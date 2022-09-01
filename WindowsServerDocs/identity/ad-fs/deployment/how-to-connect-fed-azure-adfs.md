@@ -351,11 +351,11 @@ You can use an existing virtual network or create a new VNET while deploying thi
 | AdminPassword |The password for the local Administrator account of the virtual machines |
 
 ## Additional resources
-* [Availability Sets](https://aka.ms/Azure/Availability)
+* [Availability Sets](/azure/virtual-machines/availability-set-overview)
 * [Azure Load Balancer](/azure/load-balancer/load-balancer-overview)
 * [Internal Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-powershell)
 * [Internet Facing Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-public-powershell)
-* [Storage Accounts](https://aka.ms/Azure/Storage)
+* [Storage Accounts](/azure/storage/common/storage-account-overview)
 * [Azure Virtual Networks](/azure/virtual-network/virtual-networks-overview)
 * [AD FS and Web Application Proxy Links](/archive/blogs/tangent_thoughts/qrg-quick-reference-guide-active-directory-federation-services)
 

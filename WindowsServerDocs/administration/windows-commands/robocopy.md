@@ -41,7 +41,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /s | Copies subdirectories. This option automatically excludes empty directories. |
 | /e | Copies subdirectories. This option automatically includes empty directories. |
 | /lev:`<n>` | Copies only the top *n* levels of the source directory tree. |
-| /z | Copies files in restartable mode. In restartable mode, should a file copy be interrupted, Robocopy can pick up where it left off rather than re-copying the entire file. |
+| /z | Copies files in restartable mode. In restartable mode, should a file copy be interrupted, Robocopy can pick up where it left off rather than recopying the entire file. |
 | /b | Copies files in backup mode. Backup mode allows Robocopy to override file and folder permission settings (ACLs). This allows you to copy files you might otherwise not have access to, assuming it's being run under an account with sufficient privileges.|
 | /zb | Copies files in restartable mode. If file access is denied, switches to backup mode. |
 | /j | Copies using unbuffered I/O (recommended for large files). |
@@ -64,14 +64,18 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /256 | Turns off support for paths longer than 256 characters. |
 | /mon:`<n>` | Monitors the source, and runs again when more than *n* changes are detected. |
 | /mot:`<m>` | Monitors the source, and runs again in *m* minutes, if changes are detected. |
-| /MT`[:n]` | Creates multi-threaded copies with *n* threads. *n* must be an integer between 1 and 128. The default value for *n* is 8. For better performance, redirect your output using **/log** option.<p>The **/mt** parameter can't be used with the **/ipg** and **/efsraw** parameters. |
+| /mt`[:n]` | Creates multi-threaded copies with *n* threads. *n* must be an integer between 1 and 128. The default value for *n* is 8. For better performance, redirect your output using **/log** option.<p>The **/mt** parameter can't be used with the **/ipg** and **/efsraw** parameters. |
 | /rh:hhmm-hhmm | Specifies run times when new copies may be started. |
 | /pf | Checks run times on a per-file (not per-pass) basis. |
 | /ipg:n | Specifies the inter-packet gap to free bandwidth on slow lines. |
+| /sj | Copies junctions (soft-links) to the destination path instead of link targets. |
 | /sl | Don't follow symbolic links and instead create a copy of the link. |
 | /nodcopy | Copies no directory info (the default **/dcopy:DA** is done). |
 | /nooffload | Copies files without using the Windows Copy Offload mechanism. |
 | /compress | Requests network compression during file transfer, if applicable. |
+
+> [!NOTE]
+> The **/mt** parameter was introduced in Windows Server 2008 R2 and its functionality applies to current versions of Windows Server.
 
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:
@@ -92,21 +96,15 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /xa:`[RASHCNETO]` | Excludes files for which any of the specified attributes are set. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
 | /xf `<filename>[ ...]` | Excludes files that match the specified names or paths. Wildcard characters (**&#42;** and **?**) are supported. |
 | /xd `<directory>[ ...]` | Excludes directories that match the specified names and paths. |
-| /xc | Excludes changed files. |
-| /xn | Excludes newer files. |
-| /xo | Excludes older files. |
-| /xx | Excludes extra files and directories. |
-| /xl | Excludes "lonely" files and directories. |
-| /im | Include modified files (differing change times). |
-| /is | Includes the same files. |
-| /it | Includes tweaked files. |
 | /xc | Excludes existing files with the same timestamp, but different file sizes. |
-| /xn | Excludes existing files newer than the copy in the source directory. |
-| /xo | Excludes existing files older than the copy in the source directory. |
-| /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files will not delete files from the destination.  |
+| /xn | Source directory files newer than the destination are excluded from the copy. |
+| /xo | Source directory files older than the destination are excluded from the copy. |
+| /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files will not delete files from the destination. |
 | /xl | Excludes "lonely" files and directories present in the source but not the destination. Excluding lonely files prevents any new files from being added to the destination. |
+| /im | Include modified files (differing change times). |
 | /is | Includes the same files. Same files are identical in name, size, times, and all attributes. |
 | /it | Includes "tweaked" files. Tweaked files have the same name, size, and times, but different attributes. |
+| /xc | Excludes existing files with the same timestamp, but different file sizes. |
 | /max:`<n>` | Specifies the maximum file size (to exclude files bigger than *n* bytes). |
 | /min:`<n>` | Specifies the minimum file size (to exclude files smaller than *n* bytes). |
 | /maxage:`<n>` | Specifies the maximum file age (to exclude files older than *n* days or date). |
@@ -149,7 +147,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /unicode | Displays the status output as Unicode text. |
 | /unilog:`<logfile>` | Writes the status output to the log file as Unicode text (overwrites the existing log file). |
 | /unilog+:`<logfile>` | Writes the status output to the log file as Unicode text (appends the output to the existing log file). |
-| /tee | Writes the status output to the console window, as well as to the log file. |
+| /tee | Writes the status output to the console window, and to the log file. |
 | /njh | Specifies that there is no job header. |
 | /njs | Specifies that there is no job summary. |
 
@@ -157,8 +155,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 
 | Option | Description |
 |--|--|
-| /job:`<jobname>` | Specifies that parameters are to be derived from the named job file. |
-| /save:`<jobname>` | Specifies that parameters are to be saved to the named job file. |
+| /job:`<jobname>` | Specifies that parameters are to be derived from the named job file. To run `/job:jobname`, you must first run the `/save:jobname` parameter to create the job file. |
+| /save:`<jobname>` | Specifies that parameters are to be saved to the named job file. This must be ran before running `/job:jobname`. All copy, retry, and logging options must be specified before this parameter. |
 | /quit | Quits after processing command line (to view parameters). |
 | /nosd | Indicates that no source directory is specified. |
 | /nodd | Indicates that no destination directory is specified. |

@@ -2,10 +2,10 @@
 title: How to get Extended Security Updates (ESU) for Windows Server 2008, 2008 R2, 2012, and 2012 R2
 description: Learn how to get Extended Security Updates (ESU) for Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2 after the end of their support lifecycle.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 manager: femila
-ms.date: 01/17/2022
+ms.date: 05/16/2022
 ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.custom: contperf-fy22q3
@@ -21,12 +21,15 @@ For other environments, such as on-premises VMs or physical servers, you need to
 
 To use Extended Security Updates on non-Azure VMs, you create a Multiple Activation Key (MAK) and apply it to the relevant servers running Windows Server. This MAK key lets the Windows Update servers know that you can continue to receive security updates.
 
+> [!NOTE]
+> It may take 3-5 business days for your Multiple Activation Key to become available after purchasing Extended Security Updates for on-premises VMs or physical servers. Your organization may also require time to plan and deploy the new keys. Before purchasing Extended Security Updates, you should keep these timelines in mind.
+
 ## Azure virtual machines
 
 Applicable virtual machines (VMs) hosted in Azure are automatically enabled for Extended Security Updates and these updates are provided free of charge. You don't need to configure anything, and there's no additional charge for using Extended Security Updates with Azure VMs. Extended Security Updates are automatically delivered to Azure VMs if they're configured to receive updates.
 
 > [!NOTE]
-> Azure Classic VMs (Microsoft.ClassicCompute) require additional configuration to receive Extended Security Updates since they don't have access to the [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service) that determines Extended Security Updates eligibility. Please contact [Microsoft Support](https://support.microsoft.com/contactus?PID=17336) for more help with this.
+> Azure Classic VMs (Microsoft.ClassicCompute) require additional configuration to receive Extended Security Updates since they don't have access to the [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service) that determines Extended Security Updates eligibility. This includes other Azure products such as Azure Dedicated Host, Azure VMWare Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI). Please contact [Microsoft Support](https://support.microsoft.com/contactus?PID=17336) for more help with this.
 
 ## Register for Extended Security Updates for non-Azure servers and obtain your Multiple Activation Key
 

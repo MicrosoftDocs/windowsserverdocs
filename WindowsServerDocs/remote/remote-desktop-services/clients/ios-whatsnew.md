@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/04/2022
+ms.date: 07/19/2022
 ---
 # What's new in the iOS client
 
@@ -14,6 +14,52 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 ## How to report issues
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
+
+## Updates for version 10.4.2 (5170)
+
+Date Published: July 11, 2022
+
+It's time for a quick update. In this release, we resolved some bugs that impacted Azure Virtual Desktop deployment connectivity. We also fixed an issue that caused external keyboard input to stop working when you press **Command+Tab** to switch out of and return to the app.
+
+## Updates for version 10.4.1
+
+Date Published: June 27, 2022
+
+In this release, we added thumbnail snapshots for published PC resources to the Workspaces tab of the Connection Center. We also created an in-app highlights user interface (UI) to advertise new features. The UI automatically appears when you first turn your machine on after an update. You can also access it by going to **Settings** > **About** > **Version Highlights**. Finally, we fixed an issue where the mouse cursor would temporarily get stuck at the bottom of the screen.
+
+## Updates for version 10.4.0 (5155)
+
+Date published: May 17, 2022
+
+It's finally time for our first update of the year. This is a big update with some new feature additions and lots of bug fixes and improvements.
+
+The biggest change in this release is that you can now dynamically change the orientation of the remote session to either landscape or portrait mode while connected to a machine running Windows 8.1, Windows Server 2012 R2 or later. You can set your orientation preferences in **Settings** > **Display**.
+
+To work seamlessly with dynamic orientation, we've made updates to the following experiences:
+
+- The in-session immersive switcher has a revamped look and feel, and can accommodate both landscape and portrait orientation.
+- The on-screen keyboard has been redesigned to support portrait orientation.
+- The connecting UI now supports for both landscape and portrait orientation.
+- The PC tab of the connection center now supports high-resolution thumbnails and portrait snapshots.
+
+In addition, we’ve made the following improvements:
+
+- Reworked the connection center to apply a consistent set of margins throughout the UI.
+- Added the Shift-Command-Space key combo to toggle the visibility of the connection bar.
+- Added the Command-Plus sign (+) and Command-Minus sign (-) key combos to zoom in and out respectively.
+- Fixed RemoteApp resource launch and reconnect scenarios.
+- Updated the client to send the correct physical dimensions for the iPad Mini 6.
+- Added the username to PC bookmark thumbnails.
+- Updated the in-session connection bar to fade back after three seconds if you minimize it.
+- Added support for smooth scrolling in the connection centre on ProMotion-compatible iPhones and iPads.
+
+We've also made some updates to enhance Azure Virtual Desktop (AVD) scenarios:
+
+- Integrated the Microsoft Authentication Library (MSAL) or OneAuth component to improve current and future authentication scenarios.
+- Added eTag support to speed up Azure Virtual Desktop workspace refresh.
+
+>[!NOTE]
+>This release removes support for iOS 13 and is only compatible with iOS 14 and 15.
 
 ## Updates for version 10.3.6 (5090)
 

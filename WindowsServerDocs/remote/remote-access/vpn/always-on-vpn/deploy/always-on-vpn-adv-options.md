@@ -4,7 +4,7 @@ description: 'Beyond the deployment scenario provided in this deployment, you ca
 ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.topic: article
 ms.date: 07/24/2019
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ms.reviewer: deverette
 ---

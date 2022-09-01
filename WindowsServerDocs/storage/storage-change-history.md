@@ -86,7 +86,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Nested resiliency](storage-spaces/nested-resiliency.md)    | New topic    |
+|[Nested resiliency](/azure-stack/hci/concepts/nested-resiliency)    | New topic    |
 |[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | New topic    |
 |[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.yml)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2003/) library|
 |[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/) library|

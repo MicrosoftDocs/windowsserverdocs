@@ -34,7 +34,7 @@ The tuning in each power policy is data driven by the following five workloads s
 
 - **File Server workload**
 
-    A Microsoft-developed benchmark called [FSCT](http://www.snia.org/sites/default/files2/sdc_archives/2009_presentations/tuesday/BartoszNyczkowski-JianYan_FileServerCapacityTool.pdf) is used to generate an SMB file server workload. It creates a large file set on the server and uses many client systems (actual or virtualized) to generate file open, close, read, and write operations. The operation mix is based on statistical studies of production servers. It stresses CPU, disk, and network resources.
+    A Microsoft-developed benchmark called [FSCT](https://www.snia.org/sites/default/orig/sdc_archives/2009_presentations/tuesday/BartoszNyczkowski-JianYan_FileServerCapacityTool.pdf) is used to generate an SMB file server workload. It creates a large file set on the server and uses many client systems (actual or virtualized) to generate file open, close, read, and write operations. The operation mix is based on statistical studies of production servers. It stresses CPU, disk, and network resources.
 
 - **SPECpower – JAVA workload**
 
@@ -42,7 +42,7 @@ The tuning in each power policy is data driven by the following five workloads s
 
 - **Application Server workload**
 
-    The [SAP-SD](http://global.sap.com/campaigns/benchmark/index.epx) benchmark is used to generate an application server workload. A two-tier setup is used, with the database and the application server on the same server host. This workload also utilizes response time as a performance metric, which differs from other tested workloads. Thus it is used to verify the impact of PPM parameters on responsiveness. Nevertheless, it is not intended to be representative of all latency-sensitive production workloads.
+    The [SAP-SD](https://www.sap.com/dmc/exp/2018-benchmark-directory/#/sd) benchmark is used to generate an application server workload. A two-tier setup is used, with the database and the application server on the same server host. This workload also utilizes response time as a performance metric, which differs from other tested workloads. Thus it is used to verify the impact of PPM parameters on responsiveness. Nevertheless, it is not intended to be representative of all latency-sensitive production workloads.
 
 
 All of the benchmarks except SPECpower were originally designed for performance analysis and were therefore created to run at peak load levels. However, medium to light load levels are more common for real-world production servers and are more interesting for **Balanced** plan optimizations. We intentionally run the benchmarks at varying load levels from 100% down to 10% (in 10% steps) by using various throttling methods (for example, by reducing the number of active users/clients).

@@ -345,7 +345,7 @@ Auditpol.exe syntax examples:
 
 #### Scripting Auditpol
 
-Microsoft provides a [sample script](https://support.microsoft.com/kb/921469) for administrators who want to set Advanced Audit Policy by using a script instead of manually typing in each auditpol.exe command.
+Microsoft provides a [sample script](/troubleshoot/windows-server/group-policy/configure-group-policies-set-security) for administrators who want to set Advanced Audit Policy by using a script instead of manually typing in each auditpol.exe command.
 
 **Note** Group Policy does not always accurately report the status of all enabled auditing policies, whereas auditpol.exe does. See [Getting the Effective Audit Policy in Windows 7 and Windows 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10)) for more details.
 
@@ -384,6 +384,6 @@ Auditing subcategories can be configured by using several methods, including Gro
 
 * [Auditing and Compliance in Windows Server 2008](/previous-versions/technet-magazine/cc194392(v=msdn.10))
 
-* [How to use Group Policy to configure detailed security auditing settings for Windows Vista-based and Windows Server 2008-based computers in a Windows Server 2008 domain, in a Windows Server 2003 domain, or in a Windows 2000 domain](https://support.microsoft.com/kb/921469)
+* [How to use Group Policy to configure detailed security auditing settings for Windows Vista-based and Windows Server 2008-based computers in a Windows Server 2008 domain, in a Windows Server 2003 domain, or in a Windows 2000 domain](/troubleshoot/windows-server/group-policy/configure-group-policies-set-security)
 
 * [Advanced Security Audit Policy Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd408940(v=ws.10))

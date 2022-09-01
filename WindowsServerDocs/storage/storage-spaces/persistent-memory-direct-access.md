@@ -2,7 +2,7 @@
 title: Understand Direct Access (DAX) and create DAX volumes with persistent memory devices
 description: This article provides information on DAX and how to configure it with persistent memory modules.
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.topic: how-to
 ms.date: 05/14/2021
 ---
@@ -26,7 +26,7 @@ Although we recommend enabling BTT on most DAX volumes to avoid subjecting the N
 
 ## Create a DAX volume by using Windows PowerShell
 
-Because DAX is a property of the file system, it must be specified when [formatting an NTFS volume](/powershell/module/storage/Format-Volume?view=windowsserver2019-ps&viewFallbackFrom=win10-ps).
+Because DAX is a property of the file system, it must be specified when [formatting an NTFS volume](/powershell/module/storage/Format-Volume).
 
 After creating a volume, use the **-IsDax** switch with the `Format-Volume` cmdlet to format the volume to be DAX-enabled.
 

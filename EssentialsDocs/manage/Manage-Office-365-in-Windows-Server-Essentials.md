@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -94,7 +94,7 @@ When you integrate your  Windows Server Essentials server with Microsoft 365, yo
 
 -   You should install all critical and important updates on the server before you start  Microsoft 365 integration.
 
--   If you want to use your organization's Internet domain in email addresses and with your  SharePoint Online resources, you'll need to register the domain name so you can link the domain to  Microsoft 365 during integration. For more information, see [How to buy a domain name](https://office.microsoft.com/office365-suite-help/how-to-buy-a-domain-name-HA102819883.aspx?CTT=5&origin=HA102818660).
+-   If you want to use your organization's Internet domain in email addresses and with your  SharePoint Online resources, you'll need to register the domain name so you can link the domain to  Microsoft 365 during integration. For more information, see [How to buy a domain name](/microsoft-365/admin/get-help-with-domains/buy-a-domain-name).
 
 > [!NOTE]
 >  You don't need to subscribe to  Microsoft 365 in advance. You'll be able to buy a subscription or sign up for a free trial during  Microsoft 365 integration. If you'd like to take a look at plans and pricing for  Microsoft 365, [compare Microsoft 365 plans for businesses](https://office.microsoft.com/compare-office-365-for-business-plans-FX102918419.aspx?CR_CC=200061904&WT.srch=1&WT.mc_ID=PS_bing_O365Comm_subscribe-to-office-365_Text).
@@ -184,7 +184,7 @@ When you integrate your  Windows Server Essentials server with Microsoft 365, yo
 |-------------|--------------------------|-------------|
 |(Multiple services)|MX| Microsoft 365 uses this record to verify that you own a specific domain name. This MX record does not interfere with email message routing.|
 |Exchange Online|MX|Provides email message routing. **Important:**  If you are migrating email, do not assign a preference of zero (**0**) to the new MX record. Make sure the value for the record is greater than the value that is assigned to the current MX record. When the email migration is complete and you are ready to change the email server to  Microsoft 365, have your domain name registrar reset the preference value of the new MX record.|
-|Exchange Online|Alias (CNAME)|Autodiscover record that is used to help users easily set up a connection between Exchange Online and their Outlook desktop client or a mobile email client. **Note:**  If you prefer to access Outlook Web Access by using your organization's own domain name (for example, http://mail.contoso.com) instead of the standard URL (https://outlook.com/owa/office365.com), you can configure the Alias (CNAME) record as follows: **Type=CNAME, TTL=01:00:00, HostName=mail, Address=mail.office365.com**|
+|Exchange Online|Alias (CNAME)|Autodiscover record that is used to help users easily set up a connection between Exchange Online and their Outlook desktop client or a mobile email client. **Note:**  If you prefer to access Outlook Web Access by using your organization's own domain name (for example, `http://mail.contoso.com`) instead of the standard URL (https://outlook.com/owa/office365.com), you can configure the Alias (CNAME) record as follows: **Type=CNAME, TTL=01:00:00, HostName=mail, Address=mail.office365.com**|
 |Exchange Online|TXT|Specifies that outlook.com, the domain used by the  Microsoft 365 email servers, is authorized to send email on behalf of your domain. Create this record to help prevent your outbound email from being flagged as spam.|
 |Lync Online|SRV|Helps enable federation with other instant messaging services such as Windows Live or Yahoo!.|
 |Lync Online|SRV|Autodiscover record that is used to help users easily set up a connection between the Lync desktop client and Microsoft Lync Online.|

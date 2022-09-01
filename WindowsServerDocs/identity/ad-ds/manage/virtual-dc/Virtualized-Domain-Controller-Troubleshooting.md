@@ -175,20 +175,20 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 ##### Directory Services Event Log
 
 | Events | Description |
-| -- |--|
+|--|--|
 | **Event ID** | **2160** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message**
-| The local *\<COMPUTERNAME>* has found a virtual domain controller cloning configuration file.<p>The virtual domain controller cloning configuration file is found at: %1<p>The existence of the virtual domain controller cloning configuration file indicates that the local virtual domain controller is a clone of another virtual domain controller. The *\<COMPUTERNAME>* will start to clone itself. |
+| **Message** | The local *\<COMPUTERNAME>* has found a virtual domain controller cloning configuration file.<p>The virtual domain controller cloning configuration file is found at: %1<p>The existence of the virtual domain controller cloning configuration file indicates that the local virtual domain controller is a clone of another virtual domain controller. The *\<COMPUTERNAME>* will start to clone itself. |
  **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
 
 | Events | Description |
-| -- |--|
+|--|--|
 | **Event ID** | **2161** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | The local *\<COMPUTERNAME>* did not find the virtual domain controller cloning configuration file. The local machine is not a cloned DC.| **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
+| **Message** | The local *\<COMPUTERNAME>* did not find the virtual domain controller cloning configuration file. The local machine is not a cloned DC.|
+| **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
 
 | Events | Description |
 |--|--|

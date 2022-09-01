@@ -4,9 +4,8 @@ title: Windows Time service tools and settings
 author: v-tappelgate
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tappelgate
-ms.date: 11/04/2021
+ms.date: 08/13/2022
 ms.topic: article
-ms.custom: contperf-fy21q4
 ---
 
 # Windows Time service tools and settings
@@ -17,7 +16,7 @@ The Windows Time service (W32Time) synchronizes the date and time for all comput
 
 By default, a computer that is joined to a domain synchronizes time through a domain hierarchy of time sources. However, if a computer has been manually configured to synchronize from a specific time source, perhaps because it was formerly not joined to a domain, you can reconfigure the computer to begin automatically sourcing its time from the domain hierarchy.
 
-Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception to this is the domain controller, which functions as the primary domain controller (PDC) emulator operations master for the root forest domain. The PDC emulator operations master in turn is usually configured to synchronize time with an external time source.
+Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception to this is the domain controller, which functions as the primary domain controller (PDC) emulator operations master for the root forest domain. The PDC emulator operations master in turn is configured to synchronize time with an external time source.
 
 You can achieve down to one-millisecond time accuracy in your domain. For more information, see [Support boundary for high-accuracy time](support-boundary.md) and see [Accurate Time for Windows Server 2016](accurate-time.md).
 
@@ -31,7 +30,8 @@ You can achieve down to one-millisecond time accuracy in your domain. For more i
 The Windows Time service follows the Network Time Protocol (NTP) specification, which requires the use of UDP port 123 for all time synchronization. Whenever the computer synchronizes its clock or provides time to another computer, it happens over UDP port 123. This port is exclusively reserved by the Windows Time service.
 
 > [!NOTE]
-> If you have a computer with multiple network adapters (is multi-homed), you cannot enable the Windows Time service based on a network adapter.
+> - If you have a computer with multiple network adapters (is multi-homed), you cannot enable the Windows Time service based on a network adapter.
+> - The Windows Time NTP client uses UDP port 123 for both source and destination sync requests. When using network filtering, be aware of the source port being used.
 
 ## <a id="windows-time-service-tools"></a> Using W32tm.exe
 
@@ -71,7 +71,7 @@ w32tm /config /manualpeerlist:"ntpserver.contoso.com clock.adatum.com" /syncfrom
 
 ### Set client to sync time automatically from a domain source
 
-To configure a client computer that is currently synchronizing time using a manually-specified computer to synchronize time automatically from the AD domain hierarchy, run the following following:
+To configure a client computer that is currently synchronizing time using a manually-specified computer to synchronize time automatically from the AD domain hierarchy, run the following:
 
 ```cmd
 w32tm /config /syncfromflags:domhier /update
@@ -94,9 +94,10 @@ The output of this command displays a list of W32time configuration parameters t
 > [!IMPORTANT]
 > [Windows Server 2016 has improved the time synchronization algorithms](./accurate-time.md) to align with RFC specifications. Therefore, if you want to set the local time client to point to multiple peers, we recommended that you prepare three or more different time servers.
 >
-> If you have only two time servers, you should specify the **Ntpserver**`UseAsFallbackOnly` flag (0x2)to de-prioritize one of them. For example, if you want to prioritize `ntpserver.contoso.com` over `clock.adatum.com`, run the following command.
+> If you have only two time servers, you should specify the **Ntpserver**`UseAsFallbackOnly` flag (0x2) to de-prioritize one of them. For example, if you want to prioritize `ntpserver.contoso.com` over `clock.adatum.com`, run the following command:
+
 > ```cmd
-> w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0xa" /syncfromflags:manual /update
+> w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0x2" /syncfromflags:manual /update
 > ```
 
 Additionally, you can run the following command and read the value of `NtpServer` in the output:
@@ -197,7 +198,7 @@ AND does it satisfy the following equation?
 
 > (|`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`) &le; `SystemClockRate` &divide; 2)
 
- Is 3 mins &times; (1,800,000,000) &divide; (30,000 &times; 1) &le; 156,000 &divide; 2
+ (1,800,000,000) &divide; (1 &times; 30,000) &le; 156,000 &divide; 2
 
 > Is 60,000 &le; 78,000: TRUE
 
@@ -205,7 +206,7 @@ In this case, the clock will be set back slowly.
 
 ## Using Local Group Policy Editor
 
-The Windows Time service stores a number of configuration properties as registry entries. You can use Group Policy Objects (GPOs) in Local Group Policy Editor to configure most of this information. For example, you can use GPOs to configure a computer to be an NTPServer or NTPClient, configure the time synchronization mechanism, or configure a computer to be a reliable time source.
+The Windows Time service stores several configuration properties as registry entries. You can use Group Policy Objects (GPOs) in Local Group Policy Editor to configure most of this information. For example, you can use GPOs to configure a computer to be an NTPServer or NTPClient, configure the time synchronization mechanism, or configure a computer to be a reliable time source.
 
 > [!NOTE]
 > Group Policy settings for the Windows Time service can be applied on Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2 domain controllers and can be applied to computers running Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2.
@@ -218,7 +219,7 @@ For example, suppose you edit policy settings in the **Time Providers\Configure 
 
 Then Windows uses the policy settings to configure the related Windows Time service registry entries under the following subkey:
 
-> `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Time Providers\NTPClient\\`
+> `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NTPClient\`
 
 The following table lists the policies that you can configure for the Windows Time service, and the registry subkeys that those policies affect.
 
@@ -273,18 +274,18 @@ The `Config` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Servic
 |**ClockAdjustmentAuditLimit** |Windows Server 2016 Version 1709 and later versions; Windows 10 Version 1709 and later versions |Specifies the smallest local clock adjustments that may be logged to the W32time service event log on the target computer. The default value is **800** (parts per million - PPM). |
 |**ClockHoldoverPeriod** |Windows Server 2016 Version 1709 and later versions; Windows 10 Version 1709 and later versions |Indicates the maximum number of seconds a system clock can nominally hold its accuracy without synchronizing with a time source. If this period of time passes without W32time obtaining new samples from any of its input providers, W32time initiates a rediscovery of time sources. Default: 7,800 seconds. |
 |**EventLogFlags** |All versions |Controls which events that the time service logs.<ul><li>**0x1**. Time jump</li><li>**0x2**. Source change</li></ul>The default value on domain members is **2**. The default value on stand-alone clients and servers is **2**. |
-|**FrequencyCorrectRate** |All versions |Controls the rate at which the clock is corrected. If this value is too small, the clock is unstable and overcorrects. If the value is too large, the clock takes a long time to synchronize. The default value on domain members is **4**. The default value on stand-alone clients and servers is **4**.<p>**Note** <br />Zero is not a valid value for the **FrequencyCorrectRate** registry entry. On Windows Server 2003, Windows Server 2003 R2, Windows Server 2008 , and Windows Server 2008 R2 computers, if the value is set to **0**, the Windows Time service automatically changes it to **1**. |
-|**HoldPeriod** |All versions |Controls the period of time for which spike detection is disabled in order to bring the local clock into synchronization quickly. A spike is a time sample indicating that time is off a number of seconds, and is usually received after good time samples have been returned consistently. The default value on domain members is **5**. The default value on stand-alone clients and servers is **5**. |
+|**FrequencyCorrectRate** |All versions |Controls the rate at which the clock is corrected. If this value is too small, the clock is unstable and overcorrects. If the value is too large, the clock takes a long time to synchronize. The default value on domain members is **4**. The default value on stand-alone clients and servers is **4**.<p>**Note** <br />Zero is not a valid value for the **FrequencyCorrectRate** registry entry. On Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2 computers, if the value is set to **0**, the Windows Time service automatically changes it to **1**. |
+|**HoldPeriod** |All versions |Controls the period of time for which spike detection is disabled in order to bring the local clock into synchronization quickly. A spike is a time sample indicating that time is off a number of seconds, and is received after good time samples have been returned consistently. The default value on domain members is **5**. The default value on stand-alone clients and servers is **5**. |
 |**LargePhaseOffset** |All versions |Specifies that a time offset greater than or equal to this value in 10<sup>-7</sup> seconds is considered a spike. A network disruption such as a large amount of traffic might cause a spike. A spike will be ignored unless it persists for a long period of time. The default value on domain members is **50000000**. The default value on stand-alone clients and servers is **50000000**. |
 |**LastClockRate** |All versions |Maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is **156250**. The default value on stand-alone clients and servers is **156250**. |
 |**LocalClockDispersion** |All versions |Controls the dispersion (in seconds) that you must assume when the only time source is the built-in CMOS clock. The default value on domain members is **10**. The default value on stand-alone clients and servers is **10**. |
 |**MaxAllowedPhaseOffset** |All versions |Specifies the maximum offset (in seconds) for which W32Time attempts to adjust the computer clock by using the clock rate. When the offset exceeds this rate, W32Time sets the computer clock directly. The default value for domain members is **300**. The default value for stand-alone clients and servers is **1**. |
 |**MaxClockRate** |All versions |Maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value for domain members is **155860**. The default value for stand-alone clients and servers is **155860**. |
 |**MaxNegPhaseCorrection** |All versions |Specifies the largest negative time correction, in seconds, that the service makes. If the service determines that a change larger than this is required, it logs an event instead.<p>**Note**<br />The value **0xFFFFFFFF** is a special case. This value means that the service always corrects the time.<p>The default value for domain members is **0xFFFFFFFF** (hexadecimal). The default value for domain controllers is **172,800** (48 hrs). The default value for stand-alone clients and servers is **54,000** (15 hrs).|
-|**MaxPollInterval** |All versions |Specifies the largest interval, in log2 seconds, allowed for the system polling interval. Note that while a system must poll according to the scheduled interval, a provider can refuse to produce samples when requested to do so. The default value for domain controllers is **10**. The default value for domain members is **15**. The default value for stand-alone clients and servers is **15**. |
+|**MaxPollInterval** |All versions |Specifies the largest interval, in log2 seconds, allowed for the system polling interval. A system must poll according to the scheduled interval, a provider can refuse to produce samples when requested to do so. The default value for domain controllers is **10**. The default value for domain members is **15**. The default value for stand-alone clients and servers is **15**. |
 |**MaxPosPhaseCorrection** |All versions |Specifies the largest positive time correction in seconds that the service makes. If the service determines that a change larger than this is required, it logs an event instead.<p>**Note**<br />The value **0xFFFFFFFF** is a special case. This value means that the service always corrects the time.<p>The default value for domain members is **0xFFFFFFFF** (hexadecimal). The default value for domain controllers is **172,800** (48 hrs). The default value for stand-alone clients and servers is **54,000** (15 hrs). |
 |**MinClockRate** |All versions |Maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value for domain members is **155860**. The default value for stand-alone clients and servers is **155860**. |
-|**MinPollInterval** |All versions |Specifies the smallest interval, in log base 2 seconds, allowed for the system polling interval. Note that while a system does not request samples more frequently than this, a provider can produce samples at times other than the scheduled interval. The default value for domain controllers is **6**. The default value for domain members is **10**. The default value for stand-alone clients and servers is **10**. |
+|**MinPollInterval** |All versions |Specifies the smallest interval, in log base 2 seconds, allowed for the system polling interval. A system does not request samples more frequently than this, a provider can produce samples at times other than the scheduled interval. The default value for domain controllers is **6**. The default value for domain members is **10**. The default value for stand-alone clients and servers is **10**. |
 |**PhaseCorrectRate** |All versions |Controls the rate at which the phase error is corrected. Specifying a small value corrects the phase error quickly, but might cause the clock to become unstable. If the value is too large, it takes a longer time to correct the phase error.<p>The default value on domain members is **1**. The default value on stand-alone clients and servers is **7**.<p>**Note**<br />Zero is not a valid value for the **PhaseCorrectRate** registry entry. On Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and  Windows Server 2008 R2 computers, if the value is set to **0**, the Windows Time service automatically changes it to **1**. |
 |**PollAdjustFactor** |All versions |Controls the decision to increase or decrease the poll interval for the system. The larger the value, the smaller the amount of error that causes the poll interval to be decreased. The default value on domain members is **5**. The default value on stand-alone clients and servers is **5**. |
 |**RequireSecureTimeSyncRequests** |Windows 8 and later versions |Controls whether or not the DC will respond to time sync requests that use older authentication protocols. If enabled (set to **1**), the DC will not respond to requests using such protocols. This is a boolean setting, and the default value is **0**. |
@@ -300,7 +301,7 @@ The `Parameters` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Se
 | Registry entry | Versions | Description |
 | --- | --- | --- |
 |**AllowNonstandardModeCombinations** |All versions |Indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is **1**. The default value for stand-alone clients and servers is **1**. |
-|**NtpServer** |All versions |Specifies a space-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive: For more information about this mode, see [Windows Time Server](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x08 Client</li></ul><br />There is no default value for this registry entry on domain members. The default value on stand-alone clients and servers is `time.windows.com,0x1`. |
+|**NtpServer** |All versions |Specifies a space-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  <ul><li>0x1 SpecialInterval </li><li>0x2 UseAsFallbackOnly</li><li>0x4 SymmetricActive: For more information about this mode, see [Windows Time Server](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x8 Client</li></ul><br />There is no default value for this registry entry on domain members. The default value on stand-alone clients and servers is `time.windows.com,0x1`. |
 |**ServiceDll** |All versions |Maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll. |
 |**ServiceMain** |All versions |Maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is **SvchostEntry_W32Time**. The default value on stand-alone clients and servers is **SvchostEntry_W32Time**. |
 |**Type** |All versions |Indicates which peers to accept synchronization from:  <ul><li>**NoSync**. The time service does not synchronize with other sources.</li><li>**NTP**. The time service synchronizes from the servers specified in the **NtpServer**. registry entry.</li><li>**NT5DS**. The time service synchronizes from the domain hierarchy.  </li><li>**AllSync**. The time service uses all the available synchronization mechanisms.  </li></ul>The default value on domain members is **NT5DS**. The default value on stand-alone clients and servers is **NTP**. |
@@ -326,14 +327,14 @@ The `NtpClient` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Ser
 
 ### <a id="ntpserver"></a>NtpServer entries
 
-The `NtpClient` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer`.
+The `NtpServer` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer`.
 
 |Registry Entry |Versions |Description |
 | --- | --- | --- |
 |AllowNonstandardModeCombinations |All versions |Indicates that non-standard mode combinations are allowed in synchronization between clients and servers. The default value for domain members is **1**. The default value for stand-alone clients and servers is **1**. |
 |DllName |All versions |Specifies the location of the DLL for the time provider. The default location for this DLL on both domain members and stand-alone clients and servers is `%windir%\System32\W32Time.dll`.  |
-|Enabled |All versions |Indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>**1** - Yes</li><li>**0** - No</li></ul>The default value on domain members is **1**. The default value on stand-alone clients and servers is **1**. |
-|InputProvider |All versions |Indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock. <ul><li>**1** - Yes</li><li>**0** - No = 0 </li></ul>Default value for both domain members and stand-alone clients: 1 |
+|Enabled |All versions |Indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>**1** - Yes</li><li>**0** - No</li></ul>The default value on domain members is **0**. The default value on stand-alone clients and servers is **0**. |
+|InputProvider |All versions |Indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock. <ul><li>**1** - Yes</li><li>**0** - No = 0 </li></ul>Default value for both domain members and stand-alone clients: 0 |
 
 ### Enhanced logging
 

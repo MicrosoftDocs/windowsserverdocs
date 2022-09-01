@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -69,7 +69,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 
 ###### To use the Windows Server Solutions BPA to analyze your Source Server
 
-1. Download and install the [Windows Server Solutions Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15556) at the Microsoft Download Center.
+1. Download and install the Windows Server Solutions Best Practices Analyzer at the Microsoft Download Center.
 
 2. After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.
 
@@ -139,8 +139,6 @@ Complete the following preliminary steps to ensure that the settings and data on
    You can use the latest version of the Windows Update Agent to ensure that the server update process works properly.
 
    Before you can install Windows Update Agent on the Source Server, you must first install Windows PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.
-
--   To download and install Windows PowerShell 2.0, see [article 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) in the Microsoft Knowledge Base.
 
 -   To download and install Microsoft Baseline Configuration Analyzer 2.0, see the [Microsoft Baseline Configuration Analyzer 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center.
 

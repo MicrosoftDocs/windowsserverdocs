@@ -19,7 +19,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 > [!NOTE]
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
-> - The iOS client supports devices running iOS 6.x and newer.
+> - The iOS client supports devices running iOS 14.x and newer.
 
 ## Get the Remote Desktop client and start using it
 
