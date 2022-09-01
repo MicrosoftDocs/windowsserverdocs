@@ -159,7 +159,9 @@ After you've installed Windows Admin Center on your hybrid machine, perform the 
 
 1. Open the Azure portal and navigate to your Arc-enabled server, and then under the **Settings** group, select **Windows Admin Center (preview)**.
 2. Select **Connect**.
-3. Enter credentials for an account with local Administrator permissions on the hybrid machine’s operating system, and then select **Sign in**.
+
+> [!NOTE]
+> Starting August 2022, Windows Admin Center now allows you to use Azure AD-based authentication for your hybrid machine. You will no longer be prompted for the credentials of a local administrator account.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
@@ -225,7 +227,6 @@ Here are some tips to try in case something isn't working. For general  Windows 
         ```
         
 1. Check that your Extension version is 0.0.0.169 or higher.
-    1. Navigate to the Azure Portal
     1. Navigate to "Extensions"
     1. Check that the "AdminCenter" extension version is 0.0.0.169 or higher
     1. If not, uninstall the extension and reinstall it
