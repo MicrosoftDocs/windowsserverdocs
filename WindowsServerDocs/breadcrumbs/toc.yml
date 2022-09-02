@@ -24,9 +24,20 @@ items:
   - name: Storage
     tocHref: /azure-stack/hci/
     topicHref: /windows-server/storage/storage
+
+### For linking to Azure Stack HCI SDN articles and keeping the context in Windows Server TOC
+- name: Windows Server
+  tocHref: /azure-stack/
+  topicHref: /windows-server/index
+  items:
   - name: Networking documentation
     tocHref: /azure-stack/hci/
-    topicHref: /windows-server/networking/sdn/security
+    topicHref: /windows-server/networking
+    items: 
+    - name: Software Defined Networking (SDN)
+      tocHref: /azure-stack/hci/
+      topicHref: /windows-server/networking/sdn
+
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server
   tocHref: /azure/
