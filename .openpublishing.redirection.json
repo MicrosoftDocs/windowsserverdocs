@@ -10691,6 +10691,26 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-security-top.md",
+      "redirect_url": "/azure-stack/hci/concepts/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-manage-certs.md",
+      "redirect_url": "/azure-stack/hci/concepts/sdn-manage-certs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/nc-security.md",
+      "redirect_url": "/azure-stack/hci/concepts/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/kerberos-with-spn.md",
+      "redirect_url": "/azure-stack/hci/concepts/kerberos-with-spn",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-workloads.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/virtual-machine-recs",
       "redirect_document_id": false

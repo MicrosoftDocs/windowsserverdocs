@@ -72,7 +72,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 
 ### Security with Software Defined Networking (SDN)
 
-[Security with SDN](../networking/sdn/security/sdn-security-top.md) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud.
+[Security with SDN](/azure-stack/hci/concepts/nc-security) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud.
 
 These security enhancements are integrated into the comprehensive SDN platform introduced in Windows Server 2016.
 
