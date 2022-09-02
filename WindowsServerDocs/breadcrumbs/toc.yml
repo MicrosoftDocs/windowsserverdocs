@@ -30,13 +30,13 @@ items:
   tocHref: /azure-stack/
   topicHref: /windows-server/index
   items:
-  - name: Networking documentation
+  - name: Networking
     tocHref: /azure-stack/hci/
-    topicHref: /windows-server/networking
+    topicHref: /windows-server/networking/
     items: 
-    - name: Software Defined Networking (SDN)
-      tocHref: /azure-stack/hci/
-      topicHref: /windows-server/networking/sdn
+    - name: SDN
+      tocHref: /azure-stack/hci/concepts/
+      topicHref: /windows-server/networking/sdn/
 
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server
