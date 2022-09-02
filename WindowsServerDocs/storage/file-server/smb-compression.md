@@ -206,12 +206,13 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 
 Starting in Windows Server 2022 with update [KB5016693](https://support.microsoft.com/help/5016693)
 (OS Build 20348.946) and Windows 11 with update
-[KB5016691](https://support.microsoft.com/help/5016691) (OS Build 22000.918), SMB always attempts to
-compress a file when a client or server requests it, regardless of that file’s size.
+[KB5016691](https://support.microsoft.com/help/5016691) (OS Build 22000.918), SMB by default always attempts to
+compress a file when a client or server requests it, without using compression sampling.
 
 > [!NOTE]
-> In the original release of Windows Server 2022 and Windows 11, SMB compression uses a default algorithm where it attempts to compress the first 524,288,000 bytes (500 MiB) of a file during transfer and tracks that at least 104,857,600 bytes (100 MiB) compressed within that
-500 MiB range. If fewer than 100 MiB is compressible, SMB compression stops trying to compress the rest of the file. If at least 100 MiB compresses, SMB compression attempts to compress the rest of the file. This means that very large files with compressible data, for instance, a multi-gigabyte virtual machine disk, are likely to compress but a relatively small file. Even a very compressible one will not compress.
+> In the original release of Windows Server 2022 and Windows 11, SMB compression defaulted to use of an algorithm where it attempted to compress the first 524,288,000 bytes (500 MiB) of a file during transfer and track that at least 104,857,600 bytes (100 MiB) compressed within that
+500 MiB range. If fewer than 100 MiB was compressible, SMB compression stopped trying to compress the rest of the file. If at least 100 MiB compressed, SMB compression attempted to compress the rest of the file. With this behavior change, sampling is now disabled by default and SMB always attempts to compress the entire file when a client or server requests it. 
+
 
 ## Testing SMB compression
 
