@@ -50,6 +50,7 @@ Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentic
 |Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/)|
 |Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://www.thalesdocs.com/sta/Content/STA/SEdocs/AuthADFS.htm)|
 |Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona Multi-factor Authentication](https://www.trusona.com/solution-overview/)|
+|miniOrange|miniOrange SSO + MFA SOlution| [miniOrange Multi-factor Authentication for AD FS](https://idp.miniorange.com/steps-to-enable-2fa-on-top-of-adfs-authentication/)|
 
 ## Custom Authentication Method for AD FS in Windows Server
 
