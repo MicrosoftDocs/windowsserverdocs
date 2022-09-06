@@ -22,8 +22,11 @@ items:
   topicHref: /windows-server/index
   items:
   - name: Storage
-    tocHref: /azure-stack/hci/
+    tocHref: /azure-stack/hci/concepts/
     topicHref: /windows-server/storage/storage
+  - name: Networking
+    tocHref: /azure-stack/hci/manage/
+    topicHref: /windows-server/networking/sdn
 
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server

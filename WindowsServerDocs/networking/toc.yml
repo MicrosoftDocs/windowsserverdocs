@@ -550,11 +550,11 @@ items:
     - name: Security for SDN
       items:
       - name: Secure the Network Controller
-        href: /azure-stack/hci/concepts/nc-security?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        href: /azure-stack/hci/manage/nc-security?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Manage certificates for SDN
-        href: /azure-stack/hci/concepts/sdn-manage-certs?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        href: /azure-stack/hci/manage/sdn-manage-certs?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Kerberos with Service Principal Name (SPN)
-        href: /azure-stack/hci/concepts/kerberos-with-spn?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        href: /azure-stack/hci/manage/kerberos-with-spn?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: SDN firewall auditing
         href: /azure-stack/hci/manage/use-datacenter-firewall-powershell#firewall-auditing?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Virtual network peering
