@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/07/2020
-ms.localizationpriority: high
 ---
 
 # Windows Admin Center
@@ -18,7 +17,7 @@ To find out what's new, see [Release history](support/release-history.md).
 
 ## Download now
 
-**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use.
+**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use.
 
 For help installing, see [Install](deploy/install.md). For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
 
@@ -39,7 +38,7 @@ Here's a video to give you an overview, followed by a poster giving more details
 
 [![Windows Admin Center poster](media/WAC1910Poster_thumb_small.PNG)](media/WAC1910Poster_thumb.png)
 
-[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
+[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/main/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
 ## Contents at a glance
 
@@ -110,6 +109,14 @@ Admin Center to Azure</a></li>
     </tr>
     <tr>
             <td>
+            <h3>Windows Admin Center in Azure</h3>
+            <ul>
+            <li><a href="azure/manage-vm.md">Manage a Windows Server VM (preview)</a>
+            <li><a href="azure/manage-arc-hybrid-machines.md">Manage Azure Arc-enabled Servers (preview)</a>
+            <li><a href="azure/manage-hci-clusters.md">Manage Azure Stack HCI clusters (preview)</a>
+            </ul>
+        </td>
+            <td>
             <h3>Support</h3>
             <ul>
             <li><a href="support/release-history.md">Release history</a>
@@ -118,6 +125,8 @@ Admin Center to Azure</a></li>
             <li><a href="support/known-issues.md">Known issues</a>
             </ul>
         </td>
+    </tr>
+    <tr>
             <td>
             <h3>Extend</h3>
             <ul>
@@ -128,35 +137,10 @@ Admin Center to Azure</a></li>
             <li><a href="extend/publish-extensions.md">Publishing extensions</a>
             </ul>
         </td>
+        <td></td>
     </tr>
 
 </table>
-
-## Video-based learning
-
-Here are some videos from Microsoft Ignite 2019 sessions:
-
-- [Windows Admin Center: Unlock Azure Hybrid value](https://aka.ms/WAC-BRK3165)
-- [Windows Admin Center: What’s new and what’s next](https://aka.ms/WAC-BRK2048)
-- [Automatically monitor, secure and update your on-premises servers from Azure with Windows Admin Center](https://aka.ms/WAC-THR2146)
-- [Get more done with Windows Admin Center third-party extensions](https://aka.ms/WAC-THR2140)
-- [Be a Windows Admin Center expert: Best practices for deployment, configuration, and security](https://aka.ms/WAC-THR2135)
-- [Windows Admin Center: Better together with System Center and Microsoft Azure](https://aka.ms/WAC-THR2176)
-- [How to use Microsoft Azure hybrid services together with Windows Admin Center and Windows Server](https://aka.ms/WAC-THR2073)
-- [Live Q&A: Manage your hybrid server environment with Windows Admin Center](https://aka.ms/WAC-MLS1055)
-- [Learning Path: Hybrid management technologies](https://aka.ms/WAC-HybridMgmtTech)
-- [Hands on Lab: Windows Admin Center and Hybrid](/learn/?WT.mc_id=sitertzn_homepage_learn-redirect-handsonlabs)
-
-Here are some videos from Windows Server Summit 2019 sessions:
-
-- [Go hybrid with Windows Admin Center](https://aka.ms/WAC-WSS2019-GoHybridWAC)
-- [What's new with Windows Admin Center v1904](https://aka.ms/WAC-WSS2019-WhatsNewv1904)
-
-And here are a few additional resources:
-
-- [Windows Admin Center server management reimagined](https://aka.ms/WAC-ServerMgmtReimagined)
-- [Manage Servers and Virtual Machines Anywhere with Windows Admin Center](https://aka.ms/WAC-Webinar2019)
-- [How to get started with Windows Admin Center](https://www.youtube.com/embed/PcQj6ZklmK0)
 
 ## See how customers are benefitting from Windows Admin Center
 

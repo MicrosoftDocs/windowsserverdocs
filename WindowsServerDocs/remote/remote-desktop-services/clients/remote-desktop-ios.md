@@ -7,7 +7,6 @@ author: Heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 07/15/2021
-ms.localizationpriority: medium
 ---
 
 # Get started with the iOS client
@@ -20,7 +19,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 > [!NOTE]
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
-> - The iOS client supports devices running iOS 6.x and newer.
+> - The iOS client supports devices running iOS 14.x and newer.
 
 ## Get the Remote Desktop client and start using it
 
@@ -186,4 +185,4 @@ If Bluetooth is enabled on your iOS device, the client automatically detects the
 While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 
 > [!TIP]
-> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread.

@@ -7,7 +7,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 06/01/2020
-ms.localizationpriority: medium
 ---
 # Remote Desktop URI scheme
 

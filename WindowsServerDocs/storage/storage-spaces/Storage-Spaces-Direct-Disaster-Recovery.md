@@ -6,7 +6,6 @@ author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 03/29/2018
 description: This article describes the scenarios available today for disaster recovery of Microsoft HCI (Storage Spaces Direct)
-ms.localizationpriority: medium
 ---
 # Disaster recovery with Storage Spaces Direct
 

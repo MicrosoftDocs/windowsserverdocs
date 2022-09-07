@@ -4,8 +4,7 @@ description: Explains what Network File System is.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 07/09/2018
-ms.localizationpriority: medium
+ms.date: 06/23/2022
 ---
 # Network File System overview
 
@@ -27,7 +26,7 @@ Windows supports multiple versions ofthe NFS client and server, depending on ope
 | ----------------- | ------------------- | ----------------- |
 | Windows 7, Windows 8.1, Windows 10 | N/A | NFSv2, NFSv3 |
 | Windows Server 2008, Windows Server 2008 R2 | NFSv2, NFSv3 | NFSv2, NFSv3 |
-| Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 | NFSv2, NFSv3, NFSv4.1  | NFSv2, NFSv3 |
+| Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022 | NFSv2, NFSv3, NFSv4.1  | NFSv2, NFSv3 |
 
 ## Practical applications
 

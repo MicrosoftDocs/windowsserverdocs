@@ -41,7 +41,7 @@ The following are new or improved SDN infrastructure technologies:
 
 - **Standardized protocols**. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
 
-- **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in  Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md). For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md).
+- **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in  Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md). For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](/azure-stack/hci/concepts/software-defined-networking).
 
 ### Cloud scale fundamentals
 

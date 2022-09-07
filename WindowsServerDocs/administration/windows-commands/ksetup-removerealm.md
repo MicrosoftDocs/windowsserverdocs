@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 Deletes all information for the specified realm from the registry.
 
-The realm name is stored in the registry under `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001` and `\CurrentControlSet\Control\Lsa\Kerberos`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
+The realm name is stored in the registry under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos` and `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Lsa\Kerberos`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
 
 > [!IMPORTANT]
 > You can't remove the default realm name from the domain controller because this resets its DNS information, and removing it might make the domain controller unusable.

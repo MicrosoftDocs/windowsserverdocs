@@ -7,7 +7,6 @@ manager: dongill
 ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019
-ms.localizationpriority: medium
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 
@@ -16,9 +15,9 @@ ms.localizationpriority: medium
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 
 If you aren't familiar with Windows' support for storage-class memory devices, these short videos provide an overview:
-- [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
-- [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
-- [Accelerating SQL Server 2016 performance with Persistent Memory in Windows Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
+- Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016
+- Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016
+- Accelerating SQL Server 2016 performance with Persistent Memory in Windows Server 2016
 
 Also see [Understand and deploy persistent memory in Storage Spaces Direct](/azure-stack/hci/concepts/deploy-persistent-memory).
 

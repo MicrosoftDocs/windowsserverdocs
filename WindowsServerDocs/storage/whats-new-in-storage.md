@@ -193,7 +193,7 @@ Storage Spaces Direct enables building highly available and scalable storage usi
 Storage Spaces Direct enables service providers and enterprises to use industry standard servers with local storage to build highly available and scalable software defined storage. Using servers with local storage decreases complexity, increases scalability, and enables use of storage devices that were not previously possible, such as SATA solid state disks to lower cost of flash storage, or NVMe solid state disks for better performance.
 
 Storage Spaces Direct removes the need for a shared SAS fabric, simplifying deployment and configuration. Instead it uses the network as a storage fabric, leveraging SMB3 and SMB Direct (RDMA) for high-speed, low-latency CPU efficient storage. To scale out, simply add more servers to increase storage capacity and I/O performance
-For more information, see the [Storage Spaces Direct in Windows Server 2016](storage-spaces/storage-spaces-direct-overview.md).
+For more information, see the [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview).
 
 **What works differently?**
 This capability is new in Windows Server 2016.
@@ -244,11 +244,11 @@ For more information, see [Storage Quality of Service](storage-qos/storage-qos-o
 ### <a name="dedup"></a>Data Deduplication
 | Functionality | New or Updated | Description |
 |---------------|----------------|-------------|
-| [Support for Large Volumes](data-deduplication/whats-new.md#large-volume-support) | Updated | Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for deduplication. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**. |
-| [Support for Large Files](data-deduplication/whats-new.md#large-file-support) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for deduplication. In Windows Server 2016, files **up to 1 TB** are fully supported. |
-| [Support for Nano Server](data-deduplication/whats-new.md#nano-server-support) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
-| [Simplified Backup Support](data-deduplication/whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
-| [Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
+| [Support for Large Volumes](data-deduplication/whats-new.md#support-for-large-volumes) | Updated | Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for deduplication. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**. |
+| [Support for Large Files](data-deduplication/whats-new.md#support-for-large-files) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for deduplication. In Windows Server 2016, files **up to 1 TB** are fully supported. |
+| [Support for Nano Server](data-deduplication/whats-new.md#support-for-nano-server) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
+| [Simplified Backup Support](data-deduplication/whats-new.md#simplified-configuration-for-virtualized-backup-applications) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
+| [Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#support-for-cluster-os-rolling-upgrade) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
 ### <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections
 In Windows 10 and Windows Server 2016 client connections to the Active Directory Domain Services default SYSVOL and NETLOGON shares on domain controllers now require SMB signing and mutual authentication (such as Kerberos).

@@ -57,4 +57,4 @@ wbadmin start sysrecovery -version:04/30/2020-09:00 -backupTarget:\\servername\s
 
 - [wbadmin command](wbadmin.md)
 
-- [Get-WBBareMetalRecovery](/powershell/module/windowserverbackup/Get-WBBareMetalRecovery)
+- [Get-WBBareMetalRecovery](/powershell/module/windowsserverbackup/get-wbbaremetalrecovery)

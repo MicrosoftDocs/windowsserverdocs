@@ -696,7 +696,7 @@ Guidance: Check the detailed error and make sure the transfer requirements are m
 ========================
 
 ```
-If you dump the SMS debug logs with [Get-SMSLogs](https://aka.ms.smslogs) you also see:
+If you dump the SMS debug logs with [Get-SMSLogs](https://aka.ms/smslogs) you also see:
 
 ```
 SMS Debug log:

@@ -4,13 +4,13 @@ ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: How the Windows Time Service Works
 author: dahavey
 ms.author: dahavey
-ms.date: 10/14/2021
+ms.date: 11/04/2021
 ms.topic: article
 ---
 
 # How the Windows Time Service Works
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later, Azure Stack HCI, versions 21H2 and 20H2
 
 **In this section**
 
@@ -37,7 +37,7 @@ Although the Windows Time service is not an exact implementation of the Network 
 -   The amount of CPU and network resources available to the Windows Time service
 
 > [!IMPORTANT]
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  View [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) for more information.
 
 Computers that synchronize their time less frequently or are not joined to a domain are configured, by default, to synchronize with time.windows.com.  Therefore, it is impossible to guarantee time accuracy on computers that have intermittent or no network connections.
 
@@ -257,4 +257,4 @@ The Windows Time service communicates on a network to identify reliable time sou
 ## See Also
 [Windows Time Service Technical Reference](windows-time-service-tech-ref.md)
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
-[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
+[Windows Time Service (W32Time)](windows-time-service-top.md)

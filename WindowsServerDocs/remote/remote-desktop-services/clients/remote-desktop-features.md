@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 06/02/2021
-ms.localizationpriority: medium
 ---
 
 # Compare the clients: features
@@ -27,7 +26,7 @@ The following table compares the features of each client.
 | Smart sizing | X | X | X || | X || Remote Desktop in Windowed mode is dynamically scaled to the window's size. |
 | Localization | X | X | X | English only | X | X | X | Client user interface is available in multiple languages. |
 | Multi-factor authentication || X | X | X | X | X | X | Supports multi-factor authentication for remote connections. |
-| Teams optimization for Azure Virtual Desktop || X |||||| Media optimizations for Microsoft Teams to provide high quality calls and screen sharing experiences. Learn more at [Use Microsoft Teams on Azure Virtual Desktop](/virtual-desktop/teams-on-wvd). |
+| Teams optimization for Azure Virtual Desktop || X |||| X || Media optimizations for Microsoft Teams to provide high quality calls and screen sharing experiences. Learn more at [Use Microsoft Teams on Azure Virtual Desktop](/azure/virtual-desktop/teams-on-avd). |
 
 ## Other resources
 

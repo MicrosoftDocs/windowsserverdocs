@@ -1,36 +1,35 @@
 ---
-title: Extend your on-premises subnets into Azure using Azure Extended Network
-description: Extend your on-premises subnets into Azure using Azure Extended Network
+title: Extend your on-premises subnets into Azure using extended network for Azure
+description: Extend your on-premises subnets into Azure using extended network for Azure
 ms.technology: manage
 ms.topic: article
 author: grcusanz
 ms.author: grcusanz
 ms.date: 12/17/2019
-ms.localizationpriority: medium
 ms.prod: windows-server
 ---
 
-# Extend your on-premises subnets into Azure using Azure Extended Network
+# Extend your on-premises subnets into Azure using extended network for Azure
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Overview
 
-Azure Extended Network enables you to stretch an on-premises subnet into Azure to let on-premises virtual machines keep their original on-premises private IP addresses when migrating to Azure.
+Extended network for Azure enables you to stretch an on-premises subnet into Azure to let on-premises virtual machines keep their original on-premises private IP addresses when migrating to Azure.
 
 The network is extended using a bidirectional VXLAN tunnel between two Windows Server 2019 VMs acting as virtual appliances, one running on-premises and the other running in Azure, each also connected to the subnet to be extended.
 Each subnet that you are going to extend requires one pair of appliances. Multiple subnets can be extended using multiple pairs.
 
 > [!NOTE]
-> Azure Extended Network should only be used for machines that cannot have their IP address changed when migrating to Azure. It is always better to change the IP address and connect it to a subnet that wholly exists in Azure, if that is an option.
+> Extended network for Azure should only be used for machines that cannot have their IP address changed when migrating to Azure. It is always better to change the IP address and connect it to a subnet that wholly exists in Azure, if that is an option.
 
 ## Planning
 
-To prepare to use Azure Extended Network, you must identify which subnet you want to stretch, then perform the following steps:
+To prepare to use extended network for Azure, you must identify which subnet you want to stretch, then perform the following steps:
 
 ### Capacity planning
 
-You can extend up to 250 IP addresses using Azure Extended Network. You can expect an aggregate throughput of about 700 Mbps, with some variability depending on the CPU speed of the Azure Extended Network virtual appliances.
+You can extend up to 250 IP addresses using extended network for Azure. You can expect an aggregate throughput of about 700 Mbps, with some variability depending on the CPU speed of the extended network for Azure virtual appliances.
 
 ### Configuration in Azure
 
@@ -40,7 +39,10 @@ Before you use Windows Admin Center, you must perform the following steps throug
 
 2. Configure a virtual network gateway to use a site-to-site or ExpressRoute connection to connect the virtual network to your on-premises network.
 
-3. Create a Windows Server 2019 VM in Azure that is capable of running nested virtualization. This is one of your two virtual appliances. Connect the primary network interface to the routable subnet, and the second network interface to the extended subnet.
+3. Create a Windows Server 2022 Azure Edition VM in Azure that is capable of running nested virtualization. This is one of your two virtual appliances. Connect the primary network interface to the routable subnet, and the second network interface to the extended subnet.
+
+> [!NOTE]
+> Extended network for Azure requires Windows Server 2022 Azure Edition for the VM that is running in Azure.   
 
 4. Start the VM, enable the Hyper-V role, and reboot. For example:
 
@@ -61,7 +63,7 @@ You must also perform some manual configuration in your on-premises infrastructu
 
 1. Make sure the subnets are available on the physical machine where you will deploy the on-premises VM (virtual appliance). This includes the subnet you want to extend and a second subnet that is unique and doesn't overlap with any subnets in the Azure virtual network.
 
-2. Create a Windows Server 2019 VM on any hypervisor that supports nested virtualization. This is the on-premises virtual appliance. We recommend that you create this as a highly available VM in a cluster. Connect a virtual network adapter to the routable subnet and a second virtual network adapter to the extended subnet.
+2. Create a Windows Server 2019 or 2022 VM on any hypervisor that supports nested virtualization. This is the on-premises virtual appliance. We recommend that you create this as a highly available VM in a cluster. Connect a virtual network adapter to the routable subnet and a second virtual network adapter to the extended subnet.
 
 3. Start the VM, then run this command from a PowerShell session in the VM to enable the Hyper-V role, and restart the VM:
 
@@ -92,7 +94,7 @@ Deployment is driven through Windows Admin Center.
 
     ![Screenshot showing the available extensions tab of Settings](../media/azure-extended-network/installed-extensions.png)
 
-3. On the **Available extensions** tab, select **Azure Extended Network**, and then select **Install**.
+3. On the **Available extensions** tab, select **Extended network**, and then select **Install**.
 
     After a few seconds you should see a message indicating a successful installation.
 
@@ -100,19 +102,19 @@ Deployment is driven through Windows Admin Center.
 
 5. In Windows Admin Center, go to **All connections** > **Add** and then select **Add** in the **Windows Server** tile. Enter the server name (and credentials if required) for the on-premises virtual appliance.
 
-    ![Screenshot of Windows Admin Center showing the Azure Extended Network tool in Server Manager on the on-premises virtual appliance](../media/azure-extended-network/azure-extended-network.png).
+    ![Screenshot of Windows Admin Center showing the extended network tool in Server Manager on the on-premises virtual appliance](../media/azure-extended-network/azure-extended-network.png).
 
-6. Click on **Azure Extended Network** to begin. The first time you will be presented with an overview and a setup button:
+6. Click on **Extended network** to begin. The first time you will be presented with an overview and a setup button:
 
     ![Image](../media/azure-extended-network/azure-extended-network-intro.png)
 
-### Deploy Azure Extended Network
+### Deploy extended network for Azure
 
 1. Click **Set up** to begin the configuration.
 
 2. Click **Next** to proceed past the Overview.
 
-3. On the **Upload Package** panel, you will need to download the Azure Extended Network agent package and upload it to the virtual appliance. Follow the instructions on the panel.
+3. On the **Upload Package** panel, you will need to download the extended network for Azure agent package and upload it to the virtual appliance. Follow the instructions on the panel.
 
     > [!IMPORTANT]
     > Scroll down if necessary and click **Upload** before you click **Next: Extended-Network Setup**.
@@ -137,6 +139,9 @@ Deployment is driven through Windows Admin Center.
 
     ![Azure Network gateway](../media/azure-extended-network/azure-network-gateway.png)
 
+> [!NOTE]
+> The VM list for the Azure virtual appliance only includes Azure VMs that contain Windows Server 2022 Azure Edition.  If you do not see your VM in the list, make sure it is the Azure Edition and re-create if it is not. 
+
 9. After selecting the VM, you will also need to select the Azure Extended-Network Gateway Subnet CIDR. Then click **Next: Deploy**.
 
 10. Review the summary information then click **Deploy** to begin the deployment process. Deployment will take approximately 5-10 minutes. When deployment is complete, you will see the following panel for managing the extended IP addresses, and the status should say **OK**:
@@ -158,7 +163,7 @@ To extend an address
 
 3. Use the **Add** button to manually add an address. Addresses that you add that are on-premises will be reachable by the Azure Addresses that you add to the Azure Address list, and vice versa.
 
-4. Azure Extended Network scans the network to discover IP addresses, and populates the Suggestion lists based on this scan. To extend these addresses, you must use the dropdown list and select the checkbox next to the discovered address. Not all addresses will be discovered. Optionally, use the **Add** button to manually add addresses that are not discovered automatically.
+4. Extended network for Azure scans the network to discover IP addresses, and populates the Suggestion lists based on this scan. To extend these addresses, you must use the dropdown list and select the checkbox next to the discovered address. Not all addresses will be discovered. Optionally, use the **Add** button to manually add addresses that are not discovered automatically.
 
     ![Add ipv4 addresses panel with info](../media/azure-extended-network/add-ipv4-addresses-panel-filled.png)
 
@@ -166,13 +171,13 @@ To extend an address
 
     Your addresses are now extended. Use the Add IPv4 Addresses button to add additional addresses at any time. If an IP address is no longer in use at either end of the extended network, select the checkbox next to it and select Remove IPv4 Addresses.
 
-If you no longer want to use Azure Extended Network, click the **Remove Azure Extended-Network** button. This will uninstall the agent from the two virtual appliances and remove the extended IP addresses. The network will stop being extended. You will have to re-run the setup after removing it, if you want to start using the extended network again.
+If you no longer want to use extended network for Azure, click the **Remove Azure Extended-Network** button. This will uninstall the agent from the two virtual appliances and remove the extended IP addresses. The network will stop being extended. You will have to re-run the setup after removing it, if you want to start using the extended network again.
 
 ## Troubleshooting
 
-If you receive an error during the deployment of Azure Extended Network, use the following steps:
+If you receive an error during the deployment of extended network for Azure, use the following steps:
 
-1. Verify that both virtual appliances are using Windows Server 2019.
+1. Verify that the on-premises virtual appliances is using Windows Server 2019 or 2022.  Verify that the Azure virtual appliance is using Windows Server 2022 Azure Edition.
 
 2. Verify that you are not running Windows Admin Center on one of the virtual appliances. We recommend that you run Windows Admin Center from an on-premises network.
 
@@ -186,7 +191,7 @@ If you receive an error during the deployment of Azure Extended Network, use the
     Pktmon start –etw
     ```
 
-6. Run the Azure Extended Network configuration, then stop the trace:
+6. Run the extended network for Azure configuration, then stop the trace:
 
     ```powershell
     Pktmon stop
@@ -197,11 +202,11 @@ If you receive an error during the deployment of Azure Extended Network, use the
 
 ### Diagnosing the data path after initial configuration
 
-Once Azure Extended Network is configured, additional issues that you may encounter are typically due to firewalls blocking traffic, or MTU exceeded if the failure is intermittent.
+Once extended network for Azure is configured, additional issues that you may encounter are typically due to firewalls blocking traffic, or MTU exceeded if the failure is intermittent.
 
 1. Verify that both virtual appliances are up and running.
 
-2. Verify that the Azure Extended Network Agent is running on each of the virtual appliances:
+2. Verify that the extended network agent is running on each of the virtual appliances:
 
     ```powershell
     get-service extnwagent

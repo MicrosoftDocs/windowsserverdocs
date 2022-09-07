@@ -5,7 +5,7 @@ ms.date: 05/07/2016
 ms.topic: article
 ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -578,7 +578,7 @@ manager: mtillman
 ###  <a name="BKMK_12"></a> Move computer data and settings manually
   Windows Server Essentials and  Windows Server Essentials support user profile migration only for client computers that are running the Windows 7 operating system. When you connect a Windows 7-based computer to the server, the Connect Computer to the Server Wizard can automatically migrate the user profile.
 
- The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer. For information about using Windows Easy Transfer to transfer files and settings, see [article 2735227](https://support.microsoft.com/kb/2735227) in the Microsoft Knowledge Base.
+ The user profile cannot be transferred automatically when connecting a Windows 8,  Windows 8.1 or Windows 10 computer to the server. However, on a Windows 8 computer, you can use Windows Easy Transfer to transfer data and settings from the original local user to the domain-joined computer. To do that, you must be an Administrator on both the Windows 8 source computer and the Windows 8 destination computer.
 
 ###  <a name="BKMK_Transfer"></a> Transfer multiple user profiles during computer deployment
  Before you connect a computer running the Windows 7 or Windows 7 SP1 operating system to the Windows Server Essentials server, in order to transfer multiple local user profiles you must first create the corresponding network user accounts on the server. For more information about creating network user accounts, see [Add a user account](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage1).

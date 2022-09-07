@@ -4,7 +4,6 @@ description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.localizationpriority: medium
 ms.date: 06/07/2019
 ---
 # Windows Admin Center Known Issues
@@ -36,7 +35,7 @@ If you encounter an issue not described on this page, please [let us know](https
 
 - If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
 
-- There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
+- There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the third Party Software Notice.
 
 ### Extension Manager
 
@@ -45,19 +44,19 @@ If you encounter an issue not described on this page, please [let us know](https
 
 ## Partner extension issues
 
-- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. This API only works when the user is a gateway administrator and does not support non-admin use.
+- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. This API (e.g. NodeExtensionInstall) only works when the user is a gateway administrator and does not support non-admin use. 
 
 ## Browser Specific Issues
 
 ### Microsoft Edge
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
+- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
 
 ### Google Chrome
 
-- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the WebSockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
+- Prior to version 70 (released late October 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the WebSockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
 
-- Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
+- Chrome may pop up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
 
 - If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work.
 
@@ -65,11 +64,11 @@ If you encounter an issue not described on this page, please [let us know](https
 
 Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work.
 
-- Windows 10 Installation: Mozilla Firefox has it's own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
+- Windows 10 Installation: Mozilla Firefox has its own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
 
 ## WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service.
+Remote Desktop, PowerShell, Packet Monitoring, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service.
 
 ## Support for Windows Server versions before 2016 (2012 R2, 2012, 2008 R2)
 
@@ -97,7 +96,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Events
 
-- Events is effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
+- Events are effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
 
 - You may get an error that references “packet size” when exporting large log files.
 
@@ -109,13 +108,13 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### PowerShell
 
-- PowerShell is effected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
+- PowerShell is affected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
 
 - Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
 
 - Ctrl-C to copy does not work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
 
-- When you make the Windows Admin Center window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to it's previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
+- When you make the Windows Admin Center window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to its previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
 
 ### Registry Editor
 
@@ -131,11 +130,11 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- Remote Desktop is effected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
+- Remote Desktop is affected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
 
 - The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
 
-- To do any copy/paste within the remote session, you can copy as normal (right click + copy or Ctrl+C), but paste requires right click + paste (Ctrl+V does NOT work)
+- To do any copy/paste within the remote session, you can copy as normal (right-click + copy or Ctrl+C), but paste requires right-click + paste (Ctrl+V does NOT work)
 
 - You cannot send the following key commands to the remote session
   - Alt+Tab
@@ -174,7 +173,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - When managing the virtual machines on a Windows Server 2012 host, the in-browser VM connect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
 
-- Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
+- Azure Site Recovery – If Azure Site Recovery is set up on the host outside of Windows Admin Center, you will be unable to protect a VM from within Windows Admin Center [18972276]
 
 - Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
@@ -184,9 +183,9 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ## Computer Management Solution
 
-The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, as well as the following Computer Management solution specific issues:
+The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, and the following Computer Management solution-specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account [16568455]
+- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account. [16568455]
 
 - When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
 
@@ -194,7 +193,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 
   - To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
 
-  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
+  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please see how to [enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
 
 ## Cluster Deployment
 
@@ -217,51 +216,110 @@ Sometimes servers take longer than expected to restart after updates are install
 
 If you would like to restart the server manually, exit the current wizard session. After you have restarted the server, you may restart the wizard.
 
+### Stage 4 Storage
+In stage 4, an error can occur if a user has deleted a cluster and has not cleared the storage pools from the cluster. That means the storage pools that are on the system are locked by the old cluster object and only the user can manually clear them. 
+
+To clear the configuration, the user needs to run:
+
+1. On all nodes run: ```Clear-ClusterNode```
+2. Remove all previous storage pools, you can then run: 
+    ```PowerShell
+    get-storagepool
+    get-storagepool -IsPrimordial 0 | remove-storagepool
+    ```
+  > [!Note]
+  > If the storage pools are set as readonly which can sometimes happen if the cluster is improperly destroyed, then the user needs to first make sure the storage pools are changed to editable before removing. Run the following before the commands above: ```
+  Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false```
+
+To avoid this scenario in the first place, the user will need to run the following: 
+
+1. Remove virtual disk:
+    ```PowerShell
+    get-virtualdisk | Remove-VirtualDisk
+    ```
+2. Remove storage pools:
+    ```PowerShell
+    get-storagepool
+    get-storagepool -IsPrimordial 0 | remove-storagepool
+    ```
+3. Remove cluster resources:
+    ```PowerShell
+    Get-ClusterResource | ? ResourceType -eq "virtual machine" | Remove-ClusterResource
+    Get-ClusterResource | ? ResourceType -like "*virtual machine*" | Remove-ClusterResource
+    ```
+4. Cleaning up:
+    ```PowerShell
+    Remove-Cluster -CleanupAD
+    ```
+5. On all nodes run: 
+    ```PowerShell
+    Clear-ClusterNode
+    ```
+
 ### Stretch cluster creation
 It is recommended to use servers that are domain-joined when creating a stretch cluster. There is a network segmentation issue when trying to use workgroup machines for stretch cluster deployment due to WinRM limitations.
 
 ### Undo and start over
 When using same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) for instructions on how to clean up your cluster.
 
-### CredSSP
-The Windows Admin Center cluster deployment wizard uses CredSSP in several places. You run into this error message during the wizard (this occurs most frequently in the Validate cluster step):
+### CredSSP in cluster creation
+The Windows Admin Center cluster deployment wizard uses CredSSP in several places. You run into the error message **There was an error during the validation. Review error and try again** (this occurs most frequently in the Validate cluster step):
 
-![Screenshot of cluster create CredSSP error](../media/cluster-create-credssp-error.jpg)
+:::image type="content" source="../media/cluster-create-credssp-error.jpg" alt-text="Screenshot of cluster create CredSSP error.":::
 
 You can use the following steps to troubleshoot:
 
 1. Disable CredSSP settings on all nodes and the Windows Admin Center gateway machine. Run the first command on your gateway machine and the second command on all of the nodes in your cluster:
+   
+   ```PowerShell
+   Disable-WsmanCredSSP -Role Client
+   ```
+   
+   ```PowerShell
+   Disable-WsmanCredSSP -Role Server
+   ```
 
-```PowerShell
-Disable-WsmanCredSSP -Role Client
-```
-```PowerShell
-Disable-WsmanCredSSP -Role Server
-```
 2. Repair the trust on all nodes. Run the following command on all nodes:
-```PowerShell
-Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
-```
+   
+   ```PowerShell
+   Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
+   ```
 
-3. Reset group policy propagated data using the command
-```Command Line
-gpupdate /force
-```
+3. Reset group policy propagated data by running the following command on all nodes:
+   
+   ```Command Line
+   gpupdate /force
+   ```
 
-4. Reboot the nodes. After reboot, test the connectivity between your gateway machine and target nodes, as well as your connectivity between nodes, using the following command:
-```PowerShell
-Enter-PSSession -computername <node fqdn>
-```
+4. Reboot each nodes. After reboot, test the connectivity between your gateway machine and target nodes, as well as your connectivity between nodes, using the following command:
+   
+   ```PowerShell
+   Enter-PSSession -computername <node fqdn>
+   ```
+
+## CredSSP
+
+- The **Updates** tool will sometimes throws the CredSSP error **You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials**:
+
+    :::image type="content" source="../media/updates-tool-credssp-error.png" alt-text="Screenshot of Updates tool using Cluster-Aware Updating with Cred S S P error.":::
+
+    This error was widely seen when new clusters are created and then you try to access the **Updates** tool for these clusters in Windows Admin Center. This issue is fixed in Windows Admin Center v2110. [36734941]
+
+- The CredSSP session endpoint permission issue is an common CredSSP error that can be seen when Windows Admin Center runs on Windows client machines. This issue is widely seen when the user who is using Windows Admin Center is not the same user who installed Windows Admin Center on the client machine.
+
+    To mitigate this problem, we have introduced the Windows Admin Center CredSSP administrators' group. The user facing this problem should be added to this group and then relogin to the desktop computer running Windows Admin Center. Below is an image of what the error notification was before (left) and after (right) the modification:
+
+    :::image type="content" source="../media/notification-credssp-error.png" alt-text="A side by side comparison of the error notification for Cred S S P.":::
 
 ### Nested Virtualization
-When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below powershell command:
+When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below PowerShell command:
 
 ```PowerShell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
 ```
 
   > [!Note]
-  > For virtual switch teaming to be successful in a virtual machine environment, the following command needs to be run in PowerShell on the host soon after the virtual machines are created: Get-vm | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
+  > For virtual switch teaming to be successful in a virtual machine environment, the following command needs to be run in PowerShell on the host soon after the virtual machines are created: Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
 
 If you are a deploying a cluster using the Azure Stack HCI OS, there is an additional requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To do this, run the following command before creating the virtual machines:
 
@@ -291,13 +349,15 @@ The cluster deployment wizard in Windows Admin Center version 2007 does not prov
 ### Azure login and gateway registration
 In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
 
-* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure Portal](https://portal.azure.com/).  
+* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
 
 * If you successfully sign into Azure during gateway registration but do not see visual confirmation on the **Azure** page of your Windows Admin Center settings, try navigating to a different page in settings before navigating back to the **Azure** page. 
 
 * The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
 
-* If you have already given admin approval for Windows Admin Center in the Azure Portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
+* If you have already given admin approval for Windows Admin Center in the Azure portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
+   
+* If your proxy is mis-configured, then you may get the error message "Error: Value cannot be null. Parameter name: httpClientFactory." Please ensure that your proxy is configured correctly by going to **Settings** page. 
 
 ### Azure File Sync permissions
 
@@ -312,4 +372,4 @@ To update your Azure Active Directory app, you can do one of two things
 Azure management services including Azure Monitor, Azure Update Management, and Azure Security Center, use the same agent for an on-premises server: the Microsoft Monitoring Agent. Azure Update Management has a more limited set of supported regions and requires the Log Analytics workspace to be linked to an Azure Automation account. Because of this limitation, if you wish to set up multiple services in Windows Admin Center, you must set up Azure Update Management first, and then either Azure Security Center or Azure Monitor. If you've configured any Azure management services that use the Microsoft Monitoring Agent, and then try to set up Azure Update Management using Windows Admin Center, Windows Admin Center will only allow you to configure Azure Update Management if the existing resources linked to the Microsoft Monitoring Agent support Azure Update Management. If this is not the case you have two options:
 
 1. Go to the Control Panel > Microsoft Monitoring Agent to [disconnect your server from the existing Azure management solutions](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (like Azure Monitor or Azure Security Center). Then set up Azure Update Management in Windows Admin Center. After that, you can go back to set up your other Azure management solutions through Windows Admin Center without issues.
-2. You can [manually set up the Azure resources needed for Azure Update Management](/azure/automation/automation-update-management) and then [manually update the Microsoft Monitoring Agent](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) (outside of Windows Admin Center) to add the new workspace corresponding to the Update Management solution you wish to use.
+2. You can [manually set up the Azure resources needed for Azure Update Management](/azure/automation/update-management/overview) and then [manually update the Microsoft Monitoring Agent](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) (outside of Windows Admin Center) to add the new workspace corresponding to the Update Management solution you wish to use.

@@ -4,7 +4,6 @@ description: Learn about the new features in compute, identity, management, auto
 ms.topic: article
 author: greg-lindsay
 ms.author: greglin
-ms.localizationpriority: high
 ms.date: 05/07/2018
 ---
 

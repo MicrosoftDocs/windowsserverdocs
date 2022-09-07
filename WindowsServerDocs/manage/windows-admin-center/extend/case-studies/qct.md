@@ -5,13 +5,12 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/14/2019
-ms.localizationpriority: medium
 ---
 # QCT Management Suite Extension
 
 ## A simple path to server infrastructure management
 
-The QCT Management Suite extension for Windows Admin Center provides a single pane of glass dashboard for monitoring system configurations and managing server health of [QCT Azure Stack HCI certified systems](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-server-cloud-ready-appliances/windows-server-software-defined-solution-wssd/) : [QuantaGrid D52BQ-2U](https://www.qct.io/product/index/Server/rackmount-server/2U-Rackmount-Server/QuantaGrid-D52BQ-2U), [QuantaGrid D52T-1ULH](https://www.qct.io/product/index/Storage/Storage-Server/1U-Storage-Server/QuantaGrid-D52T-1ULH) and [QuantaPlex T21P-4U](https://www.qct.io/product/index/Storage/Storage-Server/4U-Storage-Server/QuantaPlex-T21P-4U).
+The QCT Management Suite extension for Windows Admin Center provides a single pane of glass dashboard for monitoring system configurations and managing server health of [QCT Azure Stack HCI certified systems](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-azure-stack-hci-solution/) : [QuantaGrid D52BQ-2U](https://www.qct.io/product/index/Server/rackmount-server/2U-Rackmount-Server/QuantaGrid-D52BQ-2U), [QuantaGrid D52T-1ULH](https://www.qct.io/product/index/Storage/Storage-Server/1U-Storage-Server/QuantaGrid-D52T-1ULH) and [QuantaPlex T21P-4U](https://www.qct.io/product/index/Storage/Storage-Server/4U-Storage-Server).
 
 Driven by customer pain points around existing monitoring and management, QCT provides exclusive, complementary features and functions, which includes an overview of system event logs, monitoring drivers, and hardware component health to enhance the overall management experience.
 

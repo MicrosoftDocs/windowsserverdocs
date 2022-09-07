@@ -5,8 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 10/26/2021
-ms.localizationpriority: medium
+ms.date: 09/07/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,14 +17,185 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2600        |1.2.1672                  |
-|Insider    |1.2.2600        |1.2.1672                  |
+|Public     |1.2.3495        |1.2.1672                  |
+|Insider    |1.2.3495        |1.2.1672                  |
+
+## Updates for version 1.2.3495
+
+Date published: 9/06/2022
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
+- Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
+- Fixed bugs.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - Fixed an issue that caused calls to disconnect when using a microphone with a high sample rate (192 kbps).
+
+## Updates for version 1.2.3401
+
+Date published: 8/02/2022
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51gy5), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51gy7), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51od9)
+
+- Fixed an issue where the narrator was announcing the Tenant Expander button as "on" or "off" instead of "expanded" or “collapsed."
+- Fixed an issue where the text size didn't change when the user adjusted the text size system setting.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+
+## Updates for version 1.2.3317
+
+*Date published: 7/12/2022*
+
+- Fixed the vulnerability known as [CVE-2022-30221](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30221).
+
+## Updates for version 1.2.3316
+
+*Date published: 7/06/2022*
+
+- Fixed an issue where the service couldn't render RemoteApp windows while RemoteFX Advanced Graphics were disabled.
+- Fixed an issue that happened when a user tried to connect to an Azure Virtual Desktop endpoint while using the Remote Desktop Services Transport Layer Security protocol (RDSTLS) with CredSSP disabled, which caused the Windows Desktop client to not prompt the user for credentials. Because the client couldn't authenticate, it would get stuck in an infinite loop of failed connection attempts.
+- Fixed an issue that happened when users tried to connect to an Azure Active Directory (Azure AD)-joined Azure Virtual Desktop endpoint from a client machine joined to the same Azure AD tenant while the Credential Security Support Provider protocol (CredSSP) was disabled.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - Better noise suppression during calls.
+  - A diagnostic overlay now appears when you press **Shift+Ctrl+Semicolon (;)** during calls. The diagnostic overlay only works with version 1.17.2205.23001 or later of the Remote Desktop WebRTC Redirector Service. You can download the latest version of the service [here](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YM8L).
+
+## Updates for version 1.2.3213
+
+*Date published: 6/02/2022*
+
+- Reduced flicker when application is restored to full-screen mode from minimized state in single-monitor configuration.
+- The client now shows an error message when the user tries to open a connection from the UI, but the connection doesn't launch.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - The new hardware encoding feature increases the video quality (resolution and framerate) of the outgoing camera during Teams calls. Because this feature uses the underlying hardware on the PC and not just software, we're being extra careful to ensure broad compatibility before turning the feature on by default for all users. Therefore, this feature is currently off by default. To get an early preview of the feature, you can enable it on your local machine by creating a registry key at **Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client\Default\AddIns\WebRTC Redirector\\(DWORD)UseHardwareEncoding** and setting it to **1**. To disable the feature, set the key to **0**.
+
+## Updates for version 1.2.3130
+
+*Date published: 05/10/2022*
+
+- Fixed the vulnerability known as [CVE-2022-22017](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22017).
+- Fixed the vulnerability known as [CVE-2022-26940](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26940).
+- Fixed the vulnerability known as [CVE-2022-22015](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22015).
+- Fixed an issue where the [Class Identifier (CLSID)-based registration of the dynamic virtual channel (DVC) plug-in](/windows/win32/termserv/dvc-plug-in-registration) wasn't working.
+
+## Updates for version 1.2.3128
+
+*Date published: 5/03/2022*
+
+- Improved Narrator application experience.
+- Accessibility improvements.
+- Fixed a regression that prevented subsequent connections after reconnecting to an existing session with the group policy object (GPO) "User Configuration\Administrative Templates\System\Ctrl+Alt+Del Options\Remove Lock Computer" enabled.
+- Added an error message for when a user selects a credential type for smart card or Windows Hello for Business but the required smart card redirection is disabled in the RDP file.
+- Improved diagnostic for User Data Protocol (UDP)-based Remote Desktop Protocol (RDP) transport protocols.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including updating the WebRTC stack from version M88 to M98. M98 provides better reliability and performances when making audio and video calls.
+
+## Updates for version 1.2.3004
+
+*Date published: 3/29/2022*
+
+- Fixed an issue where Narrator didn't announce grid or list views correctly.
+- Fixed an issue where the msrdc.exe process might take a long time to exit after closing the last Azure Virtual Desktop connection if customers have set a very short token expiration policy.
+- Updated the error message that appears when users are unable to subscribe to their feed.
+- Updated the disconnect dialog boxes that appear when the user locks their remote session or puts their local computer in sleep mode to be only informational.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- [Multimedia redirection for Azure Virtual Desktop (preview)](/azure/virtual-desktop/multimedia-redirection) now has an update that gives it more site and media control compatibility.
+- Improved connection reliability for Teams on Azure Virtual Desktop.
+
+## Updates for version 1.2.2927
+
+*Date published: 3/15/2022*
+
+Fixed an issue where the number pad didn't work on initial focus.
+
+## Updates for version 1.2.2925
+
+*Date published: 03/08/2022*
+
+- Fixed the vulnerability known as [CVE-2022-21990](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21990).
+- Fixed the vulnerability known as [CVE-2022-24503](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24503).
+- Fixed an issue where background updates could close active remote connections.
+
+## Updates for version 1.2.2924
+
+*Date published: 02/23/2022*
+
+- The Desktop client now supports Ctrl+Alt+arrow key keyboard shortcuts during desktop sessions.
+- Improved graphics performance with certain mouse types.
+- Fixed an issue that caused the client to randomly crash when something ends a RemoteApp connection.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - The background blur feature is rolling out this week for Windows endpoints.
+  - Fixed an issue that caused the screen to turn black during Teams video calls.
+
+## Updates for version 1.2.2860
+
+*Date published: 02/15/2022*
+
+- Improved stability of Azure Active Directory authentication.
+- Fixed an issue that was preventing users from opening multiple .RDP files from different host pools.
+
+## Updates for version 1.2.2851
+
+*Date published: 01/25/2022*
+
+- Fixed an issue that caused a redirected camera to give incorrect error codes when camera access was restricted in the Privacy settings on the client device. This update should give accurate error messages in apps using the redirected camera.
+- Fixed an issue where the Azure Active Directory credential prompt appeared in the wrong monitor.
+- Fixed an issue where the background refresh and update tasks were repeatedly registered with the task scheduler, which caused the background and update task times to change without user input.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+    - In September 2021 we released a preview of our GPU render path optimizations but defaulted them off. After extensive testing, we've now enabled them by default. These GPU render path optimizations reduce endpoint-to-endpoint latency and solve some performance issues. You can manually disable these optimizations by setting the registry key **HKEY_CURRENT_USER \SOFTWARE\Microsoft\Terminal Server Client\IsSwapChainRenderingEnabled** to **00000000**.
+
+## Updates for version 1.2.2691
+
+*Date published: 01/12/2022*
+
+- Fixed the vulnerability known as [CVE-2019-0887](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-0887).
+- Fixed the vulnerability known as [CVE-2022-21850](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21850).
+- Fixed the vulnerability known as [CVE-2022-21851](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21851).
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+
+## Updates for version 1.2.2688
+
+*Date published: 12/09/2021*
+
+- Fixed an issue where some users were unable to subscribe using the "subscribe with URL" option after updating to version 1.2.2687.0.
+
+## Updates for version 1.2.2687
+
+*Date published: 12/02/2021*
+
+- Improved manual refresh functionality to acquire new user tokens, which ensures the service can accurately update user access to resources.
+- Fixed an issue where the service sometimes pasted empty frames when a user tried to copy an image from a remotely running Internet Explorer browser to a locally running Word document.
+- Fixed the vulnerability known as [CVE-2021-38665](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38665).
+- Fixed the vulnerability known as [CVE-2021-38666](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38666).
+- Fixed the vulnerability known as [CVE-2021-1669](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1669).
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed a usability issue where the Windows Desktop client would sometimes prompt for a password (Azure Active Directory prompt) after the device went into sleep mode.
+- Fixed an issue where the client didn't automatically expand and display interactive sign-in messages set by admins when a user signs in to their virtual machine.
+- Fixed a reliability issue that appeared in version 1.2.2686 where the client stopped responding when users tried to launch new connections.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+   - The notification volume level on the client device is now the same as the host device.
+   - Fixed an issue where the device volume was low in Azure Virtual Desktop sessions
+   - Fixed a multi-monitor screen sharing issue where screen sharing didn't appear correctly when moving from one monitor to the other.
+   - Resolved a black screen issue that caused screen sharing to incorrectly show a black screen sometimes.
+   - Increased the reliability of the camera stack when resizing the Teams app or turning the camera on or off.
+   - Fixed a memory leak that caused issues like high memory usage or video freezing when reconnecting with Azure Virtual Desktop.
+   - Fixed an issue that caused Remote Desktop connections to stop responding.
+
+## Updates for version 1.2.2606
+
+*Date published: 11/9/2021*
+
+- Fixed the vulnerability known as [CVE-2021-38665](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38665).
+- Fixed the vulnerability known as [CVE-2021-38666](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38666).
+- Fixed an issue where the service sometimes pasted empty frames when a user tried to copy an image from a remotely running Internet Explorer browser to a locally running Word document.
 
 ## Updates for version 1.2.2600
 
 *Date published: 10/26/2021*
-
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Updates to Teams for Azure Virtual Desktop, including improvements to camera performance during video calls.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
@@ -33,8 +203,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.2459
 
 *Date published: 09/28/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWLBme), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWLQYT), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWLE7z)
 
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Fixed an issue that caused the client to prompt for credentials a second time after closing a credential prompt window while subscribing.
@@ -124,7 +292,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
-- Fixed an issue where the client sometimes didn't send EventHub and Diagnostics events.
+- Fixed an issue where the client sometimes didn't send Event Hubs and Diagnostics events.
 - Updates to Teams on Azure Virtual Desktop, including:
   - Improved audio and video sync performance and added hardware accelerated decode that decreases CPU utilization on the client.
   - Addressed the most prevalent causes of black screen issues when a user joins a call or meeting with their video turned on, when a user performs screen sharing, and when a user toggles their camera on and off.

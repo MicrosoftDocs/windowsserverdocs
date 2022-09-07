@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 03/29/2021
-ms.localizationpriority: medium
 ---
 # What's new in the Microsoft Store client
 

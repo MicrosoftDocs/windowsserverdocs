@@ -1,5 +1,62 @@
+items:
 - name: Docs
   href: /
   items:
     - name: Windows Server
       href: /windows-server/
+      
+### For linking to Azure Stack HCI topic and keeping the context in Windows Server TOC      
+- name: Windows Server
+  tocHref: /azure-stack/
+  topicHref: /windows-server/index
+  items:
+  - name: Failover Clustering              # Original doc set name
+    tocHref: /azure-stack/hci/             # Destination doc set route
+    topicHref: /windows-server/failover-clustering/failover-clustering-overview      # Original doc set route
+    items:
+    - name: Manage                         # Destination doc set name
+      tocHref: /azure-stack/hci/manage/      # Destination doc set route
+      topicHref: /windows-server/failover-clustering/cluster-aware-updating    # Original doc set route
+- name: Windows Server
+  tocHref: /azure-stack/
+  topicHref: /windows-server/index
+  items:
+  - name: Storage
+    tocHref: /azure-stack/hci/concepts/
+    topicHref: /windows-server/storage/storage
+- name: Windows Server
+  tocHref: /azure-stack/
+  topicHref: /windows-server/index
+  items:
+  - name: Networking
+    tocHref: /azure-stack/hci/
+    topicHref: /windows-server/networking/index
+    items:
+    - name: SDN
+      tocHref: /azure-stack/hci/manage/
+      topicHref: /windows-server/networking/sdn/index
+      
+
+### For linking to Azure topic and keeping the context in Windows Server TOC      
+- name: Windows Server
+  tocHref: /azure/
+  topicHref: /windows-server/index
+  items:
+  - name: Management                       # Original doc set name
+    tocHref: /azure/azure-arc/             # Destination doc set route
+    topicHref: /windows-server/administration/      # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /system-center/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/virtual-machines/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/automanage/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/security/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/virtual-network/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route

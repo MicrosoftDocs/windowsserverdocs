@@ -4,7 +4,6 @@ description: Windows Admin Center Common Troubleshooting Steps (Project Honolulu
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.localizationpriority: medium
 ms.date: 01/15/2021
 ---
 # Troubleshooting Windows Admin Center
@@ -117,22 +116,24 @@ These three tools require the websocket protocol, which is commonly blocked by p
 ## Using Windows Admin Center in a workgroup
 
 ### What account are you using?
+
 Make sure the credentials you are using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you are using a local user account that is **not the built-in administrator account**, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
 ```cmd
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
 ```
+
 ### Are you connecting to a workgroup machine on a different subnet?
 
 To connect to a workgroup machine that is not on the same subnet as the gateway, make sure the firewall port for WinRM (TCP 5985) allows inbound traffic on the target machine. You can run the following command in PowerShell or at a Command Prompt as Administrator on the target machine to create this firewall rule:
 
-- **Windows Server**
+* **Windows Server**
 
     ```powershell
     Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any
     ```
 
-- **Windows 10**
+* **Windows 10**
 
     ```powershell
     Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
@@ -193,23 +194,25 @@ netsh http delete urlacl url=https://+:443/
 
 ## Azure features don't work properly in Edge
 
-Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding https://login.microsoftonline.com, https://login.live.com and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser.
+Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding `https://login.microsoftonline.com`, `https://login.live.com` and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser.
 
 To do this:
+
 1. Search for **Internet Options** in the Windows Start Menu
 2. Go to the **Security** tab
-3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
+3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as `https://login.microsoftonline.com` and `https://login.live.com`.
 4. Go to the **Pop-up Blocker** settings in Microsoft Edge via edge://settings/content/popups?search=pop-up
-5. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com to the **Allow list**.
+5. You'll need to add your gateway URL as well as `https://login.microsoftonline.com` and `https://login.live.com` to the **Allow list**.
 
 ## Having an issue with an Azure-related feature?
 
 Please send us an email at wacFeedbackAzure@microsoft.com with the following information:
+
 * General issue information from the [questions listed below](#providing-feedback-on-issues).
 * Describe your issue and the steps you took to reproduce the issue.
 * Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
 * Is your Azure account associated with multiple directories/tenants?
-    * If yes: When registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure?
+  * If yes: When registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure?
 * Does your Azure account have access to multiple subscriptions?
 * Does the subscription you were using have billing attached?
 * Were you logged in to multiple Azure accounts when you encountered the issue?
@@ -217,24 +220,38 @@ Please send us an email at wacFeedbackAzure@microsoft.com with the following inf
 * Is the machine you are trying to manage an Azure VM?
 * Is Windows Admin Center installed on an Azure VM?
 
+## Collecting HAR files
+
+A HTTP Archive Format (HAR) file is a log of a web browser's interaction with a site. This information is crucial for troubleshooting and debugging.
+To collect a HAR file in Microsoft Edge or Google Chrome, please follow the steps below:
+
+1. Press **F12** to open Developer Tools window, and then click the **Network** tab. 
+2. Select the **Clear** icon to clean up network log.
+3. Click to select the **Preserve Log** check box.
+4. Reproduce the issue.
+5. After reproducing the issue, click on **Export HAR**.
+6. Specify where to save the log and click **Save**.
+
+    ![The points users have to click on to collect a HAR file are displayed and highlighted based on the numbered bullets.](../media/collect-har.PNG)
+
 ## Providing feedback on issues
 
 Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperience and look for any errors or warnings.
 
-File a bug on our [UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5BBug%5D) that describes your issue.
+File a bug on [GitHub](https://aka.ms/wacfeedback) that describes your issue.
 
 Please include any errors or warning you find in the event log, as well as the following information:
 
 * Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
-    * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center:
-    * Are you using the self-signed certificate created by the installer?
-    * If you are using your own certificate, does the subject name match the machine?
-    * If you are using your own certificate, does it specify an alternate subject name?
+  * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center:
+  * Are you using the self-signed certificate created by the installer?
+  * If you are using your own certificate, does the subject name match the machine?
+  * If you are using your own certificate, does it specify an alternate subject name?
 * Did you install with the default port setting?
-    * If not, which port did you specify?
+  * If not, which port did you specify?
 * Is the machine where Windows Admin Center is **installed** joined to a domain?
 * Windows [version](#check-the-windows-version) where Windows Admin Center is **installed**:
 * Is the machine that you are **trying to manage** joined to a domain?
 * Windows [version](#check-the-windows-version) of the machine that you are **trying to manage**:
 * What browser are you using?
-    * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
+  * If you are using Google Chrome, what is the version? (Help > About Google Chrome)

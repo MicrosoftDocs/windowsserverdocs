@@ -39,7 +39,7 @@ You can use the following documentation to deploy SDN scenarios with Windows Ser
 
 -   [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 
-For more information, see [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md).
+For more information, see [Software Defined Networking &#40;SDN&#41;](/azure-stack/hci/concepts/software-defined-networking).
 
 #### <a name="bkmk_netc"></a>Network Controller scenarios
 
@@ -158,8 +158,6 @@ The NIC Teaming scenarios allow you to:
 
 > [!NOTE]
 > In Windows Server 2016, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`
-
-For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md).
 
 ### <a name="bkmk_set"></a>Switch Embedded Teaming \(SET\) scenarios
 

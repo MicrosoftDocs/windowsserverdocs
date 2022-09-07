@@ -5,7 +5,6 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
 ms.author: artemp
-ms.localizationpriority: medium
 ms.date: 05/07/2018
 ms.topic: conceptual
 ---

@@ -3,7 +3,7 @@ title: Beginning your General Data Protection Regulation (GDPR) journey for Wind
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
 ms.topic: article
 ms.date: 09/25/2017
-ms.author: nirb
+ms.author: wscontent
 author: nirb-ms
 ---
 
@@ -99,7 +99,7 @@ Two key principles have guided and continue to guide the development of Windows:
 
 - **Privacy.** Users should be in control of how their data is used. Policies for information use should be clear to the user. Users should be in control of when and if they receive information to make best use of their time. It should be easy for users to specify appropriate use of their information including controlling the use of email they send.
 
-Microsoft has remained steadfast against these principles as recently noted by Microsoft's CEO, Satya Nadella,
+Microsoft supports these principles as recently noted by Microsoft's CEO, Satya Nadella,
 
 > “_As the world continues to change and business requirements evolve, some things are consistent: a customer's demand for security and privacy._”
 
@@ -298,7 +298,7 @@ One way to improve protection in virtualized environments is to segment the netw
 ### Other GDPR considerations for servers
 The GDPR includes explicit requirements for breach notification where a personal data breach means, “_a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed._”  Obviously, you can't begin to move forward to meet the stringent GDPR notification requirements within 72 hours if you cannot detect the breach in the first place.
 
-As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](https://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
+As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](/events/build-2016/b890)
 
 > “_Unlike pre-breach, post-breach assumes a breach has already occurred – acting as a flight recorder and Crime Scene Investigator (CSI). Post-breach provides security teams the information and toolset needed to identify, investigate, and respond to attacks that otherwise will stay undetected and below the radar._”
 
@@ -343,19 +343,34 @@ You can use ATA to help detect attackers attempting to compromise privileged ide
 
 ## Related content for associated Windows Server 2016 solutions
 
-- **Windows Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10
+- **Windows Defender Antivirus:**
 
-- **Windows Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection
+  - [Windows Defender Antivirus (YouTube video)](https://www.youtube.com/watch?v=P1aNEy09NaI)
+  - [Microsoft Defender Antivirus in Windows](/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10)
 
-- **Windows Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide
+- **Windows Defender Advanced Threat Protection:**
 
-- **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
+- [An overview of Windows Defender Advanced Threat Protection for Windows 10 Creators Update (YouTube video)](https://www.youtube.com/watch?v=qxeGa3pxIwg)
+- [Onboard Windows servers to the Microsoft Defender for Endpoint service](/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection)
 
-- **Control Flow Guard:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
+- **Windows Defender Device Guard:**
 
-- **Security and Assurance:** https://docs.microsoft.com/windows-server/security/security-and-assurance
+- [Windows Defender Device Guard (YouTube video)](https://www.youtube.com/watch?v=F-pTkesjkhI)
+- [Deploying Windows Defender Application Control (WDAC) policies](/windows/device-security/device-guard/device-guard-deployment-guide)
+
+- **Windows Defender Credential Guard:** [Windows Defender Credential Guard (YouTube video)](https://www.youtube.com/watch?v=F-pTkesjkhI)
+- [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard)
+
+- **Control Flow Guard:**
+
+  - [Control Flow Guard for platform security](/windows/win32/secbp/control-flow-guard)
+
+- **Security and Assurance:**
+
+- [Windows Server Security documentation](/windows-server/security/security-and-assurance)
 
 ## Disclaimer
+
 This article is a commentary on the GDPR, as Microsoft interprets it, as of the date of publication. We've spent a lot of time with GDPR and like to think we've been thoughtful about its intent and meaning. But the application of GDPR is highly fact-specific, and not all aspects and interpretations of GDPR are well-settled.
 
 As a result, this article is provided for informational purposes only and should not be relied upon as legal advice or to determine how GDPR might apply to you and your organization. We encourage you to work with a legally-qualified professional to discuss GDPR, how it applies specifically to your organization, and how best to ensure compliance.

@@ -58,6 +58,6 @@ After the modifying write, region B is still shared by both files. Note that if 
 
 -   [ReFS overview](refs-overview.md)
 -   [ReFS integrity streams](integrity-streams.md)
--   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 -   [DUPLICATE_EXTENTS_DATA](/windows/win32/api/winioctl/ns-winioctl-duplicate_extents_data)
 -   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](/windows/win32/api/winioctl/ni-winioctl-fsctl_duplicate_extents_to_file)

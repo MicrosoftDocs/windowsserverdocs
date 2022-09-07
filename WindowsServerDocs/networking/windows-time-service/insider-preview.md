@@ -3,7 +3,7 @@ title: Insider preview for Windows Time Service features in Windows Server 2019
 description: New Windows Time Service features in Windows Server 2019
 author: dahavey
 ms.author: dahavey
-ms.date: 10/14/2021
+ms.date: 11/04/2021
 ms.topic: article
 ---
 
@@ -12,7 +12,7 @@ ms.topic: article
 
 ## Leap second support
 
->Applies to: Windows Server 2022, Windows Server 2019 and Windows 10, version 1809, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019 and Windows 10, version 1809, Azure Stack HCI, versions 21H2 and 20H2
 
 A leap second is an occasional 1-second adjustment to UTC. As the earth's rotation slows, [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (an atomic timescale) diverges from [mean solar time](https://en.wikipedia.org/wiki/Solar_time#Mean_solar_time) or astronomical time. Once UTC has diverged by at most .9 seconds, a [leap second](https://en.wikipedia.org/wiki/Leap_second) is inserted to keep UTC in-sync with mean solar time.
 

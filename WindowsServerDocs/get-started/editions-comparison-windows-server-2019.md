@@ -7,7 +7,6 @@ ms.author: jgerend
 manager: femila
 ms.date: 8/16/2021
 ms.prod: windows-server
-ms.localizationpriority: medium
 ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 ---
 
@@ -38,7 +37,6 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
 |Work Folders|Yes|Yes|
@@ -68,8 +66,8 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Active Directory Certificate Services| |Yes|Yes|
 |Active Directory Domain Services| |Yes|Yes|
 |Active Directory Federation Services| |Yes|Yes|
-|AD Lightweight Directory Services| |Yes|Yes|
-|AD Rights Management Services| |Yes|Yes|
+|Active Directory Lightweight Directory Services| |Yes|Yes|
+|Active Directory Rights Management Services| |Yes|Yes|
 |Device Health Attestation| |Yes|Yes|
 |DHCP Server| |Yes|Yes|
 |DNS Server| |Yes|Yes|
@@ -96,7 +94,6 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
 |Windows Deployment Services| |Yes*|Yes*|
-|Windows Server Essentials Experience| |No | No |
 |Windows Server Update Services| |Yes|Yes|
 
 *WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the Semi-Annual Channel starting with Windows Server, version 1803)
@@ -122,7 +119,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |I/O Quality of Service|Yes|Yes|
 |IIS Hostable Web Core|Yes|Yes|
 |Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|IPAM Server|Yes|Yes|
+|IP Address Management (IPAM) Server|Yes|Yes|
 |iSNS Server service|Yes|Yes|
 |LPR Port Monitor|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Management OData IIS Extension|Yes|Yes|
@@ -133,36 +130,41 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Network Load Balancing|Yes|Yes|
 |Peer Name Resolution Protocol|Yes|Yes|
 |Quality Windows Audio Video Experience|Yes|Yes|
-|RAS Connection Manager Administration Kit|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|RAS Connection Manager Administration Kit (CMAK)|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Remote Assistance|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Remote Differential Compression|Yes|Yes|
-|RSAT|Yes|Yes|
+|Remote Server Administration Tools (RSAT)|Yes|Yes|
 |RPC over HTTP Proxy|Yes|Yes|
 |Setup and Boot Event Collection|Yes|Yes|
 |Simple TCP/IP Services|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|SMB 1.0/CIFS File Sharing Support|Installed|Installed|
+|SMB 1.0/CIFS File Sharing Support|Yes|Yes|
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
 |Software Load Balancer|Yes|Yes|
+|Storage Migration Service|Yes|Yes|
+|Storage Migration Service Proxy|Yes|Yes|
 |Storage Replica|Yes|Yes|
+|System Data Archiver|Yes|Yes|
+|System Insights|Yes|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |VM Shielding Tools for Fabric Management|Yes|Yes|
 |WebDAV Redirector|Yes|Yes|
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|Windows Defender features|Installed|Installed|
+|Windows Defender Antivirus|Yes|Yes|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Internal Database|Yes|Yes|
-|Windows PowerShell|Installed|Installed|
+|Windows PowerShell|Yes|Yes|
 |Windows Process Activation Service|Yes|Yes|
 |Windows Search Service|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Server Backup|Yes|Yes|
 |Windows Server Migration Tools|Yes|Yes|
 |Windows Standards-Based Storage Management|Yes|Yes|
+|Windows Subsystem for Linux|Yes|Yes|
 |Windows TIFF IFilter|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |WinRM IIS Extension|Yes|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 support|Installed|Installed|
+|WoW64 Support|Yes|Yes|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|

@@ -24,12 +24,12 @@ TLS and SSL assume that a connection-oriented transport, typically TCP, is in us
 
 -   Message forgery
 
-The TLS and SSL protocols can be divided into two layers. The first layer consists of the application protocol and the three handshaking protocols: the handshake protocol, the change cipher spec protocol, and the alert protocol. The second layer is the record protocol. The following image illustrates the various layers and their elements.
+The TLS and SSL protocols can be divided into two layers. The first layer consists of the application protocol and the three handshaking protocols: the handshake protocol, the change cipher spec protocol, and the alert protocol. The second layer is the record protocol.
 
 **TLS and SSL protocol layers**
 
 
-The Schannel SSP implements the TLS and SSL protocols without modification. The SSL protocol is proprietary, but the Internet Engineering Task Force produces the public TLS specifications. For information about which TLS or SSL version is supported in Windows versions, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). The following table lists the specifications for each TLS version. Each specification contains information about:
+The Schannel SSP implements the TLS and SSL protocols without modification. The SSL protocol is proprietary, but the Internet Engineering Task Force produces the public TLS specifications. For information about which TLS or SSL version is supported in Windows versions, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). Each specification contains information about:
 
 -   The TLS Record Protocol
 
@@ -65,12 +65,12 @@ For information about stateless TLS session resumption, see the IETF document [R
 ## <a name="BKMK_AppProtocolNego"></a>Application protocol negotiation
  Windows Server 2012 R2  and Windows 8.1 introduced support that allows client-side TLS application protocol negotiation. Applications can leverage protocols as part of the HTTP 2.0 standard development, and users can access online services such as Google and Twitter by using apps running the SPDY protocol.
 
-For information about how application protocol negotiation works, see [Transport Layer Security (TLS) Application Layer Protocol Negotiation Extension](http://tools.ietf.org/search/draft-ietf-tls-applayerprotoneg-05).
+For information about how application protocol negotiation works, see [Transport Layer Security (TLS) Application Layer Protocol Negotiation Extension](https://datatracker.ietf.org/doc/html/rfc7301).
 
 ## <a name="BKMK_SNI"></a>TLS support for Server Name Indication extensions
 The Server Name Indication (SNI) feature extends the SSL and TLS protocols to allow proper identification of the server when numerous virtual images are running on a single server. In a virtual hosting scenario, several domains (each with its own potentially distinct certificate) are hosted on one server. In this case, the server has no way of knowing beforehand which certificate to send to the client. SNI allows the client to inform the target domain earlier in the protocol, and this allows the server to correctly select the proper certificate.
 
-This additional functionality:
+This provides the following additional functionality:
 
 -   Allows you to host multiple SSL websites on a single Internet Protocol and port combination
 

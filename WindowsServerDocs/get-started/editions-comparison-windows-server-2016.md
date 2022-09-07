@@ -8,7 +8,6 @@ manager: femila
 ms.date: 08/16/2021
 ms.prod: windows-server
 ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
-ms.localizationpriority: medium
 ---
 
 # Comparison of Standard and Datacenter editions of Windows Server 2016
@@ -38,7 +37,6 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| **Can be host or guest** |
 |Work Folders|Yes|Yes|
@@ -68,8 +66,8 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | Active Directory Certificate Services|              | Yes                          | Yes                            |
 | Active Directory Domain Services    |               | Yes                          | Yes                            |
 | Active Directory Federation Services|               | Yes                          | Yes                            |
-| AD Lightweight Directory Services| |Yes|Yes|
-| AD Rights Management Services| |Yes|Yes|
+| Active Directory Lightweight Directory Services| |Yes|Yes|
+| Active Directory Rights Management Services| |Yes|Yes|
 | Device Health Attestation| |Yes|Yes|
 | DHCP Server| |Yes|Yes|
 | DNS Server| |Yes|Yes|
@@ -139,7 +137,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |RPC over HTTP Proxy|Yes|Yes|
 |Setup and Boot Event Collection|Yes|Yes|
 |Simple TCP/IP Services|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|SMB 1.0/CIFS File Sharing Support|Installed|Installed|
+|SMB 1.0/CIFS File Sharing Support|Yes|Yes|
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
@@ -150,10 +148,10 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |VM Shielding Tools for Fabric Management|Yes|Yes|
 |WebDAV Redirector|Yes|Yes|
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|Windows Defender features|Installed|Installed|
+|Windows Defender features|Yes|Yes|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Internal Database|Yes|Yes|
-|Windows PowerShell|Installed|Installed|
+|Windows PowerShell|Yes|Yes|
 |Windows Process Activation Service|Yes|Yes|
 |Windows Search Service|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Server Backup|Yes|Yes|
@@ -163,5 +161,5 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |WinRM IIS Extension|Yes|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 support|Installed|Installed|
+|WoW64 support|Yes|Yes|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|

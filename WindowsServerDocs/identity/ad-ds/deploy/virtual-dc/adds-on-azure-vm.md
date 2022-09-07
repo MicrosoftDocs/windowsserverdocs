@@ -4,7 +4,7 @@ description: How to create a new Active Directory forest on a virtual machine (V
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 04/11/2019
+ms.date: 6/28/2022
 ms.topic: article
 ---
 
@@ -15,14 +15,14 @@ AD DS can run on an Azure virtual machine (VM) in the same way it runs in many o
 ## Components
 
 * A resource group to put everything in.
-* An [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview.md), subnet, network security group, and rule to allow RDP access to VMs.
-* An Azure virtual machine [availability set](/azure/virtual-machines/windows/regions-and-availability#availability-sets) to put two Active Directory Domain Services (AD DS) domain controllers in.
+* An [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview), subnet, network security group, and rule to allow RDP access to VMs.
+* An Azure virtual machine [availability set](/azure/virtual-machines/availability-set-overview) to put two Active Directory Domain Services (AD DS) domain controllers in.
 * Two Azure virtual machines to run AD DS and DNS.
 
 ### Items that are not covered
 
-* [Creating a site-to-site VPN connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) from an on-premises location
-* [Securing network traffic in Azure](/azure/security/azure-security-network-security-best-practices.md)
+* [Creating a site-to-site VPN connection](/azure/vpn-gateway/tutorial-site-to-site-portal) from an on-premises location
+* [Securing network traffic in Azure](/azure/security/azure-security-network-security-best-practices)
 * [Designing the site topology](../../plan/designing-the-site-topology.md)
 * [Planning operations master role placement](../../plan/planning-operations-master-role-placement.md)
 * [Deploying Azure AD Connect to synchronize identities to Azure AD](/azure/active-directory/hybrid/how-to-connect-install-express)
@@ -149,7 +149,7 @@ az vm create \
 
 If the Azure virtual machines created as part of this process will be an extension of an existing on-premises Active Directory infrastructure, the DNS settings on the virtual network must be changed to include your on-premises DNS servers before deployment. This step is important to allow the newly created Domain Controllers in Azure to resolve on-premises resources and allow for replication to occur. More information about DNS, Azure, and how to configure settings can be found in the section [Name resolution that uses your own DNS server](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
 
-After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. VMs continue to use their current DNS settings until they are restarted. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
 Information about extending an on-premises network to Azure can be found in the article [Creating a site-to-site VPN connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal).
 

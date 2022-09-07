@@ -7,7 +7,6 @@ ms.author: jgerend
 manager: femila
 ms.date: 08/13/2021
 ms.prod: windows-server
-ms.localizationpriority: high
 ---
 
 # What's new in Windows Server 2019
@@ -46,7 +45,7 @@ This optional feature on demand is available on a separate ISO and can be added 
 
 ATP's deep platform sensors and response actions expose memory and kernel level attacks and respond by suppressing malicious files and terminating malicious processes.
 
-- For more information about Windows Defender ATP, see [Overview of Windows Defender ATP capabilities](/windows/security/threat-protection/windows-defender-atp/overview).
+- For more information about Windows Defender ATP, see [Overview of Windows Defender ATP capabilities](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
 
 - For more information on onboarding servers, see [Onboard servers to Windows Defender ATP service](/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
 

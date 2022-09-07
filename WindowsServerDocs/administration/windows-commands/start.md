@@ -16,7 +16,7 @@ Starts a separate Command Prompt window to run a specified program or command.
 ## Syntax
 
 ```
-start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <hexaffinity>] [/wait] [/elevate] [/b] [<command> [<parameter>... ] | <program> [<parameter>... ]]
+start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/node <NUMA node>] [/affinity <hexaffinity>] [/wait] [/b] [<command> [<parameter>... ] | <program> [<parameter>... ]]
 ```
 
 ### Parameters
@@ -29,9 +29,9 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 | `{/min | /max}` | Specifies to minimize (**/min**) or maximize (**/max**) the new **Command Prompt** window. |
 | `{/separate | /shared}` | Starts 16-bit programs in a separate memory space (**/separate**) or shared memory space (**/shared**). These options are not supported on 64-bit platforms. |
 | `{/low | /normal | /high | /realtime | /abovenormal | belownormal}` | Starts an application in the specified priority class. |
+| /node `<NUMA node>` | Specifies the preferred Non-Uniform Memory Architecture (NUMA) node as a decimal integer. |
 | /affinity `<hexaffinity>` | Applies the specified processor affinity mask (expressed as a hexadecimal number) to the new application. |
 | /wait | Starts an application and waits for it to end. |
-| /elevate | Runs application as administrator. |
 | /b | Starts an application without opening a new **Command Prompt** window. CTRL+C handling is ignored unless the application enables CTRL+C processing. Use CTRL+BREAK to interrupt the application. |
 | `[<command> [<parameter>... ] | <program> [<parameter>... ]]` | Specifies the command or program to start. |
 | `<parameter>` | Specifies parameters to pass to either the command or the program. |
@@ -45,7 +45,7 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
 - If you run a 32-bit graphical user interface (GUI) application, **cmd** does not wait for the application to quit before returning to the command prompt. This behavior does not occur if you run the application from a command script.
 
-- If you run a command that uses a first token that does not contain an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:
+- If you run a command that uses a first token that is not a command or the file path to an existing file with an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:
 
   ```
   .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC

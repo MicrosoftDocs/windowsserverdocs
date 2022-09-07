@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
-ms.localizationpriority: medium
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 
@@ -13,7 +12,7 @@ ms.localizationpriority: medium
 
 ## What is Hyper-Converged Infrastructure
 
-Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md), [Software Defined Networking](../../../networking/sdn/software-defined-networking.md) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
+Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview), [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
@@ -163,7 +162,7 @@ Although Windows Admin Center offers powerful and convenient integration with th
 
 ## Things to try
 
-If you're just getting started, here are some quick tutorials to help you learn how Windows Admin Center for Hyper-Converged Infrastructure is organized and works. Please exercise good judgement and be careful with production environments. These videos were recorded with Windows Admin Center version 1804 and an Insider Preview build of Windows Server 2019.
+If you're just getting started, here are some quick tutorials to help you learn how Windows Admin Center for Hyper-Converged Infrastructure is organized and works. Please exercise good judgment and be careful with production environments. These videos were recorded with Windows Admin Center version 1804 and an Insider Preview build of Windows Server 2019.
 
 ### Manage Storage Spaces Direct volumes
 
@@ -214,12 +213,12 @@ If you're just getting started, here are some quick tutorials to help you learn 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
 2. At the top of the Virtual Machines tool, choose the **Inventory** tab, then click **New** to create a new virtual machine.
 3. Enter the virtual machine name and choose between generation 1 and 2 virtual machines.
-4. Uou can then choose which host to initially create the virtual machine on or use the recommended host.
+4. You can then choose which host to initially create the virtual machine on or use the recommended host.
 5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\[virtual machine name]` path of the selected volume or path.
 6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
 7. Click **Create** to create the virtual machine.
 8. Once the virtual machine is created and appears in the virtual machine list, you can start the virtual machine.
-9. Once the virtual machine is started, you can connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, click **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
+9. Once the virtual machine is started, you can connect to the virtual machine's console via "VMConnect" to install the operating system. Select the virtual machine from the list, click **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
 
 [Learn more about virtual machine management with Windows Admin Center](manage-virtual-machines.md).
 
@@ -251,7 +250,7 @@ If you're just getting started, here are some quick tutorials to help you learn 
 2. Click **New** to create a new virtual network and subnets, or choose an existing virtual network and click **Settings** to modify its configuration.
 3. Click an existing virtual network to view VM connections to the virtual network subnets and access control lists applied to virtual network subnets.
 
-![Manage virtual networks](../media/manage-hyper-converged/manage-virtual-networks.png)
+![Here is a screenshot of how you can manage your virtual networks.](../media/manage-hyper-converged/manage-virtual-networks.png)
 
 ### Connect a virtual machine to a virtual network (SDN-enabled HCI clusters using Windows Admin Center Preview)
 
@@ -261,26 +260,40 @@ If you're just getting started, here are some quick tutorials to help you learn 
 
 You can also configure the virtual network when creating a virtual machine.
 
-![Connect a virtual machine to a virtual network](../media/manage-hyper-converged/connect-vm-to-virtual-network.png)
+![Here is a screenshot of how you can onnect a virtual machine to a virtual network.](../media/manage-hyper-converged/connect-vm-to-virtual-network.png)
 
 ### Monitor Software Defined Networking infrastructure (SDN-enabled HCI clusters using Windows Admin Center Preview)
 
 1. Select **SDN Monitoring** from the navigation on the left side.
 2. View detailed information about the health of Network Controller, Software Load Balancer, Virtual Gateway and monitor your Virtual Gateway Pool, Public and Private IP Pool usage and SDN host status.
 
-![Monitor SDN infrastructure](../media/manage-hyper-converged/sdn-monitoring.png)
+![Here is a screenshot of how you can monitor your SDN infrastructure.](../media/manage-hyper-converged/sdn-monitoring.png)
+
+### GPU management 
+
+1. Select **GPUs** from the navigation on the left side. 
+2. View the available GPUs from your clustered VMs and provide GPU acceleration to workloads running in the clustered VMs through Discrete Device Assignment (DDA). [Learn more about using GPUs with clustered VMs.](https://aka.ms/useGPUWithClusteredVM)
+
+[![Here is a screenshot of how you can manage your GPUs.](../media/manage-hyper-converged/gpu-tool.png)](../media/manage-hyper-converged/gpu-tool.png#lightbox)
+
+### Security tool
+
+1. Select **Security** from the navigation on the left side. 
+2. Select the **Secured-core** tab and enable or disable the available security features. 
+
+[![Here is a screenshot of how you can check the security of your resources.](../media/manage-hyper-converged/security-tool.png)](../media/manage-hyper-converged/security-tool.png#lightbox)
 
 ## Give us feedback
 
 It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
 
-- [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
+- [Submit ideas for feature requests and provide feedback](https://aka.ms/wacfeedback)
 - [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Tweet to `@servermgmt`
 
 ### Additional References
 
 - [Windows Admin Center](../overview.md)
-- [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md)
-- [Software Defined Networking](../../../networking/sdn/software-defined-networking.md)
+- [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking)

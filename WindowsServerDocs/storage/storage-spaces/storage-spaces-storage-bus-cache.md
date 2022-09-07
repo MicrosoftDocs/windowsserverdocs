@@ -13,7 +13,7 @@ ms.custom: template-tutorial #Required; leave this attribute/value as-is.
 
 >Applies to: Windows Server 2022
 
-The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its [implementation for Storage Spaces Direct](understand-the-cache.md), this feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. By default, only a portion of the faster media tier is reserved for the cache.
+The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its [implementation for Storage Spaces Direct](/azure-stack/hci/concepts/cache), this feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. By default, only a portion of the faster media tier is reserved for the cache.
 
 |Resiliency  |Cache type  |
 |---------|---------|
@@ -45,6 +45,9 @@ In this tutorial, you learn about:
 - Your server has an all flash configuration; or
 - You server is a member of a Failover Cluster
 
+> [!NOTE]
+> This feature requires your server to have the Failover Clustering feature installed but your server cannot be a part of a Failover Cluster.
+
 ## Feature overview
 
 This section explains what each configurable field of the storage bus cache is and applicable values.
@@ -73,7 +76,7 @@ Enabled                        : False
 This field determines if the entire faster media tier or only a portion of it will be used for caching. This field cannot be modified after enabling the storage bus cache.
 
 - Shared (default): The cache will only take up a portion of the faster media tier. The exact percentage is configurable by the Shared Cache Percentage field below.
-- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the [storage bus cache in Storage Spaces Direct](understand-the-cache.md).
+- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the [storage bus cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache).
 
 ### Shared cache percentage
 
@@ -167,7 +170,7 @@ Now the storage bus cache has been successfully enabled, the next step is to cre
 The PowerShell cmdlet below creates a 1TiB mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
 ```PowerShell
-New-Volume –FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
+New-Volume –FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -StorageTierFriendlyNames MirrorOnSSD, ParityOnHDD -StorageTierSizes 200GB, 800GB
 ```
 
 ### Volumes without resiliency:
@@ -206,3 +209,19 @@ Get-StorageBusBinding
 In the example below, the first column lists out capacity drives and the third column lists out the cache drives that they are bound to. Follow the instructions in Adding or replacing cache drives to balance, the existing cache will not be preserved.
 
 :::image type="content" source="media/storage-bus-cache/get-storagebusbinding.png" alt-text="Output of Get-StorageBusBinding":::
+
+## Storage bus cache FAQ
+This section answers frequently asked questions about the storage bus cache on Windows Server 2022
+
+### Why does the Failover Clustering feature need to be installed when the server is not a part of a Failover Cluster?
+This feature is designed for standalone servers but built on top of the storage bus layer (SBL) cache for Storage Spaces Direct. The Failover Clustering feature needs to be installed as clustering components are needed.
+
+### Will the storage bus cache work with an all flash configuration? 
+No, this feature will only work when there are two media types, one of which must be HDD. This will not work with RAID, SAN, or all flash systems.
+
+### How can the storage bus cache settings be change? 
+See example below for changing the Provision mode from Shared (default) to Cache. Note that default settings are recommended and any changes should be made before the storage bus cache is enabled.
+
+```PowerShell
+Set-StorageBusCache -ProvisionMode Cache
+```

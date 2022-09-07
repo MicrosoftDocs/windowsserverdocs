@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 06/30/2021
+ms.date: 11/02/2021
 ---
 
 # Manage certificates for Software Defined Networking
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2019 or 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
 
@@ -51,7 +51,7 @@ When you create self\-signed certificates, you can use the following guidelines.
 
 #### Multiple node
 
-You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 
@@ -67,7 +67,7 @@ New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryp
 
 #### Single node
 
-You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 

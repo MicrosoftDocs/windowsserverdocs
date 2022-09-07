@@ -62,7 +62,7 @@ The WID synchronization process also supports incremental transfers for more eff
 > [!NOTE]
 > The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.
 
-### How to managed the AD FS synchronization properties
+### How to manage the AD FS synchronization properties
 This Section describes how to view and edit the AD FS configuration database synchronization properties.
 .
 
@@ -99,10 +99,10 @@ This command changes an AD FS server in a WID farm from secondary to primary.
 PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
 ```
 
-This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly. 
+This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary server. Not doing so may result in not all the secondary AD FS servers syncing properly. 
 Note: The primary server must be accessible via HTTP on port 80 from the secondary server.
 
-For more information see: [Set-AdfsSyncProperties](/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+For more information see: [Set-AdfsSyncProperties](/powershell/module/adfs/set-adfssyncproperties)
 
 
 ## Using SQL Server to store the AD FS configuration database

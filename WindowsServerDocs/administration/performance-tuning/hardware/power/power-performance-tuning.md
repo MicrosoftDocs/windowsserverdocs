@@ -13,7 +13,7 @@ Energy efficiency is increasingly important in enterprise and data center enviro
 
 This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server.
 
-## Choosing the turning metrics
+## Choosing the tuning metrics
 
 When you tune your server for energy savings, you must also consider performance. Tuning affects performance and power, sometimes in disproportionate amounts. For each possible adjustment, consider your power budget and performance goals to determine whether the trade-off is acceptable.
 
@@ -57,7 +57,7 @@ You need to thoroughly understand your workload requirements to choose an optima
 
 Shortened timer tick rates, drivers that lack power management support, and excessive CPU utilization are a few of the behavioral issues that are detected by the **powercfg /energy** command. This tool provides a simple way to identify and fix power management issues, potentially resulting in significant cost savings in a large datacenter.
 
-For more info about PowerCfg.exe, see [Powercfg command-line options](https://docs.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options).
+For more info about PowerCfg.exe, see [Powercfg command-line options](/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
 ## Using power plans in Windows Server
 
@@ -72,7 +72,7 @@ Windows Server 2016 has three built-in power plans designed to meet different s
 
 These power plans exist in Windows for alternating current (AC) and direct current (DC) powered systems, but we will assume that servers are always using an AC power source.
 
-For more info on power plans and power policy configurations, see [Powercfg command-line options](https://docs.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options).
+For more info on power plans and power policy configurations, see [Powercfg command-line options](/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
 > [!Note]
 > Some server manufactures have their own power management options available through the BIOS settings. If the operating system does not have control over the power management, changing the power plans in Windows will not affect system power and performance.
@@ -81,7 +81,7 @@ For more info on power plans and power policy configurations, see [Powercfg comm
 
 Each power plan represents a combination of numerous underlying power management parameters. The built-in plans are three collections of recommended settings that cover a wide variety of workloads and scenarios. However, we recognize that these plans will not meet every customer's needs.
 
-The following sections describe ways to tune some specific processor power management parameters to meet goals not addressed by the three built-in plans. If you need to understand a wider array of power parameters, see [Powercfg command-line options](https://docs.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options).
+The following sections describe ways to tune some specific processor power management parameters to meet goals not addressed by the three built-in plans. If you need to understand a wider array of power parameters, see [Powercfg command-line options](/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
 ## Intel Hardware Controlled P-states (HWP) 
 Starting from Intel Broadwell processors running WS2016, Windows PPM uses Intel’s Hardware Controlled P-states (HWP). HWP is a new capability for a cooperative hardware and software performance control. When HWP is enabled, CPU monitors activity and scalability, and selects frequency at hardware time scale. OS is no longer required to monitor activity and select frequency at regular intervals. Switching to HWP has several benefits:

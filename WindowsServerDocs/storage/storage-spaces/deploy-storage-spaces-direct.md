@@ -1,19 +1,18 @@
 ---
-title: Deploy Storage Spaces Direct
-manager: eldenc
-ms.author: stevenek
+title: Deploy Storage Spaces Direct on Windows Server
+manager: femil
+ms.author: inhenkel
 ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 12/09/2020
+ms.date: 11/16/2021
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
-ms.localizationpriority: medium
 ---
-# Deploy Storage Spaces Direct
+# Deploy Storage Spaces Direct on Windows Server
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
 > Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://aka.ms/azurestackhcicatalog).
@@ -27,7 +26,7 @@ Review the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-H
 
 Gather the following information:
 
-- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](storage-spaces-direct-overview.md#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
+- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](/azure-stack/hci/concepts/storage-spaces-direct-overview#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
 
 - **Server names.** Get familiar with your organization's naming policies for computers, files, paths, and other resources. You'll need to provision several servers, each with unique names.
 
@@ -111,7 +110,7 @@ The next step is to install server roles on every server. You can do this by usi
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet. You can use it on a single server like this:
 
 ```PowerShell
 Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
@@ -252,7 +251,7 @@ When this command is finished, which may take several minutes, the system will b
 
 We recommend using the `New-Volume` cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
+For more information, check out [Creating volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes).
 
 ### Step 3.7: Optionally enable the CSV cache
 
@@ -273,7 +272,7 @@ $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
 
-For more info, see [Using the CSV in-memory read cache](csv-cache.md).
+For more info, see [Using the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache).
 
 ### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
@@ -353,8 +352,7 @@ To create file shares by using PowerShell scripts, do the following:
 
     # Start of the script itself
     CD $ScriptFolder
-    Get-ClusterSharedVolume -Cluster $StorageClusterName | ForEach-Object
-    {
+    Get-ClusterSharedVolume -Cluster $StorageClusterName | ForEach-Object {
         $ShareName = $SharePrefix + $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume")
         Write-host "Creating share $ShareName on "$_.name "on Volume: " $_.SharedVolumeInfo.friendlyvolumename
         .\FileShareSetup.ps1 -HyperVClusterName $StorageClusterName -CSVVolumeNumber $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume") -ScaleOutFSName $SOFSName -ShareName $ShareName -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName
@@ -374,15 +372,11 @@ CD $ScriptFolder
 .\KCDSetup.ps1 -HyperVClusterName $HyperVClusterName -ScaleOutFSName $ScaleOutFSName -EnableLM
 ```
 
-## Next steps
-
-After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11)).
-
 ## Additional References
 
--   [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
--   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
--   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
--   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
+-   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+-   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
+-   [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
+-   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 -   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

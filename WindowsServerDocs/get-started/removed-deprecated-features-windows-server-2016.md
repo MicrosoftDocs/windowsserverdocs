@@ -8,12 +8,11 @@ manager: femila
 ms.date: 8/16/2021
 ms.prod: windows-server
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
-ms.localizationpriority: medium
 ---
 
 # Features Removed or Deprecated in  Windows Server 2016
 
-Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option. Here are the details about the features and functionalities that we removed in Windows Server 2022.
+Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option. Here are the details about the features and functionalities that we removed in Windows Server 2016.
 
 > [!TIP]
 >
@@ -23,7 +22,7 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 ## Features we've removed in this release
 
-We're removing the following features and functionalities from the installed product image in Windows Server 2019. Applications or code that depend on these features won't function in this release unless you use an alternate method.
+We're removing the following features and functionalities from the installed product image in Windows Server 2016. Applications or code that depend on these features won't function in this release unless you use an alternate method.
 
 > [!NOTE]
 > If you are moving to Windows Server 2016 from a server release prior to Windows Server 2012 R2 or Windows Server 2012, you should also review [Features Removed or Deprecated in Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)) and [Features Removed or Deprecated in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831568(v=ws.11)).

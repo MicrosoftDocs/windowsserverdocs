@@ -6,7 +6,6 @@ ms.date: 04/10/2017
 ms.topic: article
 author: lizap
 manager: dongill
-ms.localizationpriority: medium
 ---
 # Deploy your Remote Desktop environment
 
@@ -32,7 +31,7 @@ If you are using virtual machines for any of the Remote Desktop Services servers
     2.  Select the virtual machine where the RD license server will be installed (for example, Contoso-Cb1).
     3.  Click **Next**, and then click **Add**.
 4.  Activate the RD License Server and add it to the License Servers group:
-    1.  In Server Manager, click **Tools > Terminal Services > Remote Desktop Licensing Manager**.
+    1.  In Server Manager, click **Remote Desktop Services > Servers**. Right-click the server with the Remote Desktop Licensing role installed and select **RD Licensing Manager**.
     2.  In RD Licensing Manager, select the server, and then click **Action > Activate Server**.
     3.  Accept the default values in the Activate Server Wizard. Continue accepting default values until you reach the **Company information** page. Then, enter your company information.
     4.  Accept the defaults for the remaining pages until the final page. Clear **Start Install Licenses Wizard now**, and then click **Finish**.

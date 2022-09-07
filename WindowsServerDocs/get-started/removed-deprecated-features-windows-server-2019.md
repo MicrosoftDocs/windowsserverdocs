@@ -7,7 +7,6 @@ ms.author: jgerend
 manager: femila
 ms.date: 8/16/2021
 ms.prod: windows-server
-ms.localizationpriority: medium
 ---
 
 # Features removed or no longer developed starting with Windows Server 2019

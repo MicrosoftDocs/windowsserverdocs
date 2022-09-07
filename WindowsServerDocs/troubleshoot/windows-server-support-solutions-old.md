@@ -15,7 +15,7 @@ Microsoft regularly releases both updates and solutions for Windows Server. To e
 These are the top Microsoft Support solutions for the most common issues experienced when using Windows Server 2016. The links below include links to KB articles, updates, and library articles.
 
 >[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
 ## Solutions for installing or upgrading Windows Server
 

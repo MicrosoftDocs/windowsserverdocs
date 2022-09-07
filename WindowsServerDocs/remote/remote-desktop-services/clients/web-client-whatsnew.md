@@ -5,8 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/26/2021
-ms.localizationpriority: medium
+ms.date: 03/24/2022
 ---
 # What's new in the web client
 
@@ -14,6 +13,24 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 > [!NOTE]
 > We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Azure Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+
+## Updates for version 1.0.27.0
+
+*Date published: March 24, 2022*
+
+- Added Web client keyboard shortcuts for switching between programs. For more information, see [Keyboard shortcuts](remote-desktop-web-client.md#web-client-keyboard-shortcuts).
+- The client now supports native resolution on high-DPI devices. For more information, see [Enable native display resolution in remote sessions](remote-desktop-web-client.md#enable-native-display-resolution-in-remote-sessions).
+- Updated full screen mode icon behavior to disable the icon when you press the F11 key to enter full screen mode.  
+- Removed support for Internet Explorer and other deprecated browsers.  
+- Fixed an issue where some keys weren’t working correctly on the Japanese keyboard layout.
+- Bug fixes and security improvements for file transfer.
+
+## Updates for version 1.0.26.0
+
+*Date published: December 12th, 2021*
+
+- Bug fixes.
+- This is the final version of the client that supports Internet Explorer 11 and WinXP.
 
 ## Updates for version 1.0.25.0
 

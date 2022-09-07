@@ -22,16 +22,16 @@ In the Windows operating systems designated in the Applies To list at the beginn
 
 - Disable RC4 support for Kerberos on all domain controllers. This requires a minimum of a Windows Server 2008 domain functional level and an environment where all Kerberos clients, application servers, and trust relationships to and from the domain must support AES. Support for AES was introduced in Windows Server 2008 and Windows Vista.
 
-    [!NOTE]
-    There is a known issue with disabling RC4 which can cause the system to restart. See the following hotfixes:
-    - [Windows Server 2012 R2](https://support.microsoft.com/kb/3038261)
-    - [Windows Server 2012](https://support.microsoft.com/kb/3086213)
-    - No hotfix is available for earlier versions of Windows Server
+    > [!NOTE]
+    > There is a known issue with disabling RC4 which can cause the system to restart. See the following hotfixes:
+    > - [Windows Server 2012 R2](https://support.microsoft.com/kb/3038261)
+    > - [Windows Server 2012](https://support.microsoft.com/kb/3086213)
+    > - No hotfix is available for earlier versions of Windows Server
 
 - Deploy domains set to Windows Server 2012 R2 domain functional level or higher, and configure users as members of the Protected Users security group. Because this feature disrupts more than just RC4 usage in the Kerberos protocol, see resources in the following [See also](#see-also) section.
 
 ## See Also
 
-- For information about how to prevent the usage of the RC4 encryption type in Windows Server 2012 R2 domains, see [Protected Users Security Group](/../credentials-protection-and-management/protected-users-security-group.md), and [How to Configure Protected Accounts](/../credentials-protection-and-management/how-to-configure-protected-accounts.md).
+- For information about how to prevent the usage of the RC4 encryption type in Windows Server 2012 R2 domains, see [Protected Users Security Group](../credentials-protection-and-management/protected-users-security-group.md).
 
-- For explanations about RFC 4120 and RFC 4757, see [IETF Documents](http://tools.ietf.org/html/).
+- For explanations about RFC 4120 and RFC 4757, see [IETF Documents](https://tools.ietf.org/).

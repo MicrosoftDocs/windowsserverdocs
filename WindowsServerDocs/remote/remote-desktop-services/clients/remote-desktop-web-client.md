@@ -2,10 +2,9 @@
 title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
 ms.author: helohr
-ms.date: 04/20/2021
+ms.date: 07/01/2022
 ms.topic: article
 author: Heidilohr
-ms.localizationpriority: medium
 ---
 # Get started with the web client
 
@@ -16,17 +15,13 @@ The Remote Desktop web client lets you use a compatible web browser to access yo
 
 ## What you'll need to use the web client
 
-* For the web client, you'll need a PC running Windows, macOS, ChromeOS, or Linux. Mobile devices are not supported at this time.
-* A modern browser like Microsoft Edge, Internet Explorer 11, Google Chrome, Safari, or Mozilla Firefox (v55.0 and later).
+* For the web client, you'll need a PC running Windows, macOS, ChromeOS, or Linux. Mobile devices aren't supported at this time.
+* A modern browser like Microsoft Edge, Google Chrome, Apple Safari, or Mozilla Firefox (v55.0 and later).
 * The URL your admin sent you.
-
->[!NOTE]
->The Internet Explorer version of the web client does not have audio at this time.
->Safari may display a gray screen if the browser is resized or enters fullscreen multiple times.
 
 ## Start using the Remote Desktop client
 
-To sign in to the client, go to the URL your admin sent you. At the sign in page, enter your domain and user name in the format ```DOMAIN\username```, enter your password, and then select **Sign in**.
+To sign in to the client, go to the URL your admin sent you. At the sign-in page, enter your domain and user name in the format ```DOMAIN\username```, enter your password, and then select **Sign in**.
 
 >[!NOTE]
 >By signing in to the web client, you agree that your PC complies with your organization's security policy.
@@ -44,7 +39,9 @@ The following table describes alternate key combinations to inject standard Wind
 |Shortcut key |Description |
 |-------------|------------|
 |(Windows) Ctrl+Alt+End</br>(MacOS) fn+control+option+delete|Inject Ctrl+Alt+Del in the remote session.|
-|Alt+F3       |Injects Windows key in the remote session.|    
+|Alt+F3       |Injects Windows key in the remote session.|
+|Alt+Page up|Switches between programs from left to right in the remote session. (Windows shortcut is Alt+Tab.)|
+|Alt+Page down|Switches between programs from right to left in the remote session. (Windows shortcut is Alt+Shift+Tab.) |
 
 ## Printing from the Remote Desktop web client
 
@@ -71,8 +68,9 @@ To download files from the remote session to your local computer:
 
 1. Connect to the remote session.
 2. Open the file explorer in your remote session.
-3. Copy the files you want to download to **Remote Desktop Virtual Drive** > **Downloads**.
-4. Your files will be downloaded to your local default downloads folder.
+3. Copy the file or files you want to download to **Remote Desktop Virtual Drive** > **Downloads**.
+4. A prompt will ask if you want to download the file or files you selected. At this point, you can confirm the download by selecting **Confirm** or cancel it by selecting **Cancel**. If you don't want to see this prompt every time you download files from the current browser, select the check box labeled **Don’t ask me again on this browser** before confirming.
+5. Your files will be downloaded to your local default downloads folder.
 
 ## Copy and paste from the Remote Desktop web client
 
@@ -89,10 +87,36 @@ To enable IME input using the web client:
 3. In the drop-down menu, select the keyboard you want to use in the remote session.
 4. Connect to the remote session.
 
-The web client will suppress the local IME window when you are focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window.
+The web client will suppress the local IME window when you're focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window.
 
 >[!NOTE]
 >If the language pack isn't installed on the host virtual machine, the remote session will default to the English (United States) keyboard.
+
+## Enable native display resolution in remote sessions
+
+The web client supports using native display resolution during remote sessions. In sessions running on a high-DPI display, native resolution can provide higher-fidelity graphics and improved text clarity.
+
+>[!NOTE]
+>Enabling native display resolution with a high-DPI display may cause increased CPU or network usage.
+
+Native resolution is set to off by default. To turn native resolution on:
+
+1. In your session, go to the upper-right corner of the taskbar and select **Settings**.
+2. Set **Enable native display resolution** to **On**.
+
+## Open resources in your installed Azure Virtual Desktop client
+
+The web client supports opening resources in your installed Azure Virtual Desktop client instead of the browser by downloading the Remote Desktop Protocol (RDP) file. To learn how to install a Remote Desktop client, check out [Remote Desktop clients](remote-desktop-clients.md).
+
+>[!NOTE]
+>RDP files have a limited lifespan. We recommend you download the RDP file every time you need to use a resource
+
+To download the RDP file:
+
+1. In the web client, go to the upper-right corner of the taskbar and select **the settings (gear) icon**.
+2. Under **Resource Launch method**, select **Download the RDP file**.
+3. Select the resource you want to open (for example, Excel) to download the RDP file.
+4. Once the download is finished, select the downloaded RDP file to open the resource.
 
 ## Get help with the web client
 

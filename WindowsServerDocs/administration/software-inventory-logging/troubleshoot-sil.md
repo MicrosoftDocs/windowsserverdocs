@@ -16,11 +16,11 @@ ms.date: 10/16/2017
 
 Before you start troubleshooting SIL, you should have a good understanding of its components and how it works. The following videos give an overview of SIL and SIL Aggregator, and how to use them to forward and report inventory data:
 
-1. [An Introduction to Software Inventory Logging (SIL) (10:57)](https://channel9.msdn.com/Blogs/Regular-IT-Guy/An-Introduction-to-Software-Inventory-Logging-SIL)
+1. An Introduction to Software Inventory Logging (SIL) (10:57)
 
-2. [Software Inventory Logging: Setting Up SIL Aggregator (14:34)](https://channel9.msdn.com/Blogs/windowsserver/Software-Inventory-Logging-Setting-up-SIL-Aggregator)
+2. Software Inventory Logging: Setting Up SIL Aggregator (14:34)
 
-3. [Software Inventory Logging: Enabling SIL Forwarding (7:20)](https://channel9.msdn.com/Blogs/windowsserver/Software-Inventory-Logging-Enabling-SIL-Forwarding)
+3. Software Inventory Logging: Enabling SIL Forwarding (7:20)
 
 ## How SIL data flow works
 

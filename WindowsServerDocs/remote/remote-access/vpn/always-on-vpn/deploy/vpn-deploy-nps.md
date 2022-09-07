@@ -2,8 +2,7 @@
 title: Install and Configure the NPS Server
 description: NPS server processing of connection requests that are sent by the VPN server verifies that the user has permission to connect, the user's identity, and logs the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 ms.topic: article
-ms.localizationpriority: medium
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ms.date: 08/30/2018
 ---

@@ -4,9 +4,8 @@ description: Provides information about the KMS service, and suggests tools and 
 ms.topic: troubleshooting
 ms.date: 9/24/2019
 author: Teresa-Motiv
-ms.author: v-tea
+ms.author: wscontent
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # Guidelines for troubleshooting the Key Management Service (KMS)

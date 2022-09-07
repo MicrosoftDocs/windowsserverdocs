@@ -7,9 +7,8 @@ metadata:
   ms.author:  billmath
   manager: mtillman
   ms.date: 11/02/2020
-  ms.topic: article
+  ms.topic: faq
   ms.prod: windows-server
-    
 title: Frequently asked questions (FAQ) about AD FS
 summary: This article provides answers to frequently asked questions about Active Directory Federation Services (AD FS). It's divided into sections that are based on the type of question.
 
@@ -432,4 +431,4 @@ sections:
            - You have a mixed-mode farm. 
            - AD FS 2019 provides the farm max behavior level information to the primary federation server and isn't recognized by federation server version 2016. 
           
-           AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](https://docs.microsoft.com/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).
+           AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).

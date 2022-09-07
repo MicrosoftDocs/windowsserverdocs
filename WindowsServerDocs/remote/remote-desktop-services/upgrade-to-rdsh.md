@@ -10,13 +10,13 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Session Host to Windows Server 2016
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2016
 
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.
 
 ## Supported OS upgrades with RDS role installed
-Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016 TP5.
+Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2.
 
 ## Upgrading a RDS session-based collection
 In order to keep the down-time to a minimum, it is best to follow the steps below while upgrading a RDS session-based collection:

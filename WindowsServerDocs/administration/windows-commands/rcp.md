@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 >[!IMPORTANT]
 > This command has been deprecated.
 
-You can install the subsystem for UNIX-based Applications using the **Add Features Wizard**. For more information and the download files, see [Utilities and SDK for Subsystem for UNIX-based Applications in Microsoft Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=2391).
+You can install the subsystem for UNIX-based Applications using the **Add Features Wizard**. For more information and the download files. <!-- see [Utilities and SDK for Subsystem for UNIX-based Applications in Microsoft Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=2391).-->
 
 After installation, you can then open a C Shell (csh or tcsh) or KornShell command window and run **rcp**. For more information, type **man rcp** at the C Shell or KornShell prompt.
 

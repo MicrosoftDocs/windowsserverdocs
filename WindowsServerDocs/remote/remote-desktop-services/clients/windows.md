@@ -7,11 +7,10 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 09/17/2020
-ms.localizationpriority: medium
 ---
 # Get started with the Microsoft Store Client
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 11, and Windows 10
 
 You can use the Remote Desktop client for Windows to work with Windows apps and PCs remotely from a different Windows device.
 
@@ -204,4 +203,4 @@ You can also give us feedback by selecting the ellipsis button (**...**) in the 
 > ![A screenshot showing the ellipsis button highlighted in red. A drop-down menu has opened beneath the button, and the "Feedback" option is also highlighted in red.](../media/ellipsis-icon.png)
 
 >[!NOTE]
->To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/feedback).

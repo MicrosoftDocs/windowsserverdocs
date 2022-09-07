@@ -64,7 +64,7 @@ To set up a Cloud Witness as a quorum witness for your cluster, complete the fol
 
 This section describes how to create a storage account and view and copy endpoint URLs and access keys for that account.
 
-To configure Cloud Witness, you must have a valid Azure Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.
+To configure Cloud Witness, you must have a valid Azure general purpose Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.
 
 When you use the same Azure Storage Account for configuring Cloud Witness for multiple different clusters, a single **msft-cloud-witness** container gets created automatically. This container will contain one-blob file per cluster.
 
@@ -98,10 +98,10 @@ In the Azure portal, navigate to your storage account, click **All settings** an
 
 When you create a Storage Account, the following URLs are generated using the format: `https://<Storage Account Name>.<Storage Type>.<Endpoint>`
 
-Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different endpoint as per your scenario (for example the Microsoft Azure datacenter in China has a different endpoint).
+Cloud Witness always uses **Blob** as the file storage type in a general purpose storage account. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different endpoint as per your scenario (for example the Microsoft Azure datacenter in China has a different endpoint).
 
 > [!NOTE]
-> The endpoint URL is generated automatically by Cloud Witness resource and there is no extra step of configuration necessary for the URL.
+> The endpoint URL is generated automatically by the Cloud Witness resource. Make sure that port 443 is open in your firewalls and that `*.core.windows.net` is included in any firewall allow lists you're using between the cluster and Azure Storage.
 
 #### To view and copy endpoint URL links
 
@@ -175,7 +175,7 @@ When configuring a Cloud Witness as a quorum witness for your Failover Cluster, 
 
 ### Proxy considerations with Cloud Witness
 
-Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy.
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy. Azure uses **.core.windows.net** as the Endpoint. You need to ensure that it is included in any firewall allow lists you're using between the cluster and Azure Storage.
 
 ## See Also
 

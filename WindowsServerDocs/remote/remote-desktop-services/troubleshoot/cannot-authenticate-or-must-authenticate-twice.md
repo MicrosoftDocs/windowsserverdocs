@@ -7,7 +7,6 @@ author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
-ms.localizationpriority: medium
 ---
 
 # User can't authenticate or must authenticate twice

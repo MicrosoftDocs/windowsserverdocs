@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 26cb2992-1250-4672-98ee-8b870baa45d5
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -13,7 +13,7 @@ manager: mtillman
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-To create and customize an image of  Windows Server Essentials, you use many of the tools in the [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248647), but there are some important differences between the Windows 8 ADK and the  Windows Server Essentials ADK.
+To create and customize an image of Windows Server Essentials, you use many of the tools in the [Windows Assessment and Deployment Kit (Windows ADK)](/windows-hardware/get-started/adk-install), but there are some important differences between the Windows ADK and the Windows Server Essentials ADK.
 
  You should be aware of the following important differences:
 

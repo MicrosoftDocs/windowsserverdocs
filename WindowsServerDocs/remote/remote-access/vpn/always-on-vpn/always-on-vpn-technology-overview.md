@@ -3,9 +3,8 @@ title: Always On VPN Technology Overview
 description: 'This page provies a brief overview of the Always On VPN technologies with links to detailed documents. '
 ms.topic: article
 ms.date: 11/05/2018
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ---
 
 

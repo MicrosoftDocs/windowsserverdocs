@@ -7,7 +7,6 @@ ms.author: jgerend
 manager: femila
 ms.date: 08/13/2021
 ms.prod: windows-server
-ms.localizationpriority: medium
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -79,7 +78,7 @@ The latest version of Web Application Proxy focuses on new features that enable 
 
 The [Management and Automation area](../administration/manage-windows-server.yml) focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.
 
-Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](/powershell/wmf/5.1/scenarios-features) for details.
+Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.1#new-scenarios-and-features-in-wmf-51) for details.
 
 New additions for Windows Server 2016 include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.
 
@@ -153,7 +152,7 @@ Control Flow Guard (CFG) is a platform security feature that was created to comb
 
 Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies the deployment and management of software-defined storage systems and unlocks use of new classes of disk devices, such as SATA SSD and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.
 
-For more info, see [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md).
+For more info, see [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview).
 
 ### Storage Replica
 

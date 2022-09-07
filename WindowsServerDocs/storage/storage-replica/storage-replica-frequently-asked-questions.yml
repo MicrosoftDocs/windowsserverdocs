@@ -4,12 +4,11 @@ metadata:
   title: Frequently asked questions about Storage Replica
   manager: siroy
   ms.author: nedpyle
-  ms.topic: article
+  ms.topic: faq
   author: nedpyle
   ms.date: 04/15/2020
   ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
   ms.prod: windows-server
-    
 title: Frequently asked questions about Storage Replica
 summary: |
   >Applies to: Windows Server 2019, Windows Server 2016
@@ -155,7 +154,7 @@ sections:
       - question: |
           How can I reduce time for initial synchronization?
         answer: |
-          You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including non-clustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs.
+          You can use thin-provisioned storage as one way to speed up initial sync times. Storage Replica queries for and automatically uses thin-provisioned storage, including non-clustered Storage Spaces, Hyper-V dynamic disks, and SAN LUNs. Once initial replication is initiated, the volume will not be able to shrink or trim.
           
           You can also use seeded data volumes to reduce bandwidth usage and sometimes time, by ensuring that the destination volume has some subset of data from the primary then using the Seeded option in Failover Cluster Manager or `New-SRPartnership`. If the volume is mostly empty, using seeded sync may reduce time and bandwidth usage. There are multiple ways to seed data, with varying degrees of efficacy:
           
@@ -177,7 +176,7 @@ sections:
       - question: |
           What are my backup and restore options for replicated volumes?
         answer: |
-          Storage Replica supports backing up and restoring the source volume. It also supports creating and restoring snapshots of the source volume. You cannot backup or restore the destination volume while protected by Storage Replica, as it is not mounted nor accessible. If you experience a disaster where the source volume is lost, using `Set-SRPartnership` to promote the previous destination volume to now be a read/writable source will allow you to backup or restore that volume. You can also remove replication with `Remove-SRPartnership` and `Remove-SRGroup` to remount that volume as read/writable.
+          Storage Replica supports backing up and restoring the source volume. It also supports creating and restoring snapshots of the source volume. You cannot back up or restore the destination volume while protected by Storage Replica, as it is not mounted nor accessible. If you experience a disaster where the source volume is lost, using `Set-SRPartnership` to promote the previous destination volume to now be a read/writable source will allow you to back up or restore that volume. You can also remove replication with `Remove-SRPartnership` and `Remove-SRGroup` to remount that volume as read/writable.
           
           To create periodic application consistent snapshots, you can use VSSADMIN.EXE on the source server to snapshot replicated data volumes. For example, where you are replicating the F: volume with Storage Replica:
           
@@ -222,7 +221,7 @@ sections:
           
           Again: Microsoft strongly recommends that the log storage be faster than the data storage and that log volumes must never be used for other workloads.
           
-          You can get log sizing recommendations by running the Test-SRTopology tool. Alternatively, you can use performance counters on existing servers to make a log size judgement. The formula is simple:  monitor the data disk throughput (Avg Write Bytes/Sec) under the workload and use it to calculate the amount of time it will take to fill up the log of different sizes. For example, data disk throughput of 50 MB/s will cause the log of 120GB to wrap in 120GB/50MB seconds or 2400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source would replay blocks via the bit map log instead of the main log. The size of the log does not have an effect on performance.
+          You can get log sizing recommendations by running the Test-SRTopology tool. Alternatively, you can use performance counters on existing servers to make a log size judgment. The formula is simple:  monitor the data disk throughput (Avg Write Bytes/Sec) under the workload and use it to calculate the amount of time it will take to fill up the log of different sizes. For example, data disk throughput of 50 MB/s will cause the log of 120GB to wrap in 120GB/50MB seconds or 2400 seconds or 40 minutes. So the amount of time that the destination server could be unreachable before the log wrapped is 40 minutes. If the log wraps but the destination becomes reachable again, the source would replay blocks via the bit map log instead of the main log. The size of the log does not have an effect on performance.
           
           ONLY the Data disk from the Source cluster should be backed-up. The Storage Replica Log disks should NOT be backed-up since a backup can conflict with Storage Replica operations.
           
@@ -258,12 +257,12 @@ sections:
       - question: |
           How do I report an issue with Storage Replica or this guide?
         answer: |
-          For technical assistance with Storage Replica, you can post at the [Microsoft forums](/answers/index.html). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The [Windows Server general feedback site](https://windowsserver.uservoice.com/forums/295047-general-feedback) is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
+          For technical assistance with Storage Replica, you can post at the [Microsoft forums](/answers/index.html). You can also email srfeed@microsoft.com for questions on Storage Replica. For issues with this documentation, see Feedback section at the bottom of this page, and select **This page**.
           
       - question: |
           Can Storage Replica be configured to replicate in both directions?
         answer: |
-          Storage Replica is a one-way replication technology.  It will only replicate from the source to the destination on a per volume basis.  This direction can be reversed at any time, but is still only in one direction.  However, that does not mean you cannot have a set of volumes (source and destination) replicate in one direction and a different set of drives (source and destination) replicate in the opposite direction.  For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters L:, M:, N:, and O: and you wish to replicate drive M: from Server1 to Server2 but drive O: replicate from Server2 to Server1.  This can be done as long as there separate log drives for each of the groups. I.E.
+          Storage Replica is a one-way replication technology.  It will only replicate from the source to the destination on a per volume basis.  This direction can be reversed at any time, but is still only in one direction.  However, that does not mean you cannot have a set of volumes (source and destination) replicate in one direction and a different set of drives (source and destination) replicate in the opposite direction.  For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters L:, M:, N:, and O: and you wish to replicate drive M: from Server1 to Server2 but drive O: replicate from Server2 to Server1.  This can be done as long as there are separate log drives for each of the groups. I.E.
           
           - Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
           - Server2 source drive O: with source log drive N: replicating to Server1 destination drive O: with destination log drive N:
@@ -286,4 +285,4 @@ sections:
           See also
         answer: |
           - [Storage Overview](../storage.yml)
-          - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+          - [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
