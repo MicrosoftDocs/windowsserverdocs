@@ -367,4 +367,4 @@ System state backup will back up the cluster state and metadata. Using Windows S
 ## Next steps
 
 - Learn more about [Storage Replica](/windows-server/storage/storage-replica/storage-replica-overview).
-- Learn more about [Stretched clusters](../concepts/stretched-clusters.md).
+- Learn more about [Stretched clusters](/azure-stack/hci/concepts/stretched-clusters).
