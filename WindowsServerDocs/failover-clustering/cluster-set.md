@@ -15,7 +15,7 @@ ms.custom: contperf-fy21q4
 
 This article provides information on how to deploy a cluster set for Windows Server Failover Clusters using PowerShell. A cluster set is a group of multiple failover clusters that are clustered together. By using a cluster set, you can increase the number of server nodes in a single Software Defined Data Center (SDDC) cloud by orders of magnitude.
 
-Cluster sets have been tested and supported up to 64 total cluster nodes. However, cluster sets can scale to much larger limits and are not hardcoded for a limit.
+Cluster sets have been tested and supported up to 64 total cluster nodes. However, cluster sets can scale to much larger limits and aren't hardcoded for a limit.
 
 ## Benefits
 
@@ -33,7 +33,7 @@ Cluster sets offer the following benefits:
 
 - Benefit from [Azure-like Fault Domains and Availability sets](/azure/virtual-machines/windows/manage-availability) across individual clusters in initial VM placement and subsequent migration.
 
-- Can use even if compute and storage hardware between cluster nodes is not identical.
+- Can use even if compute and storage hardware between cluster nodes isn't identical.
 - Live migration of VMs between clusters.
 - Azure-like availability sets and fault domains across multiple clusters.
 - Moving of SQL Server VMs between clusters.
@@ -44,7 +44,7 @@ There are a few requirements and limitations for using cluster sets:
 
 - All member clusters in a cluster set must be in the same Active Directory (AD) forest.
 
-- Member servers in the set must run the same operating system version. Virtual machines cannot be live migrated between different operating systems. You can have a cluster set that consists of any one, but not multiples, of the following options:
+- Member servers in the set must run the same operating system version. Virtual machines can't be live migrated between different operating systems. You can have a cluster set that consists of any one, but not multiples, of the following options:
 
     - Windows Server 2019 Failover Cluster and Windows Server 2019 Failover Cluster
     - Windows Server 2019 Failover Cluster and Windows Server 2019 Storage Spaces Direct
@@ -52,11 +52,11 @@ There are a few requirements and limitations for using cluster sets:
 
 - Identical processor hardware is needed for all member servers for live migration between member clusters to occur; otherwise, you must select **CPU Processor Compatibility** in virtual machines settings.
 
-- Cluster set VMs must be manually live-migrated across clusters - they cannot automatically failover.
+- Cluster set VMs must be manually live-migrated across clusters - they can't automatically fail over.
 
 - Storage Replica must be used between member clusters to realize storage resiliency to cluster failures. When using SR, bear in mind that namespace storage UNC paths will not change automatically on SR failover to the replica target cluster.
 
-- Storage Spaces Direct does not function across member clusters in a cluster set. Rather, Storage Spaces Direct applies to a single cluster, with each cluster having its own storage pool.
+- Storage Spaces Direct doesn't function across member clusters in a cluster set. Rather, Storage Spaces Direct applies to a single cluster, with each cluster having its own storage pool.
 
 ## Architecture
 
@@ -72,7 +72,7 @@ The management cluster hosts the highly-available management plane and the names
 
 ### Cluster set namespace referral SOFS
 
-A namespace for the cluster set is provided with an SOFS server role running on the management cluster. This is similar to a Distributed File System Namespace (DFSN). Unlike DFSN however, cluster set namespace referral metadata is auto-populated on all cluster nodes without any intervention, so there is almost no performance overhead in the storage access path. This lightweight referral mechanism does not participate in the I/O path.
+A namespace for the cluster set is provided with an SOFS server role running on the management cluster. This is similar to a Distributed File System Namespace (DFSN). Unlike DFSN however, cluster set namespace referral metadata is auto-populated on all cluster nodes without any intervention, so there's almost no performance overhead in the storage access path. This lightweight referral mechanism doesn't participate in the I/O path.
 
 Each Server Message Block (SMB) referral share on the cluster set namespace referral SOFS is of type `SimpleReferral`. This referral allows SMB clients access to the target SMB share hosted on the member cluster SOFS. Referrals are cached perpetually on each of the client nodes and the cluster set namespace dynamically updates the referrals as needed automatically. Referral information is persistently cached in each cluster set node, even during reboots.
 
@@ -86,13 +86,13 @@ A member cluster runs VM and Storage Spaces Direct workloads. Multiple member cl
 
 ### Cluster set worker
 
-The CS-Master interacts with a cluster resource on member clusters called the Cluster Set Worker (CS-Worker). CS-Worker responds to requests by the CS-Master, including VM placement and resource inventorying. There is one CS-Worker instance per member cluster.
+The CS-Master interacts with a cluster resource on member clusters called the Cluster Set Worker (CS-Worker). CS-Worker responds to requests by the CS-Master, including VM placement and resource inventorying. There's one CS-Worker instance per member cluster.
 
 ### Fault domain
 
 A fault domain is a group of hardware and software that could fail together. While you could designate one or more clusters together as a fault domain, each node could participate in a fault domain in an availability set. Fault domain boundaries are based on data center topology, networking architecture, and other considerations.
 
-Using stretched clusters, you can failover VMs across fault domains in a disaster recovery situation if an entire site goes down.
+Using stretched clusters, you can fail over VMs across fault domains in a disaster recovery situation if an entire site goes down.
 
 ### Availability set
 
@@ -188,7 +188,7 @@ After creating the cluster set, the next step is to create VMs. You should perfo
 The `Get-ClusterSetOptimalNodeForVM` command identifies the optimal cluster and node in the cluster set and then deploys the VM on it. In the following example, a new VM is created with:
 
 - 4 GB available
-- 1 virtual processor
+- One virtual processor
 - 10% minimum CPU available
 
 ```PowerShell
@@ -213,10 +213,10 @@ State         : Running
 ComputerName  : 1-S2D2
 ```
 
-If there is not enough memory, CPU capacity, or disk space available to add the VM, you will receive the following error:
+If there's not enough memory, CPU capacity, or disk space available to add the VM, you'll receive the following error:
 
 ```
-Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.
+Get-ClusterSetOptimalNodeForVM : A cluster node isn't available for this operation.
 ```
 
 Once the VM is created, it is displayed in Hyper-V manager on the specific node specified. To add it as a cluster set VM and add it to the cluster, use this command:
@@ -233,7 +233,7 @@ Id  VMName  State  MemberName  PSComputerName
  1  CSVM1     On   CLUSTER1    CSMASTER
 ```
 
-If you have created a cluster using existing VMs, the VMs need to be registered with the cluster set. To register all VMs at once, use:
+If you've created a cluster using existing VMs, the VMs need to be registered with the cluster set. To register all VMs at once, use:
 
 ```PowerShell
 Get-ClusterSetMember -Name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM -RegisterAll -CimSession CSMASTER
@@ -258,7 +258,7 @@ WARNING: There were issues updating the virtual machine configuration that may p
 WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualMachineConfiguration '' on date at time.htm.
 ```
 
-This warning may be ignored as there were no physical changes in the virtual machine role storage configuration. The actual physical location does not change; only the configuration paths do.
+This warning may be ignored as there were no physical changes in the virtual machine role storage configuration. The actual physical location doesn't change; only the configuration paths do.
 
 For more information on `Move-VMStorage`, see [Move-VMStorage](/powershell/module/hyper-v/move-vmstorage).
 
@@ -274,23 +274,23 @@ Then, to move a cluster set VM from CLUSTER1 to NODE2-CL3 on CLUSTER3 for exampl
 Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
 ```
 
-This command does not move the VM storage or configuration files and is not necessary as the path to the VM remains as \\\\SOFS-CLUSTER1\VOLUME1. Once a VM has been registered with the infrastructure file server share path, the drives and VM do not require being on the same node as the VM.
+This command doesn't move the VM storage or configuration files and isn't necessary as the path to the VM remains as \\\\SOFS-CLUSTER1\VOLUME1. Once a VM has been registered with the infrastructure file server share path, the drives and VM don't require being on the same node as the VM.
 
 ## Create the infrastructure scale-out file server
 
-There is one Infrastructure SOFS cluster role on a cluster. The Infrastructure SOFS role is created by specifying the `-Infrastructure` switch parameter to the `Add-ClusterScaleOutFileServerRole` cmdlet. For example:
+There's one Infrastructure SOFS cluster role on a cluster. The Infrastructure SOFS role is created by specifying the `-Infrastructure` switch parameter to the `Add-ClusterScaleOutFileServerRole` cmdlet. For example:
 
  ```PowerShell
  Add-ClusterScaleoutFileServerRole -Name "my_infra_sofs_name" -Infrastructure
 ```
 
-Each CSV volume created automatically triggers the creation of an SMB share with an auto-generated name based on the CSV volume name. You cannot directly create or modify SMB shares under an SOFS role, other than by using CSV volume create and modify operations.
+Each CSV volume created automatically triggers the creation of an SMB share with an auto-generated name based on the CSV volume name. You can't directly create or modify SMB shares under an SOFS role, other than by using CSV volume create and modify operations.
 
 In hyperconverged configurations, an Infrastructure SOFS allows an SMB client (Hyper-V host) to communicate with continuous availability (CA) to the Infrastructure SOFS SMB server. This hyper-converged SMB loopback CA is achieved by VMs accessing their virtual disk (VHDX) files where the owning VM identity is forwarded between the client and server. This identity forwarding allows the use of ACLs for VHDx files just as in standard hyperconverged cluster configurations as before.
 
 Once a cluster set is created, the cluster set namespace relies on an Infrastructure SOFS on each of the member clusters, and additionally an Infrastructure SOFS in the management cluster.
 
-At the time a member cluster is added to a cluster set, you can specify the name of an Infrastructure SOFS on that cluster if one already exists. If the Infrastructure SOFS does not exist, a new Infrastructure SOFS role on the new member cluster is created. If an Infrastructure SOFS role already exists on the member cluster, the Add operation implicitly renames it to the specified name as needed. Any existing SMB servers, or non-infrastructure SOFS roles on the member clusters, are not used by the cluster set.
+At the time a member cluster is added to a cluster set, you can specify the name of an Infrastructure SOFS on that cluster if one already exists. If the Infrastructure SOFS doesn't exist, a new Infrastructure SOFS role on the new member cluster is created. If an Infrastructure SOFS role already exists on the member cluster, the Add operation implicitly renames it to the specified name as needed. Any existing SMB servers, or non-infrastructure SOFS roles on the member clusters, aren't used by the cluster set.
 
 When the cluster set is created, you have the option to use an existing AD computer object as the namespace root on the management cluster. Cluster set creation creates the Infrastructure SOFS cluster role on the management cluster or renames the existing Infrastructure SOFS role. The Infrastructure SOFS on the management cluster is used as the cluster set namespace referral SOFS.
 
@@ -310,7 +310,7 @@ New-ClusterSetFaultDomain -Name FD1 -FdType Logical -CimSession CSMASTER -Member
 New-ClusterSetFaultDomain -Name FD2 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER3,CLUSTER4 -Description "Second fault domain"
 ```
 
-To ensure they have been created successfully, `Get-ClusterSetFaultDomain` can be run with its output shown for FD1:
+To ensure they've been created successfully, `Get-ClusterSetFaultDomain` can be run with its output shown for FD1:
 
 ```PowerShell
 PS C:\> Get-ClusterSetFaultDomain -CimSession CSMASTER -FdName FD1 | fl *
@@ -336,7 +336,7 @@ To validate it has been created, use:
 Get-ClusterSetAvailabilitySet -AvailabilitySetName CSMASTER-AS -CimSession CSMASTER
 ```
 
-When creating new VMs, use the `-AvailabilitySet` parameter to determine the optimal node for placement. Here is an example:
+When creating new VMs, use the `-AvailabilitySet` parameter to determine the optimal node for placement. Here's an example:
 
 ```PowerShell
 # Identify the optimal node to create a new VM
@@ -352,7 +352,7 @@ $cred = new-object -typename System.Management.Automation.PSCredential ("<domain
 
 There are times when a cluster needs to be removed from a cluster set. As a best practice, all cluster set VMs should be moved out of the cluster beforehand. This can be done using the `Move-ClusterSetVM` and `Move-VMStorage` commands.
 
-If the VMs are not moved out of the cluster first, all remaining cluster set VMs hosted on the cluster being removed will simply become highly available VMs bound to that cluster, assuming they have access to their storage. Cluster sets also automatically update their inventory by no longer tracking the health of a removed cluster and the VMs running on it, and by removing the namespace and all references to shares hosted on the removed cluster.
+If the VMs aren't moved out of the cluster first, all remaining cluster set VMs hosted on the cluster being removed will become highly available VMs bound to that cluster, assuming they have access to their storage. Cluster sets also automatically update their inventory by no longer tracking the health of a removed cluster and the VMs running on it, and by removing the namespace and all references to shares hosted on the removed cluster.
 
 For example, the command to remove the CLUSTER1 cluster from a cluster set is:
 
@@ -362,7 +362,7 @@ Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
 
 ## System state backup
 
-System state backup will backup the cluster state and metadata. Using Windows Server Backup, you can restore just a node's cluster database if needed or do an authoritative restore to roll back the entire cluster database across all nodes. For cluster sets, we recommend doing an authoritative restore first for the member clusters and then for the management cluster. For more information on system state backup, see [Back up system state and bare metal](/system-center/dpm/back-up-system-state-and-bare-metal).
+System state backup will back up the cluster state and metadata. Using Windows Server Backup, you can restore just a node's cluster database if needed or do an authoritative restore to roll back the entire cluster database across all nodes. For cluster sets, we recommend doing an authoritative restore first for the member clusters and then for the management cluster. For more information on system state backup, see [Back up system state and bare metal](/system-center/dpm/back-up-system-state-and-bare-metal).
 
 ## Next steps
 
