@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/30/2022
+ms.date: 09/07/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,18 +17,18 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3401        |1.2.1672                  |
+|Public     |1.2.3495        |1.2.1672                  |
 |Insider    |1.2.3495        |1.2.1672                  |
 
-## Updates for version 1.2.3495 (Insider)
+## Updates for version 1.2.3495
 
-Date published: 8/30/2022
+Date published: 9/06/2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
-- Made bug fixes.
+- Fixed bugs.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
   - Fixed an issue that caused calls to disconnect when using a microphone with a high sample rate (192 kbps).
@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 Date published: 8/02/2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51gy5), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51gy7), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51od9)
 
 - Fixed an issue where the narrator was announcing the Tenant Expander button as "on" or "off" instead of "expanded" or “collapsed."
 - Fixed an issue where the text size didn't change when the user adjusted the text size system setting.
@@ -46,8 +46,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.3317
 
 *Date published: 7/12/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE518ld), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50W7f), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50W7e)
 
 - Fixed the vulnerability known as [CVE-2022-30221](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30221).
 
