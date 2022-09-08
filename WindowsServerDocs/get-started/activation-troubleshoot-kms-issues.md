@@ -10,6 +10,8 @@ manager: dcscontentpm
 
 # KMS activation: known issues
 
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806237" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common issues related to KMS and MAK activation</span>
+
 This article describes common questions and issues that can arisse during Key Management Service (KMS) activations, and provides guidance for addressing the issues.
 
 > [!NOTE]

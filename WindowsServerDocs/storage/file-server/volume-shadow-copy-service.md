@@ -221,7 +221,7 @@ A software-based shadow copy provider must maintain a "point-in-time" view of a 
 
 A software provider is applicable to a wider range of storage platforms than a hardware-based provider, and it should work with basic disks or logical volumes equally well. (A logical volume is a volume that is created by combining free space from two or more disks.) In contrast to hardware shadow copies, software providers consume operating system resources to maintain the shadow copy.
 
-For more information about basic disks, see [What Are Basic Disks and Volumes?](/previous-versions/windows/it-pro/windows-server-2003/cc787202(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=180894) on TechNet.
+For more information about basic disks, see [What Are Basic Disks and Volumes?](/previous-versions/windows/it-pro/windows-server-2003/cc787202(v=ws.10)).
 
 ### System provider
 
@@ -239,21 +239,17 @@ The component files that make up the system provider are swprv.dll and volsnap.s
 
 The Windows operating system includes a set of VSS writers that are responsible for enumerating the data that is required by various Windows features.
 
-For more information about these writers, see the following Microsoft Docs Web page:
-
-- [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers)
-
+For more information about these writers, see [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers).
 
 ## How Shadow Copies Are Used
 
 In addition to backing up application data and system state information, shadow copies can be used for a number of purposes, including the following:
 
-  - Restoring LUNs (LUN resynchronization and LUN swapping)
+- Restoring LUNs (LUN resynchronization and LUN swapping)
 
-  - Restoring individual files (Shadow Copies for Shared Folders)
+- Restoring individual files (Shadow Copies for Shared Folders)
 
-  - Data mining by using transportable shadow copies
-
+- Data mining by using transportable shadow copies
 
 ### Restoring LUNs (LUN resynchronization and LUN swapping)
 
