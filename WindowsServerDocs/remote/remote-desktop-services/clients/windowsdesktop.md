@@ -115,7 +115,9 @@ Workspaces can contain multiple managed resources, including desktops. When acce
 
 ### Desktop settings
 
-You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource and select **Settings**.
+You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource in your workspace and select **Settings**.
+
+![Screenshot of the Windows Remote Desktop Client workspace settings button.](/windowsserverdocs-pr/WindowsServerDocs/remote/media/windows-remote-desktop-client-3.jpg)
 
 The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
 
