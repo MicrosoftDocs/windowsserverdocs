@@ -92,8 +92,6 @@ The CS-Master interacts with a cluster resource on member clusters called the Cl
 
 A fault domain is a group of hardware and software that could fail together. While you could designate one or more clusters together as a fault domain, each node could participate in a fault domain in an availability set. Fault domain boundaries are based on data center topology, networking architecture, and other considerations.
 
-Using stretched clusters, you can fail over VMs across fault domains in a disaster recovery situation if an entire site goes down.
-
 ### Availability set
 
 An availability set is used to configure the desired redundancy of clustered workloads across fault domains by grouping and deploying workloads. For a two-tier application, you should configure at least two VMs in an availability set for each tier, which ensures that when a fault domain in an availability set goes down, your application will have at least one VM in each tier hosted on a different fault domain.
@@ -367,4 +365,3 @@ System state backup will back up the cluster state and metadata. Using Windows S
 ## Next steps
 
 - Learn more about [Storage Replica](/windows-server/storage/storage-replica/storage-replica-overview).
-- Learn more about [Stretched clusters](/azure-stack/hci/concepts/stretched-clusters).
