@@ -35,7 +35,7 @@ Devices that are joined only to AD can only back up passwords to AD.
 
 If your devices are hybrid-joined (to both Azure AD and AD), then you have to choose a specific directory. Backing up passwords to both directories isn't supported.
 
-## Getting started
+## Next steps
 
 Once you have an idea of which scenario you want to use, proceed to one of the following articles:
 
