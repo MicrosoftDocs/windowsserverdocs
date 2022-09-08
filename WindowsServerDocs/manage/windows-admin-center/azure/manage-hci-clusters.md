@@ -125,7 +125,7 @@ Every node of the Azure Stack HCI cluster must meet the following networking req
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
   - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) (for extension versions less than 0.0.0.203)
-  - `*.waconazure.com` or the `WindodwsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) (for extension versions greater than or equal to 0.0.0.203)
+  - `*.waconazure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) (for extension versions greater than or equal to 0.0.0.203)
   - `pas.windows.net`
   - `*.servicebus.windows.net`
 
