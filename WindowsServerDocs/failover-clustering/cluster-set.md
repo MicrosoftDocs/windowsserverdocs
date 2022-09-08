@@ -62,7 +62,7 @@ There are a few requirements and limitations for using cluster sets:
 
 The following diagram illustrates a cluster set at a high level:
 
- :::image type="content" source="media/cluster-set/cluster-set.png" alt-text="Diagram showing a cluster set" lightbox="media/cluster-set/cluster-set.png":::
+ :::image type="content" source="media/cluster-set/cluster-set.png" alt-text="Diagram showing a cluster set." lightbox="media/cluster-set/cluster-set.png":::
 
 The following provides a summary of each of the elements shown:
 
