@@ -1012,6 +1012,7 @@
         href: laps/laps-scenarios-legacy.md
     - name: Management
       href: laps/laps-management.md
+      items:
       - name: Policy settings
         href: laps/laps-management-policysettings.md
       - name: PowerShell
