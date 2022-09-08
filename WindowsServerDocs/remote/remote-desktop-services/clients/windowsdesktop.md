@@ -148,14 +148,14 @@ To retrieve the client logs:
 1. Open **File Explorer**.
 1. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
 
-Below you will find different methods used to read the client logs:
+Below you will find different methods used to read the client logs.
 
 #### Event Viewer
 
 1. Navigate to the Start menu, Control Panel, System and Security, and select **view event logs** under "Windows Tools".
 1. Once the **Event Viewer** is open, click the Action tab at the top and select **Open Saved Log...**.
 1. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder and select the log file you want to view.
-1. The **Event Viewer** dialog box will open requesting a response to convert etl format to evtx format. Select **Yes**.
+1. The **Event Viewer** dialog box will open requesting a response to which it will convert etl format to evtx format. Select **Yes**.
 1. In the **Open Saved Log** dialog box, you have the options to rename the log file and add a description. Select **Ok**.
 1. The **Event Viewer** dialog box will open asking to overwrite the log file. Select **Yes**. This will not overwrite your original etl log file but create a copy in evtx format.
 
