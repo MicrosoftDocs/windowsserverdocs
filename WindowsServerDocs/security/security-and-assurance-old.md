@@ -13,7 +13,7 @@ manager: mtillman
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 >[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
 <img src="../media/landing-icons/security.png" alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 
@@ -41,7 +41,7 @@ A walkthrough of Shielded VM technology and benefits.
 ### [Shielded VM Demo](https://www.youtube.com/watch?v=xip5Qtk-7d8)
 This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.
 
-### [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)
+### [Shielded Virtual Machines in Windows Server video walkthrough](/shows/oemtv/1758)
 This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
 
 ### Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)
@@ -105,7 +105,7 @@ Windows Defender provides active detection capabilities to block known malware. 
 ### Security Threat Analysis Using Microsoft Operations Management Suite
 This Ignite presentation discusses how you can use Operational Insights to perform security threat analysis.
 
-### [Microsoft Operations Management Suite (OMS)](https://www.microsoft.com/server-cloud/operations-management-suite/overview.aspx)
+### [Microsoft Operations Management Suite (OMS)](/shows/azure/operations-management-suite-oms-overview)
 The Microsoft Operations Management Suite (OMS) Security and Audit solution processes security logs and firewall events from on-premises and cloud environments to analyze and detect malicious behavior.
 
 ### [OMS and Windows Server](https://www.youtube.com/watch?v=_SaDw1dRy2k)

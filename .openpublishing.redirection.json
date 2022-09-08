@@ -1,6 +1,66 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/get-started/Deploy-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Developing-PowerShell-Cmdlets-for-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Developing-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/IIS-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/MPIO-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Manage-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Nano-Server-Quick-Start.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/PowerShell-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Update-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Troubleshooting-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/nano-in-semi-annual-channel.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/index.md",
       "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
       "redirect_document_id": false
@@ -8411,6 +8471,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "EssentialsDocs/get-started/system-requirements.md",
+      "redirect_url": "/windows-server-essentials/get-started/hardware-limits",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md",
       "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Only-Perimeter-Network",
       "redirect_document_id": true
@@ -10623,6 +10688,31 @@
     {
       "source_path": "WindowsServerDocs/get-started/upgrade-2016-to-2019.md",
       "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-security-top.md",
+      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-manage-certs.md",
+      "redirect_url": "/azure-stack/hci/manage/sdn-manage-certs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/nc-security.md",
+      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/kerberos-with-spn.md",
+      "redirect_url": "/azure-stack/hci/manage/kerberos-with-spn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-workloads.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/virtual-machine-recs",
       "redirect_document_id": false
     }
   ]

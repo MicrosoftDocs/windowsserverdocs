@@ -31,21 +31,21 @@ This topic explains how to install [Data Deduplication](overview.md), evaluate w
 To install Data Deduplication, run the following PowerShell command as an administrator:
 `Install-WindowsFeature -Name FS-Data-Deduplication`
 
-To install Data Deduplication in a Nano Server installation:
+To install Data Deduplication:
 
-1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../get-started/getting-started-with-nano-server.md).
-2. From a server running Windows Server 2016 in any mode other than Nano Server, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):
-	```PowerShell
-	Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
+- From a server running Windows Server 2016 or later, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the server name (replace 'MyServer' with the real name of the server instance):
+
+    ```powershell
+    Install-WindowsFeature -ComputerName <MyServer> -Name FS-Data-Deduplication
     ```
-	<br />
-    <strong>-- OR --</strong>
-	<br />
-	Connect remotely to the Nano Server instance with PowerShell remoting and install Data Deduplication by using DISM:
 
-	```PowerShell
-	Enter-PSSession -ComputerName MyNanoServer
-	dism /online /enable-feature /featurename:dedup-core /all
+    Or
+
+- Connect remotely to the server instance with PowerShell remoting and install Data Deduplication by using DISM:
+
+    ```powershell
+    Enter-PSSession -ComputerName MyServer
+    dism /online /enable-feature /featurename:dedup-core /all
     ```
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
@@ -131,7 +131,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 2. If you are running a recommended workload, you're done. For other workloads, see [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]
-> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run [`New-CimSession`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)).
+> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](/powershell/module/deduplication/enable-dedupvolume), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a server instance. To create a new CIM Session run [`New-CimSession`](/powershell/module/cimcmdlets/new-cimsession).
 
 #### <a id="enable-dedup-sometimes-considerations"></a>Other considerations
 > [!Important]

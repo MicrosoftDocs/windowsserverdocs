@@ -109,6 +109,14 @@ Admin Center to Azure</a></li>
     </tr>
     <tr>
             <td>
+            <h3>Windows Admin Center in Azure</h3>
+            <ul>
+            <li><a href="azure/manage-vm.md">Manage a Windows Server VM (preview)</a>
+            <li><a href="azure/manage-arc-hybrid-machines.md">Manage Azure Arc-enabled Servers (preview)</a>
+            <li><a href="azure/manage-hci-clusters.md">Manage Azure Stack HCI clusters (preview)</a>
+            </ul>
+        </td>
+            <td>
             <h3>Support</h3>
             <ul>
             <li><a href="support/release-history.md">Release history</a>
@@ -117,6 +125,8 @@ Admin Center to Azure</a></li>
             <li><a href="support/known-issues.md">Known issues</a>
             </ul>
         </td>
+    </tr>
+    <tr>
             <td>
             <h3>Extend</h3>
             <ul>
@@ -127,6 +137,7 @@ Admin Center to Azure</a></li>
             <li><a href="extend/publish-extensions.md">Publishing extensions</a>
             </ul>
         </td>
+        <td></td>
     </tr>
 
 </table>
