@@ -38,7 +38,7 @@ You can also manually search for new updates for the client:
 
 1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
 
-![Screenshot of the Windows Remote Desktop Client connection center drop-down button.](/windowsserverdocs-pr/WindowsServerDocs/remote/media/windows-remote-desktop-client-1.png)
+![Screenshot of the Windows Remote Desktop Client connection center drop-down button.](../media/windows-remote-desktop-client-1.png)
 
 1. Select **About** from the drop-down menu.
 1. The client automatically searches for updates.
@@ -88,7 +88,7 @@ Accessing the Details panel:
 
 1. From the Connection Center, tap the overflow menu (**...**) next to the Workspace.
 
-![Screenshot of the Windows Remote Desktop Client workspace drop-down button.](/windowsserverdocs-pr/WindowsServerDocs/remote/media/windows-remote-desktop-client-2.png)
+![Screenshot of the Windows Remote Desktop Client workspace drop-down button.](../media/windows-remote-desktop-client-2.png)
 
 1. Select **Details** from the drop-down menu.
 1. The Details panel appears on the right side of the client.
@@ -117,7 +117,7 @@ Workspaces can contain multiple managed resources, including desktops. When acce
 
 You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource in your workspace and select **Settings**.
 
-![Screenshot of the Windows Remote Desktop Client workspace settings button.](/windowsserverdocs-pr/WindowsServerDocs/remote/media/windows-remote-desktop-client-3.png)
+![Screenshot of the Windows Remote Desktop Client workspace settings button.](../media/windows-remote-desktop-client-3.png)
 
 The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
 
