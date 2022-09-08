@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/07/2022
+ms.date: 09/08/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,22 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3495        |1.2.1672                  |
+|Public     |1.2.3496        |1.2.1672                  |
 |Insider    |1.2.3495        |1.2.1672                  |
 
-## Updates for version 1.2.3495
+## Updates for version 1.2.3496
+
+Date published: 9/08/2022
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Reverted to version 1.2.3401 build to avoid a connectivity issue with older RDP stacks.
+
+## Updates for version 1.2.3495 Insider
 
 Date published: 9/06/2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
