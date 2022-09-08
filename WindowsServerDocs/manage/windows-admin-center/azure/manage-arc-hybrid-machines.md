@@ -134,12 +134,16 @@ The hybrid machine must meet the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
-  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) when using hybrid machines in Azure
+  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) (for extension versions less than 0.0.0.203)
+  - `*.waconazure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) (for extension versions greater than or equal to 0.0.0.203)
   - `pas.windows.net`
   - `*.servicebus.windows.net`
 
 > [!NOTE]
 > No inbound ports are required in order to use Windows Admin Center.
+
+The management machine where the Azure Portal is running must meet the following networking requirements:
+- Outbound internet access over port `6443`
 
 Make sure you review the [supported devices and recommended browsers](/azure/azure-portal/azure-portal-supported-browsers-devices) before accessing the Azure portal from the management machine or system.
 
