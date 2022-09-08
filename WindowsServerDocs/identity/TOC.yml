@@ -1017,7 +1017,7 @@
       - name: PowerShell
         href: laps/laps-management-powershell.md
       - name: Eventlog
-        href: laps-management-eventlog.md
+        href: laps/laps-management-eventlog.md
       - name: User interface
         href: laps/laps-management-userinterface.md
     - name: Technical reference
