@@ -1,5 +1,5 @@
 ---
-title: Deploy a cluster set
+title: Deploy a cluster set for Windows Server Failover Clusters 
 description: Learn how to deploy a cluster set
 author: jasongerend
 ms.topic: how-to
@@ -54,7 +54,7 @@ There are a few requirements and limitations for using cluster sets:
 
 - Cluster set VMs must be manually live-migrated across clusters - they can't automatically fail over.
 
-- Storage Replica must be used between member clusters to realize storage resiliency to cluster failures. When using SR, bear in mind that namespace storage UNC paths will not change automatically on SR failover to the replica target cluster.
+- Storage Replica must be used between member clusters to realize storage resiliency to cluster failures. When using Storage Replica, bear in mind that namespace storage UNC paths will not change automatically on SR failover to the replica target cluster.
 
 - Storage Spaces Direct doesn't function across member clusters in a cluster set. Rather, Storage Spaces Direct applies to a single cluster, with each cluster having its own storage pool.
 
@@ -62,13 +62,13 @@ There are a few requirements and limitations for using cluster sets:
 
 The following diagram illustrates a cluster set at a high level:
 
- :::image type="content" source="media/cluster-set/cluster-set.png" alt-text="Cluster set" lightbox="media/cluster-set/cluster-set.png":::
+ :::image type="content" source="media/cluster-set/cluster-set.png" alt-text="Diagram showing a cluster set" lightbox="media/cluster-set/cluster-set.png":::
 
 The following provides a summary of each of the elements shown:
 
 ### Management cluster
 
-The management cluster hosts the highly-available management plane and the namespace referral Scale-Out File Server (SOFS) for the cluster set. A management cluster is logically decoupled from individual member clusters that run VM workloads. This makes the cluster set management plane resilient to any localized cluster-wide failures, such as loss of power of a member cluster.
+The management cluster hosts the highly-available management plane and the namespace referral scale-out file server (SOFS) for the cluster set. A management cluster is logically decoupled from individual member clusters that run VM workloads. This makes the cluster set management plane resilient to any localized cluster-wide failures, such as loss of power of a member cluster.
 
 ### Cluster set namespace referral SOFS
 
@@ -78,7 +78,7 @@ Each Server Message Block (SMB) referral share on the cluster set namespace refe
 
 ### Cluster set master
 
-Communication between member clusters is loosely coupled and coordinated by the Cluster Set Master (CS-Master) resource. Like other cluster set resources, CS-Master is highly available and resilient to individual member cluster failures or management cluster node failures. Through a cluster set WMI provider, CS-Master provides the management endpoint for all cluster set management actions.
+Communication between member clusters is loosely coupled and coordinated by the cluster set master (CS-Master) resource. Like other cluster set resources, CS-Master is highly available and resilient to individual member cluster failures or management cluster node failures. Through a cluster set WMI provider, CS-Master provides the management endpoint for all cluster set management actions.
 
 ### Member cluster
 
@@ -86,7 +86,7 @@ A member cluster runs VM and Storage Spaces Direct workloads. Multiple member cl
 
 ### Cluster set worker
 
-The CS-Master interacts with a cluster resource on member clusters called the Cluster Set Worker (CS-Worker). CS-Worker responds to requests by the CS-Master, including VM placement and resource inventorying. There's one CS-Worker instance per member cluster.
+The CS-Master interacts with a cluster resource on member clusters called the cluster set worker (CS-Worker). CS-Worker responds to requests by the CS-Master, including VM placement and resource inventorying. There's one CS-Worker instance per member cluster.
 
 ### Fault domain
 
