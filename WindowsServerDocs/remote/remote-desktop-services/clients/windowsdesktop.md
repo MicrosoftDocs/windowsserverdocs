@@ -37,9 +37,12 @@ You'll be notified whenever a new version of the client is available as long as 
 You can also manually search for new updates for the client:
 
 1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
-2. Select **About** from the drop-down menu.
-3. The client automatically searches for updates.
-4. If there's an update available, tap **Install update** to update the client.
+
+![Screenshot of the Windows Remote Desktop Client connection center drop-down button.](../media/windows-remote-desktop-client-1.png)
+
+1. Select **About** from the drop-down menu.
+1. The client automatically searches for updates.
+1. If there's an update available, tap **Install update** to update the client.
 
 ## Workspaces
 
@@ -55,21 +58,21 @@ There are two ways you can subscribe to a Workspace. The client can try to disco
 #### Subscribe with a user account
 
 1. From the main page of the client, tap **Subscribe**.
-2. Sign in with your user account when prompted.
-3. The resources will appear in the Connection Center grouped by Workspace.
+1. Sign in with your user account when prompted.
+1. The resources will appear in the Connection Center grouped by Workspace.
 
 #### Subscribe with URL
 
 1. From the main page of the client, tap **Subscribe with URL**.
-2. Enter the Workspace URL or your email address:
+1. Enter the Workspace URL or your email address:
    - If you use the **Workspace URL**, use the one your admin gave you. If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
      - Azure Virtual Desktop (classic): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
      - Azure Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
      - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery.md).
-3. Tap **Next**.
-4. Sign in with your user account when prompted.
-5. The resources will appear in the Connection Center grouped by Workspace.
+1. Tap **Next**.
+1. Sign in with your user account when prompted.
+1. The resources will appear in the Connection Center grouped by Workspace.
 
 ### Workspace details
 
@@ -84,8 +87,11 @@ After subscribing, you can view additional information about a Workspace on the 
 Accessing the Details panel:
 
 1. From the Connection Center, tap the overflow menu (**...**) next to the Workspace.
-2. Select **Details** from the drop-down menu.
-3. The Details panel appears on the right side of the client.
+
+![Screenshot of the Windows Remote Desktop Client workspace drop-down button.](../media/windows-remote-desktop-client-2.png)
+
+1. Select **Details** from the drop-down menu.
+1. The Details panel appears on the right side of the client.
 
 After you've subscribed, the Workspace will refresh automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your admin.
 
@@ -100,8 +106,8 @@ You can manually refresh a Workspace by selecting **Refresh** from the overflow 
 This section will teach you how to unsubscribe from a Workspace. You can unsubscribe to either subscribe again with a different account or remove your resources from the system.
 
 1. From the Connection Center, tap the overflow menu (**...**) next to the Workspace.
-2. Select **Unsubscribe** from the drop-down menu.
-3. Review the dialog box and select **Continue**.
+1. Select **Unsubscribe** from the drop-down menu.
+1. Review the dialog box and select **Continue**.
 
 ## Managed desktops
 
@@ -109,7 +115,9 @@ Workspaces can contain multiple managed resources, including desktops. When acce
 
 ### Desktop settings
 
-You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource and select **Settings**.
+You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource in your workspace and select **Settings**.
+
+![Screenshot of the Windows Remote Desktop Client workspace settings button.](../media/windows-remote-desktop-client-3.png)
 
 The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
 
