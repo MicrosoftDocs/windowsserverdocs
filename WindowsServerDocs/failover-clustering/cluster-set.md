@@ -3,7 +3,7 @@ title: Deploy a cluster set for Windows Server Failover Clusters
 description: Learn how to deploy a cluster set
 author: jasongerend
 ms.topic: how-to
-ms.date: 10/19/2021
+ms.date: 09/08/2022
 ms.author: jgerend
 ms.reviewer: stevenek
 ms.custom: contperf-fy21q4
@@ -54,7 +54,7 @@ There are a few requirements and limitations for using cluster sets:
 
 - Cluster set VMs must be manually live-migrated across clusters - they can't automatically fail over.
 
-- Storage Replica must be used between member clusters to realize storage resiliency to cluster failures. When using Storage Replica, bear in mind that namespace storage UNC paths will not change automatically on SR failover to the replica target cluster.
+- Storage Replica must be used between member clusters to realize storage resiliency to cluster failures. When using Storage Replica, bear in mind that namespace storage UNC paths will not change automatically on Storage Replica failover to the replica target cluster.
 
 - Storage Spaces Direct doesn't function across member clusters in a cluster set. Rather, Storage Spaces Direct applies to a single cluster, with each cluster having its own storage pool.
 
