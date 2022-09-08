@@ -1004,11 +1004,11 @@
     - name: Scenario guides
       href: laps/laps-scenarios.md
       items:
-      - name: Getting started: Windows LAPS and Azure AD
+      - name: Getting started with Windows LAPS and Azure AD
         href: laps/laps-scenarios-aad.md
-      - name: Getting started: Windows LAPS and Active Directory
+      - name: Getting started with Windows LAPS and Active Directory
         href: laps/laps-scenarios-ad.md
-      - name: Getting started: Windows LAPS in Legacy LAPS emulation mode
+      - name: Getting started with Windows LAPS in Legacy LAPS emulation mode
         href: laps/laps-scenarios-legacy.md
     - name: Management
       href: laps/laps-management.md

@@ -71,11 +71,11 @@ Windows LAPS inherits many design concepts from legacy LAPS. So if you're famili
 > [!IMPORTANT]
 > Windows LAPS doesn't require installation of legacy LAPS. You can fully deploy and use all Windows LAPS features with no need to ever install or even refer to legacy LAPS. However Windows LAPS does support a legacy LAPS "emulation mode" which will be discussed later.
 
-# Next steps
+## Next steps
 
 Learn more about basic concepts by checking out [Windows LAPS Concepts](../laps/laps-concepts.md).
 
-# Related articles
+## Related articles
 
 [Windows LAPS Concepts](../laps/laps-concepts.md)
 
