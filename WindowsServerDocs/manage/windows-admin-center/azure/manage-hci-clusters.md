@@ -132,6 +132,10 @@ Every node of the Azure Stack HCI cluster must meet the following networking req
 > [!NOTE]
 > No inbound ports are required in order to use Windows Admin Center.
 
+The management machine where the Azure Portal is running must meet the following networking requirements:
+
+- Outbound internet access over port `6443`
+
 Make sure you review the [supported devices and recommended browsers](/azure/azure-portal/azure-portal-supported-browsers-devices) before accessing the Azure portal from the management machine or system.
 
 ## Install Windows Admin Center in the Azure portal
