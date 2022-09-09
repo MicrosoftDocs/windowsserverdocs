@@ -22,7 +22,7 @@ items:
   topicHref: /windows-server/index
   items:
   - name: Storage
-    tocHref: /azure-stack/hci/
+    tocHref: /azure-stack/hci/concepts/
     topicHref: /windows-server/storage/storage
 - name: Windows Server
   tocHref: /azure-stack/
