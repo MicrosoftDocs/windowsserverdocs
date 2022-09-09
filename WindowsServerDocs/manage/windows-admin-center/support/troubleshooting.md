@@ -35,7 +35,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
-* Did you select the correct certificate on [first launch?](../use/get-started.md#start-windows-admin-center-on-windows-10)
+* Did you select the correct certificate on [first launch?](../use/get-started.md#open-windows-admin-center-on-a-windows-pc)
 
   * Try opening your browser in a private session - if that works, you'll need to clear your cache.
 
@@ -113,6 +113,10 @@ These three tools require the websocket protocol, which is commonly blocked by p
     ```
     REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
     ```
+
+## I get this message: "You are not authorized to view this page. If you recently updated Windows Admin Center, you may need to restart your browser, and then refresh the page."
+
+Make sure to select the **Windows Admin Center Client** certificate when prompted on the first launch, and not any other certificate. If you select any other certificate, you'll get this error message.
 
 ## Using Windows Admin Center in a workgroup
 

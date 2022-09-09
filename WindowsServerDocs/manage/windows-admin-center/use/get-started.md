@@ -11,19 +11,16 @@ ms.date: 07/15/2022
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-> [!TIP]
-> New to Windows Admin Center? [Learn more about Windows Admin Center and download](../overview.md).
+This article describes how to get started with Windows Admin Center after you've downloaded it and installed it on a Windows PC. [Download Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center). To read about installing, see [Install Windows Admin Center on a PC or server](../../windows-admin-center/deploy/install.md). To learn more about Windows Admin Center, see [Windows Admin Center overview](../overview.md).
 
-This article describes how to get started with Windows Admin Center after you've [installed it on your Windows 10 computer](../../windows-admin-center/deploy/install.md#install-on-windows-10).
-
-## Start Windows Admin Center on Windows 10
+## Open Windows Admin Center on a Windows PC
 
 Windows Admin Center enables you to manage servers, clusters, Windows PCs, and Azure virtual machines (VMs) directly from your Windows 10 computer using a web browser.
 
 > [!IMPORTANT]
 > You must be a member of the local administrator's group to use Windows Admin Center on Windows 10.
 
-Follow these steps to start Windows Admin Center:
+Follow these steps to open Windows Admin Center on a Windows PC:
 
 1. From the **Start** menu, select Windows Admin Center. Or type **Windows Admin Center** in the search bar and then select it from the search results. Windows Admin Center opens in your default browser with the URL: `https://localhost:6516/`. Alternatively, you can also start it from your desired browser by entering `https://localhost:6516/`.
 
