@@ -28,7 +28,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 - Reverted to version 1.2.3401 build to avoid a connectivity issue with older RDP stacks.
 
-## Updates for version 1.2.3495 Insider
+## Updates for version 1.2.3495 (Insider)
 
 Date published: 9/06/2022
 
