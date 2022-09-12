@@ -5,7 +5,7 @@ items:
     - name: Windows Server
       href: /windows-server/
 
-### For linking to HCI topic and keeping the context in Windows Server TOC
+### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
   tocHref: /azure-stack/hci/
   topicHref: /windows-server/index
