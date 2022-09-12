@@ -23,11 +23,12 @@ Let's get started on backing up some passwords to Azure AD!
 
 The first step is to choose how you're going to apply policy to your devices.
 
-The preferred option for Azure-joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
+The preferred option for Azure AD joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 
-If your devices are also hybrid-joined to on-premises Active Directory, you may deploy policy using [Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy).
+If your devices are Azure AD joined but you're not using Microsoft Endpoint Manager, then it's still possible to deploy Windows LAPS for Azure AD. In this case though you must deploy policy manually (for example, either using direct registry modification or Local Computer Group Policy). See [Windows LAPS Policy Settings](../laps/laps-management-policysettings.md) article for specific details.
 
-If your devices aren't hybrid-joined and you're not using Microsoft Endpoint Manager, then it's still possible to deploy Windows LAPS for Azure AD. In this case though you must deploy policy manually (for example, either using direct registry modification or Local Computer Group Policy). See [Windows LAPS Policy Settings](../laps/laps-management-policysettings.md) article for specific details.
+  > [!NOTE] 
+  > If your devices are hybrid-joined to on-premises Active Directory, you may deploy policy using [Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy).
 
 ### Policies applicable to Azure AD mode
 
