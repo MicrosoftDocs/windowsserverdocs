@@ -15,9 +15,9 @@ ms.topic: article
 
 Windows LAPS supports several primary scenarios:
 
-* Backing up local admin account passwords to Azure AD (for Azure-AD-joined or hybrid-joined devices)
+* Backing up local admin account passwords to [Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join) (for Azure AD joined devices)
 
-* Backing up local admin account passwords to Active Directory (for AD domain-joined clients\servers)
+* Backing up local admin account passwords to Active Directory (for on-premises AD joined clients and servers)
 
 * Backing up Directory Services Repair Mode (DSRM) account passwords to Active Directory (for AD domain controllers)
 
@@ -29,15 +29,15 @@ Within each scenario, there's various different policy settings that can be appl
 
 Which directory a device is joined to impacts how Windows LAPS can be used and should be kept in mind as you're planning which scenario(s) to use.
 
-Devices that are joined only to Azure AD can only back up passwords to Azure AD.
+Devices that are joined to [Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join) can only back up passwords to Azure AD.
 
-Devices that are joined only to AD can only back up passwords to AD.
+Devices that are joined to on-premises AD can only back up passwords to AD.
 
-If your devices are hybrid-joined (to both Azure AD and AD), then you have to choose a specific directory. Backing up passwords to both directories isn't supported.
+Devices that are [hybrid-joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to on-premises AD and registered with Azure AD), can backup their passwords to either AD or Azure AD. Backing up passwords to both directories isn't supported.
 
 ## Next steps
 
-Once you have an idea of which scenario you want to use, proceed to one of the following articles:
+Once you have decided which scenario is most relevant for you, proceed to one of the following articles:
 
 [Getting started with Windows LAPS and Azure AD](../laps/laps-scenarios-aad.md).
 
