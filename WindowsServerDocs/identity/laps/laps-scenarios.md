@@ -15,7 +15,7 @@ ms.topic: article
 
 Windows LAPS supports several primary scenarios:
 
-* Backing up local admin account passwords to [Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join) (for Azure AD joined devices)
+* Backing up local admin account passwords to [Azure AD](/azure/active-directory/devices/concept-azure-ad-join) (for Azure AD joined devices)
 
 * Backing up local admin account passwords to Active Directory (for on-premises AD joined clients and servers)
 
@@ -29,11 +29,11 @@ Within each scenario, there's various different policy settings that can be appl
 
 Which directory a device is joined to impacts how Windows LAPS can be used and should be kept in mind as you're planning which scenario(s) to use.
 
-Devices that are joined to [Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join) can only back up passwords to Azure AD.
+Devices that are joined to [Azure AD](/azure/active-directory/devices/concept-azure-ad-join) can only back up passwords to Azure AD.
 
 Devices that are joined to on-premises AD can only back up passwords to AD.
 
-Devices that are [hybrid-joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to on-premises AD and registered with Azure AD), can backup their passwords to either AD or Azure AD. Backing up passwords to both directories isn't supported.
+Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to on-premises AD and registered with Azure AD), can backup their passwords to either AD or Azure AD. Backing up passwords to both directories isn't supported.
 
 ## Next steps
 
