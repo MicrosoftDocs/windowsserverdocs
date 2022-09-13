@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/18/2022
+ms.date: 09/13/2022
 ---
 # What's new in the macOS client
 
@@ -16,6 +16,12 @@ If you encounter any issues, you can contact us by opening the macOS client and 
 ## The macOS beta client
 
 If you're feeling adventurous, you can help us test out new features by running the beta version of the macOS client. To join the beta, just go to <https://aka.ms/rdmacbeta>.
+
+## Updates for version 10.7.9
+
+*Date Published: September 13, 2022*
+
+In this release, we fixed some customer-reported bugs and issues reported by telemetry. Two of the impacted feature areas include Teams redirection and multimonitor support.
 
 ## Updates for version 10.7.8
 

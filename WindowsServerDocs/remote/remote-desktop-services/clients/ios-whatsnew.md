@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2022
+ms.date: 09/13/2022
 ---
 # What's new in the iOS client
 
@@ -15,7 +15,13 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
 
-## Updates for version 10.4.2 (5170)
+## Updates for version 10.4.3
+
+Date Published: August 11, 2022
+
+In this release, we resolved a customer bug that impacted authentication when connecting to Azure Virtual Desktop deployments.
+
+## Updates for version 10.4.2
 
 Date Published: July 11, 2022
 
