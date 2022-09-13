@@ -6,7 +6,7 @@ author: billmath
 manager: femila
 ms.date: 09/12/2022
 ms.topic: article
-ms.author: xelu86
+ms.author: alalve
 ---
 
 # Join a Computer to a Domain
