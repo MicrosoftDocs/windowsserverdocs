@@ -19,7 +19,7 @@ If you're feeling adventurous, you can help us test out new features by running 
 
 ## Updates for version 10.7.9
 
-*Date Published: September 13, 2022*
+*Date Published: August 11, 2022*
 
 In this release, we fixed some customer-reported bugs and issues reported by telemetry. Two of the impacted feature areas include Teams redirection and multimonitor support.
 
