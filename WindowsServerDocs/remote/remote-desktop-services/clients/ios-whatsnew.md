@@ -57,7 +57,7 @@ In addition, we’ve made the following improvements:
 - Updated the client to send the correct physical dimensions for the iPad Mini 6.
 - Added the username to PC bookmark thumbnails.
 - Updated the in-session connection bar to fade back after three seconds if you minimize it.
-- Added support for smooth scrolling in the connection centre on ProMotion-compatible iPhones and iPads.
+- Added support for smooth scrolling in the connection center on ProMotion-compatible iPhones and iPads.
 
 We've also made some updates to enhance Azure Virtual Desktop (AVD) scenarios:
 
@@ -77,7 +77,7 @@ It's time for a quick update. In this release we added support for the iPad Mini
 
 Date published: October 28, 2021
 
-In this release, we've added support for time zone redirection. This new feature fixes an issue in in Windows 11 remote sessions that caused the screen to flicker, making the session unusable.
+In this release, we've added support for time zone redirection. This new feature fixes an issue in Windows 11 remote sessions that caused the screen to flicker, making the session unusable.
 
 ## Updates for version 10.3.1
 
@@ -195,7 +195,7 @@ We've put together some bug fixes and feature updates for the 10.1.3 release. He
 
 In this update, we've addressed issues that were reported in the version 10.1.1 update.
 
-- Fixed a crash that occurred for some users when subscribing to a Azure Virtual Desktop feed using non-brokered authentication.
+- Fixed a crash that occurred for some users when subscribing to an Azure Virtual Desktop feed using non-brokered authentication.
 - Fixed the layout of workspace icons on the iPhone X, iPhone XS, and iPhone 11 Pro.
 
 ## Updates for version 10.1.1
