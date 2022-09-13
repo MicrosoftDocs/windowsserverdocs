@@ -426,7 +426,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - On Mojave and Catalina we've added a new dialog that requests your permission to use the microphone and camera for device redirection.
 - The feed subscription flow has been rewritten to be simpler and faster.
 - Clipboard redirection now includes the Rich Text Format (RTF).
-- When entering your password, can now choose to reveal it by selecting the "Show password" checkbox.
+- When entering your password, you can now choose to reveal it by selecting the "Show password" checkbox.
 - Addressed scenarios where the session window was jumping between monitors.
 - The Connection Center displays high-resolution remote app icons (when available).
 - Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
@@ -548,7 +548,7 @@ In this release, we addressed graphics mispaints (caused by a server encoding bu
 - Smart card redirection fixes.
 - Support for all possible values of the "EnableCredSspSupport" and "Authentication Level" RDP file settings if the ClientSettings.EnforceCredSSPSupport user default key (in the com.microsoft.rdc.macos domain) is set to 0.
 - Support for the "Prompt for Credentials on Client" RDP file setting when NLA is not negotiated.
-- Support for smart card-based sign in using smart card redirection at the Winlogon prompt when NLA is not negotiated.
+- Support for smart card-based sign-in using smart card redirection at the Winlogon prompt when NLA is not negotiated.
 - Fixed an issue that prevented downloading feed resources that have spaces in the URL.
 
 ## Updates for version 10.2.1
