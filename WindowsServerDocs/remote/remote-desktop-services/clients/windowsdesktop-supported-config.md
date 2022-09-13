@@ -39,6 +39,9 @@ The tables in this section list which versions of Windows and Windows Server are
 |Windows 7|Enterprise, Home Basic, Home Premium, Professional, Starter, Ultimate|Extended security update (Year 2)|
 |Windows 7 Embedded Standard|Professional for Embedded Systems, Ultimate for Embedded Systems|Extended security update (Year 1)|
 
+> [!NOTE]
+> Extended support for using Windows 7 to connect to Azure Virtual Desktop ends on January 10, 2023.
+
 ### Windows Server
 
 | Operating system         | Edition  | Minimum version             |

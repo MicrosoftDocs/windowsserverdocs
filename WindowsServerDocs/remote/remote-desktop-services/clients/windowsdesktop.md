@@ -17,6 +17,7 @@ You can use the Remote Desktop client for Windows Desktop to access Windows apps
 > - This documentation is not for the Remote Desktop Connection (MSTSC) client that ships with Windows. It's for the new Remote Desktop (MSRDC) client.
 > - This client currently only supports accessing remote apps and desktops from [Azure Virtual Desktop](https://aka.ms/wvd) and Windows 365.
 > - Curious about the new releases for the Windows Desktop client? Check out [What's new in the Windows Desktop client](windowsdesktop-whatsnew.md)
+> - Extended support for using Windows 7 to connect to Azure Virtual Desktop ends on January 10, 2023.
 
 ## Install the client
 
