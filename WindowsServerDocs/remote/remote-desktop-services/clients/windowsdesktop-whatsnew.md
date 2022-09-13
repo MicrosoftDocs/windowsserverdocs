@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/08/2022
+ms.date: 09/13/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,19 +18,11 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.3496        |1.2.1672                  |
-|Insider    |1.2.3495        |1.2.1672                  |
+|Insider    |1.2.3497        |1.2.1672                  |
 
-## Updates for version 1.2.3496
+## Updates for version 1.2.3497 (Insider)
 
-Date published: 9/08/2022
-
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
-
-- Reverted to version 1.2.3401 build to avoid a connectivity issue with older RDP stacks.
-
-## Updates for version 1.2.3495 (Insider)
-
-Date published: 9/06/2022
+Date published: 9/13/2022
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
@@ -40,6 +32,15 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
   - Fixed an issue that caused calls to disconnect when using a microphone with a high sample rate (192 kbps).
+- Resolved a connectivity issue with older RDP stacks.
+
+## Updates for version 1.2.3496
+
+Date published: 9/08/2022
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Reverted to version 1.2.3401 build to avoid a connectivity issue with older RDP stacks.
 
 ## Updates for version 1.2.3401
 
