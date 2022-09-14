@@ -1,13 +1,13 @@
 ---
-title: Active Directory Accounts
-description: Creating default local Windows Server Active Directory accounts on a domain controller
+title: About Active Directory Accounts
+description: This article discusses how to create default local Windows Server Active Directory accounts on a domain controller.
 author: dansimp
 ms.author: dansimp
 ms.topic: article
 ms.date: 07/20/2022
 ---
 
-# Active Directory accounts
+# About Active Directory accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
