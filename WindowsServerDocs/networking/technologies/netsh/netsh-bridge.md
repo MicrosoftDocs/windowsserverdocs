@@ -9,23 +9,7 @@ ms.date: 09/09/2022.
 ms.custom: template-how-to #Required; leave this attribute/value as-is.
 ---
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
--->
-
-<!-- 1. H1
-Required. Start your H1 with a verb. Pick an H1 that clearly conveys the task the 
-user will complete.
--->
-
 # Netsh bridge commands
-
-<!-- 2. Introductory paragraph 
-Required. Lead with a light intro that describes, in customer-friendly language, 
-what the customer will learn, or do, or accomplish. Answer the fundamental “why 
-would I want to do this?” question. Keep it short.
--->
 
 Use **netsh bridge** commands to create and manage a network bridge of at least two network adapters to share network connectivity and resources of one network adapter to another.
 
@@ -33,7 +17,6 @@ Use **netsh bridge** commands to create and manage a network bridge of at least 
 >If you are using Windows PowerShell on a computer running Windows Server or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **bridge** and press Enter to get the netsh bridge prompt.
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh bridge\>
-
 
 <!-- netsh bridge <command> help -->
 ## display help
