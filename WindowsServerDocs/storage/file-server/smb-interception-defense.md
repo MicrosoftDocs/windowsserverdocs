@@ -4,7 +4,7 @@ description: How to configure Windows Server to harden SMB protocol to defend ag
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 08/10/2022
+ms.date: 09/14/2022
 # Customer Intent: As a system or security administrator, I want to prevent SMB interception
 # attacks, so that I can mitigate security risks within my environment
 ---
@@ -18,15 +18,15 @@ developing your own defense-in-depth strategy for the SMB protocol.
 ## What is an interception attack?
 
 An adversary-in-the-middle (AITM) attack intends to modify the network communication between a
-client and server, allowing a threat actor to intercept traffic, this is known as interception.
-After interception, a malicious actor may have the ability to spoof, tamper, disclose, or deny
-access to your organizations data or account credentials.
+client and server, allowing a threat actor to intercept traffic. After interception, a malicious
+actor may have the ability to spoof, tamper, disclose, or deny access to your organizations data or
+account credentials.
 
 Many organizations rely on SMB to share files between users and to support other applications or
 technologies like Active Directory Domain Services. With such broad adoption, SMB is both a popular
 target for attackers and has the potential for business-wide impact.
 
-For example, an intercept attack might be for industrial or state-level espionage, extortion, or
+For example, an AITM attack might be used for industrial or state-level espionage, extortion, or
 finding sensitive security data stored in files. It could also be used as part of a wider attack to
 enable the attacker to move laterally within your network or to target multiple endpoints.
 
@@ -36,9 +36,9 @@ techniques. When protecting your system against SMB interception, there are two 
 1. Reduce the number of attack methods available.
 1. Secure the pathways you present to your users.
 
-Due to the diversity of technology and clients within many organizations, a well-rounded defense will
-combine multiple methods and will follow the [Zero Trust](/security/zero-trust/zero-trust-overview)
-principles.
+Due to the diversity of technology and clients within many organizations, a well-rounded defense
+will combine multiple methods and will follow the Zero Trust principles. Learn more about
+Zero Trust in the [What is Zero Trust?](/security/zero-trust/zero-trust-overview) article.
 
 Now you'll learn about some of the typical good practice configurations to reduce the risk of SMB
 interception.
@@ -62,10 +62,10 @@ affecting not just SMB, but all Microsoft products and services.
 You can install security updates using a few different methods depending on your organizations
 requirements. Typical methods are:
 
+- [Azure Update Management](/azure/automation/update-management/overview)
 - [Windows Update](https://support.microsoft.com/windows/get-the-latest-windows-update-7d20e88c-0568-483a-37bc-c3885390d212#WindowsVersion=Windows_11)
 - [Windows Server Update Services (WSUS)](../../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md)
 - [Software updates in Endpoint Configuration Manager](/mem/configmgr/sum/understand/software-updates-introduction)
-- [Azure Update Management](/azure/automation/update-management/overview)
 
 Consider subscribing to notifications in the
 [Microsoft Security Response Center (MSRC) Security Update Guide](https://msrc.microsoft.com/update-guide/).
@@ -78,6 +78,12 @@ You should remove or disable the SMB 1.0 feature from all Windows Servers and cl
 require it. For systems that do require SMB 1.0, you should move to SMB 2.0 or higher as soon as
 possible. Starting in the Windows 10 Fall Creators Update and Windows Server 2019, [SMB 1.0 is no
 longer installed by default](Troubleshoot/smbv1-not-installed-by-default-in-windows.md).
+
+> [!TIP]
+> Windows 10 Home and Windows 10 Pro still contain the SMB 1.0 client by default after a clean
+> installation or in-place upgrade. This behavior is changing in Windows 11, you can read more in
+> the article
+> [SMB1 now disabled by default for Windows 11 Home Insiders builds](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb1-now-disabled-by-default-for-windows-11-home-insiders-builds/ba-p/3289473).
 
 Removing SMB 1.0 protects your systems by eliminating several well known security vulnerabilities.
 SMB 1.0 lacks the security features of SMB 2.0 and later that help protect against interception. For
@@ -99,20 +105,36 @@ In SMB 1.0 when a user's credentials fail, the SMB client will try guest access.
 access or fallback to the guest account by default. You should use SMB 2.0 or higher and disable
 the use of SMB guest access on any systems where guest access isn't disabled by default.
 
+> [!TIP]
+> Windows 11 Home and Pro editions are unchanged from their previous default behavior; they allow
+> guest authentication by default.
+
 When guest access is disabled, it prevents a malicious actor from creating a server and tricking users
 into accessing it using guest access. For example, when a user accesses the spoofed share, their
-credentials would fail and SMB 1.0 would fallback to using guest access. Disabling guess access
+credentials would fail and SMB 1.0 would fall back to using guest access. Disabling guess access
 stops the SMB session from connecting, preventing the user from accessing the share and any
 malicious files.
 
 To prevent the use of guest fallback on Windows SMB clients where guest access isn't disabled by
-default (including Windows Server), you configure the following group policy:
+default (including Windows Server):
+
+# [Group Policy](#tab/group-policy)
 
 1. Open the **Group Policy Management Console**.
 1. In the console tree, select **Computer Configuration > Administrative Templates > Network >
     Lanman Workstation**.
 1. For the setting, right-click **Enable insecure guest logons** and select **Edit**.
 1. Select **Enabled** and select **OK**.
+
+# [PowerShell](#tab/powershell)
+
+From an elevated PowerShell prompt, run the following commands:
+
+```powershell
+Set-SmbClientConfiguration -EnableInsecureGuestLogons $false -Confirm:$false 
+```
+
+---
 
 To learn more about guest access default behavior, read the article
 [Guest access in SMB2 and SMB3 disabled by default in Windows](/troubleshoot/windows-server/networking/guest-access-in-smb2-is-disabled-by-default).
@@ -128,7 +150,8 @@ over HTTPS. For example, your server may be configured to require SMB signing or
 the Webclient could connect to HTTP/80 if WebDAV has been enabled. Any resulting connection would be
 unencrypted, regardless of your SMB configuration.
 
-You can use Group Policy Preferences to disable the service on a large number of machines when you're ready to implement. For more information about configuring Group Policy Preferences, see
+You can use Group Policy Preferences to disable the service on a large number of machines when
+you're ready to implement. For more information about configuring Group Policy Preferences, see
 [Configure a Service Item](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732482(v=ws.10)).
 
 ### Restrict outbound SMB destinations
@@ -167,14 +190,18 @@ mandatory security feature called _pre-authentication integrity_. Pre-authentica
 or encrypts the early phases of SMB connections to prevent the tampering of Negotiate and Session
 Setup messages by using cryptographic hashing.
 
-Using cryptographic hashing, the client and server can mutually trust the connection and session
+Cryptographic hashing means the client and server can mutually trust the connection and session
 properties. Pre-authentication integrity supersedes _secure dialect negotiation_ introduced in SMB
 3.0. You can’t turn off pre-authentication integrity, but if a client uses an older dialect, it
 won’t be used.
 
 You can enhance your security posture further by forcing the use of SMB 3.1.1 as a minimum. To set
-the minimum SMB dialect to 3.1.1, you must create registry DWORD values for `MinSMB2Dialect` and
-`MaxSMB2Dialect` with `0x000000311` as the value data. The registry values are found in the key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters`.
+the minimum SMB dialect to 3.1.1, from an elevated PowerShell prompt, run the following commands:
+
+```powershell
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" -Name "MinSMB2Dialect" -Value 0x000000311
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" -Name "MaxSMB2Dialect" -Value 0x000000311
+```
 
 To learn more about how to set the minimum SMB dialect used, see
 [Controlling SMB dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024?WT.mc_id=ITOPSTALK-blog-abartolo).
@@ -191,12 +218,14 @@ includes the signatures used by signing.
 > require encryption unless all your machines support SMB 3.0 or later, or are third parties with
 > SMB 3 and encryption support. If you configure SMB encryption on clients or UNC paths hosted by
 > servers that do not support SMB Encryption, the SMB client will be unable to access the specified
-> path.
+> path. Also, if you configure your server for SMB encryption and it is accessed by clients that
+> don't support it, those clients will again be unable to access the path.
 
-UNC Hardening gives the ability to check UNC paths for mandated security settings and will refuse
-to connect if a server couldn't meet them. It's a highly effective tool against spoofing and
-tampering because the client can authenticate the identity of the server and validate the
-integrity of the SMB payloads.
+UNC Hardening gives the ability to check UNC paths for mandated security settings and will refuse to
+connect if a server couldn't meet them. Beginning with Windows Server 2016 and Windows 10, UNC
+Hardening is enabled by default for SYSVOL and NETLOGON shares on domain controllers. It's a highly
+effective tool against spoofing and tampering because the client can authenticate the identity of
+the server and validate the integrity of the SMB payloads.
 
 When configuring UNC hardening, you can specify various UNC path patterns. For example:
 
@@ -205,8 +234,10 @@ When configuring UNC hardening, you can specify various UNC path patterns. For e
 - `\\*\<Share>` - The configuration entry applies to the share that has the specified name on any server.
 - `\\<Server>\*` - The configuration entry applies to any share on the specified server.
 
-You can use Group Policy to apply the UNC Hardened Access feature to a large number of machines when you're ready to implement it. For more information about configuring UNC Hardened Access through Group Policy, see the support article
-[KB3000483](https://support.microsoft.com/help/3000483/ms15-011-vulnerability-in-group-policy-could-allow-remote-code-executi?WT.mc_id=ITOPSTALK-blog-abartolo).
+You can use Group Policy to apply the UNC Hardened Access feature to a large number of machines when
+you're ready to implement it. For more information about configuring UNC Hardened Access through
+Group Policy, see the security bulletin
+[MS15-011](https://support.microsoft.com/topic/ms15-011-vulnerability-in-group-policy-could-allow-remote-code-execution-february-10-2015-91b4bda2-945d-455b-ebbb-01d1ec191328).
 
 ### Map drives on demand with mandated signing or encryption
 
@@ -223,7 +254,8 @@ The parameters don't change how signing or encryption work, or the dialect requi
 to map a drive and the server refuses to honor your requirement for signing or encryption, the drive
 mapping will fail rather than connect unsafely.
 
-Learn about the syntax and parameters for the `New-SmbMapping` command in [New-SmbMapping](/powershell/module/smbshare/new-smbmapping) reference article.
+Learn about the syntax and parameters for the `New-SmbMapping` command in
+[New-SmbMapping](/powershell/module/smbshare/new-smbmapping) reference article.
 
 ### Beyond SMB
 
@@ -232,21 +264,24 @@ usage, then reviewing the logs to find where NTLM is used.
 
 Removing NTLM helps to protect you against common attacks like pass-the-hash, brute-force or rainbow
 hash tables due to its use of older MD4/MD5 cryptography hash function. NTLM also isn't able to
-verify the server identity, unlike more recent protocols like Kerberos, making it vulnerable to
-NTLM relay attacks as well. Many of these attacks are well proven but are also mitigated with
-Kerberos.
+verify the server identity, unlike more recent protocols like Kerberos, making it vulnerable to NTLM
+relay attacks as well. Many of these common attacks are easily mitigated with Kerberos.
 
-To learn how to audit NTLM as part of
-your effort to begin the transition to Kerberos, see the
+To learn how to audit NTLM as part of your effort to begin the transition to Kerberos, see the
 [Assessing NTLM usage](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/jj865670(v%3dws.10)?WT.mc_id=ITOPSTALK-blog-abartolo)
-article. You can also read learn about detecting insecure protocols using Azure Sentinel in the [Azure Sentinel Insecure Protocols Workbook Implementation Guide](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/azure-sentinel-insecure-protocols-workbook-implementation-guide/ba-p/1197564?WT.mc_id=ITOPSTALK-blog-abartolo) blog article.
+article. You can also read learn about detecting insecure protocols using Azure Sentinel in the
+[Azure Sentinel Insecure Protocols Workbook Implementation Guide](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/azure-sentinel-insecure-protocols-workbook-implementation-guide/ba-p/1197564?WT.mc_id=ITOPSTALK-blog-abartolo)
+blog article.
 
 In parallel to removing NTLM, you should consider adding more layers of protection for offline
 and ticket passing attacks. Use the following items as a guide when enhancing Kerberos security.
 
-1. **Enforce long passwords and phrases** - 15 characters or more without dictionary words makes
-   offline brute force extremely time consuming. Avoiding dictionary attacks with pass phrases makes
-   that even stronger.
+1. **Deploy Windows Hello for Business or smart cards** - Two-factor authentication with Windows
+   Hello for Business adds an entire new layer of protection. Learn about
+   [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview).
+1. **Enforce long passwords and phrases** - We encourage using longer password lengths such as 14
+   characters or more to reduce your resistance to brute force attacks. You should also avoid common
+   words or phrases to make your password even stronger.
 1. **Deploy Azure AD Password Protection for Active Directory Domain Services** - Use Azure AD
    Password Protect to block known weak passwords and terms that are specific to your organization.
    To learn more, review
@@ -255,11 +290,6 @@ and ticket passing attacks. Use the following items as a guide when enhancing Ke
    character construction, makes brute force and dictionary attacks to crack passwords incredibly
    time consuming. Read about what gMSAs are in the article
    [Group Managed Service Accounts Overview](../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md).
-1. **Deploy Windows Hello for Business or smart cards** - Two-factor authentication with Windows
-   Hello for Business adds an entire new layer of protection. Learn about
-   [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview).
-   TODO: as well as switching to Public Key Cryptography for Initial Authentication (PKINIT) in the
-   Kerberos protocol instead of just using passwords.
 1. **Kerberos Armoring, known as Flexible Authentication Secure Tunneling (FAST)** - FAST prevents
    [Kerberoasting](https://www.microsoft.com/security/blog/2020/08/27/stopping-active-directory-attacks-and-other-post-exploitation-behavior-with-amsi-and-machine-learning/) because the user’s pre-authentication data is protected and no longer subject to
    offline brute force or dictionary attacks. It also prevents downgrade attacks from spoofed KDCs,
@@ -271,7 +301,7 @@ and ticket passing attacks. Use the following items as a guide when enhancing Ke
    [How Windows Defender Credential Guard works](/windows/security/identity-protection/credential-guard/credential-guard-how-it-works)
    article.
 1. **Consider requiring SCRIL: Smart Card Required for Interactive Logon** - When deploying SCRIL,
-   AD changes the user's password to a random 128-bit set which users can no longer use to log on
+   AD changes the user's password to a random 128-bit set which users can no longer use to sign in
    interactively. SCRIL is typically only suitable for environments with
    specific security requirements. To learn more about passwordless strategies, review
    [Configuring user accounts to disallow password authentication](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
