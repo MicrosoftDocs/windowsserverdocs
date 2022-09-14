@@ -25,7 +25,8 @@ In addition to the uniquely created domain-specific SIDs that are assigned to sp
 
 SIDs are a fundamental building block of the Windows security model. They work with specific components of the authorization and access-control technologies in the security infrastructure of the Windows Server operating systems. This helps protect access to network resources and provides a more secure computing environment.
 
-The content in this article applies to computers that are running the supported versions of the Windows operating system referenced in the "Applies to" list at the beginning.
+> [!NOTE]
+> This content pertains only to the Windows versions in the "Applies to" list at the beginning of the article.
 
 ## How security identifiers work
 
@@ -145,7 +146,7 @@ The universal well-known SIDs are listed in the following table:
 | S-1-5 | NT Authority | A SID that represents an identifier authority. |
 | S-1-5-80-0 | All Services | A group that includes all service processes configured on the system. Membership is controlled by the operating system.|
 
-The following table lists the predefined identifier authority constants. The first four values are used with universal well-known SIDs, and the rest of the values are used with well-known SIDs in the Windows operating systems that are designated in the "Applies to" list at the beginning of the article.
+The following table lists the predefined identifier authority constants. The first four values are used with universal well-known SIDs, and the rest of the values are used with well-known SIDs in the Windows operating systems in the "Applies to" list at the beginning of the article.
 
 | Identifier authority | Value | SID string prefix |
 | - | - | - |
@@ -166,7 +167,7 @@ The following RID values are used with universal well-known SIDs. The **Identifi
 | SECURITY_CREATOR_OWNER_RID | 0 | S-1-3 |
 | SECURITY_CREATOR_GROUP_RID | 1 | S-1-3 |
 
-The SECURITY\_NT\_AUTHORITY (S-1-5) predefined identifier authority produces SIDs that aren't universal and are meaningful only in installations of the Windows operating systems that are designated in the "Applies to" list at the beginning of this article. 
+The SECURITY\_NT\_AUTHORITY (S-1-5) predefined identifier authority produces SIDs that aren't universal and are meaningful only in installations of the Windows operating systems in the "Applies to" list at the beginning of this article. 
 
 The well-known SIDs are listed in the following table:
 
@@ -239,7 +240,7 @@ The well-known SIDs are listed in the following table:
 | S-1-5-64-21 | Digest Authentication| A SID that's used when the Digest authentication package authenticates the client.|
 | S-1-5-80 | NT Service | A SID that's used as an NT Service account prefix.|
 | S-1-5-80-0 | All Services| A group that includes all service processes that are configured on the system. Membership is controlled by the operating system. SID S-1-5-80-0 equals NT SERVICES\ALL SERVICES. This SID was introduced in Windows Server 2008 R2.|
-| S-1-5-83-0| NT VIRTUAL MACHINE\Virtual Machines| A built-in group. The group is created when the Hyper-V role is installed. Membership in the group is maintained by the Hyper-V Management Service (VMMS). This group requires the *Create Symbolic Links* right (SeCreateSymbolicLinkPrivilege), and also the *Log on as a Service* right (SeServiceLogonRight). |
+| S-1-5-83-0| NT VIRTUAL MACHINE\Virtual Machines| A built-in group. The group is created when the Hyper-V role is installed. Membership in the group is maintained by the Hyper-V Management Service (VMMS). This group requires the *Create Symbolic Links* right (SeCreateSymbolicLinkPrivilege) and the *Log on as a Service* right (SeServiceLogonRight). |
 
 The following RIDs are relative to each domain:
 
