@@ -240,7 +240,7 @@ After creating the cluster, use the `Enable-ClusterStorageSpacesDirect` PowerShe
 From the management system, in a PowerShell command windows opened with Administrator privileges, initiate the following command. The cluster name is the name of the cluster that you created in the previous steps. If this command is run locally on one of the nodes, the -CimSession parameter is not necessary.
 
 ```PowerShell
-Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
+Enable-ClusterStorageSpacesDirect -CimSession <ClusterName>
 ```
 
 To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.
