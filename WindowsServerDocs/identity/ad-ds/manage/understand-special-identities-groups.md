@@ -1,5 +1,5 @@
 ---
-title: Special Identities
+title: Special identities
 description: Windows Server special identities groups usage in Windows access control 
 author: dansimp
 ms.author: dansimp
@@ -9,7 +9,7 @@ ms.date: 08/02/2022
 
 # Special identities
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes the special identity groups (which are sometimes referred to as security groups) that are used in Windows access control.
 
@@ -21,7 +21,7 @@ Special identity groups are similar to Active Directory security groups as liste
 
 Servers that are running the supported Windows Server operating systems designated in the **Applies to** list at the beginning of this article include several special identity groups. These special identity groups do not have specific memberships that can be modified, but they can represent different users at different times, depending on the circumstances.
 
-Although the special identity groups can be assigned rights and permissions to resources, the memberships cannot be modified or viewed. Group scopes do not apply to special identity groups. Users are automatically assigned to these special identity groups whenever they sign in or access a particular resource.
+Although the special identity groups can be assigned rights and permissions to resources, the memberships can't be modified or viewed. Group scopes do not apply to special identity groups. Users are automatically assigned to these special identity groups whenever they sign in or access a particular resource.
 
 For information about security groups and group scope, see [Active Directory Security Groups](understand-security-groups.md).
 
@@ -81,24 +81,24 @@ The special identity groups are described in the following tables:
 
 ## Anonymous Logon
 
-Any user who accesses the system through an anonymous logon has the Anonymous Logon identity. This identity allows anonymous access to resources, such as a web page that is published on corporate servers. The Anonymous Logon group is not a member of the Everyone group by default.
+Any user who accesses the system through an anonymous logon has the Anonymous Logon identity. This identity allows anonymous access to resources, like a webpage that's published on a corporate server. The Anonymous Logon group is not a member of the Everyone group by default.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-7 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-7 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Attested key property
 
-A SID that means the key trust object had the attestation property.
+A security identifier (SID) that means the key trust object had the attestation property.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-18-6 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-18-6 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Authenticated Users
@@ -107,20 +107,20 @@ Any user who accesses the system through a sign-in process has the Authenticated
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-11 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-11 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Add workstations to domain](/windows/device-security/security-policy-settings/add-workstations-to-domain): SeMachineAccountPrivilege<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
 
 ## Authentication authority asserted identity
 
-A SID that means the client's identity is asserted by an authentication authority based on proof of possession of client credentials.
+An SID that means the client's identity is asserted by an authentication authority based on proof of possession of client credentials.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-18-1 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-18-1 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Batch
@@ -129,9 +129,9 @@ Any user or process that accesses the system as a batch job (or through the batc
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-3 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-3 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| none|
 
 ## Console logon
@@ -140,22 +140,22 @@ A group that includes users who are logged on to the physical console. This SID 
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-2-1 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-2-1 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Creator Group
 
 The person who created the file or the directory is a member of this special identity group. Windows Server operating systems use this identity to automatically grant access permissions to the creator of a file or directory.
 
-A placeholder security identifier (SID) is created in an inheritable access control entry (ACE). When the ACE is inherited, the system replaces this SID with the SID for the primary group of the object’s current owner. The primary group is used only by the Portable Operating System Interface for UNIX (POSIX) subsystem.
+A placeholder SID is created in an inheritable access control entry (ACE). When the ACE is inherited, the system replaces this SID with the SID for the primary group of the object’s current owner. The primary group is used only by the Portable Operating System Interface for UNIX (POSIX) subsystem.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-3-1 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-3-1 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| none|
 
 ## Creator Owner
@@ -164,9 +164,9 @@ The person who created the file or the directory is a member of this special ide
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-3-0 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-3-0 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| none|
 
 ## Dialup
@@ -175,18 +175,18 @@ Any user who accesses the system through a dial-up connection has the Dial-Up id
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-1 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-1 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| none|
 
 ## Digest authentication
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-64-21 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-64-21 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| none|
 
 ## Enterprise Domain Controllers
@@ -195,9 +195,9 @@ This group includes all domain controllers in an Active Directory forest. Domain
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-9 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-9 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight|
 
 ## Enterprise Read-only Domain Controllers
@@ -206,9 +206,9 @@ This group includes all domain controllers in an Active Directory forest. Domain
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-21-\<RootDomain>|
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-21-\<RootDomain>|
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Everyone
@@ -221,20 +221,20 @@ Membership is controlled by the operating system.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-1-0 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-1-0 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight</br> [Act as part of the operating system](/windows/device-security/security-policy-settings/act-as-part-of-the-operating-system): SeTcbPrivilege</br> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
 
 ## Fresh Public Key identity
 
-A SID that means the client's identity is asserted by an authentication authority based on proof of current possession of client public key credentials.
+An SID that means the client's identity is asserted by an authentication authority based on proof of current possession of client public key credentials.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-18-3 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-18-3 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Interactive
@@ -243,9 +243,9 @@ Any user who is logged on to the local system has the Interactive identity. This
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-4 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-4 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None|
 
 ## IUSR
@@ -254,20 +254,20 @@ Internet Information Services (IIS) uses this account by default whenever anonym
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-17 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-17 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Key trust
 
-A SID that means the client's identity is based on proof of possession of public key credentials using the key trust object.
+An SID that means the client's identity is based on proof of possession of public key credentials using the key trust object.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-18-4 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-18-4 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Local Service
@@ -276,31 +276,31 @@ The Local Service account is similar to an Authenticated User account. The Local
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-19 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-19 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|  [Adjust memory quotas for a process](/windows/device-security/security-policy-settings/adjust-memory-quotas-for-a-process): SeIncreaseQuotaPrivilege <p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p> [Change the system time](/windows/device-security/security-policy-settings/change-the-system-time): SeSystemtimePrivilege<p> [Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone): SeTimeZonePrivilege<p> [Create global objects](/windows/device-security/security-policy-settings/create-global-objects): SeCreateGlobalPrivilege<p> [Generate security audits](/windows/device-security/security-policy-settings/generate-security-audits): SeAuditPrivilege<p>[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication): SeImpersonatePrivilege<p> [Replace a process level token](/windows/device-security/security-policy-settings/replace-a-process-level-token): SeAssignPrimaryTokenPrivilege<p>|
 
 ## LocalSystem
 
-This is a service account that is used by the operating system. The LocalSystem account is a powerful account that has full access to the system and acts as the computer on the network. If a service logs on to the LocalSystem account on a domain controller, that service has access to the entire domain. Some services are configured by default to log on to the LocalSystem account. Do not change the default service setting. The name of the account is LocalSystem. This account does not have a password.
+This is a service account that's used by the operating system. The LocalSystem account is a powerful account that has full access to the system and acts as the computer on the network. If a service logs on to the LocalSystem account on a domain controller, that service has access to the entire domain. Some services are configured by default to log on to the LocalSystem account. Do not change the default service setting. The name of the account is LocalSystem. This account does not have a password.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-18 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-18 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## MFA key property
 
-A SID that means the key trust object had the multifactor authentication (MFA) property.
+An SID that means the key trust object had the multifactor authentication (MFA) property.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-18-5 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-18-5 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Network
@@ -309,9 +309,9 @@ This group implicitly includes all users who are logged on through a network con
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-2 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-2 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Network Service
@@ -320,18 +320,18 @@ The Network Service account is similar to an Authenticated User account. The Net
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-20 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-20 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| [Adjust memory quotas for a process](/windows/device-security/security-policy-settings/adjust-memory-quotas-for-a-process): SeIncreaseQuotaPrivilege<p> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p>[Create global objects](/windows/device-security/security-policy-settings/create-global-objects): SeCreateGlobalPrivilege<p>[Generate security audits](/windows/device-security/security-policy-settings/generate-security-audits): SeAuditPrivilege<p>[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication): SeImpersonatePrivilege<p>[Replace a process level token](/windows/device-security/security-policy-settings/replace-a-process-level-token): SeAssignPrimaryTokenPrivilege<p>|
 
 ## NTLM authentication
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-64-10 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-64-10 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None|
 
 ## Other Organization
@@ -340,9 +340,9 @@ This group implicitly includes all users who are logged on to the system through
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-1000 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-1000 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None |
 
 ## Owner Rights
@@ -351,20 +351,20 @@ A group that represents the current owner of the object. When an ACE that carrie
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-3-4 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-3-4 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Principal Self
 
-This identity is a placeholder in an ACE on a user, group, or computer object in Active Directory. When you grant permissions to Principal Self, you grant them to the security principal that is represented by the object. During an access check, the operating system replaces the SID for Principal Self with the SID for the security principal that is represented by the object.
+This identity is a placeholder in an ACE on a user, group, or computer object in Active Directory. When you grant permissions to Principal Self, you grant them to the security principal that's represented by the object. During an access check, the operating system replaces the SID for Principal Self with the SID for the security principal that's represented by the object.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-10 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-10 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None |
 
 ## Proxy
@@ -373,24 +373,24 @@ Identifies a SECURITY_NT_AUTHORITY Proxy.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-8 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-8 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Read-only Domain Controller
 
-This group includes all read-only domain controllers in the forest with read-only rights within the Active Directory database. It allows for domain controller deployment in situations where physical security is scare or not guaranteed. Membership is controlled by the operating system.
+This group includes all read-only domain controllers in the forest with read-only rights within the Active Directory database. It allows for domain controller deployment in situations where physical security is scarce or not guaranteed. Membership is controlled by the operating system.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-21-\<domain>|
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-21-\<domain>|
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 > [!NOTE]
-> The Denied RODC (Read-only Domain Controller) Replication group is created automatically when a RODC account is created in the forest. Passwords cannot be replicated in the Denied Read-only domain controller group.
+> The Denied RODC (Read-only Domain Controller) Replication group is created automatically when an RODC account is created in the forest. Passwords can't be replicated in the Denied Read-only domain controller group.
 
 ## Remote Interactive Logon
 
@@ -398,51 +398,51 @@ This identity represents all users who are currently logged on to a computer by 
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-14|
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-14|
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None |
 
 ## Restricted
 
-Users and computers with restricted capabilities have the Restricted identity. This identity group is used by a process that is running in a restricted security context, such as running an application with the RunAs service. When code runs at the Restricted security level, the Restricted SID is added to the user’s access token.
+Users and computers with restricted capabilities have the Restricted identity. This identity group is used by a process that's running in a restricted security context, such as running an application with the RunAs service. When code runs at the Restricted security level, the Restricted SID is added to the user’s access token.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-12 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-12 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None |
 
 ## SChannel authentication
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-64-14 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-64-14 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None |
 
 ## Service
 
-Any service that accesses the system has the Service identity. This identity group includes all security principals that are signed in as a service. This identity grants access to processes that are being run by Windows Server services. Membership is controlled by the operating system.
+Any service that accesses the system has the Service identity. This identity group includes all security principals that are signed in as a service. This identity grants access to processes that Windows Server services are running. Membership is controlled by the operating system.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-6 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-6 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| [Create global objects](/windows/device-security/security-policy-settings/create-global-objects): SeCreateGlobalPrivilege<p>[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication): SeImpersonatePrivilege<p>|
 
 ## Service asserted identity
 
-A SID that means the client's identity is asserted by a service.
+An SID that means the client's identity is asserted by a service.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-18-2 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-18-2 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Terminal Server User
@@ -451,33 +451,33 @@ Any user accessing the system through Terminal Services has the Terminal Server 
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-13 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-13 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None |
 
 ## This Organization
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-15 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-15 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| None |
 
 ## Window Manager\\Window Manager Group
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-90 |
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-known SID/RID | S-1-5-90 |
+|Object class|  Foreign Security Principal|
+|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default User Rights| [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p> [Increase a process working set](/windows/device-security/security-policy-settings/increase-a-process-working-set): SeIncreaseWorkingSetPrivilege<p>|
 
 ## See also
 
-- [Active Directory Security Groups](understand-security-groups.md)
+- [Active Directory security groups](understand-security-groups.md)
 
-- [Security Principals](understand-security-principals.md)
+- [Security principals](understand-security-principals.md)
 
-- [Access Control Overview](/windows/security/identity-protection/access-control/access-control)
+- [Access control overview](/windows/security/identity-protection/access-control/access-control)
