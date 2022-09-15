@@ -44,13 +44,13 @@ Credential information is encrypted twice. The first encryption is based on the 
 
     For more information, see [How to help keep your Microsoft account safe and secure](https://support.microsoft.com/account-billing/how-to-help-keep-your-microsoft-account-safe-and-secure-628538c2-7006-33bb-5ef4-c917657362b9).
 
-- **Secondary proof of identity is required**. Before user profile information and settings can be accessed on a second supported Windows computer for the first time, trust must be established for that device by providing secondary proof of identity. This can be accomplished by providing Windows with a code that is sent to a mobile phone number or by following the instructions that are sent to an alternate email address that a user specifies in the account settings.
+- **Secondary proof of identity is required**. Before user profile information and settings can be accessed on a second supported Windows computer for the first time, trust must be established for that device by providing secondary proof of identity. The user can prove their identity by providing Windows with a code that's sent to a mobile phone number or by following the instructions that are sent to an alternate email address that a user specifies in the account settings.
 
 - **All user profile data is encrypted on the client before it's transmitted to the cloud**. User data doesn't roam over a wireless wide area network by default so that profile data is protected. All data and settings that leave a device are transmitted through the TLS/SSL protocol.
 
 ### Microsoft account security information
 
-A user can add security information to their Microsoft account through the Accounts interface on computers running the supported versions of Windows. In Accounts, the user can update the security information that they provided when they created their account. This security information includes an alternate email address or phone number so that if their password is compromised or forgotten, a verification code can be sent to verify their identity. A user can potentially use their Microsoft account to store corporate data on a personal OneDrive or email app, so it's a safe practice for the account owner to keep this security information up-to-date.
+A user can add security information to their Microsoft account through the Accounts interface on computers running supported versions of Windows. In Accounts, the user can update the security information that they provided when they created their account. This security information includes an alternate email address or phone number so that if their password is compromised or forgotten, a verification code can be sent to verify their identity. A user can potentially use their Microsoft account to store corporate data on a personal OneDrive or email app, so it's a safe practice for the account owner to keep this security information up-to-date.
 
 ## Microsoft accounts in the enterprise
 
