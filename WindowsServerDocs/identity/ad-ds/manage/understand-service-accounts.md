@@ -1,5 +1,5 @@
 ---
-title: About service Accounts
+title: Service Accounts
 description: Windows Server standalone and group-managed service accounts in Active Directory
 author: dansimp
 ms.author: dansimp
@@ -7,7 +7,7 @@ ms.topic: article
 ms.date: 07/21/2022
 ---
 
-# About service accounts
+# Service accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
