@@ -374,12 +374,12 @@
           href: ad-ds/plan/appendix-L--Events-to-Monitor.md
         - name: 'Appendix M: Document Links and Recommended Reading'
           href: ad-ds/manage/appendix-M--Document-Links-and-Recommended-Reading.md
-      - name: Active Directory Replication and Topology Management Using Windows Powershell
+      - name: Active Directory Replication and Topology Management Using Windows PowerShell
         href: ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md
         items:
         - name: Introduction to Active Airectory Replication and Topology Management Using Windows PowerShell (Level 100)
           href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
-        - name: Advanced Active Directory Replication and Topology Management Using Windows Powershell (Level 200)
+        - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
           href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
       - name: Managing RID issuance
         href: ad-ds/manage/Managing-RID-Issuance.md
@@ -395,7 +395,7 @@
             href: ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md
           - name: TPM key attestation
             href: ad-ds/manage/component-updates/TPM-Key-attestation.md
-          - name: CA backup and restore Windows Powershell cmdlets
+          - name: CA backup and restore Windows PowerShell cmdlets
             href: ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-powershell-cmdlets.md
           - name: Command-line process auditing
             href: ad-ds/manage/component-updates/Command-line-process-auditing.md
