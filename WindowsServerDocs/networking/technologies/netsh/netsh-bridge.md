@@ -1,11 +1,11 @@
 ---
 title: Netsh Commands for a network bridge of different network adapters.
 description: Use netsh bridge commands to create and manage a bridge of network adapters for sharing connectivity.
-author: Windows Mobile Connectivity / NetworkUX Team
-ms.author: Windows Mobile Connectivity / NetworkUX Team
+author: hiepkhuuMS
+ms.author: msedgedevrel
 ms.service: #Required; service per approved list. slug assigned by ACOM.
-ms.topic: how-to article 
-ms.date: 09/09/2022.
+ms.topic: how-to 
+ms.date: 09/09/2022
 ms.custom: template-how-to #Required; leave this attribute/value as-is.
 ---
 
@@ -20,10 +20,12 @@ Use **netsh bridge** commands to create and manage a network bridge of at least 
 
 <!-- netsh bridge <command> help -->
 ## display help
+
 Command provides more detailed information about the supported **netsh bridge** commands.
 
 **Syntax**
-```powershell
+
+```text
 netsh bridge [command] [help | ?]
 ```
 
@@ -39,7 +41,7 @@ netsh bridge [command] [help | ?]
 
 The following is an example of the command to show all supported netsh bridge commands and its expected result:
 
-> ```
+> ```text
 > C:\Windows\system32> netsh bridge help
 > 
 > The following commands are available:
@@ -59,10 +61,12 @@ The following is an example of the command to show all supported netsh bridge co
 
 <!-- "netsh bridge list" command section -->
 ## list bridge
+
 Command lists all available created bridges, identified by their unique bridge GUIDs.
 
 **Syntax**
-```powershell
+
+```text
 netsh bridge list
 ```
 
@@ -81,11 +85,13 @@ The following is an example of this command and its expected result:
 
 <!-- "netsh bridge show adapters" command section -->
 ## show adapter
+
 Command shows the bridgeable network adapters and the network adapters already configured as a single bridge.
 Each adapter is identified by its unique ID, which can be adapter GUID or interface index (namely, IfIndex) or Adapter Name.
 
 **Syntax**
-```powershell
+
+```text
 netsh bridge show adapter
 ```
 
@@ -103,14 +109,16 @@ The following is an example of this command and its expected result:
 > ------------------------------------------------------------------------------------------
 > ```
 
-<!-- "netsh bridge create bridge <Adapter ID#1> <AdapterID#2>" command section -->
+<!-- "netsh bridge create bridge <Adapter ID 1> <Adapter ID 2>" command section -->
 ## create bridge
-Command creates a bridge of at least two network adapters joining onto the bridge. The two network adapters are required parameters. A successfully created bridge is identified by its unique bridge GUID and can be acquired 
+
+Command creates a bridge of at least two network adapters joining onto the bridge. The two network adapters are required parameters. A successfully created bridge is identified by its unique bridge GUID and can be acquired
 from command **netsh bridge list**.
 
 **Syntax**
-```powershell
-netsh bridge create [<Adapter ID#1> <Adapter ID#2>]
+
+```text
+netsh bridge create [<Adapter ID 1> <Adapter ID 2>]
 ```
 
 **Parameters**
@@ -149,10 +157,12 @@ netsh bridge create [<Adapter ID#1> <Adapter ID#2>]
 
 <!-- "netsh bridge add <Adapter ID> to <Bridge GUID>" command section -->
 ## add adapter to bridge
+
 Command adds a bridgeable network adapter onto an existing bridge.
 
 **Syntax**
-```powershell
+
+```text
 netsh bridge add [<Adapter ID>] to [<Bridge GUID>]
 ```
 
@@ -176,10 +186,12 @@ The following is an example of this command and its expected result:
 
 <!-- "netsh bridge remove <Adapter ID> from <Bridge GUID>" command section -->
 ## remove adapter from bridge
+
 Command removes a bridged network adapter from an existing bridge.
 
 **Syntax**
-```powershell
+
+```text
 netsh bridge remove [<Adapter ID>] from [<Bridge GUID>]
 ```
 
@@ -196,17 +208,19 @@ netsh bridge remove [<Adapter ID>] from [<Bridge GUID>]
 
 The following is an example of this command and its expected result:
 
-> ```
+> ```text
 > C:\Windows\system32> netsh bridge remove [<Adapter ID>] from [<Bridge GUID>]
 > Successfully removed adapter <Adapter ID> from bridge.
 > ```
 
 <!-- "netsh bridge remove all from <Bridge GUID>" command section -->
 ## remove all adapters
+
 Command removes all bridged network adapters from an existing bridge and then destroys the bridge.
 
 **Syntax**
-```powershell
+
+```text
 netsh bridge remove all from [<Bridge GUID>]
 ```
 
@@ -222,17 +236,19 @@ netsh bridge remove all from [<Bridge GUID>]
 
 The following is an example of this command and its expected result:
 
-> ```
+> ```text
 > C:\Windows\system32> netsh bridge remove all from [<Bridge GUID>]
 > Successfully destroyed bridge <Bridge GUID>.
 > ```
 
 <!-- "netsh bridge destroy <Bridge GUID>" command section -->
 ## destroy bridge
+
 Command removes all bridged network adapters from an existing bridge and then destroys the bridge.
 
 **Syntax**
-```powershell
+
+```text
 netsh bridge destroy [<Bridge GUID>]
 ```
 
@@ -248,7 +264,7 @@ netsh bridge destroy [<Bridge GUID>]
 
 The following is an example of this command and its expected result:
 
-> ```
+> ```text
 > C:\Windows\system32> netsh bridge destroy [<Bridge GUID>]
 > Successfully destroyed bridge <Bridge GUID>.
 > ```
