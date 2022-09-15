@@ -434,7 +434,7 @@ Members of the DnsUpdateProxy group are DNS clients. They're permitted to perfor
 
 However, to protect against unsecured records or to permit members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, you must create a dedicated user account and configure DHCP servers to perform DNS dynamic updates by using the credentials of this account (user name, password, and domain). Multiple DHCP servers can use the credentials of one dedicated user account. This group exists only if the DNS server role is or was once installed on a domain controller in the domain.
 
-For information, see [DNS Record Ownership and the DnsUpdateProxy Group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd334715(v=ws.10)).
+For information, see [DNS record ownership and the DnsUpdateProxy group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd334715(v=ws.10)).
 
 |Attribute|Value|
 |--- |--- |
@@ -1124,7 +1124,7 @@ The group is authorized to make schema changes in Active Directory. By default, 
 
 Any of the service administrator groups in the root domain can modify the membership of this group. This group is considered a service administrator account because its members can modify the schema, which governs the structure and content of the entire directory.
 
-For more information, see [What is the Active Directory schema?](/previous-versions/windows/it-pro/windows-server-2003/cc784826(v=ws.10)).
+For more information, see [What is the Active Directory schema?](/previous-versions/windows/it-pro/windows-server-2003/cc784826(v=ws.10))
 
 The Schema Admins group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
