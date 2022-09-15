@@ -42,7 +42,7 @@ In addition to the enhanced security that's provided by having individual accoun
 
 Group-managed service accounts are an extension of standalone managed service accounts, which were introduced in Windows Server 2008 R2. These accounts are managed domain accounts that provide automatic password management and simplified SPN management, including delegation of management to other administrators.
 
-The group-managed service account provides the same functionality as a standalone managed service account within the domain, but it extends that functionality over multiple servers. When connecting to a service that's hosted on a server farm, such as Network Load Balancing, the authentication protocols that support mutual authentication require all instances of the services to use the same principal. When group-managed service accounts are used as service principals, the Windows Server operating system manages the password for the account instead of relying on the administrator to manage the password.
+A group-managed service account provides the same functionality as a standalone managed service account within the domain, but it extends that functionality over multiple servers. When you're connecting to a service that's hosted on a server farm, such as Network Load Balancing, the authentication protocols that support mutual authentication require all instances of the services to use the same principal. When group-managed service accounts are used as service principals, the Windows Server operating system manages the password for the account instead of relying on the administrator to manage the password.
 
 The Microsoft Key Distribution Service (kdssvc.dll) provides the mechanism to securely obtain the latest key or a specific key with a key identifier for an Active Directory account. This service was introduced in Windows Server 2012, and it doesn't run on earlier versions of the Windows Server operating system. The Key Distribution Service shares a secret, which is used to create keys for the account. These keys are periodically changed. For a group-managed service account, the domain controller computes the password on the key that's provided by the Key Distribution Services, in addition to other attributes of the group-managed service account.
 
@@ -79,9 +79,8 @@ Services that run as virtual accounts access network resources by using the cred
 
 To learn how to configure and use virtual service accounts, see [Service accounts step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd548356(v=ws.10)).
 
-### Virtual account software requirements
-
-Virtual accounts apply only to the Windows operating systems that are listed in "Applies to" at the beginning of this article.
+> [!NOTE]
+> Virtual accounts apply only to the Windows operating systems that are listed in "Applies to" at the beginning of this article.
 
 ## See also
 

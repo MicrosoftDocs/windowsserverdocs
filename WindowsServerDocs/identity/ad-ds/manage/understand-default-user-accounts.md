@@ -1,13 +1,13 @@
 ---
-title: Active Directory Accounts
-description: Creating default local Windows Server Active Directory accounts on a domain controller
+title: About Active Directory Accounts
+description: This article discusses how to create default local Windows Server Active Directory accounts on a domain controller.
 author: dansimp
 ms.author: dansimp
 ms.topic: article
 ms.date: 07/20/2022
 ---
 
-# Active Directory accounts
+# About Active Directory accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
@@ -183,14 +183,14 @@ For all account types (users, computers, and services)
 
 - All the TGTs that are already issued and distributed will be invalid because the DCs will reject them. These tickets are encrypted with the KRBTGT so any DC can validate them. When the password changes, the tickets become invalid.
 
-- All currently authenticated sessions that logged on users have established (based on their service tickets) to a resource (such as a file share, SharePoint site, or Exchange server) are good until the service ticket is required to reauthenticate.
+- All currently authenticated sessions that signed-in users have established (based on their service tickets) to a resource (such as a file share, SharePoint site, or Exchange server) are good until the service ticket is required to reauthenticate.
 
 - NTLM authenticated connections aren't affected.
 
 Because it's impossible to predict the specific errors that will occur for any given user in a production operating environment, you must assume that all computers and users will be affected.
 
 > [!IMPORTANT]
-> Rebooting a computer is the only reliable way to recover functionality, because doing so will cause both the computer account and user accounts to log back in again. Logging in again will request new TGTs that are valid with the new KRBTGT, which will correct any KRBTGT-related operational issues on that computer.
+> Rebooting a computer is the only reliable way to recover functionality, because doing so will cause both the computer account and user accounts to sign back in again. Signing in again will request new TGTs that are valid with the new KRBTGT, which will correct any KRBTGT-related operational issues on that computer.
 
 For information about how to help mitigate the risks associated with a potentially compromised KRBTGT account, see [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/cybertrust/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/).
 
@@ -221,12 +221,12 @@ Each default local account in Active Directory has several account settings that
 
 |Account settings|Description|
 |--- |--- |
-|User must change password at next logon|Forces a password change the next time that the user logs in to the network. Use this option when you want to ensure that the user is the only person who knows their password.|
+|User must change password at next logon|Forces a password change the next time that the user signs in to the network. Use this option when you want to ensure that the user is the only person who knows their password.|
 |User can't change password|Prevents the user from changing the password. Use this option when you want to maintain control over a user account, such as for a Guest or temporary account.|
 |Password never expires|Prevents a user password from expiring. It's a best practice to enable this option with service accounts and to use strong passwords.|
 |Store passwords using reversible encryption|Provides support for applications that use protocols requiring knowledge of the plaintext form of the user’s password for authentication purposes.<p>This option is required when you're using Challenge Handshake Authentication Protocol (CHAP) in Internet Authentication Services (IAS), and when you're using digest authentication in Internet Information Services (IIS).|
 |Account is disabled|Prevents the user from signing in with the selected account. As an administrator, you can use disabled accounts as templates for common user accounts.|
-|Smart card is required for interactive logon|Requires that a user has a smart card to sign on to the network interactively. The user must also have a smart card reader attached to their computer and a valid personal identification number (PIN) for the smart card.<br><br>When this attribute is applied on the account, the effect is as follows:<li>The attribute only restricts initial authentication for interactive logon and Remote Desktop logon. When interactive or Remote Desktop logon requires a subsequent network logon, such as with a domain credential, an NT Hash provided by the domain controller is used to complete the smartcard authentication process.<li>Each time the attribute is enabled on an account, the account’s current password hash value is replaced with a 128-bit random number. This invalidates the use of any previously configured passwords for the account. The value doesn't change after that unless a new password is set or the attribute is disabled and re-enabled.<li>Accounts with this attribute can't be used to start services or run scheduled tasks.|
+|Smart card is required for interactive logon|Requires that a user has a smart card to sign on to the network interactively. The user must also have a smart card reader attached to their computer and a valid personal identification number (PIN) for the smart card.<br><br>When this attribute is applied on the account, the effect is as follows:<li>The attribute restricts only initial authentication for interactive sign-in and Remote Desktop sign-in. When interactive or Remote Desktop sign-in requires a subsequent network sign-in, such as with a domain credential, an NT Hash provided by the domain controller is used to complete the smartcard authentication process.<li>Each time the attribute is enabled on an account, the account’s current password hash value is replaced with a 128-bit random number. This invalidates the use of any previously configured passwords for the account. The value doesn't change after that unless a new password is set or the attribute is disabled and re-enabled.<li>Accounts with this attribute can't be used to start services or run scheduled tasks.|
 |Account is trusted for delegation|Lets a service running under this account to perform operations on behalf of other user accounts on the network. A service running under a user account (also known as a service account) that's trusted for delegation can impersonate a client to gain access to resources, either on the computer where the service is running or on other computers. For example, in a forest that's set to the Windows Server 2003 functional level, this setting is found on the Delegation tab. It's available only for accounts that have been assigned service principal names (SPNs), which are set by using the `setspn` command from Windows Support Tools. This setting is security-sensitive and should be assigned cautiously.|
 |Account is sensitive and can't be delegated|Gives control over a user account, such as for a Guest account or a temporary account. This option can be used if this account can't be assigned for delegation by another account.|
 |Use DES encryption types for this account|Provides support for the Data Encryption Standard (DES). DES supports multiple levels of encryption, including Microsoft Point-to-Point Encryption (MPPE) Standard (40-bit and 56-bit), MPPE standard (56-bit), MPPE Strong (128-bit), Internet Protocol Security (IPSec) DES (40-bit), IPSec 56-bit DES, and IPSec Triple DES (3DES).</div>|
@@ -268,9 +268,7 @@ Moreover, it's a best practice to stringently control where and how sensitive do
 Implementing these best practices is separated into the following tasks:
 
 - [Separate Administrator accounts from user accounts](#separate-administrator-accounts-from-user-accounts)
-
-- [Restrict administrator logon access to servers and workstations](#restrict-administrator-logon-access-to-servers-and-workstations)
-
+- [Restrict administrator sign-in access to servers and workstations](#restrict-administrator-sign-in-access-to-servers-and-workstations)
 - [Disable the account delegation right for sensitive Administrator accounts](#disable-the-account-delegation-right-for-sensitive-administrator-accounts)
 
 To provide for instances where integration challenges with the domain environment are expected, each task is described according to the requirements for a minimum, better, and ideal implementation. As with all significant changes to a production environment, ensure that you test these changes thoroughly before you implement and deploy them. Then stage the deployment in a manner that allows for a rollback of the change if technical issues occur.
@@ -294,16 +292,16 @@ Restrict Domain Admins accounts and other sensitive accounts to prevent them fro
 
 To learn more about privileged access, see [Privileged access devices](/security/compass/privileged-access-devices).
 
-### Restrict administrator logon access to servers and workstations
+### Restrict administrator sign-in access to servers and workstations
 
 It's a best practice to restrict administrators from using sensitive Administrator accounts to sign in to lower-trust servers and workstations. This restriction prevents administrators from inadvertently increasing the risk of credential theft by signing in to a lower-trust computer.
 
 > [!IMPORTANT]
 > Ensure that you either have local access to the domain controller or you've built at least one dedicated administrative workstation.
 
-Restrict logon access to lower-trust servers and workstations by using the following guidelines:
+Restrict sign-in access to lower-trust servers and workstations by using the following guidelines:
 
-- **Minimum**: Restrict domain administrators from having logon access to servers and workstations. Before you start this procedure, identify all OUs in the domain that contain workstations and servers. Any computers in OUs that aren't identified won't restrict administrators with sensitive accounts from signing in to them.
+- **Minimum**: Restrict domain administrators from having sign-in access to servers and workstations. Before you start this procedure, identify all OUs in the domain that contain workstations and servers. Any computers in OUs that aren't identified won't restrict administrators with sensitive accounts from signing in to them.
 
 - **Better**: Restrict domain administrators from non-domain controller servers and workstations.
 
@@ -328,7 +326,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 5. Right-click **New GPO**, and then select **Edit**.
 
-6. Configure user rights to deny logon locally for domain administrators.
+6. Configure user rights to deny sign-in locally for domain administrators.
 
 7. Select **Computer Configuration** > **Policies** > **Windows Settings** > **Local Policies**, select **User Rights Assignment**, and then do the following:  
 
@@ -336,7 +334,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
     b. Select **Add User or Group**, select **Browse**, type **Enterprise Admins**, and then select **OK**.  
     c. Select **Add User or Group**, select **Browse**, type **Domain Admins**, and then select **OK**.
 
-    ![Screenshot of the "User Rights Management" window, showing that the "Define these policy settings" checkbox is selected and two domain accounts are being denied local logon.](media/default-user-account-restrict3.png)
+    ![Screenshot of the "User Rights Management" window, showing that the "Define these policy settings" checkbox is selected and two domain accounts are being denied local sign-in.](media/default-user-account-restrict3.png)
 
     > [!TIP]
     > You can optionally add any groups that contain server administrators whom you want to restrict from signing in to workstations.
@@ -346,9 +344,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     d. Select **OK** to complete the configuration.
 
-8. Link the GPO to the first Workstations OU.
-
-    Go to the *\<forest>*\Domains\\`<domain>`\OU Path, and then do the following:
+8. Link the GPO to the first Workstations OU. Go to the *\<forest>*\Domains\\`<domain>`\OU path, and then do the following:
 
     a. Right-click the workstation OU, and then select **Link an Existing GPO**.
 
@@ -358,14 +354,14 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     ![Screenshot of the "Select GPO" window, where you select a domain and Group Policy Objects.](media/default-user-account-restrict5.png)
 
-9. Test the functionality of enterprise applications on workstations in the first OU and resolve any issues caused by the new policy.
+9. Test the functionality of enterprise applications on workstations in the first OU, and resolve any issues caused by the new policy.
 
 10. Link all other OUs that contain workstations.
 
     However, do *not* create a link to the Administrative Workstation OU if it's created for administrative workstations that are dedicated to administration duties only and are without internet or email access.
 
     > [!IMPORTANT]
-    > If you later extend this solution, do *not* deny logon rights for the Domain Users group. The Domain Users group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
+    > If you later extend this solution, do *not* deny sign-in rights for the Domain Users group. The Domain Users group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
 
 ### Disable the account delegation right for sensitive Administrator accounts
 
@@ -373,7 +369,7 @@ Although user accounts aren't marked for delegation by default, accounts in an A
 
 For sensitive accounts, such as those belonging to members of the Administrators, Domain Admins, or Enterprise Admins groups in Active Directory, delegation can present a substantial risk of rights escalation. For example, if an account in the Domain Admins group is used to sign in to a compromised member server that's trusted for delegation, that server can request access to resources in the context of the Domain Admins account, and escalate the compromise of that member server to a domain compromise.
 
-It's a best practice to configure the user objects for all sensitive accounts in Active Directory by selecting the **Account is sensitive and cannot be delegated** checkbox under **Account options** to prevent these accounts from being delegated. For more information, see [Settings for default local accounts in Active Directory](#settings-for-default-local-accounts-in-active-directory).
+It's a best practice to configure the user objects for all sensitive accounts in Active Directory by selecting the **Account is sensitive and cannot be delegated** checkbox under **Account options** to prevent the accounts from being delegated. For more information, see [Settings for default local accounts in Active Directory](#settings-for-default-local-accounts-in-active-directory).
 
 As with any configuration change, test this enabled setting fully to ensure that it performs correctly before you implement it.
 
@@ -384,7 +380,7 @@ As with any configuration change, test this enabled setting fully to ensure that
 It's a best practice to strictly enforce restrictions on the domain controllers in your environment. This ensures that the domain controllers:
 
 * Run only required software.
-* Required that software is regularly updated.
+* Require that software is regularly updated.
 * Are configured with the appropriate security settings.
 
 One aspect of securing and managing domain controllers is to ensure that the default local user accounts are fully protected. It's of primary importance to restrict and secure all sensitive domain accounts, as described in the preceding sections.

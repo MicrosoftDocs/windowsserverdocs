@@ -17,7 +17,8 @@ This reference article describes security principals for Windows accounts and se
 
 A security principal is any entity that can be authenticated by the operating system, such as a user account, a computer account, or a thread or process that runs in the security context of a user or computer account, or the security groups for these accounts. Security principals have long been a foundation for controlling access to securable resources on Windows computers. Each security principal is represented in the operating system by a unique security identifier (SID).
 
-The following content applies to the versions of Windows that are designated in the "Applies to" list at the beginning of this article.
+> [!NOTE]
+> This content pertains only to the Windows versions in the "Applies to" list at the beginning of the article.
 
 ## How security principals work
 
