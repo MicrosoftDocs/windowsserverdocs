@@ -13,6 +13,8 @@ ms.date: 08/02/2022
 
 Learn about default Active Directory security groups, group scope, and group functions.
 
+## What is a security group in Active Directory?
+
 Active Directory has two forms of common security principals: user accounts and computer accounts. These accounts represent a physical entity that is either a person or a computer. A user account also can be used as a dedicated service account for some applications. Security groups are used to collect user accounts, computer accounts, and other groups into manageable units.
 
 In the Windows Server operating system, there are several built-in accounts and security groups that are preconfigured with the appropriate rights and permissions to perform specific tasks. For Active Directory, there are two types of administrative responsibilities:
@@ -21,7 +23,7 @@ In the Windows Server operating system, there are several built-in accounts and 
 
 - **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations.
 
-## About Active Directory groups
+## How Active Directory security groups work
 
 Groups are used to collect user accounts, computer accounts, and other groups into manageable units. Working with groups instead of with individual users helps simplify network maintenance and administration.
 
@@ -164,7 +166,7 @@ The Access Control Assistance Operators group applies to the Windows Server oper
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-579|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
@@ -187,7 +189,7 @@ The Account Operators group applies to the Windows Server operating system in th
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-548|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|Yes|
@@ -214,7 +216,7 @@ This security group includes the following changes since Windows Server 2008:
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-544|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|Administrator, Domain Admins, Enterprise Admins|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|Yes|
@@ -250,7 +252,7 @@ The Backup Operators group applies to the Windows Server operating system in [De
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-551|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|Yes|
@@ -364,7 +366,7 @@ The Device Owners group applies to the Windows Server operating system in [Defau
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-583|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
@@ -382,7 +384,7 @@ The DHCP Administrators group applies to the Windows Server operating system in 
 |--- |--- |
 |Well-known SID/RID|S-1-5-21-\<domain>|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|[Users](#users)|
 |Protected by ADMINSDHOLDER?|No|
@@ -400,7 +402,7 @@ The DHCP Users group applies to the Windows Server operating system in [Default 
 |--- |--- |
 |Well-known SID/RID|S-1-5-21-\<domain>|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|[Users](#users)|
 |Protected by ADMINSDHOLDER?|No|
@@ -670,7 +672,7 @@ The Guests group applies to the Windows Server operating system in [Default Acti
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-546|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|[Domain Guests](#domain-guests)|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
@@ -689,7 +691,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-578|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
@@ -707,7 +709,7 @@ For more information, see [Understanding Built-In User and Group Accounts in IIS
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-568|
 |Type|Builtin Local|
-|Default container|CN=BuiltIn, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|IUSR|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
@@ -777,7 +779,7 @@ Members of the Network Configuration Operators group can have the following admi
 
 - Rename all the remote access connections of users.
 
-- Issue **ipconfig**, **ipconfig /release**, or **ipconfig /renew** commands.
+- Issue `ipconfig`, `ipconfig /release`, or `ipconfig /renew` commands.
 
 - Enter the PIN unblock key (PUK) for mobile broadband devices that support a SIM card.
 
@@ -810,10 +812,10 @@ Members of the Performance Log Users group can manage performance counters, logs
 - Can create and modify Data Collector Sets after the group is assigned the [Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job) user right.
 
   > [!WARNING]
-  > If you are a member of the Performance Log Users group, you must configure Data Collector Sets that you create to run under your credentials.
+  > If you're a member of the Performance Log Users group, you must configure Data Collector Sets that you create to run under your credentials.
 
   > [!NOTE]
-  > In Windows Server 2016 or later, Data Collector Sets can't be created by a member of the Performance Log Users group. If a member of the Performance Log Users group tries to create Data Collector Sets, they can't complete creation because access will be denied.
+  > In Windows Server 2016 or later, a member of the Performance Log Users group can't create Data Collector Sets. If a member of the Performance Log Users group tries to create Data Collector Sets, they can't complete the action because access is denied.
 
 - Can't use the Windows Kernel Trace event provider in Data Collector Sets.
 
@@ -841,7 +843,7 @@ The Performance Log Users group applies to the Windows Server operating system i
 
 ### Performance Monitor Users
 
-Members of this group can monitor performance counters on domain controllers in the domain, locally and from remote clients without being a member of the Administrators or Performance Log Users groups. The Windows Performance Monitor is a Microsoft Management Console (MMC) snap-in that provides tools for analyzing system performance. From a single console, you can monitor application and hardware performance, customize what data you want to collect in logs, define thresholds for alerts and automatic actions, generate reports, and view past performance data in various ways.
+Members of this group can monitor performance counters on domain controllers in the domain, locally and from remote clients, without being a member of the Administrators or Performance Log Users groups. The Windows Performance Monitor is a Microsoft Management Console (MMC) snap-in that provides tools for analyzing system performance. From a single console, you can monitor application and hardware performance, customize what data you want to collect in logs, define thresholds for alerts and automatic actions, generate reports, and view past performance data in various ways.
 
 Specifically, members of this security group:
 
@@ -1166,7 +1168,7 @@ Members of the Storage Replica Administrators group have complete and unrestrict
 |-----------|-------|
 | Well-known SID/RID | S-1-5-32-582 |
 | Type | Builtin Local |
-| Default container | CN=BuiltIn, DC=\<domain>, DC= |
+| Default container | CN=Builtin, DC=\<domain>, DC= |
 | Default members | None |
 | Default member of | None |
 | Protected by ADMINSDHOLDER? | No |
@@ -1184,7 +1186,7 @@ The System Managed Accounts group applies to the Windows Server operating system
 |-----------|-------|
 | Well-known SID/RID | S-1-5-32-581 |
 | Type | Builtin Local |
-| Default container | CN=BuiltIn, DC=\<domain>, DC= |
+| Default container | CN=Builtin, DC=\<domain>, DC= |
 | Default members | Users |
 | Default member of | None |
 | Protected by ADMINSDHOLDER? | No |

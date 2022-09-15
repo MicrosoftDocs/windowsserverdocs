@@ -13,6 +13,8 @@ ms.date: 08/02/2022
 
 Understand how a Microsoft account works to enhance security and privacy for users and how you can manage consumer account types in your organization.
 
+## What is a Microsoft account?
+
 Microsoft sites, services, properties, and computers running Windows 10 can use a Microsoft account as a means of identifying a user. A Microsoft account previously was called a Windows Live ID. A Microsoft account has user-defined secrets and consists of a unique email address and a password.
 
 When a user signs in with a Microsoft account, the device is connected to cloud services. The user can share many of their settings, preferences, and apps across devices.
