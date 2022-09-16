@@ -30,7 +30,7 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw]
 | /g | Shuts down the computer. On the next restart, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /a | Aborts a system shutdown. Effective only during the time-out period. To use **/a**, you must also use the **/m** option. |
 | /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it will shut down when you use **/p**, but the power to the computer will remain on. |
-| /h | Puts the local computer into hibernation, if hibernation is enabled. The **/f** switch can be used in conjunction with the **/h** switch. |
+| /h | Puts the local computer into hibernation, if hibernation is enabled. The **/f** switch can be used with the **/h** switch. |
 | hybrid | Shuts down the device and prepares it for fast startup. This option must be used with the **/s** option. |
 | /fw | Combining this option with a shutdown option causes the next restart to go to the firmware user interface. |
 | /e | Enables you to document the reason for the unexpected shutdown on the target computer. |
@@ -60,7 +60,7 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw]
 
   - Using the **p** parameter, along the reason code for an unplanned shutdown, causes the shutdown to fail.
 
-  - Not using the **p** parameter, and only providing the reason code for an planned shutdown, also causes the shutdown to fail
+  - Not using the **p** parameter, and only providing the reason code for a planned shutdown, also causes the shutdown to fail.
 
 ## Examples
 
