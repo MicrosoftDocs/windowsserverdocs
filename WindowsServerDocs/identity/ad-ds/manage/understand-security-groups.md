@@ -21,7 +21,7 @@ Security groups are a way to collect user accounts, computer accounts, and other
 
 In the Windows Server operating system, several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In Active Directory, administrative responsibilities are separated into two types of administrators:
 
-- **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring the AD DS.
+- **service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring the AD DS.
 
 - **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations.
 
@@ -61,7 +61,7 @@ You can use distribution groups only to send email to collections of users by us
 
 ### Group scope
 
-Each groups has a scope that identifies the extent to which the group is applied in the domain tree or forest. The scope of a group defines where in the network permissions can be granted for the group. Active Directory defines the following three group scopes:
+Each group has a scope that identifies the extent to which the group is applied in the domain tree or forest. The scope of a group defines where in the network permissions can be granted for the group. Active Directory defines the following three group scopes:
 
 - Universal
 
@@ -98,7 +98,7 @@ Default groups are located in the Builtin container and in the Users container i
 
 Some of the administrative groups that are listed in this article and all members of these groups are protected by a background process that periodically checks for and applies a specific security descriptor. This descriptor is a data structure that contains security information that's associated with a protected object. This process ensures that any successful unauthorized attempt to modify the security descriptor on one of the administrative accounts or groups is overwritten with the protected settings.
 
-The security descriptor is present on the AdminSDHolder object. If you want to modify the permissions on one of the Service administrator groups or on any of its member accounts, you must modify the security descriptor on the AdminSDHolder object so that it's applied consistently. Be careful when you make these modifications because you're also changing the default settings that are applied to all your protected administrative accounts.
+The security descriptor is present on the AdminSDHolder object. If you want to modify the permissions on one of the service administrator groups or on any of its member accounts, you must modify the security descriptor on the AdminSDHolder object so that it's applied consistently. Be careful when you make these modifications because you're also changing the default settings that are applied to all your protected administrative accounts.
 
 ### Default Active Directory security groups
 
@@ -173,19 +173,19 @@ The Access Control Assistance Operators group applies to the Windows Server oper
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Account Operators
 
-The Account Operators group grants limited account creation privileges to a user. Members of this group can create and modify most types of accounts, including accounts for users, local groups, and global groups. Group members can log in locally to domain controllers.
+The Account Operators group grants limited account creation privileges to a user. Members of this group can create and modify most types of accounts, including accounts for users, Local groups, and Global groups. Group members can log in locally to domain controllers.
 
 Members of the Account Operators group can't manage the Administrator user account, the user accounts of administrators, or the [Administrators](#administrators), [Server Operators](#server-operators), [Account Operators](#account-operators), [Backup Operators](#backup-operators), or [Print Operators](#print-operators) groups. Members of this group can't modify user rights.
 
 The Account Operators group applies to the Windows Server operating system in the [Default Active Directory security groups](#default-active-directory-security-groups) list.
 
 > [!NOTE]
-> By default, this built-in group has no members. The group can create and manage users and groups in the domain, including its own membership and that of the Server Operators group. This group is considered a Service administrator group because it can modify Server Operators, which in turn can modify domain controller settings. As a best practice, leave the membership of this group empty, and don't use it for any delegated administration. This group can't be renamed, deleted, or removed.
+> By default, this built-in group has no members. The group can create and manage users and groups in the domain, including its own membership and that of the Server Operators group. This group is considered a service administrator group because it can modify Server Operators, which in turn can modify domain controller settings. As a best practice, leave the membership of this group empty, and don't use it for any delegated administration. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -196,7 +196,7 @@ The Account Operators group applies to the Windows Server operating system in th
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|[Allow log on locally:](/windows/device-security/security-policy-settings/allow-log-on-locally) SeInteractiveLogonRight|
 
 ### Administrators
@@ -206,7 +206,7 @@ Members of the Administrators group have complete and unrestricted access to the
 The Administrators group applies to the Windows Server operating system in the [Default Active Directory security groups](#default-active-directory-security-groups) list.
 
 > [!NOTE]
-> The Administrators group has built-in capabilities that give its members full control over the system. This group can't be renamed, deleted, or removed. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups. Members of the following groups can modify the Administrators group membership: the default service Administrators, Domain Admins in the domain, and Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This account is considered a Service administrator group because its members have full access to the domain controllers in the domain.
+> The Administrators group has built-in capabilities that give its members full control over the system. This group can't be renamed, deleted, or removed. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups. Members of the following groups can modify the Administrators group membership: the default service Administrators, Domain Admins in the domain, and Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This account is considered a service administrator group because its members have full access to the domain controllers in the domain.
 
 This security group includes the following changes since Windows Server 2008:
 
@@ -223,7 +223,7 @@ This security group includes the following changes since Windows Server 2008:
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|[Adjust memory quotas for a process](/windows/device-security/security-policy-settings/adjust-memory-quotas-for-a-process): SeIncreaseQuotaPrivilege<p>[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight<p>[Allow log on through Remote Desktop Services](/windows/device-security/security-policy-settings/allow-log-on-through-remote-desktop-services): SeRemoteInteractiveLogonRight<p>[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories): SeBackupPrivilege<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p>[Change the system time](/windows/device-security/security-policy-settings/change-the-system-time): SeSystemTimePrivilege<p>[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone): SeTimeZonePrivilege<p>[Create a pagefile](/windows/device-security/security-policy-settings/create-a-pagefile): SeCreatePagefilePrivilege<p>[Create global objects](/windows/device-security/security-policy-settings/create-global-objects): SeCreateGlobalPrivilege<p>[Create symbolic links](/windows/device-security/security-policy-settings/create-symbolic-links): SeCreateSymbolicLinkPrivilege<p>[Debug programs](/windows/device-security/security-policy-settings/debug-programs): SeDebugPrivilege<p>[Enable computer and user accounts to be trusted for delegation](/windows/device-security/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation): SeEnableDelegationPrivilege<p>[Force shutdown from a remote system](/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system): SeRemoteShutdownPrivilege<p>[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication): SeImpersonatePrivilege<p>[Increase scheduling priority](/windows/device-security/security-policy-settings/increase-scheduling-priority): SeIncreaseBasePriorityPrivilege<p>[Load and unload device drivers](/windows/device-security/security-policy-settings/load-and-unload-device-drivers): SeLoadDriverPrivilege<p>[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job): SeBatchLogonRight<p>[Manage auditing and security log](/windows/device-security/security-policy-settings/manage-auditing-and-security-log): SeSecurityPrivilege<p>[Modify firmware environment values](/windows/device-security/security-policy-settings/modify-firmware-environment-values): SeSystemEnvironmentPrivilege<p>[Perform volume maintenance tasks](/windows/device-security/security-policy-settings/perform-volume-maintenance-tasks): SeManageVolumePrivilege<p>[Profile system performance](/windows/device-security/security-policy-settings/profile-system-performance): SeSystemProfilePrivilege<p>[Profile single process](/windows/device-security/security-policy-settings/profile-single-process): SeProfileSingleProcessPrivilege<p>[Remove computer from docking station](/windows/device-security/security-policy-settings/remove-computer-from-docking-station): SeUndockPrivilege<p>[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories): SeRestorePrivilege<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege<p>[Take ownership of files or other objects](/windows/device-security/security-policy-settings/take-ownership-of-files-or-other-objects): SeTakeOwnershipPrivilege|
 
 ### Allowed RODC Password Replication
@@ -241,12 +241,12 @@ The Allowed RODC Password Replication group applies to the Windows Server operat
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Backup Operators
 
-Members of the Backup Operators group can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can log on to and shut down the computer. This group can't be renamed, deleted, or removed. By default, this built-in group has no members, and it can perform backup and restore operations on domain controllers. Members of the following groups can modify Backup Operators group membership: default service Administrators, Domain Admins in the domain, and Enterprise Admins. Members of the Backup Operators group can't modify the membership of any administrative groups. Although members of this group can't change server settings or modify the configuration of the directory, they do have the permissions needed to replace files (including operating system files) on domain controllers. Because members of this group can replace files on domain controllers, they are considered Service administrators.
+Members of the Backup Operators group can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can log on to and shut down the computer. This group can't be renamed, deleted, or removed. By default, this built-in group has no members, and it can perform backup and restore operations on domain controllers. Members of the following groups can modify Backup Operators group membership: default service Administrators, Domain Admins in the domain, and Enterprise Admins. Members of the Backup Operators group can't modify the membership of any administrative groups. Although members of this group can't change server settings or modify the configuration of the directory, they do have the permissions needed to replace files (including operating system files) on domain controllers. Because members of this group can replace files on domain controllers, they're considered service administrators.
 
 The Backup Operators group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -259,7 +259,7 @@ The Backup Operators group applies to the Windows Server operating system in [De
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight<p>[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories): SeBackupPrivilege<p>[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job): SeBatchLogonRight<p>[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories): SeRestorePrivilege<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege|
 
 ### Certificate Service DCOM Access
@@ -277,7 +277,7 @@ The Certificate Service DCOM Access group applies to the Windows Server operatin
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Cert Publishers
@@ -295,7 +295,7 @@ The Cert Publishers group applies to the Windows Server operating system in [Def
 |Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Cloneable Domain Controllers
@@ -313,7 +313,7 @@ For more information, see [Introduction to Active Directory Domain Services (AD 
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Cryptographic Operators
@@ -333,7 +333,7 @@ This security group was introduced in Windows Vista SP1, and it hasn't changed i
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Denied RODC Password Replication
@@ -355,7 +355,7 @@ This security group includes the following changes since Windows Server 2008:
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?||
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Device Owners
@@ -373,7 +373,7 @@ The Device Owners group applies to the Windows Server operating system in [Defau
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|You can move the group, but we don't recommend it|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight<p>[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p>[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone): SeTimeZonePrivilege|
 
 ### DHCP Administrators
@@ -391,7 +391,7 @@ The DHCP Administrators group applies to the Windows Server operating system in 
 |Default member of|[Users](#users)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|You can move the group, but we don't recommend it|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### DHCP Users
@@ -409,7 +409,7 @@ The DHCP Users group applies to the Windows Server operating system in [Default 
 |Default member of|[Users](#users)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|You can move the group, but we don't recommend it|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Distributed COM Users
@@ -427,7 +427,7 @@ The Distributed COM Users group applies to the Windows Server operating system i
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### DnsUpdateProxy
@@ -447,7 +447,7 @@ For more information, see [DNS record ownership and the DnsUpdateProxy group](/p
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### DnsAdmins
@@ -465,14 +465,14 @@ For more information about security and DNS, see [DNSSEC in Windows Server 2012]
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Domain Admins
 
 Members of the Domain Admins security group are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that have joined a domain, including the domain controllers. The Domain Admins group is the default owner of any object that's created in Active Directory for the domain by any member of the group. If members of the group create other objects, such as files, the default owner is the Administrators group.
 
-The Domain Admins group controls access to all domain controllers in a domain, and it can modify the membership of all administrative accounts in the domain. Members of the Service administrator groups in its domain (Administrators and Domain Admins) and members of the Enterprise Admins group can modify Domain Admins membership. This group is considered a Service administrator account because its members have full access to the domain controllers in a domain.
+The Domain Admins group controls access to all domain controllers in a domain, and it can modify the membership of all administrative accounts in the domain. Members of the service administrator groups in its domain (Administrators and Domain Admins) and members of the Enterprise Admins group can modify Domain Admins membership. This group is considered a service administrator account because its members have full access to the domain controllers in a domain.
 
 The Domain Admins group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -485,7 +485,7 @@ The Domain Admins group applies to the Windows Server operating system in [Defau
 |Default member of|[Administrators](#administrators)<p>[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Administrators](#administrators)<p>See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 
 ### Domain Computers
@@ -503,7 +503,7 @@ The Domain Computers group applies to the Windows Server operating system in [De
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes (but not required)|
-|Safe to delegate management of this group to non-Service admins?|Yes |
+|Safe to delegate management of this group to non-service admins?|Yes |
 |Default user rights|None|
 
 ### Domain Controllers
@@ -521,7 +521,7 @@ The Domain Controllers group applies to the Windows Server operating system in [
 |Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|No|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Domain Guests
@@ -539,14 +539,14 @@ The Domain Guests group applies to the Windows Server operating system in [Defau
 |Default member of|[Guests](#guests)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|You can move the group, but we don't recommend it|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Guests](#guests)|
 
 ### Domain Users
 
 The Domain Users group includes all user accounts in a domain. When you create a user account in a domain, it's automatically added to this group.
 
-By default, any user account that's created in the domain automatically becomes a member of this group. You can use this group to represent all users in the domain. For example, if you want all domain users to have access to a printer, you can assign permissions for the printer to this group or add the Domain Users group to a local group on the print server that has permissions for the printer.
+By default, any user account that's created in the domain automatically becomes a member of this group. You can use this group to represent all users in the domain. For example, if you want all domain users to have access to a printer, you can assign permissions for the printer to this group or add the Domain Users group to a Local group on the print server that has permissions for the printer.
 
 The Domain Users group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -560,14 +560,14 @@ krbtgt|
 |Default member of|[Users](#users)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Users](#users)|
 
 ### Enterprise Admins
 
 The Enterprise Admins group exists only in the root domain of an Active Directory forest of domains. The group is a Universal group if the domain is in native mode. The group is a Global group if the domain is in mixed mode. Members of this group are authorized to make forest-wide changes in Active Directory, like adding child domains.
 
-By default, the only member of the group is the Administrator account for the forest root domain. This group is automatically added to the Administrators group in every domain in the forest, and it provides complete access to configuring all domain controllers. Members in this group can modify the membership of all administrative groups. Members of the default Service administrator groups in the root domain can modify Enterprise Admins membership. This group is considered a Service administrator account.
+By default, the only member of the group is the Administrator account for the forest root domain. This group is automatically added to the Administrators group in every domain in the forest, and it provides complete access to configuring all domain controllers. Members in this group can modify the membership of all administrative groups. Members of the default service administrator groups in the root domain can modify Enterprise Admins membership. This group is considered a service administrator account.
 
 The Enterprise Admins group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -580,7 +580,7 @@ The Enterprise Admins group applies to the Windows Server operating system in [D
 |Default member of|[Administrators](#administrators)<p>[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Administrators](#administrators)<p>See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 
 ### Enterprise Key Admins
@@ -596,7 +596,7 @@ Members of this group can perform administrative actions on key objects within t
 | Default member of | None |
 | Protected by AdminSDHolder? | Yes |
 | Safe to move out of default container? | Yes |
-| Safe to delegate management of this group to non-Service admins? | No |
+| Safe to delegate management of this group to non-service admins? | No |
 | Default user rights | None |
 
 ### Enterprise Read-only Domain Controllers
@@ -618,7 +618,7 @@ The Enterprise Read-only Domain Controllers group applies to the Windows Server 
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?||
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Event Log Readers
@@ -636,7 +636,7 @@ The Event Log Readers group applies to the Windows Server operating system in [D
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Group Policy Creator Owners
@@ -656,7 +656,7 @@ The Group Policy Creator Owners group applies to the Windows Server operating sy
 |Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|No|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 
 ### Guests
@@ -666,7 +666,7 @@ Members of the Guests group have the same access as members of the Users group b
 When a member of the Guests group signs out, the entire profile is deleted. The profile deletion includes everything that's stored in the *%userprofile%* directory, including the user's registry hive information, custom desktop icons, and other user-specific settings. This fact implies that a guest must use a temporary profile to sign in to the system. This security group interacts with the Group Policy setting. *When this security group is enabled, don't log on users that have temporary profiles*. To access this setting, go to **Computer Configuration** > **Administrative Templates** > **System** > **User Profiles**.
 
 > [!NOTE]
-> A Guest account is a default member of the Guests security group. People who don't have an actual account in the domain can use the Guest account. A user whose account is disabled (but not deleted) can also use the Guest account. The Guest account does not require a password. You can set rights and permissions for the Guest account as in any user account. By default, the Guest account is a member of the built-in Guests group and of the Domain Guests global group, which allows a user to sign in to a domain. The Guest account is disabled by default, and we recommend that it stay disabled.
+> A Guest account is a default member of the Guests security group. People who don't have an actual account in the domain can use the Guest account. A user whose account is disabled (but not deleted) can also use the Guest account. The Guest account does not require a password. You can set rights and permissions for the Guest account as in any user account. By default, the Guest account is a member of the built-in Guests group and of the Domain Guests Global group, which allows a user to sign in to a domain. The Guest account is disabled by default, and we recommend that it stay disabled.
 
 The Guests group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -679,7 +679,7 @@ The Guests group applies to the Windows Server operating system in [Default Acti
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Hyper-V Administrators
@@ -698,7 +698,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### IIS\_IUSRS
@@ -716,7 +716,7 @@ For more information, see [Understand built-in user and group accounts in IIS 7]
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?||
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Incoming Forest Trust Builders
@@ -725,15 +725,11 @@ Members of the Incoming Forest Trust Builders group can create incoming, one-way
 
 To make this determination, the Windows security system computes a trust path between the domain controller for the server that receives the request and a domain controller in the domain of the requesting account. A secured channel extends to other Active Directory domains through interdomain trust relationships. This secured channel is used to obtain and verify security information, including SIDs for users and groups.
 
-> [!NOTE]
-> This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
-For more information, see [How Domain and Forest Trusts Work: Domain and Forest Trusts](/previous-versions/windows/it-pro/windows-server-2003/cc773178(v=ws.10)).
+For more information, see [How domain and forest trusts work: Domain and forest trusts](/previous-versions/windows/it-pro/windows-server-2003/cc773178(v=ws.10)).
 
 The Incoming Forest Trust Builders group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
-
-> [!NOTE]
-> This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -744,7 +740,7 @@ The Incoming Forest Trust Builders group applies to the Windows Server operating
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Key Admins
@@ -762,7 +758,7 @@ The Key Admins group applies to the Windows Server operating system in [Default 
 | Default member of | None |
 | Protected by AdminSDHolder? | Yes |
 | Safe to move out of default container? | Yes |
-| Safe to delegate management of this group to non-Service admins? | No |
+| Safe to delegate management of this group to non-service admins? | No |
 | Default user rights | None |
 
 ### Network Configuration Operators
@@ -775,23 +771,19 @@ Members of the Network Configuration Operators group can have the following admi
 
 - Enable or disable a LAN connection.
 
-- Modify the properties of all of remote access connections of users.
+- Modify the properties of all remote access connections of users.
 
 - Delete all the remote access connections of users.
 
 - Rename all the remote access connections of users.
 
-- Issue `ipconfig`, `ipconfig /release`, or `ipconfig /renew` commands.
+- Issue `ipconfig`, `ipconfig /release`, and `ipconfig /renew` commands.
 
 - Enter the PIN unblock key (PUK) for mobile broadband devices that support a SIM card.
 
-> [!NOTE]
-> This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 The Network Configuration Operators group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
-
-> [!NOTE]
-> This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -802,7 +794,7 @@ The Network Configuration Operators group applies to the Windows Server operatin
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### Performance Log Users
@@ -817,19 +809,15 @@ Members of the Performance Log Users group can manage performance counters, logs
   > If you're a member of the Performance Log Users group, you must configure Data Collector Sets that you create to run under your credentials.
 
   > [!NOTE]
-  > In Windows Server 2016 or later, a member of the Performance Log Users group can't create Data Collector Sets. If a member of the Performance Log Users group tries to create Data Collector Sets, they can't complete the action because access is denied.
+  > In Windows Server 2016 and later, a member of the Performance Log Users group can't create Data Collector Sets. If a member of the Performance Log Users group tries to create Data Collector Sets, they can't complete the action because access is denied.
 
 - Can't use the Windows Kernel Trace event provider in Data Collector Sets.
 
-For members of the Performance Log Users group to initiate data logging or modify Data Collector Sets, the group must first be assigned the [Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job) user right. To assign this user right, use the Local Security Policy snap-in in Microsoft Management Console.
+For members of the Performance Log Users group to initiate data logging or modify Data Collector Sets, the group must first be assigned the [Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job) user right. To assign this user right, use the Local Security Policy snap-in in Microsoft Management Console (MMC).
 
-> [!NOTE]
-> This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This account can't be renamed, deleted, or moved.
 
 The Performance Log Users group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
-
-> [!NOTE]
-> This account can't be renamed, deleted, or moved.
 
 |Attribute|Value|
 |--- |--- |
@@ -840,12 +828,12 @@ The Performance Log Users group applies to the Windows Server operating system i
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job): SeBatchLogonRight|
 
 ### Performance Monitor Users
 
-Members of this group can monitor performance counters on domain controllers in the domain, locally and from remote clients, without being a member of the Administrators or Performance Log Users groups. The Windows Performance Monitor is a Microsoft Management Console (MMC) snap-in that provides tools for analyzing system performance. From a single console, you can monitor application and hardware performance, customize what data you want to collect in logs, define thresholds for alerts and automatic actions, generate reports, and view past performance data in various ways.
+Members of this group can monitor performance counters on domain controllers in the domain, locally and from remote clients, without being a member of the Administrators or Performance Log Users groups. The Windows Performance Monitor is an MMC snap-in that provides tools for analyzing system performance. From a single console, you can monitor application and hardware performance, customize what data you want to collect in logs, define thresholds for alerts and automatic actions, generate reports, and view past performance data in various ways.
 
 Specifically, members of this security group:
 
@@ -858,10 +846,9 @@ Specifically, members of this security group:
 - Can't create or modify Data Collector Sets.
 
 > [!WARNING]
-> You can't configure a Data Collector Set to run as a member of the Performance Monitor Users group.
+> Members of the Performance Monitor Users group can't configure Data Collection Sets.
 
-> [!NOTE]
-> This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
+This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 The Performance Monitor Users group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -874,12 +861,12 @@ The Performance Monitor Users group applies to the Windows Server operating syst
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### Pre–Windows 2000 Compatible Access
 
-Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers running Windows NT 4.0 and earlier. By default, the special identity group, Everyone, is a member of this group. Add users to this group only if they're running Windows NT 4.0 or earlier.
+Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers running Windows NT 4.0 and earlier. By default, the special identity group Everyone is a member of this group. Add users to this group only if they're running Windows NT 4.0 or earlier.
 
 > [!WARNING]
 > This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
@@ -895,7 +882,7 @@ The Pre–Windows 2000 Compatible Access group applies to the Windows Server ope
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
 
 ### Print Operators
@@ -917,7 +904,7 @@ For more information, see [Assign delegated print administrator and printer perm
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight<p>[Load and unload device drivers](/windows/device-security/security-policy-settings/load-and-unload-device-drivers): SeLoadDriverPrivilege<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege|
 
 ### Protected Users
@@ -926,9 +913,9 @@ Members of the Protected Users group have extra protection against the compromis
 
 This security group is designed as part of a strategy to effectively protect and manage credentials within the enterprise. Members of this group automatically have non-configurable protection applied to their accounts. Membership in the Protected Users group is meant to be restrictive and proactively secure by default. The only way you can modify the protection for an account is to remove the account from the security group.
 
-This domain-related, global group triggers non-configurable protection on devices and host computers, starting with the Windows Server 2012 R2 and Windows 8.1 operating systems. It also triggers non-configurable protection on domain controllers in domains that have a primary domain controller running Windows Server 2016 or Windows Server 2012 R2. This protection greatly reduces the memory footprint of credentials when users sign in to computers on the network from a non-compromised computer.
+This domain-related, Global group triggers non-configurable protection on devices and host computers, starting with the Windows Server 2012 R2 and Windows 8.1 operating systems. It also triggers non-configurable protection on domain controllers in domains that have a primary domain controller running Windows Server 2016 or Windows Server 2012 R2. This protection greatly reduces the memory footprint of credentials when users sign in to computers on the network from a non-compromised computer.
 
-Depending on the account’s domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows.
+Depending on the account’s domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows:
 
 - Members of the Protected Users group can't authenticate by using the following Security Support Providers (SSPs): NTLM, Digest Authentication, or CredSSP. Passwords aren't cached on a device running Windows 10 or  Windows 8.1, so the device fails to authenticate to a domain when the account is a member of the Protected User group.
 
@@ -942,7 +929,7 @@ The Protected Users group applies to the Windows Server operating system in [Def
 
 This group was introduced in Windows Server 2012 R2. For more information about how this group works, see [Protected Users security group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466518(v=ws.11)).
 
-The following table specifies the properties of the Protected Users group.
+The following table specifies the properties of the Protected Users group:
 
 |Attribute|Value|
 |--- |--- |
@@ -953,7 +940,7 @@ The following table specifies the properties of the Protected Users group.
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### RAS and IAS Servers
@@ -971,14 +958,14 @@ The RAS and IAS Servers group applies to the Windows Server operating system in 
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### RDS Endpoint Servers
 
 Servers that are members in the RDS Endpoint Servers group can run virtual machines and host sessions where user RemoteApp programs and personal virtual desktops run. You must populate this group on servers running RD Connection Broker. Session Host servers and RD Virtualization Host servers used in the deployment must be in this group.
 
-For information about Remote Desktop Services, see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
+For information about Remote Desktop Services (RDS), see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
 
 |Attribute|Value|
 |--- |--- |
@@ -989,12 +976,12 @@ For information about Remote Desktop Services, see [Host desktops and apps in Re
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### RDS Management Servers
 
-You can use servers that are members of the RDS Management Servers group to complete routine administrative actions on servers running Remote Desktop Services. You must populate this group on all servers in a Remote Desktop Services deployment. The servers running the RDS Central Management service must be included in this group.
+You can use servers that are members of the RDS Management Servers group to complete routine administrative actions on servers running RDS. You must populate this group on all servers in an RDS deployment. The servers running the RDS Central Management service must be included in this group.
 
 |Attribute|Value|
 |--- |--- |
@@ -1005,12 +992,12 @@ You can use servers that are members of the RDS Management Servers group to comp
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### RDS Remote Access Servers
 
-Servers in the RDS Remote Access Servers group provide users with access to RemoteApp programs and personal virtual desktops. In Internet facing deployments, these servers are typically deployed in an edge network. This group needs to be populated on servers running RD Connection Broker. RD Gateway servers and RD Web Access servers that are used in the deployment need to be in this group.
+Servers in the RDS Remote Access Servers group provide users with access to RemoteApp programs and personal virtual desktops. In internet-facing deployments, these servers typically are deployed in an edge network. You must populate this group on servers running RD Connection Broker. RD Gateway servers and RD Web Access servers that are used in the deployment must be in this group.
 
 For more information, see [Host desktops and apps in Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
 
@@ -1023,12 +1010,12 @@ For more information, see [Host desktops and apps in Remote Desktop Services](/w
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Read-only Domain Controllers
 
-This group is composed of the RODCs in the domain. An RODC makes it possible for organizations to easily deploy a domain controller in scenarios in which physical security can't be guaranteed, such as branch office locations, or when local storage of all domain passwords is considered a primary threat, like in an extranet or in an application-facing role.
+This group is composed of the RODCs in the domain. An RODC makes it possible for organizations to easily deploy a domain controller in scenarios in which physical security can't be guaranteed, such as in branch office locations or when local storage of all domain passwords is considered a primary threat, like in an extranet or application-facing role.
 
 Because you can delegate administration of an RODC to a domain user or security group, an RODC is well suited for a site that shouldn't have a user who is a member of the Domain Admins group. An RODC has the following functionality:
 
@@ -1053,12 +1040,12 @@ For information about deploying an RODC, see [Understand planning and deployment
 |Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 
 ### Remote Desktop Users
 
-Use the Remote Desktop Users group on a Remote Desktop Session Host (RD Session Host) server to grant users and groups permissions to remotely connect to an RD Session Host server. This group can't be renamed, deleted, or removed. The group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+Use the Remote Desktop Users group on an RD Session Host server to grant users and groups permissions to remotely connect to an RD Session Host server. This group can't be renamed, deleted, or removed. The group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
 
 The Remote Desktop Users group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -1071,14 +1058,14 @@ The Remote Desktop Users group applies to the Windows Server operating system in
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### Remote Management Users
 
 Members of the Remote Management Users group can access Windows Management Instrumentation (WMI) resources over management protocols like WS-Management via the Windows Remote Management service. Access to WMI resources applies only to WMI namespaces that grant access to the user.
 
-Use the Remote Management Users group to allow users to manage servers through the Server Manager console, whereas the [WinRMRemoteWMIUsers\\_](#winrmremotewmiusers_) group allows remotely running Windows PowerShell commands.
+Use the Remote Management Users group to allow users to manage servers through the Server Manager console. Use the [WinRMRemoteWMIUsers\\_](#winrmremotewmiusers_) group to allow users to remotely run Windows PowerShell commands.
 
 For more information, see [What's new in MI?](/previous-versions/windows/desktop/wmi_v2/what-s-new-in-mi) and [About WMI](/windows/win32/wmisdk/about-wmi).
 
@@ -1091,15 +1078,15 @@ For more information, see [What's new in MI?](/previous-versions/windows/desktop
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Replicator
 
-Computers that are members of the Replicator group support file replication in a domain. Windows Server operating systems use the File Replication Service (FRS) to replicate system policies and logon scripts that are stored in the System Volume folder (sysvol folder). Each domain controller keeps a copy of the sysvol folder for network clients to access. FRS can also replicate data for the Distributed File System (DFS) and sync the content of each member in a replica set as defined by DFS. FRS can copy and maintain shared files and folders on multiple servers simultaneously. When changes occur, content is synchronized immediately within sites and by a schedule between sites.
+Computers that are members of the Replicator group support file replication in a domain. Windows Server operating systems use the File Replication Service (FRS) to replicate system policies and logon scripts that are stored in the System Volume folder (sysvol folder). Each domain controller keeps a copy of the sysvol folder for network clients to access. FRS can also replicate data for the Distributed File System (DFS) and sync the content of each member in a replica set as defined by DFS. FRS can copy and maintain shared files and folders on multiple servers simultaneously. When changes occur, content is synced immediately within sites and on a schedule between sites.
 
 > [!WARNING]
-> In Windows Server 2008 R2, you can't use FRS to replicate DFS folders or custom (non-sysvol) data. A Windows Server 2008 R2 domain controller can still use FRS to replicate the contents of sysvol folder shared resource in a domain that uses FRS to replicate the sysvol folder shared resource between domain controllers. However, Windows Server 2008 R2 servers can't use FRS to replicate the contents of any replica set except the sysvol folder shared resource. The DFS Replication service is a replacement for FRS, and you can use it to replicate the contents of a sysvol folder shared resource, DFS folders, and other custom (non-sysvol) data. You should migrate all non-sysvol FRS replica sets to DFS Replication.
+> In Windows Server 2008 R2, you can't use FRS to replicate DFS folders or custom (non-sysvol) data. A Windows Server 2008 R2 domain controller can still use FRS to replicate the contents of sysvol folder shared resource in a domain that uses FRS to replicate the sysvol folder shared resource between domain controllers. However, Windows Server 2008 R2 servers can't use FRS to replicate the contents of any replica set except the sysvol folder shared resource. The DFS Replication service is a replacement for FRS. You can use DFS Replication to replicate the contents of a sysvol folder shared resource, DFS folders, and other custom (non-sysvol) data. You should migrate all non-sysvol FRS replica sets to DFS Replication.
 
 For more information, see:
 
@@ -1115,7 +1102,7 @@ For more information, see:
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ### Schema Admins
@@ -1124,7 +1111,7 @@ Members of the Schema Admins group can modify the Active Directory schema. This 
 
 The group is authorized to make schema changes in Active Directory. By default, the only member of the group is the Administrator account for the forest root domain. This group has full administrative access to the schema.
 
-Any of the Service administrator groups in the root domain can modify the membership of this group. This group is considered a Service administrator account because its members can modify the schema, which governs the structure and content of the entire directory.
+Any of the service administrator groups in the root domain can modify the membership of this group. This group is considered a service administrator account because its members can modify the schema, which governs the structure and content of the entire directory.
 
 For more information, see [What is the Active Directory schema?](/previous-versions/windows/it-pro/windows-server-2003/cc784826(v=ws.10))
 
@@ -1139,14 +1126,14 @@ The Schema Admins group applies to the Windows Server operating system in [Defau
 |Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
 
 ### Server Operators
 
 Members of the Server Operators group can administer domain controllers. This group exists only on domain controllers. By default, the group has no members. Members of the Server Operators group can take the following actions: sign in to a server interactively, create and delete network shared resources, start and stop services, back up and restore files, format the hard disk drive of the computer, and shut down the computer. This group can't be renamed, deleted, or removed.
 
-By default, this built-in group has no members, and it has access to server configuration options on domain controllers. Its membership is controlled by the Service administrator groups Administrators and Domain Admins in the domain, and by the Enterprise Admins group in the forest root domain. Members in this group can't change any administrative group memberships. This group is considered a Service administrator account because its members have physical access to domain controllers. They can perform maintenance tasks like backup and restore, and they can change binaries that are installed on the domain controllers. See the group's default user rights in the following table.
+By default, this built-in group has no members. The group has access to server configuration options on domain controllers. Its membership is controlled by the service administrator groups Administrators and Domain Admins in the domain, and by the Enterprise Admins group in the forest root domain. Members in this group can't change any administrative group memberships. This group is considered a service administrator account because its members have physical access to domain controllers. Members of this group can perform maintenance tasks like backup and restore, and they can change binaries that are installed on the domain controllers. See the group's default user rights in the following table.
 
 The Server Operators group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -1159,7 +1146,7 @@ The Server Operators group applies to the Windows Server operating system in [De
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight<p>[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories): SeBackupPrivilege<p>[Change the system time](/windows/device-security/security-policy-settings/change-the-system-time): SeSystemTimePrivilege<p>[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone): SeTimeZonePrivilege<p>[Force shutdown from a remote system](/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system): SeRemoteShutdownPrivilege<p>[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories): Restore files and directories SeRestorePrivilege<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege|
 
 ### Storage Replica Administrators
@@ -1175,7 +1162,7 @@ Members of the Storage Replica Administrators group have complete and unrestrict
 | Default member of | None |
 | Protected by AdminSDHolder? | No |
 | Safe to move out of default container? | Yes |
-| Safe to delegate management of this group to non-Service admins? | No |
+| Safe to delegate management of this group to non-service admins? | No |
 | Default user rights | None |
 
 ### System Managed Accounts
@@ -1193,19 +1180,16 @@ The System Managed Accounts group applies to the Windows Server operating system
 | Default member of | None |
 | Protected by AdminSDHolder? | No |
 | Safe to move out of default container? | Yes |
-| Safe to delegate management of this group to non-Service admins? | No |
+| Safe to delegate management of this group to non-service admins? | No |
 | Default user rights | None |
 
 ### Terminal Server License Servers
 
-Members of the Terminal Server License Servers group can update user accounts in Active Directory with information about license issuance. The group is used to track and report TS Per User CAL usage. A TS Per User CAL gives one user the right to access an instance of Terminal Server from an unlimited number of client computers or devices. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+Members of the Terminal Server License Servers group can update user accounts in Active Directory with information about license issuance. The group is used to track and report TS Per User CAL usage. A TS Per User CAL gives one user the right to access an instance of Terminal Server from an unlimited number of client computers or devices. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 For more information about this security group, see [Terminal Services License Server security group configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc775331(v=ws.10)).
 
 The Terminal Server License Servers group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
-
-> [!NOTE]
-> This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -1216,12 +1200,12 @@ The Terminal Server License Servers group applies to the Windows Server operatin
 |Default member of|None|
 |Safe to move out of default container?|Can't be moved|
 |Protected by AdminSDHolder?|No|
-|Safe to delegate management of this group to non-Service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### Users
 
-Members of the Users group are prevented from making accidental or intentional system-wide changes, and they can run most applications. After the initial installation of the operating system, the only member is the Authenticated Users group. When a computer joins a domain, the Domain Users group is added to the Users group on the computer.
+Members of the Users group are prevented from making accidental or intentional system-wide changes. Members of this group can run most applications. After the initial installation of the operating system, the only member is the Authenticated Users group. When a computer joins a domain, the Domain Users group is added to the Users group on the computer.
 
 Users can do tasks like run an application, use local and network printers, shut down the computer, and lock the computer. Users can install applications that only they can use if the installation program of the application supports per-user installation. This group can't be renamed, deleted, or removed.
 
@@ -1229,30 +1213,27 @@ The Users group applies to the Windows Server operating system in [Default Activ
 
 This security group includes the following changes since Windows Server 2008:
 
-- In Windows Server 2008 R2, INTERACTIVE was added to the default members list.
+- In Windows Server 2008 R2, Interactive was added to the default members list.
 
-- In Windows Server 2012, the default **Member Of** list changed from Domain Users to none.
+- In Windows Server 2012, the default Member Of list changed from Domain Users to none.
 
 |Attribute|Value|
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-545|
 |Type|Builtin Local|
 |Default container|CN=Builtin, DC=\<domain>, DC=|
-|Default members|Authenticated Users<p>[Domain Users](#domain-users)<p>INTERACTIVE|
+|Default members|[Authenticated Users](understand-special-identities-groups.md#authenticated-users)<p>[Domain Users](#domain-users)<p>[Interactive](understand-special-identities-groups.md#interactive)|
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|No|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Windows Authorization Access
 
-Members of this group have access to the computed token GroupsGlobalAndUniversal attribute on User objects. Some applications have features that read the token-groups-global-and-universal (TGGAU) attribute on user account objects or on computer account objects in Active Directory Domain Services. Some Win32 functions make it easier to read the TGGAU attribute. Applications that read this attribute or that call an API (referred to as a *function*) that reads this attribute don't succeed if the calling security context doesn't have access to the attribute. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+Members of this group have access to the computed token GroupsGlobalAndUniversal attribute on User objects. Some applications have features that read the token-groups-global-and-universal (TGGAU) attribute on user account objects or on computer account objects in AD DS. Some Win32 functions make it easier to read the TGGAU attribute. Applications that read this attribute or that call an API (a *function*) that reads this attribute don't succeed if the calling security context doesn't have access to the attribute. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 The Windows Authorization Access group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
-
-> [!NOTE]
-> This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -1263,7 +1244,7 @@ The Windows Authorization Access group applies to the Windows Server operating s
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-Service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### WinRMRemoteWMIUsers\_
@@ -1284,7 +1265,7 @@ The WinRMRemoteWMIUsers\_ group applies to the Windows Server operating system i
 
   - You must have Read permissions to the file share.
 
-In Windows Server 2012, the Access Denied Assistance functionality adds the Authenticated Users group to the local WinRMRemoteWMIUsers\_\_ group. Therefore, when the Access Denied Assistance functionality is enabled, all authenticated users who have Read permissions to the file share can view the file share permissions.
+In Windows Server 2012, the Access Denied Assistance functionality adds the Authenticated Users group to the local WinRMRemoteWMIUsers\_\_ group. When the Access Denied Assistance functionality is enabled, all authenticated users who have Read permissions to the file share can view the file share permissions.
 
 > [!NOTE]
 > The WinRMRemoteWMIUsers\_\_ group allows running Windows PowerShell commands remotely. In contrast, you typically use the [Remote Management Users](#remote-management-users) group to allow users to manage servers by using the Server Manager console.
@@ -1298,13 +1279,13 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-Service admins?||
+|Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
 ## See also
 
 - [Security principals](understand-security-principals.md)
 
-- [Special identities](understand-special-identities-groups.md)
+- [Special identity groups](understand-special-identities-groups.md)
 
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
