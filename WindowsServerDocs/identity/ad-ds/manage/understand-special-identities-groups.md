@@ -29,7 +29,7 @@ Although you can assign rights and permissions for specific resources to a speci
 
 For information about Active Directory security groups and group scopes, see [Active Directory security groups](understand-security-groups.md).
 
-## Default special identity groups in Windows Server
+## Default special identity groups
 
 Default special identity groups in Windows Server are described in the following list:
 

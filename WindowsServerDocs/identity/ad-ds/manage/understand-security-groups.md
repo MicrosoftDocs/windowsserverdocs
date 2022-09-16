@@ -292,7 +292,7 @@ The Cert Publishers group applies to the Windows Server operating system in [Def
 |Type|Domain Local|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
-|Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
 |Safe to delegate management of this group to non-service admins?|No|
@@ -482,11 +482,11 @@ The Domain Admins group applies to the Windows Server operating system in [Defau
 |Type|Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|Administrator|
-|Default member of|[Administrators](#administrators)<p>[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default member of|[Administrators](#administrators)<p>[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?|No|
-|Default user rights|See [Administrators](#administrators)<p>See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default user rights|See [Administrators](#administrators)<p>See [Denied RODC Password Replication](#denied-rodc-password-replication)|
 
 ### Domain Computers
 
@@ -518,7 +518,7 @@ The Domain Controllers group applies to the Windows Server operating system in [
 |Type|Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|Computer accounts for all domain controllers of the domain|
-|Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|No|
 |Safe to delegate management of this group to non-service admins?|No|
@@ -577,11 +577,11 @@ The Enterprise Admins group applies to the Windows Server operating system in [D
 |Type|Universal if domain is in native mode; otherwise, Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|Administrator|
-|Default member of|[Administrators](#administrators)<p>[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default member of|[Administrators](#administrators)<p>[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?|No|
-|Default user rights|See [Administrators](#administrators)<p>See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default user rights|See [Administrators](#administrators)<p>See [Denied RODC Password Replication](#denied-rodc-password-replication)|
 
 ### Enterprise Key Admins
 
@@ -653,11 +653,11 @@ The Group Policy Creator Owners group applies to the Windows Server operating sy
 |Type|Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|Administrator|
-|Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|No|
 |Safe to delegate management of this group to non-service admins?|No|
-|Default user rights|See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default user rights|See [Denied RODC Password Replication](#denied-rodc-password-replication)|
 
 ### Guests
 
@@ -1037,11 +1037,11 @@ For information about deploying an RODC, see [Understand planning and deployment
 |Type|Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
-|Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?||
-|Default user rights|See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default user rights|See [Denied RODC Password Replication](#denied-rodc-password-replication)|
 
 ### Remote Desktop Users
 
@@ -1123,11 +1123,11 @@ The Schema Admins group applies to the Windows Server operating system in [Defau
 |Type|Universal (if Domain is in Native-Mode) else Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|Administrator|
-|Default member of|[Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?|No|
-|Default user rights|See [Denied RODC Password Replication group](#denied-rodc-password-replication-group)|
+|Default user rights|See [Denied RODC Password Replication](#denied-rodc-password-replication)|
 
 ### Server Operators
 

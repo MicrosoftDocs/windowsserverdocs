@@ -114,7 +114,7 @@ If this setting is enabled, a user has two options:
 
 - **The user can't add a Microsoft account**. Existing connected accounts can still sign in to the device (and they appear on the **Sign in** page). However, a user can't use the Settings app to add a new connected account or to connect a local account to a Microsoft account.
 
-- **The user can’t add or sign in with Microsoft accounts**. A user can't add a new connected account (or connect a local account to a Microsoft account) or use an existing connected account through Settings.
+- **The user can’t add or sign in with a Microsoft account**. A user can't add a new connected account (or connect a local account to a Microsoft account) or use an existing connected account through Settings.
 
 This setting doesn't affect adding a Microsoft account for app authentication. For example, if this setting is enabled, a user can still provide a Microsoft account for authentication with an app like Mail, but the user can't use the Microsoft account for single sign-on authentication for other apps or services. For other apps and services, the user is prompted to authenticate.
 
@@ -128,9 +128,7 @@ A user can connect a Microsoft account to their domain account and sync the sett
 
 ### Disconnect a connected account
 
-A user can disconnect a Microsoft account from their domain account at any time:
-
-- In **PC settings**, select **Users** > **Disconnect** > **Finish**.
+A user can disconnect a Microsoft account from their domain account at any time: In **PC settings**, select **Users** > **Disconnect** > **Finish**.
 
 > [!NOTE]
 > Connecting a Microsoft account to a domain account might limit access to some high-privileged tasks in Windows. For example, Task Scheduler  evaluates the connected Microsoft account for access and fails. In this scenario, the account owner should disconnect the account.
