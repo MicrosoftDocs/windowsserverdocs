@@ -43,7 +43,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
 |Work Folders|Yes|Yes|
 
-# [Version Differences](#tab/features-generally-available-differences)
+# [Version Differences](#tab/feature-differences)
 
 |Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
