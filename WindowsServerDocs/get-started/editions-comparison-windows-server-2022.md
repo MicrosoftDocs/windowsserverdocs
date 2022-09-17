@@ -46,7 +46,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
 |Work Folders|Yes|Yes|Yes|
 
-# [Version Differences](#tab/features-generally-available-differences)
+# [Version Differences](#tab/version-differences)
 
 |Features available generally|Windows Server 2022 Standard|Windows Server 2022 Datacenter|Windows Server 2022 Datacenter: Azure Edition|
 |-------------------|----------|---------------------------|
@@ -82,7 +82,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 | DirectAccess                    | Yes                           | Yes |
 | DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
-# [Version Differences](#tab/locks-and-limits-differences)
+# [Version Differences](#tab/version-differences)
 
 | Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
@@ -129,7 +129,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Windows Deployment Services| |Yes|Yes|
 |Windows Server Update Services| |Yes|Yes|
 
-# [Version Differences](#tab/server-roles-differences)
+# [Version Differences](#tab/version-differences)
 
 |Windows Server roles available|Role services|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
 |-------------------|----------|----------|---------------------------|
@@ -208,7 +208,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |WoW64 support|Yes|Yes|
 |XPS Viewer|Yes, installed with Server with Desktop Experience|Yes, installed with Server with Desktop Experience|
 
-# [Version Differences](#tab/features-differences)
+# [Version Differences](#tab/version-differences)
 
 |Windows Server Features available|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
 |-------------------|----------|---------------------------|
