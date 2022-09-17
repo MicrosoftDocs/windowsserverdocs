@@ -119,8 +119,8 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Windows Deployment Services| |Yes*|Yes*|
 |Windows Server Update Services| |Yes|Yes|
 
->[!NOTE] WDS Transport Server is new to Server Core installations in Windows
-> Server 2019 and also included in the Semi-Annual Channel starting with Windows Server version 1803.
+> [!NOTE]
+> WDS Transport Server is new to Server Core installations in Windows Server 2019 and also included in the Semi-Annual Channel starting with Windows Server version 1803.
 
 # [Version Differences](#tab/server-roles-differences)
 
