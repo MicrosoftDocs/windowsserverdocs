@@ -74,7 +74,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | DirectAccess                    | yes                           | yes |
 | DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
-# [Full Comparison](#tab/locks-and-limits-differences)
+# [Version Differences](#tab/locks-and-limits-differences)
 
 | Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
@@ -123,7 +123,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 
 *WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the Semi-Annual Channel starting with Windows Server, version 1803)
 
-# [Full Comparison](#tab/server-roles-differences)
+# [Version Differences](#tab/server-roles-differences)
 
 |Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|----------|---------------------------|
@@ -204,7 +204,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |WoW64 Support|Yes|Yes|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 
-# [Full Comparison](#tab/features-differences)
+# [Version Differences](#tab/features-differences)
 
 |Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
