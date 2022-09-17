@@ -3,9 +3,9 @@ title: Comparison of Standard and Datacenter editions Windows Server 2019
 description: Comparison of Standard and Datacenter editions of Windows Server 2019.
 ms.topic: conceptual
 author: jasongerend
-ms.author: jgerend
+ms.author: alalve
 manager: femila
-ms.date: 8/16/2021
+ms.date: 09/16/2022
 ms.prod: windows-server
 ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 ---
@@ -14,7 +14,9 @@ ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 
 Use this article to compare Standard and Datacenter editions of Windows Server 2019 to see which will be most appropriate.
 
-## Features available generally
+## Features generally available
+
+# [Full Comparison](#tab/features-generally-available)
 
 |Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
@@ -31,7 +33,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |SMB Direct and SMB over RDMA|Yes|Yes|
 |Software-defined Networking|No| **Yes** |
 |Storage Migration  Service|Yes|Yes|
-| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, **unlimited** |
+| Storage Replica | Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** |
 |Storage Spaces|Yes|Yes|
 |Storage Spaces Direct|No| **Yes** |
 |Volume Activation Services|Yes|Yes|
@@ -40,6 +42,17 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Server license logging|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
 |Work Folders|Yes|Yes|
+
+# [Version Differences](#tab/features-generally-available)
+
+|Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|Software-defined Networking|No| **Yes** |
+| Storage Replica | Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** |
+|Storage Spaces Direct|No| **Yes** |
+|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
+
+---
 
 ## Locks and Limits
 
