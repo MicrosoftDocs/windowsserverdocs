@@ -15,7 +15,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 
 ## Features available generally
 
-# [Full Comparison](#tab/features-generally-available)
+# [Full Comparison](#tab/full-comparison)
 
 |Features available generally|Windows Server 2022 Standard|Windows Server 2022 Datacenter|Windows Server 2022 Datacenter: Azure Edition|
 |--|--|--|--|
@@ -62,7 +62,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 
 ## Locks and Limits
 
-# [Full Comparison](#tab/locks-and-limits)
+# [Full Comparison](#tab/full-comparison)
 
 | Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
@@ -92,7 +92,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 
 ## Server roles
 
-# [Full Comparison](#tab/server-roles)
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server roles available|Role services|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
 |-------------------|----------|----------|---------------------------|
@@ -139,7 +139,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 
 ## Features
 
-# [Full Comparison](#tab/features)
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server Features available|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
 |-------------------|----------|---------------------------|

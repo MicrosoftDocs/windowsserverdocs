@@ -14,7 +14,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 
 ## Features available generally
 
-# [Full Comparison](#tab/features-generally-available)
+# [Full Comparison](#tab/full-comparison)
 
 |Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
 |-------------------|----------|---------------------------|
@@ -54,7 +54,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 
 ## Locks and Limits
 
-# [Full Comparison](#tab/locks-and-limits)
+# [Full Comparison](#tab/full-comparison)
 
 | Locks and Limits | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | ------------------- |---------- | --------------------------- |
@@ -82,7 +82,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 
 ## Server roles
 
-# [Full Comparison](#tab/server-roles)
+# [Full Comparison](#tab/full-comparison)
 
 | Windows Server roles available     | Role services | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | -------------------                | ----------    | ----------                   | ---------------------------    |
@@ -132,7 +132,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 
 ## Features
 
-# [Full Comparison](#tab/features)
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server Features available|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
 |-------------------|----------|---------------------------|
