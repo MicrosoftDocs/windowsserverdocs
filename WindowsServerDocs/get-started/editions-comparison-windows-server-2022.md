@@ -135,6 +135,8 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |-------------------|----------|----------|---------------------------|
 |Network Controller| |No| **Yes** |
 
+---
+
 ## Features
 
 # [Full Comparison](#tab/features)
