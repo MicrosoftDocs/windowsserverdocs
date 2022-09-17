@@ -12,7 +12,7 @@ ms.prod: windows-server
 
 Use this article to compare Standard and Datacenter editions of Windows Server 2016 to see which will be most appropriate.
 
-## Features available generally
+## Features generally available
 
 # [Full Comparison](#tab/full-comparison)
 

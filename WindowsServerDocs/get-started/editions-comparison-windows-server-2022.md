@@ -13,7 +13,7 @@ ms.prod: windows-server
 
 Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022 to see which will be most appropriate.
 
-## Features available generally
+## Features generally available
 
 # [Full Comparison](#tab/full-comparison)
 
