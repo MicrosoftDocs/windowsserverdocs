@@ -4,10 +4,8 @@ description: Comparison of Standard and Datacenter editions of Windows Server 20
 ms.topic: conceptual
 author: jasongerend
 ms.author: alalve
-manager: femila
 ms.date: 09/16/2022
 ms.prod: windows-server
-ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 ---
 
 # Comparison of Standard and Datacenter editions of Windows Server 2019
@@ -121,7 +119,8 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Windows Deployment Services| |Yes*|Yes*|
 |Windows Server Update Services| |Yes|Yes|
 
-*WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the Semi-Annual Channel starting with Windows Server, version 1803)
+>[!NOTE] WDS Transport Server is new to Server Core installations in Windows
+> Server 2019 and also included in the Semi-Annual Channel starting with Windows Server version 1803.
 
 # [Version Differences](#tab/server-roles-differences)
 
