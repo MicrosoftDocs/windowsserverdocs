@@ -41,7 +41,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Inherited activation|As guest if hosted on Datacenter| **Can be host or guest** |
 |Work Folders|Yes|Yes|
 
-# [Version Differences](#tab/features-generally-available-differences)
+# [Version Differences](#tab/version-differences)
 
 |Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
 |-------------------|----------|---------------------------|
@@ -72,7 +72,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | DirectAccess            | yes             | yes                |
 | DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
-# [Version Differences](#tab/locks-and-limits-differences)
+# [Version Differences](#tab/version-differences)
 
 | Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
@@ -121,7 +121,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | Windows Server Essentials Experience| |Yes|Yes|
 | Windows Server Update Services| |Yes|Yes|
 
-# [Version Differences](#tab/server-roles-differences)
+# [Version Differences](#tab/version-differences)
 
 |Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|----------|---------------------------|
@@ -198,7 +198,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |WoW64 support|Yes|Yes|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 
-# [Version Differences](#tab/features-differences)
+# [Version Differences](#tab/version-differences)
 
 |Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
