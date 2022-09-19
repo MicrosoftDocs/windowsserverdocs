@@ -33,7 +33,7 @@ The above picture has many moving parts - let's break it down piece by piece.
 
 ## Basic Windows LAPS scenario flow
 
-The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) for Azure AD-joined devices, or Group Policy for AD-joined devices.
+The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) for Azure AD-joined devices or Hybrid Azure AD-joined devices that are enrolled with Microsoft Endpoint Manager, or Group Policy for AD-joined devices.
 
 After the managed device has been configured with a policy that enables Windows LAPS, the device will start to manage the configured local account's password. Whenever the password has expired, the device will generate a random new password that is compliant with the current policy's length and complexity settings, and validated against the local device's password complexity policy. Once the password is validated, the device stores it in the configured directory (either AD or Azure AD). An associated password expiration time (based on the current policy's password age setting) is also computed and stored in the directory. The device will rotate this password automatically once the password expiration time has been reached.
 
@@ -69,7 +69,7 @@ A better (more scoped) way to kick off the policy processing cycle is by running
 
 When backing up passwords to Azure AD, managed local account passwords are stored on the Azure AD device object. Windows LAPS authenticates to Azure AD using the Azure AD device identity of the managed device. Data stored in Azure AD is highly secure, but for extra protection the password is further encrypted prior to being persisted. This extra encryption layer is removed before the password is returned to authorized clients.
 
-By default retrieval of the clear-text password is limited to members of the Global Admins, Device Admins, and Intune Admins roles.
+By default retrieval of the clear-text password is limited to members of the Global Administrator, Cloud Device Administrator, and Intune Administrator roles.
 
 ## Active Directory concepts
 
