@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/13/2022
+ms.date: 09/20/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3496        |1.2.1672                  |
+|Public     |1.2.3497        |1.2.1672                  |
 |Insider    |1.2.3497        |1.2.1672                  |
 
-## Updates for version 1.2.3497 (Insider)
+## Updates for version 1.2.3497
 
-Date published: 9/13/2022
+Date published: 9/20/2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
@@ -38,15 +38,13 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 Date published: 9/08/2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE55C53), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE55C54), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE55C52)
 
 - Reverted to version 1.2.3401 build to avoid a connectivity issue with older RDP stacks.
 
 ## Updates for version 1.2.3401
 
 Date published: 8/02/2022
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51gy5), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51gy7), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51od9)
 
 - Fixed an issue where the narrator was announcing the Tenant Expander button as "on" or "off" instead of "expanded" or “collapsed."
 - Fixed an issue where the text size didn't change when the user adjusted the text size system setting.
