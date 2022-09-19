@@ -140,4 +140,4 @@ new version:
 
 If you'd like to learn more about deploying, post-installation configuration and activation options,
 check out the
-[Windows Server deployment, configuration, and administration learning path](/learn/paths/windows-server-deployment-configuration-administration/).
+[Windows Server deployment, configuration, and administration learning path](/training/paths/windows-server-deployment-configuration-administration/).
