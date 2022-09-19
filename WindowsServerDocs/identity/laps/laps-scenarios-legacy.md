@@ -11,6 +11,9 @@ ms.topic: article
 
 # Getting started with Windows LAPS in Legacy LAPS emulation mode
 
+> [!IMPORTANT]
+> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure AD scenario is currently limited to a small group of Windows Insiders.
+
 ## Overview
 
 Windows LAPS can be configured so that it will honor the legacy LAPS Group Policy settings subject to certain restrictions and limitations. This feature is referred to as "legacy LAPS emulation". This feature can be useful when migrating an existing deployment from legacy LAPS to Windows LAPS.

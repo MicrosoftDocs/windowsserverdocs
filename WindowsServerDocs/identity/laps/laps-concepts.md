@@ -52,7 +52,7 @@ Windows LAPS uses a background task that wakes up every hour to process the curr
 
 :::image type="content" source="../laps/laps-concepts-processing-cycle.png" alt-text="Windows LAPS Background Processing Cycle":::
 
-The obvious key difference between the AD and Azure AD flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory. In the AD scenario, the managed device will regularly poll AD to query the password expiration time and will act once it has expired. In the AD scenario, the managed device doesn't perform polling of Azure AD; instead, the current password expiration time is maintained locally on the device.
+The obvious key difference between the AD and Azure AD flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory. In the AD scenario, the managed device will regularly poll AD to query the password expiration time and will act once it has expired. In the Azure AD scenario, the managed device doesn't perform polling of Azure AD; instead, the current password expiration time is maintained locally on the device.
 
 Windows LAPS does respond to Group Policy change notifications - so one manual way to kick off the policy processing cycle is by forcing a Group Policy refresh, for example:
 

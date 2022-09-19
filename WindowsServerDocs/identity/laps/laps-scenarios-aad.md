@@ -11,6 +11,9 @@ ms.topic: article
 
 # Getting started with Windows LAPS and Azure AD
 
+> [!IMPORTANT]
+> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure AD scenario is currently limited to a small group of Windows Insiders.
+
 ## Overview
 
 In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Azure AD and also how to retrieve them.
