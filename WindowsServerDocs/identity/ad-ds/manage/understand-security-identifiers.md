@@ -9,7 +9,7 @@ ms.date: 07/21/2022
 
 # Security identifiers
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes how security identifiers (SIDs) work with accounts and groups in the Windows Server operating system.
 
@@ -23,7 +23,7 @@ Each time a user signs in, the system creates an access token for that user. The
 
 In addition to the uniquely created domain-specific SIDs that are assigned to specific users and groups, there are well-known SIDs that identify generic groups and generic users. For example, the *Everyone and World* SIDs identify a group that includes all users. Well-known SIDs have values that remain constant across all operating systems.
 
-SIDs are a fundamental building block of the Windows security model. They work with specific components of the authorization and access-control technologies in the security infrastructure of the Windows Server operating systems. This helps protect access to network resources and provides a more secure computing environment.
+SIDs are a fundamental building block of the Windows security model. They work with specific components of the authorization and access control technologies in the security infrastructure of the Windows Server operating systems. This helps protect access to network resources and provides a more secure computing environment.
 
 > [!NOTE]
 > This content pertains only to the Windows versions in the "Applies to" list at the beginning of the article.
@@ -121,7 +121,7 @@ When a User object moves from one domain to another, a new SID must be generated
 
 If you allow or deny users' access to a resource based on their jobs, you should allow or deny access to a group, not to an individual. That way, when users change jobs or move to other departments, you can easily adjust their access by removing them from certain groups and adding them to others.
 
-However, if you allow or deny an individual user access to resources, you probably want that user's access to remain the same no matter how many times the user's account domain changes. The `SIDHistory` property makes this possible. When a user changes domains, there's no need to change the access-control list (ACL) on any resource. If an ACL has the user's old SID, but not the new one, the old SID is still in the user's access token. It's listed among the SIDs for the user's groups, and the user is granted or denied access based on the old SID.
+However, if you allow or deny an individual user access to resources, you probably want that user's access to remain the same no matter how many times the user's account domain changes. The `SIDHistory` property makes this possible. When a user changes domains, there's no need to change the access control list (ACL) on any resource. If an ACL has the user's old SID, but not the new one, the old SID is still in the user's access token. It's listed among the SIDs for the user's groups, and the user is granted or denied access based on the old SID.
 
 ## Well-known SIDs
 
