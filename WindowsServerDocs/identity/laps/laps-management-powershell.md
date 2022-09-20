@@ -62,4 +62,3 @@ In addition to naming-related changes, the Windows LAPS Windows Server Active Di
 [Getting Started with Windows LAPS in Legacy LAPS Emulation Mode](..\laps\laps-scenarios-legacy.md)
 
 [Windows LAPS Management](..\laps\laps-management.md)
-

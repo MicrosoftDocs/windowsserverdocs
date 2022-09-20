@@ -61,6 +61,6 @@ The Account Name and Password fields will be populated assuming you're granted p
 
 A warning dialog will appear if you don't have permission to read or decrypt the current password information.
 
-## Related articles
+## See also
 
 [Windows LAPS Management](..\laps\laps-management.md)
