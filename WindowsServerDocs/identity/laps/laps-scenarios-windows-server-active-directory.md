@@ -9,20 +9,20 @@ ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Getting started with Windows LAPS and Active Directory
+# Getting started with Windows LAPS and Windows Server Active Directory
 
 > [!IMPORTANT]
 > Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure Active Directory scenario is currently limited to a small group of Windows Insiders.
 
 ## Overview
 
-In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Active Directory, and also how to retrieve them.
+In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory, and also how to retrieve them.
 
 Let's get started on backing up some passwords to Windows Server Active Directory!
 
 ## Update the Windows Server Active Directory schema
 
-The Active Directory schema must be updated prior to using Windows LAPS. This action is performed using the `Update-LapsADSchema` cmdlet and is a one-time operation for the entire forest.
+The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed using the `Update-LapsADSchema` cmdlet and is a one-time operation for the entire forest.
 
 ```PowerShell
 PS C:\> Update-LapsADSchema
@@ -31,7 +31,7 @@ PS C:\> Update-LapsADSchema
 > [!TIP]
 > Pass the -Verbose parameter to see detailed info on what the Update-LapsADSchema cmdlet (or any other cmdlet in the LAPS PowerShell module) is doing.
 
-## Grant the managed device permission to update its password in Active Directory
+## Grant the managed device permission to update its password
 
 The managed device needs to be granted permission to update its password. This action is performed by setting inheritable permissions on the Organizational Unit that the device is in. The `Set-LapsADComputerSelfPermission` is used for this purpose, for example:
 
@@ -78,7 +78,7 @@ If you want to configure a custom local admin account, you should configure the 
 
 Finally, feel free to configure the other settings as needed or desired, for example PasswordLength, ADPasswordEncryptionEnabled, etc.
 
-## Update the password in Windows Server Active Directory
+## Update the password in the directory
 
 Windows LAPS will process the currently active policy on a periodic (every hour) basis, and will also respond to Group Policy change notifications, and will act as needed at those times.
 
@@ -88,7 +88,7 @@ Now look in the event log for 10018 event that verifies that the password was su
 
 If there's any delay processing the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet.
 
-## Password retrieval from Active Directory
+## Password retrieval from the directory
 
 The `Get-LapsADPassword` cmdlet is used to retrieve passwords from Windows Server Active Directory, for example:
 
@@ -109,7 +109,7 @@ This output result indicates that we have enabled password encryption (see the S
 
 ## Rotating the password
 
-Windows LAPS will read the password expiration time from Active Directory during each policy processing cycle. If the password has expired, a new password will be generated and stored immediately.
+Windows LAPS will read the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password has expired, a new password will be generated and stored immediately.
 
 In some situations (for example, after a security breach, or for ad-hoc testing purposes) it may be necessary to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet, for example:
 

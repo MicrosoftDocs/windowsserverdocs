@@ -53,7 +53,7 @@ Windows LAPS uses a background task that wakes up every hour to process the curr
 
 :::image type="content" source="../laps/media/laps-concepts/laps-concepts-processing-cycle.png" alt-text="Flowchart describing the Windows LAPS background processing cycle":::
 
-The obvious key difference between the Azure Active Directory and Windows Server Active Directory flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory. In the Azure Active Directory scenario, the managed device doesn't perform polling of Azure Active Directory instead, the current password expiration time is maintained locally on the device. In the Windows Server Active Directory scenario, the managed device will regularly poll AD to query the password expiration time and will act once it has expired.
+The obvious key difference between the Azure Active Directory and Windows Server Active Directory flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory. In the Azure Active Directory scenario, the managed device doesn't perform polling of Azure Active Directory instead, the current password expiration time is maintained locally on the device. In the Windows Server Active Directory scenario, the managed device will regularly poll the directory to query the password expiration time and will act once it has expired.
 
 Windows LAPS does respond to Group Policy change notifications - so one manual way to kick off the policy processing cycle is by forcing a Group Policy refresh, for example:
 
@@ -105,7 +105,7 @@ The inner circle is only applicable when password encryption is enabled. It's co
 
 The Windows LAPS password encryption feature is based on [CNG DPAPI](/windows/win32/seccng/cng-dpapi). CNG DPAPI supports multiple encryption modes, but Windows LAPS only supports encrypting passwords against a single Windows Server Active Directory security principal (user or group). The underlying encryption is based on AES256.
 
-The ADPasswordEncryptionPrincipal policy setting can be used to specify a specific AD security principal for encrypting the password. If ADPasswordEncryptionPrincipal isn't specified, Windows LAPS will encrypt the password against the Domain Admins group of the managed device's domain. Prior to encrypting a password, the managed device will always verify that the specified user or group is resolvable.
+The ADPasswordEncryptionPrincipal policy setting can be used to specify a specific security principal for encrypting the password. If ADPasswordEncryptionPrincipal isn't specified, Windows LAPS will encrypt the password against the Domain Admins group of the managed device's domain. Prior to encrypting a password, the managed device will always verify that the specified user or group is resolvable.
 
 > [!TIP]
 > Windows LAPS only supports encrypting passwords against a single security principal. CNG DPAPI does support encryption against multiple security principals, but this mode is not supported by Windows LAPS because it causes size bloat of the encrypted password buffers. If you need to grant decryption permissions to multiple security principals, one workaround is to create a wrapper group that has all of those security principals as members.
@@ -130,7 +130,7 @@ When encrypted password history is enabled and it's time to rotate the password,
 Windows LAPS supports backing up the Directory Services Repair Mode (DSRM) account password on Windows Server domain controllers. DSRM account passwords can only be backed up to Windows Server Active Directory (backing up DSRM passwords to Azure Active Directory isn't supported), and also requires that password encryption is enabled. Otherwise this feature works almost identically to how encrypted password support works for Windows Server Active Directory-joined clients.
 
 > [!IMPORTANT]
-> When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable as long at least one AD domain controller in that domain is accessible.
+> When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable as long at least one domain controller in that domain is accessible.
 >
 > However, consider a catastrophic situation where all of the domain controllers in a given domain are down. None of the DSRM passwords will be available. For this reason, Microsoft recommends using Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. It is strongly recommended that the DSRM passwords be regularly extracted from the directory, and then backed up to a secure store outside of Windows Server Active Directory. Such an external store backup strategy is  outside of the scope of Windows LAPS.
 

@@ -15,11 +15,11 @@ ms.topic: article
 
 This article describes the Active Directory Users and Computers LAPS property page available in Windows LAPS.
 
-## Active Directory Users and Computers LAPS property page
+## Windows Server Active Directory Users and Computers LAPS property page
 
-The Active Directory Users and Computers management snap-in now includes a LAPS property page available on AD computer objects:
+The Windows Server Active Directory Users and Computers management snap-in now includes a LAPS property page available on computer objects:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-property-page.png" alt-text="Active Directory and Users LAPS property page.":::
+:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-property-page.png" alt-text="Screenshot showing the Windows LAPS property page in the Windows Server Active Directory and Users snap-in.":::
 
 You can use the new property page to perform the following actions:
 
@@ -35,13 +35,13 @@ You can use the new property page to perform the following actions:
 
 When you first bring up the property page for an Active Directory computer, the date-time control will display the current password expiration time. For example:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-modify-password-expiration.png" alt-text="Active Directory and Users LAPS property page viewing the password expiration time":::
+:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-view-password-expiration.png" alt-text="Screenshot showing the current password expiration time on the  Windows LAPS property page in the Windows Server Active Directory and Users snap-in.":::
 
 ### Modify the password expiration time
 
 The date-time control can be used to modify the password expiration time. For example:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-modify-password-expiration.png" alt-text="Active Directory and Users LAPS property page modifying the password expiration time":::
+:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-modify-password-expiration.png" alt-text="Screenshot showing a modification of the password expiration time on the  Windows LAPS property page in the Windows Server Active Directory and Users snap-in.":::
 
 Once modified, select OK or Apply to apply the changes.
 
@@ -49,7 +49,7 @@ Once modified, select OK or Apply to apply the changes.
 
 If you just want to immediately expire the password, select the "Expire now" button:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-expire-password-now.png" alt-text="Active Directory and Users LAPS property page immediately expiring the password expiration time":::
+:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-expire-password-now.png" alt-text="Screenshot showing the Expire now button on the  Windows LAPS property page in the Windows Server Active Directory and Users snap-in.":::
 
 Then select OK or Apply to apply the changes.
 
@@ -57,7 +57,7 @@ Then select OK or Apply to apply the changes.
 
 The Account Name and Password fields will be populated assuming you're granted permissions to read (and decrypt) the computer's current LAPS password attribute. You can copy the password to the clipboard using the Copy button, or you can display the password using the Show Password button.
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-copy-show-password.PNG" alt-text="Active Directory and Users LAPS property page copy or view passwords":::
+:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-copy-show-password.PNG" alt-text="Screenshot showing the copy and show password functionality on the  Windows LAPS property page in the Windows Server Active Directory and Users snap-in.":::
 
 A warning dialog will appear if you don't have permission to read or decrypt the current password information.
 

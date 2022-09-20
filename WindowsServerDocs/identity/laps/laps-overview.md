@@ -20,8 +20,8 @@ Using Windows LAPS to regularly rotate and manage local administrator account pa
 * Protection against pass-the-hash and lateral-traversal attacks.
 * Improved security for remote help-desk scenarios.
 * Log into and recover devices that are otherwise inaccessible.
-* Supports fine-grained security model (ACLs plus optional password encryption) for securing passwords stored in Active Directory.
-* Supports Azure role-based access control model for securing passwords stored in Azure AD.
+* Supports fine-grained security model (ACLs plus optional password encryption) for securing passwords stored in Windows Server Active Directory.
+* Supports Azure role-based access control model for securing passwords stored in Azure Active Directory.
 
 ## Supported SKUs
 
@@ -30,7 +30,7 @@ Windows LAPS is supported on desktop Windows, Windows Server, and Windows Server
 > [!IMPORTANT]
 > Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure AD scenario is currently limited to a small group of Windows Insiders.
 
-## Passwords stored in either Azure AD or Active Directory
+## Passwords stored in either Azure Active Directory or Windows Server Active Directory
 
 Windows LAPS supports backing up the managed account password to either Azure Active Directory or Windows Server Active Directory. A hybrid-joined device (joined to both Azure Active Directory and Windows Server Active Directory) can be configured to back up passwords to either directory. However, backing up passwords to both directories from a single device isn't supported.
 
