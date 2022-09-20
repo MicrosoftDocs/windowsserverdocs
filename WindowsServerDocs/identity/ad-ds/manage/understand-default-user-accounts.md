@@ -134,7 +134,7 @@ HelpAssistant is the primary account that's used to establish a Remote Assistanc
 
 The SIDs that pertain to the default HelpAssistant account include:
 
-- SID: S-1-5-`<domain>`-13, display name Terminal Server User. This group includes all users who sign in to a server with Remote Desktop Services enabled. In Windows Server 2008, Remote Desktop Services are called Terminal Services.
+- SID: S-1-5-`<domain>`-13, display name Terminal Server User. This group includes all users who sign in to a server with Remote Desktop Services enabled. In Windows Server 2008, Remote Desktop Services is called Terminal Services.
 
 - SID: S-1-5-`<domain>`-14, display name Remote Interactive Logon. This group includes all users who connect to the computer by using a remote desktop connection. This group is a subset of the Interactive group. Access tokens that contain the Remote Interactive Logon SID also contain the Interactive SID.
 
