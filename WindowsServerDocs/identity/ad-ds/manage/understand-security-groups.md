@@ -21,7 +21,7 @@ Security groups are a way to collect user accounts, computer accounts, and other
 
 In the Windows Server operating system, several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In Active Directory, administrative responsibilities are separated into two types of administrators:
 
-- **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring the AD DS.
+- **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring AD DS.
 
 - **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations.
 
