@@ -43,7 +43,7 @@ Windows LAPS supports multiple policy management mechanisms:
 
 [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md)
 
-[Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy)
+[Windows LAPS Group Policy](../laps/laps-management-policy-settings.md#laps-group-policy)
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 
@@ -77,6 +77,6 @@ Windows LAPS inherits many design concepts from legacy LAPS. So if you're famili
 
 [Windows LAPS Management](../laps/laps-management.md)
 
-[Windows LAPS Technical Reference](../laps/laps-technicalreference.md)
+[Windows LAPS Technical Reference](../laps/laps-technical-reference.md)
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899)

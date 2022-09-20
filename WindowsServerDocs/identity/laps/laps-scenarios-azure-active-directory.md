@@ -206,4 +206,4 @@ Proceed to the [Windows LAPS Concepts](../laps/laps-concepts.md) article.
 
 [Windows LAPS Concepts](../laps/laps-concepts.md)
 
-[Windows LAPS Policy Settings](../laps/laps-management-policysettings.md)
+[Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)

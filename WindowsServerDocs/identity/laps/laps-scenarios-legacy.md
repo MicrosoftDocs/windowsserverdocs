@@ -43,7 +43,7 @@ The following requirements and limitations apply to legacy LAPS emulation suppor
 
 * No other Windows LAPS policies can be applied to the machine.
 
-  If present, a Windows LAPS policy will always take precedence regardless of application method (for example, via CSP, GPO, or raw registry modification). If a Windows LAPS policy is present, a legacy LAPS policy will always be ignored. For more info, see [Windows LAPS Policy Settings](../laps/laps-management-policysettings.md).
+  If present, a Windows LAPS policy will always take precedence regardless of application method (for example, via CSP, GPO, or raw registry modification). If a Windows LAPS policy is present, a legacy LAPS policy will always be ignored. For more info, see [Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md).
 
 * Legacy LAPS must not be installed on the machine.
 

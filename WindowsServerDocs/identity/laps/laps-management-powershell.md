@@ -55,7 +55,7 @@ Legacy LAPS included a PowerShell module named `AdmPwd.PS`. There are many funct
 |`Set-LapsADResetPasswordPermission`|`Set-AdmPwdResetPasswordPermission`|
 |`Update-LapsADSchema`|`Update-AdmPwdADSchema`|
 
-In addition to naming-related changes, the Windows LAPS Windows Server Active Directory-related cmdlets operate over an entirely different set of schema extensions. For more information, see [Windows Server Active Directory Schema Extensions](../laps/laps-technicalreference.md#windows-server-active-directory-schema-extensions).
+In addition to naming-related changes, the Windows LAPS Windows Server Active Directory-related cmdlets operate over an entirely different set of schema extensions. For more information, see [Windows Server Active Directory Schema Extensions](../laps/laps-technical-reference.md#windows-server-active-directory-schema-extensions).
 
 ## See also
 

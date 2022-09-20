@@ -61,7 +61,7 @@ In this example we can see that only trusted entities (SYSTEM, Domain Admins) ha
 
 The first step is to choose how you're going to apply policy to your devices.
 
-Most environments will use [Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy) to deploy the necessary settings to their Windows Server Active Directory-domain-joined devices.
+Most environments will use [Windows LAPS Group Policy](../laps/laps-management-policy-settings.md#laps-group-policy) to deploy the necessary settings to their Windows Server Active Directory-domain-joined devices.
 
 If your devices are also hybrid-joined to Azure Active Directory, you may deploy policy using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 
