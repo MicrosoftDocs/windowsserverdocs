@@ -377,7 +377,7 @@
       - name: Active Directory Replication and Topology Management Using Windows PowerShell
         href: ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md
         items:
-        - name: Introduction to Active Airectory Replication and Topology Management Using Windows PowerShell (Level 100)
+        - name: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
           href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
         - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
           href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
@@ -744,7 +744,7 @@
           href: ad-fs/deployment/migrate-ad-fs-fed-server-r2.md
         - name: Migrate the AD FS Federation Server Proxy
           href: ad-fs/deployment/migrate-fed-server-proxy-r2.md
-        - name: Verfiy the AD FS Migration to Windows Server 2012 R2
+        - name: Verify the AD FS Migration to Windows Server 2012 R2
           href: ad-fs/deployment/verify-ad-fs-migration.md
       - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012
         href: ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md
