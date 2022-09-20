@@ -21,7 +21,7 @@ The following feature distribution map indicates the features in each version. T
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**20.04 LTS**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|
+|**Feature**|**Windows Server operating system version**|**22.04 LTS**|**20.04 LTS**|**18.04 LTS**|**16.04 LTS**|
 |-|-|-|-|-|-|
 |**Availability**||Built-in|Built-in|Built-in|Built-in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
