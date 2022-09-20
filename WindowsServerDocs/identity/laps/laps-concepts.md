@@ -21,15 +21,15 @@ This article provides information about the basic design and security concepts t
 
 The above picture has many moving parts - let's break it down piece by piece.
 
-<ins>IT admin</ins>: this entity represents collectively the various IT admin roles that may be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
+IT admin: this entity represents collectively the various IT admin roles that may be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
 
-<ins>Managed device:</ins> this entity is the Azure Active Directory-joined or Windows Server Active Directory-joined device on which we want to manage a local administrator account. The feature is composed of a few key binaries: laps.dll (core logic), lapscsp.dll (Configuration Service Provider logic), and lapspsh.dll (PowerShell cmdlet logic). Windows LAPS may also be configured using Group Policy and will respond to GPO change notifications. The managed device may also be a Windows Server Active Directory domain controller, which can be configured to back up DSRM account passwords.
+Managed device: this entity is the Azure Active Directory-joined or Windows Server Active Directory-joined device on which we want to manage a local administrator account. The feature is composed of a few key binaries: laps.dll (core logic), lapscsp.dll (Configuration Service Provider logic), and lapspsh.dll (PowerShell cmdlet logic). Windows LAPS may also be configured using Group Policy and will respond to GPO change notifications. The managed device may also be a Windows Server Active Directory domain controller, which can be configured to back up DSRM account passwords.
 
-<ins>Windows Server Active Directory:</ins> this entity is your on-premises Windows Server Active Directory deployment.
+Windows Server Active Directory: this entity is your on-premises Windows Server Active Directory deployment.
 
-<ins>Azure Active Directory</ins>: this entity is Azure Active Directory running in the cloud.
+Azure Active Directory: this entity is Azure Active Directory running in the cloud.
 
-<ins>Microsoft Endpoint Manager</ins>: this entity is the preferred Microsoft device policy management solution, also running in the cloud.
+Microsoft Endpoint Manager: this entity is the preferred Microsoft device policy management solution, also running in the cloud.
 
 ## Basic Windows LAPS scenario flow
 
