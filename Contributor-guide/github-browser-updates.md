@@ -29,7 +29,7 @@ There are two separate locations where we keep Windows Server technical content.
 
 Quick edits streamline the process to report and fix small errors and omissions in documents. Despite all efforts, small grammar and spelling errors _do_ make their way into our published documents.
 
-1. Follow the instructions in [GitHub account setup](https://review.docs.microsoft.com/en-us/help/contribute/contribute-get-started-setup-github?branch=master).
+1. Follow the instructions in [GitHub account setup](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main).
 
 1. Go to the [Windows Server](https://github.com/MicrosoftDocs/windowsserverdocs-pr/tree/master/WindowsServerDocs) or [Azure Stack HCI](https://github.com/MicrosoftDocs/azure-stack-docs-pr/tree/master/azure-stack/hci) private repository. The private repositories are monitored more frequently so our approval time is faster, they benefit from increased quality checks, and provide the ability to view content in staging as it will appear on our live site.
 

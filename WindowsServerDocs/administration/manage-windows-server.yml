@@ -60,7 +60,7 @@ landingContent:
       - linkListType: learn
         links:
           - text: Learning path
-            url: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+            url: /training/paths/manage-hybrid-infrastructure-with-azure-arc
         
   # Card
   - title: Windows Admin Center
