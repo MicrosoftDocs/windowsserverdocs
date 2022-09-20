@@ -11,8 +11,6 @@ ms.topic: article
 
 # Windows LAPS Event Log
 
-## Overview
-
 Windows LAPS includes a dedicated event log channel, and all operations are tracked with rich eventing. This overview article provides a brief overview of the key events.
 
 ## Event log channel location
@@ -21,7 +19,7 @@ The Windows LAPS events to the following Operational log:
 
 `\Applications and Services Logs\Microsoft\Windows\LAPS\Operational`
 
-:::image type="content" source="../laps/media/laps-management-event-log/laps-management-event-log-event-log.png" alt-text="Windows LAPS event log channel":::
+:::image type="content" source="../laps/media/laps-management-event-log/laps-management-event-log-event-log.png" alt-text="Screenshot of the event log showing a Windows LAPS policy processing started event log message.":::
 
 ## Key events to be aware of
 
@@ -77,7 +75,7 @@ Post authentication grace period (hours): 8
 Post authentication actions: 1
 ```
 
-When the policy is configured to back up the password to Azure AD, a 10022 event will be logged. here's an example of a 10022 event:
+When the policy is configured to back up the password to Azure Active Directory, a 10022 event will be logged. here's an example of a 10022 event:
 
 ```text
 The current LAPS policy is configured as follows:
@@ -110,7 +108,7 @@ The specific policy setting values above are examples and shouldn't be considere
 
 ### Password update confirmation events
 
-Whenever Windows LAPS successfully updates the configured directory (AD or Azure AD) with a new password, a success event will be logged: 10018 for password updates in Active Directory, and 10029 for password updates in Azure AD.
+Whenever Windows LAPS successfully updates the configured directory (Windows Server Active Directory or Azure Active Directory) with a new password, a success event will be logged: 10018 for password updates in Windows Server Active Directory, and 10029 for password updates in Azure Active Directory.
 
 Here's an example of a 10018 event:
 
@@ -193,6 +191,6 @@ Password reset retry count: 1
 Error code: 80070032
 ```
 
-### Related articles
+### See also
 
 [Windows LAPS Management](../laps/laps-management.md)

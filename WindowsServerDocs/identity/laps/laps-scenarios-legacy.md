@@ -53,9 +53,9 @@ The following requirements and limitations apply to legacy LAPS emulation suppor
 
   When the DllName value is present, and refers to a file on disk (note: the file isn't loaded or otherwise verified), legacy LAPS is considered to be installed.
 
-* The Active Directory Users and Computer management console doesn't support reading or writing the legacy LAPS schema attributes.
+* The Windows Server Active Directory Users and Computer management console doesn't support reading or writing the legacy LAPS schema attributes.
 
-* Windows LAPS will always ignore a legacy LAPS policy when configured on an Windows Server Active Directory domain controller, even if all other conditions are met.
+* Windows LAPS will always ignore a legacy LAPS policy when configured on a Windows Server Active Directory domain controller, even if all other conditions are met.
 
 * All Windows LAPS policy knobs not supported by legacy LAPS will be defaulted to their disabled or default settings.
 
@@ -82,7 +82,7 @@ AuthorizedDecryptor : NotApplicable
 
 The `Set-LapsADPasswordExpirationTime` cmdlet doesn't support expiring or modifying the legacy LAPS password expiration attribute (`ms-Mcs-AdmPwdExpirationTime`).
 
-The Windows LAPS property page in the Active Directory Users and Computers management console doesn't support displaying or administering the legacy LAPS attributes.
+The Windows LAPS property page in the Windows Server Active Directory Users and Computers management console doesn't support displaying or administering the legacy LAPS attributes.
 
 ## Logging
 

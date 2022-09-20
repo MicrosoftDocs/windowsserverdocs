@@ -35,11 +35,11 @@ Devices that are only joined to [Azure Active Directory](/azure/active-directory
 
 Devices that are only joined to Windows Server Active Directory can only back up passwords to Windows Server Active Directory.
 
-Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory), can backup their passwords to either Azure Active Directory or Windows Server Active Directory. Backing up passwords to both directories isn't supported.
+Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory), can back up their passwords to either Azure Active Directory or Windows Server Active Directory. Backing up passwords to both directories isn't supported.
 
 ## Next steps
 
-Once you have decided which scenario is most relevant for you, proceed to one of the following articles:
+Once you've decided which scenario is most relevant for you, proceed to one of the following articles:
 
 [Getting started with Windows LAPS and Azure Active Directory](../laps/laps-scenarios-azure-active-directory.md).
 

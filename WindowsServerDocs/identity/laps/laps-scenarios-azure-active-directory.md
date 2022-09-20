@@ -86,7 +86,7 @@ You may need to configure the repository as Trusted for the above command to suc
 
 ### Creation of an Azure Active Directory registered app for retrieving Azure LAPS passwords
 
-The next step is to create an Azure Active Directory application configured with the necessary permissions. The basic instructions for creating an Azure Active Directory applicaton can be found here:
+The next step is to create an Azure Active Directory application configured with the necessary permissions. The basic instructions for creating an Azure Active Directory application can be found here:
 
 [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app.md)
 
@@ -120,9 +120,9 @@ Once the final URL is ready, paste it into a browser and navigate to it. The bro
 
 ### Retrieve the password from Azure Active Directory
 
-We're almost there! First we need to login into Microsoft Graph, and then we can use the `Get-LapsAADPassword` cmdlet to retrieve the password.
+We're almost there! First we need to sign-in into Microsoft Graph, and then we can use the `Get-LapsAADPassword` cmdlet to retrieve the password.
 
-Logging into Microsoft Graph is done using the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID, plus the application ID of the Azure Active Directory application you created above. Run the cmdlet once to do the login, for example:
+Logging into Microsoft Graph is done using the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID, plus the application ID of the Azure Active Directory application you created above. Run the cmdlet once to do the sign-in, for example:
 
 `Connect-MgGraph -Environment PROD -TenantId c754bc06-12e1-4508-b3b1-653a220c62cc -ClientId 71f6c060-e966-4d7e-b068-7ea116e131ed`
 

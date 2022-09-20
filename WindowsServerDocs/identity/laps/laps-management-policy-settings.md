@@ -11,8 +11,6 @@ ms.topic: article
 
 # Windows LAPS Policy Settings
 
-## Overview
-
 Windows LAPS supports various policy-controllable settings. This article describes the various settings and ways to administer them.
 
 ## Supported policy roots
@@ -65,11 +63,11 @@ Windows LAPS includes a new Group Policy object that can be used to administer p
 
 For example:
 
-:::image type="content" source="../laps/media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="LAPS Group Policy editor.":::
+:::image type="content" source="../laps/media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="Screenshot of the Group Policy Management Editor showing the Windows LAPS policy settings.":::
 
 ## LAPS Configuration Service Provider
 
-Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure-joined devices. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md) is managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md).
+Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure Active Directory-joined devices. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md) is managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md).
 
 ## Policy setting details
 
@@ -82,8 +80,8 @@ Use this setting to control which directory the password for the managed account
 |Value|Description of setting|
 |--- |--- |
 |0|Disabled (password won't be backed up)|
-|1|Back up the password to Azure AD only|
-|2|Back up the password to Active Directory only|
+|1|Back up the password to Azure Active Directory only|
+|2|Back up the password to Windows Server Active Directory only|
 
 If not specified, this setting will default to 0 (Disabled).
 
@@ -196,7 +194,7 @@ If not specified, this setting will default to zero (0) passwords (disabled).
 
 ### ADBackupDSRMPassword
 
-Use this setting to enable backup of the DSRM account password on AD domain controllers.
+Use this setting to enable backup of the DSRM account password on Windows Server Active Directory domain controllers.
 
 Supported values are either 1 (True) or 0 (False).
 
@@ -235,6 +233,6 @@ If not specified, this setting will default to 3.
 > [!IMPORTANT]
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
 
-## Related articles
+## See also
 
 [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md)

@@ -11,29 +11,27 @@ ms.topic: article
 
 # Windows LAPS PowerShell
 
-## Overview
-
 Windows LAPS includes a new PowerShell module named 'LAPS'. This article provides an overview of the various cmdlets in this module.
 
 ## Cmdlet descriptions
 
 |Cmdlet name|Description|
 |---|---|
-|`Get-LapsAADPassword`|Used for querying Azure AD for LAPS passwords|
+|`Get-LapsAADPassword`|Used for querying Azure Active Directory for LAPS passwords|
 |`Get-LapsDiagnostics`|Used to collect diagnostic information for investigating problems|
-|`Find-LapsADExtendedRights`|Used to discover which identities have been granted permissions on an OU in Active Directory|
-|`Get-LapsADPassword`|Used for querying Active Directory for LAPS passwords|
+|`Find-LapsADExtendedRights`|Used to discover which identities have been granted permissions on an OU in Windows Server Active Directory|
+|`Get-LapsADPassword`|Used for querying Windows Server Active Directory for LAPS passwords|
 |`Invoke-LapsPolicyProcessing`|Used to initiate a policy processing cycle|
-|`Reset-LapsPassword`|Used to initiate an immediate password rotation; may be used when backing up the password to either Azure AD or AD|
-|`Set-LapsADAuditing`|Used to configure Windows LAPS-related auditing on OUs in AD|
-|`Set-LapsADComputerSelfPermission`|Used to configure an OU in Active Directory to allow computer objects to update their Windows LAPS passwords|
-|`Set-LapsADPasswordExpirationTime`|Used to update a computer's Windows LAPS password expiration time in Active Directory|
-|`Set-LapsADReadPasswordPermission`|Used to grant permission to read the Windows LAPS password information in Active Directory|
-|`Set-LapsADResetPasswordPermission`|Used to grant permission to update the Windows LAPS password expiration time in Active Directory|
-|`Update-LapsADSchema`|Used to extend the Active Directory schema with the Windows LAPS schema attributes|
+|`Reset-LapsPassword`|Used to initiate an immediate password rotation; may be used when backing up the password to either Azure Active Directory or Windows Server Active Directory|
+|`Set-LapsADAuditing`|Used to configure Windows LAPS-related auditing on OUs in Windows Server Active Directory|
+|`Set-LapsADComputerSelfPermission`|Used to configure an OU in Windows Server Active Directory to allow computer objects to update their Windows LAPS passwords|
+|`Set-LapsADPasswordExpirationTime`|Used to update a computer's Windows LAPS password expiration time in Windows Server Active Directory|
+|`Set-LapsADReadPasswordPermission`|Used to grant permission to read the Windows LAPS password information in Windows Server Active Directory|
+|`Set-LapsADResetPasswordPermission`|Used to grant permission to update the Windows LAPS password expiration time in Windows Server Active Directory|
+|`Update-LapsADSchema`|Used to extend the Windows Server Active Directory schema with the Windows LAPS schema attributes|
 
 > [!TIP]
-> The `Invoke-LapsPolicyProcessing` and `Reset-LapsPassword` cmdlets are agnostic as to whether the password is currently being backed up to Azure AD or Active Directory. They are supported in both cases.
+> The `Invoke-LapsPolicyProcessing` and `Reset-LapsPassword` cmdlets are agnostic as to whether the password is currently being backed up to Azure Active Directory or Windows Server Active Directory. They are supported in both cases.
 
 > [!TIP]
 > All cmdlets in the Windows LAPS PowerShell module support detailed logging when the -Verbose parameter is specified.
@@ -57,8 +55,11 @@ Legacy LAPS included a PowerShell module named `AdmPwd.PS`. There are many funct
 |`Set-LapsADResetPasswordPermission`|`Set-AdmPwdResetPasswordPermission`|
 |`Update-LapsADSchema`|`Update-AdmPwdADSchema`|
 
-In addition to naming-related changes, the Windows LAPS Active Directory-related cmdlets operate over an entirely different set of AD schema extensions. For more information, see [Active Directory Schema Extensions](../laps/laps-technicalreference.md#active-directory-schema-extensions).
+In addition to naming-related changes, the Windows LAPS Windows Server Active Directory-related cmdlets operate over an entirely different set of schema extensions. For more information, see [Windows Server Active Directory Schema Extensions](../laps/laps-technicalreference.md#windows-server-active-directory-schema-extensions).
 
-## Related articles
+## See also
+
+[Getting Started with Windows LAPS in Legacy LAPS Emulation Mode](..\laps\laps-scenarios-legacy.md)
 
 [Windows LAPS Management](..\laps\laps-management.md)
+
