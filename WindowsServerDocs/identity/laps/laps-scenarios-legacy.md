@@ -12,26 +12,26 @@ ms.topic: article
 # Getting started with Windows LAPS in Legacy LAPS emulation mode
 
 > [!IMPORTANT]
-> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure AD scenario is currently limited to a small group of Windows Insiders.
+> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure Active Directory scenario is currently limited to a small group of Windows Insiders.
 
 ## Overview
 
 Windows LAPS can be configured so that it will honor the legacy LAPS Group Policy settings subject to certain restrictions and limitations. This feature is referred to as "legacy LAPS emulation". This feature can be useful when migrating an existing deployment from legacy LAPS to Windows LAPS.
 
 > [!IMPORTANT]
-> Just like in legacy LAPS proper, legacy LAPS emulation mode only supports storage of passwords in clear-text form in Active Directory. For security reasons, Microsoft recommends that you migrate to using Windows LAPS natively so you can take advantage of password encryption.
+> Just like in legacy LAPS proper, legacy LAPS emulation mode only supports storage of passwords in clear-text form in Windows Server Active Directory. For security reasons, Microsoft recommends that you migrate to using Windows LAPS natively so you can take advantage of password encryption.
 
 ## Setup and configuration
 
-When Windows LAPS has been configured in legacy LAPS emulation mode, Windows LAPS assumes that your Active Directory environment is already configured and enabled for running legacy LAPS. Refer to the existing legacy LAPS documentation for full details.
+When Windows LAPS has been configured in legacy LAPS emulation mode, Windows LAPS assumes that your Windows Server Active Directory environment is already configured and enabled for running legacy LAPS. Refer to the existing legacy LAPS documentation for full details.
 
 ## Requirements and limitations
 
 The following requirements and limitations apply to legacy LAPS emulation support:
 
-* Windows LAPS doesn't support adding the legacy LAPS AD schema
+* Windows LAPS doesn't support adding the legacy LAPS Windows Server Active Directory schema
 
-  You must install legacy LAPS on a domain controller or other management client in order to extend your AD schema with the legacy LAPS schema elements (using the `Update-AdmPwdADSchema` cmdlet). The Windows LAPS `Update-LapsADSchema` cmdlet doesn't add the legacy LAPS schema elements.
+  You must install legacy LAPS on a domain controller or other management client in order to extend your Windows Server Active Directory schema with the legacy LAPS schema elements (using the `Update-AdmPwdADSchema` cmdlet). The Windows LAPS `Update-LapsADSchema` cmdlet doesn't add the legacy LAPS schema elements.
 
 * Windows LAPS doesn't install the legacy LAPS Group Policy definition files.
 
@@ -39,7 +39,7 @@ The following requirements and limitations apply to legacy LAPS emulation suppor
 
 * Windows LAPS doesn't support managing the legacy LAPS Active Directory ACLs.
 
-  You must install legacy LAPS on a domain controller or other management client in order to manage the legacy LAPS AD ACLS, for example using the `Set-AdmPwdComputerSelfPermissions` cmdlet.
+  You must install legacy LAPS on a domain controller or other management client in order to manage the legacy LAPS Windows Server Active Directory ACLS, for example using the `Set-AdmPwdComputerSelfPermissions` cmdlet.
 
 * No other Windows LAPS policies can be applied to the machine.
 
@@ -53,19 +53,19 @@ The following requirements and limitations apply to legacy LAPS emulation suppor
 
   When the DllName value is present, and refers to a file on disk (note: the file isn't loaded or otherwise verified), legacy LAPS is considered to be installed.
 
-* The Active Directory Users and Computer management console doesn't support reading or writing the legacy LAPS AD attributes.
+* The Active Directory Users and Computer management console doesn't support reading or writing the legacy LAPS schema attributes.
 
-* Windows LAPS will always ignore a legacy LAPS policy when configured on an AD domain controller, even if all other conditions are met.
+* Windows LAPS will always ignore a legacy LAPS policy when configured on an Windows Server Active Directory domain controller, even if all other conditions are met.
 
 * All Windows LAPS policy knobs not supported by legacy LAPS will be defaulted to their disabled or default settings.
 
-  This point should be obvious, but just to be sure: for example, when running in legacy LAPS emulation mode you can't configure Windows LAPS to encrypt passwords, or save passwords to Azure AD, etc.
+  This point should be obvious, but just to be sure: for example, when running in legacy LAPS emulation mode you can't configure Windows LAPS to encrypt passwords, or save passwords to Azure Active Directory, etc.
 
 Assuming all of the above constraints are satisfied, Windows LAPS will honor the legacy LAPS Group Policy settings. The specified managed local administrator account will be managed identically to legacy LAPS.
 
 ## Limited administrative support
 
-The `Get-LapsADPassword` cmdlet supports retrieval of the legacy LAPS AD password attribute (`ms-Mcs-AdmPwd`). The Account and PasswordUpdateTime fields in the resulting output will always be blank however, for example:
+The `Get-LapsADPassword` cmdlet supports retrieval of the legacy LAPS password attribute (`ms-Mcs-AdmPwd`). The Account and PasswordUpdateTime fields in the resulting output will always be blank however, for example:
 
 ```PowerShell
 PS C:\> Get-LapsADPassword -Identity lapsAD2 -AsPlainText
@@ -80,22 +80,22 @@ DecryptionStatus    : NotApplicable
 AuthorizedDecryptor : NotApplicable
 ```
 
-The `Set-LapsADPasswordExpirationTime` cmdlet doesn't support expiring or modifying the legacy LAPS AD password expiration attribute (`ms-Mcs-AdmPwdExpirationTime`).
+The `Set-LapsADPasswordExpirationTime` cmdlet doesn't support expiring or modifying the legacy LAPS password expiration attribute (`ms-Mcs-AdmPwdExpirationTime`).
 
-The Windows LAPS property page in the Active Directory Users and Computers management console doesn't support displaying or administering the legacy LAPS AD attributes.
+The Windows LAPS property page in the Active Directory Users and Computers management console doesn't support displaying or administering the legacy LAPS attributes.
 
 ## Logging
 
 When Windows LAPS runs in legacy LAPS emulation mode, a 10023 event will be logged to detail the current policy configuration:
 
-:::image type="content" source="../laps/laps-scenarios-legacymode-gpo_event.png" alt-text="Legacy LAPS configuration event log message.":::
+:::image type="content" source="../laps/media/laps-scenarios-legacy/laps-scenarios-legacy-gpo-event.png" alt-text="Screenshot of the event log showing a legacy LAPS configuration event log message.":::
 
 Otherwise, the same events logged by Windows LAPS when running in non-legacy-LAPS-emulation mode, will also be logged when running in legacy-LAPS-emulation.
 
-## Related articles
+## See also
 
 This article doesn't go into detail on managing other aspects of legacy LAPS. For full details, see the legacy LAPS documentation available at the download link:
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 
-[Windows LAPS Policy Settings](../laps/laps-management-policysettings.md)
+[Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)

@@ -11,20 +11,22 @@ ms.topic: article
 
 # Windows LAPS Management
 
+Windows LAPS offers multiple ways to manage the solution. This article provides a brief overview of some of the management mechanisms.
+
 ## Overview
 
-Windows LAPS offers multiple ways to manage the solution.
+There's a large number of configuration settings that be configured via both a Group Policy setting and an Intune Configuration Service Provider (CSP):
 
-There's a large number of configuration settings that be configured via both Group Policy and CSP:
-
-[Windows LAPS policy settings](../laps/laps-management-policysettings.md)
+[Windows LAPS policy settings](../laps/laps-management-policy-settings.md)
 
 A dedicated event log channel is used to track all activity performed by the Windows LAPS client:
 
-[Windows LAPS event log](../laps/laps-management-eventlog.md)
+[Windows LAPS event log](../laps/laps-management-event-log.md)
 
-The Get-LapsDiagnostic cmdlet can be used to collect traces and other data necessary for troubleshooting issues:
+A new PowerShell module is provided for security configuration tasks, password retrieval, and trouble-shooting scenarios:
 
 [Windows LAPS PowerShell](../laps/laps-management-powershell.md)
 
-## Related articles
+## See also
+
+[Windows LAPS policy settings](../laps/laps-management-policy-settings.md)

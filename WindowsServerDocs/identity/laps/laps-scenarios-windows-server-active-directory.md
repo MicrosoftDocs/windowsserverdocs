@@ -12,15 +12,15 @@ ms.topic: article
 # Getting started with Windows LAPS and Active Directory
 
 > [!IMPORTANT]
-> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure AD scenario is currently limited to a small group of Windows Insiders.
+> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure Active Directory scenario is currently limited to a small group of Windows Insiders.
 
 ## Overview
 
 In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Active Directory, and also how to retrieve them.
 
-Let's get started on backing up some passwords to Azure AD!
+Let's get started on backing up some passwords to Windows Server Active Directory!
 
-## Update the Active Directory schema
+## Update the Windows Server Active Directory schema
 
 The Active Directory schema must be updated prior to using Windows LAPS. This action is performed using the `Update-LapsADSchema` cmdlet and is a one-time operation for the entire forest.
 
@@ -61,13 +61,13 @@ In this example we can see that only trusted entities (SYSTEM, Domain Admins) ha
 
 The first step is to choose how you're going to apply policy to your devices.
 
-Most environments will use [Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy) to deploy the necessary settings to their AD-domain-joined devices.
+Most environments will use [Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy) to deploy the necessary settings to their Windows Server Active Directory-domain-joined devices.
 
-If your devices are also hybrid-joined to Azure AD, you may deploy policy using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
+If your devices are also hybrid-joined to Azure Active Directory, you may deploy policy using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 
 ### Configure specific policies
 
-At minimum, you must configure the BackupDirectory setting to the value 2 (backup passwords to Active Directory).
+At minimum, you must configure the BackupDirectory setting to the value 2 (backup passwords to Windows Server Active Directory).
 
 If you don't configure the AdministratorAccountName setting, Windows LAPS will default to managing the default built-in local Administrator account. This built-in account is automatically identified by its well-known Relative Identifier (also known as "RID") and should therefore never be identified by name. (The name of the built-in local Administrator account will vary depending on the default locale of the device.)
 
@@ -78,19 +78,19 @@ If you want to configure a custom local admin account, you should configure the 
 
 Finally, feel free to configure the other settings as needed or desired, for example PasswordLength, ADPasswordEncryptionEnabled, etc.
 
-## Update the password in Active Directory
+## Update the password in Windows Server Active Directory
 
-Windows LAPS will process the currently active policy on a periodic (every hour) basis, and will also respond to Group Policy change notifications, and will act immediately as needed.
+Windows LAPS will process the currently active policy on a periodic (every hour) basis, and will also respond to Group Policy change notifications, and will act as needed at those times.
 
-Now look in the event log for 10018 event that verifies that the password was successfully updated in Active Directory.
+Now look in the event log for 10018 event that verifies that the password was successfully updated in Windows Server Active Directory.
 
-:::image type="content" source="../laps/laps-scenarios-ad-pwdupdate-event.png" alt-text="Successful Active Directory password update event log message.":::
+:::image type="content" source="../laps/media/laps-scenarios-windows-server-active-directory/laps-scenarios-windows-server-active-directory-password-update-event.png" alt-text="Screenshot of the event log showing a successful Windows Server Active Directory password update event log message.":::
 
 If there's any delay processing the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet.
 
 ## Password retrieval from Active Directory
 
-The `Get-LapsADPassword` cmdlet is used to retrieve passwords from Active Directory, for example:
+The `Get-LapsADPassword` cmdlet is used to retrieve passwords from Windows Server Active Directory, for example:
 
 ```PowerShell
 PS C:\> Get-LapsADPassword -Identity lapsAD2 -AsPlainText
@@ -105,7 +105,7 @@ DecryptionStatus    : Success
 AuthorizedDecryptor : LAPS\Domain Admins
 ```
 
-This output result indicates that we have enabled password encryption (see the Source field). AD password encryption requires that your domain is configured for Windows Server 2016 Domain Functional Level or later.
+This output result indicates that we have enabled password encryption (see the Source field). Password encryption requires that your domain is configured for Windows Server 2016 Domain Functional Level or later.
 
 ## Rotating the password
 
@@ -113,7 +113,7 @@ Windows LAPS will read the password expiration time from Active Directory during
 
 In some situations (for example, after a security breach, or for ad-hoc testing purposes) it may be necessary to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet, for example:
 
-You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time as stored in Active Directory, for example:
+You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time as stored in Windows Server Active Directory, for example:
 
 ```PowerShell
 PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsAD2
@@ -126,8 +126,12 @@ The next time the Windows LAPS wakes up to process the current policy, it will s
 
 Finally, you can also use the `Reset-LapsPassword` cmdlet to locally force an immediate rotation of the password.
 
-## Related articles
+## Next steps
+
+Proceed to the [Windows LAPS Concepts](../laps/laps-concepts.md) article.
+
+## See also
 
 [Windows LAPS Concepts](../laps/laps-concepts.md)
 
-[Windows LAPS Policy Settings](../laps/laps-management-policysettings.md)
+[Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)

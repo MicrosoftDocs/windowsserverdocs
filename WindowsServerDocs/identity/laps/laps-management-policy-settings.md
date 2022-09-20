@@ -65,7 +65,7 @@ Windows LAPS includes a new Group Policy object that can be used to administer p
 
 For example:
 
-:::image type="content" source="../laps/laps-management-policysettings-grouppolicyeditor.png" alt-text="LAPS Group Policy editor.":::
+:::image type="content" source="../laps/media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="LAPS Group Policy editor.":::
 
 ## LAPS Configuration Service Provider
 

@@ -11,17 +11,15 @@ ms.topic: article
 
 # Windows LAPS Technical Reference
 
-## Overview
-
 This article provides other technical details that may be helpful when deploying or managing Windows LAPS.
 
-## Active Directory Schema Extensions
+## Windows Server Active Directory Schema Extensions
 
-This section documents the new Windows LAPS Active Directory schema elements. In order to use any of the Windows LAPS AD-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema` cmdlet.
+This section documents the new Windows LAPS Windows Server Active Directory schema elements. In order to use any of the Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema` cmdlet.
 
-### AD schema attributes
+### Windows Server Active Directory schema attributes
 
-Windows LAPS uses many new schema attributes that are all stored on the computer object in Active Directory for a given managed device. The `Update-LapsADSchema` cmdlet adds these new AD schema attributes to the AD schema, and also adds them to the mayContain list on the computer AD schema class.
+Windows LAPS uses many new schema attributes that are all stored on the computer object in Windows Server Active Directory for a given managed device. The `Update-LapsADSchema` cmdlet adds these new schema attributes to the directory, and also adds them to the mayContain list on the computer schema class.
 
 > [!TIP]
 > Many of the attributes below specify a SearchFlags value of 904. For easy reference, this value is composed of the following bit flags:
@@ -139,7 +137,7 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
-### AD extended rights
+### Windows Server Active Directory extended rights
 
 #### ms-LAPS-Encrypted-Password-Attributes
 
@@ -151,9 +149,9 @@ Rights guid: f3531ec6-6330-4f8e-8d39-7a671fbac605
 Valid accesses: 48 (RIGHT_DS_READ_PROPERTY | RIGHT_DS_WRITE_PROPERTY)
 ```
 
-### Comparison with legacy LAPS AD schema
+### Comparison with legacy LAPS schema
 
-Legacy LAPS also required extension of the Active Directory schema. For comparison purposes, this table provides a logical mapping between the AD schema elements used by Windows LAPS versus the legacy LAPS.
+Legacy LAPS also required extension of the Windows Server Active Directory schema. For comparison purposes, this table provides a logical mapping between the Windows LAPS schema elements versus the legacy LAPS schema elements.
 
 |Windows LAPS schema element|Legacy LAPS schema element|
 |---|---|
@@ -165,6 +163,6 @@ Legacy LAPS also required extension of the Active Directory schema. For comparis
 |msLAPS-EncryptedDSRMPasswordHistory|N\A|
 |ms-LAPS-Encrypted-Password-Attributes|N\A|
 
-## Related articles
+## See also
 
 [Windows LAPS Concepts](../laps/laps-concepts.md)

@@ -21,7 +21,7 @@ The Windows LAPS events to the following Operational log:
 
 `\Applications and Services Logs\Microsoft\Windows\LAPS\Operational`
 
-:::image type="content" source="../laps/laps-management-eventlog-eventlog.PNG" alt-text="Windows LAPS event log channel":::
+:::image type="content" source="../laps/media/laps-management-event-log/laps-management-event-log-event-log.png" alt-text="Windows LAPS event log channel":::
 
 ## Key events to be aware of
 

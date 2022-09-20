@@ -11,36 +11,38 @@ ms.topic: article
 
 # Windows LAPS Scenarios
 
+This article describes the basic scenarios supported by Windows LAPS.
+
 ## Scenarios
 
 Windows LAPS supports several primary scenarios:
 
-* Backing up local admin account passwords to [Azure AD](/azure/active-directory/devices/concept-azure-ad-join) (for Azure AD joined devices)
+* Backing up local admin account passwords to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) (for Azure Active Directory joined devices)
 
-* Backing up local admin account passwords to Active Directory (for on-premises AD joined clients and servers)
+* Backing up local admin account passwords to Windows Server Active Directory (for Windows Server Active Directory-joined clients and servers)
 
-* Backing up Directory Services Repair Mode (DSRM) account passwords to Active Directory (for AD domain controllers)
+* Backing up Directory Services Repair Mode (DSRM) account passwords to Windows Server Active Directory (for Windows Server Active Directory domain controllers)
 
-* Backing up local admin account passwords to Active Directory using legacy LAPS
+* Backing up local admin account passwords to Windows Server Active Directory using legacy LAPS
 
-Within each scenario, there's various different policy settings that can be applied.  
+Within each scenario, there's various different policy settings that can be applied.
 
 ## Understand device join state restrictions
 
 Which directory a device is joined to impacts how Windows LAPS can be used and should be kept in mind as you're planning which scenario(s) to use.
 
-Devices that are joined to [Azure AD](/azure/active-directory/devices/concept-azure-ad-join) can only back up passwords to Azure AD.
+Devices that are only joined to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) can only back up passwords to Azure Active Directory.
 
-Devices that are joined to on-premises AD can only back up passwords to AD.
+Devices that are only joined to Windows Server Active Directory can only back up passwords to Windows Server Active Directory.
 
-Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to on-premises AD and registered with Azure AD), can backup their passwords to either AD or Azure AD. Backing up passwords to both directories isn't supported.
+Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory), can backup their passwords to either Azure Active Directory or Windows Server Active Directory. Backing up passwords to both directories isn't supported.
 
 ## Next steps
 
 Once you have decided which scenario is most relevant for you, proceed to one of the following articles:
 
-[Getting started with Windows LAPS and Azure AD](../laps/laps-scenarios-aad.md).
+[Getting started with Windows LAPS and Azure Active Directory](../laps/laps-scenarios-azure-active-directory.md).
 
-[Getting started with Windows LAPS and Active Directory](../laps/laps-scenarios-ad.md).
+[Getting started with Windows LAPS and Windows Server Active Directory](../laps/laps-scenarios-windows-server-active-directory.md).
 
 [Getting started with Windows LAPS in Legacy LAPS emulation mode](../laps/laps-scenarios-legacy.md)
