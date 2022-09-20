@@ -21,7 +21,7 @@ Security groups are a way to collect user accounts, computer accounts, and other
 
 In the Windows Server operating system, several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In Active Directory, administrative responsibilities are separated into two types of administrators:
 
-- **service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring the AD DS.
+- **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring the AD DS.
 
 - **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations.
 
@@ -45,7 +45,7 @@ Security groups can provide an efficient way to assign access to resources on yo
 
     For example, a user who you add to the Backup Operators group in Active Directory can back up and restore files and directories that are located on each domain controller in the domain. The user can complete these actions because, by default, the user rights *Backup files and directories* and *Restore files and directories* are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
 
-    You can use Group Policy to assign user rights to security groups to delegate specific tasks. For more information about using Group Policy, see [User rights assignment](/windows/device-security/security-policy-settings/user-rights-assignment).
+    You can use Group Policy to assign user rights to security groups to delegate specific tasks. For more information about using Group Policy, see [User Rights Assignment](/windows/device-security/security-policy-settings/user-rights-assignment).
 
 - Assign permissions to security groups for resources.
 
@@ -605,7 +605,7 @@ Members of this group are RODCs in the enterprise. Except for account passwords,
 
 RODCs address some of the issues that are commonly found in branch offices. These locations might not have a domain controller, or they might have a writable domain controller but not the physical security, network bandwidth, or local expertise to support it.
 
-For more information, see [What is an RODC?](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771030(v=ws.10))
+For more information, see [What is a read-only domain controller?](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771030(v=ws.10))
 
 The Enterprise Read-only Domain Controllers group applies to the Windows Server operating system in [Default Active Directory security groups](#default-active-directory-security-groups).
 
@@ -1029,7 +1029,7 @@ Because you can delegate administration of an RODC to a domain user or security 
 
 - Contains read-only Domain Name System (DNS)
 
-For information about deploying an RODC, see [Understand planning and deployment for read-only domain controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
+For more information, see [Understand planning and deployment for read-only domain controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
 
 |Attribute|Value|
 |--- |--- |
