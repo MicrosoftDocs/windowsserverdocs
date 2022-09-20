@@ -234,14 +234,14 @@ When configuring UNC hardening, you can specify various UNC path patterns. For e
 - `\\*\<Share>` - The configuration entry applies to the share that has the specified name on any server.
 - `\\<Server>\*` - The configuration entry applies to any share on the specified server.
 
-You can use Group Policy to apply the UNC Hardened Access feature to a large number of machines when
-you're ready to implement it. For more information about configuring UNC Hardened Access through
+You can use Group Policy to apply the UNC hardening feature to a large number of machines when
+you're ready to implement it. For more information about configuring UNC hardening through
 Group Policy, see the security bulletin
 [MS15-011](https://support.microsoft.com/topic/ms15-011-vulnerability-in-group-policy-could-allow-remote-code-execution-february-10-2015-91b4bda2-945d-455b-ebbb-01d1ec191328).
 
 ### Map drives on demand with mandated signing or encryption
 
-In addition to UNC Hardened Access, you can use signing or encryption when mapping network drives.
+In addition to UNC hardening, you can use signing or encryption when mapping network drives.
 Beginning in Windows version 1709 and later, you can create encrypted or signed mapped drives on
 demand using Windows PowerShell or Command Prompt. You can use the `NET USE` command or the
 PowerShell `New-SmbMapping` command to map drives by specifying **RequireIntegrity** (signing) or
