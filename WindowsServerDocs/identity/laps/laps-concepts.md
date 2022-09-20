@@ -11,13 +11,11 @@ ms.topic: article
 
 # Windows LAPS Concepts
 
-## Overview
-
 This article provides information about the basic design and security concepts that Windows LAPS is based on.
 
 ## Architecture diagram
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-architecture-diagram.PNG" alt-text="Diagram of Windows LAPS architecture showing the managed device, Azure Active Directory, and Windows Server Active Directory":::
+:::image type="content" source="../laps/media/laps-concepts/laps-concepts-architecture-diagram.PNG" alt-text="Diagram of Windows LAPS architecture showing the managed device, Azure Active Directory, and Windows Server Active Directory.":::
 
 The above picture has many moving parts - let's break it down piece by piece.
 
@@ -51,7 +49,7 @@ The password may also be rotated prior to the normally expected expiration time.
 
 Windows LAPS uses a background task that wakes up every hour to process the currently active policy. Note, this task isn't implemented using Windows Task Scheduler. Whenever the background task runs, it executes the following basic flow:
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-processing-cycle.png" alt-text="Flowchart describing the Windows LAPS background processing cycle":::
+:::image type="content" source="../laps/media/laps-concepts/laps-concepts-processing-cycle.png" alt-text="Flowchart describing the Windows LAPS background processing cycle.":::
 
 The obvious key difference between the Azure Active Directory and Windows Server Active Directory flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory. In the Azure Active Directory scenario, the managed device doesn't perform polling of Azure Active Directory instead, the current password expiration time is maintained locally on the device. In the Windows Server Active Directory scenario, the managed device will regularly poll the directory to query the password expiration time and will act once it has expired.
 
@@ -88,7 +86,7 @@ The second line of password security uses the Windows Server Active Directory pa
 
 Consider the following diagram when designing your password retrieval security model:
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-password-security-layers.png" alt-text="Diagram showing the Windows LAPS password security layers":::
+:::image type="content" source="../laps/media/laps-concepts/laps-concepts-password-security-layers.png" alt-text="Diagram showing the Windows LAPS password security layers.":::
 
 This diagram illustrates the suggested Windows Server Active Directory password security layers and how you should think about their relationship to each other.
 

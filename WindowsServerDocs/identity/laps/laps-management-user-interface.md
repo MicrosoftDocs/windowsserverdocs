@@ -11,9 +11,7 @@ ms.topic: article
 
 # Windows LAPS User Interface
 
-## Overview
-
-This article describes the Active Directory Users and Computers LAPS property page available in Windows LAPS.
+This article describes the Windows Server Active Directory Users and Computers LAPS property page available in Windows LAPS.
 
 ## Windows Server Active Directory Users and Computers LAPS property page
 
@@ -57,7 +55,7 @@ Then select OK or Apply to apply the changes.
 
 The Account Name and Password fields will be populated assuming you're granted permissions to read (and decrypt) the computer's current LAPS password attribute. You can copy the password to the clipboard using the Copy button, or you can display the password using the Show Password button.
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-copy-show-password.PNG" alt-text="Screenshot showing the copy and show password functionality on the  Windows LAPS property page in the Windows Server Active Directory and Users snap-in.":::
+:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-copy-show-password.png" alt-text="Screenshot showing the copy and show password functionality on the  Windows LAPS property page in the Windows Server Active Directory and Users snap-in.":::
 
 A warning dialog will appear if you don't have permission to read or decrypt the current password information.
 
