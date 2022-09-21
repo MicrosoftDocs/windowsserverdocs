@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/24/2022
+ms.date: 09/07/2022
 ---
 # Get started with the Windows Desktop client
 
@@ -17,6 +17,7 @@ You can use the Remote Desktop client for Windows Desktop to access Windows apps
 > - This documentation is not for the Remote Desktop Connection (MSTSC) client that ships with Windows. It's for the new Remote Desktop (MSRDC) client.
 > - This client currently only supports accessing remote apps and desktops from [Azure Virtual Desktop](https://aka.ms/wvd) and Windows 365.
 > - Curious about the new releases for the Windows Desktop client? Check out [What's new in the Windows Desktop client](windowsdesktop-whatsnew.md)
+> - Extended support for using Windows 7 to connect to Azure Virtual Desktop ends on January 10, 2023.
 
 ## Install the client
 
@@ -37,9 +38,12 @@ You'll be notified whenever a new version of the client is available as long as 
 You can also manually search for new updates for the client:
 
 1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
-2. Select **About** from the drop-down menu.
-3. The client automatically searches for updates.
-4. If there's an update available, tap **Install update** to update the client.
+
+![Screenshot of the Windows Remote Desktop Client connection center drop-down button.](../media/windows-remote-desktop-client-1.png)
+
+1. Select **About** from the drop-down menu.
+1. The client automatically searches for updates.
+1. If there's an update available, tap **Install update** to update the client.
 
 ## Workspaces
 
@@ -55,21 +59,21 @@ There are two ways you can subscribe to a Workspace. The client can try to disco
 #### Subscribe with a user account
 
 1. From the main page of the client, tap **Subscribe**.
-2. Sign in with your user account when prompted.
-3. The resources will appear in the Connection Center grouped by Workspace.
+1. Sign in with your user account when prompted.
+1. The resources will appear in the Connection Center grouped by Workspace.
 
 #### Subscribe with URL
 
 1. From the main page of the client, tap **Subscribe with URL**.
-2. Enter the Workspace URL or your email address:
+1. Enter the Workspace URL or your email address:
    - If you use the **Workspace URL**, use the one your admin gave you. If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
      - Azure Virtual Desktop (classic): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
      - Azure Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
      - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery.md).
-3. Tap **Next**.
-4. Sign in with your user account when prompted.
-5. The resources will appear in the Connection Center grouped by Workspace.
+1. Tap **Next**.
+1. Sign in with your user account when prompted.
+1. The resources will appear in the Connection Center grouped by Workspace.
 
 ### Workspace details
 
@@ -84,8 +88,11 @@ After subscribing, you can view additional information about a Workspace on the 
 Accessing the Details panel:
 
 1. From the Connection Center, tap the overflow menu (**...**) next to the Workspace.
-2. Select **Details** from the drop-down menu.
-3. The Details panel appears on the right side of the client.
+
+![Screenshot of the Windows Remote Desktop Client workspace drop-down button.](../media/windows-remote-desktop-client-2.png)
+
+1. Select **Details** from the drop-down menu.
+1. The Details panel appears on the right side of the client.
 
 After you've subscribed, the Workspace will refresh automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your admin.
 
@@ -100,8 +107,8 @@ You can manually refresh a Workspace by selecting **Refresh** from the overflow 
 This section will teach you how to unsubscribe from a Workspace. You can unsubscribe to either subscribe again with a different account or remove your resources from the system.
 
 1. From the Connection Center, tap the overflow menu (**...**) next to the Workspace.
-2. Select **Unsubscribe** from the drop-down menu.
-3. Review the dialog box and select **Continue**.
+1. Select **Unsubscribe** from the drop-down menu.
+1. Review the dialog box and select **Continue**.
 
 ## Managed desktops
 
@@ -109,7 +116,9 @@ Workspaces can contain multiple managed resources, including desktops. When acce
 
 ### Desktop settings
 
-You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource and select **Settings**.
+You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource in your workspace and select **Settings**.
+
+![Screenshot of the Windows Remote Desktop Client workspace settings button.](../media/windows-remote-desktop-client-3.png)
 
 The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
 
@@ -145,5 +154,40 @@ You might need the client logs when investigating a problem.
 To retrieve the client logs:
 
 1. Ensure no sessions are active and the client process isn't running in the background by right-clicking on the **Remote Desktop** icon in the system tray and selecting **Disconnect all sessions**.
-2. Open **File Explorer**.
-3. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
+1. Open **File Explorer**.
+1. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
+
+Below you will find different methods used to read the client logs.
+
+#### Event Viewer
+
+1. Navigate to the Start menu, Control Panel, System and Security, and select **view event logs** under "Windows Tools".
+1. Once the **Event Viewer** is open, click the Action tab at the top and select **Open Saved Log...**.
+1. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder and select the log file you want to view.
+1. The **Event Viewer** dialog box will open requesting a response to which it will convert etl format to evtx format. Select **Yes**.
+1. In the **Open Saved Log** dialog box, you have the options to rename the log file and add a description. Select **Ok**.
+1. The **Event Viewer** dialog box will open asking to overwrite the log file. Select **Yes**. This will not overwrite your original etl log file but create a copy in evtx format.
+
+#### Command-line
+
+This method will enable you to convert the log file from etl format to either _csv_ or _xml_ format using the `tracerpt` command. Open the Command Prompt or PowerShell and run the following:
+
+```
+tracerpt "<FilePath>.etl" -o "<OutputFilePath>.extension"
+```
+
+**CSV example:**
+
+```
+tracerpt "C:\Users\admin\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\msrdcw_09-07-2022-15-48-44.etl" -o "C:\Users\admin\Desktop\LogFile.csv" -of csv
+```
+
+If the `-of csv` parameter is omitted from the command above, it won't properly convert the file.
+
+**XML example:**
+
+```
+tracerpt "C:\Users\admin\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace\msrdcw_09-07-2022-15-48-44.etl" -o "C:\Users\admin\Desktop\LogFile.xml"
+```
+
+The `-of xml` parameter is not necessary in this instance as the default output for the conversion is in _xml_ format.

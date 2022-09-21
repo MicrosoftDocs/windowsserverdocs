@@ -374,16 +374,16 @@
           href: ad-ds/plan/appendix-L--Events-to-Monitor.md
         - name: 'Appendix M: Document Links and Recommended Reading'
           href: ad-ds/manage/appendix-M--Document-Links-and-Recommended-Reading.md
-      - name: Active Directory Replication and Topology Management Using Windows powershell
+      - name: Active Directory Replication and Topology Management Using Windows PowerShell
         href: ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md
         items:
-        - name: Introduction to Active Airectory Replication and Topology Management Using Windows PowerShell (Level 100)
+        - name: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
           href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
-        - name: Advanced Active Directory Replication and Topology Management Using Windows powershell (Level 200)
+        - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
           href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
-      - name: Managing RID Issuance
+      - name: Managing RID issuance
         href: ad-ds/manage/Managing-RID-Issuance.md
-      - name: Active Directory Domain Services component Updates
+      - name: Active Directory Domain Services component updates
         href: ad-ds/manage/component-updates/active-directory-Domain-Services-component-Updates.md
         items:
         - name: Identity component updates
@@ -393,31 +393,31 @@
             href: ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md
           - name: Winlogon Automatic Restart Sign-On (ARSO)
             href: ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md
-          - name: TPM Key attestation
+          - name: TPM key attestation
             href: ad-ds/manage/component-updates/TPM-Key-attestation.md
-          - name: CA Backup and Restore Windows powershell cmdlets
+          - name: CA backup and restore Windows PowerShell cmdlets
             href: ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-powershell-cmdlets.md
-          - name: Command line process auditing
+          - name: Command-line process auditing
             href: ad-ds/manage/component-updates/Command-line-process-auditing.md
-        - name: Directory Services component updates
+        - name: Directory services component updates
           href: ad-ds/manage/component-updates/directory-Services-component-updates.md
-      - name: Understand Active Directory Accounts
+      - name: Active Directory accounts
         href: ad-ds/manage/understand-default-user-accounts.md
-      - name: Understand Special Identities
+      - name: Special identities
         href: ad-ds/manage/understand-special-identities-groups.md
-      - name: Understand Active Directory Security Groups
+      - name: Active Directory security groups
         href: ad-ds/manage/understand-security-groups.md
-      - name: Understand Service Accounts
+      - name: Service accounts
         href: ad-ds/manage/understand-service-accounts.md
-      - name: Understand Microsoft Accounts
+      - name: Microsoft accounts
         href: ad-ds/manage/understand-microsoft-accounts.md
-      - name: Understand Security Principals
+      - name: Security principals
         href: ad-ds/manage/understand-security-principals.md
-      - name: Understand Security Identifiers
+      - name: Security identifiers
         href: ad-ds/manage/understand-security-identifiers.md
-      - name: How to Configure Protected Accounts
+      - name: Configure protected accounts
         href: ad-ds/manage/how-to-configure-protected-accounts.md
-      - name: How LDAP Server Cookies Are Handled
+      - name: How LDAP server cookies are handled
         href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
@@ -744,7 +744,7 @@
           href: ad-fs/deployment/migrate-ad-fs-fed-server-r2.md
         - name: Migrate the AD FS Federation Server Proxy
           href: ad-fs/deployment/migrate-fed-server-proxy-r2.md
-        - name: Verfiy the AD FS Migration to Windows Server 2012 R2
+        - name: Verify the AD FS Migration to Windows Server 2012 R2
           href: ad-fs/deployment/verify-ad-fs-migration.md
       - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012
         href: ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md
@@ -976,6 +976,8 @@
     items:
     - name: Upgrading AD RMS to Windows Server 2016
       href: ad-rms/adrms-deploy.md
+  - name: Active Directory Certificate Services
+    href: ad-cs/index.yml
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
@@ -994,3 +996,33 @@
       href: software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md
     - name: Troubleshoot Software Restriction Policies
       href: software-restriction-policies/troubleshoot-software-restriction-policies.md
+  - name: Windows Local Administrator Password Solution
+    href: laps/laps.md
+    items:
+    - name: Overview
+      href: laps/laps-overview.md
+    - name: Concepts
+      href: laps/laps-concepts.md
+    - name: Scenario guides
+      href: laps/laps-scenarios.md
+      items:
+      - name: Getting started with Windows LAPS and Azure Active Directory
+        href: laps/laps-scenarios-azure-active-directory.md
+      - name: Getting started with Windows LAPS and Windows Server Active Directory
+        href: laps/laps-scenarios-windows-server-active-directory.md
+      - name: Getting started with Windows LAPS in Legacy LAPS emulation mode
+        href: laps/laps-scenarios-legacy.md
+    - name: Management
+      href: laps/laps-management.md
+      items:
+      - name: Policy settings
+        href: laps/laps-management-policy-settings.md
+      - name: PowerShell
+        href: laps/laps-management-powershell.md
+      - name: Eventlog
+        href: laps/laps-management-event-log.md
+      - name: User interface
+        href: laps/laps-management-user-interface.md
+    - name: Technical reference
+      href: laps/laps-technical-reference.md
+

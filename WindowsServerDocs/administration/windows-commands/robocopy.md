@@ -4,9 +4,8 @@ description: Reference article for the robocopy command, which copies file data 
 ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: jasongerend
-ms.author: jgerend
-manager: lizapo
-ms.date: 03/17/2021
+ms.author: alalve
+ms.date: 09/15/2022
 ---
 
 # robocopy
@@ -176,7 +175,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | 8 | Several files did not copy. |
 
 > [!NOTE]
-> Any value greater than **8** indicates that there was at least one failure during the copy operation.
+> Any value equal to or greater than **8** indicates that there was at least one failure during the copy operation.
 
 ## Additional References
 
