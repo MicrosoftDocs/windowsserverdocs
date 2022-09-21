@@ -33,8 +33,8 @@ enable the attacker to move laterally within your network or to target multiple 
 Attacks are constantly evolving, with attackers often using a combination of established and new
 techniques. When protecting your system against SMB interception, there are two main goals:
 
-1. Reduce the number of attack methods available.
-1. Secure the pathways you present to your users.
+- Reduce the number of attack methods available.
+- Secure the pathways you present to your users.
 
 Due to the diversity of technology and clients within many organizations, a well-rounded defense
 will combine multiple methods and will follow the Zero Trust principles. Learn more about
