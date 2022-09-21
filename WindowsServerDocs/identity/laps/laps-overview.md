@@ -41,7 +41,7 @@ Windows LAPS supports backing up the managed account password to either Azure Ac
 
 Windows LAPS supports multiple policy management mechanisms:
 
-[Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md)
+[Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 
 [Windows LAPS Group Policy](../laps/laps-management-policy-settings.md#laps-group-policy)
 
