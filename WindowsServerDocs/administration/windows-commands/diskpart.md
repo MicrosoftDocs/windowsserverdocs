@@ -83,7 +83,7 @@ You can run the following commands from the Diskpart command interpreter:
 
 You can view a list of options associated to each command by running the main command followed by what is available to that specific command. Running **list** by itself will display the four options below:
 
-![Screenshot of the diskpart list command.](/windowsserverdocs-pr/WindowsServerDocs/administration/media/diskpart/diskpart-1.png)
+![Screenshot of the diskpart list command.](../media/diskpart/diskpart-1.png)
 
 > [!NOTE]
 > After you run the **list** command, an asterisk (__*__) appears next to the object of focus.
@@ -102,7 +102,7 @@ To select a disk, run **select disk** followed by the disk number. For example:
 select disk 1
 ```
 
-![Screenshot of  diskpart showing available list command options.](/windowsserverdocs-pr/WindowsServerDocs/administration/media/diskpart/diskpart-2.png)
+![Screenshot of  diskpart showing available list command options.](../media/diskpart/diskpart-2.png)
 
 Before disk 1 can be utilized, a partition will need to be created by running **create partition primary**:
 
@@ -116,7 +116,7 @@ Lastly, we can perform a quick format of disk 1 to NTFS with the label "Backup" 
 format fs=ntfs label=Backup quick
 ```
 
-![Screenshot of diskpart showing how to create a partition and formatting the drive.](/windowsserverdocs-pr/WindowsServerDocs/administration/media/diskpart/diskpart-3.png)
+![Screenshot of diskpart showing how to create a partition and formatting the drive.](../media/diskpart/diskpart-3.png)
 
 ## Additional References
 
