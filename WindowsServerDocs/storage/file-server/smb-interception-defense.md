@@ -101,7 +101,7 @@ quickly enable the auditing of SMB1 client connections and to uninstall SMB 1.
 ### Disable guest authentication and fallback
 
 In SMB 1.0 when a user's credentials fail, the SMB client will try guest access. Starting in Windows
-10, version 1709, and Windows Server 2019, SMB2 and SMB3 clients no longer allow guess account
+10, version 1709, and Windows Server 2019, SMB2 and SMB3 clients no longer allow guest account
 access or fallback to the guest account by default. You should use SMB 2.0 or higher and disable
 the use of SMB guest access on any systems where guest access isn't disabled by default.
 
@@ -111,7 +111,7 @@ the use of SMB guest access on any systems where guest access isn't disabled by 
 
 When guest access is disabled, it prevents a malicious actor from creating a server and tricking users
 into accessing it using guest access. For example, when a user accesses the spoofed share, their
-credentials would fail and SMB 1.0 would fall back to using guest access. Disabling guess access
+credentials would fail and SMB 1.0 would fall back to using guest access. Disabling guest access
 stops the SMB session from connecting, preventing the user from accessing the share and any
 malicious files.
 
@@ -279,7 +279,7 @@ and ticket passing attacks. Use the following items as a guide when enhancing Ke
 1. **Deploy Windows Hello for Business or smart cards** - Two-factor authentication with Windows
    Hello for Business adds an entire new layer of protection. Learn about
    [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview).
-1. **Enforce long passwords and phrases** - We encourage using longer password lengths such as 14
+1. **Enforce long passwords and phrases** - We encourage using longer password lengths such as 15
    characters or more to reduce your resistance to brute force attacks. You should also avoid common
    words or phrases to make your password even stronger.
 1. **Deploy Azure AD Password Protection for Active Directory Domain Services** - Use Azure AD
