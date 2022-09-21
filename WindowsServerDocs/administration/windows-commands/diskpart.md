@@ -9,7 +9,7 @@ ms.date: 09/21/2022
 
 # diskpart
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
 The diskpart command interpreter helps you manage your computer's drives (disks, partitions, volumes, or virtual hard disks).
 
@@ -21,7 +21,7 @@ When you select an object, the focus remains on that object until you select a d
 
 Some commands automatically change the focus. For example, when you create a new partition, the focus automatically switches to the new partition.
 
-You can only give focus to a partition on the selected disk. After a partition has focus, the related volume (if any) also has focus. After a volume has focus, the related disk and partition also have focus if the volume maps to a single specific partition. If this isn't the case, focus on the disk and partition is lost.
+You can only give focus to a partition on the selected disk. After a partition has focus, the related volume (if any) also has focus. After a volume has focus, the related disk and partition also have focus if the volume maps to a single specific partition. If this isn't the case, focus on the disk and partition are lost.
 
 ## Syntax
 
@@ -85,7 +85,8 @@ You can view a list of options associated to each command by running the main co
 
 ![Screenshot of the diskpart list command.](/windowsserverdocs-pr/WindowsServerDocs/administration/media/diskpart/diskpart-1.png)
 
-> [!NOTE] After you run the **list** command, an asterisk (__*__) appears next to the object of focus.
+> [!NOTE]
+> After you run the **list** command, an asterisk (__*__) appears next to the object of focus.
 
 ### Examples
 
