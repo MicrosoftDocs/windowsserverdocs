@@ -11,11 +11,12 @@ ms.date: 01/15/2021
 >Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, version v20H2
 
 > [!Important]
-> This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](./known-issues.md)
+> This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you're having an issue with a specific tool, 
+check to see if you're experiencing a [known issue.](./known-issues.md)
 
 ## Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
 
-This can happen if your default PowerShell module path has been modified or removed. To resolve the issue, make sure that ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` is the **first** item in your PSModulePath environment variable. You can achieve this with the following line of PowerShell:
+This failure can happen if your default PowerShell module path has been modified or removed. To resolve the issue, make sure that ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` is the **first** item in your PSModulePath environment variable. You can achieve this with the following line of PowerShell:
 
 ```powershell
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
@@ -32,7 +33,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * [Check the Windows version](#check-the-windows-version)
 
-* Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
+* Make sure you're using either Microsoft Edge or Google Chrome as your web browser.
 
 * Did you select the correct certificate on [first launch?](../use/get-started.md#selecting-a-client-certificate)
 
@@ -70,7 +71,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug which caused Windows Admin Center to fail. Please use a current supported version of Windows.
+* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug which caused Windows Admin Center to fail. Use a current supported version of Windows to fix this issue.
 
 ### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
 
@@ -88,7 +89,7 @@ If you're receiving WinRM error messages, try using the verification steps in th
 
 * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts)
 
-## I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
+## I get the message: "Can't connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
 
 Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key on **the machine running the browser** to remove the HTTP/2 restriction:
 
@@ -99,7 +100,7 @@ EnableHttp2Tls=dword:00000000
 
 ## I'm having trouble with the Remote Desktop, Events, and PowerShell tools.
 
-These three tools require the websocket protocol, which is commonly blocked by proxy servers and firewalls. If you are using Google Chrome, there is a [known issue](known-issues.md#google-chrome) with websockets and NTLM authentication.
+These three tools require the websocket protocol, which is commonly blocked by proxy servers and firewalls. If you are using Google Chrome, there is a [known issue](known-issues.md#google-chrome) with web sockets and NTLM authentication.
 
 ## I can connect to some servers, but not others
 
@@ -206,7 +207,7 @@ To do this:
 
 ## Having an issue with an Azure-related feature?
 
-Please send us an email at wacFeedbackAzure@microsoft.com with the following information:
+Send us an email at wacFeedbackAzure@microsoft.com with the following information:
 
 * General issue information from the [questions listed below](#providing-feedback-on-issues).
 * Describe your issue and the steps you took to reproduce the issue.
@@ -217,13 +218,13 @@ Please send us an email at wacFeedbackAzure@microsoft.com with the following inf
 * Does the subscription you were using have billing attached?
 * Were you logged in to multiple Azure accounts when you encountered the issue?
 * Does your Azure account require multi-factor authentication?
-* Is the machine you are trying to manage an Azure VM?
+* Is the machine you're trying to manage an Azure VM?
 * Is Windows Admin Center installed on an Azure VM?
 
 ## Collecting HAR files
 
-A HTTP Archive Format (HAR) file is a log of a web browser's interaction with a site. This information is crucial for troubleshooting and debugging.
-To collect a HAR file in Microsoft Edge or Google Chrome, please follow the steps below:
+An HTTP Archive Format (HAR) file is a log of a web browser's interaction with a site. This information is crucial for troubleshooting and debugging.
+To collect a HAR file in Microsoft Edge or Google Chrome, follow the steps below:
 
 1. Press **F12** to open Developer Tools window, and then click the **Network** tab. 
 2. Select the **Clear** icon to clean up network log.
@@ -233,6 +234,9 @@ To collect a HAR file in Microsoft Edge or Google Chrome, please follow the step
 6. Specify where to save the log and click **Save**.
 
     ![The points users have to click on to collect a HAR file are displayed and highlighted based on the numbered bullets.](../media/collect-har.PNG)
+    
+> [!WARNING] 
+> Before sharing your HAR files with Microsoft, ensure that you remove or obfuscate any sensitive information, like passwords.
 
 ## Providing feedback on issues
 
@@ -240,18 +244,18 @@ Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperi
 
 File a bug on [GitHub](https://aka.ms/wacfeedback) that describes your issue.
 
-Please include any errors or warning you find in the event log, as well as the following information:
+Include any errors or warning you find in the event log, as well as the following information:
 
 * Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
   * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center:
   * Are you using the self-signed certificate created by the installer?
-  * If you are using your own certificate, does the subject name match the machine?
-  * If you are using your own certificate, does it specify an alternate subject name?
+  * If you're using your own certificate, does the subject name match the machine?
+  * If you're using your own certificate, does it specify an alternate subject name?
 * Did you install with the default port setting?
   * If not, which port did you specify?
 * Is the machine where Windows Admin Center is **installed** joined to a domain?
 * Windows [version](#check-the-windows-version) where Windows Admin Center is **installed**:
-* Is the machine that you are **trying to manage** joined to a domain?
-* Windows [version](#check-the-windows-version) of the machine that you are **trying to manage**:
+* Is the machine that you're **trying to manage** joined to a domain?
+* Windows [version](#check-the-windows-version) of the machine that you're **trying to manage**:
 * What browser are you using?
-  * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
+  * If you're using Google Chrome, what is the version? (Help > About Google Chrome)
