@@ -976,6 +976,8 @@
     items:
     - name: Upgrading AD RMS to Windows Server 2016
       href: ad-rms/adrms-deploy.md
+  - name: Active Directory Certificate Services
+    href: ad-cs/index.yml
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
