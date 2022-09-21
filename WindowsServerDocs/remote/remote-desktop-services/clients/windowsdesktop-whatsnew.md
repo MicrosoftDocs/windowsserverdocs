@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/20/2022
+ms.date: 09/21/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -27,7 +27,7 @@ Date published: 9/20/2022
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
-- Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
+- Updated connection information dialog to distinguish between Websocket (formerly known as TCP), RDP Shortpath for managed networks, and RDP Shortpath for public networks.
 - Fixed bugs.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
