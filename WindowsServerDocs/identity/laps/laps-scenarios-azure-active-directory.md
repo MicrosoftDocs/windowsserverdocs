@@ -26,7 +26,7 @@ Let's get started on backing up some passwords to Azure Active Directory!
 
 The first step is to choose how you're going to apply policy to your devices.
 
-The preferred option for Azure AD joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
+The preferred option for Azure AD joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
 
 If your devices are Azure AD joined but you're not using Microsoft Endpoint Manager, then it's still possible to deploy Windows LAPS for Azure Active Directory. In this case though you must deploy policy manually (for example, either using direct registry modification or Local Computer Group Policy). See [Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md) article for specific details.
 
@@ -58,7 +58,7 @@ If you don't configure the AdministratorAccountName setting, Windows LAPS will d
 If you want to configure a custom local admin account, you should configure the AdministratorAccountName setting with the name of that account.
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage a custom local admin account, you must ensure that the account is created - LAPS doesn't support creation of the account. Microsoft recommends using the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups.md) for this purpose.
+> If you configure Windows LAPS to manage a custom local admin account, you must ensure that the account is created - LAPS doesn't support creation of the account. Microsoft recommends using the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) for this purpose.
 
 Finally, feel free to configure the other settings as needed or desired, for example PasswordLength, etc.
 
@@ -88,7 +88,7 @@ You may need to configure the repository as Trusted for the above command to suc
 
 The next step is to create an Azure Active Directory application configured with the necessary permissions. The basic instructions for creating an Azure Active Directory application can be found here:
 
-[Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app.md)
+[Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
 The app needs to be configured with two permissions, first `Devices.Read.All`, and second either `Device.LocalCredentials.Read` or `Device.LocalCredentials.ReadAll`.
 
@@ -207,3 +207,7 @@ Proceed to the [Windows LAPS Concepts](../laps/laps-concepts.md) article.
 [Windows LAPS Concepts](../laps/laps-concepts.md)
 
 [Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)
+
+[Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+
+[Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)

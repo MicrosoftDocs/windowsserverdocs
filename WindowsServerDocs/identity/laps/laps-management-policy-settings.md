@@ -53,7 +53,7 @@ The following table specifies which settings are applicable on devices with the 
 |PostAuthenticationResetDelay|Yes|Yes|Yes|
 |PostAuthenticationActions|Yes|Yes|Yes|
 
-Almost all settings can be administered via any policy management mechanism. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md) has two exceptions to this rule. The LAPS CSP supports two settings not in the above table, ResetPassword and ResetPasswordStatus, and it doesn't support the ADBackupDSRMPassword setting (AD domain controllers are never managed via CSP). See the LAPS CSP documentation for more info.
+Almost all settings can be administered via any policy management mechanism. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) has two exceptions to this rule. The LAPS CSP supports two settings not in the above table, ResetPassword and ResetPasswordStatus, and it doesn't support the ADBackupDSRMPassword setting (domain controllers are never managed via CSP). See the LAPS CSP documentation for more info.
 
 ## LAPS Group Policy
 
@@ -67,7 +67,7 @@ For example:
 
 ## LAPS Configuration Service Provider
 
-Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure Active Directory-joined devices. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md) is managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md).
+Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure Active Directory-joined devices. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) is managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
 ## Policy setting details
 
@@ -235,4 +235,6 @@ If not specified, this setting will default to 3.
 
 ## See also
 
-[Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md)
+[Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+
+[Microsoft Endpoint Manager](/mem/endpoint-manager-overview)

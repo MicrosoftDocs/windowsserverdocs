@@ -31,7 +31,7 @@ Microsoft Endpoint Manager: this entity is the preferred Microsoft device policy
 
 ## Basic Windows LAPS scenario flow
 
-The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) for Azure Active Directory-joined devices or hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Endpoint Manager, or Group Policy for Windows Server Active Directory-joined devices.
+The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) for Azure Active Directory-joined devices or hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Endpoint Manager, or Group Policy for Windows Server Active Directory-joined devices.
 
 After the managed device has been configured with a policy that enables Windows LAPS, the device will start to manage the configured local account's password. Whenever the password has expired, the device will generate a random new password that is compliant with the current policy's length and complexity settings, and validated against the local device's password complexity policy. Once the password is validated, the device stores it in the configured directory (either Windows Server Active Directory or Azure Active Directory). An associated password expiration time (based on the current policy's password age setting) is also computed and stored in the directory. The device will rotate this password automatically once the password expiration time has been reached.
 
@@ -41,7 +41,7 @@ Once the password has been stored in the directory (again, either in Azure Activ
 The password may also be rotated prior to the normally expected expiration time. Earlier-than-scheduled password rotations can be accomplished via various ways:
 
 * Manual admin intervention on the managed device itself (for example, using the `Reset-LapsPassword` cmdlet).
-* Invoking the ResetPassword Execute action in the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
+* Invoking the ResetPassword Execute action in the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
 * Modification of the password expiration time in the directory (applies to Windows Server Active Directory only).
 * Automatic rotation after the managed account is used to authenticate to the managed device.
 
@@ -155,3 +155,5 @@ Now that you're aware of the basic concepts that Windows LAPS is designed around
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
 
 [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
+
+[Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
