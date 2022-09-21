@@ -233,6 +233,9 @@ To collect a HAR file in Microsoft Edge or Google Chrome, please follow the step
 6. Specify where to save the log and click **Save**.
 
     ![The points users have to click on to collect a HAR file are displayed and highlighted based on the numbered bullets.](../media/collect-har.PNG)
+    
+> [!WARNING] 
+> Before sharing your HAR files with Microsoft, ensure that you remove or obfuscate any sensitive information, like passwords.
 
 ## Providing feedback on issues
 
