@@ -35,7 +35,7 @@ Follow these steps to open Windows Admin Center on a Windows PC:
    >
    > *You are not authorized to view this page. If you recently updated Windows Admin Center, you may need to restart your browser, and then refresh the page.*
    >
-   > If you continue to get the same error even after restarting your browser and refreshing the page, you may need to uninstall and reinstall Windows Admin Center, and then restart it.
+   > If you continue to get the same error even after restarting your browser and refreshing the page, try clearing the browser cache or switching to another browser. If none of these troubleshooting steps resolve the issue, you may need to uninstall and reinstall Windows Admin Center, and then restart it.
 
 1. (First time only) A pop-up window appears confirming that your Windows Admin Center version is successfully installed. It also provides information on what's new in this release. Close the window to proceed.
 
