@@ -10,7 +10,7 @@ ms.date: 01/15/2021
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, versions 21H2 and 20H2
 
-This article describes how to troubleshoot issues with Windows Admin Center. If you're having an issue with a specific tool, check to see if you're experiencing a [known issue](./known-issues.md).
+This article describes how to diagnose and resolve issues in Windows Admin Center. If you're having an issue with a specific tool, check to see if you're experiencing a [known issue](./known-issues.md).
 
 ## Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
 
@@ -73,7 +73,7 @@ To check the Windows version:
 
   - If you're using Windows 10 version 1703 or earlier, Windows Admin Center isn't supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Google Chrome.
 
-  - If you're using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug which caused Windows Admin Center to fail. Use a current supported version of Windows to fix this issue.
+  - If you're using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug that caused Windows Admin Center to fail. Use a current supported version of Windows to fix this issue.
 
 ### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
 
@@ -93,7 +93,7 @@ If you're receiving WinRM error messages, try using the verification steps in th
 
 This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts)
 
-## I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings."
+## I get the message: "Can't connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings."
 
 Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key on **the machine running the browser** to remove the HTTP/2 restriction:
 
@@ -104,15 +104,15 @@ EnableHttp2Tls=dword:00000000
 
 ## I'm having trouble with the Remote Desktop, Events, and PowerShell tools.
 
-These three tools require the websocket protocol, which is commonly blocked by proxy servers and firewalls. If you are using Google Chrome, there is a [known issue](known-issues.md#google-chrome) with web sockets and NTLM authentication.
+These three tools require the web socket protocol, which is commonly blocked by proxy servers and firewalls. If you're using Google Chrome, there's a [known issue](known-issues.md#google-chrome) with web sockets and NTLM authentication.
 
 ## I can connect to some servers, but not others
 
-- Log on to the gateway machine locally and try to ```Enter-PSSession <machine name>``` in PowerShell, replacing \<machine name> with the name of the Machine you are trying to manage in Windows Admin Center.
+- Log on to the gateway machine locally and try to ```Enter-PSSession <machine name>``` in PowerShell, replacing \<machine name> with the name of the Machine you're trying to manage in Windows Admin Center.
 
 - If your environment uses a workgroup instead of a domain, see [using Windows Admin Center in a workgroup](#using-windows-admin-center-in-a-workgroup).
 
-- **Using local administrator accounts:** If you are using a local user account that is not the built-in administrator account, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
+- **Using local administrator accounts:** If you're using a local user account that isn't the built-in administrator account, you need to enable the policy on the target machine by running the following command in PowerShell or at a command prompt as Administrator on the target machine:
 
     ```cmd
     REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
@@ -126,7 +126,7 @@ Make sure to select the **Windows Admin Center Client** certificate when prompte
 
 ### What account are you using?
 
-Make sure the credentials you are using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you are using a local user account that is **not the built-in administrator account**, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
+Make sure the credentials you're using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you're using a local user account that is **not the built-in administrator account**, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
 ```cmd
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
@@ -134,7 +134,7 @@ REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
 
 ### Are you connecting to a workgroup machine on a different subnet?
 
-To connect to a workgroup machine that is not on the same subnet as the gateway, make sure the firewall port for WinRM (TCP 5985) allows inbound traffic on the target machine. You can run the following command in PowerShell or at a Command Prompt as Administrator on the target machine to create this firewall rule:
+To connect to a workgroup machine that isn't on the same subnet as the gateway, make sure the firewall port for WinRM (TCP 5985) allows inbound traffic on the target machine. You can run the following command in PowerShell or at a Command Prompt as Administrator on the target machine to create this firewall rule:
 
 - **Windows Server**
 
@@ -150,7 +150,7 @@ To connect to a workgroup machine that is not on the same subnet as the gateway,
 
 ### Configure TrustedHosts
 
-When installing Windows Admin Center, you are given the option to let Windows Admin Center manage the gateway's TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
+When installing Windows Admin Center, you're given the option to let Windows Admin Center manage the gateway's TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
 
 **To modify TrustedHosts using PowerShell commands:**
 
@@ -201,11 +201,11 @@ netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```
 
-## Azure features don't work properly in Edge
+## Azure features don't work properly in Microsoft Edge
 
-Microsoft Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding `https://login.microsoftonline.com`, `https://login.live.com`, and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser.
+Microsoft Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. 
 
-To do this:
+If you are having trouble using Azure features when using Microsoft Edge, perform these steps to add the required URLs:
 
 1. Search for **Internet Options** in the Windows Start menu.
 
@@ -225,15 +225,15 @@ To do this:
     
     1. Under the **Allow** section, add the following URLs:
     
-        - Your gateway URL
-        - `https://login.microsoftonline.com`
-        - `https://login.live.com`
+      - Your gateway URL
+      - `https://login.microsoftonline.com`
+      - `https://login.live.com`
 
 ## Have an issue with an Azure-related feature?
 
 Send us an email at wacFeedbackAzure@microsoft.com with the following information:
 
-- General issue information from the [questions listed below](#providing-feedback-on-issues).
+- General issue information from the [questions listed below](#provide-feedback-on-issues).
 - Describe your issue and the steps you took to reproduce the issue.
 - Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
 - Is your Azure account associated with multiple directories/tenants? If yes, when registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure?
@@ -268,7 +268,7 @@ Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperi
 
 File a bug on [GitHub](https://aka.ms/wacfeedback) that describes your issue.
 
-Include any errors or warning you find in the event log, as well as the following information:
+Include any errors or warning you find in the event log, and the following information:
 
 * Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
   * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center:
