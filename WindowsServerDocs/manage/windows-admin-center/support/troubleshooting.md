@@ -71,15 +71,15 @@ To check the Windows version:
 
 1. Check the version in the **About Windows** window.
 
-  - If you're using Windows 10 version 1703 or earlier, Windows Admin Center isn't supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Google Chrome.
+    - If you're using Windows 10 version 1703 or earlier, Windows Admin Center isn't supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Google Chrome.
 
-  - If you're using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug that caused Windows Admin Center to fail. Use a current supported version of Windows to fix this issue.
+    - If you're using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug that caused Windows Admin Center to fail. Use a current supported version of Windows to fix this issue.
 
 ### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
 
 1. Open the run dialog with WindowsKey + R.
 
-1. Type ```services.msc``` and press Enter.
+1. Type `services.msc` and press Enter.
 
 1. In the window that opens, look for Windows Remote Management (WinRM), make sure it is running and set to automatically start.
 
