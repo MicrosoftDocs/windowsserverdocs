@@ -41,11 +41,7 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
    :::image type="content" source="../media/successful-install-message.png" alt-text="Screenshot of the message showing that Windows Admin Center is successfully installed.":::
 
-   The **All connections** page is displayed with your Windows 10 computer name listed under the list of connections.
-
-   :::image type="content" source="../media/all-connections-page.png" alt-text="Screenshot of the All connections page.":::
-
-You're now ready to add connections to Windows Admin Center.
+   The **All connections** page is displayed with your Windows 10 computer name listed under the list of connections. You're now ready to add connections to Windows Admin Center.
 
 ## Add connections to Windows Admin Center
 
@@ -162,8 +158,6 @@ To add or edit a tag:
    :::image type="content" source="../media/launch/use-get-started-11.png" alt-text="Screenshot of the Edit tags option.":::
 
    The **Available tags** pane opens on the right.
-
-   :::image type="content" source="../media/launch/edit-tags-available-tags-pane.png" alt-text="Screenshot of the Available tags pane.":::
 
 1. Add, edit, or remove tags from the selected connections.
 
