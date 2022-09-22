@@ -81,7 +81,7 @@ You can run the following commands from the Diskpart command interpreter:
 
 ## Listing available objects
 
-You can view a list of options associated to each command by running the main command followed by what is available to that specific command. Running **list** by itself will display the four options below:
+You can view a list of options associated to each command by running the main command followed by what is available to that specific command. Running **list** by itself will display the four parameters below:
 
 ![Screenshot of the diskpart list command.](../media/diskpart/diskpart-1.png)
 
