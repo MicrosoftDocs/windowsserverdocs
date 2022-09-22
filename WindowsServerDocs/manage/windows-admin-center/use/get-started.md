@@ -4,7 +4,7 @@ description: Get started with Windows Admin Center
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 07/15/2022
+ms.date: 09/21/2022
 ---
 
 # Get Started with Windows Admin Center
