@@ -168,6 +168,8 @@ To add or edit a tag:
    - To remove a tag from all selected connections, clear the checkbox next to the tag you wish to remove.
 
    - If a tag is applied to a subset of the selected connections, the checkbox is shown in an intermediate state. You can select the checkbox to select it and apply the tag to all selected connections, or select again to clear it and remove the tag from all selected connections.
+   
+      :::image type="content" source="../media/launch/use-get-started-12.png" alt-text="Screenshot of the available tags.":::
 
 1. When finished, select **Save** to save your changes.
 
@@ -177,7 +179,7 @@ After tags are added to one or more connections, you can view the tags on the co
 
 - To filter by a tag, select the filter icon next to the search box.
 
-   :::image type="content" source="../media/launch/use-get-started-13.png" alt-text="Screenshot of the filter using the search box.":::
+   :::image type="content" source="../media/launch/use-get-started-13.png" alt-text="Screenshot of the filter using the search box." lightbox="../media/launch/use-get-started-13.png":::
    
 - You can select "Or", "And", or "Not" to modify the filter behavior of the selected tags.
 
