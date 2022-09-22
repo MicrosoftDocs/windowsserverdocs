@@ -1,10 +1,8 @@
 ---
-ms.assetid: 26445d45-8d2c-4cbb-be3d-0dc0bf7c7753
-title: Local Administrator Password Solution Legacy Emulation Scenario
-description: Local Administrator Password Solution Legacy Emulation Scenario
-author: jsimmons
+title: Local Administrator Password Solution legacy emulation scenario
+description: Local Administrator Password Solution legacy emulation scenario.
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
@@ -49,7 +47,7 @@ The following requirements and limitations apply to legacy LAPS emulation suppor
 
   The reason for this restriction is that otherwise Windows LAPS and legacy LAPS would simultaneously try to manage the same local administrator account. Having two parties manage the same account is a bad idea and also not supported. For the purposes of this emulation feature, legacy LAPS is considered installed if the legacy LAPS Group Policy Client Side Extension is installed. This detection is done by querying the DllName registry value under this registry key:
 
-    `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{D76B9641-3288-4f75-942D-087DE603E3EA}`
+  `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{D76B9641-3288-4f75-942D-087DE603E3EA}`
 
   When the DllName value is present, and refers to a file on disk (note: the file isn't loaded or otherwise verified), legacy LAPS is considered to be installed.
 
@@ -67,7 +65,7 @@ Assuming all of the above constraints are satisfied, Windows LAPS will honor the
 
 The `Get-LapsADPassword` cmdlet supports retrieval of the legacy LAPS password attribute (`ms-Mcs-AdmPwd`). The Account and PasswordUpdateTime fields in the resulting output will always be blank however, for example:
 
-```PowerShell
+```powershell
 PS C:\> Get-LapsADPassword -Identity lapsAD2 -AsPlainText
 ComputerName        : LAPSAD2
 DistinguishedName   : CN=LAPSAD2,OU=LapsTestOU,DC=laps,DC=com

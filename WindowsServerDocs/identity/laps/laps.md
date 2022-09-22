@@ -1,10 +1,8 @@
 ---
-ms.assetid: 2e7d436a-fd23-4eb5-be74-43c1296d7f6f
 title: Local Administrator Password Solution
 description: Local Administrator Password Solution
-author: jsimmons
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---

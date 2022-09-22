@@ -1,10 +1,8 @@
 ---
-ms.assetid: 20a12d2d-96dc-4e10-ba18-bb1d94ebce4b
 title: Windows Local Administrator Password Solution User Interface
 description: Windows Local Administrator Password Solution User Interface
-author: jsimmons
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---

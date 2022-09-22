@@ -1,10 +1,8 @@
 ---
-ms.assetid: 05ded58e-8e65-4110-8a6f-4f4ca0c4f183
 title: Windows Local Administrator Password Solution PowerShell
 description: Windows Local Administrator Password Solution PowerShell
-author: jsimmons
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---

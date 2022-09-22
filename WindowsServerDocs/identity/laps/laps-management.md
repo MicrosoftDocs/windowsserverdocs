@@ -1,10 +1,8 @@
 ---
-ms.assetid: 3afeb8da-9752-4cb0-917b-0cea28fc2b20
-title: Local Administrator Password Solution Management
-description: Local Administrator Password Solution Management
-author: jsimmons
+title: Local Administrator Password Solution management
+description: Local Administrator Password Solution management.
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---

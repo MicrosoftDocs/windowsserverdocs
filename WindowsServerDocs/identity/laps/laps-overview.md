@@ -1,15 +1,13 @@
 ---
-ms.assetid: 4695eaa7-74bd-41e7-bb27-d8873963806f
-title: Local Administrator Password Solution Overview
-description: Local Administrator Password Solution Overview
-author: jsimmons
+title: Local Administrator Password Solution overview
+description: Local Administrator Password Solution overview.
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows LAPS Overview
+# Windows LAPS overview
 
 Windows Local Administrator Password Solution (LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined and Windows Server Active Directory-joined devices. The feature may also be used to automatically manage and back up the Directory Services Repair Mode account password on your Windows Server Active Directory domain controllers. The password may then be retrieved by an authorized administrator and used as needed.
 

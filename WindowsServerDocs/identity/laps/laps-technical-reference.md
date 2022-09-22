@@ -1,19 +1,17 @@
 ---
-ms.assetid: 1d4c57e1-9203-4f15-80fb-0197dd3839ac
-title: Local Administrator Password Solution Technical Reference
-description: Local Administrator Password Solution Technical Reference
-author: jsimmons
+title: Local Administrator Password Solution technical reference
+description: Local Administrator Password Solution technical reference
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows LAPS Technical Reference
+# Windows LAPS technical reference
 
 This article provides other technical details that may be helpful when deploying or managing Windows LAPS.
 
-## Windows Server Active Directory Schema Extensions
+## Windows Server Active Directory schema extensions
 
 This section documents the new Windows LAPS Windows Server Active Directory schema elements. In order to use any of the Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema` cmdlet.
 
@@ -165,4 +163,4 @@ Legacy LAPS also required extension of the Windows Server Active Directory schem
 
 ## See also
 
-[Windows LAPS Concepts](../laps/laps-concepts.md)
+[Windows LAPS concepts](../laps/laps-concepts.md)

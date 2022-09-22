@@ -1,10 +1,8 @@
 ---
-ms.assetid: e373705e-097a-406b-9334-72f3ada9aab1
-title: Local Administrator Password Solution Azure AD Scenario Guide
-description: Local Administrator Password Solution Azure AD Scenario Guide
-author: jsimmons
+title: Local Administrator Password Solution Azure AD scenario guide
+description: Local Administrator Password Solution Azure AD scenario guide.
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---

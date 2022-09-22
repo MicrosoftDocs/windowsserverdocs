@@ -1,10 +1,8 @@
 ---
-ms.assetid: 05452862-51a1-4b28-bf1a-8de787ad887e
 title: Windows Local Administrator Password Solution Event Log
 description: Windows Local Administrator Password Solution Event Log
-author: jsimmons
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---

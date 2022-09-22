@@ -1,10 +1,8 @@
 ---
-ms.assetid: d1f03be1-261c-4cb3-ba08-c70e9b29284a
-title: Local Administrator Password Solution Getting Started
-description: Local Administrator Password Solution Getting Started
-author: jsimmons
+title: Local Administrator Password Solution get started
+description: Local Administrator Password Solution get started.
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
@@ -107,7 +105,7 @@ AuthorizedDecryptor : LAPS\Domain Admins
 
 This output result indicates that we have enabled password encryption (see the Source field). Password encryption requires that your domain is configured for Windows Server 2016 Domain Functional Level or later.
 
-## Rotating the password
+## Rotate the password
 
 Windows LAPS will read the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password has expired, a new password will be generated and stored immediately.
 

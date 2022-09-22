@@ -1,10 +1,8 @@
 ---
-ms.assetid: d4a54de1-fd53-4470-b551-2341ccd6c210
 title: Local Administrator Password Solution Policy Settings
 description: Local Administrator Password Solution Policy Settings
-author: jsimmons
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---

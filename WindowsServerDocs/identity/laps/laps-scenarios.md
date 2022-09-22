@@ -1,15 +1,13 @@
 ---
-ms.assetid: 1d4c57e1-9203-4f15-80fb-0197dd3839ac
-title: Local Administrator Password Solution Scenarios
-description: Local Administrator Password Solution Scenarios
-author: jsimmons
+title: Local Administrator Password Solution scenarios
+description: Local Administrator Password Solution scenarios.
+author: jay98014
 ms.author: jsimmons
-manager: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows LAPS Scenarios
+# Windows LAPS scenarios
 
 This article describes the basic scenarios supported by Windows LAPS.
 
