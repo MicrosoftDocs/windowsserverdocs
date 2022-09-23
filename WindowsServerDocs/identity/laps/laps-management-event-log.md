@@ -1,13 +1,13 @@
 ---
-title: Windows Local Administrator Password Solution Event Log
-description: Windows Local Administrator Password Solution Event Log
+title: Windows Local Administrator Password Solution event log
+description: Windows Local Administrator Password Solution event log.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows LAPS Event Log
+# Windows LAPS event log
 
 Windows LAPS includes a dedicated event log channel, and all operations are tracked with rich eventing. This overview article provides a brief overview of the key events.
 
@@ -33,13 +33,13 @@ LAPS policy processing is now starting.
 
 Each 10003 event will be followed by several other events that describe what is happening. When the cycle completes, the final event will mark the operation as having either succeeded or failed.
 
-A successful cycle will be marked by a 10004 event; here's an example of a 10004 event:
+A successful cycle will be marked by a 10004 event. Here's an example of a 10004 event:
 
 ```text
 LAPS policy processing succeeded.
 ```
 
-A failed cycle will be marked by a 10005 event; here's an example of a 10005 event:
+A failed cycle will be marked by a 10005 event. Here's an example of a 10005 event:
 
 ```text
 LAPS policy processing failed with the error code below.
@@ -53,7 +53,7 @@ If a failure occurs the error code is helpful with troubleshooting, however also
 
 Whenever password backup is enabled, a policy configuration event will be emitted during every Windows LAPS background policy processing cycle to log the specific policy setting value for every cycle iteration. 
 
-When the policy is configured to back up the password to Active Directory, a 10021 event will be logged. here's an example of a 10021 event:
+When the policy is configured to back up the password to Active Directory, a 10021 event will be logged. Here's an example of a 10021 event:
 
 ```text
 The current LAPS policy is configured as follows:

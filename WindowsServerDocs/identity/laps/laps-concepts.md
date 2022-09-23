@@ -1,6 +1,6 @@
 ---
 title: Windows Local Administrator Password Solution (Windows LAPS) concepts
-description: Review basic design and security concepts for Windows Local Administrator Password Solution (LAPS).
+description: Review basic design and security concepts for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
@@ -13,7 +13,7 @@ This article provides information about the basic design and security concepts t
 
 ## Architecture diagram
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-architecture-diagram.PNG" alt-text="Diagram of Windows LAPS architecture showing the managed device, Azure Active Directory, and Windows Server Active Directory.":::
+:::image type="content" source="../laps/media/laps-concepts/laps-concepts-architecture-diagram.png" alt-text="Diagram of Windows LAPS architecture showing the managed device, Azure Active Directory, and Windows Server Active Directory.":::
 
 The above picture has many moving parts - let's break it down piece by piece.
 
