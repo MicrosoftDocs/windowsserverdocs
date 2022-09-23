@@ -33,6 +33,12 @@ The Azure AD app created is used for all points of Azure integration in Windows 
 - Azure Service Management
     - user_impersonation
 
+> [!NOTE] The WAC gateway needs Microsoft Graph - Application.ReadWrite.All permissions to setup Azure Kubernetes Service and Azure File Sync extensions.
+> - If you do not anticipate deploying AKS or AFS, these permission do not need to be granted.
+> - If you decide to deploy either of these hybrid services later, these permissions will temporarily need to be granted.
+> - The permission can be toggled on/off for install/uninstall and does not need to be enabled long term.
+
+
 ### Manual Azure AD app configuration
 
 If you wish to configure an Azure AD app manually, rather than using the Azure AD app created automatically by Windows Admin Center during the gateway registration process, you must do the following.
