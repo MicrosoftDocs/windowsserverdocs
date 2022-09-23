@@ -16,7 +16,7 @@ Starts a separate Command Prompt window to run a specified program or command.
 ## Syntax
 
 ```
-start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/node <NUMA node>] [/affinity <hexaffinity>] [/wait] [/b] [<command> [<parameter>... ] | <program> [<parameter>... ]]
+start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/node <NUMA node>] [/affinity <hexaffinity>] [/wait] [/b] [/machine <x86|amd64|arm|arm64>] [<command> [<parameter>... ] | <program> [<parameter>... ]]
 ```
 
 ### Parameters
@@ -33,7 +33,8 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 | /affinity `<hexaffinity>` | Applies the specified processor affinity mask (expressed as a hexadecimal number) to the new application. |
 | /wait | Starts an application and waits for it to end. |
 | /b | Starts an application without opening a new **Command Prompt** window. CTRL+C handling is ignored unless the application enables CTRL+C processing. Use CTRL+BREAK to interrupt the application. |
-| `[<command> [<parameter>... ] | <program> [<parameter>... ]]` | Specifies the command or program to start. |
+| /machine `<x86\|amd64\|arm\|arm64>` | Specifies the machine architecture of the application process. <b>Note:</b> This option is not supported until <b>Windows 11 22H2</b>. |
+| `[<command> [<parameter>... ] \| <program> [<parameter>... ]]` | Specifies the command or program to start. |
 | `<parameter>` | Specifies parameters to pass to either the command or the program. |
 | /? | Displays help at the command prompt. |
 
