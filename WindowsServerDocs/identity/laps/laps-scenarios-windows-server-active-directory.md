@@ -1,6 +1,6 @@
 ---
-title: Local Administrator Password Solution get started
-description: Local Administrator Password Solution get started.
+title: Windows Local Administrator Password Solution (Windows LAPS) get started
+description: Windows Local Administrator Password Solution (Windows LAPS) get started.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022

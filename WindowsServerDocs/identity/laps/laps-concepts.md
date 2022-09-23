@@ -143,7 +143,7 @@ When Windows is started in safe mode, DSRM mode, or any other non-default boot m
 
 ## Next steps
 
-Now that you're aware of the basic concepts of the Windows LAPS design, get started by checking out the [scenario guides](..\laps\laps-scenarios.md).
+Now that you're aware of the basic concepts of the Windows LAPS design, get started by checking out the [scenario guide](..\laps\laps-scenarios.md).
 
 ## See also
 

@@ -1,6 +1,6 @@
 ---
-title: Windows Local Administrator Password Solution PowerShell
-description: Windows Local Administrator Password Solution PowerShell
+title: Windows Local Administrator Password Solution (Windows LAPS) PowerShell
+description: Windows Local Administrator Password Solution (Windows LAPS) PowerShell.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
@@ -9,11 +9,11 @@ ms.topic: article
 
 # Windows LAPS PowerShell
 
-Windows LAPS includes a new PowerShell module named 'LAPS'. This article provides an overview of the various cmdlets in this module.
+Windows LAPS includes a new PowerShell module named LAPS. This article provides an overview of the various cmdlets in this module.
 
 ## Cmdlet descriptions
 
-|Cmdlet name|Description|
+|Name|Description|
 |---|---|
 |`Get-LapsAADPassword`|Used for querying Azure Active Directory for LAPS passwords|
 |`Get-LapsDiagnostics`|Used to collect diagnostic information for investigating problems|
@@ -32,9 +32,9 @@ Windows LAPS includes a new PowerShell module named 'LAPS'. This article provide
 > The `Invoke-LapsPolicyProcessing` and `Reset-LapsPassword` cmdlets are agnostic as to whether the password is currently being backed up to Azure Active Directory or Windows Server Active Directory. They are supported in both cases.
 
 > [!TIP]
-> All cmdlets in the Windows LAPS PowerShell module support detailed logging when the -Verbose parameter is specified.
+> All cmdlets in the Windows LAPS PowerShell module support detailed logging when you use the  `-Verbose` parameter.
 
-## Comparison with legacy LAPS PowerShell
+## Windows LAPS vs. Microsoft LAPS PowerShell
 
 Legacy LAPS included a PowerShell module named `AdmPwd.PS`. There are many functional similarities across the two modules, but also many differences. This table provides a mapping between the two modules.
 
@@ -57,6 +57,6 @@ In addition to naming-related changes, the Windows LAPS Windows Server Active Di
 
 ## See also
 
-[Getting Started with Windows LAPS in Legacy LAPS Emulation Mode](..\laps\laps-scenarios-legacy.md)
+[Get started with Windows LAPS in Microsoft LAPS emulation mode](..\laps\laps-scenarios-legacy.md)
 
-[Windows LAPS Management](..\laps\laps-management.md)
+[Manage Windows LAPS](..\laps\laps-management.md)

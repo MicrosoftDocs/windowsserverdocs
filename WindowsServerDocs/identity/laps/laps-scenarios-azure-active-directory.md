@@ -1,6 +1,6 @@
 ---
-title: Local Administrator Password Solution Azure AD scenario guide
-description: Local Administrator Password Solution Azure AD scenario guide.
+title: Windows Local Administrator Password Solution (Windows LAPS) Azure AD scenario guide
+description: Windows Local Administrator Password Solution (Windows LAPS) Azure AD scenario guide.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022

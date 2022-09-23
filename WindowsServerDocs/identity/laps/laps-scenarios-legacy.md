@@ -1,13 +1,13 @@
 ---
-title: Local Administrator Password Solution legacy emulation scenario
-description: Local Administrator Password Solution legacy emulation scenario.
+title: Windows Local Administrator Password Solution (Windows LAPS) legacy emulation scenario
+description: Windows Local Administrator Password Solution (Windows LAPS) legacy emulation scenario.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Getting started with Windows LAPS in Legacy LAPS emulation mode
+# Get started with Windows LAPS in Microsoft LAPS emulation mode
 
 > [!IMPORTANT]
 > Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure Active Directory scenario is currently limited to a small group of Windows Insiders.

@@ -1,6 +1,6 @@
 ---
-title: Windows Local Administrator Password Solution event log
-description: Windows Local Administrator Password Solution event log.
+title: Windows Local Administrator Password Solution (Windows LAPS) event log
+description: Windows Local Administrator Password Solution (Windows LAPS) event log.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022

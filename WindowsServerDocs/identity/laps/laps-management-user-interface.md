@@ -1,6 +1,6 @@
 ---
-title: Windows Local Administrator Password Solution User Interface
-description: Windows Local Administrator Password Solution User Interface
+title: Windows Local Administrator Password Solution (Windows LAPS) user interface
+description: Windows Local Administrator Password Solution (Windows LAPS) user interface.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022

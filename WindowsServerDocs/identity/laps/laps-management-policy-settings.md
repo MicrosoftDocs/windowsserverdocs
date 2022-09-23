@@ -1,13 +1,13 @@
 ---
-title: Local Administrator Password Solution Policy Settings
-description: Local Administrator Password Solution Policy Settings
+title: Windows Local Administrator Password Solution (Windows LAPS) policy settings
+description: Learn about Windows Local Administrator Password Solution (Windows LAPS) policy settings.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows LAPS Policy Settings
+# Windows LAPS policy settings
 
 Windows LAPS supports various policy-controllable settings. This article describes the various settings and ways to administer them.
 
@@ -36,7 +36,7 @@ Windows Local Administrator Password Solution (LAPS) supports multiple policy se
 
 The following table specifies which settings are applicable on devices with the specified join states:
 
-|Setting name|Azure-joined|Hybrid-joined|AD-joined|
+|Setting name|Azure-joined|Hybrid-joined|Active Directory-joined|
 |---|---|---|---|
 |BackupDirectory|Yes|Yes|Yes|
 |PasswordAgeDays|Yes|Yes|Yes|
@@ -116,7 +116,7 @@ Use this setting to configure password complexity of the managed local administr
 If not specified, this setting will default to four (4).
 
 > [!IMPORTANT]
-> Windows supports the lower password complexity settings (1, 2, and 3) only for backwards compatibility with older versions of LAPS. Microsoft recommends that this setting always be configured to 4.
+> Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with earlier versions of LAPS. Microsoft recommends that this setting always be configured to 4.
 
 ### PasswordExpirationProtectionEnabled
 
@@ -215,7 +215,7 @@ If not specified, this setting will default to 24 hours.
 
 Use this setting to specify the actions to take upon expiration of the configured grace period (see the PostAuthenticationResetDelay setting above).
 
-This setting can have ONE of the following values:
+This setting can have *one* of the following values:
 
 |Value|Name|Action(s) taken upon expiry of the grace period|
 |--- |--- |--- |
@@ -223,10 +223,10 @@ This setting can have ONE of the following values:
 |3|Reset password and sign out|The managed account password will be reset and any interactive sign-in sessions using the managed account will be terminated|
 |5|Reset password and reboot|The managed account password will be reset and the managed device will be immediately rebooted.|
 
-If not specified, this setting will default to 3.
+If not specified, this setting default is 3.
 
 > [!IMPORTANT]
-> The allowed post-authentication actions are intended to help limit the amount of time that a LAPS password may be used before being reset. Logging off the managed account - or rebooting the device - are options to help ensure this. Abrupt termination of logon sessions, or rebooting the device, may result in data loss.
+> The allowed post-authentication actions are intended to help limit the amount of time a Windows LAPS password can be used before it is reset. Logging off the managed account or restarting the device are options to help ensure this. Abrupt termination of logon sessions, or rebooting the device, may result in data loss.
 
 > [!IMPORTANT]
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
