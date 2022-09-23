@@ -28,7 +28,7 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
 1. Select the certificate labeled **Windows Admin Center Client**, then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
 
-   :::image type="content" source="../media/launch-cert-prompt.png" alt-text="Screenshot of the prompt showing options to select a certificate.":::
+   :::image type="content" source="../media/launch/select-certificate.png" alt-text="Screenshot of the prompt showing options to select a certificate.":::
 
    > [!IMPORTANT]
    > Make sure to select the **Windows Admin Center Client** certificate when prompted, and not any other certificate. If you select any other certificate, the following error message appears:
@@ -64,9 +64,9 @@ To add connections to Windows Admin Center:
    
 3. Windows Admin Center supports various methods to add resources depending on the resource type:
 
-   - add one resource at a time
-   - add multiple resources by bulk importing
-   - add resources by searching the Active Directory
+   - Add one resource at a time
+   - Add multiple resources by bulk importing
+   - Add resources by searching the Active Directory
 
    Select the tab based on how you want to add resources. The label for each tab can differ based on the resource type you're adding.
 
