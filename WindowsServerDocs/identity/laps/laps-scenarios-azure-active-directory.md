@@ -1,22 +1,20 @@
 ---
 title: Windows Local Administrator Password Solution (Windows LAPS) Azure AD scenario guide
-description: Windows Local Administrator Password Solution (Windows LAPS) Azure AD scenario guide.
+description: Windows Local Administrator Password Solution (Windows LAPS) Azure Active Directory (Azure AD) scenario guide.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Getting started with Windows LAPS and Azure Active Directory
+# Get started with Windows LAPS and Azure Active Directory
+
+In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and also how to retrieve them.
 
 > [!IMPORTANT]
 > Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure AD scenario is currently limited to a small group of Windows Insiders.
 
-## Overview
-
-In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and also how to retrieve them.
-
-Let's get started on backing up some passwords to Azure Active Directory!
+Let's get started on backing up some passwords to Azure Active Directory.
 
 ## Configure device policy
 
