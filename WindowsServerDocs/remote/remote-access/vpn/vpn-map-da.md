@@ -12,9 +12,6 @@ author: Teresa-MOTIV
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
-- [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)
-- [**Next:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
-
 In this topic, you learn about the features and functionalities of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionalities used in remote access solutions.
 
 > [!TIP]

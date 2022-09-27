@@ -12,10 +12,7 @@ ms.reviewer: deverette
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)
-- [**Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
-
-Beyond the deployment scenarios that are provided, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, the VPN server can use these features to help make sure that the connecting client is healthy before it allows a connection.
+Beyond a standard deployment, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, the VPN server can use these features to help make sure that the connecting client is healthy before it allows a connection.
 
 ## High Availability
 
