@@ -18,7 +18,7 @@ There are two separate locations where we keep Windows Server technical content.
 
 ## Public (`windowsserverdocs-pr`) and private (`windowsserverdocs`) repos
 
-These repos are actively managed and contain the source for Windows Server technical content published to [Microsoft Docs](https://learn.microsoft.com):
+These repos are actively managed and contain the source for Windows Server technical content published to [Microsoft Learn](https://learn.microsoft.com):
 
 - [Windows Server home page](https://learn.microsoft.com/windows-server/)
 - [Windows Server Essentials](https://learn.microsoft.com/windows-server-essentials)
