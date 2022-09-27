@@ -235,9 +235,9 @@
       - name: DirectAccess and VPN
         items:
         - name: What is VPN?
-          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy
+          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md
         - name: What is DirectAccess?
-          href: remote-access/directaccess/directaccess
+          href: remote-access/directaccess/directaccess.md
         - name: DirectAccess Unsupported configurations
           href: remote-access/directaccess/directAccess-Unsupported-Configurations.md
         - name: Direct Access Capacity Planning
