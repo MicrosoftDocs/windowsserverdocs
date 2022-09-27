@@ -430,48 +430,48 @@
             href: remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md
           - name: 'Step 3: Verify the Deployment'
             href: remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md
-          - name: Manage Remote Access
+      - name: Manage Remote Access
+        items:
+        - name: Scenario Overview
+          href: remote-access/ras/Manage-remote-Access.md
+        - name: Use Remote Access Monitoring and Accounting
+          href: remote-access/ras/monitoring-and-accounting/Use-remote-Access-Monitoring-and-Accounting.md
+          items:
+          - name: Monitor the existing load on the Remote Access server
+            href: remote-access/ras/monitoring-and-accounting/Monitor-the-existing-load-on-the-remote-Access-server.md
+          - name: Monitor the configuration distribution status of the Remote Access server
+            href: remote-access/ras/monitoring-and-accounting/Monitor-the-configuration-distribution-status-of-the-remote-Access-server.md
+          - name: Monitor the operations status of the Remote Access server and its components
+            href: remote-access/ras/monitoring-and-accounting/Monitor-the-operations-status-of-the-remote-Access-server-and-its-components.md
+          - name: Identify and resolve Remote Access server operations problems
+            href: remote-access/ras/monitoring-and-accounting/Identify-and-resolve-remote-Access-server-operations-problems.md
+          - name: Monitor connected remote clients for activity and status
+            href: remote-access/ras/monitoring-and-accounting/Monitor-connected-remote-clients-for-activity-and-status.md
+          - name: Generate a usage report for remote clients using historical data
+            href: remote-access/ras/monitoring-and-accounting/Generate-a-usage-report-for-remote-clients-using-historical-data.md
+        - name: Manage DirectAccess Clients Remotely
+          href: remote-access/ras/manage-remote-clients/Manage-directAccess-Clients-remotely.md
+          items:
+          - name: Plan Deployment for Remote Management of DirectAccess Clients
+            href: remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-remote-Management-of-directAccess-Clients.md
             items:
-            - name: Scenario Overview
-              href: remote-access/ras/Manage-remote-Access.md
-            - name: Use Remote Access Monitoring and Accounting
-              href: remote-access/ras/monitoring-and-accounting/Use-remote-Access-Monitoring-and-Accounting.md
-              items:
-              - name: Monitor the existing load on the Remote Access server
-                href: remote-access/ras/monitoring-and-accounting/Monitor-the-existing-load-on-the-remote-Access-server.md
-              - name: Monitor the configuration distribution status of the Remote Access server
-                href: remote-access/ras/monitoring-and-accounting/Monitor-the-configuration-distribution-status-of-the-remote-Access-server.md
-              - name: Monitor the operations status of the Remote Access server and its components
-                href: remote-access/ras/monitoring-and-accounting/Monitor-the-operations-status-of-the-remote-Access-server-and-its-components.md
-              - name: Identify and resolve Remote Access server operations problems
-                href: remote-access/ras/monitoring-and-accounting/Identify-and-resolve-remote-Access-server-operations-problems.md
-              - name: Monitor connected remote clients for activity and status
-                href: remote-access/ras/monitoring-and-accounting/Monitor-connected-remote-clients-for-activity-and-status.md
-              - name: Generate a usage report for remote clients using historical data
-                href: remote-access/ras/monitoring-and-accounting/Generate-a-usage-report-for-remote-clients-using-historical-data.md
-            - name: Manage DirectAccess Clients Remotely
-              href: remote-access/ras/manage-remote-clients/Manage-directAccess-Clients-remotely.md
-              items:
-              - name: Plan Deployment for Remote Management of DirectAccess Clients
-                href: remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-remote-Management-of-directAccess-Clients.md
-                items:
-                - name: 'Step 1: Plan the Remote Access Infrastructure'
-                  href: remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-remote-Access-Infrastructure.md
-                - name: 'Step 2: Plan the Remote Access Deployment'
-                  href: remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-remote-Access-Deployment.md
-              - name: Install and Configure Deployment for remote Management of DirectAccess Clients
-                href: remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-remote-Management-of-directAccess-Clients.md
-                items:
-                - name: 'Step 1: Configure the Remote Access Infrastructure'
-                  href: remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md
-                - name: 'Step 2: Configure the Remote Access Server'
-                  href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
-                - name: 'Step 3: Verify the Deployment'
-                  href: ./remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
-              - name: Publishing Applications using AD FS Preauthentication
-                href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
-              - name: Publishing Applications with SharePoint, Exchange and RDG
-                href: remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md
+            - name: 'Step 1: Plan the Remote Access Infrastructure'
+              href: remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-remote-Access-Infrastructure.md
+            - name: 'Step 2: Plan the Remote Access Deployment'
+              href: remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-remote-Access-Deployment.md
+          - name: Install and Configure Deployment for remote Management of DirectAccess Clients
+            href: remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-remote-Management-of-directAccess-Clients.md
+            items:
+            - name: 'Step 1: Configure the Remote Access Infrastructure'
+              href: remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md
+            - name: 'Step 2: Configure the Remote Access Server'
+              href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
+            - name: 'Step 3: Verify the Deployment'
+              href: ./remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
+          - name: Publishing Applications using AD FS Preauthentication
+            href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
+          - name: Publishing Applications with SharePoint, Exchange and RDG
+            href: remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md
     - name: Concepts
       items:
       - name: Virtual Private Networking (VPN) 
@@ -536,7 +536,7 @@
           href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)
       - name: Web Application Proxy
         items:
-        - name:
+        - name: About Web Application Proxy
           href: remote-access/web-application-proxy/web-application-proxy-windows-server.md
     - name: Troubleshooting
       items:
