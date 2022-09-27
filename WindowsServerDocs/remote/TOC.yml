@@ -525,7 +525,7 @@
         - name: Network Address Translation (NAT) routers
           href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10)
         - name: LAN routers running Border Gateway Protocol (BGP)
-          href: bgp/border-gateway-protocol-bgp.md
+          href: remote-access/bgp/border-gateway-protocol-bgp.md
         - name: Routing Information Protocol (RIP)
           href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10)
         - name: Multicast-capable routers using Internet Group Management Protocol (IGMP)
