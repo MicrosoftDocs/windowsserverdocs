@@ -9,7 +9,11 @@ ms.topic: article
 
 # Windows LAPS PowerShell
 
+> Applies to: Windows 11
+
 Windows LAPS includes a new PowerShell module named LAPS. This article provides an overview of the various cmdlets in this module.
+
+Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Cmdlet descriptions
 
@@ -36,9 +40,9 @@ Windows LAPS includes a new PowerShell module named LAPS. This article provides 
 
 ## Windows LAPS vs. Microsoft LAPS PowerShell
 
-Legacy LAPS included a PowerShell module named `AdmPwd.PS`. There are many functional similarities across the two modules, but also many differences. This table provides a mapping between the two modules.
+Microsoft LAPS included a PowerShell module named `AdmPwd.PS`. There are many functional similarities across the two modules, but also many differences. This table provides a mapping between the two modules.
 
-|Windows LAPS cmdlet|Legacy LAPS cmdlet|
+|Windows LAPS cmdlet|Microsoft LAPS cmdlet|
 |---|---|
 |`Get-LapsAADPassword`|N\A|
 |`Get-LapsDiagnostics`|N\A|
@@ -53,7 +57,7 @@ Legacy LAPS included a PowerShell module named `AdmPwd.PS`. There are many funct
 |`Set-LapsADResetPasswordPermission`|`Set-AdmPwdResetPasswordPermission`|
 |`Update-LapsADSchema`|`Update-AdmPwdADSchema`|
 
-In addition to naming-related changes, the Windows LAPS Windows Server Active Directory-related cmdlets operate over an entirely different set of schema extensions. For more information, see [Windows Server Active Directory Schema Extensions](../laps/laps-technical-reference.md#windows-server-active-directory-schema-extensions).
+In addition to naming-related changes, the Windows LAPS Windows Server Active Directory-related cmdlets operate over an entirely different set of schema extensions. For more information, see [Windows Server Active Directory schema extensions](../laps/laps-technical-reference.md#windows-server-active-directory-schema-extensions).
 
 ## See also
 

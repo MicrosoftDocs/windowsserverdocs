@@ -9,25 +9,32 @@ ms.topic: article
 
 # Get started with Windows LAPS and Azure Active Directory
 
+> Applies to: Windows 11
+
 In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and also how to retrieve them.
 
-> [!IMPORTANT]
-> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure AD scenario is currently limited to a small group of Windows Insiders.
+Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 Let's get started on backing up some passwords to Azure Active Directory.
 
 ## Configure device policy
 
-### Choose policy deployment mechanism
+To configure device policy, complete these tasks:
+
+- Choose a policy deployment mechanism
+- Understand policies that apply to Azure Active Directory mode
+- Configure specific policies
+
+### Choose a policy deployment mechanism
 
 The first step is to choose how you're going to apply policy to your devices.
 
-The preferred option for Azure AD joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
+The preferred option for Azure Active Directory-joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
 
-If your devices are Azure AD joined but you're not using Microsoft Endpoint Manager, then it's still possible to deploy Windows LAPS for Azure Active Directory. In this case though you must deploy policy manually (for example, either using direct registry modification or Local Computer Group Policy). See [Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md) article for specific details.
+If your devices are Azure Active Directory-joined but you're not using Microsoft Endpoint Manager, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Windows LAPS policy settings](../laps/laps-management-policy-settings.md).
 
-  > [!NOTE]
-  > If your devices are hybrid-joined to on-premises Active Directory, you may deploy policy using [Windows LAPS Group Policy](../laps/laps-management-policy-settings.md#laps-group-policy).
+> [!NOTE]
+> If your devices are hybrid-joined to on-premises Windows Server Active Directory, you can deploy policy by using [Windows LAPS Group Policy](../laps/laps-management-policy-settings.md#laps-group-policy).
 
 ### Policies applicable to Azure Active Directory mode
 
@@ -35,13 +42,13 @@ The LAPS CSP and LAPS Group Policy object both manage the same settings, however
 
 The following settings are applicable when backing passwords up to Azure AD:
 
-* BackupDirectory
-* PasswordAgeDays
-* PasswordComplexity
-* PasswordLength
-* AdministratorAccountName
-* PostAuthenticationResetDelay
-* PostAuthenticationActions
+- BackupDirectory
+- PasswordAgeDays
+- PasswordComplexity
+- PasswordLength
+- AdministratorAccountName
+- PostAuthenticationResetDelay
+- PostAuthenticationActions
 
 More plainly: the Windows Server Active Directory-specific policy settings don't make sense, and aren't supported, when backing the password up to Azure Active Directory.
 
@@ -98,59 +105,65 @@ The app needs to be configured with two permissions, first `Devices.Read.All`, a
 
 A manual step is currently required to consent to either `Device.LocalCredentials.Read` or the `Device.LocalCredentials.ReadAll` permissions. This limitation will be removed in future.
 
-Once you've decided which Device.LocalCredentials permission to configure, manually construct a URL as follows. In these examples, we're using `DeviceLocalCredential.Read.All` as the permission; replace that with `DeviceLocalCredential.Read.Basic` as required.
+When you've decided which `Device.LocalCredentials` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.Read.Basic` if required.
 
-<ins>For multi-tenant apps:</ins>
+For multi-tenant apps:
 
-`https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=YOUR_CLIENT_APPID_HERE=response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
+`https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=<YourClientAppID>=response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
 
-<ins>For single-tenant apps:</ins>
+For single-tenant apps:
 
-`https://login.microsoftonline.com/YOUR_TENANT_NAME_OR_ID_HERE/oauth2/v2.0/authorize?client_id=YOUR_CLIENT_APPID_HERE&response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
+`https://login.microsoftonline.com/<YourTenantNameOrTenantID>/oauth2/v2.0/authorize?client_id=<YourClientAppID>&response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
 
-Using the appropriate URL template above, replace `YOUR_CLIENT_APPID_HERE` with the application ID of the Azure registered app you created above, and replace `YOUR_TENANT_NAME_OR_ID_HERE` with your Azure tenant name or ID.
+Using the URL template that's relevant for your scenario, replace `<YourClientAppID>` with the application ID of the Azure registered app you created earlier. Replace `<YourTenantNameOrTenantID>` with your Azure tenant name or tenant ID.
 
-Once the final URL is ready, paste it into a browser and navigate to it. The browser will then display a permission consent dialog, which you should say ok to. For example:
+When the final URL is ready, paste it into a browser and go to the URL. The browser displays a permissions consent dialog. Select the **Consent on behalf of your organization** checkbox, and then select **Accept**. For example:
 
-:::image type="content" source="../laps/media/laps-scenarios-azure-active-directory/laps-scenarios-azure-active-directory-permission-consent.png" alt-text="Screenshot showing an Azure Active Directory application permission consent dialog.":::
+:::image type="content" source="../laps/media/laps-scenarios-azure-active-directory/laps-scenarios-azure-active-directory-permission-consent.png" alt-text="Screenshot that shows an Azure Active Directory application permissions consent dialog.":::
 
 ### Retrieve the password from Azure Active Directory
 
-We're almost there! First we need to sign-in into Microsoft Graph, and then we can use the `Get-LapsAADPassword` cmdlet to retrieve the password.
+You're almost there! First, you must sign in to Microsoft Graph. Then, use the `Get-LapsAADPassword` cmdlet to retrieve the password.
 
-Logging into Microsoft Graph is done using the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID, plus the application ID of the Azure Active Directory application you created above. Run the cmdlet once to do the sign-in, for example:
+To sign in to Microsoft Graph, use the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID and the application ID of the Azure Active Directory application you created earlier. Run the cmdlet once to sign in. For example:
 
-`Connect-MgGraph -Environment PROD -TenantId c754bc06-12e1-4508-b3b1-653a220c62cc -ClientId 71f6c060-e966-4d7e-b068-7ea116e131ed`
-
-```PowerShell
+```powershell
 PS C:\> Connect-MgGraph -Environment Global -TenantId acca2622-272f-413f-865f-a67416923a6b -ClientId 1c2e514c-2ef1-486d-adbb-8da208457957
+```
+
+```output
 Welcome To Microsoft Graph!
 ```
 
 > [!TIP]
-> You may need to modify your PowerShell execution policy in order for the `Connect-MgGraph` cmdlet to succeed. For example, by running `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`.
+> For the `Connect-MgGraph` cmdlet to succeed, you might need to modify your PowerShell execution policy. For example, you might need for first run `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`.
 
-Awesome - now that you're logged into Microsoft Graph, you're ready to retrieve the password!
+Now that you're logged into Microsoft Graph, you can retrieve the password.
 
-First, let's invoke the `Get-LapsAADPassword` cmdlet passing the name of the device:
+First, invoke the `Get-LapsAADPassword` cmdlet and pass the name of the device:
 
-```PowerShell
+```powershell
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice
+```
 
+```output
 DeviceName    DeviceId                             PasswordExpirationTime
 ----------    --------                             ----------------------
 myAzureDevice be8ab291-6307-42a2-8fda-2f4ee78e51c8 7/31/2022 11:34:39 AM
 ```
 
 > [!TIP]
-> Pass the -Verbose parameterFor to see detailed info on what the Get-LapsAADPassword cmdlet (or any other cmdlet in the LAPS PowerShell module) is doing.
+> Pass the `-Verbose` parameter to see detailed info about what the `Get-LapsAADPassword` cmdlet (or any other cmdlet in the Windows LAPS PowerShell module) is doing.
 
-The above example requires that the client is granted `DeviceLocalCredential.Read.Basic`. The examples below require that the client is granted `DeviceLocalCredential.Read.All`.
+The preceding example requires that the client is granted `DeviceLocalCredential.Read.Basic` permissions. The following examples require that the client is granted `DeviceLocalCredential.Read.All` permissions.
 
-Next, let's invoke the `Get-LapsAADPassword` cmdlet asking for the actual password to be returned:
+Next, invoke the `Get-LapsAADPassword` cmdlet to ask for the actual password to be returned:
 
-```PowerShell
+```powershell
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice -IncludePasswords
+```
+
+```output
 DeviceName             : myAzureDevice
 DeviceId               : be8ab291-6307-42a2-8fda-2f4ee78e51c8
 Account                : Administrator
@@ -163,8 +176,11 @@ Note: the password above is returned in a SecureString object.
 
 Finally, for testing or ad-hoc purposes you can request that the password is displayed in clear-text using the -AsPlainText parameter:
 
-```PowerShell
+```powershell
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice -IncludePasswords -AsPlainText
+```
+
+```output
 DeviceName             : myAzureDevice
 DeviceId               : be8ab291-6307-42a2-8fda-2f4ee78e51c8
 Account                : Administrator
@@ -173,13 +189,16 @@ PasswordExpirationTime : 7/31/2022 11:34:39 AM
 PasswordUpdateTime     : 7/1/2022 11:34:39 AM
 ```
 
-## Rotating the password
+## Rotate the password
 
-Windows LAPS will locally remember when the last stored password expires, and will automatically rotate the password upon expiry. In some situations (for example, after a security breach, or for ad-hoc testing purposes) it may be necessary to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet, for example:
+Windows LAPS will locally remember when the last stored password expires, and will automatically rotate the password upon expiry. In some situations (for example, after a security breach, or for ad-hoc testing purposes) it may be necessary to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet. For example:
 
-```PowerShell
+```powershell
 PS C:\> Reset-LapsPassword
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice -IncludePasswords -AsPlainText
+```
+
+```output
 DeviceName             : myAzureDevice
 DeviceId               : be8ab291-6307-42a2-8fda-2f4ee78e51c8
 Account                : Administrator
@@ -189,10 +208,9 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 ```
 
 > [!IMPORTANT]
-> Azure Active Directory doesn't support expiration of a device's currently stored password via modification of the password expiration timestamp in Azure Active Directory. This is a design difference from the Windows Server Active Directory-based Windows LAPS.
-
-> [!IMPORTANT]
-> Excessively frequent use of the `Reset-LapsPassword` cmdlet is not recommended. If detected such activity may be throttled.
+>
+> - Azure Active Directory doesn't support expiration of a device's currently stored password via modification of the password expiration timestamp in Azure Active Directory. This is a design difference from the Windows Server Active Directory-based Windows LAPS.
+> - Avoid excessively frequent use of the `Reset-LapsPassword` cmdlet. If detected, the activity might be throttled.
 
 ## Next steps
 

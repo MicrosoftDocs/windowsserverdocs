@@ -9,7 +9,11 @@ ms.topic: article
 
 # Windows LAPS scenarios
 
+> Applies to: Windows 11
+
 This article describes the basic scenarios for using Windows LAPS.
+
+Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Scenarios
 

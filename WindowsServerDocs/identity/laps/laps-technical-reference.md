@@ -9,29 +9,33 @@ ms.topic: article
 
 # Windows LAPS technical reference
 
+> Applies to: Windows 11
+
 This article provides technical details that might help you deploy or manage Windows LAPS.
+
+Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Windows Server Active Directory schema extensions
 
-Windows LAPS offers new schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the Update-LapsADSchema cmdlet.
+Windows LAPS offers new schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the Update-LapsADSchema PowerShell cmdlet.
 
 ### Windows Server Active Directory schema attributes
 
-Windows LAPS uses many new schema attributes that are stored on the computer object in Windows Server Active Directory for a managed device. The Update-LapsADSchema cmdlet adds these new schema attributes to the directory and to the mayContain list on the computer schema class.
+Windows LAPS uses many new schema attributes that are stored on the computer object in Windows Server Active Directory for a managed device. The Update-LapsADSchema cmdlet adds these new schema attributes to the directory and to the `mayContain` list on the computer schema class.
 
 > [!TIP]
 > Many of the following attributes specify a `SearchFlags` value of `904`. For easy reference, this value is composed of the following bit flags:
 >
-> * fRODCFilteredAttribute
-> * fNEVERVALUEAUDIT
-> * fCONFIDENTIAL
-> * fPRESERVEONDELETE
+> * `fRODCFilteredAttribute`
+> * `fNEVERVALUEAUDIT`
+> * `fCONFIDENTIAL`
+> * `fPRESERVEONDELETE`
 
 #### msLAPS-PasswordExpirationTime
 
 This attribute contains a 64-bit integer that specifies the currently scheduled password expiration time in UTC.
 
-```text
+```powershell
 Name: ms-LAPS-PasswordExpirationTime
 LDAP display name: msLAPS-PasswordExpirationTime
 OID: 1.2.840.113556.1.6.44.1.1
@@ -45,9 +49,9 @@ AttributeSecurityGuid: <not set>
 
 #### msLAPS-Password
 
-This attribute contains a Unicode string that specifies the clear-text version of the current password (and other information).
+This attribute contains a Unicode string that specifies the clear-text version of the current password and other information.
 
-```text
+```powershell
 Name: ms-LAPS-Password
 LDAP display name: msLAPS-Password
 OID: 1.2.840.113556.1.6.44.1.2
@@ -75,7 +79,7 @@ Each name-value pair in the JSON string has a specific meaning:
 
 This attribute contains a byte string that contains an encrypted version of the current password.
 
-```text
+```powershell
 Name: ms-LAPS-EncryptedPassword
 LDAP display name: msLAPS-EncryptedPassword
 OID: 1.2.840.113556.1.6.44.1.3
@@ -91,7 +95,7 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 
 This attribute contains a multi-valued byte string. Each value contains an encrypted version of an earlier password.
 
-```text
+```powershell
 Name: ms-LAPS-EncryptedPassword
 LDAP display name: msLAPS-EncryptedPassword
 OID: 1.2.840.113556.1.6.44.1.4
@@ -107,7 +111,7 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 
 This attribute contains a byte string that contains an encrypted version of the current DSRM account password.
 
-```text
+```powershell
 Name: ms-LAPS-EncryptedPassword
 LDAP display name: msLAPS-EncryptedPassword
 OID: 1.2.840.113556.1.6.44.1.5
@@ -123,7 +127,7 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 
 This attribute contains a multi-valued byte string. Each value contains an encrypted version of an earlier DSRM account password.
 
-```text
+```powershell
 Name: ms-LAPS-EncryptedDSRMPasswordHistory
 LDAP display name: msLAPS-EncryptedDSRMPasswordHistory
 OID: 1.2.840.113556.1.6.44.1.6
@@ -139,9 +143,9 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 
 Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory.
 
-You can use the `ms-LAPS-Encrypted-Password-Attributes` extended right to grant managed devices SELF permission to read and write the various encrypted password attributes (see above).
+You can use the `ms-LAPS-Encrypted-Password-Attributes` extended right to grant managed devices SELF permission to read and write the various encrypted password attributes described in this article.
 
-```text
+```powershell
 Name: ms-LAPS-Encrypted-Password-Attributes
 Rights guid: f3531ec6-6330-4f8e-8d39-7a671fbac605
 Valid accesses: 48 (RIGHT_DS_READ_PROPERTY | RIGHT_DS_WRITE_PROPERTY)
@@ -149,17 +153,17 @@ Valid accesses: 48 (RIGHT_DS_READ_PROPERTY | RIGHT_DS_WRITE_PROPERTY)
 
 ### Windows LAPS schema vs. Microsoft LAPS schema
 
-Microsoft LAPS also required extension of the Windows Server Active Directory schema. For comparison purposes, this table provides a logical mapping between Windows LAPS schema elements and Microsoft LAPS schema elements:
+Microsoft LAPS also requires that you extend the Windows Server Active Directory schema. The following table shows a logical mapping between Windows LAPS schema elements and Microsoft LAPS schema elements:
 
 |Windows LAPS schema element|Microsoft LAPS schema element|
 |---|---|
-|msLAPS-PasswordExpirationTime|ms-Mcs-AdmPwdExpirationTime|
-|msLAPS-Password|ms-Mcs-AdmPwd|
-|msLAPS-EncryptedPassword|N\A|
-|msLAPS-EncryptedPasswordHistory|N\A|
-|msLAPS-EncryptedDSRMPassword|N\A|
-|msLAPS-EncryptedDSRMPasswordHistory|N\A|
-|ms-LAPS-Encrypted-Password-Attributes|N\A|
+|`msLAPS-PasswordExpirationTime`|`ms-Mcs-AdmPwdExpirationTime`|
+|`msLAPS-Password`|`ms-Mcs-AdmPwd`|
+|`msLAPS-EncryptedPassword`|None|
+|`msLAPS-EncryptedPasswordHistory`|None|
+|`msLAPS-EncryptedDSRMPassword`|None|
+|`msLAPS-EncryptedDSRMPasswordHistory`|None|
+|`ms-LAPS-Encrypted-Password-Attributes`|None|
 
 ## See also
 

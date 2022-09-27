@@ -9,7 +9,11 @@ ms.topic: article
 
 # Windows LAPS policy settings
 
+> Applies to: Windows 11
+
 Windows LAPS supports various policy-controllable settings. This article describes the various settings and ways to administer them.
+
+Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Supported policy roots
 

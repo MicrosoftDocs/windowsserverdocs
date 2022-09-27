@@ -9,8 +9,9 @@ ms.topic: article
 
 # Get started with Windows LAPS in Microsoft LAPS emulation mode
 
-> [!IMPORTANT]
-> Windows LAPS is currently only available in Windows Insider builds as of 25145 and later. Support for the Windows LAPS Azure Active Directory scenario is currently limited to a small group of Windows Insiders.
+> Applies to: Windows 11
+
+Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Overview
 

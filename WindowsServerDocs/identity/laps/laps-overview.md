@@ -9,9 +9,13 @@ ms.topic: overview
 
 # What is Windows LAPS?
 
+> Applies to: Windows 11
+
 Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined and Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
-## Windows LAPS benefits
+Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+
+## Benefits of using Windows LAPS
 
 Using Windows LAPS to regularly rotate and manage local administrator account passwords provides many benefits:
 
@@ -21,12 +25,11 @@ Using Windows LAPS to regularly rotate and manage local administrator account pa
 - Fine-grained security model (access control lists and optional password encryption) for securing passwords stored in Windows Server Active Directory.
 - Supports the Azure role-based access control model for securing passwords stored in Azure Active Directory.
 
-## Windows LAPS supported SKUs
+## Supported SKUs
 
 Windows LAPS is supported on desktop Windows, Windows Server, and Windows Server Core. Windows LAPS is a native Windows feature on all supported SKUs. No extra steps are required to install the feature.
 
-> [!IMPORTANT]
-> Windows LAPS is currently available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+As noted earlier, Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Back up passwords in Azure Active Directory or Windows Server Active Directory
 
@@ -35,7 +38,7 @@ Windows LAPS supports backing up the managed account password to either Azure Ac
 > [!IMPORTANT]
 > Windows LAPS doesn't support Azure Active Directory workplace-joined clients.
 
-## Manage Windows LAPS policy
+## Set Windows LAPS policy
 
 You have multiple options to manage your Windows LAPS policy:
 
@@ -43,7 +46,7 @@ You have multiple options to manage your Windows LAPS policy:
 - [Windows LAPS Group Policy](../laps/laps-management-policy-settings.md#laps-group-policy)
 - [Microsoft LAPS (earlier version)](https://www.microsoft.com/download/details.aspx?id=46899)
 
-## Manage and monitor
+## Manage and monitor Windows LAPS
 
 You also have various options to manage and monitor Windows LAPS. Windows options include:
 
