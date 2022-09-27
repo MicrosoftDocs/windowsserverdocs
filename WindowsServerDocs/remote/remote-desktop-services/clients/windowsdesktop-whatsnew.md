@@ -22,7 +22,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 ## Updates for version 1.2.3573 (Insider)
 
-Date published: September 27, 2002
+Date published: September 27, 2022
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
