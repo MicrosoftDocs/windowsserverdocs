@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/22/2022
+ms.date: 09/27/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,7 +18,20 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.3497        |1.2.1672                  |
-|Insider    |1.2.3497        |1.2.1672                  |
+|Insider    |1.2.3573        |1.2.1672                  |
+
+## Updates for version 1.2.3573 (Insider)
+
+Date published: September 27, 2002
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Added banner warning users running client on Windows 7 that support for Windows 7 will end starting January 10, 2023.
+- Added page to installer warning users running client on Windows 7 that support for Windows 7 will end starting January 10, 2023.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to multimedia redirection (MMR) for Azure Virtual Desktop, including the following:
+   - MMR now works on remote app browser and supports up to 30 sites.
+   - MMR introduces better diagnostic tools with the new status icon and one-click tracelog.
 
 ## Updates for version 1.2.3497
 
