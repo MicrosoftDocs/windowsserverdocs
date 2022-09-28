@@ -4,76 +4,90 @@ description: Review basic design and security concepts for Windows Local Adminis
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
-ms.topic: article
+ms.topic: conceptual
 ---
 
 # Windows LAPS concepts
 
 > Applies to: Windows 11
 
-This article provides information about the basic design and security concepts that Windows LAPS is based on, including:
+Learn about the basic design and security concepts for Windows Local Administrator Password Solution (Windows LAPS), including:
 
 - Architecture
 - Basic scenario flow
 - Background policy processing cycle
-- Azure Active Directory
-- Windows Server Active Directory
+- How it works with Azure Active Directory
+- How it works with Windows Server Active Directory
 - Password reset after authentication
 - Account password tampering protection
-- Disabled in safe mode
+- Windows safe mode
 
 Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Windows LAPS architecture
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-architecture-diagram.png" alt-text="Diagram of Windows LAPS architecture showing the managed device, Azure Active Directory, and Windows Server Active Directory.":::
+The following figure depicts the Windows LAPS architecture:
 
-The above picture has many moving parts - let's break it down piece by piece.
+:::image type="content" source="../laps/media/laps-concepts/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture showing the managed device, Azure Active Directory, and Windows Server Active Directory.":::
 
-IT admin: this entity represents collectively the various IT admin roles that may be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
+The Windows LAPS architecture has several key components:
 
-Managed device: this entity is the Azure Active Directory-joined or Windows Server Active Directory-joined device on which we want to manage a local administrator account. The feature is composed of a few key binaries: *laps.dll* (core logic), *lapscsp.dll* (Configuration Service Provider logic), and *lapspsh.dll* (PowerShell cmdlet logic). Windows LAPS may also be configured using Group Policy and will respond to GPO change notifications. The managed device may also be a Windows Server Active Directory domain controller, which can be configured to back up DSRM account passwords.
+- **IT admin**: Represents collectively the various IT admin roles that might be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
 
-Windows Server Active Directory: this entity is your on-premises Windows Server Active Directory deployment.
+- **Managed device**: The Azure Active Directory-joined or Windows Server Active Directory-joined device on which you want to manage a local administrator account. The feature is composed of a few key binaries: *laps.dll* (core logic), *lapscsp.dll* (configuration service provider (CSP) logic), and *lapspsh.dll* (PowerShell cmdlet logic). You also can configure Windows LAPS by using Group Policy. Windows LAPS responds to Group Policy Object (GPO) change notifications. The managed device can be a Windows Server Active Directory domain controller and configured to back up Directory Services Repair Mode (DSRM) account passwords.
 
-Azure Active Directory: this entity is Azure Active Directory running in the cloud.
+- **Windows Server Active Directory**: An on-premises Windows Server Active Directory deployment.
 
-Microsoft Endpoint Manager: this entity is the preferred Microsoft device policy management solution, also running in the cloud.
+- **Azure Active Directory**: An Azure Active Directory deployment running in the cloud.
+
+- **Microsoft Endpoint Manager** The preferred Microsoft device policy management solution, also running in the cloud.
 
 ## Basic scenario flow
 
-First, you must configure the Windows LAPS policy. We recommend that you use the following configuration options:
+The first step in a basic Windows LAPS scenario is to configure the Windows LAPS policy for your organization. We recommend that you use the following configuration options:
 
 - **Azure Active Directory-joined devices**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 - **Windows Server Active Directory-joined devices**: Use Group Policy.
 - **Hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Endpoint Manager**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
-After the managed device is configured with a policy that enables Windows LAPS, the device will start to manage the configured local account's password. Whenever the password has expired, the device will generate a random new password that is compliant with the current policy's length and complexity settings, and validated against the local device's password complexity policy. Once the password is validated, the device stores it in the configured directory (either Windows Server Active Directory or Azure Active Directory). An associated password expiration time (based on the current policy's password age setting) is also computed and stored in the directory. The device will rotate this password automatically once the password expiration time has been reached.
+After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a random new password that's compliant with the current policy's length and complexity settings. The password is validated against the local device's password complexity policy.
 
-Once the password has been stored in the directory (again, either in Azure Active Directory or Windows Server Active Directory), it may then be accessed by an authorized IT admin. Passwords stored in Azure Active Directory are secured via a role based access control model. Passwords stored in Windows Server Active Directory are secured via access control lists (ACLs), and optionally also via password encryption.
+When the password is validated, the device stores the new password in the configured directory, either Windows Server Active Directory or Azure Active Directory. An associated password expiration time that's based on the current policy's password age setting also is computed and stored in the directory. The device rotates this password automatically when the password expiration time is reached.
 
-The password may also be rotated prior to the normally expected expiration time. Earlier-than-scheduled password rotations can be accomplished via various ways:
+When the password is stored in the relevant directory, an authorized IT admin can access the password. Passwords that are stored in Azure Active Directory are secured via a role-based access control model. Passwords that are stored in Windows Server Active Directory are secured via access control lists (ACLs) and also optionally via password encryption.
 
-- Manual admin intervention on the managed device itself (for example, using the `Reset-LapsPassword` cmdlet).
-- Invoking the ResetPassword Execute action in the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
+You can rotate the password before the normally expected expiration time. Rotate a password before a scheduled expiration through one of the following methods:
+
+- Manual admin intervention on the managed device itself. For example, you can use the the `Reset-LapsPassword` cmdlet.
+- By invoking the ResetPassword Execute action in the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
 - Modification of the password expiration time in the directory (applies to Windows Server Active Directory only).
 - Automatic rotation after the managed account is used to authenticate to the managed device.
 
 ## Background policy processing cycle
 
-Windows LAPS uses a background task that wakes up every hour to process the currently active policy. Note, this task isn't implemented using Windows Task Scheduler. Whenever the background task runs, it executes the following basic flow:
+Windows LAPS uses a background task that wakes up every hour to process the currently active policy. This task isn't implemented by using Windows Task Scheduler.
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-processing-cycle.png" alt-text="Flowchart describing the Windows LAPS background processing cycle.":::
+Whenever the background task runs, it executes the following basic flow:
 
-The obvious key difference between the Azure Active Directory and Windows Server Active Directory flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory. In the Azure Active Directory scenario, the managed device doesn't perform polling of Azure Active Directory instead, the current password expiration time is maintained locally on the device. In the Windows Server Active Directory scenario, the managed device will regularly poll the directory to query the password expiration time and will act once it has expired.
+:::image type="content" source="../laps/media/laps-concepts/laps-concepts-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
 
-Windows LAPS does respond to Group Policy change notifications - so one manual way to kick off the policy processing cycle is by forcing a Group Policy refresh, for example:
+The obvious key difference between the Azure Active Directory and Windows Server Active Directory flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory.
 
-```text
-gpupdate.exe /target:computer /force
-```
+In the Azure Active Directory scenario, the managed device doesn't perform polling of Azure Active Directory. Instead, the current password expiration time is maintained locally on the device.
 
-A better (more scoped) way to kick off the policy processing cycle is by running the `Initiate-LapsPolicyProcessing` cmdlet.
+In the Windows Server Active Directory scenario, the managed device regularly polls the directory to query the password expiration time and acts when it expires.
+
+### Manually start the policy processing cycle
+
+Windows LAPS does respond to Group Policy change notifications. You can manually start the policy processing cycle in two ways:
+
+- Force a Group Policy refresh, like in this example:
+
+   ```powershell
+   gpupdate.exe /target:computer /force
+   ```
+
+- Run the `Initiate-LapsPolicyProcessing` cmdlet. This method is preferred because it's more scoped.
 
 > [!TIP]
 > Legacy LAPS was built as a Group Policy Client Side Extension (CSE). GPO CSEs are loaded and invoked every time there's a Group Policy refresh cycle, therefore the frequency of the legacy LAPS  polling cycle is the same as the frequency of the GP refresh cycle. Windows LAPS is not built as a CSE, so its polling cycle is hardcoded (once per hour) and is unaffected by the Group Policy refresh cycle.
