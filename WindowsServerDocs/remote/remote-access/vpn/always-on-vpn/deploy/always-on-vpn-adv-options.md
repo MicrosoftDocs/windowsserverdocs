@@ -148,7 +148,7 @@ For more information about TPM key attestation in Windows 10, see [TPM Key Attes
 
 - [Integrate RADIUS authentication with Azure Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius): This topic walks you through adding and configuring a RADIUS client authentication with Azure Multi-Factor Authentication Server. RADIUS is a standard protocol to accept authentication requests and to process those requests. The Azure Multi-Factor Authentication Server can act as a RADIUS server.
 
-- [VPN security features](/windows/access-protection/vpn/vpn-security-features): This topic provides you VPN security guidelines for LockDown VPN, Windows Information Protection (WIP) integration with VPN, and traffic filters.
+- [VPN security features](/windows/access-protection/vpn/vpn-security-features): This topic provides you VPN security guidelines for traffic filters, Windows Information Protection (WIP) integration with VPN, and more.
 
 - [VPN auto-triggered profile options](/windows/access-protection/vpn/vpn-auto-trigger-profile): This topic provides you VPN auto-triggered profile options, such as app trigger, name-based trigger, and Always On.
 
