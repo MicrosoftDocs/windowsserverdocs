@@ -1,17 +1,16 @@
 ---
-title: Windows Local Administrator Password Solution (Windows LAPS) get started
-description: Windows Local Administrator Password Solution (Windows LAPS) get started.
+title: Get started with Windows LAPS and Windows Server Active Directory
+description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Getting started with Windows LAPS and Windows Server Active Directory
+# Get started with Windows LAPS and Windows Server Active Directory
 
-> Applies to: Windows 11
-
-Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> [!IMPORTANT]
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Overview
 

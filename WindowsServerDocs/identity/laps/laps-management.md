@@ -9,11 +9,10 @@ ms.topic: article
 
 # Windows LAPS Management
 
-> Applies to: Windows 11
-
 Windows LAPS offers multiple ways to manage the solution. This article provides a brief overview of some of the management mechanisms.
 
-Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> [!IMPORTANT]
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
 ## Overview
 
