@@ -211,16 +211,13 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 > - Azure Active Directory doesn't support expiration of a device's currently stored password via modification of the password expiration timestamp in Azure Active Directory. This is a design difference from the Windows Server Active Directory-based Windows LAPS.
 > - Avoid excessively frequent use of the `Reset-LapsPassword` cmdlet. If detected, the activity might be throttled.
 
-## Next steps
-
-Proceed to the [Windows LAPS Concepts](../laps/laps-concepts.md) article.
-
 ## See also
 
-[Windows LAPS Concepts](../laps/laps-concepts.md)
+- [Windows LAPS concepts](../laps/laps-concepts.md)
+- [Windows LAPS policy aettings](../laps/laps-management-policy-settings.md)
+- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+- [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
-[Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)
+## Next steps
 
-[Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-
-[Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+Proceed to [Windows LAPS concepts](../laps/laps-concepts.md).

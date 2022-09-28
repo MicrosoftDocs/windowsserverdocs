@@ -22,18 +22,18 @@ Let's get started on backing up some passwords to Windows Server Active Director
 
 The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed using the `Update-LapsADSchema` cmdlet and is a one-time operation for the entire forest.
 
-```PowerShell
+```powerahell
 PS C:\> Update-LapsADSchema
 ```
 
 > [!TIP]
-> Pass the -Verbose parameter to see detailed info on what the Update-LapsADSchema cmdlet (or any other cmdlet in the LAPS PowerShell module) is doing.
+> Pass the `-Verbose` parameter to see detailed info on what the Update-LapsADSchema cmdlet (or any other cmdlet in the LAPS PowerShell module) is doing.
 
 ## Grant the managed device permission to update its password
 
 The managed device needs to be granted permission to update its password. This action is performed by setting inheritable permissions on the Organizational Unit that the device is in. The `Set-LapsADComputerSelfPermission` is used for this purpose, for example:
 
-```PowerShell
+```powershell
 PS C:\> Set-LapsADComputerSelfPermission -Identity NewLaps
 Name    DistinguishedName
 ----    -----------------
@@ -44,7 +44,7 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 
 Some users or groups may already be granted Extended Rights permission on the managed device's OU. This permission is problematic because it grants the ability to read confidential attributes (all of the Windows LAPS password attributes are marked as confidential). One way to check who is granted these permissions is by using the `Find-LapsADExtendedRights` cmdlet. For example:
 
-```PowerShell
+```powershell
 PS C:\> Find-LapsADExtendedRights -Identity newlaps
 ObjectDN                  ExtendedRightHolders
 --------                  --------------------
@@ -90,7 +90,7 @@ If there's any delay processing the policy, you can run the `Invoke-LapsPolicyPr
 
 The `Get-LapsADPassword` cmdlet is used to retrieve passwords from Windows Server Active Directory, for example:
 
-```PowerShell
+```powershell
 PS C:\> Get-LapsADPassword -Identity lapsAD2 -AsPlainText
 ComputerName        : LAPSAD2
 DistinguishedName   : CN=LAPSAD2,OU=NewLAPS,DC=laps,DC=com
@@ -113,7 +113,7 @@ In some situations (for example, after a security breach, or for ad-hoc testing 
 
 You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time as stored in Windows Server Active Directory, for example:
 
-```PowerShell
+```powershell
 PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsAD2
 DistinguishedName                           Status
 -----------------                           ------
@@ -124,18 +124,14 @@ The next time the Windows LAPS wakes up to process the current policy, it will s
 
 Finally, you can also use the `Reset-LapsPassword` cmdlet to locally force an immediate rotation of the password.
 
-## Next steps
-
-Proceed to the [Windows LAPS Concepts](../laps/laps-concepts.md) article.
-
 ## See also
 
-[Windows LAPS Concepts](../laps/laps-concepts.md)
+- [Windows LAPS Concepts](../laps/laps-concepts.md)
+- [Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)
+- [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
+- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
 
-[Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)
+## Next steps
 
-[RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
-
-[Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-
-[Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+Proceed to [Windows LAPS concepts](../laps/laps-concepts.md).

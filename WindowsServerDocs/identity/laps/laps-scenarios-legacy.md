@@ -27,23 +27,23 @@ When Windows LAPS has been configured in legacy LAPS emulation mode, Windows LAP
 
 The following requirements and limitations apply to legacy LAPS emulation support:
 
-* Windows LAPS doesn't support adding the legacy LAPS Windows Server Active Directory schema
+- Windows LAPS doesn't support adding the legacy LAPS Windows Server Active Directory schema
 
   You must install legacy LAPS on a domain controller or other management client in order to extend your Windows Server Active Directory schema with the legacy LAPS schema elements (using the `Update-AdmPwdADSchema` cmdlet). The Windows LAPS `Update-LapsADSchema` cmdlet doesn't add the legacy LAPS schema elements.
 
-* Windows LAPS doesn't install the legacy LAPS Group Policy definition files.
+- Windows LAPS doesn't install the legacy LAPS Group Policy definition files.
 
   You must install legacy LAPS on a domain controller or other management client in order to define and administer legacy LAPS group policies.
 
-* Windows LAPS doesn't support managing the legacy LAPS Active Directory ACLs.
+- Windows LAPS doesn't support managing the legacy LAPS Active Directory ACLs.
 
   You must install legacy LAPS on a domain controller or other management client in order to manage the legacy LAPS Windows Server Active Directory ACLS, for example using the `Set-AdmPwdComputerSelfPermissions` cmdlet.
 
-* No other Windows LAPS policies can be applied to the machine.
+- No other Windows LAPS policies can be applied to the machine.
 
   If present, a Windows LAPS policy will always take precedence regardless of application method (for example, via CSP, GPO, or raw registry modification). If a Windows LAPS policy is present, a legacy LAPS policy will always be ignored. For more info, see [Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md).
 
-* Legacy LAPS must not be installed on the machine.
+- Microsoft LAPS must not be installed on the machine.
 
   The reason for this restriction is that otherwise Windows LAPS and legacy LAPS would simultaneously try to manage the same local administrator account. Having two parties manage the same account is a bad idea and also not supported. For the purposes of this emulation feature, legacy LAPS is considered installed if the legacy LAPS Group Policy Client Side Extension is installed. This detection is done by querying the DllName registry value under this registry key:
 
@@ -51,11 +51,11 @@ The following requirements and limitations apply to legacy LAPS emulation suppor
 
   When the DllName value is present, and refers to a file on disk (note: the file isn't loaded or otherwise verified), legacy LAPS is considered to be installed.
 
-* The Windows Server Active Directory Users and Computer management console doesn't support reading or writing the legacy LAPS schema attributes.
+- The Windows Server Active Directory Users and Computer management console doesn't support reading or writing the legacy LAPS schema attributes.
 
-* Windows LAPS will always ignore a legacy LAPS policy when configured on a Windows Server Active Directory domain controller, even if all other conditions are met.
+- Windows LAPS will always ignore a legacy LAPS policy when configured on a Windows Server Active Directory domain controller, even if all other conditions are met.
 
-* All Windows LAPS policy knobs not supported by legacy LAPS will be defaulted to their disabled or default settings.
+- All Windows LAPS policy knobs not supported by legacy LAPS will be defaulted to their disabled or default settings.
 
   This point should be obvious, but just to be sure: for example, when running in legacy LAPS emulation mode you can't configure Windows LAPS to encrypt passwords, or save passwords to Azure Active Directory, etc.
 
@@ -94,6 +94,5 @@ Otherwise, the same events logged by Windows LAPS when running in non-legacy-LAP
 
 This article doesn't go into detail on managing other aspects of legacy LAPS. For full details, see the legacy LAPS documentation available at the download link:
 
-[Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
-
-[Windows LAPS Policy Settings](../laps/laps-management-policy-settings.md)
+- [Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Windows LAPS policy settings](../laps/laps-management-policy-settings.md)

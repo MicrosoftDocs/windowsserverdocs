@@ -68,12 +68,8 @@ Windows LAPS inherits many design concepts from Microsoft LAPS. If you're famili
 
 ## See also
 
-[Windows LAPS concepts](../laps/laps-concepts.md)
-
-[Windows LAPS scenario guide](../laps/laps-scenarios.md)
-
-[Windows LAPS management](../laps/laps-management.md)
-
-[Windows LAPS technical reference](../laps/laps-technical-reference.md)
-
-[Microsoft LAPS (earlier version)](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Windows LAPS concepts](../laps/laps-concepts.md)
+- [Windows LAPS scenario guide](../laps/laps-scenarios.md)
+- [Windows LAPS management](../laps/laps-management.md)
+- [Windows LAPS technical reference](../laps/laps-technical-reference.md)
+- [Microsoft LAPS (earlier version)](https://www.microsoft.com/download/details.aspx?id=46899)

@@ -223,6 +223,5 @@ If not specified, this setting defaults to 3.
 
 ## See also
 
-[Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-
-[Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)

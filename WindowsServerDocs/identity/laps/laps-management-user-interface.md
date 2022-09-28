@@ -1,6 +1,6 @@
 ---
 title: Windows Local Administrator Password Solution (Windows LAPS) user interface
-description: Windows Local Administrator Password Solution (Windows LAPS) user interface.
+description: Understand the Windows Local Administrator Password Solution (Windows LAPS) user interface.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
@@ -22,10 +22,10 @@ The Windows Server Active Directory Users and Computers management snap-in now i
 
 You can use the new property page to perform the following actions:
 
-* View the current password expiration time
-* Modify the password expiration time
-* Expire the password expiration time
-* View the current account name and password
+- View the current password expiration time
+- Modify the password expiration time
+- Expire the password expiration time
+- View the current account name and password
 
 > [!IMPORTANT]
 > The LAPS property page doesn't support view legacy LAPS passwords or password expiration times.

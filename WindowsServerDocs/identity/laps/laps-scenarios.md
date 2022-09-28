@@ -42,8 +42,6 @@ Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-a
 
 When you've decided which scenario is most relevant for you, go to one of the following articles:
 
-[Get started with Windows LAPS and Azure Active Directory](../laps/laps-scenarios-azure-active-directory.md).
-
-[Get started with Windows LAPS and Windows Server Active Directory](../laps/laps-scenarios-windows-server-active-directory.md).
-
-[Get started with Windows LAPS in Microsoft LAPS emulation mode](../laps/laps-scenarios-legacy.md)
+- [Get started with Windows LAPS and Azure Active Directory](../laps/laps-scenarios-azure-active-directory.md).
+- [Get started with Windows LAPS and Windows Server Active Directory](../laps/laps-scenarios-windows-server-active-directory.md).
+- [Get started with Windows LAPS in Microsoft LAPS emulation mode](../laps/laps-scenarios-legacy.md)

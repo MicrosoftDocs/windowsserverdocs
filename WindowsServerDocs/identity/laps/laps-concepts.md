@@ -176,13 +176,13 @@ When Windows LAPS is configured to manage a local administrator account password
 
 When Windows is started in safe mode, DSRM mode, or in any other non-default boot mode, Windows LAPS is disabled and no passwords are backed up.
 
-## Next steps
-
-Now that you understand the basic concepts of the Windows LAPS design, get started by checking out the [scenario guide](..\laps\laps-scenarios.md).
-
 ## See also
 
 - [Windows LAPS scenario guide](../laps/laps-scenarios.md)
 - [Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 - [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
 - [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+
+## Next steps
+
+Now that you understand the basic concepts of the Windows LAPS design, get started by checking out the [scenario guide](..\laps\laps-scenarios.md).
