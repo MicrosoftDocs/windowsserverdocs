@@ -4,17 +4,15 @@ description: Learn how to get started with Windows Local Administrator Password 
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
-ms.topic: article
+ms.topic: conceptual
 ---
 
 # Get started with Windows LAPS and Azure Active Directory
 
-In this article, we're going to go over the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and also how to retrieve them.
+Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Azure Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and how to retrieve them.
 
 > [!IMPORTANT]
 > Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
-
-Let's get started on backing up some passwords to Azure Active Directory.
 
 ## Configure device policy
 
@@ -86,7 +84,7 @@ You might need to configure the repository as Trusted for the command to succeed
 
 `Set-PSRepository PSGallery -InstallationPolicy Trusted`
 
-### Create of an Azure Active Directory registered app to retrieve Azure LAPS passwords
+### Create an Azure Active Directory registered app to retrieve Azure LAPS passwords
 
 The next step is to create an Azure Active Directory application configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
@@ -94,8 +92,8 @@ The app needs to be configured with two permissions: `Devices.Read.All` and eith
 
 > [!IMPORTANT]
 >
-> - `Device.LocalCredentials.Read` is used to grant permissions for reading non-sensitive metadata about persisted LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
-> - `Device.LocalCredentials.ReadAll` is used to grant full permissions for reading everything about persisted LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
+> - Use `Device.LocalCredentials.Read` to grant permissions for reading non-sensitive metadata about persisted LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
+> - Use `Device.LocalCredentials.ReadAll` to grant full permissions for reading everything about persisted LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
 
 #### Manual consent to Device.LocalCredentials.\* permissions
 

@@ -39,7 +39,7 @@ Name    DistinguishedName
 NewLAPS OU=NewLAPS,DC=laps,DC=com
 ```
 
-## Remove Extended Rights permissions if necessary
+## Remove Extended Rights permissions
 
 Some users or groups might already be granted Extended Rights permission on the managed device's OU. This permission is problematic because it grants the ability to read confidential attributes (all of the Windows LAPS password attributes are marked as confidential). One way to check to see who is granted these permissions is by using the `Find-LapsADExtendedRights` cmdlet. For example:
 
@@ -59,7 +59,7 @@ In the output in this example, only trusted entities (SYSTEM and Domain Admins) 
 
 Complete a few steps to configure the device policy.
 
-### Choose policy deployment mechanism
+### Choose a policy deployment mechanism
 
 The first step is to choose how you're going to apply policy to your devices.
 

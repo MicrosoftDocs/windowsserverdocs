@@ -4,7 +4,7 @@ description: Learn how to use the LAPS properties dialog to configure Windows Lo
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
-ms.topic: article
+ms.topic: conceptual
 ---
 
 # Configure Windows LAPS for Windows Server Active Directory
