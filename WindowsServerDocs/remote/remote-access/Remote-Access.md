@@ -11,11 +11,12 @@ ms.date: 09/28/2022
 
 # Remote access role
 
-When you install the Remote Access role with the *Add Roles and Features Wizard* or Windows PowerShell, you can choose to install one or more of the following three role services:
+When you install the Remote Access role with the *Add Roles and Features Wizard* or Windows PowerShell, you can choose to install one or more of the following three role services, either individually or on the same server:
 
 - [Direct Access and VPN (RAS) service](#directaccess-and-vpn-service)
 - [Routing service](#routing-service)
-- [Web Application Proxy service](#web-application-proxy-service)
+- [Web Application Proxy service](#web-application-proxy-service)hz
+
 
 >[!IMPORTANT]
 >Don't attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported. You can't use Remote Access in an Azure VM to deploy VPN, DirectAccess, or any other Remote Access feature in Windows Server 2016 or earlier versions of Windows Server. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
@@ -66,4 +67,14 @@ Install-RemoteAccess -VpnType SstpProxy
 
 For more information, see [Web Application Proxy](./web-application-proxy/web-application-proxy-windows-server.md).
 
-For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).
+For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).f
+
+
+# Next Steps
+
+- [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
+- [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
+- [RAS Gateway](ras-gateway/RAS-Gateway.md)
+- [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
+- [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
+- [Virtual Private Networking (VPN)](vpn/vpn-top.md)
