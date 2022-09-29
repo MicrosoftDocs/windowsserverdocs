@@ -69,8 +69,7 @@ For more information, see [Web Application Proxy](./web-application-proxy/web-ap
 
 For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).f
 
-
-# Next Steps
+## Next Steps
 
 - [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
 - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)

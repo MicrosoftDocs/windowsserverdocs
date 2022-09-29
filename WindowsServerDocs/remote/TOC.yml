@@ -232,16 +232,6 @@
       items:
       - name: About Remote Access role services
         href: remote-access/remote-Access.md
-      - name: DirectAccess and VPN
-        items:
-        - name: What is VPN?
-          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md
-        - name: What is DirectAccess?
-          href: remote-access/directaccess/directaccess.md
-        - name: DirectAccess Unsupported configurations
-          href: remote-access/directaccess/directAccess-Unsupported-Configurations.md
-        - name: Direct Access Capacity Planning
-          href: remote-access/directaccess/directAccess-Capacity-Planning.md
     - name: Tutorials
       items:
       - name: Always on VPN
@@ -502,10 +492,12 @@
         items:
         - name: About DirectAccess
           href: remote-access/directaccess/directAccess.md
-        - name: DirectAccess Deployment paths in Windows Server
-          href: remote-access/directaccess/directAccess-Deployment-paths-in-Windows-Server.md
         - name: Prerequisites for Deploying DirectAccess
           href: remote-access/directaccess/Prerequisites-for-Deploying-directAccess.md
+        - name: DirectAccess Unsupported configurations
+          href: remote-access/directaccess/directAccess-Unsupported-Configurations.md
+        - name: Direct Access Capacity Planning
+          href: remote-access/directaccess/directAccess-Capacity-Planning.md
       - name: RAS Gateway
         items:
         - name: About RAS Gateway 
