@@ -249,16 +249,6 @@ Get-ClusterAvailableDisk -All | Add-ClusterDisk
 
 This will not work with node local storage. You can use Storage Replica to replicate a stretch cluster between two total nodes, **each one using its own set of shared storage.**
 
-## The SMB Bandwidth limiter fails to throttle Storage Replica bandwidth
-
-When specifying a bandwidth limit to Storage Replica, the limit is ignored and full bandwidth used. For example:
-
-```
-Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB
-```
-
-This issue occurs because of an interoperability issue between Storage Replica and SMB.
-
 ## Event 1241 warning repeated during initial sync
 
 When specifying a replication partnership is asynchronous, the source computer repeatedly logs warning event 1241 in the Storage Replica Admin channel. For example:
