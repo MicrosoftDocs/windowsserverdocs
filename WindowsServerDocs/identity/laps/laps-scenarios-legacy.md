@@ -14,12 +14,12 @@ You can set up Windows LAPS to honor legacy Microsoft LAPS Group Policy settings
 > [!IMPORTANT]
 > Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
-> [!IMPORTANT]
+> [!TIP]
 > Like Microsoft LAPS, emulation mode supports storage of passwords in Windows Server Active Directory only in clear-text form. To increase security, we recommend that you migrate to using Windows LAPS natively so that you can take advantage of password encryption.
 
 ## Setup and configuration
 
-When you set up Windows LAPS in legacy Microsoft LAPS emulation mode, Windows LAPS assumes that your Windows Server Active Directory environment is already configured and enabled to run legacy Microsoft LAPS. For more information about legacy Microsoft LAPS configuration, see the legacy Microsoft LAPS documentation.
+When you configure Windows LAPS in legacy Microsoft LAPS emulation mode, Windows LAPS assumes that your Windows Server Active Directory environment is set up to run legacy Microsoft LAPS. For more information about legacy Microsoft LAPS configuration, see the legacy Microsoft LAPS documentation.
 
 ## Requirements and limitations
 
@@ -43,7 +43,7 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
 
 - Legacy Microsoft LAPS must not be installed on the machine.
 
-  This restriction avoids a scenario in which Windows LAPS and legacy Microsoft LAPS simultaneously try to manage the same local administrator account. Having two entities manage the same account is not supported and a security risk.
+  This restriction avoids a scenario in which Windows LAPS and legacy Microsoft LAPS simultaneously try to manage the same local administrator account. Having two entities manage the same account is a security risk and isn't supported.
   
   For the emulation feature, legacy Microsoft LAPS is considered installed if the legacy Microsoft LAPS Group Policy Client Side Extension is installed. To detect the extension, query the `DllName` registry value under this registry key:
 
@@ -59,7 +59,7 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
 
   For example, when you run Windows LAPS in legacy Microsoft LAPS emulation mode, you can't configure Windows LAPS to do tasks like encrypt passwords or save passwords to Azure Active Directory.
 
-If all these constraints are satisfied, Windows LAPS honors legacy Microsoft LAPS Group Policy settings. The specified managed local administrator account is managed identically to how it is managed in legacy Microsoft LAPS.
+If all these constraints are satisfied, Windows LAPS honors legacy Microsoft LAPS Group Policy settings. The specified managed local administrator account is managed identically to how it's managed in legacy Microsoft LAPS.
 
 ## Limited administrative support
 

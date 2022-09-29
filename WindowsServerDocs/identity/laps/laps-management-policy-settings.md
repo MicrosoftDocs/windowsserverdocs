@@ -170,7 +170,7 @@ If specified, the specified user or group can decrypt the password that's stored
 
 ### ADEncryptedPasswordHistorySize
 
-Use this setting to configure how many previous encrypted passwords is remembered in Active Directory. Supported values are:
+Use this setting to configure how many previous encrypted passwords are remembered in Active Directory. Supported values are:
 
 - **Minimum** : 0 passwords
 - **Maximum**: 12 passwords

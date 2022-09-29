@@ -57,7 +57,7 @@ When the password is stored in the relevant directory, an authorized IT admin ca
 
 You can rotate the password before the normally expected expiration time. Rotate a password before a scheduled expiration through one of the following methods:
 
-- Manual admin intervention on the managed device itself. For example, you can use the the `Reset-LapsPassword` cmdlet.
+- Manual admin intervention on the managed device itself. For example, you can use the `Reset-LapsPassword` cmdlet.
 - By invoking the ResetPassword Execute action in the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
 - Modification of the password expiration time in the directory (applies to Windows Server Active Directory only).
 - Automatic rotation after the managed account is used to authenticate to the managed device.

@@ -20,7 +20,7 @@ Using Windows LAPS to regularly rotate and manage local administrator account pa
 
 - Protection against pass-the-hash and lateral-traversal attacks.
 - Improved security for remote help desk scenarios.
-- Ability to log in to and recover devices that are otherwise inaccessible.
+- Ability to sign in to and recover devices that are otherwise inaccessible.
 - Fine-grained security model (access control lists and optional password encryption) for securing passwords stored in Windows Server Active Directory.
 - Supports the Azure role-based access control model for securing passwords stored in Azure Active Directory.
 

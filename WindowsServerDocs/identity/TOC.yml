@@ -996,7 +996,7 @@
       href: software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md
     - name: Troubleshoot Software Restriction Policies
       href: software-restriction-policies/troubleshoot-software-restriction-policies.md
-  - name: Windows Local Administrator Password Solution (Windows LAPS)
+  - name: Windows LAPS
     items:
     - name: What is Windows LAPS?
       href: laps/laps-overview.md
@@ -1004,21 +1004,21 @@
       href: laps/laps-concepts.md
     - name: Windows LAPS scenarios
       items:
-      - name: Get started with Windows LAPS and Azure Active Directory
+      - name: Windows LAPS and Azure Active Directory
         href: laps/laps-scenarios-azure-active-directory.md
-      - name: Get started with Windows LAPS and Windows Server Active Directory
+      - name: Windows LAPS and Windows Server Active Directory
         href: laps/laps-scenarios-windows-server-active-directory.md
-      - name: Get started with Windows LAPS in legacy Microsoft LAPS emulation mode
+      - name: Windows LAPS in legacy Microsoft LAPS emulation mode
         href: laps/laps-scenarios-legacy.md
     - name: Manage Windows LAPS
       items:
-      - name: Configure policy settings for Windows LAPS
+      - name: Configure policy settings
         href: laps/laps-management-policy-settings.md
       - name: Use Windows LAPS PowerShell cmdlets
         href: laps/laps-management-powershell.md
       - name: Use Windows LAPS event logs
         href: laps/laps-management-event-log.md
-      - name: Configure Windows LAPS for Windows Server Active Directory
+      - name: Configure Windows LAPS
         href: laps/laps-management-user-interface.md
     - name: Schema extensions for Windows LAPS
       href: laps/laps-technical-reference.md
