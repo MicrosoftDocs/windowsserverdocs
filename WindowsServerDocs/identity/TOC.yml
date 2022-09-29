@@ -996,7 +996,7 @@
       href: software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md
     - name: Troubleshoot Software Restriction Policies
       href: software-restriction-policies/troubleshoot-software-restriction-policies.md
-  - name: Windows LAPS
+  - name: Windows Local Administrator Password Solution
     items:
     - name: What is Windows LAPS?
       href: laps/laps-overview.md
