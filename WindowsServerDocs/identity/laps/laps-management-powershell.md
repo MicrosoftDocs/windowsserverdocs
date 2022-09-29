@@ -1,15 +1,15 @@
 ---
-title: Windows Local Administrator Password Solution (Windows LAPS) PowerShell cmdlets
-description: Learn about the Windows Local Administrator Password Solution (Windows LAPS) PowerShell cmdlets.
+title: Use Windows LAPS PowerShell cmdlets
+description: Learn about Windows Local Administrator Password Solution (Windows LAPS) PowerShell cmdlets and how to use them.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows LAPS PowerShell cmdlets
+# Use Windows LAPS PowerShell cmdlets
 
-Windows LAPS includes a new PowerShell module named LAPS. This article provides an overview of the various cmdlets in this module.
+Windows LAPS includes a new PowerShell module named LAPS. Understand the cmdlets in this module and how to use them.
 
 > [!IMPORTANT]
 > Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
@@ -32,12 +32,11 @@ Windows LAPS includes a new PowerShell module named LAPS. This article provides 
 |`Update-LapsADSchema`|Use to extend the Windows Server Active Directory schema with the Windows LAPS schema attributes.|
 
 > [!TIP]
-> The `Invoke-LapsPolicyProcessing` and `Reset-LapsPassword` cmdlets aren't affected by whether the password currently is backed up to Azure Active Directory or Windows Server Active Directory. In this scenario, both options are supported.
+>
+> - The `Invoke-LapsPolicyProcessing` and `Reset-LapsPassword` cmdlets aren't affected by whether the password currently is backed up to Azure Active Directory or Windows Server Active Directory. In this scenario, both options are supported.
+>- All cmdlets in the Windows LAPS PowerShell module support detailed logging when you use the  `-Verbose` parameter.
 
-> [!TIP]
-> All cmdlets in the Windows LAPS PowerShell module support detailed logging when you use the  `-Verbose` parameter.
-
-## Windows LAPS PowerShell vs. Microsoft LAPS PowerShell
+## Windows LAPS PowerShell vs. legacy Microsoft LAPS PowerShell
 
 Microsoft LAPS included a PowerShell module named `AdmPwd.PS`. The two modules have many functional similarities, but they also have many differences. This table provides a mapping between the two modules:
 
@@ -56,9 +55,10 @@ Microsoft LAPS included a PowerShell module named `AdmPwd.PS`. The two modules h
 |`Set-LapsADResetPasswordPermission`|`Set-AdmPwdResetPasswordPermission`|
 |`Update-LapsADSchema`|`Update-AdmPwdADSchema`|
 
-In addition to naming-related changes, the Windows LAPS Windows Server Active Directory-related cmdlets operate over an entirely different set of schema extensions. For more information, see [Windows Server Active Directory schema extensions](../laps/laps-technical-reference.md#windows-server-active-directory-schema-extensions).
+In addition to naming-related changes, the Windows LAPS Windows Server Active Directory-related cmdlets operate over an entirely different set of schema extensions. For more information, see [Windows Server Active Directory schema extensions](laps-technical-reference.md#schema-extensions).
 
-## See also
+## Next steps
 
-- [Get started with Windows LAPS in Microsoft LAPS emulation mode](..\laps\laps-scenarios-legacy.md)
-- [Manage Windows LAPS](..\laps\laps-management.md)
+- Review [Windows LAPS concepts](../laps/laps-concepts.md).
+- [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
+- Learn how to [use Windows LAPS event logs](laps-management-event-log.md).

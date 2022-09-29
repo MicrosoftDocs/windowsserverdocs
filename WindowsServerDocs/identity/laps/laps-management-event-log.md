@@ -1,5 +1,5 @@
 ---
-title: Windows Local Administrator Password Solution (Windows LAPS) event log
+title: Use Windows LAPS event logs
 description: Learn about key events in Windows Local Administrator Password Solution (Windows LAPS) and how to view the logs.
 author: jay98014
 ms.author: jsimmons
@@ -7,18 +7,18 @@ ms.date: 07/04/2022
 ms.topic: conceptual
 ---
 
-# Windows LAPS event log
+# Use Windows LAPS event logs
 
 Windows Local Administrator Password Solution (Windows LAPS) has a dedicated event log channel. All Windows LAPS operations are tracked with rich eventing. Learn about key events and how to view the log.
 
 > [!IMPORTANT]
 > Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
-## How to view the event log
+## View the event log
 
 To view the Windows LAPS event log channel, in Windows Server Event Viewer, go to **Applications and Services** > **Logs** > **Microsoft** > **Windows** > **LAPS** > **Operational**.
 
-:::image type="content" source="../laps/media/laps-management-event-log/laps-management-event-log-event-log.png" alt-text="Screenshot of the event log, showing a Windows LAPS policy processing started event log message.":::
+:::image type="content" source="../laps/media/laps-management-event-log/laps-management-event-log-event-log.png" alt-text="Screenshot of the event log and a Windows LAPS policy processing started event log message.":::
 
 ## Key events
 
@@ -187,7 +187,7 @@ Account name: ContosoLocalAdminAccount
 Account RID: 1087
 ```
 
-If the password rotation fails, a 10043 event will be logged. Here's an example of a 10043 event:
+If the password rotation fails, a 10043 event is logged. Here's an example of a 10043 event:
 
 ```output
 LAPS failed to reset the password for the currently managed account. The password is considered expired due to an authentication event. LAPS will continue retrying the password reset operation until it succeeds.
@@ -198,6 +198,7 @@ Password reset retry count: 1
 Error code: 80070032
 ```
 
-### See also
+## Next steps
 
-[Windows LAPS management](../laps/laps-management.md)
+- [Configure Windows LAPS for Windows Server Active Directory](laps-management-user-interface.md).
+- Review [Windows LAPS concepts](laps-concepts.md).

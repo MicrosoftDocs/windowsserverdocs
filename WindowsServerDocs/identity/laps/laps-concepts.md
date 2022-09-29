@@ -1,5 +1,5 @@
 ---
-title: Windows Local Administrator Password Solution (Windows LAPS) concepts
+title: Key concepts in Windows LAPS
 description: Review basic design and security concepts for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
 ms.author: jsimmons
@@ -7,7 +7,7 @@ ms.date: 07/04/2022
 ms.topic: conceptual
 ---
 
-# Windows LAPS concepts
+# Key concepts in Windows LAPS
 
 Learn about the basic design and security concepts for Windows Local Administrator Password Solution (Windows LAPS), including:
 
@@ -89,7 +89,7 @@ Windows LAPS does respond to Group Policy change notifications. You can manually
 - Run the `Initiate-LapsPolicyProcessing` cmdlet. This method is preferred because it's more scoped.
 
 > [!TIP]
-> The earlier released Microsoft LAPS was built as a Group Policy Client Side Extension (CSE). GPO CSEs are loaded and invoked with every Group Policy refresh cycle. The frequency of the Microsoft LAPS polling cycle is the same as the frequency of the Group Policy refresh cycle. Windows LAPS is not built as a CSE, so its polling cycle is hard-coded (once per hour) and unaffected by the Group Policy refresh cycle.
+> The earlier released Microsoft LAPS (legacy Microsoft LAPS) was built as a Group Policy (GPO) Client Side Extension (CSE). GPO CSEs are loaded and invoked with every Group Policy refresh cycle. The frequency of the legacy Microsoft LAPS polling cycle is the same as the frequency of the Group Policy refresh cycle. Windows LAPS is not built as a CSE, so its polling cycle is hard-coded (once per hour) and unaffected by the Group Policy refresh cycle.
 
 ## Azure Active Directory
 
@@ -101,7 +101,7 @@ By default, retrieval of the clear-text password is limited to members of the Gl
 
 The following sections give you important information about using Windows LAPS with Windows Server Active Directory.
 
-### Windows Server Active Directory password security
+### Password security
 
 When you back up passwords to Windows Server Active Directory, managed local account passwords are stored on the computer object. Windows LAPS secures these passwords by using two mechanisms:
 
@@ -132,7 +132,7 @@ The inner circle (red) applies only when password encryption is enabled. It's co
 > [!IMPORTANT]
 > Consider customizing your security layers to match the sensitivity of the managed machines in your organization. For example, it might be acceptable for front-line IT worker devices to be accessible to help desk administrators, but you likely will want to set tighter boundaries for corporate executive laptops.
 
-### Windows Server Active Directory password encryption
+### Password encryption
 
 The Windows LAPS password encryption feature is based on the [Cryptography API: Next Generation Data Protection API (CNG DPAPI)](/windows/win32/seccng/cng-dpapi). CNG DPAPI supports multiple encryption modes, but Windows LAPS supports encrypting passwords against only a single Windows Server Active Directory security principal (user or group). The underlying encryption is based on Advanced Encryption Standard 256-bit key (AES-256) encryption.
 
@@ -143,7 +143,7 @@ You can use the ADPasswordEncryptionPrincipal policy setting to specify a specif
 > - Windows LAPS supports encrypting passwords against only a single security principal. CNG DPAPI does support encryption against multiple security principals, but this mode isn't supported by Windows LAPS because it causes size bloat of the encrypted password buffers. If you need to grant decryption permissions to multiple security principals, to resolve the constraint, you can create a wrapper group that has all the relevant security principals as members.
 > - The security principal that's authorized to decrypt the password can't be changed after a password is encrypted.
 
-### Windows Server Active Directory encrypted password history
+### Encrypted password history
 
 Windows LAPS supports a password history feature for Windows Server Active Directory domain-joined clients and domain controllers. Password history is supported only when password encryption is enabled. Password history isn't supported if you store clear-text passwords in Windows Server Active Directory.
 
@@ -155,7 +155,7 @@ When encrypted password history is enabled and it's time to rotate the password,
 > [!IMPORTANT]
 > We recommend that you never grant permissions to a managed device to decrypt an encrypted password for any device, including the device itself.
 
-### Windows Server Active Directory DSRM password support
+### DSRM password support
 
 Windows LAPS supports backing up the DSRM account password on Windows Server domain controllers. DSRM account passwords can be backed up only to Windows Server Active Directory and password encryption is enabled. (Backing up DSRM passwords to Azure Active Directory isn't supported.) Otherwise this feature works almost identically to how encrypted password support works for Windows Server Active Directory-joined clients.
 
@@ -178,11 +178,14 @@ When Windows is started in safe mode, DSRM mode, or in any other non-default boo
 
 ## See also
 
-- [Windows LAPS scenario guide](../laps/laps-scenarios.md)
-- [Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 - [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
 - [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
 
 ## Next steps
 
-Now that you understand the basic concepts of the Windows LAPS design, get started by checking out the [scenario guide](..\laps\laps-scenarios.md).
+Now that you understand the basic concepts of the Windows LAPS design, get started with the following scenarios:
+
+- [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
+- [Get started with Windows LAPS for Azure Active Directory](laps-scenarios-azure-active-directory.md)
+- [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)

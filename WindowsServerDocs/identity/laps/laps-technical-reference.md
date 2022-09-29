@@ -1,36 +1,36 @@
 ---
-title: Windows Local Administrator Password Solution (Windows LAPS) technical reference
-description: Review a technical reference for Windows Local Administrator Password Solution (Windows LAPS), including schema extensions and extended rights for Windows Server Active Directory.
+title: Windows LAPS schema and rights extension for Windows Server Active Directory
+description: Get details about schema and rights extension to deploy and manage Windows Local Administrator Password Solution (Windows LAPS) in Windows Server Active Directory.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
-ms.topic: article
+ms.topic: conceptual
 ---
 
-# Windows LAPS technical reference
+# Windows LAPS schema extensions for Windows Server Active Directory
 
-This article provides technical details that might help you deploy or manage Windows LAPS.
+Use detailed information about schema extensions and extended rights to help you deploy or manage Windows Local Administrator Password Solution (Windows LAPS) in your Windows Server Active Directory deployment.
 
 > [!IMPORTANT]
 > Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
-## Windows Server Active Directory schema extensions
+## Schema extensions
 
-Windows LAPS offers new schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the Update-LapsADSchema PowerShell cmdlet.
+Windows LAPS offers new schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema PowerShell` cmdlet.
 
-### Windows Server Active Directory schema attributes
+## Schema attributes
 
-Windows LAPS uses many new schema attributes that are stored on the computer object in Windows Server Active Directory for a managed device. The Update-LapsADSchema cmdlet adds these new schema attributes to the directory and to the `mayContain` list on the computer schema class.
+Windows LAPS uses many new schema attributes that are stored on the computer object in Windows Server Active Directory for a managed device. The `Update-LapsADSchema` cmdlet adds these new schema attributes to the directory and to the `mayContain` list on the computer schema class.
 
 > [!TIP]
 > Many of the following attributes specify a `SearchFlags` value of `904`. For easy reference, this value is composed of the following bit flags:
 >
-> * `fRODCFilteredAttribute`
-> * `fNEVERVALUEAUDIT`
-> * `fCONFIDENTIAL`
-> * `fPRESERVEONDELETE`
+> - `fRODCFilteredAttribute`
+> - `fNEVERVALUEAUDIT`
+> - `fCONFIDENTIAL`
+> - `fPRESERVEONDELETE`
 
-#### msLAPS-PasswordExpirationTime
+### msLAPS-PasswordExpirationTime
 
 This attribute contains a 64-bit integer that specifies the currently scheduled password expiration time in UTC.
 
@@ -46,7 +46,7 @@ SearchFlags: 0
 AttributeSecurityGuid: <not set>
 ```
 
-#### msLAPS-Password
+### msLAPS-Password
 
 This attribute contains a Unicode string that specifies the clear-text version of the current password and other information.
 
@@ -70,11 +70,11 @@ Each name-value pair in the JSON string has a specific meaning:
 
 |Name|Value|
 |---|---|
-|`"n"`|Contains the name of the managed local administrator account.|
-|`"t"`|Contains the UTC password update time represented as a 64-bit hexadecimal number.|
-|`"p"`|Contains the clear-text password.|
+|`"n"`|Contains the name of the managed local administrator account|
+|`"t"`|Contains the UTC password update time represented as a 64-bit hexadecimal number|
+|`"p"`|Contains the clear-text password|
 
-#### msLAPS-EncryptedPassword
+### msLAPS-EncryptedPassword
 
 This attribute contains a byte string that contains an encrypted version of the current password.
 
@@ -90,7 +90,7 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
-#### msLAPS-EncryptedPasswordHistory
+### msLAPS-EncryptedPasswordHistory
 
 This attribute contains a multi-valued byte string. Each value contains an encrypted version of an earlier password.
 
@@ -106,9 +106,9 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
-#### msLAPS-EncryptedDSRMPassword
+### msLAPS-EncryptedDSRMPassword
 
-This attribute contains a byte string that contains an encrypted version of the current DSRM account password.
+This attribute contains a byte string that contains an encrypted version of the current Directory Services Restore Mode (DSRM) account password.
 
 ```powershell
 Name: ms-LAPS-EncryptedPassword
@@ -122,7 +122,7 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
-#### msLAPS-EncryptedDSRMPasswordHistory
+### msLAPS-EncryptedDSRMPasswordHistory
 
 This attribute contains a multi-valued byte string. Each value contains an encrypted version of an earlier DSRM account password.
 
@@ -138,11 +138,9 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
-### Windows Server Active Directory extended rights
+## Extended rights
 
-Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory.
-
-You can use the `ms-LAPS-Encrypted-Password-Attributes` extended right to grant managed devices SELF permission to read and write the various encrypted password attributes described in this article.
+Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permission to read and write the encrypted password attributes described in the preceding section.
 
 ```powershell
 Name: ms-LAPS-Encrypted-Password-Attributes
@@ -150,11 +148,11 @@ Rights guid: f3531ec6-6330-4f8e-8d39-7a671fbac605
 Valid accesses: 48 (RIGHT_DS_READ_PROPERTY | RIGHT_DS_WRITE_PROPERTY)
 ```
 
-### Windows LAPS schema vs. Microsoft LAPS schema
+## Windows LAPS schema vs. Microsoft LAPS schema
 
-Microsoft LAPS also requires that you extend the Windows Server Active Directory schema. The following table shows a logical mapping between Windows LAPS schema elements and Microsoft LAPS schema elements:
+Like Windows LAPS, legacy Microsoft LAPS also requires you to use schema extensions for a Windows Server Active Directory deployment. To help you plan a migration from legacy Microsoft LAPS to Windows LAPS, the following table shows a logical mapping of schema extension elements:
 
-|Windows LAPS schema element|Microsoft LAPS schema element|
+|Windows LAPS schema element|Legacy Microsoft LAPS schema element|
 |---|---|
 |`msLAPS-PasswordExpirationTime`|`ms-Mcs-AdmPwdExpirationTime`|
 |`msLAPS-Password`|`ms-Mcs-AdmPwd`|

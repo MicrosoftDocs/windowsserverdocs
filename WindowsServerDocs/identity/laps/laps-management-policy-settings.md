@@ -1,13 +1,13 @@
 ---
-title: Windows Local Administrator Password Solution (Windows LAPS) policy settings
-description: Learn about Windows Local Administrator Password Solution (Windows LAPS) policy settings.
+title: Configure policy settings for Windows LAPS
+description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
-ms.topic: article
+ms.topic: conceptual
 ---
 
-# Windows LAPS policy settings
+# Configure policy settings for Windows LAPS
 
 Windows Local Administrator Password Solution (Windows LAPS) supports various settings you can control by using policy. Learn about the settings and how to administer them.
 
@@ -23,7 +23,7 @@ Although we don't recommend it, you can administer a device by using multiple po
 |LAPS CSP|HKLM\Software\Microsoft\Policies\LAPS|
 |LAPS Group Policy|HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\LAPS|
 |LAPS Local Configuration|HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config|
-|Microsoft LAPS|HKLM\Software\Policies\Microsoft Services\AdmPwd|
+|Legacy Microsoft LAPS|HKLM\Software\Policies\Microsoft Services\AdmPwd|
 
 Windows LAPS queries all known registry key policy roots starting at the top and moving down. If no settings are found under a specific root, that root is skipped and the query proceeds to the next root. When a root that has at least one explicitly defined setting is found, that root is used as the active policy. If the chosen root is missing any settings, the settings are assigned their default values.
 
@@ -56,17 +56,17 @@ The following table specifies which settings are applicable on devices that have
 
 You can administer almost all settings by using any policy management mechanism. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) has two exceptions to this rule. The Windows LAPS CSP supports two settings that aren't in the preceding table: ResetPassword and ResetPasswordStatus. The Windows LAPS CSP doesn't support the ADBackupDSRMPassword setting (domain controllers are never managed via CSP). For more information, see the LAPS CSP documentation for more info.
 
-## LAPS Group Policy
+## Windows LAPS Group Policy
 
 Windows LAPS includes a new Group Policy Object that you can use to administer policy settings on Active Directory domain-joined devices. To access the Windows LAPS Group Policy, in Group Policy Management Editor, go to **Computer Configuration** > **Administrative Templates** > **System** > **LAPS**. The following figure shows an example:
 
 :::image type="content" source="../laps/media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="Screenshot of the Group Policy Management Editor that shows the Windows LAPS policy settings.":::
 
-## LAPS CSP
+## Windows LAPS CSP
 
 Windows LAPS includes a new CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
-## Policy settings
+## Apply policy settings
 
 This section how to use and apply various policy settings for Windows LAPS.
 
@@ -114,7 +114,7 @@ Use this setting to configure the required password complexity of the managed lo
 If not specified, this setting defaults to 4.
 
 > [!IMPORTANT]
-> Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with earlier versions of Microsoft LAPS. We recommend that you always configure this setting to 4.
+> Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4.
 
 ### PasswordExpirationProtectionEnabled
 
@@ -125,7 +125,7 @@ Supported values are either 1 (True) or 0 (False).
 If not specified, this setting defaults to 1 (True).
 
 > [!TIP]
-> In Microsoft LAPS mode, this setting defaults to False for backward compatibility.
+> In legacy Microsoft LAPS mode, this setting defaults to False for backward compatibility.
 
 ### AdministratorAccountName
 
@@ -225,3 +225,9 @@ If not specified, this setting defaults to 3.
 
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+
+## Next steps
+
+- [Use event logs for Windows LAPS](laps-management-event-log.md)
+- [Use PowerShell for Windows LAPS](laps-management-powershell.md)
+- [Schema extensions for Windows LAPS in Windows Server Active Directory](laps-technical-reference.md)

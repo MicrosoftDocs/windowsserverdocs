@@ -9806,6 +9806,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/identity/laps/laps.md",
+      "redirect_url": "/windows-server/identity/laps/laps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-management.md",
+      "redirect_url": "/windows-server/identity/laps/laps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-scenarios.md",
+      "redirect_url": "/windows-server/identity/laps/overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/multipoint-services/manage-client-access-licenses-with-multipoint-services.md",
       "redirect_url": "/windows-server/remote/multipoint-services/manage-client-access-licenses",
       "redirect_document_id": false

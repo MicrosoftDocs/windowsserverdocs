@@ -1,5 +1,5 @@
 ---
-title: Windows Local Administrator Password Solution (Windows LAPS) overview
+title: Windows LAPS overview
 description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
 ms.author: jsimmons
@@ -30,20 +30,40 @@ Windows LAPS is supported on desktop Windows, Windows Server, and Windows Server
 
 As noted earlier, Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
 
-## Back up passwords in Azure Active Directory or Windows Server Active Directory
+## Key Windows LAPS scenarios
 
-Windows LAPS supports backing up the managed account password to either Azure Active Directory or Windows Server Active Directory. A hybrid-joined device (joined to both Azure Active Directory and Windows Server Active Directory) can be configured to back up passwords to either directory. However, backing up passwords to both directories from a single device isn't supported.
+You can use Windows LAPS for several primary scenarios:
+
+- Back up local admin account passwords to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) (for Azure Active Directory-joined devices)
+
+- Back up local admin account passwords to Windows Server Active Directory (for Windows Server Active Directory-joined clients and servers)
+
+- Back up Directory Services Repair Mode (DSRM) account passwords to Windows Server Active Directory (for Windows Server Active Directory domain controllers)
+
+- Back up local admin account passwords to Windows Server Active Directory by using legacy Microsoft LAPS.
+
+In each scenario, you can apply different policy settings.
 
 > [!IMPORTANT]
 > Windows LAPS doesn't support Azure Active Directory workplace-joined clients.
+
+## Understand device join state restrictions
+
+Which directory a device is joined to affects how you can use Windows LAPS. Keep this in mind as you plan your usage scenario.
+
+Devices that are joined only to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) can back up passwords only to Azure Active Directory.
+
+Devices that are joined only to Windows Server Active Directory can back up passwords only to Windows Server Active Directory.
+
+Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory) can back up their passwords to either Azure Active Directory or Windows Server Active Directory. You can't back up passwords to both directories.
 
 ## Set Windows LAPS policy
 
 You have multiple options to manage your Windows LAPS policy:
 
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-- [Windows LAPS Group Policy](../laps/laps-management-policy-settings.md#laps-group-policy)
-- [Microsoft LAPS (earlier version)](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy)
+- [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 
 ## Manage and monitor Windows LAPS
 
@@ -55,21 +75,20 @@ You also have various options to manage and monitor Windows LAPS. Windows option
 
 Azure-based monitoring and reporting solutions are available when you back up passwords to Azure Active Directory.
 
-For more information, see [Manage Windows LAPS](../laps/laps-management.md).
+## Windows LAPS vs. legacy Microsoft LAPS
 
-## Windows LAPS vs. Microsoft LAPS
+You can still download an earlier version of Local Administrator Password Solution, [legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
 
-You can still download an earlier version of Local Administrator Password Solution, named [Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
-
-Windows LAPS inherits many design concepts from Microsoft LAPS. If you're familiar with Microsoft LAPS, many Windows LAPS features will look familiar to you. The first key difference is that Windows LAPS is an entirely separate, native-to-Windows implementation. Windows LAPS also adds many new features that weren't present in Microsoft LAPS. Examples include the ability to back up passwords to Azure Active Directory, the ability to encrypt passwords in Windows Server Active Directory, and password history support.
+Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features will look familiar to you. The first key difference is that Windows LAPS is an entirely separate, native-to-Windows implementation. Windows LAPS also adds many new features that weren't present in legacy Microsoft LAPS. Examples include the ability to back up passwords to Azure Active Directory, the ability to encrypt passwords in Windows Server Active Directory, and password history support.
 
 > [!IMPORTANT]
-> Windows LAPS doesn't require installation of Microsoft LAPS. You can fully deploy and use all Windows LAPS features with no need to ever install or even refer to Microsoft LAPS. However Windows LAPS does support a Microsoft LAPS "emulation mode" which will be discussed later.
+> Windows LAPS doesn't require installation of legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features with no need to ever install or even refer to legacy Microsoft LAPS. However Windows LAPS does support [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
 
 ## See also
 
-- [Windows LAPS concepts](../laps/laps-concepts.md)
-- [Windows LAPS scenario guide](../laps/laps-scenarios.md)
-- [Windows LAPS management](../laps/laps-management.md)
-- [Windows LAPS technical reference](../laps/laps-technical-reference.md)
-- [Microsoft LAPS (earlier version)](https://www.microsoft.com/download/details.aspx?id=46899)
+[Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+
+## Next steps
+
+- Review [Windows LAPS concepts](laps-concepts.md)
+- [Schema extensions for Windows LAPS](laps-technical-reference.md)
