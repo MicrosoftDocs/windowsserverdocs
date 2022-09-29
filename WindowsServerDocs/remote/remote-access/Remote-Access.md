@@ -15,7 +15,7 @@ When you install the Remote Access role with the *Add Roles and Features Wizard*
 
 - [Direct Access and VPN (RAS) service](#directaccess-and-vpn-service)
 - [Routing service](#routing-service)
-- [Web Application Proxy service](#web-application-proxy-service)hz
+- [Web Application Proxy service](#web-application-proxy-service)
 
 
 >[!IMPORTANT]
