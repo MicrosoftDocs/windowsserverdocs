@@ -229,9 +229,7 @@
   - name: Remote Access role services
     items:
     - name: Overview
-      items:
-      - name: About Remote Access role services
-        href: remote-access/remote-Access.md
+      href: remote-access/remote-Access.md
     - name: Tutorials
       items:
       - name: Always on VPN
