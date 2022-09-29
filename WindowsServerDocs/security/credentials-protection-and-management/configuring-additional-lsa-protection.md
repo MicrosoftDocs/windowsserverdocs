@@ -6,7 +6,7 @@ ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 8/24/2022
+ms.date: 9/29/2022
 ---
 # Configuring Additional LSA Protection
 
@@ -142,7 +142,7 @@ For client devices running Windows 11, 21H2, additional LSA protection will be e
 
 - The device is a new install of Windows 11, 21H2 (not upgraded from previous release).
 - The device is enterprise joined (Active Directory domain joined, Azure AD domain joined, or hybrid Azure AD domain joined).
-- The device is running [Hypervisor-protected code integrity (HVCI)](/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity)
+- The device is capable of [Hypervisor-protected code integrity (HVCI)](/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity)
 
 Automatic enablement of additional LSA protection on Windows 11, 22H2 doesn't set a UEFI variable for the feature. If you want to set a UEFI variable, you can use a registry configuration or policy.
 
