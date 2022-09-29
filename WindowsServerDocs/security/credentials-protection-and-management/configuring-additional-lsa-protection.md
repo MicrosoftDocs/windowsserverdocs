@@ -138,9 +138,9 @@ x86-based or x64-based devices that don't support UEFI or where Secure Boot are 
 
 For devices running Windows RT 8.1, additional LSA protection is always enabled, and it can't be turned off.
 
-For client devices running Windows 11, 21H2, additional LSA protection will be enabled by default if the following criteria are met:
+For client devices running Windows 11, 22H2, additional LSA protection will be enabled by default if the following criteria are met:
 
-- The device is a new install of Windows 11, 21H2 (not upgraded from previous release).
+- The device is a new install of Windows 11, 22H2 (not upgraded from previous release).
 - The device is enterprise joined (Active Directory domain joined, Azure AD domain joined, or hybrid Azure AD domain joined).
 - The device is capable of [Hypervisor-protected code integrity (HVCI)](/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity)
 
