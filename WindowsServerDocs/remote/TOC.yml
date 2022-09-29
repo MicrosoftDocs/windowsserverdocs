@@ -492,8 +492,6 @@
         items:
         - name: About DirectAccess
           href: remote-access/directaccess/directAccess.md
-        - name: Prerequisites for Deploying DirectAccess
-          href: remote-access/directaccess/Prerequisites-for-Deploying-directAccess.md
         - name: DirectAccess Unsupported configurations
           href: remote-access/directaccess/directAccess-Unsupported-Configurations.md
         - name: Direct Access Capacity Planning

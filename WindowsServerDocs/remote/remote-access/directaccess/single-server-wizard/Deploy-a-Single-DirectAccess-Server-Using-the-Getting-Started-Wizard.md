@@ -31,6 +31,7 @@ In this scenario, a single computer running either   Windows Server 2016, Window
 To set up a basic DirectAccess server, several planning and deployment steps are required.
 
 ### Prerequisites
+
 Before you begin deploying this scenario, review this list for important requirements:
 
 -   Windows firewall must be enabled on all profiles
