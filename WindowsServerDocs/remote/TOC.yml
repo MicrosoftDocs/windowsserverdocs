@@ -503,21 +503,21 @@
         - name: RAS Gateway GRE Tunnel Throughput and Performance
           href: remote-access/ras-gateway/RAS-Gateway-GRE-Perf.md
         - name: RAS Gateway for Software Defined Networking
-          href: https://learn.microsoft.com/azure-stack/hci/concepts/gateway-overview
+          href: /azure-stack/hci/concepts/gateway-overview
       - name: Routing
         items:
         - name: Network Address Translation (NAT) routers
-          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10)
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10)
         - name: LAN routers running Border Gateway Protocol (BGP)
           href: remote-access/bgp/border-gateway-protocol-bgp.md
         - name: Routing Information Protocol (RIP)
-          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10)
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10)
         - name: Multicast-capable routers using Internet Group Management Protocol (IGMP)
-          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957920(v=technet.10)
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957920(v=technet.10)
         - name: Demand-dial routing
-          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10)
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10)
         - name: Unicast IP Routing
-          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)
         - name: Web Application Proxy
           href: remote-access/web-application-proxy/web-application-proxy-windows-server.md
     - name: Troubleshooting
@@ -535,7 +535,7 @@
       - name: BGP Windows PowerShell Command reference
         href: remote-access/bgp/BGP-Windows-powershell-Command-Reference.md
       - name: Remote Access PowerShell Command reference
-        href: https://learn.microsoft.com/powershell/module/remoteaccess/?view=windowsserver2022-ps
+        href: /powershell/module/remoteaccess/?view=windowsserver2022-ps
       - name: Windows VPN technical guide
         href: /windows/security/identity-protection/vpn/vpn-guide
     - name: Resources
@@ -616,7 +616,7 @@
           - name: Configuration Requirements
             href: remote-access/directaccess/tlg-multisite/Configuration-Requirements.md
           - name: Steps for Configuring the Test Lab
-            href: ./remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md
+            href: remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md
             items:
             - name: 'STEP 1: complete the DirectAccess Configuration'
               href: remote-access/directaccess/tlg-cluster-nlb/STEP-1-complete-the-directAccess-Configuration.md
@@ -635,5 +635,5 @@
             - name: 'STEP 8: Snapshot the Configuration'
               href: ./remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot.md
       - name: Routing and Remote Access Snap-In
-        href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957873(v=technet.10)
+        href: /previous-versions/windows/it-pro/windows-2000-server/cc957873(v=technet.10)
 
