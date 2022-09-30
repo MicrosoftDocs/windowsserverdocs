@@ -226,7 +226,7 @@
     href: remote-server-administration-tools.md
   - name: Remote Desktop Services
     href: remote-desktop-services/welcome-to-rds.md
-  - name: Remote Access Server Role Services
+  - name: Remote Access
     items:
     - name: Overview
       href: remote-access/remote-Access.md
@@ -507,17 +507,17 @@
       - name: Routing
         items:
         - name: Network Address Translation (NAT) routers
-          href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10)
+          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10)
         - name: LAN routers running Border Gateway Protocol (BGP)
           href: remote-access/bgp/border-gateway-protocol-bgp.md
         - name: Routing Information Protocol (RIP)
-          href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10)
+          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10)
         - name: Multicast-capable routers using Internet Group Management Protocol (IGMP)
-          href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957920(v=technet.10)
+          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957920(v=technet.10)
         - name: Demand-dial routing
-          href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10)
+          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10)
         - name: Unicast IP Routing
-          href: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)
+          href: https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)
         - name: Web Application Proxy
           href: remote-access/web-application-proxy/web-application-proxy-windows-server.md
     - name: Troubleshooting

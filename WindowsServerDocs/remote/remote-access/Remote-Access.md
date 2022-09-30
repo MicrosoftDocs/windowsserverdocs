@@ -1,6 +1,6 @@
 ---
-title: Remote Access Server Role Services
-description: This topic provides an overview of the Remote Access server role services in Windows Server.
+title: Remote Access
+description: This topic provides an overview of the Remote Access services in Windows Server.
 manager: eliotgra
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
@@ -9,7 +9,7 @@ author: anaharris-ms
 ms.date: 09/28/2022
 ---
 
-# Remote Access Server Role Services
+# Remote Access
 
 When you install the Remote Access Server Role with the *Add Roles and Features Wizard* or Windows PowerShell, you can choose to install one or more of the following three role services, either individually or on the same server:
 
