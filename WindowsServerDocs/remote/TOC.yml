@@ -457,7 +457,7 @@
             - name: 'Step 2: Configure the Remote Access Server'
               href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
             - name: 'Step 3: Verify the Deployment'
-              href: ./remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
+              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
           - name: Publishing Applications using AD FS Preauthentication
             href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
           - name: Publishing Applications with SharePoint, Exchange and RDG
