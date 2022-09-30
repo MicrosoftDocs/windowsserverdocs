@@ -14,8 +14,8 @@ Learn about the basic design and security concepts for Windows Local Administrat
 - Architecture
 - Basic scenario flow
 - Background policy processing cycle
-- How Windows LAPS works with Azure Active Directory
-- How Windows LAPS works with Windows Server Active Directory
+- Azure Active Directory passwords
+- Windows Server Active Directory passwords
 - Password reset after authentication
 - Account password tampering protection
 - Windows safe mode
@@ -46,7 +46,9 @@ The Windows LAPS architecture diagram has several key components:
 The first step in a basic Windows LAPS scenario is to configure the Windows LAPS policy for your organization. We recommend that you use the following configuration options:
 
 - **Azure Active Directory-joined devices**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+
 - **Windows Server Active Directory-joined devices**: Use Group Policy.
+
 - **Hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Endpoint Manager**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
 After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a new, random password that's compliant with the current policy's length and complexity requirements. The password is validated against the local device's password complexity policy.
@@ -170,7 +172,7 @@ Backing up DSRM passwords to Azure Active Directory isn't supported.
 > [!IMPORTANT]
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
-> But consider a catastrophic scenario in which all the domain controllers in a domain are down. No DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
+> But consider a catastrophic scenario in which all the domain controllers in a domain are down. In this scenario, no DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
 
 ## Password reset after authentication
 
@@ -180,7 +182,7 @@ Windows LAPS supports automatically rotating the local administrator account pas
 
 When Windows LAPS is configured to manage a local administrator account password, that account is protected against accidental or careless tampering. This protection extends to the DSRM account when the account is managed by Windows LAPS on a Windows Server Active Directory domain controller.
 
-## Disabled in safe mode
+## Disabled in Windows safe mode
 
 When Windows is started in safe mode, DSRM mode, or in any other non-default boot mode, Windows LAPS is disabled and no passwords are backed up.
 

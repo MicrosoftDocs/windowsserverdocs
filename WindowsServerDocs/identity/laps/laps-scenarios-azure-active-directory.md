@@ -35,7 +35,7 @@ If your devices are Azure Active Directory-joined but you're not using Microsoft
 
 ### Policies that apply to Azure Active Directory mode
 
-The Windows LAPS CSP and Windows LAPS Group Policy object both manage the same settings, but only a subset of these settings apply to Windows LAPS in Azure mode.
+The Windows LAPS CSP and Windows LAPS Group Policy object both manage the same settings, but only a subset of these settings applies to Windows LAPS in Azure mode.
 
 The following settings are applicable when backing passwords up to Azure Active Directory:
 
