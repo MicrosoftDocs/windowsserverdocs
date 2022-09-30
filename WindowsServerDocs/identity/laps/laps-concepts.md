@@ -21,19 +21,19 @@ Learn about the basic design and security concepts for Windows Local Administrat
 - Windows safe mode
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Windows LAPS architecture
 
 The following figure depicts the Windows LAPS architecture:
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture showing the managed device, Azure Active Directory, and Windows Server Active Directory.":::
+:::image type="content" source="./media/laps-concepts/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Azure Active Directory, and Windows Server Active Directory.":::
 
 The Windows LAPS architecture has several key components:
 
 - **IT admin**: Represents collectively the various IT admin roles that might be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
 
-- **Managed device**: The Azure Active Directory-joined or Windows Server Active Directory-joined device on which you want to manage a local administrator account. The feature is composed of a few key binaries: *laps.dll* (core logic), *lapscsp.dll* (configuration service provider (CSP) logic), and *lapspsh.dll* (PowerShell cmdlet logic). You also can configure Windows LAPS by using Group Policy. Windows LAPS responds to Group Policy Object (GPO) change notifications. The managed device can be a Windows Server Active Directory domain controller and configured to back up Directory Services Repair Mode (DSRM) account passwords.
+- **Managed device**: The Azure Active Directory-joined or Windows Server Active Directory-joined device on which you want to manage a local administrator account. The feature is composed of a few key binaries: *laps.dll* for core logic, *lapscsp.dll* for configuration service provider (CSP) logic, and *lapspsh.dll* for PowerShell cmdlet logic. You also can configure Windows LAPS by using Group Policy. Windows LAPS responds to Group Policy Object (GPO) change notifications. The managed device can be a Windows Server Active Directory domain controller and configured to back up Directory Services Repair Mode (DSRM) account passwords.
 
 - **Windows Server Active Directory**: An on-premises Windows Server Active Directory deployment.
 
@@ -68,7 +68,7 @@ Windows LAPS uses a background task that wakes up every hour to process the curr
 
 Whenever the background task runs, it executes the following basic flow:
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
+:::image type="content" source="./media/laps-concepts/laps-concepts-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
 
 The obvious key difference between the Azure Active Directory and Windows Server Active Directory flows is related to how the password expiration time is checked. In both scenarios, the password expiration time is stored side-by-side with the latest password in the directory.
 
@@ -119,7 +119,7 @@ The second line of password security uses the Windows Server Active Directory pa
 
 When you design your password retrieval security model, consider the following figure:
 
-:::image type="content" source="../laps/media/laps-concepts/laps-concepts-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
+:::image type="content" source="./media/laps-concepts/laps-concepts-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
 
 The diagram illustrates the suggested Windows Server Active Directory password security layers and how you should think about their relationship to each other.
 
@@ -162,7 +162,7 @@ Windows LAPS supports backing up the DSRM account password on Windows Server dom
 > [!IMPORTANT]
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
-> But consider a catastrophic situation in which all the domain controllers in a specific domain are down. None of the DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
+> But consider a catastrophic scenario in which all the domain controllers in a specific domain are down. No DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
 
 ## Password reset after authentication
 

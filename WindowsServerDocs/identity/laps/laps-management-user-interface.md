@@ -12,13 +12,13 @@ ms.topic: conceptual
 Understand the LAPS properties dialog in the Windows Server Active Directory Users and Computers management snap-in and how to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Windows Server Active Directory Users and Computers LAPS properties
 
 The Windows Server Active Directory Users and Computers management snap-in includes a LAPS properties dialog that's available for computer objects:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-property-page.png" alt-text="Screenshot that shows the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
+:::image type="content" source="./media/laps-management-user-interface/laps-management-user-interface-property-page.png" alt-text="Screenshot that shows the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
 
 You can use the properties dialog to complete the following actions:
 
@@ -34,13 +34,13 @@ You can use the properties dialog to complete the following actions:
 
 When you first go to the properties dialog for a Windows Server Active Directory computer, the date-time control displays the current password expiration time. For example:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-view-password-expiration.png" alt-text="Screenshot that shows the current password expiration time in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
+:::image type="content" source="./media/laps-management-user-interface/laps-management-user-interface-view-password-expiration.png" alt-text="Screenshot that shows the current password expiration time in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
 
 ### Modify the password expiration time
 
 You can use the date-time control to modify the password expiration time. For example:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-modify-password-expiration.png" alt-text="Screenshot that shows a modification of the password expiration time in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
+:::image type="content" source="./media/laps-management-user-interface/laps-management-user-interface-modify-password-expiration.png" alt-text="Screenshot that shows a modification of the password expiration time in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
 
 If you modify the date or time, select **Apply**, and then select **OK**.
 
@@ -48,7 +48,7 @@ If you modify the date or time, select **Apply**, and then select **OK**.
 
 To immediately expire the password, select **Expire now**:
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-expire-password-now.png" alt-text="Screenshot showing the Expire now button in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
+:::image type="content" source="./media/laps-management-user-interface/laps-management-user-interface-expire-password-now.png" alt-text="Screenshot that shows the Expire now button in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
 
 Select **Apply**, and then select **OK**.
 
@@ -56,11 +56,11 @@ Select **Apply**, and then select **OK**.
 
 If you have permissions to read and decrypt the computer's current Windows LAPS password attribute, **Account Name** and **Password** have your username and password. Select **Copy password** to copy the password to the clipboard. Select **Show password** to show the password.
 
-:::image type="content" source="../laps/media/laps-management-user-interface/laps-management-user-interface-copy-show-password.png" alt-text="Screenshot that shows the copy and show password functionality in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
+:::image type="content" source="./media/laps-management-user-interface/laps-management-user-interface-copy-show-password.png" alt-text="Screenshot that shows the copy and show password functionality in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
 
 If you don't have permissions to read or decrypt the current password information, a dialog displays a warning.
 
 ## Next steps
 
-- Implement [schema extensions for Windows LAPS](laps-technical-reference.md).
-- Review [Windows LAPS concepts](laps-concepts.md).
+- [Windows LAPS schema extensions reference](laps-technical-reference.md)
+- [Key concepts in Windows LAPS](laps-concepts.md)

@@ -1012,14 +1012,14 @@
         href: laps/laps-scenarios-legacy.md
     - name: Manage Windows LAPS
       items:
-      - name: Configure policy settings
+      - name: Configure Windows LAPS policy settings
         href: laps/laps-management-policy-settings.md
       - name: Use Windows LAPS PowerShell cmdlets
         href: laps/laps-management-powershell.md
       - name: Use Windows LAPS event logs
         href: laps/laps-management-event-log.md
-      - name: Configure Windows LAPS
+      - name: Configure Windows LAPS in properties dialog
         href: laps/laps-management-user-interface.md
-    - name: Schema extensions for Windows LAPS
+    - name: Windows LAPS schema extensions reference
       href: laps/laps-technical-reference.md
 

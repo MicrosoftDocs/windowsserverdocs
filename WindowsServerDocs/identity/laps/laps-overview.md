@@ -1,6 +1,6 @@
 ---
 title: Windows LAPS overview
-description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS).
+description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
@@ -9,14 +9,14 @@ ms.topic: overview
 
 # What is Windows LAPS?
 
-Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined and Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
+Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Benefits of using Windows LAPS
 
-Using Windows LAPS to regularly rotate and manage local administrator account passwords provides many benefits:
+Use Windows LAPS to regularly rotate and manage local administrator account passwords and get these benefits:
 
 - Protection against pass-the-hash and lateral-traversal attacks.
 - Improved security for remote help desk scenarios.
@@ -28,19 +28,19 @@ Using Windows LAPS to regularly rotate and manage local administrator account pa
 
 Windows LAPS is supported on desktop Windows, Windows Server, and Windows Server Core. Windows LAPS is a native Windows feature on all supported SKUs. No extra steps are required to install the feature.
 
-As noted earlier, Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+As noted earlier, Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Key Windows LAPS scenarios
 
 You can use Windows LAPS for several primary scenarios:
 
-- Back up local admin account passwords to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) (for Azure Active Directory-joined devices)
+- Back up local administrator account passwords to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) (for Azure Active Directory-joined devices)
 
-- Back up local admin account passwords to Windows Server Active Directory (for Windows Server Active Directory-joined clients and servers)
+- Back up local administrator account passwords to Windows Server Active Directory (for Windows Server Active Directory-joined clients and servers)
 
-- Back up Directory Services Repair Mode (DSRM) account passwords to Windows Server Active Directory (for Windows Server Active Directory domain controllers)
+- Back up DSRM account passwords to Windows Server Active Directory (for Windows Server Active Directory domain controllers)
 
-- Back up local admin account passwords to Windows Server Active Directory by using legacy Microsoft LAPS.
+- Back up local administrator account passwords to Windows Server Active Directory by using legacy Microsoft LAPS.
 
 In each scenario, you can apply different policy settings.
 
@@ -91,5 +91,5 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 
 ## Next steps
 
-- [Windows LAPS concepts](laps-concepts.md)
-- [Windows LAPS schema extensions for Windows Server Active Directory](laps-technical-reference.md)
+- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Windows LAPS schema extensions reference](laps-technical-reference.md)

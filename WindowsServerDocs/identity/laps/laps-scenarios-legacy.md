@@ -9,13 +9,12 @@ ms.topic: conceptual
 
 # Get started with Windows LAPS in legacy Microsoft LAPS emulation mode
 
-You can set up Windows LAPS to honor legacy Microsoft LAPS Group Policy settings, but with some restrictions and limitations. The feature is called *legacy Microsoft LAPS emulation mode*. You might use emulation mode if you migrate an existing deployment of legacy Microsoft LAPS to Windows LAPS.
+You can set up Windows Local Administrator Password Solution (Windows LAPS) to honor legacy Microsoft LAPS Group Policy settings, but with some restrictions and limitations. The feature is called *legacy Microsoft LAPS emulation mode*. You might use emulation mode if you migrate an existing deployment of legacy Microsoft LAPS to Windows LAPS.
+
+Like Microsoft LAPS, emulation mode supports storage of passwords in Windows Server Active Directory only in clear-text form. To increase security, we recommend that you migrate to using Windows LAPS natively so that you can take advantage of password encryption.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
-
-> [!TIP]
-> Like Microsoft LAPS, emulation mode supports storage of passwords in Windows Server Active Directory only in clear-text form. To increase security, we recommend that you migrate to using Windows LAPS natively so that you can take advantage of password encryption.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Setup and configuration
 
@@ -39,7 +38,7 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
 
 - No other Windows LAPS policies can be applied to the machine.
 
-  If a Windows LAPS policy is present on the machine, it always take precedence, regardless of how it was applied (configuration service provider, Group Policy Object, or raw registry modification). If a Windows LAPS policy is present, a legacy Microsoft LAPS policy is always ignored. For more information, see [Windows LAPS policy settings](../laps/laps-management-policy-settings.md).
+  If a Windows LAPS policy is present on the machine, it always take precedence, regardless of how it was applied (configuration service provider, Group Policy Object, or raw registry modification). If a Windows LAPS policy is present, a legacy Microsoft LAPS policy is always ignored. For more information, see [Windows LAPS policy settings](laps-management-policy-settings.md).
 
 - Legacy Microsoft LAPS must not be installed on the machine.
 
@@ -89,7 +88,7 @@ The Windows LAPS property page in the Windows Server Active Directory Users and 
 
 When Windows LAPS runs in legacy Microsoft LAPS emulation mode, a 10023 event is logged to detail the current policy configuration:
 
-:::image type="content" source="../laps/media/laps-scenarios-legacy/laps-scenarios-legacy-gpo-event.png" alt-text="Screenshot of the event log showing a Microsoft LAPS configuration event log message.":::
+:::image type="content" source="./media/laps-scenarios-legacy/laps-scenarios-legacy-gpo-event.png" alt-text="Screenshot of the event log that shows a Microsoft LAPS configuration event log message.":::
 
 Otherwise, the same events that are logged by Windows LAPS when it doesn't run in legacy Microsoft LAPS emulation mode are also logged when it runs in legacy Microsoft LAPS emulation mode.
 
@@ -98,4 +97,7 @@ Otherwise, the same events that are logged by Windows LAPS when it doesn't run i
 This article doesn't go into detail about managing other aspects of legacy Microsoft LAPS. For more information, see the legacy Microsoft LAPS documentation on the download page:
 
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
-- [Windows LAPS policy settings](../laps/laps-management-policy-settings.md)
+
+## Next steps
+
+- [Configure Windows LAPS policy settings](laps-management-policy-settings.md)

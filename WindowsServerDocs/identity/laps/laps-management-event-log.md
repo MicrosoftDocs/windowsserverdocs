@@ -12,13 +12,13 @@ ms.topic: conceptual
 Windows Local Administrator Password Solution (Windows LAPS) has a dedicated event log channel. All Windows LAPS operations are tracked with rich eventing. Learn about key events and how to view the log.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## View the event log
 
 To view the Windows LAPS event log channel, in Windows Server Event Viewer, go to **Applications and Services** > **Logs** > **Microsoft** > **Windows** > **LAPS** > **Operational**.
 
-:::image type="content" source="../laps/media/laps-management-event-log/laps-management-event-log-event-log.png" alt-text="Screenshot of the event log and a Windows LAPS policy processing started event log message.":::
+:::image type="content" source="./media/laps-management-event-log/laps-management-event-log-event-log.png" alt-text="Screenshot of the event log and a Windows LAPS policy processing started event log message.":::
 
 ## Key events
 
@@ -97,7 +97,7 @@ Post authentication grace period (hours): 8
 Post authentication actions: 3
 ```
 
-When Windows LAPS is configured to use a legacy LAPS policy, a 10023 event is logged. Here's an example of a 10023 event:
+When Windows LAPS is configured to use a legacy Microsoft LAPS policy, a 10023 event is logged. Here's an example of a 10023 event:
 
 ```output
 The current LAPS policy is configured as follows:
@@ -200,5 +200,5 @@ Error code: 80070032
 
 ## Next steps
 
-- [Configure Windows LAPS for Windows Server Active Directory](laps-management-user-interface.md).
-- Review [Windows LAPS concepts](laps-concepts.md).
+- [Configure Windows LAPS for Windows Server Active Directory](laps-management-user-interface.md)
+- [Key concepts in Windows LAPS](laps-concepts.md)

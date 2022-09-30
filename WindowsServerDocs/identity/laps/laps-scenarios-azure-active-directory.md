@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Azure Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and how to retrieve them.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Configure device policy
 
@@ -24,20 +24,20 @@ To configure device policy, complete these tasks:
 
 ### Choose a policy deployment mechanism
 
-The first step is to choose how you're going to apply policy to your devices.
+The first step is to choose how to apply policy to your devices.
 
-The preferred option for Azure Active Directory-joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
+The preferred option for Azure Active Directory-joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
-If your devices are Azure Active Directory-joined but you're not using Microsoft Endpoint Manager, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Windows LAPS policy settings](laps-management-policy-settings.md).
+If your devices are Azure Active Directory-joined but you're not using Microsoft Endpoint Manager, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 
 > [!NOTE]
 > If your devices are hybrid-joined to on-premises Windows Server Active Directory, you can deploy policy by using [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy).
 
-### Policies applicable to Azure Active Directory mode
+### Policies that apply to Azure Active Directory mode
 
-The LAPS CSP and LAPS Group Policy object both manage the same settings, however only a subset of these settings is applicable to Windows LAPS in Azure mode.
+The Windows LAPS CSP and Windows LAPS Group Policy object both manage the same settings, but only a subset of these settings apply to Windows LAPS in Azure mode.
 
-The following settings are applicable when backing passwords up to Azure AD:
+The following settings are applicable when backing passwords up to Azure Active Directory:
 
 - BackupDirectory
 - PasswordAgeDays
@@ -51,28 +51,28 @@ More plainly: the Windows Server Active Directory-specific policy settings don't
 
 ### Configure specific policies
 
-At minimum, you must configure the BackupDirectory setting to the value 1 (backup passwords to Azure Active Directory).
+At a minimum, you must configure the BackupDirectory setting to the value 1 (backup passwords to Azure Active Directory).
 
-If you don't configure the AdministratorAccountName setting, Windows LAPS will default to managing the default built-in local Administrator account. This built-in account is automatically identified by its well-known Relative Identifier (also known as "RID") and should therefore never be identified by name. (The name of the built-in local Administrator account will vary depending on the default locale of the device.)
+If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local Administrator account. This built-in account is automatically identified by its well-known relative identifier (RID) and should never be identified by name. The name of the built-in local Administrator account varies depending on the default locale of the device.
 
-If you want to configure a custom local admin account, you should configure the AdministratorAccountName setting with the name of that account.
+If you want to configure a custom local administrator account, you should configure the AdministratorAccountName setting with the name of that account.
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage a custom local admin account, you must ensure that the account is created - LAPS doesn't support creation of the account. Microsoft recommends using the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) for this purpose.
+> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account. We recommend that you use the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) to create the account.
 
-Finally, feel free to configure the other settings as needed or desired, for example PasswordLength, etc.
+You can configure other settings, like PasswordLength, as needed for your organization.
 
-## Update the password in Azure Active Directory
+## Update a password in Azure Active Directory
 
-Windows LAPS will process the currently active policy on a periodic (every hour) basis. In order to avoid waiting after applying the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet.
+Windows LAPS processes the currently active policy on a periodic basis (every hour). To avoid waiting after you apply the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet.
 
-Now look in the event log for 10029 event that verifies that the password was successfully updated in Azure Active Directory:
+To verify that the password was successfully updated in Azure Active Directory, look in the event log for the 10029 event:
 
 :::image type="content" source="./media/laps-scenarios-azure-active-directory/laps-scenarios-azure-active-directory-password-update-event.png" alt-text="Screenshot of the event log and a successful Azure Active Directory password update event log message.":::
 
 ## Retrieve a password from Azure Active Directory
 
-Retrieval of LAPS passwords stored in Azure Active Directory is supported using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that is a wrapper around the Microsoft Graph PowerShell library. Windows LAPS doesn't provide any user interface options for Azure Active Directory password retrieval. The instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve LAPS passwords from Azure Active Directory.
+Retrieving Windows LAPS passwords stored in Azure Active Directory is supported by using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that's a wrapper around the Microsoft Graph PowerShell library. Windows LAPS doesn't provide any user interface options for Azure Active Directory password retrieval. The instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve Windows LAPS passwords from Azure Active Directory.
 
 ### Install the Microsoft Graph PowerShell library
 
@@ -84,22 +84,22 @@ You might need to configure the repository as Trusted for the command to succeed
 
 `Set-PSRepository PSGallery -InstallationPolicy Trusted`
 
-### Create an Azure Active Directory registered app to retrieve Azure LAPS passwords
+### Create an Azure Active Directory registered app to retrieve Windows LAPS passwords
 
-The next step is to create an Azure Active Directory application configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+The next step is to create an Azure Active Directory application that's configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
 The app needs to be configured with two permissions: `Devices.Read.All` and either `Device.LocalCredentials.Read` or `Device.LocalCredentials.ReadAll`.
 
 > [!IMPORTANT]
 >
-> - Use `Device.LocalCredentials.Read` to grant permissions for reading non-sensitive metadata about persisted LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
-> - Use `Device.LocalCredentials.ReadAll` to grant full permissions for reading everything about persisted LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
+> - Use `Device.LocalCredentials.Read` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
+> - Use `Device.LocalCredentials.ReadAll` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
 
 #### Manual consent to Device.LocalCredentials.\* permissions
 
-A manual step is currently required to consent to either `Device.LocalCredentials.Read` or the `Device.LocalCredentials.ReadAll` permissions. This limitation will be removed in future.
+Currently, a manual step is required to consent to either `Device.LocalCredentials.Read` or the `Device.LocalCredentials.ReadAll` permissions.
 
-When you've decided which `Device.LocalCredentials` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.Read.Basic` if necessary.
+After you decide which `Device.LocalCredentials` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.Read.Basic` if necessary.
 
 For multi-tenant apps:
 
@@ -166,9 +166,9 @@ PasswordExpirationTime : 7/31/2022 11:34:39 AM
 PasswordUpdateTime     : 7/1/2022 11:34:39 AM
 ```
 
-Note: the password above is returned in a SecureString object.
+The password that's returned in a `SecureString` object.
 
-Finally, for testing or ad-hoc purposes you can request that the password is displayed in clear-text using the -AsPlainText parameter:
+Finally, for testing or ad-hoc purposes, you can request that the password appear in clear text by using the `-AsPlainText` parameter:
 
 ```powershell
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice -IncludePasswords -AsPlainText
@@ -185,7 +185,7 @@ PasswordUpdateTime     : 7/1/2022 11:34:39 AM
 
 ## Rotate the password
 
-Windows LAPS will locally remember when the last stored password expires, and will automatically rotate the password upon expiry. In some situations (for example, after a security breach, or for ad-hoc testing purposes) it may be necessary to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet. For example:
+Windows LAPS locally remembers when the last stored password expires, and it automatically rotates the password when the password expires. In some situations (for example, after a security breach or for ad-hoc testing), you might need to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet. For example:
 
 ```powershell
 PS C:\> Reset-LapsPassword
@@ -208,11 +208,11 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 
 ## See also
 
-- [Windows LAPS concepts](../laps/laps-concepts.md)
-- [Windows LAPS policy aettings](../laps/laps-management-policy-settings.md)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
 ## Next steps
 
-- Review [Windows LAPS concepts](../laps/laps-concepts.md).
+- [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
+- [Use Windows LAPS event logs](laps-management-event-log.md)
+- [Key concepts in Windows LAPS](laps-concepts.md)

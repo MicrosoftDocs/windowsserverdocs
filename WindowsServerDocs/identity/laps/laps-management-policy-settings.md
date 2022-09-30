@@ -12,7 +12,7 @@ ms.topic: conceptual
 Windows Local Administrator Password Solution (Windows LAPS) supports various settings you can control by using policy. Learn about the settings and how to administer them.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Supported policy roots
 
@@ -20,12 +20,12 @@ Although we don't recommend it, you can administer a device by using multiple po
 
 |Policy name|Policy registry key root|
 |---|---|
-|LAPS CSP|HKLM\Software\Microsoft\Policies\LAPS|
-|LAPS Group Policy|HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\LAPS|
-|LAPS Local Configuration|HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config|
-|Legacy Microsoft LAPS|HKLM\Software\Policies\Microsoft Services\AdmPwd|
+|LAPS CSP|`HKLM\Software\Microsoft\Policies\LAPS`|
+|LAPS Group Policy|`HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\LAPS`|
+|LAPS Local Configuration|`HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config`|
+|Legacy Microsoft LAPS|`HKLM\Software\Policies\Microsoft Services\AdmPwd`|
 
-Windows LAPS queries all known registry key policy roots starting at the top and moving down. If no settings are found under a specific root, that root is skipped and the query proceeds to the next root. When a root that has at least one explicitly defined setting is found, that root is used as the active policy. If the chosen root is missing any settings, the settings are assigned their default values.
+Windows LAPS queries all known registry key policy roots, starting at the top and moving down. If no settings are found under a root, that root is skipped and the query proceeds to the next root. When a root that has at least one explicitly defined setting is found, that root is used as the active policy. If the chosen root is missing any settings, the settings are assigned their default values.
 
 > [!IMPORTANT]
 > Policy settings are never shared or inherited across policy key roots.
@@ -54,13 +54,13 @@ The following table specifies which settings are applicable on devices that have
 |PostAuthenticationResetDelay|Yes|Yes|Yes|
 |PostAuthenticationActions|Yes|Yes|Yes|
 
-You can administer almost all settings by using any policy management mechanism. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) has two exceptions to this rule. The Windows LAPS CSP supports two settings that aren't in the preceding table: ResetPassword and ResetPasswordStatus. The Windows LAPS CSP doesn't support the ADBackupDSRMPassword setting (domain controllers are never managed via CSP). For more information, see the LAPS CSP documentation for more info.
+You can administer almost all settings by using any policy management mechanism. The [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp) has two exceptions to this rule. The Windows LAPS CSP supports two settings that aren't in the preceding table: ResetPassword and ResetPasswordStatus. The Windows LAPS CSP doesn't support the ADBackupDSRMPassword setting (domain controllers are never managed via CSP). For more information, see the LAPS CSP documentation for more info.
 
 ## Windows LAPS Group Policy
 
 Windows LAPS includes a new Group Policy Object that you can use to administer policy settings on Active Directory domain-joined devices. To access the Windows LAPS Group Policy, in Group Policy Management Editor, go to **Computer Configuration** > **Administrative Templates** > **System** > **LAPS**. The following figure shows an example:
 
-:::image type="content" source="../laps/media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="Screenshot of the Group Policy Management Editor that shows the Windows LAPS policy settings.":::
+:::image type="content" source=".media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="Screenshot of the Group Policy Management Editor that shows the Windows LAPS policy settings.":::
 
 ## Windows LAPS CSP
 
@@ -166,7 +166,7 @@ If specified, the specified user or group can decrypt the password that's stored
 >
 > This setting is ignored unless ADPasswordEncryptionEnabled is configured to True and all other prerequisites are met.
 >
-> This setting is ignored when DSRM account passwords are backed up on a domain controller. In that scenario, this setting always defaults to the Domain Admins group of the domain controller's domain.
+> This setting is ignored when Directory Services Repair Mode (DSRM) account passwords are backed up on a domain controller. In that scenario, this setting always defaults to the Domain Admins group of the domain controller's domain.
 
 ### ADEncryptedPasswordHistorySize
 
@@ -229,5 +229,5 @@ If not specified, this setting defaults to 3.
 ## Next steps
 
 - [Use event logs for Windows LAPS](laps-management-event-log.md)
-- [Use PowerShell for Windows LAPS](laps-management-powershell.md)
-- [Schema extensions for Windows LAPS in Windows Server Active Directory](laps-technical-reference.md)
+- [Use Windows LAPS PowerShell cmdlet](laps-management-powershell.md)
+- [Windows LAPS schema extensions reference](laps-technical-reference.md)

@@ -4,15 +4,15 @@ description: Get details about schema and rights extension to deploy and manage 
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
-ms.topic: conceptual
+ms.topic: reference
 ---
 
-# Windows LAPS schema extensions for Windows Server Active Directory
+# Windows LAPS schema extensions reference
 
 Use detailed information about schema extensions and extended rights to help you deploy or manage Windows Local Administrator Password Solution (Windows LAPS) in your Windows Server Active Directory deployment.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small group of Windows Insider users.
+> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
 ## Schema extensions
 
@@ -162,6 +162,7 @@ Like Windows LAPS, legacy Microsoft LAPS also requires you to use schema extensi
 |`msLAPS-EncryptedDSRMPasswordHistory`|None|
 |`ms-LAPS-Encrypted-Password-Attributes`|None|
 
-## See also
+## Next steps
 
-[Windows LAPS concepts](../laps/laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Use Windows LAPS event logs](laps-management-event-log.md)
