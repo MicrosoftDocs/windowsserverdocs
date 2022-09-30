@@ -40,12 +40,12 @@ DirectAccess allows connectivity for remote users to organization network resour
 
 The Routing service allows you to route network traffic between subnets on your Local Area Network. Routing provides support for the following:
 
-- [Network Address Translation (NAT) routers](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10))
+- [Network Address Translation (NAT) routers](/previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10))
 - [LAN routers running Border Gateway Protocol (BGP)](bgp/border-gateway-protocol-bgp.md)
-- [Routing Information Protocol (RIP)](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10))
-- [Multicast-capable routers using Internet Group Management Protocol (IGMP)](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957920(v=technet.10))
-- [Demand-dial routing](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10))
-- [Unicast IP Routing](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10))
+- [Routing Information Protocol (RIP)](/previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10))
+- [Multicast-capable routers using Internet Group Management Protocol (IGMP)](/previous-versions/windows/it-pro/windows-2000-server/cc957920(v=technet.10))
+- [Demand-dial routing](/previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10))
+- [Unicast IP Routing](h/previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10))
 
 As a full-featured router, you can deploy RAS on either a server computer or as a virtual machine (VM) on a computer that's running Hyper-V.
 
