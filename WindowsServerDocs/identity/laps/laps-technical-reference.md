@@ -1,6 +1,6 @@
 ---
-title: Windows LAPS schema and rights extension for Windows Server Active Directory
-description: Get details about schema and rights extension to deploy and manage Windows Local Administrator Password Solution (Windows LAPS) in Windows Server Active Directory.
+title: Windows LAPS schema and rights extensions for Windows Server Active Directory
+description: Get details about schema and rights extensions to deploy and manage Windows Local Administrator Password Solution (Windows LAPS) in Windows Server Active Directory.
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2022
@@ -16,11 +16,11 @@ Use detailed information about schema extensions and extended rights to help you
 
 ## Schema extensions
 
-Windows LAPS offers new schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema PowerShell` cmdlet.
+Windows LAPS offers specific schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema PowerShell` cmdlet.
 
 ## Schema attributes
 
-Windows LAPS uses many new schema attributes that are stored on the computer object in Windows Server Active Directory for a managed device. The `Update-LapsADSchema` cmdlet adds these new schema attributes to the directory and to the `mayContain` list on the computer schema class.
+Windows LAPS uses specific schema attributes that are stored on the computer object in Windows Server Active Directory for a managed device. The `Update-LapsADSchema` cmdlet adds the schema attributes to the directory and to the `mayContain` list on the computer schema class.
 
 > [!TIP]
 > Many of the following attributes specify a `SearchFlags` value of `904`. For easy reference, this value is composed of the following bit flags:
@@ -62,7 +62,7 @@ SearchFlags: 904
 AttributeSecurityGuid: <not set>
 ```
 
-The data stored in this attribute is a JSON string that contains multiple name-value pairs. For example:
+The data that's stored in this attribute is a JSON string that contains multiple name-value pairs. For example:
 
 `{"n":"Administrator","t":"1d8161b41c41cde","p":"A6a3#7%eb!57be4a4B95Z43394ba956de69e5d8975#$8a6d)4f82da6ad500HGx"}`
 
@@ -140,7 +140,7 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 
 ## Extended rights
 
-Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permission to read and write the encrypted password attributes described in the preceding section.
+Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permissions to read and write the encrypted password attributes that are described in the preceding sections.
 
 ```powershell
 Name: ms-LAPS-Encrypted-Password-Attributes
@@ -148,7 +148,7 @@ Rights guid: f3531ec6-6330-4f8e-8d39-7a671fbac605
 Valid accesses: 48 (RIGHT_DS_READ_PROPERTY | RIGHT_DS_WRITE_PROPERTY)
 ```
 
-## Windows LAPS schema vs. Microsoft LAPS schema
+## Windows LAPS schema vs. legacy Microsoft LAPS schema
 
 Like Windows LAPS, legacy Microsoft LAPS also requires you to use schema extensions for a Windows Server Active Directory deployment. To help you plan a migration from legacy Microsoft LAPS to Windows LAPS, the following table shows a logical mapping of schema extension elements:
 
@@ -156,11 +156,11 @@ Like Windows LAPS, legacy Microsoft LAPS also requires you to use schema extensi
 |---|---|
 |`msLAPS-PasswordExpirationTime`|`ms-Mcs-AdmPwdExpirationTime`|
 |`msLAPS-Password`|`ms-Mcs-AdmPwd`|
-|`msLAPS-EncryptedPassword`|None|
-|`msLAPS-EncryptedPasswordHistory`|None|
-|`msLAPS-EncryptedDSRMPassword`|None|
-|`msLAPS-EncryptedDSRMPasswordHistory`|None|
-|`ms-LAPS-Encrypted-Password-Attributes`|None|
+|`msLAPS-EncryptedPassword`|Doesn't apply|
+|`msLAPS-EncryptedPasswordHistory`|Doesn't apply|
+|`msLAPS-EncryptedDSRMPassword`|Doesn't apply|
+|`msLAPS-EncryptedDSRMPasswordHistory`|Doesn't apply|
+|`ms-LAPS-Encrypted-Password-Attributes`|Doesn't apply|
 
 ## Next steps
 

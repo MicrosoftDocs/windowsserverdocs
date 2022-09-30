@@ -27,17 +27,16 @@ Although we don't recommend it, you can administer a device by using multiple po
 
 Windows LAPS queries all known registry key policy roots, starting at the top and moving down. If no settings are found under a root, that root is skipped and the query proceeds to the next root. When a root that has at least one explicitly defined setting is found, that root is used as the active policy. If the chosen root is missing any settings, the settings are assigned their default values.
 
-> [!IMPORTANT]
-> Policy settings are never shared or inherited across policy key roots.
+Policy settings are never shared or inherited across policy key roots.
 
 > [!TIP]
-> The LAPS Local Configuration key is listed for completeness. You can use this key if necessary, but the key primarily is intended to be used for testing and development. No management tools or policy mechanisms target this key.
+> The LAPS Local Configuration key is included in the preceding table for completeness. You can use this key if necessary, but the key primarily is intended to be used for testing and development. No management tools or policy mechanisms target this key.
 
 ## Supported policy settings by join state
 
 Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry.
 
-The following table specifies which settings are applicable on devices that have the specified join state:
+The following table specifies which settings apply to devices that have the specified join state:
 
 |Setting name|Azure Active Directory-joined|Hybrid-joined|Windows Server Active Directory-joined|
 |---|---|---|---|
@@ -54,7 +53,7 @@ The following table specifies which settings are applicable on devices that have
 |PostAuthenticationResetDelay|Yes|Yes|Yes|
 |PostAuthenticationActions|Yes|Yes|Yes|
 
-You can administer almost all settings by using any policy management mechanism. The [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp) has two exceptions to this rule. The Windows LAPS CSP supports two settings that aren't in the preceding table: ResetPassword and ResetPasswordStatus. The Windows LAPS CSP doesn't support the ADBackupDSRMPassword setting (domain controllers are never managed via CSP). For more information, see the LAPS CSP documentation for more info.
+You can administer almost all settings by using any policy management mechanism. The [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp) has two exceptions to this rule. The Windows LAPS CSP supports two settings that aren't in the preceding table: ResetPassword and ResetPasswordStatus. Also, Windows LAPS CSP doesn't support the ADBackupDSRMPassword setting (domain controllers are never managed via CSP). For more information, see the LAPS CSP documentation.
 
 ## Windows LAPS Group Policy
 
@@ -64,11 +63,11 @@ Windows LAPS includes a new Group Policy Object that you can use to administer p
 
 ## Windows LAPS CSP
 
-Windows LAPS includes a new CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
 ## Apply policy settings
 
-This section how to use and apply various policy settings for Windows LAPS.
+The following sections describe how to use and apply various policy settings for Windows LAPS.
 
 ### BackupDirectory
 
@@ -180,7 +179,7 @@ If not specified, this setting defaults to 0 passwords (disabled).
 > [!IMPORTANT]
 > This setting is ignored unless ADPasswordEncryptionEnabled is configured to True and all other prerequisites are met.
 >
-> This setting also takes effect on on domain controllers that back up their DSRM passwords.
+> This setting also takes effect on domain controllers that back up their DSRM passwords.
 
 ### ADBackupDSRMPassword
 
@@ -195,7 +194,7 @@ This setting defaults to 0 (False).
 
 ### PostAuthenticationResetDelay
 
-Use this setting to specify the amount of time (in hours) to wait after an authentication before executing the specified post-authentication actions (see the PostAuthenticationActions setting below). Supported values are:
+Use this setting to specify the amount of time (in hours) to wait after an authentication before executing the specified post-authentication actions (see PostAuthenticationActions). Supported values are:
 
 - **Minimum** : 0 hours (setting this value to 0 disables all post-authentication actions)
 - **Maximum**: 24 hours
@@ -204,11 +203,11 @@ If not specified, this setting defaults to 24 hours.
 
 ### PostAuthenticationActions
 
-Use this setting to specify the actions to take upon expiration of the configured grace period (see the PostAuthenticationResetDelay setting above).
+Use this setting to specify the actions to take upon expiration of the configured grace period (see PostAuthenticationResetDelay).
 
 This setting can have one of the following values:
 
-|Value|Name|Actions taken upon expiry of the grace period|
+|Value|Name|Actions taken when the grace period expires|
 |--- |--- |--- |
 |1|Reset password|The managed account password is reset.|
 |3|Reset password and sign out|The managed account password is reset and any interactive sign-in sessions that use the managed account are terminated.|
@@ -217,9 +216,9 @@ This setting can have one of the following values:
 If not specified, this setting defaults to 3.
 
 > [!IMPORTANT]
-> The allowed post-authentication actions are intended to help limit the amount of time a Windows LAPS password can be used before it is reset. Logging off the managed account or restarting the device are options to help ensure this. Abrupt termination of logon sessions, or rebooting the device, may result in data loss.
+> The allowed post-authentication actions are intended to help limit the amount of time a Windows LAPS password can be used before it's reset. Signing out of the managed account or restarting the device are options that help ensure the time is limited. Abruptly terminating signed-in sessions or restarting the device might result in data loss.
 >
-> From a security perspective, a malicious user who acquires administrative privileges on a device using a valid LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
+> From a security perspective, a malicious user who acquires administrative privileges on a device using a valid Windows LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
 
 ## See also
 

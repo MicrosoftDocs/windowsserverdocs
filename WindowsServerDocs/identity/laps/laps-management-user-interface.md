@@ -1,5 +1,5 @@
 ---
-title: Configure Windows LAPS for Windows Server Active Directory
+title: Set up Windows LAPS in the LAPS properties dialog
 description: Learn how to use the LAPS properties dialog to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
 author: jay98014
 ms.author: jsimmons
@@ -7,14 +7,14 @@ ms.date: 07/04/2022
 ms.topic: conceptual
 ---
 
-# Configure Windows LAPS for Windows Server Active Directory
+# Set up Windows LAPS in the LAPS properties dialog
 
-Understand the LAPS properties dialog in the Windows Server Active Directory Users and Computers management snap-in and how to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
+Learn how to use the LAPS properties dialog in the Windows Server Active Directory Users and Computers management snap-in to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
 
 > [!IMPORTANT]
 > Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
 
-## Windows Server Active Directory Users and Computers LAPS properties
+## LAPS properties dialog in the management snap-in
 
 The Windows Server Active Directory Users and Computers management snap-in includes a LAPS properties dialog that's available for computer objects:
 

@@ -1018,7 +1018,7 @@
         href: laps/laps-management-powershell.md
       - name: Use Windows LAPS event logs
         href: laps/laps-management-event-log.md
-      - name: Configure Windows LAPS in properties dialog
+      - name: Set up Windows LAPS in LAPS properties dialog
         href: laps/laps-management-user-interface.md
     - name: Windows LAPS schema extensions reference
       href: laps/laps-technical-reference.md

@@ -18,13 +18,13 @@ Windows Local Administrator Password Solution (Windows LAPS) is a Windows featur
 
 Use Windows LAPS to regularly rotate and manage local administrator account passwords and get these benefits:
 
-- Protection against pass-the-hash and lateral-traversal attacks.
-- Improved security for remote help desk scenarios.
-- Ability to sign in to and recover devices that are otherwise inaccessible.
-- Fine-grained security model (access control lists and optional password encryption) for securing passwords stored in Windows Server Active Directory.
-- Supports the Azure role-based access control model for securing passwords stored in Azure Active Directory.
+- Protection against pass-the-hash and lateral-traversal attacks
+- Improved security for remote help desk scenarios
+- Ability to sign in to and recover devices that are otherwise inaccessible
+- A fine-grained security model (access control lists and optional password encryption) for securing passwords that are stored in Windows Server Active Directory
+- Support for the Azure role-based access control model for securing passwords that are stored in Azure Active Directory
 
-## Supported SKUs
+## Supported platforms
 
 Windows LAPS is supported on desktop Windows, Windows Server, and Windows Server Core. Windows LAPS is a native Windows feature on all supported SKUs. No extra steps are required to install the feature.
 
@@ -40,7 +40,7 @@ You can use Windows LAPS for several primary scenarios:
 
 - Back up DSRM account passwords to Windows Server Active Directory (for Windows Server Active Directory domain controllers)
 
-- Back up local administrator account passwords to Windows Server Active Directory by using legacy Microsoft LAPS.
+- Back up local administrator account passwords to Windows Server Active Directory by using legacy Microsoft LAPS
 
 In each scenario, you can apply different policy settings.
 
@@ -54,11 +54,11 @@ Devices that are joined only to [Azure Active Directory](/azure/active-directory
 
 Devices that are joined only to Windows Server Active Directory can back up passwords only to Windows Server Active Directory.
 
-Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory) can back up their passwords to either Azure Active Directory or Windows Server Active Directory. You can't back up passwords to both Azure Active Directory and Windows Server Active Directory.
+Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory) can back up their passwords either to Azure Active Directory or to Windows Server Active Directory. You can't back up passwords to both Azure Active Directory and Windows Server Active Directory.
 
 ## Set Windows LAPS policy
 
-To manage policy for your Windows LAPS deployment, you have multiple options:
+To set up and manage policy for your Windows LAPS deployment, you have multiple options:
 
 - [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp)
 - [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy)
@@ -80,10 +80,10 @@ Azure-based monitoring and reporting solutions are available when you back up pa
 
 You can still download an earlier version of Local Administrator Password Solution, [legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
 
-Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features will be familiar. The first key difference is that Windows LAPS is an entirely separate implementation that's native to Windows. Windows LAPS also adds many features that weren't present in legacy Microsoft LAPS. You can use Windows LAPS to back up passwords to Azure Active Directory, encrypt passwords in Windows Server Active Directory, and store your password history.
+Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features will be familiar. A key difference is that Windows LAPS is an entirely separate implementation that's native to Windows. Windows LAPS also adds many features that aren't available in legacy Microsoft LAPS. You can use Windows LAPS to back up passwords to Azure Active Directory, encrypt passwords in Windows Server Active Directory, and store your password history.
 
 > [!IMPORTANT]
-> Windows LAPS doesn't require you to install legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features without installing or referring to legacy Microsoft LAPS. But help migrate an existing legacy Microsoft LAPS deployment, Windows LAPS offers [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
+> Windows LAPS doesn't require you to install legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features without installing or referring to legacy Microsoft LAPS. But to help migrate an existing legacy Microsoft LAPS deployment, Windows LAPS offers [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
 
 ## See also
 
@@ -92,4 +92,6 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 ## Next steps
 
 - [Key concepts in Windows LAPS](laps-concepts.md)
-- [Windows LAPS schema extensions reference](laps-technical-reference.md)
+- [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
+- [Get started with Windows LAPS for Azure Active Directory](laps-scenarios-azure-active-directory.md)
+- [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)

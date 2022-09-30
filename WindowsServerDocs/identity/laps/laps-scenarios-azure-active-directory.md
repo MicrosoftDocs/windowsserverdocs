@@ -53,7 +53,7 @@ More plainly: the Windows Server Active Directory-specific policy settings don't
 
 At a minimum, you must configure the BackupDirectory setting to the value 1 (backup passwords to Azure Active Directory).
 
-If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local Administrator account. This built-in account is automatically identified by its well-known relative identifier (RID) and should never be identified by name. The name of the built-in local Administrator account varies depending on the default locale of the device.
+If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified by its well-known relative identifier (RID) and should never be identified by name. The name of the built-in local administrator account varies depending on the default locale of the device.
 
 If you want to configure a custom local administrator account, you should configure the AdministratorAccountName setting with the name of that account.
 

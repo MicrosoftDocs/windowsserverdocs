@@ -56,13 +56,13 @@ LAPS policy processing failed with the error code below.
 Error code: 80070032
 ```
 
-If a failure occurs, you can use the error code to help you troubleshoot. You also can look at the intervening events for detailed information.
+If a failure occurs, you can use the error code to troubleshoot. You also can look at the intervening events for detailed information.
 
 ### Policy configuration details
 
-When password backup is enabled, a policy configuration event is emitted during each Windows LAPS background policy processing cycle to log the specific policy setting value for each cycle iteration.
+When password backup is enabled, a policy configuration event is emitted during each Windows LAPS background policy processing cycle. The event logs the specific policy setting value for each cycle iteration.
 
-When the policy is configured to back up the password to Active Directory, a 10021 event is logged. Here's an example of a 10021 event:
+When the policy is configured to back up the password to Windows Server Active Directory, a 10021 event is logged. Here's an example of a 10021 event:
 
 ```output
 The current LAPS policy is configured as follows:
@@ -153,7 +153,7 @@ Account name: ContosoLocalAdminAccount
 Account RID: 1087
 ```
 
-### Post-authentication-action related events
+### Post-authentication action events
 
 When post-authentication actions are configured, Windows LAPS monitors for successful authentications by the specified managed account. When an authentication is detected, a 10041 event is logged.
 
