@@ -535,7 +535,7 @@
       - name: BGP Windows PowerShell Command reference
         href: remote-access/bgp/BGP-Windows-powershell-Command-Reference.md
       - name: Remote Access PowerShell Command reference
-        href: /powershell/module/remoteaccess/?view=windowsserver2022-ps
+        href: /powershell/module/remoteaccess/?view=windowsserver2022-ps&preserve-view=true
       - name: Windows VPN technical guide
         href: /windows/security/identity-protection/vpn/vpn-guide
     - name: Resources
