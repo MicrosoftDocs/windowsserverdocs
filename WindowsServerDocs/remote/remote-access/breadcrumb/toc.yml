@@ -9,3 +9,12 @@
     - name: Remote Access
       tocHref: /powershell/module/remoteaccess/
       topicHref: /windows-server/remote/index
+    - name: Remote Access
+      tocHref: /windows/security/identity-protection/vpn/
+      topicHref: /windows-server/remote/index
+    - name: Remote Access
+      tocHref: /azure-stack/hci/concepts/
+      topicHref: /windows-server/remote/index
+    - name: Remote Access
+      tocHref: /previous-versions/windows/it-pro/windows-2000-server/
+      topicHref: /windows-server/remote/index
