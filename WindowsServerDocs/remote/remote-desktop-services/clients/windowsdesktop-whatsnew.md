@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/27/2022
+ms.date: 09/28/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -30,8 +30,8 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Added page to installer warning users running client on Windows 7 that support for Windows 7 will end starting January 10, 2023.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to multimedia redirection (MMR) for Azure Virtual Desktop, including the following:
-   - MMR now works on remote app browser and supports up to 30 sites.
-   - MMR introduces better diagnostic tools with the new status icon and one-click tracelog.
+   - MMR now works on remote app browser and supports up to 30 sites. For more information, see [Understanding multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection-intro).
+   - MMR introduces better diagnostic tools with the new status icon and one-click tracelog. For more information, see [Multimedia redirection for Azure Virtual Desktop (preview)](/azure/virtual-desktop/multimedia-redirection).
 
 ## Updates for version 1.2.3497
 
