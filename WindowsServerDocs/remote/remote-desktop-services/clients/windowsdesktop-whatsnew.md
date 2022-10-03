@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/28/2022
+ms.date: 10/04/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3497        |1.2.1672                  |
-|Insider    |1.2.3573        |1.2.1672                  |
+|Public     |1.2.3574        |1.2.1672                  |
+|Insider    |1.2.3574        |1.2.1672                  |
 
-## Updates for version 1.2.3573 (Insider)
+## Updates for version 1.2.3574
 
-Date published: September 27, 2022
+Date published: October 3, 2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Added banner warning users running client on Windows 7 that support for Windows 7 will end starting January 10, 2023.
 - Added page to installer warning users running client on Windows 7 that support for Windows 7 will end starting January 10, 2023.
@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 Date published: 9/20/2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE567JA), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE567JB), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE567Jz)
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between Websocket (renamed from TCP), RDP Shortpath for managed networks, and RDP Shortpath for public networks.
@@ -50,8 +50,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.3496
 
 Date published: 9/08/2022
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE55C53), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE55C54), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE55C52)
 
 - Reverted to version 1.2.3401 build to avoid a connectivity issue with older RDP stacks.
 
