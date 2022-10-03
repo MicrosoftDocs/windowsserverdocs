@@ -11,12 +11,13 @@ ms.date: 09/28/2022
 
 # Remote Access
 
-When you install the Remote Access Server Role with the *Add Roles and Features Wizard* or Windows PowerShell, you can choose to install one or more of the following three role services, either individually or on the same server:
+When you install the Remote Access Server Role with the *Add Roles and Features Wizard* or Windows PowerShell, you can choose to install one or more of the following three role services:
 
 - [Direct Access and VPN (RAS) service](#directaccess-and-vpn-service)
 - [Routing service](#routing-service)
 - [Web Application Proxy service](#web-application-proxy-service)
 
+Anyone of these services can be installed either individually or on the same server.
 
 >[!IMPORTANT]
 >Don't attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported. You can't use Remote Access in an Azure VM to deploy VPN, DirectAccess, or any other Remote Access feature in Windows Server 2016 or earlier versions of Windows Server. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
@@ -25,20 +26,20 @@ When you install the Remote Access Server Role with the *Add Roles and Features 
 
 ### VPN (RAS)
 
-The VPN service uses the connectivity of the internet and a combination of tunnelling and data encryption technologies to connect to remote clients and offices.
+The VPN service uses the connectivity of the internet and a combination of tunneling and data encryption technologies to connect to remote clients and offices.
 
-With VPN and Routing service, you can also choose to deploy Always On VPN. Always On VPN enables Windows 10 clients to securely access shared resources, intranet Web sites, and the applications on an internal network without having to manually connect. For more information see [Always On VPN]()
+With VPN and Routing service, you can also choose to deploy Always On VPN. Always On VPN enables Windows 10 clients to securely access shared resources, intranet Web sites, and the applications on an internal network without having to manually connect. For more information, see [Always On VPN](vpn/vpn-map-da.md)
 
 ### DirectAccess
 
-DirectAccess allows connectivity for remote users to organization network resources without the need for traditional VPN connections. With DirectAccess connections, remote client computers are always connected to your organization. There is no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they are running and Internet connected.
+DirectAccess allows connectivity for remote users to organization network resources without the need for traditional VPN connections. With DirectAccess connections, remote client computers are always connected to your organization. There's no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they're' running and Internet connected.
 
 >[!IMPORTANT]
 >For Windows 10+ clients, it is recommended that they connect with Always On VPN. DirectAccess should be used only for clients earlier than Windows 10.
 
 ## Routing service
 
-The Routing service allows you to route network traffic between subnets on your Local Area Network. Routing provides support for the following:
+The Routing service allows you to route network traffic between subnets on your Local Area Network. Routing provides support for the following technologies:
 
 - [Network Address Translation (NAT) routers](/previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10))
 - [LAN routers running Border Gateway Protocol (BGP)](bgp/border-gateway-protocol-bgp.md)
