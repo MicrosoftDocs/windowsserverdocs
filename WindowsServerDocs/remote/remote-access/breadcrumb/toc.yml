@@ -2,13 +2,13 @@
   tocHref: /windows/
   topicHref: /windows-server/index
   items:
-  - name: Remote Access
+  - name: Remote
     tocHref: /windows-server/remote/
     topicHref: /windows-server/remote/index
     items: 
     - name: Remote Access
       tocHref: /powershell/module/remoteaccess/
-      topicHref: /windows-server/remote/index
+      topicHref: /windows-server/remote/remote-acccess/remote-access.md
     - name: Remote Access
       tocHref: /windows/security/identity-protection/vpn/
       topicHref: /windows-server/remote/index
