@@ -6,6 +6,6 @@
     tocHref: /windows-server/remote/
     topicHref: /windows-server/remote/index
     items: 
-    - name: BGP Windows PowerShell Command Reference
+    - name: Remote Access
       tocHref: /powershell/module/remoteaccess/
       topicHref: /windows-server/remote/index
