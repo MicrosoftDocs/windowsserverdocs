@@ -74,7 +74,12 @@ You can deploy Storage Replica in a stretch cluster, between cluster-to-cluster,
 
 * **Network Constraint**. Storage Replica can be limited to individual networks by server and by replicated volumes, in order to provide application, backup, and management software bandwidth.
 
-* **Thin provisioning**. Support for thin provisioning in Storage Spaces and SAN devices is supported in order to provide near-instantaneous initial replication times under many circumstances. Once initial replication is initiated, the volume will not be able to shrink or trim.
+* **Thin provisioning**. Support for thin provisioning in Storage Spaces and SAN devices is supported in order to provide near-instantaneous initial replication times under many circumstances. Once initial replication is initiated, the volume will not be able to shrink or trim
+
+* **Compression**. Storage Replica offers compression for data transferred over the network between
+  the source and destination server. Storage Replica Compression for Data Transfer is only supported in
+  Windows Server Datacenter: Azure Edition beginning with OS build 20348.1070
+  ([KB5017381](https://support.microsoft.com/help/5017381)).
 
 Storage Replica includes the following features:
 
@@ -91,6 +96,7 @@ Storage Replica includes the following features:
 | Transport | SMB3 |
 | Network | TCP/IP or RDMA |
 | Network constraint support | Yes |
+| Network compression | Yes |
 | RDMA* | iWARP, InfiniBand, RoCE v2 |
 | Replication network port firewall requirements | Single IANA port (TCP 445 or 5445) |
 | Multipath/Multichannel | Yes (SMB3) |
