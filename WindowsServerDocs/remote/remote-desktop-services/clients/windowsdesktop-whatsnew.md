@@ -17,14 +17,22 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3574        |1.2.1672                  |
-|Insider    |1.2.3574        |1.2.1672                  |
+|Public     |1.2.3575        |1.2.1672                  |
+|Insider    |1.2.3575        |1.2.1672                  |
+
+## Updates for version 1.2.3575
+
+Date published: October 4, 2022
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+Fixed issues.
 
 ## Updates for version 1.2.3574
 
 Date published: October 4, 2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58vKJ), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58vKK), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58vKI)
 
 - Added banner warning users running client on Windows 7 that support for Windows 7 will end starting January 10, 2023.
 - Added page to installer warning users running client on Windows 7 that support for Windows 7 will end starting January 10, 2023.
@@ -36,8 +44,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.3497
 
 Date published: 9/20/2022
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE567JA), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE567JB), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE567Jz)
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between Websocket (renamed from TCP), RDP Shortpath for managed networks, and RDP Shortpath for public networks.
