@@ -2,9 +2,9 @@
 title: Active Directory security groups
 description: Learn about Windows Server Active Directory security groups, group scope, and group functions.
 author: dansimp
-ms.author: dansimp
+ms.author: alalve
 ms.topic: article
-ms.date: 08/02/2022
+ms.date: 10/04/2022
 ---
 
 # Active Directory security groups
@@ -51,7 +51,7 @@ Security groups can provide an efficient way to assign access to resources on yo
 
     Permissions are different from user rights. Permissions are assigned to a security group for a shared resource. Permissions determine who can access the resource and the level of access, such as Full control or Read. Some permissions that are set on domain objects are automatically assigned to allow various levels of access to default security groups like the Account Operators group or the Domain Admins group.
 
-    Security groups are listed in discretionary access control lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in Active Directory. The user receives permissions that are defined for that group.
+    Security groups are listed in Discretionary Access Control lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in Active Directory. The user receives permissions that are defined for that group.
 
 You can use a security group as an email entity. Sending an email message to a security group sends the message to all the members of the group.
 
