@@ -26,7 +26,7 @@ Date published: October 4, 2022
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-Fixed issues.
+Fixed an issue that caused unexpected disconnects in certain RemoteApp scenarios.
 
 ## Updates for version 1.2.3574
 
