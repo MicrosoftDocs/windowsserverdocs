@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 69e0e28a-98ae-4ade-bd27-ce2ad7eb310f
 ms.author: jgerend
 author: JasonGerend
-ms.date: 12/08/2020
+ms.date: 10/04/2022
 ---
 # Configure and View VLAN Settings on Hyper-V Virtual Switch Ports
 
@@ -41,8 +41,8 @@ To configure and view VLAN switch port settings, you must do the following:
 
 If you do not follow these guidelines you might encounter the following issues.
 
-- In circumstances where you have deployed SDN and use VMM, Network Controller, or the **VMNetworkAdapterIsolation** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use Hyper-V Manager or **Get VMNetworkAdapterVlan** to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get-VMNetworkIsolation** cmdlet to view the VLAN settings.
-- In circumstances where you have not deployed SDN, and instead use Hyper-V Manager or the **VMNetworkAdapterVlan** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use the **Get-VMNetworkIsolation** cmdlet to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get VMNetworkAdapterVlan** cmdlet to view the VLAN settings.
+- In circumstances where you have deployed SDN and use VMM, Network Controller, or the **VMNetworkAdapterIsolation** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use Hyper-V Manager or **Get-VMNetworkAdapterVlan** to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get-VMNetworkIsolation** cmdlet to view the VLAN settings.
+- In circumstances where you have not deployed SDN, and instead use Hyper-V Manager or the **VMNetworkAdapterVlan** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use the **Get-VMNetworkIsolation** cmdlet to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get-VMNetworkAdapterVlan** cmdlet to view the VLAN settings.
 
 It is also important not to attempt to configure the same switch port VLAN settings by using both of these configuration methods. If you do this, the switch port is incorrectly configured, and the result might be a failure in network communication.
 
