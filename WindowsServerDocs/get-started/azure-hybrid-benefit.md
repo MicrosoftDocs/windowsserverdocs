@@ -32,7 +32,7 @@ AHB includes the following cost savings:
 
 - **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You'll still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for AHB for Azure Stack HCI. With AHB for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
 
-![Illustration showing Azure Hybrid Benefit savings for Windows Server VMs on Azure, AKS on Azure Stack HCI and Windows Server.](media/azure-hybrid-benefit/azure-hybrid-benefit-savings.png)
+![Illustration showing Azure Hybrid Benefit savings for Windows Server VMs on Azure, AKS hybrid on Azure Stack HCI and Windows Server.](media/azure-hybrid-benefit/azure-hybrid-benefit-savings.png)
 
 ## Pricing for AHB
 
