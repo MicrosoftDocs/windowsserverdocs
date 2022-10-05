@@ -25,10 +25,10 @@ Server 2022 Datacenter: Azure Edition. Learn more about how Azure Automanage for
 brings these new capabilities to Windows Server Azure Edition in the [Azure Automange for
 Windows Server services](/azure/automanage/automanage-windows-server-services-overview) article.
 
-### Azure Edition Update 1
+### September 2022
 
 This section lists the features and improvements that are now available in Windows Server
-Datacenter: Azure Edition Update 1, beginning with the 2022-09 Cumulative Update for Microsoft
+Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
 server operating system version 21H2 for x64-based Systems
 ([KB5017381](https://support.microsoft.com/help/5017381)). After you've install the Cumulative
 Update, the OS build number will be 20348.1070 or higher.
@@ -47,6 +47,16 @@ For more information, see the
 There will be no change in the way the replica groups and partnerships are created. New parameters
 are available for existing Storage Replica PowerShell commands, review the [Windows PowerShell
 StorageReplica reference](/powershell/module/storagereplica/) to learn more.
+
+#### Deploy on Arc-enabled Azure Stack HCI
+
+With this release, you'll be able to access the latest Windows Server 2022 Datacenter: Azure Edition
+images from the Azure Marketplace for Arc-enabled Azure Stack HCI. By using
+Azure Edition on Azure Stack HCI you'll be able to use all the existing features, including
+[Hotpatch](#azure-automanage---hotpatch) for Windows Server 2022 Datacenter: Azure Edition (Core).
+
+Learn more about the latest Azure Stack HCI features in our
+[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new) article.
 
 ### Azure Edition (initial release)
 
