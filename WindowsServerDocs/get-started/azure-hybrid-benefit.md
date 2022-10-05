@@ -1,6 +1,6 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
-description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server icenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
+description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
 ms.date: 10/05/2022
 ms.topic: conceptual
 author: dknappettmsft
@@ -72,25 +72,25 @@ To evaluate your potential cost savings, you can use these resources:
 
 Unlimited virtualization refers to the right to use any number of Windows Server VMs on a host.  
 
-- **Windows Server Datacenter edition:** You can use your Windows Server licenses for any number of VMs on an Azure Dedicated Host, provided you allocate Windows Server Datacenter Licenses with SA for all of the physical cores available to you on that Azure server.
+- **Windows Server Datacenter edition:** You can use your Windows Server licenses for any number of VMs on an Azure Dedicated Host, provided that you allocate Windows Server Datacenter licenses with SA for all the available physical cores on that Azure server.
 
-- **Windows Server Standard edition:** Unlimited Virtuallization Rights aren't available.  
+- **Windows Server Standard edition:** Unlimited Virtualization Rights aren't available.  
 
 ### How to apply AHB for Windows VMs in Azure
 
 To learn how to deploy Windows Server VMs in Azure with AHB, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
 
-To activate your AHB benefit, sign in on the Azure Portal, and open your Azure Stack HCI cluster resource. Than select **Activate Benefit** on the **Configuration** pane, as shown below.
+To activate your AHB benefit, sign in on the Azure portal, and open your Azure Stack HCI cluster resource. Then select **Activate Benefit** on the **Configuration** pane, as shown below.
 
 ![Screenshot of Activate Benefit button, for activating AHB, on the Configuration pane ofr an Azure Stack HCI cluster resource.](media/azure-hybrid-benefit/activate-azure-hybrid-benefit.png)
 
 ### How to maintain compliance
 
-If you apply Azure Hybrid Benefit to your Windows Server VMs, you need to verify the number of eligible licenses and respective coverage period of your Software Assurance term before any activation of this benefit, and apply the guidelines above to ensure you deploy the correct number of Windows Server VMs with Azure Hybrid Benefit.
+Before you apply Azure Hybrid Benefit to your Windows Server VMs, verify the number of eligible licenses and the Software Assurance coverage period before you activate this benefit. Use the guidelines above to make sure you deploy the correct number of Windows Server VMs with this benefit.
 
-If you already have Windows Server VMs running with Azure Hybrid Benefit, you need to perform an inventory of how many units you are running, and check this against the Software Assurance licenses you have. Please contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
+If you already have Windows Server VMs running with Azure Hybrid Benefit, perform an inventory to see how many units you are running, and check this number against your Software Assurance licenses. You can contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
 
-To see and count all virtual machines deployed with Azure Hybrid Benefit for Windows Server in an Azure subscription, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) with Azure Hybrid Benefit for Windows Server in a subscription.
+To see and count all virtual machines that are deployed with Azure Hybrid Benefit for Windows Server in an Azure subscription, you can [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) by following the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
 
 You can also look at your Microsoft Azure bill to determine how many VMs with Azure Hybrid Benefit for Windows Server you are running. You'll find information about the number of instances with the benefit under **Additional Info**:
 
@@ -98,11 +98,16 @@ You can also look at your Microsoft Azure bill to determine how many VMs with Az
 "{"ImageType":"WindowsServerBYOL","ServiceType":"Standard_A1","VMName":"","UsageType":"ComputeHR"}"
 ```
 
-Please note that billing does not apply in real time. There will be a delay of several hours from the time you've activated a Windows Server VM with Azure Hybrid Benefit before it shows on your bill.
+Billing is not applied in real time. Expect a delay of several hours after you activate a Windows Server VM with Azure Hybrid Benefit before the charge shows on your bill.
 
-Be sure to perform an inventory in each Azure subscription that you own to generate a comprehensive view of your licensing position. Once you have confirmed you are fully licensed for the number of Windows Server VMs you are running with Azure Hybrid Benefit, there is no need for any further action. You should perform an inventory regularly to ensure you are using any license benefits you are entitled to in order to reduce your costs, but also to make sure that you always have enough licenses to cover the number of Windows Server VMs you have deployed with Azure Hybrid Benefit.
+To get a comprehensive view of your licensing position, perform an inventory in each of your Azure subscriptions. After you confirm that you're fully licensed for the Windows Server VMs you're running with Azure Hybrid Benefit, no futher action is needed. 
 
-If you do not have enough eligible Windows Server licenses for the number of VMs already deployed, you either need to purchase extra Windows Server licenses covered with Software Assurance through one of the commercial licensing agreements, purchase Windows Server VMs at regular Azure hourly rates by disabling Azure Hybrid Benefit for some VMs, or deallocate some VMs.
+Perform an inventory regularly to make sure you're using any license benefits that you're entitled to. This can help you reduce costs and make sure that you always have enough licenses to cover the Windows Server VMs you've deployed with Azure Hybrid Benefit.
+
+If you don't have enough eligible Windows Server licenses for your deployed VMs, you have three choices:
+- Purchase extra Windows Server licenses covered by Software Assurance through a commercial licensing agreement.
+- Disable Azure Hybrid Benefit for some of your VMs, and purchase them at regular Azure hourly rates.
+- Deallocate some VMs.
 
 > [!NOTE]
 > Microsoft reserves the right to audit customers at any time to verify eligibility for Azure Hybrid Benefit utilization.
