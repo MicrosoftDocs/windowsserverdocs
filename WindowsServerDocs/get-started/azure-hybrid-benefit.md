@@ -18,9 +18,9 @@ For other benefits of AHB (for example, SQL Server), see [Azure Hybrid Benefit](
 To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance. Software Assurance is only available as part of a commercial licensing agreement. To learn more about volume licensing and which agreements it's available with, see [Microsoft Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
 
 > [!IMPORTANT]
-> Workloads using Azure Hybrid Benefit can run only during the Software Assurance term. When the Software Assurance term approaches expiration, you must either renew your agreement with Software Assurance, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.
+> Workloads using Azure Hybrid Benefit can run only during the Software Assurance term. When the Software Assurance term approaches expiration, you must either renew your agreement with Software Assurance, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.<!--What happens if customers fail to do this? From Anirudh-->
 
-## What's included in AHB for Windows Server?
+## What's included in AHB?
 
 Customers with Windows Server Software Assurance can use the Azure Hybrid Benefit to further reduce costs in the cloud and in datacenter and edge locations.
 
@@ -30,7 +30,7 @@ AHB includes the following cost savings:
 
 - **Azure Stack HCI:** The Azure Stack HCI host fee and Windows Server subscription fee are waived with AHB. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Stack HCI (for example, customer-managed hardware, Azure services, and workloads).
 
-- **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You'll still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for AHB for Azure Stack HCI. With AHB for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
+- **AKS hybrid:** Run AKS hybrid on Windows Server and Azure Stack HCI at no extra cost. You'll still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for AHB for Azure Stack HCI. With AHB for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
 
 ![Illustration showing Azure Hybrid Benefit savings for Windows Server VMs on Azure, AKS hybrid on Azure Stack HCI and Windows Server.](media/azure-hybrid-benefit/azure-hybrid-benefit-savings.png)
 
@@ -42,7 +42,7 @@ To evaluate your potential cost savings, you can use these resources:
 
 - **Azure Stack HCI:** [Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/hci).  
 
-- **Azure Kubernetes Service (AKS):** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
+- **Azure Kubernetes Service (AKS) hybrid:** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
 
 ## Getting AHB for Windows VMs in Azure
 
@@ -60,19 +60,19 @@ To evaluate your potential cost savings, you can use these resources:
 
 - Each additional set of 8-core licenses entitles use on up to 8 virtual cores on 1 virtual machine.
 
-- *Stacking licenses:* To run a virtual machine with more than 16 cores, you can stack licenses. For example, with two 16-core license packs, you can run a virtual machine with up to 32 cores. Each virtual machine, regardless of its size, must be licensed with a minimum of 8 cores. You can then stack more core licenses on top, up to the number that you need.
+- Stacking licenses: To run a virtual machine with more than 16 cores, you can stack licenses. For example, with two 16-core license packs, you can run a virtual machine with up to 32 cores. Each virtual machine, regardless of its size, must be licensed with a minimum of 8 cores. You can then stack more core licenses on top, up to the number that you need.
 
 #### Use rights
 
 - **Windows Server Standard edition:** Licenses must be used either on-premises or in Azure, but not at the same time. The only exception is on a onetime basis, for up to 180 days, to allow you to migrate the same workloads to Azure.  
 
-- **Windows Server Datacenter edition:** Licenses allow for simultaneous usage on-premises and in Azure. Dual Use Rights don't apply for licenses allocated for [Unlimited Virtualization Rights](#unlimited-virtualization), below.
+- **Windows Server Datacenter edition:** Licenses allow simultaneous usage on-premises and in Azure. Dual Use Rights don't apply for licenses allocated for [Unlimited Virtualization Rights](#unlimited-virtualization), below.
 
 #### Unlimited virtualization
 
-Unlimited virtualization refers to the right to use any number of Windows Server VMs on a host.  
+Unlimited Virtualization Rights refers to the right to use any number of Windows Server VMs on a host.  
 
-- **Windows Server Datacenter edition:** You can use your Windows Server licenses for any number of VMs on an Azure Dedicated Host if you allocate Windows Server Datacenter licenses with SA for all the available physical cores on that Azure server.
+- **Windows Server Datacenter edition:** You can use your Windows Server licenses for any number of VMs on an Azure dedicated host if you allocate Windows Server Datacenter licenses with active SA for all the available physical cores on that Azure server.
 
 - **Windows Server Standard edition:** Unlimited Virtualization Rights aren't available.  
 
@@ -163,7 +163,7 @@ AHB for AKS hybrid is additive. Core licenses used for AHB for AKS hybrid can be
 
 AHB for AKS hybrid will be available soon.
 
-## FAQ
+## FAQ: Azure Hybrid Benefit
 
 #### Which regions are eligible for Azure Hybrid Benefit?
 
