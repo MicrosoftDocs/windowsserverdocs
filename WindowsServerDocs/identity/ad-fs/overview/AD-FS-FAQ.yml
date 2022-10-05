@@ -374,7 +374,7 @@ sections:
       - question: |
           Is AD FS supported when Web Application Proxy servers are behind Azure Web Application Firewall (WAF)?
         answer: |
-          AD FS and Web Application servers support any firewall that doesn't perform SSL termination on the endpoint. Also, AD FS / Web Application Proxy servers have built-in mechanisms to:
+          No, Azure WAF is not supported because it terminats SSL. AD FS and Web Application servers support any firewall that doesn't perform SSL termination on the endpoint. Also, AD FS / Web Application Proxy servers have built-in mechanisms to:
           - Help prevent common web attacks like cross-site scripting.
           - Perform AD FS proxy. 
           - Satisfy all requirements defined by the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb).
