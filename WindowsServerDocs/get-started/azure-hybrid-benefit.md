@@ -90,7 +90,7 @@ If you apply Azure Hybrid Benefit to your Windows Server VMs, you need to verify
 
 If you already have Windows Server VMs running with Azure Hybrid Benefit, you need to perform an inventory of how many units you are running, and check this against the Software Assurance licenses you have. Please contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
 
-To see and count all virtual machines deployed with Azure Hybrid Benefit for Windows Server in an Azure subscription, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing.md) to [list all VMs and virtual machine scale sets](https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing.md#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) with Azure Hybrid Benefit for Windows Server in a subscription.
+To see and count all virtual machines deployed with Azure Hybrid Benefit for Windows Server in an Azure subscription, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) with Azure Hybrid Benefit for Windows Server in a subscription.
 
 You can also look at your Microsoft Azure bill to determine how many VMs with Azure Hybrid Benefit for Windows Server you are running. You'll find information about the number of instances with the benefit under **Additional Info**:
 
