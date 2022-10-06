@@ -51,8 +51,8 @@ StorageReplica reference](/powershell/module/storagereplica/) to learn more.
 #### Support for Azure Stack HCI
 
 With this release you can run Windows Server 2022 Datacenter: Azure Edition as a supported guest VM
-on Azure Stack HCI version 22H2. With Azure Edition running on Azure Stack HCI you'll be able to use
-all the existing features, including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
+on Azure Stack HCI version 22H2. With Azure Edition running on Azure Stack HCI, you'll be able to use
+all the existing features including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
 [SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
 
 Learn more about the latest Azure Stack HCI features in our
@@ -129,7 +129,7 @@ Firmware executes with high privileges and is often invisible to traditional ant
 
 Secured-core servers support virtualization-based security (VBS) and hypervisor-based code integrity (HVCI). [VBS](/windows-hardware/design/device-experiences/oem-vbs) uses hardware virtualization features to create and isolate a secure region of memory from the normal operating system, protecting against an entire class of vulnerabilities used in cryptocurrency mining attacks. VBS also allows for the use of [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-how-it-works), where user credentials and secrets are stored in a virtual container that the operating system cannot access directly.
 
-[HVCI](/windows-hardware/design/device-experiences/oem-hvci-enablement) uses VBS to significantly strengthen code integrity policy enforcement, including kernel mode integrity that checks all kernel mode drivers and binaries in a virtualized environment before they are started, preventing unsigned drivers or system files from being loaded into system memory.
+[HVCI](/windows-hardware/design/device-experiences/oem-hvci-enablement) uses VBS to significantly strengthen code integrity policy enforcement, including kernel mode integrity that checks all kernel mode drivers and binaries in a virtualized environment before they're started, preventing unsigned drivers or system files from being loaded into system memory.
 
 Kernel Data Protection (KDP) provides read-only memory protection of kernel memory containing non-executable data where memory pages are protected by Hypervisor. KDP protects key structures in the Windows Defender System Guard runtime from being tampered.
 
@@ -191,7 +191,7 @@ Nested virtualization is a feature that allows you to run Hyper-V inside of a Hy
 
 #### Microsoft Edge browser
 
-Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer. It is built on Chromium open source and backed by Microsoft security and innovation. It can be used with the Server with Desktop Experience installation options. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
+Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer. It's built on Chromium open source and backed by Microsoft security and innovation. It can be used with the Server with Desktop Experience installation options. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
 
 #### Networking performance
 
