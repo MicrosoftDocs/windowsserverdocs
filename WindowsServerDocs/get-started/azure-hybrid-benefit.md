@@ -9,7 +9,7 @@ ms.author: daknappe
 
 # Azure Hybrid Benefit for Windows Server
 
-Azure Hybrid Benefit (AHB) is a cost saving benefit that lets you use your on-premises licenses with Software Assurance (SA) enabled in the cloud. This article focuses on benefits for Windows Server licenses with SA: cost savings for Windows Server virtual machines (VMs) in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server.
+Azure Hybrid Benefit (AHB) is a cost saving benefit that enables you to use your on-premises licenses with Software Assurance (SA) enabled in the cloud. This article focuses on benefits for Windows Server licenses with SA: cost savings for Windows Server virtual machines (VMs) in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server.
 
 For other benefits of AHB (for example, SQL Server), see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit).
 
