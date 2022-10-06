@@ -68,7 +68,7 @@ Install-RemoteAccess -VpnType SstpProxy
 
 For more information, see [Web Application Proxy](./web-application-proxy/web-application-proxy-windows-server.md).
 
-For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).f
+For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).
 
 ## Next Steps
 
