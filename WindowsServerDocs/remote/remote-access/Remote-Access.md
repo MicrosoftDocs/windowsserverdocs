@@ -35,7 +35,7 @@ With VPN and Routing service, you can also choose to deploy Always On VPN. Alway
 DirectAccess allows connectivity for remote users to organization network resources without the need for traditional VPN connections. With DirectAccess connections, remote client computers are always connected to your organization. There's no need for remote users to start and stop connections, as is required with VPN connections. In addition, your IT administrators can manage DirectAccess client computers whenever they're' running and Internet connected.
 
 >[!IMPORTANT]
->For Windows 10+ clients, it is recommended that they connect with Always On VPN. DirectAccess should be used only for clients earlier than Windows 10.
+>For Windows 10 or later, it is recommended to connect using Always On VPN. DirectAccess should be used only for clients earlier than Windows 10.
 
 ## Routing service
 
