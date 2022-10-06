@@ -48,15 +48,25 @@ There will be no change in the way the replica groups and partnerships are creat
 are available for existing Storage Replica PowerShell commands, review the [Windows PowerShell
 StorageReplica reference](/powershell/module/storagereplica/) to learn more.
 
-#### Deploy on Arc-enabled Azure Stack HCI
+#### Support for Azure Stack HCI
 
-With this release, you'll be able to access the latest Windows Server 2022 Datacenter: Azure Edition
-images from the Azure Marketplace for Arc-enabled Azure Stack HCI. By using
-Azure Edition on Azure Stack HCI you'll be able to use all the existing features, including
-[Hotpatch](#azure-automanage---hotpatch) for Windows Server 2022 Datacenter: Azure Edition (Core).
+With this release you can run Windows Server 2022 Datacenter: Azure Edition as a supported guest VM
+on Azure Stack HCI version 22H2. With Azure Edition running on Azure Stack HCI you'll be able to use
+all the existing features, including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
+[SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
 
 Learn more about the latest Azure Stack HCI features in our
 [What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new) article.
+
+#### Deploy from Azure Marketplace on Arc-enabled Azure Stack HCI (preview)
+
+Windows Server 2022 Datacenter: Azure Edition images will be available in the Azure Marketplace for
+Arc-enabled Azure Stack HCI, making it easy to try, buy, and deploy using Azure certified images.
+
+Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Stack HCI features in
+our
+[What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new#azure-arc-vm-changes-and-azure-marketplace)
+article.
 
 ### Azure Edition (initial release)
 
