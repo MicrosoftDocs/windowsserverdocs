@@ -1,8 +1,8 @@
 ---
 title: Scale out your RDS deployment by adding an RD Session Host farm
-description: Add a second RD Session Host to yur RDS environment.
+description: Add a second RD Session Host to your RDS environment.
 ms.author: elizapo
-ms.date: 04/10/2017
+ms.date: 10/05/2022
 ms.topic: article
 author: lizap
 manager: dongill
@@ -13,8 +13,7 @@ manager: dongill
 
 You can improve the availability and scale of your RDS deployment by adding a Remote Desktop Session Host (RDSH) farm.
 
-
-Use the following steps to add another RD Sesssion Host to your deployment:
+Use the following steps to add another RD Session Host to your deployment:
 
 1. Create a server to host the second RD Session Host. If you are using Azure virtual machines, make sure to include the new VM in the same availability set that holds your first RD Session Host.
 2. Enable remote management on the new server or virtual machine:
@@ -27,6 +26,7 @@ Use the following steps to add another RD Sesssion Host to your deployment:
    3. Enter the domain administrator credentials.
    4. Restart the server or vm.
 4. Add the new RD Session Host to the farm:
+   
    >[!NOTE]
    > Step 1, creating a public IP address for the RDMS virtual machine, is only necessary if you are using a vm for the RDMS and if it does not already have an IP address assigned.
 
@@ -42,7 +42,7 @@ Use the following steps to add another RD Sesssion Host to your deployment:
        2. In the Add Servers dialog, click **Find Now**.
        3. Select the server you want to use for the RD Session Host or the newly created virtual machine (for example, Contoso-Sh2) and click **OK**.
    4. Add the RDSH server to the deployment
-       1. Launch Server Manager .
+       1. Launch Server Manager.
        2. Click **Remote Desktop Services > Overview > Deployment Servers > Tasks > Add RD Session Host Servers**.
        3. Select the new server (for example, Contoso-Sh2), and then click **Next**.
        4. On the Confirmation page, select **Restart remote computers as needed**, and then click **Add**.
