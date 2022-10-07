@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
-ms.date: 10/06/2022
+ms.date: 10/07/2022
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
@@ -18,7 +18,7 @@ For other benefits of AHB (for example, SQL Server), see [Azure Hybrid Benefit](
 To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance. Software Assurance is only available as part of a commercial licensing agreement. To learn more about volume licensing and which agreements it's available with, see [Microsoft Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
 
 > [!IMPORTANT]
-> Workloads using Azure Hybrid Benefit can run only during the Software Assurance term. When the Software Assurance term approaches expiration, you must either renew your agreement with Software Assurance, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.<!--What happens if customers fail to do this? From Anirudh-->
+> Workloads using Azure Hybrid Benefit can run only during the Software Assurance term. When the Software Assurance term approaches expiration, you must either renew your agreement with Software Assurance, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.
 
 ## What's included in AHB?
 
@@ -78,7 +78,7 @@ Unlimited Virtualization Rights refers to the right to use any number of Windows
 
 ### How to apply AHB for Windows VMs in Azure
 
-To learn how to deploy Windows Server VMs in Azure with AHB, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing). One way to activate AHB for a Windows Server VM is to open the followig screen from the VM's **Configuration** blade.
+To learn how to deploy Windows Server VMs in Azure with AHB, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing). One way to activate AHB for a Windows Server VM is to check the box under **Licensing** during VM creation, as shown below.
 
 ![Screenshot of Licensing screen to apply Azure Hybrid Benefit to a Windows Server VM.](media/azure-hybrid-benefit/activate-azure-hybrid-benefit-for-windows-server-vm.png)
 
@@ -171,7 +171,7 @@ AHB is available across all Azure regions and sovereign clouds.
 
 #### What happens to my benefits if my Software Assurance expires?
 
-To use these benefits, your Software Assurance or subscriptions must be active. If you choose not to renew your Software Assurance when it expires, you'll need to remove your benefits from your resources in the Azure portal.<!--What happens immediately to the resourcesIf they don't do this, billings resume automatically at non-AHB rates?-->
+To use these benefits, your Software Assurance or subscriptions must be active. If you choose not to renew your Software Assurance when it expires, you'll need to remove your benefits from your resources in the Azure portal.
 
 #### What is Software Assurance?
 
