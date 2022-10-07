@@ -997,32 +997,29 @@
     - name: Troubleshoot Software Restriction Policies
       href: software-restriction-policies/troubleshoot-software-restriction-policies.md
   - name: Windows Local Administrator Password Solution
-    href: laps/laps.md
     items:
-    - name: Overview
+    - name: What is Windows LAPS?
       href: laps/laps-overview.md
-    - name: Concepts
+    - name: Key concepts in Windows LAPS
       href: laps/laps-concepts.md
-    - name: Scenario guides
-      href: laps/laps-scenarios.md
+    - name: Windows LAPS scenarios
       items:
-      - name: Getting started with Windows LAPS and Azure Active Directory
+      - name: Windows LAPS and Azure Active Directory
         href: laps/laps-scenarios-azure-active-directory.md
-      - name: Getting started with Windows LAPS and Windows Server Active Directory
+      - name: Windows LAPS and Windows Server Active Directory
         href: laps/laps-scenarios-windows-server-active-directory.md
-      - name: Getting started with Windows LAPS in Legacy LAPS emulation mode
+      - name: Windows LAPS in legacy Microsoft LAPS emulation mode
         href: laps/laps-scenarios-legacy.md
-    - name: Management
-      href: laps/laps-management.md
+    - name: Manage Windows LAPS
       items:
-      - name: Policy settings
+      - name: Configure Windows LAPS policy settings
         href: laps/laps-management-policy-settings.md
-      - name: PowerShell
+      - name: Use Windows LAPS PowerShell cmdlets
         href: laps/laps-management-powershell.md
-      - name: Eventlog
+      - name: Use Windows LAPS event logs
         href: laps/laps-management-event-log.md
-      - name: User interface
+      - name: Set up Windows LAPS in LAPS properties dialog
         href: laps/laps-management-user-interface.md
-    - name: Technical reference
+    - name: Windows LAPS schema extensions reference
       href: laps/laps-technical-reference.md
 
