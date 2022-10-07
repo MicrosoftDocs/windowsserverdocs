@@ -46,7 +46,11 @@ To evaluate your potential cost savings, you can use these resources:
 
 ## Getting AHB for Windows VMs in Azure
 
+Follow the guidance in this section to get and maintain Azure Hybrid Benefit for your Windows VMs in Azure.
+
 ### Licensing prerequisites
+
+To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the following licensing prerequisites.
 
 #### Types of license
 
@@ -112,7 +116,11 @@ If you don't have enough eligible Windows Server licenses for your deployed VMs,
 
 ## Getting AHB for Azure Stack HCI
 
+Use the guidance in this section to get Azure Hybrid Benefit for your Azure Stack HCI infrastructure.
+
 ### Licensing prerequisites
+
+To qualify for Azure Hybrid Benefit for Windows Azure Stack HCI, you must meet the following licensing prerequisites.
 
 #### Types of license
 
@@ -138,7 +146,11 @@ You can learn how to deploy AHB for Azure Stack HCI by following the steps in [A
 
 ## Getting AHB for AKS
 
-### Licensing prerequisites 
+Follow the guidance in this section to get Azure Hybrid Benefit for AKS.
+
+### Licensing prerequisites
+
+To quaify for Azure Hybrid Benefit for AKS, you must meet the following licensing prerequisites.
 
 #### Eligible hosts
 
