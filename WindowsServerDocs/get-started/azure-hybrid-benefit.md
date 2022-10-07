@@ -132,7 +132,7 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 #### Unlimited virtualization
 
-- You can use Windows Server in any number of VMs on the Azure Stack HCI cluster if you allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
+- You can use any number of Windows Server VMs on the Azure Stack HCI cluster if you allocate enough core licenses for all physical cores on servers in the Azure Stack HCI cluster.
 
 #### Use rights
 
