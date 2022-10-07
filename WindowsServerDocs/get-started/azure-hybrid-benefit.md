@@ -120,7 +120,7 @@ Use the guidance in this section to get Azure Hybrid Benefit for your Azure Stac
 
 ### Licensing prerequisites
 
-To qualify for Azure Hybrid Benefit for Windows Azure Stack HCI, you must meet the following licensing prerequisites.
+To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the following licensing prerequisites.
 
 #### Types of license
 
@@ -150,7 +150,7 @@ Follow the guidance in this section to get Azure Hybrid Benefit for AKS.
 
 ### Licensing prerequisites
 
-To quaify for Azure Hybrid Benefit for AKS, you must meet the following licensing prerequisites.
+To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensing prerequisites.
 
 #### Eligible hosts
 
