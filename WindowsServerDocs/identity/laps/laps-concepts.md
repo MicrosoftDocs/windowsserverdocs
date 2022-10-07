@@ -112,7 +112,7 @@ When you back up passwords to Windows Server Active Directory, managed local acc
 
 #### ACLs
 
-The first line of password security in Windows Server Active Directory are ACLs that are set up on the computer object that contains Organizational Unit (OU). The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
+The first line of password security in Windows Server Active Directory is ACLs that are set up on the computer object that contains an Organizational Unit (OU). The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
 
 #### Encrypted passwords
 
