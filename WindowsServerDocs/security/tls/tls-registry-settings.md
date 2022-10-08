@@ -3,7 +3,7 @@ title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
 author: PatAltimore
-ms.author: patricka
+ms.author: alalve
 ms.date: 10/07/2022
 ---
 
@@ -303,15 +303,15 @@ The system administrator can override the default (D)TLS and SSL protocol versio
 
 These version-specific subkeys can be created under the following registry path:
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
+**HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols**
 
 For example, here are some valid registry paths with version-specific subkeys:
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client
+- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client**
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server
+- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server**
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client
+- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client**
 
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with a non-zero value, and a DWORD registry value named "DisabledByDefault" with a value of zero, under the corresponding version-specific subkey.
 
