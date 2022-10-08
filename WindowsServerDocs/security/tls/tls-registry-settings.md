@@ -4,14 +4,14 @@ description: Learn about supported registry setting information for the Windows 
 ms.topic: article
 author: PatAltimore
 ms.author: patricka
-ms.date: 08/29/2022
+ms.date: 10/07/2022
 ---
 
 # Transport Layer Security (TLS) registry settings
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
 
-This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). The registry subkeys and entries covered in this topic help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols.
+This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols.
 
 > [!CAUTION]
 > This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied.
@@ -47,13 +47,13 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 TLS/SSL ciphers should be controlled by configuring the cipher suite order. For details, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order).
 
-For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+For information about default cipher suite orders that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## CipherSuites
 
 Configuring TLS/SSL cipher suites should be done using group policy, MDM or PowerShell, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order) for details.
 
-For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+For information about default cipher suite orders that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## ClientCacheTime
 
@@ -148,7 +148,52 @@ Applicable versions: All versions beginning with Windows Server 2008 and Windows
 
 Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
 
-## KeyExchangeAlgorithm - Client RSA key sizes
+## KeyExchangeAlgorithm key sizes
+
+These entries listed below may not exist in the registry by default and must be manually created. To enable a specific algorithm, create a registry key named **Enabled** in the respective registry path with a DWORD value of **1**. This can also be disabled by setting the DWORD value to **0**.
+
+# [Diffie-Hellman](#tab/diffie-hellman)
+
+This entry controls the Diffie-Hellman key sizes.
+
+Use of key exchange algorithms should be controlled by configuring the cipher suite order.
+
+Added in Windows 10, version 1507 and Windows Server 2016.
+
+Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
+
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 1024 bits will be the minimum.
+
+To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, then a maximum is not enforced.
+
+To specify the Diffie-Hellman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 2048 bits will be the default.
+
+# [Elliptic Curve Diffie-Hellman](#tab/ecdh)
+
+This entry controls the Elliptic Curve Diffie-Hellman (ECDH) key sizes.
+
+Use of key exchange algorithms should be controlled by configuring the cipher suite order.
+
+Added in Windows 10, version 1507 and Windows Server 2016.
+
+Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\ECDH**
+
+To specify a minimum supported range of ECDH key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+
+To specify a maximum supported range of ECDH key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+
+To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+
+# [Client RSA](#tab/client-rsa)
 
 This entry controls the client RSA key sizes.
 
@@ -159,39 +204,16 @@ Added in Windows 10, version 1507 and Windows Server 2016.
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS**
 
 To specify a minimum supported range of RSA key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
-This entry does not exist in the registry by default.
 After you have created the entry, change the DWORD value to the desired bit length.
 If not configured, 1024 bits will be the minimum.
 
 To specify a maximum supported range of RSA key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-This entry does not exist in the registry by default.
 After you have created the entry, change the DWORD value to the desired bit length.
 If not configured, then a maximum is not enforced.
 
-## KeyExchangeAlgorithm - Diffie-Hellman key sizes
+---
 
-This entry controls the Diffie-Hellman key sizes.
-
-Use of key exchange algorithms should be controlled by configuring the cipher suite order.
-
-Added in Windows 10, version 1507 and Windows Server 2016.
-
-Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
-
-To specify a minimum supported range of Diffie-Helman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, 1024 bits will be the minimum.
-
-To specify a maximum supported range of Diffie-Helman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, then a maximum is not enforced.
-
-To specify the Diffie-Helman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, 2048 bits will be the default.
+To learn more about TLS/SSL cipher suite cryptographic algorithms, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## MaximumCacheSize
 
@@ -312,4 +334,4 @@ Switching a (D)TLS or SSL protocol version to **Disabled by default** or **Disab
 
 Once the (D)TLS or SSL protocol version settings have been modified, they take effect on connections established using credential handles opened by subsequent [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, an application or service restart may be required.
 
-Please note that these registry settings only apply to Schannel SSP and do not affect any third-party (D)TLS and SSL implementations that may be installed on the system.
+These registry settings only apply to Schannel SSP and do not affect any third-party (D)TLS and SSL implementations that may be installed on the system.
