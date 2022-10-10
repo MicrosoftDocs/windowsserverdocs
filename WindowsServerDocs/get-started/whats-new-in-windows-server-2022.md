@@ -25,6 +25,17 @@ Server 2022 Datacenter: Azure Edition. Learn more about how Azure Automanage for
 brings these new capabilities to Windows Server Azure Edition in the [Azure Automange for
 Windows Server services](/azure/automanage/automanage-windows-server-services-overview) article.
 
+Windows Server 2022 Datacenter: Azure Edition builds on Datacenter Edition to deliver a VM-only
+operating system that helps to use the benefits of cloud, with advanced features like SMB over QUIC,
+Hotpatch, and Azure Extended Networking. This section describes some of these new features.
+
+Compare the
+[differences in the editions in Windows Server 2022](../get-started/editions-comparison-windows-server-2022.md).
+You can also learn more about how Azure Automanage for Windows Server brings these new capabilities
+to Windows Server Azure Edition in the
+[Azure Automange for Windows Server services](/azure/automanage/automanage-windows-server-services-overview)
+article.
+
 ### September 2022
 
 This section lists the features and improvements that are now available in Windows Server
@@ -35,18 +46,17 @@ Update, the OS build number will be 20348.1070 or higher.
 
 #### Storage Replica compression for data transfer
 
-This update includes the Storage Replica compression feature for data transferred between the source
+This update includes Storage Replica compression for data transferred between the source
 and destination servers. This new functionality compresses the replication data at the source
 system, sent over the network and decompressed and saved on the destination. The compression results
-in fewer network packets to transfer the same amount of data, allowing for more throughput, less
-network utilization, which should also result in less cost for metered networks.
+in fewer network packets to transfer the same amount of data, allowing for more throughput, and less
+network utilization. Higher data throughput should also result in lowering synchronization time for
+when you need it most, for example in a disaster recovery scenario.
 
-For more information, see the
+New Storage Replica PowerShell parameters are available for existing commands, review the [Windows
+PowerShell StorageReplica reference](/powershell/module/storagereplica/) to learn more. For more
+information about Storage Replica, see the
 [Storage Replica overview](../storage/storage-replica/storage-replica-overview.md).
-
-There will be no change in the way the replica groups and partnerships are created. New parameters
-are available for existing Storage Replica PowerShell commands, review the [Windows PowerShell
-StorageReplica reference](/powershell/module/storagereplica/) to learn more.
 
 #### Support for Azure Stack HCI
 
@@ -54,6 +64,13 @@ With this release you can run Windows Server 2022 Datacenter: Azure Edition as a
 on Azure Stack HCI version 22H2. With Azure Edition running on Azure Stack HCI, you'll be able to use
 all the existing features including [Hotpatch](#azure-automanage---hotpatch) for Server Core and
 [SMB over QUIC](#smb-over-quic) at your datacenter and edge locations.
+
+Begin deploying Windows Server 2022 Datacenter: Azure Edition using the
+[Azure Marketplace on Arc-enabled Azure Stack HCI](#deploy-from-azure-marketplace-on-arc-enabled-azure-stack-hci-preview)
+or using an ISO. You can download the ISO from here:
+
+- [Windows Server 2022 Datacenter: Azure Edition (EN-US) ISO](https://aka.ms/AAi4r31)
+- [Windows Server 2022 Datacenter: Azure Edition (ZH-CN) ISO](https://aka.ms/AAi4bii)
 
 Learn more about the latest Azure Stack HCI features in our
 [What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new) article.
@@ -81,11 +98,11 @@ can be found at the [Azure Automanage documentation](/azure/automanage/automanag
 
 #### SMB over QUIC
 
-SMB over QUIC updates the SMB 3.1.1 protocol in Windows Server 2022 Datacenter: Azure Edition and
-supported Windows clients to use the QUIC protocol instead of TCP. By using SMB over QUIC along with
-TLS 1.3, users and applications can securely and reliably access data from edge file servers running
-in Azure. Mobile and telecommuter users no longer need a VPN to access their file servers over SMB
-when on Windows. More information can be found at the
+SMB over QUIC updates the SMB 3.1.1 protocol to use the QUIC protocol instead of TCP in Windows
+Server 2022 Datacenter: Azure Edition, Windows 11 and later, and third party clients if they support
+it. By using SMB over QUIC along with TLS 1.3, users and applications can securely and reliably
+access data from edge file servers running in Azure. Mobile and telecommuter users no longer need a
+VPN to access their file servers over SMB when on Windows. More information can be found at the
 [SMB over QUIC documentation](../storage/file-server/smb-over-quic.md) and
 [SMB over QUIC management with Automanage machine best practices](/azure/automanage/automanage-smb-over-quic).
 
