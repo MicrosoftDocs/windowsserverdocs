@@ -19,9 +19,9 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 
 * **Built in** - LIS are included as part of this Linux distribution.The Microsoft-provided LIS download package does not work for this distribution, so do not install it.The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.
 
-* &#10004; - Feature available
+* &#10004; - Feature available.
 
-* (*blank*) - Feature not available
+* (*blank*) - Feature not available.
 
 SLES12+ is 64-bit only.
 
