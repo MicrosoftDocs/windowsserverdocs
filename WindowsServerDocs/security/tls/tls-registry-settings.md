@@ -27,7 +27,7 @@ This article explains the supported registry setting information for the Windows
 
 ## SChannel logging
 
-There are 8 logging levels for SChannel events that is saved to the system event log and viewable using Event Viewer. This registry path is stored in **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL** under the **EventLogging** key with a DWORD value set to **1**.
+There are eight logging levels for SChannel events saved to the system event log and viewable using Event Viewer. This registry path is stored in **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL** under the **EventLogging** key with a DWORD value set to **1**.
 
 | Decimal or Hex | SChannel logging events |
 |---|---|
