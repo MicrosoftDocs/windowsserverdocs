@@ -32,7 +32,7 @@ Fixed a bug related to tracing that was blocking reconnections.
 
 Date published: October 6, 2022
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58YFH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE59ekj), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58YFG)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58YFH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/re59ekJ), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58YFG)
 
 Fixed a bug that affected users of some third-party plugins.
 
