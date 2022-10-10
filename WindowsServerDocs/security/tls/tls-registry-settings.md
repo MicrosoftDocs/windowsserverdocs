@@ -228,7 +228,7 @@ To specify the RSA key bit length for the TLS server default, create a **ServerM
 
 To learn more about TLS/SSL cipher suite cryptographic algorithms, see:
 
-- [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel)
+- [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel)
 - [Demystifying SChannel](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233) (blog)
 
 ## MaximumCacheSize
