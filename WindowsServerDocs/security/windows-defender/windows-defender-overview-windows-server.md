@@ -17,7 +17,8 @@ View the [Windows Defender Antivirus in Windows 10](/windows/threat-protection/w
 
 While the functionality, configuration, and management for Windows Defender AV is largely the same in either Windows 10 or Windows Server 2016 and above, there are a few differences.
 
-> [NOTE!]
+> [!NOTE]
+
 > In Windows Server 2016, Windows Defender AV will not disable itself if you are running another antivirus product.
 
 To learn more, see the following articles:
