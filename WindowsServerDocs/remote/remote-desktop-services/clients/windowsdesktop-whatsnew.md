@@ -26,6 +26,8 @@ Date published: October 10, 2022
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
+Fixed a bug related to tracing that was blocking reconnections.
+
 ## Updates for version 1.2.3576
 
 Date published: October 6, 2022
