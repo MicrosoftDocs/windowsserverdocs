@@ -12,9 +12,6 @@ author: Teresa-MOTIV
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**Previous:** Remote Access](../../../Remote-Access.md)<br>
-- [**Next:** Learn about the Always On VPN features and functionality](../../vpn-map-da.md)
-
 Always On VPN provides a single, cohesive solution for remote access and supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices, even personally owned devices. With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
 
 ## Prerequisites
