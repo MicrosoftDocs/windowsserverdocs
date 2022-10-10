@@ -176,8 +176,6 @@ These entries listed below may not exist in the registry by default and must be 
 
 # [Diffie-Hellman](#tab/diffie-hellman)
 
-This entry controls the Diffie-Hellman key sizes.
-
 Use of key exchange algorithms should be controlled by configuring the cipher suite order.
 
 Added in Windows 10, version 1507 and Windows Server 2016.
@@ -192,8 +190,6 @@ To specify the Diffie-Hellman key bit length for the TLS server default, create 
 After you have created the entry, change the DWORD value to the desired bit length.
 
 # [Elliptic Curve Diffie-Hellman](#tab/ecdh)
-
-This entry controls the Elliptic Curve Diffie-Hellman (ECDH) key sizes.
 
 Use of key exchange algorithms should be controlled by configuring the cipher suite order.
 
@@ -210,8 +206,6 @@ After you have created the entry, change the DWORD value to the desired bit leng
 To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
 
 # [RSA](#tab/rsa)
-
-This entry controls the client RSA key sizes.
 
 Use of key exchange algorithms should be controlled by configuring the cipher suite order.
 
