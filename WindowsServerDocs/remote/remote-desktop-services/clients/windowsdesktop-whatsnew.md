@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 10/06/2022
+ms.date: 10/10/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,22 +17,28 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3576        |1.2.1672                  |
-|Insider    |1.2.3576        |1.2.1672                  |
+|Public     |1.2.3577        |1.2.1672                  |
+|Insider    |1.2.3577        |1.2.1672                  |
+
+## Updates for version 1.2.3577
+
+Date published: October 10, 2022
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+Fixed a bug related to tracing that was blocking reconnections.
 
 ## Updates for version 1.2.3576
 
 Date published: October 6, 2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58YFH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE59ekJ), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE58YFG)
 
 Fixed a bug that affected users of some third-party plugins.
 
 ## Updates for version 1.2.3575
 
 Date published: October 4, 2022
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE59dUV), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE598Hw), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE593vn)
 
 Fixed an issue that caused unexpected disconnects in certain RemoteApp scenarios.
 
