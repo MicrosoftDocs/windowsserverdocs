@@ -4,14 +4,14 @@ description: Learn about supported registry setting information for the Windows 
 ms.topic: article
 author: PatAltimore
 ms.author: alalve
-ms.date: 10/07/2022
+ms.date: 10/10/2022
 ---
 
 # Transport Layer Security (TLS) registry settings
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
 
-This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols.
+This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
 
 > [!CAUTION]
 > This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied.
@@ -20,6 +20,28 @@ This article explains the supported registry setting information for the Windows
 > As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system.
 > When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC).
 > If you must edit the registry, use extreme caution.
+> If you want to only allow TLS 1.2, select only the cipher suites that support TLS 1.2 for the specific platform.
+
+> [!NOTE]
+> Disabling SChannel components via registry settings is not recommended and has been officially deprecated to invoke a particular behavior of cryptographic components.
+
+## SChannel logging
+
+There are 8 logging levels for SChannel events that is saved to the system event log and viewable using Event Viewer. This registry path is stored in **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL** under the **EventLogging** key with a DWORD value set to **1**.
+
+| Decimal or Hex | SChannel logging events |
+|---|---|
+|0|No events|
+|1|Error events|
+|2|Warning events|
+|3|Error and Warning events|
+|4|Informational and Success events|
+|5|Error, Informational, and Success events|
+|6|Warning, Informational, and Success events|
+|7|Error, Warning, Informational and Success events|
+
+> [!NOTE]
+> You must reboot your device after changing the SChannel logging level.
 
 ## CertificateMappingMethods
 
@@ -150,7 +172,7 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 ## KeyExchangeAlgorithm key sizes
 
-These entries listed below may not exist in the registry by default and must be manually created. To enable a specific algorithm, create a registry key named **Enabled** in the respective registry path with a DWORD value of **1**. This can also be disabled by setting the DWORD value to **0**.
+These entries listed below may not exist in the registry by default and must be manually created. To enable a specific algorithm, create a registry key named **Enabled** in the respective registry path with a DWORD value of **1**. This can also be disabled by setting the DWORD value to **0**. It is _recommended_ to use **2048 bits** minimum for both client and server key bit lengths.
 
 # [Diffie-Hellman](#tab/diffie-hellman)
 
@@ -162,17 +184,12 @@ Added in Windows 10, version 1507 and Windows Server 2016.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
 
-To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, 1024 bits will be the minimum.
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
 
-To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, then a maximum is not enforced.
+To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
 
 To specify the Diffie-Hellman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
 After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, 2048 bits will be the default.
 
 # [Elliptic Curve Diffie-Hellman](#tab/ecdh)
 
@@ -188,12 +205,11 @@ To specify a minimum supported range of ECDH key bit length for the TLS client, 
 After you have created the entry, change the DWORD value to the desired bit length.
 
 To specify a maximum supported range of ECDH key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length.
+After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
 
-To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length.
+To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
 
-# [Client RSA](#tab/client-rsa)
+# [RSA](#tab/rsa)
 
 This entry controls the client RSA key sizes.
 
@@ -205,15 +221,21 @@ Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 To specify a minimum supported range of RSA key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
 After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, 1024 bits will be the minimum.
 
 To specify a maximum supported range of RSA key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, then a maximum is not enforced.
+After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
+
+To specify the RSA key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
+
+> [!NOTE]
+> RSA authentication with key bit length of over 3072 bits have been reported to cause large performance issues leading to connection timeouts and service unavailability when large number of clients have simultaneous open connections.
 
 ---
 
-To learn more about TLS/SSL cipher suite cryptographic algorithms, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+To learn more about TLS/SSL cipher suite cryptographic algorithms, see:
+
+- [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel)
+- [Demystifying SChannel](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233) (blog)
 
 ## MaximumCacheSize
 
@@ -234,7 +256,7 @@ This entry controls the maximum allowed size of fragmented TLS handshake message
 Messages larger than the allowed size will not be accepted, and the TLS handshake will fail.
 These entries do not exist in the registry by default.
 
-When you set the value to 0x0, fragmented messages are not processed and will cause the TLS handshake to fail.
+When you set the value to **0x0**, fragmented messages are not processed and will cause the TLS handshake to fail.
 This makes TLS clients or servers on the current machine non-compliant with the TLS RFCs.
 
 The maximum allowed size can be increased up to 2^24-1 bytes.
@@ -245,12 +267,12 @@ Added in Windows 7 and Windows Server 2008 R2: An update that enables Internet E
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Messaging**
 
 To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client will accept, create a **MessageLimitClient** entry.
-After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be 0x8000 bytes.
+After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be **0x8000** bytes.
 
 To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there is no client authentication, create a **MessageLimitServer** entry. After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, the default value will be 0x4000 bytes.
+If not configured, the default value will be **0x4000** bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there is client authentication, create a **MessageLimitServerClientAuth** entry. After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be 0x8000 bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there is client authentication, create a **MessageLimitServerClientAuth** entry. After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be **0x8000** bytes.
 
 ## SendTrustedIssuerList
 
