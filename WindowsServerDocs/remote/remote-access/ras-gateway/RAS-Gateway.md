@@ -15,7 +15,7 @@ ms.date: 05/23/2018
 
 With RAS Gateway, Cloud Service Providers (CSPs) and Enterprises can enable datacenter and cloud network traffic routing between both virtual and physical networks, including the Internet. 
 
-It's recommended that you don't deploy RAS Gateway in single tenant mode. For single tenant mode scenarios, see [Single Tenant]().
+It's recommended that you don't deploy RAS Gateway in single tenant mode. For single tenant mode scenarios, see [Single Tenant](../vpn/vpn-top.md#ras-gateway-as-a-single-tenant-vpn-server).
 
 > [!NOTE]
 > RAS Gateway supports IPv4 and IPv6, including IPv4 and IPv6 forwarding. When you configure RAS Gateway with Network Address Translation (NAT), only NAT44 is supported.
