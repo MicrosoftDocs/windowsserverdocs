@@ -5,6 +5,8 @@ ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 ms.author: benarm
 author: BenjaminArmstrong
++ms.author: kkashanjat
++author: KhrumKashanJat
 ms.date: 01/08/2021
 ---
 # Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
