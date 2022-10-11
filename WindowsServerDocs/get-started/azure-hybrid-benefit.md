@@ -9,42 +9,42 @@ ms.author: daknappe
 
 # Azure Hybrid Benefit for Windows Server
 
-Azure Hybrid Benefit (AHB) is a cost saving benefit that enables you to use your on-premises licenses with Software Assurance (SA) in the cloud. This article focuses on benefits for Windows Server licenses with SA: cost savings for Windows Server virtual machines (VMs) in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) hybrid deployment options.
+Azure Hybrid Benefit is a cost-saving benefit that enables you to use your on-premises licenses with Software Assurance (SA) in the cloud. This article focuses on benefits for Windows Server licenses with SA: cost savings for Windows Server virtual machines (VMs) in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) hybrid deployment options.
 
-For other benefits of AHB (for example, SQL Server), see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit).
+For other Azure hybrid benefits (for example, SQL Server), see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit).
 
-## What qualifies you for AHB?
+## What qualifies you for Azure Hybrid Benefit?
 
 To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance. Software Assurance is only available as part of a commercial licensing agreement. To learn more about volume licensing and which agreements it's available with, see [Microsoft Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
 
 > [!IMPORTANT]
 > Workloads using Azure Hybrid Benefit can run only during the Software Assurance term. When the Software Assurance term approaches expiration, you must either renew your agreement with Software Assurance, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.
 
-## What's included in AHB?
+## What's included in Azure Hybrid Benefit?
 
 Customers with Windows Server Software Assurance can use Azure Hybrid Benefit to further reduce costs in the cloud and in datacenter and edge locations.
 
-AHB includes the following cost savings:
+Azure Hybrid Benefit includes the following cost savings:
 
-- **Windows Server VMs on Azure:** The license for Windows Server is covered by AHB, so you only need to pay for the base compute rate of the virtual machine. The base compute rate is equal to the Linux rate for virtual machines.
+- **Windows Server VMs on Azure:** The license for Windows Server is covered by Azure Hybrid Benefit, so you only need to pay for the base compute rate of the virtual machine. The base compute rate is equal to the Linux rate for virtual machines.
 
-- **Azure Stack HCI:** The Azure Stack HCI host fee and Windows Server subscription fee are waived with AHB. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Stack HCI (for example, customer-managed hardware, Azure services, and workloads).
+- **Azure Stack HCI:** The Azure Stack HCI host fee and Windows Server subscription fee are waived with Azure Hybrid Benefit. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Stack HCI (for example, customer-managed hardware, Azure services, and workloads).
 
-- **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You'll still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for AHB for Azure Stack HCI. With AHB for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
+- **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You'll still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for Azure Hybrid Benefit for Azure Stack HCI. With Azure Hybrid Benefit for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
 
 ![Illustration showing Azure Hybrid Benefit savings for Windows Server VMs on Azure, AKS on Azure Stack HCI and Windows Server.](media/azure-hybrid-benefit/azure-hybrid-benefit-savings.png)
 
-## Pricing for AHB
+## Pricing for Azure Hybrid Benefit
 
 To evaluate your potential cost savings, you can use these resources:
 
-- **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/) to estimate cost savings, or compare Windows VM pricing with and without AHB.  
+- **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
 
 - **Azure Stack HCI:** [Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/hci).  
 
 - **Azure Kubernetes Service (AKS):** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
 
-## Getting AHB for Windows VMs in Azure
+## Getting Azure Hybrid Benefit for Windows VMs in Azure
 
 Follow the guidance in this section to get and maintain Azure Hybrid Benefit for your Windows VMs in Azure.
 
@@ -80,9 +80,9 @@ Unlimited Virtualization Rights refers to the right to use any number of Windows
 
 - **Windows Server Standard edition:** Unlimited Virtualization Rights aren't available.  
 
-### How to apply AHB for Windows VMs in Azure
+### How to apply Azure Hybrid Benefit for Windows VMs in Azure
 
-To learn how to deploy Windows Server VMs in Azure with AHB, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing). One way to activate AHB for a Windows Server VM is to check the box under **Licensing** during VM creation, as shown below.
+To learn how to deploy Windows Server VMs in Azure with Azure Hybrid Benefit, follow the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing). One way to activate Azure Hybrid Benefit for a Windows Server VM is to check the box under **Licensing** during VM creation, as shown below.
 
 ![Screenshot of Licensing screen to apply Azure Hybrid Benefit to a Windows Server VM.](media/azure-hybrid-benefit/activate-azure-hybrid-benefit-for-windows-server-vm.png)
 
@@ -114,7 +114,7 @@ If you don't have enough eligible Windows Server licenses for your deployed VMs,
 > [!NOTE]
 > Microsoft reserves the right to audit customers at any time to verify eligibility for Azure Hybrid Benefit utilization.
 
-## Getting AHB for Azure Stack HCI
+## Getting Azure Hybrid Benefit for Azure Stack HCI
 
 Use the guidance in this section to get Azure Hybrid Benefit for your Azure Stack HCI infrastructure.
 
@@ -138,13 +138,13 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 - Licenses must be used either on-premises or on Azure Stack HCI, but not on both. You'll have 180 days of concurrent licensing to migrate your servers.
 
-### How to apply AHB for Azure Stack HCI
+### How to apply Azure Hybrid Benefit for Azure Stack HCI
 
-You can learn how to deploy AHB for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure-stack/hci/concepts/billing). One method is to activate the benefit from the **Configuration** pane of the Azure Stack HCI resource, as shown below.
+You can learn how to deploy Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure-stack/hci/concepts/azure-hybrid-benefit). One method is to activate the benefit from the **Configuration** pane of the Azure Stack HCI resource, as shown below.
 
 ![Screenshot of the screen for activating Azure Hybrid Benefit for Azure Stack HCI.](media/azure-hybrid-benefit/activate-azure-hybrid-benefit-for-azure-stack-hci.png)
 
-## Getting AHB for AKS
+## Getting Azure Hybrid Benefit for AKS
 
 Follow the guidance in this section to get Azure Hybrid Benefit for AKS.
 
@@ -169,17 +169,17 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 #### Use rights
 
-- AHB for AKS is additive. Core licenses used for AHB for AKS can be used at the same time with on-premises Windows Server licensing, as well as AHB for other workloads in this article.
+- Azure Hybrid Benefit for AKS is additive. Core licenses used for Azure Hybrid Benefit for AKS can be used at the same time with on-premises Windows Server licensing, as well as Azure Hybrid Benefit for other workloads in this article.
 
-### How to apply AHB for AKS
+### How to apply Azure Hybrid Benefit for AKS
 
-AHB for AKS will be available soon.
+Azure Hybrid Benefit for AKS will be available soon.
 
 ## FAQ: Azure Hybrid Benefit
 
 #### Which regions are eligible for Azure Hybrid Benefit?
 
-AHB is available across all Azure regions and sovereign clouds.
+Azure Hybrid Benefit is available across all Azure regions and sovereign clouds.
 
 #### What happens to my benefits if my Software Assurance expires?
 
