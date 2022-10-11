@@ -3,10 +3,10 @@ title: manage-bde unlock
 description: Reference article for the manage-bde unlock command, which unlocks a BitLocker-protected drive by using a recovery password or a recovery key.
 ms.topic: reference
 ms.assetid: 7852bf7d-9102-40be-adcb-71e8f4dfde72
-ms.author: jgerend
+ms.author: alalve
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 10/11/2022
 ---
 
 # manage-bde unlock
@@ -24,7 +24,7 @@ manage-bde -unlock {-recoverypassword <password>|-recoverykey <pathtoexternalkey
 | Parameter | Description |
 | --------- | ----------- |
 | -recoverypassword | Specifies that a recovery password will be used to unlock the drive. You can also use **-rp** as an abbreviated version of this command. |
-| `<password>` | Represents the recovery password that can be used to unlock the drive. |
+| `<password>` | Represents the recovery password that can be used to unlock the drive that either you or your administrator has set. |
 | -recoverykey | Specifies that an external recovery key file will be used to unlock the drive. You can also use **-rk** as an abbreviated version of this command. |
 | `<pathtoexternalkeyfile>` | Represents the external recovery key file that can be used to unlock the drive. |
 | `<drive>` | Represents a drive letter followed by a colon. |
@@ -41,7 +41,7 @@ manage-bde -unlock {-recoverypassword <password>|-recoverykey <pathtoexternalkey
 
 To unlock drive E with a recovery key file that's been saved to a backup folder on another drive, type:
 
-```
+```cmd
 manage-bde –unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
 ```
 
