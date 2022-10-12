@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 ms.author: anaharris
 author: anaharris-ms
-ms.date: 10/12/20222
+ms.date: 10/12/2022
 ---
 # Step 1. Plan the Always On VPN deployment
 

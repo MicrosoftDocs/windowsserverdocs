@@ -3,7 +3,6 @@ title: Deploy Always On VPN
 description: Learn about the workflow for deploying Always On VPN connections for remote domain-joined Windows 10 client computers.
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.date: 06/29/2022
 ms.author: anaharris
 author: anaharris-ms
 ms.date: 10/12/20222
