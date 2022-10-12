@@ -58,53 +58,53 @@ steps:
 1. Enable virtualization-based security by running the following PowerShell command to configure the
    correct registry settings:
 
-```powershell
-$registryPath = "HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard"
-$parameters = $parameters = @{
-    Path = $registryPath
-    Name = "EnableVirtualizationBasedSecurity"
-    Value = "0x1"
-    Force = $True
-}
-New-Item $registryPath -Force
-New-ItemProperty @parameters
-```
+   ```powershell
+   $registryPath = "HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard"
+   $parameters = $parameters = @{
+       Path = $registryPath
+       Name = "EnableVirtualizationBasedSecurity"
+       Value = "0x1"
+       Force = $True
+   }
+   New-Item $registryPath -Force
+   New-ItemProperty @parameters
+   ```
 
 1. Configure the Hotpatch table size in the registry by running the following PowerShell command:
 
-```powershell
-$registryPath = "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management"
-$parameters = $parameters = @{
-    Path = $registryPath
-    Name = "HotPatchTableSize"
-    Value = "0x1000"
-    Force = $True
-}
-New-Item $registryPath -Force
-New-ItemProperty @parameters
-```
+   ```powershell
+   $registryPath = "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management"
+   $parameters = $parameters = @{
+       Path = $registryPath
+       Name = "HotPatchTableSize"
+       Value = "0x1000"
+       Force = $True
+   }
+   New-Item $registryPath -Force
+   New-ItemProperty @parameters
+   ```
 
 1. Configure the Windows Update endpoint for Hotpatch in the registry by running the following
    PowerShell command:
 
-```powershell
-$registryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Update\TargetingInfo\DynamicInstalled\Hotpatch.amd64"
-$nameParameters = $parameters = @{
-    Path = $registryPath
-    Name = "Name"
-    Value = "Hotpatch Enrollment Package"
-    Force = $True
-}
-$versionParameters = $parameters = @{
-    Path = $registryPath
-    Name = "Version"
-    Value = "10.0.20348.465"
-    Force = $True
-}
-New-Item $registryPath -Force
-New-ItemProperty @nameParameters
-New-ItemProperty @versionParameters
-```
+   ```powershell
+   $registryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Update\TargetingInfo\DynamicInstalled\Hotpatch.amd64"
+   $nameParameters = $parameters = @{
+       Path = $registryPath
+       Name = "Name"
+       Value = "Hotpatch Enrollment Package"
+       Force = $True
+   }
+   $versionParameters = $parameters = @{
+       Path = $registryPath
+       Name = "Version"
+       Value = "10.0.20348.465"
+       Force = $True
+   }
+   New-Item $registryPath -Force
+   New-ItemProperty @nameParameters
+   New-ItemProperty @versionParameters
+   ```
 
 Now you've prepared your computer, you can install the Hotpatch servicing package.
 
@@ -119,26 +119,26 @@ package. In your PowerShell session, complete the following steps:
 1. Download the (KB5003508) Microsoft Update Standalone Package from the Microsoft Update Catalog
    and copy it to your computer using the following PowerShell command:
 
-```powershell
-$parameters = @{
-    Uri = "https://go.microsoft.com/fwlink/?linkid=2211714"
-    OutFile = ".\KB5003508.msu"
-}
-Invoke-WebRequest @parameters
-```
+   ```powershell
+   $parameters = @{
+       Uri = "https://go.microsoft.com/fwlink/?linkid=2211714"
+       OutFile = ".\KB5003508.msu"
+   }
+   Invoke-WebRequest @parameters
+   ```
 
 1. To install the Standalone Package, run the following command:
 
-```powershell
-wusa.exe .\KB5003508.msu
-```
+   ```powershell
+   wusa.exe .\KB5003508.msu
+   ```
 
 1. Follow the prompts. Once it's completed, select Finish.
 1. To verify the installation, run the following command:
 
-```powershell
-Get-HotFix | Where-Object {$_.HotFixID -eq "KB5003508"}
-```
+   ```powershell
+   Get-HotFix | Where-Object {$_.HotFixID -eq "KB5003508"}
+   ```
 
 > [!NOTE]
 > When using Server Core, updates are set to be manually installed by default. You can change this
