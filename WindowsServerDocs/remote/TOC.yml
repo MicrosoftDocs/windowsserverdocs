@@ -260,168 +260,8 @@
           href: remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md
         - name: Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices
           href: remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md
-      - name: Deploy Remote Access in an Enterprise
-        href: remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md
-        items:
-      - name: Deploy Remote Access in a Load Balancing Cluster
-        href: remote-access/ras/cluster/Deploy-remote-Access-In-Cluster.md
-        items:
-        - name: Plan a Remote Access Cluster Deployment
-          href: remote-access/ras/cluster/plan/Plan-a-remote-Access-Cluster-Deployment.md
-          items:
-          - name: 'Step 1: Plan an Advanced Single-Server Deployment'
-            href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-          - name: 'Step 2: Plan Cluster Servers'
-            href: remote-access/ras/cluster/plan/Step-2-Plan-Cluster-Servers.md
-          - name: 'Step 3: Plan a Load-Balanced Cluster Deployment'
-            href: remote-access/ras/cluster/plan/Step-3-Plan-a-Load-Balanced-Cluster-Deployment.md
-        - name: Configure a Remote Access Cluster
-          href: remote-access/ras/cluster/configure/Configure-a-remote-Access-Cluster.md
-          items:
-          - name: 'Step 1: Implement a Single-Server Remote Access Deployment'
-            href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-          - name: 'Step 2: Prepare Cluster Servers'
-            href: remote-access/ras/cluster/configure/Step-2-Prepare-Cluster-Servers.md
-          - name: 'Step 3: Configure a Load-Balanced Cluster'
-            href: remote-access/ras/cluster/configure/Step-3-Configure-a-Load-Balanced-Cluster.md
-          - name: 'Step 4: Verify the Cluster'
-            href: remote-access/ras/cluster/configure/Step-4-verify-the-Cluster.md
-      - name: Deploy Multiple Remote Access Servers in a Multisite Deployment
-        href: remote-access/ras/multisite/Deploy-Multiple-remote-Access-Servers-in-a-Multisite-Deployment.md
-        items:
-        - name: Plan a Multisite Deployment
-          href: remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment.md
-          items:
-          - name: 'Step 1: Plan an Advanced Single Server Deployment'
-            href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-          - name: 'Step 2: Plan the Multisite Infrastructure'
-            href: remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure.md
-          - name: 'Step 3: Plan the Multisite Deployment'
-            href: remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment.md
-        - name: Configure a Multisite Deployment
-          href: remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment.md
-          items:
-          - name: 'Step 1: Implement a Single Server Remote Access Deployment'
-            href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-          - name: 'Step 2: Configure the Multisite Infrastructure'
-            href: remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure.md
-          - name: 'Step 3: Configure the Multisite Deployment'
-            href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
-          - name: 'Step 4: Verify the Multisite Deployment'
-            href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
-        - name: Troubleshoot a Multisite Deployment
-          href: remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md
-          items:
-          - name: Troubleshooting Enabling Multisite
-            href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md
-          - name: Troubleshooting adding Entry Points
-            href: remote-access/ras/multisite/troubleshoot/Troubleshooting-adding-Entry-Points.md
-          - name: Troubleshooting Setting the Entry Point Domain Controller
-            href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md
-          - name: Troubleshooting General Issues
-            href: remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md
-      - name: Deploy Remote Access with OTP Authentication
-        href: remote-access/ras/otp/Deploy-RA-OTP.md
-        items:
-        - name: Plan Remote Access with OTP Authentication
-          href: remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md
-          items:
-          - name: 'Step 1: Plan an Advanced Single Server Deployment'
-            href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-          - name: 'Step 2: Plan the RADIUS Server Deployment'
-            href: remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md
-          - name: 'Step 3: Plan OTP Certificate Deployment'
-            href: remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md
-          - name: 'Step 4: Plan for OTP on the Remote Access Server'
-            href: remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md
-        - name: Configure Remote Access with OTP Authentication
-          href: remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md
-          items:
-          - name: 'Step 1: Implement a Single Server Remote Access Deployment'
-            href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-          - name: 'Step 2: Configure the RADIUS Server'
-            href: remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md
-          - name: 'Step 3: Configure the Remote Access Server for OTP'
-            href: remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md
-          - name: 'Step 4: Verify DirectAccess with OTP'
-            href: remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md
-        - name: Troubleshoot an OTP Deployment
-          href: remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md
-          items:
-          - name: Troubleshooting Authentication Issues
-            href: remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md
-          - name: Troubleshooting Enabling OTP
-            href: remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md
-      - name: Deploy Remote Access in a Multi-forest Environment
-        href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
-        items:
-        - name: Plan a Multi-forest Deployment
-          href: remote-access/ras/multi-forest/Plan-a-Multi-forest-Deployment.md
-        - name: Configure a Multi-forest Deployment
-          href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md  
       - name: DirectAccess
         items:
-        - name: DirectAccess offline Domain Join
-          href: remote-access/directaccess/directAccess-offline-Domain-Join.md
-        - name: Deploy a Single DirectAccess Server Using the Getting started Wizard
-          href: remote-access/directaccess/single-server-wizard/Deploy-a-Single-directAccess-Server-Using-the-Getting-started-Wizard.md
-          items:
-          - name: Plan a Basic DirectAccess Deployment
-            href: remote-access/directaccess/single-server-wizard/Plan-a-Basic-directAccess-Deployment.md
-            items:
-            - name: 'Step 1: Plan the Basic DirectAccess Infrastructure'
-              href: remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure.md
-            - name: 'Step 2: Plan the Basic DirectAccess Deployment'
-              href: remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment.md
-          - name: Install and Configure Basic DirectAccess
-            href: remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-directAccess.md
-            items:
-            - name: 'Step 1: Configure the Basic DirectAccess Infrastructure'
-              href: remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure.md
-            - name: 'Step 2: Configure the Basic DirectAccess Server'
-              href: remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server.md
-            - name: 'Step 3: verify Basic DirectAccess Deployments'
-              href: remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify.md
-        - name: Deploy a Single DirectAccess Server with Advanced Settings
-          href: remote-access/directaccess/single-server-advanced/Deploy-a-Single-directAccess-Server-with-Advanced-Settings.md
-          items:
-          - name: Plan an Advanced DirectAccess Deployment
-            href: remote-access/directaccess/single-server-advanced/Plan-an-Advanced-directAccess-Deployment.md
-            items:
-            - name: 'Step 1: Plan the Advanced DirectAccess Infrastructure'
-              href: remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure.md
-            - name: 'Step 2: Plan Advanced DirectAccess Deployments'
-              href: remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments.md
-          - name: Install and Configure Advanced DirectAccess
-            href: remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-directAccess.md
-            items:
-            - name: 'Step 1: Configure Advanced DirectAccess Infrastructure'
-              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure.md
-            - name: 'Step 2: Configure Advanced DirectAccess Servers'
-              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers.md
-            - name: 'Step 3: verify the Advanced DirectAccess Deployment'
-              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
-        - name: Add DirectAccess to an Existing Remote Access (VPN) Deployment
-          href: remote-access/directaccess/add-to-existing-vpn/add-directAccess-to-an-Existing-remote-Access-VPN-Deployment.md
-          items:
-          - name: Plan to Enable DirectAccess
-            href: remote-access/directaccess/add-to-existing-vpn/Plan-to-Enable-directAccess.md
-            items:
-            - name: 'Step 1: Plan DirectAccess Infrastructure'
-              href: remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn.md
-            - name: 'Step 2: Plan the DirectAccess Deployment'
-              href: remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md
-          - name: Enable DirectAccess
-            href: remote-access/directaccess/add-to-existing-vpn/Enable-directAccess.md
-            items:
-            - name: 'Step 1: Configure the DirectAccess Infrastructure'
-              href: remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md
-            - name: 'Step 2: Configure the DirectAccess-VPN Server'
-              href: remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md
-            - name: 'Step 3: Verify the Deployment'
-              href: remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md
-        - name: Deploy DirectAccess Remote Client Management
-          href: remote-access/ras/Manage-remote-Access.md
         - name: Deploy Remote Access in an Enterprise
           href: remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md
           items:
@@ -448,117 +288,279 @@
               href: remote-access/ras/cluster/configure/Step-3-Configure-a-Load-Balanced-Cluster.md
             - name: 'Step 4: Verify the Cluster'
               href: remote-access/ras/cluster/configure/Step-4-verify-the-Cluster.md
-          - name: Deploy Multiple Remote Access Servers in a Multisite Deployment
-            href: remote-access/ras/multisite/Deploy-Multiple-remote-Access-Servers-in-a-Multisite-Deployment.md
-            items:
-            - name: Plan a Multisite Deployment
-              href: remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment.md
-              items:
-              - name: 'Step 1: Plan an Advanced Single Server Deployment'
-                href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-              - name: 'Step 2: Plan the Multisite Infrastructure'
-                href: remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure.md
-              - name: 'Step 3: Plan the Multisite Deployment'
-                href: remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment.md
-            - name: Configure a Multisite Deployment
-              href: remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment.md
-              items:
-              - name: 'Step 1: Implement a Single Server Remote Access Deployment'
-                href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-              - name: 'Step 2: Configure the Multisite Infrastructure'
-                href: remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure.md
-              - name: 'Step 3: Configure the Multisite Deployment'
-                href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
-              - name: 'Step 4: Verify the Multisite Deployment'
-                href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
-            - name: Troubleshoot a Multisite Deployment
-              href: remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md
-              items:
-              - name: Troubleshooting Enabling Multisite
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md
-              - name: Troubleshooting adding Entry Points
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-adding-Entry-Points.md
-              - name: Troubleshooting Setting the Entry Point Domain Controller
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md
-              - name: Troubleshooting General Issues
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md
-          - name: Deploy Remote Access with OTP Authentication
-            href: remote-access/ras/otp/Deploy-RA-OTP.md
-            items:
-            - name: Plan Remote Access with OTP Authentication
-              href: remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md
-              items:
-              - name: 'Step 1: Plan an Advanced Single Server Deployment'
-                href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-              - name: 'Step 2: Plan the RADIUS Server Deployment'
-                href: remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md
-              - name: 'Step 3: Plan OTP Certificate Deployment'
-                href: remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md
-              - name: 'Step 4: Plan for OTP on the Remote Access Server'
-                href: remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md
-            - name: Configure Remote Access with OTP Authentication
-              href: remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md
-              items:
-              - name: 'Step 1: Implement a Single Server Remote Access Deployment'
-                href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-              - name: 'Step 2: Configure the RADIUS Server'
-                href: remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md
-              - name: 'Step 3: Configure the Remote Access Server for OTP'
-                href: remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md
-              - name: 'Step 4: Verify DirectAccess with OTP'
-                href: remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md
-            - name: Troubleshoot an OTP Deployment
-              href: remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md
-              items:
-              - name: Troubleshooting Authentication Issues
-                href: remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md
-              - name: Troubleshooting Enabling OTP
-                href: remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md
-          - name: Deploy Remote Access in a Multi-forest Environment
-            href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
-            items:
-            - name: Plan a Multi-forest Deployment
-              href: remote-access/ras/multi-forest/Plan-a-Multi-forest-Deployment.md
-            - name: Configure a Multi-forest Deployment
-              href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md 
-        - name: Use Remote Access Monitoring and Accounting
-          href: remote-access/ras/monitoring-and-accounting/Use-remote-Access-Monitoring-and-Accounting.md
+        - name: Deploy Multiple Remote Access Servers in a Multisite Deployment
+          href: remote-access/ras/multisite/Deploy-Multiple-remote-Access-Servers-in-a-Multisite-Deployment.md
           items:
-          - name: Monitor the existing load on the Remote Access server
-            href: remote-access/ras/monitoring-and-accounting/Monitor-the-existing-load-on-the-remote-Access-server.md
-          - name: Monitor the configuration distribution status of the Remote Access server
-            href: remote-access/ras/monitoring-and-accounting/Monitor-the-configuration-distribution-status-of-the-remote-Access-server.md
-          - name: Monitor the operations status of the Remote Access server and its components
-            href: remote-access/ras/monitoring-and-accounting/Monitor-the-operations-status-of-the-remote-Access-server-and-its-components.md
-          - name: Identify and resolve Remote Access server operations problems
-            href: remote-access/ras/monitoring-and-accounting/Identify-and-resolve-remote-Access-server-operations-problems.md
-          - name: Monitor connected remote clients for activity and status
-            href: remote-access/ras/monitoring-and-accounting/Monitor-connected-remote-clients-for-activity-and-status.md
-          - name: Generate a usage report for remote clients using historical data
-            href: remote-access/ras/monitoring-and-accounting/Generate-a-usage-report-for-remote-clients-using-historical-data.md
-        - name: Manage DirectAccess Clients Remotely
-          href: remote-access/ras/manage-remote-clients/Manage-directAccess-Clients-remotely.md
+          - name: Plan a Multisite Deployment
+            href: remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment.md
+            items:
+            - name: 'Step 1: Plan an Advanced Single Server Deployment'
+              href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
+            - name: 'Step 2: Plan the Multisite Infrastructure'
+              href: remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure.md
+            - name: 'Step 3: Plan the Multisite Deployment'
+              href: remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment.md
+          - name: Configure a Multisite Deployment
+            href: remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment.md
+            items:
+            - name: 'Step 1: Implement a Single Server Remote Access Deployment'
+              href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
+            - name: 'Step 2: Configure the Multisite Infrastructure'
+              href: remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure.md
+            - name: 'Step 3: Configure the Multisite Deployment'
+              href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
+            - name: 'Step 4: Verify the Multisite Deployment'
+              href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
+          - name: Troubleshoot a Multisite Deployment
+            href: remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md
+            items:
+            - name: Troubleshooting Enabling Multisite
+              href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md
+            - name: Troubleshooting adding Entry Points
+              href: remote-access/ras/multisite/troubleshoot/Troubleshooting-adding-Entry-Points.md
+            - name: Troubleshooting Setting the Entry Point Domain Controller
+              href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md
+            - name: Troubleshooting General Issues
+              href: remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md
+        - name: Deploy Remote Access with OTP Authentication
+          href: remote-access/ras/otp/Deploy-RA-OTP.md
           items:
-          - name: Plan Deployment for Remote Management of DirectAccess Clients
-            href: remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-remote-Management-of-directAccess-Clients.md
+          - name: Plan Remote Access with OTP Authentication
+            href: remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md
             items:
-            - name: 'Step 1: Plan the Remote Access Infrastructure'
-              href: remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-remote-Access-Infrastructure.md
-            - name: 'Step 2: Plan the Remote Access Deployment'
-              href: remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-remote-Access-Deployment.md
-          - name: Install and Configure Deployment for remote Management of DirectAccess Clients
-            href: remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-remote-Management-of-directAccess-Clients.md
+            - name: 'Step 1: Plan an Advanced Single Server Deployment'
+              href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
+            - name: 'Step 2: Plan the RADIUS Server Deployment'
+              href: remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md
+            - name: 'Step 3: Plan OTP Certificate Deployment'
+              href: remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md
+            - name: 'Step 4: Plan for OTP on the Remote Access Server'
+              href: remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md
+          - name: Configure Remote Access with OTP Authentication
+            href: remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md
             items:
-            - name: 'Step 1: Configure the Remote Access Infrastructure'
-              href: remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md
-            - name: 'Step 2: Configure the Remote Access Server'
-              href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
-            - name: 'Step 3: Verify the Deployment'
-              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
-          - name: Publishing Applications using AD FS Preauthentication
-            href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
-          - name: Publishing Applications with SharePoint, Exchange and RDG
-            href: remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md
+            - name: 'Step 1: Implement a Single Server Remote Access Deployment'
+              href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
+            - name: 'Step 2: Configure the RADIUS Server'
+              href: remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md
+            - name: 'Step 3: Configure the Remote Access Server for OTP'
+              href: remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md
+            - name: 'Step 4: Verify DirectAccess with OTP'
+              href: remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md
+          - name: Troubleshoot an OTP Deployment
+            href: remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md
+            items:
+            - name: Troubleshooting Authentication Issues
+              href: remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md
+            - name: Troubleshooting Enabling OTP
+              href: remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md
+        - name: Deploy Remote Access in a Multi-forest Environment
+          href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
+          items:
+          - name: Plan a Multi-forest Deployment
+            href: remote-access/ras/multi-forest/Plan-a-Multi-forest-Deployment.md
+          - name: Configure a Multi-forest Deployment
+            href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md  
+        - name: DirectAccess
+          items:
+          - name: DirectAccess offline Domain Join
+            href: remote-access/directaccess/directAccess-offline-Domain-Join.md
+          - name: Deploy a Single DirectAccess Server Using the Getting started Wizard
+            href: remote-access/directaccess/single-server-wizard/Deploy-a-Single-directAccess-Server-Using-the-Getting-started-Wizard.md
+            items:
+            - name: Plan a Basic DirectAccess Deployment
+              href: remote-access/directaccess/single-server-wizard/Plan-a-Basic-directAccess-Deployment.md
+              items:
+              - name: 'Step 1: Plan the Basic DirectAccess Infrastructure'
+                href: remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure.md
+              - name: 'Step 2: Plan the Basic DirectAccess Deployment'
+                href: remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment.md
+            - name: Install and Configure Basic DirectAccess
+              href: remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-directAccess.md
+              items:
+              - name: 'Step 1: Configure the Basic DirectAccess Infrastructure'
+                href: remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure.md
+              - name: 'Step 2: Configure the Basic DirectAccess Server'
+                href: remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server.md
+              - name: 'Step 3: verify Basic DirectAccess Deployments'
+                href: remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify.md
+          - name: Deploy a Single DirectAccess Server with Advanced Settings
+            href: remote-access/directaccess/single-server-advanced/Deploy-a-Single-directAccess-Server-with-Advanced-Settings.md
+            items:
+            - name: Plan an Advanced DirectAccess Deployment
+              href: remote-access/directaccess/single-server-advanced/Plan-an-Advanced-directAccess-Deployment.md
+              items:
+              - name: 'Step 1: Plan the Advanced DirectAccess Infrastructure'
+                href: remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure.md
+              - name: 'Step 2: Plan Advanced DirectAccess Deployments'
+                href: remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments.md
+            - name: Install and Configure Advanced DirectAccess
+              href: remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-directAccess.md
+              items:
+              - name: 'Step 1: Configure Advanced DirectAccess Infrastructure'
+                href: remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure.md
+              - name: 'Step 2: Configure Advanced DirectAccess Servers'
+                href: remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers.md
+              - name: 'Step 3: verify the Advanced DirectAccess Deployment'
+                href: remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
+          - name: Add DirectAccess to an Existing Remote Access (VPN) Deployment
+            href: remote-access/directaccess/add-to-existing-vpn/add-directAccess-to-an-Existing-remote-Access-VPN-Deployment.md
+            items:
+            - name: Plan to Enable DirectAccess
+              href: remote-access/directaccess/add-to-existing-vpn/Plan-to-Enable-directAccess.md
+              items:
+              - name: 'Step 1: Plan DirectAccess Infrastructure'
+                href: remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn.md
+              - name: 'Step 2: Plan the DirectAccess Deployment'
+                href: remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md
+            - name: Enable DirectAccess
+              href: remote-access/directaccess/add-to-existing-vpn/Enable-directAccess.md
+              items:
+              - name: 'Step 1: Configure the DirectAccess Infrastructure'
+                href: remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md
+              - name: 'Step 2: Configure the DirectAccess-VPN Server'
+                href: remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md
+              - name: 'Step 3: Verify the Deployment'
+                href: remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md
+          - name: Deploy DirectAccess Remote Client Management
+            href: remote-access/ras/Manage-remote-Access.md
+          - name: Deploy Remote Access in an Enterprise
+            href: remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md
+            items:
+          - name: Deploy Remote Access in a Load Balancing Cluster
+            href: remote-access/ras/cluster/Deploy-remote-Access-In-Cluster.md
+            items:
+            - name: Plan a Remote Access Cluster Deployment
+              href: remote-access/ras/cluster/plan/Plan-a-remote-Access-Cluster-Deployment.md
+              items:
+              - name: 'Step 1: Plan an Advanced Single-Server Deployment'
+                href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
+              - name: 'Step 2: Plan Cluster Servers'
+                href: remote-access/ras/cluster/plan/Step-2-Plan-Cluster-Servers.md
+              - name: 'Step 3: Plan a Load-Balanced Cluster Deployment'
+                href: remote-access/ras/cluster/plan/Step-3-Plan-a-Load-Balanced-Cluster-Deployment.md
+            - name: Configure a Remote Access Cluster
+              href: remote-access/ras/cluster/configure/Configure-a-remote-Access-Cluster.md
+              items:
+              - name: 'Step 1: Implement a Single-Server Remote Access Deployment'
+                href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
+              - name: 'Step 2: Prepare Cluster Servers'
+                href: remote-access/ras/cluster/configure/Step-2-Prepare-Cluster-Servers.md
+              - name: 'Step 3: Configure a Load-Balanced Cluster'
+                href: remote-access/ras/cluster/configure/Step-3-Configure-a-Load-Balanced-Cluster.md
+              - name: 'Step 4: Verify the Cluster'
+                href: remote-access/ras/cluster/configure/Step-4-verify-the-Cluster.md
+            - name: Deploy Multiple Remote Access Servers in a Multisite Deployment
+              href: remote-access/ras/multisite/Deploy-Multiple-remote-Access-Servers-in-a-Multisite-Deployment.md
+              items:
+              - name: Plan a Multisite Deployment
+                href: remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment.md
+                items:
+                - name: 'Step 1: Plan an Advanced Single Server Deployment'
+                  href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
+                - name: 'Step 2: Plan the Multisite Infrastructure'
+                  href: remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure.md
+                - name: 'Step 3: Plan the Multisite Deployment'
+                  href: remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment.md
+              - name: Configure a Multisite Deployment
+                href: remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment.md
+                items:
+                - name: 'Step 1: Implement a Single Server Remote Access Deployment'
+                  href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
+                - name: 'Step 2: Configure the Multisite Infrastructure'
+                  href: remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure.md
+                - name: 'Step 3: Configure the Multisite Deployment'
+                  href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
+                - name: 'Step 4: Verify the Multisite Deployment'
+                  href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
+              - name: Troubleshoot a Multisite Deployment
+                href: remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md
+                items:
+                - name: Troubleshooting Enabling Multisite
+                  href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md
+                - name: Troubleshooting adding Entry Points
+                  href: remote-access/ras/multisite/troubleshoot/Troubleshooting-adding-Entry-Points.md
+                - name: Troubleshooting Setting the Entry Point Domain Controller
+                  href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md
+                - name: Troubleshooting General Issues
+                  href: remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md
+            - name: Deploy Remote Access with OTP Authentication
+              href: remote-access/ras/otp/Deploy-RA-OTP.md
+              items:
+              - name: Plan Remote Access with OTP Authentication
+                href: remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md
+                items:
+                - name: 'Step 1: Plan an Advanced Single Server Deployment'
+                  href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
+                - name: 'Step 2: Plan the RADIUS Server Deployment'
+                  href: remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md
+                - name: 'Step 3: Plan OTP Certificate Deployment'
+                  href: remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md
+                - name: 'Step 4: Plan for OTP on the Remote Access Server'
+                  href: remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md
+              - name: Configure Remote Access with OTP Authentication
+                href: remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md
+                items:
+                - name: 'Step 1: Implement a Single Server Remote Access Deployment'
+                  href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
+                - name: 'Step 2: Configure the RADIUS Server'
+                  href: remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md
+                - name: 'Step 3: Configure the Remote Access Server for OTP'
+                  href: remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md
+                - name: 'Step 4: Verify DirectAccess with OTP'
+                  href: remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md
+              - name: Troubleshoot an OTP Deployment
+                href: remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md
+                items:
+                - name: Troubleshooting Authentication Issues
+                  href: remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md
+                - name: Troubleshooting Enabling OTP
+                  href: remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md
+            - name: Deploy Remote Access in a Multi-forest Environment
+              href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
+              items:
+              - name: Plan a Multi-forest Deployment
+                href: remote-access/ras/multi-forest/Plan-a-Multi-forest-Deployment.md
+              - name: Configure a Multi-forest Deployment
+                href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md 
+          - name: Use Remote Access Monitoring and Accounting
+            href: remote-access/ras/monitoring-and-accounting/Use-remote-Access-Monitoring-and-Accounting.md
+            items:
+            - name: Monitor the existing load on the Remote Access server
+              href: remote-access/ras/monitoring-and-accounting/Monitor-the-existing-load-on-the-remote-Access-server.md
+            - name: Monitor the configuration distribution status of the Remote Access server
+              href: remote-access/ras/monitoring-and-accounting/Monitor-the-configuration-distribution-status-of-the-remote-Access-server.md
+            - name: Monitor the operations status of the Remote Access server and its components
+              href: remote-access/ras/monitoring-and-accounting/Monitor-the-operations-status-of-the-remote-Access-server-and-its-components.md
+            - name: Identify and resolve Remote Access server operations problems
+              href: remote-access/ras/monitoring-and-accounting/Identify-and-resolve-remote-Access-server-operations-problems.md
+            - name: Monitor connected remote clients for activity and status
+              href: remote-access/ras/monitoring-and-accounting/Monitor-connected-remote-clients-for-activity-and-status.md
+            - name: Generate a usage report for remote clients using historical data
+              href: remote-access/ras/monitoring-and-accounting/Generate-a-usage-report-for-remote-clients-using-historical-data.md
+          - name: Manage DirectAccess Clients Remotely
+            href: remote-access/ras/manage-remote-clients/Manage-directAccess-Clients-remotely.md
+            items:
+            - name: Plan Deployment for Remote Management of DirectAccess Clients
+              href: remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-remote-Management-of-directAccess-Clients.md
+              items:
+              - name: 'Step 1: Plan the Remote Access Infrastructure'
+                href: remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-remote-Access-Infrastructure.md
+              - name: 'Step 2: Plan the Remote Access Deployment'
+                href: remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-remote-Access-Deployment.md
+            - name: Install and Configure Deployment for remote Management of DirectAccess Clients
+              href: remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-remote-Management-of-directAccess-Clients.md
+              items:
+              - name: 'Step 1: Configure the Remote Access Infrastructure'
+                href: remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md
+              - name: 'Step 2: Configure the Remote Access Server'
+                href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
+              - name: 'Step 3: Verify the Deployment'
+                href: remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
+            - name: Publishing Applications using AD FS Preauthentication
+              href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
+            - name: Publishing Applications with SharePoint, Exchange and RDG
+              href: remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md
     - name: How-to Guides
       items:
       - name: Virtual Private Networking (VPN) 
