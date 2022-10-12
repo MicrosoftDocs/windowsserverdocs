@@ -234,7 +234,7 @@
       items:
       - name: Always on VPN
         items:
-        - name: Deploy Always On VPN
+        - name: Tutorial - Deploy Always On VPN
           href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md
           items:
           - name: Step 1. Plan the Always On VPN Deployment
