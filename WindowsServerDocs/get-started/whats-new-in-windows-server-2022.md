@@ -22,7 +22,7 @@ security, Azure hybrid integration and management, and application platform.
 Windows Server 2022 Datacenter: Azure Edition helps you use the benefits of cloud to keep your VMs
 up to date while minimizing downtime. This section describes some of the new features in Windows
 Server 2022 Datacenter: Azure Edition. Learn more about how Azure Automanage for Windows Server
-brings these new capabilities to Windows Server Azure Edition in the [Azure Automange for
+brings these new capabilities to Windows Server Azure Edition in the [Azure Automanage for
 Windows Server services](/azure/automanage/automanage-windows-server-services-overview) article.
 
 Windows Server 2022 Datacenter: Azure Edition builds on Datacenter Edition to deliver a VM-only
@@ -33,7 +33,7 @@ Compare the
 [differences in the editions in Windows Server 2022](../get-started/editions-comparison-windows-server-2022.md).
 You can also learn more about how Azure Automanage for Windows Server brings these new capabilities
 to Windows Server Azure Edition in the
-[Azure Automange for Windows Server services](/azure/automanage/automanage-windows-server-services-overview)
+[Azure Automanage for Windows Server services](/azure/automanage/automanage-windows-server-services-overview)
 article.
 
 ### September 2022
@@ -186,7 +186,7 @@ You can increase your efficiency and agility with built-in hybrid capabilities i
 
 #### Azure Arc enabled Windows Servers
 
-Azure Arc enabled servers with Windows Server 2022 brings on-premises and multi-cloud Windows Servers to Azure with Azure Arc. This management experience is designed to be consistent with how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. More information can be found at the [Azure Arc enables servers documentation](/azure/azure-arc/servers/overview).
+Azure Arc enabled servers with Windows Server 2022 brings on-premises and multicloud Windows Servers to Azure with Azure Arc. This management experience is designed to be consistent with how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. More information can be found at the [Azure Arc enables servers documentation](/azure/azure-arc/servers/overview).
 
 #### Windows Admin Center
 
