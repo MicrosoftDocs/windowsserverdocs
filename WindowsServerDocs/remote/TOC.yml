@@ -235,33 +235,31 @@
       - name: Always on VPN
         items:
         - name: Tutorial - Deploy Always On VPN
-          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md
-          items:
-          - name: Step 1. Plan the Always On VPN Deployment
-            href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md
-          - name: Step 2. Configure the Always On VPN Server Infrastructure
-            href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md
-          - name: Step 3. Configure the Remote Access Server for Always On VPN
-            href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md
-          - name: Step 4. Install and Configure the NPS Server
-            href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md
-          - name: Step 5. Configure DNS and Firewall Settings
-            href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md
-          - name: Step 6. Configure Windows 10 Client Always On VPN Connections
-            href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md
-          - name: Step 7. Conditional access for VPN connectivity using Azure AD
-            href: remote-access/vpn/ad-ca-vpn-connectivity-windows10.md
-            items:
-            - name: Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
-              href: remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md
-            - name: Step 7.2. Create root certificates for VPN authentication with Azure AD
-              href: remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md
-            - name: Step 7.3. Configure the Conditional Access policy
-              href: remote-access/vpn/vpn-config-conditional-access-policy.md
-            - name: Step 7.4. Deploy Conditional Access root certificates to on-premises AD
-              href: remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md
-            - name: Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices
-              href: remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md
+          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md        
+        - name: Step 1. Plan the Always On VPN Deployment
+          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md
+        - name: Step 2. Configure the Always On VPN Server Infrastructure
+          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md
+        - name: Step 3. Configure the Remote Access Server for Always On VPN
+          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md
+        - name: Step 4. Install and Configure the NPS Server
+          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md
+        - name: Step 5. Configure DNS and Firewall Settings
+          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md
+        - name: Step 6. Configure Windows 10 Client Always On VPN Connections
+          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md
+        - name: Step 7. Conditional access for VPN connectivity using Azure AD
+          href: remote-access/vpn/ad-ca-vpn-connectivity-windows10.md        
+        - name: Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
+          href: remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md
+        - name: Step 7.2. Create root certificates for VPN authentication with Azure AD
+          href: remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md
+        - name: Step 7.3. Configure the Conditional Access policy
+          href: remote-access/vpn/vpn-config-conditional-access-policy.md
+        - name: Step 7.4. Deploy Conditional Access root certificates to on-premises AD
+          href: remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md
+        - name: Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices
+          href: remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md
       - name: Deploy Remote Access in an Enterprise
         href: remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md
         items:
