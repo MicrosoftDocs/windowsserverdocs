@@ -50,9 +50,9 @@ Windows Admin Center has many enhancements that make your management platform [m
 
 Windows Admin Center has many points of [integration with Azure services](../azure/index.md), including Azure Active Directory, Azure Backup, Azure Site Recovery, and more.
 
-### Windows Admin Center in Azure (Preview)
+### Windows Admin Center in Azure
 
-Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers, Azure Stack HCI cluster nodes, and Azure VMs.
+Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers (preview), Azure Stack HCI cluster nodes (preview), and Azure VMs.
 
 You can securely manage your machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
