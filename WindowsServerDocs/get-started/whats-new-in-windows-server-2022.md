@@ -72,6 +72,10 @@ or using an ISO. You can download the ISO from here:
 - [Windows Server 2022 Datacenter: Azure Edition (EN-US) ISO](https://aka.ms/AAi4r31)
 - [Windows Server 2022 Datacenter: Azure Edition (ZH-CN) ISO](https://aka.ms/AAi4bii)
 
+Your Azure subscription permits you to use Windows Server Datacenter: Azure Edition on any virtual
+machine instances running on Azure Stack HCI, for more information see refer to your product terms
+[Product Terms](https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS).
+
 Learn more about the latest Azure Stack HCI features in our
 [What's new in Azure Stack HCI, version 22H2](/azure-stack/hci/whats-new) article.
 
