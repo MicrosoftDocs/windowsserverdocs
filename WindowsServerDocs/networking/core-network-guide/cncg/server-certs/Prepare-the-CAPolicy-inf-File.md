@@ -201,7 +201,7 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 
 **Prerequisite:** You must be a member of the Administrators group.
 
-1. On the computer where you are planning to install AD CS, open Windows PowerShell, type **notepad c:\CAPolicy.inf** and press ENTER.
+1. On the computer where you are planning to install AD CS, open Windows PowerShell, type **notepad c:\Windows\CAPolicy.inf** and press ENTER.
 
 2. When prompted to create a new file, click **Yes**.
 
