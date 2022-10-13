@@ -182,6 +182,15 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 - [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 - [Assign Azure roles using Azure PowerShell](/azure/role-based-access-control/role-assignments-powershell).
 
+## Updating Windows Admin Center
+
+We are constantly releasing new versions of Windows Admin Center. For Windows Admin Center to automatically update to the latest version, the Azure Virtual Machine needs a control plane operation to take place. In the event you wish to update sooner, you can run the following commands:
+
+```powershell
+Set-AzContext <subscription_id>
+Set-AzVMExtension -ExtensionName "AdminCenter" -Publisher "Microsoft.AdminCenter" -ExtensionType "AdminCenter" -ResourceGroupName <RG_name> -VMName <VM_name>
+```
+
 ## Implementation details
 
 Windows Admin Center is currently implemented in the Azure portal in the form of an extension that we install on each Azure VM with which you want to use Windows Admin Center.
