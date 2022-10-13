@@ -11,7 +11,6 @@ ms.date: 10/12/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server, Windows Server 2012 R2, Windows 10
 
-- [**Previous:** Learn about the workflow for deploying Always On VPN](always-on-vpn-deploy-deployment.md)
 - [**Next:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
 In this step of the tutorial, you'll learn how to plan and prepare your Always On VPN deployment.

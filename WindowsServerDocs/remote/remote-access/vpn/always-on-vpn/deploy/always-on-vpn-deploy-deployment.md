@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 ms.author: anaharris
 author: anaharris-ms
-ms.date: 10/12/20222
+ms.date: 10/12/2022
 ---
 
 # Deploy Always On VPN
