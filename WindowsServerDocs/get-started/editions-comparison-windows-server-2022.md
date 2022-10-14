@@ -33,10 +33,12 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Server Core installation option|Yes|Yes|Yes|
 |Server Manager|Yes|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|Yes (not supported in Azure)|
+|SMB Compression|Yes|Yes|Yes|
 |SMB over QUIC|No|No|**Yes**|
 |Software-defined Networking|No|**Yes**|**Yes**|
 |Storage Migration Service|Yes|Yes|Yes|
 |Storage Replica| Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** | Yes, **unlimited** |
+|Storage Replica Compression|No|No|**Yes**|
 |Storage Spaces|Yes|Yes|Yes|
 |Storage Spaces Direct|No|**Yes**|**Yes**|
 |Volume Activation Services|Yes|Yes|Yes|
