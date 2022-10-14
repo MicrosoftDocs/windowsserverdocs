@@ -3,26 +3,22 @@ title: Deploy Always On VPN
 description: Learn about the workflow for deploying Always On VPN connections for remote domain-joined Windows 10 client computers.
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.date: 06/29/2022
-ms.author: wscontent
-author: Teresa-MOTIV
+ms.author: anaharris
+author: anaharris-ms
+ms.date: 10/12/2022
 ---
 
 # Deploy Always On VPN
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**Previous:** Learn about the Always On VPN advanced features](always-on-vpn-adv-options.md)
-- [**Next:** Step 1. Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
+In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows 10 client computers.
 
-In this section, you learn about the workflow for deploying Always On VPN connections for remote domain-joined Windows 10 client computers. If you want to **configure conditional access** to fine-tune how VPN users access your resources, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md). To learn more about conditional access for VPN connectivity using Azure AD, see [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).
+If you want to **configure conditional access** to fine-tune how VPN users access your resources, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md). To learn more about conditional access for VPN connectivity using Azure AD, see [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 The following diagram illustrates the workflow process for the different scenarios when deploying Always On VPN:
 
 [![Flow chart of the Always On VPN deployment workflow](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png)
-
-> [!IMPORTANT]
-> For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
 
 ## [Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)
 
