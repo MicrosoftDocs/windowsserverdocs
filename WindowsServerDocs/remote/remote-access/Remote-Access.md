@@ -74,7 +74,7 @@ For more information about other networking technologies, see [Networking in Win
 
 Now you've learned about what the Remote Access role is, here are some articles that might help you during deployment:
 
-- [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
+- [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
 - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
 - [RAS Gateway](ras-gateway/RAS-Gateway.md)
 - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
