@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/13/2022
+ms.date: 10/18/2022
 ---
 # What's new in the iOS client
 
@@ -14,6 +14,19 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 ## How to report issues
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
+
+## Updates for version 10.4.4
+
+It's time for another release! We've made targeted bug fixes and performance improvements, and also added new features. Here's what we've included:
+
+- You can now use Apple Pencil to draw, write, and interact with remote sessions.
+- You can now see a live preview of the current active session when switching to the Connection Center from a remote session.
+- Gather logs for troubleshooting by going to **Settings** > **Troubleshooting**.
+- Review app highlights from previous versions by going to **Settings** > **About** > **Version Highlights**.
+- We've made some small appearance changes to the connection bar user interface.
+- We've fixed issues that affected locking to landscape or portrait on iOS 16.
+
+We appreciate all the comments sent to us through the App Store, in-app feedback, and email.
 
 ## Updates for version 10.4.3
 
