@@ -8,14 +8,9 @@ author: Teresa-MOTIV
 ---
 
 
-# Always On VPN technology overview
+# Always On VPN overview
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
-
-- [**Previous:** Learn about the Always On VPN enhancements](always-on-vpn-enhancements.md)
-- [**Next:** Learn about the advanced features of Always On VPN](deploy/always-on-vpn-adv-options.md)
-
-For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
 
 The following illustration shows the infrastructure that is required to deploy Always On VPN.
 

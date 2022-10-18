@@ -11,9 +11,6 @@ ms.date: 11/05/2018
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
-- [**Previous:** Learn about the Always On VPN features](../vpn-map-da.md)
-- [**Next:** Learn about the Always On VPN technology](always-on-vpn-technology-overview.md)
-
 Always On VPN has many benefits over the Windows VPN solutions of the past. The following key improvements align Always On VPN with Microsoft's cloud-first, mobile-first vision:
 
 - **Platform Integration:** Always On VPN has improved integration with the Windows operating system and third-party solutions to provide a robust platform for countless advanced connection scenarios.
