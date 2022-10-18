@@ -43,7 +43,7 @@ The following feature distribution map indicates the features in each version. T
 | **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                             |                 |                |                |                |
 | PAE Kernel Support                                                                                                                           | 2019, 2016, 2012 R2                         | ✔               | ✔              | ✔              | ✔              |
 | Configuration of MMIO gap                                                                                                                    | 2019, 2016, 2012 R2                         | ✔               | ✔              | ✔              | ✔              |
-| Dynamic Memory - Hot-Add                                                                                                                     | 2019, 2016, 2012 R2                         | ✔ Note 6, 7 , 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 |
+| Dynamic Memory - Hot-Add                                                                                                                     | 2019, 2016, 2012 R2                         | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 |
 | Dynamic Memory - Ballooning                                                                                                                  | 2019, 2016, 2012 R2                         | ✔ Note 6, 7, 8  | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 | ✔ Note 6, 7, 8 |
 | Runtime Memory Resize                                                                                                                        | 2019, 2016                                  | ✔               | ✔              | ✔              | ✔              |
 | **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                 |                |                |                |
@@ -89,7 +89,7 @@ The following feature distribution map indicates the features in each version. T
 
 9. In Windows Server 2019, Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
 
-10. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
+10. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
 
     ```Powershell
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
