@@ -5,6 +5,8 @@ ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 ms.author: benarm
 author: BenjaminArmstrong
+ms.author:kkkashan
+auther:kkkashan
 ms.date: 01/08/2021
 ---
 # Supported Debian virtual machines on Hyper-V
