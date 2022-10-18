@@ -17,7 +17,7 @@ We're committed to making the Remote Desktop client for iOS the best it can be, 
 
 ## Updates for version 10.4.4
 
-Date published: October 18, 2022
+Date published: October 4, 2022
 
 It's time for another release! We've made targeted bug fixes and performance improvements, and also added new features. Here's what we've included:
 
