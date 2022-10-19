@@ -3,8 +3,8 @@ title: Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 description: Lists the versions of Linux integration services for supported CentOS and Red Hat Enterprise distributions
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
-author: jperrin
-ms.author: japerrin
+author: kkkashan        
+ms.author: kkashanjat
 ms.date: 10/21/2021
 ---
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
