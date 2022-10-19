@@ -17,13 +17,13 @@ Displays WMI information inside an interactive command shell.
 
 ## Syntax
 
-```
+```cmd
 wmic </parameter>
 ```
 
 ## Sub-commands
 
-The following sub-commands are available at all times:
+The following sub-commands are available:
 
 |Sub-command|Description|
 |-----------|-----------|
@@ -35,11 +35,14 @@ The following sub-commands are available at all times:
 ## Examples
 
 To display the current values of all global switches, type:
-```
+
+```cmd
 wmic context
 ```
+
 Output similar to the following displays:
-```
+
+```cmd
 NAMESPACE    : root\cimv2
 ROLE         : root\cli
 NODE(S)      : BOBENTERPRISE
@@ -57,8 +60,10 @@ APPEND       : STDOUT
 USER         : N/A
 AGGREGATE    : ON
 ```
+
 To change the language ID used by the command line to English (locale ID 409), type:
-```
+
+```cmd
 wmic /locale:ms_409
 ```
 
