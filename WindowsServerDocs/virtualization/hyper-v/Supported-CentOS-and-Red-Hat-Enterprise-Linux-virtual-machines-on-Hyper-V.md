@@ -63,7 +63,7 @@ In this section:
 
 | **Feature**                                                                                                                              | **Host OS**                                              | **9.0**       | **8.1-8.6**   | **8.0**      |
 |------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------|---------------|--------------|
-| LIS Availability                                                                                                                         |                                                          | Buit in       | Built in      | Built in     |
+| LIS Availability                                                                                                                         |                                                          | Built in       | Built in      | Built in     |
 | [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
 | Windows Server 2016 Accurate Time                                                                                                        | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔             | ✔            |
 | \>256 vCPUs                                                                                                                              |                                                          | ✔             | ✔             |              |
