@@ -1,5 +1,5 @@
 ---
-title: Always On VPN enhancements
+title: About Always On VPN 
 description: Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 ms.topic: article
 ms.author: wscontent
@@ -7,7 +7,7 @@ author: Teresa-MOTIV
 ms.date: 11/05/2018
 ---
 
-# Always On VPN overview
+# About Always On VPN 
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
