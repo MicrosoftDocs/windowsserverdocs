@@ -7,7 +7,7 @@ author: Teresa-MOTIV
 ms.date: 11/05/2018
 ---
 
-# Always On VPN enhancements
+# Always On VPN overview
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
