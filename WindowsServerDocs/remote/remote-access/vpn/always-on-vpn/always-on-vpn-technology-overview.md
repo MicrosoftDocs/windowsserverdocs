@@ -1,5 +1,5 @@
 ---
-title: Always On VPN Technology Overview
+title: Always On VPN Deployment Infrastructure
 description: 'This page provies a brief overview of the Always On VPN technologies with links to detailed documents. '
 ms.topic: article
 ms.date: 11/05/2018
@@ -8,7 +8,7 @@ author: Teresa-MOTIV
 ---
 
 
-# About Always On VPN 
+# Always On VPN deployment infrastructure 
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
