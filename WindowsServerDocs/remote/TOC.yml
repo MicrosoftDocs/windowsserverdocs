@@ -464,6 +464,8 @@
       items:
       - name: Virtual Private Networking (VPN) 
         items: 
+        - name: Configure VPN device tunneling
+          href: remote-access/vpn/vpn-device-tunnel-config.md
         - name: How to configure Diffie Hellman protocol over IKEv2 VPN connections
           href: /windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
         - name: How to use single sign on (SSO) over VPN and Wi-Fi connections
@@ -473,17 +475,14 @@
       - name: Always On VPN
         items:
         - name: About Always On VPN
-          href: remote-access/vpn/vpn-map-da.md
-        - name: VPN Device Tunnels in Windows 10
-          href: remote-access/vpn/vpn-device-tunnel-config.md
-        - name: Advanced features
-          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md
-        - name: Always On VPN Deployment for Windows Server and Windows 10
-          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md
-        - name: Always On VPN enhancements
           href: remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md
-        - name: Technology Overview of Always On VPN
+        - name: Always On VPN deployment infrastructure
           href: remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md
+        - name: Always On VPN features and functionalities
+          href: remote-access/vpn/vpn-map-da.md
+        - name: Always On VPN advanced features
+          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md
+
       - name: DirectAccess
         items:
         - name: About DirectAccess
@@ -516,8 +515,8 @@
           href: /previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
         - name: Unicast IP Routing
           href: /previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
-        - name: Web Application Proxy
-          href: remote-access/web-application-proxy/web-application-proxy-windows-server.md
+      - name: Web Application Proxy
+        href: remote-access/web-application-proxy/web-application-proxy-windows-server.md
     - name: Troubleshooting
       items:
       - name: Always On VPN
