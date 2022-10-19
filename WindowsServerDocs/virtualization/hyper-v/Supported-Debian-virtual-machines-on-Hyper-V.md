@@ -21,7 +21,7 @@ The following feature distribution map indicates the features that are present i
 
 * (*blank*) - Feature not available
 
-| **Feature**                                                                                                                                  | **Windows Server operating system version** | **11 Bullseye** | **10.0-10.3 (buster)** |
+| **Feature**                                                                                                                                  | **Windows Server operating system version** | **11 (Bullseye)** | **10.0-10.3 (Buster)** |
 |----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------|------------------------|
 | **Availability**                                                                                                                             |                                             | Built in        | Built in               |
 | **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2                         | ✔               | ✔                      |
