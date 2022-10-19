@@ -474,7 +474,7 @@
       items:
       - name: Always On VPN
         items:
-        - name: Overview
+        - name: About Always On VPN
           href: remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md
         - name: Always On VPN deployment infrastructure
           href: remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md
