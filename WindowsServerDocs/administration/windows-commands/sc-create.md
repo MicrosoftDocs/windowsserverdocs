@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: 59416460-0661-4fef-85cc-73e9d8f4beb4
 ms.author: alalve
 author: JasonGerend
-ms.date: 10/16/2017
+ms.date: 10/18/2022
 ---
 
 # sc.exe create
