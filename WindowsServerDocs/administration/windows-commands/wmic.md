@@ -3,19 +3,17 @@ title: wmic
 description: Reference article for wmic, which displays WMI information inside an interactive command shell.
 ms.topic: reference
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
-ms.author: jgerend
+ms.author: alalve
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 10/19/2022
 ---
+
+> [!IMPORTANT]
+> The WMI command-line (WMIC) utility is deprecated as of Windows 10, version 21H1, and as of the 21H1 semi-annual channel release of Windows Server. This utility is superseded by Windows PowerShell for WMI (see [Chapter 7—Working with WMI](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/07-working-with-wmi)). This deprecation applies only to the WMI command-line (WMIC) utility; Windows Management Instrumentation (WMI) itself is not affected. Also see [Windows 10 features we're no longer developing](/windows/deployment/planning/windows-10-deprecated-features).
 
 # wmic
 
-
-
 Displays WMI information inside an interactive command shell.
-
-
 
 ## Syntax
 
