@@ -31,7 +31,7 @@ landingContent:
           - text: Advanced features of Always On VPN
             url: ./deploy/always-on-vpn-adv-options.md
           - text: Always On VPN deployment for Windows Server and Windows 10
-            url: ./deploy/always-on-vpn-deploy.md
+            url: ./deploy/always-on-vpn-deploy-deployment.md
 
   # Card (optional)
   - title: Deploy Always On VPN

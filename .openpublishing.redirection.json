@@ -10729,6 +10729,11 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-workloads.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/virtual-machine-recs",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment",
+      "redirect_document_id": true
     }
   ]
 }
