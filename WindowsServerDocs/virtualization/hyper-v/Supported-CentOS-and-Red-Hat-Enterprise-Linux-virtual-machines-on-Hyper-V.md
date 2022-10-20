@@ -18,7 +18,7 @@ issues and workarounds for each distribution are listed after the tables.
 The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V
 (available since Red Hat Enterprise Linux 6.4) are sufficient for Red Hat
 Enterprise Linux guests to run using the high performance synthetic devices on
-Hyper-V hosts.These built-in drivers are certified by Red Hat for this use.
+Hyper-V hosts. These built-in drivers are certified by Red Hat for this use.
 Certified configurations can be viewed on this Red Hat web page: [Red Hat
 Certification
 Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server).
@@ -52,9 +52,9 @@ In this section:
 ## Table legend
 
 -   **Built in** - LIS are included as part of this Linux distribution. The
-    kernel module version numbers for the built in LIS (as shown by **lsmod**,
+    kernel module version numbers for the built-in LIS (as shown by **lsmod**,
     for example) are different from the version number on the Microsoft-provided
-    LIS download package. A mismatch does not indicate that the built in LIS is
+    LIS download package. A mismatch does not indicate that the built-in LIS is
     out of date.
 
 -   ✔ - Feature available
