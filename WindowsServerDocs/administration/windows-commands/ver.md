@@ -10,7 +10,7 @@ ms.date: 10/20/2022
 
 # ver
 
-Displays the operating system version number. This command is supported in the Windows Command prompt (Cmd.exe), but not in PowerShell.
+Displays the operating system version number. This command is supported in the Windows Command prompt (Cmd.exe), but not in any version of PowerShell.
 
 ## Syntax
 
@@ -31,9 +31,6 @@ To obtain the version number of the operating system from the Command shell (cmd
 ```
 ver
 ```
-
-> [!NOTE]
-> The **ver** command doesn't work in any version of PowerShell.
 
 If you want to get the operating system version number through Windows PowerShell, type:
 
