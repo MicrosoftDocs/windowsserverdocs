@@ -18,7 +18,7 @@ issues and workarounds for each distribution are listed after the tables.
 The built-in Red Hat Enterprise Linux Integration Services drivers for Hyper-V
 (available since Red Hat Enterprise Linux 6.4) are sufficient for Red Hat
 Enterprise Linux guests to run using the high performance synthetic devices on
-Hyper-V hosts.These built-in drivers are certified by Red Hat for this use.
+Hyper-V hosts. These built-in drivers are certified by Red Hat for this use.
 Certified configurations can be viewed on this Red Hat web page: [Red Hat
 Certification
 Catalog](https://access.redhat.com/ecosystem/search/#/ecosystem/Red%20Hat%20Enterprise%20Linux?sort=sortTitle%20asc&vendors=Microsoft&category=Server).
@@ -37,6 +37,8 @@ install the latest LIS release, and reboot again.
 
 In this section:
 
+-   [RHEL/CentOS 9.x Series](#rhelcentos-9x-series)
+
 -   [RHEL/CentOS 8.x Series](#rhelcentos-8x-series)
 
 -   [RHEL/CentOS 7.x Series](#rhelcentos-7x-series)
@@ -50,55 +52,94 @@ In this section:
 ## Table legend
 
 -   **Built in** - LIS are included as part of this Linux distribution. The
-    kernel module version numbers for the built in LIS (as shown by **lsmod**,
+    kernel module version numbers for the built-in LIS (as shown by **lsmod**,
     for example) are different from the version number on the Microsoft-provided
-    LIS download package. A mismatch does not indicate that the built in LIS is
+    LIS download package. A mismatch does not indicate that the built-in LIS is
     out of date.
 
 -   ✔ - Feature available
 
 -   (*blank*) - Feature not available
+## RHEL/CentOS 9.x Series
+| **Feature**                                                                                                                              | **Host OS**                                              | **9.0**       |
+|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------|
+| LIS Availability                                                                                                                         |                                                          | Built in      |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| Windows Server 2016 Accurate Time                                                                                                        | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             |
+| \>256 vCPUs                                                                                                                              |                                                          | ✔             |
+| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)                                       |                                                          |               |
+| Jumbo frames                                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| VLAN tagging and trunking                                                                                                                | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| Live Migration                                                                                                                           | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| Static IP Injection                                                                                                                      | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 2      |
+| vRSS                                                                                                                                     | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| TCP Segmentation and Checksum Offloads                                                                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| SR-IOV                                                                                                                                   | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             |
+| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)                                             |                                                          |               |
+| VHDX resize                                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| Virtual Fibre Channel                                                                                                                    | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 3      |
+| Live virtual machine backup                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 5      |
+| TRIM support                                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| SCSI WWN                                                                                                                                 | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)                                               |                                                          |               |
+| PAE Kernel Support                                                                                                                       | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI |               |
+| Configuration of MMIO gap                                                                                                                | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| Dynamic Memory - Hot-Add                                                                                                                 | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 9, 10  |
+| Dynamic Memory - Ballooning                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 9,10   |
+| Runtime Memory Resize                                                                                                                    | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             |
+| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)                                                 |                                                          |               |
+| Hyper-V-specific video device                                                                                                            | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)                                 |                                                          |               |
+| Key-Value Pair                                                                                                                           | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| Non-Maskable Interrupt                                                                                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| File copy from host to guest                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| lsvmbus command                                                                                                                          | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |
+| Hyper-V Sockets                                                                                                                          | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             |
+| PCI Passthrough/DDA                                                                                                                      | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             |
+| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |                                                          |               |
+| Boot using UEFI                                                                                                                          | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 14, 17 |
+| Secure boot                                                                                                                              | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             |
 
 ## RHEL/CentOS 8.x Series
 
-| **Feature**                                                                                                                              | **Host OS**                                              | **9.0**       | **8.1-8.6**   | **8.0**      |
-|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------|---------------|--------------|
-| LIS Availability                                                                                                                         |                                                          | Built in       | Built in      | Built in     |
-| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| Windows Server 2016 Accurate Time                                                                                                        | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔             | ✔            |
-| \>256 vCPUs                                                                                                                              |                                                          | ✔             | ✔             |              |
-| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)                                       |                                                          |               |               |              |
-| Jumbo frames                                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| VLAN tagging and trunking                                                                                                                | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| Live Migration                                                                                                                           | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| Static IP Injection                                                                                                                      | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 2      | ✔ Note 2      | ✔ Note 2     |
-| vRSS                                                                                                                                     | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| TCP Segmentation and Checksum Offloads                                                                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| SR-IOV                                                                                                                                   | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔             | ✔            |
-| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)                                             |                                                          |               |               |              |
-| VHDX resize                                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| Virtual Fibre Channel                                                                                                                    | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 3      | ✔ Note 3      | ✔ Note 3     |
-| Live virtual machine backup                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 5      | ✔ Note 5      | ✔ Note 5     |
-| TRIM support                                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| SCSI WWN                                                                                                                                 | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)                                               |                                                          |               |               |              |
-| PAE Kernel Support                                                                                                                       | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI |               | N/A           | N/A          |
-| Configuration of MMIO gap                                                                                                                | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| Dynamic Memory - Hot-Add                                                                                                                 | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 9, 10  | ✔ Note 9, 10  | ✔ Note 9, 10 |
-| Dynamic Memory - Ballooning                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 9,10   | ✔ Note 9, 10  | ✔ Note 9, 10 |
-| Runtime Memory Resize                                                                                                                    | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔             | ✔            |
-| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)                                                 |                                                          |               |               |              |
-| Hyper-V-specific video device                                                                                                            | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)                                 |                                                          |               |               |              |
-| Key-Value Pair                                                                                                                           | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| Non-Maskable Interrupt                                                                                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| File copy from host to guest                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| lsvmbus command                                                                                                                          | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔             | ✔            |
-| Hyper-V Sockets                                                                                                                          | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔             | ✔            |
-| PCI Passthrough/DDA                                                                                                                      | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔             | ✔            |
-| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |                                                          |               |               |              |
-| Boot using UEFI                                                                                                                          | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 14, 17 | ✔ Note 14, 17 | ✔ Note 14    |
-| Secure boot                                                                                                                              | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔             | ✔            |
+| **Feature**                                                                                                                              | **Host OS**                                              | **8.1-8.6**   | **8.0**      |
+|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------|--------------|
+| LIS Availability                                                                                                                         |                                                          | Built in      | Built in     |
+| [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| Windows Server 2016 Accurate Time                                                                                                        | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔            |
+| \>256 vCPUs                                                                                                                              |                                                          | ✔             |              |
+| [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)                                       |                                                          |               |              |
+| Jumbo frames                                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| VLAN tagging and trunking                                                                                                                | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| Live Migration                                                                                                                           | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| Static IP Injection                                                                                                                      | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 2      | ✔ Note 2     |
+| vRSS                                                                                                                                     | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| TCP Segmentation and Checksum Offloads                                                                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| SR-IOV                                                                                                                                   | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔            |
+| [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)                                             |                                                          |               |              |
+| VHDX resize                                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| Virtual Fibre Channel                                                                                                                    | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 3      | ✔ Note 3     |
+| Live virtual machine backup                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 5      | ✔ Note 5     |
+| TRIM support                                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| SCSI WWN                                                                                                                                 | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)                                               |                                                          |               |              |
+| PAE Kernel Support                                                                                                                       | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | N/A           | N/A          |
+| Configuration of MMIO gap                                                                                                                | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| Dynamic Memory - Hot-Add                                                                                                                 | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 9, 10  | ✔ Note 9, 10 |
+| Dynamic Memory - Ballooning                                                                                                              | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 9, 10  | ✔ Note 9, 10 |
+| Runtime Memory Resize                                                                                                                    | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔            |
+| [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)                                                 |                                                          |               |              |
+| Hyper-V-specific video device                                                                                                            | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)                                 |                                                          |               |              |
+| Key-Value Pair                                                                                                                           | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| Non-Maskable Interrupt                                                                                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| File copy from host to guest                                                                                                             | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| lsvmbus command                                                                                                                          | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
+| Hyper-V Sockets                                                                                                                          | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔            |
+| PCI Passthrough/DDA                                                                                                                      | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔            |
+| [Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines) |                                                          |               |              |
+| Boot using UEFI                                                                                                                          | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔ Note 14, 17 | ✔ Note 14    |
+| Secure boot                                                                                                                              | Windows Server 2022, 2019, 2016 Azure Stack HCI          | ✔             | ✔            |
 
 RHEL/CentOS 7.x Series
 ----------------------
