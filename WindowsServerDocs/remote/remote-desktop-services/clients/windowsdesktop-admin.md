@@ -87,3 +87,9 @@ To configure the client for the Insider group, set the following registry inform
 This group is for all users and is the most stable version. You don't need to do anything to configure this group.
 
 The Public group receives the version of the client that was tested by the Insider group every fourth Tuesday of each month. All users in the Public group will receive an update notification if that setting is enabled.
+
+## Azure Virtual Desktop (HostApp)
+
+The Azure Virtual Desktop (HostApp) is a platform component containing a set of predefined user interfaces and APIs that Azure Virtual Desktop developers can use to deploy and manage Remote Desktop connections to their Azure Virtual Desktop resources. If this application is required on a device for another application to work correctly, it will automatically be downloaded by the other application. There should be no need for user interaction.
+
+The purpose of the Azure Virtual Desktop (HostApp) is to provide core functionality to other client apps in the Microsoft Store. This is known as the *Hosted App Model*. For more information, see [Hosted App Model](https://blogs.windows.com/windowsdeveloper/2020/03/19/hosted-app-model/).
