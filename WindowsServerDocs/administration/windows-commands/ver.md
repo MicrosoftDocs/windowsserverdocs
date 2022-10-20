@@ -3,10 +3,9 @@ title: ver
 description: Reference article for the ver command, which displays the operating system version number.
 ms.topic: reference
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
-ms.author: jgerend
+ms.author: alalve
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 10/20/2022
 ---
 
 # ver
@@ -33,10 +32,19 @@ To obtain the version number of the operating system from the Command shell (cmd
 ver
 ```
 
-The **ver** command doesn't work in PowerShell. If you want to get the operating system version number through PowerShell, type:
+> [!NOTE]
+> The **ver** command doesn't work in any version of PowerShell.
+
+If you want to get the operating system version number through Windows PowerShell, type:
 
 ```powershell
 $PSVersionTable.BuildVersion
+```
+
+If you want to get the operating system version number through PowerShell 7.x.x, type:
+
+```powershell
+$PSVersionTable.OS
 ```
 
 ## Additional References
