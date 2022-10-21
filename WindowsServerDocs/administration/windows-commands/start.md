@@ -3,10 +3,9 @@ title: start
 description: Reference article for the start command, which starts a separate Command Prompt window to run a specified program or command.
 ms.topic: reference
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
-ms.author: jgerend
+ms.author: alalve
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 10/20/2022
 ---
 
 # start
@@ -16,7 +15,7 @@ Starts a separate Command Prompt window to run a specified program or command.
 ## Syntax
 
 ```
-start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/node <NUMA node>] [/affinity <hexaffinity>] [/wait] [/b] [/machine <x86|amd64|arm|arm64>] [<command> [<parameter>... ] | <program> [<parameter>... ]]
+start ["title"] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | /belownormal}] [/node <NUMA node>] [/affinity <hexaffinity>] [/wait] [/b] [/machine <x86|amd64|arm|arm64>] [<command> [<parameter>... ] | <program> [<parameter>... ]]
 ```
 
 > [!NOTE]
@@ -30,12 +29,12 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
 | Parameter | Description |
 |--|--|
-| `<title>` | Specifies the title to display in the **Command Prompt** window title bar. |
+| `<"title">` | Specifies the title to display in the **Command Prompt** window title bar. |
 | /d `<path>` | Specifies the startup directory. |
 | /i | Passes the Cmd.exe startup environment to the new **Command Prompt** window. If `/i` isn't specified, the current environment is used. |
-| `{/min | /max}` | Specifies to minimize (`/min`) or maximize (`/max`) the new **Command Prompt** window. |
-| `{/separate | /shared}` | Starts 16-bit programs in a separate memory space (`/separate`) or shared memory space (**/shared**). These options aren't supported on 64-bit platforms. |
-| `{/low | /normal | /high | /realtime | /abovenormal | belownormal}` | Starts an application in the specified priority class. |
+| `{/min \| /max}` | Specifies to minimize (`/min`) or maximize (`/max`) the new **Command Prompt** window. |
+| `{/separate \| /shared}` | Starts 16-bit programs in a separate memory space (`/separate`) or shared memory space (**/shared**). These options aren't supported on 64-bit platforms. |
+| `{/low \| /normal \| /high \| /realtime \| /abovenormal \| /belownormal}` | Starts an application in the specified priority class. |
 | /node `<NUMA node>` | Specifies the preferred Non-Uniform Memory Architecture (NUMA) node as a decimal integer. |
 | /affinity `<hexaffinity>` | Applies the specified processor affinity mask (expressed as a hexadecimal number) to the new application. |
 | /wait | Starts an application and waits for it to end. |
