@@ -49,7 +49,7 @@ From an elevated cmd prompt, run: **cluster.exe node /stat**
 
 #### For Windows Server 2012 and Windows Server 2012 R2 cluster
 
-Run the following PS command: [`Get-ClusterResource`](/powershell/module/failoverclusters/get-clusterresource)
+Run the following PowerShell command: [`Get-ClusterResource`](/powershell/module/failoverclusters/get-clusterresource)
 
 Is the cluster service continuously running and available on all the nodes?
 
@@ -120,7 +120,7 @@ Such events are possible when the network channels between the nodes are choked 
 
 ## Review Cluster Networks
 
-We would recommend that you review you Cluster Networks by checking the following three options one by one to continue this troubleshooting guide.
+We would recommend that you review your Cluster Networks by checking the following three options one by one to continue this troubleshooting guide.
 
 ### Check for Antivirus Exclusion
 
