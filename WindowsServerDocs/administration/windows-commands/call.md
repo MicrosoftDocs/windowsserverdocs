@@ -19,7 +19,11 @@ Calls one batch program from another without stopping the parent batch program. 
 ## Syntax
 
 ```
-call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
+call [drive:][path]<filename> [<batchparameters>]
+```
+OR 
+```
+CALL [:[:]<label> [<arguments>]]
 ```
 
 ### Parameters
@@ -28,7 +32,7 @@ call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
 | --------- | ----------- |
 | `[<drive>:][<path>]<filename>` | Specifies the location and name of the batch program that you want to call. The `<filename>` parameter is required, and it must have a .bat or .cmd extension. |
 | `<batchparameters>` | Specifies any command-line information required by the batch program. |
-| `:<label>` | Specifies the label that you want a batch program control to jump to. |
+| `:[:]<label>` | Specifies the label that you want a batch program control to jump to. |
 | `<arguments>` | Specifies the command-line information to be passed to the new instance of the batch program, beginning at `:<label>`.|
 | /? | Displays help at the command prompt. |
 
@@ -85,7 +89,7 @@ In the above examples, **%1** and PATH can be replaced by other valid values. Th
 
 - Working with command extensions
 
-    If command extensions are enabled, **call** accepts `<label>` as the target of the call. The correct syntax is `call :<label> <arguments>`
+    If command extensions are enabled, **call** accepts `<label>` as the target of the call. The correct syntax is `call :[:]<label> <arguments>`
 
 ## Examples
 
