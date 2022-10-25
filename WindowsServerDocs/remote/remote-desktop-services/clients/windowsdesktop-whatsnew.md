@@ -26,7 +26,7 @@ Date published: October 25, 2022
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
-- Added User Datagram Protocol (UDP) support to the client's Azure Resource Manager platform.
+- Added User Datagram Protocol (UDP) support to the client's ARM64 platform.
 - Fixed an issue where the tooltip didn't disappear when the user moved the mouse cursor away from the tooltip area.
 - Fixed an issue where the application crashes when calling reset manually from the command line.
 - Fixed an issue where the client stops responding when disconnecting, which prevents the user from launching another connection.
