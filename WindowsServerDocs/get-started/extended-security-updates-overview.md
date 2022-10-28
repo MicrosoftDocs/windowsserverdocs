@@ -30,9 +30,9 @@ Versions of Windows Server that have reached or are reaching the end of extended
 
 Extended Security Updates for Windows Server include security updates and bulletins rated *critical* and *important*, for a maximum period of time from the end of extended support, depending on the version (see below). They are available free of charge for servers hosted in Azure, and available to purchase for servers not hosted in Azure. Extended Security Updates don't include new features, customer-requested non-security hotfixes, or design change requests. For more information, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
 
-With Extended Security Updates, the different phases of support for these versions of Windows Server are as follows:
+With Extended Security Updates, the different phases for these versions of Windows Server are as follows:
 
-:::image type="content" source="media/esu-phases.png" alt-text="Diagram showing the phases of support with Extended Security Updates":::
+:::image type="content" source="media/esu-phases.png" alt-text="Diagram showing the phases with Extended Security Updates":::
 
 If you haven't already upgraded your servers, the following options will help protect your applications and data during the transition:
 
