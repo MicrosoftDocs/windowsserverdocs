@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Resilient File System (ReFS) overview"
 title: Resilient File System (ReFS) overview
-ms.author: billy
+ms.author: wbsmolen
 manager: candyc
 ms.topic: article
-author: billy
+author: wbsmolen
 ms.date: 10/28/2022
 ---
 # Resilient File System (ReFS) overview
