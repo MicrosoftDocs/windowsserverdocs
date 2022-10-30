@@ -146,7 +146,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 3. CSV will not use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
 4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions
 5. Storage Spaces only.
-6. Available on ReFS 3.7 and later
+6. Available on ReFS 3.7 and later.
 
 #### The following features are only available with ReFS:
 
