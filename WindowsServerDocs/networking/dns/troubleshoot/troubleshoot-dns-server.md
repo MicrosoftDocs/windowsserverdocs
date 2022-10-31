@@ -95,7 +95,7 @@ The problem might be caused by user error when users enter data into the zone. O
 
    If the name is not correct on the primary server, go to step 4.
 
-2. If the name is correct on the primary server, check whether the serial number on the primary server is less than or equal to the serial number on the secondary server. If it is, modify either the primary server or the secondary server so that the serial number on the primary server is greater than than the serial number on the secondary server.
+2. If the name is correct on the primary server, check whether the serial number on the primary server is less than or equal to the serial number on the secondary server. If it is, modify either the primary server or the secondary server so that the serial number on the primary server is greater than the serial number on the secondary server.
 
 3. On the secondary server, force a zone transfer from within the DNS console or by running the following command:
 
