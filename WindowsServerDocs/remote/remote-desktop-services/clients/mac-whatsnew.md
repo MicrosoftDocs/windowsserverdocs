@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/13/2022
+ms.date: 11/02/2022
 ---
 # What's new in the macOS client
 
@@ -16,6 +16,23 @@ If you encounter any issues, you can contact us by opening the macOS client and 
 ## The macOS beta client
 
 If you're feeling adventurous, you can help us test out new features by running the beta version of the macOS client. To join the beta, just go to <https://aka.ms/rdmacbeta>.
+
+## Updates for Version 10.7.10
+
+Date published: October 24, 2022
+
+In this release, we've added some new features to Teams redirection for Azure Virtual Desktop and Windows 365 scenarios:
+
+- Give/Take Control support.
+- Background blur support.
+- Background replacement support.
+
+We've also made some additional fixes and performance improvements, including the following:
+
+- We resolved some customer-reported time zone redirection mismatches.
+- We've improved smart card redirection performance.
+- We addressed overactive Azure Virtual Desktop diagnostics reporting.
+- We fixed a crash that happened when users moved hidden windows in RemoteApp scenarios.
 
 ## Updates for version 10.7.9
 
