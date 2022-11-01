@@ -10,7 +10,7 @@ ms.date: 10/12/2022
 
 # Deploy Always On VPN
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
 
 In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows 10 client computers.
 
@@ -36,9 +36,9 @@ You most likely have the technologies deployed that you can use to deploy Always
 - Management platform of your choice for deploying the Always On VPN configuration because the CSP is not vendor-specific.
 
 >[!IMPORTANT]
->For this deployment, it is not a requirement that your infrastructure servers, such as computers running Active Directory Domain Services, Active Directory Certificate Services, and Network Policy Server, are running Windows Server 2016. You can use earlier versions of Windows Server, such as Windows Server 2012 R2, for the infrastructure servers and for the server that is running Remote Access.
+>For this deployment, you can use all versions of Windows Server for the infrastructure servers and for the server that is running Remote Access.
 >
->Do not attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+>Don't attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## About this deployment
 

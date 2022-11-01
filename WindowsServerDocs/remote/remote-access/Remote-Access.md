@@ -20,7 +20,7 @@ When you install the Remote Access Server Role with the *Add Roles and Features 
 Anyone of these services can be installed either individually or on the same server.
 
 >[!IMPORTANT]
->Don't attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported. You can't use Remote Access in an Azure VM to deploy VPN, DirectAccess, or any other Remote Access feature in Windows Server 2016 or earlier versions of Windows Server. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+>Don't attempt to deploy Remote Access on a virtual machine \(VM\) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported. You can't use Remote Access in an Azure VM to deploy VPN, DirectAccess, or any other Remote Access feature in Windows Server. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## DirectAccess and VPN service
 
@@ -68,7 +68,7 @@ Install-RemoteAccess -VpnType SstpProxy
 
 For more information, see [Web Application Proxy](./web-application-proxy/web-application-proxy-windows-server.md).
 
-For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).
+For more information about other networking technologies, see [Networking in Windows Server](../../networking/index.yml).
 
 ## Next Steps
 

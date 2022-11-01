@@ -1,7 +1,7 @@
 ---
-description: "Learn more about: Web Application Proxy in Windows Server 2016"
+description: "Learn more about: Web Application Proxy in Windows Server"
 ms.assetid: d8adcb68-18e0-41bf-a817-d57344bf2e7d
-title: Web Application Proxy in Windows Server 2016
+title: Web Application Proxy in Windows Server
 ms.author: kgremban
 author: JasonGerend
 manager: femila
@@ -9,15 +9,15 @@ ms.date: 07/13/2016
 ms.topic: article
 ---
 
-# Web Application Proxy in Windows Server 2016
+# Web Application Proxy in Windows Server
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
-The content in this section describes what's new and changed in the Web Application Proxy for Windows Server 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.
+The content in this section describes what's new and changed in the Web Application Proxy for Windows Server. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.
 
-## Web Application Proxy new features in Windows Server 2016
+## Web Application Proxy new features in Windows Server
 
 - Preauthentication for HTTP Basic application publishing
 
@@ -51,7 +51,7 @@ The content in this section describes what's new and changed in the Web Applicat
 
 ## See Also
 
--   [What's New in Windows Server 2016](../../../get-started/whats-new-in-windows-server-2016.md)
+-   [What's New in Windows Server](../../../get-started/whats-new-in-windows-server-2016.md)
 
 -   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 

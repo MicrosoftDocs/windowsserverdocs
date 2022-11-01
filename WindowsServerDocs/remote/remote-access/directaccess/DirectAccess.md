@@ -1,6 +1,6 @@
 ---
 title: DirectAccess
-description: You can use this topic for a brief overview of DirectAccess in Windows Server 2016.
+description: You can use this topic for a brief overview of DirectAccess in Windows Server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 6b71d18e-1939-4fc0-bb42-29e0e5ffc8da
@@ -12,7 +12,7 @@ ms.date: 08/07/2020
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, and for links to additional DirectAccess documentation for Windows Server 2016.
+You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, and for links to additional DirectAccess documentation for Windows Server.
 
 > [!NOTE]
 > In addition to this topic, the following DirectAccess documentation is available.
@@ -38,7 +38,7 @@ DirectAccess provides support only for domain-joined clients that include operat
 
 The following server operating systems support DirectAccess.
 
--   You can deploy all versions of  Windows Server 2016 as a DirectAccess client or a DirectAccess server.
+-   You can deploy all versions of  Windows Server 2016 and above as a DirectAccess client or a DirectAccess server.
 
 -   You can deploy all versions of Windows Server 2012 R2 as a DirectAccess client or a DirectAccess server.
 
@@ -48,6 +48,10 @@ The following server operating systems support DirectAccess.
 
 The following client operating systems support DirectAccess.
 
+-   Windows 11 Enterprise
+
+-   Windows 11 Enterprise 2015 Long Term Servicing Branch (LTSB)
+- 
 -   Windows 10 Enterprise
 
 -   Windows 10 Enterprise 2015 Long Term Servicing Branch (LTSB)
