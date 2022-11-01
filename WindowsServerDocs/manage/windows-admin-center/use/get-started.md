@@ -117,6 +117,9 @@ To add connections to Windows Admin Center:
 After you've added connections as managed nodes, you must authenticate with them to connect. 
 Windows Admin Center supports several mechanisms for authenticating with a managed node. Single sign-on is the default.
 
+> [!NOTE] 
+> To perform remote management, Windows Admin Center impersonates the provided user's security context and uses that security context to access the machine. The provided user is listed under the "Managing As" column on the All Connections page.
+
 ### Authenticate by single sign-on
 
 You can use your current Windows credentials to authenticate with the managed node. This is the default, and Windows Admin Center attempts the single sign-on when you add a resource.
