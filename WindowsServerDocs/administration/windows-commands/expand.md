@@ -22,8 +22,8 @@ The **expand** command can also run from the Windows Recovery Console, using dif
 expand [-r] <source> <destination>
 expand -r <source> [<destination>]
 expand -i <source> [<destination>]
-expand -d <source>.cab [/f:<files>]
-expand <source>.cab /f:<files> <destination>
+expand -d <source>.cab [-f:<files>]
+expand <source>.cab -f:<files> <destination>
 ```
 
 ### Parameters
