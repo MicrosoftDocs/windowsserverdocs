@@ -3,10 +3,10 @@ title: Get started with the Microsoft Store Client
 description: Basic setup instructions for the Remote Desktop client for Windows Store.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 09/17/2020
+author: Heidilohr
+manager: femila
+ms.author: helohr
+ms.date: 11/03/2020
 ---
 # Get started with the Microsoft Store Client
 
@@ -15,6 +15,8 @@ ms.date: 09/17/2020
 You can use the Remote Desktop client for Windows to work with Windows apps and PCs remotely from a different Windows device.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
+
+If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for Windows (Microsoft Store)](/azure/virtual-desktop/users/connect-microsoft-store).
 
 > [!NOTE]
 > - Curious about the new releases for the Microsoft Store Client? Check out [What's new in the Microsoft Store Client](windows-whatsnew.md)
