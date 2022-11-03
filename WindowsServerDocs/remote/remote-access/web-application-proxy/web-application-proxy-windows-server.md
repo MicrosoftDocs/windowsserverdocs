@@ -17,7 +17,7 @@ ms.topic: article
 
 The content in this section describes what's new and changed in the Web Application Proxy for Windows Server. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.
 
-## Web Application Proxy new features in Windows Server
+## Web Application Proxy Features
 
 - Preauthentication for HTTP Basic application publishing
 
@@ -51,9 +51,9 @@ The content in this section describes what's new and changed in the Web Applicat
 
 ## See Also
 
--   [What's New in Windows Server](../../../get-started/whats-new-in-windows-server-2016.md)
+- [What's New in Windows Server](../../../get-started/whats-new-in-windows-server-2016.md)
 
--   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
+- [Publishing Applications using AD FS Preauthentication](../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 
--   [Troubleshooting Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))
+- [Troubleshooting Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))
 
