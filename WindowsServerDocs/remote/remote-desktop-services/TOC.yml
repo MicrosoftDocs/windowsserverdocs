@@ -146,18 +146,8 @@
     items:
     - name: Available Remote Desktop clients
       href: clients/remote-desktop-clients.md
-    - name: Windows Desktop client
-      items:
-      - name: Get started with the Windows Desktop client
-        href: clients/windowsdesktop.md
-      - name: Windows Desktop client for admins
-        href: clients/windowsdesktop-admin.md
-      - name: What's new in the Windows Desktop client
-        href: clients/windowsdesktop-whatsnew.md
-      - name: Supported configurations
-        href: clients/windowsdesktop-supported-config.md
-      - name: Shortcut keys
-        href: /windows/win32/termserv/terminal-services-shortcut-keys
+    - name: Windows Remote Desktop Connection (MSTSC)
+      href: clients/mstsc.md
     - name: Microsoft Store client
       items:
       - name: Get started with the Microsoft Store client
