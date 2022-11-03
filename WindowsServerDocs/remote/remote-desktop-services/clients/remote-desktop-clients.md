@@ -31,10 +31,10 @@ Here's a list of the Remote Desktop client apps and our documentation for connec
 
 | Remote Desktop client | Documentation and download links | Version information |
 |--|--|--|
-| Web | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Web](connect-web.md) | [What's new](web-client-whatsnew.md) |
-| macOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for macOS](connect-macos.md) | [What's new](mac-whatsnew) |
-| iOS/iPadOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for iOS and iPadOS](connect-ios-ipados.md) | [What's new](ios-whatsnew) |
-| Android/Chrome OS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Android and Chrome OS](connect-android-chrome-os.md) | [What's new](android-whatsnew) |
-| Microsoft Store | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Windows (Microsoft Store)](connect-microsoft-store.md) | [What's new](windows-whatsnew) |
+| Web | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Web](remote-desktop-web-client.md) | [What's new](web-client-whatsnew.md) |
+| macOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for macOS](remote-desktop-mac.md) | [What's new](mac-whatsnew.md) |
+| iOS/iPadOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for iOS and iPadOS](remote-desktop-ios.md) | [What's new](ios-whatsnew.md) |
+| Android/Chrome OS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Android and Chrome OS](remote-desktop-android.md) | [What's new](android-whatsnew.md) |
+| Microsoft Store | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Windows (Microsoft Store)](windows.md) | [What's new](windows-whatsnew.md) |
 
 Before you connect to your remote PC, you'll need to allow remote access to is. For more information, see [Remote Desktop - Allow access to your PC](remote-desktop-allow-access.md).

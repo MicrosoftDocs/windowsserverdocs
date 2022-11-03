@@ -10738,17 +10738,17 @@
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop.md",
       "redirect_url": "/azure/virtual-desktop/users/connect-windows",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-admin.md",
       "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-whatsnew.md",
       "redirect_url": "/azure/virtual-desktop/whats-new-client-windows",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-supported-config.md",
