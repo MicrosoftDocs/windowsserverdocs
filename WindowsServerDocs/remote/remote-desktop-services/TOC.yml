@@ -146,8 +146,6 @@
     items:
     - name: Available Remote Desktop clients
       href: clients/remote-desktop-clients.md
-    - name: Windows Remote Desktop Connection (MSTSC)
-      href: clients/mstsc.md
     - name: Microsoft Store client
       items:
       - name: Get started with the Microsoft Store client

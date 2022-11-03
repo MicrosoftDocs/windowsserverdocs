@@ -13,7 +13,7 @@ ms.date: 08/24/2022
 
 >Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-We're often asked how the different Remote Desktop clients compare to each other when connecting to Remote Desktop Services or remote PCs . Do they all support the same redirection? Here's the answer to that questions.
+We're often asked how the different Remote Desktop clients compare to each other when connecting to Remote Desktop Services or remote PCs. Here's the answer to these questions.
 
 ## Redirection support
 

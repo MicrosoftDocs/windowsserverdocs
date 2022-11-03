@@ -31,7 +31,6 @@ Here's a list of the Remote Desktop client apps and our documentation for connec
 
 | Remote Desktop client | Documentation and download links | Version information |
 |--|--|--|
-| Windows (MSTSC) | Connect to Remote Desktop Services and remote PCs with the Remote Desktop Connection client (MSTSC) (*article coming soon*) |  |
 | Web | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Web](connect-web.md) | [What's new](web-client-whatsnew.md) |
 | macOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for macOS](connect-macos.md) | [What's new](mac-whatsnew) |
 | iOS/iPadOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for iOS and iPadOS](connect-ios-ipados.md) | [What's new](ios-whatsnew) |
