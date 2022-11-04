@@ -163,7 +163,7 @@ To learn more about health monitoring for AD FS, see [Azure AD Connect Health ag
 
 ## Best practice for securing and monitoring the AD FS trust with Azure AD
 
-When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to setup alerts, see [Monitor changes to federation configuration](/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes).
+When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to set up alerts, see [Monitor changes to federation configuration](/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes).
 
 ## Additional security configurations
 
