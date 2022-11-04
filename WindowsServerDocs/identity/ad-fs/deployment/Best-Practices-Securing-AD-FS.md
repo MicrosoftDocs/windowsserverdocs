@@ -181,7 +181,7 @@ Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -Ex
 
 For reference, see [Configuring AD FS Extranet Lockout](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486806(v=ws.11)) to learn more about this feature.
 
-### Disable WS-Trust Windows endpoints on the proxy i.e. from extranet
+### Disable WS-Trust Windows endpoints on the proxy from extranet
 
 WS-Trust Windows endpoints (*/adfs/services/trust/2005/windowstransport* and */adfs/services/trust/13/windowstransport*) are meant only to be intranet facing endpoints that use WIA binding on HTTPS. Exposing them to extranet could allow requests against these endpoints to bypass lockout protections. These endpoints should be disabled on the proxy (i.e. disabled from extranet) to protect AD account lockout by using following PowerShell commands. There is no known end user impact by disabling these endpoints on the proxy.
 
@@ -200,7 +200,7 @@ Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Pr
 
 AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication. Multi factor authentication can be set up via the AD FS management snap-in.
 
-### Require Multi factor authentication (MFA)
+### Require Multi Factor Authentication (MFA)
 
 AD FS can be configured to require strong authentication (such as multi factor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Azure AD / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MF and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.
 
