@@ -18,7 +18,8 @@ You can use the Remote Desktop client for Android to work with Windows apps and 
 
 This article will show you how to get started using the client. If you have any additional questions, make sure to check our [FAQ](remote-desktop-client-faq.yml).
 
-If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for Android and Chrome OS](/azure/virtual-desktop/users/connect-android-chrome-os).
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for Android and Chrome OS](/azure/virtual-desktop/users/connect-android-chrome-os).
 
 > [!NOTE]
 > - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).
