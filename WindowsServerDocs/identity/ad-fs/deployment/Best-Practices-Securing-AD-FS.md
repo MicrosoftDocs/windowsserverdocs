@@ -3,9 +3,8 @@ ms.assetid: b7bf7579-ca53-49e3-a26a-6f9f8690762f
 title: Best Practices for securing AD FS and Web Application Proxy
 description: Best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.
 author: billmath
-ms.author: billmath
-manager: mtillman
-ms.date: 11/03/2022
+ms.author: alalve
+ms.date: 11/04/2022
 ms.topic: article
 ---
 
@@ -106,12 +105,12 @@ Organizations deploying AD FS and WAP only for Azure AD and Office 365 scenarios
 
 |Endpoint|Purpose |
 |-----|----- |
-|/adfs/ls|Browser based authentication flows and current versions of Microsoft Office use this endpoint for Azure AD and Office 365 authentication |
+|/adfs/ls/|Browser based authentication flows and current versions of Microsoft Office use this endpoint for Azure AD and Office 365 authentication |
 |/adfs/services/trust/2005/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
 |/adfs/services/trust/13/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
-|/adfs/oauth2|Used for any modern apps (on-premises or in cloud) you have configured to authenticate directly to AD FS (i.e. not through Azure AD) |
+|/adfs/oauth2/|Used for any modern apps (on-premises or in cloud) you have configured to authenticate directly to AD FS (i.e. not through Azure AD) |
 |/adfs/services/trust/mex|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint.|
-|/adfs/ls/federationmetadata/2007-06/federationmetadata.xml    |Requirement for any passive flows; and used by Office 365 / Azure AD to check AD FS certificates. |
+|/federationmetadata/2007-06/federationmetadata.xml    |Requirement for any passive flows; and used by Office 365 / Azure AD to check AD FS certificates. |
 
 AD FS endpoints can be disabled on the proxy using the following PowerShell cmdlet:
 
