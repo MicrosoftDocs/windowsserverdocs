@@ -263,7 +263,7 @@ Update-MgDomainFederationConfiguration -DomainId “contoso.com” -InternalDoma
 
 ### Hardware Security Module (HSM)
 
-In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide more protection, we recommend protecting these keys in a hardware security module (HSM) attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation PowerShell commandlets, specifying your custom certificates as follows:
+In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet. They are never present in the DMZ or on the proxy machines. Optionally to provide more protection, we recommend protecting these keys in a hardware security module (HSM) attached to AD FS. Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation PowerShell commandlets, specifying your custom certificates as follows:
 
 ```PowerShell
 Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String> -FederationServiceName <String> -ServiceAccountCredential <PSCredential> -SigningCertificateThumbprint <String>
