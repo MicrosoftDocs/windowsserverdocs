@@ -17,7 +17,8 @@ You can use the Remote Desktop client for iOS to work with Windows apps, resourc
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
-If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for iOS and iPadOS](/azure/virtual-desktop/users/connect-ios-ipados).
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for iOS and iPadOS](/azure/virtual-desktop/users/connect-ios-ipados).
 
 > [!NOTE]
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
