@@ -142,7 +142,8 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 3. Change the congestion control settings from its default values to `<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />`.
 4. Save and close the file.
 5. Restart the AD FS service by running `net stop adfssrv` and then `net start adfssrv`.
-For your reference, guidance on this capability can be found [here](/previous-versions/azure/azure-services/dn528859(v=azure.100)).
+
+For guidance on this capability, see [Configure extranet access for AD FS on Windows Server 2012 R2](/previous-versions/azure/azure-services/dn528859(v=azure.100)).
 
 ### Standard HTTP request checks at the proxy
 
@@ -203,7 +204,7 @@ AD FS has the ability to differentiate access policies for requests that origina
 
 AD FS can be configured to require strong authentication (such as multi factor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Azure AD / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MF and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.
 
-Supported external MFA providers include those listed in the [Configure additional authentication methods for AD FS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
+Supported external MFA providers include those listed in the [Configure additional authentication methods for AD FS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page.
 
 ### Enable protection to prevent by-passing of cloud Azure AD Multi-Factor Authentication when federated with Azure AD
 
