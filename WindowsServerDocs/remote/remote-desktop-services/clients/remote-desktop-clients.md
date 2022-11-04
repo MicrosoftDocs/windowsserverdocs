@@ -37,6 +37,6 @@ Here's a list of the Remote Desktop client apps and our documentation for connec
 | Android/Chrome OS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Android and Chrome OS](remote-desktop-android.md) | [What's new](android-whatsnew.md) |
 | Microsoft Store | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Windows (Microsoft Store)](windows.md) | [What's new](windows-whatsnew.md) |
 
-## Connect to your remote PC
+## Connecting to your remote PC
 
-Before you connect to your remote PC, you'll need to enable Remote Desktop on it. For more information, see [Enable Remote Desktop on your PC](remote-desktop-allow-access.md).
+Before you can connect to your remote PC, you'll need to enable Remote Desktop on it. For more information, see [Enable Remote Desktop on your PC](remote-desktop-allow-access.md).
