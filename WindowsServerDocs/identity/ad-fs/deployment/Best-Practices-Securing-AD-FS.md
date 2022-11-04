@@ -51,9 +51,10 @@ The following is a list of best practices and recommendations for hardening and 
 
 The below diagram depicts the firewall ports that must be enabled between and amongst the components of the AD FS and WAP deployment. If the deployment does not include Azure AD / Office 365, the sync requirements can be disregarded.
 
-> [!NOTE] that port 49443 is only required if user certificate authentication is used, which is optional for Azure AD and Office 365.
+> [!NOTE]
+> Port 49443 is only required if user certificate authentication is used, which is optional for Azure AD and Office 365.
 
-![a diagram showing the required ports and protocols for an A D F S deployment.](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+![A diagram showing the required ports and protocols for an A D F S deployment.](media/Best-Practices-Securing-AD-FS/adfssec2.png)
 
 > [!NOTE]
 > Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net. TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and PowerShell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan.
