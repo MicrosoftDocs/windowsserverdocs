@@ -16,11 +16,12 @@ You can use the Remote Desktop client for Windows to work with Windows apps and 
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
-If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for Windows (Microsoft Store)](/azure/virtual-desktop/users/connect-microsoft-store).
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for Windows (Microsoft Store)](/azure/virtual-desktop/users/connect-microsoft-store).
 
 > [!NOTE]
 > - Curious about the new releases for the Microsoft Store Client? Check out [What's new in the Microsoft Store Client](windows-whatsnew.md)
-> - You can run the client on any supported version of Windows 10.
+> - You can run the client on any supported version of Windows 10 or Windows 11.
 
 ## Get the RD client and start using it
 
