@@ -19,8 +19,8 @@ This document applies to AD FS and WAP in Windows Server 2012 R2, 2016, and 2019
 
 For deployment in on-premises environments, we recommend a standard deployment topology consisting of:
 
- - One or more AD FS servers on the internal corporate network.
- - One or more Web Application Proxy (WAP) servers in a DMZ or extranet network.  
+- One or more AD FS servers on the internal corporate network.
+- One or more Web Application Proxy (WAP) servers in a DMZ or extranet network.  
 
 At each layer, AD FS and WAP, a hardware or software load balancer is placed in front of the server farm, and handles traffic routing.  Firewalls are placed, in front of the external IP address, of the load balancer as needed.
 
@@ -92,17 +92,17 @@ Protocol |Ports |Description
 HTTPS|443(TCP/UDP)|Used for device authentication.|
 TCP|49443 (TCP)|Used for certificate authentication.|
 
-For information on required ports and protocols required for hybrid deployments, see the document [here](/azure/active-directory/hybrid/reference-connect-ports).
+For information on required ports and protocols required for hybrid deployments, see [Hybrid reference connect ports](/azure/active-directory/hybrid/reference-connect-ports).
 
-For information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [here](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
+For information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [Office 365 URL and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
 
 ### Endpoints enabled
 
 When AD FS and WAP are installed, a default set of AD FS endpoints are enabled on the federation service and on the proxy. These defaults were chosen based on the most commonly required and used scenarios and it is not necessary to change them.
 
-### [Optional] Min set of endpoints proxy enabled for Azure AD / Office 365
-Organizations deploying AD FS and WAP only for Azure AD and Office 365 scenarios can limit even further the number of AD FS endpoints enabled on the proxy to achieve a more minimal attack surface.
-Below is the list of endpoints that must be enabled on the proxy in these scenarios:
+### Min set of endpoints proxy enabled for Azure AD / Office 365 (optional)
+
+Organizations deploying AD FS and WAP only for Azure AD and Office 365 scenarios can limit even further the number of AD FS endpoints enabled on the proxy to achieve a more minimal attack surface. Below is the list of endpoints that must be enabled on the proxy in these scenarios:
 
 |Endpoint|Purpose |
 |-----|----- |
@@ -115,35 +115,27 @@ Below is the list of endpoints that must be enabled on the proxy in these scenar
 
 AD FS endpoints can be disabled on the proxy using the following PowerShell cmdlet:
 
-```PowerShell
+```powershell
 Set-AdfsEndpoint -TargetAddressPath <address path> -Proxy $false
 ```
 
-For example:
-
-```PowerShell
+```powershell
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/certificatemixed -Proxy $false
 ```
 
 ### Extended protection for authentication
 
-Extended protection for authentication is a feature that mitigates against man in the middle (MITM) attacks and is enabled by default with AD FS.
+Extended protection for authentication is a feature that mitigates against man in the middle (MITM) attacks and is enabled by default with AD FS. The setting can be verified using the below PowerShell cmdlet:
 
-#### To verify the settings, you can do the following:
-
-The setting can be verified using the below PowerShell cmdlet.
-
-```PowerShell
+```powershell
 Get-ADFSProperties
 ```
 
-The property is `ExtendedProtectionTokenCheck`.  The default setting is Allow, so that the security benefits can be achieved without the compatibility concerns with browsers that do not support the capability.
+The property is `ExtendedProtectionTokenCheck`. The default setting is Allow, so that the security benefits can be achieved without the compatibility concerns with browsers that do not support the capability.
 
 ### Congestion control to protect the federation service
 
-The federation service proxy (part of the WAP) provides congestion control to protect the AD FS service from a flood of requests.  The Web Application Proxy will reject external client authentication requests if the federation server is overloaded as detected by the latency between the Web Application Proxy and the federation server.  This feature is configured by default with a recommended latency threshold level.
-
-#### To verify the settings, you can do the following:
+The federation service proxy (part of the WAP) provides congestion control to protect the AD FS service from a flood of requests. The Web Application Proxy will reject external client authentication requests if the federation server is overloaded as detected by the latency between the Web Application Proxy and the federation server. This feature is configured by default with a recommended latency threshold level. To verify the settings, you can do the following:
 
 1. On your Web Application Proxy computer, start an elevated command window.
 2. Navigate to the AD FS directory, at %WINDIR%\adfs\config.
@@ -164,9 +156,9 @@ The proxy also performs the following standard checks against all traffic:
 
 Ensure all AD FS and WAP servers receive the most current updates. The most important security recommendation for your AD FS infrastructure is to ensure you have a means in place to keep your AD FS and WAP servers current with all security updates, as well as those optional updates specified as important for AD FS on this page.
 
-The recommended way for Azure AD customers to monitor and keep current their infrastructure is via Azure AD Connect Health for AD FS, a feature of Azure AD Premium.  Azure AD Connect Health includes monitors and alerts that trigger if an AD FS or WAP machine is missing one of the important updates specifically for AD FS and WAP.
+The recommended way for Azure AD customers to monitor and keep current their infrastructure is via Azure AD Connect Health for AD FS, a feature of Azure AD Premium. Azure AD Connect Health includes monitors and alerts that trigger if an AD FS or WAP machine is missing one of the important updates specifically for AD FS and WAP.
 
-Information on installing Azure AD Connect Health for AD FS can be found [here](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
+To learn more about health monitoring for AD FS, see [Azure AD Connect Health agent installation](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
 
 ## Best practice for securing and monitoring the AD FS trust with Azure AD
 
@@ -182,18 +174,21 @@ With the extranet lockout feature in Windows Server 2012 R2, an AD FS administra
 
 You can use the following Windows PowerShell command to set the AD FS extranet lockout (example):
 
-```PowerShell
+```powershell
 Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow ( new-timespan -Minutes 30 )
 ```
 
-For reference, the public documentation of this feature is [here](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486806(v=ws.11)).
+For reference, see [Configuring AD FS Extranet Lockout](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486806(v=ws.11)) to learn more about this feature.
 
 ### Disable WS-Trust Windows endpoints on the proxy i.e. from extranet
 
 WS-Trust Windows endpoints (*/adfs/services/trust/2005/windowstransport* and */adfs/services/trust/13/windowstransport*) are meant only to be intranet facing endpoints that use WIA binding on HTTPS. Exposing them to extranet could allow requests against these endpoints to bypass lockout protections. These endpoints should be disabled on the proxy (i.e. disabled from extranet) to protect AD account lockout by using following PowerShell commands. There is no known end user impact by disabling these endpoints on the proxy.
 
-```PowerShell
+```powershell
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/2005/windowstransport -Proxy $false
+```
+
+```powershell
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Proxy $false
 ```
 
@@ -208,7 +203,7 @@ AD FS has the ability to differentiate access policies for requests that origina
 
 AD FS can be configured to require strong authentication (such as multi factor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Azure AD / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MF and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.
 
-Supported external MFA providers include those listed in [this](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
+Supported external MFA providers include those listed in the [Configure additional authentication methods for AD FS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
 
 ### Enable protection to prevent by-passing of cloud Azure AD Multi-Factor Authentication when federated with Azure AD
 
@@ -216,7 +211,7 @@ Enable protection to prevent bypassing of cloud Azure AD Multi-Factor Authentica
 
 Enabling the protection for a federated domain in your Azure AD tenant will ensure that Azure AD Multi-Factor Authentication is always performed when a federated user accesses an application that is governed by a conditional access policy requiring MFA. This includes performing Azure AD Multi-Factor Authentication even when federated identity provider has indicated (via federated token claims) that on-premises MFA has been performed. Enforcing Azure AD Multi-Factor Authentication every time assures that a compromised on-premises account cannot bypass Azure AD Multi-Factor Authentication by imitating that a multi factor authentication has already been performed by the identity provider, and is highly recommended unless you perform MFA for your federated users using a third party MFA provider.  
 
-The protection can be enabled using a new security setting, [`federatedIdpMfaBehavior`](/graph/api/resources/internaldomainfederation?view=graph-rest-beta&preserve-view=true) which is exposed as a part of the [Internal Federation MS Graph API](/graph/api/resources/internaldomainfederation) or [MS Graph PowerShell cmdlets](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration). The `federatedIdpMfaBehavior` setting determines whether Azure AD accepts the MFA performed by the federated identity provider when a federated user accesses an application that is governed by a conditional access policy that requires MFA.
+The protection can be enabled using a new security setting, [`federatedIdpMfaBehavior`](/graph/api/resources/internaldomainfederation?view=graph-rest-beta&preserve-view=true), which is exposed as a part of the [Internal Federation MS Graph API](/graph/api/resources/internaldomainfederation) or [MS Graph PowerShell cmdlets](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration). The `federatedIdpMfaBehavior` setting determines whether Azure AD accepts the MFA performed by the federated identity provider when a federated user accesses an application that is governed by a conditional access policy that requires MFA.
 
 Administrators can choose one of the following values:
 
@@ -250,15 +245,15 @@ PATCH /domains/contoso.com/federationConfiguration/2a8ce608-bb34-473f-9e0f-f373e
 "federatedIdpMfaBehavior": "rejectMfaByFederatedIdp" 
 ```
 
-PowerShell
+Example:
 
-```PowerShell
+```powershell
 Update-MgDomainFederationConfiguration -DomainId <domainsId> -InternalDomainFederationId <internalDomainFederationId> federatedIdpMfaBehavior "rejectMfaByFederatedIdp" 
 ```
 
 Example:
 
-```PowerShell
+```powershell
 Update-MgDomainFederationConfiguration -DomainId “contoso.com” -InternalDomainFederationId “2a8ce608-bb34-473f-9e0f-f373ee4cbc5a” federatedIdpMfaBehavior "rejectMfaByFederatedIdp" 
 ```
 
@@ -266,7 +261,7 @@ Update-MgDomainFederationConfiguration -DomainId “contoso.com” -InternalDoma
 
 In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet. They are never present in the DMZ or on the proxy machines. Optionally to provide more protection, we recommend protecting these keys in a hardware security module (HSM) attached to AD FS. Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation PowerShell commandlets, specifying your custom certificates as follows:
 
-```PowerShell
+```powershell
 Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String> -FederationServiceName <String> -ServiceAccountCredential <PSCredential> -SigningCertificateThumbprint <String>
 ```
 
