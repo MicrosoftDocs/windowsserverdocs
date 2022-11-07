@@ -5,7 +5,7 @@ description: "Learn more about: AD FS Extranet Lockout and Extranet Smart Lockou
 author: billmath
 ms.author: billmath
 manager: mtilman
-ms.date: 05/20/2019
+ms.date: 11/07/2022
 ms.topic: article
 ---
 
