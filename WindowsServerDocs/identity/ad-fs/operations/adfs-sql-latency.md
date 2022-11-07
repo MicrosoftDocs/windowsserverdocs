@@ -90,7 +90,7 @@ The generated script should be run on the SQL machine to create the required dat
 >
 > Use a Data Source value that matches your sql connection.
 
-  1. Restart the AD FS service for the changes to take effect.
+  3. Restart the AD FS service for the changes to take effect.
 
  > [!NOTE]
  > It is not recommended to use SQL replication or synchronization between the artifact databases. The recommendation is to set up one artifact database per datacenter.
