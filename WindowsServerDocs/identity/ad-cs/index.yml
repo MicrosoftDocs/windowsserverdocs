@@ -42,7 +42,7 @@ landingContent:
           - text: Certificate Enrollment Policy Web Service for AD CS
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11)
           - text: Network Device Enrollment Service for AD CS
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831498(v=ws.11)
+            url: /hh831498.md(v=ws.11).md
           - text: Protecting Against Weak Cryptographic Algorithms
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn375961(v=ws.11)
       - linkListType: how-to-guide
