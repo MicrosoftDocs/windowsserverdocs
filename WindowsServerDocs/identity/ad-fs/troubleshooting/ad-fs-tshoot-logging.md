@@ -24,9 +24,9 @@ The Admin log provides high level information on issues that are occurring and i
 ### To view the admin log
 
 1. Open Event Viewer
-2. Expand **Applications and Services Log**.
-3. Expand **AD FS**.
-4. Click on **Admin**.
+1. Expand **Applications and Services Log**.
+1. Expand **AD FS**.
+1. Click on **Admin**.
 
 ![Screenshot of the Event Viewer with the Admin option called out.](media/ad-fs-tshoot-logging/event1.PNG)
 
