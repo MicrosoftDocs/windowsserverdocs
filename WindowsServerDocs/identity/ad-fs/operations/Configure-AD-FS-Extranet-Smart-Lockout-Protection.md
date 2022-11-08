@@ -9,9 +9,7 @@ ms.date: 11/07/2022
 ms.topic: article
 ---
 
-# AD FS Extranet Lockout and Extranet Smart Lockout
-
-## Overview
+# AD FS Extranet Lockout and Extranet Smart Lockout Overview
 
 Extranet Smart Lockout (ESL) protects your users from experiencing extranet account lockout from malicious activity.
 
@@ -80,21 +78,25 @@ The AccountActivity table is populated both during ‘Log-Only' mode and ‘Enfo
 1. **Install updates on all nodes in the farm**
 
    First, ensure all Windows Server 2016 AD FS servers are up to date as of the June 2018 Windows Updates and that the AD FS 2016 farm is running at the 2016 farm behavior level.
+
 1. **Verify Permissions**
 
    Extranet Smart Lockout requires that Windows Remote management is enabled on every AD FS server.
-3. **Update artifact database permissions**
+
+1. **Update artifact database permissions**
 
    Extranet smart lockout requires the AD FS service account to have permissions to create a new table in the AD FS artifact database. Log in to any AD FS server as an AD FS admin, and then grant this permission by executing the following commands in a PowerShell Command Prompt window:
 
-   ``` powershell
+   ```powershell
    PS C:\>$cred = Get-Credential
    PS C:\>Update-AdfsArtifactDatabasePermission -Credential $cred
    ```
-   >[!NOTE]
-   >The $cred placeholder is an account that has AD FS administrator permissions. This should provide the write permissions to create the table.
+
+   > [!NOTE]
+   > The $cred placeholder is an account that has AD FS administrator permissions. This should provide the write permissions to create the table.
 
    The commands above may fail due to lack of sufficient permission because your AD FS farm is using SQL Server, and the credential provided above does not have admin permission on your SQL server. In this case, you can configure database permissions manually in SQL Server Database by running the following command when you're connected to the AdfsArtifactStore database.
+
     ```
     # when prompted with “Are you sure you want to perform this action?”, enter Y.
 
@@ -140,12 +142,15 @@ The AccountActivity table is populated both during ‘Log-Only' mode and ‘Enfo
     ```
 
 ### Ensure AD FS Security Audit Logging is enabled
+
 This feature makes use of Security Audit logs, so auditing must be enabled in AD FS and the local policy on all AD FS servers.
 
 ### Configuration Instructions
+
 Extranet Smart Lockout uses the AD FS property **ExtranetLockoutEnabled**. This property was previously used to control “Extranet Soft Lockout” in Server 2012R2. If Extranet Soft Lockout was enabled, to view the current property configuration, run ` Get-AdfsProperties` .
 
 ### Configuration Recommendations
+
 When configuring the Extranet Smart Lockout, follow best practices for setting thresholds:
 
 `ExtranetObservationWindow (new-timespan -Minutes 30)`
@@ -165,6 +170,7 @@ To set this property run:
 ``` powershell
 Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false
 ```
+
 ### Enable Log-Only Mode
 
 In log only mode, AD FS populates users familiar location information and writes security audit events, but does not block any requests. This mode is used to validate that smart lockout is running and to enable AD FS to “learn” familiar locations for users before enabling “enforce” mode. As AD FS learns, it stores login activity per user (whether in log only mode or enforce mode).
@@ -201,16 +207,17 @@ For the new mode to take effect, restart the AD FS service on all nodes in the f
 ## Manage user account activity
 
 AD FS provides three cmdlets to manage account activity data. These cmdlets automatically connect to the node in the farm that holds the master role.
+
 > [!NOTE]
 > Just Enough Administration (JEA) can be used to delegate AD FS commandlets to reset account lockouts. For example, Help Desk personnel can be delegated permissions to use ESL commandlets. For information on delegating permissions for using these cmdlets, see [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
 
 This behavior can be overridden by passing the -Server parameter.
 
-- Get-ADFSAccountActivity -UserPrincipalName
+**Get-ADFSAccountActivity -UserPrincipalName**
 
-  Read the current account activity for a user account. The cmdlet always automatically connects to the farm master by using the Account Activity REST endpoint. Therefore, all data should always be consistent.
+Read the current account activity for a user account. The cmdlet always automatically connects to the farm master by using the Account Activity REST endpoint. Therefore, all data should always be consistent.
 
-  `Get-ADFSAccountActivity user@contoso.com`
+`Get-ADFSAccountActivity user@contoso.com`
 
 Properties:
 - BadPwdCountFamiliar: Incremented when an authentication is unsuccessful from a known location.
@@ -220,19 +227,20 @@ Properties:
 - FamiliarLockout: Boolean value that will be “True” if the “BadPwdCountFamiliar” > ExtranetLockoutThreshold.
 - UnknownLockout: Boolean value that will be “True” if the “BadPwdCountUnknown” > ExtranetLockoutThreshold.
 - FamiliarIPs: maximum of 20 IPs that are familiar to the user. When this is exceeded the oldest IP in the list will be removed.
-<br><br>
-- Set-ADFSAccountActivity
 
-  Adds new familiar locations. The familiar IP list has a maximum of 20 entries, if this is exceeded, the oldest IP in the list will be removed.
+**Set-ADFSAccountActivity**
 
-  `Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”`
+Adds new familiar locations. The familiar IP list has a maximum of 20 entries, if this is exceeded, the oldest IP in the list will be removed.
 
-- Reset-ADFSAccountLockout
+`Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”`
 
-  Resets the lockout counter for a user account for each Familiar location (badPwdCountFamiliar) or Unfamiliar Location counters (badPwdCountUnfamiliar). By resetting a counter, the “FamiliarLockout” or “UnfamiliarLockout” value will update, as the reset counter will be less than the threshold.
+**Reset-ADFSAccountLockout**
 
-  `Reset-ADFSAccountLockout user@contoso.com -Location Familiar`<br>
-  `Reset-ADFSAccountLockout user@contoso.com -Location Unknown`
+Resets the lockout counter for a user account for each Familiar location (badPwdCountFamiliar) or Unfamiliar Location counters (badPwdCountUnfamiliar). By resetting a counter, the “FamiliarLockout” or “UnfamiliarLockout” value will update, as the reset counter will be less than the threshold.
+
+`Reset-ADFSAccountLockout user@contoso.com -Location Familiar`
+
+`Reset-ADFSAccountLockout user@contoso.com -Location Unknown`
 
 ## Event Logging & User Activity Information for AD FS Extranet Lockout
 
@@ -243,7 +251,7 @@ The recommended way to monitor user account activity is through Connect Health. 
 ### AD FS Extranet Smart Lockout events
 
 > [!NOTE]
-> Troubleshoot Extranet Smart lockout with the [AD FS Help Extranet Lockout troubleshooting guide](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8)
+> Troubleshoot Extranet Smart lockout with the [AD FS Help Extranet Lockout troubleshooting guide](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8).
 
 For Extranet Smart Lockout events to be written, ESL must be enabled in ‘log-only' or ‘enforce' mode and AD FS security auditing is enabled.
 AD FS will write extranet lockout events to the security audit log:
@@ -271,7 +279,7 @@ A: If AD FS Smart Lockout is set to ‘enforce' mode, then you will never see th
 
 **What happens ESL is enabled and the bad actor has a user password?**
 
-A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature will not block the access since the sign in will meet “successful” criteria of correct password plus new IP. The bad actors IP would then appear as a “familiar” one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require Multi Factor Authentication for the users. We strongly recommend installing AAD Password Protection that ensures guessable passwords do not get into the system.
+A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature will not block the access since the sign in will meet “successful” criteria of correct password plus new IP. The bad actors IP would then appear as a “familiar” one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require Multi Factor Authentication for the users. We strongly recommend installing Azure AD Password Protection that ensures guessable passwords do not get into the system.
 
 **If my user has never signed in successfully from an IP and then tries with wrong password a few times will they be able to login once they finally type their password correctly?**
 
@@ -291,6 +299,7 @@ Extranet Smart Lockout checks network IPs, forwarded IPs, the x-forwarded-client
 A: With ESL enabled, AD FS tracks the account activity and known locations for users in the ADFSArtifactStore database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the ADFSArtifactStore database to grow at a rate of up to 1GB per 100,000 users. If the AD FS farm is using the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data\. To prevent filling this drive, ensure you have a minimum of 5GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to an additional 1GB of RAM for user populations of 500,000 or less.
 
 ## Additional references
+
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
 [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
