@@ -82,7 +82,7 @@ Deployment is divided into three phases:
 
 3.  Verifying the deployment. This phase includes steps to verify that the deployment is working as required.
 
-For detailed deployment steps, see [Install and Configure Basic DirectAccess](../Install-and-Configure-Basic-DirectAccess.md).
+For detailed deployment steps, see [Install and Configure Basic DirectAccess](./Install-and-Configure-Basic-DirectAccess.md).
 
 ## <a name="BKMK_APP"></a>Practical applications
 Deploying a single Remote Access server provides the following benefits:
