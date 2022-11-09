@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 9/18/2019
 author: kaushika-msft
 ms.author: kaushika
-ms.localizationpriority: medium
 ms.custom:
   - CI ID 116803
   - CSSTroubleshoot
@@ -14,6 +13,8 @@ manager: dcscontentpm
 
 # Resolve Windows activation error codes
 
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=winact" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common issues related to KMS and MAK activation</span>
+
 > [!NOTE]
 > This article is intended for technical support agents and IT professionals. If you're looking for more information about Windows activation error messages, see [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).
 
@@ -21,7 +22,7 @@ This article provides troubleshooting information to help you respond to error m
 
 For more information about volume activation, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client).
 
-For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
+For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](/windows/deployment/volume-activation/volume-activation-windows-10).
 
 For more information about volume activation for older versions of Windows, see KB 929712, [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
 
@@ -31,7 +32,10 @@ For more information about volume activation for older versions of Windows, see�
 > This tool is intended to help fix Windows activation problems on computers that run Enterprise, Professional, or Server edition of Windows.
 
 
-Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. Download the diagnostic tool from [here](https://aka.ms/SaRA-WindowsActivation).
+Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. 
+
+> [!div class="nextstepaction"]
+> [Download the Assistant](https://aka.ms/SaRA-WindowsActivation)
 
 This tool will try to activate Windows. If it returns an activation error code, the tool will display targeted solutions for known error codes.
 

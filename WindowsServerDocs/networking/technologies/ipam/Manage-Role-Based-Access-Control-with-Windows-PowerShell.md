@@ -1,20 +1,21 @@
 ---
 title: Manage Role Based Access Control with Windows PowerShell
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to use IPAM to manage role based access control with Windows PowerShell.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Manage Role Based Access Control with Windows PowerShell
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to use IPAM to manage role based access control with Windows PowerShell.
 
 >[!NOTE]
->For the IPAM Windows PowerShell command reference, see the [IpamServer cmdlets in Windows PowerShell](/powershell/module/ipamserver/?view=win10-ps).
+>For the IPAM Windows PowerShell command reference, see the [IpamServer cmdlets in Windows PowerShell](/powershell/module/ipamserver/).
 
 The new Windows PowerShell IPAM commands provide you with the ability to retrieve and change the access scopes of DNS and DHCP objects. The following table illustrates the correct command to use for each IPAM object.
 

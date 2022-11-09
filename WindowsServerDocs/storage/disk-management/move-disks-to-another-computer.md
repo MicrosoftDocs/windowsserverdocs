@@ -10,7 +10,7 @@ ms.author: jgerend
 
 # Move disks to another computer
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section describes the steps to take, and the considerations associated with, moving disks to another computer. You might want to print this procedure or write down the steps before attempting to move disks from one computer to another.
 

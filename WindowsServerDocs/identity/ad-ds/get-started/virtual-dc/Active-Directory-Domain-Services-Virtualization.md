@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Active Directory Domain Services Virtualization"
 ms.assetid: 2f536fb8-16e5-471d-bafc-21b96197efb8
 title: Active Directory Domain Services Virtualization
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Active Directory Domain Services Virtualization
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic lists resources that are available for using virtualized domain controllers.
 

@@ -22,7 +22,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\ConnectionCountPerNetworkInterface
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
     The default is 1, and we strongly recommend using the default. The valid range is 1-16. The maximum number of connections per interface to be established with a server for non-RSS interfaces.
 
@@ -33,7 +33,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\ConnectionCountPerRssNetworkInterface
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
     The default is 4, and we strongly recommend using the default. The valid range is 1-16. The maximum number of connections per interface to be established with a server for RSS interfaces.
 
@@ -43,7 +43,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\ConnectionCountPerRdmaNetworkInterface
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
     The default is 2, and we strongly recommend using the default. The valid range is 1-16. The maximum number of connections per interface to be established with a server for RDMA interfaces.
 
@@ -53,7 +53,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\MaximumConnectionCountPerServer
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
     The default is 32, with a valid range from 1-64. The maximum number of connections to be established with a single server running Windows Server 2012 across all interfaces.
 
@@ -63,7 +63,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantDirectoryTimeout
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
     The default is 600 seconds. The maximum time server directory handles held open with directory leases.
 
@@ -73,7 +73,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileInfoCacheLifetime
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 10 seconds. The file information cache timeout period.
 
@@ -83,7 +83,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheLifetime
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 10 seconds. This is the directory cache timeout.
 
@@ -111,7 +111,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheEntrySizeMax
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 64 KB. This is the maximum size of directory cache entries.
 
@@ -121,7 +121,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileNotFoundCacheLifetime
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 5 seconds. The file not found cache timeout period.
 
@@ -141,7 +141,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableBandwidthThrottling
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 0. By default, the SMB redirector throttles throughput across high-latency network connections, in some cases to avoid network-related timeouts. Setting this registry value to 1 disables this throttling, enabling higher file transfer throughput over high-latency network connections.
 
@@ -151,7 +151,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableLargeMtu
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 0 for Windows 8 only. In Windows 8, the SMB redirector transfers payloads as large as 1 MB per request, which can improve file transfer speed. Setting this registry value to 1 limits the request size to 64 KB. You should evaluate the impact of this setting before applying it.
 
@@ -161,7 +161,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\RequireSecuritySignature
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 0, disabling SMB Signing. Changing this value to 1 enables SMB signing for all SMB communication, preventing SMB communication with computers where SMB signing is disabled. SMB signing can increase CPU cost and network round trips, but helps block man-in-the-middle attacks. If SMB signing is not required, ensure that this registry value is 0 on all clients and servers.
 
@@ -173,7 +173,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileInfoCacheEntriesMax
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 64, with a valid range of 1 to 65536. This value is used to determine the amount of file metadata that can be cached by the client. Increasing the value can reduce network traffic and increase performance when a large number of files are accessed.
 
@@ -183,7 +183,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheEntriesMax
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 16, with a valid range of 1 to 4096. This value is used to determine the amount of directory information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when large directories are accessed.
 
@@ -193,7 +193,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileNotFoundCacheEntriesMax
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 128, with a valid range of 1 to 65536. This value is used to determine the amount of file name information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when a large number of file names are accessed.
 
@@ -203,7 +203,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\MaxCmds
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 15. This parameter limits the number of outstanding requests on a session. Increasing the value can use more memory, but it can improve performance by enabling a deeper request pipeline. Increasing the value in conjunction with MaxMpxCt can also eliminate errors that are encountered due to large numbers of outstanding long-term file requests, such as FindFirstChangeNotification calls. This parameter does not affect connections with SMB 2.0 servers.
 
@@ -213,7 +213,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
     HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit
     ```
 
-    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+    Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2022, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
     The default is 1023. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file.
 

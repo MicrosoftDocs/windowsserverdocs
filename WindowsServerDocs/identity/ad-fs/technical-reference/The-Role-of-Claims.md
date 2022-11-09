@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: The Role of Claims"
 ms.assetid: 22f53391-8c6a-4873-a1f4-08b4760ea621
 title: The Role of Claims
 author: billmath
@@ -55,9 +56,9 @@ A claim type provides context for the claim value. It is usually expressed as a 
 |Name|The unique name of the user|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/name|
 |UPN|The user principal name \(UPN\) of the user|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/upn|
 |Common Name|The common name of the user|http:\/\/schemas.xmlsoap.org\/claims\/CommonName|
-|AD FS 1.x E\-Mail Address|The e\-mail address of the user when interoperating with AD FS 1.1 or ADFS 1.0|http:\/\/schemas.xmlsoap.org\/claims\/EmailAddress|
+|AD FS 1.x E\-Mail Address|The e\-mail address of the user when interoperating with AD FS 1.1 or AD FS 1.0|http:\/\/schemas.xmlsoap.org\/claims\/EmailAddress|
 |Group|A group that the user is a member of|http:\/\/schemas.xmlsoap.org\/claims\/Group|
-|AD FS 1.x UPN|The UPN of the user when interoperating with AD FS 1.1 or ADFS 1.0|http:\/\/schemas.xmlsoap.org\/claims\/UPN|
+|AD FS 1.x UPN|The UPN of the user when interoperating with AD FS 1.1 or AD FS 1.0|http:\/\/schemas.xmlsoap.org\/claims\/UPN|
 |Role|A role that the user has|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/role|
 |Surname|The surname of the user|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/surname|
 |PPID|The private identifier of the user|http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/privatepersonalidentifier|

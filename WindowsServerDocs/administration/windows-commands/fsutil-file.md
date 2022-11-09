@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil file
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
 Finds a file by user name (if Disk Quotas are enabled), queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, or creates a new file.
 
@@ -48,7 +48,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 | offset=`<offset>` | Specifies the start of the range that should be set to zeroes. |
 | length=`<length>` | Specifies the length of the range (in bytes). |
 | queryextents | Queries extents for a file. |
-| /r | If <filename> is a reparse point, open it rather than its target. |
+| /r | If `<filename>` is a reparse point, open it rather than its target. |
 | `<startingvcn>` | Specifies first VCN to query. If omitted, start at VCN 0. |
 | `<numvcns>` | Number of VCNs to query. If omitted or 0, query until EOF. |
 | queryfileid | Queries the file ID of a file on an NTFS volume. |

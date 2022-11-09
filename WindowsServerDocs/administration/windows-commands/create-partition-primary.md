@@ -3,14 +3,14 @@ title: create partition primary
 description: Reference article for the create partition primary command, which creates a primary partition on the basic disk with focus.
 ms.topic: reference
 ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # create partition primary
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a primary partition on the basic disk with focus. After the partition has been created, the focus automatically shifts to the new partition.
 

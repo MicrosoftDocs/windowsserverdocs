@@ -1,10 +1,11 @@
 ---
 title: Shielded VMs - Hosting service provider sets up Windows Azure Pack
+description: "Learn more about: Shielded VMs - Hosting service provider sets up Windows Azure Pack"
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
@@ -20,11 +21,11 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 1. Complete configuration of System Center 2016 - Virtual Machine Manager (VMM) for your hosting fabric. This includes setting up VM templates and a VM cloud, which will be exposed through Windows Azure Pack:
 
-    [Scenario - Deploy guarded hosts and shielded virtual machines in VMM](/system-center/vmm/deploy-guarded-host-fabric?view=sc-vmm-2019)
+    [Scenario - Deploy guarded hosts and shielded virtual machines in VMM](/system-center/vmm/deploy-guarded-host-fabric)
 
 2. Install and configure System Center 2016 - Service Provider Foundation (SPF). This software enables Windows Azure Pack to communicate with your VMM servers:
 
-    [Deploying Service Provider Foundation - SPF](https://technet.microsoft.com/system-center-docs/spf/deploy/deploy-spf)
+    [Deploying Service Provider Foundation - SPF](/system-center/spf/deploy-spf)
 
 3. Install Windows Azure Pack and configure it to communicate with SPF:
 
@@ -41,7 +42,7 @@ Install and configure Windows Azure Pack (WAP) on the machine where you wish to 
 
 1.  Reviewing [WAP system requirements](/previous-versions/azure/windows-server-azure-pack/dn296442(v=technet.10)) and install the [prerequisite software](/previous-versions/azure/windows-server-azure-pack/dn469335(v=technet.10)).
 
-2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine is not connected to the Internet, follow the [offline installation instructions](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
+2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine is not connected to the Internet, follow the [offline installation instructions](/visualstudio/install/create-an-offline-installation-of-visual-studio).
 
 3.  Open the Web Platform Installer and find **Windows Azure Pack: Portal and API Express** under the **Products** tab. Click **Add**, then **Install** at the bottom of the window.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Device Registration Technical Reference"
 ms.assetid: 69ec592a-5499-4249-8ba0-afa356a8ff75
 title: Device Registration Technical Reference
 author: billmath

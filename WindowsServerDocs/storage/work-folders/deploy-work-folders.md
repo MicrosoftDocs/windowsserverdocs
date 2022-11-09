@@ -10,7 +10,7 @@ description: How to deploy Work Folders, including installing the server role, c
 ---
 # Deploying Work Folders
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).
 
@@ -289,4 +289,4 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 |**Understanding**|-   [Work Folders](work-folders-overview.md)|
 |**Planning**|-   [Designing a Work Folders Implementation](plan-work-folders.md)|
 |**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
-|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264(v=ws.11))<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/?view=win10-ps)|
+|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/)|

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Set a Service Communications Certificate"
 ms.assetid: 638c89bd-87e6-484b-9d2e-8ae2a74227e5
 title: Set a Service Communications Certificate
 author: billmath
@@ -22,7 +23,7 @@ You can use the following procedure to change the service communications certifi
 > [!NOTE]
 > The AD FS Management snap\-in refers to server authentication certificates for federation servers as service communication certificates.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
 
 ### To set a service communications certificate
 

@@ -4,12 +4,13 @@ description:  The CAPolicy.inf contains various settings that are used when inst
 manager: alanth
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # CAPolicy.inf Syntax
->   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>   Applies To: Windows Server 2016
 
 The CAPolicy.inf is a configuration file that defines the extensions, constraints, and other configuration settings that are applied to a root CA certificate and all certificates issued by the root CA. The CAPolicy.inf file must be installed on a host server before the setup routine for the root CA begins. When the security restrictions on a root CA are to be modified, the root certificate must be renewed and an updated CAPolicy.inf file must be installed on the server before the renewal process begins.
 
@@ -40,16 +41,16 @@ In the example below, **[Version]** is the section, **Signature** is the key, an
 
 Example:
 
-```PowerShell
-[Version]                     #section
-Signature="$Windows NT$"      #key=value
+```
+[Version]
+Signature="$Windows NT$"
 ```
 
-###  Version
+### Version
 
 Identifies the file as an .inf file. Version is the only required section and must be at the beginning of your CAPolicy.inf file.
 
-###  PolicyStatementExtension
+### PolicyStatementExtension
 
 Lists the policies that have been defined by the organization, and whether they are optional or mandatory. Multiple policies are separated by commas. The names have meaning in the context of a specific deployment, or in relation to custom applications that check for the presence of these policies.
 
@@ -60,7 +61,7 @@ If you are going to have descriptive text in the policy statement, then the next
 ```
 [InternalPolicy]
 OID=1.1.1.1.1.1.1
-Notice=”Legal policy statement text”
+Notice="Legal policy statement text"
 ```
 
 If you are going to use a URL to host the CA policy statement, then next three lines would instead look like:
@@ -86,7 +87,7 @@ An example of multiple notices and URLs in a policy section would look like:
 OID=1.1.1.1.1.1.1
 URL=https://pki.wingtiptoys.com/policies/legalpolicy.asp
 URL=ftp://ftp.wingtiptoys.com/pki/policies/legalpolicy.asp
-Notice=”Legal policy statement text”
+Notice="Legal policy statement text"
 ```
 
 ### CRLDistributionPoint

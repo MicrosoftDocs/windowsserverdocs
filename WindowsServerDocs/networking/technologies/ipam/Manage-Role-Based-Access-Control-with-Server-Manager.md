@@ -1,15 +1,16 @@
 ---
 title: Manage Role Based Access Control with Server Manager
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to manage role based access control by using Server Manager, which has a graphical user interface.
 manager: brianlic
 ms.topic: article
 ms.assetid: 77b6ac92-eaff-46d7-95db-ee6fc96742ed
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Manage Role Based Access Control with Server Manager
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following topics to manage role based access control by using Server Manager, which has a graphical user interface.
 

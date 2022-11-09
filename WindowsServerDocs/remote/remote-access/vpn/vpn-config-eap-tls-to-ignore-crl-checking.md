@@ -3,15 +3,14 @@ title: Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 description: 'An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate) of the client and verifies that certificates have been revoked.'
 ms.topic: article
 ms.date: 07/13/2018
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 
 # Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)
 - [**Next:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
@@ -40,7 +39,7 @@ Since the authentication method is EAP-TLS, this registry value is only needed u
 
 5. Select **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
 
-For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](/previous-versions/system-center/configuration-manager-2007/bb680540(v=technet.10)).
+<!---For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](/previous-versions/system-center/configuration-manager-2007/bb680540(v=technet.10)).--->
 
 
 |Registry Path  |EAP Extension  |

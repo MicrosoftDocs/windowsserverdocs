@@ -3,8 +3,8 @@ title: online
 description: Reference article for the online command, which takes an offline disk or volume to the online state.
 ms.topic: reference
 ms.assetid: aacc3f75-bbc8-4ae2-bf92-420a82594da2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

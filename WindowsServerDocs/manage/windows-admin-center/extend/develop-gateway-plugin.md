@@ -2,15 +2,14 @@
 title: Develop a gateway plugin
 description: Develop a gateway plugin Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Develop a gateway plugin
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 A Windows Admin Center gateway plugin enables API communication from the UI of your tool or solution to a target node.  Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plugins to be executed on target nodes. The gateway service can be extended to include custom gateway plugins that support protocols other than the default ones.
 
@@ -62,11 +61,11 @@ After the Windows Admin process restarts, you will be able to exercise the APIs 
 
 ### Optional: Attach to plugin for debugging
 
-In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"
+In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: `"<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"`
 
-## Create a tool extension with the Windows Admin Center CLI ##
+## Create a tool extension with the Windows Admin Center SDK ##
 
-Now we need to create a tool extension from which you can call your custom gateway plugin.  Create or browse to a folder where you want to store your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center CLI that was installed earlier, create a new extension with the following syntax:
+Now we need to create a tool extension from which you can call your custom gateway plugin.  Create or browse to a folder where you want to store your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center SDK that was installed earlier, create a new extension with the following syntax:
 
 ```
 wac create --company "{!Company Name}" --tool "{!Tool Name}"
@@ -95,7 +94,7 @@ Once this completes, you've set up everything you need to load your new extensio
 
 ## Connect your tool extension to your custom gateway plugin
 
-Now that you've created an extension with the Windows Admin Center CLI, you are ready to connect your tool extension to your custom gateway plugin, by following these steps:
+Now that you've created an extension with the Windows Admin Center SDK, you are ready to connect your tool extension to your custom gateway plugin, by following these steps:
 
 - Add an [empty module](guides/add-module.md)
 - Use your [custom gateway plugin](guides/use-custom-gateway-plugin.md) in your tool extension

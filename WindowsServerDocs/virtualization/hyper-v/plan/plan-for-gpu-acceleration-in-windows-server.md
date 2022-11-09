@@ -1,7 +1,6 @@
 ---
 title: Plan for GPU acceleration in Windows Server
 description: Learn about the different Hyper-V technologies for GPU acceleration, including DDA and RemoteFX vGPU
-ms.reviewer: rickman
 author: rick-man
 ms.author: rickman
 manager: stevelee
@@ -11,7 +10,7 @@ ms.date: 07/14/2020
 
 # Plan for GPU acceleration in Windows Server
 
-> Applies to: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article introduces the graphics virtualization capabilities available in Windows Server.
 
@@ -48,7 +47,7 @@ For more information, see these topics:
 ## RemoteFX vGPU
 
 > [!NOTE]
-> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
+> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
 RemoteFX vGPU is a graphics virtualization technology that allows a single physical GPU to be shared among multiple virtual machines. In a RemoteFX vGPU deployment, virtualized workloads run on Microsoft's RemoteFX 3D adapter, which coordinates GPU processing requests between the host and guests. RemoteFX vGPU is most suitable for knowledge worker and high-burst workloads where dedicated GPU resources are not required. RemoteFX vGPU can only provide GPU acceleration to Windows VMs.
 

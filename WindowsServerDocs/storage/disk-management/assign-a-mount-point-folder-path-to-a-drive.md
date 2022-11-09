@@ -55,7 +55,7 @@ To remove the mount point so that the drive is no longer accessible via a folder
 -   Mount point folder paths are available only on empty folders on basic or dynamic NTFS volumes.
 -   To modify a mount point folder path, remove it, and then create a new folder path using the new location. You cannot modify the mount point folder path directly.
 -   When assigning a mount point folder path to a drive, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors would be listed as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
--   You can also create a mounted drive using the [mountvol](https://go.microsoft.com/fwlink/?linkid=64111) command.
+-   You can also create a mounted drive using the [mountvol](/previous-versions/orphan-topics/ws.10/cc772671(v=ws.10)) command.
 
 ## Additional References
 -   [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))

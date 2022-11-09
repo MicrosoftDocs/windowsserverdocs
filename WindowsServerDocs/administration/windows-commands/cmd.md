@@ -3,10 +3,10 @@ title: cmd
 description: Reference article for the cmd command, which starts a new instance of the command interpreter, Cmd.exe.
 ms.topic: reference
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 08/11/2022
 ---
 
 # cmd
@@ -26,11 +26,11 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 | /c | Carries out the command specified by *string* and then stops. |
 | /k | Carries out the command specified by *string* and continues. |
 | /s | Modifies the treatment of *string* after **/c** or **/k**. |
-| /q | Turns the echo off. |
+| /q | Turns echo off. |
 | /d | Disables execution of AutoRun commands. |
 | /a | Formats internal command output to a pipe or a file as American National Standards Institute (ANSI). |
 | /u | Formats internal command output to a pipe or a file as Unicode. |
-| /t:{`<b><f>` | `<f>`} | Sets the background (*b*) and foreground (*f*) colors. |
+| /t:{`<b><f>` \| `<f>`} | Sets the background (*b*) and foreground (*f*) colors. |
 | /e:on | Enables command extensions. |
 | /e:off | Disables commands extensions. |
 | /f:on | Enables file and directory name completion. |
@@ -63,10 +63,16 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 ## Remarks
 
-- To use multiple commands for `<string>`, separate them by the command separator **&&** and enclose them in quotation marks. For example:
+- To use multiple commands for `<string>`, separate them by the command separator **&&**. For example:
 
     ```
-    "<command1>&&<command2>&&<command3>"
+    <command1>&&<command2>&&<command3>
+    ```
+
+- If the directory path and files have spaces in their name, they must be enclosed in double quotation marks. For example:
+
+    ```
+    mkdir Test&&mkdir "Test 2"&&move "Test 2" Test
     ```
 
 - If you specify **/c** or **/k**, **cmd** processes, the remainder of *string*, and the quotation marks are preserved only if all of the following conditions are met:
@@ -161,11 +167,11 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 - If you enable file and directory name completion by using **/f:on**, use **CTRL+D** for directory name completion and **CTRL+F** for file name completion. To disable a particular completion character in the registry, use the value for white space [**0×20**] because it is not a valid control character.
 
-  - Pressing **CTRL+D** or **CTRL+F**, processes the file and directory name completion. These key combination functions append a wildcard character to *string* (if one is not present), builds a list of paths that match, and then displays the first matching path.<p>If none of the paths match, the file and directory name completion function beeps and does not change the display. To move through the list of matching paths, press **CTRL+D** or **CTRL+F** repeatedly. To move through the list backwards, press the **SHIFT** key and **CTRL+D** or **CTRL+F** simultaneously. To discard the saved list of matching paths and generate a new list, edit *string* and press **CTRL+D** or **CTRL+F**. If you switch between **CTRL+D** and **CTRL+F**, the saved list of matching paths is discarded and a new list is generated. The only difference between the key combinations **CTRL+D** and **CTRL+F** is that **CTRL+D** only matches directory names and **CTRL+F** matches both file and directory names. If you use file and directory name completion on any of the built-in directory commands (that is, **CD**, **MD**, or **RD**), directory completion is assumed.
+  - Pressing **CTRL+D** or **CTRL+F**, processes the file and directory name completion. These key combination functions append a wildcard character to *string* (if one is not present), builds a list of paths that match, and then displays the first matching path.<p>If none of the paths match, the file and directory name completion function beeps and does not change the display. To move through the list of matching paths, press **CTRL+D** or **CTRL+F** repeatedly. To move through the list backwards, press the **SHIFT** key and **CTRL+D** or **CTRL+F** simultaneously. To discard the saved list of matching paths and generate a new list, edit *string* and press **CTRL+D** or **CTRL+F**. If you switch between **CTRL+D** and **CTRL+F**, the saved list of matching paths is discarded, and a new list is generated. The only difference between the key combinations **CTRL+D** and **CTRL+F** is that **CTRL+D** only matches directory names and **CTRL+F** matches both file and directory names. If you use file and directory name completion on any of the built-in directory commands (that is, **CD**, **MD**, or **RD**), directory completion is assumed.
 
   - File and directory name completion correctly processes file names that contain white space or special characters if you place quotation marks around the matching path.
 
-  - You must use quotation marks around the following special characters: & < > [ ] { } ^ = ; ! ' + , ` ~ [white space].
+  - You must use quotation marks around the following special characters: & < > [ ] | { } ^ = ; ! ' + , ` ~ [white space].
 
   - If the information that you supply contains spaces, you must use quotation marks around the text (for example, "Computer Name").
 

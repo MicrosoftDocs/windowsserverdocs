@@ -3,8 +3,8 @@ title: add
 description: Reference article for the add command, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.topic: reference
 ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -5,18 +5,22 @@ ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend
 manager: daveba
+ms.topic: article
 ms.date: 06/20/2019
 ---
 
 # Using Disk Cleanup on Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 The Disk Cleanup tool clears unnecessary files in a Windows Server environment. This tool is available by default on Windows Server 2019 and Windows Server 2016, but you might have to take a few manual steps to enable it on earlier versions of Windows Server.
 
 To start the Disk Cleanup tool, either run the Cleanmgr.exe command, or select **Start**, select **Windows Administrative Tools**, and then select **Disk Cleanup**.
 
 You can also run Disk Cleanup by using the [cleanmgr Windows command](../../administration/windows-commands/cleanmgr.md) and use command-line options to specify that Disk Cleanup cleans up certain files.
+
+> [!NOTE]
+> If you're just looking to free up disk space, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
 ## Enable Disk Cleanup on an earlier version of Windows Server by installing the Desktop Experience
 

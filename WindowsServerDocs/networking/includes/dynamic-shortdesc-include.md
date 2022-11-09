@@ -1,6 +1,6 @@
 ---
-author: eross-msft
-ms.author: lizross
+author: JasonGerend
+ms.author: jgerend
 ms.date:  10/02/2018
 ms:topic: include
 ---

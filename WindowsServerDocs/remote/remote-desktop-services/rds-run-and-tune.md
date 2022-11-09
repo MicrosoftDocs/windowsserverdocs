@@ -16,7 +16,7 @@ It's a good practice to continually assess the metrics and balance against runni
 
 ## Management and monitoring
 
-CHeck out [Manage users in your RDS collection](rds-user-management.md) for information about how to manage access to your desktops and remote resources.
+Check out [Manage users in your RDS collection](rds-user-management.md) for information about how to manage access to your desktops and remote resources.
 
 Use **Microsoft Operations Management Suite (OMS)** to monitor Remote Desktop deployments for potential bottlenecks and manage them using one of the following ways:
 

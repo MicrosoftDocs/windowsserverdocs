@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Troubleshooting Disk Management
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic lists a few common issues you may encounter when using Disk Management and troubleshooting steps to try.
 

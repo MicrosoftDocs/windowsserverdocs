@@ -3,8 +3,8 @@ title: certutil
 description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
 ms.topic: reference
 ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -35,7 +35,7 @@ certutil [options] [-dump] file
 
 ### -asn
 
-Parse the ASN.1 file.
+Parse and display the contents of a file using Abstract Syntax Notation (ASN.1) syntax. File types include .CER, .DER and PKCS #7 formatted files.
 
 ```
 certutil [options] -asn file [type]
@@ -187,7 +187,7 @@ Where:
 
   - **8. CRL_REASON_REMOVE_FROM_CRL** - Remove From CRL
 
-  - **1. Unrevoke** - Unrevoke
+  - **-1. Unrevoke** - Unrevoke
 
 ```
 [-config Machine\CAName]
@@ -391,7 +391,9 @@ Where:
 
 Gets a certificate revocation list (CRL).
 
+```
 certutil [options] -getcrl outfile [index] [delta]
+```
 
 Where:
 
@@ -1584,7 +1586,9 @@ Where:
 
 Deletes a Policy Server application and application pool, if necessary. This command does not remove binaries or packages.
 
+```
 certutil [options] -deletePolicyServer kerberos | username | clientcertificate [keybasedrenewal]
+```
 
 Where:
 

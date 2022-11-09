@@ -3,10 +3,9 @@ title: ntbackup
 description: Reference article for the ntbackup command, which has been replaced by the wbadmin command.
 ms.topic: reference
 ms.assetid: 6bce6b0d-646b-46b6-b833-0ff1d6f082c2
-ms.author: lizross
-author: eross-msft
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: alalve
+author: JasonGerend
+ms.date: 11/01/2022
 ---
 
 # ntbackup
@@ -14,7 +13,7 @@ ms.date: 10/16/2017
 Backs up and restores your computer and files from a command prompt. This command has been replaced by the [wbadmin command](wbadmin.md).
 
 > [!IMPORTANT]
-> The **wbadmin** command can't recover backups created using the **ntbackup** command. However, a version of **ntbackup** is available as a download from [Windows NT Backup - Restore Utility](https://www.microsoft.com/download/details.aspx?id=4220). This downloadable version helps you to perform recoveries of legacy backups, but it can't create new backups.
+> The **wbadmin** command cannot recover backups created by using the **ntbackup** commands. The Windows NT Backup - Restore utility is needed to recover from legacy backups.
 
 ## Additional References
 

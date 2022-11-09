@@ -1,8 +1,9 @@
 ---
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Active Directory Domain Services
-author: iainfoulds
-ms.author: iainfou
+description: A short summary of Active Directory Domain Services documentation.
+author: daveba
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Active Directory Domain Services
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 You will find links to Active Directory Domain services content on this page.

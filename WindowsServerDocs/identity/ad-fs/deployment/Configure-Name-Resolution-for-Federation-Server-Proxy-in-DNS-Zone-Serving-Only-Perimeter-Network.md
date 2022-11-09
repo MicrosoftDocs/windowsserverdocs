@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network"
 ms.assetid: b7109e46-b66e-4c5c-8b87-a6611d68415a
 title: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network
 author: billmath
@@ -23,7 +24,7 @@ So that name resolution can work successfully for a federation server in an Acti
 ## Add the IP address of a federation server to the hosts file
 So that a federation server proxy can work as expected in the perimeter network of an account partner, you must add an entry to the hosts file on that federation server proxy that points to a federation server's DNS host name \(for example, fs.fabrikam.com\) and IP address \(for example, 192.168.1.4\) in the corporate network of the account partner. Adding this entry to the hosts file prevents the federation server proxy from contacting itself to resolve a client\-initiated call to a federation server in the account partner.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To add the IP address of a federation server to the hosts file
 
@@ -43,7 +44,7 @@ So that clients on the Internet can successfully access a federation server thro
 > [!NOTE]
 > It is assumed that you are using a DNS server, running Windows 2000 Server, Windows Server 2003, or  Windows Server 2008  with the DNS Server service, to control the perimeter DNS zone.
 
-Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To add a host \(A\) resource record to perimeter DNS for a federation server proxy
 
@@ -61,4 +62,3 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)
 
 [Name Resolution Requirements for Federation Server Proxies](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807055(v=ws.11))
-

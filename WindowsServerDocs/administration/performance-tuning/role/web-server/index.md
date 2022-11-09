@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 # Performance Tuning Web Servers
 
 
-This topic describes performance tuning methods and recommendations for Windows Server 2016 web servers.
+This topic describes performance tuning methods and recommendations for Windows Server 2022 web servers.
 
 
 ## Selecting the proper hardware for performance
@@ -43,7 +43,7 @@ Avoid installing non-essential services and applications. In some cases, it migh
 
 ## NTFS file system settings
 
-The system-global switch **NtfsDisableLastAccessUpdate** (REG\_DWORD) 1 is located under **HKLM\\System\\CurrentControlSet\\Control\\FileSystem** and is set by default to 1. This switch reduces disk I/O load and latencies by disabling date and time stamp updating for the last file or directory access. Clean installations of Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 enable this setting by default, and you do not need to adjust it. Earlier versions of Windows did not set this key. If your server is running an earlier version of Windows, or it was upgraded to Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, you should enable this setting.
+The system-global switch **NtfsDisableLastAccessUpdate** (REG\_DWORD) 1 is located under **HKLM\\System\\CurrentControlSet\\Control\\FileSystem** and is set by default to 1. This switch reduces disk I/O load and latencies by disabling date and time stamp updating for the last file or directory access. Clean installations of Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 enable this setting by default, and you do not need to adjust it. Earlier versions of Windows did not set this key. If your server is running an earlier version of Windows, or it was upgraded to Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008, you should enable this setting.
 
 Disabling the updates is effective when you are using large data sets (or many hosts) that contain thousands of directories. We recommend that you use IIS logging instead if you maintain this information only for Web administration.
 

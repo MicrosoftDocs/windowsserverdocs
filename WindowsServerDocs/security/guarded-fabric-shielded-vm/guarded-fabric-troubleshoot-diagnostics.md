@@ -1,20 +1,21 @@
 ---
 title: Troubleshooting Using the Guarded Fabric Diagnostic Tool
+description: "Learn more about: Troubleshooting Using the Guarded Fabric Diagnostic Tool"
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 01/14/2020
 ---
 
 # Troubleshooting Using the Guarded Fabric Diagnostic Tool
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the use of the Guarded Fabric Diagnostic Tool to identify and remediate common failures in the deployment, configuration, and on-going operation of guarded fabric infrastructure. This includes the Host Guardian Service (HGS), all guarded hosts, and supporting services such as DNS and Active Directory. The diagnostic tool can be used to perform a first-pass at triaging a failing guarded fabric, providing administrators with a starting point for resolving outages and identifying misconfigured assets. The tool is not a replacement for a sound grasp of operating a guarded fabric and only serves to rapidly verify the most common issues encountered during day-to-day operations.
 
-Full documentation of the cmdlets used in this article can be found in the [HgsDiagnostics module reference](/powershell/module/hgsdiagnostics/?view=win10-ps).
+Full documentation of the cmdlets used in this article can be found in the [HgsDiagnostics module reference](/powershell/module/hgsdiagnostics/).
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)]
 
@@ -61,7 +62,7 @@ Collected traces can be diagnosed by provided `Get-HgsTrace` the location of the
 
 Diagnosis will provide results in a hierarchical format showing which trace targets, diagnostic sets, and individual diagnostics are responsible for a particular failure.  Failures include remediation and resolution recommendations if a determination can be made as to what action should be taken next.  By default, passing and irrelevant results are hidden.  To see everything tested by diagnostics, specify the `-Detailed` switch.  This will cause all results to appear regardless of their status.
 
-It is possible to restrict the set of diagnostics that are run using the `-Diagnostic` parameter.  This allows you to specify which classes of diagnostic should be run against the trace targets, and suppressing all others.  Examples of available diagnostic classes include networking, best practices, and client hardware.  Consult the [cmdlet documentation](https://technet.microsoft.com/library/mt718831.aspx) to find an up-to-date list of available diagnostics.
+It is possible to restrict the set of diagnostics that are run using the `-Diagnostic` parameter.  This allows you to specify which classes of diagnostic should be run against the trace targets, and suppressing all others.  Examples of available diagnostic classes include networking, best practices, and client hardware.  Consult the [cmdlet documentation](/powershell/scripting/developer/cmdlet/cmdlet-overview) to find an up-to-date list of available diagnostics.
 
 > [!WARNING]
 > Diagnostics are not a replacement for a strong monitoring and incident response pipeline.  There is a System Center Operations Manager package available for monitoring guarded fabrics, as well as various event log channels that can be monitored to detect issues early.  Diagnostics can then be used to quickly triage these failures and establish a course of action.
@@ -100,7 +101,7 @@ Get-HgsTrace -RunDiagnostics -Target $server
 ```
 This example will generate a prompt to collect the remote user credentials, and then diagnostics will run using the remote host at `hgs-01.secure.contoso.com` to complete trace collection.  The resulting traces are downloaded to the localhost and then diagnosed.  The results of diagnosis are presented the same as when performing [local diagnosis](#local-diagnosis).  Similarly, it is not necessary to specify a role as it can be inferred based on the Windows PowerShell modules installed on the remote system.
 
-Remote diagnosis utilizes Windows PowerShell remoting for all accesses to the remote host.  Therefore it is a prerequisite that the trace target have Windows PowerShell remoting enabled (see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7)) and that the localhost is properly configured for launching connections to the target.
+Remote diagnosis utilizes Windows PowerShell remoting for all accesses to the remote host.  Therefore it is a prerequisite that the trace target have Windows PowerShell remoting enabled (see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&preserve-view=true)) and that the localhost is properly configured for launching connections to the target.
 
 > [!NOTE]
 > In most cases, it is only necessary that the localhost be a part of the same Active Directory forest and that a valid DNS hostname is used.  If your environment utilizes a more complicated federation model or you wish to use direct IP addresses for connectivity, you may need to perform additional configuration such as setting the WinRM [trusted hosts](/previous-versions/technet-magazine/ff700227(v=msdn.10)).
@@ -117,7 +118,7 @@ This command will return `$True` if and only if `Get-HgsTrace` would be able to 
 When performing remote diagnosis from a user with sufficient privileges to connect remotely to the trace target, it is not necessary to supply credentials to `New-HgsTraceTarget`.  The `Get-HgsTrace` cmdlet will automatically reuse the credentials of the user that invoked the cmdlet when opening a connection.
 
 > [!WARNING]
-> Some restrictions apply to reusing credentials, particularly when performing what is known as a "second hop."  This occurs when attempting to reuse credentials from inside a remote session to another machine.  It is necessary to [setup CredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7) to support this scenario, but this is outside of the scope of guarded fabric management and troubleshooting.
+> Some restrictions apply to reusing credentials, particularly when performing what is known as a "second hop."  This occurs when attempting to reuse credentials from inside a remote session to another machine.  It is necessary to [setup CredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true) to support this scenario, but this is outside of the scope of guarded fabric management and troubleshooting.
 
 #### Using Windows PowerShell Just Enough Administration (JEA) and Diagnostics
 

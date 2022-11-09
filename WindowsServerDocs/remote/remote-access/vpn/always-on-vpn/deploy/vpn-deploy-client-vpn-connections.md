@@ -4,14 +4,13 @@ description: In this step, you learn about the ProfileXML options and schema, an
 ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-ms.localizationpriority: medium
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ms.reviewer: deverette
 ---
 # Step 6. Configure Windows 10 client Always On VPN connections
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
 - [**Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
@@ -21,11 +20,14 @@ In this step, you'll learn about the ProfileXML options and schema, and configur
 You can configure the Always On VPN client through PowerShell, Microsoft Endpoint Configuration Manager, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without Configuration Manager or Intune is possible.
 
 >[!NOTE]
->Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client.  However, you can use logon scripts.
+>Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client.  However, you can use logon scripts.
+
+>[!NOTE]
+>Auto-triggered VPN connections will not work if folder redirection for %appdata% (C:\Users\username\AppData\Roaming) is enabled. Either folder redirection must be disabled for %appdata%, or the auto-triggered VPN profile must be deployed in system context, to change the path in which the rasphone.pbk file is stored.
 
 ## ProfileXML overview
 
-ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv2 CSP node individually—such as triggers, route lists, and authentication protocols—use this node to configure a Windows 10 VPN client by delivering all the settings as a single XML block to a single CSP node. The ProfileXML schema matches the schema of the VPNv2 CSP nodes almost identically, but some terms are slightly different.
+ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv2 CSP node individually—such as triggers, route lists, and authentication protocols—use this node to configure a Windows 10 VPN client by delivering all the settings as a single XML block to a single CSP node. The ProfileXML schema matches the schema of the VPNv2 CSP nodes almost identically, but some terms are slightly different.
 
 You use ProfileXML in all the delivery methods this deployment describes, including Windows PowerShell, Microsoft Endpoint Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this deployment:
 
@@ -150,7 +152,7 @@ However, if you haven't restarted the computer since configuring certificate aut
 
 5.  In Connection Name, type **Template**.
 
-6.  In Server name or address, type the **external** FQDN of your VPN server (for example, **vpn.contoso.com**).
+6.  In Server name or address, type the **external** FQDN of your VPN server (for example, **vpn.contoso.com**).
 
 7.  Click **Save**.
 
@@ -211,7 +213,7 @@ The Windows PowerShell script in Listing 1 creates two files on the desktop, bot
 >[!IMPORTANT]
 >The example commands below require Windows 10 Build 1607 or later.
 
-**Create VPN_Profile.xml and VPN_Proflie.ps1**
+**Create VPN_Profile.xml and VPN_Profile.ps1**
 
 1. Sign in to the domain-joined client computer containing the template VPN profile with the same user account that the section [Manually create a template connection profile](#manually-create-a-template-connection-profile) described.
 
@@ -911,7 +913,7 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 
 ### Sync the Always On VPN configuration policy with Intune
 
-To test the configuration policy, sign in to a Windows 10 client computer as the user you added to the **Always On VPN Users** group, and then sync with Intune.
+To test the configuration policy, sign in to a Windows 10 client computer as the user you added to the **Always On VPN Users** group, and then sync with Intune.
 
 1.  On the Start menu, click **Settings**.
 

@@ -10,14 +10,14 @@ manager: dongill
 ---
 # Remote Desktop Services - High availability
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Failures and throttling are unavoidable in large-scale systems. It's simple to set up Remote Desktop infrastructure roles to support high availability and allow end users to connect seamlessly, every time.
 
 In Remote Desktop Services, the following items represent the Remote Desktop infrastructure roles, with their respective guidance to establish high availability:
 - [Remote Desktop Connection Broker](./rds-connection-broker-cluster.md)
 - [Remote Desktop Gateway](./rds-rdweb-gateway-ha.md)
-- Remote Desktop Licensing
+- [Remote Desktop Licensing](./rds-client-access-license.md)
 - [Remote Desktop Web Access](./rds-rdweb-gateway-ha.md)
 
 High availability is established by duplicating each of the roles services on a second machines. In Azure, you can receive a guaranteed uptime by placing the set of the two virtual machines (hosting the same role) in an availability sets.

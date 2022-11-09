@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshooting drive firmware updates"
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
 title: Troubleshooting drive firmware updates
 ms.author: toklima
@@ -9,14 +10,14 @@ ms.date: 04/18/2017
 ---
 # Troubleshooting drive firmware updates
 
->Applies to: Windows 10, Windows Server (Semi-Annual Channel),
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10
 
-Windows 10, version 1703 and newer, and Windows Server (Semi-Annual Channel) include the capability to update firmware of HDDs and SSDs that have been certified with the Firmware Upgradeable AQ (Additional Qualifier) via PowerShell.
+Windows 10, version 1703 and newer include the capability to update firmware of HDDs and SSDs that have been certified with the Firmware Upgradeable AQ (Additional Qualifier) via PowerShell.
 
 You can find more information about this feature here:
 
 - [Updating drive firmware in Windows Server 2016](update-firmware.md)
-- [Update Drive Firmware Without Downtime in Storage Spaces Direct](https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct)
+- Update Drive Firmware Without Downtime in Storage Spaces Direct
 
 Firmware updates may fail for various reasons. The purpose of this article is to help with advanced troubleshooting.
 

@@ -3,8 +3,8 @@ title: ksetup delrealmflags
 description: Reference article for the ksetup delrealmflags command, which removes realm flags from the specified realm.
 ms.topic: reference
 ms.assetid: 22053041-1eb4-47f5-bed9-3d5681bcde7d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

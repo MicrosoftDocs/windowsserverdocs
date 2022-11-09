@@ -1,11 +1,11 @@
 ---
 title: "Overview of the Dashboard in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the administrative dashboard, which simplifies the tasks that you perform to manage your Windows Server Essentials network and server.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f70a79de-9c56-4496-89b5-20a1bff2293e
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 

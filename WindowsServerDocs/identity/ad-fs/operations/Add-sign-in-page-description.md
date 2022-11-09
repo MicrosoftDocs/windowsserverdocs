@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add sign-in page description"
 ms.assetid: 330c7b61-dde0-432f-9b74-d250ad9cc808
 title: Add sign-in page description
 author: billmath

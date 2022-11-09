@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Perform initial recovery"
 title: AD Forest Recovery - Perform initial recovery
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -9,7 +10,7 @@ ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ---
 # Perform initial recovery
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 This section includes the following steps:
 
@@ -44,7 +45,7 @@ Then perform the following steps. Procedures for performing certain steps are in
 
       **HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Repl Perform Initial Synchronizations**
 
-      Create the entry with the data type **REG_DWORD** and a value of **0**. After the forest is recovered completely, you can reset the value of this entry to **1**, which requires a domain controller that restarts and holds operations master roles to have successful AD DS inbound and outbound replication with its known replica partners before it advertises itself as domain controller and starts providing services to clients. For more information about initial synchronization requirements, see KB article [305476](https://support.microsoft.com/kb/305476).
+      Create the entry with the data type **REG_DWORD** and a value of **0**. After the forest is recovered completely, you can reset the value of this entry to **1**, which requires a domain controller that restarts and holds operations master roles to have successful AD DS inbound and outbound replication with its known replica partners before it advertises itself as domain controller and starts providing services to clients. For more information about initial synchronization requirements, see [How synchronization works in Azure AD Domain Services](/azure/active-directory-domain-services/synchronization).
 
       Continue to the next steps only after you restore and verify the data and before you join this computer to the production network.
 
@@ -148,6 +149,6 @@ At this stage you should have a stable forest, with one DC for each domain and o
 - [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 - [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 - [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)

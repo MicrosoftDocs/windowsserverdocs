@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Block cloning on ReFS"
 ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
 author: gawatu
-ms.author: gawatu
+ms.author: daknappe
 manager: gawatu
 ms.date: 10/17/2018
 ms.topic: article
 ---
 # Block cloning on ReFS
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Block cloning instructs the file system to copy a range of file bytes on behalf of an application, where the destination file may be the same as, or different from, the source file. Copy operations, unfortunately, are expensive, since they trigger expensive read and writes to the underlying, physical data.
 
@@ -57,6 +58,6 @@ After the modifying write, region B is still shared by both files. Note that if 
 
 -   [ReFS overview](refs-overview.md)
 -   [ReFS integrity streams](integrity-streams.md)
--   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 -   [DUPLICATE_EXTENTS_DATA](/windows/win32/api/winioctl/ns-winioctl-duplicate_extents_data)
 -   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](/windows/win32/api/winioctl/ni-winioctl-fsctl_duplicate_extents_to_file)

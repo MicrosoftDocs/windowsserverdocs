@@ -1,16 +1,15 @@
 ---
 title: Generation 1 virtual machine security settings for Hyper-V
 description: Describes the security settings available in Hyper-V Manager for generation 1 virtual machines
-manager: dongill
 ms.topic: article
 ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
-author: larsiwer
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/04/2016
 ---
 # Generation 1 virtual machine security settings
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Use the generation 1 virtual machine security settings in Hyper-V Manager to help protect the data and state of a virtual machine.
 

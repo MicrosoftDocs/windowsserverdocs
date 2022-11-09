@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD FS Overview"
 ms.assetid: 5007a619-ef57-4636-9aa9-93b0f02be1fc
 title: AD FS 2016 Overview
 author: billmath
@@ -20,7 +21,7 @@ This document contains a list of all of the documentation overviews for AD FS fo
 
 * [AD FS Requirements](./overview/ad-fs-requirements.md)
 
-* [AD FS FAQ](../ad-fs/overview/AD-FS-FAQ.md)
+* [AD FS FAQ](../ad-fs/overview/AD-FS-FAQ.yml)
 
 
 

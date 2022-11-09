@@ -4,13 +4,12 @@ description: Learn how to create a VPN device tunnel in Windows 10.
 ms.date: 11/05/2018
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ---
 # Configure VPN device tunnels in Windows 10
 
->Applies to: Windows 10 version 1709
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10 version 1709
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels:
 
@@ -20,12 +19,12 @@ Always On VPN gives you the ability to create a dedicated VPN profile for device
 
 Unlike _user tunnel_, which only connects after a user logs on to the device or machine, _device tunnel_ allows the VPN to establish connectivity before the user logs on. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate. User tunnel supports SSTP and IKEv2, and device tunnel supports IKEv2 only with no support for SSTP fallback.
 
-User tunnel is supported on domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. It is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
+User tunnel is supported on domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. It is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support. 
 
-Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel. Device tunnel does not support using the Name Resolution Policy table (NRPT). Device tunnel does not support Force tunnel. You must configure it as Split tunnel.
+ Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel. Device tunnel does not support using the Name Resolution Policy table (NRPT). Device tunnel does not support Force tunnel. You must configure it as Split tunnel. |
 
+## Prerequisites
 
-## Device Tunnel Requirements and Features
 You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections.
 
 ```PowerShell

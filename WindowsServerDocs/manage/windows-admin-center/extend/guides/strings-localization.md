@@ -5,12 +5,11 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
-ms.localizationpriority: medium
 ---
 
 # Strings and localization in Windows Admin Center #
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Let's go more in-depth into the Windows Admin Center Extensions SDK and talk about strings and localization.
 
@@ -33,7 +32,7 @@ MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 
 ## Add Other Languages for Localization ##
 
-For localization to other languages, a strings.resjson file needs to be created for each language. These files need to be places in ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson```. The available languages with corresponding folders are:
+For localization to other languages, a strings.resjson file needs to be created for each language. These files need to be placed in ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson```. The available languages with corresponding folders are:
 
 | Language      | Folder      |
 | ------------- |-------------|

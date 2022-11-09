@@ -10,6 +10,7 @@ metadata:
   author: billmath 
   ms.author: billmath
   ms.date: 5/18/2020 
+  ms.prod: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -33,6 +34,8 @@ landingContent:
             url: ../identity/ad-ds/Active-Directory-Domain-Services.md
           - text: Active Directory Federation Services
             url: Active-Directory-Federation-Services.md
+          - text: Windows Local Administrator Password Solution (LAPS)
+            url: ../identity/laps/laps.md
 
   # Card
   - title: Solutions and Scenario Guides

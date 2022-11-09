@@ -3,17 +3,19 @@ title: Get started with the macOS client
 description: Learn how to set up the Remote Desktop client for Mac
 ms.topic: article
 ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/20/2020
-ms.localizationpriority: medium
+author: Heidilohr
+manager: femila
+ms.author: helohr
+ms.date: 11/03/2022
 ---
 # Get started with the macOS client
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
+You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
+
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for macOS](/azure/virtual-desktop/users/connect-macos).
 
 >[!NOTE]
 > - Curious about the new releases for the macOS client? Check out [What's new for Remote Desktop on Mac?](mac-whatsnew.md)
@@ -25,7 +27,7 @@ You can use the Remote Desktop client for Mac to work with Windows apps, resourc
 Follow these steps to get started with Remote Desktop on your Mac:
 
 1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12).
-2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
+2. [Set up your PC to accept remote connections](remote-desktop-client-faq.yml#how-do-i-set-up-a-pc-for-remote-desktop-). (If you skip this step, you can't connect to your PC.)
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ## What about the Mac beta client?
@@ -41,17 +43,15 @@ Subscribe to the feed your admin gave you to get the list of managed resources a
 To subscribe to a feed:
 
 1. Select **Add feed** on the main page to connect to the service and retrieve your resources.
-2. Enter the feed URL. This can be a URL or email address:
-   - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
-      - For Windows Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-      - For Windows Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-   - To use email, enter your email address. This tells the client to search for a URL associated with your email address if your admin configured the server that way.
+2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
+   - If you use a URL, use the one your admin gave you.
+   - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Select **Subscribe**.
 4. Sign in with your user account when prompted.
 
 After you've signed in, you should see a list of available resources.
 
-Once you've subscribed to a feed, the feed's content will update automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your administrator.
+Once you've subscribed to a feed, the feed's content will update automatically regularly. Resources may be added, changed, or removed based on changes made by your administrator.
 
 ### Export and import connections
 
@@ -126,7 +126,7 @@ To delete the resolution, select it, and then select **-**.
 
 ## Displays have separate spaces
 
-If you're running Mac OS X 10.9 and have disabled **Displays have separate spaces** in Mavericks (**System Preferences > Mission Control**), you need to configure this setting in the Remote Desktop client using the same option.
+If you're running macOS X 10.9 and have disabled **Displays have separate spaces** in Mavericks (**System Preferences > Mission Control**), you need to configure this setting in the Remote Desktop client using the same option.
 
 ### Drive redirection for remote resources
 
@@ -144,7 +144,7 @@ Mac keyboard layouts differ from the Windows keyboard layouts.
 - The function keys can be activated in the session by pressing additionally the FN key (for example, FN+F1).
 - The Alt key to the right of the space bar on the Mac keyboard equals the Alt Gr/right Alt key in Windows.
 
-By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.md) for more information about keyboards and locales.
+By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, it will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.yml) for more information about keyboards and locales.
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
@@ -153,7 +153,4 @@ Windows Server 2012 R2 introduced support for a new authentication method, Remot
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.
 
-To learn more about this feature, check out [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
-
-> [!TIP]
-> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+To learn more about this feature, check out [Remote Desktop Gateway Pluggable Authentication and Authorization Sample](https://github.com/microsoftarchive/msdn-code-gallery-community-m-r/blob/master/Remote%20Desktop%20Gateway%20Pluggable%20Authentication%20and%20Authorization%20Sample/README.md).

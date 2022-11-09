@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Upgrading AD RMS to Windows Server 2016"
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Upgrading AD RMS to Windows Server 2016
 author: msmbaldwin
@@ -20,10 +21,10 @@ For information on migrating to Azure Information Protection from AD RMS without
 
 ## About the environment used in this guide
 
-AD FS is an optional component of an AD RMS installation. In this guide, the use of ADFS is assumed. If ADFS hasn't been used in your environment for supporting AD RMS users, you can skip all steps that refer to ADFS.
+AD FS is an optional component of an AD RMS installation. In this guide, the use of AD FS is assumed. If AD FS hasn't been used in your environment for supporting AD RMS users, you can skip all steps that refer to AD FS.
 
 In this guide, SQL Server is upgraded to SQL Server 2016 by performing a parallel install and moving the databases over via a backup.
-Alternatively, if you can upgrade your AD RMS and ADFS database servers to SQL Server 2016 in-place, you can move to the next section in this document after having done that without having to follow the steps in this section.
+Alternatively, if you can upgrade your AD RMS and AD FS database servers to SQL Server 2016 in-place, you can move to the next section in this document after having done that without having to follow the steps in this section.
 
 ## Installation
 
@@ -39,7 +40,7 @@ The following section details how to prepare the SQL Server so that it can be up
 
 ##### Adding CNAME for SQL Server 2016 to DNS
 
-The CNAME is used to help ensure that the Windows Server 2016 setup will be getting the appropriate data since it will be pointed at the new SQL Server 2016. **Note: If already using a CNAME for the ADFS and AD RMS service, you can move on to the next steps.**
+The CNAME is used to help ensure that the Windows Server 2016 setup will be getting the appropriate data since it will be pointed at the new SQL Server 2016. **Note: If already using a CNAME for the AD FS and AD RMS service, you can move on to the next steps.**
 
 
 **To add a CNAME for SQL Server 2016 to DNS**
@@ -60,17 +61,17 @@ The CNAME is used to help ensure that the Windows Server 2016 setup will be gett
 
 8.  Once all the information has been entered, click **OK**.
 
-##### Backup the AD RMS and ADFS Databases
+##### Backup the AD RMS and AD FS Databases
 
-The AD RMS and ADFS databases hold critical information necessary to AD RMS, such as the public key of the Server Licensor Certificate, rights policy templates, ADFS configuration data, and logging information. Without these databases, clients cannot issue licenses to consume protected content, among other issues.
+The AD RMS and AD FS databases hold critical information necessary to AD RMS, such as the public key of the Server Licensor Certificate, rights policy templates, AD FS configuration data, and logging information. Without these databases, clients cannot issue licenses to consume protected content, among other issues.
 
-Of the databases, the AD RMS configuration database is considered the most important, as it stores the SLC, rights policy templates, users' keys, and configuration information. Therefore, though you should take care to back up all of the AD RMS and ADFS databases, you should plan to back up the configuration database regularly.
+Of the databases, the AD RMS configuration database is considered the most important, as it stores the SLC, rights policy templates, users' keys, and configuration information. Therefore, though you should take care to back up all of the AD RMS and AD FS databases, you should plan to back up the configuration database regularly.
 
 The logging database stores information about user requests to the AD RMS cluster for certificates and use licenses. Your backup strategy of this database should be based on company policy for retaining this type of information.
 
 The directory services database is not critical to AD RMS functionality and, if the latest data is lost, the database will repopulate with information as the AD RMS server receives requests for certificates and use licenses. You do not need to backup this database regularly, but you do need to have at least a copy of the database as it was originally configured after deploying AD RMS.
 
-**To backup an AD RMS and/or ADFS database with Microsoft SQL Server**
+**To backup an AD RMS and/or AD FS database with Microsoft SQL Server**
 
 1.  Log on to the Windows Server 2012 R2 AD RMS database server with SQL 2012.
 
@@ -86,11 +87,11 @@ The directory services database is not critical to AD RMS functionality and, if 
 
 Now you can store the database copies in a secure location. Remember to back up your databases frequently.
 
-##### Adding Domain Admin, SQL, AD RMS, and/or ADFS Service Account to SQL Server 2016
+##### Adding Domain Admin, SQL, AD RMS, and/or AD FS Service Account to SQL Server 2016
 
 The following steps will showcase how to add the various Service Accounts to SQL Server 2016 to assist with migrating the data from the Windows Server 2012 R2 environment. This will give the proper permissions when trying to access the content and handle the data.
 
-**To add the Domain Admin, SQL, AD RMS, and/or ADFS Service Account to SQL Server**
+**To add the Domain Admin, SQL, AD RMS, and/or AD FS Service Account to SQL Server**
 
 1.  Log on to the server with SQL Server 2016 as the Local Admin account.
 
@@ -112,9 +113,9 @@ The following steps will showcase how to add the various Service Accounts to SQL
 
 10. In the **Connect to Server** window, confirm the server hosting the AD RMS databases is in the **Server Name** box then for Authentication click the drop-down menu and select **Windows Authentication** and click **Connect**.
 
-##### Restoring the AD RMS and ADFS Databases to SQL Server 2016
+##### Restoring the AD RMS and AD FS Databases to SQL Server 2016
 
-The following steps will showcase how to restore the data from the previous SQL Server instance to the new 2016 instance. This will allow the new SQL to utilize the relevant configuration data from the previous AD RMS and ADFS databases.
+The following steps will showcase how to restore the data from the previous SQL Server instance to the new 2016 instance. This will allow the new SQL to utilize the relevant configuration data from the previous AD RMS and AD FS databases.
 
 **To restore the data from the previous SQL Server to the new SQL Server**
 
@@ -164,13 +165,13 @@ You can deploy additional AD FS servers to support the AD RMS deployment. You ma
 
 12. In the Installation Complete page, click **Exit**.
 
-#### Raising the ADFS Farm Behavior Level
+#### Raising the AD FS Farm Behavior Level
 
-When deploying an ADFs server that exceeds the current environment level such as, having an ADFS on Windows Server 2012 R2 and then adding an ADFS Windows Server 2016, the Farm Behavior Level will need to be increased. This is needed to ensure that the environment is using the most up to date information and functions.
+When deploying an AD FS server that exceeds the current environment level such as, having an AD FS on Windows Server 2012 R2 and then adding an AD FS Windows Server 2016, the Farm Behavior Level will need to be increased. This is needed to ensure that the environment is using the most up to date information and functions.
 
-**To raise the ADFS Farm Behavior Level**
+**To raise the AD FS Farm Behavior Level**
 
-1.  Navigate to the Windows Server 2016 ADFS.
+1.  Navigate to the Windows Server 2016 AD FS.
 
 2.  Open an admin PowerShell session.
 
@@ -293,7 +294,7 @@ You can deploy additional Web Application Proxy servers to support the AD RMS de
 
 #### DNS Configuration for 2016 WAP Server
 
-Once the Windows Server 2016 Web Application Proxy server has been put in place, some DNS changes will need to be made. This will require using a service such as GoDaddy to point the ADFS and AD RMS services at the 2016 WAP server.
+Once the Windows Server 2016 Web Application Proxy server has been put in place, some DNS changes will need to be made. This will require using a DNS service, such as GoDaddy, to point the AD FS and AD RMS services at the 2016 WAP server.
 
 **To point the DNS at the WAP server**
 
@@ -301,7 +302,7 @@ Once the Windows Server 2016 Web Application Proxy server has been put in place,
 
 2.  Go into Domain Management and then DNS Management.
 
-3.  Locate the ADFS and AD RMS service and replace the **Points to** portion with the Public IP Address of the 2016 WAP server and **Save**.
+3.  Locate the AD FS and AD RMS service and replace the **Points to** portion with the Public IP Address of the 2016 WAP server and **Save**.
 
 4.  The changes may take time to propagate, but once they do this setup will be complete.
 

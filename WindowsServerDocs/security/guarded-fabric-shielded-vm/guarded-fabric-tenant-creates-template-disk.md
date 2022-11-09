@@ -1,16 +1,17 @@
 ---
+description: "Learn more about: Shielded VMs for tenants - Creating a template disk (optional)"
 title: Shielded VMs for tenants - Creating a template disk - optional
 ms.topic: article
 ms.assetid: c1992f8b-6f88-4dbc-b4a5-08368bba2787
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
 # Shielded VMs for tenants - Creating a template disk (optional)
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 To create a new shielded VM, you will need to use a specially prepared, signed template disk. Metadata from signed template disks helps ensure that the disks are not modified after they have been created and allows you as a tenant to restrict which disks can be used to create your shielded VMs. One way to provide this disk is for you, the tenant, to create it, as described in this topic.
 

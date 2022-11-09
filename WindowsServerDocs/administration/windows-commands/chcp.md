@@ -3,8 +3,8 @@ title: chcp
 description: Reference article for the chcp command, which changes the active console code page.
 ms.topic: reference
 ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -72,3 +72,5 @@ If the specified code page is invalid, the following error message appears: `Inv
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Code Page BitFields](/windows/win32/intl/code-page-bitfields)
+- [Code Page Identifiers](/windows/win32/intl/code-page-identifiers)

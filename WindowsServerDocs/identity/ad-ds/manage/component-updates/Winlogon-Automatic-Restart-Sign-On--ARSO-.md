@@ -3,10 +3,10 @@ ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon automatic restart sign-on (ARSO)
 description: How Windows automatic restart sign-on can help make your users more productive.
 author: iainfoulds
-ms.author: iainfou
+ms.author: justinha
 manager: daveba
 ms.reviewer: cahick
-ms.date: 08/20/2019
+ms.date: 04/30/2021
 ms.topic: article
 ---
 
@@ -74,7 +74,7 @@ If you disable this policy setting, the device does not configure automatic sign
 
 **Type:** DWORD
 
-![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-signinpolicy.png)
+![Screenshot of the Sign-in and lock last interactive user automatically after a restart dialog box.](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-signinpolicy.png)
 
 ## Policy #2
 
@@ -115,7 +115,7 @@ If you disable or don't configure this setting, automatic sign on will default t
 
 **Type:** DWORD
 
-![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/arso-policy-setting.png)
+![Screenshot of the Configure the mode of automatically signing in and locking last interactive user after a restart or cold boot dialog box.](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/arso-policy-setting.png)
 
 ## Troubleshooting
 
@@ -149,6 +149,10 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 ## Security details
 
+In environments where the device’s physical security is of concern (for example, the device can be stolen), Microsoft does not recommend using ARSO. ARSO relies on the integrity of the platform firmware and TPM, an attacker with physical access maybe able to compromise these and as such access the credentials stored on disk with ARSO enabled.
+
+In enterprise environments where the security for user data protected by Data Protection API (DPAPI) is of concern, Microsoft does not recommend using ARSO. ARSO negatively impacts user data protected by DPAPI because decryption doesn't requires user credentials. Enterprises should test the impact on the security of user data protected by DPAPI before using ARSO.
+
 ### Credentials stored
 
 | Password hash | Credential key | Ticket-granting ticket | Primary refresh token |
@@ -160,7 +164,7 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 ### Credential Guard interaction
 
-If a device has Credential Guard enabled, a user's derived secrets are encrypted with a key specific to the current boot session. Therefore, ARSO is not currently supported on devices with Credential Guard enabled.
+ARSO is supported with Credential Guard enabled on devices beginning with Windows 10 version 2004.
 
 ## Additional resources
 

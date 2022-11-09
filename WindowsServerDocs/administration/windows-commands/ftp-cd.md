@@ -3,15 +3,15 @@ title: ftp cd
 description: Reference article for the ftp cd command, which changes the working directory on the remote computer.
 ms.topic: reference
 ms.assetid: a574855a-31b4-45c6-bce2-581c7231c99b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp cd
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the working directory on the remote computer.
 
@@ -25,7 +25,7 @@ cd <remotedirectory>
 
 | Parameter | Description |
 | --------- | ----------- |
-| <remotedirectory> | Specifies the directory on the remote computer to which you want to change. |
+| `<remotedirectory>` | Specifies the directory on the remote computer to which you want to change. |
 
 ### Examples
 

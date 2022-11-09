@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add Home Link"
 ms.assetid: da035189-e87f-4597-9933-49bf391a8d5d
 title: Add Home Link
 author: billmath

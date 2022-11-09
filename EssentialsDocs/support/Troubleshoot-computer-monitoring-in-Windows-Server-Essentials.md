@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot computer monitoring in Windows Server Essentials
-description: Describes how to use Windows Server Essentials
+description: Learn how to troubleshoot issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 

@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Reducing the Active Directory Attack Surface"
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Reducing the Active Directory Attack Surface
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Reducing the Active Directory Attack Surface
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section focuses on technical controls to implement to reduce the attack surface of the Active Directory installation. The section contains the following information:
 
@@ -94,6 +95,6 @@ Most objects in Active Directory are owned by the domain's BA group. However, th
 In versions of Windows earlier than Windows Server 2008, owners of an object can change permissions of the object, including granting themselves permissions that they did not originally have. Therefore, the default permissions on a domain's AdminSDHolder object prevent users who are members of BA or EA groups from changing the permissions for a domain's AdminSDHolder object. However, members of the Administrators group for the domain can take ownership of the object and grant themselves additional permissions, which means that this protection is rudimentary and only protects the object against accidental modification by users who are not members of the DA group in the domain. Additionally, the BA and EA (where applicable) groups have permission to change the attributes of the AdminSDHolder object in the local domain (root domain for EA).
 
 > [!NOTE]
-> An attribute on the AdminSDHolder object, dSHeuristics, allows limited customization (removal) of groups that are considered protected groups and are affected by AdminSDHolder and SDProp. This customization should be carefully considered if it is implemented, although there are valid circumstances in which modification of dSHeuristics on AdminSDHolder is useful. More information about modification of the dSHeuristics attribute on an AdminSDHolder object can be found in the Microsoft Support articles [817433](https://support.microsoft.com/?id=817433) and [973840](https://support.microsoft.com/kb/973840), and in [Appendix C: Protected Accounts and Groups in Active Directory](Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).
+> An attribute on the AdminSDHolder object, dSHeuristics, allows limited customization (removal) of groups that are considered protected groups and are affected by AdminSDHolder and SDProp. This customization should be carefully considered if it is implemented, although there are valid circumstances in which modification of dSHeuristics on AdminSDHolder is useful. More information about modification of the dSHeuristics attribute on an AdminSDHolder object can be found in the Microsoft Support articles [817433](https://support.microsoft.com/?id=817433) <!--and [973840](https://support.microsoft.com/kb/973840),--> and in [Appendix C: Protected Accounts and Groups in Active Directory](Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).
 
 Although the most privileged groups in Active Directory are described here, there are a number of other groups that have been granted elevated levels of privilege. For more information about all of the default and built-in groups in Active Directory and the user rights assigned to each, see [Appendix B: Privileged Accounts and Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md).

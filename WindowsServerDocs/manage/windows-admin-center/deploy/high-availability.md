@@ -4,12 +4,12 @@ description: Deploy Windows Admin Center with High Availability (Project Honolul
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.localizationpriority: medium
+ms.date: 08/07/2020
 ---
 
 # Deploy Windows Admin Center with high availability
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway service. The solution provided is an active-passive solution, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly.
 
@@ -50,7 +50,7 @@ $certPassword = Read-Host -AsSecureString
 #### Install with a self-signed certificate:
 
 ```powershell
-.\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -generateSslCert -Verbose
+.\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -StaticAddress (local ip address) -generateSslCert -Verbose
 ```
 
 ## Update an existing high availability installation

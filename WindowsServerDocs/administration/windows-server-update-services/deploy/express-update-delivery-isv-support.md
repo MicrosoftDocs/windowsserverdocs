@@ -1,7 +1,7 @@
 ---
 title: Express update delivery ISV support
 description: Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can configure Express update delivery using WSUS
-ms.topic: get-started article
+ms.topic: how-to
 author: brentfor
 ms.author: brentf
 manager: mtillman
@@ -9,7 +9,7 @@ ms.date: 10/16/2017
 ---
 # Express update delivery ISV support
 
->Applies To: Windows 10, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows Server 2016
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.
 
@@ -74,7 +74,7 @@ There are two options when setting up the alternate download location for the IS
 > [!IMPORTANT]
 > The ISV file cache requires the following:
 > - The server must be HTTP 1.1 compliant per the RFC: <http://www.w3.org/Protocols/rfc2616/rfc2616.html>
-> Specifically, the web server needs to support                                                                                                                                                                                                                                       [**HEAD**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) and [**GET**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.htm) requests<br>                                                                                                                                                                                                                                                                                                  - Partial Range requests<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - Do not use Transfer-Encoding:chunked
+> Specifically, the web server needs to support                                                                                                                                                                                                                                       [**HEAD**](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4) and [**GET**](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) requests<br>                                                                                                                                                                                                                                                                                                  - Partial Range requests<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - Do not use Transfer-Encoding:chunked
 
 #### Populate the ISV File Cache
 

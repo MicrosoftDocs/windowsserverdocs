@@ -10,7 +10,7 @@ ms.author: jgerend
 
 # Manage Virtual Hard Disks (VHD)
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to create, attach, and detach virtual hard disks with Disk Management. Virtual hard disks (VHDs) are virtualized hard disk files that, once mounted, appear and operate pretty much identically to a physical hard drive. They're most commonly used with Hyper-V virtual machines.
 

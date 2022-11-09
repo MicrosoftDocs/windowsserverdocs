@@ -6,6 +6,7 @@ ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
 author: lizap
 manager: dongill
 ms.author: elizapo
+ms.date: 08/07/2020
 ---
 # Edit Server Settings
 When you installed MultiPoint Services, you configured settings for your system, including opting in to certain programs. This topic describes the settings you can set for your MultiPoint Services system, and explains how to edit the settings.

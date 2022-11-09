@@ -12,7 +12,7 @@ manager: scottman
 
 Remote Desktop Services (RDS) built on Windows Server 2016 is a virtualization platform enabling a wide range of customer scenarios. Improvements in the overall RDS solution incorporates the work done by both the Remote Desktop team and other technology partners at Microsoft. The following scenarios and technologies are new or improved in Windows Server 2016.
 
-Also be sure to check out our session from Ignite 2016: [Harness RDS improvements in Windows Server 2016](https://channel9.msdn.com/Events/Ignite/2016/BRK3098). In this video, the product team reviews all of the new and improved features in Remote Desktop Services, including vGPU support.
+Also be sure to check out our session from Ignite 2016: Harness RDS improvements in Windows Server 2016. In this video, the product team reviews all of the new and improved features in Remote Desktop Services, including vGPU support.
 
 ## App Compatibility - Windows Server 2016 and Windows 10
 Built on the same foundation of Windows 10, Windows Server 2016 not only has the same look and feel you expect out of a desktop but can also run many of the same applications. Pairing Windows Server 2016 with the graphics capabilities (below) gives you an environment for all users to be productive.
@@ -21,6 +21,9 @@ Built on the same foundation of Windows 10, Windows Server 2016 not only has the
 The RD Connection Broker is able to store all of the deployment information (like connection states and user/host mappings) in a shared SQL database, such as an Azure SQL database. Ditch the SQL Server Always On Availability Group deployment manual, grab the connection string to the Azure SQL database, and start using your highly available environment.
 
 Additional information: [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](https://techcommunity.microsoft.com/t5/microsoft-security-and/new-windows-server-2016-capability-use-azure-sql-db-for-your/ba-p/249787)
+
+## Remote Desktop IP Virtualization on Windows Server 2019
+If you want to use IP virtualization on Windows Server 2019, please follow [these steps](/support/windows-server/remote/remote-desktop-ip-virtualization).
 
 ## Graphics - solving graphics needs across various scenarios
 Thanks to Hyper-V's Discrete Device Assignment, you can now map GPUs on a host machine directly to a VM to be consumed by its GPU-requiring applications. Improvements have also been made in RemoteFX vGPU, including support for OpenGL 4.4, OpenCL 1.1, 4k resolution, and Windows Server virtual machines.

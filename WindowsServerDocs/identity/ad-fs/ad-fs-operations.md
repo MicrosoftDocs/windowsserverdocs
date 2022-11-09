@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD FS Operations"
 ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS Operations
 author: billmath
@@ -22,6 +23,7 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
 - [Fine tune SQL and address latency](../ad-fs/operations/adfs-sql-latency.md)
 - [AlwaysOn Availability Groups](../ad-fs/operations/ad-fs-always-on.md)
+- [What is KDFv2?](../ad-fs/operations/what-is-kdfv2.md)
 
 
 ## Authentication Configuration

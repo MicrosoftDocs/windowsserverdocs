@@ -4,11 +4,10 @@ description: Learn about how often to install the latest version of Windows Admi
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.localizationpriority: medium
 ms.date: 04/12/2019
 ---
 # Windows Admin Center support policy
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 [!INCLUDE [support-policy](../includes/support-policy.md)]

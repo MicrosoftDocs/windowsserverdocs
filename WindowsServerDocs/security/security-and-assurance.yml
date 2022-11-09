@@ -7,9 +7,10 @@ metadata:
   title: Windows Server Security documentation
   description: An overview of Security in Windows Server.
   ms.topic: landing-page # Required
-  author: eross-msft
-  ms.author: lizross
+  author: JasonGerend
+  ms.author: jgerend
   ms.date: 5/19/2020
+  ms.prod: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -29,22 +30,16 @@ landingContent:
             url: https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be
           - text: Protecting Your Datacenter and Cloud from Emerging Threats blog post
             url: https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx
-          - text: Security and Assurance Overview session at Ignite
-            url: https://channel9.msdn.com/events/ignite/2015/brk2482
 
   # Card
   - title: Secure virtualization with Shielded VMs
     linkLists:
       - linkListType: video
         links:
-          - text: Shielded VM in Channel 9
-            url: https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016
           - text: Shielded VM Demo
             url: https://www.youtube.com/watch?v=xip5Qtk-7d8
           - text: Shielded Virtual Machines in Windows Server video walkthrough
-            url: http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm
-          - text: 'Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)'
-            url: https://channel9.msdn.com/events/ignite/2015/brk3457
+            url: /shows/oemtv/1758
       - linkListType: how-to-guide
         links:
           - text: Guarded Fabric Deployment Guide
@@ -60,13 +55,15 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows Defender Application Control (WDAC) Deployment Guide
-            url: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-contro
+            url: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide
           - text: Transport Layer Security Registry Settings
             url: ./tls/tls-registry-settings.md
           - text: Control Flow Guard
             url: /windows/desktop/SecBP/control-flow-guard
           - text: Windows Defender
             url: ./windows-defender/windows-defender-overview-windows-server.md
+          - text: Secured-core server
+            url: secured-core-server.md
       - linkListType: video
         links:
           - text: Device Guard demo video
@@ -78,15 +75,13 @@ landingContent:
       - linkListType: overview
         links:
           - text: Securing Privileged Access
-            url: ../identity/securing-privileged-access/securing-privileged-access.md
+            url: /security/compass/overview
           - text: Just in Time Administration with Microsoft Identity Manager
             url: /microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services
           - text: Just Enough Administration Article
             url: https://aka.ms/JEA
       - linkListType: video
         links:
-          - text: Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management
-            url: https://channel9.msdn.com/events/ignite/2015/brk3873
           - text: Just Enough Administration demo video
             url: https://www.youtube.com/watch?v=xnBrbkY9P20
 
@@ -109,8 +104,6 @@ landingContent:
     linkLists:
       - linkListType: video
         links:
-          - text: Security Threat Analysis Using Microsoft Operations Management Suite
-            url: https://channel9.msdn.com/events/ignite/2015/brk3464
           - text: Microsoft Operations Management Suite (OMS)
             url: https://www.youtube.com/watch?v=_SaDw1dRy2k
           - text: OMS and Windows Server

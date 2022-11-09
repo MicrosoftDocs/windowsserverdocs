@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: TPM Key Attestation"
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM Key Attestation
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # TPM Key Attestation
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
@@ -106,23 +107,23 @@ To configure the certificate template for TPM key attestation, do the following 
 
     -   Ensure **Windows 8.1 / Windows Server 2012 R2** is selected for the **Certificate recipient**.
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)
+    ![Screenshot that highlights the Certificate recipient list.](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)
 
 2.  **Cryptography** tab
 
     Ensure **Key Storage Provider** is selected for the **Provider Category** and **RSA** is selected for the **Algorithm name**. Ensure **Requests must use one of the following providers** is selected and the **Microsoft Platform Crypto Provider** option is selected under **Providers**.
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
+    ![Screenshot that highlights the Provider Category and Algorithm name lists.](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
 
 3.  **Key Attestation** tab
 
     This is a new tab for Windows Server 2012 R2:
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)
+    ![Screenshot that shows the Key Attestation tab.](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)
 
     Choose an attestation mode from the three possible options.
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)
+    ![Screenshot that shows the attestation modes.](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)
 
     -   **None:** Implies that key attestation must not be used
 
@@ -132,7 +133,7 @@ To configure the certificate template for TPM key attestation, do the following 
 
     Then choose the TPM trust model. There are again three options:
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)
+    ![Screenshot that shows the TPM trust models.](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)
 
     -   **User credentials:** Allow an authenticating user to vouch for a valid TPM by specifying their domain credentials.
 
@@ -186,8 +187,8 @@ To configure the certificate template for TPM key attestation, do the following 
 
         |Operation|Command syntax|
         |-------------|------------------|
-        |Add folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories +"<folder>"|
-        |Remove folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories -"<folder>"|
+        |Add folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories +"\<folder>"|
+        |Remove folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories -"\<folder>"|
 
         The EndorsementKeyListDirectories in certutil command is a registry setting as described in the following table.
 
@@ -195,7 +196,7 @@ To configure the certificate template for TPM key attestation, do the following 
         |--------------|--------|--------|
         |EndorsementKeyListDirectories|REG_MULTI_SZ|<LOCAL or UNC path to EKPUB allow list(s)><p>Example:<p>*\\\blueCA.contoso.com\ekpub*<p>*\\\bluecluster1.contoso.com\ekpub*<p>D:\ekpub|
 
-        HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\\<CA Sanitized Name>
+        HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration&#92;\<CA Sanitized Name>
 
         *EndorsementKeyListDirectories* will contain a list of UNC or local file system paths, each pointing to a folder that the CA has Read access to. Each folder may contain zero or more allow list entries, where each entry is a file with a name that is the SHA-2 hash of a trusted EKpub, with no file extension.
         Creating or editing this registry key configuration requires a restart of the CA, just like existing CA registry configuration settings. However, edits to the configuration setting will take effect immediately and will not require the CA to be restarted.

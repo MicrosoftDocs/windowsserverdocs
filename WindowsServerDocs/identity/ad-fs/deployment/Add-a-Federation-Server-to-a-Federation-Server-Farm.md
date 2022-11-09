@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add a Federation Server to a Federation Server Farm"
 ms.assetid: 6ecf8d85-cd61-4c87-add8-00a679a6e3ff
 title: Add a Federation Server to a Federation Server Farm
 author: billmath
@@ -18,7 +19,7 @@ You join a computer to a farm with the AD FS Federation Server Configuration Wiz
 > [!NOTE]
 > For the Federated Web Single\-Sign\-On \(SSO\) design, you must have at least one federation server in the account partner organization and at least one federation server in the resource partner organization. For more information, see [Where to Place a Federation Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807127(v=ws.11)).
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
 
 ### To add a federation server to a federation server farm
 
@@ -46,4 +47,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 ## Additional references
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
-

@@ -3,15 +3,15 @@ title: change port
 description: Reference article for the change port command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
 ms.topic: article
 ms.assetid: 3d772c90-e849-4e74-b9ec-b6cae1159336 Lizap
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # change port
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists or changes the COM port mappings to be compatible with MS-DOS applications.
 
@@ -21,15 +21,15 @@ Lists or changes the COM port mappings to be compatible with MS-DOS applications
 ## Syntax
 
 ```
-change port [<portX>=<portY| /d <portX | /query]
+change port [<portX>=<portY>| /d <portX> | /query]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 |-----------------|----------------------------------------|
-| <portX>=<portY> | Maps COM `<*portX*>` to `<*portY*>` |
-| /d <portX> | Deletes the mapping for COM `<*portX*>` |
+| `<portX>`=`<portY>` | Maps COM `<portX>` to `<portY>` |
+| /d `<portX>` | Deletes the mapping for COM `<portX>` |
 | /query | Displays the current port mappings. |
 | /? | Displays help at the command prompt. |
 

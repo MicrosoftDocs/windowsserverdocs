@@ -1,15 +1,16 @@
 ---
 title: Wireless Access Deployment Overview
-description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
+description: Learn about wireless access deployment components that are required to deploy 802.1X authenticated wireless access with PEAP-MS-CHAP v2.
 manager: brianlic
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: eross-msft
-ms.author: lizross
+author: JasonGerend
+ms.author: jgerend
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following illustration shows the components that are required to deploy 802.1X authenticated wireless access with PEAP\-MS\-CHAP v2.
 

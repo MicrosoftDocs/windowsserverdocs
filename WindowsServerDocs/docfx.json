@@ -35,13 +35,14 @@
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
-      "feedback_product_url": "https://windowsserver.uservoice.com/forums/295047-general-feedback",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server",
       "_op_documentIdPathDepotMapping": {
           "manage/windows-admin-center/license/": {
             "depot_name": "MSDN.WindowsServerDocs-pr",
             "folder_relative_path_in_docset": "licensing/"
            }
-        }
+        },
+      "recommendations": true
       },
       "fileMetadata": {
         "feedback_product_url": {
@@ -92,6 +93,15 @@
     "template": [
       "docs.html"
     ],
+
+    "rules": {
+      "sensitive-language-sl": {
+        "exclude": [
+          "administration/windows-commands/dnscmd.md"
+        ]
+      }
+    },
+
     "dest": "windows-server"
-    }
   }
+}

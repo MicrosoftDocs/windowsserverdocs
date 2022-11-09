@@ -3,8 +3,8 @@ title: bitsadmin list
 description: Reference article for the bitsadmin list command, which lists the transfer jobs owned by the current user.
 ms.topic: reference
 ms.assetid: 1416965e-e0e6-49cf-b1d4-b286d3cf8716
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Troubleshooting Domain Controller Deployment"
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 title: Troubleshooting Domain Controller Deployment
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 03/20/2019
 ms.topic: article
@@ -10,13 +11,16 @@ ms.topic: article
 
 # Troubleshooting Domain Controller Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This topic covers detailed methodology on troubleshooting domain controller configuration and deployment.
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806257" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Active Directory replication issues.
+
+This article covers detailed methodology on troubleshooting domain controller configuration and deployment.
 
 ## Introduction to Troubleshooting
 
-![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
+![Diagram that shows the workflow for troubleshooting domain controller deployment.](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
 
 ## Built-in logs for troubleshooting
 
@@ -26,7 +30,7 @@ The built-in logs are the most important instrument for troubleshooting issues w
 |--|--|
 | Server Manager or ADDSDeployment Windows PowerShell operations | -   %systemroot%\debug\dcpromoui.log<p>-   %systemroot%\debug\dcpromoui*.log |
 | Installation/Promotion of the domain controller | -   %systemroot%\debug\dcpromo.log<p>-   %systemroot%\debug\dcpromo*.log<p>-   Event viewer\Windows logs\System<p>-   Event viewer\Windows logs\Application<p>-   Event viewer\Applications and services logs\Directory Service<p>-   Event viewer\Applications and services logs\File Replication Service<p>-   Event viewer\Applications and services logs\DFS Replication |
-| Forest or domain upgrade | -   %systemroot%\debug\adprep\\<datetime>\adprep.log<p>-   %systemroot%\debug\adprep\\<datetime>\csv.log<p>-   %systemroot%\debug\adprep\\<datetime>\dspecup.log<p>-   %systemroot%\debug\adprep\\<datetime>\ldif.log* |
+| Forest or domain upgrade | -   %systemroot%\debug\adprep&#92;\<datetime>\adprep.log<p>-   %systemroot%\debug\adprep&#92;\<datetime>\csv.log<p>-   %systemroot%\debug\adprep&#92;\<datetime>\dspecup.log<p>-   %systemroot%\debug\adprep&#92;\<datetime>\ldif.log* |
 | Server Manager ADDSDeployment Windows PowerShell deployment engine | -   Event viewer\Applications and services logs\Microsoft\Windows\DirectoryServices-Deployment\Operational |
 | Windows Servicing | -   %systemroot%\Logs\CBS\\*<p>-   %systemroot%\servicing\sessions\sessions.xml<p>-   %systemroot%\winsxs\poqexec.log<p>-   %systemroot%\winsxs\pending.xml |
 
@@ -48,13 +52,13 @@ To troubleshoot issues not explained by the logs, use the following tools as a s
 
     1.  Did you mistype or forget to provide an argument to ADDSDeployment Windows PowerShell? For example, if using ADDSDeployment Windows PowerShell, did you forget to add required argument **-domainname** with a valid name?
 
-    2.  Examine the Windows PowerShell console output carefully to see exactly why it is failing to parse the command-line provided.
+    2.  Examine the Windows PowerShell console output carefully to see exactly why it's failing to parse the command-line provided.
 
 2.  Is the error a prerequisite failure?
 
     1.  Many errors that used to appear as fatal promotion results are now prevented by the prerequisite checker.
 
-    2.  Examine the text of the prerequisite errors carefully, they provide the necessary guidance to resolve most issues, as they are controlled scenarios.
+    2.  Examine the text of the prerequisite errors carefully, they provide the necessary guidance to resolve most issues, as they're controlled scenarios.
 
 3.  Is the error in promotion and therefore fatal?
 
@@ -68,33 +72,33 @@ To troubleshoot issues not explained by the logs, use the following tools as a s
 
         3.  Examine the DirectoryServices-Deployment event log for errors only if the Dcpromoui.log lacks detail or ends arbitrarily due to an unhandled exception in the configuration process.
 
-    3.  Examine the Directory Services, System, and Application event logs for other indicators of a configuration issue. Often times, the domain controller promotion is just a symptom of other network misconfiguration that would affect all distributed systems.
+    3.  Examine the Directory Services, System, and Application event logs for other indicators of a configuration issue. Often, the domain controller promotion is just a symptom of other network misconfiguration that would affect all distributed systems.
 
     4.  Use dcdiag.exe and repadmin.exe to validate the overall forest health and indicate subtle misconfigurations that may prevent further domain controller promotion.
 
     5.  Use AutoRuns.exe, Task Manager, or MSinfo32.exe to examine the computer for third party software that may be interfering.
 
-        1.  Remove third party software (do not simply disable the software; that does not prevent drivers loading).
+        1.  Remove third party software (don't simply disable the software; that doesn't prevent drivers loading).
 
     6.  Install NetMon 3.4 on the computer that fails to promote as well the replication partner domain controller and analyze the promotion process with double-sided network captures.
 
-        1.  Compare this to your working lab environment to understand what a healthy promotion looks like and where it is failing.
+        1.  Compare this to your working lab environment to understand what a healthy promotion looks like and where it's failing.
 
         2.  At this point, the errors are likely with the forest objects, non-default security changes, or the network, and this new domain controller is a victim of misconfigurations in DNS, firewalls, host intrusion protection software, or other outside factors.
 
 ## Troubleshooting Events and Error Messages
 
-Domain controller promotion and demotion always returns a code at the end of operation and unlike most programs, do not return zero for success. To see the code at the end of a domain controller configuration, you have several options:
+Domain controller promotion and demotion always returns a code at the end of operation and unlike most programs, don't return zero for success. To see the code at the end of a domain controller configuration, you have several options:
 
-1. When using Server Manager, examine the promotion results in the ten seconds prior to automatic reboot.
+1. When using Server Manager, examine the promotion results in the 10 seconds prior to automatic reboot.
 
-2. When using ADDSDeployment Windows PowerShell, examine the promotion results in the ten seconds prior to automatic reboot. Alternatively, choose not to restart automatically on completion. You should add the **Format-List** pipeline to make the output easier to read. For example:
+2. When using ADDSDeployment Windows PowerShell, examine the promotion results in the 10 seconds prior to automatic reboot. Alternatively, choose not to restart automatically on completion. You should add the **Format-List** pipeline to make the output easier to read. For example:
 
    ```
    Install-addsdomaincontroller <options> -norebootoncompletion:$true | format-list
    ```
 
-   Errors in prerequisite validation and verification do not continue on to a reboot, so they are visible in all cases. For example:
+   Errors in prerequisite validation and verification don't continue on to a reboot, so they are visible in all cases. For example:
 
    ![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/ADDS_PSPrereqError.png)
 
@@ -287,7 +291,7 @@ The following are common issues seen during the Windows Server 2012 development 
 
 | Issue | Prerequisite adprep check fails with error "Unable to perform Exchange schema conflict check" |
 |--|--|
-| Symptoms | When attempting to promote a Windows Server 2012 domain controller into an existing Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 forest, prerequisite check fails with error:<p>Code - Verification of prerequisites for AD prep failed. Unable to perform Exchange schema conflict check for domain  *<domain name>* (Exception: the RPC server is unavailable)<p>The adprep.log shows error:<p>Code - Adprep could not retrieve data from the server *<domain controller>*<p>through Windows Management Instrumentation (WMI). |
+| Symptoms | When attempting to promote a Windows Server 2012 domain controller into an existing Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 forest, prerequisite check fails with error:<p>Code - Verification of prerequisites for AD prep failed. Unable to perform Exchange schema conflict check for domain  *\<domain name>* (Exception: the RPC server is unavailable)<p>The adprep.log shows error:<p>Code - Adprep could not retrieve data from the server *\<domain controller>*<p>through Windows Management Instrumentation (WMI). |
 | Resolution and Notes | The new domain controller cannot access WMI through DCOM/RPC protocols against the existing domain controllers. To date, there have been three causes for this:<p>-   A firewall rule blocks access to the existing domain controllers<p>-   The NETWORK SERVICE account is missing from the "Logon as a service" (SeServiceLogonRight) privilege on the existing domain controllers<p>-   NTLM is disabled on domain controllers, using security policies described in [Introducing the Restriction of NTLM Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560653(v=ws.10)) |
 
 | Issue | Creating a new AD DS forest always shows DNS warning |

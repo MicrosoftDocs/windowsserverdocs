@@ -5,11 +5,10 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 06/06/2019
-ms.localizationpriority: medium
 ---
 # Deploy primary computers for Folder Redirection and Roaming User Profiles
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 This topic describes how to enable primary computer support and designate primary computers for users. Doing so enables you to control which computers use Folder Redirection and Roaming User Profiles.
 
@@ -33,7 +32,7 @@ Primary computer support has the following requirements:
 The first step in deploying primary computers support is designating the primary computers for each user. To do so, use Active Directory Administration Center to obtain the distinguished name of the relevant computers and then set the **msDs-PrimaryComputer** attribute.
 
 > [!TIP]
-> To use Windows PowerShell to work with primary computers, see the blog post [Digging a little deeper into Windows 8 Primary Computer](<https://blogs.technet.microsoft.com/askds/2012/10/23/digging-a-little-deeper-into-windows-8-primary-computer/>).
+> To use Windows PowerShell to work with primary computers, see the blog post [Digging a little deeper into Windows 8 Primary Computer](/archive/blogs/askds/digging-a-little-deeper-into-windows-8-primary-computer).
 
 Here's how to specify the primary computers for users:
 

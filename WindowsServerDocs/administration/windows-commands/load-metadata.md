@@ -3,8 +3,8 @@ title: load metadata
 description: Reference article for the load metadata command, which loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore.
 ms.topic: reference
 ms.assetid: 2c535487-668b-44fc-babb-ff59cf7d190e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

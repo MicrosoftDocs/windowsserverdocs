@@ -5,12 +5,11 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Target a different version of the Windows Admin Center SDK
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Keeping your extension up to date with SDK changes and platform changes is easy.  We use [NPM tags](https://www.npmjs.com/package/@microsoft/windows-admin-center-sdk) to organize the release of new features into SDK versions.
 
@@ -21,7 +20,7 @@ There are three SDK versions you can choose from:
 * ```next``` – this SDK package contains the most recent functionality
 
 > [!NOTE]
-> Find out more about the different [versions](https://aka.ms/WACDownloadPage) of Windows Admin Center that are available to download.
+> Find out more about the different [versions](../overview.md) of Windows Admin Center that are available to download.
 
 ## Targeting SDK version on a new project
 

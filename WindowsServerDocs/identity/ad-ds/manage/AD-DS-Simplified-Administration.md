@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: AD DS Simplified Administration"
 ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS Simplified Administration
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -9,7 +10,7 @@ ms.topic: article
 ---
 # AD DS Simplified Administration
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains the capabilities and benefits of Windows Server 2012 domain controller deployment and administration, and the differences between previous operating system DC deployment and the new Windows Server 2012 implementation.
 
@@ -51,7 +52,7 @@ For information about Adprep and previous operating system forest preparation, s
 
 ## Server Manager AD DS Integration
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_Dashboard.png)
+![Screenshot that shows the Server Manager Dashboard.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_Dashboard.png)
 
 Server Manager acts as a hub for server management tasks. Its dashboard-style appearance periodically refreshes views of installed roles and remote server groups. Server Manager provides centralized management of local and remote servers, without the need for console access.
 
@@ -67,7 +68,7 @@ These views include:
 
 ## Active Directory Administrative Center Recycle Bin
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_ADAC.png)
+![Screenshot that shows the delete objects in the Active Directory Administrative Center Recycle Bin.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_ADAC.png)
 
 Windows Server 2008 R2 introduced the Active Directory Recycle Bin, which recovers deleted Active Directory objects without restoring from backup, restarting the AD DS service, or rebooting domain controllers.
 
@@ -77,7 +78,7 @@ For information about the Active Directory [Recycle Bin, see Active Directory Re
 
 ## Active Directory Administrative Center Fine-Grained Password Policy
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_FGPP.png)
+![Screenshot that shows the Active Directory Administrative Center Fine-Grained Password Policy graphical interface.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_FGPP.png)
 
 Windows Server 2008 introduced the Fine-Grained Password policy, which allows administrators to configure multiple password and account lockout policies per domain. This allows domains a flexible solution to enforce more or less restrictive password rules, based on users and groups. It had no managerial interface and required administrators to configure it using Ldp.exe or Adsiedit.msc. Windows Server 2008 R2 introduced the Active Directory module for Windows PowerShell, which granted administrators a command-line interface to FGPP.
 
@@ -87,7 +88,7 @@ For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained 
 
 ## Active Directory Administrative Center Windows PowerShell History Viewer
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_HistoryViewer.png)
+![Screenshot that shows the Active Directory Administrative Center Windows PowerShell History Viewer.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_HistoryViewer.png)
 
 Windows Server 2008 R2 introduced the Active Directory Administrative Center, which superseded the older Active Directory Users and Computers snap-in created in Windows 2000. The Active Directory Administrative Center creates a graphical administrative interface to the then-new Active Directory module for Windows PowerShell.
 
@@ -95,7 +96,7 @@ While the Active Directory module contains over a hundred cmdlets, the learning 
 
 ## AD Replication Windows PowerShell
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_PSNewADReplSite.png)
+![Screenshot that shows how to use AD Replication cmdlets.](media/AD-DS-Simplified-Administration/ADDS_PSNewADReplSite.png)
 
 Windows Server 2012 adds additional Active Directory replication cmdlets to the Active Directory Windows PowerShell module. These allow configuration of new or existing sites, subnets, connections, site links, and bridges. They also return Active Directory replication metadata, replication status, queuing, and up-to-dateness version vector information. The introduction of the replication cmdlets - combined with the deployment and other existing AD DS cmdlets - makes it possible to administer a forest using Windows PowerShell alone. This creates new opportunities for administrators wishing to provision and manage Windows Server 2012 without a graphical interface, which then reduces the operating system's attack surface and servicing requirements. This is especially important when deploying servers into high security networks such as Secret Internet Protocol Router (SIPR) and corporate DMZs.
 
@@ -159,7 +160,7 @@ Prerequisite checking ensures that certain conditions are true. These conditions
 
 The AD Preparation code formerly housed in ADprep.exe is refactored into adprep.dll. This allows both ADPrep.exe and the ADDSDeployment Windows PowerShell module to use the library for the same tasks and have the same capabilities. Adprep.exe is included with the installation media but automated processes do not call it directly - only an Administrator runs it manually. It can only run on Windows Server 2008 x64 and later operating systems. Ldifde.exe and csvde.exe also have refactored versions as DLLs that are loaded by the preparation process. Schema extension still uses the signature-verified LDF files, like in previous operating system versions.
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_AdprepDLLs.png)
+![Diagram that shows how ADprep.dll allows both ADPrep.exe and the ADDSDeployment Windows PowerShell module to use the library for the same tasks and have the same capabilities.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_AdprepDLLs.png)
 
 > [!IMPORTANT]
 > There is no 32-bit Adprep32.exe tool for Windows Server 2012. You must have at least one Windows Server 2008 x64, Windows Server 2008 R2, or Windows Server 2012 computer, running as a domain controller, member server, or in a workgroup, to prepare the forest and domain. Adprep.exe does not run on Windows Server 2003 x64.
@@ -194,8 +195,8 @@ There is no need to run these cmdlets, ordinarily; they already automatically ex
 | CheckDomainPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Domain Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers |
 | CheckRODCPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Enterprise Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers |
 | VerifyInitSync<p>AfterReboot | LDAP | Validate that the Schema Master has replicated at least once since it restarted by setting a dummy value on rootDSE attribute becomeSchemaMaster |
-| VerifySFUHotFix<p>Applied | LDAP | Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<p>([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732)) |
-| VerifyExchange<p>SchemaFixed | LDAP, WMI, DCOM, RPC | Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649)) |
+| VerifySFUHotFix<p>Applied | LDAP | Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<p>([Impact of Schema Changes - Win32 apps](/windows/win32/ad/impact-of-schema-changes)) |
+| VerifyExchange<p>SchemaFixed | LDAP, WMI, DCOM, RPC | Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([About schema extensions - Configuration Manager](/mem/configmgr/core/plan-design/network/schema-extensions)) |
 | VerifyWin2KSchema<p>Consistency | LDAP | Validate the existing forest schema has consistent (not incorrectly modified by a third party) core attributes and classes. |
 | DCPromo | DRSR over RPC,<p>LDAP,<p>DNS<p>RPC over SMB (SAMR) | Validate the command-line syntax passed to the promotion code and test promotion. Validate the forest or domain does not already exist if creating new. |
 | VerifyOutbound<p>ReplicationEnabled | LDAP, DRSR over SMB, RPC over SMB (LSARPC) | Validate the existing domain controller specified as the replication partner has outbound replication enabled by checking the NTDS Settings object's options attribute for NTDSDSA_OPT_DISABLE_OUTBOUND_REPL (0x00000004) |

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Resources to verify replication is working"
 title: AD Forest Recovery - Verify Replication
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -9,7 +10,7 @@ ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5
 ---
 # Resources to verify replication is working
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 After you have restored or re-installed all DCs, you can verify that AD DS and SYSVOL are recovered and replicating correctly by using **repadmin /replsum**, which runs on any version of Windows Server.
 
@@ -25,7 +26,7 @@ If the first recovered DC logs Event ID 4614 (“the domain controller is waitin
 
 You can also create a diagnostic report DFS Replication. For more information, see [Create a Diagnostic Report for DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)) and [DFS Step-by-Step Guide for Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)). If the server is running Windows Server 2008 R2, you can use [dfsrdiag.exe ReplicationState command line switch](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)).
 
-You can also run the Replications test using dcdiag.exe to check for replication errors. For more information, see Knowledge Base [article 249256](https://support.microsoft.com/kb/249256).
+You can also run the Replications test using dcdiag.exe to check for replication errors. For more information, see Knowledge Base [Active Directory replication error 8452 - Windows Server](/troubleshoot/windows-server/identity/replication-error-8452).
 
 ## Next Steps
 

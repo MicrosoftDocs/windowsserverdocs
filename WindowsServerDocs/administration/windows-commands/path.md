@@ -3,8 +3,8 @@ title: path
 description: Reference article for setting the command path in the PATH environment variable, specifying the set of directories used to search for executable (.exe) files.
 ms.topic: reference
 ms.assetid: 1bfa1349-e79a-472b-a9e6-d7a91149ae8f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

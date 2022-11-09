@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: What's New in Active Directory Domain Services Installation and Removal"
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What's New in Active Directory Domain Services Installation and Removal
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -9,7 +10,7 @@ ms.topic: article
 ---
 # What's New in Active Directory Domain Services Installation and Removal
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Domain Services (AD DS) deployment in Windows Server 2012 is simpler and faster than previous versions of Windows Server. The AD DS installation process is now built on Windows PowerShell and is integrated with Server Manager. The number of steps required to introduce domain controllers into an existing Active Directory environment is reduced. This makes the process for creating a new Active Directory environment simpler and more efficient. The new AD DS deployment process minimizes the chances of errors that would have otherwise blocked installation.
 
@@ -91,7 +92,7 @@ Adprep.exe requires /userdomain if /user is specified. For smartcard credentials
 
 ### Adprep /domainprep /gpprep command is not run automatically
 
-The adprep /domainprep /gpprep command is not run as part of AD DS installation. This command sets permissions that are required for Resultant Set of Policy (RSOP) planning mode functionality. For more information about this command, see [Microsoft Knowledge Base article 324392](https://support.microsoft.com/kb/324392). If the command needs to be run in your Active Directory domain, you can run it separately from the AD DS installation. If the command has already been run in preparation of deploying domain controllers that run Windows Server 2003 SP1 or later, the command does not need to be run again.
+The adprep /domainprep /gpprep command is not run as part of AD DS installation. This command sets permissions that are required for Resultant Set of Policy (RSOP) planning mode functionality. For more information about this command, see [Microsoft Knowledge Base article 324392](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731728(v=ws.11)). If the command needs to be run in your Active Directory domain, you can run it separately from the AD DS installation. If the command has already been run in preparation of deploying domain controllers that run Windows Server 2003 SP1 or later, the command does not need to be run again.
 
 You can safely add domain controllers that run Windows Server 2012 to an existing domain without running adprep /domainprep /gpprep, but RSOP planning mode will not function properly.
 

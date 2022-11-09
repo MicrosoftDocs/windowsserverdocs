@@ -4,12 +4,13 @@ description: Describes common issues that may occur during the MAK activation pr
 ms.topic: troubleshooting
 ms.date: 10/3/2019
 author: Teresa-Motiv
-ms.author: v-tea
+ms.author: wscontent
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # MAK activation: known issues
+
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806237" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common issues related to KMS and MAK activation</span>
 
 This article describes common issues that can occur during Multiple Activation Key (MAK) activations, and provides guidance for addressing those issues.
 
@@ -19,7 +20,7 @@ On the computer, open the **System** control panel and look for **Windows is act
 
 ## The computer does not activate over the internet
 
-Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](https://go.microsoft.com/fwlink/?linkid=150083).
+Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](/previous-versions/tn-archive/dd772269(v=technet.10)).
 
 ## Internet and telephone activation fail
 

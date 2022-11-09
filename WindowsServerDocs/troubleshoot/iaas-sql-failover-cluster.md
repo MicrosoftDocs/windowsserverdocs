@@ -1,17 +1,18 @@
 ---
 title: Adjust the failover baseline network threshold
 description: This article introduces solutions for adjusting the threshold of failover cluster networks.
-ms.date: 05/28/2020
+ms.date: 11/03/2021
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
-# IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds
+# IaaS with SQL Server - Tuning Failover Cluster Network Thresholds
 
 This article introduces solutions for adjusting the threshold of failover cluster networks.
 
 ## Symptom
 
-When running Windows Failover Cluster nodes in IaaS with SQL Server AlwaysOn, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and do not take into account the possibility of induced latency caused by a multi-tenant environment such as Windows Azure (IaaS).
+When running Windows Failover Cluster nodes in IaaS with a SQL Server Always On availability group, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and do not take into account the possibility of induced latency caused by a multi-tenant environment such as Windows Azure (IaaS).
 
 Windows Server Failover Clustering is constantly monitoring the network connections and health of the nodes in a Windows Cluster.  If a node is not reachable over the network, then recovery action is taken to recover and bring applications and services online on another node in the cluster. Latency in communication between cluster nodes can lead to the following error:
 
@@ -71,62 +72,7 @@ By default Windows Server 2016 sets the **SameSubnetThreshold** to 10 and **Same
 
 ## Resolution
 
-In an IaaS environment, relax the Cluster network configuration settings.
-
-### Steps to verify current configuration
-
-Check the current Cluster network configuration settings use the get-cluster command:
-
-```powershell
-C:\Windows\system32> get-cluster | fl *subnet*
-```
-
-Default, minimum, maximum, and recommended values for each support OS
-
-| Description | OS | Min | Max | Default | Recommended |
-|--|--|--|--|--|--|
-| CrossSubnetThreshold | 2008 R2 | 3 | 20 | 5 | 20 |
-| CrossSubnet Threshold | 2012 | 3 | 120 | 5 | 20 |
-| CrossSubnet Threshold | 2012 R2 | 3 | 120 | 5 | 20 |
-| CrossSubnet Threshold | 2016 | 3 | 120 | 20 | 20 |
-| SameSubnet Threshold | 2008 R2 | 3 | 10 | 5 | 10 |
-| SameSubnet Threshold | 2012 | 3 | 120 | 5 | 10 |
-| SameSubnet Threshold | 2012 R2 | 3 | 120 | 5 | 10 |
-| SameSubnetThreshold | 2016 | 3 | 120 | 10 | 10 |
-
-The values for Threshold reflect the current recommendations regarding the scope of  deployment as described in the following article:
-
-[Fine tuning failover cluster network thresholds in Windows Server 2012 R2](https://support.microsoft.com/en-us/help/3153887/fine-tuning-failover-cluster-network-thresholds-in-windows-server-2012)
-
-The **Threshold** defines the number of heartbeats, which are missed before the cluster takes recovery action.  The threshold is a number of heartbeats.  Within the same cluster, there can be different thresholds between nodes on the same subnet and between nodes, which are on different subnets.
-
-## Recommendations for changing to more relaxed settings for multi-tenant environments like Azure (IaaS)
-
-> [!NOTE]
-> Increasing the resiliency of your Cluster environment by adjusting the Cluster network configuration settings can result in increased downtime. For more information, see [Tuning Failover Cluster Network Thresholds](https://techcommunity.microsoft.com/t5/failover-clustering/tuning-failover-cluster-network-thresholds/ba-p/371834).
-
-1. Modify to more relaxed settings:
-
-    > [!NOTE]
-    > Changing the cluster threshold will take effect immediately, you don't have to restart the cluster or any resources.
-
-    The following settings are recommended for both same subnet and cross-region deployments of AlwaysOn availability groups.
-
-    ```powershell
-    C:\Windows\system32> (get-cluster).SameSubnetThreshold = 20
-    ```
-
-    ```powershell
-    C:\Windows\system32> (get-cluster).CrossSubnetThreshold = 20
-    ```
-
-2. Verify the changes:
-
-    ```powershell
-    C:\Windows\system32> get-cluster | fl *subnet*
-    ```
-
-    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="cmd" border="false":::
+To resolve this issue, relax the Cluster network configuration settings. See [Heartbeat and threshold](/azure/azure-sql/virtual-machines/windows/hadr-cluster-best-practices#heartbeat-and-threshold).
 
 ## References
 

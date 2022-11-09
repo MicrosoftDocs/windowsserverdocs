@@ -10,7 +10,7 @@ manager: dongill
 ---
 # Remote Desktop Services architecture
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Below are various configurations for deploying Remote Desktop Services to host Windows apps and desktops for end-users.
 

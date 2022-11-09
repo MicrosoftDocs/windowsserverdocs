@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 # Hardware considerations in ADDS performance tuning
 
 >[!Important]
-> The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to review [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
+> The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](./capacity-planning-for-active-directory-domain-services.md) article. Readers are highly encouraged to review [Capacity Planning for Active Directory Domain Services](./capacity-planning-for-active-directory-domain-services.md) for a greater technical understanding and implications of these recommendations.
 
 ## Avoid going to disk
 
@@ -69,4 +69,4 @@ Just like with processors, excessive network adapter utilization will cause long
 - [LDAP considerations](ldap-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
 - [Troubleshooting ADDS performance](troubleshoot.md)
-- [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)
+- [Capacity Planning for Active Directory Domain Services](./capacity-planning-for-active-directory-domain-services.md)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Azure Active Directory Connect"
 ms.assetid: 0ac8584c-d0a1-4b87-a9e2-cee909dcaff9
 title: Azure Active Directory Connect
 author: billmath

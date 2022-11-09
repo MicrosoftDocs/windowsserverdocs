@@ -5,12 +5,11 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Add a module to a tool extension
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 In this article, we will add an empty module to a tool extension we have created with the Windows Admin Center CLI.
 
@@ -26,10 +25,10 @@ If you are new to Angular, it is highly recommended that you read the documentat
 * More information about generating a new component in Angular CLI: https://github.com/angular/angular-cli/wiki/generate-component
 
 
-Open a command prompt, change directory to \src\app in your project, then run the following commands, replacing ```{!ModuleName}``` with your module name (spaces removed):
+Open a command prompt, change directory to .\src\app in your project, then run the following commands, replacing ```{!ModuleName}``` with your module name (spaces removed):
 
 ```
-cd \src\app
+cd .\src\app
 ng generate module {!ModuleName}
 ng generate component {!ModuleName}
 ```
@@ -40,7 +39,7 @@ ng generate component {!ModuleName}
 
 Example usage:
 ```
-cd \src\app
+cd .\src\app
 ng generate module ManageFooWorksPortal
 ng generate component ManageFooWorksPortal
 ```

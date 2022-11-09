@@ -3,13 +3,13 @@ title: Support boundary for high-accuracy time
 description: This article describes the support boundary for the Windows Time (W32Time) service in environments that require highly accurate and stable system time.
 author: dahavey
 ms.author: dahavey
-ms.date: 10/17/2018
+ms.date: 11/04/2021
 ms.topic: article
 ---
 
 # Support boundary for high-accuracy time
 
->Applies to: Windows Server 2016, and Windows 10 version 1607 or later
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows 10 version 1607 or later, Azure Stack HCI, versions 21H2 and 20H2
 
 This article describes the support boundaries for the Windows Time service (W32Time) in environments that require highly accurate and stable system time.
 
@@ -25,7 +25,7 @@ Tighter accuracy requirements were outside of the design specification of the Wi
 
 ## Windows 10 and Windows Server 2016
 
-Time accuracy in Windows 10 and Windows Server 2016 has been substantially improved, while maintaining full backwards NTP compatibility with older Windows versions. Under the right operating conditions, systems running Windows 10 or Windows Server 2016 and newer releases can deliver 1 second, 50ms (milliseconds), or 1ms accuracy.
+Time accuracy in Windows 10 and Windows Server 2016 has been substantially improved, while maintaining full backwards NTP compatibility with older Windows versions. Under the right operating conditions, systems running Windows 10 or Windows Server 2016 and newer releases can deliver 1 second, 50 ms (milliseconds), or 1 ms accuracy.
 
 >[!IMPORTANT]
 >**Highly accurate time sources**<br>
@@ -49,15 +49,15 @@ To achieve 1s accuracy for a specific target machine when compared to a highly a
 
 -   All Windows operating systems in the NTP hierarchy mentioned above must be configured as documented in the [Configuring Systems for High Accuracy](configuring-systems-for-high-accuracy.md) documentation.
 
--   The cumulative one-way network latency between the target and source must not exceed 100ms. The cumulative network delay is measured by adding the individual one-way delays between pairs of NTP client-server nodes in the hierarchy starting with the target and ending at the source. For more information, please review the high accuracy time sync document.
+-   The cumulative one-way network latency between the target and source must not exceed 100 ms. The cumulative network delay is measured by adding the individual one-way delays between pairs of NTP client-server nodes in the hierarchy starting with the target and ending at the source. For more information, please review the high accuracy time sync document.
 
 ### Target Accuracy: 50 Milliseconds
 
 All requirements outlined in the section **Target Accuracy: 1 Second** apply, except where stricter controls are outlined in this section.
 
-The additional requirements to achieve 50ms accuracy for a specific target system are:
+The other requirements to achieve 50 ms accuracy for a specific target system are:
 
--   The target computer must have better than 5ms of network latency between its time source.
+-   The target computer must have better than 5 ms of network latency between its time source.
 
 -   The target system must be no further than stratum 5 from a highly accurate time source
 
@@ -74,7 +74,7 @@ The additional requirements to achieve 50ms accuracy for a specific target syste
 
 All requirements outlined in the sections **Target Accuracy: 1 Second** and **Target Accuracy: 50 Milliseconds** apply, except where stricter controls are outlined in this section.
 
-The additional requirements to achieve 1 ms accuracy for a specific target system are:
+The other requirements to achieve 1 ms accuracy for a specific target system are:
 
 -   The target computer must have better than 0.1 ms of network latency between its time source
 

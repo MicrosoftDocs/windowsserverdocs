@@ -3,8 +3,8 @@ title: mkdir
 description: Reference article for the mkdir command, which creates a directory or subdirectory.
 ms.topic: reference
 ms.assetid: 033a57a2-5deb-4c98-aa78-61ce8df2a330
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,6 +1,7 @@
 ---
 title: iSCSI Target Server Scalability Limits
 TOCTitle: iSCSI Target Server Scalability Limits
+description: "Learn more about: iSCSI Target Server Scalability Limits"
 ms.topic: article
 author: JasonGerend
 manager: dougkim
@@ -10,7 +11,7 @@ ms.date: 09/11/2018
 
 # iSCSI Target Server Scalability Limits
 
-Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides the supported and tested Microsoft iSCSI Target Server limits on Windows Server. The following tables display the tested support limits and, where applicable, whether the limits are enforced.
 
@@ -18,10 +19,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -66,7 +67,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <td><p>Locally mounted virtual disks or snapshots per storage appliance</p></td>
 <td><p>32</p></td>
 <td><p>Yes</p></td>
-<td><p>Locally mounted virtual disks don&#39;t offer any iSCSI-specific functionality, and are deprecated - for more info, see <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>.</p></td>
+<td><p>Locally mounted virtual disks don&#39;t offer any iSCSI-specific functionality, and are deprecated - for more info, see <a href="/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)">Features Removed or Deprecated in Windows Server 2012 R2</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -75,10 +76,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -145,10 +146,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -226,10 +227,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -346,7 +347,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <td><p>Logical Unit shrink</p></td>
 <td><p>Yes (Windows Server 2012 R2 and newer only)</p></td>
 <td><p>N/A</p></td>
-<td><p>Use <a href="https://docs.microsoft.com/powershell/module/iscsitarget/resize-iscsivirtualdisk">Resize-iSCSIVirtualDisk</a> to shrink a LUN.</p></td>
+<td><p>Use <a href="/powershell/module/iscsitarget/resize-iscsivirtualdisk">Resize-iSCSIVirtualDisk</a> to shrink a LUN.</p></td>
 </tr>
 <tr class="even">
 <td><p>Logical Unit cloning</p></td>
@@ -361,9 +362,9 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -416,7 +417,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <tr class="odd">
 <td><p>Local mount</p></td>
 <td><p>Supported</p></td>
-<td><p>Locally mounted iSCSI virtual disks are deprecated - for more info, see <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>. Dynamic disk snapshots cannot be locally mounted.</p></td>
+<td><p>Locally mounted iSCSI virtual disks are deprecated - for more info, see <a href="/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)">Features Removed or Deprecated in Windows Server 2012 R2</a>. Dynamic disk snapshots cannot be locally mounted.</p></td>
 </tr>
 </tbody>
 </table>
@@ -437,7 +438,7 @@ The iSCSI Target Storage Provider is a role service in Windows Server 2016, Wind
 
 Note that if the iSCSI Target Server is hosted by a server running Windows Server 2012 R2 or newer and you want to use VSS or VDS from a remote server, the remote server has to also run the same version of Windows Server and have the iSCSI Target Storage Provider role service installed. Also note that on all versions of Windows you should install only one version of the iSCSI Target Storage Provider role service.
 
-For more info about the iSCSI Target Storage Provider, see [iSCSI Target Storage (VDS/VSS) Provider](/powershell/module/iscsi/?view=win10-ps).
+For more info about the iSCSI Target Storage Provider, see [iSCSI Target Storage (VDS/VSS) Provider](/powershell/module/iscsi/).
 
 ## Tested compatibility with iSCSI initiators
 
@@ -445,10 +446,10 @@ We've tested the iSCSI Target Server software with the following iSCSI initiator
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <tbody>
 <tr class="odd">

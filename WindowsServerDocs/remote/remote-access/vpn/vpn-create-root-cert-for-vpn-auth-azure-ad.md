@@ -3,14 +3,13 @@ title: Create root certificates for VPN authentication with Azure AD
 description: 'Azure AD uses the VPN certificate to sign certificates issued to Windows 10 clients when authenticating to Azure AD for VPN connectivity. The certificate marked as Primary is the Issuer that Azure AD uses.'
 ms.topic: article
 ms.date: 06/28/2019
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 # Step 7.2. Create conditional access root certificates for VPN authentication with Azure AD
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 - [**Next:** Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)

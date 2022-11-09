@@ -10,13 +10,13 @@ manager: dongill
 ---
 # License your RDS deployment with client access licenses (CALs)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Each user and device that connects to a Remote Desktop Session host needs a client access license (CAL). You use RD Licensing to install, issue, and track RDS CALs.
 
 When a user or a device connects to an RD Session Host server, the RD Session Host server determines if an RDS CAL is needed. The RD Session Host server then requests an RDS CAL from the Remote Desktop license server. If an appropriate RDS CAL is available from a license server, the RDS CAL is issued to the client, and the client is able to connect to the RD Session Host server and from there to the desktop or apps they're trying to use.
 
-There is a licensing grace period of 180 Days during which no license server is required. Once the grace period ends, clients must have a valid RDS CAL issued by a license server before they can log on to an RD Session Host server.
+There is a licensing grace period of 120 Days during which no license server is required. Once the grace period ends, clients must have a valid RDS CAL issued by a license server before they can log on to an RD Session Host server.
 
 Use the following information to learn about how client access licensing works in Remote Desktop Services and to deploy and manage your licenses:
 
@@ -58,22 +58,24 @@ The RDS CAL for your users or devices must be compatible with the version of Win
 
 The following table shows which RDS CAL and RD Session Host versions are compatible with each other.
 
-|                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL |
-|---------------------------------|--------|--------|--------|--------|
-| **2008, 2008 R2 session host** | Yes    | Yes    | Yes    | Yes     |
-| **2012 session host**         | No     | Yes    | Yes    | Yes    |
-| **2012 R2 session host**      | No     | Yes    | Yes    | Yes    |
-| **2016 session host**         | No     | No     | Yes    | Yes    |
-| **2019 session host**         | No     | No     | No     | Yes    |
+|                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL |
+|---------------------------------|--------|--------|--------|--------|--------|
+| **2008, 2008 R2 session host** | Yes    | Yes    | Yes    | Yes     | Yes     |
+| **2012 session host**         | No     | Yes    | Yes    | Yes    | Yes     |
+| **2012 R2 session host**      | No     | Yes    | Yes    | Yes    | Yes     |
+| **2016 session host**         | No     | No     | Yes    | Yes    | Yes     |
+| **2019 session host**         | No     | No     | No     | Yes    | Yes     |
+| **2022 session host**         | No     | No     | No     | No     | Yes     |
 
 You must install your RDS CAL on a compatible RD license server. Any RDS license server can host licenses from all previous versions of Remote Desktop Services and the current version of Remote Desktop Services. For example, a Windows Server 2016 RDS license server can host licenses from all previous versions of RDS, while a Windows Server 2012 R2 RDS license server can only host licenses up to Windows Server 2012 R2.
 
 The following table shows which RDS CAL and license server versions are compatible with each other.
 
-|                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL |
-|---------------------------------|--------|--------|--------|--------|
-| **2008, 2008 R2 license server** | Yes    | No   | No   | No    |
-| **2012 license server**         | Yes     | Yes    | No   | No    |
-| **2012 R2 license server**      | Yes     | Yes    | No   | No    |
-| **2016 license server**         | Yes     | Yes    | Yes   | No    |
-| **2019 license server**         | Yes     | Yes    | Yes  | Yes   |
+|                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL | RDS 2022 CAL |
+|---------------------------------|--------|--------|--------|--------|--------|
+| **2008, 2008 R2 license server** | Yes    | No   | No   | No    | No    |
+| **2012 license server**         | Yes     | Yes    | No   | No    | No    |
+| **2012 R2 license server**      | Yes     | Yes    | No   | No    | No    |
+| **2016 license server**         | Yes     | Yes    | Yes   | No    | No    |
+| **2019 license server**         | Yes     | Yes    | Yes  | Yes   | No    |
+| **2022 license server**         | Yes     | Yes    | Yes  | Yes   | Yes   |

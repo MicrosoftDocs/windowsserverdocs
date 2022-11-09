@@ -4,12 +4,13 @@ description: Describes common issues that may occur during the KMS activation pr
 ms.topic: troubleshooting
 ms.date: 10/3/2019
 author: Teresa-Motiv
-ms.author: v-tea
+ms.author: wscontent
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # KMS activation: known issues
+
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806237" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common issues related to KMS and MAK activation</span>
 
 This article describes common questions and issues that can arisse during Key Management Service (KMS) activations, and provides guidance for addressing the issues.
 
@@ -28,7 +29,7 @@ On the KMS client computer, open the **System** control panel, and look for the 
 
 ## The KMS client computer does not activate
 
-Verify that the KMS activation threshold is met. On the KMS host computer, run Slmgr.vbs and use the **/dli** command-line option to determine the host’s current count. Until the KMS host has a count of 25, Windows 7 client computers cannot be activated. Windows Server 2008 R2 KMS clients require a KMS count of 5 for activation. For more information about KMS requirements, see the [Volume Activation Planning Guide](https://go.microsoft.com/fwlink/?linkid=155926).
+Verify that the KMS activation threshold is met. On the KMS host computer, run Slmgr.vbs and use the **/dli** command-line option to determine the host’s current count. Until the KMS host has a count of 25, Windows 7 client computers cannot be activated. Windows Server 2008 R2 KMS clients require a KMS count of 5 for activation. For more information about KMS requirements, see the [Volume Activation Planning Guide](/previous-versions/tn-archive/dd878528(v=technet.10)).
 
 On the KMS client computer, look in the Application event log for event ID 12289. Check this event for the following information:
 
@@ -79,4 +80,4 @@ KMS keys should be installed only on KMS hosts, not on KMS clients. Run **slmgr.
 
 If a KMS host fails, you must install a KMS host key on a new host and then activate the host. Make sure that the new KMS host has an SRV RR in the DNS database. If you install the new KMS host using the same computer name and IP address as the failed KMS host, the new KMS host can use the DNS SRV record of the failed host. If the new host has a different computer name, you can manually remove the DNS SRV RR of the failed host or (if scavenging is enabled in DNS) let DNS automatically remove it. If the network is using DDNS, the new KMS host automatically creates a new SRV RR on the DNS server. The new KMS host then starts collecting client renewal requests and begins activating clients as soon as the KMS activation threshold is met.
 
-If your KMS clients use auto-discovery, they automatically select another KMS host if the original KMS host does not respond to renewal requests. If the clients do not use auto-discovery, you must manually update the KMS client computers that were assigned to the failed KMS host by running **slmgr.vbs /skms**. To avoid this scenario, configure the KMS clients to use auto-discovery. For more information, see the [Volume Activation Deployment Guide](https://go.microsoft.com/fwlink/?linkid=150083).
+If your KMS clients use auto-discovery, they automatically select another KMS host if the original KMS host does not respond to renewal requests. If the clients do not use auto-discovery, you must manually update the KMS client computers that were assigned to the failed KMS host by running **slmgr.vbs /skms**. To avoid this scenario, configure the KMS clients to use auto-discovery. For more information, see the [Volume Activation Deployment Guide](/previous-versions/tn-archive/dd772269(v=technet.10)).

@@ -1,11 +1,11 @@
 ---
 title: "Install and Configure Windows Server Essentials or Windows Server Essentials Experience"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to install and configure Windows Server Essentials or the Essentials Experience role on Windows Server 2016.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -49,7 +49,7 @@ Before you install Windows Server Essentials or the Essentials Experience role, 
 ## Before you begin
  Before you begin the installation, review the following documentation:
 
--   [Windows Server Essentials Product Overview](https://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)
+-   [Get started with Windows Server Essentials](/windows-server-essentials/get-started/get-started)
 
 
 -   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)

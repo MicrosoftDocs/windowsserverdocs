@@ -1,15 +1,16 @@
 ---
 title: Step 1 Configure the Remote Access Infrastructure
-description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
+description: Learn how to configure the infrastructure that is required for an advanced Remote Access deployment using a single Remote Access server in a mixed IPv4 and IPv6 environment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 1 Configure the Remote Access Infrastructure
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 
@@ -28,7 +29,7 @@ This topic describes how to configure the infrastructure that is required for an
 |Configure the network location server|Configure the network location server, including installing the network location server website certificate.|
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_ConfigNetworkSettings"></a>Configure server network settings
 Depending on if you decide to place the Remote Access server at the edge or behind a Network Address Translation (NAT) device, the following network interface address settings are required for a single server deployment in an environment with IPv4 and IPv6. All IP addresses are configured by using **Change adapter settings** in the **Windows Networking and Sharing Center**.
@@ -429,7 +430,7 @@ Whether you use a private certificate or a self-signed certificate, they require
 
     This step is not required if the network location server website is hosted on the Remote Access server.
 
-3.  Set up a CRL site that hass high availability on the internal network.
+3.  Set up a CRL site that has high availability on the internal network.
 
     CRL distribution points can be accessed through:
 

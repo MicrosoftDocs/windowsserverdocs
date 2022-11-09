@@ -1,21 +1,21 @@
 ---
 title: Supported Oracle Linux virtual machines on Hyper-V
-description: Lists the Linux integration services and features included in each version
-manager: dongill
+description: Lists the Oracle Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
-author: shirgall
-ms.author: kathydav
-ms.date: 06/05/2020
+ms.author: kkashanjat
+author: kkkashan
+ms.date: 01/08/2021
 ---
 # Supported Oracle Linux virtual machines on Hyper-V
 
->Applies To: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 The following feature distribution map indicates the features that are present in each version. The known issues and workarounds for each distribution are listed after the table.
 
 In this section:
 
+* [Oracle Linux 9.x Series](#oracle-linux-9x-series)
 * [Oracle Linux 8.x Series](#oracle-linux-8x-series)
 * [Oracle Linux 7.x Series](#oracle-linux-7x-series)
 * [Oracle Linux 6.x Series](#oracle-linux-6x-series)
@@ -27,15 +27,55 @@ In this section:
 
 * &#10004; - Feature available
 * (*blank*) - Feature not available
-* **RHCK** - Red Hat Compatable Kernel
+* **RHCK** - Red Hat Compatible Kernel
 * **UEK** - Unbreakable Enterprise Kernel (UEK)
    * UEK4 - built on upstream Linux Kernel release 4.1.12
    * UEK5 - built on upstream Linux Kernel release 4.14
    * UEK6 - built on upstream Linux Kernel release 5.4
 
+## Oracle Linux 9.x Series
+
+|       **Feature**     |       **Windows Server version**      |       **9.0 (RHCK)** |
+|-----------------------|---------------------------------------|-------------------|
+|       **Availability**        |   |
+|       **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019, 2016, 2012 R2 | &#10004; |
+|       Windows Server 2016 Accurate Time       | 2019, 2016 | &#10004; |
+|       **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |
+|       Jumbo frames        | 2019, 2016, 2012 R2 | &#10004; |
+|       VLAN tagging and trunking       | 2019, 2016, 2012 R2 | &#10004;  |
+|       Live Migration      | 2019, 2016, 2012 R2 | &#10004; |
+|       Static IP Injection     |  2019, 2016, 2012 R2 | &#10004; Note 2 |
+|       vRSS     | 2019, 2016, 2012 R2 | &#10004; |
+|       TCP Segmentation and Checksum Offloads | 2019, 2016, 2012 R2 | &#10004;|
+|       SR-IOV  | 2019, 2016 |  &#10004;   |
+|       **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |
+|       VHDX resize  | 2019, 2016, 2012 R2 | &#10004; |
+|       Virtual Fibre Channel | 2019, 2016, 2012 R2 | &#10004; Note 3  |
+|       Live virtual machine backup  | 2019, 2016, 2012 R2 | &#10004; Note 5 |
+|       TRIM support | 2019, 2016, 2012 R2 | &#10004;  |
+|       SCSI WWN | 2019, 2016, 2012 R2 | &#10004;  |
+|       **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |
+|       PAE Kernel Support  | 2019, 2016, 2012 R2 |  N/A |
+|       Configuration of MMIO gap  | 2019, 2016, 2012 R2 | &#10004; |
+|       Dynamic Memory - Hot-Add | 2019, 2016, 2012 R2  | &#10004; Note 7, 8, 9 |
+|       Dynamic Memory - Ballooning | 2019, 2016, 2012 R2 | &#10004; Note 7, 8, 9 |
+|       Runtime Memory Resize | 2019, 2016  | &#10004;  |
+|       **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | |
+|       Hyper-V-specific video device | 2019, 2016, 2012 R2 | &#10004;   |
+|       **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | |
+|       Key-Value Pair  | 2019, 2016, 2012 R2 | &#10004;   |
+|       Non-Maskable Interrupt | 2019, 2016, 2012 R2 | &#10004;  |
+|       File copy from host to guest | 2019, 2016, 2012 R2 | &#10004;  |
+|       lsvmbus command | 2019, 2016, 2012 R2 | &#10004;  |
+|       Hyper-V Sockets | 2019, 2016 | &#10004;  |
+|       PCI Passthrough/DDA | 2019, 2016 | &#10004; |
+| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** | |  |
+|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 12  |
+|       Secure boot | 2019, 2016 |  &#10004; |
+
 ## Oracle Linux 8.x Series
 
-|       **Feature**     |       **Windows Server version**      |       **8.0-8.1 (RHCK)** |
+|       **Feature**     |       **Windows Server version**      |       **8.0-8.5 (RHCK)** |
 |-----------------------|---------------------------------------|-------------------|
 |       **Availability**        |   |
 |       **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019, 2016, 2012 R2 | &#10004; |
@@ -1349,7 +1389,7 @@ This series only has 64-bit kernels.
 
 See Also
 
-* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

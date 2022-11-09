@@ -1,15 +1,16 @@
 ---
 title: Deploy BranchCache
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to deploy BranchCache in distributed and hosted cache modes.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Deploy BranchCache
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following sections provide information about deploying BranchCache in distributed and hosted cache modes.
 

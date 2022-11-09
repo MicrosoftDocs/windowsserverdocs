@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD FS 2016 Deployment Guide"
 ms.assetid: eb047a19-e5cb-43f4-a7bb-c4b7c8fc55a5
 title: AD FS Deployment Guide
 author: billmath

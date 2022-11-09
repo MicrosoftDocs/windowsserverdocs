@@ -31,9 +31,9 @@ If redirection is not occurring there are a few things you want to check
 
 3. Finally, you want to check [DNS](ad-fs-tshoot-dns.md) and make sure that your AD FS servers or WAP servers are resolving from the internet.  Verify that this resolves and that you are able to navigate to it.
 
-4. You can also use the PowerShell cmdlt `Get-AzureADDomain` to get this information also.
+4. You can also use the PowerShell cmdlet `Get-AzureADDomain` to get this information also.
 
-   ![PowerShell cmdlet screen](media/ad-fs-tshoot-azure/azure6.png)
+   ![Screenshot of the PowerShell window showing the results of the Get-AzureADDomain command.](media/ad-fs-tshoot-azure/azure6.png)
 
 ### You are receiving an Unknown Auth method error
 You may encounter an "Unknown Auth method” error stating that AuthnContext is not supported at the AD FS or STS level when you are redirected from Azure.
@@ -118,7 +118,7 @@ After AD FS issues a token, Azure AD may throw an error. In this situation, chec
 
 To get the User attribute value in Azure AD, run the following command line: `Get-AzureADUser –UserPrincipalName <UPN>`
 
-![PowerShell cmdlet screen](media/ad-fs-tshoot-azure/azure5.png)
+![Screenshot of the PowerShell window showing the results of the Get-AzureADUser command.](media/ad-fs-tshoot-azure/azure5.png)
 
    - SAML 2.0:
        - IDPEmail: The value of this claim should match the user principal name of the users in Azure AD.

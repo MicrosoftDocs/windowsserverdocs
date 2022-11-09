@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Reviewing OU Design Concepts"
 ms.assetid: 41b56704-c6f9-4d29-af97-62123e300565
 title: Reviewing OU Design Concepts
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Reviewing OU Design Concepts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The organizational unit (OU) structure for a domain includes the following:
 

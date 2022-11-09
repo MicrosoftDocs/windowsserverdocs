@@ -1,16 +1,15 @@
 ---
 title: Plan for Hyper-V on Windows Server 2016
 description: Gives links to articles on planning considerations for Hyper-V
-manager: dongill
 ms.topic: article
 ms.assetid: fba1e964-3ac3-4852-83dc-eb20752765fd
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/21/2019
 ---
 # Plan for Hyper-V on Windows Server
 
->Applies To: Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 Use these resources to help you plan your Hyper-V deployment.
 

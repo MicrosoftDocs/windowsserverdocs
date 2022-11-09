@@ -1,9 +1,9 @@
 ---
 title: DHCP (Dynamic Host Configuration Protocol) Basics
-description:
+description: "Learn more about: DHCP (Dynamic Host Configuration Protocol) Basics"
 manager: dcscontentpm
 ms.date: 5/26/2020
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 ms.reviewer:
@@ -385,7 +385,7 @@ DHCP: NACK (xid=74A005CE)
 
 ```
 
-The client will then begin the discover process, but the DHCPDISCOVER packet will still attempt to lease the same address. In many instances, tth client will get the same address but may not.
+The client will then begin the discover process, but the DHCPDISCOVER packet will still attempt to lease the same address. In many instances, the client will get the same address but may not.
 
 ```
 

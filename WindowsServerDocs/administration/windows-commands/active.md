@@ -3,8 +3,8 @@ title: active
 description: Reference article for the active command, which on basic disks, marks the partition with focus as active.
 ms.topic: reference
 ms.assetid: 1f25da2e-87fc-4392-a7ee-f38d09b7873c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

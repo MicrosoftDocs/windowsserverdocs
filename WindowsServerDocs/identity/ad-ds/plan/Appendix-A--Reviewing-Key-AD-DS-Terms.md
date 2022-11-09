@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Appendix A: Reviewing Key AD DS Terms"
 ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Appendix A - Reviewing Key AD DS Terms
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Appendix A: Reviewing Key AD DS Terms
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following terms are relevant to the deployment process for  Windows Server 2008  Active Directory Domain Services (AD DS).
 

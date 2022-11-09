@@ -1,15 +1,16 @@
 ---
 title: Deploy Remote Access with OTP Authentication
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to configure a Remote Access server with DirectAccess enabled to authenticate DirectAccess client users with two-factor one-time password authentication.
 manager: brianlic
 ms.topic: article
 ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Deploy Remote Access with OTP Authentication
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service \(RRAS\) VPN into a single Remote Access role.
 
@@ -38,9 +39,9 @@ The OTP authentication scenario includes a number of steps:
 
 2.  [Plan Remote Access with OTP Authentication](./plan/plan-remote-access-with-otp-authentication.md). In addition to the planning required for a single server, OTP requires planning for a Microsoft certification authority \(CA\) and certificate templates for OTP; and a RADIUS\-enabled OTP server. Planning might also include a requirement for security groups to exempt specific users from strong \(OTP or smart card\) authentication. For information regarding the configuration of OTP in a multi\-forest environment, see [Configure a Multi-Forest Deployment](../../ras/multi-forest/Configure-a-Multi-Forest-Deployment.md).
 
-3.  [Configure DirectAccess with OTP Authentication](/configure/Configure-RA-with-OTP-Authentication.md). OTP deployment consists of a number of configuration steps, including preparing the infrastructure for OTP authentication, configuring the OTP server, configuring OTP settings on the Remote Access server, and updating DirectAccess client settings.
+3.  [Configure DirectAccess with OTP Authentication](./configure/Configure-RA-with-OTP-Authentication.md). OTP deployment consists of a number of configuration steps, including preparing the infrastructure for OTP authentication, configuring the OTP server, configuring OTP settings on the Remote Access server, and updating DirectAccess client settings.
 
-4.  [Troubleshoot an OTP Deployment]((/troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.
+4.  [Troubleshoot an OTP Deployment](./troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.
 
 ## <a name="BKMK_APP"></a>Practical applications
 Increase security-Using OTP increases the security of your DirectAccess deployment. A user requires OTP credentials in order to gain access to the internal network. A user supplies OTP credentials via the Workplace Connections available in the network connections on the Windows 10 or Windows 8 client computer, or by using DirectAccess Connectivity Assistant \(DCA\) on client computers running Windows 7. The OTP authentication process works as follows:
@@ -89,7 +90,7 @@ There are a number of requirements for this scenario:
 
     3.  Security group-To exempt users from strong authentication, an Active Directory security group containing these users is required.
 
-    4.  Client\-side requirements-For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. This is available as a download on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29039).
+    4.  Client\-side requirements-For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. Learn how to [Install and Configure Advanced DirectAccess](/windows-server/remote/remote-access/directaccess/single-server-advanced/install-and-configure-advanced-directaccess).
 
     5.  Note the following:
 

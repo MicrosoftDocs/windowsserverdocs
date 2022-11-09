@@ -4,12 +4,14 @@ description: This topic provides an overview of the Core Network Guide, which al
 manager: brianlic
 ms.topic: article
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
+
 # Core network guidance for Windows Server
 
->Applies to: Windows Server, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server, Windows Server 2016
 
 This topic provides an overview of the Core network guidance for Windows Server&reg; 2016, and contains the following sections.
 

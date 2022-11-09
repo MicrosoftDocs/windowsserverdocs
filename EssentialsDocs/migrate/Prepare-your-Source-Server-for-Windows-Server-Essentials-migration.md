@@ -1,11 +1,11 @@
 ---
 title: "Prepare your Source Server for Windows Server Essentials migration1"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the preliminary steps to complete to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -69,7 +69,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 
 ###### To use the Windows Server Solutions BPA to analyze your Source Server
 
-1. Download and install the [Windows Server Solutions Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15556) at the Microsoft Download Center.
+1. Download and install the Windows Server Solutions Best Practices Analyzer at the Microsoft Download Center.
 
 2. After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.
 
@@ -140,11 +140,9 @@ Complete the following preliminary steps to ensure that the settings and data on
 
    Before you can install Windows Update Agent on the Source Server, you must first install Windows PowerShell 2.0 and Microsoft Baseline Configuration Analyzer 2.0.
 
--   To download and install Windows PowerShell 2.0, see [article 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) in the Microsoft Knowledge Base.
-
 -   To download and install Microsoft Baseline Configuration Analyzer 2.0, see the [Microsoft Baseline Configuration Analyzer 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center.
 
--   To download and install the latest version of Windows Update Agent, see [article 949104](https://go.microsoft.com/fwlink/p/?LinkId=237493) in the Microsoft Knowledge Base.
+-   To download and install the latest version of Windows Update Agent, see [article 949104](/troubleshoot/windows-client/deployment/update-windows-update-agent) in the Microsoft Knowledge Base.
 
 ##### To install and run the Migration Preparation Tool on the Source Server
 
@@ -161,7 +159,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 3. In the Migration Preparation Tool, select **I have a backup and am ready to proceed**, and then click **Next**.
 
    > [!WARNING]
-   >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.
+   >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](/troubleshoot/windows-server/deployment/cannot-install-updates-programs) in the Microsoft Knowledge Base.
 
     The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.
 

@@ -3,8 +3,8 @@ title: prompt
 description: Reference article for the prompt command, which customizes your Cmd.exe command prompt.
 ms.topic: reference
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---

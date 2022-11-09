@@ -3,7 +3,7 @@ title: Top support solutions for Windows Server
 description: Get links to solutions for Windows Server issues
 manager: alant
 ms.date: 03/16/2018
-ms.topic: article
+ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: elizapo
 ---
@@ -15,7 +15,7 @@ Microsoft regularly releases both updates and solutions for Windows Server. To e
 These are the top Microsoft Support solutions for the most common issues experienced when using Windows Server 2016. The links below include links to KB articles, updates, and library articles.
 
 >[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
 ## Solutions for installing or upgrading Windows Server
 
@@ -41,7 +41,7 @@ These are the top Microsoft Support solutions for the most common issues experie
 ## Solutions related to DCPromo and installing domain controllers
 - [Active Directory and Active Directory Domain Services Port Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
 - [Active Directory Firewall Ports – Let's Try To Make This Simple](http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/)
-- [Exchange Server support for Windows Server 2016](/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019)
+- [Exchange Server support for Windows Server 2016](/Exchange/plan-and-deploy/supportability-matrix)
 - [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](https://support.microsoft.com/kb/255504)
 - [Troubleshooting Domain Controller Deployment](../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md)
 - [Troubleshooting Active Directory Installation Wizard Problems](/previous-versions/windows/it-pro/windows-2000-server/bb727058(v=technet.10))

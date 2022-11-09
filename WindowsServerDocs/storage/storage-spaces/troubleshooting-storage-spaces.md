@@ -5,12 +5,11 @@ ms.author: kaushika
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
-ms.localizationpriority: medium
 ---
 
 # Troubleshoot Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following information to troubleshoot your Storage Spaces Direct deployment.
 
@@ -50,7 +49,7 @@ To fix this issue, follow these steps:
 1. Remove the affected Virtual Disks from CSV. This will put them in the "Available storage" group in the cluster and start showing as a ResourceType of "Physical Disk."
 
    ```powershell
-   Remove-ClusterSharedVolume -name "VdiskName"
+   Remove-ClusterSharedVolume -name "CSV Name"
    ```
 2. On the node that owns the Available Storage group, run the following command on every disk that's in a No Redundancy state. To identify which node the "Available Storage" group is on you can run the following command.
 
@@ -59,8 +58,8 @@ To fix this issue, follow these steps:
    ```
 3. Set the disk recovery action and then start the disk(s).
    ```powershell
-   Get-ClusterResource "VdiskName" | Set-ClusterParameter -Name DiskRecoveryAction -Value 1
-   Start-ClusterResource -Name "VdiskName"
+   Get-ClusterResource "Physical Disk Resource Name" | Set-ClusterParameter -Name DiskRecoveryAction -Value 1
+   Start-ClusterResource -Name "Physical Disk Resource Name"
    ```
 4. A repair should automatically start. Wait for the repair to finish. It may go into a suspended state and start again. To monitor the progress:
     - Run **Get-StorageJob** to monitor the status of the repair and to see when it is completed.
@@ -68,18 +67,18 @@ To fix this issue, follow these steps:
 5. After the repair finishes and the Virtual Disks are Healthy, change the Virtual Disk parameters back.
 
    ```powershell
-    Get-ClusterResource "VdiskName" | Set-ClusterParameter -Name DiskRecoveryAction -Value 0
+    Get-ClusterResource "Physical Disk Resource Name" | Set-ClusterParameter -Name DiskRecoveryAction -Value 0
    ```
 6. Take the disk(s) offline and then online again to have the DiskRecoveryAction take effect:
 
    ```powershell
-   Stop-ClusterResource "VdiskName"
-   Start-ClusterResource "VdiskName"
+   Stop-ClusterResource "Physical Disk Resource Name"
+   Start-ClusterResource "Physical Disk Resource Name"
    ```
 7. Add the affected Virtual Disks back to CSV.
 
    ```powershell
-   Add-ClusterSharedVolume -name "VdiskName"
+   Add-ClusterSharedVolume -name "Physical Disk Resource Name"
    ```
 
 **DiskRecoveryAction** is an override switch that enables attaching the Space volume in read-write mode without any checks. The property enables you to do diagnostics into why a volume won't come online. It's very similar to Maintenance Mode but you can invoke it on a resource in a Failed state. It also lets you access the data, which can be helpful in situations such as "No Redundancy," where you can get access to whatever data you can and copy it. The DiskRecoveryAction property was added in the February 22, 2018, update, KB 4077525.
@@ -149,13 +148,13 @@ To fix this issue, follow these steps:
 1. Remove the affected Virtual Disks from CSV.
 
    ```powershell
-   Remove-ClusterSharedVolume -name "VdiskName"
+   Remove-ClusterSharedVolume -name "CSV Name"
    ```
 2. Run the following commands on every disk that's not coming online.
 
    ```powershell
-   Get-ClusterResource -Name "VdiskName" | Set-ClusterParameter DiskRunChkDsk 7
-   Start-ClusterResource -Name "VdiskName"
+   Get-ClusterResource -Name "Physical Disk Resource Name" | Set-ClusterParameter DiskRunChkDsk 7
+   Start-ClusterResource -Name "Physical Disk Resource Name"
    ```
 3. Run the following command on every node in which the detached volume is online.
 
@@ -174,20 +173,20 @@ To fix this issue, follow these steps:
 4. As soon as the "Data Integrity Scan for Crash Recovery" is finished, the repair finishes and the Virtual Disks are Healthy, change the Virtual Disk parameters back.
 
    ```powershell
-   Get-ClusterResource -Name "VdiskName" | Set-ClusterParameter DiskRunChkDsk 0
+   Get-ClusterResource -Name "Physical Disk Resource Name" | Set-ClusterParameter DiskRunChkDsk 0
    ```
 
 5. Take the disk(s) offline and then online again to have the DiskRecoveryAction take effect:
 
    ```powershell
-   Stop-ClusterResource "VdiskName"
-   Start-ClusterResource "VdiskName"
+   Stop-ClusterResource "Physical Disk Resource Name"
+   Start-ClusterResource "Physical Disk Resource Name"
    ```
 
 6. Add the affected Virtual Disks back to CSV.
 
    ```powershell
-   Add-ClusterSharedVolume -name "VdiskName"
+   Add-ClusterSharedVolume -name "Physical Disk Resource Name"
    ```
    **DiskRunChkdsk value 7** is used to attach the Space volume and have the partition in read-only mode. This enables Spaces to self-discover and self-heal by triggering a repair. Repair will run automatically once mounted. It also allows you to access the data, which can be helpful to get access to whatever data you can to copy. For some fault conditions, such as a full DRT log, you need to run the Data Integrity Scan for Crash Recovery scheduled task.
 
@@ -198,7 +197,7 @@ For more information, see [Troubleshooting Storage Spaces Direct health and oper
 ## Event 5120 with STATUS_IO_TIMEOUT c00000b5
 
 > [!Important]
-> **For Windows Server 2016:** To reduce the chance of experiencing these symptoms while applying the update with the fix, it is recommended to use the Storage Maintenance Mode procedure below to install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version when the nodes currently have installed a Windows Server 2016 cumulative update that was released from [May 8, 2018](https://support.microsoft.com/help/4103723) to [October 9, 2018](https://support.microsoft.com/help/KB4462917).
+> **For Windows Server 2016:** To reduce the chance of experiencing these symptoms while applying the update with the fix, it is recommended to use the Storage Maintenance Mode procedure below to install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version when the nodes currently have installed a Windows Server 2016 cumulative update that was released from [May 8, 2018](https://support.microsoft.com/help/4103723) to [October 9, 2018](https://support.microsoft.com/help/4462917).
 
 You might get event 5120 with STATUS_IO_TIMEOUT c00000b5 after you restart a node on Windows Server 2016 with cumulative update that were released from [May 8, 2018 KB 4103723](https://support.microsoft.com/help/4103723) to [October 9, 2018 KB 4462917](https://support.microsoft.com/help/4462917) installed.
 
@@ -411,6 +410,7 @@ In a Windows Server 2016 Storage Spaces Direct cluster, you might see the Health
 "Removing from Pool" is an intent set when **Remove-PhysicalDisk** is called but stored in Health to maintain state and allow recovery if the remove operation fails. You can manually change the OperationalStatus to Healthy with one of the following methods:
 
 - Remove the physical disk from the pool, and then add it back.
+- Import-Module Clear-PhysicalDiskHealthData.ps1
 - Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. (Available for download as a .TXT file. You'll need to save it as a .PS1 file before you can run it.)
 
 Here are some examples showing how to run the script:
@@ -454,4 +454,4 @@ We've identified a critical issue that affects some Storage Spaces Direct users 
 >[!NOTE]
 > Individual OEMs may have devices that are based on the Intel P3x00 family of NVMe devices with unique firmware version strings. Contact your OEM for more information of the latest firmware version.
 
-If you are using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8). This [Microsoft Support article](https://support.microsoft.com/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) provides additional information about this issue.
+If you are using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8).

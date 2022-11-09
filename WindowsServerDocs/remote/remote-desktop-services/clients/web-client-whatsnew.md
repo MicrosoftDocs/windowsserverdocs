@@ -3,24 +3,62 @@ title: What's new in the web client
 description: Learn about recent changes to the Remote Desktop web client
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 09/02/2020
-ms.localizationpriority: medium
+ms.date: 03/24/2022
 ---
 # What's new in the web client
 
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 > [!NOTE]
-> We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Windows Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+> We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Azure Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+
+## Updates for version 1.0.27.0
+
+*Date published: March 24, 2022*
+
+- Added Web client keyboard shortcuts for switching between programs. For more information, see [Keyboard shortcuts](remote-desktop-web-client.md#web-client-keyboard-shortcuts).
+- The client now supports native resolution on high-DPI devices. For more information, see [Enable native display resolution in remote sessions](remote-desktop-web-client.md#enable-native-display-resolution-in-remote-sessions).
+- Updated full screen mode icon behavior to disable the icon when you press the F11 key to enter full screen mode.  
+- Removed support for Internet Explorer and other deprecated browsers.  
+- Fixed an issue where some keys weren’t working correctly on the Japanese keyboard layout.
+- Bug fixes and security improvements for file transfer.
+
+## Updates for version 1.0.26.0
+
+*Date published: December 12th, 2021*
+
+- Bug fixes.
+- This is the final version of the client that supports Internet Explorer 11 and WinXP.
+
+## Updates for version 1.0.25.0
+
+*Date published: 7/22/2021*
+
+- Client now has web assembly on supported browsers. 
+- Added file transfer support.
+- Bug fixes.
+
+## Updates for 1.0.24.0
+*Date published: 1/6/2021*
+
+>[!IMPORTANT]
+> Version 1.0.24.0 includes an important security fix. We have removed earlier versions of the web client containing this bug. 
+
+- Added support for redirecting local microphone input to the remote session.
+- Fixed issues with **AltGr** and several other keyboard bugs.
+- Accessibility improvements.
 
 ## Updates for 1.0.22.0
 *Date published: 9/2/2020*
 
+> [!IMPORTANT]
+> In version 1.0.22.0, we introduced a regression that impacts some Chromebook operating systems. Users on impacted operating systems won't be able to connect to a remote session using the web client. We're currently investigating this issue and will release a new version of the web client as soon as we fix this regression. 
+
 - Users can now move the minimized menu.
 - Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
-- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Windows Virtual Desktop with the web client](/azure-docs/articles/virtual-desktop/connect-web.md).
+- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Azure Virtual Desktop with the web client](/azure/virtual-desktop/connect-web).
 - Changed the **All Resources** page UI.
 - Fixed several connection sequence failures where web client returned a *General Protocol Error*.
 - Fixed keyboard input issues where specific key sequences were not handled appropriately.

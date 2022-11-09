@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Understanding Key AD FS Concepts"
 ms.assetid: 204f5fe9-3611-4da0-b057-a386004b4598
 title: Understanding Key Active Directory Federation Services Concepts
 author: billmath

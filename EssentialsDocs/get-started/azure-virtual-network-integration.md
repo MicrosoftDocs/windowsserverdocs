@@ -1,11 +1,11 @@
 ---
 title: "Azure Virtual network integration"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about Azure Virtual network integration that enables you to create point-to-point (P2P) or site-to-site (S2S) virtual private networks.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d7d38505-cff5-4f15-9fd5-ae6dba15ce88
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 

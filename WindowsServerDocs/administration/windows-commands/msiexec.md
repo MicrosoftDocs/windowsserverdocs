@@ -3,8 +3,8 @@ title: msiexec
 description: Reference article for the msiexec command, which provides the means to install, modify, and perform operations on Windows Installer from the command line.
 ms.topic: reference
 ms.assetid: 122eb0ce-ecbc-4909-a52a-15c3413619af
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

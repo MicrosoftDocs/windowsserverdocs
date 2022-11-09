@@ -4,8 +4,9 @@ description: You can use this topic to install Network Policy Server (NPS) by us
 manager: brianlic
 ms.topic: article
 ms.assetid: 4842a4ab-70bb-4744-bea7-70f2ac892ad1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Install Network Policy Server

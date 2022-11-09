@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Name Resolution for Perimeter and Internet Clients"
 ms.assetid: 1a6740e6-5b6d-41f8-9ec4-32cdbee3e1bb
 title: Name Resolution for Perimeter and Internet Clients
 author: billmath
@@ -26,7 +27,7 @@ So that client computers on the Internet can successfully access a federation se
 > [!NOTE]
 > It is assumed that you are using a DNS server running Windows 2000 Server, Windows Server 2003, or  Windows Server 2008  with the DNS Server service to control the Internet DNS zone.
 
-Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To add a host \(A\) resource record to the Internet DNS zone for a federation server proxy
 
@@ -46,7 +47,7 @@ So that Internet client requests can be processed successfully by the federation
 > [!NOTE]
 > It is assumed that you are using a DNS server running Windows 2000 Server, Windows Server 2003,  Windows Server 2008 , or Windows Server&reg; 2012 with the DNS Server service to control the perimeter DNS zone.
 
-Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To add a host \(A\) resource record to the perimeter DNS zone for a federation server proxy
 
@@ -64,4 +65,3 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)
 
 [Name Resolution Requirements for Federation Server Proxies](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807055(v=ws.11))
-

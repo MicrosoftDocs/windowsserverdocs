@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Web Application Proxy in Windows Server 2016"
 ms.assetid: d8adcb68-18e0-41bf-a817-d57344bf2e7d
 title: Web Application Proxy in Windows Server 2016
 ms.author: kgremban
-author: eross-msft
+author: JasonGerend
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Web Application Proxy in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
 

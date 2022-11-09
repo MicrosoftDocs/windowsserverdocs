@@ -1,15 +1,16 @@
 ---
 title: DNS Policy Scenario Guide
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to use DNS policy to control how a DNS server processes name resolution queries based on different parameters that you define in policies.
 manager: brianlic
 ms.topic: article
 ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # DNS Policy Scenario Guide
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This guide is intended for use by DNS, network, and systems administrators.
 

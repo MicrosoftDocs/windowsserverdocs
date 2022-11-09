@@ -4,13 +4,14 @@ description: This topic provides an overview of network policy access permission
 manager: brianlic
 ms.topic: article
 ms.assetid: d6d1ca5e-bde0-4509-9e14-dc3fa9ff447e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Access Permission
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Access permission is configured on the **Overview** tab of each network policy in Network Policy Server (NPS).
 

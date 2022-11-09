@@ -3,8 +3,8 @@ title: bitsadmin getaclflags
 description: Reference article for the bitsadmin getaclflags command, which retrieves the access control list (ACL) propagations flags.
 ms.topic: reference
 ms.assetid: 99266def-7479-4430-a61c-98ec433fa88b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

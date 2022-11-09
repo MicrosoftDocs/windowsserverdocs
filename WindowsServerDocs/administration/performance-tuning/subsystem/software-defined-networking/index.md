@@ -15,7 +15,7 @@ Software Defined Networking (SDN) in Windows Server 2016 is made up of a combina
 
 The network controller is a Windows Server role which must be enabled on Virtual Machines running on hosts that are configured to use SDN and are controlled by the network controller.
 
-Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan a Software Defined Network Infrastructure](../../../../networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md) topic.
+Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure) topic.
 
 ### SDN Quality of Service (QoS)
 

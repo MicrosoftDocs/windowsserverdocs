@@ -1,16 +1,18 @@
 ---
 title: Troubleshoot problems on the DHCP server
-description: This artilce introduces how to troubleshoot problems on the DHCP server and collect data.
+description: This article introduces how to troubleshoot problems on the DHCP server and collect data.
 manager: dcscontentpm
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 ---
 # Troubleshoot problems on the DHCP server
 
-This article discusses how to troubleshoot problems that occur on the
-DHCP server.
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806271" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DHCP issues.
+
+This article discusses how to troubleshoot problems that occur on the DHCP server.
 
 ## Troubleshooting checklist
 
@@ -26,7 +28,7 @@ Check the following settings:
 
   - Check whether any devices on the network have static IP addresses that have not been excluded from the DHCP scope.
 
-  - Verify that the IP address to which DHCP server is bound is within the subnet of the scopes from which IP addresses must be leased out. This is in case no relay agent is available. To do this, run the **Get-DhcpServerv4Binding** or **Get-DhcpServerv6Binding** cmdlet.
+  - Verify that the DHCP server is bound to at least one IP address, and that this is within the subnet of the scopes from which IP addresses must be leased out (unless using DHCP relay). To do this, run the **Get-DhcpServerv4Binding** or **Get-DhcpServerv6Binding** cmdlet.  Server connection bindings are configured in the DHCP server management console under IPv4 / IPv6 Advanced Properties.
 
   - Verify that only the DHCP server is listening on UDP port 67 and 68. No other process or other services (such as WDS or PXE) should occupy these ports. To do this, run the `netstat -anb` command.
 
@@ -57,7 +59,7 @@ For more information, see [Analyze DHCP Server Log Files](/previous-versions/win
 
 A correlating network trace may indicate what the DHCP server was doing at the time that the event was logged. To create such a trace, follow these steps:
 
-1.  Go to [GitHub](https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS), and download the [tss\_tools.zip](https://github.com/CSS-Windows/WindowsDiag/blob/master/ALL/TSS/tss_tools.zip) file.
+1.  Go to [GitHub](https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS), and download the tss\_tools.zip file.
 
 2.  Copy the Tss\_tools.zip file, and expand it to a location on the local disk, such as to the C:\\tools folder.
 

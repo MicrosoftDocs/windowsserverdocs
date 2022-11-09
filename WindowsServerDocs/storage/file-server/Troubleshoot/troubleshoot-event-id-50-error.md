@@ -81,8 +81,7 @@ In the example in the "Summary" section, the error code is listed in the second 
 
 **The Target Disk**
 
-You can identify the disk that the write was being tried to by using the symbolic link that is listed to the drive in the "Description" section of the event ID message, for example: \Device\HarddiskVolume4. For additional information about how to identify the drive, click the following article number to view the article in the Microsoft Knowledge Base:
-[159865 ](/EN-US/help/159865) How to Distinguish a Physical Disk Device from an Event Message
+You can identify the disk that the write was being tried to by using the symbolic link that is listed to the drive in the "Description" section of the event ID message, for example: \Device\HarddiskVolume4.
 
 **The Final Status Code**
 
@@ -94,7 +93,7 @@ The final status code is the most important piece of information in an event ID 
 
 In this case, the final status equals 0x80000011.This status code maps to STATUS_DEVICE_BUSY and implies that the device is currently busy.
 
->[!NOTE] 
+> [!NOTE] 
 > When you are converting the hexadecimal data in the event ID 50 message to the status code, remember that the values are represented in the little-endian format. Because the status code is the only piece of information that you are interested in, it may be easier to view the data in WORDS format instead of BYTES. If you do so, the bytes will be in the correct format and the data may be easier to interpret quickly.
 
 To do so, click **Words** in the **Event Properties** window. In the Data Words view, the example in the "Symptoms" section would read as follows: Data: 

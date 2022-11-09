@@ -10,7 +10,7 @@ ms.author: elizapo
 ---
 # Migrate to  MultiPoint Services in Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 Use the following steps plus the information you gathered in the migration planning worksheet to migrate to MultiPoint Services in Windows Server 2016.
 

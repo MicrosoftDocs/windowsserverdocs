@@ -1,11 +1,11 @@
 ---
 title: "Prepare the Technician Computer"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to prepare the technician computer which contains the tools and documentation in the Windows Assessment and Deployment Kit (ADK).
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 8841c3aa-7aaa-4cc0-b1e1-ab0643f29586
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -17,7 +17,7 @@ The technician computer contains the tools and documentation in the Windows Asse
 
 -   Prepare a computer with the Windows 7, Windows 8 or Windows 10.
 
--   Install Windows ADK on the computer running Windows 7, Windows 8 or Windows 10 from the [Microsoft website](https://go.microsoft.com/fwlink/?LinkID=248647).
+-   Install Windows ADK on the computer running Windows 7, Windows 8 or Windows 10 from the [Microsoft website](/windows-hardware/get-started/adk-install).
 
 ## See Also
 

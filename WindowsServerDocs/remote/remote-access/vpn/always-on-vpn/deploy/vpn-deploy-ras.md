@@ -2,16 +2,15 @@
 title: Configure the Remote Access Server for Always On VPN
 description: RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features.
 ms.topic: article
-ms.localizationpriority: medium
-ms.author: v-tea
+ms.author: inhenkel
 author: Teresa-MOTIV
-ms.date: 08/30/2018
+ms.date: 11/16/2021
 ms.reviewer: deverette
 ---
 
 # Step 3. Configure the Remote Access Server for Always On VPN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 - [**Previous:** Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md)
@@ -181,6 +180,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
     c. In **Start IP address**, enter the starting IP address in the range you want to assign to VPN clients.
 
     d. In **End IP address**, enter the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, enter the number of the address you want to make available. If you're using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
+
+    > [!NOTE]
+    > For optimal network performance, the VPN server itself should not have a network interface in the same IPv4 subnet that assigns IPv4 addresses to the clients. If the VPN server does have a network interface in that subnet, a broadcast or multicast that is sent to that subnet could cause a latency spike.
 
     e. (Optional) If you are using DHCP, select **Adapter**, and in the list of results, select the Ethernet adapter connected to your internal perimeter network.
 

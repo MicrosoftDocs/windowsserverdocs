@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Executive Summary"
 ms.assetid: 85ca191c-0cc7-4453-a72c-42060ddf2ea2
 title: Executive Summary
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/08/2018
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Executive Summary
 
->Applies To: Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012
 
 >[!IMPORTANT]
 >The following documentation was written in 2013 and is provided for historical purposes only.  Currently we are reviewing this documentation and it is subject to change.  It may not reflect current best practices.
@@ -164,7 +165,7 @@ Practices are listed in approximate order of priority, that is., lower numbers i
 | Eliminate permanent membership in highly privileged groups. | Tactical | Preventative |
 | Implement controls to grant temporary membership in privileged groups when needed. | Tactical | Preventative |
 | Implement secure administrative hosts. | Tactical | Preventative |
-| Use application whitelisting on domain controllers, administrative hosts, and other sensitive systems. | Tactical | Preventative |
+| Use application allowslists on domain controllers, administrative hosts, and other sensitive systems. | Tactical | Preventative |
 | Identify critical assets, and prioritize their security and monitoring. | Tactical | Both |
 | Implement least-privilege, role-based access controls for administration of the directory, its supporting infrastructure, and domain-joined systems. | Strategic | Preventative |
 | Isolate legacy systems and applications. | Tactical | Preventative |

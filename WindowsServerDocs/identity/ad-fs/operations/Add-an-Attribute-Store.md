@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add an Attribute Store"
 ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: Add an Attribute Store
 author: billmath
@@ -15,7 +16,7 @@ User accounts and computer accounts that require access to a resource that is pr
 
 You can use the following procedure to add an attribute store to the Federation Service.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To add an attribute store
 
@@ -23,7 +24,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 2.  Under **Actions** click **Add an attribute store**.
 
-![add attribute store](media/Add-an-Attribute-Store/addstore1.PNG)
+![Screenshot that highlights the Add Attribute Store action.](media/Add-an-Attribute-Store/addstore1.PNG)
 
 3. In the **Add an attribute store** dialog box, configure the following properties for the attribute store that you want to add:
 

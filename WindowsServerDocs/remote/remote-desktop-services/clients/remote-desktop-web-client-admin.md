@@ -5,7 +5,6 @@ ms.author: helohr
 ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
-ms.localizationpriority: medium
 ---
 # Set up the Remote Desktop web client for your users
 
@@ -73,7 +72,7 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
-    Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/webclient/index.html>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
+    Make sure you can access the web client at the web client URL with your server name, formatted as `https://server_FQDN/RDWeb/webclient/index.html`. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 
     >[!NOTE]
     >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you're aware of the configuration limitation.
@@ -210,7 +209,7 @@ This section describes how to enable a web client connection to an RD Broker wit
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <strong>https://+:3392/rdp/</strong>.
+3. Open the Windows Registry (regedit), go to `HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp` and locate the key **WebSocketURI**. Next, set the value to `https://+:3392/rdp/`.
 
 ### Setting up the RD Session Host
 Follow these steps if the RD Session Host server is different from the RD Broker server:
@@ -232,7 +231,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <https://+:3392/rdp/>.
+3. Open the Windows Registry (regedit) and navigate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to `https://+:3392/rdp/`.
 
 ### General Observations
 
@@ -261,9 +260,9 @@ By default, the user may select to enable or disable telemetry. A boolean value 
 ### Remote resource launch method
 
 >[!NOTE]
->This setting currently only works with the RDS web client, not the Windows Virtual Desktop web client.
+>This setting currently only works with the RDS web client, not the Azure Virtual Desktop web client.
 
-By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
+By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following PowerShell command:
 
    ```PowerShell
     Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
@@ -316,4 +315,4 @@ The console may also be accessed directly through your browser. The console is g
 
 ## Get help with the web client
 
-If you've encountered an issue that can't be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client).
+If you've encountered an issue that can't be solved by the information in this article, you can report it on the [Azure Virtual Desktop forum of Microsoft Tech Community](https://aka.ms/wvdtc).

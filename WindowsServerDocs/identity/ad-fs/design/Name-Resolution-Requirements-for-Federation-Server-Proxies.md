@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Name Resolution Requirements for Federation Server Proxies"
 ms.assetid: c28c60ff-693d-49ee-a75b-58f24866217b
 title: Name Resolution Requirements for Federation Server Proxies
 author: billmath
@@ -25,9 +26,9 @@ In this scenario, your organization has one or two DNS zones in the perimeter ne
 
 The following illustration and corresponding steps show how each of these conditions is achieved for a given example. In this illustration, Microsoft Network Load Balancing \(NLB\) technology provides a single, cluster FQDN and a single, cluster IP address for an existing federation server farm.
 
-![name requirements](media/adfs2_deploy_single_fs.gif)
+![Illustration that shows Microsoft Network Load Balancing technology provides a single, cluster F Q D N and a single, cluster I P address for an existing federation server farm.](media/adfs2_deploy_single_fs.gif)
 
-For more information about configuring a cluster IP address or a cluster FQDN using NLB, see [Specifying the Cluster Parameters](https://go.microsoft.com/fwlink/?LinkId=75282).
+For more information about configuring a cluster IP address or a cluster FQDN using NLB, see [Specifying the Cluster Parameters](/previous-versions/windows/it-pro/windows-server-2003/cc781505(v=ws.10)).
 
 ### 1. Configure the hosts file on the federation server proxy
 Because DNS in the perimeter network is configured to resolve all requests for fs.fabrikam.com to the account federation server proxy, the account partner federation server proxy has an entry in its local hosts file to resolve fs.fabrikam.com to the IP address of the actual account federation server \(or cluster DNS name for the federation server farm\) that is connected to the corporate network. This makes it possible for the account federation server proxy to resolve the host name fs.fabrikam.com to the account federation server rather than to itself—as would occur if it attempted to look up fs.fabrikam.com using perimeter DNS—so that the federation server proxy can communicate with the federation server.

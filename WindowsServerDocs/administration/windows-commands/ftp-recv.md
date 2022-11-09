@@ -3,15 +3,15 @@ title: ftp recv
 description: Reference article for the ftp recv command, which copies a remote file to the local computer using the current file transfer type.
 ms.topic: reference
 ms.assetid: f249ce61-247d-421b-9b93-48bce5108800
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp recv
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies a remote file to the local computer using the current file transfer type.
 

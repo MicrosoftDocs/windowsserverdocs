@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Running Data Deduplication"
 ms.assetid: f15c02d7-1cbd-4eba-a571-0ea34ab93ef4
 title: Running Data Deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
-ms.date: 09/15/2016
+ms.date: 02/18/2022
 ---
 # Running Data Deduplication
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 ## <a id="running-dedup-jobs-manually"></a>Running Data Deduplication jobs manually
 

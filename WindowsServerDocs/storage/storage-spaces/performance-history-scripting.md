@@ -1,18 +1,18 @@
 ---
+description: "Learn more about: Scripting with PowerShell and Storage Spaces Direct performance history"
 title: Scripting with Storage Spaces Direct performance history
 ms.author: cosdar
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
-ms.localizationpriority: medium
 ---
 
 # Scripting with PowerShell and Storage Spaces Direct performance history
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
-In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.md) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
+In Windows Server 2019, [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
 
 1. Were there any CPU spikes last week?
 2. Is any physical disk exhibiting abnormal latency?
@@ -36,7 +36,7 @@ This sample uses the `ClusterNode.Cpu.Usage` series from the `LastWeek` timefram
 
 In the screenshot below, we see that *Server-02* had an unexplained spike last week:
 
-![Screenshot of PowerShell](media/performance-history/Show-CpuMinMaxAvg.png)
+![Screenshot that shows that Server-02 had an unexplained spike last week.](media/performance-history/Show-CpuMinMaxAvg.png)
 
 ### How it works
 
@@ -95,7 +95,7 @@ This sample uses the `PhysicalDisk.Latency.Average` series from the `LastHour` t
 
 In the screenshot below, we see there are no outliers:
 
-![Screenshot of PowerShell](media/performance-history/Show-LatencyOutlierHDD.png)
+![Screenshot that shows there are no outliers.](media/performance-history/Show-LatencyOutlierHDD.png)
 
 ### How it works
 
@@ -202,7 +202,7 @@ Performance history can answer questions about *right now*, too. New measurement
 
 In the screenshot below, we see the Top 10 virtual machines by storage activity:
 
-![Screenshot of PowerShell](media/performance-history/Show-TopIopsVMs.png)
+![Screenshot that shows the Top 10 virtual machines by storage activity.](media/performance-history/Show-TopIopsVMs.png)
 
 ### How it works
 
@@ -254,7 +254,7 @@ This sample uses the `NetAdapter.Bandwidth.Total` series from the `LastDay` time
 
 In the screenshot below, we see that one *Fabrikam NX-4 Pro #2* peaked in the last day:
 
-![Screenshot of PowerShell](media/performance-history/Show-NetworkSaturation.png)
+![Screenshot that shows that Fabrikam NX-4 Pro #2 peaked in the last day.](media/performance-history/Show-NetworkSaturation.png)
 
 ### How it works
 
@@ -326,7 +326,7 @@ To look at macro trends, performance history is retained for up to 1 year. This 
 
 In the screenshot below, we see the *Backup* volume is adding about 15 GB per day:
 
-![Screenshot of PowerShell](media/performance-history/Show-StorageTrend.png)
+![Screenshot that shows that the Backup volume is adding about 15 GB per day.](media/performance-history/Show-StorageTrend.png)
 
 At this rate, it will reach its capacity in another 42 days.
 
@@ -484,5 +484,5 @@ That's it! Hopefully these samples inspire you and help you get started. With St
 ## Additional References
 
 - [Getting started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Performance history](performance-history.md)

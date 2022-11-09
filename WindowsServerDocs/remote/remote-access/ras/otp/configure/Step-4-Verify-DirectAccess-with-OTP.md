@@ -1,15 +1,16 @@
 ---
 title: Step 4 Verify DirectAccess with OTP
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to verify that you have correctly configured your DirectAccess with OTP deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: ed49a0a3-1c45-42e5-8f13-cad20c1c1d68
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 4 Verify DirectAccess with OTP
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to verify that you have correctly configured your DirectAccess with OTP deployment.
 

@@ -3,8 +3,8 @@ title: bitsadmin setreplyfilename
 description: Reference article for the bitsadmin setreplyfilename command, which specifies the path of the file that contains the server upload-reply.
 ms.topic: reference
 ms.assetid: c26d3342-0533-40b1-a13e-e09678232b25
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

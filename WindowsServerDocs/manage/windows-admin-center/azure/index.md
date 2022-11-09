@@ -4,10 +4,11 @@ description: You can extend on-premises deployments of Windows Server to the clo
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.localizationpriority: medium
 ms.date: 05/31/2019
 ---
 # Connecting Windows Server to Azure hybrid services
+
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can extend on-premises deployments of Windows Server to the cloud by using Azure hybrid services. These cloud services provide an array of useful functions, both for extending on-premises into Azure, and for centrally managing from Azure.
 
@@ -41,7 +42,27 @@ From the Azure hybrid services tool, you can:
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
 - Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
-- Make Azure VMs look like your on-premises network with [Azure Extended Network](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)
+- Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
+
+## Azure hybrid service regional support
+
+The Windows Admin Center gateway can be registered in both public and private Azure clouds. Today, we support gateway registration in Azure Global, Azure China, and Azure US Government. When your gateway is registered, Windows Admin Center assumes that all other Azure operations, including the use of Azure hybrid services, will be done in that cloud. 
+
+The regional support for each Azure hybrid service is different. Broadly, these are the clouds supported for each Azure hybrid service in Windows Admin Center:
+
+| Azure hybrid service | Azure global | Azure China | Azure US Government |
+| ------------- | ------ | ------ | ------ |
+| Azure Arc | yes | no | yes |
+| Azure Backup|yes|yes|yes|
+| Azure Extended Network|yes|yes|yes|
+| Azure File Sync|yes|yes|yes|
+| Azure Monitor|yes|yes|yes|
+| Azure Network Adapter|yes|yes|yes|
+| Azure Security Center|yes|yes|yes|
+| Azure Site Recovery |yes|yes|no|
+| Azure Update Management |yes|yes|no|
+
+For a more detailed regional support breakdown for each service, see [Azure products available by region](https://azure.microsoft.com/global-infrastructure/services/).
 
 ## Back up and protect your on-premises servers and VMs
 
@@ -61,7 +82,7 @@ For more info, see [Server-to-server replication with Storage Replica](../../../
 
 ### Extend storage capacity
 
-- **Sync your file server with the cloud by using [Azure File Sync](https://aka.ms/afs)**
+- **Sync your file server with the cloud by using [Azure File Sync](/azure/storage/files/storage-sync-files-planning)**
 Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering to free up space and cache only the most frequently used files on the server, tiering cold data to the cloud. Data in the cloud can be backed up, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
 For more info, see [Sync your file server with the cloud by using Azure File Sync](azure-file-sync.md).
 
@@ -83,7 +104,7 @@ For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../../fail
 - **Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)**
 Let Windows Admin Center simplify setting up a point-to-site VPN from an on-premises server into an Azure virtual network.
 
-- **Make Azure VMs look like your on-premises network with [Azure Extended Network](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)**
+- **Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)**
 Windows Admin Center can set up a site-to-site VPN and extend your on-premises IP addresses into your Azure vNet to let you more easily migrate workloads into Azure without breaking dependencies on IP addresses.
 
 ## Centrally manage your hybrid environment from Azure
@@ -92,7 +113,7 @@ Windows Admin Center can set up a site-to-site VPN and extend your on-premises I
 You can use Azure Monitor, also known as Virtual Machines Insights, to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server. Windows Admin Center can also set up default email alerts for server health performance and cluster health events.
 For more info, see [Connect your servers to Azure Monitor and configure email notifications](azure-monitor.md).
 
-- **Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](/azure/automation/automation-update-management)**
+- **Centrally manage operating system updates for all your Windows Servers with [Azure Update Management](/azure/automation/update-management/overview)**
 You can manage updates and patches for multiple servers and VMs from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your servers are Azure VMs, hosted by other cloud providers, or on-premises.
 For more info, see [Configure servers for Azure Update Management](azure-update-management.md).
 
@@ -108,7 +129,7 @@ Inventory, organize, and manage on-premises servers from Azure. You can govern s
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](/azure-stack/hci/overview?view=azs-2002), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
+- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](/azure-stack/hci/overview?view=azs-2002&preserve-view=true), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
 
 ### Services for stand-alone servers and VMs
 
@@ -122,7 +143,7 @@ This is the complete list of Azure services that provide functionality to stand-
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
 - Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
-- Make Azure VMs look like your on-premises network with [Azure Extended Network](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)
+- Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
 ### Services for clusters
 
@@ -139,7 +160,7 @@ You can use Windows Admin Center to manage your Azure VMs as well as on-premises
 For more info, see [Configure Windows Admin Center to manage VMs in Azure](manage-azure-vms.md).
 
 - **Add an layer of security to Windows Admin Center by adding [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) authentication**
-You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.
+You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multifactor authentication.
 For more info, see [Configure Azure AD authentication for Windows Admin Center](../configure/user-access-control.md#azure-active-directory).
 
 - **Manage Azure resources directly through [Azure Cloud Shell](/azure/cloud-shell/overview) embedded in Windows Admin Center**

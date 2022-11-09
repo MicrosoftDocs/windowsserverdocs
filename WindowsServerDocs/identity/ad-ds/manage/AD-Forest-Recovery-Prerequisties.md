@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Active Directory Forest Recovery Prerequisites"
 title: Prerequisites for planning for Active Directory Forest Recovery
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -9,7 +10,7 @@ ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
 ---
 # Active Directory Forest Recovery Prerequisites
 
-> Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 The following document discuss prerequisites that you should be familiar with before devising a forest recovery plan or attempting a recovery.
 
@@ -63,7 +64,7 @@ In addition, you should have backed up and restored AD DS and SYSVOL in a lab en
 > [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
 
 > [!div class="nextstepaction"]
-> [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+> [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 
 > [!div class="nextstepaction"]
 > [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)

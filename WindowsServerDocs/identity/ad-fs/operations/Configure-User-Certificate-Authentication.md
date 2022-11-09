@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configuring AD FS for user certificate authentication"
 ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
 author: jenfieldmsft

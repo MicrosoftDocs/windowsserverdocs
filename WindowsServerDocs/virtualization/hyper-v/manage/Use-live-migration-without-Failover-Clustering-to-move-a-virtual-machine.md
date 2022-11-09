@@ -1,16 +1,15 @@
 ---
 title: Use live migration without Failover Clustering to move a virtual machine
 description: Gives prerequisites and instructions for doing a live migration in a standalone environment.
-manager: dongill
 ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 01/17/2017
 ---
 # Use live migration without Failover Clustering to move a virtual machine
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article shows you how to move a virtual machine by doing a live migration without using Failover Clustering. A live migration moves running virtual machines between Hyper-V hosts without any noticeable downtime.
 
@@ -68,7 +67,7 @@ Failed to establish a connection with host *computer name*: No credentials are a
 3. Check **Migrate to a computer with a different processor version**.
 4. Click **OK**.
 
-   To use Windows PowerShell, use the [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor?view=win10-ps) cmdlet:
+   To use Windows PowerShell, use the [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor) cmdlet:
 
    ```
    PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true

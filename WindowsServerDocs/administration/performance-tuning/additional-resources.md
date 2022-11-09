@@ -26,7 +26,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Using PowerCfg to Evaluate System Energy Efficiency](/previous-versions/windows/it-pro/windows-vista/cc748940(v=ws.10))
 
--   [Interrupt-Affinity Policy Tool](https://support.microsoft.com/kb/252867)
+-   [Interrupt-Affinity](/windows-hardware/drivers/kernel/interrupt-affinity-and-priority)
 
 ## Networking Subsystem Tuning Resources
 
@@ -76,13 +76,16 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 ## Server Workload Tuning Resources
 
+   > [!NOTE]
+   > Microsoft Server Performance Advisor is no longer available. Please use the resources in this section instead.
+
 -   [Performance Tuning for NTttcp](/previous-versions/dn567663(v=vs.85))
 
 -   [Ttcp](http://en.wikipedia.org/wiki/Ttcp)
 
--   [How to use NTttcp to Test Network Performance](https://msdn.microsoft.com/windows/hardware/gg463264.aspx)
+-   [How to use NTttcp to Test Network Performance](/samples/browse/?redirectedfrom=TechNet-Gallery)
 
--   [Using the File Server Capactiy Tool](/previous-versions/dn567658(v=vs.85))
+-   [Using the File Server Capacity Tool](/previous-versions/dn567658(v=vs.85))
 
 -   [Using the SPECsfs2008 File Server](/previous-versions/dn567653(v=vs.85))
 
@@ -90,23 +93,19 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Performance Tuning for Online Transaction Processing (OLTP)](/previous-versions/dn567642(v=vs.85))
 
--   [How to: Configure SQL Server to Use Soft-NUMA](https://go.microsoft.com/fwlink/?LinkId=98292)
+-   [How to: Configure SQL Server to Use Soft-NUMA](/sql/database-engine/configure-windows/soft-numa-sql-server)
 
--   [How to: Map TCP/IP Ports to NUMA Nodes](https://go.microsoft.com/fwlink/?LinkId=98293)
+-   [How to: Map TCP/IP Ports to NUMA Nodes](/sql/database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server)
 
--   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql?view=sql-server-ver15)
-
-
-## Server Tuning Tools
-
--   [Microsoft Server Performance Advisor](/previous-versions/dn481522(v=vs.85))
+-   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)
 
 ## Performance Tuning Guidelines for previous versions of Windows Server
-
 
 Use the performance tuning guidelines to improve performance for older versions of Windows Server.
 
 Here's a list of performance tuning guidelines for previous versions of Windows Server:
+
+-   [Performance Tuning Guidelines for Windows Server 2016](/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf)
 
 -   [Performance Tuning Guidelines for Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=51960)
 
@@ -114,4 +113,4 @@ Here's a list of performance tuning guidelines for previous versions of Windows 
 
 -   [Performance Tuning Guidelines for Windows Server 2008 R2](https://download.microsoft.com/download/6/B/2/6B2EBD3A-302E-4553-AC00-9885BBF31E21/Perf-tun-srv-R2.docx)
 
--   [Performance Tuning Guidelines for Windows Server 2008](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Perf-tun-srv.docx)
+-   [Performance Tuning Guidelines for Windows Server 2016](/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf)

@@ -3,8 +3,8 @@ title: bdehdcfg newdriveletter
 description: Reference article for the bdehdcfg newdriveletter command, which assigns a new drive letter to the portion of a drive used as the system drive.
 ms.topic: reference
 ms.assetid: f1f200a0-6850-4f0d-9047-f9f982a590f8
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,10 +1,10 @@
 ---
 title: User Account Control Overview
-description: Windows Server Security
+description: Learn about User Account Control, how it is a fundamental component of Microsoft's overall security vision, and how it helps mitigate the impact of a malicious program.
 ms.topic: article
 ms.assetid: 1b7a39cd-fc10-4408-befd-4b2c45806732
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

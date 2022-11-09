@@ -1,16 +1,16 @@
 ---
 title: Keyboard Shortcuts for Server Manager
-description: Server Manager
+description: Learn about the new keyboard shortcuts and access keys for Server Manager in Windows Server 2012 and newer releases of Windows Server.
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Keyboard Shortcuts for Server Manager
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Because Server Manager was fully redesigned starting in Windows Server 2012, keyboard shortcuts that worked in the Server Manager console in  Windows Server 2008 R2  or  Windows Server 2008  are not necessarily the same commands. This topic describes the new keyboard shortcuts and access keys for Server Manager in  Windows Server 2012  and newer releases of Windows Server.
 

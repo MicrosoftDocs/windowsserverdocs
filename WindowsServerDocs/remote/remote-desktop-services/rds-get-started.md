@@ -10,7 +10,7 @@ manager: dongill
 ---
 # Get started with Remote Desktop Services in Windows Server 2016
 
-> Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following information to begin exploring and using Remote Desktop Services in Windows Server 2016.
 

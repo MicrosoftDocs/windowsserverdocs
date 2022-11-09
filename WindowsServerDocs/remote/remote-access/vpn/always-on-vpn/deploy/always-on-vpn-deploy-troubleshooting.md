@@ -3,14 +3,13 @@ title: Troubleshoot Always On VPN
 description: This topic provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
-ms.localizationpriority: medium
-ms.date: 06/11/2018
-ms.author: v-tea
+ms.date: 11/15/2021
+ms.author: inhenkel
 author: Teresa-MOTIV
 ---
 # Troubleshoot Always On VPN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 If your Always On VPN setup is failing to connect clients to your internal network, the cause is likely an invalid VPN certificate, incorrect NPS policies, or issues with the client deployment scripts or in Routing and Remote Access. The first step in troubleshooting and testing your VPN connection is understanding the core components of the Always On VPN infrastructure.
 
@@ -106,7 +105,7 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 
 The application logs on client computers record most of the higher-level details of VPN connection events.
 
-Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](/previous-versions/mt728163(v=technet.10)).
+Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes]( /windows/win32/rras/routing-and-remote-access-error-codes ).
 
 ## NPS logs
 

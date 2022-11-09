@@ -3,16 +3,16 @@ title: WSUS and the Catalog Site
 description: Windows Server Update Service (WSUS) topic - How to import hotfixes into WSUS by accessing the Microsoft Update catalog site
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # WSUS and the Catalog Site
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The Catalog Site is the Microsoft location from which you can import hotfixes and hardware drivers.
+The [Catalog Site](https://www.catalog.update.microsoft.com) is the Microsoft location from which you can import hotfixes and hardware drivers.
 
 ## The Microsoft Update Catalog Site
 In order to import hotfixes into WSUS, you must access the Microsoft Update Catalog Site from a WSUS computer. Any computer that has the WSUS administrative console installed, whether or not it is a WSUS server, can be used to import hotfixes from the Catalog Site. You must be logged on to the computer as an administrator to import the hotfixes.
@@ -53,7 +53,7 @@ WSUS administrators might consider restricting access to the hotfixes they have 
 
     -   Select **Windows Authentication** and click **Enable** in the **Actions** pane on the right.
 
-2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client computers and WSUS computer Groups](managing-wsus-client-computers-and-wsus-computer-groups.md) in this guide, and section [3.3. Configure WSUS computer groups](../deploy/2-configure-wsus.md#23-configure-wsus-computer-groups) of Step 3: Configure WSUS, in the WSUS deployment guide.
+2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client computers and WSUS computer Groups](managing-wsus-client-computers-and-wsus-computer-groups.md) in this guide, and [Configure WSUS computer groups](../deploy/2-configure-wsus.md#24-configure-wsus-computer-groups) in the WSUS deployment guide.
 
 3.  Download the files for the hotfix.
 

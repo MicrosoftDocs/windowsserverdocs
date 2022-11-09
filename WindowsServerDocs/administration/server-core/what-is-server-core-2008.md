@@ -7,7 +7,7 @@ author: pronichkin
 ms.author: artemp
 ---
 # What is Server Core 2008?
->Applies To: Windows Server 2008
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2008
 
 >[!NOTE]
 >This information applies to Windows Server 2008. For information about Server Core in Windows Server, see [What is the Server Core Installation in Windows Server](./what-is-server-core.md).

@@ -3,8 +3,8 @@ title: Diskraid
 description: Reference article for the Diskraid command-line tool, which enables you to configure and manage redundant array of independent (or inexpensive) disks (RAID) storage subsystems.
 ms.topic: reference
 ms.assetid: 20aef1e5-7641-47cf-b4eb-cda117f65b6e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

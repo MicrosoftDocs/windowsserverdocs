@@ -3,8 +3,8 @@ title: autofmt
 description: Reference article for the autofmt command, which formats a drive or partition when called from the Windows Recovery Console.
 ms.topic: reference
 ms.assetid: 81f9abac-f927-41d8-8667-f056db4cb2af
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

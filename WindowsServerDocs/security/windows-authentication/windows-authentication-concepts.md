@@ -1,16 +1,16 @@
 ---
 title: Windows Authentication Concepts
-description: Windows Server Security
+description: Learn about the concepts on which Windows authentication is based.
 ms.topic: article
 ms.assetid: 29d1db15-cae0-4e3d-9d8e-241ac206bb8b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Windows Authentication Concepts
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This reference overview topic describes the concepts on which Windows authentication is based.
 
@@ -63,7 +63,7 @@ For more information about accounts, see:
 
 -   [Active Directory Security Groups](/windows/security/identity-protection/access-control/active-directory-security-groups)
 
--   [Local Accounts](https://technet.microsoft.com/itpro/windows/keep-bastion.local-accounts)
+-   [Local Accounts](/windows/security/identity-protection/access-control/local-accounts)
 
 -   [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts)
 
@@ -96,4 +96,4 @@ Constrained delegation gives administrators the ability to specify and enforce a
 For more information about constrained delegation, see [Kerberos Constrained Delegation Overview](../kerberos/kerberos-constrained-delegation-overview.md).
 
 ## Additional References
-[Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn269029.aspx)
+[Windows Logon and Authentication Technical Overview](/windows-server/security/windows-authentication/windows-authentication-technical-overview)

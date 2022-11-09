@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 1/7/2019
-ms.localizationpriority: medium
 ---
 # Pure Storage Extension
 
@@ -17,7 +16,7 @@ Early on, when Windows Admin Center was known as “Project Honolulu”, Pure sa
 
 When Pure started researching the use case with “Project Honolulu” they immediately realized the potential for providing a unified management experience between Windows Admin Center and FlashArray. Pure closely collaborated with the Windows Admin Center engineering team, which helped define the implementation details for the features. Pure was also able to provide feedback at the early stages of Windows Admin Center and make contributions to the Microsoft team.
 
-![Pure Storage Extension](../../media/extend-case-study-purestorage/purestorage-1.png)
+![Screenshot of the Capacity page of the Pure Storage extension.](../../media/extend-case-study-purestorage/purestorage-1.png)
 
 > <cite>“We have integrated a feature set that mimics our FlashArray web interface to enable direct management from within Windows Admin Center. Our customers and partners will benefit from a single pane of glass versus needing to work with two different management tools. In addition to the single point of management benefits customers will be able to contextually manage Windows Servers that are connected to the FlashArray.”</cite>
 >
@@ -35,14 +34,14 @@ A [demonstration video](https://youtu.be/IFAeCAd6V2g) has been created that show
 
 The below screenshot illustrates viewing what disks (volumes) are connected to a specific Windows Server host. In addition to viewing the connectivity detail, we check if Multipath-IO is configured.
 
-![Pure Storage Extension](../../media/extend-case-study-purestorage/purestorage-2.png)
+![Screenshot showing what disks are connected to a specific Windows Server host.](../../media/extend-case-study-purestorage/purestorage-2.png)
 
 In addition to viewing the disks, new volumes can be created and immediately mounted to the host without having to use Windows Disk Management tool.
 
-![Pure Storage Extension](../../media/extend-case-study-purestorage/purestorage-3.png)
+![Screenshot showing how new volumes can be created and immediately mounted to the host using the Pure Storage host.](../../media/extend-case-study-purestorage/purestorage-3.png)
 
 Since releasing our Technical Preview, the customer feedback collected so far has been very positive and has also provided us insight into different features to add in future releases.
 
 Additional resources:
-- [Pure Storage extension announcement blog post](https://blog.purestorage.com/tech-preview-of-the-pure-storage-extension-for-windows-admin-center/)
+- [Pure Storage extension announcement blog post](https://podcasts.apple.com/us/podcast/windows-admin-center-extension-from-pure-storage/id1392639991?i=1000424316130)
 - [PureReport](https://itunes.apple.com/podcast/windows-admin-center-extension-from-pure-storage/id1392639991?i=1000424316130&mt=2) podcast

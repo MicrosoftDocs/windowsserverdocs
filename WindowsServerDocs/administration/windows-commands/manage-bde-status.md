@@ -3,8 +3,8 @@ title: manage-bde status
 description: Reference article for the manage-bde status command, which provides information about all drives on the computer, regardless whether they are BitLocker protected.
 ms.topic: reference
 ms.assetid: 1444a360-fabf-4dd3-b67f-188e6ea3fa5b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

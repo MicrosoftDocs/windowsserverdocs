@@ -5,12 +5,11 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Add an iFrame to a tool extension
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 In this article, we will add an iFrame to a new, empty tool extension we have created with the Windows Admin Center CLI.
 

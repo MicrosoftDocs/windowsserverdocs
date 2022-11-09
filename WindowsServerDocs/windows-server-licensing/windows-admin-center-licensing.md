@@ -2,8 +2,8 @@
 title: Licensing content for Windows Server and the Windows Admin Center
 description: Learn about the Windows Admin Center licensing agreements.
 ms.topic: reference
-author: eross-msft
-ms.author: lizross
+author: JasonGerend
+ms.author: jgerend
 ms.date: 06/11/2019
 ---
 
@@ -15,8 +15,12 @@ Review our Windows Admin Center license terms.
 
 - [License terms for extensions](/legal/windows-server/windows-admin-center/license-terms-for-extensions)
 
+- [Windows Admin Center extensions publisher agreement](/legal/windows-server/windows-admin-center/extensions-publishers-agreement)
+
+- [Microsoft extensions participation policy](/legal/windows-server/windows-admin-center/extensions-participation-policy)
+
 - [Microsoft Software License Terms - Windows Admin Center - Preview](/legal/windows-server/windows-admin-center/wac-prerelease-eula)
 
 - [Windows Admin Center for Microsoft Windows Server and Microsoft Windows operating system (Version 10)](/legal/windows-server/windows-admin-center/wac-product-ga-eula)
 
-- [Windows Server-related license terms](/legal/windows-server/windows-server-licensing)
+- [Windows Server-related license terms](/legal/windows-server/winserver2016licenseterms)

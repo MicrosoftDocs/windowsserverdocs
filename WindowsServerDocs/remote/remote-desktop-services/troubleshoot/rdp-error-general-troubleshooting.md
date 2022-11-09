@@ -7,9 +7,10 @@ author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
-ms.localizationpriority: medium
 ---
 # General Remote Desktop connection troubleshooting
+
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=rdssc" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common RD Sessions connectivity issues</span>
 
 Use these steps when a Remote Desktop client can't connect to a remote desktop but doesn't provide messages or other symptoms that would help identify the cause.
 
@@ -25,14 +26,14 @@ To check and change the status of the RDP protocol on a local computer, see [How
 ### Check the status of the RDP protocol on a remote computer
 
 > [!IMPORTANT]  
-> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you start modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
 
 To check and change the status of the RDP protocol on a remote computer, use a network registry connection:
 
 1. First, go to the **Start** menu, then select **Run**. In the text box that appears, enter **regedt32**.
 2. In the Registry Editor, select **File**, then select **Connect Network Registry**.
 3. In the **Select Computer** dialog box, enter the name of the remote computer, select **Check Names**, and then select **OK**.
-4. Navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server**.  
+4. Navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server** and to **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services**.  
    ![Registry Editor, showing the fDenyTSConnections entry](../media/troubleshoot-remote-desktop-connections/RegEntry_fDenyTSConnections.png)
    - If the value of the **fDenyTSConnections** key is **0**, then RDP is enabled.
    - If the value of the **fDenyTSConnections** key is **1**, then RDP is disabled.

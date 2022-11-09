@@ -1,26 +1,27 @@
 ---
 title: Troubleshoot SDN
-description: This topic provides links to contents about troubleshooting Software Defined Networking in Windows Server 2016.
+description: This topic provides links to contents about troubleshooting Software Defined Networking in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 11/04/2021
 ---
 # Troubleshoot SDN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
-The topics in this section provide information about troubleshooting the Software Defined Networking (SDN) technologies that are included in Windows Server 2016.
+The topics in this section provide information about troubleshooting the Software Defined Networking (SDN) technologies that are included in Azure Stack HCI, Windows Server 2019, and Windows Server 2016.
 
 > [!NOTE]
 > For additional Software Defined Networking documentation, you can use the following library sections.
 >
 > - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
-> - [Plan SDN](/windows-server/networking/sdn/plan/Deploy-a-Software-Defined-Network-Infrastructure)
+> - [Plan SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
 > - [Deploy SDN](../deploy/deploy-a-software-defined-network-infrastructure.md)
 > - [Manage SDN](../manage/manage-sdn.md)
-> - [Security for SDN](../security/sdn-security-top.md)
+> - [Security for SDN](/azure-stack/hci/manage/nc-security)
 
 This section contains the following topics.
 

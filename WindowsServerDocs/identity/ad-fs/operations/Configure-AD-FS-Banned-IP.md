@@ -1,5 +1,6 @@
 ---
 title: Configure AD FS Banned IP Addesses
+description: "Learn more about: AD FS and banned IP addresses"
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -52,6 +53,6 @@ BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 ## Additional references
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
+[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS Operations](../ad-fs-operations.md)

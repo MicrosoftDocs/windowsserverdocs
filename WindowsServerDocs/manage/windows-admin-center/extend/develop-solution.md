@@ -2,15 +2,14 @@
 title: Develop a solution extension
 description: Develop a solution extension Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Develop a solution extension
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Solutions primarily define a unique type of object you wish to manage through Windows Admin Center.  These solutions/connection types are included with Windows Admin Center by default:
 
@@ -30,9 +29,9 @@ If you would like to build a management GUI for services not defined by the defa
 
 If you haven't already, [prepare your environment](prepare-development-environment.md) by installing dependencies and global prerequisites required for all projects.
 
-## Create a new solution extension with the Windows Admin Center CLI ##
+## Create a new solution extension with the Windows Admin Center SDK ##
 
-Once you have all the dependencies installed, you are ready to create your new solution extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center CLI that was installed previously, create a new extension with the following syntax:
+Once you have all the dependencies installed, you are ready to create your new solution extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center SDK that was installed previously, create a new extension with the following syntax:
 
 ```
 wac create --company "{!Company Name}" --solution "{!Solution Name}" --tool "{!Tool Name}"
@@ -62,15 +61,16 @@ Once this completes, you've set up everything you need to load your new extensio
 
 ## Add content to your extension
 
-Now that you've created an extension with the Windows Admin Center CLI, you are ready to customize content.  See these guides for examples of what you can do:
+Now that you've created an extension with the Windows Admin Center SDK, you are ready to customize content.  See these guides for examples of what you can do:
 
 - Add an [empty module](guides/add-module.md)
 - Add an [iFrame](guides/add-iframe.md)
 - Create a [custom connection provider](guides/create-connection-provider.md)
 - Modify [root navigation behavior](guides/modify-root-navigation.md)
 
-Even more examples can be found our [GitHub SDK site](https://aka.ms/wacsdk):
--  [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a fully functioning extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.
+Even more examples can be found in our Developer Guide. The Developer Guide is a fully functioning solution extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension. 
+
+Enable the Developer Guide extension on the **Advanced** page of your Windows Admin Center settings. 
 
 ## Build and side load your extension
 
@@ -80,7 +80,7 @@ Next, build and side load your extension into Windows Admin Center.  Open a comm
 
     ```
     gulp build
-    gulp serve -p 4201
+    gulp serve --port 4201
     ```
 
 Note that you need to choose a port that is currently free. Make sure you do not attempt to use the port that Windows Admin Center is running on.

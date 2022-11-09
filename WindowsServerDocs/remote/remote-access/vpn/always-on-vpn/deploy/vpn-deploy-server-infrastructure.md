@@ -2,15 +2,14 @@
 title: Configure the Server Infrastructure
 description: In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.
 ms.topic: article
-ms.localizationpriority: medium
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
 # Step 2. Configure the server infrastructure
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)
 - [**Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
@@ -65,7 +64,7 @@ You manually enroll certificates on VPN servers.
 
 Since the RRAS server is not domain joined, autoenrollment cannot be used to enroll the VPN gateway certificate.  Therefore, use an offline certificate request procedure.
 
-1. On the RRAS server, generate a file called **VPNGateway.inf** based upon the example certificate policy request provided in Appendix A (section 0) and customize the following entries:
+1. On the RRAS server, generate a file called **VPNGateway.inf** based upon the example certificate policy request provided in the example below and customize the following entries:
 
    - In the [NewRequest] section, replace vpn.contoso.com used for the Subject Name with the chosen [_Customer_] VPN endpoint FQDN.
 
@@ -319,21 +318,19 @@ Domain-joined VPN servers
 
 10. Close the Certificate Templates console.
 
-11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, click **New** and then click **Certificate Template to Issue**.
+11. Restart the Certificate Authority services.(*)
 
-12. Restart the Certificate Authority services.(*)
+12. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
 
-13. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
+13. Select the name you chose in step 4 above, and click **OK**.
 
-14. Select the name you chose in step 4 above, and click **OK**.
-
-15. Close the Certification Authority snap-in.
+14. Close the Certification Authority snap-in.
 
 * **You can stop/start the CA service by running the following command in CMD:**
 
 ```
-Net Stop "certsvc"
-Net Start "certsvc"
+net stop "certsvc"
+net start "certsvc"
 ```
 
 ## Create the NPS Server Authentication template

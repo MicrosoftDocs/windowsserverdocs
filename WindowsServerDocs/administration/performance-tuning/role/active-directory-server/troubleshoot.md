@@ -17,4 +17,4 @@ For additional information on ADDS performance troubleshooting, see [Monitoring 
 - [Hardware considerations](hardware-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
-- [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)
+- [Capacity Planning for Active Directory Domain Services](./capacity-planning-for-active-directory-domain-services.md)

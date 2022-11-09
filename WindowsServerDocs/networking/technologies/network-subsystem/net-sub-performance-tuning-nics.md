@@ -1,20 +1,20 @@
 ---
 title: Performance Tuning Network Adapters
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn how to tune the performance network adapters for computers that are running Windows Server 2016 and later versions.
 audience: Admin
   - CI ID 111485
   - CSSTroubleshoot
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-Motiv
-ms.date: 12/23/2019
+ms.date: 10/27/2021
 ---
 
 # Performance Tuning Network Adapters
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Use the information in this topic to tune the performance network adapters for computers that are running Windows Server 2016 and later versions. If your network adapters provide tuning options, you can use these options to optimize network throughput and resource usage.
 
@@ -216,8 +216,8 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 
 For more information about these cmdlets, see the following articles:
 
-- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
-- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
+- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting)
+- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting)
 
 #### Autotuning levels
 

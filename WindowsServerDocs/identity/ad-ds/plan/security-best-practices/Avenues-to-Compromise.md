@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Avenues to Compromise"
 ms.assetid: d7a4d2e1-217d-4ffc-93f0-817149bd9e7f
 title: Avenues to Compromise
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Avenues to Compromise
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
@@ -96,7 +97,8 @@ Domain controllers should be treated as critical infrastructure components, secu
 Although some organizations create baseline configurations for servers of different types and allow limited customization of the operating system after it's installed, analysis of compromised environments often uncovers large numbers of servers deployed in an ad hoc fashion, and configured manually and independently. Configurations between two servers performing the same function may be completely different, where neither server is configured securely. Conversely, server configuration baselines may be consistently enforced, but also consistently misconfigured; that is, servers are configured in a manner that creates the same vulnerability on all servers of a given type. Misconfiguration includes practices such as disabling of security features, granting excessive rights and permissions to accounts (particularly service accounts), use of identical local credentials across systems, and permitting installation of unauthorized applications and utilities that create vulnerabilities of their own.
 
 ##### Disabling Security Features
-Organizations sometimes disable Windows Firewall with Advanced Security (WFAS) out of a belief that WFAS is difficult to configure or requires work-intensive configuration. However, beginning with Windows Server 2008, when any role or feature is installed on a server, it is configured by default with the least privileges required for the role or feature to function, and the Windows Firewall is automatically configured to support the role or feature. By disabling WFAS (and not using another host-based firewall in its place), organizations increase the attack surface of the entire Windows environment. Perimeter firewalls provide some protection against attacks that directly target an environment from the Internet, but they provide no protection against attacks that exploit other attack vectors such as [drive-by download](https://www.microsoft.com/security/sir/glossary/drive-by-download-sites.aspx) attacks, or attacks that originate from other compromised systems on the intranet.
+
+Organizations sometimes disable Windows Firewall with Advanced Security (WFAS) out of a belief that WFAS is difficult to configure or requires work-intensive configuration. However, beginning with Windows Server 2008, when any role or feature is installed on a server, it is configured by default with the least privileges required for the role or feature to function, and the Windows Firewall is automatically configured to support the role or feature. By disabling WFAS (and not using another host-based firewall in its place), organizations increase the attack surface of the entire Windows environment. Perimeter firewalls provide some protection against attacks that directly target an environment from the Internet, but they provide no protection against attacks that exploit other attack vectors such as drive-by download<!--(/windows/win32/secgloss/security-glossary)--> attacks, or attacks that originate from other compromised systems on the intranet.
 
 User Account Control (UAC) settings are sometimes disabled on servers because administrative staff find the prompts intrusive. Although [Microsoft Support article 2526083](https://support.microsoft.com/kb/2526083) describes scenarios in which UAC may be disabled on Windows Server, unless you are running a server core installation (where UAC is disabled by design), you should not disable UAC on servers without careful consideration and research.
 
@@ -105,7 +107,7 @@ In other cases, server settings are configured to less-secure values because org
 ##### Granting Excessive Privilege
 In nearly every environment we have assessed, excessive privilege is granted to local and domain-based accounts on Windows systems. Users are granted local Administrator rights on their workstations, member servers run services that are configured with rights beyond what they need to function, and local Administrators groups across the server population contain dozens or even hundreds of local and domain accounts. Compromise of only one privileged account on a computer allows attackers to compromise the accounts of every user and service that logs on to the computer, and to harvest and leverage credentials to propagate the compromise to other systems.
 
-Although pass-the-hash (PTH) and other credential theft attacks are ubiquitous today, it is because there is freely available tooling that makes it simple and easy to extract the credentials of other privileged accounts when an attacker has gained Administrator- or SYSTEM-level access to a computer. Even without tooling that allows harvesting of credentials from logon sessions, an attacker with privileged access to a computer can just as easily install keystroke loggers that capture keystrokes, screenshots, and clipboard contents. An attacker with privileged access to a computer can disable antimalware software, install rootkits, modify protected files, or install malware on the computer that automates attacks or turns a server into a [drive-by download](https://www.microsoft.com/security/sir/glossary/drive-by-download-sites.aspx) host.
+Although pass-the-hash (PTH) and other credential theft attacks are ubiquitous today, it is because there is freely available tooling that makes it simple and easy to extract the credentials of other privileged accounts when an attacker has gained Administrator- or SYSTEM-level access to a computer. Even without tooling that allows harvesting of credentials from logon sessions, an attacker with privileged access to a computer can just as easily install keystroke loggers that capture keystrokes, screenshots, and clipboard contents. An attacker with privileged access to a computer can disable antimalware software, install rootkits, modify protected files, or install malware on the computer that automates attacks or turns a server into a drive-by download <!--(/windows/win32/secgloss/security-glossary)--> host.
 
 The tactics used to extend a breach beyond a single computer vary, but the key to propagating compromise is the acquisition of highly privileged access to additional systems. By reducing the number of accounts with privileged access to any system, you reduce the attack surface not only of that computer, but the likelihood of an attacker harvesting valuable credentials from the computer.
 
@@ -156,5 +158,5 @@ The Microsoft Security Development Lifecycle (SDL) is a set of structural proces
 
 Some organizations place the full cost of fixing a security issue in production code above $10,000 per issue, and applications developed without an effective SDL can average more than ten high-severity issues per 100,000 lines of code. In large applications, the costs escalate quickly. By contrast, many companies set a benchmark of less than one issue per 100,000 lines of code at the final code review stage of the SDL, and aim for zero issues in high-risk applications in production.
 
-Implementing the SDL improves security by including security requirements early in requirements gathering and design of an application provides threat modeling for high-risk applications; requires effective training and monitoring of developers; and requires clear, consistent code standards and practices. The net effect of an SDL is significant improvements in application security while reducing the cost to develop, deploy, maintain, and decommission an application. Although a detailed discussion of the design and implementation of SDL is beyond the scope of this document, refer to the [Microsoft Security Development Lifecycle](https://www.microsoft.com/security/sdl/default.aspx) for detailed guidance and information.
+Implementing the SDL improves security by including security requirements early in requirements gathering and design of an application provides threat modeling for high-risk applications; requires effective training and monitoring of developers; and requires clear, consistent code standards and practices. The net effect of an SDL is significant improvements in application security while reducing the cost to develop, deploy, maintain, and decommission an application. Although a detailed discussion of the design and implementation of SDL is beyond the scope of this document, refer to the [Microsoft Security Development Lifecycle](/windows/security/threat-protection/msft-security-dev-lifecycle) for detailed guidance and information.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set-up Clients"
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 5, Set Up Clients
 ms.topic: article
 manager: klaasl
@@ -9,7 +10,7 @@ ms.assetid: f168292b-0dbc-44b9-965f-d480e5134a0c
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set-up Clients
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the fifth step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:
 
@@ -73,7 +74,7 @@ To configure Work Folders on the client machine, follow these steps:
 
 3. On the **Enter your work email address** page, enter either the user's email address (for example, user@contoso.com) or the Work Folders URL (in the test example, https:\//workfolders.contoso.com), and then click **Next**.
 
-4. If the user is connected to the corporate network, the authentication is performed by Windows Integrated Authentication. If the user is not connected to the corporate network, the authentication is performed by ADFS (OAuth) and the user will be prompted for credentials. Enter your credentials and click **OK**.
+4. If the user is connected to the corporate network, the authentication is performed by Windows Integrated Authentication. If the user is not connected to the corporate network, the authentication is performed by AD FS (OAuth) and the user will be prompted for credentials. Enter your credentials and click **OK**.
 
 5. After you have authenticated, the **Introducing Work Folders** page is displayed, where you can optionally change the Work Folders directory location. Click **Next**.
 

@@ -3,14 +3,14 @@ title: Safely virtualizing Active Directory Domain Services (AD DS)
 description: USN Rollback and safe virtualization of Active Directory
 ms.topic: article
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 03/22/2019
 ms.assetid: 7a3114c8-bda8-49bb-83a8-4e04340ab221
 ---
 # Safely virtualizing Active Directory Domain Services (AD DS)
 
->Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 Beginning with Windows Server 2012, AD DS provides greater support for virtualizing domain controllers by introducing virtualization-safe capabilities. This article explains the role of USNs and InvocationIDs in Domain Controller replication and discusses some potential issues that can occur.
 

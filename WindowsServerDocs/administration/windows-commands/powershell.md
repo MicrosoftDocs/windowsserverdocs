@@ -3,8 +3,8 @@ title: PowerShell
 description: Reference article for the PowerShell command, which opens the PowerShell console from a command prompt.
 ms.topic: reference
 ms.assetid: 694fc970-0b6c-4046-b1b5-7eb1a0d26609
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---

@@ -5,12 +5,11 @@ ms.topic: article
 author: saurabhsensharma
 ms.author: saurse
 ms.date: 03/25/2019
-ms.localizationpriority: low
 ---
 
 # Backup your Windows Servers from Windows Admin Center with Azure Backup
 
->Applies To: Windows Admin Center Preview, Windows Admin Center
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 

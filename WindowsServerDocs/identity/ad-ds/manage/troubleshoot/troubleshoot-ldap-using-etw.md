@@ -4,7 +4,7 @@ description: How to turn on and use ETW to trace LDAP connections between AD DS 
 author: Teresa-Motiv
 manager: dcscontentpm-dev
 audience: Admin
-ms.author: v-tea
+ms.author: wscontent
 ms.topic: article
 ms.date: 11/22/2019
 ---
@@ -132,4 +132,4 @@ Consider an application, App1.exe, that sets passwords for user accounts. Suppos
     ```
 
    > [!NOTE]
-   > In this command, **tracerpt.exe** is a [trace consumer](https://go.microsoft.com/fwlink/p/?linkid=83876) tool.
+   > In this command, **tracerpt.exe** is a [trace consumer](/windows-hardware/drivers/devtest/trace-consumer) tool.

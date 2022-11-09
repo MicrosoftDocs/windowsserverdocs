@@ -4,7 +4,7 @@ description: In this document you will learn how to deploy AD FS in Azure for hi
 author: billmath
 manager: mtillman
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
-ms.topic: get-started-article
+ms.topic: how-to
 ms.date: 10/28/2018
 ms.author: billmath
 ---
@@ -23,7 +23,7 @@ There are several advantages of deploying AD FS in Azure, a few of them are list
 
 The diagram above shows the recommended basic topology to start deploying your AD FS infrastructure in Azure. The principles behind the various components of the topology are listed below:
 
-* **DC / ADFS Servers**: If you have fewer than 1,000 users you can simply install AD FS role on your domain controllers. If you do not want any performance impact on the domain controllers or if you have more than 1,000 users, then deploy AD FS on separate servers.
+* **DC/AD FS Servers**: If you have fewer than 1,000 users you can simply install AD FS role on your domain controllers. If you do not want any performance impact on the domain controllers or if you have more than 1,000 users, then deploy AD FS on separate servers.
 * **WAP Server** – it is necessary to deploy Web Application Proxy servers, so that users can reach the AD FS when they are not on the company network also.
 * **DMZ**: The Web Application Proxy servers will be placed in the DMZ and ONLY TCP/443 access is allowed between the DMZ and the internal subnet.
 * **Load Balancers**: To ensure high availability of AD FS and Web Application Proxy servers, we recommend using an internal load balancer for AD FS servers and Azure Load Balancer for Web Application Proxy servers.
@@ -84,7 +84,7 @@ We will need a connection to on-premises in order to deploy the domain controlle
 * ExpressRoute
 
 It is recommended to use ExpressRoute. ExpressRoute lets you create private connections between Azure datacenters and infrastructure that's on your premises or in a co-location environment. ExpressRoute connections do not go over the public Internet. They offer more reliability, faster speeds, lower latencies and higher security than typical connections over the Internet.
-While it is recommended to use ExpressRoute, you may choose any connection method best suited for your organization. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](https://aka.ms/Azure/ExpressRoute).
+While it is recommended to use ExpressRoute, you may choose any connection method best suited for your organization. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](/azure/expressroute/expressroute-introduction).
 
 ### 2. Create storage accounts
 In order to maintain high availability and avoid dependence on a single storage account, you can create two storage accounts. Divide the machines in each availability set into two groups and then assign each group a separate storage account.
@@ -104,7 +104,7 @@ Create the following availability sets
 
 | Availability Set | Role | Fault domains | Update domains |
 |:---:|:---:|:---:|:--- |
-| contosodcset |DC/ADFS |3 |5 |
+| contosodcset |DC/AD FS |3 |5 |
 | contosowapset |WAP |3 |5 |
 
 ### 4. Deploy virtual machines
@@ -112,12 +112,12 @@ The next step is to deploy virtual machines that will host the different roles i
 
 | Machine | Role | Subnet | Availability set | Storage account | IP Address |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| contosodc1 |DC/ADFS |INT |contosodcset |contososac1 |Static |
-| contosodc2 |DC/ADFS |INT |contosodcset |contososac2 |Static |
+| contosodc1 |DC/AD FS |INT |contosodcset |contososac1 |Static |
+| contosodc2 |DC/AD FS |INT |contosodcset |contososac2 |Static |
 | contosowap1 |WAP |DMZ |contosowapset |contososac1 |Static |
 | contosowap2 |WAP |DMZ |contosowapset |contososac2 |Static |
 
-As you might have noticed, no NSG has been specified. This is because azure lets you use NSG at the subnet level. Then, you can control machine network traffic by using the individual NSG associated with either the subnet or else the NIC object. Read more on [What is a Network Security Group (NSG)](https://aka.ms/Azure/NSG).
+As you might have noticed, no NSG has been specified. This is because azure lets you use NSG at the subnet level. Then, you can control machine network traffic by using the individual NSG associated with either the subnet or else the NIC object. Read more on [What is a Network Security Group (NSG)](/azure/virtual-network/tutorial-filter-network-traffic).
 Static IP address is recommended if you are managing the DNS. You can use Azure DNS and instead in the DNS records for your domain, refer to the new machines by their Azure FQDNs.
 Your virtual machine pane should look like below after the deployment is completed:
 
@@ -331,33 +331,33 @@ You can use an existing virtual network or create a new VNET while deploying thi
 | VirtualNetworkResourceGroupName |Specifies the name of the resource group where the existing virtual network resides. When using an existing virtual network, this becomes a mandatory parameter so the deployment can find the ID of the existing virtual network |
 | VirtualNetworkAddressRange |The address range of the new VNET, mandatory if creating a new virtual network |
 | InternalSubnetName |The name of the internal subnet, mandatory on both virtual network usage options (new or existing) |
-| InternalSubnetAddressRange |The address range of the internal subnet, which contains the Domain Controllers and ADFS servers, mandatory if creating a new virtual network. |
+| InternalSubnetAddressRange |The address range of the internal subnet, which contains the Domain Controllers and AD FS servers, mandatory if creating a new virtual network. |
 | DMZSubnetAddressRange |The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network. |
 | DMZSubnetName |The name of the internal subnet, mandatory on both virtual network usage options (new or existing). |
 | ADDC01NICIPAddress |The internal IP address of the first Domain Controller, this IP address will be statically assigned to the DC and must be a valid ip address within the Internal subnet |
 | ADDC02NICIPAddress |The internal IP address of the second Domain Controller, this IP address will be statically assigned to the DC and must be a valid ip address within the Internal subnet |
-| ADFS01NICIPAddress |The internal IP address of the first ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet |
-| ADFS02NICIPAddress |The internal IP address of the second ADFS server, this IP address will be statically assigned to the ADFS server and must be a valid ip address within the Internal subnet |
+| ADFS01NICIPAddress |The internal IP address of the first AD FS server, this IP address will be statically assigned to the AD FS server and must be a valid ip address within the Internal subnet |
+| ADFS02NICIPAddress |The internal IP address of the second AD FS server, this IP address will be statically assigned to the AD FS server and must be a valid ip address within the Internal subnet |
 | WAP01NICIPAddress |The internal IP address of the first WAP server, this IP address will be statically assigned to the WAP server and must be a valid ip address within the DMZ subnet |
 | WAP02NICIPAddress |The internal IP address of the second WAP server, this IP address will be statically assigned to the WAP server and must be a valid ip address within the DMZ subnet |
-| ADFSLoadBalancerPrivateIPAddress |The internal IP address of the ADFS load balancer, this IP address will be statically assigned to the load balancer and must be a valid ip address within the Internal subnet |
+| ADFSLoadBalancerPrivateIPAddress |The internal IP address of the AD FS load balancer, this IP address will be statically assigned to the load balancer and must be a valid ip address within the Internal subnet |
 | ADDCVMNamePrefix |Virtual Machine name prefix for Domain Controllers |
-| ADFSVMNamePrefix |Virtual Machine name prefix for ADFS servers |
+| ADFSVMNamePrefix |Virtual Machine name prefix for AD FS servers |
 | WAPVMNamePrefix |Virtual Machine name prefix for WAP servers |
-| ADDCVMSize |The vm size of the Domain Controllers |
-| ADFSVMSize |The vm size of the ADFS servers |
-| WAPVMSize |The vm size of the WAP servers |
+| ADDCVMSize |The virtual machine size of the Domain Controllers |
+| ADFSVMSize |The virtual machine size of the AD FS servers |
+| WAPVMSize |The virtual machine size of the WAP servers |
 | AdminUserName |The name of the local Administrator of the virtual machines |
 | AdminPassword |The password for the local Administrator account of the virtual machines |
 
 ## Additional resources
-* [Availability Sets](https://aka.ms/Azure/Availability)
-* [Azure Load Balancer](https://aka.ms/Azure/ILB)
-* [Internal Load Balancer](https://aka.ms/Azure/ILB/Internal)
-* [Internet Facing Load Balancer](https://aka.ms/Azure/ILB/Internet)
-* [Storage Accounts](https://aka.ms/Azure/Storage)
-* [Azure Virtual Networks](https://aka.ms/Azure/VNet)
-* [AD FS and Web Application Proxy Links](https://aka.ms/ADFSLinks)
+* [Availability Sets](/azure/virtual-machines/availability-set-overview)
+* [Azure Load Balancer](/azure/load-balancer/load-balancer-overview)
+* [Internal Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-powershell)
+* [Internet Facing Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-public-powershell)
+* [Storage Accounts](/azure/storage/common/storage-account-overview)
+* [Azure Virtual Networks](/azure/virtual-network/virtual-networks-overview)
+* [AD FS and Web Application Proxy Links](/archive/blogs/tangent_thoughts/qrg-quick-reference-guide-active-directory-federation-services)
 
 ## Next steps
 * [Integrating your on-premises identities with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity)

@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Guarded fabric and shielded VMs overview"
 title: Guarded Fabric and Shielded VMs overview
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
 # Guarded fabric and shielded VMs overview
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 ## Overview of the guarded fabric
 
@@ -28,8 +29,6 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 ![Guarded host fabric](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)
 
 ## Video: Introduction to shielded virtual machines
-
-> [!VIDEO https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016]
 
 ## Attestation modes in the Guarded Fabric solution
 
@@ -76,7 +75,7 @@ The shielding data file (PDK file) provides assurances that the VM will be creat
 
 The following figure shows the shielding data file and related configuration elements.
 
-![Shielding data file](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
+![Illustration that shows the shielding data file and related configuration elements.](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
 
 ## What are the types of virtual machines that a guarded fabric can run?
 
@@ -160,5 +159,5 @@ Both shielded VMs and encryption-supported VMs continue to support commonplace f
 
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
 - Blog: [Datacenter and Private Cloud Security Blog](/archive/blogs/datacentersecurity/)
-- Video: [Introduction to Shielded Virtual Machines](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
-- Video: [Dive into Shielded VMs with Windows Server 2016 Hyper-V](https://channel9.msdn.com/events/Ignite/2016/BRK3124)
+- Video: Introduction to Shielded Virtual Machines
+- Video: Dive into Shielded VMs with Windows Server 2016 Hyper-V

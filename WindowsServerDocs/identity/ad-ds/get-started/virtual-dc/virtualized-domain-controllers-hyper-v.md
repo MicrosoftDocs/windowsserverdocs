@@ -2,13 +2,13 @@
 title: Virtualizing Domain Controllers using Hyper-V
 description: Considerations to make when virtualizing Windows Server Active Directory Domain Controllers in Hyper-V
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 ms.date: 04/19/2018
 ms.topic: article
 ---
 # Virtualizing Domain Controllers using Hyper-V
 
-> Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic will be updated in order to make the guidance applicable to Windows Server 2016. Windows Server 2012 introduces many improvements for virtualized domain controllers (DCs), including safeguards to prevent USN rollback on virtual DCs and the ability to clone virtual DCs. For more information about these improvements, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../../introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
 
@@ -34,9 +34,9 @@ To install and use the Hyper-V role, you must have the following:
 You should attempt to avoid creating potential single points of failure when you plan your virtual domain controller deployment. You can avoid introducing potential single points of failure by implementing system redundancy. For example, consider the following recommendations while keeping in mind the potential for increases in the cost of administration:
 
 1. Run at least two virtualized domain controllers per domain on different virtualization hosts, which reduces the risk of losing all domain controllers if a single virtualization host fails.
-2. As recommended for other technologies, diversify the hardware (using different CPUs, motherboards, network adapters, or other hardware) on which the domain controllers are running. Hardware diversification limits the damage that might be caused by a malfunction that is specific to a vendor configuration, a driver, or a single piece or type of hardware.
-3. If possible, domain controllers should be running on hardware that is located in different regions of the world. This helps to reduce the impact of a disaster or failure that affects a site at which the domain controllers are hosted.
-4. Maintain physical domain controllers in each of your domains. This mitigates the risk of a virtualization platform malfunction that affects all host systems that use that platform.
+1. As recommended for other technologies, diversify the hardware (using different CPUs, motherboards, network adapters, or other hardware) on which the domain controllers are running. Hardware diversification limits the damage that might be caused by a malfunction that is specific to a vendor configuration, a driver, or a single piece or type of hardware.
+1. If possible, domain controllers should be running on hardware that is located in different regions of the world. This helps to reduce the impact of a disaster or failure that affects a site at which the domain controllers are hosted.
+1. Maintain physical domain controllers in each of your domains. This mitigates the risk of a virtualization platform malfunction that affects all host systems that use that platform.
 
 ## Security considerations
 
@@ -47,7 +47,7 @@ Be sure to keep the following security considerations in mind when you are plann
    - The local administrator of a computer that hosts virtual, writeable domain controllers should be considered equivalent in credentials to the default domain administrator of all the domains and forests that those domain controllers belong to.
    - The recommended configuration to avoid security and performance issues is a host running a Server Core installation of Windows Server 2008 or later, with no applications other than Hyper-V. This configuration limits the number of applications and services that are installed on the server, which should result in increased performance and fewer applications and services that could be maliciously exploited to attack the computer or network. The effect of this type of configuration is known as a reduced attack surface. In a branch office or other locations that cannot be satisfactorily secured, a read-only domain controller (RODC) is recommended. If a separate management network exists, we recommend that the host be connected only to the management network.
    - You can use Bitlocker with your domain controllers, since Windows Server 2016 you can use the virtual TPM feature to also give the guest key material to unlock the system volume.
-   - [Guarded fabric and shielded VMs](/it-server/WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) can provide additional controls to protect your domain controllers.
+   - [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) can provide additional controls to protect your domain controllers.
 
 For information about RODCs, see [Read-Only Domain Controller Planning and Deployment Guide](../../deploy/rodc/read-only-domain-controller-updates.md).
 
@@ -80,88 +80,22 @@ One benefit of RODCs is the ability to place them at locations where physical se
 
 With the new microkernel 64-bit architecture, there are significant increases in Hyper-V performance from previous virtualization platforms. For best host performance, the host should be a Server Core installation of Windows Server 2008 or later, and it should not have server roles other than Hyper-V installed.
 
-Performance of virtual machines depends specifically on the workload. To guarantee satisfactory Active Directory performance, test specific topologies. Assess the current workload over a period of time with a tool such as the Reliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](https://go.microsoft.com/fwlink/?linkid=137077). The MAP tool can also be valuable if you want to take an inventory of all of the servers and server roles that currently exist in your network.
+Performance of virtual machines depends specifically on the workload. To guarantee satisfactory Active Directory performance, test specific topologies. Assess the current workload over a period of time with a tool such as the Reliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](/previous-versions/tn-archive/cc936627(v=technet.10)). The MAP tool can also be valuable if you want to take an inventory of all of the servers and server roles that currently exist in your network.
 
 To get a general idea of the performance of virtualized domain controllers, the following performance tests were carried out with the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
 
 Lightweight Directory Access Protocol (LDAP) tests were run on a physical domain controller with ADTest.exe and then on a virtual machine that was hosted on a server that was identical to the physical domain controller. Only one logical processor was used for the physical computer, and only one virtual processor was used for the virtual machine to easily reach 100-percent CPU utilization. In the following table, the letter and number in parenthesis after each test indicate the specific test in ADTest.exe. As this data shows, virtualized domain controller performance was 88 to 98 percent of the physical domain controller performance.
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Measurement</th>
-<th>Test</th>
-<th>Physical</th>
-<th>Virtual</th>
-<th>Delta</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Searches/sec</p></td>
-<td><p>Search for common name in base scope (L1)</p></td>
-<td><p>11508</p></td>
-<td><p>10276</p></td>
-<td><p>-10.71%</p></td>
-</tr>
-<tr class="even">
-<td><p>Searches/sec</p></td>
-<td><p>Search for a set of attributes in base scope (L2)</p></td>
-<td><p>10123</p></td>
-<td><p>9005</p></td>
-<td><p>-11.04%</p></td>
-</tr>
-<tr class="odd">
-<td><p>Searches/sec</p></td>
-<td><p>Search for all attributes in base scope (L3)</p></td>
-<td><p>1284</p></td>
-<td><p>1242</p></td>
-<td><p>-3.27%</p></td>
-</tr>
-<tr class="even">
-<td><p>Searches/sec</p></td>
-<td><p>Search for common name in subtree scope (L6)</p></td>
-<td><p>8613</p></td>
-<td><p>7904</p></td>
-<td><p>-8.23%</p></td>
-</tr>
-<tr class="odd">
-<td><p>Successful binds/sec</p></td>
-<td><p>Perform fast binds (B1)</p></td>
-<td><p>1438</p></td>
-<td><p>1374</p></td>
-<td><p>-4.45%</p></td>
-</tr>
-<tr class="even">
-<td><p>Successful binds/sec</p></td>
-<td><p>Perform simple binds (B2)</p></td>
-<td><p>611</p></td>
-<td><p>550</p></td>
-<td><p>-9.98%</p></td>
-</tr>
-<tr class="odd">
-<td><p>Successful binds/sec</p></td>
-<td><p>Use NTLM to perform binds (B5)</p></td>
-<td><p>1068</p></td>
-<td><p>1056</p></td>
-<td><p>-1.12%</p></td>
-</tr>
-<tr class="even">
-<td><p>Writes/sec</p></td>
-<td><p>Write multiple attributes (W2)</p></td>
-<td><p>6467</p></td>
-<td><p>5885</p></td>
-<td><p>-9.00%</p></td>
-</tr>
-</tbody>
-</table>
+| Measurement  | Test                                              | Physical | Virtual | Delta |
+|--------------|---------------------------------------------------|----------|---------|-------|
+| Searches/sec | Search for common name in base scope (L1)         | 11508 | 10276 | -10.71% |
+| Searches/sec | Search for a set of attributes in base scope (L2) | 10123 | 9005 | -11.04%  |
+| Searches/sec | Search for all attributes in base scope (L3)      | 1284  | 1242 | -3.27% |
+| Searches/sec | Search for common name in subtree scope (L6)      | 8613 | 7904 | -8.23% |
+| Successful binds/sec | Perform fast binds (B1) | 1438 | 1374 | -4.45% |
+| Successful binds/sec | Perform simple binds (B2) | 611 | 550 | -9.98% |
+| Successful binds/sec | Use NTLM to perform binds (B5) | 1068 | 1056 | -1.12% |
+|Writes/sec | Write multiple attributes (W2) | 6467 | 5885 | -9.00% |
 
 To ensure satisfactory performance, integration components (IC) were installed to allow the guest operating system to use “enlightenments,” or hypervisor-aware synthetic drivers. During the installation process, it may be necessary to use emulated Integrated Drive Electronics (IDE) or network adapter drivers. In production environments, you should replace these emulated drivers with synthetic drivers to increase performance.
 
@@ -169,9 +103,9 @@ When you monitor performance of virtual machines with Reliability and Performanc
 
 For more information about performance tuning of both AD DS and Hyper-V, see [Performance Tuning Guidelines for Windows Server 2016](../../../../administration/performance-tuning/index.md).
 
-Also, do not plan to use a differencing disk VHD on a virtual machine that is configured as a domain controller because the differencing disk VHD can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New Virtual Hard Disk Wizard](https://go.microsoft.com/fwlink/?linkid=137279).
+Also, do not plan to use a differencing disk VHD on a virtual machine that is configured as a domain controller because the differencing disk VHD can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New Virtual Hard Disk Wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 
-For additional information regarding AD DS in virtual hosting environments, see [Things to consider when you host Active Directory domain controllers in virtual hosting environments](https://go.microsoft.com/fwlink/?linkid=141292) in the Microsoft Knowledge Base.
+For additional information regarding AD DS in virtual hosting environments, see [Things to consider when you host Active Directory domain controllers in virtual hosting environments](/troubleshoot/windows-server/identity/ad-dc-in-virtual-hosting-environment) in the Microsoft Knowledge Base.
 
 ## Deployment Considerations for Virtualized Domain Controllers
 
@@ -182,7 +116,7 @@ There are several common virtual machine practices that you should avoid when yo
 Virtualization platforms, such as Hyper-V, offer a number of convenience features that make managing, maintaining, backing up, and migrating computers easier. However, the following common deployment practices and features should not be used for virtual domain controllers:
 
 - To ensure durability of Active Directory writes, do not deploy a virtual domain controller's database files (the Active Directory database (NTDS.DIT), logs and SYSVOL) on virtual IDE disks. Instead, create a second VHD attached to a virtual SCSI controller and ensure that the database, logs, and SYSVOL are placed on the virtual machine's SCSI disk during domain controller installation.
-- Do not implement differencing disk virtual hard disks (VHDs) on a virtual machine that you are configuring as a domain controller. This makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New Virtual Hard Disk Wizard](https://go.microsoft.com/fwlink/?linkid=137279).
+- Do not implement differencing disk virtual hard disks (VHDs) on a virtual machine that you are configuring as a domain controller. This makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New Virtual Hard Disk Wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 - Do not deploy new Active Directory domains and forests on a copy of a Windows Server operating system that was not first prepared using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
 
    > [!WARNING]
@@ -199,7 +133,7 @@ Virtualization platforms, such as Hyper-V, offer a number of convenience feature
 
 System Center Virtual Machine Manager (VMM) 2008 provides unified management of physical machines and virtual machines. It also provides the ability to migrate a physical machine to a virtual machine. This process is known as physical-to-virtual machine conversion (P2V conversion). During the P2V conversion process, the new virtual machine and the physical domain controller that is being migrated must not be running at the same time, to avoid a USN rollback situation as described in [USN and USN Rollback](#usn-and-usn-rollback).
 
-You should perform P2V conversion using offline mode so that the directory data is consistent when the domain controller is turned back on. The offline mode option is offered and recommended in the Convert Physical Server Wizard. For a description of the difference between online mode and offline mode, see [P2V: Converting Physical Computers to Virtual Machines in VMM](https://go.microsoft.com/fwlink/?linkid=155072). During P2V conversion, the virtual machine should not be connected to the network. The network adapter of the virtual machine should be enabled only after the P2V conversion process is complete and verified. At this point, the physical source machine will be off. Do not bring the physical source machine back onto the network again before you reformat the hard disk.
+You should perform P2V conversion using offline mode so that the directory data is consistent when the domain controller is turned back on. The offline mode option is offered and recommended in the Convert Physical Server Wizard. For a description of the difference between online mode and offline mode, see [P2V: Converting Physical Computers to Virtual Machines in VMM](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc764232(v=technet.10)). During P2V conversion, the virtual machine should not be connected to the network. The network adapter of the virtual machine should be enabled only after the P2V conversion process is complete and verified. At this point, the physical source machine will be off. Do not bring the physical source machine back onto the network again before you reformat the hard disk.
 
 > [!NOTE]
 > There are safer options to create new virtual DCs that don't run the risks of creating a USN Rollback. You may setup a new virtual DC by regular promotion, promotion from Install from Media (IfM), and also using Domain Controller cloning, if you already have at least one virtual DC.
@@ -209,7 +143,7 @@ This also helps avoiding problems with hardware or platform-related problems P2V
 > To prevent issues with Active Directory replication, ensure that only one instance (physical or virtual) of a given domain controller exists on a given network at any point in time.
 > You can lower the likelihood of the old clone being a problem:
 >
-> - When the new virtual DC is running, change the computer account password twice using: netdom resetpwd /Server:<domain-controller> …
+> - When the new virtual DC is running, change the computer account password twice using: netdom resetpwd /Server:\<domain-controller\> …
 > - Export and import the new virtual guest to force it becoming a new Generation ID and hence a database invocation ID.
 
 ## Using P2V Migration to Create Test Environments
@@ -253,14 +187,14 @@ To optimize the performance of the domain controller virtual machine and ensure 
 
 To reduce the chance of corruption of Active Directory data, use virtual SCSI controllers:
 
-   - Use SCSI physical drives (as opposed to IDE/ATA drives) on Hyper-V servers that host virtual domain controllers. If you cannot use SCSI drives, ensure that write caching is disabled on the ATA/IDE drives that host virtual domain controllers. For more information, see [Event ID 1539 – Database Integrity](https://go.microsoft.com/fwlink/?linkid=162419).
+   - Use SCSI physical drives (as opposed to IDE/ATA drives) on Hyper-V servers that host virtual domain controllers. If you cannot use SCSI drives, ensure that write caching is disabled on the ATA/IDE drives that host virtual domain controllers. For more information, see [Event ID 1539 – Database Integrity](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941847(v=ws.10)).
    - To guarantee the durability of Active Directory writes, the Active Directory database, logs, and SYSVOL must be placed on a virtual SCSI disk. Virtual SCSI disks support Forced Unit Access (FUA). FUA ensures that the operating system writes and reads data directly from the media bypassing any and all caching mechanisms.
 
 ## Operational Considerations for Virtualized Domain Controllers
 
 Domain controllers that are running on virtual machines have operational restrictions that do not apply to domain controllers that are running on physical machines. When you use a virtualized domain controller, there are some virtualization software features and practices that you should not use:
 
-   - Do not pause, stop, or store the saved state of a domain controller in a virtual machine for time periods longer than the tombstone lifetime of the forest and then resume from the paused or saved state. Doing this can interfere with replication. To learn how to determine the tombstone lifetime for the forest, see [Determine the Tombstone Lifetime for the Forest](https://go.microsoft.com/fwlink/?linkid=137177).
+   - Do not pause, stop, or store the saved state of a domain controller in a virtual machine for time periods longer than the tombstone lifetime of the forest and then resume from the paused or saved state. Doing this can interfere with replication. To learn how to determine the tombstone lifetime for the forest, see [Determine the Tombstone Lifetime for the Forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
    - Do not copy or clone virtual hard disks (VHDs). Even with the Safeguards in place for the guest VM, individual VHDs can still be copied and cause USN roll-back.
    - Do not take or use a Snapshot of a virtual domain controller. It is technically supported with Windows Server 2012 and newer, it is not a replacement for a good backup strategy. There are few reasons for taking DC snapshots or restoring the snapshots.
    - Do not use a differencing disk VHD on a virtual machine that is configured as a domain controller. This makes reverting to a previous version too easy, and it also decreases performance.
@@ -271,7 +205,7 @@ All these recommendations are made to help avoid the possibility of an update se
 
 ## Backup and Restore Considerations for Virtualized Domain Controllers
 
-Backing up domain controllers is a critical requirement for any environment. Backups protect against data loss in the event of domain controller failure or administrative error. If such an event occurs, it is necessary to roll back the system state of the domain controller to a point in time before the failure or error. The supported method of restoring a domain controller to a healthy state is to use an Active Directory–compatible backup application, such as Windows Server Backup, to restore a system state backup that originated from the current installation of the domain controller. For more information about using Windows Server Backup with Active Directory Domain Services (AD DS), see the [AD DS Backup and Recovery Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=138501).
+Backing up domain controllers is a critical requirement for any environment. Backups protect against data loss in the event of domain controller failure or administrative error. If such an event occurs, it is necessary to roll back the system state of the domain controller to a point in time before the failure or error. The supported method of restoring a domain controller to a healthy state is to use an Active Directory–compatible backup application, such as Windows Server Backup, to restore a system state backup that originated from the current installation of the domain controller. For more information about using Windows Server Backup with Active Directory Domain Services (AD DS), see the [AD DS Backup and Recovery Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)).
 
 With virtual machine technology, certain requirements of Active Directory restore operations take on added significance. For example, if you restore a domain controller by using a copy of the virtual hard disk (VHD) file, you bypass the critical step of updating the database version of a domain controller after it has been restored. Replication will proceed with inappropriate tracking numbers, resulting in an inconsistent database among domain controller replicas. In most cases, this problem goes undetected by the replication system and no errors are reported, despite inconsistencies between domain controllers.
 
@@ -304,7 +238,7 @@ To restore a domain controller when it fails, you must regularly backup system s
 
 When a domain controller virtual machine fails and an update sequence number (USN) rollback has not occurred, there are two supported situations for restoring the virtual machine:
 
-   - If a valid system state data backup that predates the failure exists, you can restore system state by using the restore option of the backup utility that you used to create the backup. The system state data backup must have been created using an Active Directory–compatible backup utility within the span of the tombstone lifetime, which is by default, no more than 180 days. You should back up your domain controllers at least every half tombstone lifetime. For instructions about how to determine the specific tombstone lifetime for your forest, see [Determine the Tombstone Lifetime for the Forest](https://go.microsoft.com/fwlink/?linkid=137177).
+   - If a valid system state data backup that predates the failure exists, you can restore system state by using the restore option of the backup utility that you used to create the backup. The system state data backup must have been created using an Active Directory–compatible backup utility within the span of the tombstone lifetime, which is by default, no more than 180 days. You should back up your domain controllers at least every half tombstone lifetime. For instructions about how to determine the specific tombstone lifetime for your forest, see [Determine the Tombstone Lifetime for the Forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
    - If a working copy of the VHD file is available, but no system state backup is available, you can remove the existing virtual machine. Restore the existing virtual machine by using a previous copy of the VHD, but be sure to start it in Directory Services Restore Mode (DSRM) and configure the registry properly, as described in the following section. Then, restart the domain controller in normal mode.
 
 Use the process in the following illustration to determine the best way to restore your virtualized domain controller.
@@ -330,7 +264,7 @@ If a valid system state backup exists for the domain controller virtual machine,
 
 2. In the Windows Boot Manager screen, press F8 to access advanced boot options.
 3. In the **Advanced Boot Options** screen, select **Directory Services Restore Mode**, and then press ENTER. This starts the domain controller in DSRM.
-4. Use the appropriate restore method for the tool that you used to create the system state backup. If you used Windows Server Backup, see [Performing a Nonauthoritative Restore of AD DS](https://go.microsoft.com/fwlink/?linkid=132637).
+4. Use the appropriate restore method for the tool that you used to create the system state backup. If you used Windows Server Backup, see [Performing a Nonauthoritative Restore of AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730683(v=ws.10)).
 
 ## Restoring a virtual domain controller when an appropriate system state data backup is not available
 
@@ -347,7 +281,7 @@ If you do not have a system state data backup that predates the virtual machine 
 2. Open Registry Editor. To open Registry Editor, click **Start**, click **Run**, type **regedit**, and then click OK. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Yes**. In Registry Editor, expand the following path: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\NTDS\\Parameters**. Look for a value named **DSA Previous Restore Count**. If the value is there, make a note of the setting. If the value is not there, the setting is equal to the default, which is zero. Do not add a value if you do not see one there.
 3. Right-click the **Parameters** key, click **New**, and then click **DWORD (32-bit) Value**.
 4. Type the new name **Database restored from backup**, and then press ENTER.
-5. Double-click the value that you just created to open the **Edit DWORD (32-bit) Value** dialog box, and then type **1** in the **Value data** box. The **Database restored from backup entry** option is available on domain controllers that are running Windows 2000 Server with Service Pack 4 (SP4), Windows Server 2003 with the updates that are included in [How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2](https://go.microsoft.com/fwlink/?linkid=137182) in the Microsoft Knowledge Base installed, and Windows Server 2008.
+5. Double-click the value that you just created to open the **Edit DWORD (32-bit) Value** dialog box, and then type **1** in the **Value data** box. The **Database restored from backup entry** option is available on domain controllers that are running Windows 2000 Server with Service Pack 4 (SP4), Windows Server 2003 with the updates that are included in [How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base installed, and Windows Server 2008.
 6. Restart the domain controller in normal mode.
 7. When the domain controller restarts, open Event Viewer. To open Event Viewer, click **Start**, click **Control Panel**, double-click **Administrative Tools**, and then double-click **Event Viewer**.
 8. Expand **Application and Services Logs**, and then click the **Directory Services** log. Ensure that events appear in the details pane.
@@ -418,7 +352,7 @@ USN rollback can be caused in many ways, for example, when old virtual hard disk
    - When not running Windows Server 2012 or newer, do not export the virtual machine that is running a domain controller.
    - Do not restore a domain controller or attempt to roll back the contents of an Active Directory database by any other means than a supported backup solution, such as Windows Server Backup.
 
-In some cases, USN rollback may go undetected. In other cases, it may cause other replication errors. In these cases, it is necessary to identify the extent of the problem and take care of it in a timely manner. For information about how to remove lingering objects that may occur as a result of USN rollback, see [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](https://go.microsoft.com/fwlink/?linkid=137185) in the Microsoft Knowledge Base.
+In some cases, USN rollback may go undetected. In other cases, it may cause other replication errors. In these cases, it is necessary to identify the extent of the problem and take care of it in a timely manner. For information about how to remove lingering objects that may occur as a result of USN rollback, see [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1388-1988) in the Microsoft Knowledge Base.
 
 ## USN rollback detection
 
@@ -441,9 +375,9 @@ If the Directory Service event log reports Event ID 2095, complete the followin
 1. Isolate the virtual machine that recorded the error from the network.
 2. Attempt to determine whether any changes originated from this domain controller and propagated to other domain controllers. If the event was a result of a snapshot or copy of a virtual machine being started, try to determine the time the USN rollback occurred. You can then check the replication partners of that domain controller to determine whether replication occurred since then.
 
-   You can use the Repadmin tool to make this determination. For information about how to use Repadmin, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?linkid=122830). If you are not able to determine this yourself, contact [Microsoft Support](https://support.microsoft.com) for assistance.
+   You can use the Repadmin tool to make this determination. For information about how to use Repadmin, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)). If you are not able to determine this yourself, contact [Microsoft Support](https://support.microsoft.com) for assistance.
 
-3. Forcefully demote the domain controller. This involves cleaning up the domain controller's metadata and seizing the operations master (also known as flexible single master operations or FSMO) roles. For more information, see the “Recovering from USN rollback” section of [How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2](https://go.microsoft.com/fwlink/?linkid=137182) in the Microsoft Knowledge Base.
+3. Forcefully demote the domain controller. This involves cleaning up the domain controller's metadata and seizing the operations master (also known as flexible single master operations or FSMO) roles. For more information, see the “Recovering from USN rollback” section of [How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base.
 4. Delete all former VHD files for the domain controller.
 
 ## Undetected USN rollback

@@ -3,8 +3,8 @@ title: ksetup dumpstate
 description: Reference article for the ksetup dumpstate commnand, which displays the current state of realm settings for all realms that are defined on the computer.
 ms.topic: reference
 ms.assetid: 3ef2f7b8-97af-4f42-9542-cff324840637
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

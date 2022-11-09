@@ -1,32 +1,26 @@
 ---
-title: Always On VPN Technology Overview
+title: Always On VPN deployment infrastructure
 description: 'This page provies a brief overview of the Always On VPN technologies with links to detailed documents. '
 ms.topic: article
 ms.date: 11/05/2018
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ---
 
 
-# Always On VPN technology overview
+# Always On VPN deployment infrastructure 
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
-
-- [**Previous:** Learn about the Always On VPN enhancements](always-on-vpn-enhancements.md)
-- [**Next:** Learn about the advanced features of Always On VPN](deploy/always-on-vpn-adv-options.md)
-
-For this deployment, you must install a new Remote Access server that is running Windows Server 2016, as well as modify some of your existing infrastructure for the deployment.
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 The following illustration shows the infrastructure that is required to deploy Always On VPN.
 
 ![Always On VPN Infrastructure](../../../media/Always-On-Vpn/Ao-Vpn-Overview.jpg)
 
-The connection process depicted in this illustration is comprised of the following steps:
+The connection process depicted in this illustration is composed of the following steps:
 
-1. Using public DNS servers, the Windows 10 VPN client performs a name resolution query for the IP address of the VPN gateway.
+1. The Windows 10 VPN client uses public DNS servers to perform a name resolution query for the IP address of the VPN gateway.
 
-2. Using the IP address returned by DNS, the VPN client sends a connection request to the VPN gateway.
+2. The VPN client uses the IP address returned by DNS to send a connection request to the VPN gateway.
 
 3. The VPN gateway is also configured as a Remote Authentication Dial-In User Service (RADIUS) Client; the VPN RADIUS Client sends the connection request to the organization/corporate NPS server for connection request processing.
 
@@ -146,7 +140,7 @@ For more information, see [Configure NPS to Ignore User Account Dial-in Properti
 
 Group Policy Management enables directory-based change and configuration management of user and computer settings, including security and user information. You use Group Policy to define configurations for groups of users and computers.
 
-With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO). By associating a GPO with selected Active Directory system containers — sites, domains, and OUs — you can apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the
+With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO).  You can associate a GPO with selected Active Directory system containers (sites, domains, and OUs) to apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the
 Group Policy Management Editor Microsoft Management Console (MMC).
 
 ## Windows 10 VPN Clients

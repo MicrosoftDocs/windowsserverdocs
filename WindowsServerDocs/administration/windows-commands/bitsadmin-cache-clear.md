@@ -3,8 +3,8 @@ title: bitsadmin cache and clear
 description: Reference article for the bitsadmin cache and clear command, which purges the local cache.
 ms.topic: reference
 ms.assetid: 125426bc-5f90-4cdb-ba14-24be428c66c7
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

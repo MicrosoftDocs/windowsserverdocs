@@ -1,16 +1,16 @@
 ---
+description: "Learn more about: CA Backup and Restore Windows PowerShell cmdlets"
 ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA Backup and Restore Windows PowerShell cmdlets
-author: iainfoulds
-ms.author: iainfou
-manager: daveba
-ms.date: 05/31/2017
+author: xelu86
+ms.author: alalve
+ms.date: 06/21/2022
 ms.topic: article
 ---
 
 # CA Backup and Restore Windows PowerShell cmdlets
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 >
 > **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 >
@@ -25,7 +25,6 @@ The ADCSAdministration Windows PowerShell module was introduced in Window Server
 -   Restore-CARoleService
 
 ## Backup-CARoleService
-**Table  SEQ Table \\\* ARABIC 17: Backup and Restore Windows PowerShell Cmdlets**
 
 **ADCSAdministration Cmdlet: Backup-CARoleService**
 
@@ -39,7 +38,7 @@ The ADCSAdministration Windows PowerShell module was introduced in Window Server
 |-Incremental|-   Perform an incremental backup<p>Backup-CARoleService c:\adcsbackup7 -Incremental|
 |-KeepLog|1.  Instructs the command to keep log files. If the switch is not specified, log files are truncated by default except in the Incremental scenario<p>Backup-CARoleService c:\adcsbackup7 -KeepLog|
 
-### -Password <Secure String>
+### -Password \<Secure String>
 If the -Password parameter is used, the supplied password must be a secure string.  Use the **Read-Host** cmdlet to launch an interactive prompt for secure password entry, or use the **ConvertTo-SecureString** cmdlet to specify the password in-line.
 
 Review the following examples
@@ -72,7 +71,7 @@ A non-password protected backup is taken if the ConvertTo-SecureString function 
 
 ![CA backup and restore](media/CA-Backup-and-Restore-Windows-PowerShell-cmdlets/GTR_ADDS_BackupCARole.gif)
 
-**Table  SEQ Table \\\* ARABIC 18: Common Errors**
+### Common errors
 
 |Action|Error|Comment|
 |----------|---------|-----------|

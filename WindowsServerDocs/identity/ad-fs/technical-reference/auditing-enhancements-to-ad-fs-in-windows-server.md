@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Auditing Enhancements to AD FS in Windows Server 2016"
 ms.assetid: 208928eb-bb17-4984-a312-23fff43133e3
 title: Auditing Enhancements to AD FS in Windows Server 2016
 author: billmath
@@ -15,7 +16,7 @@ Currently, in AD FS for Windows Server 2012 R2 there are numerous audit events g
 With the release of AD FS in Windows Server 2016, auditing has become more streamlined and less verbose.
 
 ## Auditing levels in AD FS for Windows Server 2016
-By default, AD FS in Windows Server 2016 has basic auditing enabled.  With basic auditing, administrators will see 5 or less events for a single request.  This marks a significant decrease in the number of events administrators have to look at, in order to see a single request.   The auditing level can be raised or lowered using the PowerShell cmdlt:  Set-AdfsProperties -AuditLevel.  The table below explains the available auditing levels.
+By default, AD FS in Windows Server 2016 has basic auditing enabled.  With basic auditing, administrators will see 5 or less events for a single request.  This marks a significant decrease in the number of events administrators have to look at, in order to see a single request.   The auditing level can be raised or lowered using the PowerShell cmdlet:  Set-AdfsProperties -AuditLevel.  The table below explains the available auditing levels.
 
 | Audit Level | PowerShell syntax | Description |
 |--|--|--|
@@ -23,11 +24,11 @@ By default, AD FS in Windows Server 2016 has basic auditing enabled.  With basic
 | Basic (Default) | Set-AdfsProperties - AuditLevel Basic | No more than 5 events will be logged for a single request |
 | Verbose | Set-AdfsProperties - AuditLevel Verbose | All events will be logged.  This will log a significant amount of information per request. |
 
-To view the current auditing level, you can use the PowerShell cmdlt:  Get-AdfsProperties.
+To view the current auditing level, you can use the PowerShell cmdlet:  Get-AdfsProperties.
 
-![audit enhancements](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)
+![Screenshot that shows how to use the Get-AdfsProperties cmdlet.](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)
 
-The auditing level can be raised or lowered using the PowerShell cmdlt:  Set-AdfsProperties -AuditLevel.
+The auditing level can be raised or lowered using the PowerShell cmdlet:  Set-AdfsProperties -AuditLevel.
 
 ![audit enhancements](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)
 

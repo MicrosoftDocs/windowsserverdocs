@@ -3,14 +3,14 @@ title: Plan Your WSUS Deployment
 description: Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 05/24/2018
 ---
 # Plan your WSUS deployment
 
->Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
@@ -41,11 +41,11 @@ Hardware and database software requirements are driven by the number of client c
     -   **Network adapter:** 100 megabits per second (Mbps) or greater (1GB is recommended)
 
 > [!NOTE]
-> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rullup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.
+> These guidelines assume that WSUS clients are synchronizing with the server every eight hours with a total of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.
 
 -   Software Requirements:
 
-    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=6576). On Windows Server 2016, WSUS requires [Microsoft Report Viewer Runtime 2012](https://www.microsoft.com/download/details.aspx?id=35747)
+    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=3203). On Windows Server 2016, WSUS requires [Microsoft Report Viewer Runtime 2012](https://www.microsoft.com/download/details.aspx?id=35747)
 
 -   If you install roles or software updates that require you to restart the server when installation is complete, restart the server before you enable the WSUS server role.
 
@@ -107,7 +107,7 @@ WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
 
--   Any supported Microsoft SQL Server version. For more information, see [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle).
+-   Any supported Microsoft SQL Server version. For more information, see [Microsoft Lifecycle Policy](/lifecycle/products/?products=sql-server).
 
 The following editions of SQL Server are supported by WSUS:
 
@@ -166,10 +166,10 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 You can connect WSUS servers in Autonomous mode (to achieve distributed administration) or in Replica mode (to achieve centralized administration). You do not have to deploy a server hierarchy that uses only one mode: you can deploy a WSUS solution that uses both autonomous and replica WSUS servers.
 
 #### Autonomous mode
-The Autonomous mode, also called distributed administration, is the default installation option for WSUS. In Autonomous mode, an upstream WSUS server shares updates with downstream servers during synchronization. Downstream WSUS servers are administered separately, and they do not receive update approval status or computer group information from the upstream server. By using the distributed management model, each WSUS server administrator selects update languages, creates computer groups, assigns computers to groups, tests and approves updates, and makes sure that the correct updates are installed to the appropriate computer groups. The following image shows how you might deploy autonomous WSUS servers in a branch office environment:
+The Autonomous mode, also called distributed administration, is the default installation option for WSUS. In Autonomous mode, an upstream WSUS server shares updates with downstream servers during synchronization. Downstream WSUS servers are administered separately, and they do not receive update approval status or computer group information from the upstream server. By using the distributed management model, each WSUS server administrator selects update languages, creates computer groups, assigns computers to groups, tests and approves updates, and makes sure that the correct updates are installed to the appropriate computer groups.
 
 #### Replica mode
-The Replica mode, also called centralized administration, works by having an upstream WSUS server that shares updates, approval status, and computer groups with downstream servers. Replica servers inherit update approvals and are not administered separately from the upstream WSUS server. The following image shows how you might deploy replica WSUS servers in a branch office environment.
+The Replica mode, also called centralized administration, works by having an upstream WSUS server that shares updates, approval status, and computer groups with downstream servers. Replica servers inherit update approvals and are not administered separately from the upstream WSUS server.
 
 > [!NOTE]
 > If you set up several replica servers to connect to a single upstream WSUS server, do not schedule synchronization to run at the same time on each replica server. This practice will avoid sudden surges in bandwidth usage.

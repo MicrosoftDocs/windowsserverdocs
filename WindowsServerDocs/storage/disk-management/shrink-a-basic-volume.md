@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Shrink a basic volume
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need an additional partition but do not have additional disks, you can shrink the existing partition from the end of the volume to create new unallocated space that can then be used for a new partition. The shrink operation can be blocked by the presence of certain file types. For more information, see [Additional considerations](#additional-considerations)
 

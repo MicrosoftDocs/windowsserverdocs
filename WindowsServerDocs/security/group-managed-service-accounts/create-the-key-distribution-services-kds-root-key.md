@@ -1,16 +1,16 @@
 ---
 title: Create the Key Distribution Services KDS Root Key
-description: Windows Server Security
+description: Learn how to create a Microsoft Key Distribution Service (kdssvc.dll) root key on the domain controller using Windows PowerShell to generate group Managed Service Account passwords in Windows Server 2012 or later.
 ms.topic: article
 ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Create the Key Distribution Services KDS Root Key
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional describes how to create a Microsoft Key Distribution Service (kdssvc.dll) root key on the domain controller using Windows PowerShell to generate group Managed Service Account passwords in Windows Server 2012 or later.
 
@@ -35,6 +35,8 @@ Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivale
     > [!TIP]
     > The Effective time parameter can be used to give time for keys to be propagated to all DCs before use. Using Add-KdsRootKey -EffectiveImmediately will add a root key to the target DC which will be used by the KDS service immediately. However, other domain controllers will not be able to use the root key until replication is successful.
 
+KDS root keys are stored in Active Directory in container "CN=Master Root Keys,CN=Group Key Distribution Service,CN=Services,CN=Configuration,DC=&lt;forest name&gt;". They have an attribute msKds-DomainID that links to the computer account of the Domain Controller that created the object. When this domain controller is demoted and removed from the domain, the value will refer to the tombstone of the computer account. You can ignore the broken value as it is only used to help the administrator track the object when it is freshly created. You may also change the attribute value and point it to the computer object of another domain controller in your forest.
+   
 For test environments with only one DC, you can create a KDS root key and set the start time in the past to avoid the interval wait for key generation by using the following procedure. Validate that a 4004 event has been logged in the kds event log.
 
 #### To create the KDS root key in a test environment for immediate effectiveness

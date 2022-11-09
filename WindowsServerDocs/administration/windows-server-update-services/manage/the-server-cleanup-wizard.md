@@ -3,14 +3,14 @@ title: The Server cleanup Wizard
 description: Windows Server Update Service (WSUS) topic - How to use the Server cleanup Wizard to manage disk space
 ms.topic: article
 ms.assetid: 7c351797-2716-4442-a668-60d5b4e77751
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # The Server cleanup Wizard
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Server cleanup Wizard is integrated into the user interface and can be used to help you manage your disk space. This wizard can do the following operations:
 

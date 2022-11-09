@@ -3,8 +3,8 @@ title: bitsadmin getreplyfilename
 description: Reference article for the bitsadmin getreplyfilename command, which gets the path of the file that contains the server upload-reply for the job.
 ms.topic: reference
 ms.assetid: 85447184-1732-4816-a365-2e3599551bf8
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,6 +1,6 @@
 ---
 title: Managing SSL/TLS Protocols and Cipher Suites for AD FS
-description: Frequently asked questions for AD FS 2016
+description: Learn how to disable and enable certain TLS/SSL protocols and cipher suites that are used by AD FS.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -11,13 +11,13 @@ ms.topic: article
 # Managing SSL/TLS Protocols and Cipher Suites for AD FS
 The following documentation provides information on how to disable and enable certain TLS/SSL protocols and cipher suites that are used by AD FS
 
-## TLS/SSL, SChannel and Cipher Suites in AD FS
+## TLS/SSL, SChannel, and Cipher Suites in AD FS
 
 The Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are protocols that provide for secure communications.  Active Directory Federation Services uses these protocols for communications.  Today several versions of these protocols exist.
 
 Schannel is a Security Support Provider (SSP) that implements the SSL, TLS and DTLS Internet standard authentication protocols. The Security Support Provider Interface (SSPI) is an API used by Windows systems to perform security-related functions including authentication. The SSPI functions as a common interface to several Security Support Providers (SSPs), including the Schannel SSP.
 
-A cipher suite is a set of cryptographic algorithms. The schannel SSP implementation of the TLS/SSL protocols use algorithms from a cipher suite to create keys and encrypt information. A cipher suite specifies one algorithm for each of the following tasks:
+A cipher suite is a set of cryptographic algorithms. The Schannel SSP implementation of the TLS/SSL protocols use algorithms from a cipher suite to create keys and encrypt information. A cipher suite specifies one algorithm for each of the following tasks:
 
 - Key exchange
 - Bulk encryption
@@ -37,7 +37,7 @@ In today's day and age, hardening your servers and removing older or weak cipher
 
 The registry keys below are located in the same location:  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Use regedit or PowerShell to enable or disable these protocols and cipher suites.
 
-![Registry location](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
+![Screenshot of the Registry Editor showing the registry keys located in the Protocols folder.](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
 
 ## Enable and Disable SSL 2.0
 Use the following registry keys and their values to enable and disable SSL 2.0.
@@ -212,7 +212,7 @@ Use the following registry keys and their values to enable and disable RC4.  Thi
 
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
 
-![Registry location](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
+![Screenshot of the Registry Editor showing the registry keys located in the Ciphers folder.](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
 
 
 
@@ -245,7 +245,7 @@ Use the following registry keys and their values to enable and disable RC4.  Thi
 
 You can disable certain specific ciphers by removing them from HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002
 
-![Registry location](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
+![Screenshot of the Registry Editor showing the Edit Multi-String dialog box for the 00010002 folder.](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
 
 To enable a cipher suite, add its string value to the Functions multi-string value key.  For example, if we want to enable TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521 then we would add it to the string.
 

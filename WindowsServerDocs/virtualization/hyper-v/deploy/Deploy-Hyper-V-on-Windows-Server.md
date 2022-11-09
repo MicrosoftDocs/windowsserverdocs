@@ -1,16 +1,15 @@
 ---
 title: Deploy Hyper-V on Windows Server
 description: Gives links to articles on deploying Hyper-V
-manager: dongill
 ms.topic: article
 ms.assetid: e13abdca-5412-4c0a-99f3-2ab83666ec66
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/21/2019
 ---
 # Deploy Hyper-V on Windows Server
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Use these resources to help you deploy Hyper-V on Windows Server 2016.
 

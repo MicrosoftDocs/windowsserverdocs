@@ -1,7 +1,6 @@
 ---
 title: Manage Hyper-V on Windows Server
 description: Gives links to articles on managing Hyper-V
-manager: dongill
 ms.topic: article
 ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
 author: jasongerend
@@ -10,7 +9,7 @@ ms.date: 01/08/2018
 ---
 # Manage Hyper-V on Windows Server
 
->Applies To: Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 Use the resources in this section to help you manage Hyper-V on Windows Server:
 

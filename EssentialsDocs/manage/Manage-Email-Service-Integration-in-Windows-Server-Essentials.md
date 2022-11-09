@@ -1,11 +1,11 @@
 ---
 title: "Manage Email Service Integration in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to set up an email solution for your organization.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4c35d230-02ec-4374-b4c5-2da19fe151ee
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 

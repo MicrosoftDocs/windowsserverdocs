@@ -1,6 +1,7 @@
 ---
 ms.assetid: 0f2a7f7b-aca8-4e5d-ad67-4258e88bc52f
 title: What's new in storage in Windows Server
+description: "Learn more about: What's new in Storage in Windows Server"
 ms.author: jgerend
 manager: dongill
 ms.topic: article
@@ -9,7 +10,7 @@ ms.date: 05/29/2019
 ---
 # What's new in Storage in Windows Server
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 
@@ -75,7 +76,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Two-server clusters using a USB flash drive as a witness**
 
-    Use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+    Use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/here-s-what-you-missed-8211-five-big-announcements-for-storage/ba-p/428257) and [documentation on how to deploy a file share witness](../failover-clustering/file-share-witness.md#creating-a-file-share-witness-on-a-router-with-a-usb-device).
 
 - **Windows Admin Center**
 
@@ -87,7 +88,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Scale up to 4 PB per cluster**
 
-    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](storage-spaces/cluster-sets.md) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](/azure-stack/hci/deploy/cluster-set) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 - **Mirror-accelerated parity is 2X faster**
 
@@ -120,7 +121,7 @@ To gain the increased performance, all members of the replication group must run
 
 #### Test failover
 
-You can now temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+You can now temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.yml).
 
 #### Windows Admin Center support
 
@@ -158,13 +159,13 @@ Windows Server, version 1803 includes the ability to prevent the File Server Res
 
 Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
 
-For more information, see [Windows Server Semi-annual Channel Overview](../get-started-19/servicing-channels-19.md).
+For more information, see [Windows Server Semi-annual Channel Overview](../get-started/servicing-channels-comparison.md).
 
 ### Storage Replica
 
 The disaster recovery protection added by Storage Replica is now expanded to include:
 
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.yml).
 - **Windows Admin Center support**: Support for graphical management of replication is now available in Windows Admin Center via the Server Manager tool. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
 
 Storage Replica also contains the following improvements:
@@ -192,7 +193,7 @@ Storage Spaces Direct enables building highly available and scalable storage usi
 Storage Spaces Direct enables service providers and enterprises to use industry standard servers with local storage to build highly available and scalable software defined storage. Using servers with local storage decreases complexity, increases scalability, and enables use of storage devices that were not previously possible, such as SATA solid state disks to lower cost of flash storage, or NVMe solid state disks for better performance.
 
 Storage Spaces Direct removes the need for a shared SAS fabric, simplifying deployment and configuration. Instead it uses the network as a storage fabric, leveraging SMB3 and SMB Direct (RDMA) for high-speed, low-latency CPU efficient storage. To scale out, simply add more servers to increase storage capacity and I/O performance
-For more information, see the [Storage Spaces Direct in Windows Server 2016](storage-spaces/storage-spaces-direct-overview.md).
+For more information, see the [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview).
 
 **What works differently?**
 This capability is new in Windows Server 2016.
@@ -243,11 +244,11 @@ For more information, see [Storage Quality of Service](storage-qos/storage-qos-o
 ### <a name="dedup"></a>Data Deduplication
 | Functionality | New or Updated | Description |
 |---------------|----------------|-------------|
-| [Support for Large Volumes](data-deduplication/whats-new.md#large-volume-support) | Updated | Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for deduplication. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**. |
-| [Support for Large Files](data-deduplication/whats-new.md#large-file-support) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for deduplication. In Windows Server 2016, files **up to 1 TB** are fully supported. |
-| [Support for Nano Server](data-deduplication/whats-new.md#nano-server-support) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
-| [Simplified Backup Support](data-deduplication/whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
-| [Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
+| [Support for Large Volumes](data-deduplication/whats-new.md#support-for-large-volumes) | Updated | Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for deduplication. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**. |
+| [Support for Large Files](data-deduplication/whats-new.md#support-for-large-files) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for deduplication. In Windows Server 2016, files **up to 1 TB** are fully supported. |
+| [Support for Nano Server](data-deduplication/whats-new.md#support-for-nano-server) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
+| [Simplified Backup Support](data-deduplication/whats-new.md#simplified-configuration-for-virtualized-backup-applications) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
+| [Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#support-for-cluster-os-rolling-upgrade) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
 ### <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections
 In Windows 10 and Windows Server 2016 client connections to the Active Directory Domain Services default SYSVOL and NETLOGON shares on domain controllers now require SMB signing and mutual authentication (such as Kerberos).

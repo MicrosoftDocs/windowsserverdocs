@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: When to Create a Federation Server Proxy Farm"
 ms.assetid: ad0bf21d-2ace-4565-b1f5-ce57c8eb2689
 title: When to Create a Federation Server Proxy Farm
 author: billmath
@@ -16,7 +17,7 @@ You can create a federation server proxy farm or install additional federation s
 
 Before all the federation server proxies can function together as a farm, you must first cluster them under one IP address and one Domain Name System \(DNS\) fully qualified domain name \(FQDN\). You can cluster the servers by deploying Microsoft Network Load Balancing \(NLB\) inside the perimeter network. The tasks in the following table require NLB to be configured appropriately to cluster the federation server proxies in the farm.
 
-For more information about how to configure an FQDN for a cluster using Microsoft NLB technology, see [Specifying the Cluster Parameters](https://go.microsoft.com/fwlink/?linkid=74651).
+For more information about how to configure an FQDN for a cluster using Microsoft NLB technology, see [Specifying the Cluster Parameters](/previous-versions/windows/it-pro/windows-server-2003/cc781505(v=ws.10)).
 
 ## Configuring federation server proxies for a farm
 The following table describes the tasks that must be completed so that each federation server proxy can participate in a farm.

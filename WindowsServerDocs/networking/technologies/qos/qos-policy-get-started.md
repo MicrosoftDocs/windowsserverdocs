@@ -4,13 +4,14 @@ description: This topic provides links to overview topics for Quality of Service
 ms.topic: article
 ms.assetid: a37398a4-fe46-464f-8a33-829ef3c6db55
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Getting Started with QoS Policy
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following topics to get started with Quality of Service \(QoS\) Policy.
 

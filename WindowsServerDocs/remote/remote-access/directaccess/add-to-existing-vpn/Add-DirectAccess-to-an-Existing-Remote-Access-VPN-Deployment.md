@@ -1,15 +1,16 @@
 ---
 title: Add DirectAccess to an Existing Remote Access (VPN) Deployment
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to add DirectAccess to an existing remote access (VPN) deployment for Windows Server 2016.
 manager: brianlic
 ms.topic: article
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Add DirectAccess to an Existing Remote Access (VPN) Deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 ## <a name="BKMK_OVER"></a>Scenario description
 In this scenario, a single computer running  Windows Server 2016, Windows Server 2012 R2 or Windows Server 2012 is configured as a DirectAccess server with recommended settings after you have already installed and configured VPN. If you want to configure DirectAccess with enterprise features, such as a load-balanced cluster, multisite deployment, or two-factor client authentication, complete the scenario described in this topic to set up a single server, and then set up the enterprise scenario as described in [Deploy Remote Access in an enterprise](../../ras/Deploy-Remote-Access-in-an-Enterprise.md).

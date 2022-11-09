@@ -1,5 +1,35 @@
+items:
 - name: Docs
   href: /
   items:
     - name: Windows Server
       href: /windows-server/
+
+### For linking to HCI topics and keeping the context in Windows Server TOC
+- name: Windows Server
+  tocHref: /azure-stack/hci/
+  topicHref: /windows-server/index
+
+### For linking to Azure topic and keeping the context in Windows Server TOC      
+- name: Windows Server
+  tocHref: /azure/
+  topicHref: /windows-server/index
+  items:
+  - name: Management                       # Original doc set name
+    tocHref: /azure/azure-arc/             # Destination doc set route
+    topicHref: /windows-server/administration/      # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /system-center/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/virtual-machines/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/automanage/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/security/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Management                         # Destination doc set name
+    tocHref: /azure/virtual-network/      # Destination doc set route
+    topicHref: /windows-server/administration/    # Original doc set route

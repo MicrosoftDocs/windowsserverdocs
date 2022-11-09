@@ -3,8 +3,8 @@ title: recover
 description: Reference article for the recover command, which recovers readable information from a bad or defective disk.
 ms.topic: reference
 ms.assetid: cf9be2e3-90c8-4773-a201-dc503b91948e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

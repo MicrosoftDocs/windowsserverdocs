@@ -3,14 +3,14 @@ ms.assetid: 2a5d5271-6ac6-4c1b-b4ef-9b568932a55a
 title: Active Directory domain-wide schema updates
 description: Domain-wide schema updates performed by adprep /domainprep when promoting a Domain Controller
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ---
 # Domain-wide schema updates
 
->Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /domainprep in Windows Server.
 

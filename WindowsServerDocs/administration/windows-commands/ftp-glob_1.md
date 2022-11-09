@@ -3,15 +3,15 @@ title: ftp glob
 description: Reference article for the ftp glob command, which toggles allowing wildcard expansion for local file names.
 ms.topic: reference
 ms.assetid: 111494f9-0083-4f48-9d35-46366debafae
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp glob
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Toggles allowing wildcard expansion for local file names. By default, globbing (wildcard expansion) is turned on. If globbing is turned on, you'll be able to use the asterisk (*) and question mark (?) as wildcard characters in local file or path names.
 

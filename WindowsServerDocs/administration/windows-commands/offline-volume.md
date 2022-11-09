@@ -3,8 +3,8 @@ title: offline volume
 description: Reference article for the offline volume command, which takes the online volume with focus to the offline state.
 ms.topic: reference
 ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

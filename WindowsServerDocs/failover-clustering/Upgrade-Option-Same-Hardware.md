@@ -6,12 +6,11 @@ ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 02/28/2019
-ms.localizationpriority: medium
 ---
 
 # Upgrading Failover Clusters on the same hardware
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service.
 
@@ -21,7 +20,7 @@ This guide describes the steps for upgrading the cluster nodes to Windows Server
 
 Upgrading the operating system on an existing failover cluster is only supported when going from Windows Server 2016 to Windows 2019.  If the failover cluster is running an earlier version, such as Windows Server 2012 R2 and earlier, upgrading while the cluster services are running will not allow joining nodes together.  If using the same hardware, steps can be taken to get it to the newer version.
 
-Before any upgrade of your failover cluster, please consult the [Windows Server upgrade content](../upgrade/upgrade-overview.md).  When you upgrade a Windows Server in-place, you move from an existing operating system release to a more recent release while staying on the same hardware. Windows Server can be upgraded in-place at least one, and sometimes two versions forward. For example, Windows Server 2012 R2 and Windows Server 2016 can be upgraded in-place to Windows Server 2019.  Also keep in mind that the [Cluster Migration Wizard](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) can be used but is only supported up to two versions back. The following graphic shows the upgrade paths for Windows Server. Downward pointing arrows represent the supported upgrade path moving from earlier versions up to Windows Server 2019.
+Before any upgrade of your failover cluster, please consult the [Windows Server upgrade content](../get-started/upgrade-overview.md).  When you upgrade a Windows Server in-place, you move from an existing operating system release to a more recent release while staying on the same hardware. Windows Server can be upgraded in-place at least one, and sometimes two versions forward. For example, Windows Server 2012 R2 and Windows Server 2016 can be upgraded in-place to Windows Server 2019.  Also keep in mind that the [Cluster Migration Wizard](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) can be used but is only supported up to two versions back. The following graphic shows the upgrade paths for Windows Server. Downward pointing arrows represent the supported upgrade path moving from earlier versions up to Windows Server 2019.
 
 ![In-place Upgrade Diagram](media/In-Place-Upgrade/In-Place-Upgrade-1.png)
 
@@ -35,11 +34,11 @@ In the example below, the name of the failover cluster is CLUSTER and the node n
 
 1. In Failover Cluster Manager, drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](/powershell/module/failoverclusters/suspend-clusternode).
 
-    ![Drain Node](media/In-Place-Upgrade/In-Place-Upgrade-2.png)
+    ![Screenshot of the Failover Cluster Manager showing the Pause > Drain Roles option.](media/In-Place-Upgrade/In-Place-Upgrade-2.png)
 
 2. Evict NODE1 from the Cluster by right mouse clicking the node and selecting **More Actions** and **Evict**.  Alternatively, you can use the PowerShell command [REMOVE-CLUSTERNODE](/powershell/module/failoverclusters/remove-clusternode).
 
-    ![Drain Node](media/In-Place-Upgrade/In-Place-Upgrade-3.png)
+    ![Screenshot of the Failover Cluster Manager showing the More Actions > Evict option.](media/In-Place-Upgrade/In-Place-Upgrade-3.png)
 
 3. As a precaution, detach NODE1 from the storage you are using.  In some cases, disconnecting the storage cables from the machine will suffice.  Check with your storage vendor for proper detachment steps if needed.  Depending on your storage, this may not be necessary.
 
@@ -47,11 +46,11 @@ In the example below, the name of the failover cluster is CLUSTER and the node n
 
 5. Create a new cluster called CLUSTER1 with NODE1.  Open Failover Cluster Manager and in the **Management** pane, choose **Create Cluster** and follow the instructions in the wizard.
 
-    ![Drain Node](media/In-Place-Upgrade/In-Place-Upgrade-4.png)
+    ![Screenshot of the Management pane of the Failover Cluster Manager showing the Create Cluster option called out.](media/In-Place-Upgrade/In-Place-Upgrade-4.png)
 
 6. Once the Cluster is created, the roles will need to be migrated from the original cluster to this new cluster.  On the new cluster, right mouse click on the cluster name (CLUSTER1) and selecting **More Actions** and **Copy Cluster Roles**.  Follow along in the wizard to migrate the roles.
 
-    ![Drain Node](media/In-Place-Upgrade/In-Place-Upgrade-5.png)
+    ![Screenshot of the Failover Cluster Manager showing the More Actions > Copy Cluster option.](media/In-Place-Upgrade/In-Place-Upgrade-5.png)
 
 7.  Once all the resources have been migrated, power down NODE2 (original cluster) and disconnect the storage so as to not cause any interference.  Connect the storage to NODE1.  Once all is connected, bring all the resources online and ensure they are functioning as should.
 
@@ -69,7 +68,7 @@ Once you have verified everything is working as it should, NODE2 can be rebuilt 
 
    c. When choosing OK or APPLY, you will see the below dialog popup.
 
-    ![Drain Node](media/In-Place-Upgrade/In-Place-Upgrade-6.png)
+    ![Screenshot of the Please confirm action dialog box.](media/In-Place-Upgrade/In-Place-Upgrade-6.png)
 
     d. The Cluster Service will be stopped and needed to be started again for the rename to complete.
 
