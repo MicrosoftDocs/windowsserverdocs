@@ -12,7 +12,7 @@ ms.date: 10/12/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
 
-In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows 10 client computers.
+In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows client computers.
 
 If you want to **configure conditional access** to fine-tune how VPN users access your resources, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md). To learn more about conditional access for VPN connectivity using Azure AD, see [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
@@ -42,7 +42,7 @@ You most likely have the technologies deployed that you can use to deploy Always
 
 ## About this deployment
 
-The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the scenarios mentioned below, for remote client computers that are running Windows 10. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
+The instructions provided walk you through deploying Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the scenarios mentioned below, for remote client computers that are running Windows. You also find instructions for modifying some of your existing infrastructure for the deployment. Also throughout this deployment, you find links to help you learn more about the VPN connection process, servers to configure, ProfileXML VPNv2 CSP node, and other technologies to deploy Always On VPN.
 
 **Always On VPN deployment scenarios:**
 
@@ -72,7 +72,7 @@ To configure the server infrastructure, you must perform the following tasks:
 
 - **On a server configured with Active Directory Domain Services:** Enable certificate autoenrollment in Group Policy for both computers and users, create the VPN Users Group, the VPN Servers Group, and the NPS Servers Group, and add members to each group.
 - **On an Active Directory Certificate Server CA:** Create the User Authentication, VPN Server Authentication, and NPS Server Authentication certificate templates.
-- **On domain-joined Windows 10 clients:** Enroll and validate user certificates.
+- **On domain-joined Windows clients:** Enroll and validate user certificates.
 
 ## [Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
@@ -99,9 +99,9 @@ To configure NPS, you must perform the following tasks:
 
 In this step, you configure DNS and Firewall settings. When remote VPN clients connect, they use the same DNS servers that your internal clients use which allows them to resolve names in the same manner as the rest of your internal workstations.
 
-## [Step 6. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
+## [Step 6. Configure Windows Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
 
-In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, Microsoft Endpoint Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings.
+In this step, you configure the Windows client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows VPN clients, including Windows PowerShell, Microsoft Endpoint Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings.
 
 ## [Step 7. (Optional) Configure conditional access for VPN connectivity](../../ad-ca-vpn-connectivity-windows10.md)
 

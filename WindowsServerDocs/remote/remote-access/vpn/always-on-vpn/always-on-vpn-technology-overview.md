@@ -18,7 +18,7 @@ The following illustration shows the infrastructure that is required to deploy A
 
 The connection process depicted in this illustration is composed of the following steps:
 
-1. The Windows 10 VPN client uses public DNS servers to perform a name resolution query for the IP address of the VPN gateway.
+1. The Windows VPN client uses public DNS servers to perform a name resolution query for the IP address of the VPN gateway.
 
 2. The VPN client uses the IP address returned by DNS to send a connection request to the VPN gateway.
 
@@ -143,12 +143,12 @@ Group Policy Management enables directory-based change and configuration managem
 With Group Policy, you can specify settings for registry entries, security, software installation, scripts, folder redirection, remote installation services, and Internet Explorer maintenance. The Group Policy settings that you create are contained in a Group Policy object (GPO).  You can associate a GPO with selected Active Directory system containers (sites, domains, and OUs) to apply the GPO's settings to the users and computers in those Active Directory containers. To manage Group Policy objects across an enterprise, you can use the
 Group Policy Management Editor Microsoft Management Console (MMC).
 
-## Windows 10 VPN Clients
+## Windows VPN Clients
 
-In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607). The Windows 10 VPN clients must be domain-joined to your Active Directory domain.
+In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607). The Windows VPN clients must be domain-joined to your Active Directory domain.
 
 
-The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You'll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment.
+The Windows VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You'll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment.
 
 Table 1. VPN Features and Configurations Discussed in this Deployment
 
@@ -165,13 +165,13 @@ Table 1. VPN Features and Configurations Discussed in this Deployment
 
 ### VPNv2 CSP Nodes
 
-In this deployment, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows 10 client computers. Configuration Service Providers (CSPs) are interfaces that expose various management capabilities within the Windows client; conceptually, CSPs work similar to how Group Policy works. Each CSP has configuration nodes that represent individual settings. Also like Group Policy settings, you can tie CSP settings to registry keys, files, permissions, and so on. Similar to how you use the Group Policy Management Editor to configure Group Policy objects (GPOs), you configure CSP nodes by using a mobile device management (MDM) solution such as Microsoft Intune. MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
+In this deployment, you use the ProfileXML VPNv2 CSP node to create the VPN profile that is delivered to Windows client computers. Configuration Service Providers (CSPs) are interfaces that expose various management capabilities within the Windows client; conceptually, CSPs work similar to how Group Policy works. Each CSP has configuration nodes that represent individual settings. Also like Group Policy settings, you can tie CSP settings to registry keys, files, permissions, and so on. Similar to how you use the Group Policy Management Editor to configure Group Policy objects (GPOs), you configure CSP nodes by using a mobile device management (MDM) solution such as Microsoft Intune. MDM products like Intune offer a user-friendly configuration option that configures the CSP in the operating system.
 
 ![Mobile Device Management to CSP configuration](../../../media/Always-On-Vpn/Vpn-Mdm.jpg)
 
 However, you can't configure some CSP nodes directly through a user interface (UI) like the Intune Admin Console. In these cases, you must configure the Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings manually. You configure OMA-URIs by using the OMA Device Management protocol (OMA-DM), a universal device management specification that most modern Apple, Android, and Windows devices support. As long as they adhere to the OMA-DM specification, all MDM products should interact with these operating systems in the same way.
 
-Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP to configure the VPN client. The VPNv2 CSP allows configuration of each VPN profile setting in Windows 10 through a unique CSP node. Also contained in the VPNv2 CSP is a node called *ProfileXML*, which allows you to configure all the settings in one node rather than individually. For more information about ProfileXML, see the section "ProfileXML overview" later in this deployment. For details about each VPNv2 CSP node, see the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+Windows offers many CSPs, but this deployment focuses on using the VPNv2 CSP to configure the VPN client. The VPNv2 CSP allows configuration of each VPN profile setting in Windows through a unique CSP node. Also contained in the VPNv2 CSP is a node called *ProfileXML*, which allows you to configure all the settings in one node rather than individually. For more information about ProfileXML, see the section "ProfileXML overview" later in this deployment. For details about each VPNv2 CSP node, see the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 ## Next steps
 
@@ -185,7 +185,7 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 
 - [Remote Access](../../Remote-Access.md): This topic provides an overview of the Remote Access server role in Windows Server.
 
-- [Windows 10 VPN Technical Guide](/windows/access-protection/vpn/vpn-guide): This guide walks you through the decisions you will make for Windows 10 clients in your enterprise VPN solution and how to configure your deployment. This guide references the VPNv2 Configuration Service Provider (CSP) and provides mobile device management (MDM) configuration instructions using Microsoft Intune and the VPN Profile template for Windows 10.
+- [Windows VPN Client Technical Guide](/windows/access-protection/vpn/vpn-guide): This guide walks you through the decisions you will make for Windows clients in your enterprise VPN solution and how to configure your deployment. This guide references the VPNv2 Configuration Service Provider (CSP) and provides mobile device management (MDM) configuration instructions using Microsoft Intune and the VPN Profile template for Windows clients.
 
 - [Core Network Guide](../../../../networking/core-network-guide/Core-Network-Guide.md): This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest.
 

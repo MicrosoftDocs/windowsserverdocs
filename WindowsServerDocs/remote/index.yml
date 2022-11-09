@@ -74,7 +74,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Web Application Proxy in Windows Server 2016
+          - text: Web Application Proxy in Windows Server
             url: ./remote-access/web-application-proxy/web-application-proxy-windows-server.md
       - linkListType: how-to-guide
         links:
