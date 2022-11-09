@@ -69,7 +69,7 @@ Virtual networks are created by using Hyper-V Network Virtualization, which is a
 Hyper-V Network Virtualization provides you with the ability to deploy a virtual machine (VM) network that is independent of the underlying physical network. With VM networks, which are composed of one or more virtual subnets, the exact physical location of an IP subnet is decoupled from the virtual network topology. As a result, you can easily move your on premises subnets to the cloud - while preserving your existing IP addresses and topology in the cloud. This ability to preserve infrastructure allows existing services to continue to work, unaware of the physical location of the subnets. That is, Hyper-V Network Virtualization enables a seamless hybrid cloud.
 
 > [!NOTE]
-> Hyper-V Network Virtualization is a network overlay technology using Network Virtualization Generic Routing Encapsulation ([NVGRE](https://tools.ietf.org/html/draft-sridharan-virtualization-nvgre-00)), which allows tenants to bring their own address space and allows CSPs better scalability than is possible by using VLANs for tenant isolation.
+> Hyper-V Network Virtualization is a network overlay technology using Network Virtualization Generic Routing Encapsulation ([NVGRE](https://datatracker.ietf.org/doc/html/rfc7637)), which allows tenants to bring their own address space and allows CSPs better scalability than is possible by using VLANs for tenant isolation.
 
 In Windows Server, RAS Gateway routes network traffic between the physical network and VM network resources, regardless of where the resources are located. You can use RAS Gateway to route network traffic between physical and virtual networks at the same physical location or at many different physical locations.
 
