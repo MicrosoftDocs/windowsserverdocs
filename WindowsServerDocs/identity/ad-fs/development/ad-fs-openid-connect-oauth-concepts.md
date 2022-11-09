@@ -4,7 +4,7 @@ description: Learn about AD FS modern authentication concepts.
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 11/08/2022
+ms.date: 11/09/2022
 ms.topic: article
 ---
 
@@ -51,11 +51,11 @@ Modern authentication uses following token types:
 - **KMSI logon (EnableKmsi=true in AD FS conf and kmsi=true passed as parameter**): AD FS will apply **KmsiLifetimeMins with DeviceUsageWindowInDays**. The first refresh token will have lifetime=DeviceUsageWindowInDays and each subsequent grant_type=refresh_token request will get a new refresh_token. (This happens only with native clients or confidential client + device auth).
 - **Registered devices (device auth)**: AD FS will use PersistentSsoLifetimeMins + DeviceUsageWindowInDays similar to KMSI. Both Native and Confidential Clients should get new refresh tokens (based on device auth).
 
-Additional details in [AD FS Single Sign On documentation](../operations/ad-fs-single-sign-on-settings.md)
+To learn more, see [AD FS Single Sign On documentation](../operations/ad-fs-single-sign-on-settings.md).
 
 ## Scopes
 
-While registering a resource in AD FS, scopes can be configured to allow AD FS to perform specific actions. In addition to configuring the scope, the scope value is also required to be sent in the request for AD FS to perform the action. For example, an Admin needs to configure the scope as openid during resource registration and application (client) needs to send scope = openid in the auth request for AD FS to issue ID Token. Details on the scopes available in AD FS are provided below
+When registering a resource in AD FS, scopes can be configured to allow AD FS to perform specific actions. In addition to configuring the scope, the scope value is also required to be sent in the request for AD FS to perform the action. For example, an Admin needs to configure the scope as openid during resource registration and application (client) needs to send scope = openid in the auth request for AD FS to issue ID Token. Details on the scopes available in AD FS are provided below
 
 - aza - If using [OAuth 2.0 Protocol Extensions for Broker Clients](/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope "aza", the server issues a new primary refresh token and sets it in the refresh_token field of the response, as well as setting the refresh_token_expires_in field to the lifetime of the new primary refresh token if one is enforced.
 - openid - Allows application to request use of the OpenID Connect authentication protocol.
@@ -85,9 +85,9 @@ The claims present in any given security token are dependent upon the type of to
 
 1. AD FS validates the client ID in the auth request with the client ID obtained during client and resource registration in AD FS. If using confidential client, then AD FS also validates the client secret provided in the auth request. AD FS also validates the redirect URI of the Client.
 
-1. AD FS identifies the resource that the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values e.g., openid]*.
+1. AD FS identifies the resource that the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values, e.g., openid]*.
 
-    If resource is not passed using resource or scope parameter, AD FS will use a default resource urn:microsoft:userinfo whose policies (e.g., MFA, issuance, or authorization policy) can't be configured.
+    If resource is not passed using resource or scope parameter, AD FS will use a default resource urn:microsoft:userinfo whose policies (such as MFA, issuance, or authorization policy) can't be configured.
 
 1. Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request match the scopes configured while registering the resource. If the client doesn't have the permissions, or the right scopes aren't sent in the auth request, the auth flow is terminated.
 
@@ -95,9 +95,9 @@ The claims present in any given security token are dependent upon the type of to
 
 1. If an [additional authentication method](../operations/configure-additional-authentication-methods-for-ad-fs.md) is required as per the resource policy or the global auth policy, AD FS triggers the additional authentication.
 
-1. AD FS uses [Azure MFA](../operations/configure-ad-fs-and-azure-mfa.md) or [3rd party MFA](../operations/additional-authentication-methods-ad-fs.md) to perform authentication.
+1. AD FS uses [Azure AD Multi-Factor Authentication](../operations/configure-ad-fs-and-azure-mfa.md) or [3rd party MFA](../operations/additional-authentication-methods-ad-fs.md) to perform authentication.
 
-1. Once user is authenticated, AD FS applies the [claim rules](../deployment/configuring-claim-rules.md) (determines the claims sent to resource as a part of the security tokens), and [access control polices](../operations/ad-fs-client-access-policies.md) (determines that user has met the required conditions to access the resource).
+1. Once user is authenticated, AD FS applies the [claim rules](../deployment/configuring-claim-rules.md), which determines the claims sent to resource as a part of the security tokens, and [access control polices](../operations/ad-fs-client-access-policies.md) that determines the user has met the required conditions to access the resource.
 
 1. Next, AD FS generates the Access and Refresh Tokens. AD FS also generates the ID token.
 
@@ -136,7 +136,7 @@ In certain scenarios, it is possible that the Web app (client) needs additional 
 
 ![AD FS Customize Token Option 2](media/adfs-modern-auth-concepts/option2.png)
 
-To better understand how to configure a Web App in AD FS to acquire customized ID token, see [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016 or later](Custom-Id-Tokens-in-AD-FS.md).
+To better understand how to configure a Web App in AD FS to acquire a customized ID token, see [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016 or later](Custom-Id-Tokens-in-AD-FS.md).
 
 ## Single log-out
 
