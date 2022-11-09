@@ -21,7 +21,7 @@ This how-to guide shows you how to use the `DefaultSecureProtocols` registry ent
 
 - Confirm that your account has Administrative rights to the system.
 
-- Make sure that [Powershell is installed](/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2).
+- Make sure that [Powershell is installed](/powershell/scripting/install/installing-powershell-on-windows).
 
 ## Configure DefaultSecureProtocols
 
