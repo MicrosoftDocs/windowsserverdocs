@@ -57,42 +57,43 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 1. In AD FS 2016, implement [extranet smart lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md) Extranet smart lockout tracks familiar locations, and will allow a valid user to come through if they have previously logged in successfully from that location. By using extranet smart lockout, you can ensure that bad actors won't be able to brute force attack the users and at the same time will let legitimate user be productive.
 
-    - If you aren't on AD FS 2016, we strongly recommend you [upgrade](../../ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md) to AD FS 2016. It's a simple upgrade path from AD FS 2012 R2. If you are on AD FS 2012 R2, implement [extranet lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md). One disadvantage of this approach is that valid users may be blocked from extranet access if you are in a brute force pattern. AD FS on Server 2016 doesn't have this disadvantage.
+   If you aren't on AD FS 2016, we strongly recommend you [upgrade](../../ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md) to AD FS 2016. It's a simple upgrade path from AD FS 2012 R2. If you are on AD FS 2012 R2, implement [extranet lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md). One disadvantage of this approach is that valid users may be blocked from extranet access if you are in a brute force pattern. AD FS on Server 2016 doesn't have this disadvantage.
 
 1. Monitor & Block suspicious IP addresses
-    - If you have Azure AD Premium, implement Connect Health for AD FS, and use the [Risky IP report](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
 
-       a. Licensing is not for all users and requires 25 licenses per AD FS/WAP server that may be easy for a customer.
+    If you have Azure AD Premium, implement Connect Health for AD FS, and use the [Risky IP report](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
 
-       b. You can now investigate IP's that are generating large number of failed logins.
+    a. Licensing is not for all users and requires 25 licenses per AD FS/WAP server that may be easy for a customer.
 
-       c. This will require you to enable auditing on your AD FS servers.
+    b. You can now investigate IP's that are generating large number of failed logins.
+
+    c. This will require you to enable auditing on your AD FS servers.
 
 1. Block suspicious IP's. This potentially blocks DOS attacks.
 
-         a. If on 2016, use the [*Extranet Banned IP addresses*](../../ad-fs/operations/configure-ad-fs-banned-ip.md) feature to block any requests from IP's flagged by #3 (or manual analysis).
+    a. If on 2016, use the [*Extranet Banned IP addresses*](../../ad-fs/operations/configure-ad-fs-banned-ip.md) feature to block any requests from IP's flagged by #3 (or manual analysis).
 
-         b. If you are on AD FS 2012 R2 or lower, block the IP address directly at Exchange Online and optionally on your firewall.
+     b. If you are on AD FS 2012 R2 or lower, block the IP address directly at Exchange Online and optionally on your firewall.
 
 1. If you have Azure AD Premium, use [Azure AD Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to prevent guessable passwords from getting into Azure AD.
 
-         a. If you have guessable passwords, you can crack them with just 1-3 attempts. This feature prevents these from getting set.
+    a. If you have guessable passwords, you can crack them with just 1-3 attempts. This feature prevents these from getting set.
 
-         b. From our preview stats, nearly 20-50% of new passwords get blocked from being set. This implies that % of users are vulnerable to easily guessed passwords.
+    b. From our preview stats, nearly 20-50% of new passwords get blocked from being set. This implies that % of users are vulnerable to easily guessed passwords.
 
 ## Level 2: Protect your extranet
 
 1. Move to modern authentication for any clients accessing from the extranet. Mail clients are a large part of this.
 
-        a. You'll need to use Outlook Mobile for mobile devices. The new iOS native mail app supports modern authentication as well.
+    a. You'll need to use Outlook Mobile for mobile devices. The new iOS native mail app supports modern authentication as well.
 
-        b. You'll need to use Outlook 2013 (with the latest CU patches) or Outlook 2016.
+    b. You'll need to use Outlook 2013 (with the latest CU patches) or Outlook 2016.
 
 1. Enable MFA for all extranet access. This gives you added protection for any extranet access.
 
-        a. If you have Azure AD premium, use [Azure AD Conditional Access policies](/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Azure AD, when requesting a new access token (typically every hour) using a refresh token.
+    a. If you have Azure AD premium, use [Azure AD Conditional Access policies](/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Azure AD, when requesting a new access token (typically every hour) using a refresh token.
 
-        b. If you don't have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement Azure AD Multi-Factor Authentication and configure a [global multi-factor authentication policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
+    b. If you don't have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement Azure AD Multi-Factor Authentication and configure a [global multi-factor authentication policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
 
 ## Level 3: Move to password-less for extranet access
 
