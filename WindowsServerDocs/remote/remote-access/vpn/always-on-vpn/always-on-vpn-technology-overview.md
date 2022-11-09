@@ -10,7 +10,7 @@ author: Teresa-MOTIV
 
 # Always On VPN deployment infrastructure 
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
 The following illustration shows the infrastructure that is required to deploy Always On VPN.
 
