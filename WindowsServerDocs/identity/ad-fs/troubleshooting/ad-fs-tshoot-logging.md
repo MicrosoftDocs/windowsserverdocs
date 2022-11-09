@@ -4,7 +4,7 @@ description:  This document describes how to use the various AD FS logs to troub
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 11/08/2022
+ms.date: 11/09/2022
 ms.topic: article
 ---
 
@@ -58,9 +58,9 @@ The table below explains the available auditing levels.
 
 |Audit Level|PowerShell syntax|Description|
 |----- | ----- | ----- |
-|None|Set-AdfsProperties -LogLevel None|Auditing is disabled and no events will be logged.|
-|Basic (Default)|Set-AdfsProperties -LogLevel Basic|No more than 5 events will be logged for a single request.|
-|Verbose|Set-AdfsProperties -LogLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|
+|None|Set-AdfsProperties -AuditLevel None|Auditing is disabled and no events will be logged.|
+|Basic (Default)|Set-AdfsProperties -AuditLevel Basic|No more than 5 events will be logged for a single request.|
+|Verbose|Set-AdfsProperties -AuditLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|
 
 To view the current auditing level, you can use the PowerShell cmdlet:  Get-AdfsProperties.
 
