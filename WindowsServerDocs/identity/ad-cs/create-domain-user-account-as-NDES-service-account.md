@@ -6,7 +6,7 @@ ms.author: robinharwood
 ms.topic: overview
 ms.date: 11/09/2022
 =======
-# What is Network Device Enrollment Service for Active Directory Certificate Services?
+# How to configure Network Device Enrollment Service for Active Directory Certificate Services
 
 Applies To: Windows Server (All supported versions)
 
