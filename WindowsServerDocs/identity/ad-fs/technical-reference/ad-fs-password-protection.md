@@ -4,7 +4,7 @@ description:  This document describes how to protect AD FS users from password a
 author: billmath
 manager: mtillman
 ms.reviewer: andandyMSFT
-ms.date: 11/09/2022
+ms.date: 11/10/2022
 ms.topic: article
 ms.author: billmath
 ---
@@ -17,7 +17,7 @@ This also means that some bad actors can take advantage of the federated endpoin
 
 There are two types of common password attacks. Password spray attack & brute force password attack.
 
-## Password Spray Attack
+## Password spray attack
 
 In a password spray attack, these bad actors will try the most common passwords across many different accounts and services to gain access to any password protected assets they can find. Usually these span many different organizations and identity providers. For example, an attacker will use a commonly available toolkit to enumerate all of the users in several organizations and then try “P@$$w0rD” and “Password1” against all of those accounts. To give you the idea, an attack might look like:
 
@@ -39,7 +39,7 @@ For attackers, it's a numbers game: they know that there are some passwords out 
 
 But by taking a few steps to configure the AD FS and network correctly, AD FS endpoints can be secured against these type of attacks. This article covers 3 areas that need to be configured properly to help secure against these attacks.
 
-## Brute Force Password Attack
+## Brute force password attack
 
 In this form of attack, an attacker will attempt multiple password attempts against a targeted set of accounts. In many cases, these accounts will be targeted against users that have a higher level of access within the organization. These could be executives within the organization or admins who manage critical infrastructure.
 
@@ -103,7 +103,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 1. For mobile devices, if you only allow MDM managed devices, you can use [Certificates](../../ad-fs/operations/configure-user-certificate-authentication.md) to log the user in.
 
-## Urgent Handling
+## Urgent handling
 
 If the AD FS environment is under active attack, the following steps should be implemented at the earliest:
 
