@@ -111,7 +111,7 @@ In addition to these requirements, it may be necessary to have a service princip
 
       - Ensure that NDES service account is selected. Ensure that the **Allow** check box that corresponds to **Request Certificates** is selected. Click **OK**.
 
-##### To set a service principal name for the NDES service account
+#### To set a service principal name for the NDES service account
 
 1. Ensure that you are using an account that is a member of the Domain Admins group. Open Windows PowerShell or a command prompt as an administrator.
 
