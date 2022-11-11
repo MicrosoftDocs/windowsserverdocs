@@ -140,7 +140,7 @@ To view logs with Event Viewer, navigate to the following:
 
 # [PowerShell](#tab/powershell)
 
-There are two source types when retrieving logs in PowerShell, **chkdsk** and **winnit**. Run one of the two commands in PowerShell to view the most current chkdsk log:
+There are two source types when retrieving logs in PowerShell, **chkdsk** and **wininit**. Run one of the two commands in PowerShell to view the most current chkdsk log:
 
 ```powershell
 get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "chkdsk"} | fl timecreated, message
