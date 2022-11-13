@@ -497,6 +497,57 @@ If using a synchronous partnership type, test failover works normally.
 
 This is caused by a known code defect in Windows Server, version 1709. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). This issue isn't present in Windows Server 2019 and Windows Server, version 1809 and newer.
 
+## After role switching see event log 10443 warning
+
+You see this event in the Storage Replica Admin log:
+
+```
+A partition state change occured where an attempt to update the partition GPT attributes to mark the partition as visible failed.
+
+DeviceName: \Device\Harddisk<n>\<srid>
+DiskId: {<GUID>}
+PartitionId: {<GUID>}
+PartitionNumber: <Partition Number>
+PartitionState: PrimaryReplicating
+Status: The specified request is not a valid operation for the target device.
+
+Guidance: This event is triggered during a partition state change such as de-provisioning, starting replication, or a role switch when the driver is unable to update the GPT attributes for the partition to mark the partition as visible. The Diskpart.exe utility can be used to correct this condition.
+```
+To solve this issue open a Command Prompt (cmd.exe) with elevated privileges and use Diskpart.exe to bring the affected volume online.
+
+```
+Microsoft Windows [Version 10.0.20348.643]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>diskpart
+
+Microsoft DiskPart version 10.0.20348.1
+
+Copyright (C) Microsoft Corporation.
+On computer: SERVER01
+
+DISKPART> list volume
+
+  Volume ###  Ltr  Label        Fs     Type        Size     Status     Info
+  ----------  ---  -----------  -----  ----------  -------  ---------  --------
+  Volume 0     D                       DVD-ROM         0 B  No Media
+  Volume 1     C                NTFS   Partition     39 GB  Healthy    Boot
+  Volume 2                      FAT32  Partition    100 MB  Healthy    System
+  Volume 3                      NTFS   Partition    524 MB  Healthy    Hidden
+  Volume 4     E   SRLog        NTFS   Partition   1023 GB  Healthy
+  Volume 5     H   SRData              Partition     19 TB  Healthy    Offline
+
+DISKPART> select volume 5
+
+Volume 5 is the selected volume.
+
+DISKPART> online volume
+
+DiskPart successfully onlined the selected volume.
+
+DISKPART>
+```
+
 ## Additional References
 
 - [Storage Replica](storage-replica-overview.md)
