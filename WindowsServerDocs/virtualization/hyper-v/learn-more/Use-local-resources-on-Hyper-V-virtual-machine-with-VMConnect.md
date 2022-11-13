@@ -11,7 +11,7 @@ ms.date: 06/30/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 11, Windows 10, Windows 8.1
 
-Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how configure the host and then give the virtual machine access to a local resource.
+Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how configure the host and then give the virtual machine access to a local resource. Please make sure your host and guest OSes have the [prerequisites](## Requirements for using local resources) in advance.
 
 Enhanced session mode and Type clipboard text are available only for virtual machines that run recent Windows operating systems. \(See [Requirements for using local resources](#requirements-for-using-local-resources), below.\)
 
@@ -61,22 +61,22 @@ To choose a local resource:
 3.  Click **Show options**.
 
     ![Screenshot that calls out Show options on the bottom left of the dialog box.](media/HyperV-VMConnect-DisplayConfig.png)
+    
+4. Select **Save my settings for future connections to this virtual machine**.
 
-4.  Select **Local resources**.
+    ![Screenshot that calls out the checkbox to select for this option.](media/HyperV-VMConnect-SaveSettings.png)
+
+5.  Select **Local resources**.
 
     ![Screenshot that calls out the Local resources tab.](media/HyperV-VMConnect-DisplayConfig-LocalResources.png)
 
-5.  Click **More**.
+6.  Click **More**.
 
     ![Screenshot that calls out the More button.](media/HyperV-VMConnect-DisplayConfig-LocalResourcesMore.png)
 
-6.  Select the drive that you want to use on the virtual machine and click **Ok**.
+7.  Select the drive that you want to use on the virtual machine and click **Ok**.
 
     ![Screenshot that shows the local resources and drives that you can select.](media/HyperV-VMConnect-Settings-LocalResourcesDrives.png)
-
-7.  Select **Save my settings for future connections to this virtual machine**.
-
-    ![Screenshot that calls out the checkbox to select for this option.](media/HyperV-VMConnect-SaveSettings.png)
 
 8.  Click **Connect**.
 
@@ -97,7 +97,7 @@ To be able to use a computer's local resources on a virtual machine:
 
 -   The computer on which you use VMConnect must run Windows 10, Windows 8.1, Windows Server 2016, or Windows Server 2012 R2.
 
--   The virtual machine must have Remote Desktop Services enabled, and run Windows 10, Windows 8.1, Windows Server 2016, or Windows Server 2012 R2 as the guest operating system.
+-   The virtual machine must have Remote Desktop Services enabled, and run Windows 10, Windows 8.1, Windows Server 2016, or Windows Server 2012 R2 as the guest operating system. Please consider that the [Remote Desktop Protocol (RDP)](https://docs.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol) isn't available to the Home users. In order to get the Enhanced Sessions functionalities, your geust OS must be either Pro or Enterprise editions of Windows. 
 
 If the computer running VMConnect and the virtual machine both meet the requirements, you can use any of the following local resources if they're available:
 
