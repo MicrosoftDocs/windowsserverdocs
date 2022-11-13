@@ -36,6 +36,10 @@ goto <label>
 
 - You can use **goto** with other commands to perform conditional operations. For more information about using **goto** for conditional operations, see the [if command](if.md).
 
+- Goto breaks brackets context and can be used to interrupt for loops. 
+
+- Outside brackets GOTO can be used for multi-line comments
+
 ## Examples
 
 The following batch program formats a disk in drive A as a system disk. If the operation is successful, the **goto** command directs processing to the **:end** label:
@@ -47,6 +51,46 @@ if not errorlevel 1 goto end
 echo An error occurred during formatting.
 :end
 echo End of batch program.
+```
+
+Interrupting a for loop with GOTO:
+
+```
+:: only 'one' will be printed
+for %%# in (one two three) do (
+	if %%#== two (
+	  goto break
+	) else (
+	  echo %%#
+	)
+	
+)
+:break
+```
+
+GOTO breaks brackets context inside the IF command body:
+
+```
+if 1 equ 1 (
+	goto :break_if
+	:break_if
+	rem
+) else (
+	echo this will be printed
+)
+```
+
+Outside brackets GOTO can be used for multi-line comments:
+
+```
+goto :end_comment
+
+	this is 
+	a 
+	multi-line 
+	comment
+
+:end_comment
 ```
 
 ## Additional References
