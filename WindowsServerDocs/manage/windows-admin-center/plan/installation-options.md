@@ -8,7 +8,7 @@ ms.date: 12/11/2019
 ---
 # What type of installation is right for you?
 
-This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC, Windows 11 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 We don’t recommend using Windows Admin Center for local management of the same server on which it’s installed. To manage a server, use Windows Admin Center to connect to the server remotely from a management PC or other server.
 
@@ -27,6 +27,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | **Platform**                       | **Installation mode** |
 | -----------------------------------| --------------------- |
 | Windows 10                         | Local client |
+| Windows 11                         | Local client |
 | Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
 | Windows Server 2016                | Gateway sever, managed server, failover cluster |
 | Windows Server 2019                | Gateway sever, managed server, failover cluster |
@@ -41,7 +42,7 @@ To operate Windows Admin Center:
 
 ## Installation: Supported web browsers
 
-Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10. Other web browsers—including Internet Explorer and Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has it’s own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
+Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10 and Windows 11. Other web browsers—including Internet Explorer and Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has it’s own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
 
 ## Management target: Supported operating systems
 
@@ -50,6 +51,7 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
 | Windows 10 | Yes (via Computer Management) | N/A |
+| Windows 11 | Yes (via Computer Management) | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes |
 | Windows Server 2019 | Yes | Yes |
 | Windows Server 2016 | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
