@@ -8,9 +8,9 @@ ms.date: 01/10/2020
 ---
 # Overview of file sharing using the SMB 3 protocol in Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server, version 1607 and higher (including Windows Server 2019 and Windows Server 2016), Windows Server 2012 R2, and Windows Server 2012
 
-This topic describes the SMB 3 feature in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012—practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements. SMB is also a fabric protocol used by [software-defined data center (SDDC)](../../sddc.md) solutions such as Storage Spaces Direct, Storage Replica, and others. SMB version 3.0 was introduced with Windows Server 2012 and has been incrementally improved in subsequent releases.
+This topic describes the SMB 3 feature in Windows Server 2022, Windows Server, version 1607 and higher (including Windows Server 2019 and Windows Server 2016), Windows Server 2012 R2, and Windows Server 2012—practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements. SMB is also a fabric protocol used by [software-defined data center (SDDC)](../../sddc.md) solutions such as Storage Spaces Direct, Storage Replica, and others. SMB version 3 was introduced with Windows Server 2012 and has been incrementally improved in subsequent releases.
 
 ## Feature description
 
@@ -29,9 +29,18 @@ This section discusses some new practical ways to use the new SMB 3.0 protocol.
 
 ## New and changed functionality
 
-The following sections describe functionality that was added in SMB 3 and subsequent updates.
+The following sections describe functionality that was added in SMB 3.0 and subsequent updates.
 
-## Features added in Windows Server 2019 and Windows 10, version 1809
+## Features added in Windows Server 2022 and Windows 11
+
+| Feature/functionality  | New or updated  | Summary  |
+| --------- | --------- | --------- |
+| SMB Signing | Updated | Support for AES-128-GMAC. |
+| SMB Encryption | Updated | Support for AES-256-CCM and AES-256-GCM. |
+| SMB over QUIC | New | Explicit support for SMB over untrusted networks, like Internet, through the transport layer QUIC. Only on Windows 11 and Windows Server 2022 Datacenter: Azure Edition (the latter is still in preview at the moment). |
+| SMB compression | New | Performance gains due to compression of SMB traffic. |
+
+## Features added in Windows Server, version 1809 (including Windows Server 2019) and Windows 10, version 1809
 
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |
@@ -41,16 +50,16 @@ The following sections describe functionality that was added in SMB 3 and subseq
 
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |
-| Guest access to file shares is disabled | New | The SMB client no longer allows the following actions: Guest account access to a remote server; Fallback to the Guest account after invalid credentials are provided. For details, see [Guest access in SMB2 disabled by default in Windows](https://support.microsoft.com/help/4046019/guest-access-in-smb2-disabled-by-default-in-windows-10-and-windows-ser). |
+| Guest access to file shares is disabled | Updated | The SMB client no longer allows the following actions by default for editions Enterprise and Education (Windows client) and Standard en Datacenter (Windows Server): Guest account access to a remote server; Fallback to the Guest account after invalid credentials are provided. For details, see [Guest access in SMB2 disabled by default in Windows](https://support.microsoft.com/help/4046019/guest-access-in-smb2-disabled-by-default-in-windows-10-and-windows-ser). |
 | SMB global mapping | New | Maps a remote SMB share to a drive letter that is accessible to all users on the local host, including containers. This is required to enable container I/O on the data volume to traverse the remote mount point. Be aware that when using SMB global mapping for containers, all users on the container host can access the remote share. Any application running on the container host also have access to the mapped remote share. For details, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct, SMB Global Mapping](https://techcommunity.microsoft.com/t5/failover-clustering/container-storage-support-with-cluster-shared-volumes-csv/ba-p/372140). |
 | SMB dialect control | New | You can now set registry values to control the minimum SMB version (dialect) and maximum SMB version used. For details, see [Controlling SMB Dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024). |
 
-## Features added in SMB 3.11 with Windows Server 2016 and Windows 10, version 1607
+## Features added in SMB 3.11 with Windows Server, version 1607 (including Windows Server 2016) and Windows 10, version 1607
 
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |
 | SMB Encryption     |   Updated      | SMB 3.1.1 encryption with Advanced Encryption Standard-Galois/Counter Mode (AES-GCM) is faster than SMB Signing or previous SMB encryption using AES-CCM.   |
-| Directory Caching | New | SMB 3.1.1 includes enhancements to directory caching. Windows clients can now cache much larger directories, approximately 500K entries. Windows clients will attempt directory queries with 1 MB buffers to reduce round trips and improve performance. |
+| Directory Caching | Updated | SMB 3.1.1 includes enhancements to directory caching. Windows clients can now cache much larger directories, approximately 500K entries. Windows clients will attempt directory queries with 1 MB buffers to reduce round trips and improve performance. |
 | Pre-Authentication Integrity | New |  In SMB 3.1.1, pre-authentication integrity provides improved protection from a man-in-the-middle attacker tampering with SMB’s connection establishment and authentication messages. For details, see [SMB 3.1.1 Pre-authentication integrity in Windows 10](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10). |
 | SMB Encryption Improvements | New | SMB 3.1.1 offers a mechanism to negotiate the crypto algorithm per connection, with options for AES-128-CCM and AES-128-GCM. AES-128-GCM is the default for new Windows versions, while older versions will continue to use AES-128-CCM. |
 | Rolling cluster upgrade support | New | Enables [rolling cluster upgrades](../../failover-clustering/cluster-operating-system-rolling-upgrade.md) by letting SMB appear to support different max versions of SMB for clusters in the process of being upgraded. For more details on letting SMB communicate using different versions (dialects) of the protocol, see the blog post [Controlling SMB Dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024). |
@@ -64,7 +73,7 @@ For additional details, see the blog post [What’s new in SMB 3.1.1 in the Wind
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |
 | Automatic rebalancing of Scale-Out File Server clients     |   New      | Improves scalability and manageability for Scale-Out File Servers. SMB client connections are tracked per file share (instead of per server), and clients are then redirected to the cluster node with the best access to the volume used by the file share. This improves efficiency by reducing redirection traffic between file server nodes. Clients are redirected following an initial connection and when cluster storage is reconfigured.    |
-| Performance over WAN   | Updated  | Windows 8.1 and Windows 10 provide improved CopyFile SRV_COPYCHUNK over SMB support when you use File Explorer for remote copies from one location on a remote machine to another copy on the same server. You will copy only a small amount of metadata over the network (1/2KiB per 16MiB of file data is transmitted). This results in a significant performance improvement. This is an OS-level and File Explorer-level distinction for SMB. |
+| Performance over WAN   | Updated  | Windows 8.1, Windows Server 2012 R2 and higher provide an improved CopyFile FSCTL_SRV_COPYCHUNK over SMB support when you use File Explorer for remote copies from one to another location on the same remote SMB server. You will copy only a small amount of metadata over the network (1/2KiB per 16MiB of file data is transmitted). This results in a significant performance improvement. This is an OS-level and File Explorer-level distinction for SMB. |
 | SMB Direct     |   Updated      | Improves performance for small I/O workloads by increasing efficiency when hosting workloads with small I/Os (such as an online transaction processing (OLTP) database in a virtual machine). These improvements are evident when using higher speed network interfaces, such as 40 Gbps Ethernet and 56 Gbps InfiniBand.  |
 | SMB bandwidth limits | New | You can now use [Set-SmbBandwidthLimit](/powershell/module/smbshare/set-smbbandwidthlimit) to set bandwidth limits in three categories: VirtualMachine (Hyper-V over SMB traffic), LiveMigration (Hyper-V Live Migration traffic over SMB), or Default (all other types of SMB traffic).
 
@@ -84,34 +93,34 @@ For more information on new and changed SMB functionality in Windows Server 2012
 | SMB Encryption     |   New      | Provides end-to-end encryption of SMB data and protects data from eavesdropping occurrences on untrusted networks. Requires no new deployment costs, and no need for Internet Protocol security (IPsec), specialized hardware, or WAN accelerators. It may be configured on a per share basis, or for the entire file server, and may be enabled for a variety of scenarios where data traverses untrusted networks. |
 | SMB Directory Leasing     |  New | Improves application response times in branch offices. With the use of directory leases, roundtrips from client to server are reduced since metadata is retrieved from a longer living directory cache. Cache coherency is maintained because clients are notified when directory information on the server changes. Directory leases work with scenarios for HomeFolder (read/write with no sharing) and Publication (read-only with sharing).    |
 | Performance over WAN   | New   | Directory opportunistic locks (oplocks) and oplock leases were introduced in SMB 3.0. For typical office/client workloads, oplocks/leases are shown to reduce network round trips by approximately 15%.<br><br>In SMB 3, the Windows implementation of SMB has been refined to improve the caching behavior on the client as well as the ability to push higher throughputs.<br><br>SMB 3 features improvements to the CopyFile() API, as well as to associated tools such as Robocopy, to push significantly more data over the network. |
-| Secure dialect negotiation | New | Helps protect against man-in-the-middle attempt to downgrade dialect negotiation. The idea is to prevent an eavesdropper from downgrading the initially negotiated dialect and capabilities between the client and the server. For details, see [SMB3 Secure Dialect Negotiation](/archive/blogs/openspecification/smb3-secure-dialect-negotiation). Note that this has been superceded by the [SMB 3.1.1 Pre-authentication integrity in Windows 10](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) feature in SMB 3.1.1. |
+| Secure dialect negotiation | New | Helps protect against man-in-the-middle attempt to downgrade dialect and/or capabilities negotiation. The idea is to prevent an eavesdropper from downgrading the initially negotiated dialect and capabilities between the client and the server. For details, see [SMB3 Secure Dialect Negotiation](/archive/blogs/openspecification/smb3-secure-dialect-negotiation). Note that this has been superceded by the [SMB 3.1.1 Pre-authentication integrity in Windows 10](/archive/blogs/openspecification/smb-3-1-1-pre-authentication-integrity-in-windows-10) feature in SMB 3.1.1. |
 
 
 ## Hardware requirements
 
 SMB Transparent Failover has the following requirements:
 
-* A failover cluster running Windows Server 2012 or Windows Server 2016 with at least two nodes configured. The cluster must pass the cluster validation tests included in the validation wizard.
+* A failover cluster running Windows Server 2012 or higher with at least two nodes configured. The cluster must pass the cluster validation tests included in the validation wizard.
 * File shares must be created with the Continuous Availability (CA) property, which is the default.
 * File shares must be created on CSV volume paths to attain SMB Scale-Out.
-* Client computers must be running Windows® 8 or Windows Server 2012, both of which include the updated SMB client that supports continuous availability.
+* Client computers must be running Windows® 8, Windows Server 2012 or higher. These versions include the updated SMB client that supports continuous availability.
 
 > [!NOTE]
 > Down-level clients can connect to file shares that have the CA property, but transparent failover will not be supported for these clients.
 
 SMB Multichannel has the following requirements:
 
-* At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
+* At least two computers running Windows 8, Windows Server 2012 or higher are required. No extra features need to be installed—the technology is on by default.
 * For information on recommended network configurations, see the See Also section at the end of this overview topic.
 
 SMB Direct has the following requirements:
 
-* At least two computers running Windows Server 2012 are required. No extra features need to be installed—the technology is on by default.
-* Network adapters with RDMA capability are required. Currently, these adapters are available in three different types: iWARP, Infiniband, or RoCE (RDMA over Converged Ethernet).
+* At least two computers running Windows Server 2012, Windows 10 (Version 1607 Enterprise, Education or Pro for Workstations) or higher are required. No extra features need to be installed—the technology is on by default.
+* Network adapters with RDMA capability are required. Currently, these adapters are available in three different types: iWARP, InfiniBand, or RoCE (RDMA over Converged Ethernet).
 
 ## More information
 
-The following list provides additional resources on the web about SMB and related technologies in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+The following list provides additional resources on the web about SMB and related technologies in Windows Server 2022, Windows Server, version 1607 and higher (including Windows Server 2019 and Windows Server 2016), Windows Server 2012 R2, and Windows Server 2012.
 
 * [Storage in Windows Server](../storage.yml)
 * [Scale-Out File Server for Application Data](../../failover-clustering/sofs-overview.md)
