@@ -74,7 +74,7 @@ You can create a new federation server farm by using either a new or existing gM
 
     1.  On the computer that you want to configure as a federation server, ensure that the required SSL certificate has been imported into the **Local Computer\\My Store** directory. You can verify whether the SSL certificate has been imported by running the following command in the Windows PowerShell command window: `dir Cert:\LocalMachine\My`. The certificate is listed by its thumbprint in the **Local Computer\\My Store** directory.
 
-    2.  On your domain controller, open the Windows PowerShell command window and run the following command to verify whether the KDS Root Key has been created in your domain: `Get-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)`. If it has not been created so that the output displays no information, run the following command to create the key: `Add-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)`.
+    2.  On your domain controller, open the Windows PowerShell command window and run the following command to verify whether the KDS Root Key has been created in your domain: `Get-KdsRootKey`. If it has not been created so that the output displays no information, run the following command to create the key: `Add-KdsRootKey –EffectiveTime (Get-Date).AddHours(-10)`.
 
     3.  On the computer that you want to configure as a federation server, open the Windows PowerShell command window, and run the following command:
 
