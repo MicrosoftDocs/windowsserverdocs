@@ -101,21 +101,22 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
 
    Set-Service -Name ClusSvc -StartupType Automatic
    ```
-7. Bring the Cluster Name and all other cluster Network Name resources to an Online state.
 
-   ```PowerShell
-   Start-ClusterResource -Name "Cluster Name"
-
-   Start-ClusterResource -Name FS-CLUSCLUS
-   ```
-
-8. Change the cluster to be a part of the new domain with associated active directory objects. To do this, the command is below and the network name resources must be in an online state.  What this command will do is recreate the name objects in Active Directory.
+7. Change the cluster to be a part of the new domain with associated active directory objects. To do this, the command is below and the network name resources must be in an online state.  What this command will do is recreate the name objects in Active Directory.
 
    ```PowerShell
    New-ClusterNameAccount -Name CLUSTERNAME -Domain NEWDOMAINNAME.com -UpgradeVCOs
    ```
 
     NOTE: If you do not have any additional groups with network names (i.e. a Hyper-V Cluster with only virtual machines), the -UpgradeVCOs parameter switch is not needed.
+
+8. Bring the Cluster Name and all other cluster Network Name resources to an Online state.
+
+   ```PowerShell
+   Start-ClusterResource -Name "Cluster Name"
+
+   Start-ClusterResource -Name FS-CLUSCLUS
+   ```
 
 9. Use Active Directory Users and Computers to check the new domain and ensure the associated computer objects were created. If they have, then bring the remaining resources in the groups online.
 
