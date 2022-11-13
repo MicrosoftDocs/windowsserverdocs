@@ -48,6 +48,8 @@ The following server operating systems support DirectAccess.
 
 The following client operating systems support DirectAccess.
 
+-   Windows 11 Enterprise
+
 -   Windows 10 Enterprise
 
 -   Windows 10 Enterprise 2015 Long Term Servicing Branch (LTSB)
