@@ -133,7 +133,7 @@ There may be a rare occurrence where if your CRL lists are very long, it may hit
 
 |                                         Claim type                                         |                              Example Value                               |
 |--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-|         http://schemas.microsoft.com/2012/12/certificatecontext/field/x509version         |                                    3                                     |
+|         `http://schemas.microsoft.com/2012/12/certificatecontext/field/x509version`         |                                    3                                     |
 |     http://schemas.microsoft.com/2012/12/certificatecontext/field/signaturealgorithm      |                                sha256RSA                                 |
 |           http://schemas.microsoft.com/2012/12/certificatecontext/field/issuer            |                 CN=entca, DC=domain, DC=contoso, DC=com                  |
 |         http://schemas.microsoft.com/2012/12/certificatecontext/field/issuername          |                 CN=entca, DC=domain, DC=contoso, DC=com                  |
