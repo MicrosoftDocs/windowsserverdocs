@@ -3,9 +3,9 @@ description: "Learn more about: Known issues with Storage Replica"
 title: Known issues with Storage Replica
 manager: siroy
 ms.author: nedpyle
-ms.topic: how-to
+ms.topic: troubleshooting
 author: nedpyle
-ms.date: 06/25/2019
+ms.date: 11/14/2022
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 
@@ -17,7 +17,7 @@ This article discusses known issues with Storage Replica in Windows Server.
 
 ## Disks are offline after removing replication and you can't configure replication
 
-In Windows Server, you may be unable to provision replication on a volume that was previously replicated or may find unmountable volumes. This may occur when some error condition prevents removal of replication or when you reinstall the operating system on a computer that was previously replicating data.
+You may be unable to provision replication on a volume that was previously replicated or may find unmountable volumes. Disks can remain offline when replication isn't removed or when you reinstall the operating system on a computer that was previously replicating data.
 
 To fix, you must clear the hidden Storage Replica partition off the disks and return them to a writeable state using the `Clear-SRMetadata` cmdlet.
 
@@ -45,17 +45,17 @@ To fix, you must clear the hidden Storage Replica partition off the disks and re
     Clear-SRMetadata -Name RG01 -Logs -Partition
     ```
 
-The server may need to restart after cleaning the partition database; you can suppress this temporarily with `-NoRestart` but you shouldn't skip restarting the server if requested by the cmdlet. This cmdlet doesn't remove data volumes nor data contained within those volumes.
+The server may need to restart after cleaning the partition database. You can prevent the server from rebooting temporarily with `-NoRestart` but you shouldn't skip restarting if requested by the cmdlet. This cmdlet doesn't remove data volumes nor data contained within those volumes.
 
-## During initial sync, see event log 4004 warnings
+## During initial sync, 4004 warnings are seen in the event log
 
-In Windows Server, when configuring replication, both the source and destination servers may show multiple **StorageReplica\Admin*- event log 4004 warnings each during initial sync, with a status of "insufficient system resources exist to complete the API". You're likely to see 5014 errors as well. These indicate that the servers don't have enough available memory (RAM) to perform both initial synchronization and run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.
+After configuring replication, during initial sync both the source and destination servers may show multiple event 4004 warnings entries in the **StorageReplica\Admin** event log. The event description shows the status "insufficient system resources exist to complete the API". You're likely to see 5014 errors as well. These events indicate that the servers don't have enough available memory (RAM) to perform both initial synchronization and run workloads. Either add RAM or reduce the used RAM from features and applications other than Storage Replica.
 
-## virtual machines stop responding after configuring replication, when using guest clusters with Shared VHDX and a host without a CSV
+## Virtual machines stop responding after configuring replication
 
-In Windows Server, when using Hyper-V guest clusters for Storage Replica testing or demonstration purposes, and using Shared VHDX as the guest cluster storage, the virtual machines stop responding after you configure replication. If you restart the Hyper-V host, the virtual machines start responding but replication configuration won't be complete and no replication will occur.
+Virtual machines stop responding after you configure replication when using in-guest clustering and Storage Replica on a shared VHDX (not a cluster shared volume). If you restart the Hyper-V host, the virtual machines start responding, however the replication configuration won't be complete and no replication will occur.
 
-This behavior occurs when you're using **fltmc.exe attach svhdxflt*- to bypass the requirement for the Hyper-V host running a CSV. Use of this command isn't supported and is intended only for test and demonstration purposes.
+This behavior occurs when you're using `fltmc.exe attach svhdxflt` to bypass the requirement for the Hyper-V host running a CSV. Use of this command isn't supported and is intended only for test and demonstration purposes.
 
 The cause of the slowdown is a by-design interoperability issue between the Storage QoS feature in Windows Server and the manually attached Shared VHDX filter. To resolve this issue, disable the Storage QoS filter driver and restart the Hyper-V host:
 
@@ -71,7 +71,7 @@ When using the `New-Volume` cmdlet along with differing sets of storage on the s
 Data partition sizes are different in those two groups
 ```
 
-Use the `New-Partition**` cmdlet to create volumes and format them instead of `New-Volume`, as the latter cmdlet may round the volume size on differing storage arrays. If you've already created an NTFS volume, you can use `Resize-Partition` to grow or shrink one of the volumes to match the other (you can't do this with ReFS volumes). If using **Diskmgmt*- or **Server Manager**, no rounding will occur.
+Use the `New-Partition**` cmdlet to create volumes and format them instead of `New-Volume`, as the latter cmdlet may round the volume size on differing storage arrays. If you've already created an NTFS volume, you can use `Resize-Partition` to grow or shrink one of the volumes to match the other. You can't use this method with ReFS volumes. If using **Diskmgmt*- or **Server Manager**, no rounding will occur.
 
 ## Running Test-SRTopology fails with name-related errors
 
@@ -133,7 +133,7 @@ At line: 1 char: 1
 + FullyQua1ifiedErrorId : Windows System Error 1168 ,New-SRPartnership
 ```
 
-This is caused by selecting a data volume that is on the same partition as the System Drive (that is, the **C:*- drive with its Windows folder). For instance, on a drive that contains both the **C:*- and **D:*- volumes created from the same partition. This isn't supported in Storage Replica; you must pick a different volume to replicate.
+You'll experience this error when selecting a data volume that is on the same partition as the system drive (that is, the **C:*- drive with its Windows folder). For instance, on a drive that contains both the **C:*- and **D:*- volumes created from the same partition. Using a system drive isn't supported in Storage Replica; you must pick a different volume to replicate.
 
 ## Attempting to grow a replicated volume fails due to missing update
 
@@ -156,9 +156,9 @@ If using the Disk Management MMC snap-in, you receive this error:
 Element not found
 ```
 
-This occurs even if you correctly enable volume resizing on the source server using `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`.
+You'll receive `The operation failed with return code 8` even if you correctly enable volume resizing on the source server using `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`.
 
-This issue was fixed in Cumulative Update for Windows 10, version 1607 (Anniversary Update) and Windows Server 2016: December 9, 2016 (KB3201845).
+The issue was fixed in Cumulative Update for Windows 10, version 1607 (Anniversary Update) and Windows Server 2016: December 9, 2016 ([KB3201845](https://support.microsoft.com/help/3201845)).
 
 ## Attempting to grow a replicated volume fails due to missing step
 
@@ -200,9 +200,9 @@ An unexpected error has occurred
 
 After resizing the volume, remember to disable resizing with `Set-SRGroup -Name rg01 -AllowVolumeResize $FALSE`. This parameter prevents admins from attempting to resize volumes prior to ensuring that there's sufficient space on the destination volume, typically because they were unaware of Storage Replica's presence.
 
-## Attempting to move a PDR resource between sites on an asynchronous stretch cluster fails
+## Moving a physical disk resource between sites on an asynchronous stretch cluster fails
 
-When attempting to move a physical disk resource-attached role - such as a file server for general use - in order to move the associated storage in an asynchronous stretch cluster, you receive an error.
+When attempting to move a physical disk resource (PDR) attached role - such as a file server for general use - in order to move the associated storage in an asynchronous stretch cluster, you receive an error.
 
 If using the Failover Cluster Manager snap-in:
 
@@ -227,9 +227,9 @@ At line:1 char:1
 + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
 ```
 
-This occurs due to a by-design behavior in Windows Server. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.
+The move fails due to a by-design behavior in Windows Server. Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster.
 
-This behavior has been changed in Windows Server, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
+The moved behavior has been changed beginning with Windows Server 2016, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
 
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found"
 
@@ -239,7 +239,7 @@ When attempting to provision a cluster with only two nodes, prior to adding Stor
 No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests.
 ```
 
-This doesn't occur if you have at least three nodes in the cluster. This issue occurs because of a by-design code change in Windows Server for asymmetric storage clustering behaviors.
+You won't experience the error if you have at least three nodes in the cluster. The issue occurs because of a by-design code change in Windows Server for asymmetric storage clustering behaviors.
 
 To add the storage, you can run the following command on the node in the second site:
 
@@ -247,7 +247,7 @@ To add the storage, you can run the following command on the node in the second 
 Get-ClusterAvailableDisk -All | Add-ClusterDisk
 ```
 
-This won't work with node local storage. You can use Storage Replica to replicate a stretch cluster between two total nodes, **each one using its own set of shared storage.**
+The command won't work with node local storage. You can use Storage Replica to replicate a stretch cluster between two total nodes, **each one using its own set of shared storage.**
 
 ## Event 1241 warning repeated during initial sync
 
@@ -276,13 +276,13 @@ RemoteReplicationGroupId: {7f18e5ea-53ca-4b50-989c-9ac6afb3cc81}
 TargetRPO: 30
 ```
 
-Guidance: This is typically due to one of the following reasons:
+Event 1241, "The Recovery Point Objective (RPO) of the asynchronous destination is unavailable" is typically due to one of the following reasons:
 
 - The asynchronous destination is currently disconnected. The RPO may become available after the connection is restored.
 
 - The asynchronous destination is unable to keep pace with the source such that the most recent destination log record is no longer present in the source log. The destination will start block copying. The RPO should become available after block copying completes.
 
-This is expected behavior during initial sync and can safely be ignored. This behavior may change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds, by default).
+During initial sync, the event is expected behavior and can safely be ignored. The event behavior may change in a later release. If you see this behavior during ongoing asynchronous replication, investigate the partnership to determine why replication is delayed beyond your configured RPO (30 seconds, by default).
 
 ## Event 4004 warning repeated after rebooting a replicated node
 
@@ -329,7 +329,7 @@ Error Code: 0x80071397
 The operation failed because either the specified cluster node is not the owner of the resource, or the node is not a possible owner of the resource.
 ```
 
-If you attempt to move the disk or CSV manually, you receive an other error. For example:
+If you attempt to move the disk or CSV manually, you receive another error. For example:
 
 ```Output
 Error
@@ -342,7 +342,7 @@ A cluster node is not available for this operation
 
 This issue is caused by one or more uninitialized disks being attached to one or more cluster nodes. To resolve the issue, initialize all attached storage using DiskMgmt.msc, DISKPART.EXE, or the `Initialize-Disk` PowerShell cmdlet.
 
-We're working on providing an update that permanently resolves this issue. If you're interested in assisting us and you have a Microsoft Premier Support agreement, please email SRFEED@microsoft.com so that we can work with you on filing a backport request.
+We're working on providing an update that permanently resolves this issue. Contact Microsoft Support for more information.
 
 ## GPT error when attempting to create a new SR partnership
 
@@ -359,9 +359,9 @@ At line:1 char:1
 + FullyQualifiedErrorId : Windows System Error 5078,New-SRPartnership
 ```
 
-In the Failover Cluster Manager GUI, there is no capability to set up replication for the disk.
+In the Failover Cluster Manager GUI, there's no capability to set up replication for the disk.
 
-When running Test-SRTopology, it fails with:
+Running `Test-SRTopology` fails with:
 
 ```Output
 WARNING: Object reference not set to an instance of an object.
@@ -377,26 +377,27 @@ At line:1 char:1
 + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 ```
 
-This is caused by the cluster functional level still being set to Windows Server 2012 R2 (that is, FL 8). Storage Replica is supposed to return a specific error here but instead returns an incorrect error mapping.
+The error is caused by the cluster functional level still being set to Windows Server 2012 R2 (that is, FL 8). Storage Replica is supposed to return a specific error here but instead returns an incorrect error mapping.
+
+From an elevated PowerShell session, run the following command on each node.
 
 ```powershell
-Run Get-Cluster | fl - on each node.
+Get-Cluster | fl *
 ```
 
-If `ClusterFunctionalLevel = 9`, that is the Windows 2016 ClusterFunctionalLevel version needed to implement Storage Replica on this node.
-If ClusterFunctionalLevel isn't 9, the ClusterFunctionalLevel will need to be updated in order to implement Storage Replica on this node.
+If the `ClusterFunctionalLevel` attribute is `9` or higher, that is the version needed to implement Storage Replica. If `ClusterFunctionalLevel` isn't `9`, the `ClusterFunctionalLevel` will need to be updated in order to implement Storage Replica on this node.
 
 To resolve the issue, raise the cluster functional level by running the PowerShell cmdlet: [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/update-clusterfunctionallevel).
 
-## Small unknown partition listed in DISKMGMT for each replicated volume
+## Small unknown volume listed in DISKMGMT for each replicated volume
 
-When running the Disk Management snap-in (DISKMGMT.MSC), you notice one or more volumes listed with no label or drive letter and 1MB in size. You may be able to delete the unknown volume or you may receive:
+When running the Disk Management snap-in (DISKMGMT.MSC), you notice one or more volumes listed with no label or drive letter and 1 MB in size. You may be able to delete the unknown volume or you may receive:
 
 ```Output
 An Unexpected Error has Occurred
 ```
 
-This behavior is by design. This not a volume, but a partition. Storage Replica creates a 512KB partition as a database slot for replication operations (the legacy DiskMgmt.msc tool rounds to the nearest MB). Having a partition like this for each replicated volume is normal and desirable. Once the disk is no longer used by Storage Replica, you're free to delete this 512KB partition; in-use partitions can't be deleted. The partition will never grow or shrink. If you're recreating replication, we recommend leaving the partition as Storage Replica will claim unused ones.
+The message above is expected behavior and is by design. The listed items aren't volumes, but are partitions. Storage Replica creates a 512-KB partition as a database slot for replication operations (the legacy DiskMgmt.msc tool rounds to the nearest MB). Having a partition like this for each replicated volume is normal and desirable. Once the disk is no longer used by Storage Replica, you're free to delete this 512-KB partition; in-use partitions can't be deleted. The partition will never grow or shrink. If you're recreating replication, we recommend leaving the partition as Storage Replica will claim unused ones.
 
 To view details, use the DISKPART tool or `Get-Partition` cmdlet. These partitions will have a GPT Type of `558d43c5-a1ac-43c0-aac8-d1472b2923d1`.
 
@@ -412,7 +413,7 @@ To prevent this behavior, don't snapshot Storage Replica log volumes. There's no
 
 When using Storage Spaces Direct with an NVMe (nonvolatile memory express) device or SSD (solid-state drive) cache, you see a greater than expected increase in latency when configuring Storage Replica replication between Storage Spaces Direct clusters. The change in latency is proportionally much higher than you see when using NVMe and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
 
-This issue occurs due to architectural limitations within Storage Replica's log mechanism combined with the low latency of NVMe when compared to slower media. With Storage Spaces Direct cache, all I/O of Storage Replica logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. This means that all Storage Replica activity happens on the same speed media - this configuration is supported but not recommended (see [Frequently asked questions about Storage Replica](storage-replica-frequently-asked-questions.yml) for log recommendations).
+This issue occurs due to architectural limitations within Storage Replica's log mechanism combined with the low latency of NVMe when compared to slower media. With Storage Spaces Direct cache, all I/O of Storage Replica logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. Meaning that all Storage Replica activity happens on the same speed media - the configuration is supported but not recommended (see [Frequently asked questions about Storage Replica](storage-replica-frequently-asked-questions.yml) for log recommendations).
 
 When using Storage Spaces Direct with HDDs, you can't disable or avoid the cache. As a workaround, if using just SSD and NVMe, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you'll avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVMe.
 
@@ -420,11 +421,9 @@ This workaround isn't ideal and some customers may not be able to make use of it
 
 ## Error "Could not find file" when running Test-SRTopology between two clusters
 
-When running `Test-SRTopology` between two clusters and their CSV paths, it fails with error:
+Running `Test-SRTopology` between two clusters and their CSV paths fails with the error:
 
-```powershell
-PS C:\Windows\system32> Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName NedClusterB -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 1 -ResultPath C:\Temp
-
+```Output
 Validating data and log volumes...
 Measuring Storage Replica recovery and initial synchronization performance...
 WARNING: Could not find file '\\NedNode1\C$\CLUSTERSTORAGE\VOLUME1TestSRTopologyRecoveryTest\SRRecoveryTestFile01.txt'.
@@ -439,15 +438,13 @@ At line:1 char:1
 + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 ```
 
-This is caused by a known code defect in Windows Server 2016. This issue was first fixed in Windows Server, version 1709 and the associated RSAT tools. For a downlevel resolution, please contact Microsoft Support and request a backport update. There's no workaround.
+The error shown in the example is caused by a known code defect in Windows Server 2016. This issue was first fixed in Windows Server, version 1709 and the associated RSAT tools. For a downlevel resolution, contact Microsoft Support and request a backport update. There's no workaround.
 
 ## Error "specified volume couldn't be found" when running Test-SRTopology between two clusters
 
-When running `Test-SRTopology` between two clusters and their CSV paths, it fails with error:
+Running `Test-SRTopology` between two clusters and their CSV paths fail with error:
 
 ```Output
-PS C:\> Test-SRTopology -SourceComputerName RRN44-14-09 -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName RRN44-14-13 -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 30 -ResultPath c:\report
-
 Test-SRTopology : The specified volume C:\ClusterStorage\Volume1 cannot be found on computer RRN44-14-09. If this is a cluster node, the volume must be part of a role or CSV; volumes in Available Storage are not accessible
 At line:1 char:1
 + Test-SRTopology -SourceComputerName RRN44-14-09 -SourceVolumeName C:\ ...
@@ -456,13 +453,13 @@ At line:1 char:1
     + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 ```
 
-When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. This error received an improved message in Windows Server 2019.
+When specifying the source node CSV as the source volume, you must select the node that owns the CSV. You can either move the CSV to the specified node or change the node name you specified in `-SourceComputerName`. An improved message was introduced beginning with Windows Server 2019.
 
 ## Unable to access the data drive in Storage Replica after unexpected reboot when BitLocker is enabled
 
-If BitLocker is enabled on both drives (Log Drive and Data Drive) and in both Storage replica drives, if the Primary Server reboots then you're unable to access the Primary Drive even after unlocking the Log Drive from BitLocker.
+If BitLocker is enabled on both drives (the Log Drive and Data Drive), the Primary Server reboots then you're unable to access the Primary Drive even after unlocking the Log Drive from BitLocker.
 
-This is an expected behavior. To recover the data or access the drive, you need to unlock the log drive first, and then open Diskmgmt.msc to locate the data drive. Turn the data drive offline and online again. Locate the BitLocker icon on the drive and unlock the drive.
+To recover the data or access the drive, you need to unlock the log drive first, and then open Diskmgmt.msc to locate the data drive. Turn the data drive offline and online again. Locate the BitLocker icon on the drive and unlock the drive.
 
 ## Issue unlocking the Data drive on secondary server after breaking the Storage Replica partnership
 
@@ -472,7 +469,7 @@ You need to use Key or Password of Primary Server's Data drive to unlock the Sec
 
 ## Test Failover doesn't mount when using asynchronous replication
 
-When running `Mount-SRDestination` to bring a destination volume online as part of the Test Failover feature, it fails with error:
+Running `Mount-SRDestination` to bring a destination volume online as part of the Test Failover feature fails with error:
 
 ```Output
 Mount-SRDestination: Unable to mount SR group <TEST>, detailed reason: The group or resource is not in the correct state to perform the supported operation.
@@ -485,7 +482,7 @@ Mount-SRDestination: Unable to mount SR group <TEST>, detailed reason: The group
 
 If using a synchronous partnership type, test failover works normally.
 
-This is caused by a known code defect in Windows Server, version 1709. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). This issue isn't present in Windows Server 2019 and Windows Server, version 1809 and newer.
+There's known code defect in Windows Server, version 1709, which caused this error shown. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). This issue isn't present in Windows Server 2019 and Windows Server, version 1809 and newer.
 
 ## Further reading
 
