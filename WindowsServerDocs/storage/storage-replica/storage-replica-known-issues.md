@@ -71,7 +71,7 @@ When using the `New-Volume` cmdlet along with differing sets of storage on the s
 Data partition sizes are different in those two groups
 ```
 
-Use the `New-Partition**` cmdlet to create volumes and format them instead of `New-Volume`, as the latter cmdlet may round the volume size on differing storage arrays. If you've already created an NTFS volume, you can use `Resize-Partition` to grow or shrink one of the volumes to match the other. You can't use this method with ReFS volumes. If using **Diskmgmt*- or **Server Manager**, no rounding will occur.
+Use the `New-Partition**` cmdlet to create volumes and format them instead of `New-Volume`, as the latter cmdlet may round the volume size on differing storage arrays. If you've already created an NTFS volume, you can use `Resize-Partition` to grow or shrink one of the volumes to match the other. You can't use this method with ReFS volumes. If using **Diskmgmt** or **Server Manager**, no rounding will occur.
 
 ## Running Test-SRTopology fails with name-related errors
 
@@ -133,7 +133,7 @@ At line: 1 char: 1
 + FullyQua1ifiedErrorId : Windows System Error 1168 ,New-SRPartnership
 ```
 
-You'll experience this error when selecting a data volume that is on the same partition as the system drive (that is, the **C:*- drive with its Windows folder). For instance, on a drive that contains both the **C:*- and **D:*- volumes created from the same partition. Using a system drive isn't supported in Storage Replica; you must pick a different volume to replicate.
+You'll experience this error when selecting a data volume that is on the same partition as the system drive (that is, the *C:* drive with its Windows folder). For instance, on a drive that contains both the *C:* and *D:* volumes created from the same partition. Using a system drive isn't supported in Storage Replica; you must pick a different volume to replicate.
 
 ## Attempting to grow a replicated volume fails due to missing update
 
