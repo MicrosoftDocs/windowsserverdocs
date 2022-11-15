@@ -5,9 +5,9 @@ manager: eliotgra
 ms.topic: article
 author: anaharris-ms
 ms.author: anaharris
-ms.date: 11/09/2022
+ms.date: 11/15/2022
 ---
-# Configure secure protocol options for Windows HTTP Services (WinHTTP)
+# Configure secure protocol options for WinHTTP
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
@@ -47,6 +47,8 @@ To add and set the DefaultSecureProtocols registry entry:
 ```
 
 ---
+
+1. Either reboot the machine or restart whichever services are using WinHTTP.
 
 ## Next Steps
 
