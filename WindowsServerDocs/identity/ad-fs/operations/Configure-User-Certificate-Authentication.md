@@ -18,7 +18,7 @@ User certificate authentication is used mainly in two use cases:
 
 ## Prerequisites
 
-1. Determine the mode of AD FS user certificate authentication you want to enable using one of the modes described in [this article].(ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md).
+1. Determine the mode of AD FS user certificate authentication you want to enable using one of the modes described in [AD FS support for alternate hostname binding for certificate authentication](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md).
 1. Ensure that your user certificate trust chain is installed & trusted by all AD FS and WAP servers including any intermediate certificate authorities. Usually this is done via GPO on AD FS / WAP servers.
 1. Ensure that the root certificate of the chain of trust for your user certificates is in the NTAuth store in Active Directory.
 1. If using AD FS in alternate certificate authentication mode, ensure that your AD FS and WAP servers have SSL certificates that contain the AD FS hostname prefixed with "certauth", for example "certauth.fs.contoso.com", and that traffic to this hostname is allowed through the firewall.
@@ -35,7 +35,7 @@ If you're configuring AD FS for Azure AD certificate authentication, ensure that
 Optional aspects include:
 
 - If you wish to use claims based on certificate fields and extensions in addition to EKU (claim type https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim pass through rules on the Active Directory claims provider trust. See below for a complete list of available certificate claims.
-- If you need to restrict access based on the type of cert, you can use the additional properties on the certificate in AD FS issuance authorization rules for the application. Common scenarios are "only allow certificates provisioned by an MDM provider" or "only allow smart card certificates"
+- If you need to restrict access based on the type of cert, you can use the additional properties on the certificate in AD FS issuance authorization rules for the application. Common scenarios are "only allow certificates provisioned by an MDM provider" or "only allow smart card certificates".
 
 > [!IMPORTANT]
 > Customers using device code flow for authentication and performing device authentication using an IDP other than Azure AD (e.g AD FS) will not be able to enforce device based access (e.g. only allow managed devices using a 3rd party MDM service) for Azure AD resources. To protect access to your corporate resources in Azure AD and prevent any data leakage, customers should configure Azure AD device based Conditional Access (i.e. “Require device to be marked complaint” grant control in Azure AD Conditional Access).
