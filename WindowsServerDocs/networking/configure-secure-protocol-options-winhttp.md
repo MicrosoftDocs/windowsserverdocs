@@ -13,7 +13,7 @@ ms.date: 11/15/2022
 
 The `DefaultSecureProtocols` registry entry allows you to specify which SSL protocols should be used when the `WINHTTP_OPTION_SECURE_PROTOCOLS` flag is used. The setting allows applications that were built to use the WinHTTP default flag to be able to use the newer TLS protocols or prevent older SSL based natively without any need for updates to the application.
 
-This how-to guide shows you how to use the `DefaultSecureProtocols` registry entry to add secure protocols for Windows HTTP Services (WinHTTP).
+This how-to guide shows you how to use the `DefaultSecureProtocols` registry entry to choose which protocols are used by the Windows HTTP Services (WinHTTP).
 
 ## Prerequisites
 
