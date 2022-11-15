@@ -1,41 +1,34 @@
 ---
-title: How to configure Network Device Enrollment Service for Active Directory Certificate Services
+title: Configure Network Device Enrollment Service for Active Directory Certificate Services
 description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) and how it works with certificates based on Simple Certificate Enrollment Protocol (SCEP)
 author: gswashington
 ms.author: robinharwood
 ms.topic: overview
 ms.date: 11/09/2022
-=======
-# How to configure Network Device Enrollment Service for Active Directory Certificate Services
+
+NEW FILE NAME: overview?-network-device-enrollment-service-overview
+---
+
+# Configure Network Device Enrollment Service for Active Directory Certificate Services
 
 Applies To: Windows Server (All supported versions)
 
+In this article you will learn how to configure NDES to run as a user account that is specified as a service account.
+
 The Network Device Enrollment Service (NDES) allows software on routers and other network devices running without domain credentials to obtain certificates based on the Simple Certificate Enrollment Protocol (SCEP).
 
-> [!NOTE]
-> SCEP was developed to support the secure, scalable issuance of certificates to network devices by using existing certification authorities (CAs). The protocol supports CA and registration authority public key distribution, certificate enrollment, certificate revocation, certificate queries, and certificate revocation queries.
+Note: If you select the built-in application pool identity, there is no additional configuration required. 
 
-The Network Device Enrollment Service performs the following functions:
+The recommended configuration is to specify a user account, which requires additional configuration.
 
-1. Generates and provides one-time enrollment passwords to administrators
+SCEP was developed to support the secure, scalable issuance of certificates to network devices by using existing certification authorities (CAs). The protocol supports CA and registration authority public key distribution, certificate enrollment, certificate revocation, certificate queries, and certificate revocation queries.
 
-2. Submits enrollment requests to the CA
+To learn more about NDES and how it works ... (link to conceptual). 
 
-3. Retrieves enrolled certificates from the CA and forwards them to the network device
+The recommended configuration is to specify a user account, which requires additional configuration.
 
-## NDES configuration settings
 
-The following sections describe the configuration options that you can select after installing the NDES binary installation files.
-
-### Configure a service account for NDES
-
-NDES can be configured to run as either of the following:
-
-- A user account that is specified as a service account
-
-- The built-in application pool identity of the Internet Information Services (IIS) computer
-
-If you select the built-in application pool identity, there is no additional configuration required. However, the recommended configuration is to specify a user account, which requires additional configuration. The user account that is specified as the NDES service account must meet the following requirements:
+## Prerequisites
 
 - Be a domain user account
 
@@ -45,9 +38,14 @@ If you select the built-in application pool identity, there is no additional con
 
 - Have Read and Enroll permissions on the NDES certificate template, which is configured automatically
 
-In addition to these requirements, it may be necessary to have a service principal name (SPN) set in Active Directory. The following guidance is intended to help you determine whether it is necessary to set an SPN in Active Directory.
+After installing the NDES role service for AD CS, the following are configuration options that you can select
 
-- If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an SPN registered. The computer account's default SPNs for HOST/computerfqdn cover this case. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
+## Configure a service principal name for NDES
+You need to configure a service principal name (SPN) in Active Directory if you re using a load balancer or virtual name. In this section you will learn how to  determine whether it is necessary to set an SPN in Active Directory.
+
+TURN THIS INTO INSTRUCTIONAL FORMAT: numbered list:
+
+- You will need to use SPN ..... if If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an SPN registered. The computer account's default SPNs for HOST/computerfqdn cover this case. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
 
 - If you are using a custom A record as a hostname, or load balancing with a Virtual IP, an SPN needs to be registered against the NDES service account (SCEPSvc). To register an SPN against the NDES service account: 
   - Use the Setspn command syntax of: **Setspn -s HTTP/computerfqdn** domainname\accountname when entering your commands. For example:
@@ -57,7 +55,7 @@ In addition to these requirements, it may be necessary to have a service princip
 
   - Then disable IIS Kernel-mode Authentication for the site.
 
-#### To create a domain user account to act as the NDES service account
+## Create a domain user account to act as the NDES service account
 
 1. Sign in to the domain controller or administrative computer with Active Directory Domain Services Remote Server Administration Tools installed. Open **Active Directory Users and Computers** by using an account that has permissions to add users to the domain.
 
