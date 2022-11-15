@@ -27,28 +27,34 @@ This how-to guide shows you how to use the `DefaultSecureProtocols` registry ent
 
 To add and set the DefaultSecureProtocols registry entry:
 
+# [x86](#tab/x86)
+
 1. Open an elevated Powershell prompt.
 
 1. To create and set the `DefaultSecureProtocols` registry key, run the following command (replace `{value}` with the `DefaultSecureProtocols` value that you selected in the [Calculated the value](#prerequisites)).
-
-# [x86](#tab/x86)
 
 ```powershell
 
     Get-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
 ```
 
+1. Either reboot the machine or restart whichever services are using WinHTTP.
+
 # [x64](#tab/x64)
+
+1. Open an elevated Powershell prompt.
+
+1. To create and set the `DefaultSecureProtocols` registry key, run the following command (replace `{value}` with the `DefaultSecureProtocols` value that you selected in the [Calculated the value](#prerequisites)).
 
 ```powershell
 
     Get-Item -Path "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
-
 ```
+
+1. Either reboot the machine or restart whichever services are using WinHTTP.
 
 ---
 
-1. Either reboot the machine or restart whichever services are using WinHTTP.
 
 ## Next Steps
 
