@@ -31,14 +31,14 @@ To add and set the DefaultSecureProtocols registry entry:
 
 1. To create and set the `DefaultSecureProtocols` registry key, run the following command (replace `{value}` with the `DefaultSecureProtocols` value that you selected in the [Calculated the value](#prerequisites)).
 
-# [x86-based computers](#tab/x86)
+# [x86](#tab/x86)
 
 ```powershell
 
     Get-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
 ```
 
-# [x64-based computers](#tab/x64)
+# [x64](#tab/x64)
 
 ```powershell
 
