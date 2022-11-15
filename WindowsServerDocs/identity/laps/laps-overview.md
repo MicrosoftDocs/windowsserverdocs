@@ -3,7 +3,7 @@ title: Windows LAPS overview
 description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
 author: jay98014
 ms.author: jsimmons
-ms.date: 07/04/2022
+ms.date: 11/08/2022
 ms.topic: overview
 ---
 
@@ -12,7 +12,7 @@ ms.topic: overview
 Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
+> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
 
 ## Benefits of using Windows LAPS
 
@@ -23,6 +23,10 @@ Use Windows LAPS to regularly rotate and manage local administrator account pass
 - Ability to sign in to and recover devices that are otherwise inaccessible
 - A fine-grained security model (access control lists and optional password encryption) for securing passwords that are stored in Windows Server Active Directory
 - Support for the Azure role-based access control model for securing passwords that are stored in Azure Active Directory
+
+Watch this video to learn about Windows LAPS.
+
+>[!Video https://www.youtube.com/embed/jdEDIXm4JgU]
 
 ## Supported platforms
 

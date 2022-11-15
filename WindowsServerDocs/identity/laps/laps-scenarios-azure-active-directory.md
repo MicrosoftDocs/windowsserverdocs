@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Azure Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and how to retrieve them.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
+> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
 
 ## Configure device policy
 
@@ -26,9 +26,9 @@ To configure device policy, complete these tasks:
 
 The first step is to choose how to apply policy to your devices.
 
-The preferred option for Azure Active Directory-joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+The preferred option for Azure Active Directory-joined devices is to use [Microsoft Intune](/mem/endpoint-manager-overview) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
-If your devices are Azure Active Directory-joined but you're not using Microsoft Endpoint Manager, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
+If your devices are Azure Active Directory-joined but you're not using Microsoft Intune, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 
 > [!NOTE]
 > If your devices are hybrid-joined to on-premises Windows Server Active Directory, you can deploy policy by using [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy).
@@ -58,7 +58,7 @@ If you don't configure the AdministratorAccountName setting, Windows LAPS defaul
 If you want to configure a custom local administrator account, you should configure the AdministratorAccountName setting with the name of that account.
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account. We recommend that you use the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) to create the account.
+> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account. We recommend that you use the [Accounts CSP](/windows/client-management/mdm/accounts-csp) to create the account.
 
 You can configure other settings, like PasswordLength, as needed for your organization.
 
@@ -88,7 +88,7 @@ You might need to configure the repository as Trusted for the command to succeed
 
 The next step is to create an Azure Active Directory application that's configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
-The app needs to be configured with two permissions: `Devices.Read.All` and either `Device.LocalCredentials.Read` or `Device.LocalCredentials.ReadAll`.
+The app needs to be configured with two permissions: `Device.Read.All` and either `Device.LocalCredentials.Read` or `Device.LocalCredentials.ReadAll`.
 
 > [!IMPORTANT]
 >

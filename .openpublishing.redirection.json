@@ -10734,6 +10734,26 @@
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md",
       "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop.md",
+      "redirect_url": "/azure/virtual-desktop/users/connect-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-admin.md",
+      "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-whatsnew.md",
+      "redirect_url": "/azure/virtual-desktop/whats-new-client-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-supported-config.md",
+      "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
+      "redirect_document_id": false
     }
   ]
 }
