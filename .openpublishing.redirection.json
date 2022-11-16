@@ -10760,5 +10760,11 @@
       "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
       "redirect_document_id": true
     },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-support.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_document_id": false
+    }
+
   ]
 }
