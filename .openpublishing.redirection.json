@@ -8442,7 +8442,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Web-Application-Proxy-in-Windows-Server",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
       "redirect_document_id": true
     },
     {
@@ -8532,7 +8532,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
       "redirect_document_id": false
     },
     {
@@ -10757,7 +10757,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Web-Application-Proxy-Windows-Server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
       "redirect_document_id": true
     },
     {

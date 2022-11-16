@@ -516,7 +516,7 @@
         - name: Unicast IP Routing
           href: /previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
       - name: Web Application Proxy
-        href: remote-access/web-application-proxy/web-application-proxy-windows-server.md
+        href: remote-access/web-application-proxy/web-app-proxy-windows-server.md
     - name: Troubleshooting
       items:
       - name: Always On VPN

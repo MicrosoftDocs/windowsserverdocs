@@ -75,7 +75,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Web Application Proxy in Windows Server
-            url: ./remote-access/web-application-proxy/web-application-proxy-windows-server.md
+            url: ./remote-access/web-application-proxy/web-app-proxy-windows-server.md
       - linkListType: how-to-guide
         links:
           - text: Publishing Applications using AD FS Preauthentication
