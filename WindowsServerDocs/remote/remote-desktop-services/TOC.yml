@@ -226,5 +226,4 @@
         href: troubleshoot/input-method-editor-error.md
       - name: '"Out of memory" error'
         href: troubleshoot/out-of-memory-error.md
-  - name: Additional resources
-    href: rds-get-support.md
+
