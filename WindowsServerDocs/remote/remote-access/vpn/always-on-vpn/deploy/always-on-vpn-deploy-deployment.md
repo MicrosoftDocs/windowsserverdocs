@@ -10,7 +10,7 @@ ms.date: 10/12/2022
 
 # Deploy Always On VPN
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
 In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows client computers.
 
