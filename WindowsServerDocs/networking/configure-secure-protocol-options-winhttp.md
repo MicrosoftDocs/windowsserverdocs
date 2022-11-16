@@ -55,6 +55,6 @@ To add and set the DefaultSecureProtocols registry entry:
 ---
 
 
-## Next Steps
+## Next steps
 
 - To configure the `DefaultSecureProtocols` registry entry for multiple machines, see [Configure a Service Item](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732482(v=ws.10)).
