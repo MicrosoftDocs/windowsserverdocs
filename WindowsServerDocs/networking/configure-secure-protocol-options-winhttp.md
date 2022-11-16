@@ -11,9 +11,9 @@ ms.date: 11/15/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
-The `DefaultSecureProtocols` registry entry allows you to specify which SSL protocols should be used when the `WINHTTP_OPTION_SECURE_PROTOCOLS` flag is used. The setting allows applications that were built to use the WinHTTP default flag to be able to use the newer TLS protocols or prevent older SSL based natively without any need for updates to the application.
+This how-to guide shows you how to use the `DefaultSecureProtocols` registry entry to choose which protocols for the Windows HTTP Services (WinHTTP).
 
-This how-to guide shows you how to use the `DefaultSecureProtocols` registry entry to choose which protocols are used by the Windows HTTP Services (WinHTTP).
+The `DefaultSecureProtocols` registry entry allows you to specify which SSL protocols should be used when the `WINHTTP_OPTION_SECURE_PROTOCOLS` flag is used. The setting allows applications that were built to use the WinHTTP default flag to be able to use the newer TLS protocols or prevent older SSL based natively without any need for updates to the application.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ This how-to guide shows you how to use the `DefaultSecureProtocols` registry ent
 
 - Confirm that your account has Administrative rights to the system.
 
-- Make sure that [Powershell is installed](/powershell/scripting/install/installing-powershell-on-windows).
+- Make sure that [PowerShell is installed](/powershell/scripting/install/installing-powershell-on-windows).
 
 ## Configure DefaultSecureProtocols
 
@@ -33,10 +33,9 @@ To add and set the DefaultSecureProtocols registry entry:
 
 1. To create and set the `DefaultSecureProtocols` registry key, run the following command (replace `{value}` with the `DefaultSecureProtocols` value that you selected in the [Calculated the value](#prerequisites)).
 
-```powershell
-
-    Get-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
-```
+    ```powershell
+        Get-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
+    ```
 
 1. Either reboot the machine or restart whichever services are using WinHTTP.
 
@@ -46,10 +45,10 @@ To add and set the DefaultSecureProtocols registry entry:
 
 1. To create and set the `DefaultSecureProtocols` registry key, run the following command (replace `{value}` with the `DefaultSecureProtocols` value that you selected in the [Calculated the value](#prerequisites)).
 
-```powershell
-
-    Get-Item -Path "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
-```
+    ```powershell
+    
+        Get-Item -Path "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp" | New-ItemProperty -Name "DefaultSecureProtocols" -Value "{value}"
+    ```
 
 1. Either reboot the machine or restart whichever services are using WinHTTP.
 
