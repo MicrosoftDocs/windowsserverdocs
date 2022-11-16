@@ -17,7 +17,7 @@ ms.topic: article
 
 The content in this section describes what's new and changed in the Web Application Proxy for Windows Server. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.
 
-## Web Application Proxy Features
+## Web Application Proxy features
 
 - Preauthentication for HTTP Basic application publishing
 
