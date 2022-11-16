@@ -8441,9 +8441,14 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Web-Application-Proxy-in-Windows-Server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
@@ -8532,8 +8537,8 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/configure-ad-fs-extranet-lockout.md",
@@ -10756,9 +10761,15 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-support.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
       "redirect_document_id": false
     }
+
   ]
 }
