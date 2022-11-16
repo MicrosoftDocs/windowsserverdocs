@@ -145,7 +145,7 @@ Group Policy Management Editor Microsoft Management Console (MMC).
 
 ## Windows VPN Clients
 
-In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607). The Windows VPN clients must be domain-joined to your Active Directory domain.
+In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607) or later. The Windows VPN clients must be domain-joined to your Active Directory domain.
 
 
 The Windows VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You'll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment.
