@@ -66,7 +66,7 @@ To install Remote Access as a Web Application Proxy, either use the Add Roles an
 Install-RemoteAccess -VpnType SstpProxy
 ```
 
-For more information, see [Web Application Proxy](./web-application-proxy/web-application-proxy-windows-server.md).
+For more information, see [Web Application Proxy](./web-application-proxy/web-app-proxy-windows-server.md).
 
 For more information about other networking technologies, see [Networking in Windows Server](../../networking/index.yml).
 
