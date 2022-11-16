@@ -10754,6 +10754,11 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-supported-config.md",
       "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Web-Application-Proxy-Windows-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
+      "redirect_document_id": true
+    },
   ]
 }
