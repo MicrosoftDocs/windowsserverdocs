@@ -29,7 +29,7 @@ To add and set the DefaultSecureProtocols registry entry:
 
 # [x86](#tab/x86)
 
-1. Open an elevated Powershell prompt.
+1. Open an elevated PowerShell prompt.
 
 1. To create and set the `DefaultSecureProtocols` registry key, run the following command (replace `{value}` with the `DefaultSecureProtocols` value that you selected in the [Calculated the value](#prerequisites)).
 
