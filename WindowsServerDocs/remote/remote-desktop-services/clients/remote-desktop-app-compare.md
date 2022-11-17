@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/24/2022
+ms.date: 11/17/2022
 ---
 
 # Compare the clients: redirections
@@ -48,7 +48,7 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 
 | Redirection         | Windows Inbox</br>(MSTSC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|---------------|---------|--------------|---------------------------------|---------------|
-| Cameras             | X                         |               |         |   X          | X                               |               |
+| Cameras             | X                         |               |  X       |   X          | X                               |               |
 | Clipboard           | X                         | X             | Text    | Text, images | X                               | Text          |
 | Local drive/storage | X                         |               | X       | X            | X                               |               |
 | Location            | X                         |               |         |              |                                 |               |
