@@ -75,7 +75,7 @@ This item specifies that the client verifies that server certificates presented 
 
 ### Connect to these servers
 
-This item allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the **Subject** field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one "" in the string specified. For example, you can specify nps.example.com to specify the RADIUS server nps1.example.com or nps2.example.com.
+This item allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the **Subject** field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one `*` in the string specified. For example, you can specify `nps.*\.example\.com` to match the RADIUS servers `nps1.example.com`, `nps2.example.com` or `npsabc.example.com`.
 
 Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
@@ -228,7 +228,7 @@ Default = enabled
 
 ### Connect to these servers
 
-This item allows you to specify the name for RADIUS servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one "" in the string that is specified. For example, you can specify nps.example.com to specify the RADIUS server nps1.example.com or nps2.example.com.
+This item allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the **Subject** field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one `*` in the string specified. For example, you can specify `nps.*\.example\.com` to match the RADIUS servers `nps1.example.com`, `nps2.example.com` or `npsabc.example.com`.
 
 Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
@@ -366,7 +366,9 @@ Default = not enabled
 
 ### Connect to these servers
 
-This item enables you to specify the name for RADIUS servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name. But to differentiate a regular expression with the literal string, you must use at least one * in the string specified. For example, you can specify nps*.example.com to specify the RADIUS server nps1.example.com or nps2.example.com. Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+This item allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the **Subject** field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one `*` in the string specified. For example, you can specify `nps.*\.example\.com` to match the RADIUS servers `nps1.example.com`, `nps2.example.com` or `npsabc.example.com`.
+
+Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
 Default = none
 
