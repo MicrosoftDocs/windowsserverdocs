@@ -19,4 +19,4 @@ that can be set, such as for device redirection, display settings, session behav
 > Services compared to Azure Virtual Desktop. Use the following tables to understand each setting and whether it applies when
 > connecting to Remote Desktop Services, Azure Virtual Desktop, or both.
 
-[!INCLUDE [include-rdp-properties](~/_azuredocs/articles/virtual-desktop/includes/include-rdp-properties.md)]
+[!INCLUDE [include-rdp-properties](~/../_azuredocs/articles/virtual-desktop/includes/include-rdp-properties.md)]
