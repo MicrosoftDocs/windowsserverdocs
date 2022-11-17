@@ -7,6 +7,7 @@ metadata:
   title: Active Directory Certificate Services documentation
   description: Learn how Active Directory Certificate Services (AD CS) provides public key infrastructure (PKI) for cryptography, digital certificates and signature capabilities.
   ms.topic: landing-page
+  ms.date: 11/11/2022
   author: robinharwood
   ms.author: roharwoo 
   ms.date: 09/21/2022
@@ -42,7 +43,7 @@ landingContent:
           - text: Certificate Enrollment Policy Web Service for AD CS
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11)
           - text: Network Device Enrollment Service for AD CS
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831498(v=ws.11)
+            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/network-device-enrollment-service-overview
           - text: Protecting Against Weak Cryptographic Algorithms
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn375961(v=ws.11)
       - linkListType: how-to-guide

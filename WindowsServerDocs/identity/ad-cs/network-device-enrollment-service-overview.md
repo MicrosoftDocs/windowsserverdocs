@@ -66,9 +66,9 @@ To learn how to configure a service account for the Network Device Enrollment Se
 
 ## Next steps
 
-Now that you've learned about what NDES is ... here are some articles to help you 
+Now that you've learned about what NDES is here are some articles to help you configure and run NDES sucessfully.   
 
-- OUR HOW TO LINKED TO HERE
+- [Configure Network Device Enrollment Service for Active Directory Certificate Services](/create-domain-user-account-as-ndes-service-account.md)
 
 - If you require over-the-air enrollment for mobile devices, see [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473016(v=ws.11)).
 
