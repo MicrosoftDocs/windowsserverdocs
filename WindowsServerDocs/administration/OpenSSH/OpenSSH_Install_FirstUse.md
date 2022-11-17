@@ -59,6 +59,16 @@ Once setup completes, return to **Apps** and **Optional Features** and you shoul
 > [!NOTE]
 > Installing OpenSSH Server will create and enable a firewall rule named `OpenSSH-Server-In-TCP`. This allows inbound SSH traffic on port 22. If this rule is not enabled and this port is not open, connections will be refused or reset.
 
+To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right click, Run as an administrator), then run the following commands to start the `sshd service`:
+
+```powershell
+# Start the sshd service
+Start-Service sshd
+
+# OPTIONAL but recommended:
+Set-Service -Name sshd -StartupType 'Automatic'
+```
+
 # [PowerShell](#tab/powershell)
 
 To install OpenSSH using PowerShell, run PowerShell as an Administrator.
