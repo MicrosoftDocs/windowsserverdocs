@@ -2,7 +2,7 @@
 title: Configure Network Device Enrollment Service (NDES) role service to use a domain uer account for Active Directory Certificate Services
 description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) as a role service and how it works with certificates based on Simple Certificate Enrollment Protocol (SCEP)
 author: gswashington
-ms.author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 11/17/2022
 ---
@@ -134,7 +134,7 @@ You then must select a CA for the NDES service to use when issuing certificates 
 
 1. Open AD CS Configuration.
 
-1. Click on "C for NDES" 
+1. Click on "C for NDES"
 
 1. Click **CA name** or **Computer name**, and then click **Select**.
 
