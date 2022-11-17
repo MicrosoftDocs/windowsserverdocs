@@ -1,6 +1,6 @@
 ---
-title: Configure Network Device Enrollment Service for Active Directory Certificate Services
-description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) and how it works with certificates based on Simple Certificate Enrollment Protocol (SCEP)
+title: Configure Network Device Enrollment Service (NDES) role service to use a domain uer account for Active Directory Certificate Services
+description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) as a role service and how it works with certificates based on Simple Certificate Enrollment Protocol (SCEP)
 author: gswashington
 ms.author: robinharwood
 ms.topic: how-to
@@ -15,9 +15,10 @@ In this article you will learn how to configure NDES to run as a user account th
 
 The Network Device Enrollment Service (NDES) allows software on routers and other network devices running without domain credentials to obtain certificates based on the Simple Certificate Enrollment Protocol (SCEP).
 
-Note: If you select the built-in application pool identity, there is no additional configuration required. 
+> [!NOTE]
+> If you select the built-in application pool identity, there is no additional configuration required.
 
-The recommended configuration is to specify a user account, which requires additional configuration.
+The recommended configuration is to specify a user account, which requires additional steps.
 
 SCEP was developed to support the secure, scalable issuance of certificates to network devices by using existing certification authorities (CAs). The protocol supports CA and registration authority public key distribution, certificate enrollment, certificate revocation, certificate queries, and certificate revocation queries.
 
@@ -98,7 +99,8 @@ After you have successfully created a domain user account as the NDES service ac
 > [!TIP]
 > You can also use `net localgroup IIS_IUSRS <domain>\<username> /Add` to add the NDES service account to the local IIS_IUSRS group. The command prompt or Windows PowerShell must be run as Administrator. For more information, see the[Add-LocalGroupMember](/powershell/module'/microsoft.powershell.localaccounts/add-localgroupmember)] PowerShell command.
 
-## Configure the NDES service account with request permission on the CA
+
+## Set up request permission on the CA
 
 NDES service accounts need to request permission on the Certification Authority that is to be used by NDES.
 
@@ -122,15 +124,19 @@ Now that you have established request permissions, you must set a service princi
 
 1. Use the following command syntax to register the server principal name (SPN) for the NDES service account: `setspn -s http/<computername> <domainname>\<accountname>`. For example, to register a service account with the sign-in name NdesService in the cpandl.com domain that is running on a computer named CA1, you would run the following command: `setspn -s http/CA1.cpandl.com cpandl\NdesService`
 
-## Select a CA for NDES
+## Set up the NDES role service
 
-You must select a CA for the NDES service to use when issuing certificates to clients. 
+After installation completes, you need to do a few steps to finish configuring the NDES computer.
 
-If NDES is installed on a CA, you do not have the opportunity to select a CA because the local CA is used. 
+If NDES is installed on a CA, you do not have the opportunity to select a CA because the local CA is used.
 
-When you install NDES on a computer that is not a CA, you must select the target CA. You can select the CA by the CA name or by the computer name. 
+You then must select a CA for the NDES service to use when issuing certificates to clients. When you install NDES on a computer that is not a CA, you must select the target CA. You can select the CA by the CA name or by the computer name.
 
-1. Click **CA name** or **Computer name**, and then click **Select**. 
+1. Open AD CS Configuration.
+
+1. Click on "C for NDES" 
+
+1. Click **CA name** or **Computer name**, and then click **Select**.
 
 The option you choose will determine the type of dialog box that is presented next.
 
@@ -138,7 +144,21 @@ The option you choose will determine the type of dialog box that is presented ne
 
     - If you clicked **Computer name**, you see the **Select Computer** dialog box where you can set the **Locations** and enter the computer name that you want to specify as the CA.
 
-For detailed information about NDES configuration and operation see [Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](https://social.technet.microsoft.com/wiki/contents/articles/9063.network-device-enrollment-service-ndes-in-active-directory-certificate-services-ad-cs.aspx).
+You are now ready to complete setup of the NDES role service. The remaining steps are verifying the Registration Authority information and setting up cryptography.
+
+1. Registration Authority (RA) information that you provide will be used to construct the signing certificate that is issued to the service. In Server Manager. click RA information.
+
+1. Check all fields and confirm that the RA information is correct (or is set to the defaults).
+
+NDES uses two certificates and their keys to enable device enrollment. Organizations might want to use different Cryptographic Service Providers (CSPs) to store these keys, or they may want to change the length of the keys that is used by the service. Only Cryptographic Application Programming Interface (CryptoAPI) Service Providers are supported for the RA keys—Cryptography API; Next Generation (CNG) providers are not supported.
+
+1. To configure the cryptography, in Server Manager, click Cryptography for NDES.
+
+1. Enter the values for Signature Key Provider and/or Encryption Key Provider and decide on key length values.
+
+1. Continue through the wizard to complete the installation of NDES.
+
+Now that you've cofigured the role service, you can learn detailed information about NDES configuration and operation see [Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](https://social.technet.microsoft.com/wiki/contents/articles/9063.network-device-enrollment-service-ndes-in-active-directory-certificate-services-ad-cs.aspx).
 
 ## Next steps
 
