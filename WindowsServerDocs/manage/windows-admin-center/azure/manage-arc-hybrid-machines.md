@@ -141,6 +141,9 @@ The hybrid machine must meet the following networking requirements:
 > [!NOTE]
 > No inbound ports are required in order to use Windows Admin Center.
 
+> [!NOTE]
+> Confiuring Windows Admin Center to communicate through an HTTP/HTTPS proxy server is currently not supported.
+
 Make sure you review the [supported devices and recommended browsers](/azure/azure-portal/azure-portal-supported-browsers-devices) before accessing the Azure portal from the management machine or system.
 
 ## Install Windows Admin Center in the Azure portal

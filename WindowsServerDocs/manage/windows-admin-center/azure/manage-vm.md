@@ -82,6 +82,9 @@ The VM also has the following networking requirements, which we step through dur
 
 - An inbound port rule if using a public IP address to connect to the VM (not recommended)
 
+> [!NOTE]
+> Confiuring Windows Admin Center to communicate outbound through an HTTP/HTTPS proxy server is currently not supported.
+
 Just like with Remote Desktop, we recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. Using a private IP address doesn't require an inbound port rule, though it does require access to the virtual network (which we discuss next).
 
 > [!NOTE]
