@@ -48,5 +48,5 @@ These deployments include all the technologies you need for a fully functional i
 - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
 - [Plan SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
 - [Manage SDN](../manage/manage-sdn.md)
-- [Security for SDN](../security/sdn-security-top.md)
+- [Security for SDN](/azure-stack/hci/manage/nc-security)
 - [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)

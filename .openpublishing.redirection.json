@@ -8441,9 +8441,14 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Web-Application-Proxy-in-Windows-Server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
@@ -8532,8 +8537,8 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/configure-ad-fs-extranet-lockout.md",
@@ -9806,6 +9811,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/identity/laps/laps.md",
+      "redirect_url": "/windows-server/identity/laps/laps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-management.md",
+      "redirect_url": "/windows-server/identity/laps/laps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-scenarios.md",
+      "redirect_url": "/windows-server/identity/laps/overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/multipoint-services/manage-client-access-licenses-with-multipoint-services.md",
       "redirect_url": "/windows-server/remote/multipoint-services/manage-client-access-licenses",
       "redirect_document_id": false
@@ -10691,9 +10711,65 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-security-top.md",
+      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-manage-certs.md",
+      "redirect_url": "/azure-stack/hci/manage/sdn-manage-certs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/nc-security.md",
+      "redirect_url": "/azure-stack/hci/manage/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/kerberos-with-spn.md",
+      "redirect_url": "/azure-stack/hci/manage/kerberos-with-spn",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-workloads.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/virtual-machine-recs",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop.md",
+      "redirect_url": "/azure/virtual-desktop/users/connect-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-admin.md",
+      "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-whatsnew.md",
+      "redirect_url": "/azure/virtual-desktop/whats-new-client-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-supported-config.md",
+      "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-support.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_document_id": false
     }
+
   ]
 }

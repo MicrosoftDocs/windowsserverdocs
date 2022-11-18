@@ -86,7 +86,7 @@
       href: azure/deploy-wac-in-azure.md
   - name: Windows Admin Center in Azure
     items:
-    - name: Azure IaaS VMs
+    - name: Azure Virtual Machines
       href: azure/manage-vm.md
     - name: Azure Arc-enabled Servers
       href: azure/manage-arc-hybrid-machines.md
