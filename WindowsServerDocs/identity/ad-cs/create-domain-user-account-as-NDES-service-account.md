@@ -138,9 +138,11 @@ You then must select a CA for the NDES service to use when issuing certificates 
 
 1. Click **CA name** or **Computer name**, and then click **Select**.
 
-The option you choose will determine the type of dialog box that is presented next.
+1. The option you choose will determine the type of dialog box that is presented next:
 
     - If you clicked **CA name**, you will be presented with the **Select Certification Authority** dialog box, which has a list of CAs from which you can choose.
+
+      or
 
     - If you clicked **Computer name**, you see the **Select Computer** dialog box where you can set the **Locations** and enter the computer name that you want to specify as the CA.
 
