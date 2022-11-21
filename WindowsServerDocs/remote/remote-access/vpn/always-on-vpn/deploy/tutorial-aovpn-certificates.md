@@ -1,5 +1,5 @@
 ---
-title: Configure certificate-based authentication for Always On VPN
+title: Tutorial - Configure certificate-based authentication for Always On VPN
 description: In this section of the tutorial, you'll configure Always on VPN for certificate-based authentication
 ms.topic: article
 ms.author: anaharris
