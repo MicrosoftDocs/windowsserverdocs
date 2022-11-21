@@ -63,4 +63,4 @@ Before walking through this tutorial, you'll need to set up two firewalls around
 
 ## Next steps
 
-- [Configure the server infrastructure](vpn-deploy-server-infrastructure.md):
+- [Configure certificate-based authentication for Always On VPN](tutorial-aovpn-certificates.md).
