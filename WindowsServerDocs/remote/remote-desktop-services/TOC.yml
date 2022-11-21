@@ -194,7 +194,7 @@
         href: clients/remote-desktop-features.md
       - name: 'Compare the clients: redirections'
         href: clients/remote-desktop-app-compare.md
-      - name: Supported Remote Desktop RDP file settings
+      - name: Supported RDP properties
         href: clients/rdp-files.md
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
@@ -226,5 +226,4 @@
         href: troubleshoot/input-method-editor-error.md
       - name: '"Out of memory" error'
         href: troubleshoot/out-of-memory-error.md
-  - name: Additional resources
-    href: rds-get-support.md
+
