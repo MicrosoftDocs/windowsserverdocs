@@ -1,16 +1,16 @@
 ---
-title: Configure Always On VPN server infrastructure
-description: In this step, you install and configure the server-side components necessary to support Always On VPN. 
+title: Configure certificate-based authentication for Always On VPN
+description: In this section of the tutorial, you'll configure Always on VPN for certificate-based authentication
 ms.topic: article
 ms.author: anaharris
 author: anaharris-ms
 ms.date: 11/21/2022
 ---
-# Configure the server infrastructure
+# Tutorial: Configure certificate-based authentication for Always On VPN
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
-In this section of the Deploy Always On VPN tutorial, you'll use Azure Active Directory public key infrastructure (PKI) to create the certificate templates and distribute the certificates for use by users, the VPN server, and the NPS server.
+In this section of the tutorial, you'll configure Always on VPN for certificate-based authentication.
 
 ## Configure certificate auto-enrollment in Group Policy
 
