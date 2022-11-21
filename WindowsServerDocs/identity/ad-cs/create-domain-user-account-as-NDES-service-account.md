@@ -44,7 +44,7 @@ After installing the NDES role service for AD CS, verify that the following prer
 
 You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section you'll learn how to  determine whether it is necessary to set an SPN in Active Directory.
 
-- If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an SPN registered. The computer accounts default SPNs for HOST/computerfqdn cover this case. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
+- If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an SPN registered. The computer accounts default SPNs for HOST/computerFQDN cover this case. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
 
 - If you are using a custom A record as a hostname, or load balancing with a Virtual IP, an SPN needs to be registered against the NDES service account (SCEPSvc). To register an SPN against the NDES service account:
  
