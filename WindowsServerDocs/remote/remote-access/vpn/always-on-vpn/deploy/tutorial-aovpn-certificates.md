@@ -1,12 +1,12 @@
 ---
-title: Tutorial - Configure certificate-based authentication for Always On VPN
+title: Configure Always On VPN certificate-based authentication
 description: In this section of the tutorial, you'll configure Always on VPN for certificate-based authentication
 ms.topic: article
 ms.author: anaharris
 author: anaharris-ms
 ms.date: 11/21/2022
 ---
-# Tutorial: Configure certificate-based authentication for Always On VPN
+# Configure Always On VPN certificate-based authentication
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 

@@ -8,7 +8,7 @@ author: anaharris-ms
 ms.date: 11/21/2022
 ---
 
-# Tutorial: Deploy Always On VPN
+# Tutorial: Step 1 - Deploy Always On VPN
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
@@ -63,4 +63,4 @@ Before walking through this tutorial, you'll need to set up two firewalls around
 
 ## Next steps
 
-- [Configure certificate-based authentication for Always On VPN](tutorial-aovpn-certificates.md).
+- [Step 1: Configure Always On VPN certificate-based authentication](tutorial-aovpn-certificates.md).
