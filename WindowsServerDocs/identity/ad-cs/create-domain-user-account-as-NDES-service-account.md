@@ -34,7 +34,7 @@ After installing the NDES role service for AD CS, verify that the following prer
 
 - Be a domain user account
 
-- Be a member of the local IIS\_IUSRS group
+- Be a member of the local _IIS\_IUSRS_ group
 
 - Have Request permissions on the configured CA
 
@@ -44,14 +44,18 @@ After installing the NDES role service for AD CS, verify that the following prer
 
 You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section you'll learn how to  determine whether it is necessary to set an SPN in Active Directory.
 
-- If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an SPN registered. The computer accounts default SPNs for HOST/computerfqdn cover this case. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
+If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an new SPN registered. Computer accounts by default have a registered SPN for their hostname. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
 
-- If you are using a custom A record as a hostname, or load balancing with a Virtual IP, an SPN needs to be registered against the NDES service account (SCEPSvc). To register an SPN against the NDES service account:
- 
-  1. Use the Setspn command syntax of: **Setspn -s HTTP/computerfqdn** domainname\accountname when entering your commands. For example:
+If you are using a custom DNS A record as a hostname, or load balancing with a virtual IP or hostname, an SPN needs to be registered for the NDES service account (_SCEPSvc_).
 
-    - **Setspn -s HTTP/NDESFARM.fabrikam.com fabrikam\SCEPSvc**
-    - **Setspn -s HTTP/NDESFARM fabrikam\SCEPSvc**
+To register an SPN for the NDES service account:
+
+  1. From an elevated PowerShell session, run the following command `setspn -s HTTP/<computerfqdn> <domainname>\<accountname>` (replacing the placeholders with your own values). For example:
+
+    ```powershell
+    setspn -s HTTP/<computerfqdn> <domainname>\<accountname>
+    setspn -s HTTP/<netbioscomputer> <domainname>\<accountname>
+    ```
 
   1. Then disable IIS Kernel-mode Authentication for the site.
 
@@ -65,30 +69,31 @@ You next need to create a domain user account as the NDES service account.
 
 3. In the **New Object - User** text boxes, enter appropriate names for all the fields so that it is clear that you are creating a user account. Be sure to follow your organization's policy for creating a service account, if such a policy exists. As an example, you could enter the following, and then click **Next**.
 
-    - **First name**: **Ndes**
+    - **First name**: _Ndes_
 
-    - **Last name**: **Service**
+    - **Last name**: _Service_
 
-    - **User logon name**: **NdesService**
+    - **User logon name**: _NdesService_
 
 4. Ensure that you set a complex password for the account and confirm the password. Configure the password options to correspond to your organization's security policies regarding service accounts. If the password is configured to expire, you should have a process in place to ensure that you reset the password at the required intervals.
 
 5. Click **Next**, and then click **Finished**.
 
 > [!TIP]
+>
+> - You can also use the [New-ADUser](/powershell/module/activedirectory/new-aduser) Windows PowerShell command to add a domain user account.
+>
+> - Depending upon your Active Directory Domain Service (AD DS) configuration, you may be able to implement a Managed Service Account or Group Managed Service Account for NDES. For more information about Managed Service Accounts, see [Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378925(v=ws.10)). For more information about Group Managed Service Accounts, see [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
-- You can also use the [New-ADUser](/powershell/module/activedirectory/new-aduser) Windows PowerShell command to add a domain user account.
-- Depending upon your Active Directory Domain Service (AD DS) configuration, you may be able to implement a Managed Service Account or Group Managed Service Account for NDES. For more information about Managed Service Accounts, see [Managed Service Accounts]/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378925(v=ws.10)). For more information about Group Managed Service Accounts, see [Group Managed Service Accounts Overview](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+## Add the NDES service account to the local _IIS\_IUSRS_ group
 
-## Add the NDES service account to the local IIS\_IUSERS group
+After you have successfully created a domain user account as the NDES service account, you must add this NDES service account to the local _IIS\_IUSRS_ group.
 
-After you have successfully created a domain user account as the NDES service account, you must add this NDES service account to the local IIS\_IUSERS group.
-
-1. On the server that is hosting the NDES service, open **Computer Management** (compmgmt.msc).
+1. On the server that is hosting the NDES service, open **Computer Management** (_compmgmt.msc_).
 
 1. In the Computer Management console tree, under **System Tools**, expand **Local User and Groups**. Click **Groups**.
 
-1. In the details pane, double-click **IIS\_IUSRS**.
+1. In the details pane, double-click _IIS\_IUSRS_.
 
 1. In the **General** tab, click **Add**.
 
@@ -98,7 +103,6 @@ After you have successfully created a domain user account as the NDES service ac
 
 > [!TIP]
 > You can also use `net localgroup IIS_IUSRS <domain>\<username> /Add` to add the NDES service account to the local IIS_IUSRS group. The command prompt or Windows PowerShell must be run as Administrator. For more information, see the[Add-LocalGroupMember](/powershell/module'/microsoft.powershell.localaccounts/add-localgroupmember)] PowerShell command.
-
 
 ## Set up request permission on the CA
 
@@ -122,19 +126,21 @@ Now that you have established request permissions, you must set a service princi
 
 1. Ensure that you are using an account that is a member of the Domain Admins group. Open Windows PowerShell or a command prompt as an administrator.
 
-1. Use the following command syntax to register the server principal name (SPN) for the NDES service account: `setspn -s http/<computername> <domainname>\<accountname>`. For example, to register a service account with the sign-in name NdesService in the cpandl.com domain that is running on a computer named CA1, you would run the following command: `setspn -s http/CA1.cpandl.com cpandl\NdesService`
+1. Use the following command syntax to register the server principal name (SPN) for the NDES service account: `setspn -s http/<computername> <domainname>\<accountname>`. For example, to register a service account with the sign-in name _NdesService_ in the _cpandl.com_ domain that is running on a computer named _CA1_, you would run the following command: `setspn -s http/CA1.cpandl.com cpandl\NdesService`
 
 ## Set up the NDES role service
 
 After installation completes, you need to do a few steps to finish configuring the NDES computer.
 
-If NDES is installed on a CA, you do not have the opportunity to select a CA because the local CA is used.
+If NDES is installed on a Certificate Authority (CA), you do not have the opportunity to select a CA because the local CA is used.
 
-You then must select a CA for the NDES service to use when issuing certificates to clients. When you install NDES on a computer that is not a CA, you must select the target CA. You can select the CA by the CA name or by the computer name.
+When you install NDES on a computer that is not a CA, you must select the target CA. You can select the CA using the CA name or by the computer name.
+
+To select the CA:
 
 1. Open AD CS Configuration.
 
-1. Click on "C for NDES"
+1. Click on **CA for NDES**
 
 1. Click **CA name** or **Computer name**, and then click **Select**.
 

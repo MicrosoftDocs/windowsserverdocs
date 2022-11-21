@@ -23,11 +23,11 @@ SCEP was developed to support the secure, scalable issuance of certificates to n
 
 NDES performs the following functions:
 
-1. Generates and provides one-time enrollment passwords to administrators.
+- Generates and provides one-time enrollment passwords to administrators.
 
-1. Submits enrollment requests to the CA.
+- Submits enrollment requests to the CA.
 
-1. Retrieves enrolled certificates from the CA and forwards them to the network device.
+- Retrieves enrolled certificates from the CA and forwards them to the network device.
 
 NDES is implemented as an  Internet Server API (ISAPI) extension. It requires the Internet Information Services (IIS) role to be installed on the same computer. It does not require the CA to be installed on the same computer. The ISAPI extension runs in its own application pool, that is, SCEP. This application pool is created during setup and is configured to run with the credentials that were provided during setup.
 
@@ -56,7 +56,7 @@ Enrolling certificates through Network Device Enrollment Service is a straightfo
 
 ## NDES configuration settings
 
-NDES can be configured to run as either of the following after installing the NDES binary installation files:
+NDES can be configured to run as either of the following after installing the NDES role service:
 
 - A user account that is specified as a service account
 
@@ -66,7 +66,7 @@ To learn how to configure a service account for the Network Device Enrollment Se
 
 ## Next steps
 
-Now that you've learned about what NDES is here are some articles to help you configure and run NDES sucessfully.   
+Now that you've learned about what NDES is here are some articles to help you configure and run NDES sucessfully.
 
 - [Configure Network Device Enrollment Service for Active Directory Certificate Services](/create-domain-user-account-as-ndes-service-account.md)
 
