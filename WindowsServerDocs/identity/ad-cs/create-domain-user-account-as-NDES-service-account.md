@@ -99,7 +99,6 @@ After you have successfully created a domain user account as the NDES service ac
 > [!TIP]
 > You can also use `net localgroup IIS_IUSRS <domain>\<username> /Add` to add the NDES service account to the local IIS_IUSRS group. The command prompt or Windows PowerShell must be run as Administrator. For more information, see the[Add-LocalGroupMember](/powershell/module'/microsoft.powershell.localaccounts/add-localgroupmember)] PowerShell command.
 
-
 ## Set up request permission on the CA
 
 NDES service accounts need to request permission on the Certification Authority that is to be used by NDES.

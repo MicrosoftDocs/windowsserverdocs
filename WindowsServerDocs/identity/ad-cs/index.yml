@@ -5,7 +5,7 @@ summary: Active Directory Certificate Services (AD CS) provides public key infra
 
 metadata:
   title: Active Directory Certificate Services documentation
-  description: Learn how Active Directory Certificate Services (AD CS) provides public key infrastructure (PKI) for cryptography, digital certificates and signature capabilities.
+  description: Learn how Active Directory Certificate Services (AD CS) provides public key infrastructure (PKI) for cryptography, digital certificates, and signature capabilities.
   ms.topic: landing-page
   ms.date: 11/17/2022
   author: robinharwood
