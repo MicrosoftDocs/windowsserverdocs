@@ -1,6 +1,6 @@
 ---
-title: Configure Network Device Enrollment Service (NDES) role service to use a domain uer account for Active Directory Certificate Services
-description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) as a role service and how it works with certificates based on Simple Certificate Enrollment Protocol (SCEP)
+title: Configure Network Device Enrollment Service (NDES) role service to use a domain user account for Active Directory Certificate Services
+description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) as a role service with certificates based on Simple Certificate Enrollment Protocol (SCEP)
 author: gswashington
 ms.author: roharwoo
 ms.topic: how-to
@@ -11,22 +11,22 @@ ms.date: 11/17/2022
 
 Applies To: Windows Server (All supported versions)
 
-In this article you will learn how to configure NDES to run as a user account that is specified as a service account.
+In this article, you'll learn how to configure NDES to run as a user account that is specified as a service account.
 
 The Network Device Enrollment Service (NDES) allows software on routers and other network devices running without domain credentials to obtain certificates based on the Simple Certificate Enrollment Protocol (SCEP).
 
 > [!NOTE]
 > If you select the built-in application pool identity, there is no additional configuration required.
 
-The recommended configuration is to specify a user account, which requires additional steps.
+The recommended configuration is to specify a user account, which requires extra steps.
 
-SCEP was developed to support the secure, scalable issuance of certificates to network devices by using existing certification authorities (CAs). The protocol supports CA and registration authority public key distribution, certificate enrollment, certificate revocation, certificate queries, and certificate revocation queries.
+SCEP was developed to support the secure, scalable issuance of certificates to network devices by using existing certification authorities (CAs). The protocol supports CA and registration authority public key distribution, enrollment, and certificate revocation queries.
 
 See [What is Network Device Enrollment Service for Active Directory Certificate Services?](/network-device-enrollment-service-overview.md) to learn more about NDES and how it works with certificates based on Simple Certificate Enrollment Protocol.
 
 ## Specify a user account as a service account in NDES
 
-As stated in the preceding section, the recommended configuration for NDES is to specify a user account and that this requires additional steps to complete.
+As stated in the preceding section, the recommended configuration for NDES is to specify a user account, and extra steps are required.
 
 ## Prerequisites
 
@@ -42,20 +42,20 @@ After installing the NDES role service for AD CS, verify that the following prer
 
 ## Verify whether it is necessary to set a service principal name for NDES
 
-You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section you'll learn how to  determine whether it is necessary to set an SPN in Active Directory.
+You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section, you'll learn how to  determine whether it is necessary to set an SPN in Active Directory.
 
-If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an new SPN registered. Computer accounts by default have a registered SPN for their hostname. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
+If you're using a single NDES server and its actual hostname (most common scenario), the account doesn't need a new SPN registered. Computer accounts by default have a registered SPN for their hostname. If you're using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
 
-If you are using a custom DNS A record as a hostname, or load balancing with a virtual IP or hostname, an SPN needs to be registered for the NDES service account (_SCEPSvc_).
+If you're using a custom DNS A record as a hostname, or load balancing with a virtual IP or hostname, an SPN needs to be registered for the NDES service account (_SCEPSvc_).
 
 To register an SPN for the NDES service account:
 
   1. From an elevated PowerShell session, run the following command `setspn -s HTTP/<computerfqdn> <domainname>\<accountname>` (replacing the placeholders with your own values). For example:
 
-    ```powershell
-    setspn -s HTTP/<computerfqdn> <domainname>\<accountname>
-    setspn -s HTTP/<netbioscomputer> <domainname>\<accountname>
-    ```
+     ```powershell
+     setspn -s HTTP/<computerfqdn> <domainname>\<accountname>
+     setspn -s HTTP/<netbioscomputer> <domainname>\<accountname>
+     ```
 
   1. Then disable IIS Kernel-mode Authentication for the site.
 
@@ -67,7 +67,7 @@ You next need to create a domain user account as the NDES service account.
 
 2. In the console tree, expand the structure until you see the container where you want to create the user account. For example, some organizations have a Services OU or similar account. Right-click the container, click **New**, and then click **User**.
 
-3. In the **New Object - User** text boxes, enter appropriate names for all the fields so that it is clear that you are creating a user account. Be sure to follow your organization's policy for creating a service account, if such a policy exists. As an example, you could enter the following, and then click **Next**.
+3. In the **New Object - User** text boxes, enter appropriate names for all the fields so that it is clear that you're creating a user account. Be sure to follow your organization's policy for creating a service account, if such a policy exists. As an example, you could enter the following, and then click **Next**.
 
     - **First name**: _Ndes_
 
@@ -87,7 +87,7 @@ You next need to create a domain user account as the NDES service account.
 
 ## Add the NDES service account to the local _IIS\_IUSRS_ group
 
-After you have successfully created a domain user account as the NDES service account, you must add this NDES service account to the local _IIS\_IUSRS_ group.
+After you've successfully created a domain user account as the NDES service account, you must add this NDES service account to the local _IIS\_IUSRS_ group.
 
 1. On the server that is hosting the NDES service, open **Computer Management** (_compmgmt.msc_).
 
@@ -112,7 +112,7 @@ NDES service accounts need to request permission on the Certification Authority 
 
 1. Open the Certification Authority console. Right-click the certification authority, and then click **Properties**.
 
-1. On the **Security** tab, you can see the accounts that have Request Certificates permissions. By default the group **Authenticated Users** has this permission. The service account that you created will be a member of **Authenticated Users** when it is in use. You do not need to grant additional permissions, if **Authenticated Users** has the Request Certificates permission. However, if that is not the case, you should grant the NDES service account Request Certificates permission on the CA. To do so:
+1. On the **Security** tab, you can see the accounts that have Request Certificates permissions. By default the group **Authenticated Users** has this permission. The service account that you created will be a member of **Authenticated Users** when it is in use. You don't need to grant more permissions, if **Authenticated Users** has the Request Certificates permission. However, if that isn't the case, you should grant the NDES service account Request Certificates permission on the CA. To do so:
 
       - Click **Add**.
 
@@ -122,9 +122,9 @@ NDES service accounts need to request permission on the Certification Authority 
 
 ## Set a service principal name for the NDES service account
 
-Now that you have established request permissions, you must set a service principal name for the NDES service account.
+Now that you've established request permissions, you must set a service principal name for the NDES service account.
 
-1. Ensure that you are using an account that is a member of the Domain Admins group. Open Windows PowerShell or a command prompt as an administrator.
+1. Ensure that you're using an account that is a member of the Domain Admins group. Open Windows PowerShell or a command prompt as an administrator.
 
 1. Use the following command syntax to register the server principal name (SPN) for the NDES service account: `setspn -s http/<computername> <domainname>\<accountname>`. For example, to register a service account with the sign-in name _NdesService_ in the _cpandl.com_ domain that is running on a computer named _CA1_, you would run the following command: `setspn -s http/CA1.cpandl.com cpandl\NdesService`
 
@@ -132,9 +132,9 @@ Now that you have established request permissions, you must set a service princi
 
 After installation completes, you need to do a few steps to finish configuring the NDES computer.
 
-If NDES is installed on a Certificate Authority (CA), you do not have the opportunity to select a CA because the local CA is used.
+If NDES is installed on a Certificate Authority (CA), you don't have the opportunity to select a CA because the local CA is used.
 
-When you install NDES on a computer that is not a CA, you must select the target CA. You can select the CA using the CA name or by the computer name.
+When you install NDES on a computer that isn't a CA, you must select the target CA. You can select the CA using the CA name or by the computer name.
 
 To select the CA:
 
@@ -146,19 +146,19 @@ To select the CA:
 
 1. The option you choose will determine the type of dialog box that is presented next:
 
-    - If you clicked **CA name**, you will be presented with the **Select Certification Authority** dialog box, which has a list of CAs from which you can choose.
+    - If you clicked **CA name**, you'll be presented with the **Select Certification Authority** dialog box, which has a list of CAs from which you can choose.
 
       or
 
     - If you clicked **Computer name**, you see the **Select Computer** dialog box where you can set the **Locations** and enter the computer name that you want to specify as the CA.
 
-You are now ready to complete setup of the NDES role service. The remaining steps are verifying the Registration Authority information and setting up cryptography.
+You're now ready to complete setup of the NDES role service. The remaining steps are verifying the Registration Authority information and setting up cryptography.
 
 1. Registration Authority (RA) information that you provide will be used to construct the signing certificate that is issued to the service. In Server Manager. click RA information.
 
 1. Check all fields and confirm that the RA information is correct (or is set to the defaults).
 
-NDES uses two certificates and their keys to enable device enrollment. Organizations might want to use different Cryptographic Service Providers (CSPs) to store these keys, or they may want to change the length of the keys that is used by the service. Only Cryptographic Application Programming Interface (CryptoAPI) Service Providers are supported for the RA keys—Cryptography API; Next Generation (CNG) providers are not supported.
+NDES uses two certificates and their keys to enable device enrollment. Organizations can use different Cryptographic Service Providers (CSPs) to store these keys, or change the length of the keys that is used by the service. Only Cryptographic Application Programming Interface (CryptoAPI) Service Providers are supported for the RA keys—Cryptography API; Next Generation (CNG) providers aren't supported.
 
 1. To configure the cryptography, in Server Manager, click Cryptography for NDES.
 
