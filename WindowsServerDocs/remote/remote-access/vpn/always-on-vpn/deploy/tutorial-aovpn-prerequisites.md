@@ -46,7 +46,7 @@ Your Active Directory domain infrastructure must include:
 
 Before walking through this tutorial, you'll need to set up two firewalls around the perimeter network. Make sure that you have done the following:
 
-- Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function properly. For more information on how to configure firewalls for RADIUS traffic, see [Configure firewalls for RADIUS traffic](../../../../networking/technologies/nps/nps-firewalls-configure.md).
+- Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function properly. For more information on how to configure firewalls for RADIUS traffic, see [Configure firewalls for RADIUS traffic](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
 
 - Make sure that you have permissions to configure your external firewall and that you have a valid public IP address.
 
