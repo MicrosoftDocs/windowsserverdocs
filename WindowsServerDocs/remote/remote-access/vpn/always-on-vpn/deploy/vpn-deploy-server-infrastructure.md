@@ -7,17 +7,15 @@ author: Teresa-MOTIV
 ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
-# Step 2. Configure the server infrastructure
+# Configure the server infrastructure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
-- [**Previous:** Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)
-- [**Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
-
-In this step, you'll install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  You also configure RRAS to support IKEv2 connections and the NPS server to perform authorization for the VPN connections.
+In this section of the Deploy Always On VPN tutorial, you'll install and configure the server-side components necessary to support Always On VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  You'll also configure Remote Access (RAS) to support IKEv2 connections and the NPS server to perform authorization for the VPN connections.
 
 ## Configure certificate autoenrollment in Group Policy
-In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically.
+
+In this section, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically.
 
 You manually enroll certificates on VPN servers.
 
