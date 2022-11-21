@@ -40,9 +40,9 @@ After installing the NDES role service for AD CS, verify that the following prer
 
 - Have Read and Enroll permissions on the NDES certificate template, which is configured automatically
 
-## Verify whether it is necessary to set a service principal name for NDES
+## Verify whether it's necessary to set a service principal name for NDES
 
-You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section, you'll learn how to  determine whether it is necessary to set an SPN in Active Directory.
+You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section, you'll learn how to  determine whether it's necessary to set an SPN in Active Directory.
 
 If you're using a single NDES server and its actual hostname (most common scenario), the account doesn't need a new SPN registered. Computer accounts by default have a registered SPN for their hostname. If you're using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
 
@@ -67,7 +67,7 @@ You next need to create a domain user account as the NDES service account.
 
 2. In the console tree, expand the structure until you see the container where you want to create the user account. For example, some organizations have a Services OU or similar account. Right-click the container, click **New**, and then click **User**.
 
-3. In the **New Object - User** text boxes, enter appropriate names for all the fields so that it is clear that you're creating a user account. Be sure to follow your organization's policy for creating a service account, if such a policy exists. As an example, you could enter the following, and then click **Next**.
+3. In the **New Object - User** text boxes, enter appropriate names for all the fields so that it's clear that you're creating a user account. Be sure to follow your organization's policy for creating a service account, if such a policy exists. As an example, you could enter the following, and then click **Next**.
 
     - **First name**: _Ndes_
 
@@ -112,7 +112,7 @@ NDES service accounts need to request permission on the Certification Authority 
 
 1. Open the Certification Authority console. Right-click the certification authority, and then click **Properties**.
 
-1. On the **Security** tab, you can see the accounts that have Request Certificates permissions. By default the group **Authenticated Users** has this permission. The service account that you created will be a member of **Authenticated Users** when it is in use. You don't need to grant more permissions, if **Authenticated Users** has the Request Certificates permission. However, if that isn't the case, you should grant the NDES service account Request Certificates permission on the CA. To do so:
+1. On the **Security** tab, you can see the accounts that have Request Certificates permissions. By default the group **Authenticated Users** has this permission. The service account that you created will be a member of **Authenticated Users** when it's in use. You don't need to grant more permissions, if **Authenticated Users** has the Request Certificates permission. However, if that isn't the case, you should grant the NDES service account Request Certificates permission on the CA. To do so:
 
       - Click **Add**.
 
