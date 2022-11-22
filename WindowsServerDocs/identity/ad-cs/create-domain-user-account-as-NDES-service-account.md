@@ -40,21 +40,6 @@ After installing the NDES role service for AD CS, verify that the following prer
 
 - Have Read and Enroll permissions on the NDES certificate template, which is configured automatically
 
-## Verify whether it is necessary to set a service principal name for NDES
-
-You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section you'll learn how to  determine whether it is necessary to set an SPN in Active Directory.
-
-- If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an SPN registered. The computer accounts default SPNs for HOST/computerFQDN cover this case. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
-
-- If you are using a custom A record as a hostname, or load balancing with a Virtual IP, an SPN needs to be registered against the NDES service account (SCEPSvc). To register an SPN against the NDES service account:
- 
-  1. Use the Setspn command syntax of: **Setspn -s HTTP/computerfqdn** domainname\accountname when entering your commands. For example:
-
-    - **Setspn -s HTTP/NDESFARM.fabrikam.com fabrikam\SCEPSvc**
-    - **Setspn -s HTTP/NDESFARM fabrikam\SCEPSvc**
-
-  1. Then disable IIS Kernel-mode Authentication for the site.
-
 ## Create a domain user account to act as the NDES service account
 
 You next need to create a domain user account as the NDES service account.
@@ -115,14 +100,20 @@ NDES service accounts need to request permission on the Certification Authority 
 
       - Ensure that NDES service account is selected. Ensure that the **Allow** check box that corresponds to **Request Certificates** is selected. Click **OK**.
 
-## Set a service principal name for the NDES service account
+## Verify whether it is necessary to set a service principal name for NDES
 
-Now that you have established request permissions, you must set a service principal name for the NDES service account.
+You need to configure a service principal name (SPN) in Active Directory if you're using a load balancer or virtual name. In this section you'll learn how to  determine whether it is necessary to set an SPN in Active Directory.
 
-1. Ensure that you are using an account that is a member of the Domain Admins group. Open Windows PowerShell or a command prompt as an administrator.
+- If you are using a single NDES server and its actual hostname (most common scenario), the account does not need an SPN registered. The computer accounts default SPNs for HOST/computerFQDN cover this case. If you are using all other defaults (particularly around IIS kernel-mode authentication), you can skip ahead to the next section of this article.
 
-1. Use the following command syntax to register the server principal name (SPN) for the NDES service account: `setspn -s http/<computername> <domainname>\<accountname>`. For example, to register a service account with the sign-in name NdesService in the cpandl.com domain that is running on a computer named CA1, you would run the following command: `setspn -s http/CA1.cpandl.com cpandl\NdesService`
+- If you are using a custom A record as a hostname, or load balancing with a Virtual IP, an SPN needs to be registered against the NDES service account (SCEPSvc). To register an SPN against the NDES service account:
+ 
+  1. Use the Setspn command syntax of: **Setspn -s HTTP/computerfqdn** domainname\accountname when entering your commands. For example:
 
+    - **Setspn -s HTTP/NDESFARM.fabrikam.com fabrikam\SCEPSvc**
+    - **Setspn -s HTTP/NDESFARM fabrikam\SCEPSvc**
+
+  1. Then disable IIS Kernel-mode Authentication for the site.
 ## Set up the NDES role service
 
 After installation completes, you need to do a few steps to finish configuring the NDES computer.
