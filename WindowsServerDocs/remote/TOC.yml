@@ -235,16 +235,14 @@
       - name: Always on VPN
         items:
         - name: Step 1. Deploy Always On VPN
-          href: remote-access/vpn/always-on-vpn/deploy/tutorial-aovpn-prerequisites.md        
-        - name: Step 2. Configure Always On VPN certificate-based authentication
-          href: remote-access/vpn/always-on-vpn/deploy/tutorial-aovpn-certificates.md
-        - name: Step 3. Configure the Remote Access Server for Always On VPN
+          href: remote-access/vpn/always-on-vpn/deploy/tutorial-aovpn-deploy-authentication.md        
+        - name: Step 2. Configure the Remote Access Server for Always On VPN
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md
-        - name: Step 4. Install and Configure the NPS Server
+        - name: Step 3. Install and Configure the NPS Server
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md
-        - name: Step 5. Configure DNS and Firewall Settings
+        - name: Step 4. Configure DNS and Firewall Settings
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md
-        - name: Step 6. Configure Windows 10 Client Always On VPN Connections
+        - name: Step 5. Configure Windows 10 Client Always On VPN Connections
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md
         - name: Step 7. Conditional access for VPN connectivity using Azure AD
           href: remote-access/vpn/ad-ca-vpn-connectivity-windows10.md        
