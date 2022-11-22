@@ -10782,7 +10782,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md",
-      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/tutorial-aovpn-certificates",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-certificates",
       "redirect_document_id": false
     }
 
