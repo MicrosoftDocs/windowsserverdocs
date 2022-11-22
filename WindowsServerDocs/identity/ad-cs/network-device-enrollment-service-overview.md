@@ -17,11 +17,7 @@ SCEP defines the communication protocol between network devices and a Registrati
 
 ## Understanding the Network Device Enrollment Service
 
-<<<<<<< HEAD
 SCEP is a solution to the problem of enabling network devices that do not run with domain credentials to enroll for x509 version 3 certificates from a Certification Authority (CA). NDES provides any network device with a private key and associated certificate issued by a CA. Applications on the device can use the key and its associated certificate to interact with other entities on the network. The most common use of an NDES-issued certificate on a network device is to authenticate the device in an IPSec session.
-=======
-SCEP is a solution to the problem of enabling network devices that don't run with domain credentials to enroll for x509 version 3 certificates from a Certification Authority (CA). NDES provides any network device with a private key and associated certificate issued by a CA. Applications on the device can use the key and its associated certificate to interact with other entities on the network. The most common usage of an NDES-issued certificate on a network device is to authenticate the device in an IPSec session.
->>>>>>> d80299eda5c0699ec64f85c547307a51ee886cb0
 
 SCEP was developed to support the secure, scalable issuance of certificates to network devices by using existing certification authorities (CAs). The protocol supports CA and registration authority public key distribution, enrollment, and certificate revocation queries.
 
@@ -68,11 +64,7 @@ NDES can be configured to run as either of the following after installing the ND
 
 ## Next steps
 
-<<<<<<< HEAD
 Now that you've learned about what NDES is here are some articles to help you configure and run NDES sucessfully.
-=======
-Now that you've learned about what NDES is here are some articles to help you configure and run NDES successfully.
->>>>>>> d80299eda5c0699ec64f85c547307a51ee886cb0
 
 - [Configure Network Device Enrollment Service for Active Directory Certificate Services](/create-domain-user-account-as-ndes-service-account.md)
 
