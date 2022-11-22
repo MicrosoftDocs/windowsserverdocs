@@ -25,12 +25,22 @@ cls
 | --------- | ----------- |
 | /? | Displays help at the command prompt. |
 
+### Remarks
+
+- If CLS is redirected to file, console or executed through FOR /F it will print a line feed character (ASCII 10).
+
 ## Examples
 
 To clear all information that appears in the Command Prompt window and return to a blank window, type:
 
 ```
 cls
+```
+
+Write line feed character to a file:
+
+```
+cls>LF.txt
 ```
 
 ## Additional References
