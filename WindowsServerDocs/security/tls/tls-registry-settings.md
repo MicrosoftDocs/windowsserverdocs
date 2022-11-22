@@ -4,12 +4,12 @@ description: Learn about supported registry setting information for the Windows 
 ms.topic: article
 author: PatAltimore
 ms.author: alalve
-ms.date: 10/10/2022
+ms.date: 11/22/2022
 ---
 
 # Transport Layer Security (TLS) registry settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
 
 This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
 
@@ -329,13 +329,13 @@ For example, here are some valid registry paths with version-specific subkeys:
 
 - **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client**
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with a non-zero value, and a DWORD registry value named "DisabledByDefault" with a value of zero, under the corresponding version-specific subkey.
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with an entry value of "**1**", and a DWORD registry value named "DisabledByDefault" with a value of "**0**", under the corresponding version-specific subkey.
 
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
 ![Screenshot of Set TLS 1.0 client-side to enabled in Windows Server registry setting.](images/tls-10-client-enabled.png)
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" and "DisabledByDefault" with a non-zero value under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" and "DisabledByDefault" with a value of either "**0**" or "**1**" under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
 
 ![Screenshot of Override disabled by default state in Windows Server registry setting for TLS 1.0 server-side.](images/tls-10-server-disabled.png)
 
