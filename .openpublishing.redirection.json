@@ -10772,12 +10772,12 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md",
-      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/tutorial-aovpn-prerequisites",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-setup",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md",
-      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/tutorial-aovpn-prerequisites",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-setup",
       "redirect_document_id": false
     },
     {
