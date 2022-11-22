@@ -5,8 +5,9 @@ ms.topic: reference
 ms.assetid: 62912a3c-d2cc-4ef6-9679-43709a286035
 author: jasongerend
 ms.author: alalve
-ms.date: 10/04/2022
+ms.date: 11/22/2022
 ---
+
 # chkdsk
 
 Checks the file system and file system metadata of a volume for logical and physical errors. If used without parameters, **chkdsk** displays only the status of the volume and does not fix any errors. If used with the **/f**, **/r**, **/x**, or **/b** parameters, it fixes errors on the volume.
@@ -135,7 +136,7 @@ To view logs with Event Viewer, navigate to the following:
    _Alternatively_, press **Win + R** keys to bring up the run dialog box, type **eventvwr.msc**, and select **OK**.
 
 1. Expand **Windows Logs** > right-click on **Application**  > select **Filter Current Log**.
-1. Within the **Filter Current Log** window, navigate to **Event sources** drop-down menu, select **Chkdsk** and **Winnit**.
+1. Within the **Filter Current Log** window, navigate to **Event sources** drop-down menu, select **Chkdsk** and **Wininit**.
 1. Click **OK** to finish filtering for these two sources.
 
 # [PowerShell](#tab/powershell)
@@ -147,7 +148,7 @@ get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -matc
 ```
 
 ```powershell
-get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "winnit"} | fl timecreated, message
+get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "wininit"} | fl timecreated, message
 ```
 
 To export the log to a specific location, the following can be added to the end of the command `| out-file "$env:userprofile\location\filename.txt"`. Example:
@@ -157,7 +158,7 @@ get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -matc
 ```
 
 ```powershell
-get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "winnit"} | fl timecreated, message | out-file "C:\Users\Administrator\Desktop\Chkdsk_Log.txt"
+get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "wininit"} | fl timecreated, message | out-file "C:\Users\Administrator\Desktop\Wininit_Log.txt"
 ```
 
 ---
