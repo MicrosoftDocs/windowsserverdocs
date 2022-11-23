@@ -18,21 +18,25 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
 
 <!-- Editorial note: Emphasize that this is not production ready and has no security infrastructure such as firewalls, etc to protect the network.-->
 
-## Prerequisites
+## Setup the environment
 
-To implement the steps in this tutorial, you'll need to setup the following:
+For this tutorial, you'll need the following:
 
-**Servers:**
+1. Create the Domain Controller. Install and configure Active Directory Domain Services (AD DS) on a Windows Server. For information on how to install and configure AD DS, see [AD DS Role Installation](/windows-server/identity/ad-ds/deploy/install-a-new-windows-server-2012-active-directory-forest--level-200-#ad-ds-role-installation)
 
-- A Remote Access (RAS) VPN server that has:
-    - One physical network adapter with a public IP address installed to connect to the network.  
-    - <!-- Editorial note: This one may be covered in the tutorial-->Determine the maximum number of simultaneous VPN clients that you want to support. Also, plan a range of static IP addresses on the internal perimeter network to meet that requirement, namely the *static address pool*. If you use DHCP to supply IP addresses on the internal DMZ, you might also need to create an exclusion for those static IP addresses in DHCP.
+1. Install the following services on a separate Windows Server:
+   - Remote Access (RAS). Install the DirectAccess and VPN(RAS) role service.
 
-- A [Network Policy Server (NPS or RADIUS)](../../../../../networking/technologies/nps/nps-top.md) server. If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than add a new server. 
 
-- Domain controller server
 
-- A Certification Authority (CA) server.
+1- Windows Server(s) with the following services installed (for this tutorial, you install all three on one Windows server):
+    - Network Policy and Access Services (NPS).
+    - Remote Access (RAS). Install the DirectAccess and VPN(RAS) role service.
+
+
+    - Active Directory Certificate Services (AD CS)
+
+-  The Remote Access (RAS) VPN server should have one physical network adapter with a public IP address.
 
 **Active Directory:**
 
