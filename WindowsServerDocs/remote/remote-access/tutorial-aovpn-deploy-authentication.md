@@ -20,45 +20,31 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
 
 ## Setup the environment
 
-For this tutorial, you'll need the following:
+For this tutorial, you'll need two Windows server machines. One will be the RAS server and the other the Domain Controller:
 
-1. Create the Domain Controller. Install and configure Active Directory Domain Services (AD DS) on a Windows Server. For information on how to install and configure AD DS, see [AD DS Role Installation](/windows-server/identity/ad-ds/deploy/install-a-new-windows-server-2012-active-directory-forest--level-200-#ad-ds-role-installation)
+1. Create the Domain Controller. On one Windows server, install and configure Active Directory Domain Services (AD DS) on a Windows Server. For information on how to install and configure AD DS, see [AD DS Role Installation](/windows-server/identity/ad-ds/deploy/install-a-new-windows-server-2012-active-directory-forest--level-200-#ad-ds-role-installation).
 
-1. Install the following services on a separate Windows Server:
-   - Remote Access (RAS). Install the DirectAccess and VPN(RAS) role service.
+1. On the Domain Controller server, install and configure the following roles:
+    - [Network Policy and Access Services (NPS)](../../networking/technologies/nps/nps-top.md).
+    - [Active Directory Certificate Services (AD CS)](../../identity/ad-cs/index.yml). Install the Certification Authority role service.
 
+1. Create the RAS server.  On a separate machine running Windows Server install:
+     - [Remote Access (RAS)](remote-access.md). Install the DirectAccess and VPN(RAS) role service.
 
+1. Ensure that the RAS server has one physical Ethernet network adapter that faces the internet.
 
-1- Windows Server(s) with the following services installed (for this tutorial, you install all three on one Windows server):
-    - Network Policy and Access Services (NPS).
-    - Remote Access (RAS). Install the DirectAccess and VPN(RAS) role service.
+1. Join the RAS server to your domain.
 
+1. Configure your firewalls:
+    - Configure your firewalls to allow RADIUS traffic. For more information on how to configure firewalls for RADIUS traffic, see [Configure firewalls for RADIUS traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
-    - Active Directory Certificate Services (AD CS)
-
--  The Remote Access (RAS) VPN server should have one physical network adapter with a public IP address.
-
-**Active Directory:**
-
-- Active Directory Certificate Services (AD CS) to provide public key infrastructure (PKI).
-
-- A public DNS (Domain Name Services) zone for the network.
-
-- <!-- Editorial note: This item can probably be removed as I believe it is one of the steps in the tutorial-->Make sure that all VPN users have user accounts in Active Directory User (AD DS). Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
-
-**Routing and Firewall infrastructure:**
-
-- Configure your firewalls to allow RADIUS traffic. For more information on how to configure firewalls for RADIUS traffic, see [Configure firewalls for RADIUS traffic](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
-
-- Configure your firewalls to allow VPN traffic by opening User Datagram Protocol (UDP) ports 500 and 4500 on the external perimeter network adapter.
-
-- Make sure that the VPN server can reach all of the required internal networks and network resources. Any network or resource unreachable from the VPN server is also unreachable over VPN connections from remote locations.
+    - Configure your firewalls to allow VPN traffic by opening User Datagram Protocol (UDP) ports 500 and 4500 on the external perimeter network adapter.
 
 <!-- Editorial note: Is this still true? -->
 >[!IMPORTANT]
 >Don't attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
-## Configure Active Directory authentication
+## Setup Active Directory authentication
 
 ### Configure Active Directory Group Policy
 
