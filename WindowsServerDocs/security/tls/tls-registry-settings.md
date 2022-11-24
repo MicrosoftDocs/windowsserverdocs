@@ -182,12 +182,17 @@ Added in Windows 10, version 1507 and Windows Server 2016.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
 
-To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 1024 bits will be the minimum.
 
-To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
+To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, then a maximum is not enforced.
 
 To specify the Diffie-Hellman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
 After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 2048 bits will be the default.
 
 # [Elliptic Curve Diffie-Hellman](#tab/ecdh)
 
@@ -201,11 +206,12 @@ To specify a minimum supported range of ECDH key bit length for the TLS client, 
 After you have created the entry, change the DWORD value to the desired bit length.
 
 To specify a maximum supported range of ECDH key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
+After you have created the entry, change the DWORD value to the desired bit length.
 
-To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
+To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
 
-# [RSA](#tab/rsa)
+# [Client RSA](#tab/client-rsa)
 
 Use of key exchange algorithms should be controlled by configuring the cipher suite order.
 
@@ -215,14 +221,11 @@ Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 To specify a minimum supported range of RSA key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
 After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 1024 bits will be the minimum.
 
 To specify a maximum supported range of RSA key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
-
-To specify the RSA key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
-
-> [!NOTE]
-> RSA authentication with key bit length of over 3072 bits have been reported to cause large performance issues leading to connection timeouts and service unavailability when large number of clients have simultaneous open connections.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, then a maximum is not enforced.
 
 ---
 
