@@ -2,10 +2,10 @@
 title: Features removed or no longer developed starting with Windows Server 2022
 description: Learn about the features and functionalities removed or no longer developed starting with Windows Server 2022.
 ms.topic: conceptual
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 manager: femila
-ms.date: 6/24/2021
+ms.date: 11/25/2022
 ms.prod: windows-server
 ---
 
