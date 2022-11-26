@@ -227,7 +227,7 @@ At line:1 char:1
 + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
 ```
 
-Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster. The moved behavior has been changed beginning with Windows Server 2016, version 1709 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
+Use `Set-SRPartnership` to move these PDR disks in an asynchronous stretched cluster. The moved behavior has been changed beginning with Windows Server 2019 to allow manual and automated failovers with asynchronous replication, based on customer feedback.
 
 ## Attempting to add disks to a two-node asymmetric cluster returns "No disks suitable for cluster disks found"
 
@@ -434,7 +434,7 @@ At line:1 char:1
 + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 ```
 
-The error shown in the example is caused by a known code defect in Windows Server 2016. This issue was fixed in Windows Server, version 1709 and the associated RSAT tools. For a downlevel resolution, contact Microsoft Support. There's no workaround.
+The error shown in the example is caused by a known code defect in Windows Server 2016. This issue was fixed in Windows Server 2019 and the associated RSAT tools. For a downlevel resolution, contact Microsoft Support. There's no workaround.
 
 ## Error "specified volume couldn't be found" when running Test-SRTopology between two clusters
 
