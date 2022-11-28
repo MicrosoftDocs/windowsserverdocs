@@ -136,7 +136,7 @@ It's now possible to prevent the File Server Resource Manager service from creat
     Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 isn't installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
 
 - **SMB2/SMB3 security and compatibility**
-    You now have the ability to disable oplocks in SMB2+ for legacy applications, and require signing or encryption on per-connection basis from a client. For more information, review the [SMBShare PowerShell module help](/powershell/module/smbshare/?view=windowsserver2019-ps).
+    You now have the ability to disable oplocks in SMB2+ for legacy applications, and require signing or encryption on per-connection basis from a client. For more information, review the [SMBShare PowerShell module help](/powershell/module/smbshare/?view=windowsserver2019-ps&preserve-view=true).
 
 ### Storage Migration Service
 
