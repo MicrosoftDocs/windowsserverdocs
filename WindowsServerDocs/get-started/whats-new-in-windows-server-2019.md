@@ -2,10 +2,10 @@
 title: What's new in Windows Server 2019
 description: This article describes some of the new features in Windows Server 2019.
 ms.topic: article
-author: jasongerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 manager: femila
-ms.date: 08/13/2021
+ms.date: 11/28/2022
 ms.prod: windows-server
 ---
 
@@ -38,6 +38,14 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 The [Server Core App Compatibility Feature on Demand (FOD)](../get-started/server-core-app-compatibility-feature-on-demand.md) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.
 
 This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM.
+
+### Remote Desktop Services integration with Azure AD
+
+With Azure AD integration you can leverage Conditional Access policies, Multifactor Authentication, Integrated authentication with other SaaS Apps using Azure AD, and many more. For more information, see [Integrate Azure AD Domain Services with your RDS deployment](../remote/remote-desktop-services/rds-azure-adds.md).
+
+## Networking
+
+In Windows Server 2019 we made several improvements to the core network stack such as, TCP Fast Open (TFO), Receive Window Autotuning, IPv6, and more. For more information about these feature see the [Core Network Stack feature improvement](https://techcommunity.microsoft.com/t5/networking-blog/core-network-stack-features-in-the-creators-update-for-windows/ba-p/339676) post.
 
 ## Security
 
@@ -107,6 +115,22 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 ## Storage
 
 Here are some of the changes we've made to storage in Windows Server 2019. For details, see [What's new in Storage](../storage/whats-new-in-storage.md).
+
+### Data Deduplication
+
+- **Data Deduplication now supports ReFS**
+    You can now enable Data Deduplication wherever you can enable ReFS, increasing storage efficiency by up to 95% with ReFS.
+
+- **DataPort API for optimized ingress/egress to deduplicated volumes**
+    Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
+
+### SMB
+
+- **SMB1 and guest authentication removal**
+    Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 is not installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
+
+- **SMB2/SMB3 security and compatibility**
+    You now have the ability to disable oplocks in SMB2+ for legacy applications, as well as require signing or encryption on per-connection basis from a client. For more information, review the [SMBShare PowerShell module help](/powershell/module/smbshare/?view=windowsserver2019-ps).
 
 ### Storage Migration Service
 
@@ -182,6 +206,22 @@ Windows Server 2019 continues the improvements to compute, networking, and stora
 
     We've made it easier than ever to see which containers are running on your computer and manage individual containers with a new extension for Windows Admin Center. Look for the "Containers" extension in the [Windows Admin Center public feed](../manage/windows-admin-center/configure/using-extensions.md).
 
+### Compute improvements
+
+- **VM Start Ordering**
+    VM Start Ordering is also improved with OS and Application awareness, bringing enhanced triggers for when a VM is considered started before starting the next.
+
+- **Storage-class memory support for VMs** enables NTFS-formatted direct access volumes to be created on non-volatile DIMMs and exposed to Hyper-V VMs. This enables Hyper-V VMs to leverage the low-latency performance benefits of storage-class memory devices.
+
+- **Persistent Memory support for Hyper-V VMs**
+    To leverage the high throughput and low latency of persistent memory (also known as storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
+
+- **Container storage – persistent data volumes**
+    Application containers now have persistent access to volumes. For more info, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct (S2D), SMB Global Mapping](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering).
+
+- **Virtual machine configuration file format (updated)**
+    An additional VM guest state file (.vmgs) has been added for virtual machines with a configuration version of 8.2 and higher. The VM guest state file includes device state information that was previously part of the VM runtime state file.
+
 ### Encrypted Networks
 
 [Encrypted Networks](../networking/sdn/sdn-whats-new.md) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as **Encryption Enabled**.
@@ -211,6 +251,4 @@ The [Windows Time Service](../networking/windows-time-service/insider-preview.md
 
 Now, with Windows Server 2019, it's easy to deploy and manage through a new deployment UI and Windows Admin Center extension that enable anyone to harness the power of SDN.
 
-### Persistent Memory support for Hyper-V VMs
 
-To leverage the high throughput and low latency of persistent memory (also known as storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
