@@ -980,9 +980,9 @@
     href: ad-cs/index.yml
     items:
     - name: What is Network Device Enrollment Service for Active Directory Certificate Services?
-      href: network-device-enrollment-service-overview.md
+      href: ad-cs/network-device-enrollment-service-overview.md
     - name: Configure Network Device Enrollment Service for Active Directory Certificate Services
-      href: create-domain-user-account-as-ndes-service-account.md
+      href: ad-cs/create-domain-user-account-as-ndes-service-account.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
