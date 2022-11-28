@@ -10769,6 +10769,21 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-support.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Removed-Features-1709.md",
+      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-1903-1909.md",
+      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/windows-server-1803-removed-features.md",
+      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
     }
 
   ]
