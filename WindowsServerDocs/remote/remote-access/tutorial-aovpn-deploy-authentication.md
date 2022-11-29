@@ -24,7 +24,7 @@ For this tutorial, you'll need two Windows server machines. One will be the RAS 
 
 1. Create the Domain Controller. On one Windows server, install and configure Active Directory Domain Services (AD DS) on a Windows Server. For information on how to install and configure AD DS, see [AD DS Role Installation](/windows-server/identity/ad-ds/deploy/install-a-new-windows-server-2012-active-directory-forest--level-200-#ad-ds-role-installation).
 
-1. On the Domain Controller server, install and configure the following roles:
+1. On the domain controller server, install and configure the following roles:
     - [Network Policy and Access Services (NPS)](../../networking/technologies/nps/nps-top.md).
     - [Active Directory Certificate Services (AD CS)](../../identity/ad-cs/index.yml). Install the Certification Authority role service.
 
@@ -48,31 +48,31 @@ For this tutorial, you'll need two Windows server machines. One will be the RAS 
 
 ### Configure Active Directory Group Policy
 
-In this section, you'll configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically.
+In this section, you'll configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so lets VPN users request and retrieve user certificates that authenticate VPN connections automatically. Also, this policy allows NPS servers to request server authentication certificates automatically.
 
 1. On the domain controller, open Group Policy Management.
 
-2. In the navigation pane, right-click your domain (for example, corp.contoso.com), then select **Create a GPO in this domain, and Link it here**.
+2. In the left pane, right-click your domain (for example, corp.contoso.com). Select **Create a GPO in this domain, and Link it here**.
 
-3. On the New GPO dialog box, enter **Autoenrollment Policy**, then select **OK**.
+3. On the New GPO dialog box, for **Name**, enter *Autoenrollment Policy*. Select **OK**.
 
-4. In the navigation pane, right-click **Autoenrollment Policy**, then select **Edit**.
+4. In the left pane, right-click **Autoenrollment Policy**. Select **Edit** to open the **Group Policy Management Editor**.
 
-5. In the Group Policy Management Editor, complete the following steps to configure computer certificate autoenrollment:
+5. In the **Group Policy Management Editor**, complete the following steps to configure computer certificate autoenrollment:
 
-    1. In the navigation pane, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
+    1. In the left pane, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
 
-    2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment**, then select **Properties**.
+    2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment**. Select **Properties**.
 
-    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, in **Configuration Model**, select **Enabled**.
+    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, for **Configuration Model**, select **Enabled**.
 
     4. Select **Renew expired certificates, update pending certificates, and remove revoked certificates** and **Update certificates that use certificate templates**.
 
     5. Select **OK**.
 
-6. In the Group Policy Management Editor, complete the following steps to Configure user certificate autoenrollment:
+6. In the **Group Policy Management Editor**, complete the following steps to Configure user certificate autoenrollment:
 
-    1. In the navigation pane, go to **User Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
+    1. In the left pane, go to **User Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
 
     2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment** and select **Properties**.
 
@@ -88,23 +88,23 @@ In this section, you'll configure Group Policy on the domain controller so that 
 
 ### Create Active Directory groups
 
-In this procedure, you can add a new Active Directory (AD) group that contains the users allowed to use the VPN to connect to your organization network.
+In this section, you'll add three new Active Directory (AD) groups:
 
-This group serves two purposes:
+- *VPN Users group*. VPN Users group serves two purposes:
+    
+    - It defines which users are allowed to autoenroll for the user certificates the VPN requires.
+    - It defines which users the NPS authorizes for VPN access.
+    - It allows you to revoke a user's VPN access by removing that user from the group.
 
-- It defines which users are allowed to autoenroll for the user certificates the VPN requires.
+- *VPN Servers group*. The VPN Servers group contains the VPN servers that are allowed to request certificates.
 
-- It defines which users the NPS authorizes for VPN access.
-
-By using a custom group, if you ever want to revoke a user's VPN access, you can remove that user from the group.
-
-You also add a group containing VPN servers and another group containing NPS servers. You use these groups to restrict certificate requests to their members.
+- *NPS Servers group*. The NPS Servers group contains the NPS servers that are allowed to request certificates.
 
 **Create VPN Users group:**
 
 1. On a domain controller, open Active Directory Users and Computers.
 
-2. Right-click a container or organizational unit, select **New**, then select **Group**.
+2. Right-click a container or organizational unit (for example, *Users*), select **New**, then select **Group**.
 
 3. In **Group name**, enter **VPN Users**, then select **OK**.
 
@@ -140,12 +140,12 @@ You also add a group containing VPN servers and another group containing NPS ser
 
 ## Create authentication templates
 
-**Create the User Authentication template:**
-
-In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate's overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
+In this section, you'll configure a custom client-server authentication template. This template is required because you want to improve the certificate's overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
 
 >[!IMPORTANT]
 >Microsoft Platform Crypto Provider" requires a TPM chip, in the case that you are running a VM and you get the following error: "Can not find a valid CSP in the local machine" when trying to manually enroll the certificate you need to check "Microsoft Software Key Storage Provider" and have it second in order after "Microsoft Platform Crypto Provider" in the Cryptography tab in certificate properties.
+
+**Create the User Authentication template:**
 
 1. On the CA, open Certification Authority.
 
