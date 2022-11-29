@@ -138,9 +138,9 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 10. Close Active Directory Users and Computers.
 
-## Create authentication templates
+## Setup Certification Authority templates
 
-In this section, you'll configure three authentication templates:
+In this section, you'll configure three authentication templates on the Certification Authority server:
 
 - *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
 
