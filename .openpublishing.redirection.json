@@ -10783,6 +10783,19 @@
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md",
       "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-authentication",
+
+      "source_path": "WindowsServerDocs/get-started/Removed-Features-1709.md",
+      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-1903-1909.md",
+      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/windows-server-1803-removed-features.md",
+      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
       "redirect_document_id": false
     }
 
