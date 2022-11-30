@@ -235,7 +235,7 @@
       - name: Always on VPN
         items:
         - name: Step 1. Deploy Always On VPN
-          href: remote-access/tutorial-aovpn-deploy-authentication.md        
+          href: remote-access/tutorial-aovpn-deploy-setup.md        
         - name: Step 2. Configure the Remote Access Server for Always On VPN
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md
         - name: Step 3. Install and Configure the NPS Server

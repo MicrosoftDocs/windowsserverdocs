@@ -8,7 +8,7 @@ author: anaharris-ms
 ms.date: 11/21/2022
 ---
 
-# Tutorial: Step 1 - Deploy Always On VPN
+# Tutorial: Deploy Always On VPN
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
@@ -28,8 +28,9 @@ For this tutorial, you'll need two Windows server machines. One will be the RAS 
     - [Network Policy and Access Services (NPS)](../../networking/technologies/nps/nps-top.md).
     - [Active Directory Certificate Services (AD CS)](../../identity/ad-cs/index.yml). Install the Certification Authority role service.
 
-1. Create the RAS server.  On a separate machine running Windows Server install:
-     - [Remote Access (RAS)](remote-access.md). Install the DirectAccess and VPN(RAS) role service.
+1. Create the RAS server by following []
+     - On a separate machine running Windows Server install [Remote Access (RAS)](remote-access.md). Install the DirectAccess and VPN(RAS) role service.
+     - 
 
 1. Ensure that the RAS server has one physical Ethernet network adapter that faces the internet.
 
@@ -48,7 +49,7 @@ For this tutorial, you'll need two Windows server machines. One will be the RAS 
 
 ### Configure Active Directory Group Policy
 
-In this section, you'll configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so lets VPN users request and retrieve user certificates that authenticate VPN connections automatically. Also, this policy allows NPS servers to request server authentication certificates automatically.
+In this section, you'll configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows NPS servers to request server authentication certificates automatically.
 
 1. On the domain controller, open Group Policy Management.
 
@@ -234,7 +235,7 @@ In this section, you'll configure three authentication templates on the Certific
     3. On the **Add Application Policy** dialog box, select **IP security IKE intermediate**, then select **OK**.
 
         >[!TIP]
-        >Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
+        >Add IP security IKE intermediate to the EKU in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
 
     4. Select **OK** to return to the **Properties of New Template** dialog box.
 
@@ -284,7 +285,7 @@ In this section, you'll configure three authentication templates on the Certific
 2. In the left pane, right-click **Certificate Templates** and select **Manage**.
 
 3. In the Certificate Templates console, right-click **RAS and IAS Server**, and select **Duplicate Template**.
-   
+
    >[!WARNING]
    >Do not select **Apply** or **OK** at any time prior to step 10.  If you select these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
 
@@ -318,18 +319,18 @@ In this section, you'll configure three authentication templates on the Certific
 
 **Enroll and validate the user certificate:**
 
-Because you're using Group Policy to autoenroll user certificates, you'll update only the policy. Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
+Because we're using Group Policy to autoenroll user certificates, Windows 10 will automatically enroll the user accounts for the correct certificates. Once enrolled, you can then validate the certificates in the Certificates console.
 
 >[!IMPORTANT]
 >Microsoft Platform Crypto Provider" requires a TPM chip. If, while trying to manually enroll a certificate on a VM, you get the following error: "Cannot find a valid CSP in the local machine" do ensure that "Microsoft Software Key Storage Provider" is second in order after "Microsoft Platform Crypto Provider" in the Cryptography tab of the certificate Properties.
 
 1. Sign in to a domain-joined client computer as a member of the **VPN Users** group.
 
-2. Press Windows key + R, type **gpupdate /force**, and press Enter.
+2. Press Windows key + R. Type **gpupdate /force**, and press Enter key.
 
-3. On the Start menu, type **certmgr.msc**, and press Enter.
+3. On the Start menu, type **certmgr.msc** to open the Certificates snap-in, and press Enter key.
 
-4. In the Certificates snap-in, under **Personal**, select **Certificates**. Your certificates appear in the details pane.
+4. In the Certificates snap-in, select **Personal** **>** **Certificates**. Your certificates should appear in the details pane.
 
 5. Right-click the certificate that has your current domain username, and then select **Open**.
 
@@ -337,17 +338,16 @@ Because you're using Group Policy to autoenroll user certificates, you'll update
 
 7. Select **OK**, and close the Certificates snap-in.
 
-
 **Enroll and validate the VPN server certificates:**
 
-Unlike the user certificate, you must manually enroll the VPN server's certificate. After you've enrolled it, validate it by using the same process you used for the user certificate. Like the user certificate, the NPS server automatically enrolls its authentication certificate, so all you need to do is validate it.
+Unlike the user certificate, you must manually enroll the VPN server's certificate. After you've enrolled it, you'll validate it by using the same process as for the user certificate. 
 
 >[!NOTE]
 >You might need to restart the VPN and NPS servers to allow them to update their group memberships before you can complete these steps.
 
 **Enroll and validate the VPN server certificate:**
 
-1. On the VPN server's Start menu, type **certlm.msc**, and press Enter.
+1. On the VPN server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press Enter.
 
 2. Right-click **Personal**, select **All Tasks** and then select **Request New Certificate** to start the Certificate Enrollment Wizard.
 
@@ -355,17 +355,17 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 
 4. On the Select Certificate Enrollment Policy page, select **Next**.
 
-5. On the Request Certificates page, select the check box next to the VPN server to select it.
+5. On the Request Certificates page, select **VPN Server Authentication**.
 
 6. Under the VPN server check box, select **More information is required** to open the Certificate Properties dialog box and complete the following steps:
 
-    1. Select the **Subject** tab, select **Common Name** under **Subject name**, in **Type**.
+    1. Select the **Subject** tab. In the **Subject name** section, for **Type** select *Common Name*. 
 
-    2. Under **Subject name**, in **Value**, enter the name of the external domain clients used to connect to the VPN, for example, vpn.contoso.com, then select **Add**.
+    2. In the **Subject name** section, for **Value**, enter the name of the external domain that clients use to connect to the VPN(for example, vpn.contoso.com). Then, select **Add**.
 
-    3. Under **Alternative Name**, in **Type**, select **DNS**.
+    3. In the **Alternative Name** section, for **Type**, select *DNS*.
 
-    4. Under **Alternative Name**, in **Value**, enter all of the server names clients use to connect to the VPN, for example, vpn.contoso.com, vpn, 132.64.86.2.
+    4. In the **Alternative Name** section, for **Value**, enter all server names that clients use to connect to the VPN, for example, vpn.contoso.com, vpn, 132.64.86.2.
 
     5. Select **Add** after entering each name.
 
@@ -391,15 +391,17 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 
 **Validate the NPS server certificate:**
 
+Like the user certificate, the NPS server automatically enrolls its authentication certificate, so all you need to do is validate it.
+
 1. Restart the NPS server.
 
-2. On the NPS server's Start menu, type **certlm.msc**, and press Enter.
+2. On the NPS server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press Enter.
 
 3. In the Certificates snap-in, under **Personal**, select **Certificates**.
 
-    Your listed certificates appear in the details pane.
+    Your listed certificates should appear in the details pane.
 
-4. Right-click the certificate that has your NPS server's name, and then select **Open**.
+4. Right-click the NPS Server Authentication certificate, and then select **Open**.
 
 5. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the incorrect certificate.
 
@@ -409,4 +411,4 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 
 ## Next steps
 
-[Step 2. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
+[Step 1. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
