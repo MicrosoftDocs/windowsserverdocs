@@ -5,16 +5,17 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
-ms.date: 11/04/2021
+ms.date: 12/01/2022
 ms.custom: contperf-fy21q2
 ---
+
 # How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
 
 > Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article describes how to enable and disable Server Message Block (SMB) version 1 (SMBv1), SMB version 2 (SMBv2), and SMB version 3 (SMBv3) on the SMB client and server components.
 
-While disabling or removing SMBv1 might cause some compatibility issues with old computers or software, SMBv1 has significant security vulnerabilities and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858).
+While disabling or removing SMBv1 might cause some compatibility issues with old computers or software, SMBv1 has significant security vulnerabilities, and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858).
 
 ## Disabling SMBv2 or SMBv3 for troubleshooting
 
@@ -23,7 +24,7 @@ We recommend keeping SMBv2 and SMBv3 enabled, but you might find it useful to di
 In Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, disabling SMBv3 deactivates the following functionality:
 
 - Transparent Failover - clients reconnect without interruption to cluster nodes during maintenance or failover
-- Scale Out - concurrent access to shared data on all file cluster nodes 
+- Scale Out - concurrent access to shared data on all file cluster nodes
 - Multichannel - aggregation of network bandwidth and fault tolerance if multiple paths are available between client and server
 - SMB Direct - adds RDMA networking support for high performance, with low latency and low CPU use
 - Encryption - Provides end-to-end encryption and protects from eavesdropping on untrustworthy networks
@@ -324,7 +325,7 @@ To use Group Policy to configure this, follow these steps:
 
 In the **New Registry Properties** dialog box, select the following:
 
-- **Action**: Update
+- **Action**: Create
 - **Hive**: HKEY_LOCAL_MACHINE
 - **Key Path**: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 - **Value name**: SMB1
@@ -343,7 +344,7 @@ This procedure disables the SMBv1 Server components. This Group Policy must be 
 
 ### Disable SMBv1 client
 
-To disable the SMBv1 client, the services registry key needs to be updated to disable the start of **MRxSMB10** and then the dependency on **MRxSMB10** needs to be removed from the entry for **LanmanWorkstation** so that it can start normally without requiring **MRxSMB10** to first start.
+To disable the SMBv1 client, the services registry key needs to be updated to disable the start of **MRxSMB10**, and then the dependency on **MRxSMB10** needs to be removed from the entry for **LanmanWorkstation** so that it can start normally without requiring **MRxSMB10** to first start.
 
 This guidance updates and replaces the default values in the following two items in the registry:
 
