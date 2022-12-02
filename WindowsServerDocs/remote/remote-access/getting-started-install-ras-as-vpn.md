@@ -8,9 +8,11 @@ ms.date: 12/02/2022
 ---
 
 
-## Install Remote Access as a VPN server
+# Install Remote Access as a VPN server
 
 In this getting started guide, we'll show you how to install and configure Remote Access (RAS) as a VPN server.
+
+## Install the Remote Access role
 
 # [PowerShell](#tab/powershell)
 
