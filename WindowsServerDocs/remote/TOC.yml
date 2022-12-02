@@ -230,20 +230,24 @@
     items:
     - name: Overview
       href: remote-access/remote-Access.md
+    - name: Getting started
+      items:
+      - name: Install Remote Access as a VPN Server
+        href: getting-started-install-ras-as-vpn.md 
     - name: Tutorials
       items:
       - name: Always on VPN
         items:
-        - name: Step 1. Deploy Always On VPN
+        - name: Deploy Always On VPN - Setup the environment
           href: remote-access/tutorial-aovpn-deploy-setup.md        
-        - name: Step 2. Configure the Remote Access Server for Always On VPN
-          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md
-        - name: Step 3. Install and Configure the NPS Server
-          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md
+        - name: Deploy Always On VPN - Setup Active Directory authentication
+          href: remote-access/tutorial-aovpn-deploy-active-directory.md        
         - name: Step 4. Configure DNS and Firewall Settings
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md
         - name: Step 5. Configure Windows 10 Client Always On VPN Connections
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md
+      - name: Always on VPN Conditional Access
+        items:
         - name: Step 7. Conditional access for VPN connectivity using Azure AD
           href: remote-access/vpn/ad-ca-vpn-connectivity-windows10.md        
         - name: Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking

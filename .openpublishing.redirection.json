@@ -10782,11 +10782,20 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-active-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md",
       "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
       "redirect_document_id": false
     },
     {
-
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md",
+      "redirect_url": "/windows-server/remote/remote-access/getting-started-install-ras-as-vpn",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/get-started/Removed-Features-1709.md",
       "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
       "redirect_document_id": false
