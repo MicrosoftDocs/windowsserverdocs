@@ -236,11 +236,11 @@
         href: remote-access/getting-started-install-ras-as-vpn.md 
     - name: Tutorials
       items:
-      - name: Always on VPN
+      - name: Deploy Always on VPN
         items:
-        - name: Deploy Always On VPN - Setup the environment
+        - name: Setup the environment
           href: remote-access/tutorial-aovpn-deploy-setup.md        
-        - name: Deploy Always On VPN - Setup Active Directory authentication
+        - name: Setup Active Directory authentication
           href: remote-access/tutorial-aovpn-deploy-active-directory.md        
         - name: Step 4. Configure DNS and Firewall Settings
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md

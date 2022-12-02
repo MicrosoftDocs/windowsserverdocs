@@ -8,7 +8,7 @@ author: anaharris-ms
 ms.date: 12/02/2022
 ---
 
-# Setup Active Directory authentication
+# Deploy Always On VPN: Setup Active Directory authentication
 
 In this part of the Deploy Always On VPN tutorial, you'll setup Active Directory (AD) authentication by performing the following tasks:
 
@@ -16,6 +16,10 @@ In this part of the Deploy Always On VPN tutorial, you'll setup Active Directory
 - Create Active Directory groups
 - Configure Certification Authority templates
 - Enroll and validate certificates
+
+## Prerequisites
+
+Before attempting the steps in this tutorial, you must complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
 
 ## Configure Active Directory Group Policy
 
