@@ -77,9 +77,7 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
    >[!NOTE]
    >The Configure Remote Access wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
 
-1. Select **Deploy VPN only**.
-
-    The Routing and Remote Access Microsoft Management Console (MMC) opens.
+1. Select **Deploy VPN only** to open the Routing and Remote Access Microsoft Management Console (MMC).
 
 1. Right-click the VPN server, then select **Configure and Enable Routing and Remote Access**.
 
@@ -89,9 +87,7 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. In **Configuration**, select **Custom Configuration**, and then select **Next**.
 
-1. In **Custom Configuration**, select **VPN access**, and then select **Next**.
-
-   The Completing the Routing and Remote Access Server Setup Wizard opens.
+1. In **Custom Configuration**, select **VPN access**, and then select **Next** to open the Completing the Routing and Remote Access Server Setup Wizard.
 
 1. Select **Finish** to close the wizard, then select **OK** to close the Routing and Remote Access dialog box.
 
@@ -99,36 +95,42 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. In the Remote Access snap-in, right-click the VPN server, then select **Properties**.
 
-1. In Properties, select the **Security** tab and do:
+1. In Properties, select the **Security** tab and then:
 
-    a. Select **Authentication provider** and select **RADIUS Authentication**.
+    1. Select **Authentication provider** and select **RADIUS Authentication**.
 
-    b. Select **Configure** to open the RADIUS Authentication dialog box.
+    1. Select **Configure** to open the RADIUS Authentication dialog box.
 
-    c. Select **Add** to open the Add RADIUS Server dialog box.
+    1. Select **Add** to open the Add RADIUS Server dialog box.
 
-    d. In **Server name**, enter the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network. For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, enter **NPS1.corp.contoso.com**.
+        1. In **Server name**, enter the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network. For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, enter **NPS1.corp.contoso.com**.
 
-    e. In **Shared secret**, select **Change** to open the Change Secret dialog box.
+        1. In **Shared secret**, select **Change** to open the Change Secret dialog box.
 
-    f. In **New secret**, enter a text string.
+        1. In **New secret**, enter a text string.
 
-    g. In **Confirm new secret**, enter the same text string, then select **OK**.
+        1. In **Confirm new secret**, enter the same text string, then select **OK**.
 
     >[!IMPORTANT]
     >Save this text string. If you plan on you configuring the NPS Server on your Organization/Corporate network, you'll add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
 
-1. In **Add RADIUS Server**, review the default settings for:
+    1. In **Add RADIUS Server**, review the default settings for:
 
-    - **Time-out**
+        - **Time-out**
 
-    - **Initial score**
+        - **Initial score**
 
-    - **Port**
+        - **Port**
 
-1. If necessary, change the values to match the requirements for your environment and select **OK**.
+    1. If necessary, change the values to match the requirements for your environment and select **OK**.
 
-1. Select **OK** to close the Radius Authentication dialog.
+    1. Select **OK** to close the Radius Authentication dialog.
+
+1. On the VPN server properties dialog, select **Authentication Methods...**.
+
+1. Select **Allow machine certificate authentication for IKEv2**.
+
+1. Select **OK**.
 
 1. On the VPN server properties dialog, review the setting for **Accounting provider**:
 

@@ -233,7 +233,7 @@
     - name: Getting started
       items:
       - name: Install Remote Access as a VPN Server
-        href: getting-started-install-ras-as-vpn.md 
+        href: remote-access/getting-started-install-ras-as-vpn.md 
     - name: Tutorials
       items:
       - name: Always on VPN
