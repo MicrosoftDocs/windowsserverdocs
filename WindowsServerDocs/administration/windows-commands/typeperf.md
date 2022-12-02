@@ -36,7 +36,7 @@ typeperf -qx [object] [options]
 | -cf `<filename>` | Specifies a file containing a list of performance counters to monitor, with one counter per line. |
 | -si `<[[hh:]mm:]ss>` | Specifies the sample interval. The default is one second. |
 | -o `<filename>` | Specifies the path for the output file, or the SQL database. The default is STDOUT (written to the command window). |
-| -q `[object]` | Display a list of installed counters (no instances). To list counters for one object, include the object name. ***EXAMPLE |
+| -q `[object]` | Display a list of installed counters (no instances). To list counters for one object, include the object name. |
 | -qx `[object]` | Display a list of installed counters with instances. To list counters for one object, include the object name. |
 | -sc `<samples>` | Specifies the number of samples to collect. The default is to collect data until CTRL+C is pressed. |
 | -config `<filename>` | Specifies a settings file containing command options. |
