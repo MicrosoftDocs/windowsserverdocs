@@ -14,9 +14,11 @@ In this part of the Deploy Always On VPN tutorial, you'll create, enroll, and va
 
 You'll create, enroll, and validate the following templates:
 
-- A user authentication template for the VPN Users AD Group.
-- A VPN server authentication template for the VPN Servers AD Group.
-- A NPS server authentication template for the NSP Servers AD Group.
+- *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
+
+- *VPN server authentication template*. With a VPN server authentication template, you can add the IP Security (IPsec) IKE Intermediate application policy to allows the server to filter certificates if more than one certificate is available with the server authentication extended key usage. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for autoenrollment.
+
+- *NPS server authentication template*. The NPS server authentication template is a simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You'll configure the NPS server certificate for autoenrollment.
 
 >[!NOTE]
 >Both user and NPS server authentication templates have been configured for autoenrollment. The VPN template must be enrolled manually.
@@ -25,17 +27,7 @@ You'll create, enroll, and validate the following templates:
 
 Before attempting the steps in this tutorial, you'll need to complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
 
-## Configure Certification Authority templates
-
-In this section, you'll configure three authentication templates on the Certification Authority server:
-
-- *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
-
-- *VPN server authentication template*. With a VPN server authentication template, you can add the IP Security (IPsec) IKE Intermediate application policy to allows the server to filter certificates if more than one certificate is available with the server authentication extended key usage. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for autoenrollment.
-
-- *NPS server authentication template*. The NPS server authentication template is a simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You'll configure the NPS server certificate for autoenrollment.
-
-### Create the user authentication template:
+### Create the user authentication template
 
 1. On the CA server, open the Certification Authority snap-in.
 
