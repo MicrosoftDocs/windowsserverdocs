@@ -23,7 +23,7 @@ You are familiar with the following topics:
 
 To configure Azure Active Directory conditional access for VPN connectivity, you need to have the following configured:
 
-- [Server Infrastructure](tutorial-aovpn-deploy-setup.md)
+- [Server Infrastructure](../tutorial-aovpn-deploy-setup.md)
 - [Remote Access Server for Always On VPN](always-on-vpn/deploy/vpn-deploy-ras.md)
 - [Network Policy Server](always-on-vpn/deploy/vpn-deploy-nps.md)
 - [DNS and Firewall Settings](always-on-vpn/deploy/vpn-deploy-dns-firewall.md)

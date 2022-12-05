@@ -39,7 +39,7 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Deployment prerequisites and setup
-            url: ../tutorial-aovpn-deploy-setup.md.md
+            url: ../tutorial-aovpn-deploy-setup.md
           - text: Plan the Always On VPN deployment
             url: ./deploy/always-on-vpn-deploy-planning.md
           - text: Deploy the VPN infrastructure

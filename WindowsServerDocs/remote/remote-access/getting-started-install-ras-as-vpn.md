@@ -186,4 +186,3 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
  Next steps
 
 - [Tutorial: Deploy Always On VPN](tutorial-aovpn-deploy-setup.md)
-
