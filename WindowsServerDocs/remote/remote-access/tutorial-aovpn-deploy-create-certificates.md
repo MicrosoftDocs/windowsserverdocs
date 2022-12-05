@@ -10,9 +10,9 @@ ms.date: 12/02/2022
 
 # Deploy Always On VPN: Configure Certification Authority templates
 
-In this part of the Deploy Always On VPN tutorial, you'll create, enroll, and validate Certification Authority templates for the Active Directory (AD) groups that you created in [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md):
+In this part of the Deploy Always On VPN tutorial, you'll create certificate templates and enroll or validate certificates for the Active Directory (AD) groups that you created in [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md):
 
-You'll create, enroll, and validate the following templates:
+You'll create the following templates:
 
 - *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
 
@@ -21,7 +21,7 @@ You'll create, enroll, and validate the following templates:
 - *NPS server authentication template*. The NPS server authentication template is a simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You'll configure the NPS server certificate for autoenrollment.
 
 >[!NOTE]
->Both user and NPS server authentication templates have been configured for autoenrollment. The VPN template must be enrolled manually.
+>Both user and NPS server authentication templates have been configured for autoenrollment and so only require verification. The VPN server template will be enrolled manually.
 
 ## Prerequisites
 
