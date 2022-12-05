@@ -1,7 +1,7 @@
 ---
 title: Configure trusted roots and disallowed certificates
 description: Guidance on how to configure individual software updates for automatic daily updating of certificate trust lists and other functionality
-ms.service: windows server active directory certificate services
+ms.service: 
 ms.topic: how-to 
 author: gswashington
 ms.author: robin.harwood
@@ -379,7 +379,7 @@ You may encounter the following errors and warnings when running the `Certutil -
 
 - [Controlling the Update Root certificate Certificates Feature to Prevent the Flow of Information to and from the Internet](https://technet.microsoft.com/library/cc749331.aspx
 
-- [certutil](./administration/windows-commands/certutil.md))
+- [certutil](../administration/windows-commands/certutil.md))
   
 - [How to Write a Simple .Adm File for Registry-based Group Policy](https://technet.microsoft.com/library/cc738443.aspx)
 

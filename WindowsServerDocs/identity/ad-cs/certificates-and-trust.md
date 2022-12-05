@@ -1,7 +1,7 @@
 ---
 title: Certificates and trust
 description: Learn how the Microsoft Root Certificate Program works to distribute trusted root certificates automatically across Windows operating systems.
-ms.service: windows server active directory certificate services
+ms.service: 
 author: gswashington
 ms.author: robin.harwood
 ms.topic: overview
@@ -22,7 +22,7 @@ Client computers access the Windows Update site by using the automatic update me
 
 Windows Server 2012 R2, Windows Server 2012 and Windows 8.1, and Windows 8 operating systems feature automatic daily update functionality that includes downloads of certificate trust lists. Windows Server 2012 R2 and Windows 8.1 offer additional functionality to control how your CTLs are updated.
 
-Individual manual software updates are available for Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista. You can take advantage of the automatic update functionality discussed in this document by manually installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates) for guidance in installing the software updates on supported operating systems discussed in this article.
+Individual manual software updates are available for Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista. You can take advantage of the automatic update functionality discussed in this document by manually installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
 Prior to Windows Server 2012 R2 and Windows 8.1, the same registry setting controlled updates for trusted and untrusted root certificates; you could not selectively enable or disable one or the other. This presented several challenges.
 
@@ -46,7 +46,7 @@ now are available in Windows Server 2012 R2 and Windows 8.1, or by installing th
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable. This means you can use the automatic update mechanism to download only the untrusted CTLs and manage your own list of trusted CTLs. For more information, see [Registry settings modified](configure-trusted-roots-disallowed-certificates.md#registry-settings-modified).
 
-See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates) for guidance in installing the software updates on supported operating systems discussed in this article.
+See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
 ## Related content
 
@@ -72,4 +72,4 @@ See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-root
 
 - [Windows PKI Blog](https://blogs.technet.com/b/pki/)
 
-- [certutil](./administration/windows-commands/certutil.md)
+- [certutil](../administration/windows-commands/certutil.md)
