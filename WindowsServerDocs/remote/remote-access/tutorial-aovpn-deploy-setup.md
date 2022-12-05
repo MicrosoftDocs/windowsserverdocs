@@ -114,7 +114,7 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
 
     14. At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
 
-1. Configure your firewalls. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.For more information, see [Configure Firewalls for RADIUS Traffic](../../../../networking/technologies/nps/nps-firewalls-configure.md).
+1. Configure your firewalls. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
 <!-- Editorial note: Is this still true? -->
 >[!IMPORTANT]
