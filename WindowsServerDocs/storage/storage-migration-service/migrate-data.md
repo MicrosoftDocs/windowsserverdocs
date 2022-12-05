@@ -73,7 +73,7 @@ In this step you transfer data after specifying where to put it on the destinati
     Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
     > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
 
-3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder) and ensuring that the Azure Files Sync checkbox is set for any volumes or shares that are cloud tiering with Azure File Sync, and then select **Next**.
+3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder) and ensuring that the Azure File Sync checkbox is set for any volumes or shares that are cloud tiering with Azure File Sync, and then select **Next**.
 
     > [!NOTE]
     > When migrating NetApp CIFS servers, source volumes don't show drive letters. You can map these volumes to any destination volumes, and you can map multiple NetApp CIFS volumes to the same destination volume. New root folder paths are created to avoid any folder overwrites or collisions, and then shares are created at the correct level. The **Shares** detail pane shows the folder structure you're about to create.
