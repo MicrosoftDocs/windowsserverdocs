@@ -3,7 +3,7 @@ title: Certificates and trust
 description: Learn how the Microsoft Root Certificate Program works to distribute trusted root certificates automatically across Windows operating systems.
 ms.service: 
 author: gswashington
-ms.author: robin.harwood
+ms.author: roharwoo
 ms.topic: overview
 ms.date: 12/05/2022
 
@@ -72,4 +72,4 @@ See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-root
 
 - [Windows PKI Blog](https://blogs.technet.com/b/pki/)
 
-- [certutil](../administration/windows-commands/certutil.md)
+- [certutil](/administration/windows-commands/certutil.md)
