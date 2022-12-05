@@ -205,7 +205,7 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 1. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
 
-        If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+    If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
 
 1. In **Shared secret**:
 
