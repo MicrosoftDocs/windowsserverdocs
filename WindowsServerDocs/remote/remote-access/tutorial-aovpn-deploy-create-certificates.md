@@ -1,6 +1,6 @@
 ---
-title: Deploy Always On VPN - Setup Active Directory authentication
-description: Learn how to configure Active Directory (AD) group policies, create Active Directory Groups, and create and enroll certificate templates for Always On VPN (AOV) connections,
+title: Deploy Always On VPN - Configure Certification Authority templates
+description: Learn how to create, enroll, and validate Certification Authority templates for Active Directory (AD) groups.
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 ms.author: anaharris
@@ -8,110 +8,22 @@ author: anaharris-ms
 ms.date: 12/02/2022
 ---
 
-# Deploy Always On VPN: Setup Active Directory authentication
+# Deploy Always On VPN: Configure Certification Authority templates
 
-In this part of the Deploy Always On VPN tutorial, you'll setup Active Directory (AD) authentication by performing the following tasks:
+In this part of the Deploy Always On VPN tutorial, you'll create, enroll, and validate Certification Authority templates for the Active Directory (AD) groups that you created in [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md):
 
-- Configure AD Group Policy
-- Create Active Directory groups
-- Configure Certification Authority templates
-- Enroll and validate certificates
+You'll create, enroll, and validate the following templates:
+
+- A user authentication template for the VPN Users AD Group.
+- A VPN server authentication template for the VPN Servers AD Group.
+- A NPS server authentication template for the NSP Servers AD Group.
+
+>[!NOTE]
+Both user and NPS server authentication templates have been configured for autoenrollment. The VPN template must be enrolled manually.
 
 ## Prerequisites
 
-Before attempting the steps in this tutorial, you must complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
-
-## Configure Active Directory Group Policy
-
-In this section, you'll configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows NPS servers to request server authentication certificates automatically.
-
-1. On the domain controller, open Group Policy Management.
-
-2. In the left pane, right-click your domain (for example, corp.contoso.com). Select **Create a GPO in this domain, and Link it here**.
-
-3. On the New GPO dialog box, for **Name**, enter *Autoenrollment Policy*. Select **OK**.
-
-4. In the left pane, right-click **Autoenrollment Policy**. Select **Edit** to open the **Group Policy Management Editor**.
-
-5. In the **Group Policy Management Editor**, complete the following steps to configure computer certificate autoenrollment:
-
-    1. In the left pane, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
-
-    2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment**. Select **Properties**.
-
-    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, for **Configuration Model**, select **Enabled**.
-
-    4. Select **Renew expired certificates, update pending certificates, and remove revoked certificates** and **Update certificates that use certificate templates**.
-
-    5. Select **OK**.
-
-6. In the **Group Policy Management Editor**, complete the following steps to Configure user certificate autoenrollment:
-
-    1. In the left pane, go to **User Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
-
-    2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment** and select **Properties**.
-
-    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, in **Configuration Model**, select **Enabled**.
-
-    4. Select **Renew expired certificates, update pending certificates, and remove revoked certificates** and **Update certificates that use certificate templates**.
-
-    5. Select **OK**.
-
-    6. Close the Group Policy Management Editor.
-
-7. Close Group Policy Management.
-
-## Create Active Directory groups
-
-In this section, you'll add three new Active Directory (AD) groups:
-
-- *VPN Users group*. VPN Users group serves two purposes:
-    
-    - It defines which users are allowed to autoenroll for the user certificates the VPN requires.
-    - It defines which users the NPS authorizes for VPN access.
-    - It allows you to revoke a user's VPN access by removing that user from the group.
-
-- *VPN Servers group*. The VPN Servers group contains the VPN servers that are allowed to request certificates.
-
-- *NPS Servers group*. The NPS Servers group contains the NPS servers that are allowed to request certificates.
-
-**Create VPN Users group:**
-
-1. On a domain controller, open Active Directory Users and Computers.
-
-2. Right-click a container or organizational unit (for example, *Users*), select **New**, then select **Group**.
-
-3. In **Group name**, enter **VPN Users**, then select **OK**.
-
-4. Right-click **VPN Users** and select **Properties**.
-
-5. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
-
-6. On the Select Users dialog box, add all the users who need VPN access and select **OK**.
-
-7. Close Active Directory Users and Computers.
-
-**Create VPN Servers and NPS Servers groups:**
-
-1. On a domain controller, open Active Directory Users and Computers.
-
-2. Right-click a container or organizational unit, select **New**, then select **Group**.
-
-3. In **Group name**, enter **VPN Servers**, then select **OK**.
-
-4. Right-click **VPN Servers** and select **Properties**.
-
-5. On the **Members** tab of the VPN Servers Properties dialog box, select **Add**.
-
-6. select **Object Types**, select the **Computers** check box, then select **OK**.
-
-7. In **Enter the object names to select**, enter the names of your VPN servers, then select **OK**.
-
-8. Select **OK** to close the VPN Servers Properties dialog box.
-
-9. Repeat the previous steps for the NPS Servers group.
-
-10. Close Active Directory Users and Computers.
+Before attempting the steps in this tutorial, you'll need to complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
 
 ## Configure Certification Authority templates
 

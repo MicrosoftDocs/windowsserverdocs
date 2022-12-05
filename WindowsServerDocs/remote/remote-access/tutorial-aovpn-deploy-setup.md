@@ -19,100 +19,198 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
 - For this tutorial, you'll need three Windows machines:
     - The first Windows Server machine will be the Domain Controller and will also function as a Certificate Authority and Network Policy server.
     - The second Windows machine will be the VPN Server. Ensure that the VPN server has one physical Ethernet network adapter that faces the internet. 
-    - The third machine be should be running either Windows Server or Windows 10+. This machine will be a client test machine.
-- Ensure that your user account is a member of **Administrators**, or equivalent.
+    - The third machine should be running either Windows Server or Windows 10+. This machine will be a client test machine.
+- Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
-## Setup the environment
+## Create the Domain Controller
 
-1. On the one of the Windows Server machines, install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) to create the Domain Controller. For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
+On one of the Windows Server machines, install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview). For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
 
-1. On the Domain Controller, install the following two Server Roles:
+## Create the VPN server
 
-    - [Active Directory Certificate Services (AD CS)](/windows-server/identity/ad-cs/index).  For detailed information on how to install AD CS, see [Install the Certificate Authority](/windows-server/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
+1. On the second Windows Server machine, install the DirectAccess and VPN(RAS) role service to create the VPN server.
 
-    - [Network Policy and Access Services (NPS)](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
+1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to set a Shared Secret for NPS and VPN server communications. You'll want to copy the Shared Secret for later use in this tutorial.
 
-1. On the second Windows Server machine, install the DirectAccess and VPN(RAS) role service to create the VPN server. For instruction on how to setup and configure RAS as a VPN server, see [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md).
+1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
-1. Join the VPN server to your domain.
+## Create the NPS server
+
+1. On the Domain Controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
 1. Register the NPS Server in Active Directory. For detailed information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
 
-1. Add the VPN Server as a RADIUS Client in NPS.
+## Configure Active Directory Group Policy
 
-    1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
+In this section, you'll configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows the NPS server to request server authentication certificates automatically.
 
-    2. Right-click **RADIUS Clients** and select **New** to open the New RADIUS Client dialog box.
+1. On the domain controller, open Group Policy Management.
 
-    3. Verify that the **Enable this RADIUS client** check box is selected.
+2. In the left pane, right-click your domain (for example, corp.contoso.com). Select **Create a GPO in this domain, and Link it here**.
 
-    4. In **Friendly name**, enter a display name for the VPN server.
+3. On the New GPO dialog box, for **Name**, enter *Autoenrollment Policy*. Select **OK**.
 
-    5. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
+4. In the left pane, right-click **Autoenrollment Policy**. Select **Edit** to open the **Group Policy Management Editor**.
 
-         If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+5. In the **Group Policy Management Editor**, complete the following steps to configure computer certificate autoenrollment:
 
-    6. In **Shared secret**, do:
+    1. In the left pane, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
 
-        1. Ensure that **Manual** is selected.
+    2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment**. Select **Properties**.
 
-        2. Enter the strong text string that you also entered on the VPN server.
+    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, for **Configuration Model**, select **Enabled**.
 
-        3. Reenter the shared secret in Confirm shared secret.
+    4. Select **Renew expired certificates, update pending certificates, and remove revoked certificates** and **Update certificates that use certificate templates**.
 
-    7. Select **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
+    5. Select **OK**.
 
-1. Configure NPS as a RADIUS for VPN Connections
+6. In the **Group Policy Management Editor**, complete the following steps to Configure user certificate autoenrollment:
 
-    1. In the NPS console, in Standard Configuration, ensure that **RADIUS server for Dial-Up or VPN Connections** is selected.
+    1. In the left pane, go to **User Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
 
-    2. Select **Configure VPN or Dial-Up** to open the Configure VPN or Dial-Up wizard.
+    2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment** and select **Properties**.
 
-    3. Select **Virtual Private Network (VPN) Connections**, and select **Next**.
+    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, in **Configuration Model**, select **Enabled**.
 
-    4. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in the previous step. For example, if your VPN server NetBIOS name is RAS1, select **RAS1**.
+    4. Select **Renew expired certificates, update pending certificates, and remove revoked certificates** and **Update certificates that use certificate templates**.
 
-    5. Select **Next**.
+    5. Select **OK**.
 
-    6. In Configure Authentication Methods, complete the following steps:
+    6. Close the Group Policy Management Editor.
 
-        1. Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
+7. Close Group Policy Management.
 
-        2. Select the **Extensible Authentication Protocol** check box to select it.
+## Create Active Directory groups
 
-        3. For **Type** (based on the method of access and network configuration), select **Microsoft: Protected EAP (PEAP)**. Then select **Configure** to open the Edit Protected EAP Properties dialog box.
+In this section, you'll add three new Active Directory (AD) groups:
 
-        4. Select **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
+- *VPN Users group*. VPN Users group serves two purposes:
+    
+    - It defines which users are allowed to autoenroll for the user certificates the VPN requires.
+    - It defines which users the NPS authorizes for VPN access.
+    - It allows you to revoke a user's VPN access by removing that user from the group.
 
-        5. Select **Add**. The Add EAP dialog box opens.
+- *VPN Servers group*. The VPN Servers group contains the VPN servers that are allowed to request certificates.
 
-        6. Select **Smart Card or other certificate**, then select **OK**.
+- *NPS Servers group*. The NPS Servers group contains the NPS servers that are allowed to request certificates.
 
-        7. Select **OK** to close Edit Protected EAP Properties.
+**Create VPN Users group:**
 
-    7. Select **Next**.
+1. On a domain controller, open Active Directory Users and Computers.
 
-    8. In Specify User Groups, complete the following steps:
+2. Right-click a container or organizational unit (for example, *Users*), select **New**, then select **Group**.
 
-        1. Select **Add**. The Select Users, Computers, Service Accounts, or Groups dialog box opens.
+3. In **Group name**, enter **VPN Users**, then select **OK**.
 
-        2. Enter **VPN Users**, then select **OK**.
+4. Right-click **VPN Users** and select **Properties**.
 
-        3. Select **Next**.
+5. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
 
-    9. For **Specify IP Filters**, select **Next**.
+6. On the Select Users dialog box, add all the users who need VPN access and select **OK**.
 
-    10. For **Specify Encryption Settings**, select **Next**. Do not make any changes.
+7. Close Active Directory Users and Computers.
 
-        These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn't support.
+**Create VPN Servers and NPS Servers groups:**
 
-    11. For **Specify a Realm Name**, select **Next**.
+1. On a domain controller, open Active Directory Users and Computers.
 
-    12. Select **Finish** to close the wizard.
+2. Right-click a container or organizational unit, select **New**, then select **Group**.
 
-    13. On the NPS server, open Windows PowerShell.
+3. In **Group name**, enter **VPN Servers**, then select **OK**.
 
-    14. At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
+4. Right-click **VPN Servers** and select **Properties**.
+
+5. On the **Members** tab of the VPN Servers Properties dialog box, select **Add**.
+
+6. select **Object Types**, select the **Computers** check box, then select **OK**.
+
+7. In **Enter the object names to select**, enter the names of your VPN servers, then select **OK**.
+
+8. Select **OK** to close the VPN Servers Properties dialog box.
+
+9. Repeat the previous steps for the NPS Servers group.
+
+10. Close Active Directory Users and Computers.
+
+## Configure NPS server as a RADIUS server
+
+1. On the Domain Controller, open the NPS console.
+
+1. In the NPS console, in Standard Configuration, ensure that **RADIUS server for Dial-Up or VPN Connections** is selected.
+
+1. Select **Configure VPN or Dial-Up** to open the Configure VPN or Dial-Up wizard.
+
+1. Select **Virtual Private Network (VPN) Connections**, and select **Next**.
+
+1. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in the previous section. For example, if your VPN server NetBIOS name is RAS1, select **RAS1**.
+
+1. Select **Next**.
+
+1. In Configure Authentication Methods, complete the following steps:
+
+    1. Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
+
+    2. Select the **Extensible Authentication Protocol** check box to select it.
+
+    3. For **Type** (based on the method of access and network configuration), select **Microsoft: Protected EAP (PEAP)**. Then select **Configure** to open the Edit Protected EAP Properties dialog box.
+
+    4. Select **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
+
+    5. Select **Add**. The Add EAP dialog box opens.
+
+    6. Select **Smart Card or other certificate**, then select **OK**.
+
+    7. Select **OK** to close Edit Protected EAP Properties.
+
+1. Select **Next**.
+
+1. In Specify User Groups, complete the following steps:
+
+    1. Select **Add**. The Select Users, Computers, Service Accounts, or Groups dialog box opens.
+
+    2. Enter **VPN Users**, then select **OK**.
+
+    3. Select **Next**.
+
+1. For **Specify IP Filters**, select **Next**.
+
+1. For **Specify Encryption Settings**, select **Next**. Do not make any changes.
+
+    These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn't support.
+
+1. For **Specify a Realm Name**, select **Next**.
+
+1. Select **Finish** to close the wizard.
+
+1. On the NPS server, open Windows PowerShell.
+
+1. At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
+
+## Configure VPN server as a RADIUS client in NPS
+
+1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
+
+1. Right-click **RADIUS Clients** and select **New** to open the New RADIUS Client dialog box.
+
+1. Verify that the **Enable this RADIUS client** check box is selected.
+
+1. In **Friendly name**, enter a display name for the VPN server.
+
+1. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
+
+        If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+
+1. In **Shared secret**:
+
+    1. Ensure that **Manual** is selected.
+
+    2. Enter the strong text string that you entered on the VPN server.
+
+    3. For **Confirm shared secret**, re-enter the shared secret.
+
+1. Select **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
+
+## Configure your firewalls
 
 1. Configure your firewalls. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
@@ -122,4 +220,4 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
 
 ## Next steps
 
-[Deploy Always On VPN Tutorial: Setup Active Directory authentication](tutorial-aovpn-deploy-active-directory.md)
+[Deploy Always On VPN Tutorial: Setup Active Directory authentication](tutorial-aovpn-deploy-create-certificates.md)
