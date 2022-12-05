@@ -1,10 +1,10 @@
 ---
 title: Certificates and trust
 description: Learn how the Microsoft Root Certificate Program works to distribute trusted root certificates automatically across Windows operating systems.
-ms.topic: 
-ms:assetid: f6068f7c-4e19-462c-97dd-1d227be27269
-ms.author: robin.harwood
+ms.service: windows server active directory certificate services
 author: gswashington
+ms.author: robin.harwood
+ms.topic: overview
 ms.date: 12/05/2022
 
 ---

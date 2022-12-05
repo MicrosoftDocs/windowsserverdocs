@@ -1,10 +1,10 @@
 ---
 title: Configure trusted roots and disallowed certificates
 description: Guidance on how to configure individual software updates for automatic daily updating of certificate trust lists and other functionality
-ms.topic: 
-ms:assetid:
-ms.author: robin.harwood
+ms.service: windows server active directory certificate services
+ms.topic: how-to 
 author: gswashington
+ms.author: robin.harwood
 ms.date: 12/05/2022
 ---
 
@@ -23,6 +23,12 @@ Prior to Windows Server 2012 R2 and Windows 8.1, the same registry setting contr
 - **Conflicting recommendations regarding automatic updates for trusted and untrusted CTLs** Although disabling automatic updates for trusted CTLs was recommended if you managed your lists of trusted root certificates manually (in disconnected or connected environments), disabling automatic updates of untrusted CTLs was *not* recommended.
 
 - **No method to view and extract only the trusted root certificates in a trusted CTL** This missing functionality made managing a customized list of trusted certificates  difficult task.
+
+## Prerequisites
+
+- <!-- prerequisite 1 -->
+- <!-- prerequisite 2 -->
+- <!-- prerequisite n -->
 
 ## Software update description
 
@@ -323,48 +329,19 @@ The settings described in this document configure the following registry keys on
 
 The following options were added to Certutil:
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Syntax</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CertUtil [Options] -syncWithWU DestinationDir</td>
-<td>Sync with Windows Update.<br />
-<br />
+| Syntax | Description | Example |
+|--------|---------|---------|
+| CertUtil [Options] -syncWithWU DestinationDir| Sync with Windows Update.</br></br>
 
-<ul>
-<li>DestinationDir is the folder that receives the files by using the automatic update mechanism.</li>
-<li>The following files are downloaded by using the automatic update mechanism:<br />
-<br />
- 
-<ul>
-<li>The authrootstl.cab contains the CTLs of non-Microsoft root certificates.</li>
-<li>The disallowedcertstl.cab contains the CTLs of untrusted certificates.</li>
-<li>The disallowedcert.sst contains the serialized certificate store, including the untrusted certificates.</li>
-<li>&lt;thumbprint&gt;.crt contains the non-Microsoft root certificates.</li>
-</ul></li>
-</ul></td>
-<td>CertUtil -syncWithWU \\server1\PKI\CTLs</td>
-</tr>
-<tr class="even">
-<td>CertUtil [Options] -generateSSTFromWU SSTFile</td>
-<td>Generate SST by using the automatic update mechanism.<br />
-<br />
-SSTFile: .sst file to be created. The generated .sst file contains the non_Microsoft root certificates that were downloaded by using the automatic update mechanism.</td>
-<td>CertUtil –generateSSTFromWU TRoots.sst</td>
-</tr>
-</tbody>
-</table>
+- DestinationDir is the folder that receives the files by using the automatic update mechanism.</br>
+- The following files are downloaded by using the automatic update mechanism:</br></br>
+
+- The `authrootstl.cab` contains the CTLs of non-Microsoft root certificates.</br>
+- The `disallowedcertstl.cab` contains the CTLs of untrusted certificates.</br>
+- The disallowedcert.sst contains the serialized certificate store, including the untrusted certificates.</br>
+- The thumbprint.crt contains the non-Microsoft root certificates. |
+| CertUtil [Options] -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism.</br></br>
+SSTFile: .sst file to be created. The generated .sst file contains the non_Microsoft root certificates that were downloaded by using the automatic update mechanism. | CertUtil –generateSSTFromWU TRoots.sst |
 
 > [!TIP]
 > `Certutil -SyncWithWU -f <folder>` updates existing files in the target folder.

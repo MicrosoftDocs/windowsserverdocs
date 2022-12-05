@@ -1,11 +1,10 @@
 ---
 title: certutil
 description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
+ms.service: windows server active directory certificate services
 ms.topic: reference
-ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
-ms.author: jgerend
 author: JasonGerend
-manager: mtillman
+ms.author: jgerend
 ms.date: 11/22/2022
 ---
 
