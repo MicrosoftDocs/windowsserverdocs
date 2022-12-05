@@ -55,7 +55,7 @@ CSV provides a general-purpose, clustered file system that is layered above
 NTFS or ReFS. CSV applications include:
 
 - Clustered virtual hard disk (VHD/VHDX) files for clustered Hyper-V virtual machines
-- Scale out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. ReFS is not supported for a Scale-Out File Server in Windows Server 2012 R2 and below. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)).
+- Scale out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. ReFS is not supported for a Scale-Out File Server in Windows Server 2012 R2 and below. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)).
 - Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI) Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server don't support the use of CSV.
 - Windows Server 2019 or higher Microsoft Distributed Transaction Control (MSDTC)
 

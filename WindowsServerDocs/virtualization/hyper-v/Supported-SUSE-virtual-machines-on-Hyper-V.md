@@ -3,8 +3,8 @@ title: Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 description: Lists the SUSE Linux Enterprise Server (SLES)/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: kkashanjat
+author: kkkashan
 ms.date: 01/08/2021
 ---
 # Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
@@ -25,7 +25,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 
 SLES12+ is 64-bit only.
 
-|**Feature**|**Windows Server operating system version**|**SLES 15 SP1-SP2**|**SLES 15**|**SLES 12 SP3-SP5**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
+|**Feature**|**Windows Server operating system version**|**SLES 15 SP1-SP4**|**SLES 15**|**SLES 12 SP3-SP5**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
 |-|-|-|-|-|-|-|-|-|
 |**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|

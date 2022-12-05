@@ -5,12 +5,12 @@ ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 10/10/2016
+ms.date: 10/18/2022
 ---
 
 # Set up Hyper-V Replica
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016; Azure Stack HCI, versions 22H2 and 21H2
 
 Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper-V host server to another to keep your workloads available.  Hyper-V Replica creates a copy of a live virtual machine  to a replica offline virtual machine. Note the following:
 
@@ -70,17 +70,21 @@ You'll need at least two Hyper-V hosts with one or more virtual machines on each
 
 To allow replication between the primary and secondary servers, traffic must get through the Windows firewall (or any other third-party firewalls). When you installed the Hyper-V role on the servers by default exceptions for HTTP (80) and HTTPS (443) are created. If you're using these standard ports, you'll just need to enable the rules:
 
--  To enable the rules on a standalone host server:
+- To enable the rules on a standalone host server:
 
     1. Open Windows Firewall with Advance Security and click **Inbound Rules**.
 
     2. To enable HTTP (Kerberos) authentication, right-click **Hyper-V Replica HTTP Listener (TCP-In)** > **Enable Rule**. To enable HTTPS certificate-based authentication, right-click **Hyper-V Replica HTTPS Listener (TCP-In)** > **Enable Rule**.
 
--  To enable rules on a Hyper-V cluster, open a Windows PowerShell session using **Run as Administrator**, then run one of these commands:
+- To enable rules on a Hyper-V cluster, open a Windows PowerShell session using **Run as Administrator**, then run one of these commands:
 
-    - For HTTP:  `get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTP Listener (TCP-In)"}}`
+  - For HTTP:
 
-    - For HTTPS: `get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTPS Listener (TCP-In)"}}`
+    `get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTP Listener (TCP-In)"}}`
+
+  - For HTTPS:
+
+    `get-clusternode | ForEach-Object  {Invoke-command -computername $_.name -scriptblock {Enable-Netfirewallrule -displayname "Hyper-V Replica HTTPS Listener (TCP-In)"}}`
 
 ### Enable virtual machine replication
 
@@ -113,8 +117,8 @@ Do the following on each virtual machine you want to replicate:
 
 After completing these deployment steps your replicated environment is up and running. Now you can run failovers as needed.
 
-**Test failover**:  If you want to run a test failover right-click the replica virtual machine and select **Replication** > **Test Failover**. Pick the latest or other recovery point if configured. A new test virtual machine will be created and started on the secondary site. After you've finished testing, select  **Stop Test Failover** on the replica virtual machine to clean it up. Note that for a virtual machine you can only run one test failover at a time. [Read more](https://docs.microsoft.com/virtualization/community/team-blog/2012/20120725-types-of-failover-operations-in-hyper-v-replica-part-i-test-failover).
+**Test failover**:  If you want to run a test failover right-click the replica virtual machine and select **Replication** > **Test Failover**. Pick the latest or other recovery point if configured. A new test virtual machine will be created and started on the secondary site. After you've finished testing, select  **Stop Test Failover** on the replica virtual machine to clean it up. Note that for a virtual machine you can only run one test failover at a time. For more information, see [Test failover in Hyper-V Replica](/virtualization/community/team-blog/2012/20120725-types-of-failover-operations-in-hyper-v-replica-part-i-test-failover).
 
-**Planned failover**: To run a planned failover, right-click the primary virtual machine and select **Replication** > **Planned Failover**. Planned failover performs prerequisites checks to ensure zero data loss. It checks that the primary virtual machine is shut down before beginning the failover. After the virtual machine is failed over, it starts replicating the changes back to the primary site when it's available. Note that for this to work, the  primary server should be configured to receive replication from the secondary server, or from the Hyper-V Replica Broker in the case of a primary cluster. Planned failover sends the last set of tracked changes. [Read more](https://docs.microsoft.com/virtualization/community/team-blog/2012/20120731-types-of-failover-operations-in-hyper-v-replica-part-ii-planned-failover).
+**Planned failover**: To run a planned failover, right-click the primary virtual machine and select **Replication** > **Planned Failover**. Planned failover performs prerequisites checks to ensure zero data loss. It checks that the primary virtual machine is shut down before beginning the failover. After the virtual machine is failed over, it starts replicating the changes back to the primary site when it's available. Note that for this to work, the  primary server should be configured to receive replication from the secondary server, or from the Hyper-V Replica Broker in the case of a primary cluster. Planned failover sends the last set of tracked changes. For more information, see [Planned failover in Hyper-V Replica](/virtualization/community/team-blog/2012/20120731-types-of-failover-operations-in-hyper-v-replica-part-ii-planned-failover).
 
 **Unplanned failover**: To run an unplanned failover, right-click on the replica virtual machine and select **Replication** > **Unplanned Failover** from Hyper-V Manager or Failover Clustering Manager. You can recover from the latest recovery point or from previous recovery points if this option is enabled. After failover, check that everything is working as expected on the failed over virtual machine, then click **Complete** on the replica virtual machine. [Read more](/virtualization/community/team-blog/2012/20120808-types-of-failover-operations-in-hyper-v-replica-part-iii-unplanned-failover).

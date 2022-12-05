@@ -4,9 +4,8 @@ description: Reference article for the robocopy command, which copies file data 
 ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: jasongerend
-ms.author: jgerend
-manager: lizapo
-ms.date: 03/17/2021
+ms.author: alalve
+ms.date: 10/04/2022
 ---
 
 # robocopy
@@ -15,7 +14,7 @@ Copies file data from one location to another.
 
 ## Syntax
 
-```
+```cmd
 robocopy <source> <destination> [<file>[ ...]] [<options>]
 ```
 
@@ -104,7 +103,6 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /im | Include modified files (differing change times). |
 | /is | Includes the same files. Same files are identical in name, size, times, and all attributes. |
 | /it | Includes "tweaked" files. Tweaked files have the same name, size, and times, but different attributes. |
-| /xc | Excludes existing files with the same timestamp, but different file sizes. |
 | /max:`<n>` | Specifies the maximum file size (to exclude files bigger than *n* bytes). |
 | /min:`<n>` | Specifies the minimum file size (to exclude files smaller than *n* bytes). |
 | /maxage:`<n>` | Specifies the maximum file age (to exclude files older than *n* days or date). |
@@ -176,7 +174,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | 8 | Several files did not copy. |
 
 > [!NOTE]
-> Any value greater than **8** indicates that there was at least one failure during the copy operation.
+> Any value equal to or greater than **8** indicates that there was at least one failure during the copy operation.
 
 ## Additional References
 

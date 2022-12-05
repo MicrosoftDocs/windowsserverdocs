@@ -10,6 +10,9 @@ ms.date: 12/25/2019
 
 # Advanced Troubleshooting Server Message Block (SMB)
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806211" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common SMB issues.
+
 Server Message Block (SMB) is a network transport protocol for file systems operations to enable a client to access resources on a server. The primary purpose of the SMB protocol is to enable remote file system access between two systems over TCP/IP.
 
 SMB troubleshooting can be extremely complex. This article is not an exhaustive troubleshooting guide Instead, it is a short primer to understand the basics of how to effectively troubleshoot SMB.

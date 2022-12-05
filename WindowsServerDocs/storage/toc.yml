@@ -92,6 +92,8 @@ items:
       href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
     - name: Secure SMB traffic
       href: file-server/smb-secure-traffic.md
+    - name: Protect SMB traffic from interception
+      href: file-server/smb-interception-defense.md
     - name: Network File System overview
       href: nfs/nfs-overview.md
     - name: Deploy Network File System

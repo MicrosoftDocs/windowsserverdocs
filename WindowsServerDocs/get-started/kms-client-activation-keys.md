@@ -3,11 +3,9 @@ title: Key Management Services (KMS) client activation and product keys for Wind
 description: Get the product keys needed for setup and activation of Windows Server and other Windows products from a KMS host server.
 ms.topic: conceptual
 author: dknappettmsft
-ms.author: daknappe
-manager: femila
+ms.author: alalve
 ms.date: 9/13/2021
 ms.prod: windows-server
-ms.custom: contperf-fy22q1
 ---
 
 # Key Management Services (KMS) client activation and product keys
@@ -211,3 +209,12 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 7 Enterprise     | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
 | Windows 7 Enterprise N   | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
 | Windows 7 Enterprise E   | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
+
+#### Windows Vista
+
+| Operating system edition | KMS Client Product Key        |
+|--------------------------|-------------------------------|
+|Windows Vista Business | YFKBB-PQJJV-G996G-VWGXY-2V3X8 |
+|Windows Vista Business N | HMBQG-8H2RH-C77VX-27R82-VMQBT |
+|Windows Vista Enterprise | VKK3X-68KWM-X2YGT-QR4M6-4BWMV |
+|Windows Vista Enterprise N | VTC42-BM838-43QHV-84HX6-XJXKV |

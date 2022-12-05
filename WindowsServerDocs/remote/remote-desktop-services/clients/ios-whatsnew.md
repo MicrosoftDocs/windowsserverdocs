@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2022
+ms.date: 10/18/2022
 ---
 # What's new in the iOS client
 
@@ -15,7 +15,28 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
 
-## Updates for version 10.4.2 (5170)
+## Updates for version 10.4.4
+
+Date published: October 4, 2022
+
+It's time for another release! We've made targeted bug fixes and performance improvements, and also added new features. Here's what we've included:
+
+- You can now use Apple Pencil to draw, write, and interact with remote sessions.
+- You can now see a live preview of the current active session when switching to the Connection Center from a remote session.
+- Gather logs for troubleshooting by going to **Settings** > **Troubleshooting**.
+- Review app highlights from previous versions by going to **Settings** > **About** > **Version Highlights**.
+- We've made some small appearance changes to the connection bar user interface.
+- We've fixed issues that affected locking to landscape or portrait on iOS 16.
+
+We appreciate all the comments sent to us through the App Store, in-app feedback, and email.
+
+## Updates for version 10.4.3
+
+Date Published: August 11, 2022
+
+In this release, we resolved a customer bug that impacted authentication when connecting to Azure Virtual Desktop deployments.
+
+## Updates for version 10.4.2
 
 Date Published: July 11, 2022
 
@@ -51,7 +72,7 @@ In addition, we’ve made the following improvements:
 - Updated the client to send the correct physical dimensions for the iPad Mini 6.
 - Added the username to PC bookmark thumbnails.
 - Updated the in-session connection bar to fade back after three seconds if you minimize it.
-- Added support for smooth scrolling in the connection centre on ProMotion-compatible iPhones and iPads.
+- Added support for smooth scrolling in the connection center on ProMotion-compatible iPhones and iPads.
 
 We've also made some updates to enhance Azure Virtual Desktop (AVD) scenarios:
 
@@ -71,7 +92,7 @@ It's time for a quick update. In this release we added support for the iPad Mini
 
 Date published: October 28, 2021
 
-In this release, we've added support for time zone redirection. This new feature fixes an issue in in Windows 11 remote sessions that caused the screen to flicker, making the session unusable.
+In this release, we've added support for time zone redirection. This new feature fixes an issue in Windows 11 remote sessions that caused the screen to flicker, making the session unusable.
 
 ## Updates for version 10.3.1
 
@@ -189,7 +210,7 @@ We've put together some bug fixes and feature updates for the 10.1.3 release. He
 
 In this update, we've addressed issues that were reported in the version 10.1.1 update.
 
-- Fixed a crash that occurred for some users when subscribing to a Azure Virtual Desktop feed using non-brokered authentication.
+- Fixed a crash that occurred for some users when subscribing to an Azure Virtual Desktop feed using non-brokered authentication.
 - Fixed the layout of workspace icons on the iPhone X, iPhone XS, and iPhone 11 Pro.
 
 ## Updates for version 10.1.1

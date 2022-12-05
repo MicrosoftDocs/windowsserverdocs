@@ -200,7 +200,7 @@ In this step, you'll run the cluster validation tool to ensure that the server n
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
 
 ```PowerShell
-Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
+Test-Cluster -Node <MachineName1, MachineName2, MachineName3, MachineName4> -Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
 ```
 
 ### Step 3.3: Create the cluster
@@ -210,10 +210,10 @@ In this step, you'll create a cluster with the nodes that you have validated for
 When creating the cluster, you'll get a warning that states - "There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below." You can safely ignore this warning. It's due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
 
 > [!Note]
-> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress &lt;X.X.X.X&gt;.
+> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:-StaticAddress &lt;X.X.X.X&gt;.
 > In the following command the ClusterName placeholder should be replaced with a netbios name that is unique and 15 characters or less.
 > ```PowerShell
-> New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage
+> New-Cluster -Name <ClusterName> -Node <MachineName1,MachineName2,MachineName3,MachineName4> -NoStorage
 > ```
 
 After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
@@ -240,7 +240,7 @@ After creating the cluster, use the `Enable-ClusterStorageSpacesDirect` PowerShe
 From the management system, in a PowerShell command windows opened with Administrator privileges, initiate the following command. The cluster name is the name of the cluster that you created in the previous steps. If this command is run locally on one of the nodes, the -CimSession parameter is not necessary.
 
 ```PowerShell
-Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
+Enable-ClusterStorageSpacesDirect -CimSession <ClusterName>
 ```
 
 To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.

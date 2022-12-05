@@ -6,7 +6,7 @@ ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 11/22/2022
 ---
 
 # certutil
@@ -1335,6 +1335,17 @@ certutil [options] -scroots delete [readername]
 
 ```
 [-f] [-split] [-p Password]
+```
+
+### -DeleteHelloContainer
+
+Deletes the Windows Hello container, removing all associated credentials that are stored on the
+device, including any WebAuthn and FIDO credentials.
+
+Users will need to sign out after using this option for it to complete.
+
+```
+CertUtil [Options] -DeleteHelloContainer
 ```
 
 ### -verifykeys

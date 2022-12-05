@@ -19,8 +19,6 @@
     items:
     - name: Build anywhere
       href: rds-plan-build-anywhere.md
-    - name: Remote Desktop workloads
-      href: remote-desktop-workloads.md
     - name: Network guidelines
       href: network-guidance.md
     - name: Virtual machine sizing guidelines
@@ -148,18 +146,6 @@
     items:
     - name: Available Remote Desktop clients
       href: clients/remote-desktop-clients.md
-    - name: Windows Desktop client
-      items:
-      - name: Get started with the Windows Desktop client
-        href: clients/windowsdesktop.md
-      - name: Windows Desktop client for admins
-        href: clients/windowsdesktop-admin.md
-      - name: What's new in the Windows Desktop client
-        href: clients/windowsdesktop-whatsnew.md
-      - name: Supported configurations
-        href: clients/windowsdesktop-supported-config.md
-      - name: Shortcut keys
-        href: /windows/win32/termserv/terminal-services-shortcut-keys
     - name: Microsoft Store client
       items:
       - name: Get started with the Microsoft Store client
@@ -208,7 +194,7 @@
         href: clients/remote-desktop-features.md
       - name: 'Compare the clients: redirections'
         href: clients/remote-desktop-app-compare.md
-      - name: Supported Remote Desktop RDP file settings
+      - name: Supported RDP properties
         href: clients/rdp-files.md
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
@@ -240,5 +226,4 @@
         href: troubleshoot/input-method-editor-error.md
       - name: '"Out of memory" error'
         href: troubleshoot/out-of-memory-error.md
-  - name: Additional resources
-    href: rds-get-support.md
+
