@@ -22,11 +22,13 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
     - The third machine should be running either Windows Server or Windows 10+. This machine will be a client test machine.
 - Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
-## Create the Domain Controller
+## Create the Servers
+
+### Create the Domain Controller
 
 On one of the Windows Server machines, install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview). For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
 
-## Create the VPN server
+### Create the VPN server
 
 1. On the second Windows Server machine, install the DirectAccess and VPN(RAS) role service to create the VPN server.
 
@@ -34,15 +36,18 @@ On one of the Windows Server machines, install [Active Directory Domain Services
 
 1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
-## Create the NPS server
+### Create the NPS server
 
 1. On the Domain Controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
 1. Register the NPS Server in Active Directory. For detailed information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
+=
 
-## Configure Active Directory Group Policy
+## Configure Active Directory
 
-In this section, you'll configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows the NPS server to request server authentication certificates automatically.
+### Create an Active Directory Group Policy
+
+In this section, you'll create a Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows the NPS server to request server authentication certificates automatically.
 
 1. On the domain controller, open Group Policy Management.
 
@@ -80,7 +85,7 @@ In this section, you'll configure Group Policy on the domain controller so that 
 
 7. Close Group Policy Management.
 
-## Create Active Directory groups
+### Create Active Directory groups
 
 In this section, you'll add three new Active Directory (AD) groups:
 
@@ -132,7 +137,9 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 10. Close Active Directory Users and Computers.
 
-## Configure NPS server as a RADIUS server
+## Setup RADIUS client and server in NPS
+
+### Configure NPS server as a RADIUS server
 
 1. On the Domain Controller, open the NPS console.
 
@@ -186,7 +193,7 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 1. At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
 
-## Configure VPN server as a RADIUS client in NPS
+### Configure VPN server as a RADIUS client
 
 1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
 
