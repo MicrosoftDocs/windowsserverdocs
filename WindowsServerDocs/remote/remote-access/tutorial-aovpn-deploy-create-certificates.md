@@ -19,7 +19,7 @@ You'll create, enroll, and validate the following templates:
 - A NPS server authentication template for the NSP Servers AD Group.
 
 >[!NOTE]
-Both user and NPS server authentication templates have been configured for autoenrollment. The VPN template must be enrolled manually.
+>Both user and NPS server authentication templates have been configured for autoenrollment. The VPN template must be enrolled manually.
 
 ## Prerequisites
 
