@@ -227,4 +227,4 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 ## Next steps
 
-[Deploy Always On VPN Tutorial: Setup Active Directory authentication](tutorial-aovpn-deploy-create-certificates.md)
+[Deploy Always On VPN Tutorial: Configure Certification Authority templatesn](tutorial-aovpn-deploy-create-certificates.md)
