@@ -30,7 +30,7 @@ prerequisites:
 - The Hyper-V server role must be installed.
 - Determine [what type of virtual switch you need to create](../plan/plan-hyper-v-networking-in-windows-server.md).
 - Identified which network you'll connect your computer to. Review the
-  [Core network planning](../../../networking/core-network-guide/Core-Network-Guide.md#core-network-planning)
+  [Core network planning](../../../networking/core-network-guide/Core-Network-Guide.md#BKMK_planning)
   article for more information.
 - Have administrative rights.
 
