@@ -18,7 +18,7 @@ If certutil is run on a certification authority without additional parameters, i
 > [!IMPORTANT]
 > Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
-## Parameters
+## Parameters 
 
 ### -dump
 
