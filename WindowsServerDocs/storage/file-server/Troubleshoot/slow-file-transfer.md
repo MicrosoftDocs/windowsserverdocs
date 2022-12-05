@@ -85,4 +85,4 @@ We recommend that you make sure that the Office and SMB binaries are up-to-date,
    NET START SERVER
    ```
 
-To avoid this issue, you can also replicate the file to a local file server. For more information, see [aving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
+To avoid this issue, you can also replicate the file to a local file server. For more information, see [saving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
