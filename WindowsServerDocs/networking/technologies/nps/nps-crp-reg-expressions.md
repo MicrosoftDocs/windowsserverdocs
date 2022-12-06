@@ -15,6 +15,11 @@ ms.date: 08/16/2019
 
 This topic explains the use of regular expressions for pattern matching in NPS in Windows Server. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
 
+> [!NOTE]
+> The NPS Console and the NPS MMC snap-in have a 256 character limit for all settings that take a string value. That includes all settings that can be configured using regular expressions.
+> To configure string values that exceed 256 charactes you can use the NETSH NPS commands. 
+> Configured string values exceeding 256 characters cannot be edited in the NPS Console or the NPS MMC snap-in without invalidating them.
+
 ## Pattern-matching reference
 
 You can use the following table as a reference source when creating regular expressions with pattern-matching syntax. Note that regular expression patterns are often surrounded by forward slashes (/).
