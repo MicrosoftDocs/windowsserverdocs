@@ -12,14 +12,30 @@ ms.date: 12/02/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
-In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for Windows 10+ client computers that are working offsite (for example, from home, a customer site, or a public wireless access point). The scenario as presented in this tutorial is only for learning purposes and should not be used in in a production environment.
+In this tutorial, you'll create a sample infrastructure that shows you how to implement an Always On VPN connection process. The process is composed of the following steps:
+
+1. The Windows VPN client uses a public DNS server to perform a name resolution query for the IP address of the VPN gateway.
+
+2. The VPN client uses the IP address returned by DNS to send a connection request to the VPN gateway.
+
+3. The VPN server is also configured as a Remote Authentication Dial-In User Service (RADIUS) Client; the VPN RADIUS Client sends the connection request to the NPS server for connection request processing.
+
+4. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
+
+5. The NPS server forwards an Access-Accept or Access-Deny response to the VPN server.
+
+6. The connection is initiated or terminated based on the response that the VPN server received from the NPS server.
 
 ## Prerequisites
 
-- For this tutorial, you'll need three Windows machines:
+- For this tutorial, you'll need three Windows Server machines:
+
     - The first Windows Server machine will be the Domain Controller and will also function as a Certificate Authority and Network Policy server.
+
     - The second Windows machine will be the VPN Server. Ensure that the VPN server has one physical Ethernet network adapter that faces the internet. 
+
     - The third machine should be running either Windows Server or Windows 10+. This machine will be a client test machine.
+    
 - Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
 <!-- Editorial note: Is this still true? -->
@@ -27,13 +43,11 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
 >Don't attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 
-## Create the Servers
-
-### Create the Domain Controller
+## Create the Domain Controller
 
 On one of the Windows Server machines, install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview). For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
 
-### Create the VPN server
+## Create the VPN server
 
 1. On the second Windows Server machine, install the DirectAccess and VPN(RAS) role service to create the VPN server.
 
@@ -43,7 +57,7 @@ On one of the Windows Server machines, install [Active Directory Domain Services
 
 1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 
-### Create the NPS server
+## Create the NPS server
 
 1. On the Domain Controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
@@ -51,7 +65,7 @@ On one of the Windows Server machines, install [Active Directory Domain Services
 
 1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
-### Create the Test Client
+## Create the Test Client
 
 1. On the third machine, make sure that Windows 10+ or Windows Server is installed.
 
