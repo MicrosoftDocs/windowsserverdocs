@@ -27,7 +27,7 @@ ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv
 
 You use ProfileXML in all the delivery methods this deployment describes, including Windows PowerShell, Microsoft Endpoint Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this deployment:
 
-- **OMA-DM**. One way is to use an MDM provider using OMA-DM, as discussed earlier in the section [VPNv2 CSP nodes](../always-on-vpn-technology-overview.md#vpnv2-csp-nodes). Using this method, you can easily insert the VPN profile configuration XML markup into the ProfileXML CSP node when using Intune.
+- **OMA-DM**. One way is to use an MDM provider using OMA-DM, as discussed earlier in the section [VPNv2 CSP nodes](vpn/always-on-vpn-technology-overview.md#vpnv2-csp-nodes). Using this method, you can easily insert the VPN profile configuration XML markup into the ProfileXML CSP node when using Intune.
 
 - **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile when using Windows PowerShell and Configuration Manager.
 
@@ -35,7 +35,7 @@ Even though these configuration methods differ, both require a properly formatte
 
 Below you find each of the required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
 
-[!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
+[!INCLUDE [important-lower-case-true-include](includes/important-lower-case-true-include.md)]
 
 **Connection type:** Native IKEv2
 
@@ -279,7 +279,7 @@ $EAPSettings= $Connection.EapConfigXmlStream.InnerXml
 
 ### Create the profile XML
 
-[!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
+[!INCLUDE [important-lower-case-true-include](includes/important-lower-case-true-include.md)]
 
 ```xml
 $ProfileXML = @("
@@ -889,7 +889,7 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 
 3.  Copy the following XML string to a text editor:
 
-    [!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
+    [!INCLUDE [important-lower-case-true-include](includes/important-lower-case-true-include.md)]
 
 
     ```XML
@@ -927,5 +927,5 @@ You are done deploying Always On VPN.  For other features you can configure, see
 
 |If you want to...  |Then see...  |
 |---------|---------|
-|Configure Conditional Access for VPN    |[Step 7. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
+|Configure Conditional Access for VPN    |[Step 7. (Optional) Configure conditional access for VPN connectivity using Azure AD](vpn/ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
 |Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
