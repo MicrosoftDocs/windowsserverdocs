@@ -17,7 +17,7 @@ If certutil is run on a certification authority without additional parameters, i
 > [!IMPORTANT]
 > Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
-## Parameters 
+## Parameters
 
 ### -dump
 
@@ -2005,6 +2005,8 @@ This section defines all of the options you're able to specify, based on the com
 | -csp provider | Provider |
 | -t timeout | URL fetch timeout in milliseconds. |
 | -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES` |
+| -syncWithWU DestinationDir | Sync with Windows Update. |
+| -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism. |
 
 ### Additional References
 
@@ -2014,4 +2016,4 @@ For some more examples about how to use this command, see
 
 - [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
-- [certutil command](certutil.md)
+- [Configure trusted roots and disallowed certificates](configure-trusted-roots-disallowed-certificates.md)
