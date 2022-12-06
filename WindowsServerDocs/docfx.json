@@ -32,7 +32,8 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
-      "extendBreadcrumb": true,
+      "extendBreadcrumb": false,
+      "uhfHeaderId": "MSDocsHeader-WindowsServer",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server",
