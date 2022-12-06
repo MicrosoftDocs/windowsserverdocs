@@ -10786,6 +10786,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md",
       "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
       "redirect_document_id": false

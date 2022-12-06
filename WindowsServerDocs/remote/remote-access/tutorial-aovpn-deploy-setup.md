@@ -36,12 +36,25 @@ On one of the Windows Server machines, install [Active Directory Domain Services
 
 1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
+1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
+
 ### Create the NPS server
 
 1. On the Domain Controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
 1. Register the NPS Server in Active Directory. For detailed information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
-=
+
+1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
+
+### Create the Test Client
+
+1. On the third machine, make sure that Windows 10+ or Windows Server is installed.
+
+1. Create a user and add them to the local Administrators' Group.
+
+1. Add to the user to the VPN Users group.
+
+1. Ensure that the test client can connect to the VPN server. Create a DNS A (Host) record in the DNS zone that uses the certificate subject alternative name for the VPN server.
 
 ## Configure Active Directory
 
@@ -217,9 +230,15 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 1. Select **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
 
-## Configure your firewalls
+1. By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If you enable Windows Firewall with Advanced Security when installing NPS, firewall exceptions for these ports get created automatically during the installation process for both IPv6 and IPv4 traffic.
 
-1. Configure your firewalls. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly.For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
+>[!IMPORTANT]
+
+>If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
+>
+>- Ports UDP1812, UDP1813, UDP1645, and UDP1646
+>
+>If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
 
 <!-- Editorial note: Is this still true? -->
 >[!IMPORTANT]

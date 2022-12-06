@@ -242,8 +242,6 @@
           href: remote-access/tutorial-aovpn-deploy-setup.md        
         - name: Configure Certification Authority templates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
-        - name: Step 4. Configure DNS and Firewall Settings
-          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md
         - name: Step 5. Configure Windows 10 Client Always On VPN Connections
           href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md
       - name: Always on VPN Conditional Access
