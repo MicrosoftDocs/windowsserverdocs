@@ -284,3 +284,7 @@ Like the user certificate, the NPS server automatically enrolls its authenticati
 6. Select **OK** to close the certificate.
 
 7. Close the Certificates snap-in.
+
+## Next steps
+
+- [Deploy Always On VPN Tutorial: Configure Windows 10 Always On VPN client connections](tutorial-aovpn-deploy-configure-client.md)

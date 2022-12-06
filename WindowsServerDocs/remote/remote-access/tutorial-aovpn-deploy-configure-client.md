@@ -1,19 +1,15 @@
 ---
-title: Configure Windows 10 Client Always On VPN Connections
+title: Configure Windows 10 Always On VPN client connections
 description: In this step, you learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
 ms.topic: article
-ms.date: 05/29/2018
+ms.date: 12/06/2022
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-ms.author: wscontent
-author: Teresa-MOTIV
-ms.reviewer: deverette
+ms.author: anaharris
+author: anaharris-ms
 ---
-# Step 6. Configure Windows 10 client Always On VPN connections
+# Deploy Always On VPN: Configure Windows 10 Always On VPN client connections
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
-
-- [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
-- [**Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
 In this step, you'll learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
 

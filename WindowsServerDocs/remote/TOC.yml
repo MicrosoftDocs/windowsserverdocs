@@ -242,8 +242,8 @@
           href: remote-access/tutorial-aovpn-deploy-setup.md        
         - name: Configure Certification Authority templates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
-        - name: Step 5. Configure Windows 10 Client Always On VPN Connections
-          href: remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md
+        - name: Configure Windows 10 Always On VPN client connections
+          href: remote-access/tutorial-aovpn-deploy-configure-client.md
       - name: Always on VPN Conditional Access
         items:
         - name: Step 7. Conditional access for VPN connectivity using Azure AD

@@ -59,7 +59,8 @@ On one of the Windows Server machines, install [Active Directory Domain Services
 
 1. Add to the user to the VPN Users group.
 
-1. Ensure that the test client can connect to the VPN server. Create a DNS A (Host) record in the DNS zone that uses the certificate subject alternative name for the VPN server.
+<!-- Should I add more info here about DNS -->
+1. Ensure that the test client can connect to the VPN server. 
 
 ## Configure Active Directory
 
@@ -105,19 +106,9 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 ### Create Active Directory groups
 
-In this section, you'll add three new Active Directory (AD) groups:
+In this section, you'll add three new Active Directory (AD) groups: the VPN Users group, the VPN Servers group, and the NPS Servers group. Each one of these groups will contain the servers that are allowed to request certificates from the CA.
 
-- *VPN Users group*. VPN Users group serves two purposes:
-    
-    - It defines which users are allowed to autoenroll for the user certificates the VPN requires.
-    - It defines which users the NPS authorizes for VPN access.
-    - It allows you to revoke a user's VPN access by removing that user from the group.
-
-- *VPN Servers group*. The VPN Servers group contains the VPN servers that are allowed to request certificates.
-
-- *NPS Servers group*. The NPS Servers group contains the NPS servers that are allowed to request certificates.
-
-**Create VPN Users group:**
+**Create the VPN Users group:**
 
 1. On a domain controller, open Active Directory Users and Computers.
 
@@ -133,7 +124,7 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 7. Close Active Directory Users and Computers.
 
-**Create VPN Servers and NPS Servers groups:**
+**Create the VPN Servers and NPS Servers groups:**
 
 1. On a domain controller, open Active Directory Users and Computers.
 
@@ -155,7 +146,7 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 10. Close Active Directory Users and Computers.
 
-## Setup RADIUS client and server in NPS
+## Configure NPS RADIUS server and client
 
 ### Configure NPS server as a RADIUS server
 
@@ -235,16 +226,14 @@ In this section, you'll add three new Active Directory (AD) groups:
 
 1. Select **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
 
-1. By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If you enable Windows Firewall with Advanced Security when installing NPS, firewall exceptions for these ports get created automatically during the installation process for both IPv6 and IPv4 traffic.
-
 >[!IMPORTANT]
+
 >If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
 >
 >- Ports UDP1812, UDP1813, UDP1645, and UDP1646
 >
 >If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
-
 ## Next steps
 
-[Deploy Always On VPN Tutorial: Configure Certification Authority templatesn](tutorial-aovpn-deploy-create-certificates.md)
+- [Deploy Always On VPN Tutorial: Configure Certification Authority templates](tutorial-aovpn-deploy-create-certificates.md)
