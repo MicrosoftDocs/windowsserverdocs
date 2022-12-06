@@ -22,6 +22,11 @@ In this tutorial, you'll learn how to deploy Always On VPN (AOV) connections for
     - The third machine should be running either Windows Server or Windows 10+. This machine will be a client test machine.
 - Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
+<!-- Editorial note: Is this still true? -->
+>[!IMPORTANT]
+>Don't attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+
+
 ## Create the Servers
 
 ### Create the Domain Controller
@@ -233,16 +238,12 @@ In this section, you'll add three new Active Directory (AD) groups:
 1. By default, NPS and VPN listen for RADIUS traffic on ports 1812, 1813, 1645, and 1646 on all installed network adapters. If you enable Windows Firewall with Advanced Security when installing NPS, firewall exceptions for these ports get created automatically during the installation process for both IPv6 and IPv4 traffic.
 
 >[!IMPORTANT]
-
 >If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
 >
 >- Ports UDP1812, UDP1813, UDP1645, and UDP1646
 >
 >If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
-<!-- Editorial note: Is this still true? -->
->[!IMPORTANT]
->Don't attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## Next steps
 
