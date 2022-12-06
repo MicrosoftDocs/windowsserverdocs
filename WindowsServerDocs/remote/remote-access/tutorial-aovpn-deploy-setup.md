@@ -238,7 +238,7 @@ In this section, you'll add three new Active Directory (AD) groups:
 >
 >- Ports UDP1812, UDP1813, UDP1645, and UDP1646
 >
->If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
+>If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
 <!-- Editorial note: Is this still true? -->
 >[!IMPORTANT]
