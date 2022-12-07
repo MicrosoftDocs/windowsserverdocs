@@ -8,7 +8,7 @@ ms.author: roharwoo
 ms.date: 12/05/2022
 ---
 
-# Configure Trusted Roots and Disallowed Certificates
+# Configure trusted roots and disallowed certificates
 
 Applies To: Windows Server (All supported versions)
 
@@ -336,17 +336,8 @@ The following options were added to Certutil:
 
 | Syntax | Description | Example |
 |--------|---------|---------|
-| CertUtil [Options] -syncWithWU DestinationDir| Sync with Windows Update.</br></br>
-
-- DestinationDir is the folder that receives the files by using the automatic update mechanism.</br>
-- The following files are downloaded by using the automatic update mechanism:</br></br>
-
-- The `authrootstl.cab` contains the CTLs of non-Microsoft root certificates.</br>
-- The `disallowedcertstl.cab` contains the CTLs of untrusted certificates.</br>
-- The `disallowedcert.sst` contains the serialized certificate store, including the untrusted certificates.</br>
-- The `thumbprint.crt` contains the non-Microsoft root certificates. | CertUtil -syncWithWU \\server1\PKI\CTLs |
-CertUtil [Options] -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism.</br></br>
-SSTFile: .sst file to be created. The generated .sst file contains the non_Microsoft root certificates that were downloaded by using the automatic update mechanism. | CertUtil –generateSSTFromWU TRoots.sst |
+| CertUtil [Options] -syncWithWU DestinationDir| Sync with Windows Update.</br></br>- DestinationDir is the folder that receives the files by using the automatic update mechanism.</br>- The following files are downloaded by using the automatic update mechanism:</br></br> - The `authrootstl.cab` contains the CTLs of non-Microsoft root certificates.</br> - The `disallowedcertstl.cab` contains the CTLs of untrusted certificates.</br>- The `disallowedcert.sst` contains the serialized certificate store, including the untrusted certificates.</br>- The `thumbprint.crt` contains the non-Microsoft root certificates. | CertUtil -syncWithWU \\server1\PKI\CTLs |
+| CertUtil [Options] -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism.</br></br>SSTFile: .sst file to be created. The generated .sst file contains the non_Microsoft root certificates that were downloaded by using the automatic update mechanism. | CertUtil –generateSSTFromWU TRoots.sst |
 
 > [!TIP]
 > `Certutil -SyncWithWU -f <folder>` updates existing files in the target folder.
