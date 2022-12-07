@@ -12,7 +12,7 @@ ms.date: 12/02/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
-In this tutorial, you'll create a sample infrastructure that shows you how to implement an Always On VPN connection process. The process is composed of the following steps:
+In this tutorial, you'll learn how to deploy Always On VPN connections for remote domain-joined Windows client computers. You'll create a sample infrastructure that shows you how to implement an Always On VPN connection process. The process is composed of the following steps:
 
 1. The Windows VPN client uses a public DNS server to perform a name resolution query for the IP address of the VPN gateway.
 
@@ -28,26 +28,29 @@ In this tutorial, you'll create a sample infrastructure that shows you how to im
 
 ## Prerequisites
 
-- For this tutorial, you'll need three Windows Server machines:
+To complete the steps in this tutorial,
 
-    - The first Windows Server machine will be the Domain Controller and will also function as a Certificate Authority and Network Policy server.
-
-    - The second Windows machine will be the VPN Server. Ensure that the VPN server has one physical Ethernet network adapter that faces the internet. 
-
-    - The third machine should be running either Windows Server or Windows 10+. This machine will be a client test machine.
-    
+- You'll need access to three physical computers or virtual machines (VMs).
 - Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
 <!-- Editorial note: Is this still true? -->
 >[!IMPORTANT]
->Don't attempt to deploy Remote Access on a virtual machine (VM) in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
-
+>Don't attempt to deploy Remote Access on a VM in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## Create the Domain Controller
 
-On one of the Windows Server machines, install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview). For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-).
+1. Install Windows Server one of the machines. This machine will be the comain controller and will run the following:
+     - Certificate Authority server
+     - Network Policy server
+     - DNS server
+
+1. Install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) on the Windows Server. For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#to-install-ad-ds-by-using-server-manager).
+
+1. Promote the Windows Server to be a domain controller. For information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage)
 
 ## Create the VPN server
+
+1. Install Windows Server on the second machine. This machine will be the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
 
 1. On the second Windows Server machine, install the DirectAccess and VPN(RAS) role service to create the VPN server.
 
@@ -66,6 +69,8 @@ On one of the Windows Server machines, install [Active Directory Domain Services
 1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
 ## Create the Test Client
+
+1. Install Windows 10+ or Windows Server on the third machine. This machine will be a VPN client test machine.
 
 1. On the third machine, make sure that Windows 10+ or Windows Server is installed.
 
