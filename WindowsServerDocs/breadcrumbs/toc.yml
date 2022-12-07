@@ -21,6 +21,11 @@ items:
   tocHref: /azure-stack/hci/
   topicHref: /windows-server/index
 
+### For linking to system center topics and keeping the context in Windows Server TOC
+- name: Windows Server                         # Destination doc set name
+  tocHref: /system-center/      # Destination doc set route
+  topicHref: /windows-server/    # Original doc set route
+
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server
   tocHref: /azure/
