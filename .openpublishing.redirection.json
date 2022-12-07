@@ -10772,17 +10772,22 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/Removed-Features-1709.md",
-      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-1903-1909.md",
-      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/windows-server-1803-removed-features.md",
-      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines",
       "redirect_document_id": false
     }
 
