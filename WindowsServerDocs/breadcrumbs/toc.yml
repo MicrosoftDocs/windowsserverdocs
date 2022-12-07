@@ -9,6 +9,12 @@ items:
       - name: Remote desktop services
         tocHref: /windows-server/remote/remote-desktop-services/
         topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Hyper-V
+        tocHref: /windows-server/virtualization/hyper-v/
+        topicHref: /windows-server/virtualization/hyper-v/
+      - name: Hyper-V Virtual Switch
+        tocHref: /windows-server/virtualization/hyper-v-virtual-switch/
+        topicHref: /windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch/
 
 ### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
