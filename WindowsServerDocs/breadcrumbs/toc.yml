@@ -3,7 +3,12 @@ items:
   href: /
   items:
     - name: Windows Server
-      href: /windows-server/
+      tocHref: /windows-server/
+      topicHref: /windows-server/
+      items:
+      - name: Remote desktop services
+        tocHref: /windows-server/remote/remote-desktop-services/
+        topicHref: /windows-server/remote/remote-desktop-services/
 
 ### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
