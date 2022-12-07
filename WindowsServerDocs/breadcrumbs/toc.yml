@@ -14,8 +14,4 @@ items:
 - name: Windows Server
   tocHref: /azure/
   topicHref: /windows-server/index
-  items:
-  - name: Management                       # Original doc set name
-    tocHref: /azure/azure-arc/             # Destination doc set route
-    topicHref: /windows-server/administration/      # Original doc set route
 
