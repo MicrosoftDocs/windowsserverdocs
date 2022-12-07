@@ -17,7 +17,7 @@ This topic explains the use of regular expressions for pattern matching in NPS i
 
 > [!NOTE]
 > The NPS Console and the NPS MMC snap-in have a 256 character limit for all settings that take a string value. That includes all settings that can be configured using regular expressions.
-> To configure string values that exceed 256 charactes you can use the NETSH NPS commands. 
+> To configure string values that exceed 256 characters, use NETSH NPS commands. 
 > Configured string values exceeding 256 characters cannot be edited in the NPS Console or the NPS MMC snap-in without invalidating them.
 
 ## Pattern-matching reference
