@@ -1967,6 +1967,51 @@ Where:
 
 - **-? -v** displays a full list of parameters and options.
 
+### -syncWithWU
+
+Syncs with Windows Update. DestinationDir is the folder that receives the files by using the automatic update mechanism.
+
+The following files are downloaded by using the automatic update mechanism:
+
+- `authrootstl.cab` (Contains the CTLs of non-Microsoft root certificates.)
+- `disallowedcertstl.cab` (Contains the CTLs of untrusted certificates.)
+- `disallowedcert.sst` (Contains the serialized certificate store, including the untrusted certificates.)
+- `thumbprint.crt` (Contains the non-Microsoft root certificates.)
+
+For example, `CertUtil -syncWithWU \\server1\PKI\CTLs`.
+
+### -generateSSTFromWU SSTFile
+
+Generates SST by using the automatic update mechanism.
+
+SSTFile is the .sst file to be created. The generated .sst file contains the non_Microsoft root certificates that were downloaded by using the automatic update mechanism. For example, `CertUtil –generateSSTFromWU TRoots.sst`.
+
+#### Potential errors with Certutil -SyncWithWU
+
+You may encounter the following errors and warnings when running the `Certutil -syncWithWU` command:
+
+- If you use a non-existent local path or folder as the destination folder, you'll see the error:
+  
+    The system can't find the file specified. 0x80070002 (WIN32: 2 ERROR\_FILE\_NOT\_FOUND)
+
+- If you use a non-existent or unavailable network location as the destination folder, you'll see the error:
+
+    The network name can't be found. 0x80070043 (WIN32: 67 ERROR\_BAD\_NET\_NAME)
+
+- If your server can't connect over TCP port 80 to Microsoft Automatic Update servers, you'll receive the following error:
+
+    A connection with the server could not be established 0x80072efd (INet: 12029 ERROR\_INTERNET\_CANNOT\_CONNECT)
+
+- If your server is unable to reach the Microsoft Automatic Update servers with the DNS name ctldl.windowsupdate.com, you'll receive the following error:
+
+    The server name or address could not be resolved 0x80072ee7 (INet: 12007 ERROR\_INTERNET\_NAME\_NOT\_RESOLVED).
+
+- If you do not use the **-f** switch, and any of the CTL files already exist in the directory, you'll receive a *file* exists error:
+
+    CertUtil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR\_ALREADY\_EXISTS) Certutil: Can't create a file when that file already exists.
+
+- If there is a change in the trusted root certificates, you'll see: "Warning\! Encountered the following no longer trusted roots: \<folder path\>\\\<thumbprint\>.crt. Use "-f -f" options to force the delete of the above ".crt" files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated."
+
 ## Options
 
 This section defines all of the options you're able to specify, based on the command. Each parameter includes information about which options are valid for use.
