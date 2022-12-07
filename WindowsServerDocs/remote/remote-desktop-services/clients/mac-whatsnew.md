@@ -17,10 +17,10 @@ If you encounter any issues, you can contact us by opening the macOS client and 
 
 The following table lists the current versions available for the Public and Beta releases:
 
-| Release | Latest version |
-|---------|----------------|
-| Public  | 10.7.10        |
-| Beta    | 10.8.0         |
+| Release | Latest version | Minimum supported version |
+|---------|----------------|---------------------------|
+| Public  | 10.7.10        | 10.6.0                    |
+| Beta    | 10.8.0         | 10.6.0                    |
 
 ## The macOS beta client
 

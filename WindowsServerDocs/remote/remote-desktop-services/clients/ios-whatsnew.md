@@ -19,10 +19,10 @@ We're committed to making the Remote Desktop client for iOS the best it can be, 
 
 The following table lists the current versions available for the Public and Beta releases:
 
-| Release | Latest version |
-|---------|----------------|
-| Public  | 10.4.4        |
-| Beta    | XX.X.X         |
+| Release | Latest version | Minimum supported version |
+|---------|----------------|---------------------------|
+| Public  | 10.4.4         | 10.4.0                    |
+| Beta    | 10.4.6         | 10.4.0                    |
 
 ## Updates for version 10.4.4
 
