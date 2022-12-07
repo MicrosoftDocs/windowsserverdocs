@@ -345,7 +345,7 @@ The following options were added to Certutil:
 - The `disallowedcertstl.cab` contains the CTLs of untrusted certificates.</br>
 - The `disallowedcert.sst` contains the serialized certificate store, including the untrusted certificates.</br>
 - The `thumbprint.crt` contains the non-Microsoft root certificates. | CertUtil -syncWithWU \\server1\PKI\CTLs |
-| CertUtil [Options] -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism.</br></br>
+CertUtil [Options] -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism.</br></br>
 SSTFile: .sst file to be created. The generated .sst file contains the non_Microsoft root certificates that were downloaded by using the automatic update mechanism. | CertUtil –generateSSTFromWU TRoots.sst |
 
 > [!TIP]
