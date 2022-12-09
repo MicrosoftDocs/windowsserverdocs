@@ -3,15 +3,15 @@ title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
 author: PatAltimore
-ms.author: patricka
-ms.date: 08/29/2022
+ms.author: alalve
+ms.date: 11/22/2022
 ---
 
 # Transport Layer Security (TLS) registry settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
 
-This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the Schannel Security Support Provider (SSP). The registry subkeys and entries covered in this topic help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols.
+This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
 
 > [!CAUTION]
 > This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied.
@@ -20,6 +20,28 @@ This article explains the supported registry setting information for the Windows
 > As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system.
 > When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC).
 > If you must edit the registry, use extreme caution.
+> If you want to only allow TLS 1.2, select only the cipher suites that support TLS 1.2 for the specific platform.
+
+> [!NOTE]
+> Disabling SChannel components via registry settings is not recommended and has been officially deprecated to invoke a particular behavior of cryptographic components.
+
+## SChannel logging
+
+There are eight logging levels for SChannel events saved to the system event log and viewable using Event Viewer. This registry path is stored in **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL** under the **EventLogging** key with a DWORD value set to **1**.
+
+| Decimal or Hex | SChannel logging events |
+|---|---|
+|0|No events|
+|1|Error events|
+|2|Warning events|
+|3|Error and Warning events|
+|4|Informational and Success events|
+|5|Error, Informational, and Success events|
+|6|Warning, Informational, and Success events|
+|7|Error, Warning, Informational and Success events|
+
+> [!NOTE]
+> You must reboot your device after changing the SChannel logging level.
 
 ## CertificateMappingMethods
 
@@ -47,13 +69,13 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 TLS/SSL ciphers should be controlled by configuring the cipher suite order. For details, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order).
 
-For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+For information about default cipher suite orders that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## CipherSuites
 
 Configuring TLS/SSL cipher suites should be done using group policy, MDM or PowerShell, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order) for details.
 
-For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
+For information about default cipher suite orders that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## ClientCacheTime
 
@@ -148,9 +170,48 @@ Applicable versions: All versions beginning with Windows Server 2008 and Windows
 
 Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
 
-## KeyExchangeAlgorithm - Client RSA key sizes
+## KeyExchangeAlgorithm key sizes
 
-This entry controls the client RSA key sizes.
+These entries listed below may not exist in the registry by default and must be manually created. To enable a specific algorithm, create a registry key named **Enabled** in the respective registry path with a DWORD value of **1**. This can also be disabled by setting the DWORD value to **0**. It is _recommended_ to use **2048 bits** minimum for both client and server key bit lengths.
+
+# [Diffie-Hellman](#tab/diffie-hellman)
+
+Use of key exchange algorithms should be controlled by configuring the cipher suite order.
+
+Added in Windows 10, version 1507 and Windows Server 2016.
+
+Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
+
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 1024 bits will be the minimum.
+
+To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, then a maximum is not enforced.
+
+To specify the Diffie-Hellman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 2048 bits will be the default.
+
+# [Elliptic Curve Diffie-Hellman](#tab/ecdh)
+
+Use of key exchange algorithms should be controlled by configuring the cipher suite order.
+
+Added in Windows 10, version 1507 and Windows Server 2016.
+
+Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\ECDH**
+
+To specify a minimum supported range of ECDH key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+
+To specify a maximum supported range of ECDH key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+
+To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+
+# [Client RSA](#tab/client-rsa)
 
 Use of key exchange algorithms should be controlled by configuring the cipher suite order.
 
@@ -159,39 +220,19 @@ Added in Windows 10, version 1507 and Windows Server 2016.
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS**
 
 To specify a minimum supported range of RSA key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
-This entry does not exist in the registry by default.
 After you have created the entry, change the DWORD value to the desired bit length.
 If not configured, 1024 bits will be the minimum.
 
 To specify a maximum supported range of RSA key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-This entry does not exist in the registry by default.
 After you have created the entry, change the DWORD value to the desired bit length.
 If not configured, then a maximum is not enforced.
 
-## KeyExchangeAlgorithm - Diffie-Hellman key sizes
+---
 
-This entry controls the Diffie-Hellman key sizes.
+To learn more about TLS/SSL cipher suite cryptographic algorithms, see:
 
-Use of key exchange algorithms should be controlled by configuring the cipher suite order.
-
-Added in Windows 10, version 1507 and Windows Server 2016.
-
-Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
-
-To specify a minimum supported range of Diffie-Helman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, 1024 bits will be the minimum.
-
-To specify a maximum supported range of Diffie-Helman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, then a maximum is not enforced.
-
-To specify the Diffie-Helman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, 2048 bits will be the default.
+- [Cipher Suites in TLS/SSL (SChannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel)
+- [Demystifying SChannel](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/demystifying-schannel/ba-p/259233) (blog)
 
 ## MaximumCacheSize
 
@@ -212,7 +253,7 @@ This entry controls the maximum allowed size of fragmented TLS handshake message
 Messages larger than the allowed size will not be accepted, and the TLS handshake will fail.
 These entries do not exist in the registry by default.
 
-When you set the value to 0x0, fragmented messages are not processed and will cause the TLS handshake to fail.
+When you set the value to **0x0**, fragmented messages are not processed and will cause the TLS handshake to fail.
 This makes TLS clients or servers on the current machine non-compliant with the TLS RFCs.
 
 The maximum allowed size can be increased up to 2^24-1 bytes.
@@ -223,12 +264,12 @@ Added in Windows 7 and Windows Server 2008 R2: An update that enables Internet E
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Messaging**
 
 To specify a maximum allowed size of fragmented TLS handshake messages that the TLS client will accept, create a **MessageLimitClient** entry.
-After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be 0x8000 bytes.
+After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be **0x8000** bytes.
 
 To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there is no client authentication, create a **MessageLimitServer** entry. After you have created the entry, change the DWORD value to the desired bit length.
-If not configured, the default value will be 0x4000 bytes.
+If not configured, the default value will be **0x4000** bytes.
 
-To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there is client authentication, create a **MessageLimitServerClientAuth** entry. After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be 0x8000 bytes.
+To specify a maximum allowed size of fragmented TLS handshake messages that the TLS server will accept when there is client authentication, create a **MessageLimitServerClientAuth** entry. After you have created the entry, change the DWORD value to the desired bit length. If not configured, the default value will be **0x8000** bytes.
 
 ## SendTrustedIssuerList
 
@@ -281,23 +322,23 @@ The system administrator can override the default (D)TLS and SSL protocol versio
 
 These version-specific subkeys can be created under the following registry path:
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
+**HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols**
 
 For example, here are some valid registry paths with version-specific subkeys:
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client
+- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client**
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server
+- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server**
 
-HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client
+- **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client**
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with a non-zero value, and a DWORD registry value named "DisabledByDefault" with a value of zero, under the corresponding version-specific subkey.
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with an entry value of "**1**", and a DWORD registry value named "DisabledByDefault" with a value of "**0**", under the corresponding version-specific subkey.
 
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
 ![Screenshot of Set TLS 1.0 client-side to enabled in Windows Server registry setting.](images/tls-10-client-enabled.png)
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" and "DisabledByDefault" with a non-zero value under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" and "DisabledByDefault" with a value of either "**0**" or "**1**" under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
 
 ![Screenshot of Override disabled by default state in Windows Server registry setting for TLS 1.0 server-side.](images/tls-10-server-disabled.png)
 
@@ -312,4 +353,4 @@ Switching a (D)TLS or SSL protocol version to **Disabled by default** or **Disab
 
 Once the (D)TLS or SSL protocol version settings have been modified, they take effect on connections established using credential handles opened by subsequent [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, an application or service restart may be required.
 
-Please note that these registry settings only apply to Schannel SSP and do not affect any third-party (D)TLS and SSL implementations that may be installed on the system.
+These registry settings only apply to Schannel SSP and do not affect any third-party (D)TLS and SSL implementations that may be installed on the system.
