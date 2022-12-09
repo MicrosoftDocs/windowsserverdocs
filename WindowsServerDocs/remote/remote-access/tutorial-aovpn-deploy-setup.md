@@ -16,15 +16,15 @@ In this tutorial, you'll learn how to deploy Always On VPN connections for remot
 
 1. The Windows VPN client uses a public DNS server to perform a name resolution query for the IP address of the VPN gateway.
 
-2. The VPN client uses the IP address returned by DNS to send a connection request to the VPN gateway.
+1. The VPN client uses the IP address returned by DNS to send a connection request to the VPN gateway.
 
-3. The VPN server is also configured as a Remote Authentication Dial-In User Service (RADIUS) Client; the VPN RADIUS Client sends the connection request to the NPS server for connection request processing.
+1. The VPN server is also configured as a Remote Authentication Dial-In User Service (RADIUS) Client; the VPN RADIUS Client sends the connection request to the NPS server for connection request processing.
 
-4. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
+1. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
 
-5. The NPS server forwards an Access-Accept or Access-Deny response to the VPN server.
+1. The NPS server forwards an Access-Accept or Access-Deny response to the VPN server.
 
-6. The connection is initiated or terminated based on the response that the VPN server received from the NPS server.
+1. The connection is initiated or terminated based on the response that the VPN server received from the NPS server.
 
 ## Prerequisites
 
@@ -39,24 +39,21 @@ To complete the steps in this tutorial,
 
 ## Create the Domain Controller
 
-1. Install Windows Server one of the machines. This machine will be the comain controller and will run the following:
-     - Certificate Authority server
-     - Network Policy server
-     - DNS server
+1. Install Windows Server the machines that will run the domain controller.
 
 1. Install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) on the Windows Server. For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#to-install-ad-ds-by-using-server-manager).
 
-1. Promote the Windows Server to be a domain controller. For information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage)
+1. Promote the Windows Server to domain controller. For information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage)
 
 ## Create the VPN server
 
-1. Install Windows Server on the second machine. This machine will be the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
-
-1. On the second Windows Server machine, install the DirectAccess and VPN(RAS) role service to create the VPN server.
-
-1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to set a Shared Secret for NPS and VPN server communications. You'll want to copy the Shared Secret for later use in this tutorial.
+1. Install Windows Server the machine that will run the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
 
 1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
+
+1. Install the DirectAccess and VPN(RAS) role service to create the VPN server.
+
+1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to set a Shared Secret for NPS and VPN server communications. You'll want to copy the Shared Secret for later use in this tutorial.
 
 1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 
