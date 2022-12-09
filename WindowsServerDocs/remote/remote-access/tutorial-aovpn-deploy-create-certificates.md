@@ -8,7 +8,7 @@ author: anaharris-ms
 ms.date: 12/02/2022
 ---
 
-# Deploy Always On VPN: Configure Certification Authority templates
+# Deploy Always On VPN: Configure Certificate Authority templates
 
 In this part of the Deploy Always On VPN tutorial, you'll create certificate templates and enroll or validate certificates for the Active Directory (AD) groups that you created in [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md):
 
@@ -27,7 +27,7 @@ You'll create the following templates:
 
 Before attempting the steps in this tutorial, you'll need to complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
 
-### Create the user authentication template
+## Create the user authentication template
 
 1. On the CA server, open the Certification Authority snap-in.
 
@@ -91,7 +91,7 @@ Before attempting the steps in this tutorial, you'll need to complete [Deploy Al
 
 14. Close the the Certification Authority snap-in.
 
-### Create the VPN Server authentication template
+## Create the VPN Server authentication template
 
 1. On the CA, open the Certification Authority snap-in.
 
@@ -156,7 +156,7 @@ Before attempting the steps in this tutorial, you'll need to complete [Deploy Al
 
 15. Close the Certification Authority snap-in.
 
-### Create the NPS Server authentication template
+## Create the NPS Server authentication template
 
 1. On the CA, open the Certification Authority snap-in.
 

@@ -79,9 +79,7 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. Select **Deploy VPN only** to open the Routing and Remote Access Microsoft Management Console (MMC).
 
-1. Right-click the VPN server, then select **Configure and Enable Routing and Remote Access**.
-
-   The Routing and Remote Access Server Setup Wizard opens.
+1. Right-click the VPN server, and then select **Configure and Enable Routing and Remote Access** to open the Routing and Remote Access Server Setup Wizard.
 
 1. In the Welcome to the Routing and Remote Access Server Setup Wizard, select **Next**.
 
@@ -163,6 +161,14 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
     2. Select **OK**.
 
+1. Select **WAN Miniport (IKEv2)** and select **Configure** to open the Configure Device - WAN Miniport (IKEv2) dialog box.
+
+    1. Ensure that the **Remote access connections (inbound only)** and  **Demand-dial routing connections (inbound and outbound)** are selected.
+
+    1. In **Maximum ports**, enter the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
+
+    1. Select **OK**.
+
 1. Select **WAN Miniport (L2TP)** and select **Configure** to open the Configure Device -  - WAN Miniport (L2TP) dialog box.
 
     1. Clear both  **Remote access connections (inbound only)**  and **Demand-dial routing connections (inbound and outbound)**.
@@ -174,12 +180,6 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
     1. Clear both  **Remote access connections (inbound only)**  and **Demand-dial routing connections (inbound and outbound)**.
 
     2. Select **OK**.
-
-1. Select **WAN Miniport (IKEv2)** and select **Configure** to open the Configure Device - WAN Miniport (IKEv2) dialog box.
-
-    1. Ensure that the **Remote access connections (inbound only)** and  **Demand-dial routing connections (inbound and outbound)** are selected.
-
-    2. In **Maximum ports**, enter the number of ports to match the maximum number of simultaneous VPN connections that you want to support.
 
 1. If prompted, select **Yes** to confirm restarting the server and select **Close** to restart the server.
 

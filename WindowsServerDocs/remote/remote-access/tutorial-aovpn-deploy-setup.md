@@ -33,50 +33,45 @@ To complete the steps in this tutorial,
 - You'll need access to three physical computers or virtual machines (VMs).
 - Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
-<!-- Editorial note: Is this still true? -->
 >[!IMPORTANT]
->Don't attempt to deploy Remote Access on a VM in Microsoft Azure. Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
+>Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## Create the Domain Controller
 
-1. Install Windows Server the machines that will run the domain controller.
+1. Install Windows Server on the machine that will run the domain controller.
 
 1. Install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) on the Windows Server. For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#to-install-ad-ds-by-using-server-manager).
 
 1. Promote the Windows Server to domain controller. For information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage)
 
-## Create the VPN server
-
-1. Install Windows Server the machine that will run the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
-
-1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
-
-1. Install the DirectAccess and VPN(RAS) role service to create the VPN server.
-
-1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to set a Shared Secret for NPS and VPN server communications. You'll want to copy the Shared Secret for later use in this tutorial.
-
-1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
-
 ## Create the NPS server
 
-1. On the Domain Controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
+1. On the domain controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
 1. Register the NPS Server in Active Directory. For detailed information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
 
 1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
-## Create the Test Client
+## Create the VPN server
 
-1. Install Windows 10+ or Windows Server on the third machine. This machine will be a VPN client test machine.
+1. Install Windows Server on the machine that will run the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
 
-1. On the third machine, make sure that Windows 10+ or Windows Server is installed.
+1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
-1. Create a user and add them to the local Administrators' Group.
+1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
 
-1. Add to the user to the VPN Users group.
+>[!IMPORTANT]
+> Copy and save the shared secret for NPS and VPN server communications, as you'll need it for later use in this tutorial.
 
-<!-- Should I add more info here about DNS -->
-1. Ensure that the test client can connect to the VPN server. 
+1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
+
+## Create the test client
+
+1. Install Windows 10+ or Windows Server on the machine that will be your test client.
+
+1. Join the text client to your domain.
+
+1. Add the user to the VPN Users group.
 
 ## Configure Active Directory
 
@@ -216,8 +211,6 @@ In this section, you'll add three new Active Directory (AD) groups: the VPN User
 
 1. On the NPS server, open Windows PowerShell.
 
-1. At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
-
 ### Configure VPN server as a RADIUS client
 
 1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
@@ -236,7 +229,7 @@ In this section, you'll add three new Active Directory (AD) groups: the VPN User
 
     1. Ensure that **Manual** is selected.
 
-    2. Enter the strong text string that you entered on the VPN server.
+    2. Enter the secret that you created in the [Create the VPN server section](#create-the-vpn-server).
 
     3. For **Confirm shared secret**, re-enter the shared secret.
 
