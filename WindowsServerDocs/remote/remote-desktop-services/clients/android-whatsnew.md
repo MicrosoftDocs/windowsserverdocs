@@ -5,11 +5,29 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/29/2022
+ms.date: 12/09/2022
 ---
 # What's new in the Android client
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Latest client versions
+
+The following table lists the current versions available for the Public and Beta releases:
+
+| Release | Latest version      |
+|---------|---------------------|
+| Public  | 10.0.15.1207        |
+| Beta    | 10.0.15.1207        |
+
+## Updates for version 10.0.15.1207
+
+Date published: October 31, 2022
+
+Here's what's changed in the latest version of the Android client:
+
+- Added support for camera redirection.
+- Bug fixes and improvements.
 
 ## Updates for version 10.0.14.1182
 
