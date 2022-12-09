@@ -6,12 +6,15 @@ ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/01/2023
 ---
 
 # msdt
 
 Invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
+
+> [!Note] 
+> The Microsoft Support Diagnostic Tool (MSDT) is deprecated. For more information, see [Deprecated Windows features](/windows/whats-new/deprecated-features).
 
 ## Syntax
 
