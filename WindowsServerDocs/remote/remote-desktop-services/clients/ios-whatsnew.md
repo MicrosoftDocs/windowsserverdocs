@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 12/07/2022
+ms.date: 12/09/2022
 ---
 # What's new in the iOS client
 
@@ -15,14 +15,14 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
 
-## Supported client versions
+## Latest client versions
 
 The following table lists the current versions available for the Public and Beta releases:
 
-| Release | Latest version | Minimum supported version |
-|---------|----------------|---------------------------|
-| Public  | 10.4.4         | 10.4.0                    |
-| Beta    | 10.4.6         | 10.4.0                    |
+| Release | Latest version |
+|---------|----------------|
+| Public  | 10.4.4         |
+| Beta    | 10.4.6         |
 
 ## Updates for version 10.4.4
 
