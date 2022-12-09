@@ -11,25 +11,17 @@ ms.date: 12/05/2022
 
 # Certificates and trust
 
-Applies To: Windows Server (All supported versions)
+Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
 
-Trusted root certificates are used by Windows operating systems and applications as a reference for which public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Trusted root certificates functionality works in both connected and disconnected environments. In disconnected environments, automatic update functionality exists to help keep your trusted root certificates up to date.
-
-The list of trusted root certificates is stored in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL). There are CTLs for both trusted and untrusted root certificates. The list of trusted root certificates is called a Trusted CTL (untrusted root certificates are certificates that are publicly known to be fraudulent). Client computers access the Windows Update site by using the automatic update mechanism to update the CTL. This automatic update functionality of trusted roots lists works in all supported versions of Windows Server when working in disconnected environments.
-
-Individual manual software updates to enable automatic update functionality are available for Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista. You can take advantage of the automatic update functionality discussed in this document by manually installing the appropriate software updates.
+Trusted root certificates are used by Windows operating systems and applications as a reference for which public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Trusted root certificates functionality works across all environments, whether connected or disconnected.
 
 The Microsoft Root Certificate Program distributes trusted root certificates within Windows operating systems. In Windows, trusted root certificates are stored in the Trusted Root Certification Authorities certificate. Applications in Windows reference this certificate when determining what public key infrastructure (PKI) hierarchies and digital certificates are trustworthy.
 
-Client computers access the Windows Update site by using the automatic update mechanism to update both trusted and untrusted CTLs.
-
-Windows Server 2012 R2, Windows Server 2012 and Windows 8.1, and Windows 8 operating systems feature automatic daily update functionality that includes downloads of certificate trust lists. Windows Server 2012 R2 and Windows 8.1 offer additional functionality to control how your CTLs are updated.
-
-Individual manual software updates are available for Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista. You can take advantage of the automatic update functionality discussed in this document by manually installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
+The list of trusted root certificates is stored in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of CTLs. The list of trusted root certificates is called a Trusted CTL (untrusted root certificates are certificates that are publicly known to be fraudulent). Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism discussed in this article. You can take advantage of the automatic update functionality by manually installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
 ## Automatic certificate trust list updates
 
-Windows Server includes automatic update functionality to address the challenges for disconnected environments. Functionality include:
+Automatic update functionality benefits include:
 
 - **Registry settings for storing CTLs** New settings enable changing the location for uploading trusted or untrusted CTLs from the Windows Update site to a shared location in an organization. See [Registry Settings Modified](configure-trusted-roots-disallowed-certificates.md#registry-settings-modified).
 
@@ -39,7 +31,9 @@ Windows Server includes automatic update functionality to address the challenges
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable; you can use the automatic update mechanism to download only the untrusted CTLs and manage your own list of trusted CTLs. For more information, see [Registry settings modified](configure-trusted-roots-disallowed-certificates.md#registry-settings-modified).
 
-See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
+Automatic update functionality also can be disabled if necessary. See [Workflow: PKI Client: Certificate Root Update Program - Overview (visualstudio.com)](https://supportability.visualstudio.com/WindowsDirectoryServices/_wiki/wikis/WindowsDirectoryServices/414078/Workflow-PKI-Client-Certificate-Root-Update-Program) for more information.
+
+ See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
 ## Related content
 

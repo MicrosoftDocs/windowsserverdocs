@@ -1,6 +1,6 @@
 ---
-title: Configure trusted roots and disallowed certificates
-description: Guidance on how to configure individual software updates for automatic daily updating of certificate trust lists and other functionality
+title: Configure Root Certificate Updates
+description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs) and other functionality
 ms.service: 
 ms.topic: how-to 
 author: gswashington
@@ -10,28 +10,17 @@ ms.date: 12/05/2022
 
 # Configure trusted roots and disallowed certificates
 
-Applies To: Windows Server (All supported versions)
+Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
 
-This article contains guidance intended to help administrators take advantage of automatic update functionality in all supported versions of Windows Server when working in disconnected environments.
-
-Windows Server 2012 R2, Windows Server 2012 and Windows 8.1, and Windows 8 operating systems feature automatic daily update functionality that includes downloads of certificate trust lists. Windows Server 2012 R2 and Windows 8.1 offer additional functionality to control how your CTLs are updated.
-
-Individual manual software updates to enable automatic update functionality are available for Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista. You can take advantage of the automatic update functionality discussed in this document by manually installing the appropriate software updates.
+This article contains guidance intended to help administrators install automatic daily update functionality of Certificate Trust Lists (CTLs). Servers and clients access the Windows Update site to update CTLs using the automatic daily Root Certificate Updates mechanism discussed in this article.
 
 See [Certificates and trust](certificates-and-trust.md) for for more detailed knowledge on how the Microsoft Root Certificate Program works to distribute trusted root certificates automatically across Windows operating systems.
 
-Prior to Windows Server 2012 R2 and Windows 8.1, the same registry setting controlled updates for trusted and untrusted root certificates; you could not selectively enable or disable one or the other. This presented several challenges, including:
-
-- **Conflicting recommendations regarding automatic updates for trusted and untrusted CTLs** Although disabling automatic updates for trusted CTLs was recommended if you managed your lists of trusted root certificates manually (in disconnected or connected environments), disabling automatic updates of untrusted CTLs was *not* recommended.
-
-- **No method to view and extract only the trusted root certificates in a trusted CTL** This missing functionality made managing a customized list of trusted certificates a difficult task.
-
 ## Prerequisites
 
-- Client machine with internet access (to run certutil)
-- File server or web server to store it on
+- Client machine with internet access to run certutil
+- File server or web server for file storage
 - AD Group policy or MDM solution to deploy configuration settings to your client
-- Admin machine to generate trusted roots
 
 ## Software update description
 
