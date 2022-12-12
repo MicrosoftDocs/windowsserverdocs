@@ -46,7 +46,7 @@ In Windows 7 and Windows Server 2008 R2, disabling SMBv2 deactivates the follow
 
 The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008, while the SMBv3 protocol was introduced in Windows 8 and Windows Server 2012. For more information about SMBv2 and SMBv3 capabilities, see the following articles:
 
-- [Server Message Block overview](/previous-versions/windows/t-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11))
+- [Server Message Block overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11))
 - [What's New in SMB](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff625695(v=ws.10))
 
 ## How to remove SMBv1 via PowerShell
