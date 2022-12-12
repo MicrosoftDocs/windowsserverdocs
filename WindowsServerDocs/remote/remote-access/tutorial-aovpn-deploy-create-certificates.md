@@ -25,7 +25,9 @@ You'll create the following templates:
 
 ## Prerequisites
 
-Before attempting the steps in this tutorial, you'll need to complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
+1. Complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
+
+1. On the domain controller, install the Certificate Authority (CA). For detailed information on how to install CA, see [Install the Certification Authority](/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
 
 ## Create the user authentication template
 
