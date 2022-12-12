@@ -70,9 +70,7 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. On the VPN server, in Server Manager, select the **Notifications** flag.
 
-1. In the **Tasks** menu, select **Open the Getting Started Wizard**
-
-   The Configure Remote Access wizard opens.
+1. In the **Tasks** menu, select **Open the Getting Started Wizard** to open the Configure Remote Access wizard.
 
    >[!NOTE]
    >The Configure Remote Access wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
@@ -183,6 +181,6 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. If prompted, select **Yes** to confirm restarting the server and select **Close** to restart the server.
 
- Next steps
+ ## Next steps
 
 - [Tutorial: Deploy Always On VPN](tutorial-aovpn-deploy-setup.md)

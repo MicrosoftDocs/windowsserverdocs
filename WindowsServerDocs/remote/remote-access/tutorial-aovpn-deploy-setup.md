@@ -69,9 +69,7 @@ To complete the steps in this tutorial,
 
 1. Install Windows 10+ or Windows Server on the machine that will be your test client.
 
-1. Join the text client to your domain.
-
-1. Add the user to the VPN Users group.
+1. Join the test client to your domain. For information on how to join a computer to a domain, see [To join a computer to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
 ## Configure Active Directory
 
@@ -93,7 +91,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
     2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment**. Select **Properties**.
 
-    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, for **Configuration Model**, select **Enabled**.
+    3. On the **Certificate Services Client – Auto-Enrollment Properties** dialog box, for **Configuration Model**, select *Enabled*.
 
     4. Select **Renew expired certificates, update pending certificates, and remove revoked certificates** and **Update certificates that use certificate templates**.
 
@@ -105,7 +103,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
     2. In the details pane, right-click **Certificate Services Client – Auto-Enrollment** and select **Properties**.
 
-    3. On the Certificate Services Client – Auto-Enrollment Properties dialog box, in **Configuration Model**, select **Enabled**.
+    3. On the **Certificate Services Client – Auto-Enrollment Properties** dialog box, in **Configuration Model**, select *Enabled*.
 
     4. Select **Renew expired certificates, update pending certificates, and remove revoked certificates** and **Update certificates that use certificate templates**.
 
@@ -115,15 +113,29 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 7. Close Group Policy Management.
 
+### Create Active Directory test user
+
+In this section, you'll add a test user who will be able to logon to the domain using Always On VPN.
+
+1. On the domain controller, open Active Directory Users and Computers.
+
+1. Under your domain, right-click **Users**. Select **New**.  For **User logon name**, enter any logon name. Select **Next**.
+
+1. Choose a password for the user.
+
+1. Deselect **User must change password at next logon**. Select **Password never expires**.
+
+1. Select **Finish**.
+
 ### Create Active Directory groups
 
-In this section, you'll add three new Active Directory (AD) groups: the VPN Users group, the VPN Servers group, and the NPS Servers group. Each one of these groups will contain the servers that are allowed to request certificates from the CA.
+In this section, you'll add three new Active Directory (AD) groups: the VPN Users group, the VPN Servers group, and the NPS Servers group.
 
 **Create the VPN Users group:**
 
-1. On a domain controller, open Active Directory Users and Computers.
+1. On the domain controller, open Active Directory Users and Computers.
 
-2. Right-click a container or organizational unit (for example, *Users*), select **New**, then select **Group**.
+2. Under your domain, right-click **Users**. Select **New**, then select **Group**.
 
 3. In **Group name**, enter **VPN Users**, then select **OK**.
 
@@ -131,7 +143,7 @@ In this section, you'll add three new Active Directory (AD) groups: the VPN User
 
 5. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
 
-6. On the Select Users dialog box, add all the users who need VPN access and select **OK**.
+6. On the Select Users dialog box, add the test user who you created in [Create Active Directory test user](#create-active-directory-test-user) and select **OK**.
 
 7. Close Active Directory Users and Computers.
 
@@ -139,7 +151,7 @@ In this section, you'll add three new Active Directory (AD) groups: the VPN User
 
 1. On a domain controller, open Active Directory Users and Computers.
 
-2. Right-click a container or organizational unit, select **New**, then select **Group**.
+2. Under your domain, right-click **Computers**. Select **New**, then select **Group**.
 
 3. In **Group name**, enter **VPN Servers**, then select **OK**.
 
@@ -149,27 +161,57 @@ In this section, you'll add three new Active Directory (AD) groups: the VPN User
 
 6. select **Object Types**, select the **Computers** check box, then select **OK**.
 
-7. In **Enter the object names to select**, enter the names of your VPN servers, then select **OK**.
+7. In **Enter the object names to select**, enter the computer name of the VPN server you created in [Create the VPN server](#create-the-vpn-server). Select **OK**.
 
-8. Select **OK** to close the VPN Servers Properties dialog box.
+8. Repeat the previous steps for the NPS Servers group.
 
-9. Repeat the previous steps for the NPS Servers group.
-
-10. Close Active Directory Users and Computers.
+9. Close Active Directory Users and Computers.
 
 ## Configure NPS RADIUS server and client
 
+### Configure VPN server as a RADIUS client
+
+1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
+
+1. Right-click **RADIUS Clients** and select **New** to open the New RADIUS Client dialog box.
+
+1. Verify that the **Enable this RADIUS client** check box is selected.
+
+1. In **Friendly name**, enter a display name for the VPN server.
+
+1. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
+
+    If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+
+1. In **Shared secret**:
+
+    1. Ensure that **Manual** is selected.
+
+    2. Enter the secret that you created in the [Create the VPN server section](#create-the-vpn-server).
+
+    3. For **Confirm shared secret**, re-enter the shared secret.
+
+1. Select **OK**. The VPN Server should appear in the list of RADIUS clients configured on the NPS server.
+
+>[!IMPORTANT]
+
+>If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
+>
+>- Ports UDP1812, UDP1813, UDP1645, and UDP1646
+>
+>If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
+
 ### Configure NPS server as a RADIUS server
 
-1. On the Domain Controller, open the NPS console.
+1. In the NPS console, select **NPS(Local)**.
 
-1. In the NPS console, in Standard Configuration, ensure that **RADIUS server for Dial-Up or VPN Connections** is selected.
+1. In Standard Configuration, ensure that **RADIUS server for Dial-Up or VPN Connections** is selected.
 
 1. Select **Configure VPN or Dial-Up** to open the Configure VPN or Dial-Up wizard.
 
 1. Select **Virtual Private Network (VPN) Connections**, and select **Next**.
 
-1. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in the previous section. For example, if your VPN server NetBIOS name is RAS1, select **RAS1**.
+1. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in [Configure VPN server as a RADIUS client](#configure-vpn-server-as-a-radius-client).
 
 1. Select **Next**.
 
@@ -203,45 +245,9 @@ In this section, you'll add three new Active Directory (AD) groups: the VPN User
 
 1. For **Specify Encryption Settings**, select **Next**. Do not make any changes.
 
-    These settings apply only to Microsoft Point-to-Point Encryption (MPPE) connections, which this scenario doesn't support.
-
 1. For **Specify a Realm Name**, select **Next**.
 
 1. Select **Finish** to close the wizard.
-
-1. On the NPS server, open Windows PowerShell.
-
-### Configure VPN server as a RADIUS client
-
-1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
-
-1. Right-click **RADIUS Clients** and select **New** to open the New RADIUS Client dialog box.
-
-1. Verify that the **Enable this RADIUS client** check box is selected.
-
-1. In **Friendly name**, enter a display name for the VPN server.
-
-1. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
-
-    If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
-
-1. In **Shared secret**:
-
-    1. Ensure that **Manual** is selected.
-
-    2. Enter the secret that you created in the [Create the VPN server section](#create-the-vpn-server).
-
-    3. For **Confirm shared secret**, re-enter the shared secret.
-
-1. Select **OK**. The VPN Server appears in the list of RADIUS clients configured on the NPS server.
-
->[!IMPORTANT]
-
->If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
->
->- Ports UDP1812, UDP1813, UDP1645, and UDP1646
->
->If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
 ## Next steps
 
