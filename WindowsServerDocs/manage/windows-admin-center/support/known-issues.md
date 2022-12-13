@@ -349,6 +349,8 @@ The cluster deployment wizard in Windows Admin Center version 2007 doesn't provi
 ## Azure services
 
 ### Azure login and gateway registration
+When attempting to register your Windows Admin Center gateway in the Azure China or Azure US Gov cloud domains in version 2211, you may be redirected to the Azure Global sign-in experience. To work around this issue, please use an earlier version of Windows Admin Center.    
+   
 In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
 
 * Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
