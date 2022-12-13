@@ -5,13 +5,22 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/02/2022
+ms.date: 12/09/2022
 ---
 # What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can contact us by opening the macOS client and going to **Help** > **Submit Feedback**.
+
+## Latest client versions
+
+The following table lists the current versions available for the Public and Beta releases:
+
+| Release | Latest version |
+|---------|----------------|
+| Public  | 10.7.10        |
+| Beta    | 10.8.0         |
 
 ## The macOS beta client
 
