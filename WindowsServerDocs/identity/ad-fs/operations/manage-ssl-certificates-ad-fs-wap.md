@@ -65,6 +65,7 @@ dir Cert:\LocalMachine\My\
 * The Set-AdfsSslCertificate cmdlet has to be run only on the primary server. The primary server has to be running Server 2016 and the Farm Behavior Level should be raised to 2016.
 * The Set-AdfsSslCertificate cmdlet will use PowerShell Remoting to configure the other AD FS servers, make sure port 5985 (TCP) is open on the other nodes.
 * The Set-AdfsSslCertificate cmdlet will grant the adfssrv principal read permissions to the private keys of the SSL certificate. This principal represents the AD FS service. It's not necessary to grant the AD FS service account read access to the private keys of the SSL certificate.
+* When the logged in account executing the certificate replacement is a member of the 'Protected Users' Group, the procedure may fail with an Access Denied error and generate an event with the ID 4625. This is expected as the Group blocks NTLM authentication for the member accounts. To circumvent this, remove the account from the group and execute the procedure again.
 
 ### Replacing the SSL certificate for AD FS running in alternate TLS binding mode
 When configured in alternate client TLS binding mode, AD FS performs device certificate authentication on port 443 and user certificate authentication on port 443 as well, on a different hostname. The user certificate hostname is the AD FS hostname pre-pended with "certauth", for example "certauth.fs.contoso.com".
