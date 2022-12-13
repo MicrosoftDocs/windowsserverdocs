@@ -20,7 +20,9 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 ## General
 > [!NOTE]
-> Self-signed certificiates accessed on "https://localhost:[port]" currently cause Windows Admin Center to be blocked on both Microsoft Edge and Google Chrome browsers. When this happens, you may see an error explaining that your connection is not private. Update your Windows Admin Center installation with a publicly verified certificate to fix this issue.
+> Self-signed certificiates accessed on "https://localhost:[port]" may cause Windows Admin Center to be blocked on both Microsoft Edge and Google Chrome browsers. When this happens, you may see an error explaining that your connection is not private. Update your Windows Admin Center installation with a publicly verified certificate to fix this issue.
+
+- Using certain versions of extensions with older versions of Windows Admin Center may result in icons not displaying properly. To fix this issue, please upgrade to the latest build of Windows Admin Center. 
 
 - In the 1910.2 release of Windows Admin Center, you may not be able to connect to Hyper-V servers on specific hardware. If you are blocked on this issue, [download our previous build](https://aka.ms/wacprevious).
 
