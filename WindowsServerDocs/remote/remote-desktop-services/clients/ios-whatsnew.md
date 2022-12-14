@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 12/09/2022
+ms.date: 12/14/2022
 ---
 # What's new in the iOS client
 
@@ -21,8 +21,14 @@ The following table lists the current versions available for the Public and Beta
 
 | Release | Latest version |
 |---------|----------------|
-| Public  | 10.4.4         |
+| Public  | 10.4.5         |
 | Beta    | 10.4.6         |
+
+## Updates for version 10.4.5
+
+Date published: November 2, 2022
+
+In this release, we fixed a WebSocket transport bug that affected some Azure Virtual Desktop deployments. We also addressed accessibility compliance issues.
 
 ## Updates for version 10.4.4
 
