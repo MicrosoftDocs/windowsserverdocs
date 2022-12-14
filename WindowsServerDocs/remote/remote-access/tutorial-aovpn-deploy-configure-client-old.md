@@ -11,6 +11,87 @@ author: anaharris-ms
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
+In this part of the Deploy Always On VPN tutorial, you'll learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
+
+You can configure the Always On VPN client through PowerShell, Microsoft Endpoint Configuration Manager, or Intune. All three require an XML VPN profile to configure the appropriate VPN settings. Automating PowerShell enrollment for organizations without Configuration Manager or Intune is possible.
+
+>[!NOTE]
+>Group Policy does not include administrative templates to configure the Windows 10+ Remote Access Always On VPN client.  However, you can use logon scripts.
+
+>[!NOTE]
+>Auto-triggered VPN connections will not work if folder redirection for %appdata% (C:\Users\username\AppData\Roaming) is enabled. Either folder redirection must be disabled for %appdata%, or the auto-triggered VPN profile must be deployed in system context, to change the path in which the rasphone.pbk file is stored.
+
+## ProfileXML overview
+
+ProfileXML is a URI node within the VPNv2 Configuration Service Provider (CSP). Rather than configuring each VPNv2 CSP node individually, such as triggers, route lists, and authentication protocols, use this node to configure a Windows 10+ VPN client by delivering all the settings as a single XML block to a single CSP node. The ProfileXML schema matches the schema of the VPNv2 CSP nodes almost identically, but some terms are slightly different.
+
+You use ProfileXML in all the delivery methods this deployment describes, including Windows PowerShell, Microsoft Endpoint Configuration Manager, and Intune. There are two ways to configure the ProfileXML VPNv2 CSP node in this deployment:
+
+- **OMA-DM**. One way is to use an MDM provider using OMA-DM, as discussed earlier in the section [VPNv2 CSP nodes](vpn/always-on-vpn-technology-overview.md#vpnv2-csp-nodes). Using this method, you can easily insert the VPN profile configuration XML markup into the ProfileXML CSP node when using Intune.
+
+- **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile when using Windows PowerShell and Configuration Manager.
+
+Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](/windows/client-management/mdm/vpnv2-profile-xsd).
+
+Below you find each of the required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
+
+[!INCLUDE [important-lower-case-true-include](includes/important-lower-case-true-include.md)]
+
+**Connection type:** Native IKEv2
+
+ProfileXML element:
+
+```xml
+<NativeProtocolType>IKEv2</NativeProtocolType>
+```
+
+**Routing:** Split tunneling
+
+ProfileXML element:
+
+```xml
+<RoutingPolicyType>SplitTunnel</RoutingPolicyType>
+```
+
+**Name resolution:** Domain Name Information List and DNS suffix
+
+ProfileXML elements:
+
+```xml
+<DomainNameInformation>
+<DomainName>.corp.contoso.com</DomainName>
+<DnsServers>10.10.1.10,10.10.1.50</DnsServers>
+</DomainNameInformation>
+
+<DnsSuffix>corp.contoso.com</DnsSuffix>
+```
+
+**Triggering:** Always On and Trusted Network Detection
+
+ProfileXML elements:
+
+```xml
+<AlwaysOn>true</AlwaysOn>
+<TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection>
+```
+
+**Authentication:** PEAP-TLS with TPM-protected user certificates
+
+ProfileXML elements:
+
+```xml
+<Authentication>
+<UserMethod>Eap</UserMethod>
+<Eap>
+<Configuration>...</Configuration>
+</Eap>
+</Authentication>
+```
+
+You can use simple tags to configure some VPN authentication mechanisms. However, EAP and PEAP are more involved. The easiest way to create the XML markup is to configure a VPN client with its EAP settings, and then export that configuration to XML.
+
+For more information about EAP settings, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
+
 ## Manually create a template connection profile
 
 In this step, you use Protected Extensible Authentication Protocol (PEAP) to secure communication between the client and the server. Unlike a simple user name and password, this connection requires a unique EAPConfiguration section in the VPN profile to work.

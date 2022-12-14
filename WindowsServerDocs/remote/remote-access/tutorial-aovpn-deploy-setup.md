@@ -74,6 +74,20 @@ To complete the steps in this tutorial,
 
 ## Configure Active Directory
 
+### Create Active Directory test user
+
+In this section, you'll add a test user who will be able to logon to the domain using Always On VPN.
+
+1. On the domain controller, open Active Directory Users and Computers.
+
+1. Under your domain, right-click **Users**. Select **New**.  For **User logon name**, enter any logon name. Select **Next**.
+
+1. Choose a password for the user.
+
+1. Deselect **User must change password at next logon**. Select **Password never expires**.
+
+1. Select **Finish**.
+
 ### Create an Active Directory Group Policy
 
 In this section, you'll create a Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows the NPS server to request server authentication certificates automatically.
@@ -113,20 +127,6 @@ In this section, you'll create a Group Policy on the domain controller so that d
     6. Close the Group Policy Management Editor.
 
 7. Close Group Policy Management.
-
-### Create Active Directory test user
-
-In this section, you'll add a test user who will be able to logon to the domain using Always On VPN.
-
-1. On the domain controller, open Active Directory Users and Computers.
-
-1. Under your domain, right-click **Users**. Select **New**.  For **User logon name**, enter any logon name. Select **Next**.
-
-1. Choose a password for the user.
-
-1. Deselect **User must change password at next logon**. Select **Password never expires**.
-
-1. Select **Finish**.
 
 ### Create Active Directory groups
 
