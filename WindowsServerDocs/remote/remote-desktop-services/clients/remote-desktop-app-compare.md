@@ -27,7 +27,7 @@ If you remote into your personal desktop, there are other redirections that you 
 ### Input redirection
 
 | Redirection | Windows Inbox</br>(MSTSC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client |
-|---|---|---|---|---|---|---|
+|--|--|--|--|--|--|--|
 | Keyboard | X | X | X | X | X | X |
 | Mouse | X | X | X | X\* | X | X |
 | Touch | X | X | X | X |  | X (except IE) |
