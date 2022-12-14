@@ -141,7 +141,7 @@ unable to resolve the query locally from a hosted zone or the DNS Server cache.
 You can edit the list of root name servers on the Root Hints tab of the DNS Server properties dialog
 box or by using the `dnscmd.exe` command line utility. To learn more, review the [Dnscmd](../../administration/windows-commands/dnscmd.md) command reference.
 
-#### [dnscmd](#tab/dnscmd)
+### [PowerShell](#tab/powershell)
 
 1. Run PowerShell on your computer in an elevated session.
 
@@ -191,7 +191,7 @@ traffic to the DNS root servers. You can add forwarders using the GUI or by usin
 
 ### [PowerShell](#tab/powershell)
 
-Here's how to install the DNS server role using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps) command.
+Here's how to install the DNS server role using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
 
 For example to configure a DNS server to use DNS servers as `192.168.10.10` and `192.168.10.11` as
 forwarders, use the commands:
@@ -226,7 +226,7 @@ To remove the DNS Server role, perform the following steps.
 
 ### [PowerShell](#tab/powershell)
 
-Here's how to uninstall the DNS server role using the [Uninstall-WindowsFeature](/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2022-ps) command.
+Here's how to uninstall the DNS server role using the [Uninstall-WindowsFeature](/powershell/module/servermanager/uninstall-windowsfeature) command.
 
 1. In an elevated PowerShell prompt, run the following command:
 
