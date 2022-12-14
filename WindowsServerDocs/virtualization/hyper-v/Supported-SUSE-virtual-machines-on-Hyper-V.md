@@ -85,7 +85,7 @@ SLES12+ is 64-bit only.
 
 8. VSS backup will fail if a single partition is mounted multiple times.
 
-9. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper-V Manager or you can disable it using Powershell:
+9. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and Generation 2 Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in Hyper-V Manager or you can disable it using PowerShell:
 
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
