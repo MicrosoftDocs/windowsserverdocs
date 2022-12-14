@@ -5,7 +5,7 @@ ms.service:
 author: gswashington
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 12/05/2022
+ms.date: 12/14/2022
 
 ---
 
@@ -17,7 +17,7 @@ Trusted root certificates are used by Windows operating systems and applications
 
 The Microsoft Root Certificate Program distributes trusted root certificates within Windows operating systems. In Windows, trusted root certificates are stored in the Trusted Root Certification Authorities certificate. Applications in Windows reference this certificate when determining what public key infrastructure (PKI) hierarchies and digital certificates are trustworthy.
 
-The list of trusted root certificates is stored in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of CTLs. The list of trusted root certificates is called a Trusted CTL (untrusted root certificates are certificates that are publicly known to be fraudulent). Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism discussed in this article. You can take advantage of the automatic update functionality by manually installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
+Trusted root certificates are contained in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of latest CTLs. The list of trusted root certificates is called a Trusted CTL. Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism (CTL updater) discussed in this article. You can take advantage of CTL updater functionality by installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
 ## Automatic certificate trust list updates
 

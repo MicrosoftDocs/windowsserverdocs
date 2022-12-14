@@ -5,7 +5,7 @@ ms.service:
 ms.topic: how-to 
 author: gswashington
 ms.author: roharwoo
-ms.date: 12/05/2022
+ms.date: 12/14/2022
 ---
 
 # Configure trusted roots and disallowed certificates
@@ -24,7 +24,7 @@ See [Certificates and trust](certificates-and-trust.md) for for more detailed kn
 
 ## Software update description
 
-The following improved automatic update mechanisms for a disconnected environment are available in Windows Server 2012 R2 and Windows 8.1 or when the appropriate software update is installed:
+The following automatic update mechanisms are available in Windows Server 2012 R2 and Windows 8.1 or when the appropriate software update is installed:
 
   - **Registry settings for storing CTLs** New settings enable changing the location for uploading trusted or untrusted CTLs from the Windows Update site to a shared location in an organization. For more information, see the [Registry settings modified]() section.
 
@@ -33,6 +33,8 @@ The following improved automatic update mechanisms for a disconnected environmen
   - **Tool to select trusted root certificates** This software update introduces a tool for administrators who manage the set of trusted root certificates in their enterprise environment. Administrators can view and select the set of trusted root certificates, export them to a serialized certificate store, and distribute them by using Group Policy. For more information, see the [New Certutil Options]() section in this document.
 
   - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable. Administrators can use the automatic update mechanism to download only the untrusted CTLs and manage their own list of trusted CTLs. For more information, see the [Registry settings modified]() section in this document.
+
+Automatic update functionality also can be disabled if necessary. See [Workflow: PKI Client: Certificate Root Update Program - Overview (visualstudio.com)](https://supportability.visualstudio.com/WindowsDirectoryServices/_wiki/wikis/WindowsDirectoryServices/414078/Workflow-PKI-Client-Certificate-Root-Update-Program) for more information.
 
 ## Configuration options
 
