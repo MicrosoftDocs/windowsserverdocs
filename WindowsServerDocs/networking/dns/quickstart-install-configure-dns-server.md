@@ -41,7 +41,7 @@ To install the DNS Server role as a standalone server, perform the following ste
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to install the DNS server role using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps) command.
+Here's how to install the DNS server role using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
 
 1. Run PowerShell on your computer in an elevated session.
 
