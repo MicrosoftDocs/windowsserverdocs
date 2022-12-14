@@ -391,11 +391,8 @@ These are the Windows NTP client settings and default values for the Windows Tim
 > [!NOTE]
 > If you use Group Policy to set the **NtpServer** value as part of the **Configure Windows NTP
 > Client** policy and apply it to a domain member, the Windows Time Service will not use the
-> **NtpServer** Registry value. This is because the default client type is **NT5DS**. This value
-> means that the Windows Time Service will synchronize according to the domain hierarchy. For the
-> value to apply, you must also set the **Type** value to **NTP** or **AllSync**. This is the
-> default configuration for domain-joined computers. To view your NTP configuration, open a Command
-> Prompt and run `w32tm /query /configuration`.
+> **NtpServer** Registry value. To view your NTP configuration, open a Command Prompt and run
+> `w32tm /query /configuration`.
 
 ## Related information
 
