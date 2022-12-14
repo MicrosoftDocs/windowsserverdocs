@@ -127,7 +127,7 @@ AD FS already supports triggering additional authentication based on claim rule 
 For example, 2012 R2 onwards admin can already write the following rule to prompt additional authentication if the request comes from extranet. 
 
 ```
-Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );' 
+Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );' 
 ```
 In 2019, customers can now use claims rules to decide which additional authentication provider to invoke for additional authentication. This is useful for two scenarios: 
 
@@ -135,25 +135,25 @@ Customers are transitioning from one additional authentication provider to anoth
 
 Customers have a need for a specific additional authentication provider (for example, certificate) for certain applications but different method (AzureMFA) for other applications. 
 
-This could be achieved by issuing the claim `https://schemas.microsoft.com/claims/authnmethodsproviders` from additional authentication policies. The value of this claim should be the Name of the authentication provider. 
+This could be achieved by issuing the claim `http://schemas.microsoft.com/claims/authnmethodsproviders` from additional authentication policies. The value of this claim should be the Name of the authentication provider. 
 
 Now in 2019 they can modify above claim rule to choose auth providers based on their scenarios.  
 
 Transitioning from one additional authentication provider to another: 
 We will modify the above rule to choose AzureMFA for users that are in group SID S-1-5-21-608905689-872870963-3921916988-12345 (say a group managed by enterprise, which tracks the users that have registered for AzureMFA) and for rest of the users, admin wants to use certificate auth. 
 ```
-'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
 
- c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "`https://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "AzureMfaAuthentication"); 
+ c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "`http://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "AzureMfaAuthentication"); 
 
-not exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "`https://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "CertificateAuthentication");’ 
+not exists([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "`http://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "CertificateAuthentication");’ 
 ```
  
 Example to set two different auth providers for two different applications. 
 
 Application A to use Azure MFA as additional auth provider: 
 ```
-Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
 
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication");' 
 ```
@@ -164,11 +164,11 @@ Set- Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules '
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");' 
  ```
  
-Admin can also make rules to allow more than one additional authentication provider in which case AD FS will show all the issued auth methods providers and user can choose any of them. For allowing multiple additional authentication providers, they should issue multiple claim  `https://schemas.microsoft.com/claims/authnmethodsproviders` 
+Admin can also make rules to allow more than one additional authentication provider in which case AD FS will show all the issued auth methods providers and user can choose any of them. For allowing multiple additional authentication providers, they should issue multiple claim  `http://schemas.microsoft.com/claims/authnmethodsproviders` 
 
 If none of the auth providers are returned by the claim evaluation, AD FS will fall back to show all the additional auth providers configured by Admin on AD FS and user will need to select the appropriate auth provider. 
 
-To get all the additional authentication providers allowed, admin can use the cmdlet (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider. The value of `https://schemas.microsoft.com/claims/authnmethodsproviders` claim should be one of the provider names returned by above cmdlet. 
+To get all the additional authentication providers allowed, admin can use the cmdlet (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider. The value of `http://schemas.microsoft.com/claims/authnmethodsproviders` claim should be one of the provider names returned by above cmdlet. 
 
 There is no support to trigger particular additional auth provider if the RP is using [Access Control Policies in AD FS Windows Server 2016 | Microsoft Docs](../operations/access-control-policies-in-ad-fs.md). While moving an Application away from Access control policy, AD FS copies the corresponding policy from Access Control Policy to AdditionalAuthenticationRules and IssuanceAuthorizationRules. So if an admin wants to use particular auth provider, they can moves away from not using access control policy and then modify AdditionalAuthenticationRules to trigger particular additional auth provider. 
 
