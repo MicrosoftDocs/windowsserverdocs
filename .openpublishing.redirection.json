@@ -10789,6 +10789,16 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-1709.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-1803.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
     }
 
   ]
