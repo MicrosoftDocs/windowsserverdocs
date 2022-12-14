@@ -33,8 +33,6 @@ items:
       items:
       - name: Windows Server 2022
         href: removed-deprecated-features-windows-server-2022.md
-      - name: Windows Server, version 1903 and 1909
-        href: removed-deprecated-features-windows-server-1903-1909.md
       - name: Windows Server 2019
         href: removed-deprecated-features-windows-server-2019.md
       - name: Windows Server 2016
