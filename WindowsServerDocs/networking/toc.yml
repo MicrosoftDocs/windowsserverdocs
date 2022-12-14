@@ -167,6 +167,10 @@ items:
             href: dns/deploy/anycast.md
           - name: DNS policies overview
             href: dns/deploy/DNS-Policies-Overview.md
+      - name: Quickstarts
+        items: 
+          - name: "Install and configure DNS server"
+            href: dns/quickstart-install-configure-dns-server.md
       - name: How-to guides
         items: 
           - name: Secure DNS Client over HTTPS (DoH)

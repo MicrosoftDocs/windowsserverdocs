@@ -21,9 +21,9 @@ upstream name server.
 Before you can install and configure your DNS Server, your computer must meet the following
 prerequisites:
 
-- A computer running a support version of Windows Server
-- A static IP
-- An account that is a member of the Administrators group, or equivalent
+- A computer running a support version of Windows Server.
+- A static IP.
+- An account that is a member of the Administrators group, or equivalent.
 
 ## Installing DNS Servers
 
@@ -33,9 +33,11 @@ Windows Server server.
 > [!TIP]
 > When you install Active Directory Domain Services (AD DS) with the Active Directory Domain
 > Services Installation Wizard, the wizard gives you the option to automatically install and
-> configure a DNS server. The resulting DNS zone is integrated with the AD DS domain namespace.
+> configure a DNS server. The resulting DNS zone is integrated with the AD DS domain namespace. To
+> learn more, see
+> [Understanding Active Directory Domain Services Integration](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc726034(v=ws.11)).
 
-To install the DNS Server role service, perform the following steps:
+To install the DNS Server role as a standalone server, perform the following steps:
 
 #### [PowerShell](#tab/powershell)
 
@@ -66,7 +68,7 @@ Here's how to install the DNS server role using Server Manager from the Windows 
 
 1. On the **Select server roles** page, select the **DNS Server** checkbox, and then select on the
    **Next** button.
-      
+
     1. You'll be prompted to add features that are required for DNS Server, if you're happy with the defaults, select **Add Features**.
 
 1. On the **Select features** page, you can leave the default selections, and then select on the
@@ -264,11 +266,8 @@ When removing the DNS server role service from a Windows Server computer be awar
 
 ## Next steps
 
-Advance to the next article to learn how to create...
-> [!div class="nextstepaction"]
-> [Next steps button](contribute-how-to-mvc-quickstart.md)
+Now you've installed and configured a DNS server, here are some articles that might help you to do
+more.
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
--->
+- [DNS Policies Overview](deploy/DNS-Policies-Overview.md)
+- [Anycast DNS overview](deploy/anycast.md)
