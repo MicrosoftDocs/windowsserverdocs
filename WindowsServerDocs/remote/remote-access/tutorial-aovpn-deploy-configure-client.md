@@ -17,100 +17,90 @@ In this step, you use Protected Extensible Authentication Protocol (PEAP) to sec
 
 Instead of describing how to create the XML markup from scratch, you use Settings in Windows to create a template VPN profile. After creating the template VPN profile, you use Windows PowerShell to consume the EAPConfiguration portion from that template to create the final ProfileXML that you deploy later in the deployment.
 
-### Record NPS certificate settings
+## Prerequisites
 
-Before creating the template, take note the hostname or fully qualified domain name (FQDN) of the NPS server from the server's certificate and the name of the CA that issued the certificate.
+1. Complete [Tutorial: Deploy Always On VPN - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md).
 
-**Procedure:**
+1. Copy/paste the fully qualified domain name (FQDN) of the NPS server and the name of the CA that issued that certificate. To retrieve these values perform the following steps:
 
-1. On your NPS server, open Network Policy Server.
+    1. On the NPS server, open Network Policy Server.
 
-2. In the NPS console, under Policies, click **Network Policies**.
+    2. In the NPS console, under Policies, select **Network Policies**.
 
-3. Right-click **Virtual Private Network (VPN) Connections**, and click **Properties**.
+    3. Right-click **Virtual Private Network (VPN) Connections**, and select **Properties**.
 
-4. Click the **Constraints** tab, and click **Authentication Methods**.
+    4. Select the **Constraints** tab, and select **Authentication Methods**.
 
-5. In EAP Types, click **Microsoft: Protected EAP (PEAP)**, and click **Edit**.
+    5. In EAP Types, select **Microsoft: Protected EAP (PEAP)**, and select **Edit**.
 
-6. Record the values for **Certificate issued to** and **Issuer**.
+    6. Copy and paste the values for **Certificate issued to** and **Issuer**. You'll use these values later in this tutorial.
 
-    You use these values in the upcoming VPN template configuration. For example, if the server's FQDN is nps01.corp.contoso.com and the hostname is NPS01, the certificate name is based upon the FQDN or DNS name of the server—for example, nps01.corp.contoso.com.
+    7. Select **Cancel** to close Edit Protected EAP Properties.
 
-7. Cancel the Edit Protected EAP Properties dialog box.
+    8. Select **Cancel** to close Virtual Private Network (VPN) Connections Properties.
 
-8. Cancel the Virtual Private Network (VPN) Connections Properties dialog box.
+    9. Close Network Policy Server.
 
-9. Close Network Policy Server.
-
->[!NOTE]
->If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used.
+    >[!NOTE]
+    >If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used.
 
 ### Configure the template VPN profile on a domain-joined client computer
 
-Now that you have the necessary information configure the template VPN profile on a domain-joined client computer. The type of user account you use (that is, standard user or administrator) for this part of the process does not matter.
+In this section, we'll create a test VPN connection to verify the configuration of the VPN server. Then, we'll verify that the the test client can establish a successful VPN connection.
 
-However, if you haven't restarted the computer since configuring certificate autoenrollment, do so before configuring the template VPN connection to ensure you have a usable certificate enrolled on it.
+1. Sign in to the domain-joined test client computer as the test user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-active-directory-test-user).
 
->[!NOTE]
->There is no way to manually add any advanced properties of VPN, such as NRPT rules, Always On, Trusted network detection, etc. In the next step, you create a test VPN connection to verify the configuration of the VPN server and that you can establish a VPN connection to the server.
+2. On the Start menu, type **VPN**, and press ENTER.
 
-**Manually create a single test VPN connection**
+3. In the details pane, select **Add a VPN connection**.
 
-1.  Sign in to a domain-joined client computer as a member of the **VPN Users** group.
+4. For **VPN Provider**, select *Windows (built-in)*.
 
-2.  On the Start menu, type **VPN**, and press Enter.
+5. For **Connection Name**, enter *Template*.
 
-3.  In the details pane, click **Add a VPN connection**.
+6. For **Server name or address**, enter the **external** FQDN of your VPN server (for example, *vpn.contoso.com*).
 
-4.  In the VPN Provider list, click **Windows (built-in)**.
+7. Select **Save**.
 
-5.  In Connection Name, type **Template**.
+8. Under Related Settings, select **Change adapter options**.
 
-6.  In Server name or address, type the **external** FQDN of your VPN server (for example, **vpn.contoso.com**).
+9. Right-click **Template**, and select **Properties**.
 
-7.  Click **Save**.
+10. On the **Security** tab, for **Type of VPN**, select *IKEv2*.
 
-8.  Under Related Settings, click **Change adapter options**.
+11. For **Data encryption**, select *Maximum strength encryption*.
 
-9.  Right-click **Template**, and click **Properties**.
+12. Select **Use Extensible Authentication Protocol (EAP)**. Then, for **Use Extensible Authentication Protocol (EAP)**, select *Microsoft: Protected EAP (PEAP) (encryption enabled)*.
 
-10. On the **Security** tab, in **Type of VPN**, click **IKEv2**.
+13. Select **Properties** to open Protected EAP Properties, and complete the following steps:
 
-11. In Data encryption, click **Maximum strength encryption**.
+    1. For **Connect to these servers**, enter the name of the NPS server that you retrieved from the NPS server authentication settings earlier in the [Prerequisites](#prerequisites)(for example, NPS01).
 
-12. Click **Use Extensible Authentication Protocol (EAP)**; then, in **Use Extensible Authentication Protocol (EAP)**, click **Microsoft: Protected EAP (PEAP) (encryption enabled)**.
+    1. For **Trusted Root Certification Authorities**, select the CA that issued the NPS server's certificate (for example, contoso-CA).
 
-13. Click **Properties** to open the Protected EAP Properties dialog box, and complete the following steps:
+    1. For **Notifications before connecting**, select *Don't ask user to authorize new servers or trusted CAs*.
 
-    a. In the **Connect to these servers** box, type the name of the NPS server that you retrieved from the NPS server authentication settings earlier in this section (for example, NPS01).
+    1. For **Select Authentication Method**, select **Smart Card or other certificate**.
+  
+    1. Select **Configure**.
 
-    >[!NOTE]
-    >The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that "The connection was prevented because of a policy configured on your RAS/VPN server."
+        1. Select **Use a certificate on this computer**.
 
-    b.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server's certificate (for example, contoso-CA).
+        1. For **Connect to these servers**, enter the name of the NPS server that you retrieved from the NPS server authentication settings earlier in the [Prerequisites](#prerequisites)(for example, NPS01).
 
-    c.  In Notifications before connecting, click **Don't ask user to authorize new servers or trusted CAs**.
+        1. For **Trusted Root Certification Authorities**, select the CA that issued the NPS server's certificate.
 
-    d.  In Select Authentication Method, click **Smart Card or other certificate**, and click **Configure**. The Smart Card or other Certificate Properties dialog opens.
+        1. Select **Don't prompt user to authorize new servers or trusted certification authorities**.
 
-    e.  Click **Use a certificate on this computer**.
+        1. Select **OK** to close Smart Card or other Certificate Properties.
 
-    f.  In the Connect to these servers box, enter the name of the NPS server you retrieved from the NPS server authentication settings in the previous steps.
+        1. Select **OK** to close Protected EAP Properties.
 
-    g.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server's certificate.
+    1. Select **OK** to close the Template Properties dialog box.
 
-    h.  Select the **Don't prompt user to authorize new servers or trusted certification authorities** check box.
+14. Close the Network Connections window.
 
-    i.  Click **OK** to close the Smart Card or other Certificate Properties dialog box.
-
-    j.  Click **OK** to close the Protected EAP Properties dialog box.
-
-14. Click **OK** to close the Template Properties dialog box.
-
-15. Close the Network Connections window.
-
-16. In Settings, test the VPN by clicking **Template**, and clicking **Connect**.
+15. In Settings, test the VPN by clicking **Template**, and clicking **Connect**.
 
 >[!IMPORTANT]
 >Make sure that the template VPN connection to your VPN server is successful. Doing so ensures that the EAP settings are correct before you use them in the next example. You must connect at least once before continuing; otherwise, the profile will not contain all the information necessary to connect to the VPN.
@@ -612,35 +602,35 @@ To use Configuration Manager to deploy a Remote Access Always On VPN profile to 
 
 1.  In the Configuration Manager console, open Assets and Compliance\\User Collections.
 
-2.  On the **Home** ribbon, in the **Create** group, click **Create User Collection**.
+2.  On the **Home** ribbon, in the **Create** group, select **Create User Collection**.
 
 3.  On the General page, complete the following steps:
 
     a. In **Name**, type **VPN Users**.
 
-    b. Click **Browse**, click **All Users** and click **OK**.
+    b. Select **Browse**, select **All Users** and select **OK**.
 
-    c. Click **Next**.
+    c. Select **Next**.
 
 4.  On the Membership Rules page, complete the following steps:
 
-    a.  In **Membership rules**, click **Add Rule**, and click **Direct Rule**. In this example, you're adding individual users to the user collection. However, you might use a query rule to add users to this collection dynamically for a larger-scale deployment.
+    a.  In **Membership rules**, select **Add Rule**, and select **Direct Rule**. In this example, you're adding individual users to the user collection. However, you might use a query rule to add users to this collection dynamically for a larger-scale deployment.
 
-    b.  On the **Welcome** page, click **Next**.
+    b.  On the **Welcome** page, select **Next**.
 
-    c.  On the Search for Resources page, in **Value**, type the name of the user you want to add. The resource name includes the user's domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string "lori," type **%lori%**. Click **Next**.
+    c.  On the Search for Resources page, in **Value**, type the name of the user you want to add. The resource name includes the user's domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string "lori," type **%lori%**. Select **Next**.
 
-    d.  On the Select Resources page, select the users you want to add to the group, and click **Next**.
+    d.  On the Select Resources page, select the users you want to add to the group, and select **Next**.
 
-    e.  On the Summary page, click **Next**.
+    e.  On the Summary page, select **Next**.
 
-    f.  On the Completion page, click **Close**.
+    f.  On the Completion page, select **Close**.
 
-6.  Back on the Membership Rules page of the Create User Collection Wizard, click **Next**.
+6.  Back on the Membership Rules page of the Create User Collection Wizard, select **Next**.
 
-7.  On the Summary page, click **Next**.
+7.  On the Summary page, select **Next**.
 
-8.  On the Completion page, click **Close**.
+8.  On the Completion page, select **Close**.
 
 After you create the user group to receive the VPN profile, you can create a package and program to deploy the Windows PowerShell configuration script that you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files).
 
@@ -650,20 +640,20 @@ After you create the user group to receive the VPN profile, you can create a pac
 
 2.  In the Configuration Manager console, open **Software Library\\Application Management\\Packages**.
 
-3.  On the **Home** ribbon, in the **Create** group, click **Create Package** to start the Create Package and Program Wizard.
+3.  On the **Home** ribbon, in the **Create** group, select **Create Package** to start the Create Package and Program Wizard.
 
 4.  On the Package page, complete the following steps:
 
     a. In **Name**, type **Windows 10 Always On VPN Profile**.
 
-    b. Select the **This package contains source files** check box, and click **Browse**.
+    b. Select the **This package contains source files** check box, and select **Browse**.
 
-    c. In the Set Source Folder dialog box, click **Browse**, select the file share containing VPN_Profile.ps1, and click **OK**.
+    c. In the Set Source Folder dialog box, select **Browse**, select the file share containing VPN_Profile.ps1, and select **OK**.
         Make sure you select a network path, not a local path. In other words, the path should be something like *\\fileserver\\vpnscript*, not *c:\\vpnscript*.
 
-1.  Click **Next**.
+1.  Select **Next**.
 
-2.  On the Program Type page, click **Next**.
+2.  On the Program Type page, select **Next**.
 
 3.  On the Standard Program page, complete the following steps:
 
@@ -671,9 +661,9 @@ After you create the user group to receive the VPN profile, you can create a pac
 
     b.  In **Command line**, type **PowerShell.exe -ExecutionPolicy Bypass -File        "VPN_Profile.ps1"**.
 
-    c.  In **Run mode**, click **Run with administrative rights**.
+    c.  In **Run mode**, select **Run with administrative rights**.
 
-    d.  Click **Next**.
+    d.  Select **Next**.
 
 4.  On the Requirements page, complete the following steps:
 
@@ -685,11 +675,11 @@ After you create the user group to receive the VPN profile, you can create a pac
 
     d.  In **Maximum allowed run time (minutes)**, type **15**.
 
-    e.  Click **Next**.
+    e.  Select **Next**.
 
-5.  On the Summary page, click **Next**.
+5.  On the Summary page, select **Next**.
 
-6.  On the Completion page, click **Close**.
+6.  On the Completion page, select **Close**.
 
 With the package and program created, you need to deploy it to the **VPN Users** group.
 
@@ -697,53 +687,53 @@ With the package and program created, you need to deploy it to the **VPN Users**
 
 1.  In the Configuration Manager console, open Software Library\\Application Management\\Packages.
 
-2.  In **Packages**, click **Windows 10 Always On VPN Profile**.
+2.  In **Packages**, select **Windows 10 Always On VPN Profile**.
 
-3.  On the **Programs** tab, at the bottom of the details pane, right-click **VPN Profile Script**, click **Properties**, and complete the following steps:
+3.  On the **Programs** tab, at the bottom of the details pane, right-select **VPN Profile Script**, select **Properties**, and complete the following steps:
 
-    a.  On the **Advanced** tab, in **When this program is assigned to a computer**, click **Once for every user who logs on**.
+    a.  On the **Advanced** tab, in **When this program is assigned to a computer**, select **Once for every user who logs on**.
 
-    b.  Click **OK**.
+    b.  Select **OK**.
 
-4.  Right-click **VPN Profile Script** and click **Deploy** to start the Deploy Software Wizard.
+4.  Right-click **VPN Profile Script** and select **Deploy** to start the Deploy Software Wizard.
 
 5.  On the General page, complete the following steps:
 
-    a.  Beside **Collection**, click **Browse**.
+    a.  Beside **Collection**, select **Browse**.
 
-    b.  In the **Collection Types** list (top left), click **User Collections**.
+    b.  In the **Collection Types** list (top left), select **User Collections**.
 
-    c.  Click **VPN Users**, and click **OK**.
+    c.  Select **VPN Users**, and select **OK**.
 
-    d.  Click **Next**.
+    d.  Select **Next**.
 
 6.  On the Content page, complete the following steps:
 
-    a.  Click **Add**, and click **Distribution Point**.
+    a.  Select **Add**, and select **Distribution Point**.
 
-    b.  In **Available distribution points**, select the distribution points to which you want to distribute the ProfileXML configuration script, and click **OK**.
+    b.  In **Available distribution points**, select the distribution points to which you want to distribute the ProfileXML configuration script, and select **OK**.
 
-    c.  Click **Next**.
+    c.  Select **Next**.
 
-7.  On the Deployment settings page, click **Next**.
+7.  On the Deployment settings page, select **Next**.
 
 8.  On the Scheduling page, complete the following steps:
 
-    a.  Click **New** to open the Assignment Schedule dialog box.
+    a.  Select **New** to open the Assignment Schedule dialog box.
 
-    b.  Click **Assign immediately after this event**, and click **OK**.
+    b.  Select **Assign immediately after this event**, and select **OK**.
 
-    c.  Click **Next**.
+    c.  Select **Next**.
 
 9.  On the User Experience page, complete the following steps:
 
     1.  Select the **Software Installation** check box.
 
-    2.  Click **Summary**.
+    2.  Select **Summary**.
 
-10. On the Summary page, click **Next**.
+10. On the Summary page, select **Next**.
 
-11. On the Completion page, click **Close**.
+11. On the Completion page, select **Close**.
 
 With the ProfileXML configuration script deployed, sign in to a Windows 10 client computer with the user account you selected when you built the user collection. Verify the configuration of the VPN client.
 
@@ -752,15 +742,15 @@ With the ProfileXML configuration script deployed, sign in to a Windows 10 clien
 
 ### Verify the configuration of the VPN client
 
-1.  In Control Panel, under **System\\Security**, click **Configuration Manager**.
+1.  In Control Panel, under **System\\Security**, select **Configuration Manager**.
 
 2.  In the Configuration Manager Properties dialog, on the **Actions** tab, complete the following steps:
 
-    a.  Click **Machine Policy Retrieval & Evaluation Cycle**, click **Run Now**, and click **OK**.
+    a.  Select **Machine Policy Retrieval & Evaluation Cycle**, select **Run Now**, and select **OK**.
 
-    b.  Click **User Policy Retrieval & Evaluation Cycle**, click **Run Now**, and click **OK**.
+    b.  Select **User Policy Retrieval & Evaluation Cycle**, select **Run Now**, and select **OK**.
 
-    c.  Click **OK**.
+    c.  Select **OK**.
 
 3.  Close the Control Panel.
 
@@ -781,7 +771,7 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 
 2.    Go to **Intune** > **Device Configuration** > **Profiles**.
 
-3.    Click **Create Profile** to start the Create profile Wizard.
+3.    Select **Create Profile** to start the Create profile Wizard.
 
 4.    Enter a **Name** for the VPN profile and (optionally) a description.
 
@@ -822,7 +812,7 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 
 5.  Replace the **\<ServerNames>NPS.contoso.com\</ServerNames>** in the sample XML with the FQDN of the domain-joined NPS where authentication takes place.
 
-6.  Copy the revised XML string and paste into the **EAP Xml** box under the Base VPN tab and click **OK**.
+6.  Copy the revised XML string and paste into the **EAP Xml** box under the Base VPN tab and select **OK**.
     An Always On VPN Device Configuration policy using EAP is created in Intune.
 
 
@@ -830,13 +820,13 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 
 To test the configuration policy, sign in to a Windows 10 client computer as the user you added to the **Always On VPN Users** group, and then sync with Intune.
 
-1.  On the Start menu, click **Settings**.
+1.  On the Start menu, select **Settings**.
 
-2.  In Settings, click **Accounts**, and click **Access work or school**.
+2.  In Settings, select **Accounts**, and select **Access work or school**.
 
-3.  Click the MDM profile, and click **Info**.
+3.  Select the MDM profile, and select **Info**.
 
-4.  Click **Sync** to force an Intune policy evaluation and retrieval.
+4.  Select **Sync** to force an Intune policy evaluation and retrieval.
 
 5.  Close Settings. After synchronization, you see the VPN profile available on the computer.
 

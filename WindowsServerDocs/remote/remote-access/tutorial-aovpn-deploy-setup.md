@@ -221,6 +221,7 @@ In this section, you'll add three new Active Directory (AD) groups: the VPN User
 
     2. Select the **Extensible Authentication Protocol** check box to select it.
 
+<!-- Editor's note: Do we need to select "Microsoft: Secured password (EAP-MSCHAP v2) ? In the client configuration setup, the test client can't connect  withou this. -->
     3. For **Type** (based on the method of access and network configuration), select **Microsoft: Protected EAP (PEAP)**. Then select **Configure** to open the Edit Protected EAP Properties dialog box.
 
     4. Select **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
