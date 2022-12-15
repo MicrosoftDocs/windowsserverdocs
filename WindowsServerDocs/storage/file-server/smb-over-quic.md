@@ -119,8 +119,12 @@ By default, a Windows 11 device won't have access to an Active Directory domain 
 #### Windows Admin Center method
 
 1. Ensure you are using at least Windows Admin Center version 2110.
-2. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on the file servers.
-3. Configure the following group policy setting to apply to the Windows 11 device:
+2. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on the file servers. The default KDC proxy port is 443 and assigned automatically by WAC.
+
+> [!NOTE]
+> You cannot configure an SMB over QUIC server joined to a Workgroup usging Windows Admin Center. You must join the server to an Active Direcotry domain or use the Manual Method section's steps below. 
+
+4. Configure the following group policy setting to apply to the Windows 11 device:
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
