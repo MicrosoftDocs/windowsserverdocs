@@ -110,9 +110,9 @@ Here's how to configure the interface used to listen for DNS requests using the
     Get-NetIPAddress | fl IPAddress,InterfaceAlias
     ```
 
-1. Store the current DNS server setting in a variable, set the **ListeningIpAddress** property, and
-   apply the new settings by run the following commands. Replace the placeholder `<ip_address>` with
-   the IP you made a note of earlier.
+1. Store the current DNS server setting in a temporary variable, set the **ListeningIpAddress**
+   property, and apply the new settings by running the following commands. Replace the placeholder
+   `<ip_address>` with the IP you made a note of earlier.
 
    ```powershell
    $DnsServerSettings=Get-DnsServerSetting -ALL
@@ -139,27 +139,48 @@ Root hints servers are used to help resolving DNS address information when the D
 unable to resolve the query locally from a hosted zone or the DNS Server cache.
 
 You can edit the list of root name servers on the Root Hints tab of the DNS Server properties dialog
-box or by using the `dnscmd.exe` command line utility from a PowerShell session. To learn more,
-review the [Dnscmd](../../administration/windows-commands/dnscmd.md) command reference.
+box or by using PowerShell.
+
+> [!TIP]
+> Removing all root hints servers is not supported. Configure your DNS server to not use root hint
+> name server by, selecting the **Disable recursion** server option in the DNS Manager console
+> **Advanced** tab, this also disables any configured forwarders. Alternatively, clear the Use root
+> hints if no forwarders are availble option in the **Forwarders** tab.
 
 ### [PowerShell](#tab/powershell)
 
+Here's how to update a DNS root hint name server using the
+[Set-DnsServerRootHint](/powershell/module/dnsserver/set-dnsserverroothint) command.
+
 1. Run PowerShell on your computer in an elevated session.
 
-1. To add a server to the list of root hints servers using the command below. Replace the
-   placeholder `<DNS_server_name>` with the name of your DNS server. Replace the placeholder
-   `<IP_address>` with the root hint server IP and `<FQDN>` the root hint server fully qualified
-   domain name.
+1. Find your computers existing IP address by running the
+   [Get-DnsServerRootHint](/powershell/module/netadapter/get-dnsserverroothint) cmdlet. Make a note
+   of the name server that you want to update.
+
+    ```powershell
+    Get-DnsServerRootHint
+    ```
+
+1. Store the current DNS server setting in a variable by running the following commands. Replace the
+   placeholder `<root_hint_name_server>` with the root hint name server you noted earlier. Make sure
+   to include the trailing dot <kbd>.</kbd>.
 
    ```powershell
-   dnscmd <DNS_server_name> /addroothint <IP_address> <FQDN>
+   $RootHintServer = (Get-DnsServerRootHint | Where-Object {$_.NameServer.RecordData.NameServer -eq "<root_hint_name_server>"} )
    ```
 
-1. To verify the currently configured list of root hints servers, run the following command. Replace
-   the placeholder `<DNS_server_name>` with the name of your DNS server.
+1. Set the **Ipv4address** property in the temporary variable by running the following commands.
+   Replace the placeholder `<ip_address>` with the updated IP address.
 
    ```powershell
-   dnscmd <DNS_server_name> /enumroot
+   $RootHintServer.IPAddress[0].RecordData.Ipv4address = "<ip_address>"
+   ```
+
+1. Apply the updated record by running the following commands.
+
+   ```powershell
+   Set-DnsServerRootHint $RootHintServer
    ```
 
 #### [GUI](#tab/gui)
@@ -188,7 +209,7 @@ traffic to the DNS root servers. You can add forwarders using the GUI or by usin
 `Set-DNSServerForwarder` PowerShell cmdlet.
 
 > [!NOTE]
-> DNS root hints not be used unless your forwarders fail to respond.
+> DNS root hints will not be used unless your forwarders fail to respond.
 
 ### [PowerShell](#tab/powershell)
 
@@ -197,12 +218,13 @@ Here's how to install the DNS server role using the
 
 1. Run PowerShell on your computer in an elevated session.
 
-1. As an example, to configure a DNS server to use DNS servers as `192.168.10.10` and `192.168.10.11` as
-forwarders, run the commands:
+1. To configure DNS forwarders, replace the placeholders `<ip_forwarder_1>` and `<ip_forwarder_2>`
+   with the IP address of the DNS server to be used as your forwarders. Then, run the following
+   commands.
 
    ```powershell
-   $forwarders = "192.168.10.10","192.168.10.11"
-   Set-DnsServerForwarder -IPAddress $forwarders
+   $Forwarders = "<ip_forwarder_1>","<ip_forwarder_2>"
+   Set-DnsServerForwarder -IPAddress $Forwarders
    ```
 
 #### [GUI](#tab/gui)
