@@ -4,7 +4,7 @@ description: Get started installing and configuring a DNS server on Windows Serv
 author: robinharwood
 ms.author: roharwoo
 ms.topic: quickstart
-ms.date: 12/14/2022
+ms.date: 12/15/2022
 ms.custom: template-quickstart
 ---
 
@@ -41,7 +41,8 @@ To install the DNS Server role as a standalone server, perform the following ste
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to install the DNS server role using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
+Here's how to install the DNS server role using the
+[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
 
 1. Run PowerShell on your computer in an elevated session.
 
@@ -69,7 +70,8 @@ Here's how to install the DNS server role using Server Manager from the Windows 
 1. On the **Select server roles** page, select the **DNS Server** checkbox, and then select on the
    **Next** button.
 
-    1. You'll be prompted to add features that are required for DNS Server, if you're happy with the defaults, select **Add Features**.
+    1. You'll be prompted to add features that are required for DNS Server, if you're happy with the
+       defaults, select **Add Features**.
 
 1. On the **Select features** page, you can leave the default selections, and then select on the
    **Next** button.
@@ -91,33 +93,31 @@ Now you've installed the DNS server role, you can configure the server.
 ### Configure DNS server interface
 
 By default a DNS server will listen for requests on all IP address interfaces. You can configure DNS
-server to listen on a specify interface using the GUI or by using the `Set-DNSServerListenAddress`
-PowerShell cmdlet.
+server to listen on a specify interface using the GUI or by using PowerShell.
 
 ### [PowerShell](#tab/powershell)
 
-FIXME: This command doesn't exist and Set-DNSServerSetting only takes a CIMinstance, which also
-doesn't work
-
 Here's how to configure the interface used to listen for DNS requests using the
-Set-DNSServerListenAddress command.
-
-For example to configure a DNS server to listen on IP address `10.10.10.100` use the command:
+[Set-DNSServerSetting](/powershell/module/dnsserver/set-dnsserversetting) command.
 
 1. Run PowerShell on your computer in an elevated session.
 
-1. Find existing network adapters by running the
-   [Get-NetAdapter](/powershell/module/netadapter/get-netadapter) cmdlet. Identify the interface
-   alias that you want to use for your DNS server.
+1. Find your computers existing IP address by running the
+   [Get-NetIPAddress](/powershell/module/netadapter/get-netipaddress) cmdlet. Make a note of the IP
+   address that you want to use for your DNS server.
 
     ```powershell
-    (Get-NetAdapter).InterfaceAlias
+    Get-NetIPAddress | fl IPAddress,InterfaceAlias
     ```
 
-1. To install the DNS role, run the following command.
+1. Store the current DNS server setting in a variable, set the **ListeningIpAddress** property, and
+   apply the new settings by run the following commands. Replace the placeholder `<ip_address>` with
+   the IP you made a note of earlier.
 
    ```powershell
-   Set-DNSServerListenAddress -InterfaceAlias "Ethernet" -IPAddress "10.10.10.100"
+   $DnsServerSettings=Get-DnsServerSetting -ALL
+   $DnsServerSettings.ListeningIpAddress=@("<ip_address>")
+   Set-DNSServerSetting $DnsServerSettings
    ```
 
 #### [GUI](#tab/gui)
@@ -139,14 +139,15 @@ Root hints servers are used to help resolving DNS address information when the D
 unable to resolve the query locally from a hosted zone or the DNS Server cache.
 
 You can edit the list of root name servers on the Root Hints tab of the DNS Server properties dialog
-box or by using the `dnscmd.exe` command line utility. To learn more, review the [Dnscmd](../../administration/windows-commands/dnscmd.md) command reference.
+box or by using the `dnscmd.exe` command line utility from a PowerShell session. To learn more,
+review the [Dnscmd](../../administration/windows-commands/dnscmd.md) command reference.
 
 ### [PowerShell](#tab/powershell)
 
 1. Run PowerShell on your computer in an elevated session.
 
-1. To add a server to the list of root hints servers using the command below. Replace the placeholder
-   `<DNS_server_name>` with the name of your DNS server. Replace the placeholder
+1. To add a server to the list of root hints servers using the command below. Replace the
+   placeholder `<DNS_server_name>` with the name of your DNS server. Replace the placeholder
    `<IP_address>` with the root hint server IP and `<FQDN>` the root hint server fully qualified
    domain name.
 
@@ -191,15 +192,18 @@ traffic to the DNS root servers. You can add forwarders using the GUI or by usin
 
 ### [PowerShell](#tab/powershell)
 
-Here's how to install the DNS server role using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
+Here's how to install the DNS server role using the
+[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
 
-For example to configure a DNS server to use DNS servers as `192.168.10.10` and `192.168.10.11` as
-forwarders, use the commands:
+1. Run PowerShell on your computer in an elevated session.
 
-```powershell
-$forwarders = "192.168.10.10","192.168.10.11"
-Set-DnsServerForwarder -IPAddress $forwarders
-```
+1. As an example, to configure a DNS server to use DNS servers as `192.168.10.10` and `192.168.10.11` as
+forwarders, run the commands:
+
+   ```powershell
+   $forwarders = "192.168.10.10","192.168.10.11"
+   Set-DnsServerForwarder -IPAddress $forwarders
+   ```
 
 #### [GUI](#tab/gui)
 
@@ -226,7 +230,8 @@ To remove the DNS Server role, perform the following steps.
 
 ### [PowerShell](#tab/powershell)
 
-Here's how to uninstall the DNS server role using the [Uninstall-WindowsFeature](/powershell/module/servermanager/uninstall-windowsfeature) command.
+Here's how to uninstall the DNS server role using the
+[Uninstall-WindowsFeature](/powershell/module/servermanager/uninstall-windowsfeature) command.
 
 1. In an elevated PowerShell prompt, run the following command:
 
