@@ -79,7 +79,7 @@ You'll create the following templates:
 
    2. Select **Requests must use one of the following providers**.
 
-   3. Select the **Microsoft Platform Crypto Provider** check box.
+   3. Select both **Microsoft Platform Crypto Provider** and **Microsoft Software Key Storage Provider**.
 
 1. On the **Subject Name** tab, if you don't have an email address listed on all user accounts, clear the **Include e-mail name in subject name** and **E-mail name** check boxes.
 
@@ -176,10 +176,9 @@ You'll create the following templates:
 
 ### Validate the user certificate
 
-Because we're using Group Policy to autoenroll user certificates, Windows 10 will automatically enroll the user accounts for the correct certificates. Once enrolled, you can then validate the certificates in the Certificates console.
+Because we've configured Group Policy to autoenroll user certificates for the VPN Users group, Windows 10+ will automatically enroll any users that belong to that group. 
 
->[!IMPORTANT]
->Microsoft Platform Crypto Provider" requires a TPM chip. If, while trying to manually enroll a certificate on a VM, you get the following error: "Cannot find a valid CSP in the local machine" do ensure that "Microsoft Software Key Storage Provider" is second in order after "Microsoft Platform Crypto Provider" in the Cryptography tab of the certificate Properties.
+**To validate the VPN User certificate:**
 
 1. Sign in to the domain-joined test client computer as the test user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-active-directory-test-user).
 
@@ -197,52 +196,55 @@ Because we're using Group Policy to autoenroll user certificates, Windows 10 wil
 
 ### Enroll and validate the VPN server certificates
 
-Unlike the user certificate, you must manually enroll the VPN server's certificate. After you've enrolled it, you'll validate it by using the same process as for the user certificate. 
+Unlike the user certificate, you must manually enroll the VPN server's certificate. 
 
->[!NOTE]
->You might need to restart the VPN and NPS servers to allow them to update their group memberships before you can complete these steps.
+**To enroll the VPN server's certificate:**
 
-1. On the VPN server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press Enter.
+1. On the VPN server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press ENTER.
 
-2. Right-click **Personal**, select **All Tasks** and then select **Request New Certificate** to start the Certificate Enrollment Wizard.
+1. Right-click **Personal**, select **All Tasks** and then select **Request New Certificate** to start the Certificate Enrollment Wizard.
 
-3. On the Before You Begin page, select **Next**.
+1. On the Before You Begin page, select **Next**.
 
-4. On the Select Certificate Enrollment Policy page, select **Next**.
+1. On the Select Certificate Enrollment Policy page, select **Next**.
 
-5. On the Request Certificates page, select **VPN Server Authentication**.
+1. On the Request Certificates page, select **VPN Server Authentication**.
 
-6. Under the VPN server check box, select **More information is required** to open the Certificate Properties dialog box and complete the following steps:
+1. Under the VPN server check box, select **More information is required** to open the Certificate Properties dialog box.
 
-    1. Select the **Subject** tab. In the **Subject name** section, for **Type** select *Common Name*.
+1. Select the **Subject** tab and enter the following information:
 
-    2. In the **Subject name** section, for **Value**, enter the name of the external domain that clients use to connect to the VPN(for example, vpn.contoso.com). Then, select **Add**.
+    *In the **Subject name** section:*
 
-    3. In the **Alternative Name** section, for **Type**, select *DNS*.
+    1. For **Type** select *Common Name*.  
+    1. For **Value**, enter the name of the external domain that clients use to connect to the VPN (for example, vpn.contoso.com).
+    1. Select **Add**.
 
-    4. In the **Alternative Name** section, for **Value**, enter all server names that clients use to connect to the VPN, for example, vpn.contoso.com, vpn, 132.64.86.2.
+    *In the **Alternative Name** section*:
 
-    5. Select **Add** after entering each name.
+    1. For **Type**, select *DNS*.
+    1. For **Value**, enter all server names that clients use to connect to the VPN (for example, vpn.contoso.com, vpn, 132.64.86.2).
+    1. Select **Add**.
 
-    6. Select **OK** when finished.
+1. Select **OK** to close Certificate Properties.
 
-7. Select **Enroll**.
+1. Select **Enroll**.
 
-8. Select **Finish**.
+1. Select **Finish**.
 
-9. In the Certificates snap-in, under **Personal**, select **Certificates**.
+**To validate the VPN server's certificate:**
 
-    Your listed certificates appear in the details pane.
+1. In the Certificates snap-in, under **Personal**, select **Certificates**.
 
-10. Right-click the certificate that has your VPN server's name, and then select **Open**.
+    Your listed certificates should appear in the details pane.
 
-11. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the incorrect certificate.
+1. Right-click the certificate that has your VPN server's name, and then select **Open**.
 
-12. On the **Details** tab, select **Enhanced Key Usage**, and verify that **IP security IKE intermediate** and **Server Authentication** display in the list.
+1. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
 
-13. Select **OK** to close the certificate.
+1. On the **Details** tab, select **Enhanced Key Usage**, and verify that **IP security IKE intermediate** and **Server Authentication** display in the list.
 
-14. Close the Certificates snap-in.
+1. Select **OK** to close the certificate.
 
 ### Validate the NPS server certificate
 
@@ -250,19 +252,17 @@ Like the user certificate, the NPS server automatically enrolls its authenticati
 
 1. Restart the NPS server.
 
-2. On the NPS server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press Enter.
-
-3. In the Certificates snap-in, under **Personal**, select **Certificates**.
+1. In the Certificates snap-in, under **Personal**, select **Certificates**.
 
     Your listed certificates should appear in the details pane.
 
-4. Right-click the NPS Server Authentication certificate, and then select **Open**.
+1. Right-click the NPS Server Authentication certificate, and then select **Open**.
 
-5. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the incorrect certificate.
+1. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the incorrect certificate.
 
-6. Select **OK** to close the certificate.
+1. Select **OK** to close the certificate.
 
-7. Close the Certificates snap-in.
+1. Close the Certificates snap-in.
 
 ## Next steps
 

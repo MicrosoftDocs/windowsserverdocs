@@ -60,7 +60,6 @@ To complete the steps in this tutorial,
 
 1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
 
-
 >[!IMPORTANT]
 > Copy and save the shared secret for NPS and VPN server communications, as you'll need it for later use in this tutorial.
 
