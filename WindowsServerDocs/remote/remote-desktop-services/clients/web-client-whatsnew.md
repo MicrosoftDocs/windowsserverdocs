@@ -16,7 +16,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 ## Updates for version 1.0.28.0
 
-*Date published: December, 2022*
+*Date published: December 2022*
 
 - You can now redirect cameras.
 - Updated third-party libraries.
@@ -36,7 +36,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 ## Updates for version 1.0.26.0
 
-*Date published: December 12th, 2021*
+*Date published: December 12, 2021*
 
 - Bug fixes.
 - This is the final version of the client that supports Internet Explorer 11 and WinXP.
@@ -70,14 +70,14 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Azure Virtual Desktop with the web client](/azure/virtual-desktop/connect-web).
 - Changed the **All Resources** page UI.
 - Fixed several connection sequence failures where web client returned a *General Protocol Error*.
-- Fixed keyboard input issues where specific key sequences were not handled appropriately.
+- Fixed keyboard input issues where specific key sequences weren't handled appropriately.
 - Accessibility improvements.
 
 ## Updates for version 1.0.21.0
 *Date published: 11/15/2019*
 
 - Added support for using an Input Method Editor (IME) in the remote session to input complex characters.
-- Fixed a regression where users could not copy and paste into the remote session on macOS devices.
+- Fixed a regression where users couldn't copy and paste into the remote session on macOS devices.
 - Fixed a regression where local Windows Key was sent to the remote session on Firefox.
 - Added link to RDWeb password change when enabled by your administrator.
 
@@ -133,7 +133,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 - InPrivate mode is now supported.
 - Improved support for non-English keyboards.
 - Fixed an issue where tooltips with non-English characters showed incorrectly.
-- Fixed graphics rendering issue which affected Chrome users.
+- Fixed graphics rendering issue that affected Chrome users.
 - Updated time zone redirection with full DST support.
 - Improved the error message for out-of-memory error.
 - Various bug fixes.
@@ -159,7 +159,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 - Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
 - Fixed connection failures for some languages when printing is enabled.
-- Improved error message when a gateway is not part of the deployment.
+- Improved error message when a gateway isn't part of the deployment.
 - **Help** and **Feedback** options were added.
 
 ## Updates for version 0.8.0
