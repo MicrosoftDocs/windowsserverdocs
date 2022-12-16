@@ -46,7 +46,7 @@ Here's how to install the DNS Server role using the
 
 1. Run PowerShell on your computer in an elevated session.
 
-1. To install the DNS role, run the following command.
+1. To install the DNS role, run the following command. The installation doesn't require a reboot.
 
    ```powershell
    Install-WindowsFeature -Name DNS
@@ -82,7 +82,7 @@ Here's how to install the DNS Server role using Server Manager from the Windows 
 1. On the **Confirm installation selections** page, review the selected roles and features, and then
    select on the **Install** button to begin the installation process.
 
-1. Once the installation is complete, select **Close**.
+1. Once the installation is complete, select **Close**. The installation doesn't require a reboot.
 
 ---
 
@@ -115,8 +115,8 @@ Here's how to configure the interface used to listen for DNS requests using the
    `<ip_address>` with the IP you made a note of earlier.
 
    ```powershell
-   $DnsServerSettings=Get-DnsServerSetting -ALL
-   $DnsServerSettings.ListeningIpAddress=@("<ip_address>")
+   $DnsServerSettings = Get-DnsServerSetting -ALL
+   $DnsServerSettings.ListeningIpAddress = @("<ip_address>")
    Set-DNSServerSetting $DnsServerSettings
    ```
 
@@ -136,16 +136,15 @@ Here's how to configure the interface used to listen for DNS requests using the 
 ### Configure root hints
 
 Root hints servers are used to help resolving DNS address information when the DNS server is
-unable to resolve the query locally from a hosted zone or the DNS server cache.
+unable to resolve the query locally from a hosted zone or the DNS server cache. Root hints name servers are populated by default in new installations.
 
-You can edit the list of root name servers on the **Root Hints** tab of the DNS server properties
+You can edit the list of root name servers if required by navigating to the **Root Hints** tab of the DNS server properties
 dialog box or by using PowerShell.
 
-> [!TIP]
-> Removing all root hints servers is not supported. Configure your DNS server to not use root hint
-> name server by, selecting the **Disable recursion** server option in the DNS Manager console
-> **Advanced** tab, this also disables any configured forwarders. Alternatively, clear the Use root
-> hints if no forwarders are availble option in the **Forwarders** tab.
+Removing all root hints servers isn't supported. Instead configure your DNS server to not use root hint
+name server by selecting the **Disable recursion** server option in the DNS Manager console
+**Advanced** tab. Disabling recursion also disables any configured forwarders. Alternatively, clear
+**Use root hints if no forwarders are available** in the **Forwarders** tab.
 
 ### [PowerShell](#tab/powershell)
 
@@ -163,11 +162,10 @@ Here's how to update a DNS root hint name server using the
     ```
 
 1. Store the current DNS server setting in a variable by running the following commands. Replace the
-   placeholder `<root_hint_name_server>` with the root hint name server you noted earlier. Make sure
-   to include the trailing dot <kbd>.</kbd>.
+   placeholder `<root_hint_name_server>` with the root hint name server you noted earlier.
 
    ```powershell
-   $RootHintServer = (Get-DnsServerRootHint | Where-Object {$_.NameServer.RecordData.NameServer -eq "<root_hint_name_server>"} )
+   $RootHintServer = (Get-DnsServerRootHint | Where-Object {$_.NameServer.RecordData.NameServer -match "<root_hint_name_server>"} )
    ```
 
 1. Set the **Ipv4address** property in the temporary variable by running the following commands.
@@ -182,6 +180,13 @@ Here's how to update a DNS root hint name server using the
    ```powershell
    Set-DnsServerRootHint $RootHintServer
    ```
+
+1. To check the updated root hints, run the following command. You'll notice the name server has a
+   trailing dot (.).
+
+    ```powershell
+    Get-DnsServerRootHint
+    ```
 
 #### [GUI](#tab/gui)
 
@@ -198,7 +203,8 @@ Here's how to root hints using the DNS Manager console.
 
 1. Select **OK**.
 
-1. Review the updated root hint server in the list, when you're ready select **OK**.
+1. Review the updated root hint server in the list, when you're ready select **OK**. You'll notice
+   the name server has a trailing dot (.).
 
 ---
 
@@ -278,18 +284,21 @@ Here's how to uninstall the DNS server role using Server Manager from the Window
 1. On the **Confirm removal selections** page, review the selected roles and features, and then
    select on the **Remove**.
 1. Once the role and feature is removed, select **Close**.
+1. Restart your computer to complete the uninstall.
 
 ---
 
-When removing the DNS server role service from a Windows Server computer be aware:
-
-- For a DNS server that hosts AD DS-integrated zones, these zones are saved or deleted
-  according to their storage type. The zone data isn't deleted unless the DNS server that you
-  uninstall is the last DNS server hosting that zone.
-- For a DNS server that hosts standard DNS zones, the zone files remain in the
-  _%systemroot%\system32\Dns_ directory, but they aren't reloaded if the DNS server is reinstalled.
-  If you create a new zone with the same name as an old zone, the old zone file is replaced with the
-  new zone file.
+> [!IMPORTANT]
+>
+> When removing the DNS server role service from a Windows Server computer be aware:
+>
+> - For a DNS server that hosts AD DS-integrated zones, these zones are saved or deleted
+>   according to their storage type. The zone data isn't deleted unless the DNS server that you
+>   uninstall is the last DNS server hosting that zone.
+> - For a DNS server that hosts standard DNS zones, the zone files remain in the
+>   _%systemroot%\System32\Dns_ directory, but they aren't reloaded if the DNS server is reinstalled.
+>   If you create a new zone with the same name as an old zone, the old zone file is replaced with the
+>   new zone file.
 
 ## Next steps
 
