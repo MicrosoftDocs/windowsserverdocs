@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/24/2022
+ms.date: 12/192022
 ---
 # What's new in the web client
 
@@ -13,6 +13,15 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 > [!NOTE]
 > We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Azure Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+
+## Updates for version 1.0.28.0
+
+*Date published: December, 2022*
+
+- You can now redirect cameras.
+- Updated third-party libraries.
+- Accessibility improvements.
+- Bug fixes.
 
 ## Updates for version 1.0.27.0
 
