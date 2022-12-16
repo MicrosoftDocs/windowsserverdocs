@@ -22,6 +22,7 @@ Before you start upgrading, your computer must meet the following requirements:
 - Determine
   [which version of Windows Server to upgrade to](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
 - The hardware meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
+- Must not be running in Azure.
 - The install media is ready to use.
 - A valid product key and activation method are available. Keys and methods may depend based on the
   distribution channel that you received Windows Server media from, for example, a Commercial
@@ -36,6 +37,10 @@ Before you start upgrading, your computer must meet the following requirements:
   [Microsoft server applications compatibility](application-compatibility-windows-server-2022.md)
   article.
 - Review any third party application vendors support requirements.
+
+> [!IMPORTANT]
+> Looking to perform an in-place upgrade of Windows Server running in an Azure VM? See
+> [Steps for in-place system upgrades for Azure VMs](/troubleshoot/azure/virtual-machines/in-place-system-upgrade).
 
 ### Collect diagnostic information
 
