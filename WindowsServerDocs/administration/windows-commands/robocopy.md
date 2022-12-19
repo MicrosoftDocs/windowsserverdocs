@@ -37,8 +37,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 
 | Option | Description |
 |--|--|
-| /s | Copies subdirectories. This option automatically excludes empty directories. |
-| /e | Copies subdirectories. This option automatically includes empty directories. |
+| /s | Copies subdirectories. This option does not include empty directories. |
+| /e | Copies subdirectories. This option automatically includes empty directories. /e overrides /s|
 | /lev:`<n>` | Copies only the top *n* levels of the source directory tree. |
 | /z | Copies files in restartable mode. In restartable mode, should a file copy be interrupted, Robocopy can pick up where it left off rather than recopying the entire file. |
 | /b | Copies files in backup mode. Backup mode allows Robocopy to override file and folder permission settings (ACLs). This allows you to copy files you might otherwise not have access to, assuming it's being run under an account with sufficient privileges.|
