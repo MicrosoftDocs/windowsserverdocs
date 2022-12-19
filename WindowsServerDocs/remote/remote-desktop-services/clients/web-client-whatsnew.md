@@ -16,7 +16,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 ## Updates for version 1.0.28.0
 
-*Date published: December 2022*
+*Date published: December 19, 2022*
 
 - You can now redirect cameras.
 - Updated third-party libraries.
