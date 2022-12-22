@@ -26,37 +26,37 @@ See [Certificates and trust](certificates-and-trust.md) for for more detailed kn
 
 The following automatic update mechanisms are available in Windows Server 2012 R2 and Windows 8.1 or when the appropriate software update is installed:
 
-  - **Registry settings for storing CTLs** New settings enable changing the location for uploading trusted or untrusted CTLs from the Windows Update site to a shared location in an organization. For more information, see the [Registry settings modified]() section.
+- **Registry settings for storing CTLs** New settings enable changing the location for uploading trusted or untrusted CTLs from the Windows Update site to a shared location in an organization. For more information, see the [Registry settings modified]() section.
 
-  - **Synchronization options** If the URL for the Windows Update site is moved to a local shared folder, the local shared folder must be synchronized with the Windows Update folder. This software update adds a set of options in the Certutil tool that administrators can use to enable synchronization. For more information, see the [New Certutil Options]() section.
+- **Synchronization options** If the URL for the Windows Update site is moved to a local shared folder, the local shared folder must be synchronized with the Windows Update folder. This software update adds a set of options in the Certutil tool that administrators can use to enable synchronization. For more information, see the [New Certutil Options]() section.
 
-  - **Tool to select trusted root certificates** This software update introduces a tool for administrators who manage the set of trusted root certificates in their enterprise environment. Administrators can view and select the set of trusted root certificates, export them to a serialized certificate store, and distribute them by using Group Policy. For more information, see the [New Certutil Options]() section in this document.
+- **Tool to select trusted root certificates** This software update introduces a tool for administrators who manage the set of trusted root certificates in their enterprise environment. Administrators can view and select the set of trusted root certificates, export them to a serialized certificate store, and distribute them by using Group Policy. For more information, see the [New Certutil Options]() section in this document.
 
-  - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable. Administrators can use the automatic update mechanism to download only the untrusted CTLs and manage their own list of trusted CTLs. For more information, see the [Registry settings modified]() section in this document.
+- **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable. Administrators can use the automatic update mechanism to download only the untrusted CTLs and manage their own list of trusted CTLs. For more information, see the [Registry settings modified]() section in this document.
 
-Automatic update functionality also can be disabled if necessary. See [Workflow: PKI Client: Certificate Root Update Program - Overview (visualstudio.com)](https://supportability.visualstudio.com/WindowsDirectoryServices/_wiki/wikis/WindowsDirectoryServices/414078/Workflow-PKI-Client-Certificate-Root-Update-Program) for more information.
+Automatic update functionality also can be disabled if necessary, although this is not recommended. See [Workflow: PKI Client: Certificate Root Update Program - Overview (visualstudio.com)](https://supportability.visualstudio.com/WindowsDirectoryServices/_wiki/wikis/WindowsDirectoryServices/414078/Workflow-PKI-Client-Certificate-Root-Update-Program) for more information.
 
 ## Configuration options
 
 In Windows Server 2012 R2 and Windows 8.1 (or by installing the previously mentioned software updates on supported operating systems), an administrator can configure a file or web server to download the following files by using the automatic update mechanism:
 
-  - authrootstl.cab, which contains a non-Microsoft CTL
+- authrootstl.cab, which contains a non-Microsoft CTL
 
-  - disallowedcertstl.cab, which contains a CTL with untrusted certificates
+- disallowedcertstl.cab, which contains a CTL with untrusted certificates
 
-  - disallowedcert.sst, which contains a serialized certificate store, including untrusted certificates
+- disallowedcert.sst, which contains a serialized certificate store, including untrusted certificates
 
-  - *thumbprint*.crt, which contains non-Microsoft root certificates
+- *thumbprint*.crt, which contains non-Microsoft root certificates
 
 The steps to perform this configuration are described in the [Configure a file or web server to download the CTL files]() section of this document.
 
 By using Windows Server 2012 R2 and Windows 8.1 (or by installing the previously mentioned software updates on supported operating systems), an administrator can:
 
-  - Configure Active Directory Domain Services (AD DS) domain member computers to use the automatic update mechanism for trusted and untrusted CTLs, without having access to the Windows Update site. This configuration is described in the [Redirect the Microsoft Automatic Update URL for a disconnected environment]() section of this document.
+- Configure Active Directory Domain Services (AD DS) domain member computers to use the automatic update mechanism for trusted and untrusted CTLs, without having access to the Windows Update site. This configuration is described in the [Redirect the Microsoft Automatic Update URL for a disconnected environment]() section of this document.
 
-  - Configure AD DS domain member computers to independently opt-in for untrusted and trusted CTL automatic updates. This configuration is described in the [Redirect the Microsoft Automatic Update URL for untrusted CTLs only]() section of this document.
+- Configure AD DS domain member computers to independently opt-in for untrusted and trusted CTL automatic updates. This configuration is described in the [Redirect the Microsoft Automatic Update URL for untrusted CTLs only]() section of this document.
 
-  - Examine the set of root certificates in the Windows Root Certificate Program. This enables administrators to select a subset of certificates to distribute by using a Group Policy Object (GPO). This configuration is described in the [Use a subset of the trusted CTLs]() section of this document.
+- Examine the set of root certificates in the Windows Root Certificate Program. This enables administrators to select a subset of certificates to distribute by using a Group Policy Object (GPO). This configuration is described in the [Use a subset of the trusted CTLs]() section of this document.
 
 > [!IMPORTANT]
 > All the steps shown in this document require that you use an account that is a member of the local <STRONG>Administrators</STRONG> group. For all Active Directory Domain Services (AD DS) configuration steps, you must use an account that is a member of the <STRONG>Domain Admins</STRONG> group or that has been delegated the necessary permissions.
@@ -73,12 +73,12 @@ To facilitate the distribution of trusted or untrusted certificates for a discon
 
 #### To configure a server that has access to the Internet to retrieve the CTL files
 
-1.  Create a shared folder on a file or web server that is able to synchronize by using the automatic update mechanism and that you want to use to store the CTL files.
+1. Create a shared folder on a file or web server that is able to synchronize by using the automatic update mechanism and that you want to use to store the CTL files.
 
     > [!TIP]
     > <BR>Before you begin, you may have to adjust the shared folder permissions and NTFS folder permissions to allow the appropriate account access, especially if you're using a scheduled task with a service account. For more information on adjusting permissions see <A href="https://technet.microsoft.com/library/cc753731.aspx">Managing Permissions for Shared Folders</A>.
 
-1.  From an elevated command prompt, run the following command:
+1. From an elevated command prompt, run the following command:
 
     ```
     Certutil -syncWithWU \\<server>\<share>
@@ -90,7 +90,7 @@ To facilitate the distribution of trusted or untrusted certificates for a discon
     Certutil -syncWithWU \\Server1\CTL
     ```
 
-1.  Download the CTL files on a server that computers on a disconnected environment can access over the network by using a FILE path (for example, FILE://\\\\Server1\\CTL) or an HTTP path (for example, https://Server1/CTL).
+1. Download the CTL files on a server that computers on a disconnected environment can access over the network by using a FILE path (for example, FILE://\\\\Server1\\CTL) or an HTTP path (for example, https://Server1/CTL).
 
 > [!NOTE]
 > - If the server that synchronizes the CTLs is not accessible from the computers in the disconnected environment, you must provide another method to transfer the information. For example, you can allow one of the domain member computers to connect to the server, then schedule another task on the domain member computer to pull the information into a shared folder on an internal web server. If there is absolutely no network connection, you may have to use a manual process to transfer the files, such as a removable storage device.
@@ -320,6 +320,20 @@ The settings described in this document configure the following registry keys on
 | HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\DisableRootAutoUpdate | A value of 1 disables the Windows AutoUpdate of the trusted CTL. |  
 | HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\EnableDisallowedCertAutoUpdate | A value of 1 enables the Windows AutoUpdate of the untrusted CTL. |
 | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\RootDirUrl | Configures the shared location (the HTTP or the FILE path). |
+
+## Deleting Trusted and Untrusted CTLs
+
+It may be necessary for various reasons to delete all Trusted and Untrusted CTLs from a client machine. The following Certutil options can be used to accomplish this.
+
+`certutil -verifyCTL AuthRoot`
+`certutil -verifyCTL Disallowed`
+
+## Checking Last Sync Time
+
+To check the most recent sync time on the local machine for either Trusted or Untrusted CTLs, run the following Certutil command:
+
+`certutil -verifyctl AuthRoot | findstr /i "lastsynctime"`
+`certutil -verifyctl Disallowed | findstr /i "lastsynctime"`
 
 ## New Certutil Options
 

@@ -13,15 +13,31 @@ ms.date: 12/14/2022
 
 Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
 
-Trusted root certificates are used by Windows operating systems and applications as a reference for which public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Trusted root certificates functionality works across all environments, whether connected or disconnected.
+Trusted and untrusted root certificates are used by Windows operating systems and applications as a reference when determining whether public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Trusted and untrusted root certificates functionality works across all environments, whether connected or disconnected.
 
-The Microsoft Root Certificate Program distributes trusted root certificates within Windows operating systems. In Windows, trusted root certificates are stored in the Trusted Root Certification Authorities certificate. Applications in Windows reference this certificate when determining what public key infrastructure (PKI) hierarchies and digital certificates are trustworthy.
+The Microsoft Root Certificate Program distributes trusted and untrusted root certificates within Windows operating systems. In Windows, trusted root certificates are stored in the Trusted Root Certification Authorities certificate.
 
-Trusted root certificates are contained in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of latest CTLs. The list of trusted root certificates is called a Trusted CTL. Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism (CTL updater) discussed in this article. You can take advantage of CTL updater functionality by installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
+Trusted and untrusted root certificates are contained in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of latest CTLs. The list of trusted and untrusted root certificates are called the Trusted CTL and Untrusted CTL, respectively. Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism (CTL updater) discussed in this article. You can take advantage of CTL updater functionality by installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
 ## Automatic certificate trust list updates
 
-Automatic update functionality benefits include:
+By default, Windows downloads the CTLs from the Internet via an automatic mechanism called the CTL Updater. The public URLs used by the CTL Updater can be made available to clients. These are:
+
+- http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/disallowedcertstl.cab 
+- http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab
+
+Automatic update functionality also can be disabled if necessary, although this is not recommended.
+
+Alternately, you also can create a Group Policy administrative templates (ADMX policy) to redirect to an internal server for updates.
+
+The registry location where trusted and untrusted CTLs are stored are as follows: 
+
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\EncodedCtl
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\DisallowedCertEncodedCtl
+
+## Benefits of CTL Updater
+
+Automatic update functionality using the CTL Updater delivers several benefits:
 
 - **Registry settings for storing CTLs** New settings enable changing the location for uploading trusted or untrusted CTLs from the Windows Update site to a shared location in an organization. See [Registry Settings Modified](configure-trusted-roots-disallowed-certificates.md#registry-settings-modified).
 
@@ -30,8 +46,6 @@ Automatic update functionality benefits include:
 - **Tool to select trusted root certificates** This software update introduces a tool for managing the set of trusted root certificates in your enterprise environment. You can view and select the set of trusted root certificates, export them to a serialized certificate store, and distribute them by using Group Policy. For more information, see [New Certutil Options](configure-trusted-roots-disallowed-certificates.md#new-certutil-options).
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable; you can use the automatic update mechanism to download only the untrusted CTLs and manage your own list of trusted CTLs. For more information, see [Registry settings modified](configure-trusted-roots-disallowed-certificates.md#registry-settings-modified).
-
-Automatic update functionality also can be disabled if necessary. See [Workflow: PKI Client: Certificate Root Update Program - Overview (visualstudio.com)](https://supportability.visualstudio.com/WindowsDirectoryServices/_wiki/wikis/WindowsDirectoryServices/414078/Workflow-PKI-Client-Certificate-Root-Update-Program) for more information.
 
  See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
@@ -58,5 +72,9 @@ Automatic update functionality also can be disabled if necessary. See [Workflow:
 - [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
 
 - [Windows PKI Blog](https://blogs.technet.com/b/pki/)
+
+- [Event ID 8 — Automatic Root Certificates Update Configuration](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10)?redirectedfrom=MSDN)
+
+- [An update is available that enables administrators to update trusted and disallowed CTLs in disconnected environments in Windows](https://support.microsoft.com/topic/an-update-is-available-that-enables-administrators-to-update-trusted-and-disallowed-ctls-in-disconnected-environments-in-windows-0c51c702-fdcc-f6be-7089-4585fad729d6) 
 
 - [certutil](/administration/windows-commands/certutil.md)
