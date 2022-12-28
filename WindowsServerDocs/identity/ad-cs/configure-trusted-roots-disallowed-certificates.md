@@ -1,5 +1,5 @@
 ---
-title: Configure Root Certificate Updates
+title: Configure trusted roots and disallowed certificates
 description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs) and other functionality
 ms.service: 
 ms.topic: how-to 
@@ -24,7 +24,7 @@ See [Certificates and trust](certificates-and-trust.md) for for more detailed kn
 
 ## Software update description
 
-The following automatic update mechanisms are available in Windows Server 2012 R2 and Windows 8.1 or when the appropriate software update is installed:
+The following automatic update mechanisms are available in Windows Server 2012 R2 and Windows 8.1 and newer Windows versions or when the appropriate software update is installed (for older operating systems discussed in this article):
 
 - **Registry settings for storing CTLs** New settings enable changing the location for uploading trusted or untrusted CTLs from the Windows Update site to a shared location in an organization. For more information, see the [Registry settings modified]() section.
 
@@ -34,7 +34,7 @@ The following automatic update mechanisms are available in Windows Server 2012 R
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable. Administrators can use the automatic update mechanism to download only the untrusted CTLs and manage their own list of trusted CTLs. For more information, see the [Registry settings modified]() section in this document.
 
-Automatic update functionality also can be disabled if necessary, although this is not recommended. See [Workflow: PKI Client: Certificate Root Update Program - Overview (visualstudio.com)](https://supportability.visualstudio.com/WindowsDirectoryServices/_wiki/wikis/WindowsDirectoryServices/414078/Workflow-PKI-Client-Certificate-Root-Update-Program) for more information.
+Automatic update functionality also can be disabled if necessary, although this is not recommended. See [Event ID 8 — Automatic Root Certificates Update Configuration](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10)?redirectedfrom=MSDN#turn-off-automatic-root-certificates-update) for more information.
 
 ## Configuration options
 

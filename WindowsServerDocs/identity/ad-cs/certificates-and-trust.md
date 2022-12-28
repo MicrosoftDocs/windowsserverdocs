@@ -1,11 +1,11 @@
 ---
-title: Certificates and trust
+title: Trusted roots and disallowed certificates
 description: Learn how the Microsoft Root Certificate Program works to distribute trusted root certificates automatically across Windows operating systems in disconnected environments.
 ms.service: 
 author: gswashington
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 12/14/2022
+ms.date: 12/29/2022
 
 ---
 
@@ -13,11 +13,13 @@ ms.date: 12/14/2022
 
 Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
 
-Trusted and untrusted root certificates are used by Windows operating systems and applications as a reference when determining whether public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Trusted and untrusted root certificates functionality works across all environments, whether connected or disconnected.
+The Microsoft Root Certificate Program enables distribution of trusted and untrusted root certificates within Windows operating systems. For more information about the list of members in Windows Root Certificate Program, see [Windows Root Certificate Program - Members List (All CAs)](GET VERIFIED LINK FROM FLORIN).
 
-The Microsoft Root Certificate Program distributes trusted and untrusted root certificates within Windows operating systems. In Windows, trusted root certificates are stored in the Trusted Root Certification Authorities certificate.
+Trusted and untrusted root certificates are used by Windows operating systems and applications as a reference when determining whether public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Untrusted root certificates are certificates that are publicly known to be fraudulent. Trusted and untrusted root certificates functionality works across all environments, whether connected or disconnected.
 
-Trusted and untrusted root certificates are contained in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of latest CTLs. The list of trusted and untrusted root certificates are called the Trusted CTL and Untrusted CTL, respectively. Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism (CTL updater) discussed in this article. You can take advantage of CTL updater functionality by installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
+Trusted and untrusted root certificates are contained in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of latest CTLs. The list of trusted and untrusted root certificates are called the Trusted CTL and Untrusted CTL, respectively. See [Announcing the automated updater of untrustworthy certificates and keys](https://blogs.technet.com/b/pki/archive/2012/06/12/announcing-the-automated-updater-of-untrustworthy-certificates-and-keys.aspx) for more information.
+
+Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism (CTL updater) discussed in this article. You can take advantage of CTL updater functionality by installing the appropriate software updates. See [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
 ## Automatic certificate trust list updates
 
