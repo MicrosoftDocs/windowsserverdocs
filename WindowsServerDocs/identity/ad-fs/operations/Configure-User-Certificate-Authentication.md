@@ -37,7 +37,7 @@ Enable user certificate authentication as an intranet or extranet authentication
 
 Optional considerations include:
 
-- If you want to use claims based on certificate fields and extensions in addition to the [EKU claim type](https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim passthrough rules on the Active Directory claims provider trust. See the [complete list of available certificate claims](#reference-complete-list-of-user-certificate-claim-types-and-example-values) later in this article.
+- If you want to use claims based on certificate fields and extensions in addition to the [EKU claim type](https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure more claim passthrough rules on the Active Directory claims provider trust. See the [complete list of available certificate claims](#reference-complete-list-of-user-certificate-claim-types-and-example-values) later in this article.
 - If you need to restrict access based on the type of certificate, you can use the additional properties on the certificate in AD FS issuance authorization rules for the application. Common scenarios are to allow only certificates provisioned by a mobile device management (MDM) provider or to allow only smart card certificates.
 
   > [!IMPORTANT]
@@ -47,7 +47,7 @@ Optional considerations include:
 
   Configure allowed issuing certificate authorities for client certificates by using the guidance under "Management of trusted issuers for client authentication" in the [Schannel SSP technical overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786429(v=ws.11)).
 
-- Consider modifying sign-in pages to suit the needs of your users when you're doing certificate authentication. A common case is to change **Sign in with your X509 certificate** to something more user friendly.
+- Consider modifying sign-in pages to suit the needs of your users when they're doing certificate authentication. A common case is to change **Sign in with your X509 certificate** to something more user friendly.
 
 ## Configure seamless certificate authentication for the Chrome browser on Windows desktops
 
@@ -74,12 +74,12 @@ To validate this automatically, use the [AD FS Diagnostics Analyzer tool](https:
 
 ### Check if certificate authentication is enabled in the AD FS authentication policy
 
-AD FS performs user certificate authentication by default on port 49443 with the same host name as AD FS (example: `adfs.contoso.com`). You can also configure AD FS to use port 443 (the default HTTPS port) by using the alternate SSL binding. However, the URL used in this configuration is `certauth.<adfs-farm-name>` (example: `certauth.contoso.com`). For more information, see [AD FS support for alternate hostname binding for certificate authentication](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md).
+AD FS performs user certificate authentication by default on port 49443 with the same hostname as AD FS (example: `adfs.contoso.com`). You can also configure AD FS to use port 443 (the default HTTPS port) by using the alternate SSL binding. However, the URL used in this configuration is `certauth.<adfs-farm-name>` (example: `certauth.contoso.com`). For more information, see [AD FS support for alternate hostname binding for certificate authentication](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md).
 
 > [!NOTE]
 > In AD FS on Windows Server 2016, two modes are now supported. The first mode uses the host `adfs.contoso.com` with ports 443 and 49443. The second mode uses hosts `adfs.contoso.com` and `certauth.adfs.contoso.com` with port 443. You need an SSL certificate to support `certauth.\<adfs-service-name>` as an alternate subject name. You can do this at the time of farm creation or later via PowerShell.
 
-The most common case of network connectivity is that a firewall has been incorrectly configured and blocks traffic for user certificate authentication. Usually, you see a blank screen or a 500 server error when this problem occurs. To fix this problem:
+The most common case of network connectivity problems is that a firewall has been incorrectly configured and blocks traffic for user certificate authentication. Usually, you see a blank screen or a 500 server error when this problem occurs. To fix it:
 
 1. Note the hostname and port that you configured in AD FS.
 1. Ensure that any firewall in front of AD FS or WAP is configured to allow the `hostname:port` combination for your AD FS farm. Your network engineer must perform this step.
@@ -121,7 +121,7 @@ You might notice that some devices are working correctly but other devices are n
 
 ### Check if the TLS version is compatible between AD FS/WAP servers and the client device
 
-In rare cases, a client device, such as a mobile device, is updated to support only a higher version of TLS (for example, 1.3). Or you might have the reverse problem, where AD FS and WAP servers were updated to use only a higher TLS version that the client device doesn't support.
+In rare cases, a client device is updated to support only a higher version of TLS (for example, 1.3). Or you might have the reverse problem, where AD FS and WAP servers were updated to use only a higher TLS version that the client device doesn't support.
 
 You can use online SSL tools to check your AD FS and WAP servers and see if they're compatible with the device. For more information on how to control the TLS versions, see [Managing SSL/TLS protocols and cipher suites for AD FS](manage-ssl-protocols-in-ad-fs.md).
 
