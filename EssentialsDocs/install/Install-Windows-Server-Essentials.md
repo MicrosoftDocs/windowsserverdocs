@@ -15,7 +15,7 @@ manager: mtillman
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-The following documents provide step-by-step instructions for installing and configuring  Windows Server Essentials and  Windows Server Essentials, including pre-installation tasks and information about system requirements.
+The following documents provide step-by-step instructions for installing and configuring  Windows Server Essentials, including pre-installation tasks and information about system requirements.
 
 -   [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md)
 
