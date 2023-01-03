@@ -31,6 +31,7 @@
       "externalReference": [],
       "globalMetadata": {
          "breadcrumb_path": "/windows-server-essentials/breadcrumbs/toc.json",
+         "uhfHeaderId": "MSDocsHeader-WindowsServer",
          "_op_documentIdPathDepotMapping": {
             "./": {
                "depot_name": "WS.EssentialsDocs"

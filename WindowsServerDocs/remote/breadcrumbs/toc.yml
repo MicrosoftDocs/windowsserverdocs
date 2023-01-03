@@ -3,20 +3,17 @@ items:
   href: /
   items:
     - name: Windows Server
-      href: /windows-server/
-      items:
-      - name: Remote         
-        href: /windows-server/remote/ 
-        items: 
-        - name: Remote Access                         # New contextual breadcrumb
-          tocHref: /azure-stack/hci/concepts/         # Original  docset source
-          topicHref: /windows-server/remote/remote-access/remote-access.md     # New contextual Windows Server Remote Access docset route
-        - name: Remote Access
-          tocHref: /powershell/module/remoteaccess/
-          topicHref: /windows-server/remote/remote-access/remote-access.md
-        - name: Remote Access
-          tocHref: /windows/security/identity-protection/vpn/
-          topicHref: /windows-server/remote/remote-access/remote-access.md
-        - name: Remote Access
-          tocHref: /previous-versions/windows/it-pro/windows-2000-server/
-          topicHref: /windows-server/remote/remote-access/remote-access.md
+      tocHref: /windows-server/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /azure-stack/hci/concepts/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /powershell/module/remoteaccess/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /windows/security/identity-protection/vpn/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /previous-versions/windows/it-pro/windows-2000-server/
+      topicHref: /windows-server/
