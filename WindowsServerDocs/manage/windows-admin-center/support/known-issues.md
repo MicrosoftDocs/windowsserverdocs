@@ -300,7 +300,9 @@ You can use the following steps to troubleshoot:
    ```PowerShell
    Enter-PSSession -computername <node fqdn>
    ```
-
+### Inconsistent IP addresses
+  Some users may experience inconsistencies in their IP addresses between sections 2,3, and 4 of the cluster create wizard. Users may confirm the correct IP addresses using the SConfig tool. The addresses displayed by the SConfig tool should be consistent with the IP addresses displayed in step 4 of the wizard. These inconsistencies should not effect cluster deployment. 
+   
 ## CredSSP
 
 - The **Updates** tool will sometimes throw the CredSSP error **You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials**:
