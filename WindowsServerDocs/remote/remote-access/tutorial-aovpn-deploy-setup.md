@@ -36,58 +36,15 @@ To complete the steps in this tutorial,
 >[!IMPORTANT]
 >Using Remote Access in Microsoft Azure is not supported, including both Remote Access VPN and DirectAccess. For more information, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
-## Create the Domain Controller
+## Create the domain controller
 
 1. Install Windows Server on the machine that will run the domain controller.
 
 1. Install [Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) on the Windows Server. For detailed information on how to install AD DS, see [Install Active Directory Domain Services](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#to-install-ad-ds-by-using-server-manager).
 
-1. Promote the Windows Server to domain controller. For information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage)
+1. Promote the Windows Server to domain controller. For this tutorial, you'll create a new forest and the domain to that new forest. For detailed information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage).
 
-## Create the NPS server
-
-1. On the domain controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
-
-1. Register the NPS Server in Active Directory. For detailed information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
-
-1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
-
-## Create the VPN server
-
-1. Install Windows Server on the machine that will run the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
-
-1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
-
-1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
-
->[!IMPORTANT]
-> Copy and save the shared secret for NPS and VPN server communications, as you'll need it for later use in this tutorial.
-
-1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
-
-## Create the test client
-
-1. Install Windows 10+ or Windows Server on the machine that will be your test client.
-
-1. Join the test client to your domain. For information on how to join a computer to a domain, see [To join a computer to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
-
-## Configure Active Directory
-
-### Create Active Directory test user
-
-In this section, you'll add a test user who will be able to logon to the domain using Always On VPN.
-
-1. On the domain controller, open Active Directory Users and Computers.
-
-1. Under your domain, right-click **Users**. Select **New**.  For **User logon name**, enter any logon name. Select **Next**.
-
-1. Choose a password for the user.
-
-1. Deselect **User must change password at next logon**. Select **Password never expires**.
-
-1. Select **Finish**.
-
-### Create an Active Directory Group Policy
+## Create an Active Directory Group Policy
 
 In this section, you'll create a Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows the NPS server to request server authentication certificates automatically.
 
@@ -127,45 +84,90 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 7. Close Group Policy Management.
 
-### Create Active Directory groups
+## Create the NPS server
 
-In this section, you'll add three new Active Directory (AD) groups: the VPN Users group, the VPN Servers group, and the NPS Servers group.
+1. On the domain controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
-**Create the VPN Users group:**
+1. Register the NPS Server in Active Directory. For information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
+
+1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
+
+1. Create the NPS Servers group:
+
+    1. On the domain controller, open Active Directory Users and Computers.
+    
+    1. Under your domain, right-click **Computers**. Select **New**, then select **Group**.
+    
+    1. In **Group name**, enter **NPS Servers**, then select **OK**.
+    
+    1. Right-click **NPS Servers** and select **Properties**.
+    
+    1. On the **Members** tab of the VPN Servers Properties dialog box, select **Add**.
+    
+    1. select **Object Types**, select the **Computers** check box, then select **OK**.
+    
+    1. In **Enter the object names to select**, enter the computer name of the NPS server. Select **OK**.
+    
+    1. Close Active Directory Users and Computers.
+
+## Create the VPN server
+
+1. Install Windows Server on the machine that will run the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
+
+1. Add the DNS preferred address to the IP address of the domain controller. For information on how to set a static preferred DNS address, see [How to change IPv4 DNS server address to public DNS in Windows](https://answers.microsoft.com/windows/forum/all/how-to-change-ipv4-dns-server-address-to-public/56548e8d-eb9c-4fc5-807c-eefca5d278d0).
+
+1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
+
+1. Create the VPN Servers group:
+
+    1. On the domain controller, open Active Directory Users and Computers.
+    
+    1. Under your domain, right-click **Computers**. Select **New**, then select **Group**.
+    
+    1. In **Group name**, enter **VPN Servers**, then select **OK**.
+    
+    1. Right-click **VPN Servers** and select **Properties**.
+    
+    1. On the **Members** tab of the VPN Servers Properties dialog box, select **Add**.
+    
+    1. select **Object Types**, select the **Computers** check box, then select **OK**.
+    
+    1. In **Enter the object names to select**, enter the computer name of the VPN server. Select **OK**.
+    
+    1. Close Active Directory Users and Computers.
+
+1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
+
+>[!IMPORTANT]
+> Copy and save the shared secret for NPS and VPN server communications, as you'll need it for later use in this tutorial.
+
+1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
+
+## Configure the VPN user and client
+
+1. Install Windows 10+ or Windows Server on the machine that will be your test client.
 
 1. On the domain controller, open Active Directory Users and Computers.
 
-2. Under your domain, right-click **Users**. Select **New**, then select **Group**.
+1. Under your domain, right-click **Users**. Select **New**.  For **User logon name**, enter any logon name. Select **Next**.
 
-3. In **Group name**, enter **VPN Users**, then select **OK**.
+1. Choose a password for the user.
 
-4. Right-click **VPN Users** and select **Properties**.
+1. Deselect **User must change password at next logon**. Select **Password never expires**.
 
-5. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
+1. Select **Finish**. Keep Active Directory Users and Computers open.
 
-6. On the Select Users dialog box, add the test user who you created in [Create Active Directory test user](#create-active-directory-test-user) and select **OK**.
+1. Under your domain, right-click **Users**. Select **New**, then select **Group**.
 
-7. Close Active Directory Users and Computers.
+1. In **Group name**, enter **VPN Users**, then select **OK**.
 
-**Create the VPN Servers and NPS Servers groups:**
+1. Right-click **VPN Users** and select **Properties**.
 
-1. On a domain controller, open Active Directory Users and Computers.
+1. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
 
-2. Under your domain, right-click **Computers**. Select **New**, then select **Group**.
+1. On the Select Users dialog box, add the VPN user that you created and select **OK**. 
 
-3. In **Group name**, enter **VPN Servers**, then select **OK**.
-
-4. Right-click **VPN Servers** and select **Properties**.
-
-5. On the **Members** tab of the VPN Servers Properties dialog box, select **Add**.
-
-6. select **Object Types**, select the **Computers** check box, then select **OK**.
-
-7. In **Enter the object names to select**, enter the computer name of the VPN server you created in [Create the VPN server](#create-the-vpn-server). Select **OK**.
-
-8. Repeat the previous steps for the NPS Servers group.
-
-9. Close Active Directory Users and Computers.
+1. Join the VPN client to your domain. For information on how to join a computer to a domain, see [To join a computer to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
 ## Configure NPS RADIUS server and client
 

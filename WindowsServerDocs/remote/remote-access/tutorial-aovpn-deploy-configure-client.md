@@ -21,6 +21,8 @@ Instead of describing how to create the XML markup from scratch, you use Setting
 
 1. Complete [Tutorial: Deploy Always On VPN - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md).
 
+<!-- Editor's note: probably find this in earlier part of the tutorial -->
+
 1. Copy/paste the fully qualified domain name (FQDN) of the NPS server and the name of the CA that issued that certificate. To retrieve these values perform the following steps:
 
     1. On the NPS server, open Network Policy Server.
@@ -50,29 +52,31 @@ In this section, we'll create a test VPN connection to verify the configuration 
 
 1. Sign in to the domain-joined test client computer as the test user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-active-directory-test-user).
 
-2. On the Start menu, type **VPN**, and press ENTER.
+1. On the Start menu, type **VPN**, and press ENTER.
 
-3. In the details pane, select **Add a VPN connection**.
+1. In the details pane, select **Add a VPN connection**.
 
-4. For **VPN Provider**, select *Windows (built-in)*.
+1. For **VPN Provider**, select *Windows (built-in)*.
 
-5. For **Connection Name**, enter *Template*.
+1. For **Connection Name**, enter *Contoso VPN*.
 
-6. For **Server name or address**, enter the **external** FQDN of your VPN server (for example, *vpn.contoso.com*).
+1. For **Server name or address**, enter the **external** FQDN of your VPN server (for example, *vpn.contoso.com*).
 
-7. Select **Save**.
+1. For **VPN type**, leave as *IKEv2*.
 
-8. Under Related Settings, select **Change adapter options**.
+1. For **Type of sing-in info**, select *Certificate*.
 
-9. Right-click **Template**, and select **Properties**.
+1. Select **Save**.
 
-10. On the **Security** tab, for **Type of VPN**, select *IKEv2*.
+1. Under Related Settings, select **Change adapter options**.
 
-11. For **Data encryption**, select *Maximum strength encryption*.
+1. Right-click **Contoso VPN**, and select **Properties**.
 
-12. Select **Use Extensible Authentication Protocol (EAP)**. Then, for **Use Extensible Authentication Protocol (EAP)**, select *Microsoft: Protected EAP (PEAP) (encryption enabled)*.
+1. On the **Security** tab, for **Data encryption**, select *Maximum strength encryption*.
 
-13. Select **Properties** to open Protected EAP Properties, and complete the following steps:
+1. Select **Use Extensible Authentication Protocol (EAP)**. Then, for **Use Extensible Authentication Protocol (EAP)**, select *Microsoft: Protected EAP (PEAP) (encryption enabled)*.
+
+1. Select **Properties** to open Protected EAP Properties, and complete the following steps:
 
     1. For **Connect to these servers**, enter the name of the NPS server that you retrieved from the NPS server authentication settings earlier in the [Prerequisites](#prerequisites)(for example, NPS01).
 
@@ -96,11 +100,11 @@ In this section, we'll create a test VPN connection to verify the configuration 
 
         1. Select **OK** to close Protected EAP Properties.
 
-    1. Select **OK** to close the Template Properties dialog box.
+    1. Select **OK** to close Contoso VPN Properties.
 
-14. Close the Network Connections window.
+1. Close the Network Connections window.
 
-15. In Settings, test the VPN by clicking **Template**, and clicking **Connect**.
+1. In Settings, test the VPN by clicking **Contoso VPN**, and clicking **Connect**.
 
 >[!IMPORTANT]
 >Make sure that the template VPN connection to your VPN server is successful. Doing so ensures that the EAP settings are correct before you use them in the next example. You must connect at least once before continuing; otherwise, the profile will not contain all the information necessary to connect to the VPN.
