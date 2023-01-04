@@ -5,11 +5,13 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/29/2021
+ms.date: 01/04/2023
 ---
 # What's new in the Microsoft Store client
 
-We regularly update the [Microsoft Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+We're no longer updating the Microsoft Store client with new features.
+
+For the best Azure Virtual Desktop experience that includes the latest features and fixes, we recommend you download our [Windows Remote Desktop client](/azure/virtual-desktop/whats-new-client-windows) instead.
 
 ## Updates for version 10.2.1810
 
