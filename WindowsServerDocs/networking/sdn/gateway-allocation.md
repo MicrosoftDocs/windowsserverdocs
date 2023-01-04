@@ -22,26 +22,21 @@ In Windows Server 2019, for a tunnel type, the maximum throughput is fixed. Even
 
 The maximum available throughput for different tunnel types are:
 
+- IPsec = 5 Gbps
+
 - GRE = 15 Gbps
 
 - L3 = 5 Gbps
 
-- IPsec = 5 Gbps
-
 > [!NOTE]
-> By default, IPsec bandwidth allocation uses [Windows Server 2016 behavior](#windows-server-2016-behavior) described later in this article. 
-> 
-> To get maximum throughput (5 Gbps), do the following on gateway VMs:
-> 
+> By default, IPsec bandwidth allocation uses [Windows Server 2016 behavior](#windows-server-2016-behavior) described later in this article. To get maximum throughput (5 Gbps), follow these steps on each gateway VM:
 > 1. Run the following command to enable the gatewayservice:
 >
->    ```powershell
->    Set-Service gatewayservice -StartupType Automatic -Status Running
->    ```
+>     ```powershell
+>     Set-Service gatewayservice -StartupType Automatic -Status Running
+>     ```
 >
-> 1. Restart the gateway VM
->
-> 1. Repeat steps 1 and 2 for each gateway VM 
+> 1. Restart the gateway VM.
 
 ## Gateway capacity calculation
 
