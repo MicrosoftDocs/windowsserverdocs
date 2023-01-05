@@ -128,14 +128,9 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. Select **OK**.
 
-1. On the VPN server properties dialog, review the setting for **Accounting provider**:
+1. For **Accounting provider** select *Windows Accounting*.
 
-    |If you want the... | Then…  |
-    |-----------------------------------------------------------|--|
-    | Remote Access activity logged on the Remote Access server |Make sure that **Windows Accounting** is selected.|
-    | NPS to perform accounting services for VPN | Change **Accounting provider** to **RADIUS Accounting** and then configure the NPS as the accounting provider. |
-
-1. Select the **IPv4** tab and do:
+1. Select the **IPv4** tab and do the following steps:
 
     1. Select **Static address pool**.
 
@@ -181,6 +176,6 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. If prompted, select **Yes** to confirm restarting the server and select **Close** to restart the server.
 
- ## Next steps
+## Next steps
 
 - [Tutorial: Deploy Always On VPN](tutorial-aovpn-deploy-setup.md)

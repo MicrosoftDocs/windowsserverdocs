@@ -154,12 +154,6 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
     1. For **Value**, enter the name of the external domain that clients use to connect to the VPN (for example, vpn.contoso.com).
     1. Select **Add**.
 
-    *In the **Alternative Name** section*:
-
-    1. For **Type**, select *DNS*.
-    1. For **Value**, enter all server names that clients use to connect to the VPN (for example, vpn.contoso.com, vpn, 132.64.86.2).
-    1. Select **Add**.
-
 1. Select **OK** to close Certificate Properties.
 
 1. Select **Enroll**.
