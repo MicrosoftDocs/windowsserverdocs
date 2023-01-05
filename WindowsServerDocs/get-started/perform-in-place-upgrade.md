@@ -40,7 +40,7 @@ Before you start upgrading, your computer must meet the following requirements:
 
 > [!IMPORTANT]
 > Looking to perform an in-place upgrade of Windows Server running in an Azure VM? See
-> [Steps for in-place system upgrades for Azure VMs](/troubleshoot/azure/virtual-machines/in-place-system-upgrade).
+> [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 ### Collect diagnostic information
 
