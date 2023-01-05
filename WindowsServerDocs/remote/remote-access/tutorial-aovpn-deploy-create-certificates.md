@@ -14,20 +14,16 @@ In this part of the Deploy Always On VPN tutorial, you'll create certificate tem
 
 You'll create the following templates:
 
-- *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
+- *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview). 
+
+    >[!NOTE]
+    >The user template has been configured for autoenrollment and so only requires verification. The VPN server template will be enrolled manually.
 
 - *VPN server authentication template*. With a VPN server authentication template, you can add the IP Security (IPsec) IKE Intermediate application policy to allows the server to filter certificates if more than one certificate is available with the server authentication extended key usage. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for autoenrollment.
-
-- *NPS server authentication template*. The NPS server authentication template is a simple copy of the RAS and IAS Server template secured to the NPS Server group that you created earlier in this section. You'll configure the NPS server certificate for autoenrollment.
-
->[!NOTE]
->Both user and NPS server authentication templates have been configured for autoenrollment and so only require verification. The VPN server template will be enrolled manually.
 
 ## Prerequisites
 
 1. Complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
-
-1. Create the Certificate Authority (CA) server. On the domain controller, install the Certificate Authority (CA). For detailed information on how to install CA, see [Install the Certification Authority](/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
 
 ## Create the user authentication template
 
@@ -128,71 +124,9 @@ You'll create the following templates:
 
 1. Select **OK** to save the VPN Server certificate template.
 
-1. Restart the Certificate Authority services. You can restart the CA service by running the following command in CMD:
-
-    ```dos
-    net stop "certsvc"
-    net start "certsvc"
-    ```
-
 1. In the left pane of the Certificate Authority snap-in, right-click **Certificate Templates**. Select **New** and then select **Certificate Template to Issue**.
 
 1. Select **VPN Server Authentication**, then select **OK**.
-
-## Create the NPS Server authentication template
-
-1. In the Certificate Templates console, right-click **RAS and IAS Server**, and select **Duplicate Template**.
-
-   >[!WARNING]
-   >Do not select **Apply** or **OK** at any time prior to step 10.  If you select these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
-
-1. In the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter *NPS Server Authentication*.
-
-1. On the **Security** tab, complete the following steps:
-
-    1. Select **Add**.
-
-    2. On the **Select Users, Computers, Service Accounts, or Groups** dialog box, enter **NPS Servers**, then select **OK**.
-
-    3. In **Group or user names**, select **NPS Servers**.
-
-    4. In **Permissions for NPS Servers**, select the **Enroll** and **Autoenroll** check boxes in the **Allow** column.
-
-    5. In **Group or user names**, select **RAS and IAS Servers**, then select **Remove**.
-
-1. Select **OK** to save the NPS Server certificate template.
-
-1. Close the Certificate Templates console.
-
-1. In the left pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
-
-1. Select **NPS Server Authentication**, and select **OK**.
-
-1. Close the Certification Authority snap-in.
-
-1. Restart both the VPN and CA servers.
-
-## Enroll and validate certificates
-
-### Validate the user certificate
-
-Because we've configured Group Policy to autoenroll user certificates for the VPN Users group, Windows 10+ will automatically enroll any users that belong to that group. 
-
-**To validate the VPN User certificate:**
-
-1. Sign in to the domain-joined test client computer as the test user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-active-directory-test-user).
-
-2. Press Windows key + R. Type **gpupdate /force**, and press ENTER.
-
-3. On the Start menu, type **certmgr.msc** to open the Certificates snap-in, and press ENTER.
-
-4. In the Certificates snap-in, select **Personal** **>** **Certificates**. Your certificates should appear in the details pane.
-
-5. Right-click the certificate that has your current domain username, and then select **Open**.
-
-6. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
-
-7. Select **OK**, and close the Certificates snap-in.
 
 ### Enroll and validate the VPN server certificates
 
@@ -245,24 +179,6 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 1. On the **Details** tab, select **Enhanced Key Usage**, and verify that **IP security IKE intermediate** and **Server Authentication** display in the list.
 
 1. Select **OK** to close the certificate.
-
-### Validate the NPS server certificate
-
-Like the user certificate, the NPS server automatically enrolls its authentication certificate, so all you need to do is validate it.
-
-1. Restart the NPS server.
-
-1. In the Certificates snap-in, under **Personal**, select **Certificates**.
-
-    Your listed certificates should appear in the details pane.
-
-1. Right-click the NPS Server Authentication certificate, and then select **Open**.
-
-1. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the incorrect certificate.
-
-1. Select **OK** to close the certificate.
-
-1. Close the Certificates snap-in.
 
 ## Next steps
 

@@ -44,6 +44,8 @@ To complete the steps in this tutorial,
 
 1. Promote the Windows Server to domain controller. For this tutorial, you'll create a new forest and the domain to that new forest. For detailed information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage).
 
+1. Install the Certificate Authority (CA) on the domain controller. For detailed information on how to install CA, see [Install the Certification Authority](/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
+
 ## Create an Active Directory Group Policy
 
 In this section, you'll create a Group Policy on the domain controller so that domain members automatically request user and computer certificates. This configuration lets VPN users request and retrieve user certificates that automatically authenticate VPN connections. This policy also allows the NPS server to request server authentication certificates automatically.
@@ -91,24 +93,6 @@ In this section, you'll create a Group Policy on the domain controller so that d
 1. Register the NPS Server in Active Directory. For information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
 
 1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
-
-1. Create the NPS Servers group:
-
-    1. On the domain controller, open Active Directory Users and Computers.
-    
-    1. Under your domain, right-click **Computers**. Select **New**, then select **Group**.
-    
-    1. In **Group name**, enter **NPS Servers**, then select **OK**.
-    
-    1. Right-click **NPS Servers** and select **Properties**.
-    
-    1. On the **Members** tab of the VPN Servers Properties dialog box, select **Add**.
-    
-    1. select **Object Types**, select the **Computers** check box, then select **OK**.
-    
-    1. In **Enter the object names to select**, enter the computer name of the NPS server. Select **OK**.
-    
-    1. Close Active Directory Users and Computers.
 
 ## Create the VPN server
 
@@ -189,19 +173,19 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
     1. Ensure that **Manual** is selected.
 
-    2. Enter the secret that you created in the [Create the VPN server section](#create-the-vpn-server).
+    1. Enter the secret that you created in the [Create the VPN server section](#create-the-vpn-server).
 
-    3. For **Confirm shared secret**, re-enter the shared secret.
+    1. For **Confirm shared secret**, re-enter the shared secret.
 
 1. Select **OK**. The VPN Server should appear in the list of RADIUS clients configured on the NPS server.
 
->[!IMPORTANT]
-
->If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
->
->- Ports UDP1812, UDP1813, UDP1645, and UDP1646
->
->If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
+    >[!IMPORTANT]
+    
+    >If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
+    >
+    >- Ports UDP1812, UDP1813, UDP1645, and UDP1646
+    >
+    >If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
 
 ### Configure NPS server as a RADIUS server
 
@@ -223,7 +207,6 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
     2. Select the **Extensible Authentication Protocol** check box to select it.
 
-<!-- Editor's note: Do we need to select "Microsoft: Secured password (EAP-MSCHAP v2) ? In the client configuration setup, the test client can't connect  withou this. -->
     3. For **Type** (based on the method of access and network configuration), select **Microsoft: Protected EAP (PEAP)**. Then select **Configure** to open the Edit Protected EAP Properties dialog box.
 
     4. Select **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
