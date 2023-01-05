@@ -164,32 +164,6 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. A dialog will prompt you to restart the server. Select **Yes**.
 
-## Configure VPN server as a RADIUS client
-
-1. On the NPS server, enable the following ports: UDP1812, UDP1813, UDP1645, and UDP1646.
-
-1. In the NPS console, double-click **RADIUS Clients and Servers**.
-
-1. Right-click **RADIUS Clients** and select **New** to open the New RADIUS Client dialog box.
-
-1. Verify that the **Enable this RADIUS client** check box is selected.
-
-1. In **Friendly name**, enter a display name for the VPN server.
-
-1. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
-
-    If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
-
-1. In **Shared secret**:
-
-    1. Ensure that **Manual** is selected.
-
-    1. Enter the secret that you created in the [Create the VPN server section](#create-the-vpn-server).
-
-    1. For **Confirm shared secret**, re-enter the shared secret.
-
-1. Select **OK**. The VPN Server should appear in the list of RADIUS clients configured on the NPS server.
-
 ## Create VPN Client
 
 1. Install Windows 10+ or Windows Server on the machine that will be your VPN client.
@@ -220,6 +194,32 @@ In this section, you'll create a Group Policy on the domain controller so that d
     1. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
     
     1. On the Select Users dialog box, add the VPN user that you created and select **OK**.
+
+## Configure VPN server as a RADIUS client
+
+1. On the NPS server, enable the following ports: UDP1812, UDP1813, UDP1645, and UDP1646.
+
+1. In the NPS console, double-click **RADIUS Clients and Servers**.
+
+1. Right-click **RADIUS Clients** and select **New** to open the New RADIUS Client dialog box.
+
+1. Verify that the **Enable this RADIUS client** check box is selected.
+
+1. In **Friendly name**, enter a display name for the VPN server.
+
+1. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
+
+    If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
+
+1. In **Shared secret**:
+
+    1. Ensure that **Manual** is selected.
+
+    1. Enter the secret that you created in the [Create the VPN server section](#create-the-vpn-server).
+
+    1. For **Confirm shared secret**, re-enter the shared secret.
+
+1. Select **OK**. The VPN Server should appear in the list of RADIUS clients configured on the NPS server.
 
 ## Configure NPS server as a RADIUS server
 
