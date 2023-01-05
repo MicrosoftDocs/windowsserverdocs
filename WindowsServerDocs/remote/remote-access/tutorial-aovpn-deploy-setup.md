@@ -44,7 +44,7 @@ To complete the steps in this tutorial,
 
 1. Promote the Windows Server to domain controller. For this tutorial, you'll create a new forest and the domain to that new forest. For detailed information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage).
 
-1. Install the Certificate Authority (CA) on the domain controller. For detailed information on how to install CA, see [Install the Certification Authority](/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
+1. Install and configure the Certificate Authority (CA) on the domain controller. For detailed information on how to install CA, see [Install the Certification Authority](/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
 
 ## Create an Active Directory Group Policy
 
@@ -102,6 +102,10 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
+1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
+
+1. Enable the following ports: UDP1812, UDP1813, UDP1645, and UDP1646.
+
 1. Create the VPN Servers group:
 
     1. On the domain controller, open Active Directory Users and Computers.
@@ -122,42 +126,49 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
 
->[!IMPORTANT]
-> Copy and save the shared secret for NPS and VPN server communications, as you'll need it for later use in this tutorial.
+1. Open the Routing and Remote Access tool from Server Manager., r
 
-1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
+1. Right-click the VPN server, and then select **Properties**.
 
-## Configure the VPN user and client
+1. In Properties, select the **Security** tab and then:
 
-1. Install Windows 10+ or Windows Server on the machine that will be your test client.
+    1. Select **Authentication provider** and select **RADIUS Authentication**.
 
-1. On the domain controller, open Active Directory Users and Computers.
+    1. Select **Configure** to open the RADIUS Authentication dialog.
 
-1. Under your domain, right-click **Users**. Select **New**.  For **User logon name**, enter any logon name. Select **Next**.
+    1. Select **Add** to open the Add RADIUS Server dialog.
 
-1. Choose a password for the user.
+        1. In **Server name**, enter the Fully Qualified Domain Name (FQDN) of the NPS server. In this tutorial, the NPS server is the domain controller server. For example, if the NetBIOS name of your NPS and domain controller server is dc1 and your domain name is corp.contoso.com, enter **dc1.corp.contoso.com**.
 
-1. Deselect **User must change password at next logon**. Select **Password never expires**.
+        1. In **Shared secret**, select **Change** to open the Change Secret dialog box.
 
-1. Select **Finish**. Keep Active Directory Users and Computers open.
+        1. In **New secret**, enter a text string.
 
-1. Under your domain, right-click **Users**. Select **New**, then select **Group**.
+        1. In **Confirm new secret**, enter the same text string, then select **OK**.
 
-1. In **Group name**, enter **VPN Users**, then select **OK**.
+        1. Save this secret. You'll need it when you add this VPN server as a RADIUS client later in this tutorial.
 
-1. Right-click **VPN Users** and select **Properties**.
+    1. Select **OK** to close the Add RADIUS Server dialog.
 
-1. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
+    1. Select **OK** to close the Radius Authentication dialog.
 
-1. On the Select Users dialog box, add the VPN user that you created and select **OK**. 
+1. On the VPN server Properties dialog, select **Authentication Methods...**.
 
-1. Join the VPN client to your domain. For information on how to join a computer to a domain, see [To join a computer to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
+1. Select **Allow machine certificate authentication for IKEv2**.
 
-## Configure NPS RADIUS server and client
+1. Select **OK**.
 
-### Configure VPN server as a RADIUS client
+1. For **Accounting provider**, select *Windows Accounting*.
 
-1. On the NPS server, in the NPS console, double-click **RADIUS Clients and Servers**.
+1. Select **OK** to close the Properties dialog.
+
+1. A dialog will prompt you to restart the server. Select **Yes**.
+
+## Configure VPN server as a RADIUS client
+
+1. On the NPS server, enable the following ports: UDP1812, UDP1813, UDP1645, and UDP1646.
+
+1. In the NPS console, double-click **RADIUS Clients and Servers**.
 
 1. Right-click **RADIUS Clients** and select **New** to open the New RADIUS Client dialog box.
 
@@ -179,15 +190,38 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. Select **OK**. The VPN Server should appear in the list of RADIUS clients configured on the NPS server.
 
-    >[!IMPORTANT]
-    
-    >If you use the default RADIUS port configuration on the VPN Server and the NPS Server, make sure that you open the following ports:
-    >
-    >- Ports UDP1812, UDP1813, UDP1645, and UDP1646
-    >
-    >If you're not using the default RADIUS ports in your NPS deployment, you must allow RADIUS traffic on the ports that you are using. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
+## Create VPN Client
 
-### Configure NPS server as a RADIUS server
+1. Install Windows 10+ or Windows Server on the machine that will be your VPN client.
+
+1. Join the VPN client to your domain. For information on how to join a computer to a domain, see [To join a computer to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
+
+## Create VPN User and Group
+
+1. Create a VPN User by taking the following steps:
+    1. On the domain controller, open Active Directory Users and Computers.
+    
+    1. Under your domain, right-click **Users**. Select **New**.  For **User logon name**, enter any logon name. Select **Next**.
+    
+    1. Choose a password for the user.
+    
+    1. Deselect **User must change password at next logon**. Select **Password never expires**.
+    
+    1. Select **Finish**. Keep Active Directory Users and Computers open.
+
+1. Create a VPN User group by taking the following steps:
+    
+    1. Under your domain, right-click **Users**. Select **New**, then select **Group**.
+    
+    1. In **Group name**, enter **VPN Users**, then select **OK**.
+    
+    1. Right-click **VPN Users** and select **Properties**.
+    
+    1. On the **Members** tab of the VPN Users Properties dialog box, select **Add**.
+    
+    1. On the Select Users dialog box, add the VPN user that you created and select **OK**.
+
+## Configure NPS server as a RADIUS server
 
 1. In the NPS console, select **NPS(Local)**.
 
@@ -195,19 +229,19 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. Select **Configure VPN or Dial-Up** to open the Configure VPN or Dial-Up wizard.
 
-1. Select **Virtual Private Network (VPN) Connections**, and select **Next**.
+1. Select *Virtual Private Network (VPN) Connections*, and select **Next**.
 
-1. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN Server that you added in [Configure VPN server as a RADIUS client](#configure-vpn-server-as-a-radius-client).
+1. In Specify Dial-Up or VPN Server, in RADIUS clients, select the name of the VPN server.
 
 1. Select **Next**.
 
 1. In Configure Authentication Methods, complete the following steps:
 
-    1. Clear the **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** check box.
+    1. Clear **Microsoft Encrypted Authentication version 2 (MS-CHAPv2)** .
 
-    2. Select the **Extensible Authentication Protocol** check box to select it.
+    2. Select **Extensible Authentication Protocol**.
 
-    3. For **Type** (based on the method of access and network configuration), select **Microsoft: Protected EAP (PEAP)**. Then select **Configure** to open the Edit Protected EAP Properties dialog box.
+    3. For **Type**, select **Microsoft: Protected EAP (PEAP)**. Then select **Configure** to open the Edit Protected EAP Properties dialog box.
 
     4. Select **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
 
@@ -227,11 +261,11 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
     3. Select **Next**.
 
-1. For **Specify IP Filters**, select **Next**.
+1. On **Specify IP Filters**, select **Next**.
 
-1. For **Specify Encryption Settings**, select **Next**. Do not make any changes.
+1. On **Specify Encryption Settings**, select **Next**. Do not make any changes.
 
-1. For **Specify a Realm Name**, select **Next**.
+1. On **Specify a Realm Name**, select **Next**.
 
 1. Select **Finish** to close the wizard.
 

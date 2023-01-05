@@ -38,25 +38,23 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 **To install Remote Access role by using Server Manager:**
 
-1. On the Windows server, in Server Manager, select **Manage** and select **Add Roles and Features**.
-
-   The Add Roles and Features Wizard opens.
+1. On the Windows server, in Server Manager, select **Manage** and select **Add Roles and Features** to open the Add Roles and Features Wizard.
 
 2. On the Before you begin page, select **Next**.
 
-3. On the Select Installation Type page, select the **Role-Based or feature-based installation** option and select **Next**.
+3. On the Select Installation Type page, select *Role-Based or feature-based installation* and select **Next**.
 
-4. On the Select destination server page, select the **Select a server from the server pool** option.
+4. On the Select destination server page, select *Select a server from the server pool* .
 
 5. Under Server Pool, select the local computer and select **Next**.
 
-6. On the Select server roles page, in **Roles**, select **Remote Access**, then **Next**.
+6. On the Select server roles page, in **Roles**, select *Remote Access*, then **Next**.
 
 7. On the Select features page, select **Next**.
 
 8. On the Remote Access page, select **Next**.
 
-9. On the Select role service page, in **Role services**, select **DirectAccess and VPN (RAS)**.
+9. On the Select role service page, in **Role services**, select *DirectAccess and VPN (RAS)*.
 
 10. On the Confirm installation selections page, review your choices, then select **Install**.
 
@@ -68,67 +66,28 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 In this section, we'll configure Remote Access to allow IKEv2 VPN connections and to deny connections from other VPN protocols. We'll also assign a static IP address pool for the issuance of IP addresses to connecting authorized VPN clients.
 
-1. On the VPN server, in Server Manager, select the **Notifications** flag.
+1. Make sure that your firewall rules allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
+
+1. On the VPN server, in Server Manager, select the Notifications flag. You may have to wait a minute or two to see the Notifications flag.
 
 1. In the **Tasks** menu, select **Open the Getting Started Wizard** to open the Configure Remote Access wizard.
 
    >[!NOTE]
    >The Configure Remote Access wizard might open behind Server Manager. If you think the wizard is taking too long to open, move or minimize Server Manager to find out whether the wizard is behind it. If not, wait for the wizard to initialize.
 
-1. Select **Deploy VPN only** to open the Routing and Remote Access Microsoft Management Console (MMC).
+1. Select *Deploy VPN only* to open the Routing and Remote Access Microsoft Management Console (MMC).
 
-1. Right-click the VPN server, and then select **Configure and Enable Routing and Remote Access** to open the Routing and Remote Access Server Setup Wizard.
+1. Right-click the VPN server, and then select *Configure and Enable Routing and Remote Access* to open the Routing and Remote Access Server Setup Wizard.
 
 1. In the Welcome to the Routing and Remote Access Server Setup Wizard, select **Next**.
 
-1. In **Configuration**, select **Custom Configuration**, and then select **Next**.
+1. In **Configuration**, select *Custom Configuration*, and then select **Next**.
 
-1. In **Custom Configuration**, select **VPN access**, and then select **Next** to open the Completing the Routing and Remote Access Server Setup Wizard.
+1. In **Custom Configuration**, select *VPN access*, and then select **Next** to open the Completing the Routing and Remote Access Server Setup Wizard.
 
 1. Select **Finish** to close the wizard, then select **OK** to close the Routing and Remote Access dialog box.
 
-1. Select **Start service** to start Remote Access.
-
-1. In the Remote Access snap-in, right-click the VPN server, then select **Properties**.
-
-1. In Properties, select the **Security** tab and then:
-
-    1. Select **Authentication provider** and select **RADIUS Authentication**.
-
-    1. Select **Configure** to open the RADIUS Authentication dialog box.
-
-    1. Select **Add** to open the Add RADIUS Server dialog box.
-
-        1. In **Server name**, enter the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network. For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, enter **NPS1.corp.contoso.com**.
-
-        1. In **Shared secret**, select **Change** to open the Change Secret dialog box.
-
-        1. In **New secret**, enter a text string.
-
-        1. In **Confirm new secret**, enter the same text string, then select **OK**.
-
-    >[!IMPORTANT]
-    >Save this text string. If you plan on you configuring the NPS Server on your Organization/Corporate network, you'll add this VPN Server as a RADIUS Client. During that configuration, you will use this same shared secret so that the NPS and VPN Servers can communicate.
-
-    1. In **Add RADIUS Server**, review the default settings for:
-
-        - **Time-out**
-
-        - **Initial score**
-
-        - **Port**
-
-    1. If necessary, change the values to match the requirements for your environment and select **OK**.
-
-    1. Select **OK** to close the Radius Authentication dialog.
-
-1. On the VPN server properties dialog, select **Authentication Methods...**.
-
-1. Select **Allow machine certificate authentication for IKEv2**.
-
-1. Select **OK**.
-
-1. For **Accounting provider** select *Windows Accounting*.
+1. Once the VPN server is running, right-click the VPN server and select **Properties**.
 
 1. Select the **IPv4** tab and do the following steps:
 
@@ -136,17 +95,13 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
     2. Select **Add** to configure an IP address pool.
 
-       The static address pool should contain addresses from the internal perimeter network. These addresses are on the internal-facing network connection on the VPN server, not the corporate network.
-
     3. In **Start IP address**, enter the starting IP address in the range you want to assign to VPN clients.
 
     4. In **End IP address**, enter the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, enter the number of the address you want to make available.
 
-    5. Select **OK** to close the Properties dialog.
+1. Select **OK** to close the Properties dialog.
 
-1. In the Routing and Remote Access MMC, right-click **Ports,** and then select **Properties**.
-
-    The Ports Properties dialog box opens.
+1. In the Routing and Remote Access MMC, right-click **Ports,** and then select **Properties** to open the Ports Properties dialog box.
 
 1. Select **WAN Miniport (SSTP)** and select **Configure** to open the Configure Device - WAN Miniport (SSTP) dialog box.
 
@@ -173,8 +128,6 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
     1. Clear both  **Remote access connections (inbound only)**  and **Demand-dial routing connections (inbound and outbound)**.
 
     2. Select **OK**.
-
-1. If prompted, select **Yes** to confirm restarting the server and select **Close** to restart the server.
 
 ## Next steps
 
