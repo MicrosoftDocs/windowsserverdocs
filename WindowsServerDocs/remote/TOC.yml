@@ -238,11 +238,11 @@
       items:
       - name: Deploy Always on VPN
         items:
-        - name: Setup the environment
+        - name: Setup the Always On VPN environment
           href: remote-access/tutorial-aovpn-deploy-setup.md        
-        - name: Configure Certification Authority templates
+        - name: Configure Always On VPN certificates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
-        - name: Configure Windows 10 Always On VPN client connections
+        - name: Configure Always On VPN client connections
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
       - name: Always on VPN Conditional Access
         items:
