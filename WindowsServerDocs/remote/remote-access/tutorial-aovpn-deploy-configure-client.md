@@ -1,13 +1,13 @@
 ---
 title: Tutorial - Deploy Always On VPN - Configure Windows 10 Always On VPN client connections
-description:  Learn how to deploy Always On VPN (AOV) connections for Windows 10+ client computers that are working offsite (for example, from home, a customer site, or a public wireless access point).
+description:  Learn how to deploy configure the Always On VPN client connection.
 ms.topic: article
-ms.date: 12/06/2022
+ms.date: 01/06/2022
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 ms.author: anaharris
 author: anaharris-ms
 ---
-# Tutorial: Deploy Always On VPN - Configure Windows 10 Always On VPN client connections
+# Tutorial: Deploy Always On VPN - Configure the Always On VPN client connection
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -25,7 +25,7 @@ Complete [Tutorial: Deploy Always On VPN - Configure Certificate Authority templ
 
 In this section, we'll create a test VPN connection to verify the configuration of the VPN server. Then, we'll verify that the the test client can establish a successful VPN connection.
 
-1. Sign in to the domain-joined VPN client computer as the VPN user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-active-directory-test-user).
+1. Sign in to the domain-joined VPN client computer as the VPN user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-vpn-user-and-group).
 
 1. On the Start menu, type **VPN**, and press ENTER.
 
