@@ -1,20 +1,18 @@
 ---
 title: auditpol backup
-description: Reference article for the auditpol backup command, which backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
+description: Reference article for the auditpol backup command that backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
 ms.topic: reference
-ms.assetid: dc84e581-aa0f-4c91-b13b-1d970bad5517
-ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: jgerend
+ms.date: 01/03/2023
 ---
 # auditpol backup
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
+The auditpol backup command backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
 
-To perform *backup* operations on the *per-user* and *system* policies, you must have **Write** or **Full Control** permission for that object set in the security descriptor. You can also perform *backup* operations if you have the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the overall *backup* operations.
+To perform *backup* operations on the *per-user* and *system* policies, you need **Write** or **Full Control** permissions for that object set in the security descriptor. You can also perform *backup* operations if you have the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that isn't necessary to perform the overall *backup* operations.
 
 ## Syntax
 
