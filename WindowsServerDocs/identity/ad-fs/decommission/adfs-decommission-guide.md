@@ -72,10 +72,10 @@ Once the above is verified, you can take the following steps (assuming the AD FS
  10. You can now safely delete your AD FS account.
 
 ## Next Steps
-- [AD FS Overview](../ad-fs/ad-fs-overview.md)
-- [AD FS Design](../ad-fs/AD-FS-Design.md)
-- [AD FS Deployment](../ad-fs/AD-FS-Deployment.md)
-- [AD FS Development](../ad-fs/AD-FS-Development.md)
-- [AD FS Operations](../ad-fs/ad-fs-operations.md)
-- [AD FS Technical Reference](../ad-fs/AD-FS-Technical-Reference.md)
+- [AD FS Overview](../ad-fs-overview.md)
+- [AD FS Design](../AD-FS-Design.md)
+- [AD FS Deployment](../AD-FS-Deployment.md)
+- [AD FS Development](../AD-FS-Development.md)
+- [AD FS Operations](../ad-fs-operations.md)
+- [AD FS Technical Reference](../AD-FS-Technical-Reference.md)
 
