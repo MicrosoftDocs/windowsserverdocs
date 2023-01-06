@@ -13,59 +13,69 @@ ms.topic: article
 
 Azure AD provides a simple cloud-based sign-in experience to all your resources and apps with strong authentication and real-time, risk-based adaptive access policies to grant access to resources reducing operational costs of managing and maintaining an AD FS environment and increasing IT efficiency.  
 
-For more info on why you should upgrade from AD FS to Azure AD, see [Moving from AD FS to Azure AD](aka.ms/adfs2aad). 
+For more info on why you should upgrade from AD FS to Azure AD, see [Moving from AD FS to Azure AD](https://aka.ms/adfs2aad). 
 
 This document will provide you with the recommended steps for decommissioning your AD FS servers.
 
 ## Pre-requisites for decommissioning AD FS servers 
 
-Before you begin decommissioning your AD FS Servers, ensure the following is completed: 
+Before you begin decommissioning your AD FS Servers, ensure the following items are complete. 
 
-Install Azure AD Connect Health to provide robust monitoring of your on-premises identity infrastructure. 
+ 1. [Install Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#install-the-agent-for-ad-fs) to provide robust monitoring of your on-premises identity infrastructure. 
+ 2. [Migrate your user authentication to Azure AD](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout). With cloud authentication enabled, Azure AD is capable of handling the users' sign-in process securely. Azure AD provides you with three options for secure cloud authentication of users:
+     - [Azure AD Password Hash Synchronization (PHS)](https://learn.microsoft.com/azure/active-directory/hybrid/whatis-phs) – Allows your users to sign-in to both on-premises and cloud-based applications using the same passwords. Azure AD Connect synchronizes a [hash of a hash of a user's password](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#detailed-description-of-how-password-hash-synchronization-works) from an on-premises Active Directory instance to a cloud-based Azure AD instance. The two layers of hashing ensure your passwords are never exposed or transmitted to cloud systems. 
+     - [Azure AD Certificate Based Authentication (CBA)](https://learn.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication) – Enables you to adopt a phishing resistant authentication method and authenticate users with an X.509 certificate against your Public Key Infrastructure (PKI). 
+     - [Azure AD Pass-through Authentication (PTA)](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) – Allows your users to sign-in to both on-premises and cloud-based applications using the same passwords. It installs an agent on your on-premises Active Directory and validates the users’ passwords directly against your on-premises Active Directory.  
 
- 
+     You can try cloud authentication for your users using [Staged Rollout](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout). It allows you to selectively test groups of users with the cloud authentication capabilities mentioned above. 
 
-Migrate your user authentication to Azure AD. With cloud authentication enabled, Azure AD is capable of handling the users' sign-in process securely. Azure AD provides you with three options for secure cloud authentication of users: 
-
- 
-
-Azure AD Password Hash Synchronization (PHS) – Allows your users to sign-in to both on-premises and cloud-based applications using the same passwords. Azure AD Connect synchronizes a hash of a hash of a user's password from an on-premises Active Directory instance to a cloud-based Azure AD instance. The two layers of hashing ensure your passwords are never exposed or transmitted to cloud systems. 
-
- 
-
-Azure AD Certificate Based Authentication (CBA) – Enables you to adopt a phishing resistant authentication method and authenticate users with an X.509 certificate against your Public Key Infrastructure (PKI). 
-
- 
-
-Azure AD Pass-through Authentication (PTA) – Allows your users to sign-in to both on-premises and cloud-based applications using the same passwords. It installs an agent on your on-premises Active Directory and validates the users’ passwords directly against your on-premises Active Directory.  
+     >[!NOTE]  
+     > - PHS & CBA are the preferred options for cloud managed authentication. PTA must be used only in cases where there are regulatory requirements to not synchronize any password information to the cloud. 
+     >- User authentication and App Migration can be done in any order, however, it is recommended to complete user authentication migration first and then undertake app migration for a smoother migration experience. 
+     >- Make sure to evaluate the [supported](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout#supported-scenarios) and [not-supported](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout#unsupported-scenarios) scenarios for Staged Rollout. 
 
  
 
-You can try cloud authentication for your users using Staged Rollout. It allows you to selectively test groups of users with the cloud authentication capabilities mentioned above. 
+ 3. [Migrate all your applications](https://learn.microsoft.com/azure/active-directory/manage-apps/migrate-adfs-apps-to-azure) that are currently using AD FS for authentication to Azure AD, as it gives you a single control plane for identity and access management to Azure AD. Ensure you also migrate your Office 365 applications and joined devices to Azure AD. 
+     - Migration assistant can be used for migrating applications from AD FS to Azure AD. 
+     - If you do not find the right SaaS application in the app gallery, they can be requested from https://aka.ms/AzureADAppRequest.  
 
-Note:  
+ 4. Ensure to run [Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#install-the-agent-for-ad-fs) for at least 1 week to observe the usage of apps in Azure AD. You should also be able to view user sign in logs in Azure AD. 
 
-PHS & CBA are the preferred options for cloud managed authentication. PTA must be used only in cases where there are regulatory requirements to not synchronize any password information to the cloud. 
+## Steps to decommission your AD FS Servers 
 
-User authentication and App Migration can be done in any order, however, it is recommended to complete user authentication migration first and then undertake app migration for a smoother migration experience. 
+This section provides you with the step-by-step process to decommission your AD FS servers.  
 
-Make sure to evaluate the supported and not-supported scenarios for Staged Rollout. 
+Before reaching this point, you must verify that there is no relying party (Replying Part Trusts) with traffic which are still present in the AD FS servers.  
 
- 
+Before you begin, check the [AD FS application event logs and/or Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs) for any login failures or success as that would mean these servers are still being used for something. In case you see login successes or failures, check how to [migrate your apps](https://learn.microsoft.com/azure/active-directory/manage-apps/migrate-adfs-apps-to-azure) from AD FS or [move your authentication](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication) to Azure AD. 
 
-Migrate all your applications that are currently using AD FS for authentication to Azure AD, as it gives you a single control plane for identity and access management to Azure AD. Ensure you also migrate your Office 365 applications and joined devices to Azure AD. 
+Once the above is verified, you can take the following steps (assuming the AD FS servers are not used for anything else now): 
 
- 
+> [!NOTE]
+> After you moved your authentication to Azure AD, test your environment for at least 1 week to verify cloud authentication is running smoothly without any issues. 
 
-Migration assistant can be used for migrating applications from AD FS to Azure AD. 
+ 1. Consider taking an optional [final backup](../operations/ad-fs-rapid-restore-tool#create-a-backup.md) before decommissioning AD FS servers.  
+ 2. Remove any AD FS entries from any of the load balancers (internal as well as external) you might have configured in your environment. 
+ 3. Delete any corresponding DNS entries of the respective farm names for AD FS servers in your environment. 
+ 4. On the primary AD FS server run [`Get-ADFSProperties`](https://learn.microsoft.com/powershell/module/adfs/get-adfsproperties?view=windowsserver2022-ps) and look for **CertificateSharingContainer**. Keep a note of this DN, as you will need to delete it near the end of the installation (after a few reboots and when it is not available anymore) 
+     - Remove the content in this DN using ADSI Edit after uninstallation.
+ 5. If your AD FS configuration database is using a single SQL Server database instance as the store, ensure to delete the database before uninstalling AD FS servers.
+ 6. Uninstall the WAP (Proxy) servers. 
+     - Login to each WAP server, open the Remote Access Management Console and look for published web applications. 
+     - Remove any related to AD FS servers that are not being used any more. 
+     - When all the published web applications are removed, uninstall WAP with the following command [Uninstall-WindowsFeature Web-Application-Proxy,CMAK,RSAT-RemoteAccess](https://learn.microsoft.com/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2022-ps).
+ 7. Uninstall the AD FS servers.
+     - Starting with the secondary nodes, uninstall AD FS with [Uninstall-WindowsFeature ADFS-Federation,Windows-Internal-Database](https://learn.microsoft.com/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2022-ps) command. After this run del C:\Windows\WID\data\adfs* command to delete any database files
+ 8. Delete AD FS SSL certificates from each server storage.
+ 9. Re-image AD FS servers with full disk formatting.
+ 10. You can now safely delete your AD FS account.
 
-If you do not find the right SaaS application in the app gallery, they can be requested from https://aka.ms/AzureADAppRequest.  
+## Next Steps
+- [AD FS Overview](./ad-fs/ad-fs-overview.md)
+- [AD FS Design](ad-fs/AD-FS-Design.md)
+- [AD FS Deployment](ad-fs/AD-FS-Deployment.md)
+- [AD FS Development](ad-fs/AD-FS-Development.md)
+- [AD FS Operations](./ad-fs/ad-fs-operations.md)
+- [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
 
- 
-
-Ensure to run Azure AD Connect Health for at least 1 week to observe the usage of apps in Azure AD. You should also be able to view user sign in logs in Azure AD. 
-
-
-## See Also
-
-[Active Directory Federation Services Overview](./ad-fs-overview.md)
