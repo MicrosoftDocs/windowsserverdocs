@@ -4,7 +4,7 @@ description: Learn how to perform an in-place upgrade to Windows Server.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 05/19/2022
+ms.date: 01/06/2023
 # Customer intent: As a server administrator, I want upgrade Windows Server, so that my server
 # remains supported and I can use the latest features.
 ---
@@ -14,6 +14,10 @@ ms.date: 05/19/2022
 An in-place upgrade allows you to go from an older operating system to a newer one while keeping
 your settings, server roles, and data intact. This article will teach you how to move to a later
 version of Windows Server using an in-place upgrade.
+
+> [!IMPORTANT]
+> Looking to perform an in-place upgrade of Windows Server running in an Azure VM? See
+> [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 ## Prerequisites
 
@@ -38,9 +42,7 @@ Before you start upgrading, your computer must meet the following requirements:
   article.
 - Review any third party application vendors support requirements.
 
-> [!IMPORTANT]
-> Looking to perform an in-place upgrade of Windows Server running in an Azure VM? See
-> [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+
 
 ### Collect diagnostic information
 
