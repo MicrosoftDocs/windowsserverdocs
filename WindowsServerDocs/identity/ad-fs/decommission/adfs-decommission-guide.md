@@ -38,32 +38,32 @@ Before you begin decommissioning your AD FS Servers, ensure the following items 
 
  3. [Migrate all your applications](https://learn.microsoft.com/azure/active-directory/manage-apps/migrate-adfs-apps-to-azure) that are currently using AD FS for authentication to Azure AD, as it gives you a single control plane for identity and access management to Azure AD. Ensure you also migrate your Office 365 applications and joined devices to Azure AD. 
      - Migration assistant can be used for migrating applications from AD FS to Azure AD. 
-     - If you do not find the right SaaS application in the app gallery, they can be requested from https://aka.ms/AzureADAppRequest.  
+     - If you don't find the right SaaS application in the app gallery, they can be requested from https://aka.ms/AzureADAppRequest.  
 
- 4. Ensure to run [Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#install-the-agent-for-ad-fs) for at least 1 week to observe the usage of apps in Azure AD. You should also be able to view user sign in logs in Azure AD. 
+ 4. Ensure to run [Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#install-the-agent-for-ad-fs) for at least one week to observe the usage of apps in Azure AD. You should also be able to view user sign-in logs in Azure AD. 
 
 ## Steps to decommission your AD FS Servers 
 
 This section provides you with the step-by-step process to decommission your AD FS servers.  
 
-Before reaching this point, you must verify that there is no relying party (Replying Part Trusts) with traffic which are still present in the AD FS servers.  
+Before reaching this point, you must verify that there's no relying party (Replying Part Trusts) with traffic which are still present in the AD FS servers.  
 
 Before you begin, check the [AD FS application event logs and/or Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs) for any login failures or success as that would mean these servers are still being used for something. In case you see login successes or failures, check how to [migrate your apps](https://learn.microsoft.com/azure/active-directory/manage-apps/migrate-adfs-apps-to-azure) from AD FS or [move your authentication](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication) to Azure AD. 
 
-Once the above is verified, you can take the following steps (assuming the AD FS servers are not used for anything else now): 
+Once the above is verified, you can take the following steps (assuming the AD FS servers aren't used for anything else now): 
 
 > [!NOTE]
-> After you moved your authentication to Azure AD, test your environment for at least 1 week to verify cloud authentication is running smoothly without any issues. 
+> After you moved your authentication to Azure AD, test your environment for at least one week to verify cloud authentication is running smoothly without any issues. 
 
  1. Consider taking an optional [final backup](../operations/ad-fs-rapid-restore-tool.md#create-a-backup) before decommissioning AD FS servers.  
  2. Remove any AD FS entries from any of the load balancers (internal as well as external) you might have configured in your environment. 
  3. Delete any corresponding DNS entries of the respective farm names for AD FS servers in your environment. 
- 4. On the primary AD FS server run [`Get-ADFSProperties`](https://learn.microsoft.com/powershell/module/adfs/get-adfsproperties?view=windowsserver2022-ps) and look for **CertificateSharingContainer**. Keep a note of this DN, as you will need to delete it near the end of the installation (after a few reboots and when it is not available anymore) 
+ 4. On the primary AD FS server run [`Get-ADFSProperties`](https://learn.microsoft.com/powershell/module/adfs/get-adfsproperties?view=windowsserver2022-ps) and look for **CertificateSharingContainer**. Keep a note of this DN, as you'll need to delete it near the end of the installation (after a few reboots and when it isn't available anymore) 
      - Remove the content in this DN using ADSI Edit after uninstallation.
  5. If your AD FS configuration database is using a single SQL Server database instance as the store, ensure to delete the database before uninstalling AD FS servers.
  6. Uninstall the WAP (Proxy) servers. 
-     - Login to each WAP server, open the Remote Access Management Console and look for published web applications. 
-     - Remove any related to AD FS servers that are not being used any more. 
+     - Log in to each WAP server, open the Remote Access Management Console and look for published web applications. 
+     - Remove any related to AD FS servers that aren't being used anymore. 
      - When all the published web applications are removed, uninstall WAP with the following command [Uninstall-WindowsFeature Web-Application-Proxy,CMAK,RSAT-RemoteAccess](https://learn.microsoft.com/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2022-ps).
  7. Uninstall the AD FS servers.
      - Starting with the secondary nodes, uninstall AD FS with [Uninstall-WindowsFeature ADFS-Federation,Windows-Internal-Database](https://learn.microsoft.com/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2022-ps) command. After this run del C:\Windows\WID\data\adfs* command to delete any database files
