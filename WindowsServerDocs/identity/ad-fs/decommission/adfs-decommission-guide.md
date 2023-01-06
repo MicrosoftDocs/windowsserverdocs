@@ -55,7 +55,7 @@ Once the above is verified, you can take the following steps (assuming the AD FS
 > [!NOTE]
 > After you moved your authentication to Azure AD, test your environment for at least 1 week to verify cloud authentication is running smoothly without any issues. 
 
- 1. Consider taking an optional [final backup](../operations/ad-fs-rapid-restore-tool#create-a-backup.md) before decommissioning AD FS servers.  
+ 1. Consider taking an optional [final backup](../operations/ad-fs-rapid-restore-tool.md#create-a-backup) before decommissioning AD FS servers.  
  2. Remove any AD FS entries from any of the load balancers (internal as well as external) you might have configured in your environment. 
  3. Delete any corresponding DNS entries of the respective farm names for AD FS servers in your environment. 
  4. On the primary AD FS server run [`Get-ADFSProperties`](https://learn.microsoft.com/powershell/module/adfs/get-adfsproperties?view=windowsserver2022-ps) and look for **CertificateSharingContainer**. Keep a note of this DN, as you will need to delete it near the end of the installation (after a few reboots and when it is not available anymore) 
@@ -72,10 +72,10 @@ Once the above is verified, you can take the following steps (assuming the AD FS
  10. You can now safely delete your AD FS account.
 
 ## Next Steps
-- [AD FS Overview](./ad-fs/ad-fs-overview.md)
-- [AD FS Design](ad-fs/AD-FS-Design.md)
-- [AD FS Deployment](ad-fs/AD-FS-Deployment.md)
-- [AD FS Development](ad-fs/AD-FS-Development.md)
-- [AD FS Operations](./ad-fs/ad-fs-operations.md)
-- [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
+- [AD FS Overview](../ad-fs/ad-fs-overview.md)
+- [AD FS Design](../ad-fs/AD-FS-Design.md)
+- [AD FS Deployment](../ad-fs/AD-FS-Deployment.md)
+- [AD FS Development](../ad-fs/AD-FS-Development.md)
+- [AD FS Operations](../ad-fs/ad-fs-operations.md)
+- [AD FS Technical Reference](../ad-fs/AD-FS-Technical-Reference.md)
 
