@@ -972,6 +972,11 @@
         href: ad-fs/technical-reference/ad-fs-password-protection.md
     - name: AD FS 2016 FAQ
       href: ad-fs/overview/AD-FS-FAQ.yml
+    - name: AD FS Decommission
+      href: ad-fs/AD-FS-Decommission.md
+      items:
+      - name: AD FS Decommission Guide
+        href: ad-fs/decommission/adfs-decommission-guide.md
   - name: Active Directory Rights Management Service
     items:
     - name: Upgrading AD RMS to Windows Server 2016
