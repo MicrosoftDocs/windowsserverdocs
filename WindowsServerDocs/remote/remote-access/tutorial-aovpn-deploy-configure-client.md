@@ -19,7 +19,7 @@ Instead of describing how to create the XML markup from scratch, you use Setting
 
 ## Prerequisites
 
-1. Complete [Tutorial: Deploy Always On VPN - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md).
+Complete [Tutorial: Deploy Always On VPN - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md).
 
 ## Create and configure the VPN profile on the VPN client
 
