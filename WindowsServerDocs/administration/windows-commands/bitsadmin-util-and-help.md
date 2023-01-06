@@ -1,17 +1,17 @@
 ---
 title: bitsadmin util and help
-description: Reference article for the bitsadmin util and help command, which displays the command-line usage for the /util switches.
+description: Reference article for the bitsadmin util and help command that displays the command-line usage for the /util switches.
 ms.topic: reference
-ms.assetid: 806e377a-3022-4764-b451-0aa4f754f195
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/06/2023
 ---
 
 # bitsadmin util and help
 
-Displays the command-line usage for the **/util** switches.
+Applies to: Windows Server (All supported versions)
+
+The bitsadmin util and help command displays the command-line usage for the **/util** switches.
 
 ## Syntax
 
