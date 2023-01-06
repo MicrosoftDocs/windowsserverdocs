@@ -190,9 +190,9 @@ Because you're using Group Policy to autoenroll user certificates, you only need
 
 1. Sign in to the VPN client as the user that you created for the **VPN Users** group.
 
-2. Press Windows key + R, type **gpupdate /force**, and press Enter.
+2. Press Windows key + R, type **gpupdate /force**, and press ENTER.
 
-3. On the Start menu, type **certmgr.msc**, and press Enter.
+3. On the Start menu, type **certmgr.msc**, and press ENTER.
 
 4. In the Certificates snap-in, under **Personal**, select **Certificates**. Your certificates appear in the details pane.
 

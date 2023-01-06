@@ -21,36 +21,11 @@ Instead of describing how to create the XML markup from scratch, you use Setting
 
 1. Complete [Tutorial: Deploy Always On VPN - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md).
 
-<!-- Editor's note: probably find this in earlier part of the tutorial -->
-
-1. Copy/paste the fully qualified domain name (FQDN) of the NPS server and the name of the CA that issued that certificate. To retrieve these values perform the following steps:
-
-    1. On the NPS server, open Network Policy Server.
-
-    2. In the NPS console, under Policies, select **Network Policies**.
-
-    3. Right-click **Virtual Private Network (VPN) Connections**, and select **Properties**.
-
-    4. Select the **Constraints** tab, and select **Authentication Methods**.
-
-    5. In EAP Types, select **Microsoft: Protected EAP (PEAP)**, and select **Edit**.
-
-    6. Copy and paste the values for **Certificate issued to** and **Issuer**. You'll use these values later in this tutorial.
-
-    7. Select **Cancel** to close Edit Protected EAP Properties.
-
-    8. Select **Cancel** to close Virtual Private Network (VPN) Connections Properties.
-
-    9. Close Network Policy Server.
-
-    >[!NOTE]
-    >If you have multiple NPS servers, complete these steps on each one so that the VPN profile can verify each of them should they be used.
-
-### Configure the template VPN profile on a domain-joined client computer
+## Create and configure the VPN profile on the VPN client
 
 In this section, we'll create a test VPN connection to verify the configuration of the VPN server. Then, we'll verify that the the test client can establish a successful VPN connection.
 
-1. Sign in to the domain-joined test client computer as the test user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-active-directory-test-user).
+1. Sign in to the domain-joined VPN client computer as the VPN user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-active-directory-test-user).
 
 1. On the Start menu, type **VPN**, and press ENTER.
 
@@ -62,7 +37,7 @@ In this section, we'll create a test VPN connection to verify the configuration 
 
 1. For **Server name or address**, enter the **external** FQDN of your VPN server (for example, *vpn.contoso.com*).
 
-1. For **VPN type**, leave as *IKEv2*.
+1. For **VPN type**, select *IKEv2*.
 
 1. For **Type of sing-in info**, select *Certificate*.
 
@@ -78,7 +53,7 @@ In this section, we'll create a test VPN connection to verify the configuration 
 
 1. Select **Properties** to open Protected EAP Properties, and complete the following steps:
 
-    1. For **Connect to these servers**, enter the name of the NPS server that you retrieved from the NPS server authentication settings earlier in the [Prerequisites](#prerequisites)(for example, NPS01).
+    1. For **Connect to these servers**, enter the name of the NPS server. For this tutorial, the NPS server is on the domain controller.
 
     1. For **Trusted Root Certification Authorities**, select the CA that issued the NPS server's certificate (for example, contoso-CA).
 
@@ -90,7 +65,7 @@ In this section, we'll create a test VPN connection to verify the configuration 
 
         1. Select **Use a certificate on this computer**.
 
-        1. For **Connect to these servers**, enter the name of the NPS server that you retrieved from the NPS server authentication settings earlier in the [Prerequisites](#prerequisites)(for example, NPS01).
+        1. For **Connect to these servers**, enter the name of the NPS server. For this tutorial, the NPS server is on the domain controller.
 
         1. For **Trusted Root Certification Authorities**, select the CA that issued the NPS server's certificate.
 
@@ -104,7 +79,7 @@ In this section, we'll create a test VPN connection to verify the configuration 
 
 1. Close the Network Connections window.
 
-1. In Settings, test the VPN by clicking **Contoso VPN**, and clicking **Connect**.
+1. In Settings, select **Contoso VPN**, and then select **Connect**.
 
 >[!IMPORTANT]
 >Make sure that the template VPN connection to your VPN server is successful. Doing so ensures that the EAP settings are correct before you use them in the next example. You must connect at least once before continuing; otherwise, the profile will not contain all the information necessary to connect to the VPN.
