@@ -86,8 +86,6 @@ In this section, we'll create a test VPN connection to verify the configuration 
 
 ## Create the ProfileXML configuration files
 
-Before completing this section, make sure you have created and tested the template VPN connection that the section [Manually create a template connection profile](#manually-create-a-template-connection-profile) describes. Testing the VPN connection is necessary to ensure that the profile contains all the information required to connect to the VPN.
-
 The Windows PowerShell script in Listing 1 creates two files on the desktop, both of which contain **EAPConfiguration** tags based on the template connection profile you created previously:
 
 - **VPN_Profile.xml.** This file contains the XML markup required to configure the ProfileXML node in the VPNv2 CSP. Use this file with OMA-DM–compatible MDM services, such as Intune.
