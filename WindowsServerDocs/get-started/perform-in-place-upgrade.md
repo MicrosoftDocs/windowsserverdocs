@@ -42,8 +42,6 @@ Before you start upgrading, your computer must meet the following requirements:
   article.
 - Review any third party application vendors support requirements.
 
-
-
 ### Collect diagnostic information
 
 We recommend that you collect some information from your devices for diagnostic and troubleshooting
