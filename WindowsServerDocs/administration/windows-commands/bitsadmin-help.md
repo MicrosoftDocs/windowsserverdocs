@@ -9,7 +9,7 @@ ms.date: 01/06/2023
 
 # bitsadmin help
 
-Applies to: Windows Server (All supported versions) 
+Applies to: Windows Server (All supported versions)
 
 The bitsadmin help command displays help-related information about the bitsadmin command-line parameters and options.
 
