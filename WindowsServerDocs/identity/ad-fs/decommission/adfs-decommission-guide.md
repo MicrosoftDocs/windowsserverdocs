@@ -22,7 +22,8 @@ This document will provide you with the recommended steps for decommissioning yo
 Before you begin decommissioning your AD FS Servers, ensure the following items are complete. 
 
  1. [Install Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#install-the-agent-for-ad-fs) to provide robust monitoring of your on-premises identity infrastructure. 
- 2. [Migrate your user authentication to Azure AD](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout). With cloud authentication enabled, Azure AD is capable of handling the users' sign-in process securely. Azure AD provides you with three options for secure cloud authentication of users:
+ 2. Complete the [pre-work for Single Sign-On (SSO)](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication#pre-work-for-sso).
+ 3. [Migrate your user authentication to Azure AD](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout). With cloud authentication enabled, Azure AD is capable of handling the users' sign-in process securely. Azure AD provides you with three options for secure cloud authentication of users:
      - [Azure AD Password Hash Synchronization (PHS)](https://learn.microsoft.com/azure/active-directory/hybrid/whatis-phs) – Allows your users to sign-in to both on-premises and cloud-based applications using the same passwords. Azure AD Connect synchronizes a [hash of a hash of a user's password](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#detailed-description-of-how-password-hash-synchronization-works) from an on-premises Active Directory instance to a cloud-based Azure AD instance. The two layers of hashing ensure your passwords are never exposed or transmitted to cloud systems. 
      - [Azure AD Certificate Based Authentication (CBA)](https://learn.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication) – Enables you to adopt a phishing resistant authentication method and authenticate users with an X.509 certificate against your Public Key Infrastructure (PKI). 
      - [Azure AD Pass-through Authentication (PTA)](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) – Allows your users to sign-in to both on-premises and cloud-based applications using the same passwords. It installs an agent on your on-premises Active Directory and validates the users’ passwords directly against your on-premises Active Directory.  
@@ -31,7 +32,7 @@ Before you begin decommissioning your AD FS Servers, ensure the following items 
 
      >[!NOTE]  
      > - PHS & CBA are the preferred options for cloud managed authentication. PTA must be used only in cases where there are regulatory requirements to not synchronize any password information to the cloud. 
-     >- User authentication and App Migration can be done in any order, however, it is recommended to complete user authentication migration first and then undertake app migration for a smoother migration experience. 
+     >- User authentication and App Migration can be done in any order, however, it is recommended to complete user authentication migration first. 
      >- Make sure to evaluate the [supported](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout#supported-scenarios) and [not-supported](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout#unsupported-scenarios) scenarios for Staged Rollout. 
 
  
