@@ -99,22 +99,21 @@ In this section, you'll create and run the following Windows PowerShell script. 
   
 1. Sign in as your VPN User to the VPN client computer.
 
-1. Open Windows PowerShell integrated scripting environment (ISE) and copy/paste the following script (Make sure to customize the variables at the top of the script):
+1. Open Windows PowerShell integrated scripting environment (ISE) and copy/paste the script below. Make sure to customize the variables at the top of the script ($ProfileName, $Servers, $DnsSuffix, $DomainName, $DNSServers, $TrustedNetwork). For more information about the function and syntax of these variables, see: [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
     ```powershell
-      $TemplateName = 'Template' # Replace with your template name
-      
-      $ProfileName = 'Contoso AlwaysOn VPN' # Unique alphanumeric identifier for the profile. The profile name must not include a forward slash (/). If the profile name has a space or other non-alphanumeric character, it must be properly escaped according to the URL encoding standard.
+     
+      $ProfileName = 'Contoso AlwaysOn VPN' # Profile name.
 
-      $Servers = 'aov-vpn.corp.contoso.com' #Public or routable IP address or DNS name for the VPN gateway. It can point to the external IP of a gateway or a virtual IP for a server farm. Examples, 208.147.66.130 or vpn.contoso.com.
+      $Servers = 'aov-vpn.contoso.com' #Public or routable IP address or DNS name for the VPN gateway.
       
-      $DnsSuffix = 'corp.contoso.com' # Specifies one or more commas separated DNS suffixes. The first in the list is also used as the primary connection-specific DNS suffix for the VPN Interface. The entire list will also be added into the SuffixSearchList.
+      $DnsSuffix = 'corp.contoso.com' # Specifies one or more commas separated DNS suffixes. 
       
-      $DomainName = '.corp.contoso.com' #Used to indicate the namespace to which the policy applies. When a Name query is issued, the DNS client compares the name in the query to all of the namespaces under DomainNameInformationList to find a match. This parameter can be one of the following two types: FQDN (Fully qualified domain name) or Suffix (A domain suffix that will be appended to the shortname query for DNS resolution. To specify a suffix, prepend a period (.) to the DNS suffix).
+      $DomainName = '.corp.contoso.com' #Used to indicate the namespace to which the policy applies.
 
-      $DNSServers = '10.10.0.2,10.10.0.3' #List of comma-separated DNS Server IP addresses to use for the namespace.
+      $DNSServers = '10.10.0.6' #List of comma-separated DNS Server IP addresses to use for the namespace.
 
-      $TrustedNetwork = 'corp.contoso.com' #Comma-separated string to identify the trusted network. VPN does not connect automatically when the user is on their corporate wireless network where protected resources are directly accessible to the device.
+      $TrustedNetwork = 'corp.contoso.com' #Comma-separated string to identify the trusted network.
     
     
       $Connection = Get-VpnConnection -Name $TemplateName
