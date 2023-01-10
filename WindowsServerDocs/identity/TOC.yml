@@ -973,7 +973,7 @@
     - name: AD FS 2016 FAQ
       href: ad-fs/overview/AD-FS-FAQ.yml
     - name: AD FS Decommission
-      href: ad-fs/AD-FS-Decommission.md
+      href: ad-fs/ad-fs-decommission.md
       items:
       - name: AD FS Decommission Guide
         href: ad-fs/decommission/adfs-decommission-guide.md
