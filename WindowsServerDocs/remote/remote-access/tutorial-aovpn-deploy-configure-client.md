@@ -84,9 +84,9 @@ In this section, we'll create a test VPN connection to verify the configuration 
 >[!IMPORTANT]
 >Make sure that the template VPN connection to your VPN server is successful. Doing so ensures that the EAP settings are correct before you use them in the next example. You must connect at least once before continuing; otherwise, the profile will not contain all the information necessary to connect to the VPN.
 
-## Create the ProfileXML configuration file
+## Modify and run MakeProfile.ps1
 
-In this section, you'll create and run the following Windows PowerShell script. The script creates the following two files:
+In this section, you'll modify and run MakeProfile.ps1. The script creates the following two files:
 
 - *VPN_Profile.xml*. This file contains the XML markup required to configure the ProfileXML node in the VPNv2 CSP. Use this file with OMA-DM–compatible MDM services, such as Intune.
 
@@ -95,14 +95,16 @@ In this section, you'll create and run the following Windows PowerShell script. 
   >[!NOTE]
   >VPN_Profile.ps1 uses the current user's SID to identify the user's context. Because no SID is available in a Remote Desktop or Hyper-V session, the script won't be able to work in those sessions. If you are using VMs in this tutorial, you must disable enhanced session on your client VMs before running this script.
 
-**To modify and run the ProfileXML configuration file:**
+**To modify and run MakeProfile.ps1:**
   
 1. Sign in as your VPN User to the VPN client computer.
 
-1. Open Windows PowerShell integrated scripting environment (ISE) and copy/paste the script below. Make sure to customize the variables at the top of the script ($ProfileName, $Servers, $DnsSuffix, $DomainName, $DNSServers, $TrustedNetwork). For more information about the function and syntax of these variables, see: [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+1. Open Windows PowerShell integrated scripting environment (ISE) and copy/paste the script below.
 
     ```powershell
      
+      $TemplateName = 'Contoso VPN' # Name of the VPN connection
+
       $ProfileName = 'Contoso AlwaysOn VPN' # Profile name.
 
       $Servers = 'aov-vpn.contoso.com' #Public or routable IP address or DNS name for the VPN gateway.
@@ -115,7 +117,8 @@ In this section, you'll create and run the following Windows PowerShell script. 
 
       $TrustedNetwork = 'corp.contoso.com' #Comma-separated string to identify the trusted network.
     
-    
+      # Prepare and create the ProfileXML
+
       $Connection = Get-VpnConnection -Name $TemplateName
       if(!$Connection)
       {
@@ -125,6 +128,8 @@ In this section, you'll create and run the following Windows PowerShell script. 
       }
       $EAPSettings= $Connection.EapConfigXmlStream.InnerXml
     
+     # Create the ProfileXML to get the EAP settings from the profile
+
       $ProfileXML = @("
       <VPNProfile>
         <DnsSuffix>$DnsSuffix</DnsSuffix>
@@ -151,8 +156,18 @@ In this section, you'll create and run the following Windows PowerShell script. 
       </VPNProfile>
       ")
     
+      # Here we are getting the output for VPN_Profile.xml for Intune
       $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
-    
+        
+      # Jere we are getting the output for VPN_Profile.ps1 for the desktop and Configuration Manager:
+      # 1. Defines key VPN profile parameters ($Script, $ProfileNameEscaped)
+      # 2. Escape special characters in the profile (<,>,")
+      # 3. Define WMI-to-CSP Bridge properties ($nodeCSPURI, $namespaceName, $className )
+      # 4. Determine user SID for VPN profile.
+      # 5. Define WMI session.
+      # 6. Detect and delete previous VPN profile.
+      # 7. Create the VPN profile.
+
         $Script = @("
         `$ProfileName = '$ProfileName'
         `$ProfileNameEscaped = `$ProfileName -replace ' ', '%20'
@@ -236,198 +251,24 @@ In this section, you'll create and run the following Windows PowerShell script. 
         `$Message = `"Script Complete`"
         Write-Host `"`$Message`"
         ")
-    
-        $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
+
+       # Save the profile XML file
+       $Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
     
       $Message = "Successfully created VPN_Profile.xml and VPN_Profile.ps1 on the desktop."
       Write-Host "$Message"
     ```
 
+1. Customize the variables at the top of the script ($ProfileName, $Servers, $DnsSuffix, $DomainName, $DNSServers, $TrustedNetwork). For more information about the function  variables, see: [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+
 1. Press ENTER to run the script.
 
 1. Confirm that the script created *VPN_Profile.xml* and *VPN_Profile.ps1* on the desktop.
 
-### Prepare and create the profile XML
+1. Configure the VPN Client
 
-The following example commands get EAP settings from the template profile:
+# [PowerShell](#tab/powershell)
 
-```xml
-$Connection = Get-VpnConnection -Name $TemplateName
-if(!$Connection)
-{
-$Message = "Unable to get $TemplateName connection profile: $_"
-Write-Host "$Message"
-exit
-}
-$EAPSettings= $Connection.EapConfigXmlStream.InnerXml
-```
-
-### Create the profile XML
-
-[!INCLUDE [important-lower-case-true-include](includes/important-lower-case-true-include.md)]
-
-```xml
-$ProfileXML = @("
-<VPNProfile>
-  <DnsSuffix>$DnsSuffix</DnsSuffix>
-  <NativeProfile>
-<Servers>$Servers</Servers>
-<NativeProtocolType>IKEv2</NativeProtocolType>
-<Authentication>
-  <UserMethod>Eap</UserMethod>
-  <Eap>
-    <Configuration>
-     $EAPSettings
-    </Configuration>
-  </Eap>
-</Authentication>
-<RoutingPolicyType>SplitTunnel</RoutingPolicyType>
-  </NativeProfile>
-  <AlwaysOn>true</AlwaysOn>
-  <RememberCredentials>true</RememberCredentials>
-  <TrustedNetworkDetection>$TrustedNetwork</TrustedNetworkDetection>
-  <DomainNameInformation>
-<DomainName>$DomainName</DomainName>
-<DnsServers>$DNSServers</DnsServers>
-</DomainNameInformation>
-</VPNProfile>
-")
-```
-
-### Output VPN_Profile.xml for Intune
-
-You can use the following example command to save the profile XML file:
-
-```xml
-$ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
-```
-
-### Output VPN_Profile.ps1 for the desktop and Configuration Manager
-
-The following example code configures an AlwaysOn IKEv2 VPN Connection by using the ProfileXML node in the VPNv2 CSP.
-
-You can use this script on the Windows 10 desktop or in Configuration Manager.
-
-### Define key VPN profile parameters
-
-```xml
-$Script = '$ProfileName = ''' + $ProfileName + ''''
-$ProfileNameEscaped = $ProfileName -replace ' ', '%20'
-```
-
-### Escape special characters in the profile
-
-```xml
-$ProfileXML = $ProfileXML -replace '<', '&lt;'
-$ProfileXML = $ProfileXML -replace '>', '&gt;'
-$ProfileXML = $ProfileXML -replace '"', '&quot;'
-```
-
-### Define WMI-to-CSP Bridge properties
-
-```xml
-$nodeCSPURI = "./Vendor/MSFT/VPNv2"
-$namespaceName = "root\cimv2\mdm\dmmap"
-$className = "MDM_VPNv2_01"
-```
-
-### Determine user SID for VPN profile:
-
-```xml
-try
-{
-$username = Gwmi -Class Win32_ComputerSystem | select username
-$objuser = New-Object System.Security.Principal.NTAccount($username.username)
-$sid = $objuser.Translate([System.Security.Principal.SecurityIdentifier])
-$SidValue = $sid.Value
-$Message = "User SID is $SidValue."
-Write-Host "$Message"
-}
-catch [Exception]
-{
-$Message = "Unable to get user SID. User may be logged on over Remote Desktop: $_"
-Write-Host "$Message"
-exit
-}
-```
-
-### Define WMI session:
-
-```xml
-$session = New-CimSession
-$options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
-$options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Type", "PolicyPlatform_UserContext", $false)
-$options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Id", "$SidValue", $false)
-```
-
-### Detect and delete previous VPN profile:
-
-```xml
-try
-{
-  $deleteInstances = $session.EnumerateInstances($namespaceName, $className, $options)
-  foreach ($deleteInstance in $deleteInstances)
-  {
-    $InstanceId = $deleteInstance.InstanceID
-    if ("$InstanceId" -eq "$ProfileNameEscaped")
-    {
-        $session.DeleteInstance($namespaceName, $deleteInstance, $options)
-        $Message = "Removed $ProfileName profile $InstanceId"
-        Write-Host "$Message"
-    } else {
-        $Message = "Ignoring existing VPN profile $InstanceId"
-        Write-Host "$Message"
-    }
-  }
-}
-catch [Exception]
-{
-  $Message = "Unable to remove existing outdated instance(s) of $ProfileName profile: $_"
-  Write-Host "$Message"
-  exit
-}
-```
-
-### Create the VPN profile:
-
-```xml
-try
-{
-  $newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
-  $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", "String", "Key")
-  $newInstance.CimInstanceProperties.Add($property)
-  $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", "String", "Key")
-  $newInstance.CimInstanceProperties.Add($property)
-  $property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", "String", "Property")
-  $newInstance.CimInstanceProperties.Add($property)
-  $session.CreateInstance($namespaceName, $newInstance, $options)
-  $Message = "Created $ProfileName profile."
-
-
-  Write-Host "$Message"
-}
-catch [Exception]
-{
-$Message = "Unable to create $ProfileName profile: $_"
-Write-Host "$Message"
-exit
-}
-
-$Message = "Script Complete"
-Write-Host "$Message"
-```
-
-### Save the profile XML file
-
-```xml
-$Script | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.ps1')
-
-$Message = "Successfully created VPN_Profile.xml and VPN_Profile.ps1 on the desktop."
-Write-Host "$Message"
-```
-
-
-## Configure the VPN client by using Windows PowerShell
 
 To configure the VPNv2 CSP on a Windows 10 client computer, run the VPN_Profile.ps1 Windows PowerShell script that you created in the [Create the profile XML](#create-the-profile-xml) section. Open Windows PowerShell as an Administrator; otherwise, you'll receive an error saying, _Access denied_.
 
@@ -682,7 +523,7 @@ With the ProfileXML configuration script deployed, sign in to a Windows 10 clien
 
 You should see the new VPN profile shortly.
 
-## Configure the VPN client by using Intune
+# [InTune](#tab/intune)
 
 To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files), or you can use the base EAP XML sample provided below.
 
@@ -755,6 +596,8 @@ To test the configuration policy, sign in to a Windows 10 client computer as the
 4.  Select **Sync** to force an Intune policy evaluation and retrieval.
 
 5.  Close Settings. After synchronization, you see the VPN profile available on the computer.
+
+---
 
 ## Next steps
 
