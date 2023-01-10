@@ -22,7 +22,7 @@ This document will provide you with the recommended steps for decommissioning yo
 Before you begin decommissioning your AD FS Servers, ensure the following items are complete.  For more information, see [migrating from federation to cloud authentication](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication). 
 
  1. [Install Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#install-the-agent-for-ad-fs) to provide robust monitoring of your on-premises identity infrastructure. 
- 2. Complete the [pre-work for Single Sign-On (SSO)](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication#pre-work-for-sso).
+ 2. Complete the [pre-work for single sign-On (SSO)](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication#pre-work-for-sso).
  3. [Migrate your user authentication to Azure AD](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-staged-rollout). With cloud authentication enabled, Azure AD is capable of handling the users' sign-in process securely. Azure AD provides you with three options for secure cloud authentication of users:
      - [Azure AD Password Hash Synchronization (PHS)](https://learn.microsoft.com/azure/active-directory/hybrid/whatis-phs) – Allows your users to sign-in to both on-premises and cloud-based applications using the same passwords. Azure AD Connect synchronizes a [hash of a hash of a user's password](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#detailed-description-of-how-password-hash-synchronization-works) from an on-premises Active Directory instance to a cloud-based Azure AD instance. The two layers of hashing ensure your passwords are never exposed or transmitted to cloud systems. 
      - [Azure AD Certificate Based Authentication (CBA)](https://learn.microsoft.com/azure/active-directory/authentication/concept-certificate-based-authentication) – Enables you to adopt a phishing resistant authentication method and authenticate users with an X.509 certificate against your Public Key Infrastructure (PKI). 
@@ -49,7 +49,7 @@ This section provides you with the step-by-step process to decommission your AD 
 
 Before reaching this point, you must verify that there's no relying party (Replying Part Trusts) with traffic which are still present in the AD FS servers.  
 
-Before you begin, check the [AD FS application event logs and/or Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs) for any login failures or success as that would mean these servers are still being used for something. In case you see login successes or failures, check how to [migrate your apps](https://learn.microsoft.com/azure/active-directory/manage-apps/migrate-adfs-apps-to-azure) from AD FS or [move your authentication](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication) to Azure AD. 
+Before you begin, check the [AD FS event logs and/or Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs) for any sign-in failures or success as that would mean these servers are still being used for something. In case you see sign-in successes or failures, check how to [migrate your apps](https://learn.microsoft.com/azure/active-directory/manage-apps/migrate-adfs-apps-to-azure) from AD FS or [move your authentication](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication) to Azure AD. 
 
 Once the above is verified, you can take the following steps (assuming the AD FS servers aren't used for anything else now): 
 
@@ -63,12 +63,12 @@ Once the above is verified, you can take the following steps (assuming the AD FS
      - Remove the content in this DN using ADSI Edit after uninstallation.
  5. If your AD FS configuration database is using a single SQL Server database instance as the store, ensure to delete the database before uninstalling AD FS servers.
  6. Uninstall the WAP (Proxy) servers. 
-     - Log in to each WAP server, open the Remote Access Management Console and look for published web applications. 
+     - Sign in to each WAP server, open the Remote Access Management Console and look for published web applications. 
      - Remove any related to AD FS servers that aren't being used anymore. 
      - When all the published web applications are removed, uninstall WAP with the following command [Uninstall-WindowsFeature Web-Application-Proxy,CMAK,RSAT-RemoteAccess](https://learn.microsoft.com/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2022-ps).
  7. Uninstall the AD FS servers.
      - Starting with the secondary nodes, uninstall AD FS with [Uninstall-WindowsFeature ADFS-Federation,Windows-Internal-Database](https://learn.microsoft.com/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2022-ps) command. After this run del C:\Windows\WID\data\adfs* command to delete any database files
- 8. Delete AD FS SSL certificates from each server storage.
+ 8. Delete AD FS Secure Socket Layer (SSL) certificates from each server storage.
  9. Re-image AD FS servers with full disk formatting.
  10. You can now safely delete your AD FS account.
 

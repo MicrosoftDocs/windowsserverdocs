@@ -197,7 +197,7 @@ Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Pr
 
 ### Differentiate access policies for intranet and extranet access
 
-AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication. Multi factor authentication can be set up via the AD FS management snap-in.
+AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive information, consider requiring multi factor authentication. Multi factor authentication can be set up via the AD FS management snap-in.
 
 ### Require Multi Factor Authentication (MFA)
 
