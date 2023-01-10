@@ -13,7 +13,7 @@ ms.topic: article
 
 Azure AD provides a simple cloud-based sign-in experience to all your resources and apps with strong authentication and real-time, risk-based adaptive access policies to grant access to resources reducing operational costs of managing and maintaining an AD FS environment and increasing IT efficiency.  
 
-For more info on why you should upgrade from AD FS to Azure AD, see [Moving from AD FS to Azure AD](https://aka.ms/adfs2aad). 
+For more info on why you should upgrade from AD FS to Azure AD, visit [moving from AD FS to Azure AD](https://aka.ms/adfs2aad). Visit [migrate from federation to cloud authentication](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication) to understand how to upgrade from AD FS. 
 
 This document will provide you with the recommended steps for decommissioning your AD FS servers.
 
