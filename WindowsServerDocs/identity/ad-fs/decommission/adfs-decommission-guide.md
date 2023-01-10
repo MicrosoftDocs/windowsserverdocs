@@ -19,7 +19,7 @@ This document will provide you with the recommended steps for decommissioning yo
 
 ## Pre-requisites for decommissioning AD FS servers 
 
-Before you begin decommissioning your AD FS Servers, ensure the following items are complete. 
+Before you begin decommissioning your AD FS Servers, ensure the following items are complete.  For more information, see [migrating from federation to cloud authentication](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication). 
 
  1. [Install Azure AD Connect Health](https://learn.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#install-the-agent-for-ad-fs) to provide robust monitoring of your on-premises identity infrastructure. 
  2. Complete the [pre-work for Single Sign-On (SSO)](https://learn.microsoft.com/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication#pre-work-for-sso).
