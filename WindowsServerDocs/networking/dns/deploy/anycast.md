@@ -138,6 +138,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier “10.10.10.254” -LocalASN 8075
 Add-BgpPeer -Name "DC001" -LocalIPAddress 10.10.10.254 -PeerIPAddress 10.10.10.1 -PeerASN 65511 –LocalASN 8075
+Add-BgpPeer -Name "DC002" -LocalIPAddress 10.10.10.254 -PeerIPAddress 10.10.10.2 -PeerASN 65511 –LocalASN 8075
 ```
 
 2.	DC001
