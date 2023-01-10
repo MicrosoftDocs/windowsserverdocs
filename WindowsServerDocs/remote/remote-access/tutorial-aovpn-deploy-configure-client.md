@@ -361,7 +361,7 @@ If you need to troubleshoot the markup, it is easier to put it in an XML editor 
 
 ## Configure the VPN client by using Configuration Manager
 
-In Configuration Manager, you can deploy VPN profiles by using the ProfileXML CSP node, just like you did in Windows PowerShell. Here, you use the VPN_Profile.ps1 Windows PowerShell script that you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files).
+In Configuration Manager, you can deploy VPN profiles by using the ProfileXML CSP node, just like you did in Windows PowerShell. Here, you'll use the VPN_Profile.ps1 Windows PowerShell script.
 
 To use Configuration Manager to deploy a Remote Access Always On VPN profile to Windows 10 client computers, you must start by creating a group of machines or users to whom you deploy the profile. In this scenario, create a user group to deploy the configuration script.
 
@@ -399,7 +399,7 @@ To use Configuration Manager to deploy a Remote Access Always On VPN profile to 
 
 8.  On the Completion page, select **Close**.
 
-After you create the user group to receive the VPN profile, you can create a package and program to deploy the Windows PowerShell configuration script that you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files).
+After you create the user group to receive the VPN profile, you can create a package and program to deploy the Windows PowerShell configuration script (VPN_Profile.ps1).
 
 ### Create a package containing the ProfileXML configuration script
 
@@ -525,7 +525,7 @@ You should see the new VPN profile shortly.
 
 # [InTune](#tab/intune)
 
-To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files), or you can use the base EAP XML sample provided below.
+To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using VPN_Profile.xml, or you can use the base EAP XML sample provided below.
 
 >[!NOTE]
 >Intune now uses Azure AD groups. If Azure AD Connect synced the VPN Users group from on-premises to Azure AD, and users are assigned to the VPN Users group, you are ready to proceed.
@@ -606,4 +606,4 @@ You are done deploying Always On VPN.  For other features you can configure, see
 |If you want to...  |Then see...  |
 |---------|---------|
 |Configure Conditional Access for VPN    |[Step 7. (Optional) Configure conditional access for VPN connectivity using Azure AD](vpn/ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
-|Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
+|Learn more about the advanced VPN features  |[Advanced VPN Features](vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
