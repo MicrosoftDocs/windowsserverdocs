@@ -1,7 +1,7 @@
 ---
 title:  Get started with OpenSSH for Windows
 description: Learn how to install and connect to remote machines using the OpenSSH Client and Server for Windows.
-ms.date: 07/12/2022
+ms.date: 01/11/2023
 ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
@@ -56,7 +56,7 @@ To install the OpenSSH components:
 
 1. Once setup completes, return to **Apps** and **Optional Features** and confirm OpenSSH is listed.
 
-1. Open the Services desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
+1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
 
 1. In the details pane, double-click **OpenSSH SSH Server**.
 
