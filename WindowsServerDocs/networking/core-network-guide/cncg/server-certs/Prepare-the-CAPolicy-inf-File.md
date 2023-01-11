@@ -202,8 +202,6 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 
 1. On the computer where you're planning to install AD CS, open Windows PowerShell, type **notepad.exe** and press <kbd>ENTER</kbd>.
 
-1. When prompted to create a new file, select **Yes**.
-
 1. Enter the following text:
 
    ```Text
