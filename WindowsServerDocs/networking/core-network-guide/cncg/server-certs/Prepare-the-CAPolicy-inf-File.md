@@ -202,9 +202,9 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 
 1. On the computer where you're planning to install AD CS, open Windows PowerShell, type **notepad.exe** and press <kbd>ENTER</kbd>.
 
-2. When prompted to create a new file, select **Yes**.
+1. When prompted to create a new file, select **Yes**.
 
-3. Enter the following text:
+1. Enter the following text:
 
    ```Text
    [Version]
@@ -227,11 +227,11 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
    [AuthorityInformationAccess]
    ```
 
-4. Select **File**, and then select **Save As**.
+1. Select **File**, and then select **Save As**.
 
-5. Navigate to the %systemroot% folder.
+1. Navigate to the _%systemroot%_ folder.
 
-6. Ensure the following options are set:
+1. Ensure the following options are set:
 
    - **File name** is set to **CAPolicy.inf**
 
@@ -239,16 +239,16 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 
    - **Encoding** is **ANSI**
 
-7. Select **Save**.
+1. Select **Save**.
 
-8. When you're prompted to overwrite the file, select **Yes**.
+1. When you're prompted to overwrite the file, select **Yes**.
 
    ![Save As location for the CAPolicy.inf file](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)
 
    > [!CAUTION]
    >   Be sure to save the CAPolicy.inf with the inf extension. If you do not specifically type **.inf** at the end of the file name and select the options as described, the file will be saved as a text file and will not be used during CA installation.
 
-9. Close Notepad.
+1. Close Notepad.
 
 > [!IMPORTANT]
-> In the CAPolicy.inf, you can see there is a line specifying the URL https://pki.corp.contoso.com/pki/cps.txt. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement (CPS). In this guide, you are not instructed to create the certificate practice statement (CPS).
+> In the CAPolicy.inf, you can see there is a line specifying the URL `https://pki.corp.contoso.com/pki/cps.txt`. The Internal Policy section of the CAPolicy.inf is just shown as an example of how you would specify the location of a certificate practice statement (CPS). In this guide, you are not instructed to create the certificate practice statement (CPS).
