@@ -22,7 +22,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 > [!IMPORTANT]
 > We're no longer updating the Microsoft Store client with new features.
 >
-> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and fixes, we recommend you download the [Remote Desktop client for Windows](/azure/virtual-desktop/users/connect-windows.md) instead.
+> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and fixes, we recommend you download the [Remote Desktop client for Windows](/azure/virtual-desktop/users/connect-windows) instead.
 
 ## Get the RD client and start using it
 
