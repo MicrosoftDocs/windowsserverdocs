@@ -51,7 +51,7 @@ Before the RADIUS message is either processed locally (when NPS is being used as
 
 > [!Note]  
 > Realm manipulation does not work with PEAP.    
-> The desired behaviour might be accomplished by either switching to EAP-TLS or EAP-MSCHAPv2 for authentication or [adding an UPN suffix to the domain](previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772007(v=ws.11)) for each additional domain name you need to resolve.
+> The desired behaviour might be accomplished by either switching to EAP-TLS or EAP-MSCHAPv2 for authentication or [adding an UPN suffix to the domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772007(v=ws.11)) for each additional domain name you need to resolve.
 
 You can configure attribute manipulation rules for the User-Name attribute to change the following:
 
