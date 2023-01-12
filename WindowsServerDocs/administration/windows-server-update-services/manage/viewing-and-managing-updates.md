@@ -1,12 +1,12 @@
 ---
 title: Viewing and Managing Updates
-description: Windows Server Update Service (WSUS) topic - How to view and manage updates in the WSUS console
+description: Windows Server Update Service (WSUS) article - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/12/2023
 ---
 # Viewing and Managing Updates
 
@@ -20,9 +20,9 @@ On the **Updates** page, you can do the following:
 
 - View updates. The update overview displays updates that have been synchronized from the update source to your WSUS server and are available for approval.
 
-- Filter updates. In the default view you can filter updates by approval status and installation status. The default setting is for unapproved updates that are needed by some clients or that have had installation failures on some clients. You can change this view by changing the approval status and installation status filters, and then clicking **Refresh**.
+- Filter updates. In the default view, you can filter updates by approval status and installation status. The default setting is for unapproved updates that are needed by some clients or that's'had installation failures on some clients. You can change this view by changing the approval status and installation status filters, and then clicking **Refresh**.
 
-- Create new update views. In the **Actions** pane, click **New Update View**. You can filter updates by classification, product, the group for which they have been approved, and synchronization date. You can sort the list by clicking the appropriate column heading in the title bar.
+- Create new update views. In the **Actions** pane, select **New Update View**. You can filter updates by classification, product, the group for which they've been approved, and synchronization date. You can sort the list by clicking the appropriate column heading in the title bar.
 
 - Search for updates. You can search for an individual update or set of updates by title, description, Knowledge Base article, or the Microsoft Security Response Center number for the update.
 
@@ -32,25 +32,25 @@ On the **Updates** page, you can do the following:
 
 ### To view updates
 
-1.  In the WSUS administration console, expand **Updates**, and then click **All Updates**.
+1. In the WSUS administration console, expand **Updates**, and then select **All Updates**.
 
-2.  By default, updates are displayed with their title, classification, installed/not applicable percentage, and approval status. If you wish to display more or different update properties, right-click the column heading bar and select the appropriate columns.
+1. By default, updates are displayed with their title, classification, installed/not applicable percentage, and approval status. If you wish to display more or different update properties, right-click the column heading bar and select the appropriate columns.
 
-3.  To sort by different criteria, such as download status, title, classification, release date, or approval status, click the appropriate column heading.
+1. To sort by different criteria, such as download status, title, classification, release date, or approval status, select the appropriate column heading.
 
 ### To filter the list of updates displayed on the Updates page
 
-1.  In the WSUS administration console, expand **Updates**, and then click **All Updates**.
+1. In the WSUS administration console, expand **Updates**, and then select **All Updates**.
 
-2.  In the center pane next to **Approval**, select the desired approval status, and next to **Status** select the desired installation status. Click **Refresh**.
+1. In the center pane next to **Approval**, select the desired approval status, and next to **Status** select the desired installation status. Select **Refresh**.
 
 ### To create a new update view on WSUS
 
-1.  In the WSUS administration console, expand **Updates**, and then click **All Updates**.
+1. In the WSUS administration console, expand **Updates**, and then select **All Updates**.
 
-2.  In the **Actions** pane, click **New Update View**.
+1. In the **Actions** pane, select **New Update View**.
 
-3.  In the **Add Update View** window, under **Step 1: Select properties**, select the properties you need to filter the update view:
+1. In the **Add Update View** window, under **Step 1: Select properties**, select the properties you need to filter the update view:
 
     - Select **Updates are in a specific classification** to filter on updates belonging to one or more update classifications.
 
@@ -62,39 +62,39 @@ On the **Updates** page, you can do the following:
 
     - Select **Updates are WSUS Updates** to filter on WSUS updates.
 
-4.  Under **Step 2: Edit the properties**, click the underlined words to pick the values you want.
+1. Under **Step 2: Edit the properties**, select the underlined words to pick the values you want.
 
-5.  Under **Step 3: Specify a name**, give your new view a name.
+1. Under **Step 3: Specify a name**, give your new view a name.
 
-6.  Click **OK**.
+1. Select **OK**.
 
 Your new view will appear in the tree view pane under Updates. It will be displayed, like the standard views, in the center pane when you select it.
 
 ### To search for an update
 
-1.  Select the **Updates** node (or any node under it).
+1. Select the **Updates** node (or any node under it).
 
-2.  In the **Actions** pane, click **Search**.
+1. In the **Actions** pane, select **Search**.
 
-3.  In the **Search** window, on the **Updates** tab, enter your search criteria. You can use text from the **Title**, **Description**, and **Microsoft Knowledge Base (KB) article number** fields. Each of these items is a property listed on the **details** tab in the update properties.
+1. In the **Search** window, on the **Updates** tab, enter your search criteria. You can use text from the **Title**, **Description**, and **Microsoft Knowledge Base (KB) article number** fields. Each of these items is a property listed on the **details** tab in the update properties.
 
 ### To view the properties for an update
 
-1.  In the WSUS administration console, expand **Updates**, and then click **All Updates**.
+1. In the WSUS administration console, expand **Updates**, and then select **All Updates**.
 
-2.  In the list of updates, click the update you want to view.
+1. In the list of updates, select the update you want to view.
 
-3.  In the lower pane, you will see the different property sections:
+1. In the lower pane, you'll see the different property sections:
 
-    - The title bar displays the title of the update; for example, Security Update for Windows Media Player 9 (KB911565).
+    - The title bar displays the title of the update; for example, _Security Update for Windows Media Player 9 (KB911565)_.
 
-    - The Status section displays the installation status of the update (the computers on which it needs to be installed, computers on which it was installed with errors, computers on which it has been installed or is not applicable, and computers that have not reported status for the update), as well as general information (KB and MSRC numbers release date, etc.).
+    - The Status section displays the installation status of the update. For example, computers on which it has been installed, needs to be installed or installed with errors. The Status section also displays computers that haven't reported status for the update, aren't applicable, and general information (KB and MSRC numbers release date, etc.).
 
     - The Description section displays a brief description of the update.
 
     - The additional details section displays the following information:
 
-        - The installation behavior of the update (whether or not it is removable, requests a restart, requires user input, or must be installed exclusively).
+        - The installation behavior of the update (whether or not it's removable, requests a restart, requires user input, or must be installed exclusively).
 
         - Whether or not the update has Microsoft Software License Terms
 
@@ -108,7 +108,7 @@ Your new view will appear in the tree view pane under Updates. It will be displa
 
         - The update ID
 
-Note that you can perform this procedure on only one update at a time. If you select multiple updates, only the first update in the list will be displayed in the **Properties** pane.
+You can perform this procedure on only one update at a time. If you select multiple updates, only the first update in the list will be displayed in the **Properties** pane.
 
 ## Managing Updates with WSUS
 
@@ -118,25 +118,25 @@ Updates are used for updating or providing a full file replacement for software 
 
 - Update files: The actual files required to install an update on a computer.
 
-When updates are synchronized to your WSUS server, the metadata and update files are stored in two separate locations. Metadata is stored in the WSUS database. Update files can be stored either on your WSUS server or on Microsoft Update servers, depending on how you have configured your synchronization options. If you choose to store update files on Microsoft Update servers, only metadata is downloaded at the time of synchronization; you approve the updates through the WSUS console, and then client computers get the update files directly from Microsoft Update at the time of installation. For more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy) of Step 1: Prepare for Your WSUS Deployment, in the WSUS deployment guide.
+When updates are synchronized to your WSUS server, the metadata and update files are stored in two separate locations. Metadata is stored in the WSUS database. Update files can be stored either on your WSUS server or on Microsoft Update servers, depending on how you've configured your synchronization options. If you choose to use Microsoft Update servers as your update location, only the metadata is downloaded at the time of synchronization. When you approve the updates through the WSUS console, client computers get the update files directly from Microsoft Update at the time of installation. For more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy) of Step 1: Prepare for Your WSUS Deployment, in the WSUS deployment guide.
 
-You will be setting up and running synchronizations, adding computers and computer groups, and deploying updates on a regular basis. The following list gives examples of general tasks you might undertake in updating computers with WSUS.
+You'll be setting up and running synchronizations, adding computers and computer groups, and deploying updates regularly. The following list gives examples of general tasks you might undertake in updating computers with WSUS.
 
 - Determine an overall update management plan based on your network topology and bandwidth, company needs, and organizational structure.
 
-    - Whether to set up a hierarchy of WSUS servers and how the hierarchy should be structured.
+  - Whether to set up a hierarchy of WSUS servers and how the hierarchy should be structured.
 
-    - What computer groups to create, and how to assign computers to them (server-side or client-side targeting).
+  - What computer groups to create, and how to assign computers to them (server-side or client-side targeting).
 
-    - Which database to use for update metadata (for example, Windows Internal Database, SQL Server).
+  - Which database to use for update metadata (for example, Windows Internal Database, SQL Server).
 
-    - Whether updates should be synchronized automatically, and at what time.
+  - Whether updates should be synchronized automatically, and at what time.
 
 - Set synchronization options, such as update source, product and update classification, language, connection settings, storage location, and synchronization schedule.
 
 - Get the updates and associated metadata on your WSUS server through synchronization from either Microsoft Update or an upstream WSUS server.
 
-- Approve or decline updates. You have the option of allowing users to install the updates themselves (if they are local administrators on their client computers).
+- Approve or decline updates. You have the option of allowing users to install the updates themselves (if they're local administrators on their client computers).
 
 - Configure automatic approvals. You can also configure whether you want to enable automatic approval of revisions to existing updates or approve revisions manually. If you choose to approve revisions manually, then your WSUS server will continue using the older version until you manually approve the new revision.
 
@@ -171,9 +171,9 @@ To view these icons, you have to enable the Supersedence column in the Update Se
 
 The update has no supersedence relationship with any other update.
 
- **Operational Concerns:**
+**Operational Concerns:**
 
- There are no operational concerns.
+There are no operational concerns.
 
 ### Superseding Icon
 
@@ -184,6 +184,7 @@ The update has no supersedence relationship with any other update.
 There are no operational concerns.
 
 ### Superseded & Superseding Icon
+
 :::image type="icon" source="../../media/wsus/wsus-superseded.png"::: This update is superseded by another update, and supersedes other updates.
 
 **Operational Concerns:**
@@ -191,6 +192,7 @@ There are no operational concerns.
 Replace these updates with the superseding updates when possible.
 
 ### Superseded Icon
+
 :::image type="icon" source="../../media/wsus/wsus-superseded-leaf.png"::: This update is superseded by another update.
 
 **Operational Concerns:**
