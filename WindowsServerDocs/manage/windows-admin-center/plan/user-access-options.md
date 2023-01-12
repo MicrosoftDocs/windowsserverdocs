@@ -14,7 +14,7 @@ ms.date: 03/07/2019
 When deployed on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
 
 > [!NOTE]
-> Windows Admin Center as an application depends on the operating system and infrastructure for security. Windows Admin Center does not implement, moitor, or enforce a security boundary.
+> Windows Admin Center as an application depends on the operating system and infrastructure for security. Windows Admin Center does not implement, monitor, or enforce a security boundary.
 
 ## Gateway access roles
 
