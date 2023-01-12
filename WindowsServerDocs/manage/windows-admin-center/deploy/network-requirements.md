@@ -19,8 +19,8 @@ Windows Admin Center communicates outbound securely to endpoints over TCP port 4
 
 Endpoints need to be opened on two sources:
 
-1. The gateway - this is the server or client machine where the Windows Admin Center gateway (.msi) is installed.
-1. The browser - this is the machine where the Windows Admin Center web service is being accessed from.
+- The gateway - this is the server or client machine where the Windows Admin Center gateway (.msi) is installed.
+- The browser - this is the machine where the Windows Admin Center web service is being accessed from.
 
 If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs listed below are not blocked.
 
