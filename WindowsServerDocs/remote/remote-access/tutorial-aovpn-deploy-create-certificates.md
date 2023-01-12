@@ -188,7 +188,7 @@ Because you're using Group Policy to autoenroll user certificates, you only need
 
 **To validate the user certificate:**
 
-1. Sign in to the VPN client as the user that you created for the **VPN Users** group.
+1. Sign in to the VPN Windows client as the user that you created for the **VPN Users** group.
 
 2. Press Windows key + R, type **gpupdate /force**, and press ENTER.
 

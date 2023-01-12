@@ -164,9 +164,9 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. A dialog will prompt you to restart the server. Select **Yes**.
 
-## Create VPN Client
+## Create VPN Windows 10+ Client
 
-1. Install Windows 10+ or Windows Server on the machine that will be your VPN client.
+1. Install Windows 10+ on the machine that will be your VPN client.
 
 1. Join the VPN client to your domain. For information on how to join a computer to a domain, see [To join a computer to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
