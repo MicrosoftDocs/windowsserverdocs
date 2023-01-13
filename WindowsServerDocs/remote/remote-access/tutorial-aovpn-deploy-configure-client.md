@@ -27,11 +27,9 @@ For more detailed information on Always on VPN configuration options for the con
 
 ## Create an Always On VPN client profile
 
-In this section, we'll create a VPN client connection for the following reasons:
+In this section, we'll create a VPN client connection in order to verify that the VPN test client can establish a successful VPN connection. This will also allow us to create the EAP settings for export in the next section.  
 
-- Verify that the VPN test client can establish a successful VPN connection.
-
-- Create the EAP settings for export in the next section.  For more information about EAP settings, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
+For more information about EAP settings, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
 1. Sign in to the domain-joined VPN client computer as the VPN user you created in [Create Active Directory test user](tutorial-aovpn-deploy-setup.md#create-vpn-user-and-group).
 
