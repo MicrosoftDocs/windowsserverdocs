@@ -60,8 +60,7 @@ Once the above is verified, you can take the following steps (assuming the AD FS
  2. Remove any AD FS entries from any of the load balancers (internal as well as external) you might have configured in your environment. 
  3. Delete any corresponding DNS entries of the respective farm names for AD FS servers in your environment. 
  4. On the primary AD FS server run [`Get-ADFSProperties`](https://learn.microsoft.com/powershell/module/adfs/get-adfsproperties?view=windowsserver2022-ps) and look for **CertificateSharingContainer**. Keep a note of this DN, as you'll need to delete it near the end of the installation (after a few reboots and when it isn't available anymore) 
-     - Remove the content in this DN using ADSI Edit after uninstallation.
- 5. If your AD FS configuration database is using a single SQL Server database instance as the store, ensure to delete the database before uninstalling AD FS servers.
+ 5. If your AD FS configuration database is using a SQL Server database instance as the store, ensure to delete the database before uninstalling AD FS servers.
  6. Uninstall the WAP (Proxy) servers. 
      - Sign in to each WAP server, open the Remote Access Management Console and look for published web applications. 
      - Remove any related to AD FS servers that aren't being used anymore. 
@@ -71,6 +70,7 @@ Once the above is verified, you can take the following steps (assuming the AD FS
  8. Delete AD FS Secure Socket Layer (SSL) certificates from each server storage.
  9. Re-image AD FS servers with full disk formatting.
  10. You can now safely delete your AD FS account.
+ 11. Remove the content of the **CertificateSharingContainer** DN using ADSI Edit after unistallation.
 
 ## Next Steps
 - [AD FS Overview](../ad-fs-overview.md)
