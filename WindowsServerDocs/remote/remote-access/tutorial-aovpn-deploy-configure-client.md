@@ -1,13 +1,13 @@
 ---
-title: Tutorial - Deploy Always On VPN - Configure Windows 10 Always On VPN client connections
-description:  Learn how to deploy configure the Always On VPN client connections.
+title: Tutorial - Deploy Always On VPN - Configure Windows 10+ Always On VPN client connections
+description:  Learn how to deploy configure  Always On VPN client connections
 ms.topic: article
 ms.date: 01/06/2022
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 ms.author: anaharris
 author: anaharris-ms
 ---
-# Tutorial: Deploy Always On VPN - Configure the Always On VPN client connections
+# Tutorial: Deploy Always On VPN - Configure Always On VPN client connections
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10+
 
