@@ -11,7 +11,7 @@ author: anaharris-ms
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10+
 
-In the last part of the tutorial, you'll learn how to configure Always On VPN settings in Windows 10 and Windows 11 using the following configuration options:
+In this last part of the tutorial, you'll learn how to configure Always On VPN settings in Windows 10 and Windows 11 using the following configuration options:
 
 - Manual PowerShell configuration directly on each client.
 - Configuration Manager configuration for a group of clients.
