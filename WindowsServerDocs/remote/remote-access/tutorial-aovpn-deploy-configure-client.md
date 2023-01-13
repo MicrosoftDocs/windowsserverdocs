@@ -25,7 +25,7 @@ For more detailed information on Always on VPN configuration options for the con
 
 1. Download [Sample Configuration Windows PowerShell Script](VPN-Profile.ps1).
 
-## Create a Always On VPN client profile
+## Create an Always On VPN client profile
 
 In this section, we'll create a VPN client connection for the following reasons:
 
