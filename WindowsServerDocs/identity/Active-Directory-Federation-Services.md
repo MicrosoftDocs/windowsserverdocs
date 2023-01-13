@@ -26,3 +26,5 @@ This document contains a list of all of the documentation areas for AD FS for Wi
 * [AD FS Operations](./ad-fs/ad-fs-operations.md)
 
 * [AD FS Technical Reference](ad-fs/AD-FS-Technical-Reference.md)
+
+* [AD FS Decommission](ad-fs/AD-FS-Decommission.md)

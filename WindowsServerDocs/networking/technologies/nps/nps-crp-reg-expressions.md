@@ -70,6 +70,10 @@ The following examples describe the use of the pattern-matching syntax to specif
 
 ## Examples for manipulation of the realm name in the User Name attribute
 
+> [!Note]  
+> Realm manipulation does not work with PEAP.    
+> The desired behaviour might be accomplished by either switching to EAP-TLS or EAP-MSCHAPv2 for authentication or [adding an UPN suffix to the domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772007(v=ws.11)) for each additional domain name you need to resolve.
+
 The following examples describe the use of the pattern-matching syntax to manipulate realm names for the User Name attribute, which is located on the **Attribute** tab in the properties of a connection request policy.
 
 **To remove the realm portion of the User Name attribute**
