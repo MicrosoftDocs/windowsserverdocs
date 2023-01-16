@@ -10,9 +10,12 @@ ms.date: 10/12/2016
 ---
 # Software Restriction Policies
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic for the IT professional describes Software Restriction Policies (SRP) in Windows Server 2012 and Windows 8, and provides links to technical information about SRP beginning with Windows Server 2003.
+This topic for the IT professional describes Software Restriction Policies (SRP) in Windows Server 2012 and 2016 and Windows 8, and provides links to technical information about SRP beginning with Windows Server 2003.
+
+> [!IMPORTANT]
+> Software Restriction Policies were deprecated beginning with Windows 10 build 1803 and also applies to Windows Server 2019 and above. You should use Windows Defender Application Control (WDAC) or AppLocker to control what software runs.
 
 For procedures and troubleshooting tips, see [Administer Software Restriction Policies](administer-software-restriction-policies.md) and [Troubleshoot Software Restriction Policies](troubleshoot-software-restriction-policies.md).
 
