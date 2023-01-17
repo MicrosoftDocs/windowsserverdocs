@@ -1,23 +1,23 @@
 ---
 title: rcp
-description: Reference article for the rcp command, which copies files between computers. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
+description: Reference article for the rcp command that copies files between computers. This command is deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.topic: reference
-ms.assetid: 83ad713c-63c9-458c-8ad8-39a6ddeb1690
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/03/2023
 ---
 
 # rcp
 
 >[!IMPORTANT]
-> This command has been deprecated.
+> This command is deprecated.
+
+Applies to: Windows Server (All supported versions)
 
 You can install the subsystem for UNIX-based Applications using the **Add Features Wizard**. For more information and the download files. <!-- see [Utilities and SDK for Subsystem for UNIX-based Applications in Microsoft Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=2391).-->
 
-After installation, you can then open a C Shell (csh or tcsh) or KornShell command window and run **rcp**. For more information, type **man rcp** at the C Shell or KornShell prompt.
+After installation, open a C Shell (csh or tcsh) or KornShell command window and run **rcp**. For more information, type **man rcp** at the C Shell or KornShell prompt.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
