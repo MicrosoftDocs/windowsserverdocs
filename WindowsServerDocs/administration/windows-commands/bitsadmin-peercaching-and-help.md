@@ -1,20 +1,21 @@
 ---
 title: bitsadmin peercaching and help
-description: Reference article for **bitsadmin peercaching** and **help**, which displays the command-line usage for the /peercaching switches.
+description: Reference article for bitsadmin peercaching and help command that displays the command-line usage for the /peercaching switches.
 ms.topic: reference
-ms.assetid: 2cb0fcc0-5464-47c9-b44d-dd32a4f0d907
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/03/2023
 ---
 
 # bitsadmin peercaching and help
 
-Displays the command-line usage for the **/peercaching** switches.
+Applies to: Windows Server (All supported versions) 
+
+The bitsadmin peercaching and help command displays the command-line usage for the **/peercaching** switches.
 
 ## Syntax
 
+The following synax is used:
 ```
 bitsadmin /peercaching /help
 ```
@@ -27,7 +28,7 @@ To display the command-line help for the **/peercaching** switches:
 bitsadmin /peercaching /help
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
