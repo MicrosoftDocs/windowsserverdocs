@@ -5,7 +5,7 @@ ms.service:
 author: gswashington
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 12/29/2022
+ms.date: 01/18/2023
 
 ---
 
@@ -28,11 +28,11 @@ By default, Windows downloads the CTLs from the Internet via an automatic mechan
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/disallowedcertstl.cab 
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab
 
-Automatic update functionality also can be disabled if necessary, although this is not recommended.
+Automatic update functionality also can be disabled if necessary, although this isn't recommended.
 
 Alternately, you also can create a Group Policy administrative templates (ADMX policy) to redirect to an internal server for updates.
 
-The registry location where trusted and untrusted CTLs are stored are as follows: 
+The registry location where trusted and untrusted CTLs are stored as follows:
 
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\EncodedCtl
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\DisallowedCertEncodedCtl
