@@ -14,11 +14,12 @@ Follow these instructions to install MultiPoint Services when you're installing 
 
 Finish installing Windows Server 2016 and then sign in as Administrator. Use Server Manager to enable MultiPoint Services. Server Manager opens automatically at start-up. On the Dashboard, select **Add roles and features** to enable MultiPoint Services and follow the instructions in the wizard.
 
-In the section for the installation type you can opt for either
+In the section for the installation type opt for either:
+
 - Role-based or feature-based installation or
 - Remote Desktop Services installation
 
-For standard MultiPoint Services deployments, select the Remote Desktop Services installation. This allows you to conveniently select the MultiPoint Services role under Deployment type. For the role-based installation you need to select **MultiPoint Services** from the list of roles. The server will restart after successful installation.
+For standard MultiPoint Services deployments, select the Remote Desktop Services installation. The Remote Desktop Services role allows you to conveniently select the MultiPoint Services role under Deployment type. For the role-based installation, select **MultiPoint Services** from the list of roles. The server will restart after successful installation.
 
 ## Configure your primary station
 
