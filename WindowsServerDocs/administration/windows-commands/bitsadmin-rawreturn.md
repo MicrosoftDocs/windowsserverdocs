@@ -11,7 +11,7 @@ ms.date: 01/03/2023
 
 Applies to: Windows Server (All supported versions) 
 
-The bitsadmin rawreturn command returns data suitable for parsing. Typically, you use this command in conjunction with the **/create** and **/get*** switches to receive only the value. You must specify this switch before other switches.
+The bitsadmin rawreturn command returns data suitable for parsing. Typically, you use this command with the **/create** and **/get*** switches to receive only the value. You must specify this switch before other switches.
 
 > [!NOTE]
 > This command strips newline characters and formatting from the output.
