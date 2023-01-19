@@ -41,6 +41,8 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 - There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the third Party Software Notice.
 
+- Windows Admin Center tool APIs may be accessed and used through other methods while a session of Windows Admin Center is active and a user has access to that session. The actions taken using these APIs will only affect the gateway machine (the machine Windows Admin Center is installed on). This will not affect machines managed remotely without authentication through the Windows Admin Center gateway.
+
 ### Extension Manager
 
 - When you update Windows Admin Center, you must reinstall your extensions.
@@ -300,8 +302,6 @@ You can use the following steps to troubleshoot:
    ```PowerShell
    Enter-PSSession -computername <node fqdn>
    ```
-### Inconsistent IP addresses
-  Some users may experience inconsistencies in their IP addresses between sections 2,3, and 4 of the cluster create wizard. Users may confirm the correct IP addresses using the SConfig tool. The addresses displayed by the SConfig tool should be consistent with the IP addresses displayed in step 4 of the wizard. These inconsistencies should not effect cluster deployment. 
    
 ## CredSSP
 
