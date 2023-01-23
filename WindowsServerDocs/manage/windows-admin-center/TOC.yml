@@ -92,6 +92,8 @@
       href: azure/manage-arc-hybrid-machines.md
     - name: Azure Stack HCI
       href: azure/manage-hci-clusters.md
+    - name: Azure extension release history
+      href: azure/extension-release-notes.md
   - name: Support
     items:
     - name: Release history
