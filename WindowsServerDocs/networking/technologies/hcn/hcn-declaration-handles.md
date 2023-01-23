@@ -14,7 +14,14 @@ Applies to: Windows Server 2022, Windows Server 2019
 
 ## HCN_Network
 
-An HCN Network is an entity that is used to represent a host compute network and its associated system resources and policies. For example, a HCN network will typically consist of a set of metadata (for example, id, name, type), a virtual switch, a host virtual network adapter (that acts as a default gateway for the network), a NAT instance (if required by the network type), a set of subnet and MAC pools, and any network-wide policies to be applied (for example, ACLs).
+An HCN Network is an entity that is used to represent a host compute network and its associated system resources and policies. A HCN network typically can include:
+
+- A set of metadata (id, name, type)
+- A virtual switch
+- A host virtual network adapter (acting as a default gateway for the network)
+- A NAT instance (if required by the network type)
+- A set of subnet and MAC pools
+- Any network-wide policies to be applied (for example, ACLs)
 
 HCN Network entities are represented using HCN_NETWORK RPC context handles.
 
@@ -144,7 +151,12 @@ HcnCloseNetwork(
 
 ## HCN_Endpoint
 
-A HCN Endpoint is an entity which is used to represent an IP endpoint on an HCN network and its associated system resources and policies. For example, an HCN endpoint will typically consist of a set of metadata (for example, id, name, parent network id), its network identity (for example, IP address, MAC address), and any endpoint specific policies to be applied (for example, ACLs, routes).
+A HCN Endpoint is an entity that is used to represent an IP endpoint on an HCN network and its associated system resources and policies. An HCN endpoint typically consists of: 
+
+- A set of metadata (id, name, parent network id)
+- Its network identity (IP address, MAC address)
+- Any endpoint specific policies to be applied (ACLs, routes)
+
 HCN Endpoint entities are represented using HCN_ENDPOINT RPC context handles.
 
 ```
