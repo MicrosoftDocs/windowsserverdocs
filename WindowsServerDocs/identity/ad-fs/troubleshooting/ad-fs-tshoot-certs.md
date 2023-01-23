@@ -9,31 +9,31 @@ ms.date: 01/06/2023
 
 # AD FS Troubleshooting - Certificates
 
-AD FS requires the following certificates in order to work correctly. Issues can occur if any of these certificates have not been setup or configured properly.
+AD FS requires specific certificates in order to work correctly. Issues can occur if any of these certificates haven't been setup or configured properly.
 
 ## Required certificates
 
-AD FS requires the following:
+Each of the required AD FS certificates have their own requirements:
 
 - **Federation trust** – Federation trust requires one of the following: 1. A certificate chained to a mutually trusted Internet root Certificate Authority (CA) is present in the trusted root store of both the claims provider and relying party Federation Servers; 2. A cross-certification design has been implemented in which each side has exchanged its root CA with its partner. 3. Self-signed certificates that have been imported on each side where appropriate.
 - **Token-signing** – Each Federation Service computer requires a token-signing certificate. The claims provider token-signing certificate must be trusted by the relying party Federation Server. The relying party token-signing certificate must be trusted by all applications that receive tokens from the RP Federation Server.
 - **Secure Sockets Layer (SSL)** – The SSL certificate for the Federation Service must be present in a trusted store on the Federation Server proxy computer and have a valid chain to a trusted Certificate Authority (CA) store.
 - **Certificate Revocation List (CRL)** – For any certificate that has a CRL published, the CRL must be accessible to all clients and servers who need to access the certificate.
 
-If any of the above requirements are not configured correctly, AD FS will not work.
+If any of the above requirements are not configured correctly, AD FS won't work.
 
 ## Common things to check with certificates
 
 The following checklist can help you resolve a certificate issue.
 
 - Make sure that the certificate is trusted.
-	- SSL certs need to be trusted by the clients.
-	- Token signing certificates need to be trusted by the relying parties
+- SSL certs need to be trusted by the clients.
+  - Token signing certificates need to be trusted by the relying parties
 - Check the trust chain - every cert in the chain needs to be valid.
 - Verify the certificate expiration date.
 - Check Certificate Revocation List (CRL) accessibility.
-	- Make sure the CDP field is populated.
-	- Manually browse to the CDP.
+  - Make sure the CDP field is populated.
+  - Manually browse to the CDP.
 - Make sure the certificate has not been revoked.
 
 ## Common certificate errors
@@ -54,6 +54,6 @@ The following table is a list of common certificate errors and possible causes.
 |Event 387 - AD FS detected that one or more of the certificates that are specified in the Federation Service were not accessible to the service account that is used by the AD FS Windows Service.|The AD FS service account does not have read permissions to the private key of one or more configured certificates.|Ensure that the AD FS service account has read permission to the private key of all configured certificates.|
 |Event 389 - AD FS detected that one or more of your trusts require their certificates to be updated manually because they are expired, or will expire soon.|One of your configured partner's certificates has expired, or is about to expire. This can apply to either a claims provider trust or to a relying party trust.|If you've manually created this trust, update the certificate configuration manually. If you used federation metadata to create the trust, the certificate will update automatically as soon as the partner updates the certificate.|
 
-## Next Steps
+## Related links
 
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
