@@ -9,22 +9,23 @@ ms.date: 01/03/2023
 
 # bitsadmin peercaching and help
 
-Applies to: Windows Server (All supported versions) 
+Applies to: Windows Server (All supported versions)
 
-The bitsadmin peercaching and help command displays the command-line usage for the **/peercaching** switches.
+The `bitsadmin` command displays the command-line usage for the `/peercaching` switch when combined with `/help` switch..
 
 ## Syntax
 
-The following synax is used:
-```
+The following syntax is used:
+
+```CLI
 bitsadmin /peercaching /help
 ```
 
 ## Examples
 
-To display the command-line help for the **/peercaching** switches:
+To display the command-line help for the `/peercaching` switches, run the following command.
 
-```
+```CLI
 bitsadmin /peercaching /help
 ```
 
