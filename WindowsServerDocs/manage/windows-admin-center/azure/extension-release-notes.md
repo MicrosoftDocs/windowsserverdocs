@@ -24,7 +24,7 @@ This page is updated monthly, so revisit it regularly.
 
 ### New features
 
-- Updated the build of Windows Admin Center to the v2211. A few highlights are listed below. For a full summary, visit [our blog post](https://aka.ms/wac2211).
+- Updated the build of Windows Admin Center to the v2211. A few highlights are listed. For a full summary, visit [our blog post](https://aka.ms/wac2211).
     - Support for WDAC-enforced infrastructure
     - Support for 400% zoom
     - Search settings with smart keywords
@@ -34,11 +34,11 @@ This page is updated monthly, so revisit it regularly.
 
 ### Fixed
 
-- Fixed AAD authentication when managing domain controllers. AAD authentication is not supported on domain controllers and users must enter local administrator credentials
+- Fixed Azure AD authentication when managing domain controllers. Azure AD authentication isn't supported on domain controllers and users must enter local administrator credentials.
 
 ## Version 0.0.0.221 - October 2022
 
 ### New features
 
-- Introduced AAD authentication for Windows Server Azure Virtual Machines and Arc-enabled Servers. Azure Stack HCI does not support AAD authentication yet.
+- Introduced Azure AD authentication for Windows Server Azure Virtual Machines and Arc-enabled Servers. Azure Stack HCI doesn't support Azure AD authentication yet.
 - Windows Admin Center for Azure Virtual Machines is now generally available. Windows Admin Center for Arc-enabled servers and Azure Stack HCI remains in Public Preview.
