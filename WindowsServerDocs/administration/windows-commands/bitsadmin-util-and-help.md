@@ -27,7 +27,7 @@ To display the command-line help for the **/util** switches:
 bitsadmin /util /help
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
