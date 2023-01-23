@@ -13,6 +13,6 @@ ms.date: 01/03/2023
 
 Applies to: Applies to: Windows Server (All supported versions)
 
-The command cprofile is deprecated and is not guaranteed to be supported in future releases of Windows.
+The command cprofile is deprecated and isn't guaranteed to be supported in future releases of Windows.
 
-Terminal Services has been updated and renamed Remote Desktop Services. For more information, see [Welcome to Remote Desktop Services](../../remote/remote-desktop-services/welcome-to-rds.md).
+Terminal Services is updated and renamed Remote Desktop Services. For more information, see [Welcome to Remote Desktop Services](../../remote/remote-desktop-services/welcome-to-rds.md).
