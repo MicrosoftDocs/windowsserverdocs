@@ -9,7 +9,7 @@ ms.date: 01/06/2023
 
 # bitsadmin getproxybypasslist
 
-Applies to: Applies to: Windows Server (All supported versions)
+Applies to: Windows Server (All supported versions)
 
 The bitsadmin getproxybypasslist command retrieves the proxy bypass list for the specified job.
 
@@ -37,7 +37,7 @@ To retrieve the proxy bypass list for the job named *myDownloadJob*:
 bitsadmin /getproxybypasslist myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
