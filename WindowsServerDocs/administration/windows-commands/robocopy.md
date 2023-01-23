@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: jasongerend
 ms.author: alalve
-ms.date: 10/04/2022
+ms.date: 01/23/2023
 ---
 
 # robocopy
@@ -20,8 +20,8 @@ robocopy <source> <destination> [<file>[ ...]] [<options>]
 
 For example, to copy a file named *yearly-report.mov* from *c:\reports* to a file share *\\\\marketing\videos* while enabling multi-threading for higher performance (with the **/mt** parameter) and the ability to restart the transfer in case it's interrupted (with the **/z** parameter), type:
 
-```dos
-robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
+```cmd
+robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 ```
 
 ### Parameters

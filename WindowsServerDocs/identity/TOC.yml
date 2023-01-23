@@ -613,8 +613,6 @@
             href: ad-fs/deployment/verify-your-Windows-Server-2012-R2-Federation-Server-Is-Operational.md
         - name: Deploying Federation Server Proxies
           href: ad-fs/deployment/Deploying-Federation-Server-Proxies-W2K12R2.md
-        - name: Azure Active Directory Connect
-          href: ad-fs/deployment/Azure-active-directory-Connect.md
       - name: Windows Server 2012 AD FS Deployment Guide
         href: ad-fs/deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md
         items:
@@ -972,6 +970,11 @@
         href: ad-fs/technical-reference/ad-fs-password-protection.md
     - name: AD FS 2016 FAQ
       href: ad-fs/overview/AD-FS-FAQ.yml
+    - name: AD FS Decommission
+      href: ad-fs/ad-fs-decommission.md
+      items:
+      - name: AD FS Decommission Guide
+        href: ad-fs/decommission/adfs-decommission-guide.md
   - name: Active Directory Rights Management Service
     items:
     - name: Upgrading AD RMS to Windows Server 2016

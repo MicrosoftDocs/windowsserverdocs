@@ -6,7 +6,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/03/2022
+ms.date: 01/13/2023
 ---
 # Get started with the Microsoft Store Client
 
@@ -22,7 +22,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 > [!IMPORTANT]
 > We're no longer updating the Microsoft Store client with new features.
 >
-> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and fixes, we recommend you download the [Remote Desktop client for Windows](/azure/virtual-desktop/users/connect-windows.md) instead.
+> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and fixes, we recommend you download the [Remote Desktop client for Windows](/azure/virtual-desktop/users/connect-windows) instead.
 
 ## Get the RD client and start using it
 
