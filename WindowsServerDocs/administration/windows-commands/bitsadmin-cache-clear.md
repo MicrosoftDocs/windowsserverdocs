@@ -27,7 +27,7 @@ To purge the local cache:
 bitsadmin /cache /clear
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
