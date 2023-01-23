@@ -10814,7 +10814,18 @@
       "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-2004-20h2.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Azure-Active-Directory-Connect.md",
+      "redirect_url": "/azure/active-directory/hybrid/whatis-hybrid-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/winpop.md",
+      "redirect_url": "/previous-versions/orphan-topics/ws.10/cc772824(v=ws.10)",
+      "redirect_document_id": false
     }
+
 
   ]
 }
