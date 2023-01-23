@@ -12,7 +12,7 @@ ms.topic: article
 
 Applies to: Windows Server (All supported versions)
 
-Single Sign-On (SSO) allows users to authenticate once and access multiple resources without being prompted for additional credentials.  This article describes the default AD FS behavior for SSO as well as the configuration settings that let you customize this behavior.
++Single Sign-On (SSO) allows users to authenticate once and access multiple resources without being prompted for more credentials. This article describes the default AD FS behavior for SSO and the configuration settings that let you customize this behavior.
 
 ## Supported types of Single Sign-On
 
@@ -20,15 +20,15 @@ AD FS supports several types of Single Sign-On experiences:
 
 - **Session SSO**
 
-     Session SSO cookies are written for the authenticated user; this eliminates additional prompts when the user switches applications during a particular session. However, if a particular session ends, the user will be prompted for their credentials again.
+     Session SSO cookies are written for the authenticated user; this eliminates extra prompts when the user switches applications during a particular session. However, if a particular session ends, the user will be prompted for their credentials again.
 
-     AD FS will set session SSO cookies by default if users' devices are not registered. If the browser session has ended and is restarted, this session cookie is deleted and isn't valid any more.
+     AD FS will set session SSO cookies by default if users' devices aren't registered. If the browser session has ended and is restarted, this session cookie is deleted and isn't valid anymore.
 
 - **Persistent SSO**
 
-     Persistent SSO cookies are written for the authenticated user; this eliminates additional prompts when the user switches applications for as long as the persistent SSO cookie is valid. The difference between persistent SSO and session SSO is that persistent SSO can be maintained across different sessions.
+     Persistent SSO cookies are written for the authenticated user; this eliminates extra prompts when the user switches applications for as long as the persistent SSO cookie is valid. The difference between persistent SSO and session SSO is that persistent SSO can be maintained across different sessions.
 
-     AD FS will set persistent SSO cookies if the device is registered. AD FS will also set a persistent SSO cookie if a user selects the “Keep me signed in” option. If the persistent SSO cookie is no longer valid it is rejected and deleted.
+     AD FS will set persistent SSO cookies if the device is registered. AD FS will also set a persistent SSO cookie if a user selects the “Keep me signed in” option. If the persistent SSO cookie is no longer valid, it's rejected and deleted.
 
 - **Application specific SSO**
 
@@ -36,7 +36,7 @@ AD FS supports several types of Single Sign-On experiences:
 
      If a device is registered, AD FS will set the expiration time of a refresh token based on the persistent SSO cookie's lifetime for a registered device. Cookie lifetime is 7 days by default for AD FS 2012R2 and up to a maximum of 90 days with AD FS 2016 if the device is used to access AD FS resources within a 14-day window.
 
-If the device is not registered but a user selects the “Keep me signed in” option, the expiration time of the refresh token will equal the persistent SSO cookie's lifetime for "Keep me signed in". The persistent SSO cookie lifetime is 1 day by default with maximum of 7 days. Otherwise, refresh token lifetime equals session SSO cookie lifetime (8 hours by default).
+If the device is not registered, the user can select the “Keep me signed in” option. The expiration time of the refresh token will equal the persistent SSO cookie's lifetime for "Keep me signed in". The persistent SSO cookie lifetime is 1 day by default with maximum of 7 days. Otherwise, refresh token lifetime equals session SSO cookie lifetime (8 hours by default).
 
  As mentioned above, users on registered devices will always get a persistent SSO unless the persistent SSO is disabled. For un-registered devices, persistent SSO can be achieved by enabling the “keep me signed in” (KMSI) feature.
 
@@ -44,7 +44,7 @@ If the device is not registered but a user selects the “Keep me signed in” o
 
 Task | PowerShell | Description
 ------------ | ------------- | -------------
-Enable/disable persistent SSO | ```` Set-AdfsProperties –EnablePersistentSso <Boolean> ````| Persistent SSO is enabled by default. If it is disabled, no PSSO cookie will be written.
+Enable/disable persistent SSO | ```` Set-AdfsProperties –EnablePersistentSso <Boolean> ````| Persistent SSO is enabled by default. If it's disabled, no PSSO cookie is created.
 "Enable/disable “keep me signed in" | ```` Set-AdfsProperties –EnableKmsi <Boolean> ```` | "Keep me signed in" feature is disabled by default. If it's enabled, the user will see a “Keep me signed in” choice on AD FS sign-in page
 
 ## AD FS 2016 - Single Sign-On and authenticated devices
@@ -91,11 +91,11 @@ Set-AdfsProperties –KmsiLifetimeMins <Int32\>
 
 ## Multi-factor authentication (MFA) behavior
 
-AD FS provides relatively long periods of single sign on. However, it is important to note AD FS will prompt for additional authentication (multi factor authentication) when a previous sign on is based on primary credentials (not MFA) but the current sign on requires MFA. This is regardless of SSO configuration. When AD FS receives an authentication request, it first determines whether or not there is an SSO context (such as a cookie) and then whether MFA is required. For example, MFA is required when the authentication request is from outside. In such a case, AD FS assesses whether or not the SSO context contains MFA. If not, MFA is prompted.
+AD FS provides relatively long periods of single sign on. It is important to note AD FS prompts for additional authentication (multi-factor authentication) when a previous sign on is based on primary credentials (not MFA) but the current sign on requires MFA. This is regardless of SSO configuration. When AD FS receives an authentication request, it first determines whether or not there is an SSO context (such as a cookie) and whether MFA is required. For example, MFA is required when the authentication request is from outside. In such a case, AD FS assesses whether or not the SSO context contains MFA. If it does not, MFA is prompted.
 
 ## PSSO revocation
 
- To protect security, AD FS rejects any persistent SSO cookie previously issued when the following conditions are met (rejection of a persistent SSO cookie requires the user to provide their credentials in order to authenticate with AD FS again):
+ To protect security, AD FS rejects any persistent SSO cookie previously issued when the following conditions are met:
 
 - User changes password
 
@@ -113,6 +113,8 @@ AD FS provides relatively long periods of single sign on. However, it is importa
 
 - AD FS administrator has set a cutoff time for persistent SSO. When this is configured, AD FS will reject any persistent SSO cookie issued before this time
 
+Rejection of a persistent SSO cookie requires the user to provide their credentials in order to authenticate with AD FS again.
+
   To set the cutoff time, run the following PowerShell cmdlet:
 
 ``` powershell
@@ -121,7 +123,7 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 
 ## Enable PSSO for Office 365 users to access SharePoint Online
 
-Once PSSO is enabled and configured in AD FS, AD FS will write a persistent cookie after a user has authenticated. The next time the user comes in, if a persistent cookie is still valid, a user does not need to provide credentials to authenticate again. You can also avoid the additional authentication prompt for Office 365 and SharePoint Online users by configuring the following two claims rules in AD FS to trigger persistence at Microsoft Azure AD and SharePoint Online.  To enable PSSO for Office 365 users to access SharePoint online, you need to install this [hotfix](https://support.microsoft.com/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
+Once PSSO is enabled and configured in AD FS, AD FS will write a persistent cookie after a user has authenticated. The next time the user comes in and a persistent cookie is still valid, they don't need to provide credentials to authenticate again. You can also avoid the extra authentication prompt for Office 365 and SharePoint Online users by configuring the following two claims rules in AD FS to trigger persistence at Microsoft Azure AD and SharePoint Online.  To enable PSSO for Office 365 users to access SharePoint online, you need to install this [hotfix](https://support.microsoft.com/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
 
  An Issuance Transform rule to pass through the InsideCorporateNetwork claim
 
@@ -207,4 +209,4 @@ AD FS issues a new refresh token only if the validity of the newer refresh token
 
 Federated users who don't have the **LastPasswordChangeTimestamp** attribute synced are issued session cookies and refresh tokens that have a **Max Age value of 12 hours**.
 
-This occurs because Azure AD can't determine when to revoke tokens that are related to an old credential (such as a password that has been changed). Therefore, Azure AD must check more frequently to make sure that the user and associated tokens are still in good standing.
+Max Age value session cookies and refresh tokens are issued because Azure AD can't determine when to revoke tokens that are related to an old credential (such as a password that has been changed). Therefore, Azure AD must check more frequently to make sure that the user and associated tokens are still in good standing.
