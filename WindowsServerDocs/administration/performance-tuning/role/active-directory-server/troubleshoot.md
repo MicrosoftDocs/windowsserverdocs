@@ -11,7 +11,7 @@ ms.date: 01/03/2023
 
 Applies to: Windows Server (All supported versions)
 
-For additional information on ADDS performance tuning troubleshooting, see [Monitoring Your Branch Office Environment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd736504(v=ws.10)).
+For more information on AD DS performance tuning troubleshooting, see [Monitoring Your Branch Office Environment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd736504(v=ws.10)).
 
 ## Related links
 
