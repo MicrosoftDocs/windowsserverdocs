@@ -463,9 +463,9 @@
       - name: Always On VPN
         items:
         - name: Deploy Always On VPN profile to Windows 10+ clients with Microsoft InTune
-          href: how-to-aovpn-client-intune.md
+          href: remote-access/how-to-aovpn-client-intune.md
         - name: Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager
-          href: how-to-aovpn-client-config-mgr.md
+          href: remote-access/how-to-aovpn-client-config-mgr.md
       - name: Virtual Private Networking (VPN) 
         items: 
         - name: Configure VPN device tunneling
