@@ -36,7 +36,7 @@ The returned output values can be:
 | Transferring | BITS is transferring data. |
 | Transferred | BITS has successfully transferred all files in the job. |
 | Suspended | The job is paused. |
-| Error | A non-recoverable error occurred; the transfer will not be retried. |
+| Error | A non-recoverable error occurred; the transfer won't be retried. |
 | Transient_Error | A recoverable error occurred; the transfer retries when the minimum retry delay expires. |
 | Acknowledged | The job completed. |
 | Canceled | The job was canceled. |
@@ -49,7 +49,7 @@ To retrieve the state for the job named *myDownloadJob*:
 bitsadmin /getstate myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
