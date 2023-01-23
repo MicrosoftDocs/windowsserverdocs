@@ -236,13 +236,13 @@
         href: remote-access/getting-started-install-ras-as-vpn.md 
     - name: Tutorials
       items:
-      - name: Deploy Always on VPN
+      - name: Always on VPN
         items:
-        - name: Setup the Always On VPN environment
+        - name: Setup infrastructure for Always On VPN 
           href: remote-access/tutorial-aovpn-deploy-setup.md        
         - name: Configure Always On VPN certificates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
-        - name: Configure Always On VPN client connections
+        - name: Deploy Always On VPN profile for Windows 10+ clients
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
       - name: Always on VPN Conditional Access
         items:
@@ -460,6 +460,12 @@
             href: remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md
     - name: How-to Guides
       items:
+      - name: Always On VPN
+        items:
+        - name: Deploy Always On VPN profile to Windows 10+ clients with Microsoft InTune
+          href: how-to-aovpn-client-intune.md
+        - name: Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager
+          href: how-to-aovpn-client-config-mgr.md
       - name: Virtual Private Networking (VPN) 
         items: 
         - name: Configure VPN device tunneling

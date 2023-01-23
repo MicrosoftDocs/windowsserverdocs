@@ -1,5 +1,5 @@
 ---
-title: Deploy Always On VPN - Setup the environment
+title: Tutorial - Setup infrastructure for Always On VPN 
 description: Learn how to deploy Always On VPN (AOV) connections for Windows 10+ client computers that are working offsite (for example, from home, a customer site, or a public wireless access point).
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
@@ -8,7 +8,7 @@ author: anaharris-ms
 ms.date: 01/06/2022
 ---
 
-# Tutorial: Deploy Always On VPN - Setup the environment
+# Tutorial: Setup infrastructure for Always On VPN 
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
@@ -109,19 +109,19 @@ In this section, you'll create a Group Policy on the domain controller so that d
 1. Create the VPN Servers group:
 
     1. On the domain controller, open Active Directory Users and Computers.
-    
+
     1. Under your domain, right-click **Computers**. Select **New**, then select **Group**.
-    
+
     1. In **Group name**, enter **VPN Servers**, then select **OK**.
-    
+
     1. Right-click **VPN Servers** and select **Properties**.
-    
+
     1. On the **Members** tab of the VPN Servers Properties dialog box, select **Add**.
-    
+
     1. select **Object Types**, select the **Computers** check box, then select **OK**.
-    
+
     1. In **Enter the object names to select**, enter the computer name of the VPN server. Select **OK**.
-    
+
     1. Close Active Directory Users and Computers.
 
 1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
