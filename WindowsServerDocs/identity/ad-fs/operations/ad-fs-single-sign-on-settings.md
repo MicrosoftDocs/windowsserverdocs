@@ -145,16 +145,16 @@ To Summarize:
 
 | Single SignOn experience | ADFS 2012 R2 <br> Is device registered? | ADFS 2016 <br> Is device registered? |
 | ------------ | ------------- | ------------- |
-|  | No     No but KMSI     Yes | No     No but KMSI     Yes |
-| SSO=>set Refresh Token=> | 8 hrs     n/a     n/a | 8 hrs     n/a     n/a |
-| PSSO=>set Refresh Token=> | n/a     24 hrs     7 days | n/a     24 hrs     Max 90 days with 14-days window |
-| Token lifetime | 1 hr     1 hr     1 hr | 1 hr     1 hr     1 hr |
+|  | No    No but KMSI    Yes | No    No but KMSI    Yes |
+| SSO=>set Refresh Token=> | 8 hrs    n/a    n/a | 8 hrs    n/a    n/a |
+| PSSO=>set Refresh Token=> | n/a    24 hrs    7 days | n/a    24 hrs    Max 90 days with 14-days window |
+| Token lifetime | 1 hr    1 hr    1 hr | 1 hr    1 hr    1 hr |
 
-**Registered Device?** You get a PSSO / Persistent SSO
+**Registered Device?** You get a PSSO / Persistent SSO.
 
-**Not Registered Device?** You get a SSO
+**Not Registered Device?** You get a SSO.
 
-**Not Registered Device but KMSI?** You get a PSSO/ Persistent SSO
+**Not Registered Device but KMSI?** You get a PSSO/ Persistent SSO.
 
 IF:
  - [x] Admin has enabled the KMSI feature [AND]
