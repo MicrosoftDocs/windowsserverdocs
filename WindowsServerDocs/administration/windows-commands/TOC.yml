@@ -421,8 +421,6 @@
         href: convert-mbr.md
     - name: copy
       href: copy.md
-    - name: cprofile
-      href: cprofile.md
     - name: create
       href: create.md
       items:
