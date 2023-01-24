@@ -36,11 +36,11 @@ AD FS supports several types of Single Sign-On experiences:
 
      If a device is registered, AD FS will set the expiration time of a refresh token based on the persistent SSO cookie's lifetime for a registered device. Cookie lifetime is 7 days by default for AD FS 2012R2 and up to a maximum of 90 days with AD FS 2016 if the device is used to access AD FS resources within a 14-day window.
 
-If the device is not registered, the user can select the “Keep me signed in” option. The expiration time of the refresh token will equal the persistent SSO cookie's lifetime for "Keep me signed in". The persistent SSO cookie lifetime is 1 day by default with maximum of 7 days. Otherwise, refresh token lifetime equals session SSO cookie lifetime (8 hours by default).
+If the device is not registered but a user selects the “Keep me signed in” option, the expiration time of the refresh token will equal the persistent SSO cookie's lifetime for "Keep me signed in". The persistent SSO cookie lifetime is 1 day by default with maximum of 7 days. Otherwise, refresh token lifetime equals session SSO cookie lifetime (8 hours by default).
 
- As mentioned above, users on registered devices will always get a persistent SSO unless the persistent SSO is disabled. For un-registered devices, persistent SSO can be achieved by enabling the “keep me signed in” (KMSI) feature.
+Users on registered devices will always get a persistent SSO unless the persistent SSO is disabled. For unregistered devices, persistent SSO can be achieved by enabling the “keep me signed in” (KMSI) feature.
 
- For Windows Server 2012 R2, to enable PSSO for the “Keep me signed in” scenario, you need to install this [hotfix](https://support.microsoft.com/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
+For Windows Server 2012 R2, to enable PSSO for the “Keep me signed in” scenario, you need to install this [hotfix](https://support.microsoft.com/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
 
 Task | PowerShell | Description
 ------------ | ------------- | -------------
@@ -52,7 +52,7 @@ Enable/disable persistent SSO | ```` Set-AdfsProperties –EnablePersistentSso <
 AD FS 2016 changes the PSSO when requestor is authenticating from a registered device increasing to max 90 Days but requiring an authentication within a 14 days period (device usage window).
 After providing credentials for the first time, by default users with registered devices get single Sign-On for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days. After 15 days, users will be prompted for credentials again.
 
-Persistent SSO is enabled by default. If it is disabled, no PSSO cookie is created.|
+Persistent SSO is enabled by default. If it's disabled, no PSSO cookie is created.|
 
 ``` powershell
 Set-AdfsProperties –EnablePersistentSso <Boolean\>
@@ -91,7 +91,7 @@ Set-AdfsProperties –KmsiLifetimeMins <Int32\>
 
 ## Multi-factor authentication (MFA) behavior
 
-AD FS provides relatively long periods of single sign on. It is important to note AD FS prompts for additional authentication (multi-factor authentication) when a previous sign on is based on primary credentials (not MFA) but the current sign on requires MFA. This is regardless of SSO configuration. When AD FS receives an authentication request, it first determines whether or not there is an SSO context (such as a cookie) and whether MFA is required. For example, MFA is required when the authentication request is from outside. In such a case, AD FS assesses whether or not the SSO context contains MFA. If it does not, MFA is prompted.
+AD FS provides relatively long periods of single sign on. However, it's important to note AD FS will prompt for more authentication (multi factor authentication) when a previous sign on is based on primary credentials (not MFA) but the current sign on requires MFA. This is regardless of SSO configuration. When AD FS receives an authentication request, it first determines whether or not there is an SSO context (such as a cookie), and then whether MFA is required. For example, MFA is required when the authentication request is from outside. In such a case, AD FS assesses whether or not the SSO context contains MFA. If not, MFA is prompted.
 
 ## PSSO revocation
 
@@ -123,7 +123,9 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 
 ## Enable PSSO for Office 365 users to access SharePoint Online
 
-Once PSSO is enabled and configured in AD FS, AD FS will write a persistent cookie after a user has authenticated. The next time the user comes in and a persistent cookie is still valid, they don't need to provide credentials to authenticate again. You can also avoid the extra authentication prompt for Office 365 and SharePoint Online users by configuring the following two claims rules in AD FS to trigger persistence at Microsoft Azure AD and SharePoint Online.  To enable PSSO for Office 365 users to access SharePoint online, you need to install this [hotfix](https://support.microsoft.com/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
+After PSSO is enabled and configured AD FS creates a persistent cookie immediately after user authentication. This avoids the need to re-authenticate in subsequent sessions, as long as the cookie is still valid.
+
+Users can also avoid extra authentication prompts for Office 365 and SharePoint Online. Configure the following two claims rules in AD FS to trigger persistence at Microsoft Azure AD and SharePoint Online. To enable PSSO for Office 365 users to access SharePoint online, install this [hotfix](https://support.microsoft.com/kb/2958298/). It's part of the [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
 
  An Issuance Transform rule to pass through the InsideCorporateNetwork claim
 
@@ -140,57 +142,13 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
 ```
 
 To Summarize:
-<table>
-  <tr>
-    <th colspan="1">Single SignOn experience</th>
-    <th colspan="3">ADFS 2012 R2 <br> Is Device Registered?</th>
-        <th colspan="1"></th>
-    <th colspan="3">ADFS 2016 <br> Is Device Registered?</th>
-  </tr>
 
-  <tr align="center">
-    <th></th>
-    <th>NO</th>
-    <th>NO But KMSI</th>
-    <th>YES</th>
-    <th></th>
-    <th>NO</th>
-    <th>NO But KMSI</th>
-    <th>YES</th>
-  </tr>
- <tr align="center">
-    <td>SSO=&gt;set Refresh Token=&gt;</td>
-    <td>8 Hrs</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <th></th>
-    <td>8 Hrs</td>
-    <td>N/A</td>
-    <td>N/A</td>
-  </tr>
-
- <tr align="center">
-    <td>PSSO=&gt;set Refresh Token=&gt;</td>
-    <td>N/A</td>
-    <td>24 Hrs</td>
-    <td>7 Days</td>
-    <th></th>
-    <td>N/A</td>
-    <td>24 Hrs</td>
-    <td>Max 90 Days with 14 Days Window</td>
-  </tr>
-
- <tr align="center">
-    <td>Token Lifetime</td>
-    <td>1 Hrs</td>
-    <td>1 Hrs</td>
-    <td>1 Hrs</td>
-    <th></th>
-    <td>1 Hrs</td>
-    <td>1 Hrs</td>
-    <td>1 Hrs</td>
-  </tr>
-</table>
+| Single SignOn experience | ADFS 2012 R2 <br> Is device registered? | ADFS 2016 <br> Is device registered? |
+| ------------ | ------------- | ------------- |
+|  | No     No but KMSI     Yes | No     No but KMSI     Yes |
+| SSO=>set Refresh Token=> | 8 hrs     n/a     n/a | 8 hrs     n/a     n/a |
+| PSSO=>set Refresh Token=> | n/a     24 hrs     7 days | n/a     24 hrs     Max 90 days with 14-days window |
+| Token lifetime | 1 hr     1 hr     1 hr | 1 hr     1 hr     1 hr |
 
 **Registered Device?** You get a PSSO / Persistent SSO
 
@@ -209,4 +167,4 @@ AD FS issues a new refresh token only if the validity of the newer refresh token
 
 Federated users who don't have the **LastPasswordChangeTimestamp** attribute synced are issued session cookies and refresh tokens that have a **Max Age value of 12 hours**.
 
-Max Age value session cookies and refresh tokens are issued because Azure AD can't determine when to revoke tokens that are related to an old credential (such as a password that has been changed). Therefore, Azure AD must check more frequently to make sure that the user and associated tokens are still in good standing.
+Max Age value session cookies and refresh tokens are issued because Azure AD can't determine when to revoke tokens that are related to an old credential. This could be caused by a password that has been changed, for example. Azure AD must check more frequently to make sure that user and associated tokens are still valid.
