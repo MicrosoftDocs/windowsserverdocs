@@ -14,9 +14,9 @@ Applies to: Windows Server 2022, Windows Server 2019
 
 ## HCN_Network
 
-An HCN Network is an entity that is used to represent a host compute network and its associated system resources and policies. A HCN network typically can include:
+An HCN Network is an entity that is used to represent a host compute network and its associated system resources and policies. An HCN network typically can include:
 
-- A set of metadata (id, name, type)
+- A set of metadata (ID, name, type)
 - A virtual switch
 - A host virtual network adapter (acting as a default gateway for the network)
 - A NAT instance (if required by the network type)
@@ -151,9 +151,9 @@ HcnCloseNetwork(
 
 ## HCN_Endpoint
 
-A HCN Endpoint is an entity that is used to represent an IP endpoint on an HCN network and its associated system resources and policies. An HCN endpoint typically consists of: 
+An HCN Endpoint is an entity that is used to represent an IP endpoint on an HCN network and its associated system resources and policies. An HCN endpoint typically consists of: 
 
-- A set of metadata (id, name, parent network id)
+- A set of metadata (ID, name, parent network ID)
 - Its network identity (IP address, MAC address)
 - Any endpoint specific policies to be applied (ACLs, routes)
 
@@ -287,7 +287,7 @@ HcnCloseEndpoint(
 
 ## HCN_Namespace
 
-A HCN namespace is an entity that is used to represent a host compute network namespace. Namespaces allow you to have isolated network environments on a single host, where each namespace has its own network interfaces and routing table, separated from other namespaces.
+An HCN namespace is an entity that is used to represent a host compute network namespace. Namespaces allow you to have isolated network environments on a single host, where each namespace has its own network interfaces and routing table, separated from other namespaces.
 
 HCN Namespace entities are represented using HCN_NAMESPACE RPC context handles.
 
@@ -417,7 +417,7 @@ HcnCloseNamespace(
 
 ## HCN_LoadBalancer
 
-A HCN load balancer is an entity that is used to represent a host compute network load balancer. Load balancers allow you to have load balanced host compute network endpoints.
+An HCN load balancer is an entity that is used to represent a host compute network load balancer. Load balancers allow you to have load balanced host compute network endpoints.
 HCN LoadBalancer entities are represented using HCN_LOADBALANCER RPC context handles.
 
 ```
