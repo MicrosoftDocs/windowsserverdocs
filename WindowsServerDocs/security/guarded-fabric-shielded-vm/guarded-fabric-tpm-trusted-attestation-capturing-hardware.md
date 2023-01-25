@@ -6,7 +6,7 @@ ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: IngridAtMicrosoft
 ms.author: inhenkel
-ms.date: 04/01/2019
+ms.date: 1/24/2023
 ---
 
 # Authorize guarded hosts using TPM-based attestation
@@ -136,10 +136,6 @@ For more information about the available CI policy rule levels, see [Deploy code
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
     ```
     
-    > [!NOTE]
-    > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS. The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
-
-
     > [!NOTE]
     > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS. The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
 
