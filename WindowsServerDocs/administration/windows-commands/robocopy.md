@@ -94,7 +94,7 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | Option | Description |
 |--|--|
 | /iomaxsize:`<n>`[kmg] | The requested max i/o size per read/write cycle in *n* **k**ilobytes, **m**egabytes, or **g**igabytes. |
-| /iorate:`<n>`[kmg] | The requested i/o rate, in *n* **k**ilobytes **m**egabytes, or **g**igabytes per second. |
+| /iorate:`<n>`[kmg] | The requested i/o rate in *n* **k**ilobytes **m**egabytes, or **g**igabytes per second. |
 | /threshold:`<n>`[kmg] | The file size threshold for throttling in *n* **k**ilobytes, **m**egabytes, or **g**igabytes (see [Remarks](#remarks)). |
 
 #### File selection options
