@@ -201,5 +201,6 @@ WSUS does not automatically decline superseded updates, and it is recommended th
 -   If a superseding update has more restricted applicability than the update it supersedes, which would make it inappropriate for some client computers.
 
 -   If an update no longer supersedes a previously released update because of new changes. It is possible that through changes at each release, an update no longer supersedes an update it previously superseded in an earlier version. In this scenario, you will still see a message about the superseded update, even though the update that supersedes it has been replaced by an update that does not.
+-   Keep quality and feature updates in sync.  This means that if a feature update is oen month old, then the quality update should be as well.  If the feature update is two months old, and the quality update is at one month then ACR, language pack, and Feature on Demand acquisition will not work.  
 
 
