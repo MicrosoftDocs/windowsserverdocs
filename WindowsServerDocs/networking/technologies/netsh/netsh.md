@@ -9,7 +9,7 @@ author: JasonGerend
 ms.date: 01/25/2023
 ---
 
-# Network shell \(Netsh\)
+# Network shell \(netsh\)
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
@@ -24,8 +24,8 @@ In addition, there are netsh commands for network technologies, such as for IPv6
 >[!IMPORTANT]
 >It is recommended that you use Windows PowerShell to manage networking technologies in [Windows Server and Windows 10](/powershell/windows/get-started) rather than Network Shell. Network Shell is included for compatibility with your scripts and its use is supported.
 
-## Network Shell (Netsh) Technical Reference
+## Netsh technical reference
 
-The [Netsh Command Reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754516(v=ws.10)) provides a comprehensive list of netsh commands, including syntax, parameters, and examples. You can use this reference to build scripts and batch files by using netsh commands for local or remote management of network technologies and devices.
+The [netsh command reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754516(v=ws.10)) provides a comprehensive list of netsh commands, including syntax, parameters, and examples. You can use this reference to build scripts and batch files by using netsh commands for local or remote management of network technologies and devices.
 
 ---
