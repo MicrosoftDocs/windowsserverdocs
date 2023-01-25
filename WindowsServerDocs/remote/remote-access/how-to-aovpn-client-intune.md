@@ -15,11 +15,10 @@ In this how-to article, we'll show you how to use InTune to deploy Always On VPN
 
 InTune uses Azure Active Directory (AD) user groups, so you'll need to:
 
+<!-- Editorial note: Not sure if we need certificates -->
 - Create an Azure AD user group that's associated with a VPN user authentication certificate, and you'll need to assign users to that group. For guidance on how to setup a VPN Users group, as well as a user certificate for VPN access, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
 
 - Make sure that Azure AD Connect has synced to the VPN Users group from on-premises to Azure AD.
-
-- Create the VPN device configuration policy to configure the Windows 10 client computers for all users added to the group. If you don't have one, you can create one using the steps provided in [](tutorial-aovpn-deploy-configure-client.md). Since the Intune template provides VPN parameters, only copy the \<EapHostConfig> \</EapHostConfig> portion of the VPN_ProfileXML file.
 
 ### Create the Always On VPN configuration policy
 

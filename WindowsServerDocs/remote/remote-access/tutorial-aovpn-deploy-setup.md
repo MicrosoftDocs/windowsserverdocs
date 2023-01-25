@@ -8,7 +8,7 @@ author: anaharris-ms
 ms.date: 01/06/2022
 ---
 
-# Tutorial: Setup infrastructure for Always On VPN 
+# Tutorial: Setup infrastructure for Always On VPN
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 

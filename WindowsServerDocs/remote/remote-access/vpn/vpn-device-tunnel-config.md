@@ -1,15 +1,15 @@
 ---
-title: Configure the VPN device tunnel in Windows 10
-description: Learn how to create a VPN device tunnel in Windows 10.
-ms.date: 11/05/2018
+title: Configure the VPN device tunnel in Windows client
+description: Learn how to create a VPN device tunnel in Windows client.
+ms.date: 01/25/2023
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: wscontent
-author: Teresa-MOTIV
+author: anaharris-ms
 ---
-# Configure VPN device tunnels in Windows 10
+# Configure VPN device tunnels in Windows client
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10 version 1709
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 11
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels:
 

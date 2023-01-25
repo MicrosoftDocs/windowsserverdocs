@@ -11,7 +11,7 @@ author: anaharris-ms
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10+
 
-In this last part of the tutorial, you'll learn how to use a ProfileXML PowerShell configuration script to configure Always On VPN settings on the client you created in [Create VPN Windows 10+ Client](tutorial-aovpn-deploy-setup.md#create-vpn-windows-10-client).
+In this last part of the tutorial, you'll learn how to use a ProfileXML PowerShell configuration script to configure Always On VPN settings and create a user tunnel for client connections.
 
 For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).
 
@@ -125,6 +125,8 @@ TrustedNetworkDetection : corp.contoso.com
 PSComputerName          : 
 `
 ```
+
+You have now configured your user tunnel for Always On VPN. If you want to learn how to configure a device tunnel, see [Configure VPN device tunnels in Windows client](vpn/vpn-device-tunnel-config.md).
 
 ## Next steps
 
