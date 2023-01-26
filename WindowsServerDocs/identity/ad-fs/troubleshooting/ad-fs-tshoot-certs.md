@@ -13,7 +13,7 @@ AD FS requires specific certificates in order to work correctly. Issues can occu
 
 ## Required certificates
 
-Each of the required AD FS certificate's have their own requirements:
+Each of the required AD FS certificates have their own requirements:
 
 - **Federation trust** – Federation trust requires one of the following: 1. A certificate chained to a mutually trusted Internet root Certificate Authority (CA) is present in the trusted root store of both the claims provider and relying party Federation Servers; 2. A cross-certification design has been implemented in which each side has exchanged its root CA with its partner. 3. Self-signed certificates that have been imported on each side where appropriate.
 - **Token-signing** – Each Federation Service computer requires a token-signing certificate. The claims provider token-signing certificate must be trusted by the relying party Federation Server. The relying party token-signing certificate must be trusted by all applications that receive tokens from the RP Federation Server.
