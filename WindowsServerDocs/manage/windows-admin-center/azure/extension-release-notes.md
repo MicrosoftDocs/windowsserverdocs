@@ -23,8 +23,7 @@ This page is updated monthly, so revisit it regularly.
 ## Version 0.0.0.228 - January 2023
 
 ### New features
-
-- Updated the build of Windows Admin Center to the v2211. A few highlights are listed. For a full summary, visit [our blog post](https://aka.ms/wac2211).
+- Updated the build of Windows Admin Center to v2211. A few highlights are listed. For a full summary, visit [our blog post](https://aka.ms/wac2211).
     - Support for WDAC-enforced infrastructure
     - Support for 400% zoom
     - Search settings with smart keywords
