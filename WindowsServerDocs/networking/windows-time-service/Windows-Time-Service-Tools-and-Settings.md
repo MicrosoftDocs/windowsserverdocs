@@ -381,12 +381,18 @@ These are the Windows NTP client settings and default values for the Windows Tim
 |Group Policy setting|Default value|
 |------------------------|-----------------|
 |NtpServer|`time.windows.com`, 0x1|
-|Type|**NTP** - Use for non-domain-joined computers<br>**NT5DS** - Use for domain-joined computers|
+|Type|**NT5DS** - Used for domain-joined computers<br>**NTP** - Used for non-domain-joined computers|
 |CrossSiteSyncFlags|2|
 |ResolvePeerBackoffMinutes|15|
 |ResolvePeerBackoffMaxTimes|7|
 |SpecialPollInterval|3,600|
 |EventLogFlags|0|
+
+> [!NOTE]
+> If you use Group Policy to set the **NtpServer** value as part of the **Configure Windows NTP
+> Client** policy and apply it to a domain member, the Windows Time Service will not use the
+> **NtpServer** Registry value. To view your NTP configuration, open a Command Prompt and run
+> `w32tm /query /configuration`.
 
 ## Related information
 

@@ -9,14 +9,14 @@ ms.date: 11/9/2021
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
->Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows 10, Windows 11, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows Server 2022, Azure Stack HCI
 
 > [!NOTE]
-> If you plan to ever upload Windows virtual machines (VMs) from on-premises to Microsoft Azure, generation 1 and generation 2 VMs in the VHD file format and have a fixed sized disk are supported. See [Generation 2 VMs on Azure](/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+> If you plan to ever upload Windows virtual machines (VMs) from on-premises to Microsoft Azure, both generation 1 and generation 2 VMs are supported as long as they use the VHD file format and have a fixed (not dynamically expanding) sized disk. See [Generation 2 VMs on Azure](/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:
 
-- The VHD you want to boot from is not [UEFI-compatible](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
+- You're using an existing, pre-built virtual disk (VHD or VHDX) which is not [compatible with UEFI](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
 - Generation 2 doesn't support the operating system you want to run on the virtual machine.
 - Generation 2 doesn't support the boot method you want to use.
 
@@ -167,8 +167,8 @@ The following table shows which boot methods are supported by generation 1 and g
 |PXE boot by using a standard network adapter| &#10006;|&#10004;|
 |PXE boot by using a legacy network adapter|&#10004;| &#10006;|
 |Boot from a SCSI virtual hard disk (.VHDX) or virtual DVD (.ISO)| &#10006;|&#10004;|
-|Boot from IDE Controller virtual hard disk (.VHD) or virtual DVD (.ISO)|&#10004;| &#10006;|
-|Boot from floppy (.VFD)|&#10004;| &#10006;|
+|Boot from IDE Controller virtual hard disk (.VHD), virtual DVD (.ISO) or a physical CD/DVD drive|&#10004;| &#10006;|
+|Boot from virtual floppy (.VFD)|&#10004;| &#10006;|
 
 ## What are the advantages of using generation 2 virtual machines?
 
@@ -212,8 +212,8 @@ Here are some additional tips about using generation 2 virtual machines.
 
 ### Attach or add a DVD drive
 
-- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the *Oscdimg* command line tool. For more information, see [Oscdimg Command-Line Options](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824847(v=win.10)).
-- When you create a new virtual machine with the New-VM Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
+- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the *OScdimg* command line tool. For more information, see [Oscdimg Command-Line Options](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824847(v=win.10)).
+- When you create a new virtual machine with the `New-VM` Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
 
 ### Use UEFI firmware
 
@@ -224,16 +224,16 @@ Here are some additional tips about using generation 2 virtual machines.
 ### Work with VHDX files
 
 - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
-- We don't support or recommend that you create a VHDX file that is bootable to both generation 1 and generation 2 virtual machines.
+- We don't support or recommend that you create a single virtual disk (VHD or VHDX file) that is bootable to both generation 1 and generation 2 virtual machines.
 - The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.
 - A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
 
 ### Use IPv6 instead of IPv4
 
-By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:
+When booting from network with PXE, generation 2 virtual machines use IPv4 by default. To use IPv6 instead, run the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:
 
 ```powershell
-Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6
+Set-VMFirmware -VMName 'TestVM' -IPProtocolPreference IPv6
 ```
 
 ## Add a COM port for kernel debugging
@@ -245,13 +245,13 @@ To add a COM port:
 1. Disable Secure Boot. Kernel debugging isn't compatible with Secure Boot. Make sure the virtual machine is in an Off state, then use the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet. For example, the following command disables Secure Boot on virtual machine TestVM:
 
     ```powershell
-    Set-VMFirmware -Vmname TestVM -EnableSecureBoot Off
+    Set-VMFirmware -VMName 'TestVM' -EnableSecureBoot Off
     ```
 
 2. Add a COM port. Use the [Set-VMComPort](/powershell/module/hyper-v/set-vmcomport) cmdlet to do this. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:
 
     ```powershell
-    Set-VMComPort -VMName TestVM 1 \\.\pipe\TestPipe
+    Set-VMComPort -VMName 'TestVM' -Number 1 -Path '\\.\pipe\TestPipe'
     ```
 
 > [!NOTE]

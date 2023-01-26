@@ -421,8 +421,6 @@
         href: convert-mbr.md
     - name: copy
       href: copy.md
-    - name: cprofile
-      href: cprofile.md
     - name: create
       href: create.md
       items:
@@ -1639,8 +1637,6 @@
       href: winnt.md
     - name: winnt32
       href: winnt32.md
-    - name: winpop
-      href: winpop.md
     - name: winrs
       href: winrs.md
     - name: winsat mem

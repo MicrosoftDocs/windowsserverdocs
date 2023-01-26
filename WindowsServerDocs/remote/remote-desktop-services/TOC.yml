@@ -38,12 +38,12 @@
     - name: Choose how you pay
       href: rds-plan-choose-how-you-pay.md
     - name: Office 2016 in RDS and VDI deployments
-      href: /deployoffice/rds-office-vdi-rdsh
+      href: /deployoffice/rds-office-vdi-rdsh?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
       items:
-      - name: Dealing with Outlook search in non-persistent environments
-        href: /deployoffice/rds-outlook-search
+      - name: Outlook search in non-persistent environments
+        href: /deployoffice/rds-outlook-search?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
       - name: OneDrive for Business and VDI environments
-        href: /deployoffice/rds-onedrive-business-vdi
+        href: /sharepoint/sync-vdi-support?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
     - name: Desktop Hosting Reference Architecture
       href: Desktop-Hosting-Reference-Architecture.md
       items:
@@ -146,18 +146,6 @@
     items:
     - name: Available Remote Desktop clients
       href: clients/remote-desktop-clients.md
-    - name: Windows Desktop client
-      items:
-      - name: Get started with the Windows Desktop client
-        href: clients/windowsdesktop.md
-      - name: Windows Desktop client for admins
-        href: clients/windowsdesktop-admin.md
-      - name: What's new in the Windows Desktop client
-        href: clients/windowsdesktop-whatsnew.md
-      - name: Supported configurations
-        href: clients/windowsdesktop-supported-config.md
-      - name: Shortcut keys
-        href: /windows/win32/termserv/terminal-services-shortcut-keys
     - name: Microsoft Store client
       items:
       - name: Get started with the Microsoft Store client
@@ -206,7 +194,7 @@
         href: clients/remote-desktop-features.md
       - name: 'Compare the clients: redirections'
         href: clients/remote-desktop-app-compare.md
-      - name: Supported Remote Desktop RDP file settings
+      - name: Supported RDP properties
         href: clients/rdp-files.md
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
@@ -238,5 +226,4 @@
         href: troubleshoot/input-method-editor-error.md
       - name: '"Out of memory" error'
         href: troubleshoot/out-of-memory-error.md
-  - name: Additional resources
-    href: rds-get-support.md
+
