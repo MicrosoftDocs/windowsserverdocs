@@ -9,11 +9,11 @@ ms.date: 01/06/2023
 
 # AD FS Troubleshooting - Certificates
 
-AD FS requires specific certificates in order to work correctly. Issues can occur if any of these certificates haven't been setup or configured properly.
+AD FS requires specific certificates in order to work correctly. Issues can occur if any of these certificates haven't been set up or configured properly.
 
 ## Required certificates
 
-Each of the required AD FS certificates have their own requirements:
+Each of the required AD FS certificate's have their own requirements:
 
 - **Federation trust** – Federation trust requires one of the following: 1. A certificate chained to a mutually trusted Internet root Certificate Authority (CA) is present in the trusted root store of both the claims provider and relying party Federation Servers; 2. A cross-certification design has been implemented in which each side has exchanged its root CA with its partner. 3. Self-signed certificates that have been imported on each side where appropriate.
 - **Token-signing** – Each Federation Service computer requires a token-signing certificate. The claims provider token-signing certificate must be trusted by the relying party Federation Server. The relying party token-signing certificate must be trusted by all applications that receive tokens from the RP Federation Server.
@@ -52,7 +52,7 @@ The following table is a list of common certificate errors and possible causes.
 |Event 381 - An error occurred during an attempt to build the certificate chain for configuration certificate.|One of the certificates configured for use on the AD FS server is expired or has been revoked.|Ensure that all configured certificates haven't been revoked and haven't expired.|
 |Event 385 - AD FS detected that one or more certificates in the AD FS configuration database needs to be updated manually.|One of the certificates configured for use on the AD FS server has expired or is nearing its expiration date.|Update the expired or soon-to-expire certificate with a replacement. (If you're using self-signed certificates and automatic certificate rollover is enabled, this error can be ignored because it will self-resolve.)|
 |Event 387 - AD FS detected that one or more of the certificates that are specified in the Federation Service weren't accessible to the service account that is used by the AD FS Windows Service.|The AD FS service account doesn't have read permissions to the private key of one or more configured certificates.|Ensure that the AD FS service account has read permission to the private key of all configured certificates.|
-|Event 389 - AD FS detected that one or more of your trusts require their certificates to be updated manually because they're expired, or will expire soon.|One of your configured partner's certificates has expired, or is about to expire. This can apply to either a claims provider trust or to a relying party trust.|If you've manually created this trust, update the certificate configuration manually. If you used federation metadata to create the trust, the certificate will update automatically as soon as the partner updates the certificate.|
+|Event 389 - AD FS detected that one or more of your trusts require their certificates to be updated manually because they're expired, or will expire soon.|One of your configured partner's certificates has expired, or is about to expire. The event can apply to either a claims provider trust or to a relying party trust.|If you've manually created this trust, update the certificate configuration manually. If you used federation metadata to create the trust, the certificate will update automatically as soon as the partner updates the certificate.|
 
 ## Related links
 
