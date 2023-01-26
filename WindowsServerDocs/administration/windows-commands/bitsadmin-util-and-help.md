@@ -11,7 +11,7 @@ ms.date: 01/06/2023
 
 Applies to: Windows Server (All supported versions)
 
-The bitsadmin util and help command displays the command-line usage for the **/util** switches.
+Display help for the `bitsadmin util` command switch when combined with the **help** switch.
 
 ## Syntax
 
@@ -21,9 +21,9 @@ bitsadmin /util /help
 
 ## Examples
 
-To display the command-line help for the **/util** switches:
+Display the command-line help for the **/util** switches by running the following command.
 
-```
+```CLI
 bitsadmin /util /help
 ```
 
