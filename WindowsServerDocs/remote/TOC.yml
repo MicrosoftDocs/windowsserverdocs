@@ -236,7 +236,7 @@
         href: remote-access/getting-started-install-ras-as-vpn.md 
     - name: Tutorials
       items:
-      - name: Always on VPN
+      - name: Deploy Always on VPN
         items:
         - name: 1- Setup infrastructure for Always On VPN 
           href: remote-access/tutorial-aovpn-deploy-setup.md        

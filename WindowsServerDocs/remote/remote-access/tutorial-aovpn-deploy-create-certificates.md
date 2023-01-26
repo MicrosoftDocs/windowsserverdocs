@@ -10,6 +10,9 @@ ms.date: 01/06/2022
 
 # Tutorial: Deploy Always On VPN - Configure Certificate Authority templates
 
+- [**Previous:** 1 - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md)
+- [**Next:** 3 - Configure Always On VPN profile for Windows 10+ clients](tutorial-aovpn-deploy-configure-client.md)
+
 In this part of the Deploy Always On VPN tutorial, you'll create certificate templates and enroll or validate certificates for the Active Directory (AD) groups that you created in [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md):
 
 You'll create the following templates:

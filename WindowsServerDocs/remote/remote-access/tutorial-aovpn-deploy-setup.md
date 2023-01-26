@@ -8,7 +8,9 @@ author: anaharris-ms
 ms.date: 01/06/2022
 ---
 
-# Tutorial: Setup infrastructure for Always On VPN
+# Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN
+
+- [**Next:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 

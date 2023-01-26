@@ -7,7 +7,10 @@ ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 ms.author: anaharris
 author: anaharris-ms
 ---
-# Tutorial: Deploy Always On VPN profile for Windows 10+ clients
+# Tutorial: Deploy Always On VPN - Configure Always On VPN profile for Windows 10+ clients
+
+- [**Previous:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
+
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10+
 
