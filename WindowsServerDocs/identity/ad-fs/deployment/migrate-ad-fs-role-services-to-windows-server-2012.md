@@ -4,7 +4,7 @@ description: Provides instructions for migrating the AD FS service to Windows Se
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/28/2017
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

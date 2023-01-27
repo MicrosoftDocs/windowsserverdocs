@@ -4,7 +4,7 @@ description: This scenario describes how to build a custom authentication method
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 07/13/2022
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

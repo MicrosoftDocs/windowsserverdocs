@@ -5,7 +5,7 @@ title: Verify your Windows Server 2012 R2 Federation Server is Operational
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/27/2023
 ms.topic: article
 ---
 
