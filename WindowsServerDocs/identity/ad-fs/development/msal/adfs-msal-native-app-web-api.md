@@ -4,7 +4,7 @@ description: earn how to build a native app signing-in users authenticated by AD
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/09/2019
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

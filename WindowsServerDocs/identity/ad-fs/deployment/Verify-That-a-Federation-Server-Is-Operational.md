@@ -4,7 +4,7 @@ ms.assetid: ad61c586-ba8a-4534-8824-b45994d60c6b
 title: Verify That a Federation Server Is Operational
 author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/27/2023
 ms.topic: article
 ms.author: billmath
 ---
@@ -22,7 +22,7 @@ Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators
 
 2.  Open a browser window, in the address bar type the federation server's DNS host name, and then append /adfs/fs/federationserverservice.asmx to it for the new federation server, for example:
 
-    **https://fs1.fabrikam.com/adfs/fs/federationserverservice.asmx**
+    `https://fs1.fabrikam.com/adfs/fs/federationserverservice.asmx`
 
 3.  Press ENTER, and then complete the next procedure on the federation server computer. If you see the message **There is a problem with this website's security certificate**, click **Continue to this website**.
 

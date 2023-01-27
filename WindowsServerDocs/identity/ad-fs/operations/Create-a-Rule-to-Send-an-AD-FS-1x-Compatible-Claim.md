@@ -25,7 +25,7 @@ In situations in which you are using Active Directory Federation Services \(AD�
 
     -   Group
 
-    -   Any other claim type that begins with https://schemas.xmlsoap.org/claims/, such as https://schemas.xmlsoap.org/claims/EmployeeID
+    -   Any other claim type that begins with `https://schemas.xmlsoap.org/claims/`, such as `https://schemas.xmlsoap.org/claims/EmployeeID`
 
 Depending on the needs of your organization, use one of the following procedures to create an AD FS 1.*x* compatible NameID claim:
 

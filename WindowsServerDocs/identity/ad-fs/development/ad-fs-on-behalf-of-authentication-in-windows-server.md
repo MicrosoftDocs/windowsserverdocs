@@ -5,7 +5,7 @@ description: "Learn more about: Build a multi-tiered application using On-Behalf
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 02/22/2018
+ms.date: 01/27/2023
 ms.topic: article
 ---
 
@@ -18,7 +18,7 @@ This walkthrough provides instruction for implementing an on-behalf-of (OBO) aut
 
 ## Overview
 
-In this sample we will be creating an authentication flow where a client will be accessing a middle-tier Web Service and the web service will then act on behalf of the authenticated client to get an access token.
+In this sample we'll be creating an authentication flow where a client will be accessing a middle-tier Web Service and the web service will then act on behalf of the authenticated client to get an access token.
 
 ![AD FS on-behalf-of diagram](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO28.png)
 
@@ -49,7 +49,7 @@ This walk-through uses Visual Studio 2015. The project heavily uses Active Direc
 The sample also uses SQL LocalDB v11.0. Install the SQL LocalDB prior to working on the sample.
 
 ## Setting up the environment
-We will be working with a basic setup of:
+We'll be working with a basic setup of:
 
 1. **DC**: Domain controller for the domain in which AD FS will be hosted
 2. **AD FS Server**: The AD FS Server for the domain
@@ -74,12 +74,12 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapi-onbeha
 
 ## Modifying the sample
 
-As soon as you open the solution WebAPI-OnBehalfOf-DotNet.sln, you will notice that you have two projects in the solution
+As soon as you open the solution WebAPI-OnBehalfOf-DotNet.sln, you'll notice that you have two projects in the solution
 
 * **ToDoListClient**: This will serve as the OpenID client which the user will be interacting with
 * **ToDoListService**: This will be the middle-tier WebServer APP / Service that will be interacting with another backend WebAPI OBO the authenticated user
 
-As you can see, we will need to add another project later which will act as the resource that will be accessed by the middle-tier ToDoListService.
+As you can see, we'll need to add another project later which will act as the resource that will be accessed by the middle-tier ToDoListService.
 
 ### Configuring AD FS for the Client and WebServer App
 
@@ -91,23 +91,23 @@ Open the AD FS management MMC and add a new application group. Select Native-App
 
 ![Screenshot of the Welcome page of the Add Application Group WIzard showing the Native-Application-WebAPI highlighted.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO2.PNG)
 
-Click on Next and you will be presented with the page for providing information about Client App. Give an appropriate name to the client App in AD FS. Copy the client Identifier and save it somewhere you can access later as this will be required in the application config in visual studio.
+Click on Next and you'll be presented with the page for providing information about Client App. Give an appropriate name to the client App in AD FS. Copy the client Identifier and save it somewhere you can access later as this will be required in the application config in visual studio.
 
 >Note: The Redirect URI can be any arbitrary URI as it is really not used in case of native clients
 
 ![Screenshot of the Native application page of the Add Application Group Wizard.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO11.PNG)
 
-Click on Next and you will be presented with the page for providing information about WebAPI. Give a suitable name for the AD FS entry for the WebAPI and enter the redirect URI as the URI you see in Visual Studio for the ToDoListService
+Click on Next and you'll be presented with the page for providing information about WebAPI. Give a suitable name for the AD FS entry for the WebAPI and enter the redirect URI as the URI you see in Visual Studio for the ToDoListService
 
 ![Screenshot of the Todo List Service Project Properties showing the redirect U R I.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO16.PNG)
 
 ![Screenshot of the Configure Web API page of the Add Application Group Wizard showing the redirect URI populated in the text field.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO18.PNG)
 
-Click on Next and you will see the Choose Access Control Policy Page. Ensure you see "Permit everyone" in the Policy section.
+Click on Next and you'll see the Choose Access Control Policy Page. Ensure you see "Permit everyone" in the Policy section.
 
 ![Screenshot of the Choose Access Control Policy page of the Add Application Group Wizard.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO1.PNG)
 
-Click on Next and you will be presented with the configure Application Permissions page. On this page, select the permitted scopes as openid (selected by default) and user_impersonation. The scope 'user_impersonation' is necessary to be successfully able to request an on-behalf-of access token from AD FS.
+Click on Next and you'll be presented with the configure Application Permissions page. On this page, select the permitted scopes as openid (selected by default) and user_impersonation. The scope 'user_impersonation' is necessary to be successfully able to request an on-behalf-of access token from AD FS.
 
 ![Screenshot of the Configure Application Permissions page of the Add Application Group Wizard.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO12.PNG)
 
@@ -136,11 +136,11 @@ You will be presented with the "Add a new application to MySampleGroup" page. On
 
 ![Screenshot of the Welcome page of the Add a new application to MySampleGroup wizard with the Server Application or Website option highlighted.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO19.PNG)
 
-Click Next and you will be presented with the page to provide application details. Provide a suitable name for the configuration entry in the Name section. Ensure that the Client Identifier is same as the identifier for the ToDoListServiceWebAPI
+Click Next and you'll be presented with the page to provide application details. Provide a suitable name for the configuration entry in the Name section. Ensure that the Client Identifier is same as the identifier for the ToDoListServiceWebAPI
 
 ![Screenshot of the Server application page of the Add a new application to MySampleGroup wizard showing the correct Client Identifier.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO20.PNG)
 
-Click on Next and you will be presented with the page to configure the application credentials. Click on "Generate a shared secret". You will be presented with a secret that is automatically generated. Copy the secret at some location as this will be required while we configure the ToDoListService in visual studio.
+Click on Next and you'll be presented with the page to configure the application credentials. Click on "Generate a shared secret". You will be presented with a secret that is automatically generated. Copy the secret at some location as this will be required while we configure the ToDoListService in visual studio.
 
 ![Screenshot of the Configure Application Credentials page of the Add a new application to MySampleGroup wizard showing the Generate a shared secret option selected.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO17.PNG)
 
@@ -214,8 +214,8 @@ In order to complete the on-behalf-of flow, you need to create a backend resourc
 ![Screenshot of the Add New Project dialog box with the A S P dot NET option highlighted.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO4.PNG)
 
 * On the next prompt click on 'Change Authentication'
-* Select 'Work and School Accounts' and on the right drop down list select 'On-Premises'
-* Enter the federationmetadata.xml path for your AD FS deployment and provide an App URI (provide any URI for now, and you will change it later) and click Ok to add the project to the solution.
+* Select 'Work and School Accounts' and on the right drop down list select 'on-premises'
+* Enter the federationmetadata.xml path for your AD FS deployment and provide an App URI (provide any URI for now, and you'll change it later) and click Ok to add the project to the solution.
 
 ![Screenshot of the Change Authentication dialog box with the APP I D U R I value highlighted.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO9.PNG)
 
@@ -250,7 +250,7 @@ In order to complete the on-behalf-of flow, you need to create a backend resourc
         }
     ```
 
-This code will simply return the string when anyone puts a Get request for the WebAPI WebAPIOBO
+This code will return the string when anyone puts a Get request for the WebAPI WebAPIOBO
 
 ### Adding the new backend WebAPI to AD FS
 
@@ -277,12 +277,12 @@ Continue through the rest of the wizard same as when we configured the ToDoListS
 
 | Key | Value |
 |:-|:-|
-| ida:Audience | ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, https://localhost:44321/ |
-| ida:ClientID | ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, <https://localhost:44321/> </br>**It is very important that the ida:Audience and ida:ClientID match each other** |
+| ida:Audience | ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, `https://localhost:44321/` |
+| ida:ClientID | ID of the ToDoListService as given to AD FS while configuring the ToDoListService WebAPI, for example, `https://localhost:44321` </br>**It is very important that the ida:Audience and ida:ClientID match each other** |
 | ida:ClientSecret | This is the secret that AD FS generated when you were configuring the ToDoListService client in AD FS |
-| ida:AdfsMetadataEndpoint | This is the URL to your AD FS metadata, for e.g. https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml |
-| ida:OBOWebAPIBase | This is the base address that we will use to call the backend API, for e.g. https://localhost:44300 |
-| ida:Authority | This is the URL for your AD FS service, example https://fs.anandmsft.com/adfs/ |
+| ida:AdfsMetadataEndpoint | This is the URL to your AD FS metadata, for e.g. `https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml` |
+| ida:OBOWebAPIBase | This is the base address that we'll use to call the backend API, for e.g. `https://localhost:44300` |
+| ida:Authority | This is the URL for your AD FS service, example `https://fs.anandmsft.com/adfs/` |
 
 All other ida:XXXXXXX keys in the **appsettings** node can be commented out or deleted
 
@@ -359,7 +359,7 @@ private static string OBOWebAPIBase = ConfigurationManager.AppSettings["ida:OBOW
 
 **Modify the claim used for Name**
 
-From AD FS we are issuing the Name claim but we are not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurrences of NameIdentifier with Name.
+From AD FS we're issuing the Name claim but we're not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurrences of NameIdentifier with Name.
 
 **Modify Post routine and CallGraphAPIOnBehalfOfUser()**
 
@@ -406,7 +406,7 @@ public async Task Post(TodoItem todo)
         string custommessage = "";
 
 //
-// Use ADAL to get a token On Behalf Of the current user.  To do this we will need:
+// Use ADAL to get a token On Behalf Of the current user.  To do this we'll need:
 // The Resource ID of the service we want to call.
 // The current user's access token, from the current request's authorization header.
 // The credentials of this application.
@@ -495,11 +495,11 @@ Click on the sign-in button. You will be prompted to sign-in using AD FS
 
 ![Screenshot of the Sign In page.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO25.PNG)
 
-After you sign-in, add a ToDo item in the list. Behind the scenes we are going to do a Post operation to the ToDoListService which further will do a Post to the WebAPIOBO web API.
+After you sign-in, add a ToDo item in the list. Behind the scenes we're going to do a Post operation to the ToDoListService which further will do a Post to the WebAPIOBO web API.
 
 ![Screenshot of the To Do List Client dialog box with the Create a To Do item text field populated.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO26.PNG)
 
-On successful operation you will see that the item has been added to the list with the additional message from the backend Web API which was accessed using OBO flow.
+On successful operation you'll see that the item has been added to the list with the additional message from the backend Web API which was accessed using OBO flow.
 
 ![Screenshot of the To Do List Client dialog box with the new to do item populating the To Do Items section.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
@@ -507,7 +507,7 @@ You can also see the detailed traces on Fiddler. Launch Fiddler and enable HTTPS
 In the first interaction, we present the access code to the token endpoint and get an access token for https://localhost:44321/
 ![Screenshot of the WebForms tab and the Raw tab in the Fiddler U I showing the presented access code.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
 
-In the second interaction with the token endpoint, you can see that we have **requested_token_use** set as **on_behalf_of** and we are using the access token obtained for the middle-tier web service, i.e. https://localhost:44321/ as the assertion to obtain the on-behalf-of token.
+In the second interaction with the token endpoint, you can see that we have **requested_token_use** set as **on_behalf_of** and we're using the access token obtained for the middle-tier web service, i.e. https://localhost:44321/ as the assertion to obtain the on-behalf-of token.
 ![Screenshot of the WebForms tab and the Raw tab in the Fiddler U I showing the requested token use option set to on behalf of.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
 
 ## Next Steps

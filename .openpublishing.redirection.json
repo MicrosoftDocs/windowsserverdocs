@@ -10816,6 +10816,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/windows-commands/inuse.md",
+      "redirect_url": "/previous-versions/orphan-topics/ws.10/dd996699(v=ws.10)",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Azure-Active-Directory-Connect.md",
       "redirect_url": "/azure/active-directory/hybrid/whatis-hybrid-identity",
       "redirect_document_id": false
