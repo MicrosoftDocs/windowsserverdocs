@@ -5,7 +5,7 @@ title: Required Updates for Active Directory Federation Services (AD FS)
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 3/29/2019
+ms.date: 01/27/2023
 ms.topic: article
 ---
 # Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)

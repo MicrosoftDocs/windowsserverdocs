@@ -5,7 +5,7 @@ title: AD FS Design Guide in Windows Server 2012 R2
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/27/2023
 ms.topic: article
 ---
 
