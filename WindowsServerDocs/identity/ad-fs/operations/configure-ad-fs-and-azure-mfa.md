@@ -115,7 +115,7 @@ Once you've completed the previous section on each AD FS server, set the Azure t
 Open a PowerShell prompt and enter your own *tenantId* with the [Set-AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. For customers that use Microsoft Azure Government cloud, add the `-Environment USGov` parameter:
 
 > [!NOTE]
-> You need to restart the AD FS service on each server in the farm before these changes take affect. For minimal impact, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
+> You need to restart the AD FS service on each server in the farm before these changes take effect. For minimal impact, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
 
 ```powershell
 Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
@@ -134,7 +134,7 @@ Windows Server without the latest service pack doesn't support the `-Environment
     | StsUrl             | https://login.microsoftonline.us |
     | ResourceUri        | https://adnotifications.windowsazure.us/StrongAuthenticationService.svc/Connector |
 
-1. Restart the AD FS service on each server in the farm before these changes take affect. For minimal impact, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
+1. Restart the AD FS service on each server in the farm before these changes take effect. For minimal impact, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
 
 After this, you'll see that Azure MFA is available as a primary authentication method for intranet and extranet use.
 
