@@ -527,10 +527,6 @@
       href: erase.md
     - name: eventcreate
       href: eventcreate.md
-    - name: eventquery
-      href: eventquery.md
-    - name: eventtriggers
-      href: eventtriggers.md
     - name: Evntcmd
       href: evntcmd.md
     - name: exec
