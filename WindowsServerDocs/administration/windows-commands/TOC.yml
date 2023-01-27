@@ -527,10 +527,6 @@
       href: erase.md
     - name: eventcreate
       href: eventcreate.md
-    - name: eventquery
-      href: eventquery.md
-    - name: eventtriggers
-      href: eventtriggers.md
     - name: Evntcmd
       href: evntcmd.md
     - name: exec
@@ -1108,8 +1104,6 @@
       href: quser.md
     - name: qwinsta
       href: qwinsta.md
-    - name: rcp
-      href: rcp.md
     - name: rd
       href: rd.md
     - name: rdpsign
