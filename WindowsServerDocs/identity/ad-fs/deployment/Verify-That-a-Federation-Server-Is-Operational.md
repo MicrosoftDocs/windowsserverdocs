@@ -22,7 +22,7 @@ Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators
 
 2.  Open a browser window, in the address bar type the federation server's DNS host name, and then append /adfs/fs/federationserverservice.asmx to it for the new federation server, for example:
 
-    **https://fs1.fabrikam.com/adfs/fs/federationserverservice.asmx**
+    `https://fs1.fabrikam.com/adfs/fs/federationserverservice.asmx`
 
 3.  Press ENTER, and then complete the next procedure on the federation server computer. If you see the message **There is a problem with this website's security certificate**, click **Continue to this website**.
 

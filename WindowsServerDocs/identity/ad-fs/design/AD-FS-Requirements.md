@@ -178,8 +178,8 @@ AD FS creates session-based and persistent cookies that must be stored on client
 
 ## <a name="BKMK_extranet"></a>Extranet requirements
 To provide extranet access to the AD FS service, you must deploy the Web Application Proxy role service as the extranet facing role that proxies authentication requests in a secure manner to the AD FS service. This provides isolation of the AD FS service endpoints as well as isolation of all security keys (such as token signing certificates) from requests that originate from the internet. In addition, features such as Soft Extranet Account Lockout require the use of the Web Application Proxy. For more information about Web Application Proxy, see [Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584107(v=ws.11)).
+`
 
-If you want to use a third-party proxy for extranet access, this third-party proxy must support the protocol defined in [http://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf).
 
 ## <a name="BKMK_7"></a>Network requirements
 Configuring the following network services appropriately is critical for successful deployment of AD FS in your organization:
