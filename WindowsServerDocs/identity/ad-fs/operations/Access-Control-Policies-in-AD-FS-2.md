@@ -43,14 +43,12 @@ On the Active Directory claims provider trust, create a new acceptance transform
 
     `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
+   `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
-~~~
-`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+   `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
-`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+   `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
 
-`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
-~~~
 
 ### Step 3: Update the Microsoft Office 365 Identity Platform relying party trust
 
@@ -160,14 +158,14 @@ The following example enables access from internal clients based on IP address. 
 
 |                                                                                                   Description                                                                                                   |                                                                     Claim Rule language syntax                                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|              Default AD FS rule to Permit Access to All Users. This rule should already exist in the Microsoft Office 365 Identity Platform relying party trust Issuance Authorization Rules list.              |                                  => issue(Type = "<https://schemas.microsoft.com/authorization/claims/permit>", Value = "true");                                   |
+|              Default AD FS rule to Permit Access to All Users. This rule should already exist in the Microsoft Office 365 Identity Platform relying party trust Issuance Authorization Rules list.              |                                  `=> issue(Type = "<https://schemas.microsoft.com/authorization/claims/permit>", Value = "true")`;                                   |
 |                               Adding this clause to a new, custom rule specifies that the request has come from the federation server proxy (i.e., it has the x-ms-proxy header)                                |                                                                                                                                                                    |
-|                                                                                 It is recommended that all rules include this.                                                                                  |                                    exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy>"])                                    |
-|                                                         Used to establish that the request is from a client with an IP in the defined acceptable range.                                                         | NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", Value=~"customer-provided public ip address regex"]) |
-|                                    This clause is used to specify that if the application being accessed is not Microsoft.Exchange.ActiveSync the request should be denied.                                     |       NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", Value=="Microsoft.Exchange.ActiveSync"])        |
-|                                                      This rule allows you to determine whether the call was through a Web browser, and will not be denied.                                                      |              NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", Value == "/adfs/ls/"])               |
-| This rule states that the only users in a particular Active Directory group (based on SID value) should be denied. Adding NOT to this statement means a group of users will be allowed, regardless of location. |             exists([Type == "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", Value =~ "{Group SID value of allowed AD group}"])              |
-|                                                                This is a required clause to issue a deny when all preceding conditions are met.                                                                 |                                   => issue(Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");                                    |
+|                                                                                 It is recommended that all rules include this.                                                                                  |                                    `exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy>"]`)                                    |
+|                                                         Used to establish that the request is from a client with an IP in the defined acceptable range.                                                         | `NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", Value=~"customer-provided public ip address regex"])` |
+|                                    This clause is used to specify that if the application being accessed is not Microsoft.Exchange.ActiveSync the request should be denied.                                     |       `NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", Value=="Microsoft.Exchange.ActiveSync"])`        |
+|                                                      This rule allows you to determine whether the call was through a Web browser, and will not be denied.                                                      |              `NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", Value == "/adfs/ls/"])`               |
+| This rule states that the only users in a particular Active Directory group (based on SID value) should be denied. Adding NOT to this statement means a group of users will be allowed, regardless of location. |             `exists([Type == "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", Value =~ "{Group SID value of allowed AD group}"])`              |
+|                                                                This is a required clause to issue a deny when all preceding conditions are met.                                                                 |                                  ` => issue(Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");`                                    |
 
 ### Building the IP address range expression
 

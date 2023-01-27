@@ -83,7 +83,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 2. In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
 3. Enter the following information in the claim description
    - Display Name: 'Windows device group'
-   - Claim Description: '<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>' `
+   - Claim Description: `'<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>'` `
 4. Place a check in both boxes.
 5. Click **OK**.
 

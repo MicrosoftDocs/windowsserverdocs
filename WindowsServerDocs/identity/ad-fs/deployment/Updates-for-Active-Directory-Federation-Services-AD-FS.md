@@ -52,7 +52,7 @@ Below is the list of hotfixes and update rollups that have been released for Act
 |[4012216](https://support.microsoft.com/kb/4009970)|MS17-019 This security update resolves a vulnerability in Active Directory Federation Services (AD FS). The vulnerability could allow information disclosure if an attacker sends a specially crafted request to an AD FS server, allowing the attacker to read sensitive information about the target system.|March 2017 Update Rollup
 |[3179574](https://support.microsoft.com/kb/3179574)|Fixed issue with AD FS extranet password update. |August 2016 Update Rollup
 |[3172614](https://support.microsoft.com/kb/3172614)|Introduced prompt=login [support](../overview/ad-fs-faq.yml), fixed issue with the AD FS management console and AlwaysRequireAuthentication setting. |July 2016 Update Rollup
-|[3163306](https://support.microsoft.com/kb/3163306)|Active Directory Federation Services (AD FS) 3.0 can't connect to Lightweight Directory Access Protocol (LDAP) attribute stores that are configured to use Secure Sockets Layer (SSL) port 636 or 3269 in connection string. |June 2016 Update Rollup
+||Active Directory Federation Services (AD FS) 3.0 can't connect to Lightweight Directory Access Protocol (LDAP) attribute stores that are configured to use Secure Sockets Layer (SSL) port 636 or 3269 in connection string. |June 2016 Update Rollup
 |[3148533](https://support.microsoft.com/kb/3148533)|MFA fallback authentication fails through AD FS Proxy in Windows Server 2012 R2 |May 2016
 |[3134787](https://support.microsoft.com/kb/3134787)|AD FS logs don't contain client IP address for account lockout scenarios in Windows Server 2012 R2 |February 2016
 |[3134222](https://support.microsoft.com/kb/3134222)|MS16-020: Security update for Active Directory Federation Services to address denial of service: February 9, 2016|February 2016
@@ -97,7 +97,7 @@ Below is the list of hotfixes and update rollups that have been released for AD 
 |[2896713](https://support.microsoft.com/kb/2896713) or [2989956](https://support.microsoft.com/kb/2989956)|Update is available to fix several issues after you install security update 2843638 on an AD FS server|November 2013</br></br>September 2014|AD FS 2.0 / 2.1
 |[2877424](https://support.microsoft.com/kb/2877424)|Update enables you to use one certificate for multiple Relying Party Trusts in an AD FS 2.1 farm|October 2013|AD FS 2.1
 |[2873168](https://support.microsoft.com/kb/2873168)|FIX: An error occurs when you use a third-party CSP and HSM and then configure a claims provider trust in Update Rollup 3 for AD FS 2.0 on Windows Server 2008 R2 Service Pack 1|September 2013|AD FS 2.0
-|[2861090](https://support.microsoft.com/kb/2861090)|A comma in the subject name of an encryption certificate causes an exception in Windows Server 2008 R2 SP1|August 2013|AD FS 2.0
+||A comma in the subject name of an encryption certificate causes an exception in Windows Server 2008 R2 SP1|August 2013|AD FS 2.0
 |[2843639](https://support.microsoft.com/kb/2843639)|[Security] Vulnerability in Active Directory Federation Services Could Allow Information Disclosure|November 2013|AD FS 2.1
 |[2843638](https://support.microsoft.com/kb/2843638)|MS13-066: Description of the security update for Active Directory Federation Services 2.0: August 13, 2013|August 2013|AD FS 2.0
 |[2827748](https://support.microsoft.com/kb/2827748)|Federationmetadata.xml file does not contain the MEX endpoint information for the WS-Trust and WS-Federation endpoints in Windows Server 2012|May 2013|AD FS 2.1
