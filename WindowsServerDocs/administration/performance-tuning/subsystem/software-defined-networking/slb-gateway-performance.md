@@ -27,7 +27,7 @@ Each SLB Mux VM must be sized according to the guidelines provided in the SDN in
 
 ## Single Root IO virtualization (SR-IOV)
 
-When using 40 Gbit Ethernet, the ability for the virtual switch to process packets for the Mux VM becomes the limiting factor for Mux VM throughput. SR-IOV should be enabled on the SLB VM's VM Network Adapter to ensure that the virtual switch isn't the bottleneck.
+When you're using 40 Gigabit Ethernet, the ability for the virtual switch to process packets for the Mux VM becomes the limiting factor for Mux VM throughput. SR-IOV should be enabled on the SLB VM's VM Network Adapter to ensure that the virtual switch isn't the bottleneck.
 
 To enable SR-IOV, you must enable it on the virtual switch when the virtual switch is created.  In this example, we're creating a virtual switch with switch embedded teaming (SET) and SR-IOV:
 
