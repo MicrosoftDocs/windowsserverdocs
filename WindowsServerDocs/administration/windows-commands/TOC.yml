@@ -421,8 +421,6 @@
         href: convert-mbr.md
     - name: copy
       href: copy.md
-    - name: cprofile
-      href: cprofile.md
     - name: create
       href: create.md
       items:
@@ -529,10 +527,6 @@
       href: erase.md
     - name: eventcreate
       href: eventcreate.md
-    - name: eventquery
-      href: eventquery.md
-    - name: eventtriggers
-      href: eventtriggers.md
     - name: Evntcmd
       href: evntcmd.md
     - name: exec
@@ -1639,8 +1633,6 @@
       href: winnt.md
     - name: winnt32
       href: winnt32.md
-    - name: winpop
-      href: winpop.md
     - name: winrs
       href: winrs.md
     - name: winsat mem
