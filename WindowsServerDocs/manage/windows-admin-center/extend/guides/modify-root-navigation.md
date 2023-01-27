@@ -1,6 +1,6 @@
 ---
 title: Modify root navigation behavior
-description: Develop a solution extension Windows Admin Center SDK (Project Honolulu) - modify root navigation behavior
+description: Develop a solution extension Windows Admin Center SDK - modify root navigation behavior
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
@@ -11,7 +11,7 @@ ms.date: 01/03/2023
 
 Applies to: Windows Admin Center, Windows Admin Center Preview
 
-This article provides guidance on how to modify the root navigation behavior for your solution to have different connection list behavior, as well as how to hide or show the tools list.
+This article provides guidance on how to modify the root navigation behavior for your solution to have different connection list behavior. You'll also learn how to hide or show the tools list.
 
 ## Modifying root navigation behavior
 
@@ -41,7 +41,10 @@ Tools built with this kind of structure won't require connections to load, but w
 
 ### Setting connections as a rootNavigationBehavior
 
-When you set the ```rootNavigationBehavior``` property to ```connections```, you're telling the Windows Admin Center Shell that there's a connected node (always a server of some type) that it should connect to, and verify connection status. With this, there are 2 steps in verifying connection. 1) Windows Admin Center will attempt to make an attempt to log into the node with your credentials (for establishing the remote PowerShell session) and; 2) Windows Admin Center will execute the PowerShell script you provide to verify if the node is in a connectable state.
+When you set the ```rootNavigationBehavior``` property to ```connections```, you're telling the Windows Admin Center Shell that there's a connected node (always a server of some type) that it should connect to, and verify connection status. There are two steps in verifying a connection.
+
+1. Windows Admin Center will attempt to make an attempt to log into the node with your credentials (for establishing the remote PowerShell session)
+1. Windows Admin Center will execute the PowerShell script you provide to verify if the node is in a connectable state.
 
 A valid solution definition with connections will look like this:
 
@@ -67,8 +70,8 @@ A valid solution definition with connections will look like this:
         },
 ```
 
-When the rootNavigationBehavior is set to "connections" you're required to build out the connections definition in the  manifest. This includes the "header" property (will be used to display in your solution header when a user selects it from the menu), a connectionTypes array (this will specify which connectionTypes are used in the solution. More on that in the connectionProvider documentation.).
+When the rootNavigationBehavior is set to "connections", you're required to build out the connections definition in the  manifest. This includes the "header" property (will be used to display in your solution header when a user selects it from the menu), a connectionTypes array (this will specify which connectionTypes are used in the solution. More on that in the connectionProvider documentation.).
 
 ## Enabling and disabling the tools menu
 
-Another property available in the solution definition is the "tools" property. This dictates if the tools menu is displayed, as well as the tool that will be loaded. When enabled, Windows Admin Center will render the left hand tools menu. With defaultTool, it's required that you add a tool entry point to the manifest in order to load the appropriate resources. The value of "defaultTool" needs to be the "name" property of the tool as it is defined in the manifest.
+Another property available in the solution definition is the "tools" property. This dictates if the tools menu is displayed, and the tool that will be loaded. When enabled, Windows Admin Center will render the left hand tools menu. With defaultTool, it's required that you add a tool entry point to the manifest in order to load the appropriate resources. The value of "defaultTool" needs to be the "name" property of the tool as it is defined in the manifest.
