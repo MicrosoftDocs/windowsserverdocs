@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Deploy Always On VPN profile for Windows 10+ clients
+title: Tutorial - Deploy Always On VPN profile for Windows clients
 description:  Learn how to deploy Always On VPN profile for Windows 10+ clients
 ms.topic: article
 ms.date: 01/06/2022
@@ -12,7 +12,7 @@ author: anaharris-ms
 - [**Previous:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10+
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
 
 In this last part of the tutorial, you'll learn how to use a ProfileXML PowerShell configuration script to configure Always On VPN settings and create a user tunnel for client connections.
 
@@ -95,7 +95,7 @@ In this section, you'll manually configure the Windows VPN client using a PowerS
 
 1. Open Windows PowerShell integrated scripting environment (ISE) as Administrator.
 
-1. Copy and past the following script:
+1. Copy and paste the following script:
 
 ```powershell
 
@@ -320,8 +320,8 @@ You have now configured your user tunnel for Always On VPN. If you want to learn
 
 - To learn more about the advanced VPN features, see  |[Advanced VPN Features](vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features).
 
-- To learn how to configure Always On VPN profiles with Microsoft Configuration Manager, see [Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager](how-to-aovpn-client-config-mgr.md).
+- To learn how to configure Always On VPN profiles with Microsoft Configuration Manager, see [Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager](how-to-aovpn-client-config-mgr.md).
 
-- To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows 10+ clients with Microsoft InTune](how-to-aovpn-client-intune.md).
+- To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows clients with Microsoft InTune](how-to-aovpn-client-intune.md).
 
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).

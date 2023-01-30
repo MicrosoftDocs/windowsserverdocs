@@ -128,7 +128,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
 
-1. Open the Routing and Remote Access tool from Server Manager., r
+1. Open the Routing and Remote Access tool from Server Manager.
 
 1. Right-click the VPN server, and then select **Properties**.
 
@@ -140,7 +140,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
     1. Select **Add** to open the Add RADIUS Server dialog.
 
-        1. In **Server name**, enter the Fully Qualified Domain Name (FQDN) of the NPS server. In this tutorial, the NPS server is the domain controller server. For example, if the NetBIOS name of your NPS and domain controller server is dc1 and your domain name is corp.contoso.com, enter **dc1.corp.contoso.com**.
+        1. In **Server name**, enter the Fully Qualified Domain Name (FQDN) of the NPS server. In this tutorial, the NPS server is the domain controller server. For example, if the NetBIOS name of your NPS and domain controller server is dc1 and your domain name is corp.contoso.com, enter _dc1.corp.contoso.com_.
 
         1. In **Shared secret**, select **Change** to open the Change Secret dialog box.
 
@@ -166,9 +166,9 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. A dialog will prompt you to restart the server. Select **Yes**.
 
-## Create VPN Windows 10+ Client
+## Create VPN Windows client
 
-1. Install Windows 10+ on the machine that will be your VPN client.
+1. Install Windows 10 or later on the machine that will be your VPN client.
 
 1. Join the VPN client to your domain. For information on how to join a computer to a domain, see [To join a computer to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
@@ -199,7 +199,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 ## Configure VPN server as a RADIUS client
 
-1. On the NPS server, enable the following ports: UDP1812, UDP1813, UDP1645, and UDP1646.
+1. On the NPS server, open your firewall rules to allow UDP ports 1812, 1813, 1645, and 1646 inbound.
 
 1. In the NPS console, double-click **RADIUS Clients and Servers**.
 
@@ -272,5 +272,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 1. Select **Finish** to close the wizard.
 
 ## Next steps
+
+Now you've created your sample infrastructure you are ready to being configuring your Certificate Authority.
 
 - [Deploy Always On VPN Tutorial: Configure Certification Authority templates](tutorial-aovpn-deploy-create-certificates.md)

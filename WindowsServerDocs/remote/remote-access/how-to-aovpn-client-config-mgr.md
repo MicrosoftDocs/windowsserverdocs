@@ -1,6 +1,6 @@
 ---
 title: Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager
-description:  Learn how to deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager
+description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Endpoint Configuration Manager
 ms.topic: article
 ms.date: 01/23/2022
 ms.author: anaharris
@@ -16,9 +16,9 @@ In this how-to article, we'll show you how to use Configuration Manager deploy A
 
 - You should have already created a ProfileXML PowerShell configuration script. If you don't know how to create a ProfileXML configuration script, see [Tutorial: Deploy Always On VPN - Configure Always On VPN client connections](tutorial-aovpn-deploy-configure-client.md).
 
-### Create a user group
+### Create a user collection
 
-To use Configuration Manager to deploy an Always On VPN profile to Windows 10+ client computers, you'll need to create a group of machines or users to whom you'll deploy the profile.
+To use Configuration Manager to deploy an Always On VPN profile to Windows 10  or newer client computers, you'll need to create a group of machines or users to whom you'll deploy the profile to.
 
 1. In the Configuration Manager console, open Assets and Compliance\\User Collections.
 
@@ -64,7 +64,7 @@ After you create the user group to receive the VPN profile, you can create a pac
 
 1. On the Package page, complete the following steps:
 
-    1. In **Name**, type a name,  such as **Windows 10 Always On VPN Profile**.
+    1. In **Name**, type a name,  such as **Windows client Always On VPN Profile**.
 
     1. Select the **This package contains source files** check box, and select **Browse**.
 
@@ -79,7 +79,7 @@ After you create the user group to receive the VPN profile, you can create a pac
 
     1. In **Name**, type **VPN Profile Script**.
 
-    1. In **Command line**, type **PowerShell.exe -ExecutionPolicy Bypass -File        "{your-script-name.ps1}"**.
+    1. In **Command line**, type `PowerShell.exe -ExecutionPolicy Bypass -File        "{your-script-name.ps1}"`.
 
     1. In **Run mode**, select **Run with administrative rights**.
 
@@ -103,11 +103,11 @@ After you create the user group to receive the VPN profile, you can create a pac
 
 With the package and program created, you are now ready to deploy it to the **VPN Users** group.
 
-### Deploy the ProfileXML configuration script
+### Deploy the ProfileXML configuration package
 
 1. In the Configuration Manager console, open Software Library\\Application Management\\Packages.
 
-1. In **Packages**, select **Windows 10 Always On VPN Profile**.
+1. In **Packages**, select **Windows client Always On VPN Profile**.
 
 1. On the **Programs** tab, at the bottom of the details pane, right-select **VPN Profile Script**, select **Properties**, and complete the following steps:
 
@@ -155,11 +155,11 @@ With the package and program created, you are now ready to deploy it to the **VP
 
 1. On the Completion page, select **Close**.
 
-With the ProfileXML configuration script deployed, sign in to a Windows 10 client computer with the user account you selected when you built the user collection. Verify the configuration of the VPN client.
+With the ProfileXML configuration script deployed, sign in to a Windows client computer with the user account you selected when you built the user collection. Verify the configuration of the VPN client.
 
 ### Verify the configuration of the VPN client
 
-1. In Control Panel, under **System\\Security**, select **Configuration Manager**.
+1. In Control Panel, under **System > Security**, select **Configuration Manager**.
 
 1. In the Configuration Manager Properties dialog, on the **Actions** tab, complete the following steps:
 
@@ -176,5 +176,5 @@ You should see the new VPN profile shortly.
 ## Next Steps
 
 - For an in depth tutorial on how to setup Always On VPN, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
-- To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows 10+ clients with Microsoft InTune](how-to-aovpn-client-intune.md)
+- To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows clients with Microsoft InTune](how-to-aovpn-client-intune.md)
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).

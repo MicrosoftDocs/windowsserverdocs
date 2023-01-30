@@ -22,7 +22,7 @@ You'll create the following templates:
     >[!NOTE]
     >The user template has been configured for autoenrollment and so only requires verification. The VPN server template will be enrolled manually.
 
-- *VPN server authentication template*. With a VPN server authentication template, you can add the IP Security (IPsec) IKE Intermediate application policy to allows the server to filter certificates if more than one certificate is available with the server authentication extended key usage. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for autoenrollment.
+- *VPN server authentication template*. With a VPN server authentication template, you will add the IP Security (IPsec) IKE Intermediate application policy. The IP Security (IPsec) IKE Intermediate application policy determines how the certificate can be used, it can allow the server to filter certificates if more than one certificate is available. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for autoenrollment.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ You'll create the following templates:
 1. In the Certificate Templates console, right-click **User** and select **Duplicate Template**.
 
    >[!WARNING]
-   >Do not select **Apply** or **OK** at any time prior to step 10.  If you select these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
+   >Do not select **Apply** or **OK** at any time prior to step 10.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
 
 1. In the Properties of New Template dialog box, on the **General** tab, complete the following steps:
 
@@ -56,7 +56,7 @@ You'll create the following templates:
    4. In **Permissions for VPN Users**, select the **Enroll** and **Autoenroll** check boxes in the **Allow** column.
 
       >[!IMPORTANT]
-      >Make sure to keep the Read check box selected. You'll need Read permissions for enrollment.
+      >Make sure to keep the Read permission check box selected. You'll need Read permissions for enrollment.
 
    5. In **Group or user names**, select **Domain Users**, then select **Remove**.
 
@@ -97,7 +97,7 @@ You'll create the following templates:
 1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**.
 
    >[!WARNING]
-   >Do not select **Apply** or **OK** at any time prior to step 10.  If you select these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
+   >Do not select **Apply** or **OK** at any time prior to step 10.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
 
 1. On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter *VPN Server Authentication*.
 
@@ -207,4 +207,4 @@ Because you're using Group Policy to autoenroll user certificates, you only need
 
 ## Next steps
 
-- [Deploy Always On VPN Tutorial: Configure Windows 10 Always On VPN client connections](tutorial-aovpn-deploy-configure-client.md)
+- [Deploy Always On VPN Tutorial: Configure Windows client Always On VPN connections](tutorial-aovpn-deploy-configure-client.md)
