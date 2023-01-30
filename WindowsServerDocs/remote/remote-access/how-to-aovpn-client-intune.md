@@ -88,5 +88,5 @@ To test the configuration policy, sign in to a Windows 10+ client computer and t
 ## Next Steps
 
 - For an in depth tutorial on how to setup Always On VPN, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
-- To learn how to configure Always On VPN profiles with Microsoft Configuration Manager, see [Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager](how-to-aovpn-client-config-mgr.md)
+- To learn how to configure Always On VPN profiles with Microsoft Configuration Manager, see [Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager](how-to-aovpn-client-config-mgr.md)
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).
