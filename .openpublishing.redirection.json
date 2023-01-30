@@ -10881,6 +10881,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10.md",
       "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
       "redirect_document_id": false
