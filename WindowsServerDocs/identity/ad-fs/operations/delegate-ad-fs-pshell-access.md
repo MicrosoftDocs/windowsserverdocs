@@ -38,7 +38,7 @@ Add-KdsRootKey -EffectiveTime ((get-date).addhours(-10)) 
 $adfsServer = Get-ADComputer server01.contoso.com
 
 # Run targeted at domain controller
-$serviceaccount = New-ADServiceAccount gMSAcontoso -DNSHostName <FQDN of the domain containing the KDS key> - PrincipalsAllowedToRetrieveManagedPassword $adfsServer –passthru
+$serviceaccount = New-ADServiceAccount gMSAcontoso -DNSHostName <FQDN of the domain containing the KDS key> -PrincipalsAllowedToRetrieveManagedPassword $adfsServer –passthru
 
 # Run this on every node
 Add-ADComputerServiceAccount -Identity server01.contoso.com -ServiceAccount $ServiceAccount
