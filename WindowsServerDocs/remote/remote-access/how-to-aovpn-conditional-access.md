@@ -16,7 +16,7 @@ In this how-to guide, you'll learn how to grant VPN users access your resources 
 
 ## Prerequisites
 
-- You're familiar with the following topics:
+Before you start configuring Conditional Access for your VPN, you must have completed the following prerequisites:
 
 - [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
