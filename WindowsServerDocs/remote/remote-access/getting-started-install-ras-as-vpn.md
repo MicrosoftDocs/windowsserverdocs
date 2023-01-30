@@ -54,7 +54,7 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 8. On the Remote Access page, select **Next**.
 
-9. On the Select role service page, in **Role services**, select *DirectAccess and VPN (RAS)*.
+9. On the Select role service page, in **Role services**, select **DirectAccess and VPN (RAS)**.
 
 10. On the Confirm installation selections page, review your choices, then select **Install**.
 
