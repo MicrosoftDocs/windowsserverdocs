@@ -234,6 +234,6 @@ You are done configuring the VPN profile to use Azure AD conditional access.
 
 - To learn more about how conditional access works with VPNs, see [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access).
 
-- To learn more about the advanced VPN features, see [Advanced VPN Features](always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features).
+- To learn more about the advanced VPN features, see [Advanced VPN Features](vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features).
 
 - To see an overview of VPNv2 CSP, see [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp):  This topic provides you with an overview of VPNv2 CSP.
