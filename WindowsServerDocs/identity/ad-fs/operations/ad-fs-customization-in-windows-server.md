@@ -5,7 +5,7 @@ title: AD FS Customization in Windows Server 2016
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # AD FS Customization in Windows Server 2016

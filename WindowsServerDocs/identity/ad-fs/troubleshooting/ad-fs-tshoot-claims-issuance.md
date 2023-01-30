@@ -4,7 +4,7 @@ description:  This document describes how to troubleshoot token issuance issues 
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 01/03/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

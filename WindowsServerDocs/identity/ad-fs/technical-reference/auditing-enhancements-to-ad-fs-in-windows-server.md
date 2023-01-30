@@ -5,7 +5,7 @@ title: Auditing Enhancements to AD FS in Windows Server 2016
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/25/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

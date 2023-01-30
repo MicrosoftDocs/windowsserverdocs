@@ -5,7 +5,7 @@ title: Walkthrough - Workplace Join to an Android device
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Walkthrough: Workplace Join to an Android device

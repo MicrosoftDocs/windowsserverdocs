@@ -4,7 +4,7 @@ description: Describes the new Key Derivation Function (KDF) called "KDFv2" for 
 author: billmath
 manager: Karen444
 ms.topic: article
-ms.date: 11/02/2021
+ms.date: 01/30/2023
 ms.author: billmath
 
 ---

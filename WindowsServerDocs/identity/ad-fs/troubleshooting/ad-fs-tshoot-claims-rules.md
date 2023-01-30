@@ -4,7 +4,7 @@ description:  This document describes how to troubleshoot claims rule syntax wit
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 11/08/2022
+ms.date: 01/30/2023
 ms.topic: article
 ---
 
