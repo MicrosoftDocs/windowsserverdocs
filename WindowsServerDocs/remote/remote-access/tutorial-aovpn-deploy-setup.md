@@ -275,4 +275,6 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 Now you've created your sample infrastructure you are ready to being configuring your Certificate Authority.
 
+Now you've created your sample infrastructure you are ready to being configuring your Certificate Authority.
+
 - [Deploy Always On VPN Tutorial: Configure Certification Authority templates](tutorial-aovpn-deploy-create-certificates.md)
