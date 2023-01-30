@@ -244,20 +244,6 @@
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
         - name: 3- Deploy Always On VPN profile for Windows clients
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
-      - name: Always on VPN Conditional Access
-        items:
-        - name: Step 7. Conditional access for VPN connectivity using Azure AD
-          href: remote-access/vpn/ad-ca-vpn-connectivity-windows10.md        
-        - name: Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
-          href: remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md
-        - name: Step 7.2. Create root certificates for VPN authentication with Azure AD
-          href: remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md
-        - name: Step 7.3. Configure the Conditional Access policy
-          href: remote-access/vpn/vpn-config-conditional-access-policy.md
-        - name: Step 7.4. Deploy Conditional Access root certificates to on-premises AD
-          href: remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md
-        - name: Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices
-          href: remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md
       - name: DirectAccess
         items:
         - name: DirectAccess offline Domain Join
@@ -466,6 +452,8 @@
           href: remote-access/how-to-aovpn-client-intune.md
         - name: Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager
           href: remote-access/how-to-aovpn-client-config-mgr.md
+        - name: Configure Always on VPN Conditional Access using Azure AD
+          href: remote-access/how-to-aovpn-conditional-access.md
       - name: Virtual Private Networking (VPN) 
         items: 
         - name: Configure VPN device tunneling

@@ -10881,8 +10881,33 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
-      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-config-conditional-access-policy.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
       "redirect_document_id": false
     }
   ]

@@ -6,7 +6,7 @@ ms.date: 01/23/2022
 ms.author: anaharris
 author: anaharris-ms
 ---
-<!-- Will this work? Pulled this out of tutorial. Need to make sure it will work as written.-->
+
 
 # Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager
 
