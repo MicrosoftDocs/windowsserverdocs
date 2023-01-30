@@ -42,7 +42,7 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 2. On the Before you begin page, select **Next**.
 
-3. On the Select Installation Type page, select *Role-Based or feature-based installation* and select **Next**.
+3. On the Select Installation Type page, select **Role-Based or feature-based installation** and select **Next**.
 
 4. On the Select destination server page, select *Select a server from the server pool* .
 
