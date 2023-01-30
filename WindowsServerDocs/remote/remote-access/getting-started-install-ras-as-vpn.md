@@ -48,7 +48,7 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 5. Under Server Pool, select the local computer and select **Next**.
 
-6. On the Select server roles page, in **Roles**, select *Remote Access*, then **Next**.
+6. On the Select server roles page, in **Roles**, select **Remote Access**, then **Next**.
 
 7. On the Select features page, select **Next**.
 
