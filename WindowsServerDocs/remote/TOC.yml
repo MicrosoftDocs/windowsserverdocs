@@ -242,7 +242,7 @@
           href: remote-access/tutorial-aovpn-deploy-setup.md        
         - name: 2- Configure Always On VPN certificates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
-        - name: 3- Deploy Always On VPN profile for Windows 10+ clients
+        - name: 3- Deploy Always On VPN profile for Windows clients
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
       - name: Always on VPN Conditional Access
         items:
@@ -462,9 +462,9 @@
       items:
       - name: Always On VPN
         items:
-        - name: Deploy Always On VPN profile to Windows 10+ clients with Microsoft InTune
+        - name: Deploy Always On VPN profile to Windows clients with Microsoft InTune
           href: remote-access/how-to-aovpn-client-intune.md
-        - name: Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager
+        - name: Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager
           href: remote-access/how-to-aovpn-client-config-mgr.md
       - name: Virtual Private Networking (VPN) 
         items: 
