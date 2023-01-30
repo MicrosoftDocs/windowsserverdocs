@@ -4,7 +4,7 @@ description:  This document describes how to protect AD FS users from password a
 author: billmath
 manager: mtillman
 ms.reviewer: andandyMSFT
-ms.date: 11/10/2022
+ms.date: 01/30/2023
 ms.topic: article
 ms.author: billmath
 ---

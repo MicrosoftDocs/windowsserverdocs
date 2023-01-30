@@ -4,7 +4,7 @@ description:  This document describes how to troubleshoot integrated  windows au
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 02/21/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

@@ -5,7 +5,7 @@ title: Customize the display names and descriptions for authentication methods
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Customize the display names and descriptions for authentication methods

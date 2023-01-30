@@ -4,7 +4,7 @@ description: The following document describes how to change the AD FS forms sign
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 10/24/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

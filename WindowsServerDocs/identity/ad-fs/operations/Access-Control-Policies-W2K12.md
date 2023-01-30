@@ -5,7 +5,7 @@ title: Access Control Policies in AD FS in Windows Server 2012 R2
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/05/2018
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

@@ -4,7 +4,7 @@ description:  Learn how to troubleshoot various aspects of AD FS as it pertains 
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 01/12/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 
