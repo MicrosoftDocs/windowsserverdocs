@@ -1,12 +1,12 @@
 ---
 title: Remote Desktop - compare the client apps redirections
-description: Learn how the different RD apps compare when it comes to redirections.
+description: Learn how the different Remote Desktop apps compare when it comes to redirections.
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/29/2022
+ms.date: 12/16/2022
 ---
 
 # Compare the clients: redirections
@@ -31,9 +31,11 @@ If you remote into your personal desktop, there are other redirections that you 
 | Keyboard    | X                         | X             | X       | X   | X     | X             |
 | Mouse       | X                         | X             | X       | X\* | X     | X             |
 | Touch       | X                         | X             | X       | X   |       | X (except IE) |
-| Pen         | X                         |               | X (as touch) |  X (as touch)  |       |               |
+| Pen         | X                         |               | X (as touch) | X \*\* | | |
 
-*View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
+\* View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
+
+\*\* Pen input redirection is not supported when connecting to Windows 8, Windows 8.1, Windows Server 2012, or Windows Server 2012 R2.
 
 ### Port redirection
 
@@ -48,7 +50,7 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 
 | Redirection         | Windows Inbox</br>(MSTSC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|---------------|---------|--------------|---------------------------------|---------------|
-| Cameras             | X                         |               |  X       |   X          | X                               |               |
+| Cameras             | X                         |               |  X       |   X          | X                               | X              |
 | Clipboard           | X                         | X             | Text    | Text, images | X                               | Text          |
 | Local drive/storage | X                         |               | X       | X            | X                               |  X\*             |
 | Location            | X                         |               |         |              |                                 |               |

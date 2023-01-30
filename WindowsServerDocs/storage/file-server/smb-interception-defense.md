@@ -4,7 +4,7 @@ description: How to configure Windows Server to harden SMB protocol to defend ag
 ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
-ms.date: 09/14/2022
+ms.date: 12/12/2022
 # Customer Intent: As a system or security administrator, I want to prevent SMB interception
 # attacks, so that I can mitigate security risks within my environment
 ---
@@ -92,7 +92,7 @@ encryption, and signing. Learn more in the [SMB security enhancements](smb-secur
 
 Before removing the SMB 1.0 feature, be sure no applications and processes on the computer require
 it. For more information on how to detect and disable SMB 1.0, see the article
-[How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md#how-to-remove-smbv1).
+[How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols).
 
 You can also use the Windows Admin Center
 [Files and file sharing tool](../../manage/windows-admin-center/use/manage-servers.md) to both

@@ -5,7 +5,7 @@ description: Using the Install-AdfsFarm cmdlet and script to create an AD FS far
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 04/01/2020
+ms.date: 01/27/2023
 ms.topic: article
 
 ---

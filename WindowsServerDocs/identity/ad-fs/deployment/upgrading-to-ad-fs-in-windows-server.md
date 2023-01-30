@@ -4,13 +4,15 @@ ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrading to AD FS in Windows Server 2016 and 2019
 author: billmath
 manager: femila
-ms.date: 06/24/2022
+ms.date: 01/27/2023
 ms.topic: article
 ms.author: billmath
 ---
 
 # Upgrading to AD FS in Windows Server 2016 using a WID database
 
+
+[!INCLUDE [Migrate to Azure AD](../../../../includes/adfs-to-azure-ad-upgrade.md)]
 
 > [!NOTE]
 > Only begin an upgrade with a definitive time frame planned for completion. It is not recommended to keep AD FS in a mixed mode state for an extended period of time, as leaving AD FS in a mixed mode state may cause issues with the farm.

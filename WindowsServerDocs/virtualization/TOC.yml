@@ -42,7 +42,7 @@
       items:
       - name: Install Hyper-V
         href: hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md
-      - name: Create a virtual switch
+      - name: Create and configure a virtual switch
         href: hyper-v/get-started/create-a-virtual-switch-for-Hyper-V-virtual-machines.md
       - name: Create a virtual machine
         href: hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md
@@ -130,7 +130,5 @@
     - name: Manage Hyper-V Virtual Switch
       href: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
       items:
-      - name: Configure and View VLAN Settings on Hyper-V Virtual Switch Ports
-        href: hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md
       - name: Create Security Policies with extended Port Access Control lists
         href: hyper-v-virtual-switch/create-Security-Policies-with-extended-Port-Access-Control-lists.md

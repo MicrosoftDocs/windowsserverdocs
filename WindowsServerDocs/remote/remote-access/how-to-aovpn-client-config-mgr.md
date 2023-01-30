@@ -14,13 +14,15 @@ In this how-to article, we'll show you how to use Configuration Manager deploy A
 
 ## Prerequisites
 
+- You should have Configuration Manager installed and configured. To learn how to install Configuration Manager, see [Set up a Configuration Manager lab](/mem/configmgr/core/get-started/set-up-your-lab).
+
 - You should have already created a ProfileXML PowerShell configuration script. If you don't know how to create a ProfileXML configuration script, see [Tutorial: Deploy Always On VPN - Configure Always On VPN client connections](tutorial-aovpn-deploy-configure-client.md).
 
 ### Create a user collection
 
 To use Configuration Manager to deploy an Always On VPN profile to Windows 10  or newer client computers, you'll need to create a group of machines or users to whom you'll deploy the profile to.
 
-1. In the Configuration Manager console, open Assets and Compliance\\User Collections.
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace.
 
 1. On the **Home** ribbon, in the **Create** group, select **Create User Collection**.
 
@@ -58,9 +60,9 @@ After you create the user group to receive the VPN profile, you can create a pac
 
 1. Host the ProfileXML configuration script on a network share that the site server computer account can access.
 
-1. In the Configuration Manager console, open **Software Library\\Application Management\\Packages**.
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Packages** node.
 
-1. On the **Home** ribbon, in the **Create** group, select **Create Package** to start the Create Package and Program Wizard.
+1. In the **Home** tab of the ribbon, in the **Create** group, select **Create Package**.
 
 1. On the Package page, complete the following steps:
 

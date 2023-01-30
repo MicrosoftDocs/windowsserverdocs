@@ -5,7 +5,7 @@ title: Build a server-side app that uses OAuth confidential clients by using Act
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 02/22/2018
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

@@ -1,7 +1,7 @@
 ---
 title:  Get started with OpenSSH for Windows
 description: Learn how to install and connect to remote machines using the OpenSSH Client and Server for Windows.
-ms.date: 07/12/2022
+ms.date: 01/11/2023
 ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
@@ -49,12 +49,20 @@ To install the OpenSSH components:
 
 1. Open **Settings**, select **Apps**, then select **Optional Features**.
 
-2. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
+1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
     - Find **OpenSSH Client**, then select **Install**
     - Find **OpenSSH Server**, then select **Install**
 
-Once setup completes, return to **Apps** and **Optional Features** and you should see OpenSSH listed.
+1. Once setup completes, return to **Apps** and **Optional Features** and confirm OpenSSH is listed.
+
+1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
+
+1. In the details pane, double-click **OpenSSH SSH Server**.
+
+1. On the **General** tab, from the **Startup type** drop-down menu, select **Automatic**.
+
+1. To start the service, select **Start**.
 
 > [!NOTE]
 > Installing OpenSSH Server will create and enable a firewall rule named `OpenSSH-Server-In-TCP`. This allows inbound SSH traffic on port 22. If this rule is not enabled and this port is not open, connections will be refused or reset.

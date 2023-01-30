@@ -4,7 +4,7 @@ description: Learn how to verify that federation servers in your farm are operat
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/10/2017
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

@@ -3,8 +3,8 @@ ms.assetid: b7bf7579-ca53-49e3-a26a-6f9f8690762f
 title: Best Practices for securing AD FS and Web Application Proxy
 description: Best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.
 author: billmath
-ms.author: alalve
-ms.date: 11/04/2022
+ms.author: billmath
+ms.date: 01/27/2023
 ms.topic: article
 ---
 
@@ -197,7 +197,7 @@ Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Pr
 
 ### Differentiate access policies for intranet and extranet access
 
-AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication. Multi factor authentication can be set up via the AD FS management snap-in.
+AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive information, consider requiring multi factor authentication. Multi factor authentication can be set up via the AD FS management snap-in.
 
 ### Require Multi Factor Authentication (MFA)
 
