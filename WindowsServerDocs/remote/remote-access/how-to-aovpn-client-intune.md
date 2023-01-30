@@ -9,7 +9,7 @@ author: anaharris-ms
 
 # Deploy Always On VPN profile to Windows 10+ clients with Microsoft InTune
 
-In this how-to article, we'll show you how to use InTune to deploy Always On VPN profiles to configure the ProfileXML CSP node using a base EAP XML sample XML.
+In this how-to article, we'll show you how to use Intune to deploy Always On VPN profiles to configure the ProfileXML CSP node using a base EAP XML sample XML.
 
 ## Prerequisites
 
