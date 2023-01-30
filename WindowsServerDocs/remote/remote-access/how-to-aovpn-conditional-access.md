@@ -12,22 +12,17 @@ author: anaharris-ms
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
 
-In this tutorial, you'll learn how to grant VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.
+In this how-to guide, you'll learn how to grant VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.
 
 ## Prerequisites
 
-You are familiar with the following topics:
+- You're familiar with the following topics:
 
 - [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
 
-To configure Azure Active Directory conditional access for VPN connectivity, you need to have the following configured:
-
-- [Server Infrastructure](../tutorial-aovpn-deploy-setup.md)
-- [Remote Access Server for Always On VPN](always-on-vpn/deploy/vpn-deploy-ras.md)
-- [Network Policy Server](always-on-vpn/deploy/vpn-deploy-nps.md)
-- [DNS and Firewall Settings](always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
-- [Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
+- You've completed [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md) or you already have setup the Always On VPN infrastructure in your environment.
+- Your Windows client computer has already been configured with a VPN connection using Intune. If you don't know how to configure and deploy a VPN Profile with Intune, see [Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune](how-to-aovpn-client-intune.md).
 
 ## Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
@@ -58,7 +53,7 @@ In this section, you'll add `IgnoreNoRevocationCheck` and set it to allow authen
 
 ## Create root certificates for VPN authentication with Azure AD
 
-In this step, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
+In this section, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
 
 1. Create a VPN certificate in the Azure portal.
 2. Download the VPN certificate.
@@ -99,22 +94,21 @@ Create a Conditional Access policy that is assigned to VPN users group and scope
 **Procedure:**
 This step covers creation of the most basic Conditional Access policy.  If desired, additional Conditions and Controls can be used.
 
-
 1. On the **Conditional Access** page, in the toolbar on the top, select **Add**.
 
-    ![Select add on conditional access page](../../media/Always-On-Vpn/07.png)
+    ![Select add on conditional access page](../media/Always-On-Vpn/07.png)
 
 2. On the **New** page, in the **Name** box, enter a name for your policy. For example, enter **VPN policy**.
 
-    ![Add name for policy on conditional access page](../../media/Always-On-Vpn/08.png)
+    ![Add name for policy on conditional access page](../media/Always-On-Vpn/08.png)
 
 3. In the **Assignment** section, select **Users and groups**.
 
-    ![Select users and groups](../../media/Always-On-Vpn/09.png)
+    ![Select users and groups](../media/Always-On-Vpn/09.png)
 
 4. On the **Users and groups** page, perform the following steps:
 
-    ![Select test user](../../media/Always-On-Vpn/10.png)
+    ![Select test user](../media/Always-On-Vpn/10.png)
 
     a. Select **Select users and groups**.
 
@@ -126,7 +120,7 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
 5. On the **New** page, perform the following steps:
 
-    ![Select cloud apps](../../media/Always-On-Vpn/11.png)
+    ![Select cloud apps](../media/Always-On-Vpn/11.png)
 
     a. In the **Assignments** section, select **Cloud apps**.
 
@@ -136,11 +130,11 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
 6.  On the **New** page, to open the **Grant** page, in the **Controls** section, select **Grant**.
 
-    ![Select grant](../../media/Always-On-Vpn/13.png)
+    ![Select grant](../media/Always-On-Vpn/13.png)
 
 7.  On the **Grant** page, perform the following steps:
 
-    ![Select require multi-factor authentication](../../media/Always-On-Vpn/14.png)
+    ![Select require multi-factor authentication](../media/Always-On-Vpn/14.png)
 
     a. Select **Require multi-factor authentication**.
 
@@ -148,7 +142,7 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
 8.  On the **New** page, under **Enable policy**, select **On**.
 
-    ![Enable policy](../../media/Always-On-Vpn/15.png)
+    ![Enable policy](../media/Always-On-Vpn/15.png)
 
 9.  On the **New** page, select **Create**.
 
@@ -186,28 +180,19 @@ In this section, you deploy a trusted root certificate for VPN authentication to
       - NTAuthCertificates
       - AIA Container
       - Certificate Authorities Container
-      - 
 
 ## Create OMA-DM based VPNv2 profiles to Windows 10 devices
 
-In this step, you'll create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy.
+In this section, you'll create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy.
 
-To learn how to use Microsoft Endpoint Configuration Manager or PowerShell script to create VPNv2 profiles, see [Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager](../how-to-aovpn-client-config-mgr.md) or [Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune](../how-to-aovpn-client-intune.md) for more details.
-
-**Prerequisite:**
-
-Windows 10 client computer has already been configured with a VPN connection using Intune.
-
-**Procedure:**
-
-1. In the Azure portal, select **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier in [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune).
+1. In the Azure portal, select **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created in [Configure the VPN client by using Intune](how-to-aovpn-client-intune.md).
 
 2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 
     >[!NOTE]
     >Without this, the VPN client could retrieve the user certificate issued from the on-premises certificate authority, resulting in a failed VPN connection.
 
-    ![Intune portal](../../media/Always-On-Vpn/intune-eap-xml.png)
+    ![Intune portal](../media/Always-On-Vpn/intune-eap-xml.png)
 
 3. Locate the section that ends with **\</AcceptServerName>\</EapType>** and insert the following string between these two values to provide the VPN client with the logic to select the AAD Conditional Access Certificate:
 
@@ -219,15 +204,15 @@ Windows 10 client computer has already been configured with a VPN connection usi
 
    Enabling this setting changes the **\<DeviceCompliance>\<Enabled>true\</Enabled>** setting in the VPNv2 Profile XML.
 
-    ![Conditional Access for Always On VPN - Properties](../../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
+    ![Conditional Access for Always On VPN - Properties](../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
 
 5. Select **OK**.
 
 6. Select **Assignments**, under Include, select **Select groups to include**.
 
-7. Select the **VPN Users** group that receives this policy and select **Save**.
+7. Select the correct group that receives this policy and select **Save**.
 
-    ![CAP for Auto VPN Users - Assignments](../../media/Always-On-Vpn/cap-for-auto-vpn-users-assignments.png)
+    ![CAP for Auto VPN Users - Assignments](../media/Always-On-Vpn/cap-for-auto-vpn-users-assignments.png)
 
 ## Force MDM Policy Sync on the Client
 
