@@ -5,7 +5,7 @@ title: The Role of the AD FS Configuration Database
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/26/2021
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

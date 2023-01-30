@@ -4,7 +4,7 @@ description: This document discusses how to fine tune SQL with AD FS.
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 11/07/2022
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

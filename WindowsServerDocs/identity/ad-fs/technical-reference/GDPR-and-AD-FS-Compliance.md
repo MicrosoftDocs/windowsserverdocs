@@ -5,7 +5,7 @@ title: User Privacy and AD FS
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/24/2018
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # User privacy and AD FS

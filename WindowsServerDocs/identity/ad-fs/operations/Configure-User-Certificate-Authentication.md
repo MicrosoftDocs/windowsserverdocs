@@ -5,7 +5,7 @@ title: Configure AD FS support for user certificate authentication
 author: jenfieldmsft
 ms.author: billmath
 manager: samueld
-ms.date: 11/14/2022
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

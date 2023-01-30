@@ -5,7 +5,7 @@ title: AD FS 2016 Single Sign On Settings
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 08/17/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # AD FS Single Sign-On Settings

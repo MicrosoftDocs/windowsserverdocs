@@ -4,7 +4,7 @@ description:  This document shows an in-depth trace of a WS-Federation exchange 
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 01/18/2018
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

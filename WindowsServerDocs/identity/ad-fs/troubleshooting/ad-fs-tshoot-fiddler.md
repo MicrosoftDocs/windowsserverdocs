@@ -4,7 +4,7 @@ description:  This document describes what Fiddler is and how to install and con
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 03/02/2018
+ms.date: 01/30/2023
 ms.topic: article
 ---
 
