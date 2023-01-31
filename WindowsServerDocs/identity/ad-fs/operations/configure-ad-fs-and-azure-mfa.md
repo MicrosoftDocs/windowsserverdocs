@@ -5,7 +5,7 @@ description: "Learn more about: Configure Azure MFA as authentication provider w
 ms.author: billmath
 author: billmath
 manager: mtillman
-ms.date: 04/29/2021
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Configure Azure MFA as authentication provider with AD FS

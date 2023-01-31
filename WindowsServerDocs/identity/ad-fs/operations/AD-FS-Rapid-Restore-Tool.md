@@ -5,7 +5,7 @@ title: AD FS Rapid Restore Tool
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/24/2019
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

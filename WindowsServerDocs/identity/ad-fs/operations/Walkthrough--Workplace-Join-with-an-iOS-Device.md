@@ -5,7 +5,7 @@ title: Walkthrough - Workplace Join with an iOS Device
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 10/18/2018
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

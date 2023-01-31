@@ -4,7 +4,7 @@ description: The following document discusses compound authentication and AD DS 
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/07/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Compound authentication and AD DS claims in AD FS

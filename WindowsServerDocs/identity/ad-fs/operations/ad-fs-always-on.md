@@ -4,7 +4,7 @@ description: "Learn more about: Setting up an AD FS Deployment with AlwaysOn Ava
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 01/20/2020
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

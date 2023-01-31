@@ -4,7 +4,7 @@ description:  This document describes how to use the various AD FS logs to troub
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 11/09/2022
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

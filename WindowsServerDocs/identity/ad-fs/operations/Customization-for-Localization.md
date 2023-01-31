@@ -5,7 +5,7 @@ title: Customization for Localization
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Customization for Localization

@@ -5,7 +5,7 @@ title: Change the illustration on the AD FS sign-in page
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 11/10/2022
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Change the illustration on the AD FS sign-in page
