@@ -1,6 +1,6 @@
 ---
 title: Configure conditional access for VPN connectivity using Azure AD
-description: Learn how to configure onditional access for VPN connectivity using Azure AD
+description: Learn how to configure conditional access for VPN connectivity using Azure AD
 ms.topic: article
 ms.date: 01/30/2023
 ms.author: wscontent
@@ -10,13 +10,13 @@ author: anaharris-ms
 
 # Conditional access for VPN connectivity using Azure AD
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
 
 In this how-to guide, you'll learn how to grant VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.
 
 ## Prerequisites
 
-- You're familiar with the following topics:
+Before you start configuring Conditional Access for your VPN, you must have completed the following prerequisites:
 
 - [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
