@@ -35,12 +35,12 @@ You can configure the Command shell to automatically complete file and directory
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
 
-```
+```Registry
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor\CompletionChar
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
 ```
 
-```
+```Registry
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\CompletionChar
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
 ```
@@ -260,7 +260,6 @@ To find information about a specific command, in the following A-Z menu, select 
   - [convert gpt](convert-gpt.md)
   - [convert mbr](convert-mbr.md)
 - [copy](copy.md)
-- [cprofile](cprofile.md)
 - [create](create.md)
   - [create partition efi](create-partition-efi.md)
   - [create partition extended](create-partition-extended.md)
@@ -318,8 +317,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [end restore](end-restore.md)
 - [erase](erase.md)
 - [eventcreate](eventcreate.md)
-- [eventquery](eventquery.md)
-- [eventtriggers](eventtriggers.md)
 - [Evntcmd](evntcmd.md)
 - [exec](exec.md)
 - [exit](./exit.md)
@@ -427,7 +424,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [import (shadowdisk)](import.md)
 - [import (diskpart)](import_1.md)
 - [inactive](inactive.md)
-- [inuse](inuse.md)
 - [ipconfig](ipconfig.md)
 - [ipxroute](ipxroute.md)
 - [irftp](irftp.md)
@@ -634,7 +630,6 @@ To find information about a specific command, in the following A-Z menu, select 
 
 ### R
 
-- [rcp](rcp.md)
 - [rd](rd.md)
 - [rdpsign](rdpsign.md)
 - [recover](recover.md)
@@ -747,7 +742,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [sysocmgr](sysocmgr.md)
 - [systeminfo](systeminfo.md)
 
-
 ### T
 
 - [takeown](takeown.md)
@@ -827,7 +821,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [whoami](whoami.md)
 - [winnt](winnt.md)
 - [winnt32](winnt32.md)
-- [winpop](winpop.md)
 - [winrs](winrs.md)
 - [winsat mem](winsat-mem.md)
 - [winsat mfmedia](winsat-mfmedia.md)
