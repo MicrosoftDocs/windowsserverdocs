@@ -10,12 +10,12 @@ ms.topic: article
 
 Applies to: Windows Server: (All supported versions)
 
-> [!IMPORTANT]
-> Forest-wide updates provided in this article are cumulative; you must first install the Forest-wide updates for the version of Windows Server you are running before proceeding to install the later Forest-wide updates.
-
-You can review the following set of changes to help understand and prepare for the schema updates that are performed by `adprep /forestprep` in Windows Server 2019.
+You can review the following set of changes to help understand and prepare for the schema updates that are performed by `adprep /forestprep` in Windows Server.
 
 Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
+
+> [!IMPORTANT]
+> Forest-wide schema updates are performed cumulatively by `adprep`. For example, operations 131 - 135 are performed before operations 136 - 142.
 
 For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](/windows/win32/secauthz/ace-strings). For more information about how to interpret the security ID (SID) strings, see [SID strings](/windows/win32/secauthz/sid-strings).
 
