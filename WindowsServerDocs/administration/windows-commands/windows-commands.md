@@ -30,7 +30,7 @@ A reference of exit and error codes for Windows Commands can be found in the [De
 
 ## Command shell file and directory name automatic completion
 
-You can configure the Command shell to automatically complete file and directory names on a computer or user session when a specified control character is pressed. By default this control character is configured to be the **tab** key for both file and directory names, although they can be different. To change this control character, run `regedit.exe` and navigate to either of the registry keys and entries below, depending on whether you wish to change the value for the current user only, or for all users of the computer.
+You can configure the Command shell to automatically complete file and directory names on a computer or user session when a specified control character is pressed. By default this control character is configured to be the **tab** key for both file and directory names, although they can be different. To change this control character, run `regedit.exe` and navigate to either of the following registry keys and entries, depending on whether you wish to change the value for the current user only, or for all users of the computer.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
@@ -45,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\CompletionChar
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
 ```
 
-Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it is not a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can be specified by hexadecimal or decimal value.
+Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it isn't a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can be specified by hexadecimal or decimal value.
 
 You can also enable or disable file and directory name completion per instance of a Command shell by running `cmd.exe` with the parameter and switch `/F:ON` or `/F:OFF`. If name completion is enabled with the `/F:ON` parameter and switch, the two control characters used are `Ctrl-D` for directory name completion and `Ctrl-F` for file name completion. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
