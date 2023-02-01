@@ -3,10 +3,10 @@ title: Windows commands
 description: Reference
 ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
-author: jasongerend
-ms.author: jgerend
-manager: dongill
-ms.date: 08/16/2022
+author: robinharwood
+ms.author: wscontent
+manager: femila
+ms.date: 02/01/2023
 ---
 
 # Windows Commands
