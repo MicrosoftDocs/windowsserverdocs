@@ -88,7 +88,7 @@ In this section, you'll create an Extensible Authentication Protocol (EAP) confi
 
     1. For **IKE Security Association Parameters**, select the values appropriate to your security policy and your VPN server.
 
-    1. Leave the remaining settings as default, unless your environment requires further configuration. For more information on EAP Profile settings for Intune, see [Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune](mem/intune/configuration/vpn-settings-windows-10).
+    1. Leave the remaining settings as default, unless your environment requires further configuration. For more information on EAP Profile settings for Intune, see [Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune](/mem/intune/configuration/vpn-settings-windows-10).
 
     1. Select **Next**.
 
