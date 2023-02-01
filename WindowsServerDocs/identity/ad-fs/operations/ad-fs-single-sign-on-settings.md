@@ -6,7 +6,6 @@ author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/01/2023
-ms.topic: article
 ---
 # AD FS single sign-on settings
 
