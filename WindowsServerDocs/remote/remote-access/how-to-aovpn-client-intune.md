@@ -2,23 +2,26 @@
 title: Deploy Always On VPN profile to Windows clients with Microsoft Intune
 description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Intune
 ms.topic: article
-ms.date: 01/23/2022
+ms.date: 02/01/2023
 ms.author: anaharris
 author: anaharris-ms
 ---
 
 # Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune
 
-In this how-to article, we'll show you how to use Intune to deploy Always On VPN profiles to configure the ProfileXML CSP node using a base EAP XML sample XML.
- 
+In this how-to article, we'll show you how to use Intune to create and deploy Always On VPN profiles.
+
+However, if you want to create a custom VPN profileXML, follow the guidance in [Apply ProfileXML using Intune](/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune).
+
 ## Prerequisites
 
-InTune uses Azure Active Directory (AD) user groups, so you'll need to:
+Intune uses Azure Active Directory (AAD) user groups, so you'll need to:
 
-<!-- Editorial note: Not sure if we need certificates -->
-- Create an Azure AD user group that's associated with a VPN user authentication certificate, and you'll need to assign users to that group. For guidance on how to setup a VPN Users group, as well as a user certificate for VPN access, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
+- Ensure that you have a Private Key Infrastructure (PKI) capable of issuing user and device certificates for authentication. For more information on certificates for Intune, see [Use certificates for authentication in Microsoft Intune](/mem/intune/protect/certificates-configure).
 
-- Make sure that Azure AD Connect has synced to the VPN Users group from on-premises to Azure AD.
+- Create an Azure AD user group that's associated with VPN users and assign new users to the group as needed.
+
+- Make sure that the VPN users have VPN server connection permissions.
 
 ## Create the Extensible Authentication Protocol (EAP) configuration XML
 
@@ -43,13 +46,11 @@ In this section, you'll create an Extensible Authentication Protocol (EAP) confi
 
 ## Create the Always On VPN configuration policy
 
-1. Sign into the [Azure portal](https://portal.azure.com/).
+1. Sign into [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 
-1. Go to [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. Go to **Devices** > **Configuration profiles**.
 
-1. Go to **Devices** > **Configuration Profiles**.
-
-1. Select **Create Profile**.
+1. Select **+ Create profile**.
 
 1. For **Platform**, select **Windows 10 and later**.
 
@@ -59,60 +60,70 @@ In this section, you'll create an Extensible Authentication Protocol (EAP) confi
 
 1. Select **Create**.
 
-1. Enter a **Name** for the VPN profile and (optionally) a description.
+1. For the **Basics** tab:
 
-     >[!TIP]
-     >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
+    - Enter a **Name** for the VPN profile and (optionally) a description.
 
 1. For the  **Configuration settings** tab:
 
-     -**User this VPN profile with a user/device scope**: Select user or device scope for this profile.
+    1. For **Use this VPN profile with a user/device scope**, select **User**.
 
-    - **Connection name:** Enter the name of the VPN connection; for example, _Contoso AutoVPN_.
+    1. For **Connection type:**, select **IKEv2**.
 
-    - **Servers:**  Select **Import** to add VPN servers.
+    1. For **Connection name:** enter the name of the VPN connection; for example, *Contoso AutoVPN*.
 
-    - **Description** and **IP Address or FQDN:** Enter the description and IP Address or FQDN of the VPN server. These values must align with the Subject Name in the VPN server's authentication certificate.
+    1. For **Servers:**, add the VPN server addresses and descriptions. For the default server, set **Default server** to **True**.
 
-    - **Default server:** If this is the default VPN server, set to **True**. Doing this enables this server as the default server that devices use to establish the connection.
+    1. For **Register IP addresses with internal DNS**, select **Disable**.
 
-    - **Connection type:** Set to **IKEv2**.
+    1. For **Always On:**, select **Enable**.
 
-    - **Always On:** Set to **Enable** to connect to the VPN automatically at the sign-in and stay connected until the user manually disconnects.
+    1. For **Remember credentials at each logon**, select the value that's appropriate to your security policy.
 
-    - **Remember credentials at each logon**:  Boolean value (true or false) for caching credentials. If set to true, credentials are cached whenever possible.
+    1. For **Authentication Method**, select **EAP**.
 
-    - **Authentication Method**: Select **EAP**.
+    1. For **EAP XML**, select the XML you saved in [Create the EAP XML](#create-the-extensible-authentication-protocol-eap-configuration-xml).
 
-    - **EAP XML**: Copy the XML you saved in [Create the EAP XML](#create-the-eap-xml)
+    1. For **Device Tunnel**, select the value that's appropriate for your environment. To learn more about device tunnels, see [Configure VPN device tunnels in Windows 10](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config).
 
+    1. For **IKE Security Association Parameters**, select the values appropriate to your security policy and your VPN server.
 
-1. For the **Scope Tags** tab, select **Next**.
+    1. Leave the remaining settings as default, unless your environment requires further configuration. For more information on EAP Profile settings for Intune, see [Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune](mem/intune/configuration/vpn-settings-windows-10).
 
-1. For the **Assignments** tab, select **Next**.
+    1. Select **Next**.
 
-1. For the **Applicability Rules**, select **Next**.
+1. For the **Scope Tags** tab, leave default settings and select **Next**.
 
-1. Review all your settings, and select **Create**.
+1. For the **Assignments** tab:
 
+    1. Select **Add groups**, and add your VPN user group.
+
+    1. Select **Next**.
+
+1. For the **Applicability Rules** tab, leave default settings and select **Next**.
+
+1. For the **Review + Create** tab, review all your settings, and select **Create**.
 
 ### Sync the Always On VPN configuration policy with Intune
 
-<!-- Will this work? -->
-To test the configuration policy, sign in to a Windows 10+ client computer and then sync with Intune.
+To test the configuration policy, sign in to a Windows 10+ client computer as a VPN user and then sync with Intune.
 
 1. On the Start menu, select **Settings**.
 
 1. In Settings, select **Accounts**, and select **Access work or school**.
 
-1. Select the MDM profile, and select **Info**.
+1. Select the account to connect to your Azure AD, and select **Info**.
 
-1. Select **Sync** to force an Intune policy evaluation and retrieval.
+1. Move down and select **Sync** to force an Intune policy evaluation and retrieval.
 
-1. Close Settings. After synchronization, you see the VPN profile available on the computer.
+1. When the synchronization is complete, close **Settings**. After synchronization, you should be able to connect to your organization's VPN server.
 
 ## Next Steps
 
 - For an in depth tutorial on how to setup Always On VPN, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
+
 - To learn how to configure Always On VPN profiles with Microsoft Configuration Manager, see [Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager](how-to-aovpn-client-config-mgr.md)
+
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).
+
+- To troubleshoot VPN deployment in Microsoft Intune, see [Troubleshooting VPN profile issues in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles?tabs=windows).
