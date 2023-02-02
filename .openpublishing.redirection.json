@@ -10849,6 +10849,11 @@
       "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md",
+      "redirect_url": "/azure/active-directory/authentication/how-to-migrate-mfa-server-to-azure-mfa-with-federation",
+      "redirect_document_id": false
     }
   ]
 }
