@@ -15,7 +15,7 @@ A detailed guide on information you need to know to decommission your AD FS serv
 |:-----------|:-------------|
 |[AD FS decommission guide](../ad-fs/decommission/adfs-decommission-guide.md)|Detailed guide to decommissioning your AD FS servers.|
 |[AD FS migration workshop](https://aka.ms/adfs2azureadworkshop)|Attend a workshop on how to successfully migrate off of AD FS.|
-|[AD FS migration wizard in the Office 365 portal](https://aka.ms/MigrateADFSToMicrosoftAzureAD)|Provides cusom guidance on migrating to Azure AD.|
+|[AD FS migration wizard](https://aka.ms/ADFS2AAD/Guide)|Provides cusom guidance on migrating to Azure AD.|
 
 
 ## Resources for migrating authentication from AD FS to Azure Active Directory
