@@ -11,7 +11,7 @@ ms.topic: article
 # AD FS Operations
 
 
-[!INCLUDE [Migrate to Azure AD](../../../../includes/adfs-to-azure-ad-upgrade.md)]
+[!INCLUDE [Migrate to Azure AD](../../../includes/adfs-to-azure-ad-upgrade.md)]
 
 This document contains a list of all of the documentation operations for AD FS.
 
