@@ -895,8 +895,6 @@
         href: ad-fs/operations/Set-up-an-AD-FS-lab-environment.md
       - name: SQL fine tuning and addressing latency
         href: ad-fs/operations/adfs-sql-latency.md
-      - name: 'Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications'
-        href: ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md
       - name: 'Walkthrough Guide: Manage Risk with Conditional Access Control'
         href: ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md
       - name: 'Walkthrough: Workplace Join with a Windows Device'
