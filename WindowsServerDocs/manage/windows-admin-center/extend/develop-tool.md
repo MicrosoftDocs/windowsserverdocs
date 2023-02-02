@@ -27,7 +27,7 @@ If you haven't already, [prepare your environment](prepare-development-environme
 Once you have all the dependencies installed, you are ready to create your new tool extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center SDK that was installed previously, create a new extension with the following syntax:
 
 ``` cmd
-wac create --company "{!Company Name}" --tool "{!Tool Name}"
+wac create --company "{!Company Name}" --tool "{!Tool Name}" --version latest
 ```
 
 | Value | Explanation | Example |
@@ -38,10 +38,13 @@ wac create --company "{!Company Name}" --tool "{!Tool Name}"
 Here's an example usage:
 
 ``` cmd
-wac create --company "Contoso Inc" --tool "Manage Foo Works"
+wac create --company "Contoso Inc" --tool "Manage Foo Works" --version latest
 ```
 
 This creates a new folder inside the current working directory using the name you specified for your tool, copies all the necessary template files into your project, and configures the files with your company and tool name.
+
+> [!NOTE]
+> The --version flag in this command specifies which version of the Windows Admin Center SDK you'd like to develop with.
 
 Next, change directory into the folder just created, then install required local dependencies by running the following command:
 
