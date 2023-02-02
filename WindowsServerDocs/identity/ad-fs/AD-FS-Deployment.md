@@ -11,6 +11,8 @@ ms.topic: article
 # AD FS Deployment
 
 
+[!INCLUDE [Migrate to Azure AD](../../../../includes/adfs-to-azure-ad-upgrade.md)]
+
 This document contains a list of all of the documentation for deploying AD FS for Windows Server 2016. This includes the following:
 
 * [Best Practices for Securing AD FS](deployment/Best-Practices-Securing-AD-FS.md)
