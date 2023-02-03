@@ -62,7 +62,7 @@ wdsutil /Set-Imagmedia:Windows Vista with Officemediatype:Install /Description:N
 wdsutil /verbose /Set-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /Name:New name /Description:New description /UserFilter:O:BAG:DUD:AI(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;AU) /Enabled:Yes /UnattendFile:\\server\share\unattend.xml /OverwriteUnattend:Yes
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-image command](wdsutil-add-image.md)
 - [wdsutil copy-image command](wdsutil-copy-image.md)

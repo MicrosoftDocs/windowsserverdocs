@@ -200,7 +200,7 @@ rem  3 File(s) copied
 
 In the preceding example, this particular source parameter value **.\\toc\*.yml** copies the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
 
-## Additional References
+## Related links
 
 - [Copy](copy.md)
 - [Move](move.md)
