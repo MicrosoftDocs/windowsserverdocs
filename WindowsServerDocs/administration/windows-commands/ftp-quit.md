@@ -32,7 +32,7 @@ To end the ftp session with the remote computer and return to the operating syst
 quit
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

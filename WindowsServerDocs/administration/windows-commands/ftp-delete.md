@@ -35,7 +35,7 @@ To delete the *test.txt* file on the remote computer, type:
 delete test.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

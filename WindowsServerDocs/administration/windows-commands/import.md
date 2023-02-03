@@ -47,7 +47,7 @@ IMPORT
 #The shadow copy will now be loaded into the system.
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

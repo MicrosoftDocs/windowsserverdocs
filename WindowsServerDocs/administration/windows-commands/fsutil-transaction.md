@@ -45,7 +45,7 @@ To display transaction information for file *c:\test.txt*, type:
 fsutil transaction fileinfo c:\test.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
