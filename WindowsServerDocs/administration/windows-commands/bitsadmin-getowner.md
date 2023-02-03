@@ -33,7 +33,7 @@ To display the owner for the job named *myDownloadJob*:
 bitsadmin /getowner myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

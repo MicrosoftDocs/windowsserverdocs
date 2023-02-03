@@ -34,7 +34,7 @@ To report the temporary filename of file 2 for the job named *myDownloadJob*:
 bitsadmin /gettemporaryname myDownloadJob 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
