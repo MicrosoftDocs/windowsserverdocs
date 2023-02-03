@@ -67,6 +67,6 @@ To change the language ID used by the command line to English (locale ID 409), t
 wmic /locale:ms_409
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

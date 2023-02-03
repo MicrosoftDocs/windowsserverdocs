@@ -53,5 +53,5 @@ winsat mfmedia <parameters>
 -   Membership in the local Administrators group, or equivalent, is the minimum required to use **winsat**. The command must be executed from an elevated command prompt window.
 -   To open an elevated command prompt window, click **Start**, click **Accessories**, right-click **Command Prompt**, and click **Run as administrator**.
 
-## Additional References
+## Related links
 
