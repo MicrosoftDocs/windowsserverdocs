@@ -47,7 +47,7 @@ To save the hive MyApp into the current folder as a file named AppBkUp.hiv, type
 reg save HKLM\Software\MyCo\MyApp AppBkUp.hiv
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

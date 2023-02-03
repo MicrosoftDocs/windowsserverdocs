@@ -102,7 +102,7 @@ C:\Test> pktmon start --trace -p Microsoft-Windows-TCPIP -p Microsoft-Windows-ND
 C:\Test> pktmon start --capture --trace -p Microsoft-Windows-TCPIP -k 0xFF -l 4
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

@@ -78,6 +78,6 @@ To attempt to repair drive C: and to write the content from drive C: to drive D:
 repair-bde C: D: -pw
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

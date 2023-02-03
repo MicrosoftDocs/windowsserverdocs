@@ -29,7 +29,7 @@ Where `<file>` is the ETL file to convert.
 | **-d, --drop-only** | Convert dropped packets only. |
 | **-c, --component-id \<id\>** | Filter packets by a specific component ID. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

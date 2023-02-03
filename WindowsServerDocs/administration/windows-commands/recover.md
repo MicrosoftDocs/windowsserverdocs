@@ -36,6 +36,6 @@ To recover the file *story.txt* in the *\fiction* directory on drive D, type:
 recover d:\fiction\story.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
