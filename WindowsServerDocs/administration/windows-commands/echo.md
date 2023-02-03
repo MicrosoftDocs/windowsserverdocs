@@ -107,6 +107,6 @@ File2.txt
 File3.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

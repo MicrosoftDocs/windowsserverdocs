@@ -53,6 +53,6 @@ Output similar to the following example appears on the screen:
 INFO: The specified 52,428,800 byte(s) of free space is available on current drive.
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
