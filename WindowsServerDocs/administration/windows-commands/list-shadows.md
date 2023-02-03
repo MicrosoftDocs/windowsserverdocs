@@ -27,6 +27,6 @@ list shadows {all | set <setID> | id <shadowID>}
 | set `<setID>` | Lists shadow copies that belong to the specified Shadow Copy Set ID. |
 | id `<shadowID>` | Lists any shadow copy with the specified shadow copy ID. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
