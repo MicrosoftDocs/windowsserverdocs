@@ -58,7 +58,7 @@ tpmtool drivertracing start
 tpmtool drivertracing stop
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

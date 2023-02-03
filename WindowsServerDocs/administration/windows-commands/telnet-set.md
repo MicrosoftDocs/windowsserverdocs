@@ -49,6 +49,6 @@ To set the log file and to begin logging to the local file *tnlog.txt*, type:
 set logfile tnlog.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

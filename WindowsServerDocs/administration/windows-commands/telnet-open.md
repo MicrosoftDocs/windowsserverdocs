@@ -36,6 +36,6 @@ To connect to a telnet server at *telnet.microsoft.com*, type:
 o telnet.microsoft.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
