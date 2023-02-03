@@ -66,6 +66,6 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 
     - For UNIX groups, use the formats: `<NISdomain>\<groupname>`, `<groupname>@<NISdomain>`, `<groupname>@PCNFS`, or `PCNFS\<groupname>`
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

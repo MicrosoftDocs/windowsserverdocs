@@ -62,7 +62,7 @@ To restore MSMQ messages and registry settings, type:
 mqbkup /r c:\msmqbkup
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

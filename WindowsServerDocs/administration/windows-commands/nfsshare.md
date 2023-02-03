@@ -40,7 +40,7 @@ nfsshare {<sharename> | <drive>:<path> | * } /delete
 
 - If *sharename* and `<drive>:<path>` are used, this command exports the folder identified by `<drive>:<path>` as *sharename*. If you use the **/delete** option, the specified folder stops being available to NFS clients.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
