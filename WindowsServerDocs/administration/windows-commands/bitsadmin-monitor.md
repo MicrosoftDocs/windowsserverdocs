@@ -34,7 +34,7 @@ To monitor the transfer queue for jobs owned by the current user and refreshes t
 bitsadmin /monitor /refresh 60
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

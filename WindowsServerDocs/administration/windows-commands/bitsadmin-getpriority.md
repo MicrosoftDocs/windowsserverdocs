@@ -46,7 +46,7 @@ To retrieve the priority for the job named *myDownloadJob*:
 bitsadmin /getpriority myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
