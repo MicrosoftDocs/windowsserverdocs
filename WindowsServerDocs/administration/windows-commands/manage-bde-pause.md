@@ -37,7 +37,7 @@ To pause BitLocker encryption on drive C, type:
 manage-bde -pause C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
