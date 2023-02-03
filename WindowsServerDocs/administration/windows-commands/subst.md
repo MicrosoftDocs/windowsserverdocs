@@ -61,6 +61,6 @@ Instead of typing the full path, you can reach this directory by typing the lett
 z:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

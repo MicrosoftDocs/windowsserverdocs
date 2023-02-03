@@ -47,6 +47,6 @@ schtasks /run
 | [schtasks query](schtasks-query.md) | Displays tasks scheduled to run on the computer. |
 | [schtasks run](schtasks-run.md) | Starts a scheduled task immediately. The **run** operation ignores the schedule, but uses the program file location, user account, and password saved in the task to run the task immediately. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -76,6 +76,6 @@ To restart the remote computer *myremoteserver* with the same parameters as the 
 shutdown /r /m \\myremoteserver /t 60 /c "Reconfiguring myapp.exe" /f /d p:4:1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
