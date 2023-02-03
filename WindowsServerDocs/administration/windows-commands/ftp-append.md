@@ -42,7 +42,7 @@ To append the local *file1.txt* to a file named *file1.txt* on the remote comput
 append file1.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

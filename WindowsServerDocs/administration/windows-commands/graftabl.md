@@ -65,7 +65,7 @@ To load the graphics character set for code page 850 (multilingual) into memory,
 graftabl 850
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
