@@ -42,7 +42,7 @@ To set the "no progress" timeout value to 20 seconds, for the job named *myDownl
 bitsadmin /setnoprogresstimeout myDownloadJob 20
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -39,7 +39,7 @@ bootcfg /delete /id 1
 bootcfg /delete /s srvmain /u maindom\hiropln /p p@ssW23 /id 3
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
