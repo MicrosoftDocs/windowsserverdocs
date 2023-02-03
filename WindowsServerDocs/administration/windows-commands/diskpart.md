@@ -118,7 +118,7 @@ format fs=ntfs label=Backup quick
 
 ![Screenshot of diskpart showing how to create a partition and formatting the drive.](../media/diskpart/diskpart-3.png)
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

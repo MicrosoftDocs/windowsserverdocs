@@ -66,7 +66,7 @@ To remove 8dot3 file names in the *D:\MyData* directory and all subdirectories, 
 fsutil 8dot3name strip /l mylogfile.log /s d:\MyData
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
