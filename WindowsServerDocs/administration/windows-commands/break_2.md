@@ -39,6 +39,6 @@ To make a shadow copy using the alias name Alias1 accessible as a writable volum
 break writable %Alias1%
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
