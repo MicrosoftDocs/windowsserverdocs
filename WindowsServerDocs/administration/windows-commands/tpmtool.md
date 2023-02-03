@@ -18,7 +18,7 @@ This utility can be used to get information about the [Trusted Platform Module (
 ## Syntax
 
 ```
-tpmtool /parameter [<arguments>]
+tpmtool parameter [<arguments>]
 ```
 
 ### Parameters
@@ -28,6 +28,7 @@ tpmtool /parameter [<arguments>]
 | getdeviceinformation | Displays the basic information of the TPM. See the [Win32_Tpm::IsReadyInformation method parameters](/windows/win32/secprov/win32-tpm-isreadyinformation#parameters) article for details about the information flag values. |
 | gatherlogs [output directory path] | Collects TPM logs and places them in the specified directory. If that directory doesn't exist, it's created. By default, the log files are placed in the current directory. The possible files generated are:<ul><li>TpmEvents.evtx</li><li>TpmInformation.txt</li><li>SRTMBoot.dat</li><li>SRTMResume.dat</li><li>DRTMBoot.dat</li><li>DRTMResume.dat</li></ul> |
 | drivertracing `[start | stop]` | Starts or stops collecting TPM driver traces. The trace log, *TPMTRACE.etl*, is created and placed in the current directory. |
+| optionalcommands `[add | remove]` | Add / Remove TpmDiagnostics.exe tool for more Optional Commands. (New in Windows 11.) |
 | /? | Displays help at the command prompt. |
 
 ## Examples
@@ -56,6 +57,18 @@ To collect TPM driver traces, type:
 tpmtool drivertracing start
 # Run scenario
 tpmtool drivertracing stop
+```
+
+To install TpmDiagnostics.exe tool for additional commands, type:
+
+```
+tpmtool optionalcommands add
+```
+
+To remove TpmDiagnostics.exe tool, type:
+
+```
+tpmtool optionalcommands remove
 ```
 
 ## Additional References
