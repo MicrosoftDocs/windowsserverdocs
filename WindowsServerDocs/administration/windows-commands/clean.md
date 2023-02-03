@@ -46,7 +46,7 @@ To remove all formatting from the selected disk, type:
 clean
 ```
 
-## Additional References
+## Related links
 
 - [clear-disk command](/powershell/module/storage/clear-disk)
 
