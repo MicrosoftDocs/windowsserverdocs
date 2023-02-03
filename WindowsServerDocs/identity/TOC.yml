@@ -973,6 +973,8 @@
       items:
       - name: AD FS Decommission Guide
         href: ad-fs/decommission/adfs-decommission-guide.md
+      - name: AD FS to Azure AD FAQ
+        href: ad-fs/decommission/ad-fs-to-azure-ad-faq.md
   - name: Active Directory Rights Management Service
     items:
     - name: Upgrading AD RMS to Windows Server 2016

@@ -73,10 +73,6 @@ Once the above is verified, you can take the following steps (assuming the AD FS
  11. Remove the content of the **CertificateSharingContainer** DN using ADSI Edit after unistallation.
 
 ## Next Steps
-- [AD FS Overview](../ad-fs-overview.md)
-- [AD FS Design](../AD-FS-Design.md)
-- [AD FS Deployment](../AD-FS-Deployment.md)
-- [AD FS Development](../AD-FS-Development.md)
-- [AD FS Operations](../ad-fs-operations.md)
-- [AD FS Technical Reference](../AD-FS-Technical-Reference.md)
+- [AD FS to Azure AD FAQ](ad-fs-to-azure-ad-faq.md)
+
 
