@@ -38,7 +38,7 @@ To display the status of the *Laserprinter1* printer queue on an LPD host at *10
 lpq -S 10.0.0.45 -P Laserprinter1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

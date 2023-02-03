@@ -25,7 +25,7 @@ pktmon hex2pkt [--type { Ethernet | IP | HTTP }]
 | ------------- | --------------- |
 | **-t, --type** | Packet type to decode. Options are Ethernet, IP, and HTTP. Default is Ethernet. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

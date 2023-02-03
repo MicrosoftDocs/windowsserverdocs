@@ -56,7 +56,7 @@ wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namesp
 /Namespacetype:ScheduledCast /time:2006/11/20:17:00 /Clients:20
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allnamespaces command](wdsutil-get-allnamespaces.md)

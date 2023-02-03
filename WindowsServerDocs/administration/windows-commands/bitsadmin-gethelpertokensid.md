@@ -35,7 +35,7 @@ To retrieve the SID of a BITS transfer job named *myDownloadJob*:
 bitsadmin /gethelpertokensid myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -77,6 +77,6 @@ color e
 > [!NOTE]
 > In this example, the background is set to the default color because only one hexadecimal digit is specified.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

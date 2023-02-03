@@ -2007,7 +2007,7 @@ This section defines all of the options you're able to specify, based on the com
 | -t timeout | URL fetch timeout in milliseconds. |
 | -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES` |
 
-### Additional References
+### Related links
 
 For some more examples about how to use this command, see
 

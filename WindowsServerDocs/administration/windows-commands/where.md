@@ -54,6 +54,6 @@ To find all files named Notepad in drive C of the remote computer, Computer1, an
 where /r \\computer1\c notepad.*
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

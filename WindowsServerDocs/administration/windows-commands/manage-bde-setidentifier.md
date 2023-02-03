@@ -37,7 +37,7 @@ To set BitLocker drive identifier field for C, type:
 manage-bde –setidentifier C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

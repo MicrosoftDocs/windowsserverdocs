@@ -42,7 +42,7 @@ To assign the letter E to the volume in focus, type:
 assign letter=e
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

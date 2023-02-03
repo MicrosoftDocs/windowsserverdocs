@@ -93,6 +93,6 @@ Advanced users can salvage files using an interactive console. This mode also re
 refsutil salvage -IC <source volume> <working directory> <options>
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

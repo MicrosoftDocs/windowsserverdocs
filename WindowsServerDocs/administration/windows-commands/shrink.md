@@ -62,7 +62,7 @@ To display the maximum number of MB that the volume can be reduced by, type:
 shrink querymax
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

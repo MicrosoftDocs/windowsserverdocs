@@ -35,7 +35,7 @@ To copy remote files *a.exe* and *b.exe* to the local computer using the current
 mget a.exe b.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

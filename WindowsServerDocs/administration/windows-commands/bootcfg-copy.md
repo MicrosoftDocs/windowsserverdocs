@@ -39,7 +39,7 @@ To copy boot entry 1 and enter \ABC Server\ as the description:
 bootcfg /copy /d \ABC Server\ /id 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

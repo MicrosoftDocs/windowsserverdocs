@@ -43,7 +43,7 @@ To create an extended partition of 1000 megabytes in size, type:
 create partition extended size=1000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

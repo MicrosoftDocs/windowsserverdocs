@@ -29,7 +29,7 @@ To end the ftp session with the remote server and remain at the `ftp>` prompt, t
 close
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

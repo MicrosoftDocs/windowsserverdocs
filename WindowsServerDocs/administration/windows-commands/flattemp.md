@@ -65,7 +65,7 @@ To disable flat temporary folders, type:
 flattemp /disable
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

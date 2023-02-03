@@ -56,6 +56,6 @@ sc.exe create NewService binpath= c:\windows\system32\NewServ.exe type= share st
 
 To learn more about the `sc.exe` command, see [SC commands](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754599(v=ws.11)).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -59,7 +59,7 @@ To start a boot image multicast transmission for Windows Server 2008 R2, type:
 wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemediatype:Boot /Architecture:x64
 /Filename:boot.wim\n\
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)
 - [wdsutil get-multicasttransmission command](wdsutil-get-multicasttransmission.md)

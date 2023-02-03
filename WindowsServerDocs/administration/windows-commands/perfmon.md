@@ -28,7 +28,7 @@ perfmon </res|report|rel|sys>
 | /rel | Starts the Reliability Monitor. |
 | /sys | Starts the Performance Monitor. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

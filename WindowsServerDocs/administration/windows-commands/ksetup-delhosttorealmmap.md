@@ -36,7 +36,7 @@ To change the configuration of the realm CONTOSO, and to delete the mapping of t
 ksetup /delhosttorealmmap IPops897 CONTOSO
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -43,6 +43,6 @@ To copy the file *boot.img* from the remote computer *Host1*, type:
 tftp  -i Host1 get boot.img
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

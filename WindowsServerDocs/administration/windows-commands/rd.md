@@ -67,6 +67,6 @@ To run the previous example in quiet mode, type:
 rd /s /q test
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

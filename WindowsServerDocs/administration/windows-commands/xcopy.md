@@ -43,8 +43,8 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/k|Copies files and retains the read-only attribute on _destination_ files if present on the _source_ files. By default, `xcopy` removes the read-only attribute.|
 |/r|Copies read-only files.|
 |/h|Copies files with hidden and system file attributes. By default, `xcopy` does not copy hidden or system files|
-|/a|Copies only _source_ files that have their archive file attributes set. **/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Additional References](#additional-references).|
-|/m|Copies _source_ files that have their archive file attributes set. Unlike **/a**, **/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Additional References](#additional-references).|
+|/a|Copies only _source_ files that have their archive file attributes set. **/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Related links](#related-links).|
+|/m|Copies _source_ files that have their archive file attributes set. Unlike **/a**, **/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Related links](#related-links).|
 |/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the _destination_ file system. The _destinatio_* file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
@@ -93,7 +93,7 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 
 - Using the `xcopy` command to set archive attribute for _destination_ files
 
-  The `xcopy` command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Additional References](#additional-references).
+  The `xcopy` command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Related links](#related-links).
 
 - Comparing `**`xcopy`**` and **diskcopy**
 
@@ -101,7 +101,7 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 
 - Exit codes for `xcopy`
 
-  To process exit codes returned by `xcopy`, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Additional References](#additional-references). The following table lists each exit code and a description.
+  To process exit codes returned by `xcopy`, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Related links](#related-links). The following table lists each exit code and a description.
 
   |Exit code|Description|
   |---------|-----------|
@@ -200,7 +200,7 @@ rem  3 File(s) copied
 
 In the preceding example, this particular source parameter value **.\\toc\*.yml** copies the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
 
-## Additional References
+## Related links
 
 - [Copy](copy.md)
 - [Move](move.md)

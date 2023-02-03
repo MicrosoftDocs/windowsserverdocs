@@ -33,7 +33,7 @@ To retrieve the time that the job named *myDownloadJob* finished transferring da
 bitsadmin /getcompletiontime myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

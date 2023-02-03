@@ -62,7 +62,7 @@ To reset all call-related information to zero on the client and server, type:
 nfsstat -z
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
