@@ -31,7 +31,7 @@ pktmon counters [--type { all | flow | drop }] [--include-hidden] [--zero] [--dr
 | **--refresh-rate \<n\>** | Number of times to refresh the counters per second, from 1 to 30. Default is 10. |
 | **--json** | Output the counters in JSON format. Implies -i and -r. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon etl2pcap](pktmon-etl2pcap.md)

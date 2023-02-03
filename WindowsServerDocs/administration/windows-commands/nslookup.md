@@ -83,6 +83,6 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
   | Refused | The DNS name server refused to service the request. |
   | format error | The DNS name server found that the request packet was not in the proper format. It may indicate an error in **nslookup**. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

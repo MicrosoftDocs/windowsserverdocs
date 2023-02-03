@@ -42,6 +42,6 @@ mount [-o <option>[...]] [-u:<username>] [-p:{<password> | *}] {\\<computername>
 | `<sharename>` | Specifies the name of the file system. |
 | `<devicename>` | Specifies the drive letter and name of the device. If you use an asterisk (**&#42;**) this value represents the first available driver letter. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
