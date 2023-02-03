@@ -31,6 +31,6 @@ delete volume
 | [Delete shadows](delete-shadows.md) | Deletes shadow copies. |
 | [Delete volume](delete-volume.md) | Deletes a volume. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

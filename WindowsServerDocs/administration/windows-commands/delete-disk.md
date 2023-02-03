@@ -37,7 +37,7 @@ To delete a missing dynamic disk from the list of disks, type:
 delete disk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

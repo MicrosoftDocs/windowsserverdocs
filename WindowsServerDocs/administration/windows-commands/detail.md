@@ -31,6 +31,6 @@ detail vdisk
 | [Detail volume](detail-volume.md) | Displays the disks on which the current volume resides. |
 | [Detail vdisk](detail-vdisk.md) | Displays the properties of the selected VHD. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

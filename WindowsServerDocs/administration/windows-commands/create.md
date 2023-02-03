@@ -34,6 +34,6 @@ create volume
 | [create volume raid command](create-volume-raid.md) | Creates a RAID-5 volume using three or more specified dynamic disks. |
 | [create volume stripe command](create-volume-stripe.md) | Creates a striped volume using two or more specified dynamic disks. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

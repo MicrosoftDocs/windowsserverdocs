@@ -80,7 +80,7 @@ To run `cleanmgr /sageset:1` and `cleanmgr /sagerun:1` together, type:
 cleanmgr /tuneup:1
 ```
 
-## Additional References
+## Related links
 
 - [Free up drive space in Windows 10](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)
 
