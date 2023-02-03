@@ -34,6 +34,6 @@ To view information about a driver file, type:
 wdsutil /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

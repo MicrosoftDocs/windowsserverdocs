@@ -42,7 +42,7 @@ wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /PackageId:{4D36E972
 wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /DriverPackage:XYZ
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

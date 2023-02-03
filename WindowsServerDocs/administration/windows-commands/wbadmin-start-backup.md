@@ -66,7 +66,7 @@ To perform a one-time, non-recursive backup of *d:\\folder1* to the `\\backupsha
 wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
