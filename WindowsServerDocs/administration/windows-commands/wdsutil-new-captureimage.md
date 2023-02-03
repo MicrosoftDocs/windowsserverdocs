@@ -50,6 +50,6 @@ wdsutil /Verbose /Progress /New-CaptureImage /Server:MyWDSServer /Image:WinPE bo
 /DestinationImage /FilePath:\\Server\Share\WinPECapture.wim /Name:New WinPE image /Description:WinPE image with capture utility /Overwrite:No /UnattendFilePath:\\Server\Share\WDSCapture.inf
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
