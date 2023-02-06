@@ -40,7 +40,7 @@ To load a metadata file called metafile.cab from the default location, type:
 load metadata metafile.cab
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

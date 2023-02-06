@@ -4,7 +4,7 @@ description: A technical overview of the custom id token concepts in AD FS 2016 
 author: anandyadavmsft
 ms.author: billmath
 manager: mtillman
-ms.date: 04/29/2020
+ms.date: 01/27/2023
 ms.topic: article
 ms.reviewer: anandy
 ---

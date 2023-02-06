@@ -3,9 +3,8 @@ title: Overview of file sharing using the SMB 3 protocol in Windows Server
 description: An overview of using the SMB 3 protocol for file shares and file serving with Windows Server.
 ms.topic: article
 author: JasonGerend
-ms.author: jgerend
-ms.date: 01/10/2020
-ms.localizationpriority: medium
+ms.author: alalve
+ms.date: 01/26/2023
 ---
 # Overview of file sharing using the SMB 3 protocol in Windows Server
 
@@ -46,7 +45,7 @@ The following sections describe functionality that was added in SMB 3 and subseq
 | SMB global mapping | New | Maps a remote SMB share to a drive letter that is accessible to all users on the local host, including containers. This is required to enable container I/O on the data volume to traverse the remote mount point. Be aware that when using SMB global mapping for containers, all users on the container host can access the remote share. Any application running on the container host also have access to the mapped remote share. For details, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct, SMB Global Mapping](https://techcommunity.microsoft.com/t5/failover-clustering/container-storage-support-with-cluster-shared-volumes-csv/ba-p/372140). |
 | SMB dialect control | New | You can now set registry values to control the minimum SMB version (dialect) and maximum SMB version used. For details, see [Controlling SMB Dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024). |
 
-## Features added in SMB 3.11 with Windows Server 2016 and Windows 10, version 1607
+## Features added in SMB 3.1.1 with Windows Server 2016 and Windows 10, version 1607
 
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |

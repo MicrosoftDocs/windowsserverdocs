@@ -44,6 +44,6 @@ bdehdcfg [–driveinfo <drive_letter>] [-target {default|unallocated|<drive_lett
 | [bdehdcfg: restart](bdehdcfg-restart.md) | Directs the computer to restart after the drive preparation has finished. |
 | /? | Displays Help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -17,7 +17,7 @@ Is it time to move to a newer version of Windows Server? Depending on what you'r
 > Extended support for Windows Server 2008 R2 and Windows Server 2008 ended in January 2020. Extended Security Updates (ESU) are available, with one option to migrate your on-premises servers to Azure, where you can continue to run them on virtual machines. To find out more, see [Extended Security Updates overview](extended-security-updates-overview.md).
 
 > [!TIP]
-> To download Windows Server 2022, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022-preview).
+> To download Windows Server 2022, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022).
 
 ## Clean install
 
@@ -27,7 +27,7 @@ Clean install is simplest way to install Windows Server, where you install on a 
 
 In-place upgrade enables you to keep the same hardware and all the server roles you have set up without wiping and reinstalling the operating system, by which you go from an older operating system to a newer one, keeping your settings, server roles and features, and data intact. For example, if your server is running Windows Server 2019, you can upgrade it to Windows Server 2022. However, not every older operating system has a pathway to every newer one and some roles or features don't support this or need you to take extra steps.  In-place upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.
 
-  For step-by-step guidance and more information on upgrading, review the [Windows Server upgrade content](../upgrade/upgrade-overview.md) and [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
+  For step-by-step guidance and more information on upgrading, review the [Windows Server upgrade content](../get-started/upgrade-overview.md) and [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
 
 ## Cluster Operating System rolling upgrade
 

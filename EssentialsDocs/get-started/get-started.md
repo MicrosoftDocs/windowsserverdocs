@@ -40,8 +40,6 @@ For information about installing, configuring, managing, using, and troubleshoot
 
 - [Windows Server Essentials Health Report](https://www.microsoft.com/download/details.aspx?id=35565)
 
-- [Windows Server Essentials Management Pack](https://www.microsoft.com/download/details.aspx?id=35560)
-
 - **Updates:** see [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
 
 ## End-to-end solution guides

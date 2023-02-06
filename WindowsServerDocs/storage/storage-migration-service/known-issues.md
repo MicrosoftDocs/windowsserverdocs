@@ -228,6 +228,28 @@ at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.Proc
 
 This was a code defect that would manifest if your migration account does not have at least Read permissions to the SMB shares. This issue was first fixed in cumulative update [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062).
 
+Another possible cause might be insufficient access rights to the source file server. While examining the "Microsoft.StorageMigration.Proxy.Service.exe" process with Process Monitor you might see the below result:
+```
+Date: 6/04/2022 15:36:09,1943419
+Thread: 1688
+Class: File System
+Operation: CreateFile
+Result: PRIVILEGE_NOT_HELD
+Path: \\srv1.contoso.com\F$\\public
+Duration: 0.0002573
+
+Desired Access: Read Attributes, Read Control, Synchronize, Access System Security
+Disposition: Open
+Options: Synchronous IO Non-Alert, Open For Backup
+Attributes: N
+ShareMode: Read, Write
+AllocationSize: n/a
+Impersonating: CONTOSO\ServiceAccount
+OpenResult: PRIVILEGE_NOT_HELD
+```
+The actual operation being performed needs the "Open For Backup"-privileges on the source file server. Verify that your user account used to access the source file server is granted the necessary permissions via the following Local Security Policy on this server or using a Group Policy Object:
+    `Security Settings > Local Policies > User Rights Assignment > Back up files and directories`
+
 ## Error 0x80005000 when running inventory
 
 After installing [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
@@ -696,7 +718,7 @@ Guidance: Check the detailed error and make sure the transfer requirements are m
 ========================
 
 ```
-If you dump the SMS debug logs with [Get-SMSLogs](https://aka.ms.smslogs) you also see:
+If you dump the SMS debug logs with [Get-SMSLogs](https://aka.ms/smslogs) you also see:
 
 ```
 SMS Debug log:

@@ -5,7 +5,7 @@ title: Configure AD FS to authenticate users stored in LDAP directories
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Configure AD FS to authenticate users stored in LDAP directories in Windows Server 2016 or later

@@ -45,7 +45,7 @@ Troubleshooting packs comprise a set of root causes, each of which describes a s
 | 1 | **Present, but not fixed:** The troubleshooter identified one or more root causes that remain in a not fixed state. This code is returned even if another root cause was fixed. |
 | 2 | **Not found:** The troubleshooter did not identify any root causes. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

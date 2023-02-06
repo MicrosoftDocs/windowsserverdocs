@@ -8,7 +8,6 @@ manager: femila
 ms.date: 8/16/2021
 ms.prod: windows-server
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
-ms.localizationpriority: medium
 ---
 
 # Features Removed or Deprecated in  Windows Server 2016

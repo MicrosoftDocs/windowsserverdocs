@@ -5,7 +5,7 @@ title: Join to Workplace from Any Device for SSO and Seamless Second Factor Auth
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 12/05/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

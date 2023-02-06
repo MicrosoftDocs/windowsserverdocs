@@ -33,13 +33,14 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 ## RD Connection Brokers
 
-Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016. The following table shows which versions of RDS components work with the 2016 and 2012 R2 versions of the Connection Broker in a highly available deployment with three or more Connection Brokers.
+Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016. The following table shows which versions of RDS components work in a highly available deployment with three or more Connection Brokers.
 
-|3+ Connection Brokers in HA|RDSH or RDVH 2019|RDSH or RDVH 2016|RDSH or RDVH 2012 R2|
-|---|---|---|---|
- |Windows Server 2019 Connection Broker|Supported|Supported|Supported|
- |Windows Server 2016 Connection Broker|N/A|Supported|Supported|
- |Windows Server 2012 R2 Connection Broker|N/A|N/A|Not Supported|
+|3+ Connection Brokers in HA|RDSH or RDVH 2022|RDSH or RDVH 2019|RDSH or RDVH 2016|RDSH or RDVH 2012 R2|
+|---|---|---|---|---|
+ |Windows Server 2022 Connection Broker|Supported|Supported|Supported|Supported|
+ |Windows Server 2019 Connection Broker|N/A|Supported|Supported|Supported|
+ |Windows Server 2016 Connection Broker|N/A|N/A|Supported|Supported|
+ |Windows Server 2012 R2 Connection Broker|N/A|N/A|N/A|Not Supported|
 
 ## Support for graphics processing unit (GPU) acceleration
 
@@ -57,13 +58,13 @@ GPUs presented by a non-Microsoft hypervisor or Cloud Platform must have drivers
 
 The following table shows the scenarios supported by different versions of RDSH hosts.
 
-|Feature|Windows Server 2008 R2|Windows Server 2012 R2|Windows Server 2016|Windows Server 2019|
-|---|---|---|---|---|
-|Use of hardware GPU for all RDP sessions|No|Yes|Yes|Yes|
-|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Yes|Yes|
-|Load balancing between multiple GPUs presented to the OS|No|No|No|Yes|
-|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|No|Yes|
-|H.264/AVC support for 4K resolution|No|No|No|Yes|
+|Feature|Windows Server 2008 R2|Windows Server 2012 R2|Windows Server 2016|Windows Server 2019|Windows Server 2022|
+|---|---|---|---|---|---|
+|Use of hardware GPU for all RDP sessions|No|Yes|Yes|Yes|Yes|
+|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Yes|Yes|Yes|
+|Load balancing between multiple GPUs presented to the OS|No|No|No|Yes|Yes|
+|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|No|Yes|Yes|
+|H.264/AVC support for 4K resolution|No|No|No|Yes|Yes|
 
 ### VDI support for GPUs
 
@@ -72,10 +73,10 @@ The following table shows support for GPU scenarios in the client OS.
 |Feature|Windows 7 SP1|Windows 8.1|Windows 10|
 |---|---|---|---|
 |Use of hardware GPU for all RDP sessions|No|Yes|Yes|
-|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Windows 10 1703 and later|
-|Load balancing between multiple GPUs presented to the OS|No|No|Windows 10 1803 and later|
-|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|Windows 10 1803 and later|
-|H.264/AVC support for 4K resolution|No|No|Windows 10 1803 and later|
+|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Windows 10 1703 or later|
+|Load balancing between multiple GPUs presented to the OS|No|No|Windows 10 1803 or later|
+|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|Windows 10 1803 or later|
+|H.264/AVC support for 4K resolution|No|No|Windows 10 1803 or later|
 
 ### RemoteFX 3D Video Adapter (vGPU) support
 
@@ -91,12 +92,11 @@ Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V 
 
 ### Discrete Device Assignment support
 
-Remote Desktop Services supports Physical GPUs presented with Discrete Device Assignment from Windows Server 2016 or Windows Server 2019 Hyper-V hosts. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
-
+Remote Desktop Services supports Physical GPUs presented with Discrete Device Assignment from Hyper-V hosts running Windows Server 2016 or later. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
 
 ## VDI deployment – supported guest OSes
 
-Windows Server 2016 and Windows Server 2019 RD Virtualization Host servers support the following guest OSes:
+Windows Server 2016 or later RD Virtualization Host servers support the following guest OSes:
 
 - Windows 10 Enterprise
 - Windows 8.1 Enterprise
@@ -109,7 +109,7 @@ Windows Server 2016 and Windows Server 2019 RD Virtualization Host servers suppo
 
 ## Single sign-on
 
-Windows Server 2016 and Windows Server 2019 RDS supports two main SSO experiences:
+RDS in Windows Server 2016 or later supports two main SSO experiences:
 
 - In-app (Remote Desktop application on Windows, iOS, Android, and Mac)
 - Web SSO
@@ -129,4 +129,4 @@ For more information about creating VDI deployment of Remote Desktop Services, c
 
 ## Using Remote Desktop Services with application proxy services
 
-You can use Remote Desktop Services with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-application-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.
+You can use Remote Desktop Services with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-app-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.

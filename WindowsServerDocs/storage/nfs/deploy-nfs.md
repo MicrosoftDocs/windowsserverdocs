@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/12/2021
-ms.localizationpriority: medium
 ---
 # Deploy Network File System
 
@@ -108,7 +107,7 @@ You can create an NFS file share using either Server Manager or Windows PowerShe
 2. Server Manager will start automatically. If it does not automatically start, select **Start**, type **servermanager.exe**, and then select **Server Manager**.
 3. On the left, select **File and Storage Services**, and then select **Shares**.
 4. Select **To create a file share, start the New Share Wizard**.
-5. On the **Select Profile** page, select either **NFS Share – Quick** or **NFS Share - Advanced**, then select **Next**.
+5. On the **Select Profile** page, select either **NFS Share ï¿½ Quick** or **NFS Share - Advanced**, then select **Next**.
 6. On the **Share Location** page, select a server and a volume, and select **Next**.
 7. On the **Share Name** page, specify a name for the new share, and select **Next**.
 8. On the **Authentication** page, specify the authentication method you want to use for this share.

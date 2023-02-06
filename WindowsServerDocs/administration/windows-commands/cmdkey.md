@@ -65,6 +65,6 @@ To delete a credential stored for *Server01*, type:
 cmdkey /delete:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

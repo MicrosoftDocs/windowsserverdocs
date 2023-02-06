@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Changes the default server to the specified Domain Name System (DNS) domain.
 
-This command uses the current default server to look up the information about the specified DSN domain. If you want to lookup information using the initial server, use the [nslookup lserver](nslookup-lserver.md) command.
+This command uses the current default server to look up the information about the specified DNS domain. If you want to lookup information using the initial server, use the [nslookup lserver](nslookup-lserver.md) command.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ server <DNSdomain>
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

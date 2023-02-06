@@ -70,6 +70,6 @@ To display RSoP data for the logged on user, *maindom\hiropln* with the password
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

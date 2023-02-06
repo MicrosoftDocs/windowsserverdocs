@@ -7,14 +7,13 @@ ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.localizationpriority: medium
 ---
 # Security and Assurance in Windows Server
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 >[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
 <img src="../media/landing-icons/security.png" alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 
@@ -31,21 +30,21 @@ In this 6-minute video, Anders Vinberg provides an overview of Microsoft's secur
 ### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
 This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.
 
-### [Security and Assurance Overview session at Ignite](https://channel9.msdn.com/events/ignite/2015/brk2482)
+### Security and Assurance Overview session at Ignite
 This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.
 
 ## Secure virtualization with Shielded VMs
 
-### [Shielded VM in Channel 9](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
+### Shielded VM in Channel 9
 A walkthrough of Shielded VM technology and benefits.
 
 ### [Shielded VM Demo](https://www.youtube.com/watch?v=xip5Qtk-7d8)
 This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.
 
-### [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)
+### [Shielded Virtual Machines in Windows Server video walkthrough](/shows/oemtv/1758)
 This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
 
-### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](https://channel9.msdn.com/events/ignite/2015/brk3457)
+### Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)
 
 This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs.
 
@@ -68,7 +67,7 @@ A road-map for how you can secure your privileged access. This road-map is built
 ### [Just in Time Administration with Microsoft Identity Manager](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.
 
-### [Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management](https://channel9.msdn.com/events/ignite/2015/brk3873)
+### Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management
 This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).
 
 ### [Just Enough Administration Article](https://aka.ms/JEA)
@@ -103,10 +102,10 @@ Control Flow Guard provides built-in protection against some classes of memory c
 Windows Defender provides active detection capabilities to block known malware. Windows Defender is turned on by default and is optimized to support the various server roles in Windows Server.
 
 ## Detecting and Responding to Threats
-### [Security Threat Analysis Using Microsoft Operations Management Suite](https://channel9.msdn.com/events/ignite/2015/brk3464)
+### Security Threat Analysis Using Microsoft Operations Management Suite
 This Ignite presentation discusses how you can use Operational Insights to perform security threat analysis.
 
-### [Microsoft Operations Management Suite (OMS)](https://www.microsoft.com/server-cloud/operations-management-suite/overview.aspx)
+### [Microsoft Operations Management Suite (OMS)](/shows/azure/operations-management-suite-oms-overview)
 The Microsoft Operations Management Suite (OMS) Security and Audit solution processes security logs and firewall events from on-premises and cloud environments to analyze and detect malicious behavior.
 
 ### [OMS and Windows Server](https://www.youtube.com/watch?v=_SaDw1dRy2k)

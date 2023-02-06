@@ -7,7 +7,6 @@ author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
-ms.localizationpriority: medium
 ---
 
 # Clients can't connect and get the "Class not registered" error

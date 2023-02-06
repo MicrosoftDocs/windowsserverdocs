@@ -6,7 +6,6 @@ ms.topic: article
 author: NedPyle
 ms.author: inhenkel
 ms.date: 06/07/2021
-ms.localizationpriority: medium
 ---
 
 # SMB over QUIC
@@ -29,7 +28,7 @@ A file server administrator must opt in to enabling SMB over QUIC. It isn't on b
 
 To use SMB over QUIC, you need the following things:
 
-- A file server running Windows Server 2022 Datacenter: Azure Edition  ([Microsoft Server Operating Systems](https://aka.ms/ws2022ae-ga))
+- A file server running Windows Server 2022 Datacenter: Azure Edition ([Microsoft Server Operating Systems](https://aka.ms/ws2022ae-ga))
 - A Windows 11 computer ([Windows for business](https://www.microsoft.com/windows/business))
 - Windows Admin Center ([Homepage](https://aka.ms/windowsadmincenter))
 - A Public Key Infrastructure to issue certificates like Active Directory Certificate Server or access to a trusted third party certificate issuer like Verisign, Digicert, Let's Encrypt, and so on.
@@ -100,8 +99,8 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 ### Step 3: Connect to SMB shares
 
-1. Join your Windows 11 to your domain.Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOST files for your Windows 11 . Ensure that the server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows 11 .
-1. Move your Windows 11  to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
+1. Join your Windows 11 device to your domain. Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOST files for your Windows 11. Ensure that the server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows 11 .
+1. Move your Windows 11 device to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
 1. In Windows File Explorer, in the Address Bar, type the UNC path to a share on the file server and confirm you can access data in the share. Alternatively, you can use *NET USE /TRANSPORT:QUIC* or *New-SmbMapping -TransportType QUIC* with a UNC path. Examples:
 
     `NET USE * \\fsedge1.contoso.com\sales` *(automatically tries TCP then QUIC)*
@@ -112,10 +111,30 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 ### Configure the KDC Proxy (Optional, but recommended)
 
-By default, a Windows 11 won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel.
+By default, a Windows 11 device won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel. The KDC Proxy is fully supported by SMB over QUIC and highly recommended.
 
 > [!NOTE]
-> You cannot configure the Windows Admin Center in gateway mode using TCP port 443 on a file server where you are configuring KDC Proxy. When configuring WAC on the file server, change the port to one that is not in use and is not 443. If you have already configured WAC on port 443, re-run the WAC setup MSI and choose a different port when prompted. 
+> You cannot configure the Windows Admin Center (WAC) in gateway mode using TCP port 443 on a file server where you are configuring KDC Proxy. When configuring WAC on the file server, change the port to one that is not in use and is not 443. If you have already configured WAC on port 443, re-run the WAC setup MSI and choose a different port when prompted. 
+
+#### Windows Admin Center method
+
+1. Ensure you are using at least Windows Admin Center version 2110.
+2. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on the file servers.
+3. Configure the following group policy setting to apply to the Windows 11 device:
+
+    **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
+
+    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external name you specified for the QUIC server. For example, where the Active Directory domain is named *corp.contoso.com* and the external DNS domain is named *contoso.com*:
+
+    `value name: corp.contoso.com`
+
+    `value: <https fsedge1.contoso.com:443:kdcproxy />`
+
+    This Kerberos realm mapping means that if user *ned@corp.contoso.com* tried to connect to a file server name *fs1edge.contoso.com*, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal *corp.contoso.com* domain. The communication with the client will be over HTTPS on port 443 and user credentials aren't directly exposed on the client-file server network.
+4. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
+5. Apply the group policy and restart the Windows 11 device.  
+
+#### Manual Method
 
 1. On the file server, in an elevated PowerShell prompt, run:
 
@@ -143,23 +162,26 @@ By default, a Windows 11 won't have access to an Active Directory domain control
 
     `Start-Service -Name kpssvc`
 
-1. Configure the following group policy to apply to the Windows 11:
+1. Configure the following group policy to apply to the Windows 11 device:
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
-    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external  name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
+    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
 
     `value name: corp.contoso.com`
 
     `value: <https fsedge1.contoso.com:443:kdcproxy />`
 
-    This Kerberos realm mapping means that if user `ned@corp.contoso.com` tried to connect to a file server name `fs1edge.contoso.com"`, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS/443 and user credentials aren't directly exposed on the client-file server network.
+    This Kerberos realm mapping means that if user `ned@corp.contoso.com` tried to connect to a file server name `fs1edge.contoso.com"`, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS on port 443 and user credentials aren't directly exposed on the client-file server network.
 1. Create a Windows Defender Firewall rule that inbound-enables TCP port 443 for the KDC Proxy service to receive authentication requests.  
-1. Ensure that edge firewalls allow HTTPS/443 inbound to the file server.
-1. Apply the group policy and restart the Windows 11.  
+1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
+1. Apply the group policy and restart the Windows 11 device.  
 
 > [!NOTE]
 > Automatic configuration of the KDC Proxy will come later in the SMB over QUIC and these server steps will not be necessary.
+
+## Certificate expiration and renewal
+An expired SMB over QUIC certificate that you replace with a new certificate from the issuer will contain a new thumbprint. While you can automatically renew SMB over QUIC certificates when they expire using Active Directory Certificate Services, a renewed certificate gets a new thumbprint as well. This effectively means that SMB over QUIC must be reconfigured when the certificate expires, as a new thumbprint must be mapped. You can simply select your new certificate in Windows Admin Center for the existing SMB over QUIC configuration or use the Set-SMBServerCertificateMapping PowerShell command to update the mapping for the new certificate. You can use Azure Automanage for Windows Server to detect impending certificate expiration and prevent an outage. For more information, review [Azure Automanage for Windows Server](/azure/automanage/automanage-windows-server-services-overview). 
 
 ## Notes
 
@@ -179,4 +201,4 @@ By default, a Windows 11 won't have access to an Active Directory domain control
 
 [TLS 1.3 Working Group homepage](https://tlswg.org/)
 
-[Microsoft TLS 1.3 Support Reference](https://devblogs.microsoft.com/premier-developer/microsoft-tls-1-3-support-reference/)
+[Taking Transport Layer Security (TLS) to the next level with TLS 1.3](https://www.microsoft.com/security/blog/2020/08/20/taking-transport-layer-security-tls-to-the-next-level-with-tls-1-3/)

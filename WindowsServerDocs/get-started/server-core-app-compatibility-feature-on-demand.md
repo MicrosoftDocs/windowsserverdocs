@@ -62,8 +62,8 @@ Starting with Windows Server, version 1903, the following components are also av
 > [!IMPORTANT]
 > The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to the Server with Desktop Experience installation option.
 
-> [!CAUTION]
-> There is currently a known issue with App Compatibility FOD for Windows Server 2022. Once installed, if you try to connect to the server using Remote Desktop Protocol (RDP), you can be presented with a black screen and disconnected. This issue will be fixed in a future Cumulative Update. Windows Server 2019 and previous versions are not affected.
+> [!IMPORTANT]
+> For servers running Windows Server 2022, ensure you have installed the [2022-01 Cumulative Update Preview for Microsoft server operating system version 21H2 for x64-based Systems (KB5009608)](https://support.microsoft.com/topic/january-25-2022-kb5009608-os-build-20348-502-preview-54285445-4a79-4bc1-9c9c-fbe7299e1c29) or later cumulative update before you install the App Compatibility FOD. You can verify this by checking that the operating system build number is 20348.502 or greater. Prior to this, if you tried to connect to the server using Remote Desktop Protocol (RDP), you could be presented with a black screen and disconnected.
 
 ### Connected to the internet
 
@@ -78,7 +78,7 @@ Starting with Windows Server, version 1903, the following components are also av
 1. If the server can't connect to Windows Update, instead download the Windows Server Languages and Optional Features ISO image file, and copy the ISO to a shared folder on your local network:
 
    - If you have a volume license, you can download the Windows Server Languages and Optional Features ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+   - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
     > [!NOTE]
     > The Languages and Optional Features ISO image file is new for Windows Server 2022. Previous versions of Windows Server use the Features on Demand (FOD) ISO.
@@ -187,7 +187,7 @@ Starting with Windows Server, version 1903, the following components are also av
 
 - If you choose to also install the Internet Explorer 11 optional package, note that double-clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with Internet Explorer**, or you can open it directly from Internet Explorer **File** -> **Open**.
 
-- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD. Use the PowerShell cmdlet [**Install-WindowsFeature**](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) to add IIS Management Console:
+- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD. Use the PowerShell cmdlet [**Install-WindowsFeature**](/powershell/module/servermanager/install-windowsfeature) to add IIS Management Console:
 
     ```PowerShell
     Install-WindowsFeature -Name Web-Mgmt-Console
@@ -200,7 +200,7 @@ Starting with Windows Server, version 1903, the following components are also av
 1. Download both the Languages and Optional Features ISO and the Windows Server ISO image files to a local folder on a Windows computer. This can be a desktop Windows PC and does not need to be running Windows Server with the Server Core installation option.
 
    - If you have a volume license, you can download the Windows Server Languages and Optional Features ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
+   - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
     > [!NOTE]
     > The Languages and Optional Features ISO image file is new for Windows Server 2022. Previous versions of Windows Server use the Features on Demand (FOD) ISO.

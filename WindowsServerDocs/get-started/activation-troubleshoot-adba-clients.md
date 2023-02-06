@@ -4,9 +4,8 @@ description: Walks through a troubleshooting process for a Windows activation is
 ms.topic: troubleshooting
 ms.date: 09/24/2019
 author: Teresa-Motiv
-ms.author: v-tea
+ms.author: wscontent
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # Example: Troubleshooting Active Directory Based Activation (ADBA) clients that do not activate

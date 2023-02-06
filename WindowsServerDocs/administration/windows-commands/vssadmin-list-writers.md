@@ -5,7 +5,6 @@ ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2018
-ms.localizationpriority: medium
 ---
 
 # vssadmin list writers
@@ -20,7 +19,7 @@ Lists subscribed volume shadow copy writers.
 vssadmin list writers
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

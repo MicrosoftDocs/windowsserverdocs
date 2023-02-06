@@ -1,13 +1,12 @@
 ---
 title: Upgrade and conversion options for Windows Server
-description: Explains how to upgrade or convert Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed.
+description: Explains how to upgrade or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.date: 11/25/2021
 ms.topic: conceptual
 ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.localizationpriority: medium
 ---
 
 # Upgrade and conversion options for Windows Server
@@ -20,7 +19,7 @@ The process of upgrading or converting installations of Windows Server might var
 
 Below are general guidelines for in-place upgrade paths where Windows Server is **already licensed** (that is, not evaluation):
 
-- Upgrades from 32-bit to 64-bit architectures are not supported. All releases of Windows Server since Windows Server 2016 are 64-bit only.
+- Upgrades from 32-bit to 64-bit architectures are not supported. All releases of Windows Server since Windows Server 2008 R2 are 64-bit only.
 - Upgrades from one language to another are not supported.
 - If the server is an Active Directory domain controller, you cannot convert it to a retail version. See [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](../identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012.md) for important information.
 - Upgrades from pre-release versions (previews) of Windows Server are not supported. Perform a clean installation of Windows Server.

@@ -4,7 +4,7 @@ description: "Learn more about: Build Plug-ins with AD FS 2019 Risk Assessment M
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/05/2020
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

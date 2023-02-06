@@ -159,7 +159,7 @@ bitsadmin /reset
 2 out of 2 jobs canceled.
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

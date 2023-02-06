@@ -4,7 +4,7 @@ description: The following document discusses compound authentication and AD DS 
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/07/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Compound authentication and AD DS claims in AD FS
@@ -83,7 +83,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 2. In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
 3. Enter the following information in the claim description
    - Display Name: 'Windows device group'
-   - Claim Description: '<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>' `
+   - Claim Description: `'<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>'` `
 4. Place a check in both boxes.
 5. Click **OK**.
 

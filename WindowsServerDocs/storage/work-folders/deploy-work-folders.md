@@ -175,7 +175,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 
    - <strong>User alias@domain</strong> creates user folders that include a domain name. If you aren't using a file share already in use with Folder Redirection or another user data solution, select this naming convention to eliminate folder naming conflicts when multiple users of the share have identical aliases (which can happen if the users belong to different domains).
 
-6. On the **Enter the sync share name** page, specify a name and a description for the sync share. This is not advertised on the network but is visible in Server Manager and Windows Powershell to help distinguish sync shares from each other.
+6. On the **Enter the sync share name** page, specify a name and a description for the sync share. This is not advertised on the network but is visible in Server Manager and Windows PowerShell to help distinguish sync shares from each other.
 
 7. On the **Grant sync access to groups** page, specify the group that you created that lists the users allowed to use this sync share.
 
@@ -289,4 +289,4 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 |**Understanding**|-   [Work Folders](work-folders-overview.md)|
 |**Planning**|-   [Designing a Work Folders Implementation](plan-work-folders.md)|
 |**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
-|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264(v=ws.11))<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/?view=win10-ps)|
+|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/)|

@@ -36,7 +36,7 @@ To display the version of the BITS Service.
 bitsadmin /util /version
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -16,7 +16,7 @@ ms.date: 07/11/2018
 Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer.
 
 > [!IMPORTANT]
-> This command, servermanagercmd, has been deprecated and it's not guaranteed to be supported in future releases of Windows. We recommend instead that you use the Windows PowerShell cmdlets that are available for Server Manager. For more information, see [Install or Uninstall Roles, Role Services, or Features](/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+> This command, servermanagercmd, has been deprecated and it's not guaranteed to be supported in future releases of Windows. We recommend instead that you use the Windows PowerShell cmdlets that are available for Server Manager. For more information, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
 ## Syntax
 
@@ -60,8 +60,8 @@ To display detailed information about the roles, role services, and features tha
 servermanagercmd -inputpath install.xml -whatif
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Server Manager overview](/administration/server-manager/server-manager)
+- [Server Manager overview](/windows-server/administration/server-manager/server-manager)

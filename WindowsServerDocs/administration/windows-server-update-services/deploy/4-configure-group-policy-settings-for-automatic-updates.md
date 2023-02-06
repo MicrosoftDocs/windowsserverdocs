@@ -83,7 +83,7 @@ Specifies whether Automatic Updates will automatically install updates that don'
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > If the **Configure Automatic Updates** policy setting is set to **Disabled**, this policy has no effect.
@@ -122,7 +122,7 @@ Specifies whether Automatic Updates accepts updates that are signed by entities 
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|Windows RT|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
 > [!NOTE]
 > Updates from a service other than an intranet Microsoft update service must always be signed by Microsoft. This policy setting doesn't affect them.
@@ -145,7 +145,7 @@ Specifies whether a restart timer will always begin immediately after Windows Up
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > If the **No auto-restart with logged on users for scheduled automatic updates installations** policy setting is enabled, this policy has no effect.
@@ -163,7 +163,7 @@ Specifies the hours that Windows will use to determine how long to wait before c
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|Windows RT|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
 > [!NOTE]
 > The **Specify intranet Microsoft update service location** setting must be enabled for this policy to have effect.
@@ -186,7 +186,7 @@ Specifies whether automatic updates are enabled on this computer.
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|Windows RT|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
 If this Group Policy setting is enabled, you must select one of the four options that the setting provides.
 
@@ -203,7 +203,7 @@ Specifies the amount of time Automatic Updates will wait before proceeding with 
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the **Configure Automatic Updates** policy setting is disabled, this policy has no effect.
@@ -221,7 +221,7 @@ This policy setting enables you to specify whether the **Install Updates and Shu
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > This policy setting has no impact if the *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Windows Update** > **Do not display Install Updates and Shut Down option in Shut Down Windows dialog** policy setting is enabled.
@@ -242,7 +242,7 @@ Even when Windows Update is configured to receive updates from an intranet updat
 
 |Supported on|Excluding|
 |---------|-------|
-|Starting with  Windows Server 2012 R2, Windows 8.1, or Windows RT 8.1, Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Starting with  Windows Server 2012 R2, Windows 8.1, or Windows RT 8.1, Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 |Policy setting state|Behavior|
 |-|-|
@@ -257,7 +257,7 @@ Specifies whether the **Install Updates and Shut Down** option is displayed in t
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 |Policy setting state|Behavior|
 |-|-|
@@ -272,7 +272,7 @@ Specifies the target group name or names that are configured in the WSUS console
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|Windows RT|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
 > [!NOTE]
 > This policy applies only when this computer is configured to support the specified target group names in WSUS. If the target group name doesn't exist in WSUS, it will be ignored until it's created. If the **Specify intranet Microsoft update service location** policy setting is disabled or not configured, this policy has no effect.
@@ -297,7 +297,7 @@ The computer won't wake unless there are updates to be installed. If the compute
 
 |Supported on|Excluding|
 |---------|-------|
-|Starting with Windows Vista and Windows Server 2008 (Windows 7), Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Starting with Windows Vista and Windows Server 2008 (Windows 7), Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 |Policy setting state|Behavior|
 |-|-|
@@ -312,7 +312,7 @@ Specifies that to complete a scheduled installation, Automatic Updates will wait
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the **Configure Automatic Updates** policy setting is disabled, this policy has no effect.
@@ -330,7 +330,7 @@ Specifies the amount of time for Automatic Updates to wait before prompting agai
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|Windows RT|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
 > [!IMPORTANT]
 > This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the **Configure Automatic Updates** policy setting is disabled, this policy has no effect.
@@ -353,7 +353,7 @@ If the status is set to **Not Configured**, a missed scheduled installation will
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the **Configure Automatic Updates** policy setting is disabled, this policy has no effect.
@@ -371,7 +371,7 @@ Specifies an intranet server to host updates from Microsoft Update. You can then
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|Windows RT|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
 This setting enables you to specify a WSUS server on your network that will function as an internal update service. Instead of using the public Windows Update and Microsoft Update services on the internet, WSUS clients will search this service for updates that apply. Enabling this setting means that users in your organization don't have to go through a firewall to get updates. It also gives you the opportunity to test updates before deploying them.
 
@@ -399,7 +399,7 @@ Specifies whether Automatic Updates will deliver important and recommended updat
 
 |Supported on|Excluding|
 |---------|-------|
-|Starting with Windows Vista, Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Starting with Windows Vista, Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 |Policy setting state|Behavior|
 |-|-|
@@ -418,7 +418,7 @@ If the **Configure Automatic Updates** policy setting is disabled or is not conf
 
 |Supported on|Excluding|
 |---------|-------|
-|Starting with  Windows Server 2008 (Windows Vista) and Windows 7, Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Starting with  Windows Server 2008 (Windows Vista) and Windows 7, Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > By default, this policy setting is disabled.
@@ -449,7 +449,7 @@ The activation boundary is the daily scheduled time at which Automatic Maintenan
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > This setting is related to option 4 in **Configure Automatic Updates**. If you did not select option 4 in **Configure Automatic Updates**, you don't need to configure this setting.
@@ -467,7 +467,7 @@ The maintenance random delay is the amount of time up to which Automatic Mainten
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > This setting is related to option 4 in **Configure Automatic Updates**. If you did not select option 4 in **Configure Automatic Updates**, you don't need to configure this setting.
@@ -487,7 +487,7 @@ The wake-up policy specifies whether Automatic Maintenance should make a wake-up
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > If the operating computer's power-wake policy is explicitly disabled, this setting has no effect.
@@ -522,7 +522,7 @@ Specifies whether the **Install Updates and Shut Down** option is displayed in t
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 |Policy setting state|Behavior|
 |-|-|
@@ -537,7 +537,7 @@ Specifies whether the **Install Updates and Shut Down** option is allowed as the
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 > [!NOTE]
 > This policy setting has no impact if the *PolicyName* > **User Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Windows Update** > **Do not display Install Updates and Shut Down option in Shut Down Windows** dialog is enabled.
@@ -555,7 +555,7 @@ This setting enables you to remove WSUS client access to Windows Update.
 
 |Supported on|Excluding|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](https://support.microsoft.com/gp/lifeselect)|null|
+|Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|null|
 
 |Policy setting state|Behavior|
 |-|-|

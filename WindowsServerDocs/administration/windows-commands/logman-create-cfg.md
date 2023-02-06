@@ -67,7 +67,7 @@ To create a configuration data collector called cfg_log, which records all WMI o
 logman create cfg cfg_log -mgt root\wmi:select * FROM MSNdis_Vendordriverversion
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

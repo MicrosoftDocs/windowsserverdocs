@@ -5,7 +5,6 @@ ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
 ms.date: 04/12/2018
-ms.localizationpriority: medium
 ---
 
 # Windows Admin Center Settings

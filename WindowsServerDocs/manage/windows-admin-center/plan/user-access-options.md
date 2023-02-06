@@ -5,7 +5,6 @@ ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
 ms.date: 03/07/2019
-ms.localizationpriority: medium
 ---
 
 # User access options with Windows Admin Center
@@ -13,6 +12,9 @@ ms.localizationpriority: medium
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
 When deployed on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
+
+> [!NOTE]
+> Windows Admin Center as an application depends on the operating system and infrastructure for security. Windows Admin Center does not implement, monitor, or enforce a security boundary.
 
 ## Gateway access roles
 

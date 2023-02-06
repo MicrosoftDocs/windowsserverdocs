@@ -3,19 +3,18 @@ title: Comparison of Standard and Datacenter editions Windows Server 2019
 description: Comparison of Standard and Datacenter editions of Windows Server 2019.
 ms.topic: conceptual
 author: jasongerend
-ms.author: jgerend
-manager: femila
-ms.date: 8/16/2021
+ms.author: alalve
+ms.date: 09/16/2022
 ms.prod: windows-server
-ms.localizationpriority: medium
-ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 ---
 
 # Comparison of Standard and Datacenter editions of Windows Server 2019
 
 Use this article to compare Standard and Datacenter editions of Windows Server 2019 to see which will be most appropriate.
 
-## Features available generally
+## Features generally available
+
+# [Full Comparison](#tab/full-comparison)
 
 |Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
@@ -32,18 +31,30 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |SMB Direct and SMB over RDMA|Yes|Yes|
 |Software-defined Networking|No| **Yes** |
 |Storage Migration  Service|Yes|Yes|
-| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, **unlimited** |
+| Storage Replica | Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** |
 |Storage Spaces|Yes|Yes|
 |Storage Spaces Direct|No| **Yes** |
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
 |Work Folders|Yes|Yes|
 
+# [Version Differences](#tab/version-differences)
+
+|Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|Software-defined Networking|No| **Yes** |
+| Storage Replica | Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** |
+|Storage Spaces Direct|No| **Yes** |
+|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
+
+---
+
 ## Locks and Limits
+
+# [Full Comparison](#tab/full-comparison)
 
 | Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
@@ -61,15 +72,25 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | DirectAccess                    | yes                           | yes |
 | DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
+# [Version Differences](#tab/version-differences)
+
+| Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| -------------------              | ---------------------------  | --------------------------- |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+
+---
+
 ## Server roles
+
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|----------|---------------------------|
 |Active Directory Certificate Services| |Yes|Yes|
 |Active Directory Domain Services| |Yes|Yes|
 |Active Directory Federation Services| |Yes|Yes|
-|AD Lightweight Directory Services| |Yes|Yes|
-|AD Rights Management Services| |Yes|Yes|
+|Active Directory Lightweight Directory Services| |Yes|Yes|
+|Active Directory Rights Management Services| |Yes|Yes|
 |Device Health Attestation| |Yes|Yes|
 |DHCP Server| |Yes|Yes|
 |DNS Server| |Yes|Yes|
@@ -96,12 +117,22 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
 |Windows Deployment Services| |Yes*|Yes*|
-|Windows Server Essentials Experience| |No | No |
 |Windows Server Update Services| |Yes|Yes|
 
-*WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the Semi-Annual Channel starting with Windows Server, version 1803)
+> [!NOTE]
+> WDS Transport Server is new to Server Core installations in Windows Server 2019 and also included in the Semi-Annual Channel starting with Windows Server version 1803.
+
+# [Version Differences](#tab/version-differences)
+
+|Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|----------|---------------------------|
+|Network Controller| |No| **Yes** |
+
+---
 
 ## Features
+
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
@@ -122,7 +153,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |I/O Quality of Service|Yes|Yes|
 |IIS Hostable Web Core|Yes|Yes|
 |Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|IPAM Server|Yes|Yes|
+|IP Address Management (IPAM) Server|Yes|Yes|
 |iSNS Server service|Yes|Yes|
 |LPR Port Monitor|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Management OData IIS Extension|Yes|Yes|
@@ -133,36 +164,50 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Network Load Balancing|Yes|Yes|
 |Peer Name Resolution Protocol|Yes|Yes|
 |Quality Windows Audio Video Experience|Yes|Yes|
-|RAS Connection Manager Administration Kit|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+|RAS Connection Manager Administration Kit (CMAK)|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Remote Assistance|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Remote Differential Compression|Yes|Yes|
-|RSAT|Yes|Yes|
+|Remote Server Administration Tools (RSAT)|Yes|Yes|
 |RPC over HTTP Proxy|Yes|Yes|
 |Setup and Boot Event Collection|Yes|Yes|
 |Simple TCP/IP Services|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|SMB 1.0/CIFS File Sharing Support|Installed|Installed|
+|SMB 1.0/CIFS File Sharing Support|Yes|Yes|
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
 |Software Load Balancer|Yes|Yes|
+|Storage Migration Service|Yes|Yes|
+|Storage Migration Service Proxy|Yes|Yes|
 |Storage Replica|Yes|Yes|
+|System Data Archiver|Yes|Yes|
+|System Insights|Yes|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |VM Shielding Tools for Fabric Management|Yes|Yes|
 |WebDAV Redirector|Yes|Yes|
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|Windows Defender features|Installed|Installed|
+|Windows Defender Antivirus|Yes|Yes|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Internal Database|Yes|Yes|
-|Windows PowerShell|Installed|Installed|
+|Windows PowerShell|Yes|Yes|
 |Windows Process Activation Service|Yes|Yes|
 |Windows Search Service|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Server Backup|Yes|Yes|
 |Windows Server Migration Tools|Yes|Yes|
 |Windows Standards-Based Storage Management|Yes|Yes|
+|Windows Subsystem for Linux|Yes|Yes|
 |Windows TIFF IFilter|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |WinRM IIS Extension|Yes|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 support|Installed|Installed|
+|WoW64 Support|Yes|Yes|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+
+# [Version Differences](#tab/version-differences)
+
+|Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (**unlimited Windows and Hyper-V containers**) |
+|Host Guardian Hyper-V Support|No| **Yes** |
+
+---

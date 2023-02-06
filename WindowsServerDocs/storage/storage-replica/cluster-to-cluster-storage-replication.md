@@ -19,7 +19,7 @@ You will configure these computers and storage in a cluster-to-cluster configura
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 8 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.
 >
-> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md).
+> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview).
 
 This walkthrough uses the following environment as an example:
 
@@ -127,7 +127,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 -   **For Storage Spaces Direct:**
 
-1. Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct)
+1. Ensure that each cluster can see that site's storage enclosures only by [deploying Storage Spaces Direct](../storage-spaces/deploy-storage-spaces-direct.md).
 
 2. Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 
@@ -386,4 +386,4 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
--   [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)

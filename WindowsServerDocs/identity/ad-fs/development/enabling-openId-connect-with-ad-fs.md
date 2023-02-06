@@ -5,7 +5,7 @@ title: Build a web application using OpenID Connect with AD FS 2016 and later
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 02/22/2018
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

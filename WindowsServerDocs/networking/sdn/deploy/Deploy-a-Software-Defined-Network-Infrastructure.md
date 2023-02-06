@@ -4,8 +4,8 @@ description: This topic provides links to topics on how to deploy a Microsoft So
 ms.topic: how-to
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
 ms.date: 10/28/2021
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: v-mandhiman
+author: ManikaDhiman
 manager: grcusanz
 ---
 # Deploy a Software Defined Network infrastructure
@@ -48,5 +48,5 @@ These deployments include all the technologies you need for a fully functional i
 - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
 - [Plan SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
 - [Manage SDN](../manage/manage-sdn.md)
-- [Security for SDN](../security/sdn-security-top.md)
+- [Security for SDN](/azure-stack/hci/manage/nc-security)
 - [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)

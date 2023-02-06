@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/07/2020
-ms.localizationpriority: high
 ---
 
 # Windows Admin Center
@@ -18,7 +17,7 @@ To find out what's new, see [Release history](support/release-history.md).
 
 ## Download now
 
-**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use.
+**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use.
 
 For help installing, see [Install](deploy/install.md). For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
 
@@ -39,7 +38,7 @@ Here's a video to give you an overview, followed by a poster giving more details
 
 [![Windows Admin Center poster](media/WAC1910Poster_thumb_small.PNG)](media/WAC1910Poster_thumb.png)
 
-[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
+[Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/main/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
 ## Contents at a glance
 
@@ -110,6 +109,14 @@ Admin Center to Azure</a></li>
     </tr>
     <tr>
             <td>
+            <h3>Windows Admin Center in Azure</h3>
+            <ul>
+            <li><a href="azure/manage-vm.md">Manage a Windows Server IaaS VMs</a>
+            <li><a href="azure/manage-arc-hybrid-machines.md">Manage Azure Arc-enabled Servers (preview)</a>
+            <li><a href="azure/manage-hci-clusters.md">Manage Azure Stack HCI clusters (preview)</a>
+            </ul>
+        </td>
+            <td>
             <h3>Support</h3>
             <ul>
             <li><a href="support/release-history.md">Release history</a>
@@ -118,6 +125,8 @@ Admin Center to Azure</a></li>
             <li><a href="support/known-issues.md">Known issues</a>
             </ul>
         </td>
+    </tr>
+    <tr>
             <td>
             <h3>Extend</h3>
             <ul>
@@ -128,6 +137,7 @@ Admin Center to Azure</a></li>
             <li><a href="extend/publish-extensions.md">Publishing extensions</a>
             </ul>
         </td>
+        <td></td>
     </tr>
 
 </table>

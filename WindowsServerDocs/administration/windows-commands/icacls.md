@@ -27,16 +27,16 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 
 | Parameter | Description |
 | --------- | ----------- |
-| \<filename\> | Specifies the file for which to display DACLs. |
-| \<directory\> | Specifies the directory for which to display DACLs. |
+| \<filename\> | Specifies the file for which to display or modify DACLs. |
+| \<directory\> | Specifies the directory for which to display or modify DACLs. |
 | /t | Performs the operation on all specified files in the current directory and its subdirectories. |
 | /c | Continues the operation despite any file errors. Error messages will still be displayed. |
 | /l | Performs the operation on a symbolic link instead of its destination. |
 | /q | Suppresses success messages. |
-| [/save \<ACLfile\> [/t] [/c] [/l] [/q]] | Stores DACLs for all matching files into *ACLfile* for later use with **/restore**. |
+| [/save \<ACLfile\> [/t] [/c] [/l] [/q]] | Stores DACLs for all matching files into an access control list (ACL) file for later use with **/restore**. |
 | [/setowner \<username\> [/t] [/c] [/l] [/q]] | Changes the owner of all matching files to the specified user. |
 | [/findsid \<sid\> [/t] [/c] [/l] [/q]] | Finds all matching files that contain a DACL explicitly mentioning the specified security identifier (SID). |
-| [/verify [/t] [/c] [/l] [/q]] | Finds all files with ACLs that are not canonical or have lengths inconsistent with ACE (access control entry) counts. |
+| [/verify [/t] [/c] [/l] [/q]] | Finds all files with ACLs that are not canonical or have lengths inconsistent with access control entry (ACE) counts. |
 | [/reset [/t] [/c] [/l] [/q]] | Replaces ACLs with default inherited ACLs for all matching files. |
 | [/grant[:r] \<sid\>:\<perm\>[...]] | Grants specified user access rights. Permissions replace previously granted explicit permissions.<p>Not adding the **:r**, means that permissions are added to any previously granted explicit permissions. |
 | [/deny \<sid\>:\<perm\>[...]] | Explicitly denies specified user access rights. An explicit deny ACE is added for the stated permissions and the same permissions in any explicit grant are removed. |
@@ -44,7 +44,7 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 | [/setintegritylevel [(CI)(OI)] \<Level\>:\<Policy\>[...]] | Explicitly adds an integrity ACE to all matching files. The level can be specified as:<ul><li>**l** - Low</li><li>**m**- Medium</li><li>**h** - High</li></ul>Inheritance options for the integrity ACE may precede the level and are applied only to directories. |
 | [/substitute \<sidold\>\<sidnew\> [...]] | Replaces an existing SID (*sidold*) with a new SID (*sidnew*). Requires using with the `<directory>` parameter. |
 | /restore \<ACLfile\> [/c] [/l] [/q] | Applies stored DACLs from `<ACLfile>` to files in the specified directory. Requires using with the `<directory>` parameter. |
-| /inheritancelevel: [e \| d \| r] | Sets the inheritance level, which can be:<ul><li>**e** - Enables inheritance</li><li>**d** - Disables inheritance and copies the ACEs</li><li>**r** - Removes all inherited ACEs</li></ul> |
+| /inheritancelevel: [e \| d \| r] | Sets the inheritance level, which can be:<ul><li>**e** - Enables inheritance</li><li>**d** - Disables inheritance and copies the ACEs</li><li>**r** - Disables inheritance and removes only inherited ACEs</li></ul> |
 
 ## Remarks
 
@@ -62,7 +62,7 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 
 - The `<perm>` option is a permission mask that can be specified in one of the following forms:
 
-    - A sequence of simple rights:
+    - A sequence of simple rights (basic permissions):
 
       - **F** - Full access
 
@@ -74,15 +74,15 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 
       - **W** - Write-only access
 
-    - A comma-separated list in parenthesis of specific rights:
+    - A comma-separated list in parenthesis of specific rights (advanced permissions):
 
       - **D** - Delete
 
-      - **RC** - Read control
+      - **RC** - Read control (read permissions)
 
-      - **WDAC** - Write DAC
+      - **WDAC** - Write DAC (change permissions)
 
-      - **WO** - Write owner
+      - **WO** - Write owner (take ownership)
 
       - **S** - Synchronize
 
@@ -116,15 +116,17 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 
       - **WA** - Write attributes
 
-  - Inheritance rights may precede either `<perm>` form, and they are applied only to directories:
+  - Inheritance rights may precede either `<perm>` form:
 
-      - **(OI)** - Object inherit
+      - **(I)** - Inherit. ACE inherited from the parent container.
 
-      - **(CI)** - Container inherit
+      - **(OI)** - Object inherit. Objects in this container will inherit this ACE. Applies only to directories.
 
-      - **(IO)** - Inherit only
+      - **(CI)** - Container inherit. Containers in this parent container will inherit this ACE. Applies only to directories.
 
-      - **(NP)** - Do not propagate inherit
+      - **(IO)** - Inherit only. ACE inherited from the parent container, but does not apply to the object itself. Applies only to directories.
+
+      - **(NP)** - Do not propagate inherit. ACE inherited by containers and objects from the parent container, but does not propagate to nested containers. Applies only to directories.
 
 ## Examples
 
@@ -152,6 +154,6 @@ To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a f
 icacls test2 /grant *S-1-1-0:(d,wdac)
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

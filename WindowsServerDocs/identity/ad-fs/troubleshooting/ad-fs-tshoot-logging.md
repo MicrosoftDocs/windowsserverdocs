@@ -4,11 +4,12 @@ description:  This document describes how to use the various AD FS logs to troub
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 02/21/2018
+ms.date: 01/30/2023
 ms.topic: article
 ---
 
 # AD FS Troubleshooting - Events and Logging
+
 AD FS provides two primary logs that can be used in troubleshooting.  They are:
 
 - the Admin Log
@@ -17,32 +18,39 @@ AD FS provides two primary logs that can be used in troubleshooting.  They are:
 Each of these logs will be explained below.
 
 ## Admin Log
+
 The Admin log provides high level information on issues that are occurring and is enabled by default.
 
 ### To view the admin log
-1.  Open Event Viewer
-2.  Expand **Applications and Services Log**.
-3.  Expand **AD FS**.
-4.  Click on **Admin**.
+
+1. Open Event Viewer
+1. Expand **Applications and Services Log**.
+1. Expand **AD FS**.
+1. Click on **Admin**.
 
 ![Screenshot of the Event Viewer with the Admin option called out.](media/ad-fs-tshoot-logging/event1.PNG)
 
 ## Trace Log
-The Trace log is where detailed messages are logged, and will be the most useful log when troubleshooting. Since a lot of trace log information can be generated in a short amount of time, which can impact system performance, the trace logs are disabled by default.
+
+The Trace log is where detailed messages are logged, and will be the most useful log when troubleshooting. Since numerous trace log information can be generated in a short amount of time, which can impact system performance, the trace logs are disabled by default.
 
 ### To enable and view the trace log
-1.  Open Event Viewer
-2.  Right-click on **Applications and Services Log** and select view and click on **Show Analytic and Debug Logs**.  This will show additional nodes on the left.
+
+1. Open **Event Viewer** and expand **Applications and Services Log**.
+2. Right-click on **Applications and Services Log**, click **View** and select **Show Analytic and Debug Logs** (this will show additional nodes on the left).
+
 ![Screenshot of the Event Viewer showing that the user right-clicked Applications and Services Log and selected View with the Show Analytic and Debug Logs option called out.](media/ad-fs-tshoot-logging/event2.PNG)
-3.  Expand AD FS Tracing
-4.  Right-click on Debug and select **Enable Log**.
+
+3. Expand **AD FS Tracing**.
+4. Right-click on **Debug** and select **Enable Log**.
+
 ![Screenshot of the Event Viewer showing that the user right-clicked Debug with the Enable Log option called out.](media/ad-fs-tshoot-logging/event3.PNG)
 
-
 ## Event auditing information for AD FS on Windows Server 2016
-By default, AD FS in Windows Server 2016 has a basic level of auditing enabled.  With basic auditing, administrators will see 5 or less events for a single request.  This marks a significant decrease in the number of events administrators have to look at, in order to see a single request.   The auditing level can be raised or lowered using the PowerShell cmdlt:
 
-```PowerShell
+By default, AD FS in Windows Server 2016 has a basic level of auditing enabled.  With basic auditing, administrators will see 5 or less events for a single request.  This marks a significant decrease in the number of events administrators have to look at, in order to see a single request.   The auditing level can be raised or lowered using the PowerShell cmdlet:
+
+```powershell
 Set-AdfsProperties -AuditLevel
 ```
 
@@ -50,20 +58,21 @@ The table below explains the available auditing levels.
 
 |Audit Level|PowerShell syntax|Description|
 |----- | ----- | ----- |
-|None|Set-AdfsProperties -LogLevel None|Auditing is disabled and no events will be logged.|
-|Basic (Default)|Set-AdfsProperties -LogLevel Basic|No more than 5 events will be logged for a single request|
-|Verbose|Set-AdfsProperties -LogLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|
+|None|Set-AdfsProperties -AuditLevel None|Auditing is disabled and no events will be logged.|
+|Basic (Default)|Set-AdfsProperties -AuditLevel Basic|No more than 5 events will be logged for a single request.|
+|Verbose|Set-AdfsProperties -AuditLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|
 
-To view the current auditing level, you can use the PowerShell cmdlt:  Get-AdfsProperties.
+To view the current auditing level, you can use the PowerShell cmdlet:  Get-AdfsProperties.
 
 ![Screenshot of the PowerShell window showing the results of the Get-AdfsProperties cmdlet with the Audit Level property called out.](media/ad-fs-tshoot-logging/ADFS_Audit_1.PNG)
 
-The auditing level can be raised or lowered using the PowerShell cmdlt:  Set-AdfsProperties -AuditLevel.
+The auditing level can be raised or lowered using the PowerShell cmdlet:  Set-AdfsProperties -AuditLevel.
 
 ![Screenshot of the PowerShell window showing the Set-AdfsProperties -AuditLevel Verbose cmdlet typed in the command prompt.](media/ad-fs-tshoot-logging/ADFS_Audit_2.png)
 
 ## Types of Events
-AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it.  The type of events can be differentiated between login requests (i.e. token requests) versus system requests (server-server calls including fetching configuration information).
+
+AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it.  The type of events can be differentiated between login requests (such as token requests) versus system requests (server-server calls including fetching configuration information).
 
 The table below describes the basic types of events.
 
@@ -79,12 +88,14 @@ The table below describes the basic types of events.
 |Sign Out Failure|1207|Describes a failed sign-out request.|
 
 ## Security Auditing
-Security auditing of the AD FS service account can sometimes assist in tracking down issues with password updates, request/response logging, request contect headers and device registration results.  Auditing of the AD FS service account is disabled by default.
+
+Security auditing of the AD FS service account can sometimes assist in tracking down issues with password updates, request/response logging, request content headers and device registration results. Auditing of the AD FS service account is disabled by default.
 
 ### To enable security auditing
-1. Click Start, point to **Programs**, point to **Administrative Tools**, and then click **Local Security Policy**.
+
+1. Click Start, point to **Programs**, point to **Administrative Tools**, and then select **Local Security Policy**.
 2. Navigate to the **Security Settings\Local Policies\User Rights Management** folder, and then double-click **Generate security audits**.
-3. On the **Local Security Setting** tab, verify that the AD FS service account is listed. If it is not present, click Add User or Group and add it to the list, and then click OK.
+3. On the **Local Security Setting** tab, verify that the AD FS service account is listed. If it is not present, select Add User or Group and add it to the list, and then click OK.
 4. Open a command prompt with elevated privileges and run the following command to enable auditing
    auditpol.exe /set /subcategory:"Application Generated" /failure:enable /success:enable
 5. Close **Local Security Policy**, and then open the AD FS Management snap-in.
@@ -98,13 +109,15 @@ To open the AD FS Management snap-in, click Start, point to Programs, point to A
 
 ![Screenshot of the Events tab of the Federation Service Properties dialog box showing the Success audits and Failure audits options are selected.](media/ad-fs-tshoot-logging/event4.PNG)
 
->[!NOTE]
->The above instructions are used only when AD FS is on a stand-alone member server.  If AD FS is running on a domain controller, instead of the Local Security Policy, use the **Default Domain Controller Policy** located in **Group Policy Management/Forest/Domains/Domain Controllers**.  Click edit and navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Management**
+> [!NOTE]
+> The above instructions are used only when AD FS is on a stand-alone member server.  If AD FS is running on a domain controller, instead of the Local Security Policy, use the **Default Domain Controller Policy** located in **Group Policy Management/Forest/Domains/Domain Controllers**. Click edit and navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Management**.
 
 ## Windows Communication Foundation and Windows Identity Foundation messages
+
 In addition to trace logging, sometimes you may need to view Windows Communication Foundation (WCF) and Windows Identity Foundation (WIF) messages in order to troubleshoot an issue. This can be done by modifying the **Microsoft.IdentityServer.ServiceHost.Exe.Config** file on the AD FS server.
 
 This file is located in **<%system root%>\Windows\ADFS** and is in XML format. The relevant portions of the file are shown below:
+
 ```
 <!-- To enable WIF tracing, change the switchValue below to desired trace level - Verbose, Information, Warning, Error, Critical -->
 
@@ -115,40 +128,39 @@ This file is located in **<%system root%>\Windows\ADFS** and is in XML format. T
 <source name="System.ServiceModel" switchValue="Off" > … </source>
 ```
 
-
 After you apply these changes, save the configuration, and restart the AD FS service. After you enable these traces by setting the appropriate switches, they will appear in the AD FS trace log in the Windows Event Viewer.
 
 ## Correlating Events
-One of the hardest things to troubleshoot is access issues that generate a lot of error or debug events.
+
+One of the hardest things to troubleshoot is access issues that generate numerous errors or debug events.
 
 To help with this, AD FS correlates all events that are recorded to the Event Viewer, in both the admin and the debug logs, which correspond to a particular request by using a unique Globally Unique Identifier (GUID) called the Activity ID. This ID is generated when the token issuance request is initially presented to the web application (for applications using the passive requestor profile) or requests sent directly to the claims provider (for applications using WS-Trust).
 
 ![Screenshot of the Details tab of the event Properties dialog box with the Active I D value called out.](media/ad-fs-tshoot-logging/activityid1.png)
 
 This activity ID remains the same for the entire duration of the request, and is logged as part of every event recorded in the Event Viewer for that request. This means:
- - that filtering or searching the Event Viewer using this activity ID can help keep track of all related events that correspond to the token request
- - the same activity ID is logged across different machines which allows you to troubleshooting a user request across multiple machines such as the Federation Server proxy (FSP)
- - the activity ID will also appear in the user's browser if the AD FS request fails in any way, thus allowing the user to communicate this ID to help desk or IT Support.
+
+- Filtering or searching the Event Viewer using this activity ID can help keep track of all related events that correspond to the token request.
+- The same activity ID is logged across different machines, which allows you to troubleshooting a user request across multiple machines such as the Federation Server proxy (FSP).
+- The activity ID will also appear in the user's browser if the AD FS request fails in any way, thus allowing the user to communicate this ID to help desk or IT Support.
 
 ![Screenshot of the Details tab of the event Properties dialog box with the client request I D value called out.](media/ad-fs-tshoot-logging/activityid2.png)
 
 To aid in the troubleshooting process, AD FS also logs the caller ID event whenever the token-issuance process fails on an AD FS server. This event contains the claim type and value of one of the following claim types, assuming that this information was passed to the Federation Service as part of a token request:
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountnameh
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upnh
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/upn
-- http://schemas.xmlsoap.org/claims/UPN
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddressh
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress
-- http://schemas.xmlsoap.org/claims/EmailAddress
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/name
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier
+
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountnameh`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upnh`
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/upn`
+- `http://schemas.xmlsoap.org/claims/UPN`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddressh`
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress`
+- `http://schemas.xmlsoap.org/claims/EmailAddress`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/name`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier`
 
 The caller ID event also logs the activity ID to allow you to use that activity ID to filter or search the event logs for a particular request.
-
-
-
 
 ## Next Steps
 

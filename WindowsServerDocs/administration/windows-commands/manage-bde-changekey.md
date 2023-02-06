@@ -37,7 +37,7 @@ To create a new startup key on drive E, to use with BitLocker encryption on driv
 manage-bde -changekey C: E:\
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

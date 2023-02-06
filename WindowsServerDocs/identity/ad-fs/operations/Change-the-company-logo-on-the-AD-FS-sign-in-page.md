@@ -5,7 +5,7 @@ title: Changing the company logo on the AD FS sign-in page
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/08/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # Changing the company logo on the AD FS sign-in page

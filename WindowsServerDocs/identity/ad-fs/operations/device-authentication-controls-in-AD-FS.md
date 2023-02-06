@@ -4,7 +4,7 @@ description:  This document describes how to enable device authentication in AD 
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 11/09/2017
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

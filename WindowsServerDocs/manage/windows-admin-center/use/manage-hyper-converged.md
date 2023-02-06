@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
-ms.localizationpriority: medium
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 
@@ -13,7 +12,7 @@ ms.localizationpriority: medium
 
 ## What is Hyper-Converged Infrastructure
 
-Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md), [Software Defined Networking](../../../networking/sdn/software-defined-networking.md) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
+Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview), [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
@@ -288,13 +287,13 @@ You can also configure the virtual network when creating a virtual machine.
 
 It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
 
-- [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
+- [Submit ideas for feature requests and provide feedback](https://aka.ms/wacfeedback)
 - [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Tweet to `@servermgmt`
 
 ### Additional References
 
 - [Windows Admin Center](../overview.md)
-- [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md)
-- [Software Defined Networking](../../../networking/sdn/software-defined-networking.md)
+- [Software Defined Networking](/azure-stack/hci/concepts/software-defined-networking)

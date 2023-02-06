@@ -8,11 +8,11 @@ ms.date: 05/02/2019
 
 # Create new Windows Server articles using GitHub and Visual Studio Code
 
-There are two separate locations where we keep Windows Server technical content. One of the locations is public (windowsserverdocs) while the other is private (windowsserverdocs-pr). Who you are determines which location you contribute to:
+There are two separate locations where we keep Windows Server technical content. One of the locations is public (`windowsserverdocs`) while the other is private (`windowsserverdocs-pr`). Who you are determines which location you contribute to:
 
 - **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
 
-    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the windowsserverdocs-pr repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, continue reading this article.
+    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the `windowsserverdocs-pr` repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, continue reading this article.
 
     - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](edit-existing-using-github.md) article.
 
@@ -24,19 +24,19 @@ There are two separate locations where we keep Windows Server technical content.
 
 Before you can start working in the repo, you must create and set up your GitHub account, set up two-factor verification, and install and configure all the necessary tools. If you've already done this, you can skip down to the [Fork the repository section](#fork-the-repository) of this article.
 
-1. [Create a GitHub account and profile](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#create-a-github-account-and-set-up-your-profile)
+1. [Create a GitHub account and profile](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#create-a-github-account-and-set-up-your-profile)
 
-2. [Link your account to your Microsoft account and to the Microsoft and MicrosoftDocs organizations](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#link-your-github-and-microsoft-accounts)
+2. [Link your account to your Microsoft account and to the Microsoft and MicrosoftDocs organizations](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#link-your-github-and-microsoft-accounts)
 
-3. [Turn on two-factor verification](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#enable-two-factor-authentication-and-create-an-access-token)
+3. [Turn on two-factor verification](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#enable-two-factor-authentication-and-create-an-access-token)
 
-4. [Authorize the build system to access your GitHub account](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#authorize-the-ops-build-system-to-access-your-github-account)
+4. [Authorize the build system to access your GitHub account](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main#authorize-the-ops-build-system-to-access-your-github-account)
 
-5. [Install Visual Studio Code](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=master#install-visual-studio-code)
+5. [Install Visual Studio Code](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=main#install-visual-studio-code)
 
-6. [Install GitHub and its tools](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=master#install-git-client-tools)
+6. [Install GitHub and its tools](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=main#install-git-client-tools)
 
-7. [Install the Docs Authoring Pack](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=master#install-the-docs-authoring-pack)
+7. [Install the Docs Authoring Pack](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-tools?branch=main#install-the-docs-authoring-pack)
 
 ## Set up your own version of the repo
 
@@ -48,7 +48,8 @@ You need a local copy of the source files, so you can create pull requests from 
 
 #### To fork the repository
 
-1. Sign in to your GitHub account and go to https://github.com/microsoftdocs/windowsserverdocs-pr.
+1. Sign in to your GitHub account and browse to the [`windowsserverdocs-pr` GitHub repository](https://github.com/MicrosoftDocs/windowsserverdocs-pr)
+.
 
 2. Select **Fork**.
 
@@ -125,7 +126,7 @@ Before you can start to work on your content, you must create a new branch in yo
     >[!Note]
     >We highly recommend naming your branch something obvious and unique so you can find it again later.
 
-    After the commands finish, you'll be in your new branch and ready to create your new file. You only need to change into the windowsserverdocs-pr repo once per instance of your Git Bash. If you close Git Bash, you will need to change directories again after you open it.
+    After the commands finish, you'll be in your new branch and ready to create your new file. You only need to change into the `windowsserverdocs-pr` repo once per instance of your Git Bash. If you close Git Bash, you will need to change directories again after you open it.
 
 #### To create a new file in your branch
 
@@ -186,7 +187,7 @@ After you've completed your article, you must get approval from your writer (all
 
 #### To submit your pull request
 
-1. Go to https://github.com/MicrosoftDocs/windowsserverdocs-pr and select the **Pull requests** tab.
+1. Browse to the [`windowsserverdocs-pr` GitHub repository](https://github.com/MicrosoftDocs/windowsserverdocs-pr) and select the **Pull requests** tab.
 
 2. In the **Reviewers** area of the right pane, select the gear icon, and then enter the _windowsservercontent_ alias for review.
 
@@ -221,6 +222,6 @@ For more information about GitHub and the markdown language, see:
 
 ### Markdown
 
-- [Our internal markdown guidance](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master)
+- [Our internal markdown guidance](https://review.learn.microsoft.com/help/contribute/markdown-reference?branch=main)
 
 - [External, GitHub tutorial](https://www.markdowntutorial.com/)

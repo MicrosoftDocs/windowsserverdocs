@@ -157,8 +157,6 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-If you would like to see the Health Service in action and learn more about its roll-out mechanism, have a look at this video: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
-
 ## Frequently asked questions
 
 Also see [Troubleshooting drive firmware updates](troubleshoot-firmware-update.md).

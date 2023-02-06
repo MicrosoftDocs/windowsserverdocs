@@ -2,10 +2,9 @@
 title: Develop a solution extension
 description: Develop a solution extension Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Develop a solution extension
@@ -30,12 +29,12 @@ If you would like to build a management GUI for services not defined by the defa
 
 If you haven't already, [prepare your environment](prepare-development-environment.md) by installing dependencies and global prerequisites required for all projects.
 
-## Create a new solution extension with the Windows Admin Center CLI ##
+## Create a new solution extension with the Windows Admin Center SDK ##
 
-Once you have all the dependencies installed, you are ready to create your new solution extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center CLI that was installed previously, create a new extension with the following syntax:
+Once you have all the dependencies installed, you are ready to create your new solution extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center SDK that was installed previously, create a new extension with the following syntax:
 
 ```
-wac create --company "{!Company Name}" --solution "{!Solution Name}" --tool "{!Tool Name}"
+wac create --company "{!Company Name}" --solution "{!Solution Name}" --tool "{!Tool Name}" --version latest
 ```
 
 | Value | Explanation | Example |
@@ -52,6 +51,9 @@ wac create --company "Contoso Inc" --solution "Contoso Foo Works Suite" --tool "
 
 This creates a new folder inside the current working directory using the name you specified for your solution, copies all the necessary template files into your project, and configures the files with your company, solution, and tool name.
 
+> [!NOTE]
+> The --version flag in this command specifies which version of the Windows Admin Center SDK you'd like to target. Read about how to [target a different version](target-sdk-version.md) of the Windows Admin Center SDK to keep up your extension up to date with the latest SDK and platform changes.
+
 Next, change directory into the folder just created, then install required local dependencies by running the following command:
 
 ```
@@ -62,7 +64,7 @@ Once this completes, you've set up everything you need to load your new extensio
 
 ## Add content to your extension
 
-Now that you've created an extension with the Windows Admin Center CLI, you are ready to customize content.  See these guides for examples of what you can do:
+Now that you've created an extension with the Windows Admin Center SDK, you are ready to customize content.  See these guides for examples of what you can do:
 
 - Add an [empty module](guides/add-module.md)
 - Add an [iFrame](guides/add-iframe.md)
@@ -99,7 +101,3 @@ Your project can be side loaded into a local instance of Windows Admin Center fo
 *	Refresh the web browser
 
 Your project will now be visible in the Tools list with (side loaded) next to the name.
-
-## Target a different version of the Windows Admin Center SDK
-
-Keeping your extension up to date with SDK changes and platform changes is easy.  Read about how to [target a different version](target-sdk-version.md) of the Windows Admin Center SDK.

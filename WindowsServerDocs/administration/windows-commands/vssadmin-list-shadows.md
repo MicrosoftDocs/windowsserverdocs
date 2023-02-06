@@ -5,7 +5,6 @@ ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2018
-ms.localizationpriority: medium
 ---
 
 # vssadmin list shadows
@@ -27,7 +26,7 @@ vssadmin list shadows [/for=<ForVolumeSpec>] [/shadow=<ShadowID>]
 | /for=`<ForVolumeSpec>` | Specifies which volume the shadow copies will be listed for. |
 | /shadow=`<ShadowID>` | Lists the shadow copy specified by ShadowID. To get the shadow copy ID, use the [vssadmin list shadows command](vssadmin-list-shadows.md). When you type a shadow copy ID, use the following format, where each *X* represents a hexadecimal character:<p>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

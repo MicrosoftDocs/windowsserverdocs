@@ -30,7 +30,7 @@ To start the server, type one of the following:
 wdsutil /start-Server
 wdsutil /verbose /start-Server /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-server command](wdsutil-disable-server.md)
 - [wdsutil enable-server command](wdsutil-enable-server.md)

@@ -3,19 +3,18 @@ title: Comparison of Standard and Datacenter editions Windows Server 2016
 description: Comparison of Standard and Datacenter editions of Windows Server 2016.
 ms.topic: conceptual
 author: jasongerend
-ms.author: jgerend
-manager: femila
-ms.date: 08/16/2021
+ms.author: alalve
+ms.date: 09/16/2022
 ms.prod: windows-server
-ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
-ms.localizationpriority: medium
 ---
 
 # Comparison of Standard and Datacenter editions of Windows Server 2016
 
 Use this article to compare Standard and Datacenter editions of Windows Server 2016 to see which will be most appropriate.
 
-## Features available generally
+## Features generally available
+
+# [Full Comparison](#tab/full-comparison)
 
 |Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
 |-------------------|----------|---------------------------|
@@ -38,12 +37,24 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| **Can be host or guest** |
 |Work Folders|Yes|Yes|
 
+# [Version Differences](#tab/version-differences)
+
+|Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
+|-------------------|----------|---------------------------|
+| Software-defined Networking | No | **Yes** |
+|Storage Replica | No | **Yes** |
+|Storage Spaces Direct|No| **Yes** |
+|Inherited activation|As guest if hosted on Datacenter| **Can be host or guest** |
+
+---
+
 ## Locks and Limits
+
+# [Full Comparison](#tab/full-comparison)
 
 | Locks and Limits | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | ------------------- |---------- | --------------------------- |
@@ -61,15 +72,25 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | DirectAccess            | yes             | yes                |
 | DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
+# [Version Differences](#tab/version-differences)
+
+| Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| -------------------              | ---------------------------  | --------------------------- |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+
+---
+
 ## Server roles
+
+# [Full Comparison](#tab/full-comparison)
 
 | Windows Server roles available     | Role services | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | -------------------                | ----------    | ----------                   | ---------------------------    |
 | Active Directory Certificate Services|              | Yes                          | Yes                            |
 | Active Directory Domain Services    |               | Yes                          | Yes                            |
 | Active Directory Federation Services|               | Yes                          | Yes                            |
-| AD Lightweight Directory Services| |Yes|Yes|
-| AD Rights Management Services| |Yes|Yes|
+| Active Directory Lightweight Directory Services| |Yes|Yes|
+| Active Directory Rights Management Services| |Yes|Yes|
 | Device Health Attestation| |Yes|Yes|
 | DHCP Server| |Yes|Yes|
 | DNS Server| |Yes|Yes|
@@ -100,7 +121,18 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | Windows Server Essentials Experience| |Yes|Yes|
 | Windows Server Update Services| |Yes|Yes|
 
+# [Version Differences](#tab/version-differences)
+
+|Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|----------|---------------------------|
+| Hyper-V| |Yes|Yes; **including Shielded Virtual Machines**|
+| Network Controller| |No| **Yes** |
+
+---
+
 ## Features
+
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server Features available|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
 |-------------------|----------|---------------------------|
@@ -139,7 +171,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |RPC over HTTP Proxy|Yes|Yes|
 |Setup and Boot Event Collection|Yes|Yes|
 |Simple TCP/IP Services|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|SMB 1.0/CIFS File Sharing Support|Installed|Installed|
+|SMB 1.0/CIFS File Sharing Support|Yes|Yes|
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
@@ -150,10 +182,10 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |VM Shielding Tools for Fabric Management|Yes|Yes|
 |WebDAV Redirector|Yes|Yes|
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|Windows Defender features|Installed|Installed|
+|Windows Defender features|Yes|Yes|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Internal Database|Yes|Yes|
-|Windows PowerShell|Installed|Installed|
+|Windows PowerShell|Yes|Yes|
 |Windows Process Activation Service|Yes|Yes|
 |Windows Search Service|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Server Backup|Yes|Yes|
@@ -163,5 +195,14 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |WinRM IIS Extension|Yes|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 support|Installed|Installed|
+|WoW64 support|Yes|Yes|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+
+# [Version Differences](#tab/version-differences)
+
+|Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|Host Guardian Hyper-V Support|No|**Yes** |
+|Software Load Balancer|No|**Yes** |
+
+---

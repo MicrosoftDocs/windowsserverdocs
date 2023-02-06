@@ -6,8 +6,7 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/15/2021
-ms.localizationpriority: medium
+ms.date: 11/03/2022
 ---
 
 # Get started with the iOS client
@@ -18,9 +17,12 @@ You can use the Remote Desktop client for iOS to work with Windows apps, resourc
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for iOS and iPadOS](/azure/virtual-desktop/users/connect-ios-ipados).
+
 > [!NOTE]
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
-> - The iOS client supports devices running iOS 6.x and newer.
+> - The iOS client supports devices running iOS 14.x and newer.
 
 ## Get the Remote Desktop client and start using it
 
@@ -66,10 +68,6 @@ To add a workspace:
 1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
 2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
    - If you use a URL, use the one your admin gave you.
-      - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
-        - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-        - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-        - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.
@@ -186,4 +184,4 @@ If Bluetooth is enabled on your iOS device, the client automatically detects the
 While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 
 > [!TIP]
-> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread.

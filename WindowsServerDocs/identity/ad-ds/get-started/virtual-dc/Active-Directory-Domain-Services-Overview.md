@@ -5,7 +5,7 @@ title: Active Directory Domain Services Overview
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 08/16/2022
 ms.topic: article
 ---
 
@@ -23,16 +23,16 @@ This data store, also known as the directory, contains information about Active 
 Security is integrated with Active Directory through logon authentication and access control to objects in the directory. With a single network logon, administrators can manage directory data and organization throughout their network, and authorized network users can access resources anywhere on the network. Policy-based administration eases the management of even the most complex network. For more information about Active Directory security, see [Security overview](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
 Active Directory also includes:
-* A set of rules, **the schema**, that defines the classes of objects and attributes contained in the directory, the constraints and limits on instances of these objects, and the format of their names. For more information about the schema, see Schema.
+* A set of rules, **the schema**, that defines the classes of objects and attributes contained in the directory, the constraints and limits on instances of these objects, and the format of their names. For more information about the schema, see [Schema](/previous-versions/windows/it-pro/windows-server-2003/cc756876(v=ws.10)).
 
 
-* A **global catalog** that contains information about every object in the directory. This allows users and administrators to find directory information regardless of which domain in the directory actually contains the data. For more information about the global catalog, see The role of the global catalog.
+* A **global catalog** that contains information about every object in the directory. This allows users and administrators to find directory information regardless of which domain in the directory actually contains the data. For more information about the global catalog, see [Global catalog](/windows/win32/ad/global-catalog).
 
 
-* A **query and index mechanism**, so that objects and their properties can be published and found by network users or applications. For more information about querying the directory, see Finding directory information.
+* A **query and index mechanism**, so that objects and their properties can be published and found by network users or applications. For more information about querying the directory, see [Searching in Active Directory Domain Services](/windows/win32/ad/searching-in-active-directory-domain-services).
 
 
-* A **replication service** that distributes directory data across a network. All domain controllers in a domain participate in replication and contain a complete copy of all directory information for their domain. Any change to directory data is replicated to all domain controllers in the domain. For more information about Active Directory replication, see Replication overview.
+* A **replication service** that distributes directory data across a network. All domain controllers in a domain participate in replication and contain a complete copy of all directory information for their domain. Any change to directory data is replicated to all domain controllers in the domain. For more information about Active Directory replication, see [Active Directory Replication Concepts](../replication/Active-Directory-Replication-Concepts.md).
 
 ## Understanding Active Directory
  This section provides links to core Active Directory concepts:

@@ -4,7 +4,6 @@ description: How Windows Admin Center compares with and complements other Micros
 ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
-ms.localizationpriority: medium
 ms.date: 08/07/2020
 ---
 

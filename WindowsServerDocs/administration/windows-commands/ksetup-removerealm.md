@@ -38,7 +38,7 @@ ksetup /removerealm CORP.CONTOSO.CON
 
 To verify the removal, you can run the **ksetup** command and review the output.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

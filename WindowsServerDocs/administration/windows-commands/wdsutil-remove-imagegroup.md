@@ -32,7 +32,7 @@ To remove the image group, type one of the following:
 wdsutil /remove-ImageGroumediaGroup:ImageGroup1
 wdsutil /verbose /remove-ImageGroumediaGroup:My Image Group /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-imagegroup command](wdsutil-add-imagegroup.md)
 - [wdsutil get-allimagegroups command](wdsutil-get-allimagegroups.md)

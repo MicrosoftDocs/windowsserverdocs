@@ -42,7 +42,7 @@ To stop the instance of Internet Explorer started by the *InternetOn* task on th
 schtasks /end /tn InternetOn /s Svr01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

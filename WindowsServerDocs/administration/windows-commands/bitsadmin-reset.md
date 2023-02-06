@@ -36,7 +36,7 @@ To cancel all the jobs in the transfer queue for the current user.
 bitsadmin /reset
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

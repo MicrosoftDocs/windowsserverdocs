@@ -33,7 +33,7 @@ To resume the job named *myDownloadJob*:
 bitsadmin /resume myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

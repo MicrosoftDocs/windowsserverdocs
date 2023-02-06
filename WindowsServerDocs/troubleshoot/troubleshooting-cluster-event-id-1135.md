@@ -11,6 +11,9 @@ ms.topic: troubleshooting
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806331" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Active Directory replication issues.
+
 This article helps you diagnose and resolve Event ID 1135, which may be logged during the startup of the Cluster service in Failover Clustering environment.
 
 ## Start Page
@@ -18,7 +21,7 @@ This article helps you diagnose and resolve Event ID 1135, which may be logged d
 Event ID 1135 indicates that one or more Cluster nodes were removed from the active failover cluster membership. It may be accompanied by the following symptoms:
 
 - Cluster Failover\nodes being removed from active Failover Cluster membership:
- [Having a problem with nodes being removed from active Failover Cluster membership](/problem-nodes-failover-cluster.md)
+ [Having a problem with nodes being removed from active Failover Cluster membership](/windows-server/troubleshoot/problem-nodes-failover-cluster)
 - Event ID 1069
  [Event ID 1069 — Clustered Service or Application Availability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756225(v=ws.10))
 - Event ID 1177 for Quorum loss
@@ -46,13 +49,13 @@ From an elevated cmd prompt, run: **cluster.exe node /stat**
 
 #### For Windows Server 2012 and Windows Server 2012 R2 cluster
 
-Run the following PS command: [`Get-ClusterResource`](/powershell/module/failoverclusters/get-clusterresource)
+Run the following PowerShell command: [`Get-ClusterResource`](/powershell/module/failoverclusters/get-clusterresource)
 
 Is the cluster service continuously running and available on all the nodes?
 
-## Solution for cluster service is failing
+<!---## Solution for cluster service is failing--->
 
-If the cluster service is failing, troubleshoot using this article: [Windows Server 2008 and 2008R2 Failover Cluster Startup Switches](/archive/blogs/askcore/windows-server-2008-and-2008r2-failover-cluster-startup-switches).
+<!---If the cluster service is failing, troubleshoot using this article: [Windows Server 2008 and 2008R2 Failover Cluster Startup Switches](/archive/blogs/askcore/windows-server-2008-and-2008r2-failover-cluster-startup-switches).--->
 
 ## Several scenarios of Event ID 1135
 
@@ -117,7 +120,7 @@ Such events are possible when the network channels between the nodes are choked 
 
 ## Review Cluster Networks
 
-We would recommend that you review you Cluster Networks by checking the following three options one by one to continue this troubleshooting guide.
+We would recommend that you review your Cluster Networks by checking the following three options one by one to continue this troubleshooting guide.
 
 ### Check for Antivirus Exclusion
 

@@ -4,7 +4,7 @@ description: This document describes the new sign-in experience for AD FS 2019.
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 09/19/2018
+ms.date: 01/30/2023
 ms.topic: article
 ---
 # AD FS paginated sign-in

@@ -3,17 +3,19 @@ metadata:
   description: "Learn more about"
   title: DFS Replication - FAQ
   ms.date: 4/30/2021
-  author: JasonGerend
-  manager: elizapo
-  ms.author: jgerend
-  ms.topic: article
+  author: nedpyle
+  manager: brianm
+  ms.author: nedpyle
+  ms.topic: faq
   ms.prod: windows-server
-    
 title: "DFS Replication FAQ"
 summary: |
-  Updated: April 30, 2019
+  Updated: January 30, 2019
   
-  Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+  Applies To: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
+  > [!div class="nextstepaction"]
+  > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806278" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common File replication issues.
   
   This FAQ answers questions about Distributed File System (DFS) Replication (also known as DFS-R or DFSR) for Windows Server.
   
@@ -44,7 +46,7 @@ sections:
       - question: |
           Can DFS Replication replace FRS for SYSVOL replication
         answer: |
-          Yes, DFS Replication can replace FRS for SYSVOL replication on servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. Servers running Windows Server 2003 R2 do not support using DFS Replication to replicate the SYSVOL folder.
+          Yes, DFS Replication can replace FRS for SYSVOL replication on servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. Servers running Windows Server 2003 R2 don't support using DFS Replication to replicate the SYSVOL folder.
           
           For more information about replicating SYSVOL by using DFS Replication, see the [Migrate SYSVOL replication to DFS Replication](./migrate-sysvol-to-dfsr.md).
           
@@ -65,7 +67,7 @@ sections:
           
           You can also use the SMB/CIFS client functionality included in many UNIX clients to directly access the Windows file shares, although this functionality is often limited or requires modifications to the Windows environment (such as disabling SMB Signing by using Group Policy).
           
-          DFS Replication interoperates with NFS on a server running a Windows Server operating system, but you cannot replicate an NFS mount point.
+          DFS Replication interoperates with NFS on a server running a Windows Server operating system, but you can't replicate an NFS mount point.
           
       - question: |
           Can I use the Volume Shadow Copy Service with DFS Replication?
@@ -75,19 +77,19 @@ sections:
       - question: |
           Can I use Windows Backup (Ntbackup.exe) to remotely back up a replicated folder?
         answer: |
-          No, using Windows Backup (Ntbackup.exe) on a computer running Windows Server 2003 or earlier to back up the contents of a replicated folder on a computer running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 is not supported.
+          No, using Windows Backup (Ntbackup.exe) on a computer running Windows Server 2003 or earlier to back up the contents of a replicated folder on a computer running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 isn't supported.
           
           To back up files that are stored in a replicated folder, use Windows Server Backup or Microsoft&reg; System Center Data Protection Manager. For information about Backup and Recovery functionality in Windows Server 2008 R2 and Windows Server 2008, see [Backup and Recovery](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754097(v=ws.10)). For more information, see [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261) (https://go.microsoft.com/fwlink/?LinkId=182261).
           
       - question: |
           Do file system policies impact DFS Replication?
         answer: |
-          Yes. Do not configure file system policies on replicated folders. The file system policy reapplies NTFS permissions at every Group Policy refresh interval. This can result in sharing violations because an open file is not replicated until the file is closed.
+          Yes. Don't configure file system policies on replicated folders. The file system policy reapplies NTFS permissions at every Group Policy refresh interval. This can result in sharing violations because an open file isn't replicated until the file is closed.
 
       - question: |
           Does DFS Replication replicate mailboxes hosted on Microsoft Exchange Server?
         answer: |
-          No. DFS Replication cannot be used to replicate mailboxes hosted on Microsoft Exchange Server.
+          No. DFS Replication can't be used to replicate mailboxes hosted on Microsoft Exchange Server.
 
       - question: |
           Does DFS Replication support file screens created by File Server Resource Manager?
@@ -102,17 +104,17 @@ sections:
           
             - No folders may exceed the quota before the quota is enabled.
           
-            - You must use hard quotas with caution. It is possible for individual members of a replication group to stay within a quota before replication, but exceed it when files are replicated. For example, if a user copies a 10 megabyte (MB) file onto server A (which is then at the hard limit) and another user copies a 5 MB file onto server B, when the next replication occurs, both servers will exceed the quota by 5 megabytes. This can cause DFS Replication to continually retry replicating the files, causing holes in the version vector and possible performance problems.
+            - You must use hard quotas with caution. It's possible for individual members of a replication group to stay within a quota before replication, but exceed it when files are replicated. For example, if a user copies a 10 megabyte (MB) file onto server A (which is then at the hard limit) and another user copies a 5 MB file onto server B, when the next replication occurs, both servers will exceed the quota by 5 megabytes. This can cause DFS Replication to continually retry replicating the files, causing holes in the version vector and possible performance problems.
           
           
       - question: |
           Is DFS Replication cluster aware?
         answer: |
-          Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759137(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=155085). The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 is not designed to coordinate with a failover cluster, and the service will not fail over to another node.
+          Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759137(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=155085). The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 isn't designed to coordinate with a failover cluster, and the service won't fail over to another node.
           
           
           > [!NOTE]
-          > DFS Replication does not support replicating files on Cluster Shared Volumes.
+          > DFS Replication doesn't support replicating files on Cluster Shared Volumes.
           <br>
           
           
@@ -129,9 +131,9 @@ sections:
       - question: |
           Is it possible to use DFS Replication with Offline Files?
         answer: |
-          You can safely use DFS Replication and Offline Files together in scenarios when there is only one user at a time who writes to the files. This is useful for users who travel between two branch offices and want to be able to access their files at either branch or while offline. Offline Files caches the files locally for offline use and DFS Replication replicates the data between each branch office.
+          You can safely use DFS Replication and Offline Files together in scenarios when there's only one user at a time who writes to the files. This is useful for users who travel between two branch offices and want to be able to access their files at either branch or while offline. Offline Files caches the files locally for offline use and DFS Replication replicates the data between each branch office.
           
-          Do not use DFS Replication with Offline Files in a multi-user environment because DFS Replication does not provide any distributed locking mechanism or file checkout capability. If two users modify the same file at the same time on different servers, DFS Replication moves the older file to the DfsrPrivate\\ConflictandDeleted folder (located under the local path of the replicated folder) during the next replication.
+          Don't use DFS Replication with Offline Files in a multi-user environment because DFS Replication doesn't provide any distributed locking mechanism or file checkout capability. If two users modify the same file at the same time on different servers, DFS Replication moves the older file to the DfsrPrivate\\ConflictandDeleted folder (located under the local path of the replicated folder) during the next replication.
           
       - question: |
           What antivirus applications are compatible with DFS Replication?
@@ -141,19 +143,19 @@ sections:
       - question: |
           What are the benefits of using DFS Replication instead of Windows SharePoint Services?
         answer: |
-          Windows&reg; SharePoint&reg; Services provides tight coherency in the form of file check-out functionality that DFS Replication does not. If you are concerned about multiple people editing the same file, we recommend using Windows SharePoint Services. Windows SharePoint Services 2.0 with Service Pack 2 is available as part of Windows Server 2003 R2. Windows SharePoint Services can be downloaded from the Microsoft Web site; it is not included in newer versions of Windows Server. However, if you are replicating data across multiple sites and users will not edit the same files at the same time, DFS Replication provides greater bandwidth and simpler management.
+          Windows&reg; SharePoint&reg; Services provides tight coherency in the form of file check-out functionality that DFS Replication doesn't. If you're concerned about multiple people editing the same file, we recommend using Windows SharePoint Services. Windows SharePoint Services 2.0 with Service Pack 2 is available as part of Windows Server 2003 R2. Windows SharePoint Services can be downloaded from the Microsoft Web site; it isn't included in newer versions of Windows Server. However, if you're replicating data across multiple sites and users won't edit the same files at the same time, DFS Replication provides greater bandwidth and simpler management.
 
   - name: Limitations and requirements
     questions:
       - question: |
           Can DFS Replication replicate between branch offices without a VPN connection?
         answer: |
-          Yes—assuming that there is a private Wide Area Network (WAN) link (not the Internet) connecting the branch offices. However, you must open the proper ports in external firewalls. DFS Replication uses the RPC Endpoint Mapper (port 135) and a randomly assigned ephemeral port above 1024. You can use the **Dfsrdiag** command line tool to specify a static port instead of the ephemeral port. For more information about how to specify the RPC Endpoint Mapper, see [article 154596](/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=73991).
+          Yes—assuming that there's a private Wide Area Network (WAN) link (not the Internet) connecting the branch offices. However, you must open the proper ports in external firewalls. DFS Replication uses the RPC Endpoint Mapper (port 135) and a randomly assigned ephemeral port above 1024. You can use the **Dfsrdiag** command line tool to specify a static port instead of the ephemeral port. For more information about how to specify the RPC Endpoint Mapper, see [article 154596](/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=73991).
           
       - question: |
           Can DFS Replication replicate files encrypted with the Encrypting File System?
         answer: |
-          No. DFS Replication will not replicate files or folders that are encrypted using the Encrypting File System (EFS). If a user encrypts a file that was previously replicated, DFS Replication deletes the file from all other members of the replication group. This ensures that the only available copy of the file is the encrypted version on the server.
+          No. DFS Replication won't replicate files or folders that are encrypted using the Encrypting File System (EFS). If a user encrypts a file that was previously replicated, DFS Replication deletes the file from all other members of the replication group. This ensures that the only available copy of the file is the encrypted version on the server.
 
       - question: |
           Can DFS Replication replicate Outlook .pst or Microsoft Office Access database files?
@@ -188,7 +190,7 @@ sections:
       - question: |
           Does DFS Replication support replicating an entire volume?
         answer: |
-          Yes. However, you must first install Windows Server 2003 Service Pack 2 or the hotfix. For more information, see [article 920335](https://go.microsoft.com/fwlink/?linkid=76776) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=76776). Additionally, replicating an entire volume can cause the following problems:
+          Yes. However, replicating an entire volume can cause the following problems:
           
             - If the volume contains a Windows paging file, replication fails and logs DFSR event 4312 in the system event log.
           
@@ -429,55 +431,14 @@ sections:
       - question: |
           Cross-file RDC availability in editions of the Windows operating system
         answer: |
-          <table>
-          <colgroup>
-          <col style="width: 25%" />
-          <col style="width: 25%" />
-          <col style="width: 25%" />
-          <col style="width: 25%" />
-          </colgroup>
-          <thead>
-          <tr class="header">
-          <th>Operating System Version</th>
-          <th>Standard Edition</th>
-          <th>Enterprise Edition</th>
-          <th>Datacenter Edition</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="even">
-          <td><p>Windows Server 2012 R2</p></td>
-          <td><p>Yes<em></p></td>
-          <td><p>Not available</p></td>
-          <td><p>Yes</em></p></td>
-          </tr>
-          <tr class="odd">
-          <td><p>Windows Server 2012</p></td>
-          <td><p>Yes</p></td>
-          <td><p>Not available</p></td>
-          <td><p>Yes</p></td>
-          </tr>
-          <tr class="even">
-          <td><p>Windows Server 2008 R2</p></td>
-          <td><p>No</p></td>
-          <td><p>Yes</p></td>
-          <td><p>Yes</p></td>
-          </tr>
-          <tr class="odd">
-          <td><p>Windows Server 2008</p></td>
-          <td><p>No</p></td>
-          <td><p>Yes</p></td>
-          <td><p>No</p></td>
-          </tr>
-          <tr class="even">
-          <td><p>Windows Server 2003 R2</p></td>
-          <td><p>No</p></td>
-          <td><p>Yes</p></td>
-          <td><p>No</p></td>
-          </tr>
-          </tbody>
-          </table>
-          
+          | Operating System Version | Standard Edition | Enterprise Edition | Datacenter Edition |
+          |--------------------------|------------------|--------------------|--------------------|
+          | Windows Server 2012 R2   | Yes              | Not available      | Yes                |
+          | Windows Server 2012      | Yes              | Not available      | Yes                |
+          | Windows Server 2008 R2   | No               | Yes                | Yes                |
+          | Windows Server 2008      | No               | Yes                | No                 |
+          | Windows Server 2003 R2   | No               | Yes                | No                 |
+                  
           \* You can optionally disable cross-file RDC on Windows Server 2012 R2.
 
       - question: |
@@ -772,32 +733,10 @@ sections:
       - question: |
           The minimum file sizes for staging files
         answer: |
-          <table>
-          <colgroup>
-          <col style="width: 33%" />
-          <col style="width: 33%" />
-          <col style="width: 33%" />
-          </colgroup>
-          <thead>
-          <tr class="header">
-          <th> </th>
-          <th>RDC enabled</th>
-          <th>RDC disabled</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="even">
-          <td><p>Sending member</p></td>
-          <td><p>64 KB</p></td>
-          <td><p>256 KB</p></td>
-          </tr>
-          <tr class="odd">
-          <td><p>Receiving member</p></td>
-          <td><p>64 KB by default</p></td>
-          <td><p>64 KB by default</p></td>
-          </tr>
-          </tbody>
-          </table>
+          |                  |RDC enabled       | RDC disabled     |
+          |------------------|------------------|------------------|
+          | Sending member   | 64 KB            | 256 KB           |
+          | Receiving member | 64 KB by default | 64 KB by default |
           
       - question: |
           What happens if a file is changed after it is staged but before it is completely transmitted to the remote site?
@@ -806,70 +745,15 @@ sections:
 
           ## Change history
 
-          <table>
-          <colgroup>
-          <col style="width: 33%" />
-          <col style="width: 33%" />
-          <col style="width: 33%" />
-          </colgroup>
-          <thead>
-          <tr class="header">
-          <th>Date</th>
-          <th>Description</th>
-          <th>Reason</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="odd">
-          <td><p>November 15, 2018</p></td>
-          <td><p>Updated for Windows Server 2019.</p></td>
-          <td><p>New operating system.</p></td>
-          </tr>
-          <tr class="even">
-          <td><p>October 9th, 2013</p></td>
-          <td><p>Updated the What are the supported limits of DFS Replication? section with results from tests on Windows Server 2012 R2.</p></td>
-          <td><p>Updates for the latest version of Windows Server</p></td>
-          </tr>
-          <tr class="odd">
-          <td><p>January 30th, 2013</p></td>
-          <td><p>Added the Does DFS Replication continue staging files when replication is disabled by a schedule or bandwidth throttling quota, or when a connection is manually disabled? entry.</p></td>
-          <td><p>Customer questions</p></td>
-          </tr>
-          <tr class="even">
-          <td><p>October 31st, 2012</p></td>
-          <td><p>Edited the What are the supported limits of DFS Replication? entry to increase the tested number of replicated files on a volume.</p></td>
-          <td><p>Customer feedback</p></td>
-          </tr>
-          <tr class="odd">
-          <td><p>August 15, 2012</p></td>
-          <td><p>Edited the Does DFS Replication replicate NTFS file permissions, alternate data streams, hard links, and reparse points? entry to further clarify how DFS Replication handles hard links and reparse points.</p></td>
-          <td><p>Feedback from Customer Support Services</p></td>
-          </tr>
-          <tr class="even">
-          <td><p>June 13, 2012</p></td>
-          <td><p>Edited the Does DFS Replication work on ReFS or FAT volumes? entry to add discussion of ReFS.</p></td>
-          <td><p>Customer feedback</p></td>
-          </tr>
-          <tr class="odd">
-          <td><p>April 25, 2012</p></td>
-          <td><p>Edited the Does DFS Replication replicate NTFS file permissions, alternate data streams, hard links, and reparse points? entry to clarify how DFS Replication handles hard links.</p></td>
-          <td><p>Reduce potential confusion</p></td>
-          </tr>
-          <tr class="even">
-          <td><p>March 30, 2011</p></td>
-          <td><p>Edited the Can DFS Replication replicate Outlook .pst or Microsoft Office Access database files? entry to correct the potential impact of using DFS Replication with .pst and Access files.</p>
-          <p>Added How can I improve replication performance?</p></td>
-          <td><p>Customer questions about the previous entry, which incorrectly indicated that replicating .pst or Access files could corrupt the DFS Replication database.</p></td>
-          </tr>
-          <tr class="odd">
-          <td><p>January 26, 2011</p></td>
-          <td><p>Added How can files be recovered from the ConflictAndDeleted or PreExisting folders?</p></td>
-          <td><p>Customer feedback</p></td>
-          </tr>
-          <tr class="even">
-          <td><p>October 20, 2010</p></td>
-          <td><p>Added How can I upgrade or replace a DFS Replication member?</p></td>
-          <td><p>Customer feedback</p></td>
-          </tr>
-          </tbody>
-          </table>
+          | Date                       | Description                                             | Reason |
+          |----------------------------|---------------------------------------------------------|---------------------------------------------------------|
+          | November 15, 2018 | Updated for Windows Server 2019. | New operating system. |
+          | October 9th, 2013 | Updated the What are the supported limits of DFS Replication? section with results from tests on Windows Server 2012 R2. | Updates for the latest version of Windows Server |
+          | January 30th, 2013 | Added the Does DFS Replication continue staging files when replication is disabled by a schedule or bandwidth throttling quota, or when a connection is manually disabled? entry. | Customer questions |
+          | October 31st, 2012 | Edited the What are the supported limits of DFS Replication? entry to increase the tested number of replicated files on a volume. | Customer feedback |
+          | August 15, 2012    | Edited the Does DFS Replication replicate NTFS file permissions, alternate data streams, hard links, and reparse points? entry to further clarify how DFS Replication handles hard links and reparse points. | Feedback from Customer Support Services |
+          | June 13, 2012      | Edited the Does DFS Replication work on ReFS or FAT volumes? entry to add discussion of ReFS. | Customer feedback |
+          | April 25, 2012     | Edited the Does DFS Replication replicate NTFS file permissions, alternate data streams, hard links, and reparse points? entry to clarify how DFS Replication handles hard links. | Reduce potential confusion |
+          | March 30, 2011     | Edited the Can DFS Replication replicate Outlook .pst or Microsoft Office Access database files? entry to correct the potential impact of using DFS Replication with .pst and Access files. Added How can I improve replication performance? | Customer questions about the previous entry, which incorrectly indicated that replicating .pst or Access files could corrupt the DFS Replication database. | 
+          | January 26, 2011   | Added How can files be recovered from the ConflictAndDeleted or PreExisting folders? | Customer feedback |
+          | October 20, 2010   | Added How can I upgrade or replace a DFS Replication member? | Customer feedback |

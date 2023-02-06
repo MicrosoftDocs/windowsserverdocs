@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 09/10/2018
-ms.localizationpriority: medium
 ---
 # Enable optimized moves of redirected folders
 
@@ -51,7 +50,7 @@ When moving the file share that contains users' redirected folders, it is import
 
     Users will work offline using Offline Files until the move is complete and they receive the updated Folder Redirection settings from Group Policy.
 
-3. Using an account with backup privileges, move the contents of the file share to the new location using a method that preserves file timestamps, such as a backup and restore utility. To use the **Robocopy** command, open an elevated command prompt, and then type the following command, where ```<Source>``` is the current location of the file share, and ```<Destination>``` is the new location:
+3. Using an account with backup privileges, copy the contents of the file share to the new location using a method that preserves file timestamps, such as a backup and restore utility. To use the **Robocopy** command, open an elevated command prompt, and then type the following command, where ```<Source>``` is the current location of the file share, and ```<Destination>``` is the new location:
 
     ```PowerShell
     Robocopy /B <Source> <Destination> /Copyall /MIR /EFSRAW

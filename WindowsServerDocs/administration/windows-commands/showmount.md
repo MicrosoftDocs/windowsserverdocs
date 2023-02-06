@@ -29,7 +29,7 @@ showmount {-e|-a|-d} <server>
 | -a | Displays all Network File System (NFS) clients and the directories on the server each has mounted. |
 | -d | Displays all directories on the server that are currently mounted by NFS clients. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

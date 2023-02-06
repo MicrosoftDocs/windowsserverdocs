@@ -23,7 +23,7 @@ To perform this procedure, you must be a member of **Domain Admins**.
 ## To add an alias \(CNAME\) resource record to a zone
 
 >[!NOTE]
->To perform this procedure by using Windows PowerShell, see [Add-DnsServerResourceRecordCName](/powershell/module/dnsserver/add-dnsserverresourcerecordcname?view=winserver2012r2-ps).
+>To perform this procedure by using Windows PowerShell, see [Add-DnsServerResourceRecordCName](/powershell/module/dnsserver/add-dnsserverresourcerecordcname?view=winserver2012r2-ps&preserve-view=true).
 
 1.  On DC1, in Server Manager, click **Tools** and then click **DNS**. The DNS Manager Microsoft Management Console (MMC) opens.
 

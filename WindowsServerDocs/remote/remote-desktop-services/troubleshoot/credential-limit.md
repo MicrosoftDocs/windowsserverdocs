@@ -6,7 +6,6 @@ author: HeidiLohr
 manager: femila
 ms.author: helohr
 ms.date: 12/14/2020
-ms.localizationpriority: medium
 ---
 # Credential limit per app
 

@@ -38,7 +38,7 @@ To send a **quit** command to the remote ftp server, type:
 quote quit
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

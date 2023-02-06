@@ -141,13 +141,19 @@ To delete all TPM and startup keys-based key protectors on drive C, type:
 manage-bde -protectors -delete C: -type tpmandstartupkey
 ```
 
-To back up all recovery information for drive C to AD DS, type:
+To list all key protectors for drive C, type:
 
 ```
-manage-bde -protectors -adbackup C:
+manage-bde -protectors -get C:
 ```
 
-## Additional References
+To back up all recovery information for drive C to AD DS, type (where `-id` is the ID of the specific key protector to back up):
+
+```
+manage-bde -protectors -adbackup C: -id '{00000000-0000-0000-0000-000000000000}'
+```
+
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

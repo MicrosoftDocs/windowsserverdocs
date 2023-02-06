@@ -5,7 +5,6 @@ ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
 ms.date: 10/18/2021
-ms.localizationpriority: medium
 ---
 
 # Configuring Azure integration
@@ -24,7 +23,7 @@ The guided in-product steps will create an Azure AD app in your directory, which
 
 The Azure AD app created is used for all points of Azure integration in Windows Admin Center, including [Azure AD authentication to the gateway](../configure/user-access-control.md#azure-active-directory). Windows Admin Center automatically configures the permissions needed to create and manage Azure resources on your behalf:
 
-- Azure Active Directory Graph
+- Microsoft Graph
     - Application.Read.All
     - Application.ReadWrite.All
     - Directory.AccessAsUser.All

@@ -29,6 +29,6 @@ dispdiag [-testacpi] [-d] [-delay <seconds>] [-out <filepath>]
 | -out `<filepath>`  | Specifies path and filename to save collected data. This must be the last parameter. |
 | -? | Displays available command parameters and provides help for using them. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -5,8 +5,7 @@ ms.topic: reference
 ms.assetid: b70a6156-9413-4300-84ce-a34c467e2b4e
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 6/21/2022
 ---
 
 # telnet
@@ -44,13 +43,13 @@ To use telnet to connect to the computer running the telnet Server Service at *t
 telnet telnet.microsoft.com
 ```
 
-To use telnet to connect to the computer running the telnet Server Service at *telnet.microsoft.com on TCP port 44* and ro log the session activity in a local file called *telnetlog.txt*, type:
+To use telnet to connect to the computer running the telnet Server Service at *telnet.microsoft.com* on TCP port 44 and to log the session activity in a local file called *telnetlog.txt*, type:
 
 ```
 telnet /f telnetlog.txt telnet.microsoft.com 44
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

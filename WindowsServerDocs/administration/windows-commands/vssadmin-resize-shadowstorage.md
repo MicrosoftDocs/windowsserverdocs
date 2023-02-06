@@ -5,7 +5,6 @@ ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 03/05/2020
-ms.localizationpriority: medium
 ---
 
 # vssadmin resize shadowstorage
@@ -53,7 +52,7 @@ To resize shadow copy of volume C by 20%, type:
 vssadmin resize shadowstorage /For=C: /On=C: /MaxSize=20%
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

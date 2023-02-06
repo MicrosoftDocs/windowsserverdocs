@@ -51,10 +51,10 @@ To start recovering the information from the backup that was run on April 30, 20
 wbadmin start sysrecovery -version:04/30/2020-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [wbadmin command](wbadmin.md)
 
-- [Get-WBBareMetalRecovery](/powershell/module/windowserverbackup/Get-WBBareMetalRecovery)
+- [Get-WBBareMetalRecovery](/powershell/module/windowsserverbackup/get-wbbaremetalrecovery)

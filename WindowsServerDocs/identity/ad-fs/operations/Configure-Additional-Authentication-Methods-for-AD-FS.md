@@ -5,7 +5,7 @@ title: Configure Additional Authentication Methods for AD FS
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/26/2019
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

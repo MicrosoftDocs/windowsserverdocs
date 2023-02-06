@@ -86,7 +86,7 @@ To set the value *TEST^1* for the environment variable named `testVar`, type:
 set testVar=test^^1
 ```
 
-The **set** command assigns everything that follows the equal sign (=) to the value of the variable. Therefore, if you type `set testVar=test^1`, you'll get the following result, `testVar=test^1`.
+The **set** command assigns everything that follows the equal sign (=) to the value of the variable. Therefore, if you type `set testVar=test^1`, you'll get the following result, `testVar=test1`.
 
 To set the value *TEST&1* for the environment variable `testVar`, type:
 
@@ -118,6 +118,6 @@ To display a list of all of the environment variables that begin with the letter
 set p
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

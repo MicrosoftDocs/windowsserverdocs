@@ -5,7 +5,6 @@ ms.author: helohr
 ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
-ms.localizationpriority: medium
 ---
 # Set up the Remote Desktop web client for your users
 
@@ -316,4 +315,4 @@ The console may also be accessed directly through your browser. The console is g
 
 ## Get help with the web client
 
-If you've encountered an issue that can't be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client).
+If you've encountered an issue that can't be solved by the information in this article, you can report it on the [Azure Virtual Desktop forum of Microsoft Tech Community](https://aka.ms/wvdtc).

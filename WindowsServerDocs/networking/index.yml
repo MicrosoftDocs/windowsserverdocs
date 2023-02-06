@@ -97,8 +97,6 @@ landingContent:
             url: technologies/netsh/netsh.md
           - text: Network Subsystem Performance Tuning
             url: technologies/network-subsystem/net-sub-performance-top.md
-          - text: NIC Teaming
-            url: technologies/nic-teaming/NIC-Teaming.md
           - text: Quality of Service (QoS) Policy
             url: technologies/qos/qos-policy-top.md
           - text: Windows Internet Name Service (WINS)
@@ -112,9 +110,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Web Application Proxy in Windows Server 2016
-            url: ../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md
+            url: ../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md
           - text: Remote Access Always On VPN Deployment Guide
-            url: ../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md
+            url: ../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md
 
   # Card
   - title: High-Performance Networking

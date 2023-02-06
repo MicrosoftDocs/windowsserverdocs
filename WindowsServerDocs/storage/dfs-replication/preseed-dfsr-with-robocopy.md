@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2018
-ms.localizationpriority: medium
 ---
 # Use Robocopy to pre-seed files for DFS Replication
 

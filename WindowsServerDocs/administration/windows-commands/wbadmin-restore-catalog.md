@@ -46,7 +46,7 @@ To restore a catalog from a backup stored in the shared folder `\\<servername>\<
 wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -54,4 +54,4 @@ wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 
 - [wbadmin delete catalog command](wbadmin-delete-catalog.md)
 
-- [Restore-WBCatalog](/powershell/module/windowserverbackup/Restore-WBCatalog)
+- [Restore-WBCatalog](/powershell/module/windowsserverbackup/restore-wbcatalog)

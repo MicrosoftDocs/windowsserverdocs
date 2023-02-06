@@ -20,7 +20,7 @@ For other Linux distributions LIS changes are regularly integrated into the oper
 For older FreeBSD releases (before 10.0), Microsoft provides ports that contain the installable BIS drivers and corresponding daemons for FreeBSD virtual machines. For newer FreeBSD releases, BIS is built in to the FreeBSD operating system, and no separate download or installation is required except for a KVP ports download that is needed for FreeBSD 10.0.
 
 > [!TIP]
-> - Download [Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server) from the Evaluation Center.
+> - Download [Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) from the Evaluation Center.
 
 The goal of this content is to provide information that helps facilitate your Linux or FreeBSD deployment on Hyper-V. Specific details include:
 
@@ -33,8 +33,6 @@ The goal of this content is to provide information that helps facilitate your Li
 * Known issues and workarounds for each distribution or release.
 
 * Feature description for each LIS or BIS feature.
-
-**Want to make a suggestion about features and functionality?** Is there something we could do better? You can use the [Windows Server User Voice](https://windowsserver.uservoice.com/forums/295062-linux-support) site to suggest new features and capabilities for Linux and FreeBSD Virtual Machines on Hyper-V, and to see what other people are saying.
 
 ## In this section
 

@@ -1,5 +1,5 @@
 ---
-title: Remote Desktop - Allow access to your PC
+title: Enable Remote Desktop on your PC
 description: Learn about your options for remotely accessing your PC
 ms.topic: article
 ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
@@ -7,9 +7,8 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 06/05/2018
-ms.localizationpriority: medium
 ---
-# Remote Desktop - Allow access to your PC
+# Enable Remote Desktop on your PC
 
 >Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 

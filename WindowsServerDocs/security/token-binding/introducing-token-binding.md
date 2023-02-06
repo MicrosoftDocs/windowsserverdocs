@@ -40,4 +40,4 @@ For information about .NET Framework, see the following topics:
 
 - [Networking enhancements](https://blogs.msdn.microsoft.com/dotnet/2015/11/30/net-framework-4-6-1-is-now-available/#networking)
 
-- [.NET TokenBinding class](/dotnet/api/system.security.authentication.extendedprotection.tokenbinding?view=netframework-4.8)
+- [.NET TokenBinding class](/dotnet/api/system.security.authentication.extendedprotection.tokenbinding?view=netframework-4.8&preserve-view=true)

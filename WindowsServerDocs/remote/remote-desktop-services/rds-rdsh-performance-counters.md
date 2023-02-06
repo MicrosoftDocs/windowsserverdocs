@@ -6,7 +6,6 @@ ms.date: 01/19/2021
 ms.topic: article
 author: lizap
 manager: dougkim
-ms.localizationpriority: medium
 ---
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
@@ -118,7 +117,7 @@ To fix this, you can set the following registry key to match the interval (in mi
 
 We've also added a couple of keys you might find helpful under the same registry key:
 
-**LagCounterImageNameFirst** — set this key to `DWORD 1` (default value 0 or key does not exist). This changes the counter names to "Image Name <SessionID:ProcessId>." For example, "explorer <1:7964>." This is useful if you want to sort by image name.
+**LagCounterImageNameFirst** — set this key to `DWORD 1` (default value 0 or key does not exist). This changes the counter names to "Image Name \<SessionID:ProcessId\>." For example, "explorer <1:7964>." This is useful if you want to sort by image name.
 
 **LagCounterShowUnknown** — set this key to `DWORD 1` (default value 0 or key does not exist). This shows any processes that are running as services or SYSTEM. Some processes will show up with their session set as "?."
 

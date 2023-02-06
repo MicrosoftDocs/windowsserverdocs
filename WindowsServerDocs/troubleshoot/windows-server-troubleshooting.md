@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 # Troubleshooting Windows Server components
 
 > [!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/).
 >
 > You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
@@ -131,10 +131,6 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Troubleshooting Nano Server](../get-started/troubleshooting-nano-server.md)
 
-## Troubleshoot NIC teaming
-
-- [Troubleshooting NIC Teaming](../networking/technologies/nic-teaming/troubleshooting-nic-teaming.md)
-
 ## Troubleshoot OTP authentication
 
 - [Troubleshooting Authentication Issues](../remote/remote-access/ras/otp/troubleshoot/troubleshooting-authentication-issues.md)
@@ -144,10 +140,9 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.yml)
 
-## Troubleshoot S2D
+## Troubleshoot Storage Spaces Direct
 
 - [Storage Spaces Direct troubleshooting](../storage/storage-spaces/troubleshooting-storage-spaces.md)
-- [Storage Spaces Direct - Frequently asked questions](../storage/storage-spaces/storage-spaces-direct-faq.yml)
 - [Storage Spaces Direct health and operational states](../storage/storage-spaces/storage-spaces-states.md)
 - [Collect diagnostic data with Storage Spaces Direct](../storage/storage-spaces/data-collection.md)
 - [Storage-class Memory (NVDIMM-N) Health Management in Windows](../storage/storage-spaces/storage-class-memory-health.md)

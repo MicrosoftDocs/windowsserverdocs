@@ -63,7 +63,7 @@ To update the existing alert called *new_alert*, setting the threshold value for
 logman update alert new_alert -th \Processor(_Total)\% Processor time>40
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,5 +1,33 @@
-- name: Docs
+items:
+- name: Learn
   href: /
   items:
     - name: Windows Server
-      href: /windows-server/
+      tocHref: /windows-server/
+      topicHref: /windows-server/
+      items:
+      - name: Remote desktop services
+        tocHref: /windows-server/remote/remote-desktop-services/
+        topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Hyper-V
+        tocHref: /windows-server/virtualization/hyper-v/
+        topicHref: /windows-server/virtualization/hyper-v/
+      - name: Hyper-V Virtual Switch
+        tocHref: /windows-server/virtualization/hyper-v-virtual-switch/
+        topicHref: /windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch/
+
+### For linking to HCI topics and keeping the context in Windows Server TOC
+- name: Windows Server
+  tocHref: /azure-stack/hci/
+  topicHref: /windows-server/index
+
+### For linking to system center topics and keeping the context in Windows Server TOC
+- name: Windows Server                         # Destination doc set name
+  tocHref: /system-center/      # Destination doc set route
+  topicHref: /windows-server/    # Original doc set route
+
+### For linking to Azure topic and keeping the context in Windows Server TOC      
+- name: Windows Server
+  tocHref: /azure/
+  topicHref: /windows-server/index
+

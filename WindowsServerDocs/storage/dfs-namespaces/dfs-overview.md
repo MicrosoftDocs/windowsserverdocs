@@ -4,14 +4,14 @@ ms.author: jgerend
 manager: daveba
 ms.topic: article
 author: jasongerend
-ms.date: 01/21/2021
-description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
+ms.date: 01/05/2022
+description: This article describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
 # DFS Namespaces overview
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-DFS Namespaces is a role service in Windows Server that enables you to group shared folders located on different servers into one or more logically structured namespaces. This makes it possible to give users a virtual view of shared folders, where a single path leads to files located on multiple servers, as shown in the following figure:
+DFS (Distributed File System) Namespaces is a role service in Windows Server that enables you to group shared folders located on different servers into one or more logically structured namespaces. This makes it possible to give users a virtual view of shared folders, where a single path leads to files located on multiple servers, as shown in the following figure:
 
 ![DFS Namespaces technology elements](media/dfs-overview.png)
 
@@ -22,7 +22,7 @@ Here's a description of the elements that make up a DFS namespace:
 - **Folder** - Folders without folder targets add structure and hierarchy to the namespace, and folders with folder targets provide users with actual content. When users browse a folder that has folder targets in the namespace, the client computer receives a referral that transparently redirects the client computer to one of the folder targets.
 - **Folder targets** - A folder target is the UNC path of a shared folder or another namespace that is associated with a folder in a namespace. The folder target is where data and content is stored. In the previous figure, the folder named Tools has two folder targets, one in London and one in New York, and the folder named Training Guides has a single folder target in New York. A user who browses to \\\\Contoso\\Public\\Software\\Tools is transparently redirected to the shared folder \\\\LDN-SVR-01\\Tools or \\\\NYC-SVR-01\\Tools, depending on which site the user is currently located in.
 
-This topic discusses how to install DFS, what's new, and where to find evaluation and deployment information.
+This article discusses how to install DFS, what's new, and where to find evaluation and deployment information.
 
 You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](/powershell/module/dfsn/), the **DfsUtil** command, or scripts that call WMI.
 
@@ -34,6 +34,7 @@ A namespace server is a domain controller or member server that hosts a namespac
 
 Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace.
 
+- Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
@@ -92,6 +93,12 @@ For example, to install the Distributed File System Tools portion of the Remote 
 Install-WindowsFeature "RSAT-DFS-Mgmt-Con"
 ```
 
+To install the Distributed File System Tools portion for a client device, type:
+
+```PowerShell
+Add-WindowsCapability -Name Rsat.FileServices.Tools~~~~0.0.1.0 -Online
+```
+
 To install the DFS Namespaces, and the Distributed File System Tools portions of the Remote Server Administration Tools feature, type:
 
 ```PowerShell
@@ -104,7 +111,6 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested.
 
 - You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory.
 - You can cluster stand-alone namespaces in Azure virtual machines using failover clusters that use [Shared Disk](/azure/virtual-machines/disks-shared) or [Ultra Disks](/azure/virtual-machines/disks-enable-ultra-ssd).
-
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](/azure/virtual-machines/).
 

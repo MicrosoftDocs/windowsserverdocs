@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 manager: mtillman
 ---
 
@@ -18,7 +18,7 @@ This document includes information that is specific to hosters who intend to dep
 ## What is Windows Server Essentials?
  Windows Server Essentials is a cross-premises small business solution, which incorporates best-of-breed, 64-bit product technologies to deliver a server environment well suited for the vast majority of small businesses. The following technologies are included in Windows Server Essentials.
 
- **Server Operating System:** Windows Server 2012 product technologies provide the core of Windows Server Essentials. For more information, visit the [Windows Server 2012 website](https://www.microsoft.com/server-cloud/products/windows-server-2012-r2/default.aspx#fbid=ZH0GD_CRAWh).
+**Server Operating System:** Windows Server product technologies provide the core of Windows Server Essentials. For more information, visit the [Windows Server website](https://www.microsoft.com/windows-server).
 
  **Data Protection:** Windows Server Essentials leverages several new features available in Windows Server 2012 to provide greatly improved data protection capabilities. The [new Storage Spaces feature](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. Windows Server Essentials can perform complete system backups and bare-metal restores of the server itself as well as the client computers connected to the network ?now with support for volumes larger than 2 TB. New with Windows Server 2012, the [Windows Azure Online Backup](/previous-versions/azure/hh831419(v=azure.100)) can be used to protect files and folders in a cloud-based storage service that is managed by Microsoft. Windows Server Essentials also centrally manages and configures the File History feature of Windows 8.1 clients, helping users to recover from accidentally deleted or overwritten files without requiring administrator assistance.
 

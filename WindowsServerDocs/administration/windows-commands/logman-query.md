@@ -51,7 +51,7 @@ To list all available providers of data collectors on the target system, type:
 logman query providers
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

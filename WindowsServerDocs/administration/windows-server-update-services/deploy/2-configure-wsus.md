@@ -52,7 +52,7 @@ You can then start configuring the following WSUS network settings:
 
 ### 2.1.1. Configure your firewall to allow your first WSUS server to connect to Microsoft domains on the internet
 
-If a corporate firewall is between WSUS and the internet, you might have to configure that firewall to ensure that WSUS can get updates. To get updates from Microsoft Update, the WSUS server uses port 443 for the HTTPS protocol. Although most corporate firewalls allow this type of traffic, some companies restrict internet access from the servers because of security policies. If your company restricts access, you'll need to configure your firewall to allow your WSUS server to access Microsoft domains.
+If a corporate firewall is between WSUS and the internet, you might have to configure that firewall to ensure that WSUS can get updates. To get updates from Microsoft Update, the WSUS server uses ports 80 and 443 for the HTTP and HTTPS protocols. Although most corporate firewalls allow this type of traffic, some companies restrict internet access from the servers because of security policies. If your company restricts access, you'll need to configure your firewall to allow your WSUS server to access Microsoft domains.
 
 Your first WSUS server must have outbound access to ports 80 and 443 on the following domains:
 
@@ -84,6 +84,10 @@ Your first WSUS server must have outbound access to ports 80 and 443 on the foll
 
 - https\://dl.delivery.mp.microsoft.com
 
+- http\://*.delivery.mp.microsoft.com
+
+- https\://*.delivery.mp.microsoft.com
+
 > [!IMPORTANT]
 > You must configure your firewall to allow the first WSUS server to access any URL within these domains. The IP addresses associated with these domains are constantly changing, so don't try to use IP address ranges instead.
 
@@ -103,7 +107,7 @@ Your other WSUS servers must have outbound access to the topmost server through 
 
 ### 2.1.3. Configure your WSUS servers to use a proxy server, if needed
 
-If the corporate network uses proxy servers, the proxy servers must support HTTP and SSL protocols. They also must use basic authentication or Windows authentication. You can meet these requirements by using one of the following configurations:
+If the corporate network uses proxy servers, the proxy servers must support HTTP and HTTPS protocols. They also must use basic authentication or Windows authentication. You can meet these requirements by using one of the following configurations:
 
 - A single proxy server that supports two protocol channels. In this case, set one channel to use HTTP and the other channel to use HTTPS.
 
@@ -127,7 +131,7 @@ If the corporate network uses proxy servers, the proxy servers must support HTTP
 
 4. In the command prompt window, go to the *C:\Program Files\Update Services\Tools* folder. Enter the following command:
 
-    **wsusutil ConfigureSSLproxy [<proxy_server proxy_port>] -enable**
+    `wsusutil ConfigureSSLproxy [<proxy_server proxy_port>] -enable`
     
     In that command:
 
@@ -256,13 +260,13 @@ To begin the process, you must enable SSL support on the WSUS server's IIS servi
 
 The steps that are required to get an SSL certificate for the server are beyond the scope of this article and will depend on your network configuration. For more information and for instructions about how to install certificates and set up this environment, we suggest the following articles:
 
-- [Suite B PKI step-by-step guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff829847(v=ws.10))
+- [Suite B PKI step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff829847(v=ws.10))
 
-- [Implementing and administering certificate templates](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731256(v=ws.10))
+- [Implementing and administering certificate templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731256(v=ws.10))
 
-- [Active Directory Certificate Services upgrade and migration guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742515(v=ws.10))
+- [Active Directory Certificate Services upgrade and migration guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742515(v=ws.10))
 
-- [Configure certificate autoenrollment](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731522(v=ws.11))
+- [Configure certificate autoenrollment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731522(v=ws.11))
 
 ### 2.3.2. Configure the WSUS server's IIS web server to use SSL for some connections
 
@@ -316,7 +320,7 @@ You must reinitialize *ClientServicingProxy* if the server name, SSL configurati
 
 4. In the command prompt window, enter the following command:
 
-    **Wsusutil configuressl** _certificateName_
+    `wsusutil configuressl _certificateName_`
 
     In that command, *certificateName* is the DNS name of the WSUS server.
 
@@ -404,7 +408,7 @@ In a simple environment, you might link a single WSUS GPO to the domain. In a mo
 
 If you don't use Active Directory in your network, you'll configure each computer by using the Local Group Policy Editor.
 
-### 2.6.2. Edit policies to configure the client computers 
+### 2.6.2. Edit policies to configure the client computers
 
 > [!NOTE]
 > These instructions assume that you're using the most recent versions of the policy editing tools. On older versions of the tools, the policies might be arranged differently.

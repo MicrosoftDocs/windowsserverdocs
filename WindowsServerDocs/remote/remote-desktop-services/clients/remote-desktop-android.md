@@ -3,25 +3,27 @@ title: Get started with the Android client
 description: General information about the Android client.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
-author: heidilohr
+author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/15/2021
-ms.localizationpriority: medium
+ms.date: 11/03/2022
 ms.custom: contperf-fy21q1
 ---
 
 # Get started with the Android client
 
->Applies to: Windows Server 2022, Windows Server 2019, Android 7.0 and later
+>Applies to: Windows Server 2022, Windows Server 2019, Android 9.0 and later
 
 You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or a Chromebook that supports the Google Play Store.
 
 This article will show you how to get started using the client. If you have any additional questions, make sure to check our [FAQ](remote-desktop-client-faq.yml).
 
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for Android and Chrome OS](/azure/virtual-desktop/users/connect-android-chrome-os).
+
 > [!NOTE]
 > - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).
-> - The Android client supports devices running Android 6.0 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome at [Chrome OS Systems Supporting Android Apps](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
+> - The Android client supports devices running Android 9 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome at [Chrome OS Systems Supporting Android Apps](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
 ## Download the Remote Desktop client
 
@@ -67,17 +69,14 @@ Want to remove the connection? Again, tap the **More options** menu (**...**), a
 
 ## Add remote resources
 
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The Android client supports resources published from Remote Desktop Services, Windows 365, and Azure Virtual Desktop deployments.
+Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin.
 
 To add remote resources:
 
 1. In the Connection Center, tap **+**, and then tap **Remote Resource Feed**.
-2. Enter the **Feed URL**. This URL can be a URL or an email address:
-   - The **URL** is the RD Web Access server provided to you by your admin. If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
-     - If you're using Azure Virtual Desktop (classic), use: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-     - If you're using Azure Virtual Desktop, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-     - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-   - If you plan to use **Email**, enter your email address in this field. Filling out this field tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
+2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
+   - If you use a URL, use the one your admin gave you.
+   - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your sign-in information when prompted. The credentials you should use can vary based on the deployment and can include:
    - The **User name** that has permission to access the resources.

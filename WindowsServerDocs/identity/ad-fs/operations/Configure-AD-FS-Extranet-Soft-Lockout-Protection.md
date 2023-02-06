@@ -5,13 +5,13 @@ description: "Learn more about: Configure AD FS Extranet Lockout Protection"
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 02/01/2019
+ms.date: 01/30/2023
 ms.topic: article
 ---
 
 # Configure AD FS Extranet Lockout Protection
 
-In AD FS on Windows Server 2012 R2, we introduced a security feature called Extranet Lockout.  With this feature, AD FS will "stop" authenticating the "malicious" user account from outside for a period of time.  This prevents your user accounts from being locked out in Active Directory.  In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks
+In AD FS on Windows Server 2012 R2, we introduced a security feature called Extranet Lockout.  With this feature, AD FS will "stop" authenticating the "malicious" user account from outside for a period of time.  This prevents your user accounts from being locked out in Active Directory.  In addition to protecting your users from an AD account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.
 
 > [!NOTE]
 > This feature only works for the **extranet scenario** where the authentication requests come through the Web Application Proxy and only applies to **username and password authentication**.

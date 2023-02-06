@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 01/11/2019
-ms.localizationpriority: medium
 ---
 # DataON MUST Extension
 
