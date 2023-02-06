@@ -7,11 +7,15 @@ ms.author: helohr
 ms.date: 09/20/2016
 manager: femila
 ---
-# Install licenses for Remote Desktop session hosts
+# License Remote Desktop session hosts
 
 >Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use the information in this article to configure licensing for session hosts on your Remote Desktop Services (RDS) deployments. The process will be slightly different depending on which roles you've assigned to the session host you're licensing.
+
+## Prerequisites
+
+In order to install licenses for your session hosts, you'll need a Remote Desktop license server with per-user or per-device client access licenses (CALs) activated.
 
 ## Configure licensing for an RDS deployment that includes the RD Connection Broker role
 
