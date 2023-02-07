@@ -70,7 +70,7 @@ Once the above is verified, you can take the following steps (assuming the AD FS
  8. Delete AD FS Secure Socket Layer (SSL) certificates from each server storage.
  9. Re-image AD FS servers with full disk formatting.
  10. You can now safely delete your AD FS account.
- 11. Remove the content of the **CertificateSharingContainer** DN using ADSI Edit after unistallation.
+ 11. Remove the content of the **CertificateSharingContainer** DN using ADSI Edit after uninstallation.
 
 ## Next Steps
 - [AD FS to Azure AD FAQ](ad-fs-to-azure-ad-faq.md)
