@@ -3,7 +3,7 @@ description: "Learn more about: Verify That a Federation Server Is Operational"
 ms.assetid: ad61c586-ba8a-4534-8824-b45994d60c6b
 title: Verify That a Federation Server Is Operational
 author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.author: billmath

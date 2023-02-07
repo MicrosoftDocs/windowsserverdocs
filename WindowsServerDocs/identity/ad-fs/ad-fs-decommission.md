@@ -3,7 +3,7 @@ description: "Learn more about: AD FS Decommission"
 title: AD FS Decommission Reference
 author: billmath
 ms.author: billmath
-manager: 
+manager: amycolannino
 ms.date: 01/06/2023
 ms.topic: article
 ---

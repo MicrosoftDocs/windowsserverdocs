@@ -4,7 +4,7 @@ ms.assetid: 68979914-8a1c-465a-bd37-08df30722d69
 title: Mapping Your Deployment Goals to an AD FS Design
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

@@ -3,7 +3,7 @@ description: "FAQ for migrating from AD FS to Azure AD"
 title: AD FS to Azure AD FAQ
 author: billmath
 ms.author: billmath
-manager: 
+manager: amycolannino
 ms.date: 02/07/2023
 ms.topic: article
 ---

@@ -3,7 +3,7 @@ title: Configure AD FS Banned IP Addesses
 description: "Learn more about: AD FS and banned IP addresses"
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

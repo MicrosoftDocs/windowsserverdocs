@@ -4,7 +4,7 @@ ms.assetid: 65e474b5-3076-4ba3-809d-a09160f7c2bd
 title: The Role of Claim Rules
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

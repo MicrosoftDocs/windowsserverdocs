@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - Auditing Events and Logging
 description:  This document describes how to use the various AD FS logs to troubleshoot issues
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

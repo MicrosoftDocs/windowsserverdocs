@@ -3,7 +3,7 @@ title: Customize claims to be emitted in id_token when using OpenID Connect or O
 description: A technical overview of the custom id token concepts in AD FS 2016 or later
 author: anandyadavmsft
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.reviewer: anandy

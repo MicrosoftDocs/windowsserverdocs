@@ -4,7 +4,7 @@ ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: The Role of the AD FS Configuration Database
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

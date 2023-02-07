@@ -4,7 +4,7 @@ ms.assetid: de7e1e4a-f96d-4b59-ac9b-f65f5d37a96f
 title: Provide Users in Another Organization Access to Your Claims-Aware Applications and Services
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

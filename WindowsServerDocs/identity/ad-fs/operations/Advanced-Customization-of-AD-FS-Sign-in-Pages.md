@@ -4,7 +4,7 @@ title: Advanced Customization of AD FS Sign-in Pages
 description: How to make advanced customizations of the AD FS sign-in pages
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

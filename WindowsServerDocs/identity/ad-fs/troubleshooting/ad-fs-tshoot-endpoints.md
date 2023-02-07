@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - AD FS endpoints
 description:  This document describes how to troubleshoot AD FS endpoints
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

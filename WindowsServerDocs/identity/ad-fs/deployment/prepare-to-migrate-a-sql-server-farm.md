@@ -3,7 +3,7 @@ title: Prepare to migrate an AD FS SQL farm
 description: Provides information on getting ready to migrate an AD FS server SQL farm to Windows Server 2012.
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

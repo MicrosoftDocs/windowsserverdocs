@@ -3,7 +3,7 @@ title: Obtain and Configure Token Signing and Token Decryption Certificates for 
 description: This document describes how to obtain and configure the TS and TD certificates for AD FS
 author: jenfieldmsft
 ms.author: billmath
-manager: samueld
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

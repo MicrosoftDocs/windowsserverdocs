@@ -3,7 +3,7 @@ description: "Learn more about: Planning to Deploy AD FS"
 ms.assetid: c87dc32d-ab33-44d2-a46f-f9f878b4e5b4
 title: Planning to Deploy AD FS
 author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.author: billmath
