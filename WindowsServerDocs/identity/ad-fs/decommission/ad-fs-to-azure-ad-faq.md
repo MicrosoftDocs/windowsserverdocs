@@ -4,7 +4,7 @@ title: AD FS to Azure AD FAQ
 author: billmath
 ms.author: billmath
 manager: 
-ms.date: 02/03/2023
+ms.date: 02/07/2023
 ms.topic: article
 ---
 
