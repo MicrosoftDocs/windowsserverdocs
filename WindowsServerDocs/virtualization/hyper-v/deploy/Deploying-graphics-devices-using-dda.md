@@ -35,15 +35,15 @@ Some hardware performs better if the VM in configured in a certain way.  For det
 
 1. Enable Write-Combining on the CPU
    ```
-   Set-VM -GuestControlledCacheTypes $true -VMName VMName
+   Set-VM -GuestControlledCacheTypes $true -VMName $VMName
    ```
 2. Configure the 32 bit MMIO space
    ```
-   Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
+   Set-VM -LowMemoryMappedIoSpace 3Gb -VMName $VMName
    ```
 3. Configure greater than 32 bit MMIO space
    ```
-   Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
+   Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName $VMName
    ```
    > [!TIP]
    > The MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values. Consult [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to learn how to precisely calculate MMIO requirements.
@@ -74,7 +74,7 @@ Depending on if the vendor provided a mitigation driver, you'll either need to u
 The final step is to tell Hyper-V that a VM should have access to the device.  In addition to the location path found above, you'll need to know the name of the vm.
 
 ```
-Add-VMAssignableDevice -LocationPath $locationPath -VMName VMName
+Add-VMAssignableDevice -LocationPath $locationPath -VMName $VMName
 ```
 
 ## What's Next
@@ -84,7 +84,7 @@ After a device is successfully mounted in a VM, you're now able to start that VM
 If you want to return he device back to its original state, you will need to stop the VM and issue the following:
 ```
 #Remove the device from the VM
-Remove-VMAssignableDevice -LocationPath $locationPath -VMName VMName
+Remove-VMAssignableDevice -LocationPath $locationPath -VMName $VMName
 #Mount the device back in the host
 Mount-VMHostAssignableDevice -LocationPath $locationPath
 ```
