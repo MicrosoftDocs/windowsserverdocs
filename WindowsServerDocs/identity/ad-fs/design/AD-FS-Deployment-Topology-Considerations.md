@@ -4,7 +4,7 @@ ms.assetid: 4ef052f0-61a9-4912-b780-5c96187c850f
 title: AD FS Deployment Topology Considerations
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

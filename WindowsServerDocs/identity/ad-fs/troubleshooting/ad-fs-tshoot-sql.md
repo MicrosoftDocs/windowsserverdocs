@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - SQL Connectivity
 description:  Learn how to troubleshoot various aspects of AD FS as it pertains to SQL connectivity.
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

@@ -4,7 +4,7 @@ ms.assetid: 8c3536b7-d091-4ee6-ad04-24713f070862
 title: Deploying Legacy AD FS in the Account Partner Organization
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

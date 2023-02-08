@@ -1,4 +1,5 @@
 ---
+manager: amycolannino
 title: AD FS Troubleshooting - Certificates
 description:  This document describes typical certificate issues.
 ms.topic: article

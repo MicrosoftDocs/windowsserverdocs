@@ -4,7 +4,7 @@ ms.assetid: ed3206b4-bbfc-4bc7-a43c-981b0544a50d
 title: Required Updates for Active Directory Federation Services (AD FS)
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

@@ -4,7 +4,7 @@ ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
 title: Build a server-side app that uses OAuth confidential clients by using Active Directory Federation Services 2016 or later
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

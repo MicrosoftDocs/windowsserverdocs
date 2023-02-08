@@ -3,7 +3,7 @@ title: Prepare to Migrate the AD FS 2.0 Federation Server to AD FS on Windows Se
 description: Provides information on getting ready to migrate the AD FS server to Windows Server 2012 R2.
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

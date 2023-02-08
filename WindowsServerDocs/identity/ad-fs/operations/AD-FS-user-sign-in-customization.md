@@ -4,7 +4,7 @@ ms.assetid: 61b6c115-1082-45d5-b0b1-ed24d06fcdce
 title: AD FS user sign-in customization
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

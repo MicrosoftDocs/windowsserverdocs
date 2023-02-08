@@ -3,7 +3,7 @@ description: "Learn more about: Upgrading to AD FS in Windows Server 2016 and 20
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrading to AD FS in Windows Server 2016 and 2019
 author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.author: billmath

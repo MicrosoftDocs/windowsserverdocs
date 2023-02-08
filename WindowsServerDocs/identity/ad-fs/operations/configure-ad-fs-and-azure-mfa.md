@@ -4,7 +4,7 @@ title: Configure AD FS 2016 and Azure MFA
 description: "Learn more about: Configure Azure MFA as authentication provider with AD FS"
 ms.author: billmath
 author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

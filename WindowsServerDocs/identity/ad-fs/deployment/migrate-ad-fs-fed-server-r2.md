@@ -3,7 +3,7 @@ title: Migrate the AD FS 2.0 federation server to Windows Server 2012 R2
 description: Learn how to export and backup the AD FS configuration data, create a Windows Server 2012 R2 federation server farm, and import the original configuration data into the Windows Server 2012 R2 AD FS farm.
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

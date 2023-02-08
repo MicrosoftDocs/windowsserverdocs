@@ -4,7 +4,7 @@ description: "Learn more about: User privacy and AD FS"
 title: User Privacy and AD FS
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

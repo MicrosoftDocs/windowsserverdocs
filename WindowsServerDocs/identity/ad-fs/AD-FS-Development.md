@@ -4,7 +4,7 @@ ms.assetid: e9563792-cd73-4a32-b4a1-5bd6a2109016
 title: AD FS Development
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 02/22/2018
 ms.topic: article
 ---
