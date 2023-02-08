@@ -4,7 +4,7 @@ ms.assetid: 96b9f4e6-f01c-4517-8299-017d187d447e
 title: Create a Rule to Send an Authentication Method Claim
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

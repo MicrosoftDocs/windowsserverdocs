@@ -4,7 +4,7 @@ ms.assetid: 38bbc002-a8fa-4211-9328-4ef67fca0acf
 title: Customization for Localization
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

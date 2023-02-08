@@ -4,7 +4,7 @@ title: Managing SSL Certificates in AD FS and WAP in Windows Server 2016
 description: Managing SSL Certificates in AD FS and WAP in Windows Server 2016
 author: jenfieldmsft
 ms.author: billmath
-manager: samueld
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

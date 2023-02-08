@@ -3,7 +3,7 @@ title: Build a single page web application using OAuth and ADAL.JS with AD FS 20
 description: A walkthrough which provides instructions for authenticating against AD FS using ADAL for JavaScript securing an AngularJS based single page application
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

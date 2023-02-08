@@ -4,7 +4,7 @@ ms.assetid: a4f7842c-cfca-4d78-916e-023d12a9cdf0
 title: Create a Claims Provider Trust
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

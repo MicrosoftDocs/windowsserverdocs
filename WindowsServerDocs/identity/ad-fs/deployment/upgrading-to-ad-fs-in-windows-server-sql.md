@@ -2,7 +2,7 @@
 description: "Learn more about: Upgrading to AD FS in Windows Server 2016 with SQL Server"
 title: Upgrading to AD FS in Windows Server 2016 with SQL Server
 author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267

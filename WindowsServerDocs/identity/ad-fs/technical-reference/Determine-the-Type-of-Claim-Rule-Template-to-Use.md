@@ -4,7 +4,7 @@ ms.assetid: 696a29b2-d627-4c9a-a384-9c8aaf50bd23
 title: Determine the Type of Claim Rule Template to Use
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

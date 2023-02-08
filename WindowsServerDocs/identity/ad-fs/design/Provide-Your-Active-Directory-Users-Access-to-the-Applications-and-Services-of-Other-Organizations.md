@@ -4,7 +4,7 @@ ms.assetid: 2d62386c-b466-4a54-b6fa-5d16cda120d8
 title: Provide Your Active Directory Users Access to the Applications and Services of Other Organizations
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---
