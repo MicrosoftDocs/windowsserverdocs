@@ -27,6 +27,10 @@ help [<command>]
 | --------- | ----------- |
 | `<command>` | Specifies the command for which to display detailed help information. |
 
+## Remarks
+
+- Help command will not detect if the current environment is with enabled extensions or not and will print help messages as the extensions are turned on.
+
 ### Examples
 
 To view information about the **robocopy** command, type:
