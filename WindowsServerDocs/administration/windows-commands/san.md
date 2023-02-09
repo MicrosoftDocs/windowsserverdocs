@@ -42,6 +42,6 @@ To make all newly discovered disks, except the startup disk, offline and read-on
 san policy=offlineAll
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

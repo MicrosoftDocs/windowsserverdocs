@@ -136,6 +136,6 @@ To display statistics for monitoring the status of active atM connections, type:
 atmadm /s
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

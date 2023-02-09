@@ -58,6 +58,6 @@ To add a static arp cache entry that resolves the IP address *10.0.0.80* to the 
 arp /s 10.0.0.80 00-AA-00-4F-2A-9C
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

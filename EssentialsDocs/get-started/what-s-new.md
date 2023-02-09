@@ -5,7 +5,7 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: nnamuhcs
-ms.author: geschuma
+ms.author: wscontent
 ---
 
 # What's New in Windows Server 2016 Essentials

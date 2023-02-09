@@ -1,8 +1,8 @@
 ---
-title: Get started with the web client
+title: Get started with the web client for Remote Desktop Services
 description: Describes how to sign in to the Remote Desktop web client.
 ms.author: helohr
-ms.date: 03/24/2022
+ms.date: 12/16/2022
 ms.topic: article
 author: Heidilohr
 ---
@@ -10,8 +10,8 @@ author: Heidilohr
 
 The Remote Desktop web client lets you use a compatible web browser to access your organization's remote resources (apps and desktops) published to you by your admin. You'll be able to interact with the remote apps and desktops like you would with a local PC no matter where you are, without having to switch to a different desktop PC. Once your admin sets up your remote resources, all you need are your domain, user name, password, the URL your admin sent you, and a supported web browser, and you're good to go.
 
->[!NOTE]
->Curious about the new releases for the web client? Check out [What's new for Remote Desktop web client?](web-client-whatsnew.md)
+> [!TIP]
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services, see [Connect to Azure Virtual Desktop with the Remote Desktop Web client](/azure/virtual-desktop/users/connect-web).
 
 ## What you'll need to use the web client
 
@@ -68,7 +68,7 @@ To download files from the remote session to your local computer:
 
 1. Connect to the remote session.
 2. Open the file explorer in your remote session.
-3. Copy the file or files you want to download to **Remote Desktop Virtual Drive** > **Downloads**.
+3. Copy the file or files you want to download to **Remote Desktop Virtual Drive** > **Downloads**. There is a file size limit of 255MB.
 4. A prompt will ask if you want to download the file or files you selected. At this point, you can confirm the download by selecting **Confirm** or cancel it by selecting **Cancel**. If you don't want to see this prompt every time you download files from the current browser, select the check box labeled **Don’t ask me again on this browser** before confirming.
 5. Your files will be downloaded to your local default downloads folder.
 
@@ -103,6 +103,20 @@ Native resolution is set to off by default. To turn native resolution on:
 
 1. In your session, go to the upper-right corner of the taskbar and select **Settings**.
 2. Set **Enable native display resolution** to **On**.
+
+## Open resources in your installed Azure Virtual Desktop client
+
+The web client supports opening resources in your installed Azure Virtual Desktop client instead of the browser by downloading the Remote Desktop Protocol (RDP) file. To learn how to install a Remote Desktop client, check out [Remote Desktop clients](remote-desktop-clients.md).
+
+>[!NOTE]
+>RDP files have a limited lifespan. We recommend you download the RDP file every time you need to use a resource
+
+To download the RDP file:
+
+1. In the web client, go to the upper-right corner of the taskbar and select **the settings (gear) icon**.
+2. Under **Resource Launch method**, select **Download the RDP file**.
+3. Select the resource you want to open (for example, Excel) to download the RDP file.
+4. Once the download is finished, select the downloaded RDP file to open the resource.
 
 ## Get help with the web client
 

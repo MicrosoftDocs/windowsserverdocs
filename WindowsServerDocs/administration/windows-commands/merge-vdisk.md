@@ -38,7 +38,7 @@ To merge a differencing VHD with its parent VHD, type:
 merge vdisk depth=1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -38,7 +38,7 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 | /v[`<n>`] | Set debugging verbosity level (0=none,...,3=full). |
 | /? | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

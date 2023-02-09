@@ -21,7 +21,7 @@ You can find Additional Resources for Logical Structure Design in the following 
 
 - For more information about delegated authentication and constrained delegation, see [Delegating authentication](/previous-versions/windows/it-pro/windows-server-2003/cc739740(v=ws.10)).
 
-- For more information about configuring firewalls for use with AD DS, see [Active Directory in Networks Segmented by Firewalls](https://microsoft.com/download/details.aspx?familyid=c2ef3846-43f0-4caf-9767-a9166368434e).
+- For more information about configuring firewalls for use with AD DS, see [Active Directory in Networks Segmented by Firewalls](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
 
 - For more information about upgrading Active Directory domains to Windows Server 2008, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
 

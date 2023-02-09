@@ -35,7 +35,7 @@ To verify the encryption type attribute for the domain, type:
 ksetup /getenctypeattr mit.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

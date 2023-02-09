@@ -51,6 +51,6 @@ To create and edit a file named *newtextfile.txt* in the current directory, type
 edit newtextfile.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

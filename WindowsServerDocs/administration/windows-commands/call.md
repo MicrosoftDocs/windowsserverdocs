@@ -3,15 +3,15 @@ title: call
 description: Reference article for the call command, which calls one batch program from another without stopping the parent batch program.
 ms.topic: reference
 ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
-ms.author: jgerend
+ms.author: alalve
 author: JasonGerend
 manager: mtillman
-ms.date: 06/05/2018
+ms.date: 10/28/2022
 ---
 
 # call
 
-Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call
+Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call.
 
 > [!NOTE]
 > Call has no effect at the command prompt when it is used outside of a script or batch file.
@@ -19,7 +19,8 @@ Calls one batch program from another without stopping the parent batch program. 
 ## Syntax
 
 ```
-call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
+call [drive:][path]<filename> [<batchparameters>]] 
+call [:<label> [<arguments>]]
 ```
 
 ### Parameters
@@ -85,7 +86,7 @@ In the above examples, **%1** and PATH can be replaced by other valid values. Th
 
 - Working with command extensions
 
-    If command extensions are enabled, **call** accepts `<label>` as the target of the call. The correct syntax is `call :<label> <arguments>`
+    If command extensions are enabled, **call** accepts `<label>` as the target of the call. The correct syntax is `call :<label> <arguments>`.
 
 ## Examples
 
@@ -101,6 +102,6 @@ If the parent batch program accepts two batch parameters and you want it to pass
 call checknew %1 %2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

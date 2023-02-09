@@ -60,8 +60,8 @@ To display detailed information about the roles, role services, and features tha
 servermanagercmd -inputpath install.xml -whatif
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Server Manager overview](/administration/server-manager/server-manager)
+- [Server Manager overview](/windows-server/administration/server-manager/server-manager)

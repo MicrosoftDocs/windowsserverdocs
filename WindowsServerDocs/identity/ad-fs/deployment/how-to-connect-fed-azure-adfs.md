@@ -2,10 +2,10 @@
 title: Active Directory Federation Services in Azure | Microsoft Docs
 description: In this document you will learn how to deploy AD FS in Azure for high availablity.
 author: billmath
-manager: mtillman
+manager: amycolannino
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
 ms.topic: how-to
-ms.date: 10/28/2018
+ms.date: 01/27/2023
 ms.author: billmath
 ---
 
@@ -351,11 +351,11 @@ You can use an existing virtual network or create a new VNET while deploying thi
 | AdminPassword |The password for the local Administrator account of the virtual machines |
 
 ## Additional resources
-* [Availability Sets](https://aka.ms/Azure/Availability)
+* [Availability Sets](/azure/virtual-machines/availability-set-overview)
 * [Azure Load Balancer](/azure/load-balancer/load-balancer-overview)
 * [Internal Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-powershell)
 * [Internet Facing Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-public-powershell)
-* [Storage Accounts](https://aka.ms/Azure/Storage)
+* [Storage Accounts](/azure/storage/common/storage-account-overview)
 * [Azure Virtual Networks](/azure/virtual-network/virtual-networks-overview)
 * [AD FS and Web Application Proxy Links](/archive/blogs/tangent_thoughts/qrg-quick-reference-guide-active-directory-federation-services)
 

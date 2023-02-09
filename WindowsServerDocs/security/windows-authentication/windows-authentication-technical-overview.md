@@ -57,13 +57,9 @@ This collection of topics does not cover procedures for designing, implementing,
 
 -   For configuring and monitoring security, including authentication, in your Windows environment, see:
 
-    -   [Windows XP Security Guide](https://www.microsoft.com/download/details.aspx?id=962)
-
     -   [Windows Vista Security Baseline](/previous-versions/tn-archive/dd450978(v=technet.10))
 
     -   [Windows Server 2003 Security Baseline](/previous-versions/tn-archive/cc163140(v=technet.10)) and the [Threats and Countermeasures Guide](/previous-versions/tn-archive/dd162275(v=technet.10))
-
-    -   [Windows Server 2008 Security Guide](https://www.microsoft.com/download/details.aspx?id=17606)
 
     -   [Windows Server 2008 R2 Security Baseline](/previous-versions/tn-archive/gg236605(v=technet.10))
 

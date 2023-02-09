@@ -46,6 +46,6 @@ To authorize a guarded host in AD mode:
    Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
    ```
 
-2. To verify the group was added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx).
+2. To verify the group was added, run [Get-HgsAttestationHostGroup](/powershell/module/hgsattestation/get-hgsattestationhostgroup).
 
 

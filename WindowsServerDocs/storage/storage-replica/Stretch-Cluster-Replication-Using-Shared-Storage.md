@@ -5,7 +5,7 @@ manager: eldenc
 ms.author: nedpyle
 ms.topic: how-to
 author: nedpyle
-ms.date: 01/27/2021
+ms.date: 01/19/2023
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
@@ -25,7 +25,7 @@ This walkthrough uses the following environment as an example:
 
 -   Four servers, named **SR-SRV01**, **SR-SRV02**, **SR-SRV03**, and **SR-SRV04** formed into a single cluster called **SR-SRVCLUS**.
 
--   A pair of logical "sites" that represent two different data centers, with one called **Redmond** and the other called **Bellevue.**
+-   A pair of logical "sites" that represents two different data centers, with one called **Redmond** and the other called **Bellevue.**
 
 > [!NOTE]
 > You can use only as few as two nodes, where one node each is in each site. However, you will not be able to perform intra-site failover with only two servers. You can use as many as 64 nodes.
@@ -39,7 +39,7 @@ This walkthrough uses the following environment as an example:
 -   2-64 servers running Windows Server 2019 or Windows Server 2016, Datacenter Edition. If you're running Windows Server 2019, you can instead use Standard Edition if you're OK replicating only a single volume up to 2 TB in size.
 -   Two sets of shared storage, using SAS JBODs (such as with Storage Spaces), Fibre Channel SAN, Shared VHDX, or iSCSI Target. The storage should contain a mix of HDD and SSD media and must support Persistent Reservation. You will make each storage set available to two of the servers only (asymmetric).
 -   Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
--   At least one 1GbE connection on each server for synchronous replication, but preferably RDMA.
+-   At least one 1GbE connection on each server for synchronous replication.
 -   At least 2GB of RAM and two cores per server. You will need more memory and cores for more virtual machines.
 -   Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
 -   A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
@@ -203,16 +203,16 @@ You will now create a normal failover cluster. After configuration, validation, 
 4.  Configure stretch cluster site awareness so that servers **SR-SRV01** and **SR-SRV02** are in site **Redmond**, **SR-SRV03** and **SR-SRV04** are in site **Bellevue**, and **Redmond** is preferred for node ownership of the source storage and VMs:
 
     ```PowerShell
-    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"
+    New-ClusterFaultDomain -Name Redmond -Type Site -Description "Primary" -Location "Redmond Datacenter"
 
     New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"
 
-    Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle
-    Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle
+    Set-ClusterFaultDomain -Name sr-srv01 -Parent Redmond
+    Set-ClusterFaultDomain -Name sr-srv02 -Parent Redmond
     Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue
     Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue
 
-    (Get-Cluster).PreferredSite="Seattle"
+    (Get-Cluster).PreferredSite="Redmond"
     ```
 
     > [!NOTE]
@@ -273,16 +273,16 @@ You will now create a normal failover cluster. After configuration, validation, 
 8. Configure stretch cluster site awareness so that servers **SR-SRV01** and **SR-SRV02** are in site **Redmond**, **SR-SRV03** and **SR-SRV04** are in site **Bellevue**, and **Redmond** is preferred for node ownership of the source storage and virtual machines:
 
    ```PowerShell
-   New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"
+   New-ClusterFaultDomain -Name Redmond -Type Site -Description "Primary" -Location "Redmond Datacenter"
 
    New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"
 
-   Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle
-   Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle
+   Set-ClusterFaultDomain -Name sr-srv01 -Parent Redmond
+   Set-ClusterFaultDomain -Name sr-srv02 -Parent Redmond
    Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue
    Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue
 
-   (Get-Cluster).PreferredSite="Seattle"
+   (Get-Cluster).PreferredSite="Redmond"
    ```
 
 9. **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
@@ -349,16 +349,16 @@ You will now create a normal failover cluster. After configuration, validation, 
 15. Configure stretch cluster site awareness so that servers SR-SRV01 and SR-SRV02 are in site Redmond, SR-SRV03 and SR-SRV04 are in site Bellevue, and Redmond is preferred for node ownership of the source storage and VMs:
 
     ```PowerShell
-    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"
+    New-ClusterFaultDomain -Name Redmond -Type Site -Description "Primary" -Location "Redmond Datacenter"
 
     New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"
 
-    Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle
-    Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle
+    Set-ClusterFaultDomain -Name sr-srv01 -Parent Redmond
+    Set-ClusterFaultDomain -Name sr-srv02 -Parent Redmond
     Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue
     Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue
 
-    (Get-Cluster).PreferredSite="Seattle"
+    (Get-Cluster).PreferredSite="Redmond"
     ```
 
       >[!NOTE]
@@ -421,16 +421,16 @@ For more information, review the Microsoft Ignite session Stretching Failover Cl
 7. Configure stretch cluster site awareness so that servers SR-SRV01 and SR-SRV02 are in site Redmond, SR-SRV03 and SR-SRV04 are in site Bellevue, and Redmond is preferred for node ownership of the source storage and virtual machines:
 
     ```PowerShell
-    New-ClusterFaultDomain -Name Seattle -Type Site -Description "Primary" -Location "Seattle Datacenter"
+    New-ClusterFaultDomain -Name Redmond -Type Site -Description "Primary" -Location "Redmond Datacenter"
 
     New-ClusterFaultDomain -Name Bellevue -Type Site -Description "Secondary" -Location "Bellevue Datacenter"
 
-    Set-ClusterFaultDomain -Name sr-srv01 -Parent Seattle
-    Set-ClusterFaultDomain -Name sr-srv02 -Parent Seattle
+    Set-ClusterFaultDomain -Name sr-srv01 -Parent Redmond
+    Set-ClusterFaultDomain -Name sr-srv02 -Parent Redmond
     Set-ClusterFaultDomain -Name sr-srv03 -Parent Bellevue
     Set-ClusterFaultDomain -Name sr-srv04 -Parent Bellevue
 
-    (Get-Cluster).PreferredSite="Seattle"
+    (Get-Cluster).PreferredSite="Redmond"
     ```
 
 8.  (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.

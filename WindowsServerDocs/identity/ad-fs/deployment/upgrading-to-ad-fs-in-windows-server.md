@@ -3,14 +3,16 @@ description: "Learn more about: Upgrading to AD FS in Windows Server 2016 and 20
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrading to AD FS in Windows Server 2016 and 2019
 author: billmath
-manager: femila
-ms.date: 04/09/2018
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ms.author: billmath
 ---
 
 # Upgrading to AD FS in Windows Server 2016 using a WID database
 
+
+[!INCLUDE [Migrate to Azure AD](../../../../includes/adfs-to-azure-ad-upgrade.md)]
 
 > [!NOTE]
 > Only begin an upgrade with a definitive time frame planned for completion. It is not recommended to keep AD FS in a mixed mode state for an extended period of time, as leaving AD FS in a mixed mode state may cause issues with the farm.
@@ -45,7 +47,7 @@ An AD FS server of a later version can be joined to an AD FS 2012 R2 or 2016 far
 
 Be aware that while in mixed farm mode, the AD FS farm is not capable of any new features or functionality introduced in AD FS in Windows Server 2019. This means organizations that want to try out new features cannot do this until the FBL is raised. So if your organization is looking to test the new features prior to raising the FBL, you will need to deploy a separate farm to do this.
 
-The remainder of the is document provides the steps for adding a Windows Server 2019 federation server to a Windows Server 2016 or 2012 R2 environment and then raising the FBL to Windows Server 2019. These steps were performed in a test environment outlined by the architectural diagram below.
+The remainder of this document provides the steps for adding a Windows Server 2019 federation server to a Windows Server 2016 or 2012 R2 environment and then raising the FBL to Windows Server 2019. These steps were performed in a test environment outlined by the architectural diagram below.
 
 > [!NOTE]
 > Before you can move to AD FS in Windows Server 2019 FBL, you must remove all of the Windows Server 2016 or 2012 R2 nodes. You cannot just upgrade a Windows Server 2016 or 2012 R2 OS to Windows Server 2019 and have it become a 2019 node. You will need to remove it and replace it with a new 2019 node.
@@ -81,11 +83,11 @@ Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 
 ![Screenshot of a terminal window that shows how to use the Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN} cmdlet.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)
 
-6. Now on the Windows Server 2016 federation server open AD FS Management. Note that now all of the admin capabilities appear because the primary role has been transferred to this server.
+6. Now on the Windows Server 2019 federation server open AD FS Management. Note that now all of the admin capabilities appear because the primary role has been transferred to this server.
 
 ![Screenshot that shows the Windows Server 2016 federation server open AD FS Management window.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)
 
-7. If you are upgrading an AD FS 2012 R2 farm to 2016 or 2019, the farm upgrade requires the AD schema to be at least level 85.  To upgrade the schema, With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory. Run the following:  `adprep /forestprep`
+7. If you are upgrading an AD FS 2012 R2 farm to 2016 or 2019, the farm upgrade requires the AD schema to be at least level 85. To upgrade the schema, with the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory. Run the following:  `adprep /forestprep`
 
 ![Screenshot that shows how to navigate to support\adprep directory.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
 
@@ -102,7 +104,7 @@ Once that completes run `adprep /domainprep`
 Test-AdfsFarmBehaviorLevelRaise
 ```
 
-9. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlet:
+9. Now on the Windows Server 2019 Server open PowerShell and run the following cmdlet:
 
 
 > [!NOTE]
@@ -114,11 +116,11 @@ Invoke-AdfsFarmBehaviorLevelRaise
 
 ![Screenshot of a terminal window that shows how to run the Invoke-AdfsFarmBehaviorLevelRaise cmdlet.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)
 
-10. When prompted, type Y. This will begin raising the level. Once this completes you have successfully raised the FBL.
+10. When prompted, type Y. This will begin raising the level. Once this completes, you have successfully raised the FBL.
 
 ![Screenshot of a terminal window that shows when to type Y.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)
 
-11. Now, if you go to AD FS Management, you will see the new capabilities have been added for the later AD FS version
+11. Now, if you go to AD FS Management, you will see the new capabilities have been added for the later AD FS version.
 
 ![Screenshot that shows the new capabilities that have been added.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
 
@@ -126,14 +128,14 @@ Invoke-AdfsFarmBehaviorLevelRaise
 
 ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)
 
-13. To upgrade the WAP servers to the latest level, on each Web Application Proxy, re-configure the WAP by executing the following PowerShell cmdlet in an elevated window:
+13. To upgrade the WAP servers to the latest level, on each Web Application Proxy, reconfigure the WAP by executing the following PowerShell cmdlet in an elevated window:
 
 ```PowerShell
 $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
 Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred
 ```
 
-Remove old servers from the cluster and keep only the WAP servers running the latest server version, which were reconfigured above, by running the following Powershell cmdlet.
+Remove old servers from the cluster and keep only the WAP servers running the latest server version, which were reconfigured above, by running the following PowerShell cmdlet:
 
 ```PowerShell
 Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
@@ -147,7 +149,7 @@ Get-WebApplicationProxyConfiguration
 > [!NOTE]
 > Skip the next step if the ConfigurationVersion is Windows Server 2016. This is the correct value for Web Application Proxy on Windows Server 2016 / 2019.
 
-To upgrade the ConfigurationVersion of the WAP servers, run the following Powershell command.
+To upgrade the ConfigurationVersion of the WAP servers, run the following PowerShell command:
 
 ```PowerShell
 Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
@@ -159,12 +161,12 @@ This will complete the upgrade of the WAP servers.
 > [!NOTE]
 > A known PRT issue exists in AD FS 2019 if Windows Hello for Business with a Hybrid Certificate trust is performed. You may encounter this error in AD FS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'.
 > To remediate this error:
-> 1. Launch AD FS management console. Brose to "Services > Scope Descriptions"
-> 2. Right click "Scope Descriptions" and select "Add Scope Description"
-> 3. Under name type "ugs" and Click Apply > OK
-> 4. Launch Powershell as Administrator
+> 1. Launch AD FS management console. Brose to "Services > Scope Descriptions".
+> 2. Right click "Scope Descriptions" and select "Add Scope Description".
+> 3. Under name type "ugs" and Click Apply > OK.
+> 4. Launch Powershell as Administrator.
 > 5. Execute the command "Get-AdfsApplicationPermission". Look for the ScopeNames :{openid, aza} that has the ClientRoleIdentifier. Make a note of the ObjectIdentifier.
-> 6. Execute the command "Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'
+> 6. Execute the command "Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'.
 > 7. Restart the AD FS service.
 > 8. On the client: Restart the client. User should be prompted to provision WHFB.
 > 9. If the provisioning window does not pop up then need to collect NGC trace logs and further troubleshoot.

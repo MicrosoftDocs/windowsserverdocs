@@ -3,10 +3,9 @@ title: msg
 description: Reference article for the msg command, which sends a message to a user on a Remote Desktop Session Host server
 ms.topic: reference
 ms.assetid: 9501cf3e-568e-4982-9987-8daecc6c17ff
-ms.author: jgerend
+ms.author: alalve
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 10/19/2022
 ---
 
 # msg
@@ -34,7 +33,7 @@ msg {<username> | <sessionname> | <sessionID>| @<filename> | *} [/server:<server
 | `@<filename>` | Identifies a file containing a list of user names, session names, and session IDs that you want to receive the message. |
 | * | Sends the message to all user names on the system. |
 | /server:`<servername>` | Specifies the Remote Desktop Session Host server whose session or user you want to receive the message. If unspecified, **/server** uses the server to which you are currently logged on. |
-| /time:`<seconds>` | Specifies the amount of time that the message you sent is displayed on the user's screen. After the time limit is reached, the message disappears. If no time limit is set, the message remains on the user's screen until the user sees the message and clicks **OK**. |
+| /time:`<seconds>` | Specifies the amount of time that the message you sent is displayed on the user's screen. After the time limit is reached, the message disappears. If no time limit is set, the message defaults to **60 seconds** and disappears. |
 | /v | Displays information about the actions being performed. |
 | /w | Waits for an acknowledgment from the user that the message has been received. Use this parameter with `/time:<*seconds*>` to avoid a possible long delay if the user does not immediately respond. Using this parameter with **/v** is also helpful. |
 | `<message>` | Specifies the text of the message that you want to send. If no message is specified, you will be prompted to enter a message. To send a message that is contained in a file, type the less than (<) symbol followed by the file name. |
@@ -72,6 +71,6 @@ To send the message to all users, with an acknowledgment time-out (for example, 
 msg * /time:10 Let's meet at 1PM today
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

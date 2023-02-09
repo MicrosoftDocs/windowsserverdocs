@@ -1,9 +1,9 @@
 ---
 title: pktmon counters
-description: Reference article for the pktmon counters command.
+description: Reference article for the pktmon counters command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -31,7 +31,7 @@ pktmon counters [--type { all | flow | drop }] [--include-hidden] [--zero] [--dr
 | **--refresh-rate \<n\>** | Number of times to refresh the counters per second, from 1 to 30. Default is 10. |
 | **--json** | Output the counters in JSON format. Implies -i and -r. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon etl2pcap](pktmon-etl2pcap.md)

@@ -19,7 +19,7 @@ Message Queuing technology enables apps running at different times to communicat
 mqsvc.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -77,7 +77,7 @@ Since we want multi-master for high availability, a broker system is less desira
 
 And then we're back to special client software for this scenario that better understands the locks and can give the user some useful info (“Go call Susie in accounting and tell her to release that doc”, “Sorry, the file locking topology is broken and your administrator is preventing you from opening this file until it's fixed”, etc). Getting this to play nicely with the millions of applications running in Windows will definitely be interesting. There are plenty of OS's that would not be supported or get the software – Windows 2000 is out of mainstream support and XP soon will be. Linux and Mac clients wouldn't have this software until they felt it was important, so the customer would have to hope their vendors made something analogous.
 
-## More inforamtion
+## More information
 
 Right now the easiest way to control this situation in DFSR is to use DFS Namespaces to guide users to predictable locations, with a consistent namespace. By correctly configuring your DFSN site topology and server links, you force users to all share the same local server and only allow them to access remote computers when their ‘main' server is down. For most environments, this works quite well. Alternative to DFSR, SharePoint is an option because of its check-out/check-in system. BranchCache (coming in Windows Server 2008 R2 and Windows 7) may be an option for you as it is designed for easing the reading of files in a branch scenario, but in the end the authoritative data will still live on one server only – more on this [here](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127252(v=ws.11)). And again, those vendors have their solutions.
 

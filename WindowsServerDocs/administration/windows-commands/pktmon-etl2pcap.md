@@ -1,9 +1,9 @@
 ---
 title: pktmon etl2pcap
-description: Reference article for the pktmon etl2pcap command.
+description: Reference article for the pktmon etl2pcap command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -29,7 +29,7 @@ Where `<file>` is the ETL file to convert.
 | **-d, --drop-only** | Convert dropped packets only. |
 | **-c, --component-id \<id\>** | Filter packets by a specific component ID. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

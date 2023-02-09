@@ -1,9 +1,9 @@
 ---
 title: pktmon reset
-description: Reference article for the pktmon reset command.
+description: Reference article for the pktmon reset command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 06/24/2021
 ---
 
@@ -19,7 +19,7 @@ Reset counters to zero.
 pktmon reset [-counters]
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

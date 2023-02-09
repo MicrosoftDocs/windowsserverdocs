@@ -4,8 +4,8 @@ ms.assetid: c5eb3fa0-550c-4a2f-a0bc-698b690c4199
 title: Plan Device-based Conditional Access on-Premises
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 # Plan Device-based Conditional Access on-Premises
@@ -32,9 +32,9 @@ There are three kinds of registered devices, all of which are represented as Dev
 |Also available for iOS and Android Devices? | Yes | No | No |
 
 For more information on the different ways to register devices, see also:
-* [Using Windows 10 devices in your workplace](/azure/active-directory/devices/overview)
-* [Setting up Windows 10 devices for work](https://jairocadena.com/2016/01/18/setting-up-windows-10-devices-for-work-domain-join-azure-ad-join-and-add-work-or-school-account/)
-[Join Windows 10 Mobile to Azure Active Directory](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)
+* [Using Windows devices in your workplace](/azure/active-directory/devices/overview)
+* [Azure AD registered devices](/azure/active-directory/devices/concept-azure-ad-register)
+* [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join)
 
 ### How Windows 10 User and Device Sign-on is different from previous versions
 For Windows 10 and AD FS 2016, there are some new aspects of device registration and authentication you should know about (especially if you are familiar with device registration and "workplace join" in previous releases).
@@ -80,35 +80,37 @@ For complete list of AD FS 2016 device and conditional access claims, see [Refer
 
 
 ## Reference
+#### [Updates and breaking changes - Microsoft identity platform | Microsoft Docs](/azure/active-directory/develop/reference-breaking-changes)
+
 #### Complete list of new AD FS 2016 and device claims
 
-* https://schemas.microsoft.com/ws/2014/01/identity/claims/anchorclaimtype
-* http://schemas.xmlsoap.org/ws/2005/05/identity/claims/implicitupn
-* https://schemas.microsoft.com/2014/03/psso
-* https://schemas.microsoft.com/2015/09/prt
-* http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn
-* https://schemas.microsoft.com/ws/2008/06/identity/claims/primarygroupsid
-* https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid
-* http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
-* https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname
-* https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/registrationid
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/displayname
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/identifier
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/ostype
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/osversion
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/ismanaged
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser
-* https://schemas.microsoft.com/2014/02/devicecontext/claims/isknown
-* https://schemas.microsoft.com/2014/02/deviceusagetime
-* https://schemas.microsoft.com/2014/09/devicecontext/claims/iscompliant
-* https://schemas.microsoft.com/2014/09/devicecontext/claims/trusttype
-* https://schemas.microsoft.com/claims/authnmethodsreferences
-* https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent
-* https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path
-* https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork
-* https://schemas.microsoft.com/2012/01/requestcontext/claims/client-request-id
-* https://schemas.microsoft.com/2012/01/requestcontext/claims/relyingpartytrustid
-* https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-ip
-* https://schemas.microsoft.com/2014/09/requestcontext/claims/userip
-* https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod
+* `https://schemas.microsoft.com/ws/2014/01/identity/claims/anchorclaimtype`
+* `https://schemas.xmlsoap.org/ws/2005/05/identity/Identity_Selector_Interoperability_Profile_V1.5.pdf`
+* `https://schemas.microsoft.com/2014/03/psso`
+* `https://schemas.microsoft.com/2015/09/prt`
+* `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`
+* `https://schemas.microsoft.com/ws/2008/06/identity/claims/primarygroupsid`
+* `https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid`
+* `https://schemas.xmlsoap.org/ws/2005/05/identity/Identity_Selector_Interoperability_Profile_V1.5_Web_Guide.pdf`
+* `https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname`
+* `https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`
+* `https://schemas.microsoft.com/2012/01/devicecontext/claims/registrationid`
+* `/dotnet/api/system.security.claims.claimtypes.windowsdeviceclaim`
+* `https://schemas.microsoft.com/2012/01/devicecontext/claims/identifier`
+* `https://schemas.microsoft.com/2012/01/devicecontext/claims/ostype`
+* `https://schemas.microsoft.com/2012/01/devicecontext/claims/osversion`
+* `https://schemas.microsoft.com/2012/01/devicecontext/claims/ismanaged`
+* `https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`
+* `/dotnet/api/system.security.claims.claimtypes.windowsdeviceclaim`
+* `https://schemas.microsoft.com/2014/02/deviceusagetime`
+* `https://schemas.microsoft.com/2014/09/devicecontext/claims/iscompliant`
+* `https://schemas.microsoft.com/2014/09/devicecontext/claims/trusttype`
+* `https://schemas.microsoft.com/claims/authnmethodsreferences`
+* `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+* `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+* `https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`
+* `https://schemas.microsoft.com/2012/01/requestcontext/claims/client-request-id`
+* `https://schemas.microsoft.com/2012/01/requestcontext/claims/relyingpartytrustid`
+* `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-ip`
+* `https://schemas.microsoft.com/2014/09/requestcontext/claims/userip`
+* `https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod`

@@ -31,7 +31,7 @@ logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 | [logman create cfg](logman-create-cfg.md) | Creates a configuration data collector. |
 | [logman create api](logman-create-api.md) | Creates an API tracing data collector. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

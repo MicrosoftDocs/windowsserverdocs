@@ -1,20 +1,19 @@
 ---
 title: Plan the Always On VPN Deployment
-description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
+description: This topic provides planning instructions for deploying Always On VPN in Windows Server.
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
-ms.author: v-tea
-author: Teresa-MOTIV
-ms.date: 11/05/2018
+ms.author: anaharris
+author: anaharris-ms
+ms.date: 10/12/2022
 ---
 # Step 1. Plan the Always On VPN deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server, Windows Server 2012 R2, Windows 10
 
-- [**Previous:** Learn about the workflow for deploying Always On VPN](always-on-vpn-deploy-deployment.md)
 - [**Next:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
-In this step, you start to plan and prepare your Always On VPN deployment. Before you install the Remote Access server role on the computer you're planning on using as a VPN server, perform the following tasks. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
+In this step of the tutorial, you'll learn how to plan and prepare your Always On VPN deployment.
 
 [!INCLUDE [always-on-vpn-standard-config-considerations-include](../../../includes/always-on-vpn-standard-config-considerations-include.md)]
 
@@ -22,9 +21,9 @@ In this step, you start to plan and prepare your Always On VPN deployment. Befor
 
 You must do the following on the computer used as a VPN server:
 
-- **Make sure the VPN server software and hardware configuration is correct**. Install Windows Server 2016 on the computer that you plan to use as a Remote Access VPN server. This server must have two physical network adapters installed, one to connect to the external perimeter network, and one to connect to the internal perimeter network.
+- **Make sure the VPN server software and hardware configuration is correct**. Install Windows Server on the computer that you plan to use as a Remote Access VPN server. This server must have two physical network adapters installed: one to connect to the external perimeter network, and one to connect to the internal perimeter network.
 
-- **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. Configure the network adapter facing the Internet with a public IP address, while the adapter facing the Intranet can use an IP address from the local network.
+- **Identify which network adapter connects to the Internet and which network adapter connects to your private network**. Configure the network adapter facing the Internet with a public IP address, while the adapter facing the intranet can use an IP address from the local network.
 
     >[!TIP]
     >If you prefer not to use a public IP address on your perimeter network, you can configure the Edge Firewall with a public IP address, and then configure the firewall to forward VPN connection requests to the VPN server.

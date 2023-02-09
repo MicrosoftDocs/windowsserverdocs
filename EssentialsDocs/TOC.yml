@@ -1,0 +1,306 @@
+items:
+- name: Get started
+  expanded: true
+  items:
+  - name: Get started with Windows Server Essentials
+    href: get-started/get-started.md
+    items:
+    - name: What's New in Windows Server 2019 Essentials
+      href: get-started/what-s-new-19.md
+    - name: What's New in Windows Server 2016 Essentials
+      href: get-started/what-s-new.md
+      items:
+      - name: Azure Site Recovery Services integration
+        href: get-started/azure-site-recovery-services-integration.md
+      - name: Azure virtual network integration
+        href: get-started/azure-virtual-network-integration.md
+      - name: Support for larger deployments
+        href: get-started/support-for-larger-deployments.md
+    - name: Hardware requirements
+      href: /windows-server/get-started/hardware-requirements?toc=/windows-server-essentials/toc.json&bc=/windows-server-essentials/breadcrumbs/toc.json
+    - name: Hardware limits
+      href: get-started/hardware-limits.md
+    - name: Release Notes for Windows Server Essentials
+      href: get-started/release-notes.md
+- name: Before You Install Windows Server Essentials
+  href: install/Before-You-Install-Windows-Server-Essentials.md
+- name: Install Windows Server Essentials
+  href: install/Install-Windows-Server-Essentials.md
+  items:
+  - name: Install and Configure Windows Server Essentials
+    href: install/Install-and-Configure-Windows-Server-Essentials.md
+  - name: Install and Configure Windows Server Essentials or Windows Server Essentials Experience
+    href: install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md
+  - name: Add Windows Server Essentials as a Member Server
+    href: install/Add-Windows-Server-Essentials-as-a-Member-Server.md
+  - name: Hosted Windows Server Essentials
+    href: install/Hosted-Windows-Server-Essentials.md
+    items:
+    - name: Deploy Windows Server Essentials Experience as a Hosted Server
+      href: install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md
+  - name: Customize and Deploy Windows Server Essentials in Windows Server
+    href: install/Customize-and-Deploy-Windows-Server-Essentials.md
+  - name: Assessment and Deployment Kit for Windows Server Essentials
+    href: install/Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md
+    items:
+    - name: Getting Started with the Windows Server Essentials ADK
+      href: install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md
+      items:
+      - name: Important Information for Using the Windows Server Essentials ADK
+        href: install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md
+      - name: Hardware Requirements for the Target Computer
+        href: install/Hardware-Requirements-for-the-Target-Computer.md
+      - name: Preconfigure a Router
+        href: install/Preconfiguring-a-Router.md
+      - name: Prepare the Technician Computer
+        href: install/Prepare-the-Technician-Computer.md
+      - name: Configure Server Storage
+        href: install/Configure-Server-Storage.md
+    - name: Creating and Customizing the Image
+      href: install/Creating-and-Customizing-the-Image.md
+      items:
+      - name: Create a Simple Customized Image
+        href: install/Create-a-Simple-Customized-Image.md
+      - name: Create a Bootable USB Flash Drive
+        href: install/Create-a-Bootable-USB-Flash-Drive.md
+      - name: Create an Image By Using Answer Files
+        href: install/Create-an-Image-By-Using-Answer-Files.md
+        items:
+        - name: Create the Oobe.xml File Including Logo and EULA
+          href: install/Create-the-Oobe.xml-File-Including-Logo-and-EULA.md
+        - name: Create the Cfg.ini File
+          href: install/Create-the-Cfg.ini-File.md
+        - name: Create the PostIC.cmd File for Running Post Initial Configuration Tasks
+          href: install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md
+      - name: Customize the Image
+        href: install/Customize-the-Image.md
+        items:
+        - name: Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links
+          href: install/Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links.md
+        - name: Add Health Alerts
+          href: install/Add-Health-Alerts.md
+        - name: Add Third-Level Domain Names
+          href: install/Add-Third-Level-Domain-Names.md
+        - name: Configure Support for a Wireless Network
+          href: install/Configure-Support-for-a-Wireless-Network.md
+        - name: Customize Disk Partitions
+          href: install/Customize-Disk-Partitions.md
+        - name: Customize Server Backup
+          href: install/Customize-Server-Backup.md
+        - name: Customize Shared Folders
+          href: install/Customize-Shared-Folders.md
+        - name: Define Display Settings
+          href: install/Define-Display-Settings.md
+        - name: Install Add-Ins
+          href: install/Install-Add-Ins.md
+        - name: Replace the List of Domain Name Providers
+          href: install/Replace-the-List-of-Domain-Name-Providers.md
+        - name: Set the WinSAT Score on the Server
+          href: install/Set-the-WinSAT-Score-on-the-Server.md
+    - name: Additional Customizations
+      href: install/Additional-Customizations.md
+      items:
+      - name: Add Branding to the Dashboard, Remote Web Access, and Launchpad
+        href: install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md
+      - name: Add a Tab to Settings
+        href: install/Add-a-Tab-to-Settings.md
+      - name: Add Top-Level Categories to the Launchpad (Macintosh Operating System)
+        href: install/Add-Top-Level-Categories-to-the-Launchpad--Macintosh-Operating-System-.md
+      - name: Change Media Streaming Settings
+        href: install/Change-Media-Streaming-Settings.md
+      - name: Change the Color Scheme of the Dashboard and Launchpad
+        href: install/Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad.md
+      - name: Change the Order and Grouping of Tabs
+        href: install/Change-the-Order-and-Grouping-of-Tabs.md
+      - name: Install or Remove Language Packs
+        href: install/Install-or-Remove-Language-Packs.md
+      - name: Manage Domain Names and Domain Name Providers
+        href: install/Manage-Domain-Names-and-Domain-Name-Providers.md
+      - name: Customize Sign Up for Microsoft Online Backup Service task
+        href: install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md
+      - name: Customize Storage Spaces
+        href: install/Customize-Storage-Spaces.md
+      - name: Build Multi-Language Client Restore Media
+        href: install/Build-Multi-Language-Client-Restore-Media.md
+      - name: Automate Installation of Add-Ins During Setup
+        href: install/Automate-Installation-of-Add-Ins-During-Setup.md
+      - name: Add Microsoft Online Service Partner Agreement Partner-of-Record Information
+        href: install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md
+      - name: Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement
+        href: install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md
+      - name: Create a Server Recovery DVD for Remotely Administered Servers
+        href: install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md
+      - name: Create a Server Recovery DVD for Multi-Language Support
+        href: install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md
+    - name: Preparing the Image for Deployment
+      href: install/Preparing-the-Image-for-Deployment.md
+    - name: Testing the Customer Experience
+      href: install/Testing-the-Customer-Experience.md
+- name: Migrate Server Data to Windows Server Essentials
+  href: migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md
+  items:
+  - name: Configure folder redirection on the Windows Server Essentials Destination Server
+    href: migrate/Configure-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md
+  - name: Demote and remove the Source Server from the new Windows Server Essentials network
+    href: migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md
+  - name: Enable folder redirection on the Windows Server Essentials Destination Server1
+    href: migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md
+  - name: Install Windows Server Essentials in migration mode
+    href: migrate/Install-Windows-Server-Essentials-in-migration-mode.md
+  - name: Join computers to the new Windows Server Essentials network
+    href: migrate/Join-computers-to-the-new-Windows-Server-Essentials-network.md
+  - name: Join computers to the new Windows Server Essentials server
+    href: migrate/Join-computers-to-the-new-Windows-Server-Essentials-server.md
+  - name: Migrate from Previous Versions to Windows Server Essentials or Windows Server Essentials Experience
+    href: migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md
+  - name: Migrate Windows Server 2008 Foundation to Windows Server Essentials
+    href: migrate/Migrate-Windows-Server-2008-Foundation-to-Windows-Server-Essentials.md
+  - name: Migrate Windows Server Essentials to New Hardware
+    href: migrate/Migrate-Windows-Server-Essentials-to-New-Hardware.md
+  - name: Migrate Windows Small Business Server 2003 to Windows Server Essentials
+    href: migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md
+  - name: Migrate Windows Small Business Server 2008 to Windows Server Essentials
+    href: migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md
+  - name: Migrate Windows Small Business Server 2011 Essentials to Windows Server Essentials
+    href: migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md
+  - name: Migrate Windows Small Business Server 2011 Standard to Windows Server Essentials
+    href: migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md
+  - name: Move settings and data to the Destination Server for Windows Server Essentials migration
+    href: migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md
+  - name: Move Windows SBS 2003 settings and data to the Destination Server for Windows Server Essentials migration
+    href: ./migrate/move-windows-sbs-2003-to-the-destination-server-for-migration.md
+  - name: Move Windows SBS 2008 settings and data to the Destination Server for Windows Server Essentials migration
+    href: ./migrate/move-windows-sbs-2008-to-the-destination-server-for-migration.md
+  - name: Move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration
+    href: migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md
+  - name: Move Windows SBS 2011 Standard settings and data to the Destination Server for Windows Server Essentials migration
+    href: ./migrate/move-windows-sbs-2011-standard-to-the-destination-server-for-migration.md
+  - name: Move Windows Server 2008 Foundation settings and data to the Destination Server for Windows Server Essentials migration
+    href: ./migrate/move-windows-server-2008-foundation-to-the-destination-server-for-migration.md
+  - name: Perform post-migration tasks for Windows Server Essentials migration
+    href: migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md
+  - name: Prepare your Source Server for Windows Server Essentials migration
+    href: migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md
+  - name: Rules used by the Windows Server Essentials Best Practices Analyzer (BPA) Tool
+    href: migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md
+  - name: Run the Windows Server Essentials Best Practices Analyzer
+    href: migrate/Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md
+  - name: Step 1&#58; Prepare your Source Server for Windows Server Essentials migration
+    href: migrate/Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md
+  - name: Step 2&#58; Install Windows Server Essentials as a new replica domain controller
+    href: migrate/Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md
+  - name: Step 3&#58; Join computers to the new Windows Server Essentials server
+    href: migrate/Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md
+  - name: Step 4&#58; Move settings and data to the Destination Server for Windows Server Essentials migration
+    href: migrate/Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md
+  - name: Step 5&#58; Enable folder redirection on the Destination Server for Windows Server Essentials migration
+    href: migrate/Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md
+  - name: Step 6&#58; Demote and remove the Source Server from the new Windows Server Essentials network
+    href: migrate/Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md
+  - name: Step 7&#58; Perform post-migration tasks for the Windows Server Essentials migration
+    href: migrate/Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md
+  - name: Step 8&#58; Run the Windows Server Essentials Best Practices Analyzer
+    href: migrate/Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md
+  - name: Transition from Windows Server Essentials to Windows Server 2012 Standard
+    href: migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md
+  - name: Transition from Windows Server Essentials to Windows Server 2012 R2 Standard
+    href: migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md
+- name: Manage Windows Server Essentials
+  href: manage/Manage-Windows-Server-Essentials.md
+  items:
+  - name: Configure DirectAccess in Windows Server Essentials
+    href: manage/Configure-DirectAccess-in-Windows-Server-Essentials.md
+  - name: Integrate an On-Premises Exchange Server with Windows Server Essentials
+    href: manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md
+  - name: Manage Anywhere Access in Windows Server Essentials
+    href: manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md
+  - name: Manage Applications in Windows Server Essentials
+    href: manage/Manage-Applications-in-Windows-Server-Essentials.md
+  - name: Manage Backup and Restore in Windows Server Essentials
+    href: manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md
+  - name: Manage BranchCache in Windows Server Essentials
+    href: manage/Manage-BranchCache-in-Windows-Server-Essentials.md
+  - name: Manage Client Computer Backup in Windows Server Essentials
+    href: manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md
+  - name: Manage Devices in Windows Server Essentials
+    href: manage/Manage-Devices-in-Windows-Server-Essentials.md
+  - name: Manage Digital Media in Windows Server Essentials
+    href: manage/Manage-Digital-Media-in-Windows-Server-Essentials.md
+  - name: Manage Email Service Integration in Windows Server Essentials
+    href: manage/Manage-Email-Service-Integration-in-Windows-Server-Essentials.md
+  - name: Manage Microsoft Online Services in Windows Server Essentials
+    href: manage/Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md
+  - name: Manage Microsoft 365 in Windows Server Essentials
+    href: manage/Manage-Office-365-in-Windows-Server-Essentials.md
+  - name: Manage Online Accounts for Windows Server Essentials Users
+    href: manage/Manage-Online-Accounts-for-users.md
+  - name: Manage Online Backup in Windows Server Essentials
+    href: manage/Manage-Online-Backup-in-Windows-Server-Essentials.md
+  - name: Manage Remote Web Access in Windows Server Essentials
+    href: manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md
+  - name: Manage Server Backup in Windows Server Essentials
+    href: manage/Manage-Server-Backup-in-Windows-Server-Essentials.md
+  - name: Manage Server Folders in Windows Server Essentials
+    href: manage/Manage-Server-Folders-in-Windows-Server-Essentials.md
+  - name: Manage Server Storage in Windows Server Essentials
+    href: manage/Manage-Server-Storage-in-Windows-Server-Essentials.md
+  - name: Manage SharePoint Online in Windows Server Essentials
+    href: manage/Manage-SharePoint-Online-in-Windows-Server-Essentials.md
+  - name: Manage System Health in Windows Server Essentials
+    href: manage/Manage-System-Health-in-Windows-Server-Essentials.md
+  - name: Manage User Accounts in Windows Server Essentials
+    href: manage/Manage-User-Accounts-in-Windows-Server-Essentials.md
+  - name: Manage VPN in Windows Server Essentials
+    href: manage/Manage-VPN-in-Windows-Server-Essentials.md
+  - name: Overview of the Dashboard in Windows Server Essentials
+    href: manage/Overview-of-the-Dashboard-in-Windows-Server-Essentials.md
+  - name: Overview of the Launchpad in Windows Server Essentials
+    href: manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md
+  - name: Restore a full system from an existing client computer backup
+    href: manage/Restore-a-full-system-from-an-existing-client-computer-backup.md
+  - name: Restore or repair your server running Windows Server Essentials
+    href: manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md
+  - name: Set up or customize server backup
+    href: manage/Set-up-or-customize-server-backup.md
+- name: Use Windows Server Essentials
+  href: use/Use-Windows-Server-Essentials.md
+  items:
+  - name: Get Connected in Windows Server Essentials
+    href: use/Get-Connected-in-Windows-Server-Essentials.md
+  - name: Play Digital Media in Windows Server Essentials
+    href: use/Play-Digital-Media-in-Windows-Server-Essentials.md
+  - name: Quick Start Guide to Using Microsoft 365 with Windows Server Essentials
+    href: use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md
+  - name: Use Remote Web Access in Windows Server Essentials
+    href: use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md
+  - name: Use Shared Folders in Windows Server Essentials
+    href: use/Use-Shared-Folders-in-Windows-Server-Essentials.md
+  - name: Use the My Server App to Connect to Windows Server Essentials
+    href: use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md
+  - name: Work Remotely in Windows Server Essentials
+    href: use/Work-Remotely-in-Windows-Server-Essentials.md
+- name: Support Windows Server Essentials
+  href: support/Support-Windows-Server-Essentials.md
+  items:
+  - name: Install the Windows Server Essentials Log Collector
+    href: support/Install-the-Windows-Server-Essentials-Log-Collector.md
+  - name: Run the Windows Server Essentials Log Collector
+    href: support/Run-the-Windows-Server-Essentials-Log-Collector.md
+  - name: Troubleshoot Anywhere Access in Windows Server Essentials
+    href: support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md
+  - name: Troubleshoot computer backup and restore errors in Windows Server Essentials
+    href: support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md
+  - name: Troubleshoot computer monitoring in Windows Server Essentials
+    href: support/Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md
+  - name: Troubleshoot connecting computers to the server in Windows Server Essentials
+    href: support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md
+  - name: Troubleshoot File History in Windows Server Essentials
+    href: support/Troubleshoot-File-History-in-Windows-Server-Essentials.md
+  - name: Troubleshoot Remote Web Access connectivity in Windows Server Essentials
+    href: support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md
+  - name: Troubleshoot Windows Server Essentials Log Collector Errors
+    href: support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md
+  - name: Troubleshoot your firewall in Windows Server Essentials
+    href: support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md
+  - name: Use the Windows Server Essentials Log Collector
+    href: support/Use-the-Windows-Server-Essentials-Log-Collector.md

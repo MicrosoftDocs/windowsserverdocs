@@ -48,7 +48,7 @@ To create an EFI partition of 1000 megabytes on the selected disk, type:
 create partition efi size=1000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

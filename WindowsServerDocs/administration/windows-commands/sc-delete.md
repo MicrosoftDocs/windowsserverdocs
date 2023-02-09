@@ -38,6 +38,6 @@ To delete the service subkey **NewServ** from the registry on the local computer
 sc.exe delete NewServ
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

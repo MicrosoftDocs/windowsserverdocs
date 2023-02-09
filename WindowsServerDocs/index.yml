@@ -4,14 +4,14 @@ title: Windows Server documentation
 summary: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
 
 metadata:
-  title: Windows Server Documentation - Microsoft Docs
+  title: Windows Server documentation
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
-  author: JasonGerend
+  author: robinharwood
   manager: femila
   ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 08/19/2021
-  ms.author: jgerend
+  ms.date: 08/05/2022
+  ms.author: roharwoo
 
 highlightedContent:
   items:
@@ -44,20 +44,20 @@ conceptualContent:
   items:
     - title: Upgrade Windows Server
       links:
-        - url: ./get-started/upgrade-2016-to-2019.md
+        - url: ./get-started/hardware-requirements.md
           itemType: overview
-          text: Upgrade Windows Server 2016
-        - url: ./get-started/upgrade-2012r2-to-2019.md
+          text: Hardware requirements
+        - url: ./get-started/install-upgrade-migrate.md
+          itemType: concept
+          text: Install, upgrade, or migrate
+        - url: ./get-started/upgrade-migrate-roles-features.md
+          itemType: concept
+          text: Upgrade and migrate roles and features in Windows Server
+        - url: ./get-started/perform-in-place-upgrade.md
           itemType: how-to-guide
-          text: Upgrade Windows Server 2012 R2
-        - url: ./get-started/upgrade-2012-to-2016.md
-          itemType: how-to-guide
-          text: Upgrade Windows Server 2012
-        - url: ./get-started/upgrade-2008r2-to-2012r2.md
-          itemType: how-to-guide
-          text: get-started Windows Server 2008 R2
+          text: Perform an in-place upgrade
       footerLink:
-        url: ./upgrade/upgrade-overview.md
+        url: ./get-started/upgrade-overview.md
         text: See more
 
     - title: Identity and access
@@ -95,12 +95,15 @@ conceptualContent:
         - url: ./manage/windows-admin-center/overview.md
           itemType: overview
           text: Use Windows Admin Center to manage your environment
+        - url: ./administration/OpenSSH/OpenSSH_Overview.md
+          itemType: overview
+          text: OpenSSH in Windows Overview
         - url: ./manage/system-insights/overview.md
           itemType: overview
           text: System Insights overview
         - url: ./administration/performance-tuning/index.md
           itemType: overview
-          text: Performance tuning guidelines for Windows Server 2016
+          text: Performance tuning guidelines for Windows Server
       footerLink:
         url: ./administration/manage-windows-server.yml
         text: See more
@@ -197,6 +200,20 @@ conceptualContent:
       footerLink:
         url: ./virtualization/virtualization.yml
         text: See more
+    - title: Reference
+      links:
+        - url: /powershell/windows/get-started
+          itemType: reference
+          text: Windows and Windows Server PowerShell modules
+        - url: ./administration/windows-commands/windows-commands.md
+          itemType: reference
+          text: Windows built-in commands
+        - url: /windows/win32/server-and-system-technologies
+          itemType: reference
+          text: Develop with server technologies using the Win32 API
+        - url: /openspecs/windows_protocols/ms-winprotlp
+          itemType: reference
+          text: Windows protocols
 
 additionalContent:
   sections:

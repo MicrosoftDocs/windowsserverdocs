@@ -5,7 +5,7 @@ ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 09/16/2020
+ms.date: 06/30/2022
 ---
 
 # schtasks change
@@ -28,19 +28,19 @@ Changes one or more of the following properties of a task:
 
 - You can use the **/u** parameter in a **/create** or **/change** operation if the local and remote computers are in the same domain, or if the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer can't authenticate the user account specified, and it can't verify that the account is a member of the Administrators group.
 
-- The task you plan to run must have the appropriate permission; these permissions vary by task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. o run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
+- The task you plan to run must have the appropriate permission; these permissions vary by task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. To run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
 
 ## Syntax
 
 ```
-schtasks /change /tn <Taskname> [/s <computer> [/u [<domain>\]<user> [/p <password>]]] [/ru <username>] [/rp <password>] [/tr <Taskrun>] [/st <Starttime>] [/ri <interval>] [{/et <Endtime> | /du <duration>} [/k]] [/sd <Startdate>] [/ed <Enddate>] [/{ENABLE | DISABLE}] [/it] [/z]
+schtasks /change /tn <Taskname> [/s <computer> [/u [<domain>\]<user> [/p <password>]]] [/ru <username>] [/rp <password>] [/tr <Taskrun>] [/st <Starttime>] [/ri <interval>] [/rl <level>] [{/et <Endtime> | /du <duration>} [/k]] [/sd <Startdate>] [/ed <Enddate>] [/{ENABLE | DISABLE}] [/it] [/z]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 |--|--|
-| /tn `<Taskname>` | Identifies the task to be changed. Enter the task name. |
+| /tn `<Taskname>` | Identifies the task to be changed. Enter the task name (**Note**: Task names that have a space in its name are required to be wrapped in double quotes). |
 | /s `<computer>` | Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer. |
 | /u `[<domain>]` | Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**. |
 | /p `<password>` | Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter without the **/p** parameter or the password argument, schtasks will prompt you for a password. The **/u** and **/p** parameters are valid only when you use **/s**. |
@@ -49,6 +49,7 @@ schtasks /change /tn <Taskname> [/s <computer> [/u [<domain>\]<user> [/p <passwo
 | /tr `<Taskrun>` | Changes the program that the task runs. Enter the fully qualified path and file name of an executable file, script file, or batch file. If you don't add the path, **schtasks** assumes that the file is in the `<systemroot>\System32` directory. The specified program replaces the original program run by the task. |
 | /st `<Starttime>` | Specifies the start time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
 | /ri `<interval>` | Specifies the repetition interval for the scheduled task, in minutes. Valid range is 1 - 599940 (599940 minutes = 9999 hours). If either the **/et** or **/du** parameters are specified, the default is **10 minutes**. |
+| /rl `<level>` | Specifies the Run Level for the job. Acceptable values are LIMITED (scheduled tasks will be ran with the least level of privileges, such as Standard User accounts) and HIGHEST (scheduled tasks will be ran with the highest level of privileges, such as Superuser accounts). (**Note**: LIMITED is the default value).
 | /et `<Endtime>` | Specifies the end time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
 | /du `<duration>` | A value that specifies the duration to run the task. The time format is HH:mm (24-hour time). For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
 | /k | Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, schtasks doesn't start the program again after it reaches the time specified by **/et** or **/du** nor does it stop the program if it's still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
@@ -115,7 +116,7 @@ schtasks /change /tn MyApp /it
 
 This property assures that the task runs only when the run as user, that is, the user account under which the task runs, is logged on to the computer. The command uses the **/tn** parameter to identify the task and the **/it** parameter to add the interactive-only property to the task. Because the task already runs with the permissions of my user account, you don't need to change the **/ru** parameter for the task.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

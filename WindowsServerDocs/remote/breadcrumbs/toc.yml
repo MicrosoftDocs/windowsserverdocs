@@ -1,0 +1,19 @@
+items:
+- name: Learn
+  href: /
+  items:
+    - name: Windows Server
+      tocHref: /windows-server/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /azure-stack/hci/concepts/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /powershell/module/remoteaccess/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /windows/security/identity-protection/vpn/
+      topicHref: /windows-server/
+    - name: Windows Server         
+      tocHref: /previous-versions/windows/it-pro/windows-2000-server/
+      topicHref: /windows-server/

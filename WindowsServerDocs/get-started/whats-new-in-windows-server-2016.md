@@ -72,13 +72,13 @@ What's New in Active Directory Federation Services. Active Directory Federation 
 
 ### Web Application Proxy
 
-The latest version of Web Application Proxy focuses on new features that enable publishing and pre-authentication for more applications and improved user experience. Check out the full list of new features that includes pre-authentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
+The latest version of Web Application Proxy focuses on new features that enable publishing and pre-authentication for more applications and improved user experience. Check out the full list of new features that includes pre-authentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md).
 
 ## Administration
 
 The [Management and Automation area](../administration/manage-windows-server.yml) focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.
 
-Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](/powershell/wmf/5.1/scenarios-features) for details.
+Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.1#new-scenarios-and-features-in-wmf-51) for details.
 
 New additions for Windows Server 2016 include: the ability to run PowerShell.exe locally on Nano Server (no longer remote only), new Local Users & Groups cmdlets to replace the GUI, added PowerShell debugging support, and added support in Nano Server for security logging & transcription and JEA.
 

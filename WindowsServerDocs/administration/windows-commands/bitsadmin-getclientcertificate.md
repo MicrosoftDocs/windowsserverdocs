@@ -33,7 +33,7 @@ To retrieve the client certificate for the job named *myDownloadJob*:
 bitsadmin /getclientcertificate myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

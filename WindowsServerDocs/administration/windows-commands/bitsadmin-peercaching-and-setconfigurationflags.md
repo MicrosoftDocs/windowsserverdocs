@@ -34,7 +34,7 @@ To specify the job's data to be downloaded from peers for the job named *myDownl
 bitsadmin /peercaching /setconfigurationflags myDownloadJob 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

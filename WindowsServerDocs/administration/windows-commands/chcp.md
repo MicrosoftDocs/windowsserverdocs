@@ -69,8 +69,8 @@ chcp 850
 
 If the specified code page is invalid, the following error message appears: `Invalid code page`
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-- [Code Page BitFields](https://docs.microsoft.com/windows/win32/intl/code-page-bitfields)
-- [Code Page Identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
+- [Code Page BitFields](/windows/win32/intl/code-page-bitfields)
+- [Code Page Identifiers](/windows/win32/intl/code-page-identifiers)

@@ -59,8 +59,8 @@ landingContent:
             url: /azure/azure-arc/servers/onboard-windows-admin-center?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - linkListType: learn
         links:
-          - text: Microsoft Learn learning path
-            url: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+          - text: Learning path
+            url: /training/paths/manage-hybrid-infrastructure-with-azure-arc
         
   # Card
   - title: Windows Admin Center

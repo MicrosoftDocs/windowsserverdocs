@@ -57,6 +57,6 @@ The **PowerShell_ISE.exe** tool starts a Windows PowerShell ISE session. When yo
 
 - Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, because Windows PowerShell ISE requires a graphic user interface, it does not run on Server Core installations.
 
-## Additional References
+## Related links
 
 - [about_PowerShell_Ise.exe](/powershell/module/microsoft.powershell.core/about/about_powershell_exe)

@@ -4,10 +4,10 @@ description: Reference article for the chkdsk command, which checks the file sys
 ms.topic: reference
 ms.assetid: 62912a3c-d2cc-4ef6-9679-43709a286035
 author: jasongerend
-ms.author: jgerend
-manager: lizapo
-ms.date: 10/09/2019
+ms.author: alalve
+ms.date: 11/22/2022
 ---
+
 # chkdsk
 
 Checks the file system and file system metadata of a volume for logical and physical errors. If used without parameters, **chkdsk** displays only the status of the volume and does not fix any errors. If used with the **/f**, **/r**, **/x**, or **/b** parameters, it fixes errors on the volume.
@@ -23,7 +23,7 @@ Checks the file system and file system metadata of a volume for logical and phys
 
 ## Syntax
 
-```
+```cmd
 chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]] [/b]
 ```
 
@@ -76,9 +76,9 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
   Convert lost chains to files?
   ```
 
-    - If you press **Y**, Windows saves each lost chain in the root directory as a file with a name in the format File`<nnnn>`.chk. When **chkdsk** finishes, you can check these files to see if they contain any data you need.
+  - If you press **Y**, Windows saves each lost chain in the root directory as a file with a name in the format File`<nnnn>`.chk. When **chkdsk** finishes, you can check these files to see if they contain any data you need.
 
-    - If you press **N**, Windows fixes the disk, but it does not save the contents of the lost allocation units.
+  - If you press **N**, Windows fixes the disk, but it does not save the contents of the lost allocation units.
 
 - If you don't use the **/f** parameter, **chkdsk** displays a message that the file needs to be fixed, but it does not fix any errors.
 
@@ -109,7 +109,7 @@ The following table lists the exit codes that **chkdsk** reports after it has fi
 
 To check the disk in drive D and have Windows fix errors, type:
 
-```
+```cmd
 chkdsk d: /f
 ```
 
@@ -117,12 +117,52 @@ If it encounters errors, **chkdsk** pauses and displays messages. **Chkdsk** fin
 
 To check all files on a FAT disk in the current directory for noncontiguous blocks, type:
 
-```
+```cmd
 chkdsk *.*
 ```
 
 **Chkdsk** displays a status report, and then lists the files that match the file specifications that have noncontiguous blocks.
 
-## Additional References
+## Viewing chkdsk logs
+
+There are two methods that can be used to retrieve chkdsk log file(s) in Windows. View the methods described below:
+
+# [Event Viewer](#tab/event-viewer)
+
+To view logs with Event Viewer, navigate to the following:
+
+1. Start > **Control Panel** > **Administrative Tools** > **Event Viewer**.
+
+   _Alternatively_, press **Win + R** keys to bring up the run dialog box, type **eventvwr.msc**, and select **OK**.
+
+1. Expand **Windows Logs** > right-click on **Application**  > select **Filter Current Log**.
+1. Within the **Filter Current Log** window, navigate to **Event sources** drop-down menu, select **Chkdsk** and **Wininit**.
+1. Click **OK** to finish filtering for these two sources.
+
+# [PowerShell](#tab/powershell)
+
+There are two source types when retrieving logs in PowerShell, **chkdsk** and **wininit**. Run one of the two commands in PowerShell to view the most current chkdsk log:
+
+```powershell
+get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "chkdsk"} | fl timecreated, message
+```
+
+```powershell
+get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "wininit"} | fl timecreated, message
+```
+
+To export the log to a specific location, the following can be added to the end of the command `| out-file "$env:userprofile\location\filename.txt"`. Example:
+
+```powershell
+get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "chkdsk"} | fl timecreated, message | out-file "C:\Users\Administrator\Desktop\Chkdsk_Log.txt"
+```
+
+```powershell
+get-winevent -FilterHashTable @{logname="Application"} | ?{$_.providername -match "wininit"} | fl timecreated, message | out-file "C:\Users\Administrator\Desktop\Wininit_Log.txt"
+```
+
+---
+
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

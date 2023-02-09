@@ -3,32 +3,17 @@ title: diskpart
 description: Reference article for the diskpart command interpreter, which helps you manage your computer's drives.
 ms.topic: reference
 author: jasongerend
-manager: elizapo
-ms.author: jgerend
-ms.date: 12/10/2020
+ms.author: alalve
+ms.date: 09/21/2022
 ---
 
 # diskpart
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
 The diskpart command interpreter helps you manage your computer's drives (disks, partitions, volumes, or virtual hard disks).
 
 Before you can use **diskpart** commands, you must first list, and then select an object to give it focus. After an object has focus, any diskpart commands that you type will act on that object.
-
-## List available objects
-
-You can list the available objects and determine an object's number or drive letter by using:
-
-- `list disk` - Displays all the disks on the computer.
-
-- `list volume` - Displays all the volumes on the computer.
-
-- `list partition` - Displays the partitions on the disk that has focus on the computer.
-
-- `list vdisk` - Displays all the virtual disks on the computer.
-
-After you run the **list** commands, an asterisk (*) appears next to the object with focus.
 
 ## Determine focus
 
@@ -36,13 +21,13 @@ When you select an object, the focus remains on that object until you select a d
 
 Some commands automatically change the focus. For example, when you create a new partition, the focus automatically switches to the new partition.
 
-You can only give focus to a partition on the selected disk. After a partition has focus, the related volume (if any) also has focus. After a volume has focus, the related disk and partition also have focus if the volume maps to a single specific partition. If this isn't the case, focus on the disk and partition is lost.
+You can only give focus to a partition on the selected disk. After a partition has focus, the related volume (if any) also has focus. After a volume has focus, the related disk and partition also have focus if the volume maps to a single specific partition. If this isn't the case, focus on the disk and partition are lost.
 
 ## Syntax
 
 To start the diskpart command interpreter, at the command prompt type:
 
-```
+```cmd
 diskpart <parameter>
 ```
 
@@ -73,7 +58,7 @@ You can run the following commands from the Diskpart command interpreter:
 | [expand vdisk](expand-vdisk.md) | Expands a virtual hard disk (VHD) to the size that you specify. |
 | [extend](extend.md) | Extends the volume or partition with focus, along with its file system, into free (unallocated) space on a disk. |
 | [filesystems](filesystems.md) | Displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume. |
-| [format](format.md) | Formats a disk to accept Windows files. |
+| [format](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753770(v=ws.11)) | Formats a disk to accept files. |
 | [gpt](gpt.md) | Assigns the gpt attribute(s) to the partition with focus on basic GUID partition table (gpt) disks. |
 | [help](help.md) | Displays a list of the available commands or detailed help information on a specified command. |
 | [import](import_1.md) | Imports a foreign disk group into the disk group of the local computer. |
@@ -94,7 +79,46 @@ You can run the following commands from the Diskpart command interpreter:
 | [shrink](shrink.md) | Reduces the size of the selected volume by the amount you specify. |
 | [uniqueid](uniqueid.md) | Displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus. |
 
-## Additional References
+## Listing available objects
+
+You can view a list of options associated to each command by running the main command followed by what is available to that specific command. Running **list** by itself will display the four parameters below:
+
+![Screenshot of the diskpart list command.](../media/diskpart/diskpart-1.png)
+
+> [!NOTE]
+> After you run the **list** command, an asterisk (__*__) appears next to the object of focus.
+
+### Examples
+
+To see available disk(s), run **list disk**:
+
+```cmd
+list disk
+```
+
+To select a disk, run **select disk** followed by the disk number. For example:
+
+```cmd
+select disk 1
+```
+
+![Screenshot of  diskpart showing available list command options.](../media/diskpart/diskpart-2.png)
+
+Before disk 1 can be utilized, a partition will need to be created by running **create partition primary**:
+
+```cmd
+create partition primary
+```
+
+Lastly, we can perform a quick format of disk 1 to NTFS with the label "Backup" by running **format fs=ntfs label=Backup quick** as seen below:
+
+```cmd
+format fs=ntfs label=Backup quick
+```
+
+![Screenshot of diskpart showing how to create a partition and formatting the drive.](../media/diskpart/diskpart-3.png)
+
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

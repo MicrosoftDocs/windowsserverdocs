@@ -6,7 +6,7 @@ ms.assetid: e1b6a464-6a93-4e66-9969-04f175226d8d
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 1/03/2022
 ---
 
 # dfsrmig
@@ -30,7 +30,7 @@ dfsrmig [/setglobalstate <state> | /getglobalstate | /getmigrationstate | /creat
 | /getglobalstate | Retrieves the current global migration state for the domain from the local copy of the AD DS database, when run on the PDC emulator. Use this option to confirm that you set the correct global migration state.<p>**Important:** You should only run this command on the PDC emulator. |
 | /getmigrationstate | Retrieves the current local migration state for all domain controllers in the domain and determines whether those local states match the current global migration state. Use this option to determine if all domain controllers have reached the global migration state. |
 | /createglobalobjects | Creates the global objects and settings in AD DS used by DFS Replication uses. The only situations where you should use this option to  manually create objects and settings, are:<ul><li>**A new read-only domain controller is promoted during migration**. If a new read-only domain controller is promoted in the domain after moving into the **Prepared** state, but before migration to the **Eliminated** state, then the objects that correspond to the new domain controller aren't created, causing replication and the migration to fail.</li><li>**Global settings for the DFS Replication service are missing or were deleted**. If these settings are missing for a domain controller, migration from the **Start** state to the **Prepared** state will stall at the **Preparing** transition state. **Note:** Because the global AD DS settings for the DFS Replication service for a read-only domain controller are created on the PDC emulator, these settings need to replicate to the read-only domain controller from the PDC emulator before the DFS Replication service on the read-only domain controller can use these settings. Because of Active Directory replication latencies, this replication can take some time to occur. |
-| `/deleterontfrsmember [<read_only_domain_controller_name>]` | Deletes the global AD DS settings for FRS replication that correspond to the specified read-only domain controller, or deletes the global AD DS settings for FRS replication for all read-only domain controllers if no value is specified for `<read_only_domain_controller_name>`.<p>You shouldn't need to use this option during a normal migration process, because the DFS Replication service automatically deletes these AD DS settings during the migration from the **Redirected** state to the **Eliminated** state. Use this option to manually delete the AD DS settings only when the automatic deletion fails on a read-only domain controller and stalls the read-only domain controller for a long ime during the migration from the **Redirected** state to the **Eliminated** state. |
+| `/deleterontfrsmember [<read_only_domain_controller_name>]` | Deletes the global AD DS settings for FRS replication that correspond to the specified read-only domain controller, or deletes the global AD DS settings for FRS replication for all read-only domain controllers if no value is specified for `<read_only_domain_controller_name>`.<p>You shouldn't need to use this option during a normal migration process, because the DFS Replication service automatically deletes these AD DS settings during the migration from the **Redirected** state to the **Eliminated** state. Use this option to manually delete the AD DS settings only when the automatic deletion fails on a read-only domain controller and stalls the read-only domain controller for a long time during the migration from the **Redirected** state to the **Eliminated** state. |
 | `/deleterodfsrmember [<read_only_domain_controller_name>]` | Deletes the global AD DS settings for DFS Replication that correspond to the specified read-only domain controller, or deletes the global AD DS settings for DFS Replication for all read-only domain controllers if no value is specified for `<read_only_domain_controller_name>`.<p>Use this option to manually delete the AD DS settings only when the automatic deletion fails on a read-only domain controller and stalls the read-only domain controller for a long time when rolling back the migration from the Prepared state to the start state. |
 | /? | Displays help at the command prompt. |
 
@@ -44,7 +44,7 @@ dfsrmig [/setglobalstate <state> | /getglobalstate | /getmigrationstate | /creat
 
 - Active Directory replication replicates the global state to other domain controllers in the domain, but because of replication latencies, you can get inconsistencies if you run `dfsrmig /getglobalstate` on a domain controller other than the PDC emulator.
 
-- The output of `dsfrmig /getmigrationstate` indicates whether migration to the current global state is complete, listing the local migration state for any domain controllers that haven't yet reached the current global migration state. The local migration state for domain controllers can also include transition states for domain controllers that have not reached the current global migration state.
+- The output of `dfsrmig /getmigrationstate` indicates whether migration to the current global state is complete, listing the local migration state for any domain controllers that haven't yet reached the current global migration state. The local migration state for domain controllers can also include transition states for domain controllers that have not reached the current global migration state.
 
 - Read-only domain controllers can't delete settings from AD DS, the PDC emulator performs this operation, and the changes eventually replicate to the read-only domain controllers after the applicable latencies for active directory replication.
 
@@ -111,7 +111,7 @@ To create the global objects and settings that DFS Replication uses in AD DS on 
 dfsrmig /createglobalobjects
 ```
 
-To delete the global AD DS settings for FRS replication for a read-only domain controller named contoso-dc2 if those settings were not deleted automatically deleted by the migration process, type:
+To delete the global AD DS settings for FRS replication for a read-only domain controller named contoso-dc2 if those settings were not deleted automatically by the migration process, type:
 
 ```
 dfsrmig /deleterontfrsmember contoso-dc2
@@ -145,7 +145,7 @@ dfsrmig
 dfsrmig /?
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771080(v=ws.11))
 

@@ -69,7 +69,7 @@ To list the tiers of volume C, type:
 fsutil tiering tierlist C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

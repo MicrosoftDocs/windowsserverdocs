@@ -29,7 +29,7 @@ To display the current status of ftp connections, type:
 status
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

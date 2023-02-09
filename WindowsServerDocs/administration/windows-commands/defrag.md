@@ -121,7 +121,7 @@ The defragmentation process runs scheduled task as a maintenance task, which typ
 
     - The computer started back up (resumed from idle).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

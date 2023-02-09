@@ -10,7 +10,7 @@ ms.date: 02/18/2021
 
 This article describes how to use Windows Admin Center running on your on-premises PC or server to manage the operating system on one or more Azure virtual machines (in addition to on-premises servers, PCs, and VMs).
 
-To instead use Windows Admin Center directly in the Azure portal to manage the operating system on an single Azure VM, see [Use Windows Admin Center in Azure](manage-vm.md). You can also use scripts to [set up a Windows Admin Center server in an Azure VM](deploy-wac-in-azure.md).
+To instead use Windows Admin Center directly in the Azure portal to manage the operating system on a single Azure VM, see [Use Windows Admin Center in Azure](manage-vm.md). You can also use scripts to [set up a Windows Admin Center server in an Azure VM](deploy-wac-in-azure.md).
 
 ## Connecting to VMs with a public IP
 

@@ -86,13 +86,14 @@ items:
         - name: Manage Server Core and remote systems Remote Server Administration Tools
           href: ../remote/remote-server-administration-tools.md
         - name: Manage Windows with OpenSSH
-          href: OpenSSH/OpenSSH_Overview.md
           items: 
-            - name: Get started with OpenSSH
+            - name: What is OpenSSH for Windows?
+              href: OpenSSH/OpenSSH_Overview.md
+            - name: Get started with OpenSSH for Windows
               href: OpenSSH/OpenSSH_Install_FirstUse.md
-            - name: OpenSSH Server configuration
+            - name: Server configuration options
               href: OpenSSH/OpenSSH_Server_Configuration.md
-            - name: Manage OpenSSH Keys
+            - name: Key-based authentication
               href: OpenSSH/OpenSSH_KeyManagement.md
         - name: Windows Server Update Services (WSUS)
           href: windows-server-update-services/get-started/windows-server-update-services-wsus.md
@@ -205,9 +206,9 @@ items:
     - name: Microsoft Learn
       items: 
         - name: Manage hybrid infrastructure with Azure Arc
-          href: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+          href: /training/paths/manage-hybrid-infrastructure-with-azure-arc
         - name: Windows Server deployment, configuration, and administration
-          href: /learn/paths/windows-server-deployment-configuration-administration/
+          href: /training/paths/windows-server-deployment-configuration-administration/
         - name: Manage Windows Servers and workloads in a hybrid environment
-          href: /learn/paths/manage-windows-servers-workloads-hybrid-environment/
+          href: /training/paths/manage-windows-servers-workloads-hybrid-environment/
       

@@ -3,7 +3,8 @@
       "content": [
          {
             "files": [
-               "**/*.md"
+               "**/*.md",
+               "**/*.yml"               
             ],
             "exclude": [
                "**/obj/**",
@@ -15,7 +16,10 @@
          {
             "files": [
                "**/*.png",
-               "**/*.jpg"
+               "**/*.jpg",
+               "**/*.gif",
+               "**/*.json",
+               "**/*.svg"     
             ],
             "exclude": [
                "**/obj/**",
@@ -26,6 +30,8 @@
       "overwrite": [],
       "externalReference": [],
       "globalMetadata": {
+         "breadcrumb_path": "/windows-server-essentials/breadcrumbs/toc.json",
+         "uhfHeaderId": "MSDocsHeader-WindowsServer",
          "_op_documentIdPathDepotMapping": {
             "./": {
                "depot_name": "WS.EssentialsDocs"
