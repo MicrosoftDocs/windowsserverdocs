@@ -51,7 +51,7 @@ This support statement is based on tests that were performed in a single domain-
 
 ### Windows Server 2012
 
-The following table explains support for virtualized DCs running Windows Server 2012 and test cases.
+The following table explains support for virtualized DCs that run Windows Server 2012 and test cases.
 
 | Planned Failover | Unplanned Failover |
 |--|--|
