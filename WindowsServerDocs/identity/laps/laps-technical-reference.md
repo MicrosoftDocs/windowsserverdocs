@@ -12,7 +12,7 @@ ms.topic: reference
 Use detailed information about schema extensions and extended rights to help you deploy or manage Windows Local Administrator Password Solution (Windows LAPS) in your Windows Server Active Directory deployment.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#Windows-LAPS-availability-and-Azure-AD-LAPS-public-preview-status).
 
 ## Schema extensions
 

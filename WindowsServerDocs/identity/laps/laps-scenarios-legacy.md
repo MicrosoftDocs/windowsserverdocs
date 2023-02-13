@@ -14,7 +14,7 @@ You can set up Windows Local Administrator Password Solution (Windows LAPS) to h
 Like Microsoft LAPS, emulation mode supports storage of passwords in Windows Server Active Directory only in clear-text form. To increase security, we recommend that you migrate to using Windows LAPS natively so that you can take advantage of password encryption.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#Windows-LAPS-availability-and-Azure-AD-LAPS-public-preview-status).
 
 ## Setup and configuration
 

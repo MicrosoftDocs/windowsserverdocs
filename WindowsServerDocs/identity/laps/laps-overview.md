@@ -12,7 +12,25 @@ ms.topic: overview
 Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#Windows-LAPS-availability-and-Azure-AD-LAPS-public-preview-status).
+
+## Windows LAPS availability and Azure AD LAPS public preview status
+
+Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). 
+
+The Azure Active Directory LAPS scenario is currently in private preview and is closed to new customers. The Azure Active Directory LAPS scenario will enter public preview in Q2 2023 once all platforms listed below have been updated.
+
+Windows LAPS will be backported to the following OS platforms via Windows Update no later than Q2 2023:
+
+- Windows 11 21H2 and later
+- Windows 10 20H2 and later
+- Windows Server 2019 and later
+
+Server Core editions will be updated at the same time as their respective desktop Server editions.
+
+Microsoft will not be adding the Windows LAPS feature to any platforms older than the ones listed above.
+
+This documentation will be updated once a more precise date for the Windows backports and the Azure Active Directory LAPS scenario is available.
 
 ## Benefits of using Windows LAPS
 
