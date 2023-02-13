@@ -86,18 +86,7 @@ To find your current FBL:
    Get-AdfsFarmInformation
    ```
 
-1. Make a note of the `CurrentFarmBehavior` and review the `FarmNodes` show only the nodes
-   running your target Windows Server version.
-
-1. Run the following command to find your primary federation server.
-
-   ```powershell
-   Get-AdfsSyncProperties
-   ```
-
-1. Make a note of the `PrimaryComputerName` for use later.
-
-Now you know your current FBL and primary federation server computer name, you're ready to continue.
+1. Review the `CurrentFarmBehavior` and `FarmNodes`.
 
 ## Migrate federation servers
 
@@ -117,8 +106,7 @@ process. To begin the upgrade:
    Set-AdfsSyncProperties -Role PrimaryComputer
    ```
 
-1. Sign into your previous primary federation server using the farm information you previously
-   collected, then open an elevated PowerShell session.
+1. Sign into each of your federation servers running the previous version of Windows Server, open an elevated PowerShell session.
 
 1. Set the role of previous federation server to be the secondary computer by running the
    following command.
