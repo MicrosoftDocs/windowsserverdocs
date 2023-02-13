@@ -96,7 +96,7 @@ process. To begin the upgrade:
 1. Add the new federation server(s) to your existing farm. For more information, review
    [Add a federation server to an existing federation server farm](Configure-a-Federation-Server.md#add-a-federation-server-to-an-existing-federation-server-farm).
 
-1. Sign into your new federation server, then open an elevated PowerShell session.
+1. Sign into your new federation server, then open an elevated PowerShell session. If you have more than one server, only run this command on one server.
 
 1. Set the federation server sync property to take the primary computer role by running the
    following command. To learn more, review the
@@ -106,13 +106,13 @@ process. To begin the upgrade:
    Set-AdfsSyncProperties -Role PrimaryComputer
    ```
 
-1. Sign into each of your federation servers running the previous version of Windows Server, open an elevated PowerShell session.
+1. Sign into any other federation servers in the farm, open an elevated PowerShell session.
 
-1. Set the role of previous federation server to be the secondary computer by running the
+1. Set the role to be the secondary computer by running the
    following command.
 
    ```powershell
-   Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName "<new-server-FQDN>"
+   Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName "<primary-server-FQDN>"
    ```
 
 1. Update any load balancer, DNS, or network configurations to use the new federation servers,
