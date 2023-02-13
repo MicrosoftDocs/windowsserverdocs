@@ -27,7 +27,7 @@ behavior. Features of the newer Windows Server AD FS versions can't be configure
 Before you can upgrade the farm behavior level, you must meet the following prerequisites:
 
 - Determine
-  [which version of Windows Server to upgrade to](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
+  [which version of Windows Server to upgrade to](../../../get-started/upgrade-overview.md).
 
 - Deployed the target Windows Server version on a new computer, apply all Windows Updates, and
   install the Active Directory Federation Service server role. For more information, see
@@ -36,7 +36,7 @@ Before you can upgrade the farm behavior level, you must meet the following prer
 - If you're also using Windows Server Web Application Proxy deploy the target Windows Server version
   on a new computer, apply all Windows Updates, install the Remote Access server role, and Web
   Application Proxy role service. For more information, see
-  [Working with Web Application Proxy](previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn584113(v=ws.11)).
+  [Working with Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn584113(v=ws.11)).
 
 - If you're upgrading to AD FS in Windows Server 2016 or later, the farm upgrade requires the AD
   schema to be at least level 85. If you're upgrading to in Windows Server AD FS 2019 or later, the
