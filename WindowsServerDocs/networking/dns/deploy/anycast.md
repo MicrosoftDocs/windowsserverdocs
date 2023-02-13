@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: greglin
 author: greg-lindsay
-ms.date: 10/23/2020
+ms.date: 02/13/2023
 ---
 # Anycast DNS overview
 
@@ -31,7 +31,13 @@ With Anycast, servers that exist in multiple geographical locations each adverti
 
 ![Four DNS servers, located at different sites, announce the same Anycast IP address to the network](../../media/Anycast/anycast.png)
 
-**Figure 1**: Four DNS servers located at different sites on a network each announce the same Anycast IP address (black arrows) to the network. A DNS client device sends out a request to the Anycast IP address. Network devices analyze the available routes and send the client’s DNS query to the nearest location (blue arrow).
+**Figure 1**: Example Anycast network
+- Four DNS servers (blue circles), located at different sites on a network, each announce the same Anycast IP address to their local routing device (not shown).
+- Routes are shared among devices on the network (black arrows).
+- A DNS client device (green circle) sends out a DNS query to the Anycast IP address. 
+- The client's DNS request is received by a routing device on the network.
+- The routing device analyzes the available routes to the Anycast IP address, and routes the DNS query using the shortest available route.
+- The DNS query is sent to the nearest DNS server (blue arrow).
 
 Anycast DNS is used commonly today to route DNS traffic for many global DNS services. For example, the root DNS server system depends heavily on Anycast DNS. Anycast also works with a variety of routing protocols and can be used exclusively on intranets.
 
