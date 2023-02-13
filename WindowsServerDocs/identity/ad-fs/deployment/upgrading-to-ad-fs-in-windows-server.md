@@ -135,7 +135,7 @@ process. To begin the upgrade:
    the following command to remove the stale entries.
 
    ```powershell
-   Set-AdfsFarmInformation -RemoveNode "<old-server-FQDN"
+   Set-AdfsFarmInformation -RemoveNode "<old-server-FQDN>"
    ```
 
 Now you've your new federations server to farm and removed the previous ones, you're ready to
