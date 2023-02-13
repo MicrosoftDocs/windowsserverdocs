@@ -35,7 +35,7 @@ With Anycast, servers that exist in multiple geographical locations each adverti
 - Four DNS servers (blue circles), located at different sites on a network, each announce the same Anycast IP address to their local routing device (not shown).
 - Routes are shared among devices on the network (black arrows).
 - A DNS client device (green circle) sends out a DNS query to the Anycast IP address. 
-- The client's DNS request is received by a routing device on the network.
+- The client's DNS request is received by a routing device on the network (not shown).
 - The routing device analyzes the available routes to the Anycast IP address, and routes the DNS query using the shortest available route.
 - The DNS query is sent to the nearest DNS server (blue arrow).
 
