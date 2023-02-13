@@ -16,6 +16,9 @@ Azure AD provides a simple cloud-based sign-in experience to all your resources 
 
 For more info on **why** you should upgrade from AD FS to Azure AD, visit [moving from AD FS to Azure AD](https://aka.ms/adfs2aad). See [migrate from federation to cloud authentication](/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication) to understand **how** to upgrade from AD FS. 
 
+
+> [!VIDEO https://www.youtube.com/embed/D0M-N-RQw0I]
+
 This document will provide you with the recommended steps for decommissioning your AD FS servers.
 
 ## Pre-requisites for decommissioning AD FS servers 
