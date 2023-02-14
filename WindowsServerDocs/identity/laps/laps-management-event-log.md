@@ -12,7 +12,7 @@ ms.topic: conceptual
 Windows Local Administrator Password Solution (Windows LAPS) has a dedicated event log channel. All Windows LAPS operations are tracked with rich eventing. Learn about key events and how to view the log.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#Windows-LAPS-availability-and-Azure-AD-LAPS-public-preview-status).
+> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#Windows-LAPS-supported-platforms-and-Azure-AD-LAPS-preview-status).
 
 ## View the event log
 

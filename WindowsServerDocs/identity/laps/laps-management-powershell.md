@@ -12,7 +12,7 @@ ms.topic: conceptual
 Windows Local Administrator Password Solution (Windows LAPS) includes a specific PowerShell module named LAPS. Learn how to use the cmdlets in this module and what they do.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#Windows-LAPS-availability-and-Azure-AD-LAPS-public-preview-status).
+> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#Windows-LAPS-supported-platforms-and-Azure-AD-LAPS-preview-status).
 
 ## Cmdlet descriptions
 
