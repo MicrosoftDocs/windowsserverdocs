@@ -44,12 +44,6 @@ Watch this video to learn about Windows LAPS.
 
 >[!Video https://www.youtube.com/embed/jdEDIXm4JgU]
 
-## Supported platforms
-
-Windows LAPS is supported on desktop Windows, Windows Server, and Windows Server Core. Windows LAPS is a native Windows feature on all supported SKUs. No extra steps are required to install the feature.
-
-As noted earlier, Windows LAPS currently is available only in Windows 11 Insider Preview Build 25145 and later. Support for the Windows LAPS Azure Active Directory scenario currently is limited to a small number of Windows Insider users.
-
 ## Key Windows LAPS scenarios
 
 You can use Windows LAPS for several primary scenarios:
