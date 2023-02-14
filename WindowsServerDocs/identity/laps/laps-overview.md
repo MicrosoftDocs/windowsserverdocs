@@ -28,8 +28,6 @@ Windows LAPS will be backported to the following OS platforms no later than Q2 2
 
 Server Core editions will be updated at the same time as their respective desktop Server editions.
 
-Microsoft will not be adding the Windows LAPS feature to any platforms older than the ones listed above.
-
 This documentation will be updated once a more precise date for the Windows backports and the Azure Active Directory LAPS scenario is available.
 
 ## Benefits of using Windows LAPS
