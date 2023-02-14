@@ -127,7 +127,8 @@ process. To begin the upgrade:
    ```
 
 Now you've your new federations server to farm and removed the previous ones, you're ready to
-upgrade the FBL.
+upgrade the FBL. To learn more about decommissioning, see
+[Steps to decommission your AD FS Servers](../decommission/adfs-decommission-guide.md#steps-to-decommission-your-ad-fs-servers).
 
 ## Upgrade the Farm Behavior Level
 
@@ -168,8 +169,11 @@ level.
 1. Sign in to your newly deployed Web Application Proxy server and open an elevated PowerShell
    session.
 
-1. To configure WAP run the following PowerShell command. Repeat this step for any more Web
-   Application Proxy servers.
+1. Import the certificate used by the federation certificate, make a note of the certificate
+   thumbprint.
+
+1. To configure WAP run the following PowerShell command, replacing the placeholder `<value>` with
+   your own values. Repeat this step for any more Web Application Proxy servers.
 
    ```Powershell
    $trustcred = Get-Credential -Message "<Enter Domain Administrator credentials>"
@@ -184,8 +188,8 @@ level.
    ```
 
    > [!NOTE]
-   > Skip the next step if the ConfigurationVersion is Windows Server 2016. This is the correct
-   > value for Web Application Proxy on Windows Server 2016 / 2019.
+   > Skip the next step if the ConfigurationVersion is `Windows Server 2016`. This is the correct
+   > value for Web Application Proxy on Windows Server 2016 and later.
 
 1. Remove old Web Application Proxy servers, keeping only the new servers configured in the previous
    steps by running the following PowerShell cmdlet:
