@@ -22,8 +22,8 @@ The Azure Active Directory LAPS scenario is currently in private preview and is 
 
 Windows LAPS will be backported to the following OS platforms via Windows Update no later than Q2 2023:
 
-- Windows 11 21H2 and later
 - Windows 10 20H2 and later
+- Windows 11 21H2 and later
 - Windows Server 2019 and later
 
 Server Core editions will be updated at the same time as their respective desktop Server editions.
