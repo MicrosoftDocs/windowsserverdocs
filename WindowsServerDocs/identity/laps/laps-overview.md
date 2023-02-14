@@ -20,7 +20,7 @@ Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25
 
 The Azure Active Directory LAPS scenario is currently in private preview and is closed to new customers. The Azure Active Directory LAPS scenario will enter public preview in Q2 2023 once all platforms listed below have been updated.
 
-Windows LAPS will be backported to the following OS platforms via Windows Update no later than Q2 2023:
+Windows LAPS will be backported to the following OS platforms no later than Q2 2023:
 
 - Windows 10 20H2 and later
 - Windows 11 21H2 and later
