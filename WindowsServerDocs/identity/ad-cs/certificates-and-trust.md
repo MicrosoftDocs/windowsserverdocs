@@ -1,7 +1,6 @@
 ---
 title: Trusted roots and disallowed certificates
 description: Learn how the Microsoft Root Certificate Program works to distribute trusted root certificates automatically across Windows operating systems in disconnected environments.
-ms.service: 
 author: gswashington
 ms.author: roharwoo
 ms.topic: overview

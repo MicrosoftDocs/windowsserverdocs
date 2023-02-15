@@ -1,7 +1,6 @@
 ---
 title: Configure trusted roots and disallowed certificates
 description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs) and other functionality
-ms.service: 
 ms.topic: how-to 
 author: gswashington
 ms.author: roharwoo
