@@ -28,7 +28,7 @@ By default, Windows downloads the CTLs from the Internet via an automatic mechan
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/disallowedcertstl.cab 
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab
 
-Automatic update functionality also can be disabled if necessary, although this isn't recommended.
+Automatic update functionality also can be disabled if necessary, although isn't recommended.
 
 Alternately, you also can create a Group Policy administrative templates (ADMX policy) to redirect to an internal server for updates.
 
