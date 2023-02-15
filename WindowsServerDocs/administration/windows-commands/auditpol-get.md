@@ -97,7 +97,7 @@ Where the available options are AuditBaseObjects, AuditBaseOperations, and Fullp
 auditpol /get /option:CrashOnAuditFail /r
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

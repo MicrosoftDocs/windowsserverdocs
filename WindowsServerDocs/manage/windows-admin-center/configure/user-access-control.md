@@ -53,7 +53,7 @@ If your organization uses Azure Active Directory (Azure AD), you can choose to a
 Depending on the browser used, some users accessing Windows Admin Center with Azure AD authentication configured will receive an additional prompt **from the browser** where they need to provide their Windows account credentials for the machine on which Windows Admin Center is installed. After entering that information, the users will get the additional Azure Active Directory authentication prompt, which requires the credentials of an Azure account that has been granted access in the Azure AD application in Azure.
 
 > [!NOTE]
-> Users who's Windows account has **Administrator rights** on the gateway machine will not be prompted for the Azure AD authentication.
+> Users whose Windows account has **Administrator rights** on the gateway machine will not be prompted for the Azure AD authentication.
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center Preview
 

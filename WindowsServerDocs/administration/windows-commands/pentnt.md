@@ -18,6 +18,6 @@ ms.date: 10/16/2017
 
 Detects floating point division error (if present) in the Pentium chip, disables floating point hardware, and turns on floating point emulation. For descriptions and usage information, see [pentnt](/previous-versions/orphan-topics/ws.10/cc755868(v=ws.10)).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

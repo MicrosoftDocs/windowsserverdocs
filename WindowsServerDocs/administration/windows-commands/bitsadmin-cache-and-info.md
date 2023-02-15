@@ -33,7 +33,7 @@ To dump the cache entry with the recordID value of {6511FB02-E195-40A2-B595-E8E2
 bitsadmin /cache /info {6511FB02-E195-40A2-B595-E8E2F8F47702}
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

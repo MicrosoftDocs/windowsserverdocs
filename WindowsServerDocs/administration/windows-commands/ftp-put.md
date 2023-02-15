@@ -45,7 +45,7 @@ To copy the local file *program.exe* to the remote computer, type:
 put program.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -20,7 +20,9 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 ## General
 > [!NOTE]
-> Self-signed certificiates accessed on "https://localhost:[port]" currently cause Windows Admin Center to be blocked on both Microsoft Edge and Google Chrome browsers. When this happens, you may see an error explaining that your connection is not private. Update your Windows Admin Center installation with a publicly verified certificate to fix this issue.
+> Self-signed certificiates accessed on "https://localhost:[port]" may cause Windows Admin Center to be blocked on both Microsoft Edge and Google Chrome browsers. When this happens, you may see an error explaining that your connection is not private. Update your Windows Admin Center installation to the latest version to fix this issue.
+
+- Using certain versions of extensions with older versions of Windows Admin Center may result in icons not displaying properly. To fix this issue, please upgrade to the latest build of Windows Admin Center. 
 
 - In the 1910.2 release of Windows Admin Center, you may not be able to connect to Hyper-V servers on specific hardware. If you are blocked on this issue, [download our previous build](https://aka.ms/wacprevious).
 
@@ -38,6 +40,8 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 - If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
 
 - There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the third Party Software Notice.
+
+- Windows Admin Center tool APIs may be accessed and used through other methods while a session of Windows Admin Center is active and a user has access to that session. The actions taken using these APIs will only affect the gateway machine (the machine Windows Admin Center is installed on). This will not affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
 ### Extension Manager
 
@@ -298,7 +302,7 @@ You can use the following steps to troubleshoot:
    ```PowerShell
    Enter-PSSession -computername <node fqdn>
    ```
-
+   
 ## CredSSP
 
 - The **Updates** tool will sometimes throw the CredSSP error **You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials**:
@@ -349,6 +353,8 @@ The cluster deployment wizard in Windows Admin Center version 2007 doesn't provi
 ## Azure services
 
 ### Azure login and gateway registration
+When attempting to register your Windows Admin Center gateway in the Azure China or Azure US Gov cloud domains in version 2211, you may be redirected to the Azure Global sign-in experience. To work around this issue, please use an earlier version of Windows Admin Center.    
+   
 In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
 
 * Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  

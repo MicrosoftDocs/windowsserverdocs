@@ -37,7 +37,7 @@ To expand the selected VHD to 20 GB, type:
 expand vdisk maximum=20000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

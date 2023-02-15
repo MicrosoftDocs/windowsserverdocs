@@ -33,7 +33,7 @@ To assign the default drive the drive letter `P`:
 bdehdcfg -target default -newdriveletter P:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

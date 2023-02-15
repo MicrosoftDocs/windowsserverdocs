@@ -89,7 +89,7 @@ The following values are returned after driver verifier has run:
 
 - You can use the **/volatile** parameter with some of the Driver Verifier utility **/flags** options and with **/standard**. You can't use **/volatile** with the **/flags** options for [DDI compliance checking](/windows-hardware/drivers/devtest/ddi-compliance-checking), [Power Framework Delay Fuzzing](/windows-hardware/drivers/devtest/concurrency-stress-test), [Storport Verification](/windows-hardware/drivers/devtest/dv-storport-verification), or [SCSI Verification](/windows-hardware/drivers/devtest/scsi-verification). For more information, see [Using Volatile Settings](/windows-hardware/drivers/devtest/using-volatile-settings).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

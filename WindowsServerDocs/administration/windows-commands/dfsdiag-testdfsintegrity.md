@@ -43,7 +43,7 @@ To verify the integrity and consistency of the Distributed File System (DFS) nam
 dfsdiag /testdfsintegrity /DFSRoot:\contoso.com\MyNamespace /recurse /full
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

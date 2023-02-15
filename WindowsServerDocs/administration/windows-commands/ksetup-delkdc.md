@@ -45,7 +45,7 @@ To remove the association, type:
 ksetup /delkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -42,7 +42,7 @@ To get an abbreviated directory listing of *dir1* on the remote computer and sav
 ls dir1 dirlist.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

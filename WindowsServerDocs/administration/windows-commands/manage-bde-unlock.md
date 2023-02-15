@@ -6,7 +6,7 @@ ms.assetid: 7852bf7d-9102-40be-adcb-71e8f4dfde72
 ms.author: alalve
 author: JasonGerend
 manager: mtillman
-ms.date: 10/18/2022
+ms.date: 01/17/2023
 ---
 
 # manage-bde unlock
@@ -42,22 +42,22 @@ manage-bde -unlock {-recoverypassword -password | -recoverykey <pathtoexternalke
 To unlock drive E with a password, type:
 
 ```cmd
-manage-bde –unlock E: -password
+manage-bde -unlock E: -password
 ```
 
 To unlock drive E with a recovery password, type:
 
 ```cmd
-manage-bde –unlock E: -recoverypassword xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx
+manage-bde -unlock E: -recoverypassword xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx
 ```
 
 To unlock drive E with a recovery key file that's been saved to a backup folder on another drive, type:
 
 ```cmd
-manage-bde –unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
+manage-bde -unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -33,7 +33,7 @@ query user
 | [query termserver](query-termserver.md) | Displays a list of all Remote Desktop Session Host servers on the network. |
 | [query user](query-user.md) | Displays information about user sessions on a Remote Desktop Session Host server. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

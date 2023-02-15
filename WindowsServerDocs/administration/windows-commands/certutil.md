@@ -2053,7 +2053,7 @@ This section defines all of the options you're able to specify, based on the com
 | -syncWithWU DestinationDir | Sync with Windows Update. |
 | -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism. |
 
-### Additional References
+### Related links
 
 For some more examples about how to use this command, see
 

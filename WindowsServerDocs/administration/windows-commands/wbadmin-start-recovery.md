@@ -76,7 +76,7 @@ To run a recovery of the backup from April 30, 2020, taken at 9:00 A.M., of the 
 wbadmin start recovery -version:04/30/2020-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

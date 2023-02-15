@@ -60,7 +60,7 @@ To set the Archive attribute for all files on drive a:, and then clear the Archi
 attrib +a a:*.* & attrib -a a:*.bak
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

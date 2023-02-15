@@ -116,7 +116,7 @@ schtasks /change /tn MyApp /it
 
 This property assures that the task runs only when the run as user, that is, the user account under which the task runs, is logged on to the computer. The command uses the **/tn** parameter to identify the task and the **/it** parameter to add the interactive-only property to the task. Because the task already runs with the permissions of my user account, you don't need to change the **/ru** parameter for the task.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

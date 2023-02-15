@@ -4,8 +4,8 @@ title: AD FS 2016 Requirements
 description: Requirements for installing Active Directory Federation Services.
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 03/06/2018
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

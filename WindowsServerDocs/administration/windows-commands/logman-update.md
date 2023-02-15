@@ -28,7 +28,7 @@ logman update <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 | [logman update cfg](logman-update-cfg.md) | Updates a configuration data collector. |
 | [logman update api](logman-update-api.md) | Updates an API tracing data collector. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

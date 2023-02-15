@@ -4,8 +4,8 @@ ms.assetid: d282bb4e-38a0-4c7c-83d8-f6ea89278057
 title: Build a web application using OpenID Connect with AD FS 2016 and later
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 02/22/2018
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

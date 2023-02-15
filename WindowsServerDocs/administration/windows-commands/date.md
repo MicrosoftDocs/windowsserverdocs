@@ -54,6 +54,6 @@ date
 
 To keep the current date and return to the command prompt, press **ENTER**. To change the current date, type the new date based on your current date configuration, as seen in the second example above, and then press **ENTER**.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -40,7 +40,7 @@ wdsutil /add-ImageGroup imageGroup:ImageGroup2
 wdsutil /verbose /add-Imagegroup imageGroup:My Image Group /Server:MyWDSServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

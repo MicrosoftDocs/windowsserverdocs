@@ -21,6 +21,6 @@ A volume must be selected for this operation to succeed. Use the [select volume 
 filesystems
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

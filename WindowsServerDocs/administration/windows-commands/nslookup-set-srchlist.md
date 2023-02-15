@@ -41,7 +41,7 @@ To set the DNS domain to *mfg.widgets.com* and the search list to the three name
 set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

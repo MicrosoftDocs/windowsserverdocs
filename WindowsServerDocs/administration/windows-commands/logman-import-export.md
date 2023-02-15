@@ -43,7 +43,7 @@ To import the XML file *c:\windows\perf_log.xml* from the computer *server_1* as
 logman import perf_log -s server_1 -xml c:\windows\perf_log.xml
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

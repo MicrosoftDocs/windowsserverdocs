@@ -49,6 +49,10 @@ You can configure a set of connection request policies that are specific to the 
 
 Before the RADIUS message is either processed locally (when NPS is being used as a RADIUS server) or forwarded to another RADIUS server (when NPS is being used as a RADIUS proxy), the User-Name attribute in the message can be modified by attribute manipulation rules. You can configure attribute manipulation rules for the User-Name attribute by selecting **User name** on the **Conditions** tab in the properties of a connection request policy. NPS attribute manipulation rules use regular expression syntax.
 
+> [!Note]  
+> Realm manipulation does not work with PEAP.    
+> The desired behaviour might be accomplished by either switching to EAP-TLS or EAP-MSCHAPv2 for authentication or [adding an UPN suffix to the domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772007(v=ws.11)) for each additional domain name you need to resolve.
+
 You can configure attribute manipulation rules for the User-Name attribute to change the following:
 
 - Remove the realm name from the user name \(also known as realm stripping\). For example, the user name user1@example.com is changed to user1.
@@ -68,7 +72,10 @@ After the User-Name attribute is modified according to the attribute manipulatio
 When the user name does not contain a domain name, NPS supplies one. By default, the NPS-supplied domain name is the domain of which the NPS is a member. You can specify the NPS-supplied domain name through the following registry setting:
 
 ```
-HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan\PPP\ControlProtocols\BuiltIn\DefaultDomain
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan\PPP\ControlProtocols\BuiltIn\
+Name:  DefaultDomain
+Type:  REG_SZ
+Value: the FQDN for the domain, like test.contoso.com
 ```
 
 > [!CAUTION]

@@ -27,7 +27,7 @@ The Paged Query method uses the page size either set by the client or through a 
 
 When working on a query with many results, at some point the maximum number of objects allowed is reached. The LDAP server packages up the response message and adds a cookie that contains information it needs to later continue the search.
 
-The client application must treat the cookie as an opaque blob. It can retrieve the object count in the response and can continue the search based on the presence of the cookie.The client continues the search by sending the query to the LDAP server again with the same parameters such as base object and filter, and includes the cookie value that was returned on the previous response.
+The client application must treat the cookie as an opaque blob. It can retrieve the object count in the response and can continue the search based on the presence of the cookie. The client continues the search by sending the query to the LDAP server again with the same parameters such as base object and filter, and includes the cookie value that was returned on the previous response.
 
 If the number of objects doesn't fill a page, the LDAP query is complete and the response contains no page cookie. If no cookie is returned by the server, the client must consider the paged search to be successfully complete.
 
@@ -39,7 +39,7 @@ The Windows Server returns the cookie to the client and sometimes stores informa
 In this case, the cookie sent to the client by the Server is also used by the server to lookup the information from the cache on the Server. When the client continues the paged search, the Windows Server will use the client cookie as well as any related information from the server cookie cache to continue the search. If the server cannot find related cookie information from the server cache due to any reason, the search is discontinued and error is returned to the client.
 
 ## How the cookie pool is managed
-Obviously, the LDAP server is serving more than one client at a time, and also more than one client at a time can launch queries that require the use of server cookie cache.Thus the Windows Server implementation there is a tracking of cookie pool usage and limits are put into place so the cookie pool is not taking too much resources. The limits can be set by the Administrator using the following settings in LDAP Policy. The defaults and explanations are:
+Obviously, the LDAP server is serving more than one client at a time, and also more than one client at a time can launch queries that require the use of server cookie cache. Thus the Windows Server implementation there is a tracking of cookie pool usage and limits are put into place so the cookie pool is not taking too much resources. The limits can be set by the Administrator using the following settings in LDAP Policy. The defaults and explanations are:
 
 **MinResultSets: 4**
 

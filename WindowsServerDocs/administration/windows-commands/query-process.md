@@ -69,7 +69,7 @@ To display information about the processes being used by *session ID 2*, type:
 query process /ID:2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

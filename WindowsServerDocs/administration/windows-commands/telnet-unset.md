@@ -42,6 +42,6 @@ Turn off logging.
 u logging
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -45,7 +45,7 @@ To retrieve the access control list propagation flags for the job named *myDownl
 bitsadmin /getaclflags myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

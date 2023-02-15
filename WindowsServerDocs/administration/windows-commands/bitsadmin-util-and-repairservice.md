@@ -39,7 +39,7 @@ To repair the BITS service configuration:
 bitsadmin /util /repairservice
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

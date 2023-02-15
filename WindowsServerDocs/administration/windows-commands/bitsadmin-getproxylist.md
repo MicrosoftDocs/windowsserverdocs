@@ -33,7 +33,7 @@ To retrieve the proxy list for the job named *myDownloadJob*:
 bitsadmin /getproxylist myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

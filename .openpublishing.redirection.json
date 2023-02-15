@@ -10772,19 +10772,88 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/Removed-Features-1709.md",
-      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-1903-1909.md",
-      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/windows-server-1803-removed-features.md",
-      "redirect_url": "WindowsServerDocs/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-1709.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-1803.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-1809.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-1903-1909.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-2004-20h2.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/inuse.md",
+      "redirect_url": "/previous-versions/orphan-topics/ws.10/dd996699(v=ws.10)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Azure-Active-Directory-Connect.md",
+      "redirect_url": "/azure/active-directory/hybrid/whatis-hybrid-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/winpop.md",
+      "redirect_url": "/previous-versions/orphan-topics/ws.10/cc772824(v=ws.10)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/cprofile.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff934599(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/eventquery.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff935312(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/eventtriggers.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff935309(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md",
+      "redirect_url": "/azure/active-directory/authentication/how-to-migrate-mfa-server-to-azure-mfa-with-federation",
       "redirect_document_id": false
     }
-
   ]
 }

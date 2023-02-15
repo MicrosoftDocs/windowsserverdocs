@@ -3,8 +3,8 @@ title: Migrate the AD FS web agent
 description: Provides information on the AD FS web agent to Windows Server 2012.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 06/28/2017
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 
