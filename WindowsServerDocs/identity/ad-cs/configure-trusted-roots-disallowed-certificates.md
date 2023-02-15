@@ -5,7 +5,7 @@ ms.service:
 ms.topic: how-to 
 author: gswashington
 ms.author: roharwoo
-ms.date: 12/14/2022
+ms.date: 02/15/2023
 ---
 
 # Configure trusted roots and disallowed certificates
