@@ -19,7 +19,7 @@ Failover Clustering enables multiple servers to work together to provide high av
 Fault domains and fault tolerance are closely related concepts. A fault domain is a set of hardware components that share a single point of failure. To be fault tolerant to a certain level, you need multiple fault domains at that level. For example, to be rack fault tolerant, your servers and your data must be distributed across multiple racks.
 
 This short video presents an overview of fault domains in Windows Server 2016:
-![Overview video of fault domains and tolerance in Windows Server 2016.](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-1-overview)
+![Overview video of fault domains and tolerance in Windows Server 2016.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-1-overview)
 
 ### Fault domain awareness in Windows Server 2019
 
@@ -69,7 +69,7 @@ Windows Server 2016 introduces the following cmdlets to work with fault domains:
 * `Remove-ClusterFaultDomain`
 
 This short video demonstrates the usage of these cmdlets.
-![Video on the usage of the Cluster Fault Domain PowerShell commands.](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-2-using-powershell)
+![Video on the usage of the Cluster Fault Domain PowerShell commands.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-2-using-powershell)
 
 Use `Get-ClusterFaultDomain` to see the current fault domain topology. This will list all nodes in the cluster, plus any chassis, racks, or sites you have created. You can filter using parameters like **-Type** or **-Name**, but these are not required.
 
@@ -123,7 +123,7 @@ Fault domains can be specified using an XML-inspired syntax. We recommend using 
 
 This short video demonstrates the usage of XML Markup to specify fault domains.
 
-![Video on how to use XML to specify fault domains in failover clustering.](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-3-using-xml)
+![Video on how to use XML to specify fault domains in failover clustering.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-3-using-xml)
 
 In PowerShell, run the following cmdlet: `Get-ClusterFaultDomainXML`. This returns the current fault domain specification for the cluster, as XML. This reflects every discovered `<Node>`, wrapped in opening and closing `<Topology>` tags.
 
@@ -190,4 +190,4 @@ This guide presents just two examples, but the `<Site>`, `<Rack>`, `<Chassis>`, 
 
 You can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service. This short video demonstrates the value of adding such descriptors.
 
-![Video demonstrating the value of adding location descriptors to fault domains.](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-4-location-description)
+![Video demonstrating the value of adding location descriptors to fault domains.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-4-location-description)
