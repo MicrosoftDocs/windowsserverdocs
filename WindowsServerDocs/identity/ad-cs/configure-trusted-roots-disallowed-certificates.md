@@ -24,7 +24,7 @@ See [Certificates and trust](certificates-and-trust.md) for more detailed knowle
 
 ## Software update description
 
-The following automatic update mechanisms are available in Windows Server 2012 R2 and Windows 8.1 and newer Windows versions or when the appropriate software update is installed (for older operating systems discussed in this article):
+The following automatic update mechanisms are available in Windows Server and the Windows client when the appropriate software update is installed (for older operating systems discussed in this article):
 
 - **Registry settings for storing CTLs** New settings enable changing the location for uploading trusted or untrusted CTLs from the Windows Update site to a shared location in an organization. For more information, see the [Registry settings modified]() section.
 
