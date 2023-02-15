@@ -13,7 +13,7 @@ ms.date: 12/29/2022
 
 Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
 
-The Microsoft Root Certificate Program enables distribution of trusted and untrusted root certificates within Windows operating systems. For more information about the list of members in Windows Root Certificate Program, see [Windows Root Certificate Program - Members List (All CAs)](GET VERIFIED LINK FROM FLORIN).
+The Microsoft Root Certificate Program enables distribution of trusted and untrusted root certificates within Windows operating systems. For more information about the list of members in Windows Root Certificate Program, see [List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list).
 
 Trusted and untrusted root certificates are used by Windows operating systems and applications as a reference when determining whether public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Untrusted root certificates are certificates that are publicly known to be fraudulent. Trusted and untrusted root certificates functionality works across all environments, whether connected or disconnected.
 
