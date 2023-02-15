@@ -1,6 +1,6 @@
 ---
 title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
-manager: eldenc
+manager: femila
 ms.topic: article
 ms.author: wscontent
 author: robinharwood

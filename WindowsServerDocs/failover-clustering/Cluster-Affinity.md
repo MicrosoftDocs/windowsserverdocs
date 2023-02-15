@@ -1,6 +1,6 @@
 ---
 title: Cluster affinity
-manager: eldenc
+manager: femila
 ms.topic: article
 ms.author: wscontent
 author: robinharwood

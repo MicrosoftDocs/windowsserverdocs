@@ -1,7 +1,7 @@
 ---
 title: Deploy a File Share Witness in Windows Server 2019
 description: File share witnesses allow you to use a file share to vote in cluster quorum. This topic describes file share witnesses and the new functionality, including using a USB drive connected to a router as a file share witness.
-manager: eldenc
+manager: femila
 ms.topic: article
 ms.author: wscontent
 author: robinharwood
