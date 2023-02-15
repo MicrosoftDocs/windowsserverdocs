@@ -220,6 +220,7 @@ Some organizations might want only the untrusted CTLs (not the trusted CTLs) to 
 1. Use a descriptive file name to save the file, such as **EnableUntrustedCTLUpdate.adm**.
 
     > [!TIP]
+
 - Ensure that the file name extensions of these files are .adm and not .txt.
 - If you have not already enabled file name extension viewing, see [How To: View File Name Extensions](https://social.technet.microsoft.com/wiki/contents/articles/1784.how-to-view-file-name-extensions.aspx).
 - If you save the file to the %windir%\inf folder, it will be easier to locate in the following steps.
