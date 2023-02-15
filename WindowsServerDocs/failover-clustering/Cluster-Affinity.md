@@ -2,8 +2,8 @@
 title: Cluster affinity
 manager: eldenc
 ms.topic: article
-author: johnmarlin-msft
-ms.author: johnmar
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/20/2021
 description: This article describes failover cluster affinity and antiaffinity levels
 ---

@@ -2,8 +2,8 @@
 title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
 manager: eldenc
 ms.topic: article
-author: johnmarlin-msft
-ms.author: johnmar
+ms.author: wscontent
+author: robinharwood
 ms.date: 03/29/2018
 description: This article describes the scenarios available today for disaster recovery of Microsoft HCI (Storage Spaces Direct)
 ---
