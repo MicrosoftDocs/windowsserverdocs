@@ -162,7 +162,7 @@ If the computers in your network are configured in a domain environment and they
 The policy is effective immediately, but the client computers must be restarted to receive the new settings, or you can type **gpupdate /force** from an elevated command prompt or from Windows PowerShell.
 
 > [!IMPORTANT]
-> The trusted and untrusted CTLs can be updated on a daily basis, so ensure that you keep the files synchronized by using a scheduled task or another method (such as a script that handles error conditions) to update the shared folder or web virtual directory. For additional details about creating a scheduled task, see [Schedule a Task](https://technet.microsoft.com/library/cc748993.aspx). If you plan to write a script to make daily updates, see the [New Certutil Options]() and [Potential errors with Certutil -SyncWithWU]() sections of this document. These sections provide more information about command options and the error conditions.
+> The trusted and untrusted CTLs can be updated on a daily basis, so ensure that you keep the files synchronized by using a scheduled task or another method (such as a script that handles error conditions) to update the shared folder or web virtual directory. For more information about creating a scheduled task, see [Schedule a Task](https://technet.microsoft.com/library/cc748993.aspx). If you plan to write a script to make daily updates, see the [New Certutil Options]() and [Potential errors with Certutil -SyncWithWU]() sections of this document. These sections provide more information about command options and the error conditions.
 
 ## Redirect the Microsoft Automatic Update URL for untrusted CTLs only
 
