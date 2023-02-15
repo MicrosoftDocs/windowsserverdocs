@@ -101,7 +101,7 @@ To facilitate the distribution of trusted or untrusted certificates for a discon
 
 ## Redirect the Microsoft Automatic Update URL for a disconnected environment
 
-If the computers in your network are configured in a domain environment and they are unable to use the automatic update mechanism or download CTLs, you can implement a GPO in AD DS to configure those computers to obtain the CTL updates from an alternate location.
+The computers in your network might be configured in a domain environment and therefore unable to use the automatic update mechanism or download CTLs. You can implement a GPO in AD DS to configure these computers to obtain the CTL updates from an alternate location.
 
 > [!NOTE]
 > The configuration in this section requires that you already completed the steps in [Configure a file or web server to download the CTL files]().
@@ -166,7 +166,7 @@ The policy is effective immediately, but the client computers must be restarted 
 
 ## Redirect the Microsoft Automatic Update URL for untrusted CTLs only
 
-Some organizations may want only the untrusted CTLs (not the trusted CTLs) to be automatically updated. To accomplish this, you can create two .adm templates to add to Group Policy.
+Some organizations might want only the untrusted CTLs (not the trusted CTLs) to be automatically updated. To automatically update only the untrusted CTLs, create two .adm templates to add to Group Policy.
 
 > [!IMPORTANT]
 >
