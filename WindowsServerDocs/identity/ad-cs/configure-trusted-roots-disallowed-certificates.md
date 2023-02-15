@@ -34,7 +34,7 @@ The following automatic update mechanisms are available in Windows Server 2012 R
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable. Administrators can use the automatic update mechanism to download only the untrusted CTLs and manage their own list of trusted CTLs. For more information, see the [Registry settings modified]() section in this document.
 
-Automatic update functionality also can be disabled if necessary, although this is not recommended. See [Event ID 8 — Automatic Root Certificates Update Configuration](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10)?redirectedfrom=MSDN#turn-off-automatic-root-certificates-update) for more information.
+Automatic update functionality can be disabled if necessary. Disabling is not recommended. See [Event ID 8 — Automatic Root Certificates Update Configuration](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10)?redirectedfrom=MSDN#turn-off-automatic-root-certificates-update) for more information.
 
 ## Configuration options
 
@@ -54,9 +54,9 @@ By using Windows Server 2012 R2 and Windows 8.1 (or by installing the previously
 
 - Configure Active Directory Domain Services (AD DS) domain member computers to use the automatic update mechanism for trusted and untrusted CTLs, without having access to the Windows Update site. This configuration is described in the [Redirect the Microsoft Automatic Update URL for a disconnected environment]() section of this document.
 
-- Configure AD DS domain member computers to independently opt-in for untrusted and trusted CTL automatic updates. This configuration is described in the [Redirect the Microsoft Automatic Update URL for untrusted CTLs only]() section of this document.
+- Configure AD DS domain member computers to independently opt-in for untrusted and trusted CTL automatic updates. The independent opt-in configuration is described in the [Redirect the Microsoft Automatic Update URL for untrusted CTLs only]() section of this document.
 
-- Examine the set of root certificates in the Windows Root Certificate Program. This enables administrators to select a subset of certificates to distribute by using a Group Policy Object (GPO). This configuration is described in the [Use a subset of the trusted CTLs]() section of this document.
+- Examine the set of root certificates in the Windows Root Certificate Program. Examining the root certificate set enables administrators to select a subset of certificates to distribute by using a Group Policy Object (GPO). This configuration is described in the [Use a subset of the trusted CTLs]() section of this document.
 
 > [!IMPORTANT]
 > All the steps shown in this document require that you use an account that is a member of the local <STRONG>Administrators</STRONG> group. For all Active Directory Domain Services (AD DS) configuration steps, you must use an account that is a member of the <STRONG>Domain Admins</STRONG> group or that has been delegated the necessary permissions.
@@ -323,7 +323,7 @@ The settings described in this document configure the following registry keys on
 
 ## Deleting Trusted and Untrusted CTLs
 
-It may be necessary for various reasons to delete all Trusted and Untrusted CTLs from a client machine. The following Certutil options can be used to accomplish this.
+It may be necessary for various reasons to delete all Trusted and Untrusted CTLs from a client machine. The following Certutil options can be used to delete all Trusted and Untrusted CTLs from a client machine.
 
 `certutil -verifyCTL AuthRoot`
 `certutil -verifyCTL Disallowed`
@@ -372,7 +372,7 @@ You may encounter the following errors and warnings when running the `Certutil -
 
     CertUtil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR\_ALREADY\_EXISTS) Certutil: Can't create a file when that file already exists.
 
-- If there is a change in the trusted root certificates, you'll see: "Warning\! Encountered the following no longer trusted roots: \<folder path\>\\\<thumbprint\>.crt. Use "-f -f" options to force the delete of the above ".crt" files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated."
+- If there is a change in the trusted root certificates, you'll see: "Warning\! Encountered the following no longer trusted roots: \<folder path\>\\\<thumbprint\>.crt. Use "-f -f" options to force the delete of the ".crt" CerttUtil files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated."
 
 ## Related content
 

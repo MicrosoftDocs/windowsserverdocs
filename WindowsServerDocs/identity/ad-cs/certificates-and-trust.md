@@ -23,7 +23,7 @@ Servers and clients access the Windows Update site to update the CTL using the a
 
 ## Automatic certificate trust list updates
 
-By default, Windows downloads the CTLs from the Internet via an automatic mechanism called the CTL Updater. The public URLs used by the CTL Updater can be made available to clients. These are:
+By default, Windows downloads the CTLs from the Internet via an automatic mechanism called the CTL Updater. The public URLs used by the CTL Updater can be made available to clients:
 
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/disallowedcertstl.cab 
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab
