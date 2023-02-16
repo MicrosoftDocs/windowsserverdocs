@@ -6,7 +6,7 @@ ms.author: cosdar
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/15/2023
+ms.date: 02/16/2023
 ---
 # Fault domain awareness
 
@@ -18,8 +18,7 @@ Failover Clustering enables multiple servers to work together to provide high av
 
 Fault domains and fault tolerance are closely related concepts. A fault domain is a set of hardware components that share a single point of failure. To be fault tolerant to a certain level, you need multiple fault domains at that level. For example, to be rack fault tolerant, your servers and your data must be distributed across multiple racks.
 
-This short video presents an overview of fault domains in Windows Server 2016:
-![Overview video of fault domains and tolerance in Windows Server 2016.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-1-overview)
+This short video presents an [overview of fault domains in Windows Server 2016](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-1-overview).
 
 ### Fault domain awareness in Windows Server 2019
 
@@ -49,7 +48,7 @@ To disable fault domain awareness in Windows 2019, go to the Windows Registry an
 
 ## Levels of fault domains
 
-There are four canonical levels of fault domains - site, rack, chassis, and node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment does not use blade servers, the chassis level may not make sense for you.
+There are four canonical levels of fault domains - site, rack, chassis, and node. Nodes are discovered automatically; each additional level is optional. For example, if your deployment doesn't use blade servers, the chassis level may not make sense for you.
 
 ![Diagram of the different levels of fault domains](media/Fault-Domains-in-Windows-Server-2016/levels-of-fault-domains.png)
 
@@ -68,10 +67,9 @@ Windows Server 2016 introduces the following cmdlets to work with fault domains:
 * `New-ClusterFaultDomain`
 * `Remove-ClusterFaultDomain`
 
-This short video demonstrates the usage of these cmdlets.
-![Video on the usage of the Cluster Fault Domain PowerShell commands.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-2-using-powershell)
+This short video demonstrates the usage of [cluster fault domain PowerShell commands](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-2-using-powershell).
 
-Use `Get-ClusterFaultDomain` to see the current fault domain topology. This will list all nodes in the cluster, plus any chassis, racks, or sites you have created. You can filter using parameters like **-Type** or **-Name**, but these are not required.
+Use `Get-ClusterFaultDomain` to see the current fault domain topology. This lists all nodes in the cluster, plus any chassis, racks, or sites you have created. You can filter using parameters like **-Type** or **-Name**, but these are not required.
 
 ```PowerShell
 Get-ClusterFaultDomain
@@ -121,9 +119,7 @@ Remove-ClusterFaultDomain -Name "Rack A"
 
 Fault domains can be specified using an XML-inspired syntax. We recommend using your favorite text editor, such as Visual Studio Code (available for free *[here](https://code.visualstudio.com/)*) or Notepad to create an XML document that you can save and reuse.
 
-This short video demonstrates the usage of XML Markup to specify fault domains.
-
-![Video on how to use XML to specify fault domains in failover clustering.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-3-using-xml)
+This short video demonstrates the usage of [XML to specify fault domains in failover clustering](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-3-using-xml).
 
 In PowerShell, run the following cmdlet: `Get-ClusterFaultDomainXML`. This returns the current fault domain specification for the cluster, as XML. This reflects every discovered `<Node>`, wrapped in opening and closing `<Topology>` tags.
 
@@ -184,10 +180,10 @@ $xml = Get-Content <Path> | Out-String
 Set-ClusterFaultDomainXML -XML $xml
 ```
 
-This guide presents just two examples, but the `<Site>`, `<Rack>`, `<Chassis>`, and `<Node>` tags can be mixed and matched in many additional ways to reflect the physical topology of your deployment, whatever that may be. We hope these examples illustrate the flexibility of these tags and the value of freeform location descriptors to disambiguate them.
+This guide presents just two examples, but the `<Site>`, `<Rack>`, `<Chassis>`, and `<Node>` tags can be mixed and matched in several ways to reflect the physical topology of your deployment, whatever that may be. We hope these examples illustrate the flexibility of these tags and the value of freeform location descriptors to disambiguate them.
 
 ### Optional: Location and description metadata
 
-You can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service. This short video demonstrates the value of adding such descriptors.
+You can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service.
 
-![Video demonstrating the value of adding location descriptors to fault domains.](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-4-location-description)
+This short video demonstrates the value of [adding location descriptors to fault domains](https://learn.microsoft.com/shows/windowsserver/fault-domain-awareness-in-ws2016-part-4-location-description).

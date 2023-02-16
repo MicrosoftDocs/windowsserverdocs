@@ -11,7 +11,7 @@ ms.date: 06/30/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 11, Windows 10, Windows 8.1
 
-Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how configure the host and then give the virtual machine access to a local resource.
+Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how to configure the host and then give the virtual machine access to a local resource.
 
 Enhanced session mode and Type clipboard text are available only for virtual machines that run recent Windows operating systems. \(See [Requirements for using local resources](#requirements-for-using-local-resources), below.\)
 
@@ -50,7 +50,7 @@ Turn on enhanced session mode:
 
 ## Choose a local resource
 
-Local resources include printers, the clipboard, and a local drive on the computer where you're running VMConnect. For more information, see [Requirements for using local resources](#requirements-for-using-local-resources), below.
+Local resources include printers, the clipboard, and local drive(s) on the computer where you're running VMConnect. For more information, see [Requirements for using local resources](#requirements-for-using-local-resources).
 
 To choose a local resource:
 
@@ -79,6 +79,8 @@ To choose a local resource:
     ![Screenshot that calls out the checkbox to select for this option.](media/HyperV-VMConnect-SaveSettings.png)
 
 8.  Click **Connect**.
+
+The path to the local drive that is shared to the virtual machine, in a Windows-based guest VM, is located at **This PC** under **Redirected drives and folders**.  The path for a Linux-based guest VM is located at **/home/shared-drives**.
 
 ## Edit VMConnect settings
 
@@ -118,7 +120,8 @@ If the computer running VMConnect and the virtual machine both meet the requirem
 -   Supported plug and play devices
 
 ## Why use a computer's local resources?
-You might want use a computer's local resources to:
+
+You may want to use the computer's local resources to:
 
 -   Troubleshoot a virtual machine without a network connection to the virtual machine.
 
