@@ -4,11 +4,7 @@ description: Guidance on how to configure individual software updates for automa
 ms.topic: how-to 
 author: gswashington
 ms.author: roharwoo
-<<<<<<< HEAD
 ms.date: 02/15/2023
-=======
-ms.date: 01/18/2023
->>>>>>> f4a2221dac38558678932c136a1e6db0ba6c5386
 ---
 
 # Configure trusted roots and disallowed certificates
@@ -37,11 +33,7 @@ The following automatic update mechanisms are available in Windows Server and th
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted certificates are independently configurable. Administrators can use the automatic update mechanism to download only the untrusted CTLs and manage their own list of trusted CTLs. For more information, see the [Registry settings modified]() section in this document.
 
-<<<<<<< HEAD
 Automatic update functionality can be disabled if necessary. Disabling is not recommended. See [Event ID 8 — Automatic Root Certificates Update Configuration](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10)?redirectedfrom=MSDN#turn-off-automatic-root-certificates-update) for more information.
-=======
-Automatic update functionality also can be disabled if necessary, although this isn't recommended. For more information, see [Event ID 8 — Automatic Root Certificates Update Configuration](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10)?redirectedfrom=MSDN#turn-off-automatic-root-certificates-update) for more information.
->>>>>>> f4a2221dac38558678932c136a1e6db0ba6c5386
 
 ## Configuration options
 
@@ -61,11 +53,7 @@ By using Windows Server 2012 R2 and Windows 8.1 (or by installing the previously
 
 - Configure Active Directory Domain Services (AD DS) domain member computers to use the automatic update mechanism for trusted and untrusted CTLs, without having access to the Windows Update site. This configuration is described in the [Redirect the Microsoft Automatic Update URL for a disconnected environment]() section of this document.
 
-<<<<<<< HEAD
 - Configure AD DS domain member computers to independently opt-in for untrusted and trusted CTL automatic updates. The independent opt-in configuration is described in the [Redirect the Microsoft Automatic Update URL for untrusted CTLs only]() section of this document.
-=======
-- Configure AD DS domain member computers to independently opt in for untrusted and trusted CTL automatic updates. This configuration is described in the [Redirect the Microsoft Automatic Update URL for untrusted CTLs only]() section of this document.
->>>>>>> f4a2221dac38558678932c136a1e6db0ba6c5386
 
 - Examine the set of root certificates in the Windows Root Certificate Program. Examining the root certificate set enables administrators to select a subset of certificates to distribute by using a Group Policy Object (GPO). This configuration is described in the [Use a subset of the trusted CTLs]() section of this document.
 
@@ -112,11 +100,7 @@ To facilitate the distribution of trusted or untrusted certificates for a discon
 
 ## Redirect the Microsoft Automatic Update URL for a disconnected environment
 
-<<<<<<< HEAD
 The computers in your network might be configured in a domain environment and therefore unable to use the automatic update mechanism or download CTLs. You can implement a GPO in AD DS to configure these computers to obtain the CTL updates from an alternate location.
-=======
-If the computers in your network are configured in a domain environment and they're unable to use the automatic update mechanism or download CTLs, you can implement a GPO in AD DS to configure those computers to obtain the CTL updates from an alternate location.
->>>>>>> f4a2221dac38558678932c136a1e6db0ba6c5386
 
 > [!NOTE]
 > The configuration in this section requires that you already completed the steps in [Configure a file or web server to download the CTL files]().
@@ -388,11 +372,7 @@ You may encounter the following errors and warnings when running the `Certutil -
 
     CertUtil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR\_ALREADY\_EXISTS) Certutil: Can't create a file when that file already exists.
 
-<<<<<<< HEAD
 - If there is a change in the trusted root certificates, you'll see: "Warning\! Encountered the following no longer trusted roots: \<folder path\>\\\<thumbprint\>.crt. Use "-f -f" options to force the delete of the ".crt" CerttUtil files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated."
-=======
-- If there's a change in the trusted root certificates, you'll see: "Warning\! Encountered the following no longer trusted roots: \<folder path\>\\\<thumbprint\>.crt. Use "-f -f" options to force the delete of the above ".crt" files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated."
->>>>>>> f4a2221dac38558678932c136a1e6db0ba6c5386
 
 ## Related content
 

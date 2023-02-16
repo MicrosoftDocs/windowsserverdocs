@@ -4,11 +4,7 @@ description: Learn how the Microsoft Root Certificate Program works to distribut
 author: gswashington
 ms.author: roharwoo
 ms.topic: overview
-<<<<<<< HEAD
 ms.date: 02/15/2023
-=======
-ms.date: 01/18/2023
->>>>>>> f4a2221dac38558678932c136a1e6db0ba6c5386
 
 ---
 
