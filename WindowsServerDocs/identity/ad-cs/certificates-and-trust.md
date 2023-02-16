@@ -4,7 +4,11 @@ description: Learn how the Microsoft Root Certificate Program works to distribut
 author: gswashington
 ms.author: roharwoo
 ms.topic: overview
+<<<<<<< HEAD
 ms.date: 02/15/2023
+=======
+ms.date: 01/18/2023
+>>>>>>> f4a2221dac38558678932c136a1e6db0ba6c5386
 
 ---
 
@@ -16,7 +20,7 @@ The Microsoft Root Certificate Program enables distribution of trusted and untru
 
 Trusted and untrusted root certificates are used by Windows operating systems and applications as a reference when determining whether public key infrastructure (PKI) hierarchies and digital certificates are trustworthy. Untrusted root certificates are certificates that are publicly known to be fraudulent. Trusted and untrusted root certificates functionality works across all environments, whether connected or disconnected.
 
-Trusted and untrusted root certificates are contained in a certificate trust list (CTL). When you want to distribute root certificates you use a CTL. Windows Server features automatic daily update functionality that includes downloads of latest CTLs. The list of trusted and untrusted root certificates are called the Trusted CTL and Untrusted CTL, respectively. See [Announcing the automated updater of untrustworthy certificates and keys](https://blogs.technet.com/b/pki/archive/2012/06/12/announcing-the-automated-updater-of-untrustworthy-certificates-and-keys.aspx) for more information.
+Trusted and untrusted root certificates are contained in a certificate trust list (CTL). When you want to distribute root certificates, you use a CTL. Windows Server features automatic daily update functionality that includes downloads of latest CTLs. The list of trusted and untrusted root certificates are called the Trusted CTL and Untrusted CTL, respectively. See [Announcing the automated updater of untrustworthy certificates and keys](https://blogs.technet.com/b/pki/archive/2012/06/12/announcing-the-automated-updater-of-untrustworthy-certificates-and-keys.aspx) for more information.
 
 Servers and clients access the Windows Update site to update the CTL using the automatic daily update mechanism (CTL updater) discussed in this article. You can take advantage of CTL updater functionality by installing the appropriate software updates. See the article [Configure Trusted Roots and Disallowed Certificates](configure-trusted-roots-disallowed-certificates.md) for guidance in installing the software updates on supported operating systems discussed in this article.
 
@@ -27,11 +31,11 @@ By default, Windows downloads the CTLs from the Internet via an automatic mechan
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/disallowedcertstl.cab 
 - http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab
 
-Automatic update functionality also can be disabled if necessary, although this is not recommended.
+Automatic update functionality also can be disabled if necessary, although isn't recommended.
 
 Alternately, you also can create a Group Policy administrative templates (ADMX policy) to redirect to an internal server for updates.
 
-The registry location where trusted and untrusted CTLs are stored are as follows: 
+The registry location where trusted and untrusted CTLs are stored as follows:
 
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\EncodedCtl
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\DisallowedCertEncodedCtl
