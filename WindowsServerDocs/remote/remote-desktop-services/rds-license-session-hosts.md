@@ -35,7 +35,11 @@ In order to install licenses for your session hosts, you'll need a Remote Deskto
 
 ## Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
 
-1. On the RD Session Host computer, select **Start**, and then enter **gpedit.msc** to open Local Group Policy Editor.
+1. Depending on whether you want to configure Group Policy centrally from your domain or locally on each session host:
+
+   1.Open the **Group Policy Management Console** (GPMC) and create or edit a policy that targets your session hosts.
+
+   1. Open the **Local Group Policy Editor** on the session host.
 
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Licensing**.
 
