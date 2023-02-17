@@ -60,7 +60,9 @@ Follow the steps below to create and configure the application in AD FS for rece
 
    ![Screenshot of the Native application page of the Add Application Group Wizard showing the redirect U R I .](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
 
-5. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  This value will be used later for **ida:ResourceID** in the applications web.config file.
+5. On the **Configure Web API** screen, enter the followings for **Identifier**:
+    - **https://contoso.com/WebApp**.  Click **Add**. This value will be used later for **ida:ResourceID** in the applications web.config file.
+    - Enter the **Client Identifier** value from Step 3 as **Identifier** (e.g. 7ac3c470-1ecd-43d9-b444-42b34fb21028) and Click **Add**. Click **Next**
 
    ![Screenshot of the Configure Web API page of the Add Application Group Wizard showing the correct identifier.](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
 
