@@ -4,7 +4,7 @@ title: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth wit
 description: "Learn more about: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later"
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

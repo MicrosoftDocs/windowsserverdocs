@@ -4,12 +4,12 @@ description: This article describes the requirements for deploying the Folder Re
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 03/12/2021
+ms.date: 02/14/2023
 ---
 
-# Deploy Folder Redirection with Offline Files
+# Deploy Folder Redirection with offline files
 
->Applies to: Windows Server 2022, Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2.
 
 This article describes the requirements for deploying the Folder Redirection and Offline Files features together, including the steps that you need to follow to control access to the redirected files.
 
@@ -28,7 +28,6 @@ For a list of recent changes to this article, see [Change history](#change-histo
 ### File server requirements
 
 The file server is the computer that hosts the redirected folders.
-
 
 #### Interoperability with Remote Desktop Services
 
@@ -60,7 +59,8 @@ To make sure that Folder Redirection and Offline Files interact correctly with o
 
 - Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
 - Client computers must be joined to the Active Directory Domain Services (AD DS) domain that you are managing.
-- Client computers must run x64-based or x86-based processors. Folder Redirection is not supported on PCs powered by ARM processors. 
+- Client computers must run x64-based or x86-based processors. Folder Redirection is not supported on PCs powered by ARM processors.
+
 > [!NOTE]  
 > Some newer features in Folder Redirection have additional client computer and Active Directory schema requirements. For more info, see [Deploy primary computers](deploy-primary-computers.md), [Disable Offline Files on folders](disable-offline-files-on-folders.md), [Enable Always Offline mode](enable-always-offline.md), and [Enable optimized folder moving](enable-optimized-moving.md).
 
@@ -111,7 +111,7 @@ If you do not already have a file share for redirected folders, use the followin
       |System |Full Control |This folder, subfolders, and files |
       |Administrators |Full Control |This folder only |
       |Creator/Owner |Full Control |Subfolders and files only |
-      |Security group of users who need to put data on the share (Folder Redirection Users) |List folder/read data<sup>1</sup><br />Create&nbsp;folders/append data<sup>1</sup><br />Read attributes<sup>1</sup><br />Read extended attributes<sup>1</sup><br />Read<sup>1</sup><br />Traverse folder/execute file<sup>1</sup> |This&nbsp;folder&nbsp;only |
+      |Security group of users who need to put data on the share (Folder Redirection Users) |List folder/read data<sup>1</sup><br />Create&nbsp;folders/append data<sup>1</sup><br />Read attributes<sup>1</sup><br />Read extended attributes<sup>1</sup><br />Read permissions<sup>1</sup><br />Traverse folder/execute file<sup>1</sup> |This&nbsp;folder&nbsp;only |
       |Other groups and accounts |None (Remove any accounts that this table does not list) | |
 
       *<sup>1</sup> Advanced permissions*

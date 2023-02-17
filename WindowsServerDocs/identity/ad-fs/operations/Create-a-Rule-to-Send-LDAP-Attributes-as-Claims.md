@@ -4,7 +4,7 @@ ms.assetid: 66664b80-2590-46c0-bfca-82402088e42c
 title: Create a Rule to Send LDAP Attributes as Claims
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

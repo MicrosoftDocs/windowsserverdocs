@@ -4,7 +4,7 @@ ms.assetid: 606df285-259c-4c6b-8583-9aca1d614c43
 title: When to Use a Pass Through or Filter Claim Rule
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

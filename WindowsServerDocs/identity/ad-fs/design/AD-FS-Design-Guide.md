@@ -4,7 +4,7 @@ ms.assetid: fb09e37e-5d1c-428a-a2ca-2f01a0ba2992
 title: AD FS Design Guide
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

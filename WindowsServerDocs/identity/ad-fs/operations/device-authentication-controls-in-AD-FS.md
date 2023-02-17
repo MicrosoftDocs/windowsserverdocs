@@ -3,7 +3,7 @@ title: Device Authentication controls in AD FS
 description:  This document describes how to enable device authentication in AD FS for Windows Server 2016 and 2012 R2
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

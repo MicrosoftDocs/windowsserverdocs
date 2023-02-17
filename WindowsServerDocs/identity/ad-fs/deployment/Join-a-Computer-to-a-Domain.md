@@ -3,7 +3,7 @@ description: "Learn more about: Join a Computer to a Domain"
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
 title: Join a Computer to a Domain
 author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 09/12/2022
 ms.topic: article
 ms.author: alalve

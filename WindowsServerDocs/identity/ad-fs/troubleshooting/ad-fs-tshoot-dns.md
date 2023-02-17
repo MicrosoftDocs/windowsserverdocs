@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - DNS Resolution
 description:  This document describes how to troubleshoot DNS aspects of AD FS
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---
