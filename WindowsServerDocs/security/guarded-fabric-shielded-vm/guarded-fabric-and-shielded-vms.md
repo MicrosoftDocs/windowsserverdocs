@@ -28,7 +28,7 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 
 ![Guarded host fabric](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)
 
-To learn more, please see this video on [Introduction to shielded virtual machines](https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/introduction-to-shielded-virtual-machines-in-windows-server-2016/m-p/12753).
+To learn more, see this video on [Introduction to shielded virtual machines](https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/introduction-to-shielded-virtual-machines-in-windows-server-2016/m-p/12753).
 
 ## Attestation modes in the Guarded Fabric solution
 
