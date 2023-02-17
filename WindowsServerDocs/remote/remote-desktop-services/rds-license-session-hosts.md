@@ -41,9 +41,9 @@ To specify a license server:
 
 1. Depending on whether you want to configure Group Policy centrally from your domain or locally on each session host:
 
-   1.Open the **Group Policy Management Console** (GPMC) and create or edit a policy that targets your session hosts.
+   - Open the **Group Policy Management Console** (GPMC) and create or edit a policy that targets your session hosts.
 
-   1. Open the **Local Group Policy Editor** on the session host.
+   - Open the **Local Group Policy Editor** on the session host.
 
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Licensing**.
 
