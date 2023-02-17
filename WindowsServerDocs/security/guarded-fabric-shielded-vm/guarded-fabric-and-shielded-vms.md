@@ -10,9 +10,7 @@ ms.date: 02/16/2023
 
 # Guarded fabric and shielded VMs overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
-## Overview of the guarded fabric
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Virtualization security is a major investment area in Hyper-V. In addition to protecting hosts or other virtual machines from a virtual machine running malicious software, we also need to protect virtual machines from a compromised host. This is a fundamental danger for every virtualization platform today, whether it's Hyper-V, VMware or any other. If a virtual machine gets out of an organization (either maliciously or accidentally), that virtual machine can be run on any other system. Protecting high value assets in your organization, such as domain controllers, sensitive file servers, and HR systems, is a top priority.
 
@@ -26,7 +24,7 @@ A guarded fabric consists of:
 
 When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hosts and the shielded VMs themselves are protected by the HGS. The HGS provides two distinct services: attestation and key protection. The Attestation service ensures only trusted Hyper-V hosts can run shielded VMs while the Key Protection Service provides the keys necessary to power them on and to live migrate them to other guarded hosts.
 
-![Guarded host fabric](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)
+[![Diagram of the guarded host fabric.](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png#lightbox)
 
 To learn more, see this video on [Introduction to shielded virtual machines](https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/introduction-to-shielded-virtual-machines-in-windows-server-2016/m-p/12753).
 
@@ -75,15 +73,15 @@ The shielding data file (PDK file) provides assurances that the VM will be creat
 
 The following figure shows the shielding data file and related configuration elements.
 
-![Illustration that shows the shielding data file and related configuration elements.](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
+[![Illustration that shows the shielding data file and related configuration elements.](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png#lightbox)
 
 ## What are the types of virtual machines that a guarded fabric can run?
 
 Guarded fabrics are capable of running VMs in one of three possible ways:
 
 1. A normal VM offering no protections above and beyond previous versions of Hyper-V
-2. An encryption-supported VM whose protections can be configured by a fabric admin
-3. A shielded VM whose protections are all switched on and can't be disabled by a fabric admin
+1. An encryption-supported VM whose protections can be configured by a fabric admin
+1. A shielded VM whose protections are all switched on and can't be disabled by a fabric admin
 
 Encryption-supported VMs are intended for use where the fabric administrators are fully trusted.  For example, an enterprise might deploy a guarded fabric in order to ensure VM disks are encrypted at-rest for compliance purposes. Fabric administrators can continue to use convenient management features, such VM console connections, PowerShell Direct, and other day-to-day management and troubleshooting tools.
 
@@ -109,7 +107,7 @@ Both shielded VMs and encryption-supported VMs continue to support commonplace f
 
 ## The Host Guardian Service in action: How a shielded VM is powered on
 
-![Shielding data file](../media/Guarded-Fabric-Shielded-VM/shielded-vms-how-a-shielded-vm-is-powered-on.png)
+[![Diagram of shielding data file workflow.](../media/Guarded-Fabric-Shielded-VM/shielded-vms-how-a-shielded-vm-is-powered-on.png)](../media/Guarded-Fabric-Shielded-VM/shielded-vms-how-a-shielded-vm-is-powered-on.png#lightbox)
 
 1. **VM01 is powered on.** Before a guarded host can power on a shielded VM, it must first be affirmatively attested that it's healthy. To prove it's healthy, it must present a certificate of health to the Key Protection service (KPS). The certificate of health is obtained through the attestation process.
 
