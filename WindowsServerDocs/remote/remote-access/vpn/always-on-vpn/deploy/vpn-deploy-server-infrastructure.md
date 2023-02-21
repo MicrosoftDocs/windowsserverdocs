@@ -326,12 +326,6 @@ Domain-joined VPN servers
 
 14. Close the Certification Authority snap-in.
 
-* **You can stop/start the CA service by running the following command in CMD:**
-
-```
-net stop "certsvc"
-net start "certsvc"
-```
 
 ## Create the NPS Server Authentication template
 
