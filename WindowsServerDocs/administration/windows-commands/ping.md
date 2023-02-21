@@ -86,6 +86,6 @@ To ping the destination 10.0.99.221 and specify the loose source route of 10.12.
 ping /j 10.12.0.1 10.29.3.1 10.1.44.1 10.0.99.221
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

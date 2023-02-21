@@ -79,6 +79,6 @@ To eliminate the need to type the .pl file name extension when invoking a Perl s
 set PATHEXT=.pl;%PATHEXT%
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

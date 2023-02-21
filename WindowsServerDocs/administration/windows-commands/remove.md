@@ -41,6 +41,6 @@ To remove the d:\ drive, type:
 remove letter=d
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

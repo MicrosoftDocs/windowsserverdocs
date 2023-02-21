@@ -34,7 +34,7 @@ To retrieve the content validation state of file 2 within the job named *myDownl
 bitsadmin /getvalidationstate myDownloadJob 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -56,7 +56,7 @@ To shift the focus to the next disk on the computer, type:
 select disk=next
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -30,7 +30,7 @@ set option {[differential | plex] [transportable] [[rollbackrecover] [txfrecover
 | [txfrecover] | Requests VSS to make the shadow copy transactionally consistent during creation. |
 | [noautorecover] | Stops writers and the file system from performing any recovery changes to the shadow copy to a transactionally consistent state. **Noautorecover** can't be used with **txfrecover** or **rollbackrecover**. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

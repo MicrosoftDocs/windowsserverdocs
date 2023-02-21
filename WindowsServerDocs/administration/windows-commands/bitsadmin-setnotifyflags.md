@@ -34,7 +34,7 @@ To set the notification flags to generate an event when an error occurs, for a j
 bitsadmin /setnotifyflags myDownloadJob 2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

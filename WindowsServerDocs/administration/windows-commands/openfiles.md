@@ -164,6 +164,6 @@ To disable the **Maintain Objects List** global flag, type:
 openfiles /local off
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

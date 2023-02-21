@@ -3,9 +3,9 @@ title: AD FS Help Diagnostics Analyzer
 description:  This document describes AD FS Help Diagnostics Analyzer and how it can perform the basic checks using AD FS diagnostics PowerShell module.
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.reviewer: anandyadavMSFT
-ms.date: 03/29/2019
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

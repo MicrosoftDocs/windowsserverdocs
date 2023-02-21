@@ -61,7 +61,7 @@ wdsutil /Verbose /Progress /Add-Image /ImageFile:\\MyServer\Share\Install.wim /S
 /SingleImage:"Windows Pro" /Name:"My WDS Image" /Description:"Windows Pro image with Microsoft Office" /Filename:"Win Pro.wim" /UnattendFile:"\\server\share\unattend.xml"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

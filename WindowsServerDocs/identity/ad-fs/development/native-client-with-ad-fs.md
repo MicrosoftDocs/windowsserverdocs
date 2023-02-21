@@ -4,8 +4,8 @@ description: A walkthrough which provides instructions building a native client 
 author: billmath
 ms.author: billmath
 ms.reviewer: anandy
-manager: mtillman
-ms.date: 07/17/2018
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

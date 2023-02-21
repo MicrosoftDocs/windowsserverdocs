@@ -32,7 +32,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
-      "extendBreadcrumb": true,
+      "uhfHeaderId": "MSDocsHeader-WindowsServer",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server",
@@ -45,9 +45,15 @@
       "recommendations": true
       },
       "fileMetadata": {
+        "author": {
+          "security/tls/*.md": "Andrei-Popov"
+        },
         "feedback_product_url": {
           "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
           "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
+        },
+        "ms.author": {
+          "security/tls/*.md": "wscontent"
         },
         "ms.prod": {
           "EssentialsDocs/**/*.md": "windows-server",

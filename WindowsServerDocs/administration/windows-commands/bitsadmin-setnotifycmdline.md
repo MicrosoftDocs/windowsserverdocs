@@ -44,7 +44,7 @@ To show the EULA text in Notepad.exe, at the completion of the job named myDownl
 bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe notepad c:\eula.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

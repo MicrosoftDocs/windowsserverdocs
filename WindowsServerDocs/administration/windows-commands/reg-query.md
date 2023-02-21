@@ -97,6 +97,6 @@ To display the value and data for value names of null (default) under HKLM\SOFTW
 reg query HKLM\SOFTWARE /ve
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

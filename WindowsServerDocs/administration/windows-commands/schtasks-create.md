@@ -567,7 +567,7 @@ To schedule a task to run on a remote computer, you must add the task to the rem
 
 - You can test a task as soon as you create it. Use the run operation to test the task and then check the SchedLgU.txt file (SystemRoot\SchedLgU.txt) for errors.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

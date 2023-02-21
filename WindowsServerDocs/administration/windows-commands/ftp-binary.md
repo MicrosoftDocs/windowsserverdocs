@@ -29,7 +29,7 @@ To set the file transfer type to binary, type:
 binary
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

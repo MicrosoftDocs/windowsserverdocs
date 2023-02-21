@@ -55,6 +55,6 @@ To display all of the information in the current access token, type:
 whoami /all
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

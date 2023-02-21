@@ -45,7 +45,7 @@ To set the transfer file type to binary, type:
 type binary
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

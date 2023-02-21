@@ -118,6 +118,6 @@ To display a list of all of the environment variables that begin with the letter
 set p
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

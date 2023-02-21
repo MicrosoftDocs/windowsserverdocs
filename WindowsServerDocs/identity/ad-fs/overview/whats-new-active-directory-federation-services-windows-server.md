@@ -4,8 +4,8 @@ ms.assetid: aa892a85-f95a-4bf1-acbb-e3c36ef02b0d
 title: What's new in Active Directory Federation Services for Windows Server 2016
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 01/22/2020
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

@@ -57,6 +57,6 @@ Use User Datagram Protocol (UDP) to call a program:
 rpcinfo /u <node program> [<version>]
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

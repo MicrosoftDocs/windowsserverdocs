@@ -143,6 +143,6 @@ To stop sending trap messages within the community named *Private* to the same c
 #pragma delete_TRAP_DEST private localhost
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

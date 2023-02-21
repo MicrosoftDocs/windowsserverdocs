@@ -37,7 +37,7 @@ To create a RAID-5 volume of 1000 megabytes in size, using disks 1, 2 and 3, typ
 create volume raid size=1000 disk=1,2,3
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

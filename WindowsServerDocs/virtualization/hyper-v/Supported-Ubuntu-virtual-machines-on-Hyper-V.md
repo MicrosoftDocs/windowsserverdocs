@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 ms.author: kkashanjat
 author: kkkashan
-ms.date: 01/08/2021
+ms.date: 02/01/2023
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
@@ -15,7 +15,7 @@ The following feature distribution map indicates the features in each version. T
 
 ## Table legend
 
-* **Built in** - LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution, so don't install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.
+* **Built in** -  Linux Integration Services (LIS) is included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution, so don't install it. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.
 
 * &#10004; - Feature available
 
@@ -49,7 +49,7 @@ The following feature distribution map indicates the features in each version. T
 | **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                             |                 |                |                |                |
 | Hyper-V specific video device                                                                                                                | 2019, 2016, 2012 R2                         | ✔               | ✔              | ✔              | ✔              |
 | **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                             |                 |                |                |                |
-| Key/value pair                                                                                                                               | 2019, 2016, 2012 R2                         | ✔ Note 5,9      | ✔ Note 5, 9    | ✔ Note 5, 9    | ✔ Note 5, 9    |
+| Key/value pair                                                                                                                               | 2019, 2016, 2012 R2                         | ✔ Note 5, 9      | ✔ Note 5, 9    | ✔ Note 5, 9    | ✔ Note 5, 9    |
 | Non-Maskable Interrupt                                                                                                                       | 2019, 2016, 2012 R2                         | ✔               | ✔              | ✔              | ✔              |
 | File copy from host to guest                                                                                                                 | 2019, 2016, 2012 R2                         | ✔               | ✔              | ✔              | ✔              |
 | lsvmbus command                                                                                                                              | 2019, 2016, 2012 R2                         | ✔               | ✔              | ✔              | ✔              |
@@ -61,7 +61,7 @@ The following feature distribution map indicates the features in each version. T
 
 ## Notes
 
-1. Static IP injection may not work if **Network Manager** has been configured for a given Hyper-V-specific network adapter on the virtual machine. To ensure smooth functioning of static IP injection please ensure that Network Manager is turned off completely or has been turned off for a specific network adapter through its **ifcfg-ethX** file.
+1. Static IP injection may not work if **Network Manager** has been configured for a given Hyper-V-specific network adapter on the virtual machine. To ensure smooth functioning of static IP injection, ensure that Network Manager is turned off completely or has been turned off for a specific network adapter through its **ifcfg-ethX** file.
 
 2. While using virtual fiber channel devices, ensure that logical unit number 0 (LUN 0) has been populated. If LUN 0 has not been populated, a Linux virtual machine might not be able to mount fiber channel devices natively.
 
@@ -77,6 +77,7 @@ The following feature distribution map indicates the features in each version. T
    # apt-get update
    # apt-get install linux-azure
    ```
+
 6. Dynamic memory support is only available on 64-bit virtual machines.
 
 7. Dynamic Memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:

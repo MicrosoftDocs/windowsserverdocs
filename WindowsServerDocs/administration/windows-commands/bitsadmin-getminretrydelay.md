@@ -33,7 +33,7 @@ To retrieve the minimum retry delay for the job named *myDownloadJob*:
 bitsadmin /getminretrydelay myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

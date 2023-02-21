@@ -88,7 +88,7 @@ wdsutil /Get-MulticastTransmission /Server:MyWDSServer image:Vista with Office i
 wdsutil /Get-MulticastTransmission /Server:MyWDSServer:X64 Boot Imagetype:Boot /Architecture:x64 /Filename:boot.wim /details:Clients
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)

@@ -2,15 +2,12 @@
 title: Manage Transport Layer Security (TLS)
 description: Learn how to manage the Transport Layer Security.
 ms.topic: article
-author: justinha
-ms.author: justinha
-manager: brianlic
 ms.date: 05/16/2018
 ---
 
 # Manage Transport Layer Security (TLS)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
 
 ## Configuring TLS Cipher Suite Order
 
