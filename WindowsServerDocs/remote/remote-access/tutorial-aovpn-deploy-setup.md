@@ -98,11 +98,13 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 ## Create the VPN server
 
-1. Install Windows Server on the machine that will run the VPN Server. Ensure that the machine has one physical Ethernet network adapter that faces the internet.
+1. Install Windows Server on the machine that will run the VPN Server. Ensure that the machine has two physical network adapters installed: one to connect to the internet, and one to connect to your private network.
+
+1. Identify which network adapter connects to the internet and which network adapter connects to your private network. Configure the network adapter facing the internet with a public IP address, while the adapter facing the intranet can use an IP address from the local network
 
 1. Add the DNS preferred address to the IP address of the domain controller. For information on how to set a static preferred DNS address, see [How to change IPv4 DNS server address to public DNS in Windows](https://answers.microsoft.com/windows/forum/all/how-to-change-ipv4-dns-server-address-to-public/56548e8d-eb9c-4fc5-807c-eefca5d278d0).
 
-1. Join the VPN server to your domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
+1. Join the VPN server to the domain of your private network. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
 1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 
