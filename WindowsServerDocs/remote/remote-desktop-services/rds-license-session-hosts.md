@@ -26,7 +26,7 @@ To specify a license server:
 1. On the RD Connection Broker computer, open Server Manager.
 2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.
 
-   :::image type="content" source="media/rds-license-session-hosts/server-manager-rd-config.png" alt-text="A screenshot of the set up remote desktop services deployment page. The user selects the tasks drop-down menu and sleects Edit Deployment Properties.":::
+   :::image type="content" source="media/rds-license-session-hosts/server-manager-rd-config.png" alt-text="A screenshot of the set up remote desktop services deployment page. The user selects the tasks drop-down menu and selects Edit Deployment Properties.":::
 
 3. Select the Remote Desktop licensing mode (either **Per User** or **Per Device**, as appropriate for your deployment).
 
