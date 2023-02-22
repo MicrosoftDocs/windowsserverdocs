@@ -35,15 +35,15 @@ Some hardware performs better if the VM in configured in a certain way.  For det
 
 1. Enable Write-Combining on the CPU
    ```
-   Set-VM -GuestControlledCacheTypes $true -VMName VMName
+   Set-VM -GuestControlledCacheTypes $true -Name VMName
    ```
 2. Configure the 32 bit MMIO space
    ```
-   Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
+   Set-VM -LowMemoryMappedIoSpace 3Gb -Name VMName
    ```
 3. Configure greater than 32 bit MMIO space
    ```
-   Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
+   Set-VM -HighMemoryMappedIoSpace 33280Mb -Name VMName
    ```
    > [!TIP]
    > The MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values. Consult [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to learn how to precisely calculate MMIO requirements.
