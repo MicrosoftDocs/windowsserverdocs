@@ -4,7 +4,7 @@ description: Learn how to install licenses for Remote Desktop session hosts.
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
-ms.date: 02/18/2023
+ms.date: 02/22/2023
 manager: femila
 ---
 # License Remote Desktop session hosts
@@ -26,7 +26,7 @@ To specify a license server:
 1. On the RD Connection Broker computer, open Server Manager.
 2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.
 
-   :::image type="content" source="media/rds-license-session-hosts/server-manager-rd-config.png" alt-text="Select the Edit Deployment Properties option to open the Remote Desktop licensing settings in Server Manager.":::
+   :::image type="content" source="media/rds-license-session-hosts/server-manager-rd-config.png" alt-text="A screenshot of the set up remote desktop services deployment page. The user selects the tasks drop-down menu and sleects Edit Deployment Properties.":::
 
 3. Select the Remote Desktop licensing mode (either **Per User** or **Per Device**, as appropriate for your deployment).
 
@@ -35,7 +35,7 @@ To specify a license server:
 
 4. Specify a license server, and then select **Add**.
 
-   :::image type="content" source="media/rds-license-session-hosts/rdlicensing-configure.png" alt-text="Configure the deployment of the RD Licensing.":::
+   :::image type="content" source="media/rds-license-session-hosts/rd-licensing-configure.png" alt-text="A screenshot of the configure the deployment page. Two red borders surround the two radio buttons that say per device and per user, and a field for the file path for the license server.":::
 
 ## Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
 
@@ -47,13 +47,13 @@ To specify a license server:
 
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Licensing**.
 
-   :::image type="content" source="media/rds-license-session-hosts/local-gp-editor-licensing-config.png" alt-text="List of policies for Remote Desktop licensing.":::
+   :::image type="content" source="media/rds-license-session-hosts/local-gp-editor-licensing-config.png" alt-text="A screenshot of the list of policies for Remote Desktop licensing. Use the specified Remote Desktop license servers and Set the Remote Desktop licensing mode are highlighted with red borders.":::
 
 1. In the policy list, right-click **Use the specified Remote Desktop license servers**, and then select **Properties**.
 
 1. Select **Enabled**, and then enter the name of the license server under **License servers to use**. If you have more than one license server, use commas to separate their names.
 
-   :::image type="content" source="media/rds-license-session-hosts/local-gp-specify-license-server.png" alt-text="Set the license servers to use in the Use the specified Remote Desktop license servers dialog box.":::
+   :::image type="content" source="media/rds-license-session-hosts/local-gp-specify-license-server.png" alt-text="A screenshot of the Use the specified Remote Desktop license servers window. The field labeled License servers to use is highlighted with a red border.":::
 
 1. Select **OK**.  
 
@@ -63,7 +63,7 @@ To specify a license server:
 
 1. Under **Specify the licensing mode for the Remote Desktop Session Host server**, select **Per Device** or **Per User**, as appropriate for your deployment.
 
-   :::image type="content" source="media/rds-license-session-hosts/local-gp-specify-licensing-mode.png" alt-text="Specify the licensing mode for the Remote Desktop Session Host server in the Set the Remote Desktop licensing mode dialog box.":::
+   :::image type="content" source="media/rds-license-session-hosts/local-gp-specify-licensing-mode.png" alt-text="A screenshot of the Set the Remote Desktop licensing mode window. The drop-down menu for specifying the licensing mode for the RD Session Host server is highlighted with a red border.":::
 
 ## Next steps
 
