@@ -14,7 +14,7 @@ This article describes how to troubleshoot the failures that occur during an SMB
 
 ## Negotiate fails
 
-The SMB server receives an SMB NEGOTIATE request from an SMB client. The connection times out and is reset after 60 seconds. There may be an ACK message after about 200 microseconds.
+The SMB server receives an SMB NEGOTIATE request from an SMB client. The connection times out and is reset after 60 seconds. There may be an ACK message after about 200 milliseconds.
 
 This problem is most often caused by antivirus program.
 
