@@ -105,7 +105,7 @@ In this section, we'll configure Remote Access to allow IKEv2 VPN connections an
 
 1. Select **WAN Miniport (SSTP)** and select **Configure** to open the Configure Device - WAN Miniport (SSTP) dialog box.
 
-    1. Ensure that the **Remote access connections (inbound only)** and  **Demand-dial routing connections (inbound and outbound)** are selected.
+    1. Clear both  **Remote access connections (inbound only)**  and **Demand-dial routing connections (inbound and outbound)**.
 
     2. Select **OK**.
 

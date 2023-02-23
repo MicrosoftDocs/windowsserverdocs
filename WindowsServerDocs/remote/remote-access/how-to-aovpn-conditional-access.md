@@ -28,7 +28,9 @@ Before you start configuring Conditional Access for your VPN, you must have comp
 
 An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well.
 
-In this section, you'll add `IgnoreNoRevocationCheck` and set it to allow authentication of clients when the certificate does not include CRL distribution points. By default, `IgnoreNoRevocationCheck` is set to 0 (disabled).
+In this section, you'll add `IgnoreNoRevocationCheck` and `NoRevocationCheck`. By default, `IgnoreNoRevocationCheck` and `NoRevocationCheck` are set to 0 (disabled).
+
+For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [NPS CRL Check Registry Settings](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771995(v=ws.10)#ignorenorevocationcheck).
 
 >[!IMPORTANT]
 >If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set `IgnoreNoRevocationCheck=1` on both servers.
@@ -43,13 +45,17 @@ In this section, you'll add `IgnoreNoRevocationCheck` and set it to allow authen
 
 4. Double-click **IgnoreNoRevocationCheck** and set the Value data to **1**.
 
-5. Select **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
+5. Select **Edit > New** and select **DWORD (32-bit) Value** and enter **NoRevocationCheck**.
+
+6. Double-click **NoRevocationCheck** and set the Value data to **1**.
+
+7. Select **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
 
 |Registry Path  |EAP Extension  |
 |---------|---------|
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13     |EAP-TLS         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
-|HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
+
 
 ## Create root certificates for VPN authentication with Azure AD
 

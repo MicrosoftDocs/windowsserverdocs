@@ -33,6 +33,7 @@ In this tutorial, you'll learn how to deploy Always On VPN connections for remot
 To complete the steps in this tutorial,
 
 - You'll need access to three physical computers or virtual machines (VMs).
+
 - Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
 >[!IMPORTANT]
@@ -98,17 +99,17 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 ## Create the VPN server
 
-1. Install Windows Server on the machine that will run the VPN Server. Ensure that the machine has two physical network adapters installed: one to connect to the internet, and one to connect to your private network.
+1. Install Windows Server on the machine that will run the VPN Server. Ensure that the machine has two physical network adapters installed: one to connect to the internet, and one to connect to the network where the domain controller is located.
 
-1. Identify which network adapter connects to the internet and which network adapter connects to your private network. Configure the network adapter facing the internet with a public IP address, while the adapter facing the intranet can use an IP address from the local network
+1. Identify which network adapter connects to the internet and which network adapter connects to the domain. Configure the network adapter facing the internet with a public IP address, while the adapter facing the intranet can use an IP address from the local network.
 
-1. Add the DNS preferred address to the IP address of the domain controller. For information on how to set a static preferred DNS address, see [How to change IPv4 DNS server address to public DNS in Windows](https://answers.microsoft.com/windows/forum/all/how-to-change-ipv4-dns-server-address-to-public/56548e8d-eb9c-4fc5-807c-eefca5d278d0).
+1. For the network adapter connecting to the domain, set the DNS preferred IP address to the IP address of the domain controller. For information on how to set a static preferred DNS address, see [How to change IPv4 DNS server address to public DNS in Windows](https://answers.microsoft.com/windows/forum/all/how-to-change-ipv4-dns-server-address-to-public/56548e8d-eb9c-4fc5-807c-eefca5d278d0).
 
-1. Join the VPN server to the domain of your private network. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
+1. Join the VPN server to the domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 
 1. Open your firewall rules to allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 
-1. Enable the following ports: UDP1812, UDP1813, UDP1645, and UDP1646.
+1. On the network adapter connecting to the domain, enable the following ports: UDP1812, UDP1813, UDP1645, and UDP1646.
 
 1. Create the VPN Servers group:
 
@@ -211,7 +212,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. In **Friendly name**, enter a display name for the VPN server.
 
-1. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
+1. In **Address (IP or DNS)**, enter the IP address or FQDN of the VPN server.
 
     If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
 
@@ -226,6 +227,9 @@ In this section, you'll create a Group Policy on the domain controller so that d
 1. Select **OK**. The VPN Server should appear in the list of RADIUS clients configured on the NPS server.
 
 ## Configure NPS server as a RADIUS server
+
+>[!NOTE]
+>In this tutorial, the NPS server is installed on the domain controller with the CA role; and we don't need to register a separate NPS server certificate. However, in an environment where the NPS server is installed on a separate server, an NPS server certificate must be enrolled before you can preform these steps.
 
 1. In the NPS console, select **NPS(Local)**.
 
@@ -274,8 +278,6 @@ In this section, you'll create a Group Policy on the domain controller so that d
 1. Select **Finish** to close the wizard.
 
 ## Next steps
-
-Now you've created your sample infrastructure you are ready to being configuring your Certificate Authority.
 
 Now you've created your sample infrastructure you are ready to being configuring your Certificate Authority.
 
