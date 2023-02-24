@@ -54,20 +54,22 @@ To allow proper extension of large .vhdx files, there are new recommendations fo
 
 |Parameter|Description|
 |---|---|
-|-AllocationUnitSize 64KB|Sets a 64 KB NTFS allocation unit size.|
+|-AllocationUnitSize 2048KB|Sets a 2048 KB NTFS allocation unit size.|
 |-UseLargeFRS|Enables support for large file record segments (FRS). This is needed to increase the number of extents allowed per file on the volume. For large FRS records, the limit increases from about 1.5 million extents to about 6 million extents.|
 
-For example, the following cmdlet formats drive D as an NTFS volume, with FRS enabled and an allocation unit size of 64 KB.
+For example, the following cmdlet formats drive D as an NTFS volume, with FRS enabled and an allocation unit size of 2048 KB.
 
 ```PowerShell
-Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 64KB -UseLargeFRS
+Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 2048KB -UseLargeFRS
 ```
 
-You also can use the **format** command. At a system command prompt, enter the following command, where **/L** formats a large FRS volume and **/A:64k** sets a 64 KB allocation unit size:
+You also can use the **format** command. At a system command prompt, enter the following command, where **/L** formats a large FRS volume and **/A:2048k** sets a 2048 KB allocation unit size:
 
 ```PowerShell
-format /L /A:64k
+format /L /A:2048k
 ```
+
+Since Windows Server 2019 and newer and Windows 10, version 1709 and newer, the maximum cluster size increased to 2048 KB from the earlier 64 KB max. For backward compatibility it is recommended to format with the previous 64 KB max cluster size. For more information, see [Support for large volumes](/WindowsServerDocs/storage/file-server/ntfs-overview.md#support-for-large-volumes). For related information on minimizing IO amplification, see [Cluster size recommendations for ReFS and NTFS]([/WindowsServerDocs/storage/file-server/ntfs-overview.md#support-for-large-volumes](https://techcommunity.microsoft.com/t5/storage-at-microsoft/cluster-size-recommendations-for-refs-and-ntfs/ba-p/425960)).
 
 ## Maximum file name and path
 
