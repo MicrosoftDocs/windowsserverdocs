@@ -10846,6 +10846,38 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/native-client-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/single-page-application-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/enabling-oauth-confidential-clients-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/enabling-openid-connect-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/custom-id-tokens-in-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+
+    {
       "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
       "redirect_document_id": false
