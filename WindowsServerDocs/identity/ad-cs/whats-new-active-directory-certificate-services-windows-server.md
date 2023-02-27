@@ -1,8 +1,8 @@
 ---
 title: What is Active Directory Certificate Services in Windows Server?
 description: Overview of Directory Certificate Services (AD CS) in Windows Server, including important functionality
-author: 
-ms.author: 
+author: robinharwood
+ms.author: robinharwood
 ms.topic: overview
 ms.date: 02/27/2023
 ---
@@ -26,11 +26,13 @@ AD CS provides the following important features:
 - Certification authorities (CAs). Root and subordinate CAs are used to issue certificates to users, computers, and services, and to manage certificate validity.
 - Web enrollment. Web enrollment allows users to connect to a CA by means of a Web browser in order to request certificates and retrieve certificate revocation lists (CRLs).
 - Online Responder. The Online Responder service decodes revocation status requests for specific certificates, evaluates the status of these certificates, and sends back a signed response containing the requested certificate status information.
-- Network Device Enrollment Service. The Network Device Enrollment Service allows routers and other network devices that do not have domain accounts to obtain certificates.
+- Network Device Enrollment Service. The Network Device Enrollment Service allows routers and other network devices that don't have domain accounts to obtain certificates.
 
 ## Real-world benefits for AD CS
 
 You can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding private key. AD CS gives you a cost-effective, efficient, and secure way to manage the distribution and use of certificates.
+
+In addition to binding of identities and private keys, AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments.
 
 You can leverage existing endpoint identity information in Active Directory to register for certificates. This means that users and computers registered to your Active Directory can have user information automatically inserted into certificates.
 
@@ -50,7 +52,7 @@ The installation of AD CS role services can be performed through the Server Mana
 | --- | --- |
 | Web Enrollment | CA Web enrollment allows users to connect to a CA by means of a Web browser in order to request certificates and retrieve certificate revocation lists (CRLs). |
 | Online Responder | The Online Responder service decodes revocation status requests for specific certificates, evaluates the status of these certificates, and sends back a signed response containing the requested certificate status information. |
-| Network Device Enrollment Service | The Network Device Enrollment Service (NDES) allows routers and other network devices that do not have domain accounts to obtain certificates. |
+| Network Device Enrollment Service | The Network Device Enrollment Service (NDES) allows routers and other network devices that don't have domain accounts to obtain certificates. |
 | Certificate Enrollment Policy Web Service | The Certificate Enrollment Policy Web Service enables users and computers to obtain certificate enrollment policy information. |
 | Certificate Enrollment Web Service | The Certificate Enrollment Web Service is an Active Directory Certificate Services (AD CS) role service that enables users and computers to perform certificate enrollment by using the HTTPS protocol. When used together, the Certificate Enrollment Web Service and the Certificate Enrollment Policy Web Service enable policy-based certificate enrollment for
 
@@ -63,9 +65,9 @@ TPM key attestation is important functionality that lets the certification autho
 
 All TPMs have an endorsement key that's unique to each TPM. In some cases, TPMs have an endorsement key certificate that chains to the manufacturer's issuing CA. Not all TPMs support attestation but when they do, you can optionally choose to validate the key attestation by using the endorsement key, or by using an endorsement key certificate.
 
-To use TPM key attestation, the client operating system must be Windows 8.1 or Windows Server 2012 R2. To configure TPM key attestation, use a version 4 certificate template with an enterprise CA, and configure the settings on the  **Key Attestation**  tab. Do not select  **Do not store certificate and requests in the CA database**  on the  **Server**  tab of the certificate template properties, because this configuration is not supported with TPM key attestation. In addition, standalone CAs and web enrollment do not support TPM key attestation.
+To use TPM key attestation, the client operating system must be Windows 8.1 or Windows Server 2012 R2. To configure TPM key attestation, use a version 4 certificate template with an enterprise CA, and configure the settings on the  **Key Attestation**  tab. Don't select  **Don't store certificate and requests in the CA database**  on the  **Server**  tab of the certificate template properties, because this configuration isn't supported with TPM key attestation. In addition, standalone CAs and web enrollment don't support TPM key attestation.
 
-When you configure TPM key attestation, you can choose increasing levels of assurance by specifying how to validate the endorsement key that is burned into the TPM by the manufacturer:
+When you configure TPM key attestation, you can choose increasing levels of assurance by specifying how to validate the endorsement key that's burned into the TPM by the manufacturer:
 
 - **User credentials**. No additional configuration is required on the CA.
 - **Endorsement certificate**. You must add the root and issuing CA certificates for the TPMs to new certificate stores on the CA. The new certificate stores are EKCA for the intermediate store, and EKRROT for the root store.
