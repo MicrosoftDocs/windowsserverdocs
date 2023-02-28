@@ -783,20 +783,7 @@
         href: ad-fs/development/ad-fs-risk-assessment-model.md
       - name: Single log-out for OpenID Connect with AD FS
         href: ad-fs/development/ad-fs-logout-openid-connect.md
-      - name: ADAL
-        items:
-        - name: Custom Id Tokens in AD FS
-          href: ad-fs/development/Custom-Id-Tokens-in-AD-FS.md
-        - name: AD FS On-behalf-of Authentication in Windows Server 2016
-          href: ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md
-        - name: Enabling OpenId Connect with AD FS 2016
-          href: ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md
-        - name: Enabling Oauth Confidential Clients with AD FS 2016
-          href: ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md
-        - name: Single Page Application with AD FS
-          href: ad-fs/development/Single-Page-Application-with-AD-FS.md
-        - name: Build a native client application using OAuth public clients with AD FS
-          href: ad-fs/development/native-client-with-ad-fs.md
+
       - name: MSAL
         items:
         - name: Native app calling Web API
