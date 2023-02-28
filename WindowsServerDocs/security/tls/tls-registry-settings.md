@@ -158,7 +158,7 @@ To specify a maximum supported range of RSA key bit length for the TLS client, c
 ---
 
 > [!NOTE]
-> Configured elliptic curves determine the cryptographic strength of the ECDHE key exchange. For more information, see [Manage Transport Layer Security (TLS)](security/tls/manage-tls#configuring-tls-ecc-curve-order).
+> Configured elliptic curves determine the cryptographic strength of the ECDHE key exchange. For more information, see [Manage Transport Layer Security (TLS)](security/tls/manage-tls.md#configuring-tls-ecc-curve-order).
 
 To learn more about TLS/SSL cipher suite cryptographic algorithms, see:
 
