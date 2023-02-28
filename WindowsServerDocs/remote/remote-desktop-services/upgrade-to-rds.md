@@ -64,11 +64,15 @@ End users cannot upgrade their personal desktops. Administrators should perform 
 **Workaround:** 
 Before migrating for the second time, check if the following registry key is present:
 HKLM\SOFTWARE\Microsoft\Terminal Server Web Access\IsInstalled
- 
-If it is not present, run the following commands on an elevated PowerShell session to set it up:
-- $registryPath = "HKLM:SOFTWARE\Microsoft\Terminal Server Web Access\IsInstalled"
-- New-Item -Path $registryPath
-- New-ItemProperty -Path $registryPath  -Name Version -PropertyType String -Value "6.0" 
+
+If it is not present, Open an elevated PowerShell prompt, run the following commands:
+   
+   ```powershell
+   $registryPath = "HKLM:SOFTWARE\Microsoft\Terminal Server Web Access\IsInstalled"
+   New-Item -Path $registryPath
+   New-ItemProperty -Path $registryPath  -Name Version -PropertyType String -Value "6.0"
+   ```
+
 
 
 
