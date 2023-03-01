@@ -10,7 +10,7 @@ ms.date: 03/01/2023
 ---
 # Add a virtual gateway to a tenant virtual network
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 22H2, 21H2, and 20H2
 
 Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site connectivity for your tenant's virtual networks. In this topic, you add tenant virtual gateways to instances of RAS gateway that are members of gateways pools, using Network Controller. RAS gateway supports up to one hundred tenants, depending on the bandwidth used by each tenant. Network Controller automatically determines the best RAS Gateway to use when you deploy a new virtual gateway for your tenants.
 
@@ -19,8 +19,8 @@ Each virtual gateway corresponds to a particular tenant and consists of one or m
 **When you deploy a Tenant Virtual Gateway, you have the following configuration options:**
 
 
-|                                                        Network connection options                                                         |                                              BGP configuration options                                               |
-|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Network connection options | BGP configuration options |
+|---|---|
 | <ul><li>IPSec site-to-site virtual private network (VPN)</li><li>Generic Routing Encapsulation (GRE)</li><li>Layer 3 forwarding</li></ul> | <ul><li>BGP router configuration</li><li>BGP peer configuration</li><li>BGP routing policies configuration</li></ul> |
 
 ---
