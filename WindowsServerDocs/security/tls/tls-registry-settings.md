@@ -34,8 +34,6 @@ There are eight logging levels for SChannel events saved to the system event log
 
 ## CertificateMappingMethods
 
-This entry doesn't exist in the registry by default.
-
 When a server application requires client authentication, SChannel automatically attempts to map the certificate that is supplied by the client computer to a user account. You can authenticate users who sign in with a client certificate by creating mappings, which relate the certificate information to a Windows user account.
 
 After you create and enable a certificate mapping, each time a client presents a client certificate, your server application automatically associates that user with the appropriate Windows user account.
