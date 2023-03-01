@@ -12,13 +12,15 @@ ms.contributors: socuff-01282022
 
 # What is Secured-core server?
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 21H2
-
-TODO: Article introduction
+>Applies to: Windows Server 2022, Azure Stack HCI version 21H2 and later
 
 Secured-core is a collection of security features that offers protection in pre-OS and OS runtime environments. It started with Windows PCs through a deep collaboration between Microsoft and PC manufacturing partners to provide the most elevated Windows security ever. Microsoft has expanded the partnership further with server manufacturing partners to bring the unparalleled host protection to servers. Secured-core server is built on three key pillars: simplified security, advanced protection, and preventative defense.
 
 ## What makes a Secured-core Server
+
+Requires at least Intel ICX or AMD Milan.
+
+TODO: Confirm not on VMs?
 
 From WAC:
 
@@ -46,18 +48,31 @@ TODO: *confirm base requirement shows capable vs enabled?
 TODO: **confirm what is AQ?
 TODO: ***what is TXT/SKINIT, I assume this is different to DRTM
 
+| Concept | Feature | Requirement | Recommended baseline | Secured-Core Server |
+|---|---|---|---|---|
+| **Create a hardware backed root of trust** |  |  |  |  |
+|  | Secure Boot | Secure Boot is enabled in the BIOS by default. TODO: What about? Default trust for Microsoft bootloaders only with BIOS option for enabling trust for non-Microsoft bootloaders | ✓ | ✓ |
+|  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification | ✓ | ✓ |
+|  | Certified for Windows Server | Demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability. | ✓ | ✓ |
+|  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D, AMD-Vi. |  | ✓ |
+| **Defend against firmware level attacks** |  |  |  |  |
+|  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware |  | ✓ |
+| **Protect the OS from execution of unverified code** |  |  |  |  |
+|  | Virtualization-based Security (VBS) |  | ✓ | ✓ |
+|  | Hypervisor Enhanced Code Integrity (HVCI) |  | ✓ | ✓ |
 
-|Column1  |Column2  |Column3  |Column4  |Column5  |
-|---------|---------|---------|---------|---------|
-|Row1     |         |         |         |         |
-|     |   test      |         |         |         |
-|Row3     |         |         |         |         |
-|head     |
-|Row5     |         |         |         |         |
-|Row6     |         |         |         |         |
-|Row7     |         |         |         |         |
-|Row8     |         |         |         |         |
-|Row9     |         |         |         |         |
+| Concept | Feature | Requirement | Recommended baseline | Secured-Core Server |
+|---|---|---|---|---|
+| **Create a hardware backed root of trust** |
+|  | Secure Boot | Secure Boot is enabled in the BIOS by default. TODO: What about? Default trust for Microsoft bootloaders only with BIOS option for enabling trust for non-Microsoft bootloaders | ✓ | ✓ |
+|  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification | ✓ | ✓ |
+|  | Certified for Windows Server | Demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability. | ✓ | ✓ |
+|  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D, AMD-Vi. |  | ✓ |
+| **Defend against firmware level attacks** |
+|  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware |  | ✓ |
+| **Protect the OS from execution of unverified code** |
+|  | Virtualization-based Security (VBS) |  | ✓ | ✓ |
+|  | Hypervisor Enhanced Code Integrity (HVCI) |  | ✓ | ✓ |
 
 Secured-core server protections are designed to deliver platforms that are secure for critical data and applications. The Secured-core functionality spans the following areas:
 
@@ -67,7 +82,7 @@ Secured-core Servers ship with UEFI Secure Boot and Trusted Platform Module (TPM
 
 UEFI Secure Boot verifies that each of the boot components such as UEFI firmware drivers, EFI applications and so on are digitally signed by a trusted author. Upon successful verification, the server boots and the firmware hands off the control to the operating system. This helps elevate supply chain security of the servers.
 
-TPM 2.0 provides a secure, hardware-backed storage for sensitive keys and data. Moreover, every component that is loaded during the boot process is measured into the TPM This hardware root-of-trust elevates the protection provided by capabilities like BitLocker, which uses the TPM 2.0 and facilitates the creation of attestation-based workflows that can be incorporated into zero-trust security strategies. 
+TPM 2.0 provides a secure, hardware-backed storage for sensitive keys and data. Moreover, every component that is loaded during the boot process is measured into the TPM This hardware root-of-trust elevates the protection provided by capabilities like BitLocker, which uses the TPM 2.0 and facilitates the creation of attestation-based workflows that can be incorporated into zero-trust security strategies.
 
 Learn more about [Trusted Platform Modules](/windows/security/information-protection/tpm/trusted-platform-module-overview) and [how Windows 10 uses the TPM](/windows/security/information-protection/tpm/how-windows-uses-the-tpm).
 
@@ -89,7 +104,7 @@ Learn more about [Windows Admin Center]( https://learn.microsoft.com/en-us/windo
 
 ## Preventative defense
 
-You can proactively defend against and disrupt many of the paths attackers use to exploit systems by enabling Secured-core functionality. Secured-core server enables advanced security features at the bottom layers of the technology stack. This protects the most privileged areas of the system before many security tools are aware of exploits. It also occurs without the need for additional tasks or monitoring by IT and SecOps teams.
+You can proactively defend against and disrupt many of the paths attackers use to exploit systems by enabling Secured-core functionality. Secured-core server enables advanced security features at the bottom layers of the technology stack. This protects the most privileged areas of the system before many security tools are aware of exploits. It also occurs without the need for extra tasks or monitoring by IT and SecOps teams.
 
 # Begin your Secured-core journey
 
