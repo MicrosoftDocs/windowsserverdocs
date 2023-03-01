@@ -14,7 +14,9 @@ ms.contributors: socuff-01282022
 
 >Applies to: Windows Server 2022, Azure Stack HCI version 21H2 and later
 
-Secured-core is a collection of security features that offers built-in hardware, firmware, and operating system protection. The protection provided by Secured-core begins before the operating system boots and continues whilst running. Secured-core server is designed to deliver a secure platform for critical data and applications.
+FIXME: Check what's new page! Plus FWlink from WAC: 2174043
+
+Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and operating security features. The protection provided by Secured-core begins before the operating system boots and continues whilst running. Secured-core server is designed to deliver a secure platform for critical data and applications.
 
 Secured-core server is built on three key concepts:
 
@@ -33,10 +35,10 @@ Windows Server integrates closely with the hardware to provide increasing levels
 
 The following table shows how each security concept and feature are used to create a Secured-core Server.
 
-| Concept | Feature | Requirement | Recommended baseline | Secured-Core Server |
+| Concept | Feature | Requirement | Recommended baseline | Secured-Core server |
 |---|---|---|---|---|
 | **Create a hardware backed root of trust** |  |  |  |  |
-|  | Secure Boot | Secure Boot is enabled in the BIOS by default. | ✓ | ✓ |
+|  | Secure Boot | Secure Boot is enabled in the Unified Extensible Firmware Interface (UEFI) BIOS by default. | ✓ | ✓ |
 |  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification | ✓ | ✓ |
 |  | Certified for Windows Server | Demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability. | ✓ | ✓ |
 |  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D, AMD-Vi. |  | ✓ |
@@ -65,26 +67,36 @@ From PPT:
 1. TODO: **confirm what is AQ?
 1. TODO: ***what is TXT/SKINIT, I assume this is different to DRTM
 1. TODO: ****TODO: What about? Default trust for Microsoft bootloaders only with BIOS option for enabling trust for non-Microsoft bootloaders
+1. TODO: What about Credential Guard?
+1. TODO: DMA runtime protecton is optional? In what way, how is it enabled and should it be added to the table?
 
 ### Create a hardware backed root of trust
 
-Secured-core Servers ship with UEFI Secure Boot and Trusted Platform Module (TPM) 2.0 enabled.
+Certified Secured-core server hardware ships with UEFI Secure Boot and TPM 2.0 enabled. UEFI Secure Boot verifies that each of the boot components such as UEFI firmware drivers and applications are digitally signed by a trusted author. Upon successful verification, the server boots and the firmware hands off the control to the operating system. using Secure Boot helps validated the supply chain security of the servers hardware.
 
-UEFI Secure Boot verifies that each of the boot components such as UEFI firmware drivers, EFI applications and so on are digitally signed by a trusted author. Upon successful verification, the server boots and the firmware hands off the control to the operating system. This helps elevate supply chain security of the servers.
+[UEFI secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) is a security standard that protects your servers from malicious rootkits. Secure boot ensures the server boots only firmware and software trusted by the hardware manufacturer. When the server is started, the firmware checks the signature of each boot component including firmware drivers and the OS. If the signatures are valid, the server boots and the firmware gives control to the OS.
 
-TPM 2.0 provides a secure, hardware-backed storage for sensitive keys and data. Moreover, every component that is loaded during the boot process is measured into the TPM This hardware root-of-trust elevates the protection provided by capabilities like BitLocker, which uses the TPM 2.0 and facilitates the creation of attestation-based workflows that can be incorporated into zero-trust security strategies.
+TPM 2.0 provides a secure, hardware-backed storage for sensitive keys and data. Every component loaded during the boot process is measured and the measurements stored in the TPM. By verifying the hardware root-of-trust it elevates the protection provided by capabilities like BitLocker, which uses the TPM 2.0 and facilitates the creation of attestation-based workflows. These attestation-base workflows can be incorporated into zero-trust security strategies.
 
-Learn more about [Trusted Platform Modules](/windows/security/information-protection/tpm/trusted-platform-module-overview) and [how Windows 10 uses the TPM](/windows/security/information-protection/tpm/how-windows-uses-the-tpm).
+Learn more about [Trusted Platform Modules](/windows/security/information-protection/tpm/trusted-platform-module-overview) and [how Windows uses the TPM](/windows/security/information-protection/tpm/how-windows-uses-the-tpm).
 
 ### Defend against firmware level attacks
 
-In the last few years, there has been a significant uptick in firmware vulnerabilities, in large part due to the higher level of privileges that firmware runs combined with limited visibility into firmware by traditional anti-virus solutions. Using processor support for Dynamic Root of Trust of Measurement (DRTM) technology, Secured-core systems put firmware in a hardware-backedsed sandbox helping to limit the impact of vulnerabilities in millions of lines of highly privileged firmware code. Along with pre-boot DMA protection, Secured-core systems provide protection throughout the boot process.
+Firmware executes with high privileges and is often invisible to traditional anti-virus solutions, which has led to a rise in the number of firmware-based attacks. Using processor support for [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm), Secured-core systems put firmware in a hardware-backed sandbox helping to limit the impact of vulnerabilities in highly privileged firmware code. System Guard relies on DRTM to securely launch the Hypervisor and VBS after device firmware is finished booting, known as System Guard Secure Launch.
+
+Pre-boot [DMA protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) isolates of driver access to memory to provide protection throughout the boot process.
 
 ### Protect the OS from execution of unverified code
 
-Secured-core Server support Virtualization-based security (VBS) and hypervisor-protected code integrity (HVCI). HVCI helps ensure that only signed and trusted code is allowed to execute in the kernel. This prevents attacks that attempt to modify the kernel mode code such as drivers, and against exploits such as WannaCry that attempt to inject malicious code into the kernel. 
+Even with malware running in the Windows kernel, secrets and code running in VBS cannot be leaked or tampered
+
+Virtualization-based security (VBS) isolates critical parts of the system from even privileged malware
+
+Secured-core Server supports Virtualization-based security (VBS) and hypervisor-protected code integrity (HVCI). HVCI helps ensure that only signed and trusted code is allowed to execute in the kernel. This prevents attacks that attempt to modify the kernel mode code such as drivers, and against exploits such as WannaCry that attempt to inject malicious code into the kernel. 
 
 ## Simplified management
+
+FIXME: WAC or PoSH
 
 The new security extension in the Windows Admin Center makes provides a single pane of glass view for customers to view and configure the OS security features of Secured-core for Azure Stack HCI systems.  It allows customers to enable advanced security features with the click of a button from a web browser anywhere in the world. With Azure Stack HCI Integrated Systems, manufacturing partners have further simplified the configuration experience for customers so that Microsoft’s best server security is available right out of the box.
 
