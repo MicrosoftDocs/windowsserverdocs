@@ -4,7 +4,7 @@ title: AD FS to Azure AD FAQ
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 02/07/2023
+ms.date: 02/28/2023
 ms.topic: article
 ---
 
@@ -28,7 +28,7 @@ Yes you can. This is quite common. Using staged rollout can help you validate a 
 
 There are a few ways. The first and recommend way is to [hybrid Azure AD join](/azure/active-directory/devices/concept-azure-ad-join-hybrid) your existing Windows 10/11 domain joined machines or use Azure AD join. This will provide you with the same seamless signle-sign on experience. The second way would be to leverage [seamless single-sign on](/azure/active-directory/hybrid/how-to-connect-sso-how-it-works) for non hybrid Azure AD joined machines or downlevel Windows clients can still get that same experience.
 
-**I’m registering Hybrid AADJ devices using AD FS device claims. How do I allow devices to continue to complete their hybrid aadj process with AD FS?**
+**I’m registering Hybrid Azure AD Joined (AADJ) devices using AD FS device claims. How do I allow devices to continue to complete their Hybrid AADJ process with AD FS?**
 
 You can follow the [configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join#managed-domains) process for devices to complete the registration process without AD FS.  
 
