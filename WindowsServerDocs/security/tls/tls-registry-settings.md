@@ -12,7 +12,7 @@ ms.date: 02/28/2023
 This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
 
 > [!CAUTION]
-> This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied. We recommend that you do not directly edit the registry unless there is no other alternative. Modifications to the registry are not validated by the Registry Editor or by the Windows operating system before they are applied. As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system. When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC). If you must edit the registry, use extreme caution. If you want to only allow TLS 1.2, select only the cipher suites that support TLS 1.2 for the specific platform.
+> This information is provided as a reference to use when you are troubleshooting or verifying that the required settings are applied. We recommend that you do not directly edit the registry unless there is no other alternative. Modifications to the registry are not validated by the Registry Editor or by the Windows operating system before they are applied. As a result, incorrect values can be stored, and this can result in unrecoverable errors in the system. When possible, instead of editing the registry directly, use Group Policy or other Windows tools such as the Microsoft Management Console (MMC). If you must edit the registry, use extreme caution.
 
 ## SChannel logging
 
@@ -34,7 +34,7 @@ There are eight logging levels for SChannel events saved to the system event log
 
 ## CertificateMappingMethods
 
-This entry doesn't exist in the registry by default. The default value is that all four certificate mapping methods, listed below, are supported.
+This entry doesn't exist in the registry by default.
 
 When a server application requires client authentication, SChannel automatically attempts to map the certificate that is supplied by the client computer to a user account. You can authenticate users who sign in with a client certificate by creating mappings, which relate the certificate information to a Windows user account.
 
@@ -45,15 +45,23 @@ In most cases, a certificate is mapped to a user account in one of two ways:
 - A single certificate is mapped to a single user account (one-to-one mapping).
 - Multiple certificates are mapped to one user account (many-to-one mapping).
 
-The SChannel provider uses four (4) certificate mapping methods with Kerberos service-for-user (S4U) certificate mapping being the default. The other three (3) are:
+The SChannel provider uses four (4) certificate mapping methods with Kerberos service-for-user (S4U) certificate mapping being enabled by default. The other three (3) are:
 
 1. User principal name mapping
 1. One-to-one mapping (also known as subject/issuer mapping)
 1. Many-to-one mapping
 
-Applicable versions: As designated in the **Applies To** list at the beginning of this article.
-
 Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
+
+|Entry name|DWORD|Enabled by default|
+|--|--|--|
+|Subject/Issuer|0x000000001|No|
+|Issuer|0x000000002|No|
+|UPN|0x000000004|No|
+|S4U2Self|0x000000008|Yes|
+|S4U2Self Explicit|0x000000010|Yes|
+
+Applicable versions: As designated in the **Applies To** list at the beginning of this article.
 
 ## Ciphers
 
@@ -69,11 +77,9 @@ For information about default cipher suite orders that are used by the SChannel 
 
 ## ClientCacheTime
 
-This entry controls the amount of time that the operating system takes in milliseconds to expire client-side cache entries. A value of 0 turns off secure-connection caching. This entry doesn't exist in the registry by default.
+This entry specifies client TLS session cache item lifetime in milliseconds. Beginning with Windows Server 2008 and Windows Vista the default is 10 hours. A value of 0 turns off TLS session caching on the client.
 
 The first time a client connects to a server through the SChannel SSP, a full TLS/SSL handshake is performed. When this is complete, the master secret, cipher suite, and certificates are stored in the session cache on the respective client and server.
-
-Beginning with Windows Server 2008 and Windows Vista, the default client cache time is 10 hours.
 
 Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
 
@@ -139,7 +145,7 @@ Added in Windows 10, version 1507 and Windows Server 2016.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
 
-To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. After you've created the entry, change the DWORD value to the desired bit length.
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. After you've created the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits will be the minimum.
 
 To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry. After you've created the entry, change the DWORD value to the desired bit length.
 
@@ -167,7 +173,7 @@ To learn more about TLS/SSL cipher suite cryptographic algorithms, see:
 
 ## MaximumCacheSize
 
-This entry controls the maximum number of cache elements. Setting MaximumCacheSize to **0** disables the
+This entry controls the maximum number of TLS sessions to cache. Setting MaximumCacheSize to **0** disables the
 server-side session cache to prevent session resumption. Increasing MaximumCacheSize above the
 default values causes Lsass.exe to consume additional memory. Each session-cache element typically
 requires 2 KB to 4 KB of memory. This entry doesn't exist in the registry by default. The default
@@ -179,7 +185,7 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 ## Messaging – fragment parsing
 
-This entry controls the maximum allowed size of fragmented TLS handshake messages that will be accepted. Messages larger than the allowed size won't be accepted and the TLS handshake will fail. These entries don't exist in the registry by default.
+This entry controls the maximum allowed size of a TLS handshake message that will be accepted. Messages larger than the allowed size won't be accepted and the TLS handshake will fail. These entries don't exist in the registry by default.
 
 When you set the value to **0x0**, fragmented messages aren't processed and will cause the TLS handshake to fail. This makes TLS clients or servers on the current machine non-compliant with the TLS RFCs.
 
@@ -197,11 +203,11 @@ To specify a maximum allowed size of fragmented TLS handshake messages that the 
 
 ## SendTrustedIssuerList
 
-This entry controls the flag that is used when the list of trusted issuers is sent if the value is set to **1**. In the case of servers that trust hundreds of certification authorities for client authentication, there are too many issuers for the server to be able to send them all to the client computer when requesting client authentication. In this situation, this registry key can be set, and instead of sending a partial list, the SChannel SSP won't send any list to the client.
+TLS servers may send a list of the distinguished names of acceptable certificate authorities when requesting client authentication. This may help TLS clients select an appropriate TLS client certificate. SChannel-based TLS servers don't send this trusted issuer list by default because it exposes the certificate authorities trusted by the server to passive observers and also increases the amount of data exchanged in the course of the TLS handshake. Setting this value to **1** causes SChannel-based servers to send their lists of trusted issuers.
 
 Not sending a list of trusted issuers might impact what the client sends when it's asked for a client certificate. For example, when Internet Explorer receives a request for client authentication, it only displays the client certificates that chain up to one of the certification authorities that is sent by the server. If the server didn't send a list, Internet Explorer displays all of the client certificates that are installed on the client.
 
-This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates won't have the same root CA; therefore, Internet Explorer cannot chose a certificate that chains up to one of the server's CAs. By configuring the server to not send a trusted issuer list, Internet Explorer sends all of its certificates. This entry doesn't exist in the registry by default.
+This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates won't have the same root CA; therefore, Internet Explorer cannot chose a certificate that chains up to one of the server's CAs. TLS clients may offer any available client certificate when a server does not send the trusted issuer list. This entry doesn't exist in the registry by default.
 
 ### Default Send Trusted Issuer List behavior
 
@@ -216,7 +222,7 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 ## ServerCacheTime
 
-This entry controls the amount of time in milliseconds that the operating system takes to expire server-side cache entries. A value of **0** disables the server-side session cache and prevents session resumption. Increasing ServerCacheTime above the default values causes Lsass.exe to consume additional memory. Each session cache element typically requires 2 KB to 4 KB of memory. This entry doesn't exist in the registry by default.
+This entry specifies server TLS session cache item lifetime in milliseconds. The default is 10 hours. A value of **0** turns off TLS session caching on the server and prevents session resumption. Increasing ServerCacheTime above the default values causes Lsass.exe to consume additional memory. Each session cache element typically requires 2 KB to 4 KB of memory. This entry doesn't exist in the registry by default.
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
@@ -233,7 +239,7 @@ A supported (D)TLS or SSL protocol version can exist in one of the following sta
 - **Enabled**: Unless the SSPI caller explicitly disables this protocol version using [SCH_CREDENTIALS](/windows/win32/api/schannel/ns-schannel-sch_credentials) structure, SChannel SSP may negotiate this protocol version with a supporting peer.
 - **Disabled**: SChannel SSP won't negotiate this protocol version regardless of the settings the SSPI caller may specify.
 
-The system administrator can override the default (D)TLS and SSL protocol version settings by creating DWORD registry values "Enabled" and "DisabledByDefault". These registry values are configured separately for the protocol client and server roles under the registry subkeys named using the following format:
+These registry values are configured separately for the protocol client and server roles under the registry subkeys named using the following format:
 
 <SSL/TLS/DTLS> \<major version number\>.\<minor version number\>\<Client\Server>
 
@@ -259,7 +265,7 @@ In order to override a system default and set a supported (D)TLS or SSL protocol
 
 The following example shows DTLS 1.2 disabled in the registry:
 
-![Screenshot of Windows Server registry setting for DTLS 1.2 set to disabled by default.](images/tls-12-server-disabled.png)
+![Screenshot of Windows Server registry setting for DTLS 1.2 set to disabled by default.](images/dtls-12-server-disabled.png)
 
 Switching a (D)TLS or SSL protocol version to **Disabled** state may cause [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of **Enabled** (D)TLS and SSL versions may break interoperability with remote peers.
 
