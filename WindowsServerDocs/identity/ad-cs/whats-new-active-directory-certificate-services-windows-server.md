@@ -12,7 +12,7 @@ ms.date: 02/27/2023
 AD CS provides customizable services within Windows Server for issuing and managing on-premises public key infrastructure (PKI) certificates used in software security systems that employ public key technologies.
 
 ## Issue and manage certificates <!--- Play with this header, or revert and remove it --->
-
+REMOVE THIS TEXT
 Digital certificates can be used to encrypt and digitally sign electronic documents and messages as well as for authentication of computer, user, or device accounts on a network. For example, PKI certificates enable you to provide users confidentiality through encryption, enhance integrity using digital signatures, and authentication  by associating certificate keys with computer, user, or device accounts on a computer network. Digital certificates are used to provide:
 
 - Confidentiality through encryption
