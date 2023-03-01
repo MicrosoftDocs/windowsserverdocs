@@ -109,7 +109,7 @@ The claims present in any given security token are dependent upon the type of to
 
 Two types of libraries are used with AD FS:
 
-- **Client libraries**: Native clients and server apps use client libraries to acquire access tokens for calling a resource such as a Web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when using AD FS 2019. Active Directory Authentication Library (ADAL) is recommended for AD FS 2016.
+- **Client libraries**: Native clients and server apps use client libraries to acquire access tokens for calling a resource such as a Web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when using AD FS 2019.
 
 - **Server middleware libraries**: Web apps use server middleware libraries for user sign-in. Web APIs use server middleware libraries to validate tokens that are sent by native clients or by other servers. OWIN (Open Web Interface for .NET) is the recommended middleware library.
 
