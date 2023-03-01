@@ -14,22 +14,39 @@ ms.contributors: socuff-01282022
 
 >Applies to: Windows Server 2022, Azure Stack HCI version 21H2 and later
 
-Secured-core is a collection of security features that offers protection in pre-OS and OS runtime environments. It started with Windows PCs through a deep collaboration between Microsoft and PC manufacturing partners to provide the most elevated Windows security ever. Microsoft has expanded the partnership further with server manufacturing partners to bring the unparalleled host protection to servers. Secured-core server is built on three key pillars: simplified security, advanced protection, and preventative defense.
+Secured-core is a collection of security features that offers built-in hardware, firmware, and operating system protection. The protection provided by Secured-core begins before the operating system boots and continues whilst running. Secured-core server is designed to deliver a secure platform for critical data and applications.
+
+Secured-core server is built on three key concepts:
+
+- Creating a hardware back root of trust.
+- Defense again firmware level attacks.
+- Protecting the OS from the execution of unverified code.
 
 ## What makes a Secured-core Server
 
-Requires at least Intel ICX or AMD Milan.
+Secured-core started with Windows PCs through a deep collaboration between Microsoft and PC manufacturing partners to provide the most elevated Windows security ever. Microsoft has expanded the partnership further with server manufacturing partners to help ensure Windows Server delivers a secure operating system environment.
 
-TODO: Confirm not on VMs?
+Windows Server integrates closely with the hardware to provide increasing levels of security:
 
-From WAC:
+- Recommended baseline: The recommended minimum for all systems to provide foundational system integrity. Uses TPM 2.0 for a hardware root of trust, secure boot.
+- Secured-core Server: Recommended for systems and industry requiring higher levels of assurance. Secured-core builds on the previous features and uses advanced processor capabilities to provide protection from firmware attacks.
 
-- Hypervisor Enhanced Code Integrity (HVCI)
-- Boot DMA protection
-- System Guard
-- Secure Boot
-- Virtualization-based Security (VBS)
-- Trusted Platform Module 2.0 (TPM 2.0)
+The following table shows how each security concept and feature are used to create a Secured-core Server.
+
+| Concept | Feature | Requirement | Recommended baseline | Secured-Core Server |
+|---|---|---|---|---|
+| **Create a hardware backed root of trust** |  |  |  |  |
+|  | Secure Boot | Secure Boot is enabled in the BIOS by default. | ✓ | ✓ |
+|  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification | ✓ | ✓ |
+|  | Certified for Windows Server | Demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability. | ✓ | ✓ |
+|  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D, AMD-Vi. |  | ✓ |
+| **Defend against firmware level attacks** |  |  |  |  |
+|  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware |  | ✓ |
+| **Protect the OS from execution of unverified code** |  |  |  |  |
+|  | Virtualization-based Security (VBS) |  | ✓ | ✓ |
+|  | Hypervisor Enhanced Code Integrity (HVCI) |  | ✓ | ✓ |
+
+TODO: Requires at least Intel ICX or AMD Milan. Why? are the instruction sets/features covered below
 
 From PPT:
 
@@ -44,39 +61,12 @@ From PPT:
   - Direct Memory Access (DMA) Protection
   - Disabled S3 sleep TODO: possible overlap with System Guard, is this required for System Guard anyway?
 
-TODO: *confirm base requirement shows capable vs enabled?
-TODO: **confirm what is AQ?
-TODO: ***what is TXT/SKINIT, I assume this is different to DRTM
+1. TODO: *confirm base requirement shows capable vs enabled? But this is beyond WS hardware requirements?
+1. TODO: **confirm what is AQ?
+1. TODO: ***what is TXT/SKINIT, I assume this is different to DRTM
+1. TODO: ****TODO: What about? Default trust for Microsoft bootloaders only with BIOS option for enabling trust for non-Microsoft bootloaders
 
-| Concept | Feature | Requirement | Recommended baseline | Secured-Core Server |
-|---|---|---|---|---|
-| **Create a hardware backed root of trust** |  |  |  |  |
-|  | Secure Boot | Secure Boot is enabled in the BIOS by default. TODO: What about? Default trust for Microsoft bootloaders only with BIOS option for enabling trust for non-Microsoft bootloaders | ✓ | ✓ |
-|  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification | ✓ | ✓ |
-|  | Certified for Windows Server | Demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability. | ✓ | ✓ |
-|  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D, AMD-Vi. |  | ✓ |
-| **Defend against firmware level attacks** |  |  |  |  |
-|  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware |  | ✓ |
-| **Protect the OS from execution of unverified code** |  |  |  |  |
-|  | Virtualization-based Security (VBS) |  | ✓ | ✓ |
-|  | Hypervisor Enhanced Code Integrity (HVCI) |  | ✓ | ✓ |
-
-| Concept | Feature | Requirement | Recommended baseline | Secured-Core Server |
-|---|---|---|---|---|
-| **Create a hardware backed root of trust** |
-|  | Secure Boot | Secure Boot is enabled in the BIOS by default. TODO: What about? Default trust for Microsoft bootloaders only with BIOS option for enabling trust for non-Microsoft bootloaders | ✓ | ✓ |
-|  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification | ✓ | ✓ |
-|  | Certified for Windows Server | Demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability. | ✓ | ✓ |
-|  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D, AMD-Vi. |  | ✓ |
-| **Defend against firmware level attacks** |
-|  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware |  | ✓ |
-| **Protect the OS from execution of unverified code** |
-|  | Virtualization-based Security (VBS) |  | ✓ | ✓ |
-|  | Hypervisor Enhanced Code Integrity (HVCI) |  | ✓ | ✓ |
-
-Secured-core server protections are designed to deliver platforms that are secure for critical data and applications. The Secured-core functionality spans the following areas:
-
-## Create a hardware backed root of trust
+### Create a hardware backed root of trust
 
 Secured-core Servers ship with UEFI Secure Boot and Trusted Platform Module (TPM) 2.0 enabled.
 
@@ -86,11 +76,11 @@ TPM 2.0 provides a secure, hardware-backed storage for sensitive keys and data. 
 
 Learn more about [Trusted Platform Modules](/windows/security/information-protection/tpm/trusted-platform-module-overview) and [how Windows 10 uses the TPM](/windows/security/information-protection/tpm/how-windows-uses-the-tpm).
 
-## Defend against firmware level attacks
+### Defend against firmware level attacks
 
 In the last few years, there has been a significant uptick in firmware vulnerabilities, in large part due to the higher level of privileges that firmware runs combined with limited visibility into firmware by traditional anti-virus solutions. Using processor support for Dynamic Root of Trust of Measurement (DRTM) technology, Secured-core systems put firmware in a hardware-backedsed sandbox helping to limit the impact of vulnerabilities in millions of lines of highly privileged firmware code. Along with pre-boot DMA protection, Secured-core systems provide protection throughout the boot process.
 
-## Protect the OS from execution of unverified code
+### Protect the OS from execution of unverified code
 
 Secured-core Server support Virtualization-based security (VBS) and hypervisor-protected code integrity (HVCI). HVCI helps ensure that only signed and trusted code is allowed to execute in the kernel. This prevents attacks that attempt to modify the kernel mode code such as drivers, and against exploits such as WannaCry that attempt to inject malicious code into the kernel. 
 
