@@ -178,6 +178,7 @@ To search for superseded updates, you can select the Superseded flag column in t
 There is no feature in Windows Server Update Services that automatically declines superseded updates upon approval of a newer update. It is recommended to first set the approval to Not Approved, and then use the Server cleanup Wizard to automatically decline the update when all relevant conditions have been satisfied. For more information, see: [The Server cleanup Wizard](the-server-cleanup-wizard.md).
 
 ## Approving Superseding or Superseded Updates
+
 Typically, an update that supersedes other updates does one or more of the following:
 
 -   Enhances, improves, or adds to the fix provided by one or more previously released updates.
@@ -196,10 +197,7 @@ In an individual update's detail pane, an informational icon and a message at th
 
 WSUS does not automatically decline superseded updates, and it is recommended that you do not assume that superseded updates should be declined in favor of the new, superseding update. Before declining a superseded update, make sure that it is no longer needed by any of your client computers. The following are examples of scenarios in which you might need to install a superseded update:
 
--   If a superseding update supports only newer versions of an operating system, and some of your client computers run earlier versions of the operating system.
-
--   If a superseding update has more restricted applicability than the update it supersedes, which would make it inappropriate for some client computers.
-
--   If an update no longer supersedes a previously released update because of new changes. It is possible that through changes at each release, an update no longer supersedes an update it previously superseded in an earlier version. In this scenario, you will still see a message about the superseded update, even though the update that supersedes it has been replaced by an update that does not.
-
-
+- If a superseding update supports only newer versions of an operating system, and some of your client computers run earlier versions of the operating system
+- If a superseding update has more restricted applicability than the update it supersedes, which would make it inappropriate for some client computers
+- If an update no longer supersedes a previously released update because of new changes. It is possible that through changes at each release, an update no longer supersedes an update it previously superseded in an earlier version. In this scenario, you will still see a message about the superseded update, even though the update that supersedes it has been replaced by an update that does not
+- Keep quality and feature updates in sync. This means that if a feature update is one month old, then the quality update should be as well. If the feature update is two months old, and the quality update is at one month then ACR, language pack, and Feature on Demand acquisition will not work
