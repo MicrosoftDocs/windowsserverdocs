@@ -34,7 +34,8 @@ Hardware and database software requirements are driven by the number of client c
 
   - **Processor:** 1.4 gigahertz (GHz) x64 processor (2 Ghz or faster is recommended)
   - **Memory:** WSUS requires an additional 2 GB of RAM apart from what's required by the server and all other services or software.
-  - **Available disk space:** 40 GB or greater is recommended
+  - **Available disk space:** 40 GB or greater is recommended.
+    - On-premises update management with Unified Update Platform (UUP) requires an additional 10 GB of space per Windows version and processor architecture.
   - **Network adapter:** 100 megabits per second (Mbps) or greater (1 GB is recommended)
 
   > [!NOTE]
@@ -68,6 +69,21 @@ During the installation process, WSUS will install the following items by defaul
   - Simple Web Authentication Web Service
   - Server Synchronization Service
   - DSS Authentication Web Service
+
+### UUP considerations
+
+Two file types are required for the on-premises update management with Unified Update Platform (UUP). The .msu and .wim MIME types need to be added on  WSUS servers to support UUP on premises. An update for WSUS is coming in 2023.03B cumulative security update. You can also follow these steps to add teh required file types manually:
+
+1. On your Windows Server install, open Server Manager.
+1. Select **Internet Information Services (IIS)** in the left column.
+1. Right-click on your server in the list of servers.
+1. Select **Internet Information Services (IIS) Manager**.
+1. Select your server from the connections list on the left side of the window that opens.  
+1. In the center pane, scroll down and select **MIME types**.  
+1. On the right side select **Add**.
+1. Create a MIME Type with the extension ".wim" and the MIME Type "application/x-ms-wim."
+1. Select **Add** again.
+1. Create a MIME type with the extension ".msu" and the MIME Type "application/octet-stream."  
 
 ### Features on Demand Considerations
 
