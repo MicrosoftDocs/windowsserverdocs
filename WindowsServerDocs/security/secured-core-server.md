@@ -24,16 +24,16 @@ Secured-core server is built on three key concepts:
 - Defense again firmware level attacks.
 - Protecting the OS from the execution of unverified code.
 
-## What makes a Secured-core Server
+## What makes a Secured-core server
 
 Secured-core started with Windows PCs through a deep collaboration between Microsoft and PC manufacturing partners to provide the most elevated Windows security ever. Microsoft has expanded the partnership further with server manufacturing partners to help ensure Windows Server delivers a secure operating system environment.
 
 Windows Server integrates closely with the hardware to provide increasing levels of security:
 
 - Recommended baseline: The recommended minimum for all systems to provide foundational system integrity. Uses TPM 2.0 for a hardware root of trust, secure boot.
-- Secured-core Server: Recommended for systems and industry requiring higher levels of assurance. Secured-core builds on the previous features and uses advanced processor capabilities to provide protection from firmware attacks.
+- Secured-core server: Recommended for systems and industry requiring higher levels of assurance. Secured-core builds on the previous features and uses advanced processor capabilities to provide protection from firmware attacks.
 
-The following table shows how each security concept and feature are used to create a Secured-core Server.
+The following table shows how each security concept and feature are used to create a Secured-core server.
 
 | Concept | Feature | Requirement | Recommended baseline | Secured-Core server |
 |---|---|---|---|---|
@@ -57,7 +57,7 @@ From PPT:
   - Secure Boot*
   - Trusted Platform Module 2.0
   - Hypervisor Enhanced Code Integrity (HVCI)*
-- Secured-core Server AQ**
+- Secured-core server AQ**
   - Secured-core certified compatible hardware (https://www.windowsservercatalog.com/)
   - System Guard Secure Launch (TXT/SKINIT***)
   - Direct Memory Access (DMA) Protection
@@ -82,17 +82,26 @@ Learn more about [Trusted Platform Modules](/windows/security/information-protec
 
 ### Defend against firmware level attacks
 
-Firmware executes with high privileges and is often invisible to traditional anti-virus solutions, which has led to a rise in the number of firmware-based attacks. Using processor support for [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm), Secured-core systems put firmware in a hardware-backed sandbox helping to limit the impact of vulnerabilities in highly privileged firmware code. System Guard relies on DRTM to securely launch the Hypervisor and VBS after device firmware is finished booting, known as System Guard Secure Launch.
+
+FIXME: Firmware is used to initialize the hardware and other software on the device and has a higher level of access and privilege than the hypervisor and operating system kernel thereby making it an attractive target for attackers. Attacks targeting firmware can undermine mechanisms like secure boot and other security functionality implemented by the hypervisor or operating system making it more difficult to identify when a system or user has been compromised. Compounding the problem is the fact that endpoint protection and detection solutions have limited visibility at the firmware layer given that they run underneath of the operating system, making evasion easier for attackers going after firmware.
+
+FIXME: Using new hardware capabilities from AMD, Intel, and Qualcomm, Windows 10 now implements System Guard Secure Launch as a key Secured-core PC device requirement to protect the boot process from firmware attacks. System Guard uses the Dynamic Root of Trust for Measurement (DRTM) capabilities that are built into the latest silicon from AMD, Intel, and Qualcomm to enable the system to leverage firmware to start the hardware and then shortly after re-initialize the system into a trusted state by using the OS boot loader and processor capabilities to send the system down a well-known and verifiable code path. This mechanism helps limit the trust assigned to firmware and provides powerful mitigation against cutting-edge, targeted threats against firmware.
+
+Firmware is used to initialize the hardware and other software on the device and has a higher level of access and privilege than the hypervisor and operating system kernel thereby making it an attractive target for attackers. 
+
+Firmware executes with high system privileges and is often invisible to traditional anti-virus solutions, which has led to a rise in the number of firmware-based attacks. Using processor support for [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm), Secured-core servers put firmware in a hardware-backed sandbox helping to limit the impact of vulnerabilities in highly privileged firmware code. System Guard relies on DRTM to securely launch the Hypervisor and VBS after device firmware is finished booting, known as System Guard Secure Launch.
 
 Pre-boot [DMA protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) isolates of driver access to memory to provide protection throughout the boot process.
 
+[Kernel DMA Protection for OEMs](/windows-hardware/design/device-experiences/oem-kernel-dma-protection)
+
 ### Protect the OS from execution of unverified code
 
-Even with malware running in the Windows kernel, secrets and code running in VBS cannot be leaked or tampered
+Secured-core server uses Virtualization-based security (VBS) and hypervisor-protected code integrity (HVCI) to create and isolate a secure region of memory from the normal operating system. VBS uses the Windows hypervisor to create a [Virtual Secure Mode (VSM)](/virtualization/hyper-v-on-windows/tlfs/vsm) to offer security boundaries within the operating system, which can use for other security solutions.
 
-Virtualization-based security (VBS) isolates critical parts of the system from even privileged malware
+HVCI, commonly referred to as Memory integrity protection, is a security solition that helps ensure that only signed and trusted code is allowed to execute in the kernel. By using only signed and trusted code it prevents attacks that attempt to modify the kernel mode code. For example attacks that modify drivers, or exploits such as WannaCry that attempt to inject malicious code into the kernel.
 
-Secured-core Server supports Virtualization-based security (VBS) and hypervisor-protected code integrity (HVCI). HVCI helps ensure that only signed and trusted code is allowed to execute in the kernel. This prevents attacks that attempt to modify the kernel mode code such as drivers, and against exploits such as WannaCry that attempt to inject malicious code into the kernel. 
+To learn more about VBS and the hardware required, see [Virtualization-based Security](/windows-hardware/design/device-experiences/oem-vbs).
 
 ## Simplified management
 
