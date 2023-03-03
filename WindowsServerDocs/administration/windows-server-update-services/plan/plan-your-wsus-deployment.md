@@ -77,7 +77,7 @@ During the installation process, WSUS will install the following items by defaul
 
 ### UUP considerations
 
-Starting March 28th, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. Clients that update using on-premises UUP gain the following capabilities:
+Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. Clients that update using on-premises UUP gain the following capabilities:
 
 - Ability for end users to acquire Features on Demand and language packs in WSUS or Configuration Manager environments.
 - Automatic corruption repair
@@ -86,24 +86,28 @@ Starting March 28th, 2023, on-premises Windows 11, version 22H2 devices will rec
 In order to prepare for on-premises UUP updates, ensure the following requirements are met:
 
 - When storing content locally for WSUS, the WSUS server downloads approximately 10 GB of content per Windows version and processor architecture for each version. For example, an additional 20 GB of content is downloaded for both x64 and arm64 for Windows 11, version 22H2.
-- Install one of the following updates on each of the WSUS servers, or [manually add the required MIME types for UUP](#add-mime-types-for-uup-on-premises-updates) to the WSUS server:
+- Install one of the following updates on the WSUS servers, or [manually add the required MIME types for UUP](#add-mime-types-for-uup-on-premises-updates) to the WSUS server:
   - **Windows Server 2016, 2019, and 2022**: 2023-02 Cumulative Update, or a later cumulative update
   - **Windows Server 2012 and 2012 R2**: 2023-03 Cumulative Update, or a later cumulative update
 
 ### Manually add the required MIME types for UUP
 
-Two file types are required for the on-premises update management with UUP. The .msu and .wim MIME types need to be added on  WSUS servers to support UUP on premises. An update for WSUS is coming in 2023.03B cumulative security update. You can also follow these steps to add teh required file types manually:
+Two file types are required for the on-premises update management with UUP. The `.msu` and `.wim` MIME types need to be added into the WSUS servers to support UUP on-premises. If you're unable to update the WSUS servers, you can use these steps to add the required file types manually:
 
-1. On your Windows Server install, open Server Manager.
-1. Select **Internet Information Services (IIS)** in the left column.
-1. Right-click on your server in the list of servers.
-1. Select **Internet Information Services (IIS) Manager**.
-1. Select your server from the connections list on the left side of the window that opens.  
-1. In the center pane, scroll down and select **MIME types**.  
-1. On the right side select **Add**.
-1. Create a MIME Type with the extension ".wim" and the MIME Type "application/x-ms-wim."
-1. Select **Add** again.
-1. Create a MIME type with the extension ".msu" and the MIME Type "application/octet-stream."  
+1. Open **Internet Information Services (IIS) Manager**.
+1. Select the WSUS server name from the **Connections** pane. If you don't see the WSUS server name, select **Connect to a server** from the **File** menu, then enter the server name.
+1. In the **Features view**, select **MIME types**, then  **Open feature** from the **Actions** pane.
+    > [!Important]
+    > Ensure you selected the server and not the site when adding the MIME types. The WSUS Administration site needs the MIME type entry to be inherited rather than local.
+1. Select **Add** from the **Actions** pane for the **MIME types**.
+1. Enter the following information into the **Add MIME type** window:
+   - File name extension: `.wim`
+   - MIME type: `application/x-ms-wim`
+1. Select **OK** when you're finished to add the MIME type.
+1. Add another MIME type, by selecting **Add** again, then enter in the following information:
+   - File name extension: `.msu`
+   - MIME type: `application/octet-stream`
+1. Select **OK** when you're finished adding the MIME type. 
 
 ### Features on Demand Considerations
 
