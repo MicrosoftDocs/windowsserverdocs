@@ -6,7 +6,7 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 05/24/2018
+ms.date: 03/03/2023
 ---
 # Plan your WSUS deployment
 
@@ -35,13 +35,18 @@ Hardware and database software requirements are driven by the number of client c
   - **Processor:** 1.4 gigahertz (GHz) x64 processor (2 Ghz or faster is recommended)
   - **Memory:** WSUS requires an additional 2 GB of RAM apart from what's required by the server and all other services or software.
   - **Available disk space:** 40 GB or greater is recommended.
-    - On-premises update management with Unified Update Platform (UUP) requires an additional 10 GB of space per Windows version and processor architecture.
+    - On-premises update management with Unified Update Platform (UUP) requires an additional 10 GB of space per Windows version and processor architecture for each version. For more information, see the [UUP considerations](#uup-considerations) section.
   - **Network adapter:** 100 megabits per second (Mbps) or greater (1 GB is recommended)
 
   > [!NOTE]
   > These guidelines assume that WSUS clients are synchronizing with the server every eight hours with a total of 30,000 clients. If they synchronize more often, there will be a corresponding increment in the server load.
 
-- Software Requirements:
+- Required software updates:
+    - **Windows Server 2016, 2019, and 2022**: 2023-02 Cumulative Update, or a later cumulative update
+    - **Windows Server 2012 and 2012 R2**: 2023-03 Cumulative Update, or a later cumulative update
+    - If you're unable to install these updates, you can [manually add the required MIME types for UUP](#add-mime-types-for-uup-on-premises-updates) to the WSUS server.
+
+- Software requirements:
 
   - For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=3203). On Windows Server 2016, WSUS requires [Microsoft Report Viewer Runtime 2012](https://www.microsoft.com/download/details.aspx?id=35747)
 
@@ -72,7 +77,22 @@ During the installation process, WSUS will install the following items by defaul
 
 ### UUP considerations
 
-Two file types are required for the on-premises update management with Unified Update Platform (UUP). The .msu and .wim MIME types need to be added on  WSUS servers to support UUP on premises. An update for WSUS is coming in 2023.03B cumulative security update. You can also follow these steps to add teh required file types manually:
+Starting March 28th, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. Clients that update using on-premises UUP gain the following capabilities:
+
+- Ability for end users to acquire Features on Demand and language packs in WSUS or Configuration Manager environments.
+- Automatic corruption repair
+- Minimized quality update client download sizes
+
+In order to prepare for on-premises UUP updates, ensure the following requirements are met:
+
+- When storing content locally for WSUS, the WSUS server downloads approximately 10 GB of content per Windows version and processor architecture for each version. For example, an additional 20 GB of content is downloaded for both x64 and arm64 for Windows 11, version 22H2.
+- Install one of the following updates on each of the WSUS servers, or [manually add the required MIME types for UUP](#add-mime-types-for-uup-on-premises-updates) to the WSUS server:
+  - **Windows Server 2016, 2019, and 2022**: 2023-02 Cumulative Update, or a later cumulative update
+  - **Windows Server 2012 and 2012 R2**: 2023-03 Cumulative Update, or a later cumulative update
+
+### Manually add the required MIME types for UUP
+
+Two file types are required for the on-premises update management with UUP. The .msu and .wim MIME types need to be added on  WSUS servers to support UUP on premises. An update for WSUS is coming in 2023.03B cumulative security update. You can also follow these steps to add teh required file types manually:
 
 1. On your Windows Server install, open Server Manager.
 1. Select **Internet Information Services (IIS)** in the left column.

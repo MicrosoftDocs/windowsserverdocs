@@ -6,7 +6,7 @@ ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 5/22/2017
+ms.date: 03/03/2023
 ---
 # Windows Server Update Services (WSUS)
 
@@ -34,7 +34,10 @@ For system administrators to automate their operations, they need coverage throu
 
 ## New and changed functionality
 
-Starting March 28, 2023, WSUS supports Unified Update Platform (UUP) updates for Windows 11 version 21H2 and later clients. For more information, see [Plan your WSUS deployment](../plan/plan-your-wsus-deployment.md).
+Starting March 28, 2023, WSUS supports Unified Update Platform (UUP) updates for Windows 11 version 21H2 clients. For more information, see [Plan your WSUS deployment](../plan/plan-your-wsus-deployment.md).
+
+> [!IMPORTANT]
+> The change requires either an update installation, or manually adding MIME types to IIS on WSUS servers. Clients running Windows 11 version 22H2 may fail to install updates from WSUS if the server hasn't been updated. For more information, see [Unified Update Platform (UUP) considerations for WSUS](../plan/plan-your-wsus-deployment.md#uup-considerations).
 
 ### Changes from WSUS version 3.2
 
