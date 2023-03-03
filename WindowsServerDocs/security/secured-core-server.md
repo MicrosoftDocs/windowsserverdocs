@@ -1,6 +1,6 @@
 ---
-title: Secured-core server by OEM partners in Windows Server
-description: Learn how Secured-core server by Windows Server hardware OEMs offers advanced protection of your operating environment
+title: What is Secured-core server for Windows Server
+description: Learn how Secured-core server by Windows Server hardware OEMs offers advanced protection of your operating system environment.
 author: SCuffy
 ms.author: wscontent
 ms.topic: conceptual 
@@ -39,11 +39,11 @@ The following table shows how each security concept and feature are used to crea
 |---|---|---|---|---|
 | **Create a hardware backed root of trust** |  |  |  |  |
 |  | Secure Boot | Secure Boot is enabled in the Unified Extensible Firmware Interface (UEFI) BIOS by default. | ✓ | ✓ |
-|  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification | ✓ | ✓ |
+|  | Trusted Platform Module (TPM) 2.0 | Meet the latest Microsoft requirements for the Trusted Computing Group (TCG) specification. | ✓ | ✓ |
 |  | Certified for Windows Server | Demonstrates that a server system meets Microsoft's highest technical bar for security, reliability and manageability. | ✓ | ✓ |
-|  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D, AMD-Vi. |  | ✓ |
+|  | Boot DMA protection | Support on devices that have the Input/Output Memory Management Unit (IOMMU). For example, Intel VT-D or AMD-Vi. |  | ✓ |
 | **Defend against firmware level attacks** |  |  |  |  |
-|  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware |  | ✓ |
+|  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware. |  | ✓ |
 | **Protect the OS from execution of unverified code** |  |  |  |  |
 |  | Virtualization-based Security (VBS) |  | ✓ | ✓ |
 |  | Hypervisor Enhanced Code Integrity (HVCI) |  | ✓ | ✓ |
@@ -82,22 +82,23 @@ Learn more about [Trusted Platform Modules](/windows/security/information-protec
 
 ### Defend against firmware level attacks
 
+Firmware has a higher level of access and privilege than operating system and hypervisor kernel, making it an attractive target for attackers. Attacks targeting firmware undermine mechanisms other security measures implemented by the operating system making it more difficult to identify when a system or user has been compromised. Also endpoint protection and detection solutions usually have limited visibility of the firmware given that they run underneath of the operating system, making evasion easier for attackers going after firmware.
 
-FIXME: Firmware is used to initialize the hardware and other software on the device and has a higher level of access and privilege than the hypervisor and operating system kernel thereby making it an attractive target for attackers. Attacks targeting firmware can undermine mechanisms like secure boot and other security functionality implemented by the hypervisor or operating system making it more difficult to identify when a system or user has been compromised. Compounding the problem is the fact that endpoint protection and detection solutions have limited visibility at the firmware layer given that they run underneath of the operating system, making evasion easier for attackers going after firmware.
+Beginning with Windows Server 2022, System Guard Secure Launch protects the boot process from
+firmware attacks by using hardware capabilities from AMD and Intel. Using processor support for
+[Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm),
+Secured-core servers put firmware in a hardware-backed sandbox helping to limit the impact of
+vulnerabilities in highly privileged firmware code. System Guard uses the DRTM capabilities that are built into compatible processors to launch
+the operating system, ensuring the system launch into a trusted stated using verified code.
 
-FIXME: Using new hardware capabilities from AMD, Intel, and Qualcomm, Windows 10 now implements System Guard Secure Launch as a key Secured-core PC device requirement to protect the boot process from firmware attacks. System Guard uses the Dynamic Root of Trust for Measurement (DRTM) capabilities that are built into the latest silicon from AMD, Intel, and Qualcomm to enable the system to leverage firmware to start the hardware and then shortly after re-initialize the system into a trusted state by using the OS boot loader and processor capabilities to send the system down a well-known and verifiable code path. This mechanism helps limit the trust assigned to firmware and provides powerful mitigation against cutting-edge, targeted threats against firmware.
-
-Firmware is used to initialize the hardware and other software on the device and has a higher level of access and privilege than the hypervisor and operating system kernel thereby making it an attractive target for attackers. 
-
-Firmware executes with high system privileges and is often invisible to traditional anti-virus solutions, which has led to a rise in the number of firmware-based attacks. Using processor support for [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm), Secured-core servers put firmware in a hardware-backed sandbox helping to limit the impact of vulnerabilities in highly privileged firmware code. System Guard relies on DRTM to securely launch the Hypervisor and VBS after device firmware is finished booting, known as System Guard Secure Launch.
-
-Pre-boot [DMA protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) isolates of driver access to memory to provide protection throughout the boot process.
-
-[Kernel DMA Protection for OEMs](/windows-hardware/design/device-experiences/oem-kernel-dma-protection)
+Along with System Guard Secure Launch, Windows Server Secured-core uses
+[Boot DMA protection](/windows-hardware/design/device-experiences/oem-kernel-dma-protection) on
+compatible processors that have the Input/Output Memory Management Unit (IOMMU). For example, Intel
+VT-D or AMD-Vi. With boot DMA protection configured, systems are protected from Direct Memory Access (DMA) attacks during boot and during the operating system runtime.
 
 ### Protect the OS from execution of unverified code
 
-Secured-core server uses Virtualization-based security (VBS) and hypervisor-protected code integrity (HVCI) to create and isolate a secure region of memory from the normal operating system. VBS uses the Windows hypervisor to create a [Virtual Secure Mode (VSM)](/virtualization/hyper-v-on-windows/tlfs/vsm) to offer security boundaries within the operating system, which can use for other security solutions.
+Secured-core server uses Virtualization Based Security (VBS) and hypervisor-protected code integrity (HVCI) to create and isolate a secure region of memory from the normal operating system. VBS uses the Windows hypervisor to create a [Virtual Secure Mode (VSM)](/virtualization/hyper-v-on-windows/tlfs/vsm) to offer security boundaries within the operating system, which can use for other security solutions.
 
 HVCI, commonly referred to as Memory integrity protection, is a security solition that helps ensure that only signed and trusted code is allowed to execute in the kernel. By using only signed and trusted code it prevents attacks that attempt to modify the kernel mode code. For example attacks that modify drivers, or exploits such as WannaCry that attempt to inject malicious code into the kernel.
 
@@ -105,9 +106,10 @@ To learn more about VBS and the hardware required, see [Virtualization-based Sec
 
 ## Simplified management
 
-FIXME: WAC or PoSH
-
-The new security extension in the Windows Admin Center makes provides a single pane of glass view for customers to view and configure the OS security features of Secured-core for Azure Stack HCI systems.  It allows customers to enable advanced security features with the click of a button from a web browser anywhere in the world. With Azure Stack HCI Integrated Systems, manufacturing partners have further simplified the configuration experience for customers so that Microsoft’s best server security is available right out of the box.
+You can view and configure the OS security features of Secured-core using Windows PowerShell or the
+security extension Windows Admin Center. With Azure Stack HCI Integrated Systems, manufacturing
+partners have further simplified the configuration experience for customers so that Microsoft’s best
+server security is available right out of the box.
 
 <!--- Insert image? --->
 
@@ -115,12 +117,24 @@ Learn more about [Windows Admin Center]( https://learn.microsoft.com/en-us/windo
 
 ## Preventative defense
 
-You can proactively defend against and disrupt many of the paths attackers use to exploit systems by enabling Secured-core functionality. Secured-core server enables advanced security features at the bottom layers of the technology stack. This protects the most privileged areas of the system before many security tools are aware of exploits. It also occurs without the need for extra tasks or monitoring by IT and SecOps teams.
+You can proactively defend against and disrupt many of the paths attackers use to exploit systems by
+enabling Secured-core functionality. Secured-core server enables advanced security features at the
+bottom layers of the technology stack. This protects the most privileged areas of the system before
+many security tools are aware of exploits. It also occurs without the need for extra tasks or
+monitoring by IT and SecOps teams.
 
 # Begin your Secured-core journey
 
-Secured-core servers, which are now available in the [Azure Stack HCI]( https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer) and [Windows Server]( https://www.windowsservercatalog.com/results.aspx?&bCatID=1333&cpID=0&avc=10&ava=0&avt=0&avq=140&OR=1&PGS=25&PG=1) catalogs, come fully equipped with industry-leading security mitigations built into the hardware, firmware, and the operating system to help thwart some of the most advanced attack vectors. Coupled with Windows Admin Center and Microsoft services such as Azure Sentinel and Microsoft Defender for Cloud, managing and monitoring the security state of your mission-critical infrastructure has never been easier.
+Now you understand what Secured-core
+
+You can find servers certified for Secured-core from our various ecosystem in the
+[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
+[Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
+These certified server come fully equipped with industry-leading security mitigations built into the
+hardware, firmware, and the operating system to help thwart some of the most advanced attack
+vectors.
 
 Learn more about how secured-core servers can help protect your workloads here:
->> Microsoft brings advanced hardware security to Server and Edge with Secured-core - Microsoft Security Blog
->> New Secured-core servers are now available from the Microsoft ecosystem to help secure your infrastructure - Microsoft Security Blog
+
+- Microsoft brings advanced hardware security to Server and Edge with Secured-core - Microsoft Security Blog
+- New Secured-core servers are now available from the Microsoft ecosystem to help secure your infrastructure - Microsoft Security Blog
