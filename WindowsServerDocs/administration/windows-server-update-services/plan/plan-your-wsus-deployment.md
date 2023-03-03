@@ -44,7 +44,7 @@ Hardware and database software requirements are driven by the number of client c
 - Required software updates:
     - **Windows Server 2016, 2019, and 2022**: 2023-02 Cumulative Update, or a later cumulative update
     - **Windows Server 2012 and 2012 R2**: 2023-03 Cumulative Update, or a later cumulative update
-    - If you're unable to install these updates, you can [manually add the required MIME types for UUP](#add-mime-types-for-uup-on-premises-updates) to the WSUS server.
+    - If you're unable to install these updates, you can [manually add the required MIME types for UUP](#manually-add-the-required-mime-types-for-uup) to the WSUS server.
 
 - Software requirements:
 
@@ -86,7 +86,7 @@ Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will recei
 In order to prepare for on-premises UUP updates, ensure the following requirements are met:
 
 - When storing content locally for WSUS, the WSUS server downloads approximately 10 GB of content per Windows version and processor architecture for each version. For example, an additional 20 GB of content is downloaded for both x64 and arm64 for Windows 11, version 22H2.
-- Install one of the following updates on the WSUS servers, or [manually add the required MIME types for UUP](#add-mime-types-for-uup-on-premises-updates) to the WSUS server:
+- Install one of the following updates on the WSUS servers, or [manually add the required MIME types for UUP](#manually-add-the-required-mime-types-for-uup) to the WSUS server:
   - **Windows Server 2016, 2019, and 2022**: 2023-02 Cumulative Update, or a later cumulative update
   - **Windows Server 2012 and 2012 R2**: 2023-03 Cumulative Update, or a later cumulative update
 
