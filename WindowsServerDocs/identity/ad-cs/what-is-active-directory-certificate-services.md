@@ -17,7 +17,7 @@ Digital certificates can be used to encrypt and digitally sign electronic docume
 
 - Confidentiality through encryption
 - Integrity through digital signatures
-- Authentication by associating certificate keys with the computer, user, or device accounts on a computer network.
+- Authentication by associating certificate keys with the computer, user, or device accounts on a computer network
 
 ## Key features
 
@@ -28,6 +28,7 @@ AD CS provides the following important features:
 - **Online Responder:** The Online Responder service decodes revocation status requests for specific certificates, evaluates the status of these certificates, and sends back a signed response containing the requested certificate status information.
 - **Network Device Enrollment Service:** The Network Device Enrollment Service allows routers and other network devices that don't have domain accounts to obtain certificates.
 - **TPM key attestation:** Lets the certification authority verify the private key is protected by a hardware-based TPM and that the TPM is one that the CA trusts. This functionality prevents the certificate from being exported to an unauthorized device and can bind the user identity to the device.
+- **Certificate Enrollment Web Service:** Certificate Enrollment Web Service enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer is not a member of a domain or when a domain member is not connected to the domain.
 
 ## Real-world benefits
 
@@ -41,70 +42,10 @@ AD CS can also be used to configure Active Directory group policies to designate
 
 Applications supported by AD CS include Secure/Multipurpose Internet Mail Extensions (S/MIME), secure wireless networks, virtual private network (VPN), Internet Protocol security (IPsec), Encrypting File System (EFS), smart card logon, Secure Socket Layer/Transport Layer Security (SSL/TLS), and digital signatures.
 
-## TPM key attestation
-
-TPM key attestation is important functionality that lets the certification authority (CA) verify the private key is protected by a hardware-based TPM and that the TPM is one that the CA trusts. This functionality prevents the certificate from being exported to an unauthorized device, and can bind the user identity to the device.
-
-All TPMs have an endorsement key that's unique to each TPM. In some cases, TPMs have an endorsement key certificate that chains to the manufacturer's issuing CA. Not all TPMs' support attestation but when they do, you can optionally choose to validate the key attestation by using the endorsement key, or by using an endorsement key certificate.
-
-To use TPM key attestation, the client operating system must be Windows 8.1 or Windows Server 2012 R2. To configure TPM key attestation, use a version 4 certificate template with an enterprise CA, and configure the settings on the  **Key Attestation**  tab. Don't select  **Don't store certificate and requests in the CA database**  on the  **Server**  tab of the certificate template properties, because this configuration isn't supported with TPM key attestation. In addition, standalone CAs and web enrollment don't support TPM key attestation.
-
-When you configure TPM key attestation, you can choose increasing levels of assurance by specifying how to validate the endorsement key that's burned into the TPM by the manufacturer:
-
-- **User credentials**. No more configuration is required on the CA.
-- **Endorsement certificate**. You must add the root and issuing CA certificates for the TPMs to new certificate stores on the CA. The new certificate stores are EKCA for the intermediate store, and EKRROT for the root store.
-- **Endorsement key**. You must add each endorsement key for the TPMs to an approved list (EKPUB list).
-
-  **Tip**
-
-If the settings on the  **Key Attestation tab**  aren't available, verify the following settings:
-
-For more information, see the following resources:
-
-- The [Key attestation](https://technet.microsoft.com/JJ889441) section in the [TPM Fundamentals [Windows 8]](https://technet.microsoft.com/library/JJ889441) article
-- [TPM Key Attestation](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581921(v=ws.11))
-
 ## Next steps
 
-- [Windows PowerShell for Certificate Services](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Increased security enabled by default on the CA role service](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
+- [Certification Authority role for AD CS](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831574(v=ws.11))
+- [Implement and manage Active Directory Certificate Services](https://learn.microsoft.com/en-us/training/modules/implement-manage-active-directory-certificate-services/)
 - [All AD CS role services run on any version](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [All AD CS role services can be run on Server Core](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11)
-- [Policy module support for the Network Device Enrollment Service](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Integration with Server Manager](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Deployment and management capabilities from Windows PowerShell](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Support for key-based renewal](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Certificate template compatibility](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Support for certificate renewal with same key](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Support for internationalized domain names](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [AD DS site awareness for AD CS and PKI clients](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Group-protected PFX format](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [Certificate lifecycle notifications](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [CA private keys are included in the System State Backup image](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [TPM Fundamentals: Key attestation](https://technet.microsoft.com/library/JJ889441)
-- [TPM Key Attestation](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581921(v=ws.11))
-
-## Related links
-
-The following table provides other resources for evaluating AD CS.
-
-| **Content type** | **References** |
-| --- | --- |
-| **Product evaluation** | - [Test Lab Guide: Deploying an AD CS Two Tier PKI Hierarchy](https://go.microsoft.com/fwlink/?linkid=240233)
-     - [Test Lab Guide: Demonstrating Key-Based Renewal](https://go.microsoft.com/fwlink/?linkid=242185)
-     - [Test Lab Guide Mini-Module: Cross-Forest Certificate Enrollment using Certificate Enrollment Web Services](https://aka.ms/certxforest) |
-| --- | --- |
-| **Community resources** | - Community directory for documentation and information: [Windows PKI Documentation Reference and Library](https://aka.ms/pkilibrary)
-     - Frequently asked questions (FAQs) list [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
-     - Support forum: [Windows Server Security Forum](https://aka.ms/adcsforum)
-     - Product team blog: [Windows PKI Blog](https://blogs.technet.com/b/pki/)
-     - Support Team Blog: [Ask the Directory Services team](https://blogs.technet.com/b/askds/)
-     - Script repository: [TechNet Script Center Repository](https://gallery.technet.microsoft.com/scriptcenter) search for Certification, Certificate, or PKI.
-     - Community technology overview: [Active Directory Certificate Services (AD CS) Overview](https://social.technet.microsoft.com/wiki/contents/articles/1137.aspx) |
-| **Related technologies** | [Active Directory Domain Services](https://www.microsoft.com/server-cloud/windows-server/active-directory-overview.aspx)
-
-  [Active Directory Rights Management Services](https://www.microsoft.com/server-cloud/windows-server/active-directory-overview.aspx)
-
-  [Active Directory Federation Services](https://www.microsoft.com/server-cloud/windows-server/active-directory-overview.aspx)
-
-  [Active Directory Lightweight Directory Services](https://www.microsoft.com/server-cloud/windows-server/active-directory-overview.aspx) |
+- [All AD CS role services can be run on Server Core](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
+- [Windows PowerShell Reference for Certificate Services](/powershell/module/adcsdeployment)
