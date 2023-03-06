@@ -70,7 +70,7 @@ items:
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
     - name: Secured-core Server
-      href: ../security/secured-core-server.md?toc=/get-started/toc.yml
+      href: ../security/secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
   - name: How-to guides
     items:
     - name: Activation
