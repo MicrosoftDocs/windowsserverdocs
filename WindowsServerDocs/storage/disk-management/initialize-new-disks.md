@@ -21,7 +21,7 @@ You can only initialize a drive that's not yet formatted. When you initialize a 
 
 ## Initialization steps
 
-The following steps shoe how to initialize a new disk by using Disk Management. If you prefer to use PowerShell, run the [initialize-disk](/powershell/module/storage/initialize-disk) cmdlet.
+The following steps show how to initialize a new disk by using Disk Management. If you prefer to use PowerShell, run the [initialize-disk](/powershell/module/storage/initialize-disk) cmdlet.
 
 1. Open Disk Management with administrator permissions.
 
@@ -55,7 +55,7 @@ The following steps shoe how to initialize a new disk by using Disk Management. 
 
 1. Specify the file system you want to use (usually NTFS), select **Next**, and then **Finish**.
 
-## About partition styles (GPT and MBR)
+## About partition styles - GPT and MBR
 
 Disks can be divided into multiple chunks called _partitions_. Each partition - even if there's only one - has to have a partition style - GPT or MBR. Windows uses the partition style to understand how to access the data on the disk. 
 
