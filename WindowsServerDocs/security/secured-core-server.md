@@ -113,7 +113,7 @@ server security is available right out of the box.
 
 <!--- Insert image? --->
 
-Learn more about [Windows Admin Center]( https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview).
+Learn more about [Windows Admin Center](../manage/windows-admin-center/overview.md).
 
 ## Preventative defense
 
@@ -123,7 +123,7 @@ bottom layers of the technology stack. This protects the most privileged areas o
 many security tools are aware of exploits. It also occurs without the need for extra tasks or
 monitoring by IT and SecOps teams.
 
-# Begin your Secured-core journey
+## Begin your Secured-core journey
 
 Now you understand what Secured-core
 
