@@ -58,3 +58,22 @@ We support the following patching scenarios:
 
 ### Upgrade unmanaged shared VM collections
 End users cannot upgrade their personal desktops. Administrators should perform the upgrade. The exact steps are still to be determined.
+
+## Known Issue:
+**Issue:** If the RD deployment has RD Web Access Role already installed and has been updated from a previous windows installation, a new upgrade might fail. For example, if the deployment containing RDWA upgraded from Server 2012R2 to Server 2019, another upgrade to Server 2022 might encounter a failure.<br><br>
+**Workaround:** 
+Before migrating for the second time, check if the following registry key is present:
+HKLM\SOFTWARE\Microsoft\Terminal Server Web Access\IsInstalled
+
+If it is not present, Open an elevated PowerShell prompt, run the following commands:
+   
+   ```powershell
+   $registryPath = "HKLM:SOFTWARE\Microsoft\Terminal Server Web Access\IsInstalled"
+   New-Item -Path $registryPath
+   New-ItemProperty -Path $registryPath  -Name Version -PropertyType String -Value "6.0"
+   ```
+
+
+
+
+
