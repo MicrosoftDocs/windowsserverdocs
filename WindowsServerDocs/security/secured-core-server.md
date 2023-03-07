@@ -43,10 +43,10 @@ The following table shows how each security concept and feature are used to crea
 | **Defend against firmware level attacks** |  |  |  |  |
 |  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware. |  | ✓ |
 | **Protect the OS from execution of unverified code** |  |  |  |  |
-|  | Virtualization-based Security (VBS) |  | ✓ | ✓ |
-|  | Hypervisor Enhanced Code Integrity (HVCI) |  | ✓ | ✓ |
+|  | Virtualization-based Security (VBS) | Requires the Windows hypervisor, which is only supported on 64-bit processors with virtualization extensions, including Intel VT-X and AMD-v. | ✓ | ✓ |
+|  | Hypervisor Enhanced Code Integrity (HVCI) | VBS requirements and Hypervisor Code Integrity (HVCI)-compatible drivers | ✓ | ✓ |
 
-TODO: Requires at least Intel ICX or AMD Milan. Why? are the instruction sets/features covered below
+TODO: Requires at least Intel ICX or AMD Milan. Why? are the instruction sets/features covered already in the table above?
 
 From PPT:
 
@@ -55,16 +55,13 @@ From PPT:
   - Secure Boot*
   - Trusted Platform Module 2.0
   - Hypervisor Enhanced Code Integrity (HVCI)*
-- Secured-core server AQ**
+- Secured-core server AQ
   - Secured-core certified compatible hardware (https://www.windowsservercatalog.com/)
-  - System Guard Secure Launch (TXT/SKINIT***)
+  - System Guard Secure Launch (TXT/SKINIT)
   - Direct Memory Access (DMA) Protection
   - Disabled S3 sleep TODO: possible overlap with System Guard, is this required for System Guard anyway?
 
 1. TODO: *confirm base requirement shows capable vs enabled? But this is beyond WS hardware requirements?
-1. TODO: **confirm what is AQ?
-1. TODO: ***what is TXT/SKINIT, I assume this is different to DRTM
-1. TODO: ****TODO: What about? Default trust for Microsoft bootloaders only with BIOS option for enabling trust for non-Microsoft bootloaders
 1. TODO: What about Credential Guard?
 1. TODO: DMA runtime protection is optional? In what way, how is it enabled and should it be added to the table?
 
@@ -72,9 +69,16 @@ From PPT:
 
 [UEFI Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) is a security standard that protects your servers from malicious rootkits by verifying your systems boot components. Secure boot verifies UEFI firmware drivers and applications to ensure they're digitally signed by a trusted author. When the server is started, the firmware checks the signature of each boot component including firmware drivers and the OS. If the signatures are valid, the server boots and the firmware gives control to the OS.
 
+To learn more about the boot process, see [Secure the Windows boot process](/windows/security/information-protection/secure-the-windows-10-boot-process).
+
 TPM 2.0 provides a secure, hardware-backed storage for sensitive keys and data. Every component loaded during the boot process is measured and the measurements stored in the TPM. By verifying the hardware root-of-trust it elevates the protection provided by capabilities like BitLocker, which uses TPM 2.0 and facilitates the creation of attestation-based workflows. These attestation-base workflows can be incorporated into zero-trust security strategies.
 
 Learn more about [Trusted Platform Modules](/windows/security/information-protection/tpm/trusted-platform-module-overview) and [how Windows uses the TPM](/windows/security/information-protection/tpm/how-windows-uses-the-tpm).
+
+Along with Secure Boot and TPM 2.0, Windows Server Secured-core uses
+[Boot DMA protection](/windows-hardware/design/device-experiences/oem-kernel-dma-protection) on
+compatible processors that have the Input/Output Memory Management Unit (IOMMU). For example, Intel
+VT-D or AMD-Vi. With boot DMA protection, systems are protected from Direct Memory Access (DMA) attacks during boot and during the operating system runtime.
 
 ### Defend against firmware level attacks
 
@@ -86,11 +90,6 @@ firmware attacks by using hardware capabilities from AMD and Intel. With process
 Secured-core servers put firmware in a hardware-backed sandbox helping to limit the effects of
 vulnerabilities in highly privileged firmware code. System Guard uses the DRTM capabilities that are built into compatible processors to launch
 the operating system, ensuring the system launches into a trusted stated using verified code.
-
-Along with System Guard Secure Launch, Windows Server Secured-core uses
-[Boot DMA protection](/windows-hardware/design/device-experiences/oem-kernel-dma-protection) on
-compatible processors that have the Input/Output Memory Management Unit (IOMMU). For example, Intel
-VT-D or AMD-Vi. With boot DMA protection, systems are protected from Direct Memory Access (DMA) attacks during boot and during the operating system runtime.
 
 ### Protect the OS from execution of unverified code
 
