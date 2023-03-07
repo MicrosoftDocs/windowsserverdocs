@@ -17,7 +17,7 @@ You can change a disk from MBR to GPT partition format as long as the disk conta
 
 > [!Important]
 > - Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
-> - You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to covert a disk.
+> - You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to convert a disk.
 
 ## Disk conversion from Windows
 
@@ -30,6 +30,8 @@ To complete the disk conversion by using Windows, follow these steps.
    - For each partition or volume section, right-click the section, and select **Delete Partition** or **Delete Volume**, as appropriate.
 
 1. Right-click the MBR disk to convert to the GPT format, and select **Convert to GPT Disk**.
+
+The process notifies you when the conversion is complete.
 
 ## Disk conversion from the command line
 
@@ -53,6 +55,8 @@ To complete the disk conversion from the command line with the **diskpart** disk
    1. At the **DISKPART** prompt, enter `clean` to delete all partition and volume sections on the disk.
 
 1. At the **DISKPART** prompt, enter `convert gpt` to convert the MBR disk to the GPT partition format.
+
+The diskpart process notifies you when the conversion is complete.
 
 ### diskpart commands
 
