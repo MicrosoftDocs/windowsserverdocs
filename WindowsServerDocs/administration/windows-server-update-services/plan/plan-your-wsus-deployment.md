@@ -76,7 +76,7 @@ During the installation process, WSUS will install the following items by defaul
   - DSS Authentication Web Service
 
 ### UUP considerations
-
+<!--max7633666-->
 Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. Clients that update using on-premises UUP gain the following capabilities:
 
 - Ability for end users to acquire Features on Demand and language packs in WSUS or Configuration Manager environments.
@@ -89,6 +89,9 @@ In order to prepare for on-premises UUP updates, ensure the following requiremen
 - Install one of the following updates on the WSUS servers, or [manually add the required MIME types for UUP](#manually-add-the-required-mime-types-for-uup) to the WSUS server:
   - **Windows Server 2016, 2019, and 2022**: 2023-02 Cumulative Update, or a later cumulative update
   - **Windows Server 2012 and 2012 R2**: 2023-03 Cumulative Update, or a later cumulative update
+
+   > [!TIP]
+   > If you encounter a `Cannot add duplicate collection entry of type 'mimeMap'` error, see [WSUS Troubleshooting Tips](wsus-troubleshooting-tips.md#cannot-add-duplicate-collection-entry-of-type mimeMap).
 
 ### Manually add the required MIME types for UUP
 
