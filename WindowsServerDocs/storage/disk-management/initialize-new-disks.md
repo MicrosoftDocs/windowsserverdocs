@@ -1,7 +1,7 @@
 ---
 title: Initialize new disks
-description: How to initialize new disks with Disk Management, get them ready to use, and access links for troubleshooting.
-ms.date: 03/06/2023
+description: Learn how to initialize new disks with Disk Management and get them ready to use. Also access links for troubleshooting.
+ms.date: 03/07/2023
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -39,7 +39,7 @@ The following steps show how to initialize a new disk by using Disk Management. 
 
    ![Screenshot that shows Disk Management for an unformatted disk with the Initialize Disk shortcut menu displayed.](media/uninitialized-disk.PNG)
 
-1. In the **Initialize Disk** dialog box, make sure the correct disk is selected, and then select **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR), see [About partition styles - GPT and MBR](#about-partition-styles---gpt-and-mbr).
+1. In the **Initialize Disk** dialog box, make sure the correct disk is selected, and then choose **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR), see [About partition styles - GPT and MBR](#about-partition-styles---gpt-and-mbr).
 
    The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 
