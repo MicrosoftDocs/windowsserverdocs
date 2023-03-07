@@ -91,7 +91,7 @@ In order to prepare for on-premises UUP updates, ensure the following requiremen
   - **Windows Server 2012 and 2012 R2**: 2023-03 Cumulative Update, or a later cumulative update
 
    > [!TIP]
-   > If you encounter a `Cannot add duplicate collection entry of type 'mimeMap'` error, see [WSUS Troubleshooting Tips](wsus-troubleshooting-tips.md#cannot-add-duplicate-collection-entry-of-type mimeMap).
+   > If you encounter a `Cannot add duplicate collection entry of type 'mimeMap'` error, see [WSUS Troubleshooting Tips](../manage/wsus-troubleshooting-tips.md#cannot-add-duplicate-collection-entry-of-type mimeMap).
 
 ### Manually add the required MIME types for UUP
 

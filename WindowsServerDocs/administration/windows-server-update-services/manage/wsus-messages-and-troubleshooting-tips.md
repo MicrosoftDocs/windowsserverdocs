@@ -94,7 +94,7 @@ Check the following services are running:
 
 ## Cannot add duplicate collection entry of type mimeMap
 <!--max7633666-->
-If you previously added MIME types manually, you may see errors about duplicate entries due to [changes for WSUS to support UUP](plan-your-wsus-deployment.md#uup-considerations). If you receive an error similar to  `Cannot add duplicate collection entry of type 'mimeMap' with unique key attribute 'fileExtension' set to '.wim'`, the MIME type may not have been set at the proper level. To resolve this issue, you'll need to edit the web.config file to remove the MIME type from level where it was originally set.
+If you previously added MIME types manually, you may see errors about duplicate entries due to [changes for WSUS to support UUP](../plan/plan-your-wsus-deployment.md#uup-considerations). If you receive an error similar to  `Cannot add duplicate collection entry of type 'mimeMap' with unique key attribute 'fileExtension' set to '.wim'`, the MIME type may not have been set at the proper level. To resolve this issue, you'll need to edit the web.config file to remove the MIME type from level where it was originally set.
 
 Locate the *web.config* file where the MIME type was set:
 
