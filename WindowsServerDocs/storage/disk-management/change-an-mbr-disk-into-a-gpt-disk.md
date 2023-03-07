@@ -13,11 +13,11 @@ ms.author: jgerend
 
 Master Boot Record (MBR) disks use the standard BIOS partition table. GUID partition table (GPT) disks use the Unified Extensible Firmware Interface (UEFI). One advantage of GPT disks is that you can have more than four partitions on each disk. GPT is also required for disks larger than 2 terabytes (TB).
 
-You can change a disk from MBR to GPT partition format as long as the disk contains no partitions or volumes.
+You can change a disk from MBR to GPT partition format as long as the disk contains no partition or volume sections.
 
 > [!Important]
-> - Before you convert a disk, be sure to back up any data on the disk. Also, close any programs that access the disk.
-> - You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete the disk conversion.
+> - Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
+> - You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to covert a disk.
 
 ## Disk conversion from Windows
 
@@ -27,9 +27,9 @@ To complete the disk conversion by using Windows, follow these steps.
 
 1. If the MBR disk has partition or volume sections, delete all sections.
 
-   - For each section (partition or volume), right-click the section, and select **Delete Partition** or **Delete Volume**, as appropriate.
+   - For each partition or volume section, right-click the section, and select **Delete Partition** or **Delete Volume**, as appropriate.
 
-1. Right-click the MBR disk to convert it to the GPT partition format, and select **Convert to GPT Disk**.
+1. Right-click the MBR disk to convert to the GPT format, and select **Convert to GPT Disk**.
 
 ## Disk conversion from the command line
 
@@ -50,9 +50,9 @@ To complete the disk conversion from the command line with the **diskpart** disk
 
    1. At the **DISKPART** prompt, enter `select disk` _`<disk-number>`_, where `<disk-number>` is the MBR disk number to convert.
 
-   1. At the **DISKPART** prompt, enter `clean`. The `clean` command deletes all partition and volume sections on the disk.
+   1. At the **DISKPART** prompt, enter `clean` to delete all partition and volume sections on the disk.
 
-1. At the **DISKPART** prompt, enter `convert gpt` to apply the conversion from MBR to the GPT partition format.
+1. At the **DISKPART** prompt, enter `convert gpt` to convert the MBR disk to the GPT partition format.
 
 ### diskpart commands
 
@@ -60,14 +60,14 @@ The following table summarizes the commands used with the diskpart process.
 
 | Command | Description |
 | --- | --- |
-| `list disk` | Displays a list of disks and information about them, such as their size and the amount of available free space. The command also shows whether the disk is a basic or dynamic disk, and whether it uses the MBR or GUID GPT partition format. In the list of results, the disk marked with an asterisk (*) has the current focus for entered commands. |
-| `select disk` _`disk-number`_ | Selects the specified disk, where *disk-number* is the disk number. The command also gives the current focus to the specified disk. |
+| `list disk` | Displays a list of disks and information about them, such as their size and the amount of available free space. The command also shows whether the disk is a basic or dynamic disk, and whether it uses the MBR or GPT partition format. In the list of results, the disk marked with an asterisk (*) has the current focus for entered commands. |
+| `select disk` _`disk-number`_ | Selects the specified disk, where *disk-number* is the disk number that you want to select. The command also gives the current focus to the specified disk. |
 | `clean` | Removes all partition or volume sections from the disk that has the current focus. |
 | `convert gpt` | Converts an empty basic disk with the MBR partition format into a basic disk with the GPT partition format. |
 
 ## MBR2GPT conversion tool
 
-As an alternate approach, you can use the MBR2GPT.EXE tool to convert the MBR disk to the GUID GPT partition format. Keep in mind that the tool can be more complicated to use than the `diskpart` process. For details, see [Convert MBR partition to GPT](/windows/deployment/mbr-to-gpt).
+As an alternate approach, you can use the MBR2GPT.EXE tool to convert the MBR disk to the GPT partition format. Keep in mind that the tool can be more complicated to use than the `diskpart` process. For details, see [Convert MBR partition to GPT](/windows/deployment/mbr-to-gpt).
 
 ## See also
 
