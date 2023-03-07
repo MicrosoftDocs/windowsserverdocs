@@ -30,7 +30,7 @@ The following steps show how to initialize a new disk by using Disk Management. 
    
    If you can't open Disk Management as an administrator, follow these steps:
    
-   1. In the search box on the taskbar, Enter **Computer Management**.
+   1. In the search box on the taskbar, enter **Computer Management**.
    1. Select **Storage** > **Disk Management**.
 
 1. In Disk Management, right-click the disk you want to initialize, and then select **Initialize Disk**. If the disk is listed as *Offline*, first right-click the disk and select **Online**.
