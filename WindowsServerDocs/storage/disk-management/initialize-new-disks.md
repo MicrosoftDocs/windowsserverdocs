@@ -10,7 +10,7 @@ ms.author: jgerend
 
 # Initialize new disks
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2022
 
 If you add a brand new disk to your PC, and it doesn't show up in File Explorer, you might need to [assign a drive letter](change-a-drive-letter.md) for the disk. You might also need to initialize the disk before you use it.
 
@@ -21,7 +21,7 @@ You can only initialize a drive that's not yet formatted. When you initialize a 
 
 ## Initialization steps
 
-The following steps show how to initialize a new disk by using Disk Management. If you prefer to use PowerShell, run the [initialize-disk](/powershell/module/storage/initialize-disk) cmdlet.
+The following steps show how to initialize a new disk by using Disk Management. If you prefer to use PowerShell, run the [Initialize-Disk](/powershell/module/storage/initialize-disk) cmdlet.
 
 1. Open Disk Management with administrator permissions.
 
