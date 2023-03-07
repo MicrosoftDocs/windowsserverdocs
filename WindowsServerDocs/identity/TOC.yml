@@ -581,7 +581,7 @@
         href: ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md
       - name: Set up the lab environment for AD FS in Windows Server 2012 R2
         href: ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md
-      - name: Upgrading to AD FS in Windows Server 2016 using a WID database
+      - name: Upgrade an AD FS farm using Windows Internal Database
         href: ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server.md
       - name: Deploy AD FS in Azure
         href: ad-fs/deployment/how-to-connect-fed-azure-adfs.md

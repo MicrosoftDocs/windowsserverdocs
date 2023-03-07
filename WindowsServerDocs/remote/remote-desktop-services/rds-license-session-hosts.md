@@ -1,5 +1,5 @@
 ---
-title: Install licenses for Remote Desktop session hosts
+title: License Remote Desktop session hosts
 description: Learn how to install licenses for Remote Desktop session hosts.
 ms.topic: article
 author: Heidilohr
