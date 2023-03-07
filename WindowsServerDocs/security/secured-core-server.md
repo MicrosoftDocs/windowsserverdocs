@@ -44,7 +44,7 @@ The following table shows how each security concept and feature are used to crea
 |  | System Guard Secure Launch | Enabled in the operating system with compatible supported Intel Trusted Execution Technology (TXT) and AMD SKINIT hardware. |  | ✓ |
 | **Protect the OS from execution of unverified code** |  |  |  |  |
 |  | Virtualization-based Security (VBS) | Requires the Windows hypervisor, which is only supported on 64-bit processors with virtualization extensions, including Intel VT-X and AMD-v. | ✓ | ✓ |
-|  | Hypervisor Enhanced Code Integrity (HVCI) | VBS requirements and Hypervisor Code Integrity (HVCI)-compatible drivers | ✓ | ✓ |
+|  | Hypervisor Enhanced Code Integrity (HVCI) | Hypervisor Code Integrity (HVCI)-compatible drivers plus VBS requirements. | ✓ | ✓ |
 
 TODO: Requires at least Intel ICX or AMD Milan. Why? are the instruction sets/features covered already in the table above?
 
