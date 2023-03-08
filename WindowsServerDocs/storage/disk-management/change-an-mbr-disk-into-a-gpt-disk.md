@@ -14,21 +14,21 @@ ms.author: jgerend
 
 Master Boot Record (MBR) disks use the standard BIOS partition table. GUID partition table (GPT) disks use the Unified Extensible Firmware Interface (UEFI). One advantage of GPT disks is that you can have more than four partitions on each disk. GPT is also required for disks larger than 2 terabytes (TB).
 
-You can change a disk from MBR to GPT partition format as long as the disk contains no partition or volume sections.
+You can change a disk from MBR to GPT partition format as long as the disk contains no partitions or volumes.
 
 > [!Important]
 > - Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
 > - You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to convert a disk.
 
-## Disk conversion from Windows
+## Disk conversion from Disk Management
 
-To complete the disk conversion by using Windows, follow these steps.
+To complete the disk conversion by using Disk Management, follow these steps.
 
-1. Back up or move the data on the MBR disk to convert.
+1. Back up or move the data on the MBR disk prior to conversion.
 
-1. If the MBR disk has partition or volume sections, delete all sections.
+1. Delete all partitions and volumes on the MBR disk.
 
-   - For each partition or volume section, right-click the section, and select **Delete Partition** or **Delete Volume**, as appropriate.
+   - For each partition or volume, right-click the item, and select **Delete Partition** or **Delete Volume**.
 
 1. Right-click the MBR disk to convert to the GPT format, and select **Convert to GPT Disk**.
 
@@ -38,13 +38,13 @@ The process notifies you when the conversion completes.
 
 To complete the disk conversion from the command line with the **diskpart** disk partition process, follow these steps.
 
-1. Back up or move the data on the MBR disk to convert.
+1. Back up or move the data on the MBR disk prior to conversion.
 
 1. Open an elevated command prompt: right-click **Command Prompt** and select **Run as Administrator**.
 
 1. At the prompt, enter `diskpart` to initiate the disk partition process.
 
-1. Prepare the MBR disk for conversion by cleaning any partition or volume sections.
+1. Prepare the MBR disk for conversion by cleaning (deleting) any partitions or volumes.
 
    > [!Note]
    > If the MBR disk doesn't have any partitions or volumes, skip to the last step to apply the conversion.
@@ -53,13 +53,13 @@ To complete the disk conversion from the command line with the **diskpart** disk
 
    1. At the **DISKPART** prompt, enter `select disk` _`<disk-number>`_, where `<disk-number>` is the MBR disk number to convert.
 
-   1. At the **DISKPART** prompt, enter `clean` to delete all partition and volume sections on the disk.
+   1. At the **DISKPART** prompt, enter `clean` to delete all partitions and volumes on the disk.
 
 1. At the **DISKPART** prompt, enter `convert gpt` to convert the MBR disk to the GPT partition format.
 
 The diskpart process notifies you when the conversion completes.
 
-### diskpart commands
+### Summary of diskpart commands
 
 The following table shows a summary of the commands for the diskpart process.
 
