@@ -5,7 +5,6 @@ ms.topic: article
 author: billmath
 ms.author: billmath
 ms.date: 01/03/2023
-
 ---
 # AD FS support for alternate hostname binding for certificate authentication
 
