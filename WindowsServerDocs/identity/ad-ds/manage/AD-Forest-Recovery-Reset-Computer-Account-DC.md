@@ -28,7 +28,7 @@ ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
    netdom resetpwd /server:domain controller name /userD:administrator /passwordd:*
    ```
 
-    Where *domain controller name* is the local DC that you are recovering.
+    Where *domain controller name* is any Domain Controller that is working fine, preferably the holder of the "PDC emulator" role.
 
    > [!NOTE]
    > You should run this command twice.
