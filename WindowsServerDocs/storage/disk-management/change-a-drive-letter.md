@@ -10,7 +10,7 @@ ms.author: jgerend
 
 # Change a drive letter
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012.
+> **Applies To:** Windows 11, Windows 10, Windows 8.1, Windows 7, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
 If you want to change a drive letter assigned to a drive, or you have a drive that doesn't yet have a drive letter, use Disk Management to change it. You can also mount the drive in an empty folder so that it appears as just another folder. For more information, see [Mount a drive in a folder](assign-a-mount-point-folder-path-to-a-drive.md).
 
@@ -36,6 +36,6 @@ The following steps show how to change the drive letter.
 
     ![Screenshot of the Change Drive Letter and Paths dialog.](media/change-drive-letter2.png)
 
-1. Select the new drive letter, choose **OK**, and then select **Yes** when prompted about how programs that rely on the drive letter might not run correctly.
+1. Select the new drive letter and choose **OK**. Then select **Yes** when prompted about how programs that rely on the drive letter might not run correctly.
 
     ![Screenshot of the Change Drive Letter or Path dialog that shows how to assign a new drive letter.](media/change-drive-letter3.png)
