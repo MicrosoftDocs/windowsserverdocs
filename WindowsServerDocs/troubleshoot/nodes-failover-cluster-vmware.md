@@ -6,7 +6,7 @@ author: Deland-Han
 ms.author: delhan
 ms.date: 01/06/2023
 ---
-# Nodes being removed from Failover Cluster membership on VMWare ESX
+# Nodes being removed from Failover Cluster membership on VMware ESX
 
 Applies to Windows Server (All supported versions)
 
