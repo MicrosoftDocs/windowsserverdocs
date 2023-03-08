@@ -14,7 +14,7 @@ This article addresses the issue of finding nodes removed from active failover c
 
 ## Symptom
 
-You'll see the following in the System Event Log of the Event Viewer when this issue occurs:
+You'll see the following event in the System Event Log of the Event Viewer when this issue occurs:
 
 ![Event 1135](media/nodes-failover-cluster-vmware/1135.png)
 
