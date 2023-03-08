@@ -84,9 +84,11 @@ In this section, you'll create an Extensible Authentication Protocol (EAP) confi
 
     1. For **EAP XML**, select the XML you saved in [Create the EAP XML](#create-the-extensible-authentication-protocol-eap-configuration-xml).
 
-    1. For **Device Tunnel**, select the value that's appropriate for your environment. To learn more about device tunnels, see [Configure VPN device tunnels in Windows 10](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config).
+    1. For **Device Tunnel**, select *Disable*. To learn more about device tunnels, see [Configure VPN device tunnels in Windows 10](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config).
 
-    1. For **IKE Security Association Parameters**, select the values appropriate to your security policy and your VPN server.
+    1. For **IKE Security Association Parameters**
+        - Set **Split tunneling** to *Enable*.
+        - Configure **Trusted Network Detection**. Set the DNS suffix to the VPN server. To find the DNS suffix you can use `Get-NetConnectionProfile > Name` on a system that's currently connected to the network and has the domain profile applied (`NetworkCategory:DomainAuthenticated`).
 
     1. Leave the remaining settings as default, unless your environment requires further configuration. For more information on EAP Profile settings for Intune, see [Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune](/mem/intune/configuration/vpn-settings-windows-10).
 

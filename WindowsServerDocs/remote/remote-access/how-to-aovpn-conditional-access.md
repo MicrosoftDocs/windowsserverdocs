@@ -134,11 +134,11 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
     d. Select **VPN Server**.
 
-6.  On the **New** page, to open the **Grant** page, in the **Controls** section, select **Grant**.
+6. On the **New** page, to open the **Grant** page, in the **Controls** section, select **Grant**.
 
     ![Select grant](../media/Always-On-Vpn/13.png)
 
-7.  On the **Grant** page, perform the following steps:
+7. On the **Grant** page, perform the following steps:
 
     ![Select require multi-factor authentication](../media/Always-On-Vpn/14.png)
 
@@ -146,11 +146,11 @@ This step covers creation of the most basic Conditional Access policy.  If desi
 
     b. Select **Select**.
 
-8.  On the **New** page, under **Enable policy**, select **On**.
+8. On the **New** page, under **Enable policy**, select **On**.
 
     ![Enable policy](../media/Always-On-Vpn/15.png)
 
-9.  On the **New** page, select **Create**.
+9. On the **New** page, select **Create**.
 
 
 ## Deploy conditional access root certificates to on-premises AD
