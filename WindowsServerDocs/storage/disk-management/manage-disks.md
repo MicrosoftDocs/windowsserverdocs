@@ -11,7 +11,7 @@ ms.author: jgerend
 
 > **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019,  and Windows Server 2016
 
-In this article and the related topics, you'll learn how to use Disk Management to manage the disks in a computer. Including information about initializing new disks, converting disks between different partition styles, and how Windows manages the online status of new disks.
+In this article and the related topics, you learn how to use Disk Management to manage the disks in a computer. Including information about initializing new disks, converting disks between different partition styles, and how Windows manages the online status of new disks.
 
 ## Online and offline status
 
