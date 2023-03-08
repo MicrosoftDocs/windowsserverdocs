@@ -1,12 +1,13 @@
 ---
 title: Change a Master Boot Record (MBR) into a GUID partition table (GPT) disk
-description: Learn how to change a Master Boot Record (MBR) into a GUID partition table (GPT) disk.
-ms.date: 03/07/2023
+description: Learn how to convert a Master Boot Record (MBR) partition disk into a GUID partition table (GPT) disk by using Windows or the command line.
+ms.date: 03/08/2023
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
+
 # Convert an MBR disk into a GPT disk
 
 > **Applies To:** Windows 10, Windows 8.1, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2022
@@ -31,7 +32,7 @@ To complete the disk conversion by using Windows, follow these steps.
 
 1. Right-click the MBR disk to convert to the GPT format, and select **Convert to GPT Disk**.
 
-The process notifies you when the conversion is complete.
+The process notifies you when the conversion completes.
 
 ## Disk conversion from the command line
 
@@ -48,7 +49,7 @@ To complete the disk conversion from the command line with the **diskpart** disk
    > [!Note]
    > If the MBR disk doesn't have any partitions or volumes, skip to the last step to apply the conversion.
 
-   1. At the **DISKPART** prompt, enter `list disk`. Note the MBR disk number that you want to convert to GPT format.
+   1. At the **DISKPART** prompt, enter `list disk`. Make a note of the MBR disk number that you want to convert to GPT format.
 
    1. At the **DISKPART** prompt, enter `select disk` _`<disk-number>`_, where `<disk-number>` is the MBR disk number to convert.
 
@@ -56,11 +57,11 @@ To complete the disk conversion from the command line with the **diskpart** disk
 
 1. At the **DISKPART** prompt, enter `convert gpt` to convert the MBR disk to the GPT partition format.
 
-The diskpart process notifies you when the conversion is complete.
+The diskpart process notifies you when the conversion completes.
 
 ### diskpart commands
 
-The following table summarizes the commands used with the diskpart process.
+The following table shows a summary of the commands for the diskpart process.
 
 | Command | Description |
 | --- | --- |
