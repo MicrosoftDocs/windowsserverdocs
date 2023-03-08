@@ -9,13 +9,13 @@ ms.date: 03/08/2023
 
 # Deploy Network File System
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, and Windows Server 2016.
 
 Network File System (NFS) provides a file sharing solution that lets you transfer files between computers running Windows Server and UNIX operating systems using the NFS protocol. This article describes the steps you should follow to deploy NFS.
 
 ## What's new in Network File System
 
-Here's what's changed for NFS in Windows Server 2012:
+Here's what's changed for NFS in Windows Server:
 
 - **Support for NFS version 4.1**: This protocol version includes the following enhancements.
 
@@ -29,17 +29,17 @@ Here's what's changed for NFS in Windows Server 2012:
 - **NFS management improvements**: A new centralized UI-based management console simplifies configuration and management of SMB and NFS shares, quotas, file screens, and classification, in addition to managing clustered file servers.
 - **Identity Mapping improvements**: This improvement includes new UI support and task-based Windows PowerShell cmdlets for configuring identity mapping, which allows administrators to quickly configure an identity mapping source, and then create individual mapped identities for users. Improvements make it easy for administrators to set up a share for multi-protocol access over both NFS and SMB.
 - **Cluster resource model restructure**: This improvement brings consistency between the cluster resource model for the Windows NFS and SMB protocol servers and simplifies administration. For NFS servers that have many shares, the resource network and the number of WMI calls required fail over a volume containing a large number of NFS shares are reduced.
-- **Integration with Resume Key Manager**: The Resume Key Manager tracks file server and file system state and enables the Windows SMB and NFS protocol servers to fail over without disrupting clients or server applications that store their data on the file server. This improvement is a key component of the continuous availability capability of the file server running Windows Server 2012.
+- **Integration with Resume Key Manager**: The Resume Key Manager tracks file server and file system state and enables the Windows SMB and NFS protocol servers to fail over without disrupting clients or server applications that store their data on the file server. This improvement is a key component of the continuous availability capability of the file server running Windows Server.
 
 ## Scenarios for using Network File System
 
-NFS supports a mixed environment of Windows-based and UNIX-based operating systems. The following deployment scenarios are examples of how you can deploy a continuously available Windows Server 2012 file server using NFS.
+NFS supports a mixed environment of Windows-based and UNIX-based operating systems. The following deployment scenarios are examples of how you can deploy a continuously available Windows Server file server using NFS.
 
 ### Provision file shares in heterogeneous environments
 
 This scenario applies to organizations with heterogeneous environments that consist of both Windows and other operating systems, such as UNIX or Linux-based client computers. With this scenario, you can provide multi-protocol access to the same file share over both the SMB and NFS protocols. Typically, when you deploy a Windows file server in this scenario, you want to facilitate collaboration between users on Windows and UNIX-based computers. When a file share is configured, it's shared with both the SMB and NFS protocols. Windows users access their files over the SMB protocol, and users on UNIX-based computers typically access their files over the NFS protocol.
 
-For this scenario, you must have a valid identity mapping source configuration. Windows Server 2012 supports the following identity mapping stores:
+For this scenario, you must have a valid identity mapping source configuration. Windows Server supports the following identity mapping stores:
 
 - Mapping File
 - Active Directory Domain Services (AD DS)
@@ -52,7 +52,7 @@ In this scenario, Windows file servers are deployed in a predominantly UNIX-base
 
 ## System requirements
 
-Server for NFS can be installed on any version of Windows Server 2012. You can use NFS with UNIX-based computers that are running an NFS server or NFS client if these NFS server and client implementations comply with one of the following protocol specifications:
+Server for NFS can be installed on any version of Windows Server. You can use NFS with UNIX-based computers that are running an NFS server or NFS client if these NFS server and client implementations comply with one of the following protocol specifications:
 
 - NFS Version 4.1 Protocol Specification (as defined in RFC [5661](https://tools.ietf.org/html/rfc5661))
 - NFS Version 3 Protocol Specification (as defined in RFC [1813](https://tools.ietf.org/html/rfc1813))
@@ -62,8 +62,8 @@ Server for NFS can be installed on any version of Windows Server 2012. You can u
 
 You need to deploy the following computers and connect them on a local area network (LAN):
 
-- One or more computers running Windows Server 2012 on which you'll install the two main Services for NFS components: Server for NFS and Client for NFS. You can install these components on the same computer or on different computers.
-- One or more UNIX-based computers that are running NFS server and NFS client software. The UNIX-based computer that is running NFS server hosts an NFS file share or export, which is accessed by a computer that is running Windows Server 2012 as a client using Client for NFS. You can install NFS server and client software either in the same UNIX-based computer or on different UNIX-based computers, as desired.
+- One or more computers running Windows Server on which you'll install the two main Services for NFS components: Server for NFS and Client for NFS. You can install these components on the same computer or on different computers.
+- One or more UNIX-based computers that are running NFS server and NFS client software. The UNIX-based computer that is running NFS server hosts an NFS file share or export, which is accessed by a computer that is running Windows Server as a client using Client for NFS. You can install NFS server and client software either in the same UNIX-based computer or on different UNIX-based computers, as desired.
 - A domain controller running at the Windows Server 2008 R2 functional level. The domain controller provides user authentication information and mapping for the Windows environment.
 - When a domain controller isn't deployed, you can use a Network Information Service (NIS) server to provide user authentication information for the UNIX environment. Or, if you prefer, you can use password and group files that are stored on the computer that is running the User Name Mapping service.
 
