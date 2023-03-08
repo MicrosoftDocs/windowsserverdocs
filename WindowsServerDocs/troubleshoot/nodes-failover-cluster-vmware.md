@@ -10,7 +10,7 @@ ms.date: 01/06/2023
 
 Applies to Windows Server (All supported versions)
 
-This article addresses the issue of finding nodes removed from active failover cluster membership when the nodes are hosted on VMWare ESX.
+This article addresses the issue of finding nodes removed from active failover cluster membership when the nodes are hosted on VMware ESX.
 
 ## Symptom
 
