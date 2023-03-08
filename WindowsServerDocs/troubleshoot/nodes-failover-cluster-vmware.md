@@ -20,7 +20,7 @@ You'll see the following in the System Event Log of the Event Viewer when this i
 
 ## Resolution
 
-One specific problem is with the VMXNET3 adapters dropping inbound network packets because the inbound buffer is set too low to handle large amounts of traffic. You easily can find out if this is a problem by using Performance Monitor to look at the “Network Interface\Packets Received Discarded” counter.
+One specific problem is with the VMXNET3 adapters dropping inbound network packets because the inbound buffer is set too low to handle large amounts of traffic. You easily can find out if packets are being drop by using Performance Monitor to look at the “Network Interface\Packets Received Discarded” counter.
 
 ![Add Counters](media/nodes-failover-cluster-vmware/0527.png)
 
