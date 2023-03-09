@@ -1,7 +1,7 @@
 ---
 title: Initialize new disks
 description: Learn how to initialize new disks with Disk Management and get them ready to use. Also access links for troubleshooting.
-ms.date: 03/07/2023
+ms.date: 03/09/2023
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -10,7 +10,7 @@ ms.author: jgerend
 
 # Initialize new disks
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2022
+> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 If you add a brand new disk to your PC, and it doesn't show up in File Explorer, you might need to [assign a drive letter](change-a-drive-letter.md) for the disk. You might also need to initialize the disk before you use it.
 
@@ -19,7 +19,7 @@ You can only initialize a drive that's not yet formatted. When you initialize a 
 > [!WARNING]
 > If your disk already contains necessary files, don't initialize the disk. You'll lose all the files. Instead, we recommend troubleshooting the disk to see if you can read the files. For details, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 
-## Initialization steps
+## Initialize a new disk
 
 The following steps show how to initialize a new disk by using Disk Management. If you prefer to use PowerShell, run the [Initialize-Disk](/powershell/module/storage/initialize-disk) cmdlet.
 
@@ -33,13 +33,13 @@ The following steps show how to initialize a new disk by using Disk Management. 
    1. In the search box on the taskbar, enter **Computer Management**.
    1. Select **Storage** > **Disk Management**.
 
-1. In Disk Management, right-click the disk you want to initialize, and then select **Initialize Disk**. If the disk is listed as *Offline*, first right-click the disk and select **Online**.
+1. In Disk Management, select and hold (or right-click) the disk you want to initialize, and then select **Initialize Disk**. If the disk is listed as *Offline*, first select and hold (or right-click) the disk, and then select **Online**.
 
    Some USB drives can't be initialized. These disks are only formatted and then assigned a [drive letter](change-a-drive-letter.md).
 
    ![Screenshot that shows Disk Management for an unformatted disk with the Initialize Disk shortcut menu displayed.](media/uninitialized-disk.PNG)
 
-1. In the **Initialize Disk** dialog box, make sure the correct disk is selected, and then choose **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR), see [About partition styles - GPT and MBR](#about-partition-styles---gpt-and-mbr).
+1. In the **Initialize Disk** dialog box, make sure the correct disk is selected, and then choose **OK** to accept the default partition style. If you need to change the partition style (GPT or MBR), see [Compare partition styles - GPT and MBR](#compare-partition-styles---gpt-and-mbr).
 
    The disk status briefly changes to **Initializing** and then to the **Online** status. If initializing fails for some reason, see [A disk's status is Not Initialized or the disk is missing entirely](troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 
@@ -55,7 +55,7 @@ The following steps show how to initialize a new disk by using Disk Management. 
 
 1. Specify the file system you want to use (usually NTFS), select **Next**, and then **Finish**.
 
-## About partition styles - GPT and MBR
+## Compare partition styles - GPT and MBR
 
 Disks can be divided into multiple chunks called _partitions_. Each partition - even if there's only one - has to have a partition style - GPT or MBR. Windows uses the partition style to understand how to access the data on the disk. 
 
