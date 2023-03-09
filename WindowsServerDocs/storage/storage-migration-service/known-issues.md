@@ -786,6 +786,61 @@ Under rare circumstances you may need to reset the Storage Migration Service dat
      NET START SMS
      NET START SMSPROXY
 
+## Transfers halts with error: Unable to translate Unicode character 
+
+A running transfer halts. You receive event log error:
+
+```
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          
+Event ID:      3515
+Task Category: None
+Level:         Error
+Keywords:      
+User:          NETWORK SERVICE
+Computer:      
+Description:
+Couldn't transfer all of the files in the endpoint on the computer.
+Job: 
+Computer: 
+Destination Computer:
+Endpoint:
+State: Failed
+Source File Count: 833617
+Source File Size in KB: 45919696
+Succeeded File Count: 833438
+Succeeded File Size in KB: 45919696
+New File Count: 0
+New File Size in KB: 0
+Failed File Count: 179
+Error: -2146233087
+Error Message: The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9970000'.
+```
+
+Examining the [Storage Migration Service debug log](http://aka.ms/smslogs) shows:
+
+```
+03. 07. 2023-23:28:08.647 [Erro] ExceptionMessage : (Unable to translate Unicode character \uDB71 at index 1 to specified code page.), ExceptionToString: (System.Text.EncoderFallbackException: Unable to translate Unicode character \uDB71 at index 1 to specified code page.
+```
+
+This issue is caused by an unhandled unicode character that the Storage Migration Service cannot translate. To locate the name of the file(s) with the invalid character, edit the following sample PowerShell script and run it on the source computer, then examine the results and rename or remove the files:
+
+`# Sample PowerShell script to find files with unhandled unicode characters
+# In this example, the example is character uDB71
+
+$FolderPath = "C:\temp"
+$OutputFilePath = "C:\temp\invalid_char_results.txt"
+$UnhandledChar = "\uDB71"
+
+Get-ChildItem -path $FolderPath -Recurse | ForEach-Object {
+ if ($_ -is [System.IO.FileInfo]) {
+  if ($_.Name -match $UnhandledChar) {
+   Add-Content $outputFilePath "$($_.FullName)"
+  }
+ }
+}`
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
