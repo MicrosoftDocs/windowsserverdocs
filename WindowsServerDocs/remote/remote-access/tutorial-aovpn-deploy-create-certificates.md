@@ -19,7 +19,9 @@ You'll create the following templates:
 
 - *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).  The user template will be configured for auto-enrollment.
 
-- *VPN server authentication template*. With a VPN server authentication template, you will add the IP Security (IPsec) IKE Intermediate application policy. The IP Security (IPsec) IKE Intermediate application policy determines how the certificate can be used, it can allow the server to filter certificates if more than one certificate is available. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for auto-enrollment.
+- *VPN server authentication template*. With a VPN server authentication template, you'll add the IP Security (IPsec) IKE Intermediate application policy. The IP Security (IPsec) IKE Intermediate application policy determines how the certificate can be used, it can allow the server to filter certificates if more than one certificate is available. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for auto-enrollment.
+
+- *NPS server authentication template*. With a NPS server authentication template, you'll copy the standard RAS and IAS Servers template, and scope it for your NPS server. The new NPS server template includes the server authentication application policy.
 
 ## Prerequisites
 
@@ -136,6 +138,58 @@ You'll create the following templates:
 
 1. Reboot the VPN server.
 
+## Create the NPS Server authentication template
+
+1. In the left pane of the Certification Authority snap-in, right-click **Certificate Templates** and select **Manage** to open the Certificate Templates console.
+
+1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**.
+
+   >[!WARNING]
+   >Do not select **Apply** or **OK** at any time prior to step 10.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
+
+1. On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter *NPS Server Authentication*.
+
+1. On the **Security** tab, complete the following steps:
+
+    1. Select **Add**.
+
+    2. On the **Select Users, Computers, Service Accounts, or Groups** dialog, enter **NPS Servers**, then select **OK**.
+
+    3. In **Group or user names**, select **NPS Servers**.
+
+    4. In **Permissions for NPS Servers**, select **Enroll** in the **Allow** column.
+
+    5. In **Group or user names**, select **RAS and IAS Servers**, then select **Remove**.
+
+1. Select **OK** to save the NPS Server certificate template.
+
+1. Close the Certificate Templates console.
+
+1. In the left pane of the Certificate Authority snap-in, right-click **Certificate Templates**. Select **New** and then select **Certificate Template to Issue**.
+
+1. Select **NPS Server Authentication**, then select **OK**.
+
+
+## Enroll and validate the user certificate
+
+Because you're using Group Policy to autoenroll user certificates, you only need to update the policy, and Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
+
+**To validate the user certificate:**
+
+1. Sign in to the VPN Windows client as the user that you created for the **VPN Users** group.
+
+2. Press Windows key + R, type **gpupdate /force**, and press ENTER.
+
+3. On the Start menu, type **certmgr.msc**, and press ENTER.
+
+4. In the Certificates snap-in, under **Personal**, select **Certificates**. Your certificates appear in the details pane.
+
+5. Right-click the certificate that has your current domain username, and then select **Open**.
+
+6. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
+
+7. Select **OK**, and close the Certificates snap-in.
+
 ### Enroll and validate the VPN server certificate
 
 Unlike the user certificate, you must manually enroll the VPN server's certificate.
@@ -182,25 +236,37 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 
 1. Select **OK** to close the certificate.
 
-## Enroll and validate the user certificate
+## Enroll and validate the NPS certificate
 
-Because you're using Group Policy to autoenroll user certificates, you only need to update the policy, and Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
+Because you're using Group Policy to autoenroll NPS certificates, you only need to update the policy, and Windows server will automatically enroll the NPS server for the correct certificate. You can then validate the certificate in the Certificates console.
 
-**To validate the user certificate:**
+**To enroll the NPS certificate:**
 
-1. Sign in to the VPN Windows client as the user that you created for the **VPN Users** group.
+1. On the NPS server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press ENTER.
 
-2. Press Windows key + R, type **gpupdate /force**, and press ENTER.
+1. Right-click **Personal**, select **All Tasks** and then select **Request New Certificate** to start the Certificate Enrollment Wizard.
 
-3. On the Start menu, type **certmgr.msc**, and press ENTER.
+1. On the Before You Begin page, select **Next**.
 
-4. In the Certificates snap-in, under **Personal**, select **Certificates**. Your certificates appear in the details pane.
+1. On the Select Certificate Enrollment Policy page, select **Next**.
 
-5. Right-click the certificate that has your current domain username, and then select **Open**.
+1. On the Request Certificates page, select **NPS Server Authentication**.
 
-6. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
+1. Select **Enroll**.
 
-7. Select **OK**, and close the Certificates snap-in.
+1. Select **Finish**.
+
+**To validate the NPS certificate:**
+
+1. In the Certificates snap-in, under **Personal**, select **Certificates**.
+
+    Your listed certificates should appear in the details pane.
+
+1. Right-click the certificate that has your NPS server's name, and then select **Open**.
+
+1. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
+
+1. Select **OK**, and close the Certificates snap-in.
 
 ## Next steps
 

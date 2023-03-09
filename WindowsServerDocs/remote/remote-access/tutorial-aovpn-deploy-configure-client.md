@@ -56,7 +56,7 @@ For more information about EAP settings, see [EAP configuration](/windows/client
 
 1. Select **Properties** to open Protected EAP Properties, and complete the following steps:
 
-    1. For **Connect to these servers**, enter the name of the NPS server. For this tutorial, the NPS server is on the domain controller.
+    1. For **Connect to these servers**, enter the name of the NPS server.
 
     1. For **Trusted Root Certification Authorities**, select the CA that issued the NPS server's certificate (for example, contoso-CA).
 
@@ -68,7 +68,7 @@ For more information about EAP settings, see [EAP configuration](/windows/client
 
         1. Select **Use a certificate on this computer**.
 
-        1. For **Connect to these servers**, enter the name of the NPS server. For this tutorial, the NPS server is on the domain controller.
+        1. For **Connect to these servers**, enter the name of the NPS server.
 
         1. For **Trusted Root Certification Authorities**, select the CA that issued the NPS server's certificate.
 

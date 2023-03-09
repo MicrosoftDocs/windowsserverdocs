@@ -32,7 +32,7 @@ In this tutorial, you'll learn how to deploy Always On VPN connections for remot
 
 To complete the steps in this tutorial,
 
-- You'll need access to three physical computers or virtual machines (VMs).
+- You'll need access to four physical computers or virtual machines (VMs).
 
 - Ensure that your user account on all machines is a member of **Administrators**, or equivalent.
 
@@ -91,11 +91,31 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 ## Create the NPS server
 
-1. On the domain controller, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
+1. Install Windows Server on the machine that will run the NPS server.
+
+1. On the NPS server, install the [Network Policy and Access Services (NPS) role](/windows-server//networking/technologies/nps/nps-top). For detailed information on how to install NSP, see [Install Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
 1. Register the NPS Server in Active Directory. For information on how to register NPS Server in Active Directory, see [Register an NPS in an Active Directory Domain](/windows-server/networking/technologies/nps/nps-manage-register).
 
 1. Make sure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function correctly. For more information, see [Configure Firewalls for RADIUS Traffic](../../networking/technologies/nps/nps-firewalls-configure.md).
+
+1. Create the NPS Servers group:
+
+    1. On the domain controller, open Active Directory Users and Computers.
+
+    1. Under your domain, right-click **Computers**. Select **New**, then select **Group**.
+
+    1. In **Group name**, enter **NPS Servers**, then select **OK**.
+
+    1. Right-click **NPS Servers** and select **Properties**.
+
+    1. On the **Members** tab of the NPS Servers Properties dialog box, select **Add**.
+
+    1. select **Object Types**, select the **Computers** check box, then select **OK**.
+
+    1. In **Enter the object names to select**, enter the computer name of the NPS server. Select **OK**.
+
+    1. Close Active Directory Users and Computers.
 
 ## Create the VPN server
 
