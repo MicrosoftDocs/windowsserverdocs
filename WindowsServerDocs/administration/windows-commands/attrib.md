@@ -27,7 +27,12 @@ attrib [{+|-}r] [{+|-}a] [{+|-}s] [{+|-}h] [{+|-}i] [<drive>:][<path>][<filename
 | `{+\|-}a` | Sets (**+**) or clears (**-**) the Archive file attribute. This attribute set marks files that have changed since the last time they were backed up. Note that the **xcopy** command uses archive attributes. |
 | `{+\|-}s` | Sets (**+**) or clears (**-**) the System file attribute. If a file uses this attribute set, you must clear the attribute before you can change any other attributes for the file. |
 | `{+\|-}h` | Sets (**+**) or clears (**-**) the Hidden file attribute. If a file uses this attribute set, you must clear the attribute before you can change any other attributes for the file. |
+| `{+\|-}o` | Sets (**+**) or clears (**-**) the Offline attribute. If a file uses this attribute set, you must clear the attribute before you can change any other attributes for the file. |
 | `{+\|-}i` | Sets (**+**) or clears (**-**) the Not Content Indexed file attribute. |
+| `{+\|-}x` | Sets (**+**) or clears (**-**) the No scrub file attribute. If a file uses this attribute set, you must clear the attribute before you can change any other attributes for the file. |
+| `{+\|-}v` | Sets (**+**) or clears (**-**) the Integrity attribute. If a file uses this attribute set, you must clear the attribute before you can change any other attributes for the file. |
+| `{+\|-}p` | Sets (**+**) or clears (**-**) the Pinned attribute. If a file uses this attribute set, you must clear the attribute before you can change any other attributes for the file. |
+| `{+\|-}u` | Sets (**+**) or clears (**-**) the Unpinned attribute. If a file uses this attribute set, you must clear the attribute before you can change any other attributes for the file. |
 | `[<drive>:][<path>][<filename>]` | Specifies the location and name of the directory, file, or group of files for which you want to display or change attributes.<p>You can use the **?** and **&#42;** wildcard characters in the *filename* parameter to display or change the attributes for a group of files. |
 | /s | Applies **attrib** and any command-line options to matching files in the current directory and all of its subdirectories. |
 | /d | Applies **attrib** and any command-line options to directories. |
@@ -59,7 +64,12 @@ To set the Archive attribute for all files on drive a:, and then clear the Archi
 ```
 attrib +a a:*.* & attrib -a a:*.bak
 ```
+To set the Pinned attribute for a directory named "demo" and its contents in OneDrive, type:
 
+```
+attrib +p -u /s /d "C:\Users\username\OneDrive\demo\*.*"
+```
+  
 ## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
