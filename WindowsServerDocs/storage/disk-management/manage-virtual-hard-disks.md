@@ -1,7 +1,7 @@
 ---
 title: Manage Virtual Hard Disks (VHD)
-description: This article describes how to manage Virtual Hard Disks
-ms.date: 10/12/2017
+description: Learn about Virtual Hard Disks (VHD) and how to manage them with Disk Management, where you can view, create, attach, and detach them in a computer.
+ms.date: 03/10/2023
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -10,26 +10,28 @@ ms.author: jgerend
 
 # Manage Virtual Hard Disks (VHD)
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 11, Windows 10, Windows Server 2022. Windows Server 2019, Windows Server 2016
 
-This topic describes how to create, attach, and detach virtual hard disks with Disk Management. Virtual hard disks (VHDs) are virtualized hard disk files that, once mounted, appear and operate pretty much identically to a physical hard drive. They're most commonly used with Hyper-V virtual machines.
+This article describes how to create, attach, and detach virtual hard disks with Disk Management. Virtual hard disks (VHDs) are disk image file formats that have similar functionalities to a physical hard drive and are designed primarily for use with Hyper-V virtual machines.
 
-## Viewing VHDs in Disk Management
+## View a VHD in Disk Management
 
-VHDs appear just like physical disks in Disk Management. When a VHD has been attached (that is, made available to the system for use), it appears blue. If the disk is detached (that is, made unavailable), its icon reverts to gray.
+VHDs appear just like physical disks in Disk Management. When a VHD has been attached and made available to the system for use, it appears blue. If the disk is detached and made unavailable, its icon reverts to gray.
 
-## Creating a VHD
+## Create a VHD
 
 > [!NOTE]
-> You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
+> To complete the following steps, you must be a part of the **Backup Operators** or **Administrators** group.
 
-**To create a VHD**
+To create a VHD follow these steps:
 
-1.  On the **Action** menu, select **Create VHD**.
+1. Open Disk Management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 
-2.  In the **Create and Attach Virtual Hard Disk** dialog box, specify both the location on the physical computer where you want the VHD file to be stored, and the size of the VHD.
+1. On the **Action** menu, select **Create VHD**.
 
-3.  In **Virtual hard disk format**, select **Dynamically expanding** or **Fixed size**, and then click **OK**.
+1. In the **Create and Attach Virtual Hard Disk** dialog box, specify both the location on the physical computer where you want the VHD file to be stored and the size of the VHD.
+
+1. In **Virtual hard disk format**, select **Dynamically expanding** or **Fixed size**, and then click **OK**.
 
 ## Attaching and detaching a VHD
 
@@ -44,7 +46,7 @@ Right-click the disk, select **Detach VHD**, and then click **OK**. Detaching a 
 
 ## Additional considerations
 
--   The path specifying the location for the VHD must be fully-qualified and cannot be in the \\Windows directory.
--   The minimum size for a VHD is 3 megabytes (MB).
--   A VHD can only be a basic disk.
--   Because a VHD is initialized when it is created, creating a large fixed-size VHD might take some time.
+- The path specifying the location for the VHD must be fully-qualified and cannot be in the \\Windows directory.
+- The minimum size for a VHD is 3 megabytes (MB).
+- A VHD can only be a basic disk.
+- Because a VHD is initialized when it is created, creating a large fixed-size VHD might take some time.
