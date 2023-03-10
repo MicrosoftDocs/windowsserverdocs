@@ -818,7 +818,7 @@ Error: -2146233087
 Error Message: The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9970000'.
 ```
 
-Examining the [Storage Migration Service debug log](http://aka.ms/smslogs) shows:
+Examining the [Storage Migration Service debug log](https://aka.ms/smslogs) shows:
 
 ```
 03. 07. 2023-23:28:08.647 [Erro] ExceptionMessage : (Unable to translate Unicode character \uDB71 at index 1 to specified code page.), ExceptionToString: (System.Text.EncoderFallbackException: Unable to translate Unicode character \uDB71 at index 1 to specified code page.
