@@ -18,7 +18,7 @@ You can add space to an existing volume by extending the volume into available u
 - There can't be any volumes between the volume to extend and the empty space to add.
 - The volume to extend must be formatted with the NTFS or ReFS file systems.
 
-You can extend a volume by using Disk Management or Windows PowerShell. On Windows Server 2012 R2 or later, you can also use Azure File Sync to extend your volume into the cloud. For for information, see [Planning for an Azure File Sync deployment on Windows Server](/azure/storage/files/storage-sync-files-planning).
+You can extend a volume by using Disk Management or Windows PowerShell. On Windows Server 2012 R2 or later, you can also use Azure File Sync to extend your volume into the cloud. For more information, see [Planning for an Azure File Sync deployment on Windows Server](/azure/storage/files/storage-sync-files-planning).
 
 ## View unallocated space on a disk drive
 
