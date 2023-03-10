@@ -50,7 +50,7 @@ Follow these steps to use the Add Roles and Features Wizard to install the Deskt
 
 1. Verify that the **Disk Cleanup** button appears in the Properties dialog box.
 
-   :::image type="content" source="media/disk-prop-sw-cleanup.png" alt-text="Screenshot of the Disk Properties dialog with the Disk Cleanup button highlighted.":::
+   :::image type="content" source="media/disk-cleanup.png" alt-text="Screenshot of the Disk Properties dialog with the Disk Cleanup button highlighted.":::
 
 ## Manually add Disk Cleanup to an earlier version of Windows Server
 
