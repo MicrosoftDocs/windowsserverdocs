@@ -42,7 +42,7 @@ To save the combined directory listing of *dir1* and *dir2* in a local file call
 mdir dir1 dir2 dirlist.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

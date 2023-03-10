@@ -27,7 +27,7 @@ To display the command-line usage for the **/peers** switches:
 bitsadmin /peers /help
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

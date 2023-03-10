@@ -33,7 +33,7 @@ To get the custom headers for the job named *myDownloadJob*:
 bitsadmin /getcustomheaders myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

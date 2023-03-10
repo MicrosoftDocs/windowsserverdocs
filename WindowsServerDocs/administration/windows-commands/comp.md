@@ -86,6 +86,6 @@ To compare the first ten lines of the text files in the *\invoice* directory and
 comp \invoice\*.txt \invoice\backup\*.txt /n=10 /d
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

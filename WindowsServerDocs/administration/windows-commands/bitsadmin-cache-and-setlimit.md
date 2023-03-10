@@ -33,7 +33,7 @@ To set the cache size limit to 50%:
 bitsadmin /cache /setlimit 50
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -218,7 +218,7 @@ msiexec.exe /fa {AAD3D77A-7476-469F-ADF4-04424124E91D}
 
 You can set public properties through this command. For information about the available properties and how to set them, see [Public Properties](/windows/win32/msi/public-properties).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

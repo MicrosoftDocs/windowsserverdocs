@@ -31,7 +31,7 @@ To use the **quiet** command:
 bdehdcfg -target default -quiet
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

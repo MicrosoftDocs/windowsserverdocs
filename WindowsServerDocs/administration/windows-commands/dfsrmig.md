@@ -145,7 +145,7 @@ dfsrmig
 dfsrmig /?
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771080(v=ws.11))
 

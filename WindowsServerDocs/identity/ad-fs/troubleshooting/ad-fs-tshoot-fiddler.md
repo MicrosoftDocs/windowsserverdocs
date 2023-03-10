@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - Fiddler
 description:  This document describes what Fiddler is and how to install and configure Fiddler to troubleshoot AD FS claims issues
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

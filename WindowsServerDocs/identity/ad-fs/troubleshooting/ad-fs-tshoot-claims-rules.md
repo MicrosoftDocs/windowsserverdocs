@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - Claims Rules
 description:  This document describes how to troubleshoot claims rule syntax with AD FS
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

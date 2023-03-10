@@ -58,7 +58,7 @@ To delete the oldest system state backup stored on disk f:, type:
 wbadmin delete systemstatebackup -backupTarget:f:\ -deleteOldest
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

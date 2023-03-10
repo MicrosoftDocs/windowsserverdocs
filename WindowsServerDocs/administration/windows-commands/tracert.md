@@ -65,7 +65,7 @@ To trace the path to the host named *corp7.microsoft.com* and use the loose sour
 tracert /j 10.12.0.1 10.29.3.1 10.1.44.1 corp7.microsoft.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

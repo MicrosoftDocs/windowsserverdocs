@@ -15,7 +15,7 @@ Backs up and restores your computer and files from a command prompt. This comman
 > [!IMPORTANT]
 > The **wbadmin** command cannot recover backups created by using the **ntbackup** commands. The Windows NT Backup - Restore utility is needed to recover from legacy backups.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

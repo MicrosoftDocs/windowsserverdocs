@@ -3,7 +3,7 @@ title: Migrate an AD FS 2.0 federation server SQL farm
 description: Provides information on migrating an AD FS 2.0 server SQL farm to Windows Server 2012
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

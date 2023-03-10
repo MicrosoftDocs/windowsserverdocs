@@ -86,6 +86,6 @@ For multi-line comments, use conditional execution:
   )
 ```
 
-## Additional references
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

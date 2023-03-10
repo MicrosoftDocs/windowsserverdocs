@@ -16,7 +16,7 @@ Starts the Auto File System Format Utility, which formats a drive or partition w
 > [!IMPORTANT]
 > You cannot run **autofmt** directly from the command-line.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -41,6 +41,6 @@ To send *c:\example.txt* over the infrared link, type:
 irftp c:\example.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

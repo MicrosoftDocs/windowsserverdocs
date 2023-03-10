@@ -33,7 +33,7 @@ To get the configuration flags for the job named *myDownloadJob*:
 bitsadmin /peercaching /getconfigurationflags myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

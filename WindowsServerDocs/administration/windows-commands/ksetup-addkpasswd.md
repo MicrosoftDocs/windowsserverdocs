@@ -42,7 +42,7 @@ ksetup /addkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 
 To verify the KDC name is set, type `ksetup` and then view the output, looking for the text, **kpasswd =**. If you don't see the text, it means the mapping hasn't been configured.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

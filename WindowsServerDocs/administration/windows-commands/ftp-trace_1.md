@@ -29,7 +29,7 @@ Toggle tracing on and off, type:
 trace
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

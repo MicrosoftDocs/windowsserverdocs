@@ -84,7 +84,7 @@ Associatie files with no extension to text files:
 assoc .=txtfile
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

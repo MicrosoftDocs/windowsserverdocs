@@ -177,6 +177,6 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   - If you process file and directory name completion from within *string*, any part of the *path* to the right of the cursor is discarded (at the point in *string* where the completion was processed).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -38,7 +38,7 @@ To make your **ksetup** configurations effective on the *IPops897* computer, whi
 ksetup /server IPops897.corp.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

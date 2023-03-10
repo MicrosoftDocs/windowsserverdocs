@@ -85,7 +85,7 @@ wdsutil /New-MulticastTransmission /FriendlyName:WDS SchedCast Transmission /Ser
 /Transmissiontype:ScheduledCast /time:2006/11/20:17:00 /Clients:100
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)

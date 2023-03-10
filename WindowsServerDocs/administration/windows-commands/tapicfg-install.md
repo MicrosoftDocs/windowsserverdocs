@@ -50,7 +50,7 @@ To create a TAPI application directory partition named *tapifiction.testdom.micr
 tapicfg install /directory:tapifiction.testdom.microsoft.com /server:testdc.testdom.microsoft.com /forcedefault
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

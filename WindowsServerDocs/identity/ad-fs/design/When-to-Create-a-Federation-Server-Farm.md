@@ -4,7 +4,7 @@ ms.assetid: 02580b2f-a339-4470-947c-d700b2d55f3f
 title: When to Create a Federation Server Farm
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

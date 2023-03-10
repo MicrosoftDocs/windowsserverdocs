@@ -36,7 +36,7 @@ To set the realm of this computer to a specific domain name, and to restrict acc
 ksetup /setrealm CONTOSO
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -174,6 +174,6 @@ To parse the output of a command by placing *set* between the parentheses, type:
 for /f "usebackq delims==" %i in (`set`) do @echo %i
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

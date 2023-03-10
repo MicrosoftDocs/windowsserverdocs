@@ -40,7 +40,7 @@ To delete the data collector *perf_log*, type:
 logman delete perf_log
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

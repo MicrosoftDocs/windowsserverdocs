@@ -35,7 +35,7 @@ To copy *Program1.exe* and *Program2.exe* to the remote computer using the curre
 mput Program1.exe Program2.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -4,7 +4,7 @@ ms.assetid: c81b8291-fba5-4b30-a43d-7feb2f4b66be
 title: Identify Your AD FS Deployment Goals
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---
