@@ -15,10 +15,10 @@ ms.author: jgerend
 You can add space to an existing volume by extending the volume into available unallocated (empty) space on a disk drive. To extend a volume, the configuration of the volume and free space must satisfy the following conditions:
 - The empty space must be unallocated space that doesn't have a volume on it.
 - The empty space must be located on the disk drive immediately after the volume that you want to extend.
-- There can be no volumes between the volume to extend and the empty space to add.
+- There can't be any volumes between the volume to extend and the empty space to add.
 - The volume to extend must be formatted with the NTFS or ReFS file systems.
 
-You can extend a volume by using Disk Management or Windows PowerShell. On Windows Server 2012 R2 or later, you can also use Azure File Sync to extend your volume into the cloud. For details, see [Planning for an Azure File Sync deployment on Windows Server](/azure/storage/files/storage-sync-files-planning).
+You can extend a volume by using Disk Management or Windows PowerShell. On Windows Server 2012 R2 or later, you can also use Azure File Sync to extend your volume into the cloud. For for information, see [Planning for an Azure File Sync deployment on Windows Server](/azure/storage/files/storage-sync-files-planning).
 
 ## View unallocated space on a disk drive
 
@@ -32,11 +32,13 @@ To extend a volume by using Disk Management, follow these steps.
 
 1. Open Disk Management with administrator permissions.
 
-   Here's an easy way to launch the Disk Management prompt:
-
-   1. From Windows Start, enter **Computer Management**.
-   1. Select and hold (or right-click) **Computer Management**, and then select **Run as administrator** > **Yes**.
-   1. After Computer Management opens, go to **Storage** > **Disk Management**.
+   1. In the search box on the taskbar, enter **Disk Management**.
+   1. Select and hold (or right-click) **Disk Management**, and then select **Run as administrator** > **Yes**.
+   
+   If you can't open Disk Management as an administrator, follow these steps:
+   
+   1. In the search box on the taskbar, enter **Computer Management**.
+   1. Select **Storage** > **Disk Management**.
 
 1. Select and hold (or right-click) the volume that you want to extend, and then select **Extend Volume**. The Extend Volume Wizard opens.
 
@@ -61,7 +63,7 @@ If the Disk Management **Extend Volume** option isn't available, check your conf
 
 | Issue to check | Description | Resolution steps |
 | --- | --- | --- |
-| **Elevated permissions for Disk Management** | Confirm the Disk Management (or Computer Management) prompt has **administrator** (elevated) permissions. | If the Disk Management (or Computer Management) prompt doesn't have **administrator** permissions, close the prompt and re-open Disk Management by following the steps earlier in the article. |
+| **Elevated permissions for Disk Management** | Confirm the Disk Management (or Computer Management) prompt has **administrator** (elevated) permissions. | If the Disk Management (or Computer Management) prompt doesn't have **administrator** permissions, close the prompt and reopen Disk Management by following the steps earlier in the article. |
 | **Location of empty space on disk drive** | Confirm the disk drive has unallocated space immediately after (or _to the right of_) the volume to extend. For an example of this spacing, see [View unallocated space on a disk drive](#view-unallocated-space-on-a-disk-drive). In the image, a red border outlines the unallocated space. | If another volume is between the unallocated space and the volume that you want to extend, you have several options: <br> - Delete the in-between volume on the disk drive and all files on that volume. Be sure to back up or move any important files on the in-between volume before you delete the volume. <br> - Use a non-Microsoft disk partitioning application that can move volumes without destroying data. <br> - Don't proceed with this volume extension. Instead, create a new separate volume in the unallocated space on the disk drive. |
 | **Volume uses NTFS or ReFS file system** | Confirm the volume is formatted with the NTFS or ReFS file system. Other file systems can't be extended. | If the volume to extend has a different file system, you must first move or back up the files on the volume, and then reformat the volume with the NTFS or ReFS file system. |
 | **Disk drive size and format** | Check the disk drive format. If the volume to extend is on a disk drive that's larger than 2 TB, the disk must use the GPT partitioning scheme. | To use more than 2 TB on a disk, the disk drive must be initialized with the GPT partitioning scheme. To convert a disk drive to the GPT format, see [Change an MBR disk into a GPT disk](change-an-mbr-disk-into-a-gpt-disk.md). |
