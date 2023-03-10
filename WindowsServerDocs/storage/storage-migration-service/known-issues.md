@@ -826,8 +826,7 @@ Examining the [Storage Migration Service debug log](https://aka.ms/smslogs) show
 
 This issue is caused by an unhandled unicode character that the Storage Migration Service cannot translate. To locate the name of the file(s) with the invalid character, edit the following sample PowerShell script and run it on the source computer, then examine the results and rename or remove the files:
 
-`# Sample PowerShell script to find files with unhandled unicode characters
-# In this example, the example is character uDB71
+`\# Sample PowerShell script to find files with unhandled unicode characters
 
 $FolderPath = "C:\temp"
 $OutputFilePath = "C:\temp\invalid_char_results.txt"
@@ -839,7 +838,8 @@ Get-ChildItem -path $FolderPath -Recurse | ForEach-Object {
    Add-Content $outputFilePath "$($_.FullName)"
   }
  }
-}`
+}
+`
 
 ## See also
 
