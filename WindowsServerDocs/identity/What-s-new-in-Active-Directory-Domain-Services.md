@@ -22,11 +22,11 @@ The following new features in Active Directory Domain Services (AD DS) improve t
 -   [Privileged access management](https://technet.microsoft.com/library/mt150258.aspx   
 )  
   
-- [Extending cloud capabilities to Windows 10 devices through Azure Active Directory Join](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-overview/)   
+- [Extending cloud capabilities to Windows 10 devices through Azure Active Directory Join](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)   
   
-- [Connecting domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-devices-group-policy/)   
+- [Connecting domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)   
   
-- [Enable Microsoft Passport for Work in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)    
+- [Enable Microsoft Passport for Work in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)    
   
 -  [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](ad-ds/active-directory-functional-levels.md)  
   
@@ -84,14 +84,14 @@ Benefits:
   
 -   **Imaging** option lets you choose between imaging and allowing your users to configure corp-owned devices directly during the first-run experience.  
   
-For more information see, [Windows 10 for the enterprise: Ways to use devices for work](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1).  
+For more information see, [Windows 10 for the enterprise: Ways to use devices for work](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1).  
   
 ## <a name="BKMK_IDLocker"></a>Microsoft Passport  
 Microsoft Passport is a new key-based authentication approach organizations and consumers, that goes beyond passwords. This form of authentication relies on breach, theft, and phish-resistant credentials.  
   
 The user logs on to the device with a biometric or PIN log on information that is linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), Phonefactor or a different notification mechanism.  
   
-For more information see, [Authenticating identities without passwords through Microsoft Passport](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport/)  
+For more information see, [Authenticating identities without passwords through Microsoft Passport](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport/)  
   
 ## <a name="BKMK_FRSDeprecation"></a>Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels  
 Although File Replication Service (FRS) and the Windows Server 2003 functional levels were deprecated in previous versions of Windows Server, it bears repeating that the Windows Server 2003 operating system is no longer supported. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain. The domain and forest functional level should be raised to at least Windows Server 2008 to prevent a domain controller that runs an earlier version of Windows Server from being added to the environment.  

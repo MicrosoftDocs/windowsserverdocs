@@ -6,7 +6,7 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/18/2018
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 # Understanding Windows Admin Center Extensions

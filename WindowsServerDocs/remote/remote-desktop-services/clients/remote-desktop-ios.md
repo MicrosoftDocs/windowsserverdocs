@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ---
 # Get started with Remote Desktop on iOS
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
@@ -28,12 +28,16 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 > - The iOS client supports devices running iOS 6.x and newer.
 
 ## Get the Remote Desktop client and start using it
+
+### Download the Remote Desktop client from the iOS store
 Follow these steps to get started with Remote Desktop on your iOS device:
 
 1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
+### Download the Remote Desktop iOS Beta client
+On your iOS device, follow [these instructions](https://aka.ms/rdiosbeta) to download the Remote Desktop iOS Beta client.
 
 ### Add a Remote Desktop connection
 
@@ -161,6 +165,12 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Mouse wheel          | 2 finger tap and hold, then drag up or down                |
 | Mouse pointer | Zoom                 | Pinch 2 fingers to zoom in or spread 2 fingers to zoom out |
 
+## Supported input devices
+
+The [Remote Desktop iOS beta client](https://aka.ms/rdiosbeta) supports the Swiftpoint GT and ProPoint physical mice. Swiftpoint is offering an [exclusive discount](https://www.swiftpoint.com/microsoft/) on the GT for iOS beta client users.
+
+The iOS client currently only supports Swiftpoint mice. Refer to the [What's new in the iOS client](ios-whatsnew.md) page and the [iOS App Store](https://aka.ms/rdios) for news about support for other devices in the future.
+
 ## Use a keyboard in a remote session
 
 You can use either an on-screen keyboard or physical keyboard in your remote session.
@@ -183,8 +193,6 @@ Be aware that, due to limitations on the OS, special keys such as Ctrl, Option, 
 - Copy: Command+C = Ctrl+C (Copy in most programs)
 - Paste: Command+V = Ctrl+V (Paste in most programs)
 - Symbols: Alt+Alphanumeric keys will produce different symbols depending on the language configured
-
-
 
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

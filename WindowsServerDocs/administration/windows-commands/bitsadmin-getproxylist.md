@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # bitsadmin getproxylist
 
-
-
 Retrieves the proxy list for the specified job.
 
 ## Syntax
@@ -35,7 +33,7 @@ bitsadmin /GetProxyList <Job>
 
 ## Remarks
 
--   The proxy list is the list of proxy servers to use. The list is comma-delimited.
+The proxy list is the list of proxy servers to use. The list is comma-delimited.
 
 ## <a name="BKMK_examples"></a>Examples
 

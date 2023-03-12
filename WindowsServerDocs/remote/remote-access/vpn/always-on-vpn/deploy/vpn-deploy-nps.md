@@ -5,18 +5,20 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
-manager: elizapo
+ms.localizationpriority: medium 
 ms.author: pashort
 author: shortpatti
-ms.date: 05/29/2018
+ms.date: 08/30/2018
 ---
 
 # Step 4. Install and configure the Network Policy Server (NPS)
 
->   Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>   Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
-&#187; [ **Next:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
+
+&#171;  [**Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)<br>
+&#187;  [**Next:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)
+
 
 In this step, you install Network Policy Server (NPS) for processing of connection requests that are sent by the VPN server:
 
@@ -30,6 +32,9 @@ The steps in this section allow you to complete the following items:
 
    >[!TIP] 
    >If you already have one or more NPS servers on your network, you do not need to perform NPS Server installation - instead, you can use this topic to update the configuration of an existing NPS server.
+
+>[!NOTE]  
+You can not install the Network Policy Server service on Windows Server Core.
 
 2.  On the organization/corporate NPS server, you can configure NPS to perform as a RADIUS server that processes the connection requests received from the VPN server.
 
@@ -205,6 +210,8 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ## Next step
 [Step 5. Configure DNS and firewall settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+
+
 
 ---
 

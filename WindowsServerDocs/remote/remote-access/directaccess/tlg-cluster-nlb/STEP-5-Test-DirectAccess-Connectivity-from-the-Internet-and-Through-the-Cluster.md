@@ -45,9 +45,9 @@ CLIENT1 is now ready for DirectAccess testing.
   
 6.  Leave the Windows PowerShell window open for the next procedure.  
   
-7.  Open Internet Explorer, in the Internet Explorer address bar, enter **http://app1/** and press ENTER. You will see the default IIS website on APP1.  
+7.  Open Internet Explorer, in the Internet Explorer address bar, enter **https://app1/** and press ENTER. You will see the default IIS website on APP1.  
   
-8.  In the Internet Explorer address bar, enter **http://app2/** and press ENTER. You will see the default website on APP2.  
+8.  In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
 9. On the **Start** screen, type**\\\App2\Files**, and then press ENTER. Double-click the New Text Document file.  
   
@@ -73,7 +73,7 @@ CLIENT1 is now ready for DirectAccess testing.
   
 4.  On the **Start** screen, type**\\\app2\files**. You should see the shared folder on the APP2 computer. The ability to open the file share on APP2 indicates that the second tunnel, which requires Kerberos authentication for the user, is working correctly.  
   
-5.  Open Internet Explorer, and then open the websites http://app1/ and http://app2/. The ability to open both websites confirms that both the first and second tunnels are up and functioning. Close Internet Explorer.  
+5.  Open Internet Explorer, and then open the websites https://app1/ and https://app2/. The ability to open both websites confirms that both the first and second tunnels are up and functioning. Close Internet Explorer.  
   
 6.  Start the EDGE2 computer.  
   

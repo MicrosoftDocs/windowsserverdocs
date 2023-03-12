@@ -43,3 +43,5 @@ To create a symbolic link named MyDocs from the root directory to the \Users\Use
 ```
 mklink /d \MyDocs \Users\User1\Documents
 ```
+## Additional references
+-   [New-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)

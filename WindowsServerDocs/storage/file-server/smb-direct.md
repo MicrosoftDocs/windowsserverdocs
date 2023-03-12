@@ -9,7 +9,7 @@ ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
 ---
-# Improve performance of a file server with SMB Direct
+# SMB Direct
 
 >Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 

@@ -4,42 +4,31 @@ title: Windows Time Service Tools and Settings
 description:
 author: shortpatti
 ms.author: pashort
-manager: elizapo
-ms.date: 07/19/2018
+manager: dougkim
+ms.date: 10/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
 ---
 
 # Windows Time Service Tools and Settings
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
-**In this section**  
-  
--   [Windows Time Service Tools](#w2k3tr_times_tools_dyax)  
-  
--   [Windows Time Service Registry Entries](#w2k3tr_times_tools_uhlp)  
-  
--   [Windows Time Service Group Policy Settings](#w2k3tr_times_tools_vwtt)  
-  
--   [Network Ports Used by the Windows Time Service](#w2k3tr_times_tools_suxb)  
-  
--   [Related Information](#w2k3tr_times_tools_qoep)  
-  
-> [!NOTE]  
-> This topic contains information only about tools and settings for Windows Time service (W32Time). If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see the list of topics in the section [Where to Find Windows Time Service Configuration Information](https://technet.microsoft.com/library/cc773061.aspx).  
-  
-> [!CAUTION]  
-> You should not use the Net time command to configure or set time when the Windows Time service is running.  
+In this topic, you learn about tools and settings for Windows Time service (W32Time). 
 
-Also, on older computers that run Windows XP or earlier, the command Net time /querysntp displays the name of a Network Time Protocol (NTP) server with which a computer is configured to synchronize, but that NTP server is used only when the computer's time client is configured as NTP or AllSync. That command has since been deprecated.  
+If you only want to synchronize time for a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see [Where to Find Windows Time Service Configuration Information](https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-top).  
   
-Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm /query /configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](https://go.microsoft.com/fwlink/?LinkId=117753). You can run the command **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** and read the value of **NtpServer** in the command output.  
+>[!CAUTION]  
+>You should not use the Net time command to configure or set time when the Windows Time service is running.  
+>
+>Also, on older computers that run Windows XP or earlier, the command Net time /querysntp displays the name of a Network Time Protocol (NTP) server with which a computer is configured to synchronize, but that NTP server is used only when the computer's time client is configured as NTP or AllSync. That command has since been deprecated.  
+  
+Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain, which is usually configured to synchronize time with an external time source. To view the time client configuration of a computer, run the W32tm /query /configuration command from an elevated Command Prompt in starting in Windows Server 2008, and Windows Vista, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](https://docs.microsoft.com/windows-server/networking/windows-time-service/How-the-Windows-Time-Service-Works). You can run the command **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** and read the value of **NtpServer** in the command output.  
   
 > [!IMPORTANT]  
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://go.microsoft.com/fwlink/?LinkID=179459) for more information.  
+> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs.  However, updates to Windows Server 2016 now allow you to implement a solution for 1ms accuracy in your domain.  See [Windows 2016 Accurate Time](accurate-time.md) and  [Support boundary to configure the Windows Time service for high-accuracy environments](https://docs.microsoft.com/windows-server/networking/windows-time-service/support-boundary) for more information.  
   
-## <a name="w2k3tr_times_tools_dyax"></a>Windows Time Service Tools  
+## Windows Time Service Tools  
 The following tools are associated with the Windows Time service.  
   
 #### W32tm.exe: Windows Time  
@@ -76,7 +65,7 @@ The following tables describe the parameters that are used with W32tm.exe.
 ---  
 For more information about **W32tm.exe**, see Help and Support Center in Windows XP, Windows Vista,  Windows 7 , Windows Server 2003, Windows Server 2003 R2,  Windows Server 2008 , and  Windows Server 2008 R2.  
   
-## <a name="w2k3tr_times_tools_uhlp"></a>Windows Time Service Registry Entries  
+## Windows Time Service Registry Entries  
 The following registry entries are associated with the Windows Time service.  
   
 This information is provided as a reference for use in troubleshooting or verifying that the required settings are applied. It is recommended that you do not directly edit the registry unless there is no other alternative. Modifications to the registry are not validated by the registry editor or by Windows before they are applied, and as a result, incorrect values can be stored. This can result in unrecoverable errors in the system.  
@@ -100,17 +89,17 @@ There are several registry keys at this registry location. The Windows Time sett
 
 Many of the values in the W32Time section of the registry are used internally by W32Time to store information. These values should not be manually changed at any time. Do not modify any of the settings in this section unless you are familiar with the setting and are certain that the new value will work as expected. The following registry entries are located under:
 
-**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\\**  
+**HKLM\SYSTEM\CurrentControlSet\Services\W32Time**  
 
 When you create a policy, the settings are configured in the following location, which does not take precedence over the next location:
 
-**HKLM/SOFTWARE/Policies/Microsoft/Windows/W32time**
+**HKLM\SOFTWARE\Policies\Microsoft\Windows\W32time**
 
 The W32time key is created with the policy.  When you remove the policy, then this key is also removed.
 
 The other default location:
 
-**HKLM/SYSTEM/CurrentControlSet/Services/W32time**
+**HKLM\SYSTEM\CurrentControlSet\Services\W32time**
 
 Some of the parameters are stored in clock ticks in the registry and some are in seconds. To convert the time from clock ticks to seconds:  
   
@@ -118,14 +107,14 @@ Some of the parameters are stored in clock ticks in the registry and some are in
   
 -   1 sec = 1000 ms  
   
--   1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://msdn.microsoft.com/en-us/library/system.datetime.ticks.aspx).  
+-   1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://docs.microsoft.com/dotnet/api/system.datetime.ticks?redirectedfrom=MSDN&view=netframework-4.7.2#System_DateTime_Ticks).  
   
-For example, 5 minutes would become 5*60\*1000\*10000 = 3000000000 clock ticks. 
+For example, 5 minutes would become 5\*60\*1000\*10000 = 3000000000 clock ticks. 
 
 All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and  Windows Server 2008 R2, Windows Server 2012, Windows Server 2012R2, Windows Server 2016.  Some entries are only availalbe on newer Windows versions.
 
 
-#### <a name="Parameters"></a>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+#### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -135,7 +124,7 @@ All versions include Windows 7, Windows 8, Windows 10, Windows Server 2008 , and
 |ServiceMain|All|Entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is SvchostEntry_W32Time. The default value on stand-alone clients and servers is SvchostEntry_W32Time.  "|
 |Type|All|Entry indicates which peers to accept synchronization from:  <ul><li>**NoSync**. The time service does not synchronize with other sources.</li><li>**NTP.** The time service synchronizes from the servers specified in the **NtpServer**. registry entry.</li><li>**NT5DS**. The time service synchronizes from the domain hierarchy.  </li><li>**AllSync**. The time service uses all the available synchronization mechanisms.  </li></ul>The default value on domain members is **NT5DS**. The default value on stand-alone clients and servers is **NTP**.   |
 ---
-#### <a name="Configuration"></a>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config
+#### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -166,11 +155,11 @@ The following registry entries must be added in order to enable W32Time logging:
 |------------------------------------|---------------|----------------------------|
 |FileLogEntries|All|Entry controls the amount of entries created in the Windows Time log file. The default value is none, which does not log any Windows Time activity. Valid values are 0 to 300. This value does not affect the event log entries normally created by Windows Time|
 |FileLogName|All|Entry controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time.  |
-|FileLogSize|All|Entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, Entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Any positive number is valid, and 3000000 is recommended. This value does not affect the event log entries normally created by Windows Time.  |
+|FileLogSize|All|Entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, Entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Please use 1000000 or larger value for this setting. This value does not affect the event log entries normally created by Windows Time.  |
 
 ---
 
-#### <a name="NtpClient"></a>HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+#### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -189,7 +178,7 @@ The following registry entries must be added in order to enable W32Time logging:
 
 ---
 
-#### <a name="NtpServer"></a> HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
+#### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
 
 |Registry Entry|Version|Description|
 |------------------------------------|---------------|----------------------------|
@@ -200,8 +189,9 @@ The following registry entries must be added in order to enable W32Time logging:
 
 ---
 
-#### <a name="MaxAllowedPhaseOffset"></a>MaxAllowedPhaseOffset information
-In order for W32Time to set the computer clock gradually, the offset must be less than the MaxAllowedPhaseOffset value and satisfy the following equation at the same time:  
+#### MaxAllowedPhaseOffset information
+In order for W32Time to set the computer clock gradually, the offset must be less than the **MaxAllowedPhaseOffset** value and satisfy the following equation at the same time:  
+
 ```  
 |CurrentTimeOffset| / (PhaseCorrectRate*UpdateInterval) < SystemClockRate / 2  
 ``` 
@@ -214,7 +204,7 @@ W32tm /query /status /verbose
 ClockRate: 0.0156000s  
 ```  
   
-SystemclockRate is the rate of the clock on the system. Using 156000 seconds as an example, the SystemclockRate would be = 0.0156000 * 1000 \* 10000 = 156000 clock ticks.  
+SystemclockRate is the rate of the clock on the system. Using 156000 seconds as an example, the SystemclockRate would be = 0.0156000 \* 1000 \* 10000 = 156000 clock ticks.  
   
 MaxAllowedPhaseOffset is also in seconds. To convert it to clock ticks, multiply MaxAllowedPhaseOffset*1000\*10000.  
   
@@ -279,7 +269,7 @@ YES/TRUE
 ```  
 In this case the clock will be set back slowly.  
   
-## <a name="w2k3tr_times_tools_vwtt"></a>Windows Time Service Group Policy Settings  
+## Windows Time Service Group Policy Settings  
 You can configure most W32Time parameters by using the Group Policy Object Editor. This includes configuring a computer to be an NTPServer or NTPClient, configuring the time synchronization mechanism, and configuring a computer to be a reliable time source.  
   
 > [!NOTE]  
@@ -338,13 +328,13 @@ The following table lists the available settings for the **Configure Windows NTP
 |SpecialPollInterval|3600|  
 |EventLogFlags|0|  
   
-## <a name="w2k3tr_times_tools_suxb"></a>Network Ports Used by the Windows Time Service  
+## Network Ports Used by the Windows Time Service  
 Windows Time follows the NTP specification, which requires the use of UDP port 123 for all time synchronization communication. This port is reserved by Windows Time and remains reserved at all times. Whenever the computer synchronizes its clock or provides time to another computer, that communication is performed on UDP port 123.  
   
 > [!NOTE]  
 > If you have a computer with multiple network adapters (also called a multihomed computer), you cannot selectively enable the Windows Time service based on the network adapter.  
   
-## <a name="w2k3tr_times_tools_qoep"></a>Related Information  
+## Related Information  
 The following resources contain additional information that is relevant to this section.  
   
 -   RFC *1305* in the IETF RFC Database  

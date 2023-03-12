@@ -20,8 +20,10 @@ This document contains a list of all of the documentation operations for AD FS f
 
 
 - [Access Control Policies in AD FS](../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)
+- [Additional Authentication methods in AD FS 2019](../ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
 - [AD FS Prompt login parameter support](../ad-fs/operations/AD-FS-Prompt-Login.md)
 - [AD FS 2016 Single Sign On Settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
+- [AD FS Paginated sign-in](../ad-fs/operations/AD-FS-paginated-sign-in.md)
 - [AD FS Rapid Restore Tool](../ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 - [AD FS support for alternate hostname binding for certificate authentication](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)
@@ -43,8 +45,10 @@ This document contains a list of all of the documentation operations for AD FS f
 - [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md) 
 - [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 - [Create a Relying Party Trust](../ad-fs/operations/Create-a-Relying-Party-Trust.md)
+- [Customize HTTP security response headers with AD FS 2019](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
+- [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
 - [Device Authentication Controls in AD FS](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
-- [GDPR Compliance and AD FS](../ad-fs/operations/GDPR-and-AD-FS-Compliance.md)
+
 - [Improved interoperability with SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 - [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)

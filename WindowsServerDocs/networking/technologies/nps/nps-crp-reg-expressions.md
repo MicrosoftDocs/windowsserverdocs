@@ -12,7 +12,7 @@ author: shortpatti
 
 # Use Regular Expressions in NPS
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic explains the use of regular expressions for pattern matching in NPS in Windows Server 2016. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
 
@@ -29,13 +29,13 @@ You can use the following table as a reference source when creating regular expr
 |`+`  |Matches the preceding character one or more times. |`/zo+/ matches "zoo" but not "z."` |
 |`?`  |Matches the preceding character zero or one times. |`/a?ve?/ matches the "ve" in "never."` |
 |`.`  |Matches any single character except a newline character.  | &nbsp; |
-|`( pattern )`  |Matches "pattern" and remembers the match.   |`To match ( ) (parentheses), use "\(" or "\)".`  |
-|`x | y `  |Matches either x or y.  |`/z|food?/ matches "zoo" or "food."` |
-|`{ n } `  |Matches exactly n times \(n is a non\-negative integer\).  |`/o{2}/ does not match the "o" in "Bob," but matches the first two instances of the letter o in "foooood."`  |
-|`{ n ,}`  |Matches at least n times \(n is a non\-negative integer\).  |`/o{2,}/ does not match the "o" in "Bob" but matches all of the instances of the letter o in "foooood." /o{1,}/ is equivalent to /o+/.`  |
-|`{ n , m }`  |Matches at least n and at most m times \(m and n are non\-negative integers\).  |`/o{1,3}/ matches the first three instances of the letter o in "fooooood."`  |
-|`[ xyz ]`  |Matches any one of the enclosed characters \(a character set\).  |`/[abc]/ matches the "a" in "plain."`  |
-|`[^ xyz ]`  |Matches any characters that are not enclosed \(a negative character set\).  |`/[^abc]/ matches the "p" in "plain."`  |
+|`(pattern)`  |Matches "pattern" and remembers the match.<br />To match the literal characters `(` and `)` (parentheses), use `\(` or `\)`.   | &nbsp;  |
+|`x|y `  |Matches either x or y.  |`/z|food?/ matches "zoo" or "food."` |
+|`{n} `  |Matches exactly n times \(n is a non\-negative integer\).  |`/o{2}/ does not match the "o" in "Bob," but matches the first two instances of the letter o in "foooood."`  |
+|`{n,}`  |Matches at least n times \(n is a non\-negative integer\).  |`/o{2,}/ does not match the "o" in "Bob" but matches all of the instances of the letter o in "foooood." /o{1,}/ is equivalent to /o+/.`  |
+|`{n,m}`  |Matches at least n and at most m times \(m and n are non\-negative integers\).  |`/o{1,3}/ matches the first three instances of the letter o in "fooooood."`  |
+|`[xyz]`  |Matches any one of the enclosed characters \(a character set\).  |`/[abc]/ matches the "a" in "plain."`  |
+|`[^xyz]`  |Matches any characters that are not enclosed \(a negative character set\).  |`/[^abc]/ matches the "p" in "plain."`  |
 |`\b`  |Matches a word boundary \(for example, a space\).  |`/ea*r\b/ matches the "er" in "never early."`  |
 |`\B`  |Matches a nonword boundary.  |`/ea*r\B/ matches the "ear" in "never early."`  |
 |`\d`  |Matches a digit character \(equivalent to digits from 0 to 9\).  | &nbsp; |
@@ -49,8 +49,8 @@ You can use the following table as a reference source when creating regular expr
 |`\v`  |Matches a vertical tab character.  | &nbsp; |
 |`\w`  |Matches any word character, including underscore \(equivalent to `[A-Za-z0-9_]`\).  | &nbsp; |
 |`\W`  |Matches any non\-word character, excluding underscore \(equivalent to `[^A-Za-z0-9_]`\).  | &nbsp; |
-|`\ num`  |Refers to remembered matches \(`?num`, where num is a positive integer\).  This option can be used only in the **Replace** text box when configuring attribute manipulation.| `\1` replaces what is stored in the first remembered match.  |
-|`/ n / `  |Allows the insertion of ASCII codes into regular expressions \(`?n`, where n is an octal, hexadecimal, or decimal escape value\).  | &nbsp; |
+|`\num`  |Refers to remembered matches \(`?num`, where num is a positive integer\).  This option can be used only in the **Replace** text box when configuring attribute manipulation.| `\1` replaces what is stored in the first remembered match.  |
+|`/n/ `  |Allows the insertion of ASCII codes into regular expressions \(`?n`, where n is an octal, hexadecimal, or decimal escape value\).  | &nbsp; |
 
 ## Examples for network policy attributes
 

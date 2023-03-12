@@ -1,7 +1,7 @@
 ---
 title: Copy the CA Certificate and CRL to the Virtual Directory
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: elizapo
+manager: dougkim
 ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
 ms.prod: windows-server-threshold
@@ -12,7 +12,7 @@ ms.date: 07/19/2018
 ---
 # Copy the CA Certificate and CRL to the Virtual Directory
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this procedure to copy the Certificate Revocation List and Enterprise root CA certificate from your certification authority to a virtual directory on your Web server, and to ensure that AD CS is configured correctly. Before running the commands below, ensure that you replace directory and server names with those that are appropriate for your deployment.  
   
@@ -23,11 +23,8 @@ To perform this procedure you must be a member of **Domain Admins**.
 1.  On CA1, run Windows PowerShell as an Administrator, and then publish the CRL with the following command:  
   
     - Type `certutil -crl`, and then press ENTER.  
-  
-    - To copy the CA certificate to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`, and then press ENTER.  
+
     - To copy the certificate revocation lists to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, and then press ENTER.  
-  
-2. To restart AD CS, type `Restart-Service certsvc`, and then press ENTER.  
   
 2.  To verify that your CDP and AIA extension locations are correctly configured, type `pkiview.msc`, and then press ENTER. The pkiview Enterprise PKI MMC opens.  
   

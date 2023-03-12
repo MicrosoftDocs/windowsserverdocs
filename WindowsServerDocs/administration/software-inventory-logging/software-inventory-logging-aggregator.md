@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # Software Inventory Logging Aggregator
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2
+>Applies To: Windows Server 2012 R2
 
 ## What is Software Inventory Logging Aggregator?
 Software Inventory Logging Aggregator (SILA) receives, aggregates, and produces basic reports of the number and types of Microsoft enterprise software installed on Windows Servers in a data center.
@@ -68,8 +68,6 @@ Once deployed correctly, the following data can be viewed at the SIL Aggregator:
 
 Software Inventory Logging Aggregator (SIL Aggregator) on a minimum of one server for aggregation and reports, either in a VM or on physical hardware):
 
--   **Windows Server 2016**
-
 -   **Windows Server 2012 R2** (Standard or Datacenter Edition)
 
 -   **The IIS server role,** with .Net Framework 4.5, WCF Services, and HTTP Activation, all in the same selection tree in **Add Roles and Features Wizard**.
@@ -80,7 +78,12 @@ Software Inventory Logging Aggregator (SIL Aggregator) on a minimum of one serve
 
 -   Optional: **VMware PowerCLI 5.5.0.5836** (needed in VMware environments)
 
+>[!Note]
+>When using the Windows Management Framework, there is a known compatibility issue with WMF release 5.1, on the SIL Aggregator only.  It is not necessary to exceed WMF version 4.0 on servers with SIL Aggregator installed.
+
 Software Inventory Logging (SIL) exists in Windows Server versions with the following updates installed:
+
+-   **Windows Server 2016**, or higher
 
 -   **Windows Server 2012 R2** (Standard or Datacenter Edition)
 
@@ -173,7 +176,7 @@ There are some things you need to make sure of before installing SIL Aggregator 
 
 6.  In **Choose an Account Type**, select either **local user** or **gMSA**, depending on your preference.
 
-    Choosing the local user account option will create a local user with an auto generated strong password. This account will be used for all SIL Aggregator services and task operations on the local server.  Using Group Managed Service Accounts (gMSA) is recommended if the Aggregator is part of an Active Directory domain (Windows Server 2012 and above). For more information on gMSA, see: [Group Managed Service Accounts Overview](https://technet.microsoft.com/en-us/library/hh831782.aspx)
+    Choosing the local user account option will create a local user with an auto generated strong password. This account will be used for all SIL Aggregator services and task operations on the local server.  Using Group Managed Service Accounts (gMSA) is recommended if the Aggregator is part of an Active Directory domain (Windows Server 2012 and above). For more information on gMSA, see: [Group Managed Service Accounts Overview](https://technet.microsoft.com/library/hh831782.aspx)
 
     -   The gMSA account option must be used if you plan to run the SQL Server database on a separate server from the SIL Aggregator.
 
@@ -230,7 +233,7 @@ Once you have Software Inventory Logging Aggregator installed on your server, op
 
     -   Run `Start-SilAggregator`
 
-        This is required for your Aggregator to actively receive data being forwarded to it over HTTPS from your servers you have (or will) set up to be inventoried. Note that even if you have enabled your servers to forward to this Aggregator first, it is ok, as they will cache their data payloads locally for up to 30 days. Once the Aggregator, their “targeturi�? is up and running, all cached data will be forwarded at once to the Aggregator and all data will be processed.
+        This is required for your Aggregator to actively receive data being forwarded to it over HTTPS from your servers you have (or will) set up to be inventoried. Note that even if you have enabled your servers to forward to this Aggregator first, it is ok, as they will cache their data payloads locally for up to 30 days. Once the Aggregator, their "targeturi" is up and running, all cached data will be forwarded at once to the Aggregator and all data will be processed.
 
     -   Run `Add-SilVMHost`
 
@@ -242,18 +245,18 @@ Once you have Software Inventory Logging Aggregator installed on your server, op
 
         -   This cmdlet will auto detect from a preset list of options (see **SIL Aggregator Cmdlets Detail** section), which HostType and HyperVisorType is correct for the host you are adding. If it is unable to recognize these or the credentials provided are incorrect, a prompt will be displayed. If you accept with a **Y** entry, the host will be added, listed as **Unknown**, but it will not be polled.
 
-    -   Run `Set-SilAggregator –AddCertificateThumbprint` “your client certificate’s thumbprint�?
+    -   Run `Set-SilAggregator –AddCertificateThumbprint` "your client certificate’s thumbprint"
 
         This is required to receive data over HTTPS from Windows Servers with SIL Logging enabled. The thumbprint will be added to the list of thumbprints that the SIL Aggregator will accept data from. The SIL Aggregator is designed to accept valid enterprise client authentication certificates. The certificate used will need to be installed in the **\\localmachine\MY (Local Computer -> Personal**) store on the server forwarding the data.
 
 -   On your Windows Servers to be inventoried, open PowerShell as an administrator and run these commands:
 
-    -   Run `Set-SilLogging –TargetUri “https://contososilaggregator�? –CertificateThumbprint “your client certificate’s thumbprint�?`
+    -   Run `Set-SilLogging –TargetUri "https://contososilaggregator" –CertificateThumbprint "your client certificate’s thumbprint"`
 
         -   This will tell SIL in Windows Server where to send inventory data and which certificate to use for authentication.
 
             > [!IMPORTANT]
-            > Make sure “https://’ is in the TargetUri value.
+            > Make sure "https://’ is in the TargetUri value.
 
         -   The enterprise client certificate with this thumbprint needs to be installed in **\localmachine\MY** or use **certmgr.msc** to install the certificate in **Local Computer -> Personal** store.
 
@@ -262,7 +265,7 @@ Once you have Software Inventory Logging Aggregator installed on your server, op
 
     -   Run `Start-SilLogging`
 
-        This starts SIL Logging. Each hour, at random intervals within the hour, SIL will forward its inventory data to the Aggregator specified with the `–targeturi` parameter. The first forward will be a complete set of data. Each subsequent forward will be more of a “heartbeat�? with just identifying data that nothing has changed. If there is any change to the data set, another complete set of data will be forwarded.
+        This starts SIL Logging. Each hour, at random intervals within the hour, SIL will forward its inventory data to the Aggregator specified with the `–targeturi` parameter. The first forward will be a complete set of data. Each subsequent forward will be more of a "heartbeat" with just identifying data that nothing has changed. If there is any change to the data set, another complete set of data will be forwarded.
 
     -   Run `Publish-SilData`
 
@@ -311,7 +314,7 @@ You will need a valid client SSL certificate in .pfx format to use these steps. 
 
 -   `Import-PfxCertificate -FilePath c:\`**<location\\certificatename.pfx>** `cert:\localMachine\my -Password $mypwd`
 
--   `Set-sillogging –targeturi “https://`**<machinename of your SIL Aggregator>** `–certificatethumbprint`
+-   `Set-sillogging –targeturi "https://`**<machinename of your SIL Aggregator>** `–certificatethumbprint`
 
 > [!NOTE] 
 > Use the Certificate thumbprint from your client pfx file and added to your SIL Aggregator using the **Set-SilAggregator `-AddCertificateThumbprint** cmdlet.
@@ -329,7 +332,7 @@ Add `Publish-SilData` to the above list if pushing SIL data to a new SIL Aggrega
 On a Software Inventory Logging Aggregator, the SQL Server Analysis Services cube will be processed once a day at 3:00:00 AM local system time. Reports will reflect all data up until that time, but nothing after that time on the same day.
 
 ### High-Water Mark
-A fundamental aspect of Software Inventory Logging Aggregator reports is the capture of what is commonly referred to as a “high-water mark�? of simultaneously running Windows Servers. This applies to Windows Server and System Center counts in these reports. For Windows Server, each physical host has a point in time (regardless of the OS type on the host), over the course of a month, when the most Windows Server VMs are running simultaneously. This is the high-water mark for the month. Additionally, for System Center, there is a point in time in the month when the most managed Windows Servers are simultaneously running per physical host (a managed server is identified when one or more System Center agents are present). Only the most recent high-water mark for any physical host will be shown in the report. No data after the high-water mark will be shown. and it can be assumed that the number of Windows Server VMs (WS tabs), or managed Windows Server VMs (SC tabs), has fallen below the high-water mark after that point. This manner of tracking and representing usage is intended to help with capacity planning as well as aligning with license models for these products.
+A fundamental aspect of Software Inventory Logging Aggregator reports is the capture of what is commonly referred to as a "high-water mark" of simultaneously running Windows Servers. This applies to Windows Server and System Center counts in these reports. For Windows Server, each physical host has a point in time (regardless of the OS type on the host), over the course of a month, when the most Windows Server VMs are running simultaneously. This is the high-water mark for the month. Additionally, for System Center, there is a point in time in the month when the most managed Windows Servers are simultaneously running per physical host (a managed server is identified when one or more System Center agents are present). Only the most recent high-water mark for any physical host will be shown in the report. No data after the high-water mark will be shown. and it can be assumed that the number of Windows Server VMs (WS tabs), or managed Windows Server VMs (SC tabs), has fallen below the high-water mark after that point. This manner of tracking and representing usage is intended to help with capacity planning as well as aligning with license models for these products.
 
 On SQL related tabs in the report, SQL Server installs are counted cumulatively; not by hig-water mark. Totals are a running count of SQL Server installs.
 
@@ -337,7 +340,7 @@ On SQL related tabs in the report, SQL Server installs are counted cumulatively;
 > Use of Software Inventory Logging does not replace the obligation to accurately report usage of Microsoft software under applicable license terms.
 
 ### Poll Date Time
-When using Software Inventory Logging Aggregator, it is important to understand that aggregation for high-water mark counts is poll driven. In other words, a high-water mark can only be captured by a poll of the underlying physical host. Thus high-water mark counts are directly associated with a corresponding “Poll Date Time.�? While poll interval is adjustable, the fidelity of high-water marks captured will be impacted if a higher interval value is used. The higher the interval, the less representative the data will be of actual usage.
+When using Software Inventory Logging Aggregator, it is important to understand that aggregation for high-water mark counts is poll driven. In other words, a high-water mark can only be captured by a poll of the underlying physical host. Thus high-water mark counts are directly associated with a corresponding "Poll Date Time." While poll interval is adjustable, the fidelity of high-water marks captured will be impacted if a higher interval value is used. The higher the interval, the less representative the data will be of actual usage.
 
 ### Reports Are Month by Month
 All reports, even yearly reports, are represented as month by month reports. High-water marks, totals, as well as machine data, are reset at the beginning of each calendar month.
@@ -354,24 +357,24 @@ Report data impacted by the switch to a new month includes:
 
 -   Ignore all values that are grey or dim. These are artifacts of the report creation from the SSAS cube.
 
--   If a VM is listed with “Unknown OS,�? it means that the Aggregator has not received a full data payload from that VM via SIL over HTTPS.
+-   If a VM is listed with "Unknown OS," it means that the Aggregator has not received a full data payload from that VM via SIL over HTTPS.
 
--   VMs listed under “Unknown Host�? are Windows Server VMs successfully forwarding inventory data over HTTPS to the Aggregator, but the Aggregator is not actively or successfully polling the underlying host for that VM. Counts will always be zero for these entries since the underlying host is unknown. Use the `Add-SilVMHost` cmdlet, with correct credentials, to add the host (or all hosts) to SIL Aggregator for polling. Once polled successfully, the VM data and the host data will be associated on reports moving forward.
+-   VMs listed under "Unknown Host" are Windows Server VMs successfully forwarding inventory data over HTTPS to the Aggregator, but the Aggregator is not actively or successfully polling the underlying host for that VM. Counts will always be zero for these entries since the underlying host is unknown. Use the `Add-SilVMHost` cmdlet, with correct credentials, to add the host (or all hosts) to SIL Aggregator for polling. Once polled successfully, the VM data and the host data will be associated on reports moving forward.
 
 -   All dates and times are local to the SIL Aggregator system time and locale. This includes inventory data received over HTTPS from SIL enabled systems. When these files are processed (no more than 20 minutes after receiving) the data is inserted into the database with the local system time.
 
--   “SIL Aggregator�? will be denoted on any server machine that has Software Inventory Logging Aggregator installed.
+-   "SIL Aggregator" will be denoted on any server machine that has Software Inventory Logging Aggregator installed.
 
 -   If a physical host changes either number of processors or amount of physical memory, a new row will appear in the report along with the old row. Polling updates will cease on the old row and proceed on the new row as if it is a newly added host.
 
--   On **Summary** and **Detail** tabs, the total listed in columns for Simultaneously Running Windows Servers or managed Windows Servers indicate a total of all the high-water marks for all hosts below. These include Windows Servers that are not hypervisor hosts and have no VMs running, as well as servers that may have VMs running but they are “Unknown,�? as no data is being received from within the VM from SIL via HTTPS. These are totaled for convenience.
+-   On **Summary** and **Detail** tabs, the total listed in columns for Simultaneously Running Windows Servers or managed Windows Servers indicate a total of all the high-water marks for all hosts below. These include Windows Servers that are not hypervisor hosts and have no VMs running, as well as servers that may have VMs running but they are "Unknown," as no data is being received from within the VM from SIL via HTTPS. These are totaled for convenience.
 
 -   In the **SQL Server** section of the **Dashboard** tab, total SQL Server installation count is a summary of all the edition totals on the Dashboard.  This can lead to a discrepancy between the total seen on the **SQL Detail** tab in cases where multiple editions of SQL are installed on a single server.  The Dashboard would count these separately on each server, the **Detail** tab does not.  Multiple SQL editions installed on one Windows Server is always counted as a count of one,  per licensing terms.
 
 -   In the **Windows Server** section of the **Dashboard** tab, rows for **Other Hypervisor Hosts** and **Total Hypervisor Hosts** include physical Windows Server hosts that may or may NOT be running Hyper-V.
 
 ### Column Descriptions
-Following are descriptions of each column on the **Windows Server Detail** tab of the Excel based report SIL Aggregator creates. Other data tabs are either the same or a subset of these columns. The one exception would be the “Install Count�? on the SQL Server tabs (see **High-Water Mark** section).
+Following are descriptions of each column on the **Windows Server Detail** tab of the Excel based report SIL Aggregator creates. Other data tabs are either the same or a subset of these columns. The one exception would be the "Install Count" on the SQL Server tabs (see **High-Water Mark** section).
 
 |Column Header|Description|
 |-----------------|---------------|
@@ -392,7 +395,7 @@ Following are descriptions of each column on the **Windows Server Detail** tab o
 |Host Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server physical host.<br /><br />It is supported to have physical hosts, running Windows Server and HyperV, to enable SIL and forward inventory data over HTTPS to a SIL Aggregator.|
 
 ## SIL Aggregator Cmdlets Detail
-Following are details of the SIL Aggregator cmdlets. For the full cmdlet documentation, see: [SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/en-us/library/mt548455.aspx)
+Following are details of the SIL Aggregator cmdlets. For the full cmdlet documentation, see: [SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)
 
 ### Publish-SilReport
 
@@ -409,7 +412,7 @@ Following are details of the SIL Aggregator cmdlets. For the full cmdlet documen
     -   Before connecting for the first time, in most cases you will need to open a port in the firewall on the SIL Aggregator database server to allow connections. IT Pros will want to set this up beforehand to allow their finance controllers or other inventory managers access to create their own reports. For steps to do this, see the link below. A typical default port for SQL Server Analysis Services is 2383.
 
 ### Add-SilVMHost
-The following host types and hypervisor versions are supported when using the `Add-SilVMHost` cmdlet. Note that it is not required to specify these. The `Add-SilVMHost` cmdlet will automatically detect a supported combination. If it is unable to detect, or the credentials provided are incorrect, a prompt will be displayed. If the user accepts with a “Y�? entry, the host will be added but it will not be polled. It will be added as “Unknown�?.
+The following host types and hypervisor versions are supported when using the `Add-SilVMHost` cmdlet. Note that it is not required to specify these. The `Add-SilVMHost` cmdlet will automatically detect a supported combination. If it is unable to detect, or the credentials provided are incorrect, a prompt will be displayed. If the user accepts with a "Y" entry, the host will be added but it will not be polled. It will be added as "Unknown".
 
 |Hypervisor Version|SIL Aggregator         HostType Value|SIL Aggregator HypervisorType Value|
 |----------------------|-----------------------------------------|---------------------------------------|
@@ -525,7 +528,11 @@ With the `Set-SilAggregator` cmdlet you can:
 
     -   Don’t forget to reboot the server after joining it to the gMSA enabled machine group in Active Directory.
 
-    -   In the installation process, don’t use fully qualified domain when entering domain\user. For example, use **mydomain\gmsaaccount$**. Don’t enter **mydomain.com\gmsaaccount$**.
+    -   In the installation process, don’t use fully qualified domain when entering domain\user. For example, use **mydomain\gmsaaccount**. Don’t enter **mydomain.<i></i>com\gmsaaccount**.
+
+-   When using the Windows Management Framework in your environment:
+
+    -   Be sure the server(s) with SILA installed do not have WMF 5.1 installed.  It is possible to hit an error in the event log regarding the DLL **'mpunits.dll'**.  This will prevent proper operation.  SILA only requires WMF 4.0.
 
 ## Managing SIL Over Time
 
@@ -566,7 +573,7 @@ When you want to start inventorying servers in your environment with a different
 
     4.  Right click **dbo.SqlServerEdition**, and then select ‘**Edit Top 200 Rows**’.
 
-    5.  Change the PropertyNumValue next to “Standard Edition�? to **2760240536** (from -1534726760).
+    5.  Change the PropertyNumValue next to "Standard Edition" to **2760240536** (from -1534726760).
 
     6.  Close the query to save the change.
 
@@ -574,7 +581,7 @@ When you want to start inventorying servers in your environment with a different
 
 -   In SIL generated reports, all processor core counts include the count of threads if hyper-threading is enabled on the physical server.  To get actual physical core counts on servers with hyperthreading enabled, it is necessary to reduce these counts by half.
 
--   Totals in the rows (on **Dashboard** tab) and columns (on **Summary and Detail** tabs) labeled “**Simultaneously Running**…�?, for both Windows Server and System Center don’t exactly match between the two locations. On the **Dashboard** tab, it is necessary to add “**Windows Server Devices (with no known VMs**)�? value to the “**Simultaneously Running**…�? value to equal this number on the **Summary and Detail** tabs.
+-   Totals in the rows (on **Dashboard** tab) and columns (on **Summary and Detail** tabs) labeled "**Simultaneously Running**…", for both Windows Server and System Center don’t exactly match between the two locations. On the **Dashboard** tab, it is necessary to add "**Windows Server Devices (with no known VMs**)" value to the "**Simultaneously Running**…" value to equal this number on the **Summary and Detail** tabs.
 
 -   See **IMPORTANT STEPS TO AVOID DATA LOSS** when changing or updating certificates under the **Managing SIL Over Time** section of this documentation.
 
@@ -582,8 +589,8 @@ When you want to start inventorying servers in your environment with a different
 
 ## See Also
 [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/en-us/download/details.aspx?id=49046)<br>
-[SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/en-us/library/mt548455.aspx)<br>
-[SIL PowerShell cmdlets](https://technet.microsoft.com/en-us/library/dn283390.aspx)<br>
-[An Overview of SIL](https://technet.microsoft.com/en-us/library/dn268301.aspx)<br>
-[Managing SIL](https://technet.microsoft.com/en-us/library/dn383584.aspx)
+[SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)<br>
+[SIL PowerShell cmdlets](https://technet.microsoft.com/library/dn283390.aspx)<br>
+[An Overview of SIL](https://technet.microsoft.com/library/dn268301.aspx)<br>
+[Managing SIL](https://technet.microsoft.com/library/dn383584.aspx)
 

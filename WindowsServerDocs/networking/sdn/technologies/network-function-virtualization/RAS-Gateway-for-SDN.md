@@ -15,9 +15,13 @@ author: shortpatti
 ---
 # RAS Gateway for SDN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016## RAS Gateway for SDN  
 
-You can use this topic to learn about RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016 that is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.  
+
+RAS Gateway is a software-based, multitenant, Border Gateway Protocol (BGP) capable router designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization. RAS Gateways routes network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations.   
+
+Multitenancy is the ability of a cloud infrastructure to support the virtual machine workloads of multiple tenants, yet isolate them from each other, while all of the workloads run on the same infrastructure. The multiple workloads of an individual tenant can interconnect and be managed remotely, but these systems do not interconnect with the workloads of other tenants, nor can other tenants remotely manage them.
+
   
 > [!NOTE]  
 > In addition to this topic, the following RAS Gateway topics are available.  
@@ -28,10 +32,7 @@ You can use this topic to learn about RAS Gateway, which is a software-based, mu
 > -   [Border Gateway Protocol &#40;BGP&#41;](../../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)  
 > -   [BGP Windows PowerShell Command Reference](../../../../remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md)  
   
-In  Windows Server 2016, RAS Gateway routes network traffic between the physical network and VM network resources, regardless of where the resources are located. You can use RAS Gateway to route network traffic between physical and virtual networks at the same physical location or at many different physical locations over the Internet.  
-  
-Multitenancy is the ability of a cloud infrastructure to support the virtual machine workloads of multiple tenants, yet isolate them from each other, while all of the workloads run on the same infrastructure. The multiple workloads of an individual tenant can interconnect and be managed remotely, but these systems do not interconnect with the workloads of other tenants, nor can other tenants remotely manage them.  
-  
+    
 ## Prerequisites for installing RAS Gateway for SDN  
 You cannot use the Windows interface to install Remote Access when you want to deploy RAS Gateway in multitenant mode for use with SDN. Instead, you must use Windows PowerShell.  
   

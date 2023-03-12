@@ -8,12 +8,12 @@ ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 04/18/2018
+ms.date: 10/24/2018
 ms.localizationpriority: 
 ---
 # Collect diagnostic data with Storage Spaces Direct
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 There are various diagnostic tools that can be used to collect the data needed to troubleshoot Storage Spaces Direct and Failover Cluster. In this article, we will focus on **Get-SDDCDiagnosticInfo** - a one touch tool that will gather all relevant information to help you diagnose your cluster.
 
@@ -33,7 +33,7 @@ The **Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. **Get-PCStorageDiagnost
 
 There are two methods of installing the script, both of which are outlines below.
 
-### PowerShell Gallery 
+### PowerShell Gallery
 
 The [PowerShell Gallery](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) is a snapshot of the GitHub Repo. Note that installing items from the PowerShell Gallery requires the latest version of the PowerShellGet module, which is available in Windows 10, in Windows Management Framework (WMF) 5.0, or in the MSI-based installer (for PowerShell 3 and 4).
 
@@ -51,7 +51,7 @@ To update the module, run the following command in PowerShell:
 Update-Module PrivateCloud.DiagnosticInfo
 ```
 
-### GitHub 
+### GitHub
 
 The [GitHub Repo](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) is the most up-to-date version of the module, since we are continually iterating here. To install the module from GitHub, download the latest module from the [archive](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) and extract the PrivateCloud.DiagnosticInfo directory to the correct PowerShell modules path pointed by ```$env:PSModulePath```
 
@@ -87,46 +87,96 @@ If you need to get this module on an offline cluster, download the zip, move it 
 
 After you have enabled event channels and completed the installation process, you can use the Get-SDDCDiagnosticInfo PowerShell cmdlet in the module to get:
 
-1. Reports on storage health, plus details on unhealthy components
-2. Reports of storage capacity by pool, volume and deduplicated volume
-3. Event logs from all cluster nodes and a summary error report
+- Reports on storage health, plus details on unhealthy components
+- Reports of storage capacity by pool, volume and deduplicated volume
+- Event logs from all cluster nodes and a summary error report
 
 Assume that your storage cluster has the name *"CLUS01".*
 
 To execute against a remote storage cluster:
+
 ``` PowerShell
 Get-SDDCDiagnosticInfo -ClusterName CLUS01
 ```
 
 To execute locally on clustered storage node:
+
 ``` PowerShell
 Get-SDDCDiagnosticInfo
 ```
 
 To save results to a specified folder:
+
 ``` PowerShell
 Get-SDDCDiagnosticInfo -WriteToPath D:\Folder 
 ```
+
+Here is an example of how this looks on a real cluster:
+
+``` PowerShell
+New-Item -Name SDDCDiagTemp -Path d:\ -ItemType Directory -Force
+Get-SddcDiagnosticInfo -ClusterName S2D-Cluster -WriteToPath d:\SDDCDiagTemp
+```
+
+As you can see, script will also do validation of current cluster state
+
+![data collection powershell screenshot](media/data-collection/CollectData.png)
+
+As you can see, all data are being written to SDDCDiagTemp folder
+
+![data in file explorer screenshot](media/data-collection/CollectDataFolder.png)
+
+After script will finish, it will create ZIP in your users directory
+
+![data zip in powershell screenshot](media/data-collection/CollectDataResult.png)
+
+Let's generate a report into a text file
+
+```PowerShell
+#find the latest diagnostic zip in UserProfile
+    $DiagZip=(get-childitem $env:USERPROFILE | where Name -like HealthTest*.zip)
+    $LatestDiagPath=($DiagZip | sort lastwritetime | select -First 1).FullName
+#expand to temp directory
+    New-Item -Name SDDCDiagTemp -Path d:\ -ItemType Directory -Force
+    Expand-Archive -Path $LatestDiagPath -DestinationPath D:\SDDCDiagTemp -Force
+#generate report and save to text file
+    $report=Show-SddcDiagnosticReport -Path D:\SDDCDiagTemp
+    $report | out-file d:\SDDCReport.txt
+    
+```
+
+For reference, here is a link to the [sample report](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/SDDCReport.txt) and [sample zip](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/HealthTest-S2D-Cluster-20180522-1546.ZIP).
+
+To view this in Windows Admin Center (version 1812 onwards), navigate to the *Diagnostics* tab. As you see in the screenshot below, you can 
+
+- Install diagnostic tools
+- Update them (if they are out-of-date), 
+- Schedule daily diagnostic runs (these have a low impact on your system, usually take <5 minutes in the background, and won't take up more than 500mb on your cluster)
+- View previously collected diagnostic information if you need to give it to support or analyze it yourself.
+
+![wac diagnostics screenshot](media/data-collection/Wac.png)
 
 ## Get-SDDCDiagnosticInfo output
 
 The following are the files included in the zipped output of Get-SDDCDiagnosticInfo.
 
 ### Health Summary Report
+
 The health summary report is saved as:
 - 0_CloudHealthSummary.log
 
 This file is generated after parsing all the data collected and is meant to provide a quick summary of your system. It contains:
-1. System information
-2. Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy components, etc.)
-3. Details on unhealthy components (cluster resources that are offline, failed, or online pending)
-4. Firmware and driver information
-5. Pool, physical disk, and volume details
-6. Storage Performance (performance counters are collected)
+
+- System information
+- Storage health overview (number of nodes up, resources online, cluster shared volumes online, unhealthy components, etc.)
+- Details on unhealthy components (cluster resources that are offline, failed, or online pending)
+- Firmware and driver information
+- Pool, physical disk, and volume details
+- Storage Performance (performance counters are collected)
 
 This report is being continually updated to include more useful information. For the latest information, see the [GitHub README](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/edit/master/README.md).
 
-### Logs and XMLfiles
+### Logs and XML files
 
 The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
@@ -183,6 +233,18 @@ If you want to keep both the **log-level** and the **keyword-mask** at their def
 
 These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
 -->
+
+## How to consume the XML files from Get-PCStorageDiagnosticInfo
+You can consume the data from the XML files provided in data collected by the **Get-PCStorageDiagnosticInfo** cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs. 
+
+To see the results of these outputs, open a PowerShell window and run the following steps. 
+
+```PowerShell
+ipmo storage
+$d = import-clixml <filename> 
+$d
+```
+
 ## What to expect next?
 A lot of improvements and new cmdlets to analyze SDDC system health.
 Provide feedback on what you'd like to see by filing issues [here](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/issues). Also, feel free to contribute helpful changes to the script, by submitting a [pull request](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/pulls).

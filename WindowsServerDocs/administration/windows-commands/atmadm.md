@@ -19,19 +19,26 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network. You can use **atmadm** to display statistics for incoming and outgoing calls on atM adapters. Used without parameters, **atmadm** displays statistics for monitoring the status of active atM connections. 
+
 ## Syntax
+
 ```
 atmadm [/c][/a][/s]
 ```
+
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
 |/c|Displays call information for all current connections to the atM network adapter installed on this computer.|
 |/a|Displays the registered atM network service access point (NSAP) address for each adapter installed in this computer.|
 |/s|Displays statistics for monitoring the status of active atM connections.|
 |/?|Displays help at the command prompt.|
+
 ## Remarks
--   The **atmadm /c** command produces output similar to the following:
+
+- The **atmadm /c** command produces output similar to the following:
+
     ```
     Windows atM call Manager Statistics
     atM Connections on Interface : [009] Olicom atM PCI 155 Adapter
@@ -62,7 +69,9 @@ atmadm [/c][/a][/s]
                               Tx:UBR,Peak 0,Avg 0,MaxSdu 0
                               Rx:UBR,Peak 16953936,Avg 16953936,MaxSdu 9180
     ```
+    
     The following table contains descriptions of each element in the **atmadm /c** sample output.
+    
     |type of Data|Screen Display|Description|
     |--------|---------|--------|
     |Connection Information|In/Out|direction of the call.  **In** is to the atM network adapter from another device.  **Out** is from the atM network adapter to another device.|
@@ -74,13 +83,17 @@ atmadm [/c][/a][/s]
     |remote address/Media Parameters|47000580FFE1000000F21A2E180000C110081500|NSAP address of the calling **(In)** or called **(Out)** atM device.|
     ||**Tx**|The **Tx** parameter includes the following three elements:<br /><br />-   Default or specified bit-rate type (UBR, CBR, VBR, or ABR)<br />-   Default or specified line speed<br />-   Specified service data unit (SDU) size|
     ||**Rx**|The **Rx** parameter includes the following three elements:<br /><br />-   Default or specified bit-rate type (UBR, CBR, VBR, or ABR)<br />-   Default or specified line speed<br />-   Specified SDU size|
--   The **atmadm /a** command produces output similar to the following:
+    
+- The **atmadm /a** command produces output similar to the following:
+
     ```
     Windows atM call Manager Statistics
     atM addresses for Interface : [009] Olicom atM PCI 155 Adapter
     47000580FFE1000000F21A2E180000C110081500
     ```
--   The **atmadm /s** command produces output similar to the following:
+    
+- The **atmadm /s** command produces output similar to the following:
+
     ```
     Windows atM call Manager Statistics
     atM call Manager statistics for Interface : [009] Olicom atM PCI 155 Adapter
@@ -94,7 +107,9 @@ atmadm [/c][/a][/s]
     Signaling and ILMI Packets Sent            = 33655
     Signaling and ILMI Packets Received        = 34989
     ```
+    
     The following table contains descriptions of each element in the **atmadm /s** sample output.
+    
     |call Manager Statistic|Description|
     |-------------|--------|
     |Current active calls|calls currently active on the atM adapter installed on this computer.|
@@ -106,18 +121,27 @@ atmadm [/c][/a][/s]
     |calls Closed Locally|calls closed by this computer.|
     |Signaling and ILMI Packets Sent|Number of integrated local management interface (ILMI) packets sent to the switch to which this computer is attempting to connect.|
     |Signaling and ILMI Packets Received|Number of ILMI packets received from the atM switch.|
+    
 ## <a name="BKMK_Examples"></a>Examples
+
 To display call information for all current connections to the atM network adapter installed on this computer, type:
+
 ```
 atmadm /c
 ```
+
 To display the registered atM network service access point (NSAP) address for each adapter installed in this computer, type:
+
 ```
 atmadm /a
 ```
+
 To display statistics for monitoring the status of active atM connections, type:
+
 ```
 atmadm /s
 ```
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+
+## Additional references
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

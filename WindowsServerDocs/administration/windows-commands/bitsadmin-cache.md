@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache
-description: "Windows Commands topic for **bitsadmin cache** commands - Contains a list of the bitsadmin /Cache commands"
+description: "Windows Commands topic for **bitsadmin cache** switches - Contains a list of the bitsadmin /Cache switches"
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -37,8 +37,8 @@ bitsadmin /Cache /SetExpirationtime
 
 |Parameter|Description|
 |-------|--------|
-|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|Displays the command\-line usage for the \/Cache commands.|
-|[bitsadmin cache clear](bitsadmin-cache-clear.md)|Purges the local cache.|
+|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|Displays the command\-line usage for the \/Cache switches.|
+|[bitsadmin cache and clear](bitsadmin-cache-clear.md)|Purges the local cache.|
 |[bitsadmin cache and delete](bitsadmin-cache-and-delete.md)|deletes a cache entry.|
 |[bitsadmin cache and deleteurl](bitsadmin-cache-and-deleteurl.md)|deletes all cache entries for the given URL.|
 |[bitsadmin cache and list](bitsadmin-cache-and-list.md)|lists all cache entries.|

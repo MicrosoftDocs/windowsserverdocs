@@ -12,8 +12,8 @@ ms.topic: article
 ms.assetid: 0f78ef4c-dd12-4b1b-8c6e-251dd803c5d1
 author: jaimeo
 ms.author: jaimeo
-manager: elizapo
-ms.localizationpriority: high
+manager: dougkim
+ms.localizationpriority: medium
 ---
 # Migrating Roles and Features in Windows Server
 
@@ -39,7 +39,7 @@ Updated migration guides for Windows Server 2016 are under development. Check ba
 - [Remote Desktop Services](https://technet.microsoft.com/windows-server-docs/compute/remote-desktop-services/migrate-rds-role-services)
 - [Web Server (IIS)](https://www.iis.net/downloads/microsoft/web-deploy)
 - [Windows Server Update Services](https://technet.microsoft.com/library/hh852339.aspx)
-- [MultiPoint Services](https://technet.microsoft.com/en-us/windows-server-docs/compute/remote-desktop-services/multipoint-services/multipoint-services-migrate)
+- [MultiPoint Services](https://technet.microsoft.com/windows-server-docs/compute/remote-desktop-services/multipoint-services/multipoint-services-migrate)
  
 ## Windows Server 2012 R2
 

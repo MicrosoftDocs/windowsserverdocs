@@ -63,6 +63,6 @@ The  Windows Server Essentials Log Collector installation wizard installs the Lo
   
 3.  Click **OK** if you are prompted.  
   
-4.  Double-click the file name ending with ˜.msi �� and select a folder in which to extract it.  
+4.  Double-click the file name ending with '.msi' and select a folder in which to extract it.  
   
 5.  Navigate to the folder with the extracted file and double-click the installation file to use the wizard to finish the installation.

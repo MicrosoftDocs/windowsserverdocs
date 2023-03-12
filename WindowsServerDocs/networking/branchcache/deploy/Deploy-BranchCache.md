@@ -12,7 +12,7 @@ author: shortpatti
 ---
 # Deploy BranchCache
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 The following sections provide information about deploying BranchCache in distributed and hosted cache modes.  
   

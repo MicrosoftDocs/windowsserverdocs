@@ -1,7 +1,7 @@
 ---
-title: Configure Quality of Service (QoS) for a Tenant VM Network Adapter
-description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
-manager: brianlic
+title: Configure Quality of Service (QoS) for a tenant VM network adapter
+description: When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,28 +12,31 @@ ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: pashort
 author: shortpatti
+ms.date: 08/23/2018
 ---
-# Configure Quality of Service (QoS) for a Tenant VM Network Adapter
+# Configure Quality of Service (QoS) for a tenant VM network adapter
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
 
-1.	**DCB**. You can configure DCB by using the Windows PowerShell NetQoS cmdlets. For an example see the section “Enable Data Center Bridging”  in the topic [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+1.	**DCB**. You can configure DCB by using the Windows PowerShell NetQoS cmdlets. For an example, see the section “Enable Data Center Bridging”  in the topic [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
 
 2.	**SDN QoS**. You can enable SDN QoS by using Network Controller, which can be set to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users.  You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM is accessible regardless of the amount of network traffic.  
 
-All SDN Qos Settings are applied through the Port Settings of the Network Interface properties according to the following table.
+Apply all SDN QoS settings through the Port settings of the Network Interface properties. Refer to the table below for more details.
 
 |Element name|Description|
 |------------|-----------| 
-|macSpoofing|Specifies whether VMs can change the source media access control \(MAC\) address in outgoing packets to a MAC address that is not assigned to the VM. Allowed values are "enabled" \(allowing the VM to use a different MAC address\) and "disabled" \(allowing the VM to use only the MAC address assigned to it\).|
-|arpGuard|Specifies whether ARP guard is enabled.  ARP guard allows only addresses that are specified in ArpFilter to pass through the port.  Allowed values are "enabled" or "disabled".
-|dhcpGuard|Specifies whether to drop DHCP messages from a VM that claims to be a DHCP server. Allowed values are "enabled", which drops DHCP messages because the virtualized DHCP server is considered untrusted, or "disabled", which allows the message to be received because the virtualized DHCP server is considered to be trustworthy.
-|stormLimit|Specifies the number of broadcast, multicast, and unknown unicast packets per second that a VM is allowed to send through the specified virtual network adapter. Broadcast, multicast, and unknown unicast packets beyond the limit during that one second interval are dropped. A value of zero \(0\) means there is no limit.
-|portFlowLimit|Specifies the maximum number of flows that can be executed for the port.  A value of blank or zero \(0\) means there is no limit.
-|vmqWeight|Specifies whether virtual machine queue (VMQ) is enabled on the virtual network adapter. The relative weight describes the affinity of the virtual network adapter to use VMQ. The range of value is 0 through 100. Specify 0 to disable VMQ on the virtual network adapter.
-|iovWeight|Specifies whether single-root I/O virtualization \(SR-IOV\) is enabled on this virtual network adapter. The relative weight sets the affinity of the virtual network adapter to the assigned SR-IOV virtual function. The range of the value is 0 through 100. Specify 0 to disable SR-IOV on the virtual network adapter. 
-|iovInterruptModeration|Specifies the interrupt moderation value for a single-root I/O virtualization \(SR-IOV\) virtual function assigned to a virtual network adapter. Allowed values are "default", "adaptive", "off", "low", "medium", and "high".   If Default is chosen, the value is determined by the physical network adapter vendor's setting.  If Adaptive is chosen, the interrupt moderation rate is based on the runtime traffic pattern. 
-|iovQueuePairsRequested|Specifies the number of hardware queue pairs to be allocated to an SR-IOV virtual function. If receive-side scaling \(RSS\) is required, and if the physical network adapter that binds to the virtual switch supports RSS on SR-IOV virtual functions, then more than one queue pair is required. Allowed values range from 1 to 4294967295. 
-|QosSettings|You can configure the following Qos Settings,all of which are optional:  <br/><br />**outboundReservedValue:**<br/>If outboundReservedMode is "absolute" then the value indicates the bandwidth, in Mbps, guaranteed to the virtual port for transmission (egress). If outboundReservedMode is "weight" then the value indicates the weighted portion of the bandwidth guaranteed. <br/><br />**outboundMaximumMbps:**  <br/>Indicates the maximum permitted send-side bandwidth, in Mbps, for the virtual port (egress). <br/><br/>**InboundMaximumMbps:**  <br/>Indicates the maximum permitted receive-side bandwidth for the virtual port (ingress) in Mbps. |
+|macSpoofing| Allows VMs to change the source media access control \(MAC\) address in outgoing packets to a MAC address not assigned to the VM.<p>Allowed values:<ul><li>Enabled – Use a different MAC address.</li><li>Disabled – Use only the MAC address assigned to it.</li></ul>|
+|arpGuard| Allows ARP guard only addresses specified in ArpFilter to pass through the port.<p>Allowed values:<ul><li>Enabled - Allowed</li><li>Disabled – Not allowed</li></ul>|
+|dhcpGuard| Allows or drops any DHCP messages from a VM that claims to be a DHCP server. <p>Allowed values:<ul><li>Enabled – Drops DHCP messages because the virtualized DHCP server is considered untrusted.</li><li>Disabled – Allows the message to be received because the virtualized DHCP server is considered trustworthy.</li></ul>|
+|stormLimit| The number of packets (broadcast, multicast, and unknown unicast) per second a VM is allowed to send through the virtual network adapter. Packets beyond the limit during that one-second interval get dropped. A value of zero \(0\) means there is no limit..|
+|portFlowLimit| The maximum number of flows allowed to execute for the port. A value of blank or zero \(0\) means there is no limit. |
+|vmqWeight| The relative weight describes the affinity of the virtual network adapter to use virtual machine queue (VMQ). The range of value is 0 through 100.<p>Allowed values:<ul><li>0 – Disables the VMQ on the virtual network adapter.</li><li>1-100 – Enables the VMQ on the virtual network adapter.</li></ul>|
+|iovWeight| The relative weight sets the affinity of the virtual network adapter to the assigned single-root I/O virtualization \(SR-IOV\) virtual function. <p>Allowed values:<ul><li>0 – Disables SR-IOV on the virtual network adapter.</li><li>1-100 – Enables SR-IOV on the virtual network adapter.</li></ul>|
+|iovInterruptModeration|<p>Allowed values:<ul><li>default – The physical network adapter vendor’s setting determines the value.</li><li>adaptive - </li><li>off </li><li>low</li><li>medium</li><li>high</li></ul><p>If you choose **default**, the physical network adapter vendor’s setting determines the value.  If you choose, **adaptive**, the runtime traffic pattern determins the interrupt moderation rate.|
+|iovQueuePairsRequested| The number of hardware queue pairs allocated to an SR-IOV virtual function. If receive-side scaling \(RSS\) is required, and if the physical network adapter that binds to the virtual switch supports RSS on SR-IOV virtual functions, then more than one queue pair is required. <p>Allowed values: 1 to 4294967295.|
+|QosSettings| Configure the following Qos settings,all of which are optional: <ul><li>**outboundReservedValue** - If outboundReservedMode is "absolute" then the value indicates the bandwidth, in Mbps, guaranteed to the virtual port for transmission (egress). If outboundReservedMode is "weight" then the value indicates the weighted portion of the bandwidth guaranteed.</li><li>**outboundMaximumMbps** - Indicates the maximum permitted send-side bandwidth, in Mbps, for the virtual port (egress).</li><li>**InboundMaximumMbps** - Indicates the maximum permitted receive-side bandwidth for the virtual port (ingress) in Mbps.</li></ul> |
+
+---

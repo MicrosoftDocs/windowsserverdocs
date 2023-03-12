@@ -12,7 +12,7 @@ author: shortpatti
 
 # Connection Request Processing
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about connection request processing in Network Policy Server in Windows Server 2016.
 

@@ -69,7 +69,7 @@ For more information about accounts, see:
 
 -   [Active Directory Security Groups](https://technet.microsoft.com/itpro/windows/keep-secure/active-directory-security-groups)
 
--   [Local Accounts](https://technet.microsoft.com/itpro/windows/keep-secure/local-accounts)
+-   [Local Accounts](https://technet.microsoft.com/itpro/windows/keep-bastion.local-accounts)
 
 -   [Microsoft Accounts](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-accounts)
 

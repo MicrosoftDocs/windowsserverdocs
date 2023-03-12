@@ -4,13 +4,14 @@ description: Cluster to Cluster Storage Replication cross region in Azure
 keywords: Storage Replica, Server Manager, Windows Server, Azure, Cluster, cross region, different region
 author: arduppal
 ms.author: arduppal
-ms.date: 5/04/2017
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
 ---
 # Cluster to Cluster Storage Replica cross region in Azure
+
 You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 
 Watch the video below for a complete walk-through of the process.
@@ -25,7 +26,7 @@ Watch the video below for a complete walk-through of the process.
 
     For example, **SR-AZ2AZ** in **West US 2** and **SR-AZCROSS** in **West Central US**, as shown above.
 
-2. Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), one in each resource group for each cluster
+2. Create two [availability sets](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), one in each resource group for each cluster.
     - Availability set (**az2azAS1**) in (**SR-AZ2AZ**)
     - Availability set (**azcross-AS**) in (**SR-AZCROSS**)
 
@@ -35,7 +36,7 @@ Watch the video below for a complete walk-through of the process.
 
 4. Create two network security groups
    - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) in the first resource group (**SR-AZ2AZ**).
-   - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)  (**azcross-NSG**) in the second resource group (**SR-AZCROSS**). 
+   - Create the [network security group](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM)  (**azcross-NSG**) in the second resource group (**SR-AZCROSS**).
 
    Add one Inbound security rule for RDP:3389 to both Network Security Groups. You can choose to remove this rule once you finish your setup.
 
@@ -155,18 +156,24 @@ Watch the video below for a complete walk-through of the process.
    - Copy the storage account name and key from "access keys"
    - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
 
-14. Configure cluster-to-cluster storage replica.
-15. Grant SR-Access from one cluster to another cluster in both direction
+14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step
+
+15. Start Windows PowerShell and use the [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
+ 
+16. Configure cluster-to-cluster storage replica.
+Grant access from one cluster to another cluster in both directions:
 
    From our example:
    ```powershell
      Grant-SRAccess -ComputerName az2az1 -Cluster SRAZCross
    ```
+If you're using Windows Server 2016 then also run this command:
+
    ```powershell
      Grant-SRAccess -ComputerName azcross1 -Cluster SRAZC1
    ```
 
-16. Create partnership for the two clusters:</ol>
+17. Create SR-Partnership for the two clusters:</ol>
 
    - For cluster **SRAZC1**
       - Volume location:- c:\ClusterStorage\DataDisk1

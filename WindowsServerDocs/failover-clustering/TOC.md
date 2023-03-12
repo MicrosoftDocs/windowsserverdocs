@@ -7,14 +7,22 @@
 ### [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)
 ### [VM load balancing](vm-load-balancing-overview.md)
 ### [VM load balancing deep-dive](vm-load-balancing-deep-dive.md)
+### [Cluster sets](../storage/storage-spaces/cluster-sets.md)
+### [Cluster affinity](cluster-affinity.md)
 ## Plan
 ### [Hardware requirements](clustering-requirements.md)
 ### [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)
+### [Using guest VM clusters](../storage/storage-spaces/storage-spaces-direct-in-vm.md)
 ## Deploy
 ### [Create a failover cluster](create-failover-cluster.md)
+### [Deploy a two-node file server](deploy-two-node-clustered-file-server.md)
 ### [Prestage a cluster in AD DS](prestage-cluster-adds.md)
-### [Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)
+#### [Configuring cluster accounts in Active Directory](configure-ad-accounts.md)
+### [Manage quorum and witnesses](manage-cluster-quorum.md)
+### [Deploy a Cloud Witness](deploy-cloud-witness.md)
+### [Deploy a file share witness](file-share-witness.md)
 ### [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md)
+### [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md)
 ## Manage
 ### [Cluster-Aware Updating](cluster-aware-updating.md)
 #### [Requirements and best practices](cluster-aware-updating-requirements.md)
@@ -26,8 +34,6 @@
 #### [Faults](health-service-faults.md)
 #### [Actions](health-service-actions.md)
 #### [Settings](health-service-settings.md)
-### [Configure and manage quorum](manage-cluster-quorum.md)
+### [Cluster-domain migration](cluster-domain-migration.md)
 ### [Troubleshooting using Windows Error Reporting](troubleshooting-using-WER-reports.md)
-## Insider Preview
-### [Cluster sets](../storage/storage-spaces/cluster-sets.md)
 ## [Change history for Failover Clustering topics](clustering-change-history.md)

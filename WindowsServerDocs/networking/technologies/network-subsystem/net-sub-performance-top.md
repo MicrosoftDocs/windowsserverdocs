@@ -12,7 +12,7 @@ author: shortpatti
 
 # Network Subsystem Performance Tuning
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic for an overview of the network subsystem and for links to other topics in this guide.
 

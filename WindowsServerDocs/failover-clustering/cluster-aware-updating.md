@@ -7,13 +7,13 @@ ms.manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
-ms.date: 03/23/2017
+ms.date: 08/06/2018
 description: Cluster-Aware Updating (CAU) automates software update installation on clusters running Windows Server.
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 ---
 # Cluster-Aware Updating overview
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature that automates the software updating process on clustered servers while maintaining availability.
 
@@ -75,10 +75,10 @@ To use CAU, install the Failover Clustering feature in Windows Server and create
 
 To install the Failover Clustering feature, you can use the following tools:
 - Add Roles and Features Wizard in Server Manager
-- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature) Windows PowerShell cmdlet
+- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/Install-WindowsFeature?view=winserver2012r2-ps&viewFallbackFrom=win10-ps) Windows PowerShell cmdlet
 - Deployment Image Servicing and Management (DISM) command-line tool
 
-For more information, see [Install or Uninstall Roles, Role Services, or Features](https://technet.microsoft.com/library/hh831809(v=ws.11).aspx).
+For more information, see [Install the Failover Clustering feature](create-failover-cluster.md#install-the-failover-clustering-feature).
 
 You must also install the Failover Clustering Tools, which are part of the Remote Server Administration Tools and are installed by default when you install the Failover Clustering feature in Server Manager. The Failover Clustering tools include the Cluster-Aware Updating user interface and PowerShell cmdlets. 
 
@@ -96,9 +96,9 @@ You must install the Failover Clustering Tools as follows to support the differe
 ### Enabling self-updating mode
 To enable the self-updating mode, you must add the Cluster-Aware Updating clustered role to the failover cluster. To do so, use one of the following methods:
 - In Server Manager, select **Tools** > **Cluster-Aware Updating**, then in the Cluster-Aware Updating window, select **Configure cluster self-updating options**. 
-- In a PowerShell session, run the [Add-CauClusterRole](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/add-cauclusterrole) cmdlet.  
+- In a PowerShell session, run the [Add-CauClusterRole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Add-CauClusterRole?view=win10-ps) cmdlet.  
   
-To uninstall CAU, uninstall the Failover Clustering feature or Failover Clustering Tools by using Server Manager, the [Uninstall-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/uninstall-windowsfeature) cmdlet, or the DISM command\-line tools.  
+To uninstall CAU, uninstall the Failover Clustering feature or Failover Clustering Tools by using Server Manager, the [Uninstall-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/Uninstall-WindowsFeature?view=win10-ps) cmdlet, or the DISM command\-line tools.  
   
 ### Additional requirements and best practices  
 
@@ -129,8 +129,8 @@ The following links provide more information about using Cluster-Aware Updating.
   
 -   [How CAU Plug\-ins Work](cluster-aware-updating-plug-ins.md)  
   
--   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=237675)  
+-   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps&viewFallbackFrom=winserverr2-ps)  
   
--   [Cluster\-Aware Updating Plug\-in Reference](https://msdn.microsoft.com/library/hh418084.aspx)  
+-   [Cluster\-Aware Updating Plug\-in Reference](https://docs.microsoft.com/previous-versions/windows/desktop/mscs/cluster-aware-update-plug-in-interfaces-and-classes)  
   
 

@@ -31,7 +31,7 @@ A token\-signing certificate must meet the following requirements to work with A
 ## How token\-signing certificates are used across partners  
 Every token\-signing certificate contains cryptographic private keys and public keys that are used to digitally sign \(by means of the private key\) a security token. Later, after they are received by a partner federation server, these keys validate the authenticity \(by means of the public key\) of the encrypted security token.  
   
-Because each security token is digitally signed by the account partner, the resource partner can verify that the security token was in fact issued by the account partner and that it was not modified. Digital signatures are verified by the public key portion of a partner’s token\-singing certificate. After the signature is verified, the resource federation server generates its own security token for its organization and it signs the security token with its own token\-signing certificate.  
+Because each security token is digitally signed by the account partner, the resource partner can verify that the security token was in fact issued by the account partner and that it was not modified. Digital signatures are verified by the public key portion of a partner’s token\-signing certificate. After the signature is verified, the resource federation server generates its own security token for its organization and it signs the security token with its own token\-signing certificate.  
   
 For federation partner environments, when the token\-signing certificate has been issued by a CA, ensure that:  
   

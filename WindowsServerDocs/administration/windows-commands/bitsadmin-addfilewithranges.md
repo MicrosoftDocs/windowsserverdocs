@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin addfilewithranges
 
-
-
-Adds a file to the specified job. BITS downloads the specified ranges from the remote file.
+Adds a file to the specified job. BITS downloads the specified ranges from the remote file. This switch is valid only for download jobs.
 
 ## Syntax
 
@@ -34,7 +32,7 @@ bitsadmin /AddFileWithRanges <Job> <RemoteURL> <LocalName> <RangeList>
 |Job|The job's display name or GUID|
 |RemoteURL|*RemoteURL* is the URL of the file on the server.|
 |LocalName|*LocalName* is the name of the file on the local computer. *LocalName* must contain an absolute path to the file.|
-|RangeList|*RangeList* is a comma-delimited list of offset and length pairs. Use a colon to separate the offset value from the length value.|
+|RangeList|*RangeList* is a comma-delimited list of offset:length pairs. Use a colon to separate the offset value from the length value. For example, a value of `0:100,2000:100,5000:eof` tells BITS to transfer 100 bytes from offset 0, 100 bytes from offset 2000, and the remaining bytes from offset 5000 to the end of the file.|
 
 ## More Information
 

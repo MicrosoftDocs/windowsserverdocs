@@ -1,7 +1,7 @@
 ---
 title: RAS Gateway
 description: This topic, which is intended for Information Technology (IT) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features in Windows Server 2016.
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
@@ -75,7 +75,7 @@ Virtual networks are created by using Hyper-V Network Virtualization, which is a
 Hyper-V Network Virtualization provides you with the ability to deploy a virtual machine (VM) network that is independent of the underlying physical network. With VM networks, which are composed of one or more virtual subnets, the exact physical location of an IP subnet is decoupled from the virtual network topology. As a result, you can easily move your on premises subnets to the cloud - while preserving your existing IP addresses and topology in the cloud. This ability to preserve infrastructure allows existing services to continue to work, unaware of the physical location of the subnets. That is, Hyper-V Network Virtualization enables a seamless hybrid cloud.  
   
 > [!NOTE]  
-> Hyper-V Network Virtualization is a network overlay technology using Network Virtualization Generic Routing Encapsulation ([NVGRE](http://tools.ietf.org/html/draft-sridharan-virtualization-nvgre-00)), which allows tenants to bring their own address space and allows CSPs better scalability than is possible by using VLANs for tenant isolation.  
+> Hyper-V Network Virtualization is a network overlay technology using Network Virtualization Generic Routing Encapsulation ([NVGRE](https://tools.ietf.org/html/draft-sridharan-virtualization-nvgre-00)), which allows tenants to bring their own address space and allows CSPs better scalability than is possible by using VLANs for tenant isolation.  
   
 In  Windows Server 2016, RAS Gateway routes network traffic between the physical network and VM network resources, regardless of where the resources are located. You can use RAS Gateway to route network traffic between physical and virtual networks at the same physical location or at many different physical locations.  
   
@@ -118,7 +118,7 @@ Following are the recommended deployment scenarios for RAS Gateway.
 ## <a name="bkmk_manage"></a>RAS Gateway Management Tools  
 Following are the management tools for RAS Gateway.  
   
--   In  Windows Server 2016, to deploy an RAS Gateway router, you must use Windows PowerShell commands. For more information, see  [Remote Access Cmdlets](https://technet.microsoft.com/library/hh918399.aspx) for  Windows Server 2016 and Windows 10.  
+-   In  Windows Server 2016, to deploy an RAS Gateway router, you must use Windows PowerShell commands. For more information, see  [Remote Access Cmdlets](https://docs.microsoft.com/en-us/powershell/module/remoteaccess) for  Windows Server 2016 and Windows 10.  
   
 -   In System Center 2012 R2 Virtual Machine Manager (VMM), the RAS Gateway is named Windows Server Gateway. A limited set of Border Gateway Protocol (BGP) configuration options are available in the VMM software interface, including **Local BGP IP Address** and **Autonomous System Numbers (ASN)**, **List of BGP Peer IP Addresses**, and **ASN values**. You can, however, use Remote Access Windows PowerShell BGP commands to configure all other features of Windows Server Gateway. For more information, see  [Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/vmm) and [Remote Access Cmdlets](https://technet.microsoft.com/library/hh918399.aspx) for  Windows Server 2016 and Windows 10.  
   

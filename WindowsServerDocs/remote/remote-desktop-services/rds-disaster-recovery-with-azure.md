@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Set up disaster recovery for RDS using Azure Site Recovery
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 You can use Azure Site Recovery to create a disaster recovery solution for your Remote Desktop Services deployment. 
 

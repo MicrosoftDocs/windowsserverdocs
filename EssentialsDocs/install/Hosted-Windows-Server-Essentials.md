@@ -36,7 +36,7 @@ This document includes information that is specific to hosters who intend to dep
  **Extensibility:** Windows Server Essentials builds on the extensibility model of Windows SBS 2011 Essentials, which allows other software vendors to add capabilities and features to the core product, and adds a new set of web services APIs. It also maintains compatibility with the existing [software development kit](https://msdn.microsoft.com/library/gg513958.aspx) (SDK) and [add-ins](https://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) created for Windows SBS 2011 Essentials.  
   
 ## How can I customize an image?  
- Refer to the [Windows Server Essentials](https://go.microsoft.com/fwlink/p/?LinkID=249124), which is a standard Windows Server sysprep process with additional Windows Server Essentials customization steps. To finish the customization, follow the instructions in [Create a Simple Customized Image](https://technet.microsoft.com/en-us/library/jj200117) and [Customize the Image](https://technet.microsoft.com/en-us/library/jj200161), and then follow the instructions in [Preparing the Image for Deployment](https://technet.microsoft.com/en-us/library/jj200142) to capture your final image.  
+ Refer to the [Windows Server Essentials](https://go.microsoft.com/fwlink/p/?LinkID=249124), which is a standard Windows Server sysprep process with additional Windows Server Essentials customization steps. To finish the customization, follow the instructions in [Create a Simple Customized Image](https://technet.microsoft.com/library/jj200117) and [Customize the Image](https://technet.microsoft.com/library/jj200161), and then follow the instructions in [Preparing the Image for Deployment](https://technet.microsoft.com/library/jj200142) to capture your final image.  
   
  You should pay attention to the following points:  
   
@@ -83,7 +83,7 @@ This document includes information that is specific to hosters who intend to dep
   
     1.  Provide the unattend.xml file as you did above, if the deployment starts from WinPE setup.  
   
-    2.  Refer to the Windows Server Essentials ADK section entitled, [Create the Cfg.ini File](https://technet.microsoft.com/en-us/library/jj200150), to generate the cfg.ini.  
+    2.  Refer to the Windows Server Essentials ADK section entitled, [Create the Cfg.ini File](https://technet.microsoft.com/library/jj200150), to generate the cfg.ini.  
   
     3.  Provide information in [InitialConfiguration].  
   
@@ -319,7 +319,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 > [!NOTE]
 >  Backing up the client might impact performance because the data needs to be transferred from the client to the server over VPN.  
   
- **Full client backup** is by default on for all the client devices connected to the Windows Server Essentials network. It backs up the full client (system and data) incrementally and supports data deduplication. The backup data will be on the server running Windows Server Essentials. A failed client can get its data back to a previous backup point. You could turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](https://technet.microsoft.com/en-us/library/jj200150).  
+ **Full client backup** is by default on for all the client devices connected to the Windows Server Essentials network. It backs up the full client (system and data) incrementally and supports data deduplication. The backup data will be on the server running Windows Server Essentials. A failed client can get its data back to a previous backup point. You could turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](https://technet.microsoft.com/library/jj200150).  
   
  Some considerations for full client backup are:  
   
@@ -333,7 +333,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 -   Client Bare Metal Restore: because Windows Preinstall Environment does not support VPN connection, Client Bare Metal Restore is not supported.  
   
- **File History** is a Windows 8.1 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server Essentials, we allow central management of the File History setting of all the Windows 8.1 clients joined to Windows Server Essentials. The backup data is stored on the server running Windows Server Essentials. You can turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](https://technet.microsoft.com/en-us/library/jj200150).  
+ **File History** is a Windows 8.1 feature for backing up profile data (Libraries, Desktop, Contacts, Favorites) to a network share. In Windows Server Essentials, we allow central management of the File History setting of all the Windows 8.1 clients joined to Windows Server Essentials. The backup data is stored on the server running Windows Server Essentials. You can turn this feature off by following the steps in the Create the Cfg.ini File section of the [ADK document](https://technet.microsoft.com/library/jj200150).  
   
 ### Storage management  
  The [new Storage Spaces feature](https://technet.microsoft.com/library/hh831739.aspx) allows you to aggregate the physical storage capacity of disparate hard drives, dynamically add hard drives, and create data volumes with specified levels of resilience. You can also attach an iSCSI disk to Windows Server Essentials to expand its storage.  

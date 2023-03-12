@@ -2,22 +2,19 @@
 ms.assetid: 99a68050-8d19-4c58-ad86-e08a3dcdb4f7
 title: Appendix L - Events to Monitor
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+ms.author: joflore
+author: MicrosoftGuyJFlo
+manager: mtillman
+ms.date: 07/30/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
-
 # Appendix L: Events to Monitor
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server
 
-  
-## Appendix L: Events to Monitor  
 The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the "Current Windows Event ID" column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.  
   
 The "Legacy Windows Event ID" column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier. The "Potential Criticality" column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the "Event Summary" column provides a brief description of the event.  
@@ -408,11 +405,8 @@ A potential criticality of High means that one occurrence of the event should be
 |5478|N/A|Low|IPsec Services has started successfully.|  
   
 > [!NOTE]  
-> Refer to [Microsoft Support article 947226](https://support.microsoft.com/kb/947226) for lists of many security event IDs and their meanings.  
->   
+> Refer to [Windows security audit events](https://www.microsoft.com/download/details.aspx?id=50034) for a list of many security event IDs and their meanings.  
+>
 > Run **wevtutil gp Microsoft-Windows-Security-Auditing /ge /gm:true** to get a very detailed listing of all security event IDs  
   
-For more information about Windows security event IDs and their meanings, see the Microsoft Support articles [Description of security events in Windows Vista and in Windows Server 2008](https://support.microsoft.com/kb/947226) and [Description of security events in Windows 7 and in Windows Server 2008 R2](https://support.microsoft.com/kb/977519). You can also download [Security Audit Events for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=21561) and [Windows 8 and Windows Server 2012 Security Event Details](https://www.microsoft.com/download/details.aspx?id=35753), which provide detailed event information for the referenced operating systems in spreadsheet format.  
-  
-
-
+For more information about Windows security event IDs and their meanings, see the Microsoft Support article [Description of security events in Windows 7 and in Windows Server 2008 R2](https://support.microsoft.com/kb/977519). You can also download [Security Audit Events for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=21561) and [Windows 8 and Windows Server 2012 Security Event Details](https://www.microsoft.com/download/details.aspx?id=35753), which provide detailed event information for the referenced operating systems in spreadsheet format.  

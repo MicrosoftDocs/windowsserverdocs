@@ -2,9 +2,9 @@
 ms.assetid: e02bb152-d0db-40b0-9942-846dce75f6c7
 title: AD DS Deployment Requirements
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

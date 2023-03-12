@@ -1,7 +1,7 @@
 ---
 title: Remote Access Always On VPN migration planning
 description: Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization. 
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article

@@ -62,8 +62,8 @@ To add an install image, type one of the following:
 ```
 wdsutil /add-ImagmediaFile:"C:\MyFolder\Install.wimmediatype:Install
 wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
-/SingleImage:"Windows Professional" /Name:"My WDS Image"
-/Description:"Windows Professional image with MSOffice" /Filename:"Win Pro.wim" /UnattendFile:"\\server\share\unattend.xml"
+/SingleImage:"Windows Pro" /Name:"My WDS Image"
+/Description:"Windows Pro image with Microsoft Office" /Filename:"Win Pro.wim" /UnattendFile:"\\server\share\unattend.xml"
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

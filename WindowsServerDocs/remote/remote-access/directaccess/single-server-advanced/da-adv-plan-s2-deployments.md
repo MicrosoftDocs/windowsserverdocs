@@ -49,7 +49,7 @@ There are three decisions to make when you are planning your client deployment:
   
         A default web probe is created that clients use to validate connectivity to the internal network. The default name is:  
   
-        http://directaccess-WebProbeHost.<domain_name>  
+        https://directaccess-WebProbeHost.<domain_name>  
   
         The name should be registered manually in DNS. You can create other connectivity verifiers by using other web addresses over HTTP or **ping**. For each connectivity verifier, a DNS entry must exist.  
   
@@ -98,7 +98,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     Decide how DirectAccess clients will authenticate to the DirectAccess server:  
   
-    -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/en-us/library/hh831379.aspx).  
+    -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/library/hh831379.aspx).  
   
     -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](da-adv-plan-s1-infrastructure.md#bkmk_12CAsandCerts).  
   

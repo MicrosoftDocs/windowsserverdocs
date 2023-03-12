@@ -2,12 +2,11 @@
 title: What's New in Windows Server, version 1709
 description: "What are the new features in compute, identity, management, automation, networking, security, storage."
 ms.prod: windows-server-threshold
-ms.date: 10/18/2017
 ms.technology: server-general
 ms.topic: article
-author: greg-lindsay
-ms.author: greg-lindsay
-ms.localizationpriority: high
+author: coreyp-at-msft
+ms.author: coreyp
+ms.localizationpriority: medium
 ---
 
 # What's New in Windows Server version 1709
@@ -32,7 +31,7 @@ Release channels are summarized in the following table.
 | Availability  | Software Assurance or Azure (cloud hosted)  | All channels |
 | Naming convention  | Windows Server, version YYMM  | Windows Server YYYY |
 
-For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/en-us/windows-server/get-started/semi-annual-channel-overview).
+For more information, see [Windows Server Semi-annual Channel Overview](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview).
 
 ## Application containers and micro-services
 
@@ -41,18 +40,18 @@ For more information, see [Windows Server Semi-annual Channel Overview](https://
     - In the Windows Server Semi-Annual Channel, Nano Server as a container base OS image is decreased from 390 MB to 80 MB.
 - Linux containers with Hyper-V isolation 
 
-For more information, see [Changes to Nano Server in the next release of Windows Server](https://docs.microsoft.com/en-us/windows-server/get-started/nano-in-semi-annual-channel) and [Windows Server, version 1709 for developers](https://blogs.technet.microsoft.com/windowsserver/2017/09/13/sneak-peek-3-windows-server-version-1709-for-developers/).
+For more information, see [Changes to Nano Server in the next release of Windows Server](https://docs.microsoft.com/windows-server/get-started/nano-in-semi-annual-channel) and [Windows Server, version 1709 for developers](https://blogs.technet.microsoft.com/windowsserver/2017/09/13/sneak-peek-3-windows-server-version-1709-for-developers/).
 
 ## Modern management
 
-Check out [Project Honolulu](https://docs.microsoft.com/en-us/windows-server/manage/honolulu/honolulu) for a simplified, integrated, secure experience to help IT administrators manage core troubleshooting, configuration, and maintenance scenarios.  Project Honolulu includes next generation tooling with a simplified, integrated, secure, and extensible interface.
+Check out [Project Honolulu](https://docs.microsoft.com/windows-server/manage/honolulu/honolulu) for a simplified, integrated, secure experience to help IT administrators manage core troubleshooting, configuration, and maintenance scenarios.  Project Honolulu includes next generation tooling with a simplified, integrated, secure, and extensible interface.
 Project Honolulu includes an intuitive all-new management experience for managing PCs, Windows servers, Failover Clusters, as well as hyper-converged infrastructure based on Storage Spaces Direct, reducing operational costs.
 
 ## Compute
 
 **Nano Container and Server Core Container**: First and foremost, this release is about driving application innovation. Nano Server, or Nano as Host is deprecated and replaced by Nano Container, which is Nano running as a container image. 
 
-For more information about containers, see [Container Networking Overview](https://docs.microsoft.com/en-us/windows-server/networking/sdn/technologies/containers/container-networking-overview).
+For more information about containers, see [Container Networking Overview](https://docs.microsoft.com/windows-server/networking/sdn/technologies/containers/container-networking-overview).
 
 **Server Core as a container** (and infrastructure) host, provides better flexibility, density and performance for existing applications under a modernization process and brands new apps developed already using the cloud model.
 
@@ -76,7 +75,7 @@ For more information about containers, see [Container Networking Overview](https
 
 **Linux as a shielded VM** is now supported.
 
-For more information, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/en-us/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
+For more information, see [Guarded fabric and shielded VMs overview](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms).
 
 **SMBLoris vulnerability**
 An issue, known as “SMBLoris”, which could result in denial of service, has been addressed.

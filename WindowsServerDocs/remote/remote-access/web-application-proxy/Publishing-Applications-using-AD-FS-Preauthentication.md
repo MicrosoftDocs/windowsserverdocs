@@ -15,7 +15,7 @@ ms.technology: web-app-proxy
 
 >Applies To: Windows Server 2016
 
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
   
 This topic describes how to publish applications through Web Application Proxy using Active Directory Federation Services (AD FS) preauthentication.  
   
@@ -115,10 +115,10 @@ This procedure describes how to publish a claims-based application, such as a Sh
   
     -   In the **External certificate** list, select a certificate whose subject covers the external URL.  
   
-    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, http://sp/app1/.  
+    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, https://sp/app1/.  
   
         > [!NOTE]  
-        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of http://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
+        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
   
 7.  On the **Confirmation** page, review the settings, and then click **Publish**. You can copy the PowerShell command to set up additional published applications.  
   
@@ -195,10 +195,10 @@ This procedure describes how to publish an application that uses Integrated Wind
   
     -   In the **External certificate** list, select a certificate whose subject covers the external URL.  
   
-    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, http://owa/.  
+    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, https://owa/.  
   
         > [!NOTE]  
-        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of http://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
+        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
   
     -   In the **Backend server SPN** box, enter the service principal name for the backend server; for example, HTTP/owa.contoso.com.  
   
@@ -254,7 +254,7 @@ The steps to publish an application that uses MS-OFBA are identical to the steps
   
 ## Publish an Application that uses HTTP Basic  
 
-HTTP Basic is the authorization protocol used by many protocols, including ActiveSync, to connect rich clients, including smartphones, with your Exchange mailbox. For more information on HTTP Basic, see [RFC 2617](https://www.ietf.org/rfc/rfc2617.txt). Web Application Proxy traditionally interacts with AD FS using redirections which is not supported on ActiveSync clients; most rich clients don't support cookies or state management. Publishing an app using HTTP basic provides support for ActiveSync clients in Web Application Proxy by caching the token that is received from AD FS and serving the token from the cache to overcome this limitation and avoid a high load on AD FS. In this way Web Application Proxy enables the HTTP app to receive a non-claims relying party trust for the application to the Federation Service. See [Plan Active Directory](https://technet.microsoft.com/library/dn383648.aspx#BKMK_AD).  
+HTTP Basic is the authorization protocol used by many protocols, to connect rich clients, including smartphones, with your Exchange mailbox. For more information on HTTP Basic, see [RFC 2617](https://www.ietf.org/rfc/rfc2617.txt). Web Application Proxy traditionally interacts with AD FS using redirections; most rich clients don't support cookies or state management. In this way Web Application Proxy enables the HTTP app to receive a non-claims relying party trust for the application to the Federation Service. See [Plan Active Directory](https://technet.microsoft.com/library/dn383648.aspx#BKMK_AD).  
   
 The authentication flow for clients that use HTTP Basic is described below and in this diagram:  
   
@@ -268,7 +268,7 @@ The authentication flow for clients that use HTTP Basic is described below and i
   
 4.  The user sends the HTTPS request to the app again with authorization set to Basic and user name and Base 64 encrypted password of the user in the www-authenticate request header.  
   
-5.  Because the device cannot be redirected to AD FS, the Web Application Proxy sends an authentication request to AD FS with the credentials that it has: username, password and, if available, device certificate. The token is acquired on behalf of the device.  
+5.  Because the device cannot be redirected to AD FS, the Web Application Proxy sends an authentication request to AD FS with the credentials that it has including username and password. The token is acquired on behalf of the device.  
   
 6.  In order to minimize the number of requests sent to the AD FS, Web Application Proxy, validates subsequent client requests using cached tokens for as long as the token is valid. Web Application Proxy periodically cleans the cache. You can view the size of the cache using the performance counter.  
   
@@ -317,7 +317,7 @@ Add-WebApplicationProxyApplication
      -BackendServerUrl 'https://mail.contoso.com'   
      -ExternalCertificateThumbprint '697F4FF0B9947BB8203A96ED05A3021830638E50'   
      -ExternalUrl 'https://mail.contoso.com'   
-     -Name 'Exchange ActiveSync'   
+     -Name 'Exchange'   
      -ExternalPreAuthentication ADFSforRichClients  
      -ADFSRelyingPartyName 'EAS_Relying_Party'  
 ```  
@@ -330,10 +330,9 @@ Add-WebApplicationProxyApplication
      -ExternalCertificateThumbprint '697F4FF0B9947BB8203A96ED05A3021830638E50'   
      -EnableHTTPRedirect:$true   
      -ExternalUrl 'https://mail.contoso.com'   
-     -Name 'Exchange ActiveSync'   
+     -Name 'Exchange'   
      -ExternalPreAuthentication ADFSforRichClients  
      -ADFSRelyingPartyName 'EAS_Relying_Party'  
-     -ADFSUserCertificateStore 'AdfsTrustedDevices'  
 ```  
   
 ## <a name="BKMK_1.4"></a>Publish an Application that uses OAuth2 such as a Microsoft Store App  
@@ -382,7 +381,7 @@ This procedure describes how to publish an application for OAuth2. This type of 
   
 -   Verified that a certificate on the Web Application Proxy server is suitable for the application you want to publish.  
   
-#### To publish and OAuth2 app  
+#### To publish an OAuth2 app  
   
 1.  On the Web Application Proxy server, in the Remote Access Management console, in the **Navigation** pane, click **Web Application Proxy**, and then in the **Tasks** pane, click **Publish**.  
   
@@ -406,10 +405,10 @@ This procedure describes how to publish an application for OAuth2. This type of 
   
         In order to make sure your users can access your app, even if they neglect to type HTTPS in the URL, select the **Enable HTTP to HTTPS Redirection** box.  
   
-    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, http://sp/app1/.  
+    -   In the **Backend server URL** box, enter the URL of the backend server. Note that this value is automatically entered when you enter the external URL and you should change it only if the backend server URL is different; for example, https://sp/app1/.  
   
         > [!NOTE]  
-        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of http://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
+        > Web Application Proxy can translate host names in URLs, but cannot translate path names. Therefore, you can enter different host names, but you must enter the same path name. For example, you can enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://app-server/app1/. However, you cannot enter an external URL of https://apps.contoso.com/app1/ and a backend server URL of https://apps.contoso.com/internal-app1/.  
   
 7.  On the **Confirmation** page, review the settings, and then click **Publish**. You can copy the PowerShell command to set up additional published applications.  
   

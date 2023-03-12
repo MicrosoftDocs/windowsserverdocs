@@ -5,15 +5,14 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 11/08/2016
+ms.date: 11/13/2018
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
 ms.author: jaimeo
-manager: dongill
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # Release Notes: Important Issues in Windows Server 2016
 
@@ -22,7 +21,11 @@ ms.localizationpriority: high
 These release notes summarize the most critical issues in the Windows Server&reg; 2016 operating system, including ways to avoid or work around the issues, if known. For information about by-design changes, new features, and fixes in this release, see [What's New in Windows Server 2016](what-s-new-in-windows-server-2016.md) and announcements from the specific feature teams. Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server 2016.  
 
 This document is continuously updated. As critical issues requiring a workaround are discovered, they are added, as are new workarounds and fixes as they become available.  
-  
+
+## Express updates available starting in November 2018 (NEW)
+
+Starting with the November 2018 "Update Tuesday" update, Windows will again publish [Express updates](express-updates.md) for Windows Server 2016. If you are using WSUS and System Center Configuration Manager (SCCM) you will once again see two packages for the Windows Server 2016 update: a Full update and an Express update. If you want to use Express for your server environments, you need to confirm that the server has taken a full update since November 2017 (KB# 4048953) to ensure the Express update installs correctly. If you attempt an Express update on a server that hasn't been updated since the 2017 11B update (KB# 4048953), you'll see repeated failures that consume bandwidth and CPU resources in an infinite loop. If you get into this scenario, stop pushing the Express update, and instead push a recent Full update to stop the failure loop.  
+
 ## Server Core installation option
 [comment]: # (ID: 370; Submitter: amason; state: signed off)  
 When you install Windows Server 2016 by using the Server Core installation option, the print spooler is installed and starts by default even when the Print Server role is not installed.

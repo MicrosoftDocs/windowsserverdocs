@@ -1,7 +1,7 @@
 ---
 title: Migration from DirectAccess to Always On VPN
 description: Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order.
-manager: elizapo
+manager: dougkim
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article

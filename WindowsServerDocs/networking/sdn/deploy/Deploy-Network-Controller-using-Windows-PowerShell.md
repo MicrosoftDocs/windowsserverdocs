@@ -1,7 +1,7 @@
 ---
 title: Deploy Network Controller using Windows PowerShell
 description: This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016.
-manager: brianlic
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,10 +12,11 @@ ms.topic: get-started-article
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 ms.author: pashort
 author: shortpatti
+ms.date: 08/23/2018
 ---
 # Deploy Network Controller using Windows PowerShell
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2016.
 
@@ -38,7 +39,7 @@ This topic contains the following sections.
 
 - [Post-Deployment Steps for Non-Kerberos Deployments](#bkmk_nonkerb)
 
-## <a name="bkmk_role"></a>Install the Network Controller server role
+## Install the Network Controller server role
 
 You can use this procedure to install the Network Controller server role on a virtual machine \(VM\).
 
@@ -58,7 +59,7 @@ Installation of Network Controller requires that you restart the computer. To do
 
 `Restart-Computer`
 
-## <a name="bkmk_configure"></a>Configure the Network Controller cluster
+## Configure the Network Controller cluster
 
 The Network Controller cluster provides high availability and scalability to the Network Controller application, which you can configure after creating the cluster, and which is  hosted on top of the cluster.
 
@@ -112,7 +113,7 @@ The following table provides descriptions for each parameter of the **Install-Ne
 |LogSizeLimitInMBs|This parameter specifies the maximum log size, in MB, that Network Controller can store. Logs are stored in circular fashion. If DiagnosticLogLocation is provided, the default value of this parameter is 40 GB. If DiagnosticLogLocation is not provided, the logs are stored on the Network Controller nodes and the default value of this parameter is 15 GB.|
 |LogTimeLimitInDays|This parameter specifies the duration limit, in days, for which the logs are stored. Logs are stored in circular fashion. The default value of this parameter is 3 days.|
 
-## <a name="bkmk_app"></a>Configure the Network Controller application
+## Configure the Network Controller application
 To configure the Network Controller application, type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.
 
 ```
@@ -136,13 +137,13 @@ The following table provides descriptions for each parameter of the **Install-Ne
 
 After you complete the configuration of the Network Controller application, your deployment of Network Controller is complete.
 
-## <a name="bkmk_validation"></a>Network Controller deployment validation
+## Network Controller deployment validation
 
 To validate your Network Controller deployment, you can add a credential to the Network Controller and then retrieve the credential.
 
 If you are using Kerberos as the ClientAuthentication mechanism, membership in the **ClientSecurityGroup** that you created is the minimum required to perform this procedure.
 
-#### To validate deployment of Network Controller
+**Procedure:**
 
 1.  On a client computer, if you are using Kerberos as the ClientAuthentication mechanism, log on with a user account that is a member of your **ClientSecurityGroup**.
 
@@ -179,7 +180,7 @@ If you are using Kerberos as the ClientAuthentication mechanism, membership in t
     > [!NOTE]
     > When you run the **Get-NetworkControllerCredential** command, you can assign the output of the command to a variable by using the dot operator to list the properties of the credentials. For example, $cred.Properties.
 
-## <a name="bkmk_ps"></a>Additional Windows PowerShell commands for Network Controller
+## Additional Windows PowerShell commands for Network Controller
 
 After you deploy Network Controller, you can use Windows PowerShell commands to manage and modify your deployment. Following are some of the changes that you can make to your deployment.
 
@@ -207,7 +208,7 @@ The following table provides the syntax for Windows PowerShell commands that you
 >[!NOTE]
 >Windows PowerShell commands for Network Controller are in the TechNet Library at [Network Controller Cmdlets](https://technet.microsoft.com/library/mt576401.aspx).
 
-## <a name="bkmk_script"></a>Sample Network Controller configuration script
+## Sample Network Controller configuration script
 
 The following sample configuration script shows how to create a multi-node Network Controller cluster and install the Network Controller application. In addition, the $cert variable selects a certificate from the local computer certificates store that matches the subject name string "networkController.contoso.com".
 
@@ -222,7 +223,7 @@ Install-NetworkControllerCluster -Node @($a,$b,$c)  -ClusterAuthentication Kerbe
 Install-NetworkController -Node @($a,$b,$c) -ClientAuthentication Kerberos -ClientSecurityGroup Contoso\NCRESTClients -ServerCertificate $cert -RestIpAddress 10.0.0.1/24
 ```
 
-## <a name="bkmk_nonkerb"></a>Post-Deployment Steps For non-Kerberos Deployments
+## Post-deployment steps For non-Kerberos deployments
 
 If you are not using Kerberos with your Network Controller deployment, you must deploy certificates.
 

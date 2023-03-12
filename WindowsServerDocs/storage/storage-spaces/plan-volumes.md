@@ -7,12 +7,12 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 4/12/2018
+ms.date: 01/10/2019
 ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
 
-> Applies To: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance for how to plan volumes in Storage Spaces Direct to meet the performance and capacity needs of your workloads, including choosing their filesystem, resiliency type, and size.
 
@@ -33,13 +33,15 @@ All volumes are accessible by all servers in the cluster at the same time. Once 
 
 We recommend making the number of volumes a multiple of the number of servers in your cluster. For example, if you have 4 servers, you will experience more consistent performance with 4 total volumes than with 3 or 5. This allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
 
-We recommend limiting the total number of volumes to 32 per cluster.
+We recommend limiting the total number of volumes to:
+
+| Windows Server 2016          | Windows Server 2019          |
+|------------------------------|------------------------------|
+| Up to 32 volumes per cluster | Up to 64 volumes per cluster |
 
 ## Choosing the filesystem
 
-We recommend using the new [Resilient File System (ReFS)](../refs/refs-overview.md) for Storage Spaces Direct.
-
-ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. However, it does not yet support certain features, such as Data Deduplication.
+We recommend using the new [Resilient File System (ReFS)](../refs/refs-overview.md) for Storage Spaces Direct. ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. It supports nearly all key NTFS features, including Data Deduplication in Windows Server, version 1709 and later. See the ReFS [feature comparison table](../refs/refs-overview.md#feature-comparison) for details.
 
 If your workload requires a feature that ReFS doesn't support yet, you can use NTFS instead.
 
@@ -63,7 +65,7 @@ If you have more than two servers, we recommend using one of the following resil
 
 ### With three servers
 
-With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
+With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). If 2 nodes become unavailable the storage pool will lose quorum, since 2/3 of the disks are not availalbe, and the virtual disks will be unaccessible. However, a node can be down and one or more disks on another node can fail and the virtual disks will remain online. For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
 ![three-way-mirror](media/plan-volumes/three-way-mirror.png)
 
@@ -114,7 +116,11 @@ In deployments with all three types of drives, only the fastest drives (NVMe) pr
 
 ## Choosing the size of volumes
 
-Volumes in Storage Spaces Direct can be any size up to 32 TB.
+We recommend limiting the size of each volume to:
+
+| Windows Server 2016 | Windows Server 2019 |
+|---------------------|---------------------|
+| Up to 32 TB         | Up to 64 TB         |
 
    >[!TIP]
    > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider – as is common with file server workloads - limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.

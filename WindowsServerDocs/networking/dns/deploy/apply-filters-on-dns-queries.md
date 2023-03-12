@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # Use DNS Policy for Applying Filters on DNS Queries
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply. 
 
@@ -29,15 +29,15 @@ You can create query filters with any logical combination (AND/OR/NOT) of the fo
 |Client Subnet|Name of a predefined client subnet. Used to verify the subnet from which the query was sent.|
 |Transport Protocol|Transport protocol used in the query. Possible values are UDP and TCP.|
 |Internet Protocol|Network protocol used in the query. Possible values are IPv4 and IPv6.|
-|Server Interface IP address|IP address of the network interface of the DNS server that received the DNS request|
+|Server Interface IP address|IP address of the network interface of the DNS server that received the DNS request.|
 |FQDN|Fully Qualified Domain Name of record in the query, with the possibility of using a wild card.|
-|Query Type|Type of record being queried \(A, SRV, TXT, etc.\)|
+|Query Type|Type of record being queried \(A, SRV, TXT, etc.\).|
 |Time of Day|Time of day the query is received.|
 
 The following examples show you how to create filters for DNS policy that either block or allow DNS name resolution queries.
 
 >[!NOTE]
->The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx). 
+>The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps). 
 
 ##<a name="bkmk_block1"></a>Block queries from a domain
 

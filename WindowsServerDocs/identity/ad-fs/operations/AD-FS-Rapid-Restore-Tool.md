@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/11/2018
+ms.date: 04/01/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -39,9 +39,6 @@ The tool backs up the following AD FS configuration
 ## How to use the tool
 First, [download](https://go.microsoft.com/fwlink/?LinkId=825646) and install the MSI to your AD FS server.  
 
->[!NOTE]
->The AD FS Rapid Restore Tool is not FIPS compliant.
-
 Run the following command from a PowerShell prompt:
 
 ```powershell
@@ -61,7 +58,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 To create a backup, use the Backup-ADFS cmdlet. This cmdlet backs up the AD FS configuration, database, SSL certificates, etc. 
 
 The user has to be at least a local admin to run this cmdlet. 
-To backup the Active Directory DKM container (required in the default AD FS configuration), the user either has to be domain admin as well, or needs to pass in the AD FS service account credentials.
+To backup the Active Directory DKM container (required in the default AD FS configuration), the user either has to be domain admin, needs to pass in the AD FS service account credentials, or has access to the DKM container.  If you are using a gMSA account, the user must be domain admin or have permissions to the container; you cannot provide the gMSA credentials. 
 
 The backup will be named according to the pattern "adfsBackup_ID_Date-Time". It will contain the version number, date and time that the backup was done.
 The cmdlet takes the following parameters:
@@ -89,7 +86,7 @@ For the file system to be used, a storage path must be given. In that directory,
 
 - **StoragePath &lt;string&gt;** - The location the backups will be stored in
 
-- **ServiceAccountCredential &lt;pscredential&gt;** - specifies the service account being used for the AD FS Service running currently. This parameter is only needed if the user would like to backup the DKM and is not domain admin.
+- **ServiceAccountCredential &lt;pscredential&gt;** - specifies the service account being used for the AD FS Service running currently. This parameter is only needed if the user would like to backup the DKM and is not domain admin or does not have access to the container's contents. 
 
 - **BackupComment &lt;string[]&gt;** - An informational string about the backup that will be displayed during the restore, similar to the concept of Hyper-V checkpoint naming. The default is an empty string
 
@@ -97,7 +94,7 @@ For the file system to be used, a storage path must be given. In that directory,
 ## Backup examples
 The following are backup examples for using the AD FS Rapid Restore Tool.
 
-### Backup the AD FS configuration, with the DKM, to the File System, while running as the domain admin
+### Backup the AD FS configuration, with the DKM, to the File System, and has access to the DKM container contents (either domain admin or delegated)
 
 ```powershell
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM
@@ -220,6 +217,33 @@ Every time a backup or restore is performed a log file is created. These can be 
 > When performing a restore a PostRestore_Instructions file might be created containing an overview of the additional authentication providers, attribute stores and local claims provider trusts to be installed manually before starting the AD FS service.
 
 ## Version Release History
+
+### Version: 1.0.81.0
+Release: April 2019
+
+**Fixed issues:**
+
+
+- Bug fixes for certificate backup and restore
+- Additional trace information to the log file
+
+
+### Version: 1.0.75.0
+Release: August 2018
+
+**Fixed issues:**
+* Update Backup-ADFS when using the -BackupDKM switch.  The tool will determine if the current context has access to the DKM container.  If so, it will not require either Domain Admin privileges or service account credentials.  This allows automated backups to happen without explicitly providing credentials or running as a Domain Administrator account.
+
+### Version: 1.0.73.0
+Release: August 2018
+
+**Fixed issues:**
+* Update the encryption algorithms so that the application is FIPS compliant
+	
+	>[!NOTE]
+	> Old backups will not work with the new version due to changes in encryption algorithms as per FIPS compliance
+	
+* Add support for SQL clusters that use merge replication
 
 ### Version: 1.0.72.0
 Release: July 2018

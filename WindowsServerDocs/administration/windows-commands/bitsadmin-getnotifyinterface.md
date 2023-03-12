@@ -17,9 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin getnotifyinterface
 
-
-
-Determines if another program has registered a COM callback interface for the specified job.
+Determines whether another program has registered a COM callback interface (the notify interface) for the specified job.
 
 ## Syntax
 

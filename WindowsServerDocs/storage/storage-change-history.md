@@ -7,16 +7,73 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 06/29/2018
+ms.date: 03/25/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## March 2019
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)| New|
+|[Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
+|[DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) library|
+
+## February 2019
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | Added an issue    |
+
+## January 2019
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)|New topic|
+
+## December 2018
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Use Storage Migration Service to migrate a server](storage-migration-service/migrate-data.md)| Added some clarification on how we transfer files |
+|[Cluster to Cluster Storage Replica cross region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Added validation steps|
+|[Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)|Added validation steps|
+|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.md)| Added support statement for Data Deduplication|
+
+## November 2018
+
+|New or changed topic                                        |Description|
+|---                                                         |---           |
+|[Nested resiliency](storage-spaces/nested-resiliency.md)    | New topic    |
+|[Storage Migration Service known issues](storage-migration-service/known-issues.md)   | New topic    |
+|[DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) library|
+|[Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[Volume Shadow Copy Service](file-server/volume-shadow-copy-service.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+
+## October 2018
+
+|New or changed topic|Description|
+|---|---|
+|[What's new in Storage](whats-new-in-storage.md)|Updated to cover what's new in Windows Server 2019|
+|[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added info about a new update.|
+
+## September 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Storage Migration Service overview](storage-migration-service/overview.md)| New topic |
+|[Use Storage Migration Service to migrate a server](storage-migration-service/migrate-data.md)| New topic |
+|[Storage Migration Service frequently asked questions (FAQ)](storage-migration-service/faq.md)| New topic |
+| [iSCSI Target Server](iscsi/iscsi-target-server.md) | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+| [iSCSI Target Server scalability limits](iscsi/iscsi-target-server-limits.md) |Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## June 2018
 

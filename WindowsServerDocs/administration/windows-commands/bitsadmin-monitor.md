@@ -32,13 +32,14 @@ bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
 
 |Parameter|Description|
 |---------|-----------|
-|Allusers|Optional—monitors jobs for all users|
+|Allusers|Optional—monitors jobs for all users.|
 |Refresh|Optional—refreshes the data at an interval specified by *Seconds*. The default refresh interval is five seconds.|
 
 ## Remarks
 
--   You must have administrator privileges to use the **Allusers** parameter.
--   Use CTRL+C to stop the refresh.
+You must have administrator privileges to use the **Allusers** parameter.
+
+Use CTRL+C to stop the refresh.
 
 ## <a name="BKMK_examples"></a>Examples
 

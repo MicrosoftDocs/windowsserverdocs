@@ -12,13 +12,14 @@ author: KBDAzure
 ms.author: kathydav
 ms.date: 01/08/2018
 ---
-# Manage Hyper-V on Windows Server 2016
+# Manage Hyper-V on Windows Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server 2019
 
-Use the resources in this section to help you manage Hyper-V on Windows Server 2016.   
+Use the resources in this section to help you manage Hyper-V on Windows Server 2016.
+
 - [Choose between standard or production checkpoints](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
-- [Enable or disable checkpoints](Enable-or-disable-checkpoints-in-Hyper-V.md)  
+- [Enable or disable checkpoints](Enable-or-disable-checkpoints-in-Hyper-V.md) 
 - [Manage hosts with Hyper-V Manager](Remotely-manage-Hyper-V-hosts.md)
 - [Manage host CPU resource controls](manage-hyper-v-minroot-2016.md)
 - [Using VM CPU Groups](manage-hyper-v-cpugroups.md)

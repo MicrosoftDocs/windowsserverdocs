@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Add high availability to the RD Web and Gateway web front
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 
 You can deploy a Remote Desktop Web Access (RD Web Access) and Remote Desktop Gateway (RD Gateway) farm to improve the availability and scale of a Windows Server Remote Desktop Services (RDS) deployment 
@@ -32,7 +32,7 @@ Set up a server to act as an additional RD Web and RD Gateway - this can be eith
 2. Add the new RD Web and Gateway server to Server Manager:
     1. Launch Server Manager, click **Manage > Add Servers**.   
     2. In the Add Servers dialog, click **Find Now**.   
-    3. Select the newly created RD Session Host server (for example, Contoso-WebGw2) and click **OK**.
+    3. Select the newly created RD Web and Gateway server (for example, Contoso-WebGw2) and click **OK**.
 3. Add RD Web and Gateway servers to the deployment  
     1. Launch Server Manager .  
     2. Click **Remote Desktop Services > Overview > Deployment Servers > Tasks > Add RD Web Access Servers**.   

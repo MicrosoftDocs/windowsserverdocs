@@ -36,7 +36,7 @@ bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
 
 ## Remarks
 
--   This command is used to add a custom HTTP header to a GET request sent to an HTTP server.
+-   This switch is used to add a custom HTTP header to a GET request sent to an HTTP server.
 
 ## <a name="BKMK_examples"></a>Examples
 

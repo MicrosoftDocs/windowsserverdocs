@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # Hyper-V Network Virtualization Overview in Windows Server 2016
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 In Windows Server 2016 and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:  
   
@@ -135,8 +135,8 @@ To learn more about Hyper-V Network Virtualization in Windows Server 2016 see th
   
 |Content type|References|  
 |----------------|--------------|  
-|**Community Resources**|-   [Private Cloud Architecture Blog](http://blogs.technet.com/b/privatecloud/archive/2012/03/19/cloud-datacenter-network-architecture-in-the-windows-server-8-era.aspx)<br />-   Ask questions: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)|  
-|**RFC**|-   VXLAN - [RFC 7348](http://www.rfc-editor.org/info/rfc7348)|  
+|**Community Resources**|-   [Private Cloud Architecture Blog](https://blogs.technet.com/b/privatecloud/archive/2012/03/19/cloud-datacenter-network-architecture-in-the-windows-server-8-era.aspx)<br />-   Ask questions: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)|  
+|**RFC**|-   VXLAN - [RFC 7348](https://www.rfc-editor.org/info/rfc7348)|  
 |**Related Technologies**|-   [Network Controller](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md)<br />-   [Hyper-V Network Virtualization Overview](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) ( Windows Server 2012 R2 )|  
   
 

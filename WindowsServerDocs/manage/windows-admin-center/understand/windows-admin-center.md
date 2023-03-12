@@ -2,42 +2,39 @@
 title: Windows Admin Center
 description: Learn how to manage Windows and Windows Server with a new browser-based app, Windows Admin Center (formerly Project Honolulu)
 ms.technology: manage
-ms.topic: landing-page
-layout: LandingPage
+ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 07/17/2018
+ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
 ---
-
 # Hello, Windows Admin Center!
+
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
 
 ## Download now
-**Windows Admin Center Preview** (version 1807)
 
-Includes the latest feature updates. [Get it from Windows Server Insider Preview](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) > Additional Downloads
-
-**Windows Admin Center** (version 1804.25)
-
-Broadly validated & generally available. [Get it here](http://aka.ms/WACDownload)
-
+<!--**Windows Admin Center Preview** (version 1906)
 [Which version is right for me?](faq.md#what-is-windows-admin-center-preview-which-version-is-right-for-me)
 
-********************
+- [Windows Admin Center Preview 1906](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) - Includes the latest feature updates.
+-  -->
+[Windows Admin Center (version 1904)](https://aka.ms/WACDownload) <!--Broadly validated & generally available.-->
 
-Quick links: [Documentation](../overview.md) | [Give feedback](https://aka.ms/WACFeedback) | [Latest features](../overview.md#latest-features) | [For developers](../extend/extensibility-overview.md)
+[What's new?](../overview.md#release-history)
+
+You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing. Each non-preview version of Windows Admin Center is supported until 30 days after the next non-preview version is released. See our [support policy](../support/index.md) for more info.
+
+> [!IMPORTANT]
+> Lenovo XClarity Integrator users, please read this [known issue](../support/known-issues.md) before installing Windows Admin Center version 1904.
 
 ********************
 
 >[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
-<!-- <font style="font-size:120%"> Windows Admin Center is the evolution of familiar in-box management tools plus so much more. </font>
-
-
-<img src="../media/legacy-to-new.gif" alt="Video of legacy management tools transformed to new Windows Admin Center tools"> -->
 
 |   |   |
 |:-:|:--|
@@ -70,4 +67,6 @@ Windows Admin Center is designed for managing a single server or cluster. It com
 
 ********************
 
-## Follow us &nbsp; <a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+## Connect with us
+
+<a target="_blank" class="mscom-link twitter-follow-link" title="Follow us on Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>&nbsp; <a target="_blank" class="mscom-link blogs-follow-link" title="Follow us on Blogs" aria-label="Follow us on Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a> [Give feedback](https://aka.ms/WACFeedback)

@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 06/18/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -13,9 +13,14 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-Once you've developed your extension, you will want to publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few different options for publishing which we'll introduce below along with the steps and requirements for publishing.
+Once you've developed your extension, you will want to publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few options which we'll introduce below along with the steps and requirements for publishing.
 
-## Deciding where to publish to
+## Publishing Options
+
+There are three primary options for configurable package sources that Windows Admin Center supports:
+* Microsoft's public Windows Admin Center NuGet feed
+* Your own private NuGet feed
+* Local or network file share
 
 ### Publishing to the Windows Admin Center extension feed
 
@@ -23,7 +28,7 @@ By default, Windows Admin Center is connected to a NuGet feed maintained by the 
 
 ### Publishing to a different NuGet feed
 
-You may also create your own NuGet feed to publish your extensions to using one of the many [different options for setting up a private source or using a NuGet hosting service](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview). The NuGet feed must support the NuGet v2 API. Since Windows Admin Center does not currently support feed authentication, the feed needs to be configured to allow read access to anyone.
+You may also create your own NuGet feed to publish your extensions to using one of the many [different options for setting up a private source or using a NuGet hosting service](https://docs.microsoft.com/nuget/hosting-packages/overview). The NuGet feed must support the NuGet v2 API. Since Windows Admin Center does not currently support feed authentication, the feed needs to be configured to allow read access to anyone.
 
 ### Publishing to a file share
 
@@ -45,35 +50,53 @@ If you are releasing a preview version of your extension for evaluation purposes
 
 ## Creating an extension package
 
-To make your extension available on a NuGet feed or file share for others to download and install, you need to create a NuGet package.
+Windows Admin Center utilizes NuGet packages and feeds for distributing and downloading extensions.  In order for your package to be shipped, you will need to generate a NuGet package containing your plugins and extensions.  A single package can contain both a UI extension as well as a Gateway plugin, and the following section will walk you through the process.
 
 ### 1. Build your extension
 
-Run "gulp build" and make sure the build is successful.
+As soon as you are ready to start packaging your extension, create a new directory on your file system, open a console, and CD into it.  This will be the root directory that we will use to contain all the nuspec and content directories that will make up our package.  We will reference this folder as "NuGet Package" for the duration of this document.
+
+#### UI Extensions
+
+To begin the process on gathering all the content needed for a UI extension, run "gulp build" on your tool and make sure the build is successful.  This process packages all the components together in a folder called "bundle" located in the root directory of your extension (at the same level of the src directory).  Copy this directory and all it's contents into the "NuGet Package" folder.
+
+#### Gateway Plugins
+
+Using your Build infrastructure (this could be as simple as opening Visual Studio and clicking the Build button), compile and build your plugin.  Open up your build output directory, and copy the Dll(s) that represent your plugin, and put them in a new folder inside the "NuGet Package" directory called "package".  You do not need to copy the FeatureInterface dll, just the Dll(s) that represent your code.
 
 ### 2. Create the .nuspec file
 
-To create the NuGet package, you need to first create a .nuspec file. A .nuspec file is an XML manifest that contains NuGet package metadata. This manifest is used both to build the package and to provide information to consumers.
+To create the NuGet package, you need to first create a .nuspec file. A .nuspec file is an XML manifest that contains NuGet package metadata. This manifest is used both to build the package and to provide information to consumers.  Place this file at the root of the "NuGet Package" folder.
 
-Here's an example .nuspec file and the list of required or recommended properties. For the full schema, see the [.nuspec reference] (https://docs.microsoft.com/en-us/nuget/reference/nuspec). Save the .nuspec file to your project's root folder with a file name of your choice.
+Here's an example .nuspec file and the list of required or recommended properties. For the full schema, see the [.nuspec reference](https://docs.microsoft.com/nuget/reference/nuspec). Save the .nuspec file to your project's root folder with a file name of your choice.
+
+> [!IMPORTANT]
+> The ```<id>``` value in the .nuspec file needs to match the ```"name"``` value in your project's ```manifest.json``` file, or else your published extension won't load successfully in Windows Admin Center.
 
 ```xml
-<?xml version="1.0"?>
-<package>
-    <metadata>
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
     <packageTypes>
-        <packageType name="WindowsAdminCenterExtension" />
-    </packageTypes>
-    <id>contoso.sme.hello-extension</id>
-    <title>Contoso Hello Extension</title>
+      <packageType name="WindowsAdminCenterExtension" />
+    </packageTypes>  
+    <id>contoso.project.extension</id>
     <version>1.0.0</version>
+    <title>Contoso Hello Extension</title>
     <authors>Contoso</authors>
-    <description>Hello World extension by Contoso</description>
-    <iconUrl>http://YourLogoLink</iconUrl>
+    <owners>Contoso</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://msft-sme.myget.org/feed/windows-admin-center-feed/package/nuget/contoso.sme.hello-extension</projectUrl>
     <licenseUrl>http://YourLicenseLink</licenseUrl>
+    <iconUrl>http://YourLogoLink</iconUrl>
+    <description>Hello World extension by Contoso</description>
     <copyright>(c) Contoso. All rights reserved.</copyright> 
-    </metadata>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="bundle\**\*.*" target="ux" />
+    <file src="package\**\*.*" target="gateway" />
+  </files>
 </package>
 ```
 
@@ -82,7 +105,7 @@ Here's an example .nuspec file and the list of required or recommended propertie
 | Property Name | Required / Recommended | Description |
 | ---- | ---- | ---- |
 | packageType | Required | Use "WindowsAdminCenterExtension" which is the NuGet package type defined for Windows Admin Center extensions. |
-| id | Required | Unique Package identifier within the feed. See [Choosing a unique package identifier](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
+| id | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
 | title | Required for publishing to the Windows Admin Center feed | Friendly name for the package that is displayed in Windows Admin Center Extension Manager. |
 | version | Required | Extension version. Using [Semantic Versioning (SemVer convention)](http://semver.org/spec/v1.0.0.html) is recommended but not required. |
 | authors | Required | If publishing on behalf of your company, use your company name. |
@@ -90,23 +113,24 @@ Here's an example .nuspec file and the list of required or recommended propertie
 | iconUrl | Recommended when publishing to the Windows Admin Center feed | URL for icon to display in the Extension Manager. |
 | projectUrl | Required for publishing to the Windows Admin Center feed | URL to your extension's website. If you do not have a separate website, use the URL for the package webpage on the NuGet feed. |
 | licenseUrl | Required for publishing to the Windows Admin Center feed | URL to your extension's end user license agreement. |
+| files | Required | These two settings set up the folder structure that Windows Admin Center expects for UI extensions and Gateway plugins. |
 
 ### 3. Build the extension NuGet package
 
 Using the .nuspec file you created above, you will now create the NuGet package .nupkg file which you can upload and publish to the NuGet feed.
 
-1. Download the nuget.exe CLI tool from the [NuGet client tools website](https://docs.microsoft.com/en-us/nuget/install-nuget-client-tools).
+1. Download the nuget.exe CLI tool from the [NuGet client tools website](https://docs.microsoft.com/nuget/install-nuget-client-tools).
 2. Run "nuget.exe pack [.nuspec file name]" to create the .nupkg file.
 
 ### 4. Signing your extension NuGet package
 
-Any .dll files included in your extension are required to be signed with a certificate from a trusted Certificate Authority (CA). By default, unsigned .dll files will be blocked from being executed.
+Any .dll files included in your extension are required to be signed with a certificate from a trusted Certificate Authority (CA). By default, unsigned .dll files will be blocked from being executed when Windows Admin Center is running in Production Mode.
 
-We also highly recommend that you sign the extension NuGet package to ensure the integrity of the package. While Windows Admin Center currently does not verify the package signing, we plan to implement this in the future.
+We also highly recommend that you sign the extension NuGet package to ensure the integrity of the package, but this is not a required step.
 
 ### 5. Test your extension NuGet package
 
-Your extension package is now ready for testing! Upload the .nupkg file to a NuGet feed or copy it to a file share. To view and download packages from a different feed or file share, you'll need to [change your feed configuration](../configure/using-extensions.md#installing-extensions-from-a-different-feed---windows-admin-center-preview) to point to your NuGet feed or file share. When testing, make sure the properties are displayed correctly in Extension Manager and you can successfully install and uninstall your extension.
+Your extension package is now ready for testing! Upload the .nupkg file to a NuGet feed or copy it to a file share. To view and download packages from a different feed or file share, you'll need to [change your feed configuration](../configure/using-extensions.md#installing-extensions-from-a-different-feed) to point to your NuGet feed or file share. When testing, make sure the properties are displayed correctly in Extension Manager and you can successfully install and uninstall your extension.
 
 ## Publishing your extension to the Windows Admin Center feed
 

@@ -38,7 +38,7 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/show
 |/categories|starts System Information with only the specified category or categories displayed. It also limits the output to the selected category or categories. Use **/showcategories** to display a list of available category IDs.|
 |/?|Displays help at the command prompt.|
 ## Remarks
-Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](https://technet.microsoft.com/en-us/library/cc783305(v=ws.10).aspx).
+Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx).
 ## <a name="BKMK_Examples"></a>Examples
 To list the available category IDs, type:
 ```

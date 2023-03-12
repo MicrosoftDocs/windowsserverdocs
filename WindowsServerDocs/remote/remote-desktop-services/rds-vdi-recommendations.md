@@ -7,16 +7,16 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 06/12/2017
+ms.date: 12/18/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
-manager: elizapo
+manager: dougkim
 ---
 # Recommended settings for VDI desktops
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
 
 Microsoft Desktop Virtualization automatically detects device configurations and network conditions to get users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
 
@@ -29,7 +29,7 @@ These instructions and recommended settings are relevant to Windows 10 1607 (ver
 > [!NOTE]  
 > Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
 
-When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](https://technet.microsoft.com/en-us/windows/release-info.aspx).
+When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](https://technet.microsoft.com/windows/release-info.aspx).
 
 ## Creating the Windows 10 image
 The first step is to install a reference image of Windows 10 1607 (version 10.0.1393) on either a physical  or virtual machine. Installing to a virtual machine is easy and allows you to save versions of the virtual hard-disk (VHD) file, in case you want to roll back to an earlier version.
@@ -416,9 +416,9 @@ Collapse **System**, and then expand **Windows Components**. Adjust each setting
 
 At the same level as the **Internet Explorer** settings you just adjusted in the preceding table, note another level of folders ranging from **Accelerators** to **Toolbars**. In other words, you are now at Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > Internet Explorer. 
 
-Open the **Delete Browsing History** folder, double-click **Allow deleting browing history on exit**, select **Enable**, and then click **OK** to save and exit.
+Open the **Delete Browsing History** folder, double-click **Allow deleting browsing history on exit**, select **Enable**, and then click **OK** to save and exit.
 
-Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
+Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Internet Settings**, double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
 
 |Setting folder under **Advanced Settings**|Setting|Recommended value for VDI use|  
 |-------------------|-------|----------|
@@ -543,12 +543,12 @@ This will prevent the apps from being reinstalled.
 You can remove the OneDrive icon and app, turn off system icons, and delete downloaded updates.
 
 ### Remove OneDrive icon and app
-1. Click **Start** and scroll to to the **OneDrive** icon.
+1. Click **Start** and scroll to the **OneDrive** icon.
 2. Right-click the **OneDrive** icon, point to **More**, and then click **Open file location**.
 3. Right-click the **OneDrive** icon in its file location, and click **Delete**.
 
 To remove the OneDrive app:
-1. Click **Start** and scroll to to the **OneDrive** icon.
+1. Click **Start** and scroll to the **OneDrive** icon.
 2. Right-click the **OneDrive** icon, and then click **Uninstall**. Programs and Features opens.
 3. In Programs and Features, right-click **Microsoft OneDrive** and click **Uninstall**.
 

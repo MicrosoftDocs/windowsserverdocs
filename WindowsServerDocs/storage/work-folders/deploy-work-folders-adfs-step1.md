@@ -6,7 +6,7 @@ ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 4/5/2017
+ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 1, Set-up AD FS
@@ -58,7 +58,7 @@ To create an AD FS self-signed certificate, follow these steps:
 3.  Set the execution policy to unrestricted:  
   
     ```powershell  
-    PS C:\temp\scripts> .\makecert.ps1 C:\temp\scripts> Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
+    Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
     ```  
   
 4.  Change to the directory where you copied the script.  
@@ -66,7 +66,7 @@ To create an AD FS self-signed certificate, follow these steps:
 5.  Execute the makecert script:  
   
     ```powershell  
-    PS C:\temp\scripts> .\makecert.ps1  
+    .\makecert.ps1  
     ```  
   
 6.  When you are prompted to change the subject certificate, enter the new value for the subject. In this example, the value is **blueadfs.contoso.com**.  
@@ -115,7 +115,7 @@ To accomplish the equivalent installation of AD FS via Windows PowerShell, use t
   
 ```powershell  
 Add-WindowsFeature RSAT-AD-Tools  
-Add-WindowsFeature AD FS-Federation –IncludeManagementTools  
+Add-WindowsFeature ADFS-Federation –IncludeManagementTools  
 ```  
   
 ## Configure AD FS  

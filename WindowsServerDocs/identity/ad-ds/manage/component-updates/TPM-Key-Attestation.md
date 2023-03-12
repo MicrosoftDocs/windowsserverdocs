@@ -2,9 +2,9 @@
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM Key Attestation
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
@@ -211,7 +211,7 @@ To configure the certificate template for TPM key attestation, do the following 
   
         ```powershell  
         PS C:>\$a=Get-TpmEndorsementKeyInfo -hashalgorithm sha256  
-        PS C:>$b=new-item $a.PublickKeyHash -ItemType file  
+        PS C:>$b=new-item $a.PublicKeyHash -ItemType file  
         ```  
   
 ## Troubleshooting  
@@ -265,7 +265,7 @@ Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify t
         PS C:>\$a.manufacturerCertificates|Export-Certificate -filepath c:\myEkcert.cer
         ```  
   
-    2.  **Verify trust on an KCert on a CA computer:** Copy the extracted EKCert (EkCert.cer) to the CA (for example, via email or xcopy). As an example, if you copy the certificate file the "c:\diagnose" folder on the CA server, run the following to finish verification:  
+    2.  **Verify trust on an EKCert on a CA computer:** Copy the extracted EKCert (EkCert.cer) to the CA (for example, via email or xcopy). As an example, if you copy the certificate file the "c:\diagnose" folder on the CA server, run the following to finish verification:  
   
         ```  
         PS C:>new-object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\diagnose\myEKcert.cer" | Confirm-CAEndorsementKeyInfo  

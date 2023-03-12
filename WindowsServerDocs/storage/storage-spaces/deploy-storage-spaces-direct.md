@@ -7,18 +7,18 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 5/24/2018
+ms.date: 8/16/2018
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure. 
 ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
 > [!Tip]
-> Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
+Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
@@ -104,7 +104,7 @@ Net localgroup Administrators <Domain\Account> /add
 
 ### Step 1.4: Install roles and features
 
-The next step is to [install some server roles and features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md) on every server:
+The next step is to install server roles on every server. You can do this by using [Windows Admin Center](../../manage/windows-admin-center/use/manage-servers.md), [Server Manager](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)), or PowerShell. Here are the roles to install:
 
 - Failover Clustering
 - Hyper-V
@@ -113,15 +113,22 @@ The next step is to [install some server roles and features](../../administratio
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-Use the `Install-WindowsFeature` cmdlet as shown, substituting your server names:
+To install via PowerShell, use the [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+
+```PowerShell
+Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
+```
+
+To run the command on all servers in the cluster as the same time, use this little bit of script, modifying the list of variables at the beginning of the script to fit your environment.
 
 ```PowerShell
 # Fill in these variables with your values
 $ServerList = "Server01", "Server02", "Server03", "Server04"
 $FeatureList = "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
 
+# This part runs the Install-WindowsFeature cmdlet on all servers in $ServerList, passing the list of features into the scriptblock with the "Using" scope modifier so you don't have to hard-code them here.
 Invoke-Command ($ServerList) {
-    Install-WindowsFeature $FeatureList
+    Install-WindowsFeature -Name $Using:Featurelist
 }
 ```
 
@@ -136,7 +143,7 @@ Storage Spaces Direct requires high-bandwidth, low-latency networking between se
 
 Windows Server 2016 introduces switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
 
-For instructions to set up networking for Storage Spaces Direct, see see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
+For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 
 ## Step 3: Configure Storage Spaces Direct
 
@@ -212,9 +219,12 @@ After the cluster is created, it can take time for DNS entry for the cluster nam
 
 ### Step 3.4: Configure a cluster witness
 
-It is recommended that you configure a witness for the cluster, so that a three or more node system can withstand two nodes failing or being offline. A two-node deployment requires a cluster witness, otherwise either node going offline will cause the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md).
+We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. 
 
-For more information about configuring a file share witness, see [*Configuring a File Share Witness on a Scale-Out File Server*](https://blogs.msdn.microsoft.com/clustering/2014/03/31/configuring-a-file-share-witness-on-a-scale-out-file-server/).
+For more info, see the following topics:
+
+- [Configure and manage quorum](../../failover-clustering/manage-cluster-quorum.md)
+- [Deploy a Cloud Witness for a Failover Cluster](../../failover-clustering/deploy-cloud-witness.md)
 
 ### Step 3.5: Enable Storage Spaces Direct
 
@@ -285,11 +295,11 @@ The next step in setting up the cluster services for your file server is creatin
 2.  On the **Select Role** page, click **File Server**.
 3.  On the **File Server Type** page, click **Scale-Out File Server for application data**.
 4.  On the **Client Access Point** page, type a name for the Scale-Out File Server.
-5.  Verify that the role was successfully set up by going to **Roles** and confirming that the **Status** column shows **Running** next to the clustered file server role you created, as shown in Figure 2.
+5.  Verify that the role was successfully set up by going to **Roles** and confirming that the **Status** column shows **Running** next to the clustered file server role you created, as shown in Figure 1.
 
-    ![Failover Cluster Manager showing the Scale&#45;Out File Server](media\Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016\SOFS_in_FCM.png "Failover Cluster Manager showing the Scale-Out File Server")
+    ![Screenshot of Failover Cluster Manager showing the Scale-Out File Server](media\Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016\SOFS_in_FCM.png "Failover Cluster Manager showing the Scale-Out File Server")
 
-     **Figure 2** Failover Cluster Manager showing the Scale-Out File Server with the Running status
+     **Figure 1** Failover Cluster Manager showing the Scale-Out File Server with the Running status
 
 > [!NOTE]
 >  After creating the clustered role, there might be some network propagation delays that could prevent you from creating file shares on it for a few minutes, or potentially longer.  

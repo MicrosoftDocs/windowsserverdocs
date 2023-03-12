@@ -1,4 +1,4 @@
-# [Manage Windows Server](manage-windows-server.md)
+# [Management](manage-windows-server.md)
 ## [Use Windows Admin Center to manage your environment (New!)](../manage/windows-admin-center/overview.md)
 ## Manage Windows Server systems and environments
 ### [Manage Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-overview.md)
@@ -23,6 +23,10 @@
 #### [Filter, sort, and query Data in Server Manager Tiles](server-manager/filter-sort-and-query-data-in-server-manager-tiles.md)
 #### [Keyboard Shortcuts for Server Manager](server-manager/keyboard-shortcuts-for-server-manager.md)
 ### [Manage Server Core and remote systems Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
+### [Manage Windows with OpenSSH](OpenSSH/OpenSSH_Overview.md)
+#### [Getting started with OpenSSH](OpenSSH/OpenSSH_Install_FirstUse.md)
+#### [Configuring Windows for OpenSSH](OpenSSH/OpenSSH_Server_Configuration.md)
+#### [Managing OpenSSH Keys](OpenSSH/OpenSSH_KeyManagement.md)
 ### [Windows Server Update Services (WSUS)](windows-server-update-services/get-started/windows-server-update-services-wsus.md)
 #### [Deploy Windows Server Update Services](windows-server-update-services/deploy/deploy-windows-server-update-services.md)
 ##### [Plan your WSUS deployment](windows-server-update-services/plan/plan-your-wsus-deployment.md)
@@ -44,6 +48,13 @@
 #### [Migrating the WSUS database from Windows Internal Database (WID) to SQL](windows-server-update-services/manage/wid-to-sql-migration.md)
 
 ## Collect information about your environment and systems
+### [System Insights](..\manage\system-insights\overview.md)
+#### [Understanding capabilities](..\manage\system-insights\understanding-capabilities.md)
+#### [Managing capabilities](..\manage\system-insights\managing-capabilities.md)
+#### [Adding and developing capabilities](..\manage\system-insights\adding-and-developing-capabilities.md)
+##### [Adding, removing, and updating capabilities](..\manage\system-insights\add-remove-update-capabilities.md)
+##### [Choosing capability data sources](..\manage\system-insights\data-sources.md)
+#### [FAQ](..\manage\system-insights\faq.md)
 ### [Collect events with Setup and Boot Event Collection](Get-started-with-Setup-and-Boot-Event-Collection.md)
 ### [Collect information about software Software Inventory Logging (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
 #### [Manage Software Inventory Logging](software-inventory-logging/manage-software-inventory-logging.md)
@@ -61,12 +72,6 @@
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
 
-## Insider Preview
-### [System Insights overview](..\manage\system-insights\system-insights-overview.md)
-#### [Management](..\manage\system-insights\managing-system-insights.md)
-#### [Capabilities](..\manage\system-insights\system-insights-capabilities.md)
-#### [FAQ](..\manage\system-insights\system-insights-faq.md)
-#### [Known issues](..\manage\system-insights\system-insights-known-issues.md)
 
 <!--
 #### [A-Z list](windows-commands/a-z-list.md)

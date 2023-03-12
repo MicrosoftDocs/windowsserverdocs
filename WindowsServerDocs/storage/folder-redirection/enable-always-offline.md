@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 04/05/2018
+ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---
 # Enable Always Offline mode for faster access to files
@@ -20,7 +20,7 @@ This document describes how to use the Always Offline mode of Offline Files to p
 To enable Always Offline mode, your environment must meet the following prerequisites.
 
 - An Active Directory Domain Services (AD DS) domain with client computers joined to the domain. There are no forest or domain functional-level requirements or schema requirements.
-- Client computers running Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012. (Client computers running earlier versions of Windows might continue to transition to Online mode on very high-speed network connections.)
+- Client computers running Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012. (Client computers running earlier versions of Windows might continue to transition to Online mode on very high-speed network connections.)
 - A computer with Group Policy Management installed.
 
 ## Enable Always Offline mode

@@ -56,7 +56,7 @@ This section provides details about the following computer-based policy settings
 
 -   [Configure Automatic Updates](#BKMK_comp5)
 
--   [delay Restart for scheduled installations](#BKMK_comp6)
+-   [Delay restart for scheduled installations](#BKMK_comp6)
 
 -   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog](#BKMK_comp7)
 
@@ -209,7 +209,7 @@ To use this setting, select **Enabled**, and then in **Options** under **Configu
 |**Enabled**|Specifies that Windows recognizes when the computer is online and uses its Internet connection to search Windows Update for available updates.<br /><br />When enabled, local administrators will be allowed to use the Windows Update control panel to select a configuration option of their choice. However, local administrators will not be allowed to disable the configuration for Automatic Updates.<br /><br />-   **2 - Notify for download and notify for install**<br />    When Windows Update finds updates that apply to the computer, users will be notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.<br />-   **3 - Auto download and notify for install** (default setting)<br />    Windows Update finds applicable updates and downloads them in the background; the user is not notified or interrupted during the process. When the downloads are complete, users are notified that there are updates ready to install. Users can then run Windows Update to install the downloaded updates.<br />-   **4 - Auto download and schedule the install**<br />    You can specify the schedule by using the options in this Group Policy setting. If no schedule is specified, the default schedule for all installations will be every day at 3:00 A.M. If any updates require a restart to complete the installation, Windows will restart the computer automatically. (if a user is signed in to the computer when Windows is ready to restart, the user will be notified and given the option to delay the restart.) **Note:**     starting Windows 8, you can set updates to install during automatic maintenance instead of using a specific schedule tied to Windows Update. Automatic maintenance will install updates when the computer is not in use, and avoid installing updates when the computer is running on battery power. If automatic maintenance is unable to install updates within days, Windows Update will install updates right away. Users will then be notified about a pending restart. A pending restart will only take place if there is no potential for accidental data loss.    You can specify schedule options in the GPME Maintenance Scheduler settings, which are located in the path, *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler** > **Automatic Maintenance Activation Boundary**. See the section of this reference titled: [Maintenance Scheduler settings](#BKMK_MtncScheduler), for setting details.    **5 - Allow local admin to choose setting**<br />-   Specifies whether local administrators are allowed to use the Automatic Updates control panel to select a configuration option of their choice for example, whether local administrators can choose a scheduled installation time.<br />    Local administrators will not be allowed to disable the configuration for Automatic Updates.|
 |**Disabled**|Specifies that any client updates that are available from the public Windows Update service must be manually downloaded from the Internet and installed.|
 
-#### <a name="BKMK_comp6"></a>delay Restart for scheduled installations
+#### <a name="BKMK_comp6"></a>Delay restart for scheduled installations
 Specifies the amount of time Automatic Updates will wait before proceeding with a scheduled restart.
 
 |Supported on:|Excluding:|
@@ -581,7 +581,7 @@ Specifies whether the **Install Updates and Shut Down** option is allowed as the
 
 **Options:** There are no options for this setting.
 
-#### <a name="BKMK_Client3"></a>remove access to use all Windows Update features
+#### <a name="BKMK_Client3"></a>Remove access to use all Windows Update features
 This setting enables you to remove WSUS client access to Windows Update.
 
 |Supported on:|Excluding:|
@@ -616,10 +616,10 @@ The procedure that follows describes how to open the GPMC on your domain control
 
 4.  Do one of the following:
 
-5.  **To open an existing domain-level GPO for editing**, double click the domain that contains the Group Policy object that you want to manage, right-click the domain policy you want to manage, and then click **edit**. Group Policy Management editor (GPME) opens.
+    -  **To open an existing domain-level GPO for editing**, double click the domain that contains the Group Policy object that you want to manage, right-click the domain policy you want to manage, and then click **edit**. Group Policy Management editor (GPME) opens.
 
-6.  ###### **To create a new Group Policy object and open for editing**:
-7.  1.  1.  Right-click the domain for which you want to create a new Group Policy object, and then click **create a GPO in this domain, and Link it here**.
+    -  **To create a new Group Policy object and open for editing**:
+        1.  Right-click the domain for which you want to create a new Group Policy object, and then click **create a GPO in this domain, and Link it here**.
 
         2.  In **New GPO**, in **Name**, type a name for the new Group Policy object, and then click **OK**.
 
@@ -635,7 +635,7 @@ The procedure that follows describes how to open the GPMC on your domain control
 
     -   **Open the computer Configuration > Maintenance Scheduler extension of Group Policy**. In GPOE, navigate to *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**.
 
-for more information about the Group Policy, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx(v=ws.12)).
+For more information about the Group Policy, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx(v=ws.12)).
 
 > [!TIP]
 > After you have opened the extension of Group Policy you want, you can use the following steps to enable, disable, or navigate between settings:
@@ -646,9 +646,9 @@ for more information about the Group Policy, see [Group Policy Overview](https:/
 
 2.  To configure the setting, do one of the following:
 
-    -   To retain the default unspecified state of the setting, select **Not Configured**
+    -   To retain the default unspecified state of the setting, select **Not Configured**.
 
-    -   To enable the setting, select **Enabled**
+    -   To enable the setting, select **Enabled**.
 
     -   To disable the setting, select **Disabled**.
 
@@ -662,7 +662,7 @@ for more information about the Group Policy, see [Group Policy Overview](https:/
 
     -   To discard all unsaved changes and close the dialog box, click **Cancel**.
 
-### <a name="BKMK_changes"></a>changes to WSUS relevant to this guide
+### <a name="BKMK_changes"></a>Changes to WSUS relevant to this guide
 The following table summarizes key differences between the current and past versions of WSUS that are relevant to this guide.
 
 |Windows Server and WSUS versions|Description|

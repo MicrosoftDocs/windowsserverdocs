@@ -74,6 +74,10 @@ if there is a corporate firewall between WSUS and the Internet, you might have t
 
 -   http://go.microsoft.com
 
+-   http://dl.delivery.mp.microsoft.com
+
+-   https://dl.delivery.mp.microsoft.com
+
 > [!IMPORTANT]
 > For a scenario in which WSUS is failing to obtain updates due firewall configurations, see [article 885819](https://support.microsoft.com/kb/885819) in the Microsoft Knowledge Base.
 

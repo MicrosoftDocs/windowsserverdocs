@@ -36,7 +36,7 @@ Install and configure a SQL server farm. For more information, see [https://tech
 4.  Copy the scripts to your secondary server.  Open the CreateDB.sql script in **SQL Management Studio** and click **Execute**.
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql4.png)
 
-5. Open the SetPermissions.sql script in in **SQL Management Studio** and click **Execute**.
+5. Open the SetPermissions.sql script in **SQL Management Studio** and click **Execute**.
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql6.png) 
 
    
@@ -119,7 +119,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
 5.  On the **Subscribers** page, select **AdfsConfigurationV3** as the subscriber database and click **Next**.  
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql28.png) </br> 
   
-6.  On the **Merge Agent Security** page, click **...** and enter the username and password of a domain account \(not a GMSA\) created for the SQL agent by using the ellipses box and and click **Next**.
+6.  On the **Merge Agent Security** page, click **...** and enter the username and password of a domain account \(not a GMSA\) created for the SQL agent by using the ellipses box and click **Next**.
 ![Set up Geographic Redundancy](media\Set-up-Geographic-Redundancy-with-SQL-Server-Replication\sql30.png) </br> 
   
 7.  On **Synchronization Schedule**, choose **Run Continuously** and click **Next**. 

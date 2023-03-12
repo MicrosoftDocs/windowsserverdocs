@@ -17,7 +17,7 @@ ms.author: jgerend
 Master Boot Record (MBR) disks use the standard BIOS partition table. GUID Partition Table (GPT) disks use Unified Extensible Firmware Interface (UEFI). One advantage of GPT disks is that you can have more than four partitions on each disk. GPT is also required for disks larger than two terabytes (TB).
 
 You can change a disk from MBR to GPT partition style as long as the disk contains no partitions or volumes.
-You cannot use the GPT partition style on removable media.
+
 
 > [!NOTE]
 > Before you convert a disk, backup any data on it and close any programs that are accessing the disk.

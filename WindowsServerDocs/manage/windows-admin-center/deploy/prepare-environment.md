@@ -5,8 +5,8 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
-ms.localizationpriority: high
+ms.date: 09/19/2018
+ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
 
@@ -30,23 +30,20 @@ Windows Admin Center requires PowerShell features that are not included by defau
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure).
+If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
 
 ## Prepare Windows Server 2008 R2
-
-> [!NOTE]
-> Management for Windows Server 2008 R2 is only supported on Windows Admin Center Preview
 
 ### Install WMF version 5.1 or higher
 
 Windows Admin Center requires PowerShell features that are not included by default in Windows Server 2008 R2. To manage Windows Server 2008 R2 with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers. 
 
-Ensure that [.NET Framework 4.5.2 or later](https://docs.microsoft.com/en-us/dotnet/framework/install/on-windows-7) is already installed on your computer.
+Ensure that [.NET Framework 4.5.2 or later](https://docs.microsoft.com/dotnet/framework/install/on-windows-7) is already installed on your computer.
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure).
+If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
 
 Run `Enable-PSRemoting –force` in a PowerShell console to enable Powershell remote connection. 
 
@@ -113,7 +110,7 @@ Windows Admin Center requires PowerShell features that are not included by defau
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher. 
 
-If it is not installed, you can [download WMF 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure).
+If it is not installed, you can [download WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
 
 ### **Step 2:** Enable Remote Management 
 
@@ -145,4 +142,4 @@ To enable Hyper-V Module for PowerShell features:
 Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin Center.
 
 > [!Tip]
-> Ready to install Windows Admin Center? [Download now](https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/understand/windows-admin-center#download-now)
+> Ready to install Windows Admin Center? [Download now](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center#download-now)

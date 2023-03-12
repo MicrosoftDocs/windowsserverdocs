@@ -135,7 +135,7 @@ Work Folders supports using Web Application Proxy, Azure AD Application Proxy or
 
 -  Web Application Proxy is an on-premises reverse proxy solution. To learn more, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).  
   
--  Azure AD Application Proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)
+-  Azure AD Application Proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 ## Additional design considerations  
  In addition to understanding each of the components noted above, customers need to spend time in their design thinking about the number of sync servers and shares to operate, and whether or not to leverage failover clustering to provide fault tolerance on those sync servers  

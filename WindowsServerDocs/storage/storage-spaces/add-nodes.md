@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 ---
 # Adding servers or drives to Storage Spaces Direct
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic describes how to add servers or drives to Storage Spaces Direct.
 

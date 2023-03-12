@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 06/13/2017
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -61,9 +61,17 @@ Use the following steps when customizing the onload.js for the AD FS service.
 3.  Make the necessary modification to customize onload.js based on your need.  
   
 4.  Update the theme with the modified onload.js. Use the following cmdlet to apply the update onload.js to custom web theme:  
-  
+
+     For AD FS on Windows Server 2012 R2:  
+
     ```  
     Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=’/adfs/portal/script/onload.js’;path="c:\theme\script\onload.js"}  
+  
+    ```  
+    For AD FS on Windows Server 2016:
+
+     ```  
+    Set-AdfsWebTheme -TargetName custom -OnLoadScriptPath "c:\ADFStheme\script\onload.js"   
   
     ```  
   

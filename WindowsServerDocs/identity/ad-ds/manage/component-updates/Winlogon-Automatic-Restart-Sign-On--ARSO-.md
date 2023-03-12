@@ -2,9 +2,9 @@
 ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon Automatic Restart Sign-On (ARSO)
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

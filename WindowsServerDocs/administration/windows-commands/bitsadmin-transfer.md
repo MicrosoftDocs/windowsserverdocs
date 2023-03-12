@@ -17,25 +17,24 @@ ms.date: 10/16/2017
 
 # bitsadmin Transfer
 
-
-
-Transfers one or more files.
+Transfers one or more files. To transfer more than one file, specify multiple \<RemoteFileName\>-\<LocalFileName\> pairs. The pairs are space-delimited.
 
 ## Syntax
 
 ```
-bitsadmin /Transfer Name [Type] [/Priority Job_Priority] [/ACLFlags Flags] <RemoteFileName> <LocalFileName>
+bitsadmin /Transfer <Name> [<Type>] [/Priority <Job_Priority>] [/ACLFlags <Flags>] [/DYNAMIC] <RemoteFileName> <LocalFileName>
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |---------|-----------|
-|Name|The name of the job.|
-|Type|Optional—specify the type of job. Use **/Download** for a download job or **/Upload** for an upload job.|
-|Priority|Optional— set the job_priority to one of the following values:</br>-   FOREGROUND</br>-   HIGH</br>-   NORMAL</br>-   LOW|
-|ACLFlags|Specify one or more of the following flags:</br>-   O: Copy owner information with file.</br>-   G: Copy group information with file.</br>-   D: Copy DACL information with file.</br>-   S: Copy SACL information with file.|
-|RemoteFileName|The name of the file when transferred to the server|
+|Name|The name of the job. Unlike most commands, **Name** may only be a name and not a GUID.|
+|Type|Optional—specify the type of job. Use **/DOWNLOAD** (the default) for a download job or **/UPLOAD** for an upload job.|
+|Priority|Optional—set the job_priority to one of the following values:</br>-   FOREGROUND</br>-   HIGH</br>-   NORMAL</br>-   LOW|
+|ACLFlags|Optional—indicates that you want to maintain the owner and ACL information with the file being downloaded. For example, to maintain the owner and group with the file, set flags to `OG`. Specify one or more of the following flags:</br>-   O: Copy owner information with file.</br>-   G: Copy group information with file.</br>-   D: Copy DACL information with file.</br>-   S: Copy SACL information with file.|
+|\/DYNAMIC|Configures the job with [**BITS_JOB_PROPERTY_DYNAMIC_CONTENT**](/windows/desktop/api/bits5_0/ne-bits5_0-bits_job_property_id), which relaxes the server-side requirements.|
+|RemoteFileName|The name of the file when transferred to the server.|
 |LocalFileName|The name of the file that resides locally.|
 
 ## Remarks

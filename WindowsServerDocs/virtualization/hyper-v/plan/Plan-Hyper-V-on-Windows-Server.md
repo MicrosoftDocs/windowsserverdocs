@@ -12,9 +12,9 @@ author: KBDAzure
 ms.author: kathydav
 ms.date: 02/13/2017
 ---
-# Plan for Hyper-V on Windows Server 2016
+# Plan for Hyper-V on Windows Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Windows Server 2019
 
 Use these resources to help you plan your Hyper-V deployment.
    

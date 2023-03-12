@@ -12,7 +12,7 @@ author: shortpatti
 
 # Register an NPS in an Active Directory Domain
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to register a server running Network Policy Server in Windows Server 2016 in the NPS default domain or in another domain.
 

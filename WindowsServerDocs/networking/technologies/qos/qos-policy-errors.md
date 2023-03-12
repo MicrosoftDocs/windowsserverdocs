@@ -12,7 +12,7 @@ author: shortpatti
 
 # QoS Policy Error and Event Messages
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Following are the error and event messages that are associated with QoS Policy.  
   

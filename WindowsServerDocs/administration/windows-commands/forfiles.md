@@ -12,7 +12,7 @@ ms.assetid: 43f6b004-446d-4fdd-91c5-5653613524a4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 08/21/2018
 ---
 
 # forfiles
@@ -75,7 +75,7 @@ forfiles /p c:\ /s /m *.bat /c "cmd /c echo @file is a batch file"
 ```
 To list all of the directories on drive C, type:
 ```
-forfiles /p c:\ /s /m *.* /c "cmd /c if @isdir==true echo @file is a directory"
+forfiles /p c:\ /s /m *.* /c "cmd /c if @isdir==TRUE echo @file is a directory"
 ```
 To list all of the files in the current directory that are at least one year old, type:
 ```

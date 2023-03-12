@@ -24,7 +24,7 @@ If you deploy DirectAccess with FRS SYSVOL replication, you risk the unintention
   
 If you are planning to deploy DirectAccess, you must use domain controllers that are running operating systems later than Windows Server 2003 R2, and you must use DFS-R.  
   
-For information on migrating from FRS to DFS-R, see the [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://technet.microsoft.com/en-us/library/dd640019(v=ws.10).aspx).  
+For information on migrating from FRS to DFS-R, see the [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://technet.microsoft.com/library/dd640019(v=ws.10).aspx).  
   
 ## <a name="bkmk_nap"></a>Network Access Protection for DirectAccess clients  
 Network Access Protection (NAP) is used to determine whether remote client computers meet IT policies before they are granted access to the corporate network. NAP was deprecated in Windows Server 2012 R2 and is not included in Windows Server 2016. For this reason, starting a new deployment of DirectAccess with NAP is not recommended. A different method of end point control for the security of DirectAccess clients is recommended.  

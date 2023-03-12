@@ -21,7 +21,7 @@ To change the logo of the company that is displayed on the sign\-in page, use th
 ![change logo](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   
 > [!IMPORTANT]  
-> We recommend the dimensions for the logo to be 260x350 @ 96 dpi with a file size of no greater than 10 KB.  
+> We recommend the dimensions for the logo to be 260x35 @ 96 dpi with a file size of no greater than 10 KB.  
   
     
     Set-AdfsWebTheme -TargetName default -Logo @{path="c:\Contoso\logo.png"}  

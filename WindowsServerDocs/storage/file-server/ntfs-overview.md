@@ -6,7 +6,7 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage 
-ms.date: 07/09/2018
+ms.date: 09/06/2018
 ms.localizationpriority: medium
 ---
 # NTFS overview
@@ -42,7 +42,7 @@ NTFS continuously monitors and corrects transient corruption issues in the backg
   |64 KB (maximum size)|256 TB|256 TB|
 
 >[!IMPORTANT]
->Services and apps might impose additional limits on file and volume sizes. If you’re using Volume Shadow Copy Service (VSS) for snapshots, the limit is 64 TB unless you’re using the VSS system provider (Volsnap) to create snapshots (instead of a hardware provider included with a SAN or RAID enclosure). In the latter case, the suggested limit for production deployments is 10 TB per volume. For more info, see Step 2 in the [Software-defined storage design considerations guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)#step-2-review-the-design-and-adjust-as-necessary>) and [Usability limit for Volume Shadow Copy Service (VSS) in Windows (KB 2967756)](https://support.microsoft.com/help/2967756/usability-limit-for-volume-shadow-copy-service-vss-in-windows).
+>Services and apps might impose additional limits on file and volume sizes. For example, the volume size limit is 64 TB if you’re using the Previous Versions feature or a backup app that makes use of Volume Shadow Copy Service (VSS) snapshots (and you’re not using a SAN or RAID enclosure). However, you might need to use smaller volume sizes depending on your workload and the performance of your storage.
 
 ### Formatting requirements for large files
 
@@ -56,7 +56,7 @@ To allow proper extension of large .vhdx files, there are new recommendations fo
 For example, the following cmdlet formats drive D as an NTFS volume, with FRS enabled and an allocation unit size of 64 KB.
 
 ```PowerShell
-Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 64KB -UseLargeFR
+Format-Volume -DriveLetter D -FileSystem NTFS -AllocationUnitSize 64KB -UseLargeFRS
 ```
 
 You also can use the **format** command. At a system command prompt, enter the following command, where **/L** formats a large FRS volume and **/A:64k** sets a 64 KB allocation unit size:

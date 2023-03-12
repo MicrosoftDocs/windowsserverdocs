@@ -12,7 +12,7 @@ author: shortpatti
 
 # QoS Policy Scenarios
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to review hypothetical scenarios that demonstrate how, when, and why to use QoS Policy.
 
@@ -94,7 +94,7 @@ To complete this task, ensure that you meet the following requirements:
 
 - The computers involved are members of an Active Directory Domain Services \(AD DS\) domain so that they can be configured by using Group Policy.
 
-- TCP/IP networks are set up with routers configured for DSCP \(RFC 2474\). For more information, see [RFC 2474](http://www.ietf.org/rfc/rfc2474.txt).
+- TCP/IP networks are set up with routers configured for DSCP \(RFC 2474\). For more information, see [RFC 2474](https://www.ietf.org/rfc/rfc2474.txt).
 
 - Administrative credentials requirements are met.
 
@@ -138,11 +138,11 @@ The task is similar to the task in Scenario 1. You will design and configure the
 
 All the following URLs are valid and can be specified in QoS Policy and applied simultaneously to a computer or a user:
 
-- http://video
+- https://video
 
 - https://training.hr.mycompany.com
 
-- http://10.1.10.249:8080/tech  
+- https://10.1.10.249:8080/tech  
 
 - https://*/ebooks
 
@@ -160,7 +160,7 @@ Details are as follows:
 
 ####  <a name="bkmk_QoS_UrlScheme"></a> 1. URL scheme
 
- `https://` has a higher priority than `http://`.
+ `https://` has a higher priority than `https://`.
 
 ####  <a name="bkmk_QoS_UrlHost"></a> 2. URL host
 

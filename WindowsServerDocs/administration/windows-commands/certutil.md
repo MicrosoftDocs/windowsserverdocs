@@ -42,7 +42,7 @@ The following table describes the verbs that can be used with the certutil comma
 |-----|-----------|
 |[-dump](#BKMK_dump)|Dump configuration information or files|
 |[-asn](#BKMK_asn)|Parse ASN.1 file|
-|[-decodehex](#BKMK_decodehex)-decodehex|Decode hexadecimal-encoded file|
+|[-decodehex](#BKMK_decodehex)|Decode hexadecimal-encoded file|
 |[-decode](#BKMK_decode)|Decode a Base64-encoded file|
 |[-encode](#BKMK_encode)|Encode a file to Base64|
 |[-deny](#BKMK_deny)|Deny a pending certificate request|
@@ -170,7 +170,7 @@ CertUtil [Options] -asn File [type]
 
 Parse ASN.1 file
 
-type: numeric CRYPT_STRING_* decoding type
+type: numeric CRYPT\_STRING\_\* decoding type
 
 Return to [Menu](#BKMK_menu)
 
@@ -178,7 +178,7 @@ Return to [Menu](#BKMK_menu)
 
 CertUtil [Options] -decodehex InFile OutFile [type]
 
-type: numeric CRYPT_STRING_* encoding type
+type: numeric CRYPT\_STRING\_\* encoding type
 
 [-f]
 
@@ -329,7 +329,7 @@ CertUtil [Options] -CAInfo [InfoName [Index | ErrorCode]]
 
 Display CA Information
 
-InfoName -- indicates the CA property to display (see below). Use "*" for all properties.
+InfoName -- indicates the CA property to display (see below). Use "\*" for all properties.
 
 Index -- optional zero-based property index
 
@@ -831,7 +831,7 @@ Return to [Menu](#BKMK_menu)
 
 ## <a name="BKMK_viewstore"></a>-viewstore
 
-CertUtil [Options] -viewdelstore [CertificateStoreName [CertId [OutputFile]]]
+CertUtil [Options] -viewstore [CertificateStoreName [CertId [OutputFile]]]
 
 Dump certificate store
 
@@ -1076,7 +1076,7 @@ CertUtil [Options] -CredStore URL delete
 
 Display, add or delete Credential Store entries
 
-URL: target URL.  Use * to match all entries. Use https://machine* to match a URL prefix.
+URL: target URL.  Use \* to match all entries. Use https://machine\* to match a URL prefix.
 
 add: add a Credential Store entry. SSL credentials must also be specified.
 
@@ -1100,7 +1100,7 @@ Return to [Menu](#BKMK_menu)
 
 ## <a name="BKMK_URLCache"></a>-URLCache
 
-CertUtil [Options] -URLCache [URL | CRL | * [delete]]
+CertUtil [Options] -URLCache [URL | CRL | \* [delete]]
 
 Display or delete URL cache entries
 
@@ -1108,7 +1108,7 @@ URL: cached URL
 
 CRL: operate on all cached CRL URLs only
 
-*: operate on all cached URLs
+\*: operate on all cached URLs
 
 delete: delete relevant URLs from the current user's local cache
 
@@ -1454,7 +1454,7 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name*" to prefix match)
+RegistryValueName: registry value name (use "Name\*" to prefix match)
 
 Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 
@@ -1492,7 +1492,7 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name*" to prefix match)
+RegistryValueName: registry value name (use "Name\*" to prefix match)
 
 Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 
@@ -1530,7 +1530,7 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name*" to prefix match)
+RegistryValueName: registry value name (use "Name\*" to prefix match)
 
 Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
 
@@ -1634,7 +1634,7 @@ PFXOutFile: PFX output file
 
 ExtendedProperties: Include extended properties
 
-The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "*", the user will be prompted for the output file password.
+The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "\*", the user will be prompted for the output file password.
 
 [-f] [-user] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
 
@@ -1658,7 +1658,7 @@ V3CACertId: V3 CA Certificate match token.  See [-store](#BKMK_Store) CertId des
 
 Salt: EPF output file salt string
 
-The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "*", the user will be prompted for the output file password.
+The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "\*", the user will be prompted for the output file password.
 
 [-f] [-silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
 
@@ -1688,7 +1688,7 @@ This section defines the options that you can specify with the command.
 |-pin PIN|Smart Card PIN|
 |-urlfetch|Retrieve and verify AIA Certs and CDP CRLs|
 |-config Machine\CAName|CA and computer name string|
-|-PolicyServer URLOrId|Policy Server URL or Id. For selection U/I, use -PolicyServer. For all Policy Servers, use -PolicyServer *|
+|-PolicyServer URLOrId|Policy Server URL or Id. For selection U/I, use -PolicyServer. For all Policy Servers, use -PolicyServer \*|
 |-Anonymous|Use anonymous SSL credentials|
 |-Kerberos|Use Kerberos SSL credentials|
 |-ClientCertificate ClientCertId|Use X.509 Certificate SSL credentials. For selection U/I, use -clientCertificate.|

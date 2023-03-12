@@ -5,8 +5,9 @@ ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
+ms.author: elizapo
 ms.localizationpriority: medium
-ms.date: 10/17/2017
+ms.date: 12/18/2018
 ---
 # Administer a Server Core server
 
@@ -117,9 +118,9 @@ Use the following reference information to perform administrative tasks from the
 |Change the name of a computer in a work group|**netdom renamecomputer \<currentcomputername\> /NewName:\<newcomputername\>** <br>Restart the computer.|
 |Disable paging file management|**wmic computersystem where name="\<computername\>" set AutomaticManagedPagefile=False**| 
 |Configure the paging file|**wmic pagefileset where name=”\<path/filename\>” set InitialSize=\<initialsize\>,MaximumSize=\<maxsize\>** <br>Where *path/filename* is the path to and name of the paging file, *initialsize* is the starting size of the paging file, in bytes, and *maxsize* is the maximum size of the page file, in bytes.|
-|Change to a static IP address|**ipconfig /all** <br>Record the relevant information or redirect it to a text file (**ipconfig /all >ipconfig.txt**).<br>**netsh interface ipv4 show interfaces**<br>Verify that there is an interface list.<br>**netsh interface ipv4 set address name \<ID from interface list\> source=static address=\<preferred IP address\> gateway=\<gateway address\>**<br>Run **ipconfig /all** to vierfy that DHCP enabled is set to **No**.|
+|Change to a static IP address|**ipconfig /all** <br>Record the relevant information or redirect it to a text file (**ipconfig /all >ipconfig.txt**).<br>**netsh interface ipv4 show interfaces**<br>Verify that there is an interface list.<br>**netsh interface ipv4 set address name \<ID from interface list\> source=static address=\<preferred IP address\> gateway=\<gateway address\>**<br>Run **ipconfig /all** to verify that DHCP enabled is set to **No**.|
 |Set a static DNS address.|**netsh interface ipv4 add dnsserver name=\<name or ID of the network interface card\> address=\<IP address of the primary DNS server\> index=1 <br>**netsh interface ipv4 add dnsserver name=\<name of secondary DNS server\> address=\<IP address of the secondary DNS server\> index=2** <br> Repeat as appropriate to add additional servers.<br>Run **ipconfig /all** to verify that the addresses are correct.|
-|Change to a DHCP-provided IP address from a static IP address|**netsh interface ipv4 set address name=\<IP address of local system\> source=DHCP** <br>Run **Ipconfig /all** to verify that DCHP enabled is set to **Yes**.|
+|Change to a DHCP-provided IP address from a static IP address|**netsh interface ipv4 set address name=\<IP address of local system\> source=DHCP** <br>Run **ipconfig /all** to verify that DCHP enabled is set to **Yes**.|
 |Enter a product key|**slmgr.vbs –ipk \<product key\>**| 
 |Activate the server locally|**slmgr.vbs -ato**| 
 |Activate the server remotely|**cscript slmgr.vbs –ipk \<product key\>\<server name\>\<username\>\<password\>** <br>**cscript slmgr.vbs -ato \<servername\> \<username\> \<password\>** <br>Get the GUID of the computer by running **cscript slmgr.vbs -did** <br> Run **cscript slmgr.vbs -dli \<GUID\>** <br>Verify that License status is set to **Licensed (activated)**.
@@ -130,7 +131,7 @@ Use the following reference information to perform administrative tasks from the
 |Task|Command| 
 |----|-------|
 |Configure your server to use a proxy server|**netsh Winhttp set proxy \<servername\>:\<port number\>** <br>**Note:** Server Core installations can't access the Internet through a proxy that requires a password to allow connections.|
-|Configure your server to bypass the proxy for Internet addresses|**netsh winttp set proxy \<servername\>:\<port number\>bypass-list="\<local\>"**| 
+|Configure your server to bypass the proxy for Internet addresses|**netsh winttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**| 
 |Display or modify IPSEC configuration|**netsh ipsec**| 
 |Display or modify NAP configuration|**netsh nap**| 
 |Display or modify IP to physical address translation|**arp**| 

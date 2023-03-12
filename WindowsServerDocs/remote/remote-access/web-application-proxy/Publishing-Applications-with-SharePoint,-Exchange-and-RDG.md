@@ -16,7 +16,7 @@ ms.technology: web-app-proxy
 
 >Applies To: Windows Server 2016
 
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-proxy-get-started/).**  
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
   
 This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway (RDP) through Web Application Proxy.  
 
@@ -44,13 +44,13 @@ The following table describes the Exchange services that you can publish through
 |Outlook Web App|-   AD FS using non-claims-based authentication<br />-   Pass-through<br />-   AD FS using claims-based authentication for on-premises Exchange 2013 Service Pak 1 (SP1)|For more information see: [Using AD FS claims-based authentication with Outlook Web App and EAC](https://go.microsoft.com/fwlink/?LinkId=393723)|  
 |Exchange Control Panel|Pass-through||  
 |Outlook Anywhere|Pass-through|You must publish three URLs for Outlook Anywhere to work correctly:<br /><br />-   The autodiscover URL.<br />-   The external host name of the Exchange Server; that is, the URL that is configured for clients to connect to.<br />-   The internal FQDN of the Exchange Server.|  
-|Exchange ActiveSync|Pass-through<br/> AD FS using HTTP Basic authorization protocol|| For more information see: https://docs.microsoft.com/en-us/windows-server/remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication 
+|Exchange ActiveSync|Pass-through<br/> AD FS using HTTP Basic authorization protocol|| For more information see: https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication 
   
 To publish Outlook Web App using Integrated Windows authentication, you must use the Add Non-Claims-Based Relying Party Trust Wizard to configure the relying party trust for the application.  
   
 To allow users to authenticate using Kerberos constrained delegation the Web Application Proxy server must be joined to a domain.  
   
-You must configure the application to support Kerberos authentication. Additionally you need to register a service principal name (SPN) to the account that the web service is running under. You can do this on the domain controller or on the backend servers. In a load balanced Exchange environment this would require using the Alternate Service Account, see [Configuring Kerberos authentication for load-balanced Client Access servers](https://technet.microsoft.com/en-us/library/ff808312(v=exchg.150).aspx)  
+You must configure the application to support Kerberos authentication. Additionally you need to register a service principal name (SPN) to the account that the web service is running under. You can do this on the domain controller or on the backend servers. In a load balanced Exchange environment this would require using the Alternate Service Account, see [Configuring Kerberos authentication for load-balanced Client Access servers](https://technet.microsoft.com/library/ff808312(v=exchg.150).aspx)  
   
 You can also configure the application directly on the backend server if it is running on Windows Server 2012 R2 or Windows Server 2012. For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers.  
   
@@ -155,7 +155,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
   
             This tells the Collection server to include the custom RDP properties in the RDP files that are sent to clients. These tell the client that pre-authentication is required and to pass the cookies for the pre-authentication server address to the Remote Desktop Connection client (mstsc.exe) . This, in conjunction with disabling HttpOnly on the Web Application Proxy application, allows the Remote Desktop Connection client (mstsc.exe) to utilize the Web Application Proxy authentication cookie obtained through the browser.  
   
-            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](https://technet.microsoft.com/en-us/library/cc731249(v=ws.10).aspx).  
+            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](https://technet.microsoft.com/library/cc731249(v=ws.10).aspx).  
   
 ## <a name="BKMK_Links"></a>See also  
   

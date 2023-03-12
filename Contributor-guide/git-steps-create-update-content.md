@@ -28,11 +28,11 @@ Here's how to create a local branch, save your changes, and then push them to yo
 
         git checkout upstream/upstream-branch-name -b your-local-branch-name
 
-  This creates the local branch directly from the upstream branch and helps you avoid merging the wrong files into your new local branch. For example, to create a working branch based on the ga-threshold branch, you could run a command like this:
+   This creates the local branch directly from the upstream branch and helps you avoid merging the wrong files into your new local branch. For example, to create a working branch based on the ga-threshold branch, you could run a command like this:
       
         git checkout upstream/master -b working-11-18
 
-  If you're working on content that should be merged into branch that's not         
+   If you're working on content that should be merged into branch that's not         
 
 5. Add the local working branch to your fork:
 
@@ -46,18 +46,18 @@ Here's how to create a local branch, save your changes, and then push them to yo
 
         git status
 
-  Review the results to make sure the files listed are the ones you changed. If ALL the files look accurate, run this command to add all of the files:
+   Review the results to make sure the files listed are the ones you changed. If ALL the files look accurate, run this command to add all of the files:
 
         git add .
         git commit –m "<comment>"
 
-  To add only the specific files (for example, if ```git status``` lists files that you don't want to submit), instead you MUST run:
+   To add only the specific files (for example, if ```git status``` lists files that you don't want to submit), instead you MUST run:
 
         git add <file path>
         git commit –m "<comment>"
 
->[!IMPORTANT]
->The command ```git add .``` adds ALL pending changes reported by ```git status```. This means that if ```git status``` shows untracked updates that you don't want to add, use ```git add <file path>``` instead.  
+   >[!IMPORTANT]
+   >The command ```git add .``` adds ALL pending changes reported by ```git status```. This means that if ```git status``` shows untracked updates that you don't want to add, use ```git add <file path>``` instead.  
 
 9. Update your local working branch with changes from upstream:
 

@@ -17,7 +17,7 @@ Software Defined Networking (SDN) in Windows Server 2016 is made up of a combina
 
 The network controller is a Windows Server role which must be enabled on Virtual Machines running on hosts that are configured to use SDN and are controlled by the network controller.
 
-Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan Software Defined Networking](../../../../networking/sdn/plan/Plan-Software-Defined-Networking.md) topic.
+Three Network Controller enabled VMs are sufficient for high availability and maximum performance.  Each VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the [Plan a Software Defined Network Infrastructure](../../../../networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md) topic.
 
 ### SDN Quality of Service (QoS)
 
@@ -36,7 +36,7 @@ The optimal number of team members is two as virtualized traffic will be spread 
 
 ### Encapsulation Offloads
 
-SDN relies on encapsulation of packets to to virtualize the network.  For optimal performance, it is important that the network adapter supports hardware offload for the encapsulation format that is used.  There is no significant performance benefit of one encapsulation format over another.  The default encapsulation format when the network controller is used is VXLAN.
+SDN relies on encapsulation of packets to virtualize the network.  For optimal performance, it is important that the network adapter supports hardware offload for the encapsulation format that is used.  There is no significant performance benefit of one encapsulation format over another.  The default encapsulation format when the network controller is used is VXLAN.
 
 You can determine which encapsulation format is being used through the network controller with the following PowerShell cmdlet:
 

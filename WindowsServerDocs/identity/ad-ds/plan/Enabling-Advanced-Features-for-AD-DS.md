@@ -2,9 +2,9 @@
 ms.assetid: 530b3cf1-e907-4556-92ab-c9dc4aee7b56
 title: Enabling Advanced Features for AD DS
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

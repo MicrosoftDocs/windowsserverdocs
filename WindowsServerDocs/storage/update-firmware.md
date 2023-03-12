@@ -1,6 +1,6 @@
 ---
 ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
-title: Updating drive firmware in Windows Server 2016
+title: Updating drive firmware
 ms.prod: windows-server-threshold
 ms.author: toklima
 ms.manager: dmoss
@@ -9,8 +9,8 @@ ms.topic: article
 author: toklima
 ms.date: 10/04/2016
 ---
-# Updating drive firmware in Windows Server 2016
->Applies to: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016
+# Updating drive firmware
+>Applies to: Windows Server 2019, Windows Server 2016, Windows 10
 
 Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces, Windows Server, and Windows 10, version 1703 and newer. If you have drives that support the new firmware update mechanism included in Windows, you can update drive firmware of in-production drives without downtime. However, if you're going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 
@@ -99,7 +99,7 @@ Once a server is in production, it's a good idea to make as few changes to the s
 
 1. Review the firmware release notes and confirm that the update addresses issues that could affect your environment, and that the firmware doesn't contain any known issues that could adversely affect you.
 
-2. Install the firmware on a server in your lab that has identical drives (including the revision of the drive if there are multiple revisions of the same drive), and test the drive under load with the new firmware. For info about doing synthetic load testing, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/en-us/library/dn894707.aspx).
+2. Install the firmware on a server in your lab that has identical drives (including the revision of the drive if there are multiple revisions of the same drive), and test the drive under load with the new firmware. For info about doing synthetic load testing, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/library/dn894707.aspx).
 
 ## Automated firmware updates with Storage Spaces Direct
 

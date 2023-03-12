@@ -1,5 +1,5 @@
 ---
-title: Deploy Hyper-V on Windows Server 2016
+title: Deploy Hyper-V on Windows Server
 description: "Gives links to articles on deploying Hyper-V"
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,9 +12,9 @@ author: KBDAzure
 ms.author: kathydav
 ms.date: 02/13/2017
 ---
-# Deploy Hyper-V on Windows Server 2016
+# Deploy Hyper-V on Windows Server
 
->Applies To: Windows Server 2016
+>Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Use these resources to help you deploy Hyper-V on Windows Server 2016.
    

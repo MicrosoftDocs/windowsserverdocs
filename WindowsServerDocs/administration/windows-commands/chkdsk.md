@@ -27,6 +27,9 @@ Checks the file system and file system metadata of a volume for logical and phys
 > [!IMPORTANT]
 > Interrupting **chkdsk** is not recommended. However, canceling or interrupting **chkdsk** should not leave the volume any more corrupt than it was before **chkdsk** was run. Rerunning **chkdsk** checks and repairs any remaining corruption on the volume.
 
+> [!IMPORTANT]
+> **Note:** Chkdsk can be used only for local disks. The command cannot be used with a local drive letter that has been redirected over the network.
+
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ##Syntax

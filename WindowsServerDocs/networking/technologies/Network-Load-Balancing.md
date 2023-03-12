@@ -1,21 +1,20 @@
 ---
 title: Network Load Balancing
-description: This topic provides an overview of the Network Load Balancing (NLB) feature in Windows Server 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
-manager: brianlic
+description: In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers. 
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-nlb
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: pashort 
 author: shortpatti
+ms.date: 09/13/2018
 ---
 # Network Load Balancing
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic provides an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016, and includes links to additional guidance about creating, configuring, and managing NLB clusters.
-
-You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.   
+In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.  
 
 >[!NOTE]
 >Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
@@ -26,7 +25,7 @@ The servers in an NLB cluster are called *hosts*, and each host runs a separate 
   
 NLB allows all of the computers in the cluster to be addressed by the same set of IP addresses, and it maintains a set of unique, dedicated IP addresses for each host. For load\-balanced applications, when a host fails or goes offline, the load is automatically redistributed among the computers that are still operating. When it is ready, the offline computer can transparently rejoin the cluster and regain its share of the workload, which allows the other computers in the cluster to handle less traffic.  
   
-## <a name="BKMK_APP"></a>Practical applications  
+## Practical applications  
 NLB is useful for ensuring that stateless applications, such as web servers running Internet Information Services \(IIS\), are available with minimal downtime, and that they are scalable \(by adding additional servers as the load increases\). The following sections describe how NLB supports high availability, scalability, and manageability of the clustered servers that run these applications.  
   
 ### High availability  
@@ -97,7 +96,7 @@ Following are the primary features of NLB.
   
 -   Enables you to take computers offline for preventive maintenance without disturbing the cluster operations on the other hosts.  
   
-## <a name="BKMK_HARD"></a>Hardware requirements  
+## Hardware requirements  
 Following are the hardware requirements to run an NLB cluster.  
   
 -   All hosts in the cluster must reside on the same subnet.  
@@ -108,7 +107,7 @@ Following are the hardware requirements to run an NLB cluster.
   
 -   If you use the unicast mode, the network adapter that is used to handle client\-to\-cluster traffic must support changing its media access control \(MAC\) address.  
   
-## <a name="BKMK_SOFT"></a>Software requirements  
+## Software requirements  
 Following are the software requirements to run an NLB cluster.  
   
 -   Only TCP\/IP can be used on the adapter for which NLB is enabled on each host. Do not add any other protocols \(for example, IPX\) to this adapter.  
@@ -118,7 +117,7 @@ Following are the software requirements to run an NLB cluster.
 > [!NOTE]  
 > NLB does not support Dynamic Host Configuration Protocol \(DHCP\). NLB disables DHCP on each interface that it configures.  
   
-## <a name="BKMK_INSTALL"></a>Installation information  
+## Installation information  
 You can install NLB by using either Server Manager or the Windows PowerShell commands for NLB.
 
 Optionally you can install the Network Load Balancing Tools to manage a local or remote NLB cluster. The tools include Network Load Balancing Manager and the NLB Windows PowerShell commands.
@@ -137,12 +136,12 @@ To install NLB by using Windows PowerShell, run the following command at an elev
     
 After installation is complete, no restart of the computer is required.
 
-For more information, see [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467.aspx).
+For more information, see [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature?view=win10-ps).
 
 ### Network Load Balancing Manager
 To open Network Load Balancing Manager in Server Manager, click **Tools**, and then click **Network Load Balancing Manager**.
   
-## <a name="BKMK_LINKS"></a>Additional Resources  
+## Additional resources  
 The following table provides links to additional information about the NLB feature.  
   
 |Content type|References|  

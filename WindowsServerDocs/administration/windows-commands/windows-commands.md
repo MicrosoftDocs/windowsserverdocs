@@ -16,11 +16,13 @@ ms.prod: windows-server-threshold
 ---
 # Windows Commands
 
-Use this PDF to find the documentation resources and other technical information that you need to learn about the command shell, and to automate command-line tasks by using scripts or scripting tools.
+All supported versions of Windows (server and client) have a set of Win32 console commands built in.
+
+This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
 
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
-[A](#bkmk_a) |
+[A](#BKMK_a) |
 [B](#BKMK_b) | 
 [C](#BKMK_c) | 
 [D](#BKMK_d) | 
@@ -30,7 +32,7 @@ To find information about a specific command, in the following A-Z menu, click t
 [H](#BKMK_h) | 
 [I](#BKMK_i) |
 [J](#BKMK_j) | 
-[K](#bkmk_k) | 
+[K](#BKMK_k) | 
 [L](#BKMK_l) | 
 [M](#BKMK_m) | 
 [N](#BKMK_n) | 
@@ -40,16 +42,17 @@ To find information about a specific command, in the following A-Z menu, click t
 [R](#BKMK_r) | 
 [S](#BKMK_s) | 
 [T](#BKMK_t) | 
-[U](#bkmk_u) | 
-[V](#bkmk_v) | 
-[W](#bkmk_w) | 
-[X](#bkmk_x) | 
-[Y](#bkmk_y) | 
-[Z](#bkmk_z)
+[U](#BKMK_u) | 
+[V](#BKMK_v) | 
+[W](#BKMK_w) | 
+[X](#BKMK_x) | 
+[Y](#BKMK_y) | 
+[Z](#BKMK_z)
 
 ## <a name="BKMK_PREREQ"></a>Prerequisites
 The information that is contained in this PDF applies to:
 
+-   Windows Server 2019
 -   Windows Server (Semi-Annual Channel)
 -   Windows Server 2016
 -   Windows Server 2012 R2
@@ -60,42 +63,30 @@ The information that is contained in this PDF applies to:
 -   Windows 8.1
 
 ### <a name="BKMK_OVR"></a>Command shell overview
-The command shell is a software program that provides direct communication between the user and the operating system. The non-graphical, command shell user interface provides the environment in which you run character-based applications and utilities. The command shell executes programs and displays their output on the screen by using individual characters similar to the MS-DOS command interpreter, Command.com. The command shell in the Windows Server operating system uses the command interpreter, Cmd.exe. Cmd.exe loads applications, directs the flow of information between applications, and translates user input into a form that the operating system understands.
+The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all Commands that are available at the command line.
 
-You can use the command shell to create and edit scripts to automate routine tasks. For example, you can create simple scripts in batch (.bat) files to automate the management of user accounts or nightly backups. You can also use the command-line version of Windows Script Host to run more sophisticated scripts in the command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
+Windows has two command shells: The Command shell and [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
 
-### <a name="BKMK_Custom"></a>Customize the Command prompt window
+PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run Windows Commands and PowerShell cmdlets in Powershell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
 
-You can change the properties for the Command prompt window.
+For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation. 
+> [!NOTE]
+>You can also download and install [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell. 
 
-##### To configure the Command prompt window
-1.  Open a Command prompt window, click the upper-left corner of the Command prompt window, and then click **Properties**. (Or to open **Command prompt Properties** from the keyboard, press ALT+SPACEBAR+P.)
-2.  Click the **Options** tab.
-3.  In **Command History**, type or select **999** in **Buffer Size**, and then type or select **5** in **Number of Buffers**. By increasing the screen buffer size to 999, you enable scrolling through the Command prompt window. By increasing the number of buffers to five, you increase the number of lines in the Command prompt window to 5000.
-4.  In **edit Options**, select the **Quick edit mode** and **Insert mode** check boxes.
-5.  Click the **Layout** tab.
-6.  In **Screen Buffer Size**, type or select **2500** in **Height**.
-7.  To further customize your Command prompt window settings, perform any of the following optional tasks:
-    -   In **Screen Buffer Size**, increase **Width**.
-    -   In **Window Size**, increase **Height**.
-    -   In **Window Size**, increase **Width**.
-    -   Clear the **Let system position window** check box, and then, in **Window Position**, change the values in **Left** and **Top**.
-8.  In the **Apply Properties** dialog box, click **Save properties for future windows with same title**.
+> [!CAUTION]
+> Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
 
 > [!NOTE]
-> To enable or disable file and directory name completion on a computer or user logon session, run **regedit.exe** and set the following **reg_DWOrd value**:
+> To enable or disable file and directory name completion in the Command shell on a computer or user logon session, run **regedit.exe** and set the following **reg_DWOrd value**:
 > 
 > HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\completionChar\reg_DWOrd
 > 
 > To set the **reg_DWOrd** value, use the hexadecimal value of a control character for a particular function (for example, **0 9** is Tab and **0 08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
-> [!CAUTION]
-> Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
-
 ## <a name="BKMK_CmdRef"></a>Command-line reference A-Z
-To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific Windows Command, in the following A-Z menu, click the letter that the Command starts with, and then click the Command name.
 
-[A](#bkmk_a) |
+[A](#BKMK_a) |
 [B](#BKMK_b) | 
 [C](#BKMK_c) | 
 [D](#BKMK_d) | 
@@ -105,7 +96,7 @@ To find information about a specific command, in the following A-Z menu, click t
 [H](#BKMK_h) | 
 [I](#BKMK_i) |
 [J](#BKMK_j) | 
-[K](#bkmk_k) | 
+[K](#BKMK_k) | 
 [L](#BKMK_l) | 
 [M](#BKMK_m) | 
 [N](#BKMK_n) | 
@@ -115,14 +106,14 @@ To find information about a specific command, in the following A-Z menu, click t
 [R](#BKMK_r) | 
 [S](#BKMK_s) | 
 [T](#BKMK_t) | 
-[U](#bkmk_u) | 
-[V](#bkmk_v) | 
-[W](#bkmk_w) | 
-[X](#bkmk_x) | 
-[Y](#bkmk_y) | 
-[Z](#bkmk_z)
+[U](#BKMK_u) | 
+[V](#BKMK_v) | 
+[W](#BKMK_w) | 
+[X](#BKMK_x) | 
+[Y](#BKMK_y) | 
+[Z](#BKMK_z)
 
-### <a name="bkmk_a"></a>A
+### <a name="BKMK_a"></a>A
 -   [append](append.md)
 -   [arp](arp.md)
 -   [assoc](assoc.md)
@@ -163,7 +154,7 @@ To find information about a specific command, in the following A-Z menu, click t
   -   [bitsadmin getnotifyflags](bitsadmin-getnotifyflags.md)
   -   [bitsadmin getnotifyinterface](bitsadmin-getnotifyinterface.md)
   -   [bitsadmin getowner](bitsadmin-getowner.md)
-  -   [bitsadmin get priority](bitsadmin-get-priority.md)
+  -   [bitsadmin get priority](bitsadmin-getpriority.md)
   -   [bitsadmin getproxybypasslist](bitsadmin-getproxybypasslist.md)
   -   [bitsadmin getproxylist](bitsadmin-getproxylist.md)
   -   [bitsadmin getproxyusage](bitsadmin-getproxyusage.md)
@@ -255,6 +246,7 @@ To find information about a specific command, in the following A-Z menu, click t
 -   [dir](dir.md)
 -   [diskcomp](diskcomp.md)
 -   [diskcopy](diskcopy.md)
+-   [diskpart](diskpart.md)
 -   [diskperf](diskperf.md)
 -   [diskraid](diskraid.md)
 -   [diskshadow](diskshadow.md)
@@ -587,17 +579,17 @@ To find information about a specific command, in the following A-Z menu, click t
 -   [typeperf](typeperf.md)
 -   [tzutil](tzutil.md)
 
-### <a name="bkmk_u"></a>U
+### <a name="BKMK_u"></a>U
 -   [unlodctr](unlodctr_1.md)
 
-### <a name="bkmk_v"></a>V
+### <a name="BKMK_v"></a>V
 -   [ver](ver.md)
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
 -   [vssadmin](vssadmin.md)- 
 
-### <a name="bkmk_w"></a>W
+### <a name="BKMK_w"></a>W
 -   [waitfor](waitfor.md)
 -   [wbadmin](wbadmin.md)
   -   [wbadmin enable backup](wbadmin-enable-backup.md)
@@ -628,5 +620,5 @@ To find information about a specific command, in the following A-Z menu, click t
 -   [wmic](wmic.md)
 -   [wscript](wscript.md)
 
-### <a name="bkmk_x"></a>X
+### <a name="BKMK_x"></a>X
 -   [xcopy](xcopy.md)

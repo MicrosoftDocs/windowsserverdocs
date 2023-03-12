@@ -184,7 +184,8 @@ You can verify that the files are properly classified by viewing the properties 
   
 -   [Scenario: Get Insight into Your Data by Using Classification](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   
--   [Plan for Automatic File Classification](assetId:///e3c3bb4b-3034-42b7-b391-8ef5f5851955)  
+-   [Plan for Automatic File Classification](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
+
   
 -   [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)  
   

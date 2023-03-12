@@ -18,7 +18,6 @@ ms.date: 10/16/2017
 # reg add
 
 
-
 Adds a new subkey or entry to the registry.
 
 ## Syntax
@@ -32,7 +31,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 
 |Parameter|Description|
 |---------|-----------|
-|\<KeyName*>*|Specifies the full path of the subkey or entry to be added. To specify a remote computer, include the computer name (in the format \\\\\<ComputerName>\) as part of the *KeyName*. Omitting \\\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
+|\<KeyName*>*|Specifies the full path of the subkey or entry to be added. To specify a remote computer, include the computer name (in the format \\\\\<ComputerName>\) as part of the *KeyName*. Omitting \\\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU. If the registry key name contains a space, enclose the key name in quotes.|
 |/v \<ValueName>|Specifies the name of the registry entry to be added under the specified subkey.|
 |/ve|Specifies that the registry entry that is added to the registry has a null value.|
 |/t \<Type>|Specifies the type for the registry entry. *Type* must be one of the following:</br>REG_SZ</br>REG_MULTI_SZ</br>REG_DWORD_BIG_ENDIAN</br>REG_DWORD</br>REG_BINARY</br>REG_DWORD_LITTLE_ENDIAN</br>REG_LINK</br>REG_FULL_RESOURCE_DESCRIPTOR</br>REG_EXPAND_SZ|

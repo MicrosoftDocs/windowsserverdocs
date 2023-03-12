@@ -12,7 +12,7 @@ author: shortpatti
 
 # Network Policy Server Best Practices
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about best practices for deploying and managing Network Policy Server \(NPS\).
 
@@ -26,7 +26,7 @@ There are two types of accounting, or logging, in NPS:
 
 - Event logging for NPS. You can use event logging to record NPS events in the system and security event logs. This is used primarily for auditing and troubleshooting connection attempts.
 
-- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity an attacker.
+- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity of an attacker.
 
 To make the most effective use of NPS logging:
 
@@ -65,7 +65,7 @@ Following are the best practices for installing NPS.
 
 - Before installing NPS, install and test each of your network access servers using local authentication methods before you configure them as RADIUS clients in NPS.
 
-- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/en-us/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS.
+- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS.
 
 >[!CAUTION]
 >- The exported NPS configuration file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups. Because of this, make sure that you save the file to a secure location.

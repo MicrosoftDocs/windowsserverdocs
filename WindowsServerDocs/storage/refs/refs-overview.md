@@ -6,11 +6,11 @@ ms.manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 05/09/2018
+ms.date: 10/17/2018
 ---
 # Resilient File System (ReFS) overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (Semi-Annual Channel)
 
 The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
 
@@ -35,9 +35,9 @@ In addition to providing resiliency improvements, ReFS introduces new features f
     
       | Performance tier | Capacity tier |
       |----------------|-----------------|
-       Mirrored SSD | Mirrored HDD |
-       Mirrored SSD | Parity SSD |
-       Mirrored SSD | Parity HDD |
+      |Mirrored SSD | Mirrored HDD |
+      |Mirrored SSD | Parity SSD |
+      |Mirrored SSD | Parity HDD |
             
     - Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
         - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
@@ -117,7 +117,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 |---------------------------|------------------|-----------------------|
 | BitLocker encryption | Yes | Yes |
 | Data Deduplication | Yes<sup>1</sup> | Yes |
-| Cluster Shared Volume (CSV) support | Yes | Yes |
+| Cluster Shared Volume (CSV) support | Yes<sup>2</sup> | Yes |
 | Soft links | Yes | Yes |
 | Failover cluster support | Yes | Yes |
 | Access-control lists | Yes | Yes |
@@ -131,11 +131,12 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Oplocks | Yes | Yes |
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
-| Thin Provisioning | Yes<sup>2</sup> | Yes |
+| Thin Provisioning | Yes<sup>3</sup> | Yes |
 | Offloaded Data Transfer (ODX) | No | Yes |
-| Trim/Unmap | Yes<sup>2</sup> | Yes |
+| Trim/Unmap | Yes<sup>3</sup> | Yes |
 1. Available on Windows Server, version 1709 and later.
-2. Storage Spaces only
+2. Available on Windows Server 2012 R2 and later.
+3. Storage Spaces only
 
 #### The following features are only available on ReFS:
 

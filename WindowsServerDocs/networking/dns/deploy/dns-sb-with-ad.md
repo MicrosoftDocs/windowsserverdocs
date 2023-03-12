@@ -12,7 +12,7 @@ author: shortpatti
 
 # Use DNS Policy for Split-Brain DNS in Active Directory
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to leverage the traffic management capabilities of DNS policies for split\-brain deployments with Active Directory integrated DNS zones in Windows Server 2016.
 
@@ -73,8 +73,8 @@ DNS policies are stored on the local DNS server. You can easily export DNS polic
 
 For more information, see the following Windows PowerShell reference topics.
 
-- [Get-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/itpro/powershell/windows/dns-server/get-dnsserverqueryresolutionpolicy)
-- [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/itpro/powershell/windows/dns-server/add-dnsserverqueryresolutionpolicy)
+- [Get-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserverqueryresolutionpolicy?view=win10-ps)
+- [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)
 
 
 ## How to Configure DNS Policy for Split\-Brain DNS in Active Directory
@@ -87,7 +87,7 @@ You can use the following example command to add the Active Directory integrated
 
     Add-DnsServerPrimaryZone -Name "contoso.com" -ReplicationScope "Domain" -PassThru
 
-For more information, see [Add-DnsServerPrimaryZone](https://technet.microsoft.com/library/jj649876.aspx).
+For more information, see [Add-DnsServerPrimaryZone](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverprimaryzone?view=win10-ps).
 
 ### Create the Scopes of the Zone
 
@@ -103,7 +103,7 @@ You can use the following example command to create the zone scope on the DNS se
 
     Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "external"
 
-For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx).
+For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).
 
 ### Add Records to the Zone Scopes
 
@@ -122,7 +122,7 @@ You can use the following example command to add records to the zone scopes on t
 >[!NOTE]
 >The **–ZoneScope** parameter is not included when the record is added to the default zone scope. This action is same as adding records to a normal zone.
 
-For more information, see [Add-DnsServerResourceRecord](https://technet.microsoft.com/library/jj649925.aspx).
+For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
 ### Create the DNS Policies
 
@@ -141,7 +141,7 @@ After you configure policies, when a DNS query is received on the public interfa
 >[!NOTE]
 >208.84.0.53 is the IP address on the public network interface.
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 Now the DNS server is configured with the required DNS policies for a split-brain name server with an Active Directory integrated DNS zone.
 

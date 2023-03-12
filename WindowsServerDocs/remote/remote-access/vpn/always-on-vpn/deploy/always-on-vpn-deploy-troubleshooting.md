@@ -5,7 +5,7 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
-manager: elizapo
+ms.localizationpriority: medium 
 ms.date: 06/11/2018
 ms.author: pashort
 author: shortpatti
@@ -203,35 +203,35 @@ A small misconfiguration can cause the client connection to fail and can be chal
                                     corp.deverett.info;derras2.corp.deverett.info</Servers><RoutingPolicyType>ForceTunnel</Routin
                                     gPolicyType><NativeProtocolType>Ikev2</NativeProtocolType><Authentication><UserMethod>Eap</Us
                                     erMethod><MachineMethod>Eap</MachineMethod><Eap><Configuration><EapHostConfig
-                                    xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type
-                                    xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId
-                                    xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType
-                                    xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId
-                                    xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config
-                                    xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.
-                                    com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.mic
+                                    xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type
+                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId
+                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType
+                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId
+                                    xmlns="https://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config
+                                    xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="https://www.microsoft.
+                                    com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="https://www.mic
                                     rosoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptFor
                                     ServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames></Serv
                                     erValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Ea
-                                    p xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type>
-                                    <EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><Credenti
+                                    p xmlns="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type>
+                                    <EapType xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><Credenti
                                     alsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore
                                     ></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUse
                                     rPromptForServerValidation><ServerNames></ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b
                                     1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>fal
-                                    se</DifferentUsername><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/E
-                                    apTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://ww
+                                    se</DifferentUsername><PerformServerValidation xmlns="https://www.microsoft.com/provisioning/E
+                                    apTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="https://ww
                                     w.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">false</AcceptServerName><TLSExtens
                                     ions
-                                    xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xml
-                                    ns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><
+                                    xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xml
+                                    ns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><
                                     EKUName>AAD Conditional
                                     Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList
                                     Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></Client
                                     AuthEKUList></FilteringInfo></TLSExtensions></EapType></Eap><EnableQuarantineChecks>false</En
                                     ableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><Perfo
-                                    rmServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2"
-                                    >false</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisionin
+                                    rmServerValidation xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2"
+                                    >false</PerformServerValidation><AcceptServerName xmlns="https://www.microsoft.com/provisionin
                                     g/MsPeapConnectionPropertiesV2">false</AcceptServerName></PeapExtensions></EapType></Eap></Co
                                     nfig></EapHostConfig></Configuration></Eap></Authentication></NativeProfile></VPNProfile>
         RememberCredentials     : False

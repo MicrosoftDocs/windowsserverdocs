@@ -5,18 +5,50 @@ ms.prod: windows-server-threshold
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
-manager: elizapo
+manager: daveba
 ms.author: jgerend
-ms.date: 05/02/2018
+ms.date: 03/08/2019
 description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ---
-# Change history for Failover Clustering topics in Windows Server 2016
+# Change history for Failover Clustering topics
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server 2016.
+This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## March 2019
+
+|New or changed topic                                    |Description |
+|--------------------------------------------------------|------------|
+|[Cluster affinity](cluster-affinity.md)| New     |
+
+## February 2019
+
+|New or changed topic                                    |Description |
+|--------------------------------------------------------|------------|
+| [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md)| New |
+|[Deploy a two-node file server](deploy-two-node-clustered-file-server.md)| New |
+
+## January 2019
+
+|New or changed topic                                    |Description |
+|--------------------------------------------------------|------------|
+|[Deploy a file share witness](file-share-witness.md)    | New        |
+|[Cluster-domain migration](cluster-domain-migration.md) | New        |
+
+## November 2018
+
+|New or changed topic|Description|
+|---|---|
+|[Configuring cluster accounts in Active Directory](configure-ad-accounts.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+
+## October 2018
+
+|New or changed topic|Description|
+|---|---|
+|[What's new in clustering](whats-new-in-failover-clustering.md)| Updates for Windows Server 2019|
 
 ## June 2018
 

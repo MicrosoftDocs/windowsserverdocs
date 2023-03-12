@@ -2,9 +2,9 @@
 ms.assetid: 119881f6-637f-43de-8577-5f5eaf3281df
 title: Appendices
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

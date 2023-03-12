@@ -13,9 +13,9 @@ ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: pashort
 author: shortpatti
 ---
-# Internal DNS Service \(iDNS\) for SDN
+# Internal DNS Service (iDNS) for SDN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 If you work for a Cloud Service Provider \(CSP\) or Enterprise that is planning to deploy Software Defined Networking \(SDN\) in Windows Server 2016, you can provide DNS services to your hosted tenant workloads by using Internal DNS \(iDNS\), which is integrated with SDN.
 
@@ -65,7 +65,7 @@ When you deploy SDN in Windows Server 2016 by using scripts, iDNS is automatical
 
 For more information, see the following topics.
 
-- [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)
+- [Deploy a Software Defined Network infrastructure using scripts](https://docs.microsoft.com/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)
 
 
 ## Understanding iDNS Deployment Steps
@@ -109,12 +109,12 @@ Method: PUT
 >This is an excerpt from the section **Configuration ConfigureIDns** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts).
 
 ### Step 3: Configure the iDNS Proxy Service
-The the iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge between the virtual networks of tenants and the physical network where the iDNS servers are located. The following registry keys must be created on every Hyper-V host.
+The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge between the virtual networks of tenants and the physical network where the iDNS servers are located. The following registry keys must be created on every Hyper-V host.
 
 
 **DNS port:** Fixed port 53
 
-- Registry Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService"
+- Registry Key = HKLM\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService"
 - ValueName = "Port"
 - ValueData = 53
 - ValueType = "Dword"
@@ -122,14 +122,14 @@ The the iDNS Proxy Service runs on each of the Hyper-V hosts, providing the brid
 
 **DNS Proxy Port:** Fixed port 53
 
-- Registry Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService"
+- Registry Key = HKLM\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService"
 - ValueName = "ProxyPort"
 - ValueData = 53
 - ValueType = "Dword"
         
-**DNS IP:** This is the fixed IP address configured on the network interface, in case the tenant chooses to use the iDNS service.
+**DNS IP:** Fixed IP address configured on the network interface, in case the tenant chooses to use the iDNS service
 
-- Registry Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService"
+- Registry Key = HKLM\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService"
 - ValueName = "IP"
 - ValueData = "169.254.169.254"
 - ValueType = "String"
@@ -137,14 +137,14 @@ The the iDNS Proxy Service runs on each of the Hyper-V hosts, providing the brid
         
 **Mac Address:** Media Access Control address of the DNS server
 
-- Registry Key = HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService
+- Registry Key = HKLM\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService
 - ValueName = "MAC"
 - ValueData = “aa-bb-cc-aa-bb-cc”
 - ValueType = "String"
 
 **IDNS Server Address:** A comma separated list of iDNS Servers.
 
-- Registry Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNSProxy\Parameters
+- Registry Key: HKLM\SYSTEM\CurrentControlSet\Services\DNSProxy\Parameters
 - ValueName = "Forwarders"
 - ValueData = “10.0.0.9”
 - ValueType = "String"

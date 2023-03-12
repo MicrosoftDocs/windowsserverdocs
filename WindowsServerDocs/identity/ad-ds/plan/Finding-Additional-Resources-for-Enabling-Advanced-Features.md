@@ -2,9 +2,9 @@
 ms.assetid: 3eb89320-d8b0-463f-b9e9-5a5b6e96e0b8
 title: Finding Additional Resources for Enabling Advanced Features
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

@@ -5,24 +5,28 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/24/2018
+ms.date: 09/07/2018
 Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
 
-> Applies To: Windows Server Insider Preview build 17692 and later
+> Applies to: Windows Server 2019
 
 Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview. It is not available in Windows Server 2016.
+   > This feature is new in Windows Server 2019. It is not available in Windows Server 2016.
 
 ## Get started
 
-Performance history is collected by default. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
+Performance history is collected by default with Storage Spaces Direct in Windows Server 2019. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
 
-To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md), the next-generation in-box management tool for Windows Server. To query and process it programmatically, use the new `Get-ClusterPerformanceHistory` cmdlet – see [Usage in PowerShell](#usage-in-powershell) below.
+To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md):
+
+![Performance history in Windows Admin Center](media/performance-history/perf-history-in-wac.png)
+
+To query and process it programmatically, use the new `Get-ClusterPerf` cmdlet. See [Usage in PowerShell](#usage-in-powershell).
 
 ## What's collected
 
@@ -30,9 +34,9 @@ Performance history is collected for 7 types of objects:
 
 ![Types of objects](media/performance-history/types-of-object.png)
 
-Each type of object has many series – for example, `ClusterNode.Cpu.Usage` is collected for each server.
+Each object type has many series: for example, `ClusterNode.Cpu.Usage` is collected for each server.
 
-For the complete list of series for each object type, including their units, how to interpret them, and where they come from, refer to the detailed sub-topics linked below:
+For details of what's collected for each object type and how to interpret them, refer to these sub-topics:
 
 | Object             | Series                                                                               |
 |--------------------|--------------------------------------------------------------------------------------|
@@ -44,7 +48,7 @@ For the complete list of series for each object type, including their units, how
 | Volumes            | [What's collected for volumes](performance-history-for-volumes.md)                   |
 | Clusters           | [What's collected for clusters](performance-history-for-clusters.md)                 |
 
-Many series are aggregated across peer objects to their parent: for example, `NetAdapter.Bytes.Inbound` is collected for each network adapter separately and aggregated to the overall server; likewise `ClusterNode.Cpu.Usage` is aggregated to the overall cluster; and so on.
+Many series are aggregated across peer objects to their parent: for example, `NetAdapter.Bandwidth.Inbound` is collected for each network adapter separately and aggregated to the overall server; likewise `ClusterNode.Cpu.Usage` is aggregated to the overall cluster; and so on.
 
 ## Timeframes
 
@@ -111,7 +115,7 @@ You can specify the series you want with these parameters:
 | Parameter                 | Example                       | List                                                                                 |
 |---------------------------|-------------------------------|--------------------------------------------------------------------------------------|
 | `-PhysicalDiskSeriesName` | `"PhysicalDisk.Iops.Read"`    | [What's collected for drives](performance-history-for-drives.md)                     |
-| `-NetAdapterSeriesName`   | `"NetAdapter.Bytes.Outbound"` | [What's collected for network adapters](performance-history-for-network-adapters.md) |
+| `-NetAdapterSeriesName`   | `"NetAdapter.Bandwidth.Outbound"` | [What's collected for network adapters](performance-history-for-network-adapters.md) |
 | `-ClusterNodeSeriesName`  | `"ClusterNode.Cpu.Usage"`     | [What's collected for servers](performance-history-for-servers.md)                   |
 | `-VHDSeriesName`          | `"Vhd.Size.Current"`          | [What's collected for virtual hard disks](performance-history-for-vhds.md)           |
 | `-VMSeriesName`           | `"Vm.Memory.Assigned"`        | [What's collected for virtual machines](performance-history-for-vms.md)              |
@@ -135,31 +139,45 @@ If you don't specify, the `MostRecent` measurement is returned.
 
 ## How it works
 
-![How it works](media/performance-history/how-it-works.png)
+### Performance history storage
 
-1. When Storage Spaces Direct is enabled, the [Health Service](../../failover-clustering/health-service-overview.md) creates an approximately 10 GB three-way mirror volume named ClusterPerformanceHistory and provisions an instance of the Extensible Storage Engine (also known as Microsoft JET) there. This lightweight database stores the performance history.
+Shortly after Storage Spaces Direct is enabled, an approximately 10 GB volume named `ClusterPerformanceHistory` is created and an instance of the Extensible Storage Engine (also known as Microsoft JET) is provisioned there. This lightweight database stores the performance history without any Administrator involvement or management.
 
-2. The Health Service automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continuously and is optimized for minimal system impact.
+![Volume for performance history storage](media/performance-history/perf-history-volume.png)
 
-3. You can see performance history in Windows Admin Center or in PowerShell. Performance history is stored for up to one year, with diminishing granularity. Queries are served directly from the database for consistent, snappy performance and to minimize system impact.
+The volume is backed by Storage Spaces and uses either simple, two-way mirror, or three-way mirror resiliency, depending on the number of nodes in the cluster. It is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
 
-## Frequently asked questions
+The volume uses ReFS but is not Cluster Shared Volume (CSV), so it only appears on the Cluster Group owner node. Besides being automatically created, there is nothing special about this volume: you can see it, browse it, resize it, or delete it (not recommended). If something goes wrong, see [Troubleshooting](#troubleshooting).
 
-### What extensibility is available?
+### Object discovery and data collection
 
-We designed cluster performance history to be scripting-friendly. You can use PowerShell to pull any available history from the database. You can build automated reporting or alerting, export history for safekeeping, roll your own visualizations, and much more. However, it is not currently possible to collect history for additional objects, timeframes, or series.
+Performance history automatically discovers relevant objects, such as virtual machines, anywhere in the cluster and begins streaming their performance counters. The counters are aggregated, synchronized, and inserted into the database. Streaming runs continuously and is optimized for minimal system impact.
 
-### Can I change the measurement frequency and/or retention period?
+Collection is handled by the Health Service, which is highly available: if the node where it's running goes down, it will resume moments later on another node in the cluster. Performance history may lapse briefly, but it will resume automatically. You can see the Health Service and its owner node by running `Get-ClusterResource Health` in PowerShell.
 
-No, measurement frequency and retention period are not currently configurable.
+### Handling measurement gaps
 
-### How does this feature handle failures?
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50% (not 25%).
 
-The Health Service, which collects measurements and inserts them into the database, is highly available. If the server where it is running goes down, it will resume moments later on another server in the cluster. Performance history collection may lapse briefly, but it will resume automatically. Resiliency for the database storage is provided by three-way mirroring. The ClusterPerformanceHistory volume is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
+### Extensibility and customization
 
-### How are missing measurements handled?
+Performance history is scripting-friendly. Use PowerShell to pull any available history directly from the database to build automated reporting or alerting, export history for safekeeping, roll your own visualizations, etc. See the published [sample scripts](performance-history-scripting.md) for helpful starter code.
 
-When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50% (not 25%).
+It's not possible to collect history for additional objects, timeframes, or series.
+
+The measurement frequency and retention period are not currently configurable.
+
+## Start or stop performance history
+
+### How do I enable this feature?
+
+Unless you `Stop-ClusterPerformanceHistory`, performance history is enabled by default.
+
+To re-enable it, run this PowerShell cmdlet as Administrator:
+
+```PowerShell
+Start-ClusterPerformanceHistory
+```
 
 ### How do I disable this feature?
 
@@ -176,27 +194,22 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 ```
 
    > [!TIP]
-   > During initial deployment, you can prevent performance history from starting by setting the `-CollectPerformanceHistory` parameter of `Enable-ClusterS2D` to `$False`.
-
-### How do I enable this feature?
-
-Unless you `Stop-ClusterPerformanceHistory`, performance history is enabled by default.
-
-To re-enable it, run this PowerShell cmdlet as Administrator:
-
-```PowerShell
-Start-ClusterPerformanceHistory
-```
+   > During initial deployment, you can prevent performance history from starting by setting the `-CollectPerformanceHistory` parameter of `Enable-ClusterStorageSpacesDirect` to `$False`.
 
 ## Troubleshooting
 
+### The cmdlet doesn't work
+
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
+
+   > [!NOTE]
+   > This feature is not available on Windows Server 2016 or earlier.
+
 ### No data available 
 
-Charts in Windows Admin Center for Hyper-Converged Infrastructure are powered by performance history.
+If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 ![No data available](media/performance-history/no-data-available.png)
-
-If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 1. If the object was newly added or created, wait for it to be discovered (up to 15 minutes).
 
@@ -206,12 +219,7 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 4. If the problem persists, open PowerShell as Administrator and run the `Get-ClusterPerf` cmdlet. The cmdlet includes troubleshooting logic to identify common problems, such as if the ClusterPerformanceHistory volume is missing, and provides remediation instructions.
 
-### The cmdlet doesn't work
-
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
-
-   > [!NOTE]
-   > This feature is not available on Windows Server 2016 or earlier.
+5. If the command in the previous step returns nothing, you can try restarting the Health Service (which collects performance history) by running `Stop-ClusterResource Health ; Start-ClusterResource Health` in PowerShell.
 
 ## See also
 

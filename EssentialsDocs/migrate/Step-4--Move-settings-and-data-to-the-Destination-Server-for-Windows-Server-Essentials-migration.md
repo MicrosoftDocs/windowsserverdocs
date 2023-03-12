@@ -53,7 +53,7 @@ This section provides information about migrating data and settings from the Sou
   
     -   \<SharedSourceFolderName\> is the name of the shared folder on the Source Server  
   
-    -   \<PathOfTheDestination\> is the absolute path where you you want to move the folder  
+    -   \<PathOfTheDestination\> is the absolute path where you want to move the folder  
   
     -   \<SharedDestinationFolderName\> is the folder on the Destination Server to which the data will be copied  
   

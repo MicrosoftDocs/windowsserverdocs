@@ -2,32 +2,27 @@
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 title: Troubleshooting Domain Controller Deployment
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
+ms.date: 03/20/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
-
 # Troubleshooting Domain Controller Deployment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016
 
 This topic covers detailed methodology on troubleshooting domain controller configuration and deployment.  
   
--   [Introduction to Troubleshooting](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md#BKMK_Intro)  
-  
--   [Troubleshooting Options](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md#BKMK_Options)  
-  
-## <a name="BKMK_Intro"></a>Introduction to Troubleshooting  
+## Introduction to Troubleshooting
+
 ![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)  
   
-## <a name="BKMK_Options"></a>Troubleshooting Options  
-  
-### Logging Options  
+## Built-in logs for troubleshooting
+
 The built-in logs are the most important instrument for troubleshooting issues with domain controller promotion and demotion. All of these logs are enabled and configured for maximum verbosity by default.  
   
 |Phase|Log|  
@@ -38,7 +33,8 @@ The built-in logs are the most important instrument for troubleshooting issues w
 |Server Manager ADDSDeployment Windows PowerShell deployment engine|-   Event viewer\Applications and services logs\Microsoft\Windows\DirectoryServices-Deployment\Operational|  
 |Windows Servicing|-   %systemroot%\Logs\CBS\\*<br /><br />-   %systemroot%\servicing\sessions\sessions.xml<br /><br />-   %systemroot%\winsxs\poqexec.log<br /><br />-   %systemroot%\winsxs\pending.xml|  
   
-### Tools and Commands for Troubleshooting Domain Controller Configuration  
+### Tools and Commands for Troubleshooting Domain Controller Configuration
+
 To troubleshoot issues not explained by the logs, use the following tools as a starting point:  
   
 -   Dcdiag.exe  
@@ -89,9 +85,8 @@ To troubleshoot issues not explained by the logs, use the following tools as a s
   
         2.  At this point, the errors are likely with the forest objects, non-default security changes, or the network, and this new domain controller is a victim of misconfigurations in DNS, firewalls, host intrusion protection software, or other outside factors.  
   
-### Troubleshooting Specific Problems  
-  
-#### Events and Error Messages  
+## Troubleshooting Events and Error Messages
+
 Domain controller promotion and demotion always returns a code at the end of operation and unlike most programs, do not return zero for success. To see the code at the end of a domain controller configuration, you have several options:  
   
 1.  When using Server Manager, examine the promotion results in the ten seconds prior to automatic reboot.  
@@ -112,7 +107,7 @@ Domain controller promotion and demotion always returns a code at the end of ope
     > [!NOTE]  
     > Some of the errors listed below are no longer possible due to operating system and domain controller configuration changes in later operating systems. The new ADDSDeployment Windows PowerShell codes also prevents certain errors, but the dcpromo.exe /unattend does not; this is another compelling reason to switch all of your current automation from the deprecated DCPromo to ADDSDeployment Windows PowerShell.  
   
-Promotion and demotion return the following success message codes.  
+### Promotion and demotion success codes
   
 |Error Code|Explanation|Note|  
 |--------------|---------------|--------|  
@@ -120,7 +115,9 @@ Promotion and demotion return the following success message codes.
 |2|Exit, success, need to reboot||  
 |3|Exit, success, with a non-critical failure|Typically seen when returning the DNS Delegation warning. If not configuring DNS delegation, use:<br /><br />-creatednsdelegation:$false|  
 |4|Exit, success, with a non-critical failure, need to reboot|Typically seen when returning the DNS Delegation warning. If not configuring DNS delegation, use:<br /><br />-creatednsdelegation:$false|  
-  
+
+### Promotion and demotion failure codes
+
 Promotion and demotion return the following failure message codes. There is also likely to be an extended error message; always read the entire error carefully, not just the numeric portion.  
   
 |Error Code|Explanation|Suggested resolution|  
@@ -213,7 +210,8 @@ Promotion and demotion return the following failure message codes. There is also
 |99|Forest functional level is too low (error is Windows Server 2012 only)|Raise the forest functional level to at least Windows Server 2003 native. Windows 2000 and Windows NT 4.0 are no longer supported operating systems|  
 |100|Domain functional level is too low (error is Windows Server 2012 only)|Raise the domain functional level to at least Windows Server 2003 native. Windows 2000 and Windows NT 4.0 are no longer supported operating systems|  
   
-#### Known/Likely Issues and Support Scenarios  
+## Known issues and common support scenarios
+
 The following are common issues seen during the Windows Server 2012 development process. All of these issues are "by design" and have either a valid workaround or more appropriate technique to avoid them in the first place. Many of these behaviors are identical in Windows Server 2008 R2 and older operating systems, but the rewrite of AD DS deployment brings heightened sensitivity to issues.  
   
 |Issue|Demoting a domain controller leaves DNS running with no zones|  
@@ -325,7 +323,7 @@ The following are common issues seen during the Windows Server 2012 development 
 |-|-|  
 |Issue|The Next button is not available on the Domain Controller Options page|  
 |Symptoms|Even though you have set a password, the **Next** button on the **Domain Controller Options** page in Server Manager is not available. There is no site listed in the **Site name** menu.|  
-|Resolution and Notes|You have multiple AD DS sites and at least one is missing subnets; this future domain controller belongs to one of those subnets. You must manually select the subnet from the Site name dropdown menu. You should also review all AD sites using DSSITE.MSC or use the following Windows PowerShell command to find all sites missing subnets:<br /><br />Code - get-adreplicationsite -filter * -property subnets &#124; where-object {!$_.subnets -eq "\*"} &#124; format-table name|  
+|Resolution and Notes|You have multiple AD DS sites and at least one is missing subnets; this future domain controller belongs to one of those subnets. You must manually select the subnet from the Site name dropdown menu. You should also review all AD sites using DSSITE.MSC or use the following Windows PowerShell command to find all sites missing subnets:<br /><br />Code - get-adreplicationsite -filter \* -property subnets &#124; where-object {!$_.subnets -eq "\*"} &#124; format-table name|  
   
 |||  
 |-|-|  

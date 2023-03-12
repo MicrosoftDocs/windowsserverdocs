@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/08/2017
+ms.date: 02/01/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -90,9 +90,9 @@ There is a known issue where the AD user account cannot authenticate with AD FS 
 
 
 ## Additional references  
-[Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
-
-[Set-AdfsProperties](https://technet.microsoft.com/en-us/itpro/powershell/windows/adfs/set-adfsproperties)
+- [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
+- [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
+- [Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
 
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
 

@@ -6,7 +6,6 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: mikeblodge
 ms.author: mikeblodge
-ms.localizationpriority: high
 ms.date: 07/11/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
@@ -22,7 +21,7 @@ You can now run a Windows Server 2008/2008 R2 VM in the cloud with Azure.
 ## Prep the Windows Server 2008/2008 R2 specialized image
 Before you can upload an image, make the following changes:
 
-- Download and install [Windows Server 2008 Service Pack 2 (SP2)](https:\www.microsoft.com\en-us\download\details.aspx?id=16468) if you don’t already have it installed on your image.
+- Download and install Windows Server 2008 Service Pack 2 (SP2) if you don’t already have it installed on your image.
 
 - Configure Remote Desktop (RDP) settings.
    1. Go to **Control Panel** > **System settings**.   
@@ -55,7 +54,7 @@ A current known bug causes the administrator password on the uploaded image to e
 ![Screenshot of administrator properties.](media/6_adminprops.png)
 
 ## Uploading the image VHD
-You can use the script below to upload the VHD. Before you do this, you’ll need the publish settings file for your Azure account. Get your [Azure file settings](https://azure.microsoft.com/en-us/downloads/).
+You can use the script below to upload the VHD. Before you do this, you’ll need the publish settings file for your Azure account. Get your [Azure file settings](https://azure.microsoft.com/downloads/).
 
 Here is the script:
 
@@ -82,12 +81,12 @@ In this section, you will be deploying the image VHD in Azure.
 > [!IMPORTANT]
 > Do not use pre-defined user images in Azure.
 
-1.	Create a new [resource group](https://docs.microsoft.com/en-us/rest/api/resources/resourcegroups/createorupdate). 
-2.	Create a new [storage blob](https://docs.microsoft.com/en-us/rest/api/storageservices/put-blob) inside the resource group.
-3.	Create a [container](https://docs.microsoft.com/en-us/rest/api/storageservices/create-container) inside the storage blob.
+1.	Create a new [resource group](https://docs.microsoft.com/rest/api/resources/resourcegroups/createorupdate). 
+2.	Create a new [storage blob](https://docs.microsoft.com/rest/api/storageservices/put-blob) inside the resource group.
+3.	Create a [container](https://docs.microsoft.com/rest/api/storageservices/create-container) inside the storage blob.
 4.	Copy the URL of the blob storage from properties.
 5.	Use the script provided above to upload your image to the new storage blob.
-6.	Create a [disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image) for your VHD.   
+6.	Create a [disk](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) for your VHD.   
      a.	Go to Disks, click **Add**.  
      b.	Enter a name for the disk. Select the subscription you want to use, set the region, and choose the account type.   
      c. For Source Type, select storage. Browse to the blob VHD location created using the script.  

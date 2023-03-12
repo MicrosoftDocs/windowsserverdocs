@@ -1,18 +1,73 @@
 {
   "redirections": [
+
     {
-      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
-      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-vms.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": false
+    },
+	
+	
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-and-vlans.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": false
+    },
+	
+
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/create-a-new-nic-team.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM",
+      "redirect_document_id": false
+    },
+	
+	
+	
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM",
+      "redirect_document_id": true
+    },
+	
+
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-optimization-technologies.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Software-Defined-Networking.md",
+      "redirect_url": "/windows-server/networking/sdn/deploy/plan-a-software-defined-network-infrastructure",
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/Plan-Software-Defined-Networking.md",
+      "redirect_url": "/windows-server/networking/sdn/plan/Deploy-a-Software-Defined-Network-Infrastructure",
+      "redirect_document_id": true
+    },
+    {  "source_path": "WindowsServerDocs/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
+      "redirect_url": "/windows-server/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-and-optimization-technologies.md",
+      "redirect_url": "/windows-server/networking/technologies/network-offload-and-optimization-technologies",
+      "redirect_document_id": true
+    },   
+    {
       "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
       "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {  
       "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
       "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/whats-new-wip-at-work",
+      "redirect_document_id": true
+    },
+    {  
+      "source_path": "WindowsServerDocs/identity/ad-ds/plan/security-best-practices/Understanding-Active-Directory-Domain-Services--AD-DS--Functional-Levels.md.md",
+      "redirect_url": "/windows-server/identity/ad-ds/active-directory-functional-levels",
       "redirect_document_id": true
     },
     {
@@ -180,7 +235,27 @@
       "source_path": "WindowsServerDocs/storage/whats-new-file-storage-services-windows-server.md",
       "redirect_url": "/windows-server/storage/whats-new-in-storage",
       "redirect_document_id": false
-    },	
+    },    
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/failover-clustering.md",
+      "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/simplified-smb-multichannel-and-multi-nic-cluster-networks.md",
+      "redirect_url": "/windows-server/failover-clustering/smb-multichannel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-a-cloud-witness-for-a-failover-cluster.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-cloud-witness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/whats-new-failover-clustering-windows-server.md",
+      "redirect_url": "/windows-server/failover-clustering/whats-new-in-failover-clustering",
+      "redirect_document_id": false
+    },
     {
       "source_path": "WindowsServerDocs/storage/software-defined-storage/Health-Service-in-Windows-Server-2016.md",
       "redirect_url": "/windows-server/failover-clustering/health-service-overview",
@@ -7747,58 +7822,58 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-hgs-to-an-existing-domain.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-add-hgs-to-an-existing-domain",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-admin-trusted-attestation.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-admin-trusted-attestation",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-tpm-trusted-attestation.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-tpm-trusted-attestation",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-to-hgs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-to-hgs",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-to-hgs.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-to-hgs",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-tpm-trusted-attestation.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-tpm-trusted-attestation",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-admin-trusted-attestation.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-add-host-information-for-admin-trusted-attestation",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-choose-where-to-install-hgs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-choose-where-to-install-hgs",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-dns-forwarding-and-trust.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-dns-forwarding-and-trust",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https",
       "redirect_document_id": true
     },
     {
@@ -7807,138 +7882,263 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-ad.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-ad",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-create-vm-move-to-guarded-fabric.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-vm-move-to-guarded-fabric",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-tpm.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-tpm",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-hoster-sets-up-windows-azure-pack.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-hoster-sets-up-windows-azure-pack",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-using-powershell.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-using-powershell",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-host-key.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-host-key",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-manage-overview.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-overview",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-vm-move-to-guarded-fabric.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-vm-move-to-guarded-fabric",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-plan-overview",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-prepare-for-hgs.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-prepare-for-hgs",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-sample-unattend-xml-file.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-sample-unattend-xml-file",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-planning-for-tenants.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-planning-for-tenants",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-guarded-host-prerequisites.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-guarded-host-prerequisites",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-hoster-sets-up-windows-azure-pack.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-hoster-sets-up-windows-azure-pack",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-template-disk.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-template-disk",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tenant-deploys-shielded-vm-using-vmm",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode-default.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode-default",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode-bastion.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode-bastion",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode-bastion.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode-bastion",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode-default.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode-default",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-bastion.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-bastion",
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd",
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-default.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-default",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-install-hgs-in-a-bastion-forest.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-install-hgs-in-a-bastion-forest",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-install-hgs-default.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-install-hgs-default",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-plan-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-prepare-for-hgs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-prepare-for-hgs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-planning-for-tenants.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-planning-for-tenants",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-template-disk.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-template-disk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-tenant-deploys-shielded-vm-using-vmm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-sample-unattend-xml-file.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-sample-unattend-xml-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-obtain-certs.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-obtain-certs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd",
       "redirect_document_id": true
     },
     {
@@ -8262,9 +8462,74 @@
   "redirect_document_id": false
 },
 {
-  "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
-  "redirect_url": "/windows-server/windows-server",
-  "redirect_document_id": true
-}
+  "source_path": "WindowsServerDocs/azure-hybrid-services/index.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-backup.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-backup",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-monitor.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-monitor",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-services.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-site-recovery.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-site-recovery",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-update-management.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-update-management",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/plan/azure-integration-options.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/configure/azure-integration.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-integration",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/configure/manage-azure-vms.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/manage-azure-vms",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/deploy/deploy-wac-in-azure.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/azure/deploy-wac-in-azure",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/troubleshooting.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/troubleshooting",
+  "redirect_document_id": false
+ },
+ {
+  "source_path": "WindowsServerDocs/manage/windows-admin-center/use/known-issues.md",
+  "redirect_url": "/windows-server/manage/windows-admin-center/support/known-issues",
+  "redirect_document_id": false
+ },
+    {
+      "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
+      "redirect_url": "/windows-server/windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server.md",
+      "redirect_url": "/windows-server/index",
+      "redirect_document_id": true
+    }
   ]
 }

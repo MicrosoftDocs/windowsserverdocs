@@ -12,7 +12,7 @@ author: shortpatti
 
 # Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy to load balance an application with geo-location awareness.
 
@@ -54,7 +54,7 @@ You can use the following Windows PowerShell commands to create DNS Client Subne
     Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet 192.0.0.0/24,182.0.0.0/24
     Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet 141.1.0.0/24,151.1.0.0/24
     
-For more information, see [Add-DnsServerClientSubnet](https://technet.microsoft.com/library/mt126261.aspx).
+For more information, see [Add-DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
 
 ###<a name="bkmk_zscopes2"></a>Create the Zone Scopes
 
@@ -78,7 +78,7 @@ You can use the following Windows PowerShell commands to create zone scopes.
     Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AmsterdamZoneScope"
     
 
-For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx)
+For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
 ###<a name="bkmk_records2"></a>Add Records to the Zone Scopes
 
@@ -91,7 +91,7 @@ The records for the America datacenters were added in the previous scenario. You
     Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.1" -ZoneScope "AmsterdamZoneScope"
     
 
-For more information, see [Add-DnsServerResourceRecord](https://technet.microsoft.com/library/jj649925.aspx).
+For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
 ###<a name="bkmk_policies2"></a>Create the DNS Policies
 
@@ -114,7 +114,7 @@ You can use the following Windows PowerShell commands to implement these DNS pol
     
     
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 You have now successfully created a DNS policy that provides application load balancing across Web servers that are located in five different datacenters on multiple continents.
 

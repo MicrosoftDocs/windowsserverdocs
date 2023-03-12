@@ -28,7 +28,8 @@ Allowed formats
 1.	IPv4
 2.	IPv6
 3.	CIDR format with IPv4 or v6
-4.	IP range with IPv4 or v6 ( i.e. 1.2.3.4-1.2.3.6 )
+
+There is a limit of 300 entries for banned IP addresses. You can use CIDR or range format to deny a large block of entries with a single entry.
 
 ## Removing banned IPs
 To remove banned IPs from the global list, use the below Powershell cmdlet:
@@ -55,6 +56,6 @@ BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 ## Additional references  
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](https://technet.microsoft.com/en-us/itpro/powershell/windows/adfs/set-adfsproperties)
+[Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
 
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)

@@ -12,26 +12,27 @@ ms.assetid: 1f9b22c5-cc93-45df-9165-bedee94998da
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 07/10/2018
+ms.date: 08/06/2018
 ---
 # manage-bde: protectors
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Manages the protection methods used for the BitLocker encryption key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 ## Syntax
 ```
-manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup}] <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup}] <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 ### Parameters
 |Parameter|Description|
 |-------|--------|
 |-get|Displays all the key protection methods enabled on the drive and provides their type and identifier (ID).|
-|-add|adds key protection methods as specified by using additional [ add parameters](manage-bde-protectors.md#BKMK_addprotectors).|
+|-add|adds key protection methods as specified by using additional [add parameters](manage-bde-protectors.md#BKMK_addprotectors).|
 |-delete|deletes key protection methods used by BitLocker. All key protectors will be removed from a drive unless the optional [-delete parameters](manage-bde-protectors.md#BKMK_deleteprotectors) are used to specify which protectors to delete. When the last protector on a drive is deleted, BitLocker protection of the drive is disabled to ensure that access to data is not lost inadvertently.|
 |-disable|Disables protection, which will allow anyone to access encrypted data by making the encryption key available unsecured on drive. No key protectors are removed. Protection will be resumed the next time Windows is booted unless the optional [-disable parameters](manage-bde-protectors.md#BKMK_disableprot) are used to specify the reboot count.|
 |-enable|Enables protection by removing the unsecured encryption key from the drive. All configured key protectors on the drive will be enforced.|
-|-adbackup|Backs up all recovery information for the drive specified to active directory Domain Services (AD DS). To back up only a single recovery key to AD DS, append the **-id** parameter and specify the ID of a specific recovery key to back up.|
+|-adbackup|Backs up all recovery information for the drive specified to Active Directory Domain Services (AD DS). To back up only a single recovery key to AD DS, append the **-id** parameter and specify the ID of a specific recovery key to back up.|
+|-aadbackup|Backs up all recovery information for the drive specified to Azure Active Directory (Azure Ad). To back up only a single recovery key to Azure AD, append the **-id** parameter and specify the ID of a specific recovery key to back up.|
 |<Drive>|Represents a drive letter followed by a colon.|
 |-computername|Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
 |<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
@@ -110,7 +111,7 @@ The following example illustrates using the **-protectors** command to add an **
 ```
 manage-bde  protectors  add E: -sid DOMAIN\user
 ```
-The following example illustrates using the ** protectors** command to disable protection until the computer has rebooted 3 times.
+The following example illustrates using the **protectors** command to disable protection until the computer has rebooted 3 times.
 ```
 manage-bde  protectors  disable C: -rc 3
 ```

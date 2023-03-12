@@ -41,9 +41,12 @@ Virtual machines that are running will continue to run. However, you won't be ab
 *Use the Services snap-in or Sc config command-line tool to reconfigure the service to start automatically.*  
   
 > [!TIP]  
-> If you can't find the service in the desktop app or the command-line tool reports that the service doesn't exist, the Hyper-V Management tools probably aren't installed. To install them:  
+> If you can't find the service in the desktop app or the command-line tool reports that the service doesn't exist, the Hyper-V Management tools probably aren't installed. 
+And if you are not able to see the Hyper-V MMC console from the Start menu, you should install the Hyper-V Management Tools.
+
+To install the Hyper-V Management tools:  
 >   
-> - On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more details, see [Install the Hyper-V role on Windows Server 2016](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
+> - On Windows Server, open Server Manager and use the Add Roles and Features wizard. For more details, see [Install the Hyper-V role on Windows Server 2016](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  You can also use PowerShell to install the tools (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`) 
 > - On Windows, from the Desktop, begin typing **programs**, click **Programs and Features** (Control panel) > **Turn Windows features on or off** > **Hyper-V** > **Hyper-V Management Tools**. Then, click **OK**.  
   
 ### To reconfigure the service to start automatically using the Services desktop app  

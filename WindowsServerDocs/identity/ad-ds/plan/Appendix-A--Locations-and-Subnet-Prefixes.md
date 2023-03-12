@@ -2,9 +2,9 @@
 ms.assetid: 28aad3ba-f129-46f2-ba94-c3da831c9811
 title: Appendix A - Locations and Subnet Prefixes
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

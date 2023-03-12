@@ -61,9 +61,9 @@ Start EDGE1 and EDGE2 if they are not already running.
   
 7.  Leave the Windows PowerShell window open for the next procedure.  
   
-8.  Open Internet Explorer, in the Internet Explorer address bar, enter **http://app1/** and press ENTER. You will see the default IIS website on APP1.  
+8.  Open Internet Explorer, in the Internet Explorer address bar, enter **https://app1/** and press ENTER. You will see the default IIS website on APP1.  
   
-9. In the Internet Explorer address bar, enter **http://app2/** and press ENTER. You will see the default website on APP2.  
+9. In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
 10. On the **Start** screen, type**\\\App2\Files**, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.  
   
@@ -81,8 +81,8 @@ Start EDGE1 and EDGE2 if they are not already running.
   
 6.  In the Windows PowerShell window, type **ping app2** and press ENTER. You should see replies from the NAT64 address assigned by EDGE1 to APP2, which in this case is fdc9:9f4e:eb1b:7777::a00:4.  
   
-7.  Open Internet Explorer, in the Internet Explorer address bar, enter **http://app1/** and press ENTER. You will see the default IIS site on APP1.  
+7.  Open Internet Explorer, in the Internet Explorer address bar, enter **https://app1/** and press ENTER. You will see the default IIS site on APP1.  
   
-8.  In the Internet Explorer address bar, enter **http://app2/** and press ENTER. You will see the default website on APP2.  
+8.  In the Internet Explorer address bar, enter **https://app2/** and press ENTER. You will see the default website on APP2.  
   
 9. On the **Start** screen, type**\\\App2\Files**, and then press ENTER. Double-click the New Text Document file. This demonstrates that you were able to connect to an IPv4 only server using SMB to obtain a resource on an IPv4 only host.

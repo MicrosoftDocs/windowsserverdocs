@@ -5,10 +5,10 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
-manager: elizapo
+ms.localizationpriority: medium 
 ms.author: pashort
 author: shortpatti
-ms.date: 07/19/2018
+ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
 
@@ -17,7 +17,8 @@ ms.reviewer: deverette
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 &#171;  [**Previous:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)<br>
-&#187; [ **Next:** Step 4. Install and Configure the NPS Server](vpn-deploy-nps.md)
+&#187;  [**Previous:** Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md)
+
 
 RRAS is designed to perform well as both a router and a remote access server because it supports a wide array of features. For the purposes of this deployment, you require only a small subset of these features: support for IKEv2 VPN connections and LAN routing.
 
@@ -54,6 +55,7 @@ In this procedure, you install the Remote Access role as a single tenant RAS Gat
    | Success | Restart Needed | Exit Code | Feature Result                             |
    |---------|----------------|-----------|--------------------------------------------|
    | True    | No             | Success   | {RAS Connection Manager Administration Kit |
+   ---
 
 ### Install the Remote Access role by using Server Manager
 
@@ -150,6 +152,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
     |---------------------|-------------------|
     | Remote Access activity logged on the Remote Access server | Make sure that **Windows Accounting** is selected.      |
     | NPS to perform accounting services for VPN   | Change **Accounting provider** to **RADIUS Accounting** and then configure the NPS as the accounting provider. |
+    ---
 
 15. Click the **IPv4** tab and do:
 
@@ -202,6 +205,10 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 7.  If prompted, click **Yes** to confirm restarting the server and click **Close** to restart the server.
 
 ## Next step
-[Step 4. Install and Configure the NPS Server](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+[Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+
+
+
+
 
 ---

@@ -24,7 +24,7 @@ There is extensive documentation on MSDN about how to properly write, structure,
 
 When returning results with multiple objects in response to client requests, the domain controller has to temporarily store the result set in memory. Increasing page sizes will cause more memory usage and can age items out of cache unnecessarily. In this case, the default settings are optimal. There are several scenarios where recommendations were made to increase the page size settings. We recommend using the default values unless specifically identified as inadequate.
 
-When queries have many results, a limit of similar queries concurrently executed may be encountered.  This occurs as the LDAP server may deplete a global memory area known as the cookie pool.  It may be necessary to increase the size of the pool as discussed in [How LDAP Server Cookies Are Handled](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/manage/how-ldap-server-cookies-are-handled).
+When queries have many results, a limit of similar queries concurrently executed may be encountered.  This occurs as the LDAP server may deplete a global memory area known as the cookie pool.  It may be necessary to increase the size of the pool as discussed in [How LDAP Server Cookies Are Handled](https://technet.microsoft.com/windows-server-docs/identity/ad-ds/manage/how-ldap-server-cookies-are-handled).
 
 To tune these settings, see [Windows Server 2008 and newer domain controller returns only 5000 values in a LDAP response](https://support.microsoft.com/kb/2009267).
 
@@ -45,7 +45,7 @@ Indexing attributes is useful when searching for objects that have the attribute
     -   **NTDS\\Request Latency** – This is subject to how long the request takes to process. Active Directory times out requests after 120 seconds (default), however, the majority should run much faster and extremely long running queries should get hidden in the overall numbers. Look for changes in this baseline, rather than absolute thresholds.
 
         **Note**  
-        High values here can also be indicators of delays in “proxying�? requests to other domains and CRL checks.
+        High values here can also be indicators of delays in "proxying" requests to other domains and CRL checks.
 
 
     -   **NTDS\\Estimated Queue Delay** – This should ideally be near 0 for optimal performance as this means that requests spend no time waiting to be serviced.
@@ -60,7 +60,7 @@ These scenarios can be detected using one or more of the following approaches:
 
 -   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor Pack
 
--   Searches using any filter besides “(objectClass=\*)�? that use the Ancestors Index.
+-   Searches using any filter besides "(objectClass=\*)" that use the Ancestors Index.
 
 ### Other index considerations
 

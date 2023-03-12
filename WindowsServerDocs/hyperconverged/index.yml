@@ -1,0 +1,131 @@
+### YamlMime:YamlDocument
+
+documentType: LandingData
+
+title: Hyper-converged infrastructure documentation
+
+metadata:
+
+  document_id: 
+
+  title: Hyper-converged infrastructure documentation 
+
+  description: Hyper-converged infrastructure documentation
+
+  text: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization
+
+  
+  keywords: Windows Server, Windows Server 2016, hyper-v, sdn, storage spaces direct, wssd
+
+  ms.localizationpriority: high
+
+  author: coreyp-at-msft
+
+  ms.author: coreyp
+
+  ms.topic: article
+
+  ms.devlang: na
+
+sections:
+
+- title: 
+
+- items:
+
+  - type: markdown
+
+    text: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. 
+
+- items:
+
+  - type: list
+
+    style: cards
+
+    className: cardsI
+
+    columns: 2
+
+    items:
+
+    - href: ../virtualization/hyper-v/index.md
+
+      html: <p>Virtualizes server hardware, enabling you to run virtual machines across servers in a hyper-converged cluster</p>
+
+      image:
+
+        src: ../media/i-virtualize.svg
+      
+      title: Hyper-V
+
+    - href: ../storage/storage-spaces/storage-spaces-direct-overview.md
+
+      html: <p>Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.</p>
+
+      image:
+
+        src: ../media/i-store.svg
+
+      title: Storage Spaces Direct
+
+    - href: ../failover-clustering/failover-clustering-overview.md
+
+      html: <p>Groups multiple servers together so that workloads such as virtual machines can run on any server in the cluster, load-balancing and failing over gracefully between servers.</p>
+
+      image:
+
+        src: ../media/i-cluster.svg
+
+      title: Failover Clustering
+
+    - href: https://docs.microsoft.com/windows-server/networking/sdn/
+
+      html: <p>Virtualizes your network hardware, enabling you to dynamically create and manage networks and policies that abstract your workloads from underlying physical networks.</p>
+
+      image:
+
+        src: ../media/i-network.svg
+
+      title: Software Defined Networking
+
+    - href: ../manage/windows-admin-center/overview.md
+
+      html: <p>Manages your cluster and other Windows servers.</p>
+
+      image:
+
+        src: ../media/i-admin-center.svg
+
+      title: Windows Admin Center      
+      
+    - href: ../azure-hybrid-services.md
+
+      html: <p>Connects your cluster to Azure hybrid services for site recovery, monitoring, and more.</p>
+
+      image:
+
+        src: ../media/i-microsoft-azure.svg
+
+      title: Connect to Azure hybrid services      
+    
+    - href: ../azure-stack-hci
+
+      html: <p>Pairs Windows Server 2019 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.</p>
+
+      image:
+
+        src: ../media/i-azure-stack.svg
+
+      title: Azure Stack HCI     
+      
+    - href: https://www.microsoft.com/cloud-platform/software-defined-datacenter
+
+      html: <p>Pairs Windows Server 2016 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.</p>
+
+      image:
+
+        src: https://docs.microsoft.com/media/common/i_data-collection.svg
+
+      title: Windows Server Software-Defined (WSSD)      
+

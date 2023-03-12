@@ -57,8 +57,7 @@ The user statistics can be filtered, based on criteria selections, by using the 
 |Resource Accessed|All users who are accessing a particular corporate resource or an endpoint. The value that corresponds to this field is the hostname/IP address of the server.|  
 |Server|The Remote Access server to which clients are connected. This is relevant only for cluster and multisite deployments.|  
   
-## See Also  
-[Additional way to monitor DirectAccess machine/user activity on Windows 2012 and 2012R2 DirectAccess with component event logging](http://blogs.technet.com/b/martin_j_solis/archive/2015/03/20/additional-way-to-monitor-directaccess-machine-user-activity-on-windows-2012-and-2012r2-directaccess-with-component-even-logging.aspx)  
+  
   
 
 

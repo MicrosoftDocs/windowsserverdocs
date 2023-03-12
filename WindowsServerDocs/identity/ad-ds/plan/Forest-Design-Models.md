@@ -2,9 +2,9 @@
 ms.assetid: c7f49a65-c3eb-4383-99d3-756aa8c79fc0
 title: Forest Design Models
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

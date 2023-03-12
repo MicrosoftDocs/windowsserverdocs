@@ -12,7 +12,7 @@ author: shortpatti
 
 # Install Data Center Bridging \(DCB\) in Windows Server 2016 or Windows 10
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to install DCB in Windows Server 2016 or Windows 10.
 

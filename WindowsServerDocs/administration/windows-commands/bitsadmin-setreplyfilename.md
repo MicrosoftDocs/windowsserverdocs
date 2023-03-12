@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin setreplyfilename
 
-
-
 Specify the path of the file that contains the server reply.
+
+**BITS 1.2 and earlier**: Not supported.
 
 ## Syntax
 

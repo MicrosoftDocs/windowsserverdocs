@@ -101,7 +101,7 @@ Microsoft reserves the right to audit end customer at any time to verify eligibi
 
 We have enabled pre-built gallery images availability for all our customers who have eligible licenses, irrespective of where they bought them, as well as enabled partners to be able to perform the deployments on customers’ behalf. 
 
-Please find the instructions for all available deployment options [here](https://azure.microsoft.com/en-us/pricing/hybrid-use-benefit/), including: 
+Please find the instructions for all available deployment options [here](https://azure.microsoft.com/pricing/hybrid-use-benefit/), including: 
 -	Detailed video highlighting the new deployment experience utilizing pre-built gallery images
 -	Detailed instructions on uploading a custom-built VM 
 -	Detailed instructions on migrating existing virtual machines using Azure Site recovery using PowerShell. 

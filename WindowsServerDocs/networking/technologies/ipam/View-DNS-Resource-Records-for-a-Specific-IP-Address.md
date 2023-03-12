@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # View DNS Resource Records for a Specific IP Address
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to view the DNS resource records that are associated with the IP Address that you choose.  
   

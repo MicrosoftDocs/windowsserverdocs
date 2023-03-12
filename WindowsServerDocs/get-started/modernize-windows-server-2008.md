@@ -6,7 +6,6 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: mikeblodge
 ms.author: mikeblodge
-ms.localizationpriority: high
 ms.date: 07/12/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
@@ -25,7 +24,7 @@ If you need to keep your servers on-premises, and you are running Windows Server
 
 See [Upgrading from Windows Server 2008 R2 or Windows Server 2008](installation-and-upgrade.md#upgrading-from-windows-server-2008-r2-or-windows-server-2008), for more information about your on-premises upgrade options.
 
-If you are running Windows Server 2003, you will need to [upgrade to Windows Server 2008](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff972408(v%3dws.10)). See [upgrade paths for Windows Server 2008](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979563(v=ws.10)) for more information about your on-premises upgrade options.
+If you are running Windows Server 2003, you will need to [upgrade to Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff972408(v%3dws.10)). See [upgrade paths for Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979563(v=ws.10)) for more information about your on-premises upgrade options.
 
 
 ## Migrate to Azure
@@ -53,4 +52,4 @@ If you are running SQL Server 2008/2008 R2, you can upgrade to SQL Server [2016]
 
 
 ## Additional resources
-[Microsoft Azure](https://docs.microsoft.com/en-us/azure/#pivot=products)
+[Microsoft Azure](https://docs.microsoft.com/azure/#pivot=products)

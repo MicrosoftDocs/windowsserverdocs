@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ---
 
 # Extending volumes in Storage Spaces Direct
-> Applies To: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides instructions for resizing volumes in [Storage Spaces Direct](storage-spaces-direct-overview.md).
 

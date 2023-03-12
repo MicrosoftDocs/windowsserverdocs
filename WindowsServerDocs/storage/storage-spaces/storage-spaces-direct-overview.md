@@ -6,18 +6,18 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 7/23/2018
+ms.date: 03/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct overview
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in Windows Server 2016 Datacenter and [Windows Server Insider Preview Builds](https://insider.windows.com/en-us/for-business-getting-started-server/). 
+Storage Spaces Direct is included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/). 
 
 For other applications of Storage Spaces, such as Shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
@@ -30,7 +30,9 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="understand-the-cache.md">Understand the cache</a></li>
 			  <li><a href="storage-spaces-fault-tolerance.md">Fault tolerance and storage efficiency</a></li>
               <li><a href="drive-symmetry-considerations.md">Drive symmetry considerations</a></li>
+              <li><a href="understand-storage-resync.md">Understand and monitor storage resync</a></li>
               <li><a href="understand-quorum.md">Understanding cluster and pool quorum</a></li>
+              <li><a href="cluster-sets.md">Cluster sets</a></li>
 		  	</ul>
         </td>
         <td style="padding: 5px; border: 0;">
@@ -49,9 +51,11 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
         <td style="padding: 5px; border: 0;">
             <strong>Deploy</a></strong>
             <ul>
-			  <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
-			  <li><a href="create-volumes.md">Create volumes</a></li>
-              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a><br><br><br></li>
+			        <li><a href="deploy-storage-spaces-direct.md">Deploy Storage Spaces Direct</a></li>
+			        <li><a href="create-volumes.md">Create volumes</a></li>
+              <li><a href="nested-resiliency.md">Nested resiliency</a></li>
+              <li><a href="../../failover-clustering/manage-cluster-quorum.md">Configure quorum</a></li>
+              <li><a href="upgrade-storage-spaces-direct-to-windows-server-2019.md">Upgrade a Storage Spaces Direct cluster to Windows Server 2019</a></li>
 		    </ul>
         </td>        
         <td style="padding: 5px; border: 0;">
@@ -63,6 +67,9 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 			  <li><a href="remove-servers.md">Remove servers</a></li>
 			  <li><a href="resize-volumes.md">Extend volumes</a></li>
 			  <li><a href="../update-firmware.md">Update drive firmware</a></li>
+              <li><a href="performance-history.md">Performance history</a></li>
+              <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
+              <li><a href="configure-azure-monitor.md">Use Azure Monitor on a hyper-converged cluster</a></li>
 		    </ul>
         </td>
     </tr>
@@ -74,12 +81,13 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
               <li><a href="data-collection.md">Collect diagnostic data with Storage Spaces Direct</a></li>
             </ul>
          <td style="padding: 5px; border: 0;">
-            <strong>Insider Preview content</a></strong>
+            <strong>Recent blog posts</a></strong>
             <ul>
-                <li><a href="performance-history.md">Performance history</a></li>
-                <li><a href="delimit-volume-allocation.md">Delimit the allocation of volumes</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/">13.7 million IOPS with Storage Spaces Direct: the new industry record for hyper-converged infrastructure</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/">Hyper-converged infrastructure in Windows Server 2019 - the countdown clock starts now!</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/">Five big announcements from the Windows Server Summit</a></li>
+              <li><a href="https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/">10,000 Storage Spaces Direct clusters and counting...</a></li>
             </ul>
-    </tr>
 </table>
 
 ## Videos
@@ -87,6 +95,10 @@ For other applications of Storage Spaces, such as Shared SAS clusters and stand-
 **Quick Video Overview (5 minutes)**
 
 <iframe src="https://www.youtube-nocookie.com/embed/raeUiNtMk0E" width="560" height="315" allowfullscreen></iframe>
+
+**Storage Spaces Direct at Microsoft Ignite 2018 (1 hour)**
+
+[Watch on YouTube](https://www.youtube.com/watch?v=5kaUiW3qo30)
 
 **Storage Spaces Direct at Microsoft Ignite 2017 (1 hour)**
 
@@ -181,7 +193,7 @@ Here's an overview of the Storage Spaces Direct stack:
 
 **Software Storage Bus.** The Software Storage Bus is new in Storage Spaces Direct. It spans the cluster and establishes a software-defined storage fabric whereby all the servers can see all of each other's local drives. You can think of it as replacing costly and restrictive Fibre Channel or Shared SAS cabling.
 
-**Storage Bus Layer Cache.** The [Software Storage Bus](software-storage-bus-overview.md) dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
+**Storage Bus Layer Cache.** The Software Storage Bus dynamically binds the fastest drives present (e.g. SSD) to slower drives (e.g. HDDs) to provide server-side read/write caching that accelerates IO and boosts throughput.
 
 **Storage Pool.** The collection of drives that form the basis of Storage Spaces is called the storage pool. It is automatically created, and all eligible drives are automatically discovered and added to it. We strongly recommend you use one pool per cluster, with the default settings. Read our [Deep Dive into the Storage Pool](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/) to learn more.
 
@@ -197,42 +209,20 @@ Here's an overview of the Storage Spaces Direct stack:
 
 There are [over 10,000 clusters](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/) worldwide running Storage Spaces Direct. Organizations of all sizes, from small businesses deploying just two nodes, to large enterprises and governments deploying hundreds of nodes, depend on Storage Spaces Direct for their critical applications and infrastructure.
 
-Click any logo to read the full customer story:
+Visit [Microsoft.com/HCI](https://www.microsoft.com/hci) to read their stories:
 
-<div style="background-color: rgba(0,0,0,0.1); padding: 10px;">
-    <a target="_blank" target="_blank" href="https://customers.microsoft.com/story/createadvertising"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Create Advertising (Microsoft Customer Story)" src="wall-of-logos/microsoft-create-advertising.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/majmaah-university"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Majmaah University (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-majmaah-university.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/soerum-kommune"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Soerum Kommune (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-soerum-kommune.png"></a>
-    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2017mar-make-it.html"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Make IT (Fujitsu Case Study)" src="wall-of-logos/fujitsu-make-it.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/mead-hunt-replaces-aging-san-with-dataon-cib-9112-and-windows-server-2016-running-refs-and-hyper-v/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Mead & Hunt (DataON Case Study)" src="wall-of-logos/dataon-mead-hunt.png"></a>
-    <a target="_blank" href="https://customers.microsoft.com/story/youth-villages"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Youth Villages (Microsoft Customer Story)" src="wall-of-logos/microsoft-youth-villages.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/evga-chooses-microsoft-and-dataon-for-their-next-generation-hyper-converged-cluster-platform/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="EVGA (DataON Case Study)" src="wall-of-logos/dataon-evga.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/king-county-wa-library-system-upgrades-to-a-storage-spaces-direct/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="King County Library System (DataON Case Study)" src="wall-of-logos/dataon-king-county-library-system.png"></a>
-    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2017sep-itarex.html"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="iTAREX (Fujitsu Case Study)" src="wall-of-logos/fujitsu-itarex.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/bennington-updates-their-storage-with-a-windows-server-2016-solution/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Bennington (DataON Case Study)" src="wall-of-logos/dataon-bennington.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/cherokee-county-school-district-replaces-their-iscsi-san-storage-with-a-storage-spaces-direct/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Cherokee County School District (DataON Case Study)" src="wall-of-logos/dataon-cherokee-county-school-district.png"></a>
-    <a target="_blank" href="https://www.fujitsu.com/global/about/resources/case-studies/cs-2018jun-harreringenieure.html"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Harrer Ingenieure GmbH (Fujitsu Case Study)" src="wall-of-logos/fujitsu-harrer-ingenieure.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/braathe-gruppen-as"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Braathe Gruppen Read (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-braathe-gruppen.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/cloud-factory"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="SE Cloud Factory (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-se-cloud-factory.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/oblakoteka"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Oblakoteka Read (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-oblakoteka.png"></a>
-    <a target="_blank" href="https://lenovosuccess.com/casestudy/acuutech"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Acuutech (Lenovo Customer Success Story)" src="wall-of-logos/lenovo-acuutech.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/infront-upgrades-their-hyper-v-and-storage-environment-to-a-dataon-and-storage-spaces-direct-solution/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Infront Finance (DataON Case Study)" src="wall-of-logos/dataon-infront.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/tmi-systems-consolidates-networking-and-storage-into-a-cost-effective-high-performance-storage-spaces-direct/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="TMI (DataON Case Study)" src="wall-of-logos/dataon-tmi.png"></a>
-    <a target="_blank" href="https://www.dataonstorage.com/customer-stories/quest-chooses-dataon-microsoft-power-veeam-cloud-connect-backup-service/"><img style="width: 19.2%; margin: 2px; max-width: 225px; transition: 0.2s;" onmouseover="this.style.boxShadow='0px 2px 10px 2px rgba(0,0,0,0.2)'; this.style.margin='0px 2px 4px 2px';" onmouseout="this.style.boxShadow='none'; this.style.margin='2px';" title="Quest Technology Management (DataON Case Study)" src="wall-of-logos/dataon-quest-technology-management.png"></a>
-</div>
+[![Grid of customer logos](media/storage-spaces-direct-in-windows-server-2016/customer-stories.png)](https://www.microsoft.com/hci)
 
-## Tools for managing Storage Spaces Direct
-After you've deployed your storage, some of the management tasks you'll perform include monitoring for failed physical disks or other issues, replacing disks that fail, and updating firmware and drivers.
-See the following table for common management options.
+## Management tools
 
-|Tool|Advantages|Disadvantages|
-|---|---|---|
-|[Windows Admin Center](../../manage/windows-admin-center/overview.md)|-Powerful and easy to use<br>-Graphical displays for monitoring individual clusters and servers|-Must be installed (it is [pretty easy to install](../../manage/windows-admin-center/deploy/install.md) though...)|
-|Windows PowerShell|- Complete control over all aspects of storage<br>- Can automate by writing scripts<br>- Powerful example scripts available|- Better for management than visually monitoring overall storage health<br>- Scripts require development and testing|
-|System Center Virtual Machine Manager (VMM) & Operations Manager|- Easy to use<br>- Graphical displays for monitoring multiple systems<br>- Alerting for common problems<br>- Common tool for managing VMs and storage<br>|- Some tasks require Windows PowerShell<br>- Requires System Center licenses<br>- Might require additional infrastructure if you don't already have System Center or are deploying at a scale that's greater than your existing deployment can handle|
-|Failover Cluster Manager & Server Manager|- Easy to use<br>- Graphical displays for monitoring<br>|- Some tasks require Windows PowerShell<br>- Slow automatic refreshes in Server Manager when working with storage<br>- Performance and usability decreases with large numbers of objects|
+The following tools can be used to manage and/or monitor Storage Spaces Direct:
 
-For more info about using VMM with Storage Spaces Direct, see [Manage Storage Spaces Direct in VMM](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm), and [Manage storage in Storage Spaces Direct in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/storage-spaces-manage).
+| Name | Graphical or command-line? | Paid or included? |
+|-----------------|----------------------------|-------------------|
+| [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | Graphical    | Included |
+| Server Manager & Failover Cluster Manager                                 | Graphical    | Included |
+| Windows PowerShell                                                        | Command-line | Included |
+| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) & [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Graphical    | Paid     |
 
 ## Get started
 
@@ -242,6 +232,7 @@ Try Storage Spaces Direct [in Microsoft Azure](https://blogs.technet.microsoft.c
 
 -   [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
 -   [Storage Replica](../storage-replica/storage-replica-overview.md)
+-   [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/)
 -   [Storage Spaces Direct throughput with iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (TechNet blog)
 -   [What's New in Failover Clustering in Windows Server](../../failover-clustering/whats-new-in-failover-clustering.md)  
 -   [Storage Quality of Service](../storage-qos/storage-qos-overview.md)

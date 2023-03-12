@@ -15,7 +15,7 @@ manager: dongill
 ---
 # Create your disaster recovery plan for RDS
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 You can create a disaster recovery plan in Azure Site Recovery to automate the failover process. Add all RDS component VMs to the recovery plan.
 
@@ -68,37 +68,36 @@ For an RDS deployment with pooled desktops, group the VMs so they come up in seq
    
    The template VM when recovered to the secondary site will start, but it is a sysprepped VM and cannot start completely. Also RDS requires that the VM be shutdown to create a pooled VM configuration from it. So, we need to turn it off. If you have a single VMM server, the template VM name is the same on the primary and the secondary. Because of that, we use the VM ID as specified by the *Context* variable in the script below. If you have multiple templates, turn them all off.
 
-   ```
+   ```powershell
    ipmo virtualmachinemanager; 
    Foreach($vm in $VMsAsTemplate)
    {
-   Get-SCVirtualMachine -ID $vm | Stop-SCVirtualMachine –Force
+      Get-SCVirtualMachine -ID $vm | Stop-SCVirtualMachine –Force
    } 
    ```
 6. Group 2 script 2 - Remove existing pooled VMs
 
    You need to remove the pooled VMs on the primary site from the Connection Broker so new VMs can be created on the secondary site. In this case you need to specify the exact host on which to create the pooled VM. Note that this will delete the VMs from only the collection.
 
-   ```
+   ```powershell
    ipmo RemoteDesktop
    $desktops = Get-RDVirtualDesktop -CollectionName Win8Desktops; 
    Foreach($vm in $desktops){
-         Remove-RDVirtualDesktopFromCollection -CollectionName Win8Desktops -VirtualDesktopName $vm.VirtualDesktopName –Force
-         }
+      Remove-RDVirtualDesktopFromCollection -CollectionName Win8Desktops -VirtualDesktopName $vm.VirtualDesktopName –Force
+   }
    ```
 7. Group 2 manual action - Assign new template
 
-   You need to assign the new template to the Connection Broker for the collection so you can create new pooled VMs on the recovery stie. Go to the RDS Connection Broker and identify the collection. Edit the properties and specify a new VM image as its template.
+   You need to assign the new template to the Connection Broker for the collection so you can create new pooled VMs on the recovery site. Go to the RDS Connection Broker and identify the collection. Edit the properties and specify a new VM image as its template.
 8. Group 2 script 3 - Recreate all pooled VMs
 
    Recreate the pooled VMs on the recovery site through the Connection Broker. In this case, you need to specify the exact host on which to create the pooled VM.
 
    The pooled VM name needs to be unique, using the prefix and suffix. If the VM name already exists, the script will fail. Also, if the primary side VMs are numbered from 1-5, the recovery site numbering will continue from 6.
 
-   ```
+   ```powershell
    ipmo RemoteDesktop; 
-   Add-RDVirtualDesktopToCollection -CollectionName Win8Desktops 
-   -VirtualDesktopAllocation @{"RDVH1.contoso.com" = 1} 
+   Add-RDVirtualDesktopToCollection -CollectionName Win8Desktops -VirtualDesktopAllocation @{"RDVH1.contoso.com" = 1} 
    ```
 9. Failover group 3 - Web Access and Gateway server VM
 
@@ -122,7 +121,7 @@ For an RDS deployment with personal desktops, group the VMs so they come up in s
       
    Modify the script below to run for each virtualization host in the cloud. Typically after you add a virtualization host to a Connection Broker, you need to restart the host. Ensure that the host doesn't have a reboot pending before the script runs, or else it will fail.
 
-   ```
+   ```powershell
    Broker - broker.contoso.com
    Virtualization host - VH1.contoso.com
 
@@ -134,11 +133,11 @@ For an RDS deployment with personal desktops, group the VMs so they come up in s
    
    The template VM when recovered to the secondary site will start, but it is a sysprepped VM and cannot start completely. Also RDS requires that the VM be shutdown to create a pooled VM configuration from it. So, we need to turn it off. If you have a single VMM server, the template VM name is the same on the primary and the secondary. Because of that, we use the VM ID as specified by the *Context* variable in the script below. If you have multiple templates, turn them all off.
 
-   ```
+   ```powershell
    ipmo virtualmachinemanager; 
    Foreach($vm in $VMsAsTemplate)
    {
-   Get-SCVirtualMachine -ID $vm | Stop-SCVirtualMachine –Force
+      Get-SCVirtualMachine -ID $vm | Stop-SCVirtualMachine –Force
    } 
    ```
 6. Failover group 3 - Personal VMs
@@ -146,7 +145,7 @@ For an RDS deployment with personal desktops, group the VMs so they come up in s
 
    Remove the personal VMs on the primary site from the Connection Broker so new VMs can be created on the secondary site. You need to extract the VMs' assignments and re-add the virtual machines to the Connection Broker with the hash of assignments. This will only remove the personal VMs from the collection and re-add them. The personal desktop allocation will be exported and imported back into the collection.
 
-   ```
+   ```powershell
    ipmo RemoteDesktop
    $desktops = Get-RDVirtualDesktop -CollectionName CEODesktops; 
    Export-RDPersonalVirtualDesktopAssignment -CollectionName CEODesktops -Path ./Desktopallocations.txt -ConnectionBroker broker.contoso.com 

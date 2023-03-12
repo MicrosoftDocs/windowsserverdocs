@@ -11,12 +11,46 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/16/2018
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 # What's new for the Remote Desktop web client?
 
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Check out the latest updates below.
+
+## Updates for version 1.0.11
+*Published date: 2/22/2019*
+
+- Enabled connection to RD Broker without an RD Gateway in Windows Server 2019.
+- Sorted feeds alphabetically (i.e., RemoteApps first, Desktops second).
+- Fixed multiple accessibility bugs improving screen reader compatibility.
+- Updated our build tools.
+- Various bug fixes.
+
+## Updates for version 1.0.7
+*Published date: 1/24/2019*
+
+- Offline use on internal networks is now supported.
+- Improved rendering on non-Microsoft Edge browsers.
+- Implemented limit for feed retrieval retry attempts to prevent DoS.
+- Fixed accessibility bugs, enabling users with visual disabilities to use the web client.
+- Improved error messages displayed to the user for feed errors.
+- Added Ctrl + Alt + End (Windows) and fn + control + option + delete (Mac) shortcuts to invoke Ctrl + Alt + Del in remote machine.
+- Improved telemetry for crash events. 
+- Improved our build pipeline and build tools.
+- Various bug fixes.
+
+## Updates for version 1.0.1
+*Published date: 10/29/2018*
+
+- Added an option to **Capture support information** on the About page to diagnose issues.
+- InPrivate mode is now supported.
+- Improved support for non-English keyboards.
+- Fixed an issue where tooltips with non-English characters showed incorrectly.
+- Fixed graphics rendering issue which affected Chrome users.
+- Updated time zone redirection with full DST support.
+- Improved the error message for out-of-memory error.
+- Various bug fixes.
 
 ## Updates for version 1.0.0
 *Published date: 07/16/2018*

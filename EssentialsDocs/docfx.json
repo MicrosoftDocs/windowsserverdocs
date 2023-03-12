@@ -36,6 +36,7 @@
 	},
     "fileMetadata": {},
     "template": [],
-    "dest": "window-server-docs/essentials"
+    "dest": "window-server-docs/essentials",
+    "markdownEngineName": "dfm"
   }
 }

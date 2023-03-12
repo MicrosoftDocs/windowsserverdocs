@@ -38,6 +38,7 @@
     "template": [
       null
     ],
-    "dest": "hyper-v-server-docs"
+    "dest": "hyper-v-server-docs",
+    "markdownEngineName": "dfm"
   }
 }

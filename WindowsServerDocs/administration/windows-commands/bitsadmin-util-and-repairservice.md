@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and repairservice
-description: "Windows Commands topic for **bitsadmin util and repairservice** - Commmand used to fix known issues with various versions of BITS service."
+description: "Windows Commands topic for **bitsadmin util and repairservice** - Command used to fix known issues with various versions of BITS service."
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin util and repairservice
 
+If BITS fails to start, use this switch to fix known issues with various versions of BITS.
 
-
-Commmand used to fix known issues with various versions of BITS service.
+**BITSAdmin 1.5 and earlier:** Not supported.
 
 ## Syntax
 
@@ -35,10 +35,10 @@ bitsadmin /Util /RepairService [/Force]
 
 ## Remarks
 
-This command resolves errors related to incorrect service configuration and dependencies on Windows services and the network directory. This command generates output that indicates if the issues that were resolved.
+This switch resolves errors related to incorrect service configuration and dependencies on Windows services (such as LANManworkstation) and the network directory. This switch generates output that indicates if the issues that were resolved.
 
 > [!NOTE]
-> that if BITS recreates the service, the service description string may be set to English in a localized system.
+> If BITS recreates the service, the service description string may be set to English in a localized system.
 
 > [!IMPORTANT]
 > This command is not supported on Windows Vista.

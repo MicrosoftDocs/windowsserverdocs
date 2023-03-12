@@ -12,13 +12,13 @@ ms.service: na
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 ---
 
->Applies To: Windows Server 2016, Windows 10
+>Applies To: Windows 10, Windows Server 2016, Windows Server 2019
 
 # Manage Hyper-V Integration Services
 
 Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as "integration components". You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
 
-For details about each integration service, see [Hyper-V Integration Services](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/integration-services).
+For details about each integration service, see [Hyper-V Integration Services](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/integration-services).
 
 >[!IMPORTANT]
 >Each service you want to use must be enabled in both the host and guest in order to function. All integration services except "Hyper-V Guest Service Interface" are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
@@ -243,7 +243,7 @@ We recommend that you keep integration services up to date to get the best perfo
 | - | | |
 | Linux guests | package manager | Integration services for Linux are built into the distro but there may be optional updates available. ******** |
 
-\* If the Data Exchange integration service can't be enabled, the integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file. Instructions for applying a cab are available in this [blog post](http://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx).
+\* If the Data Exchange integration service can't be enabled, the integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file. Instructions for applying a cab are available in this [blog post](https://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx).
 
 **For virtual machines running on Windows 8.1 hosts:**
 

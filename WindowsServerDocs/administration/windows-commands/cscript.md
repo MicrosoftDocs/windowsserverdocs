@@ -21,17 +21,17 @@ ms.date: 10/16/2017
 starts a script so that it runs in a command-line environment.
 ## Syntax
 ```
-cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}] [/I] [/Job:<Identifier>] [{/Logo|/NoLogo}] [/S] [/T:<Seconds>] [/X] [/U] [/?] [<ScriptArguments  >]
+cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}] [/I] [/Job:<Identifier>] [{/Logo|/NoLogo}] [/S] [/T:<Seconds>] [/X] [/U] [/?] [<ScriptArguments>]
 ```
 ### Parameters
 |Parameter|Description|
 |-------|--------|
 |Scriptname.extension|Specifies the path and file name of the script file with optional file name extension.|
 |/B|Specifies batch mode, which does not display alerts, scripting errors, or input prompts.|
-|/D|starts the debugger.|
-|E:<Engine>|Specifies the engine that is used to run the script.|
-|H:cscript|registers cscript.exe as the default script host for running scripts.|
-|H:wscript|registers wscript.exe as the default script host for running scripts. This is the default.|
+|/D|Starts the debugger.|
+|/E:<Engine>|Specifies the engine that is used to run the script.|
+|/H:cscript|Registers cscript.exe as the default script host for running scripts.|
+|/H:wscript|Registers wscript.exe as the default script host for running scripts. This is the default.|
 |/I|Specifies interactive mode, which displays alerts, scripting errors, and input prompts. This is the default and the opposite of **/B**.|
 |/Job:<Identifier>|Runs the job identified by *Identifier* in a .wsf script file.|
 |/Logo|Specifies that the Windows Script Host banner is displayed in the console before the script runs. This is the default and the opposite of **/Nologo**.|
@@ -53,6 +53,7 @@ cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}]
 -   if you double-click a script file with an extension that has no association, the **Open With** dialog box appears. select wscript or cscript, and then select **Always use this program to open this file type**. This registers wscript.exe or cscript as the default script host for files of this file type.
 -   You can set properties for individual scripts. See [additional References](#BKMK_references) for more information.
 -   Windows Script Host can use .wsf script files. Each .wsf file can use multiple scripting engines and perform multiple jobs.
-## <a name="BKMK_references"></a>additional References
+
+#### <a name="BKMK_references"></a>Additional references
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

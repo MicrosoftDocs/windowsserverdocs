@@ -12,7 +12,7 @@ ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 08/21/2018
 ---
 
 # icacls
@@ -51,6 +51,7 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 |[/setintegritylevel [(CI)(OI)]\<Level>:<Policy>[...]]|Explicitly adds an integrity ACE to all matching files. *Level* is specified as:</br>-   **L**[ow]</br>-   **M**[edium]</br>-   **H**[igh]</br>Inheritance options for the integrity ACE may precede the level and are applied only to directories.|
 |[/substitute \<SidOld> <SidNew> [...]]|Replaces an existing SID (*SidOld*) with a new SID (*SidNew*). Requires the *Directory* parameter.|
 |/restore \<ACLfile> [/c] [/l] [/q]|Applies stored DACLs from *ACLfile* to files in the specified directory. Requires the *Directory* parameter.|
+|/inheritancelevel:[e\|d\|r]|Sets the inheritance level: <br>  **e** - Enables enheritance <br>**d** - Disables inheritance and copies the ACEs <br>**r** - Removes all inherited ACEs
 
 ## Remarks
 

@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # View DNS Zones
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to view DNS zones in the IPAM client console.  
   

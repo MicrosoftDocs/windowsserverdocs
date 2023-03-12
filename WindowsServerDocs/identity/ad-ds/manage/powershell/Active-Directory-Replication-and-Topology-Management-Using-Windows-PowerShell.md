@@ -2,9 +2,9 @@
 ms.assetid: 853b7f02-bc69-416e-87b1-556f51cb2cea
 title: Active Directory Replication and Topology Management Using Windows PowerShell
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold

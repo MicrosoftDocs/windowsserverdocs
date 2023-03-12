@@ -12,7 +12,7 @@ author: shortpatti
 
 # Configure Remote RADIUS Server Groups
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to configure remote RADIUS server groups when you want to configure NPS to act as a proxy server and forward connection requests to other NPSs for processing.
 

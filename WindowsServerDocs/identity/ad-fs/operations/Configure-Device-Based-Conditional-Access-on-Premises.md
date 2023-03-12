@@ -26,7 +26,7 @@ The following per-requisites are required before you can begin with on-premises 
 
 |Requirement|Description
 |-----|-----
-|An Azure AD subscription with Azure AD Premium | To enable device write back for on premises conditional access - [a free trial is fine](https://azure.microsoft.com/en-us/trial/get-started-active-directory/)  
+|An Azure AD subscription with Azure AD Premium | To enable device write back for on premises conditional access - [a free trial is fine](https://azure.microsoft.com/trial/get-started-active-directory/)  
 |Intune subscription|only required for MDM integration for device compliance scenarios -[a free trial is fine](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0)
 |Azure AD Connect|November 2015 QFE or later.  Get the latest version [here](https://www.microsoft.com/en-us/download/details.aspx?id=47594).  
 |Windows Server 2016|Build 10586 or newer for AD FS  
@@ -68,7 +68,7 @@ For additional information on upgrading, see [Upgrade Domain Controllers to Wind
 ## Enable Azure AD Device Registration  
 To configure this scenario, you must configure the device registration capability in Azure AD.  
 
-To do this, follow the steps under [Setting up Azure AD Join in your organization](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-setup/)  
+To do this, follow the steps under [Setting up Azure AD Join in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-setup/)  
 
 ## Setup AD FS  
 1. Create the a [new AD FS 2016 farm](https://technet.microsoft.com/library/dn486775.aspx).   
@@ -203,7 +203,7 @@ This will help you achieve the following:
 4. Configure the group policy settings required for automatic device registration of domain joined computers   
 
 ### Microsoft Passport for Work   
-For information on enabling Windows 10 with Microsoft Passport for Work, see [Enable Microsoft Passport for Work in your organization.](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-passport-deployment/)  
+For information on enabling Windows 10 with Microsoft Passport for Work, see [Enable Microsoft Passport for Work in your organization.](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)  
 
 ### Automatic MDM enrollment   
 To enable automatic MDM enrollment of registered devices so that you can use the isCompliant claim in your access control policy, follow the steps [here.](https://blogs.technet.microsoft.com/ad/2015/08/14/windows-10-azure-ad-and-microsoft-intune-automatic-mdm-enrollment-powered-by-the-cloud/)  
@@ -220,7 +220,7 @@ To enable automatic MDM enrollment of registered devices so that you can use the
     4. Try the device enrollment or registration again  
 
 ### Related Articles  
-* [Securing access to Office 365 and other apps connected to Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access/)  
-* [Conditional access device policies for Office 365 services](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-device-policies/)  
-* [Setting up on-premises conditional access using Azure Active Directory Device Registration](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-device-registration-on-premises-setup)  
-* [Connect domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/en-us/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  
+* [Securing access to Office 365 and other apps connected to Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)  
+* [Conditional access device policies for Office 365 services](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-device-policies/)  
+* [Setting up on-premises conditional access using Azure Active Directory Device Registration](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
+* [Connect domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  

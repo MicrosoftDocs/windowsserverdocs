@@ -36,14 +36,23 @@ AD FS supports several types of Single Sign-On experiences:
   
      In the OAuth scenario, a refresh token is used to maintain the SSO state of the user within the scope of a particular application.  
   
-     If a device is registered, AD FS will set the expiration time of a refresh token based on the persistent SSO cookies lifetime for a registered device which is 7 days by default. If a user selects the “keep me signed in” option, the expiration time of the refresh token will equal the persistent SSO cookies lifetime for “keep me signed in” which is 1 day by default with maximum of 7 day. Otherwise, refresh token lifetime equals session SSO cookie lifetime which is 8 hours by default  
+     If a device is registered, AD FS will set the expiration time of a refresh token based on the persistent SSO cookies lifetime for a registered device which is 7 days by default for AD FS 2012R2 and up to a maximum of 90 days with AD FS 2016 if they use their device to access AD FS resources within a 14 day window. 
+
+If the device is not registered but a user selects the “keep me signed in” option, the expiration time of the refresh token will equal the persistent SSO cookies lifetime for "keep me signed in" which is 1 day by default with maximum of 7 day. Otherwise, refresh token lifetime equals session SSO cookie lifetime which is 8 hours by default  
   
  As mentioned above, users on registered devices will always get a persistent SSO unless the persistent SSO is disabled. For un-registered devices, persistent SSO can be achieved by enabling the “keep me signed in” (KMSI) feature. 
  
  For Windows Server 2012 R2, to enable PSSO for the “Keep me signed in” scenario, you need to install this [hotfix](https://support.microsoft.com/en-us/kb/2958298/) which is also part of the of [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/en-us/kb/2975719).   
- 
-  
-## Single Sign-On and authenticated devices  
+
+Task | PowerShell | Description
+------------ | ------------- | -------------
+Enable/disable persistent SSO | ```` Set-AdfsProperties –EnablePersistentSso <Boolean> ````| Persistent SSO is enabled by default. If it is disabled, no PSSO cookie will be written.
+"Enable/disable “keep me signed in" | ```` Set-AdfsProperties –EnableKmsi <Boolean> ```` | "Keep me signed in" feature is disabled by default. If it is enabled, end user will see a “keep me signed in” choice on AD FS sign-in page
+
+
+
+## AD FS 2016 - Single Sign-On and authenticated devices
+AD FS 2016 changes the PSSO when requestor is authenticating from a registered device increasing to max 90 Days but requiring an authenticvation within a 14 days period (device usage window).
 After providing credentials for the first time, by default users with registered devices get single Sign-On  for a maximum period of 90 days, provided they use the device to access AD FS resources at least once every 14 days.  If they wait 15 days after providing credentials, users will be prompted for credentials again.  
 
 Persistent SSO is enabled by default. If it is disabled, no PSSO cookie will be written.|  
@@ -121,16 +130,75 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 ```  
 @RuleTemplate = "PassThroughClaims"  
 @RuleName = "Pass through claim - InsideCorporateNetwork"  
-c:[Type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork"]  
+c:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork"]  
 => issue(claim = c);   
 A custom Issuance Transform rule to pass through the persistent SSO claim  
 @RuleName = "Pass Through Claim - Psso"  
-c:[Type == "https://schemas.microsoft.com/2014/03/psso"]  
+c:[Type == "http://schemas.microsoft.com/2014/03/psso"]  
 => issue(claim = c);  
   
 ```
   
-  
-    
+To Summarize:
+<table>
+  <tr>
+    <th colspan="1">Single SignOn experience</th>
+    <th colspan="3">ADFS 2012 R2 <br> Is Device Registered?</th>
+        <th colspan="1"></th>
+    <th colspan="3">ADFS 2016 <br> Is Device Registered?</th>
+  </tr>
 
+  <tr align="center">
+    <th></th>
+    <th>NO</th>
+    <th>NO But KMSI</th>
+    <th>YES</th>
+    <th></th>
+    <th>NO</th>
+    <th>NO But KMSI</th>
+    <th>YES</th>
+  </tr>
+ <tr align="center">
+    <td>SSO=>set Refresh Token=></td>
+    <td>8 Hrs</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <th></th>
+    <td>8 Hrs</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
 
+ <tr align="center">
+    <td>PSSO=>set Refresh Token=></td>
+    <td>N/A</td>
+    <td>24 Hrs</td>
+    <td>7 Days</td>
+    <th></th>
+    <td>N/A</td>
+    <td>24 Hrs</td>
+    <td>Max 90 Days with 14 Days Window</td>
+  </tr>
+
+ <tr align="center">
+    <td>Token Lifetime</td>
+    <td>1 Hrs</td>
+    <td>1 Hrs</td>
+    <td>1 Hrs</td>
+    <th></th>
+    <td>1 Hrs</td>
+    <td>1 Hrs</td>
+    <td>1 Hrs</td>
+  </tr>
+</table>
+
+**Registered Device?** You get a PSSO / Persistent SSO <br>
+**Not Registered Device?** You get a SSO <br>
+**Not Registered Device but KMSI?** You get a PSSO/ Persistent SSO <p>
+IF:
+ - [x] Admin has enabled the KMSI feature [AND]
+ - [x] User clicks the KMSI check box on the forms login page
+ 
+**Good to Know:** <br>
+Federated users who do not have the **LastPasswordChangeTimestamp** attribute synced are issued session cookies and refresh tokens that have a **Max Age value of 12 hours**.<br>
+This occurs because Azure AD cannot determine when to revoke tokens that are related to an old credential (such as a password that has been changed). Therefore, Azure AD must check more frequently to make sure that the user and associated tokens are still in good standing.

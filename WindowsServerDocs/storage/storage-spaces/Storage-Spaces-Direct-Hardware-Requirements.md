@@ -13,11 +13,11 @@ ms.localizationpriority: medium
 
 # Storage Spaces Direct hardware requirements
 
-> Applies to: Windows Server 2016, Windows Server Insider Preview
+> Applies to: Windows Server 2016
 
 This topic describes minimum hardware requirements for Storage Spaces Direct.
 
-For production, Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) hardware/software offers from our partners, which include deployment tools and procedures. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. Learn more at [https://microsoft.com/wssd](https://microsoft.com/wssd).
+For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which  which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
 
 ![logos of our Windows Server Software Defined partners](media/hardware-requirements/wssd-partners.png)
 
@@ -74,6 +74,7 @@ Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that 
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
+- NVMe driver is Microsoft's in-box or updated NVMe driver.
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
 - Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
 

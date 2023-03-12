@@ -1,7 +1,7 @@
 ---
 title: Network Policy Server (NPS)
-description: This topic provides an overview of Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
-manager: elizapo
+description: This topic provides an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019, and includes links to additional guidance about NPS.
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -13,9 +13,9 @@ ms.date: 06/20/2018
 
 # Network Policy Server (NPS)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
 
-You can use this topic for an overview of Network Policy Server in Windows Server 2016.
+You can use this topic for an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019. NPS is installed when you install the Network Policy and Access Services (NPAS) feature in Windows Server 2016 and Server 2019.
 
 >[!NOTE]
 >In addition to this topic, the following NPS documentation is available.
@@ -48,10 +48,12 @@ You can configure NPS with any combination of these features. For example, you c
 
 NPS provides different functionality depending on the edition of Windows Server that you install.
 
-### Windows Server 2016 Standard/Datacenter Edition
+### Windows Server 2016 or Windows Server 2019 Standard/Datacenter Edition
 
 With NPS in Windows Server 2016 Standard or Datacenter, you can configure an unlimited number of RADIUS clients and remote RADIUS server groups. In addition, you can configure RADIUS clients by specifying an IP address range.
 
+>[!NOTE]
+>The WIndows Network Policy and Access Services feature is not available on systems installed with a Server Core installation option.
 
 The following sections provide more detailed information about NPS as a RADIUS server and proxy.
 

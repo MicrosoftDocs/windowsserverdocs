@@ -2,21 +2,20 @@
 title: Understanding cluster and pool quorum
 description: Understanding Cluster and Pool Quorum, with specific examples to go over the intricacies.
 keywords: Storage Spaces Direct,Quorum,Witness,S2D,Cluster Quorum,Pool Quorum,Cluster,Pool
-ms.assetid: 
-ms.prod: 
+ms.prod: windows-server-threshold
 ms.author: adagashe
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 02/23/2018 
-ms.localizationpriority: 
+ms.date: 01/18/2019
+ms.localizationpriority: medium
 ---
 # Understanding cluster and pool quorum
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-[Windows Server Failover Clustering](../../failover-clustering\failover-clustering-overview.md) provides high availability for workloads. These resources are considered highly available if the nodes that host resources are up; however, the cluster generally requires more than half the nodes to be running, which is known as having *quorum*.
+[Windows Server Failover Clustering](../../failover-clustering/failover-clustering-overview.md) provides high availability for workloads. These resources are considered highly available if the nodes that host resources are up; however, the cluster generally requires more than half the nodes to be running, which is known as having *quorum*.
 
 Quorum is designed to prevent *split-brain* scenarios which can happen when there is a partition in the network and subsets of nodes cannot communicate with each other. This can cause both subsets of nodes to try to own the workload and write to the same disk which can lead to numerous problems. However, this is prevented with Failover Clustering’s concept of quorum which forces only one of these groups of nodes to continue running, so only one of these groups will stay online.
 
@@ -41,12 +40,12 @@ The table below gives an overview of the Cluster Quorum outcomes per scenario:
 | 4 + Witness  | Yes                                 | Yes                                               | Yes                                                |
 | 5 and above  | Yes                                 | Yes                                               | Yes                                                |
 
-> Therefore, our guidance is:
->
-> - If you have two nodes, a witness is <strong>required</strong>.
-> - If you have three or four nodes, witness is <strong>strongly recommended</strong>.
-> - If you have internet access, use a <strong>[cloud witness](../../failover-clustering\deploy-cloud-witness.md)</strong>
-> - If you’re in an IT environment with other machines and file shares, use a file share witness
+### Cluster quorum recommendations
+
+- If you have two nodes, a witness is <strong>required</strong>.
+- If you have three or four nodes, witness is <strong>strongly recommended</strong>.
+- If you have Internet access, use a <strong>[cloud witness](../../failover-clustering/deploy-cloud-witness.md)</strong>
+- If you’re in an IT environment with other machines and file shares, use a file share witness
 
 ## How cluster quorum works
 
@@ -216,11 +215,13 @@ Each of the 24 drives has one vote and node two also has one vote (since it's th
 - Can survive one server failure, then another: <strong>Depends </strong>(cannot survive if both nodes three and four go down, but can survive all other scenarios.
 - Can survive two server failures at once: <strong>Depends </strong>(cannot survive if both nodes three and four go down, but can survive all other scenarios.
 
-> ### Therefore, our guidance is:
-> 
-> - Ensure that each node in your cluster is symmetrical (each node has the same number of drives)
-> - Enable three-way mirror or dual parity so that you can tolerate a node failures and keep the virtual disks online. See our [volume guidance page](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/plan-volumes) for more details.
-> - If more than two nodes are down, or two nodes and a disk on another node are down, volumes may not have access to all three copies of their data, and therefore be taken offline and be unavailable. It’s recommended to bring the servers back or replace the disks quickly to ensure the most resiliency for all the data in the volume.
+### Pool quorum recommendations
+
+- Ensure that each node in your cluster is symmetrical (each node has the same number of drives)
+- Enable three-way mirror or dual parity so that you can tolerate a node failures and keep the virtual disks online. See our [volume guidance page](plan-volumes.md) for more details.
+- If more than two nodes are down, or two nodes and a disk on another node are down, volumes may not have access to all three copies of their data, and therefore be taken offline and be unavailable. It’s recommended to bring the servers back or replace the disks quickly to ensure the most resiliency for all the data in the volume.
 
 ## More information
-For additional information on how to configure and manage quorum, see documentation on [configure and manage quorum](../../failover-clustering/manage-cluster-quorum.md).
+
+- [Configure and manage quorum](../../failover-clustering/manage-cluster-quorum.md)
+- [Deploy a cloud witness](../../failover-clustering/deploy-cloud-witness.md)

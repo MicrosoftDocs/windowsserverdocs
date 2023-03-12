@@ -2,127 +2,71 @@
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 description:
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+ms.author: joflore
+author: MicrosoftGuyJFlo
+manager: mtillman
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 
 ms.technology: identity-adds
 ---
-
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.  
   
--   [Domain controller upgrade steps](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_UpgradeWorkflow)  
-  
--   [What's new in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewEight)  
-  
--   [What's new in AD DS in Windows Server 2012 R2?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_NewWS2012R2)  
-  
--   [What's new in AD DS in Windows Server 2012?](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_WhatsNewAD)  
-  
--   [AD DS server role installation changes](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_InstallationChanges)  
-  
--   [Deprecated features and behavior changes related to AD DS in Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures)  
-  
--   [Operating system requirements](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_SysReqs)  
-  
--   [Supported in-place upgrade paths](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_UpgradePaths)  
-  
--   [Functional level features and requirements](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_FunctionalLevels)  
-  
--   [AD DS interoperability with other server roles and Windows operating systems](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_ServerRoles)  
-  
--   [Operations master roles](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_OpsMasters)  
-  
--   [Virtualizing domain controllers that run Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_Virtual)  
-  
--   [Administration of Windows Server 2012 servers](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_Admin)  
-  
--   [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat)  
-  
--   [Known issues](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_KnownIssues)  
-  
 ## <a name="BKMK_UpgradeWorkflow"></a>Domain controller upgrade steps  
 The recommended way to upgrade a domain is to promote domain controllers that run newer versions of Windows Server and demote older domain controllers as needed. That method is preferable to upgrading the operating system of an existing domain controller. This list covers general steps to follow before you promote a domain controller that runs a newer version of Windows Server:  
   
-1.  Verify the target server meets [system requirements](https://technet.microsoft.com/library/dn303418.aspx).  
-  
-2.  Verify [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).  
-  
-3.  Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) and [Secure default settings in Windows Server 2008 and Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
-  
-4.  Check connectivity to the target server from the computer where you plan to run the installation.  
-  
-5.  Check for availability of necessary operation master roles:  
-  
-    -   To install the first DC that runs  Windows Server 2012  in an existing domain and forest, the machine where you run the installation needs connectivity to the schema master in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.  
-  
-    -   To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master.  
-  
-    -   To install or remove a domain in an existing forest, you need connectivity to the domain naming master.  
-  
-    -   Any domain controller installation also requires connectivity to the RID master.  
-  
-    -   If you are installing the first read-only domain controller in an existing forest, you need connectivity to the infrastructure master for each application directory partition, also known as a non-domain naming context or NDNC.  
-  
-6.  Be sure to supply the necessary credentials to run the AD DS installation.  
-  
-    |Installation action|Credential requirements|  
-    |-----------------------|---------------------------|  
-    |Install a new forest|Local Administrator on the target server|  
-    |Install a new domain in an existing forest|Enterprise Admins|  
-    |Install an additional DC in an existing domain|Domain Admins|  
-    |Run adprep /forestprep|Schema Admins, Enterprise Admins, and Domain Admins|  
-    |Run adprep /domainprep|Domain Admins|  
-    |Run adprep /domainprep /gpprep|Domain Admins|  
-    |Run adprep /rodcprep|Enterprise Admins|  
-  
-    You can delegate permissions to install AD DS. For more information, see [Installation Management Tasks](https://technet.microsoft.com/library/cc773327(WS.10).aspx).  
-  
+1. Verify the target server meets [system requirements](https://technet.microsoft.com/library/dn303418.aspx).  
+2. Verify [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).  
+3. Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) and [Secure default settings in Windows Server 2008 and Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
+4. Check connectivity to the target server from the computer where you plan to run the installation.  
+5. Check for availability of necessary operation master roles:  
+
+   - To install the first DC that runs  Windows Server 2012  in an existing domain and forest, the machine where you run the installation needs connectivity to the schema master in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.  
+   - To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master.  
+   - To install or remove a domain in an existing forest, you need connectivity to the domain naming master.  
+   - Any domain controller installation also requires connectivity to the RID master.  
+   - If you are installing the first read-only domain controller in an existing forest, you need connectivity to the infrastructure master for each application directory partition, also known as a non-domain naming context or NDNC.  
+
+6. Be sure to supply the necessary credentials to run the AD DS installation.  
+
+   |Installation action|Credential requirements|  
+   |-----------------------|---------------------------|  
+   |Install a new forest|Local Administrator on the target server|  
+   |Install a new domain in an existing forest|Enterprise Admins|  
+   |Install an additional DC in an existing domain|Domain Admins|  
+   |Run adprep /forestprep|Schema Admins, Enterprise Admins, and Domain Admins|  
+   |Run adprep /domainprep|Domain Admins|  
+   |Run adprep /domainprep /gpprep|Domain Admins|  
+   |Run adprep /rodcprep|Enterprise Admins|  
+
+   You can delegate permissions to install AD DS. For more information, see [Installation Management Tasks](https://technet.microsoft.com/library/cc773327(WS.10).aspx).  
+
 Steps-by-step instructions to promote new and replica Windows Server 2012 domain controllers using Windows PowerShell cmdlets and Server Manager can be found in the following links:  
-  
--   [Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx)  
-  
--   [Install a New Windows Server 2012 Active Directory Forest (Level 200)](https://technet.microsoft.com/library/jj574166.aspx)  
-  
--   [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](https://technet.microsoft.com/library/jj574134.aspx)  
-  
--   [Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)](https://technet.microsoft.com/library/jj574105.aspx)  
-  
--   [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](https://technet.microsoft.com/library/jj574152.aspx)  
-  
--   [Step-by-Step Guide for Setting Up Windows Server 2012 Domain Controller (en-US)](https://social.technet.microsoft.com/wiki/contents/articles/12370.step-by-step-guide-for-setting-up-windows-server-2012-domain-controller-en-us.aspx)  
-  
-## <a name="BKMK_WhatsNewEight"></a>What's new in Windows Server 2012?  
-New features listed by server role and technology area are listed in the following table. For more whitepapers, video demonstrations, and presentations about other features in Windows Server 2012, see [Server and Cloud Platform](https://www.microsoft.com/server-cloud/default.aspx).  
-  
-||||  
-|-|-|-|  
-|[Active Directory Certificate Services (AD CS)](https://technet.microsoft.com/library/hh831373.aspx)|[Active Directory Rights Management Services (AD RMS)](https://technet.microsoft.com/library/hh831554.aspx)|[BitLocker Drive Encryption](https://technet.microsoft.com/library/hh831412.aspx)|  
-|[BranchCache](https://technet.microsoft.com/library/jj127252.aspx)|[Dynamic Host Configuration protocol (DHCP)](https://technet.microsoft.com/library/jj200226.aspx)|[Domain Name System (DNS)](https://technet.microsoft.com/library/jj200224.aspx)|  
-|[Failover Clustering](https://technet.microsoft.com/library/hh831414.aspx)|[File Server Resource Manager](https://technet.microsoft.com/library/hh831746.aspx)|[Group Policy](https://technet.microsoft.com/library/jj574108.aspx)|  
-|[Hyper-V](https://technet.microsoft.com/library/hh831410.aspx)|[IP Address Management (IPAM)](https://technet.microsoft.com/library/jj200214.aspx)|[Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx)|  
-|[Managed Service Accounts](https://technet.microsoft.com/library/hh831451.aspx)|[Networking](https://technet.microsoft.com/library/jj200215.aspx)|[Remote Desktop Services](https://technet.microsoft.com/library/hh831527.aspx)|  
-|[Security Auditing](https://technet.microsoft.com/library/hh849638.aspx)|[Server Manager](https://blogs.technet.com/b/servermanager/archive/2012/06/27/server-manager-power-of-many-simplicity-of-one.aspx)|[Smart Cards](https://technet.microsoft.com/library/hh849637.aspx)|  
-|[TLS/SSL (Schannel SSP)](https://technet.microsoft.com/library/hh831771.aspx)|[Windows Deployment Services](https://technet.microsoft.com/library/hh974416.aspx)|[Windows PowerShell 3.0](https://technet.microsoft.com/library/hh857339)|  
-  
-### Automatic Maintenance and changes to restart behavior after updates are applied by Windows Update  
+
+- [Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx)  
+- [Install a New Windows Server 2012 Active Directory Forest (Level 200)](https://technet.microsoft.com/library/jj574166.aspx)  
+- [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](https://technet.microsoft.com/library/jj574134.aspx)  
+- [Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)](https://technet.microsoft.com/library/jj574105.aspx)  
+- [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](https://technet.microsoft.com/library/jj574152.aspx)  
+- [Step-by-Step Guide for Setting Up Windows Server 2012 Domain Controller (en-US)](https://social.technet.microsoft.com/wiki/contents/articles/12370.step-by-step-guide-for-setting-up-windows-server-2012-domain-controller-en-us.aspx)  
+
+## Windows Update considerations
+
 Prior to the release of Windows 8, Windows Update managed its own internal schedule to check for updates, and to download and install them. It required that the Windows Update Agent was always running in the background, consuming memory and other system resources.  
   
 Windows 8 and Windows Server 2012 introduce a new feature called [Automatic Maintenance](https://msdn.microsoft.com/library/windows/desktop/hh848037(v=vs.85).aspx). Automatic Maintenance consolidates many different features that each used to manage its own scheduling and execution logic. This consolidation allows for all these components to use far less system resources, work consistently, respect the new [Connected Standby](https://msdn.microsoft.com/library/windows/hardware/jj248729.aspx) state for new device types, and consume less battery on portable devices.  
   
 Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windows Server 2012, its own internal schedule for setting a day and time to install updates is no longer effective. To help ensure consistent and predictable restart behavior for all devices and computers in your enterprise, including those that run Windows 8 and Windows Server 2012, see Microsoft KB article [2885694](https://support.microsoft.com/kb/2885694) (or see October 2013 cumulative rollup [2883201](https://support.microsoft.com/kb/2883201)), then configure policy settings described in the WSUS blog post [Enabling a more predictable Windows Update experience for Windows 8 and Windows Server 2012 (KB 2885694)](http://blogs.technet.com/b/wsus/archive/2013/10/08/enabling-a-more-predictable-windows-update-experience-for-windows-8-and-windows-server-2012-kb-2885694.aspx).  
-  
 
-## <a name="BKMK_NewWS2012R2"></a>What's new in AD DS in Windows Server 2012 R2?  
+## <a name="BKMK_NewWS2012R2"></a>What's new in AD DS in Windows Server 2012 R2?
+
 The following table summarizes new features for AD DS in Windows Server 2012 R2, with a link to more detailed information where it is available. For a more detailed explanation of some features, including their requirements, see [What's New in Active Directory in Windows Server 2012 R2](https://technet.microsoft.com/library/dn268294.aspx).  
-  
+
 |Feature|Description|  
 |-----------|---------------|  
 |[Workplace Join](https://technet.microsoft.com/library/dn280945.aspx)|Allows information workers to join their personal devices with their company to access company resources and services.|  
@@ -137,8 +81,9 @@ The following table summarizes new features for AD DS in Windows Server 2012 R2,
 |[LDAP query optimizer changes](https://technet.microsoft.com/library/dn535775.aspx)|Performance improvement in LDAP search efficiency and LDAP search time of complex queries.|  
 |[1644 Event improvements](https://technet.microsoft.com/library/dn535775.aspx)|LDAP search result statistics were added to event ID 1644 to aid in troubleshooting.|  
 |[Active Directory replication throughput improvement](https://technet.microsoft.com/library/dn535775.aspx)|Adjusts the maximum AD Replication throughput from 40Mbps to around 600 Mbps|  
-  
-## <a name="BKMK_WhatsNewAD"></a>What's new in AD DS in Windows Server 2012?  
+
+## <a name="BKMK_WhatsNewAD"></a>What's new in AD DS in Windows Server 2012?
+
 The following table summarizes the new features for AD DS in Windows Server 2012, with a link to more detailed information where it is available. For a more detailed explanation of some features, including their requirements, see [What's New in Active Directory Domain Services (AD DS)](https://technet.microsoft.com/library/hh831477.aspx).  
   
 |Feature|Description|  
@@ -158,31 +103,31 @@ The following table summarizes the new features for AD DS in Windows Server 2012
 |[USN rollback protection for virtualized DCs](https://technet.microsoft.com/library/hh831734.aspx#safe_virt_dc)|Accidentally restoring snapshot backups of virtualized DCs no longer causes USN rollback.|  
 |[Windows PowerShell History Viewer](https://technet.microsoft.com/library/hh831702.aspx#windows_powershell_history_viewer)|Allow administrators to view the Windows PowerShell commands executed when using ADAC.|  
   
-### <a name="BKMK_"></a>Automatic Maintenance and changes to restart behavior after updates are applied by Windows Update  
+### <a name="BKMK_"></a>Automatic Maintenance and changes to restart behavior after updates are applied by Windows Update
+
 Prior to the release of Windows 8, Windows Update managed its own internal schedule to check for updates, and to download and install them. It required that the Windows Update Agent was always running in the background, consuming memory and other system resources.  
   
 Windows 8 and Windows Server 2012 introduce a new feature called [Automatic Maintenance](https://msdn.microsoft.com/library/windows/desktop/hh848037(v=vs.85).aspx). Automatic Maintenance consolidates many different features that each used to manage its own scheduling and execution logic. This consolidation allows for all these components to use far less system resources, work consistently, respect the new [Connected Standby](https://msdn.microsoft.com/library/windows/hardware/jj248729.aspx) state for new device types, and consume less battery on portable devices.  
   
 Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windows Server 2012, its own internal schedule for setting a day and time to install updates is no longer effective. To help ensure consistent and predictable restart behavior for all devices and computers in your enterprise, including those that run Windows 8 and Windows Server 2012, you can configure the following Group Policy settings:  
-  
--   **Computer Configuration|Policies|Administrative Templates|Windows Components|Windows Update|Configure Automatic Updates**  
-  
--   **Computer Configuration|Policies|Administrative Templates|Windows Components|Windows Update|No auto-restart with logged on users**  
-  
--   **Computer Configuration|Policies|Administrative Templates|Windows Components|Maintenance Scheduler|Maintenance Random Delay**  
-  
+
+- **Computer Configuration|Policies|Administrative Templates|Windows Components|Windows Update|Configure Automatic Updates**  
+- **Computer Configuration|Policies|Administrative Templates|Windows Components|Windows Update|No auto-restart with logged on users**  
+- **Computer Configuration|Policies|Administrative Templates|Windows Components|Maintenance Scheduler|Maintenance Random Delay**  
+
 The following table lists some examples of how to configure these settings to provide desired restart behavior.  
-  
+
 |||  
 |-|-|  
 |**Scenario**|**Recommended configuration(s)**|  
 |**WSUS managed**<br /><br />-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<br /><br />**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 - Auto download and schedule the install<br /><br />**Policy**: No auto-restart with logged-on users (Disabled)<br /><br />**WSUS deadlines**: set to Fridays at 11PM|  
 |**WSUS managed**<br /><br />-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<br /><br />Use above steps for previous scenario<br /><br />Set different deadlines for different target groups|  
 |**Not WSUS-managed - no support for deadlines**<br /><br />-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<br /><br />Configure automatic updating: 4 - Auto download and schedule the install<br /><br />**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](https://support.microsoft.com/kb/2835627)<br /><br />**Policy:** Automatic Maintenance Random Delay (Enabled)<br /><br />Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<br /><br />-   Updates will install at the configured maintenance time plus a random delay<br /><br />-   Restart for each machine will take place exactly 3 days later<br /><br />Alternatively, set a different maintenance time for each group of machines|  
-  
+
 For more information about why the Windows engineering team implemented these changes, see [Minimizing restarts after automatic updating in Windows Update](http://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx).  
-  
-## <a name="BKMK_InstallationChanges"></a>AD DS server role installation changes  
+
+## <a name="BKMK_InstallationChanges"></a>AD DS server role installation changes
+
 In Windows Server 2003 through Windows Server 2008 R2, you ran the x86 or X64 version of the Adprep.exe command-line tool before running the Active Directory Installation Wizard, Dcpromo.exe, and Dcpromo.exe had optional variants to install from media or for unattended installation.  
   
 Beginning in Windows Server 2012, command-line installations are performed by using the ADDSDeployment Module in Windows PowerShell. GUI-based promotions are performed in Server Manager using a completely new AD DS Configuration Wizard. To simplify the installation process, ADPREP has been integrated into the AD DS installation and runs automatically as needed. The Windows PowerShell-based AD DS Configuration Wizard automatically targets the schema and infrastructure master roles in the domains where DCs are being added, then remotely runs the required ADPREP commands on the relevant domain controllers.  
@@ -191,24 +136,20 @@ Prerequisite checks in the AD DS Installation Wizard identify potential errors b
   
 Taken together, the AD DS installation changes simplify the DC role installation process and reduce the likelihood of administrative errors, especially when you are deploying multiple domain controllers across global regions and domains.  
 More detailed information on GUI and Windows PowerShell-based installations, including command line syntax and step-by-step wizard instructions, see [Install Active Directory Domain Services](https://technet.microsoft.com/library/hh472162.aspx). For administrators that want to control the introduction of schema changes in an Active Directory forest independent of the installation of Windows Server 2012 DCs in an existing forest, Adprep.exe commands can still be run at an elevated command prompt.  
-  
-## <a name="BKMK_DeprecatedFeatures"></a>Deprecated features and behavior changes related to AD DS in Windows Server 2012  
+
+## <a name="BKMK_DeprecatedFeatures"></a>Deprecated features and behavior changes related to AD DS in Windows Server 2012
+
 There are some changes related to AD DS:  
-  
--   **Deprecation of Adprep32.exe**  
-  
-    There is only one version of Adprep.exe and it can be run as needed on 64-bit servers that run Windows Server 2008 or later. It can be run remotely, and must be run remotely if that targeted operations master role is hosted on a 32-bit operating system or Windows Server 2003.  
-  
--   **Deprecation of Dcpromo.exe**  
-  
-    Dcpromo is deprecated although in  Windows Server 2012  only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.  
-  
--   **LMHash is disabled on user accounts**  
-  
-    Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps in KB article [946405](https://support.microsoft.com/kb/946405).  
-  
-Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000.  
-  
+
+- **Deprecation of Adprep32.exe**
+   - There is only one version of Adprep.exe and it can be run as needed on 64-bit servers that run Windows Server 2008 or later. It can be run remotely, and must be run remotely if that targeted operations master role is hosted on a 32-bit operating system or Windows Server 2003.  
+- **Deprecation of Dcpromo.exe**
+   - Dcpromo is deprecated although in  Windows Server 2012  only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.  
+-   **LMHash is disabled on user accounts**
+   - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps in KB article [946405](https://support.microsoft.com/kb/946405).  
+
+Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000.
+
 |||||  
 |-|-|-|-|  
 |Encryption type or policy|Windows Server 2008 default|Windows Server 2012 and Windows Server 2008 R2 default|Comment|  
@@ -216,10 +157,11 @@ Beginning with  Windows Server 2008 , domain controllers also have the following
 |DES|Enabled|Disabled|[Article 977321](https://go.microsoft.com/fwlink/?LinkId=177717) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717)|  
 |CBT/Extended Protection for Integrated Authentication|N/A|Enabled|See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<br /><br />Review and install the hotfix in [article 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) in the Microsoft Knowledge Base as required.|  
 |LMv2|Enabled|Disabled|[Article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251)|  
-  
-## <a name="BKMK_SysReqs"></a>Operating system requirements  
+
+## <a name="BKMK_SysReqs"></a>Operating system requirements
+
 The minimum system requirements for  Windows Server 2012  are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.  
-  
+
 |||  
 |-|-|  
 |Processor|1.4 Ghz 64-bit processor|  
@@ -227,8 +169,9 @@ The minimum system requirements for  Windows Server 2012  are listed in the foll
 |Free disk space requirements|32 GB|  
 |Screen resolution|800 x 600 or higher|  
 |Miscellaneous|DVD drive, keyboard, Internet access|  
-  
-### <a name="BKMK_DiskSpaceDCWin8"></a>Disk space requirements for upgrading domain controllers  
+
+### <a name="BKMK_DiskSpaceDCWin8"></a>Disk space requirements for upgrading domain controllers
+
 This section covers disk space requirements only for upgrading domain controllers from  Windows Server 2008  or  Windows Server 2008 R2 . For more information about disk space requirements for upgrading domain controllers to earlier versions of Windows Server, see [Disk space requirements for upgrading to Windows Server 2008](https://technet.microsoft.com/library/cc754463(WS.10).aspx#BKMK_2008) or [Disk space requirements for upgrading to Windows Server 2008 R2](https://technet.microsoft.com/library/cc754463(WS.10).aspx#BKMK_2008R2).  
   
 Size the disk that hosts the Active Directory database and log files in order to accommodate the custom and application-driven schema extensions, application and administrator-initiated indexes, plus space for the objects and attributes that you will be added to the directory over deployment life of the domain controller (typically 5 to 8 years). Right sizing at deployment time is typically a good investment compared to greater touch costs required to expand disk storage after deployment. For more information, see [Capacity Planning for Active Directory Domain Services](https://social.technet.microsoft.com/wiki/contents/articles/14355.capacity-planning-for-active-directory-domain-services.aspx).  
@@ -237,24 +180,25 @@ On domain controllers that you plan to upgrade, make sure that the drive that ho
   
 In this case, you can try an offline defragmentation of the Active Directory database to recapture additional space, and then retry the upgrade. For more information, see [Compact the Directory Database File (Offline Defragmentation)](https://technet.microsoft.com/library/cc794920(v=WS.10).aspx).  
   
-### Available SKUs  
-There are 4 editions of Windows Server: Foundation, Essentials, Standard and Datacenter.   
+### Available SKUs
+
+There are 4 editions of Windows Server: Foundation, Essentials, Standard and Datacenter.
 The two editions that support the AD DS role are Standard and Datacenter.  
   
 In previous releases, Windows Server editions differed in their support of server roles, processor counts and large memory support. The Standard and Datacenter editions of Windows Server support all features and underlying hardware but vary in their virtualization rights - two virtual instances are allowed for Standard edition and unlimited virtual instances are allowed for Datacenter edition.  
   
-### Windows client and Windows Server operating systems that are supported to join Windows Server domains  
+### Windows client and Windows Server operating systems that are supported to join Windows Server domains
+
 The following Windows client and Windows Server operating systems are supported for domain member computers with domain controllers that run Windows Server 2012 or later:  
   
--   Client operating systems: Windows 8.1, Windows 8, Windows 7, Windows Vista 
-  
-    Computers that run Windows 8.1 or Windows 8 are also able to join domains that have domain controllers that run earlier version of Windows Server, including Windows Server 2003 or later. In this case however, some Windows 8 features may require additional configuration or may not be available. For more information about those features and other recommendations for managing Windows 8 clients in downlevel domains, see [Running Windows 8 member computers in Windows Server 2003 domains](https://social.technet.microsoft.com/wiki/contents/articles/17361.running-windows-8-member-computers-in-windows-server-2003-domains.aspx).  
-  
--   Server operating systems: Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, Windows Server 2003  
-  
-## <a name="BKMK_UpgradePaths"></a>Supported in-place upgrade paths  
+- Client operating systems: Windows 8.1, Windows 8, Windows 7, Windows Vista
+   - Computers that run Windows 8.1 or Windows 8 are also able to join domains that have domain controllers that run earlier version of Windows Server, including Windows Server 2003 or later. In this case however, some Windows 8 features may require additional configuration or may not be available. For more information about those features and other recommendations for managing Windows 8 clients in downlevel domains, see [Running Windows 8 member computers in Windows Server 2003 domains](https://social.technet.microsoft.com/wiki/contents/articles/17361.running-windows-8-member-computers-in-windows-server-2003-domains.aspx).  
+- Server operating systems: Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, Windows Server 2003  
+
+## <a name="BKMK_UpgradePaths"></a>Supported in-place upgrade paths
+
 Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Server 2008 R2 can be upgraded to  Windows Server 2012 . You cannot upgrade domain controllers that run Windows Server 2003 or 32-bit versions of Windows Server 2008. To replace them, install domain controllers that run a later version of Windows Server in the domain, and then remove the domain controllers that Windows Server 2003.  
-  
+
 |If you are running these editions|You can upgrade to these editions|  
 |-------------------------------------|-------------------------------------|  
 |Windows Server 2008 Standard with SP2<br /><br />OR<br /><br />Windows Server 2008 Enterprise with SP2|Windows Server 2012 Standard<br /><br />OR<br /><br />Windows Server 2012 Datacenter|  
@@ -267,22 +211,19 @@ Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Se
 For more information about supported upgrade paths, see [Evaluation Versions and Upgrade Options for Windows Server 2012](https://go.microsoft.com/fwlink/?LinkId=260917). Note that you cannot convert a domain controller that runs an evaluation version of Windows Server 2012 directly to a retail version. Instead, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version.  
   
 Due to a known issue, you cannot upgrade a domain controller that runs a Server Core installation of Windows Server 2008 R2 to a Server Core installation of  Windows Server 2012 . The upgrade will hang on a solid black screen late in the upgrade process. Rebooting such DCs exposes an option in boot.ini file to roll back to the previous operating system version. An additional reboot triggers the automatic rollback to the previous operating system version. Until a solution is available, it is recommended that you install a new domain controller running a Server Core installation of  Windows Server 2012  instead of in-place upgrading an existing domain controller that runs a Server Core installation of Windows Server 2008 R2. For more information, see KB article [2734222](https://support.microsoft.com/kb/2734222).  
-  
-## <a name="BKMK_FunctionalLevels"></a>Functional level features and requirements  
- Windows Server 2012  requires a Windows Server 2003 forest functional level. That is, before you can add a domain controller that runs  Windows Server 2012  to an existing Active Directory forest, the forest functional level must be Windows Server 2003 or higher. This means that domain controllers that run Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003 can operate in the same forest, but domain controllers that run Windows 2000 Server are not supported and will block installation of a domain controller that runs Windows Server 2012. If the forest contains domain controllers running Windows Server 2003 or later but the forest functional level is still Windows 2000, the installation is also blocked.  
+
+## <a name="BKMK_FunctionalLevels"></a>Functional level features and requirements
+
+Windows Server 2012  requires a Windows Server 2003 forest functional level. That is, before you can add a domain controller that runs  Windows Server 2012  to an existing Active Directory forest, the forest functional level must be Windows Server 2003 or higher. This means that domain controllers that run Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003 can operate in the same forest, but domain controllers that run Windows 2000 Server are not supported and will block installation of a domain controller that runs Windows Server 2012. If the forest contains domain controllers running Windows Server 2003 or later but the forest functional level is still Windows 2000, the installation is also blocked.  
   
 Windows 2000 domain controllers must be removed prior to adding Windows Server 2012 domain controllers to your forest. In this case, consider the following workflow:  
-  
-1.  Install domain controllers that run Windows Server 2003 or later. These domain controllers can be deployed on an evaluation version of Windows Server. This step also requires [running adprep.exe](https://technet.microsoft.com/library/dd464018(WS.10).aspx) for that operating system release as a prerequisite.  
-  
-2.  Remove the Windows 2000 domain controllers. Specifically, gracefully demote or forcibly remove Windows Server 2000 domain controllers from the domain and used Active Directory Users and Computers to remove the domain controller accounts for all removed domain controllers.  
-  
-3.  Raise the forest functional level to Windows Server 2003 or higher.  
-  
-4.  Install domain controllers that run Windows Server 2012.  
-  
-5.  Remove domain controllers that run earlier versions of Windows Server.  
-  
+
+1. Install domain controllers that run Windows Server 2003 or later. These domain controllers can be deployed on an evaluation version of Windows Server. This step also requires [running adprep.exe](https://technet.microsoft.com/library/dd464018(WS.10).aspx) for that operating system release as a prerequisite.  
+2. Remove the Windows 2000 domain controllers. Specifically, gracefully demote or forcibly remove Windows Server 2000 domain controllers from the domain and used Active Directory Users and Computers to remove the domain controller accounts for all removed domain controllers.  
+3. Raise the forest functional level to Windows Server 2003 or higher.  
+4. Install domain controllers that run Windows Server 2012.  
+5. Remove domain controllers that run earlier versions of Windows Server.  
+
 The new  Windows Server 2012  domain functional level enables one new feature: the **KDC support for claims, compound authentication, and Kerberos armoring** KDC administrative template policy has two settings (**Always provide claims** and **Fail unarmored authentication requests**) that require  Windows Server 2012  domain functional level.  
   
 The  Windows Server 2012  forest functional level does not provide any new features, but it ensures that any new domain created in the forest will automatically operate at the  Windows Server 2012  domain functional level. The  Windows Server 2012  domain functional level does not provide other new features beyond KDC support for claims, compound authentication, and Kerberos armoring. But it ensures that any domain controller in the domain runs  Windows Server 2012 . For more information about other features that are available at different functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).  
@@ -294,44 +235,45 @@ After you set the domain functional level to a certain value, you cannot roll ba
 For more information about features that are available at lower functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).  
   
 Beyond functional levels, a domain controller that runs  Windows Server 2012  provides additional features that are not available on a domain controller that runs an earlier version of Windows Server. For example, a domain controller that runs  Windows Server 2012  can be used for virtual domain controller cloning, whereas a domain controller that runs an earlier version of Windows Server cannot. But virtual domain controller cloning and virtual domain controller safeguards in  Windows Server 2012  do not have any functional level requirements.  
-  
+
 > [!NOTE]  
 > Microsoft Exchange Server 2013 requires a forest functional level of Windows server 2003 or higher.  
-  
-## <a name="BKMK_ServerRoles"></a>AD DS interoperability with other server roles and Windows operating systems  
+
+## <a name="BKMK_ServerRoles"></a>AD DS interoperability with other server roles and Windows operating systems
+
 AD DS is not supported on the following Windows operating systems:  
   
--   Windows MultiPoint Server  
-  
--   Windows Server 2012 Essentials  
+- Windows MultiPoint Server  
+- Windows Server 2012 Essentials  
   
 AD DS cannot be installed on a server that also runs the following server roles or role services:  
   
--   Hyper-V Server  
+- Hyper-V Server  
+- Remote Desktop Connection Broker  
   
--   Remote Desktop Connection Broker  
-  
-## <a name="BKMK_OpsMasters"></a>Operations master roles  
+## <a name="BKMK_OpsMasters"></a>Operations master roles
+
 Some new features in  Windows Server 2012  affect operations master roles:  
-  
--   The PDC emulator must be running  Windows Server 2012  to support cloning virtual domain controllers. There are additional prerequisites for cloning DCs. For more information, see [Active Directory Domain Services (AD DS) Virtualization](https://technet.microsoft.com/library/hh831734.aspx).  
-  
--   New security principals are created when the PDC emulator runs  Windows Server 2012 .  
-  
--   The RID Master has new RID issuance and monitoring functionality. The improvements include better event logging, more appropriate limits, and the ability to - in an emergency - increase the overall RID pool allocation by one bit. For more information, see [Managing RID Issuance](../../ad-ds/manage/Managing-RID-Issuance.md).  
-  
+
+- The PDC emulator must be running  Windows Server 2012  to support cloning virtual domain controllers. There are additional prerequisites for cloning DCs. For more information, see [Active Directory Domain Services (AD DS) Virtualization](https://technet.microsoft.com/library/hh831734.aspx).  
+- New security principals are created when the PDC emulator runs  Windows Server 2012 .  
+- The RID Master has new RID issuance and monitoring functionality. The improvements include better event logging, more appropriate limits, and the ability to - in an emergency - increase the overall RID pool allocation by one bit. For more information, see [Managing RID Issuance](../../ad-ds/manage/Managing-RID-Issuance.md).  
+
 > [!NOTE]  
 > Though they are not operations master roles, another change in AD DS installation is that DNS server role and the global catalog are installed by default on all domain controllers that run  Windows Server 2012 .  
-  
-## <a name="BKMK_Virtual"></a>Virtualizing domain controllers  
+
+## <a name="BKMK_Virtual"></a>Virtualizing domain controllers
+
 Improvements in AD DS beginning in  Windows Server 2012  enable safer virtualization of domain controllers and the ability to clone domain controllers. Cloning domain controllers in turn enables rapid deployment of additional domain controllers in a new domain and other benefits. For more information, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md).  
-  
-## <a name="BKMK_Admin"></a>Administration of Windows Server 2012 servers  
+
+## <a name="BKMK_Admin"></a>Administration of Windows Server 2012 servers
+
 Use the [Remote Server Administration Tools for Windows 8](https://www.microsoft.com/download/details.aspx?id=28972) to manage domain controllers and other servers that run  Windows Server 2012 . You can run the  Windows Server 2012  Remote Server Administration Tools on a computer that runs Windows 8.  
-  
-## <a name="BKMK_AppCompat"></a>Application compatibility  
+
+## <a name="BKMK_AppCompat"></a>Application compatibility
+
 The following table covers common Active Directory-integrated Microsoft applications. The table covers what versions of Windows Server that the applications can be installed on and whether the introduction of Windows Server 2012 DCs affects application compatibility.  
-  
+
 |Product|Notes|  
 |-----------|---------|  
 |[Microsoft Configuration Manager 2007](http://blogs.technet.com/b/configmgrteam/archive/2012/09/10/support-questions-about-windows-8-and-windows-server-2012.aspx)|Configuration Manager 2007 with SP2 (includes Configuration Manager 2007 R2 and Configuration Manager 2007 R3):<br /><br />-   Windows 8 Pro<br />-   Windows 8 Enterprise<br />-   Windows Server 2012 Standard<br />-   Windows Server 2012 Datacenter **Note:** Though these will be fully supported as clients, there is no plan to add support for deploying these as operating systems by using the Configuration Manager 2007 operating system deployment feature. Also, no site servers or site systems will be supported on any SKU of Windows Server 2012.|  
@@ -352,10 +294,11 @@ The following table covers common Active Directory-integrated Microsoft applicat
 |SQL Server 2008 R2|Source: KB [2681562](https://support.microsoft.com/kb/2681562)<br /><br />Requires SQL Server 2008 R2 with Service Pack 1 or later to install on Windows Server 2012.|  
 |SQL Server 2008|Source: KB [2681562](https://support.microsoft.com/kb/2681562)<br /><br />Requires SQL Server 2008 with Service Pack 3 or later to install on Windows Server 2012.|  
 |SQL Server 2005|Source: KB [2681562](https://support.microsoft.com/kb/2681562)<br /><br />Not supported to install on Windows Server 2012.|  
-  
-## <a name="BKMK_KnownIssues"></a>Known issues  
+
+## <a name="BKMK_KnownIssues"></a>Known issues
+
 The following table lists known issues related to AD DS installation.  
-  
+
 ||||  
 |-|-|-|  
 |KB article number and title|Technology area impacted|Issue/description|  
@@ -392,11 +335,9 @@ The following table lists known issues related to AD DS installation.
 |[2745013](https://support.microsoft.com/kb/2745013): "Server is not operational" error message if you run New-AdDcCloneConfigFile in Windows Server 2012|Virtual DC cloning|You receive this error after you run the New-ADDCCloneConfigFile cmdlet because the server cannot contact a global catalog server.|  
 |[2747974](https://support.microsoft.com/kb/2747974): Domain controller cloning event 2224 provides incorrect guidance|Virtual DC cloning|Event ID 2224 incorrectly states that managed service accounts must be removed before cloning. Standalone MSAs must be removed but Group MSAs do not block cloning.|  
 |[2748266](https://support.microsoft.com/kb/2748266): You cannot unlock a BitLocker-encrypted drive after you upgrade to Windows 8|BitLocker|You receive an "Application not found" error when you try to unlock a drive on a computer that was upgraded from Windows 7.|  
-  
-## See Also  
+
+## See Also
+
 [Windows Server 2012 Evaluation Resources](https://technet.microsoft.com/evalcenter/hh708766.aspx)  
 [Windows Server 2012 Evaluation Guide](https://download.microsoft.com/download/5/B/2/5B254183-FA53-4317-B577-7561058CEF42/WS%202012%20Evaluation%20Guide.pdf)  
 [Install and Deploy Windows Server 2012](https://technet.microsoft.com/library/hh831620.aspx)  
-  
-
-

@@ -19,7 +19,7 @@ There are three main reason why integrated windows authentication will fail. The
 	- Channel Binding Token
 	- Internet Explorer configuration
 
-## SPN misonfiguration
+## SPN misconfiguration
 A service principal name (SPN) is a unique identifier of a service instance. SPNs are used by Kerberos authentication to associate a service instance with a service logon account. This allows a client application to request that the service authenticate an account even if the client does not have the account name.
 
 An example of an how an SPN is used with AD FS is as follows:

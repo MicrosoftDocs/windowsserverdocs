@@ -2,9 +2,9 @@
 ms.assetid: b146f47e-3081-4c8e-bf68-d0f993564db2
 title: Virtualized Domain Controller Deployment and Configuration
 description:
-author: billmath
-ms.author: billmath
-manager: femila
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
@@ -241,7 +241,7 @@ Any programs or services previously returned by Get-ADDCCloningExcludedApplicati
 > [!WARNING]  
 > Any incompatible program or service not uninstalled or added to the CustomDCCloneAllowList.xml prevents cloning.  
   
-Use the Get-AdComputerServiceAccount cmdlet to locate any standalone Managed Service Accounts (MSAs) in the domain and if this computer is using any of them. If any MSA is installed, use the Uninstall-ADServiceAccount cmdlet to remove the locally installed service account. Once you are done with taking the source domain controller offline in step 6, you can re-add the MSA using Install-ADServiceAccount when the server is back online. For more information, see [Uninstall-ADServiceAccount](https://technet.microsoft.com/en-us/library/hh852310).  
+Use the Get-AdComputerServiceAccount cmdlet to locate any standalone Managed Service Accounts (MSAs) in the domain and if this computer is using any of them. If any MSA is installed, use the Uninstall-ADServiceAccount cmdlet to remove the locally installed service account. Once you are done with taking the source domain controller offline in step 6, you can re-add the MSA using Install-ADServiceAccount when the server is back online. For more information, see [Uninstall-ADServiceAccount](https://technet.microsoft.com/library/hh852310).  
   
 > [!IMPORTANT]  
 > Standalone MSAs - first released in Windows Server 2008 R2 - were replaced in Windows Server 2012 with group MSAs. Group MSAs support cloning.  
@@ -276,7 +276,7 @@ You run the cmdlet on the proposed source domain controller that you intend to c
 ||-PreferredWINSServer|Specifies the static IPv4 address of the primary WINS server. String data type.|  
 ||-AlternateWINSServer|Specifies the static IPv4 address of the secondary WINS server. String data type.|  
 ||-IPv6DNSResolver|Specifies the static IPv6 DNS entries of the cloned computer in a comma-separated list. There is no way to set Ipv6 static information in virtualized domain controller cloning. Array data type.|  
-||-Offline|Does not perform the validation tests and overwrites any existing dccloneconfig.xml. Has no parameters. For more information, see [Running New-ADDCCloneConfigFile in offline mode](../../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md#BKMK_OfflineMode).|  
+||-Offline|Does not perform the validation tests and overwrites any existing dccloneconfig.xml. Has no parameters.|  
 ||*-Static*|Required if specifying static IP arguments IPv4SubnetMask, IPv4SubnetMask, or IPv4DefaultGateway. Has no parameters.|  
   
 Tests performed when run in online mode:  
@@ -392,7 +392,7 @@ Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-
 > You cannot use passthru disks with cloning, as they do not use a virtual disk file but instead an actual hard disk.  
   
 > [!NOTE]  
-> For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/en-us/library/ee176927.aspx).  
+> For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).  
   
 #### Exporting the VM  
 As an alternative to copying the disks, you can export the entire Hyper-V VM as a copy. Exporting automatically creates a folder named for the VM and containing all disks and configuration information.  

@@ -75,7 +75,7 @@ The policies described in this article should always be used with another authen
 4.  On the **Select Rule Template** page, under **Claim rule template**, select **Send Claims Using a Custom Rule**, and then click **Next**.  
   
 5.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is any IP claim outside the desired range, deny”. Under **Custom rule**, type or paste the following claim rule language syntax (replace the value above for “x-ms-forwarded-client-ip” with a valid IP expression):  
-`c1:[Type == " http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
+`c1:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://schemas.microsoft.com/authorization/claims/deny", Value = " DenyUsersWithClaim");` </br>
 6.  Click **Finish**. Verify that the new rule appears in the Issuance Authorization Rules list before to the default **Permit Access to All Users** rule (the Deny rule will take precedence even though it appears earlier in the list).  If you do not have the default permit access rule, you can add one at the end of your list using the claim rule language as follows:  </br>
   	
 	`c:[] => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true"); ` 
@@ -99,7 +99,7 @@ The policies described in this article should always be used with another authen
   
 5.  On the **Configure Rule** page, under **Claim rule name**, type the display name for this rule, for example “If there is any IP claim outside the desired range, issue ipoutsiderange claim”. Under **Custom rule**, type or paste the following claim rule language syntax (replace the value above for “x-ms-forwarded-client-ip” with a valid IP expression):  
     
-    `c1:[Type == " http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
+    `c1:[Type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] && c2:[Type == "http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip", Value =~ "^(?!192\.168\.1\.77|10\.83\.118\.23)"] => issue(Type = "http://custom/ipoutsiderange", Value = "true");`  
 
 6.  Click **Finish**. Verify that the new rule appears in the **Issuance Authorization Rules** list.  
   

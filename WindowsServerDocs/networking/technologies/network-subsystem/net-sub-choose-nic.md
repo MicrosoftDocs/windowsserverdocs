@@ -12,7 +12,7 @@ author: shortpatti
 
 # Choosing a Network Adapter
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn some of the features of network adapters that might affect your purchasing choices.
 

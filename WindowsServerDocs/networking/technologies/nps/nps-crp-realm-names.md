@@ -12,7 +12,7 @@ author: shortpatti
 
 # Realm Names
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 You can use this topic for an overview of using realm names in Network Policy Server connection request processing.
@@ -65,7 +65,7 @@ After the User-Name attribute is modified according to the attribute manipulatio
 
 - The NPS forwards the message to another RADIUS server (when NPS is being used as a RADIUS proxy).
 
-## Configuring the the NPS-supplied domain name
+## Configuring the NPS-supplied domain name
 
 When the user name does not contain a domain name, NPS supplies one. By default, the NPS-supplied domain name is the domain of which the NPS is a member. You can specify the NPS-supplied domain name through the following registry setting:
 

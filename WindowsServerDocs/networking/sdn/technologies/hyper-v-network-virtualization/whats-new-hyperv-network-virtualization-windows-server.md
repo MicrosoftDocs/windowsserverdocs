@@ -17,7 +17,7 @@ ms.date: 03/19/2018
 ---
 # What's New in Hyper-V Network Virtualization in Windows Server 2016
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server 2016.  
   
@@ -39,14 +39,14 @@ Microsoft's new Network Controller pushes HNV policies down to a Host Agent runn
 The flow engine inside the Hyper-V switch is the same engine used in Microsoft Azure&trade;, which has been proven at hyper-scale in the Microsoft Azure public cloud. Additionally, the entire SDN stack up through the Network Controller, and Network Resource Provider (details coming soon) is consistent with Microsoft Azure, thus bringing the power of the Microsoft Azure public cloud to our enterprise and hosting service provider customers.  
   
 > [!NOTE]  
-> For more information about OVSDB, see [RFC 7047](http://www.rfc-editor.org/info/rfc7047).  
+> For more information about OVSDB, see [RFC 7047](https://www.rfc-editor.org/info/rfc7047).  
   
 The Hyper-V switch supports both stateless and stateful flow rules based on simple 'match action' within Microsoft's flow engine.  
  
 ![Windows Server 2016 Hyper-V switch](../../../media/what-s-new-in-hyper-v-network-virtualization-in-windows-server/HNVOverview.png)  
   
 ### <a name="VXLAN"></a>VXLAN encapsulation support  
-The Virtual eXtensible Local Area Network (VXLAN - [RFC 7348](http://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Dell, HP and others. HNV also now supports this encapsulation scheme using MAC distribution mode through the Microsoft Network Controller to program mappings for tenant overlay network IP addresses (Customer Address, or CA) to the physical underlay network IP addresses (Provider Address, or PA). Both NVGRE and VXLAN Task Offloads are supported for improved performance through third-party drivers.  
+The Virtual eXtensible Local Area Network (VXLAN - [RFC 7348](https://www.rfc-editor.org/info/rfc7348)) protocol has been widely adopted in the market place, with support from vendors like Cisco, Brocade, Dell, HP and others. HNV also now supports this encapsulation scheme using MAC distribution mode through the Microsoft Network Controller to program mappings for tenant overlay network IP addresses (Customer Address, or CA) to the physical underlay network IP addresses (Provider Address, or PA). Both NVGRE and VXLAN Task Offloads are supported for improved performance through third-party drivers.  
   
 ### <a name="SLB"></a>Software Load Balancer (SLB) interoperability  
 Windows Server 2016 includes a software load balancer (SLB) with full support for virtual network traffic and seamless interaction with HNV. The SLB is implemented through the performant flow engine in the data plane v-Switch and controlled by the Network Controller for Virtual IP (VIP) / Dynamic IP (DIP) mappings.  

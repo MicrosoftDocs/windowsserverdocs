@@ -20,7 +20,7 @@ An additional area of consideration is locating Read/Write DCs for scenarios whe
 -   Where a writable Domain Controller may be necessary.  Place read-write Domain Controllers at central locations to minimize latency.
 
 For further information reference:
--   [Application Compatibility with RODCs](https://technet.microsoft.com/en-us/library/cc772597.aspx)
+-   [Application Compatibility with RODCs](https://technet.microsoft.com/library/cc772597.aspx)
 -   [Active Directory Service Interface (ADSI) and the Read Only Domain Controller (RODC) – Avoiding performance issues](https://blogs.technet.microsoft.com/fieldcoding/2012/06/24/active-directory-service-interface-adsi-and-the-read-only-domain-controller-rodc-avoiding-performance-issues/)
 
 ## Optimize for referrals

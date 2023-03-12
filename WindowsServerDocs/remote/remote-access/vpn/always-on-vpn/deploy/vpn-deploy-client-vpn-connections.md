@@ -6,7 +6,7 @@ ms.technology: networking-ras
 ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-manager: elizapo
+ms.localizationpriority: medium 
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette
@@ -16,8 +16,8 @@ ms.reviewer: deverette
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 
-&#171;  [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
-&#187; [ **Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
+&#171; [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
+&#187; [**Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
 
 In this step, you learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
 
@@ -316,7 +316,7 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 ### Define key VPN profile parameters
 
     $Script = '$ProfileName = ''' + $ProfileName + '''
-    $ProfileNameEscaped = $ProfileName -replace '' '', ''%20''
+    $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
 
 ## Define VPN ProfileXML
 
@@ -324,15 +324,15 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
     
 ### Escape special characters in the profile
 
-    $ProfileXML = $ProfileXML -replace ''<'', ''&lt;''
-    $ProfileXML = $ProfileXML -replace ''>'', ''&gt;''
-    $ProfileXML = $ProfileXML -replace ''"'', ''&quot;''
+    $ProfileXML = $ProfileXML -replace '<', '&lt;'
+    $ProfileXML = $ProfileXML -replace '>', '&gt;'
+    $ProfileXML = $ProfileXML -replace '"', '&quot;'
     
 ### Define WMI-to-CSP Bridge properties
 
-    $nodeCSPURI = ''./Vendor/MSFT/VPNv2''
-    $namespaceName = ''root\cimv2\mdm\dmmap''
-    $className = ''MDM_VPNv2_01''
+    $nodeCSPURI = "./Vendor/MSFT/VPNv2"
+    $namespaceName = "root\cimv2\mdm\dmmap"
+    $className = "MDM_VPNv2_01"
 
 ### Determine user SID for VPN profile:
 
@@ -357,8 +357,8 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
 
     $session = New-CimSession
     $options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''PolicyPlatform_UserContext'', $false)
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Type", "PolicyPlatform_UserContext", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Id", "$SidValue", $false)
 
 
 ### Detect and delete previous VPN profile:
@@ -393,11 +393,11 @@ You can use this script on the Windows 10 desktop or in System Center Configurat
     try
     {
     	$newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", ''String'', ''Property'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", "String", "Property")
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
@@ -436,6 +436,7 @@ However, this does not work in System Center Configuration Manager because you c
 
 The following example script includes all of the code examples from previous sections. Ensure that you change example values to values that are appropriate for your environment.
     
+   ```XML
     $TemplateName = 'Template'
     $ProfileName = 'Contoso AlwaysOn VPN'
     $Servers = 'vpn.contoso.com'
@@ -482,17 +483,17 @@ The following example script includes all of the code examples from previous sec
     $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
     
     $Script = '$ProfileName = ''' + $ProfileName + '''
-    $ProfileNameEscaped = $ProfileName -replace '' '', ''%20''
+    $ProfileNameEscaped = $ProfileName -replace ' ', '%20'
     
     $ProfileXML = ''' + $ProfileXML + '''
     
-    $ProfileXML = $ProfileXML -replace ''<'', ''&lt;''
-    $ProfileXML = $ProfileXML -replace ''>'', ''&gt;''
-    $ProfileXML = $ProfileXML -replace ''"'', ''&quot;''
+    $ProfileXML = $ProfileXML -replace '<', '&lt;'
+    $ProfileXML = $ProfileXML -replace '>', '&gt;'
+    $ProfileXML = $ProfileXML -replace '"', '&quot;'
     
-    $nodeCSPURI = ''./Vendor/MSFT/VPNv2''
-    $namespaceName = ''root\cimv2\mdm\dmmap''
-    $className = ''MDM_VPNv2_01''
+    $nodeCSPURI = "./Vendor/MSFT/VPNv2"
+    $namespaceName = "root\cimv2\mdm\dmmap"
+    $className = "MDM_VPNv2_01"
     
     try
     {
@@ -512,8 +513,8 @@ The following example script includes all of the code examples from previous sec
     
     $session = New-CimSession
     $options = New-Object Microsoft.Management.Infrastructure.Options.CimOperationOptions
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Type'', ''PolicyPlatform_UserContext'', $false)
-    $options.SetCustomOption(''PolicyPlatformContext_PrincipalContext_Id'', "$SidValue", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Type", "PolicyPlatform_UserContext", $false)
+    $options.SetCustomOption("PolicyPlatformContext_PrincipalContext_Id", "$SidValue", $false)
     
         try
     {
@@ -542,11 +543,11 @@ The following example script includes all of the code examples from previous sec
     try
     {
     	$newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance $className, $namespaceName
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ParentID", "$nodeCSPURI", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", ''String'', ''Key'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("InstanceID", "$ProfileNameEscaped", "String", "Key")
     	$newInstance.CimInstanceProperties.Add($property)
-    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", ''String'', ''Property'')
+    	$property = [Microsoft.Management.Infrastructure.CimProperty]::Create("ProfileXML", "$ProfileXML", "String", "Property")
     	$newInstance.CimInstanceProperties.Add($property)
     	$session.CreateInstance($namespaceName, $newInstance, $options)
     	$Message = "Created $ProfileName profile."
@@ -567,7 +568,7 @@ The following example script includes all of the code examples from previous sec
     
     $Message = "Successfully created VPN_Profile.xml and VPN_Profile.ps1 on the desktop."
     Write-Host "$Message"
-
+   ```
 
 ## Configure the VPN client by using Windows PowerShell
 
@@ -613,8 +614,8 @@ After running VPN_Profile.ps1 to configure the VPN profile, you can verify at an
       rovisioning/EapCommon">0</VendorId><VendorType xmlns="http:
       //www.microsoft.com/provisioning/EapCommon">0</VendorType><
       AuthorId xmlns="https://www.microsoft.com/provisioning/EapCo
-      mmon">0</AuthorId></EapMethod><Config xmlns="http://www.mic
-      rosoft.com/provisioning/EapHostConfig"><Eap xmlns="http://w
+      mmon">0</AuthorId></EapMethod><Config xmlns="https://www.mic
+      rosoft.com/provisioning/EapHostConfig"><Eap xmlns="https://w
       ww.microsoft.com/provisioning/BaseEapConnectionPropertiesV1
       "><Type>25</Type><EapType xmlns="https://www.microsoft.com/p
       rovisioning/MsPeapConnectionPropertiesV1"><ServerValidation
@@ -635,7 +636,7 @@ After running VPN_Profile.ps1 to configure the VPN profile, you can verify at an
       /ServerValidation><DifferentUsername>false</DifferentUserna
       me><PerformServerValidation xmlns="https://www.microsoft.com
       /provisioning/EapTlsConnectionPropertiesV2">true</PerformSe
-      rverValidation><AcceptServerName xmlns="http://www.microsof
+      rverValidation><AcceptServerName xmlns="https://www.microsof
       t.com/provisioning/EapTlsConnectionPropertiesV2">true</Acce
       ptServerName></EapType></Eap><EnableQuarantineChecks>false<
       /EnableQuarantineChecks><RequireCryptoBinding>false</Requir
@@ -843,7 +844,7 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 5.   Under **Platform**, select **Windows 10 or later**, and choose **VPN** from the Profile type drop-down.
 
      >[!TIP]
-     >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](https://docs.microsoft.com/en-us/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
+     >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
 
 6. Under the **Base VPN** tab, verify or set the following settings:
 
@@ -866,8 +867,8 @@ Create the VPN device configuration policy to configure the Windows 10 client co
     [!INCLUDE [important-lower-case-true-include](../../../includes/important-lower-case-true-include.md)]
     <p>
     
-    ```
-    <EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</AcceptServerName></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig>
+    ```XML
+    <EapHostConfig xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="https://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="https://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="https://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="https://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="https://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames>NPS.contoso.com</ServerNames><TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b </TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</AcceptServerName></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="https://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig>
     ```
 
 8.  Replace the **\<TrustedRootCA>5a 89 fe cb 5b 49 a7 0b 1a 52 63 b7 35 ee d7 1c c2 68 be 4b<\/TrustedRootCA>** in the sample with the certificate thumbprint of your on-premises root certificate authority in both places.
@@ -899,8 +900,8 @@ You are done deploying Always On VPN.  For other features you can configure, see
 
 |If you want to...  |Then see...  |
 |---------|---------|
-|Configure Conditional Access for VPN    |[Step 7. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
+|Configure Conditional Access for VPN    |[Step 7. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
 |Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |
-|Migrate from DirectAccess to Always On VPN  |[DirectAccess to Always On VPN migration overview](../../../da-always-on-vpn-migration/da-always-on-migration-overview.md): If you are migrating from DirectAccess to Always On VPN, and have successfully deployed Always On VPN, you must properly plan your migration phases, which helps identify any issues before they affect the entire organization. The primary goal of the migration is for users to maintain remote connectivity to the office throughout the process. If you perform tasks out of order, a race condition may occur, leaving remote users with no way to access company resources.         |
+
 
 ---

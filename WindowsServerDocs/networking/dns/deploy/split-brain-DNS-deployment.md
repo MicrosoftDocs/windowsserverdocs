@@ -11,7 +11,7 @@ author: shortpatti
 ---
 # Use DNS Policy for Split\-Brain DNS Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 for split-brain DNS deployments, where there are two versions of a single zone - one for the internal users on your organization intranet, and one for the external users, who are typically users on the Internet.
 
@@ -84,7 +84,7 @@ You can use the following example command to partition the zone scope contoso.co
 
 `Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "internal"`
 
-For more information, see [Add-DnsServerZoneScope](https://technet.microsoft.com/library/mt126267.aspx)
+For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
 ###<a name="bkmk_records"></a>Add Records to the Zone Scopes
 
@@ -101,7 +101,7 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4Address "10.0.0.39” -ZoneScope "internal"
 `
 
-For more information, see [Add-DnsServerResourceRecord](https://technet.microsoft.com/library/jj649925.aspx).
+For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
 ###<a name="bkmk_policies"></a>Create the DNS Policies
 
@@ -119,7 +119,7 @@ In the following example command, 10.0.0.56 is the IP address on the private net
 
 `Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -ServerInterface "eq,10.0.0.56" -ZoneScope "internal,1" -ZoneName contoso.com`
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).  
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  
 
 
 ## <a name="bkmk_recursion"></a>Example of DNS Selective Recursion Control
@@ -182,7 +182,7 @@ In this example, the default recursion setting is disabled, while a new recursio
     Add-DnsServerRecursionScope -Name "InternalClients" -EnableRecursion $True 
     
 
-For more information, see [Add-DnsServerRecursionScope](https://technet.microsoft.com/library/mt126268.aspx)
+For more information, see [Add-DnsServerRecursionScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverrecursionscope?view=win10-ps)
 
 #### <a name="bkmk_recpolicy"></a>Create DNS Recursion Policies
 
@@ -190,15 +190,15 @@ You can create DNS server recursion policies to choose a recursion scope for a s
 
 If the DNS server is not authoritative for some queries, DNS server recursion policies allow you to control how to resolve the queries. 
 
-In this example, the internal recursion scope with recursion enabled is associated with the private network interface
+In this example, the internal recursion scope with recursion enabled is associated with the private network interface.
 
 You can use the following example command to configure DNS recursion policies.
 
     
-    Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP  "EQ,10.0.0.39"
+    Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP "EQ,10.0.0.39"
     
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://technet.microsoft.com/library/mt126273.aspx).
+For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 Now the DNS server is configured with the required DNS policies for either a split-brain name server or a DNS server with selective recursion control enabled for internal clients.
 

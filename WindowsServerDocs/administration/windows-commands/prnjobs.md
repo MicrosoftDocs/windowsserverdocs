@@ -42,20 +42,21 @@ cscript Prnjobs {-z | -m | -x | -l | -?} [-s <ServerName>]
 ## Remarks
 -   The **prnjobs** command is a Visual Basic script located in the %WINdir%\System32\printing_Admin_Scripts\\<language> directory. To use this command, at a command prompt, type **cscript** followed by the full path to the prnjobs file, or change directories to the appropriate folder. For example:
     ```
-    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnjobs
+    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnjobs.vbs
     ```
 -   If the information that you supply contains spaces, use quotation marks around the text (for example, `"computer Name"`).
 
 ## <a name="BKMK_examples"></a>Examples
 To pause a print job with a job ID of 27 sent to the remote computer named HRServer for printing on the printer named colorprinter, type:
 ```
-cscript prnjobs -z -s HRServer -p colorprinter -j 27
+cscript prnjobs.vbs -z -s HRServer -p colorprinter -j 27
 ```
 To list all current print jobs in the queue for the local printer named colorprinter_2, type:
 ```
-cscript prnjobs -l -p colorprinter_2
+cscript prnjobs.vbs -l -p colorprinter_2
 ```
 
 #### Additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[print Command Reference](print-command-reference.md)
+
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Print Command Reference](print-command-reference.md)

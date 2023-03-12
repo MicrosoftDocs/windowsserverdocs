@@ -5,10 +5,10 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
 ms.assetid: cd4908f0-0d6f-4c02-8f98-4dc88c3dcb65
-manager: elizapo
-ms.date: 05/23/2018
+ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
+ms.localizationpriority: medium 
 ---
 
 # Virtual Private Networking \(VPN\)
@@ -33,7 +33,7 @@ When you install the **DirectAccess and VPN (RAS)** role service, you are deploy
 >You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking \(SDN\), or as a DirectAccess server. For more information, see [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [Software Defined Networking (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking), and [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
 
 ## Related topics
-- [Always On VPN and DirectAccess Features Comparison](vpn-map-da.md): In previous versions of the Windows VPN architecture, platform limitations made it difficult to provide the critical functionality needed to replace DirectAccess (like automatic connections initiated before users sign in). In this topic, you learn how Always On VPN has mitigated most of those limitations or expanded the VPN functionality beyond the capabilities of DirectAccess.
+- [Always On VPN features and functionality](vpn-map-da.md): In this topic, you learn about the features and functionality of Always On VPN. 
 
 - [Configure VPN Device Tunnels in Windows 10](vpn-device-tunnel-config.md): Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: _device tunnel_ and _user tunnel_. Device tunnel is used for pre-logon connectivity scenarios and device management purposes. User tunnel allows users to access organization resources through VPN servers.
 
@@ -43,8 +43,8 @@ When you install the **DirectAccess and VPN (RAS)** role service, you are deploy
 
 - [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles): In this topic, you learn how to create VPN profiles in System Center Configuration Manager (SCCM).
 
-- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections): This topic describes the ProfileXML options and schema, and how to create the ProfileXML VPN. After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
+- [Configure Windows 10 Client Always On VPN Connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections): This topic describes the ProfileXML options and schema, and how to create the ProfileXML VPN. After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
 
-- [VPN profile options](https://docs.microsoft.com/en-us/windows/access-protection/vpn/vpn-profile-options): This topic describes the VPN profile settings in Windows 10 and learn how to configure VPN profiles using Intune or SCCM. You can configure all VPN settings in Windows 10 using the ProfileXML node in the VPNv2 CSP.
+- [VPN profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options): This topic describes the VPN profile settings in Windows 10 and learn how to configure VPN profiles using Intune or SCCM. You can configure all VPN settings in Windows 10 using the ProfileXML node in the VPNv2 CSP.
 
 ---

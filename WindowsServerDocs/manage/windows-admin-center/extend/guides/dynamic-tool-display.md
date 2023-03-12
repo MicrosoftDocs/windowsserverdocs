@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -96,7 +96,7 @@ Every object in the inventory array must conform to the following json structure
 "<property name>": {
     "type": "<expected type>",
     "operator": "<defined operator to use>",
-    "value": "<expected value to evaulate using the operator>"
+    "value": "<expected value to evaluate using the operator>"
 }
 ```
 
@@ -181,19 +181,25 @@ Finally, you can run a custom PowerShell script to identify the availability and
 
 ``` ps
 @{
-    State = ‘Available’ | 'NotSupported’ | ‘NotConfigured';
+    State = 'Available' | 'NotSupported' | 'NotConfigured';
     Message = '<Message to explain the reason of state such as not supported and not configured.>';
     Properties =
         @{ Name = 'Prop1'; Value = 'prop1 data'; Type = 'string' },
         @{Name='Prop2'; Value = 12345678; Type='number'; };
 }
 ```
+The State property is the important value that will control the decision to show or hide your extension in the tools list.  The allowed values are:
+| Value | Description |
+| ---- | ----------- |
+| Available | The extension should be displayed in the tools list. |
+| NotSupported | The extension should not be displayed in the tools list. |
+| NotConfigured | This is a placeholder value for future work that will prompt the user for additional configuration before the tool is made available.  Currently this value will result in the tool being displayed and is the functional equivalent to 'Available'. |
 
-For example, if we want a tool to load only if the remote server has Bitlocker installed, the script looks like this:
+For example, if we want a tool to load only if the remote server has BitLocker installed, the script looks like this:
 
 ``` ps
 $response = @{
-    State = 'NotConfigured';
+    State = 'NotSupported';
     Message = 'Not executed';
     Properties = @{ Name = 'Prop1'; Value = 'prop1 data'; Type = 'string' },
         @{Name='Prop2'; Value = 12345678; Type='number'; };
@@ -248,7 +254,7 @@ An entry point configuration using the script option looks like this:
                 "value": "4"
             }
             },
-            "script": "$response = @{ State = 'NotConfigured'; Message = 'Not executed'; Properties = @{ Name = 'Prop1'; Value = 'prop1 data'; Type = 'string' }, @{Name='Prop2'; Value = 12345678; Type='number'; }; } if (Get-Module -ListAvailable -Name servermanager) { Import-module servermanager; $isInstalled = (Get-WindowsFeature -name bitlocker).Installed; $isGood = $isInstalled; } if($isGood) { $response.State = 'Available'; $response.Message = 'Everything should work.'; } $response"
+            "script": "$response = @{ State = 'NotSupported'; Message = 'Not executed'; Properties = @{ Name = 'Prop1'; Value = 'prop1 data'; Type = 'string' }, @{Name='Prop2'; Value = 12345678; Type='number'; }; }; if (Get-Module -ListAvailable -Name servermanager) { Import-module servermanager; $isInstalled = (Get-WindowsFeature -name bitlocker).Installed; $isGood = $isInstalled; }; if($isGood) { $response.State = 'Available'; $response.Message = 'Everything should work.'; }; $response"
         }
         ]
     }

@@ -78,7 +78,7 @@ Here's how to create a file share on Windows Server 2012 and Windows Server 2016
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described Table 1 and shown in Figure 1, removing permissions for unlisted groups and accounts, and adding special permissions to the Folder Redirection Users group that you created in Step 1.
     
-    ![Setting the permissions for the redirected folders share](media\deploy-folder-redirection\setting-the-permissions-for-the-redirected-folders-share.png)
+    ![Setting the permissions for the redirected folders share](media/deploy-folder-redirection/setting-the-permissions-for-the-redirected-folders-share.png)
     
     **Figure 1** Setting the permissions for the redirected folders share
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** Folder Usage value.

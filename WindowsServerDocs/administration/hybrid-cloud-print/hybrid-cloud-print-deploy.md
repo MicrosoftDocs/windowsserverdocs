@@ -26,7 +26,7 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
 -   Azure AD premium subscription
     
-    See [Get started with an Azure subscription](https://azure.microsoft.com/en-us/trial/get-started-active-directory/), for a trial subscription to Azure. 
+    See [Get started with an Azure subscription](https://azure.microsoft.com/trial/get-started-active-directory/), for a trial subscription to Azure. 
 
 -   MDM service, such as Intune
     
@@ -38,15 +38,15 @@ There are a number of subscriptions, services, and computers you'll need to acqu
 
 -   Domain joined Windows Server 2016 running as Print Server
     
-    See [Install roles, role services, and features by using the add Roles and Features Wizard](https://docs.microsoft.com/en-us/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw), for information on how to install roles and role services on Windows Server.
+    See [Install roles, role services, and features by using the add Roles and Features Wizard](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw), for information on how to install roles and role services on Windows Server.
 
 -   Azure AD Connect
     
-    See [Custom installation of Azure AD Connect](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnect-get-started-custom), for help setting up Azure AD Connect.
+    See [Custom installation of Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-get-started-custom), for help setting up Azure AD Connect.
 
 -   Azure Application Proxy Connector on a separate domain joined Windows Server machine
     
-    See [Get started with Application Proxy and install the connector](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable), for help setting up Azure Application Proxy Connector.
+    See [Get started with Application Proxy and install the connector](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable), for help setting up Azure Application Proxy Connector.
 
 -   Public facing domain name
     
@@ -237,7 +237,7 @@ This guide outlines five (5) installation steps:
 |Maximum printers to query(Mobile only)  |DiscoveryMaxPrinterLimit       |
 |Printer discovery service resource URI  |MopriaDiscoveryResourceId      |
 
->   Note: If the Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to this <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">article</a> for additional info.
+>   Note: If the Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to this <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">article</a> for additional info.
 
 - OMA-URI
     - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
@@ -291,7 +291,7 @@ Sample command:
 `publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
 
 
-## Verifing the deployment
+## Verifying the deployment
 On an Azure AD joined device that has the MDM policies configured:
 - Open a web browser and to go to https://&lt;services-machine-endpoint&gt;/mcs/services (the external URL for the discovery endpoint)
 - You should see the JSON text describing the set of functionality of this endpoint

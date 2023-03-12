@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # bitsadmin setnotifycmdline
 
+Sets the command-line command that will run when the job finishes transferring data or when a job enters a state.
 
-
-Sets the command-line command that will run when the job finishes transferring data or when a job enters a state..
+**BITS 1.2 and earlier**: Not supported.
 
 ## Syntax
 

@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/18/2018
+ms.date: 09/19/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -27,9 +27,6 @@ Windows Admin Center supports three types of extensions - tool extensions, solut
 - Create a [gateway plugin](develop-gateway-plugin.md)
 - Learn more with our [guides](guides.md)
 
-## Code examples
+## SDK design toolkit
 
-Check out our code examples on GitHub:
-
-- [Windows Admin Center SDK](https://github.com/Microsoft/windows-admin-center-sdk)
-- [Windows Admin Center Extension Template](https://github.com/Microsoft/windows-admin-center-extension-template)
+Check out our Windows Admin Center [SDK design toolkit](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)! This toolkit is designed to help you rapidly mock up extensions in PowerPoint using Windows Admin Center styles, controls, and page templates. See what your extension can look like in Windows Admin Center before you start coding!

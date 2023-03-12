@@ -5,10 +5,10 @@ ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
-manager: elizapo
+ms.localizationpriority: medium 
 ms.author: pashort
 author: shortpatti
-ms.date: 05/29/2018
+ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
 
@@ -16,8 +16,9 @@ ms.reviewer: deverette
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Previous:** Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
-&#187; [ **Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
+&#171; [**Previous:** Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)<br>
+&#187; [**Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
+
 
 In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  You also configure RRAS to support IKEv2 connections and the NPS server to perform authorization for the VPN connections.
 
@@ -25,6 +26,9 @@ In this step, you install and configure the server-side components necessary to 
 In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically. 
 
 You manually enroll certificates on VPN servers.
+
+>[!TIP]
+>For non-domained joined computers, see [CA configuration for non-domain joined computers](#ca-configuration-for-non-domain-joined-computers) below. Since the RRAS server is not domain joined, autoenrollment cannot be used to enroll the VPN gateway certificate.  Therefore, use an offline certificate request procedure. 
 
 
 1.  On a domain controller, open Group Policy Management.
@@ -62,6 +66,82 @@ You manually enroll certificates on VPN servers.
     6.  Close the Group Policy Management Editor.
 
 7.  Close Group Policy Management.
+
+### CA configuration for non-domain joined computers
+
+Since the RRAS server is not domain joined, autoenrollment cannot be used to enroll the VPN gateway certificate.  Therefore, use an offline certificate request procedure. 
+
+1. On the RRAS server, generate a file called **VPNGateway.inf** based upon the example certificate policy request provided in Appendix A (section 0) and customize the following entries: 
+
+   - In the [NewRequest] section, replace vpn.contoso.com used for the Subject Name with the chosen [_Customer_] VPN endpoint FQDN.
+
+   - In the [Extensions] section, replace vpn.contoso.com used for the Subject Alternate Name with the chosen [_Customer_] VPN endpoint FQDN.
+
+2. Save or copy the **VPNGateway.inf** file to a chosen location.
+
+3. From an elevated command prompt, navigate to the folder that contains the **VPNGateway.inf** file and type:
+
+   ```
+   certreq -new VPNGateway.inf VPNGateway.req
+   ```
+
+4. Copy the newly created **VPNGateway.req** output file to a Certification Authority server, or Privileged Access Workstation (PAW). 
+
+5. Save or copy the **VPNGateway.req** file to a chosen location on the Certification Authority server, or Privileged Access Workstation (PAW).
+
+6. From an elevated command prompt, navigate to the folder that contains the VPNGateway.req file created in the previous step and type: 
+
+   ```
+   certreq -attrib “CertificateTemplate:[Customer]VPNGateway” -submit VPNgateway.req VPNgateway.cer
+   ```
+
+7. If prompted by the Certification Authority List window, select the appropriate Enterprise CA to service the certificate request.
+
+8. Copy the newly created **VPNGateway.cer** output file to the RRAS server. 
+
+9. Save or copy the **VPNGateway.cer** file to a chosen location on the RRAS server.
+
+10.	From an elevated command prompt, navigate to the folder that contains the VPNGateway.cer file created in the previous step and type:
+   
+   ```
+   certreq -accept VPNGateway.cer
+   ```
+
+11.	Run the Certificates MMC snap-in as described [here](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
+
+12.	Ensure that a valid certificate exists for the RRAS server with the following properties:
+
+   - **Intended Purposes:** Server Authentication, IP security IKE intermediate 
+
+   - **Certificate Template:** [_Customer_] VPN Server
+
+#### Example: VPNGateway.inf script
+
+Here you can see an example script of a certificate request policy used to request a VPN gateway certificate using an out-of-band process.
+
+>[!TIP]
+>You can find a copy of the VPNGateway.inf script in the VPN Offering IP Kit under the Certificate Request Policies folder. Only update the 'Subject' and '\_continue\_' with customer specific values.
+
+```
+[Version] 
+
+Signature="$Windows NT$"
+
+[NewRequest]
+Subject = "CN=vpn.contoso.com"
+Exportable = FALSE   
+KeyLength = 2048     
+KeySpec = 1          
+KeyUsage = 0xA0      
+MachineKeySet = True
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+RequestType = PKCS10 
+
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "dns=vpn.contoso.com&"
+
+```
 
 ## Create the VPN Users, VPN Servers, and NPS Servers Groups
 
@@ -130,6 +210,9 @@ In this procedure, you configure a custom client-server authentication template.
 
 3.  In the Certificate Templates console, right-click **User**, and click **Duplicate Template**.
 
+    >[!WARNING]
+    >Do not click **Apply** or **OK** at any time prior to step 10.  If you click these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.  
+
 4.  On the Properties of New Template dialog box, on the **General** tab, complete the following steps:
 
     1.  In **Template display name**, type **VPN User Authentication**.
@@ -145,6 +228,9 @@ In this procedure, you configure a custom client-server authentication template.
     3.  In **Group or user names**, click **VPN Users**.
 
     4.  In **Permissions for VPN Users**, select the **Enroll** and **Autoenroll** check boxes in the **Allow** column.
+
+       >[!TIP]
+       >Make sure to keep the Read check box selected. In other words, you need the Read permissions for enrollment. 
 
     5.  In **Group or user names**, click **Domain Users**, and click **Remove**.
 
@@ -206,8 +292,6 @@ Domain-joined VPN servers
 
     2.  In the **Edit Application Policies Extension** dialog box, click **Add**.
 
-<!-- 7/19/2018: github issue #1000; need to ask Jason Jones about this in order to resolve; Is it required for the Always On VPN to have the Encrypting File System (1.3.6.1.4.1.311.10.3.4) and Secure Email (1.3.6.1.5.5.7.3.4) EKU in it? As documented to duplicate the User Template, this would be the case. -->
-
     3.  On the **Add Application Policy** dialog box, click **IP security IKE intermediate**, and click **OK**.<p>Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
 
     4.  Click **OK** to return to the **Properties of New Template** dialog box.
@@ -240,7 +324,7 @@ Domain-joined VPN servers
 
 12. Restart the Certificate Authority services.
 
-13. Select the **RADIUS server**, and click **OK**.
+13. Select the name you chose in step 4 above, and click **OK**.
 
 14. Close the Certification Authority snap-in.
 
@@ -369,5 +453,11 @@ Unlike the user certificate, you must manually enroll the VPN server’s certifi
 
 ## Next step
 [Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md): In this step, you configure Remote Access VPN to allow IKEv2 VPN connections, deny connections from other VPN protocols, and assign a static IP address pool for issuance of IP addresses to connecting authorized VPN clients.
+
+
+
+
+
+
 
 ---

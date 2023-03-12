@@ -54,7 +54,7 @@ manager: dongill
   
 2.  On the navigation bar, click **USERS**.  
   
-3.  In the list of user accounts, select the user account that you want to grant permissions to to access the desktop remotely.  
+3.  In the list of user accounts, select the user account that you want to grant permissions to access the desktop remotely.  
   
 4.  In the **<User Account\> Tasks** pane, click **Properties**.  
   

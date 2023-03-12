@@ -16,7 +16,7 @@ ms.technology: identity-adfs
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
 ## To Add sign\-in page description  
-To add a sign\-in page description to the sign\-in page, use the following Windows PowerShell PowerShell cmdlet and syntax.  
+To add a sign\-in page description to the sign\-in page, use the following Windows PowerShell cmdlet and syntax.  
 
 ![add sign in description](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
 

@@ -54,7 +54,7 @@ If any of these are unfamiliar to you, review the remainder of this topic and th
 ## <a name="BKMK_CreateImage"></a>Creating a custom Nano Server image  
 For Windows Server 2016, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.  
   
-You can also find and install these packages with the the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the "Installing roles and features online" section of this topic.  
+You can also find and install these packages with the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the "Installing roles and features online" section of this topic.  
   
 This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Package parameter, which you can combine in a comma-separated list. You can dynamically list available packages using the Get-NanoServerPackage cmdlet.  
   
@@ -71,7 +71,7 @@ This table shows the roles and features that are available in this release of Na
 |Internet Information Server (IIS)|-Package Microsoft-NanoServer-IIS-Package<br />**Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS.|
 |Host support for Windows Containers|-Containers|
 |System Center Virtual Machine Manager agent|-Package Microsoft-NanoServer-SCVMM-Package<br />-Package Microsoft-NanoServer-SCVMM-Compute-Package<br />**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-compute-add-nano-hyper-v).| 
-|System Center Operations Manager agent| Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/en-us/system-center-docs/om/manage/install-agent-on-nano-server.|
+|System Center Operations Manager agent| Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/system-center-docs/om/manage/install-agent-on-nano-server.|
 |Data Center Bridging (including DCBQoS)|-Package Microsoft-NanoServer-DCB-Package|
 |Deploying on a virtual machine|-Package Microsoft-NanoServer-Guest-Package|
 |Deploying on a physical machine|- Package Microsoft-NanoServer-Host-Package|

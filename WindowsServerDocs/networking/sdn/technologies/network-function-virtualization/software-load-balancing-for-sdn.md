@@ -15,7 +15,7 @@ author: shortpatti
 ---
 # Software Load Balancing \(SLB\) for SDN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn about Software Load Balancing for Software Defined Networking in Windows Server 2016.  
 
@@ -70,7 +70,7 @@ When tenant VMs respond and send outbound network traffic back to the Internet o
   
 And after the initial network traffic flow is established, the inbound network traffic bypasses the SLB MUX completely.  
   
-In the following illustration, a client computer performs a DNS query for the IP address of a company Sharepoint site - in this case, a fictional company named Contoso. The following process occurs.  
+In the following illustration, a client computer performs a DNS query for the IP address of a company SharePoint site - in this case, a fictional company named Contoso. The following process occurs.  
   
 -   The DNS server returns the VIP 107.105.47.60 to the client.  
   
@@ -84,7 +84,7 @@ In the following illustration, a client computer performs a DNS query for the IP
   
 -   The host receives the encapsulated packet and inspects it.  It removes the encapsulation and rewrites the packet so the destination is now the DIP 10.10.10.5 instead of the VIP and sends the traffic to DIP VM.  
   
--   The request has now reached the Contoso Sharepoint site in Server Farm 2. The server generates a response and sends it to the client, using its own IP address as the source.  
+-   The request has now reached the Contoso SharePoint site in Server Farm 2. The server generates a response and sends it to the client, using its own IP address as the source.  
   
 -   The host intercepts the outgoing packet in the virtual switch which remembers that the client, now the destination, made the original request to the VIP.  The host rewrites the source of the packet to be the VIP so that to the client does not see the DIP address.  
   
@@ -122,7 +122,7 @@ The following sections provide more information about these elements of the SLB 
 ### SCVMM  
 With System Center 2016, you can configure Network Controller on  Windows Server 2016, including the SLB Manager and Health Monitor. You can also use System Center to deploy SLB MUXs and to install SLB Host Agents on computers that are running  Windows Server 2016 and Hyper-V.  
   
-For more information about System Center 2016, see [System Center 2016](https://www.microsoft.com/en-us/server-cloud/products/system-center-2016/).  
+For more information about System Center 2016, see [System Center 2016](https://www.microsoft.com/server-cloud/products/system-center-2016/).  
   
 > [!NOTE]  
 > If you do not want to use System Center 2016, you can use Windows PowerShell or another management application to install and configure Network Controller and other SLB infrastructure. For more information, see [Deploy Network Controller using Windows PowerShell](../../../sdn/deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).  
@@ -150,7 +150,7 @@ The SLB Host Agent listens for SLB policy updates from Network Controller. In ad
 ### SDN Enabled Hyper-V Virtual Switch  
 For a virtual switch to be compatible with SLB, you must use Hyper-V Virtual Switch Manager or Windows PowerShell commands to create the switch, and then you must enable Virtual Filtering Platform (VFP) for the virtual switch.  
   
-For information on enabling VFP on virtual switches, see the Windows PowerShell commands [Get-VMSystemSwitchExtension](https://technet.microsoft.com/en-us/library/hh848603.aspx) and [Enable-VMSwitchExtension](https://technet.microsoft.com/en-us/library/hh848541.aspx?f=255&MSPPError=-2147217396).  
+For information on enabling VFP on virtual switches, see the Windows PowerShell commands [Get-VMSystemSwitchExtension](https://technet.microsoft.com/library/hh848603.aspx) and [Enable-VMSwitchExtension](https://technet.microsoft.com/library/hh848541.aspx?f=255&MSPPError=-2147217396).  
   
 The SDN enabled Hyper-V Virtual Switch performs the following actions for SLB.  
   

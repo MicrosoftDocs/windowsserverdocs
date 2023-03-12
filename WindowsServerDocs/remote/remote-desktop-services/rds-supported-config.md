@@ -7,7 +7,7 @@ ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 04/04/2017  
+ms.date: 12/20/2018  
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
@@ -42,8 +42,8 @@ Windows Server 2016 removes the restriction for the number of Connection Brokers
 
 | 3+ Connection Brokers in HA              | RDSH 2016 | RDVH 2016 | RDSH 2012 R2  | RDVH 2012 R2  |
 |------------------------------------------|-----------|-----------|---------------|---------------|
-| Windows Server 2016 Connection Broker    | Supported | Supported | Not supported | Not supported |
-| Windows Server 2012 R2 Connection Broker | N/A       | N/A       | Not supported | Not supported |
+| Windows Server 2016 Connection Broker    | Supported | Supported | Supported     | Supported     |
+| Windows Server 2012 R2 Connection Broker | N/A       | N/A       | Supported     | Supported     |
 
 ## Support for GPU Acceleration with Hyper-V
 The following table details the support for GPU acceleration on virtual machines. See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
@@ -99,4 +99,4 @@ For more information about creating VDI deployment of Remote Desktop Services, c
 
 ## Using Remote Desktop Services with application proxy services
 
-You can use Remote Desktop Services, except for the web client, with [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server), which is included in Windows Server 2016 and earlier versions.
+You can use Remote Desktop Services, except for the web client, with [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server), which is included in Windows Server 2016 and earlier versions.

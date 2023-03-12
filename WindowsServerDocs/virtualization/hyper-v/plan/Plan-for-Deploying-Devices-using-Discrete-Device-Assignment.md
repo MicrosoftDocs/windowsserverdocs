@@ -11,7 +11,7 @@ ms.author: chrihu
 ms.date: 02/06/2018
 ---
 # Plan for Deploying Devices using Discrete Device Assignment
->Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016
+>Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
 
 Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.  This guide will discuss the type of devices that can use Discrete Device Assignment, host system requirements, limitations imposed on the virtual machines as well as security implications of Discrete Device Assignment.
 
@@ -20,7 +20,7 @@ For Discrete Device Assignment's initial release, we have focused on two device 
 If you are ready to try out Discrete Device Assignment, you can jump over to [Deploying Graphics Devices Using Discrete Device Assignment](../deploy/Deploying-graphics-devices-using-dda.md) or [Deploying Storage Devices using Discrete Device Assignment](../deploy/Deploying-storage-devices-using-dda.md) to get started!
 
 ## Supported Virtual Machines and Guest Operating Systems
-Discrete Device Assignment is supported for Generation 1 or 2 VMs.  Additionally, the guests supported include Windows 10, Windows Server 2016, Windows Server 2012r2 with [KB 3133690](https://support.microsoft.com/en-us/kb/3133690) applied, and various distributions of the [Linux OS.](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md)
+Discrete Device Assignment is supported for Generation 1 or 2 VMs.  Additionally, the guests supported include Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012r2 with [KB 3133690](https://support.microsoft.com/kb/3133690) applied, and various distributions of the [Linux OS.](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md)
 
 ## System Requirements
 In addition to the [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md), Discrete Device Assignment requires server class hardware that is capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support "Access Control Services" (ACS), which enables Hyper-V to force all PCIe traffic through the I/O MMU.

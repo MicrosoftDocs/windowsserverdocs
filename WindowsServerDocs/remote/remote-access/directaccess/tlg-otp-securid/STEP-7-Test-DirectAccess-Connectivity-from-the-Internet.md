@@ -30,7 +30,7 @@ The DirectAccess one-time password (OTP) deployment has been tested from the Hom
   
 4.  Unplug CLIENT1 from the Homenet subnet, connect it to the Internet, and restart the computer.  
   
-5.  On CLIENT1, open Internet Explorer, and in the address bar, type **http://app1.corp.contoso.com/** and press ENTER. Press F5.  
+5.  On CLIENT1, open Internet Explorer, and in the address bar, type **https://app1.corp.contoso.com/** and press ENTER. Press F5.  
   
     The site should not open.  
   
@@ -46,9 +46,9 @@ The DirectAccess one-time password (OTP) deployment has been tested from the Hom
   
 11. Paste the previously copied eight digit tokencode, and click **OK**. Wait for authentication to complete. The DirectAccess Workplace Connection status will now be **Connected**.  
   
-12. In Internet Explorer, in the address bar, type **http://app1.corp.contoso.com/** and press ENTER. Press F5. You will see the default IIS website on APP1.  
+12. In Internet Explorer, in the address bar, type **https://app1.corp.contoso.com/** and press ENTER. Press F5. You will see the default IIS website on APP1.  
   
-13. In the Internet Explorer address bar, type **http://app2.corp.contoso.com/** and press ENTER. Press F5. You will see the default IIS website on APP2.  
+13. In the Internet Explorer address bar, type **https://app2.corp.contoso.com/** and press ENTER. Press F5. You will see the default IIS website on APP2.  
   
 14. On the **Start** screen, type**\\\app1\files**, and press ENTER.  
   

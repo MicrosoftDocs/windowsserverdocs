@@ -1,17 +1,20 @@
 ---
-title: Cluster to Cluster Storage Replica within the same region in Azure
-description: Cluster to Cluster Storage Replication within the same region in Azure
+title: Cluster to cluster Storage Replica within the same region in Azure
+description: Cluster to cluster Storage Replication within the same region in Azure
 keywords: Storage Replica, Server Manager, Windows Server, Azure, Cluster, the same region
 author: arduppal
 ms.author: arduppal
-ms.date: 5/03/2017
+ms.date: 04/26/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
 ---
-# Cluster to Cluster Storage Replica within the same region in Azure
-You can configure Cluster to Cluster Storage Replicas within the same region in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
+# Cluster to cluster Storage Replica within the same region in Azure
+
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+
+You can configure cluster to cluster storage replication within the same region in Azure. In the examples below, we use a two-node cluster, but cluster to cluster storage replica isn’t restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and within the same region.
 
 Watch the videos below for a complete walk-through of the process.
 
@@ -118,25 +121,31 @@ Run it once from any one node of the cluster, for each cluster.
      Get-Cluster -Name SRAZC2 (ran from az2az1)
    ```   
 
-15. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).
+15. Create cloud witnesses for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).
 
     - Copy the storage account name and key from "access keys"
     - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
 
-16. Configure cluster-to-cluster Storage Replica.
+16. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step.
+
+17. Start Windows PowerShell and use the [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long-running performance evaluation mode.
+
+18. Configure cluster-to-cluster Storage Replica.
    
-   Grant SR-Access from one cluster to another cluster in both directions.
+   Grant access from one cluster to another cluster in both directions:
 
    In our example:
 
    ```PowerShell
       Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
    ```
+If you're using Windows Server 2016 then also run this command:
+
    ```PowerShell
       Grant-SRAccess -ComputerName az2az3 -Cluster SRAZC1
    ```   
    
-17. Create partnership for the clusters:</ol>
+19. Create SRPartnership for the clusters:</ol>
 
  - For cluster **SRAZC1**.
    - Volume location:- c:\ClusterStorage\DataDisk1

@@ -1,28 +1,32 @@
 ---
 title: Virtual Network Encryption
-description: This topic provides information on Virtual Network Encryption for Software Defined Networking in Windows Server
-manager: brianlic
+description: Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ 
+manager: dougkim
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 7da0f509-7b02-4a0f-90fb-d97c83a2bc4e
 ms.author: pashort
-author: grcusanz
+author: shortpatti
+ms.date: 08/08/2018
 ---
 # Virtual Network Encryption
 
->Applies To: Windows Server
+>Applies to: Windows Server
 
-Virtual Network Encryption provides the ability for the virtual network traffic to be encrypted between Virtual Machines that communicate with each other within subnets that are marked as "Encryption Enabled".
+Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.’ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
-This feature utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt the packets.  DTLS provides protection against eavesdropping, tampering and forgery by anyone with access to the physical network.
+Virtual network encryption requires:
+- Encryption certificates installed on each of the SDN-enabled Hyper-V hosts.
+- A credential object in the Network Controller referencing the thumbprint of that certificate.
+- Configuration on each of the Virtual Networks contain subnets that require encryption.
 
-Virtual Network encryption requries an encryption certificate to be installed on each of the SDN enabled Hyper-V hosts, a credential object in the Network Controller referencing the thumbprint of that certificate, and configuration on each of the Virtual Networks that contain subnets requiring encryption.
+Once you enable encryption on a subnet, all network traffic within that subnet is encrypted automatically, in addition to any application-level encryption that may also take place.  Traffic that crosses between subnets, even if marked as encrypted, is sent unencrypted automatically. Any traffic that crosses the virtual network boundary also gets sent unencrypted.
 
-Once encryption is enabled on a subnet, all network traffic within that subnet is encrypted automatically.  This will be in addition to any application level encryption that may also take place.  Traffic that crosses between subnets, even if both of the subnets are marked as encrypted is automatically sent unencrypted.  Any traffic that crosses the virtual network boundary is also sent unencrypted.
+>[!TIP]
+>If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](https://docs.microsoft.com/windows-server/networking/sdn/manage/use-acls-for-traffic-flow).
 
-For information on configuring Virtual Network Encryption, see [Configure Encryption for a Virtual Network](sdn-config-vnet-encryption.md).
+### Next steps
 
-If you must restrict applications to only communicate on the encrypted subnet.  You can use Access Control Lists (ACLs) to only allow communication within the current subnet.  
+[Configure encryption for a virtual network](https://docs.microsoft.com/windows-server/networking/sdn/vnet-encryption/sdn-config-vnet-encryption)
 
-For information on configuring Access Control Lists, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](../manage/use-acls-for-traffic-flow.md).

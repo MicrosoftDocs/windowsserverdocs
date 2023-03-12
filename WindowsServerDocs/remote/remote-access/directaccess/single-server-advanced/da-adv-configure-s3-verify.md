@@ -24,7 +24,7 @@ This topic describes how to verify that you have correctly configured your Direc
   
 1.  Connect a DirectAccess client computer to the corporate network and obtain the Group Policy Object.  
   
-2.  Click the **Network connections** icon in the notification area to access the DirectAcess Media Manager.  
+2.  Click the **Network connections** icon in the notification area to access the DirectAccess Media Manager.  
   
 3.  Click **DirectAccess Connection**, and you will see that the status is **Connected Locally**.  
   

@@ -11,11 +11,11 @@ author: shortpatti
 ---
 # Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this procedure to configure the web server WEB1 to distribute CRLs.  
   
-In the extensions of the root CA, it was stated that the CRL from the root CA would be available via http://pki.corp.contoso.com/pki. Currently, there is not a PKI virtual directory on WEB1, so one must be created.  
+In the extensions of the root CA, it was stated that the CRL from the root CA would be available via https://pki.corp.contoso.com/pki. Currently, there is not a PKI virtual directory on WEB1, so one must be created.  
   
 To perform this procedure, you must be a member of **Domain Admins**.  
   

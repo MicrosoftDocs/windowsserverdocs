@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Create a folder in a DFS namespace
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 You can use folders to create additional levels of hierarchy in a namespace. You can also create folders with folder targets to add shared folders to the namespace. DFS folders with folder targets cannot contain other DFS folders, so if you want to add a level of hierarchy to the namespace, do not add folder targets to the folder.
 

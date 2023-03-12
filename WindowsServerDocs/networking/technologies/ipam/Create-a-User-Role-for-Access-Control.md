@@ -16,7 +16,7 @@ author: shortpatti
 ---
 # Create a User Role for Access Control
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to create a new Access Control user role in the IPAM client console.  
   

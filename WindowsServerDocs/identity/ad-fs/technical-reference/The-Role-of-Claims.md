@@ -69,7 +69,7 @@ A claim type provides context for the claim value. It is usually expressed as a 
 |Group SID|The group SID of the user|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/groupsid|  
 |Primary group SID|The primary group SID of the user|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/primarygroupsid|  
 |Primary SID|The primary SID of the user|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/primarysid|  
-|Windows account name|The domain account name of the user in the form of <domain>\\<user>|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/windowsaccountname|  
+|Windows account name|The domain account name of the user in the form of \<domain\>\\\<user\>|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/windowsaccountname|  
   
 ## What are claim descriptions?  
 Claim descriptions represent a list of claims types that AD FS supports and that may be published in federation metadata. The claim types mentioned in the previous table are configured as claims descriptions in the AD FS Management snap\-in.  

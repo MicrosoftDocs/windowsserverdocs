@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Delegate management permissions for DFS Namespaces
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 The following table describes the groups that can perform basic namespace tasks by default, and the method for delegating the ability to perform these tasks:
 

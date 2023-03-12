@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# bitsadmin cache clear
+# bitsadmin cache and clear
 
 
 

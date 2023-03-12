@@ -12,7 +12,7 @@ Always On VPN has many configuration options. However you choose your VPN config
 
 -   **Triggering.** _Triggering_ determines how and when a VPN connection is initiated (for example, when an app opens, when the device is turned on, manually by the user). For triggering options, see the [VPN connectivity](#vpn-connectivity).
 
--   **Device or user authentication.** Always On VPN uses device certificates and device-initiated connection through a feature called [Device Tunnel](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config). That connection can be initiated automatically and is persistent, resembling a DirectAccess infrastructure tunnel connection.
+-   **Device or user authentication.** Always On VPN uses device certificates and device-initiated connection through a feature called [Device Tunnel](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config). That connection can be initiated automatically and is persistent, resembling a DirectAccess infrastructure tunnel connection.
 
 >[!TIP]
 >When migrating from DirectAccess to Always On VPN, consider starting with configuration options that are comparable to what you have, and then expand from there.

@@ -1,6 +1,6 @@
 ---
 title: Classification Management
-description: This article describes how to to categorize files based on classification properties
+description: This article describes how to categorize files based on classification properties
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage

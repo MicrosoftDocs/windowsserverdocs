@@ -236,7 +236,7 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
   
 #### <a name="ChangeDC"></a>To change the domain controller that manages server GPOs  
   
--   Run the Windows PowerShell cmdlet  `HYPERLINK "https://technet.microsoft.com/en-us/library/hh918412.aspx" Set-DAEntryPointDC` on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
+-   Run the Windows PowerShell cmdlet  `HYPERLINK "https://technet.microsoft.com/library/hh918412.aspx" Set-DAEntryPointDC` on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
   
     -   To replace the unreachable domain controller "dc1.corp.contoso.com" with the domain controller "dc2.corp.contoso.com", do the following:  
   
@@ -295,7 +295,7 @@ Domain controller association information is stored both in the registry of the 
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution  
-When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "https://technet.microsoft.com/en-us/library/cc978016.aspx" closest to the Remote Access server when creating its server GPO.  
+When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "https://technet.microsoft.com/library/cc978016.aspx" closest to the Remote Access server when creating its server GPO.  
   
 In some scenarios, it may be required to manually modify the domain controller that manages a server GPO in order to optimize configuration distribution time:  
   

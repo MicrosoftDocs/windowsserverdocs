@@ -6,18 +6,18 @@ ms.topic: article
 author: JasonGerend 
 ms.author: jgerend 
 ms.technology: storage-failover-clustering 
-ms.date: 05/01/2018
+ms.date: 01/18/2019
 ms.localizationpriority: medium
 ---
 # Configure and manage quorum
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background and steps to configure and manage the quorum in a Windows Server failover cluster.
 
 ## Understanding quorum
 
-The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explaination, see the [understanding cluster and pool quorum doc](../storage/storage-spaces/understand-quorum.md).
+The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explanation, see the [understanding cluster and pool quorum doc](../storage/storage-spaces/understand-quorum.md).
 
 ## Quorum configuration options
 
@@ -109,7 +109,7 @@ The following table provides additional information and considerations about the
 - Can be formatted with NTFS or ReFS<br />
 - Can be optionally configured with hardware RAID for fault tolerance<br />
 - Should be excluded from backups and antivirus scanning<br />
-- A Disk Witness isn't supported with Storage Spaces Direct</td>
+- A Disk witness isn't supported with Storage Spaces Direct</td>
 </tr>
 <tr class="even">
 <td>File share witness</td>
@@ -128,6 +128,16 @@ The following are additional considerations for a file server that hosts the fil
 - The file server can run on a virtual machine if the virtual machine is not hosted on the same cluster that uses the file share witness.<br />
 - For high availability, the file server can be configured on a separate failover cluster.</td>
 </tr>
+
+<tr class-"odd">
+<td>Cloud witness</td>
+<td>- A witness file stored in Azure blob storage<br>
+-Recommended when all servers in the cluster have a reliable Internet connection.</td>
+<td>See <a href="https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness">Deploy a cloud witness</a>.</td>
+<td>
+</td>
+</tr>
+
 </tbody>
 </table>
 

@@ -44,7 +44,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
   
 8.  In the **Edit Claim Rules** dialog box, click **OK** to save the rule.
   
-## To create a rule to to send group membership as a claim on a Claims Provider Trust in Windows Server 2016 
+## To create a rule to send group membership as a claim on a Claims Provider Trust in Windows Server 2016 
   
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.  
   

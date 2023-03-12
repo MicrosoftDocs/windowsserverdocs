@@ -1,7 +1,7 @@
 ---
 title: Configure the CDP and AIA Extensions on CA1
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
-manager: elizapo
+manager: dougkim
 ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
 ms.prod: windows-server-threshold
@@ -12,7 +12,7 @@ ms.date: 07/26/2018
 ---
 # Configure the CDP and AIA Extensions on CA1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this procedure to configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1.  
   
@@ -31,13 +31,13 @@ To perform this procedure, you must be a member of Domain Admins.
   
     1.  Select the entry `file://\\<ServerDNSName>\CertEnroll\<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-    2.  Select the entry `http://<ServerDNSName>/CertEnroll/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
+    2.  Select the entry `https://<ServerDNSName>/CertEnroll/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
     3.  Select the entry that starts with the path `ldap:///CN=<CATruncatedName><CRLNameSuffix>,CN=<ServerShortName>`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
 4.  In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
   
-5.  In **Add Location**, in **Location**, type `http://pki.corp.contoso.com/pki/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **OK**. This returns you to the CA properties dialog box.  
+5.  In **Add Location**, in **Location**, type `https://pki.corp.contoso.com/pki/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`, and then click **OK**. This returns you to the CA properties dialog box.  
   
 6.  On the **Extensions** tab, select the following check boxes:  
   
@@ -59,22 +59,16 @@ To perform this procedure, you must be a member of Domain Admins.
   
     1.  Select the entry that starts with the path `ldap:///CN=<CATruncatedName>,CN=AIA,CN=Public Key Services`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-    2.  Select the entry `http://<ServerDNSName>/CertEnroll/<ServerDNSName>_<CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
+    2.  Select the entry `https://<ServerDNSName>/CertEnroll/<ServerDNSName>_<CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
     3.  Select the entry `file://\\<ServerDNSName>\CertEnroll\<ServerDNSName><CaName><CertificateName>.crt`, and then click **Remove**. In **Confirm removal**, click **Yes**.  
   
-11. In **Specify locations from which users can obtain a certificate revocation list (CRL)**, click **Add**. The **Add Location** dialog box opens.  
+11. In **Specify locations from which users can obtain the certificate for this CA**, click **Add**. The **Add Location** dialog box opens.  
   
-12. In **Add Location**, in **Location**, type `http://pki.corp.contoso.com/pki/<ServerDNSName>_<CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
+12. In **Add Location**, in **Location**, type `https://pki.corp.contoso.com/pki/<ServerDNSName>_<CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
   
 13. On the **Extensions** tab, select **Include in the AIA of issued certificates**.  
   
-14. In **Add Location**, in **Location**, type `file://\\pki.corp.contoso.com\pki\<ServerDNSName><CaName><CertificateName>.crt`, and then click **OK**. This returns you to the CA properties dialog box.  
+14. When prompted to restart Active Directory Certificate Services, click **No**. You will restart the service later.  
   
-    > [!IMPORTANT]  
-    > Ensure that **Include in the AIA extension of issued certificates** is not selected.  
-  
-15. When prompted to restart Active Directory Certificate Services, click **No**. You will restart the service later.  
-  
-
 

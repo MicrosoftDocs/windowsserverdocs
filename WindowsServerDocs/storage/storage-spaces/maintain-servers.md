@@ -6,7 +6,7 @@ ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 03/20/2017
+ms.date: 10/08/2018
 Keywords: Storage Spaces Direct, S2D, maintenance
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Taking a Storage Spaces Direct server offline for maintenance
 
-> Applies To: Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance on how to properly restart or shutdown servers with [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
@@ -161,6 +161,23 @@ MyVolume3    Mirror                OK                Healthy      True          
 ```
 
 It's now safe to pause and restart other servers in the cluster.
+
+## How to update Storage Spaces Direct nodes offline
+Use the following steps to path your Storage Spaces Direct system quickly. It involves scheduling a maintenance window and taking the system down for patching. If there is a critical security update that you need applied quickly or maybe you need to ensure patching completes in your maintenance window, this method may be for you. This process brings down the Storage Spaces Direct cluster, patches it, and brings it all up again. The trade-off is downtime to the hosted resources.
+
+1. Plan your maintenance window.
+2. Take the virtual disks offline.
+3. Stop the cluster to take the storage pool offline. Run the  **Stop-Cluster** cmdlet or use Failover Cluster Manager to stop the cluster.
+4. Set the cluster service to **Disabled** in Services.msc on each node. This prevents the cluster service from starting up while being patched.
+5. Apply the Windows Server Cumulative Update and any required Servicing Stack Updates to all nodes. (You can update all nodes at the same time, no need to wait since the cluster is down).  
+6. Restart the nodes, and ensure everything looks good.
+7. Set the cluster service back to **Automatic** on each node.
+8. Start the cluster. Run the **Start-Cluster** cmdlet or use Failover Cluster Manager. 
+
+   Give it a few minutes.  Make sure the storage pool is healthy.
+9. Bring the virtual disks back online.
+10. Monitor the status of the virtual disks by running the **Get-Volume** and **Get-VirtualDisk** cmdlets.
+
 
 ## See also
 

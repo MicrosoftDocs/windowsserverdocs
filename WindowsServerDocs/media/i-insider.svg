@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="ICONS-64x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#868686;}
+	.st1{fill:#FFFFFF;stroke:#868686;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:#0C50C7;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#E5E5E5;}
+</style>
+<title>i_preview</title>
+<path class="st0" d="M33.3,36.8l-7.1,7.1L22,48.1L9.8,60.4c-1.6,1.5-4.2,1.4-5.7-0.3c-1.4-1.5-1.4-3.8,0-5.4l12.1-12.1l4.2-4.2
+	l7.2-7.2c1.6-1.5,4.2-1.4,5.6,0.3C34.7,33,34.7,35.3,33.3,36.8z"/>
+<path class="st1" d="M41.1,2c-11.5,0-20.9,9.4-20.9,20.9s9.4,20.9,20.9,20.9c11.5,0,20.9-9.4,20.9-20.9C62,11.4,52.6,2,41.1,2z"/>
+<path class="st2" d="M57,23.1c0,3.2-7.2,10.8-16,10.8s-16-7.6-16-10.8C25,19.6,32.2,13,41,13S57,19.9,57,23.1z"/>
+<circle class="st3" cx="41" cy="24" r="7"/>
+<circle class="st0" cx="41" cy="24" r="5"/>
+<circle class="st3" cx="42.5" cy="20.5" r="2.5"/>
+<polygon class="st4" points="26.3,43.9 22,48.1 16.2,42.6 20.5,38.4 "/>
+</svg>

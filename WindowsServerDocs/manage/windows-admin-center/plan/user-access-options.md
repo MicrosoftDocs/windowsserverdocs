@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/18/2018
+ms.date: 03/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ---
@@ -14,20 +14,23 @@ ms.prod: windows-server-threshold
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-When deployed as a service on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
+When deployed on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
 
 ## Gateway access roles
 
 Windows Admin Center defines two roles for access to the gateway service: gateway users and gateway administrators.
 
+> [!NOTE]
+> Access to the gateway does not imply access to the target servers visible by the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
+
 **Gateway users** can connect to the Windows Admin Center gateway service in order to manage servers through that gateway, but they cannot change access permissions nor the authentication mechanism used to authenticate to the gateway.
 
 **Gateway administrators** can configure who gets access as well as how users will authenticate to the gateway.
 
-[Configure gateway user and administrator access in Windows Admin Center.](../configure/user-access-control.md)
+>[!NOTE]
+> If there are no access groups defined in Windows Admin Center, the roles will reflect the Windows account access to the gateway server. 
 
-> [!NOTE]
-> Access to the gateway does not imply access to the target servers visible by the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
+[Configure gateway user and administrator access in Windows Admin Center.](../configure/user-access-control.md)
 
 ## Identity provider options
 

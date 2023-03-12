@@ -33,7 +33,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
 |Parameter|Description|
 |---------|-----------|
-|{%%|%}\<Variable>|Required. Represents a replaceable parameter. Use a single percent sign (**%**) to carry out the **for** command at the command prompt. Use double percent signs (**%%**) to carry out the **for** command within a batch file. Variables are case sensitive, and they must be represented with an alphabetical value such as **%A**, **%B**, or **%C**.|
+|{%%\|%}\<Variable>|Required. Represents a replaceable parameter. Use a single percent sign (**%**) to carry out the **for** command at the command prompt. Use double percent signs (**%%**) to carry out the **for** command within a batch file. Variables are case sensitive, and they must be represented with an alphabetical value such as **%A**, **%B**, or **%C**.|
 |(\<Set>)|Required. Specifies one or more files, directories, or text strings, or a range of values on which to run the command. The parentheses are required.|
 |\<Command>|Required. Specifies the command that you want to carry out on each file, directory, or text string, or on the range of values included in *Set*.|
 |\<CommandLineOptions>|Specifies any command-line options that you want to use with the specified command.|
@@ -100,16 +100,16 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         The syntaxes are:  
         ```
         for /f ["<ParsingKeywords>"] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
-        for /f ["ParsingKeywords"] {%%|%}<Variable> in ("<LiteralString>") do <Command> [<CommandLineOptions>]
+        for /f ["<ParsingKeywords>"] {%%|%}<Variable> in ("<LiteralString>") do <Command> [<CommandLineOptions>]
         for /f ["<ParsingKeywords>"] {%%|%}<Variable> in ('<Command>') do <Command> [<CommandLineOptions>]
         ```  
         The *Set* argument specifies one or more file names. Each file is opened, read, and processed before moving to the next file in *Set*. To override the default parsing behavior, specify *ParsingKeywords*. This is a quoted string that contains one or more keywords to specify different parsing options.
 
         If you use the **usebackq** option, use one of the following syntaxes:  
         ```
-        for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
-        for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ("<LiteralString>") do <Command> [<CommandLineOptions>]
-        for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ('<Command>') do <Command> [<CommandLineOptions>]
+        for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ("<Set>") do <Command> [<CommandLineOptions>]
+        for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ('<LiteralString>') do <Command> [<CommandLineOptions>]
+        for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in (`<Command>`) do <Command> [<CommandLineOptions>]
         ```  
         The following table lists the parsing keywords that you can use for *ParsingKeywords*.  
         |Keyword|Description|
@@ -118,7 +118,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         |skip=\<N>|Specifies the number of lines to skip at the beginning of the file.|
         |delims=\<xxx>|Specifies a delimiter set. This replaces the default delimiter set of space and tab.|
         |tokens=\<X,Y,M–N>|Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *M*–*N* specifies a range, from the *M*th through the *N*th tokens. If the last character in the **tokens=** string is an asterisk (**&#42;**), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed.|
-        |usebackq|Specifies to execute a back-quoted string as a command, and a single-quoted string as a literal string command. Also, allows file names in *Set* to be enclosed in quotation marks.|
+        |usebackq|Specifies to:  execute a back-quoted string as a command, use a single-quoted string as a literal string, or, for long file names that contain spaces, allow file names in *\<Set\>*, to each be enclosed in double-quotation marks.|
     -   Variable substitution
 
         The following table lists optional syntax (for any variable **I**).  
@@ -150,10 +150,10 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
         By using uppercase variable names such as **%I**, you can make your code more readable and avoid confusion with the modifiers, which are not case sensitive.
 -   Parsing a string
 
-    You can use the **for /f** parsing logic on an immediate string by wrapping *Set* in single quotes--for example, ('*Set*'). *Set* is treated as a single line of input from a file, and then it is parsed.
+    You can use the **for /f** parsing logic on an immediate string by wrapping *\<LiteralString\>* in either: double quotes (*without* "usebackq") or in single quotes (*with* "usebackq") --for example, ("MyString") or ('MyString'). *\<LiteralString\>* is treated as a single line of input from a file. When parsing *\<LiteralString\>* in double-quotes, command symbols (such as **\\ \& \| \> \< \^**) are treated as ordinary characters.
 -   Parsing output
 
-    You can use the **for /f** command to parse the output of a command by making a back-quoted string from the *Set* between the parentheses. It is treated as a command line, which is passed to a child Cmd.exe. The output is captured into memory and parsed as if it is a file.
+    You can use the **for /f** command to parse the output of a command by placing a back-quoted *\<command\>* between the parentheses. It is treated as a command line, which is passed to a child Cmd.exe. The output is captured into memory and parsed as if it is a file.
 
 ## <a name="BKMK_examples"></a>Examples
 

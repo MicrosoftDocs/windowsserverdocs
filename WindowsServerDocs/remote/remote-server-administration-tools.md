@@ -11,16 +11,21 @@ ms.topic: get-started-article
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
-manager: lizapo
-ms.date: 03/17/2017
+manager: dansimp
+
 ---
 # Remote Server Administration Tools
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic supports Remote Server Administration Tools for Windows 10.
 
-To help ease Remote server management, you can [download and install Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=404281). Remote Server Administration Tools includes Server Manager, Microsoft Management Console (mmc) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server.
+> [!IMPORTANT]
+> Starting with Windows 10 October 2018 Update, RSAT is included as a set of **Features on Demand** in Windows 10 itself. See **When to use which RSAT version** below for installation instructions.
+
+RSAT lets IT admins manage Windows Server roles and features from a Windows 10 PC.
+
+Remote Server Administration Tools includes Server Manager, Microsoft Management Console (mmc) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server.
 
 Remote Server Administration Tools includes Windows PowerShell cmdlet modules that can be used to manage roles and features that are running on Remote servers. Although Windows PowerShell remote management is enabled by default on Windows Server 2016, it is not enabled by default on Windows 10. To run cmdlets that are part of Remote Server Administration Tools against a Remote server, run `Enable-PSremoting` in a Windows PowerShell session that has been opened with elevated user rights (that is, Run as Administrator) on your Windows client computer after installing Remote Server Administration Tools.
 
@@ -44,13 +49,39 @@ To use this release of Server Manager to access and manage Remote servers that a
 
 Windows PowerShell and Server Manager remote management must be enabled on remote servers to manage them by using tools that are part of Remote Server Administration Tools for Windows 10. Remote management is enabled by default on servers that are running Windows Server 2016,  Windows Server 2012 R2, and  Windows Server 2012. For more information about how to enable remote management if it has been disabled, see [Manage multiple, remote servers with Server Manager](https://go.microsoft.com/fwlink/p/?LinkId=241358).
 
-### Install, uninstall, or disable Remote Server Administration Tools for Windows 10
-Remote Server Administration Tools for Windows 10 has the same one-step installation process as Remote Server Administration Tools for Windows 8.1. Before the release of Remote Server Administration Tools for Windows 8, after running the MSU installer program, users were required to turn on specific tools that they wanted to use in the **Turn Windows features on or off** dialog box. This step has been eliminated; after you run the MSU installation program, all tools are enabled by default.
+## Install, uninstall and turn off/on RSAT tools
 
-#### <a name="BKMK_installthresh"></a>To install Remote Server Administration Tools for Windows 10
+### Use Features on Demand (FoD) to install specific RSAT tools on Windows 10 October 2018 Update, or later
+
+Starting with Windows 10 October 2018 Update, RSAT is included as a set of **Features on Demand** right from Windows 10. Now, instead of downloading an RSAT package you can just go to **Manage optional features** in **Settings** and click **Add a feature** to see the list of available RSAT tools. Select and install the specific RSAT tools you need. To see installation progress, click the **Back** button to view status on the **Manage optional features** page.
+
+See the [list of RSAT tools available via **Features on Demand**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). In addition to installing via the graphical **Settings** app, you can also install specific RSAT tools via command line or automation using [**DISM /Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
+
+One benefit of Features on Demand is that installed features persist across Windows 10 version upgrades!
+
+#### To uninstall specific RSAT tools on Windows 10 October 2018 Update or later (after installing with FoD)
+
+On Windows 10, open the **Settings** app, go to **Manage optional features**, select and uninstall the specific RSAT tools you wish to remove. Note that in some cases, you will need to manually uninstall dependencies. Specifically, if RSAT tool A is needed by RSAT tool B, then choosing to uninstall RSAT tool A will fail if RSAT tool B is still installed. In this case, uninstall RSAT tool B first, and then uninstall RSAT tool A. Also note that in some cases, uninstalling an RSAT tool may appear to succeed even though the tool is still installed. In this case, restarting the PC will complete the removal of the tool.
+
+See the [list of RSAT tools including dependencies](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). In addition to uninstalling via the graphical Settings app, you can also uninstall specific RSAT tools via command line or automation using [**DISM /Remove-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
+
+### When to use which RSAT version
+
+If you have a version of Windows 10 prior to the October 2018 Update (1809), you will not be able to use **Features on Demand**. You will need to download and install the RSAT package.
+
+- **Install RSAT FODs directly from Windows 10, as outlined above**:
+When installing on Windows 10 October 2018 Update (1809) or later, for managing Windows Server 2019 or previous versions.
+
+- **Download and install WS_1803 RSAT package, as outlined below**:
+When installing on Windows 10 April 2018 Update (1803) or earlier, for managing Windows Server, version 1803 or Windows Server, version 1709.
+
+- **Download and install WS2016 RSAT package, as outlined below**:
+When installing on Windows 10 April 2018 Update (1803) or earlier, for managing Windows Server 2016 or previous versions.
+
+#### <a name="BKMK_installthresh"></a>Download the RSAT package to install Remote Server Administration Tools for Windows 10
 
 1.  Download the Remote Server Administration Tools for Windows 10 package from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=404281). You can either run the installer from the Download Center website, or save the download package to a local computer or share.
-I
+
     > [!IMPORTANT]
     > You can only install Remote Server Administration Tools for Windows 10 on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1 or other system-on-chip devices.
 
@@ -62,7 +93,7 @@ I
 
 5.  Installation requires a few minutes to finish.
 
-##### To uninstall Remote Server Administration Tools for Windows 10
+##### To uninstall Remote Server Administration Tools for Windows 10 (after RSAT package install)
 
 1.  On the desktop, click **Start**, click **All Apps**, click **Windows System**, and then click **Control Panel**.
 
@@ -74,7 +105,7 @@ I
 
 5.  When you are asked if you are sure you want to uninstall the update, click **Yes**.
 S
-##### To turn off specific tools
+##### To turn off specific tools (after RSAT package install)
 
 1.  On the desktop, click **Start**, click **All Apps**, click **Windows System**, and then click **Control Panel**.
 
@@ -119,6 +150,49 @@ Although they are not listed in the Server Manager console **Tools** menu, Windo
 > [!NOTE]
 > You can also start a Windows PowerShell session that is targeted at a specific server by right-clicking a managed server in a role or group page in Server Manager, and then clicking **Windows PowerShell**.
 
+
+## Known issues
+
+### **Issue**: RSAT FOD installation fails with error code 0x800f0954
+
+> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update) in WSUS/SCCM environments
+
+> **Resolution**: To install FODs on a domain-joined PC which receives updates through WSUS or SCCM, you will need to change a Group Policy setting to enable downloading FODs directly from Windows Update or a local share. For more details and instructions on how to change that setting, see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+
+---
+
+### **Issue**: RSAT FOD installation via Settings app does not show status/progress
+
+> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update)
+
+> **Resolution**: To see installation progress, click the **Back** button to view status on the **Manage optional features** page.
+
+---
+
+### **Issue**: RSAT FOD uninstallation via Settings app may fail
+
+> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update)
+
+> **Resolution**: In some cases, uninstallation failures are due to the need to manually uninstall dependencies. Specifically, if RSAT tool A is needed by RSAT tool B, then choosing to uninstall RSAT tool A will fail if RSAT tool B is still installed. In this case, uninstall RSAT tool B first, and then uninstall RSAT tool A. See the list of RSAT FODs including dependencies.
+
+---
+
+### **Issue**: RSAT FOD uninstallation appears to succeed, but the tool is still installed
+
+> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update)
+
+> **Resolution**: Restarting the PC will complete the removal of the tool.
+
+---
+
+### **Issue**: RSAT missing after Windows 10 upgrade
+
+> **Impact**: Any RSAT .MSU package installation (prior to RSAT FODs) not automatically reinstalled
+
+> **Resolution**: An RSAT installation cannot be persisted across OS upgrades due to the RSAT .MSU being delivered as a Windows Update package. Please install RSAT again after upgrading Windows 10. Note that this limitation is one of the reasons why we've moved to FODs starting with Windows 10 1809. RSAT FODs which are installed will persist across future Windows 10 version upgrades.
+
 ## See Also
 >- [Remote Server Administration Tools for Windows 10](https://go.microsoft.com/fwlink/?LinkID=404281)
 >- [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](https://go.microsoft.com/fwlink/p/?LinkID=221055)
+
+

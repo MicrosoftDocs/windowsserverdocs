@@ -8,7 +8,6 @@ manager: samueld
 ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
-ms.service: active-directory
 ms.technology: identity-adfs
 ---
 # Configuring AD FS for user certificate authentication
@@ -22,7 +21,7 @@ AD FS can be configured for x509 user certificate authentication using one of th
 - Ensure that the root certificate of the chain of trust for your user certificates is in the NTAuth store in Active Directory
 - If using AD FS in alternate certificate authentication mode, ensure that your AD FS and WAP servers have SSL certificates that contain the AD FS hostname prefixed with "certauth", for example "certauth.fs.contoso.com", and that traffic to this hostname is allowed through the firewall
 - If using certificate authentication from the extranet, ensure that at least one AIA and at least one CDP or OCSP location from the list specified in your certificates are accessible from the internet.
-- If you are configuring AD FS for Azure AD certificate authentication, ensure that you have configured the [Azure AD settings](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules required](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) for certificate Issuer and Serial Number
+- If you are configuring AD FS for Azure AD certificate authentication, ensure that you have configured the [Azure AD settings](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules required](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) for certificate Issuer and Serial Number
 - Also for Azure AD certificate authentication, for Exchange ActiveSync clients, the client certificate must have the users routable email address in Exchange online in either the Principal Name or the RFC822 Name value of the Subject Alternative Name field. (Azure Active Directory maps the RFC822 value to the Proxy Address attribute in the directory.)
 
 ## Configure AD FS for user certificate authentication  
@@ -30,7 +29,7 @@ AD FS can be configured for x509 user certificate authentication using one of th
 - Ensure that the entire chain of trust, including any intermediate certificates, is installed on every AD FS and WAP server. 
 The intermediate certificates should be installed in the local computer intermediate certification authorities store on all AD FS and WAP servers.
 - If you wish to use claims based on certificate fields and extensions in addition to EKU (claim type https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim pass through rules on the Active Directory claims provider trust.  See below for a complete list of available certificate claims.  
-- [Optional] Configure allowed issuing certification authorities for client certificates using the guidance under "Management of trusted issuers for client authentication" in [this article](https://technet.microsoft.com/en-us/library/dn786429(v=ws.11).aspx).
+- [Optional] Configure allowed issuing certification authorities for client certificates using the guidance under "Management of trusted issuers for client authentication" in [this article](https://technet.microsoft.com/library/dn786429(v=ws.11).aspx).
 
 ## Configure Seamless Certificate Authentication for Chrome browser on Windows Desktops
 When multiple user certificates (such as Wi-Fi certificates) are present on the machine that satisfy the purposes of client authentication, the Chrome browser on Windows desktop will prompt the user to select the right certificate. This may be confusing to the end user. To optimize this experience, you can set a policy for Chrome to auto-select the right certificate for a better user experience. This policy can be set manually by making a registry change or configured automatically via GPO (to set the registry keys). This requires your user client certificates for authentication against AD FS to have distinct issuers from other use cases. 
