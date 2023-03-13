@@ -313,13 +313,6 @@ $ProfileXML = @("
 ")
 ```
 
-### Output VPN_Profile.xml for Intune
-
-You can use the following example command to save the profile XML file:
-
-```xml
-$ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
-```
 
 ### Output VPN_Profile.ps1 for the desktop and Configuration Manager
 
@@ -853,12 +846,24 @@ You should see the new VPN profile shortly.
 
 ## Configure the VPN client by using Intune
 
-To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files), or you can use the base EAP XML sample provided below.
+To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files) and modify it by using the rules from [Reformat VPN_Profile.xml for Intune](#reformat-vpn_profilexml-for-intune), or you can use the base EAP XML sample provided in [Create the Always On VPN configuration policy](#create-the-always-on-vpn-configuration-policy).
 
 >[!NOTE]
 >Intune now uses Azure AD groups. If Azure AD Connect synced the VPN Users group from on-premises to Azure AD, and users are assigned to the VPN Users group, you are ready to proceed.
 
 Create the VPN device configuration policy to configure the Windows 10 client computers for all users added to the group. Since the Intune template provides VPN parameters, only copy the \<EapHostConfig> \</EapHostConfig> portion of the VPN_ProfileXML file.
+
+### Reformat VPN_Profile.xml for Intune
+
+To use the VPN_Profile.XML file with Intune, it must be correctly formatted. If the profile isn't formatted correctly, Intune won't correctly synchronize the profile. When Intune sync a profile, it will always compare the profile you've configured it with against the reformatted profile returned by the client. If the reformatted profile doesn't match the Intune profile, Intune will continuously re-sync the profile.
+
+You can use the following example command to save the profile XML file. You must first create a VPN profile using the instructions above for PowerShell. In the sample, it's assumed that the profile is the first profile returned by Get-WmiObject.
+
+```xml
+$allprofiles = Get-WmiObject -Namespace root\cimv2\mdm\dmmap -Class MDM_VPNv2_01
+$allprofiles[0].ProfileXml | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
+```
+
 
 ### Create the Always On VPN configuration policy
 
