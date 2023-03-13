@@ -846,7 +846,7 @@ You should see the new VPN profile shortly.
 
 ## Configure the VPN client by using Intune
 
-To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files) and modified using the rules below in "Output and Modify VPN_Profile.xml for Intune", or you can use the base EAP XML sample provided below.
+To use Intune to deploy Windows 10 Remote Access Always On VPN profiles, you can configure the ProfileXML CSP node by using the VPN profile you created in the section [Create the ProfileXML configuration files](#create-the-profilexml-configuration-files) and modify it by using the rules from [Reformat VPN_Profile.xml for Intune](#reformat-vpn_profilexml-for-intune), or you can use the base EAP XML sample provided below.
 
 >[!NOTE]
 >Intune now uses Azure AD groups. If Azure AD Connect synced the VPN Users group from on-premises to Azure AD, and users are assigned to the VPN Users group, you are ready to proceed.
