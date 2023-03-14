@@ -30,7 +30,7 @@ An EAP-TLS client cannot connect unless the NPS server completes a revocation ch
 
 In this section, you'll add `IgnoreNoRevocationCheck` and `NoRevocationCheck`. By default, `IgnoreNoRevocationCheck` and `NoRevocationCheck` are set to 0 (disabled).
 
-For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [NPS CRL Check Registry Settings](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771995(v=ws.10)#ignorenorevocationcheck).
+For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [NPS CRL Check Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771995(v=ws.10)#ignorenorevocationcheck).
 
 >[!IMPORTANT]
 >If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set `IgnoreNoRevocationCheck=1` on both servers.

@@ -47,7 +47,7 @@ To complete the steps in this tutorial,
 
 1. Promote the Windows Server to domain controller. For this tutorial, you'll create a new forest and the domain to that new forest. For detailed information on how to install the domain controller, see [AD DS Installation](/windows-server/identity/ad-ds/deploy/ad-ds-installation-and-removal-wizard-page-descriptions#BKMK_DNSOptionsPage).
 
-1. Install and configure the Certificate Authority (CA) on the domain controller. For detailed information on how to install CA, see [Install the Certification Authority](/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
+1. Install and configure the Certificate Authority (CA) on the domain controller. For detailed information on how to install CA, see [Install the Certification Authority](/windows-server/networking/core-network-guide/cncg/server-certs/install-the-certification-authority).
 
 ## Create an Active Directory Group Policy
 
