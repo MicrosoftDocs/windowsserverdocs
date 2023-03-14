@@ -2,7 +2,7 @@
 title: Configure conditional access for VPN connectivity using Azure AD
 description: Learn how to configure conditional access for VPN connectivity using Azure AD
 ms.topic: article
-ms.date: 01/30/2023
+ms.date: 03/14/2023
 ms.author: wscontent
 author: anaharris-ms
 
