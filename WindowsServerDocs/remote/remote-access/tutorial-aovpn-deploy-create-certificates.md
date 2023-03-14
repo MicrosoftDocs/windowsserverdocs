@@ -21,7 +21,7 @@ You'll create the following templates:
 
 - *VPN server authentication template*. With a VPN server authentication template, you'll add the IP Security (IPsec) IKE Intermediate application policy. The IP Security (IPsec) IKE Intermediate application policy determines how the certificate can be used, it can allow the server to filter certificates if more than one certificate is available. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for auto-enrollment.
 
-- *NPS server authentication template*. With a NPS server authentication template, you'll copy the standard RAS and IAS Servers template, and scope it for your NPS server. The new NPS server template includes the server authentication application policy.
+- *NPS server authentication template*. With an NPS server authentication template, you'll copy the standard RAS and IAS Servers template, and scope it for your NPS server. The new NPS server template includes the server authentication application policy.
 
 ## Prerequisites
 

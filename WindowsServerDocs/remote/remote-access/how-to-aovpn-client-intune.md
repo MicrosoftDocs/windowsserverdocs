@@ -1,6 +1,6 @@
 ---
 title: Deploy Always On VPN profile to Windows clients with Microsoft Intune
-description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Intune
+description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Intune.
 ms.topic: article
 ms.date:  03/14/2023
 ms.author: anaharris
@@ -9,13 +9,13 @@ author: anaharris-ms
 
 # Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune
 
-In this how-to article, we'll show you how to use Intune to create and deploy Always On VPN profiles.
+In this how-to article, we show you how to use Intune to create and deploy Always On VPN profiles.
 
 However, if you want to create a custom VPN profileXML, follow the guidance in [Apply ProfileXML using Intune](/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune).
 
 ## Prerequisites
 
-Intune uses Azure Active Directory (AAD) user groups, so you'll need to:
+Intune uses Azure Active Directory (AAD) user groups, so you need to:
 
 - Ensure that you have a Private Key Infrastructure (PKI) capable of issuing user and device certificates for authentication. For more information on certificates for Intune, see [Use certificates for authentication in Microsoft Intune](/mem/intune/protect/certificates-configure).
 
@@ -88,7 +88,7 @@ In this section, you'll create an Extensible Authentication Protocol (EAP) confi
 
     1. For **IKE Security Association Parameters**
         - Set **Split tunneling** to *Enable*.
-        - Configure **Trusted Network Detection**.  To find the DNS suffix you can use `Get-NetConnectionProfile > Name` on a system that's currently connected to the network and has the domain profile applied (`NetworkCategory:DomainAuthenticated`).
+        - Configure **Trusted Network Detection**.  To find the DNS suffix, you can use `Get-NetConnectionProfile > Name` on a system that's currently connected to the network and has the domain profile applied (`NetworkCategory:DomainAuthenticated`).
 
     1. Leave the remaining settings as default, unless your environment requires further configuration. For more information on EAP Profile settings for Intune, see [Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune](/mem/intune/configuration/vpn-settings-windows-10).
 
@@ -122,7 +122,7 @@ To test the configuration policy, sign in to a Windows 10+ client computer as a 
 
 ## Next Steps
 
-- For an in depth tutorial on how to setup Always On VPN, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
+- For an in depth tutorial on how to set up Always On VPN, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
 
 - To learn how to configure Always On VPN profiles with Microsoft Configuration Manager, see [Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager](how-to-aovpn-client-config-mgr.md)
 

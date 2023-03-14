@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Setup infrastructure for Always On VPN 
+title: Tutorial - Set up infrastructure for Always On VPN 
 description: Learn how to deploy Always On VPN (AOV) connections for Windows client computers that are working offsite (for example, from home, a customer site, or a public wireless access point).
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
@@ -8,7 +8,7 @@ author: anaharris-ms
 ms.date:  03/14/2023
 ---
 
-# Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN
+# Tutorial: Deploy Always On VPN - Set up infrastructure for Always On VPN
 
 - [**Next:** 2 - Configure Certificate Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
@@ -149,7 +149,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
     1. Close Active Directory Users and Computers.
 
-1. Follow the steps in [Install Remote Access as a VPN server](getting-started-install-ras-as-vpn.md) to install the VPN server.
+1. Follow the steps in [Install Remote Access as a VPN server](get-started-install-ras-as-vpn.md) to install the VPN server.
 
 1. Open the Routing and Remote Access tool from Server Manager.
 

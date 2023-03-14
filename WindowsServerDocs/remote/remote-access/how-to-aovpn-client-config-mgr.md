@@ -1,6 +1,6 @@
 ---
 title: Deploy Always On VPN profile to Windows 10+ clients with Microsoft Configuration Manager
-description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Endpoint Configuration Manager
+description:  Learn how to deploy Always On VPN profile to Windows clients with Microsoft Endpoint Configuration Manager.
 ms.topic: article
 ms.date:  03/14/2023
 ms.author: anaharris
@@ -20,7 +20,7 @@ In this how-to article, we'll show you how to use Configuration Manager deploy A
 
 ### Create a user collection
 
-To use Configuration Manager to deploy an Always On VPN profile to Windows 10  or newer client computers, you'll need to create a group of machines or users to whom you'll deploy the profile to.
+To use Configuration Manager to deploy an Always On VPN profile to Windows 10  or newer client computers, you'll need to create a group of machines or users to whom you'll deploy the profile.
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace.
 
@@ -177,6 +177,6 @@ You should see the new VPN profile shortly.
 
 ## Next Steps
 
-- For an in depth tutorial on how to setup Always On VPN, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
+- For an in depth tutorial on how to set up Always On VPN, see [Tutorial: Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
 - To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows clients with Microsoft InTune](how-to-aovpn-client-intune.md)
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).

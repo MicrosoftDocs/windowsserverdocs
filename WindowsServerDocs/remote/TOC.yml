@@ -233,12 +233,12 @@
     - name: Getting started
       items:
       - name: Install Remote Access as a VPN Server
-        href: remote-access/getting-started-install-ras-as-vpn.md 
+        href: remote-access/get-started-install-ras-as-vpn.md 
     - name: Tutorials
       items:
       - name: Deploy Always on VPN
         items:
-        - name: 1- Setup infrastructure for Always On VPN 
+        - name: 1- Set up infrastructure for Always On VPN 
           href: remote-access/tutorial-aovpn-deploy-setup.md        
         - name: 2- Configure Always On VPN certificates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
@@ -460,7 +460,7 @@
           href: remote-access/vpn/vpn-device-tunnel-config.md
         - name: How to configure Diffie Hellman protocol over IKEv2 VPN connections
           href: /windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
-        - name: How to use single sign on (SSO) over VPN and Wi-Fi connections
+        - name: How to use single sign-on (SSO) over VPN and Wi-Fi connections
           href: /windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
     - name: Concepts
       items:
