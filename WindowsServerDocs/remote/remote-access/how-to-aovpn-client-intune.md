@@ -15,7 +15,7 @@ However, if you want to create a custom VPN profileXML, follow the guidance in [
 
 ## Prerequisites
 
-Intune uses Azure Active Directory (AAD) user groups, so you need to:
+Intune uses Azure Active Directory (Azure AD) user groups, so you need to:
 
 - Ensure that you have a Private Key Infrastructure (PKI) capable of issuing user and device certificates for authentication. For more information on certificates for Intune, see [Use certificates for authentication in Microsoft Intune](/mem/intune/protect/certificates-configure).
 
