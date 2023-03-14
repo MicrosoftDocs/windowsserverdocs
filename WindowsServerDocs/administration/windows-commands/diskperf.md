@@ -32,6 +32,6 @@ diskperf [-y[d|v] | -n[d|v]] [\\computername]
 | `\\<computername>` | Specifies the name of the computer where you want to enable or disable disk performance counters. |
 | -? | Displays context sensitive help. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

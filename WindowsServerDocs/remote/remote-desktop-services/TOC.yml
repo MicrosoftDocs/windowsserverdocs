@@ -86,6 +86,8 @@
         href: rds-activate-license-server.md
       - name: Install RDS CALs on the license server
         href: rds-install-cals.md
+      - name: License RDS session hosts
+        href: rds-license-session-hosts.md
       - name: Track the CALs used in your deployment
         href: rds-track-cals.md
     - name: Integrate Azure services

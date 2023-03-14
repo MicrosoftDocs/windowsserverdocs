@@ -57,7 +57,7 @@ To unlock drive E with a recovery key file that's been saved to a backup folder 
 manage-bde -unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

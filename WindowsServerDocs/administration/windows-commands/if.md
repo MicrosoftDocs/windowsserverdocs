@@ -117,7 +117,7 @@ To go to the okay label if the value of the ERRORLEVEL environment variable is l
 if %errorlevel% LEQ 1 goto okay
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

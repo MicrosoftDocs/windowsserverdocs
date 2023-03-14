@@ -10,6 +10,9 @@ ms.date: 08/07/2020
 ---
 # Troubleshooting DirectAccess
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806260" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DirectAccess issues.
+
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Follow these steps to troubleshoot Remote Access (DirectAccess) issues.

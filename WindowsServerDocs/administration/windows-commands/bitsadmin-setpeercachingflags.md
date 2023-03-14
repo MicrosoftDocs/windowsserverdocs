@@ -34,7 +34,7 @@ To allow the job named *myDownloadJob* to download content from peers:
 bitsadmin /setpeercachingflags myDownloadJob 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

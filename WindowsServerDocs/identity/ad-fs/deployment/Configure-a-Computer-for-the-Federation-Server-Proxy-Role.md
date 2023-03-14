@@ -3,7 +3,7 @@ description: "Learn more about: Configure a Computer for the Federation Server P
 ms.assetid: a2f23877-30a7-439f-817d-387da9e00e86
 title: Configure a Computer for the Federation Server Proxy Role
 author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ms.author: billmath

@@ -33,7 +33,7 @@ To remove the *myDownloadJob* job from the transfer queue:
 bitsadmin /cancel myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

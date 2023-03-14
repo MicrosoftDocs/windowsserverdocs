@@ -4,7 +4,7 @@ title: Configure AD FS Extranet Smart Lockout Protection
 description: "Learn more about: AD FS Extranet Lockout and Extranet Smart Lockout"
 author: billmath
 ms.author: billmath
-manager: mtilman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

@@ -4,7 +4,7 @@ title: Create a Relying Party Trust
 description: Learn how to create a relying party trust manually and use federation metadata.
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

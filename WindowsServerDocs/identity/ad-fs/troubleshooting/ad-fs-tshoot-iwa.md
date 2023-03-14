@@ -3,7 +3,7 @@ title: AD FS Troubleshooting - Integrated Windows Authentication
 description:  This document describes how to troubleshoot integrated  windows authentication
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: amycolannino
 ms.date: 01/30/2023
 ms.topic: article
 ---

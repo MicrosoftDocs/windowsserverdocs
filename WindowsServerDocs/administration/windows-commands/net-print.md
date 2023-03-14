@@ -86,7 +86,7 @@ To release job number *263* on the *\\Production* computer, type:
 net print \\Production 263 /release
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

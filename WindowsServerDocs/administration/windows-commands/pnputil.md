@@ -62,7 +62,7 @@ To delete the INF file and driver named oem0.inf, type:
 pnputil.exe -d oem0.inf
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

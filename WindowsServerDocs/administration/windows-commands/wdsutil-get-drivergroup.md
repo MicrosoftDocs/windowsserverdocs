@@ -41,7 +41,7 @@ wdsutil /Get-DriverGroup /DriverGroup:printerdrivers /Show:PackageMetaData
 wdsutil /Get-DriverGroup /DriverGroup:printerdrivers /Server:MyWdsServer /Show:Filters
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-alldrivergroups command](wdsutil-get-alldrivergroups.md)

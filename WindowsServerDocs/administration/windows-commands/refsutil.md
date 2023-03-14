@@ -1,9 +1,9 @@
 ---
 title: ReFSUtil
 description: Reference article for the ReFSUtil tool, which attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume.
-author: laknight5
-ms.author: laknight
-ms.date: 1/28/2022
+author: wbsmolen
+ms.author: billy
+ms.date: 2/14/2023
 ms.topic: reference
 ---
 
@@ -93,6 +93,6 @@ Advanced users can salvage files using an interactive console. This mode also re
 refsutil salvage -IC <source volume> <working directory> <options>
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

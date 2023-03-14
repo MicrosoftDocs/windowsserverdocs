@@ -4,7 +4,7 @@ ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: When to Use Identity Delegation
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

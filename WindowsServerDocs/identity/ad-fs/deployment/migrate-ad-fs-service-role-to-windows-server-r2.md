@@ -3,7 +3,7 @@ title: Migrate Active Directory Federation Services Role Services to Windows Ser
 description: Provides instructions for migrating the AD FS service to Windows Server 2012 R2.
 author: billmath
 ms.author: billmath
-manager: femila
+manager: amycolannino
 ms.date: 01/27/2023
 ms.topic: article
 ---

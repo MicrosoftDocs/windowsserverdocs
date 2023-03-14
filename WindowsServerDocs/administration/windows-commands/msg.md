@@ -71,6 +71,6 @@ To send the message to all users, with an acknowledgment time-out (for example, 
 msg * /time:10 Let's meet at 1PM today
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

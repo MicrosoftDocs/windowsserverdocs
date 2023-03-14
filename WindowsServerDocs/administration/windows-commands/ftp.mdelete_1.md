@@ -34,7 +34,7 @@ To delete remote files *a.exe* and *b.exe*, type:
 mdelete a.exe b.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

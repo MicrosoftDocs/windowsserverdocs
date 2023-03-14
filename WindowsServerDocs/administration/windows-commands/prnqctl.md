@@ -58,7 +58,7 @@ To cancel all print jobs on the Laserprinter1 printer on the local computer, typ
 cscript prnqctl -x -p Laserprinter1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -34,7 +34,7 @@ To retrieve information about the job named *myDownloadJob*:
 bitsadmin /info myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

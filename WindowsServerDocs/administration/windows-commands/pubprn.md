@@ -48,7 +48,7 @@ To publish the Laserprinter1 printer on the \\\Server1 server to the MyContainer
 cscript pubprn \\Server1\Laserprinter1 LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

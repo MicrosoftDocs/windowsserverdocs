@@ -47,6 +47,6 @@ auditpol command [<sub-command><options>]
 | /resourceSACL | Configures global resource system access control lists (SACLs). **Note:** Applies only to Windows 7 and Windows Server 2008 R2. For more information, see [auditpol resourceSACL](auditpol-resourcesacl.md). |
 | /?| Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

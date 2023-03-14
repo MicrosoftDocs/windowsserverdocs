@@ -87,6 +87,6 @@ To create a Kerberos .keytab file for a host computer that isn't running the Win
 
 3. Merge the .keytab file with the */Etc/Krb5.keytab* file on a host computer that isn't running the Windows operating system.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

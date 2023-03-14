@@ -1,4 +1,5 @@
 ---
+manager: amycolannino
 title: Active Directory Federation Services (AD FS) decommission guide 
 description: Describes the recommended way to decommission Active Directory Federation Services (AD FS) servers.
 author: billmath
@@ -14,6 +15,9 @@ ms.topic: article
 Azure AD provides a simple cloud-based sign-in experience to all your resources and apps with strong authentication and real-time, risk-based adaptive access policies to grant access to resources reducing operational costs of managing and maintaining an AD FS environment and increasing IT efficiency.  
 
 For more info on **why** you should upgrade from AD FS to Azure AD, visit [moving from AD FS to Azure AD](https://aka.ms/adfs2aad). See [migrate from federation to cloud authentication](/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication) to understand **how** to upgrade from AD FS. 
+
+
+> [!VIDEO https://www.youtube.com/embed/D0M-N-RQw0I]
 
 This document will provide you with the recommended steps for decommissioning your AD FS servers.
 
@@ -70,13 +74,9 @@ Once the above is verified, you can take the following steps (assuming the AD FS
  8. Delete AD FS Secure Socket Layer (SSL) certificates from each server storage.
  9. Re-image AD FS servers with full disk formatting.
  10. You can now safely delete your AD FS account.
- 11. Remove the content of the **CertificateSharingContainer** DN using ADSI Edit after unistallation.
+ 11. Remove the content of the **CertificateSharingContainer** DN using ADSI Edit after uninstallation.
 
 ## Next Steps
-- [AD FS Overview](../ad-fs-overview.md)
-- [AD FS Design](../AD-FS-Design.md)
-- [AD FS Deployment](../AD-FS-Deployment.md)
-- [AD FS Development](../AD-FS-Development.md)
-- [AD FS Operations](../ad-fs-operations.md)
-- [AD FS Technical Reference](../AD-FS-Technical-Reference.md)
+- [AD FS to Azure AD FAQ](ad-fs-to-azure-ad-faq.md)
+
 

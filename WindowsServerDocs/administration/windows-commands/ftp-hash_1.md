@@ -29,7 +29,7 @@ To toggle number sign (#) printing for each data block that is transferred, type
 hash
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -26,7 +26,7 @@ compact vdisk
 
 - You can only use compact dynamically expanding VHDs that are detached or attached as read-only.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

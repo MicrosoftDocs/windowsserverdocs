@@ -18,6 +18,6 @@ ms.date: 10/16/2017
 
 Administers phone books. Used without parameters, pbadmin starts Phone Book Administrator. For descriptions and usage information, see [pbadmin](/previous-versions/orphan-topics/ws.10/cc755767(v=ws.10)).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

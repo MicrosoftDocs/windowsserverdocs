@@ -32,6 +32,6 @@ logman [create | query | start | stop | delete| update | import | export | /?] [
 | [logman update](logman-update.md) | Updates the properties of an existing data collector. |
 | [logman import &#124; export](logman-import-export.md) | Imports a data collector set from an XML file or export a data collector set to an XML file. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

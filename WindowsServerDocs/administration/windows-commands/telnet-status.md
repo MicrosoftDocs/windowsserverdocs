@@ -29,6 +29,6 @@ To display status information, type:
 st
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
