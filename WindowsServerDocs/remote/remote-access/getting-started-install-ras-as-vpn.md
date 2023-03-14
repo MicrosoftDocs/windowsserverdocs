@@ -67,7 +67,7 @@ In this getting started guide, we'll show you how to install and configure Remot
 In this section, we'll configure Remote Access to allow IKEv2 VPN connections and to deny connections from other VPN protocols. We'll also assign a static IP address pool for the issuance of IP addresses to connecting authorized VPN clients.
 
 >[!NOTE]
->Instead of IKEv2, you can also choose to use SSTP. We don't recommend that you use PPPTP, due to its lack of security features.
+>Instead of IKEv2, you can also choose to use SSTP. We don't recommend that you use PPTP, due to its lack of security features.
 
 1. Make sure that your firewall rules allow UDP ports 500 and 4500 inbound to the external IP address applied to the public interface on the VPN server.
 

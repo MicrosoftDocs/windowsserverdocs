@@ -36,7 +36,7 @@ You'll create the following templates:
 1. In the Certificate Templates console, right-click **User** and select **Duplicate Template**.
 
    >[!WARNING]
-   >Do not select **Apply** or **OK** at any time prior to step 10.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
+   >Do not select **Apply** or **OK** until you have completed entering information for all tabs.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if *Legacy Cryptographic Storage Provider* shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
 
 1. In the Properties of New Template dialog box, on the **General** tab, complete the following steps:
 
@@ -96,7 +96,7 @@ You'll create the following templates:
 1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**.
 
    >[!WARNING]
-   >Do not select **Apply** or **OK** at any time prior to step 10.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
+   >Do not select **Apply** or **OK** until you have completed entering information for all tabs.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if *Legacy Cryptographic Storage Provider* shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
 
 1. On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter *VPN Server Authentication*.
 
@@ -143,9 +143,9 @@ You'll create the following templates:
 1. In the left pane of the Certification Authority snap-in, right-click **Certificate Templates** and select **Manage** to open the Certificate Templates console.
 
 1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**.
-
+  
    >[!WARNING]
-   >Do not select **Apply** or **OK** at any time prior to step 10.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
+   >Do not select **Apply** or **OK** until you have completed entering information for all tabs.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if *Legacy Cryptographic Storage Provider* shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
 
 1. On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter *NPS Server Authentication*.
 

@@ -88,7 +88,7 @@ In this section, you'll create an Extensible Authentication Protocol (EAP) confi
 
     1. For **IKE Security Association Parameters**
         - Set **Split tunneling** to *Enable*.
-        - Configure **Trusted Network Detection**. Set the DNS suffix to the VPN server. To find the DNS suffix you can use `Get-NetConnectionProfile > Name` on a system that's currently connected to the network and has the domain profile applied (`NetworkCategory:DomainAuthenticated`).
+        - Configure **Trusted Network Detection**.  To find the DNS suffix you can use `Get-NetConnectionProfile > Name` on a system that's currently connected to the network and has the domain profile applied (`NetworkCategory:DomainAuthenticated`).
 
     1. Leave the remaining settings as default, unless your environment requires further configuration. For more information on EAP Profile settings for Intune, see [Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune](/mem/intune/configuration/vpn-settings-windows-10).
 
