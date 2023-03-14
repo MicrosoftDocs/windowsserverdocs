@@ -10,7 +10,7 @@ author: anaharris-ms
 # Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune
 
 In this how-to article, we show you how to use Intune to create and deploy Always On VPN profiles.
-
+ 
 However, if you want to create a custom VPN profileXML, follow the guidance in [Apply ProfileXML using Intune](/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune).
 
 ## Prerequisites
