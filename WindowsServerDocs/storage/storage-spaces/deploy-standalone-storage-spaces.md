@@ -26,10 +26,8 @@ The following figure illustrates the Storage Spaces workflow.
 
 :::image type="content" source="media/deploy-standalone-storage-spaces/storage-spaces-workflow.png" alt-text="Diagram of the workflow for Windows Server storage spaces.":::
 
-**Figure 1** Storage Spaces workflow
-
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [What is PowerShell?](/powershell/scripting/overview?view=powershell-7.2&preserve-view=true)
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [What is PowerShell](/powershell/scripting/overview?view=powershell-7.2&preserve-view=true).
 
 ## Prerequisites
 
@@ -43,7 +41,7 @@ To use Storage Spaces on a stand-alone Windows Server−based server, make sure 
 |Disk bus types|- Serial Attached SCSI (SAS)<br>- Serial Advanced Technology Attachment (SATA)<br>- iSCSI and Fibre Channel Controllers. |You can also use USB drives. However, it's not optimal to use USB drives in a server environment.<br>Storage Spaces is supported on iSCSI and Fibre Channel (FC) controllers as long as the virtual disks created on top of them are nonresilient (Simple with any number of columns).<br>|
 |Disk configuration|- Physical disks must be at least 4 GB<br>- Disks must be blank and not formatted. Don't create volumes.||
 |HBA considerations|- Simple host bus adapters (HBAs) that don't support RAID functionality are recommended<br>- If RAID-capable, HBAs must be in non-RAID mode with all RAID functionality disabled<br>- Adapters must not abstract the physical disks, cache data, or obscure any attached devices. This guideline includes enclosure services that are provided by attached just-a-bunch-of-disks (JBOD) devices. |Storage Spaces is compatible only with HBAs where you can completely disable all RAID functionality.|
-|JBOD enclosures|- JBOD enclosures are optional<br>- We recommend using Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br> Get-PhysicalDisk \| ? {$_.BusType –eq "SAS"} \| fc <br> | If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.|
+|JBOD enclosures|- JBOD enclosures are optional<br>- We recommend using Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br> `Get-PhysicalDisk \| ? {$_.BusType –eq "SAS"} \| fc` <br> | If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.|
 
 To plan for the number of physical disks and the desired resiliency type for a stand-alone server deployment, use the following guidelines.
 
@@ -155,19 +153,23 @@ Next, you must create one or more virtual disks from the storage pool. When you 
 
 1. On the **Specify the size of the virtual disk** page, perform one of the following actions:
 
-   If you selected thin provisioning in the previous step, in the **Virtual disk size** box, enter a virtual disk size, select the units (**MB**, **GB**, or **TB**), then select **Next**.
+   - If you selected thin provisioning in the previous step, follow these steps: 
 
-   If you selected fixed provisioning in the previous step, select one of the following options:
+     1. In the **Virtual disk size** box, enter a virtual disk size.
+     1. Select the units (**MB**, **GB**, or **TB**), and then select **Next**.
 
-   - **Specify size**
+   - If you selected fixed provisioning in the previous step, select one of the following options:
 
-     To specify a size, enter a value in the **Virtual disk size** box, then select the units (**MB**, **GB**, or **TB**).
+     - **Specify size**
 
-     If you use a storage layout other than simple, the virtual disk uses more free space than the size that you specify. To avoid a potential error in which the size of the volume exceeds the storage pool free space, select the **Create the largest virtual disk possible, up to the specified size** check box.
+       To specify a size, enter a value in the **Virtual disk size** box, then select the units (**MB**, **GB**, or **TB**).
 
-   - **Maximum size**
+       > [!NOTE]
+       > If you use a storage layout other than simple, the virtual disk uses more free space than the size that you specify. To avoid a potential error in which the size of the volume exceeds the storage pool free space, select the **Create the largest virtual disk possible, up to the specified size** check box.
 
-     Select this option to create a virtual disk that uses the maximum capacity of the storage pool.
+     - **Maximum size**
+
+       Select this option to create a virtual disk that uses the maximum capacity of the storage pool.
 
 1. On the **Confirm selections** page, verify that the settings are correct, and then select **Create**.
 
