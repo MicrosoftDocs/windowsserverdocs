@@ -211,7 +211,16 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
 For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
 
-After the AD Detached failover Cluster is created backup the certificate with private key exportable option. Open MMC ==>File ==>Add remove Snap in ==>Certificates==>Services Accounts==>Next==>Local Computer==>Cluster Service==>Certificates==>Clussvc\Personal==>Select Certificate right click==>export ==>Next==>Yes export the Private Key ==>PfX Format==>Choose Password, or you can add group ==>Next==>Select path where you want to store certificate==>Next ==>Finish. 
+After the AD Detached failover Cluster is created, back up the certificate with private key exportable option. To do so: 
+
+1. Open MMC and then select **File** > **Add/Remove Snap in** 
+2. Select **Certificates** and then select **Add**.
+3. Select **Computer account**, select **Next**, select **Service account**, select **Next**, select **Local computer** (or **Another computer** if connecting remotely), select **Next**, select **Cluster service**, select **Finish**, and then **OK**.
+The Certificates snap-in opens.
+4. Navigate to **Personal** > **Certificates**, right-click the certificate and then select **All tasks** > **Export**.
+The Certificate Export Wizard opens.
+5. Select **Yes export the Private Key**, select **Next**, select **PfX Format**, select **Choose Password** (or add a group), select **Next**, select the path where you want to store certificate, select **Next** and then **Finish**. 
+
 
 ## More information
 
