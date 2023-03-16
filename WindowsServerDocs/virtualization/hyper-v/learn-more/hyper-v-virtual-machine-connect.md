@@ -57,6 +57,7 @@ By default, the keyboard input and mouse clicks are sent to the virtual machine.
 |CTRL\+E|Revert to a checkpoint|
 |CTRL\+C|Do a screen capture|
 
+Note: Laptop keyboards currently have no standard BREAK key. You might want to connect an external full keyboard for this.
 ## See Also
 
 - [Use local resources on Hyper-V virtual machine with VMConnect](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
