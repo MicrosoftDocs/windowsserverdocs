@@ -23,7 +23,7 @@ This article discusses the following Storage Migration Service aspects:
 
 ## Why use Storage Migration Service
 
-Use Storage Migration Service because you've got a server (or multiple servers) that you want to migrate to newer hardware or virtual machines. Storage Migration Service is designed to help by doing the following tasks:
+Use Storage Migration Service because you've got a server or multiple servers that you want to migrate to newer hardware or virtual machines. Storage Migration Service is designed to help by doing the following tasks:
 
 - Inventory multiple servers and their data
 - Rapidly transfer files, file shares, and security configuration from the source servers
@@ -36,7 +36,7 @@ Use Storage Migration Service because you've got a server (or multiple servers) 
 
 Migration is a three-step process:
 
-1. **Inventory servers** to gather info about their files and configuration (shown in the following figure).
+1. **Inventory servers** to gather info about their files and configuration, shown in the following figure.
 
    :::image type="content" source="media/migrate/inventory.png" alt-text="Screenshot showing that a server is ready to be scanned.":::
 
@@ -53,10 +53,10 @@ To use Storage Migration Service, you need the following items:
 
 - A **source server** or **failover cluster** to migrate files and data from.
 - A **destination server** running Windows Server 2019 or Windows Server 2022 (clustered or standalone) to migrate to. Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower.
-- An **orchestrator server** running Windows Server 2019 or Windows Server 2022 to manage the migration  <br>If you're migrating only a few servers, and one of the servers is running Windows Server 2019 or Windows Server 2022, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
+- An **orchestrator server** running Windows Server 2019 or Windows Server 2022 to manage the migration  <br>If you're migrating only a few servers, and one of the servers is running Windows Server 2019 or Windows Server 2022, you can use that as the orchestrator. If you're migrating more servers, use a separate orchestrator server.
 - A **PC or server running the latest [Windows Admin Center](../../manage/windows-admin-center/overview.md)** to run the Storage Migration Service user interface, along with the latest Storage Migration Service tool (extension) available from the feed. The Windows Admin Center must be at least version 2103.
 
-We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs, and at least 2 GB of memory. Inventory and transfer operations are faster with more processors and memory.
+We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs and at least 2 GB of memory. Inventory and transfer operations are faster with more processors and memory.
 
 ### Security requirements, the Storage Migration Service proxy service, and firewall ports
 
@@ -102,7 +102,7 @@ The source server must run one of the following operating systems:
 - Windows Storage Server 2016
 
 > [!NOTE]
-> Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.
+> Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but it can inventory and transfer files from them.
 
 You can migrate the following other source types if the orchestrator is running Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed or Windows Server 2022:
 
@@ -133,7 +133,7 @@ The destination servers can be standalone servers or part of a Windows failover 
 
 ## Azure VM migration
 
-Windows Admin Center integrates Azure IaaS deployment into Storage Migration Service. It lets you avoid building new servers and VMs in the Azure portal by hand prior to deploying your workload - and possibly missing required steps and configuration. Windows Admin Center can deploy the Azure IaaS VM, configure its storage, join it to your domain, install roles, and then set up your distributed system.
+Windows Admin Center integrates Azure IaaS deployment into Storage Migration Service. It lets you avoid building new servers and VMs in the Azure portal by hand prior to deploying your workload. It also lets you avoid possibly missing required steps and configuration. Windows Admin Center can deploy the Azure IaaS VM, configure its storage, join it to your domain, install roles, and then set up your distributed system.
 
 The following video shows how to use Storage Migration Service to migrate to Azure VMs.
 
