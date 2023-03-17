@@ -10952,6 +10952,20 @@
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md",
       "redirect_url": "/azure/active-directory/authentication/how-to-migrate-mfa-server-to-azure-mfa-with-federation",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-aovpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md",
+      "redirect_url": "/Windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
     }
+
   ]
 }
+
+
+
