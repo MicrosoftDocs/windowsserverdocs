@@ -12,7 +12,7 @@ ms.author: jgerend
 
 > **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need another partition but don't have more disks, you can shrink the existing partition from the end of the volume to create new unallocated space. That space can then be used for a new partition. Certain file types can block the shrink operation. For more information, see [More considerations](#more-considerations)
+You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need another partition but don't have more disks, you can shrink the existing partition from the end of the volume to create new unallocated space. That space can then be used for a new partition. Certain file types can block the shrink operation. For other information, see [Other considerations](#other-considerations)
 
 When you shrink a partition, any ordinary files are automatically relocated on the disk to create the new unallocated space. There's no need to reformat the disk to shrink the partition.
 
@@ -24,7 +24,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
-### To shrink a basic volume by using the Windows interface
+### Shrink a basic volume by using the Windows interface
 
 1. In Disk Manager, right-click the basic volume you want to shrink.
 
@@ -35,7 +35,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 > [!NOTE]
 > You can only shrink basic volumes that have no file system or that use the NTFS file system.
 
-### To shrink a basic volume by using a command line
+### Shrink a basic volume by using a command line
 
 1. Open a command prompt and type `diskpart`.
 
@@ -53,7 +53,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 | **desired=** *desiredsize* | The amount of space, in megabytes, to recover to the current partition. |
 | **minimum=** *minimumsize* | The minimum amount of space, in megabytes, to recover to the current partition. If you don't specify a desired or minimum size, the command reclaims the maximum amount of space possible. |
 
-## More considerations
+## Other considerations
 
 * When you shrink a partition, certain files like the paging file or the shadow copy storage area can't be automatically relocated. Also, you can't decrease the allocated space beyond the point where the unmovable files are located.
 If the shrink operation fails, check the Application Log for Event 259, which identifies the unmovable file. If you know the cluster(s) associated with the file that's preventing the shrink operation, you can also use the **fsutil** command at a command prompt (type **fsutil volume querycluster /?** for usage).
