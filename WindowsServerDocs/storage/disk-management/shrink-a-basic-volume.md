@@ -42,7 +42,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 1. At the **DISKPART** prompt, type `select volume <volumenumber>`. Selects the simple volume *volumenumber* you want to shrink.
 
-1. At the **DISKPART** prompt, type `shrink [desired=<desiredsize>] [minimum=<minimumsize>]`. Shrinks the selected volume to *desiredsize* in megabytes (MB) if possible or to *minimumsize* if *desiredsize* is too large.
+1. At the **DISKPART** prompt, type `shrink [desired=<desiredsize>] [minimum=<minimumsize>]`. Shrink the selected volume to *desiredsize* in megabytes (MB) if possible or to *minimumsize* if *desiredsize* is too large.
 
 | Value             | Description |
 | ---               | ----------- |
@@ -56,10 +56,10 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 * When you shrink a partition, certain files like the paging file or the shadow copy storage area can't be automatically relocated. Also, you can't decrease the allocated space beyond the point where the unmovable files are located.
 If the shrink operation fails, check the Application Log for Event 259, which identifies the unmovable file. If you know the cluster(s) associated with the file that's preventing the shrink operation, you can also use the **fsutil** command at a command prompt (type **fsutil volume querycluster /?** for usage).
-* When you provide the **querycluster** parameter, the command output identifies the unmovable file that is preventing the shrink operation from succeeding.
+* When you provide the **querycluster** parameter, the command output identifies the unmovable file that's preventing the shrink operation from succeeding.
 In some cases, you can relocate the file temporarily. For example, if you need to shrink the partition further, you can use Control Panel to move the paging file or stored shadow copies to another disk, delete the stored shadow copies, shrink the volume, and then move the paging file back to the disk. If the number of bad clusters detected by dynamic bad-cluster remapping is too high, you can't shrink the partition. If this situation occurs, you should consider moving the data and replacing the disk.
 
-* Don't use a block-level copy to transfer the data. This also copies the bad sector table and the new disk treats the same sectors as bad even though they're normal.
+* Don't use a block-level copy to transfer the data. This also copies the bad sector table, and the new disk treats the same sectors as bad even though they're normal.
 
 * You can shrink primary partitions and logical drives on raw partitions&mdash;those without a file system&mdash;or partitions that use the NTFS file system.
 
