@@ -21,19 +21,15 @@ When a Best Practices Analyzer scan for Server Message Block (SMB)-based network
 > [!Note]
 > This article addresses a specific issue identified by a Best Practices Analyzer scan. Apply the information in this article only to computers that have a File Services Best Practices Analyzer scan that reports the specific port issue. For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
-## Issue
+## Identify the issue
 
-The firewall ports necessary for file and printer sharing aren't open (ports 445 and 139).
+A File Services Best Practices Analyzer scan reports that firewall ports necessary for file and printer sharing aren't open (ports 445 and 139).
 
-## Impact
+The issue prevents computer access to shared folders and other SMB-based network services on the server.
 
-Computers can't access shared folders and other SMB-based network services on this server.
+## Resolve the issue
 
-## Resolution
-
-To resolve the issue, an administrator must enable file and printer sharing to communicate through the computer's firewall. To complete this procedure, you must be a member of the **Administrators group** (or equivalent), at minimum.
-
-## Open the firewall ports
+To resolve the issue, enable file and printer sharing to communicate through the computer's firewall. To complete the procedure, you must be a member of the **Administrators group** (or equivalent), at a minimum.
 
 To open the firewall ports and enable file and printer sharing, complete the following steps:
 
@@ -53,4 +49,6 @@ To open the firewall ports and enable file and printer sharing, complete the fol
 
 ## Related links
 
-- [Understanding shared folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))(https://technet.microsoft.com/library/cc731402.aspx)
+- [Understanding shared folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))
+
+<!-- Alterate path to related link -- https://technet.microsoft.com/library/cc731402.aspx -->
