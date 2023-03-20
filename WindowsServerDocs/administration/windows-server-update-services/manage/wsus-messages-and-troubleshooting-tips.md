@@ -6,7 +6,7 @@ ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 01/11/2023
+ms.date: 03/07/2023
 ---
 # WSUS Messages and Troubleshooting Tips
 
@@ -91,3 +91,31 @@ Check the following services are running:
   - **MSSQL$WSUS** (if you're using a SQL Server database and have named your database instance WSUS)
 
     Right-click the service, and then select **Start** if the service isn't running, or **Restart** to refresh the service if it's running.
+
+## Cannot add duplicate collection entry of type mimeMap
+<!--max7633666-->
+If you previously added MIME types manually, you may see errors about duplicate entries due to [changes for WSUS to support UUP](../plan/plan-your-wsus-deployment.md#uup-considerations). If you receive an error similar to  `Cannot add duplicate collection entry of type 'mimeMap' with unique key attribute 'fileExtension' set to '.wim'`, the MIME type may not have been set at the proper level. To resolve this issue, you'll need to edit the web.config file to remove the MIME type from level where it was originally set.
+
+Locate the *web.config* file where the MIME type was set:
+
+1. Open **MIME Types** at each level and find where the **Entry type** is listed as `local` for the `.wim` and `.msu` MIME types.  
+   - For instance, you might find that `.wim` is set to `local` at the *WSUS Administration* site level or at the *APIRemoting30* web service. These two MIME types should only be set to `local` at the server level.
+1. Once you've located where the MIME types are set to `local`, from that same location, in the action pane, select **Explore** to open the folder location.
+1. Open the *web.config* file with Notepad, or another text editor.
+1. Locate the MIME map entries for `.wim` and `.msu`. The entries should look similar to `<mimeMap fileExtension=".msu" mimeType="application/octect-stream" />`.
+1. In the line directly above the file entry, insert a removal for the type such as `<remove fileExtension=".msu" />`. If both file types were listed, the *web.config* file should look similar to the following entry:
+
+    ```xml
+    <configuration>
+      <system.webServer>
+        <staticContent>
+          <remove fileExtension=".wim" />
+          <mimeMap fileExtension=".wim" mimeType="application/x-ms-wim" />
+          <remove fileExtension=".msu" />
+          <mimeMap fileExtension=".msu" mimeType="application/octect-stream" />
+        </staticContent>
+      </system.webServer>
+    </configuration>
+    ```
+
+1. Save the changed to the *web.config* file then close it.

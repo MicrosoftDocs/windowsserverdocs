@@ -34,12 +34,12 @@ landingContent:
             url: ./deploy/always-on-vpn-deploy-deployment.md
 
   # Card (optional)
-  - title: Deploy Always On VPN
+  - title: Tutorial-Deploy Always On VPN
     linkLists:
-      - linkListType: deploy
+      - linkListType: tutorial
         links:
-          - text: Deployment workflow and scenarios
-            url: ./deploy/always-on-vpn-deploy-deployment.md
+          - text: Deployment prerequisites and setup
+            url: ../../tutorial-aovpn-deploy-setup.md
           - text: Plan the Always On VPN deployment
             url: ./deploy/always-on-vpn-deploy-planning.md
           - text: Deploy the VPN infrastructure

@@ -2,9 +2,9 @@
 title: Configuring Kerberos delegation for group Managed Service Accounts
 description: Explains how to configure Kerberos delegation for group Managed Service Accounts
 ms.topic: article
-ms.author: justinha
-author: SumanBhowmik
-manager: mtillman
+ms.author: wscontent
+author: robinharwood
+manager: femila
 ms.date: 04/15/2021
 ---
 # Configuring Kerberos delegation for group Managed Service Accounts
