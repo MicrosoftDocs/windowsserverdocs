@@ -54,5 +54,3 @@ To open the firewall ports and enable file and printer sharing, complete the fol
 ## Related links
 
 - [Understanding shared folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))(https://technet.microsoft.com/library/cc731402.aspx)
-
-- [Run Best Practices Analyzer scans and manage scan results](../administration/server-manager/run-best-practices-analyzer-scans-and-manage-scan-results)
