@@ -15,7 +15,7 @@ description: Learn how Work Folders provides a consistent way for users to acces
 
 This article discusses Work Folders, a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices.
 
-If you're looking to download or use Work Folders on Windows 10, Windows 7, or an Android or iOS device, see:
+If you want to download or use Work Folders on Windows 10, Windows 7, or an Android or iOS device, see:
 
 - [Work Folders for Windows 10](https://support.microsoft.com/help/12370/windows-10-work-folders)
 - [Work Folders for Windows 7 (64-bit download)](https://www.microsoft.com/download/details.aspx?id=42558)
@@ -28,7 +28,7 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
 
 ## Role description
 
- With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers and optionally specifying user device policies such as encryption and lock-screen passwords.
+ With Work Folders, users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access those files from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers and optionally specifying user device policies such as encryption and lock-screen passwords.
 
  You can deploy Work Folders with existing deployments of Folder Redirection, Offline Files, and home folders. Work Folders stores user files in a folder on the server called a *sync share*. You can specify a folder that already contains user data, which enables you to adopt Work Folders without migrating servers and data or immediately phasing out your existing solution.
 
@@ -38,7 +38,7 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
 
 - Provide a single point of access to work files from a user's work and personal computers and devices.
 
-- Access work files while offline, and then syncing with the central file server when the PC or device next has Internet or intranet connectivity.
+- Access work files while offline, and then sync with the central file server when the PC or device next has Internet or intranet connectivity.
 
 - Deploy with existing deployments of Folder Redirection, Offline Files, and home folders.
 
@@ -68,7 +68,7 @@ The following table describes some of the major changes in Work Folders.
 | Improved logging | New in Windows Server 2019 | Event logs on the Work Folders server can be used to monitor sync activity and identify users that are failing sync sessions. Use Event ID 4020 in the Microsoft-Windows-SyncShare/Operational event log to identify which users are failing sync sessions. Use Event ID 7000 and Event ID 7001 in the Microsoft-Windows-SyncShare/Reporting event log to monitor users that are successfully completing upload and download sync sessions. |
 | Performance counters | New in Windows Server 2019 | The following performance counters were added: Bytes downloaded/sec, Bytes uploaded/sec, Connected Users, Files downloaded/sec, Files uploaded/sec, Users with change detection, Incoming requests/sec and Outstanding requests. |
 | Improved server performance | Updated in Windows Server 2019 | Performance improvements were made to handle more users per server. The limit per server varies and is based on the number of files and file churn. To determine the limit per server, users should be added to the server in phases. |
-| On-demand file access | Added to Windows 10 version 1803 | This access enables you to see and access all of your files. You control which files are stored on your PC and available offline. The rest of your files are always visible and don’t take up any space on your PC, but you need connectivity to the Work Folders file server to access them. |
+| On-demand file access | Added to Windows 10 version 1803 | This feature enables you to see and access all of your files. You control which files are stored on your PC and available offline. The rest of your files are always visible and don’t take up any space on your PC, but you need connectivity to the Work Folders file server to access them. |
 | Azure AD Application Proxy support | Added to Windows 10 version 1703, Android, iOS | Remote users can securely access their files on the Work Folders server using Azure AD Application Proxy. |
 | Faster change replication | Updated in Windows 10 and Windows Server 2016 | For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients aren't notified of the change and wait up to 10 minutes to get the update. When you use Windows Server 2016, the Work Folders server immediately notifies Windows 10 clients, and the file changes are synced immediately. This capability is new in Windows Server 2016 and requires a Windows 10 client. If you're using an older client or the Work Folders server is Windows Server 2012 R2, the client continues to poll every 10 minutes for changes. |
 | Integrated with Windows Information Protection (WIP) | Added to Windows 10 version 1607 | If an administrator deploys WIP, Work Folders can enforce data protection by encrypting the data on the PC. The encryption uses a key associated with the Enterprise ID, which can be remotely wiped by using a supported mobile device management package such as Microsoft Intune. |
@@ -121,9 +121,9 @@ Work Folders has the following software requirements for client computers:
 
 - Enough free space on a local, NTFS-formatted drive to store all the user's files in Work Folders, plus 6 more GB of free space if Work Folders is located on the system drive, as it is by default. Work Folders uses the following location by default: **%USERPROFILE%\Work Folders**
 
-     However, users can change the location during setup. microSD cards and USB drives formatted with the NTFS file system are supported locations although sync stops if the drives are removed.
+     However, users can change the location during setup. microSD cards and USB drives formatted with the NTFS file system are supported locations though sync stops if the drives are removed.
 
-     The maximum size for individual files is 10 GB by default. There's no per-user storage limit, although administrators can use the quotas functionality of File Server Resource Manager to implement quotas.
+     The maximum size for individual files is 10 GB by default. There's no per-user storage limit. However, administrators can use the quotas functionality of File Server Resource Manager to implement quotas.
 
 - Work Folders doesn't support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.
 
