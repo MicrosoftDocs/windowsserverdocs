@@ -1,0 +1,51 @@
+---
+title: What is Active Directory Certificate Services?
+description: Overview of Directory Certificate Services (AD CS) in Windows Server, including important functionality
+author: robinharwood
+ms.author: wscontent
+ms.topic: overview
+ms.date: 03/01/2023
+---
+
+# What is Active Directory Certificate Services?
+
+AD CS provides customizable services within Windows Server for issuing and managing on-premises public key infrastructure (PKI) certificates used in software security systems that employ public key technologies.
+
+## Issue and manage certificates
+
+Digital certificates can be used to encrypt and digitally sign electronic documents and messages as well as for authentication of computer, user, or device accounts on a network. For example, PKI certificates enable you to provide users confidentiality through encryption, enhance integrity using digital signatures, and authentication by associating certificate keys with computer, user, or device accounts on a computer network. Digital certificates are used to provide:
+
+- Confidentiality through encryption
+- Integrity through digital signatures
+- Authentication by associating certificate keys with the computer, user, or device accounts on a computer network
+
+## Key features
+
+AD CS provides the following important features:
+
+- **Certification authorities:** Root and subordinate CAs are used to issue certificates to users, computers, and services, and to manage certificate validity.
+- **Web enrollment:** Web enrollment allows users to connect to a CA with a Web browser in order to request certificates and retrieve certificate revocation lists (CRLs).
+- **Online Responder:** The Online Responder service decodes revocation status requests for specific certificates, evaluates the status of these certificates, and sends back a signed response containing the requested certificate status information.
+- **Network Device Enrollment Service:** The Network Device Enrollment Service allows routers and other network devices that don't have domain accounts to obtain certificates.
+- **TPM key attestation:** Lets the certification authority verify the private key is protected by a hardware-based TPM and that the TPM is one that the CA trusts. This functionality prevents the certificate from being exported to an unauthorized device and can bind the user identity to the device.
+- **Certificate Enrollment Web Service:** Certificate Enrollment Web Service enables users and computers to perform certificate enrollment by using the HTTPS protocol. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer is not a member of a domain or when a domain member is not connected to the domain.
+
+## Real-world benefits
+
+You can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding private key. AD CS gives you a cost-effective, efficient, and secure way to manage the distribution and use of certificates.
+
+In addition to binding of identities and private keys, AD CS also includes features that allow you to manage certificate enrollment and revocation in various scalable environments.
+
+You can use existing endpoint identity information in Active Directory to register for certificates. This means that users and computers registered to your Active Directory can have user information automatically inserted into certificates.
+
+AD CS can also be used to configure Active Directory group policies to designate which users and machines are allowed which types of certificates. Group policy configuration enables role-based or attribute-based access control.
+
+Applications supported by AD CS include Secure/Multipurpose Internet Mail Extensions (S/MIME), secure wireless networks, virtual private network (VPN), Internet Protocol security (IPsec), Encrypting File System (EFS), smart card logon, Secure Socket Layer/Transport Layer Security (SSL/TLS), and digital signatures.
+
+## Next steps
+
+- [Certification Authority role for AD CS](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831574(v=ws.11))
+- [Implement and manage Active Directory Certificate Services](https://learn.microsoft.com/en-us/training/modules/implement-manage-active-directory-certificate-services/)
+- [All AD CS role services run on any version](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
+- [All AD CS role services can be run on Server Core](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
+- [Windows PowerShell Reference for Certificate Services](/powershell/module/adcsdeployment)
