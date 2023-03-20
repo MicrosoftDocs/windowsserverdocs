@@ -15,7 +15,7 @@ ms.author: jgerend
 This article describes how to delete everything on a dynamic disk and then convert it back to a basic disk. Dynamic disks have been deprecated from Windows and are no longer recommended. Instead, use basic disks or the newer [Storage Spaces](../storage-spaces/overview.md) technology when you want to pool disks together into larger volumes. If you want to mirror the volume from which Windows boots, you might want to use a hardware RAID controller, such as the one included on many motherboards.
 
 > [!WARNING]
-> To convert a dynamic disk back to a basic disk, you must delete all volumes and permanently erase all data from the disk. Make sure you back up any data you want to keep before proceeding.
+> To convert a dynamic disk back to a basic disk, you must delete all volumes and permanently erase all data from the disk. Before proceeding, make sure you back up any data you want to keep.
 
 ## Change a dynamic disk back to a basic disk by using Disk Management
 
@@ -61,6 +61,6 @@ This article describes how to delete everything on a dynamic disk and then conve
 - The disk must not contain any volumes or data before you can change it back to a basic disk. If you want to keep your data, back it up or move it to another volume before you convert the disk to a basic disk.
 - After you change a dynamic disk back to a basic disk, you can only create partitions and logical drives on that disk.
 
-## See also
+## Related links
 
 - [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))
