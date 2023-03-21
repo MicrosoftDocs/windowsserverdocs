@@ -38,7 +38,7 @@ Windows typically includes three partitions on your main drive (usually the C:\ 
 
 - The **Recovery Partition** stores special tools to help you recover Windows, in case there's a problem starting the PC or other serious issues.
 
-> [!Important]
+> [!IMPORTANT]
 > Disk Management might show the EFI System Partition and Recovery Partition as 100 percent free. However, these partitions store critical files that your PC needs to operate properly, and the partitions are generally nearly full. It's recommended to not modify these partitions in any way.
 
 ## Troubleshoot issues
