@@ -15,7 +15,7 @@ Master Boot Record (MBR) disks use the standard BIOS partition table. GUID parti
 
 You can change a disk from MBR to GPT partition format as long as the disk contains no partitions or volumes.
 
-> [!Important]
+> [!IMPORTANT]
 > - Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
 > - You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to convert a disk.
 
@@ -45,7 +45,7 @@ To complete the disk conversion from the command line with the **diskpart** disk
 
 1. Prepare the GPT disk for conversion by cleaning (deleting) any partitions or volumes.
 
-   > [!Note]
+   > [!NOTE]
    > If the GPT disk doesn't have any partitions or volumes, skip to the last step to apply the conversion.
 
    1. At the **DISKPART** prompt, enter `list disk`. Make a note of the GPT disk number that you want to convert to MBR format.
