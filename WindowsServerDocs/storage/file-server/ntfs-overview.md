@@ -25,7 +25,7 @@ For larger corruption issues, the Chkdsk utility, in Windows Server 2012 and lat
 
 ## Increased security
 
-- **Access Control List (ACL)-based security for files and folders**: NTFS lets you to set permissions on a file or folder, specify the groups and users whose access you want to restrict or allow, and select access type.
+- **Access Control List (ACL)-based security for files and folders**: NTFS lets you set permissions on a file or folder, specify the groups and users whose access you want to restrict or allow, and select access type.
 
 - **Support for BitLocker Drive Encryption**: BitLocker Drive Encryption provides more security for critical system information and other data stored on NTFS volumes. Beginning in Windows Server 2012 R2 and Windows 8.1, BitLocker provides support for device encryption on x86 and x64-based computers with a Trusted Platform Module (TPM) that supports connected stand-by (previously available only on Windows RT devices). Device encryption helps protect data on Windows-based computers, and it helps block malicious users from accessing the system files they rely on to discover the user's password. It also prevents malicious users from accessing a drive by physically removing it from the PC and installing it on a different one. For more information, see [What's new in BitLocker](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn306081(v%3dws.11)).
 
