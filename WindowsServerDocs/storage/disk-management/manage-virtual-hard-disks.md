@@ -27,35 +27,41 @@ To create a VHD, follow these steps:
 
 1. Open Disk Management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 1. On the **Action** menu, select **Create VHD**.
-1. When the **Create and Attach Virtual Hard Disk** dialog box opens, first specify the location on the physical computer where you want the VHD file to be stored and the size of the VHD.
+1. When the **Create and Attach Virtual Hard Disk** dialog box opens, first specify the location on the physical computer where you want the VHD file to be stored and then the size of the VHD.
     </br>Do the following steps in order.</br>
-    </br>**For location**
-     1. Under location, select the Browse button and locate the folder you want to store the VHD.
-     1. Enter a name for drive in the File name field.
-     1. Use the Saves as type file form the drop-down menu, select **Virtual Disk files (*.vhd)**.
-     1. Select **Save**.</br>
+    1. **Location**
+    - Under location, select the Browse button and locate the folder you want to store the VHD.
+    - Enter a name for drive in the File name field.
+    - Use the Saves as type file from the drop-down menu, select **Virtual Disk files (*.vhd)**.
+    - Select **Save**.</br>
+    1. **Virtual hard disk format**
+       - Select **Dynamically expanding** or **Fixed size**, then select **OK**.
+  
+### Attach and detach a VHD
 
-    </br>**For virtual hard disk format**
-    1. Select **Dynamically expanding** or **Fixed size**, then select **OK**.
+Here are the steps to properly attach (mount) and detach (dismount) your virtual drive.
 
-## Attach a VHD
+### Attach a VHD
 
-To make a VHD available for use (either one you have just created or another existing VHD) do the following:
+To make a VHD available for use (either one you've created or another existing VHD), follow these steps.
 
 1. Open Disk management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
+
 1. On the **Action** menu, select **Attach VHD**.
+
 1. After the Attach Virtual Hard Disk dialog box appears, select the browse button, and locate the **.vhd** file. Then select **OK**.
 
-## Detach a VHD
+### Detach a VHD
 
 When you detach a VHD, you make it unavailable. You don't delete the VHD or any data stored on it.
 
 1. Open Disk management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
-1. Right-click the disk, select **Detach VHD**, and then click **OK**. 
+
+1. Right-click the disk, select **Detach VHD**, and then click **OK**.
 
 ## Additional considerations
 
-- The path specifying the location for the VHD must be fully-qualified and cannot be in the \\Windows directory.
+- The path specifying the location for the VHD must be fully qualified and can't be in the \\Windows directory.
 - The minimum size for a VHD is 3 megabytes (MB).
 - A VHD can only be a basic disk.
 - A VHD is initialized when it's created, and creating a large fixed-size VHD may take some time.
