@@ -21,31 +21,31 @@ This article describes how to delete everything on a dynamic disk and then conve
 
 1. Back up data from all volumes on the disk that you want to convert from dynamic to basic.
 
-2. Open Disk Management with administrator permissions.
+1. Open Disk Management with administrator permissions.
 
    You can type **Computer Management** in the search box on the taskbar, select and hold (or right-click) **Computer Management**, and then select **Run as administrator** > **Yes**. After Computer Management opens, go to **Storage** > **Disk Management**.
 
-3. In Disk Management, select and hold (or right-click) each volume on the dynamic disk you want to convert to a basic disk, and then choose **Delete Volume**.
+1. In Disk Management, select and hold (or right-click) each volume on the dynamic disk you want to convert to a basic disk, and then choose **Delete Volume**.
 
-4. When all volumes on the disk have been deleted, right-click the disk, and then select **Convert to Basic Disk**.
+1. When all volumes on the disk have been deleted, right-click the disk, and then select **Convert to Basic Disk**.
 
-## Change a dynamic disk back to a basic disk by using a command line
+## Change a dynamic disk back to a basic disk by using the command line
 
 1. Back up data from all volumes on the disk that you want to convert from dynamic to basic.
 
-2. Open a command prompt and type `diskpart`.
+1. Open a command prompt and type `diskpart`.
 
-3. At the **DISKPART** prompt, type `list disk`. Note the disk number you want to convert to basic.
+1. At the **DISKPART** prompt, type `list disk`. Note the disk number you want to convert to basic.
 
-4. At the **DISKPART** prompt, type `select disk <disknumber>`.
+1. At the **DISKPART** prompt, type `select disk <disknumber>`.
 
-5. At the **DISKPART** prompt, type `detail disk`.
+1. At the **DISKPART** prompt, type `detail disk`.
 
-6. For each volume on the disk, at the **DISKPART** prompt, type `select volume= <volumenumber>` and then type `delete volume`.
+1. For each volume on the disk, at the **DISKPART** prompt, type `select volume= <volumenumber>` and then type `delete volume`.
 
-7. At the **DISKPART** prompt, type `select disk <disknumber>`, specifying the disk number of the disk that you want to convert to a basic disk.
+1. At the **DISKPART** prompt, type `select disk <disknumber>`, specifying the disk number of the disk that you want to convert to a basic disk.
 
-8. At the **DISKPART** prompt, type `convert basic`.
+1. At the **DISKPART** prompt, type `convert basic`.
 
 | Command  | Description |
 | --- | --- |
