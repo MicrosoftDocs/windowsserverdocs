@@ -26,7 +26,7 @@ Open Disk Management with the following steps.
 
 ## Disks that are missing or not initialized, plus general troubleshooting steps
 
-:::image type="content" source="media/uninitialized-disk.PNG" alt-text="Screenshot that shows Disk Management highlighting an unknown disk that must be initialized.":::
+:::image type="content" source="media/uninitialized-disk.png" alt-text="Screenshot that shows Disk Management highlighting an unknown disk that must be initialized.":::
 
 **Cause:**
 If you don't see the disk in File Explorer and it's listed in Disk Management as *Not Initialized*, the disk might not have a valid disk signature. It's either because the disk was never initialized and formatted, or the drive formatting has become corrupted somehow. It's also possible that the disk is having hardware problems or other issues as described further on in this article.
@@ -35,7 +35,7 @@ If you don't see the disk in File Explorer and it's listed in Disk Management as
 
 There are many reasons a disk or memory card might be missing or fail to initialize, but the most common reason is that the disk is failing. There's only so much you can do to fix a failing disk. The following are some steps to try to get it working again. If the disk works after you've completed one of these steps, don't bother with the remaining ones. At this point, maybe update your backups.
 
-1. Look at the disk in Disk Management. If it appears **Offline** as shown here, try selecting it and choosing **Online**.
+1. Look at the disk in Disk Management. If it displays **Offline** as shown below, right-click on the **Offline** disk and select **Online**.
 
     :::image type="content" source="media/offline-disk.png" alt-text="Screenshot that shows the disk as offline.":::
 
@@ -62,7 +62,7 @@ There are many reasons a disk or memory card might be missing or fail to initial
 
     Here's a list of [Error codes in Device Manager](https://support.microsoft.com/help/310123/error-codes-in-device-manager-in-windows), but one approach that sometimes works is to select and hold (or right-click) the problematic device, select **Uninstall device**, and then **Action** > **Scan for hardware changes**.
 
-    :::image type="content" source="media/device-manager.PNG" alt-text="Screenshot of Device Manager showing an unknown USB device.":::
+    :::image type="content" source="media/device-manager.png" alt-text="Screenshot of Device Manager showing an unknown USB device.":::
 
 1. Plug the disk into a different PC.
 
