@@ -10,7 +10,7 @@ ms.date: 03/09/2023
 
 # Storage Spaces overview
 
-Storage Spaces can help protect your data from drive failures. It's a technology in Windows and Windows Server and is conceptually similar to redundant array of independent disks (RAID), implemented in software. You can use Storage Spaces to group three or more drives into a storage pool and then use capacity from that pool to create Storage Spaces. These virtual drives typically store extra copies of your data, so if one of your drives fails, you still have an intact copy of your data. If you run low on capacity, just add more drives to the storage pool.
+Storage Spaces can help protect your data from drive failures. It's a technology in Windows and Windows Server and is conceptually similar to redundant array of independent disks (RAID), implemented in software. You can use Storage Spaces to group three or more drives into a storage pool and then use capacity from that pool to create Storage Spaces. These drives typically store extra copies of your data, so if one of your drives fails, you still have an intact copy of your data. If you run low on capacity, just add more drives to the storage pool.
 
 There are four main ways to use Storage Spaces:
 
