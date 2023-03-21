@@ -122,7 +122,7 @@ Here's how to create a file share on Windows Server:
 6. On the **Other Settings** page, clear the **Enable continuous availability** checkbox, if present, and optionally select the **Enable access-based enumeration** and **Encrypt data access** checkboxes.
 7. On the **Permissions** page, select **Customize permissions…**. The Advanced Security Settings dialog box appears.
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
-9. Set the permissions as described in [Required permissions for the file share hosting roaming user profiles](#required-permissions-for-the-file-share-hosting-roaming-user-profiles) and shown in the following screen shot. Remove permissions for unlisted groups and accounts, and add special permissions to the *Roaming user profiles users and computers* group that you created in Step 2.
+9. Set the permissions as described in [Required permissions for the file share hosting roaming user profiles](#required-file-share-hosting-permissions-for-roaming-user-profiles) and shown in the following screen shot. Remove permissions for unlisted groups and accounts, and add special permissions to the *Roaming user profiles users and computers* group that you created in Step 2.
 
     :::image type="content" source="media/advanced-security-user-profiles.jpg" alt-text="Screenshot of Advanced Security Settings window that shows permissions.":::
 
@@ -202,7 +202,7 @@ Here's how to set up roaming user profiles on computers:
 4. In the Group Policy Management Editor window, navigate to **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **System**, and then **User Profiles**.
 5. Right-click **Set roaming profile path for all users logging onto this computer** and then select **Edit**.
     > [!TIP]
-    > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the **Home folder** section of the user account properties in Azure AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the **Set user home folder** policy setting, and then specify the file share and drive letter to map (or specify a local folder). Don't use environment variables or ellipses. The user's alias is appended to the end of the path specified during user sign in.
+    > A user's home folder, if configured, is the default folder used by some programs such as Windows PowerShell. You can configure an alternative local or network location on a per-user basis by using the **Home folder** section of the user account properties in AD DS. To configure the home folder location for all users of a computer running Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 in a virtual desktop environment, enable the **Set user home folder** policy setting, and then specify the file share and drive letter to map (or specify a local folder). Don't use environment variables or ellipses. The user's alias is appended to the end of the path specified during user sign in.
 6. In the **Properties** dialog box, select **Enabled**
 7. In the **Users logging onto this computer should use this roaming profile path** box, enter the path to the file share where you want to store the user's roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
 
@@ -286,7 +286,7 @@ Here's how to test roaming user profiles:
 | ☐<br><br>                 | 3. Create a file share for roaming user profiles<br>- File share name |
 | ☐<br><br>                 | 4. Create a GPO for roaming user profiles<br>- GPO name|
 | ☐                         | 5. Configure roaming user profiles policy settings    |
-| ☐<br>☐<br>☐              | 6. Enable roaming user profiles<br>- Enabled in Azure AD DS on user accounts?<br>- Enabled in Group Policy on computer accounts?<br> |
+| ☐<br>☐<br>☐              | 6. Enable roaming user profiles<br>- Enabled in AD DS on user accounts?<br>- Enabled in Group Policy on computer accounts?<br> |
 | ☐                         | 7. (Optional) Specify a mandatory Start layout for Windows 10 PCs |
 | ☐<br>☐<br><br>☐<br><br>☐ | 8. (Optional) Enable primary computer support<br>- Designate primary computers for users<br>- Location of user and primary computer mappings<br>- (Optional) Enable primary computer support for folder redirection<br>- Computer-based or user-based?<br>- (Optional) Enable primary computer support for roaming user profiles |
 | ☐                        | 9. Enable the roaming user profiles GPO                |
