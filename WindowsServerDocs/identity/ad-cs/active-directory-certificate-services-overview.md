@@ -23,7 +23,7 @@ Digital certificates can be used to encrypt and digitally sign electronic docume
 
 AD CS provides the following important features:
 
-- **Certification authorities:** Root and subordinate Certificate Authoritys (CAs) are used to issue certificates to users, computers, and services, and to manage certificate validity.
+- **Certification authorities:** Root and subordinate Certificate Authorities (CAs) are used to issue certificates to users, computers, and services, and to manage certificate validity.
 
 - **Web enrollment:** Web enrollment allows users to connect to a CA with a Web browser in order to request certificates and retrieve certificate revocation lists (CRLs).
 
