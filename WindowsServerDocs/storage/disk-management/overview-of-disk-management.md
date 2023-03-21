@@ -28,7 +28,7 @@ Disk Management shows the details for each drive on your PC and all partitions f
 
 The following image shows the Disk Management overview for several drives. Disk 0 has three partitions, and Disk 1 has two partitions. On Disk 0, the C: drive for Windows uses most the disk space. Two other partitions for system operations and recovery use a smaller amount of disk space.
 
-![Screenshot that shows the Disk Management utility in Windows as described in the text.](media/disk-management.png)
+:::image type="content" source="../media/disk-management.png" alt-text="Screenshot that shows the Disk Management utility in Windows as described in the text." border="false":::
 
 Windows typically includes three partitions on your main drive (usually the C:\ drive). These partitions include the EFI System Partition, the Local Disk (C:) Partition, and a Recovery Partition.
 
@@ -39,7 +39,7 @@ Windows typically includes three partitions on your main drive (usually the C:\ 
 - The **Recovery Partition** stores special tools to help you recover Windows, in case there's a problem starting the PC or other serious issues.
 
 > [!Important]
-> Disk Management might show the EFI System Partition and Recovery Partition as 100% free. However, these partitions store critical files that your PC needs to operate properly, and the partitions are generally nearly full. It's recommended to not modify these partitions in any way.
+> Disk Management might show the EFI System Partition and Recovery Partition as 100 percent free. However, these partitions store critical files that your PC needs to operate properly, and the partitions are generally nearly full. It's recommended to not modify these partitions in any way.
 
 ## Troubleshoot issues
 
@@ -47,7 +47,7 @@ Sometimes a Disk Management task reports an error, or a procedure doesn't work a
 
 - Review suggestions in the [Troubleshooting Disk Management](troubleshooting-disk-management.md) article.
 
-- Search the [Microsoft community - Files, folders, and storage](https://answers.microsoft.com/en-us/windows/forum/files?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=false&page=1) site.
+- Search the [Microsoft Community](https://answers.microsoft.com/en-us/windows/forum/files?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=false&page=1) website for posts about files, folders, and storage.
 
 - If you don't find an answer on the site, you can post a question for input from Microsoft or other members of the community. You can also [Contact Microsoft Support](https://support.microsoft.com/contactus/).
 
