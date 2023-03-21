@@ -18,7 +18,7 @@ When a Best Practices Analyzer scan for Server Message Block (SMB)-based network
 | --- | --- | --- | --- |
 | Windows Server | File Services | Error | Configuration |
 
-> [!Note]
+> [!NOTE]
 > This article addresses a specific issue identified by a Best Practices Analyzer scan. Apply the information in this article only to computers that have a File Services Best Practices Analyzer scan that reports the specific port issue. For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 ## Identify the issue
