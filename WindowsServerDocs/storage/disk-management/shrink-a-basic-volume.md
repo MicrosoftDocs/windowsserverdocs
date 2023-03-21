@@ -10,7 +10,7 @@ ms.author: jgerend
 
 # Shrink a basic volume
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 11, Windows 10, Windows 8.1, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need another partition but don't have more disks, you can shrink the existing partition from the end of the volume to create new unallocated space. That space can then be used for a new partition. Certain file types can block the shrink operation. For other information, see [Other considerations](#other-considerations)
 
@@ -24,9 +24,9 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
-### Shrink a basic volume by using the Windows interface
+### Shrink a basic volume by using Disk Management
 
-1. In Disk Manager, right-click the basic volume you want to shrink.
+1. In Disk Management, right-click the basic volume you want to shrink.
 
 1. Select **Shrink Volume**.
 
@@ -35,7 +35,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 > [!NOTE]
 > You can only shrink basic volumes that have no file system or that use the NTFS file system.
 
-### Shrink a basic volume by using a command line
+### Shrink a basic volume by using the command line
 
 1. Open a command prompt and enter `diskpart`.
 
@@ -60,7 +60,7 @@ If the shrink operation fails, check the Application Log for Event 259, which id
 - When you provide the **querycluster** parameter, the command output identifies the unmovable file that's preventing the shrink operation from succeeding.
 In some cases, you can relocate the file temporarily. For example, if you need to shrink the partition further, you can use Control Panel to move the paging file or stored shadow copies to another disk, delete the stored shadow copies, shrink the volume, and then move the paging file back to the disk. If the number of bad clusters detected by dynamic bad-cluster remapping is too high, you can't shrink the partition. If this situation occurs, consider moving the data and replacing the disk.
 
-- Don't use a block-level copy to transfer the data. This method also copies the bad sector table, and the new disk treats the same sectors as bad even though they're normal.
+- Don't use a block-level copy to transfer the data. This method also copies the bad sector table, and the new disk treats these sectors as bad even though they're healthy.
 
 - You can shrink primary partitions and logical drives on raw partitions&mdash;those without a file system&mdash;or partitions that use the NTFS file system.
 
