@@ -57,19 +57,19 @@ UNC Hardening lets you configure SMB clients to require encryption regardless of
 
 1. To enable SMB Encryption for an individual file share, enter the following script on the server:
 
-    ```PowerShell
+    ```powershell
     Set-SmbShare –Name <sharename> -EncryptData $true
     ```
 
 1. To enable SMB Encryption for the entire file server, enter the following script on the server:
 
-    ```PowerShell
+    ```powershell
     Set-SmbServerConfiguration –EncryptData $true
     ```
 
 1. To create a new SMB file share with SMB Encryption enabled, enter the following script:
 
-    ```PowerShell
+    ```powershell
     New-SmbShare –Name <sharename> -Path <pathname> –EncryptData $true
     ```
 
@@ -79,7 +79,7 @@ By default, when SMB Encryption is enabled for a file share or server, only SMB 
 
 However, in some circumstances, an administrator might want to allow unencrypted access for clients that don't support SMB 3.x. This situation could occur during a transition period when mixed client operating system versions are being used. To allow unencrypted access for clients that don't support SMB 3.x, enter the following script in Windows PowerShell:
 
-```PowerShell
+```powershell
 Set-SmbServerConfiguration –RejectUnencryptedAccess $false
 ```
 
@@ -100,7 +100,7 @@ Consider the following issues as you deploy SMB Encryption:
 - SMB Encryption and the Encrypting File System (EFS) in the NTFS file system are unrelated, and SMB Encryption doesn't require or depend on using EFS.
 - SMB Encryption and the BitLocker Drive Encryption are unrelated, and SMB Encryption doesn't require or depend on using BitLocker Drive Encryption.
 
-## Preauthentication Integrity
+## Preauthentication integrity
 
 SMB 3.1.1 is capable of detecting interception attacks that attempt to downgrade the protocol or the capabilities that the client and server negotiate by use of preauthentication integrity. Preauthentication integrity is a mandatory feature in SMB 3.1.1. It protects against any tampering with Negotiate and Session Setup messages by using cryptographic hashing. The resulting hash is used as input to derive the session’s cryptographic keys, including its signing key. This process enables the client and server to mutually trust the connection and session properties. When the client or the server detects such an attack, the connection is disconnected, and event ID 1005 is logged in the Microsoft-Windows-SmbServer/Operational event log.
 
