@@ -5,30 +5,19 @@ ms.topic: article
 author: JasonGerend
 manager: femila
 ms.author: jgerend
-ms.date: 03/20/2023
+ms.date: 03/21/2023
 description: Learn how Work Folders provides a consistent way for users to access work files from PCs and devices.
 ---
 
 # Work Folders overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>Applies to: Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This article discusses Work Folders, a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices.
-
-If you want to download or use Work Folders on Windows 10, Windows 7, or an Android or iOS device, see:
-
-- [Work Folders for Windows 10](https://support.microsoft.com/help/12370/windows-10-work-folders)
-- [Work Folders for Windows 7 (64-bit download)](https://www.microsoft.com/download/details.aspx?id=42558)
-- [Work Folders for Windows 7 (32-bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
-- [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
-- [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
-
-> [!NOTE]
-> The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
+Work Folders is Windows Server role service for file servers. Work Folders provides a consistent way for users to access their work files from their PCs and devices. For older versions, see [Install other versions of Work Folders](#install-other-versions-of-work-folders).
 
 ## Role description
 
- With Work Folders, users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access those files from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers and optionally specifying user device policies such as encryption and lock-screen passwords.
+ With Work Folders, users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access those files from anywhere. Organizations use Work Folders to help maintain control over corporate data. They can store files on centrally-managed file servers and define user device policies such as encryption and lock-screen passwords.
 
  You can deploy Work Folders with existing deployments of Folder Redirection, Offline Files, and home folders. Work Folders stores user files in a folder on the server called a *sync share*. You can specify a folder that already contains user data, which enables you to adopt Work Folders without migrating servers and data or immediately phasing out your existing solution.
 
@@ -38,7 +27,7 @@ If you want to download or use Work Folders on Windows 10, Windows 7, or an Andr
 
 - Provide a single point of access to work files from a user's work and personal computers and devices.
 
-- Access work files while offline, and then sync with the central file server when the PC or device next has Internet or intranet connectivity.
+- Access work files while offline, and then sync with the central file server when the PC or device next has internet or intranet connectivity.
 
 - Deploy with existing deployments of Folder Redirection, Offline Files, and home folders.
 
@@ -87,9 +76,9 @@ Work Folders has the following software requirements for file servers and your n
 
 - (Optional) An Active Directory Domain Services forest with the schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when you use multiple file servers.
 
-To enable users to sync across the Internet, there are more requirements:
+To enable users to sync across the internet, there are more requirements:
 
-- The ability to make a server accessible from the Internet by creating publishing rules in your organization's reverse proxy or network gateway.
+- The ability to make a server accessible from the internet by creating publishing rules in your organization's reverse proxy or network gateway.
 
 - (Optional) A publicly registered domain name and the ability to create more public DNS records for the domain.
 
@@ -127,6 +116,19 @@ Work Folders has the following software requirements for client computers:
 
 - Work Folders doesn't support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.
 
+## Install other versions of Work Folders
+
+If you want to download or use Work Folders on Windows 10, Windows 7, or an Android or iOS device, see:
+
+- [Work Folders for Windows 10](https://support.microsoft.com/help/12370/windows-10-work-folders)
+- [Work Folders for Windows 7 (64-bit download)](https://www.microsoft.com/download/details.aspx?id=42558)
+- [Work Folders for Windows 7 (32-bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
+- [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
+- [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
+
+> [!NOTE]
+> The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
+
 ## Work Folders compared to other sync technologies
 
 The following table discusses how various Microsoft sync technologies are positioned and when to use each.
@@ -140,7 +142,7 @@ The following table discusses how various Microsoft sync technologies are positi
 | **Supported clients** | PCs, iOS, Android | PCs in a corporate network or connected through DirectAccess, VPNs, or other remote access technologies | PCs, iOS, Android, Windows Phone | PCs, Mac computers, Windows Phone, iOS, Android |
 
 > [!NOTE]
-> In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see [DFS Namespaces and DFS Replication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)) and [BranchCache Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))
+> In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see [DFS Namespaces and DFS Replication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)) and [BranchCache Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
 
 ## Server Manager information
 
