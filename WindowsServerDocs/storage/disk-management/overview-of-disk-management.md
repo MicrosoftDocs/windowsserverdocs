@@ -28,7 +28,7 @@ Disk Management shows the details for each drive on your PC and all partitions f
 
 The following image shows the Disk Management overview for several drives. Disk 0 has three partitions, and Disk 1 has two partitions. On Disk 0, the C: drive for Windows uses most the disk space. Two other partitions for system operations and recovery use a smaller amount of disk space.
 
-:::image type="content" source="../media/disk-management.png" alt-text="Screenshot that shows the Disk Management utility in Windows as described in the text." border="false":::
+:::image type="content" source="./media/disk-management.png" alt-text="Screenshot that shows the Disk Management utility in Windows as described in the text." border="false":::
 
 Windows typically includes three partitions on your main drive (usually the C:\ drive). These partitions include the EFI System Partition, the Local Disk (C:) Partition, and a Recovery Partition.
 
