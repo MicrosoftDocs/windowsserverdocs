@@ -40,8 +40,8 @@ Applications supported by AD CS include Secure/Multipurpose Internet Mail Extens
 
 ## Next steps
 
-- [Certification Authority role for AD CS](previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831574(v=ws.11))
-- [Implement and manage Active Directory Certificate Services](training/modules/implement-manage-active-directory-certificate-services/)
-- [All AD CS role services run on any version](previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
-- [All AD CS role services can be run on Server Core](previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
+- [Certification Authority role for AD CS](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831574(v=ws.11))
+- [Implement and manage Active Directory Certificate Services](/training/modules/implement-manage-active-directory-certificate-services/)
+- [All AD CS role services run on any version](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
+- [All AD CS role services can be run on Server Core](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
 - [Windows PowerShell Reference for Certificate Services](/powershell/module/adcsdeployment)
