@@ -5,7 +5,7 @@ ms.date: 03/20/2023
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.topic: article
+ms.topic: conceptual
 ---
 
 # SMB: File and printer sharing ports should be open
