@@ -970,7 +970,7 @@
     href: ad-cs/index.yml
     items:
     - name: What is Active Directory Certificate Services?
-      href: active-directory-certificate-services-overview.md
+      href: ad-cs/active-directory-certificate-services-overview.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
