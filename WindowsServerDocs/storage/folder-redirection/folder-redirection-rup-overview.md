@@ -15,7 +15,7 @@ This topic discusses the Folder Redirection, Offline Files (client-side caching 
 
 ## Technology description
 
-Folder Redirection and Offline Files are used together to redirect the path of local folders (such as the Documents folder) to a network location, while caching the contents locally for increased speed and availability. Roaming User Profiles is used to redirect a user profile to a network location. These features used to be referred to as Intellimirror.
+Folder Redirection and Offline Files are used together to redirect the path of local folders, such as the Documents folder, to a network location, while caching the contents locally for increased speed and availability. Roaming User Profiles is used to redirect a user profile to a network location. These features used to be referred to as Intellimirror.
 
 - **Folder Redirection** enables users and administrators to redirect the path of a known folder to a new location, manually or by using Group Policy. The new location can be a folder on the local computer or a directory on a file share. Users interact with files in the redirected folder as if it still existed on the local drive. For example, you can redirect the Documents folder, which is usually stored on a local drive, to a network location. The files in the folder are then available to the user from any computer on the network.
 - **Offline Files** makes network files available to a user, even if the network connection to the server is unavailable or slow. When working online, file access performance is at the speed of the network and server. When working offline, files are retrieved from the Offline Files folder at local access speeds. A computer switches to Offline Mode in the following situations:
@@ -25,11 +25,11 @@ Folder Redirection and Offline Files are used together to redirect the path of l
   - The network connection is slower than a configurable threshold.
   - The user manually switches to Offline Mode by using the **Work offline** button in Windows Explorer.
 
-- **Roaming User Profiles** redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers. When a user signs in to a computer by using an account that is set up with a file share as the profile path, the user's profile loads to the local computer and merges with the local profile (if present). When the user signs out of the computer, the local copy of their profile, including any changes, merges with the server copy of the profile. Typically, a network administrator enables Roaming User Profiles on domain accounts.
+- **Roaming User Profiles** redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers. When a user signs in to a computer by using an account that's set up with a file share as the profile path, the user's profile loads to the local computer and merges with the local profile, if present. When the user signs out of the computer, the local copy of their profile, including any changes, merges with the server copy of the profile. Typically, a network administrator enables Roaming User Profiles on domain accounts.
 
 ## Practical applications
 
-Administrators can use Folder Redirection, Offline Files, and Roaming User Profiles to centralize storage for user data and settings. These features let users access their data while offline or in the event of a network or server outage. Some specific applications include:
+Administrators can use Folder Redirection, Offline Files, and Roaming User Profiles to centralize storage for user data and settings. These features let users access their data while offline or in the event of a network or server outage. These features can also accomplish these specific applications:
 
 - Centralize data from client computers for administrative tasks, such as using a server-based backup tool to back up user folders and settings.
 - Enable users to continue accessing network files, even if there is a network or server outage.
@@ -105,7 +105,7 @@ To limit downloading private user data to primary computers, the Folder Redirect
 1. If the policy setting enables primary computer support, Windows verifies that the AD DS schema supports the **msDS-Primary-Computer** attribute. If it does, Windows determines if the computer that the user is logging on to is designated as a primary computer for the user as follows:
 
    1. If the computer is one of the user's primary computers, Windows applies the Roaming User Profiles and Folder Redirection settings.
-   1. If the computer is not one of the user's primary computers, Windows loads the user's cached local profile, if present, or it creates a new local profile. Windows also removes any existing redirected folders according to the removal action that was specified by the previously applied Group Policy setting, which is retained in the local Folder Redirection configuration.
+   1. If the computer isn't one of the user's primary computers, Windows loads the user's cached local profile, if present, or it creates a new local profile. Windows also removes any existing redirected folders according to the removal action that was specified by the previously applied Group Policy setting, which is retained in the local Folder Redirection configuration.
 
 For more information, see [Deploy primary computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 
@@ -117,8 +117,8 @@ Folder Redirection, Offline Files, and Roaming User Profiles require an x64-base
 
 To designate primary computers, your environment must meet the following requirements:
 
-- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema and conditions (installing a Windows Server 2012 or later domain controller automatically updates the schema). For more information about upgrading the AD DS schema, see [Upgrade domain controllers to a newer version of Windows Server](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
-- Client computers must run Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, or Windows Server 2016 and be joined to the Active Directory domain that you are managing.
+- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema and conditions. Installing a Windows Server 2012 or later domain controller automatically updates the schema. For more information about upgrading the AD DS schema, see [Upgrade domain controllers to a newer version of Windows Server](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
+- Client computers must run Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, or Windows Server 2016 and be joined to the Active Directory domain that you're managing.
 
 ## Related links
 
