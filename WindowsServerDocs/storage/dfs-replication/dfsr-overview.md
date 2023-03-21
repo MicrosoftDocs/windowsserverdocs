@@ -29,7 +29,7 @@ To use DFS Replication, you create _replication groups_ and add replicated folde
 
 The following figure illustrates the relationship between a replication group, the members in the group, and the replicated folders. 
 
-![Image that shows a replication group with a connection between two members that each have replicated folders.](media/dfsr-overview.gif)
+:::image type="content" source="./media/dfsr-overview.gif" alt-text="Image that shows a replication group with a connection between two members that each have replicated folders." border="false":::
 
 A replicated folder is a folder that stays synchronized on each member in a group. In the figure, there are two replicated folders: Projects and Proposals. As the data changes in each replicated folder, the changes are replicated across connections between the members of the replication group. The connections between all members form the replication topology.
 
