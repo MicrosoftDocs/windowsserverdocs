@@ -18,12 +18,12 @@ This topic discusses the Folder Redirection, Offline Files (client-side caching 
 Folder Redirection and Offline Files are used together to redirect the path of local folders, such as the Documents folder, to a network location, while caching the contents locally for increased speed and availability. Roaming User Profiles is used to redirect a user profile to a network location. These features used to be referred to as Intellimirror.
 
 - **Folder Redirection** enables users and administrators to redirect the path of a known folder to a new location, manually or by using Group Policy. The new location can be a folder on the local computer or a directory on a file share. Users interact with files in the redirected folder as if it still existed on the local drive. For example, you can redirect the Documents folder, which is usually stored on a local drive, to a network location. The files in the folder are then available to the user from any computer on the network.
-- **Offline Files** makes network files available to a user, even if the network connection to the server is unavailable or slow. When working online, file access performance is at the speed of the network and server. When working offline, files are retrieved from the Offline Files folder at local access speeds. A computer switches to Offline Mode in the following situations:
+- **Offline Files** makes network files available to a user, even if the network connection to the server is unavailable or slow. When working online, file access performance is at the speed of the network and server. When working offline, files are retrieved from the Offline Files folder at local access speeds. A computer switches to Offline mode in the following situations:
 
   - **Always Offline** mode has been enabled.
   - The server is unavailable.
   - The network connection is slower than a configurable threshold.
-  - The user manually switches to Offline Mode by using the **Work offline** button in Windows Explorer.
+  - The user manually switches to Offline mode by using the **Work offline** button in Windows Explorer.
 
 - **Roaming User Profiles** redirects user profiles to a file share so that users receive the same operating system and application settings on multiple computers. When a user signs in to a computer by using an account that's set up with a file share as the profile path, the user's profile loads to the local computer and merges with the local profile, if present. When the user signs out of the computer, the local copy of their profile, including any changes, merges with the server copy of the profile. Typically, a network administrator enables Roaming User Profiles on domain accounts.
 
