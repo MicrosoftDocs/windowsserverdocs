@@ -1,27 +1,25 @@
 ---
 ms.assetid: c91c7196-ee0d-4856-8cfb-4c38494ccf1f
 title: Work Folders overview
-ms.topic: article
+ms.topic: conceptual
 author: JasonGerend
 manager: femila
 ms.author: jgerend
-ms.date: 03/21/2023
-description: Learn how Work Folders provides a consistent way for users to access work files from PCs and devices.
+ms.date: 03/22/2023
+description: Learn how Work Folders provides a consistent way for users to access work files from PCs and devices in Windows.
 ---
 
 # Work Folders overview
 
->Applies to: Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
+>**Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Work Folders is Windows Server role service for file servers. Work Folders provides a consistent way for users to access their work files from their PCs and devices. For older versions, see [Install other versions of Work Folders](#install-other-versions-of-work-folders).
+Work Folders is a Windows Server role service for file servers. Work Folders provides a consistent way for users to access their work files from their PCs and devices. For older versions, see [Other versions of Work Folders](#other-versions-of-work-folders).
 
-## Role description
-
- With Work Folders, users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access those files from anywhere. Organizations use Work Folders to help maintain control over corporate data. They can store files on centrally-managed file servers and define user device policies such as encryption and lock-screen passwords.
+ With Work Folders, users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access those files from anywhere. Organizations use Work Folders to help maintain control over corporate data. They can store files on centrally managed file servers and define user device policies such as encryption and lock-screen passwords.
 
  You can deploy Work Folders with existing deployments of Folder Redirection, Offline Files, and home folders. Work Folders stores user files in a folder on the server called a *sync share*. You can specify a folder that already contains user data, which enables you to adopt Work Folders without migrating servers and data or immediately phasing out your existing solution.
 
-## Practical applications
+## Common Uses
 
  Administrators can use Work Folders to provide users with access to their work files while keeping centralized storage and control over the organization's data. Work Folders can also accomplish these specific applications:
 
@@ -37,86 +35,82 @@ Work Folders is Windows Server role service for file servers. Work Folders provi
 
 - Use Failover Clustering with Work Folders to provide a high-availability solution.
 
-## Important functionality
+## Important features
 
  Work Folders includes the following functionality.
 
-| Functionality | Availability | Description |
+| Features | Availability | Description |
 | ------------------- | ------------------ | ----------------- |
-| Work Folders role service in Server Manager | Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 | File and Storage Services provides a way to set up sync shares (folders that store user's work files), monitors Work Folders, and manages sync shares and user access. |
-| Work Folders cmdlets | Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 | This Windows PowerShell module contains comprehensive cmdlets for managing Work Folders servers. |
-| Work Folders integration with Windows | Windows 10<p> Windows 8.1<p> Windows RT 8.1<p> Windows 7 (download required) | Work Folders provides the following functionality in Windows computers:<p> -   A Control Panel item that sets up and monitors Work Folders.<br />-   A File Explorer integration that enables easy access to files in Work Folders.<br />-   A sync engine that transfers files to and from a central file server while maximizing battery life and system performance. |
-| Work Folders app for devices | Android<p> Apple iPhone and iPad® | An app that allows popular devices to access files in Work Folders. |
+| **Work Folders role service in Server Manager** | Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 | File and Storage Services provides a way to set up sync shares (folders that store user's work files), monitors Work Folders, and manages sync shares and user access. |
+| **Work Folders cmdlets** | Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 | The [SyncShare](/powershell/module/syncshare/)  Windows PowerShell module contains comprehensive cmdlets for managing Work Folders servers. |
+| **Work Folders integration with Windows** | Windows 10<p> Windows 8.1<p> Windows RT 8.1<p> Windows 7 (download required) | Work Folders provides the following functionality in Windows computers:<p> -   A Control Panel item that sets up and monitors Work Folders.<br />-   A File Explorer integration that enables easy access to files in Work Folders.<br />-   A sync engine that transfers files to and from a central file server while maximizing battery life and system performance. |
+| **Work Folders app for devices** | Android<p> Apple iPhone and iPad® | An app that allows popular devices to access files in Work Folders. |
 
-## New and changed functionality
+## Feature changes
 
 The following table describes some of the major changes in Work Folders.
 
-| Feature/functionality | New or updated? | Description |
-| ---------------------------- | --------------------- | ----------------- |
-| Improved logging | New in Windows Server 2019 | Event logs on the Work Folders server can be used to monitor sync activity and identify users that are failing sync sessions. Use Event ID 4020 in the Microsoft-Windows-SyncShare/Operational event log to identify which users are failing sync sessions. Use Event ID 7000 and Event ID 7001 in the Microsoft-Windows-SyncShare/Reporting event log to monitor users that are successfully completing upload and download sync sessions. |
-| Performance counters | New in Windows Server 2019 | The following performance counters were added: Bytes downloaded/sec, Bytes uploaded/sec, Connected Users, Files downloaded/sec, Files uploaded/sec, Users with change detection, Incoming requests/sec and Outstanding requests. |
-| Improved server performance | Updated in Windows Server 2019 | Performance improvements were made to handle more users per server. The limit per server varies and is based on the number of files and file churn. To determine the limit per server, users should be added to the server in phases. |
-| On-demand file access | Added to Windows 10 version 1803 | This feature enables you to see and access all of your files. You control which files are stored on your PC and available offline. The rest of your files are always visible and don’t take up any space on your PC, but you need connectivity to the Work Folders file server to access them. |
-| Azure AD Application Proxy support | Added to Windows 10 version 1703, Android, iOS | Remote users can securely access their files on the Work Folders server using Azure AD Application Proxy. |
-| Faster change replication | Updated in Windows 10 and Windows Server 2016 | For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients aren't notified of the change and wait up to 10 minutes to get the update. When you use Windows Server 2016, the Work Folders server immediately notifies Windows 10 clients, and the file changes are synced immediately. This capability is new in Windows Server 2016 and requires a Windows 10 client. If you're using an older client or the Work Folders server is Windows Server 2012 R2, the client continues to poll every 10 minutes for changes. |
-| Integrated with Windows Information Protection (WIP) | Added to Windows 10 version 1607 | If an administrator deploys WIP, Work Folders can enforce data protection by encrypting the data on the PC. The encryption uses a key associated with the Enterprise ID, which can be remotely wiped by using a supported mobile device management package such as Microsoft Intune. |
+| Features | Version | Status | Description |
+| ---------------------------- | --------------------- | ----------------- | ----------------- |
+| **Improved logging** | Windows Server 2019 | New to version | Event logs on the Work Folders server can be used to monitor sync activity and identify users that are failing sync sessions. Use Event ID 4020 in the Microsoft-Windows-SyncShare/Operational event log to identify which users are failing sync sessions. Use Event ID 7000 and Event ID 7001 in the Microsoft-Windows-SyncShare/Reporting event log to monitor users that are successfully completing upload and download sync sessions. |
+| **Performance counters** | Windows Server 2019 | New to version | The following performance counters were added: Bytes downloaded/sec, Bytes uploaded/sec, Connected Users, Files downloaded/sec, Files uploaded/sec, Users with change detection, Incoming requests/sec and Outstanding requests. |
+| **Improved server performance** | Windows Server 2019 | Updated | Performance improvements were made to handle more users per server. The limit per server varies and is based on the number of files and file churn. To determine the limit per server, users should be added to the server in phases. |
+| **On-demand file access** | Windows 10 version 1803 | Added | This feature enables you to see and access all of your files. You control which files are stored on your PC and available offline. The rest of your files are always visible and don’t take up any space on your PC, but you need connectivity to the Work Folders file server to access them. |
+| **Azure AD Application Proxy support** | Windows 10 version 1703, Android, iOS | Added | Remote users can securely access their files on the Work Folders server using Azure AD Application Proxy. |
+| **Faster change replication** | Windows 10 and Windows Server 2016 | Updated | For Windows Server 2012 R2, when file changes are synced to the Work Folders server, clients aren't notified of the change and wait up to 10 minutes to get the update. When you use Windows Server 2016, the Work Folders server immediately notifies Windows 10 clients, and the file changes are synced immediately. This capability is new in Windows Server 2016 and requires a Windows 10 client. If you're using an older client or the Work Folders server is Windows Server 2012 R2, the client continues to poll every 10 minutes for changes. |
+| **Integrated with Windows Information Protection (WIP)** | Windows 10 version 1607 | Added | If an administrator deploys WIP, Work Folders can enforce data protection by encrypting the data on the PC. The encryption uses a key associated with the Enterprise ID, which can be remotely wiped by using a supported mobile device management package such as Microsoft Intune. |
 
 ## Software requirements
 
 Work Folders has the following software requirements for file servers and your network infrastructure:
 
-- A server running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 for hosting sync shares with user files.
+1. A server running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 for hosting sync shares with user files.
 
-- A volume formatted with the NTFS file system for storing user files.
+1. A volume formatted with the NTFS file system for storing user files.
 
-- To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).
+1. To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).
 
-- A server certificate for each file server that will host Work Folders. These certificates should be from a certification authority (CA) that's trusted by your users&mdash;ideally a public CA.
+1. A server certificate for each file server that will host Work Folders. These certificates should be from a certification authority (CA) that's trusted by your users&mdash;ideally a public CA.
 
-- (Optional) An Active Directory Domain Services forest with the schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when you use multiple file servers.
+1. (Optional) An Active Directory Domain Services forest with the schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when you use multiple file servers.
 
 To enable users to sync across the internet, there are more requirements:
 
-- The ability to make a server accessible from the internet by creating publishing rules in your organization's reverse proxy or network gateway.
+1. The ability to make a server accessible from the internet by creating publishing rules in your organization's reverse proxy or network gateway.
 
-- (Optional) A publicly registered domain name and the ability to create more public DNS records for the domain.
+1. (Optional) A publicly registered domain name and the ability to create more public DNS records for the domain.
 
-- (Optional) Active Directory Federation Services (AD FS) infrastructure when you use AD FS authentication.
+1. (Optional) Active Directory Federation Services (AD FS) infrastructure when you use AD FS authentication.
 
 Work Folders has the following software requirements for client computers:
 
-- PCs and devices must be running one of the following operating systems:
+1. PCs and devices must be running one of the following operating systems:
+   - Windows 10
+   - Windows 8.1
+   - Windows RT 8.1
+   - Windows 7
+   - Android 4.4 KitKat and later
+   - iOS 10.2 and later
 
-  - Windows 10
-  - Windows 8.1
-  - Windows RT 8.1
-  - Windows 7
-  - Android 4.4 KitKat and later
-  - iOS 10.2 and later
+   > [!NOTE]
+   > The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
 
- > [!NOTE]
- > The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
+1. Windows 7 PCs must be running one of the following editions of Windows:
+   - Windows 7 Professional
+   - Windows 7 Ultimate
+   - Windows 7 Enterprise
 
-- Windows 7 PCs must be running one of the following editions of Windows:
+1. Windows 7 PCs must be joined to your organization's domain (they can't be joined to a workgroup).
 
-  - Windows 7 Professional
+1. Enough free space on a local, NTFS-formatted drive to store all the user's files in Work Folders, plus 6 more GB of free space if Work Folders is located on the system drive, as it is by default. Work Folders uses the following location by default: **%USERPROFILE%\Work Folders**
 
-  - Windows 7 Ultimate
-
-  - Windows 7 Enterprise
-
-- Windows 7 PCs must be joined to your organization's domain (they can't be joined to a workgroup).
-
-- Enough free space on a local, NTFS-formatted drive to store all the user's files in Work Folders, plus 6 more GB of free space if Work Folders is located on the system drive, as it is by default. Work Folders uses the following location by default: **%USERPROFILE%\Work Folders**
-
-     However, users can change the location during setup. microSD cards and USB drives formatted with the NTFS file system are supported locations though sync stops if the drives are removed.
+     However, users can change the location during setup. microSD cards and USB drives formatted with the NTFS file system are supported locations. Sync stops if the drives are removed.
 
      The maximum size for individual files is 10 GB by default. There's no per-user storage limit. However, administrators can use the quotas functionality of File Server Resource Manager to implement quotas.
 
-- Work Folders doesn't support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.
+1. Work Folders doesn't support rolling back the virtual machine state of client virtual machines. Instead perform backup and restore operations from inside the client virtual machine by using System Image Backup or another backup app.
 
-## Install other versions of Work Folders
+## Other versions of Work Folders
 
 If you want to download or use Work Folders on Windows 10, Windows 7, or an Android or iOS device, see:
 
@@ -129,7 +123,7 @@ If you want to download or use Work Folders on Windows 10, Windows 7, or an Andr
 > [!NOTE]
 > The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
 
-## Work Folders compared to other sync technologies
+## Comparison with other sync technologies
 
 The following table discusses how various Microsoft sync technologies are positioned and when to use each.
 
@@ -142,9 +136,9 @@ The following table discusses how various Microsoft sync technologies are positi
 | **Supported clients** | PCs, iOS, Android | PCs in a corporate network or connected through DirectAccess, VPNs, or other remote access technologies | PCs, iOS, Android, Windows Phone | PCs, Mac computers, Windows Phone, iOS, Android |
 
 > [!NOTE]
-> In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see [DFS Namespaces and DFS Replication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)) and [BranchCache Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
+> In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see the [DFS Namespaces overview](/windows-server/storage/dfs-namespaces/dfs-overview), [DFS Replication overview](/windows-server/storage/dfs-replication/dfsr-overview), and [BranchCache Overview](/windows-server/networking/branchcache/branchcache).
 
-## Server Manager information
+## Server Manager
 
 Work Folders is part of the File and Storage Services role. You can install Work Folders by using the Add Roles and Features Wizard or the `Install-WindowsFeature` cmdlet. Both methods accomplish the following tasks:
 
@@ -154,9 +148,9 @@ Work Folders is part of the File and Storage Services role. You can install Work
 
 - Install the SyncShare Windows PowerShell module to manage Work Folders on the server.
 
-## Interoperability with Microsoft Azure virtual machines
+## Interoperability with Azure virtual machines
 
- You can run this Windows Server role service on a virtual machine in Microsoft Azure. This scenario has been tested with Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.
+ You can run this Windows Server role service on a virtual machine in Azure. This scenario has been tested with Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.
 
 To learn how to get started, see [Virtual machines in Azure](/azure/virtual-machines).
 
@@ -169,4 +163,4 @@ To learn how to get started, see [Virtual machines in Azure](/azure/virtual-mach
 | **Operations** | -   [Work Folders iPad app: FAQ](https://windows.microsoft.com/windows/work-folders-ipad-faq) (for users)<br />-   [Work Folders Certificate Management](https://techcommunity.microsoft.com/t5/storage-at-microsoft/work-folders-certificate-management/ba-p/424809) (blog post)<br />-   [Monitoring Windows Server 2012 R2 Work Folders Deployments](https://techcommunity.microsoft.com/t5/storage-at-microsoft/monitoring-windows-server-2012-r2-work-folders-deployments/ba-p/425019) (blog post)<br />-   [SyncShare (Work Folders) Cmdlets in Windows PowerShell](/powershell/module/syncshare/)<br />-   [Storage and File Services PowerShell Cmdlets Quick Reference Card For Windows Server 2012 R2 Preview Edition](https://techcommunity.microsoft.com/t5/storage-at-microsoft/storage-and-file-services-powershell-cmdlets-quick-reference/ba-p/424772) |
 | **Troubleshooting** | -   [Windows Server 2012 R2 – Resolving Port Conflict with IIS Websites and Work Folders](https://techcommunity.microsoft.com/t5/storage-at-microsoft/windows-server-2012-r2-8211-resolving-port-conflict-with-iis/ba-p/424985) (blog post)<br />-   [Common Errors in Work Folders](https://techcommunity.microsoft.com/t5/storage-at-microsoft/troubleshooting-work-folders-on-windows-client/ba-p/425627) |
 | **Community resources** | -   [File Services and Storage Forum](/answers/topics/windows-server-storage.html)<br />-   [Storage at Microsoft Blogs](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Ask the Directory Services Team Blog](/archive/blogs/askds/) |
-| **Related technologies** | -   [Storage in Windows Server 2019 and Windows Server 2016](../storage.yml)<br>-   [File and Storage Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))<br />-   [File Server Resource Manager](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11))<br />-   [Folder Redirection, Offline Files, and Roaming User Profiles](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848267(v=ws.11))<br />-   [BranchCache](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))<br />-   [DFS Namespaces and DFS Replication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)) |
+| **Related technologies** | -   [Storage in Windows Server 2019 and Windows Server 2016](../storage.yml)<br>-   [File and Storage Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))<br />-   [File Server Resource Manager](/windows-server/storage/fsrm/fsrm-overview)<br />-   [Folder Redirection, Offline Files, and Roaming User Profiles](/windows-server/storage/folder-redirection/folder-redirection-rup-overview)<br />-   [BranchCache Overview](/windows-server/networking/branchcache/branchcache)<br />-   [DFS Namespaces overview](/windows-server/storage/dfs-namespaces/dfs-overview)<br />-  [DFS Replication overview](/windows-server/storage/dfs-replication/dfsr-overview) |
