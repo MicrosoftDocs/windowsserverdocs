@@ -55,7 +55,7 @@ To make sure Folder Redirection and Offline Files interact correctly with other 
 
 - If the file share uses DFS Namespaces, the DFS folders (links) must have a single target to prevent users from making conflicting edits on different servers.
 - If the file share uses DFS Replication to replicate the contents with another server, users must be able to access only the source server to prevent users from making conflicting edits on different servers.
-- When using a clustered file share, disable continuous availability on the file share to avoid performance issues with Folder Redirection and Offline Files. Also, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a continuously available file share. The delay could frustrate users who aren’t yet using the Always Offline mode of Offline Files.
+- When using a clustered file share, disable continuous availability on the file share to avoid performance issues with Folder Redirection and Offline Files. When continuous availability is enabled, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to the file share. The delay could frustrate users who aren’t yet using the Always Offline mode of Offline Files.
 
 ### Client requirements
 
