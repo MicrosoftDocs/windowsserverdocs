@@ -207,8 +207,6 @@ After you create a GPO for Folder Redirection settings, follow these steps to ed
 1. In the Group Policy Management Editor window, navigate to **User Configuration** > **Policies** > **Windows Settings** > **Folder Redirection**.
 1. Right-click a folder that you want to redirect (for example, **Documents**), and then select **Properties**.
 1. In the **Properties** dialog box, from the **Setting** box, select **Basic - Redirect everyone’s folder to the same location**.
-   > [!NOTE]  
-   > To apply Folder Redirection to client computers that run Windows XP or Windows Server 2003, select the **Settings** tab and then select the **Also apply redirection policy to Windows 2000, Windows 2000 Server, Windows XP, and Windows Server 2003 operating systems** checkbox.
 
 1. In the **Target folder location** section, select **Create a folder for each user under the root path**.
 1. In the **Root Path** box, enter the path to the file share that stores the redirected folders, such as **\\\\`fs1.corp.contoso.com`\\`users$`**.
