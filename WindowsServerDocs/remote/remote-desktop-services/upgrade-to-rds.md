@@ -64,7 +64,7 @@ We support the following patching scenarios:
 
 End users can't upgrade their personal desktops. Administrators should perform the upgrade. The exact steps are still to be determined.
 
-## Known Issues
+## Known issues
 
 **Issue:** If the RD deployment has RD Web Access (RDWA) Role already installed and has been upgraded from a previous windows installation, a new upgrade might fail. For example, if the deployment containing RDWA upgraded from Server 2012 R2 to Server 2019, another upgrade to Server 2022 might encounter a failure.
 
