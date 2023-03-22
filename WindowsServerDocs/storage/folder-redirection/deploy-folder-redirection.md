@@ -98,7 +98,7 @@ If you don't already have a file share for redirected folders, use the following
    - If you don't have File Server Resource Manager installed or you aren't using folder management properties, select **SMB Share – Quick**.
 
 1. On the **Share Location** page, select the server and volume on which you want to create the share.
-1. On the **Share Name** page, enter a name for the share (for example, **Users$**) in the **Share name** box.
+1. On the **Share Name** page, enter a name for the share (for example, `Users$`) in the **Share name** box.
 
    > [!TIP]  
    > When you create the share, hide the share by putting a `$` (dollar sign) after the share name. This change hides the share from casual browsers.
