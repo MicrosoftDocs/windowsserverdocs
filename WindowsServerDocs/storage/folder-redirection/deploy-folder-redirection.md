@@ -209,7 +209,7 @@ After you create a GPO for Folder Redirection settings, follow these steps to ed
 1. In the **Properties** dialog box, from the **Setting** box, select **Basic - Redirect everyone’s folder to the same location**.
 
 1. In the **Target folder location** section, select **Create a folder for each user under the root path**.
-1. In the **Root Path** box, enter the path to the file share that stores the redirected folders, such as **\\\\`fs1.corp.contoso.com`\\`users$`**.
+1. In the **Root Path** box, enter the path to the file share that stores the redirected folders, such as `\\fs1.corp.contoso.com\users$`.
 1. (Optional) Select the **Settings** tab, and in the **Policy Removal** section, select **Redirect the folder back to the local userprofile location when the policy is removed**. This setting can help make Folder Redirection behave more predictably for administrators and users.
 1. Select **OK**, and then select **Yes** in the **Warning** dialog box.
 
