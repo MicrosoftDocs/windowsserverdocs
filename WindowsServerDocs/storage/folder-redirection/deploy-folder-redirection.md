@@ -287,5 +287,5 @@ The following table summarizes some of the most important changes to this articl
 - [Deploy primary computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 - [Enable Always Offline mode for faster access to files](enable-always-offline.md)
 - [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
-- [Sideload Apps with DISM](/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10))
+- [Sideload Apps with DISM](/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14)
 - [Troubleshooting packaging, deployment, and query of Windows apps](/windows/win32/appxpkg/troubleshooting)
