@@ -88,7 +88,7 @@ Windows LAPS does respond to Group Policy change notifications. You can manually
    gpupdate.exe /target:computer /force
    ```
 
-- Run the `Initiate-LapsPolicyProcessing` cmdlet. This method is preferred because it's more scoped.
+- Run the `Invoke-LapsPolicyProcessing` cmdlet. This method is preferred because it's more scoped.
 
 > [!TIP]
 > The earlier released Microsoft LAPS (legacy Microsoft LAPS) was built as a Group Policy (GPO) Client Side Extension (CSE). GPO CSEs are loaded and invoked in every Group Policy refresh cycle. The frequency of the legacy Microsoft LAPS polling cycle is the same as the frequency of the Group Policy refresh cycle. Windows LAPS is not built as a CSE, so its polling cycle is hard-coded to once per hour. Windows LAPS is not affected by the Group Policy refresh cycle.
