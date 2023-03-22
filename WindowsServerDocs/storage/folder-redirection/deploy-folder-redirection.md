@@ -20,7 +20,7 @@ For a list of recent changes to this article, see [Change history](#change-histo
 
 ## Prerequisites
 
-Make sure your environment meets the following requirements.
+Before you begin, make sure your environment meets the following requirements.
 
 ### Administration requirements
 
