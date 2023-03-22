@@ -286,6 +286,6 @@ The following table summarizes some of the most important changes to this articl
 - [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
 - [Deploy primary computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 - [Enable Always Offline mode for faster access to files](enable-always-offline.md)
-- [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
+- [Information about Microsoft support policy for a DFS-R and DFS-N deployment scenario](/troubleshoot/windows-server/networking/support-policy-for-dfsr-dfsn-deployment)
 - [Sideload Apps with DISM](/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14)
 - [Troubleshooting packaging, deployment, and query of Windows apps](/windows/win32/appxpkg/troubleshooting)
