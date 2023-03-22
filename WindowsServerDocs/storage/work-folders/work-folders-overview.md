@@ -15,9 +15,9 @@ description: Learn how Work Folders provides a consistent way for users to acces
 
 Work Folders is a Windows Server role service for file servers. Work Folders provides a consistent way for users to access their work files from their PCs and devices. For older versions, see [Other versions of Work Folders](#other-versions-of-work-folders).
 
- With Work Folders, users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access those files from anywhere. Organizations use Work Folders to help maintain control over corporate data. They can store files on centrally managed file servers and define user device policies such as encryption and lock-screen passwords.
+With Work Folders, users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access those files from anywhere. Organizations use Work Folders to help maintain control over corporate data. They can store files on centrally managed file servers and define user device policies such as encryption and lock-screen passwords.
 
- You can deploy Work Folders with existing deployments of Folder Redirection, Offline Files, and home folders. Work Folders stores user files in a folder on the server called a *sync share*. You can specify a folder that already contains user data, which enables you to adopt Work Folders without migrating servers and data or immediately phasing out your existing solution.
+You can deploy Work Folders with existing deployments of Folder Redirection, Offline Files, and home folders. Work Folders stores user files in a folder on the server called a *sync share*. You can specify a folder that already contains user data, which enables you to adopt Work Folders without migrating servers and data or immediately phasing out your existing solution.
 
 ## Common uses
 
@@ -37,7 +37,7 @@ Work Folders is a Windows Server role service for file servers. Work Folders pro
 
 ## Important features
 
-Work Folders provides users with different multiple ways to access, manage, and share work files. The following table describes the primary features of Work Folders:
+Work Folders provides users with multiple ways to access, manage, and share work files. The following table describes the primary features of Work Folders:
 
 | Features | Availability | Description |
 | ------------------- | ------------------ | ----------------- |
@@ -66,23 +66,23 @@ Work Folders requires specific software depending on the operating system and ve
 
 ### Requirements for file servers and network infrastructure
 
-- A server running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 for hosting sync shares with user files.
+- **Server requirement.** A server running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2 for hosting sync shares with user files.
 
-- A volume formatted with the NTFS file system for storing user files.
+- **Volume requirement.** A volume formatted with the NTFS file system for storing user files.
 
-- To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).
+- **Password enforcement policy.** To enforce password policies on Windows 7 PCs, you must use Group Policy password policies. You also have to exclude the Windows 7 PCs from Work Folders password policies (if you use them).
 
-- A server certificate for each file server that will host Work Folders. These certificates should be from a certification authority (CA) that's trusted by your users&mdash;ideally a public CA.
+- **A server certificate.** There must be a server certificate for each file server that will host Work Folders. These certificates should be from a certification authority (CA) that's trusted by your users&mdash;ideally a public CA.
 
-- (Optional) An Active Directory Domain Services forest with the schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when you use multiple file servers.
+- **(Optional) An Active Directory Domain Services forest.** Use this forest with the schema extensions in Windows Server 2012 R2 to support automatically referring PCs and devices to the correct file server when you use multiple file servers.
 
 ### Requirements for enabling users to sync across the internet
 
-- The ability to make a server accessible from the internet by creating publishing rules in your organization's reverse proxy or network gateway.
+- **Server accessibility.** The ability to make a server accessible from the internet by creating publishing rules in your organization's reverse proxy or network gateway.
 
-- (Optional) A publicly registered domain name and the ability to create more public DNS records for the domain.
+- **(Optional) Domain name.** A publicly registered domain name and the ability to create more public DNS records for the domain.
 
-- (Optional) Active Directory Federation Services (AD FS) infrastructure when you use AD FS authentication.
+- **(Optional) Infrastructure.** Active Directory Federation Services (AD FS) infrastructure when you use AD FS authentication.
 
 ### Requirements for client computers
 
