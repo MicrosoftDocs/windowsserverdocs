@@ -19,8 +19,7 @@ To use DFS Replication to replicate the SYSVOL folder, you can either create a n
 This document assumes that you have a basic knowledge of Active Directory Domain Services (AD DS), FRS, and Distributed File System Replication (DFS Replication). For more information, see [Active Directory Domain Services overview](/previous-versions/orphan-topics/ws.11/cc731053(v=ws.11)), [FRS overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754297(v=ws.11)), or [Overview of DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771058(v=ws.11)).
 
 > [!NOTE]
-> To download a printable version of this guide, go to <a href="https://go.microsoft.com/fwlink/?linkid=150375">SYSVOL Replication Migration Guide: FRS to DFS Replication</a> (https://go.microsoft.com/fwlink/?LinkId=150375).
-<br>
+> To download a printable version of this guide, go to [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://go.microsoft.com/fwlink/?LinkId=150375).
 
 ## In this guide
 
