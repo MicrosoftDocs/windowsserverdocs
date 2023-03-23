@@ -49,9 +49,9 @@ To make a VHD available for use (either one you've created or another existing V
 
 1. On the **Action** menu, select **Attach VHD**.
 
-1. After the *Attach Virtual Hard Disk* dialog box opens, select the browse button, and find your **.vhd** file.
+1. After the *Attach Virtual Hard Disk* dialog box opens, select the **Browse** button, and find your **.vhd** file.
 
-1. Now that you've selected the **.vhd** file, you return to the Attach Virtual Hard Disk Dialog box. Select **OK**.
+1. Now that you've selected the **.vhd** file, you return to the *Attach Virtual Hard Disk* dialog box. Select **OK**.
 
 ## Detach a VHD
 
