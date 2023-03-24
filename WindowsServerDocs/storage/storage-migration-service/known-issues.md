@@ -856,9 +856,9 @@ Windows updates released on and after October 11, 2022 contain extra protections
 
 - The user attempting the operation is the creator of the existing account.
 
-- A member of Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators created the computer account.
+- The user attempting the operation is a member of Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators created the computer account.
 
-- The owner of the computer account that is being reused is a member of the "Domain controller: Allow computer account reuse during domain join." Group Policy setting.
+- The user attempting the operation is a member of the "Domain controller: Allow computer account reuse during domain join." Group Policy setting for the computer account.
 
 To resolve this issue, use one of the following solutions.
 
