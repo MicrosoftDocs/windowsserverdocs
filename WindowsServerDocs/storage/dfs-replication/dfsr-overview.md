@@ -1,7 +1,7 @@
 ---
 title: DFS Replication overview
-description: Learn how to use the Distributed File System (DFS) Replication role service in Windows Server to efficiently replicate folders across multiple servers and sites.
-ms.date: 03/21/2023
+description: Learn how to use the Distributed File System (DFS) Replication role service in Windows Server to replicate folders across multiple servers and sites.
+ms.date: 03/23/2023
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
@@ -85,17 +85,20 @@ To install DFS Replication by using Server Manager, follow these steps.
 
 1. Under **Server Selection**, select the server or virtual hard disk (VHD) where you want to install DFS Replication. The server or VHD should be an offline virtual machine.
 
-1. Install the desired RSAT role services or features to support DFS replication.
+1. To install the DFS Replication service, go to **Server Roles**.
+   
+   > [!NOTE]
+   > For Windows Server 2022, also expand **File and Storage Services** > **File and iSCSI Services**.
+      
+   - Select **DFS Replication**.
+   
+1. To install the DFS Management Tools, go to **Features**.
 
-   1. To install the DFS Replication service, go to **Server Roles**, and select **DFS Replication**.
+   1. Expand **Remote Server Administration Tools**, **Role Administration Tools**, and then expand **File Services Tools**.
    
-   1. To install the DFS Management Tools, go to **Features**.
-
-      1. Expand **Remote Server Administration Tools**, **Role Administration Tools**, and then expand **File Services Tools**.
+   1. Select **DFS Management Tools**.
    
-      1. Select **DFS Management Tools**.
-   
-      The **DFS Management Tools** option installs the DFS Management snap-in, the DFS Replication and DFS Namespaces modules for Windows PowerShell, and command-line tools. The option doesn't install any DFS services on the server.
+   The **DFS Management Tools** option installs the DFS Management snap-in, the DFS Replication and DFS Namespaces modules for Windows PowerShell, and command-line tools. The option doesn't install any DFS services on the server.
 
 ## Install DFS Replication from PowerShell
 
