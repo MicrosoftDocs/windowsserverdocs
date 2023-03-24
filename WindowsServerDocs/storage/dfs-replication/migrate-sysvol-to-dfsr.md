@@ -32,17 +32,17 @@ To download a printable version of this guide, go to [SYSVOL Replication Migrati
 
 The SYSVOL migration guide provides topics that describe a range of concepts and procedures from the use of FRS to the use DFS. Use the following list to access articles about migrating the SYSVOL folder to use DFS Replication.
 
-### Conceptual information
+### Concepts
 
-Review concepts about SYSVOL migration states for a basic understanding of the migration tasks.
+Review these concepts about SYSVOL migration states for a basic understanding of the migration tasks.
 
 - [SYSVOL migration conceptual information](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640170(v=ws.10))
 - [SYSVOL migration states](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641052(v=ws.10))
 - [Overview of the SYSVOL migration procedure](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639809(v=ws.10))
 
-### Procedure
+### Procedures
 
-Review concepts about SYSVOL migration procedures for a basic understanding of the migration states.
+Follow these SYSVOL migration procedures for a basic understanding of the migration states.
 
 - [SYSVOL migration procedure](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639860(v=ws.10))
 - [Migrating to the Prepared state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641193(v=ws.10))
@@ -51,13 +51,13 @@ Review concepts about SYSVOL migration procedures for a basic understanding of t
 
 ### Troubleshooting
 
-Review common troubleshooting topics about SYSVOL migration states for a basic understanding of common migration issues.
+Access these articles that describe known issues and provide troubleshooting guidance.
 
 - [Troubleshooting SYSVOL migration](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640395(v=ws.10))
 - [Troubleshooting SYSVOL migration issues](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639976(v=ws.10))
 - [Rolling back SYSVOL migration to a previous stable state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640509(v=ws.10))
 
-### Reference information
+### References
 
 The following resources offer supplemental reference information:
 
