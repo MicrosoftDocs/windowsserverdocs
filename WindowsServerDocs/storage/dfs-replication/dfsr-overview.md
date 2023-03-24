@@ -31,13 +31,13 @@ The following figure illustrates the relationship between a replication group, t
 
 :::image type="content" source="./media/dfsr-overview.gif" alt-text="Image that shows a replication group with a connection between two members that each have replicated folders." border="false":::
 
-A replicated folder is a folder that stays synchronized on each member in a group. In the figure, there are two replicated folders: Projects and Proposals. As the data changes in each replicated folder, the changes are replicated across connections between the members of the replication group. The connections between all members form the replication topology.
+A _replicated folder_ stays synchronized on each member in a group. In the figure, there are two replicated folders: Projects and Proposals. As the data changes in each replicated folder, the changes are replicated across connections between the members of the replication group. The connections between all members form the replication topology.
 
 Creating multiple replicated folders in a single replication group simplifies the process of deploying replicated folders. The topology, schedule, and bandwidth throttling for the replication group are applied to each replicated folder. To deploy more replicated folders, you can run the Dfsradmin.exe tool or use a wizard to define the local path and permissions for the new replicated folder.
 
 Each replicated folder has unique settings, such as file and subfolder filters. The settings let you filter out different files and subfolders for each replicated folder.
 
-The replicated folders stored on each member can be located on different volumes in the member, and the replicated folders don't need to be shared folders or part of a namespace. However, the DFS Management snap-in makes it easy to share replicated folders and optionally publish them in an existing namespace.
+The replicated folders stored on each member can be located on different volumes in the member, and the replicated folders don't need to be shared folders or part of a namespace. However, the DFS Management snap-in simplifies sharing replicated folders and optionally publishing them in an existing namespace.
 
 ## Deploy and manage DFS Replication
 
@@ -65,7 +65,7 @@ Before you can deploy DFS Replication, you must configure your servers as follow
 
 DFS Replication on an Azure virtual machine is a verified scenario for Windows Server. However, there are some limitations and requirements for this implementation.
 
-- **Snapshots and saved states**. To restore a server that's running DFS Replication, don't use snapshots or saved states to replicate anything other than the sysvol folder. If you attempt this type of restore, DFS Replication fails. This restoration requires special database recovery steps. Also, don't export, clone, or copy the virtual machines. For more information, see [DFSR no longer replicates files after restoring a virtualized server's snapshot](/support/windows-server/networking/distributed-file-system-replication-not-replicate-files) and [Safely Virtualizing DFSR](https://techcommunity.microsoft.com/t5/storage-at-microsoft/safely-virtualizing-dfsr/ba-p/424671).
+- **Snapshots and saved states**. To restore a server that's running DFS Replication, don't use snapshots or saved states to replicate anything other than the sysvol folder. If you attempt this type of restore, DFS Replication fails. This restoration requires special database recovery steps. Also, don't export, clone, or copy the virtual machines. For more information, see [DFSR no longer replicates files after restoring a virtualized server's snapshot](/support/windows-server/networking/distributed-file-system-replication-not-replicate-files) and [Safely virtualizing DFSR](https://techcommunity.microsoft.com/t5/storage-at-microsoft/safely-virtualizing-dfsr/ba-p/424671).
 
 - **DFS Replication backups**. To back up data in a replicated folder that's stored in a virtual machine, use backup software that's located on the guest virtual machine. Don't back up or restore a virtualized DFS Replication server from the host virtual machine.
 
@@ -73,11 +73,11 @@ DFS Replication on an Azure virtual machine is a verified scenario for Windows S
 
 - **VPN connection**. DFS Replication requires a VPN connection between your on-premises replication group members and any members hosted in Azure virtual machines. You also need to configure the on-premises router (such as Forefront Threat Management Gateway) to allow the RPC Endpoint Mapper (port 135) and a randomly assigned port between 49152 and 65535 to pass over the VPN connection. You can use the `Set-DfsrMachineConfiguration` cmdlet or the `dfsrdiag` command-line tool to specify a static port instead of the random port. For more information about how to specify a static port for DFS Replication, see [`Set-DfsrServiceConfiguration`](/powershell/module/dfsr/set-dfsrserviceconfiguration). For information about related ports to open for managing Windows Server, see [Service overview and network port requirements for Windows](/support/windows-server/networking/service-overview-and-network-port-requirements).
 
-To learn how to get started with Azure virtual machines, visit the [Microsoft Azure web site](/azure/virtual-machines/).
+To learn how to get started with Azure virtual machines, visit the [Microsoft Azure website](/azure/virtual-machines/).
 
 ## Install DFS Replication from Server Manager
 
-To install DFS Replication by using Server Manager, follow these steps.
+To install DFS Replication by using Server Manager, follow these steps:
 
 1. Open Server Manager.
 
@@ -102,7 +102,7 @@ To install DFS Replication by using Server Manager, follow these steps.
 
 ## Install DFS Replication from PowerShell
 
-To install the DFS Replication by using Windows PowerShell, follow these steps.
+To install the DFS Replication by using Windows PowerShell, follow these steps:
 
 1. Open a Windows PowerShell session with elevated user rights.
 
