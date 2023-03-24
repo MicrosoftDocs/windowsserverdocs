@@ -11,7 +11,7 @@ ms.author: jgerend
 
 > **Applies To:** Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
 
-You can use Disk Management to mount (make a drive accessible) in a folder rather than a drive letter. The drive appears as just another folder. You can mount drives only in empty folders on basic or dynamic NTFS volumes.
+You can use Disk Management to mount (make a drive accessible) in a folder rather than a drive letter. It will look like just another folder. You can mount drives only in empty folders on basic or dynamic NTFS volumes.
 
 ## Before you start
 
@@ -19,7 +19,7 @@ You need to create a new empty folder and store it on an NTLFS or ReFS drive.
 
 To help you navigate the steps, here are some terms used in the instructions.
 
-| Value | Description |
+| Term | Description |
 | --- | --- |
 | **list volume** | Displays a list of basic and dynamic volumes on all disks. |
 | **select volume**        | Selects the specified volume, where *volumenumber* is the volume number, and gives it focus. If no volume is specified, the **select** command lists the current volume with focus. You can specify the volume by number, drive letter, or mount point folder path. On a basic disk, selecting a volume also gives the corresponding partition focus.|
