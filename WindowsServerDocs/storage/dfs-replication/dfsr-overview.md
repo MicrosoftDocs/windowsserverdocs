@@ -1,7 +1,7 @@
 ---
 title: DFS Replication overview
 description: Learn how to use the Distributed File System (DFS) Replication role service in Windows Server to replicate folders across multiple servers and sites.
-ms.date: 03/23/2023
+ms.date: 03/24/2023
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
@@ -86,11 +86,8 @@ To install DFS Replication by using Server Manager, follow these steps:
 1. Under **Server Selection**, select the server or virtual hard disk (VHD) where you want to install DFS Replication. The server or VHD should be an offline virtual machine.
 
 1. To install the DFS Replication service, go to **Server Roles**.
-   
-   > [!NOTE]
-   > For Windows Server 2022, also expand **File and Storage Services** > **File and iSCSI Services**.
-      
-   - Select **DFS Replication**.
+
+1. Expand **File and Storage Services** > **File and iSCSI Services**, and then select **DFS Replication**.
    
 1. To install the DFS Management Tools, go to **Features**.
 
