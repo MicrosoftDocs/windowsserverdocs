@@ -22,7 +22,7 @@ This article assumes you have a basic knowledge of Active Directory Domain Servi
 
 - [Active Directory Domain Services overview](/previous-versions/orphan-topics/ws.11/cc731053(v=ws.11))
 - [FRS overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754297(v=ws.11))
-- [Overview of DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771058(v=ws.11)).
+- [Overview of DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771058(v=ws.11))
 
 ## PDF download
 
