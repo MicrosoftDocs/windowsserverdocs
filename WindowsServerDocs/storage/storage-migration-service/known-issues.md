@@ -844,7 +844,7 @@ Get-ChildItem -path $FolderPath -Recurse | ForEach-Object {
 
 ## Cut over fails at 77% or 30%
 
-When performing cut over, the operation hangs at "77% - adding the destination computer to the domain" or "30% - Can't unjoin domain." This only happens when:
+When you're performing cut over, the operation hangs at "77% - adding the destination computer to the domain" or "30% - Can't unjoin domain." The issue only happens when:
 
 - A user who isn't a member of a built-in admin group in AD created the source or destination computer account in Active Directory.
 
@@ -852,10 +852,12 @@ When performing cut over, the operation hangs at "77% - adding the destination c
 
 - The migration user account isn't the same user who created the source computer account.
 
-Windows updates released on and after October 11, 2022 contain extra protections to address [CVE-2022-38042](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-38042), these extra protections caused the error. The protections were further updated with the March 14, 2023 monthly cumulative update, adding a workaround option for this error. The protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless:
+Windows updates released on and after October 11, 2022 contain extra protections to address [CVE-2022-38042](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-38042), these extra protections caused the issue. The protections were further updated with the March 14, 2023 monthly cumulative update, adding a workaround option for this issue. The protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless:
 
 - The user attempting the operation is the creator of the existing account.
+
 - A member of Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators created the computer account.
+
 - The owner of the computer account that is being reused is a member of the "Domain controller: Allow computer account reuse during domain join." Group Policy setting.
 
 To resolve this issue, use one of the following solutions:
@@ -864,16 +866,18 @@ To resolve this issue, use one of the following solutions:
 
 1. Ensure all domain controllers, the source computer, destination computer, and SMS migration computer have installed the March 14, 2023 cumulative update and have been rebooted.
 1. Follow the steps in detail in the Take Action section of [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8#bkmk_take_action).
-1. In Windows Admin Center, go to **Server Manager > Storage Migration Service** and then select the job that you want to complete.
-1. On the **Cut over to the new servers > Enter credentials** page, ensure the account used is the same account that was allowed to reuse computer accounts in step 2.
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that was allowed to reuse computer accounts in step 2."
 
 ### Solution 2 - Use the original account for migration
 
-When reaching the "Adjust Settings" step of the "Cut over to the new servers" phase in Windows Admin Center, under "AD Credentials" ensure the account used is the same account that created or joined the source and destination computer to the domain.
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that created or joined the source and destination computer to the domain.
 
 ### Solution 3 (not recommended) - Use a high-privilege group
 
-When reaching the "Adjust Settings" step of the "Cut over to the new servers" phase in Windows Admin Center, under "AD Credentials" ensure the account used is a member of Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators.
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is a member of one of the high-privilege Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators.
 
 > [!IMPORTANT]
 > If you have followed Solution #1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
