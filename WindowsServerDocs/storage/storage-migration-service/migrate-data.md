@@ -14,7 +14,7 @@ You can use [Storage Migration Service](overview.md) and Windows Admin Center to
 
 The migration process begins with a server inventory to identify the content to migrate, and a firewall check to ensure successful migration. The process transfers data from your source servers to the destination servers, and then cuts over to your new servers. After migration, you can process the decommissioned source servers, and reissue certificates on your new destination server.
 
-## Step 1: Install Storage Migration Service and check firewall ports
+## Step 1: Install migration service and check firewall
 
 Before you get started, install Storage Migration Service and make sure the necessary firewall ports are open.
 
@@ -64,7 +64,7 @@ Before you get started, install Storage Migration Service and make sure the nece
 
 1. If you're using an orchestrator server, and you want to download events or a data transfer log, confirm the File and Printer Sharing (SMB-In) firewall rule is enabled on the server.
 
-## Step 2: Create a job and inventory your servers to figure out what to migrate
+## Step 2: Create job and inventory server data
 
 In this step, specify what servers to migrate and then scan them to collect info on their files and configurations.
 
@@ -94,7 +94,7 @@ In this step, specify what servers to migrate and then scan them to collect info
 1. Select each server to review the inventoried shares, configuration, network adapters, and volumes. <br>Storage Migration Service doesn't transfer files or folders that could interfere with Windows operation, so you see warnings for any shares located in the Windows system folder. You have to skip these shares during the transfer phase. For more information, see [What files and folders are excluded from transfers](faq.yml#what-files-and-folders-are-excluded-from-transfers-).
 1. Select **Next** to move on to transferring data.
 
-## Step 3: Transfer data from your old servers to the destination servers
+## Step 3: Transfer data to destination servers
 
 In this step you transfer data after specifying where to put it on the destination servers.
 
@@ -122,15 +122,15 @@ In this step you transfer data after specifying where to put it on the destinati
 1. Add a destination server and mappings for any more source servers, and then select **Next**.
 1. On the **Adjust transfer settings** page, specify whether to migrate local users and groups on the source servers and then select **Next**. This option lets you recreate any local users and groups on the destination servers so file or share permissions set to local users and groups aren't lost. Here are the options when migrating local users and groups:
 
+   > [!IMPORTANT]
+   > If migrating NetApp CIFS servers, you cannot migrate local users and groups.
+
    - **Rename accounts with the same name** is selected by default and migrates all local users and groups on the source server. If local users or groups on the source are found with the same name on the destination, these items receive new names on the destination. However, a built-in user or group uses the same name on the source and destination, such as the Administrator user or the Administrators group.
    - **Reuse accounts with the same name** maps identically named users and groups on the source and destination. Don't use this setting if your source or destination server is a domain controller.
    - **Don't transfer users and groups** skips migrating local users and groups, which is required when your source or destination is a domain controller, or when seeding data for DFS Replication (DFS Replication doesn't support local groups and users).
 
    > [!NOTE]
    > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You might also want to check out [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899) as a way to manage local Administrator passwords.
-
-   > [!NOTE]
-   > If migrating NetApp CIFS servers, you cannot migrate local users and groups.
 
 1. Select **Validate** and then select **Next**.
 1. Select **Start transfer** to start transferring data.<br>The first time you transfer, we move any existing files in a destination to a backup folder. For destination servers running Azure File Sync with cloud tiering, this backup option isn't supported. We otherwise fully support Azure File Sync with cloud tiering and include updated transfer information details in Windows Admin Center. On subsequent transfers, by default we refresh the destination without backing it up first. <br>Also, Storage Migration Service is smart enough to deal with overlapping shares&mdash;we don't copy the same folders twice in the same job.
@@ -147,7 +147,7 @@ At this point, you have three options:
 
 If your goal is to sync the files with Azure, you could set up the destination servers with Azure File Sync after transferring files, or after cutting over to the destination servers. See [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
-## Step 4: Cut over to the new servers
+## Step 4: Cut over to new servers
 
 In this step you cut over from the source servers to the destination servers, moving the IP addresses and computer names to the destination servers. After this step is finished, apps and users access the new servers via the names and addresses of the servers you migrated from.
 
