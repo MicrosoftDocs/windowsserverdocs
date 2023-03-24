@@ -860,12 +860,12 @@ Windows updates released on and after October 11, 2022 contain extra protections
 
 - The owner of the computer account that is being reused is a member of the "Domain controller: Allow computer account reuse during domain join." Group Policy setting.
 
-To resolve this issue, use one of the following solutions:
+To resolve this issue, use one of the following solutions.
 
 ### Solution 1 - Use "Allow computer account re-use during domain join"
 
 1. Ensure all domain controllers, the source computer, destination computer, and SMS migration computer have installed the March 14, 2023 cumulative update and have been rebooted.
-1. Follow the steps in detail in the Take Action section of [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8#bkmk_take_action).
+1. Follow the steps in detailed in the Take Action section of [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8#bkmk_take_action).
 1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
 1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that was allowed to reuse computer accounts in step 2."
 
@@ -880,7 +880,7 @@ To resolve this issue, use one of the following solutions:
 1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is a member of one of the high-privilege Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators.
 
 > [!IMPORTANT]
-> If you have followed Solution #1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
+> If you have followed Solution 1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
 
 ## See also
 
