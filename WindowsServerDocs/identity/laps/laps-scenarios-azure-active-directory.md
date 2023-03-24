@@ -26,7 +26,7 @@ To configure device policy, complete these tasks:
 
 The first step is to choose how to apply policy to your devices.
 
-The preferred option for Azure Active Directory-joined devices is to use [Microsoft Intune](/mem/endpoint-manager-overview) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+The preferred option for Azure Active Directory-joined devices is to use [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
 If your devices are Azure Active Directory-joined but you're not using Microsoft Intune, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 

@@ -65,7 +65,7 @@ The first step is to choose how to apply policy to your devices.
 
 Most environments use [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy) to deploy the required settings to their Windows Server Active Directory-domain-joined devices.
 
-If your devices are also hybrid-joined to Azure Active Directory, you can deploy policy by using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+If your devices are also hybrid-joined to Azure Active Directory, you can deploy policy by using [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
 ### Configure specific policies
 
@@ -138,7 +138,7 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 
 - [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+- [Microsoft Intune](/mem/intune)
 
 ## Next steps
 
