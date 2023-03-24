@@ -15,17 +15,16 @@ You can use Disk Management to mount (make a drive accessible) in a folder rathe
 
 ## Before you start
 
-You need to create a new empty folder and store it ion a NTLFS or ReFS drive.
+You need to create a new empty folder and store it on an NTLFS or ReFS drive.
 
-To help you navigate the steps, here ase some terms used in the instructions.
+To help you navigate the steps, here are some terms used in the instructions.
 
-- **List volume**. Displays a list of basic and dynamic volumes on all disks.
-- **Select volume**. Selects the specified volume, where 'volumenumber' is the volume number, and gives it focus. If no volume is specified, the **select** command lists the current volume wit focus. You can specify the volume by number, drive letter,or mount point folder path. On a basic disk, selecting a volume als gives the corresponding partition focus.
-- **Assign**.
-  - Assigns a drive letter or mount point folder path to the volume with focus. If no drive letter or mount point folder path is specified, then the next available drive letter is assigned. If the drive letter or mount point folder path is already in use, an error is generated.
-  - Using the assign command, you can change the drive letter associated with a removable drive.
-  - You can't assign drive letters to boot volumes, or volumes that contain the paging file. In addition, you can't assign a drive letter to an Original Equipment Manufacturer (OEM) partition, EFI system partition, or any GPT partition other than a basic data partition.
-- **Mount=** *path*. Specifies an empty, existing NTFS folder where the mounted drive will reside.
+| Value | Description |
+| --- | --- |
+| **list volume** | Displays a list of basic and dynamic volumes on all disks. |
+| **select volume**        | Selects the specified volume, where *volumenumber* is the volume number, and gives it focus. If no volume is specified, the **select** command lists the current volume with focus. You can specify the volume by number, drive letter, or mount point folder path. On a basic disk, selecting a volume also gives the corresponding partition focus.|
+| **assign** |  Assigns a drive letter or mount point folder path to the volume with focus. If no drive letter or mount point folder path is specified, then the next available drive letter is assigned. If the drive letter or mount point folder path is already in use, an error is generated.<br>Using the **assign** command, you can change the drive letter associated with a removable drive.</br> You can't assign drive letters to boot volumes, or volumes that contain the paging file. In addition, you can't assign a drive letter to an Original Equipment Manufacturer (OEM) partition, EFI system partition, or any GPT partition other than a basic data partition. |
+| **mount=** *path* | Specifies an empty, existing NTFS folder where the mounted drive will reside.  
 
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group to complete the following steps.
@@ -54,9 +53,9 @@ You can mount a drive in an empty folder using either Windows or the command lin
 
 1. Open a command prompt and type `diskpart`.
 
-1. At the **DISKPART** prompt, type `list volume`, and press **Enter**. Make note of the volume number of the drive you want to mount ot the folder.
+1. At the **DISKPART** prompt, type `list volume`, and press **Enter**. Make note of the volume number of the drive you want to mount to the folder.
 
-1. At the **DISKPART** prompt, type `select volume <volumenumber>`,and press **Enter**. Make sue to specify the volume number in the command.
+1. At the **DISKPART** prompt, type `select volume <volumenumber>`, and press **Enter**. Make sure to specify the volume number in the command.
    </br>For example: `select volume 5`
 
 1. At the **DISKPART** prompt, type `assign [mount=<path>]`, and press **Enter**. Make sure to specify the full path in the command.
@@ -82,6 +81,6 @@ To remove the mount point so that the drive is no longer accessible through a fo
 - When assigning a mount point folder path to a drive, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors display as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
 - You can also create a mounted drive using the [mountvol](/previous-versions/orphan-topics/ws.10/cc772671(v=ws.10)) command.
 
-## Additional References
+## Related topic
 
 - [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))
