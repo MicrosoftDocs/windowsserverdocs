@@ -63,7 +63,7 @@ Windows LAPS includes a new Group Policy Object that you can use to administer p
 
 ## Windows LAPS CSP
 
-Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Intune](/mem/intune).
 
 ## Apply policy settings
 
@@ -223,7 +223,7 @@ If not specified, this setting defaults to 3.
 ## See also
 
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+- [Microsoft Intune](/mem/intune)
 
 ## Next steps
 
