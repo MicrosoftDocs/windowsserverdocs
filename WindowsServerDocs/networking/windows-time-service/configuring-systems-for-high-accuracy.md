@@ -42,7 +42,7 @@ As such, the **default configuration** is intended to satisfy the same requireme
 
 >[!IMPORTANT]
 >**Note Regarding Supportability of Highly Accurate Systems**<br>
-> Time accuracy entails the end-to-end distribution of accurate time from the authoritative time source to the end device.  Anything that adds assymetry in measurements along this path will negatively influence accuracy will affect the accuracy achievable on your devices.
+> Time accuracy entails the end-to-end distribution of accurate time from the authoritative time source to the end device.  Anything that adds assymetry in measurements along this path will negatively influence accuracy and will affect the accuracy achievable on your devices.
 >
 >For this reason, we have documented the [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md) outlining the environmental requirements that must also be satisfied to reach high accuracy targets.
 
