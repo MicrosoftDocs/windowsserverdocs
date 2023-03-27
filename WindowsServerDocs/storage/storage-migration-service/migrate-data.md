@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Use Storage Migration Service to migrate a server
 
-You can use [Storage Migration Service](overview.md) and Windows Admin Center to migrate one server to another, including their files and configuration. This article describes how to migrate a Windows server, Windows Failover Cluster, Samba server, or a NetApp FAS array to another Windows server or Windows Failover Cluster.
+You can use [Storage Migration Service](overview.md) and Windows Admin Center to migrate one server to another, including their files and configuration. This article describes how to migrate a Windows server, Windows Failover Cluster, Samba server, or a NetApp Fabric Attached Storage (FAS) array to another Windows server or Windows Failover Cluster.
 
 The migration process begins with a server inventory to identify the content to migrate, and a firewall check to ensure successful migration. The process transfers data from your source servers to the destination servers, and then cuts over to your new servers. After migration, you can process the decommissioned source servers, and reissue certificates on your new destination server.
 
@@ -76,7 +76,7 @@ In this step, specify what servers to migrate and then scan them to collect info
    - If you're migrating from Linux servers, enter credentials on the **Samba credentials** and **Linux credentials** pages, including an SSH password or private key.
    - If you're migrating from a NetApp FAS Array, complete the following steps:
 
-     1. Use the **Enter credentials and prescan NetApp** page to enter admin credentials for the NetApp CIFS servers you want to migrate from.
+     1. Use the **Enter credentials and prescan NetApp** page to enter admin credentials for the NetApp Common Internet File System (CIFS) servers you want to migrate from.
      1. Select **Start scan** to list all the NetApp CIFS servers running on the NetApp FAS array. You can uncheck any CIFS servers you don't want to migrate.
      1. Select **Next**.
 
@@ -91,7 +91,8 @@ In this step, specify what servers to migrate and then scan them to collect info
 
    :::image type="content" source="media/migrate/inventory.png" alt-text="Screenshot showing a server ready to be scanned." lightbox="media/migrate/inventory.png":::
 
-1. Select each server to review the inventoried shares, configuration, network adapters, and volumes. <br>Storage Migration Service doesn't transfer files or folders that could interfere with Windows operation, so you see warnings for any shares located in the Windows system folder. You have to skip these shares during the transfer phase. For more information, see [What files and folders are excluded from transfers](faq.yml#what-files-and-folders-are-excluded-from-transfers-).
+1. Select each server to review the inventoried shares, configuration, network adapters, and volumes.
+   Storage Migration Service doesn't transfer files or folders that could interfere with Windows operation, so you see warnings for any shares located in the Windows system folder. You have to skip these shares during the transfer phase. For more information, see [What files and folders are excluded from transfers](faq.yml#what-files-and-folders-are-excluded-from-transfers-).
 1. Select **Next** to move on to transferring data.
 
 ## Step 3: Transfer data to destination servers
