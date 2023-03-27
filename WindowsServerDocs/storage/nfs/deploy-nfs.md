@@ -1,15 +1,15 @@
 ---
 title: Deploy Network File System
 description: Learn how to deploy Network File System (NFS), which lets your organization transfer files between Windows and UNIX systems.
-ms.topic: conceptual
+ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 03/08/2023
+ms.date: 03/27/2023
 ---
 
 # Deploy Network File System
 
-> **Applies To:** Windows Server 2022, Windows Server 2019, and Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, and Windows Server 2016
 
 Network File System (NFS) provides a file sharing solution that lets you transfer files between computers running Windows Server and UNIX operating systems by using the NFS protocol. This article describes the steps you should follow to deploy NFS.
 
@@ -87,11 +87,11 @@ You need to deploy the following computers and connect them on a local area netw
 
 1. Run the following Windows PowerShell commands:
 
-   ```PowerShell
-   Import-Module ServerManager
-   Add-WindowsFeature FS-NFS-Service
-   Import-Module NFS
-   ```
+```PowerShell
+Import-Module ServerManager
+Add-WindowsFeature FS-NFS-Service
+Import-Module NFS
+```
 
 ## Configure NFS authentication
 
@@ -101,9 +101,9 @@ For the NFS version 4.1 and NFS version 3.0 protocols, we recommend that you use
 - **Krb5i**: Uses the Kerberos version 5 protocol to authenticate with integrity checking (checksums), which verifies that the data hasn't been altered.
 - **Krb5p**: Uses the Kerberos version 5 protocol, which authenticates NFS traffic with encryption for privacy. This option is the most secure Kerberos option.
 
-> [!NOTE]
-> You can choose not to use the preceding Kerberos authentication methods and instead enable unmapped user access through AUTH_SYS. We *strongly discourage* this approach because it removes all authentication protections and allows any user with access to the NFS server to access data.
-> When you use unmapped user access, you can specify to allow unmapped user access by UID or GID, which is the default. You can also allow anonymous access.
+  > [!NOTE]
+  > You can also choose not to use the preceding Kerberos authentication methods and instead enable unmapped user access through AUTH_SYS. We *strongly discourage* using this option as it removes all authentication protections and allows any user with access to the NFS server to access data.
+  > When you use unmapped user access, you can specify to allow unmapped user access by UID or GID, which is the default. You can also allow anonymous access.
 
 Instructions for configuring NFS authentication are discussed in the following section.
 
