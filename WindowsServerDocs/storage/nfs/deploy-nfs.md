@@ -17,7 +17,7 @@ Network File System (NFS) provides a file sharing solution that lets you transfe
 
 Here's what's changed for NFS in Windows Server:
 
-- **Support for NFS version 4.1**. This protocol version includes the following enhancements.
+- **Support for NFS version 4.1**: This protocol version includes the following enhancements.
 
   - Makes navigating firewalls easier, which improves accessibility.
   - Supports the RPCSEC\_GSS protocol, providing stronger security and allowing clients and servers to negotiate security.
@@ -25,11 +25,11 @@ Here's what's changed for NFS in Windows Server:
   - Takes advantage of clustered file server deployments.
   - Supports WAN-friendly compound procedures.
 
-- **NFS module for Windows PowerShell**. The availability of built-in NFS cmdlets makes it easier to automate various operations. The cmdlet names are consistent with other Windows PowerShell cmdlets (with verbs such as "Get" and "Set"), making it easier for users familiar with Windows PowerShell to learn to use new cmdlets.
-- **NFS management improvements**. A new centralized UI-based management console simplifies configuration and management of SMB and NFS shares, quotas, file screens, and classification, in addition to managing clustered file servers.
-- **Identity Mapping improvements**. This improvement includes new UI support and task-based Windows PowerShell cmdlets for configuring identity mapping. Administrators can quickly configure an identity mapping source, and then create individual mapped identities for users. Improvements make it easy for administrators to set up a share for multi-protocol access over both NFS and SMB.
-- **Cluster resource model restructure**. This improvement brings consistency between the cluster resource model for the Windows NFS and SMB protocol servers and simplifies administration. For NFS servers that have many shares, the resource network and the number of WMI calls required fail over a volume containing a large number of NFS shares are reduced.
-- **Integration with Resume Key Manager**. The Resume Key Manager tracks file server and file system state. The tool enables the Windows SMB and NFS protocol servers to fail over without disrupting clients or server applications that store their data on the file server. This improvement is a key component of the continuous availability capability of the file server running Windows Server.
+- **NFS module for Windows PowerShell**: The availability of built-in NFS cmdlets makes it easier to automate various operations. The cmdlet names are consistent with other Windows PowerShell cmdlets (with verbs such as "Get" and "Set"), making it easier for users familiar with Windows PowerShell to learn to use new cmdlets.
+- **NFS management improvements**: A new centralized UI-based management console simplifies configuration and management of SMB and NFS shares, quotas, file screens, and classification, in addition to managing clustered file servers.
+- **Identity Mapping improvements**: This improvement includes new UI support and task-based Windows PowerShell cmdlets for configuring identity mapping. Administrators can quickly configure an identity mapping source, and then create individual mapped identities for users. Improvements make it easy for administrators to set up a share for multi-protocol access over both NFS and SMB.
+- **Cluster resource model restructure**: This improvement brings consistency between the cluster resource model for the Windows NFS and SMB protocol servers and simplifies administration. For NFS servers that have many shares, the resource network and the number of WMI calls required fail over a volume containing a large number of NFS shares are reduced.
+- **Integration with Resume Key Manager**: The Resume Key Manager tracks file server and file system state. The tool enables the Windows SMB and NFS protocol servers to fail over without disrupting clients or server applications that store their data on the file server. This improvement is a key component of the continuous availability capability of the file server running Windows Server.
 
 ## Scenarios for using Network File System
 
@@ -48,7 +48,7 @@ For this scenario, you must have a valid identity mapping source configuration. 
 
 ### Provision file shares in UNIX-based environments
 
-In this scenario, Windows file servers are deployed in a predominantly UNIX-based environment to provide access to NFS file shares for UNIX-based client computers. An Unmapped UNIX User Access (UUUA) option was initially implemented for NFS shares in Windows Server 2008 R2. This option enables Windows servers to store NFS data without creating UNIX-to-Windows account mapping. UUUA allows administrators to quickly provision and deploy NFS without having to configure account mapping. When it's enabled for NFS, UUUA creates custom security identifiers (SIDs) to represent unmapped users. Mapped user accounts use standard Windows SIDs, and unmapped user accounts use custom NFS SIDs.
+In this scenario, Windows file servers are deployed in a predominantly UNIX-based environment to provide access to NFS file shares for UNIX-based client computers. An Unmapped UNIX User Access (UUUA) option was initially implemented for NFS shares in Windows Server 2008 R2. This option enables Windows servers to store NFS data without creating UNIX-to-Windows account mapping. UUUA allows administrators to quickly provision and deploy NFS without having to configure account mapping. When it is enabled for NFS, UUUA creates custom security identifiers (SIDs) to represent unmapped users. Mapped user accounts use standard Windows SIDs, and unmapped user accounts use custom NFS SIDs.
 
 ## System requirements
 
@@ -62,8 +62,8 @@ Server for NFS can be installed on any version of Windows Server. You can use NF
 
 You need to deploy the following computers and connect them on a local area network (LAN):
 
-- One or more computers running Windows Server on which to install the two main Services for NFS components: Server for NFS and Client for NFS. You can install these components on the same computer or on different computers.
-- One or more UNIX-based computers that are running NFS server and NFS client software. The UNIX-based computer running NFS server hosts an NFS file share or export. This configuration enables access by another computer running Windows Server as a client by using Client for NFS access. You can install NFS server and client software either in the same UNIX-based computer or on different UNIX-based computers, as desired.
+- One or more computers running Windows Server on which you'll install the two main Services for NFS components: Server for NFS and Client for NFS. You can install these components on the same computer or on different computers.
+- One or more UNIX-based computers that are running NFS server and NFS client software. The UNIX-based computer that is running NFS server hosts an NFS file share or export, which is accessed by a computer that is running Windows Server as a client by using Client for NFS. You can install NFS server and client software either in the same UNIX-based computer or on different UNIX-based computers, as desired.
 - A domain controller running at the Windows Server 2008 R2 functional level. The domain controller provides user authentication information and mapping for the Windows environment.
 - When a domain controller isn't deployed, you can use a Network Information Service (NIS) server to provide user authentication information for the UNIX environment. Or, if you prefer, you can use password and group files that are stored on the computer that's running the User Name Mapping service.
 
@@ -87,7 +87,7 @@ You need to deploy the following computers and connect them on a local area netw
 
 1. Run the following Windows PowerShell commands:
 
-   ```powershell
+   ```PowerShell
    Import-Module ServerManager
    Add-WindowsFeature FS-NFS-Service
    Import-Module NFS
@@ -103,7 +103,6 @@ For the NFS version 4.1 and NFS version 3.0 protocols, we recommend that you use
 
 > [!NOTE]
 > You can choose not to use the preceding Kerberos authentication methods and instead enable unmapped user access through AUTH_SYS. We *strongly discourage* this approach because it removes all authentication protections and allows any user with access to the NFS server to access data.
->
 > When you use unmapped user access, you can specify to allow unmapped user access by UID or GID, which is the default. You can also allow anonymous access.
 
 Instructions for configuring NFS authentication are discussed in the following section.
@@ -152,9 +151,9 @@ You can create an NFS file share by using either Server Manager or Windows Power
 
 ### Windows PowerShell equivalent commands
 
-The following Windows PowerShell cmdlet can also create an NFS file share, where `nfs1` is the name of the share and `C:\\shares\\nfsfolder` is the file path:
+The following Windows PowerShell cmdlet can also create an NFS file share (where `nfs1` is the name of the share and `C:\\shares\\nfsfolder` is the file path):
 
-```powershell
+```PowerShell
 New-NfsShare -name nfs1 -Path C:\shares\nfsfolder
 ```
 
