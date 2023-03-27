@@ -1,15 +1,15 @@
 ---
 title: Deploy Storage Spaces on a stand-alone server
 description: Learn the necessary prerequisites and processes for deploying Storage Spaces on a stand-alone Windows Server-based server.
-ms.topic: article
+ms.topic: conceptual
 author: JasonGerend
 ms.author: jgerend
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ---
 
 # Deploy Storage Spaces on a stand-alone server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article describes how to deploy Storage Spaces on a stand-alone server. For information about how to create a clustered storage space, see [Deploy a Storage Spaces cluster on Windows Server 2012 R2](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt270997(v%3dws.11)>).
 
@@ -41,7 +41,7 @@ To use Storage Spaces on a stand-alone Windows Server−based server, make sure 
 |Disk bus types|- Serial Attached SCSI (SAS)<br>- Serial Advanced Technology Attachment (SATA)<br>- iSCSI and Fibre Channel Controllers. |You can also use USB drives. However, it's not optimal to use USB drives in a server environment.<br>Storage Spaces is supported on iSCSI and Fibre Channel (FC) controllers as long as the virtual disks created on top of them are nonresilient (Simple with any number of columns).<br>|
 |Disk configuration|- Physical disks must be at least 4 GB<br>- Disks must be blank and not formatted. Don't create volumes.||
 |HBA considerations|- Simple host bus adapters (HBAs) that don't support RAID functionality are recommended<br>- If RAID-capable, HBAs must be in non-RAID mode with all RAID functionality disabled<br>- Adapters must not abstract the physical disks, cache data, or obscure any attached devices. This guideline includes enclosure services that are provided by attached just-a-bunch-of-disks (JBOD) devices. |Storage Spaces is compatible only with HBAs where you can completely disable all RAID functionality.|
-|JBOD enclosures|- JBOD enclosures are optional<br>- We recommend using Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br> ```Get-PhysicalDisk | ? {$_.BusType –eq "SAS"} | fc``` <br> | If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.|
+|JBOD enclosures|- JBOD enclosures are optional<br>- We recommend using Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br> `Get-PhysicalDisk | ? {$_.BusType –eq "SAS"} | fc` <br> | If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.|
 
 To plan for the number of physical disks and the desired resiliency type for a stand-alone server deployment, use the following guidelines.
 
@@ -57,7 +57,7 @@ You must first group available physical disks into one or more storage pools.
 
 1. In the Server Manager navigation pane, select **File and Storage Services**.
 
-1. In the navigation pane, select the **Storage Pools** page.
+1. In the middle, under **Volumes**, select **Storage Pools**.
 
    By default, available disks are included in a pool that is named the *primordial* pool. If no primordial pool is listed under **STORAGE POOLS**, this situation indicates that the storage doesn't meet the requirements for Storage Spaces. Make sure that the disks meet the requirements that are outlined in the [Prerequisites](#prerequisites) section.
 
@@ -101,7 +101,7 @@ The following example creates a new storage pool named *StoragePool1* that uses 
 New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk –CanPool $True)
 ```
 
-The following example creates a new storage pool, *StoragePool1*, that uses four of the available disks.
+The following example creates a new storage pool named *StoragePool1* that uses four of the available disks.
 
 ```PowerShell
 New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk PhysicalDisk1, PhysicalDisk2, PhysicalDisk3, PhysicalDisk4)
@@ -256,7 +256,7 @@ The following example initializes the disks for virtual disk *VirtualDisk1*, cre
 Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Passthru | New-Partition –AssignDriveLetter –UseMaximumSize | Format-Volume
 ```
 
-## Additional information
+## Related links
 
 - [Storage Spaces overview](overview.md)
 - Windows PowerShell cmdlets in [Storage](/powershell/module/storage/index)
