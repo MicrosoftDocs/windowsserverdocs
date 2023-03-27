@@ -39,17 +39,17 @@ The Windows LAPS architecture diagram has several key components:
 
 - **Azure Active Directory**: An Azure Active Directory deployment running in the cloud.
 
-- **Microsoft Endpoint Manager** The preferred Microsoft device policy management solution, also running in the cloud.
+- **Microsoft Intune** The preferred Microsoft device policy management solution, also running in the cloud.
 
 ## Basic scenario flow
 
 The first step in a basic Windows LAPS scenario is to configure the Windows LAPS policy for your organization. We recommend that you use the following configuration options:
 
-- **Azure Active Directory-joined devices**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+- **Azure Active Directory-joined devices**: Use [Microsoft Intune](/mem/intune).
 
 - **Windows Server Active Directory-joined devices**: Use Group Policy.
 
-- **Hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Endpoint Manager**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+- **Hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Intune**: Use [Microsoft Intune](/mem/intune).
 
 After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a new, random password that's compliant with the current policy's length and complexity requirements. The password is validated against the local device's password complexity policy.
 
@@ -190,7 +190,7 @@ When Windows is started in safe mode, DSRM mode, or in any other non-default boo
 
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 - [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
-- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+- [Microsoft Intune](/mem/intune)
 
 ## Next steps
 
