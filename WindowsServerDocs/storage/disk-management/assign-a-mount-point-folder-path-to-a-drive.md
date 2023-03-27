@@ -11,29 +11,29 @@ ms.author: jgerend
 
 > **Applies To:** Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
 
-You can use Disk Management to mount (make a drive accessible) in a folder rather than a drive letter. It will look like just another folder. You can mount drives only in empty folders on basic or dynamic NTFS volumes.
+You can use Disk Management to mount (make a drive accessible) in a folder rather than a drive letter. It looks like just another folder. You can mount drives only in empty folders on basic or dynamic NTFS volumes.
 
-## Before you start
+## Mount a drive in an empty folder
 
-You need to create a new empty folder and store it on an NTLFS or ReFS drive.
+You can mount a drive in an empty folder using either Windows or the command line.
 
-To help you navigate the steps, here are some terms used in the instructions.
+### Before you start
+
+- **Create an empty folder**. You need to create a new empty folder and store it on an NTLFS or ReFS drive.
+
+- **Review the terms**. To help you navigate the steps, here are the terms in the instructions.
 
 | Term | Description |
 | --- | --- |
 | **list volume** | Displays a list of basic and dynamic volumes on all disks. |
 | **select volume**        | Selects the specified volume, where *volumenumber* is the volume number, and gives it focus. If no volume is specified, the **select** command lists the current volume with focus. You can specify the volume by number, drive letter, or mount point folder path. On a basic disk, selecting a volume also gives the corresponding partition focus.|
-| **assign** |  Assigns a drive letter or mount point folder path to the volume with focus. If no drive letter or mount point folder path is specified, then the next available drive letter is assigned. If the drive letter or mount point folder path is already in use, an error is generated.<br>Using the **assign** command, you can change the drive letter associated with a removable drive.</br> You can't assign drive letters to boot volumes, or volumes that contain the paging file. In addition, you can't assign a drive letter to an Original Equipment Manufacturer (OEM) partition, EFI system partition, or any GPT partition other than a basic data partition. |
+| **assign** |  Assigns a drive letter or mount point folder path to the volume with focus. If no drive letter or mount point folder path is specified, then the next available drive letter is assigned. If the drive letter or mount point folder path is already in use, an error is generated.</br>Using the **assign** command, you can change the drive letter associated with a removable drive.</br> You can't assign drive letters to boot volumes, or volumes that contain the paging file. In addition, you can't assign a drive letter to an Original Equipment Manufacturer (OEM) partition, EFI system partition, or any GPT partition other than a basic data partition. |
 | **mount=** *path* | Specifies an empty, existing NTFS folder where the mounted drive will reside.  
 
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group to complete the following steps.
 
-## Mount a drive in an empty folder
-
-You can mount a drive in an empty folder using either Windows or the command line. For a better understanding of some of the values in the instructions, see [Before you start](#before-you-start).
-
-### Mount drive as a folder with Windows interface
+### Mount a drive as a folder with Windows interface
 
 1. Open Disk Management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 
@@ -49,7 +49,7 @@ You can mount a drive in an empty folder using either Windows or the command lin
 
 1. Select **OK** to finish.
 
-### Mount drive as a folder with the command line
+### Mount a drive as a folder with the command line
 
 1. Open a command prompt and type `diskpart`.
 
@@ -59,13 +59,13 @@ You can mount a drive in an empty folder using either Windows or the command lin
    </br>For example: `select volume 5`
 
 1. At the **DISKPART** prompt, type `assign [mount=<path>]`, and press **Enter**. Make sure to specify the full path in the command.
-    </br>For example: `assign [mount=C:\Users\Smith\Desktop\Demo Drive
+    </br>For example: `assign mount=C:\Users\Smith\Desktop\Demo Drive`
 
 1. Close command prompt.
 
 ## Remove a mount point
 
-To remove the mount point so that the drive is no longer accessible through a folder:
+To remove the mount point so that the drive is no longer accessible through a folder, do the following steps.
 
 1. Open Disk Management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**
 
