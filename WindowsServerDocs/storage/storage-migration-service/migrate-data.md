@@ -92,6 +92,7 @@ In this step, specify what servers to migrate and then scan them to collect info
    :::image type="content" source="media/migrate/inventory.png" alt-text="Screenshot showing a server ready to be scanned." lightbox="media/migrate/inventory.png":::
 
 1. Select each server to review the inventoried shares, configuration, network adapters, and volumes.
+   
    Storage Migration Service doesn't transfer files or folders that could interfere with Windows operation, so you see warnings for any shares located in the Windows system folder. You have to skip these shares during the transfer phase. For more information, see [What files and folders are excluded from transfers](faq.yml#what-files-and-folders-are-excluded-from-transfers-).
 1. Select **Next** to move on to transferring data.
 
