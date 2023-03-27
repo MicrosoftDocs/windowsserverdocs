@@ -1,9 +1,9 @@
 ---
 title: Slow SMB files transfer speed
-description: Learn how to troubleshoot SMB files transfer performance issues by using the provided troubleshooting procedures.
+description: Learn how to resolve transfer performance issues with SMB files by using the provided troubleshooting steps.
 author: Deland-Han
 manager: dcscontentpm
-ms.topic: article
+ms.topic: troubleshooting-problem-resolution
 ms.author: delhan
 ms.date: 03/27/2023
 ---
@@ -22,7 +22,7 @@ You can troubleshoot slow file transfers by checking your current storage use. I
 
 - Test the storage speed. Copy speeds are limited by storage speed.
 
-- File copies sometimes start fast and then slow down. A change in copy speed occurs when the initial copy is cached or buffered in memory or in the RAID controller's memory cache, and the cache runs out. This change forces data to be written directly to disk (write-through).
+- File copies sometimes start fast and then slow down. A change in copy speed occurs when the initial copy is cached or buffered, in memory or in the RAID controller's memory cache, and the cache runs out. This change forces data to be written directly to disk (write-through).
 
   To verify this situation, use storage performance monitor counters to determine whether storage performance degrades over time. For more information, see [Performance tuning for SMB file servers](../../../administration/performance-tuning/role/file-server/smb-file-server.md).
 
@@ -40,7 +40,7 @@ You can troubleshoot slow file transfers by checking your current storage use. I
 
 ## Slow transfer of small files
 
-A slow transfer of small files occurs most commonly when there are many files. This is an expected behavior.
+A slow transfer of small files occurs most commonly when there are many files. This occurrence is an expected behavior.
 
 During file transfer, file creation causes both high protocol overhead and high file system overhead. For large file transfers, these costs occur only one time. When a large number of small files are transferred, the cost is repetitive and causes slow transfers.
 
