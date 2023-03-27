@@ -10,9 +10,9 @@ ms.date: 03/27/2023
 
 # Slow SMB files transfer speed
 
-This article provides suggested troubleshooting procedures for slow file transfer speeds through SMB.
+This article provides suggested troubleshooting procedures for slow file transfer speeds through Server Message Block (SMB).
 
-## File transfer is slow
+## Slow file transfer
 
 If you observe slow transfers of files, consider the following steps:
 
@@ -28,7 +28,7 @@ If you observe slow transfers of files, consider the following steps:
 
 - Look for packet loss in the trace. Packet loss can cause throttling by the TCP congestion provider.
 
-- For SMBv3 and later versions, make sure that SMB Multichannel is enabled and working.
+- For SMBv3 and later versions, verify that SMB Multichannel is enabled and working.
 
 - On the SMB client, enable large MTU in SMB, and disable bandwidth throttling by running the following command:
 
@@ -36,15 +36,15 @@ If you observe slow transfers of files, consider the following steps:
   Set-SmbClientConfiguration -EnableBandwidthThrottling 0 -EnableLargeMtu 1
   ```
 
-## Small file transfer is slow
+## Slow small file transfer
 
-Slow transfer of small files through SMB occurs most commonly if there are many files. This is an expected behavior.
+Slow transfer of small files through SMB occurs most commonly when there are many files. This is an expected behavior.
 
 During file transfer, file creation causes both high protocol overhead and high file system overhead. For large file transfers, these costs occur only one time. When a large number of small files are transferred, the cost is repetitive and causes slow transfers.
 
 The following are technical details about this problem:
 
-- SMB calls a create command to request that the file is created. Some code checks whether the file exists, and then creates the file, or some variation of the create command creates the actual file.
+- SMB calls a create command to request that the file is created. Code checks whether the file exists and then creates the file. Otherwise, some variation of the create command creates the actual file.
 
 - Each create command generates activity on the file system.
 
@@ -54,11 +54,11 @@ The following are technical details about this problem:
 
 - If any antivirus program is running, the transfer slows down even more. This change happens because the data is typically scanned once by the packet sniffer and a second time when it's written to disk. In some scenarios, these actions are repeated thousands of times. You can potentially observe speeds of less than 1 MB/s.
 
-## Open Office documents is slow
+## Slow opening Office documents
 
 This problem generally occurs on a WAN connection. The manner in which Office apps (Microsoft Excel, in particular) access and read data is typically what causes this problem.
 
-You should make sure that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To verify both, follow these steps:
+You should verify that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To verify both, follow these steps:
 
 1. Run the following PowerShell command in Windows 8 and Windows Server 2012 or later versions of Windows:
 
@@ -66,7 +66,7 @@ You should make sure that the Office and SMB binaries are up-to-date, and then t
    Set-SmbServerConfiguration -EnableLeasing $false  
    ```
 
-   Or, run the following command in an elevated Command Prompt window:
+   You can also run the following command in an elevated Command Prompt window:
 
    ```cmd
    REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\parameters /v DisableLeasing /t REG\_DWORD /d 1 /f  
