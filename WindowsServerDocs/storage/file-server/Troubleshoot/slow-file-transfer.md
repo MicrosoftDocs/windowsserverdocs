@@ -38,7 +38,7 @@ If you observe slow transfers of files, consider the following steps:
 
 ## Slow small file transfer
 
-Slow transfer of small files through SMB occurs most commonly when there are many files. This is an expected behavior.
+A slow transfer of small files occurs most commonly when there are many files. This is an expected behavior.
 
 During file transfer, file creation causes both high protocol overhead and high file system overhead. For large file transfers, these costs occur only one time. When a large number of small files are transferred, the cost is repetitive and causes slow transfers.
 
