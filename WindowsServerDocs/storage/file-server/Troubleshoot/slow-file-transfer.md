@@ -10,13 +10,15 @@ ms.date: 03/27/2023
 
 # Slow SMB files transfer speed
 
-This article provides suggested troubleshooting procedures for slow file transfer speeds through Server Message Block (SMB).
+Server Message Block (SMB) file transfer speeds can slow down depending on the size and quantity of your files, your connection type, and the version of apps you use. This article provides troubleshooting procedures for slow file transfer speeds through SMB.
 
-## Slow file transfer
+## Slow transfer
 
-If you observe slow transfers of files, consider the following steps:
+You can troubleshoot slow file transfers by checking your current storage use. If you observe slow transfers of files, consider the following steps:
 
-- Try the file copy command for unbuffered IO (**xcopy /J** or **robocopy /J**).
+- Try the file copy command for unbuffered IO:
+  - `xcopy /J`
+  - `robocopy /J`
 
 - Test the storage speed. Copy speeds are limited by storage speed.
 
@@ -36,29 +38,30 @@ If you observe slow transfers of files, consider the following steps:
   Set-SmbClientConfiguration -EnableBandwidthThrottling 0 -EnableLargeMtu 1
   ```
 
-## Slow small file transfer
+## Slow transfer of small files
 
 A slow transfer of small files occurs most commonly when there are many files. This is an expected behavior.
 
 During file transfer, file creation causes both high protocol overhead and high file system overhead. For large file transfers, these costs occur only one time. When a large number of small files are transferred, the cost is repetitive and causes slow transfers.
 
-The following are technical details about this problem:
+### Issue details
 
-- SMB calls a create command to request that the file is created. Code checks whether the file exists and then creates the file. Otherwise, some variation of the create command creates the actual file.
+Network latency, `create` commands, and antivirus programs contribute to a slower transfer of small files. The following are technical details about this problem:
 
-- Each create command generates activity on the file system.
+- SMB calls a `create` command to request that the file is created. Code checks whether the file exists and then creates the file. Otherwise, some variation of the `create` command creates the actual file.
 
-- After the data is written, the file is closed.
+  - Each `create` command generates activity on the file system.
+  - After the data is written, the file is closed.
 
 - The process can suffer from network latency and SMB server latency. This latency occurs because the SMB request is first translated to a file system command and then to the actual file system to complete the operation.
 
-- If any antivirus program is running, the transfer slows down even more. This change happens because the data is typically scanned once by the packet sniffer and a second time when it's written to disk. In some scenarios, these actions are repeated thousands of times. You can potentially observe speeds of less than 1 MB/s.
+- The transfer continues to slow while an antivirus program is running. This change happens because the data is typically scanned once by the packet sniffer and a second time when the data is written to disk. In some scenarios, these actions are repeated thousands of times. You can potentially observe speeds of less than 1 MB/s.
 
-## Slow opening Office documents
+## Slow open of Office documents
 
-This problem generally occurs on a WAN connection. The manner in which Office apps (Microsoft Excel, in particular) access and read data is typically what causes this problem.
+Office documents can open slowly, which generally occurs on a WAN connection. The manner in which Office apps (Microsoft Excel, in particular) access and read data is typically what causes the documents to open slowly.
 
-You should verify that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To verify both, follow these steps:
+You should verify that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To verify both conditions have resolved, follow these steps:
 
 1. Run the following PowerShell command in Windows 8 and Windows Server 2012 or later versions of Windows:
 
