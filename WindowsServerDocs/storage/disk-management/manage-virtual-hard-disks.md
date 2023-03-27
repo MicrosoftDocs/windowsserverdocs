@@ -43,7 +43,7 @@ To create a VHD, follow these steps:
 
 ## Attach a VHD
 
-To make a VHD available for use (either one you've created or another existing VHD), follow these steps.
+To make a VHD available for use (either one you've created or another existing VHD), follow these steps:
 
 1. Open Disk management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 
