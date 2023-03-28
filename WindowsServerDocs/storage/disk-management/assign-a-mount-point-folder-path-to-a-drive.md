@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Mount a drive in a folder
 
-> **Applies To:** Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
+> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use Disk Management to mount (make a drive accessible) in a folder rather than a drive letter. It looks like just another folder. You can mount drives only in empty folders on basic or dynamic NTFS volumes.
 
@@ -18,11 +18,11 @@ You can use Disk Management to mount (make a drive accessible) in a folder rathe
 
 ## Mount a drive in an empty folder
 
-You can mount a drive in an empty folder using Windows or the command line.
+You can mount a drive in an empty folder using Disk Management or the command line.
 
 ### Before you start
 
-- **Create an empty folder**. You need to create a new empty folder and store it on an NTLFS or ReFS drive.
+- **Create an empty folder**. You need to create a new empty folder and store it on an NTFS or ReFS drive.
 
 - **Review the terms**. To help you navigate the steps, here are terms used throughout this article.
 
@@ -59,7 +59,7 @@ You can mount a drive in an empty folder using Windows or the command line.
    </br>For example: `select volume 5`
 
 1. At the **DISKPART** prompt, type `assign [mount=<path>]`, and select **Enter**. Make sure to specify the full path in the command.
-    </br>For example: `assign mount=C:\Users\Smith\Desktop\Demo Drive`
+    </br>For example: `assign mount="C:\Users\Smith\Desktop\Demo Drive"`
 
 1. Close command prompt.
 
