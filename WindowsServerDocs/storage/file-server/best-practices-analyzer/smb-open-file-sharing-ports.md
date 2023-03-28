@@ -1,69 +1,54 @@
 ---
-description: "Learn more about: SMB: File and printer sharing ports should be open"
 title: SMB - File and printer sharing ports should be open
-ms.date: 07/02/2012
+description: Learn how to keep file and printer sharing ports open for Server Message Block (SMB)-based network services and resolve the Best Practices Analyzer scan issue.
+ms.date: 03/20/2023
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.topic: article
+ms.topic: conceptual
 ---
 
 # SMB: File and printer sharing ports should be open
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, Windows Server 2008 R2
+> **Applies To**: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-*This topic is intended to address a specific issue identified by a Best Practices Analyzer scan. You should apply the information in this topic only to computers that have had the File Services Best Practices Analyzer run against them and are experiencing the issue addressed by this topic. For more information about best practices and scans, see* [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
+When a Best Practices Analyzer scan for Server Message Block (SMB)-based network services identifies that firewall ports for file and printer sharing aren't open, follow the steps in this article to resolve the issue.
 
+| Operating system | Product/Feature | Severity | Category |
+| --- | --- | --- | --- |
+| Windows Server | File Services | Error | Configuration |
 
-<table>
-<colgroup>
-<col>
-<col>
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Operating System</strong></p></td>
-<td><p>Windows Server</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Product/Feature</strong></p></td>
-<td><p>File Services</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Severity</strong></p></td>
-<td><p>Error</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Category</strong></p></td>
-<td><p>Configuration</p></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]
+> This article addresses a specific issue identified by a Best Practices Analyzer scan. Apply the information in this article only to computers that have a File Services Best Practices Analyzer scan that reports the specific port issue. For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
-## Issue
+## Identify the issue
 
-> *The firewall ports necessary for file and printer sharing are not open (ports 445 and 139).*
+A File Services Best Practices Analyzer scan reports that firewall ports necessary for file and printer sharing aren't open (ports 445 and 139).
 
-## Impact
+The issue prevents computer access to shared folders and other SMB-based network services on the server.
 
-> *Computers will not be able to access shared folders and other Server Message Block (SMB)-based network services on this server.*
+## Resolve the issue
 
-## Resolution
+To resolve the issue, enable file and printer sharing to communicate through the computer's firewall. To complete the procedure, you must be a member of the **Administrators group** (or equivalent), at a minimum.
 
-> *Enable File and Printer Sharing to communicate through the computer's firewall.*
+To open the firewall ports and enable file and printer sharing, complete the following steps:
 
-Membership in the **Administrators** group, or equivalent, is the minimum required to complete this procedure.
+1. Open Control Panel, select **System and Security**, and then select **Windows Defender Firewall**.
 
-## To open the firewall ports to enable file and printer sharing
+1. On the left, select **Advanced settings**. The Windows Defender Firewall console opens and shows the advanced settings.
 
-1.  Open Control Panel, click **System and Security**, and then click **Windows Firewall**.
+1. In the Windows Defender Firewall console on the left, select **Inbound Rules**.
 
-2.  In the left pane, click **Advanced settings**, and in the console tree, click **Inbound Rules**.
+1. Under **Inbound Rules**, locate the following two rules:
 
-3.  Under **Inbound Rules**, locate the rules **File and Printer Sharing (NB-Session-In)** and **File and Printer Sharing (SMB-In)**.
+   - **File and Printer Sharing (NB-Session-In)**
+   
+   - **File and Printer Sharing (SMB-In)**
 
-4.  For each rule, right-click the rule, and then click **Enable Rule**.
+1. For each rule, select and hold (or right-click) the rule, and then select **Enable Rule**.
 
-## Additional references
+## Related links
 
-[Understanding Shared Folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))(https://technet.microsoft.com/library/cc731402.aspx)
+- [Understanding shared folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))
+
+<!-- Alterate path to related link -- https://technet.microsoft.com/library/cc731402.aspx -->
