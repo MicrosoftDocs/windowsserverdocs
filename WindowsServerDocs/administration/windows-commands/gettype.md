@@ -4,7 +4,7 @@ description: Reference article for the gettype command. This command is deprecat
 ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
-ms.date: 01/03/2023
+ms.date: 04/01/2023
 ---
 
 # gettype
