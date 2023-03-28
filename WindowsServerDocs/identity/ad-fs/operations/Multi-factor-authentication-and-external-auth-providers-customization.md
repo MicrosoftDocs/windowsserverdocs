@@ -5,7 +5,7 @@ title: Multi-factor authentication and external authentication providers customi
 ms.topic: article
 author: billmath
 ms.author: billmath
-ms.date: 01/30/2023
+ms.date: 04/01/2023
 ---
 
 # Multi-factor authentication and external authentication providers customization
@@ -24,7 +24,7 @@ The example below shows a sign-in user interface, which is highlighted in RED, b
 
 ![Screenshot that shows an example of the sign-in user interface.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)
 
-Before you write a new custom authentication method study the AD FS theme and style definitions to understand the content authoring requirements.
+Before you write a new custom authentication method, study the AD FS theme and style definitions to understand the content authoring requirements.
 
 - A custom authentication method only authors an HTML segment on the AD FS sign\-in page and not the full page. Use the AD FS style definition to get the consistent appearance and behavior.
 
