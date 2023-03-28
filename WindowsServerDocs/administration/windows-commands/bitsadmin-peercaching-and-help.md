@@ -4,7 +4,7 @@ description: Reference article for bitsadmin peercaching and help command that d
 ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
-ms.date: 01/03/2023
+ms.date: 04/01/2023
 ---
 
 # bitsadmin peercaching and help
