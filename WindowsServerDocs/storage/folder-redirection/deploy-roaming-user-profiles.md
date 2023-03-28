@@ -2,7 +2,7 @@
 title: Deploy roaming user profiles
 description: Learn how to deploy roaming user profiles so that users receive the same operating system and application settings on multiple computers.
 TOCTitle: Deploy roaming user profiles
-ms.topic: article
+ms.topic: conceptual
 author: JasonGerend
 manager: brianlic
 ms.date: 03/21/2023
@@ -11,14 +11,11 @@ ms.author: jgerend
 
 # Deploy roaming user profiles
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>**Applies To:** Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 This article describes how to use Windows Server to deploy [roaming user profiles](folder-redirection-rup-overview.md) to Windows client computers. A roaming user profile redirects user profiles to a *file share* so that users receive the same operating system and application settings on multiple computers.
 
 For a list of recent changes to this article, see the [Change history](#change-history) section.
-
-> [!IMPORTANT]
-> Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016), we updated [Step 4: Optionally create a GPO for roaming user profiles](#step-4-optionally-create-a-gpo-for-roaming-user-profiles) in this article so that Windows can properly apply the roaming user profiles policy, and not revert to local policies on affected PCs.
 
 > [!IMPORTANT]
 >  User customizations to the Start menu are lost after an OS in-place upgrade in the following configuration:
@@ -122,7 +119,7 @@ Here's how to create a file share on Windows Server:
 6. On the **Other Settings** page, clear the **Enable continuous availability** checkbox, if present, and optionally select the **Enable access-based enumeration** and **Encrypt data access** checkboxes.
 7. On the **Permissions** page, select **Customize permissions…**. The Advanced Security Settings dialog box appears.
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
-9. Set the permissions as described in [Required permissions for the file share hosting roaming user profiles](#required-file-share-hosting-permissions-for-roaming-user-profiles) and shown in the following screen shot. Remove permissions for unlisted groups and accounts, and add special permissions to the *Roaming user profiles users and computers* group that you created in Step 2.
+9. Set the permissions as described in [Required permissions for roaming user profiles](#required-permissions-for-roaming-user-profiles) and shown in the following screen shot. Remove permissions for unlisted groups and accounts, and add special permissions to the *Roaming user profiles users and computers* group that you created in Step 2.
 
     :::image type="content" source="media/advanced-security-user-profiles.jpg" alt-text="Screenshot of Advanced Security Settings window that shows permissions.":::
 
@@ -130,7 +127,9 @@ Here's how to create a file share on Windows Server:
 11. If you chose the **SMB Share - Advanced** profile, on the **Quota** page, optionally select a quota to apply to users of the share.
 12. On the **Confirmation** page, select **Create.**
 
-### Required file share hosting permissions for roaming user profiles
+### Required permissions for roaming user profiles
+
+The following table lists the required file share hosting permissions for roaming user profiles.
 
 | User account | Access | Applies to |
 |   -   |   -   |   -   |
@@ -157,9 +156,6 @@ Here's how to create a GPO for roaming user profiles:
 9. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
 
     This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016).
-
->[!IMPORTANT]
->Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016), you now must give the Authenticated Users group delegated Read permissions to the GPO. Otherwise the GPO doesn't get applied to users, or if it's already applied, the GPO is removed, redirecting user profiles back to the local PC. For more info, see [Deploying group policy security update MS16-072](/archive/blogs/askds/deploying-group-policy-security-update-ms16-072-kb3163622).
 
 ## Step 5: Optionally set up roaming user profiles on user accounts
 
@@ -223,14 +219,14 @@ To specify a Start layout, do the following:
 3. Use Group Policy to apply the customized Start layout to the GPO you created for roaming user profiles. To do so, see [Use Group Policy to apply a customized Start layout in a domain](/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment).
 4. Use Group Policy to set the following registry value on your Windows 10 PCs. To do so, see [Configure a registry item](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
 
-| **Action**   | **Update**                  |
-| ------------ | ------------                |
-| Hive         | **HKEY_LOCAL_MACHINE**      |
-| Key path     | **Software\Microsoft\Windows\CurrentVersion\Explorer** |
-| Value name   | **SpecialRoamingOverrideAllowed** |
-| Value type   | **REG_DWORD**               |
-| Value data   | **1** (or **0** to disable) |
-| Base         | **Decimal**                 |
+    | **Action**   | **Update**                  |
+    | ------------ | ------------                |
+    | Hive         | **HKEY_LOCAL_MACHINE**      |
+    | Key path     | **Software\Microsoft\Windows\CurrentVersion\Explorer** |
+    | Value name   | **SpecialRoamingOverrideAllowed** |
+    | Value type   | **REG_DWORD**               |
+    | Value data   | **1** (or **0** to disable) |
+    | Base         | **Decimal**                 |
 
 5. (Optional) Enable first-time sign-in optimizations to make signing in faster for users. To do so, see [Apply policies to improve sign-in time](/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
 6. (Optional) Further decrease sign-in times by removing unnecessary apps from the Windows 10 base image you use to deploy client PCs. Windows Server 2019 and Windows Server 2016 don't have any pre-provisioned apps, so you can skip this step on server images.
@@ -298,7 +294,7 @@ Each profile has a profile version that corresponds roughly to the version of Wi
 
 The following table lists the location of roaming user profiles on various versions of Windows.
 
-| Operating system version | roaming user profiles location |
+| Operating system version | Roaming user profiles location |
 | --- | --- |
 | Windows XP and Windows Server 2003 | `\\<servername>\<fileshare>\<username>` |
 | Windows Vista and Windows Server 2008 | `\\<servername>\<fileshare>\<username>.V2` |
