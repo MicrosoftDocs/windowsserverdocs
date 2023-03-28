@@ -34,7 +34,7 @@ You can troubleshoot slow file transfers by checking your current storage use. I
 
 - On the SMB client, enable large MTU in SMB, and disable bandwidth throttling by running the following command:
 
-  ```PowerShell
+  ```powershell
   Set-SmbClientConfiguration -EnableBandwidthThrottling 0 -EnableLargeMtu 1
   ```
 
@@ -65,7 +65,7 @@ You should verify that the Office and SMB binaries are up-to-date, and then test
 
 1. Run the following PowerShell command in Windows 8 and Windows Server 2012 or later versions of Windows:
 
-   ```PowerShell
+   ```powershell
    Set-SmbServerConfiguration -EnableLeasing $false  
    ```
 
