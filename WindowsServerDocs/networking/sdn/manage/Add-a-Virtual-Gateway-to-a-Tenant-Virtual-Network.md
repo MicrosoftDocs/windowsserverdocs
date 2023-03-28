@@ -405,9 +405,6 @@ $bgpRouter.ResourceId = "Contoso_BgpRouter1"
 $bgpRouter.Properties = New-Object Microsoft.Windows.NetworkController.VGwBgpRouterProperties
 
 $bgpRouter.Properties.ExtAsNumber = "0.64512"
-$bgpRouter.Properties.RouterId = "192.168.0.2"
-$bgpRouter.Properties.RouterIP = @("192.168.0.2")
-
 $bgpRouter.Properties.BgpPeers = @()
 
 # Create BGP Peer Object(s)
