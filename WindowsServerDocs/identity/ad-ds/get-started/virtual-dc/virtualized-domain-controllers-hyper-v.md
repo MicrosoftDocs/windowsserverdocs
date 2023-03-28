@@ -3,7 +3,7 @@ title: Virtualizing Domain Controllers using Hyper-V
 description: Considerations to make when virtualizing Windows Server Active Directory Domain Controllers in Hyper-V
 author: iainfoulds
 ms.author: daveba
-ms.date: 03/01/2023
+ms.date: 04/01/2023
 ms.topic: article
 ---
 # Virtualizing Domain Controllers using Hyper-V
@@ -65,7 +65,7 @@ Using virtual machines makes it possible to have many different configurations o
 ![Security boundaries diagram](media/virtualized-domain-controller-architecture/Dd363553.f44706fd-317e-4f0b-9578-4243f4db225f(WS.10).gif)
 
 - The administrator on the host computer has the same access as a domain administrator on the writable domain controller guests and must be treated as such. In the case of an RODC guest, the administrator of the host computer has the same access as a local administrator on the guest RODC.
-- A domain controller in a virtual machine has administrative rights on the host if the host is joined to the same domain. There is an opportunity for a malicious user to compromise all virtual machines if the malicious user first gains access to Virtual Machine 1. This is known as an attack vector. If there are domain controllers for multiple domains or forests, these domains should have centralized administration in which the administrator of one domain is trusted on all domains.
+- A domain controller in a virtual machine has administrative rights on the host if the host is joined to the same domain. There's an opportunity for a malicious user to compromise all virtual machines if the malicious user first gains access to Virtual Machine 1. This is known as an attack vector. If there are domain controllers for multiple domains or forests, these domains should have centralized administration in which the administrator of one domain is trusted on all domains.
 - The opportunity for attack from Virtual Machine 1 exists even if Virtual Machine 1 is installed as an RODC. Although an administrator of an RODC does not explicitly have domain administrator rights, the RODC can be used to send policies to the host computer. These policies might include startup scripts. If this operation is successful, the host computer can be compromised, and it can then be used to compromise the other virtual machines on the host computer.
 
 ## Security of VHD files
@@ -209,18 +209,18 @@ Backing up domain controllers is a critical requirement for any environment. Bac
 
 With virtual machine technology, certain requirements of Active Directory restore operations take on added significance. For example, if you restore a domain controller by using a copy of the virtual hard disk (VHD) file, you bypass the critical step of updating the database version of a domain controller after it has been restored. Replication will proceed with inappropriate tracking numbers, resulting in an inconsistent database among domain controller replicas. In most cases, this problem goes undetected by the replication system and no errors are reported, despite inconsistencies between domain controllers.
 
-There is one supported way to perform backup and restore of a virtualized domain controller:
+There's one supported way to perform backup and restore of a virtualized domain controller:
 
 1. Run Windows Server Backup in the guest operating system.
 
 With Windows Server 2012 and newer Hyper-V hosts and guests, you can take supported backups of domain controllers using snapshots, guest VM export and import and also Hyper-V Replication. All of these however are not a good fit for creating a proper backup history, with the slight exception of guest VM export.
 
-With Windows Server 2016 Hyper-V there is support for “production snapshots” where the Hyper-V server triggers a VSS-based backup of the guest and when the guest is done with the snapshot, the host fetches the VHDs and stores them in the backup location.
+With Windows Server 2016 Hyper-V there's support for “production snapshots” where the Hyper-V server triggers a VSS-based backup of the guest and when the guest is done with the snapshot, the host fetches the VHDs and stores them in the backup location.
 
-While this works with Windows Server 2012 and newer, there is an incompatibility with Bitlocker:
+While this works with Windows Server 2012 and newer, there's an incompatibility with Bitlocker:
 
 - When doing a VSS Snap-Shot, AD wants to perform a post-snapshot task to mark the database as coming from a backup, or in the case of preparing a IFM source for RODC, remove credentials from the database.
-- When Hyper-V mounts the snapshotted volume for this task, there is no facility that would unlock the Volume for unencrypted access. So the AD database engine fails accessing the database and eventually fails the snapshot.
+- When Hyper-V mounts the snapshotted volume for this task, there's no facility that would unlock the Volume for unencrypted access. So the AD database engine fails accessing the database and eventually fails the snapshot.
 
 > [!NOTE]
 > The shielded VM project mentioned previously has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
@@ -239,7 +239,7 @@ To restore a domain controller when it fails, you must regularly backup system s
 When a domain controller virtual machine fails and an update sequence number (USN) rollback has not occurred, there are two supported situations for restoring the virtual machine:
 
 - If a valid system state data backup that predates the failure exists, you can restore system state by using the restore option of the backup utility that you used to create the backup. The system state data backup must have been created using an Active Directory–compatible backup utility within the span of the tombstone lifetime, which is by default, no more than 180 days. You should back up your domain controllers at least every half tombstone lifetime. For instructions about how to determine the specific tombstone lifetime for your forest, see [Determine the Tombstone Lifetime for the Forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
-- If a working copy of the VHD file is available, but no system state backup is available, you can remove the existing virtual machine. Restore the existing virtual machine by using a previous copy of the VHD, but be sure to start it in Directory Services Restore Mode (DSRM) and configure the registry properly, as described in the following section. Then, restart the domain controller in normal mode.
+- If a working copy of the VHD file is available, but no system state backup is available, you can remove the existing virtual machine. Restore the existing virtual machine by using a previous copy of the VHD, but be sure to start it in Directory Services Restore Mode (DSRM) and configure the registry properly, as described in the following section. Then restart the domain controller in normal mode.
 
 Use the process in the following illustration to determine the best way to restore your virtualized domain controller.
 
@@ -273,7 +273,7 @@ If you don't have a system state data backup that predates the virtual machine f
 > [!IMPORTANT]
 
 > - You shouldn't consider using the following procedure as a replacement for regularly planned and scheduled backups.
-> - **Restores that are performed with the following procedure are not supported by Microsoft and should be used only when there is no other alternative.**
+> - **Restores that are performed with the following procedure are not supported by Microsoft and should be used only when there's no other alternative.**
 > - Don't use this procedure if the copy of the VHD that you are about to restore has been started in normal mode by any virtual machine.
 
 ## To restore a previous version of a virtual domain controller VHD without system state data backup
