@@ -176,7 +176,9 @@ items:
           - name: DNS Zones
             href: dns/zone-types.md
       - name: How-to guides
-        items: 
+        items:
+          - name: Manage DNS zones
+            href: dns/manage-dns-zones.md
           - name: Secure DNS Client over HTTPS (DoH)
             href: dns/doh-client-support.md
       - name: Tutorials
