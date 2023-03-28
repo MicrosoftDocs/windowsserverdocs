@@ -33,9 +33,9 @@ You can mount a drive in an empty folder using Disk Management or the command li
 | **assign** |  Assigns a drive letter or mount point folder path to the volume with focus. If you don't specify a drive letter or mount point folder path, the next available drive letter is assigned. If the drive letter or mount point folder path is already in use, an error generates.</br>Using the **assign** command, you can change the drive letter associated with a removable drive.</br> You can't assign drive letters to boot volumes, or volumes that contain the paging file. Also, you can't assign a drive letter to an Original Equipment Manufacturer (OEM) partition, EFI system partition, or any GPT partition other than a basic data partition. |
 | **mount=** *path* | Specifies an empty, existing NTFS folder where the mounted drive resides.  
 
-### Mount a drive as a folder with Windows interface
+### Mount a drive as a folder with Disk Management
 
-1. Open Disk Management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
+1. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 
 1. Choose the partition or volume that has the folder you want to mount the drive.
 
