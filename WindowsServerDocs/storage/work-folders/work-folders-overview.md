@@ -120,10 +120,9 @@ If you want to download or use Work Folders on Windows 10, Windows 7, or an Andr
 - [Work Folders for Windows 7 (64-bit download)](https://www.microsoft.com/download/details.aspx?id=42558)
 - [Work Folders for Windows 7 (32-bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
 - [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
-- [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
 
 > [!NOTE]
-> The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
+> The Work Folders application for Android and iOS is no longer being actively developed. The Work Folders application for Android is no longer available in the Google Play store. The Work Folders application for iOS will remain in the Apple App Store if the application is functioning properly.
 
 ## Comparison with other sync technologies
 
@@ -135,7 +134,7 @@ The following table discusses how various Microsoft sync technologies are positi
 | **Intended to provide user access to work files** | Yes | Yes | Yes | No |
 | **Cloud service** | None | None | Microsoft 365 | Microsoft OneDrive |
 | **Internal network servers** | File servers running Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019 | File servers | SharePoint server (optional) | None |
-| **Supported clients** | PCs, iOS, Android | PCs in a corporate network or connected through DirectAccess, VPNs, or other remote access technologies | PCs, iOS, Android, Windows Phone | PCs, Mac computers, Windows Phone, iOS, Android |
+| **Supported clients** | PCs, iOS | PCs in a corporate network or connected through DirectAccess, VPNs, or other remote access technologies | PCs, iOS, Android, Windows Phone | PCs, Mac computers, Windows Phone, iOS, Android |
 
 > [!NOTE]
 > In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see the [DFS Namespaces overview](/windows-server/storage/dfs-namespaces/dfs-overview), [DFS Replication overview](/windows-server/storage/dfs-replication/dfsr-overview), and [BranchCache Overview](/windows-server/networking/branchcache/branchcache).
