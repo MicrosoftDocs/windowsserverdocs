@@ -1,17 +1,17 @@
 ---
 title: ksetup addrealmflags
-description: Reference article for the ksetup addrealmflags command, which adds additional realm flags to the specified realm.
+description: Reference article for the ksetup addrealmflags command that adds additional realm flags to a specified realm.
 ms.topic: reference
-ms.assetid: 80ca1e16-8871-494b-b9be-6bc9d63de860
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 04/01/2023
 ---
 
 # ksetup addrealmflags
 
-Adds additional realm flags to the specified realm.
+Applies to Windows Server (All supported versions)
+
+The ksetup addrealmflags command adds additional realm flags to a specified realm.
 
 ## Syntax
 
@@ -25,14 +25,14 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 | --------- | ----------- |
 | `<realmname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM. |
 
-#### Remarks
+## Remarks
 
-- The realm flags specify additional features of a Kerberos realm that aren't based on the Windows Server operating system. Computers that are running Windows Server, can use a Kerberos server to administer authentication in the Kerberos realm, instead of using a domain running a Windows Server operating system. This entry establishes the features of the realm, and are as follows:
+- The realm flags specify additional features of a Kerberos realm that aren't based on the Windows Server operating system. Computers running Windows Server can use a Kerberos server to administer authentication in the Kerberos realm instead of using a domain running a Windows Server operating system. This entry establishes the features of the realm and are as follows:
 
 | Value | Realm flag | Description |
 | ----- | ---------- | ----------- |
 | 0xF | All | All realm flags are set. |
-| 0x00 | None | No realm flags are set, and no additional features are enabled. |
+| 0x00 | None | No realm flags are set and no additional features are enabled. |
 | 0x01 | sendaddress | The IP address will be included within the ticket-granting tickets. |
 | 0x02 | tcpsupported | Both the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are supported in this realm. |
 | 0x04 | delegate | Everyone in this realm is trusted for delegation. |
@@ -43,7 +43,7 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 
 - You can see the available and set realm flags by viewing the output of **ksetup** or `ksetup /dumpstate`.
 
-### Examples
+## Examples
 
 To list the available realm flags for the realm CONTOSO, type:
 
@@ -57,7 +57,7 @@ To set two flags to the CONTOSO realm, type:
 ksetup /setrealmflags CONTOSO ncsupported delegate
 ```
 
-To add one more flag that is not currently in the set, type:
+To add one more flag that isn't currently in the set, type:
 
 ```
 ksetup /addrealmflags CONTOSO SendAddress
