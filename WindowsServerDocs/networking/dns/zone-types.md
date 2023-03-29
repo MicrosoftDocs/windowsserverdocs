@@ -155,11 +155,7 @@ records are necessary both to transfer authority and to provide correct referral
 servers and clients of the new servers that are being made authoritative for the new zone.
 
 ## Next steps
-<!-- Add a context sentence for the following links -->
-- [Write concepts](contribute-how-to-write-concept.md)
-- [Links](links-how-to.md)
 
-<!--
-Remove all the comments in this template before you sign-off or merge to the 
-main branch.
--->
+- [Manage DNS zones using DNS server](manage-dns-zones.md)
+- [DNS Policies Overview](deploy/DNS-Policies-Overview.md)
+- [Anycast DNS overview](deploy/anycast.md)

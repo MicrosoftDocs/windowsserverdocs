@@ -82,6 +82,8 @@ Here's how to create a forward look up zone using DNS Manager.
 
 1. Select **Finish** to complete the New Zone Wizard.
 
+---
+
 #### Create a file based primary zone
 
 To create a file based primary zone, select the relevant method and follow the
