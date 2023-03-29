@@ -4,7 +4,7 @@ description: Reference article for the auditpol backup command that backs up sys
 ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
-ms.date: 01/03/2023
+ms.date: 04/01/2023
 ---
 # auditpol backup
 
