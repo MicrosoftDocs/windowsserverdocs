@@ -35,7 +35,7 @@ You can deploy Work Folders with existing deployments of Folder Redirection, Off
 
 - Use Failover Clustering with Work Folders to provide a high-availability solution.
 
-## Important features
+## Features
 
 Work Folders provides users with multiple ways to access, manage, and share work files. The following table describes the primary features of Work Folders:
 
@@ -140,7 +140,7 @@ The following table discusses how various Microsoft sync technologies are positi
 > [!NOTE]
 > In addition to the sync technologies listed in the previous table, Microsoft offers other replication technologies, including DFS Replication, which is designed for server-to-server replication, and BranchCache, which is designed as a branch office WAN acceleration technology. For more information, see the [DFS Namespaces overview](/windows-server/storage/dfs-namespaces/dfs-overview), [DFS Replication overview](/windows-server/storage/dfs-replication/dfsr-overview), and [BranchCache Overview](/windows-server/networking/branchcache/branchcache).
 
-## Server manager
+## Server Manager
 
 Work Folders is part of the File and Storage Services role. You can install Work Folders by using the Add Roles and Features Wizard or the `Install-WindowsFeature` cmdlet. Both methods accomplish the following tasks:
 
