@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin peers and discover command that
 ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
-ms.date: 01/03/2023
+ms.date: 04/01/2023
 ---
 
 # bitsadmin peers and discover
