@@ -11,7 +11,7 @@ ms.author: jgerend
 
 # Deploy roaming user profiles
 
->**Applies To:** Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>**Applies To:** Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7
 
 This article describes how to use Windows Server to deploy [roaming user profiles](folder-redirection-rup-overview.md) to Windows client computers. A roaming user profile redirects user profiles to a *file share* so that users receive the same operating system and application settings on multiple computers.
 
@@ -92,7 +92,7 @@ Here's how to create a security group for roaming user profiles:
 4. In the **Create Group** window, in the **Group** section, specify the following settings:
 
     - In **Group name**, type the name of the security group, for example: *Roaming user profiles users and computers*.
-    - In **Group scope**, select **Security**, and then select **Global**.
+    - In **Group type**, select **Security**, and then select **Global** in **Group scope**.
 
 5. In the **Members** section, select **Add**. The **Select Users, Contacts, Computers, Service Accounts or Groups** dialog box appears.
 6. If you want to include computer accounts in the security group, select **Object Types**, select the **Computers** check box and then select **OK**.
@@ -125,7 +125,7 @@ Here's how to create a file share on Windows Server:
 
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** folder usage value.
 11. If you chose the **SMB Share - Advanced** profile, on the **Quota** page, optionally select a quota to apply to users of the share.
-12. On the **Confirmation** page, select **Create.**
+12. On the **Confirmation** page, select **Create**.
 
 ### Required permissions for roaming user profiles
 
@@ -146,14 +146,14 @@ If you don't already have a Group Policy Object (GPO) created for roaming user p
 Here's how to create a GPO for roaming user profiles:
 
 1. Open Server Manager on a computer with Group Policy Management installed.
-2. From the **Tools** menu, select **Group Policy Management**. Group Policy Management appears.
-3. Right-click the domain or OU in which you want to set up roaming user profiles, then select **Create a GPO in this domain, and Link it here**.
-4. In the **New GPO** dialog box, type a name for the GPO (for example, *Roaming user profile settings*), and then select **OK**.
-5. Right-click the newly created GPO and then clear the **Link Enabled** checkbox. This prevents the GPO from being applied until you finish configuring it.
-6. Select the GPO. In the **Security Filtering** section of the **Scope** tab, select **Authenticated Users**, and then select **Remove** to prevent the GPO from being applied to everyone.
-7. In the **Security Filtering** section, select **Add**.
-8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 2 (for example, *Roaming user profiles users and computers*), and then select **OK**.
-9. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
+1. From the **Tools** menu, select **Group Policy Management**. Group Policy Management appears.
+1. Right-click the domain or OU in which you want to set up roaming user profiles, then select **Create a GPO in this domain, and Link it here**.
+1. In the **New GPO** dialog box, type a name for the GPO (for example, *Roaming user profile settings*), and then select **OK**.
+1. Right-click the newly created GPO and then clear the **Link Enabled** checkbox. This prevents the GPO from being applied until you finish configuring it.
+1. Select the GPO. In the **Security Filtering** section of the **Scope** tab, select **Authenticated Users**, and then select **Remove** to prevent the GPO from being applied to everyone.
+1. In the **Security Filtering** section, select **Add**.
+1. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 2 (for example, *Roaming user profiles users and computers*), and then select **OK**.
+1. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
 
     This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016).
 
@@ -185,8 +185,6 @@ Here's how to set up roaming user profiles on user accounts:
 
 If you deploy roaming user profiles to computers, as is typically done for Remote Desktop Services or virtualized desktop deployments, use the following procedure. If you deploy roaming user profiles to user accounts, instead use the procedure described in [Step 5: Optionally set up roaming user profiles on user accounts](#step-5-optionally-set-up-roaming-user-profiles-on-user-accounts).
 
-You can use Group Policy to apply roaming user profiles to computers running Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
-
 > [!NOTE]
 > If you set up roaming user profiles on computers by using Group Policy and on user accounts by using Active Directory, the computer-based policy setting takes precedence.
 
@@ -217,7 +215,7 @@ To specify a Start layout, do the following:
 2. Create a full or partial Start menu layout XML file. To do so, see [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout).
     * If you specify a *full* Start layout, a user can't customize any part of the Start menu. If you specify a *partial* Start layout, users can customize everything but the locked groups of tiles you specify. However, with a partial Start layout, user customizations to the Start menu don't roam to other PCs.
 3. Use Group Policy to apply the customized Start layout to the GPO you created for roaming user profiles. To do so, see [Use Group Policy to apply a customized Start layout in a domain](/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment).
-4. Use Group Policy to set the following registry value on your Windows 10 PCs. To do so, see [Configure a registry item](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
+4. Use Group Policy to set the following registry value on your Windows 10 PCs. To do so, see [Configure a registry item](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)).
 
     | **Action**   | **Update**                  |
     | ------------ | ------------                |
@@ -244,20 +242,20 @@ To specify a Start layout, do the following:
       - Microsoft.XboxIdentityProvider\_8wekyb3d8bbwe
       - Microsoft.ZuneMusic\_8wekyb3d8bbwe
 
->[!NOTE]
->Uninstalling these apps decreases sign-in times, but you can leave them installed if your deployment needs any of them.
+> [!NOTE]
+> Uninstalling these apps decreases sign-in times, but you can leave them installed if your deployment needs any of them.
 
 ## Step 8: Enable the roaming user profiles GPO
 
 If you set up roaming user profiles on computers by using Group Policy, or if you customized other roaming user profiles settings by using Group Policy, the next step is to enable the GPO, permitting it to be applied to affected users.
 
->[!TIP]
->If you plan to implement primary computer support, do so before you enable the GPO. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For the specific policy settings, see [Deploy primary computers for folder redirection and roaming user profiles](deploy-primary-computers.md).
+> [!TIP]
+> If you plan to implement primary computer support, do so before you enable the GPO. This prevents user data from being copied to non-primary computers before primary computer support is enabled. For the specific policy settings, see [Deploy primary computers for folder redirection and roaming user profiles](deploy-primary-computers.md).
 
 Here's how to enable the roaming user profiles GPO:
 
 1. Open Group Policy Management.
-2. Right-click the GPO that you created and then select **Link Enabled**. A checkbox appears next to the menu item.
+1. Right-click the GPO that you created and then select **Link Enabled**. A checkbox appears next to the menu item.
 
 ## Step 9: Test roaming user profiles
 
@@ -268,23 +266,24 @@ Here's how to test roaming user profiles:
 1. Sign in to a primary computer (if you enabled primary computer support) with a user account for which you've enabled roaming user profiles. If you enabled roaming user profiles on specific computers, sign in to one of these computers.
 2. If the user has previously signed in to the computer, open an elevated command prompt, and then type the following command to ensure that the latest Group Policy settings are applied to the client computer:
 
-    ```PowerShell
-    GpUpdate /Force
+    ```cmd
+    gpupdate /force
     ```
+
 3. To confirm that the user profile is roaming, open **Control Panel**, select **System and Security**, select **System**, select **Advanced System Settings**, select **Settings** in the User Profiles section and then look for **Roaming** in the **Type** column.
 
 ## Appendix A: Checklist for deploying roaming user profiles
 
 | Status                     | Action                                                |
 | ---                        | ------                                                |
-| ☐<br>☐<br>☐<br>☐<br>☐   | 1. Prepare domain<br>- Join computers to domain<br>- Enable the use of separate profile versions<br>- Create user accounts<br>- (Optional) Deploy folder redirection |
-| ☐<br><br><br>             | 2. Create security group for roaming user profiles<br>- Group name<br>- Members |
-| ☐<br><br>                 | 3. Create a file share for roaming user profiles<br>- File share name |
-| ☐<br><br>                 | 4. Create a GPO for roaming user profiles<br>- GPO name|
+| <br>☐<br>☐<br>☐<br>☐   | 1. Prepare domain<br>- Join computers to domain<br>- Enable the use of separate profile versions<br>- Create user accounts<br>- (Optional) Deploy folder redirection |
+| <br>☐<br>☐<br>             | 2. Create security group for roaming user profiles<br>- Group name<br>- Members |
+| <br>☐<br>                 | 3. Create a file share for roaming user profiles<br>- File share name |
+| <br>☐<br>                 | 4. Create a GPO for roaming user profiles<br>- GPO name|
 | ☐                         | 5. Configure roaming user profiles policy settings    |
-| ☐<br>☐<br>☐              | 6. Enable roaming user profiles<br>- Enabled in AD DS on user accounts?<br>- Enabled in Group Policy on computer accounts?<br> |
+| <br>☐<br>☐              | 6. Enable roaming user profiles<br>- Enabled in AD DS on user accounts?<br>- Enabled in Group Policy on computer accounts?<br> |
 | ☐                         | 7. (Optional) Specify a mandatory Start layout for Windows 10 PCs |
-| ☐<br>☐<br><br>☐<br><br>☐ | 8. (Optional) Enable primary computer support<br>- Designate primary computers for users<br>- Location of user and primary computer mappings<br>- (Optional) Enable primary computer support for folder redirection<br>- Computer-based or user-based?<br>- (Optional) Enable primary computer support for roaming user profiles |
+| <br>☐<br>☐<br>☐<br>☐<br>☐ | 8. (Optional) Enable primary computer support<br>- Designate primary computers for users<br>- Location of user and primary computer mappings<br>- (Optional) Enable primary computer support for folder redirection<br>- Computer-based or user-based?<br>- (Optional) Enable primary computer support for roaming user profiles |
 | ☐                        | 9. Enable the roaming user profiles GPO                |
 | ☐                        | 10. Test roaming user profiles                         |
 
@@ -311,7 +310,7 @@ Here are some ways to work around Start menu layouts getting reset after an in-p
 - If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as Configuration Manager, they can do the following:
 
   1. Export the Start menu layout with *Export-Startlayout* before the upgrade.
-  2. Import the Start menu layout with *Import-StartLayout* after OOBE but before the user signs in.
+  1. Import the Start menu layout with *Import-StartLayout* after OOBE but before the user signs in.
 
      > [!NOTE]
      > Importing a *StartLayout* modifies the Default User profile. All user profiles created after the import has occurred will get the imported StartLayout.
