@@ -4,7 +4,7 @@ description: SLB Gateway performance tuning guidelines on SDN networks
 ms.topic: article
 ms.author: grcusanz
 author: phstee
-ms.date: 01/03/2023
+ms.date: 04/01/2023
 ---
 
 # SLB Gateway Performance Tuning in Software Defined Networks
@@ -19,11 +19,11 @@ No other performance tuning is required to configure the Network Controller or t
 
 SLB Mux virtual machines are deployed in an active-active configuration, meaning that every Mux VM that's deployed and added to the Network Controller can process incoming requests. In an active-active configuration, the total aggregate throughput of all of the connections is limited only by the number of Mux VMs that you deployed.
 
-An individual connection to a Virtual IP (VIP) will always be sent to the same Mux, assuming the number of muxes remains constant and its throughput is limited to the throughput of a single Mux VM.  Muxes only process the inbound traffic that is going to a VIP.  Response packets go directly from the VM that is sending the response to the physical switch that forwards it on to the client.
+An individual connection to a Virtual IP (VIP) will always be sent to the same Mux, assuming the number of muxes remains constant and its throughput is limited to the throughput of a single Mux VM.  Muxes only process the inbound traffic that's going to a VIP.  Response packets go directly from the VM that's sending the response to the physical switch that forwards it on to the client.
 
-In some cases, when the source of the request originates from an SDN host that is added to the same Network Controller that manages the VIP, further optimization of the inbound path for the request is also performed. With the SDN host and the VIP managed by the same controller, most packets are able to travel directly from the client to the server, bypassing the Mux VM entirely. No other configuration is required for this optimization to happen.
+In some cases, when the source of the request originates from an SDN host that's added to the same Network Controller that manages the VIP, further optimization of the inbound path for the request is also performed. With the SDN host and the VIP managed by the same controller, most packets are able to travel directly from the client to the server, bypassing the Mux VM entirely. No other configuration is required for this optimization to happen.
 
-Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section, learn more in the [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure) article.
+Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section. Learn more in the [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure) article.
 
 ## Single Root IO virtualization (SR-IOV)
 
