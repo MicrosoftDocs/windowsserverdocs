@@ -119,7 +119,7 @@ Here's how to create a file share on Windows Server:
 6. On the **Other Settings** page, clear the **Enable continuous availability** checkbox, if present, and optionally select the **Enable access-based enumeration** and **Encrypt data access** checkboxes.
 7. On the **Permissions** page, select **Customize permissions**. The Advanced Security Settings dialog box appears.
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
-9. Set the permissions as described in [Required permissions for roaming user profiles](#required-permissions-for-roaming-user-profiles) and shown in the following screen shot. Remove permissions for unlisted groups and accounts, and add special permissions to the *Roaming user profiles users and computers* group that you created in Step 2.
+9. Set the permissions as described in [Required permissions for roaming user profiles](#required-permissions-for-roaming-user-profiles) and shown in the following screenshot. Remove permissions for unlisted groups and accounts, and add special permissions to the *Roaming user profiles users and computers* group that you created in Step 2.
 
     :::image type="content" source="media/advanced-security-user-profiles.jpg" alt-text="Screenshot of Advanced Security Settings window that shows permissions.":::
 
