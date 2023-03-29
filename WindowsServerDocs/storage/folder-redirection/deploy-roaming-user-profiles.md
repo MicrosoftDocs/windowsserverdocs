@@ -117,7 +117,7 @@ Here's how to create a file share on Windows Server:
     > When creating the file share, hide it from casual browsers by putting a `$` after the share name.
 
 6. On the **Other Settings** page, clear the **Enable continuous availability** checkbox, if present, and optionally select the **Enable access-based enumeration** and **Encrypt data access** checkboxes.
-7. On the **Permissions** page, select **Customize permissions…**. The Advanced Security Settings dialog box appears.
+7. On the **Permissions** page, select **Customize permissions**. The Advanced Security Settings dialog box appears.
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described in [Required permissions for roaming user profiles](#required-permissions-for-roaming-user-profiles) and shown in the following screen shot. Remove permissions for unlisted groups and accounts, and add special permissions to the *Roaming user profiles users and computers* group that you created in Step 2.
 
@@ -345,7 +345,7 @@ The following table summarizes some of the most important changes to this articl
 
 - [Deploy folder redirection with offline files](deploy-folder-redirection.md)
 - [Deploy primary computers for folder redirection and roaming user profiles](deploy-primary-computers.md)
-- [Implementing user state management](</previous-versions/windows/it-pro/windows-server-2003/cc784645(v=ws.10)>)
+- [Implementing user state management](/previous-versions/windows/it-pro/windows-server-2003/cc784645(v=ws.10))
 - [Microsoft's support statement around replicated user profile data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
-- [Sideload apps with Deployment Image Servicing and Management (DISM)](</previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
+- [Sideload apps with Deployment Image Servicing and Management (DISM)](/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10))
 - [Troubleshooting packaging, deployment, and query of Windows apps](/windows/win32/appxpkg/troubleshooting)
