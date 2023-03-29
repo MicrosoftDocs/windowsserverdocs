@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin cache and getlimit command that
 ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
-ms.date: 01/03/2023
+ms.date: 04/01/2023
 ---
 
 # bitsadmin cache and getlimit
