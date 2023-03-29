@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin cache and clear command that pu
 ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
-ms.date: 01/06/2023
+ms.date: 04/01/2023
 ---
 
 # bitsadmin cache and clear
