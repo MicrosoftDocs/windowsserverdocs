@@ -1,24 +1,21 @@
 ---
-ms.assetid: cb834273-828a-4141-9387-37dd8270e932
-title: Winlogon automatic restart sign-on (ARSO)
-description: How Windows automatic restart sign-on can help make your users more productive.
+title: Winlogon Automatic Restart Sign-on (ARSO)
+description: How Windows Automatic Restart Sign-on can help make your users more productive.
 author: iainfoulds
 ms.author: justinha
-manager: daveba
-ms.reviewer: cahick
-ms.date: 04/30/2021
+ms.date: 04/01/2023
 ms.topic: article
 ---
 
-# Winlogon automatic restart sign-on (ARSO)
+# Winlogon Automatic Restart Sign-on (ARSO)
 
-During a Windows Update, there are user specific processes that must happen for the update to be complete. These processes require the user to be logged in to their device. On the first login after an update has been initiated, users must wait until these user specific processes are complete before they can start using their device.
+When running Windows Update, there are user-specific processes that must run for the update to complete successfully. These processes require the user to be logged in. On the first login after Windows Update has completed, users must wait until these user-specific processes are complete before they can resume using their device.
 
-## How does it work?
+## How it works
 
-When Windows Update initiates an automatic reboot, ARSO extracts the currently logged in user's derived credentials, persists it to disk, and configures Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
+When Windows Update initiates an automatic reboot, ARSO extracts the currently logged-in user's derived credentials, persists it to disk, and configures Autologon for the user. Windows Update running as system with TCB privilege will initiate the RPC call to do this.
 
-After the final Windows Update reboot, the user will automatically be logged in via the Autologon mechanism, and the user's session is rehydrated with the persisted secrets. Additionally, the device is locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by the Local Security Authority (LSA). Upon a successful ARSO configuration and login, the saved credentials are immediately deleted from disk.
+After the final Windows Update restart, the user will automatically be logged in via the Autologon mechanism, and the user's session is rehydrated with the persisted secrets. Additionally, the device is locked to protect the user's session. The locking will be initiated via Winlogon whereas the credential management is done by the Local Security Authority (LSA). Upon a successful ARSO configuration and login, the saved credentials are immediately deleted from disk.
 
 By automatically logging in and locking the user on the console, Windows Update can complete the user specific processes before the user returns to the device. In this way, the user can immediately start using their device.
 
@@ -29,7 +26,7 @@ ARSO treats unmanaged and managed devices differently. For unmanaged devices, de
 | Managed devices - Yes<p>Unmanaged devices - Yes | Managed devices - Yes<p>Unmanaged devices - Yes | Managed devices - No<p>Unmanaged devices - Yes | Managed devices - Yes<p>Unmanaged devices - Yes |
 
 > [!NOTE]
-> After a Windows Update induced reboot, the last interactive user is automatically logged in and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update reboot.
+> After a Windows Update restart, the last interactive user is automatically logged in and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update restart.
 
 ![Settings Page](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-lockscreenapp.png)
 
@@ -57,11 +54,11 @@ This only occurs if the last interactive user didn't sign out before the restart
 
 If the device is joined to Active Directory or Azure Active Directory, this policy only applies to Windows Update restarts. Otherwise, this will apply to both Windows Update restarts and user-initiated restarts and shutdowns.
 
-If you don't configure this policy setting, it is enabled by default. When the policy is enabled, the user is automatically signed in and the session is automatically locked with all lock screen apps configured for that user after the device boots.
+If you don't configure this policy setting, it's enabled by default. When the policy is enabled, the user is automatically signed in and the session is automatically locked with all lock screen apps configured for that user after the device restarts.
 
-After enabling this policy, you can configure its settings through the ConfigAutomaticRestartSignOn policy, which configures the mode of automatically signing in and locking the last interactive user after a restart or cold boot.
+After enabling this policy, you can configure its settings through the ConfigAutomaticRestartSignOn policy, which configures the mode of automatically signing in and locking the last interactive user after a restart or power up.
 
-If you disable this policy setting, the device does not configure automatic sign in. The user's lock screen apps are not restarted after the system restarts.
+If you disable this policy setting, the device doesn't configure automatic sign in. The user's lock screen apps aren't restarted after the system restarts.
 
 **Registry editor:**
 
@@ -92,19 +89,19 @@ If you disable this policy setting, the device does not configure automatic sign
 
 **Description:**
 
-This policy setting controls the configuration under which an automatic restart and sign on and lock occurs after a restart or cold boot. If you chose “Disabled” in the “Sign-in and lock last interactive user automatically after a restart” policy, then automatic sign on will not occur and this policy does not need to be configured.
+This policy setting controls the configuration under which an automatic restart and sign on and lock occurs after a restart or power on. If you chose “Disabled” in the “Sign-in and lock last interactive user automatically after a restart” policy, then automatic sign on will not occur and this policy doesn't need to be configured.
 
 If you enable this policy setting, you can choose one of the following two options:
 
-1. “Enabled if BitLocker is on and not suspended” specifies that automatic sign on and lock will only occur if BitLocker is active and not suspended during the reboot or shutdown. Personal data can be accessed on the device's hard drive at this time if BitLocker is not on or suspended during an update. BitLocker suspension temporarily removes protection for system components and data but may be needed in certain circumstances to successfully update boot-critical components.
-   - BitLocker is suspended during updates if:
+- “Enabled if BitLocker is on and not suspended” specifies that automatic sign on and lock will only occur if BitLocker is active and not suspended during the reboot or shutdown. Personal data can be accessed on the device's hard drive at this time if BitLocker is not on or suspended during an update. BitLocker suspension temporarily removes protection for system components and data but may be needed in certain circumstances to successfully update boot-critical components.
+- BitLocker is suspended during updates if:
       - The device doesn't have TPM 2.0 and PCR7, or
       - The device doesn't use a TPM-only protector
-2. “Always Enabled” specifies that automatic sign on will happen even if BitLocker is off or suspended during reboot or shutdown. When BitLocker is not enabled, personal data is accessible on the hard drive. Automatic restart and sign on should only be run under this condition if you are confident that the configured device is in a secure physical location.
+- “Always Enabled” specifies that automatic sign on will happen even if BitLocker is off or suspended during reboot or shutdown. When BitLocker ist enabled, personal data is accessible on the hard drive. Automatic restart and sign on should only be run under this condition if you are confident that the configured device is in a secure physical location.
 
 If you disable or don't configure this setting, automatic sign on will default to the “Enabled if BitLocker is on and not suspended” behavior.
 
-**Registry editor**
+### Registry editor
 
 | Value Name | Type | Data |
 | --- | --- | --- |
@@ -124,24 +121,26 @@ When WinLogon automatically locks, WinLogon's state trace will be stored in the 
 The status of an Autologon configuration attempt is logged
 
 - If it is successful
-   - records it as such
+  - Records it as such
+
 - If it is a failure:
-   - records what the failure was
+  - Records what the failure was
+  
 - When BitLocker's state changes:
-   - the removal of credentials will be logged
-   - These will be stored in the LSA Operational log.
+  - The removal of credentials will be logged.
+  - These will be stored in the LSA Operational log.
 
-### Reasons why autologon might fail
+### Reasons why Autologon can fail
 
-There are several cases in which a user automatic login cannot be achieved.  This section is intended to capture the known scenarios in which this can occur.
+There are several cases in which a user automatic login cannot be achieved. This section discusses known scenarios in which this can occur.
 
-### User must change password at next login
+#### User must change password at next login
 
-User login can enter a blocked state when password change at next login is required.  This can be detected prior to restart in most cases, but not all (for example, password expiry can be reached between shutdown and next login.
+User login can enter a blocked state when password change at next login is required. This can be detected prior to restart in most cases, but not all (for example, password expiry can be reached between shutdown and next login.
 
-### User account disabled
+#### User account disabled
 
-An existing user session can be maintained even if disabled.  Restart for an account that is disabled can be detected locally in most cases in advance, depending on gp it may not be for domain accounts (some domain cached login scenarios work even if account is disabled on DC).
+An existing user session can be maintained even if disabled. Restart for an account that is disabled can be detected locally in most cases in advance, depending on gp it may not be for domain accounts (some domain cached login scenarios work even if account is disabled on DC.)
 
 ### Logon hours and parental controls
 
