@@ -104,7 +104,7 @@ Here's how to configure the interface used to listen for DNS requests using the
 1. Run PowerShell on your computer in an elevated session.
 
 1. Find your computers existing IP address by running the
-   [Get-NetIPAddress](/powershell/module/netadapter/get-netipaddress) cmdlet. Make a note of the IP
+   [Get-NetIPAddress](/powershell/module/nettcpip/get-netipaddress) cmdlet. Make a note of the IP
    address that you want to use for your DNS server.
 
     ```powershell
@@ -154,7 +154,7 @@ Here's how to update a DNS root hint name server using the
 1. Run PowerShell on your computer in an elevated session.
 
 1. Find your computers existing IP address by running the
-   [Get-DnsServerRootHint](/powershell/module/netadapter/get-dnsserverroothint) cmdlet. Make a note
+   [Get-DnsServerRootHint](/powershell/module/dnsserver/get-dnsserverroothint) cmdlet. Make a note
    of the name server that you want to update.
 
     ```powershell
