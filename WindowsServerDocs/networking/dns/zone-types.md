@@ -1,5 +1,5 @@
 ---
-title: DNS Zones in DNS Server on Windows Server
+title: DNS zones in DNS Server on Windows Server
 description: Learn about the different DNS zone types and how they're stored with DNS server in Windows Server.
 author: robinharwood
 ms.author: wscontent
@@ -111,7 +111,7 @@ When working with sub zones, you should consider:
   uses a local list of name servers or the list stored in AD DS. If you want to use a local name
   servers list, you must have the IP addresses for each name server.
 
-### Reverse Lookup Zones
+### Reverse lookup zones
 
 In most Domain Name System (DNS) lookups, clients typically perform a forward lookup, which is a
 search that is based on the DNS name of another computer as it is stored in a host (A) resource
@@ -134,7 +134,7 @@ The order of IP address octets must be reversed when the `in-addr.arpa` domain t
 addresses of the DNS `in-addr.arpa` tree can be delegated to organizations as they're assigned a
 specific or limited set of IP addresses within the Internet-defined address classes.
 
-## Zone Transfer Settings
+## Zone transfer settings
 
 Zone transfers allow you to control the circumstances under which a secondary zone to be replicated
 from a primary zone. To improve the security of your DNS infrastructure, allow zone transfers only
@@ -142,7 +142,7 @@ for either the DNS servers in the name server (NS) resource records for a zone o
 servers. If you allow any DNS server to perform a zone transfer, you're allowing internal network
 information to be transferred to any host that can contact your DNS server.
 
-## Zone Delegation
+## Zone delegation
 
 You can divide your Domain Name System (DNS) namespace into one or more zones. You can delegate
 management of part of your namespace to another location or department in your organization by
