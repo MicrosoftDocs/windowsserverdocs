@@ -40,7 +40,7 @@ To retrieve the notify interface for the job named *myDownloadJob*:
 bitsadmin /getnotifyinterface myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

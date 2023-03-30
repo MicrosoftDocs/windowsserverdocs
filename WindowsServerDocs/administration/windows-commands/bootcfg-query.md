@@ -60,7 +60,7 @@ bootcfg /query /s srvmain /u maindom\hiropln /p p@ssW23
 bootcfg /query /u hiropln /p p@ssW23
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -41,6 +41,6 @@ To view detailed information about all servers, type:
 wdsutil /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

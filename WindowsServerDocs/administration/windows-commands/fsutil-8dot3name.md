@@ -2,11 +2,11 @@
 title: fsutil 8dot3name
 description: Reference article for the fsutil 8dot3name command, which queries or changes the settings for short name (8dot3 name) behavior.
 manager: dmoss
-ms.author: toklima
+ms.author: alalve
 author: toklima
 ms.assetid: a0c6dbfe-d898-496d-9356-825f7fbd90ec
 ms.topic: reference
-ms.date: 10/16/2017
+ms.date: 11/22/2022
 ---
 
 # fsutil 8dot3name
@@ -41,7 +41,7 @@ fsutil 8dot3name [strip] [/t] [/s] [/f] [/l [<log file.] ] [/v] <directorypath>
 | --------- | ----------- |
 | query `[<volumepath>]` | Queries the file system for the state of the 8dot3 short name creation behavior.<p>If a *volumepath* isn't specified as a parameter, the default 8dot3name creation behavior setting for all volumes is displayed. |
 | scan `<directorypath>` | Scans the files that are located in the specified *directorypath* for registry keys that might be impacted if 8dot3 short names were stripped from the file names. |
-| set { `<defaultvalue> | <volumepath>}` | Changes the file system behavior for 8dot3 name creation in the following instances:<ul><li>When *defaultvalue* is specified, the registry key, **HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreationNtfsDisable8dot3NameCreation**, is set to the *defaultvalue*.<p>The *DefaultValue* can have the following values:<ul><li>**0**: Enables 8dot3 name creation for all volumes on the system.</li><li>**1**: Disables 8dot3 name creation for all volumes on the system.</li><li>**2**: Sets 8dot3 name creation on a per volume basis.</li><li>**3**: Disables 8dot3 name creation for all volumes except the system volume.</li></ul><li>When a *volumepath* is specified, the specified volumes on disk flag 8dot3name properties are set to enable 8dot3 name creation for a specified volume (**0**) or set to disable 8dot3 name creation on the specified volume (**1**).<p>You must set the default file system behavior for 8dot3 name creation to the value **2** before you can enable or disable 8dot3 name creation for a specified volume.</li></ul> |
+| set { `<defaultvalue> \| <volumepath>}` | Changes the file system behavior for 8dot3 name creation in the following instances:<ul><li>When *defaultvalue* is specified, the registry key, **HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreation**, is set to the *defaultvalue*.<p>The *DefaultValue* can have the following values:<ul><li>**0**: Enables 8dot3 name creation for all volumes on the system.</li><li>**1**: Disables 8dot3 name creation for all volumes on the system.</li><li>**2**: Sets 8dot3 name creation on a per volume basis.</li><li>**3**: Disables 8dot3 name creation for all volumes except the system volume.</li></ul><li>When a *volumepath* is specified, the specified volumes on disk flag 8dot3name properties are set to enable 8dot3 name creation for a specified volume (**0**) or set to disable 8dot3 name creation on the specified volume (**1**).<p>You must set the default file system behavior for 8dot3 name creation to the value **2** before you can enable or disable 8dot3 name creation for a specified volume.</li></ul> |
 | strip `<directorypath>` | Removes the 8dot3 file names for all files that are located in the specified *directorypath*. The 8dot3 file name is not removed for any files where the *directorypath* combined with the file name contains more than 260 characters.<p>This command lists, but does not modify the registry keys that point to the files that had 8dot3 file names permanently removed. |
 | `<volumepath>` | Specifies the drive name followed by a colon or the GUID in the format `volume{GUID}`. |
 | /f | Specifies that all files that are located in the specified *directorypath* have the 8dot3 file names removed even if there are registry keys that point to files using the 8dot3 file name. In this case, the operation removes the 8dot3 file names, but does not modify any registry keys that point to the files that are using the 8dot3 file names. **Warning:** It's recommended that you back up your directory or volume prior to using the **/f** parameter because it may lead to unexpected application failures, including the inability to uninstall programs. |
@@ -66,7 +66,7 @@ To remove 8dot3 file names in the *D:\MyData* directory and all subdirectories, 
 fsutil 8dot3name strip /l mylogfile.log /s d:\MyData
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

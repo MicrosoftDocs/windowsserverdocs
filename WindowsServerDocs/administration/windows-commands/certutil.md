@@ -6,7 +6,7 @@ ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 11/22/2022
 ---
 
 # certutil
@@ -1337,6 +1337,17 @@ certutil [options] -scroots delete [readername]
 [-f] [-split] [-p Password]
 ```
 
+### -DeleteHelloContainer
+
+Deletes the Windows Hello container, removing all associated credentials that are stored on the
+device, including any WebAuthn and FIDO credentials.
+
+Users will need to sign out after using this option for it to complete.
+
+```
+CertUtil [Options] -DeleteHelloContainer
+```
+
 ### -verifykeys
 
 Verifies a public or private key set.
@@ -1996,7 +2007,7 @@ This section defines all of the options you're able to specify, based on the com
 | -t timeout | URL fetch timeout in milliseconds. |
 | -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES` |
 
-### Additional References
+### Related links
 
 For some more examples about how to use this command, see
 

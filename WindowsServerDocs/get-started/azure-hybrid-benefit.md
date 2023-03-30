@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
-ms.date: 10/07/2022
+ms.date: 11/28/2022
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
@@ -146,7 +146,7 @@ You can learn how to deploy Azure Hybrid Benefit for Azure Stack HCI by followin
 
 ## Getting Azure Hybrid Benefit for AKS
 
-Follow the guidance in this section to get Azure Hybrid Benefit for AKS.
+Follow the guidance in this section to get [Azure Hybrid Benefit for AKS](/azure/aks/hybrid/azure-hybrid-benefit).
 
 ### Licensing prerequisites
 
@@ -173,7 +173,7 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 ### How to apply Azure Hybrid Benefit for AKS
 
-Azure Hybrid Benefit for AKS will be available soon.
+To get started with Azure Hybrid Benefit for AKS, see [Azure Hybrid Benefit for AKS](/azure/aks/hybrid/azure-hybrid-benefit).
 
 ## FAQ: Azure Hybrid Benefit
 

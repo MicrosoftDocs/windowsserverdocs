@@ -72,6 +72,6 @@ To view the **start** command-line help topic in a separate maximized **Command 
 start /max start /?
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

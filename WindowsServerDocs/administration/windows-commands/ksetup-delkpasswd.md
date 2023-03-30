@@ -38,7 +38,7 @@ ksetup /delkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 
 To make sure the realm CORP.CONTOSO.COM is not mapped to a Kerberos password server (the KDC name), type `ksetup` on the Windows computer and then view the output.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

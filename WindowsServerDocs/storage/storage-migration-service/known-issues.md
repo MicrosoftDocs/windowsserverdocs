@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 06/11/2021
+ms.date: 03/24/2023
 ms.topic: article
 ---
 # Storage Migration Service known issues
@@ -227,6 +227,28 @@ at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.Proc
 ```
 
 This was a code defect that would manifest if your migration account does not have at least Read permissions to the SMB shares. This issue was first fixed in cumulative update [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062).
+
+Another possible cause might be insufficient access rights to the source file server. While examining the "Microsoft.StorageMigration.Proxy.Service.exe" process with Process Monitor you might see the below result:
+```
+Date: 6/04/2022 15:36:09,1943419
+Thread: 1688
+Class: File System
+Operation: CreateFile
+Result: PRIVILEGE_NOT_HELD
+Path: \\srv1.contoso.com\F$\\public
+Duration: 0.0002573
+
+Desired Access: Read Attributes, Read Control, Synchronize, Access System Security
+Disposition: Open
+Options: Synchronous IO Non-Alert, Open For Backup
+Attributes: N
+ShareMode: Read, Write
+AllocationSize: n/a
+Impersonating: CONTOSO\ServiceAccount
+OpenResult: PRIVILEGE_NOT_HELD
+```
+The actual operation being performed needs the "Open For Backup"-privileges on the source file server. Verify that your user account used to access the source file server is granted the necessary permissions via the following Local Security Policy on this server or using a Group Policy Object:
+    `Security Settings > Local Policies > User Rights Assignment > Back up files and directories`
 
 ## Error 0x80005000 when running inventory
 
@@ -763,6 +785,102 @@ Under rare circumstances you may need to reset the Storage Migration Service dat
      ```CMD
      NET START SMS
      NET START SMSPROXY
+
+## Transfers halts with error: Unable to translate Unicode character 
+
+A running transfer halts. You receive event log error:
+
+```
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          
+Event ID:      3515
+Task Category: None
+Level:         Error
+Keywords:      
+User:          NETWORK SERVICE
+Computer:      
+Description:
+Couldn't transfer all of the files in the endpoint on the computer.
+Job: 
+Computer: 
+Destination Computer:
+Endpoint:
+State: Failed
+Source File Count: 833617
+Source File Size in KB: 45919696
+Succeeded File Count: 833438
+Succeeded File Size in KB: 45919696
+New File Count: 0
+New File Size in KB: 0
+Failed File Count: 179
+Error: -2146233087
+Error Message: The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9970000'.
+```
+
+Examining the [Storage Migration Service debug log](https://aka.ms/smslogs) shows:
+
+```
+03. 07. 2023-23:28:08.647 [Erro] ExceptionMessage : (Unable to translate Unicode character \uDB71 at index 1 to specified code page.), ExceptionToString: (System.Text.EncoderFallbackException: Unable to translate Unicode character \uDB71 at index 1 to specified code page.
+```
+
+This issue is caused by an unhandled unicode character that the Storage Migration Service cannot translate. To locate the name of the file(s) with the invalid character, edit the following sample PowerShell script and run it on the source computer, then examine the results and rename or remove the files:
+
+```
+# Sample PowerShell script to find files with unhandled unicode characters
+
+$FolderPath = "C:\temp"
+$OutputFilePath = "C:\temp\invalid_char_results.txt"
+$UnhandledChar = "\uDB71"
+
+Get-ChildItem -path $FolderPath -Recurse | ForEach-Object {
+ if ($_ -is [System.IO.FileInfo]) {
+  if ($_.Name -match $UnhandledChar) {
+   Add-Content $outputFilePath "$($_.FullName)"
+  }
+ }
+}
+```
+
+## Cut over fails at 77% or 30%
+
+When you're performing cut over, the operation hangs at "77% - adding the destination computer to the domain" or "30% - Can't unjoin domain." The issue only happens when:
+
+- A user who isn't a member of a built-in admin group in AD created the source or destination computer account in Active Directory.
+
+    Or
+
+- The migration user account isn't the same user who created the source computer account.
+
+Windows updates released on and after October 11, 2022 contain extra protections to address [CVE-2022-38042](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-38042), these extra protections caused the issue. The protections were further updated with the March 14, 2023 monthly cumulative update, adding a workaround option for this issue. The protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless:
+
+- The user attempting the operation is the creator of the existing account.
+
+- The user attempting the operation is a member of Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators created the computer account.
+
+- The user attempting the operation is a member of the "Domain controller: Allow computer account reuse during domain join." Group Policy setting for the computer account.
+
+To resolve this issue, use one of the following solutions.
+
+### Solution 1 - Use "Allow computer account re-use during domain join"
+
+1. Ensure all domain controllers, the source computer, destination computer, and SMS migration computer have installed the March 14, 2023 cumulative update and have been rebooted.
+1. Follow the steps in detailed in the Take Action section of [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8#bkmk_take_action).
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that was allowed to reuse computer accounts in step 2."
+
+### Solution 2 - Use the original account for migration
+
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that created or joined the source and destination computer to the domain.
+
+### Solution 3 (not recommended) - Use a high-privilege group
+
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is a member of one of the high-privilege Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators.
+
+> [!IMPORTANT]
+> If you have followed Solution 1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
 
 ## See also
 

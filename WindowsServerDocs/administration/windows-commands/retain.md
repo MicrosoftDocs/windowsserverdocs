@@ -19,6 +19,6 @@ Prepares an existing simple dynamic volume for use as a boot or system volume. I
 retain
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

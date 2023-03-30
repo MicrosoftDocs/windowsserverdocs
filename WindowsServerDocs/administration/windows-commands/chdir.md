@@ -17,7 +17,7 @@ Displays the name of the current directory or changes the current directory. If 
 > > [!NOTE]
 > This command has been replaced by the **cd command**. For more information, including the syntax and parameter details, see [cd command](cd.md).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

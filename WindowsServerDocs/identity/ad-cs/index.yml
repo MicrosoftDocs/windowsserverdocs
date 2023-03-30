@@ -26,7 +26,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Active Directory Certificate Services?
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)
+            url: active-directory-certificate-services-overview.md
       
   # Card
   - title: Get started

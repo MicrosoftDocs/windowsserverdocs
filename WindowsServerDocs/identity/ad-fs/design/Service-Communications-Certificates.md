@@ -4,8 +4,8 @@ ms.assetid: 95e82190-68c5-4e40-87b1-f1bd816ef4e9
 title: Service Communications Certificates
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

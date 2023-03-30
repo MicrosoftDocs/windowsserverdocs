@@ -37,7 +37,7 @@ To create a volume of 1000 megabytes in size, on disk 1, type:
 create volume simple size=1000 disk=1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

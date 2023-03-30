@@ -47,6 +47,6 @@ To display detailed help information about how to use the **create partition pri
 help create partition primary
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

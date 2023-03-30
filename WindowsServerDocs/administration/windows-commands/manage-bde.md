@@ -48,7 +48,7 @@ manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unloc
 | -? or /? | Displays brief Help at the command prompt. |
 | -help or -h | Displays complete Help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

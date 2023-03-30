@@ -64,7 +64,7 @@ To display the network and node address for the Remote Desktop Session Host serv
 query termserver Server3 /address
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

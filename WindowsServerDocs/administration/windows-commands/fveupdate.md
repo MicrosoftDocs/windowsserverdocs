@@ -13,6 +13,6 @@ ms.date: 10/16/2017
 
 FveUpdate is an internal tool, used by the setup program when a computer is upgraded. It updates the metadata associated with BitLocker to the latest version. This tool cannot be run independently.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

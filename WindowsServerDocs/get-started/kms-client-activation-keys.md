@@ -4,7 +4,7 @@ description: Get the product keys needed for setup and activation of Windows Ser
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: alalve
-ms.date: 9/13/2021
+ms.date: 03/07/2023
 ms.prod: windows-server
 ---
 
@@ -48,6 +48,7 @@ In the tables that follow, you will find the GVLKs for each version and edition 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
 | Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
+| Windows Server 2022 Datacenter<br/>Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
 | Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
 
 #### Windows Server 2019

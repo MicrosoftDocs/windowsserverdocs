@@ -68,7 +68,7 @@ To display information about the user *USER1* on server *Server1*, type:
 query user USER1 /server:Server1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

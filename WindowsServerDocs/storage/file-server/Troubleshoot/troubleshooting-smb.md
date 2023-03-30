@@ -5,7 +5,7 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 12/25/2019
+ms.date: 12/12/2022
 ---
 
 # Advanced Troubleshooting Server Message Block (SMB)
@@ -15,13 +15,13 @@ ms.date: 12/25/2019
 
 Server Message Block (SMB) is a network transport protocol for file systems operations to enable a client to access resources on a server. The primary purpose of the SMB protocol is to enable remote file system access between two systems over TCP/IP.
 
-SMB troubleshooting can be extremely complex. This article is not an exhaustive troubleshooting guide Instead, it is a short primer to understand the basics of how to effectively troubleshoot SMB.
+SMB troubleshooting can be extremely complex. This article isn't an exhaustive troubleshooting guide Instead, it's a short primer to understand the basics of how to effectively troubleshoot SMB.
 
 ## Tools and data collection
 
 One key aspect of quality SMB troubleshooting is communicating the correct terminology. Therefore, this article introduces basic SMB terminology to ensure accuracy of data collection and analysis.
 
-> [!Note]
+> [!NOTE]
 > The *SMB Server (SRV)* refers to the system that is hosting the file system, also known as the file server. *The SMB Client (CLI)* refers to the system that is trying to access the file system, regardless of the OS version or edition.
 
 For example, if you use Windows Server 2016 to reach an SMB share that is hosted on Windows 10, Windows Server 2016 is the SMB Client and Windows 10 the SMB Server.
@@ -30,7 +30,7 @@ For example, if you use Windows Server 2016 to reach an SMB share that is hosted
 
 Before you troubleshoot SMB issues, we recommend that you first collect a network trace on both the client and server sides. The following guidelines apply:
 
-- On Windows systems, you can use netshell (netsh), Network Monitor, Message Analyser, or Wireshark to collect a network trace.
+- On Windows systems, you can use netshell (netsh), Network Monitor, Message Analyzer, or [Wireshark](https://www.wireshark.org/index.html#download) to collect a network trace.
 
 - Third-party devices generally have an in-box packet capture tool, such as tcpdump (Linux/FreeBSD/Unix), or pktt (NetApp). For example, if the SMB client or SMB server is a Unix host, you can collect data by running the following command:
   
@@ -46,8 +46,11 @@ To discover the source of the issue, you can check the two-sided traces: CLI, SR
 
 This section provides the steps for using netshell to collect network trace.
 
+> [!IMPORTANT]
+> The Microsoft Message Analyzer tool [has been retired](/openspecs/blog/ms-winintbloglp/dd98b93c-0a75-4eb0-b92e-e760c502394f) and we recommend [Wireshark](https://www.wireshark.org/index.html#download) to analyze ETL files. For those who have downloaded the tool previously and are looking for more information, see [Installing and upgrading Message Analyzer](/message-analyzer/installing-and-upgrading-message-analyzer).
+
 > [!NOTE]  
-> A Netsh trace creates an ETL file. ETL files can be opened only in Message Analyzer (MA) and Network Monitor 3.4 (set the parser to Network Monitor Parsers \> Windows).
+> A Netsh trace creates an ETL file. ETL files can be opened in Message Analyzer (MA), Network Monitor 3.4 (set the parser to Network Monitor Parsers \> Windows), and [Wireshark](https://www.wireshark.org/index.html#download).
 
 1. On both the SMB server and SMB client, create a **Temp** folder on drive **C**. Then, run the following command:
 
@@ -80,7 +83,7 @@ This section provides the steps for using netshell to collect network trace.
    Remove-NetEventSession trace
    ```
 
-> [!NOTE] 
+> [!NOTE]
 > You should trace only a minimum amount of the data that's transferred. For performance issues, always take both a good and bad trace, if the situation allows it.
 
 ### Analyze the traffic
@@ -101,11 +104,11 @@ If there is no noticeable TCP/IP issue, look for SMB errors. To do this, follow 
 
 1. Always check SMB errors against the MS-SMB2 protocol specification. Many SMB errors are benign (not harmful). Refer to the following information to determine why SMB returned the error before you conclude that the error is related to any of the following issues:
 
-   - The [MS-SMB2 Message Syntax](/openspecs/windows_protocols/ms-smb2/6eaf6e75-9c23-4eda-be99-c9223c60b181) topic details each SMB command and its options.
-    
-   - The [MS-SMB2 Client Processing](/openspecs/windows_protocols/ms-smb2/df0625a5-6516-4fbe-bf97-01bef451cab2) topic details how the SMB client creates requests and responds to server messages.
+   - The [MS-SMB2 Message Syntax](/openspecs/windows_protocols/ms-smb2/6eaf6e75-9c23-4eda-be99-c9223c60b181) article details each SMB command and its options.
 
-   - The [MS-SMB2 Server Processing](/openspecs/windows_protocols/ms-smb2/e1d08834-42e0-41ca-a833-fc26f5132a6f) topic details how the SMB server creates requests and responds to client requests.
+   - The [MS-SMB2 Client Processing](/openspecs/windows_protocols/ms-smb2/df0625a5-6516-4fbe-bf97-01bef451cab2) article details how the SMB client creates requests and responds to server messages.
+
+   - The [MS-SMB2 Server Processing](/openspecs/windows_protocols/ms-smb2/e1d08834-42e0-41ca-a833-fc26f5132a6f) article details how the SMB server creates requests and responds to client requests.
 
 2. Check whether a TCP reset command is sent immediately after an FSCTL\_VALIDATE\_NEGOTIATE\_INFO (validate negotiate) command. If so, refer to the following information:
 
@@ -118,9 +121,6 @@ If there is no noticeable TCP/IP issue, look for SMB errors. To do this, follow 
 #### Analyze the protocol
 
 Look at the actual SMB protocol details in the network trace to understand the exact commands and options that are used.
-
-> [!NOTE]
-> Only Message Analyzer can parse SMBv3 and later version commands.
 
 - Remember that SMB does only what it is told to do.
 

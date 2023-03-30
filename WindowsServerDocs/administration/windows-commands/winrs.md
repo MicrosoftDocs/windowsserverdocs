@@ -75,6 +75,6 @@ winrs /r:myserver netdom join myserver /domain:testdomain /userd:johns /password
 winrs /r:myserver /ad /u:administrator /p:$%fgh7 dir \\anotherserver\share
 ```
 
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -22,7 +22,7 @@ Copies an image or a driver group.
 | [wdsutil copy-image command](wdsutil-copy-image.md) | Copies images that are within the same image group. |
 | [wdsutil copy-drivergroup command](wdsutil-copy-drivergroup.md) | Copies an existing driver group on the server. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -50,6 +50,6 @@ To store a copy of the appended directory to an environment variable named *appe
 append /e
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

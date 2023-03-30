@@ -4,8 +4,8 @@ title: Federation Server Farm Using SQL Server
 description: "Learn more about: Legacy AD FS Federation Server Farm Using SQL Server"
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

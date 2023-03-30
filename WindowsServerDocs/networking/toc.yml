@@ -153,45 +153,64 @@ items:
     href: ../remote/remote-access/directaccess/directaccess.md
   - name: Domain Name System (DNS)
     href: dns/dns-top.md
-    items:
-    - name: What's new in DNS client in Windows Server
-      href: dns/What-s-New-in-DNS-Client.md
-    - name: What's new in DNS server in Windows Server
-      href: dns/What-s-New-in-DNS-Server.md
-    - name: Secure DNS Client over HTTPS (DoH)
-      href: dns/doh-client-support.md
-    - name: Anycast DNS
-      href: dns/deploy/anycast.md
-    - name: DNS policy scenario guidance
-      href: dns/deploy/DNS-Policy-Scenario-Guide.md
-      items:
-      - name: DNS policies overview
-        href: dns/deploy/DNS-Policies-Overview.md
-      - name: Use DNS policy for geo-location traffic management with primary servers
-        href: dns/deploy/primary-geo-location.md
-      - name: Use DNS policy for geo-location traffic management with primary-secondary deployments
-        href: dns/deploy/primary-secondary-geo-location.md
-      - name: Use DNS policy for intelligent DNS responses based on time of day
-        href: dns/deploy/dns-tod-intelligent.md
-      - name: DNS responses based on time of day with an Azure cloud app server
-        href: dns/deploy/dns-tod-azure-cloud-app-server.md
-      - name: Use DNS policy for Split-Brain DNS deployment
-        href: dns/deploy/split-brain-DNS-deployment.md
-      - name: Use DNS policy for Split-Brain DNS in Active Directory
-        href: dns/deploy/dns-sb-with-ad.md
-      - name: Use DNS policy for applying filters on DNS queries
-        href: dns/deploy/apply-filters-on-dns-queries.md
-      - name: Use DNS policy for app load balancing
-        href: dns/deploy/app-lb.md
-      - name: Use DNS policy for app load balancing with geo-location awareness
-        href: dns/deploy/app-lb-geo.md
-    - name: Troubleshooting DNS issues
-      href: dns/troubleshoot/troubleshoot-dns-data-collection.md
-      items:
-      - name: Troubleshooting DNS clients
-        href: dns/troubleshoot/troubleshoot-dns-client.md
-      - name: Troubleshooting DNS servers
-        href: dns/troubleshoot/troubleshoot-dns-server.md
+    items: 
+      - name: Overview
+        href: dns/dns-top.md
+        items: 
+          - name: What's new in DNS
+            items: 
+              - name: What's new in DNS server in Windows Server
+                href: dns/What-s-New-in-DNS-Server.md
+              - name: What's new in DNS client in Windows Server
+                href: dns/What-s-New-in-DNS-Client.md
+          - name: Anycast DNS
+            href: dns/deploy/anycast.md
+          - name: DNS policies overview
+            href: dns/deploy/DNS-Policies-Overview.md
+      - name: Quickstarts
+        items: 
+          - name: Install and configure DNS server
+            href: dns/quickstart-install-configure-dns-server.md
+      - name: Concepts
+        items:
+          - name: DNS zones
+            href: dns/zone-types.md
+      - name: How-to guides
+        items:
+          - name: Manage DNS zones
+            href: dns/manage-dns-zones.md
+          - name: Secure DNS Client over HTTPS (DoH)
+            href: dns/doh-client-support.md
+      - name: Tutorials
+        items: 
+          - name: DNS policy
+            href: dns/deploy/DNS-Policy-Scenario-Guide.md
+            items: 
+              - name: Geo-location traffic management
+                href: dns/deploy/primary-geo-location.md
+              - name: geo-location traffic management with primary-secondary zones
+                href: dns/deploy/primary-secondary-geo-location.md
+              - name: Intelligent DNS responses based on time of day
+                href: dns/deploy/dns-tod-intelligent.md
+              - name: DNS responses based on time of day with an Azure cloud app server
+                href: dns/deploy/dns-tod-azure-cloud-app-server.md
+              - name: Split-Brain DNS in Active Directory
+                href: dns/deploy/dns-sb-with-ad.md
+              - name: Split-Brain DNS deployment
+                href: dns/deploy/split-brain-DNS-deployment.md
+              - name: Apply filters to DNS queries
+                href: dns/deploy/apply-filters-on-dns-queries.md
+              - name: DNS App load balancing
+                href: dns/deploy/app-lb.md
+              - name: DNS App load balancing with geo-location awareness
+                href: dns/deploy/app-lb-geo.md
+      - name: Troubleshooting DNS issues
+        href: dns/troubleshoot/troubleshoot-dns-data-collection.md
+        items: 
+          - name: Troubleshooting DNS clients
+            href: dns/troubleshoot/troubleshoot-dns-client.md
+          - name: Troubleshooting DNS servers
+            href: dns/troubleshoot/troubleshoot-dns-server.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     href: technologies/dhcp/dhcp-top.md
     items:

@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: fb9fcd0f-5e73-4504-aa95-78204e1a79d3
 ms.author: alalve
 author: JasonGerend
-ms.date: 10/26/2022
+ms.date: 01/23/2023
 ---
 
 # echo
@@ -37,9 +37,9 @@ echo [on | off]
 
 - To prevent echoing a particular command in a batch file, insert an `@` sign in front of the command. To prevent echoing all commands in a batch file, include the **echo off** command at the beginning of the file.
 
-- To display a pipe (`|`) or redirection character (`<` or `>`) when you are using **echo**, use a caret (`^`) immediately before the pipe or redirection character. For example, `^|`, `^>`, or `^<`). To display a caret, type two carets in succession (`^^`).
-
 - To display an exclamation mark (`!`) in batch scripts, wrap the word or phrase in double quotes followed by a caret before the exclamation mark (`"Hello World^!"`). Alternatively, a double caret (`^^`) can be used without the need for double quotes (`Hello World^^!`).
+
+- To display a pipe (`|`), ampersand (`&`) or redirection character (`<` or `>`) when you are using **echo**, use a caret (`^`) immediately before that character. For example, `^|`, `^&`, `^>`, or `^<`. To display a caret, type two carets in succession (`^^`).
 
 ### Examples
 
@@ -107,6 +107,6 @@ File2.txt
 File3.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

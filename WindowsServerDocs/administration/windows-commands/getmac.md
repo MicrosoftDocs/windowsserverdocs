@@ -61,6 +61,6 @@ getmac /s srvmain /u maindom\hiropln /p p@ssW23 /fo list /v
 getmac /s srvmain /u maindom\hiropln /p p@ssW23 /fo table /nh
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

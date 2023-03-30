@@ -146,6 +146,6 @@ Archive the specified (*.evtx*) log file in a self-contained format. A subdirect
 wevtutil archive-log "C:\backup\Application.evtx" /locale:en-us
 ```
 
-#### Additional References
+#### Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

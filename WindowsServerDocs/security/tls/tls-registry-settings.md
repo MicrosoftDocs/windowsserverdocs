@@ -2,14 +2,12 @@
 title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
-author: PatAltimore
-ms.author: alalve
-ms.date: 10/10/2022
+ms.date: 11/22/2022
 ---
 
 # Transport Layer Security (TLS) registry settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, and earlier versions as noted.
 
 This article explains the supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol and the Secure Sockets Layer (SSL) protocol through the SChannel Security Support Provider (SSP). The registry subkeys and entries covered in this article help you administer and troubleshoot the SChannel SSP, specifically the TLS and SSL protocols.
 
@@ -182,12 +180,17 @@ Added in Windows 10, version 1507 and Windows Server 2016.
 
 Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\Diffie-Hellman**
 
-To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
+To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 1024 bits will be the minimum.
 
-To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
+To specify a maximum supported range of Diffie-Hellman key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, then a maximum is not enforced.
 
 To specify the Diffie-Hellman key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
 After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 2048 bits will be the default.
 
 # [Elliptic Curve Diffie-Hellman](#tab/ecdh)
 
@@ -201,11 +204,12 @@ To specify a minimum supported range of ECDH key bit length for the TLS client, 
 After you have created the entry, change the DWORD value to the desired bit length.
 
 To specify a maximum supported range of ECDH key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
+After you have created the entry, change the DWORD value to the desired bit length.
 
-To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
+To specify the ECDH key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry.
+After you have created the entry, change the DWORD value to the desired bit length.
 
-# [RSA](#tab/rsa)
+# [Client RSA](#tab/client-rsa)
 
 Use of key exchange algorithms should be controlled by configuring the cipher suite order.
 
@@ -215,14 +219,11 @@ Registry path: **HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 To specify a minimum supported range of RSA key bit length for the TLS client, create a **ClientMinKeyBitLength** entry.
 After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, 1024 bits will be the minimum.
 
 To specify a maximum supported range of RSA key bit length for the TLS client, create a **ClientMaxKeyBitLength** entry.
-After you have created the entry, change the DWORD value to the desired bit length. A maximum bit length is not enforced.
-
-To specify the RSA key bit length for the TLS server default, create a **ServerMinKeyBitLength** entry. After you have created the entry, change the DWORD value to the desired bit length.
-
-> [!NOTE]
-> RSA authentication with key bit length of over 3072 bits have been reported to cause large performance issues leading to connection timeouts and service unavailability when large number of clients have simultaneous open connections.
+After you have created the entry, change the DWORD value to the desired bit length.
+If not configured, then a maximum is not enforced.
 
 ---
 
@@ -329,13 +330,13 @@ For example, here are some valid registry paths with version-specific subkeys:
 
 - **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client**
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with a non-zero value, and a DWORD registry value named "DisabledByDefault" with a value of zero, under the corresponding version-specific subkey.
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with an entry value of "**1**", and a DWORD registry value named "DisabledByDefault" with a value of "**0**", under the corresponding version-specific subkey.
 
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
 ![Screenshot of Set TLS 1.0 client-side to enabled in Windows Server registry setting.](images/tls-10-client-enabled.png)
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" and "DisabledByDefault" with a non-zero value under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" and "DisabledByDefault" with a value of either "**0**" or "**1**" under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
 
 ![Screenshot of Override disabled by default state in Windows Server registry setting for TLS 1.0 server-side.](images/tls-10-server-disabled.png)
 

@@ -39,7 +39,7 @@ wdsutil /Copy-DriverGroup /Server:MyWdsServer /DriverGroup:PrinterDrivers /Group
 wdsutil /Copy-DriverGroup /DriverGroup:PrinterDrivers /GroupName:ColorPrinterDrivers
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

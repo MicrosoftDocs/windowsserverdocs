@@ -47,7 +47,7 @@ To take ownership of the TPM and set the owner password to *0wnerP@ss*, type:
 manage-bde  tpm  takeownership 0wnerP@ss
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

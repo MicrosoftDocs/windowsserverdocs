@@ -9,10 +9,6 @@ items:
       items:
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
-      - name: Windows Server, versions 2004 and 20H2
-        href: whats-new-in-windows-server-2004-20h2.md
-      - name: Windows Server, versions 1903 and 1909
-        href: whats-new-in-windows-server-1903-1909.md
       - name: Windows Server 2019
         href: whats-new-in-windows-server-2019.md
       - name: Windows Server 2016
@@ -33,8 +29,6 @@ items:
       items:
       - name: Windows Server 2022
         href: removed-deprecated-features-windows-server-2022.md
-      - name: Windows Server, version 1903 and 1909
-        href: removed-deprecated-features-windows-server-1903-1909.md
       - name: Windows Server 2019
         href: removed-deprecated-features-windows-server-2019.md
       - name: Windows Server 2016
