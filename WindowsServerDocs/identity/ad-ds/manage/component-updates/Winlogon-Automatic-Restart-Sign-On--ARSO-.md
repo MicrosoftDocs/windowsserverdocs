@@ -116,19 +116,23 @@ If you disable or don't configure this setting, automatic sign on will default t
 
 ## Troubleshooting
 
-When WinLogon automatically locks, WinLogon's state trace will be stored in the WinLogon event log.
+When WinLogon automatically locks, the WinLogon state trace is stored in the WinLogon event log.
 
 The status of an Autologon configuration attempt is logged
 
-- If it is successful
-  - Records it as such
+- If it is successful.
 
-- If it is a failure:
-  - Records what the failure was
-  
-- When BitLocker's state changes:
-  - The removal of credentials will be logged.
-  - These will be stored in the LSA Operational log.
+  - Records it as such.
+
+- If it is a failure.
+
+  - Records what the failure was.
+
+- When BitLocker's state changes.
+
+  - The removal of credentials is logged.
+
+        - Credential removal is stored in the LSA Operational log.
 
 ### Reasons why Autologon can fail
 
@@ -136,15 +140,15 @@ There are several cases in which a user automatic login cannot be achieved. This
 
 #### User must change password at next login
 
-User login can enter a blocked state when password change at next login is required. This can be detected prior to restart in most cases, but not all (for example, password expiry can be reached between shutdown and next login.
+User logon can enter a blocked state when password change at next logon is required. This can be detected prior to restart in most cases, but not all (for example, password expiry can be reached between shutdown and next login.)
 
 #### User account disabled
 
-An existing user session can be maintained even if disabled. Restart for an account that is disabled can be detected locally in most cases in advance, depending on gp it may not be for domain accounts (some domain cached login scenarios work even if account is disabled on DC.)
+An existing user session can be maintained even if disabled. Restart for an account that's disabled can be detected locally in most cases in advance; depending on gp it may not be for domain accounts (some domain cached login scenarios work even if account is disabled on DC.)
 
-### Logon hours and parental controls
+#### Logon hours and Parental Controls
 
-The Logon Hours and parental controls can prohibit a new user session from being created.  If a restart were to occur during this window, the user would not be permitted to login.  There is additional policy that causes lock or logout as a compliance action. The status of an Autologon configuration attempt is logged.
+Logon Hours and Parental Controls can prohibit a new user session from being created. If a restart were to occur during this window, the user is prevented from login. There's additional policy that causes lock or logout as a compliance action. This could be problematic for many child user cases where account lockdown can occur between bedtime and morning, particularly if the maintenance window is commonly set during this time.
 
 ## Security details
 
@@ -163,8 +167,8 @@ In enterprise environments where the security for user data protected by Data Pr
 
 ### Credential Guard interaction
 
-ARSO is supported with Credential Guard enabled on devices beginning with Windows 10 version 2004.
+ARSO is supported with Credential Guard enabled on devices beginning with Windows 10, version 2004.
 
-## Additional resources
+## Autologon
 
-Autologon is a feature that has been present in Windows for several releases. It is a documented feature of Windows that even has tools such as Autologon for Windows [http:/technet.microsoft.com/sysinternals/bb963905.aspx](/sysinternals/downloads/autologon). It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret. This could be problematic for many child cases where account lockdown may occur between bed time and wake-up, particularly if the maintenance window is commonly during this time.
+Autologon is a feature in Windows that offers tools such as Autologon for Windows v3.01. Autologon enables a single user of the device to sign in automatically without entering credentials. Credentials are configured and stored in registry as an encrypted LSA secret.See [http:/technet.microsoft.com/sysinternals/bb963905.aspx] for more information.
