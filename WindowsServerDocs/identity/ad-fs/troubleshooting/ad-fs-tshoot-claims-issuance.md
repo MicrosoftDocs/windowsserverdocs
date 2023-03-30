@@ -4,30 +4,31 @@ description:  This document describes how to troubleshoot token issuance issues 
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 04/01/2023
 ms.topic: article
 ---
 
 # AD FS Troubleshooting - Claims Issuance
-A claim is a statement that one subject makes about itself or another subject.  Claims are issued by a relying party, and they are given one or more values and then packaged in security tokens that are issued by the AD FS server.  Because there are several moving parts in this process, claims issuance can be broken down into these key parts.
+
+A claim is a statement that one subject makes about itself or another subject. Claims are issued by a relying party, then given one or more values, and then packaged in security tokens issued by the AD FS server.  Because there are several moving parts in this process, claims issuance can be broken down into several key parts.
 
 >[!NOTE]
 >You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [AD FS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
 
 ## Token Request
-When you go to a relying party it will redirect you to AD FS with a token request.  Issues can arise with the request.  Most notably:
 
-### The request formatting with 3rd parties (particularly SAML)
+When you go to a relying party it'll redirect you to AD FS with a token request. Issues can arise with the request. Most notably:
 
-### Pre-formated URLs that have typos
-When issuing a token from WS-Federaion relying parties that token request comes across with URL query string parameters.  If the relying party doesn't specify the correct parameters in that URL when it does the redirect to AD FS then it could cause an issue with the request.
+- Request formatting with 3rd parties (particularly SAML)
 
+- Pre-formated URLs that contain typos
 
-In order to verifiy the token format, a web debugger tool can be used
+    When issuing a token from WS-Federation relying parties, the token request comes across with URL query string parameters. If the relying party doesn't specify the correct parameters in that URL when it does the redirect to AD FS, it could cause an issue with the request.
 
+A web debugger tool can be used to verify the token format.
 
-## Token Response
+<!-- ## Token Response
 
 ## Authentication
 
-## Claim Rule Processing
+## Claim Rule Processing -->
