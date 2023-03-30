@@ -4,7 +4,7 @@ description: Learn how to configure a service account for the Network Device Enr
 author: gswashington
 ms.author: wscontent
 ms.topic: how-to
-ms.date: 11/17/2022
+ms.date: 03/30/2023
 ---
 
 # Configure Network Device Enrollment Service to use a domain user account
@@ -26,7 +26,7 @@ public key distribution, enrollment, and certificate revocation queries.
 
 For more information about NDES and how it works with certificates based using the Simple
 Certificate Enrollment Protocol, see
-[What is Network Device Enrollment Service for Active Directory Certificate Services?](/network-device-enrollment-service-overview.md).
+[What is Network Device Enrollment Service for Active Directory Certificate Services?](network-device-enrollment-service-overview.md).
 
 ## Prerequisites
 
@@ -107,7 +107,7 @@ NDES service account to the local _IIS\_IUSRS_ group.
 > You can also use `net localgroup IIS_IUSRS <domain>\<username> /Add` to add the NDES service
 > account to the local _IIS\_IUSRS_ group. The command prompt or Windows PowerShell must be run as
 > Administrator. For more information, see
-> the[Add-LocalGroupMember](/powershell/module'/microsoft.powershell.localaccounts/add-localgroupmember)]
+> the[Add-LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember)]
 > PowerShell command.
 
 ## Set up request permission on the CA
