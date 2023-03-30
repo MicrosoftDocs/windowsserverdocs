@@ -4,7 +4,7 @@ description: Learn how to verify that you've correctly configured your deploymen
 ms.topic: article
 ms.author: jgerend
 author: JasonGerend
-ms.date: 04/01/2023
+ms.date: 08/07/2020
 ---
 # Step 3 Verify the Deployment
 
