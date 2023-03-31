@@ -171,8 +171,14 @@ items:
         items: 
           - name: Install and configure DNS server
             href: dns/quickstart-install-configure-dns-server.md
+      - name: Concepts
+        items:
+          - name: DNS zones
+            href: dns/zone-types.md
       - name: How-to guides
-        items: 
+        items:
+          - name: Manage DNS zones
+            href: dns/manage-dns-zones.md
           - name: Secure DNS Client over HTTPS (DoH)
             href: dns/doh-client-support.md
       - name: Tutorials

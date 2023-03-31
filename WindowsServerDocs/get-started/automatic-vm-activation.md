@@ -4,8 +4,7 @@ description: Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purc
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
-manager: femila
-ms.date: 8/20/2021
+ms.date: 03/07/2023
 ms.prod: windows-server
 ---
 
@@ -77,6 +76,7 @@ The following AVMA keys can be used for Windows Server 2022:
 | Edition | AVMA key |
 |--|--|
 | Datacenter | W3GNR-8DDXR-2TFRP-H8P33-DV9BG |
+| Datacenter<br/>Azure Edition | F7TB6-YKN8Y-FCC6R-KQ484-VMK3J |
 | Standard | YDFWN-MJ9JR-3DYRK-FXXRW-78VHK |
 
 The following AVMA keys can be used for Windows Server 2019:
@@ -129,7 +129,7 @@ See [Data Exchange: Using key-value pairs to share information between the host 
 > [!IMPORTANT]
 > KVP data should be removed if the AVMA key is replaced with another product key (retail, OEM, or volume licensing key).
 
-Since the AVMA activation process is transparent, error messages are not displayed. However, AVMA requests are also logged on the virtualization host in Event Viewer in the Application log with Event ID 12310, and on the virtual machine with Event ID 12309.  The following events are captured on the virtual machines:
+Since the AVMA activation process is transparent, error messages are not displayed. However, AVMA requests are also logged on the virtualization host in Event Viewer in the Application log with Event ID 12310, and on the virtual machine with Event ID 12309. The following events are captured on the virtual machines:
 
 | Notification | Description |
 |--|--|
