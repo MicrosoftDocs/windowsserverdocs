@@ -16,7 +16,7 @@ functionality of Certificate Trust Lists (CTLs). Servers and clients access the 
 to update CTLs using the automatic daily Root Certificate Updates mechanism discussed in this
 article.
 
-See [Certificates and trust](certificate-trust) for more detailed knowledge on how the Microsoft
+See [Certificates and trust](certificate-trust.md) for more detailed knowledge on how the Microsoft
 Root Certificate Program works to distribute trusted root certificates automatically across Windows
 operating systems.
 
@@ -543,7 +543,7 @@ You may encounter the following errors and warnings when running the `Certutil -
 
 ## Related links
 
-- [Certificates and trust](certificate-trust)
+- [Certificates and trust](certificate-trust.md)
 
 - [List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list)
 

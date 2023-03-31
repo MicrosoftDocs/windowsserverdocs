@@ -2061,4 +2061,4 @@ For some more examples about how to use this command, see
 
 - [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
-- [Configure trusted roots and disallowed certificates](/windows-commands/configure-trusted-roots-disallowed-certificates.md)
+- [Configure trusted roots and disallowed certificates in Windows](../../identity/ad-cs/configure-trusted-roots-disallowed-certificates.md)

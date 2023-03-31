@@ -63,4 +63,4 @@ more articles that might help you as configure your systems.
 
 - [Event ID 8 — Automatic Root Certificates Update Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10))
 
-- [certutil](/administration/windows-commands/certutil.md)
+- [certutil](../../administration/windows-commands/certutil.md)
