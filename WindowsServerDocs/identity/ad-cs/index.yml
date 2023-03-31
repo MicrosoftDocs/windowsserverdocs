@@ -48,7 +48,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Configure Network Device Enrollment Service to use a domain user account
-            url: create-domain-user-account-as-ndes-service-account.md
+            url: create-domain-user-account-ndes-service-account.md
           - text: Migrate a Certification Authority key to a Key Storage Provider
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn771627(v=ws.11)
           - text: Configure trusted root and disallowed certificates

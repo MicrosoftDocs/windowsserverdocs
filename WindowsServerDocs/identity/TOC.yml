@@ -980,7 +980,7 @@
       - name: How-to guides
         items:
         - name: Configure Network Device Enrollment Service to use a domain user account
-          href: ad-cs/create-domain-user-account-as-ndes-service-account.md
+          href: ad-cs/create-domain-user-account-ndes-service-account.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies

@@ -90,7 +90,7 @@ NDES can be configured to run as either of the following after installing the ND
 Now that you've learned about what NDES is here are some articles to help you configure and run NDES
 successfully.
 
-- [Configure Network Device Enrollment Service for Active Directory Certificate Services](create-domain-user-account-as-ndes-service-account.md)
+- [Configure Network Device Enrollment Service for Active Directory Certificate Services](create-domain-user-account-ndes-service-account.md)
 
 - If you require over-the-air enrollment for mobile devices, see
   [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473016(v=ws.11)).
