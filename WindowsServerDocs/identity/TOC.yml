@@ -969,8 +969,18 @@
   - name: Active Directory Certificate Services
     href: ad-cs/index.yml
     items:
-    - name: What is Active Directory Certificate Services?
-      href: ad-cs/active-directory-certificate-services-overview.md
+    - name: Overview
+      items:
+      - name: What is Active Directory Certificate Services?
+        href: ad-cs/active-directory-certificate-services-overview.md
+      - name: Concepts
+        items:
+        - name: Network Device Enrollment Service
+          href: ad-cs/network-device-enrollment-service-overview.md
+      - name: How-to guides
+        items:
+        - name: Configure Network Device Enrollment Service to use a domain user account
+          href: ad-cs/create-domain-user-account-ndes-service-account.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
