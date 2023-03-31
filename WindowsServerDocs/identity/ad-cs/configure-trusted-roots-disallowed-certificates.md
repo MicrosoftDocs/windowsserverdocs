@@ -4,7 +4,7 @@ description: Guidance on how to configure individual software updates for automa
 ms.topic: how-to 
 author: gswashington
 ms.author: wscontent
-ms.date: 02/15/2023
+ms.date: 03/31/2023
 ---
 
 # Configure trusted roots and disallowed certificates in Windows
