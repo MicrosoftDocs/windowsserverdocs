@@ -4,7 +4,7 @@ description: Learn how to configure a service account for the Network Device Enr
 author: gswashington
 ms.author: wscontent
 ms.topic: how-to
-ms.date: 03/30/2023
+ms.date: 04/03/2023
 ---
 
 # Configure Network Device Enrollment Service to use a domain user account
@@ -41,6 +41,9 @@ that you meet the following prerequisites:
 
 - Have Read and Enroll permissions on the NDES certificate template, which is configured
   automatically.
+
+- If you're using a CNAME or load balanced network name, configure a service principle name (SPN)
+  in Active Directory Domain Services.
 
 ## Create a domain user account to act as the NDES service account
 
@@ -151,7 +154,8 @@ SPN in Active Directory.
   service account:
 
   1. Use the Setspn command syntax of: `Setspn -s HTTP/<computerfqdn> <domainname\accountname>` when
-     entering your commands. For example:
+     entering your commands. For example, your domain is `Fabrikam.com`, your NDES CNAME is
+     `NDESFARM`, and you're using a service account named `SCEPSvc`. In the example, you would run the following commands.
 
         - `Setspn -s HTTP/NDESFARM.fabrikam.com fabrikam\SCEPSvc`
         - `Setspn -s HTTP/NDESFARM fabrikam\SCEPSvc`
