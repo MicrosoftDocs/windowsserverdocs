@@ -11,60 +11,43 @@ ms.date: 03/31/2023
 
 Applies To: Windows Server (All supported versions), Windows clients, Azure Stack HCI.
 
-This article contains guidance intended to help administrators install automatic daily update
-functionality of Certificate Trust Lists (CTLs). Servers and clients access the Windows Update site
-to update CTLs using the automatic daily Root Certificate Updates mechanism discussed in this
-article.
+Redirect the Microsoft Automatic Update URL to a file or web server hosting Certificate Trust Lists
+(CTLs), untrusted CTLs, or a subset of the trusted CTL files in a disconnected environment.
 
-See [Certificates and trust](certificate-trust.md) for more detailed knowledge on how the Microsoft
-Root Certificate Program works to distribute trusted root certificates automatically across Windows
-operating systems.
+To learn more about how the Microsoft Root Certificate Program works to distribute trusted root
+certificates automatically across Windows operating systems, see
+[Certificates and trust](certificate-trust.md).
+
+> [!TIP]
+> You don't need to redirect the Microsoft Automatic Update URL for environments where computers are
+> able to connect to the Windows Update site directly. Computers that can connect to the Windows
+> Update site are able to receive updated CTLs on a daily basis.
 
 ## Prerequisites
 
-- Client machine with internet access to run the Windows command `certutil.exe`.
-- File server or web server for file storage.
+Before you can configure your disconnected environment to use CTL files hosted on a file or web
+server, you need to complete the following prerequisites.
+
+### Client prerequisites
+
+- At least one computer that is able to connect to the Internet to download CTLs from Microsoft. The
+  computer requires HTTP (TCP port 80) access and name resolution (TCP and UDP port 53) ability to
+  contact `ctldl.windowsupdate.com`. This computer can be a domain member or a member of a
+  workgroup. Currently all the downloaded files require approximately 1.5 MB of space.
+- Client machines must be connected to an Active Directory Domain Service domain.
+- You must be a member of the local _Administrators_ group.
+
+### Server prerequisites
+
+- A file server or web server for hosting the CTL files.
 - AD Group policy or MDM solution to deploy configuration settings to your client.
-- If you are using a CNAME or load balanced network name, configure a service principle name (SPN)
-  in Active Directory Domain Services.
+- An account that is a member of the _Domain Admins_ group or that has been delegated the necessary
+  permissions
 
-## Software update description
+## Configuration methods
 
-The following automatic update mechanisms are available in Windows Server and the Windows client
-when the appropriate software update is installed (for older operating systems discussed in this
-article):
-
-- **Registry settings for storing CTLs:** New settings enable changing the location for uploading
-  trusted or untrusted CTLs from the Windows Update site to a shared location in an organization.
-  For more information, see the [Registry settings modified](#registry-settings-modified) section.
-
-- **Synchronization options:** If the URL for the Windows Update site is moved to a local shared
-  folder, the local shared folder must be synchronized with the Windows Update folder. This software
-  update adds a set of options in the
-  [Certutil Windows command](../../administration/windows-commands/certutil.md) that administrators
-  can use to enable synchronization. For more information, see the
-  [New Certutil Options](#new-certutil-options) section.
-
-- **Tool to select trusted root certificates:** This software update introduces a tool for
-  administrators who manage the set of trusted root certificates in their enterprise environment.
-  Administrators can view and select the set of trusted root certificates, export them to a
-  serialized certificate store, and distribute them by using Group Policy. For more information, see
-  the [New Certutil Options](#new-certutil-options) section in this document.
-
-- **Independent configuration:** The automatic update mechanism for trusted and untrusted
-  certificates are independently configurable. Administrators can use the automatic update mechanism
-  to download only the untrusted CTLs and manage their own list of trusted CTLs. For more
-  information, see the [Registry settings modified](#registry-settings-modified) section in this
-  document.
-
-Automatic update functionality can be disabled if necessary, however disabling it isn't recommended.
-For more information, see
-[Event ID 8 — Automatic Root Certificates Update Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc734054(v=ws.10)#turn-off-automatic-root-certificates-update).
-
-## Configuration options
-
-In Windows an administrator can configure a file or web server to download the following files by
-using the automatic update mechanism:
+An administrator can configure a file or web server to download the following files by using the
+automatic update mechanism:
 
 - `authrootstl.cab` contains a non-Microsoft CTL.
 
@@ -78,7 +61,8 @@ The steps to perform this configuration are described in the
 [Configure a file or web server to download the CTL files](#configure-a-file-or-web-server-to-download-the-ctl-files)
 section of this document.
 
-An administrator can:
+There are several methods to configure your environment to use local CTL files or a subset of
+trusted CTLs. The following methods are available.
 
 - Configure Active Directory Domain Services (AD DS) domain member computers to use the automatic
   update mechanism for trusted and untrusted CTLs, without having access to the Windows Update site.
@@ -98,17 +82,6 @@ An administrator can:
 
 > [!IMPORTANT]
 >
-> - All the steps shown in this document require that you use an account that is a member of the
-> local _Administrators_ group. For all Active Directory Domain Services (AD DS) configuration
-> steps, you must use an account that is a member of the _Domain Admins_ group or that has been
-> delegated the necessary permissions.
->
-> - The procedures in this document depend upon having at least one computer that is able to connect
-> to the Internet to download CTLs from Microsoft. The computer requires HTTP (TCP port 80) access
-> and name resolution (TCP and UDP port 53) ability to contact `ctldl.windowsupdate.com`. This
-> computer can be a domain member or a member of a workgroup. Currently all the downloaded files
-> require approximately 1.5 MB of space.
->
 > - The settings described in this document are implemented by using GPOs. These settings are not
 > automatically removed if the GPO is unlinked or removed from the AD DS domain. When implemented,
 > these settings can be changed only by using a GPO or by modifying the registry of the affected
@@ -122,15 +95,7 @@ To facilitate the distribution of trusted or untrusted certificates for a discon
 you must first configure a file or web server to download the CTL files from the automatic update
 mechanism.
 
-> [!TIP]
-> The configuration described in this section is not needed for environments where computers are
-> able to connect to the Windows Update site directly. Computers that can connect to the Windows
-> Update site are able to receive updated CTLs on a daily basis (if they are running Windows Server
-> 2012, Windows 8, or the previously mentioned software updates are installed on supported operating
-> systems). For more information, see document
-> [KB2677070](https://support.microsoft.com/kb/2677070) in the Microsoft Knowledge Base.
-
-### To configure a server that has access to the Internet to retrieve the CTL files
+### Retrieve the CTL files from Windows Update
 
 1. Create a shared folder on a file or web server that is able to synchronize by using the automatic
    update mechanism and that you want to use to store the CTL files.
@@ -162,7 +127,7 @@ mechanism.
 >
 > - If the server that synchronizes the CTLs is not accessible from the computers in the
 > disconnected environment, you must provide another method to transfer the information. For
-> example, you can allow one of the domain member computers to connect to the server, then schedule
+> example, you can allow one of the domain members to connect to the server, then schedule
 > another task on the domain member computer to pull the information into a shared folder on an
 > internal web server. If there is absolutely no network connection, you may have to use a manual
 > process to transfer the files, such as a removable storage device.
@@ -174,15 +139,14 @@ mechanism.
 >
 > - Certain system and application folders in Windows have special protection applied to them. For
 > example, the _inetpub_ folder requires special access permissions, which make it difficult to
-> create a shared folder for use with a scheduled task to transfer files. As an administrator,
-> you're typically able to create a folder location at the root of a logical drive system to use for
-> file transfers.
+> create a shared folder for use with a scheduled task to transfer files. An administrator can
+> create a folder location at the root of a logical drive system to use for file transfers.
 
-## Redirect the Microsoft Automatic Update URL for a disconnected environment
+## Redirect the Microsoft Automatic Update URL
 
-The computers in your network might be configured in a domain environment and therefore unable to
-use the automatic update mechanism or download CTLs. You can implement a GPO in AD DS to configure
-these computers to obtain the CTL updates from an alternate location.
+The computers in your network might be configured in a disconnected environment and therefore unable
+to use the automatic update mechanism or download CTLs. You can implement a GPO in AD DS to
+configure these computers to obtain the CTL updates from an alternate location.
 
 The configuration in this section requires that you already completed the steps in
 [Configure a file or web server to download the CTL files](#configure-a-file-or-web-server-to-download-the-ctl-files).
@@ -264,12 +228,10 @@ PowerShell.
 > The trusted and untrusted CTLs can be updated on a daily basis, so ensure that you keep the files
 > synchronized by using a scheduled task or another method (such as a script that handles error
 > conditions) to update the shared folder or web virtual directory. For more information about
-> creating a scheduled task, see
-> [Schedule a Task](https://technet.microsoft.com/library/cc748993.aspx). If you plan to write a
-> script to make daily updates, see the [New Certutil Options](#new-certutil-options) and
-> [Potential errors with Certutil -SyncWithWU](#potential-errors-with-certutil--syncwithwu) sections
-> of this document. These sections provide more information about command options and the error
-> conditions.
+> creating a scheduled task using PowerShell, see
+> [New-ScheduledTask](/powershell/module/scheduledtasks/new-scheduledtask). If you plan to write a
+> script to make daily updates, see the
+> [certutil](../../administration/windows-commands/certutil.md) Windows command reference.
 
 ## Redirect the Microsoft Automatic Update URL for untrusted CTLs only
 
@@ -333,9 +295,6 @@ automatic update of trusted CTLs.
 1. Use a descriptive file name to save the file, such as **EnableUntrustedCTLUpdate.adm**.
 
     - Ensure that the file name extensions of these files are `.adm` and not `.txt`.
-
-    - If you haven't already enabled file name extension viewing, see
-      [How To: View File Name Extensions](https://social.technet.microsoft.com/wiki/contents/articles/1784.how-to-view-file-name-extensions.aspx).
 
     - If you save the file to the `%windir%\inf` folder, it's easier to locate in the following
       steps.
@@ -508,38 +467,6 @@ The following options were added to Certutil:
 > [!TIP]
 > `Certutil -SyncWithWU -f <folder>` updates existing files in the target folder.
 > `Certutil -syncWithWU -f -f <folder>` removes and replaces files in the target folder.
-
-## Potential errors with Certutil -SyncWithWU
-
-You may encounter the following errors and warnings when running the `Certutil -syncWithWU` command:
-
-- If you use a nonexistent local path or folder as the destination folder, you see the error:
-  
-    `The system can't find the file specified. 0x80070002 (WIN32: 2 ERROR_FILE_NOT_FOUND)`
-
-- If you use a nonexistent or unavailable network location as the destination folder, you see the
-  error:
-
-    `The network name can't be found. 0x80070043 (WIN32: 67 ERROR_BAD_NET_NAME)`
-
-- If your server can't connect over TCP port 80 to Microsoft Automatic Update servers, you'll
-  receive the following error:
-
-    `A connection with the server couldn't be established 0x80072efd (INet: 12029 ERROR_INTERNET_CANNOT_CONNECT)`
-
-- If your server is unable to reach the Microsoft Automatic Update servers with the DNS name
-  `ctldl.windowsupdate.com`, you receive the following error:
-
-    `The server name or address couldn't be resolved 0x80072ee7 (INet: 12007 ERROR_INTERNET_NAME_NOT_RESOLVED)`
-
-- If you don't use the `-f` switch, and any of the CTL files already exist in the directory, you
-  receive a *file* exists error:
-
-    `CertUtil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR_ALREADY_EXISTS) Certutil: Can't create a file when that file already exists.`
-
-- If there's a change in the trusted root certificates, you see:
-
-    `Warning! Encountered the following no longer trusted roots: <folder path>\<thumbprint>.crt. Use "-f -f" options to force the delete of the ".crt" CerttUtil files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated.`
 
 ## Related links
 
