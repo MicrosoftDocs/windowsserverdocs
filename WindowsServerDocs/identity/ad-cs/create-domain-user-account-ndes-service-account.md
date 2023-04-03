@@ -155,7 +155,8 @@ SPN in Active Directory.
 
   1. Use the Setspn command syntax of: `Setspn -s HTTP/<computerfqdn> <domainname\accountname>` when
      entering your commands. For example, your domain is `Fabrikam.com`, your NDES CNAME is
-     `NDESFARM`, and you're using a service account named `SCEPSvc`. In the example, you would run the following commands.
+     `NDESFARM`, and you're using a service account named `SCEPSvc`. In the example, you would run
+     the following commands.
 
         - `Setspn -s HTTP/NDESFARM.fabrikam.com fabrikam\SCEPSvc`
         - `Setspn -s HTTP/NDESFARM fabrikam\SCEPSvc`
@@ -214,6 +215,10 @@ aren't supported.
 Now that you've configured the role service, you can learn detailed information about NDES
 configuration and operation see
 [Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](https://social.technet.microsoft.com/wiki/contents/articles/9063.network-device-enrollment-service-ndes-in-active-directory-certificate-services-ad-cs.aspx).
+
+> [!TIP]
+> If you make configuration changes for NDES or to the certificate templates that are used by NDES,
+> you must stop and restart NDES, IIS and the CA service.
 
 ## Next steps
 
