@@ -66,9 +66,7 @@ trusted CTLs. The following methods are available.
 
 - Configure Active Directory Domain Services (AD DS) domain member computers to use the automatic
   update mechanism for trusted and untrusted CTLs, without having access to the Windows Update site.
-  This configuration is described in the
-  [Redirect the Microsoft Automatic Update URL for a disconnected environment](#redirect-the-microsoft-automatic-update-url-for-a-disconnected-environment)
-  section of this document.
+  This configuration is described in the [Redirect the Microsoft Automatic Update URL](#redirect-the-microsoft-automatic-update-url) section of this document.
 
 - Configure AD DS domain member computers to independently opt-in for untrusted and trusted CTL
   automatic updates. The independent opt-in configuration is described in the
