@@ -2026,7 +2026,7 @@ If your server is unable to reach the Microsoft Automatic Update servers with th
 
 If you don't use the `-f` switch, and any of the CTL files already exist in the directory, you'll receive a *file* exists error:
 
-  `CertUtil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR\_ALREADY\_EXISTS) Certutil: Can't create a file when that file already exists.`
+  `CertUtil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR_ALREADY_EXISTS) Certutil: Can't create a file when that file already exists.`
 
 If there's a change in the trusted root certificates, you'll see:
 
