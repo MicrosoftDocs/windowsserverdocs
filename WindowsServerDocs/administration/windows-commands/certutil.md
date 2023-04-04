@@ -1969,7 +1969,35 @@ Where:
 
 ### -syncWithWU
 
-Syncs with Windows Update. DestinationDir is the folder that receives the files by using the automatic update mechanism.
+Syncs with Windows Update. The following files are downloaded by using the automatic update
+mechanism.
+
+```
+CertUtil [Options] -syncWithWU DestinationDir
+```
+
+Where:
+
+- **DestinationDir** is the folder that receives the files by using the automatic update mechanism.
+
+```
+[-f] [-Unicode] [-gmt] [-seconds] [-v] [-privatekey] [-pin PIN] [-sid WELL_KNOWN_SID_TYPE]
+```
+
+Where:
+
+- **f** forces an overwrite
+- **Unicode** writes redirected output in Unicode
+- **gmt** Displays times as GMT
+- **seconds** Displays times with seconds and milliseconds
+- **v** is a verbose operation
+- **PIN** is Smart Card PIN
+- **WELL_KNOWN_SID_TYPE** is a numeric SID:
+  - 22 -- Local System
+  - 23 -- Local Service
+  - 24 -- Network Service
+
+#### Remarks
 
 The following files are downloaded by using the automatic update mechanism:
 
@@ -2008,9 +2036,34 @@ If there's a change in the trusted root certificates, you'll see:
 
 Generates SST by using the automatic update mechanism.
 
-SSTFile is the `.sst` file to be created. The generated `.sst` file contains the non-Microsoft root
-certificates that were downloaded by using the automatic update mechanism. For example,
-`CertUtil –generateSSTFromWU TRoots.sst`.
+```
+CertUtil [Options] -generateSSTFromWU SSTFile
+```
+
+Where:
+
+- **SSTFile** is the `.sst` file to be created.
+
+```
+[-f] [-Unicode] [-gmt] [-seconds] [-v] [-privatekey] [-pin PIN] [-sid WELL_KNOWN_SID_TYPE]
+```
+
+Where:
+
+- **f** forces an overwrite
+- **Unicode** writes redirected output in Unicode
+- **gmt** Displays times as GMT
+- **seconds** Displays times with seconds and milliseconds
+- **v** is a verbose operation
+- **PIN** is Smart Card PIN
+- **WELL_KNOWN_SID_TYPE** is a numeric SID:
+  - 22 -- Local System
+  - 23 -- Local Service
+  - 24 -- Network Service
+
+#### Remarks
+
+- The generated `.sst` file contains the Third Party Roots downloaded from Windows Update.
 
 ## Options
 

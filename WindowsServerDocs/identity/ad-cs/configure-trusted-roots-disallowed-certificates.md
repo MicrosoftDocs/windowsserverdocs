@@ -430,11 +430,30 @@ The settings described in this document configure the following registry keys on
 computers. These settings aren't automatically removed if the GPO is unlinked or removed from the
 domain. These settings must be reconfigured, if you want to change them.
 
-| Registry keys | Value and Description |
-|--------|---------|
-| `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\DisableRootAutoUpdate` | A value of 1 disables the Windows AutoUpdate of the trusted CTL. |  
-| `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\EnableDisallowedCertAutoUpdate` | A value of 1 enables the Windows AutoUpdate of the untrusted CTL. |
-| `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\RootDirUrl` | Configures the shared location (the HTTP or the FILE path). |
+- Enable or disable the Windows AutoUpdate of the trusted CTL:
+
+  - **Key**: `HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\DisableRootAutoUpdate`
+  - **Type**: `REG_DWORD`
+  - **Name**: `DisableRootAutoUpdate`
+  - **Data**: `0` to enabled or `1` to disable.
+  - **Default**: There is no key present by default. Without a key present, the default is enabled.
+
+- Enable or disable the Windows AutoUpdate of the untrusted CTL:
+
+  - **Key**: `SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot`
+  - **Type**: `REG_DWORD`
+  - **Name**: `EnableDisallowedCertAutoUpdate`
+  - **Data**: `0` to enabled or `1` to disable.
+  - **Default**: There is no key present by default. Without a key present, the default is enabled.
+
+- Set the shared CTL file location (HTTP or the FILE path):
+
+  - **Key**: `HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\RootDirUrl`
+  - **Type**: `REG_SZ`
+  - **Name**: `RootDirUrl`
+  - **Data**: Enter a valid HTTP or file URI.
+  - **Default**: There is no key present by default. Without a key present, the default behavior
+     used Windows Update.
 
 ## Deleting Trusted and Untrusted CTLs
 
@@ -442,29 +461,20 @@ It may be necessary for various reasons to delete all Trusted and Untrusted CTLs
 machine. The following Certutil options can be used to delete all Trusted and Untrusted CTLs from a
 client machine.
 
-`certutil -verifyCTL AuthRoot`
-`certutil -verifyCTL Disallowed`
+```powershell
+certutil -verifyCTL AuthRoot
+certutil -verifyCTL Disallowed
+```
 
 ## Checking Last Sync Time
 
 To check the most recent sync time on the local machine for either Trusted or Untrusted CTLs, run
 the following Certutil command:
 
-`certutil -verifyctl AuthRoot | findstr /i "lastsynctime"`
-`certutil -verifyctl Disallowed | findstr /i "lastsynctime"`
-
-## New Certutil Options
-
-The following options were added to Certutil:
-
-| Syntax | Description | Example |
-|--------|---------|---------|
-| `CertUtil [Options] -syncWithWU DestinationDir` | Sync with Windows Update.</br></br>- `DestinationDir` is the folder that receives the files by using the automatic update mechanism.</br>- The following files are downloaded by using the automatic update mechanism:</br></br> - The `authrootstl.cab` contains the CTLs of non-Microsoft root certificates.</br> - The `disallowedcertstl.cab` contains the CTLs of untrusted certificates.</br>- The `disallowedcert.sst` contains the serialized certificate store, including the untrusted certificates.</br>- The `thumbprint.crt` contains the non-Microsoft root certificates. | `CertUtil -syncWithWU \\server1\PKI\CTLs` |
-| `CertUtil [Options] -generateSSTFromWU SSTFile` | Generate SST by using the automatic update mechanism.</br></br>SSTFile: `.sst` file to be created. The generated `.sst` file contains the non-Microsoft root certificates that were downloaded by using the automatic update mechanism. | `CertUtil –generateSSTFromWU TRoots.sst` |
-
-> [!TIP]
-> `Certutil -SyncWithWU -f <folder>` updates existing files in the target folder.
-> `Certutil -syncWithWU -f -f <folder>` removes and replaces files in the target folder.
+```powershell
+certutil -verifyctl AuthRoot | findstr /i "lastsynctime"
+certutil -verifyctl Disallowed | findstr /i "lastsynctime"
+```
 
 ## Related links
 
@@ -472,7 +482,7 @@ The following options were added to Certutil:
 
 - [List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list)
 
-- [certutil](../../administration/windows-commands/certutil.md)
+- [certutil](../../administration/windows-commands/certutil.md) Windows command reference
   
 - [Windows Root certificate Certificate Program - Members List (All CAs)](https://go.microsoft.com/fwlink/?linkid=269988)
 
