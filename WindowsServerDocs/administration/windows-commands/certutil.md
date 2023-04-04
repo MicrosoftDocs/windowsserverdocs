@@ -1,19 +1,18 @@
 ---
 title: certutil
-description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
+description: Reference article for the certutil command. certutil is a command-line program that displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
+ms.service: 
 ms.topic: reference
-ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
-ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 11/22/2022
+ms.author: jgerend
+ms.date: 01/18/2023
 ---
 
 # certutil
 
-Certutil.exe is a command-line program, installed as part of Certificate Services. You can use certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
+Certutil.exe is a command-line program, installed as part of Certificate Services. You can use certutil.exe to display certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
 
-If certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. If certutil is run on a non-certification authority, the command defaults to running the `certutil [-dump]` command.
+If certutil is run on a certification authority without other parameters, it displays the current certification authority configuration. If certutil is run on a non-certification authority, the command defaults to running the `certutil [-dump]` command.
 
 > [!IMPORTANT]
 > Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
@@ -1527,7 +1526,7 @@ certutil [options] -vocsproot [delete]
 
 ### -addenrollmentserver
 
-Add an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command does not install binaries or packages.
+Add an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command doesn't install binaries or packages.
 
 ```
 certutil [options] -addenrollmentserver kerberos | username | clientcertificate [allowrenewalsonly] [allowkeybasedrenewal]
@@ -1553,7 +1552,7 @@ Where:
 
 ### -deleteenrollmentserver
 
-Deletes an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command does not install binaries or packages.
+Deletes an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command doesn't install binaries or packages.
 
 ```
 certutil [options] -deleteenrollmentserver kerberos | username | clientcertificate
@@ -1575,7 +1574,7 @@ Where:
 
 ### -addpolicyserver
 
-Add a Policy Server application and application pool, if necessary. This command does not install binaries or packages.
+Add a Policy Server application and application pool, if necessary. This command doesn't install binaries or packages.
 
 ```
 certutil [options] -addpolicyserver kerberos | username | clientcertificate [keybasedrenewal]
@@ -1595,7 +1594,7 @@ Where:
 
 ### -deletepolicyserver
 
-Deletes a Policy Server application and application pool, if necessary. This command does not remove binaries or packages.
+Deletes a Policy Server application and application pool, if necessary. This command doesn't remove binaries or packages.
 
 ```
 certutil [options] -deletePolicyServer kerberos | username | clientcertificate [keybasedrenewal]
@@ -1847,7 +1846,7 @@ certutil [options] -getkey searchtoken retrieve | recover outputfilebasename
 
 Where:
 
-- **script** generates a script to retrieve and recover keys (default behavior if multiple matching recovery candidates are found, or if the output file is not specified).
+- **script** generates a script to retrieve and recover keys (default behavior if multiple matching recovery candidates are found, or if the output file isn't specified).
 
 - **retrieve** retrieves one or more Key Recovery Blobs (default behavior if exactly one matching recovery candidate is found, and if the output file is specified). Using this option truncates any extension and appends the certificate-specific string and the .rec extension for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 
@@ -1968,6 +1967,104 @@ Where:
 
 - **-? -v** displays a full list of parameters and options.
 
+### -syncWithWU
+
+Syncs with Windows Update. The following files are downloaded by using the automatic update
+mechanism.
+
+```
+CertUtil [Options] -syncWithWU DestinationDir
+```
+
+Where:
+
+- **DestinationDir** is the folder that receives the files by using the automatic update mechanism.
+
+```
+[-f] [-Unicode] [-gmt] [-seconds] [-v] [-privatekey] [-pin PIN] [-sid WELL_KNOWN_SID_TYPE]
+```
+
+Where:
+
+- **f** forces an overwrite
+- **Unicode** writes redirected output in Unicode
+- **gmt** Displays times as GMT
+- **seconds** Displays times with seconds and milliseconds
+- **v** is a verbose operation
+- **PIN** is Smart Card PIN
+- **WELL_KNOWN_SID_TYPE** is a numeric SID:
+  - 22 -- Local System
+  - 23 -- Local Service
+  - 24 -- Network Service
+
+#### Remarks
+
+The following files are downloaded by using the automatic update mechanism:
+
+- `authrootstl.cab` Contains the CTLs of non-Microsoft root certificates.
+- `disallowedcertstl.cab` Contains the CTLs of untrusted certificates.
+- `disallowedcert.sst` Contains the serialized certificate store, including the untrusted certificates.
+- `thumbprint.crt` Contains the non-Microsoft root certificates.
+
+For example, `CertUtil -syncWithWU \\server1\PKI\CTLs`.
+
+If you use a non-existent local path or folder as the destination folder, you'll see the error:
+  
+  `The system can't find the file specified. 0x80070002 (WIN32: 2 ERROR_FILE_NOT_FOUND)`
+
+If you use a non-existent or unavailable network location as the destination folder, you'll see the error:
+
+  `The network name can't be found. 0x80070043 (WIN32: 67 ERROR_BAD_NET_NAME)`
+
+If your server can't connect over TCP port 80 to Microsoft Automatic Update servers, you'll receive the following error:
+
+  `A connection with the server couldn't be established 0x80072efd (INet: 12029 ERROR_INTERNET_CANNOT_CONNECT)`
+
+If your server is unable to reach the Microsoft Automatic Update servers with the DNS name `ctldl.windowsupdate.com`, you'll receive the following error:
+
+  `The server name or address couldn't be resolved 0x80072ee7 (INet: 12007 ERROR_INTERNET_NAME_NOT_RESOLVED).`
+
+If you don't use the `-f` switch, and any of the CTL files already exist in the directory, you'll receive a *file* exists error:
+
+  `CertUtil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR_ALREADY_EXISTS) Certutil: Can't create a file when that file already exists.`
+
+If there's a change in the trusted root certificates, you'll see:
+
+  `Warning! Encountered the following no longer trusted roots: <folder path>\<thumbprint>.crt. Use "-f -f" options to force the delete of the above ".crt" files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated.`
+
+### -generateSSTFromWU SSTFile
+
+Generates SST by using the automatic update mechanism.
+
+```
+CertUtil [Options] -generateSSTFromWU SSTFile
+```
+
+Where:
+
+- **SSTFile** is the `.sst` file to be created.
+
+```
+[-f] [-Unicode] [-gmt] [-seconds] [-v] [-privatekey] [-pin PIN] [-sid WELL_KNOWN_SID_TYPE]
+```
+
+Where:
+
+- **f** forces an overwrite
+- **Unicode** writes redirected output in Unicode
+- **gmt** Displays times as GMT
+- **seconds** Displays times with seconds and milliseconds
+- **v** is a verbose operation
+- **PIN** is Smart Card PIN
+- **WELL_KNOWN_SID_TYPE** is a numeric SID:
+  - 22 -- Local System
+  - 23 -- Local Service
+  - 24 -- Network Service
+
+#### Remarks
+
+- The generated `.sst` file contains the Third Party Roots downloaded from Windows Update.
+
 ## Options
 
 This section defines all of the options you're able to specify, based on the command. Each parameter includes information about which options are valid for use.
@@ -2006,6 +2103,8 @@ This section defines all of the options you're able to specify, based on the com
 | -csp provider | Provider |
 | -t timeout | URL fetch timeout in milliseconds. |
 | -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES` |
+| -syncWithWU DestinationDir | Sync with Windows Update. |
+| -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism. |
 
 ### Related links
 
@@ -2015,4 +2114,4 @@ For some more examples about how to use this command, see
 
 - [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
-- [certutil command](certutil.md)
+- [Configure trusted roots and disallowed certificates in Windows](../../identity/ad-cs/configure-trusted-roots-disallowed-certificates.md)
