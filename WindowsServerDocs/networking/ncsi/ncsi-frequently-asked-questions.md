@@ -192,7 +192,7 @@ An example of a probe failure may relay the following:
 
 This behavior is by design. Windows wants users to know when they connect to a network that requires captive portal authentication. Windows used to display a small popup for a short duration encouraging users to select it to open a browser. Users would often miss this not knowing it would open a browser for authentication. For more, see [a browser opens when connecting to a corporate or public network](/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network).
 
-## Where can I find public documentation stating msftconnecttest.com must be whitelisted?
+## Where can I find public documentation stating msftconnecttest.com must be in the allowlist?
 
 The following list of URLs mention or imply `msftconnecttext.com`:
 
