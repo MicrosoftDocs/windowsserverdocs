@@ -4,7 +4,7 @@ description: Learn how Secured-core server by Windows Server hardware OEMs offer
 author: roysasabe
 ms.author: wscontent
 ms.topic: conceptual 
-ms.date: 03/23/2023
+ms.date: 04/06/2023
 ms.prod: windows-server
 ms.custom: template-overview, team=cloud_advocates, kr2b-contr-experiment
 ms.contributors: socuff-01282022
@@ -14,9 +14,12 @@ ms.contributors: socuff-01282022
 
 >Applies to: Windows Server 2022, Azure Stack HCI version 21H2 and later
 
-Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and operating security features. The protection provided by Secured-core begins before the operating system boots and continues whilst running. Secured-core server is designed to deliver a secure platform for critical data and applications.
+Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and
+operating system security features. The protection provided by Secured-core systems begins before
+the operating system boots and continues whilst running. Secured-core server is designed to deliver
+a secure platform for critical data and applications.
 
-Secured-core server is built on three key concepts:
+Secured-core server is built on three key security pillars:
 
 - Creating a hardware backed root of trust.
 
@@ -26,12 +29,17 @@ Secured-core server is built on three key concepts:
 
 ## What makes a Secured-core server
 
-Secured-core started with Windows PCs through a deep collaboration between Microsoft and PC manufacturing partners to provide the most elevated Windows security ever. Microsoft has expanded the partnership further with server manufacturing partners to help ensure Windows Server delivers a secure operating system environment.
+The Secured-core initiative started with Windows PCs through a deep collaboration between Microsoft
+and PC manufacturing partners to provide the most elevated Windows security ever. Microsoft has
+expanded the partnership further with server manufacturing partners to help ensure Windows Server
+delivers a secure operating system environment.
 
 Windows Server integrates closely with hardware to provide increasing levels of security:
 
 - Recommended baseline: The recommended minimum for all systems to provide foundational system
-  integrity. Uses TPM 2.0 for a hardware root of trust and Secure Boot.
+  integrity using TPM 2.0 for a hardware root of trust and Secure Boot. TPM2.0 and Secure boot are
+  required for Windows Server hardware certification. To learn more, see
+  [Microsoft raises the security standard for next major Windows Server release](https://cloudblogs.microsoft.com/windowsserver/2020/06/11/microsoft-raises-the-security-standard-for-next-major-windows-server-release/)
 
 - Secured-core server: Recommended for systems and industries requiring higher levels of assurance.
   Secured-core server builds on the previous features and uses advanced processor capabilities to
@@ -66,7 +74,7 @@ To learn more about the boot process, see [Secure the Windows boot process](/win
 TPM 2.0 provides a secure, hardware-backed storage for sensitive keys and data. Every component
 loaded during the boot process is measured and the measurements stored in the TPM. By verifying the
 hardware root-of-trust it elevates the protection provided by capabilities like BitLocker, which
-uses TPM 2.0 and facilitates the creation of attestation-based workflows. These attestation-base
+uses TPM 2.0 and facilitates the creation of attestation-based workflows. These attestation-based
 workflows can be incorporated into zero-trust security strategies.
 
 Learn more about [Trusted Platform Modules](/windows/security/information-protection/tpm/trusted-platform-module-overview) and [how Windows uses the TPM](/windows/security/information-protection/tpm/how-windows-uses-the-tpm).
@@ -111,10 +119,10 @@ To learn more about VBS and hardware requirements, see
 
 ## Simplified management
 
-You can view and configure the OS security features of Secured-core using Windows PowerShell or the
-security extension in Windows Admin Center. With Azure Stack HCI Integrated Systems, manufacturing
-partners have further simplified the configuration experience for customers so that Microsoft’s best
-server security is available right out of the box.
+You can view and configure the OS security features of Secured-core systems using Windows PowerShell
+or the security extension in Windows Admin Center. With Azure Stack HCI Integrated Systems,
+manufacturing partners have further simplified the configuration experience for customers so that
+Microsoft’s best server security is available right out of the box.
 
 :::image type="content" source="media/Secured-core/windows-admin-center-server.png" alt-text="Screenshot showing the Windows Admin Center security extension in a browser window with Secured-core enabled." lightbox="media/Secured-core/windows-admin-center-server.png":::
 
@@ -139,7 +147,7 @@ vectors.
 
 ## Next steps
 
-Now you understand what Secured-core server, here are some resources to get you started. Learn about how:
+Now you understand what Secured-core server is, here are some resources to get you started. Learn about how:
 
 - [Microsoft brings advanced hardware security to Server and Edge with Secured-core](https://www.microsoft.com/security/blog/2021/03/02/microsoft-brings-advanced-hardware-security-to-server-and-edge-with-secured-core/) in the Microsoft Security Blog.
 - [New Secured-core servers are now available from the Microsoft ecosystem to help secure your infrastructure](https://www.microsoft.com/security/blog/2021/12/07/new-secured-core-servers-are-now-available-from-the-microsoft-ecosystem-to-help-secure-your-infrastructure/) in the Microsoft Security Blog.
