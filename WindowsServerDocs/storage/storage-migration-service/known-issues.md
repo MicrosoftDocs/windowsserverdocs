@@ -882,6 +882,18 @@ To resolve this issue, use one of the following solutions.
 > [!IMPORTANT]
 > If you have followed Solution 1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
 
+
+## Transfer validation warning "The destination proxy wasn't found"
+If you didn't already have the SMS Proxy service installed on the destination server before starting the transfer, Windows Admin Center installs it automatically. But under certain circumstances it will fail to register and display validation error "The destination proxy wasn't found". 
+
+To resolve this issue, ensure the SMS Proxy service feature is installed on the destination server, then run the following PowerShell command on the Orchestrator server:
+
+```
+Register-SMSProxy -ComputerName <destination server FQDN> -Force
+```
+
+Validation will then pass.
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
