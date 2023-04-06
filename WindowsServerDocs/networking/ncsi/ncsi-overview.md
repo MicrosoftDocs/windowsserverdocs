@@ -2,9 +2,9 @@
 title: Network Connectivity Status Indicator Overview
 description: 'The Network Connectivity Status Indicator (NCSI) helps troubleshoot connectivity issues via network probing methods.'
 ms.topic: article
-ms.date: 04/xx/2023
+ms.date: 04/06/2023
 ms.author: alalve
-author: Roland Nitsch
+author: rnitsch
 ---
 
 # NCSI overview
@@ -61,7 +61,7 @@ NCSI works together with proxies in two main ways:
 
 NCSI will detect a manually provisioned proxy address from the following registry path: "**HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\ManualProxies**".
 
-NCSI performs an active probe if the above fails including if there aren't any stored proxy information. To learn about additional reasons for proxy failures, see [when are proxy detection requests triggered?](ncsi-frequently-asked-questions.md#-when-are-proxy-detection-requests-triggered) and [how are proxies detected?](ncsi-frequently-asked-questions.md#how-are-proxies-detected).
+NCSI performs an active probe if the above fails including if there aren't any stored proxy information. To learn about additional reasons for proxy failures, see [when are proxy detection requests triggered?](ncsi-frequently-asked-questions.md#-when-are-proxy-detection-requests-triggered?) and [how are proxies detected?]()
 
 > [!TIP]
 > In Windows 10, users can perform manual proxy configuration by navigating to **Start** > **Settings** > **Network & Internet** > **Proxy** > **Manual proxy setup**.
