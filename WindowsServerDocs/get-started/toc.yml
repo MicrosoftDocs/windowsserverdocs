@@ -69,6 +69,8 @@ items:
         href: application-compatibility-windows-server-2016.md
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
+    - name: Secured-core server
+      href: ../security/secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
   - name: How-to guides
     items:
     - name: Activation
