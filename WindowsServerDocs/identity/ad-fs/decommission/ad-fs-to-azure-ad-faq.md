@@ -52,6 +52,18 @@ Yes depending on the rules needed. The best place to investigate is to use [AD F
 
 It can take up to 4 hours to fully cutover so [plan your maintenance window accordingly](/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication#plan-the-maintenance-window)
 
+**Is AD FS required for using O365?** 
+
+No, O365 can authenticate you directly without needing ADFS.
+
+**Once I move the application configuration to Azure AD, is there anything else I have to do to complete the migration?**
+
+Yes, the migration of an application to Azure AD isn’t complete until you have reconfigured the app itself (cutover) to use Azure AD.
+
+**Is ADFS required so users can login with their Email Address or User Principal Name (UPN)?** 
+
+No, Azure AD supports sign-in with an [Email Address](/azure/active-directory/authentication/howto-authentication-use-email-signin) or User Principal Name.
+
 
 
 ## Next Steps
