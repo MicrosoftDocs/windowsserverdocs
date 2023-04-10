@@ -65,5 +65,5 @@ You can troubleshoot an issue by forcing an active probe to see if it completes.
 
 ## Additional references
 
-[NCSI Overview](ncsi-overview.md)
-[NCSI FAQ](ncsi-frequently-asked-questions.md)
+- [NCSI Overview](ncsi-overview.md)
+- [NCSI FAQ](ncsi-frequently-asked-questions.md)

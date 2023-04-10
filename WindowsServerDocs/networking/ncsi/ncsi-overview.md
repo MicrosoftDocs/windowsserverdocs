@@ -80,5 +80,5 @@ Whenever NCSI is behind a known hotspot, it moves into “hotspot mode” during
 
 ## Additional references
 
-[NCSI Troubleshooting Guide](ncsi-troubleshooting-guide.md)
-[NCSI FAQ](ncsi-frequently-asked-questions.md)
+- [NCSI Troubleshooting Guide](ncsi-troubleshooting-guide.md)
+- [NCSI FAQ](ncsi-frequently-asked-questions.md)

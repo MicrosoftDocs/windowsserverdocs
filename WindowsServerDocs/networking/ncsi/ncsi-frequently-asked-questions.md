@@ -197,10 +197,11 @@ This behavior is by design. Windows wants users to know when they connect to a n
 The following list of URLs mention or imply `msftconnecttext.com`:
 
 - [Network Connection Status Indicator](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator)
+- [Windows 11 Enterprise connection endpoints](/windows/privacy/manage-windows-11-endpoints#windows-11-enterprise-connection-endpoints)
 - [Connection endpoints for non-Enterprise editions of Windows](/windows/privacy/windows-endpoints-21h1-non-enterprise-editions)
 - [NCSI active probes and the network status alert](/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network#ncsi-active-probes-and-the-network-status-alert)
 
-## How does Microsoft Office uses NCSI to determine internet connectivity?
+## How does Microsoft Office use NCSI to determine internet connectivity?
 
 This is done by NCSI making an API call to [**get_IsConnectedToInternet**](/windows/win32/api/netlistmgr/nf-netlistmgr-inetworklistmanager-get_isconnectedtointernet). If applications such as Microsoft Office is able to indicate no internet connectivity, but you're able to browse websites, this indicates an NCSI problem. If you can't browse or perform other basic network operations, this may be a general network issue, and NCSI troubleshooting wouldn't apply.
 
@@ -226,5 +227,5 @@ Additionally, some Linux applications don't perform connectivity checks. They se
 
 ## Additional references
 
-[NCSI Overview](ncsi-overview.md)
-[NCSI Troubleshooting Guide](ncsi-troubleshooting-guide.md)
+- [NCSI Overview](ncsi-overview.md)
+- [NCSI Troubleshooting Guide](ncsi-troubleshooting-guide.md)
