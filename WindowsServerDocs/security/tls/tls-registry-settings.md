@@ -206,7 +206,7 @@ TLS servers may send a list of the distinguished names of acceptable certificate
 
 Not sending a list of trusted issuers might impact what the client sends when it's asked for a client certificate. For example, when Internet Explorer receives a request for client authentication, it only displays the client certificates that chain up to one of the certification authorities that is sent by the server. If the server didn't send a list, Internet Explorer displays all of the client certificates that are installed on the client.
 
-This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates won't have the same root CA; therefore, Internet Explorer cannot chose a certificate that chains up to one of the server's CAs. TLS clients may offer any available client certificate when a server does not send the trusted issuer list. This entry doesn't exist in the registry by default.
+This behavior might be desirable. For example, when PKI environments include cross certificates, the client and server certificates won't have the same root CA; therefore, Internet Explorer cannot choose a certificate that chains up to one of the server's CAs. TLS clients may offer any available client certificate when a server does not send the trusted issuer list. This entry doesn't exist in the registry by default.
 
 ### Default Send Trusted Issuer List behavior
 
