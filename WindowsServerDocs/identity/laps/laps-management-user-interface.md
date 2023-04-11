@@ -60,6 +60,9 @@ If you have permissions to read and decrypt the computer's current Windows LAPS 
 
 If you don't have permissions to read or decrypt the current password information, a dialog displays a warning.
 
+> [!IMPORTANT]
+> The Active Directory Users and Computers management snap-in only supports viewing the most recently stored password. In order to query older passwords (assuming you enabled password history), you must use the `Get-LapsADPassword` PowerShell cmdlet.
+
 ## Next steps
 
 - [Windows LAPS schema extensions reference](laps-technical-reference.md)
