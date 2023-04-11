@@ -2,7 +2,7 @@
 title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
-ms.date: 02/28/2023
+ms.date: 04/10/2023
 ---
 
 # Transport Layer Security (TLS) registry settings
@@ -43,8 +43,9 @@ In most cases, a certificate is mapped to a user account in one of two ways:
 - A single certificate is mapped to a single user account (one-to-one mapping).
 - Multiple certificates are mapped to one user account (many-to-one mapping).
 
-The SChannel provider uses four (4) certificate mapping methods with Kerberos service-for-user (S4U) certificate mapping being enabled by default. The other three (3) are:
+The SChannel provider uses four (4) certificate mapping methods:
 
+1. Kerberos service-for-user (S4U) mapping (**enabled by default**)
 1. User principal name mapping
 1. One-to-one mapping (also known as subject/issuer mapping)
 1. Many-to-one mapping
@@ -75,7 +76,7 @@ For information about default cipher suite orders that are used by the SChannel 
 
 ## ClientCacheTime
 
-This entry specifies client TLS session cache item lifetime in milliseconds. Beginning with Windows Server 2008 and Windows Vista the default is 10 hours. A value of 0 turns off TLS session caching on the client.
+This entry specifies client TLS session cache item lifetime in milliseconds. Beginning with Windows Server 2008 and Windows Vista the default is 10 hours. A value of **0** turns off TLS session caching on the client.
 
 The first time a client connects to a server through the SChannel SSP, a full TLS/SSL handshake is performed. When this is complete, the master secret, cipher suite, and certificates are stored in the session cache on the respective client and server.
 
@@ -92,7 +93,7 @@ By default, OCSP support is enabled for IIS websites that have a simple secure (
 - Require Server Name Indication
 - Use Centralized Certificate Store
 
-In this case, the server hello response during the TLS handshake won't include an OCSP stapled status by default. This behavior improves performance: The Windows OCSP stapling implementation scales to hundreds of server certificates. Because SNI and CCS enable IIS to scale to thousands of websites that potentially have thousands of server certificates, setting this behavior to be enabled by default may cause performance issues.
+In this case, the server hello response during the TLS handshake won't include an OCSP stapled status by default. This behavior improves performance: The Windows OCSP stapling implementation scales to hundreds of server certificates. However, Server Name Indication (SNI) and Central Certificate Store (CCS) enable IIS to scale to thousands of websites that potentially have thousands of server certificates, therefore enabling OCSP stapling for CCS bindings may cause performance issues.
 
 Applicable versions: All versions beginning with Windows Server 2012 and Windows 8.
 
@@ -185,7 +186,7 @@ Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNE
 
 This entry controls the maximum allowed size of a TLS handshake message that will be accepted. Messages larger than the allowed size won't be accepted and the TLS handshake will fail. These entries don't exist in the registry by default.
 
-When you set the value to **0x0**, fragmented messages aren't processed and will cause the TLS handshake to fail. This makes TLS clients or servers on the current machine non-compliant with the TLS RFCs.
+When you set the value to **0x0**, fragmented messages aren't processed and will cause the TLS handshake to fail. This makes TLS clients or servers on the current machine noncompliant with the TLS RFCs.
 
 The maximum allowed size can be increased up to 2^16 bytes. Allowing a client or server to read and store large amounts of unverified data from the network isn't a good idea and will consume additional memory for each security context.
 
