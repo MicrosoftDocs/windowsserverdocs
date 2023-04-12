@@ -62,7 +62,17 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 ---
 
-## Configure Remote Access as a VPN Server
+## Add the VPN server to the RAS and IAS Servers group
+
+1. On the domain controller, in Server Manager, select **Tools**, and then select **Active Directory Users and Computers** to open the console.
+
+1. In the console tree, go to the desired domain, and then select **Users**.
+
+1. In the details pane, right-click **RAS and IAS Servers**, and then select **Properties** to open **RAS and IAS Servers Properties**.
+
+1. In **RAS and IAS Servers Properties**, select the **Members** tab, and add the VPN server.
+
+## Configure Remote Access as a VPN server
 
 In this section, we'll configure Remote Access to allow IKEv2 VPN connections and to deny connections from other VPN protocols. We'll also assign a static IP address pool for the issuance of IP addresses to connecting authorized VPN clients.
 
