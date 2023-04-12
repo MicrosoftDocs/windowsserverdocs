@@ -224,13 +224,14 @@ Here are some tips to try in case something isn't working. For general help trou
     1. Create a new port rule for the `Windows Admin Center` and `Azure Active Directory` service tags.
     1. You can test this by running the following command using PowerShell inside of your virtual machine:
 
-       ```powershell
-       Invoke-RestMethod -Method GET -Uri https://wac.azure.com
-       ```
+        ```powershell
+        Invoke-RestMethod -Method GET -Uri https://<your_region>.service.waconazure.com
+        ```
 
-       This should return:
+        ```Expected output
+        Microsoft Certificate and DNS service for Windows Admin Center in the Azure Portal
+        ```
 
-       `You've found the Windows Admin Center in Azure APIs' home page. Please use the Azure portal to manage your virtual machines with Windows Admin Center.`
 
     1. If you allowed all outbound traffic and are still seeing an error from the command above, check that there are no firewall rules blocking connection. If nothing seems wrong, create a support request as our service might be experiencing problems.
 1. Make sure that the Windows Admin Center service is running on your VM.
@@ -279,12 +280,13 @@ If no other tool is loading, there might be a problem with your network connecti
     1. Test connectivity by running the following command using PowerShell inside of your virtual machine:
 
         ```powershell
-        Invoke-RestMethod -Method GET -Uri https://wac.azure.com
+        Invoke-RestMethod -Method GET -Uri https://<your_region>.service.waconazure.com
         ```
 
-        This should return:
+        ```Expected output
+        Microsoft Certificate and DNS service for Windows Admin Center in the Azure Portal
+        ```
 
-        `You've found the Windows Admin Center in Azure APIs' home page. Please use the Azure portal to manage your virtual machines with Windows Admin Center.`
 1. If you have allowed all outbound traffic, and are getting an error from the command above, check that there are no firewall rules blocking the connection.
 
 If nothing seems wrong and Windows Admin Center still won't install, open a support request with the following information:
@@ -343,8 +345,6 @@ const deploymentTemplate = {
                     "settings": {
                         "port": "[parameters('port')]",
                         "salt": "[parameters('salt')]",
-                        "cspFrameAncestors": ["https://*.hosting.portal.azure.net", "https://localhost:1340", "https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com"],
-                        "corsOrigins": ["https://ms.portal.azure.com", "https://portal.azure.com", "https://portal-s1.site.wac.azure.com", "https://portal-s1.site.waconazure.com" ,"https://portal-s2.site.wac.azure.com", "https://portal-s2.site.waconazure.com", "https://portal-s3.site.wac.azure.com", "https://portal-s3.site.waconazure.com", "https://portal-s4.site.wac.azure.com", "https://portal-s4.site.waconazure.com", "https://portal-s5.site.wac.azure.com", "https://portal-s5.site.waconazure.com", "https://preview.portal.azure.com", "https://waconazure.com"]
                     }
                 }
             }
