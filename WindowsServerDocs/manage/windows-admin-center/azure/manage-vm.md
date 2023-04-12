@@ -78,9 +78,6 @@ The VM also has the following networking requirements, which we step through dur
 
 - An inbound port rule if using a public IP address to connect to the VM (not recommended)
 
-> [!NOTE]
-> Confiuring Windows Admin Center to communicate outbound through an HTTP/HTTPS proxy server is currently not supported.
-
 Just like with Remote Desktop, we recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. Using a private IP address doesn't require an inbound port rule, though it does require access to the virtual network (which we discuss next).
 
 > [!NOTE]
@@ -91,7 +88,7 @@ Just like with Remote Desktop, we recommend connecting to the VM using a private
 The management PC or other system that you use to connect to the Azure portal has the following requirements:
 
 - The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser
-- Access to the Azure virtual network that's connected to the Azure VM (this is more secure than using a public IP address to connect). There are many ways to connect to a virtual network, including by using a [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways). [Learn more](/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network) ways to connect your on-premises network to an Azure Virtual Network.
+- Access to the virtual network that's connected to the VM (this is more secure than using a public IP address to connect). There are many ways to connect to a virtual network, including by using a [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
 ## Installing in a VM
 
@@ -110,7 +107,7 @@ Before you can use Windows Admin Center in the Azure portal, you must install it
 1. In the virtual machine settings, navigate to **Windows Admin Center** (found in the **Settings** group).
 1. To optionally provide access to your VM over the public internet from any IP address (convenient for testing but exposes the VM to attack from any host on the internet), you can select **Open this port for me**.
 
-   However, we recommend instead using a private IP address to connect with, or at least [manually creating an inbound port rule](#creating-an-inbound-port-rule-for-connecting-from-specific-public-ip-addresses) that's locked down to accept traffic from only the IP addresses you specify. [Learn more](/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network) on how to connect over a Private IP.
+   However, we recommend instead using a private IP address to connect with, or at least [manually creating an inbound port rule](#creating-an-inbound-port-rule-for-connecting-from-specific-public-ip-addresses) that's locked down to accept traffic from only the IP addresses you specify.
 
 1. Select **Install**.
 
@@ -246,6 +243,21 @@ Here are some tips to try in case something isn't working. For general help trou
     1. Open the RDP file and sign in with your administrator credentials.
     1. Open the Control Panel and navigate to Control Panel\System and Security\Windows Defender Firewall\Allowed apps.
     1. Ensure that the SmeInboundOpenException rule is enabled for both Private and Public, then try to connect again.
+
+### You get stuck on the "Windows Admin Center" loading page with the logo
+This occurs when your browser blocks third party cookies. Currently, Windows Admin Center requires that you don't block third party cookies, and we are actively working to remove this requirement. In the meantime, please allow third party cookies in your browser.
+
+1. On **Edge**:
+    1. Navigate to the elipses on the top right corner, and navigate to **Settings**
+    1. Navigate to **Cookies and site permissions**
+    1. Navigate to **Manage and delete cookies and site data**
+    1. Ensure that the checkbox for **Block third-party cookies** is turned **off**
+
+1. On **Chrome**
+    1. Navigate to the elipses on the top right corner, and navigate to **Settings**
+    1. Navigate to **Privacy and Security**
+    1. Navigate to **Cookies and other site data**
+    1. Select the radio button for either **Block third-party cookies in Incognito** or **Allow all cookies**
 
 ### One of the Windows Admin Center tools isn’t loading or gives an error
 
