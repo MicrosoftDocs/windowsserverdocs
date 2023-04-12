@@ -24,6 +24,11 @@ Windows LAPS is now available on the following OS platforms with the specified u
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
 > [!IMPORTANT]
+> There is a legacy LAPS interop bug in the above April 11 2023 update. Installing the legacy LAPS GPO CSE on a machine patched with the April 11 2023 update and an applied legacy LAPS policy, will break both Windows LAPS and legacy LAPS. Symptoms include Windows LAPS event log ids 10031 and 10032, and legacy LAPS event id 6. Microsoft is working on a fix for this problem.
+>
+> You can workaround this issue by either 1) uninstalling legacy LAPS, or 2) deleting all registry values under the HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\State registry key.
+
+> [!IMPORTANT]
 > The Azure Active Directory LAPS scenario remains in private preview and is closed to new customers. The Azure Active Directory LAPS scenario is scheduled to enter public preview in Q2 2023. This documentation will be updated once a more precise date for the public preview is available.
 
 ## Benefits of using Windows LAPS
