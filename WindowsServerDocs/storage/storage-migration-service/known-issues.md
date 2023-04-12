@@ -882,6 +882,31 @@ To resolve this issue, use one of the following solutions.
 > [!IMPORTANT]
 > If you have followed Solution 1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
 
+## Cut over fails for Windows Server 2008 R2 
+When you're performing cut over with a source computer running Windows Server 2008 R2 or older OSes, the operation errors with "Couldn’t rename the computer from the domain." Examining the SMS Proxy operation event log shows
+
+The SMS debug logs gathered with http://aka.ms/smslogs will show error "0x6D1" and "Object reference not set to an instance of an object":
+
+```
+Line 360: 04/02/2023-14:06:02.877 [Info] UnjoinDomain(isLocal=False, server='2008R2.corp.contoso.com')    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2151]
+Line 361: 04/02/2023-14:06:02.948 [Erro] Attempt #1 failed to unjoin machine '2008R2.corp.contoso' from the domain with credential 'corp\ned'. Error 0x6D1.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2184]
+Line 362: 04/02/2023-14:06:02.954 [Erro] Fatal exception during cutover stage processing. Source: 2008R2.corp.contoso.com, CutoverStage: UnjoinSource, ErrorCode: 0x80004003, Message: Object reference not set to an instance of an object.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverOperation.cs::Run::1116]
+```
+
+This behavior is caused by changes introduced in [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8) to combat [CVE-2022-38042](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-38042). 
+
+To resolve this issue, use one of the following solutions.
+
+### Solution 1 (if using Windows Server 2008 R2 with a valid ESU) 
+For a source computer running Windows Server 2008 R2 with a valid [Extended Support Updates contract](https://learn.microsoft.com/windows-server/get-started/extended-security-updates-overview), installing the latest cumulative update and following the steps [Cut over fails at 77% or 30%](https://learn.microsoft.com/windows-server/storage/storage-migration-service/known-issues#cut-over-fails-at-77-or-30) will resolve the issue. 
+
+### Solution 2 (if using Windows Server 2008 R2 without a valid ESU or using Windows Server 2008 or Windows Server 2003) 
+For a source computer running Windows Server 2008 R2 without a valid ESU, or running Windows Server 2008 or Windows Server 2003, you will need to perform a manual cutover using the steps described in [How cutover works in Storage Migration Service](https://learn.microsoft.com/en-us/windows-server/storage/storage-migration-service/cutover), with the following changes:
+
+1. Skip steps 3 and 4
+2. For step 5, you must logon to the computer and disjoin it from the domain manually using SYSDM.CPL, NETDOM.exe, or Remove-Compuer PowerShell. You cannot remotely remove the computer from the domain, that API no longer works after [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8). 
+
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
