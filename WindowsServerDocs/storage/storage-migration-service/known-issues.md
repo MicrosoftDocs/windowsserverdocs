@@ -885,7 +885,7 @@ To resolve this issue, use one of the following solutions.
 ## Cut over fails for Windows Server 2008 R2 
 When you're performing cut over with a source computer running Windows Server 2008 R2 or older OSes, the operation errors with "Couldn’t rename the computer from the domain." Examining the SMS Proxy operation event log shows
 
-The SMS debug logs gathered with http://aka.ms/smslogs will show error "0x6D1" and "Object reference not set to an instance of an object":
+The SMS debug logs gathered with https://aka.ms/smslogs will show error "0x6D1" and "Object reference not set to an instance of an object":
 
 ```
 Line 360: 04/02/2023-14:06:02.877 [Info] UnjoinDomain(isLocal=False, server='2008R2.corp.contoso.com')    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2151]
