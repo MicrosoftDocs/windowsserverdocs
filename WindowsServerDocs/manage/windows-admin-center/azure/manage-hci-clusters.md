@@ -161,7 +161,7 @@ After you've installed Windows Admin Center on your cluster, perform the followi
 2. Select **Connect**.
 
 > [!NOTE]
-> Starting April 2023, Windows Admin Center now allows you to use Azure AD-based authentication for your cluster. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required.
+> Starting April 2023, Windows Admin Center now allows you to use Azure AD-based authentication for your 22H2 or higher clusters. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
