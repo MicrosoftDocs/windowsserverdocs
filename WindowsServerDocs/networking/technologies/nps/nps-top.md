@@ -106,6 +106,10 @@ You can use NPS as a RADIUS proxy when:
 - You want to process a large number of connection requests. In this case, instead of configuring your RADIUS clients to attempt to balance their connection and accounting requests across multiple RADIUS servers, you can configure them to send their connection and accounting requests to an NPS RADIUS proxy. The NPS RADIUS proxy dynamically balances the load of connection and accounting requests across multiple RADIUS servers and increases the processing of large numbers of RADIUS clients and authentications per second.
 - You want to provide RADIUS authentication and authorization for outsourced service providers and minimize intranet firewall configuration. An intranet firewall is between your perimeter network (the network between your intranet and the Internet) and intranet. By placing an NPS on your perimeter network, the firewall between your perimeter network and intranet must allow traffic to flow between the NPS and multiple domain controllers. By replacing the NPS with an NPS proxy, the firewall must allow only RADIUS traffic to flow between the NPS proxy and one or multiple NPSs within your intranet.
 
+> [!IMPORTANT]
+> NPS supports authentication across forests without a RADIUS proxy when the forest functional level is Windows Server 2003 or higher and there is a two-way trust relationship between forests. But, if you use EAP-TLS or PEAP-TLS with certificates as your authentication method, you MUST use a RADIUS proxy for authentication across forests.
+
+
 The following illustration shows NPS as a RADIUS proxy between RADIUS clients and RADIUS servers.
 
 ![NPS as a RADIUS Proxy](../../media/Nps-Proxy/Nps-Proxy.jpg)
