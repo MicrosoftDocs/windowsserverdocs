@@ -95,8 +95,8 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 This attribute contains a multi-valued byte string. Each value contains an encrypted version of an earlier password.
 
 ```powershell
-Name: ms-LAPS-EncryptedPassword
-LDAP display name: msLAPS-EncryptedPassword
+Name: msLAPS-EncryptedPasswordHistory
+LDAP display name: msLAPS-EncryptedPasswordHistory
 OID: 1.2.840.113556.1.6.44.1.4
 Syntax: 2.5.5.10
 OmSyntax: 4
@@ -111,8 +111,8 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 This attribute contains a byte string that contains an encrypted version of the current Directory Services Restore Mode (DSRM) account password.
 
 ```powershell
-Name: ms-LAPS-EncryptedPassword
-LDAP display name: msLAPS-EncryptedPassword
+Name: msLAPS-EncryptedDSRMPassword
+LDAP display name: msLAPS-EncryptedDSRMPassword
 OID: 1.2.840.113556.1.6.44.1.5
 Syntax: 2.5.5.10
 OmSyntax: 4
