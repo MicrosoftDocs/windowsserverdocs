@@ -251,7 +251,7 @@ Here are some tips to try in case something isn't working. For general help trou
     1. Ensure that the SmeInboundOpenException rule is enabled for both Private and Public, then try to connect again.
 
 ### You get stuck on the "Windows Admin Center" loading page with the logo
-This occurs when your browser blocks third party cookies. Currently, Windows Admin Center requires that you don't block third party cookies, and we're actively working to remove this requirement. In the meantime, please allow third party cookies in your browser.
+This could occur if your browser blocks third party cookies. Currently, Windows Admin Center requires that you don't block third party cookies, and we're actively working to remove this requirement. In the meantime, please allow third party cookies in your browser.
 
 1. On **Edge**:
     1. Navigate to the elipses on the top right corner, and navigate to **Settings**
