@@ -12,6 +12,10 @@ ms.date:  03/14/2023
 
 In this getting started guide, we'll show you how to install and configure Remote Access (RAS) as a VPN server.
 
+## Prerequisites
+
+Membership in Administrators, or equivalent, is the minimum required to perform these procedures. However, if the RAS server is domain joined, then the procedures need to be performed by a domain administrator.
+
 ## Install the Remote Access role
 
 # [PowerShell](#tab/powershell)
@@ -64,7 +68,7 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 ## Add the VPN server to the RAS and IAS Servers group
 
-1. On the domain controller, in Server Manager, select **Tools**, and then select **Active Directory Users and Computers** to open the console.
+1. On the Windows server, in Server Manager, select **Tools**, and then select **Active Directory Users and Computers** to open the console.
 
 1. In the console tree, go to the desired domain, and then select **Users**.
 
