@@ -88,18 +88,18 @@ You might need to configure the repository as Trusted for the command to succeed
 
 The next step is to create an Azure Active Directory application that's configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
-The app needs to be configured with two permissions: `Device.Read.All` and either `Device.LocalCredentials.Read` or `Device.LocalCredentials.ReadAll`.
+The app needs to be configured with two permissions: `Device.Read.All` and either `DeviceLocalCredential.Read.All` or `DeviceLocalCredential.ReadBasic.All`.
 
 > [!IMPORTANT]
 >
-> - Use `Device.LocalCredentials.Read` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
-> - Use `Device.LocalCredentials.ReadAll` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
+> - Use `DeviceLocalCredential.ReadBasic.All` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
+> - Use `DeviceLocalCredential.Read.All` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
 
-#### Manual consent to Device.LocalCredentials.\* permissions
+#### Manual consent to DeviceLocalCredential.\* permissions
 
-Currently, a manual step is required to consent to either `Device.LocalCredentials.Read` or the `Device.LocalCredentials.ReadAll` permissions.
+Currently, a manual step is required to consent to either `DeviceLocalCredential.ReadBasic.All` or the `DeviceLocalCredential.Read.All` permissions.
 
-After you decide which `Device.LocalCredentials` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.Read.Basic` if necessary.
+After you decide which `DeviceLocalCredential` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.ReadBasic.All` if necessary.
 
 For multi-tenant apps:
 
