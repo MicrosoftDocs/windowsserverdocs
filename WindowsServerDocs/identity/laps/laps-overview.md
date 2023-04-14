@@ -31,7 +31,7 @@ The  Windows LAPS on-premises Active Directory scenarios are fully supported as 
 > [!IMPORTANT]
 > The April 11, 2023 update has two potential regressions related to interoperability with legacy LAPS scenarios. Please read the following to understand the scenario parameters plus possible workarounds.
 >
-> - If you install the legacy LAPS GPO CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10032, as well as legacy LAPS event ID 6. Microsoft is working on a fix for this issue.
+> - If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. Microsoft is working on a fix for this issue.
 >
 > Two workarounds exist for the above issue:
 >
