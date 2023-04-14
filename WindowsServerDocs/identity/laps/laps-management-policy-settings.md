@@ -83,7 +83,7 @@ If not specified, this setting defaults to 0 (Disabled).
 
 ### PasswordAgeDays
 
-This setting controls the length of the password. Supported values are:
+This setting controls the maximum password age of the managed local administrator account. Supported values are:
 
 - **Minimum**: 1 day (When the backup directory is configured to be Azure Active Directory, the minimum is 7 days.)
 - **Maximum**: 365 days
