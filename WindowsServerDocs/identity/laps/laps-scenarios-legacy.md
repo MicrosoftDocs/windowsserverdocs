@@ -81,7 +81,7 @@ Account             :
 Password            : SV6[y1n3JG+3l8
 PasswordUpdateTime  :
 ExpirationTimestamp : 7/31/2022 12:43:10 PM
-Source              : CleartextPassword
+Source              : LegacyLapsCleartextPassword
 DecryptionStatus    : NotApplicable
 AuthorizedDecryptor : NotApplicable
 ```
