@@ -31,15 +31,15 @@ The  Windows LAPS on-premises Active Directory scenarios are fully supported as 
 > [!IMPORTANT]
 > The April 11, 2023 update has two potential regressions related to interoperability with legacy LAPS scenarios. Please read the following to understand the scenario parameters plus possible workarounds.
 >
-> - If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. Microsoft is working on a fix for this issue.
+> Issue #1: If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. Microsoft is working on a fix for this issue.
 >
-> Two workarounds exist for the above issue:
+> Two primary workarounds exist for the above issue:
 >
 > a. Uninstall the legacy LAPS CSE (result: Windows LAPS will take over management of the managed account)
 >
-> b. Create a REG_DWORD registry value named `BackupDirectory` under the `HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config` key and set it to the value zero (0) (result: Windows LAPS will defer management of the local account to legacy LAPS.).
+> b. [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) (result: legacy LAPS will take over management of the managed account)
 >
-> - If you apply a legacy LAPS policy to a device patched with the April 11, 2023 update, Windows LAPS will immediately enforce\honor the legacy LAPS policy. This may disrupt OS deployment workflows. To workaround this issue, set the registry value described above as a means of deferring built-in enforcement of the legacy LAPS policy. The registry value may be removed once it is ok for Windows LAPS to take over management of the local account, or may be left alone indefinitely if it is preferred to install and use legacy LAPS instead.
+> Issue #2: If you apply a legacy LAPS policy to a device patched with the April 11, 2023 update, Windows LAPS will immediately enforce\honor the legacy LAPS policy, which may be disruptive (for example if done during OS deployment workflow). [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) may also be used to prevent those issues.
 
 ## Benefits of using Windows LAPS
 
