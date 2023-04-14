@@ -44,7 +44,7 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
 
   This restriction avoids a scenario in which Windows LAPS and legacy Microsoft LAPS simultaneously try to manage the same local administrator account. Having two entities manage the same account is a security risk and isn't supported.
   
-  For the emulation feature, legacy Microsoft LAPS is considered installed if the legacy Microsoft LAPS Group Policy Client Side Extension is installed. To detect the extension, query the `DllName` registry value under this registry key:
+  For the emulation feature, legacy Microsoft LAPS is considered installed if the legacy Microsoft LAPS Group Policy Client Side Extension (CSE) is installed. To detect the extension, query the `DllName` registry value under this registry key:
 
   `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{D76B9641-3288-4f75-942D-087DE603E3EA}`
 
@@ -59,6 +59,12 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
   For example, when you run Windows LAPS in legacy Microsoft LAPS emulation mode, you can't configure Windows LAPS to do tasks like encrypt passwords or save passwords to Azure Active Directory.
 
 If all these constraints are satisfied, Windows LAPS honors legacy Microsoft LAPS Group Policy settings. The specified managed local administrator account is managed identically to how it's managed in legacy Microsoft LAPS.
+
+## Disabling legacy Microsoft LAPS emulation mode
+
+Windows LAPS has an important difference to be aware of when planning a deployment or migration from legacy Microsoft LAPS, namely that is always installed and active once a device has been joined to either Azure Active Directory or Windows Server Active Directory. Installation of the legacy Microsoft LAPS CSE has been used as a mechanism to control when the legacy Microsoft LAPS policy will be enforced. As a built-in Windows feature, Windows LAPS will immediately start enforcing a legacy Microsoft LAPS policy as soon as it is applied to the device. Such immediate enforcement may be disruptive, for example if enforcement occurs during the setup and configuration workflow for a new operating system.
+
+To prevent this you can disable legacy Microsoft LAPS emulation mode by creating a REG_DWORD registry value named `BackupDirectory` under the `HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config` key and set it to the value zero (0). Setting this value will prevent Windows LAPS from entering legacy Microsoft LAPS emulation mode, regardless of whether the legacy Microsoft LAPS CSE is installed or not. This value may be used temporarily or permanently. Note that if\when a new Windows LAPS policy is configured, that new policy will take precedence. For more information on the Windows LAPS policy precedence ordering, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 
 ## Limited administrative support
 
@@ -75,7 +81,7 @@ Account             :
 Password            : SV6[y1n3JG+3l8
 PasswordUpdateTime  :
 ExpirationTimestamp : 7/31/2022 12:43:10 PM
-Source              : CleartextPassword
+Source              : LegacyLapsCleartextPassword
 DecryptionStatus    : NotApplicable
 AuthorizedDecryptor : NotApplicable
 ```
