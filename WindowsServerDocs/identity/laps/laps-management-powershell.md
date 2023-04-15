@@ -30,7 +30,7 @@ The following table describes the cmdlets that are available in the LAPS PowerSh
 |`Set-LapsADComputerSelfPermission`|Use to configure an OU in Windows Server Active Directory to allow computer objects to update their Windows LAPS passwords.|
 |`Set-LapsADPasswordExpirationTime`|Use to update a computer's Windows LAPS password expiration time in Windows Server Active Directory.|
 |`Set-LapsADReadPasswordPermission`|Use to grant permission to read the Windows LAPS password information in Windows Server Active Directory.|
-|`Set-LapsADResetPasswordPermission`|Use to grant permission to update the Windows LAPS password expiration time in Windows Server Active Directory.|
+|`Set-LapsADResetPasswordPermission`|Use to grant permission to reset the Windows LAPS password information in Windows Server Active Directory.|
 |`Update-LapsADSchema`|Use to extend the Windows Server Active Directory schema with the Windows LAPS schema attributes.|
 
 > [!TIP]
