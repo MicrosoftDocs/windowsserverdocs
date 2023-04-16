@@ -49,8 +49,9 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
 |/exclude:FileName1[+[FileName2]][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file. When any of the strings match any part of the absolute path of the file to be copied, that file will be excluded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
-|/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
+|/y|Overwrites any existing destination file without prompting.|
 |/-y|Prompts to confirm that you want to overwrite an existing destination file.|
+|/D|Skips all existing destination files without prompting.|
 |/z|Copies over a network in restartable mode.|
 |/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
 |/j|Copies files without buffering. Recommended for very large files. This parameter was added in Windows Server 2008 R2.|
