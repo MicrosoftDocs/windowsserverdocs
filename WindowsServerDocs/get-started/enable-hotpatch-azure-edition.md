@@ -1,27 +1,27 @@
 ---
-title: Enable Hotpatch for Azure Edition Server Core virtual machines (preview)
-description:  Learn how to enable Hotpatch for Windows Server Datacenter&#58; Azure Edition when built using  ISO installation media.
+title: Enable Hotpatch for Azure Edition virtual machines (preview)
+description:  'Learn how to enable Hotpatch for Windows Server Datacenter: Azure Edition when built using ISO installation media.'
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 10/12/2022
+ms.date: 04/18/2023
 ---
 
-# Enable Hotpatch for Azure Edition Server Core virtual machines built from ISO (preview)
+# Enable Hotpatch for Azure Edition virtual machines built from ISO (preview)
 
 > [!IMPORTANT]
 >
-> - Hotpatch for Azure Edition Server Core virtual machines built from an ISO is currently in
-> PREVIEW. This information relates to a prerelease product that may be substantially modified
-> before it's released. Microsoft makes no warranties, expressed or implied, with respect to the
-> information provided here.
+> - Hotpatch for Azure Edition virtual machines built from an ISO is currently in PREVIEW. This
+> information relates to a prerelease product that may be substantially modified before it's
+> released. Microsoft makes no warranties, expressed or implied, with respect to the information
+> provided here.
 >
-> - This article only applies when deploying Windows Server Datacenter: Azure Edition Server Core
-> from an ISO image. It does not apply when you deploy using the Azure marketplace.
+> - This article only applies when deploying Windows Server Datacenter: Azure Edition from an ISO
+> image. It does not apply when you deploy using the Azure marketplace.
 
-Hotpatch for Windows Server 2022 Datacenter: Azure Edition Server Core allows you to install
-security updates on without requiring a reboot after installation. This article will teach you how
-to configure Hotpatch after installing or upgrading the operating system using an ISO.
+Hotpatch for Windows Server 2022 Datacenter: Azure Edition allows you to install security updates on
+without requiring a reboot after installation. This article will teach you how to configure Hotpatch
+after installing or upgrading the operating system using an ISO.
 
 When using Hotpatch for your ISO deployed machine on Azure Stack HCI, there are a few important
 differences with the Hotpatch experience compared with using Hotpatch as part of Azure Automanage
@@ -38,7 +38,7 @@ for Azure VMs.
 
 To enable Hotpatch, you must have the following prerequisites ready before you start:
 
-- Windows Server 2022 Datacenter: Azure Edition Server Core hosted on a supported platform, such as
+- Windows Server 2022 Datacenter: Azure Edition hosted on a supported platform, such as
   Azure or Azure Stack HCI with Azure benefits enabled.
   - Azure Stack HCI must be version 21H2 or later.
 - Review the [How hotpatch works](/azure/automanage/automanage-hotpatch#how-hotpatch-works) section
