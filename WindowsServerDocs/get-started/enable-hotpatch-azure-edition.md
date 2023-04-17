@@ -65,8 +65,8 @@ steps:
        Name = "EnableVirtualizationBasedSecurity"
        Value = "0x1"
        Force = $True
+       PropertyType = "DWORD" 
    }
-   New-Item $registryPath -Force
    New-ItemProperty @parameters
    ```
 
@@ -79,8 +79,8 @@ steps:
        Name = "HotPatchTableSize"
        Value = "0x1000"
        Force = $True
+       PropertyType = "DWORD"
    }
-   New-Item $registryPath -Force
    New-ItemProperty @parameters
    ```
 
