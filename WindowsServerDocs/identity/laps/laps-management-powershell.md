@@ -20,25 +20,25 @@ The following table describes the cmdlets that are available in the LAPS PowerSh
 
 |Name|Description|
 |---|---|
-|[`Get-LapsAADPassword`](/powershell/module/laps/get-lapsaadpassword?view=windowsserver2022-ps)|Use to query Azure Active Directory for Windows LAPS passwords.|
-|[`Get-LapsDiagnostics`](/powershell/module/laps/get-lapsdiagnostics?view=windowsserver2022-ps)|Use to collect diagnostic information for investigating issues.|
-|[`Find-LapsADExtendedRights`](/powershell/module/laps/find-lapsadextendedrights?view=windowsserver2022-ps)|Use to discover which identities have been granted permissions for an Organization Unit (OU) in Windows Server Active Directory.|
-|[`Get-LapsADPassword`](/powershell/module/laps/get-lapsadpassword?view=windowsserver2022-ps)|Use to query Windows Server Active Directory for Windows LAPS passwords.|
-|[`Invoke-LapsPolicyProcessing`](/powershell/module/laps/invoke-lapspolicyprocessing?view=windowsserver2022-ps)|Use to initiate a policy processing cycle.|
-|[`Reset-LapsPassword`](/powershell/module/laps/reset-lapspassword?view=windowsserver2022-ps)|Use to initiate an immediate password rotation. Use when backing up the password to either Azure Active Directory or Windows Server Active Directory.|
-|[`Set-LapsADAuditing`](/powershell/module/laps/set-lapsadauditing?view=windowsserver2022-ps)|Use to configure Windows LAPS-related auditing on OUs in Windows Server Active Directory.|
-|[]`Set-LapsADComputerSelfPermission`](/powershell/module/laps/set-lapsadcomputerselfpermission?view=windowsserver2022-ps)|Use to configure an OU in Windows Server Active Directory to allow computer objects to update their Windows LAPS passwords.|
-|[`Set-LapsADPasswordExpirationTime`](/powershell/module/laps/set-lapsadpasswordexpirationtime?view=windowsserver2022-ps)|Use to update a computer's Windows LAPS password expiration time in Windows Server Active Directory.|
-|[`Set-LapsADReadPasswordPermission`](/powershell/module/laps/set-lapsadreadpasswordpermission?view=windowsserver2022-ps)|Use to grant permission to read the Windows LAPS password information in Windows Server Active Directory.|
-|[`Set-LapsADResetPasswordPermission`](/powershell/module/laps/set-lapsadresetpasswordpermission?view=windowsserver2022-ps)|Use to grant permission to update the Windows LAPS password expiration time in Windows Server Active Directory.|
-|[`Update-LapsADSchema`](/powershell/module/laps/update-lapsadschema?view=windowsserver2022-ps)|Use to extend the Windows Server Active Directory schema with the Windows LAPS schema attributes.|
+|[`Get-LapsAADPassword`](/powershell/module/laps/get-lapsaadpassword)|Use to query Azure Active Directory for Windows LAPS passwords.|
+|[`Get-LapsDiagnostics`](/powershell/module/laps/get-lapsdiagnostics)|Use to collect diagnostic information for investigating issues.|
+|[`Find-LapsADExtendedRights`](/powershell/module/laps/find-lapsadextendedrights)|Use to discover which identities have been granted permissions for an Organization Unit (OU) in Windows Server Active Directory.|
+|[`Get-LapsADPassword`](/powershell/module/laps/get-lapsadpassword)|Use to query Windows Server Active Directory for Windows LAPS passwords.|
+|[`Invoke-LapsPolicyProcessing`](/powershell/module/laps/invoke-lapspolicyprocessing)|Use to initiate a policy processing cycle.|
+|[`Reset-LapsPassword`](/powershell/module/laps/reset-lapspassword)|Use to initiate an immediate password rotation. Use when backing up the password to either Azure Active Directory or Windows Server Active Directory.|
+|[`Set-LapsADAuditing`](/powershell/module/laps/set-lapsadauditing)|Use to configure Windows LAPS-related auditing on OUs in Windows Server Active Directory.|
+|[`Set-LapsADComputerSelfPermission`](/powershell/module/laps/set-lapsadcomputerselfpermission)|Use to configure an OU in Windows Server Active Directory to allow computer objects to update their Windows LAPS passwords.|
+|[`Set-LapsADPasswordExpirationTime`](/powershell/module/laps/set-lapsadpasswordexpirationtime)|Use to update a computer's Windows LAPS password expiration time in Windows Server Active Directory.|
+|[`Set-LapsADReadPasswordPermission`](/powershell/module/laps/set-lapsadreadpasswordpermission)|Use to grant permission to read the Windows LAPS password information in Windows Server Active Directory.|
+|[`Set-LapsADResetPasswordPermission`](/powershell/module/laps/set-lapsadresetpasswordpermission)|Use to grant permission to update the Windows LAPS password expiration time in Windows Server Active Directory.|
+|[`Update-LapsADSchema`](/powershell/module/laps/update-lapsadschema)|Use to extend the Windows Server Active Directory schema with the Windows LAPS schema attributes.|
 
 > [!TIP]
 >
 > - The `Invoke-LapsPolicyProcessing` and `Reset-LapsPassword` cmdlets aren't affected by whether the password currently is backed up to Azure Active Directory or Windows Server Active Directory. In this scenario, both options are supported.
 >- All cmdlets in the Windows LAPS PowerShell module support detailed logging when you use the  `-Verbose` parameter.
 
-For more detailed information on each cmdlet, see [LAPS PowerShell Module](/powershell/module/laps/?view=windowsserver2022-ps).
+For more detailed information on each cmdlet, see [LAPS PowerShell Module](/powershell/module/laps/).
 
 ## Windows LAPS PowerShell vs. legacy Microsoft LAPS PowerShell
 
@@ -66,4 +66,4 @@ In addition to naming-related changes, the Windows LAPS PowerShell cmdlets for W
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
 - [Key concepts in Windows LAPS](laps-concepts.md)
-- [LAPS PowerShell Module](/powershell/module/laps/?view=windowsserver2022-ps)
+- [LAPS PowerShell Module](/powershell/module/laps/)

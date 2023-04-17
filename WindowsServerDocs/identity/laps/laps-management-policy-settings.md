@@ -38,7 +38,7 @@ Windows LAPS supports multiple policy settings that you can administer via vario
 
 The following table specifies which settings apply to devices that have the specified BackupDirectory setting:
 
-||BackupDirectory=AAD|BackupDirectory=AD|
+|Setting name|Applicable when BackupDirectory=AAD?|Applicable when BackupDirectory=AD?|
 |---|---|---|
 |AdministratorAccountName|Yes|Yes|
 |PasswordAgeDays|Yes|Yes|
