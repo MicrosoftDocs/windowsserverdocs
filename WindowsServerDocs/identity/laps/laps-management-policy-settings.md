@@ -34,7 +34,7 @@ Policy settings are never shared or inherited across policy key roots.
 
 ## Supported policy settings by BackupDirectory
 
-Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry. Some of these settings only apply when backing up passwords to Active Directory, and some settings are common to both the AD and AAD scenarios.
+Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry. Some of these settings only apply when backing up passwords to Active Directory, and some settings are common to both the AD and Azure AD scenarios.
 
 The following table specifies which settings apply to devices that have the specified BackupDirectory setting:
 
