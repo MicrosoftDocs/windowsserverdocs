@@ -51,8 +51,8 @@ To enable Hotpatch, you must have the following prerequisites ready before you s
 Before you can enable Hotpatch for your VM, you must prepare your computer using the following
 steps:
 
-1. Sign-in to your machine. From the SConfig menu, enter option **15**, then press <kbd>Enter</kbd>
-   to open a PowerShell session.
+1. Sign-in to your machine. If you're on Server core, from the SConfig menu, enter option **15**, then press <kbd>Enter</kbd>
+   to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
 1. Enable virtualization-based security by running the following PowerShell command to configure the
    correct registry settings:
 
@@ -68,6 +68,7 @@ steps:
    New-ItemProperty @parameters
    ```
 
+1. Restart your computer.
 1. Configure the Hotpatch table size in the registry by running the following PowerShell command:
 
    ```powershell
@@ -96,7 +97,7 @@ steps:
    $versionParameters = $parameters = @{
        Path = $registryPath
        Name = "Version"
-       Value = "10.0.20348.465"
+       Value = "10.0.20348.1129"
        Force = $True
    }
    New-Item $registryPath -Force
