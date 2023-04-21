@@ -84,7 +84,7 @@ manager: mtillman
 
  After a factory reset, you will need to perform the following tasks:
 
--   **Reconfigure the server.** On the server, use the Configure Server Wizard to reenter configuration settings. To configure a remotely managed  Windows Server Essentials server from a client computer, open a web browser, and then type **http://**_<YourServerName\>_ in the address bar.
+-   **Reconfigure the server.** On the server, use the Configure Server Wizard to reenter configuration settings. To configure a remotely managed  Windows Server Essentials server from a client computer, open a web browser, and then type **https://**_<YourServerName\>_ in the address bar.
 
 -   **Reconnect client computers to the server.** If a computer was previously connected to the server, you must uninstall the  Windows Server Essentials Connector software from the computer before you connect the computer to the server again. For more information, see [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) and [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).
 
