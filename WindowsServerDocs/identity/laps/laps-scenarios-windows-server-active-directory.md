@@ -136,9 +136,12 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 
 ## See also
 
+- [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
 - [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
-- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Microsoft Intune](/mem/intune)
+- [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
+- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 
 ## Next steps
 
