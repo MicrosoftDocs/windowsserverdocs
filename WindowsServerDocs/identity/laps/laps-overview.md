@@ -24,7 +24,12 @@ Windows LAPS is now available on the following OS platforms with the specified u
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
 > [!IMPORTANT]
-> The Azure Active Directory LAPS scenario remains in private preview and is closed to new customers. The Azure Active Directory LAPS scenario is scheduled to enter public preview in Q2 2023. This documentation will be updated once a more precise date for the public preview is available.
+> Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in public preview as of April 21st 2023. At this time **only** the Azure Global cloud is supported however we expect to support Azure Government and  Azure China 21Vianet soon.
+>
+> See the following for more information:
+> [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+> [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
+> [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 
 ### Legacy LAPS Interop issues with the April 11 2023 Update
 
@@ -112,7 +117,12 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 
 ## See also
 
-[Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
+- [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
+- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+- [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+
 
 ## Next steps
 
