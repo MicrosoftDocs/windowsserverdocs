@@ -26,7 +26,7 @@ The  Windows LAPS on-premises Active Directory scenarios are fully supported as 
 > [!IMPORTANT]
 > Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in public preview as of April 21st 2023. At this time **only** the Azure Global cloud is supported however we expect to support Azure Government and  Azure China 21Vianet soon.
 >
-> See the following for more information:
+> For more information, see:
 > [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
 > [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
 > [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
