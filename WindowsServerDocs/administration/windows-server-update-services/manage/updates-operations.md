@@ -6,7 +6,7 @@ ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 04/24/2023
 ---
 # Updates Operations
 
@@ -136,6 +136,7 @@ You can create rules that your WSUS server will automatically apply during synch
 2.  In **Update Rules**, select **New Rule**.
 
 3.  In the **add Rule** dialog, under **Step 1: select properties**, select whether to use **When an update is in a specific classification** or **When an update is in a specific product** (or both) as criteria. Optionally, select whether to **Set a deadline** for the approval.
+    - When selecting the **Upgrades** classification, be aware that Windows feature updates that get published monthly are also classified as **Upgrades**. Automatically approving these updates could cause devices to upgrade their OS. For example, applicable Windows 10 devices could get upgraded to Windows 11. Additionally, feature updates would require additional disk space. For more information, see [UUP considerations when planning your WSUS deployment](../plan/plan-your-wsus-deployment.md#uup-considerations).
 
 4.  In **Step 2: edit the properties** select the underlined properties to select the Classifications, Products, and computer groups for which you want automatic approvals, as applicable. Optionally, choose the update approval deadline Day and time.
 
