@@ -72,7 +72,9 @@ To verify that the password was successfully updated in Azure Active Directory, 
 
 ## Retrieve a password from Azure Active Directory
 
-Retrieving Windows LAPS passwords stored in Azure Active Directory is supported by using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that's a wrapper around the Microsoft Graph PowerShell library. Windows LAPS doesn't provide any user interface options for Azure Active Directory password retrieval. The instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve Windows LAPS passwords from Azure Active Directory.
+Retrieving Windows LAPS passwords stored in Azure Active Directory is supported by using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that's a wrapper around the Microsoft Graph PowerShell library. You may also  use the Azure AD and\or Intune management portals for a UI-based password retrieval experience. Windows LAPS doesn't provide any user interface options within Windows for Azure Active Directory password retrieval.
+
+The rest of these instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve Windows LAPS passwords from Azure Active Directory using Microsoft Graph.
 
 ### Install the Microsoft Graph PowerShell library
 
