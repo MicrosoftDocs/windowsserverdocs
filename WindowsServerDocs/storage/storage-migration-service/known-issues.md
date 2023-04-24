@@ -906,7 +906,7 @@ For a source computer running Windows Server 2008 R2 with valid
 [Extended Support Updates](../../get-started/extended-security-updates-overview.md), first install
 the latest cumulative update. Once the cumulative update has been successfully installed, follow the
 steps detailed in the article
-[Cut over fails at 77% or 30%](https://learn.microsoft.com/windows-server/storage/storage-migration-service/known-issues#cut-over-fails-at-77-or-30)
+[Cut over fails at 77% or 30%](#cut-over-fails-at-77-or-30)
 to resolve the issue.
 
 ### Solution 2 (using Windows Server 2008 R2 without a valid ESU, Windows Server 2008 or Windows Server 2003)
