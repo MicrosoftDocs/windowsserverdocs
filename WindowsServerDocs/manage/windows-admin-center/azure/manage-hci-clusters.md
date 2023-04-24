@@ -99,7 +99,7 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 ### Azure region availability
 
-Windows Admin Center is supported in [all regions Azure Stack HCI is supported](/azure-stack/hci/deploy/register-with-azure#region-availability).
+Windows Admin Center is supported in [all public regions Azure Stack HCI](/azure-stack/hci/deploy/register-with-azure#region-availability) is supported.
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
