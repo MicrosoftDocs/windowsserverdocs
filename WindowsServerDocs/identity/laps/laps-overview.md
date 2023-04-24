@@ -9,26 +9,45 @@ ms.topic: overview
 
 # What is Windows LAPS?
 
-Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
-
-> [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
 ## Windows LAPS supported platforms and Azure AD LAPS preview status
 
-Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). 
+Windows LAPS is now available on the following OS platforms with the specified update or later installed:
 
-The Azure Active Directory LAPS scenario is currently in private preview and is closed to new customers. The Azure Active Directory LAPS scenario will enter public preview in Q2 2023 once all platforms listed below have been updated.
+- [Windows 11 22H2 - April 11 2023 Update](https://support.microsoft.com/help/5025239)
+- [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224)
+- [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221)
+- [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230)
+- [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229)
 
-Windows LAPS will be backported to the following OS platforms no later than Q2 2023:
+The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
-- Windows 10 20H2 and later
-- Windows 11 21H2 and later
-- Windows Server 2019 and later
+> [!IMPORTANT]
+> Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in public preview as of April 21st 2023. At this time **only** the Azure Global cloud is supported however we expect to support Azure Government and  Azure China 21Vianet soon.
+>
+> For more information, see:
+>
+> [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+>
+> [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
+>
+> [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 
-Server Core editions will be updated at the same time as their respective desktop Server editions.
+### Legacy LAPS Interop issues with the April 11 2023 Update
 
-This documentation will be updated once a more precise date for the Windows backports and the Azure Active Directory LAPS scenario is available.
+> [!IMPORTANT]
+> The April 11, 2023 update has two potential regressions related to interoperability with legacy LAPS scenarios. Please read the following to understand the scenario parameters plus possible workarounds.
+>
+> Issue #1: If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. Microsoft is working on a fix for this issue.
+>
+> Two primary workarounds exist for the above issue:
+>
+> a. Uninstall the legacy LAPS CSE (result: Windows LAPS will take over management of the managed account)
+>
+> b. [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) (result: legacy LAPS will take over management of the managed account)
+>
+> Issue #2: If you apply a legacy LAPS policy to a device patched with the April 11, 2023 update, Windows LAPS will immediately enforce\honor the legacy LAPS policy, which may be disruptive (for example if done during OS deployment workflow). [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) may also be used to prevent those issues.
 
 ## Benefits of using Windows LAPS
 
@@ -58,8 +77,6 @@ You can use Windows LAPS for several primary scenarios:
 
 In each scenario, you can apply different policy settings.
 
-Windows LAPS doesn't support Azure Active Directory workplace-joined clients.
-
 ## Understand device join state restrictions
 
 Whether a device is joined to Azure Active Directory or Windows Server Active Directory determines how you can use Windows LAPS.
@@ -69,6 +86,8 @@ Devices that are joined only to [Azure Active Directory](/azure/active-directory
 Devices that are joined only to Windows Server Active Directory can back up passwords only to Windows Server Active Directory.
 
 Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory) can back up their passwords either to Azure Active Directory or to Windows Server Active Directory. You can't back up passwords to both Azure Active Directory and Windows Server Active Directory.
+
+Windows LAPS doesn't support Azure Active Directory workplace-joined clients.
 
 ## Set Windows LAPS policy
 
@@ -101,7 +120,12 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 
 ## See also
 
-[Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
+- [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
+- [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+- [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+
 
 ## Next steps
 
