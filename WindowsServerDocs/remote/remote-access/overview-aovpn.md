@@ -31,7 +31,7 @@ Always On VPN allows you to:
 ## Supported platforms
 
 <!-- Editor note: Where would this go? -->
-Always On VPN supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprises and bring your own device (BYOD) scenarios. Also, Always On VPN is available in all Windows editions.
+Always On VPN supports domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. Always On VPN is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.<p><p>***Note:***<br>Device Tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the Device Tunnel.  
 
 Always On VPN supports integration with the following platforms:
 
@@ -48,7 +48,7 @@ Always On VPN supports integration with the following platforms:
 <!-- Editor note: moved this paragraph here. Does it belong here? -->
 Always On VPN provides connectivity to corporate resources by using tunnel policies that require authentication and encryption until they reach the VPN gateway. By default, the tunnel sessions terminate at the VPN gateway, which also functions as the IKEv2 gateway, providing end-to-edge security.
 
-Always On VPN suppports the following security features:
+Always On VPN supports the following security features:
 
 | Feature| Description  |
 |---|---|
@@ -64,7 +64,7 @@ Always On VPN suppports the following security features:
 
 ## Connectivity features
 
-Always On VPN suppports the following connectivity features:
+Always On VPN supports the following connectivity features:
 
 |  Feature  | Description |
 |----|-----|
@@ -73,10 +73,11 @@ Always On VPN suppports the following connectivity features:
 | **Trusted network detection**  | Always On VPN includes this feature to ensure that VPN connectivity is not triggered if a user is connected to a trusted network within the corporate boundary. You can combine this feature with any of the triggering methods mentioned earlier to provide a seamless "only connect when needed" user experience. |
 | **[Device Tunnel](../vpn-device-tunnel-config.md)** | Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Unlike *User Tunnel*, which only connects after a user logs on to the device or machine, *Device Tunnel* allows the VPN to establish connectivity before user sign-in. Both Device Tunnel and User Tunnel operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate. For information on how to configure a device tunnel, including information on how to use manage-out to dynamically register client IP addresses in DNS, see [Configure an Always On VPN device tunnel](/azure/vpn-gateway/vpn-gateway-howto-always-on-device-tunnel). |
 |**Determine intranet connectivity**| Trusted network detection provides the capability to detect corporate network connections, and it is based on an assessment of the connection-specific DNS suffix assigned to network interfaces and network profile. For more information, see [Create custom Intune profiles to deploy VPN client profiles](/azure/vpn-gateway/vpn-profile-intune).|
+|**Connectivity Assistant** | Always On VPN is fully integrated with the native Network Connectivity Assistant and provides connectivity status from the View All Networks interface. With the advent of Windows 10 Creators Update (version 1703), VPN connection status and VPN connection control for User Tunnel are now available through the Network flyout (for the Windows built-in VPN client), as well.                       |
 
 ## Networking features
 
-Always On VPN suppports the following networking features:
+Always On VPN supports the following networking features:
 
 | Feature |  Description   |
 |-------------------------------------------|--|
@@ -86,6 +87,8 @@ Always On VPN suppports the following networking features:
 | **Application-specific routing policies** | In addition to defining global VPN connection routing policies for internet and intranet traffic separation, it's possible to add routing policies to control the use of split tunnel or force tunnel configurations on a per-application basis. This option gives you more granular control over which apps are allowed to interact with which resources through the VPN tunnel. |
 |**Exclusion routes** | Always On VPN supports the ability to specify exclusion routes that specifically control routing behavior to define which traffic should traverse the VPN only and not go over the physical network interface.<p><p>***Notes:***<br>- Exclusion routes currently work for traffic within the same subnet as the client, for example, LinkLocal.<br>- Exclusion routes only work in a Split Tunnel setup.|
 | **Fall back to SSTP from IKEv2** | You can configure fall back for clients that are behind firewalls or proxy servers by using the automatic tunnel/protocol type within the VPN profile.<p><p>***Note:***<br>User Tunnel supports SSTP and IKEv2, and Device Tunnel supports IKEv2 only, with no support for SSTP fallback.|
+|**Support for multiple domains and forests**|The Always On VPN platform has no dependency on Active Directory Domain Services (AD DS) forests or domain topology (or associated functional/schema levels) because it doesn't require the VPN client to be domain joined to function. Group Policy is therefore not a dependency to define VPN profile settings because you do not use it during client configuration. Where Active Directory authorization integration is required, you can achieve it through RADIUS as part of the EAP authentication and authorization process.|
+|**ame resolution of corporate resources using short-name, fully qualified domain name (FQDN), and DNS suffix**|Always On VPN can natively define one or more DNS suffixes as part of the VPN connection and IP address assignment process, including corporate resource name resolution for short names, FQDNs, or entire DNS namespaces. Always On VPN also supports the use of Name Resolution Policy Tables to provide namespace-specific resolution granularity.<p><p>***Note:***<br>Avoid the use of Global Suffixes as they interfere with shortname resolution when using Name Resolution Policy tables.|
 
 <!-- Editor note:  Removed the following as it is more important during a how-to or are more detailed drill down.: <p>***Note:*** Before you get started, make sure to enable IPv6 on the VPN server. Otherwise, a connection cannot be established and an error message displays.-->
 

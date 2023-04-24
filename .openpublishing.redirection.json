@@ -10962,8 +10962,15 @@
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md",
       "redirect_url": "/Windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-map-da.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-aovpn",
+      "redirect_document_id": false
     }
 
+
+    
   ]
 }
 
