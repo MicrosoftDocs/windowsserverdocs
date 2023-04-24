@@ -30,6 +30,7 @@ This page is updated monthly, so revisit it regularly.
 
 ### Fixed
 - If a prior installation of Windows Admin Center exists on your machine, the extension will first uninstall it before installing Windows Admin Center in Azure
+- Fixed the infinite loading of the Remote Desktop tool
 
 ## Version 0.0.0.228 - January 2023
 
