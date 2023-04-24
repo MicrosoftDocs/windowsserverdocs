@@ -921,6 +921,18 @@ Windows Server 2003, you need to perform a manual cutover using the steps descri
    the computer from the domain after
    [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
 
+## Transfer validation warning "The destination proxy wasn't found"
+
+If you didn't already have the SMS Proxy service installed on the destination server before starting the transfer, Windows Admin Center installs it automatically. But under certain circumstances it will fail to register and display validation error "The destination proxy wasn't found".
+
+To resolve this issue, ensure the SMS Proxy service feature is installed on the destination server, then run the following PowerShell command on the Orchestrator server:
+
+```powershell
+Register-SMSProxy -ComputerName <destination server FQDN> -Force
+```
+
+Validation will then pass.
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)

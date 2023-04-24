@@ -12,6 +12,10 @@ ms.date:  03/14/2023
 
 In this getting started guide, we'll show you how to install and configure Remote Access (RAS) as a VPN server.
 
+## Prerequisites
+
+Membership in Administrators, or equivalent, is the minimum required to perform these procedures. However, if the RAS server is domain joined, then the procedures need to be performed by a domain administrator.
+
 ## Install the Remote Access role
 
 # [PowerShell](#tab/powershell)
@@ -62,7 +66,7 @@ In this getting started guide, we'll show you how to install and configure Remot
 
 ---
 
-## Configure Remote Access as a VPN Server
+## Configure Remote Access as a VPN server
 
 In this section, we'll configure Remote Access to allow IKEv2 VPN connections and to deny connections from other VPN protocols. We'll also assign a static IP address pool for the issuance of IP addresses to connecting authorized VPN clients.
 
