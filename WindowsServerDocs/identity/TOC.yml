@@ -1029,4 +1029,7 @@
         href: laps/laps-management-user-interface.md
     - name: Windows LAPS schema extensions reference
       href: laps/laps-technical-reference.md
+    - name: Windows LAPS FAQ
+      href: laps/laps-faq.yml
+
 
