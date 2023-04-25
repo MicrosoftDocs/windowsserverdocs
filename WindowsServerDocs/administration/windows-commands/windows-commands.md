@@ -275,6 +275,7 @@ To find information about a specific command, in the following A-Z menu, select 
 ### D
 
 - [date](date.md)
+- [dcdiag](dcdiag.md)
 - [dcgpofix](dcgpofix.md)
 - [defrag](defrag.md)
 - [del](del.md)
