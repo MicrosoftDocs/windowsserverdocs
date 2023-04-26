@@ -21,6 +21,8 @@ Windows LAPS is now available on the following OS platforms with the specified u
 - [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230)
 - [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229)
 
+All supported editions of the above platforms have been updated with Windows LAPS, including LTSC editions.
+
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
 > [!IMPORTANT]
