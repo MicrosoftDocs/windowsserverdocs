@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: wscontent
 ms.topic: conceptual
 ms.date: 04/26/2023
-ms.custom: template-concept
+ms.custom: template-concept, team=cloud_advocates
 ms.contributors: orthomas
 ---
 
