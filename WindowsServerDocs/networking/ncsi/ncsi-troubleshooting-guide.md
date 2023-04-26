@@ -2,7 +2,7 @@
 title: Network Connectivity Status Indicator Troubleshooting Guide
 description: 'This guide demonstrates how to perform diagnostics using the Network Connectivity Status Indicator (NCSI) to troubleshoot and determine Internet connectivity.'
 ms.topic: article
-ms.date: 04/06/2023
+ms.date: 04/26/2023
 ms.author: alalve
 author: rnitsch
 ---
@@ -37,15 +37,28 @@ Performing the actions mentioned above will facilitate in data retrieval. For ea
 1. The "Save As" dialog box opens. Set the "save as type" to text (*.txt), name your file and select your location. Select **Save**.
 ![Screenshot of the save as dialog window with NCSI logs being saved to the documents folder.](../media/NCSI/ncsi-event-viewer-6.jpg)
 
-Here's an example of the text file output:
+Here's an example of a successful connection output:
 
 ```
-Information    3/7/2023 10:21:06 AM    Microsoft-Windows-NCSI    4013    Internet Connectivity Detection    Active Internet Probe started on interface {704d7e27-9607-48df-b5b4-cffe0ab27000}
-Information    3/7/2023 10:21:06 AM    Microsoft-Windows-NCSI    4017    Internet Connectivity Detection    Active Internet Probe (HTTP) started on interface {704d7e27-9607-48df-b5b4-cffe0ab27000}
-Information    3/7/2023 10:21:17 AM    Microsoft-Windows-NCSI    4018    Internet Connectivity Detection    Active Internet Probe (HTTP) finished on interface {704d7e27-9607-48df-b5b4-cffe0ab27000}
+Information    4/26/2023 12:17:46 PM    Microsoft-Windows-NCSI    4013    Internet Connectivity Detection    Active Internet Probe started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Information    4/26/2023 12:17:46 PM    Microsoft-Windows-NCSI    4017    Internet Connectivity Detection    Active Internet Probe (HTTP) started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Information    4/26/2023 12:17:48 PM    Microsoft-Windows-NCSI    4005    Wait for Internet Connectivity     Entered State: Internet Connectivity Interface Luid: 0x6008001000000
+Information    4/26/2023 12:18:07 PM    Microsoft-Windows-NCSI    4018    Internet Connectivity Detection    Active Internet Probe (HTTP) finished on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Information    4/26/2023 12:18:07 PM    Microsoft-Windows-NCSI    4014    Internet Connectivity Detection    Active Internet Probe finished on interface {611346db-8fbb-473d-808b-6c7573b3ef4d} (false)
+
 ```
 
-Correlate both the **Analytic** and **Operational** NCSI events with the packet capture timestamps to determine whether the active probe was fired, if it completed, and why it failed.
+Here's an example of a failed connection output:
+
+```
+Information    4/26/2023 9:54:25 AM    Microsoft-Windows-NCSI    4013    Internet Connectivity Detection    Active Internet Probe started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Information  4/26/2023 9:54:25 AM       Microsoft-Windows-NCSI     4017       Internet Connectivity Detection  Active Internet Probe (HTTP) started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Information  4/26/2023 9:54:26 AM       Microsoft-Windows-NCSI     4005       Wait for Internet Connectivity   Entered State: Local Connectivity Interface Luid: 0x6008001000000
+Information  4/26/2023 9:54:26 AM       Microsoft-Windows-NCSI     4018       Internet Connectivity Detection  Active Internet Probe (HTTP) finished on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Warning       4/26/2023 9:54:26 AM       Microsoft-Windows-NCSI     4051       None   Active probe result code on interface {611346db-8fbb-473d-808b-6c7573b3ef4d} (0x6008001000000 Family: V4) = 12007
+```
+
+Correlate both the **Analytic** and **Operational** NCSI events with the packet capture timestamps to determine whether the active probe was fired, if it completed, and why it failed. To learn more about Winhttp error codes, see [error messages (Winhttp.h)](/windows/win32/winhttp/error-messages).
 
 ## How to reproduce a problem scenario
 
@@ -53,7 +66,7 @@ You can troubleshoot an issue by forcing an active probe to see if it completes.
 
 **Wired**
 1. Disconnect the Ethernet cable. (Alternatively, you can disable the network adapter in Advanced network settings).
-1. Start the packet capture and wait 30 seconds.
+1. Use a packet capture software, such as wireshark, and wait 30 seconds to collect the data.
 1. Reconnect the Ethernet cable. (Or enable the network adapter in Advanced network settings if it was previously disabled).
 1. Wait 60 seconds before stopping the capture to ensure ample time for active probe to be attempted.
 

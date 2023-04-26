@@ -2,7 +2,7 @@
 title: Network Connectivity Status Indicator FAQ
 description: 'Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.'
 ms.topic: article
-ms.date: 04/06/2023
+ms.date: 04/26/2023
 ms.author: alalve
 author: rnitsch
 ---
@@ -18,9 +18,8 @@ Active probes are triggered by the following events that the NCSI monitors indic
 - General interface or network condition changes.
 - Proxy detection or changes.
 - Hotspot detection or changes.
-- Application requests for an explicit probe.
 
-When new network conditions are met, either wired, wireless, or behind a VPN, the network medium becomes ready for use and the active probe tests for network connectivity. An example of this is when a wireless connection is established:
+When new network conditions are met, either wired, wireless, or behind a VPN, the network interface becomes ready for use and the active probe tests for network connectivity. An example of this is when a wireless connection is established:
 
 ```
 [Microsoft-Windows-NCSI/Analytic ] Transitioning to State: Interface NetReady
@@ -38,8 +37,6 @@ A successful probe provides the following output:
 - If the probe didn’t traverse through a proxy, NCSI makes note of this.
 - The network interface icon changes to reflect that Internet connectivity is accessible.
 - If behind a hotspot where credentials weren't provided or doesn't allow internet access by default without further input, it's set to local capability. For more information, see [hotspots](ncsi-overview.md#hotspots).
-
-No more active probes are performed for this interface until the interface changes connectivity state.
 
 ## What can stop an active probe from succeeding?
 
@@ -63,7 +60,11 @@ If NCSI sees that the connectivity is local-only, the following conditions are t
 
 ## What is the default system minimum hop count?
 
-The default hop count is **8** but this isn't always optimal for enterprises. A value of **3** is suitable for most enterprise infrastructures. Passive probe efficiency can be improved by creating a new DWORD regkey **MinimumInternetHopCount** in the following path: **HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet**
+The default hop count is **8** but this isn't always optimal for enterprises. A value of **3** is suitable for most enterprise infrastructures. Passive probe efficiency can be improved by creating a new DWORD regkey **MinimumInternetHopCount** in the following path:
+
+```registry
+HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet
+```
 
 > [!NOTE]
 > Do not add this regkey when troubleshooting a new NCSI scenario. It's more than likely an active probe issue.
@@ -76,7 +77,10 @@ There are various factors that determine if a passive probe should be ran based 
 1. A user is logged in or has been logged in within the last 30 seconds.
 
 If the passive probe is allowed to run, it does so every 15 seconds. This can be overridden by editing the following registry key:
-**HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\PassivePollPeriod**.
+
+``registry
+HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\PassivePollPeriod
+```
 
 ## Where is the HTTP web probe server path found in the registry?
 
@@ -129,7 +133,7 @@ There are several reasons as to why a network probe may fail as seen in the tabl
 |NoGlobalAddress|Same as NoAddress but specific to IPV6 interfaces.|
 |NoRoute|The interface that the probe is being sent on has no route to the internet in the routing table.<br><br>**Some scenarios where this can happen is when a newly connected VPN hasn’t yet changed the routing table with new routes, or in forced tunnel VPN scenarios in which after the VPN interface is connected, the physical interface drops to local connectivity as the route table was modified.**|
 |ActiveHttpProbeFailedButDnsSucceeded|The probe server DNS name was resolved but the HTTP probe to that resolved IP address failed.<br><br>**Use a packet capture application and verify the data capture.**|
-|ActiveHttpProbeFailedHotspotDetected|The HTTP probe didn’t get past a hotspot or captive portal.  This is typically determined when an HTTP response 200 is received but doesn’t have the text file _connecttest.txt_ in the response payload, or a non-200 HTTP status code (such as 302, 304) is received.<br><br>**After this failure the wireless connection will disconnect. This status code will normally be observed when handling issues where the wireless connection cannot be established. Verify via a packet capture. The user may need to authenticate the hotspot or the hotspot configuration may need to be modified.**|
+|ActiveHttpProbeFailedHotspotDetected|The HTTP probe didn’t get past a hotspot or captive portal.  This is typically determined when an HTTP response 200 is received but doesn’t have the text file _connecttest.txt_ in the response payload, or a non-200 HTTP status code (such as 302, 304) is received.<br><br>**This status code will normally be observed when handling issues where the wireless connection cannot be established. Verify via a packet capture. The user may need to authenticate the hotspot or the hotspot configuration may need to be modified.**|
 |ActiveHttpProbeFailed|The DNS name for the probe server wasn’t resolved. NSCI failed before attempting to send the web probe request. This could be due to DNS failure, failure to connect to the proxy server, etc.<br><br>**Verify via a packet capture.**|
 |ActiveDnsProbeFailed|The DNS probe failed.<br><br>**Verify via a packet capture.**|
 |PassivePacketHops|**Not a failure.**<br><br>Received packets indicate some level of connectivity. This change reason is used when capability is being **raised**, not lowered.|
@@ -152,11 +156,11 @@ Proxy detection requests are triggered when the following occurs:
 - If an HTTP active probe hasn't yet been successful.
 - On DHCP address changes (new lease, renewal, loss of IP).
 - New proxy settings detected via registry change.
-- The WinHTTP Web Proxy Auto-Discovery Service detects a proxy.
+- The WinHttp Web Proxy Auto-Discovery Service detects a proxy.
 
 ## How are proxies detected?
 
-Proxies are detected when NCSI queries the WinHTTP Web Proxy Auto-Discovery (WPAD) service to perform the following:
+Proxies are detected when NCSI queries the WinHttp Web Proxy Auto-Discovery (WPAD) service to perform the following:
 
 - Look up the configuration URL for WPAD.
 - Download the PAC file from a URL.
@@ -203,7 +207,7 @@ The following list of URLs mention or imply `msftconnecttext.com`:
 
 ## How does Microsoft Office use NCSI to determine internet connectivity?
 
-This is done by NCSI making an API call to [**get_IsConnectedToInternet**](/windows/win32/api/netlistmgr/nf-netlistmgr-inetworklistmanager-get_isconnectedtointernet). If applications such as Microsoft Office is able to indicate no internet connectivity, but you're able to browse websites, this indicates an NCSI problem. If you can't browse or perform other basic network operations, this may be a general network issue, and NCSI troubleshooting wouldn't apply.
+This is done by Microsoft Office making an API call to [**get_IsConnectedToInternet**](/windows/win32/api/netlistmgr/nf-netlistmgr-inetworklistmanager-get_isconnectedtointernet). If applications such as Microsoft Office is able to indicate no internet connectivity, but you're able to browse websites, this indicates an NCSI problem. If you can't browse or perform other basic network operations, this may be a general network issue, and NCSI troubleshooting wouldn't apply.
 
 The taskbar network icon relies on NCSI and the same rule above applies even if it indicates no network activity. This could be due to a more generic network issue other than NCSI.
 
