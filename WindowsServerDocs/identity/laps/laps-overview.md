@@ -21,7 +21,7 @@ Windows LAPS is now available on the following OS platforms with the specified u
 - [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230)
 - [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229)
 
-All supported editions of the above platforms have been updated with Windows LAPS, including LTSC editions. Note that the introduction of the Windows LAPS feature does not modify in any way whatsoever the standard Microsoft product lifecycle policies.
+All supported editions of the above platforms have been updated with Windows LAPS, including LTSC editions. The introduction of the Windows LAPS feature doesn't modify in any way whatsoever the standard Microsoft product lifecycle policies.
 
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
@@ -120,6 +120,16 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 > [!IMPORTANT]
 > Windows LAPS doesn't require you to install legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features without installing or referring to legacy Microsoft LAPS. But to help migrate an existing legacy Microsoft LAPS deployment, Windows LAPS offers [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
 
+## Support statement
+
+Microsoft released the legacy Microsoft LAPS in 2016. Windows LAPS shipped as part of Windows Updates released on April 11, 2023 for the platforms listed in [Windows LAPS supported platforms and Azure AD LAPS preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status). 
+
+Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products.
+
+Microsoft strongly recommends that customers begin planning now to migrate their systems from using legacy Microsoft LAPS to the new Windows LAPS feature, in order to take advantage of the improved security features and improved product servicing.
+
+Microsoft and its support delivery team don't have insight about 3rd-party and open-source local account password management tools. Questions about the capabilities, limitations, deployment and administration of non-Microsoft local account password management tools should be directed to the application developer.
+
 ## See also
 
 - [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
@@ -127,7 +137,6 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
-
 
 ## Next steps
 
