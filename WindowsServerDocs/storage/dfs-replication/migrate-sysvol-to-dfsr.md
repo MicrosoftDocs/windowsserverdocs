@@ -1,7 +1,7 @@
 ---
 description: Learn how to migrate SYSVOL replication to DFS Replication by creating a new domain name or by upgrading an existing domain.
 title: Migrate SYSVOL replication to DFS Replication
-ms.date: 03/24/2023
+ms.date: 04/25/2023
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
@@ -24,7 +24,7 @@ This article assumes you have a basic knowledge of Active Directory Domain Servi
 - [FRS overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754297(v=ws.11))
 - [Overview of DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771058(v=ws.11))
 
-## PDF download
+## Printable download
 
 To download a printable version of this guide, go to [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://go.microsoft.com/fwlink/?LinkId=150375).
 
