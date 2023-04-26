@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: wscontent
 ms.topic: how-to 
 ms.date: 03/23/2023
-ms.custom: template-how-to #Required; leave this attribute/value as-is.
+ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
 ms.contributors: orthomas
 # Customer intent: As a DNS administrator, I want create DNS zones, so that my systems
 # can perform name resolution.
@@ -29,6 +29,8 @@ prerequisites:
 - You need the fully qualified domain name (FQDN) of the zone you want to create.
 - If you want to create a secondary or stub zone, you need the IP address of the DNS server(s)
   hosting the primary zone.
+
+You can remotely manage a Windows Server DNS server using all of the methods outlined in this article.
 
 ### Create a primary zone
 
@@ -56,7 +58,7 @@ Here's how to create a forward look up zone using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
-1. In the console tree, expand a DNS server then right-click, then select **New Zone**.
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, right-click, then select **New Zone**.
 
 1. On the New Zone Wizard page, select **Next**.
 

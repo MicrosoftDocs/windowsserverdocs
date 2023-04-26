@@ -4,8 +4,8 @@ description: Learn about the different DNS zone types and how they're stored wit
 author: robinharwood
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 02/28/2023
-ms.custom: template-concept
+ms.date: 04/26/2023
+ms.custom: template-concept, team=cloud_advocates
 ms.contributors: orthomas
 ---
 
@@ -44,12 +44,12 @@ the primary zone. Secondary zones are read-only copies of primary zones.
 
 You can store a standard primary zone in a local file, or you can store zone data in AD DS. When you
 store zone data in AD DS other features are available, such as secure dynamic updates and the
-ability for each domain controller that hosts the zone to be able to process updates to the zone.
-When the zone is stored in a file, by default the primary zone file is named `zone_name.dns`, and
-it's located in the `%windir%\System32\Dns` folder on the server.
+ability for each domain controller that hosts the zone to function as a primary and be able to process 
+updates to the zone. When the zone is stored in a file, by default the primary zone file is named 
+`zone_name.dns`, and it's located in the `%windir%\System32\Dns` folder on the server.
 
-When you deploy Active Directory, a DNS zone that is associated with your organization’s domain name
-is automatically created. By default the DNS zone replicates to any other domain controller
+When you deploy Active Directory, a DNS zone that is associated with your organization’s AD DS domain name
+is automatically created. By default the AD DS DNS zone replicates to any other domain controller
 configured as a DNS server in the domain. You can also configure Active Directory Integrated DNS
 zones to replicate to all domain controllers within an AD DS forest, or specific domain controllers
 enrolled in a particular AD DS domain partition.
@@ -60,7 +60,7 @@ A secondary zone is a read-only copy of a primary zone. When a zone that this DN
 secondary zone, this DNS server is a secondary source for information about this zone. The zone at
 this server must be obtained from another remote DNS server computer that also hosts the zone. This
 DNS server must have network access to the remote DNS server that supplies this server with updated
-information about the zone. Because a secondary zone is merely a copy of a primary zone that is
+information about the zone. Because a secondary zone is only a copy of a primary zone that is
 hosted on another server, it can't be stored in AD DS as an Active Directory Integrated zone.
 
 In most cases, a secondary zone periodically copies resource records directly from the primary zone.
