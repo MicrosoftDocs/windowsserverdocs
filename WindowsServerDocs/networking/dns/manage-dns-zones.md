@@ -30,6 +30,8 @@ prerequisites:
 - If you want to create a secondary or stub zone, you need the IP address of the DNS server(s)
   hosting the primary zone.
 
+You can remotely manage a Windows Server DNS server using all of the methods outlined in this article.
+
 ### Create a primary zone
 
 #### Create an Active Directory integrated primary zone
@@ -56,7 +58,7 @@ Here's how to create a forward look up zone using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
-1. In the console tree, expand a DNS server then right-click, then select **New Zone**.
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, right-click, then select **New Zone**.
 
 1. On the New Zone Wizard page, select **Next**.
 
