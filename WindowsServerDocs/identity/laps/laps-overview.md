@@ -130,8 +130,6 @@ Microsoft strongly recommends that customers begin planning now to migrate their
 
 Questions about limitations and\or interoperability concerns between 3rd-party local account password management tools and Windows LAPS should be directed to the 3rd-party application developer not Microsoft.
 
-Microsoft and its support delivery team don't have insight about 3rd-party and open-source local account password management tools. Questions about the capabilities, limitations, deployment and administration of non-Microsoft local account password management tools should be directed to the application developer.
-
 ## See also
 
 - [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
