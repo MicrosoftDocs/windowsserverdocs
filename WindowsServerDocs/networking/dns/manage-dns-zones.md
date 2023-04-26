@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: wscontent
 ms.topic: how-to 
 ms.date: 03/23/2023
-ms.custom: template-how-to #Required; leave this attribute/value as-is.
+ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
 ms.contributors: orthomas
 # Customer intent: As a DNS administrator, I want create DNS zones, so that my systems
 # can perform name resolution.
