@@ -2,8 +2,8 @@
 title: Using Folder Redirection in Group Policy
 description: Learn how to use folder redirection in Group Policy
 ms.topic: article
-ms.author: 
-author:
+ms.author: jgerend
+author: Jason Gerend
 ms.date: 04/30/2023
 ---
 
@@ -91,21 +91,18 @@ In the **Settings** tab in the **Properties** box for a folder, you can enable t
 
 | Policy removal option | Selected setting | Result |
 | ----- | ----- | ----- |
-| Redirect the folder back to the user profile location when policy is removed | Enabled | <ul><li><p>The folder returns to its user profile location.</p></li>
-<li><p>The contents are copied, not moved, back to the user profile location.</p></li>
-<li><p>The contents aren't deleted from the redirected location.</p></li>
-<li><p>The user continues to have access to the contents, but only on the local computer.</p></li>
-</ul> |
-| Redirect the folder back to the user profile location when policy is removed | Disabled | <ul>
-<li><p>The folder returns to its user profile location.</p></li>
-<li><p>The contents aren't copied or moved to the user profile location.</p></li>
-<li><p> Note: If the contents of a folder are not copied to the user profile location, the user can't see them.
-</ul> |
-| Leave the folder in the new location when policy is removed | Either Enabled or *Disabled | <ul>
-<li><p>The folder remains at its redirected location.</p></li>
-<li><p>The contents remain at the redirected location.</p></li>
-<li><p>The user continues to have access to the contents at the redirected folder.</p></li>
-</ul> |
+| Redirect the folder back to the user profile location when policy is removed | Enabled | <li>The folder returns to its user profile location.
+<li>The contents are copied, not moved, back to the user profile location.
+<li>The contents aren't deleted from the redirected location.
+<li>The user continues to have access to the contents, but only on the local computer. |
+| Redirect the folder back to the user profile location when policy is removed | Disabled |
+<li>The folder returns to its user profile location.
+<li>The contents aren't copied or moved to the user profile location.
+<li>Note: If the contents of a folder are not copied to the user profile location, the user can't see them. |
+| Leave the folder in the new location when policy is removed | Either Enabled or *Disabled |
+<li>The folder remains at its redirected location.
+<li>The contents remain at the redirected location.
+<li>The user continues to have access to the contents at the redirected folder. |
 
 ## How to specify the location of folders in a user profile
 
@@ -137,21 +134,21 @@ You can use Group Policy to specify another location (in other words, "redirect"
 
 Use the following procedure to specify location for any user group. 
 
-    1.  Under **Security Group Membership**, select **Add**.
+1. Under **Security Group Membership**, select **Add**.
 
-    1.  Under **Security Group Membership**, select **Browse** to find the security group.
+1. Under **Security Group Membership**, select **Browse** to find the security group.
 
-    1.  Under **Target folder location**, select a location.
+1. Under **Target folder location**, select a location.
 
-    1.  If you want to redirect the folder to a specific location, select **Create a folder for each user under the root path** or **Redirect to the following location**, and then click **Browse** to specify a location.
+1. If you want to redirect the folder to a specific location, select **Create a folder for each user under the root path** or **Redirect to the following location**, and then click **Browse** to specify a location.
 
-    1.  If you want to specify additional redirection settings for the folder, click the **Settings** tab to configure any of the following settings, and then click **OK**:
+1. If you want to specify additional redirection settings for the folder, click the **Settings** tab to configure any of the following settings, and then click **OK**:
 
-      - **Grant the user exclusive rights to \[FolderName\]** (selected by default).
+- **Grant the user exclusive rights to \[FolderName\]** (selected by default).
 
-      - **Move the contents of \[FolderName\] to the new location** (selected by default).
+- **Move the contents of \[FolderName\] to the new location** (selected by default).
 
-      - Specify **Policy Removal** settings (**Leave the folder in the new location when policy is removed** is selected by default).
+- Specify **Policy Removal** settings (**Leave the folder in the new location when policy is removed** is selected by default).
 
     **Follow the documents folder**
 
