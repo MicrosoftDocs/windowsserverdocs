@@ -6,13 +6,14 @@ ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/07/2020
+ms.contributors: orthomas
+ms.date: 04/26/2023
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-You can use this topic for a brief overview of DHCP in Windows Server 2016.
+You can use this topic for a brief overview of DHCP in Windows Server.
 
 > [!NOTE]
 > In addition to this topic, the following DHCP documentation is available.
@@ -22,7 +23,7 @@ You can use this topic for a brief overview of DHCP in Windows Server 2016.
 
 Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information such as the subnet mask and default gateway. RFCs 2131 and 2132 define DHCP as an Internet Engineering Task Force (IETF) standard based on Bootstrap Protocol (BOOTP), a protocol with which DHCP shares many implementation details. DHCP allows hosts to obtain required TCP/IP configuration information from a DHCP server.
 
-Windows Server 2016 includes DHCP Server, which is an optional networking server role that you can deploy on your network to lease IP addresses and other information to DHCP clients. All Windows-based client operating systems include the DHCP client as part of TCP/IP, and DHCP client is enabled by default.
+Windows Server includes the DHCP Server role, which is an optional networking server role that you can deploy on your network to lease IP addresses and other information to DHCP clients. All Windows-based client operating systems include the DHCP client as part of TCP/IP, and DHCP client is enabled by default.
 
 ## Why use DHCP?
 
