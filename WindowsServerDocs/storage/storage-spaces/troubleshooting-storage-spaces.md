@@ -20,7 +20,7 @@ In general, start with the following steps:
 3. Update storage and drive firmware if necessary.
    Ensure the latest Windows Updates are installed on all nodes. You can get the latest updates for Windows Server 2016 from [Windows 10 and Windows Server 2016 update history](https://aka.ms/update2016) and for Windows Server 2019 from [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619).
 4. Update network adapter drivers and firmware.
-5. Run cluster validation and review the Storage Space Direct section, ensure the drives that will be used for the cache are reported correctly and with no errors.
+5. Run cluster validation and review the Storage Space Direct section, ensure the drives that are used for the cache are reported correctly and with no errors.
 
 If you're still having issues, review the following scenarios.
 
@@ -164,7 +164,7 @@ To fix this issue, follow these steps:
    This task should be initiated on all nodes on which the detached volume is online. A repair should automatically start. Wait for the repair to finish. It may go into a suspended state and start again. To monitor the progress:
    - Run **Get-StorageJob** to monitor the status of the repair and to see when it's completed.
    - Run **Get-VirtualDisk** and verify the Space returns a HealthStatus of Healthy.
-     - The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it shows completed.
+     - The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there's no progress indicator. If the task is showing as running, it's running. When it completes, it shows completed.
 
        Additionally, you can view the status of a running schedule task by using the following cmdlet:
        ```powershell
@@ -260,7 +260,7 @@ To mitigate the effect of live dump generation on systems that have lots of memo
 >[!Caution]
 >This procedure can prevent the collection of diagnostic information that Microsoft Support may need to investigate this problem. A Support agent may have to ask you to re-enable live dump generation based on specific troubleshooting scenarios.
 
-There are two methods to disable live dumps, as described below.
+The two methods to disable live dumps are as follows:
 
 #### Method 1 (recommended in this scenario)
 To completely disable all dumps, including live dumps system-wide, follow these steps:
@@ -300,7 +300,7 @@ If you see slow IO performance, check if cache is enabled in your Storage Spaces
 There are two ways to check:
 
 
-1. Using the cluster log. Open the cluster log in text editor of choice and search for "[=== SBL Disks ===]." This will be a list of the disk on the node the log was generated on.
+1. Using the cluster log. Open the cluster log in text editor of choice and search for "[=== SBL Disks ===]." This is a list of the disk on the node the log was generated on.
 
      Cache Enabled Disks Example: Note here that the state is CacheDiskStateInitializedAndBound and there's a GUID present here.
 
@@ -380,7 +380,7 @@ To fix this issue, ensure the HBA adapter is configured in HBA mode. No HBA shou
 
 ## Enable-ClusterStorageSpacesDirect hangs at 'Waiting until SBL disks are surfaced' or at 27%
 
-You will see the following information in the validation report:
+You see the following information in the validation report:
 
 Disk `<identifier>` connected to node `<nodename>` returned a SCSI Port Association and the corresponding enclosure device could not be found. The hardware is not compatible with Storage Spaces Direct (S2D), contact the hardware vendor to verify support for SCSI Enclosure Services (SES).
 
@@ -411,7 +411,7 @@ In a Windows Server 2016 Storage Spaces Direct cluster, you might see the Health
 
 - Remove the physical disk from the pool, and then add it back.
 - Import-Module Clear-PhysicalDiskHealthData.ps1
-- Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. (Available for download as a .TXT file. You'll need to save it as a .PS1 file before you can run it.)
+- Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. (Available for download as a .TXT file. You need to save it as a .PS1 file before you can run it.)
 
 Here are some examples showing how to run the script:
 
@@ -431,7 +431,7 @@ Here are some examples showing how to run the script:
 
 You might see an issue using File Explorer to copy a large VHD to the virtual disk - the file copy is taking longer than expected.
 
-Using File Explorer, Robocopy or Xcopy to copy a large VHD to the virtual disk is not a recommended method to as this will result in slower than expected performance. The copy process does not go through the Storage Spaces Direct stack, which sits lower on the storage stack, and instead acts like a local copy process.
+Using File Explorer, Robocopy or Xcopy to copy a large VHD to the virtual disk is not a recommended method to as this results in slower than expected performance. The copy process doesn't go through the Storage Spaces Direct stack, which sits lower on the storage stack, and instead acts like a local copy process.
 
 If you want to test Storage Spaces Direct performance, we recommend using VMFleet and Diskspd to load and stress test the servers to get a base line and set expectations of the Storage Spaces Direct performance.
 
