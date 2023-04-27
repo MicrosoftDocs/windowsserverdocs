@@ -86,7 +86,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\PassivePollPer
 
 Probe content along with the predefined DNS probe host is found in the following path:
 
-```
+```registry
 HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet
 ```
 
