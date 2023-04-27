@@ -51,11 +51,11 @@ Information    4/26/2023 12:18:07 PM    Microsoft-Windows-NCSI    4014    Intern
 Here's an example of a failed connection output:
 
 ```
-Information    4/26/2023 9:54:25 AM    Microsoft-Windows-NCSI    4013    Internet Connectivity Detection    Active Internet Probe started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
-Information  4/26/2023 9:54:25 AM       Microsoft-Windows-NCSI     4017       Internet Connectivity Detection  Active Internet Probe (HTTP) started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
-Information  4/26/2023 9:54:26 AM       Microsoft-Windows-NCSI     4005       Wait for Internet Connectivity   Entered State: Local Connectivity Interface Luid: 0x6008001000000
-Information  4/26/2023 9:54:26 AM       Microsoft-Windows-NCSI     4018       Internet Connectivity Detection  Active Internet Probe (HTTP) finished on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
-Warning       4/26/2023 9:54:26 AM       Microsoft-Windows-NCSI     4051       None   Active probe result code on interface {611346db-8fbb-473d-808b-6c7573b3ef4d} (0x6008001000000 Family: V4) = 12007
+Information    4/26/2023 12:01:02 PM    Microsoft-Windows-NCSI    4013    Internet Connectivity Detection  Active Internet Probe started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Information    4/26/2023 12:01:02 PM    Microsoft-Windows-NCSI    4017    Internet Connectivity Detection  Active Internet Probe (HTTP) started on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Information    4/26/2023 12:01:04 PM    Microsoft-Windows-NCSI    4005    Wait for Internet Connectivity   Entered State: Local Connectivity Interface Luid: 0x6008001000000
+Information    4/26/2023 12:03:23 PM    Microsoft-Windows-NCSI    4018    Internet Connectivity Detection  Active Internet Probe (HTTP) finished on interface {611346db-8fbb-473d-808b-6c7573b3ef4d}
+Warning        4/26/2023 12:03:23 PM    Microsoft-Windows-NCSI    4051    None                             Active probe result code on interface {611346db-8fbb-473d-808b-6c7573b3ef4d} (0x6008001000000 Family: V4) = 12007
 ```
 
 Correlate both the **Analytic** and **Operational** NCSI events with the packet capture timestamps to determine whether the active probe was fired, if it completed, and why it failed. To learn more about Winhttp error codes, see [error messages (Winhttp.h)](/windows/win32/winhttp/error-messages).

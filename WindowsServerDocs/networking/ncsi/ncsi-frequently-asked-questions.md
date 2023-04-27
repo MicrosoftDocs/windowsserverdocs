@@ -123,7 +123,7 @@ Starting in Windows 11, HTTP is always used. You may see DNS activity but its pu
 Other instances are as follows:
 
 - If a proxy has been detected, NCSI will always use HTTP to probe and not DNS.
-For more on proxy discovery and usage with active probes, see [proxies](ncsi-overview.md#proxies)
+For more on proxy discovery and usage with active probes, see [proxies](ncsi-overview.md#proxies).
 - A “forced” web probe is when it hasn't been determined if a proxy exists. NCSI might discover a proxy but if DNS probes don’t work, it might suspect a proxy without positive proof. In either case, NCSI probes using HTTP.
 - Wireless and IPv6 interface always use HTTP probing over DNS.
 
@@ -133,13 +133,13 @@ There are several reasons as to why a network probe may fail as seen in the tabl
 
 |Output|Description|
 |--|--|
+|ActiveDnsProbeFailed|The DNS probe failed.<br><br>**Verify via a packet capture.**|
+|ActiveHttpProbeFailed|The DNS name for the probe server wasn’t resolved. NSCI failed before attempting to send the web probe request. This could be due to DNS failure, failure to connect to the proxy server, etc.<br><br>**Verify via a packet capture.**|
+|ActiveHttpProbeFailedButDnsSucceeded|The probe server DNS name was resolved but the HTTP probe to that resolved IP address failed.<br><br>**Use a packet capture application and verify the data capture.**|
+|ActiveHttpProbeFailedHotspotDetected|The HTTP probe didn’t get past a hotspot or captive portal.  This is typically determined when an HTTP response 200 is received but doesn’t have the text file _connecttest.txt_ in the response payload, or a non-200 HTTP status code (such as 302, 304) is received.<br><br>**This status code will normally be observed when handling issues where the wireless connection cannot be established. Verify via a packet capture. The user may need to authenticate the hotspot or the hotspot configuration may need to be modified.**|
 |NoAddress|The target adapter has no preferred IP address assigned.<br><br>**There is a bigger issue involved that can't be resolved through NSCI.**|
 |NoGlobalAddress|Same as NoAddress but specific to IPV6 interfaces.|
 |NoRoute|The interface that the probe is being sent on has no route to the internet in the routing table.<br><br>**Some scenarios where this can happen is when a newly connected VPN hasn’t yet changed the routing table with new routes, or in forced tunnel VPN scenarios in which after the VPN interface is connected, the physical interface drops to local connectivity as the route table was modified.**|
-|ActiveHttpProbeFailedButDnsSucceeded|The probe server DNS name was resolved but the HTTP probe to that resolved IP address failed.<br><br>**Use a packet capture application and verify the data capture.**|
-|ActiveHttpProbeFailedHotspotDetected|The HTTP probe didn’t get past a hotspot or captive portal.  This is typically determined when an HTTP response 200 is received but doesn’t have the text file _connecttest.txt_ in the response payload, or a non-200 HTTP status code (such as 302, 304) is received.<br><br>**This status code will normally be observed when handling issues where the wireless connection cannot be established. Verify via a packet capture. The user may need to authenticate the hotspot or the hotspot configuration may need to be modified.**|
-|ActiveHttpProbeFailed|The DNS name for the probe server wasn’t resolved. NSCI failed before attempting to send the web probe request. This could be due to DNS failure, failure to connect to the proxy server, etc.<br><br>**Verify via a packet capture.**|
-|ActiveDnsProbeFailed|The DNS probe failed.<br><br>**Verify via a packet capture.**|
 |PassivePacketHops|**Not a failure.**<br><br>Received packets indicate some level of connectivity. This change reason is used when capability is being **raised**, not lowered.|
 
 Here's an output of a probe failure:
@@ -224,11 +224,11 @@ Additionally, some Linux applications don't perform connectivity checks. They se
 > [!NOTE]
 > The enterprise must ensure their infrastructure doesn't block a simple HTTP or DNS active probe. This can happen if any of the following are misconfigured:
 >
+> - Blocked firewalls
 > - DNS servers
+> - Forced VPN tunneling
 > - Proxy servers
 > - Routers
-> - Forced VPN tunneling
-> - Blocked firewalls
 > - Third-party software intercepting the probe
 >
 > For general consumers, there are less potential hindrances that does not require user configuration out of the box. Issues occur when VPNs or third-party software are introduced which can intercept, misroute, or delay NCSI active probes.
