@@ -22,7 +22,7 @@ Resets DiskShadow.exe to the default state. This command is especially useful in
 reset
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

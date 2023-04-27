@@ -80,7 +80,7 @@ To find the file(s) that are using the clusters, specified by the logical cluste
 fsutil volume querycluster C: 50 0x2000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

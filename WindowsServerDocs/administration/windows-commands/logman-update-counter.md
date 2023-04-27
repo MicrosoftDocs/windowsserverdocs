@@ -68,7 +68,7 @@ To update an existing counter called *perf_log*, changing the sample interval to
 logman update counter perf_log -si 10 -f csv -v mmddhhmm
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - Idp-Initiated Sign On
 description:  This document describes how to troubleshoot the AD FS sign on page.
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 01/03/2017
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

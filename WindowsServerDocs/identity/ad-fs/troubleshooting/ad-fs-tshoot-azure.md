@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - Azure AD
 description:  This document describes how to troubleshoot various aspects of AD FS and Azure AD
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 03/01/2018
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

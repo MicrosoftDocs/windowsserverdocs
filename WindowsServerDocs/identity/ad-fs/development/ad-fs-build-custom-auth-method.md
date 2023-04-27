@@ -3,8 +3,8 @@ title: Build a Custom Authentication Method for AD FS in Windows Server
 description: This scenario describes how to build a custom authentication method for AD FS in Windows Server.
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 07/13/2022
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 
@@ -667,6 +667,6 @@ You should see a successful sign-in when entering _adfabric_ at the MFA authenti
 
 #### Other Resources
 
-[Additional Authentication Methods](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)
+[Additional Authentication Methods](../operations/configure-additional-authentication-methods-for-ad-fs.md)
 
-[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/windows-server/identity/ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications)
+[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications.md)

@@ -46,7 +46,7 @@ To send the **report.txt** file, located in the **c:\accounting** directory, to 
 print /d:\\copyroom\printer1 c:\accounting\report.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

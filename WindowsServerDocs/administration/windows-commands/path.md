@@ -46,6 +46,6 @@ To search the paths *c:\user\taxes*, *b:\user\invest*, and *b:\bin* for external
 path c:\user\taxes;b:\user\invest;b:\bin
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

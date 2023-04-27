@@ -2,8 +2,8 @@
 description: "Learn more about: AD FS and certificate KeySpec property Information"
 title: Active Directory Federation Services and certificate Key Specification property Information
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ms.assetid: a5307da5-02ff-4c31-80f0-47cb17a87272
 ms.author: billmath

@@ -64,6 +64,6 @@ To query installed counters with instances for the counter object *PhysicalDisk*
 typeperf -qx PhysicalDisk -o counters.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

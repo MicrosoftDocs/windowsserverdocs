@@ -40,7 +40,7 @@ To attach the selected VHD as read-only, type:
 attach vdisk readonly
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

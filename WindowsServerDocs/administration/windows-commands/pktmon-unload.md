@@ -19,7 +19,7 @@ Stop the PktMon driver service and unload PktMon.sys. Effectively equivalent to 
 pktmon unload
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

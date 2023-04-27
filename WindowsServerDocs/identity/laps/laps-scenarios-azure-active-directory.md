@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Azure Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and how to retrieve them.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## Configure device policy
 
@@ -26,7 +26,7 @@ To configure device policy, complete these tasks:
 
 The first step is to choose how to apply policy to your devices.
 
-The preferred option for Azure Active Directory-joined devices is to use [Microsoft Intune](/mem/endpoint-manager-overview) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+The preferred option for Azure Active Directory-joined devices is to use [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
 If your devices are Azure Active Directory-joined but you're not using Microsoft Intune, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 
@@ -72,7 +72,9 @@ To verify that the password was successfully updated in Azure Active Directory, 
 
 ## Retrieve a password from Azure Active Directory
 
-Retrieving Windows LAPS passwords stored in Azure Active Directory is supported by using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that's a wrapper around the Microsoft Graph PowerShell library. Windows LAPS doesn't provide any user interface options for Azure Active Directory password retrieval. The instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve Windows LAPS passwords from Azure Active Directory.
+Retrieving Windows LAPS passwords stored in Azure Active Directory is supported by using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that's a wrapper around the Microsoft Graph PowerShell library. You may also  use the Azure AD and\or Intune management portals for a UI-based password retrieval experience. Windows LAPS doesn't provide any user interface options within Windows for Azure Active Directory password retrieval.
+
+The rest of these instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve Windows LAPS passwords from Azure Active Directory using Microsoft Graph.
 
 ### Install the Microsoft Graph PowerShell library
 
@@ -88,18 +90,18 @@ You might need to configure the repository as Trusted for the command to succeed
 
 The next step is to create an Azure Active Directory application that's configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
-The app needs to be configured with two permissions: `Device.Read.All` and either `Device.LocalCredentials.Read` or `Device.LocalCredentials.ReadAll`.
+The app needs to be configured with two permissions: `Device.Read.All` and either `DeviceLocalCredential.Read.All` or `DeviceLocalCredential.ReadBasic.All`.
 
 > [!IMPORTANT]
 >
-> - Use `Device.LocalCredentials.Read` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
-> - Use `Device.LocalCredentials.ReadAll` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
+> - Use `DeviceLocalCredential.ReadBasic.All` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
+> - Use `DeviceLocalCredential.Read.All` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
 
-#### Manual consent to Device.LocalCredentials.\* permissions
+#### Manual consent to DeviceLocalCredential.\* permissions
 
-Currently, a manual step is required to consent to either `Device.LocalCredentials.Read` or the `Device.LocalCredentials.ReadAll` permissions.
+Currently, a manual step is required to consent to either `DeviceLocalCredential.ReadBasic.All` or the `DeviceLocalCredential.Read.All` permissions.
 
-After you decide which `Device.LocalCredentials` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.Read.Basic` if necessary.
+After you decide which `DeviceLocalCredential` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.ReadBasic.All` if necessary.
 
 For multi-tenant apps:
 
@@ -208,6 +210,10 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 
 ## See also
 
+- [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
+- [Microsoft Intune](/mem/intune)
+- [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 

@@ -37,7 +37,7 @@ To lock data drive D, type:
 manage-bde -lock D:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

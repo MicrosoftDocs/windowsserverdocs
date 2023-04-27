@@ -50,6 +50,6 @@ reg unload
 | [reg save](reg-save.md) | Saves a copy of specified subkeys, entries, and values of the registry in a specified file. |
 | [reg unload](reg-unload.md) | Removes a section of the registry that was loaded using the **reg load** operation. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

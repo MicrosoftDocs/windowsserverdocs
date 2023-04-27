@@ -55,7 +55,7 @@ ksetup /setrealmflags CORP.CONTOSO.COM sendaddress tcpsupported delete ncsupport
 ksetup /setrealmflags CORP.CONTOSO.COM 0xF
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

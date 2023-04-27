@@ -26,10 +26,12 @@ You can **install** Windows Admin Center on the following Windows operating syst
 
 | **Platform**                       | **Installation mode** |
 | -----------------------------------| --------------------- |
+| Windows 11                         | Local client |
 | Windows 10                         | Local client |
 | Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
 | Windows Server 2016                | Gateway sever, managed server, failover cluster |
 | Windows Server 2019                | Gateway sever, managed server, failover cluster |
+| Windows Server 2022                | Gateway sever, managed server, failover cluster |
 
 To operate Windows Admin Center:
 
@@ -49,14 +51,17 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
+| Windows 11 | Yes (via Computer Management) | N/A |
 | Windows 10 | Yes (via Computer Management) | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes |
+| Windows Server 2022 | Yes | Yes |
 | Windows Server 2019 | Yes | Yes |
 | Windows Server 2016 | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Microsoft Hyper-V Server 2016 | Yes | Yes |
 | Windows Server 2012 R2 | Yes | Yes |
 | Microsoft Hyper-V Server 2012 R2 | Yes | Yes |
 | Windows Server 2012 | Yes | Yes |
+| Azure Stack HCI 21H2 and higher | Yes | Yes |
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.

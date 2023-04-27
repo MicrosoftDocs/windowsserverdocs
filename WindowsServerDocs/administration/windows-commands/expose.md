@@ -36,7 +36,7 @@ To expose the persistent shadow copy associated with the VSS_SHADOW_1 environmen
 expose %vss_shadow_1% x:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

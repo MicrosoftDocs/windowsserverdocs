@@ -3,8 +3,8 @@ title: Prepare to migrate a stand-alone AD FS federation server
 description: Learn how to export and back up the AD FS configuration data from this server.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 06/28/2017
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

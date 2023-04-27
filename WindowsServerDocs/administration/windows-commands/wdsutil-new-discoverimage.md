@@ -51,6 +51,6 @@ wdsutil /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
 /Name:New WinPE image /Description:WinPE image for WDS Client discovery /Overwrite:No
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

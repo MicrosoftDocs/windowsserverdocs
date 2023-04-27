@@ -52,7 +52,7 @@ To reset the session that uses *session ID 3*, type:
 reset session 3
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

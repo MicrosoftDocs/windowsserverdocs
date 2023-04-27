@@ -58,6 +58,6 @@ To determine the current NTFRS application program interface (API) version, type
 C:\Program Files\SupportTools>ntfrsutl version
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

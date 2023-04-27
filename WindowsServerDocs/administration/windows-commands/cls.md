@@ -33,6 +33,6 @@ To clear all information that appears in the Command Prompt window and return to
 cls
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

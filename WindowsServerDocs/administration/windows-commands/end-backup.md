@@ -19,6 +19,6 @@ Ends a full backup session and issues a **BackupComplete** event with the approp
 end backup
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -50,6 +50,6 @@ eventcreate /s server1 /s server2 /u user /p password /id 100 /t ERROR /d "Creat
 eventcreate /s server /u user /id 100 /t WARNING /d "Remote machine with partial user credentials"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

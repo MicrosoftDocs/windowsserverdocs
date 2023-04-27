@@ -581,7 +581,7 @@
         href: ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md
       - name: Set up the lab environment for AD FS in Windows Server 2012 R2
         href: ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md
-      - name: Upgrading to AD FS in Windows Server 2016 using a WID database
+      - name: Upgrade an AD FS farm using Windows Internal Database
         href: ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server.md
       - name: Deploy AD FS in Azure
         href: ad-fs/deployment/how-to-connect-fed-azure-adfs.md
@@ -613,8 +613,6 @@
             href: ad-fs/deployment/verify-your-Windows-Server-2012-R2-Federation-Server-Is-Operational.md
         - name: Deploying Federation Server Proxies
           href: ad-fs/deployment/Deploying-Federation-Server-Proxies-W2K12R2.md
-        - name: Azure Active Directory Connect
-          href: ad-fs/deployment/Azure-active-directory-Connect.md
       - name: Windows Server 2012 AD FS Deployment Guide
         href: ad-fs/deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md
         items:
@@ -785,20 +783,7 @@
         href: ad-fs/development/ad-fs-risk-assessment-model.md
       - name: Single log-out for OpenID Connect with AD FS
         href: ad-fs/development/ad-fs-logout-openid-connect.md
-      - name: ADAL
-        items:
-        - name: Custom Id Tokens in AD FS
-          href: ad-fs/development/Custom-Id-Tokens-in-AD-FS.md
-        - name: AD FS On-behalf-of Authentication in Windows Server 2016
-          href: ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md
-        - name: Enabling OpenId Connect with AD FS 2016
-          href: ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md
-        - name: Enabling Oauth Confidential Clients with AD FS 2016
-          href: ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS.md
-        - name: Single Page Application with AD FS
-          href: ad-fs/development/Single-Page-Application-with-AD-FS.md
-        - name: Build a native client application using OAuth public clients with AD FS
-          href: ad-fs/development/native-client-with-ad-fs.md
+
       - name: MSAL
         items:
         - name: Native app calling Web API
@@ -897,8 +882,6 @@
         href: ad-fs/operations/Set-up-an-AD-FS-lab-environment.md
       - name: SQL fine tuning and addressing latency
         href: ad-fs/operations/adfs-sql-latency.md
-      - name: 'Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications'
-        href: ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md
       - name: 'Walkthrough Guide: Manage Risk with Conditional Access Control'
         href: ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md
       - name: 'Walkthrough: Workplace Join with a Windows Device'
@@ -977,12 +960,31 @@
       items:
       - name: AD FS Decommission Guide
         href: ad-fs/decommission/adfs-decommission-guide.md
+      - name: AD FS to Azure AD FAQ
+        href: ad-fs/decommission/ad-fs-to-azure-ad-faq.md
   - name: Active Directory Rights Management Service
     items:
     - name: Upgrading AD RMS to Windows Server 2016
       href: ad-rms/adrms-deploy.md
   - name: Active Directory Certificate Services
     href: ad-cs/index.yml
+    items:
+    - name: Overview
+      items:
+      - name: What is Active Directory Certificate Services?
+        href: ad-cs/active-directory-certificate-services-overview.md
+      - name: Concepts
+        items:
+        - name: Network Device Enrollment Service
+          href: ad-cs/network-device-enrollment-service-overview.md
+        - name: Certificates and trust
+          href: ad-cs/certificate-trust.md
+      - name: How-to guides
+        items:
+        - name: Configure Network Device Enrollment Service to use a domain user account
+          href: ad-cs/create-domain-user-account-ndes-service-account.md
+        - name: Configure trusted roots and disallowed certificates
+          href: ad-cs/configure-trusted-roots-disallowed-certificates.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
@@ -1027,4 +1029,7 @@
         href: laps/laps-management-user-interface.md
     - name: Windows LAPS schema extensions reference
       href: laps/laps-technical-reference.md
+    - name: Windows LAPS FAQ
+      href: laps/laps-faq.yml
+
 

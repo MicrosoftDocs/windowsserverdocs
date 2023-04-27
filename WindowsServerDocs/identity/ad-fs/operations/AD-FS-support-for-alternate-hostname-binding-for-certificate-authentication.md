@@ -4,7 +4,9 @@ description: Learn more about: AD FS support for alternate hostname binding for 
 ms.topic: article
 author: billmath
 ms.author: billmath
-ms.date: 01/03/2023
+manager: amycolannino
+ms.date: 01/30/2023
+ms.topic: article
 ---
 # AD FS support for alternate hostname binding for certificate authentication
 

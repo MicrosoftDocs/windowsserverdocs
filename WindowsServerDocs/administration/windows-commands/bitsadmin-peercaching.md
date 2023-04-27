@@ -32,7 +32,7 @@ bitsadmin /peercaching /getconfigurationflags
 | [bitsadmin peercaching and setconfigurationflags](bitsadmin-peercaching-and-setconfigurationflags.md) | Sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers. |
 | [bitsadmin peercaching and getconfigurationflags](bitsadmin-peercaching-and-getconfigurationflags.md) | Gets the configuration flags that determine if the computer serves content to peers and if it can download content from peers. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

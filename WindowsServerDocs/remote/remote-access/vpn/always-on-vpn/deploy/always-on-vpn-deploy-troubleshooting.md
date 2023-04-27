@@ -9,6 +9,9 @@ author: Teresa-MOTIV
 ---
 # Troubleshoot Always On VPN
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806376" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common VPN and AlwaysOn VPN issues.
+
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 If your Always On VPN setup is failing to connect clients to your internal network, the cause is likely an invalid VPN certificate, incorrect NPS policies, or issues with the client deployment scripts or in Routing and Remote Access. The first step in troubleshooting and testing your VPN connection is understanding the core components of the Always On VPN infrastructure.
