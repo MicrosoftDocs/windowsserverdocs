@@ -78,13 +78,17 @@ There are various factors that determine if a passive probe should be ran based 
 
 If the passive probe is allowed to run, it does so every 15 seconds. This can be overridden by editing the following registry key:
 
-``registry
+```registry
 HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\PassivePollPeriod
 ```
 
 ## Where is the HTTP web probe server path found in the registry?
 
-Probe content along with the predefined DNS probe host is found in the following path: **HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet**.
+Probe content along with the predefined DNS probe host is found in the following path:
+
+```
+HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet
+```
 
 > [!NOTE]
 > Starting with Win10 build 14393 (1607) web probe (HTTP) requests are sent to `www.msftconnecttest.com/connecttest.txt`.
@@ -185,11 +189,11 @@ NCSI’s responsibility to the system to accurately report connectivity as local
 An example of a probe failure may relay the following:
 
 ```
-[Microsoft-Windows-NCSI/Analytic ] Active Internet Probe finished on interface {426b6867-b0e4-4ff9-a14b-dd6a4345c24e} (false) 
+[Microsoft-Windows-NCSI/Analytic ] Active Internet Probe finished on interface {426b6867-b0e4-4ff9-a14b-dd6a4345c24e} (false)
 {426b6867-b0e4-4ff9-a14b-dd6a4345c24e}, false, true, false, false, false
 
-[Microsoft-Windows-NCSI/Operational ] Capability change on {426b6867-b0e4-4ff9-a14b-dd6a4345c24e} 
-(0x6008001000000 Family: V4 Capability: Local ChangeReason: SuspectDnsProbeFailed) {426b6867-b0e4-4ff9-a14b-dd6a4345c24e}
+[Microsoft-Windows-NCSI/Operational ] Capability change on {426b6867-b0e4-4ff9-a14b-dd6a4345c24e}
+(0x6008001000000 Family: V4 Capability: Local ChangeReason: SuspectDnsProbeFailed){426b6867-b0e4-4ff9-a14b-dd6a4345c24e}
 ```
 
 ## Why does Windows sometimes open a browser when I connect to a network?
