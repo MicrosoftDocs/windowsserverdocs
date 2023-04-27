@@ -9,7 +9,7 @@ ms.date: 10/24/2018
 
 # Troubleshoot Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following information to troubleshoot your Storage Spaces Direct deployment.
 
