@@ -22,7 +22,7 @@ In general, start with the following steps:
 4. Update network adapter drivers and firmware.
 5. Run cluster validation and review the Storage Space Direct section, ensure the drives that will used for the cache are reported correctly and no errors.
 
-If you're still having issues, review the scenarios below.
+If you're still having issues, review the following scenarios.
 
 ## Virtual disk resources are in No Redundancy state
 The nodes of a Storage Spaces Direct system restart unexpectedly because of a crash or power failure. Then, one or more of the virtual disks may not come online, and you see the description "Not enough redundancy information."
@@ -46,7 +46,7 @@ The **No Redundancy Operational Status** can occur if a disk failed or if the sy
 
 To fix this issue, follow these steps:
 
-1. Remove the affected Virtual Disks from CSV. This will put them in the "Available storage" group in the cluster and start showing as a ResourceType of "Physical Disk."
+1. Remove the affected Virtual Disks from CSV. This puts them in the "Available storage" group in the cluster and start showing as a ResourceType of "Physical Disk."
 
    ```powershell
    Remove-ClusterSharedVolume -name "CSV Name"
@@ -81,7 +81,7 @@ To fix this issue, follow these steps:
    Add-ClusterSharedVolume -name "Physical Disk Resource Name"
    ```
 
-**DiskRecoveryAction** is an override switch that enables attaching the Space volume in read-write mode without any checks. The property enables you to do diagnostics into why a volume won't come online. It's very similar to Maintenance Mode but you can invoke it on a resource in a Failed state. It also lets you access the data, which can be helpful in situations such as "No Redundancy," where you can get access to whatever data you can and copy it. The DiskRecoveryAction property was added in the February 22, 2018, update, KB 4077525.
+**DiskRecoveryAction** is an override switch that enables attaching the Space volume in read-write mode without any checks. The property enables you to do diagnostics into why a volume won't come online. It's similar to Maintenance Mode but you can invoke it on a resource in a Failed state. It also lets you access the data, which can be helpful in situations such as "No Redundancy," where you can get access to whatever data you can and copy it. The DiskRecoveryAction property was added in the February 22, 2018, update, KB 4077525.
 
 
 ## Detached status in a cluster
@@ -164,7 +164,7 @@ To fix this issue, follow these steps:
    This task should be initiated on all nodes on which the detached volume is online. A repair should automatically start. Wait for the repair to finish. It may go into a suspended state and start again. To monitor the progress:
    - Run **Get-StorageJob** to monitor the status of the repair and to see when it is completed.
    - Run **Get-VirtualDisk** and verify the Space returns a HealthStatus of Healthy.
-     - The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it will show completed.
+     - The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it shows completed.
 
        Additionally, you can view the status of a running schedule task by using the following cmdlet:
        ```powershell
@@ -188,9 +188,9 @@ To fix this issue, follow these steps:
    ```powershell
    Add-ClusterSharedVolume -name "Physical Disk Resource Name"
    ```
-   **DiskRunChkdsk value 7** is used to attach the Space volume and have the partition in read-only mode. This enables Spaces to self-discover and self-heal by triggering a repair. Repair will run automatically once mounted. It also allows you to access the data, which can be helpful to get access to whatever data you can to copy. For some fault conditions, such as a full DRT log, you need to run the Data Integrity Scan for Crash Recovery scheduled task.
+   **DiskRunChkdsk value 7** is used to attach the Space volume and have the partition in read-only mode. This enables Spaces to self-discover and self-heal by triggering a repair. Repair runs automatically once mounted. It also allows you to access the data, which can be helpful to get access to whatever data you can copy. For some fault conditions, such as a full DRT log, you need to run the Data Integrity Scan for Crash Recovery scheduled task.
 
-**Data Integrity Scan for Crash Recovery task** is used to synchronize and clear a full dirty region tracking (DRT) log. This task can take several hours to complete. The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it will show as completed. If you cancel the task or restart a node while this task is running, the task will need to start over from the beginning.
+**Data Integrity Scan for Crash Recovery task** is used to synchronize and clear a full dirty region tracking (DRT) log. This task can take several hours to complete. The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it shows as completed. If you cancel the task or restart a node while this task is running, the task needs to start over from the beginning.
 
 For more information, see [Troubleshooting Storage Spaces Direct health and operational states](storage-spaces-states.md).
 
@@ -221,9 +221,9 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
 
 A change introduced in May 8, 2018 to Windows Server 2016, which was a cumulative update to add SMB Resilient Handles for the Storage Spaces Direct intra-cluster SMB network sessions. This was done to improve resiliency to transient network failures and improve how RoCE handles network congestion. These improvements also inadvertently increased time-outs when SMB connections try to reconnect and waits to time-out when a node is restarted. These issues can affect a system that is under stress. During unplanned downtime, IO pauses of up to 60 seconds have also been observed while the system waits for connections to time-out. To fix this issue, install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version.
 
-*Note* This update aligns the CSV time-outs with SMB connection time-outs to fix this issue. It does not implement the changes to disable live dump generation mentioned in the Workaround section.
+*Note* This update aligns the CSV time-outs with SMB connection time-outs to fix this issue. It doesn't implement the changes to disable live dump generation mentioned in the Workaround section.
 
-### Shutdown process flow:
+### Shutdown process flow
 
 1. Run the Get-VirtualDisk cmdlet, and make sure that the HealthStatus value is Healthy.
 2. Drain the node by running the following cmdlet:
@@ -275,7 +275,7 @@ To completely disable all dumps, including live dumps system-wide, follow these 
 After this registry key is set, live dump creation will fail and generate a "STATUS_NOT_SUPPORTED" error.
 
 #### Method 2
-By default, Windows Error Reporting will allow only one LiveDump per report type per 7 days and only 1 LiveDump per machine per 5 days. You can change that by setting the following registry keys to only allow one LiveDump on the machine forever.
+By default, Windows Error Reporting allows only one LiveDump per report type per 7 days and only 1 LiveDump per machine per 5 days. You can change that by setting the following registry keys to only allow one LiveDump on the machine forever.
 ```
 reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelReports" /v SystemThrottleThreshold /t REG_DWORD /d 0xFFFFFFFF /f
 ```
@@ -295,7 +295,7 @@ This cmdlet has an immediate effect on all cluster nodes without a computer rest
 
 ## Slow IO performance
 
-If you are seeing slow IO performance, check if cache is enabled in your Storage Spaces Direct configuration.
+If you see slow IO performance, check if cache is enabled in your Storage Spaces Direct configuration.
 
 There are two ways to check:
 
@@ -323,7 +323,7 @@ There are two ways to check:
     1. Open the XML file using "$d = Import-Clixml GetPhysicalDisk.XML"
     2. Run "ipmo storage"
     3. run "$d". Note that Usage is Auto-Select, not Journal
-   You'll see output like this:
+   You see output like this:
 
    |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| Usage| Size|
    |-----------|------------|---------| -------| -----------------| ------------| -----| ----|
@@ -348,7 +348,7 @@ The next step is to remove the phantom storage pool:
    Get-ClusterResource -Name "Cluster Pool 1" | Remove-ClusterResource
    ```
 
-Now, if you run **Get-PhysicalDisk** on any of the nodes, you'll see all the disks that were in the pool. For example, in a lab with a 4-Node cluster with 4 SAS disks, 100GB each presented to each node. In that case, after Storage Space Direct is disabled, which removes the SBL (Storage Bus Layer) but leaves the filter, if you run **Get-PhysicalDisk**, it should report 4 disks excluding the local OS disk. Instead it reported 16 instead. This is the same for all nodes in the cluster. When you run a **Get-Disk** command, you'll see the locally attached disks numbered as 0, 1, 2 and so on, as seen in this sample output:
+Now, if you run **Get-PhysicalDisk** on any of the nodes, you see all the disks that were in the pool. For example, in a lab with a 4-Node cluster with 4 SAS disks, 100 GB each presented to each node. In that case, after Storage Space Direct is disabled, which removes the SBL (Storage Bus Layer) but leaves the filter, if you run **Get-PhysicalDisk**, it should report 4 disks excluding the local OS disk. Instead it reported 16 instead. This is the same for all nodes in the cluster. When you run a **Get-Disk** command, you see the locally attached disks numbered as 0, 1, 2, and so on, as seen in this sample output:
 
 |Number| Friendly Name| Serial Number|HealthStatus|OperationalStatus|Total Size| Partition Style|
 |-|-|-|-|-|-|-|-|
@@ -387,7 +387,7 @@ Disk `<identifier>` connected to node `<nodename>` returned a SCSI Port Associat
 The issue is with the HPE SAS expander card that lies between the disks and the HBA card. The SAS expander creates a duplicate ID between the first drive connected to the expander and the expander itself.  This has been resolved in [HPE Smart Array Controllers SAS Expander Firmware: 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3).
 
 ## Intel SSD DC P4600 series has a non-unique NGUID
-You might see an issue where an Intel SSD DC P4600 series device seems to be reporting similar 16 byte NGUID for multiple namespaces such as 0100000001000000E4D25C000014E214 or 0100000001000000E4D25C0000EEE214 in the example below.
+You might see an issue where an Intel SSD DC P4600 series device seems to be reporting similar 16 byte NGUID for multiple namespaces such as 0100000001000000E4D25C000014E214 or 0100000001000000E4D25C0000EEE214 in the following example.
 
 
 |               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      size      | canpool | friendlyname | OperationalStatus |
@@ -454,4 +454,4 @@ We've identified a critical issue that affects some Storage Spaces Direct users 
 >[!NOTE]
 > Individual OEMs may have devices that are based on the Intel P3x00 family of NVMe devices with unique firmware version strings. Contact your OEM for more information of the latest firmware version.
 
-If you are using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8).
+If you're using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8).
