@@ -144,7 +144,7 @@ Connectivity and timing are important factors when it comes to UWP app cleanup. 
 
 If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps won't be installed to begin with and your profile creation times will be shorter. Later in this section there is information on how to remove UWP apps from your installation .WIM file.
 
-A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. For more information see [Universal Windows Platform Apps](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/manage-deployment/applications-manage/universal-apps.html)
+A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. For more information see [Universal Windows Platform Apps](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/manage-deployment/applications-manage/uwp-apps.html)
 
 #### Delete the payload of UWP apps
 

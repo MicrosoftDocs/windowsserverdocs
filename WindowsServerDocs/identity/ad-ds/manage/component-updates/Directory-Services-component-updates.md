@@ -33,7 +33,7 @@ Explain the following new Directory Services component updates:
 
     -   [1644 Event improvements](#BKMK_1644)
 
-    -   [Active Directory Replication throughput improvement](.md#BKMK_ADRepl)
+    -   [Active Directory Replication throughput improvement](#BKMK_ADRepl)
 
 ## <a name="BKMK_FL"></a>Domain and Forest Functional Levels
 
