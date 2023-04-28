@@ -176,11 +176,15 @@ Backing up DSRM passwords to Azure Active Directory isn't supported.
 
 ## Password reset after authentication
 
-Windows LAPS supports automatically rotating the local administrator account password if it detects that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. You can configure a grace period to give a user time to complete their intended actions.
+Windows LAPS supports automatically rotating the local administrator account password if it detects that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. You can configure a grace period to give a user time to complete their intended actions. 
+
+Password reset after authentication is not supported for the DSRM account on domain controllers.
 
 ## Account password tampering protection
 
 When Windows LAPS is configured to manage a local administrator account password, that account is protected against accidental or careless tampering. This protection extends to the DSRM account when the account is managed by Windows LAPS on a Windows Server Active Directory domain controller.
+
+Windows LAPS rejects unexpected attempts to modify the account's password with a `STATUS_POLICY_CONTROLLED_ACCOUNT` (0xC000A08B) or `ERROR_POLICY_CONTROLLED_ACCOUNT` (0x21CE\8654) error. Each such rejection is noted with a 10031 event in the Windows LAPS event log channel.
 
 ## Disabled in Windows safe mode
 
