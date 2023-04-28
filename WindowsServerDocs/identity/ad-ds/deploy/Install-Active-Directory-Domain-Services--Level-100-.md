@@ -15,13 +15,13 @@ ms.topic: article
 
 This topic explains how to install AD DS in  Windows Server 2012 by using any of the following methods:
 
--   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds)
+-   [Credential requirements to run Adprep.exe and install Active Directory Domain Services](#BKMK_Creds)
 
--   [Installing AD DS by Using Windows PowerShell](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PS)
+-   [Installing AD DS by Using Windows PowerShell](#BKMK_PS)
 
--   [Installing AD DS by using Server Manager](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_GUI)
+-   [Installing AD DS by using Server Manager](#BKMK_GUI)
 
--   [Performing a Staged RODC Installation using the Graphical User Interface](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_UIStaged)
+-   [Performing a Staged RODC Installation using the Graphical User Interface](#BKMK_UIStaged)
 
 ## <a name="BKMK_Creds"></a>Credential requirements to run Adprep.exe and install Active Directory Domain Services
 The following credentials are required to run Adprep.exe and install AD DS.
@@ -92,17 +92,17 @@ You can run Windows PowerShell cmdlets against remote servers:
 
 The next sections explain how to run ADDSDeployment module cmdlets to install AD DS.
 
--   [ADDSDeployment cmdlet arguments](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params)
+-   [ADDSDeployment cmdlet arguments](#BKMK_Params)
 
--   [Specifying Windows PowerShell Credentials](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSCreds)
+-   [Specifying Windows PowerShell Credentials](#BKMK_PSCreds)
 
--   [Using test cmdlets](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_TestCmdlets)
+-   [Using test cmdlets](#BKMK_TestCmdlets)
 
--   [Installing a new forest root domain using Windows PowerShell](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSForest)
+-   [Installing a new forest root domain using Windows PowerShell](#BKMK_PSForest)
 
--   [Installing a new child or tree domain using Windows PowerShell](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSDomain)
+-   [Installing a new child or tree domain using Windows PowerShell](#BKMK_PSDomain)
 
--   [Installing an additional (replica) domain controller using Windows PowerShell](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_PSReplica)
+-   [Installing an additional (replica) domain controller using Windows PowerShell](#BKMK_PSReplica)
 
 ### <a name="BKMK_Params"></a>ADDSDeployment cmdlet arguments
 The following table lists arguments for the ADDSDeployment cmdlets in Windows PowerShell. Arguments in bold are required. Equivalent arguments for dcpromo.exe are listed in parentheses if they are named different in Windows PowerShell.
@@ -321,7 +321,7 @@ Server Manager can pool other servers on the network as long as they are accessi
 ### <a name="BKMK_installADDSGUI"></a>Installing AD DS
 **Administrative credentials**
 
-The credential requirements to install AD DS vary depending on which deployment configuration you choose. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).
+The credential requirements to install AD DS vary depending on which deployment configuration you choose. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](#BKMK_Creds).
 
 Use the following procedures to install AD DS using the GUI method. The steps can be performed locally or remotely. For more detailed explanation of these steps, see the following topics:
 
@@ -414,7 +414,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
     > [!IMPORTANT]
     > Do not store the Active Directory database, log files, or SYSVOL folder on a data volume formatted with Resilient File System (ReFS).
 
-16. On the **Preparation Options** page, type credentials that are sufficient to run adprep. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](./Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).
+16. On the **Preparation Options** page, type credentials that are sufficient to run adprep. For more information, see [Credential requirements to run Adprep.exe and install Active Directory Domain Services](#BKMK_Creds).
 
 17. On the **Review Options** page, confirm your selections, click **View script** if you want to export the settings to a Windows PowerShell script, and then click **Next**.
 

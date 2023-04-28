@@ -25,15 +25,15 @@ Explain the following new Directory Services component updates:
 
 -   Explain the following new Directory Services component updates:
 
-    -   [Domain and Forest Functional Levels](./Directory-Services-component-updates.md#BKMK_FL)
+    -   [Domain and Forest Functional Levels](#BKMK_FL)
 
-    -   [Deprecation of NTFRS](./Directory-Services-component-updates.md#BKMK_NTFRS)
+    -   [Deprecation of NTFRS](#BKMK_NTFRS)
 
-    -   [LDAP Query Optimizer changes](./Directory-Services-component-updates.md#BKMK_LDAPQuery)
+    -   [LDAP Query Optimizer changes](#BKMK_LDAPQuery)
 
-    -   [1644 Event improvements](./Directory-Services-component-updates.md#BKMK_1644)
+    -   [1644 Event improvements](#BKMK_1644)
 
-    -   [Active Directory Replication throughput improvement](./Directory-Services-component-updates.md#BKMK_ADRepl)
+    -   [Active Directory Replication throughput improvement](.md#BKMK_ADRepl)
 
 ## <a name="BKMK_FL"></a>Domain and Forest Functional Levels
 
@@ -284,7 +284,7 @@ Perform the following on a domain controller, or from a domain-joined client or 
 
 1.  Review the ["Creating More Efficient Microsoft AD Enabled Applications"](/previous-versions/ms808539(v=msdn.10)) article and refer back to it as needed.
 
-2.  Using LDP, enable search statistics (see [To enable the Stats control in LDP](./Directory-Services-component-updates.md#BKMK_EnableStats))
+2.  Using LDP, enable search statistics (see [To enable the Stats control in LDP](#BKMK_EnableStats))
 
 3.  Conduct several LDAP searches and observe the statistical information at the top of the results.  You will repeat the same search in other activities so document them in a notepad text file.
 

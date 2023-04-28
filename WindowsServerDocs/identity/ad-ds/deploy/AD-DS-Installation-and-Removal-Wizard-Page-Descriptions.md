@@ -15,33 +15,33 @@ ms.topic: article
 
 This topic provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.
 
--   [Deployment Configuration](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DepConfigPage)
+-   [Deployment Configuration](#BKMK_DepConfigPage)
 
--   [Domain Controller Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DCOptionsPage)
+-   [Domain Controller Options](#BKMK_DCOptionsPage)
 
--   [DNS Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage)
+-   [DNS Options](#BKMK_DNSOptionsPage)
 
--   [RODC Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_RODCOptionsPage)
+-   [RODC Options](#BKMK_RODCOptionsPage)
 
--   [Additional Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_AdditionalOptionsPage)
+-   [Additional Options](#BKMK_AdditionalOptionsPage)
 
--   [Paths](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_Paths)
+-   [Paths](#BKMK_Paths)
 
--   [Preparation Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_AdprepCreds)
+-   [Preparation Options](#BKMK_AdprepCreds)
 
--   [Review Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ViewInstallOptionsPage)
+-   [Review Options](#BKMK_ViewInstallOptionsPage)
 
--   [Prerequisites Check](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_PrerqCheckPage)
+-   [Prerequisites Check](#BKMK_PrerqCheckPage)
 
--   [Results](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_Results)
+-   [Results](#BKMK_Results)
 
--   [Role Removal credentials](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_RemovalCredsPage)
+-   [Role Removal credentials](#BKMK_RemovalCredsPage)
 
--   [AD DS Removal Options and Warnings](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_RemovalOptionsPage)
+-   [AD DS Removal Options and Warnings](#BKMK_RemovalOptionsPage)
 
--   [New Administrator Password](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_NewAdminPwdPage)
+-   [New Administrator Password](#BKMK_NewAdminPwdPage)
 
--   [Confirm Role Removal Selections](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ConfirmRoleRemovalPage)
+-   [Confirm Role Removal Selections](#BKMK_ConfirmRoleRemovalPage)
 
 ## <a name="BKMK_DepConfigPage"></a>Deployment Configuration
 Server Manager begins every domain controller installation with the **Deployment Configuration** page. The remaining options and required fields change on this page and subsequent pages, depending on which deployment operation you select. For example, if you create a new forest, the **Preparation Options** page does not appear, but it does if you install the first domain controller that runs  Windows Server 2012  in an existing forest or domain.
@@ -227,7 +227,7 @@ Some of the warnings that appear on this page include:
 
 -   Domain controllers that run  Windows Server 2008  or later have a default setting for "Allow cryptography algorithms compatible with Windows NT 4" that prevents weaker cryptography algorithms when establishing secure channel sessions. For more information about the potential impact and a workaround, see [Disable the AllowNT4Crypto setting on all affected domain controllers](/services-hub/unified/health/remediation-steps-ad/disable-the-allownt4crypto-setting-on-all-affected-domain-controllers).
 
--   DNS delegation could not be created or updated. For more information, see [DNS Options](./AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_DNSOptionsPage).
+-   DNS delegation could not be created or updated. For more information, see [DNS Options](#BKMK_DNSOptionsPage).
 
 -   The prerequisite check requires WMI calls. They can fail if they are blocked firewall rules block, and return an RPC server unavailable error.
 

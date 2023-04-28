@@ -15,9 +15,9 @@ ms.topic: article
 
 This topic covers:
 
--   [Terminology](./Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_Terms)
+-   [Terminology](#BKMK_Terms)
 
--   [FixVDCPermissions.ps1](./Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)
+-   [FixVDCPermissions.ps1](#BKMK_FixPDCPerms)
 
 ## <a name="BKMK_Terms"></a>Terminology
 
