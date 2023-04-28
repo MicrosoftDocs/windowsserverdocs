@@ -9,28 +9,10 @@ author: Teresa-MOTIV
 ms.reviewer: deverette
 ---
 # Advanced features of Always On VPN
-
+ 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 Beyond a standard deployment, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, the VPN server can use these features to help make sure that the connecting client is healthy before it allows a connection.
-
-## High Availability
-
-The following are more options for high availability.
-
-|Option  |Description  |
-|---------|---------|
-|Server resilience and load balancing     |In environments that require high availability or that support large numbers of requests, you can increase the performance and resiliency of Remote Access. Use can load balancing between multiple servers that are running Network Policy Server (NPS) and enable Remote Access server clustering.<p>Related documents:<ul><li>[NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[Deploy Remote Access in a Cluster](../../../ras/cluster/deploy-remote-access-in-cluster.md)</li></ul>        |
-|Geographic site resilience     |For IP-based geolocation, you can use Global Traffic Manager with DNS in Windows Server 2016. For more robust geographic load balancing, you can use Global Server Load Balancing solutions, such as Microsoft Azure Traffic Manager.<p>Related documents:<ul><li>[Overview of Traffic Manager](/azure/traffic-manager/traffic-manager-overview)</li><li>[Microsoft Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
-
-## Advanced Authentication
-
-The following are more options for authentication.
-
-|Option  |Description  |
-|---------|---------|
-|Windows Hello for Business     |In Windows 10, Windows Hello for Business replaces passwords by providing strong two-factor authentication on PCs and mobile devices. This authentication consists of a new type of user credential that is tied to a device and uses a biometric or Personal Identification Number (PIN).<p>The Windows 10 VPN client is compatible with Windows Hello for Business. After the user logs in by using a gesture, the VPN connection uses the Windows Hello for Business certificate for certificate-based authentication.<p>Related documents:<ul><li>[Windows Hello for Business](/windows/access-protection/hello-for-business/hello-identity-verification)</li><li>Technical Case Study: [Enabling Remote Access with Windows Hello for Business in Windows 10](/previous-versions/mt728163(v=technet.10))</li></ul>         |
-|Azure Multifactor Authentication (MFA)     |Azure AD Multi-Factor Authentication has cloud and on-premises versions that you can integrate with the Windows VPN authentication mechanism.<p>For more information about how this mechanism works, see [Integrate RADIUS authentication with Azure AD Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius).         |
 
 ## Advanced VPN Features
 
@@ -134,6 +116,7 @@ For more information about TPM key attestation in Windows 10, see [TPM Key Attes
 [Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer that you plan to use as a VPN server, do the following tasks. After appropriate planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
 
 ## Related topics
+
 - [NPS Proxy Server Load Balancing](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md): Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS server might receive too many connection requests at one time, resulting in degraded performance or an overload.
 
 - [Overview of Traffic Manager](/azure/traffic-manager/traffic-manager-overview): This topic provides an overview of Azure Traffic Manager, which allows you to control the distribution of user traffic for service endpoints. Traffic Manager uses the Domain Name System (DNS) to direct client requests to the most appropriate endpoint based on a traffic-routing method and the health of the endpoints.

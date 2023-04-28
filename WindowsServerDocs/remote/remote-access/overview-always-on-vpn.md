@@ -4,7 +4,7 @@ description: Learn about Always On VPN benefits over standard Windows VPN soluti
 ms.topic: article
 ms.author: wscontent
 author: anaharris-ms
-ms.date: 04/25/2023
+ms.date: 04/28/2023
 ---
 
 # About Always On VPN
@@ -74,6 +74,8 @@ Always On VPN supports the following security features:
     >[!NOTE]
     >These rules apply only to traffic outbound from the device. Use of traffic filters blocks inbound traffic from the corporate network to the client.
 
+- **VPN conditional access.** Conditional access and device compliance can require managed devices to meet standards before they can connect to the VPN. VPN conditional access allows you to restrict the VPN connections to the devices whose client authentication certificate contains the AAD Conditional Access OID of `1.3.6.1.4.1.311.87`. To learn how to restrict the VPN connections directly on the NPS server, see [Configure VPN conditional access on the Network Policy Server](how-to-always-on-vpn-conditional-access-nps.md). To learn how to restrict the VPN connections with [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal), see [Conditional access for VPN connectivity using Azure AD](how-to-aovpn-conditional-access.md).
+
 - **Limit remote access to specific users and devices.** You can configure Always On VPN to support granular authorization when using RADIUS, which includes the use of security groups to control VPN access.
 
 - **Define accessible management servers before user sign-in.** Use the Device Tunnel feature (available in version 1709 – for IKEv2 only) in the VPN profile combined with traffic filters to control which management systems on the corporate network are accessible through the Device Tunnel.
@@ -94,6 +96,10 @@ Always On VPN supports the following security features:
     - MFA support by way of EAP RADIUS integration
     
     The application vendor controls third-party UWP VPN plug-in authentication methods, although they have an array of available options, including custom credential types and OTP support.
+
+- **Windows Hello for Business two-factor authentication on PCs and mobile devices.** In Windows 10, [Windows Hello for Business](/windows/access-protection/hello-for-business/hello-identity-verification) replaces passwords by providing strong two-factor authentication on PCs and mobile devices. For more information, see [Enabling Remote Access with Windows Hello for Business in Windows 10](/previous-versions/mt728163(v=technet.10))
+
+- **Azure Multifactor Authentication (MFA).** Azure AD Multi-Factor Authentication has cloud and on-premises versions that you can integrate with the Windows VPN authentication mechanism. For more information, see [Integrate RADIUS authentication with Azure AD Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius).
 
 ## Connectivity features
 
@@ -131,6 +137,14 @@ Always On VPN supports the following networking features:
 
     >[!NOTE]
     >Avoid the use of Global Suffixes as they interfere with shortname resolution when using Name Resolution Policy tables.
+
+## High Availability features
+
+The following are more options for high availability.
+
+**Server resilience and load balancing.** In environments that require high availability or support large numbers of requests, you can increase the performance and resiliency of Remote Access by configuring [load balancing between Network Policy Servers (NPS)](/windows-server/networking/technologies/nps/nps-manage-proxy-lb) and by [enabling Remote Access server clustering](ras/cluster/deploy-remote-access-in-cluster.md).
+
+**Geographic site resilience.** For IP-based geolocation, you can use Global Traffic Manager with DNS in Windows Server. For more robust geographic load balancing, you can use Global Server Load Balancing solutions, such as [Microsoft Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).
 
 ## Next steps
 
