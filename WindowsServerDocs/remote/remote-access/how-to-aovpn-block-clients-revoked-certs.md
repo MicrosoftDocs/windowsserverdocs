@@ -6,7 +6,7 @@ ms.date: 04/28/2023
 ms.author: wscontent
 author: anastasia-ms
 ---
-# Block VPN Clients that use revoked certificates
+# Block VPN clients that use revoked certificates
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 

@@ -456,6 +456,8 @@
           href: remote-access/how-to-aovpn-conditional-access.md
         - name: Configure Always On VPN Conditional Access using NPS
           href: how-to-always-on-vpn-conditional-access-nps.md
+        - name: Block VPN clients that use a revoked certificate
+          href: how-to-aovpn-block-clients-revoked-certs.md
       - name: Virtual Private Networking (VPN) 
         items: 
         - name: Configure VPN device tunneling
@@ -509,7 +511,7 @@
     - name: Troubleshooting
       items:
       - name: Always On VPN
-        href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md
+        href: remote-access/vpn/troubleshoot-always-on-vpn.md
       - name: DirectAccess
         href: remote-access/directaccess/Troubleshooting-directAccess.md
       - name: DirectAccess Known Issues

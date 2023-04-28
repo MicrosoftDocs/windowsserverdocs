@@ -104,7 +104,6 @@ Always On VPN supports the following security features:
 - **Trusted Platform Module (TPM) Key Attestation.** A user certificate that has a TPM-attested key provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.
 
 For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](../../../../../identity/ad-ds/manage/component-updates/tpm-key-attestation.md).
- 
 
 ## Connectivity features
 
@@ -160,3 +159,5 @@ The following are more options for high availability.
 - [VPN security features](/windows/access-protection/vpn/vpn-security-features): This topic provides an overview of VPN security guidelines for LockDown VPN, Windows Information Protection (WIP) integration with VPN, and traffic filters.
 
 - [VPN auto-triggered profile options](/windows/access-protection/vpn/vpn-auto-trigger-profile): This topic provides an overview of VPN auto-triggered profile options, such as app trigger, name-based trigger, and Always On.
+
+- [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md)
