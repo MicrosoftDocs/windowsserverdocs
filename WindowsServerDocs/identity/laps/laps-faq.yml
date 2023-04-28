@@ -27,6 +27,14 @@ sections:
           must be configured, and you must take care to configure Windows LAPS and the legacy LAPS
           to manage different local accounts.
 
+      - question: Can I deploy and use Windows LAPS even if my domain is running older domain controllers?
+        answer: |
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+
+      - question: Can I deploy and use Windows LAPS even if my domain is not yet at Windows Server 2016 Domain Functional Level?
+        answer: |
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+
       - question: Is it supported to run 3rd-party local account password manager products side-by-side with Windows LAPS?
         answer: |  
           Yes, this scenario is supported with the following condition. You must take care to
