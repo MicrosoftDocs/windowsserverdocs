@@ -3,7 +3,7 @@ metadata:
   title: Windows LAPS frequently asked questions
   description: Get answers to frequently asked questions about Windows LAPS.
   author: jay98014
-  ms.author: wscontent
+  ms.author: jsimmons
   ms.topic: faq
   ms.date: 04/20/2023
 title: Windows LAPS frequently asked questions
@@ -40,9 +40,7 @@ sections:
           Yes, this scenario is supported with the following condition. You must take care to
           configure Windows LAPS and the 3rd-party product to manage different local accounts. If
           you mistakenly configure both to manage the same account, Windows LAPS rejects attempts by
-          the 3rd-party product to modify the account's password with a
-          `STATUS_POLICY_CONTROLLED_ACCOUNT\ERROR_POLICY_CONTROLLED_ACCOUNT` error. Each such
-          rejection is noted with a 10031 event in the Windows LAPS event log channel.
+          the 3rd-party product to modify the account's password. See [Account password tampering protection](laps-overview.md#account-password-tampering-protection).
 
       - question: Why can't I change the password of a local admin account currently managed by Windows LAPS?
         answer: |
@@ -61,7 +59,7 @@ sections:
       - question: How can I copy the Windows LAPS-enabled Active Directory User and Computers snap-in to an older operating system?
         answer: This scenario isn't supported.
 
-      - question: Microsoft promotes a password-less strategy and direction. Why was a password-based feature like Windows LAPS built?
+      - question: Microsoft promotes a password-less strategy and direction. Why was a password-based feature like Windows LAPS added to Windows?
         answer: |
           All Windows LAPS scenarios involve the management of a Windows local account's password
           for use with help desk tasks, device recovery, and other scenarios. Since Windows only
