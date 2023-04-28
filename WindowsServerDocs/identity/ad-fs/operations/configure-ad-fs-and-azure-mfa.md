@@ -152,36 +152,36 @@ By default, when you configure AD FS with Azure AD Multi-Factor Authentication, 
 
 1. Assess AD FS Azure AD Multi-Factor Authentication certificate expiration date
 
-On each AD FS server, in the local computer My store, there's a self signed certificate with "Microsoft AD FS Azure MFA" in the Issuer and Subject. This certificate is the Azure AD Multi-Factor Authentication certificate. Check the validity period of this certificate on each AD FS server to determine the expiration date.
+  On each AD FS server, in the local computer My store, there's a self signed certificate with "Microsoft AD FS Azure MFA" in the Issuer and Subject. This certificate is the Azure AD Multi-Factor Authentication certificate. Check the validity period of this certificate on each AD FS server to determine the expiration date.
 
 1. Create a new AD FS Azure AD Multi-Factor Authentication Certificate on each AD FS server
 
-If the validity period of your certificates is nearing its end, start the renewal process by generating a new Azure AD Multi-Factor Authentication certificate on each AD FS server. In a PowerShell command window, generate a new certificate on each AD FS server using the following cmdlet:
+  If the validity period of your certificates is nearing its end, start the renewal process by generating a new Azure AD Multi-Factor Authentication certificate on each AD FS server. In a PowerShell command window, generate a new certificate on each AD FS server using the following cmdlet:
 
-> [!CAUTION]
-> If your certificate has already expired, don't add the `-Renew $true` parameter to the following command. In this scenario, the existing expired certificate is replaced with a new one instead of being left in place and an additional certificate created.
+  > [!CAUTION]
+  > If your certificate has already expired, don't add the `-Renew $true` parameter to the following command. In this scenario, the existing expired certificate is replaced with a new one instead of being left in place and an additional certificate created.
 
-```powershell
-$newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
-```
+  ```powershell
+  $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
+  ```
 
-If the certificate hasn't already expired, a new certificate that is valid from two days in the future to two days + 2 years is generated. AD FS and Azure AD Multi-Factor Authentication operations aren't affected when running cmdlet or renewing the certificate. The two-day delay is intentional and provides time to execute the following steps to configure the new certificate in the tenant before AD FS starts using it for Azure AD Multi-Factor Authentication.
+  If the certificate hasn't already expired, a new certificate that is valid from two days in the future to two days + 2 years is generated. AD FS and Azure AD Multi-Factor Authentication operations aren't affected when running cmdlet or renewing the certificate. The two-day delay is intentional and provides time to execute the following steps to configure the new certificate in the tenant before AD FS starts using it for Azure AD Multi-Factor Authentication.
 
 1. Configure each new AD FS Azure AD Multi-Factor Authentication certificate in the Azure AD tenant
 
-Using the Azure AD PowerShell module, for each new certificate (on each AD FS server), update your Azure AD tenant settings as follows (Note: you must first connect to the tenant using `Connect-MsolService` to run the following commands).
+  Using the Azure AD PowerShell module, for each new certificate (on each AD FS server), update your Azure AD tenant settings as follows (Note: you must first connect to the tenant using `Connect-MsolService` to run the following commands).
 
-```
-PS C:/> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
-```
+  ```powershell
+  New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
+  ```
 
-If your previous certificate is expired, restart the AD FS service to pick up the new certificate. You don't need to restart the AD FS service if you renewed a certificate before it expired.
+  If your previous certificate is expired, restart the AD FS service to pick up the new certificate. You don't need to restart the AD FS service if you renewed a certificate before it expired.
 
 1. Verify that the new certificate(s) is used for Azure AD Multi-Factor Authentication
 
 After the new certificate(s) become valid, AD FS will pick them up and start using each respective certificate for Azure AD Multi-Factor Authentication within a few hours to one day.  After AD FS begins using the new certificates, on each server you'll see an event logged in the AD FS Admin event log with the following information:
 
-```
+```Output
 Log Name:      AD FS/Admin
 Source:        AD FS
 Date:          2/27/2018 7:33:31 PM
