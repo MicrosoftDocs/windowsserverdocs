@@ -101,6 +101,11 @@ Always On VPN supports the following security features:
 
 - **Azure Multifactor Authentication (MFA).** Azure AD Multi-Factor Authentication has cloud and on-premises versions that you can integrate with the Windows VPN authentication mechanism. For more information, see [Integrate RADIUS authentication with Azure AD Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-server-radius).
 
+- **Trusted Platform Module (TPM) Key Attestation.** A user certificate that has a TPM-attested key provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.
+
+For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](../../../../../identity/ad-ds/manage/component-updates/tpm-key-attestation.md).
+ 
+
 ## Connectivity features
 
 Always On VPN supports the following connectivity features:
@@ -149,4 +154,9 @@ The following are more options for high availability.
 ## Next steps
 
 - [Install Remote Access as a VPN server](get-started-install-ras-as-vpn.md?tabs=powershell)
+
 - [Tutorial: Deploy Always On VPN](tutorial-aovpn-deploy-setup.md)
+
+- [VPN security features](/windows/access-protection/vpn/vpn-security-features): This topic provides an overview of VPN security guidelines for LockDown VPN, Windows Information Protection (WIP) integration with VPN, and traffic filters.
+
+- [VPN auto-triggered profile options](/windows/access-protection/vpn/vpn-auto-trigger-profile): This topic provides an overview of VPN auto-triggered profile options, such as app trigger, name-based trigger, and Always On.

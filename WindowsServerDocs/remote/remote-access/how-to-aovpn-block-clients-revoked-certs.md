@@ -1,25 +1,18 @@
 ---
-title: Advanced Features of Always On VPN
-description: 'Beyond the deployment scenario provided in this deployment, you can add other advanced VPN features to improve the security and availability of your VPN connection.'
-ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
+title:Block VPN Clients that use revoked certificates on Windows Server
+description: This article shows you how to block VPN clients that use revoked certificates after a Windows Server update.
 ms.topic: article
-ms.date: 07/24/2019
+ms.date: 04/28/2023
 ms.author: wscontent
-author: Teresa-MOTIV
-ms.reviewer: deverette
+author: anastasia-ms
 ---
-# Block VPN Clients that Use Revoked Certificates
- 
+# Block VPN Clients that use revoked certificates
+
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-Beyond a standard deployment, you can add other advanced VPN features to improve the security and availability of your VPN connection. For example, the VPN server can use these features to help make sure that the connecting client is healthy before it allows a connection.
+This article shows you how to block VPN clients that use revoked certificates after a Windows Server update. The RRAS server can enforce certificate revocation for VPNs that use IKEv2 and machine certificates for authentication, such as device tunnel Always-on VPNs. This means that for such VPNs, the RRAS server can deny VPN connections to clients that try to use a revoked certificate.
 
-#
-## Blocking VPN Clients that Use Revoked Certificates
-
-After you install updates, the RRAS server can enforce certificate revocation for VPNs that use IKEv2 and machine certificates for authentication, such as device tunnel Always-on VPNs. This means that for such VPNs, the RRAS server can deny VPN connections to clients that try to use a revoked certificate.
-
-**Availability**
+## Windows updates
 
 The following table lists the releases that contain the fixes for each version of Windows.
 
@@ -29,9 +22,9 @@ The following table lists the releases that contain the fixes for each version o
 |Windows Server 2019<br />Windows Server, version 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
 |Windows Server, version 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
 |Windows Server, version 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
-|Windows Server 2016, version 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
+|Windows Server 2016, version 1607 or lower  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
 
-**How to configure prerequisites**
+## Configure prerequisites
 
 1. Install the Windows updates as they become available.
 1. Make sure that all the VPN client and RRAS server certificates that you use have CDP entries, and that the RRAS server can reach the respective CRLs.
