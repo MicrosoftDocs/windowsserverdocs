@@ -21,9 +21,9 @@ Following are the new and improved features for IPAM in  Windows Server 2016.
 
 |Feature/Functionality|New or improved|Description|
 |--------------------------|-------------------|---------------|
-|[Enhanced IP address management](../../technologies/ipam/../../technologies/ipam/../../technologies/ipam/What-s-New-in-IPAM.md#EIP)|Improved|IPAM capabilities are improved for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.|
-|[Enhanced DNS service management](../../technologies/ipam/../../technologies/ipam/../../technologies/ipam/What-s-New-in-IPAM.md#EDNS)|New|IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers.|
-|[Integrated DNS, DHCP, and IP address (DDI) management](../../technologies/ipam/../../technologies/ipam/../../technologies/ipam/What-s-New-in-IPAM.md#DDI)|Improved|Several new experiences and integrated lifecycle management operations are enabled, such as visualizing all DNS resource records that pertain to an IP address, automated inventory of IP addresses based on DNS resource records, and IP address lifecycle management for both DNS and DHCP operations.|
+|[Enhanced IP address management](#EIP)|Improved|IPAM capabilities are improved for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.|
+|[Enhanced DNS service management](#EDNS)|New|IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers.|
+|[Integrated DNS, DHCP, and IP address (DDI) management](#DDI)|Improved|Several new experiences and integrated lifecycle management operations are enabled, such as visualizing all DNS resource records that pertain to an IP address, automated inventory of IP addresses based on DNS resource records, and IP address lifecycle management for both DNS and DHCP operations.|
 |[Multiple Active Directory Forest support](#bkmk_ad)|New|You can use IPAM to manage the DNS and DHCP servers of multiple Active Directory forests when there is a two-way trust relationship between the forest where IPAM is installed and each of the remote forests.|
 |[Purge Utilization Data](#bkmk_purge)|New|You can now reduce the IPAM database size by purging the IP address utilization data that is older than a date that you specify.|
 |[Windows PowerShell support for Role Based Access Control](#bkmk_ps)|New|You can use Windows PowerShell to set access scopes on IPAM objects.|
@@ -85,12 +85,12 @@ When a PTR record is created in a reverse lookup zone through IPAM, the IP addre
 ### <a name="bkmk_ad"></a>Multiple Active Directory Forest support
 In  Windows Server 2012 R2 , IPAM was able to discover and manage DNS and DHCP servers belonging to the same Active Directory forest as the IPAM server. Now you can manage DNS and DHCP servers belonging to a different AD forest when it has a  two-way trust relationship with the forest where the IPAM server is installed. You can go to the **Configure Server Discovery** dialog box and add domains from the other trusted forests that you want to manage. After the servers are discovered, the management experience is the same as for the servers that belong to the same forest where IPAM is installed.
 
-For more information, see [Manage Resources in Multiple Active Directory Forests](../../technologies/ipam/Manage-Resources-in-Multiple-Active-Directory-Forests.md)
+For more information, see [Manage Resources in Multiple Active Directory Forests](./Manage-Resources-in-Multiple-Active-Directory-Forests.md)
 
 ### <a name="bkmk_purge"></a>Purge Utilization Data
 Purge Utilization Data allows you to reduce the IPAM database size by deleting old IP address utilization data. To perform data deletion, you specify a date, and IPAM deletes all database entries that are older than or equal to the date you provide.
 
-For more information, see [Purge Utilization Data](../../technologies/ipam/Purge-Utilization-Data.md).
+For more information, see [Purge Utilization Data](./Purge-Utilization-Data.md).
 
 ### <a name="bkmk_ps"></a>Windows PowerShell support for Role Based Access Control
 You can now use Windows PowerShell to configure Role Based Access Control. You can use Windows PowerShell commands to retrieve DNS and DHCP objects in IPAM and change their access scopes. Because of this, you can write Windows PowerShell scripts to assign access scopes to the following objects.
@@ -117,4 +117,4 @@ You can now use Windows PowerShell to configure Role Based Access Control. You c
 
 -   DHCP scopes
 
-For more information, see [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) and [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/).
+For more information, see [Manage Role Based Access Control with Windows PowerShell](./Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) and [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/).

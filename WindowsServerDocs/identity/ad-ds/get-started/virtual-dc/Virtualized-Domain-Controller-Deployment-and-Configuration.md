@@ -15,15 +15,15 @@ ms.topic: article
 
 This topic covers:
 
-- [Installation Considerations](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_InstallConsiderations)
+- [Installation Considerations](#BKMK_InstallConsiderations)
 
     This includes platform requirements and other important constraints.
 
-- [Virtualized Domain Controller Cloning](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_VDCCloning)
+- [Virtualized Domain Controller Cloning](#BKMK_VDCCloning)
 
     This explains in detail the entire virtualized domain controller cloning process.
 
-- [Virtualized Domain Controller Safe Restore](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_VDCSafeRestore)
+- [Virtualized Domain Controller Safe Restore](#BKMK_VDCSafeRestore)
 
     This explains in detail the validations that are made during virtualized domain controller safe restore.
 
@@ -671,7 +671,7 @@ Unlike virtualized domain controller cloning, Windows Server 2012 virtualization
 ### Validate the Hypervisor
 Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor-independent and do not require Hyper-V.
 
-Review the previous [Platform Requirements](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_PlatformReqs) section for known VM-Generation ID support.
+Review the previous [Platform Requirements](#BKMK_PlatformReqs) section for known VM-Generation ID support.
 
 If you are migrating VMs from a source hypervisor to a different target hypervisor, virtualization safeguards may or may not be triggered depending on whether the hypervisors support VM-Generation ID, as explained in the following table.
 

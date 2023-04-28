@@ -15,9 +15,9 @@ ms.topic: article
 
 This topic explains the change to the RID master FSMO role, including the new issuance and monitoring functionality in the RID master and how to analyze and troubleshoot RID issuance.
 
-- [Managing RID Issuance](../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_Manage)
+- [Managing RID Issuance](#BKMK_Manage)
 
-- [Troubleshooting RID Issuance](../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_Tshoot)
+- [Troubleshooting RID Issuance](#BKMK_Tshoot)
 
 More information is available at the [AskDS Blog](/archive/blogs/askds/managing-rid-issuance-in-windows-server-2012).
 
@@ -251,7 +251,7 @@ The following new messages log in the System event log on Windows Server 2012 do
 |--|--|
 | Source | Directory-Services-SAM |
 | Severity | Warning |
-| Message | A pool size for account-identifiers (RIDs) that was configured by an Administrator is greater than the supported maximum. The maximum value of %1 will be used when the domain controller is the RID master.<p>For more information, see [RID Block Size Limit](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_RIDBlockMaxSize). |
+| Message | A pool size for account-identifiers (RIDs) that was configured by an Administrator is greater than the supported maximum. The maximum value of %1 will be used when the domain controller is the RID master.<p>For more information, see [RID Block Size Limit](#BKMK_RIDBlockMaxSize). |
 | Notes and resolution | The maximum value for the RID Block Size is now 15000 decimal (3A98 hexadecimal). A domain controller cannot request more than 15,000 RIDs. This event logs at every boot until the value is set to a value at or below this maximum. |
 
 | Event ID | 16654 |
@@ -280,7 +280,7 @@ The following new messages log in the System event log on Windows Server 2012 do
 | Source | Directory-Services-SAM |
 | Severity | Error |
 | Message | Action required! This domain has consumed a considerable portion of the total available account-identifiers (RIDs). A protection mechanism has been activated because the total available account-identifiers remaining is less than: X% [artificial ceiling argument].<p>The protection mechanism prevents account creation until you manually re-enable account-identifier allocation on the RID master domain controller.<p>It is extremely important that certain diagnostics are performed prior to re-enabling account creation to ensure this domain is not consuming account-identifiers at an abnormally high rate. Any issues identified should be resolved prior to re-enabling account creation.<p>Failure to diagnose and fix any underlying issue causing an abnormally high rate of account-identifier consumption can lead to account-identifier exhaustion in the domain after which account creation will be permanently disabled in this domain.<p>See https://go.microsoft.com/fwlink/?LinkId=228610 for more information. |
-| Notes and resolution | Contact all domain administrators and inform them that no further security principals can be created in this domain until this protection is overridden. For more information about how to override the protection and possibly increase the overall RID pool, see [Global RID Space Size Unlock](../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_GlobalRidSpaceUnlock). |
+| Notes and resolution | Contact all domain administrators and inform them that no further security principals can be created in this domain until this protection is overridden. For more information about how to override the protection and possibly increase the overall RID pool, see [Global RID Space Size Unlock](#BKMK_GlobalRidSpaceUnlock). |
 
 | Event ID | 16658 |
 |--|--|
