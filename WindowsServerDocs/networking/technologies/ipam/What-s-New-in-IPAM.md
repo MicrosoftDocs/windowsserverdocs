@@ -21,9 +21,9 @@ Following are the new and improved features for IPAM in  Windows Server 2016.
 
 |Feature/Functionality|New or improved|Description|
 |--------------------------|-------------------|---------------|
-|[Enhanced IP address management](./What-s-New-in-IPAM.md#EIP)|Improved|IPAM capabilities are improved for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.|
-|[Enhanced DNS service management](./What-s-New-in-IPAM.md#EDNS)|New|IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers.|
-|[Integrated DNS, DHCP, and IP address (DDI) management](./What-s-New-in-IPAM.md#DDI)|Improved|Several new experiences and integrated lifecycle management operations are enabled, such as visualizing all DNS resource records that pertain to an IP address, automated inventory of IP addresses based on DNS resource records, and IP address lifecycle management for both DNS and DHCP operations.|
+|[Enhanced IP address management](#EIP)|Improved|IPAM capabilities are improved for scenarios such as handling IPv4 /32 and IPv6 /128 subnets and finding free IP address subnets and ranges in an IP address block.|
+|[Enhanced DNS service management](#EDNS)|New|IPAM supports DNS resource record, conditional forwarder, and DNS zone management for both domain-joined Active Directory-integrated and file-backed DNS servers.|
+|[Integrated DNS, DHCP, and IP address (DDI) management](#DDI)|Improved|Several new experiences and integrated lifecycle management operations are enabled, such as visualizing all DNS resource records that pertain to an IP address, automated inventory of IP addresses based on DNS resource records, and IP address lifecycle management for both DNS and DHCP operations.|
 |[Multiple Active Directory Forest support](#bkmk_ad)|New|You can use IPAM to manage the DNS and DHCP servers of multiple Active Directory forests when there is a two-way trust relationship between the forest where IPAM is installed and each of the remote forests.|
 |[Purge Utilization Data](#bkmk_purge)|New|You can now reduce the IPAM database size by purging the IP address utilization data that is older than a date that you specify.|
 |[Windows PowerShell support for Role Based Access Control](#bkmk_ps)|New|You can use Windows PowerShell to set access scopes on IPAM objects.|
