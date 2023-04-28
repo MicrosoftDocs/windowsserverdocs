@@ -14,7 +14,7 @@ This article addresses the issue of finding nodes removed from active failover c
 
 ## Symptom
 
-You'll see the following event in the System Event Log of the Event Viewer when this issue occurs:
+You see the following event in the System Event Log of the Event Viewer when this issue occurs:
 
 ![Event 1135](media/nodes-failover-cluster-vmware/1135.png)
 
@@ -24,4 +24,4 @@ One specific problem is with the VMXNET3 adapters dropping inbound network packe
 
 ![Add Counters](media/nodes-failover-cluster-vmware/0527.png)
 
-After you've added this counter, look at the Average, Minimum, and Maximum numbers. If the values higher than zero, then the receive buffer needs to be adjusted upward for the adapter. This problem is documented in VMware’s Knowledge Base: [Large packet loss at the guest OS level on the VMXNET3 vNIC in ESXi 5.x / 4.x](https://kb.vmware.com/s/article/2039495).
+After you've added this counter, look at the Average, Minimum, and Maximum numbers. If the values are higher than zero, then the receive buffer needs to be adjusted upward for the adapter. This problem is documented in VMware’s Knowledge Base: [Large packet loss at the guest OS level on the VMXNET3 vNIC in ESXi 5.x / 4.x](https://kb.vmware.com/s/article/2039495).
