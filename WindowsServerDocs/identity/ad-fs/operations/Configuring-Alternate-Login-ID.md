@@ -4,8 +4,8 @@ ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: Configuring Alternate Login ID
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 11/14/2018
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ---
 

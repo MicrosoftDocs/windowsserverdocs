@@ -52,7 +52,7 @@ To check the Distributed File System (DFS) referrals in all trusted domains, typ
 dfsdiag /testreferral /DFSpath:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

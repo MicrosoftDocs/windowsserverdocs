@@ -44,6 +44,6 @@ If you want to get the operating system version number through PowerShell 7.x.x,
 $PSVersionTable.OS
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

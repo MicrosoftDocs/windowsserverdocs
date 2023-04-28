@@ -3,7 +3,8 @@ title: Configure AD FS and Azure AD Multi-Factor Authentication
 description: Learn more about configuring Azure AD Multi-Factor Authentication as authentication provider using AD FS
 ms.author: billmath
 author: billmath
-ms.date: 01/03/2023
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ---
 
@@ -78,11 +79,11 @@ The following prerequisites are required when using Azure AD Multi-Factor Authen
 In order to complete configuration for Azure AD Multi-Factor Authentication for AD FS, you need to configure each AD FS server using the steps described here.
 
 >[!NOTE]
->Ensure that these steps are performed on **all** AD FS servers in your farm. If you have multiple AD FS servers in your farm, you can perform the necessary configuration remotely using Azure AD PowerShell.
+>Ensure that these steps are performed on **all** AD FS servers in your farm. If you've multiple AD FS servers in your farm, you can perform the necessary configuration remotely using Azure AD PowerShell.
 
 ### Step 1: Generate a certificate for Azure AD Multi-Factor Authentication on each AD FS server using the `New-AdfsAzureMfaTenantCertificate` cmdlet
 
-The first thing you need to do use PowerShell to generate a certificate for Azure AD Multi-Factor Authentication to use. After you generate the certificate, find it in the local machines certificate store. The certificate is marked with a subject name containing the TenantID for your Azure AD directory.
+The first thing you need to do is to use PowerShell to generate a certificate for Azure AD Multi-Factor Authentication to use. After you generate the certificate, find it in the local machines certificate store. The certificate is marked with a subject name containing the TenantID for your Azure AD directory.
 
 ![Screenshot of the certificate store of a local machine showing the generated certificate.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)
 
@@ -97,7 +98,7 @@ The TenantID is the name of your directory in Azure AD. Use the following PowerS
 In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the Service Principal for the Azure Multi-Factor Auth Client. The certificates generated using the `New-AdfsAzureMFaTenantCertificate` cmdlet serves as these credentials. Using PowerShell, perform the following steps to add the new credentials to the Azure Multi-Factor Auth Client Service Principal.
 
 > [!NOTE]
-> In order to complete this step you need to connect to your instance of Azure AD with PowerShell using `Connect-MsolService`.  These steps assume you have already connected via PowerShell.  For information see [`Connect-MsolService`.](/previous-versions/azure/dn194123(v=azure.100))
+> In order to complete this step you need to connect to your instance of Azure AD with PowerShell using `Connect-MsolService`.  These steps assume you've already connected via PowerShell.  For information see [`Connect-MsolService`.](/previous-versions/azure/dn194123(v=azure.100))
 
 #### Set the certificate as the new credential against the Azure Multi-Factor Auth Client
 
@@ -266,7 +267,7 @@ The following steps show a simple example.
 
     var domain_hint = "<YOUR_DOMAIN_NAME_HERE>";
     var mfaSecondFactorErr = "The selected authentication method is not available for";
-    var mfaProofupMessage = "You will be automatically redirected in 5 seconds to set up your account for additional security verification. Once you have completed the setup, please return to the application you are attempting to access.<br><br>If you are not redirected automatically, please select the following <a href='{0}'>link</a>."
+    var mfaProofupMessage = "You will be automatically redirected in 5 seconds to set up your account for additional security verification. Once you've completed the setup, please return to the application you are attempting to access.<br><br>If you are not redirected automatically, please click <a href='{0}'>here</a>."
     var authArea = document.getElementById("authArea");
     if (authArea) {
         var errorMessage = document.getElementById("errorMessage");

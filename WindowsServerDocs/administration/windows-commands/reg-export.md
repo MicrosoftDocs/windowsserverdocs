@@ -45,6 +45,6 @@ To export the contents of all subkeys and values of the key MyApp to the file Ap
 reg export HKLM\Software\MyCo\MyApp AppBkUp.reg
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

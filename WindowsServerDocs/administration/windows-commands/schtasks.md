@@ -2,10 +2,10 @@
 title: schtasks commands
 description: Reference article for the schtasks commands, which schedules commands and programs to run periodically or at a specific time, adds and removes tasks from the schedule, starts and stops tasks on demand, and displays and changes scheduled tasks.
 ms.topic: reference
-ms.author: jgerend
+ms.author: alalve
 author: JasonGerend
 manager: mtillman
-ms.date: 09/16/2020
+ms.date: 02/01/2023
 ---
 
 # schtasks commands
@@ -28,12 +28,12 @@ Schedules commands and programs to run periodically or at a specific time, adds 
 ## Syntax
 
 ```
-schtasks change
-schtasks create
-schtasks delete
-schtasks end
-schtasks query
-schtasks run
+schtasks /change
+schtasks /create
+schtasks /delete
+schtasks /end
+schtasks /query
+schtasks /run
 ```
 
 ### Parameters
@@ -47,6 +47,6 @@ schtasks run
 | [schtasks query](schtasks-query.md) | Displays tasks scheduled to run on the computer. |
 | [schtasks run](schtasks-run.md) | Starts a scheduled task immediately. The **run** operation ignores the schedule, but uses the program file location, user account, and password saved in the task to run the task immediately. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

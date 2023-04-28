@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 06/11/2021
+ms.date: 04/24/2023
 ms.topic: article
 ---
 # Storage Migration Service known issues
@@ -785,6 +785,153 @@ Under rare circumstances you may need to reset the Storage Migration Service dat
      ```CMD
      NET START SMS
      NET START SMSPROXY
+
+## Transfers halts with error: Unable to translate Unicode character 
+
+A running transfer halts. You receive event log error:
+
+```
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          
+Event ID:      3515
+Task Category: None
+Level:         Error
+Keywords:      
+User:          NETWORK SERVICE
+Computer:      
+Description:
+Couldn't transfer all of the files in the endpoint on the computer.
+Job: 
+Computer: 
+Destination Computer:
+Endpoint:
+State: Failed
+Source File Count: 833617
+Source File Size in KB: 45919696
+Succeeded File Count: 833438
+Succeeded File Size in KB: 45919696
+New File Count: 0
+New File Size in KB: 0
+Failed File Count: 179
+Error: -2146233087
+Error Message: The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9970000'.
+```
+
+Examining the [Storage Migration Service debug log](https://aka.ms/smslogs) shows:
+
+```
+03. 07. 2023-23:28:08.647 [Erro] ExceptionMessage : (Unable to translate Unicode character \uDB71 at index 1 to specified code page.), ExceptionToString: (System.Text.EncoderFallbackException: Unable to translate Unicode character \uDB71 at index 1 to specified code page.
+```
+
+This issue is caused by an unhandled unicode character that the Storage Migration Service cannot translate. To locate the name of the file(s) with the invalid character, edit the following sample PowerShell script and run it on the source computer, then examine the results and rename or remove the files:
+
+```
+# Sample PowerShell script to find files with unhandled unicode characters
+
+$FolderPath = "C:\temp"
+$OutputFilePath = "C:\temp\invalid_char_results.txt"
+$UnhandledChar = "\uDB71"
+
+Get-ChildItem -path $FolderPath -Recurse | ForEach-Object {
+ if ($_ -is [System.IO.FileInfo]) {
+  if ($_.Name -match $UnhandledChar) {
+   Add-Content $outputFilePath "$($_.FullName)"
+  }
+ }
+}
+```
+
+## Cut over fails at 77% or 30%
+
+When you're performing cut over, the operation hangs at "77% - adding the destination computer to the domain" or "30% - Can't unjoin domain." The issue only happens when:
+
+- A user who isn't a member of a built-in admin group in AD created the source or destination computer account in Active Directory.
+
+    Or
+
+- The migration user account isn't the same user who created the source computer account.
+
+Windows updates released on and after October 11, 2022 contain extra protections to address [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042), these extra protections caused the issue. The protections were further updated with the March 14, 2023 monthly cumulative update, adding a workaround option for this issue. The protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless:
+
+- The user attempting the operation is the creator of the existing account.
+
+- The user attempting the operation is a member of Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators created the computer account.
+
+- The user attempting the operation is a member of the "Domain controller: Allow computer account reuse during domain join." Group Policy setting for the computer account.
+
+To resolve this issue, use one of the following solutions.
+
+### Solution 1 - Use "Allow computer account re-use during domain join"
+
+1. Ensure all domain controllers, the source computer, destination computer, and SMS migration computer have installed the March 14, 2023 cumulative update and have been rebooted.
+1. Follow the steps in detailed in the Take Action section of [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8#bkmk_take_action).
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that was allowed to reuse computer accounts in step 2."
+
+### Solution 2 - Use the original account for migration
+
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that created or joined the source and destination computer to the domain.
+
+### Solution 3 (not recommended) - Use a high-privilege group
+
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is a member of one of the high-privilege Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators.
+
+> [!IMPORTANT]
+> If you have followed Solution 1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
+
+## Cut over fails for Windows Server 2008 R2
+
+When you're performing cut over from a source computer running Windows Server 2008 R2 or older, you
+receive the error "Couldn’t rename the computer from the domain." Using the Storage Migration
+Service Helper [Get-SmsLog](https://aka.ms/smslogs) command shows error `0x6D1` and "Object
+reference not set to an instance of an object". The following example is the log file output from
+the PowerShell `Get-SmsLog` command.
+
+```Log
+Line 360: 04/02/2023-14:06:02.877 [Info] UnjoinDomain(isLocal=False, server='2008R2.corp.contoso.com')    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2151]
+Line 361: 04/02/2023-14:06:02.948 [Erro] Attempt #1 failed to unjoin machine '2008R2.corp.contoso' from the domain with credential 'corp\ned'. Error 0x6D1.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2184]
+Line 362: 04/02/2023-14:06:02.954 [Erro] Fatal exception during cutover stage processing. Source: 2008R2.corp.contoso.com, CutoverStage: UnjoinSource, ErrorCode: 0x80004003, Message: Object reference not set to an instance of an object.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverOperation.cs::Run::1116]
+```
+
+Changes introduced in [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8) to combat [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042) cause this error.
+
+To resolve this issue, use one of the following solutions.
+
+### Solution 1 (using Windows Server 2008 R2 with valid ESU)
+
+For a source computer running Windows Server 2008 R2 with valid
+[Extended Support Updates](../../get-started/extended-security-updates-overview.md), first install
+the latest cumulative update. Once the cumulative update has been successfully installed, follow the
+steps detailed in the article
+[Cut over fails at 77% or 30%](#cut-over-fails-at-77-or-30)
+to resolve the issue.
+
+### Solution 2 (using Windows Server 2008 R2 without a valid ESU, Windows Server 2008 or Windows Server 2003)
+
+If your source computer is running Windows Server 2008 R2 without ESU, Windows Server 2008 or
+Windows Server 2003, you need to perform a manual cutover using the steps described in
+[How cutover works in Storage Migration Service](cutover.md), but with the following changes.
+
+1. Skip steps 3 and 4
+1. For step 5, you must sign in to the computer and remove it from the domain manually using
+   `SYSDM.CPL`, `NETDOM.exe`, or the `Remove-Compuer` PowerShell command. You can't remotely remove
+   the computer from the domain after
+   [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
+
+## Transfer validation warning "The destination proxy wasn't found"
+
+If you didn't already have the SMS Proxy service installed on the destination server before starting the transfer, Windows Admin Center installs it automatically. But under certain circumstances it will fail to register and display validation error "The destination proxy wasn't found".
+
+To resolve this issue, ensure the SMS Proxy service feature is installed on the destination server, then run the following PowerShell command on the Orchestrator server:
+
+```powershell
+Register-SMSProxy -ComputerName <destination server FQDN> -Force
+```
+
+Validation will then pass.
 
 ## See also
 

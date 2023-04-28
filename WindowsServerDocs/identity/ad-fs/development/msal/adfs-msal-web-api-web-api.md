@@ -3,8 +3,8 @@ title: AD FS MSAL Web API calling Web API (On Behalf of Scenario)
 description: Learn how to build a Web API calling another Web API.
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 08/09/2019
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

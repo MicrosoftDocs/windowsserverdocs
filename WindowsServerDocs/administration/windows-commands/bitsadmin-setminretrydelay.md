@@ -34,7 +34,7 @@ To set the minimum retry delay to 35 seconds for the job named *myDownloadJob*:
 bitsadmin /setminretrydelay myDownloadJob 35
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

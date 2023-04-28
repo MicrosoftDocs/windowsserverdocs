@@ -31,6 +31,6 @@ rundll32 <DLLname>
 
 Rundll32 can only call functions from a DLL explicitly written to be called by Rundll32.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

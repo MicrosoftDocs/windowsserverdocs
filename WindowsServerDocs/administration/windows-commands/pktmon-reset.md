@@ -19,7 +19,7 @@ Reset counters to zero.
 pktmon reset [-counters]
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

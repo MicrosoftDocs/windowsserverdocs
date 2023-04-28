@@ -3,8 +3,8 @@ title: AD FS MSAL Web app (server app) calling web APIs
 description: Learn how to build a web app signing-in users authenticated by AD FS 2019.
 author: billmath
 ms.author: billmath
-manager: daveba
-ms.date: 08/09/2019
+manager: amycolannino
+ms.date: 01/27/2023
 ms.topic: article
 ---
 

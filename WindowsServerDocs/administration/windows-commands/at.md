@@ -154,7 +154,7 @@ To run a command that is not an executable (.exe) file, precede the command with
 cmd /c dir > c:\test.out
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

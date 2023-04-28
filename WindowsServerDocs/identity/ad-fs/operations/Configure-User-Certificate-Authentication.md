@@ -4,8 +4,8 @@ ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
 author: jenfieldmsft
 ms.author: billmath
-manager: samueld
-ms.date: 11/14/2022
+manager: amycolannino
+ms.date: 01/30/2023
 ms.topic: article
 ---
 
@@ -37,7 +37,7 @@ Enable user certificate authentication as an intranet or extranet authentication
 
 Optional considerations include:
 
-- If you want to use claims based on certificate fields and extensions in addition to the [EKU claim type](https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure more claim passthrough rules on the Active Directory claims provider trust. See the [complete list of available certificate claims](#reference-complete-list-of-user-certificate-claim-types-and-example-values) later in this article.
+- If you want to use claims based on certificate fields and extensions in addition to the EKU claim type, `https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku`, configure more claim passthrough rules on the Active Directory claims provider trust. See the [complete list of available certificate claims](#reference-complete-list-of-user-certificate-claim-types-and-example-values) later in this article.
 - If you need to restrict access based on the type of certificate, you can use the additional properties on the certificate in AD FS issuance authorization rules for the application. Common scenarios are to allow only certificates provisioned by a mobile device management (MDM) provider or to allow only smart card certificates.
 
   > [!IMPORTANT]

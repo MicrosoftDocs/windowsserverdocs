@@ -86,7 +86,7 @@ To turn on BitLocker for operating system drive C, and to use hardware-based enc
 manage-bde –on C: -fet hardware
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

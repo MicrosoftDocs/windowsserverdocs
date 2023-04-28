@@ -43,7 +43,7 @@ wdsutil /get-alldriverpackages /server:MyWdsServer /show:all /filtertype:driverg
 wdsutil /get-alldriverpackages /show:drivers /filtertype:packagedateadded /operator:greaterorequal /value:2008/01/01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

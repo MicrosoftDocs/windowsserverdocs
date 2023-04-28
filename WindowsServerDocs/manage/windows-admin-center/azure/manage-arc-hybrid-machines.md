@@ -176,6 +176,35 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 :::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-arc-connect.png" alt-text="Screenshot showing the Connect button for Windows Admin Center on an Arc-enabled server." lightbox="../../media/manage-vm/windows-admin-center-in-azure-arc-connect.png":::
 
+## Configuring role assignments 
+
+Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role.
+
+> [!NOTE]
+> The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
+
+To configure role assignments for your hybrid machines using the Azure AD Portal experience:
+
+1. Open the hybird machine that you wish to manage using Windows Admin Center
+
+1. Select **Access control (IAM)**.
+
+1. Select **Add** > **Add role assignment** to open the Add role assignment page.
+
+1. Assign the following role. For detailed steps, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+
+    | Setting | Value |
+    | --- | --- |
+    | Role | **Windows Admin Center Administrator Login** |
+    | Assign access to | User, group, service principal, or managed identity |
+
+For more information on how to use Azure RBAC to manage access to your Azure subscription resources, see the following articles:
+
+- [Assign Azure roles using Azure CLI](/azure/role-based-access-control/role-assignments-cli)
+- [Assign Azure roles using the Azure CLI examples](/cli/azure/role/assignment#az-role-assignment-create). Azure CLI can also be used in the Azure Cloud Shell experience.
+- [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
+- [Assign Azure roles using Azure PowerShell](/azure/role-based-access-control/role-assignments-powershell).
+
 ## How it works
 
 By using Windows Admin Center in Azure, you can connect to your hybrid machine without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
@@ -271,7 +300,7 @@ Here are some tips to try in case something isn't working. For general  Windows 
 
 1. Ensure you have outbound connectivity to the necessary ports
     1. The hybrid machine should have outbound connectivity to the following endpoints:
-       - `*.wac.azure.com` or the WindowsAdminCenter ServiceTag
+       - `*.wac.azure.com`,`*.waconazure.com` or the WindowsAdminCenter ServiceTag
        - `pas.windows.net`
        - `*.servicebus.windows.net`
 
@@ -288,12 +317,13 @@ Here are some tips to try in case something isn't working. For general  Windows 
     1. Test connectivity by running the following command using PowerShell inside of your virtual machine:
 
         ```powershell
-        Invoke-RestMethod -Method GET -Uri https://wac.azure.com
+        Invoke-RestMethod -Method GET -Uri https://<your_region>.service.waconazure.com
         ```
 
         ```Expected output
-        You've found the Windows Admin Center in Azure APIs' home page. Please use the Azure portal to manage your virtual machines with Windows Admin Center.
+        Microsoft Certificate and DNS service for Windows Admin Center in the Azure Portal
         ```
+
 
 1. If you've allowed all outbound traffic and are getting an error from the command above, check that there are no firewall rules blocking the connection.
 

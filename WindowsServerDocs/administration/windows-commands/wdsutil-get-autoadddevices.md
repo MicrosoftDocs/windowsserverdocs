@@ -42,7 +42,7 @@ To see all of the rejected computers, type:
 wdsutil /verbose /Get-AutoaddDevices /Devicetype:RejectedDevices /Server:MyWDSServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil delete-autoadddevices command](wdsutil-delete-autoadddevices.md)

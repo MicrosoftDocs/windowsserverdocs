@@ -2,10 +2,10 @@
 title: Active Directory Federation Services in Azure | Microsoft Docs
 description: In this document you will learn how to deploy AD FS in Azure for high availablity.
 author: billmath
-manager: mtillman
+manager: amycolannino
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
 ms.topic: how-to
-ms.date: 10/28/2018
+ms.date: 01/27/2023
 ms.author: billmath
 ---
 

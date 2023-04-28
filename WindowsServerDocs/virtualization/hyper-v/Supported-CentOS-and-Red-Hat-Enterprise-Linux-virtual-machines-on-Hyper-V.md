@@ -61,7 +61,7 @@ In this section:
 
 -   (*blank*) - Feature not available
 ## RHEL/CentOS 9.x Series
-| **Feature**                                                                                                                              | **Host OS**                                              | **9.0**       |
+| **Feature**                                                                                                                              | **Host OS**                                              | **9.x**       |
 |------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------|
 | LIS Availability                                                                                                                         |                                                          | Built in      |
 | [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             |

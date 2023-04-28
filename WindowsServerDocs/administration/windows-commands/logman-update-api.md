@@ -64,7 +64,7 @@ To update an existing API trace counter called *trace_notepad*, for the executab
 logman update api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

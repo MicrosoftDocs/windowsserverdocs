@@ -50,7 +50,7 @@ wdsutil /remove-Image:Windows Vista with Officemediatype:Install
 ```
 wdsutil /verbose /remove-Image:Windows Vista with Office /Server:MyWDSServemediatype:Instal ImageGroup:ImageGroup1 /Filename:install.wim
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-image command](wdsutil-add-image.md)
 - [wdsutil copy-image command](wdsutil-copy-image.md)

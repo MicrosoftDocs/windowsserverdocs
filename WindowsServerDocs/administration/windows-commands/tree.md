@@ -49,6 +49,6 @@ To print a list of all the directories on drive C to a file, type:
 tree c:\ /f > <driveletter>:\<filepath>\filename.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

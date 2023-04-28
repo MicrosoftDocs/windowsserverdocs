@@ -39,7 +39,7 @@ To convert the selected dynamic disk to basic, type:
 convert basic
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

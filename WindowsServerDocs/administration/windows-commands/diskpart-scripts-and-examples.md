@@ -46,7 +46,7 @@ diskpart /s scriptname.txt > logfile.txt
 
 - When diskpart starts, the diskpart version and computer name display at the command prompt. By default, if diskpart encounters an error while attempting to perform a scripted task, diskpart stops processing the script and displays an error code (unless you specified the **noerr** parameter). However, diskpart always returns errors when it encounters syntax errors, regardless of whether you used the **noerr** parameter. The **noerr** parameter enables you to perform useful tasks such as using a single script to delete all partitions on all disks regardless of the total number of disks.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -47,7 +47,7 @@ To create a logical partition of 1000 megabytes in size, in the extended partiti
 create partition logical size=1000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

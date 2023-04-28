@@ -38,6 +38,6 @@ Performs tasks that are related to file allocation table (FAT) and NTFS file sys
 | [fsutil volume](fsutil-volume.md) | Manages a volume. Dismounts a volume, queries to see how much free space is available on a disk, or finds a file that is using a specified cluster. |
 | [fsutil wim](fsutil-wim.md) | Provides functions to discover and manage WIM-backed files. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

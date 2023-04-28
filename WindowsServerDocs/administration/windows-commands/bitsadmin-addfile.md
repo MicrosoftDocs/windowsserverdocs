@@ -37,7 +37,7 @@ bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
 
 Repeat this call for each file to add. If multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

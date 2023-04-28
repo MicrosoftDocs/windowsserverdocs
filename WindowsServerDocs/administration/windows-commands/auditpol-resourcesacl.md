@@ -85,7 +85,7 @@ To list the global object access auditing entries for a particular user that are
 auditpol /resourceSACL /type:File /view /user:MYDOMAIN\myuser
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
