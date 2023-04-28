@@ -31,7 +31,7 @@ sections:
         answer: |
           Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
 
-      - question: Can I deploy and use Windows LAPS even if my domain is not yet at Windows Server 2016 Domain Functional Level?
+      - question: Can I deploy and use Windows LAPS even if my domain isn't yet at Windows Server 2016 Domain Functional Level?
         answer: |
           Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
 
@@ -43,6 +43,12 @@ sections:
           the 3rd-party product to modify the account's password with a
           `STATUS_POLICY_CONTROLLED_ACCOUNT\ERROR_POLICY_CONTROLLED_ACCOUNT` error. Each such
           rejection is noted with a 10031 event in the Windows LAPS event log channel.
+
+      - question: Why can't I change the password of a local admin account currently managed by Windows LAPS?
+        answer: |
+          Windows LAPS prevents accidental or spurious changes to the managed account's password. This protection
+          helps prevent a torn state situation where the password stored in the directory doesn't match the password
+          stored locally on the device. See [Account password tampering protection](laps-overview.md#account-password-tampering-protection).
 
       - question: Why isn't the Windows LAPS PowerShell module hosted on GitHub, PowerShell Gallery, or similar?
         answer: |
