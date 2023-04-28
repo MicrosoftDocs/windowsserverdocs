@@ -198,6 +198,10 @@ Password reset retry count: 1
 Error code: 80070032
 ```
 
+## Client event log versus AD domain controller event log
+
+The Windows LAPS event log channel only tracks events related to the local machine acting as a client. The Windows LAPS event log channel on an Active Directory domain controller will only have events related to management of the local DSRM account (if enabled), and will NOT have any events related to domain-join client behaviors.
+
 ## Next steps
 
 - [Configure Windows LAPS for Windows Server Active Directory](laps-management-user-interface.md)
