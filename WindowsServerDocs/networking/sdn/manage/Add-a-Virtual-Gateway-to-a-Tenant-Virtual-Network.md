@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 03/01/2023
+ms.date: 03/28/2023
 ---
 # Add a virtual gateway to a tenant virtual network
 
@@ -255,9 +255,7 @@ The Windows PowerShell example scripts and commands in this topic demonstrate ho
 
       # Update the BGP Router properties
       $bgpRouterproperties.ExtAsNumber = "0.64512"
-      $bgpRouterproperties.RouterId = "192.168.0.2"
-      $bgpRouterproperties.RouterIP = @("192.168.0.2")
-
+      
       # Add the new BGP Router for the tenant
       $bgpRouter = New-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_BgpRouter1" -Properties $bgpRouterProperties -Force
 
@@ -407,9 +405,6 @@ $bgpRouter.ResourceId = "Contoso_BgpRouter1"
 $bgpRouter.Properties = New-Object Microsoft.Windows.NetworkController.VGwBgpRouterProperties
 
 $bgpRouter.Properties.ExtAsNumber = "0.64512"
-$bgpRouter.Properties.RouterId = "192.168.0.2"
-$bgpRouter.Properties.RouterIP = @("192.168.0.2")
-
 $bgpRouter.Properties.BgpPeers = @()
 
 # Create BGP Peer Object(s)

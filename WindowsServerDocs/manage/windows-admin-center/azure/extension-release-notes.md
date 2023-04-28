@@ -20,6 +20,18 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.0.0.313 - April 2023
+
+### New features
+- Introduced Azure AD authentication for Azure Stack HCI. Note that this functionality is in preview. Please create a support ticket for all issues.
+- Introduced a **Network** tool
+- Introduced Virtual Machine Live Storage Migration
+- Introduced new security experiences for Azure Stack HCI clusters with the supplemental package
+
+### Fixed
+- If a prior installation of Windows Admin Center exists on your machine, the extension will first uninstall it before installing Windows Admin Center in Azure
+- Fixed the infinite loading of the Remote Desktop tool
+
 ## Version 0.0.0.228 - January 2023
 
 ### New features

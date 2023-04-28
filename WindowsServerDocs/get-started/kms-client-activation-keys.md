@@ -4,19 +4,19 @@ description: Get the product keys needed for setup and activation of Windows Ser
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: alalve
-ms.date: 03/07/2023
+ms.date: 04/26/2023
 ms.prod: windows-server
 ---
 
 # Key Management Services (KMS) client activation and product keys
 
-To use KMS, you need to have a KMS host available on your local network. Computers that activate with a KMS host need to have a specific product key. This key is sometimes referred to as the KMS client key, but it is formally known as a Microsoft Generic Volume License Key (GVLK). Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed as the relevant GVLK is already there.
+To use KMS, you need to have a KMS host available on your local network. Computers that activate with a KMS host need to have a specific product key. This key is sometimes referred to as the KMS client key, but it's formally known as a Microsoft Generic Volume License Key (GVLK). Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed as the relevant GVLK is already there.
 
-There are some scenarios, however, where you will need to add the GVLK to the computer you wish to activate against a KMS host, such as:
+There are some scenarios, however, where you'll need to add the GVLK to the computer you wish to activate against a KMS host, such as:
 
 - Converting a computer from using a Multiple Activation Key (MAK)
 - Converting a retail license of Windows to a KMS client
-- If the computer was previously a KMS host.
+- If the computer was previously a KMS host
 
 > [!IMPORTANT]
 > To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see how to [create a KMS host](kms-create-host.md) to learn more.
@@ -25,7 +25,7 @@ There are some scenarios, however, where you will need to add the GVLK to the co
 
 ## Install a product key
 
-If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list below. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
+If you're converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list below. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
 
 ```
 slmgr /ipk <product key>
@@ -39,7 +39,7 @@ slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
 
 ## Generic Volume License Keys (GVLK)
 
-In the tables that follow, you will find the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
+In the tables that follow, you'll find the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
 
 ### Windows Server (LTSC versions)
 
@@ -75,6 +75,11 @@ In the tables that follow, you will find the GVLKs for each version and edition 
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
+
+> [!IMPORTANT]
+> Windows Server, version 20H2 reached end of service on August 9, 2022. This includes the retirement of Windows Server Semi-Annual Channel (SAC) with **[no future releases](servicing-channels-comparison.md#semi-annual-channel)** and will no longer receive security updates after August 9, 2022.
+>
+> Customers using Windows Server SAC should move to **[Azure Stack HCI](/azure-stack/hci/)**. Alternatively, customers may use the Long-Term Servicing Channel of Windows Server.
 
 ### Windows 11 and Windows 10 (Semi-Annual Channel versions)
 

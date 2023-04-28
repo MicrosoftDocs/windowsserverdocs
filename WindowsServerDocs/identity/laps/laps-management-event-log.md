@@ -12,7 +12,7 @@ ms.topic: conceptual
 Windows Local Administrator Password Solution (Windows LAPS) has a dedicated event log channel. All Windows LAPS operations are tracked with rich eventing. Learn about key events and how to view the log.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## View the event log
 
@@ -197,6 +197,10 @@ Account RID: 1087
 Password reset retry count: 1
 Error code: 80070032
 ```
+
+## Client event log versus AD domain controller event log
+
+The Windows LAPS event log channel contains events related to the local machine acting as a client. The Windows LAPS event log channel on an Active Directory domain controller only contains events related to management of the local DSRM account (if enabled), and never contains any events related to domain-joined client behaviors.
 
 ## Next steps
 

@@ -1,12 +1,12 @@
 ---
-title: Manage Hyper-Converged Infrastructure with Windows Admin Center
+title: Manage Azure Stack HCI
 description: Manage Hyper-Converged Infrastructure with Windows Admin Center (Project Honolulu)
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.date: 03/01/2019
+ms.date: 03/15/2023
 ---
-# Manage Hyper-Converged Infrastructure with Windows Admin Center
+# Manage Azure Stack HCI
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
@@ -20,7 +20,7 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 > [!IMPORTANT]
 > Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](../overview.md)
 
-## What is Windows Admin Center
+## What is Windows Admin Center?
 
 [Windows Admin Center](../overview.md) is the next-generation management tool for Windows Server, the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an Internet connection. You can use Windows Admin Center to manage and monitor Hyper-Converged Infrastructure running Windows Server 2016 or Windows Server 2019.
 
@@ -31,15 +31,15 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 Highlights of Windows Admin Center for Hyper-Converged Infrastructure include:
 
 - **Unified single-pane-of-glass for compute, storage, and soon networking.** View your virtual machines, host servers, volumes, drives, and more within one purpose-built, consistent, interconnected experience.
-- **Create and manage Storage Spaces and Hyper-V virtual machines.** Radically simple workflows to create, open, resize, and delete volumes; and create, start, connect to, and move virtual machines; and much more.
-- **Powerful cluster-wide monitoring.** The dashboard graphs memory and CPU usage, storage capacity, IOPS, throughput, and latency in real-time, across every server in the cluster, with clear alerts when something's not right.
+- **Create and manage Storage Spaces and Hyper-V virtual machines.** Radically simple workflows to create, open, resize, and delete volumes, or to create, start, connect to, and move virtual machines, and much more.
+- **Powerful cluster-wide monitoring.** The dashboard graphs memory and CPU usage, storage capacity, IOPS, throughput, and latency in real-time, across every server in the cluster, and with clear alerts when something's not right.
 - **Software Defined Networking (SDN) support.** Manage and monitor virtual networks, subnets, connect virtual machines to virtual networks, and monitor SDN infrastructure.
 
 Windows Admin Center for Hyper-Converged Infrastructure is being actively developed by Microsoft. It receives frequent updates that improve existing features and add new features.
 
 ## Before you start
 
-To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or Windows Server 2019, and have Hyper-V and Storage Spaces Direct enabled. Optionally, it can also have Software Defined Networking enabled and managed through Windows Admin Center.
+To manage your cluster as Hyper-Converged Infrastructure in Windows Admin Center, it needs to be running Windows Server 2016 or Windows Server 2019 and have Hyper-V and Storage Spaces Direct enabled. Optionally, it can also have Software Defined Networking enabled and managed through Windows Admin Center.
 
 > [!Tip]
 > Windows Admin Center also offers a general-purpose management experience for any cluster supporting any workload, available for Windows Server 2012 and later. If this sounds like a better fit, when you add your cluster to Windows Admin Center, select [**Failover Cluster**](manage-failover-clusters.md) instead of **Hyper-Converged Cluster**.
@@ -274,14 +274,14 @@ You can also configure the virtual network when creating a virtual machine.
 1. Select **GPUs** from the navigation on the left side. 
 2. View the available GPUs from your clustered VMs and provide GPU acceleration to workloads running in the clustered VMs through Discrete Device Assignment (DDA). [Learn more about using GPUs with clustered VMs.](https://aka.ms/useGPUWithClusteredVM)
 
-[![Here is a screenshot of how you can manage your GPUs.](../media/manage-hyper-converged/gpu-tool.png)](../media/manage-hyper-converged/gpu-tool.png#lightbox)
+![Here is a screenshot of how you can manage your GPUs.](../media/manage-hyper-converged/gpu-tool.png)
 
 ### Security tool
 
 1. Select **Security** from the navigation on the left side. 
 2. Select the **Secured-core** tab and enable or disable the available security features. 
 
-[![Here is a screenshot of how you can check the security of your resources.](../media/manage-hyper-converged/security-tool.png)](../media/manage-hyper-converged/security-tool.png#lightbox)
+![Here is a screenshot of how you can check the security of your resources.](../media/manage-hyper-converged/security-tool.png)
 
 ## Give us feedback
 

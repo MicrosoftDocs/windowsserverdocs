@@ -36,7 +36,7 @@ Here are a few things you can use Windows Admin Center for:
 Here's a video to give you an overview, followed by a poster giving more details:
 > [!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
-[![Windows Admin Center poster](media/WAC1910Poster_thumb_small.PNG)](media/WAC1910Poster_thumb.png)
+![Windows Admin Center poster](media/WAC1910Poster_thumb_small.PNG)
 
 [Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/main/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
