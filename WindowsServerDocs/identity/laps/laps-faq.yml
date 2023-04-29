@@ -38,8 +38,8 @@ sections:
       - question: Do I need to deploy a Windows Server 2022 or 2019 DC in order to extend my forest's schema with the Windows LAPS schema extensions?
         answer: |
           No - you can run the `Update-LapsADSchema` cmdlet from any operating system updated with the Windows LAPS
-          feature as long as the client credential are authorized to modify the Active Directory schema. See
-           [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
+          feature. The only requirement is that the client credentials are authorized to modify the Active Directory
+          schema. See [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
 
       - question: Is it supported to run 3rd-party local account password manager products side-by-side with Windows LAPS?
         answer: |  
