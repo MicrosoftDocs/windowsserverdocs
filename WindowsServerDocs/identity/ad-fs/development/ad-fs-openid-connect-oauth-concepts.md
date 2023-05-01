@@ -4,8 +4,9 @@ description: Learn about AD FS modern authentication concepts.
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 05/01/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # AD FS OpenID Connect/OAuth Concepts
@@ -148,7 +149,7 @@ Single logout results in ending all the client sessions using the session ID. AD
 |-----|-----|
 |/authorize|AD FS returns an authorization code that can be used to obtain the access token|
 |/token|AD FS returns an access token that can be used to access the resource (Web API)|
-|/userinfo|AD FS returns claims about the authenticated user|
+|/userinfo|AD FS returns the subject claim|
 |/devicecode|AD FS returns the device code and user code|
 |/logout|AD FS logs out the user|
 |/keys|AD FS public keys used to sign responses|
