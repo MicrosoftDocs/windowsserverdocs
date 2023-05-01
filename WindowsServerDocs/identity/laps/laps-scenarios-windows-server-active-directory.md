@@ -34,7 +34,7 @@ Microsoft strongly recommends customer upgrade to the latest available operating
 
 ## Update the Windows Server Active Directory schema
 
-The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest.
+The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. This operation can be performed on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but may also be performed on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
 
 ```powershell
 PS C:\> Update-LapsADSchema
