@@ -63,7 +63,7 @@ The following prerequisites are required when using Azure AD Multi-Factor Authen
 - [Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 > [!NOTE]
-> Azure AD and Azure MFA are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  You do not need individual subscriptions if you have either of these applications installed.
+> Azure AD and Azure AD Multi-Factor Authentication are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  You do not need individual subscriptions if you have either of these applications installed.
 
 - A Windows Server 2016 AD FS on-premises environment.
   - The server needs to be able to communicate with the following URLs over port 443.
