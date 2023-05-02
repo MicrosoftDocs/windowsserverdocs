@@ -88,12 +88,20 @@ sections:
         answer: |
           The new snap-in isn't currently installed as part of RSAT. See [Windows LAPS snap-in availability](laps-management-user-interface.md#windows-laps-snap-in-availability).
 
+      - question: Are Windows LAPS DSRM passwords available during a catastrophic AD disaster scenario?
+        answer: |
+          Windows LAPS DSRM password backup is only one component of a comprehensive Active Directory disaster recovery plan. For more information, see [DSRM password support](laps-concepts.md#dsrm-password-support).
+
       - question: Microsoft promotes a password-less strategy and direction. Why was a password-based feature like Windows LAPS added to Windows?
         answer: |
           All Windows LAPS scenarios involve the management of a Windows local account's password
           for use with help desk tasks, device recovery, and other scenarios. Since Windows only
           supports password-based authentication for local accounts, password management is
           necessary.
+
+      - question: How can I submit unanswered questions or feature requests?
+        answer: |
+          See [Submitting feedback, feature requests, or other questions](laps-overview.md#submitting-feedback,-feature requests,-or-other-questions)
 
 additionalContent: |
     ## Next steps
