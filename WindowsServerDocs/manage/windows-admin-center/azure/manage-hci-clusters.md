@@ -227,8 +227,8 @@ $subscription = "<subscription_id>"
 $port = "6516"
         
 #Deploy Windows Admin Center
-$Setting = @{ "port" = $port }
-New-AzStackHciExtension -ArcSettingName "default" -Name "AdminCenter" -ResourceGroupName $resourceGroup -ClusterName $clusterName -ExtensionParameterPublisher "Microsoft.AdminCenter" -ExtensionParameterSetting $Setting -ExtensionParameterType "AdminCenter" -SubscriptionId $subscription -ExtensionParameterTypeHandlerVersion "0.0"
+$setting = @{ "port" = $port }
+New-AzStackHciExtension -ArcSettingName "default" -Name "AdminCenter" -ResourceGroupName $resourceGroup -ClusterName $clusterName -ExtensionParameterPublisher "Microsoft.AdminCenter" -ExtensionParameterSetting $setting -ExtensionParameterType "AdminCenter" -SubscriptionId $subscription -ExtensionParameterTypeHandlerVersion "0.0"
         
 #Allow connectivity
 $patch = @{ "properties" =  @{ "connectivityProperties" = @{"enabled" = $true}}}
