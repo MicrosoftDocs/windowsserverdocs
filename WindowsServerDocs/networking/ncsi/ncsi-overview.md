@@ -1,6 +1,6 @@
 ---
 title: Network Connectivity Status Indicator Overview
-description: The Network Connectivity Status Indicator (NCSI) helps troubleshoot connectivity issues via network probing methods.
+description: The Network Connectivity Status Indicator (NCSI) helps to detect network connectivity and troubleshoot via network probing and passive polling.
 ms.topic: article
 ms.date: 04/26/2023
 ms.author: alalve
@@ -9,11 +9,13 @@ author: rnitsch
 
 # NCSI overview
 
-The Network Connectivity Status Indicator (NCSI) is a feature that provides a visual display of the current network connection status, including network adapter details and their configurations.
+The Network Connectivity Status Indicator (NCSI) is a feature that provides a visual display of the current network connection status. The NCSI icon is found on the bottom-right of the taskbar by default ![The Network Connectivity Status Indicator icon showing as connected.](../media/NCSI/ncsi-icon-connected.jpg).
+
+The network status can be viewed by clicking this icon and further network adapter details can be seen by following the **Network and Internet settings** link.
 
 ## NCSI functionality
 
-NCSI uses network probes that are network requests sent to an endpoint followed by a response. NCSI’s probe, referred to as an “active probe”, is a HTTP request/response. It also uses passive polling, referred to as a “passive probe”, although not a true function of a probe.
+NCSI uses network probes that are network requests sent to an endpoint followed by a response. NCSI’s probe, referred to as an “active probe”, is a HTTP request/response. It also uses passive polling, referred to as "passive probe", which examines network traffic passively to determine connectivity.
 
 ### What is the purpose of NCSI in Windows?
 
@@ -23,12 +25,12 @@ This seems trivial until you consider that it must perform checks for a multitud
 
 ### Active probing
 
-An active probe can either be a request sent to a web probe server or a DNS lookup for a specific NCSI address. The server is hosted by Microsoft on the internet but can also be an enterprise’s own private probe server, which is a more uncommon scenario. When NCSI sends the probe and receives a valid response, it considers the client device to have internet connectivity.
+An active probe is an http request sent to a web probe server for a specific NCSI address. The server is hosted by Microsoft on the internet but can also be an enterprise’s own private probe server, which is a more uncommon scenario. When NCSI sends the probe and receives a valid response, it considers the client device to have internet connectivity.
 
 When NCSI doesn’t detect internet connectivity, it's either that the probe is not completing, or the probe is completing with failure. Some reasons for not completing can be device, network configuration, or other environmental issues. An example of completing with a failure is receiving an **HTTP 403 Forbidden** response, usually indicating a proxy blocked the outbound probe.
 
 > [!WARNING]
-> Do not disable active probing as a resolution to a NCSI issue as passive probing alone is unable to determine all network connectivity issues.
+> Do not disable active probing as a resolution to a NCSI issue as passive polling alone is unable to determine all network connectivity issues.
 
 The HTTP probe hosts and contents are predefined and found in the following registry path:
 
@@ -36,11 +38,11 @@ The HTTP probe hosts and contents are predefined and found in the following regi
 HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet
 ```
 
-NCSI sends separate IPv4 and IPv6 active probes in parallel. If either probe succeeds, NCSI determines that the device has network connectivity.
+NCSI sends separate IPv4 and IPv6 active probes in parallel. If either probe succeeds, NCSI determines that the device has internet connectivity.
 
 ### Passive probing
 
-Similar to active probing, passive probing uses learned information from received packets to determine network status. Both probing methods complement one another as they determine intermittent network conditions differently. Certain conditions prevent active probes from functioning correctly, such as, a temporary router having intermittent connectivity issue where a client machine doesn't experience any change in the interface state. No additional active probes are sent until the client machine changes to passive probing which can determine the connectivity status due to lack of inbound packets from the internet.
+Similar to active probing, passive probing uses learned information from received packets to determine network status. Both probing methods complement one another as they determine intermittent network conditions differently. Certain conditions prevent active probes from functioning correctly, such as, a temporary router having intermittent connectivity issue where a client device doesn't experience any change in the interface state. In case of such intermittent connectivity issues, which can cause active probing to have false negative results, passive polling can determine the connectivity status due to network traffic and keep internet connectivity.
 
 > [!NOTE]
 > As of Windows 11, NCSI is hosted within the Network List Service (aka the Network Profile Manager). Previous OS iterations were hosted in the Network Location Awareness (NLA) service.
@@ -51,15 +53,10 @@ Both active and passive probing may encounter issue's. To learn more, see [reaso
 
 ### Proxies
 
-NCSI works together with proxies in two main ways:
-
-1. Discovering proxies and storing proxy information.
-1. Using stored proxy information in the execution of active probes.
-
- The most common problems with active probes not leaving enterprise network spaces to the internet are due to proxies:
+NCSI works together with proxies by using stored proxy information in the execution of active probes. The most common problems with active probes not leaving enterprise network spaces to the internet are due to:
 
 - A proxy exists but isn't yet discovered.
-- A proxy was discovered by NCSI but the client machine can't reach it at the time of the probe.
+- A proxy was discovered but the client device can't reach it at the time of the probe.
 - The Proxy Auto-Config (PAC) file is misconfigured and hasn't mapped `www.msftconnecttest.com` to the correct proxy.
 - The proxy is misconfigured.
 
@@ -83,8 +80,6 @@ Captive portals may send an HTTP redirect or an empty response to the probe inst
 - An active HTTP probe was sent but not via a known proxy.
 - The probe got a response.
 - The response payload didn't match the expected content: “Microsoft Connect Test”.
-
-Whenever NCSI is behind a known hotspot, it moves into “hotspot mode” during which it ignores receipt of passive probed internet packets. Hotspot mode also exits after a default of 60 hotspot polls.
 
 ## Additional references
 

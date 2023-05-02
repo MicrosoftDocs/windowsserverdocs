@@ -60,14 +60,7 @@ If NCSI sees that the connectivity is local-only, the following conditions are t
 
 ## What is the default system minimum hop count?
 
-The default hop count is **8** but this isn't always optimal for enterprises. A value of **3** is suitable for most enterprise infrastructures. Passive probe efficiency can be improved by creating a new DWORD regkey **MinimumInternetHopCount** in the following path:
-
-```registry
-HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet
-```
-
-> [!NOTE]
-> Do not add this regkey when troubleshooting a new NCSI scenario. It's more than likely an active probe issue.
+The default hop count is **8** but this isn't always optimal for enterprises. A value of **3** is suitable for most enterprise infrastructures.
 
 ## When and how often does the passive probe run?
 
