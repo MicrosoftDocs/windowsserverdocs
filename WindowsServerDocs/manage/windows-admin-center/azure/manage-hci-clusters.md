@@ -231,7 +231,8 @@ $Setting = @{ "port" = $port }
 New-AzStackHciExtension -ArcSettingName "default" -Name "AdminCenter" -ResourceGroupName $resourceGroup -ClusterName $clusterName -ExtensionParameterPublisher "Microsoft.AdminCenter" -ExtensionParameterSetting $Setting -ExtensionParameterType "AdminCenter" -SubscriptionId $subscription -ExtensionParameterTypeHandlerVersion "0.0"
         
 #Allow connectivity
-$patch = @{ "properties" =  @{ "connectivityProperties" = @{"enabled" = $true}}}                                                                            $patchPayload = ConvertTo-Json $patch
+$patch = @{ "properties" =  @{ "connectivityProperties" = @{"enabled" = $true}}}
+$patchPayload = ConvertTo-Json $patch
 Invoke-AzRestMethod -Method PATCH -Uri "https://management.azure.com/subscriptions/$subscription/resourceGroups/$resourceGroup/providers/Microsoft.AzureStackHCI/clusters/$clusterName/ArcSettings/default?api-version=2023-02-01" -Payload $patchPayload
 ```
 
