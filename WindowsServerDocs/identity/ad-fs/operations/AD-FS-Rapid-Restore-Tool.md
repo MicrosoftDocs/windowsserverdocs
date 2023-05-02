@@ -5,15 +5,16 @@ title: AD FS Rapid Restore Tool
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 05/01/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # AD FS Rapid Restore Tool
 
 ## Overview
 
-Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
+Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there's a problem.
 The new AD FS Rapid Restore tool provides a way to restore AD FS data without requiring a full backup and restore of the operating system or system state. You can use the new tool to export AD FS configuration either to Azure or to an on-premises location.  Then you can apply the exported data to a fresh AD FS installation, re-creating or duplicating the AD FS environment.
 
 ## Scenarios
@@ -56,7 +57,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 
 ### System requirements
 
-- This tool works for AD FS in Windows Server 2012 R2 and later.
+- This tool works for AD FS in Windows Server 2016 and later.
 - The required .NET framework is at least 4.0.
 - The restore must be done on an AD FS server of the same version as the backup and that uses the same Active Directory account as the AD FS service account.
 
@@ -65,7 +66,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 To create a backup, use the Backup-ADFS cmdlet. This cmdlet backs up the AD FS configuration, database, SSL certificates, etc.
 
 The user has to be at least a local admin to run this cmdlet.
-To backup the Active Directory DKM container (required in the default AD FS configuration), the user either has to be domain admin, needs to pass in the AD FS service account credentials, or has access to the DKM container.  If you are using a gMSA account, the user must be domain admin or have permissions to the container; you cannot provide the gMSA credentials.
+To backup the Active Directory DKM container (required in the default AD FS configuration), the user either has to be domain admin, needs to pass in the AD FS service account credentials, or has access to the DKM container.  If you're using a gMSA account, the user must be domain admin or have permissions to the container; you can't provide the gMSA credentials.
 
 The backup will be named according to the pattern "adfsBackup_ID_Date-Time". It will contain the version number, date and time that the backup was done.
 The cmdlet takes the following parameters:
@@ -82,7 +83,7 @@ Parameter Sets
 "FileSystem" indicates that the user wants to store it in a folder locally or in the network
 "Azure" indicates the user wants to store it in the Azure Storage Container
 When the user performs the backup, they select the backup location, either the File System or in the cloud.
-For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn't exist, it is created during the backup.
+For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn't exist, it's created during the backup.
 For the file system to be used, a storage path must be given. In that directory, a new directory will be created for each backup. Each directory created will contain the backed up files.
 
 - **EncryptionPassword &lt;string&gt;** - The password that is going to be used to encrypt all the backed up files before storing it
@@ -93,7 +94,7 @@ For the file system to be used, a storage path must be given. In that directory,
 
 - **StoragePath &lt;string&gt;** - The location the backups will be stored in
 
-- **ServiceAccountCredential &lt;pscredential&gt;** - specifies the service account being used for the AD FS Service running currently. This parameter is only needed if the user would like to backup the DKM and is not domain admin or does not have access to the container's contents.
+- **ServiceAccountCredential &lt;pscredential&gt;** - specifies the service account being used for the AD FS Service running currently. This parameter is only needed if the user would like to backup the DKM and isn't domain admin or doesn't have access to the container's contents.
 
 - **BackupComment &lt;string[]&gt;** - An informational string about the backup that will be displayed during the restore, similar to the concept of Hyper-V checkpoint naming. The default is an empty string
 
@@ -130,7 +131,7 @@ Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testE
 
 To apply a configuration created using Backup-ADFS to a new AD FS installation, use the Restore-ADFS cmdlet.
 
-This cmdlet creates a new AD FS farm using the cmdlet `Install-AdfsFarm` and restores the AD FS configuration, database, certificates, etc.  If the AD FS role has not been installed on the server, the cmdlet will install it.  The cmdlet checks the restore location for existing backups and prompts the user to choose an appropriate backup based on the date/time it was taken and any backup comment that the user might have attached to the backup. If there are multiple AD FS configurations with different federation service names, then the user is prompted to first choose the appropriate AD FS configuration.
+This cmdlet creates a new AD FS farm using the cmdlet `Install-AdfsFarm` and restores the AD FS configuration, database, certificates, etc.  If the AD FS role hasn't been installed on the server, the cmdlet will install it.  The cmdlet checks the restore location for existing backups and prompts the user to choose an appropriate backup based on the date/time it was taken and any backup comment that the user might have attached to the backup. If there are multiple AD FS configurations with different federation service names, then the user is prompted to first choose the appropriate AD FS configuration.
 The user has to be both local and domain admin to run this cmdlet.
 
 
@@ -155,7 +156,7 @@ The cmdlet takes the following parameters:
 
 - **StoragePath &lt;string&gt;** - The location the backups will be stored in
 
-- **ADFSName &lt; string &gt;** - The name of the federation that was backed up and is going to be restored. If this is not provided and there is only one federation service name then that will be used. If there is more than one federation service backed up to the location, then the user is prompted to choose one of the backed up Federation Services.
+- **ADFSName &lt; string &gt;** - The name of the federation that was backed up and is going to be restored. If this isn't provided and there's only one federation service name then that will be used. If there's more than one federation service backed up to the location, then the user is prompted to choose one of the backed up Federation Services.
 
 - **ServiceAccountCredential &lt; pscredential &gt;** - specifies the service account that will be used for the new AD FS Service being restored
 
@@ -292,7 +293,7 @@ Release: July 2018
 
 **Fixed issues:**
 
-- Bug fix: handle service account passwords that have special characters in them (ie, '&')
+- Bug fix: handle service account passwords that have special characters in them (that is, '&')
 - Bug fix: restoration fails because Microsoft.IdentityServer.Servicehost.exe.config is being used by another process
 
 
