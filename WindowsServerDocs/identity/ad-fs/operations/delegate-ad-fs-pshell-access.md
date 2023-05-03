@@ -1,15 +1,15 @@
 ---
-title: Delegate AD FS Powershell commandlet access to non-admin users
-description: This article describes how to delegate permissions for AD FS PowerShell commandlets to non-admins.
+title: Delegate AD FS PowerShell commandlet access to nonadmin users
+description: This article describes how to delegate permissions for AD FS PowerShell commandlets to nonadmins.
 author: billmath
 ms.author: billmath
 ms.date: 04/01/2023
 ms.topic: article
 ---
 
-# Delegate AD FS Powershell commandlet access to non-admin users
+# Delegate AD FS PowerShell commandlet access to nonadmin users
 
-By default, AD FS administration via PowerShell can only be accomplished by AD FS administrators. For many large organizations, this may not be a viable operational model when dealing with other personas such as a help desk personnel.
+By default, only AD FS administrators can perform AD FS administration via PowerShell. For many large organizations, this may not be a viable operational model when dealing with other personas such as a help desk personnel.
 
 With Just Enough Administration (JEA), customers now can delegate permissions for specific commandlets to different personnel groups.
 
@@ -54,7 +54,7 @@ Install-ADServiceAccount gMSAcontoso
 
 ### Grant the gMSA Account admin rights
 
-If the farm is using delegated administration, grant the gMSA Account admin rights by adding it to the existing group which has delegated admin access.
+If the farm is using delegated administration, grant the gMSA Account admin rights by adding it to the existing group, which has delegated admin access.
 
 If the farm isn't using delegated administration, grant the gMSA account admin rights by making it the local administration group on all of the AD FS servers.
 
@@ -80,7 +80,7 @@ Follow the instructions to create the [JEA session configuration](/powershell/sc
 
 Role capabilities are referenced by the flat name (filename without the extension) of the role capability file. If multiple role capabilities are available on the system with the same flat name, PowerShell uses its implicit search order to select the effective role capability file. It doesn't give access to all role capability files with the same name.
 
-To specify a Role Capability File with a path, use the `RoleCapabilityFiles` argument. For a subfolder, JEA looks for valid Powershell modules that contain a `RoleCapabilities` subfolder, where the `RoleCapabilityFiles` argument should be modified to be `RoleCapabilities`.
+To specify a Role Capability File with a path, use the `RoleCapabilityFiles` argument. For a subfolder, JEA looks for valid PowerShell modules that contain a `RoleCapabilities` subfolder, where the `RoleCapabilityFiles` argument should be modified to be `RoleCapabilities`.
 
 Sample session configuration file:
 
@@ -96,7 +96,7 @@ RoleDefinitions = @{ JEAcontoso = @{ RoleCapabilityFiles = 'C:\Program Files\Win
 
 Save the session configuration file.
 
-It's strongly recommended to [test your session configuration file](/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile) if you have edited the pssc file manually using a text editor to ensure the syntax is correct. If a session configuration file doesn't pass this test, it isn't successfully registered on the system.
+It's recommended to [test your session configuration file](/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile) if you have edited the pssc file manually using a text editor to ensure the syntax is correct. If a session configuration file doesn't pass this test, it isn't successfully registered on the system.
 
 ### Install the JEA session configuration on the AD FS server
 
@@ -108,7 +108,7 @@ Register-PSSessionConfiguration -Path .\JEASessionConfig.pssc -name "AccountActi
 
 ## Operational instructions
 
-After it is set up, JEA logging and auditing can be used to determine the if the correct users have access to the JEA endpoint.
+After it's set up, JEA logging and auditing can be used to determine if the correct users have access to the JEA endpoint.
 
 To use the delegated commands:
 
