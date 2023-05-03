@@ -40,7 +40,7 @@ ng generate component {!ModuleName}
 
 Example usage:
 
-```
+```powershell
 cd .\src\app
 ng generate module ManageFooWorksPortal
 ng generate component ManageFooWorksPortal
@@ -105,9 +105,9 @@ Use the same module name that you used in the preceding step.
 
 1. Open file ```{!module-name}.module.ts```, found with the following naming convention:
 
-| Value | Explanation | Example filename |
-| ----- | ----------- | ------- |
-| ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.module.ts``` |
+   | Value | Explanation | Example filename |
+   | ----- | ----------- | ------- |
+   | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.module.ts``` |
 
 1. Add content to the file:
 
@@ -133,44 +133,46 @@ Use the same module name that you used in the preceding step.
 
 1. Open file ```{!module-name}.component.ts```, found with the following naming convention:
 
-| Value | Explanation | Example filename |
-| ----- | ----------- | ------- |
-| ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.component.ts``` |
+   | Value | Explanation | Example filename |
+   | ----- | ----------- | ------- |
+   | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.component.ts``` |
 
 1. Modify content in the file to match the following example.
 
-``` ts
-constructor() {
-    // TODO
-}
-
-public ngOnInit() {
-    // TODO
-}
-```
+   ``` ts
+   constructor() {
+       // TODO
+   }
+   
+   public ngOnInit() {
+       // TODO
+   }
+   ```
 
 ### Update app-routing.module.ts
 
 1. Open file ```app-routing.module.ts```, and modify the default path so it loads the new module you created. Find the entry for ```path: ''```, and update  ```loadChildren``` to load your module instead of the default module:
 
-| Value | Explanation | Example |
-| ----- | ----------- | ------- |
-| ```{!ModuleName}``` | Your module name (spaces removed) | ```ManageFooWorksPortal``` |
-| ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal``` |
+   | Value | Explanation | Example |
+   | ----- | ----------- | ------- |
+   | ```{!ModuleName}``` | Your module name (spaces removed) | ```ManageFooWorksPortal``` |
+   | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal``` |
 
-``` ts
-    {
-        path: '',
-        loadChildren: 'app/{!module-name}/{!module-name}.module#{!ModuleName}Module'
-    },
-```
-Here's an example of an updated default path:
-``` ts
-    {
-        path: '',
-        loadChildren: 'app/manage-foo-works-portal/manage-foo-works-portal.module#ManageFooWorksPortalModule'
-    },
-```
+   ``` ts
+       {
+           path: '',
+           loadChildren: 'app/{!module-name}/{!module-name}.module#{!ModuleName}Module'
+       },
+   ```
+
+   Here's an example of an updated default path:
+
+   ``` ts
+       {
+           path: '',
+           loadChildren: 'app/manage-foo-works-portal/manage-foo-works-portal.module#ManageFooWorksPortalModule'
+       },
+   ```
 
 ## Build and side load your extension
 
