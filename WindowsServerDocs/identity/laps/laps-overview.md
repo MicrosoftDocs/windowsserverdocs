@@ -130,6 +130,18 @@ Microsoft strongly recommends that customers begin planning now to migrate their
 
 Questions about limitations and\or interoperability concerns between 3rd-party local account password management tools and Windows LAPS should be directed to the 3rd-party application developer not Microsoft.
 
+## Licensing requirements
+
+The Windows LAPS feature itself are available for free in all supported Windows platforms.
+
+You can backup passwords to your on-premises Active Directory with no additional licensing requirements.
+
+You can backup passwords to Azure AD with an Azure AD Free or higher license.
+
+Other Azure- or Intune-related features may have other licensing requirements.
+
+You can backup passwords to your on-premises Active Directory with no additional licensing requirements.
+
 ## Submitting feedback
 
 Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages.
