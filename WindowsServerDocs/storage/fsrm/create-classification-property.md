@@ -14,13 +14,13 @@ Classification properties are used to assign values to files within a specified 
 
 |Property | Description |
 | --- | --- |
-| Yes/No | A Boolean property that can be **Yes** or **No**. When combining multiple values during classification or from file content, a **No** value will be overridden by a **Yes** value. |
-| Date-time | A simple date/time property. When combining multiple values during classification or from file content, conflicting values will prevent re-classification. |
-| Number | A simple number property. When combining multiple values during classification or from file content, conflicting values will prevent re-classification. |
-| Ordered List | A list of fixed values. Only one value can be assigned to a property at a time. When combining multiple values during classification or from file content, the value highest in the list will be used. |
-| String | A simple string property. When combining multiple values during classification or from file content conflicting values will prevent re-classification. |
-| Multi-choice | A list of values that can be assigned to a property. More than one value can be assigned to a property at a time. When combining multiple values during classification or from file content, each value in the list will be used. |
-| Multi-string | A list of strings that can be assigned to a property. More than one value can be assigned to a property at a time. When combining multiple values during classification or from file content, each value in the list will be used. |
+| Yes/No | A Boolean property that can be **Yes** or **No**. When combining multiple values during classification or from file content, a **No** value is overridden by a **Yes** value. |
+| Date-time | A simple date/time property. When combining multiple values during classification or from file content, conflicting values prevent reclassification. |
+| Number | A simple number property. When combining multiple values during classification or from file content, conflicting values prevent reclassification. |
+| Ordered List | A list of fixed values. Only one value can be assigned to a property at a time. When combining multiple values during classification or from file content, the value highest in the list is used. |
+| String | A simple string property. When combining multiple values during classification or from file content conflicting values prevent reclassification. |
+| Multi-choice | A list of values that can be assigned to a property. More than one value can be assigned to a property at a time. When combining multiple values during classification or from file content, each value in the list is used. |
+| Multi-string | A list of strings that can be assigned to a property. More than one value can be assigned to a property at a time. When combining multiple values during classification or from file content, each value in the list is used. |
 
 ## To create a Classification property
 
