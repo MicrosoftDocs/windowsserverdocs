@@ -101,7 +101,7 @@ sections:
 
       - question: How can I submit unanswered questions or feature requests?
         answer: |
-          See [Submitting feedback, feature requests, or other questions](laps-overview.md#submitting-feedback,-feature requests,-or-other-questions)
+          See [Submitting feedback](laps-overview.md#submitting-feedback).
 
 additionalContent: |
     ## Next steps
