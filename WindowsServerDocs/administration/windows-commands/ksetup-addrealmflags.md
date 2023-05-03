@@ -29,17 +29,17 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 
 - Realm flags are stored in the registry under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\<realmname>`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
 
-- The realm flags specify other features of a Kerberos realm that aren't based on the Windows Server operating system. Computers running Windows Server can use a Kerberos server to administer authentication in the Kerberos realm instead of using a domain running a Windows Server operating system. This registry entry establishes the features of the realm and are as follows:
+- The realm flags specify other features of a Kerberos realm that aren't based on the Windows Server operating system. Computers running Windows Server can use a Kerberos server to administer authentication in the Kerberos realm instead of using a domain running a Windows Server operating system. This registry entry establishes the features of the realm and is as follows:
 
 | Value | Realm flag | Description |
 | ----- | ---------- | ----------- |
-| 0xF | All | All realm flags are set. |
-| 0x00 | None | No realm flags are set and no other features are enabled. |
-| 0x01 | sendaddress | The IP address is included within the ticket-granting tickets. |
-| 0x02 | tcpsupported | Both the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are supported in this realm. |
-| 0x04 | delegate | Everyone in this realm is trusted for delegation. |
-| 0x08 | ncsupported | This realm supports name canonicalization, which allows for DNS and Realm naming standards. |
-| 0x80 | rc4 | This realm supports RC4 encryption to enable cross-realm trust, which allows for the use of TLS. |
+| `0xF` | `All` | All realm flags are set. |
+| `0x00` | `None` | No realm flags are set and no other features are enabled. |
+| `0x01` | `sendaddress` | The IP address is included within the ticket-granting tickets. |
+| `0x02` | `tcpsupported` | Both the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are supported in this realm. |
+| `0x04` | `delegate` | Everyone in this realm is trusted for delegation. |
+| `0x08` | `ncsupported` | This realm supports name canonicalization, which allows for DNS and Realm naming standards. |
+| `0x80` | `rc4` | This realm supports RC4 encryption to enable cross-realm trust, which allows for the use of TLS. |
 
 - You can see the available and set realm flags by viewing the output of **ksetup** or `ksetup /dumpstate`.
 
