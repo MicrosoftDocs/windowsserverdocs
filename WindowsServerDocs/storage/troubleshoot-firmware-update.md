@@ -1,5 +1,5 @@
 ---
-description: Learn more about roubleshooting drive firmware updates
+description: Learn more about troubleshooting drive firmware updates
 title: Troubleshooting drive firmware updates
 ms.author: toklima
 ms.topic: article
@@ -34,7 +34,7 @@ The following sections outline troubleshooting information, depending on whether
 
 ## Identifying inappropriate hardware
 
-The quickest way to identify whether a device supports the correct command set is to simply launch PowerShell and pass a disk's representing PhysicalDisk object into the Get-StorageFirmwareInfo cmdlet. Here is an example:
+The quickest way to identify whether a device supports the correct command set is to launch PowerShell and pass a disk's representing PhysicalDisk object into the Get-StorageFirmwareInfo cmdlet. Here's an example:
 
 ```powershell
 Get-PhysicalDisk -SerialNumber 15140F55976D | Get-StorageFirmwareInformation
@@ -53,16 +53,16 @@ FirmwareVersionInSlot : {0013}
 
 The SupportsUpdate field, at least for SATA and NVMe devices, indicates if the built-in PowerShell functionality can be used to update firmware.
 
-The SupportsUpdate field will always report “True” for SAS-attached devices because querying for the appropriate command support isn't possible with industry-standard commands.
+The SupportsUpdate field always report “True” for SAS-attached devices because querying for the appropriate command support isn't possible with industry-standard commands.
 
 To validate whether a SAS device supports the required command set, two options exist:
 
 - Test SAS device via the Update-StorageFirmware cmdlet with an appropriate firmware image; or
-- Consult the Windows Server Catalogue to identify which SAS devices have successfully gained the FW Update AQ (https://www.windowsservercatalog.com/)
+- Consult the Windows Server Catalog to identify which SAS devices have successfully gained the FW Update AQ (https://www.windowsservercatalog.com/)
 
 ### Remediation options
 
-If a given device you are testing doesn't support the appropriate command set, either query your vendor to see if an updated firmware is available that provides the needed command set, or consult the Windows Server Catalogue to identify devices for sourcing that implement the appropriate command set.
+If a given device you're testing doesn't support the appropriate command set, either query your vendor to see if an updated firmware is available that provides the needed command set, or consult the Windows Server Catalog to identify devices for sourcing that implement the appropriate command set.
 
 ## Troubleshooting with 3rd-Party drivers (SAS)
 
@@ -72,7 +72,7 @@ To identify what happened to the firmware download and activate APIs sent down t
 
 Event Viewer - Application and Services Logs - Microsoft - Windows - StorDiag - **Microsoft-Windows-Storage-ClassPnP/Operational**
 
-This channel records information about the Windows APIs sent down to the miniport drivers as well as their responses. For example, the following error condition occurs when attempting to download a firmware image to a SATA device connected through a SAS HBA that doesn't properly implement the needed translation from SAS to SATA:
+This channel records information about the Windows APIs sent down to the miniport drivers and their responses. For example, the following error condition occurs when attempting to download a firmware image to a SATA device connected through a SAS HBA that doesn't properly implement the needed translation from SAS to SATA:
 
 ```powershell
 Get-PhysicalDisk -SerialNumber 44GS103UT5EW | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.enc -SlotNumber 0
@@ -94,7 +94,7 @@ At line:1 char:47
 + FullyQualifiedErrorId : StorageWMI 4,Microsoft.Management.Infrastructure.CimCmdlets.InvokeCimMethodCommand,Update-StorageFirmware
 ```
 
-PowerShell will throw an error and has received the information that the function called (that is, the Kernel API) was incorrect. This could mean that either the API wasn't implemented by the 3rd-party SAS mini-port driver (correct in this case), or that the API failed for another reason, such as a misalignment of download segments.
+PowerShell throws an error and has received the information that the function called (that is, the Kernel API) was incorrect. An error could mean that either the API wasn't implemented by the 3rd-party SAS mini-port driver (correct in this case), or that the API failed for another reason, such as a misalignment of download segments.
 
 ```
 EventData
@@ -128,11 +128,11 @@ In cases where protocols are mixed and translations occur, that is, SATA behind 
 
 If the 3rd-party driver is identified as not implementing the needed APIs or translations, it's possible to either swap to the Microsoft provided alternatives for SATA (StorAHCI.sys) and NVMe (StorNVMe.sys), or reach out to the OEM or HBA vendor that provided the SAS driver and query if a newer version with the proper support exists.
 
-## Additional troubleshooting with Microsoft drivers (SATA/NVMe)
+## More troubleshooting with Microsoft drivers (SATA/NVMe)
 
-When Windows-native drivers, such as StorAHCI.sys or StorNVMe.sys are used to power storage devices, it's possible to get additional information about possible failure cases during firmware update operations.
+When Windows-native drivers, such as `StorAHCI.sys` or `StorNVMe.sys` are used to power storage devices, it's possible to get additional information about possible failure cases during firmware update operations.
 
-Beyond the ClassPnP Operational channel, StorAHCI and StorNVMe will log the device's protocol specific return codes in the following ETW channel:
+Beyond the ClassPnP Operational channel, StorAHCI and StorNVMe log the device's protocol specific return codes in the following ETW channel:
 
 Event Viewer - Application and Services Logs - Microsoft - Windows - StorDiag - **Microsoft-Windows-Storage-StorPort/Diagnose**
 
