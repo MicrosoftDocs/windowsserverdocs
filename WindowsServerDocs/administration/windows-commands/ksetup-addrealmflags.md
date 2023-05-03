@@ -1,6 +1,6 @@
 ---
 title: ksetup addrealmflags
-description: Reference article for the ksetup addrealmflags command that adds additional realm flags to a specified realm.
+description: Reference article for the ksetup addrealmflags command that adds other realm flags to a specified realm.
 ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
@@ -11,7 +11,7 @@ ms.date: 04/01/2023
 
 Applies to Windows Server (All supported versions)
 
-The ksetup addrealmflags command adds additional realm flags to a specified realm.
+The ksetup addrealmflags command adds other realm flags to a specified realm.
 
 ## Syntax
 
@@ -23,23 +23,23 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 
 | Parameter | Description |
 | --------- | ----------- |
-| `<realmname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM. |
+| `<realmname>` | Specifies the uppercase DNS name, such as `CORP.CONTOSO.COM`. |
 
 ## Remarks
 
-- The realm flags specify additional features of a Kerberos realm that aren't based on the Windows Server operating system. Computers running Windows Server can use a Kerberos server to administer authentication in the Kerberos realm instead of using a domain running a Windows Server operating system. This entry establishes the features of the realm and are as follows:
+- Realm flags are stored in the registry under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\<realmname>`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
+
+- The realm flags specify other features of a Kerberos realm that aren't based on the Windows Server operating system. Computers running Windows Server can use a Kerberos server to administer authentication in the Kerberos realm instead of using a domain running a Windows Server operating system. This registry entry establishes the features of the realm and are as follows:
 
 | Value | Realm flag | Description |
 | ----- | ---------- | ----------- |
 | 0xF | All | All realm flags are set. |
-| 0x00 | None | No realm flags are set and no additional features are enabled. |
-| 0x01 | sendaddress | The IP address will be included within the ticket-granting tickets. |
+| 0x00 | None | No realm flags are set and no other features are enabled. |
+| 0x01 | sendaddress | The IP address is included within the ticket-granting tickets. |
 | 0x02 | tcpsupported | Both the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are supported in this realm. |
 | 0x04 | delegate | Everyone in this realm is trusted for delegation. |
 | 0x08 | ncsupported | This realm supports name canonicalization, which allows for DNS and Realm naming standards. |
 | 0x80 | rc4 | This realm supports RC4 encryption to enable cross-realm trust, which allows for the use of TLS. |
-
-- Realm flags are stored in the registry under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\<realmname>`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
 
 - You can see the available and set realm flags by viewing the output of **ksetup** or `ksetup /dumpstate`.
 
