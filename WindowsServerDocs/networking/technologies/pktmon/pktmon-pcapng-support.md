@@ -1,6 +1,6 @@
 ---
 title: Pktmon support for Wireshark (pcapng)
-description: Describes how to convert Pktmon logs to pcapng format for analysis in Wireshark or any other pcapng analyer.
+description: Describes how to convert Pktmon logs to pcapng format for analysis in Wireshark or any other pcapng analyzer.
 ms.topic: how-to
 author: khdownie
 ms.author: wscontent
@@ -37,7 +37,7 @@ Example: pktmon pcapng C:\tmp\PktMon.etl -d -c nics
 
 ## Output filtering
 
-All information about the packet drop reports and packet flow through the networking stack is lost in pcapng format output. Log contents should be carefully pre-filtered for conversion. For example:
+All information about the packet drop reports and packet flow through the networking stack is lost in pcapng format output. Log contents should be carefully prefiltered for conversion. For example:
 
-- Pcapng format doesn't distinguish between a flowing packet and a dropped packet. To separate all the packets in the capture from dropped packets, generate two pcapng files; one that contains all the packets ("**pktmon pcapng log.etl --out log-capture.etl**"), and another that contains only dropped packets ("**pktmon pcapng log.etl  --drop-only --out log-drop.etl**"). This way you'll be able to analyze the dropped packets in a separate log.
-- Pcapng format doesn't distinguish between different networking components where a packet was captured. For such multilayered scenarios, specify the desired component ID in the pcapng output "**pktmon pcapng log.etl --component-id 5**". Repeat this command for each set of component IDs that you're interested in.
+- Pcapng format doesn't distinguish between a flowing packet and a dropped packet. To separate all the packets in the capture from dropped packets, generate two pcapng files; one that contains all the packets ("`pktmon pcapng log.etl --out log-capture.etl`"), and another that contains only dropped packets ("`pktmon pcapng log.etl  --drop-only --out log-drop.etl`"). This way you're able to analyze the dropped packets in a separate log.
+- Pcapng format doesn't distinguish between different networking components where a packet was captured. For such multilayered scenarios, specify the desired component ID in the pcapng output "`pktmon pcapng log.etl --component-id 5`". Repeat this command for each set of component IDs that you're interested in.
