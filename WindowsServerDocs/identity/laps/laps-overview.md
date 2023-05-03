@@ -132,7 +132,9 @@ Questions about limitations and\or interoperability concerns between 3rd-party l
 
 ## Submitting feedback
 
-Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages. You can also submit feedback and other requests via the [Windows LAPS feedback](https://techcommunity.microsoft.com/t5/windows-laps-feedback/idb-p/Windows-LAPS-feedback) Tech Community page.
+Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages.
+
+You can also submit feedback and other requests via the [Windows LAPS feedback](https://techcommunity.microsoft.com/t5/windows-laps-feedback/idb-p/Windows-LAPS-feedback) Tech Community page.
 
 ## See also
 
