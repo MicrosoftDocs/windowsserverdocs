@@ -130,9 +130,11 @@ Microsoft strongly recommends that customers begin planning now to migrate their
 
 Questions about limitations and\or interoperability concerns between 3rd-party local account password management tools and Windows LAPS should be directed to the 3rd-party application developer not Microsoft.
 
-## Submitting feedback, feature requests, or other questions
+## Submitting feedback
 
-Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages. You can also submit feedback and other requests via the [Windows LAPS feedback](https://techcommunity.microsoft.com/t5/windows-laps-feedback/idb-p/Windows-LAPS-feedback) Tech Community page.
+Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages.
+
+You can also submit feedback and other requests via the [Windows LAPS feedback](https://techcommunity.microsoft.com/t5/windows-laps-feedback/idb-p/Windows-LAPS-feedback) Tech Community page.
 
 ## See also
 
