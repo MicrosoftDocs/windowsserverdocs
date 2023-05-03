@@ -11,7 +11,7 @@ ms.date: 04/01/2023
 
 Applies to: Windows Admin Center, Windows Admin Center Preview
 
-In this article, we'll add an empty module to a tool extension we've created with the Windows Admin Center CLI.
+In this article, add an empty module to a tool extension we've created with the Windows Admin Center CLI.
 
 ## Prepare your environment
 
@@ -21,7 +21,7 @@ If you haven't already done it, follow the directions in develop a [tool](../dev
 
 If you're new to Angular, we encourage you to read the documentation on the Angular website to learn about Angular and NgModule. See [NgModule](https://angular.io/guide/ngmodule) for guidance.
 
-Additional resources:
+To learn more:
 
 - [Generating a new module in Angular CLI](https://github.com/angular/angular-cli/wiki/generate-module).
 - [Generating a new component in Angular CLI](https://github.com/angular/angular-cli/wiki/generate-component).
@@ -48,13 +48,13 @@ ng generate component ManageFooWorksPortal
 
 ## Add routing information
 
-If you're new to Angular, we recommended you learn about Angular Routing and Navigation. The sections below define necessary routing elements that enable Windows Admin Center to navigate to your extension and between views in your extension in response to user activity. To learn more, see the [Router guidance](https://angular.io/guide/router)
+If you're new to Angular, we recommended you learn about Angular Routing and Navigation. The following sections define necessary routing elements that enable Windows Admin Center to navigate to your extension and between views in your extension in response to user activity. To learn more, see the [Router guidance](https://angular.io/guide/router)
 
 Use the same module name that you used in the preceding step.
 
 ### Add content to new routing file
 
-1. Browse to the module folder that was created by  ``` ng generate ``` in the previous step.
+1. Browse to the module folder created by  ``` ng generate ``` in the previous step.
 
 1. Create a new file ```{!module-name}.routing.ts```, following this naming convention:
 
@@ -62,7 +62,7 @@ Use the same module name that you used in the preceding step.
     | ----- | ----------- | ------- |
     | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.routing.ts``` |
 
-1. Add this content to the file just created:
+1. Add this content to the file created:
 
     ``` ts
     import { NgModule } from '@angular/core';
@@ -94,7 +94,7 @@ Use the same module name that you used in the preceding step.
     export class Routing { }
     ```
 
-1. Replace values in the file just created with your desired values:
+1. Replace values in the file created with your desired values:
 
     | Value | Explanation | Example |
     | ----- | ----------- | ------- |
@@ -129,7 +129,7 @@ Use the same module name that you used in the preceding step.
 
 1. Make sure ```import``` statements are alphabetized by source.
 
-### Add content to new component typescript file
+### Add content to new component TypeScript file
 
 1. Open file ```{!module-name}.component.ts```, found with the following naming convention:
 
@@ -137,7 +137,7 @@ Use the same module name that you used in the preceding step.
 | ----- | ----------- | ------- |
 | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.component.ts``` |
 
-1. Modify content in the file to the following:
+1. Modify content in the file to match the following example.
 
 ``` ts
 constructor() {
@@ -151,7 +151,7 @@ public ngOnInit() {
 
 ### Update app-routing.module.ts
 
-1. Open file ```app-routing.module.ts```, and modify the default path so it'll load the new module you just created. Find the entry for ```path: ''```, and update  ```loadChildren``` to load your module instead of the default module:
+1. Open file ```app-routing.module.ts```, and modify the default path so it loads the new module you created. Find the entry for ```path: ''```, and update  ```loadChildren``` to load your module instead of the default module:
 
 | Value | Explanation | Example |
 | ----- | ----------- | ------- |
@@ -174,4 +174,4 @@ Here's an example of an updated default path:
 
 ## Build and side load your extension
 
-You've now added a module to your extension. Next, you can [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
+You have now added a module to your extension. Next, you can [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
