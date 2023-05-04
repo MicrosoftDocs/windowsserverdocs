@@ -4,7 +4,7 @@ description: Guidance on how to configure individual software updates for automa
 ms.topic: how-to 
 author: gswashington
 ms.author: wscontent
-ms.date: 03/31/2023
+ms.date: 05/04/2023
 ---
 
 # Configure trusted roots and disallowed certificates in Windows
@@ -455,10 +455,10 @@ domain. These settings must be reconfigured, if you want to change them.
   - **Default**: There is no key present by default. Without a key present, the default behavior
      used Windows Update.
 
-## Deleting Trusted and Untrusted CTLs
+## Verify Trusted and Untrusted CTLs
 
-It may be necessary for various reasons to delete all Trusted and Untrusted CTLs from a client
-machine. The following Certutil options can be used to delete all Trusted and Untrusted CTLs from a
+It may be necessary for various reasons to verify all Trusted and Untrusted CTLs from a client
+machine. The following Certutil options can be used to verify all Trusted and Untrusted CTLs from a
 client machine.
 
 ```powershell
