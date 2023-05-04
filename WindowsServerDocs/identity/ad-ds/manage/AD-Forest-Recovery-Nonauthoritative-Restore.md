@@ -1,27 +1,29 @@
 ---
-description: Learn more about performing a nonauthoritative restore of Active Directory Domain Services.
+description: "Learn more about: Performing a nonauthoritative restore of Active Directory Domain Services"
 title: AD Forest Recovery - Nonauthoritative restore
 ms.author: daveba
 author: iainfoulds
-ms.date: 04/01/2023
+manager: daveba
+ms.date: 08/09/2018
 ms.topic: article
+ms.assetid: e4ce1d18-d346-492a-8bca-f85513aa3ac1
 ---
-# Active Directory forest recovery and nonauthoritative restore of Active Directory Domain Services
+# Performing a nonauthoritative restore of Active Directory Domain Services
 
-Applies to: Windows Server (All supported versions)
+Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
-The guidance in this article is intended to help you perform a nonauthoritative restore of Active Directory Domain Services.
+To perform a nonauthoritative restore, complete the following procedure.
 
-The following procedures use the Wbadmin.exe to perform a nonauthoritative restore of Active Directory or Active Directory Domain Services (AD DS). If you're using a different backup solution or plan to complete the authoritative restore of SYSVOL later in the forest recovery process, do an authoritative restore of SYSVOL using these alternative methods:
+The following procedures use the Wbadmin.exe to perform a nonauthoritative restore of Active Directory or Active Directory Domain Services (AD DS). If you're using a different backup solution or intend to complete the authoritative restore of SYSVOL later in the forest recovery process, do an authoritative restore of SYSVOL using these alternative methods:
 
-- If you're using File Replication Service (FRS) to replicate SYSVOL, follow the steps in [article 290762](/troubleshoot/windows-server/networking/use-burflags-to-reinitialize-frs) in the Microsoft Knowledge Base, using the **BurFlags** registry key to reinitialize FRS replica sets. Alternate guidance in this [Knowledge Base article](https://support.microsoft.com/kb/315457) might also be helpful in rebuilding the SYSVOL tree. See [Determining Whether a Domain Controller's SYSVOL Folder is Replicated by DFSR or FRS](/windows/win32/vss/backing-up-and-restoring-an-frs-replicated-sysvol-folder#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs) to confirm whether SYSVOL is replicated by FRS.
-- See [Perform an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md) if you're using Distributed File System (DFS) Replication to replicate SYSVOL.
+- If you're using File Replication Service (FRS) to replicate SYSVOL, follow the steps in [article 290762](/troubleshoot/windows-server/networking/use-burflags-to-reinitialize-frs) in the Microsoft Knowledge Base, using the **BurFlags** registry key to reinitialize FRS replica sets. If necessary, follow the guidance in [315457](https://support.microsoft.com/kb/315457)to rebuild the SYSVOL tree. See [Determining Whether a Domain Controller's SYSVOL Folder is Replicated by DFSR or FRS](/windows/win32/vss/backing-up-and-restoring-an-frs-replicated-sysvol-folder#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs) to determine if SYSVOL is replicated by FRS.
+- If you're using Distributed File System (DFS) Replication to replicate SYSVOL, see [Perform an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).
 
 ## Performing a nonauthoritative restore
 
-Use the following procedure to perform a nonauthoritative restore of AD DS. This procedure will also do a authoritative restore of SYSVOL using wbadmin.exe on a DC that runs Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. The backup must include system state data; a full server backup that's used for full server recovery won't work. See [Backing up the System State data](AD-Forest-Recovery-Backing-up-System-State.md) for more information about creating a system state backup.
+Use the following procedure to perform a nonauthoritative restore of AD DS. TRhis procedure also performs an authoritative restore of SYSVOL using wbadmin.exe on a DC that runs Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. The backup must include system state data. A full server backup that is used for full server recovery won't work. See [Backing up the System State data](AD-Forest-Recovery-Backing-up-System-State.md) for more information about creating a system state backup.
 
-### Perform a nonauthoritative restore of AD DS and authoritative restore of SYSVOL using wbadmin.exe
+### To perform a nonauthoritative restore of AD DS and authoritative restore of SYSVOL using wbadmin.exe
 
 - Include the **-authsysvol** switch in your recovery command, as shown in the following example:
 
