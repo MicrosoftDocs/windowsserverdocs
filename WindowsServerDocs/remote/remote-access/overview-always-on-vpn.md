@@ -103,7 +103,7 @@ Always On VPN supports the following security features:
 
 - **Trusted Platform Module (TPM) Key Attestation.** A user certificate that has a TPM-attested key provides higher security assurance, backed up by non-exportability, anti-hammering, and isolation of keys provided by the TPM.
 
-For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](../../../../../identity/ad-ds/manage/component-updates/tpm-key-attestation.md).
+For more information about TPM key attestation in Windows 10, see [TPM Key Attestation](../../identity/ad-ds/manage/component-updates/tpm-key-attestation.md).
 
 ## Connectivity features
 

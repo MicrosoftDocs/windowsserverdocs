@@ -1,8 +1,8 @@
 ---
-title: Configure conditional access for VPN connectivity using Azure AD
-description: Learn how to configure conditional access for VPN connectivity using Azure AD.
+title: Configure VPN conditional access on the Network Policy Server (NPS) on Windows Server
+description: Learn how to configure VPN conditional access on the Network Policy Server (NPS)
 ms.topic: article
-ms.date: 04/28/2023
+ms.date: 05/04/2023
 ms.author: wscontent
 author: anaharris-ms
 
