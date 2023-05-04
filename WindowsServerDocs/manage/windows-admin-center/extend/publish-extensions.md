@@ -22,7 +22,7 @@ There are three primary options for configurable package sources that Windows Ad
 
 ### Publishing to the Windows Admin Center extension feed
 
-By default, Windows Admin Center is connected to a NuGet feed maintained by the Windows Admin Center product team at Microsoft. Early preview versions of new extensions developed by Microsoft can be published to this feed and made available to Windows Admin Center users. External developers planning to build and release extensions publicly can also [submit a request](#publishing-your-extension-to-the-windows-admin-center-feed) to publish to this feed. Prior to publishing to this feed, external developers have to agree to Windows Admin Center's [Extension Publisher Agreement](/legal/windows-server/windows-admin-center/extensions-publishers-agreement) and [Extension Participation Policy](/legal/windows-server/windows-admin-center/extensions-participation-policy).
+By default, Windows Admin Center is connected to a NuGet feed maintained by the Windows Admin Center product team at Microsoft. Early preview versions of new extensions developed by Microsoft can be published to this feed and made available to Windows Admin Center users. External developers planning to build and release extensions publicly can also submit a request to [Publish your extension to the Windows Admin Center feed](#publish-your-extension-to-the-windows-admin-center-feed). Prior to publishing to this feed, external developers have to agree to Windows Admin Center's [Extension Publisher Agreement](/legal/windows-server/windows-admin-center/extensions-publishers-agreement) and [Extension Participation Policy](/legal/windows-server/windows-admin-center/extensions-participation-policy).
 
 ### Publishing to a different NuGet feed
 
