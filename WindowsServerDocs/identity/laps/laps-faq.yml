@@ -88,6 +88,10 @@ sections:
         answer: |
           The new snap-in isn't currently installed as part of RSAT. See [Windows LAPS snap-in availability](laps-management-user-interface.md#windows-laps-snap-in-availability).
 
+      - question: Why don't I see the new Windows LAPS policy in my GPO central store?
+        answer: |
+          The new Windows LAPS policy isn't automatically installed as part of the GPO central store. See [Group Policy Object Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
+
       - question: Are Windows LAPS DSRM passwords available during a catastrophic AD disaster scenario?
         answer: |
           Windows LAPS DSRM password backup is only one component of a comprehensive Active Directory disaster recovery plan. For more information, see [DSRM password support](laps-concepts.md#dsrm-password-support).
