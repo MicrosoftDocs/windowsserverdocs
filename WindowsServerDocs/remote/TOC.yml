@@ -468,10 +468,8 @@
           href: /windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
     - name: Concepts
       items:
-      - name: Always On VPN
-        items:
-        - name: About Always On VPN
-          href: remote-access/overview-always-on-vpn.md
+      - name: About Always On VPN
+        href: remote-access/overview-always-on-vpn.md
       - name: DirectAccess
         items:
         - name: About DirectAccess
