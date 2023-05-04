@@ -1,5 +1,5 @@
 ---
-description: Learn more about: How LDAP Server Cookies Are Handled
+description: Learn more about How LDAP Server Cookies Are Handled
 title: How LDAP server cookies are handled
 author: iainfoulds
 ms.author: daveba
