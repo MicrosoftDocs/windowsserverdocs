@@ -144,7 +144,11 @@ Other Azure- or Intune-related features may have other licensing requirements.
 
 Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages.
 
-You can also submit feedback and other requests via the [Windows LAPS feedback](https://aka.ms/WindowsLAPSFeedback) Tech Community page.
+You may also submit feedback and other requests via the [Windows LAPS feedback](https://aka.ms/WindowsLAPSFeedback) Tech Community page.
+
+If your feedback is specific to the Azure AD- or Intune-related LAPS functionality, you may submit feedback via the [Azure AD feedback forum](https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789).
+
+If you aren't sure where your feedback should go, submit it using any of the above options.
 
 ## See also
 
