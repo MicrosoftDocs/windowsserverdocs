@@ -86,7 +86,7 @@ sections:
 
       - question: I installed RSAT and I still don't see the new LAPS-enabled Active Directory User and Computers snap-in?
         answer: |
-          The new snap-in isn't currently installed as part of RSAT. See [Windows LAPS snap-in availability](laps-management-user-interface.md#windows-laps-snap-in-availability).
+          The new snap-in is only available in the Windows in-box versions of RSAT on supported Windows LAPS platforms. See [Windows LAPS snap-in availability](laps-management-user-interface.md#windows-laps-snap-in-availability).
 
       - question: Why don't I see the new Windows LAPS policy in my GPO central store?
         answer: |
