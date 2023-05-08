@@ -42,7 +42,7 @@ To enable the equivalent of `EnableAuthEpResolution` settings, navigate to:
 **Computer Configuration\Administrative Templates\System\Remote Procedure Call\Enable RPC Endpoint Mapper Client Authentication**. This setting is **disabled** by default. Only two settings are available:
 
 - **Disabled** - RPC clients won't authenticate to the Endpoint Mapper Service, but they'll be able to communicate with the Endpoint Mapper Service on Windows NT4 Server.
-- **Enabled** - PC clients authenticate via the Endpoint Mapper Service for calls that contain authentication information.  Clients making such calls won't be able to communicate with the Windows NT4 Server Endpoint Mapper Service.
+- **Enabled** - PC clients authenticate via the Endpoint Mapper Service for calls that contain authentication information. Clients making such calls won't be able to communicate with the Windows NT4 Server Endpoint Mapper Service.
 
 > [!NOTE]
 > Any changes to either of these settings requires a **system reboot** to take effect.
@@ -74,7 +74,7 @@ It's much more difficult to attack an interface if you require calls to perform 
 
 RPC applications that expect to receive call from remote anonymous RPC clients may not run correctly when using this feature. As a result, applications that use DCOM (Distributed Component Object Model) might not work correctly if this value is set.
 
-Because secure RPC calls over connectionless protocols such as UDP (User Datagram Protocol) and IPX (Internetwork Packet Exchange), `ncadq_ip_udp` and `ncadg_ipx` respectively, uses a lower level of security  than calls over connection-oriented protocols where these calls are always considered nonsecure for the purposes of this policy. As a result, RPC calls over connectionless protocols will fail if this key is enabled.
+Because secure RPC calls over connectionless protocols such as UDP (User Datagram Protocol) and IPX (Internetwork Packet Exchange), `ncadq_ip_udp` and `ncadg_ipx` respectively, uses a lower level of security than calls over connection-oriented protocols where these calls are always considered nonsecure for the purposes of this policy. As a result, RPC calls over connectionless protocols will fail if this key is enabled.
 
 To allow RPC client calls using connectionless protocols, keep the `RestrictRemoteClients` value set to **0** (_RPC_RESTRICT_REMOTE_CLIENT_NONE_).
 
