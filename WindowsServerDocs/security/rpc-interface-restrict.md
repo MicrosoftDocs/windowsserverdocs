@@ -4,7 +4,7 @@ description: RPC Interface Restriction helps to prevent unauthorized access to s
 ms.topic: how-to
 author: xelu86 
 ms.author: wscontent
-ms.date: 05/09/2023
+ms.date: 05/10/2023
 ---
 
 # RPC Interface Restriction
@@ -35,7 +35,7 @@ When an interface is registered using `RpcServerRegisterIf`, RPC allows the serv
 
 RPC clients that use the named pipe protocol sequence (`ncacn_np`) are exempt from all restrictions discussed in this section. The named pipe protocol sequence can't be restricted due to significant backwards compatibility issues.
 
-`RestrictRemoteClients` can also be controlled programmatically in the rpcdce.h API (Application Programming Interface) header.
+`RestrictRemoteClients` can also be controlled programmatically in the [rpcdce.h](/windows/win32/api/rpcdce/) API (Application Programming Interface) header.
 
 ### Configuring RestrictRemoteClients
 
@@ -51,8 +51,8 @@ To edit these policies using the GPO (Group Policy Object) editor:
 
 Any changes to either of these settings requires a **system reboot** to take effect.
 
-> [!NOTE]
-> **¹**Don't use this value without significant testing. For more information, see [Restrictions for Unauthenticated RPC Clients](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128).
+> [!CAUTION]
+> **¹**Don't use this value without significant testing. For more information, see **[Restrictions for Unauthenticated RPC Clients](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128)**.
 
 ## EnableAuthEpResolution
 
