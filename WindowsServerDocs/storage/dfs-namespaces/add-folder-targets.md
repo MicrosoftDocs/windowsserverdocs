@@ -1,6 +1,6 @@
 ---
-title: Add Folder Targets
-description: This article describes how to add folder targets (UNC paths)
+title: Add Folder Targets in Windows Server
+description: This article describes how to add folder targets (UNC paths) in the Windows Server environment.
 ms.author: wscontent
 ms.topic: how-to
 author: xelu86
@@ -33,7 +33,7 @@ To add a folder target by using DFS Management, perform the following:
 
 The following animation demonstrates the steps to add a folder target by using DFS Management.
 
-![A video demonstrating how to add a target folder using DFS management in Windows.](media/add-folder-targets-gif.gif)
+![A video demonstrating how to add a target folder using DFS management in Windows Server.](media/add-folder-targets-gif.gif)
 
 If the folder is replicated using DFS Replication, you can specify whether to add the new folder target to the replication group.
 
@@ -43,7 +43,7 @@ If the folder is replicated using DFS Replication, you can specify whether to ad
 > [!NOTE]
 > Folders can contain folder targets or other DFS folders, but not both, at the same level in the folder hierarchy.
 
-## Additional References
+## Additional references
 
 - [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 - [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
