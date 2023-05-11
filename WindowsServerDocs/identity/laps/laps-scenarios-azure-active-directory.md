@@ -97,26 +97,6 @@ The app needs to be configured with two permissions: `Device.Read.All` and eithe
 > - Use `DeviceLocalCredential.ReadBasic.All` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
 > - Use `DeviceLocalCredential.Read.All` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
 
-#### Manual consent to DeviceLocalCredential.\* permissions
-
-Currently, a manual step is required to consent to either `DeviceLocalCredential.ReadBasic.All` or the `DeviceLocalCredential.Read.All` permissions.
-
-After you decide which `DeviceLocalCredential` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.ReadBasic.All` if necessary.
-
-For multi-tenant apps:
-
-`https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=<YourClientAppID>=response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
-
-For single-tenant apps:
-
-`https://login.microsoftonline.com/<YourTenantNameOrTenantID>/oauth2/v2.0/authorize?client_id=<YourClientAppID>&response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
-
-Using the URL template that's relevant for your scenario, replace `<YourClientAppID>` with the application ID of the Azure registered app you created earlier. Replace `<YourTenantNameOrTenantID>` with your Azure tenant name or tenant ID.
-
-When the final URL is ready, paste it into a browser and go to the URL. The browser displays a permissions consent dialog. Select the **Consent on behalf of your organization** checkbox, and then select **Accept**. For example:
-
-:::image type="content" source="./media/laps-scenarios-azure-active-directory/laps-scenarios-azure-active-directory-permission-consent.png" alt-text="Screenshot that shows an Azure Active Directory application permissions consent dialog.":::
-
 ### Retrieve the password from Azure Active Directory
 
 You're almost there! First, sign in to Microsoft Graph. Then, use the `Get-LapsAADPassword` cmdlet to retrieve the password.
