@@ -41,13 +41,15 @@ The  Windows LAPS on-premises Active Directory scenarios are fully supported as 
 > [!IMPORTANT]
 > The April 11, 2023 update has two potential regressions related to interoperability with legacy LAPS scenarios. Please read the following to understand the scenario parameters plus possible workarounds.
 >
-> Issue #1: If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. Microsoft is working on a fix for this issue.
+> Issue #1: If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. The password that is stored in Active Directory will not match the password stored on the local account, resulting in authentication errors. Microsoft is working on a fix for this issue.
 >
 > Two primary workarounds exist for the above issue:
 >
 > a. Uninstall the legacy LAPS CSE (result: Windows LAPS will take over management of the managed account)
 >
 > b. [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) (result: legacy LAPS will take over management of the managed account)
+>
+> UPDATE: the May 9th, 2023 update contains a fix for issue #1 on all supported Windows LAPS platforms. The fix prevents the issue from reoccurring in future, but does not immediately solve the problem of the local password not matching the AD-stored password. The passwords will be made consistent the next time the legacy LAPS CSE runs during a GPO refresh and sees an expired password expiry time in AD. You can accelerate that process by manually forcing a pwd expiry via Reset-AdmPwdPassword.
 >
 > Issue #2: If you apply a legacy LAPS policy to a device patched with the April 11, 2023 update, Windows LAPS will immediately enforce\honor the legacy LAPS policy, which may be disruptive (for example if done during OS deployment workflow). [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) may also be used to prevent those issues.
 
