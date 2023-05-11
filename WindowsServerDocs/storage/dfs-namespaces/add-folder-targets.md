@@ -1,5 +1,5 @@
 ---
-title: Add Folder Targets in Windows Server
+title: Add folder targets in Windows Server
 description: This article describes how to add folder targets (UNC paths) in the Windows Server environment.
 ms.author: wscontent
 ms.topic: how-to
