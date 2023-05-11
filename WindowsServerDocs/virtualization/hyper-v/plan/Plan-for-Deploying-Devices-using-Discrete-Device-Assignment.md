@@ -19,7 +19,7 @@ To learn about other methods of GPU virtualization, see [Plan for GPU accelerati
 
 ## Supported Virtual Machines and Guest Operating Systems
 
-Discrete Device Assignment is supported for Generation 1 or 2 VMs. The guests supported include Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with [KB 3133690](https://support.microsoft.com/kb/3133690) applied. Various distributions of the [Linux OS.](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md) are also supported.
+Discrete Device Assignment is supported for Generation 1 or 2 VMs. The guests supported include Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 with [KB 3133690](https://support.microsoft.com/kb/3133690) applied. Various distributions of the [Linux OS.](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md) are also supported.
 
 ## System Requirements
 
