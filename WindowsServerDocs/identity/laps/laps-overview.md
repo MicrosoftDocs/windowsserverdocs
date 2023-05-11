@@ -49,7 +49,7 @@ The  Windows LAPS on-premises Active Directory scenarios are fully supported as 
 >
 > b. [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) (result: legacy LAPS will take over management of the managed account)
 >
-> UPDATE: the May 9th, 2023 update contains a fix for issue #1 on all supported Windows LAPS platforms. The fix prevents the issue from reoccurring in future, but does not immediately solve the problem of the local password not matching the AD-stored password. The passwords will be made consistent the next time the legacy LAPS CSE runs during a GPO refresh and sees an expired password expiry time in AD. You can accelerate that process by manually forcing a pwd expiry via Reset-AdmPwdPassword.
+> **UPDATE:** the May 9th, 2023 update contains a fix for issue #1 on all supported Windows LAPS platforms. The fix prevents the issue from reoccurring in future, but does not immediately solve the problem of the local password not matching the AD-stored password. The passwords will be made consistent the next time the legacy LAPS CSE runs during a GPO refresh and sees an expired password expiry time in AD. You can accelerate that process by manually forcing a pwd expiry via Reset-AdmPwdPassword.
 >
 > Issue #2: If you apply a legacy LAPS policy to a device patched with the April 11, 2023 update, Windows LAPS will immediately enforce\honor the legacy LAPS policy, which may be disruptive (for example if done during OS deployment workflow). [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) may also be used to prevent those issues.
 
