@@ -3,7 +3,7 @@ title: Plan for deploying devices using Discrete Device Assignment
 description: Learn about how DDA works in Windows Server
 ms.topic: article
 ms.author: wscontent
-author: roharwoo
+author: robinharwood
 ms.date: 08/21/2019
 ---
 
