@@ -159,6 +159,7 @@ If you aren't sure where your feedback should go, submit it using any of the abo
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 

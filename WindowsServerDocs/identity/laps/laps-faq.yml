@@ -96,6 +96,10 @@ sections:
         answer: |
           Windows LAPS DSRM password backup is only one component of a comprehensive Active Directory disaster recovery plan. For more information, see [DSRM password support](laps-concepts.md#dsrm-password-support).
 
+      - question: I see errors in my Windows LAPS event log - how do I fix them?
+        answer: |
+          See [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance).
+
       - question: Microsoft promotes a password-less strategy and direction. Why was a password-based feature like Windows LAPS added to Windows?
         answer: |
           All Windows LAPS scenarios involve the management of a Windows local account's password
