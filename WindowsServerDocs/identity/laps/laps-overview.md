@@ -26,7 +26,7 @@ All supported editions of the above platforms have been updated with Windows LAP
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
 > [!IMPORTANT]
-> Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in public preview as of April 21st 2023. At this time **only** the Azure Global cloud is supported however we expect to support Azure Government and  Azure China 21Vianet soon.
+> Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in public preview as of April 21st 2023.
 >
 > For more information, see:
 >
