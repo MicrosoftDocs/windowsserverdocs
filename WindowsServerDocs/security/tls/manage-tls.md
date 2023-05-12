@@ -111,8 +111,8 @@ The process for distributing a curve is:
 
 1. On Windows 10 and Windows Server 2016, use **certutil.exe** to add a new registered named curve to Windows.
 2. From that same computer, Open the Group Policy Management Console (GPMC), create a new Group Policy object, and edit it.
-3. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**.  Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You'll create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters*.
-4. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters\[curveName]*.
+3. Navigate to **Computer Configuration|Preferences|Windows Settings|Registry**.  Right-click **Registry**. Hover over **New** and select **Collection Item**. Rename the collection item to match the name of the curve. You'll create one Registry Collection item for each registry key under *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\ECCParameters*.
+4. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\ECCParameters\\[curveName]*.
 5. Deploy the Group Policy object containing Group Policy Registry Collection item to Windows 10 and Windows Server 2016 computers that should receive the new named curves.
 
     ![Screenshot of the Preferences tab of the Group Policy Management Editor.](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
