@@ -4,7 +4,7 @@ description: RPC Interface Restriction helps to prevent unauthorized access to s
 ms.topic: how-to
 author: xelu86 
 ms.author: wscontent
-ms.date: 05/11/2023
+ms.date: 05/12/2023
 ---
 
 # RPC Interface Restriction
@@ -68,10 +68,10 @@ To edit these policies using the GPO (Group Policy Object) editor:
 
 1. Click **Start** > type **gpedit.msc** > hit **<kbd>Enter</kbd>** to open the **Local Group Policy Editor**.
 
-1. To enable the equivalent of `EnableAuthEpResolution` settings, navigate to **Computer Configuration\Administrative Templates\System\Remote Procedure Call\Enable RPC Endpoint Mapper Client Authentication**, then select one of the the two available settings. This setting is **disabled** by default.
+1. To enable the equivalent of `EnableAuthEpResolution` settings, navigate to **Computer Configuration\Administrative Templates\System\Remote Procedure Call\Enable RPC Endpoint Mapper Client Authentication**, then select one of the two available settings:
 
-- **Disabled** - This setting is the default. RPC clients won't authenticate to the Endpoint Mapper Service, but they'll be able to communicate with the Endpoint Mapper Service on Windows NT4 Server.
-- **Enabled** - PC clients authenticate via the Endpoint Mapper Service for calls that contain authentication information. Clients making such calls won't be able to communicate with the Windows NT4 Server Endpoint Mapper Service.
+   - **Disabled** - This setting is the default. RPC clients won't authenticate to the Endpoint Mapper Service, but they'll be able to communicate with the Endpoint Mapper Service on Windows NT4 Server.
+   - **Enabled** - PC clients authenticate via the Endpoint Mapper Service for calls that contain authentication information. Clients making such calls won't be able to communicate with the Windows NT4 Server Endpoint Mapper Service.
 
 Any changes to either of these settings requires a **system reboot** to take effect.
 
