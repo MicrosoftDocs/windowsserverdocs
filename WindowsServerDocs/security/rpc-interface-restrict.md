@@ -1,10 +1,10 @@
 ---
-title: RPC Interface Restriction
-description: RPC Interface Restriction helps to prevent unauthorized access to system resources and data when enabled in group policy object editor in the registry.
+title: RPC Interface Restriction for Windows Server
+description: RPC Interface Restriction helps to prevent unauthorized access to system resources and data when enabled in group policy object editor or in the registry.
 ms.topic: how-to
 author: xelu86 
 ms.author: wscontent
-ms.date: 05/10/2023
+ms.date: 05/11/2023
 ---
 
 # RPC Interface Restriction
@@ -13,7 +13,7 @@ ms.date: 05/10/2023
 
 The Remote Procedure Call (RPC) service makes RPC interfaces secure by default to reduce attacks. The `RestrictRemoteClients` registry key enables you to modify the behavior of all RPC interfaces on the system and can be used to eliminate remote anonymous access to RPC interfaces on the system, with some exceptions. You can apply other interface controls using the `EnableAuthEpResolution` registry key covered in this article. RPC Interface Restrictions can be configured by both RPC application developers and System Administrators.
 
-## Prerequisite
+## Prerequisites
 
 When using `RestrictRemoteClients` on your server:
 
@@ -68,7 +68,7 @@ To edit these policies using the GPO (Group Policy Object) editor:
 
 1. Click **Start** > type **gpedit.msc** > hit **<kbd>Enter</kbd>** to open the **Local Group Policy Editor**.
 
-1. To enable the equivalent of `EnableAuthEpResolution` settings, navigate to **Computer Configuration\Administrative Templates\System\Remote Procedure Call\Enable RPC Endpoint Mapper Client Authentication**, then select one of the following: This setting is **disabled** by default. Only two settings are available:
+1. To enable the equivalent of `EnableAuthEpResolution` settings, navigate to **Computer Configuration\Administrative Templates\System\Remote Procedure Call\Enable RPC Endpoint Mapper Client Authentication**, then select one of the the two available settings. This setting is **disabled** by default.
 
 - **Disabled** - This setting is the default. RPC clients won't authenticate to the Endpoint Mapper Service, but they'll be able to communicate with the Endpoint Mapper Service on Windows NT4 Server.
 - **Enabled** - PC clients authenticate via the Endpoint Mapper Service for calls that contain authentication information. Clients making such calls won't be able to communicate with the Windows NT4 Server Endpoint Mapper Service.
@@ -80,7 +80,7 @@ Any changes to either of these settings requires a **system reboot** to take eff
 > - Network security: Restrict NTLM: Incoming NTLM traffic – **"Deny All Accounts"**
 > - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers – **"Deny All"**
 >
-> It's encouraged to move away from NTLM to better secure your environment. If faced with a choice between restricting NTLM and using `EnableAuthEpResolution`, the recommend approach is that you restrict NTLM in your environment.  
+> It's encouraged to move away from NTLM to better secure your environment. If faced with a choice between restricting NTLM and using `EnableAuthEpResolution`, the recommended approach is that you restrict NTLM in your environment.  
 
 ## Other RPC Interface Registration flags
 
