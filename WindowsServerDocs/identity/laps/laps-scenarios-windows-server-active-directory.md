@@ -160,6 +160,7 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 - [Microsoft Intune](/mem/intune)
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 

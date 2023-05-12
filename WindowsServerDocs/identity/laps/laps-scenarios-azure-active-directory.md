@@ -14,6 +14,10 @@ Learn how to get started with Windows Local Administrator Password Solution (Win
 > [!IMPORTANT]
 > For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
+## Supported Azure clouds
+
+See [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
+
 ## Configure device policy
 
 To configure device policy, complete these tasks:
@@ -53,7 +57,7 @@ More plainly: the Windows Server Active Directory-specific policy settings don't
 
 At a minimum, you must configure the BackupDirectory setting to the value 1 (backup passwords to Azure Active Directory).
 
-If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified by its well-known relative identifier (RID) and should never be identified by name. The name of the built-in local administrator account varies depending on the default locale of the device.
+If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified using its well-known relative identifier (RID) and should never be identified with its name. The name of the built-in local administrator account varies depending on the default locale of the device.
 
 If you want to configure a custom local administrator account, you should configure the AdministratorAccountName setting with the name of that account.
 
@@ -150,7 +154,7 @@ PasswordUpdateTime     : 7/1/2022 11:34:39 AM
 
 The password that's returned in a `SecureString` object.
 
-Finally, for testing or ad-hoc purposes, you can request that the password appear in clear text by using the `-AsPlainText` parameter:
+Finally, for testing or ad-hoc purposes, you can request that the password appears in clear text by using the `-AsPlainText` parameter:
 
 ```powershell
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice -IncludePasswords -AsPlainText
@@ -196,6 +200,7 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 
