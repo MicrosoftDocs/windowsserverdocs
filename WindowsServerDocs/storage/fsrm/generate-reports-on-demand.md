@@ -1,7 +1,7 @@
 ---
 title: Generate reports on demand in Windows Server
 description: This article describes how to generate reports on demand to analyze disk usage in the Windows Server environment.
-ms.date: 05/11/2023
+ms.date: 05/12/2023
 ms.topic: how-to
 author: xelu86
 ms.author: wscontent
