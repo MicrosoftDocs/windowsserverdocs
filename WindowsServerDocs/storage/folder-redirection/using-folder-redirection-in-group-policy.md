@@ -61,7 +61,7 @@ If you use Roaming User Profiles, you can use Folder Redirection to reduce the t
 
 Folder redirection enables data that's specific to a user to be redirected to a different hard disk on the user's local computer from the hard disk that holds the operating system files. Folder redirection makes the user's data safer in case the operating system has to be reinstalled.
 
-Finally, as an administrator, you can use Group Policy to set disk quotas, limiting how much space is consumed by user profile folders.
+Finally, as an administrator, you can use Group Policy to set disk quotas, limiting how much space user profile folders will use.
 
 ## Selecting a Folder Redirection target
 
@@ -77,7 +77,7 @@ The **Target** tab of the folder's **Properties** box enables you to select the 
 
 - **Advanced—Specify locations for various user groups**. This setting enables you to specify redirection behavior for the folder based on the security group memberships for the GPO.
 
-- **Not configured**. This is the default setting. This setting specifies that policy-based folder redirection was removed for that GPO and the folders are redirected to the local user profile location or stay where they're based on the redirection options selected if any existing redirection policies were set. No changes are being made to the current location of this folder.
+- **Not configured**. This is the default setting. This setting specifies that policy-based folder redirection was removed for that GPO. All folders are redirected to the local user profile location or remain where they're based on the redirection options selected. No changes are made to the current folder location.
 
 ## Configuring other settings for the redirected folder
 
@@ -106,7 +106,12 @@ In the **Settings** tab in the **Properties** box for a folder, you can enable t
 
 ## How to specify the location of folders in a user profile
 
-You can use Group Policy to specify another location (in other words, "redirect" the location) for folders within user profiles. You can redirect folders either to one location for everyone or to different locations based on the security group membership of users. You can also configure other settings for the redirected folder. The settings that you can configure include whether to grant exclusive user rights to the folder, move the contents of the folder to the new location, apply redirection policy to earlier Windows operating systems, or specify system behavior if the policy is removed.
+You can use Group Policy to specify another location (in other words, "redirect" the location) for folders within user profiles. You can redirect folders either to one location for everyone or to different locations based on the security group membership of users. You can also configure other settings for the redirected folder. The settings that you can configure include: 
+
+- Granting exclusive user rights to the folder 
+- Moving the contents of the folder to the new location
+- Applying redirection policy to earlier Windows operating systems
+- Specifying system behavior if the policy is removed
 
 ### To specify the location of folders in a user profile
 
