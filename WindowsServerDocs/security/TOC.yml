@@ -203,6 +203,8 @@
       href: kerberos/passwords-technical-overview.md
     - name: System key utility technical overview
       href: kerberos/system-key-utility-technical-overview.md
+  - name: RPC Interface Restriction 
+    href: rpc-interface-restrict.md
   - name: TLS - SSL (Schannel SSP)
     href: tls/tls-ssl-schannel-ssp-overview.md
     items:
