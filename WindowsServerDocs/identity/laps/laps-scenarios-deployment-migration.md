@@ -87,7 +87,7 @@ There are multiple approaches to monitoring for a successful outcome once you ha
 
 The specific steps required to remove the legacy LAPS software from the managed device depend on how that software was initially installed.
 
-1. If you installed legacy LAPS using the MSI installer package:
+### If you installed legacy LAPS using the MSI installer package
 
 You can manually uninstall the legacy LAPS software from the control panel.
 
@@ -97,9 +97,9 @@ You can automate this process with a silent MSI uninstall command:
 C:\>msiexec.exe /q /uninstall {97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}
 ```
 
-2. If you installed legacy LAPS by manually copying and registering the legacy LAPS CSE binary
+### If you installed legacy LAPS by manually copying and registering the legacy LAPS CSE dll
 
-In this situation you need to manually unregister and then delete the legacy LAPS CSE binary:
+In this situation you need to manually unregister and then delete the legacy LAPS CSE dll:
 
 ```text
 regsvr32.exe /s /u AdmPwd.dll
