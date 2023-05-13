@@ -107,4 +107,4 @@ This article doesn't go into detail about managing other aspects of legacy Micro
 
 ## Next steps
 
-- [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
+- [Get started with Windows LAPS deployment and migration scenarios](laps-scenarios-migration.md)
