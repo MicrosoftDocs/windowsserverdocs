@@ -75,13 +75,15 @@ You may want to implement a more gradual migration procedure from legacy LAPS to
 
 With this approach, it's necessary to create a second local account since it's not supported to have both a Windows LAPS policy and legacy LAPS policy targeting the same account.
 
+After confirming that Windows LAPS is working properly, you may leave the managed device in this state for as long as needed before performing the rest of the migration steps.
+
 ## Monitoring a successful transition
 
 There are multiple approaches to monitoring for a successful outcome once you have transitioned a managed device to a Windows LAPS policy:
 
-- If you have deployed a centralized event log collection solution, you can monitor the managed device's [Windows LAPS event log channel](laps-management-event-log.md) for successful password update events
-- When storing passwords in Active Directory, you can look for the appearance of a new\updated msLAPS-PasswordExpirationTime attribute on the managed device's AD computer object.
-- When storing passwords in Azure Active Directory, you can check the Azure AD or Intune management portals to verify that the device has updated its password.
+- You can monitor the managed device's [Windows LAPS event log channel](laps-management-event-log.md) for successful password update events (for either Azure AD or AD). A centralized event log collection solution may help here.
+- When storing passwords in Active Directory, you can look for the appearance of a new\updated msLAPS-PasswordExpirationTime attribute on the managed device's AD computer object. The [`Get-LapsADPassword`](/powershell/module/laps/get-lapsadpassword) PowerShell cmdlet can be used to automate this analysis.
+- When storing passwords in Azure AD, you can check the Azure AD or Intune management portals to verify that the device has updated its password. The [`Get-LapsAADPassword`](/powershell/module/laps/get-lapsaadpassword) PowerShell cmdlet can be used to automate this analysis.
 
 ## Removing the legacy LAPS software from a managed device
 
@@ -89,9 +91,9 @@ The specific steps required to remove the legacy LAPS software from the managed 
 
 ### If you installed legacy LAPS using the MSI installer package
 
-You can manually uninstall the legacy LAPS software from the control panel.
+In this situation, you can manually uninstall the legacy LAPS software from the control panel for ad-hoc management scenarios.
 
-You can automate this process with a silent MSI uninstall command:
+Alternatively you can also automate this process with a silent MSI uninstall command run on the managed device:
 
 ```text
 C:\>msiexec.exe /q /uninstall {97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}
@@ -99,7 +101,7 @@ C:\>msiexec.exe /q /uninstall {97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}
 
 ### If you installed legacy LAPS by manually copying and registering the legacy LAPS CSE dll
 
-In this situation you need to manually unregister and then delete the legacy LAPS CSE dll:
+In this situation, you need to manually unregister and then delete the legacy LAPS CSE dll:
 
 ```text
 regsvr32.exe /s /u AdmPwd.dll
