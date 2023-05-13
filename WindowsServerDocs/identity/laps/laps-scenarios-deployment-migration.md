@@ -71,9 +71,9 @@ You may want to implement a more gradual migration procedure from legacy LAPS to
 1. Monitor the managed device to confirm a successful application of the Windows LAPS policy
 1. Disable\remove the legacy LAPS policy
 1. Remove the legacy LAPS software
+1. Remove the extra account
 
 With this approach, it's necessary to create a second local account since it's not supported to have both a Windows LAPS policy and legacy LAPS policy targeting the same account.
-The easiest approach when configuring the Windows LAPS policy is to target the same account that was previously targeted in the legacy LAPS policy. If you choose to target a different account, then it's your responsibility to remove the first account as needed.
 
 ## Monitoring a successful transition
 
