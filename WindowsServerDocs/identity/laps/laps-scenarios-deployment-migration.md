@@ -33,10 +33,6 @@ A second technique is to configure the legacy LAPS policy to target a different 
 
 A third technique is to [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) at the beginning of the OS deployment workflow, and enable it (if needed) at the end of the OS deployment workflow.
 
-## Existing OS patch update scenario
-
-Windows LAPS shipped to all supported platforms in the April 11, 2023 update.
-
 ## Coexistence (side-by-side) scenario with legacy LAPS
 
 It's possible to use both Windows LAPS and legacy LAPS in a side-by-side scenario. For the side-by-side scenario to be successful, both policies MUST target different local accounts. Your long term goal however should be to migrate away from legacy LAPS to Windows LAPS.
@@ -49,12 +45,14 @@ There are two basic approaches that can be used. The first approach is an immedi
 
 ### Immediate transition approach
 
-You can immediately migrate from legacy LAPS to Windows LAPS by simultaneously (or as nearly as possible) making the following policy modifications:
+You can immediately migrate from legacy LAPS to Windows LAPS on existing devices using the following steps:
 
 1. Disable\remove the legacy LAPS policy
 1. Create and apply a Windows LAPS policy
 1. Monitor the managed device to confirm a successful transition
 1. Remove the legacy LAPS software
+
+The first two steps should be performed simultaneously (or as nearly so as possible).
 
 The easiest approach when configuring the Windows LAPS policy is to target the same account that was previously targeted in the legacy LAPS policy. If you choose to target a different account, then it's your responsibility to create the new account prior to applying the Windows LAPS policy. The first account should be removed if no longer needed.
 
@@ -66,7 +64,7 @@ Once the transition has completed, the final step should be to [remove the legac
 
 ### Transient side-by-side coexistence approach
 
-You may want to implement a more gradual migration procedure from legacy LAPS to Windows LAPS. The basic steps are as follows:
+You may want to implement a more gradual migration procedure from legacy LAPS to Windows LAPS. The basic steps to perform this transition on existing devices are as follows:
 
 1. Configure the managed device with a second local account
 1. Create and apply a Windows LAPS policy
@@ -96,7 +94,7 @@ You can manually uninstall the legacy LAPS software from the control panel.
 You can automate this process with a silent MSI uninstall command:
 
 ```text
-C:\>MsiExec.exe /q /uninstall {97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}
+C:\>msiexec.exe /q /uninstall {97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}
 ```
 
 2. If you installed legacy LAPS by manually copying and registering the legacy LAPS CSE binary
