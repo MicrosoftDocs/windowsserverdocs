@@ -18,6 +18,11 @@ Learn how to get started with Windows Local Administrator Password Solution (Win
 
 See [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
 
+## Enable LAPS in the Azure AD device settings
+
+> [!IMPORTANT]
+> By default Azure AD doesn't allow managed devices to post new Windows LAPS passwords to Azure AD. You MUST first have your IT admin enable the feature at the Azure AD tenant level. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) for more information.
+
 ## Configure device policy
 
 To configure device policy, complete these tasks:
