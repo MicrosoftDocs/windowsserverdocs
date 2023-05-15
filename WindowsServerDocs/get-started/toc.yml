@@ -17,6 +17,8 @@ items:
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
       items:
+      - name: Azure Edition
+        href: azure-edition.md
       - name: Windows Server 2022
         href: editions-comparison-windows-server-2022.md
       - name: Windows Server 2019
