@@ -46,7 +46,7 @@ The following must be installed to use this feature:
 
 The following animation demonstrates the steps to generate a report using the **Generate Reports Now** feature.
 
-![A video demonstrating how to generate a report using the generate reports now feature in the File Server Resource Management for Windows Server.](../media/generate-reports-now-gif.gif)
+![A video demonstrating how to generate a report using the generate reports now feature in the File Server Resource Manager for Windows Server.](../media/generate-reports-now-gif.gif)
 
 ## Generate custom reports
 
@@ -67,7 +67,7 @@ To customize your reports, perform the following:
 To deliver copies of the reports to administrators by e-mail:
 
 1. In the **Storage Reports Task Properties** dialog box, complete your selection of the report data you want to generate along with the **Report format** of choice.
-1. Click the **Delivery** tab, select the **Send reports to the following administrators** check box, then enter the names of the administrative accounts that receive reports in <em>account@domain</em> formatting using the semicolon (**;**) to indicate multiple accounts.
+1. Click the **Delivery** tab, select the **Send reports to the following administrators** check box, then enter the names of the administrative accounts that receive reports in _account@domain_ formatting using the semicolon (**;**) to indicate multiple accounts.
 1. Click **OK**, select how you want your report generated, and then click **OK**.
 
    > [!NOTE]
