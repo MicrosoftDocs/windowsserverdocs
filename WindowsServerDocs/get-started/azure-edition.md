@@ -41,7 +41,7 @@ Hotpatch gives you the ability to apply security updates on your VM without rebo
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 | Operating system | Azure | Azure Stack HCI |
-| -- | -- | -- |
+|--| -- |--|
 | Windows Server 2022 Datacenter: Azure Edition (Core) | Generally available (GA) | Public preview |
 | Windows Server 2022 Datacenter: Azure Edition (Desktop Experience) | Public preview | Public preview |
 
@@ -52,9 +52,9 @@ SMB over QUIC is available on the following images:
 - Windows Server 2022 Datacenter: Azure Edition (Desktop experience)
 - Windows Server 2022 Datacenter: Azure Edition (Core)
 
-SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and branch offices, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. [QUIC](https://datatracker.ietf.org/doc/rfc9000/) is an IETF-standardized protocol used in HTTP/3, designed for maximum data protection with TLS 1.3 and requires encryption that cannot be disabled. SMB behaves normally within the QUIC tunnel, meaning the user experience doesn't change. SMB features like multichannel, signing, compression, continuous availability, and directory leasing work normally. 
+SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and branch offices, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. [QUIC](https://datatracker.ietf.org/doc/rfc9000/) is an IETF-standardized protocol used in HTTP/3, designed for maximum data protection with TLS 1.3 and requires encryption that can't be disabled. SMB behaves normally within the QUIC tunnel, meaning the user experience doesn't change. SMB features like multichannel, signing, compression, continuous availability, and directory leasing work normally. 
 
-SMB over QUIC is also integrated with [Automanage machine best practices for Windows Server](automanage-windows-server.md) to help make SMB over QUIC management easier. QUIC uses certificates to provide its encryption and organizations often struggle to maintain complex public key infrastructures. Automanage machine best practices ensure that certificates do not expire without warning and that SMB over QUIC stays enabled for maximum continuity of service.
+SMB over QUIC is also integrated with [Automanage machine best practices for Windows Server](automanage-windows-server.md) to help make SMB over QUIC management easier. QUIC uses certificates to provide its encryption and organizations often struggle to maintain complex public key infrastructures. Automanage machine best practices ensure that certificates don't expire without warning and that SMB over QUIC stays enabled for maximum continuity of service.
 
 To learn more, see [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic) and [SMB over QUIC management with Automanage machine best practices](automanage-smb-over-quic.md).
 
@@ -86,7 +86,7 @@ It's important to consider up front, which Automanage for Windows Server capabil
 To start using Automanage for Windows Server capabilities on a new VM, use your preferred method to create an Azure VM, and select the _Windows Server Azure Edition_ image that corresponds to the set of [capabilities](#getting-started-with-windows-server-azure-edition) that you would like to use.  
 
 > [!IMPORTANT]
-> Some capabilities have specific configuration steps to perform during VM creation, and some capabilities that are in preview have specific opt-in and portal viewing requirements.  See the individual capability topics above to learn more about using that capability with your VM.
+> Some capabilities have specific configuration steps to perform during VM creation, and some capabilities that are in preview have specific opt-in and portal viewing requirements.  See the individual capability topics to learn more about using that capability with your VM.
 
 ## Next steps
 
