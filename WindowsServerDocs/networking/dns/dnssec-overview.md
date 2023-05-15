@@ -17,20 +17,20 @@ Domain Name System Security Extensions (DNSSEC) is a suite of extensions that ad
 
 If supported by an authoritative DNS server, a DNS zone can be secured with DNSSEC using a process called zone signing. Signing a zone with DNSSEC adds validation support to a zone without changing the basic mechanism of a DNS query and response.
 
-Validation of DNS responses occurs through the use of digital signatures that are included with DNS responses. These digital signatures are contained in new, DNSSEC-related resource records that are generated and added to the zone during zone signing.
+Validation of DNS responses occurs through the use of digital signatures included with DNS responses. These digital signatures are contained in new, DNSSEC-related resource records generated and added to the zone during zone signing.
 
 The following figure shows DNS resource records in the zone contoso.com before and after zone signing.
 
 ![DNS resource records](RackMultipart20230503-1-7urv46_html_49ac0cb03196381.gif) alt-text="Screenshot showing DNS resource records in the zone contoso.com before and after zone signing"
 
-For more information about each of these resource records, see the following section, [DNSSEC-related resource records](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj200221(v=ws.11)).
+For more information about each of these resource records, see [DNSSEC-related resource records](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj200221(v=ws.11)).
 
-When a DNSSEC-aware recursive or forwarding DNS server receives a query from a DNS client for a DNSSEC-signed zone, it will request that the authoritative DNS server also send DNSSEC records, and then attempt to validate the DNS response using these records. A recursive or forwarding DNS server recognizes that the zone supports DNSSEC if it has a DNSKEY, also called a trust anchor, for that zone.
+When a DNSSEC-aware recursive or forwarding DNS server receives a query from a DNS client for a DNSSEC-signed zone, it requests that the authoritative DNS server also send DNSSEC records and then attempt to validate the DNS response using these records. A recursive or forwarding DNS server recognizes that the zone supports DNSSEC if it has a DNSKEY, also called a trust anchor, for that zone.
 
     > [!IMPORTANT]
     > A non-authoritative DNS server might use recursion or forwarding to resolve a DNS query. This topic refers to the non-authoritative server as a recursive DNS server; however, if the server uses forwarding, then the process used for DNSSEC validation of DNS responses is the same.
 
-A recursive DNS server uses the DNSKEY resource record to validate responses from the authoritative DNS server by decrypting digital signatures that are contained in DNSSEC-related resource records, and then by computing and comparing hash values. If hash values are the same, it provides a reply to the DNS client with the DNS data that it requested, such as a host (A) resource record. If hash values are not the same, it replies with a SERVFAIL message. In this way, a DNSSEC-capable, resolving DNS server with a valid trust anchor installed protects against DNS spoofing attacks whether or not DNS clients are DNSSEC-aware.
+A recursive DNS server uses the DNSKEY resource record to validate responses from the authoritative DNS server by decrypting digital signatures contained in DNSSEC-related resource records, and then by computing and comparing hash values. If hash values are identical, it provides a reply to the DNS client with the DNS data that it requested, such as a host (A) resource record. If hash values don't match, it replies with a SERVFAIL message. In this way, a DNSSEC-capable, resolving DNS server with a valid trust anchor installed protects against DNS spoofing attacks whether or not DNS clients are DNSSEC-aware.
 
 Additionally, if the DNS client is DNSSEC-aware, it can be configured to require that the DNS server perform DNSSEC validation.
 
@@ -38,7 +38,7 @@ The following figure shows the validation process.
 
 ![Validation process](RackMultipart20230503-1-7urv46_html_49ac0cb03196381.gif) alt-text="Screenshot showing validation process"
 
-DNSKEYs are used to compute hash values and decrypt RRSIG records. The figure does not display all validation processes that are performed. Additional validation is also carried out to ensure the DNSKEYs are valid and that DS records are valid, if they exist (not shown above).
+DNSKEYs are used to compute hash values and decrypt RRSIG records. The figure doesn't display all validation processes that are performed. Additional validation is also carried out to ensure the DNSKEYs are valid and that DS records are valid, if they exist (not shown above).
 
 For information about how to add DNSSEC data to the DNS query and response process, see [Validate DNS responses](/validate-dns-responses.md).
 
@@ -48,9 +48,9 @@ The following table shows the new resource record types that are used with DNSSE
 
 | **Resource record type** | **Description** |
 | --- | --- |
-| Resource record signature (RRSIG) | Signatures that are generated with DNSSEC are contained in RRSIG records. Each RRSIG record is matched to another record in the zone for which it provides a digital signature.When a resolver issues a query for a name, one or more RRSIG records are returned in the response. |
+| Resource record signature (RRSIG) | Signatures generated with DNSSEC are contained in RRSIG records. Each RRSIG record is matched to another record in the zone for which it provides a digital signature.When a resolver issues a query for a name, one or more RRSIG records are returned in the response. |
 | --- | --- |
-| Next Secure (NSEC) | An NSEC record is used to prove nonexistence of a DNS name. NSEC records prevent spoofing attacks that are intended to fool a DNS client into believing that a DNS name does not exist. |
+| Next Secure (NSEC) | An NSEC record is used to prove nonexistence of a DNS name. NSEC records prevent spoofing attacks intended to fool a DNS client into believing that a DNS name doesn't exist. |
 | Next Secure 3 (NSEC3) | NSEC3 is a replacement or alternative to NSEC that has the additional benefit of preventing "zone walking" which is the process of repeating NSEC queries in order to retrieve all the names in a zone. A DNS server running Windows Server 2012 or a later operating system supports both NSEC and NSEC3. A zone can be signed with either NSEC or NSEC3, but not both. |
 | Next Secure 3 Parameter (NSEC3PARAM) | The NSEC3PARAM record is used to determine which NSEC3 records to include in responses for non-existing DNS names. |
 | DNS Key (DNSKEY) | A DNSKEY resource record stores a public cryptographic key that is used to verify a signature. The DNSKEY record is used by a DNS server during the validation process.DNSKEY records can store public keys for a zone signing key (ZSK) or a key signing key (KSK). |
