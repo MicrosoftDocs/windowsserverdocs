@@ -123,7 +123,7 @@ In this section, you'll create a Group Policy on the domain controller so that d
 
 1. Identify which network adapter connects to the internet and which network adapter connects to the domain. Configure the network adapter facing the internet with a public IP address, while the adapter facing the intranet can use an IP address from the local network.
 
-1. For the network adapter connecting to the domain, set the DNS preferred IP address to the IP address of the domain controller. For information on how to set a static preferred DNS address, see [How to change IPv4 DNS server address to public DNS in Windows](https://answers.microsoft.com/windows/forum/all/how-to-change-ipv4-dns-server-address-to-public/56548e8d-eb9c-4fc5-807c-eefca5d278d0).
+1. For the network adapter connecting to the domain, set the DNS preferred IP address to the IP address of the domain controller.
 
 1. Join the VPN server to the domain. For information on how to join a server to a domain, see [To join a server to a domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain#to-join-a-server-to-a-domain).
 

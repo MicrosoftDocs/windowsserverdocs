@@ -4,7 +4,7 @@ description: This article shows you how configure RRAS server to block VPN clien
 ms.topic: article
 ms.date: 05/04/2023
 ms.author: wscontent
-author: anastasia-ms
+author: anaharris-ms
 ---
 # Block VPN clients that use revoked certificates
 
@@ -14,7 +14,7 @@ This article shows you how configure RRAS server to block VPN clients that use a
 
 Once the RRAS server is configured for certificate revocation, any VPN clients that attempt to use a revoked IKEv2 certificate for authentication, such as device tunnel Always-on VPNs, will be denied connection.
 
-For more information on authentication certificates in Windows, see [Certificates and trust in Windows](https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/certificate-trust).
+For more information on authentication certificates in Windows, see [Certificates and trust in Windows](/windows-server/identity/ad-cs/certificate-trust).
 
 ## Configure VPN authentication
 

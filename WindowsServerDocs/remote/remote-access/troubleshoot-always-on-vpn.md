@@ -148,7 +148,7 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 5. Are UDP 500 and 4500 ports open from the client to the VPN server's external interface? Check the client firewall, server firewall, and any hardware firewalls. IPSEC uses UDP port 500, so make sure that you do not have IPEC disabled or blocked anywhere.
 
-6. Is certificate validation failing? Verify the NPS server has a Server Authentication certificate that can service IKE requests. Make sure that you have the correct VPN server IP specified as an NPS client. Make sure that you are authenticating with PEAP, and the Protected EAP properties should only allow authentication with a certificate. You can check the NPS event logs for authentication failures. For more details, see [Install and Configure the NPS Server](vpn-deploy-nps.md)
+6. Is certificate validation failing? Verify the NPS server has a Server Authentication certificate that can service IKE requests. Make sure that you have the correct VPN server IP specified as an NPS client. Make sure that you are authenticating with PEAP, and the Protected EAP properties should only allow authentication with a certificate. You can check the NPS event logs for authentication failures. For more details, see [Install and Configure the NPS Server](/windows-server/networking/technologies/nps/nps-manage-install)
 
 7. Are you connecting but do not have Internet/local network access? Check your DHCP/VPN server IP pools for configuration issues.
 

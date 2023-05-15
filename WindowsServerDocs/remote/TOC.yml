@@ -507,7 +507,7 @@
     - name: Troubleshooting
       items:
       - name: Always On VPN
-        href: remote-access/vpn/troubleshoot-always-on-vpn.md
+        href: remote-access/troubleshoot-always-on-vpn.md
       - name: DirectAccess
         href: remote-access/directaccess/Troubleshooting-directAccess.md
       - name: DirectAccess Known Issues
