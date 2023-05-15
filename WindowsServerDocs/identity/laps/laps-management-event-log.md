@@ -167,7 +167,7 @@ Account RID: 1087
 Password reset timer deadline: %3%n
 ```
 
-When the deadline that's listed in the 10031 event is reached, Windows LAPS logs a 10042 event:
+When the deadline that's listed in the 10041 event is reached, Windows LAPS logs a 10042 event:
 
 ```output
 The post-authentication grace period has expired per policy. The configured post-authentication actions will now be executed.
