@@ -20,7 +20,7 @@ Most of the content in this guide isn't directory specific. There are however so
 The following steps should be followed before configuring your Azure AD-joined or hybrid-joined devices to back up a managed account's passwords to Azure AD.
 
 1. Extend your AD schema to support Windows LAPS. See [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
-1. If you are using a GPO Central Store, manually copy the Windows LAPS Group Policy template files to the central store. See [GPO Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
+1. If you're using a GPO Central Store, manually copy the Windows LAPS Group Policy template files to the central store. See [GPO Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
 1. Assign device self-write permissions. See [Grant the managed device permission to update its password](laps-scenarios-windows-server-active-directory.md#grant-the-managed-device-permission-to-update-its-password).
 1. Analyze, determine, and configure the appropriate AD permissions for password expiration and password retrieval. See [Windows Server Active Directory passwords](laps-concepts.md#windows-server-active-directory-passwords).
 1. Analyze and determine the appropriate authorized groups for decrypting passwords. See [Windows Server Active Directory passwords](laps-concepts.md#windows-server-active-directory-passwords).
