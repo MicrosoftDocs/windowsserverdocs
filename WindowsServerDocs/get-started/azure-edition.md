@@ -11,6 +11,10 @@ ms.author: niwashbu
 
 # What is Azure Edition for Windows Server?
 
+[Windows Server: Azure Edition (WSAE)](./automanage-windows-server-services-overview.md) is a new edition of Windows Server focused on innovation and efficiency. Featuring an annual release cadence and optimized to run on Azure properties, WSAE brings new functionality to Windows Server users faster than the traditional Long-Term Servicing Channel (LTSC) editions of Windows Server (2016,2019,2022, etc.) the first version of this new variant is Windows Server 2022 Datacenter: Azure Edition, announced at Microsoft Ignite in November 2021.
+
+The annual WSAE releases are delivered using Windows Update, rather than a full OS upgrade. As part of this annual release cadence, the WSAE Insider preview program will spin up each spring with the opportunity to access early builds of the next release - leading to general availability in the fall. Install the preview to get early access to all the new features and functionality prior to general availability. If you are a registered Microsoft Server Insider, you have access to create and use virtual machine images from this preview. For more information and to manage your Insider membership, visit the [Windows Insider home page](https://insider.windows.com/) or [Windows Insiders for Business home page.](https://insider.windows.com/for-business/)
+
 Azure Automanage for Windows Server brings new capabilities specifically to _Windows Server Azure Edition_.  These capabilities include:
 - Hotpatch
 - SMB over QUIC
@@ -41,7 +45,7 @@ Hotpatch gives you the ability to apply security updates on your VM without rebo
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 | Operating system | Azure | Azure Stack HCI |
-|--| -- |--|
+|--|--|--|
 | Windows Server 2022 Datacenter: Azure Edition (Core) | Generally available (GA) | Public preview |
 | Windows Server 2022 Datacenter: Azure Edition (Desktop Experience) | Public preview | Public preview |
 
