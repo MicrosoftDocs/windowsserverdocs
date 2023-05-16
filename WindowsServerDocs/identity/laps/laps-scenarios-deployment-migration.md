@@ -15,22 +15,23 @@ There are many possible methods of deploying Windows LAPS, or migrating from leg
 
 Most of the content in this guide isn't directory specific. There are however some preparatory steps required to enable your directory (either Active Directory or Azure AD) to support Windows LAPS devices. These steps should be followed first before proceeding to implement any of the other scenarios described in this article.
 
-## Preparing Windows Server Active Directory
+### Preparing Windows Server Active Directory
 
 The following steps should be followed before configuring your Azure AD-joined or hybrid-joined devices to back up a managed account's passwords to Azure AD.
 
 1. Extend your AD schema to support Windows LAPS. See [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
+1. If you are using a GPO Central Store, manually copy the Windows LAPS Group Policy template files to the central store. See [GPO Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
 1. Assign device self-write permissions. See [Grant the managed device permission to update its password](laps-scenarios-windows-server-active-directory.md#grant-the-managed-device-permission-to-update-its-password).
-1. Analyze and configure the appropriate permissions for password expiration, password retrieval, and password encryption. See [Windows Server Active Directory passwords](laps-concepts.md#windows-server-active-directory-passwords).
-1. If you're planning to manage a custom (non-built-in) local account, you must create that account first on the managed device(s) before proceeding.
+1. Analyze, determine, and configure the appropriate AD permissions for password expiration and password retrieval. See [Windows Server Active Directory passwords](laps-concepts.md#windows-server-active-directory-passwords).
+1. Analyze and determine the appropriate authorized groups for decrypting passwords. See [Windows Server Active Directory passwords](laps-concepts.md#windows-server-active-directory-passwords).
 1. Create a new Windows LAPS policy that targets the managed device(s) with the appropriate settings as determined in the previous steps.
 
-## Preparing Azure Active Directory
+### Preparing Azure Active Directory
 
 The following steps should be followed before configuring your Azure AD-joined or hybrid-joined devices to back up a managed account's passwords to Azure AD.
 
 1. Review the membership of the built-in Azure AD roles that have by-default access to Windows LAPS passwords stored in Azure AD. By default these roles are highly privileged so there should be no surprises in this step.
-1. Enable your Azure AD tenant to support Windows LAPS password backup. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad)
+1. Enable your Azure AD tenant to support Windows LAPS password backup. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
 
 ## New OS install scenario with a Windows LAPS policy
 
