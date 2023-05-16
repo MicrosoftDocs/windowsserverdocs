@@ -235,4 +235,3 @@ There are some important considerations to running a supported _Windows Server A
 
 - [Azure Update Management](/azure/automation/update-management/overview)
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
-- [Automanage for Windows Server](automanage-windows-server-services-overview.md)
