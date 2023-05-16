@@ -26,7 +26,7 @@ All supported editions of the above platforms have been updated with Windows LAP
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
 > [!IMPORTANT]
-> Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in public preview as of April 21st 2023. At this time **only** the Azure Global cloud is supported however we expect to support Azure Government and  Azure China 21Vianet soon.
+> Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in public preview as of April 21st 2023.
 >
 > For more information, see:
 >
@@ -41,13 +41,15 @@ The  Windows LAPS on-premises Active Directory scenarios are fully supported as 
 > [!IMPORTANT]
 > The April 11, 2023 update has two potential regressions related to interoperability with legacy LAPS scenarios. Please read the following to understand the scenario parameters plus possible workarounds.
 >
-> Issue #1: If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. Microsoft is working on a fix for this issue.
+> Issue #1: If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. The password that is stored in Active Directory will not match the password stored on the local account, resulting in authentication errors. Microsoft is working on a fix for this issue.
 >
 > Two primary workarounds exist for the above issue:
 >
 > a. Uninstall the legacy LAPS CSE (result: Windows LAPS will take over management of the managed account)
 >
 > b. [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) (result: legacy LAPS will take over management of the managed account)
+>
+> **UPDATE:** the May 9th, 2023 update contains a fix for issue #1 on all supported Windows LAPS platforms. The fix prevents the issue from reoccurring in future, but does not immediately solve the problem of the local password not matching the AD-stored password. The passwords will be made consistent the next time the legacy LAPS CSE runs during a GPO refresh and sees an expired password expiry time in AD. You can accelerate that process by manually forcing a pwd expiry via Reset-AdmPwdPassword.
 >
 > Issue #2: If you apply a legacy LAPS policy to a device patched with the April 11, 2023 update, Windows LAPS will immediately enforce\honor the legacy LAPS policy, which may be disruptive (for example if done during OS deployment workflow). [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) may also be used to prevent those issues.
 
@@ -115,7 +117,7 @@ Azure-based monitoring and reporting solutions are available when you back up pa
 
 You can still download an earlier version of Local Administrator Password Solution, [legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
 
-Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features will be familiar. A key difference is that Windows LAPS is an entirely separate implementation that's native to Windows. Windows LAPS also adds many features that aren't available in legacy Microsoft LAPS. You can use Windows LAPS to back up passwords to Azure Active Directory, encrypt passwords in Windows Server Active Directory, and store your password history.
+Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're familiar with legacy Microsoft LAPS, many Windows LAPS features are familiar. A key difference is that Windows LAPS is an entirely separate implementation that's native to Windows. Windows LAPS also adds many features that aren't available in legacy Microsoft LAPS. You can use Windows LAPS to back up passwords to Azure Active Directory, encrypt passwords in Windows Server Active Directory, and store your password history.
 
 > [!IMPORTANT]
 > Windows LAPS doesn't require you to install legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features without installing or referring to legacy Microsoft LAPS. But to help migrate an existing legacy Microsoft LAPS deployment, Windows LAPS offers [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
@@ -126,9 +128,29 @@ Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on th
 
 Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products.
 
-Microsoft strongly recommends that customers begin planning now to migrate their Windows LAPS-capable systems from using legacy Microsoft LAPS over to the new Windows LAPS feature, in order to take advantage of improved security features and improved product servicing.
+Microsoft strongly recommends that customers begin planning now to migrate their Windows LAPS-capable systems from using legacy Microsoft LAPS over to the new Windows LAPS feature. Windows LAPS offers many new security features and improved product servicing.
 
 Questions about limitations and\or interoperability concerns between 3rd-party local account password management tools and Windows LAPS should be directed to the 3rd-party application developer not Microsoft.
+
+## Licensing requirements
+
+The Windows LAPS feature itself is available for free in all supported Windows platforms.
+
+You can backup passwords to your on-premises Active Directory with no other licensing requirements.
+
+You can backup passwords to Azure AD with an Azure AD Free or higher license.
+
+Other Azure- or Intune-related features may have other licensing requirements.
+
+## Submitting feedback
+
+Want to send us feedback? Feel free to submit doc-specific questions via the Feedback links at the bottom of these doc pages.
+
+You may also submit feedback and other requests via the [Windows LAPS feedback](https://aka.ms/WindowsLAPSFeedback) Tech Community page.
+
+If your feedback is specific to the Azure AD- or Intune-related LAPS functionality, you may submit feedback via the [Azure AD feedback forum](https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789).
+
+If you aren't sure where your feedback should go, submit it using any of the above options.
 
 ## See also
 
@@ -137,6 +159,7 @@ Questions about limitations and\or interoperability concerns between 3rd-party l
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 

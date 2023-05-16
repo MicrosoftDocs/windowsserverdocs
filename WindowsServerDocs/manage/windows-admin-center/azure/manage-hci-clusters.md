@@ -216,6 +216,26 @@ Clicking **Connect** performs the following actions:
 
 Connection to Windows Admin Center is end-to-end encrypted with SSL termination happening on your cluster.
 
+## Automate Windows Admin Center deployment using PowerShell
+
+You can automate Windows Admin Center deployment in Azure portal using this example PowerShell script.
+
+```powershell
+$clusterName = "<name_of_cluster>"
+$resourceGroup = "<resource_group>"
+$subscription = "<subscription_id>"
+$port = "6516"
+        
+#Deploy Windows Admin Center
+$setting = @{ "port" = $port }
+New-AzStackHciExtension -ArcSettingName "default" -Name "AdminCenter" -ResourceGroupName $resourceGroup -ClusterName $clusterName -ExtensionParameterPublisher "Microsoft.AdminCenter" -ExtensionParameterSetting $setting -ExtensionParameterType "AdminCenter" -SubscriptionId $subscription -ExtensionParameterTypeHandlerVersion "0.0"
+        
+#Allow connectivity
+$patch = @{ "properties" =  @{ "connectivityProperties" = @{"enabled" = $true}}}
+$patchPayload = ConvertTo-Json $patch
+Invoke-AzRestMethod -Method PATCH -Uri "https://management.azure.com/subscriptions/$subscription/resourceGroups/$resourceGroup/providers/Microsoft.AzureStackHCI/clusters/$clusterName/ArcSettings/default?api-version=2023-02-01" -Payload $patchPayload
+```
+
 ## Troubleshooting
 
 Here are some tips to try in case something isn't working. For general Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).

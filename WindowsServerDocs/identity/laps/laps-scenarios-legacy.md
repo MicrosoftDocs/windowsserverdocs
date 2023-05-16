@@ -52,9 +52,9 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
 
 - The Windows Server Active Directory Users and Computer management console doesn't support reading or writing legacy Microsoft LAPS schema attributes.
 
-- Windows LAPS always ignores a legacy Microsoft LAPS policy when Windows LAPS is configured on a Windows Server Active Directory domain controller, even if all other conditions are met.
+- Windows LAPS always ignores a legacy Microsoft LAPS policy when Windows LAPS is configured on a Windows Server Active Directory domain controller.
 
-- All Windows LAPS policy knobs that aren't supported by legacy Microsoft LAPS default to their disabled or default settings.
+- All Windows LAPS policy knobs that aren't supported in a legacy LAPS policy default to their disabled or default settings.
 
   For example, when you run Windows LAPS in legacy Microsoft LAPS emulation mode, you can't configure Windows LAPS to do tasks like encrypt passwords or save passwords to Azure Active Directory.
 
@@ -62,9 +62,9 @@ If all these constraints are satisfied, Windows LAPS honors legacy Microsoft LAP
 
 ## Disabling legacy Microsoft LAPS emulation mode
 
-Windows LAPS has an important difference to be aware of when planning a deployment or migration from legacy Microsoft LAPS, namely that is always installed and active once a device has been joined to either Azure Active Directory or Windows Server Active Directory. Installation of the legacy Microsoft LAPS CSE has been used as a mechanism to control when the legacy Microsoft LAPS policy will be enforced. As a built-in Windows feature, Windows LAPS will immediately start enforcing a legacy Microsoft LAPS policy as soon as it is applied to the device. Such immediate enforcement may be disruptive, for example if enforcement occurs during the setup and configuration workflow for a new operating system.
+Windows LAPS has an important difference to be aware of when planning a deployment or migration from legacy Microsoft LAPS. Windows LAPS is always present and active once a device has been joined to either Azure Active Directory or Windows Server Active Directory. Installation of the legacy Microsoft LAPS CSE is often used as a mechanism to control when the legacy Microsoft LAPS policy is enforced. As a built-in Windows feature, Windows LAPS starts enforcing a legacy Microsoft LAPS policy as soon as it's applied to the device. Such immediate enforcement may be disruptive, for example if enforcement occurs during the setup and configuration workflow for a new operating system.
 
-To prevent this you can disable legacy Microsoft LAPS emulation mode by creating a REG_DWORD registry value named `BackupDirectory` under the `HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config` key and set it to the value zero (0). Setting this value will prevent Windows LAPS from entering legacy Microsoft LAPS emulation mode, regardless of whether the legacy Microsoft LAPS CSE is installed or not. This value may be used temporarily or permanently. Note that if\when a new Windows LAPS policy is configured, that new policy will take precedence. For more information on the Windows LAPS policy precedence ordering, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
+To prevent such potential disruption, you can disable legacy Microsoft LAPS emulation mode by creating a REG_DWORD registry value named `BackupDirectory` under the `HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config` key and set it to the value zero (0). Setting this value prevents Windows LAPS from entering legacy Microsoft LAPS emulation mode, regardless of whether the legacy Microsoft LAPS CSE is installed or not. This value may be used temporarily or permanently. When a new Windows LAPS policy is configured, that new policy takes precedence. For more information on the Windows LAPS policy precedence ordering, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 
 ## Limited administrative support
 
@@ -96,14 +96,15 @@ When Windows LAPS runs in legacy Microsoft LAPS emulation mode, a 10023 event is
 
 :::image type="content" source="./media/laps-scenarios-legacy/laps-scenarios-legacy-gpo-event.png" alt-text="Screenshot of the event log that shows a Microsoft LAPS configuration event log message.":::
 
-Otherwise, the same events that are logged by Windows LAPS when it doesn't run in legacy Microsoft LAPS emulation mode are also logged when it runs in legacy Microsoft LAPS emulation mode.
+Otherwise, the same events logged by Windows LAPS when it doesn't run in legacy Microsoft LAPS emulation mode are also logged when it runs in legacy Microsoft LAPS emulation mode.
 
 ## See also
 
 This article doesn't go into detail about managing other aspects of legacy Microsoft LAPS. For more information, see the legacy Microsoft LAPS documentation on the download page:
 
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 
-- [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
+- [Get started with Windows LAPS deployment and migration scenarios](laps-scenarios-deployment-migration.md)

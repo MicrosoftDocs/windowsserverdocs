@@ -4,23 +4,22 @@ ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Active Directory Domain Services Functional Levels in Windows Server
 ms.author: daveba
 author: dknappettmsft
-manager: daveba
-ms.date: 12/02/2021
+ms.date: 05/09/2023
 ms.topic: article
 ms.custom: it-pro
-ms.reviewer: maheshu
 ---
+
 # Forest and Domain Functional Levels
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Functional levels determine the available Active Directory Domain Services (AD DS) domain or forest capabilities. They also determine which Windows Server operating systems you can run on domain controllers in the domain or forest. However, functional levels do not affect which operating systems you can run on workstations and member servers that are joined to the domain or forest.
 
-When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support. This way, you can use as many AD DS features as possible. When you deploy a new forest, you are prompted to set the forest functional level and then set the domain functional level. You can set the domain functional level to a value that is higher than the forest functional level, but you cannot set the domain functional level to a value that is lower than the forest functional level.
+When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support. This way, you can use as many AD DS features as possible. When you deploy a new forest, you are prompted to set the forest functional level, and then set the domain functional level. You can set the domain functional level to a value that is higher than the forest functional level, but you cannot set the domain functional level to a value that is lower than the forest functional level.
 
 With the end of life of Windows Server 2003, 2008, and 2008 R2, these domain controllers (DCs) need to be updated to Windows Server 2012, 2012 R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2008 R2 and older should be removed from the domain.
 
-At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx). Windows Server 2016 RS1 is the last Windows Server release that includes FRS.
+At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [Streamlined Migration of FRS to DFSR SYSVOL blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). Windows Server 2016 RS1 is the last Windows Server release that includes FRS.
 
 > [!NOTE]
 > There have been no new forest or domain functional levels added since Windows Server 2016. Later operating system versions can and should be used for domain controllers, however they use Windows Server 2016 as the most recent functional levels.
@@ -47,7 +46,7 @@ The minimum requirement to add one a domain controller of one of these versions 
    * DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
    * Kerberos clients successfully authenticating with the PKInit Freshness Extension will get the fresh public key identity SID.
 
-    For more information see [What's New in Kerberos Authentication](../../security/kerberos/whats-new-in-kerberos-authentication.md) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
+    For more information, see [What's New in Kerberos Authentication](../../security/kerberos/whats-new-in-kerberos-authentication.md) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
 
 ## Windows Server 2012 R2 functional levels
 
@@ -71,7 +70,7 @@ Supported domain controller operating systems:
       * Be delegated with unconstrained or constrained delegation
       * Renew user tickets (TGTs) beyond the initial 4 hour lifetime
    * Authentication Policies
-      * New forest-based Active Directory policies which can be applied to accounts in Windows Server 2012 R2 domains to control which hosts an account can sign-on from and apply access control conditions for authentication to services running as an account.
+      * New forest-based Active Directory policies that can be applied to accounts in Windows Server 2012 R2 domains to control which hosts an account can sign-on from and apply access control conditions for authentication to services running as an account.
    * Authentication Policy Silos
       * New forest-based Active Directory object, which can create a relationship between user, managed service and computer, accounts to be used to classify accounts for authentication policies or for authentication isolation.
 
@@ -196,10 +195,10 @@ Supported domain controller operating systems:
       * By default, two well-known containers are provided for housing computer and user accounts, namely, cn=Computers,\<domain root> and cn=Users,\<domain root>. This feature allows the definition of a new, well-known location for these accounts.
    * The ability for Authorization Manager to store its authorization policies in AD DS
    * Constrained delegation
-      * Constrained delegation makes it possible for applications to take advantage of the secure delegation of user credentials by means of Kerberos-based authentication.
+      * Constrained delegation makes it possible for applications to take advantage of the secure delegation of user credentials with Kerberos-based authentication.
       * You can restrict delegation to specific destination services only.
    * Selective authentication
-      * Selective authentication makes it is possible for you to specify the users and groups from a trusted forest who are allowed to authenticate to resource servers in a trusting forest.
+      * Selective authentication makes it possible for you to specify the users and groups from a trusted forest who are allowed to authenticate to resource servers in a trusting forest.
 
 ## Windows 2000 functional levels
 
