@@ -25,13 +25,13 @@ The following table summarizes the key differences:
 | Who can use it? | All customers through all channels | TODO: Software Assurance and cloud customers only |
 | Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience |
 
-Capabilities vary by image, see [getting started](#getting-started-with-windows-server-azure-edition) for more detail.
+Capabilities vary by image, see [Getting started with Windows Server Datacenter: Azure Edition](#getting-started-with-windows-server-datacenter-azure-edition) for more detail.
 
 ## Key capabilities
 
 ### Hotpatch
 
-Beginning with Windows Server 2022 Datacenter: Azure Edition, Hotpatch gives you the ability to apply security updates on your VM without rebooting. When used with Azure, Azure Automanage for Windows Server automates the onboarding, configuration, and orchestration of hot patching. To learn more, see [Hotpatch for new virtual machines](hotpactch.md).
+Beginning with Windows Server 2022 Datacenter: Azure Edition, Hotpatch gives you the ability to apply security updates on your VM without rebooting. When used with Azure, Azure Automanage for Windows Server automates the onboarding, configuration, and orchestration of hot patching. To learn more, see [Hotpatch for new virtual machines](hotpatch.md).
 
 #### Supported platforms
 

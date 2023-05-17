@@ -67,7 +67,7 @@ To start using hotpatch on a new VM, follow these steps:
 
 1. Supply details during VM creation
 
-    - Ensure that a supported _Windows Server Azure Edition_ image is selected in the Image dropdown. See [automanage windows server services](azure-edition.md#getting-started-with-windows-server-azure-edition) to determine which images are supported.
+    - Ensure that a supported _Windows Server Azure Edition_ image is selected in the Image dropdown. See [Getting started with Windows Server Datacenter: Azure Edition](azure-edition.md#getting-started-with-windows-server-datacenter-azure-edition) to determine which images are supported.
 
     - On the Management tab under section ‘Guest OS updates’, the checkbox for 'Enable hotpatch' is selected by default. Patch orchestration options are set to 'Azure-orchestrated'.
 
@@ -162,7 +162,7 @@ Virtual machines created in Azure is enabled for [Automatic VM Guest Patching](/
 
 - Virtual machine health, as determined through platform health signals, is monitored to detect patching failures.
 
-When using Azure Stack HCI updates are orchestrated either by the operating system using Windows Updates, using Windows Server Update Services (WSUS), or manually by an administration. To learn more about using WSUS to manage and distribute updates, see [Windows Server Update Services](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+When using Azure Stack HCI updates are orchestrated either by the operating system using Windows Updates, using Windows Server Update Services (WSUS), or manually by an administration. To learn more about using WSUS to manage and distribute updates, see [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
 
 ## Understanding the patch status for your VM in Azure
 
