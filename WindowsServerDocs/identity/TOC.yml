@@ -261,7 +261,7 @@
       items:
       - name: What's New in Active Directory Domain Services Installation and Removal
         href: ad-ds/deploy/What-s-New-in-active-directory-Domain-Services-Installation-and-removal.md
-      - name: Upgrade Domain Controllers to Windows Server 2016
+      - name: Upgrade Domain Controllers to Windows Server
         href: ad-ds/deploy/upgrade-domain-controllers.md
       - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
         href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
