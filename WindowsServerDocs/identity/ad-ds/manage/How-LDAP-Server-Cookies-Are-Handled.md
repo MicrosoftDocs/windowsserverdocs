@@ -5,6 +5,7 @@ author: iainfoulds
 ms.author: daveba
 ms.date: 04/01/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # How LDAP server cookies are handled
