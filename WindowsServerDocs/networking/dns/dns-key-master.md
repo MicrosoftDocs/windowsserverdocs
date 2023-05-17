@@ -105,6 +105,7 @@ If the new Key Master cannot access private key material for the zone, a notific
 
     > [!IMPORTANT]
     > If you click  **Yes**  and continue seizing the Key Master role, new ZSKs and KSKs are not automatically generated. You must re-sign the zone so that private key material is available. If trust anchors were distributed for the zone, these trust anchors must also be replaced. If the original Key Master becomes available before the zone is re-signed, you can transfer the Key Master role back to this server without the requirement to re-sign the zone and redistribute trust anchors.
+
 If private key material is stored in Active Directory, you can seize the Key Master role on another primary, authoritative Active Directory-integrated DNS server and have full access to private key material. In this case, the signing keys (ZSKs and KSKs) don't have to be replaced.
 
 If you use DNS Manager to access an Active Directory-integrated authoritative DNS server with a primary copy of the zone when the Key Master is offline, a notification is displayed when you view DNSSEC properties of the zone, which indicates that DNSSEC settings couldn't be loaded. See the following example.
