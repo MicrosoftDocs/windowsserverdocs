@@ -4,9 +4,10 @@ title: AD Forest Recovery - Determine how to recover the forest
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 08/09/2018
+ms.date: 05/16/2023
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
+ms.custom: inhenkel
 ---
 # Determine how to recover the forest
 
@@ -18,18 +19,18 @@ Recovering an entire Active Directory forest involves either restoring it from b
 - All updates that were made to existing objects since the last trusted backup
 - All changes that were made to either the configuration partition or the schema partition in AD DS (such as schema changes) since the last trusted backup
 
-For each domain in the forest, the password of a Domain Admin account must be known. Preferably, this is the password of the built-in Administrator account. You must also know the DSRM password to perform a system state restore of a DC. In general, it is a good practice to archive the Administrator account and DSRM password history in a safe place for as long as the backups are valid, that is, within the tombstone lifetime period or within the deleted object lifetime period if Active Directory Recycle Bin is enabled. You can also synchronize the DSRM password with a domain user account in order to make it easier to remember. For more information, see KB article [961320](https://support.microsoft.com/kb/961320). Synchronizing the DSRM account must be done in advance of the forest recovery, as part of preparation.
+For each domain in the forest, the password of a Domain Admin account must be known. Preferably, this is the password of the built-in Administrator account. You must also know the DSRM password to perform a system state restore of a DC. In general, it's a good practice to archive the Administrator account and DSRM password history in a safe place for as long as the backups are valid, that is, within the tombstone lifetime period or within the deleted object lifetime period if Active Directory Recycle Bin is enabled. You can also synchronize the DSRM password with a domain user account in order to make it easier to remember. For more information, see KB article [961320](https://support.microsoft.com/kb/961320). Synchronizing the DSRM account must be done in advance of the forest recovery, as part of preparation.
 
 > [!NOTE]
 > The Administrator account is a member of the built-in Administrators group by default, as are the Domain Admins and Enterprise Admins groups. This group has full control of all DCs in the domain.
 
 ## Determining which backups to use
 
-Back up at least two writeable DCs for each domain regularly so you have several backups to choose from. Note that you cannot use the backup of a read-only domain controller (RODC) to restore a writeable DC. We recommend that you restore the DCs by using backups that were taken a few days before the occurrence of the failure. In general, you must determine a tradeoff between the recentness and the safeness of the restored data. Choosing a more recent backup recovers more useful data, but it might increase the risk of reintroducing dangerous data into the restored forest.
+Back up at least two writeable DCs for each domain regularly so you have several backups to choose from. Note that you can't use the backup of a read-only domain controller (RODC) to restore a writeable DC. We recommend that you restore the DCs by using backups that were taken a few days before the occurrence of the failure. In general, you must determine a tradeoff between the recentness and the safeness of the restored data. Choosing a more recent backup recovers more useful data, but it might increase the risk of reintroducing dangerous data into the restored forest.
 
-Restoring system state backups depends on the original operating system and server of the backup. For example, you should not restore a system state backup to a different server. In this case, you may see the following warning:
+Restoring system state backups depends on the original operating system and server of the backup. For example, you shouldn't restore a system state backup to a different server. In this case, you may see the following warning:
 
-“The specified backup is of a different server than the current one. We do not recommend performing a system state recovery with the backup to an alternate server because the server might become unusable. Are you sure you want to use this backup for recovering the current server?”
+“The specified backup is of a different server than the current one. We don't recommend performing a system state recovery with the backup to an alternate server because the server might become unusable. Are you sure you want to use this backup for recovering the current server?”
 
 If you need to restore Active Directory to different hardware, create full server backups and plan to perform a full server recovery.
 
@@ -41,7 +42,7 @@ If you need to restore Active Directory to different hardware, create full serve
 >
 > For more information, see Microsoft KB article [249694](https://support.microsoft.com/kb/249694).
 
-If the time of the occurrence of the failure is unknown, investigate further to identify backups that hold the last safe state of the forest. This approach is less desirable. Therefore, we strongly recommend that you keep detailed logs about the health state of AD DS on a daily basis so that, if there is a forest-wide failure, the approximate time of failure can be identified. You should also keep a local copy of backups to enable faster recovery.
+If the time of the occurrence of the failure is unknown, investigate further to identify backups that hold the last safe state of the forest. This approach is less desirable. Therefore, we strongly recommend that you keep detailed logs about the health state of AD DS on a daily basis so that, if there's a forest-wide failure, the approximate time of failure can be identified. You should also keep a local copy of backups to enable faster recovery.
 
 If Active Directory Recycle Bin is enabled, the backup lifetime is equal to the **deletedObjectLifetime** value or the **tombstoneLifetime** value, whichever is less. For more information, see [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=178657).
 
@@ -53,7 +54,7 @@ You can also use the **ntdsutil snapshot** command to create snapshots of the Ac
 
 ## Determining which domain controllers to restore
 
-Ease of the restore process is an important factor when deciding which domain controller to restore. It is recommended to have a dedicated DC for each domain that is the preferred DC for a restore. A dedicated restore DC makes it easier to reliably plan and execute the forest recovery because you use the same source configuration that was used to perform restore tests. You can script the recovery, and not contend with different configurations, such as whether the DC holds operations master roles or not, or whether it is a GC or DNS server or not.
+Ease of the restore process is an important factor when deciding which domain controller to restore. It's recommended to have a dedicated DC for each domain that is the preferred DC for a restore. A dedicated restore DC makes it easier to reliably plan and execute the forest recovery because you use the same source configuration that was used to perform restore tests. You can script the recovery, and not contend with different configurations, such as whether the DC holds operations master roles or not, or whether it's a GC or DNS server or not.
 
 > [!NOTE]
 > While it is not recommended to restore an operations master role holder in the interest of simplicity, some organizations may choose to restore one for other advantages. For example restoring the RID master may help prevent problems with managing RIDs during the recovery.
@@ -66,9 +67,9 @@ Choose a DC that best meets the following criteria:
 - A DC that is accessible, either physically or on a virtual network, and preferably located in a datacenter. This way, you can easily isolate it from the network during forest recovery.
 - A DC that has a good full server backup. A good backup is a backup that can be restored successfully, was taken a few days before the failure, and contains as much useful data as possible.
 - A DC that was a Domain Name System (DNS) server before the failure. This saves the time required to reinstall DNS.
-- If you also use Windows Deployment Services, choose a DC that is not configured to use BitLocker Network Unlock. In this case, BitLocker Network Unlock is not supported to be used for the first DC that you restore from backup during a forest recovery.
+- If you also use Windows Deployment Services, choose a DC that isn't configured to use BitLocker Network Unlock. In this case, BitLocker Network Unlock isn't supported to be used for the first DC that you restore from backup during a forest recovery.
 
-   BitLocker Network Unlock as the *only* key protector *cannot* be used on DCs where you have deployed Windows Deployment Services (WDS) because doing so results in a scenario where the first DC requires Active Directory and WDS to be working in order to unlock. But before you restore the first DC, Active Directory is not yet available for WDS, so it cannot unlock.
+   BitLocker Network Unlock as the *only* key protector *can't* be used on DCs where you have deployed Windows Deployment Services (WDS) because doing so results in a scenario where the first DC requires Active Directory and WDS to be working in order to unlock. But before you restore the first DC, Active Directory isn't yet available for WDS, so it can't unlock.
 
    To determine if a DC is configured to use BitLocker Network Unlock, check that a Network Unlock certificate is identified in the following registry key:
 
@@ -78,9 +79,9 @@ Maintain security procedures when handling or restoring backup files that includ
 
 ## Identify the current forest structure and DC functions
 
-Determine the current forest structure by identifying all the domains in the forest. Make a list of all of the DCs in each domain, particularly the DCs that have backups, and virtualized DCs which can be a source for cloning. A list of DCs for the forest root domain will be the most important because you will recover this domain first. After you restore the forest root domain, you can obtain a list of the other domains, DCs, and the sites in the forest by using Active Directory snap-ins.
+Determine the current forest structure by identifying all the domains in the forest. Make a list of all of the DCs in each domain, particularly the DCs that have backups, and virtualized DCs which can be a source for cloning. A list of DCs for the forest root domain will be the most important because you'll recover this domain first. After you restore the forest root domain, you can obtain a list of the other domains, DCs, and the sites in the forest by using Active Directory snap-ins.
 
-Prepare a table that shows the functions of each DC in the domain, as shown in the following example. This will help you revert back to the pre-failure configuration of the forest after recovery.
+Prepare a table that shows the functions of each DC in the domain, as shown in the following example. This will help you revert back to the prefailure configuration of the forest after recovery.
 
 |DC name|Operating system|FSMO|GC|RODC|Backup|DNS|Server Core|VM|VM-GenID|
 |-------------|----------------------|----------|--------|----------|------------|---------|-----------------|--------|---------------|
@@ -96,36 +97,36 @@ For each domain in the forest, identify a single writeable DC that has a trusted
 
 In this example, there are four backup candidates: DC_1, DC_2, DC_4, and DC_5. Of these backup candidates, you restore only one. The recommended DC is DC_5 for the following reasons:
 
-- It satisfies requirements for using it as a source for virtualized DC cloning, that is, it runs Windows Server 2012 as a virtual DC on a hypervisor that supports VM-GenerationID, runs software that is allowed to be cloned (or that can be removed if it is not able to be cloned). After the restore, the PDC emulator role will be seized to that server and it can be added to the Cloneable Domain Controllers group for the domain.
+- It satisfies requirements for using it as a source for virtualized DC cloning, that is, it runs Windows Server 2012 as a virtual DC on a hypervisor that supports VM-GenerationID, runs software that is allowed to be cloned (or that can be removed if it isn't able to be cloned). After the restore, the PDC emulator role will be seized to that server and it can be added to the Cloneable Domain Controllers group for the domain.
 - It runs a full installation of Windows Server 2012. A DC that runs a Server Core installation can be less convenient as a target for recovery.
-- It is a DNS server. Therefore, DNS does not have to be reinstalled.
+- It's a DNS server. Therefore, DNS doesn't have to be reinstalled.
 
 > [!NOTE]
 > Because DC_5 is not a global catalog server, it also has an advantage in that the global catalog does not need to be removed after the restore. But whether or not the DC is also a global catalog server is not a decisive factor because beginning with Windows Server 2012, all DCs are global catalog servers by default, and removing and adding the global catalog after the restore is recommended as part of the forest recovery process in any case.
 
 ## Recover the forest in isolation
 
-The preferred scenario is to shut down all writeable DCs before the first restored DC is brought back into production. This ensures that any dangerous data does not replicate back into the recovered forest. It is particularly important to shut down all operations master role holders.
+The preferred scenario is to shut down all writeable DCs before the first restored DC is brought back into production. This ensures that any dangerous data doesn't replicate back into the recovered forest. It is particularly important to shut down all operations master role holders.
 
 > [!NOTE]
 > There may be cases where you move the first DC that you plan to recover for each domain to an isolated network while allowing other DCs to remain online in order to minimize system downtime. For example, if you are recovering from a failed schema upgrade, you may choose to keep domain controllers running on the production network while you perform recovery steps in isolation.
 
-If you are running virtualized DCs, you can move them to a virtual network that is isolated from the production network where you will perform recovery. Moving virtualized DCs to a separate network provides two benefits:
+If you're running virtualized DCs, you can move them to a virtual network that is isolated from the production network where you'll perform recovery. Moving virtualized DCs to a separate network provides two benefits:
 
-- Recovered DCs are prevented from reoccurrence of the problem that caused the forest recovery because they are isolated.
-- Virtualized DC cloning can be performed on the separate network so that a critical number of DCs can be running and tested before they are brought back to the production network.
+- Recovered DCs are prevented from reoccurrence of the problem that caused the forest recovery because they're isolated.
+- Virtualized DC cloning can be performed on the separate network so that a critical number of DCs can be running and tested before they're brought back to the production network.
 
-If you are running DCs on physical hardware, disconnect the network cable of the first DC that you plan to restore in the forest root domain. If possible, also disconnect the network cables of all other DCs. This prevents DCs from replicating, if they are accidentally started during the forest recovery process.
+If you're running DCs on physical hardware, disconnect the network cable of the first DC that you plan to restore in the forest root domain. If possible, also disconnect the network cables of all other DCs. This prevents DCs from replicating, if they're accidentally started during the forest recovery process.
 
-In a large forest that is spread across multiple locations, it can be difficult to guarantee that all writeable DCs are shut down. For this reason, the recovery steps—such as resetting the computer account and krbtgt account, in addition to metadata cleanup—are designed to ensure that the recovered writeable DCs do not replicate with dangerous writeable DCs (in case some are still online in the forest).
+In a large forest that is spread across multiple locations, it can be difficult to guarantee that all writeable DCs are shut down. For this reason, the recovery steps—such as resetting the computer account and krbtgt account, in addition to metadata cleanup—are designed to ensure that the recovered writeable DCs don't replicate with dangerous writeable DCs (in case some are still online in the forest).
 
-However, only by taking writeable DCs offline can you guarantee that replication does not occur. Therefore, whenever possible, you should deploy remote management technology that can help you to shut down and physically isolate the writeable DCs during forest recovery.
+However, only by taking writeable DCs offline can you guarantee that replication doesn't occur. Therefore, whenever possible, you should deploy remote management technology that can help you to shut down and physically isolate the writeable DCs during forest recovery.
 
-RODCs can continue to operate while writeable DCs are offline. No other DC will directly replicate any changes from any RODC—especially, no Schema or Configuration container changes—so they do not pose the same risk as writeable DCs during recovery. After all the writeable DCs are recovered and online, you should rebuild all the RODCs.
+RODCs can continue to operate while writeable DCs are offline. No other DC will directly replicate any changes from any RODC—especially, no Schema or Configuration container changes—so they don't pose the same risk as writeable DCs during recovery. After all the writeable DCs are recovered and online, you should rebuild all the RODCs.
 
-RODCs will continue to allow access to local resources that are cached in their respective sites while the recovery operations are going on in parallel. Local resources that are not cached on the RODC will have authentication requests forwarded to a writeable DC. These requests will fail because writeable DCs are offline. Some operations such as password changes will also not work until you recover writeable DCs.
+RODCs will continue to allow access to local resources that are cached in their respective sites while the recovery operations are going on in parallel. Local resources that aren't cached on the RODC will have authentication requests forwarded to a writeable DC. These requests will fail because writeable DCs are offline. Some operations such as password changes will also not work until you recover writeable DCs.
 
-If you are using a hub-and-spoke network architecture, you can concentrate first on recovering the writeable DCs in the hub sites. Later, you can rebuild the RODCs in remote sites.
+If you're using a hub-and-spoke network architecture, you can concentrate first on recovering the writeable DCs in the hub sites. Later, you can rebuild the RODCs in remote sites.
 
 ## Next Steps
 
