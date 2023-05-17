@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 There are many possible methods of deploying Windows LAPS, or migrating from legacy LAPS to Windows LAPS. This article outlines the basic scenarios along with tips and tricks to be aware of.
 
+When you're migrating existing hybrid-joined devices from legacy LAPS to Windows LAPS, it is your choice whether to continue storing the passwords in Active Directory or to switch to storing the passwords in Azure Active Directory.
+
 ## Directory preparation
 
 Most of the content in this guide isn't directory specific. There are however some preparatory steps required to enable your directory (either Active Directory or Azure AD) to support Windows LAPS devices. These steps should be followed first before proceeding to implement any of the other scenarios described in this article.
