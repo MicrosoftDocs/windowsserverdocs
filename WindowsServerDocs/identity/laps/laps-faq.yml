@@ -89,6 +89,10 @@ sections:
 
   - name: Windows LAPS and Azure Active Directory
     questions:
+      - question: I applied a Windows LAPS policy to my managed Azure AD-joined device which has BackupDirectory=AAD, but Windows LAPS is getting an error when attempting to post the password to Azure AD?
+        answer: |
+          You probably forgot to enable the LAPS feature for your Azure AD tenant. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) for more information.
+
       - question: Do I need to extend my forest's schema if I'm only planning to backup passwords to Azure AD?
         answer: |
           No.

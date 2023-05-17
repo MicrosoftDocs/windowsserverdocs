@@ -5,8 +5,9 @@ ms.topic: article
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 03/22/2019
+ms.date: 05/16/2023
 ms.assetid: 7a3114c8-bda8-49bb-83a8-4e04340ab221
+ms.custom: inhenkel
 ---
 # Safely virtualizing Active Directory Domain Services (AD DS)
 
@@ -18,7 +19,7 @@ Beginning with Windows Server 2012, AD DS provides greater support for virtualiz
 
 Virtual environments present unique challenges to distributed workloads that depend upon a logical clock-based replication scheme. AD DS replication, for example, uses a monotonically increasing value (known as a USN or Update Sequence Number) assigned to transactions on each domain controller. Each domain controller's database instance is also given an identity, known as an InvocationID. The InvocationID of a domain controller and its USN together serve as a unique identifier associated with every write-transaction performed on each domain controller and must be unique within the forest.
 
-AD DS replication uses InvocationID and USNs on each domain controller to determine what changes need to be replicated to other domain controllers. If a domain controller is rolled back in time outside of the domain controller's awareness and a USN is reused for an entirely different transaction, replication will not converge because other domain controllers will believe they have already received the updates associated with the re-used USN under the context of that InvocationID.
+AD DS replication uses InvocationID and USNs on each domain controller to determine what changes need to be replicated to other domain controllers. If a domain controller is rolled back in time outside of the domain controller's awareness and a USN is reused for an entirely different transaction, replication won't converge because other domain controllers will believe they have already received the updates associated with the reused USN under the context of that InvocationID.
 
 For example, the following illustration shows the sequence of events that occurs in Windows Server 2008 R2 and earlier operating systems when USN rollback is detected on VDC2, the destination domain controller that is running on a virtual machine. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value that was seen previously by the replication partner, which indicates that VDC2's database has rolled back in time improperly.
 
@@ -30,11 +31,11 @@ Beginning with  Windows Server 2012 , AD DS virtual domain controllers hosted on
 
 ## Effects of USN rollback
 
-When USN rollbacks occur, modifications to objects and attributes are not inbound replicated by destination domain controllers that have previously seen the USN.
+When USN rollbacks occur, modifications to objects and attributes aren't inbound replicated by destination domain controllers that have previously seen the USN.
 
-Because these destination domain controllers believe they are up to date, no replication errors are reported in Directory Service event logs or by monitoring and diagnostic tools.
+Because these destination domain controllers believe they're up to date, no replication errors are reported in Directory Service event logs or by monitoring and diagnostic tools.
 
-USN rollback may affect the replication of any object or attribute in any partition. The most frequently observed side effect is that user accounts and computer accounts that are created on the rollback domain controller do not exist on one or more replication partners. Or, the password updates that originated on the rollback domain controller do not exist on replication partners.
+USN rollback may affect the replication of any object or attribute in any partition. The most frequently observed side effect is that user accounts and computer accounts that are created on the rollback domain controller don't exist on one or more replication partners. Or, the password updates that originated on the rollback domain controller don't exist on replication partners.
 
 A USN rollback can prevent any object type in any Active Directory partition from replicating. These object types include the following:
 
@@ -50,16 +51,16 @@ The size of the USN hole may represent hundreds, thousands, or even tens of thou
 
 Because a USN rollback is difficult to detect, a domain controller logs event 2095 when a source domain controller sends a previously acknowledged USN number to a destination domain controller without a corresponding change in the invocation ID.
 
-To prevent unique originating updates to Active Directory from being created on the incorrectly restored domain controller, the Net Logon service is paused. When the Net Logon service is paused, user and computer accounts cannot change the password on a domain controller that will not outbound-replicate such changes. Similarly, Active Directory administration tools will favor a healthy domain controller when they make updates to objects in Active Directory.
+To prevent unique originating updates to Active Directory from being created on the incorrectly restored domain controller, the Net Logon service is paused. When the Net Logon service is paused, user and computer accounts can't change the password on a domain controller that won't outbound-replicate such changes. Similarly, Active Directory administration tools will favor a healthy domain controller when they make updates to objects in Active Directory.
 
 On a domain controller, event messages that resemble the following are recorded if the following conditions are true:
 
 * A source domain controller sends a previously acknowledged USN number to a destination domain controller.
-* There is no corresponding change in the invocation ID.
+* There's no corresponding change in the invocation ID.
 
-These events may be captured in the Directory Service event log. However, they may be overwritten before they are observed by an administrator.
+These events may be captured in the Directory Service event log. However, they may be overwritten before they're observed by an administrator.
 
-If you suspect a USN rollback has occurred but do not see a corresponding event in the event logs, check for the DSA Not Writable entry in the registry. This entry provides forensic evidence that a USN rollback has occurred.
+If you suspect a USN rollback has occurred but don't see a corresponding event in the event logs, check for the DSA Not Writable entry in the registry. This entry provides forensic evidence that a USN rollback has occurred.
 
 ```
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters
@@ -78,9 +79,9 @@ During domain controller installation, AD DS initially stores the VM GenerationI
 
 When an administrator restores the virtual machine from a previous snapshot, the current value of the VM GenerationID from the virtual machine driver is compared against a value in the DIT.
 
-If the two values are different, the invocationID is reset and the RID pool discarded thereby preventing USN re-use. If the values are the same, the transaction is committed as normal.
+If the two values are different, the invocationID is reset and the RID pool discarded thereby preventing USN reuse. If the values are the same, the transaction is committed as normal.
 
-AD DS also compares the current value of the VM GenerationID from the virtual machine against the value in the DIT each time the domain controller is rebooted and, if different, it resets the invocationID, discards the RID pool and updates the DIT with the new value. It also non-authoritatively synchronizes the SYSVOL folder in order to complete safe restoration. This enables the safeguards to extend to the application of snapshots on VMs that were shutdown. These safeguards introduced in  Windows Server 2012  enable AD DS administrators to benefit from the unique advantages of deploying and managing domain controllers in a virtualized environment.
+AD DS also compares the current value of the VM GenerationID from the virtual machine against the value in the DIT each time the domain controller is rebooted and, if different, it resets the invocationID, discards the RID pool and updates the DIT with the new value. It also non-authoritatively synchronizes the SYSVOL folder in order to complete safe restoration. This enables the safeguards to extend to the application of snapshots on VMs that were shut down. These safeguards introduced in  Windows Server 2012  enable AD DS administrators to benefit from the unique advantages of deploying and managing domain controllers in a virtualized environment.
 
 The following illustration shows how virtualization safeguards are applied when the same USN rollback is detected on a virtualized domain controller that runs Windows Server 2012 on a hypervisor that supports VM-GenerationID.
 
@@ -88,9 +89,9 @@ The following illustration shows how virtualization safeguards are applied when 
 
 In this case, when the hypervisor detects a change to VM-GenerationID value, virtualization safeguards are triggered, including the reset of the InvocationID for the virtualized DC (from A to B in the preceding example) and updating the VM-GenerationID value saved on the VM to match the new value (G2) stored by the hypervisor. The safeguards ensure that replication converges for both domain controllers.
 
-With Windows Server 2012, AD DS employs safeguards on virtual domain controllers hosted on VM-GenerationID aware hypervisors and ensures that the accidental application of snapshots or other such hypervisor-enabled mechanisms that could rollback a virtual machine's state does not disrupt the AD DS environment (by preventing replication problems such as a USN bubble or lingering objects).
+With Windows Server 2012, AD DS employs safeguards on virtual domain controllers hosted on VM-GenerationID aware hypervisors and ensures that the accidental application of snapshots or other such hypervisor-enabled mechanisms that could roll back a virtual machine's state doesn't disrupt the AD DS environment (by preventing replication problems such as a USN bubble or lingering objects).
 
-Restoring a domain controller by applying a virtual machine snapshot is not recommended as an alternative mechanism to backing up a domain controller. It is recommended that you continue to use Windows Server Backup or other VSS-writer based backup solutions.
+Restoring a domain controller by applying a virtual machine snapshot isn't recommended as an alternative mechanism to backing up a domain controller. It's recommended that you continue to use Windows Server Backup or other VSS-writer based backup solutions.
 
 > [!CAUTION]
 > If a domain controller in a production environment is accidentally reverted to a snapshot, it's advised that you consult the vendors for the applications, and services hosted on that virtual machine, for guidance on verifying the state of these programs after snapshot restore.
@@ -111,7 +112,7 @@ There are two approaches to recover from a USN rollback:
 3. On a healthy domain controller, clean up the metadata of the demoted domain controller.
 4. If the incorrectly restored domain controller hosts operations master roles, transfer these roles to a healthy domain controller.
 5. Restart the demoted server.
-6. If you are required to, install Active Directory on the stand-alone server again.
+6. If you're required to, install Active Directory on the stand-alone server again.
 7. If the domain controller was previously a global catalog, configure the domain controller to be a global catalog.
 8. If the domain controller previously hosted operations master roles, transfer the operations master roles back to the domain controller.
 
@@ -119,7 +120,7 @@ There are two approaches to recover from a USN rollback:
 
 Evaluate whether valid system state backups exist for this domain controller. If a valid system state backup was made before the rolled-back domain controller was incorrectly restored, and the backup contains recent changes that were made on the domain controller, restore the system state from the most recent backup.
 
-You can also use the snapshot as a source of a backup. Or you can set the database to give itself a new invocation ID using the procedure in the section [Restoring a virtual domain controller when an appropriate system state data backup is not available](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd363553%28v%3dws.10%29#restoring-a-virtual-domain-controller-when-an-appropriate-system-state-data-backup-is-not-available)
+You can also use the snapshot as a source of a backup. Or you can set the database to give itself a new invocation ID using the procedure in the section [Restoring a virtual domain controller when an appropriate system state data backup isn't available](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd363553%28v%3dws.10%29#restoring-a-virtual-domain-controller-when-an-appropriate-system-state-data-backup-is-not-available)
 
 ## Next steps
 
