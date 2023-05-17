@@ -58,10 +58,12 @@ Beginning with Windows Server 2022 Datacenter: Azure Edition, Azure Extended Net
 
 ## Getting started with Windows Server Datacenter: Azure Edition
 
-FIXME: To get start using Azure Edition, use your preferred method to create an Azure or Azure Stack HCI VM, and select the _Windows Server Azure Edition_ image that you would like to use.  
+To get start using Azure Edition, use your preferred method to create an Azure or Azure Stack HCI VM, and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use.  
 
 > [!IMPORTANT]
 > Some capabilities have specific configuration steps to perform during VM creation, and some capabilities that are in preview have specific opt-in and portal viewing requirements.  See the individual capability topics to learn more about using that capability with your VM.
+
+To learn more about creating virtual machine using Azure or Azure Stack HCI, see [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal) and [Deploy Windows Server Azure Edition VMs](/azure-stack/hci/manage/windows-server-azure-edition?tabs=hci).
 
 ## Next steps
 
