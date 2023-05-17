@@ -113,7 +113,7 @@ If you use DNS Manager to access an Active Directory-integrated authoritative DN
 
 Select  **OK**  to load DNSSEC settings using the local server. These settings will be the settings that were configured during the last successful replication.
 
-On the  **Key Master**  tab, you can choose a new Key Master from a list of available DNS servers, similar to the procedure that's used for a graceful transfer of the Key Master role, described earlier in this topic.
+On the  **Key Master**  tab, you can choose a new Key Master from a list of available DNS servers, similar to the procedure that's used for routine transfer of the Key Master role, described earlier in this topic.
 
 After choosing a new Key Master, select  **OK**. A notification is displayed with information about the changes to be made. Click  **OK**  again to proceed with the seizing operation. Another notification is displayed with the status of the role transfer. See the following examples:
 
