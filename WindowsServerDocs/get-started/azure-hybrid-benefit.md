@@ -150,7 +150,7 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 #### Eligible hosts
 
-- Windows Server 2019 or later (Datacenter or Standard), or
+- Windows Server 2019 or later (Datacenter only), or
 - Azure Stack HCI
 
 #### Types of license

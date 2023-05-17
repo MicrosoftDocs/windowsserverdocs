@@ -62,6 +62,13 @@ Windows LAPS includes a new Group Policy Object that you can use to administer p
 
 :::image type="content" source="./media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="Screenshot of the Group Policy Management Editor that shows the Windows LAPS policy settings.":::
 
+The template for this new Group Policy object is installed as part of Windows at `%windir%\PolicyDefinitions\LAPS.admx`.
+
+## Group Policy Object Central Store
+
+> [!IMPORTANT]
+> The Windows LAPS GPO template files are  NOT automatically copied to your GPO central store as part of a Windows Update patching operation, assuming you have chosen to implement that approach. Instead you must manually copy the LAPS.admx to the GPO central store location. See [Create and Manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+
 ## Windows LAPS CSP
 
 Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Intune](/mem/intune).

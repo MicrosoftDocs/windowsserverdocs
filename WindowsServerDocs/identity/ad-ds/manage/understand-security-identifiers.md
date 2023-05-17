@@ -4,7 +4,7 @@ description: This article discusses security identifiers (SIDs) for Windows Serv
 author: dansimp
 ms.author: dansimp
 ms.topic: article
-ms.date: 07/21/2022
+ms.date: 05/09/2023
 ---
 
 # Security identifiers
@@ -36,7 +36,7 @@ The operating system generates a SID that identifies a particular account or gro
 
 For every local account and group, the SID is unique for the computer where it was created. No two accounts or groups on the computer ever share the same SID. Likewise, for every domain account and group, the SID is unique within an enterprise. This means that the SID for an account or group that's created in one domain will never match the SID for an account or group created in any other domain in the enterprise.
 
-SIDs always remain unique. Security authorities never issue the same SID twice, and they never reuse SIDs for deleted accounts. For example, if a user with a user account in a Windows domain leaves their job, an administrator deletes their Active Directory account, including the SID that identifies the account. If they later return to a different job at the same company, an administrator creates a new account, and the Windows Server operating system generates a new SID. The new SID doesn't match the old one, so none of the user's access from their old account is transferred to the new account. Both their accounts represent two completely different security principals.
+SIDs always remain unique. Security authorities never issue the same SID twice, and they never reuse SIDs for deleted accounts. For example, if a user with a user account in a Windows domain leaves their job, an administrator deletes their Active Directory account, including the SID that identifies the account. If they later return to a different job at the same company, an administrator creates a new account, and the Windows Server operating system generates a new SID. The new SID doesn't match the old one, so none of the user's access from their old account is transferred to the new account. Both their accounts represent two different security principals.
 
 ## Security identifier architecture
 
@@ -101,7 +101,7 @@ The SID for Contoso\Domain Admins is distinguished from the SIDs for other Domai
 
 When accounts and groups are stored in an account database that's managed by a local Security Accounts Manager (SAM), it's fairly easy for the system to generate a unique relative identifier for each account and in a group that it creates on a standalone computer. The SAM on a standalone computer can track the relative identifier values that it has used before and make sure that it never uses them again.
 
-In a network domain, however, generating unique relative identifiers is a more complex process. Windows Server network domains can have several domain controllers. Each domain controller stores Active Directory account information. This means that, in a network domain, there are as many copies of the account database as there are domain controllers. In addition, every copy of the account database is a master copy. 
+In a network domain, however, generating unique relative identifiers is a more complex process. Windows Server network domains can have several domain controllers. Each domain controller stores Active Directory account information. This means that, in a network domain, there are as many copies of the account database as there are domain controllers. In addition, every copy of the account database is a master copy.
 
 New accounts and groups can be created on any domain controller. Changes that are made to Active Directory on one domain controller are replicated to all other domain controllers in the domain. The process of replicating changes in one master copy of the account database to all other master copies is called a multimaster operation.
 
@@ -139,8 +139,8 @@ The universal well-known SIDs are listed in the following table:
 | S-1-2-1 | Console Logon | A group that includes users who are signed in to the physical console. |
 | S-1-3-0 | Creator Owner ID | A security identifier to be replaced by the security identifier of the user who created a new object. This SID is used in inheritable access control entries (ACEs). |
 | S-1-3-1 | Creator Group ID | A security identifier to be replaced by the primary-group SID of the user who created a new object. Use this SID in inheritable ACEs. |
-| S-1-3-2 | Creator Owner Server | |
-| S-1-3-3 | Creator Group Server | |
+| S-1-3-2 | Owner Server |A placeholder in an inheritable ACE. When the ACE is inherited, the system replaces this SID with the SID for the object's owner server and stores information about who created a given object or file. |
+| S-1-3-3 | Group Server |A placeholder in an inheritable ACE. When the ACE is inherited, the system replaces this SID with the SID for the object's group server and stores information about the groups that are allowed to work with the object. |
 | S-1-3-4 | Owner Rights | A group that represents the current owner of the object. When an ACE that carries this SID is applied to an object, the system ignores the implicit READ_CONTROL and WRITE_DAC permissions for the object owner. |
 | S-1-4 | Non-unique Authority | A SID that represents an identifier authority. |
 | S-1-5 | NT Authority | A SID that represents an identifier authority. |
@@ -167,7 +167,7 @@ The following RID values are used with universal well-known SIDs. The **Identifi
 | SECURITY_CREATOR_OWNER_RID | 0 | S-1-3 |
 | SECURITY_CREATOR_GROUP_RID | 1 | S-1-3 |
 
-The SECURITY\_NT\_AUTHORITY (S-1-5) predefined identifier authority produces SIDs that aren't universal and are meaningful only in installations of the Windows operating systems in the "Applies to" list at the beginning of this article. 
+The SECURITY\_NT\_AUTHORITY (S-1-5) predefined identifier authority produces SIDs that aren't universal and are meaningful only in installations of the Windows operating systems in the "Applies to" list at the beginning of this article.
 
 The well-known SIDs are listed in the following table:
 
@@ -182,7 +182,7 @@ The well-known SIDs are listed in the following table:
 | S-1-5-5- *X*-*Y* | Logon Session| The *X* and *Y* values for these SIDs uniquely identify a particular sign-in session.|
 | S-1-5-6 | Service| A group that includes all security principals that have signed in as a service.|
 | S-1-5-7 | Anonymous Logon| A user who has connected to the computer without supplying a user name and password.<br>The Anonymous Logon identity is different from the identity that's used by Internet Information Services (IIS) for anonymous web access. IIS uses an actual account—by default, IUSR_*ComputerName*, for anonymous access to resources on a website. Strictly speaking, such access isn't anonymous, because the security principal is known even though unidentified people are using the account. IUSR_*ComputerName* (or whatever you name the account) has a password, and IIS signs in to the account when the service starts. As a result, the IIS "anonymous" user is a member of Authenticated Users but Anonymous Logon isn't.|
-| S-1-5-8| Proxy| Does not currently apply: this SID isn't used.|
+| S-1-5-8| Proxy| Doesn't currently apply: this SID isn't used.|
 | S-1-5-9 | Enterprise Domain Controllers| A group that includes all domain controllers in a forest of domains.|
 | S-1-5-10 | Self| A placeholder in an ACE for a user, group, or computer object in Active Directory. When you grant permissions to Self, you grant them to the security principal that's represented by the object. During an access check, the operating system replaces the SID for Self with the SID for the security principal that's represented by the object.|
 | S-1-5-11 | Authenticated Users| A group that includes all users and computers with identities that have been authenticated. Authenticated Users doesn't include Guest even if the Guest account has a password.<br>This group includes authenticated security principals from any trusted domain, not only the current domain.|
@@ -206,7 +206,11 @@ The well-known SIDs are listed in the following table:
 | S-1-5-*root domain*-518| Schema Admins| A group that exists only in the forest root domain. It's a universal group if the domain is in native mode, and it's a global group if the domain is in mixed mode. The Schema Admins group is authorized to make schema changes in Active Directory. By default, the only member of the group is the Administrator account for the forest root domain.|
 | S-1-5-*root domain*-519| Enterprise Admins| A group that exists only in the forest root domain. It's a universal group if the domain is in native mode, and it's a global group if the domain is in mixed mode.<br>The Enterprise Admins group is authorized to make changes to the forest infrastructure, such as adding child domains, configuring sites, authorizing DHCP servers, and installing enterprise certification authorities.<br>By default, the only member of Enterprise Admins is the Administrator account for the forest root domain. The group is a default member of every Domain Admins group in the forest. |
 | S-1-5-*domain*-520| Group Policy Creator Owners| A global group that's authorized to create new Group Policy Objects in Active Directory. By default, the only member of the group is Administrator.<br>Objects that are created by members of Group Policy Creator Owners are owned by the individual user who creates them. In this way, the Group Policy Creator Owners group is unlike other administrative groups (such as Administrators and Domain Admins). Objects that are created by members of these groups are owned by the group rather than by the individual.|
-| S-1-5-*domain*-553| RAS and IAS Servers| A local domain group. By default, this group has no members. Computers that are running the Routing and Remote Access service are added to the group automatically.<br>Members of this group have access to certain properties of User objects, such as Read Account Restrictions, Read Logon Information, and Read Remote Access Information.|
+|S-1-5-*domain*-521|Read-only Domain Controllers|A global group that includes all read-only domain controllers.|
+|S-1-5-*domain*-522|Clonable Controllers|A global group that includes all domain controllers in the domain that can be cloned.|
+|S-1-5-*domain*-525|Protected Users|A global group that is afforded additional protections against authentication security threats.|
+|S-1-5-*root domain*-526|Key Admins|This group is intended for use in scenarios where trusted external authorities are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
+|S-1-5-*domain*-527|Enterprise Key Admins|This group is intended for use in scenarios where trusted external authorities are responsible for modifying this attribute. Only trusted enterprise administrators should be made a member of this group.|
 | S-1-5-32-544 | Administrators| A built-in group. After the initial installation of the operating system, the only member of the group is the Administrator account. When a computer joins a domain, the Domain Admins group is added to the Administrators group. When a server becomes a domain controller, the Enterprise Admins group also is added to the Administrators group.|
 | S-1-5-32-545 | Users| A built-in group. After the initial installation of the operating system, the only member is the Authenticated Users group.|
 | S-1-5-32-546 | Guests| A built-in group. By default, the only member is the Guest account. The Guests group allows occasional or one-time users to sign in with limited privileges to a computer's built-in Guest account.|
@@ -215,7 +219,8 @@ The well-known SIDs are listed in the following table:
 | S-1-5-32-549| Server Operators| Description: A built-in group that exists only on domain controllers. By default, the group has no members. Server Operators can sign in to a server interactively; create and delete network shares; start and stop services; back up and restore files; format the hard disk of the computer; and shut down the computer.|
 | S-1-5-32-550 | Print Operators| A built-in group that exists only on domain controllers. By default, the only member is the Domain Users group. Print Operators can manage printers and document queues.|
 | S-1-5-32-551 | Backup Operators| A built-in group. By default, the group has no members. Backup Operators can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can sign in to the computer and shut it down.|
-| S-1-5-32-552 | Replicators | A built-in group that's used by the File Replication service on domain controllers. By default, the group has no members. Do *not* add users to this group.|
+| S-1-5-32-552 | Replicators | A built-in group that's used by the File Replication service on domain controllers. By default, the group has no members. *Don't* add users to this group.|
+| S-1-5-*domain*-553| RAS and IAS Servers| A local domain group. By default, this group has no members. Computers that are running the Routing and Remote Access service are added to the group automatically.<br>Members of this group have access to certain properties of User objects, such as Read Account Restrictions, Read Logon Information, and Read Remote Access Information.|
 |S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|An alias added by Windows 2000. A backward compatibility group that allows read access on all users and groups in the domain.|
 |S-1-5-32-555|Builtin\Remote Desktop Users|An alias. Members of this group are granted the right to sign in remotely.|
 |S-1-5-32-556|Builtin\Network Configuration Operators|An alias. Members of this group can have some administrative privileges to manage configuration of networking features.|
@@ -227,6 +232,8 @@ The well-known SIDs are listed in the following table:
 |S-1-5-32-562|Builtin\Distributed COM Users|An alias. A group for COM to provide computer-wide access controls that govern access to all call, activation, or launch requests on the computer.|
 |S-1-5-32-568|Builtin\IIS_IUSRS|An alias. A built-in group account for IIS users.|
 |S-1-5-32-569|Builtin\Cryptographic Operators|A built-in local group. Members are authorized to perform cryptographic operations.|
+|S-1-5-*domain*-571|Allowed RODC Password Replication Group|Members in this group can have their passwords replicated to all read-only domain controllers in the domain.|
+|S-1-5-*domain*-572|Denied RODC Password Replication Group|Members in this group can't have their passwords replicated to all read-only domain controllers in the domain.|
 |S-1-5-32-573|Builtin\Event Log Readers|A built-in local group. Members of this group can read event logs from a local computer.|
 |S-1-5-32-574|Builtin\Certificate Service DCOM Access|A built-in local group. Members of this group are allowed to connect to Certification Authorities in the enterprise.|
 |S-1-5-32-575|Builtin\RDS Remote Access Servers|A built-in local group. Servers in this group enable users of RemoteApp programs and personal virtual desktops access to these resources. In internet-facing deployments, these servers are typically deployed in an edge network. This group needs to be populated on servers that are running RD Connection Broker. RD Gateway servers and RD Web Access servers used in the deployment need to be in this group.|
@@ -280,20 +287,20 @@ Changes in SID implementation in the Windows operating systems are described in 
 
 ## Capability SIDs
 
-Capability security identifiers are used to uniquely and immutably identify capabilities that represent an unforgeable token of authority, which grants access to resources (for example, documents, camera, and location) to Universal Windows Applications. An app that *has* a capability is granted access to the resource that the capability is associated with, and one that *does not have* a capability is denied access to the resource.
+Capability security identifiers are used to uniquely and immutably identify capabilities that represent an unforgettable token of authority, which grants access to resources (for example, documents, camera, and location) to Universal Windows Applications. An app that *has* a capability is granted access to the resource that the capability is associated with, and one that *doesn't have* a capability is denied access to the resource.
 
-All capability SIDs that the operating system is aware of are stored in the Windows Registry in the path 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities'. Any capability SID that's added to Windows by first-party or third-party applications will be added to this location.
+All capability SIDs that the operating system is aware of are stored in the Windows Registry in the path 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities'. Any capability SID that's added to Windows by first-party or third-party applications are added to this location.
 
 ## Examples of registry keys taken from Windows 10, version 1909, 64-bit Enterprise edition
 
 You might see the following registry keys under AllCachedCapabilities:
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock_Internal
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Enterprise
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_General
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Restricted
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Windows
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock_Internal
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Enterprise
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_General
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Restricted
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Windows
 
 All capability SIDs are prefixed by *S-1-15-3*.
 
@@ -301,15 +308,16 @@ All capability SIDs are prefixed by *S-1-15-3*.
 
 You might see the following registry keys under AllCachedCapabilities:
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock_Internal
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Enterprise
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_General
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Restricted
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Windows
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock
+
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_DevUnlock_Internal
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Enterprise
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_General
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Restricted
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SecurityManager\CapabilityClasses\AllCachedCapabilities\capabilityClass_Windows
 
 All capability SIDs are prefixed by *S-1-15-3*.
 
 ## See also
 
-* [Access control overview](/windows/security/identity-protection/access-control/access-control)
+- [Access control overview](/windows/security/identity-protection/access-control/access-control)
