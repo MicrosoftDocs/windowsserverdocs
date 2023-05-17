@@ -7,7 +7,7 @@ author: iainfoulds
 manager: daveba
 ms.date: 05/16/2023
 ms.topic: article
-ms.custom: inhenkel
+ms.custom: inhenke
 ---
 
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
