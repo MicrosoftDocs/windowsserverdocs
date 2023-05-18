@@ -30,7 +30,7 @@ To get started using Hotpatch, use your preferred method to create an Azure or A
 
 ### Preview access
 
-For images in preview, you must use a specifical Azure Marketplace image. To create a preview virtual machine for Hotpatch with Desktop Experience, see the following articles:
+For images in preview, you must use a specifically Azure Marketplace image. To create a preview virtual machine for Hotpatch with Desktop Experience, see the following articles:
 
 - **Azure:** visit the [Microsoft Server 2022 Datacenter: Azure Edition Hotpatch Preview](https://aka.ms/HotpatchPreviewImage) in the Azure Marketplace.
 
@@ -66,25 +66,27 @@ There are some important considerations to running a supported _Windows Server A
 
 TODO: intro and then bullets
 
-Virtual machines created in Azure are enabled for [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) by default with a supported _Windows Server Azure Edition_ image. With automatic VM guest patching enabled:
+Hotpatch is an extension of Windows Update and typical orchestration processes. Patch orchestration tools vary depending on your platform. To orchestration Hotpatch:
 
-- Patches classified as Critical or Security are automatically downloaded and applied on the VM.
+- **Azure:** Virtual machines created in Azure are enabled for [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) by default with a supported _Windows Server Datacenter: Azure Edition_ image. With automatic VM guest patching in Azure enabled:
 
-- Patches are applied during off-peak hours in the VM's time zone.
+  - Patches classified as Critical or Security are automatically downloaded and applied on the VM.
 
-- Azure manages patch orchestration and patches are applied following [availability-first principles](/azure/virtual-machines/automatic-vm-guest-patching#availability-first-updates).
+  - Patches are applied during off-peak hours in the VM's time zone.
 
-- Virtual machine health, as determined through platform health signals, is monitored to detect patching failures.
+  - Azure manages patch orchestration and patches are applied following [availability-first principles](/azure/virtual-machines/automatic-vm-guest-patching#availability-first-updates).
 
-When using Azure Stack HCI updates are orchestrated either in the operating system (Windows Update), using Windows Server Update Services (WSUS), or manually by an administration. To learn more about using WSUS to manage and distribute updates, see [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
+  - Virtual machine health, as determined through platform health signals, is monitored to detect patching failures.
+
+- **Azure Stack HCI:** Hotpatch updates are orchestrated either in the operating system (Windows Update), using Windows Server Update Services (WSUS), or manually by an administration. To learn more about using WSUS to manage and distribute updates, see [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
 
 TODO: check WSUS can deliver Hotpatches?
 
-## Understanding the patch status for your VM in Azure
+### Understanding the patch status for your VM in Azure
 
 TODO: check with Ned
 
-To view the patch status for your VM, browse to the VM Overveiw in the Azure Portal, under Operations, select  **Updates**. Under the **Guest OS updates** section, select **Go to Hotpatch (Preview)** to view the latest patch status for your VM.
+To view the patch status for your VM, browse to the VM Overview in the Azure Portal, under Operations, select  **Updates**. Under the **Guest OS updates** section, select **Go to Hotpatch (Preview)** to view the latest patch status for your VM.
 
 On this screen, you see the hotpatch status for your VM. You can also review if there any available patches for your VM that haven't been installed. As described in the ‘Patch installation’ previous section, all security and critical updates are automatically installed on your VM using [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) and no extra actions are required. Patches with other update classifications aren't automatically installed. Instead, they're viewable in the list of available patches under the ‘Update compliance’ tab. You can also view the history of update deployments on your VM through the ‘Update history’. Update history from the past 30 days is displayed, along with patch installation details.
 
