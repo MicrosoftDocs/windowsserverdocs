@@ -118,13 +118,15 @@ By default, a Windows 11 device won't have access to an Active Directory domain 
 
 #### Windows Admin Center method
 
-1. Ensure you are using at least Windows Admin Center version 2110.
-2. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on the file servers. The default KDC proxy port is 443 and assigned automatically by WAC.
+1. Ensure you're using at least Windows Admin Center version 2110.
+1. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure
+   KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on
+   the file servers. The default KDC proxy port is 443 and assigned automatically by Windows Admin Center.
 
-> [!NOTE]
-> You cannot configure an SMB over QUIC server joined to a Workgroup usging Windows Admin Center. You must join the server to an Active Direcotry domain or use the Manual Method section's steps below. 
+   > [!NOTE]
+   > You cannot configure an SMB over QUIC server joined to a Workgroup using Windows Admin Center. You must join the server to an Active Directory domain or use the step in [Manual Method](#manual-method) section.
 
-4. Configure the following group policy setting to apply to the Windows 11 device:
+1. Configure the following group policy setting to apply to the Windows 11 device:
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
@@ -135,8 +137,8 @@ By default, a Windows 11 device won't have access to an Active Directory domain 
     `value: <https fsedge1.contoso.com:443:kdcproxy />`
 
     This Kerberos realm mapping means that if user *ned@corp.contoso.com* tried to connect to a file server name *fs1edge.contoso.com*, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal *corp.contoso.com* domain. The communication with the client will be over HTTPS on port 443 and user credentials aren't directly exposed on the client-file server network.
-4. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
-5. Apply the group policy and restart the Windows 11 device.  
+1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
+1. Apply the group policy and restart the Windows 11 device.  
 
 #### Manual Method
 
