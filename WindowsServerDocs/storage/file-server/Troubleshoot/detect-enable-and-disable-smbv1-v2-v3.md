@@ -5,7 +5,7 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
-ms.date: 12/12/2022
+ms.date: 05/18/2023
 ms.custom: contperf-fy21q2
 ---
 
@@ -15,7 +15,7 @@ ms.custom: contperf-fy21q2
 
 This article describes how to enable and disable Server Message Block (SMB) version 1 (SMBv1), SMB version 2 (SMBv2), and SMB version 3 (SMBv3) on the SMB client and server components.
 
-While disabling or removing SMBv1 might cause some compatibility issues with old computers or software, SMBv1 has significant security vulnerabilities, and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). SMB 1.0 is [not installed by default](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows) in any edition of Windows 11 or Windows Server 2019 and later, and not installed by default in Windows 10 except Home and Pro editions. We recommend that instead of reinstalling SMB 1.0, you update the SMB server that still requires it. For a list of third parties that require SMB 1.0 and their updates that remove the requirement, review the [SMB1 Product Clearinghouse](https://aka.ms/stillneedssmb1).
+While disabling or removing SMBv1 might cause some compatibility issues with old computers or software, SMBv1 has significant security vulnerabilities, and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). [SMB 1.0 isn't installed by default](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows) in any edition of Windows 11 or Windows Server 2019 and later. SMB 1.0 also isn't installed by default in Windows 10, except Home and Pro editions. We recommend that instead of reinstalling SMB 1.0, you update the SMB server that still requires it. For a list of third parties that require SMB 1.0 and their updates that remove the requirement, review the [SMB1 Product Clearinghouse](https://aka.ms/stillneedssmb1).
 
 ## Disabling SMBv2 or SMBv3 for troubleshooting
 
