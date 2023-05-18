@@ -4,7 +4,7 @@ description: Learn about SMB security enhancements, such as encryption and the n
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 03/17/2023
+ms.date: 05/18/2023
 ms.prod: windows-server
 ---
 
@@ -55,33 +55,35 @@ UNC Hardening lets you configure SMB clients to require encryption regardless of
 
 ### Enable SMB Encryption with Windows PowerShell
 
-1. To enable SMB Encryption for an individual file share, enter the following script on the server:
+1. Sign into your server and run PowerShell on your computer in an elevated session.
+
+1. To enable SMB Encryption for an individual file share, run the following command.
 
     ```powershell
     Set-SmbShare –Name <sharename> -EncryptData $true
     ```
 
-1. To enable SMB Encryption for the entire file server, enter the following script on the server:
+1. To enable SMB Encryption for the entire file server, run the following command.
 
     ```powershell
     Set-SmbServerConfiguration –EncryptData $true
     ```
 
-1. To create a new SMB file share with SMB Encryption enabled, enter the following script:
+1. To create a new SMB file share with SMB Encryption enabled, run the following command.
 
     ```powershell
     New-SmbShare –Name <sharename> -Path <pathname> –EncryptData $true
     ```
-    
+
 ### Map drives with encryption
 
-1. To enable SMB Encryption when mapping a drive using PowerShell:
+1. To enable SMB Encryption when mapping a drive using PowerShell, run the following command.
 
     ```powershell
     New-SMBMapping -LocalPath <drive letter> -RemotePath <UNC path> -RequirePrivacy $TRUE
     ```
-    
-2. To enable SMB Encryption when mapping a drive using CMD:
+
+2. To enable SMB Encryption when mapping a drive using CMD, run the following command.
 
     ```cmd
     NET USE <drive letter> <UNC path> /REQUIREPRIVACY
