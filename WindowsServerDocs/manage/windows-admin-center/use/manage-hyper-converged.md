@@ -274,14 +274,14 @@ You can also configure the virtual network when creating a virtual machine.
 1. Select **GPUs** from the navigation on the left side. 
 2. View the available GPUs from your clustered VMs and provide GPU acceleration to workloads running in the clustered VMs through Discrete Device Assignment (DDA). [Learn more about using GPUs with clustered VMs.](https://aka.ms/useGPUWithClusteredVM)
 
-[![Here is a screenshot of how you can manage your GPUs.](../media/manage-hyper-converged/gpu-tool.png)](../media/manage-hyper-converged/gpu-tool.png#lightbox)
+![Here is a screenshot of how you can manage your GPUs.](../media/manage-hyper-converged/gpu-tool.png)
 
 ### Security tool
 
 1. Select **Security** from the navigation on the left side. 
 2. Select the **Secured-core** tab and enable or disable the available security features. 
 
-[![Here is a screenshot of how you can check the security of your resources.](../media/manage-hyper-converged/security-tool.png)](../media/manage-hyper-converged/security-tool.png#lightbox)
+![Here is a screenshot of how you can check the security of your resources.](../media/manage-hyper-converged/security-tool.png)
 
 ## Give us feedback
 

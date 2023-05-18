@@ -14,6 +14,20 @@ Learn how to use the LAPS properties dialog in the Windows Server Active Directo
 > [!IMPORTANT]
 > For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
+## Windows LAPS snap-in availability
+
+The Windows LAPS-enabled Active Directory Users and Computers management snap-in is available on Windows Server platforms that have been patched with the Windows LAPS feature. The Active Directory Users and Computers management snap-in must be installed, either as part of the larger `Active Directory Domain Services` role, or as part of the `AD DS Snap-in and Command-Line Tools` individual feature.
+
+One way to install the `AD DS Snap-Ins and Command-Line Tools` feature is from the command line as follows:
+
+```
+dism.exe /online /enable-feature:DirectoryServices-DomainController-Tools /all
+```
+
+The Windows LAPS-enabled Active Directory Users and Computers management snap-in is available on supported Windows Client platforms that have been patched with the Windows LAPS feature, via Remote Server Administration Tools (RSAT). You may install RSAT on client platforms by going to Settings, then Apps, then Optional Features, and then install RSAT (specifically search for and install "RSAT: Active Directory Domain Services and Lightweight Directory Services Tools").
+
+The Windows LAPS-enabled Active Directory Users and Computers management snap-in isn't available on older platforms that don't support Windows LAPS. The older Remote Server Administration tools package is not updated to support the new snap-in.
+
 ## LAPS properties dialog in the management snap-in
 
 The Windows Server Active Directory Users and Computers management snap-in includes a LAPS properties dialog that's available for computer objects:

@@ -62,6 +62,13 @@ Windows LAPS includes a new Group Policy Object that you can use to administer p
 
 :::image type="content" source="./media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="Screenshot of the Group Policy Management Editor that shows the Windows LAPS policy settings.":::
 
+The template for this new Group Policy object is installed as part of Windows at `%windir%\PolicyDefinitions\LAPS.admx`.
+
+## Group Policy Object Central Store
+
+> [!IMPORTANT]
+> The Windows LAPS GPO template files are  NOT automatically copied to your GPO central store as part of a Windows Update patching operation, assuming you have chosen to implement that approach. Instead you must manually copy the LAPS.admx to the GPO central store location. See [Create and Manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+
 ## Windows LAPS CSP
 
 Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Intune](/mem/intune).
@@ -82,6 +89,21 @@ Use this setting to control which directory the password for the managed account
 
 If not specified, this setting defaults to 0 (Disabled).
 
+### AdministratorAccountName
+
+Use this setting to configure the name of the managed local administrator account.
+
+If not specified, this setting defaults to managing the built-in local administrator account.
+
+> [!IMPORTANT]
+> If you configure Windows LAPS to manage the built-in local administrator account, you must ensure that the account is enabled. Windows LAPS doesn't enable the account.
+
+> [!IMPORTANT]
+> Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
+
+> [!IMPORTANT]
+> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created and enabled. Windows LAPS doesn't create or enable the account.
+
 ### PasswordAgeDays
 
 This setting controls the maximum password age of the managed local administrator account. Supported values are:
@@ -100,6 +122,9 @@ Use this setting to configure the length of the password of the managed local ad
 
 If not specified, this setting defaults to 14 characters.
   
+> [!IMPORTANT]
+> Do not configure PasswordLength to a value that is incompatible with the managed device's local password policy. This will result in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAP event log).
+
 ### PasswordComplexity
 
 Use this setting to configure the required password complexity of the managed local administrator account.
@@ -116,6 +141,9 @@ If not specified, this setting defaults to 4.
 > [!IMPORTANT]
 > Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4.
 
+> [!IMPORTANT]
+> Do not configure PasswordComplexity to a setting that is incompatible with the managed device's local password policy. This will result in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAPS event log).
+
 ### PasswordExpirationProtectionEnabled
 
 Use this setting to configure enforcement of maximum password age for the managed local administrator account.
@@ -126,15 +154,6 @@ If not specified, this setting defaults to 1 (True).
 
 > [!TIP]
 > In legacy Microsoft LAPS mode, this setting defaults to False for backward compatibility.
-
-### AdministratorAccountName
-
-Use this setting to configure the name of the managed local administrator account.
-
-If not specified, this setting defaults to managing the built-in local administrator account.
-
-> [!IMPORTANT]
-> Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
 
 ### ADPasswordEncryptionEnabled
 

@@ -19,10 +19,10 @@ HNV offers enhanced support in the following areas:
 
 |Feature/Functionality|New or improved|Description|
 |--------------------------|-------------------|---------------|
-|[Programmable Hyper-V switch](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SDN)|New|HNV policy is programmable through the Microsoft Network Controller.|
-|[VXLAN encapsulation support](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#VXLAN)|New|HNV now supports VXLAN encapsulation.|
-|[Software Load Balancer (SLB) interoperability](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SLB)|New|HNV is fully integrated with the Microsoft Software Load Balancer.|
-|[Compliant IEEE Ethernet headers](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#L2)|Improved|Compliant with IEEE Ethernet standards|
+|[Programmable Hyper-V switch](#SDN)|New|HNV policy is programmable through the Microsoft Network Controller.|
+|[VXLAN encapsulation support](#VXLAN)|New|HNV now supports VXLAN encapsulation.|
+|[Software Load Balancer (SLB) interoperability](#SLB)|New|HNV is fully integrated with the Microsoft Software Load Balancer.|
+|[Compliant IEEE Ethernet headers](#L2)|Improved|Compliant with IEEE Ethernet standards|
 
 ### <a name="SDN"></a>Programmable Hyper-V switch
 HNV is a fundamental building block of Microsoft's updated Software Defined Networking (SDN) solution, and is fully integrated into the SDN stack.

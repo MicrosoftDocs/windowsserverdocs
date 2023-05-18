@@ -5,8 +5,9 @@ title: Troubleshooting Domain Controller Deployment
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 03/20/2019
+ms.date: 05/16/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # Troubleshooting Domain Controller Deployment
@@ -84,7 +85,7 @@ To troubleshoot issues not explained by the logs, use the following tools as a s
 
         1.  Compare this to your working lab environment to understand what a healthy promotion looks like and where it's failing.
 
-        2.  At this point, the errors are likely with the forest objects, non-default security changes, or the network, and this new domain controller is a victim of misconfigurations in DNS, firewalls, host intrusion protection software, or other outside factors.
+        2.  At this point, the errors are likely with the forest objects, nondefault security changes, or the network, and this new domain controller is a victim of misconfigurations in DNS, firewalls, host intrusion protection software, or other outside factors.
 
 ## Troubleshooting Events and Error Messages
 
@@ -98,7 +99,7 @@ Domain controller promotion and demotion always returns a code at the end of ope
    Install-addsdomaincontroller <options> -norebootoncompletion:$true | format-list
    ```
 
-   Errors in prerequisite validation and verification don't continue on to a reboot, so they are visible in all cases. For example:
+   Errors in prerequisite validation and verification don't continue on to a reboot, so they're visible in all cases. For example:
 
    ![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/ADDS_PSPrereqError.png)
 
@@ -113,18 +114,18 @@ Domain controller promotion and demotion always returns a code at the end of ope
 |--|--|--|
 | 1 | Exit, success | You still must reboot, this just notes that the automatic restart flag was removed |
 | 2 | Exit, success, need to reboot |  |
-| 3 | Exit, success, with a non-critical failure | Typically seen when returning the DNS Delegation warning. If not configuring DNS delegation, use:<p>-creatednsdelegation:$false |
-| 4 | Exit, success, with a non-critical failure, need to reboot | Typically seen when returning the DNS Delegation warning. If not configuring DNS delegation, use:<p>-creatednsdelegation:$false |
+| 3 | Exit, success, with a noncritical failure | Typically seen when returning the DNS Delegation warning. If not configuring DNS delegation, use:<p>-creatednsdelegation:$false |
+| 4 | Exit, success, with a noncritical failure, need to reboot | Typically seen when returning the DNS Delegation warning. If not configuring DNS delegation, use:<p>-creatednsdelegation:$false |
 
 ### Promotion and demotion failure codes
 
-Promotion and demotion return the following failure message codes. There is also likely to be an extended error message; always read the entire error carefully, not just the numeric portion.
+Promotion and demotion return the following failure message codes. There's also likely to be an extended error message; always read the entire error carefully, not just the numeric portion.
 
 | Error Code | Explanation | Suggested resolution |
 |--|--|--|
-| 11 | Domain controller promotion is already running | Do not run than one instance of domain controller promotion at the same time for the same target computer |
-| 12 | User must be administrator | Logon as a member of the built-in Administrators group and ensure you are elevating with UAC |
-| 13 | Certification Authority is installed | You cannot demote this domain controller, as it is also a Certification Authority. Do not remove the CA before you carefully inventory its usage - if it is issuing certificates, removing the role will cause an outage. Running CAs on domain controllers is discouraged |
+| 11 | Domain controller promotion is already running | Don't run more than one instance of domain controller promotion at the same time for the same target computer |
+| 12 | User must be administrator | Logon as a member of the built-in Administrators group and ensure you're elevating with UAC |
+| 13 | Certification Authority is installed | You can't demote this domain controller, as it's also a Certification Authority. Don't remove the CA before you carefully inventory its usage - if it's issuing certificates, removing the role will cause an outage. Running CAs on domain controllers is discouraged |
 | 14 | Running in safe-boot mode | Boot the server into normal mode |
 | 15 | Role change is in progress or needs reboot | You must restart the server (due to prior configuration changes) before promotion |
 | 16 | Running on wrong platform | *Not likely to get this error* |
@@ -160,7 +161,7 @@ Promotion and demotion return the following failure message codes. There is also
 | 47 | A tree with the specified name already exists | Choose a different tree DNS domain name |
 | 48 | The tree name does not fit into the forest structure | Choose a different tree DNS domain name |
 | 49 | The specified domain does not exist | Verify your typed domain name |
-| 50 | During demote, last domain controller was detected even though it is not, or last domain controller was specified, but it is not | Do not specify **Last Domain Controller in the Domain** (**-lastdomaincontrollerindomain**) unless it is true. Use **-ignorelastdcindomainmismatch** to override if this is truly the last domain controller and there is phantom domain controller metadata |
+| 50 | During demote, last domain controller was detected even though it is not, or last domain controller was specified, but it is not | Do not specify **Last Domain Controller in the Domain** (**-lastdomaincontrollerindomain**) unless it is true. Use **-ignorelastdcindomainmismatch** to override if this is truly the last domain controller and there's phantom domain controller metadata |
 | 51 | App partitions exist on this domain controller | Specify to **Remove Application Partitions** (**-removeapplicationpartitions**) |
 | 52 | Required command-line argument is missing (that is, an answer file must be specified on the command-line) | *Only seen with dcpromo /unattend, which is deprecated. See older documentation* |
 | 53 | The promotion/demotion failed, machine must be rebooted to clean up | Examine the extended error and logs |
@@ -175,12 +176,12 @@ Promotion and demotion return the following failure message codes. There is also
 | 63 | Forest functional level is below windows server 2003 | Raise the forest functional level to at least Windows Server 2003 Native. Windows 2000 and Windows NT 4.0 are no longer supported operating systems |
 | 64 | Promo failed because component binary detection failed | Install the AD DS role |
 | 65 | Promo failed because component binary installation failed | Install the AD DS role |
-| 66 | Promo failed because operating system detection failed | Examine the extended error and logs; the server is failing to return its operating system version. It is likely that the computer will need to be re-installed, as its overall health is highly suspect |
+| 66 | Promo failed because operating system detection failed | Examine the extended error and logs; the server is failing to return its operating system version. It's likely that the computer will need to be reinstalled, as its overall health is highly suspect |
 | 68 | Replication partner is invalid | Use repadmin.exe or the **Get-ADReplication\\**\* Windows PowerShell to validate partner domain controller health |
 | 69 | Required Port is already in use by some other application | Use **netstat.exe -anob** to locate processes that are incorrectly assigned to reserved AD DS ports |
 | 70 | The forest root domain controller must be a GC | *Only seen with dcpromo /unattend, which is deprecated. See older documentation* |
-| 71 | DNS server is already installed | Do not specify to install DNS (**-installDNS**) if the DNS service is already installed |
-| 72 | Computer is running Remote Desktop Services in non-admin mode | You cannot promote this domain controller, as it is also a RDS server configured for more than two admin users. Do not remove RDS before you carefully inventory its usage - if it is being used by applications or end-users, removal will cause an outage |
+| 71 | DNS server is already installed | Don't specify to install DNS (**-installDNS**) if the DNS service is already installed |
+| 72 | Computer is running Remote Desktop Services in nonadmin mode | You can't promote this domain controller, as it's also a RDS server configured for more than two admin users. Don't remove RDS before you carefully inventory its usage - if it's being used by applications or end-users, removal will cause an outage |
 | 73 | The specified forest functional level is invalid. | Specify a valid forest functional level |
 | 74 | The specified domain functional level is invalid. | Specify a valid domain functional level |
 | 75 | Unable to determine the default password replication policy. | Validate that the RODC password replication policy exists and is accessible |
@@ -193,17 +194,17 @@ Promotion and demotion return the following failure message codes. There is also
 | 82 | Forest schema mismatch | Use Windows Server 2012 to prepare the forest or use **adprep.exe /forestprep** |
 | 83 | Unsupported SKU | *Not likely to get this error* |
 | 84 | Unable to detect a domain controller account | Validate that existing domain controllers have correct user account control attribute set. |
-| 85 | Unable to select a domain controller account for stage 2 | Returned if you specify "Use Existing Account" but either no account found or there is an error during account lookup. Ensure you provided the correct RODC staged account |
-| 86 | Need to run stage 2 promotion | Returned if you promote an additional domain controller but an existing account exists and "Allow Reinstall" was not specified |
+| 85 | Unable to select a domain controller account for stage 2 | Returned if you specify "Use Existing Account" but either no account found or there's an error during account lookup. Ensure you provided the correct RODC staged account |
+| 86 | Need to run stage 2 promotion | Returned if you promote an additional domain controller but an existing account exists and "Allow Reinstall" wasn't specified |
 | 87 | A domain controller account of conflicting type exists | Rename the computer before promoting, if not trying to attach to an unoccupied domain controller. You must attach to the unoccupied domain controller account using **-useexistingaccount** and the correct read-only or writable argument, depending on account type |
 | 88 | The specified server admin is not valid | You specified an invalid account for RODC admin delegation. Verify that the account specified is a valid user or group |
-| 89 | RID master for the specified domain is offline. | Use **netdom.exe query fsmo** to detect the RID master. Bring it online and make it accessible to the domain controller you are promoting |
-| 90 | Domain naming master is offline. | Use **netdom.exe query fsmo** to detect the domain naming master. Bring it online and make it accessible to the domain controller you are promoting |
+| 89 | RID master for the specified domain is offline. | Use **netdom.exe query fsmo** to detect the RID master. Bring it online and make it accessible to the domain controller you're promoting |
+| 90 | Domain naming master is offline. | Use **netdom.exe query fsmo** to detect the domain naming master. Bring it online and make it accessible to the domain controller you're promoting |
 | 91 | Failed to detect if the process is wow64 | *Not possible to get this error anymore, the operating system is 64-bit* |
-| 92 | Wow64 process is not supported | *Not possible to get this error anymore, the operating system is 64-bit* |
-| 93 | Domain controller service is not running for non-forceful demotion | Start the AD DS service |
-| 94 | Local admin password does not meet requirement: either blank or not required | Provide a non-blank password and ensure that the local password policy requires a password |
-| 95 | Cannot demote last Windows Server 2008 or later domain controller in the domain where live RODCs exist | You must first demote all RODCs before you can demote all Windows Server 2008 or later writable domain controllers |
+| 92 | Wow64 process isn't supported | *Not possible to get this error anymore, the operating system is 64-bit* |
+| 93 | Domain controller service isn't running for nonforceful demotion | Start the AD DS service |
+| 94 | Local admin password doesn't meet requirement: either blank or not required | Provide a nonblank password and ensure that the local password policy requires a password |
+| 95 | Can't demote last Windows Server 2008 or later domain controller in the domain where live RODCs exist | You must first demote all RODCs before you can demote all Windows Server 2008 or later writable domain controllers |
 | 96 | Unable to uninstall DS binaries | *Only seen with dcpromo /unattend, which is deprecated. See older documentation* |
 | 97 | Forest functional level version higher than that of the child domain operating system | Provide a child domain functional the same or higher than the forest functional level |
 | 98 | Component binary install/uninstall is in progress. | *Only seen with dcpromo /unattend, which is deprecated. See older documentation* |
@@ -219,69 +220,69 @@ The following are common issues seen during the Windows Server 2012 development 
 | Symptoms | Server still responds to DNS requests but has no zone information |
 | Resolution and Notes | When removing the AD DS role, also remove the DNS Server role or set the DNS Server service to disabled. Remember to point the DNS client to another server than itself. If using Windows PowerShell, run the following after you demote the server:<p>Code - uninstall-windowsfeature dns<p>or<p>Code - set-service dns -starttype disabled<br />stop-service dns |
 
-| Issue | Promoting a Windows Server 2012 into an existing single-label domain does not configure updatetopleveldomain=1 or allowsinglelabeldnsdomain=1 |
+| Issue | Promoting a Windows Server 2012 into an existing single-label domain doesn't configure updatetopleveldomain=1 or allowsinglelabeldnsdomain=1 |
 |--|--|
-| Symptoms | DNS dynamic record registration does not occur |
+| Symptoms | DNS dynamic record registration doesn't occur |
 | Resolution and Notes | Set these values using the Netlogon and DNS group policies. Microsoft began blocking single-label domain creation in Windows Server 2008; you can use ADMT or the Domain Rename Tool to change to an approved DNS domain structure. |
 
 | Issue | Demotion of last domain controller in a domain fails if there are pre-created, unoccupied RODC accounts |
 |--|--|
-| Symptoms | Demotion fails with message:<p>**Dcpromo.General.54**<p>Active Directory Domain Services could not find another Active Directory Domain Controller to transfer the remaining data in directory partition CN=Schema,CN=Configuration,DC=corp,DC=contoso,DC=com.<p>"The format of the specified domain name is invalid." |
+| Symptoms | Demotion fails with message:<p>**Dcpromo.General.54**<p>Active Directory Domain Services couldn't find another Active Directory Domain Controller to transfer the remaining data in directory partition CN=Schema,CN=Configuration,DC=corp,DC=contoso,DC=com.<p>"The format of the specified domain name is invalid." |
 | Resolution and Notes | Remove any remaining pre-created RODC accounts before demoting a domain, using **Dsa.msc** or **Ntdsutil.exe metadata cleanup**. |
 
-| Issue | Automated forest and domain preparation does not run GPPREP |
+| Issue | Automated forest and domain preparation doesn't run GPPREP |
 |--|--|
-| Symptoms | Cross-domain planning functionality for Group Policy, Resultant Set of Policy (RSOP) Planning Mode, requires updated file system and Active Directory permissions for existing GP. Without Gpprep, you cannot use RSOP Planning across domains. |
-| Resolution and Notes | Run **adprep.exe /gpprep** manually for all domains that were not previously prepared for Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2. Administrators should run GPPrep only once in the history of a domain, not with every upgrade. It is not run by automatic adprep because if you have already set adequate custom permissions, it would cause all SYSVOL contents to re-replicate on all domain controllers. |
+| Symptoms | Cross-domain planning functionality for Group Policy, Resultant Set of Policy (RSOP) Planning Mode, requires updated file system and Active Directory permissions for existing GP. Without Gpprep, you can't use RSOP Planning across domains. |
+| Resolution and Notes | Run **adprep.exe /gpprep** manually for all domains that weren't previously prepared for Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2. Administrators should run GPPrep only once in the history of a domain, not with every upgrade. It isn't run by automatic adprep because if you have already set adequate custom permissions, it would cause all SYSVOL contents to re-replicate on all domain controllers. |
 
 | Issue | Install from media fails to verify when pointing to a UNC path |
 |--|--|
-| Symptoms | Error returned:<p>Code - Could not validate media path. Exception calling "GetDatabaseInfo" with "2" arguments. The folder is not valid. |
+| Symptoms | Error returned:<p>Code - Couldn't validate media path. Exception calling "GetDatabaseInfo" with "2" arguments. The folder isn't valid. |
 | Resolution and Notes | You must store IFM files on a local disk, not a remote UNC path. This intentional block prevents partial server promotion due to a network interruption. |
 
 | Issue | DNS delegation warning shown twice during domain controller promotion |
 |--|--|
-| Symptoms | Warning returned *twice* when promoting using ADDSDeployment Windows PowerShell:<p>Code - "A delegation for this DNS server cannot be created because the authoritative parent zone cannot be found or it does not run Windows DNS server. If you are integrating with an existing DNS infrastructure, you should manually create a delegation to this DNS server in the parent zone to ensure reliable name resolution from outside the domain. Otherwise, no action is required." |
-| Resolution and Notes | Ignore. ADDSDeployment Windows PowerShell shows the warning first during prerequisite checking, then again during configuration of the domain controller. If you do not wish to configure DNS delegation, use argument:<p>Code - -creatednsdelegation:$false<p>Do *not* skip the prerequisite checks in order to suppress this message |
+| Symptoms | Warning returned *twice* when promoting using ADDSDeployment Windows PowerShell:<p>Code - "A delegation for this DNS server can't be created because the authoritative parent zone can't be found or it doesn't run Windows DNS server. If you're integrating with an existing DNS infrastructure, you should manually create a delegation to this DNS server in the parent zone to ensure reliable name resolution from outside the domain. Otherwise, no action is required." |
+| Resolution and Notes | Ignore. ADDSDeployment Windows PowerShell shows the warning first during prerequisite checking, then again during configuration of the domain controller. If you don't wish to configure DNS delegation, use argument:<p>Code - -creatednsdelegation:$false<p>Don't* skip the prerequisite checks in order to suppress this message |
 
-| Issue | Specifying UPN or non-domain credentials during configuration returns misleading errors |
+| Issue | Specifying UPN or nondomain credentials during configuration returns misleading errors |
 |--|--|
 | Symptoms | Server Manager returns error:<p>Code - Exception calling "DNSOption" with "6" Arguments<p>ADDSDeployment Windows PowerShell returns error:<p>Code - Verification of user permissions failed. You must supply the name of the domain to which this user account belongs. |
-| Resolution and Notes | Ensure you are providing valid domain credentials in the form of **domain\user**. |
+| Resolution and Notes | Ensure you're providing valid domain credentials in the form of **domain\user**. |
 
 | Issue | Removing the DirectoryServices-DomainController role using Dism.exe leads to unbootable server |
 |--|--|
 | Symptoms | If using Dism.exe to remove the AD DS role before demoting a domain controller gracefully, the server no longer boots normally and shows error:<p>Code - Status: 0x000000000<br />Info: An unexpected error has occurred. |
-| Resolution and Notes | Boot into Directory Services Repair Mode using *Shift+F8*. Add the AD DS role back, and then forcibly demote the domain controller. Alternatively, restore the System State from backup. Do not use Dism.exe for AD DS role removal; the utility has no knowledge of domain controllers. |
+| Resolution and Notes | Boot into Directory Services Repair Mode using *Shift+F8*. Add the AD DS role back, and then forcibly demote the domain controller. Alternatively, restore the System State from backup. Don't use Dism.exe for AD DS role removal; the utility has no knowledge of domain controllers. |
 
 | Issue | Installing a new forest fails when setting forestmode to Win2012 |
 |--|--|
 | Symptoms | Promotion using ADDSDeployment Windows PowerShell returns error:<p>Code -  Test.VerifyDcPromoCore.DCPromo.General.74<p>Verification of prerequisites for Domain Controller promotion failed. The specified domain functional level is invalid |
-| Resolution and Notes | Do not specify a forest functional mode of Win2012 without *also* specifying a domain functional mode of Win2012. Here is an example that will work without errors:<p>Code - -forestmode Win2012 -domainmode Win2012] |
+| Resolution and Notes | Don't specify a forest functional mode of Win2012 without *also* specifying a domain functional mode of Win2012. Here's an example that will work without errors:<p>Code - -forestmode Win2012 -domainmode Win2012] |
 
 | Issue | Clicking Verify in the Install from Media selection area appears to do nothing |
 |--|--|
 | Symptoms | When you specify a path to an IFM folder, clicking the **Verify** button never returns a message or appears to do anything. |
-| Resolution and Notes | The **Verify** button only returns errors if there are issues. Otherwise, it makes the **Next** button selectable if you have provided an IFM path. You must click **Verify** to proceed if you have selected IFM. |
+| Resolution and Notes | The **Verify** button only returns errors if there are issues. Otherwise, it makes the **Next** button selectable if you have provided an IFM path. You must select **Verify** to proceed if you have selected IFM. |
 
-| Issue | Demoting with Server Manager does not provide feedback until completed. |
+| Issue | Demoting with Server Manager doesn't provide feedback until completed. |
 |--|--|
-| Symptoms | When using Server Manager to remove the AD DS role and demote a domain controller, there is no ongoing feedback given until the demotion completes or fails. |
+| Symptoms | When using Server Manager to remove the AD DS role and demote a domain controller, there's no ongoing feedback given until the demotion completes or fails. |
 | Resolution and Notes | This is a limitation of Server Manager. For feedback, use ADDSDeployment Windows PowerShell cmdlet:<p>Code - Uninstall-addsdomaincontroller |
 
-| Issue | Install from Media Verify does not detect that RODC media provided for writable domain controller, or vice versa. |
+| Issue | Install from Media Verify doesn't detect that RODC media provided for writable domain controller, or vice versa. |
 |--|--|
-| Symptoms | When promoting a new domain controller using IFM and providing incorrect media to IFM - such as RODC media for a writable domain controller, or RWDC media for an RODC - the Verify button does not return an error. Later, promotion fails with error:<p>Code - An error occurred while trying to configure this machine as a domain controller. <br />The Install-From-Media promotion of a Read-Only DC cannot start because the specified source database is not allowed. Only databases from other RODCs can be used for IFM promotion of a RODC. |
-| Resolution and Notes | Verify only validates the overall integrity of IFM. Do not provide the wrong IFM type to a server. Restart the server before you attempt promotion again with the correct media. |
+| Symptoms | When promoting a new domain controller using IFM and providing incorrect media to IFM - such as RODC media for a writable domain controller, or RWDC media for an RODC - the Verify button doesn't return an error. Later, promotion fails with error:<p>Code - An error occurred while trying to configure this machine as a domain controller. <br />The Install-From-Media promotion of a Read-Only DC can't start because the specified source database isn't allowed. Only databases from other RODCs can be used for IFM promotion of a RODC. |
+| Resolution and Notes | Verify only validates the overall integrity of IFM. Don't provide the wrong IFM type to a server. Restart the server before you attempt promotion again with the correct media. |
 
-| Issue | Promoting an RODC into a pre-created computer account fails |
+| Issue | Promoting an RODC into a precreated computer account fails |
 |--|--|
-| Symptoms | When using ADDSDeployment Windows PowerShell to promote a new RODC with a staged computer account, receive error:<p>Code - Parameter set cannot be resolved using the specified named parameters.    <br />InvalidArgument: ParameterBindingException<br />    + FullyQualifiedErrorId : AmbiguousParameterSet,Microsoft.DirectoryServices.Deployment.PowerShell.Commands.Install |
-| Resolution and Notes | Do not provide parameters already defined already on a pre-created RODC account. These include:<p>Code - -readonlyreplica<br />-installdns<br />-donotconfigureglobalcatalog<br />-sitename<br />-installdns |
+| Symptoms | When using ADDSDeployment Windows PowerShell to promote a new RODC with a staged computer account, receive error:<p>Code - Parameter set can't be resolved using the specified named parameters.    <br />InvalidArgument: ParameterBindingException<br />    + FullyQualifiedErrorId : AmbiguousParameterSet,Microsoft.DirectoryServices.Deployment.PowerShell.Commands.Install |
+| Resolution and Notes | Don't provide parameters already defined already on a precreated RODC account. These include:<p>Code - -readonlyreplica<br />-installdns<br />-donotconfigureglobalcatalog<br />-sitename<br />-installdns |
 
 | Issue | Deselecting/selecting "Restart each destination server automatically if required" does nothing |
 |--|--|
-| Symptoms | If selecting (or not selecting) the Server Manager option **Restart each destination server automatically if required** whendemoting a domain controller through role removal, the server always restarts, regardless of choice. |
+| Symptoms | If selecting (or not selecting) the Server Manager option **Restart each destination server automatically if required** when demoting a domain controller through role removal, the server always restarts, regardless of choice. |
 | Resolution and Notes | This is intentional. The demotion process restarts the server regardless of this setting. |
 
 | Issue | Dcpromo.log shows "[error] setting security on server files failed with 2" |
@@ -291,8 +292,8 @@ The following are common issues seen during the Windows Server 2012 development 
 
 | Issue | Prerequisite adprep check fails with error "Unable to perform Exchange schema conflict check" |
 |--|--|
-| Symptoms | When attempting to promote a Windows Server 2012 domain controller into an existing Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 forest, prerequisite check fails with error:<p>Code - Verification of prerequisites for AD prep failed. Unable to perform Exchange schema conflict check for domain  *\<domain name>* (Exception: the RPC server is unavailable)<p>The adprep.log shows error:<p>Code - Adprep could not retrieve data from the server *\<domain controller>*<p>through Windows Management Instrumentation (WMI). |
-| Resolution and Notes | The new domain controller cannot access WMI through DCOM/RPC protocols against the existing domain controllers. To date, there have been three causes for this:<p>-   A firewall rule blocks access to the existing domain controllers<p>-   The NETWORK SERVICE account is missing from the "Logon as a service" (SeServiceLogonRight) privilege on the existing domain controllers<p>-   NTLM is disabled on domain controllers, using security policies described in [Introducing the Restriction of NTLM Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560653(v=ws.10)) |
+| Symptoms | When attempting to promote a Windows Server 2012 domain controller into an existing Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 forest, prerequisite check fails with error:<p>Code - Verification of prerequisites for AD prep failed. Unable to perform Exchange schema conflict check for domain  *\<domain name>* (Exception: the RPC server is unavailable)<p>The adprep.log shows error:<p>Code - Adprep couldn't retrieve data from the server *\<domain controller>*<p>through Windows Management Instrumentation (WMI). |
+| Resolution and Notes | The new domain controller can't access WMI through DCOM/RPC protocols against the existing domain controllers. To date, there have been three causes for this:<p>-   A firewall rule blocks access to the existing domain controllers<p>-   The NETWORK SERVICE account is missing from the "Logon as a service" (SeServiceLogonRight) privilege on the existing domain controllers<p>-   NTLM is disabled on domain controllers, using security policies described in [Introducing the Restriction of NTLM Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560653(v=ws.10)) |
 
 | Issue | Creating a new AD DS forest always shows DNS warning |
 |--|--|
@@ -307,39 +308,39 @@ The following are common issues seen during the Windows Server 2012 development 
 | Issue | After promotion, logon fails with " Not enough storage is available to process this command" |
 |--|--|
 | Symptoms | After you promote a new domain controller and then log off and attempt to log on interactively, you receive error:<p>Code - Not enough storage is available to process this command |
-| Resolution and Notes | The domain controller was not rebooted after promotion, either due to an error or because you specified the ADDSDeployment Windows PowerShell argument **-norebootoncompletion**. Restart the domain controller. |
+| Resolution and Notes | The domain controller wasn't rebooted after promotion, either due to an error or because you specified the ADDSDeployment Windows PowerShell argument **-norebootoncompletion**. Restart the domain controller. |
 
-| Issue | The Next button is not available on the Domain Controller Options page |
+| Issue | The Next button isn't available on the Domain Controller Options page |
 |--|--|
-| Symptoms | Even though you have set a password, the **Next** button on the **Domain Controller Options** page in Server Manager is not available. There is no site listed in the **Site name** menu. |
+| Symptoms | Even though you have set a password, the **Next** button on the **Domain Controller Options** page in Server Manager isn't available. There's no site listed in the **Site name** menu. |
 | Resolution and Notes | You have multiple AD DS sites and at least one is missing subnets; this future domain controller belongs to one of those subnets. You must manually select the subnet from the Site name dropdown menu. You should also review all AD sites using DSSITE.MSC or use the following Windows PowerShell command to find all sites missing subnets:<p>Code - get-adreplicationsite -filter \* -property subnets &#124; where-object {!$_.subnets -eq "\*"} &#124; format-table name |
 
-| Issue | Promotion or demotion fails with message "the service cannot be started" |
+| Issue | Promotion or demotion fails with message "the service can't be started" |
 |--|--|
-| Symptoms | If you attempt promotion, demotion, or cloning of a domain controller you receive error:<p>Code - The service cannot be started, either because it is disabled or it has no enabled devices associated with it" (0x80070422)<p>The error may be interactive, an event, or written to a log like dcpromoui.log or dcpromo.log |
-| Resolution and Notes | The DS Role Server service (DsRoleSvc) is disabled. By default, this service is installed during AD DS role installation and set to a Manual start type. Do not disable this service. Set it back to Manual and allow the DS role operations to start and stop it on demand. This behavior is by design. |
+| Symptoms | If you attempt promotion, demotion, or cloning of a domain controller you receive error:<p>Code - The service can't be started, either because it's disabled or it has no enabled devices associated with it" (0x80070422)<p>The error may be interactive, an event, or written to a log like dcpromoui.log or dcpromo.log |
+| Resolution and Notes | The DS Role Server service (DsRoleSvc) is disabled. By default, this service is installed during AD DS role installation and set to a Manual start type. Don't disable this service. Set it back to Manual and allow the DS role operations to start and stop it on demand. This behavior is by design. |
 
 | Issue | Server Manager still warns that you need to promote DC |
 |--|--|
 | Symptoms | If you promote a domain controller using the deprecated dcpromo.exe /unattend or upgrade an existing Windows Server 2008 R2 domain controller in place to Windows Server 2012, Server Manager still shows the post-deployment configuration task **Promote this server to a domain controller**. |
-| Resolution and Notes | Click the post-deployment warning link and the message will disappear for good. This behavior is cosmetic and expected. |
+| Resolution and Notes | select the post-deployment warning link and the message will disappear for good. This behavior is cosmetic and expected. |
 
 | Issue | Server Manager deployment script missing role installation |
 |--|--|
-| Symptoms | If you promote a domain controller using Server Manager and save the Windows PowerShell deployment script, it does not include the role installation cmdlet and arguments (install-windowsfeature -name ad-domain-services -includemanagementtools). Without the role, the DC cannot be configured. |
+| Symptoms | If you promote a domain controller using Server Manager and save the Windows PowerShell deployment script, it doesn't include the role installation cmdlet and arguments (install-windowsfeature -name ad-domain-services -includemanagementtools). Without the role, the DC can't be configured. |
 | Resolution and Notes | Manually add that cmdlet and arguments to any scripts. This behavior is expected and by design. |
 
-| Issue | Server Manager deployment script is not named PS1 |
+| Issue | Server Manager deployment script isn't named PS1 |
 |--|--|
 | Symptoms | If you promote a domain controller using Server Manager and save the Windows PowerShell deployment script, the file is named with a random temporary name and not as a PS1 file. |
 | Resolution and Notes | Manually rename the file. This behavior is expected and by design. |
 
 | Issue | Dcpromo /unattend allows unsupported functional levels |
 |--|--|
-| Symptoms | If you promote a domain controller using dcpromo /unattend with the following sample answer file:<p>Code -<p>[DCInstall]<br />NewDomain=Forest<p>ReplicaOrNewDomain=Domain<p>NewDomainDNSName=corp.contoso.com<p>SafeModeAdminPassword=Safepassword@6<p>DomainNetbiosName=corp<p>DNSOnNetwork=Yes<p>AutoConfigDNS=Yes<p>RebootOnSuccess=NoAndNoPromptEither<p>RebootOnCompletion=No<p>*DomainLevel=0*<p>*ForestLevel=0*<p>Promotion fails with the following errors in the dcpromoui.log:<p>Code - dcpromoui EA4.5B8 0089 13:31:50.783       Enter CArgumentsSpec::ValidateArgument DomainLevel<p>dcpromoui EA4.5B8 008A 13:31:50.783         Value for DomainLevel is 0<p>dcpromoui EA4.5B8 008B 13:31:50.783   Exit code is 77<p>dcpromoui EA4.5B8 008C 13:31:50.783   The specified argument is invalid.<p>dcpromoui EA4.5B8 008D 13:31:50.783 closing log<p>dcpromoui EA4.5B8 0032 13:31:50.830   Exit code is 77<p>Level 0 is Windows 2000, which is not supported in Windows Server 2012. |
-| Resolution and Notes | Do not use the deprecated dcpromo /unattend and understand that it allows you to specify invalid settings that later fail. This behavior is expected and by design. |
+| Symptoms | If you promote a domain controller using dcpromo /unattend with the following sample answer file:<p>Code -<p>[DCInstall]<br />NewDomain=Forest<p>ReplicaOrNewDomain=Domain<p>NewDomainDNSName=corp.contoso.com<p>SafeModeAdminPassword=Safepassword@6<p>DomainNetbiosName=corp<p>DNSOnNetwork=Yes<p>AutoConfigDNS=Yes<p>RebootOnSuccess=NoAndNoPromptEither<p>RebootOnCompletion=No<p>*DomainLevel=0*<p>*ForestLevel=0*<p>Promotion fails with the following errors in the dcpromoui.log:<p>Code - dcpromoui EA4.5B8 0089 13:31:50.783       Enter CArgumentsSpec::ValidateArgument DomainLevel<p>dcpromoui EA4.5B8 008A 13:31:50.783         Value for DomainLevel is 0<p>dcpromoui EA4.5B8 008B 13:31:50.783   Exit code is 77<p>dcpromoui EA4.5B8 008C 13:31:50.783   The specified argument is invalid.<p>dcpromoui EA4.5B8 008D 13:31:50.783 closing log<p>dcpromoui EA4.5B8 0032 13:31:50.830   Exit code is 77<p>Level 0 is Windows 2000, which isn't supported in Windows Server 2012. |
+| Resolution and Notes | Don't use the deprecated dcpromo /unattend and understand that it allows you to specify invalid settings that later fail. This behavior is expected and by design. |
 
 | Issue | Promotion "hangs" at creating NTDS settings object, never completes |
 |--|--|
 | Symptoms | If you promote a replica DC or RODC, the promotion reaches "creating NTDS settings object" and never proceeds or completes. The logs stop updating as well. |
-| Resolution and Notes | This is a known issue caused by providing credentials of the built-in local Administrator account with a matching password to the built-in domain Administrator account. This causes a failure down in the core setup engine that does not error, but instead waits indefinitely (quasi-loop). This is expected - albeit undesirable - behavior.<p>To fix the server:<p>1.  Reboot it.<p>1.  In AD, delete that server's member computer account (it will not yet be a DC account)<p>1.  On that server, forcibly disjoin it from the domain<p>1.  On that server, remove the AD DS role.<p>1.  Reboot<p>1.  Re-add the AD DS role and reattempt promotion, ensuring that you always provide the ***domain\admin*** formatted credentials to DC promotion and not just the built-in local administrator account |
+| Resolution and Notes | This is a known issue caused by providing credentials of the built-in local Administrator account with a matching password to the built-in domain Administrator account. This causes a failure down in the core setup engine that doesn't error, but instead waits indefinitely (quasi-loop). This is expected - albeit undesirable - behavior.<p>To fix the server:<p>1.  Reboot it.<p>1.  In AD, delete that server's member computer account (it will not yet be a DC account)<p>1.  On that server, forcibly disjoin it from the domain<p>1.  On that server, remove the AD DS role.<p>1.  Reboot<p>1.  Readd the AD DS role and reattempt promotion, ensuring that you always provide the ***domain\admin*** formatted credentials to DC promotion and not just the built-in local administrator account |

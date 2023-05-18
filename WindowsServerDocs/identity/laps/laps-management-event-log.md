@@ -42,13 +42,13 @@ LAPS policy processing is now starting.
 
 Each 10003 event is followed by several other events that describe what's happening. When the cycle finishes, the final event marks the operation as succeeded or failed.
 
-A successful cycle is marked by a 10004 event. Here's an example of a 10004 event:
+A successful cycle is tracked with a 10004 event. Here's an example of a 10004 event:
 
 ```output
 LAPS policy processing succeeded.
 ```
 
-A failed cycle is marked by a 10005 event. Here's an example of a 10005 event:
+A failed cycle is tracked with a 10005 event. Here's an example of a 10005 event:
 
 ```output
 LAPS policy processing failed with the error code below.
@@ -142,7 +142,7 @@ Account RID: 1087
 
 ### Blocked external password modification request
 
-When Windows LAPS is enabled, it protects the password for the specified managed account from being modified by any entity other than Windows LAPS. A 10031 event is logged when an attempt to change the password is blocked.
+When Windows LAPS is enabled, it protects the password for the specified managed account from modification by any entity other than Windows LAPS. A 10031 event is logged when an attempt to change the password is blocked.
 
 Here's an example of a 10031 event:
 
@@ -167,7 +167,7 @@ Account RID: 1087
 Password reset timer deadline: %3%n
 ```
 
-When the deadline that's listed in the 10031 event is reached, Windows LAPS logs a 10042 event:
+When the deadline that's listed in the 10041 event is reached, Windows LAPS logs a 10042 event:
 
 ```output
 The post-authentication grace period has expired per policy. The configured post-authentication actions will now be executed.
@@ -197,6 +197,10 @@ Account RID: 1087
 Password reset retry count: 1
 Error code: 80070032
 ```
+
+## Client event log versus AD domain controller event log
+
+The Windows LAPS event log channel contains events related to the local machine acting as a client. The Windows LAPS event log channel on an Active Directory domain controller only contains events related to management of the local DSRM account (if enabled), and never contains any events related to domain-joined client behaviors.
 
 ## Next steps
 

@@ -14,6 +14,15 @@ Learn how to get started with Windows Local Administrator Password Solution (Win
 > [!IMPORTANT]
 > For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
+## Supported Azure clouds
+
+See [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
+
+## Enable LAPS in the Azure AD device settings
+
+> [!IMPORTANT]
+> By default Azure AD doesn't allow managed devices to post new Windows LAPS passwords to Azure AD. You MUST first have your IT admin enable the feature at the Azure AD tenant level. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) for more information.
+
 ## Configure device policy
 
 To configure device policy, complete these tasks:
@@ -53,7 +62,7 @@ More plainly: the Windows Server Active Directory-specific policy settings don't
 
 At a minimum, you must configure the BackupDirectory setting to the value 1 (backup passwords to Azure Active Directory).
 
-If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified by its well-known relative identifier (RID) and should never be identified by name. The name of the built-in local administrator account varies depending on the default locale of the device.
+If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified using its well-known relative identifier (RID) and should never be identified with its name. The name of the built-in local administrator account varies depending on the default locale of the device.
 
 If you want to configure a custom local administrator account, you should configure the AdministratorAccountName setting with the name of that account.
 
@@ -90,32 +99,12 @@ You might need to configure the repository as Trusted for the command to succeed
 
 The next step is to create an Azure Active Directory application that's configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
-The app needs to be configured with two permissions: `Device.Read.All` and either `DeviceLocalCredential.Read.All` or `DeviceLocalCredential.ReadBasic.All`.
+The app needs to be configured with two permissions: `Device.Read.All` and either `Device.LocalCredential.Read` or `Device.LocalCredential.ReadAll`. `DeviceManagementManagedDevices.Read.All` may also be required in order to query passwords for Microsoft Managed Desktop devices.
 
 > [!IMPORTANT]
 >
 > - Use `DeviceLocalCredential.ReadBasic.All` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
 > - Use `DeviceLocalCredential.Read.All` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
-
-#### Manual consent to DeviceLocalCredential.\* permissions
-
-Currently, a manual step is required to consent to either `DeviceLocalCredential.ReadBasic.All` or the `DeviceLocalCredential.Read.All` permissions.
-
-After you decide which `DeviceLocalCredential` permission to configure, manually construct a URL for your scenario. In the following examples, `DeviceLocalCredential.Read.All` is the permission. Replace the permission with `DeviceLocalCredential.ReadBasic.All` if necessary.
-
-For multi-tenant apps:
-
-`https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=<YourClientAppID>=response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
-
-For single-tenant apps:
-
-`https://login.microsoftonline.com/<YourTenantNameOrTenantID>/oauth2/v2.0/authorize?client_id=<YourClientAppID>&response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
-
-Using the URL template that's relevant for your scenario, replace `<YourClientAppID>` with the application ID of the Azure registered app you created earlier. Replace `<YourTenantNameOrTenantID>` with your Azure tenant name or tenant ID.
-
-When the final URL is ready, paste it into a browser and go to the URL. The browser displays a permissions consent dialog. Select the **Consent on behalf of your organization** checkbox, and then select **Accept**. For example:
-
-:::image type="content" source="./media/laps-scenarios-azure-active-directory/laps-scenarios-azure-active-directory-permission-consent.png" alt-text="Screenshot that shows an Azure Active Directory application permissions consent dialog.":::
 
 ### Retrieve the password from Azure Active Directory
 
@@ -170,7 +159,7 @@ PasswordUpdateTime     : 7/1/2022 11:34:39 AM
 
 The password that's returned in a `SecureString` object.
 
-Finally, for testing or ad-hoc purposes, you can request that the password appear in clear text by using the `-AsPlainText` parameter:
+Finally, for testing or ad-hoc purposes, you can request that the password appears in clear text by using the `-AsPlainText` parameter:
 
 ```powershell
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice -IncludePasswords -AsPlainText
@@ -216,6 +205,7 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 

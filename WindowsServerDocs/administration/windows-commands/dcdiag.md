@@ -5,6 +5,8 @@ ms.topic: reference
 ms.date: 04/25/2023
 ms.author: alalve
 author: orthomas
+ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
+ms.contributors: orthomas
 ---
 
 # Dcdiag

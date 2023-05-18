@@ -5,8 +5,9 @@ title: Autonomy vs. Isolation
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/16/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # Autonomy vs. Isolation
@@ -35,11 +36,11 @@ In Active Directory Domain Services (AD DS), administrators can delegate both se
 The number of forests that you need to deploy is based on the autonomy and isolation requirements of each group within your organization. To identify your forest design requirements, you must identify the autonomy and isolation requirements for all groups in your organization. Specifically, you must identify the need for data isolation, data autonomy, service isolation, and service autonomy. You must also identify areas of limited connectivity in your organization.
 
 ### Data isolation
-Data isolation involves exclusive control over data by the group or organization that owns the data. It is important to note that service administrators have the ability to take control of a resource away from data administrators. And data administrators do not have the ability to prevent service administrators from accessing the resources that they control. Therefore, you cannot achieve data isolation when another group within the organization is responsible for service administration. If a group requires data isolation, that group must also assume responsibility for service administration.
+Data isolation involves exclusive control over data by the group or organization that owns the data. It's important to note that service administrators have the ability to take control of a resource away from data administrators. And data administrators don't have the ability to prevent service administrators from accessing the resources that they control. Therefore, you can't achieve data isolation when another group within the organization is responsible for service administration. If a group requires data isolation, that group must also assume responsibility for service administration.
 
-Because data stored in AD DS and on computers joined to AD DS cannot be isolated from service administrators, the only way for a group within an organization to achieve complete data isolation is to create a separate forest for that data. Organizations for which the consequences of an attack by malicious software or by a coerced service administrator are substantial might choose to create a separate forest to achieve data isolation. Legal requirements typically create a need for this type of data isolation. For example:
+Because data stored in AD DS and on computers joined to AD DS can't be isolated from service administrators, the only way for a group within an organization to achieve complete data isolation is to create a separate forest for that data. Organizations for which the consequences of an attack by malicious software or by a coerced service administrator are substantial might choose to create a separate forest to achieve data isolation. Legal requirements typically create a need for this type of data isolation. For example:
 
--   A financial institution is required by law to limit access to data that belongs to clients in a particular jurisdiction to users, computers, and administrators located in that jurisdiction. Although the institution trusts service administrators that work outside the protected area, if the access limitation is violated, the institution will no longer be able to do business in that jurisdiction. Therefore, the financial institution must isolate data from service administrators outside that jurisdiction. Note that encryption is not always an alternative to this solution. Encryption might not protect data from service administrators.
+-   A financial institution is required by law to limit access to data that belongs to clients in a particular jurisdiction to users, computers, and administrators located in that jurisdiction. Although the institution trusts service administrators that work outside the protected area, if the access limitation is violated, the institution will no longer be able to do business in that jurisdiction. Therefore, the financial institution must isolate data from service administrators outside that jurisdiction. Note that encryption isn't always an alternative to this solution. Encryption might not protect data from service administrators.
 
 -   A defense contractor is required by law to limit access to project data to a specified set of users. Although the contractor trusts service administrators who control computer systems related to other projects, a violation of this access limitation will cause the contractor to lose business.
 
@@ -49,16 +50,16 @@ Because data stored in AD DS and on computers joined to AD DS cannot be isolated
 ### Data autonomy
 Data autonomy involves the ability of a group or organization to manage its own data, including making administrative decisions about the data and performing any required administrative tasks without the need for approval from another authority.
 
-Data autonomy does not prevent service administrators in the forest from accessing the data. For example, a research group within a large organization might want to be able to manage their project-specific data themselves but not need to secure the data from other administrators in the forest.
+Data autonomy doesn't prevent service administrators in the forest from accessing the data. For example, a research group within a large organization might want to be able to manage their project-specific data themselves but not need to secure the data from other administrators in the forest.
 
 ### Service isolation
 Service isolation involves exclusive control of the Active Directory infrastructure. Groups that require service isolation require that no administrator outside of the group can interfere with the operation of the directory service.
 
 Operational or legal requirements typically create a need for service isolation. For example:
 
--   A manufacturing company has a critical application that controls equipment on the factory floor. Interruptions in the service on other parts of the network of the organization cannot be allowed to interfere with the operation of the factory floor.
+-   A manufacturing company has a critical application that controls equipment on the factory floor. Interruptions in the service on other parts of the network of the organization can't be allowed to interfere with the operation of the factory floor.
 
--   A hosting company provides service to multiple clients. Each client requires service isolation so that any service interruption that affects one client does not affect the other clients.
+-   A hosting company provides service to multiple clients. Each client requires service isolation so that any service interruption that affects one client doesn't affect the other clients.
 
 ### Service autonomy
 Service autonomy involves the ability to manage the infrastructure without a requirement for exclusive control; for example, when a group wants to make changes to the infrastructure (such as adding or removing domains, modifying the Domain Name System (DNS) namespace, or modifying the schema) without the approval of the forest owner.

@@ -8,7 +8,7 @@ ms.date: 05/06/2022
 ---
 # Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)
 
->Applies to Azure Stack HCI, version 21H2 and later
+> Applies to: Azure Stack HCI, versions 22H2 and 21H2
 
 > [!IMPORTANT]
 > Windows Admin Center in the Azure portal is currently in preview.
@@ -215,6 +215,26 @@ Clicking **Connect** performs the following actions:
 3. A unique short-lived URL is generated and connection to Windows Admin Center is established from the Azure portal.
 
 Connection to Windows Admin Center is end-to-end encrypted with SSL termination happening on your cluster.
+
+## Automate Windows Admin Center deployment using PowerShell
+
+You can automate Windows Admin Center deployment in Azure portal using this example PowerShell script.
+
+```powershell
+$clusterName = "<name_of_cluster>"
+$resourceGroup = "<resource_group>"
+$subscription = "<subscription_id>"
+$port = "6516"
+        
+#Deploy Windows Admin Center
+$setting = @{ "port" = $port }
+New-AzStackHciExtension -ArcSettingName "default" -Name "AdminCenter" -ResourceGroupName $resourceGroup -ClusterName $clusterName -ExtensionParameterPublisher "Microsoft.AdminCenter" -ExtensionParameterSetting $setting -ExtensionParameterType "AdminCenter" -SubscriptionId $subscription -ExtensionParameterTypeHandlerVersion "0.0"
+        
+#Allow connectivity
+$patch = @{ "properties" =  @{ "connectivityProperties" = @{"enabled" = $true}}}
+$patchPayload = ConvertTo-Json $patch
+Invoke-AzRestMethod -Method PATCH -Uri "https://management.azure.com/subscriptions/$subscription/resourceGroups/$resourceGroup/providers/Microsoft.AzureStackHCI/clusters/$clusterName/ArcSettings/default?api-version=2023-02-01" -Payload $patchPayload
+```
 
 ## Troubleshooting
 

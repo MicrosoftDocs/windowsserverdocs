@@ -68,7 +68,7 @@
     },
     {
       "path_to_root": "_azurestack",
-      "url": "https://github.com/MicrosoftDocs/azure-stack-docs",
+      "url": "https://github.com/MicrosoftDocs/azure-stack-docs-pr",
       "branch": "main",
       "branch_mapping": {}
     },

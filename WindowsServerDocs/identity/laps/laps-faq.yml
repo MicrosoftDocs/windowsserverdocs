@@ -3,7 +3,7 @@ metadata:
   title: Windows LAPS frequently asked questions
   description: Get answers to frequently asked questions about Windows LAPS.
   author: jay98014
-  ms.author: wscontent
+  ms.author: jsimmons
   ms.topic: faq
   ms.date: 04/20/2023
 title: Windows LAPS frequently asked questions
@@ -14,27 +14,18 @@ summary: |
 sections:
   - name: General
     questions:
-      - question: I only want to use legacy Microsoft LAPS, how can I uninstall Windows LAPS?
-        answer: |
-          Windows LAPS is considered a Windows baseline security feature and can't be
-          uninstalled. To prevent any chance of conflict between the two features, you should avoid
-          configuring or applying any new Windows LAPS policies, and also
-          [Disable legacy LAPS emulation mode](/windows-server/identity/laps/laps-scenarios-legacy#disabling-legacy-microsoft-laps-emulation-mode).
-
-      - question: Is it supported to run legacy Microsoft LAPS side-by-side with Windows LAPS?
-        answer: |
-          Yes, this scenario is supported with the following conditions. A new Windows LAPS policy
-          must be configured, and you must take care to configure Windows LAPS and the legacy LAPS
-          to manage different local accounts.
-
       - question: Is it supported to run 3rd-party local account password manager products side-by-side with Windows LAPS?
         answer: |  
           Yes, this scenario is supported with the following condition. You must take care to
           configure Windows LAPS and the 3rd-party product to manage different local accounts. If
           you mistakenly configure both to manage the same account, Windows LAPS rejects attempts by
-          the 3rd-party product to modify the account's password with a
-          `STATUS_POLICY_CONTROLLED_ACCOUNT\ERROR_POLICY_CONTROLLED_ACCOUNT` error. Each such
-          rejection is noted with a 10031 event in the Windows LAPS event log channel.
+          the 3rd-party product to modify the account's password. See [Account password tampering protection](laps-concepts.md#account-password-tampering-protection).
+
+      - question: Why can't I change the password of a local admin account currently managed by Windows LAPS?
+        answer: |
+          Windows LAPS prevents accidental or spurious changes to the managed account's password. This protection
+          helps prevent a torn state situation where the password stored in the directory doesn't match the password
+          stored locally on the device. See [Account password tampering protection](laps-concepts.md#account-password-tampering-protection).
 
       - question: Why isn't the Windows LAPS PowerShell module hosted on GitHub, PowerShell Gallery, or similar?
         answer: |
@@ -44,15 +35,88 @@ sections:
       - question: How can I copy the Windows LAPS PowerShell module to an older operating system?
         answer: This scenario isn't supported.
 
-      - question: How can I copy the Windows LAPS-enabled Active Directory User and Computers snap-in to an older operating system?
-        answer: This scenario isn't supported.
+      - question: How can I submit unanswered questions or feature requests?
+        answer: |
+          See [Submitting feedback](laps-overview.md#submitting-feedback).
 
-      - question: Microsoft promotes a password-less strategy and direction. Why was a password-based feature like Windows LAPS built?
+      - question: I see errors in my Windows LAPS event log - how do I fix them?
+        answer: |
+          See [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance).
+
+      - question: Microsoft promotes a password-less strategy and direction. Why was a password-based feature like Windows LAPS added to Windows?
         answer: |
           All Windows LAPS scenarios involve the management of a Windows local account's password
           for use with help desk tasks, device recovery, and other scenarios. Since Windows only
           supports password-based authentication for local accounts, password management is
           necessary.
+
+  - name: Windows LAPS and Active Directory
+    questions:
+      - question: Can I deploy and use Windows LAPS even if my domain is running older domain controllers?
+        answer: |
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+
+      - question: Can I deploy and use Windows LAPS even if my domain isn't yet at Windows Server 2016 Domain Functional Level?
+        answer: |
+          Yes with some limitations. See [Domain functional level and domain controller version requirements](laps-scenarios-windows-server-active-directory.md#domain-functional-level-and-domain-controller-os-version-requirements).
+
+      - question: Do I need to deploy a Windows Server 2022 or 2019 DC in order to extend my forest's schema with the Windows LAPS schema extensions?
+        answer: |
+          No - you can run the `Update-LapsADSchema` cmdlet from any operating system updated with the Windows LAPS
+          feature. The only requirement is that the client credentials are authorized to modify the Active Directory
+          schema. See [Update the Windows Server Active Directory schema](laps-scenarios-windows-server-active-directory.md#update-the-windows-server-active-directory-schema).
+
+      - question: How can I copy the Windows LAPS-enabled Active Directory User and Computers snap-in to an older operating system?
+        answer: This scenario isn't supported.
+
+      - question: I installed RSAT and I still don't see the new LAPS-enabled Active Directory User and Computers snap-in?
+        answer: |
+          The new snap-in is only available in the Windows in-box versions of RSAT on supported Windows LAPS platforms. See [Windows LAPS snap-in availability](laps-management-user-interface.md#windows-laps-snap-in-availability).
+
+      - question: Why don't I see the new Windows LAPS policy in my GPO central store?
+        answer: |
+          The new Windows LAPS policy isn't automatically installed as part of the GPO central store. See [Group Policy Object Central Store](laps-management-policy-settings.md#group-policy-object-central-store).
+
+      - question: Are Windows LAPS DSRM passwords available during a catastrophic AD disaster scenario?
+        answer: |
+          Windows LAPS DSRM password backup is only one component of a comprehensive Active Directory disaster recovery plan. For more information, see [DSRM password support](laps-concepts.md#dsrm-password-support).
+
+      - question: Is it supported to run legacy Microsoft LAPS side-by-side with Windows LAPS?
+        answer: |
+          Yes, this scenario is supported with the following conditions. A new Windows LAPS policy
+          must be configured, and you must take care to configure Windows LAPS and the legacy LAPS
+          to manage different local accounts.
+
+  - name: Windows LAPS and Azure Active Directory
+    questions:
+      - question: I applied a Windows LAPS policy to my managed Azure AD-joined device which has BackupDirectory=AAD, but Windows LAPS is getting an error when attempting to post the password to Azure AD?
+        answer: |
+          You probably forgot to enable the LAPS feature for your Azure AD tenant. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) for more information.
+
+      - question: Do I need to extend my forest's schema if I'm only planning to backup passwords to Azure AD?
+        answer: |
+          No.
+
+      - question: Do I need Intune in order to use Windows LAPS?
+        answer: |
+          No. It's supported to deploy and use Windows LAPS in either Active Directory or Azure AD mode
+          without Intune. Intune does provide many benefits to the Windows LAPS scenario (for example,
+          policy deployment at scale, monitoring, and password-reset action support).
+
+      - question: Do I need Azure AD Connect in order to use Windows LAPS?
+        answer: |
+          No. There are no dependencies between these two features. Managed Windows LAPS devices back up
+          their passwords to Azure AD directly via https and doesn't rely at all on data synchronization
+          techniques.
+
+      - question: How do I configure a hybrid-joined device to back up the password to both Azure AD and AD?
+        answer: This scenario isn't supported. You can only back up the password to one directory at a time.
+
+      - question: Which specific Azure clouds support Windows LAPS?
+        answer: |
+          See [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps) and 
+          [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information
+          on which specific clouds are supported.
 
 additionalContent: |
     ## Next steps
