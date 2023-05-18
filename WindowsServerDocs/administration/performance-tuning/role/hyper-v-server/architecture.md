@@ -4,7 +4,7 @@ description: Learn about the Hyper-V architecture considerations to tune and imp
 ms.topic: article
 ms.author: wscontent
 author: phstee
-ms.date: 05/17/2023
+ms.date: 05/18/2023
 ---
 
 # Hyper-V architecture
@@ -15,7 +15,7 @@ The root partition owns and has direct access to the physical I/O devices. The v
 
 ![Diagram showing the Hyper-V hypervisor-based architecture.](../../media/perftune-guide-hyperv-arch.png)
 
-The Hyper-V-specific I/O architecture consists of virtualization service providers (VSPs) in the root partition and virtualization service clients (VSCs) in the child partition. Each service is exposed as a device over VM Bus, which acts as an I/O bus and enables high-performance communication between VMs that use mechanisms such as shared memory. The guest operating system's plug and play manager enumerates these devices, including VM Bus, and loads the appropriate device drivers, virtual service clients. Services other than I/O are also exposed through this architecture.
+The Hyper-V-specific I/O architecture consists of virtualization service providers (VSPs) in the root partition and virtualization service clients (VSCs) in the child partition. Each service is exposed as a device over VM Bus, which acts as an I/O bus and enables high-performance communication between VMs that use mechanisms such as shared memory. The guest operating system's Plug and Play manager enumerates these devices, including VM Bus, and loads the appropriate device drivers, virtual service clients. Services other than I/O are also exposed through this architecture.
 
 ## Windows Server 2008 operating system features
 
