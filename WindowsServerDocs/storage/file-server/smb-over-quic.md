@@ -5,7 +5,7 @@ ms.prod: windows-server
 ms.topic: article
 author: NedPyle
 ms.author: inhenkel
-ms.date: 06/07/2021
+ms.date: 05/18/2023
 ---
 
 # SMB over QUIC
@@ -188,7 +188,7 @@ An expired SMB over QUIC certificate that you replace with a new certificate fro
 - Windows Server 2022 Datacenter: Azure Edition will also eventually be available on Azure Stack HCI 21H2, for customers not using Azure public cloud.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
 - Users should have strong passwords or, ideally, be configured using a [passwordless strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy) with [Windows Hello for Business MFA](/windows/security/identity-protection/hello-for-business) or [smart cards](/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference). Configure an account lockout policy for mobile users through [fine-grained password policy](../../identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#fine_grained_pswd_policy_mgmt) and you should deploy intrusion protection software to detect brute force or password spray attacks.
-- You cannot configure SMB over QUIC using WAC when the SMB server is in a workgroup (i.e. not AD domain joined). In that scenario you must use the New-[SMBServerCertificateMapping](https://learn.microsoft.com/powershell/module/smbshare/new-smbservercertificatemapping?view=windowsserver2022-ps) cmdlet and the manual steps above for KDC proxy configuration
+- You can't configure SMB over QUIC using WAC when the SMB server is in a workgroup (that is, not AD domain joined). In that scenario you must use the [New-SMBServerCertificateMapping](https://learn.microsoft.com/powershell/module/smbshare/new-smbservercertificatemapping?view=windowsserver2022-ps) cmdlet and the [Manual Method](#manual-method) steps for KDC proxy configuration.
 
 ## More references
 
