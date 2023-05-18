@@ -11,7 +11,7 @@ ms.author: wscontent
 
 Windows Server: Azure Edition (WSAE) is a new edition of Windows Server focused on innovation and efficiency. Featuring an annual release cadence and optimized to run on Azure, WSAE brings new functionality to Windows Server users faster than the traditional Long-Term Servicing Channel (LTSC) editions of Windows Server (2016,2019,2022, etc.).
 
-The annual WSAE releases are delivered using Windows Update, rather than a full OS upgrade. As part of this annual release cadence, the WSAE Insider preview program gives the opportunity to access early builds of the next release - leading to general availability. If you are a registered Microsoft Server Insider, you have access to create and use virtual machine images from this preview. For more information and to manage your Insider membership, visit the [Windows Insider home page](https://insider.windows.com/) or [Windows Insiders for Business home page.](https://insider.windows.com/for-business/)
+The annual WSAE releases are delivered using Windows Update, rather than a full OS upgrade. As part of this annual release cadence, the WSAE Insider preview program gives the opportunity to access early builds of the next release - leading to general availability. If you're a registered Microsoft Server Insider, you have access to create and use virtual machine images from this preview. Details regarding each preview is shared in release announcements posted to the [Windows Server Insiders](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders) space on Microsoft Tech Community.
 
 ## Key differences
 
@@ -20,9 +20,9 @@ The following table summarizes the key differences:
 | Description | Windows Server Standard, Datacenter | Windows Server Datacenter: Azure Edition |
 |--|--|--|
 | New releases | Every 2-3 years | TODO: Every year |
-| Support | 5 years of mainstream support, plus 5 years of extended support | TODO: 5 years of mainstream support |
-| Servicing channels | Long-Term Servicing Channel | TODO: Annual |
-| Who can use it? | All customers through all channels | TODO: Software Assurance and cloud customers only |
+| Support | 5 years of mainstream support, plus 5 years of extended support | TODO: 5 years of mainstream support? |
+| Servicing channels | Long-Term Servicing Channel | TODO: Annual? |
+| Who can use it? | All customers through all channels | TODO: Software Assurance and cloud customers only? |
 | Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience |
 
 Capabilities vary by image, see [Getting started with Windows Server Datacenter: Azure Edition](#getting-started-with-windows-server-datacenter-azure-edition) for more detail.
@@ -46,7 +46,7 @@ Beginning with Windows Server 2022 Datacenter: Azure Edition, Hotpatch gives you
 
 ### SMB over QUIC
 
-Beginning with Windows Server 2022 Datacenter: Azure Edition, SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and branch offices, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. [QUIC](https://datatracker.ietf.org/doc/rfc9000/) is an IETF-standardized protocol used in HTTP/3, designed for maximum data protection with TLS 1.3 and requires encryption that can't be disabled. SMB behaves normally within the QUIC tunnel, meaning the user experience doesn't change. SMB features like multichannel, signing, compression, continuous availability, and directory leasing work normally.
+Beginning with Windows Server 2022 Datacenter: Azure Edition, SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and branch offices. SMB over QUIC provides secure, reliable connectivity to edge file servers over untrusted networks like the Internet. [QUIC](https://datatracker.ietf.org/doc/rfc9000/) is an IETF-standardized protocol used in HTTP/3, designed for maximum data protection with TLS 1.3 and requires encryption that can't be disabled. SMB behaves normally within the QUIC tunnel, meaning the user experience doesn't change. SMB features like multichannel, signing, compression, continuous availability, and directory leasing work normally.
 
 SMB over QUIC is also integrated with [Azure Automanage machine best practices for Windows Server](/azure/automanage/automanage-windows-server) to help make SMB over QUIC management easier. QUIC uses certificates to provide its encryption and organizations often struggle to maintain complex public key infrastructures. Azure Automanage machine best practices ensure that certificates don't expire without warning and that SMB over QUIC stays enabled for maximum continuity of service.
 
@@ -58,12 +58,12 @@ Beginning with Windows Server 2022 Datacenter: Azure Edition, Azure Extended Net
 
 ## Getting started with Windows Server Datacenter: Azure Edition
 
-To get start using Azure Edition, use your preferred method to create an Azure or Azure Stack HCI VM, and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use.  
+To get started using Azure Edition, use your preferred method to create an Azure or Azure Stack HCI VM, and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use.  
 
 > [!IMPORTANT]
 > Some capabilities have specific configuration steps to perform during VM creation, and some capabilities that are in preview have specific opt-in and portal viewing requirements.  See the individual capability topics to learn more about using that capability with your VM.
 
-To learn more about creating virtual machine using Azure or Azure Stack HCI, see [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal) and [Deploy Windows Server Azure Edition VMs](/azure-stack/hci/manage/windows-server-azure-edition?tabs=hci).
+To learn more about creating virtual machine using Azure or Azure Stack HCI, see [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal) and [Deploy Windows Server Azure Edition VMs in Azure Stack HCI](/azure-stack/hci/manage/windows-server-azure-edition?tabs=hci).
 
 ## Next steps
 
