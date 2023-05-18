@@ -5,7 +5,6 @@ author: dansimp
 ms.author: dansimp
 ms.topic: article
 ms.date: 05/17/2023
-ms.custom: inhenkel
 ---
 
 # Active Directory accounts
