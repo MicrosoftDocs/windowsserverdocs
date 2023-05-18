@@ -4,14 +4,14 @@ description: This article discusses how to create default local Windows Server A
 author: dansimp
 ms.author: dansimp
 ms.topic: article
-ms.date: 07/20/2022
+ms.date: 05/17/2023
 ---
 
 # Active Directory accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization. 
+Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization.
 
 This reference article describes the Windows Server default local accounts that are stored locally on the domain controller and used in Active Directory. It doesn't describe default local user accounts for a member, standalone server, or Windows client. For more information, see [Local accounts](/windows/security/identity-protection/access-control/local-accounts).
 
@@ -192,8 +192,6 @@ Because it's impossible to predict the specific errors that will occur for any g
 > [!IMPORTANT]
 > Rebooting a computer is the only reliable way to recover functionality, because doing so will cause both the computer account and user accounts to sign back in again. Signing in again will request new TGTs that are valid with the new KRBTGT, which will correct any KRBTGT-related operational issues on that computer.
 
-For information about how to help mitigate the risks associated with a potentially compromised KRBTGT account, see [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/cybertrust/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/).
-
 ### Read-only domain controllers and the KRBTGT account
 
 Windows Server 2008 introduced the read-only domain controller (RODC). The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines whether a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
@@ -328,10 +326,10 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 
 6. Configure user rights to deny sign-in locally for domain administrators.
 
-7. Select **Computer Configuration** > **Policies** > **Windows Settings** > **Local Policies**, select **User Rights Assignment**, and then do the following:  
+7. Select **Computer Configuration** > **Policies** > **Windows Settings** > **Local Policies**, select **User Rights Assignment**, and then do the following:
 
-    a. Double-click **Deny logon locally**, and then select **Define these policy settings**.  
-    b. Select **Add User or Group**, select **Browse**, type **Enterprise Admins**, and then select **OK**.  
+    a. Double-click **Deny logon locally**, and then select **Define these policy settings**.
+    b. Select **Add User or Group**, select **Browse**, type **Enterprise Admins**, and then select **OK**.
     c. Select **Add User or Group**, select **Browse**, type **Domain Admins**, and then select **OK**.
 
     ![Screenshot of the "User Rights Management" window, showing that the "Define these policy settings" checkbox is selected and two domain accounts are being denied local sign-in.](media/default-user-account-restrict3.png)
