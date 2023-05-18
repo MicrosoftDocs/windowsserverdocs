@@ -4,19 +4,19 @@ description: Learn about SMB security enhancements, such as encryption and the n
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 03/17/2023
+ms.date: 05/18/2023
 ms.prod: windows-server
 ---
 
 # SMB security enhancements
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, version 21H2
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI version 21H2, Windows 11, Windows 10
 
-This article explains the SMB security enhancements in Windows Server.
+This article explains the SMB security enhancements in Windows Server and Windows.
 
 ## SMB Encryption
 
-SMB Encryption provides SMB data end-to-end encryption and protects data from eavesdropping occurrences on untrusted networks. You can deploy SMB Encryption with minimal effort, but it might require other costs for specialized hardware or software. It has no requirements for Internet Protocol security (IPsec) or WAN accelerators. SMB Encryption can be configured on a per share basis or for the entire file server. You can also enable it for various scenarios where data traverses untrusted networks.
+SMB Encryption provides SMB data end-to-end encryption and protects data from eavesdropping occurrences on untrusted networks. You can deploy SMB Encryption with minimal effort, but it might require other costs for specialized hardware or software. It has no requirements for Internet Protocol security (IPsec) or WAN accelerators. SMB Encryption can be configured on a per share basis, for the entire file server, or when mapping drives. 
 
 > [!NOTE]
 > SMB Encryption does not cover security at rest, which is typically handled by BitLocker Drive Encryption.
@@ -55,22 +55,38 @@ UNC Hardening lets you configure SMB clients to require encryption regardless of
 
 ### Enable SMB Encryption with Windows PowerShell
 
-1. To enable SMB Encryption for an individual file share, enter the following script on the server:
+1. Sign into your server and run PowerShell on your computer in an elevated session.
+
+1. To enable SMB Encryption for an individual file share, run the following command.
 
     ```powershell
     Set-SmbShare –Name <sharename> -EncryptData $true
     ```
 
-1. To enable SMB Encryption for the entire file server, enter the following script on the server:
+1. To enable SMB Encryption for the entire file server, run the following command.
 
     ```powershell
     Set-SmbServerConfiguration –EncryptData $true
     ```
 
-1. To create a new SMB file share with SMB Encryption enabled, enter the following script:
+1. To create a new SMB file share with SMB Encryption enabled, run the following command.
 
     ```powershell
     New-SmbShare –Name <sharename> -Path <pathname> –EncryptData $true
+    ```
+
+### Map drives with encryption
+
+1. To enable SMB Encryption when mapping a drive using PowerShell, run the following command.
+
+    ```powershell
+    New-SMBMapping -LocalPath <drive letter> -RemotePath <UNC path> -RequirePrivacy $TRUE
+    ```
+
+2. To enable SMB Encryption when mapping a drive using CMD, run the following command.
+
+    ```cmd
+    NET USE <drive letter> <UNC path> /REQUIREPRIVACY
     ```
 
 ### Considerations for deploying SMB Encryption
