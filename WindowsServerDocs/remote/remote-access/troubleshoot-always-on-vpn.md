@@ -22,7 +22,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 ### Error code: 800
 
-- **Error description.** The remote connection was not made because the attempted VPN tunnels failed. The VPN server might be unreachable. If this connection is attempting to use an L2TP/IPsec tunnel, the security parameters required for IPsec negotiation might not be configured properly.
+- **Error description.** The remote connection wasn't made because the attempted VPN tunnels failed. The VPN server might be unreachable. If this connection is attempting to use an L2TP/IPsec tunnel, the security parameters required for IPsec negotiation might not be configured properly.
 
 - **Possible cause.** This error occurs when the VPN tunnel type is **Automatic** and the connection attempt fails for all VPN tunnels.
 
@@ -30,9 +30,9 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
     - If you know which tunnel to use for your deployment, set the type of VPN to that particular tunnel type on the VPN client side.
 
-    - By making a VPN connection with a particular tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, "GRE blocked for PPTP").
+    - By making a VPN connection with a particular tunnel type, your connection still fails, but it results in a more tunnel-specific error (for example, "GRE blocked for PPTP").
 
-    - This error also occurs when the VPN server cannot be reached or the tunnel connection fails.
+    - This error also occurs when the VPN server can't be reached or the tunnel connection fails.
 
 - **Make sure:**
 
@@ -42,7 +42,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 ### Error code: 809
 
-- **Error description.**  The network connection between your computer and the VPN server could not be established because the remote server is not responding. This could be because one of the network devices (e.g., firewalls, NAT, routers) between your computer and the remote server is not configured to allow VPN connections. Please contact your administrator or your service provider to determine which device may be causing the problem.
+- **Error description.**  The network connection between your computer and the VPN server couldn't be established because the remote server isn't responding. This could be because one of the network devices (for example, firewalls, NAT, routers) between your computer and the remote server isn't configured to allow VPN connections. Contact your administrator or your service provider to determine which device may be causing the problem.
 
 - **Possible cause.** This error is caused by blocked UDP 500 or 4500 ports on the VPN server or the firewall.
 
@@ -50,11 +50,11 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 ### Error code: 812
 
-- **Error description.** Can't connect to Always On VPN. The connection was prevented because of a policy configured on your RAS/VPN server. Specifically, the authentication method the server used to verify your user name and password may not match the authentication method configured in your connection profile. Please contact the administrator of the RAS server and notify him or her of this error.
+- **Error description.** Can't connect to Always On VPN. The connection was prevented because of a policy configured on your RAS/VPN server. Specifically, the authentication method the server used to verify your user name and password may not match the authentication method configured in your connection profile. Notify the RAS server administrator about the error.
 
 - **Possible causes:**
 
-    - The typical cause of this error is that the NPS has specified an authentication condition that the client cannot meet. For example, the NPS may specify the use of a certificate to secure the PEAP connection, but the client is attempting to use EAP-MSCHAPv2.
+    - The typical cause of this error is that the NPS has specified an authentication condition that the client can't meet. For example, the NPS may specify the use of a certificate to secure the PEAP connection, but the client is attempting to use EAP-MSCHAPv2.
 
     - Event log 20276 is logged to the event viewer when the RRAS-based VPN server authentication protocol setting doesn't match that of the VPN client computer.
 
@@ -86,7 +86,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 ### Error code: 0x80070040
 
-- **Error description.** The server certificate does not have **Server Authentication** as one of its certificate usage entries.
+- **Error description.** The server certificate doesn't have **Server Authentication** as one of its certificate usage entries.
 
 - **Possible cause.** This error may occur if no server authentication certificate is installed on the RAS server.
 
@@ -94,11 +94,11 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
 ### Error code: 0x800B0109
 
-Generally, the VPN client machine is joined to the Active Directory–based domain. If you use domain credentials to log on to the VPN server, the certificate is automatically installed in the Trusted Root Certification Authorities store. However, if the computer is not joined to the domain or if you use an alternative certificate chain, you may experience this issue.
+Generally, the VPN client machine is joined to the Active Directory–based domain. If you use domain credentials to log on to the VPN server, the certificate is automatically installed in the Trusted Root Certification Authorities store. However, if the computer isn't joined to the domain or if you use an alternative certificate chain, you may experience this issue.
 
-- **Error description.** A certificate chain processed but terminated in a root certificate that the trust provider does not trust.
+- **Error description.** A certificate chain processed but terminated in a root certificate that the trust provider doesn't trust.
 
-- **Possible cause.** This error may occur if the appropriate trusted root CA certificate is not installed in the Trusted Root Certification Authorities store on the client computer.
+- **Possible cause.** This error may occur if the appropriate trusted root CA certificate isn't installed in the Trusted Root Certification Authorities store on the client computer.
 
 - **Possible solution.** Make sure that the root certificate is installed on the client computer in the Trusted Root Certification Authorities store.
 
@@ -132,13 +132,13 @@ The most common issues when manually running the VPN_ Profile.ps1 script include
 
 - Is the user an administrator of that local machine?  Make sure that while running the VPN_Profile.ps1 script that the user has administrator privileges.
 
-- Do you have additional PowerShell security features enabled? Make sure that the PowerShell execution policy is not blocking the script. You might consider turning off Constrained Language mode, if enabled, before running the script. You can activate Constrained Language mode after the script completes successfully.
+- Do you have other PowerShell security features enabled? Make sure that the PowerShell execution policy isn't blocking the script. You might consider turning off Constrained Language mode, if enabled, before running the script. You can activate Constrained Language mode after the script completes successfully.
 
 ## Always On VPN client connection issues
 
-A small misconfiguration can cause the client connection to fail and can be challenging to find the cause.  An Always On VPN client goes through several steps before establishing a connection. When troubleshooting client connection issues, go through the process of elimination with the following:
+A small misconfiguration can cause the client connection to fail and can be challenging to find the cause.  An Always On VPN client goes through several steps before establishing a connection. When troubleshooting client connection issues, go through the following process of elimination:
 
-1. Is the template machine externally connected? A **whatismyip** scan should show a public IP address that does not belong to you.
+1. Is the template machine externally connected? A **whatismyip** scan should show a public IP address that doesn't belong to you.
 
 2. Can you resolve the Remote Access/VPN server name to an IP address? In **Control Panel** > **Network** and **Internet** > **Network Connections**, open the properties for your VPN Profile. The value in the **General** tab should be publicly resolvable through DNS.
 
@@ -146,29 +146,29 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
 4. Do you have the internal and external NICs on the VPN server configured correctly? Are they in different subnets? Does the external NIC connect to the correct interface on your firewall?
 
-5. Are UDP 500 and 4500 ports open from the client to the VPN server's external interface? Check the client firewall, server firewall, and any hardware firewalls. IPSEC uses UDP port 500, so make sure that you do not have IPEC disabled or blocked anywhere.
+5. Are UDP 500 and 4500 ports open from the client to the VPN server's external interface? Check the client firewall, server firewall, and any hardware firewalls. IPSEC uses UDP port 500, so make sure that you don't have IPEC disabled or blocked anywhere.
 
-6. Is certificate validation failing? Verify the NPS server has a Server Authentication certificate that can service IKE requests. Make sure that you have the correct VPN server IP specified as an NPS client. Make sure that you are authenticating with PEAP, and the Protected EAP properties should only allow authentication with a certificate. You can check the NPS event logs for authentication failures. For more details, see [Install and Configure the NPS Server](/windows-server/networking/technologies/nps/nps-manage-install)
+6. Is certificate validation failing? Verify the NPS server has a Server Authentication certificate that can service IKE requests. Make sure that you have the correct VPN server IP specified as an NPS client. Make sure that you are authenticating with PEAP, and the Protected EAP properties should only allow authentication with a certificate. You can check the NPS event logs for authentication failures. For more information, see [Install and Configure the NPS Server](/windows-server/networking/technologies/nps/nps-manage-install)
 
-7. Are you connecting but do not have Internet/local network access? Check your DHCP/VPN server IP pools for configuration issues.
+7. Are you connecting but don't have Internet/local network access? Check your DHCP/VPN server IP pools for configuration issues.
 
-8. Are you connecting and have a valid internal IP but do not have access to local resources?  Verify that clients know how to get to those resources. You can use the VPN server to route requests.
+8. Are you connecting and have a valid internal IP but don't have access to local resources?  Verify that clients know how to get to those resources. You can use the VPN server to route requests.
 
 ## Azure AD Conditional Access connection issues
 
 ### Oops - You can't get to this yet
 
-- **Error description.** When the Conditional Access policy is not satisfied, blocking the VPN connection, but connects after the user selects **X** to close the message.  Selecting **OK** causes another authentication attempt, which ends in another "Oops" message. These events are recorded in the AAD Operational Event log of the client.
+- **Error description.** When the Conditional Access policy isn't satisfied, blocking the VPN connection, but connects after the user selects **X** to close the message.  Selecting **OK** causes another authentication attempt, which ends in another "Oops" message. These events are recorded in the AAD Operational Event log of the client.
 
 - **Possible cause**
 
-  - The user has a valid client authentication certificate in their Personal Certificate store that was not issued by Azure AD.
+  - The user has a valid client authentication certificate in their Personal Certificate store that Azure AD didn't issue.
 
-  - The VPN profile \<TLSExtensions\> section is either missing or does not contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without this, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds.
+  - The VPN profile \<TLSExtensions\> section is either missing or doesn't contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without the  \<EKUName> and \<EKUOID> entries, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds.
 
-  - The RADIUS server (NPS) has not been configured to only accept client certificates that contain the **AAD Conditional Access** OID.
+  - The RADIUS server (NPS) hasn't been configured to only accept client certificates that contain the **AAD Conditional Access** OID.
 
-- **Possible solution.** To escape this loop, do the following:
+- **Possible solution.** To escape this loop:
 
   1. In Windows PowerShell, run the **Get-WmiObject** cmdlet to dump the VPN profile configuration.
   2. Verify that the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and shows the correct name and OID.
@@ -271,15 +271,15 @@ A small misconfiguration can cause the client connection to fail and can be chal
       Encryption test passed
      ```
      >[!NOTE]
-     >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by selecting **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
+     >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by selecting **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that wasn't issued from the Microsoft VPN root CA.
 
   4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user selects the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.
 
-     An error message that says "A certificate could not be found that can be used with the Extensible Authenticate Protocol" appears.
+     An error message that says "A certificate couldn't be found that can be used with the Extensible Authenticate Protocol" appears.
 
 ### Unable to delete the certificate from the VPN connectivity blade
 
-- **Error description.** Certificates on the VPN connectivity blade cannot be deleted.
+- **Error description.** Certificates on the VPN connectivity blade can't be deleted.
 
 - **Possible cause.** The certificate is set to **Primary**.
 

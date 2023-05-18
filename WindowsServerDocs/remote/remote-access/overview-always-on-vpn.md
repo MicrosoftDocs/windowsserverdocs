@@ -113,7 +113,7 @@ Always On VPN supports the following connectivity features:
 
 - **Name-based auto-triggering.** With Always On VPN, you can define rules so that specific domain name queries trigger the VPN connection. Windows devices support name-based triggering for domain-joined and nondomain-joined machines (previously, only nondomain-joined machines were supported).
 
-- **Trusted network detection.** Always On VPN includes this feature to ensure that VPN connectivity is not triggered if a user is connected to a trusted network within the corporate boundary. You can combine this feature with any of the triggering methods mentioned earlier to provide a seamless "only connect when needed" user experience.
+- **Trusted network detection.** Always On VPN includes this feature to ensure that VPN connectivity isn't triggered if a user is connected to a trusted network within the corporate boundary. You can combine this feature with any of the triggering methods mentioned earlier to provide a seamless "only connect when needed" user experience.
 
 - **[Device Tunnel](./vpn/vpn-device-tunnel-config.md).** Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Unlike *User Tunnel*, which only connects after a user logs on to the device or machine, *Device Tunnel* allows the VPN to establish connectivity before user sign-in. Both Device Tunnel and User Tunnel operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate. For information on how to configure a device tunnel, including information on how to use manage-out to dynamically register client IP addresses in DNS, see [Configure an Always On VPN device tunnel](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config).
 
@@ -135,14 +135,14 @@ Always On VPN supports the following networking features:
     >[!NOTE]
     >Exclusion routes work for traffic within the same subnet as the client such as LinkLocal. Exclusion routes only work in a Split Tunnel setup.
 
-- **Support for multiple domains and forests.** The Always On VPN platform has no dependency on Active Directory Domain Services (AD DS) forests or domain topology (or associated functional/schema levels) because it doesn't require the VPN client to be domain joined to function. Group Policy is therefore not a dependency to define VPN profile settings because you do not use it during client configuration. Where Active Directory authorization integration is required, you can achieve it through RADIUS as part of the EAP authentication and authorization process.
+- **Support for multiple domains and forests.** The Always On VPN platform has no dependency on Active Directory Domain Services (AD DS) forests or domain topology (or associated functional/schema levels) because it doesn't require the VPN client to be domain joined to function. Group Policy is therefore not a dependency to define VPN profile settings because you don't use it during client configuration. Where Active Directory authorization integration is required, you can achieve it through RADIUS as part of the EAP authentication and authorization process.
 
 - **Name resolution of corporate resources** using short-name, fully qualified domain name (FQDN), and DNS suffix.Always On VPN can natively define one or more DNS suffixes as part of the VPN connection and IP address assignment process, including corporate resource name resolution for short names, FQDNs, or entire DNS namespaces. Always On VPN also supports the use of Name Resolution Policy Tables to provide namespace-specific resolution granularity.
 
     >[!NOTE]
     >Avoid the use of Global Suffixes as they interfere with shortname resolution when using Name Resolution Policy tables.
 
-## High Availability features
+## High availability features
 
 The following are more options for high availability.
 

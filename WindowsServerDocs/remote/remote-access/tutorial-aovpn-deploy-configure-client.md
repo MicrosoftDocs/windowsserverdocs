@@ -161,7 +161,7 @@ In this section, you'll manually configure the Windows VPN client using a PowerS
     </VPNProfile>
     ")
         
-    #Output the XML for possible use in InTune
+    #Output the XML for possible use in Intune
     $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
     
     # Escape special characters in the profile (<,>,")
@@ -318,7 +318,7 @@ You have now configured your user tunnel for Always On VPN. If you want to learn
 
 - To learn how to configure Always On VPN profiles with Microsoft Configuration Manager, see [Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager](how-to-aovpn-client-config-mgr.md).
 
-- To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows clients with Microsoft InTune](how-to-aovpn-client-intune.md).
+- To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows clients with Microsoft Intune](how-to-aovpn-client-intune.md).
 
 - Learn how to [Configure conditional access for VPN connectivity using Azure AD](how-to-aovpn-conditional-access.md).
 
