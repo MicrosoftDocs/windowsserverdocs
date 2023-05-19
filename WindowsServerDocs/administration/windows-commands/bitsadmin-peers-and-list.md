@@ -11,7 +11,7 @@ ms.date: 04/01/2023
 
 Applies to: Windows Server (All supported versions)
 
-The `bitsadmin` command lists all peers when it is combined with the **peers** and **list** switches.
+The `bitsadmin` command lists all peers when it's combined with the **peers** and **list** switches.
 
 ## Syntax
 
