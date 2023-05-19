@@ -12,11 +12,11 @@ ms.date: 06/01/2023
 
 Applies to: Windows Server: (All supported versions)
 
+This guide provides instructions on how to manage resource records in Windows Server, including how to create new records, modify existing record and delete records. 
+
 Resource records contain the information that a zone maintains about the resources (such as hosts) that the zone contains. Resource record information includes record type, owner name, host address and other information. See [DNS resource records](managing-resource-records-conceptual.md) to learn more about resource records.
 
 You can add resource records directly, or they can be added automatically when Windows-based, Dynamic Host Configuration Protocol (DHCP)–enabled clients join a network using dynamic update.
-
-Managing of resource records includes creating new records, modifying existing records, and deleting records.
 
 The most common resource records include the following:
 
