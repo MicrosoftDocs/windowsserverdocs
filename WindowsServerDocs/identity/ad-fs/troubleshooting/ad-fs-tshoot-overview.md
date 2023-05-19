@@ -4,23 +4,26 @@ description: Learn how to troubleshoot various aspects of AD FS.
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 05/19/2023
 ms.topic: article
 ---
 
 # Troubleshooting AD FS
-AD FS has a lot of moving pieces, touches many different things and has many different dependencies.  Naturally, this can give rise to various issues.  This document is designed to get you started on troubleshooting these issues.  This document will introduce you to the typical areas that you should focus on, how to enable features for additional information, and various tools that can be used to track down problems.
+
+AD FS has many moving pieces, touches many different things and has many different dependencies.  Naturally, this complexity can give rise to various issues.  This document is designed to get you started on troubleshooting these issues.  This document introduces you to the typical areas that you should focus on, how to enable features for additional information, and various tools that can be used to track down problems.
 
 >[!NOTE]
->For additional information see [AD FS Help](https://adfshelp.microsoft.com) which provides effective tools in one place that makes it easier for users and administrators to resolve authentication issues at a quicker pace.
-
+>For more information, see [AD FS Help](https://adfshelp.microsoft.com) which provides effective tools in one place that makes it easier for users and administrators to resolve authentication issues at a quicker pace.
 
 ## What to Check First
+
 Before you dive into in-depth troubleshooting, there are a few things that you should check first.  They are:
-- **DNS Configuration** - can you resolve the name of the federation service?  This should resolve to either the load balancer's IP address or the IP address of one of the AD FS servers in your farm. For more information see [AD FS Troubleshooting - DNS](ad-fs-tshoot-dns.md).
-- **AD FS Endpoints** - can you browse to the AD FS endpoints?  By browsing to this you can determine whether or not your AD FS web server is responding to requests.  If you can get to this file, then you know that AD FS is servicing requests over 443 just fine.  For more information see [AD FS Troubleshooting - Endpoints](ad-fs-tshoot-endpoints.md).
-- **Idp-Initiated Sign On** - can you log in and authenticate via the Idp-Initiated Sign On page?  You need to ensure that this page was enabled because it is disabled by default.  Use `Set-AdfsProperties -EnableIdPInitiatedSignOn $true` to enable the page.  If you can sign in and authenticate then you know that AD FS is working in this area.  For more information see [AD FS Troubleshooting - SignOn](ad-fs-tshoot-initiatedsignon.md).
-  ##  Common Troubleshooting Areas
+
+- **DNS Configuration** - can you resolve the name of the federation service?  This connection should resolve to either the load balancer's IP address or the IP address of one of the AD FS servers in your farm. For more information, see [AD FS Troubleshooting - DNS](ad-fs-tshoot-dns.md).
+- **AD FS Endpoints** - can you browse to the AD FS endpoints?  Browsing to this endpoint can determine whether or not your AD FS web server is responding to requests.  If you can get to this file, then you know that AD FS is servicing requests over 443 fine.  For more information, see [AD FS Troubleshooting - Endpoints](ad-fs-tshoot-endpoints.md).
+- **Idp-Initiated Sign On** - can you sign in and authenticate via the Idp-Initiated Sign On page?  You need to ensure that this page was enabled because it's disabled by default.  Use `Set-AdfsProperties -EnableIdPInitiatedSignOn $true` to enable the page.  If you can sign in and authenticate, then you know that AD FS is working in this area.  For more information, see [AD FS Troubleshooting - SignOn](ad-fs-tshoot-initiatedsignon.md).
+
+## Common Troubleshooting Areas
 
 |Name|Description|
 |-----|-----|
