@@ -18,10 +18,10 @@ Managing of resource records includes creating new records, modifying existing r
 
 The most common resource records include the following:
 
-- Host (A) resource records: for mapping a Domain Name System (DNS) domain name to an IP address that is used by a computer.
+- Host (A) resource records: for mapping a Domain Name System (DNS) domain name to an IP address that's used by a computer.
 - Alias (CNAME) resource records: for mapping an alias DNS domain name to another primary or canonical name.
 - Mail exchanger (MX) resource records: for mapping a DNS domain name to the name of a computer that exchanges or forwards mail.
-- Pointer (PTR) resource records: for mapping a reverse DNS domain name that is based on the IP address of a computer that points to the forward DNS domain name of that computer.
+- Pointer (PTR) resource records: for mapping a reverse DNS domain name that's based on the IP address of a computer that points to the forward DNS domain name of that computer.
 - Service location (SRV) resource records: for mapping a DNS domain name to a specified list of DNS host computers that offer a specific type of service, such as Active Directory domain controllers.
 - Name server (NS) resource records: for specifying the authoritative name servers for a delegated DNS zone.
 - Text (TXT) record. Allows for publication of text in a DNS record.
@@ -190,7 +190,7 @@ Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -Zon
 
 #### [GUI](#tab/gui)
 
-The Set-DnsServerResourceRecord cmdlet cannot change the Name or Type of a DNS server resource record object. If you want to perform those actions, it is simpler to remove the existing resource record and create a new one. You remove a DNS record using the Remove-DnsServerResourceRecord cmdlet. For example, to remove the DNS record example.contoso.com use the following command:
+The Set-DnsServerResourceRecord cmdlet can't change the Name or Type of a DNS server resource record object. If you want to perform those actions, it's simpler to remove the existing resource record and create a new one. You remove a DNS record using the Remove-DnsServerResourceRecord cmdlet. For example, to remove the DNS record example.contoso.com use the following command:
 
 #### [PowerShell](#tab/powershell)
 
