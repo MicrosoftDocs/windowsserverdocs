@@ -1,8 +1,10 @@
 ---
 description: Learn more about DNS resource records in Windows Server
 title: DNS resource records 
-author: orrinthomas
-ms.author: orrinthomas
+author: robinharwood
+ms.author: wscontent
+ms.custom: template-quickstart, team=cloud_advocates
+ms.contributors: orthomas
 ms.topic: article
 ms.date: 06/01/2023
 ---
