@@ -34,7 +34,7 @@ For images in preview, you must use a specific Azure Marketplace image. To creat
 
 - **Azure:** visit the [Microsoft Server 2022 Datacenter: Azure Edition Hotpatch Preview](https://aka.ms/HotpatchPreviewImage) in the Azure Marketplace.
 
-- **Azure Stack HCI:** visit [Enable Hotpatch for Azure Edition virtual machines built from ISO (preview)](enable-hotpatch-azure-edition.md).
+- **Azure Stack HCI:** visit [Deploy Windows Server Azure Edition VMs in Azure Stack HCI](/azure-stack/hci/manage/windows-server-azure-edition?tabs=azure). Once you have deployed your VM, see [Enable Hotpatch for Azure Edition virtual machines built from ISO (preview)](enable-hotpatch-azure-edition.md).
 
 ## How Hotpatch works
 
