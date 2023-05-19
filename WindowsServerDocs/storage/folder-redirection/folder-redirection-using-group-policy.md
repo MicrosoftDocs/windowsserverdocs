@@ -2,8 +2,8 @@
 title: Folder Redirection using Group Policy on Windows Server
 description: Learn about using Group Policy to configure Folder Redirection on Windows Server 
 ms.topic: conceptual
-ms.author: robinharwood
-author: wscontent
+ms.author: wscontent
+author: robinharwood
 ms.date: 05/19/2023
 ---
 
