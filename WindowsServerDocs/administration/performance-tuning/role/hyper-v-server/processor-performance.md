@@ -1,10 +1,10 @@
 ---
-title: Hyper-V Processor Performance
-description: Learn about processor performance considerations to tune and improve Hyper-V performance.
+title: Hyper-V processor performance
+description: Learn about the processor performance considerations to use for tuning and improving Hyper-V performance.
 ms.topic: article
 ms.author: wscontent
 author: phstee
-ms.date: 05/18/2023
+ms.date: 05/19/2023
 ---
 
 # Hyper-V processor performance
@@ -13,7 +13,7 @@ Virtualization servers host multiple virtual machines (VMs) that are isolated fr
 
 ## Virtual machine integration services
 
-The virtual machine (VM) integration services include enlightened drivers for the Hyper-V-specific I/O devices, which significantly reduce CPU overhead for I/O compared to emulated devices. Install the latest version of the VM integration services in every supported VM. The services decrease the CPU usage of the guests, from idle guests to heavily used guests, and improves the I/O throughput. This step is the first one in tuning performance in a server running Hyper-V. For a list of supported guest operating systems, see [Hyper-V overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
+The virtual machine (VM) integration services include enlightened drivers for the Hyper-V-specific I/O devices, which significantly reduce CPU overhead for I/O compared to emulated devices. Install the latest version of the VM integration services in every supported VM. The services decrease the CPU usage of the guests, from idle guests to heavy-use guests, and improves the I/O throughput. This step is the first one in tuning performance in a server running Hyper-V. For a list of supported guest operating systems, see [Hyper-V overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
 ## Virtual processors
 
@@ -35,7 +35,7 @@ Minimizing the background activity in idle VMs releases CPU cycles that other VM
 
 - Review the scheduled tasks and services that are enabled by default.
 
-- Review the ETW trace providers that are on by default by running **logman.exe query -ets**
+- Review the Event Tracing for Windows (ETW) trace providers that are on by default by running **logman.exe query -ets**.
 
 - Improve server applications to reduce periodic activity (such as timers).
 
@@ -47,7 +47,7 @@ The following are best practices for configuring a *client version* of Windows i
 
 - Disable background services such as SuperFetch and Windows Search.
 
-- Disable scheduled tasks such as Scheduled Defrag.
+- Disable scheduled tasks such as scheduled defrag.
 
 ## Virtual NUMA
 
