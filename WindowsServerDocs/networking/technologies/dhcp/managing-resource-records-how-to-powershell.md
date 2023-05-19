@@ -199,6 +199,6 @@ Remove-DnsServerResourceRecord -name Example -Zonename "contoso.com" -RRType A
 ```
 #### [GUI](#tab/gui)
 
-# Related links
+## Related links
 
 - [DNS resource records ](managing-resource-records-conceptual.md)
