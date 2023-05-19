@@ -30,7 +30,7 @@ The most common resource records include the following:
 
 ## Working with resource records and zones
 
-Resource records can be added to an existing zone using the Add-DNSServerResourceRecord PowerShell cmdlet. Some common resource record types have additional PowerShell cmdlets where you don't need to specify the resource record type. You can also add some resource records using the DNS Manager console by right-selecting on the DNS zone you want to add the resource record to and selecting from one of the following options and completing the entries in the dialog box. See [Managing DNS resource records](managing-resource-records-how-to-powershell.md) for detailed guidance on working with resource records, including procedures on creating and modifying existing resource records.
+Resource records can be added to an existing zone using the Add-DNSServerResourceRecord PowerShell cmdlet. Some common resource record types have additional PowerShell cmdlets where you don't need to specify the resource record type. You can also add some resource records using the DNS Manager console by right-selecting on the DNS zone you want to add the resource record to and selecting from one of the following options and completing the entries in the dialog box. See [Managing DNS resource records](managing-resource-records-how-to-powershell.md) for detailed guidance on working with resource records, including procedures and examples for creating and modifying existing resource records of all types.
 
 ## Related links
 

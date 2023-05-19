@@ -26,7 +26,7 @@ The most common resource records include the following:
 - Pointer (PTR) resource records: for mapping a reverse DNS domain name that's based on the IP address of a computer that points to the forward DNS domain name of that computer.
 - Service location (SRV) resource records: for mapping a DNS domain name to a specified list of DNS host computers that offer a specific type of service, such as Active Directory domain controllers.
 - Name server (NS) resource records: for specifying the authoritative name servers for a delegated DNS zone.
-- Text (TXT) record. Allows for publication of text in a DNS record.
+- Text (TXT) record. Enables publication of text in a DNS record.
 - Delegation name (DNAME) resource record: Alias for a name and all subnames.
 - Start of authority (SOA) resource record. Provides authoritative information about a DNS zone. This includes primary name server, contact of DNZ zone administrator, refresh information and other information.
 
@@ -147,7 +147,7 @@ Add-DnsServerResourceRecord -Srv -Name "sip" -ZoneName "contoso.com" -DomainName
 
 ### TXT records
 
-Text records allow you to add text information that can be returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. To create a TXT record use the Add-DnsServerResourceRecord cmdlet with both the -txt parameter and the DescriptiveText parameters. For example, to create a TXT record named example with the text value “Example DNS record text” in the contoso.com zone use the following PowerShell commands:
+Text records let you to add text information that can be returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. To create a TXT record use the Add-DnsServerResourceRecord cmdlet with both the -txt parameter and the DescriptiveText parameters. For example, to create a TXT record named example with the text value “Example DNS record text” in the contoso.com zone use the following PowerShell commands:
 
 #### [PowerShell](#tab/powershell)
 
