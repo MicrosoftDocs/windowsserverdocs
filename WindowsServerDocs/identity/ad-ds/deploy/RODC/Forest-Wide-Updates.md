@@ -1,5 +1,5 @@
 ---
-description: Learn more about: Forest-Wide Updates
+description: Learn more about Forest-Wide Updates
 title: Active Directory Forest-Wide Updates
 author: iainfoulds
 ms.author: daveba
