@@ -463,9 +463,9 @@
         - name: Configure Always on VPN Conditional Access using Azure AD
           href: remote-access/how-to-aovpn-conditional-access.md
         - name: Configure Always On VPN Conditional Access using NPS
-          href: remote-access/how-to-always-on-vpn-conditional-access-nps.md
+          href: remote-access/how-to-always-on-vpn-conditional-access-network-policy-server.md
         - name: Block VPN clients that use a revoked certificate
-          href: remote-access/how-to-aovpn-block-clients-revoked-certs.md
+          href: remote-access/how-to-always-on-vpn-block-clients-revoked-certificates.md
       - name: Virtual Private Networking (VPN) 
         items: 
         - name: Configure VPN device tunneling

@@ -28,7 +28,7 @@ To restrict VPN connections:
 
 1. Select the **Allowed-Certificate-OID** option, and then select **Add**.
 
-1. Paste the AAD Conditional Access OID of **1.3.6.1.4.1.311.87** as the attribute value, and then select **OK**.
+1. Paste the Azure AD Conditional Access OID of **1.3.6.1.4.1.311.87** as the attribute value, and then select **OK**.
 
 1. Select **OK** again.
 

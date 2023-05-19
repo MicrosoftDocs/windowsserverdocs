@@ -10987,7 +10987,18 @@
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/index.md",
       "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/how-to-always-on-vpn-conditional-access-nps.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-always-on-vpn-conditional-access-network-policy-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/how-to-aovpn-block-clients-revoked-certs.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-always-on-vpn-block-clients-revoked-certificates",
+      "redirect_document_id": false
     }
+    
     
 
   ]
