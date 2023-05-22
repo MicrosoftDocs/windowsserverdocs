@@ -113,6 +113,9 @@ This setting controls the maximum password age of the managed local administrato
 
 If not specified, this setting defaults to 30 days.
 
+> [!IMPORTANT]
+> Changes to the PasswordAgeDays policy setting have no effect on the expiration time of the current password. Similarly, changes to the PasswordAgeDays policy setting won't cause the managed device to initiate a password rotation.
+
 ### PasswordLength
 
 Use this setting to configure the length of the password of the managed local administrator account. Supported values are:
