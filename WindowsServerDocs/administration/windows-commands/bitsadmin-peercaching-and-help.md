@@ -11,7 +11,7 @@ ms.date: 04/01/2023
 
 Applies to: Windows Server (All supported versions)
 
-The `bitsadmin` command displays the command-line usage for the `/peercaching` switch when combined with `/help` switch..
+The `bitsadmin` command displays the command-line usage for the `/peercaching` switch when combined with `/help` switch.
 
 ## Syntax
 
