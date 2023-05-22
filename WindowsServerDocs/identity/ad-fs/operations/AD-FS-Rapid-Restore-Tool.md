@@ -69,7 +69,7 @@ Follow these steps to set up the tool:
    import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecreationTool.dll'
    ```
 
-## Create backups: Backup-ADFS
+## <a name="create-a-backup">Create backups: Backup-ADFS</a>
 
 To create a backup, use the Backup-ADFS PowerShell cmdlet. The backup cmdlet backs up the AD FS configuration, database, SSL certificates, and so on.
 
@@ -336,7 +336,7 @@ Release: July 2018
 
 - Bug fix: Fix .MSI installer to support in-place upgrades
 
-### 1.0.18.0
+### Version: 1.0.18.0
 
 Release: July 2018
 
@@ -345,7 +345,7 @@ Release: July 2018
 - Bug fix: Handle service account passwords with special characters (that is, '&')
 - Bug fix: Resolve issues relation to restoration failure because Microsoft.IdentityServer.Servicehost.exe.config is in use by another process
 
-### 1.0.0.0
+### Version: 1.0.0.0
 
 Released: October 2016
 
