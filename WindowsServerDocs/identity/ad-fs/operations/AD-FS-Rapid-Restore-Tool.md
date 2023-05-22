@@ -158,7 +158,7 @@ The following cmdlet backs up the AD FS configuration to the file system without
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of AD FS (FS)"
 ```
 
-## Restore from backup: Restore-ADFS
+## Restore backups: Restore-ADFS
 
 To apply a configuration created by using the Backup-ADFS cmdlet to a new AD FS installation, use the Restore-ADFS cmdlet. The restore cmdlet creates a new AD FS farm by using the `Install-AdfsFarm` cmdlet and restores the AD FS configuration, database, certificates, and so on.
 
@@ -280,7 +280,7 @@ A log file is created for every backup and restore operation. The log files can 
 
 ## Version release history
 
-The following sections identify version details for the Rapid Restore tool.
+The following sections identify version details for the AD FS Rapid Restore tool.
 
 ### Version 1.0.82.3
 
@@ -298,7 +298,7 @@ Release: July 2019
 
 - Bug fix for AD FS service account names that contain LDAP escape characters
 
-### Version: 1.0.81.0
+### Version 1.0.81.0
 
 Release: April 2019
 
@@ -307,7 +307,7 @@ Release: April 2019
 - Bug fixes for certificate backup and restore
 - Add more trace information to the log file
 
-### Version: 1.0.75.0
+### Version 1.0.75.0
 
 Release: August 2018
 
@@ -315,7 +315,7 @@ Release: August 2018
 
 - Update the Backup-ADFS cmdlet for the -BackupDKM switch. The tool determines if the current context has access to the DKM container. When access is available, the tool doesn't require Domain Admin privileges or service account credentials. This update enables automated backups that don't the user to explicitly provide credentials or run the operation as a Domain Administrator account.
 
-### Version: 1.0.73.0
+### Version 1.0.73.0
 
 Release: August 2018
 
@@ -328,7 +328,7 @@ Release: August 2018
 
 - Add support for SQL clusters that use merge replication
 
-### Version: 1.0.72.0
+### Version 1.0.72.0
 
 Release: July 2018
 
@@ -336,7 +336,7 @@ Release: July 2018
 
 - Bug fix: Fix .MSI installer to support in-place upgrades
 
-### Version: 1.0.18.0
+### Version 1.0.18.0
 
 Release: July 2018
 
@@ -345,7 +345,7 @@ Release: July 2018
 - Bug fix: Handle service account passwords with special characters (that is, '&')
 - Bug fix: Resolve issues relation to restoration failure because Microsoft.IdentityServer.Servicehost.exe.config is in use by another process
 
-### Version: 1.0.0.0
+### Version 1.0.0.0
 
 Released: October 2016
 
