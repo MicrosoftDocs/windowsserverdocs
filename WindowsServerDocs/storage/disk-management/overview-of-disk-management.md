@@ -1,54 +1,74 @@
 ---
 title: Overview of Disk Management
-description: Disk Management is a system utility in Windows that enables you to perform advanced storage tasks, such as initializing a new drive, extending volumes, shrinking partitions, and changing drive letters.
-ms.date: 06/07/2019
-ms.topic: article
+description: Learn how to use the Disk Management system utility in Windows to initialize drives, extend volumes, shrink partitions, and change drive letters.
+ms.date: 03/20/2023
+ms.topic: conceptual
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
+
 # Overview of Disk Management
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Disk Management is a system utility in Windows that enables you to perform advanced storage tasks. Here are some of the things Disk Management is good for:
+Disk Management is a system utility in Windows for advanced storage operations. Here are some tasks you can complete with Disk Management:
 
-- To setup a new drive, see [Initializing a new drive](initialize-new-disks.md).
-- To extend a volume into space that's not already part of a volume on the same drive, see [Extend a basic volume](extend-a-basic-volume.md).
-- To shrink a partition, usually so that you can extend a neighboring partition, see [Shrink a basic volume](shrink-a-basic-volume.md).
-- To change a drive letter or assign a new drive letter, see [Change a drive letter](change-a-drive-letter.md).
+- Set up a new drive. For more information, see [Initialize new disks](initialize-new-disks.md).
 
-![Disk management showing a typical drive with three partitions - a 499 MB system partition, a larger C drive for Windows, and another 499 MB partition for recovery](media/disk-management.png)
+- Extend a volume into space that's not already part of a volume on the same drive. For more information, see [Extend a basic volume](extend-a-basic-volume.md).
 
-> [!TIP]
->  If you get an error or something doesn't work when following these procedures, take a peek at the [Troubleshooting Disk Management](troubleshooting-disk-management.md) topic. If that doesn't help - don't panic! There's a ton of info on the [Microsoft community](https://answers.microsoft.com/en-us/windows) site - try searching the [Files, folders, and storage](https://answers.microsoft.com/en-us/windows/forum/windows_10-files?sort=lastreplydate&dir=desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=true&tm=1514405359639) section, and if you still need help, post a question there and Microsoft or other members of the community will try to help. If you have feedback on how to improve these topics, we'd love to hear from you! Just answer the *Is this page helpful?* prompt, and leave any comments there or in the public comments thread at the bottom of this topic.
+- Shrink a partition, such as to enable extending into a neighboring partition. For more information, see [Shrink a basic volume](shrink-a-basic-volume.md).
 
-Here are some common tasks you might want to do but that use other tools in Windows:
+- Change a drive letter or assign a new drive letter. For more information, see [Change a drive letter](change-a-drive-letter.md).
 
-- To free up disk space, see [Free up drive space in Windows 10](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space).
-- To defragment your drives, see [Defragment your Windows 10 PC](https://support.microsoft.com/help/4026701/windows-defragment-your-windows-10-pc).
-- To take multiple hard drives and pool them together, similar to a RAID, see [Storage Spaces](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
+## Review drives and partitions
 
-## About those extra recovery partitions
+Disk Management shows the details for each drive on your PC and all partitions for each drive. The details include statistics about the partitions, including the amount of space allocated or used.
 
-In case you're curious (we've read your comments!), Windows typically includes three partitions on your main drive (usually the C:\ drive):
+The following image shows the Disk Management overview for several drives. Disk 0 has three partitions, and Disk 1 has two partitions. On Disk 0, the C: drive for Windows uses the most disk space. Two other partitions for system operations and recovery use a smaller amount of disk space.
 
-![Disk 0 showing three partitions - an EFI system partition, the Windows partition, and a recovery partition](media/windows-partitions.png)
+:::image type="content" source="./media/disk-management.png" alt-text="Screenshot that shows the Disk Management utility in Windows as described in the text." border="false":::
 
-- **EFI system partition** - This is used by modern PCs to start (boot) your PC and your operating system.
-- **Windows operating system drive (C:)** - This is where Windows is installed, and usually where you put the rest of your apps and files.
-- **Recovery partition** - This is where special tools are stored to help you recover Windows in case it has trouble starting or runs into other serious issues.
+Windows typically includes three partitions on your main drive (usually the C:\ drive). These partitions include the EFI System Partition, the Local Disk (C:) Partition, and a Recovery Partition.
 
-Although Disk Management might show the EFI system partition and the recovery partition as 100% free, it's lying. These partitions are generally pretty full with really important files your PC needs to operate properly. It's best to just leave them alone to do their jobs starting your PC and helping you recover from problems.
+- The Windows operating system is installed on the **Local Disk (C:) Partition**. This partition is the common storage location for your other apps and files.
 
-## Additional References
+- Modern PCs use the **EFI System Partition** to start (boot) your PC and your operating system.
+
+- The **Recovery Partition** stores special tools to help you recover Windows, in case there's a problem starting the PC or other serious issues.
+
+> [!IMPORTANT]
+> Disk Management might show the EFI System Partition and Recovery Partition as 100 percent free. However, these partitions store critical files that your PC needs to operate properly, and the partitions are generally nearly full. It's recommended to not modify these partitions in any way.
+
+## Troubleshoot issues
+
+Sometimes a Disk Management task reports an error, or a procedure doesn't work as expected. There are several options available to help you resolve the issue.
+
+- Review suggestions in the [Troubleshooting Disk Management](troubleshooting-disk-management.md) article.
+
+- Search the [Microsoft Community](https://answers.microsoft.com/en-us/windows/forum/files?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=false&page=1) website for posts about files, folders, and storage.
+
+- If you don't find an answer on the site, you can post a question for input from Microsoft or other members of the community. You can also [Contact Microsoft Support](https://support.microsoft.com/contactus/).
+
+## Complete related tasks
+
+Disk Management supports a wide range of drive tasks, but some tasks need to be completed by using a different tool. Here are some common disk management tasks to complete with other tools in Windows:
+
+- Free up disk space. For more information, see [Free up drive space in Windows](https://support.microsoft.com/windows/free-up-drive-space-in-windows-85529ccb-c365-490d-b548-831022bc9b32).
+
+- Defragment or optimize your drives. For more information, see [Ways to improve your computer's performance](https://support.microsoft.com/windows/ways-to-improve-your-computer-s-performance-c6018c78-0edd-a71a-7040-02267d68ea90).
+
+- Pool multiple hard drives together, similar to a RAID (redundant array of independent disks). For more information, see [Storage Spaces in Windows](https://support.microsoft.com/windows/storage-spaces-in-windows-b6c8b540-b8d8-fb8a-e7ab-4a75ba11f9f2).
+
+## Related links
 
 - [Manage disks](manage-disks.md)
 - [Manage basic volumes](manage-basic-volumes.md)
 - [Troubleshooting Disk Management](troubleshooting-disk-management.md)
-- [Recovery options in Windows 10](https://support.microsoft.com/help/12415/windows-10-recovery-options)
-- [Find lost files after the update to Windows 10](https://support.microsoft.com/help/12386/windows-10-find-lost-files-after-update)
-- [Back up and restore your files](https://support.microsoft.com/help/17143/windows-10-back-up-your-files)
-- [Create a recovery drive](https://support.microsoft.com/help/4026852/windows-create-a-recovery-drive)
-- [Create a system restore point](https://support.microsoft.com/help/4027538/windows-create-a-system-restore-point)
-- [Find my BitLocker recovery key](https://support.microsoft.com/help/4026181/windows-find-my-bitlocker-recovery-key)
+- [Recovery options in Windows](https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5)
+- [Find lost files after the upgrade to Windows](https://support.microsoft.com/windows/find-lost-files-after-the-upgrade-to-windows-10-or-11-10af49aa-b372-b067-a334-2314401297a9)
+- [Backup and Restore in Windows](https://support.microsoft.com/windows/backup-and-restore-in-windows-352091d2-bb9d-3ea3-ed18-52ef2b88cbef)
+- [Create a recovery drive](https://support.microsoft.com/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246)
+- [Create a system restore point](https://support.microsoft.com/windows/create-a-system-restore-point-77e02e2a-3298-c869-9974-ef5658ea3be9)
+- [Where to look for your BitLocker recovery key](https://support.microsoft.com/windows/where-to-look-for-your-bitlocker-recovery-key-fd2b3501-a4b9-61e9-f5e6-2a545ad77b3e)

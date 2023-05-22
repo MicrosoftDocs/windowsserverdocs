@@ -3,9 +3,6 @@ title: Transport Layer Security protocol
 description: Learn about how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
 ms.topic: article
 ms.assetid: de510bb0-a9f6-4bbe-8f8a-8dd7473bbae8
-author: justinha
-ms.author: justinha
-manager: brianlic
 ms.date: 05/16/2018
 ---
 # Transport Layer Security protocol

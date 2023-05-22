@@ -3,7 +3,7 @@ description: "Learn more about: Upgrading to AD FS in Windows Server 2016 with S
 title: Upgrading to AD FS in Windows Server 2016 with SQL Server
 author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 02/14/2023
 ms.topic: article
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.author: billmath
@@ -37,6 +37,9 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
 > [!NOTE]
 > Before you can move to AD FS in Windows Server 2016 FBL, you must remove all of the Windows 2012 R2 nodes.  You can't just upgrade a Windows Server 2012 R2 OS to Windows Server 2016 and have it become a 2016 node.  You will need to remove it and replace it with a new 2016 node.
+
+> [!NOTE]
+> If AlwaysOnAvailability groups or merge replication are configured in AD FS, remove all replication of any AD FS databases prior to upgrade and point all nodes to the Primary SQL database. After performing this, perform the farm upgrade as documented. After upgrade, add AlwaysOnAvailability groups or merge replication to the new databases.
 
 The following architectural diagram shows the setup that was used to validate and record the steps below.
 

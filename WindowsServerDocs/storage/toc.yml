@@ -335,10 +335,8 @@ items:
         href: storage-spaces/remove-servers.md
       - name: Update drive firmware
         href: update-firmware.md
-      - name: Extend volumes
-        href: /azure-stack/hci/manage/extend-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: Delete volumes
-        href: /azure-stack/hci/manage/delete-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Manage volumes
+        href: /azure-stack/hci/manage/manage-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Performance history
         href: storage-spaces/performance-history.md
         items:

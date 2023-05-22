@@ -12,7 +12,7 @@ ms.topic: conceptual
 Windows Local Administrator Password Solution (Windows LAPS) supports various settings you can control by using policy. Learn about the settings and how to administer them.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## Supported policy roots
 
@@ -32,26 +32,27 @@ Policy settings are never shared or inherited across policy key roots.
 > [!TIP]
 > The LAPS Local Configuration key is included in the preceding table for completeness. You can use this key if necessary, but the key primarily is intended to be used for testing and development. No management tools or policy mechanisms target this key.
 
-## Supported policy settings by join state
+## Supported policy settings by BackupDirectory
 
-Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry.
+Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry. Some of these settings only apply when backing up passwords to Active Directory, and some settings are common to both the AD and Azure AD scenarios.
 
-The following table specifies which settings apply to devices that have the specified join state:
+The following table specifies which settings apply to devices that have the specified BackupDirectory setting:
 
-|Setting name|Azure Active Directory-joined|Hybrid-joined|Windows Server Active Directory-joined|
-|---|---|---|---|
-|BackupDirectory|Yes|Yes|Yes|
-|PasswordAgeDays|Yes|Yes|Yes|
-|PasswordLength|Yes|Yes|Yes|
-|PasswordComplexity|Yes|Yes|Yes|
-|PasswordExpirationProtectionEnabled|No|Yes|Yes|
-|AdministratorAccountName|Yes|Yes|Yes|
-|ADPasswordEncryptionEnabled|No|Yes|Yes|
-|ADPasswordEncryptionPrincipal|No|Yes|Yes|
-|ADEncryptedPasswordHistorySize|No|Yes|Yes|
-|ADBackupDSRMPassword|No|No|Yes|
-|PostAuthenticationResetDelay|Yes|Yes|Yes|
-|PostAuthenticationActions|Yes|Yes|Yes|
+|Setting name|Applicable when BackupDirectory=Azure AD?|Applicable when BackupDirectory=AD?|
+|---|---|---|
+|AdministratorAccountName|Yes|Yes|
+|PasswordAgeDays|Yes|Yes|
+|PasswordLength|Yes|Yes|
+|PasswordComplexity|Yes|Yes|
+|PostAuthenticationResetDelay|Yes|Yes|
+|PostAuthenticationActions|Yes|Yes|
+|ADPasswordEncryptionEnabled|No|Yes|
+|ADPasswordEncryptionPrincipal|No|Yes|
+|ADEncryptedPasswordHistorySize|No|Yes|
+|ADBackupDSRMPassword|No|Yes|
+|PasswordExpirationProtectionEnabled|No|Yes|
+
+If BackupDirectory is set to Disabled, all other settings are ignored.
 
 You can administer almost all settings by using any policy management mechanism. The [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp) has two exceptions to this rule. The Windows LAPS CSP supports two settings that aren't in the preceding table: ResetPassword and ResetPasswordStatus. Also, Windows LAPS CSP doesn't support the ADBackupDSRMPassword setting (domain controllers are never managed via CSP). For more information, see the LAPS CSP documentation.
 
@@ -61,9 +62,16 @@ Windows LAPS includes a new Group Policy Object that you can use to administer p
 
 :::image type="content" source="./media/laps-management-policy-settings/laps-management-policy-settings-group-policy-editor.png" alt-text="Screenshot of the Group Policy Management Editor that shows the Windows LAPS policy settings.":::
 
+The template for this new Group Policy object is installed as part of Windows at `%windir%\PolicyDefinitions\LAPS.admx`.
+
+## Group Policy Object Central Store
+
+> [!IMPORTANT]
+> The Windows LAPS GPO template files are  NOT automatically copied to your GPO central store as part of a Windows Update patching operation, assuming you have chosen to implement that approach. Instead you must manually copy the LAPS.admx to the GPO central store location. See [Create and Manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+
 ## Windows LAPS CSP
 
-Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Intune](/mem/intune).
 
 ## Apply policy settings
 
@@ -75,15 +83,30 @@ Use this setting to control which directory the password for the managed account
 
 |Value|Description of setting|
 |--- |--- |
-|0|Disabled (password won't be backed up)|
+|0|Disabled (password isn't backed up)|
 |1|Back up the password to Azure Active Directory only|
 |2|Back up the password to Windows Server Active Directory only|
 
 If not specified, this setting defaults to 0 (Disabled).
 
+### AdministratorAccountName
+
+Use this setting to configure the name of the managed local administrator account.
+
+If not specified, this setting defaults to managing the built-in local administrator account.
+
+> [!IMPORTANT]
+> If you configure Windows LAPS to manage the built-in local administrator account, you must ensure that the account is enabled. Windows LAPS doesn't enable the account.
+
+> [!IMPORTANT]
+> Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
+
+> [!IMPORTANT]
+> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created and enabled. Windows LAPS doesn't create or enable the account.
+
 ### PasswordAgeDays
 
-This setting controls the length of the password. Supported values are:
+This setting controls the maximum password age of the managed local administrator account. Supported values are:
 
 - **Minimum**: 1 day (When the backup directory is configured to be Azure Active Directory, the minimum is 7 days.)
 - **Maximum**: 365 days
@@ -99,6 +122,9 @@ Use this setting to configure the length of the password of the managed local ad
 
 If not specified, this setting defaults to 14 characters.
   
+> [!IMPORTANT]
+> Do not configure PasswordLength to a value that is incompatible with the managed device's local password policy. This will result in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAP event log).
+
 ### PasswordComplexity
 
 Use this setting to configure the required password complexity of the managed local administrator account.
@@ -115,6 +141,9 @@ If not specified, this setting defaults to 4.
 > [!IMPORTANT]
 > Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4.
 
+> [!IMPORTANT]
+> Do not configure PasswordComplexity to a setting that is incompatible with the managed device's local password policy. This will result in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAPS event log).
+
 ### PasswordExpirationProtectionEnabled
 
 Use this setting to configure enforcement of maximum password age for the managed local administrator account.
@@ -125,15 +154,6 @@ If not specified, this setting defaults to 1 (True).
 
 > [!TIP]
 > In legacy Microsoft LAPS mode, this setting defaults to False for backward compatibility.
-
-### AdministratorAccountName
-
-Use this setting to configure the name of the managed local administrator account.
-
-If not specified, this setting defaults to managing the built-in local administrator account.
-
-> [!IMPORTANT]
-> Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
 
 ### ADPasswordEncryptionEnabled
 
@@ -207,11 +227,11 @@ Use this setting to specify the actions to take upon expiration of the configure
 
 This setting can have one of the following values:
 
-|Value|Name|Actions taken when the grace period expires|
-|--- |--- |--- |
-|1|Reset password|The managed account password is reset.|
-|3|Reset password and sign out|The managed account password is reset and any interactive sign-in sessions that use the managed account are terminated.|
-|5|Reset password and reboot|The managed account password is reset and the managed device is immediately restarted.|
+|Value|Name|Actions taken when the grace period expires|Comments|
+|--- |--- |--- |--- |
+|1|Reset password|The managed account password is reset.||
+|3|Reset password and sign out|The managed account password is reset, any interactive sign-in sessions that use the managed account are terminated, and any SMB sessions using the managed account are deleted.|Interactive sign-in sessions receive a nonconfigurable two-minute warning to save their work and sign out.|
+|5|Reset password and reboot|The managed account password is reset and the managed device is restarted.|The managed device is restarted after a nonconfigurable one-minute delay.|
 
 If not specified, this setting defaults to 3.
 
@@ -223,7 +243,7 @@ If not specified, this setting defaults to 3.
 ## See also
 
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+- [Microsoft Intune](/mem/intune)
 
 ## Next steps
 

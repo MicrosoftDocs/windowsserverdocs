@@ -1,9 +1,9 @@
 ---
 title: Cluster affinity
-manager: eldenc
+manager: femila
 ms.topic: article
-author: johnmarlin-msft
-ms.author: johnmar
+ms.author: wscontent
+author: robinharwood
 ms.date: 10/20/2021
 description: This article describes failover cluster affinity and antiaffinity levels
 ---
@@ -29,7 +29,7 @@ Get-ClusterGroup Group2 | fl AntiAffinityClassNames
     AntiAffinityClassNames : {}
 ```
 
-Because AntiAffinityClassNames are not defined as a default, these roles can run together or apart. The goal is to keep them to be separated. The value for AntiAffinityClassNames can be whatever you want them to be, they just have to be the same. Say that Group1 and Group2 are domain controllers running in virtual machines and they would be best served running on different nodes. Because these are domain controllers, I will use DC for the class name. To set the value, the PowerShell command and results would be:
+Because AntiAffinityClassNames are not defined as a default, these roles can run together or apart. The goal is to keep them separated. The value for AntiAffinityClassNames can be whatever you want them to be, they just have to be the same. Say that Group1 and Group2 are domain controllers running in virtual machines and they would be best served running on different nodes. Because these are domain controllers, I will use DC for the class name. To set the value, the PowerShell command and results would be:
 
 ```powershell
 $AntiAffinity = New-Object System.Collections.Specialized.StringCollection

@@ -12,7 +12,21 @@ ms.topic: conceptual
 Learn how to use the LAPS properties dialog in the Windows Server Active Directory Users and Computers management snap-in to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+
+## Windows LAPS snap-in availability
+
+The Windows LAPS-enabled Active Directory Users and Computers management snap-in is available on Windows Server platforms that have been patched with the Windows LAPS feature. The Active Directory Users and Computers management snap-in must be installed, either as part of the larger `Active Directory Domain Services` role, or as part of the `AD DS Snap-in and Command-Line Tools` individual feature.
+
+One way to install the `AD DS Snap-Ins and Command-Line Tools` feature is from the command line as follows:
+
+```
+dism.exe /online /enable-feature:DirectoryServices-DomainController-Tools /all
+```
+
+The Windows LAPS-enabled Active Directory Users and Computers management snap-in is available on supported Windows Client platforms that have been patched with the Windows LAPS feature, via Remote Server Administration Tools (RSAT). You may install RSAT on client platforms by going to Settings, then Apps, then Optional Features, and then install RSAT (specifically search for and install "RSAT: Active Directory Domain Services and Lightweight Directory Services Tools").
+
+The Windows LAPS-enabled Active Directory Users and Computers management snap-in isn't available on older platforms that don't support Windows LAPS. The older Remote Server Administration tools package is not updated to support the new snap-in.
 
 ## LAPS properties dialog in the management snap-in
 
@@ -59,6 +73,9 @@ If you have permissions to read and decrypt the computer's current Windows LAPS 
 :::image type="content" source="./media/laps-management-user-interface/laps-management-user-interface-copy-show-password.png" alt-text="Screenshot that shows the copy and show password functionality in the Windows LAPS properties dialog in the Windows Server Active Directory Users and Computers snap-in.":::
 
 If you don't have permissions to read or decrypt the current password information, a dialog displays a warning.
+
+> [!IMPORTANT]
+> The Active Directory Users and Computers management snap-in only supports viewing the most recently stored password. In order to query older passwords (assuming you enabled password history), you must use the `Get-LapsADPassword` PowerShell cmdlet.
 
 ## Next steps
 

@@ -12,7 +12,7 @@ ms.topic: reference
 Use detailed information about schema extensions and extended rights to help you deploy or manage Windows Local Administrator Password Solution (Windows LAPS) in your Windows Server Active Directory deployment.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## Schema extensions
 
@@ -95,8 +95,8 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 This attribute contains a multi-valued byte string. Each value contains an encrypted version of an earlier password.
 
 ```powershell
-Name: ms-LAPS-EncryptedPassword
-LDAP display name: msLAPS-EncryptedPassword
+Name: ms-LAPS-EncryptedPasswordHistory
+LDAP display name: msLAPS-EncryptedPasswordHistory
 OID: 1.2.840.113556.1.6.44.1.4
 Syntax: 2.5.5.10
 OmSyntax: 4
@@ -111,8 +111,8 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 This attribute contains a byte string that contains an encrypted version of the current Directory Services Restore Mode (DSRM) account password.
 
 ```powershell
-Name: ms-LAPS-EncryptedPassword
-LDAP display name: msLAPS-EncryptedPassword
+Name: ms-LAPS-EncryptedDSRMPassword
+LDAP display name: msLAPS-EncryptedDSRMPassword
 OID: 1.2.840.113556.1.6.44.1.5
 Syntax: 2.5.5.10
 OmSyntax: 4

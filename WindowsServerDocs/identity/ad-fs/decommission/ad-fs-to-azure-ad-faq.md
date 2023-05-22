@@ -4,7 +4,7 @@ title: AD FS to Azure AD FAQ
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 02/07/2023
+ms.date: 02/28/2023
 ms.topic: article
 ---
 
@@ -28,7 +28,7 @@ Yes you can. This is quite common. Using staged rollout can help you validate a 
 
 There are a few ways. The first and recommend way is to [hybrid Azure AD join](/azure/active-directory/devices/concept-azure-ad-join-hybrid) your existing Windows 10/11 domain joined machines or use Azure AD join. This will provide you with the same seamless signle-sign on experience. The second way would be to leverage [seamless single-sign on](/azure/active-directory/hybrid/how-to-connect-sso-how-it-works) for non hybrid Azure AD joined machines or downlevel Windows clients can still get that same experience.
 
-**I’m registering Hybrid AADJ devices using AD FS device claims. How do I allow devices to continue to complete their hybrid aadj process with AD FS?**
+**I’m registering Hybrid Azure AD Joined (AADJ) devices using AD FS device claims. How do I allow devices to continue to complete their Hybrid AADJ process with AD FS?**
 
 You can follow the [configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join#managed-domains) process for devices to complete the registration process without AD FS.  
 
@@ -51,6 +51,18 @@ Yes depending on the rules needed. The best place to investigate is to use [AD F
 **When switching a domain from federated to managed how long does it take for the change to take place?**
 
 It can take up to 4 hours to fully cutover so [plan your maintenance window accordingly](/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication#plan-the-maintenance-window)
+
+**Is AD FS required for using O365?** 
+
+No, O365 can authenticate you directly without needing ADFS.
+
+**Once I move the application configuration to Azure AD, is there anything else I have to do to complete the migration?**
+
+Yes, the migration of an application to Azure AD isn’t complete until you have reconfigured the app itself (cutover) to use Azure AD.
+
+**Is ADFS required so users can login with their Email Address or User Principal Name (UPN)?** 
+
+No, Azure AD supports sign-in with an [Email Address](/azure/active-directory/authentication/howto-authentication-use-email-signin) or User Principal Name.
 
 
 

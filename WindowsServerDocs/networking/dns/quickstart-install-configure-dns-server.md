@@ -4,7 +4,7 @@ description: Get started installing and configuring a DNS server on Windows Serv
 author: robinharwood
 ms.author: roharwoo
 ms.topic: quickstart
-ms.date: 12/15/2022
+ms.date: 03/14/2022
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ---
@@ -13,8 +13,9 @@ ms.contributors: orthomas
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
+
 This quickstart shows you how to install and configure a DNS Server on Windows Server. You'll
-install the DNS Server role to forward DNS queries to DNS root hint name servers, or optionally to an
+install the DNS Server role to host DNS zone data, forward DNS queries to DNS root hint name servers, or optionally to an
 upstream name server.
 
 ## Prerequisites
@@ -86,7 +87,6 @@ Here's how to install the DNS Server role using Server Manager from the Windows 
 1. Once the installation is complete, select **Close**. The installation doesn't require a reboot.
 
 ---
-
 ## Configuring DNS Server
 
 Now you've installed the DNS Server role, you can configure the server.
@@ -104,7 +104,7 @@ Here's how to configure the interface used to listen for DNS requests using the
 1. Run PowerShell on your computer in an elevated session.
 
 1. Find your computers existing IP address by running the
-   [Get-NetIPAddress](/powershell/module/netadapter/get-netipaddress) cmdlet. Make a note of the IP
+   [Get-NetIPAddress](/powershell/module/nettcpip/get-netipaddress) cmdlet. Make a note of the IP
    address that you want to use for your DNS server.
 
     ```powershell
@@ -133,7 +133,6 @@ Here's how to configure the interface used to listen for DNS requests using the 
    select the IP address you wish to use, and then select **OK**.
 
 ---
-
 ### Configure root hints
 
 Root hints servers are used to help resolving DNS address information when the DNS server is
@@ -155,7 +154,7 @@ Here's how to update a DNS root hint name server using the
 1. Run PowerShell on your computer in an elevated session.
 
 1. Find your computers existing IP address by running the
-   [Get-DnsServerRootHint](/powershell/module/netadapter/get-dnsserverroothint) cmdlet. Make a note
+   [Get-DnsServerRootHint](/powershell/module/dnsserver/get-dnsserverroothint) cmdlet. Make a note
    of the name server that you want to update.
 
     ```powershell
@@ -208,7 +207,6 @@ Here's how to root hints using the DNS Manager console.
    the name server has a trailing dot (.).
 
 ---
-
 ### Configure forwarders
 
 You can optionally configure a forwarder to resolve DNS address information rather than forwarding
@@ -252,7 +250,6 @@ Here's how to configure DNS forwarders using the DNS Manager console.
 1. Review the DNS server in the list, select **OK** or **Apply** to complete your configuration.
 
 ---
-
 ## Removing the DNS Server role
 
 To remove the DNS Server role, perform the following steps.
@@ -288,7 +285,6 @@ Here's how to uninstall the DNS server role using Server Manager from the Window
 1. Restart your computer to complete the uninstall.
 
 ---
-
 > [!IMPORTANT]
 >
 > When removing the DNS server role service from a Windows Server computer be aware:
@@ -308,3 +304,4 @@ more.
 
 - [DNS Policies Overview](deploy/DNS-Policies-Overview.md)
 - [Anycast DNS overview](deploy/anycast.md)
+

@@ -189,11 +189,10 @@ When you expand the zip archive, you'll see the following folder structure:
 - JustEnoughAdministration (directory)
 - Modules (directory)
     - Microsoft.SME.\* (directories)
-    - WindowsAdminCenter.Jea (directory)
 
 To configure support for role-based access control on a node, you need to perform the following actions:
 
-1.  Copy the **JustEnoughAdministration**, **Microsoft.SME.\***, and **WindowsAdminCenter.Jea** modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
+1.  Copy the **JustEnoughAdministration** and **Microsoft.SME.\*** modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
 2.  Update **InstallJeaFeature.ps1** file to match your desired configuration for the RBAC endpoint.
 3.  Run `InstallJeaFeature.ps1` to compile the DSC resource.
 4.  Deploy your DSC configuration to all of your machines to apply the configuration.

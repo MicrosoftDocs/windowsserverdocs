@@ -21,7 +21,7 @@ Learn about the basic design and security concepts for Windows Local Administrat
 - Windows safe mode
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## Windows LAPS architecture
 
@@ -39,17 +39,17 @@ The Windows LAPS architecture diagram has several key components:
 
 - **Azure Active Directory**: An Azure Active Directory deployment running in the cloud.
 
-- **Microsoft Endpoint Manager** The preferred Microsoft device policy management solution, also running in the cloud.
+- **Microsoft Intune** The preferred Microsoft device policy management solution, also running in the cloud.
 
 ## Basic scenario flow
 
 The first step in a basic Windows LAPS scenario is to configure the Windows LAPS policy for your organization. We recommend that you use the following configuration options:
 
-- **Azure Active Directory-joined devices**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+- **Azure Active Directory-joined devices**: Use [Microsoft Intune](/mem/intune).
 
 - **Windows Server Active Directory-joined devices**: Use Group Policy.
 
-- **Hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Endpoint Manager**: Use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+- **Hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Intune**: Use [Microsoft Intune](/mem/intune).
 
 After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a new, random password that's compliant with the current policy's length and complexity requirements. The password is validated against the local device's password complexity policy.
 
@@ -88,7 +88,7 @@ Windows LAPS does respond to Group Policy change notifications. You can manually
    gpupdate.exe /target:computer /force
    ```
 
-- Run the `Initiate-LapsPolicyProcessing` cmdlet. This method is preferred because it's more scoped.
+- Run the `Invoke-LapsPolicyProcessing` cmdlet. This method is preferred because it's more scoped.
 
 > [!TIP]
 > The earlier released Microsoft LAPS (legacy Microsoft LAPS) was built as a Group Policy (GPO) Client Side Extension (CSE). GPO CSEs are loaded and invoked in every Group Policy refresh cycle. The frequency of the legacy Microsoft LAPS polling cycle is the same as the frequency of the Group Policy refresh cycle. Windows LAPS is not built as a CSE, so its polling cycle is hard-coded to once per hour. Windows LAPS is not affected by the Group Policy refresh cycle.
@@ -178,9 +178,13 @@ Backing up DSRM passwords to Azure Active Directory isn't supported.
 
 Windows LAPS supports automatically rotating the local administrator account password if it detects that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. You can configure a grace period to give a user time to complete their intended actions.
 
+Password reset after authentication is not supported for the DSRM account on domain controllers.
+
 ## Account password tampering protection
 
 When Windows LAPS is configured to manage a local administrator account password, that account is protected against accidental or careless tampering. This protection extends to the DSRM account when the account is managed by Windows LAPS on a Windows Server Active Directory domain controller.
+
+Windows LAPS rejects unexpected attempts to modify the account's password with a `STATUS_POLICY_CONTROLLED_ACCOUNT` (0xC000A08B) or `ERROR_POLICY_CONTROLLED_ACCOUNT` (0x21CE\8654) error. Each such rejection is noted with a 10031 event in the Windows LAPS event log channel.
 
 ## Disabled in Windows safe mode
 
@@ -190,7 +194,7 @@ When Windows is started in safe mode, DSRM mode, or in any other non-default boo
 
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 - [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
-- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+- [Microsoft Intune](/mem/intune)
 
 ## Next steps
 

@@ -45,9 +45,15 @@
       "recommendations": true
       },
       "fileMetadata": {
+        "author": {
+          "security/tls/*.md": "Andrei-Popov"
+        },
         "feedback_product_url": {
           "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
           "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
+        },
+        "ms.author": {
+          "security/tls/*.md": "wscontent"
         },
         "ms.prod": {
           "EssentialsDocs/**/*.md": "windows-server",

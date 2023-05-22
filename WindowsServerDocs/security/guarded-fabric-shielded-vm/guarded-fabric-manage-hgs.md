@@ -217,7 +217,7 @@ The backed up HGS server state will not include the name of your HGS cluster, an
 These settings are important for consistency but not critical to get your HGS cluster back online after a disaster.
 
 To capture the name of the HGS service, run `Get-HgsServer` and note the flat name in the Attestation and Key Protection URLs.
-For example, if the Attestation URL is "<http://hgs.contoso.com/Attestation>", "hgs" is the HGS service name.
+For example, if the Attestation URL is "<https://hgs.contoso.com/Attestation>", "hgs" is the HGS service name.
 
 The Active Directory domain used by HGS should be managed like any other Active Directory domain.
 When restoring HGS after a disaster, you will not necessarily need to recreate the exact objects that are present in the current domain.
@@ -494,7 +494,7 @@ On the newly-added Hyper-V host, run `Set-HgsClientConfiguration` and supply the
 These URLs can be obtained by running `Get-HgsServer` on any HGS node.
 
 ```powershell
-Set-HgsClientConfiguration -KeyProtectionServerUrl 'http://hgs.bastion.local/KeyProtection' -AttestationServerUrl 'http://hgs.bastion.local/Attestation'
+Set-HgsClientConfiguration -KeyProtectionServerUrl 'https://hgs.bastion.local/KeyProtection' -AttestationServerUrl 'https://hgs.bastion.local/Attestation'
 ```
 
 If the resulting status does not indicate "IsHostGuarded : True" you will need to troubleshoot the configuration.

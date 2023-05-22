@@ -2,9 +2,6 @@
 title: Manage Transport Layer Security (TLS)
 description: Learn how to manage the Transport Layer Security.
 ms.topic: article
-author: justinha
-ms.author: justinha
-manager: brianlic
 ms.date: 05/16/2018
 ---
 

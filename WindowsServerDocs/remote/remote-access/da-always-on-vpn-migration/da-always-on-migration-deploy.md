@@ -61,7 +61,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 >[!NOTE]
 >Microsoft recommends that you test this process before performing it on any of your user migration rings.
 
-1.  **Create and publish the VPN certificate, and enable the auto-enrollment Group Policy object (GPO).** For traditional,  certificate-based Windows 10 VPN deployments, a certificate is issued to either the device or the user so that it can authenticate the connection. When the new authentication certificate is created and published for auto-enrollment, you must create and deploy a GPO with the auto-enrollment setting configured to the VPN Users group. For the steps to configure certificates and auto-enrollment, see [Configure the server infrastructure](../vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md).
+1.  **Create and publish the VPN certificate, and enable the auto-enrollment Group Policy object (GPO).** For traditional,  certificate-based Windows 10 VPN deployments, a certificate is issued to either the device or the user so that it can authenticate the connection. When the new authentication certificate is created and published for auto-enrollment, you must create and deploy a GPO with the auto-enrollment setting configured to the VPN Users group. For the steps to configure certificates and auto-enrollment, see [Configure the server infrastructure](../tutorial-aovpn-deploy-setup.md).
 
 2.  **Add users to the VPN Users group.** Add whichever users you migrate to the VPN Users group. Those users stay in that security group after you have migrated them so that they can receive any certificate updates in the future. Continue to add users to this group until you have moved every user from DirectAccess to Always On VPN.
 

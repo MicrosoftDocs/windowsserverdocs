@@ -8,7 +8,7 @@ metadata:
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
   author: robinharwood
   manager: femila
-  ms.service: windows-server
+  ms.prod: windows-server
   ms.topic: hub-page
   ms.date: 08/05/2022
   ms.author: roharwoo
@@ -143,10 +143,10 @@ conceptualContent:
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview
-        - url: ./security/windows-authentication/windows-authentication-overview.md
+        - url: ./security/secured-core-server.md
           itemType: overview
           text: Secured-core server
-        - url: ./security/secured-core-server.md
+        - url: ./security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           itemType: how-to-guide
           text: Getting started with group-managed service accounts
         - url: ./security/windows-authentication/credentials-processes-in-windows-authentication.md

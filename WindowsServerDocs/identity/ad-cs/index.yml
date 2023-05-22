@@ -5,11 +5,11 @@ summary: Active Directory Certificate Services (AD CS) provides public key infra
 
 metadata:
   title: Active Directory Certificate Services documentation
-  description: Learn how Active Directory Certificate Services (AD CS) provides public key infrastructure (PKI) for cryptography, digital certificates and signature capabilities.
+  description: Learn how Active Directory Certificate Services (AD CS) provides public key infrastructure (PKI) for cryptography, digital certificates, and signature capabilities.
   ms.topic: landing-page
+  ms.date: 11/17/2022
   author: robinharwood
   ms.author: roharwoo 
-  ms.date: 09/21/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -26,7 +26,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Active Directory Certificate Services?
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)
+            url: active-directory-certificate-services-overview.md
       
   # Card
   - title: Get started
@@ -42,15 +42,17 @@ landingContent:
           - text: Certificate Enrollment Policy Web Service for AD CS
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11)
           - text: Network Device Enrollment Service for AD CS
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831498(v=ws.11)
+            url: network-device-enrollment-service-overview.md
           - text: Protecting Against Weak Cryptographic Algorithms
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn375961(v=ws.11)
       - linkListType: how-to-guide
         links:
+          - text: Configure Network Device Enrollment Service to use a domain user account
+            url: create-domain-user-account-ndes-service-account.md
           - text: Migrate a Certification Authority key to a Key Storage Provider
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn771627(v=ws.11)
           - text: Configure trusted root and disallowed certificates
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265983(v=ws.11)
+            url: configure-trusted-roots-disallowed-certificates.md
           - text: Use a Policy Module with the Network Device Enrollment
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473016(v=ws.11)
           - text: Perform a Delegated Installation for an Enterprise Certification Authority

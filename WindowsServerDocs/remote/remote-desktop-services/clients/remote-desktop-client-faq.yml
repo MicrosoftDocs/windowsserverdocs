@@ -204,7 +204,7 @@ sections:
       - question: |
           Why do incorrect characters appear in the session?
         answer: |
-          If you are using an international keyboard, you might see an issue where the characters that appear in the session do match the characters you typed on the Mac keyboard.
+          If you are using an international keyboard, you might see an issue where the characters that appear in the session do not match the characters you typed on the Mac keyboard.
           
           This can occur in the following scenarios:
           

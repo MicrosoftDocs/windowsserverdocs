@@ -10771,6 +10771,41 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-create-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-configure-client",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md",
+      "redirect_url": "/windows-server/remote/remote-access/get-started-install-ras-as-vpn",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/get-started/Removed-Features-1709.md",
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
       "redirect_document_id": false
@@ -10846,14 +10881,105 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/native-client-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/single-page-application-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/enabling-oauth-confidential-clients-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/enabling-openid-connect-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/custom-id-tokens-in-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+
+    {
       "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-config-conditional-access-policy.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-aovpn-conditional-access",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md",
       "redirect_url": "/azure/active-directory/authentication/how-to-migrate-mfa-server-to-azure-mfa-with-federation",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md",
+      "redirect_url": "/Windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-map-da.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/overview-aovpn.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
     }
+
+
+
+
+    
   ]
 }
+
+
+

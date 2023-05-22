@@ -446,6 +446,8 @@
       href: cscript.md
     - name: date
       href: date.md
+    - name: dcdiag
+      href: dcdiag.md
     - name: dcgpofix
       href: dcgpofix.md
     - name: defrag

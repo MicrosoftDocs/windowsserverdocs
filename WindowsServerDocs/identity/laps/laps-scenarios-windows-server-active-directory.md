@@ -12,11 +12,29 @@ ms.topic: conceptual
 Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory and how to retrieve them.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11). Support for the Windows LAPS Azure Active Directory scenario is currently in private preview, and limited to a small number of customers who have a direct engagement with engineering. Once public preview is declared in 2023, all customers will be able to evaluate this AAD scenario.
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+
+## Domain functional level and domain controller OS version requirements
+
+If your domain is configured below 2016 Domain Functional Level (DFL), you can't enable Windows LAPS password encryption period. Without password encryption, clients can only be configured to store passwords in clear-text (secured by Active Directory ACLs) and DCs can't be configured to manage their local DSRM account.
+
+Once your domain reaches 2016 DFL, you can enable Windows LAPS password encryption. However if you're still running any WS2016 DCs, those WS2016 DCs don't support Windows LAPS and therefore can't use the DSRM account management feature.
+
+It's fine to use supported operating systems older than WS2016 on your domain controllers as long as you're aware of these limitations.
+
+The following table summarizes the various supported-or-not scenarios:
+
+|Domain details|Clear-text password storage supported|Encrypted password storage supported (for domain-joined clients) |DSRM account management supported (for DCs)|
+|--- |--- |--- |--- |
+|Below 2016 DFL|Yes|No|No|
+|2016 DFL with one or more WS2016 DCs|Yes|Yes|Yes but only for WS2019 and later DCs|
+|2016 DFL with only WS2019 and later DCs|Yes|Yes|Yes|
+
+Microsoft strongly recommends customer upgrade to the latest available operating system on clients, servers, and domain controllers in order to take advantage of latest features and security improvements.
 
 ## Update the Windows Server Active Directory schema
 
-The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest.
+The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. This operation can be performed on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but may also be performed on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
 
 ```powershell
 PS C:\> Update-LapsADSchema
@@ -65,13 +83,13 @@ The first step is to choose how to apply policy to your devices.
 
 Most environments use [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy) to deploy the required settings to their Windows Server Active Directory-domain-joined devices.
 
-If your devices are also hybrid-joined to Azure Active Directory, you can deploy policy by using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+If your devices are also hybrid-joined to Azure Active Directory, you can deploy policy by using [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
 ### Configure specific policies
 
 At a minimum, you must configure the BackupDirectory setting to the value 2 (backup passwords to Windows Server Active Directory).
 
-If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified by its well-known relative identifier (RID) and should never be identified by name. The name of the built-in local administrator account varies depending on the default locale of the device.
+If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified using its well-known relative identifier (RID) and should never be identified using its name. The name of the built-in local administrator account varies depending on the default locale of the device.
 
 If you want to configure a custom local administrator account, you should configure the AdministratorAccountName setting with the name of that account.
 
@@ -136,9 +154,13 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 
 ## See also
 
+- [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
 - [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
+- [Microsoft Intune](/mem/intune)
+- [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
-- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 
