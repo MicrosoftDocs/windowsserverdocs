@@ -4,9 +4,10 @@ title: AD Forest Recovery - Performing a full server recovery
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 08/09/2018
+ms.date: 05/16/2023
 ms.topic: article
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
+ms.custom: inhenkel
 ---
 # AD Forest Recovery - Performing a full server recovery
 
@@ -16,7 +17,7 @@ Use the following procedure to perform a full server recovery for Windows Server
 
 ## Active Directory Full Server Recovery
 
-A full server recovery is necessary if you are restoring to different hardware or a different operating system instance. Keep in mind the following:
+A full server recovery is necessary if you're restoring to different hardware or a different operating system instance. Keep in mind the following:
 
 - The number drives on the target server needs to be equal to the number in the backup and they need to be the same size or greater.
 - The target server needs to be started from the operating system DVD in order to access the **Repair your computer** option.
@@ -27,57 +28,57 @@ Depending on your scenario, use one of the following procedures to perform a ful
 
 ## Perform a full server restore with a local backup with the latest image
 
-1. Start Windows Setup, specify the Language, Time and currency format, and keyboard options and click **Next**.
-2. Click **Repair your computer**.
+1. Start Windows Setup, specify the Language, Time and currency format, and keyboard options and select **Next**.
+2. Select **Repair your computer**.
    ![Screenshot that shows where to select Repair your computer.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore1.png)
-3. Click **Troubleshoot**.</br>
+3. Select **Troubleshoot**.</br>
    ![Screenshot that shows the Troubleshoot option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore2.png)
-4. Click **System Image Recovery**.</br>
+4. Select **System Image Recovery**.</br>
    ![Screenshot that shows the System Image Recovery option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore3.png)
-5. Click **Windows Server 2016**.
+5. Select **Windows Server 2016**.
    ![Screenshot that shows the Windows Server 2016 option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore4.png)
-6. If you are restoring the most recent local backup, click **Use the latest available system image (recommended)** and click **Next**.
+6. If you're restoring the most recent local backup, select **Use the latest available system image (recommended)** and select **Next**.
    ![Screenshot that shows the Use the latest available system image (recommended) option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore5.png)
-7. You will now be given an option to:
+7. You'll now be given an option to:
    -  Format and repartition disks
    -  Install drivers
-   -  De-selecting the **Advanced** features of automatically restarting and checking for disk errors. These are enabled by default.
+   -  Deselecting the **Advanced** features of automatically restarting and checking for disk errors. These are enabled by default.
    ![Screenshot that highlights the Advanced... button.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore6.png)
-8. Click **Next**.
-9. Click **Finish**. You will be prompted asking if you are sure you want to continue. Click **Yes**.
+8. Select **Next**.
+9. Select **Finish**. You'll be prompted asking if you're sure you want to continue. Select **Yes**.
    ![Screenshot that shows the progress of the image restoration.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore11.png)
 10. Once this completes perform an authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).
 
 ## Perform a full server restore with any image local or remote
 
-1. Start Windows Setup, specify the Language, Time and currency format, and keyboard options and click **Next**.
-2. Click **Repair your computer**.</br>
-3. Click **Troubleshoot**, click **System Image Recovery**, and click **Windows Server 2016**.
-4. If you are restoring the most recent local backup, click **Select a system image** and click **Next**.
+1. Start Windows Setup, specify the Language, Time and currency format, and keyboard options and select **Next**.
+2. Select **Repair your computer**.</br>
+3. Select **Troubleshoot**, select **System Image Recovery**, and select **Windows Server 2016**.
+4. If you're restoring the most recent local backup, select **Select a system image** and select **Next**.
 5. Now you can select the location of the backup that you want to restore. If the image is local you can select it from the list.
 6. If the image is on a network share, select **Advanced**. You can also select **Advanced** if you need to install a driver.
    ![Screenshot that highlights the Advanced button in the Re-image your computer dialog box.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore7.png)
-7. If you are restoring from the network after clicking **Advanced** select **Search for a system image on the network**. You may be prompted to restore network connectivity. Select Ok. </br>
+7. If you're restoring from the network after clicking **Advanced** select **Search for a system image on the network**. You may be prompted to restore network connectivity. Select Ok. </br>
    ![Screenshot that highlights the Search for a system image on the network option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore8.png)
-8. Type the UNC path to the backup share location (for example, \\\server1\backups) and click **OK**. You can also type the IP address of the target server, such as \\\192.168.1.3\backups.
+8. Type the UNC path to the backup share location (for example, \\\server1\backups) and select **OK**. You can also type the IP address of the target server, such as \\\192.168.1.3\backups.
    ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore9.png)
-9. Type credentials necessary to access the share and click OK.
-10. Now **Select the date and time of system image to restore** and click **Next**.
-11. You will now be given an option to:
+9. Type credentials necessary to access the share and select OK.
+10. Now **Select the date and time of system image to restore** and select **Next**.
+11. You'll now be given an option to:
     - Format and repartition disks
     - Install drivers
-    - De-selecting the **Advanced** features of automatically restarting and checking for disk errors. These are enabled by default.
-12. Click **Next**.
-13. Click **Finish**. You will be prompted asking if you are sure you want to continue. Click **Yes**.
+    - Deselecting the **Advanced** features of automatically restarting and checking for disk errors. These are enabled by default.
+12. Select **Next**.
+13. Select **Finish**. You'll be prompted asking if you're sure you want to continue. Select **Yes**.
 14. Once this completes perform an authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).
 
 ## Enabling the network adapter for a network backup
 
 If you need to enable a network adapter from the command prompt to restore from a network share, use the following steps.
 
-1. Start Windows Setup, specify the Language, Time and currency format, and keyboard options and click **Next**.
-2. Click **Repair your computer**. I
-3. Click **Troubleshoot**, click **Command Prompt**.
+1. Start Windows Setup, specify the Language, Time and currency format, and keyboard options and select **Next**.
+2. Select **Repair your computer**. I
+3. Select **Troubleshoot**, select **Command Prompt**.
 4. Type the following command and press ENTER:
 
    ```
@@ -118,7 +119,7 @@ If you need to enable a network adapter from the command prompt to restore from 
    set address "Local Area Connection" static 192.168.1.2 255.0.0.0 192.168.1.1 1
    ```
 
-   Type `quit` to return to a command prompt. Type `ipconfig /all` to verify the network adapter has an IP address and try to ping the IP address of the server that hosts the backup share to confirm connectivity. Close the command prompt when you are done.
+   Type `quit` to return to a command prompt. Type `ipconfig /all` to verify the network adapter has an IP address and try to ping the IP address of the server that hosts the backup share to confirm connectivity. Close the command prompt when you're done.
 
 6. Now that the network adapter is working, select the steps above to complete the restore.
 

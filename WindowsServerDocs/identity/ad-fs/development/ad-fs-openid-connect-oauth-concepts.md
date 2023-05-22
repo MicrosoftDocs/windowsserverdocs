@@ -4,8 +4,9 @@ description: Learn about AD FS modern authentication concepts.
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 05/01/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # AD FS OpenID Connect/OAuth Concepts
@@ -18,7 +19,7 @@ ms.topic: article
 |-----|-----|
 |End User|This is the security principal (users, applications, services, and groups) who needs to access the resource.|
 |Client|This is your web application, identified by its client ID. The client is usually the party that the end user interacts with, and it requests tokens from the authorization server.
-|Authorization Server / Identity Provider (IdP)| This is your AD FS server. It is responsible for verifying the identity of security principals that exist in an organization's directory. It issues security tokens (bearer access token, ID token, refresh token) upon successful authentication of those security principals.
+|Authorization Server / Identity Provider (IdP)| This is your AD FS server. It's responsible for verifying the identity of security principals that exist in an organization's directory. It issues security tokens (bearer access token, ID token, refresh token) upon successful authentication of those security principals.
 |Resource Server / Resource Provider / Relying Party| This is where the resource or data resides. It trusts the Authorization Server to securely authenticate and authorize the Client and uses Bearer access tokens to ensure that access to a resource can be granted.
 
 Following diagram provides the most basic relationship between the actors:
@@ -30,7 +31,7 @@ Following diagram provides the most basic relationship between the actors:
 |Application Type|Description|Role|
 |-----|-----|-----|
 |Native application|Sometimes called a **public client**, is intended to be a client app that runs on a pc or device and with which the user interacts.|Requests tokens from the authorization server (AD FS) for user access to resources. Sends HTTP requests to protected resources, using the tokens as HTTP headers.|
-|Server application (Web app)|A web application that runs on a server and is accessible to users via a browser. Because it is capable of maintaining its own client 'secret' or credential, it is sometimes called a **confidential client**. |Requests tokens from the authorization server (AD FS) for user access to resources. Before requesting a token, client (Web App) needs to authenticate using its secret. |
+|Server application (Web app)|A web application that runs on a server and is accessible to users via a browser. Because it's capable of maintaining its own client 'secret' or credential, it's sometimes called a **confidential client**. |Requests tokens from the authorization server (AD FS) for user access to resources. Before requesting a token, client (Web App) needs to authenticate using its secret. |
 |Web API|The end resource the user is accessing. Think of these as the new representation of "relying parties".|Consumes bearer access tokens obtained by the clients.|
 
 ## Application Group
@@ -62,7 +63,7 @@ When registering a resource in AD FS, scopes can be configured to allow AD FS to
 - logon_cert - The logon_cert scope allows an application to request logon certificates, which can be used to interactively log on authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a base64-encoded CMS certificate chain or a CMC full PKI response. More details available [here](/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e).
 - user_impersonation - The user_impersonation scope is necessary to successfully request an on-behalf-of access token from AD FS. For details on how to use this scope refer to [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](ad-fs-on-behalf-of-authentication-in-windows-server.md).
 - allatclaims – The allatclaims scope allows the application to request claims in access token to be added in the ID Token as well.
-- vpn_cert - The vpn_cert scope allows an application to request VPN certificates, which can be used to establish VPN connections using EAP-TLS authentication. This is not supported anymore.
+- vpn_cert - The vpn_cert scope allows an application to request VPN certificates, which can be used to establish VPN connections using EAP-TLS authentication. This isn't supported anymore.
 - email - Allows application to request email claim for the signed in user.
 - profile - Allows application to request profile related claims for the sign-in user.
 
@@ -85,9 +86,9 @@ The claims present in any given security token are dependent upon the type of to
 
 1. AD FS validates the client ID in the auth request with the client ID obtained during client and resource registration in AD FS. If using confidential client, then AD FS also validates the client secret provided in the auth request. AD FS also validates the redirect URI of the Client.
 
-1. AD FS identifies the resource that the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values, e.g., openid]*.
+1. AD FS identifies the resource that the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter isn't sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values, for example, openid]*.
 
-    If resource is not passed using resource or scope parameter, AD FS will use a default resource urn:microsoft:userinfo whose policies (such as MFA, issuance, or authorization policy) can't be configured.
+    If resource isn't passed using resource or scope parameter, AD FS will use a default resource urn:microsoft:userinfo whose policies (such as MFA, issuance, or authorization policy) can't be configured.
 
 1. Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request match the scopes configured while registering the resource. If the client doesn't have the permissions, or the right scopes aren't sent in the auth request, the auth flow is terminated.
 
@@ -115,16 +116,16 @@ Two types of libraries are used with AD FS:
 
 ## Customize ID Token (additional claims in ID Token)
 
-In certain scenarios, it is possible that the Web app (client) needs additional claims in an ID token to help in the functionality. This can be achieved by using one of the following options:
+In certain scenarios, it's possible that the Web app (client) needs additional claims in an ID token to help in the functionality. This can be achieved by using one of the following options:
 
-**Option 1:** Should be used when using a public client and web app does not have a resource that it is trying to access. This option requires:
+**Option 1:** Should be used when using a public client and web app doesn't have a resource that it's trying to access. This option requires:
 
 - response_mode set as form_post
 - Relying party identifier (Web API identifier) is same as client identifier
 
 ![AD FS Customize Token Option 1](media/adfs-modern-auth-concepts/option1.png)
 
-**Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. This option requires:
+**Option 2:** Should be used when web app has a resource that it's trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. This option requires:
 
 - response_mode set as form_post
 - KB4019472 is installed on your AD FS servers
@@ -148,7 +149,7 @@ Single logout results in ending all the client sessions using the session ID. AD
 |-----|-----|
 |/authorize|AD FS returns an authorization code that can be used to obtain the access token|
 |/token|AD FS returns an access token that can be used to access the resource (Web API)|
-|/userinfo|AD FS returns claims about the authenticated user|
+|/userinfo|AD FS returns the subject claim|
 |/devicecode|AD FS returns the device code and user code|
 |/logout|AD FS logs out the user|
 |/keys|AD FS public keys used to sign responses|

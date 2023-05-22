@@ -20,7 +20,7 @@ This is the beginning of our trace.  In this frame we see the following:
 
 Request:
 
-- HTTP GET to our relying party (http://sql1.contoso.com/SampApp)
+- HTTP GET to our relying party (https://sql1.contoso.com/SampApp)
 
 Response:
 

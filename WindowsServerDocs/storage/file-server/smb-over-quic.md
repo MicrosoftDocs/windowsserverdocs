@@ -5,7 +5,7 @@ ms.prod: windows-server
 ms.topic: article
 author: NedPyle
 ms.author: inhenkel
-ms.date: 06/07/2021
+ms.date: 05/18/2023
 ---
 
 # SMB over QUIC
@@ -118,9 +118,15 @@ By default, a Windows 11 device won't have access to an Active Directory domain 
 
 #### Windows Admin Center method
 
-1. Ensure you are using at least Windows Admin Center version 2110.
-2. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on the file servers.
-3. Configure the following group policy setting to apply to the Windows 11 device:
+1. Ensure you're using at least Windows Admin Center version 2110.
+1. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure
+   KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on
+   the file servers. The default KDC proxy port is 443 and assigned automatically by Windows Admin Center.
+
+   > [!NOTE]
+   > You cannot configure an SMB over QUIC server joined to a Workgroup using Windows Admin Center. You must join the server to an Active Directory domain or use the step in [Manual Method](#manual-method) section.
+
+1. Configure the following group policy setting to apply to the Windows 11 device:
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
@@ -131,8 +137,8 @@ By default, a Windows 11 device won't have access to an Active Directory domain 
     `value: <https fsedge1.contoso.com:443:kdcproxy />`
 
     This Kerberos realm mapping means that if user *ned@corp.contoso.com* tried to connect to a file server name *fs1edge.contoso.com*, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal *corp.contoso.com* domain. The communication with the client will be over HTTPS on port 443 and user credentials aren't directly exposed on the client-file server network.
-4. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
-5. Apply the group policy and restart the Windows 11 device.  
+1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
+1. Apply the group policy and restart the Windows 11 device.  
 
 #### Manual Method
 
@@ -188,6 +194,7 @@ An expired SMB over QUIC certificate that you replace with a new certificate fro
 - Windows Server 2022 Datacenter: Azure Edition will also eventually be available on Azure Stack HCI 21H2, for customers not using Azure public cloud.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
 - Users should have strong passwords or, ideally, be configured using a [passwordless strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy) with [Windows Hello for Business MFA](/windows/security/identity-protection/hello-for-business) or [smart cards](/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference). Configure an account lockout policy for mobile users through [fine-grained password policy](../../identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#fine_grained_pswd_policy_mgmt) and you should deploy intrusion protection software to detect brute force or password spray attacks.
+- You can't configure SMB over QUIC using WAC when the SMB server is in a workgroup (that is, not AD domain joined). In that scenario you must use the [New-SMBServerCertificateMapping](/powershell/module/smbshare/new-smbservercertificatemapping) cmdlet and the [Manual Method](#manual-method) steps for KDC proxy configuration.
 
 ## More references
 

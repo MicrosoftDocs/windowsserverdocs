@@ -15,7 +15,7 @@ ms.author: billmath
 
 # What is KDFv2 for AD FS?
 
-On July 13, 2021, updates were released for AD FS to address token replay attacks, as described in [CVE-2021-33779](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33779). These updates introduce new settings to enable and control a new, Key Derivation Function (KDF) called "KDFv2". This new version of KDF is more secure then the previous version.  This document describes new settings enabled by the security fix for [CVE-2021-33779](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33779), and how to enable these settings in different deployment scenarios. For product-specific KB numbers and related downloads, please refer to links provided in the CVE article.
+On July 13, 2021, updates were released for AD FS to address token replay attacks, as described in [CVE-2021-33779](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33779). These updates introduce new settings to enable and control a new, Key Derivation Function (KDF) called "KDFv2". This new version of KDF is more secure than the previous version.  This document describes new settings enabled by the security fix for [CVE-2021-33779](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33779), and how to enable these settings in different deployment scenarios. For product-specific KB numbers and related downloads, please refer to links provided in the CVE article.
  
 ## KDFv2 Settings:
  

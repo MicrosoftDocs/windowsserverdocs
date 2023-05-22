@@ -17,15 +17,15 @@ This topic provides an introduction to the DirectAccess scenario that uses a sin
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites
 You can use the following topics to review prerequisites and other information before you deploy DirectAccess.
 
--   [DirectAccess Unsupported Configurations](../../../remote-access/directaccess/DirectAccess-Unsupported-Configurations.md)
+-   [DirectAccess Unsupported Configurations](../DirectAccess-Unsupported-Configurations.md)
 
--   [Prerequisites for Deploying DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)
+-   [Prerequisites for Deploying DirectAccess](../Prerequisites-for-Deploying-DirectAccess.md)
 
 ## <a name="BKMK_OVER"></a>Scenario description
 In this scenario, a Windows Server computer is configured as a DirectAccess server with default settings. The configuration only requires a few easy wizard steps, without any need to configure infrastructure settings such as a certification authority (CA) or Active Directory security groups.
 
 > [!NOTE]
-> If you want to configure an advanced deployment with custom settings, see [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)
+> If you want to configure an advanced deployment with custom settings, see [Deploy a Single DirectAccess Server with Advanced Settings](../single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)
 
 ## In this scenario
 To set up a basic DirectAccess server, several planning and deployment steps are required.
@@ -54,7 +54,7 @@ Before you begin deploying this scenario, review this list for important require
 
 -   Changing policies outside of the DirectAccess management console or PowerShell cmdlets isn't supported.
 
--   To deploy multisite, now or in the future, first [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).
+-   To deploy multisite, now or in the future, first [Deploy a Single DirectAccess Server with Advanced Settings](../single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).
 
 ### Planning steps
 Planning is divided into two phases:
@@ -63,7 +63,7 @@ Planning is divided into two phases:
 
 2. Planning for the DirectAccess deployment. This phase describes the planning steps required to prepare for the DirectAccess deployment. It includes planning for DirectAccess client computers, server and client authentication requirements, VPN settings, infrastructure servers, and management and application servers.
 
-For detailed planning steps, see [Plan an Advanced DirectAccess Deployment](../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).
+For detailed planning steps, see [Plan an Advanced DirectAccess Deployment](../single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).
 
 ### Deployment steps
 
@@ -82,7 +82,7 @@ Deployment is divided into three phases:
 
 3.  Verifying the deployment. This phase includes steps to verify that the deployment is working as required.
 
-For detailed deployment steps, see [Install and Configure Basic DirectAccess](../../../remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-DirectAccess.md).
+For detailed deployment steps, see [Install and Configure Basic DirectAccess](./Install-and-Configure-Basic-DirectAccess.md).
 
 ## <a name="BKMK_APP"></a>Practical applications
 Deploying a single Remote Access server provides the following benefits:
@@ -115,7 +115,7 @@ Hardware requirements for this scenario include the following:
     -   A client computer must be running Windows 10, Windows 8.1 or Windows 8.
 
         > [!IMPORTANT]
-        > If some or all of your client computers are running Windows 7, you must use the Advanced Setup Wizard. The Getting Started Setup Wizard described in this document doesn't support client computers that are running Windows 7. See [Deploy a Single DirectAccess Server with Advanced Settings](../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/../../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) for instructions on how to use Windows 7 clients with DirectAccess.
+        > If some or all of your client computers are running Windows 7, you must use the Advanced Setup Wizard. The Getting Started Setup Wizard described in this document does'nt support client computers that are running Windows 7. See [Deploy a Single DirectAccess Server with Advanced Settings](../single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) for instructions on how to use Windows 7 clients with DirectAccess.
 
         > [!NOTE]
         > Only the following operating systems can be used as DirectAccess clients: Windows 10 Enterprise, Windows 8.1 Enterprise,  Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8 Enterprise, Windows Server 2008 R2, Windows 7 Enterprise, and Windows 7 Ultimate.

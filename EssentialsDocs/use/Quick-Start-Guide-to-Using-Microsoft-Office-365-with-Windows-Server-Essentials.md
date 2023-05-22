@@ -53,7 +53,7 @@ manager: mtillman
     |Device type|Download from|
     |-----------------|-------------------|
     |Windows-based laptop, PC, or Surface device|[My Server 2012 R2 (Apps for Windows)](https://apps.microsoft.com/windows/app/my-server-2012-r2/67e86695-bda3-4f32-96c4-2e20e56f1cf3)|
-    | Windows 8 phone or  Windows 8.1 phone|[My Server 2012 R2 (Windows Phone store)](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)|
+    | Windows 8 phone or  Windows 8.1 phone|[My Server 2012 R2 (Windows Phone store)](https://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)|
 
 #### To work with documents in SharePoint Online libraries from My Server 2012 R2
 

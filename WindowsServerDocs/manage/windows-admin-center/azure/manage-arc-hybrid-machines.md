@@ -300,7 +300,7 @@ Here are some tips to try in case something isn't working. For general  Windows 
 
 1. Ensure you have outbound connectivity to the necessary ports
     1. The hybrid machine should have outbound connectivity to the following endpoints:
-       - `*.wac.azure.com` or the WindowsAdminCenter ServiceTag
+       - `*.wac.azure.com`,`*.waconazure.com` or the WindowsAdminCenter ServiceTag
        - `pas.windows.net`
        - `*.servicebus.windows.net`
 
@@ -317,12 +317,13 @@ Here are some tips to try in case something isn't working. For general  Windows 
     1. Test connectivity by running the following command using PowerShell inside of your virtual machine:
 
         ```powershell
-        Invoke-RestMethod -Method GET -Uri https://wac.azure.com
+        Invoke-RestMethod -Method GET -Uri https://<your_region>.service.waconazure.com
         ```
 
         ```Expected output
-        You've found the Windows Admin Center in Azure APIs' home page. Please use the Azure portal to manage your virtual machines with Windows Admin Center.
+        Microsoft Certificate and DNS service for Windows Admin Center in the Azure Portal
         ```
+
 
 1. If you've allowed all outbound traffic and are getting an error from the command above, check that there are no firewall rules blocking the connection.
 

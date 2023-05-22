@@ -6,7 +6,7 @@ ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: wscontent
 manager: femila
-ms.date: 02/01/2023
+ms.date: 04/25/2023
 ---
 
 # Windows Commands
@@ -35,17 +35,12 @@ You can configure the Command shell to automatically complete file and directory
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
 
-```Registry
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor\CompletionChar
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
-```
-
-```Registry
+```registry
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\CompletionChar
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
 ```
 
-Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it isn't a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can be specified by hexadecimal or decimal value.
+Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it isn't a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can also be specified by hexadecimal or decimal value.
 
 You can also enable or disable file and directory name completion per instance of a Command shell by running `cmd.exe` with the parameter and switch `/F:ON` or `/F:OFF`. If name completion is enabled with the `/F:ON` parameter and switch, the two control characters used are `Ctrl-D` for directory name completion and `Ctrl-F` for file name completion. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
@@ -275,6 +270,7 @@ To find information about a specific command, in the following A-Z menu, select 
 ### D
 
 - [date](date.md)
+- [dcdiag](dcdiag.md)
 - [dcgpofix](dcgpofix.md)
 - [defrag](defrag.md)
 - [del](del.md)

@@ -9,7 +9,7 @@ ms.date: 10/24/2018
 
 # Troubleshoot Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following information to troubleshoot your Storage Spaces Direct deployment.
 
@@ -20,9 +20,9 @@ In general, start with the following steps:
 3. Update storage and drive firmware if necessary.
    Ensure the latest Windows Updates are installed on all nodes. You can get the latest updates for Windows Server 2016 from [Windows 10 and Windows Server 2016 update history](https://aka.ms/update2016) and for Windows Server 2019 from [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619).
 4. Update network adapter drivers and firmware.
-5. Run cluster validation and review the Storage Space Direct section, ensure the drives that will used for the cache are reported correctly and no errors.
+5. Run cluster validation and review the Storage Space Direct section, ensure the drives that are used for the cache are reported correctly and with no errors.
 
-If you're still having issues, review the scenarios below.
+If you're still having issues, review the following scenarios.
 
 ## Virtual disk resources are in No Redundancy state
 The nodes of a Storage Spaces Direct system restart unexpectedly because of a crash or power failure. Then, one or more of the virtual disks may not come online, and you see the description "Not enough redundancy information."
@@ -46,7 +46,7 @@ The **No Redundancy Operational Status** can occur if a disk failed or if the sy
 
 To fix this issue, follow these steps:
 
-1. Remove the affected Virtual Disks from CSV. This will put them in the "Available storage" group in the cluster and start showing as a ResourceType of "Physical Disk."
+1. Remove the affected Virtual Disks from CSV. This puts them in the "Available storage" group in the cluster and start showing as a ResourceType of "Physical Disk."
 
    ```powershell
    Remove-ClusterSharedVolume -name "CSV Name"
@@ -62,7 +62,7 @@ To fix this issue, follow these steps:
    Start-ClusterResource -Name "Physical Disk Resource Name"
    ```
 4. A repair should automatically start. Wait for the repair to finish. It may go into a suspended state and start again. To monitor the progress:
-    - Run **Get-StorageJob** to monitor the status of the repair and to see when it is completed.
+    - Run **Get-StorageJob** to monitor the status of the repair and to see when it's completed.
     - Run **Get-VirtualDisk** and verify that the Space returns a HealthStatus of Healthy.
 5. After the repair finishes and the Virtual Disks are Healthy, change the Virtual Disk parameters back.
 
@@ -81,7 +81,7 @@ To fix this issue, follow these steps:
    Add-ClusterSharedVolume -name "Physical Disk Resource Name"
    ```
 
-**DiskRecoveryAction** is an override switch that enables attaching the Space volume in read-write mode without any checks. The property enables you to do diagnostics into why a volume won't come online. It's very similar to Maintenance Mode but you can invoke it on a resource in a Failed state. It also lets you access the data, which can be helpful in situations such as "No Redundancy," where you can get access to whatever data you can and copy it. The DiskRecoveryAction property was added in the February 22, 2018, update, KB 4077525.
+**DiskRecoveryAction** is an override switch that enables attaching the Space volume in read-write mode without any checks. The property enables you to do diagnostics into why a volume won't come online. It's similar to Maintenance Mode but you can invoke it on a resource in a Failed state. It also lets you access the data, which can be helpful in situations such as "No Redundancy," where you can get access to whatever data you can and copy it. The DiskRecoveryAction property was added in the February 22, 2018, update, KB 4077525.
 
 
 ## Detached status in a cluster
@@ -162,9 +162,9 @@ To fix this issue, follow these steps:
    Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask
    ```
    This task should be initiated on all nodes on which the detached volume is online. A repair should automatically start. Wait for the repair to finish. It may go into a suspended state and start again. To monitor the progress:
-   - Run **Get-StorageJob** to monitor the status of the repair and to see when it is completed.
+   - Run **Get-StorageJob** to monitor the status of the repair and to see when it's completed.
    - Run **Get-VirtualDisk** and verify the Space returns a HealthStatus of Healthy.
-     - The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it will show completed.
+     - The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there's no progress indicator. If the task is showing as running, it's running. When it completes, it shows completed.
 
        Additionally, you can view the status of a running schedule task by using the following cmdlet:
        ```powershell
@@ -188,16 +188,16 @@ To fix this issue, follow these steps:
    ```powershell
    Add-ClusterSharedVolume -name "Physical Disk Resource Name"
    ```
-   **DiskRunChkdsk value 7** is used to attach the Space volume and have the partition in read-only mode. This enables Spaces to self-discover and self-heal by triggering a repair. Repair will run automatically once mounted. It also allows you to access the data, which can be helpful to get access to whatever data you can to copy. For some fault conditions, such as a full DRT log, you need to run the Data Integrity Scan for Crash Recovery scheduled task.
+   **DiskRunChkdsk value 7** is used to attach the Space volume and have the partition in read-only mode. This enables Spaces to self-discover and self-heal by triggering a repair. Repair runs automatically once mounted. It also allows you to access the data, which can be helpful to get access to whatever data you can copy. For some fault conditions, such as a full DRT log, you need to run the Data Integrity Scan for Crash Recovery scheduled task.
 
-**Data Integrity Scan for Crash Recovery task** is used to synchronize and clear a full dirty region tracking (DRT) log. This task can take several hours to complete. The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it will show as completed. If you cancel the task or restart a node while this task is running, the task will need to start over from the beginning.
+**Data Integrity Scan for Crash Recovery task** is used to synchronize and clear a full dirty region tracking (DRT) log. This task can take several hours to complete. The "Data Integrity Scan for Crash Recovery" is a task that doesn't show as a storage job, and there is no progress indicator. If the task is showing as running, it is running. When it completes, it shows as completed. If you cancel the task or restart a node while this task is running, the task needs to start over from the beginning.
 
 For more information, see [Troubleshooting Storage Spaces Direct health and operational states](storage-spaces-states.md).
 
 ## Event 5120 with STATUS_IO_TIMEOUT c00000b5
 
 > [!Important]
-> **For Windows Server 2016:** To reduce the chance of experiencing these symptoms while applying the update with the fix, it is recommended to use the Storage Maintenance Mode procedure below to install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version when the nodes currently have installed a Windows Server 2016 cumulative update that was released from [May 8, 2018](https://support.microsoft.com/help/4103723) to [October 9, 2018](https://support.microsoft.com/help/4462917).
+> **For Windows Server 2016:** To reduce the chance of experiencing these symptoms while applying the update with the fix, it's recommended to use the Storage Maintenance Mode procedure below to install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version when the nodes currently have installed a Windows Server 2016 cumulative update that was released from [May 8, 2018](https://support.microsoft.com/help/4103723) to [October 9, 2018](https://support.microsoft.com/help/4462917).
 
 You might get event 5120 with STATUS_IO_TIMEOUT c00000b5 after you restart a node on Windows Server 2016 with cumulative update that were released from [May 8, 2018 KB 4103723](https://support.microsoft.com/help/4103723) to [October 9, 2018 KB 4462917](https://support.microsoft.com/help/4462917) installed.
 
@@ -219,11 +219,11 @@ Event ID: 1135
 Description: Cluster node 'NODENAME'was removed from the active failover cluster membership. The Cluster service on this node may have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
-A change introduced in May 8, 2018 to Windows Server 2016, which was a cumulative update to add SMB Resilient Handles for the Storage Spaces Direct intra-cluster SMB network sessions. This was done to improve resiliency to transient network failures and improve how RoCE handles network congestion. These improvements also inadvertently increased time-outs when SMB connections try to reconnect and waits to time-out when a node is restarted. These issues can affect a system that is under stress. During unplanned downtime, IO pauses of up to 60 seconds have also been observed while the system waits for connections to time-out. To fix this issue, install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version.
+A change introduced in May 8, 2018 to Windows Server 2016, which was a cumulative update to add SMB Resilient Handles for the Storage Spaces Direct intra-cluster SMB network sessions. This was done to improve resiliency to transient network failures and improve how RoCE handles network congestion. These improvements also inadvertently increased timeouts when SMB connections try to reconnect and waits to time out when a node is restarted. These issues can affect a system that is under stress. During unplanned downtime, IO pauses of up to 60 seconds have also been observed while the system waits for connections to time out. To fix this issue, install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version.
 
-*Note* This update aligns the CSV time-outs with SMB connection time-outs to fix this issue. It does not implement the changes to disable live dump generation mentioned in the Workaround section.
+*Note* This update aligns the CSV time-outs with SMB connection time-outs to fix this issue. It doesn't implement the changes to disable live dump generation mentioned in the Workaround section.
 
-### Shutdown process flow:
+### Shutdown process flow
 
 1. Run the Get-VirtualDisk cmdlet, and make sure that the HealthStatus value is Healthy.
 2. Drain the node by running the following cmdlet:
@@ -260,7 +260,7 @@ To mitigate the effect of live dump generation on systems that have lots of memo
 >[!Caution]
 >This procedure can prevent the collection of diagnostic information that Microsoft Support may need to investigate this problem. A Support agent may have to ask you to re-enable live dump generation based on specific troubleshooting scenarios.
 
-There are two methods to disable live dumps, as described below.
+The two methods to disable live dumps are as follows:
 
 #### Method 1 (recommended in this scenario)
 To completely disable all dumps, including live dumps system-wide, follow these steps:
@@ -275,7 +275,7 @@ To completely disable all dumps, including live dumps system-wide, follow these 
 After this registry key is set, live dump creation will fail and generate a "STATUS_NOT_SUPPORTED" error.
 
 #### Method 2
-By default, Windows Error Reporting will allow only one LiveDump per report type per 7 days and only 1 LiveDump per machine per 5 days. You can change that by setting the following registry keys to only allow one LiveDump on the machine forever.
+By default, Windows Error Reporting allows only one LiveDump per report type per 7 days and only 1 LiveDump per machine per 5 days. You can change that by setting the following registry keys to only allow one LiveDump on the machine forever.
 ```
 reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelReports" /v SystemThrottleThreshold /t REG_DWORD /d 0xFFFFFFFF /f
 ```
@@ -295,27 +295,27 @@ This cmdlet has an immediate effect on all cluster nodes without a computer rest
 
 ## Slow IO performance
 
-If you are seeing slow IO performance, check if cache is enabled in your Storage Spaces Direct configuration.
+If you see slow IO performance, check if cache is enabled in your Storage Spaces Direct configuration.
 
 There are two ways to check:
 
 
-1. Using the cluster log. Open the cluster log in text editor of choice and search for "[=== SBL Disks ===]." This will be a list of the disk on the node the log was generated on.
+1. Using the cluster log. Open the cluster log in text editor of choice and search for "[=== SBL Disks ===]." This is a list of the disk on the node the log was generated on.
 
-     Cache Enabled Disks Example: Note here that the state is CacheDiskStateInitializedAndBound and there is a GUID present here.
+     Cache Enabled Disks Example: Note here that the state is CacheDiskStateInitializedAndBound and there's a GUID present here.
 
    ```
    [=== SBL Disks ===]
     {26e2e40f-a243-1196-49e3-8522f987df76},3,false,true,1,48,{1ff348f1-d10d-7a1a-d781-4734f4440481},CacheDiskStateInitializedAndBound,1,8087,54,false,false,HGST    ,HUH721010AL4200 ,        7PG3N2ER,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
-    Cache Not Enabled: Here we can see there is no GUID present and the state is CacheDiskStateNonHybrid.
+    Cache Not Enabled: Here we can see there's no GUID present and the state is CacheDiskStateNonHybrid.
     ```
    [=== SBL Disks ===]
     {426f7f04-e975-fc9d-28fd-72a32f811b7d},12,false,true,1,24,{00000000-0000-0000-0000-000000000000},CacheDiskStateNonHybrid,0,0,0,false,false,HGST    ,HUH721010AL4200 ,        7PGXXG6C,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
-    Cache Not Enabled: When all disks are of the same type case is not enabled by default. Here we can see there is no GUID present and the state is CacheDiskStateIneligibleDataPartition.
+    Cache Not Enabled: When all disks are of the same type case is not enabled by default. Here we can see there's no GUID present and the state is CacheDiskStateIneligibleDataPartition.
     ```
     {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe    ,INTEL SSDPE7KX02,  PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
@@ -323,7 +323,7 @@ There are two ways to check:
     1. Open the XML file using "$d = Import-Clixml GetPhysicalDisk.XML"
     2. Run "ipmo storage"
     3. run "$d". Note that Usage is Auto-Select, not Journal
-   You'll see output like this:
+   You see output like this:
 
    |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| Usage| Size|
    |-----------|------------|---------| -------| -----------------| ------------| -----| ----|
@@ -348,7 +348,7 @@ The next step is to remove the phantom storage pool:
    Get-ClusterResource -Name "Cluster Pool 1" | Remove-ClusterResource
    ```
 
-Now, if you run **Get-PhysicalDisk** on any of the nodes, you'll see all the disks that were in the pool. For example, in a lab with a 4-Node cluster with 4 SAS disks, 100GB each presented to each node. In that case, after Storage Space Direct is disabled, which removes the SBL (Storage Bus Layer) but leaves the filter, if you run **Get-PhysicalDisk**, it should report 4 disks excluding the local OS disk. Instead it reported 16 instead. This is the same for all nodes in the cluster. When you run a **Get-Disk** command, you'll see the locally attached disks numbered as 0, 1, 2 and so on, as seen in this sample output:
+Now, if you run **Get-PhysicalDisk** on any of the nodes, you see all the disks that were in the pool. For example, in a lab with a 4-Node cluster with 4 SAS disks, 100 GB each presented to each node. In that case, after Storage Space Direct is disabled, which removes the SBL (Storage Bus Layer) but leaves the filter, if you run **Get-PhysicalDisk**, it should report 4 disks excluding the local OS disk. Instead it reported 16 instead. This is the same for all nodes in the cluster. When you run a **Get-Disk** command, you see the locally attached disks numbered as 0, 1, 2, and so on, as seen in this sample output:
 
 |Number| Friendly Name| Serial Number|HealthStatus|OperationalStatus|Total Size| Partition Style|
 |-|-|-|-|-|-|-|-|
@@ -370,7 +370,7 @@ Now, if you run **Get-PhysicalDisk** on any of the nodes, you'll see all the dis
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
 
-## Error message about "unsupported media type" when you create an Storage Spaces Direct cluster using Enable-ClusterS2D
+## Error message about "unsupported media type" when you create a Storage Spaces Direct cluster using Enable-ClusterS2D
 
 You might see errors similar to this when you run the **Enable-ClusterS2D** cmdlet:
 
@@ -380,14 +380,14 @@ To fix this issue, ensure the HBA adapter is configured in HBA mode. No HBA shou
 
 ## Enable-ClusterStorageSpacesDirect hangs at 'Waiting until SBL disks are surfaced' or at 27%
 
-You will see the following information in the validation report:
+You see the following information in the validation report:
 
 Disk `<identifier>` connected to node `<nodename>` returned a SCSI Port Association and the corresponding enclosure device could not be found. The hardware is not compatible with Storage Spaces Direct (S2D), contact the hardware vendor to verify support for SCSI Enclosure Services (SES).
 
 The issue is with the HPE SAS expander card that lies between the disks and the HBA card. The SAS expander creates a duplicate ID between the first drive connected to the expander and the expander itself.  This has been resolved in [HPE Smart Array Controllers SAS Expander Firmware: 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3).
 
 ## Intel SSD DC P4600 series has a non-unique NGUID
-You might see an issue where an Intel SSD DC P4600 series device seems to be reporting similar 16 byte NGUID for multiple namespaces such as 0100000001000000E4D25C000014E214 or 0100000001000000E4D25C0000EEE214 in the example below.
+You might see an issue where an Intel SSD DC P4600 series device seems to be reporting similar 16 byte NGUID for multiple namespaces such as 0100000001000000E4D25C000014E214 or 0100000001000000E4D25C0000EEE214 in the following example.
 
 
 |               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      size      | canpool | friendlyname | OperationalStatus |
@@ -405,13 +405,13 @@ The [May 2018 release of the Intel SSD Data Center Tool](https://downloadmirror.
 
 ## Physical Disk "Healthy," and Operational Status is "Removing from Pool"
 
-In a Windows Server 2016 Storage Spaces Direct cluster, you might see the HealthStatus for one ore more physical disks as "Healthy," while the OperationalStatus is "(Removing from Pool, OK)."
+In a Windows Server 2016 Storage Spaces Direct cluster, you might see the HealthStatus for one or more physical disks as "Healthy," while the OperationalStatus is "(Removing from Pool, OK)."
 
 "Removing from Pool" is an intent set when **Remove-PhysicalDisk** is called but stored in Health to maintain state and allow recovery if the remove operation fails. You can manually change the OperationalStatus to Healthy with one of the following methods:
 
 - Remove the physical disk from the pool, and then add it back.
 - Import-Module Clear-PhysicalDiskHealthData.ps1
-- Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. (Available for download as a .TXT file. You'll need to save it as a .PS1 file before you can run it.)
+- Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. (Available for download as a .TXT file. You need to save it as a .PS1 file before you can run it.)
 
 Here are some examples showing how to run the script:
 
@@ -429,15 +429,15 @@ Here are some examples showing how to run the script:
 
 ## File copy is slow
 
-You might seen an issue using File Explorer to copy a large VHD to the virtual disk - the file copy is taking longer than expected.
+You might see an issue using File Explorer to copy a large VHD to the virtual disk - the file copy is taking longer than expected.
 
-Using File Explorer, Robocopy or Xcopy to copy a large VHD to the virtual disk is not a recommended method to as this will result in slower than expected performance. The copy process does not go through the Storage Spaces Direct stack, which sits lower on the storage stack, and instead acts like a local copy process.
+Using File Explorer, Robocopy or Xcopy to copy a large VHD to the virtual disk is not a recommended method to as this results in slower than expected performance. The copy process doesn't go through the Storage Spaces Direct stack, which sits lower on the storage stack, and instead acts like a local copy process.
 
 If you want to test Storage Spaces Direct performance, we recommend using VMFleet and Diskspd to load and stress test the servers to get a base line and set expectations of the Storage Spaces Direct performance.
 
 ## Expected events that you would see on rest of the nodes during the reboot of a node.
 
-It is safe to ignore these events:
+It's safe to ignore these events:
 
 ```
 Event ID 205: Windows lost communication with physical disk {XXXXXXXXXXXXXXXXXXXX }. This can occur if a cable failed or was disconnected, or if the disk itself failed.
@@ -454,4 +454,4 @@ We've identified a critical issue that affects some Storage Spaces Direct users 
 >[!NOTE]
 > Individual OEMs may have devices that are based on the Intel P3x00 family of NVMe devices with unique firmware version strings. Contact your OEM for more information of the latest firmware version.
 
-If you are using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8).
+If you're using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8).

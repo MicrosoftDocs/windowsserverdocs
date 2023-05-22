@@ -1,10 +1,10 @@
 ---
 title: auditpol remove
-description: Reference article for the auditpol remove command; auditpol remove removes the per-user audit policy for a specified account or all accounts.
+description: Reference article for the auditpol remove command; auditpol removes the per-user audit policy for a specified account or all accounts.
 ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
-ms.date: 01/06/2023
+ms.date: 04/01/2023
 ---
 # auditpol remove
 
@@ -12,7 +12,7 @@ Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windo
 
 The auditpol remove command removes the per-user audit policy for a specified account or all accounts.
 
-To perform *remove* operations on the *per-user* policy, you must have **Write** or **Full Control** permissions for that object set in the security descriptor. You can also perform *remove* operations if you've the **Manage auditing and security log** (`SeSecurityPrivilege`) user right. However, this right allows access that isn't necessary to perform the overall *remove* operations.
+To perform *remove* operations on the *per-user* policy, you must have **Write** or **Full Control** permissions for that object set in the security descriptor. You can also perform *remove* operations if you have the **Manage auditing and security log** (`SeSecurityPrivilege`) user right. However, this right allows access that isn't necessary to perform the overall *remove* operations.
 
 ## Syntax
 
