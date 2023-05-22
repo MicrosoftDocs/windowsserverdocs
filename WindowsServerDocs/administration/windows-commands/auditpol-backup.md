@@ -24,7 +24,7 @@ auditpol /backup /file:<filename>
 
 | Parameter | Description |
 |-----------|------------- |
-| /file | Specifies the name of the file to which the audit policy will be backed up. |
+| /file | Specifies the file name of the for the back up. |
 | /? | Displays help at the command prompt. |
 
 ## Examples
