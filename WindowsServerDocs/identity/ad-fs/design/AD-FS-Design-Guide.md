@@ -9,9 +9,9 @@ ms.topic: article
 ms.assetid: fb09e37e-5d1c-428a-a2ca-2f01a0ba2992
 ---
 
-# Active Directory Federation Services design guide
+# AD FS design guide
 
-The AD FS design guide is a comprehensive guide for designing AD FS deployments. This guide is made up of the following sections:
+The Active Directory Federation Services design guide is a comprehensive guide for designing AD FS in Windows Server. This guide has the following sections:
 
 - [AD FS design guide in Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
 - [AD FS design guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
@@ -19,5 +19,4 @@ The AD FS design guide is a comprehensive guide for designing AD FS deployments.
 **See also**
 
 - For capacity planning for AD FS in Windows Server 2016, see the [AD FS capacity planning worksheet](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
-
 - To learn more, see the [Active Directory Federation Services overview](../../Active-Directory-Federation-Services.md).

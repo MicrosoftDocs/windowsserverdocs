@@ -9,14 +9,13 @@ ms.topic: article
 ms.assetid: 5fb3ed9b-8a4a-4bd4-bb50-c2abd861aac9
 ---
 
-# Active Directory Federation Services design
+# AD FS design options
 
-This article contains a list of the documentation for designing for AD FS in Windows Server.
+This article identifies documentation for designing for Active Directory Federation Services in Windows Server.
 
 - [AD FS design guide](../ad-fs/design/AD-FS-Design-Guide.md)
 
 **See also**
 
 - For capacity planning for AD FS in Windows Server 2016, see the [AD FS capacity planning worksheet](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
-
 - To learn more, see the [Active Directory Federation Services overview](../Active-Directory-Federation-Services.md).
