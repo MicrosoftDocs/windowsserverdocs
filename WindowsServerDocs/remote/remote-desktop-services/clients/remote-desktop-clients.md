@@ -35,7 +35,7 @@ Here's a list of the Remote Desktop client apps and our documentation for connec
 | macOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for macOS](remote-desktop-mac.md) | [What's new](mac-whatsnew.md) |
 | iOS/iPadOS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for iOS and iPadOS](remote-desktop-ios.md) | [What's new](ios-whatsnew.md) |
 | Android/Chrome OS | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Android and Chrome OS](remote-desktop-android.md) | [What's new](android-whatsnew.md) |
-| Microsoft Store | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop client for Windows (Microsoft Store)](windows.md) | [What's new](windows-whatsnew.md) |
+| Remote Desktop app for Windows | [Connect to Remote Desktop Services and remote PCs with the Remote Desktop app for Windows](windows.md) | [What's new](windows-whatsnew.md) |
 
 ## Connecting to your remote PC
 

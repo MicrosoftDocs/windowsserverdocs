@@ -3,8 +3,9 @@ description: Learn more about assigning cost values to links
 title: Determining the Cost
 author: iainfoulds
 ms.author: daveba
-ms.date: 04/01/2023
+ms.date: 05/16/2023
 ms.topic: article
+ms.custom: inhenkel
 
 ---
 
@@ -33,7 +34,7 @@ The following table lists the speeds for different types of networks.
 |100BaseT|100 Mbps|
 |Gigabit Ethernet|1 gigabit per second (Gbps)|
 
-Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that is not listed in the table, you can calculate a relative cost factor by dividing 1,024 by the logarithm of the available bandwidth, as measured in Kbps.
+Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that isn't listed in the table, you can calculate a relative cost factor by dividing 1,024 by the logarithm of the available bandwidth, as measured in Kbps.
 
 |Available bandwidth (Kbps)|Cost|
 |--------------------------------|--------|
@@ -49,5 +50,4 @@ Use the following table to calculate the cost of each site link based on wide ar
 |2,048|309|
 |4,096|283|
 
-These costs don't reflect differences in reliability between network links. Set higher costs on any failure-prone network links so that you don't have to rely on those links for replication. By setting higher site
-link costs, you can control replication failover when a site link fails.
+These costs don't reflect differences in reliability between network links. Set higher costs on any failure-prone network links so that you don't have to rely on those links for replication. By setting higher site link costs, you can control replication failover when a site link fails.

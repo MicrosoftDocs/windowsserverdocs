@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin util and help command that disp
 ms.topic: reference
 ms.author: jgerend
 author: JasonGerend
-ms.date: 01/06/2023
+ms.date: 04/01/2023
 ---
 
 # bitsadmin util and help

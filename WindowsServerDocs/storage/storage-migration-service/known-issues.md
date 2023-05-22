@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 03/24/2023
+ms.date: 04/24/2023
 ms.topic: article
 ---
 # Storage Migration Service known issues
@@ -852,7 +852,7 @@ When you're performing cut over, the operation hangs at "77% - adding the destin
 
 - The migration user account isn't the same user who created the source computer account.
 
-Windows updates released on and after October 11, 2022 contain extra protections to address [CVE-2022-38042](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-38042), these extra protections caused the issue. The protections were further updated with the March 14, 2023 monthly cumulative update, adding a workaround option for this issue. The protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless:
+Windows updates released on and after October 11, 2022 contain extra protections to address [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042), these extra protections caused the issue. The protections were further updated with the March 14, 2023 monthly cumulative update, adding a workaround option for this issue. The protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless:
 
 - The user attempting the operation is the creator of the existing account.
 
@@ -881,6 +881,57 @@ To resolve this issue, use one of the following solutions.
 
 > [!IMPORTANT]
 > If you have followed Solution 1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
+
+## Cut over fails for Windows Server 2008 R2
+
+When you're performing cut over from a source computer running Windows Server 2008 R2 or older, you
+receive the error "Couldn’t rename the computer from the domain." Using the Storage Migration
+Service Helper [Get-SmsLog](https://aka.ms/smslogs) command shows error `0x6D1` and "Object
+reference not set to an instance of an object". The following example is the log file output from
+the PowerShell `Get-SmsLog` command.
+
+```Log
+Line 360: 04/02/2023-14:06:02.877 [Info] UnjoinDomain(isLocal=False, server='2008R2.corp.contoso.com')    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2151]
+Line 361: 04/02/2023-14:06:02.948 [Erro] Attempt #1 failed to unjoin machine '2008R2.corp.contoso' from the domain with credential 'corp\ned'. Error 0x6D1.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2184]
+Line 362: 04/02/2023-14:06:02.954 [Erro] Fatal exception during cutover stage processing. Source: 2008R2.corp.contoso.com, CutoverStage: UnjoinSource, ErrorCode: 0x80004003, Message: Object reference not set to an instance of an object.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverOperation.cs::Run::1116]
+```
+
+Changes introduced in [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8) to combat [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042) cause this error.
+
+To resolve this issue, use one of the following solutions.
+
+### Solution 1 (using Windows Server 2008 R2 with valid ESU)
+
+For a source computer running Windows Server 2008 R2 with valid
+[Extended Support Updates](../../get-started/extended-security-updates-overview.md), first install
+the latest cumulative update. Once the cumulative update has been successfully installed, follow the
+steps detailed in the article
+[Cut over fails at 77% or 30%](#cut-over-fails-at-77-or-30)
+to resolve the issue.
+
+### Solution 2 (using Windows Server 2008 R2 without a valid ESU, Windows Server 2008 or Windows Server 2003)
+
+If your source computer is running Windows Server 2008 R2 without ESU, Windows Server 2008 or
+Windows Server 2003, you need to perform a manual cutover using the steps described in
+[How cutover works in Storage Migration Service](cutover.md), but with the following changes.
+
+1. Skip steps 3 and 4
+1. For step 5, you must sign in to the computer and remove it from the domain manually using
+   `SYSDM.CPL`, `NETDOM.exe`, or the `Remove-Compuer` PowerShell command. You can't remotely remove
+   the computer from the domain after
+   [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
+
+## Transfer validation warning "The destination proxy wasn't found"
+
+If you didn't already have the SMS Proxy service installed on the destination server before starting the transfer, Windows Admin Center installs it automatically. But under certain circumstances it will fail to register and display validation error "The destination proxy wasn't found".
+
+To resolve this issue, ensure the SMS Proxy service feature is installed on the destination server, then run the following PowerShell command on the Orchestrator server:
+
+```powershell
+Register-SMSProxy -ComputerName <destination server FQDN> -Force
+```
+
+Validation will then pass.
 
 ## See also
 

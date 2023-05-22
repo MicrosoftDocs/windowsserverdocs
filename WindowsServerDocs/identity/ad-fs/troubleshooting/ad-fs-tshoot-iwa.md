@@ -4,12 +4,15 @@ description:  This document describes how to troubleshoot integrated  windows au
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 05/17/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # AD FS Troubleshooting - Integrated Windows Authentication
 Integrated Windows authentication enables users to log in with their Windows credentials and experience single-sign on (SSO), using Kerberos or NTLM.
+
+
 
 ## Reason integrated windows authentication fails
 There are three main reasons why integrated windows authentication will fail. They are:
@@ -52,6 +55,9 @@ By default, AD FS has this set to "Allow".  You can change this setting using th
 For more information on this, see [Best Practices for Secure Planning and Deployment of AD FS](../../ad-fs/design/best-practices-for-secure-planning-and-deployment-of-ad-fs.md).
 
 ## Internet Explorer configuration
+
+> [!NOTE]
+> If you are using Chrome, add it to the WIA supported user agents list.
 
 By default, Internet explorer will behave the following way:
 

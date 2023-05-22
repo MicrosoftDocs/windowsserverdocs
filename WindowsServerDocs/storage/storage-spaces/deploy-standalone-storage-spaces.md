@@ -4,7 +4,7 @@ description: Learn the necessary prerequisites and processes for deploying Stora
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ---
 
 # Deploy Storage Spaces on a stand-alone server
@@ -57,7 +57,7 @@ You must first group available physical disks into one or more storage pools.
 
 1. In the Server Manager navigation pane, select **File and Storage Services**.
 
-1. In the navigation pane, select the **Storage Pools** page.
+1. Under **Volumes**, select **Storage Pools**.
 
    By default, available disks are included in a pool that is named the *primordial* pool. If no primordial pool is listed under **STORAGE POOLS**, this situation indicates that the storage doesn't meet the requirements for Storage Spaces. Make sure that the disks meet the requirements that are outlined in the [Prerequisites](#prerequisites) section.
 

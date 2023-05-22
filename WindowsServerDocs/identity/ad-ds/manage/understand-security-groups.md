@@ -4,7 +4,7 @@ description: Learn about Windows Server Active Directory security groups, group 
 author: dansimp
 ms.author: alalve
 ms.topic: article
-ms.date: 10/04/2022
+ms.date: 04/10/2023
 ---
 
 # Active Directory security groups
@@ -537,7 +537,7 @@ The Domain Guests group applies to the Windows Server operating system in [Defau
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|Guest|
 |Default member of|[Guests](#guests)|
-|Protected by AdminSDHolder?|Yes|
+|Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|You can move the group, but we don't recommend it|
 |Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Guests](#guests)|

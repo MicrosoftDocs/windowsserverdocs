@@ -8,7 +8,7 @@ ms.date: 05/06/2022
 ---
 # Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)
 
->Applies to Azure Stack HCI, version 21H2 and later
+> Applies to: Azure Stack HCI, versions 22H2 and 21H2
 
 > [!IMPORTANT]
 > Windows Admin Center in the Azure portal is currently in preview.
@@ -99,12 +99,7 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 ### Azure region availability
 
-Windows Admin Center is supported in the following Azure regions:
-
-- East US
-- West Europe
-- Southeast Asia
-- Australia East
+Windows Admin Center is supported in [all public regions Azure Stack HCI](/azure-stack/hci/deploy/register-with-azure#region-availability) is supported.
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
@@ -159,7 +154,9 @@ After you've installed Windows Admin Center on your cluster, perform the followi
 
 1. Open the Azure portal and navigate to your Azure Stack HCI cluster, and then under the **Settings** group, select **Windows Admin Center**.
 2. Select **Connect**.
-3. Enter credentials for an account with local Administrator permissions on the cluster's operating system, and then select **Sign in**.
+
+> [!NOTE]
+> Starting April 2023, Windows Admin Center now allows you to use Azure AD-based authentication for your 22H2 or higher clusters running the AdminCenter extension greater than 0.0.0.313. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
@@ -167,7 +164,7 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 ## Configuring role assignments
 
-Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role.
+Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role. You **must** have this role configured on the Azure Stack HCI resource, **and** each of the Azure Arc-enabled servers associated with this cluster.
 
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
@@ -219,6 +216,26 @@ Clicking **Connect** performs the following actions:
 
 Connection to Windows Admin Center is end-to-end encrypted with SSL termination happening on your cluster.
 
+## Automate Windows Admin Center deployment using PowerShell
+
+You can automate Windows Admin Center deployment in Azure portal using this example PowerShell script.
+
+```powershell
+$clusterName = "<name_of_cluster>"
+$resourceGroup = "<resource_group>"
+$subscription = "<subscription_id>"
+$port = "6516"
+        
+#Deploy Windows Admin Center
+$setting = @{ "port" = $port }
+New-AzStackHciExtension -ArcSettingName "default" -Name "AdminCenter" -ResourceGroupName $resourceGroup -ClusterName $clusterName -ExtensionParameterPublisher "Microsoft.AdminCenter" -ExtensionParameterSetting $setting -ExtensionParameterType "AdminCenter" -SubscriptionId $subscription -ExtensionParameterTypeHandlerVersion "0.0"
+        
+#Allow connectivity
+$patch = @{ "properties" =  @{ "connectivityProperties" = @{"enabled" = $true}}}
+$patchPayload = ConvertTo-Json $patch
+Invoke-AzRestMethod -Method PATCH -Uri "https://management.azure.com/subscriptions/$subscription/resourceGroups/$resourceGroup/providers/Microsoft.AzureStackHCI/clusters/$clusterName/ArcSettings/default?api-version=2023-02-01" -Payload $patchPayload
+```
+
 ## Troubleshooting
 
 Here are some tips to try in case something isn't working. For general Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
@@ -264,7 +281,7 @@ Here are some tips to try in case something isn't working. For general Windows A
 
 1. Ensure you have outbound connectivity to the necessary ports.
     1. Each node of your cluster should have outbound connectivity to the following endpoint
-       - `*.wac.azure.com` or the WindowsAdminCenter ServiceTag
+       - `*.wac.azure.com`, `*.waconazure.com` or the WindowsAdminCenter ServiceTag
        - `pas.windows.net`
        - `*.servicebus.windows.net`
 
@@ -281,11 +298,11 @@ Here are some tips to try in case something isn't working. For general Windows A
     1. Test connectivity by running the following command using PowerShell inside of your virtual machine:
 
         ```powershell
-        Invoke-RestMethod -Method GET -Uri https://wac.azure.com
+        Invoke-RestMethod -Method GET -Uri https://<your_region>.service.waconazure.com
         ```
 
         ```Expected output
-        You've found the Windows Admin Center in Azure APIs' home page. Please use the Azure portal to manage your virtual machines with Windows Admin Center.`
+        Microsoft Certificate and DNS service for Windows Admin Center in the Azure Portal
         ```
 
 1. If you've allowed all outbound traffic and are getting an error from the command above, check that there are no firewall rules blocking the connection.

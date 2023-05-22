@@ -1,4 +1,4 @@
-﻿---
+---
 title: Processor compatibility mode in Hyper-V
 description: Describes how to use processor compatibility mode to move a running virtual machine or save state between virtualization hosts that use different generations of processors.
 ms.topic: how-to
