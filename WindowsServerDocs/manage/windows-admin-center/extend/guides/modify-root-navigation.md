@@ -37,16 +37,16 @@ A valid manifest entryPoints array looks like this:
     ],
 ```
 
-Tools built with this kind of structure won't require connections to load, but won't have node connectivity functionality either.
+Tools built with this kind of structure don't require connections to load, but don't have node connectivity functionality either.
 
 ### Setting connections as a rootNavigationBehavior
 
-When you set the ```rootNavigationBehavior``` property to ```connections```, you're telling the Windows Admin Center Shell that there's a connected node (always a server of some type) that it should connect to to verify connection status. There are two steps in verifying a connection.
+When you set the ```rootNavigationBehavior``` property to ```connections```, you're telling the Windows Admin Center Shell that there's a connected node (always a server of some type) that it should connect to verify connection status. There are two steps in verifying a connection.
 
-1. Windows Admin Center will attempt to make an attempt to log into the node with your credentials (for establishing the remote PowerShell session).
-1. Windows Admin Center will execute the PowerShell script you provide to verify if the node is in a connectable state.
+1. Windows Admin Center attempts to make an attempt to log into the node with your credentials (for establishing the remote PowerShell session).
+1. Windows Admin Center executes the PowerShell script you provide to verify if the node is in a connectable state.
 
-A valid solution definition with connections will look like this:
+A valid solution definition with connections looks like this:
 
 ``` json
         {
@@ -74,4 +74,4 @@ When the rootNavigationBehavior is set to "connections", you're required to buil
 
 ## Enabling and disabling the tools menu
 
-Another property available in the solution definition is the Tools property. The Tools property decides whether the Tools menu is displayed, as well as which tool will be loaded. When enabled, Windows Admin Center renders the left hand Tools menu. With defaultTool, it's required that you add a tool entry point to the manifest in order to load the appropriate resources. The value of "defaultTool" needs to be the "name" property of the tool as it's defined in the manifest.
+Another property available in the solution definition is the Tools property. The Tools property decides whether the Tools menu is displayed, and which tool will be loaded. When enabled, Windows Admin Center renders the left hand Tools menu. With defaultTool, it's required that you add a tool entry point to the manifest in order to load the appropriate resources. The value of "defaultTool" needs to be the "name" property of the tool as it's defined in the manifest.
