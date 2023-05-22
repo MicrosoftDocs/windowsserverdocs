@@ -10,7 +10,7 @@ ms.date: 04/01/2023
 
 Applies to: Windows Server: (All supported versions)
 
-You can review the following set of changes to help understand and prepare for the schema updates that are performed by `adprep /forestprep` in Windows Server.
+You can review the following set of changes to help understand and prepare for the schema updates that are performed when running `adprep /forestprep` on Windows Server.
 
 Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
