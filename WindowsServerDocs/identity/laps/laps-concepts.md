@@ -112,7 +112,7 @@ When you back up passwords to Windows Server Active Directory, managed local acc
 
 #### ACLs
 
-The first line of password security in Windows Server Active Directory is ACLs that are set up on the computer object that contains an Organizational Unit (OU). The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
+The first line of password security in Windows Server Active Directory uses ACLs that are set up on the computer object that contains an Organizational Unit (OU). The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
 
 #### Encrypted passwords
 
@@ -178,7 +178,7 @@ Backing up DSRM passwords to Azure Active Directory isn't supported.
 
 Windows LAPS supports automatically rotating the local administrator account password if it detects that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. You can configure a grace period to give a user time to complete their intended actions.
 
-Password reset after authentication is not supported for the DSRM account on domain controllers.
+Password reset after authentication isn't supported for the DSRM account on domain controllers.
 
 ## Account password tampering protection
 
