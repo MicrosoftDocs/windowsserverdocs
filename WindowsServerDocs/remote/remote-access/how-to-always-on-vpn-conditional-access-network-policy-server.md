@@ -10,7 +10,7 @@ author: anaharris-ms
 
 # Configure VPN conditional access on the Network Policy Server (NPS)
 
-Conditional access and device compliance can require that managed devices meet standards before they can connect to the VPN. VPN conditional access allows you to restrict the VPN connections to devices whose client authentication certificate contains the AAD Conditional Access OID of **1.3.6.1.4.1.311.87**.  VPN clients that try to connect by using certificate other than the short-lived **1.3.6.1.4.1.311.87** cloud certificate will fail to connect.
+Conditional access and device compliance can require that managed devices meet standards before they can connect to the VPN. VPN conditional access allows you to restrict the VPN connections to devices whose client authentication certificate contains the Azure AD Conditional Access OID of **1.3.6.1.4.1.311.87**.  VPN clients that try to connect by using a certificate other than the short-lived **1.3.6.1.4.1.311.87** cloud certificate will fail to connect.
 
 This article shows you how to configure VPN conditional access directly on the NPS server. To learn how to restrict the VPN connections with Azure Active Directory (Azure AD) conditional access, see [Conditional access for VPN connectivity using Azure AD](how-to-aovpn-conditional-access.md).
 
