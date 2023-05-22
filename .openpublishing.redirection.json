@@ -10972,12 +10972,25 @@
       "source_path": "WindowsServerDocs/remote/remote-access/overview-aovpn.md",
       "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md",
+      "redirect_url": "/Windows-server/remote/remote-access/troubleshoot-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/index.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
     }
-
-
-
-
     
+    
+
   ]
 }
 

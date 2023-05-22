@@ -59,7 +59,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Always On VPN
-            url: ./remote-access/vpn/always-on-vpn/index.yml
+            url: ./remote-access/overview-always-on-vpn.md
           - text: Border Gateway Protocol (BGP)
             url: ./remote-access/bgp/border-gateway-protocol-bgp.md
           - text: RAS Gateway
