@@ -11,7 +11,7 @@ ms.date: 01/06/2023
 
 Applies to: Applies to: Windows Server (All supported versions)
 
-The bitsadmin getproxybypasslist command retrieves the proxy bypass list for the specified job.
+The `bitsadmin /getproxybypasslist` command retrieves the proxy bypass list for the specified job.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ bitsadmin /getproxybypasslist <job>
 
 ### Remarks
 
-The bypass list contains the host names or IP addresses, or both, that won't be routed through a proxy. The list can contain `<local>` to refer to all servers on the same LAN. The list can be semicolon (;) or space-delimited.
+The bypass list contains the host names or IP addresses, or both, that aren't routed through a proxy. The list can contain `<local>` to refer to all servers on the same LAN. The list can be semicolon (;) or space-delimited.
 
 ## Examples
 
