@@ -14,7 +14,7 @@ You can set up Windows Local Administrator Password Solution (Windows LAPS) to h
 Like Microsoft LAPS, emulation mode supports storage of passwords in Windows Server Active Directory only in clear-text form. To increase security, we recommend that you migrate to using Windows LAPS natively so that you can take advantage of password encryption.
 
 > [!IMPORTANT]
-> Windows LAPS currently is available only in [Windows 11 Insider Preview Build 25145 and later](/windows-insider/flight-hub/#active-development-builds-of-windows-11) and the Azure Active Directory LAPS scenario is in private preview. For more information see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## Setup and configuration
 
@@ -44,7 +44,7 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
 
   This restriction avoids a scenario in which Windows LAPS and legacy Microsoft LAPS simultaneously try to manage the same local administrator account. Having two entities manage the same account is a security risk and isn't supported.
   
-  For the emulation feature, legacy Microsoft LAPS is considered installed if the legacy Microsoft LAPS Group Policy Client Side Extension is installed. To detect the extension, query the `DllName` registry value under this registry key:
+  For the emulation feature, legacy Microsoft LAPS is considered installed if the legacy Microsoft LAPS Group Policy Client Side Extension (CSE) is installed. To detect the extension, query the `DllName` registry value under this registry key:
 
   `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions\{D76B9641-3288-4f75-942D-087DE603E3EA}`
 
@@ -52,13 +52,19 @@ The following requirements and limitations apply to legacy Microsoft LAPS emulat
 
 - The Windows Server Active Directory Users and Computer management console doesn't support reading or writing legacy Microsoft LAPS schema attributes.
 
-- Windows LAPS always ignores a legacy Microsoft LAPS policy when Windows LAPS is configured on a Windows Server Active Directory domain controller, even if all other conditions are met.
+- Windows LAPS always ignores a legacy Microsoft LAPS policy when Windows LAPS is configured on a Windows Server Active Directory domain controller.
 
-- All Windows LAPS policy knobs that aren't supported by legacy Microsoft LAPS default to their disabled or default settings.
+- All Windows LAPS policy knobs that aren't supported in a legacy LAPS policy default to their disabled or default settings.
 
   For example, when you run Windows LAPS in legacy Microsoft LAPS emulation mode, you can't configure Windows LAPS to do tasks like encrypt passwords or save passwords to Azure Active Directory.
 
 If all these constraints are satisfied, Windows LAPS honors legacy Microsoft LAPS Group Policy settings. The specified managed local administrator account is managed identically to how it's managed in legacy Microsoft LAPS.
+
+## Disabling legacy Microsoft LAPS emulation mode
+
+Windows LAPS has an important difference to be aware of when planning a deployment or migration from legacy Microsoft LAPS. Windows LAPS is always present and active once a device has been joined to either Azure Active Directory or Windows Server Active Directory. Installation of the legacy Microsoft LAPS CSE is often used as a mechanism to control when the legacy Microsoft LAPS policy is enforced. As a built-in Windows feature, Windows LAPS starts enforcing a legacy Microsoft LAPS policy as soon as it's applied to the device. Such immediate enforcement may be disruptive, for example if enforcement occurs during the setup and configuration workflow for a new operating system.
+
+To prevent such potential disruption, you can disable legacy Microsoft LAPS emulation mode by creating a REG_DWORD registry value named `BackupDirectory` under the `HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config` key and set it to the value zero (0). Setting this value prevents Windows LAPS from entering legacy Microsoft LAPS emulation mode, regardless of whether the legacy Microsoft LAPS CSE is installed or not. This value may be used temporarily or permanently. When a new Windows LAPS policy is configured, that new policy takes precedence. For more information on the Windows LAPS policy precedence ordering, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 
 ## Limited administrative support
 
@@ -75,7 +81,7 @@ Account             :
 Password            : SV6[y1n3JG+3l8
 PasswordUpdateTime  :
 ExpirationTimestamp : 7/31/2022 12:43:10 PM
-Source              : CleartextPassword
+Source              : LegacyLapsCleartextPassword
 DecryptionStatus    : NotApplicable
 AuthorizedDecryptor : NotApplicable
 ```
@@ -90,14 +96,15 @@ When Windows LAPS runs in legacy Microsoft LAPS emulation mode, a 10023 event is
 
 :::image type="content" source="./media/laps-scenarios-legacy/laps-scenarios-legacy-gpo-event.png" alt-text="Screenshot of the event log that shows a Microsoft LAPS configuration event log message.":::
 
-Otherwise, the same events that are logged by Windows LAPS when it doesn't run in legacy Microsoft LAPS emulation mode are also logged when it runs in legacy Microsoft LAPS emulation mode.
+Otherwise, the same events logged by Windows LAPS when it doesn't run in legacy Microsoft LAPS emulation mode are also logged when it runs in legacy Microsoft LAPS emulation mode.
 
 ## See also
 
 This article doesn't go into detail about managing other aspects of legacy Microsoft LAPS. For more information, see the legacy Microsoft LAPS documentation on the download page:
 
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
+- [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
 
 ## Next steps
 
-- [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
+- [Get started with Windows LAPS deployment and migration scenarios](laps-scenarios-deployment-migration.md)

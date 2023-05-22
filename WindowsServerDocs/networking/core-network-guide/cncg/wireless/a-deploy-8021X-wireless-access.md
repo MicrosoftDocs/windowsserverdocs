@@ -57,7 +57,7 @@ Network and system administrators deploying authenticated wireless must follow t
 
 This guide is available at the following location.
 
-- The Windows Server 2016 Core Network Companion Guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md?f=255&MSPPError=-2147217396) in HTML format in the Technical Library.
+- The Windows Server 2016 Core Network Companion Guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md) in HTML format in the Technical Library.
 
 ##### Public CA
 You can purchase server certificates from a public CA, such as VeriSign, that client computers already trust.

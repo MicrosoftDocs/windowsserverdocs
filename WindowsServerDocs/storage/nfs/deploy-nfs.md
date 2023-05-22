@@ -4,7 +4,7 @@ description: Learn how to deploy Network File System (NFS), which lets your orga
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 03/08/2023
+ms.date: 03/27/2023
 ---
 
 # Deploy Network File System
@@ -69,17 +69,25 @@ You need to deploy the following computers and connect them on a local area netw
 
 ### Install Network File System on the server with Server Manager
 
-1. From the Add Roles and Features Wizard, under **Server Roles**, select **File and Storage Services**, if it hasn't already been installed.
-1. Under **File and iSCSI Services**, select **File Server** and **Server for NFS**.
-1. To include selected NFS features, select **Add Features**.
+1. From the **Add Roles and Features** Wizard, under **Server Roles**, expand **File and Storage Services** > expand **File and iSCSI Services**.
+
+1. Select **File Server** and **Server for NFS**, select **Next**.
+
+1. A dialog box lets you know what other tools are required for the selected feature.
+
+   - Check the box for the required features, select **Add Features**.
+
+1. Select **Next**, and then choose any other preferred features. When you're ready, select **Next**.
+
 1. To install the NFS components on the server, select **Install**.
 
 ### Install Network File System on the server with Windows PowerShell
 
 1. Start Windows PowerShell. Select and hold (or right-click) the PowerShell icon on the taskbar, and select **Run as Administrator**.
+
 1. Run the following Windows PowerShell commands:
 
-```PowerShell
+```powershell
 Import-Module ServerManager
 Add-WindowsFeature FS-NFS-Service
 Import-Module NFS
@@ -106,23 +114,47 @@ You can create an NFS file share by using either Server Manager or Windows Power
 ### Create an NFS file share with Server Manager
 
 1. Sign in to the server as a member of the local Administrators group.
-1. Server Manager starts automatically. If it doesn't automatically start, select **Start**, enter **servermanager.exe**, and then select **Server Manager**.
-1. On the left, select **File and Storage Services**, and then select **Shares**.
-1. Select **To create a file share, start the New Share Wizard**.
-1. On the **Select Profile** page, select either **NFS Share   Quick** or **NFS Share - Advanced**, then select **Next**.
-1. On the **Share Location** page, select a server and a volume, and select **Next**.
-1. On the **Share Name** page, specify a name for the new share, and select **Next**.
-1. On the **Authentication** page, specify the authentication method you want to use for this share.
-1. On the **Share Permissions** page, select **Add**. Specify the host, client group, or netgroup you want to grant permission to the share.
-1. In **Permissions**, configure the type of access control you want the users to have, and select **OK**.
+
+1. Server Manager starts automatically.
+
+   - If the tool doesn't automatically start, select **Start**. Enter **servermanager.exe**, and then select **Server Manager**.
+
+1. On the left, select **File and Storage Services**, then select **Shares**. 
+
+1. Under the **Shares** column, select **To create a file share, start the New Share Wizard**.
+
+1. On the **Select Profile** page, select either **NFS Share - Quick** or **NFS Share - Advanced**, then select **Next**.
+
+1. On the **Share Location** page, select a server and a volume, then select **Next**.
+
+1. On the **Share Name** page, enter a name for the new share, then select **Next**.
+
+1. On the **Authentication** page, specify the authentication method you want to use, then select **Next**.
+
+1. On the **Share Permissions** page, select **Add**. The **Add Permissions** dialog opens.
+
+   1. Choose the level of user permissions to grant: **Host**, **Netgroup**, **Client group**, or **All Machines**.
+   
+   1. For the selected user level, enter the name for the user(s) to grant permission to the share.
+
+   1. Use the drop-down menu to select the preferred **Language encoding**.
+
+   1. Use the drop-down menu to select the preferred **Share permissions**.
+
+   1. (Optional) Select the **Allow root access** checkbox. _This option isn't recommended_.
+
+   1. Select **Add**. The dialog closes. Select **Next**.
+
+1. On the **Permissions** page, configure access control for your selected users. When you're ready, select **Next**.
+
 1. On the **Confirmation** page, review your configuration, and select **Create** to create the NFS file share.
 
 ### Windows PowerShell equivalent commands
 
 The following Windows PowerShell cmdlet can also create an NFS file share (where `nfs1` is the name of the share and `C:\\shares\\nfsfolder` is the file path):
 
-```PowerShell
-New-NfsShare -name nfs1 -Path C:\shares\nfsfolder
+```powershell
+New-NfsShare -Name nfs1 -Path C:\shares\nfsfolder
 ```
 
 ### Known issue

@@ -261,7 +261,7 @@
       items:
       - name: What's New in Active Directory Domain Services Installation and Removal
         href: ad-ds/deploy/What-s-New-in-active-directory-Domain-Services-Installation-and-removal.md
-      - name: Upgrade Domain Controllers to Windows Server 2016
+      - name: Upgrade Domain Controllers to Windows Server
         href: ad-ds/deploy/upgrade-domain-controllers.md
       - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
         href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
@@ -969,8 +969,22 @@
   - name: Active Directory Certificate Services
     href: ad-cs/index.yml
     items:
-    - name: What is Active Directory Certificate Services?
-      href: ad-cs/active-directory-certificate-services-overview.md
+    - name: Overview
+      items:
+      - name: What is Active Directory Certificate Services?
+        href: ad-cs/active-directory-certificate-services-overview.md
+      - name: Concepts
+        items:
+        - name: Network Device Enrollment Service
+          href: ad-cs/network-device-enrollment-service-overview.md
+        - name: Certificates and trust
+          href: ad-cs/certificate-trust.md
+      - name: How-to guides
+        items:
+        - name: Configure Network Device Enrollment Service to use a domain user account
+          href: ad-cs/create-domain-user-account-ndes-service-account.md
+        - name: Configure trusted roots and disallowed certificates
+          href: ad-cs/configure-trusted-roots-disallowed-certificates.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
@@ -1003,6 +1017,8 @@
         href: laps/laps-scenarios-windows-server-active-directory.md
       - name: Windows LAPS in legacy Microsoft LAPS emulation mode
         href: laps/laps-scenarios-legacy.md
+      - name: Windows LAPS deployment and migration
+        href: laps/laps-scenarios-deployment-migration.md
     - name: Manage Windows LAPS
       items:
       - name: Configure Windows LAPS policy settings
@@ -1015,4 +1031,7 @@
         href: laps/laps-management-user-interface.md
     - name: Windows LAPS schema extensions reference
       href: laps/laps-technical-reference.md
+    - name: Windows LAPS FAQ
+      href: laps/laps-faq.yml
+
 

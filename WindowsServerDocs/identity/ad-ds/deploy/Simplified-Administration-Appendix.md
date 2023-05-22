@@ -5,8 +5,9 @@ title: Simplified Administration Appendix
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/16/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 
 # Simplified Administration Appendix
@@ -50,9 +51,9 @@ The Active Directory search returns the following attributes:
 ```
 
 ## <a name="BKMK_ServerMgrStatus"></a>Server Manager Remote Server Status
-Server Manager tests remote server accessibility using Address Routing Protocol. Any servers not responding to ARP requests are not listed, even if they are in the pool.
+Server Manager tests remote server accessibility using Address Routing Protocol. Any servers not responding to ARP requests aren't listed, even if they are in the pool.
 
-If ARP responds, then DCOM and WMI connections are made to the server to return status information. If RPC, DCOM, and WMI are unreachable, server manager cannot fully manage the server.
+If ARP responds, then DCOM and WMI connections are made to the server to return status information. If RPC, DCOM, and WMI are unreachable, server manager can't fully manage the server.
 
 ## <a name="BKMK_PSLoadModule"></a>Windows PowerShell Module Loading
 Windows PowerShell 3.0 implements dynamic module loading. Using the **Import-Module** cmdlet is typically no longer required; instead, simply invoking the cmdlet, alias, or function automatically loads the module.
@@ -86,7 +87,7 @@ dir
 See [An update is available to detect and prevent too much consumption of the global RID pool on a domain controller that is running Windows Server 2008 R2](https://support.microsoft.com/kb/2618669).
 
 ## <a name="BKMK_IFM"></a>Ntdsutil.exe Install from Media Changes
-Windows Server 2012 adds two additional options to the Ntdsutil.exe command-line tool for the **IFM (IFM Media Creation)** menu. These allow you to create IFM stores without first performing an offline defrag of the exported NTDS.DIT database file. When disk space is not a premium, this saves time creating the IFM.
+Windows Server 2012 adds two additional options to the Ntdsutil.exe command-line tool for the **IFM (IFM Media Creation)** menu. These allow you to create IFM stores without first performing an offline defrag of the exported NTDS.DIT database file. When disk space isn't a premium, this saves time creating the IFM.
 
 The following table describes the two new menu items:
 
