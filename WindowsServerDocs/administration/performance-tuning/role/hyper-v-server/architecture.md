@@ -9,7 +9,7 @@ ms.date: 05/18/2023
 
 # Hyper-V architecture
 
-Hyper-V features a Type 1 hypervisor-based architecture. The hypervisor virtualizes processors and memory. It provides mechanisms for the virtualization stack in the root partition to manage child partitions, virtual machines (VMs) and expose services such as I/O devices to the VMs.
+Hyper-V features a Type 1 hypervisor-based architecture. The hypervisor virtualizes processors and memory. It provides mechanisms for the virtualization stack in the root partition to manage child partitions, virtual machines (VMs) and expose services such as I/O (input/output) devices to the VMs.
 
 The root partition owns and has direct access to the physical I/O devices. The virtualization stack in the root partition provides a memory manager for VMs, management APIs, and virtualized I/O devices. It also implements emulated devices, such as the integrated device electronics (IDE) disk controller and PS/2 input device port. And it supports Hyper-V-specific synthetic devices for increased performance and reduced overhead.
 
