@@ -1,10 +1,8 @@
 ---
-ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
-description: "Learn more about: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012"
+description: Learn more about upgrading domain controllers to Windows Server 2012 R2 and Windows Server 2012
 ms.author: daveba
 author: iainfoulds
-manager: daveba
 ms.date: 05/16/2023
 ms.topic: article
 ms.custom: inhenke
@@ -21,10 +19,10 @@ This article provides background information about Active Directory Domain Servi
 The recommended way to upgrade a domain is to promote domain controllers that run newer versions of Windows Server and demote older domain controllers as needed. That method is preferable to upgrading the operating system of an existing domain controller. This list covers general steps to follow before you promote a domain controller that runs a newer version of Windows Server:
 
 1. Verify the target server meets [system requirements](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)).
-2. Verify [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).
-3. Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) and [Secure default settings in Windows Server 2008 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee522994(v=ws.10)#BKMK_SecureDefault).
-4. Check connectivity to the target server from the computer where you plan to run the installation.
-5. Check for availability of necessary operation master roles:
+1. Verify [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).
+1. Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) and [Secure default settings in Windows Server 2008 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee522994(v=ws.10)#BKMK_SecureDefault).
+1. Check connectivity to the target server from the computer where you plan to run the installation.
+1. Check for availability of necessary operation master roles:
 
    - To install the first DC that runs  Windows Server 2012  in an existing domain and forest, the machine where you run the installation needs connectivity to the schema master in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.
    - To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master.
@@ -32,7 +30,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
    - Any domain controller installation also requires connectivity to the RID master.
    - If you're installing the first read-only domain controller in an existing forest, you need connectivity to the infrastructure master for each application directory partition, also known as a nondomain naming context or NDNC.
 
-6. Be sure to supply the necessary credentials to run the AD DS installation.
+1. Be sure to supply the necessary credentials to run the AD DS installation.
 
    |Installation action|Credential requirements|
    |-----------------------|---------------------------|
@@ -59,9 +57,9 @@ Steps-by-step instructions to promote new and replica Windows Server 2012 domain
 
 Prior to the release of Windows 8, Windows Update managed its own internal schedule to check for updates, and to download and install them. It required that the Windows Update Agent was always running in the background, consuming memory and other system resources.
 
-Windows 8 and Windows Server 2012 introduce a new feature called [Automatic Maintenance](/windows/win32/w8cookbook/automatic-maintenance). Automatic Maintenance consolidates many different features that each used to manage its own scheduling and execution logic. This consolidation allows for all these components to use far less system resources, work consistently, respect the new [Connected Standby](/windows/win32/w8cookbook/automatic-maintenance) state for new device types, and consume less battery on portable devices.
+Windows 8 and Windows Server 2012 introduce a new feature called [Automatic Maintenance](/windows/win32/w8cookbook/automatic-maintenance). Automatic Maintenance consolidates many different features that each used to manage its own scheduling and execution logic. This consolidation enables all these components to use far less system resources, work consistently, respect the new [Connected Standby](/windows/win32/w8cookbook/automatic-maintenance) state for new device types, and consume less battery on portable devices.
 
-Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windows Server 2012, its own internal schedule for setting a day and time to install updates is no longer effective. To help ensure consistent and predictable restart behavior for all devices and computers in your enterprise, including those that run Windows 8 and Windows Server 2012, see Microsoft KB article [2885694](https://support.microsoft.com/kb/2885694) (or see October 2013 cumulative rollup [2883201](https://support.microsoft.com/kb/2883201)), then configure policy settings described in the WSUS blog post [Enabling a more predictable Windows Update experience for Windows 8 and Windows Server 2012 (KB 2885694)](/archive/blogs/wsus/enabling-a-more-predictable-windows-update-experience-for-windows-8-and-windows-server-2012-kb-2885694).
+Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windows Server 2012, its own internal schedule for setting a day and time to install updates is no longer effective. To help ensure consistent and predictable restart behavior for all devices and computers in your enterprise, including those that run Windows 8 and Windows Server 2012, see Microsoft KB article [2885694](https://support.microsoft.com/kb/2885694) (or see October 2013 cumulative rollup [2883201](https://support.microsoft.com/kb/2883201)). Then configure policy settings as described in the WSUS blog post [Enabling a more predictable Windows Update experience for Windows 8 and Windows Server 2012 (KB 2885694)](/archive/blogs/wsus/enabling-a-more-predictable-windows-update-experience-for-windows-8-and-windows-server-2012-kb-2885694).
 
 ## <a name="BKMK_NewWS2012R2"></a>What's new in AD DS in Windows Server 2012 R2?
 
@@ -76,7 +74,7 @@ The following table summarizes new features for AD DS in Windows Server 2012 R2,
 |[Winlogon Automatic Restart Sign-On (ARSO)](../manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md)|Enables lock screen applications to be restarted and available on Windows 8.1 devices.|
 |[TPM Key Attestation](../manage/component-updates/tpm-key-attestation.md)|Enables CAs to cryptographically attest in an issued certificate that the certificate requester private key is actually protected by a Trusted Platform Module (TPM).|
 |[Credentials Protection and Management](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))|New credential protection and domain authentication controls to reduce credential theft.|
-|[Deprecation of File Replication Service (FRS)](../manage/component-updates/directory-services-component-updates.md)|The Windows Server 2003 domain functional level is also deprecated because at the functional level, FRS is used to replicate SYSVOL. That means when you create a new domain on a server that runs Windows Server 2012 R2, the domain functional level must be Windows Server 2008 or newer. You can still add a domain controller that runs Windows Server 2012 R2 to an existing domain that has a Windows Server 2003 domain functional level; you just can't create a new domain at that level.|
+|[Deprecation of File Replication Service (FRS)](../manage/component-updates/directory-services-component-updates.md)|The Windows Server 2003 domain functional level is also deprecated because at the functional level, FRS is used to replicate SYSVOL. That means when you create a new domain on a server that runs Windows Server 2012 R2, the domain functional level must be Windows Server 2008 or newer. You can still add a domain controller that runs Windows Server 2012 R2 to an existing domain that has a Windows Server 2003 domain functional level. You just can't create a new domain at that level.|
 |[New domain and forest functional levels](../active-directory-functional-levels.md)|There are new functional levels for Windows Server 2012 R2. New features are available at Windows Server 2012 R2 DFL.|
 |[LDAP query optimizer changes](../manage/component-updates/directory-services-component-updates.md)|Performance improvement in LDAP search efficiency and LDAP search time of complex queries.|
 |[1644 Event improvements](../manage/component-updates/directory-services-component-updates.md)|LDAP search result statistics were added to event ID 1644 to aid in troubleshooting.|
@@ -324,7 +322,7 @@ The following table lists known issues related to AD DS installation:
 | [2742959](/troubleshoot/windows-server/identity/dcpromo-demotion-fails): Domain controller cloning fails with error 8437: "invalid parameter was specified for this replication operation" | Virtual DC cloning | Cloning failed because an invalid clone name or a duplicate NetBIOS name was specified. |
 | [2742970](/troubleshoot/windows-server/identity/dcpromo-demotion-fails): DC Cloning fails with no DSRM, duplicate source and clone computer | Virtual DC cloning | The cloned virtual DC boots in Directory Services Repair Mode (DSRM), using a duplicate name as the source DC because the DCCloneConfig.xml file wasn't created in the correct location or because the source DC was rebooted before cloning. |
 | [2743278](/troubleshoot/windows-server/identity/fail-to-configure-server-using-server-manager): Domain controller cloning error 0x80041005 | Virtual DC cloning | The cloned DC boots into DSRM because only one WINS server was specified. If any WINS server is specified, both Preferred and Alternate WINS servers must be specified. |
-| [2745013](/troubleshoot/windows-server/identity/fail-to-configure-server-using-server-manager): "Server isn't operational" error message if you run New-AdDcCloneConfigFile in Windows Server 2012 | Virtual DC cloning | You receive this error after you run the New-ADDCCloneConfigFile cmdlet because the server can't contact a global catalog server. |
+| [2745013](/troubleshoot/windows-server/identity/fail-to-configure-server-using-server-manager): "Server is not operational" error message if you run New-AdDcCloneConfigFile in Windows Server 2012 | Virtual DC cloning | You receive this error after you run the New-ADDCCloneConfigFile cmdlet because the server can't contact a global catalog server. |
 | [2747974](/windows-server/identity/ad-ds/manage/virtual-dc/virtualized-domain-controller-troubleshooting): Domain controller cloning event 2224 provides incorrect guidance | Virtual DC cloning | Event ID 2224 incorrectly states that managed service accounts must be removed before cloning. Standalone MSAs must be removed but Group MSAs don't block cloning. |
 | [2748266](/windows/security/information-protection/bitlocker/bitlocker-recovery-guide-plan): You can't unlock a BitLocker-encrypted drive after you upgrade to Windows 8 | BitLocker | You receive an "Application not found" error when you try to unlock a drive on a computer that was upgraded from Windows 7. |
 
