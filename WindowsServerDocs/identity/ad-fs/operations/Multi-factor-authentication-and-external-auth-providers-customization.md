@@ -20,7 +20,7 @@ An external authentication provider should use the classes that are defined in t
 Export-AdfsWebTheme -Name default -DirectoryPath C:\theme
 ```
 
-The example below shows a sign-in user interface, which is highlighted in RED, by an external authentication provider. The user interface uses the UI classes in the AD FS .css file.
+The following example shows a sign-in user interface, which is highlighted in RED, by an external authentication provider. The user interface uses the UI classes in the AD FS .css file.
 
 ![Screenshot that shows an example of the sign-in user interface.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)
 
@@ -32,13 +32,13 @@ Before you write a new custom authentication method, study the AD FS theme and s
 
 - AD FS administrators can customize the AD FS styles. Don't hardcode your own styles. Instead, try using AD FS styles whenever possible.
 
-- Out of the box, AD FS styles are authored with one left-to-right \(LTR\) style and one right-to-left \(RTL\). Administrators can customize both and can provide language-specific styles through the web theme definition. Each style sheet has three sections with respective comments:
+- Out of the box, AD FS styles are authored with one left-to-right \(LTR\) style and one right-to-left \(RTL\). Administrators can customize both and can provide language-specific styles through the web theme definition. Each stylesheet has three sections with respective comments:
 
-- **theme styles** - These styles shouldn't and can't be used. These styles are meant to define theme across all pages. They're defined by an element ID purposely so that they aren't reused.
+- **theme styles** - These styles shouldn't and can't be used. These styles are meant to define the theme across all pages. They're defined with an element ID purposely so that they aren't reused.
 
-- **common styles** - These are the styles that should be used for your content.
+- **common styles** - These styles are the styles that should be used for your content.
 
-- **form factor styles** - These are styles for different form factors. You should understand this section to ensure that your content works with different form factors, for example, phones and tablets.
+- **form factor styles** - These styles for different form factors. You should understand this section to ensure that your content works with different form factors, for example, phones and tablets.
 
 For more information, see [Solution Guide: Manage Risk with Multi\-factor Access Control](./manage-risk-with-conditional-access-control.md) and [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/windows-server/identity/ad-fs/operations/walkthrough-guide--manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications)).
 
