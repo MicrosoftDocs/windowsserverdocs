@@ -19,7 +19,7 @@ After you've restored or reinstalled all domain controllers (DCs), you can verif
 
 Check the DFS Replication event logs for Event ID 4602 (or File Replication Service event ID 13516). This log event indicates sysvol replication has been initialized.
 
-If the first recovered DC has Event ID 4614 in the DFS Replication log (“the domain controller is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner”). If Event ID 4602 doesn't appear, you need to perform the following manual steps to recover the sysvol folder if it's replicated by DFSR.
+If the first recovered DC has Event ID 4614 in the DFS Replication log (“the domain controller is waiting to perform initial replication"), the replicated folder remains in the initial synchronization state until it has replicated with its partner. If Event ID 4602 doesn't appear, you need to perform the following manual steps to recover the sysvol folder if it's replicated using DFSR.
 
 1. If DFSR Event 4612 appears on the first restored DC, perform a manual authoritative restore as described in [2218556: How to force authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication)](https://support.microsoft.com/kb/2218556).
 1. Set **SysvolReady Flag** to 1 manually, as described in [947022 The NETLOGON share isn't present after you install Active Directory Domain Services on a new full or read-only Windows Server 2008-based domain controller](https://support.microsoft.com/kb/947022).
