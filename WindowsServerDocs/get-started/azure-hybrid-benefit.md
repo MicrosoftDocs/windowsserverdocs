@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
-ms.date: 11/28/2022
+ms.date: 04/06/2023
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
@@ -9,20 +9,20 @@ ms.author: daknappe
 
 # Azure Hybrid Benefit for Windows Server
 
-Azure Hybrid Benefit is a cost-saving benefit that enables you to use your on-premises licenses with Software Assurance (SA) in the cloud. This article focuses on benefits for Windows Server licenses with SA: cost savings for Windows Server virtual machines (VMs) in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) hybrid deployment options.
+Azure Hybrid Benefit is a cost-saving benefit that enables you to use your on-premises licenses with Software Assurance (SA) or subscription licenses to get Windows virtual machines on Azure at a reduced cost. This article focuses on benefits for Windows Server licenses with SA or subscription: cost savings for Windows Server virtual machines (VMs) in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) hybrid deployment options.
 
 For other Azure hybrid benefits (for example, SQL Server), see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit).
 
 ## What qualifies you for Azure Hybrid Benefit?
 
-To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance. Software Assurance is only available as part of a commercial licensing agreement. To learn more about volume licensing and which agreements it's available with, see [Microsoft Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
+To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance or subscription licenses. Software Assurance and subscription licenses are only available as part of a commercial licensing agreement. To learn more about commercial licensing, see [Microsoft Licensing Resources](https://www.microsoft.com/en-us/licensing/default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
 
 > [!IMPORTANT]
-> Workloads using Azure Hybrid Benefit can run only during the Software Assurance term. When the Software Assurance term approaches expiration, you must either renew your agreement with Software Assurance, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.
+> Workloads using Azure Hybrid Benefit can run only during the Software Assurance or subscription license term. When the Software Assurance or subscription license term approaches expiration, you must either renew your agreement with either Software Assurance or a subscription license, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.
 
 ## What's included in Azure Hybrid Benefit?
 
-Customers with Windows Server Software Assurance can use Azure Hybrid Benefit to further reduce costs in the cloud and in datacenter and edge locations.
+Customers with Windows Server Software Assurance or subscription license can use Azure Hybrid Benefit to further reduce costs in the cloud and in datacenter and edge locations.
 
 Azure Hybrid Benefit includes the following cost savings:
 
@@ -54,17 +54,12 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 #### Types of license
 
-- Windows Server Standard with active Software Assurance, or
-- Windows Server Datacenter with active Software Assurance, or
-- An eligible Cloud Solution Provider (CSP) subscription
+- Windows Server Standard with active Software Assurance or subscription.
+- Windows Server Datacenter with active Software Assurance or subscription.
 
 #### Number of licenses
 
-- The minimum set of 16-core licenses, either Windows Server Datacenter or Windows Server Standard edition, entitles use on up to 16 virtual cores allocated across 2 or fewer virtual machines.
-
-- Each additional set of 8-core licenses entitles use on up to 8 virtual cores on 1 virtual machine.
-
-- Stacking licenses: To run a virtual machine with more than 16 cores, you can stack licenses. For example, with two 16-core license packs, you can run a virtual machine with up to 32 cores. Each virtual machine, regardless of its size, must be licensed with a minimum of 8 cores. You can then stack more core licenses on top, up to the number that you need.
+You'll need a minimum of 8 core licenses (Datacenter or Standard edition) per virtual machine. You may also run instances larger than 8 cores by allocating licenses equal to the core-size of the instance. For example, 12 core licenses are required for a 12-core instance, however 8 core licenses are still required if you run a 4-core instance. For customers with processor licenses, each two core processor license is equivalent to 16 core licenses.
 
 #### Use rights
 
@@ -76,7 +71,7 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 Unlimited Virtualization Rights refers to the right to use any number of Windows Server VMs on a host.  
 
-- **Windows Server Datacenter edition:** You can use any number of Windows Server VMs on an Azure dedicated host if you allocate Windows Server Datacenter licenses with active SA for all the available physical cores on that Azure server.
+- **Windows Server Datacenter edition:** You can use any number of Windows Server VMs on an Azure dedicated host if you allocate Windows Server Datacenter licenses with active SA or subscription for all the available physical cores on that Azure server.
 
 - **Windows Server Standard edition:** Unlimited Virtualization Rights aren't available.  
 
@@ -88,9 +83,9 @@ To learn how to deploy Windows Server VMs in Azure with Azure Hybrid Benefit, fo
 
 ### How to maintain compliance
 
-If you apply Azure Hybrid Benefit to your Windows Server VMs, verify the number of eligible licenses and the Software Assurance coverage period before you activate this benefit. Use the guidelines above to make sure you deploy the correct number of Windows Server VMs with this benefit.
+If you apply Azure Hybrid Benefit to your Windows Server VMs, verify the number of eligible licenses and the Software Assurance (or subscription) coverage period before you activate this benefit. Use the guidelines above to make sure you deploy the correct number of Windows Server VMs with this benefit.
 
-If you already have Windows Server VMs running with Azure Hybrid Benefit, perform an inventory to see how many units you're running, and check this number against your Software Assurance licenses. You can contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
+If you already have Windows Server VMs running with Azure Hybrid Benefit, perform an inventory to see how many units you're running, and check this number against your Software Assurance or subscription licenses. You can contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
 
 To see and count all VMs that are deployed with Azure Hybrid Benefit in an Azure subscription, [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) using the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
 
@@ -107,8 +102,9 @@ To get a comprehensive view of your licensing position, perform an inventory in 
 Perform an inventory regularly to make sure you're using any license benefits that you're entitled to. Regular inventories can help you reduce costs and make sure that you always have enough licenses to cover the Windows Server VMs you've deployed with Azure Hybrid Benefit.
 
 If you don't have enough eligible Windows Server licenses for your deployed VMs, you have three choices:
-- Purchase extra Windows Server licenses covered by Software Assurance through a commercial licensing agreement.
-- Disable Azure Hybrid Benefit for some of your VMs, and purchase them at regular Azure hourly rates.
+
+- Purchase extra Windows Server licenses covered by Software Assurance or subscription through a commercial licensing agreement.
+- Disable Azure Hybrid Benefit for some of your VMs and purchase them at regular Azure hourly rates.
 - Deallocate some VMs.
 
 > [!NOTE]
@@ -124,7 +120,7 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 #### Types of license
 
-- Windows Server Datacenter with active Software Assurance only
+- Windows Server Datacenter with active Software Assurance or subscription licenses only
 
 #### Number of licenses
 
@@ -154,14 +150,13 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 #### Eligible hosts
 
-- Windows Server 2019 or later (Datacenter or Standard), or
+- Windows Server 2019 or later (Datacenter only), or
 - Azure Stack HCI
 
 #### Types of license
 
-- Windows Server Standard with active Software Assurance, or
-- Windows Server Datacenter with active Software Assurance, or
-- An eligible Cloud Solution Provider (CSP) subscription
+- Windows Server Standard with active Software Assurance or subscription.
+- Windows Server Datacenter with active Software Assurance or subscription.
 
 #### Number of licenses
 
@@ -181,15 +176,19 @@ To get started with Azure Hybrid Benefit for AKS, see [Azure Hybrid Benefit for 
 
 Azure Hybrid Benefit is available across all Azure regions and sovereign clouds.
 
-#### What happens to my benefits if my Software Assurance expires?
+#### What happens to my benefits if my Software Assurance or subscription expires?
 
-To use these benefits, your Software Assurance or subscriptions must be active. If you choose not to renew your Software Assurance when it expires, you'll need to remove your benefits from your resources in the Azure portal.
+To use these benefits, your Software Assurance or subscriptions must be active. If you choose not to renew your Software Assurance or subscription when it expires, you'll need to remove your benefits from your resources in the Azure portal.
 
 #### What is Software Assurance?
 
 Software Assurance provides other benefits to maximize your IT investments. Software Assurance is only available through volume licensing and is purchased when you buy or renew a Volume Licensing agreement. It's included with some agreements and is an optional purchase with others. Software Assurance benefits include new product version rights, support, license mobility rights, and a unique set of technologies and services.
 
 For information about volume licensing, see [Microsoft Licensing](https://www.microsoft.com/en-us/Licensing/default). To learn more about Software Assurance benefits, and how each benefit can help meet your business needs, see [Software Assurance benefits](https://www.microsoft.com/en-us/Licensing/licensing-programs/software-assurance-by-benefits).
+
+#### What is a subscription license?
+
+Subscription licenses are licenses to run the software only during the term of the subscription. Subscription licenses do not include perpetual rights to run the software.
 
 #### How can customers get Software Assurance?
 

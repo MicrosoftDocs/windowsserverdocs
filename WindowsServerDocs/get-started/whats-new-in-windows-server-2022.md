@@ -4,8 +4,7 @@ description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-manager: femila
-ms.date: 11/28/2022
+ms.date: 04/18/2023
 ms.prod: windows-server
 ---
 
@@ -35,6 +34,13 @@ You can also learn more about how Azure Automanage for Windows Server brings the
 to Windows Server Azure Edition in the
 [Azure Automanage for Windows Server services](/azure/automanage/automanage-windows-server-services-overview)
 article.
+
+### April 2023
+
+#### Hotpatching
+
+Windows Server 2022 Datacenter: Azure Edition Hotpatching is now public preview for the Desktop
+Experience both in Azure and as a supported guest VM on Azure Stack HCI version 22H2.
 
 ### September 2022
 

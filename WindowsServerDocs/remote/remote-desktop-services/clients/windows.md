@@ -1,6 +1,6 @@
 ---
-title: Get started with the Microsoft Store Client
-description: Basic setup instructions for the Remote Desktop client for Windows Store.
+title: Get started with the Remote Desktop app for Windows
+description: Basic setup instructions for the Remote Desktop app for Windows.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: Heidilohr
@@ -8,27 +8,27 @@ manager: femila
 ms.author: helohr
 ms.date: 01/13/2023
 ---
-# Get started with the Microsoft Store Client
+# Get started with the Remote Desktop app for Windows
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows 11, and Windows 10
 
-You can use the Remote Desktop client for Windows to work with Windows apps and PCs remotely from a different Windows device.
+You can use the Remote Desktop app for Windows to work with Windows apps and PCs remotely from a different Windows device.
 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
 > [!TIP]
-> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop client for Windows (Microsoft Store)](/azure/virtual-desktop/users/connect-microsoft-store).
+> If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop app for Windows](/azure/virtual-desktop/users/connect-microsoft-store).
 
 > [!IMPORTANT]
-> We're no longer updating the Microsoft Store client with new features.
+> We're no longer updating the Remote Desktop app for Windows with new features.
 >
-> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and fixes, we recommend you download the [Remote Desktop client for Windows](/azure/virtual-desktop/users/connect-windows) instead.
+> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and updates, we recommend you download the [Azure Virtual Desktop Store app for Windows](/azure/virtual-desktop/users/connect-windows-avd-app) instead.
 
-## Get the RD client and start using it
+## Get the Remote Desktop app and start using it
 
 Follow these steps to get started with Remote Desktop on your Windows 10 device:
 
-1. Download the Remote Desktop client from [Microsoft Store](https://www.microsoft.com/store/p/microsoft-remote-desktop/9wzdncrfj3ps).
+1. Download the Remote Desktop app from the [Microsoft Store](https://www.microsoft.com/store/p/microsoft-remote-desktop/9wzdncrfj3ps).
 2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
 3. Add a Remote PC connection or a workspace. You use a connection to connect directly to a Windows PC and a workspace to use a RemoteApp program, session-based desktop, or virtual desktop published by your admin.
 4. Pin items so you can get to Remote Desktop quickly.
@@ -84,12 +84,12 @@ Now you can start the PC connection directly from your Start menu by tapping it.
 
 ## Connect to an RD Gateway to access internal assets
 
-A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
+A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your connections to gateways using the Remote Desktop app.
 
-To set up a new gateway:
+To set up a new Remote Desktop Gateway:
 
 1. In the Connection Center, tap **Settings**.
-2. Next to Gateway, tap **+** to add a new gateway.
+2. Next to Gateway, tap **+** to add a new Gateway.
 
       >[!NOTE]
       >You can also add a gateway when you add a new connection.

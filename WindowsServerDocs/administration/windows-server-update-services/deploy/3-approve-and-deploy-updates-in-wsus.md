@@ -6,7 +6,7 @@ ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 04/24/2023
 ---
 # Step 3: Approve and Deploy Updates in WSUS
 
@@ -53,10 +53,10 @@ Automatic Approvals enables you to specify how to automatically approve installa
 4.  In **add Rule**, in **Step 1: select Properties**, select any single option, or combination of options from the following:
 
     -   **When an update is in a specific classification**
-
+        - When selecting the **Upgrades** classification, be aware that Windows feature updates that get published monthly are also classified as **Upgrades**. Automatically approving these updates could cause devices to upgrade their OS. For example, applicable Windows 10 devices could get upgraded to Windows 11. Additionally, feature updates would require additional disk space. For more information, see [UUP considerations when planning your WSUS deployment](../plan/plan-your-wsus-deployment.md#uup-considerations).
     -   **When an update is in a specific product**
 
-    -   **Set a deadline for the approva**l
+    -   **Set a deadline for the approval**
 
 5.  In **Step 2: edit the properties**, click each of the options listed, and then select the appropriate options for each.
 

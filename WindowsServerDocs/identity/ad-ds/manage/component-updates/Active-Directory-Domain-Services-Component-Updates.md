@@ -31,26 +31,26 @@ After completing this module, you will be able to:
 
 -   Explain the component updates made within the Directory Services and Identity technology areas in Windows Server 2012 R2
 
-    -   [SPN and UPN uniqueness](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)
+    -   [SPN and UPN uniqueness](./SPN-and-UPN-uniqueness.md)
 
-    -   [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)
+    -   [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](./Winlogon-Automatic-Restart-Sign-On--ARSO-.md)
 
-    -   [TPM Key Attestation](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md)
+    -   [TPM Key Attestation](./TPM-Key-Attestation.md)
 
-    -   [CA Backup and Restore Windows PowerShell cmdlets](../../../ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-PowerShell-cmdlets.md)
+    -   [CA Backup and Restore Windows PowerShell cmdlets](./CA-Backup-and-Restore-Windows-PowerShell-cmdlets.md)
 
-    -   [Command line process auditing](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)
+    -   [Command line process auditing](./Command-line-process-auditing.md)
 
     -   [Credentials Protection and Management](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))
 
-    -   [Directory Services component updates](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md)
+    -   [Directory Services component updates](./Directory-Services-component-updates.md)
 
-        -   [Domain and Forest Functional Levels](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_FL)
+        -   [Domain and Forest Functional Levels](./Directory-Services-component-updates.md#BKMK_FL)
 
-        -   [Deprecation of NTFRS](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_NTFRS)
+        -   [Deprecation of NTFRS](./Directory-Services-component-updates.md#BKMK_NTFRS)
 
-        -   [LDAP Query Optimizer changes](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_LDAPQuery)
+        -   [LDAP Query Optimizer changes](./Directory-Services-component-updates.md#BKMK_LDAPQuery)
 
-        -   [1644 Event improvements](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_1644)
+        -   [1644 Event improvements](./Directory-Services-component-updates.md#BKMK_1644)
 
-        -   [Active Directory Replication throughput improvement](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)
+        -   [Active Directory Replication throughput improvement](./Directory-Services-component-updates.md#BKMK_ADRepl)

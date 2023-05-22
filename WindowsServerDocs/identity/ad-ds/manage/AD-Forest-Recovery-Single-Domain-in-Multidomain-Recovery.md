@@ -4,15 +4,16 @@ title: AD Forest Recovery - Recovering a single domain in a multidomain forest
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 08/09/2018
+ms.date: 05/16/2023
 ms.topic: article
 ms.assetid: 267541be-2ea7-4af6-ab34-8b5a3fedee2d
+ms.custom: inhenkel
 ---
 # AD Forest Recovery - Recovering a single domain in a multidomain forest
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
-There can be times when it is necessary to recover only a single domain within a forest that has multiple domains, rather than a full forest recovery. This topic covers considerations for recovering a single domain and possible strategies for recovery.
+There can be times when it's necessary to recover only a single domain within a forest that has multiple domains, rather than a full forest recovery. This article covers considerations for recovering a single domain and possible strategies for recovery.
 
 A single domain recovery presents a unique challenge for rebuilding global catalog (GC) servers. For example, if the first domain controller (DC) for the domain is restored from a backup that was created one week earlier, then all other GCs in the forest will have more up-to-date data for that domain than the restored DC. To re-establish GC data consistency, there are a couple options:
 
@@ -26,17 +27,17 @@ The following sections provide general considerations for each option. The compl
 > [!WARNING]
 > The password of the Domain Administrator account for all domains must be ready for use in case a problem prevents access to a GC for logon.
 
-Rehosting all GCs can be done using repadmin /unhost and repadmin /rehost commands (part of repadmin /experthelp). You would run the repadmin commands on every GC in each domain that is not recovered. It needs to be ensured, that all GCs do not hold a copy of the recovered domain anymore. To achieve this, unhost the domain partition first from all domain controllers across all none-recovered domains of the forest first. After all GCs do not contain the partition anymore, you can rehost it. When rehosting, consider the site- and replication-structure of your forest, for example, finish the rehost of one DC per site prior to rehosting the other DCs of that site.
+Rehosting all GCs can be done using repadmin /unhost and repadmin /rehost commands (part of repadmin /experthelp). You would run the repadmin commands on every GC in each domain that isn't recovered. It needs to be ensured, that all GCs don't hold a copy of the recovered domain anymore. To achieve this, unhost the domain partition first from all domain controllers across all none-recovered domains of the forest first. After all GCs don't contain the partition anymore, you can rehost it. When rehosting, consider the site- and replication-structure of your forest, for example, finish the rehost of one DC per site prior to rehosting the other DCs of that site.
 
 This option can be advantageous for a small organization that has only a few domain controllers for each domain. All of the GCs could be rebuilt on a Friday night and, if necessary, complete replication for all read-only domain partitions before Monday morning. But if you need to recover a large domain that covers sites across the globe, rehosting the read-only domain partition on all GCs for other domains can significantly impact operations and potentially require down time.
 
 ## Remove lingering objects
 
-Similar to the forest recovery process, you restore one DC from backup in the domain that you need to recover, perform metadata cleanup of remaining DCs, and then re-install AD DS to build out the domain. On the GCs of all other domains in the forest, you remove the lingering objects for the read-only partition of the recovered domain.
+Similar to the forest recovery process, you restore one DC from backup in the domain that you need to recover, perform metadata cleanup of remaining DCs, and then reinstall AD DS to build out the domain. On the GCs of all other domains in the forest, you remove the lingering objects for the read-only partition of the recovered domain.
 
-The source for the lingering object cleanup must be a DC in the recovered domain. To be certain that the source DC does not have any lingering objects for any domain partitions, you can remove the global catalog if it was a GC.
+The source for the lingering object cleanup must be a DC in the recovered domain. To be certain that the source DC doesn't have any lingering objects for any domain partitions, you can remove the global catalog if it was a GC.
 
-Removing lingering objects is advantageous for larger organizations that cannot risk the down time associated with the other options.
+Removing lingering objects is advantageous for larger organizations that can't risk the down time associated with the other options.
 
 For more information, see [Use Repadmin to remove lingering objects](/previous-versions/windows/it-pro/windows-server-2003/cc785298(v=ws.10)).
 
