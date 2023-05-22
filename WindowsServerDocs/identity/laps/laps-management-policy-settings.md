@@ -38,7 +38,7 @@ Windows LAPS supports multiple policy settings that you can administer via vario
 
 The following table specifies which settings apply to devices that have the specified BackupDirectory setting:
 
-|Setting name|Applicable when BackupDirectory=AAD?|Applicable when BackupDirectory=AD?|
+|Setting name|Applicable when BackupDirectory=Azure AD?|Applicable when BackupDirectory=AD?|
 |---|---|---|
 |AdministratorAccountName|Yes|Yes|
 |PasswordAgeDays|Yes|Yes|
@@ -83,7 +83,7 @@ Use this setting to control which directory the password for the managed account
 
 |Value|Description of setting|
 |--- |--- |
-|0|Disabled (password won't be backed up)|
+|0|Disabled (password isn't backed up)|
 |1|Back up the password to Azure Active Directory only|
 |2|Back up the password to Windows Server Active Directory only|
 
@@ -227,11 +227,11 @@ Use this setting to specify the actions to take upon expiration of the configure
 
 This setting can have one of the following values:
 
-|Value|Name|Actions taken when the grace period expires|
-|--- |--- |--- |
-|1|Reset password|The managed account password is reset.|
-|3|Reset password and sign out|The managed account password is reset and any interactive sign-in sessions that use the managed account are terminated.|
-|5|Reset password and reboot|The managed account password is reset and the managed device is immediately restarted.|
+|Value|Name|Actions taken when the grace period expires|Comments|
+|--- |--- |--- |--- |
+|1|Reset password|The managed account password is reset.||
+|3|Reset password and sign out|The managed account password is reset, any interactive sign-in sessions that use the managed account are terminated, and any SMB sessions using the managed account are deleted.|Interactive sign-in sessions receive a nonconfigurable two-minute warning to save their work and sign out.|
+|5|Reset password and reboot|The managed account password is reset and the managed device is restarted.|The managed device is restarted after a nonconfigurable one-minute delay.|
 
 If not specified, this setting defaults to 3.
 
