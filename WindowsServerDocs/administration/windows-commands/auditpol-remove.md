@@ -1,6 +1,6 @@
 ---
 title: auditpol remove
-description: Reference article for the auditpol remove command; auditpol remove removes the per-user audit policy for a specified account or all accounts.
+description: Reference article for the auditpol remove command; auditpol removes the per-user audit policy for a specified account or all accounts.
 ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
