@@ -7,7 +7,7 @@ ms.date: 05/23/2023
 ms.topic: article
 ms.custom: inhenkel
 ---
-# Virtualizing Domain Controllers using Hyper-V
+# Virtualizing domain controllers using Hyper-V
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
