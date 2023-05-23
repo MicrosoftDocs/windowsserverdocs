@@ -18,7 +18,7 @@ DNS resource records contain the information that a zone maintains about the res
 
 The most common resource records include the following:
 
-- Host (A) resource records: For mapping a Domain Name System (DNS) domain name to an IP address that's used by a computer.
+- Host (A, AAAA) resource records: For mapping a Domain Name System (DNS) domain name to an IP address that's used by a computer.
 - Alias (CNAME) resource records: For mapping an alias DNS domain name to another primary or canonical name.
 - Mail exchanger (MX) resource records: For mapping a DNS domain name to the name of a computer that exchanges or forwards mail.
 - Pointer (PTR) resource records: For mapping a reverse DNS domain name that's based on the IP address of a computer that points to the forward DNS domain name of that computer.
