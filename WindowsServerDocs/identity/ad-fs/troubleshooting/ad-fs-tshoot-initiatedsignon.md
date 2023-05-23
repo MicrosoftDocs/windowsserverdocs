@@ -63,4 +63,4 @@ The AD FS sign-on page can't be used to initiate a sign-on with a claims provide
 
 ## Next Steps
 
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+- [Troubleshooting AD FS](ad-fs-tshoot-overview.md)
