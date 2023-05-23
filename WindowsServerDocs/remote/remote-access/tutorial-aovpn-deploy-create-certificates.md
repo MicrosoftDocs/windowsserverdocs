@@ -271,3 +271,5 @@ Because you're using Group Policy to autoenroll NPS certificates, you only need 
 ## Next steps
 
 - [Deploy Always On VPN Tutorial: Configure Windows client Always On VPN connections](tutorial-aovpn-deploy-configure-client.md)
+
+- [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md)

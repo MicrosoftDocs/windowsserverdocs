@@ -229,7 +229,15 @@
   - name: Remote Access
     items:
     - name: Overview
-      href: remote-access/remote-Access.md
+      items:
+      - name: About Remote Access
+        href: remote-access/remote-Access.md
+      - name: About Always On VPN
+        href: remote-access/overview-always-on-vpn.md
+      - name: About DirectAccess
+        href: remote-access/directaccess/directAccess.md
+      - name: About RAS Gateway 
+        href: remote-access/ras-gateway/RAS-Gateway.md
     - name: Getting started
       items:
       - name: Install Remote Access as a VPN Server
@@ -454,6 +462,10 @@
           href: remote-access/how-to-aovpn-client-config-mgr.md
         - name: Configure Always on VPN Conditional Access using Azure AD
           href: remote-access/how-to-aovpn-conditional-access.md
+        - name: Configure Always On VPN Conditional Access using NPS
+          href: remote-access/how-to-always-on-vpn-conditional-access-network-policy-server.md
+        - name: Block VPN clients that use a revoked certificate
+          href: remote-access/how-to-always-on-vpn-block-clients-revoked-certificates.md
       - name: Virtual Private Networking (VPN) 
         items: 
         - name: Configure VPN device tunneling
@@ -464,24 +476,14 @@
           href: /windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
     - name: Concepts
       items:
-      - name: Always On VPN
-        items:
-        - name: About Always On VPN
-          href: remote-access/overview-always-on-vpn.md
-        - name: Always On VPN advanced features
-          href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md
       - name: DirectAccess
         items:
-        - name: About DirectAccess
-          href: remote-access/directaccess/directAccess.md
         - name: DirectAccess Unsupported configurations
           href: remote-access/directaccess/directAccess-Unsupported-Configurations.md
         - name: Direct Access Capacity Planning
           href: remote-access/directaccess/directAccess-Capacity-Planning.md
       - name: RAS Gateway
         items:
-        - name: About RAS Gateway 
-          href: remote-access/ras-gateway/RAS-Gateway.md
         - name: GRE Tunneling in Windows Server
           href: remote-access/ras-gateway/gre-tunneling-windows-server.md
         - name: RAS Gateway GRE Tunnel Throughput and Performance
@@ -507,7 +509,7 @@
     - name: Troubleshooting
       items:
       - name: Always On VPN
-        href: remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md
+        href: remote-access/troubleshoot-always-on-vpn.md
       - name: DirectAccess
         href: remote-access/directaccess/Troubleshooting-directAccess.md
       - name: DirectAccess Known Issues
