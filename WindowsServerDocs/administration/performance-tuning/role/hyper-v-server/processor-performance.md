@@ -4,7 +4,7 @@ description: Learn about the processor performance considerations to use for tun
 ms.topic: article
 ms.author: wscontent
 author: phstee
-ms.date: 05/19/2023
+ms.date: 05/22/2023
 ---
 
 # Hyper-V processor performance
@@ -23,7 +23,7 @@ Increase the number of virtual processors if the VM requires more than one CPU o
 
 ## Background activity
 
-Minimizing the background activity in idle VMs releases CPU cycles that other VMs use. Windows guests typically use less than one percent of a CPU when they're idle. The following links provide best practices to minimize background CPU usage of a VM:
+Minimizing the background activity in idle VMs releases CPU cycles that other VMs use. Windows guests typically use less than one percent of a CPU when they're idle. The following are best practices to minimize background CPU usage of a VM:
 
 - Install the latest version of the VM integration services.
 
@@ -35,7 +35,7 @@ Minimizing the background activity in idle VMs releases CPU cycles that other VM
 
 - Review the scheduled tasks and services that are enabled by default.
 
-- Review the Event Tracing for Windows (ETW) trace providers that are on by default by running **logman.exe query -ets**.
+- Review the Event Tracing for Windows (ETW) trace providers that are on by default by running `logman.exe query -ets`.
 
 - Improve server applications to reduce periodic activity (such as timers).
 
@@ -51,7 +51,7 @@ The following are best practices for configuring a *client version* of Windows i
 
 ## Virtual NUMA
 
-To enable virtualizing large scale-up workloads, Hyper-V in Windows Server 2016 expanded VM scale limits. You can assign a single VM with up to 240 virtual processors and 12 TB of memory. When you create such large VMs, memory from multiple NUMA nodes on the host system are typically used. In that type of VM configuration, if you don't allocate virtual processors and memory from the same NUMA node, workloads might have poor performance. Performance is negatively affected because workloads can't take advantage of the NUMA optimizations.
+Hyper-V in Windows Server 2016 expanded VM scale limits to enable virtualizing large scale-up workloads. You can assign a single VM with up to 240 virtual processors and 12 TB of memory. When you create such large VMs, memory from multiple NUMA nodes on the host system are typically used. In that type of VM configuration, if you don't allocate virtual processors and memory from the same NUMA node, workloads might have poor performance. Performance is negatively affected because workloads can't take advantage of the NUMA optimizations.
 
 In Windows Server 2016, Hyper-V presents a Virtual NUMA topology to VMs. By default, this Virtual NUMA topology is optimized to match the NUMA topology of the underlying host computer. Exposing a Virtual NUMA topology into a VM lets the guest operating system, and any NUMA-aware applications running within it, take advantage of the NUMA performance optimizations, just as they would when running on a physical computer.
 
