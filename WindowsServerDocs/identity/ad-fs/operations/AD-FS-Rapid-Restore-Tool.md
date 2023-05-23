@@ -89,15 +89,26 @@ Before you use the backup cmdlet, review the following access and permissions re
 
 Each backup is named according to the pattern `adfsBackup_ID_Date-Time`. The name contains the version number, date, and time of the backup.
 
-The following are the parameters accepted by the Backup-ADFS cmdlet:
+The following are the parameters for the Backup-ADFS cmdlet:
 
 ```powershell
-Backup-ADFS -StorageType {FileSystem | Azure} -EncryptionPassword <string> -AzureConnectionCredentials 
-  <pscredential> -AzureStorageContainer <string> [-BackupComment <string>] [-ServiceAccountCredential 
-  <pscredential>] [-BackupDKM]  [<CommonParameters>]
+Backup-ADFS 
+  -StorageType {FileSystem | Azure} 
+  -EncryptionPassword <string> 
+  -AzureConnectionCredentials <pscredential> 
+  -AzureStorageContainer <string> 
+  [-BackupComment <string>] 
+  [-ServiceAccountCredential <pscredential>]
+  [-BackupDKM]
+  [<CommonParameters>]
     
-Backup-ADFS -StorageType {FileSystem | Azure} -EncryptionPassword <string> -StoragePath <string> 
-  [-BackupComment <string>] [-ServiceAccountCredential <pscredential>] [-BackupDKM]  [<CommonParameters>]
+Backup-ADFS -StorageType {FileSystem | Azure} 
+  -EncryptionPassword <string>
+  -StoragePath <string> 
+  [-BackupComment <string>]
+  [-ServiceAccountCredential <pscredential>]
+  [-BackupDKM]
+  [<CommonParameters>]
 ```
 
 The following list describes the parameter details for the Backup-ADFS cmdlet.
@@ -181,17 +192,33 @@ Before you use the restore cmdlet, review the following requirements.
 
 ### Restore-ADFS cmdlet parameters
 
-The following shows the parameters accepted by the Restore-ADFS cmdlet
+The following are the parameters for the Restore-ADFS cmdlet:
 
 ```powershell
-Restore-ADFS -StorageType {FileSystem | Azure} -DecryptionPassword <string> -AzureConnectionCredentials 
-  <pscredential> -AzureStorageContainer <string> [-ADFSName <string>] [-ServiceAccountCredential <pscredential>] 
-  [-GroupServiceAccountIdentifier <string>] [-DBConnectionString <string>] [-Force] [-RestoreDKM]  
+Restore-ADFS 
+  -StorageType {FileSystem | Azure} 
+  -DecryptionPassword <string> 
+  -AzureConnectionCredentials <pscredential>
+  -AzureStorageContainer <string>
+  [-ADFSName <string>]
+  [-ServiceAccountCredential <pscredential>]
+  [-GroupServiceAccountIdentifier <string>]
+  [-DBConnectionString <string>]
+  [-Force]
+  [-RestoreDKM]  
   [<CommonParameters>]
     
-Restore-ADFS -StorageType {FileSystem | Azure} -DecryptionPassword <string> -StoragePath <string> [-ADFSName 
-  <string>] [-ServiceAccountCredential <pscredential>] [-GroupServiceAccountIdentifier <string>] 
-  [-DBConnectionString <string>] [-Force] [-RestoreDKM] [<CommonParameters>]
+Restore-ADFS 
+  -StorageType {FileSystem | Azure} 
+  -DecryptionPassword <string>
+  -StoragePath <string>
+  [-ADFSName <string>]
+  [-ServiceAccountCredential <pscredential>]
+  [-GroupServiceAccountIdentifier <string>]
+  [-DBConnectionString <string>]
+  [-Force]
+  [-RestoreDKM]
+  [<CommonParameters>]
 ```
 
 The following list describes the parameter details for the Restore-ADFS cmdlet.
