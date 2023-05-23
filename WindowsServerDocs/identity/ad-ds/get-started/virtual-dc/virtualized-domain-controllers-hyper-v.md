@@ -3,7 +3,7 @@ title: Virtualizing Domain Controllers using Hyper-V
 description: Considerations to make when virtualizing Windows Server Active Directory Domain Controllers in Hyper-V
 author: iainfoulds
 ms.author: daveba
-ms.date: 05/16/2023
+ms.date: 05/23/2023
 ms.topic: article
 ms.custom: inhenkel
 ---
@@ -118,10 +118,10 @@ Virtualization platforms, such as Hyper-V, offer a number of convenience feature
 
 - To ensure durability of Active Directory writes, don't deploy a virtual domain controller's database files (the Active Directory database (NTDS.DIT), logs and SYSVOL) on virtual IDE disks. Instead, create a second VHD attached to a virtual SCSI controller and ensure that the database, logs, and SYSVOL are placed on the virtual machine's SCSI disk during domain controller installation.
 - Don't implement differencing disk virtual hard disks (VHDs) on a virtual machine that you're configuring as a domain controller. This makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New Virtual Hard Disk Wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
-- Don't deploy new Active Directory domains and forests on a copy of a Windows Server operating system that wasn't first prepared using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
+- Don't deploy new Active Directory domains and forests on a copy of a Windows Server operating system without first preparing them using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
 
    > [!WARNING]
-   > Running Sysprep on a domain controller is not supported.
+   > Running Sysprep on an already promoted domain controller is not supported.
 
 - To help prevent a potential update sequence number (USN) rollback situation, don't use copies of a VHD file that represents an already deployed domain controller to deploy additional domain controllers. For more information about USN rollback, see [USN and USN Rollback](#usn-and-usn-rollback).
    - Windows Server 2012 and newer allows administrators to clone domain controller images if prepared properly when they want to deploy additional domain controllers
