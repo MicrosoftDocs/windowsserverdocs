@@ -1,5 +1,5 @@
 ---
-title: AD FS Troubleshooting - Idp-Initiated Sign On
+title: Troubleshoot Active Directory Federation Services Idp-initiated sign-on
 description: Learn how to use the sign-in page to troubleshoot Active Directory Federation Services (AD FS) authentication.
 author: billmath
 ms.author: billmath
@@ -8,11 +8,11 @@ ms.date: 05/19/2023
 ms.topic: article
 ---
 
-# AD FS Troubleshooting - Idp-Initiated Sign On
+# Troubleshoot Active Directory Federation Services Idp-initiated sign-on
 
 The Active Directory Federation Services (AD FS) sign-on page can be used to check if authentication is working. This test is done by navigating to the page and signing in. Also, you can use the sign-in page to verify that all SAML 2.0 relying parties are listed.
 
-## Enable the Idp-Initiated Sign on page
+## Enable the Idp-initiated sign on page
 
 By default, AD FS in Windows 2016 doesn't have the sign on page enabled. To enable the page, you can use the PowerShell command `Set-AdfsProperties`. Use the following procedure to enable the page:
 
@@ -29,7 +29,7 @@ By default, AD FS in Windows 2016 doesn't have the sign on page enabled. To enab
 
 ## Test authentication
 
-Use the following procedure to test AD FS authentication with the Idp-Initiated Sign on page.
+Use the following procedure to test AD FS authentication with the Idp-initiated sign on page.
 
 1. Open a web browser, and go to the Idp sign on page. Your URL might look like `https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx`.
 1. You should be prompted to sign-in. Enter your credentials.
