@@ -7,13 +7,14 @@ ms.date: 05/16/2023
 ms.author: wscontent
 ---
 
-# Hotpatch for new virtual machines
+# Hotpatch for virtual machines
 
-Hotpatching is a new way to install updates on supported _Windows Server Datacenter: Azure Edition_ virtual machines (VMs) that doesn’t require a reboot after installation. It works by patching the in-memory code of running processes without the need to restart the process. This article covers information about hotpatch for supported VMs, which has the following benefits:
+Hotpatching is a way to install updates on supported _Windows Server Datacenter: Azure Edition_ virtual machines (VMs) that doesn’t require a reboot after installation. It works by patching the in-memory code of running processes without the need to restart the process. This article covers information about hotpatch for supported VMs, which has the following benefits:
 
-- Lower workload impact with less reboots
-- Faster deployment of updates as the packages are smaller, install faster, and have easier patch orchestration with Azure Update Manager
-- Better protection, as the hotpatch update packages are scoped to Windows security updates that install faster without rebooting
+- Lower workload impact with fewer reboots.
+- Fewer binaries mean update install faster and consume less disk and CPU resources.
+- Better protection, as the hotpatch update packages are scoped to Windows security updates that install faster without rebooting.
+- Reduces the time exposed to security risks and change windows, and easier patch orchestration with Azure Update Manager.
 
 ## Supported platforms
 
@@ -38,7 +39,7 @@ For images in preview, you must use a specific Azure Marketplace image. To creat
 
 ## How Hotpatch works
 
-Hotpatch works by first establishing a baseline with a Windows Update Latest Cumulative Update. Hotpatches are periodically released (for example, on the second Tuesday of the month) that builds on that baseline. Hotpatches contains updates that don't require a reboot. Because Hotpatch patches the in-memory code of running processes without the need to restart the process, your applications are unaffected by the patching process. This action is separate from any potential performance and functionality implications of the patch itself. Periodically (starting at every three months), the baseline is refreshed with a new Latest Cumulative Update.
+Hotpatch works by first establishing a baseline with a Windows Update Latest Cumulative Update. Hotpatches are released every third month, for example, there are 4 cumulative updates and 8 hotpatches. For more information about when hotpatches are released, see [Release notes for Hotpatch in Azure Automanage for Windows Server 2022](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8). Hotpatches contains updates that don't require a reboot. Because Hotpatch patches the in-memory code of running processes without the need to restart the process, your applications are unaffected by the patching process. This action is separate from any potential performance and functionality implications of the patch itself. Periodically (starting at every three months), the baseline is refreshed with a new Latest Cumulative Update.
 
 The following image is an example of an annual three-month schedule (including example unplanned baselines due to zero-day fixes).
 
@@ -76,7 +77,7 @@ Hotpatch is an extension of Windows Update and typical orchestration processes. 
 
   - Virtual machine health, as determined through platform health signals, is monitored to detect patching failures.
 
-- **Azure Stack HCI:** Hotpatch updates are orchestrated either in the operating system (Windows Update), using Windows Server Update Services (WSUS), or manually by an administration. To learn more about using WSUS to manage and distribute updates, see [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
+- **Azure Stack HCI:** Hotpatch updates are orchestrated either in the operating system (Windows Update), using Windows Server Update Services (WSUS), or manually by an administrator. To learn more about using WSUS to manage and distribute updates, see [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
 
 TODO: check WSUS can deliver Hotpatches?
 
