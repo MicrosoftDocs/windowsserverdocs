@@ -9,9 +9,9 @@ ms.author: wscontent
 
 # What is Azure Edition for Windows Server Datacenter?
 
-Windows Server: Azure Edition (WSAE) is a new edition of Windows Server focused on innovation and efficiency. Featuring an annual release cadence and optimized to run on Azure, WSAE brings new functionality to Windows Server users faster than the traditional Long-Term Servicing Channel (LTSC) editions of Windows Server (2016,2019,2022, etc.).
+Windows Server: Azure Edition (WSAE) is a an edition of Windows Server focused on innovation and virtualization optimized to run on Azure. Featuring a Long-Term Servicing Channel (LTSC) and annual updates, WSAE brings new functionality to Windows Server users faster than the Standard and Datacenter editions of Windows Server.
 
-The annual WSAE releases are delivered using Windows Update, rather than a full OS upgrade. As part of this annual release cadence, the WSAE Insider preview program gives the opportunity to access early builds of the next release - leading to general availability. If you're a registered Microsoft Server Insider, you have access to create and use virtual machine images from this preview. Details regarding each preview is shared in release announcements posted to the [Windows Server Insiders](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders) space on Microsoft Tech Community.
+The annual WSAE updates are delivered using Windows Update, rather than a full OS upgrade. As part of this annual update cadence, the WSAE Insider preview program gives the opportunity to access early builds - leading to general availability. If you're a registered Microsoft Server Insider, you have access to create and use virtual machine images from this preview. Details regarding each preview is shared in release announcements posted to the [Windows Server Insiders](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders) space on Microsoft Tech Community.
 
 ## Key differences
 
@@ -19,11 +19,12 @@ The following table summarizes the key differences:
 
 | Description | Windows Server Standard, Datacenter | Windows Server Datacenter: Azure Edition |
 |--|--|--|
-| New releases | Every 2-3 years | TODO: Every year |
-| Support | 5 years of mainstream support, plus 5 years of extended support | TODO: 5 years of mainstream support? |
-| Servicing channels | Long-Term Servicing Channel | TODO: Annual? |
+| New releases | Typically 2-3 years | Typically 2-3 years |
+| Updates | With new release | Yearly |
+| Support | 5 years of mainstream support, plus 5 years of extended support | 5 years of mainstream support, plus 5 years of extended support |
+| Servicing channels | Long-Term Servicing Channel | Long-Term Servicing Channel |
 | Who can use it? | All customers through all channels | TODO: Software Assurance and cloud customers only? |
-| Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience |
+| Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience only |
 
 Capabilities vary by image, see [Getting started with Windows Server Datacenter: Azure Edition](#getting-started-with-windows-server-datacenter-azure-edition) for more detail.
 
