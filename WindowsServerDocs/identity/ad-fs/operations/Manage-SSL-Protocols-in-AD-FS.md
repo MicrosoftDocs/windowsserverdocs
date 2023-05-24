@@ -174,7 +174,7 @@ Use the following registry keys and their values to enable and disable TLS 1.1.
 ```
 
 ## Enable and Disable TLS 1.2
-Starting in Windows Server 2012, TLS 1.2 is enabled by default.  To enforce the use of TLS 1.2, older protocols such as TLS 1.0 and TLS 1.1 need to be disabled.  For more information see [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2)
+Starting in Windows Server 2012, TLS 1.2 is enabled by default.  To enforce the use of TLS 1.2, older protocols such as TLS 1.0 and TLS 1.1 need to be disabled.  For more information see How to enable TLS 1.2.
 
 ## Enabling or Disabling Hashes, Ciphers, and Cipher Suites
 
