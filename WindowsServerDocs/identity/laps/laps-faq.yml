@@ -118,6 +118,10 @@ sections:
           [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information
           on which specific clouds are supported.
 
+      - question: Does Azure AD Domain Services support Windows LAPS?
+        answer: |
+          [Azure AD Domain Services](/azure/active-directory-domain-services/overview) does not currently support Windows LAPS.
+
 additionalContent: |
     ## Next steps
       To learn more about Windows LAPS, here are some more resources.
