@@ -323,8 +323,9 @@ items:
         - name: Manage role-based access control with Windows PowerShell
           href: technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-powershell.md
   - name: Network Connectivity Status Indicator
-    href: ncsi/nci-overview.md
     items:
+    - name: NCSI overview
+      href: ncsi/ncsi-overview.md
     - name: NCSI troubleshooting guide
       href: ncsi/ncsi-troubleshooting-guide.md
     - name: NCSI frequently asked questions
