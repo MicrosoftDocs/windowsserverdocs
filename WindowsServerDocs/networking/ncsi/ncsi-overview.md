@@ -2,9 +2,10 @@
 title: Network Connectivity Status Indicator Overview
 description: The Network Connectivity Status Indicator (NCSI) helps to detect network connectivity and troubleshoot via network probing and passive polling.
 ms.topic: article
-ms.date: 04/26/2023
+ms.date: 05/25/2023
 ms.author: alalve
-author: rnitsch
+author: wscontent
+ms.contributors: rnitsch
 ---
 
 # NCSI overview
@@ -23,7 +24,7 @@ NCSI uses network probes that are network requests sent to an endpoint followed 
 
 NCSI is the component responsible for determining network connectivity exists and if it's Internet or local-only. The reason NCSI was developed to save applications the complex task of determining network configuration on its own. Every attempt to perform a task over the network would require constant attention to whether the network was still accessible. In a network outage, even intermittently, the application would time out the operation and tests the network continuously until the connection is stable.
 
-This seems trivial until you consider that it must perform checks for a multitude of environmental factors such as being behind a proxy, hotspot, or captive portal. NCSI must know if the network it detects is one that can satisfy its requests. Does it need full internet or private corporate access? Users must wait for their actions to either complete or time out while the application makes this determination when deciding how to handle restrictive or no network connectivity scenarios.
+This seems trivial until you consider that it must perform checks for a multitude of environmental factors such as being behind a proxy, hotspot, or captive portal. NCSI must know if the network it detects is one that can satisfy its requests. Does it need full internet or private corporate access? Users must wait for NCSI to either complete or time out while the application determines how to handle restrictive or no network connectivity scenarios.
 
 ### Active probing
 
@@ -68,16 +69,14 @@ NCSI will detect a manually provisioned proxy address from the following registr
 HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\ManualProxies
 ```
 
-NCSI performs an active probe if the above fails including if there aren't any stored proxy information. To learn about additional reasons for proxy failures, see [when are proxy detection requests triggered?](ncsi-frequently-asked-questions.md#when-are-proxy-detection-requests-triggered) and [how are proxies detected?](ncsi-frequently-asked-questions.md#how-are-proxies-detected).
-
 > [!TIP]
 > In Windows 10, users can perform manual proxy configuration by navigating to **Start** > **Settings** > **Network & Internet** > **Proxy** > **Manual proxy setup**.
 
-### Hotspots
+### Captive portals
 
-In the same way that NCSI detects proxies inside an enterprise in order to successfully navigate a probe to the internet, it also determines hindrances outside of an enterprise environment for consumers on mobile devices. Hotspots and captive portals are largely found in public environments such as airports, hospitals, coffee shops, etc. but can also be gateways in satellite extensions of enterprise networks.
+In the same way that NCSI detects proxies inside an enterprise in order to successfully navigate a probe to the internet, it also determines hindrances outside of an enterprise environment for consumers on mobile devices. Captive portals are largely found in public environments such as airports, hospitals, coffee shops, etc. but can also be gateways in satellite extensions of enterprise networks.
 
-Captive portals may send an HTTP redirect or an empty response to the probe instead of allowing it through to the internet. This is how NCSI is able to determine if it’s behind a hotspot as long as the conditions below are true:
+Captive portals may send an HTTP redirect or an empty response to the probe instead of allowing it through to the internet. This is how NCSI is able to determine if it’s behind a captive portal as long as the conditions below are true:
 
 - An active HTTP probe was sent but not via a known proxy.
 - The probe got a response.

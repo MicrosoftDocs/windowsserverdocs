@@ -2,9 +2,10 @@
 title: Network Connectivity Status Indicator FAQ
 description: 'Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.'
 ms.topic: article
-ms.date: 04/26/2023
+ms.date: 05/25/2023
 ms.author: alalve
-author: rnitsch
+author: wscontent
+ms.contributors: rnitsch
 ---
 
 # Answers To Common Questions about NCSI
@@ -62,6 +63,9 @@ If NCSI sees that the connectivity is local-only, the following conditions are t
 
 The default hop count is **8** but this isn't always optimal for enterprises. A value of **3** is suitable for most enterprise infrastructures.
 
+> [!NOTE]
+> Microsoft doesn't recommend non-enterprise users changing this hop count value as they are subject to change.
+
 ## When and how often does the passive probe run?
 
 There are various factors that determine if a passive probe should be ran based on the passive poll information. The following must be true:
@@ -113,13 +117,6 @@ Starting in Windows 11, HTTP is always used. You may see DNS activity but its pu
 [Microsoft-Windows-NCSI/Analytic ] Active Internet Probe (DNS) started on interface {426b6867-b0e4-4ff9-a14b-dd6a4345c24e}
 ```
 
-Other instances are as follows:
-
-- If a proxy has been detected, NCSI will always use HTTP to probe and not DNS.
-For more on proxy discovery and usage with active probes, see [proxies](ncsi-overview.md#proxies).
-- A “forced” web probe is when it hasn't been determined if a proxy exists. NCSI might discover a proxy but if DNS probes don’t work, it might suspect a proxy without positive proof. In either case, NCSI probes using HTTP.
-- Wireless and IPv6 interface always use HTTP probing over DNS.
-
 ## Reasons for network probe failure
 
 There are several reasons as to why a network probe may fail as seen in the table below. For any failures encountered, it's logged in the Event Viewer for investigation.
@@ -145,33 +142,6 @@ Here's an output of a probe failure:
 
 > [!NOTE]
 > If the probe failure was due to traversing a proxy NCSI will set the connectivity state to None. If the failed probe did not traverse (went direct), NCSI will set the connectivity state to set to Local
-
-## When are proxy detection requests triggered?
-
-Proxy detection requests are triggered when the following occurs:
-
-- If an HTTP active probe hasn't yet been successful.
-- On DHCP address changes (new lease, renewal, loss of IP).
-- New proxy settings detected via registry change.
-- The WinHttp Web Proxy Auto-Discovery Service detects a proxy.
-
-## How are proxies detected?
-
-Proxies are detected when NCSI queries the WinHttp Web Proxy Auto-Discovery (WPAD) service to perform the following:
-
-- Look up the configuration URL for WPAD.
-- Download the PAC file from a URL.
-- Uses the PAC file to find the correct proxy IP address.
-
-## How does NCSI use the received proxy information?
-
-When NCSI queues an active probe, it checks for proxy information it stored from previous proxy discovery. The active probe can then be routed appropriately. To determine if NCSI has stored proxy information look at Microsoft-Windows-Http diagnostic events.
-
-Example of a successful proxy detection:
-
-```
-[Microsoft-Windows-WinHttp/Diagnostic] Client successfully downloaded the configuration file from the configuration URL: ConfigurationURL=http://autoproxy.contoso.com/wpad.dat 40
-```
 
 ## When does NCSI exit hotspot mode?
 
