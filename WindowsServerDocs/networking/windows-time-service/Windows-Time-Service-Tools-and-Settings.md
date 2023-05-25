@@ -4,7 +4,7 @@ title: Windows Time service tools and settings
 author: xelu86
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure these settings in the registry or Group Policy Object Editor (GPO).
 ms.author: wscontent
-ms.date: 05/25/2023
+ms.date: 05/30/2023
 ms.topic: article
 ---
 
@@ -137,7 +137,7 @@ All versions of Windows use the same final equation to check `PhaseCorrection`:
 
 To see the `SystemClockRate` and `pollIntervalInSeconds` values (measured in seconds), open a Command Prompt window and then run `w32tm /query /status /verbose`. This command produces an output that resembles the following:  
 
-```cmd
+```
 Leap Indicator: 0(no warning)
 Stratum: 1 (primary reference - syncd by radio clock)
 Precision: -23 (119.209ns per tick)
@@ -367,7 +367,7 @@ In the following section, "All versions" refers to Windows 7, including future i
 
 # [NtpServer](#tab/ntpserver)
 
-|Registry Entry |Versions |Description |
+|Registry entry |Versions |Description |
 | --- | --- | --- |
 |**AllowNonstandardModeCombinations** |All versions |Indicates that nonstandard mode combinations are allowed in synchronization between clients and servers. The default value for domain members is **1**. The default value for stand-alone clients and servers is **1**. |
 |**ChainDisable** | |Controls whether or not the chaining mechanism is disabled. If chaining is disabled (set to 0), a read-only domain controller (RODC) can synchronize with any domain controller, but hosts that don't have their passwords cached on the RODC won't be able to synchronize with the RODC. This is a boolean setting, and the default value is **0**.|

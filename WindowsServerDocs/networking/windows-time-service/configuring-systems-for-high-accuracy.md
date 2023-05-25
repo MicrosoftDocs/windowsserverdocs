@@ -1,10 +1,10 @@
 ---
 ms.assetid:
 title: Configuring systems for high accuracy
-description: Improve Windows Time synchronization tuning under reasonable operating conditions where systems can be configured to maintain 1ms (millisecond) accuracy or better with respect to UTC.
+description: Improve Windows Time synchronization tuning under reasonable operating conditions where systems can be configured to maintain 1 ms (millisecond) accuracy or better with respect to UTC.
 author: xelu86
 ms.author: wscontent
-ms.date: 05/25/2023
+ms.date: 05/30/2023
 ms.topic: article
 ---
 
@@ -12,7 +12,7 @@ ms.topic: article
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10 version 1607 and later, Azure Stack HCI versions 21H2 and 20H2
 
-Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved. Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
+Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved. Under reasonable operating conditions, systems can be configured to maintain 1 ms (millisecond) accuracy or better (with respect to UTC).
 
 > [!WARNING]
 > Windows Server 2012 R2 and below can not meet the same high accuracy objectives. These operating systems are not supported for high accuracy. In these versions, the Windows Time service satisfied the following requirements:
@@ -24,7 +24,7 @@ Time synchronization in Windows 10 and Windows Server 2016 has been substantiall
 
 ## Windows 10 and Windows Server 2016 default configuration
 
-While we support accuracy up to 1ms on Windows 10 or Windows Server 2016, most customers don't require highly accurate time.
+While we support accuracy up to 1 ms on Windows 10 or Windows Server 2016, most customers don't require highly accurate time.
 
 As such, the **default configuration** is intended to satisfy the same requirements as prior operating systems that:
 
@@ -39,11 +39,11 @@ For this reason, we have documented the [Support boundary to configure the Windo
 
 ### Operating System requirements
 
-High accuracy configurations require Windows 10 or Windows Server 2016.  All Windows devices in the time topology must meet this requirement including higher stratum Windows time servers, and in virtualized scenarios, the Hyper-V Hosts that run the time-sensitive virtual machines. All of these devices must be at least Windows 10 or Windows Server 2016.
+High accuracy configurations require Windows 10 or Windows Server 2016. All Windows devices in the time topology must meet this requirement including higher stratum Windows time servers, and in virtualized scenarios, the Hyper-V Hosts that run the time-sensitive virtual machines. All of these devices must be at least Windows 10 or Windows Server 2016.
 
-In the illustration shown below, the virtual machines requiring high accuracy are running Windows 10 or Windows Server 2016.  Likewise, the Hyper-V Host on which the virtual machines reside, and the upstream Windows time server must also run Windows Server 2016.
+In the illustration shown below, the virtual machines requiring high accuracy are running Windows 10 or Windows Server 2016. Likewise, the Hyper-V Host on which the virtual machines reside, and the upstream Windows time server must also run Windows Server 2016.
 
-![An image of three virtual machines connected to a Windows Server 2016 Hyper-V host utilizing the Windows Time service.](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/Topology2016.png)
+![An image of three virtual machines connected to a Windows Server 2016 Hyper-V host utilizing the Windows Time service.](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/topology-2016.png)
 
 > [!TIP]
 > You can run the command `winver` at a command prompt to verify the OS version is 1607 (or higher) and OS Build is 14393 (or higher) as shown below:
@@ -72,7 +72,7 @@ For example: Consider a time sync hierarchy with a highly accurate source, two i
 - Time server B and time server A
 - Time server A and the Source
 
-This measurement can be obtained using the inbox w32tm.exe tool.  To do this:
+This measurement can be obtained using the inbox w32tm.exe tool. To do this:
 
 1. Perform the calculation from the target and time server B.
 
@@ -163,5 +163,5 @@ net stop w32time && net start w32time
 | Key location | HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config |
 | Setting | 2 |
 
-> [!TIP]
+> [!NOTE]
 > To learn more about the W32Time registry settings, see [Windows Time registry reference](Windows-Time-Service-Tools-and-Settings.md#windows-time-registry-reference)
