@@ -132,7 +132,7 @@ To help with this, AD FS correlates all events that are recorded to the Event Vi
 
 :::image type="content" source="media/ad-fs-tshoot-logging/activityid1.png" alt-text="Screenshot of the Details tab of the event Properties dialog box with the ActivityID value called out.":::
 
-This activity ID remains the same for the entire duration of the request, and it is logged as part of every event recorded in the Event Viewer for that request. This means:
+This activity ID remains the same for the entire duration of the request, and it's logged as part of every event recorded in the Event Viewer for that request. This means:
 
 - Filtering or searching the Event Viewer by using this activity ID can help keep track of all related events that correspond to the token request.
 - The same activity ID is logged across different machines, which allows you to troubleshooting a user request across multiple machines such as the Federation Server proxy (FSP).
