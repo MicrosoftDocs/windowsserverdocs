@@ -4,7 +4,7 @@ description: Learn about Active Directory Federation Services modern authenticat
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 05/24/2023
+ms.date: 05/25/2023
 ms.topic: article
 ms.custom: inhenkel
 ---
@@ -17,7 +17,7 @@ ms.custom: inhenkel
 
 | Actor | Description |
 |-----|-----|
-| End user | The security principal (users, applications, services, and groups) who access the resource. |
+| End user | The security principal (users, applications, services, and groups) who accesses the resource. |
 | Client | Your web application, identified by its client ID. The client is usually the party that the end user interacts with, and the client requests tokens from the authorization server. |
 | Authorization server/Identity provider (IdP)| Your AD FS server. It's responsible for verifying the identity of security principals that exist in an organization's directory. It issues security tokens (bearer access token, ID token, and refresh token) upon successful authentication of those security principals. |
 | Resource server/Resource provider/Relying party| Where the resource or data resides. It trusts the authorization server to securely authenticate and authorize the client and uses bearer access tokens to ensure that access to a resource can be granted. |
@@ -30,13 +30,13 @@ The following diagram provides the most basic relationship between the actors:
 
 |Application Type | Description | Role |
 |-----|-----|-----|
-| Native application | Sometimes called a _public client_. It's intended to be a client app that runs on a pc or device and with which the user interacts.| Requests tokens from the authorization server (AD FS) for user access to resources. Sends HTTP requests to protected resources, using the tokens as HTTP headers. |
+| Native application | Sometimes called a _public client_. It's intended to be a client app that runs on a pc or device and with which the user interacts.| Requests tokens from the authorization server (AD FS) for user access to resources. Sends HTTP requests to protected resources, by using the tokens as HTTP headers. |
 | Server application (web app) | A web application that runs on a server and is accessible to users via a browser. Because it's capable of maintaining its own client secret or credential, it's sometimes called a _confidential client_. | Requests tokens from the authorization server (AD FS) for user access to resources. Before it requests a token, client (web app) needs to authenticate by using its secret. |
 | web API | The end resource that the user accesses. Think of it as the new representation of relying parties.| Consumes bearer access tokens obtained by the clients. |
 
 ## Application group
 
-You associate an application group with every native or web app OAuth client or web API resource that's configured with AD FS. Configure the clients in an application group to access the resources in the same group. An application group can have multiple clients and resources.
+You must associate an application group with every native or web app OAuth client or web API resource that's configured with AD FS. Configure the clients in an application group to access the resources in the same group. An application group can have multiple clients and resources.
 
 ## Security tokens
 
@@ -56,14 +56,14 @@ To learn more, see [AD FS single sign-on documentation](../operations/ad-fs-sing
 
 ## Scopes
 
-When you register a resource in AD FS, you can configure scopes to let AD FS perform specific actions. Along with configuring the scope, you must send the scope value in the request for AD FS to perform the action. For example, an administrator configures the scope as `openid` during resource registration and the application (client) must send the `scope = openid` in the authentication request for AD FS to issue the ID Token. Following are details on the available scopes in AD FS:
+When you register a resource in AD FS, you can configure scopes to let AD FS perform specific actions. Along with configuring the scope, you must send the scope value in the request for AD FS to perform the action. For example, an administrator configures the scope as `openid` during resource registration and the application (client) must send the `scope = openid` in the authentication request for AD FS to issue the ID Token. The following are details on the available scopes in AD FS:
 
-- `aza` - If using [OAuth 2.0 protocol extensions for broker clients](/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope `aza`, the server issues a new primary refresh token. It sets the token in the `refresh_token` field of the response and sets the `refresh_token_expires_in field` to the lifetime of the new primary refresh token if one is enforced.
+- `aza` - If you use [OAuth 2.0 protocol extensions for broker clients](/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope `aza`, the server issues a new primary refresh token. It sets the token in the `refresh_token` field of the response and sets the `refresh_token_expires_in field` to the lifetime of the new primary refresh token if one is enforced.
 - `openid` - Lets the application request use of the `openid` connect authentication protocol.
 - `logon_cert` - Lets an application request sign-in certificates that you can use to interactively log on authenticated users. The AD FS server omits the `access_token` parameter from the response and instead provides a base64-encoded CMS certificate chain or a CMC full PKI response. For more information, see [MS-OAPX: OAuth 2.0 protocol extensions](/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e).
 - `user_impersonation` - Requests an on-behalf-of access token from AD FS. For details on how to use this scope, see [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](ad-fs-on-behalf-of-authentication-in-windows-server.md).
 - `allatclaims` – Lets the application request the claims in the access token to be added to the ID token as well.
-- `vpn_cert` - Lets an application request VPN certificates, which establish VPN connections using EAP-TLS authentication. This feature isn't supported anymore.
+- `vpn_cert` - Lets an application request VPN certificates, which establish VPN connections by using EAP-TLS authentication. This feature isn't supported anymore.
 - `email` - Lets the application request an email claim for the signed-in user.
 - `profile` - Lets the application request profile-related claims for the signed-in user.
 
@@ -108,13 +108,13 @@ A diagram of the high-level flow follows.
 
 1. If you include the `scope = allatclaims` in the authentication request, it customizes the [ID token](custom-id-tokens-in-ad-fs.md) to include claims in the access token based on the defined claim rules.
 
-1. Once the required tokens are generated and customized, AD FS responds to the client and includes the tokens. The ID token is only included in the responsenly if the authentication request includes `scope = openid`. The client can always get the ID token after authentication by using the token endpoint.
+1. Once the required tokens are generated and customized, AD FS responds to the client and includes the tokens. The ID token response is only included in the responsenly if the authentication request includes `scope = openid`. The client can always get the ID token after authentication by using the token endpoint.
 
 ## Types of libraries
 
 Use two types of libraries with AD FS:
 
-- **Client libraries**: Native clients and server apps use client libraries to get access tokens for calling a resource such as a web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when using AD FS 2019.
+- **Client libraries**: Native clients and server apps use client libraries to get access tokens for calling a resource such as a web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when you use AD FS 2019.
 
 - **Server middleware libraries**: Web apps use server middleware libraries for user sign-in. Web APIs use server middleware libraries to validate tokens sent by native clients or by other servers. Open Web Interface for .NET (OWIN) is the recommended middleware library.
 
@@ -145,7 +145,7 @@ To better understand how to configure a web app in AD FS to get a customized ID 
 
 ## Single log-out
 
-Single log-out results in ending all client sessions using the session ID. AD FS 2016 and later supports single log-out for OpenID Connect/OAuth. For more information, see [Single log-out for OpenID Connect with AD FS](ad-fs-logout-openid-connect.md).
+Single log-out ends all client sessions that use the session ID. AD FS 2016 and later supports single log-out for OpenID Connect/OAuth. For more information, see [Single log-out for OpenID Connect with AD FS](ad-fs-logout-openid-connect.md).
 
 ## AD FS endpoints
 
