@@ -3,8 +3,8 @@ title: Network Connectivity Status Indicator FAQ
 description: 'Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.'
 ms.topic: article
 ms.date: 05/25/2023
-ms.author: alalve
-author: wscontent
+ms.author: wscontent
+author: xelu86
 ms.contributors: rnitsch
 ---
 
@@ -37,7 +37,7 @@ A successful probe provides the following output:
 
 - If the probe didn’t traverse through a proxy, NCSI makes note of this.
 - The network interface icon changes to reflect that Internet connectivity is accessible.
-- If behind a hotspot where credentials weren't provided or doesn't allow internet access by default without further input, it's set to local capability. For more information, see [hotspots](ncsi-overview.md#hotspots).
+- If behind a captive portal where credentials weren't provided or doesn't allow internet access by default without further input, it's set to local capability. For more information, see [Captive portals](ncsi-overview.md#captive-portals).
 
 ## What can stop an active probe from succeeding?
 
