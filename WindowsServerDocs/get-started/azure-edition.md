@@ -32,7 +32,7 @@ Capabilities vary by image, see [Getting started with Windows Server Datacenter:
 
 ### Hotpatch
 
-Beginning with Windows Server 2022 Datacenter: Azure Edition, Hotpatch gives you the ability to apply security updates on your VM without rebooting. When used with Azure, Azure Automanage for Windows Server automates the onboarding, configuration, and orchestration of hot patching. To learn more, see [Hotpatch for new virtual machines](hotpatch.md).
+Beginning with Windows Server 2022 Datacenter: Azure Edition, Hotpatch gives you the ability to apply security updates on your VM without rebooting. When used with Azure, [Azure Guest Patching Service](/azure/virtual-machines/automatic-vm-guest-patching), along with Automanage for Window Server, automate the onboarding, configuration, and orchestration of hotpatching. To learn more, see [Hotpatch for new virtual machines](hotpatch.md).
 
 #### Supported platforms
 
