@@ -21,7 +21,7 @@ See [Windows Local Administrator Password Solution in Azure AD (preview)](https:
 ## Enable LAPS in the Azure AD device settings
 
 > [!IMPORTANT]
-> By default Azure AD doesn't allow managed devices to post new Windows LAPS passwords to Azure AD. You MUST first have your IT admin enable the feature at the Azure AD tenant level. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) for more information.
+> By default Azure AD doesn't allow managed devices to post new Windows LAPS passwords to Azure AD. You MUST first have your IT admin enable the feature at the Azure AD tenant level. For more information, see [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
 
 ## Configure device policy
 
@@ -196,6 +196,14 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 >
 > - Azure Active Directory doesn't support expiration of a device's currently stored password via modification of the password expiration timestamp in Azure Active Directory. This is a design difference from the Windows Server Active Directory-based Windows LAPS.
 > - Avoid excessively frequent use of the `Reset-LapsPassword` cmdlet. If detected, the activity might be throttled.
+
+## Windows LAPS and Azure AD Connect in hybrid environments
+
+Windows LAPS doesn't rely on [Azure AD Connect](/azure/active-directory/hybrid/connect/whatis-azure-ad-connect-v2), and there are no dependencies between these two technologies. Managed Windows LAPS devices that back up their passwords to Azure AD do so directly via https, with no reliance whatsoever on data synchronization.
+
+Furthermore, the Azure AD and Intune device management portals can only view and manage passwords that have been directly backed up from a Windows LAPS device. Configuring Azure AD Connect to synchronize the on-premises Active Directory Windows LAPS attributes to Azure AD isn't a tested scenario. Manually synchronizing the on-premises Active Directory Windows LAPS attributes to Azure AD **won't** result in those attributes showing up in the Azure AD or Intune device management portals.
+
+While not required for Windows LAPS to operate, whenever you extend your on-premises Active Directory schema as a best practice you should also refresh your Azure AD Connect directory schema. See [Refresh directory schema](/azure/active-directory/hybrid/connect/how-to-connect-installation-wizard#refresh-directory-schema).
 
 ## See also
 

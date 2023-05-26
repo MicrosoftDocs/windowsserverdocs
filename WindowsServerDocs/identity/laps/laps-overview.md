@@ -13,7 +13,7 @@ Windows Local Administrator Password Solution (Windows LAPS) is a Windows featur
 
 ## Windows LAPS AMA session!
 
-We're holding an Ask Me Anything session on Windows LAPS this coming Wednesday May 31 from 10:30-11:30am PST:
+We're holding an Ask Microsoft Anything session on Windows LAPS this coming Wednesday May 31 from 10:30-11:30am PST:
 
 [Ask Microsoft Anything: Windows LAPS](https://aka.ms/AMA/WindowsLAPS)
 
