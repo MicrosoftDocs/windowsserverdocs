@@ -10,7 +10,7 @@ ms.topic: article
 
 # Troubleshoot Active Directory Federation Services with events and logging
 
-Active Directory Federation Services (AD FS) provides two primary logs that you can use use to troubleshoot. They are:
+Active Directory Federation Services (AD FS) provides two primary logs that you can use to troubleshoot. They are:
 
 - The Admin Log.
 - The Tracelog.
@@ -68,7 +68,7 @@ You can raise or lower the auditing level by using the PowerShell cmdlet: ``Set-
 
 ## Types of events
 
-AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it. The type of events can be differentiated between sign-in requests, such as token requests, versus and system requests, such as server-server calls, including fetching configuration information.
+AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it. he type of events can be differentiated between login requests and system requests. Your login requests might be token requests, and your system requests might be server-server calls, including fetching configuration information.
 
 The following table describes the basic types of events.
 
