@@ -105,9 +105,7 @@ sections:
 
       - question: Do I need Azure AD Connect in order to use Windows LAPS?
         answer: |
-          No. There are no dependencies between these two features. Managed Windows LAPS devices back up
-          their passwords to Azure AD directly via https and doesn't rely at all on data synchronization
-          techniques.
+          No. There are no dependencies between these two features. See [Windows LAPS and Azure AD Connect in hybrid environments](laps-scenarios-azure-active-directory.md#windows-laps-and-azure-ad-connect-in-hybrid-environments).
 
       - question: How do I configure a hybrid-joined device to back up the password to both Azure AD and AD?
         answer: This scenario isn't supported. You can only back up the password to one directory at a time.
