@@ -10,14 +10,14 @@ ms.topic: article
 
 # Troubleshoot Active Directory Federation Services with events and logging
 
-Active Directory Federation Services (AD FS) provides two primary logs that can be used in troubleshooting. They are:
+Active Directory Federation Services (AD FS) provides two primary logs that you can use use to troubleshoot. They are:
 
-- the Admin Log.
-- the Tracelog.
+- The Admin Log.
+- The Tracelog.
 
 ## View the admin log
 
-The Admin log provides high level information on issues that are occurring and is enabled by default. To view the admin log:
+The Admin log provides high-level information on issues that are occurring and is enabled by default. To view the admin log:
 
 1. Open **Event Viewer**.
 1. Expand **Applications and Services Log**.
@@ -33,18 +33,18 @@ The Tracelog is where detailed messages are logged, and it's the most useful log
 ### To enable and view the Tracelog
 
 1. Open **Event Viewer** and expand **Applications and Services Log**.
-1. Right-click on **Applications and Services Log**, and select **View**. Then select **Show Analytic and Debug Logs**. This pane shows more nodes)
+1. Right-click on **Applications and Services Log**, and select **View**. Then select **Show Analytic and Debug Logs**. This pane shows more nodes.
 
     :::image type="content" source="media/ad-fs-tshoot-logging/event2.PNG" alt-text="Screenshot of the Event Viewer showing that the user right-clicked Applications and Services Log and selected View with the Show Analytic and Debug Logs option called out.":::
 
 1. Expand **AD FS Tracing**.
-1. Right-click on **Debug** and select **Enable Log**.
+1. Right-click on **Debug**, and select **Enable Log**.
 
     :::image type="content" source="media/ad-fs-tshoot-logging/event3.PNG" alt-text="Screenshot of the Event Viewer showing that the user right-clicked Debug with the Enable Log option called out.":::
 
 ## Event auditing information for AD FS on Windows Server 2016
 
-By default, AD FS in Windows Server 2016 has a basic level of auditing enabled. With basic auditing, administrators see five or less events for a single request. This information marks a significant decrease in the number of events administrators have to look at in order to see a single request. The auditing level can be raised or lowered by using the PowerShell cmdlet:
+By default, AD FS in Windows Server 2016 has a basic level of auditing enabled. With basic auditing, administrators see five or fewer events for a single request. This information marks a significant decrease in the number of events administrators have to look at in order to see a single request. You can raise or lower the auditing level by using the PowerShell cmdlet:
 
 ```powershell
 Set-AdfsProperties -AuditLevel
@@ -62,13 +62,13 @@ To view the current auditing level, you can use the PowerShell cmdlet: ``Get-Adf
 
  :::image type="content" source="media/ad-fs-tshoot-logging/ADFS_Audit_1.PNG" alt-text="Screenshot of the PowerShell window showing the results of the Get-AdfsProperties cmdlet with the Audit Level property called out.":::
 
-The auditing level can be raised or lowered by using the PowerShell cmdlet: ``Set-AdfsProperties -AuditLevel``.
+You can raise or lower the auditing level by using the PowerShell cmdlet: ``Set-AdfsProperties -AuditLevel``.
 
 :::image type="content" source="media/ad-fs-tshoot-logging/ADFS_Audit_2.png" alt-text="Screenshot of the PowerShell window showing the Set-AdfsProperties -AuditLevel Verbose cmdlet typed in the command prompt.":::
 
-## Types of Events
+## Types of events
 
-AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it.  The type of events can be differentiated between sign-in requests (such as token requests) versus system requests (server-server calls including fetching configuration information).
+AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it. The type of events can be differentiated between sign-in requests, such as token requests, versus and system requests, such as server-server calls, including fetching configuration information.
 
 The following table describes the basic types of events.
 
@@ -83,25 +83,25 @@ The following table describes the basic types of events.
 |Sign Out Success|1206|Describes a successful sign out request.|
 |Sign Out Failure|1207|Describes a failed sign out request.|
 
-## Security Auditing
+## Security auditing
 
-Security auditing of the AD FS service account can sometimes help tracking down issues with password updates, request/response logging, request content headers, and device registration results. Auditing of the AD FS service account is disabled by default.
+Security auditing of the AD FS service account can sometimes help track issues with password updates, request/response logging, request content headers, and device registration results. Auditing of the AD FS service account is disabled by default.
 
 ### Enable security auditing
 
-1. Select **Start**. Then go to **Programs** > **Administrative Tools**, and then select **Local Security Policy**.
+1. Select **Start**. Then go to **Programs** > **Administrative Tools**, and then choose **Local Security Policy**.
 1. Go to the **Security Settings\Local Policies\User Rights Management** folder, and then double-click **Generate security audits**.
 1. On the **Local Security Setting** tab, verify that the AD FS service account is listed. If it isn't present, select **Add User** or **Group**, and add it to the list. Then select **OK**.
 1. Open a command prompt with elevated privileges and run the following command to enable auditing:
    ``auditpol.exe /set /subcategory:"Application Generated" /failure:enable /success:enable``
 1. Close **Local Security Policy**, and then open the AD FS Management snap-in.
-1. To open the AD FS Management snap-in, select Start. Go to **Programs** > **Administrative Tools**, and then select AD FS Management.
-1. In the Actions pane, select Edit Federation Service Properties.
-1. In the Federation Service Properties dialog box, select the **Events** tab.
+1. To open the AD FS Management snap-in, select **Start**. Go to **Programs** > **Administrative Tools**, and then select **AD FS Management**.
+1. In the **Actions** pane, select **Edit Federation Service Properties**.
+1. In the **Federation Service Properties** dialog box, select the **Events** tab.
 1. Select the **Success audits** and **Failure audits** check boxes.
 1. Select **OK**.
 
-    :::image type="content" source="media/ad-fs-tshoot-logging/event4.PNG" alt-text="Screenshot of the Events tab of the Federation Service Properties dialog box showing the Success audits and Failure audits options are selected.":::
+    :::image type="content" source="media/ad-fs-tshoot-logging/event4.PNG" alt-text="Screenshot of the Events tab of the Federation Service Properties dialog box showing that the Success audits and Failure audits options are selected.":::
 
 > [!NOTE]
 > The previous instructions are used only when AD FS is on a stand-alone member server.  If AD FS is running on a domain controller, instead of the **Local Security Policy**, use the **Default Domain Controller Policy** located in **Group Policy Management/Forest/Domains/Domain Controllers**. Select **edit** and go to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Management**.
