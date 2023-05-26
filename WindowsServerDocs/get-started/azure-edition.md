@@ -9,7 +9,7 @@ ms.author: wscontent
 
 # What is Azure Edition for Windows Server Datacenter?
 
-Windows Server: Azure Edition (WSAE) is a an edition of Windows Server focused on innovation and virtualization optimized to run on Azure. Featuring a Long-Term Servicing Channel (LTSC) and annual updates, WSAE brings new functionality to Windows Server users faster than the Standard and Datacenter editions of Windows Server.
+Windows Server: Azure Edition (WSAE) is a an edition of Windows Server focused on innovation and virtualization optimized to run on Azure. WSAE features a Long-Term Servicing Channel (LTSC) and yearly product updates, with two major product updates in the first 3 years. WSAE also brings new functionality to Windows Server users faster than the Standard and Datacenter editions of Windows Server.
 
 The annual WSAE updates are delivered using Windows Update, rather than a full OS upgrade. As part of this annual update cadence, the WSAE Insider preview program gives the opportunity to access early builds - leading to general availability. If you're a registered Microsoft Server Insider, you have access to create and use virtual machine images from this preview. Details regarding each preview is shared in release announcements posted to the [Windows Server Insiders](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders) space on Microsoft Tech Community.
 
@@ -20,7 +20,7 @@ The following table summarizes the key differences:
 | Description | Windows Server Standard, Datacenter | Windows Server Datacenter: Azure Edition |
 |--|--|--|
 | New releases | Typically 2-3 years | Typically 2-3 years |
-| Updates | With new release | Yearly |
+| Product updates | With new release | Yearly, with two major updates in the first 3 years |
 | Support | 5 years of mainstream support, plus 5 years of extended support | 5 years of mainstream support, plus 5 years of extended support |
 | Servicing channels | Long-Term Servicing Channel | Long-Term Servicing Channel |
 | Who can use it? | All customers through all channels | TODO: Software Assurance and cloud customers only? |
@@ -52,6 +52,16 @@ Beginning with Windows Server 2022 Datacenter: Azure Edition, SMB over QUIC offe
 SMB over QUIC is also integrated with [Azure Automanage machine best practices for Windows Server](/azure/automanage/automanage-windows-server) to help make SMB over QUIC management easier. QUIC uses certificates to provide its encryption and organizations often struggle to maintain complex public key infrastructures. Azure Automanage machine best practices ensure that certificates don't expire without warning and that SMB over QUIC stays enabled for maximum continuity of service.
 
 To learn more, see [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic) and [SMB over QUIC management with Automanage machine best practices](/azure/automanage/automanage-smb-over-quic).
+
+## Storage Replica compression for data transfer
+
+Beginning with Update 1 for Windows Server 2022 Datacenter: Azure Edition, you can compress Storage Replica data between source
+and destination server. The compression results
+in fewer network packets to transfer the same amount of data, allowing for more throughput, and less
+network utilization. Higher data throughput should also result in lowering synchronization time for
+when you need it most, for example in a disaster recovery scenario.
+
+To learn more about Storage Replica features, see [Storage Replica features](/windows-server/storage/storage-replica/storage-replica-overview#storage-replica-features)
 
 ### Extended network for Azure
 

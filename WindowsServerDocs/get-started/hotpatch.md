@@ -39,7 +39,9 @@ For images in preview, you must use a specific Azure Marketplace image. To creat
 
 ## How Hotpatch works
 
-Hotpatch works by first establishing a baseline with a Windows Update Latest Cumulative Update. Hotpatches are released every third month, for example, there are 4 cumulative updates and 8 hotpatches. For more information about when hotpatches are released, see [Release notes for Hotpatch in Azure Automanage for Windows Server 2022](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8). Hotpatches contains updates that don't require a reboot. Because Hotpatch patches the in-memory code of running processes without the need to restart the process, your applications are unaffected by the patching process. This action is separate from any potential performance and functionality implications of the patch itself. Periodically (starting at every three months), the baseline is refreshed with a new Latest Cumulative Update.
+Hotpatch works by first establishing a baseline with the current Cumulative Update for Windows Server. Periodically (starting every three months), the baseline is refreshed with the latest Cumulative Update, then hotpatches are released for two months following. For example, if January is a Cumulative Update, February and March would be a hotpatch release. For the hotpatch release schedule, see [Release notes for Hotpatch in Azure Automanage for Windows Server 2022](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8).
+
+Hotpatches contains updates that don't require a reboot. Because Hotpatch patches the in-memory code of running processes without the need to restart the process, your applications are unaffected by the patching process. This action is separate from any potential performance and functionality implications of the patch itself.
 
 The following image is an example of an annual three-month schedule (including example unplanned baselines due to zero-day fixes).
 
