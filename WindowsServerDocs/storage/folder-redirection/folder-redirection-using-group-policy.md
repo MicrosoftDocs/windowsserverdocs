@@ -65,14 +65,16 @@ In the **Settings** tab in the **Properties** box for a folder, you can enable t
 
 - **Grant the user exclusive rights**. This setting is enabled by default and is a recommended setting. This setting specifies that the administrator and other users don't have permissions to access this folder.
 
-- **Move the contents of `<FolderName>` to the new location**. This setting moves all the data the user has in the local folder to the shared folder on the network.
+- **Move the contents of `<FolderName>` to the new location**. This setting moves all the data the user has in the local folder to the shared folder on the network. Moving all data can take a large amount of time, depending on the speed of the connection and volume of data. The time to move all data could be significant if both locations are remote.
 
 - **Policy Removal**. The following table summarizes the behavior of redirected folders and their contents when the GPO no longer applies, based on your selections for policy removal. The following policy removal options are available in the **Settings** tab, under **Policy Removal**.
 
 | Policy removal option | Selected setting | Result |
 | ----- | ----- | ----- |
-| Redirect the folder back to the user profile location when policy is removed | Enabled | <li>The folder returns to its user profile location.<li>The contents are copied, not moved, back to the user profile location. <li>The contents aren't deleted from the redirected location.<li>The user continues to have access to the contents, but only on the local computer. |
-| Leave the folder in the new location when policy is removed | Enabled | <li>The folder remains at its redirected location.<li>The contents remain at the redirected location. <li>The user continues to have access to the contents at the redirected folder. 
+| Redirect the folder back to the user profile location when policy is removed<sup>1</sup> | Enabled | <li>The folder returns to its user profile location.<li>The contents are copied, not moved, back to the user profile location. <li>The contents aren't deleted from the redirected location.<li>The user continues to have access to the contents, but only on the local computer. |
+| Leave the folder in the new location when policy is removed | Enabled | <li>The folder remains at its redirected location.<li>The contents remain at the redirected location. <li>The user continues to have access to the contents at the redirected folder. |
+
+<sup>1</sup> Moving all data back to the user profile can take a large amount of time, depending on the speed of the connection and volume of data. The time to move all data could be significant if both locations are remote.
 
 You can also use the GPMC to configure the following Folder Redirection policy settings:
 
