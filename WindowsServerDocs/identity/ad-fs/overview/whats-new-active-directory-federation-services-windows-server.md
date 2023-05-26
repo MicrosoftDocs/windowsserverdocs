@@ -5,7 +5,7 @@ title: What's new in Active Directory Federation Services for Windows Server 201
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 05/26/2023
 ms.topic: article
 ---
 
