@@ -10,7 +10,7 @@ ms.topic: article
 
 # Troubleshoot AD FS
 
-Active Directory Federation Services (AD FS) has many moving pieces, touches many different things and has many different dependencies.  Naturally, this complexity can give rise to various issues. This article is designed to get you started on troubleshooting these issues. It introduces you to the common areas that you should focus on, how to enable features for additional information, and various tools you can use to track down problems.
+Active Directory Federation Services (AD FS) has many moving pieces, touches many different things and has many different dependencies.  Naturally, this complexity can give rise to various issues. This article is designed to get you started on troubleshooting these issues. It introduces you to the common areas that you should focus on, how to enable features for additional information, and various tools to track down problems.
 
 >[!NOTE]
 >For more information, see [AD FS help](https://adfshelp.microsoft.com), which provides effective tools in one place that make it easier for users and administrators to resolve authentication issues at a quicker pace.
