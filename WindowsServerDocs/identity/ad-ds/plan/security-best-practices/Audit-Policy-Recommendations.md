@@ -89,7 +89,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
 | --- | --- | --- | --- |
 | **Logon and Logoff** |  |  |  |
-| Audit Account Lockout | `Yes  \|  No` |  | `Yes  \|  No` |
+| Audit Account Lockout | `No  \|  Yes` |  | `No  \|  Yes` |
 | Audit User/Device Claims |  |  |  |
 | Audit IPsec Extended Mode |  |  |  |
 | Audit IPsec Main Mode |  |  | `IF  \|  IF` |
