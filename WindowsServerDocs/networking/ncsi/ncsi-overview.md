@@ -2,7 +2,7 @@
 title: Network Connectivity Status Indicator Overview
 description: The Network Connectivity Status Indicator (NCSI) helps to detect network connectivity and troubleshoot via network probing and passive polling.
 ms.topic: article
-ms.date: 05/25/2023
+ms.date: 05/30/2023
 ms.author: wscontent
 author: xelu86
 ms.contributors: rnitsch
@@ -10,7 +10,7 @@ ms.contributors: rnitsch
 
 # NCSI overview
 
-The Network Connectivity Status Indicator (NCSI) is a feature that provides a visual display of the current network connection status. The NCSI icon is found on the bottom-right of the taskbar by default:  
+The Network Connectivity Status Indicator (NCSI) is a feature that helps to provide a visual display of the current network connection status. The NCSI icon is found on the bottom-right of the taskbar by default. Depending on how your device is connected to the network will change its appearance.  
 
 :::image type="icon" source="../media/NCSI/ncsi-icon-connected.jpg":::
 
@@ -48,7 +48,7 @@ NCSI sends separate IPv4 and IPv6 active probes in parallel. If either probe suc
 Similar to active probing, passive probing uses learned information from received packets to determine network status. Both probing methods complement one another as they determine intermittent network conditions differently. Certain conditions prevent active probes from functioning correctly, such as, a temporary router having intermittent connectivity issue where a client device doesn't experience any change in the interface state. In case of such intermittent connectivity issues, which can cause active probing to have false negative results, passive polling can determine the connectivity status due to network traffic and keep internet connectivity.
 
 > [!NOTE]
-> As of Windows 11, NCSI is hosted within the Network List Service (aka the Network Profile Manager). Previous OS iterations were hosted in the Network Location Awareness (NLA) service.
+> As of Windows 11, NCSI is hosted within the Network List Manager service (aka the Network Profile Manager). Previous OS iterations were hosted in the Network Location Awareness (NLA) service.
 
 The main goal of the passive probe is to update NCSI’s connectivity status for all active network interfaces based on packet data received. For each active interface, the probe can update the status to either internet or local by constantly inspecting inbound packets for the number of hops traversed from the sender.
 
