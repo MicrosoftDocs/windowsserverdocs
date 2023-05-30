@@ -19,15 +19,15 @@ Poor application performance is one of the most difficult problems to diagnose, 
 > - Windows Server 2019 or later
 > - Windows 10, version 1809 or later
 
-The User Input Delay counter can help you quickly identify the root cause for bad end user RDP experiences. This counter measures how long any user input, such as mouse or keyboard usage, stays in the queue before a process picks it up. The counter works in both local and remote sessions.
+The User Input Delay counter can help you quickly identify the root cause for bad end user Remote Desktop Performance (RDP) experiences. This counter measures how long any user input, such as mouse or keyboard usage, stays in the queue before a process picks it up. The counter works in both local and remote sessions.
 
 The following image shows a rough representation of user input flow from client to application.
 
-![Diagram of user input flows from the users Remote Desktop client to the application.](./media/rds-user-input.png)
+:::image type="content" source="./media/rds-user-input.png" alt-text="Diagram of user input flows from the users Remote Desktop client to the application.":::
 
 The User Input Delay counter measures the max delta within an interval of time between the input being queued and when the app in a [traditional message loop](/windows/win32/winmsg/about-messages-and-message-queues#message-loop) picks it up. A traditional message loop is shown in the following flow chart:
 
-![Diagram of user input Delay performance counter flow.](./media/rds-user-input-delay.png)
+:::image type="content" source="./media/rds-user-input-delay.png" alt-text="Diagram of user input Delay performance counter flow.":::
 
 One important detail of this counter is that it reports the maximum user input delay within a configurable interval. This delay is the longest time it takes for an input to reach the application, which can affect the speed of important and visible actions like typing.
 
@@ -48,15 +48,15 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 > [!NOTE]
 > If you use Windows 10, version 1809 or later or Windows Server 2019 or later, you won't need to enable the registry key.
 
-Next, restart the server. Then, open the Performance Monitor, and select the plus sign (+), as shown in the following screenshot:
+Next, restart the server. Then, open the Performance Monitor, and select the **plus icon (+)**, as shown in the following screenshot:
 
-![Screenshot showing how to add the User input Delay performance counter.](./media/rds-add-user-input-counter-screen.png)
+:::image type="content" source="./media/rds-add-user-input-counter-screen.png" alt-text="Screenshot showing how to add the User input Delay performance counter.":::
 
-Next, you should see the Add Counters dialog, where you can select **User Input Delay per Process** or **User Input Delay per Session**.
+Next, you should see the **Add Counters** dialog, where you can select **User Input Delay per Process** or **User Input Delay per Session**.
 
-![Screenshot showing how to add the User input Delay per session.](./media/rds-user-delay-per-session.png)
+:::image type="content" source="./media/rds-user-delay-per-session.png" alt-text="Screenshot showing how to add the User input Delay per session.":::
 
-![Screenshot showing how to add the User input Delay per process.](./media/rds-user-delay-per-process.png)
+:::image type="content" source="./media/rds-user-delay-per-process.png" alt-text="Screenshot showing how to add the User input Delay per process.":::
 
 When you select **User Input Delay per Process**, you see the **Instances of the selected object**, in other words, the processes in `SessionID:ProcessID <Process Image>` format.
 
@@ -67,7 +67,7 @@ For example, if the Calculator app is running in a [Session ID 1](/previous-vers
 
 The counter starts reporting user input delay as soon as you add it. The maximum scale is set to 100 (ms) by default.
 
-![Screenshot of an example of activity for the User Input Delay per process in the Performance Monitor.](./media/rds-sample-user-input-delay-perfmon.png)
+:::image type="content" source="./media/rds-sample-user-input-delay-perfmon.png" alt-text="Screenshot of an example of activity for the User Input Delay per process in the Performance Monitor.":::
 
 Next, see the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average across all sessions).
 
@@ -85,9 +85,9 @@ This table shows a visual example of these instances. You can get the same infor
 
 ## Counters used in an overloaded system
 
-Now let's look at what you see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the RDSH server performance degrades over time as more users sign in.
+Now let's look at what you see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the Remote Deskotp Session Hosts (RDSH) server performance degrades over time as more users sign in.
 
-![Screenshot of an example performance graph for the RDSH server running Microsoft Word.](./media/rds-user-input-perf-graph.png)
+:::image type="content" source="./media/rds-user-input-perf-graph.png" alt-text="Screenshot of an example performance graph for the RDSH server running Microsoft Word.":::
 
 Here's how to read the graph's lines:
 
@@ -102,9 +102,9 @@ There's a correlation between CPU spikes and user input delay. As the CPU gets m
 
 An important thing to remember when you use this performance counter is that it reports user input delay on an interval of 1,000 ms by default. If you set the performance counter sample interval property, as shown in the following screenshot, to anything different, the reported value will be incorrect.
 
-![Screenshot of the Performance Monitor Properties dialog.](./media/rds-user-input-perfmon-properties.png)
+:::image type="content" source="./media/rds-user-input-perfmon-properties.png" alt-text="Screenshot of the Performance Monitor Properties dialog.":::
 
-To fix this issue, you can set the following registry key to match the interval (in milliseconds) that you want to use. For example, if we change Sample every 1 second to Sample every 5 seconds, we need to set this key to 5000 ms.
+To fix this issue, you can set the following registry key to match the interval (in milliseconds) that you want to use. For example, if you change Sample every 1 second to Sample every 5 seconds, you need to set this key to 5000 ms.
 
 ```
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
@@ -119,11 +119,11 @@ We've also added a couple of keys you might find helpful under the same registry
 
 `LagCounterImageNameFirst`—set this key to `DWORD 1` (default value 0 or key doesn't exist). This key changes the counter names to "Image Name \<SessionID:ProcessId\>." For example, "explorer <1:7964>." This change is useful if you want to sort by image name.
 
-`LagCounterShowUnknown`—set this key to `DWORD 1` (default value 0 or key doesn't exist). This key shows any processes that are running as services or SYSTEM. Some processes show up with their session set as "?."
+`LagCounterShowUnknown`—set this key to `DWORD 1` (default value 0 or key doesn't exist). This key shows any processes that are running as services or SYSTEM. Some processes show up with their session set as "?".
 
 The following image shows what it looks like with both keys on:
 
-![Screenshot of the performance monitor with both keys on.](./media/rds-user-input-delay-with-two-counters.png)
+:::image type="content" source="./media/rds-user-input-delay-with-two-counters.png" alt-text="Screenshot of the performance monitor with both keys on.":::
 
 ## Use the new counters with non-Microsoft tools
 
