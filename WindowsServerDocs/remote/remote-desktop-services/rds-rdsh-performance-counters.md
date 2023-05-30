@@ -1,8 +1,8 @@
 ---
 title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts
-description: Learn about performance counters you can use to diagnose app performance problems, such as your app running slow, on RDSH.
+description: Learn about performance counters you can use to diagnose app performance problems, such as your app running slowly, on RDSH.
 ms.author: elizapo
-ms.date: 05/26/2023
+ms.date: 05/30/2023
 ms.topic: article
 author: lizap
 manager: dougkim
@@ -12,7 +12,7 @@ manager: dougkim
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows 10
 
-Poor application performance is one of the most difficult problems to diagnose, especially for slow or nonresponsive applications. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics. You then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This situation makes reading the data and correlating it with the reported issue difficult.
+Poor application performance is one of the most difficult problems to diagnose, especially for slow or nonresponsive applications. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics. You then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This situation makes it difficult to read the data and correlate it with the reported issue.
 
 > [!NOTE]
 > The User Input Delay counter is only compatible with:
@@ -58,7 +58,7 @@ Next, you should see the Add Counters dialog, where you can select **User Input 
 
 ![Screenshot showing how to add the User input Delay per process.](./media/rds-user-delay-per-process.png)
 
-If you select **User Input Delay per Process**, you see the **Instances of the selected object**, in other words, the processes in `SessionID:ProcessID <Process Image>` format.
+When you select **User Input Delay per Process**, you see the **Instances of the selected object**, in other words, the processes in `SessionID:ProcessID <Process Image>` format.
 
 For example, if the Calculator app is running in a [Session ID 1](/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), you see ```1:4232 <Calculator.exe>```.
 
@@ -69,7 +69,7 @@ The counter starts reporting user input delay as soon as you add it. The maximum
 
 ![Screenshot of an example of activity for the User Input Delay per process in the Performance Monitor.](./media/rds-sample-user-input-delay-perfmon.png)
 
-Next, let's look at the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average across all sessions).
+Next, see the **User Input Delay per Session**. There are instances for each session ID, and their counters show the user input delay of any process within the specified session. In addition, there are two instances called "Max" (the maximum user input delay across all sessions) and "Average" (the average across all sessions).
 
 This table shows a visual example of these instances. You can get the same information in Perfmon by switching to the Report graph type.
 
@@ -94,9 +94,9 @@ Here's how to read the graph's lines:
 - The pink line shows the number of sessions signed in on the server.
 - The red line is the CPU usage.
 - The green line is the maximum user input delay across all sessions.
-- The blue line (displayed as black in this graph) represents average user input delay across all sessions.
+- The blue line, displayed as black in this graph, represents average user input delay across all sessions.
 
-There's a correlation between CPU spikes and user input delay. As the CPU gets more usage, the user input delay increases. Also, as more users get added to the system, CPU usage gets closer to 100%, leading to more frequent user input delay spikes. While this counter is useful in cases where the server runs out of resources, it can also use track user input delay related to a specific application.
+There's a correlation between CPU spikes and user input delay. As the CPU gets more usage, the user input delay increases. Also, as more users get added to the system, CPU usage gets closer to 100%, leading to more frequent user input delay spikes. While this counter is useful in cases where the server runs out of resources, it can also track user input delay related to a specific application.
 
 ## Configuration Options
 
