@@ -58,7 +58,7 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 ```
 
 > [!TIP]
-> If you prefer to set the inheritable permissions on the root of the domain, this is possible by specifying the entire domain root using DN syntax. For example, specify 'DC=laps,DC=com' for the -Identity parameter in the example above.
+> If you prefer to set the inheritable permissions on the root of the domain, this is possible by specifying the entire domain root using DN syntax. For example, specify 'DC=laps,DC=com' for the -Identity parameter.
 
 ## Remove Extended Rights permissions
 
