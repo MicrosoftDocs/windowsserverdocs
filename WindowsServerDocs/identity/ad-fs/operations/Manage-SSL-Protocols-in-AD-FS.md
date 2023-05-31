@@ -48,6 +48,7 @@ Use the following registry keys and their values to enable and disable SSL 2.0.
 ### Enable SSL 2.0
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server|Enabled|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server|DisabledByDefault|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client|Enabled|dword:00000001|
@@ -56,6 +57,7 @@ Use the following registry keys and their values to enable and disable SSL 2.0.
 ### Disable SSL 2.0
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server|Enabled|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server|DisabledByDefault|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client|Enabled|dword:00000000|
@@ -85,6 +87,7 @@ Use the following registry keys and their values to enable and disable SSL 3.0.
 ### Enable SSL 3.0
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server|Enabled|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server|DisabledByDefault|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client|Enabled|dword:00000001|
@@ -93,6 +96,7 @@ Use the following registry keys and their values to enable and disable SSL 3.0.
 ### Disable SSL 3.0
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server|Enabled|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server|DisabledByDefault|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client|Enabled|dword:00000000|
@@ -125,6 +129,7 @@ Use the following registry keys and their values to enable and disable TLS 1.0.
 ### Enable TLS 1.0
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server|Enabled|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server|DisabledByDefault|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client|Enabled|dword:00000001|
@@ -133,6 +138,7 @@ Use the following registry keys and their values to enable and disable TLS 1.0.
 ### Disable TLS 1.0
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server|Enabled"=dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server|DisabledByDefault|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client|Enabled|dword:00000000|
@@ -162,6 +168,7 @@ Use the following registry keys and their values to enable and disable TLS 1.1.
 ### Enable TLS 1.1
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server|Enabled|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server|DisabledByDefault|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client|Enabled|dword:00000001|
@@ -170,6 +177,7 @@ Use the following registry keys and their values to enable and disable TLS 1.1.
 ### Disable TLS 1.1
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server|Enabled|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server|DisabledByDefault|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client|Enabled|dword:00000000|
@@ -200,6 +208,7 @@ TLS 1.2 is enabled by default starting with Windows Server 2012. You can use the
 >It is not recommended to disable TLS 1.2.
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server|Enabled|dword:00000000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server|DisabledByDefault|dword:00000001|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client|Enabled|dword:00000000|
@@ -239,10 +248,13 @@ The .NET Framework 3.5/4.0/4.5.x applications can switch the default protocol to
 For the .NET Framework 3.5, use the following registry key:
 
 |Path|Value Name|Value Data|
+|----|----------|----------|
 |HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v2.0.50727|SchUseStrongCrypto|dword:00000001|
 
 For the .NET Framework 4.0/4.5.x, use the following registry key:
+
 |Path|Value Name|Value Data|
+|----|----------|----------|
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319|SchUseStrongCrypto|dword:00000001|
 
 :::image type="content" source="media/Managing-SSL-Protocols-in-AD-FS/strongauth.png" alt-text="Screenshot Registry editor that highlights the SchUseStrongCrypto key":::
