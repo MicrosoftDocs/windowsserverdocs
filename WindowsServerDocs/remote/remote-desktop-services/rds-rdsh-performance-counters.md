@@ -2,7 +2,7 @@
 title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts
 description: Learn about performance counters you can use to diagnose app performance problems, such as your app running slowly, on RDSH.
 ms.author: elizapo
-ms.date: 05/30/2023
+ms.date: 05/31/2023
 ms.topic: article
 author: lizap
 manager: dougkim
@@ -85,7 +85,7 @@ This table shows a visual example of these instances. You can get the same infor
 
 ## Counters used in an overloaded system
 
-Now let's look at what you see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the Remote Deskotp Session Hosts (RDSH) server performance degrades over time as more users sign in.
+Now let's look at what you see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the Remote Desktop Session Hosts (RDSH) server performance degrades over time as more users sign in.
 
 :::image type="content" source="./media/rds-user-input-perf-graph.png" alt-text="Screenshot of an example performance graph for the RDSH server running Microsoft Word.":::
 
@@ -117,7 +117,7 @@ To fix this issue, you can set the following registry key to match the interval 
 
 We've also added a couple of keys you might find helpful under the same registry key:
 
-`LagCounterImageNameFirst`—set this key to `DWORD 1` (default value 0 or key doesn't exist). This key changes the counter names to "Image Name \<SessionID:ProcessId\>." For example, "explorer <1:7964>." This change is useful if you want to sort by image name.
+`LagCounterImageNameFirst`—set this key to `DWORD 1` (default value 0 or key doesn't exist). This key changes the counter names to "Image Name \<SessionID:ProcessId\>" for example, "explorer <1:7964>". This change is useful if you want to sort by image name.
 
 `LagCounterShowUnknown`—set this key to `DWORD 1` (default value 0 or key doesn't exist). This key shows any processes that are running as services or SYSTEM. Some processes show up with their session set as "?".
 
