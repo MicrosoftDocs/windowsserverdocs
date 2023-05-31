@@ -43,12 +43,12 @@ High accuracy configurations require Windows 10 or Windows Server 2016. All Wind
 
 In the illustration shown below, the virtual machines requiring high accuracy are running Windows 10 or Windows Server 2016. Likewise, the Hyper-V Host on which the virtual machines reside, and the upstream Windows time server must also run Windows Server 2016.
 
-![An image of three virtual machines connected to a Windows Server 2016 Hyper-V host utilizing the Windows Time service.](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/topology-2016.png)
+![A diagram that shows three virtual machines connected to a Windows Server 2016 Hyper-V host utilizing the Windows Time service.](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/topology-2016.png)
 
 > [!TIP]
 > You can run the command `winver` at a command prompt to verify the OS version is 1607 (or higher) and OS Build is 14393 (or higher) as shown below:
 >
-> ![A screenshot of the winver command displaying Windows Server 2016 version 1607 and operating system build 14393](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/winver-2016.png)
+> ![A screenshot of the winver command displaying Windows Server 2016 version 1607 and operating system build 14393.](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/winver-2016.png)
 
 ### System configuration
 
