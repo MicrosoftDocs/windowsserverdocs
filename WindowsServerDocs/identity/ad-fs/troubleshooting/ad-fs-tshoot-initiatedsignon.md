@@ -2,8 +2,7 @@
 title: Troubleshoot Active Directory Federation Services Idp-initiated sign-on
 description: Learn how to use the sign-in page to troubleshoot Active Directory Federation Services (AD FS) authentication.
 author: billmath
-ms.author: billmath
-manager: amycolannino
+ms.author: wscontent
 ms.date: 05/19/2023
 ms.topic: article
 ---
@@ -23,7 +22,7 @@ By default, AD FS in Windows 2016 doesn't have the sign on page enabled. To enab
     :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp2.png" alt-text="Screenshot showing PowerShell output highlighting that the EnableIdpInitiatedSignonPage property is set to false.":::
 
 1. In PowerShell, enter `Set-AdfsProperties -EnableIdpInitiatedSignonPage $true`.
-1. PowerShell doesn't provide a confirmation for the ``Set-AdfsProperties` command. To confirm the **EnableIdpInitatedSignonPage** property is set to true, enter the `Get-AdfsProperties` command again and check the value for the property.
+1. PowerShell doesn't provide a confirmation for the `Set-AdfsProperties` command. To confirm the **EnableIdpInitatedSignonPage** property is set to true, enter the `Get-AdfsProperties` command again and check the value for the property.
 
     :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp4.png" alt-text="Screenshot  PowerShell output highlighting that the EnableIdpInitiatedSignonPage property is set to true.":::
 
@@ -52,7 +51,7 @@ You can test the seamless sign-in experience by making sure the URL for your AD 
 
 1. Enter your URL and select **Add**. Select **Close**.
 
-    ![Add url](media/ad-fs-tshoot-initiatedsignon/idp9.png)
+    ![A screenshot of the local intranet popup box requesting the URL to be added for authentication.](media/ad-fs-tshoot-initiatedsignon/idp9.png)
 
 1. Select **Ok**. Then select **Ok** to close the internet options.
 
