@@ -478,10 +478,14 @@
       items:
       - name: DirectAccess
         items:
+        - name: Direct Access Prerequisites
+          href: remote-access/directaccess/prerequisites-for-deploying-directaccess.md
         - name: DirectAccess Unsupported configurations
           href: remote-access/directaccess/directAccess-Unsupported-Configurations.md
         - name: Direct Access Capacity Planning
           href: remote-access/directaccess/directAccess-Capacity-Planning.md
+        - name: Direct Access deployment paths
+          href: 
       - name: RAS Gateway
         items:
         - name: GRE Tunneling in Windows Server
