@@ -1,5 +1,5 @@
 ---
-title: Upgrading Remote Desktop Services deployments
+title: Upgrade Remote Desktop Services deployments
 description: Learn about which Remote Desktop Services versions can be upgraded and the order to upgrade your Remote Desktop role services.
 ms.author: spatnaik
 ms.date: 06/01/2023
@@ -8,7 +8,7 @@ ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
 author: spatnaik
 manager: scottman
 ---
-# Upgrading Remote Desktop Services deployments
+# Upgrade Remote Desktop Services deployments
 
 >Applies to: Windows Server 2022, Windows Server 2019, and Windows Server 2016
 
