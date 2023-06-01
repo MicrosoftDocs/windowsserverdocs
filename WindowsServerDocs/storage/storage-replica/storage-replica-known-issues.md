@@ -482,7 +482,7 @@ There's a known code defect in Windows Server, version 1709, which caused this e
 
 ## Unable to setup Storage Replica with physical sector sizes greater than 4K
 
-Storage Replica does not support disks with physical sector sizes great than 4K today. We are exploring implementing this feature in future releases.
+Storage Replica does not support disks with physical sector sizes greater than 4K today. We are exploring implementing this feature in future releases.
 
 ## Next steps
 
