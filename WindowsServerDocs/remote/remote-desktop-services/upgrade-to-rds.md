@@ -20,18 +20,18 @@ Beginning with Windows Server 2012 R2, you can upgrade to a newer version of Win
 
 ## Flow for deployment upgrades
 
-In order to keep the down-time to a minimum, use the follow as a guide:
+In order to keep the downtime to a minimum, use the follow as a guide:
 
-1. **RD Connection Broker servers** should upgraded first. If you have an active/active configuration, remove all but one server from the deployment and perform an in-place upgrade. Perform upgrades on the remaining RD Connection Broker servers offline and then re-add them to the deployment. The deployment isn't available during the RD Connection Broker servers' upgrade.
+1. **RD Connection Broker servers** should be upgraded first. If you have an active/active configuration, remove all but one server from the deployment and perform an in-place upgrade. Perform upgrades on the remaining RD Connection Broker servers offline and then readd them to the deployment. The deployment isn't available during the RD Connection Broker servers' upgrade.
 
    > [!NOTE]
-   > It's mandatory to upgrade all RD Connection Broker servers. We don't support Windows Server RD Connection Broker servers in a mixed deployment. Once the RD Connection Broker server(s) are running a new Windows Server version, the deployment remains functional, even if the rest of the servers in the deployment are still running the previous version.
+   > It's mandatory to upgrade all RD Connection Broker servers. Windows Server RD Connection Broker servers in a mixed deployment are not supported. Once the RD Connection Broker server(s) are running a new Windows Server version, the deployment remains functional, even if the rest of the servers in the deployment are still running the previous version.
 
 2. **RD License servers** should be upgraded before you upgrade your RD Session Host servers.
    > [!NOTE]
    > RD license servers from an older version of Windows Server work with newer versions, but they can only process CALs from the older Windows Server version. They can't use the newer Windows Server CALs. For more information about RD license servers, see [RDS CAL version compatibility](rds-client-access-license.md#rds-cal-version-compatibility).
 
-3. **RD Session Host servers** can be upgraded next. Avoid down time during upgrade by splitting the servers to be upgraded in two steps as detailed. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers](upgrade-to-rdsh.md).
+3. **RD Session Host servers** can be upgraded next. Avoid downtime during upgrade by splitting the servers to be upgraded in two steps as detailed. All will be functional after the upgrade. To upgrade, use the steps described in [Upgrading Remote Desktop Session Host servers](upgrade-to-rdsh.md).
 
 4. **RD Virtualization Host servers** can be upgraded next. To upgrade, use the steps described in [Upgrading Remote Desktop Virtualization Host servers](upgrade-to-rdvh.md).
 
