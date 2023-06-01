@@ -28,6 +28,8 @@ Windows Server server.
 
 To install the DNS Server role as a standalone server, perform the following steps:
 
+<!-- DNS Server installation steps using Server Manager are almost identical to those for deploying DHCP; need to adjust the below accordingly  -->
+
 Here's how to install the DNS Server role using Server Manager from the Windows desktop.
 
 1. From the Windows desktop, open the **Start** menu, then select the **Server Manager** tile.
@@ -94,7 +96,7 @@ Follow these steps to authorize your DHCP server in a domain environment.
 
 #### [PowerShell](#tab/powershell)
 
-(powershell version)
+<!-- (powershell version) -->
 
 #### [GUI](#tab/gui)
 
