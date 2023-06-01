@@ -35,17 +35,17 @@ Note that not all supported distributions are listed here. See the current suppo
 
 ### Enterprise Linux (RHEL and variants)
 
-- Enterprise Linux 6 (EL6)<p>`sudo rpm -Uvh https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm`
+- Enterprise Linux 6 (EL6)<p>`sudo yum install https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm`
 
-- Enterprise Linux 7 (EL7)<p>`sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm`
+- Enterprise Linux 7 (EL7)<p>`sudo yum install https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm`
 
-- Enterprise Linux 8 (EL8)<p>`sudo rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm`
+- Enterprise Linux 8 (EL8)<p>`sudo dnf install https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm`
 
 ### SUSE
 
-- SUSE Linux Enterprise Server 12<p>`sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm`
+- SUSE Linux Enterprise Server 12<p>`sudo zypper install https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm`
 
-- SUSE Linux Enterprise Server 15<p>`sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm`
+- SUSE Linux Enterprise Server 15<p>`sudo zypper install https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm`
 
 ### Ubuntu
 

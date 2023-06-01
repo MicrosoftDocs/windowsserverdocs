@@ -1,10 +1,8 @@
 ---
-description: "Learn more about: Determining the Cost"
-ms.assetid: e3ea1f67-60d4-4566-b24c-37faa95c3b2a
+description: Learn more about assigning cost values to links
 title: Determining the Cost
 author: iainfoulds
 ms.author: daveba
-manager: daveba
 ms.date: 05/16/2023
 ms.topic: article
 ms.custom: inhenkel
@@ -53,5 +51,3 @@ Use the following table to calculate the cost of each site link based on wide ar
 |4,096|283|
 
 These costs don't reflect differences in reliability between network links. Set higher costs on any failure-prone network links so that you don't have to rely on those links for replication. By setting higher site link costs, you can control replication failover when a site link fails.
-
-

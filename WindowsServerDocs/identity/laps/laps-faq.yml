@@ -89,11 +89,11 @@ sections:
 
   - name: Windows LAPS and Azure Active Directory
     questions:
-      - question: I applied a Windows LAPS policy to my managed Azure AD-joined device which has BackupDirectory=AAD, but Windows LAPS is getting an error when attempting to post the password to Azure AD?
+      - question: Why is my Azure AD-joined device getting an error when attempting to post the password to Azure AD?
         answer: |
-          You probably forgot to enable the LAPS feature for your Azure AD tenant. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) for more information.
+          The most common reason for this forgetting to enable the LAPS feature for your Azure AD tenant. See [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
 
-      - question: Do I need to extend my forest's schema if I'm only planning to backup passwords to Azure AD?
+      - question: Do I need to extend my forest's schema if I'm only planning to back up passwords to Azure AD?
         answer: |
           No.
 
@@ -105,9 +105,7 @@ sections:
 
       - question: Do I need Azure AD Connect in order to use Windows LAPS?
         answer: |
-          No. There are no dependencies between these two features. Managed Windows LAPS devices back up
-          their passwords to Azure AD directly via https and doesn't rely at all on data synchronization
-          techniques.
+          No. There are no dependencies between these two features. See [Windows LAPS and Azure AD Connect in hybrid environments](laps-scenarios-azure-active-directory.md#windows-laps-and-azure-ad-connect-in-hybrid-environments).
 
       - question: How do I configure a hybrid-joined device to back up the password to both Azure AD and AD?
         answer: This scenario isn't supported. You can only back up the password to one directory at a time.
@@ -117,6 +115,10 @@ sections:
           See [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps) and 
           [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information
           on which specific clouds are supported.
+
+      - question: Does Azure AD Domain Services support Windows LAPS?
+        answer: |
+          [Azure AD Domain Services](/azure/active-directory-domain-services/overview) doesn't currently support Windows LAPS.
 
 additionalContent: |
     ## Next steps
