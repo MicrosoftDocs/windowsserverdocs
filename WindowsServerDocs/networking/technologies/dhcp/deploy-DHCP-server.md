@@ -200,8 +200,9 @@ By customizing the subnet mask length, you can reduce the number of bits that ar
 
 To prevent addressing and routing problems, you should make sure that all TCP/IP computers on a network segment use the same subnet mask and that each computer or device has an unique IP address.
 
-For more information on scopes and configuring your DHCP server, see [Plan DHCP deployment](/networking/technologies/dhcp/dhcp-deploy-wps#bkmk_plan)
+For more information on scopes and configuring your DHCP server, see [Plan DHCP deployment](/dhcp-deploy-wps#bkmk_plan)
 
 ## Related links
 
-- 
+- [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
+- [DHCP Subnet selection options](/dhcp-subnet-options)
