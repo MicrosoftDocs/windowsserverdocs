@@ -24,7 +24,7 @@ Hyper-V offers three types of virtual controllers: IDE, SCSI, and virtual Fibre 
 
 ### IDE
 
-IDE controllers expose IDE disks to the VM. The IDE controller is emulated. It's the only controller available for guest VMs running earlier versions of Windows without [Hyper-V VM integration services](https://learn.microsoft.com/virtualization/hyper-v-on-windows/reference/integration-services). Disk I/O performed by using the IDE filter driver provided with integration services is significantly better than the disk I/O performance provided with the emulated IDE controller.
+IDE controllers expose IDE disks to the VM. The IDE controller is emulated. It's the only controller available for guest VMs running earlier versions of Windows without [Hyper-V VM integration services](/virtualization/hyper-v-on-windows/reference/integration-services). Disk I/O performed by using the IDE filter driver provided with integration services is significantly better than the disk I/O performance provided with the emulated IDE controller.
 
 **Recommendation**: Only use IDE disks for operating system (OS) disks. OS disks have performance limitations due to the maximum I/O size that can be issued to these devices.
 
@@ -71,7 +71,7 @@ Convert-VHD –Path E:\vms\testvhd\test.vhd –DestinationPath E:\vms\testvhd\te
 In this example, the source disk to convert is **test.vhd**, and the new (converted) disk is **test-converted.vhd**. When you run the command, update the `-Path` and `-DestinationPath` values as required for your disk conversion.
 
 > [!NOTE]
-> The new (converted) VHD is created with the data from the source VHD via the **Copy from Source** disk option. For more information, see the [Convert-VHD](https://learn.microsoft.com/powershell/module/hyper-v/convert-vhd) command in the Window PowerShell Hyper-V reference.
+> The new (converted) VHD is created with the data from the source VHD via the **Copy from Source** disk option. For more information, see the [Convert-VHD](/powershell/module/hyper-v/convert-vhd) command in the Window PowerShell Hyper-V reference.
 
 
 #### Check disk alignment
@@ -169,7 +169,7 @@ The VHDX format also provides several performance features:
 
 There are three types of VHD files: fixed, dynamic, and differencing. 
 
-**Recommendation**: As you compare the VHD file types, consider the following Recommendation.
+**Recommendation**: As you compare the VHD file types, consider the following recommendations.
 
 | File type | Disk format | Recommendation |
 | --- | --- | --- |
