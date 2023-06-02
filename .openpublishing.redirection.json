@@ -11004,7 +11004,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/remote/remote-access/da-always-on-vpn-migration/Remote-Access-Server-Role-Documentation.md",
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
       "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
     }

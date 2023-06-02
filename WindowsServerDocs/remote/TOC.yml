@@ -600,7 +600,7 @@
           href: remote-access/directaccess/tlg-otp-securid/Test-Lab-Guide-Demonstrate-directAccess-with-OTP-Authentication-and-RSA-SecurID.md
           items:
           - name: Overview of the Test Lab Scenario OTP Authentication and RSA SecurID
-            href: remote-access/directaccess/tlg-otp-securid/Overview-of-the-Test-Lab-Scenario.md
+            href: remote-access/directaccess/tlg-multisite/Overview-of-the-Test-Lab-Scenario_4.md
           - name: Configuration Requirements
             href: remote-access/directaccess/tlg-multisite/Configuration-Requirements.md
           - name: Steps for Configuring the Test Lab
