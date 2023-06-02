@@ -42,7 +42,7 @@ No, their current session will remain valid and the next time they would need to
 
 **I have a claims provider trust with another company to access resources? How should I move this trust relationship?**
 
-You should look to take advantage of [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) to accomplish the same authentication access.
+You should look to take advantage of [Azure AD B2B](/azure/active-directory/external-identities/what-is-b2b) to accomplish the same authentication access which has more capabilities.
 
 **We have custom claim rules can Azure AD support these?**
 
@@ -54,11 +54,11 @@ It can take up to 4 hours to fully cutover so [plan your maintenance window acco
 
 **Is AD FS required for using O365?** 
 
-No, O365 can authenticate you directly without needing ADFS.
+No, O365 uses Azure Active Directory as it's Identity Provider.   While customers may have chosen to federate their Azure Active Directory tenant to federated providers such as AD FS, as an option for hybrid scenarios, it is not required to use O365 or Azure services.   The majority of customers choose to use managed authentication for hybrid scenarios which does not use identity federation.
 
 **Once I move the application configuration to Azure AD, is there anything else I have to do to complete the migration?**
 
-Yes, the migration of an application to Azure AD isn’t complete until you have reconfigured the app itself (cutover) to use Azure AD.
+Yes, the migration of an application to Azure AD isn’t complete until you have reconfigured the app itself (cutover) to use Azure AD as it's authentication provider.
 
 **Is ADFS required so users can login with their Email Address or User Principal Name (UPN)?** 
 
