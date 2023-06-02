@@ -1,269 +1,339 @@
 ---
-title: Hyper-V Storage I/O Performance
-description: Storage i/o performance considerations in Hyper-V performance tuning
+title: Hyper-V storage I/O performance
+description: Learn about storage I/O performance considerations in Hyper-V performance tuning, including advantages, limitations, and recommendations.
 ms.topic: article
 ms.author: wscontent
 author: phstee
-ms.date: 04/01/2023
+ms.date: 06/02/2023
 ---
 
-# Hyper-V Storage I/O Performance
+# Hyper-V storage I/O performance
 
-This section describes the different options and considerations for tuning storage I/O performance in a virtual machine. The storage I/O path extends from the guest storage stack, through the host virtualization layer, to the host storage stack, and then to the physical disk. Following are explanations about how optimizations are possible at each of these stages.
+This article explores different options and considerations for tuning storage I/O performance in a virtual machine (VM). The storage I/O path extends across four successive stages:
+
+1. Guest storage stack
+1. Host virtualization layer
+1. Host storage stack
+1. Physical disk
+
+The following sections describe the optimizations possible for each stage.
 
 ## Virtual controllers
 
-Hyper-V offers three types of virtual controllers: IDE, SCSI, and Virtual host bus adapters (HBAs).
+Hyper-V offers three types of virtual controllers: IDE, SCSI, and virtual Fibre Channel host bus adapters (HBAs).
 
-## IDE
+### IDE
 
-IDE controllers expose IDE disks to the virtual machine. The IDE controller is emulated, and it's the only controller that's available for guest VMs running older version of Windows without the Virtual Machine Integration Services. Disk I/O that's performed by using the IDE filter driver that's provided with the Virtual Machine Integration Services is significantly better than the disk I/O performance that's provided with the emulated IDE controller. We recommend that IDE disks be used only for the operating system disks because they have performance limitations due to the maximum I/O size that can be issued to these devices.
+IDE controllers expose IDE disks to the VM. The IDE controller is emulated. It's the only controller available for guest VMs running earlier versions of Windows without [Hyper-V VM integration services](https://learn.microsoft.com/virtualization/hyper-v-on-windows/reference/integration-services). Disk I/O performed by using the IDE filter driver provided with integration services is significantly better than the disk I/O performance provided with the emulated IDE controller.
 
-## SCSI (SAS controller)
+**Recommendation**: Only use IDE disks for operating system (OS) disks. OS disks have performance limitations due to the maximum I/O size that can be issued to these devices.
 
-SCSI controllers expose SCSI disks to the virtual machine, and each virtual SCSI controller can support up to 64 devices. For optimal performance, we recommend that you attach multiple disks to a single virtual SCSI controller and create additional controllers only as they're required to scale the number of disks connected to the virtual machine. SCSI path isn't emulated which makes it the preferred controller for any disk other than the operating system disk. In fact with Generation 2 VMs, it's the only type of controller possible. Introduced in Windows Server 2012 R2, this controller is reported as SAS to support shared VHDX.
+### SCSI (SAS controller)
 
-## Virtual Fibre Channel HBAs
+SCSI controllers expose SCSI disks to the VM. Each virtual SCSI controller can support up to 64 devices. The SCSI path isn't emulated, which makes it the preferred controller for any disk other than the OS disk. For Generation 2 VMs, SCSI disks are the only type of controller possible. Support for SCSI disks is available in Windows Server 2012 R2 and later, where the controller is reported as SAS to support shared VHDX.
 
-Virtual Fibre Channel HBAs can be configured to allow direct access for virtual machines to Fibre Channel and Fibre Channel over Ethernet (FCoE) LUNs. Virtual Fibre Channel disks bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O.
+**Recommendation**: For optimal performance, attach multiple disks to a single virtual SCSI controller. Create other controllers only as required to scale the number of disks connected to the VM. 
 
-Large data drives and drives that are shared between multiple virtual machines (for guest clustering scenarios) are prime candidates for virtual Fibre Channel disks.
+### Virtual Fibre Channel HBAs
 
-Virtual Fibre Channel disks require one or more Fibre Channel host bus adapters (HBAs) to be installed on the host. Each host HBA is required to use an HBA driver that supports the Windows Server 2016 Virtual Fibre Channel/NPIV capabilities. The SAN fabric should support NPIV, and the HBA port(s) that are used for the virtual Fibre Channel should be set up in a Fibre Channel topology that supports NPIV.
+Configure Virtual Fibre Channel HBAs to allow direct access for VMs to Fibre Channel and Fibre Channel over Ethernet (FCoE) LUNs. Virtual Fibre Channel disks bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O.
 
-To maximize throughput on hosts that are installed with more than one HBA, we recommend that you configure multiple virtual HBAs inside the Hyper-V virtual machine (up to four HBAs can be configured for each virtual machine). Hyper-V will automatically make a best effort to balance virtual HBAs to host HBAs that access the same virtual SAN.
+Large data drives and drives shared between multiple VMs (for guest clustering scenarios) are prime candidates for virtual Fibre Channel disks.
+
+Virtual Fibre Channel disks require one or more Fibre Channel HBAs to be installed on the host. Each host HBA is required to use an HBA driver that supports Windows Server 2016 Virtual Fibre Channel/NPIV capabilities. The SAN fabric should support NPIV, and HBA ports used for the virtual Fibre Channel should be set up in a Fibre Channel topology that supports NPIV.
+
+**Recommendation**: To maximize throughput on hosts installed with more than one HBA, configure multiple virtual HBAs inside the Hyper-V VM. Up to four HBAs can be configured for each VM. Hyper-V automatically makes a best effort to balance virtual HBAs to host HBAs that access the same virtual SAN.
 
 ## Virtual disks
 
-Disks can be exposed to the virtual machines through the virtual controllers. These disks could be virtual hard disks that are file abstractions of a disk or a pass-through disk on the host.
+Virtual disks can be exposed to the VMs through the virtual controllers. These disks can be virtual hard disks that are file abstractions of a disk or a pass-through disk on the host.
 
-## Virtual hard disks
+There are two virtual hard disk formats: VHD and VHDX. Each format supports three types of virtual hard disk files.
 
-There are two virtual hard disk formats, VHD and VHDX. Each of these formats supports three types of virtual hard disk files.
+**Recommendation**: When you upgrade to Windows Server 2016, convert all VHD files to the VHDX format. For details, see the following [VHDX](#vhdx-format) section.
 
-## VHD format
+### VHD format
 
-The VHD format was the only virtual hard disk format that was supported by Hyper-V in past releases. Introduced in Windows Server 2012, the VHD format has been modified to allow better alignment, which results in significantly better performance on new large sector disks.
+Earlier versions of Hyper-V support only the VHD format. The VHD format is available in Windows Server 2012 and later. Later versions of Hyper-V contain improvements for the VHD format to allow better alignment. The updates result in significantly better performance on new large sector disks.
 
-Any new VHD that's created on a Windows Server 2012 or newer has the optimal 4 KB alignment. This aligned format is completely compatible with previous Windows Server operating systems. However, the alignment property will be broken for new allocations from parsers that are not 4 KB alignment-aware (such as a VHD parser from a previous version of Windows Server or a non-Microsoft parser).
+A VHD created in Windows Server 2012 or later has the optimal 4-KB alignment. The aligned format is fully compatible with previous Windows Server versions. However, the alignment property is broken for new allocations from parsers that aren't 4 KB alignment-aware. Examples include a VHD parser from an earlier version of Windows Server or a non-Microsoft parser.
 
-Any VHD that's moved from a previous release doesn't automatically get converted to this new improved VHD format.
+#### Convert disk to VHD format
 
-To convert to new VHD format, run the following Windows PowerShell command:
+When you move a VHD from an earlier release of Hyper-V or Windows Server to a later release, the system doesn't automatically convert the disk to the newer improved VHD format.
 
-``` syntax
+To convert an existing virtual disk to use the newer VHD format, you can use the `Convert-VHD` PowerShell command: 
+
+```powershell
 Convert-VHD –Path E:\vms\testvhd\test.vhd –DestinationPath E:\vms\testvhd\test-converted.vhd
 ```
 
-You can check the alignment property for all the VHDs on the system, and it should be converted to the optimal 4 KB alignment. You create a new VHD with the data from the original VHD by using the **Create-from-Source** option.
+In this example, the source disk to convert is **test.vhd**, and the new (converted) disk is **test-converted.vhd**. When you run the command, update the `-Path` and `-DestinationPath` values as required for your disk conversion.
 
-To check for alignment by using Windows Powershell, examine the Alignment line, as shown below:
+> [!NOTE]
+> The new (converted) VHD is created with the data from the source VHD via the **Copy from Source** disk option. For more information, see the [Convert-VHD](https://learn.microsoft.com/powershell/module/hyper-v/convert-vhd) command in the Window PowerShell Hyper-V reference.
 
-``` syntax
-Get-VHD –Path E:\vms\testvhd\test.vhd
 
-Path                    : E:\vms\testvhd\test.vhd
-VhdFormat               : VHD
-VhdType                 : Dynamic
-FileSize                : 69245440
-Size                    : 10737418240
-MinimumSize             : 10735321088
-LogicalSectorSize       : 512
-PhysicalSectorSize      : 512
-BlockSize               : 2097152
-ParentPath              :
-FragmentationPercentage : 10
-Alignment               : 0
-Attached                : False
-DiskNumber              :
-IsDeleted               : False
-Number                  :
-```
+#### Check disk alignment
 
-To verify alignment by using Windows PowerShell, examine the Alignment line, as shown below:
+You can check the `Alignment` property for the VHDs in your system. After you convert a disk, you can view the property to ensure the new disk uses the optimal 4-KB alignment. 
 
-``` syntax
-Get-VHD –Path E:\vms\testvhd\test-converted.vhd
+To check the alignment setting for a disk, you can use the `Get-VHD` PowerShell command. Run the command for the source disk, and then again for the converted disk. Compare the values for the `Alignment` property to ensure the new (converted) disk is 4 KB alignment-aware.
 
-Path                    : E:\vms\testvhd\test-converted.vhd
-VhdFormat               : VHD
-VhdType                 : Dynamic
-FileSize                : 69369856
-Size                    : 10737418240
-MinimumSize             : 10735321088
-LogicalSectorSize       : 512
-PhysicalSectorSize      : 512
-BlockSize               : 2097152
-ParentPath              :
-FragmentationPercentage : 0
-Alignment               : 1
-Attached                : False
-DiskNumber              :
-IsDeleted               : False
-Number                  :
-```
+1. Run the `Get-VHD` command to view the alignment setting for the source disk. 
 
-## VHDX format
+   ```powershell
+   Get-VHD –Path E:\vms\testvhd\test.vhd
+   ```
 
-VHDX is a new virtual hard disk format introduced in Windows Server 2012, which allows you to create resilient high-performance virtual disks up to 64 terabytes. Benefits of this format include:
+   In this example, the source disk is named **test.vhd**. When you run the command on your system, update the `-Path` value for your source disk.
 
-- Support for virtual hard disk storage capacity of up to 64 terabytes.
+1. In the output, notice the value for the `Alignment` property. In this example, the value is `0`, which means the disk isn't 4 KB alignment-aware.
 
-- Protection against data corruption during power failures by logging updates to the VHDX metadata structures.
+   ```output
+   Path                    : E:\vms\testvhd\test.vhd
+   VhdFormat               : VHD
+   VhdType                 : Dynamic
+   FileSize                : 69245440
+   Size                    : 10737418240
+   MinimumSize             : 10735321088
+   LogicalSectorSize       : 512
+   PhysicalSectorSize      : 512
+   BlockSize               : 2097152
+   ParentPath              :
+   FragmentationPercentage : 10
+   Alignment               : 0
+   Attached                : False
+   DiskNumber              :
+   IsDeleted               : False
+   Number                  :
+   ```
 
-- Ability to store custom metadata about a file, which a user might want to record, such as operating system version or patches applied.
+1. Run the  `Get-VHD` command again to get the details for the new (converted) disk. 
 
-The VHDX format also provides the following performance benefits:
+   ```powershell
+   Get-VHD –Path E:\vms\testvhd\test-converted.vhd
+   ```
 
-- Improved alignment of the virtual hard disk format to work well on large sector disks.
+   In this example, the new (converted) disk is named **test-converted.vhd**. When you run the command on your system, update the `-Path` value for your converted disk.
 
-- Larger block sizes for dynamic and differential disks, which allows these disks to attune to the needs of the workload.
+1. In the output, check the value for the `Alignment` property. The value should be `1`, which means the disk is successfully converted to the newer VHD format and is 4 KB alignment-aware.
 
-- 4 KB logical sector virtual disk that allows for increased performance when used by applications and workloads that are designed for 4 KB sectors.
+   ```output
+   Path                    : E:\vms\testvhd\test-converted.vhd
+   VhdFormat               : VHD
+   VhdType                 : Dynamic
+   FileSize                : 69369856
+   Size                    : 10737418240
+   MinimumSize             : 10735321088
+   LogicalSectorSize       : 512
+   PhysicalSectorSize      : 512
+   BlockSize               : 2097152
+   ParentPath              :
+   FragmentationPercentage : 0
+   Alignment               : 1
+   Attached                : False
+   DiskNumber              :
+   IsDeleted               : False
+   Number                  :
+   ```
 
-- Efficiency in representing data, which results in smaller file size and allows the underlying physical storage device to reclaim unused space. (Trim requires pass-through or SCSI disks and trim-compatible hardware.)
+### VHDX format
 
-When you upgrade to Windows Server 2016, we recommend that you convert all VHD files to the VHDX format due to these benefits. The only scenario where it would make sense to keep the files in the VHD format is when a virtual machine has the potential to be moved to a previous release of Hyper-V that doesn't support the VHDX format.
+VHDX is a new virtual hard disk format introduced in Windows Server 2012. This format allows you to create resilient high-performance virtual disks up to 64 terabytes.
 
-## Types of virtual hard disk files
+Here are some benefits of the VHDX format:
 
-There are three types of VHD files. The following sections are the performance characteristics and trade-offs between the types.
+- Support for virtual hard disk storage capacity of up to 64 terabytes
 
-The following recommendations should be taken into consideration with regards to selecting a VHD file type:
+- Protection against data corruption during power failures by logging updates to the VHDX metadata structures
 
-- When using the VHD format, we recommend that you use the fixed type because it has better resiliency and performance characteristics compared to the other VHD file types.
+- Ability to store custom metadata for a file that a user might want to record, such as the OS version or applied patches
 
-- When using the VHDX format, we recommend that you use the dynamic type because it offers resiliency guarantees in addition to space savings that are associated with allocating space only when there's a need to do so.
+The VHDX format also provides several performance features:
 
--   The fixed type is also recommended, irrespective of the format, when the storage on the hosting volume isn't actively monitored to ensure that sufficient disk space is present when expanding the VHD file at run time.
+- Improved alignment of the virtual hard disk format to work well on large sector disks
 
--   Snapshots of a virtual machine create a differencing VHD to store writes to the disks. Having only a few snapshots can elevate the CPU usage of storage I/Os, but might not noticeably affect performance except in highly I/O-intensive server workloads. However, having a large chain of snapshots can noticeably affect performance because reading from the VHD can require checking for the requested blocks in many differencing VHDs. Keeping snapshot chains short is important for maintaining good disk I/O performance.
+- Larger block sizes for dynamic and differential disks to enable disks to adjust for workload requirements
 
-## Fixed virtual hard disk type
+- 4-KB logical sector virtual disk to support increased performance when used by applications and workloads designed for 4-KB sectors
 
-Space for the VHD is first allocated when the VHD file is created. This type of VHD file is less likely to fragment, which reduces the I/O throughput when a single I/O is split into multiple I/Os. It has the lowest CPU overhead of the three VHD file types because reads and writes don't need to look up the mapping of the block.
+- Efficiency in representing data to produce smaller file sizes and allow underlying physical storage device to reclaim unused space
 
-## Dynamic virtual hard disk type
+   > [!NOTE]
+   > Trimming requires pass-through or SCSI disks and trim-compatible hardware.
 
-Space for the VHD is allocated on demand. The blocks in the disk start as unallocated blocks and are not backed by any actual space in the file. When a block is first written to, the virtualization stack must allocate space within the VHD file for the block, and then update the metadata. This increases the number of necessary disk I/Os for the Write and increases CPU usage. Reads and writes to existing blocks incur disk access and CPU overhead when looking up the blocks' mapping in the metadata.
+**Recommendation**: When you upgrade to Windows Server 2016, convert all VHD files to the VHDX format. Only maintain files in VHD format when the VM can potentially move to an earlier release of Hyper-V that doesn't support VHDX format.
 
-## Differencing virtual hard disk type
+## Virtual files
 
-The VHD points to a parent VHD file. Any writes to blocks not written to result in space being allocated in the VHD file, as with a dynamically expanding VHD. Reads are serviced from the VHD file if the block has been written to. Otherwise, they're serviced from the parent VHD file. In both cases, the metadata is read to determine the mapping of the block. Reads and Writes to this VHD can consume more CPU and result in more I/Os than a fixed VHD file.
+There are three types of VHD files: fixed, dynamic, and differencing. 
 
-## Block size considerations
+**Recommendation**: As you compare the VHD file types, consider the following Recommendation.
 
-Block size can significantly impact performance. It's optimal to match the block size to the allocation patterns of the workload that's using the disk. For example, if an application is allocating in chunks of 16 MB, it would be optimal to have a virtual hard disk block size of 16 MB. A block size of &gt;2 MB is possible only on virtual hard disks with the VHDX format. Having a larger block size than the allocation pattern for a random I/O workload will significantly increase the space usage on the host.
+| File type | Disk format | Recommendation |
+| --- | --- | --- |
+| **Fixed** | VHD | Use the fixed file type for optimal resiliency and performance. |
+| **Fixed** | Any | Use the fixed file type when storage on the hosting volume isn't actively monitored. Ensure sufficient disk space is present when expanding the VHD file at run time. |
+| **Dynamic** | VHDX | Use the dynamic file type for resiliency guarantees and to allocate disk space only as needed. |
+| **Differencing** | Any | Keep VM snapshot chains short to maintain good disk I/O performance. |
 
-## Sector size implications
+### Fixed file type
 
-Most of the software industry has depended on disk sectors of 512 bytes, but the standard is moving to 4 KB disk sectors. To reduce compatibility issues that might arise from a change in sector size, hard drive vendors are introducing a transitional size referred to as 512 emulation drives (512e).
+Space for the VHD is first allocated when the VHD file is created. This type of VHD file is less likely to fragment, which reduces the I/O throughput when a single I/O is split into multiple I/Os. The fixed file type has the lowest CPU overhead of the three options because `Reads` and `Writes` don't need to look up the mapping of the block.
 
-These emulation drives offer some of the advantages that are offered by 4 KB disk sector native drives, such as improved format efficiency and an improved scheme for error correction codes (ECC). They come with fewer compatibility issues that would occur by exposing a 4 KB sector size at the disk interface.
+### Dynamic file type
 
-## Support for 512e disks
+Space for the VHD is allocated on demand. The blocks in the disk start as unallocated blocks. No actual space in the file backs the unallocated blocks. When a block receives the first Write, the virtualization stack must allocate space within the VHD file for the block, and then update the metadata. This action increases the number of necessary disk I/Os for the Write and increases CPU usage. `Reads` and `Writes` to existing blocks incur disk access and CPU overhead when looking up the blocks' mapping in the metadata.
 
-A 512e disk can perform a write only in terms of a physical sector—in other words, it can't directly write a 512byte sector that's issued to it. The internal process in the disk that makes these writes possible follows these steps:
+### Differencing file type
 
-- The disk reads the 4 KB physical sector to its internal cache, which contains the 512-byte logical sector referred to in the write.
+Snapshots of a VM create a differencing VHD to store `Writes` to the disks. The VHD points to a parent VHD file. Any `Writes` to blocks without existing `Writes` cause space to be allocated in the VHD file, as with a dynamically expanding VHD. `Reads` are serviced from the VHD file if the block contains `Writes`. Otherwise, the blocks are serviced from the parent VHD file. In both cases, the metadata is read to determine the mapping of the block. `Reads` and `Writes` to this VHD can consume more CPU and result in more I/Os than a fixed VHD file.
 
-- Data in the 4 KB buffer is modified to include the updated 512-byte sector.
+When there are only a few snapshots, the CPU usage of storage I/Os can be elevated, but performance might not be noticeably affected except in highly I/O-intensive server workloads. Maintaining a large chain of snapshots can noticeably affect performance. Reading from the VHD can require checking for the requested blocks in many differencing VHDs. It's important to keep snapshot chains short to maintain good disk I/O performance.
 
-- The disk performs a write of the updated 4 KB buffer back to its physical sector on the disk.
+## Size considerations
 
-This process is called read-modify-write (RMW). The overall performance impact of the RMW process depends on the workloads. The RMW process causes performance degradation in virtual hard disks for the following reasons:
+There are two size implementations to consider for disk optimization: blocks and sectors.
 
-- Dynamic and differencing virtual hard disks have a 512-byte sector bitmap in front of their data payload. In addition, footer, header, and parent locators align to a 512-byte sector. It's common for the virtual hard disk driver to issue 512-byte write commands to update these structures, resulting in the RMW process described earlier.
+### Block size
 
-- Applications commonly issue reads and writes in multiples of 4 KB sizes (the default cluster size of NTFS). Because there's a 512-byte sector bitmap in front of the data payload block of dynamic and differencing virtual hard disks, the 4 KB blocks are not aligned to the physical 4 KB boundary. The following figure shows a VHD 4 KB block (highlighted) that isn't aligned with physical 4 KB boundary.
+Block size can significantly affect performance. The best approach is to match the block size to the allocation patterns of the workloads that use the disk. If an application allocates blocks in chunks of 16 MB, it's optimal to have a virtual hard disk block size of 16 MB. A block size larger than 2 MB is possible only on virtual hard disks with the VHDX format. When the block size is larger than the allocation pattern for a random I/O workload, you can significantly increase the space usage on the host.
 
-![vhd 4 kb block](../../media/perftune-guide-vhd-4kb-block.png)
+**Recommendation**: Match the disk block size to the allocation patterns of the workloads that use the disk. 
 
-Each 4 KB write command that's issued by the current parser to update the payload data results in two reads for two blocks on the disk, which are then updated and subsequently written back to the two disk blocks. Hyper-V in Windows Server 2016 mitigates some of the performance effects on 512e disks on the VHD stack by preparing the previously mentioned structures for alignment to 4 KB boundaries in the VHD format. This avoids the RMW effect when accessing the data within the virtual hard disk file and when updating the virtual hard disk metadata structures.
+### Sector size
 
-As mentioned earlier, VHDs that are copied from previous versions of Windows Server won't automatically be aligned to 4 KB. You can manually convert them to optimally align by using the **Copy from Source** disk option that's available in the VHD interfaces.
+Software organizations frequently depend on disk sectors of 512 bytes, but the industry standard is moving to 4-KB disk sectors. To reduce compatibility issues that can arise from changes in sector size, hard drive vendors are introducing a transitional size referred to as **512 emulation drives (512e)**.
 
-By default, VHDs are exposed with a physical sector size of 512 bytes. This is done to ensure that physical sector size dependent applications are not impacted when the application and VHDs are moved from a previous version of Windows Server.
+Emulation drives offer some of the advantages provided by 4-KB disk sector native drives, such as improved format efficiency and an improved scheme for error correction codes (ECC). Emulation drives present fewer compatibility issues that can occur by exposing a 4-KB sector size at the disk interface.
 
-By default, disks with the VHDX format are created with the 4 KB physical sector size to optimize their performance profile regular disks and large sector disks. To make full use of 4 KB sectors it's recommended to use VHDX format.
+**Recommendation**: To make full use of 4-KB sectors, use VHDX format rather than disk sectors of 512 bytes. To reduce compatibility issues between disk sizes, implement 512e drives for transitional sizing.
 
-## Support for native 4 KB disks
+#### Support transitional size with 512e disks
 
-Hyper-V in Windows Server 2012 R2 and beyond supports 4 KB native disks. But it's still possible to store VHD disk on 4 KB native disk. This is done by implementing a software RMW algorithm in the virtual storage stack layer that converts 512-byte access and update requests to corresponding 4 KB accesses and updates.
+A 512e disk can perform a Write only in terms of a physical sector. This type of disk can't directly write a 512-byte sector to which it's issued. The disk has an internal process that makes the `Write` operations possible. The process involves `Read-Modify-Write` (RMW) operations and implements the following steps:
 
-Because VHD file can only expose themselves as 512-byte logical sector size disks, it's very likely that there will be applications that issue 512-byte I/O requests. In these cases, the RMW layer will satisfy these requests and cause performance degradation. This is also true for a disk that's formatted with VHDX that has a logical sector size of 512 bytes.
+1. The disk `Reads` the 4-KB physical sector to its internal cache. The cache contains the 512-byte logical sector referred to in the `Write` operation.
 
-It is possible to configure a VHDX file to be exposed as a 4 KB logical sector size disk, and this would be an optimal configuration for performance when the disk is hosted on a 4 KB native physical device. Care should be taken to ensure that the guest and the application that's using the virtual disk are backed by the 4 KB logical sector size. The VHDX formatting will work correctly on a 4 KB logical sector size device.
+1. The disk `Modifies` the data in the 4-KB buffer to include the updated 512-byte sector.
+
+1. The disk `Writes` the updated 4-KB buffer back to its physical sector on the disk.
+
+The overall performance impact of the RMW process depends on the workloads. The RMW process causes performance degradation in virtual hard disks for the following reasons:
+
+- Dynamic and differencing virtual hard disks have a 512-byte sector bitmap in front of their data payload. Footer, header, and parent locators align to a 512-byte sector. It's common for the virtual hard disk driver to execute 512-byte `Write` operations to update these structures, which result in the RMW process previously described.
+
+- Applications commonly execute `Reads` and `Writes` in multiples of 4-KB sizes (the default cluster size of NTFS). Dynamic and differencing virtual hard disks have a 512-byte sector bitmap in front of the data payload block. This bitmap causes the 4-KB blocks to not align to the physical 4-KB boundary. The following figure shows a VHD 4-KB block (highlighted) that's not aligned with the physical 4-KB boundary.
+
+   :::image type="content" source="../../media/perftune-guide-vhd-4kb-block.png" alt-text="Diagram of a VHD 4-KB block that's not aligned with the physical 4-KB boundary." border="false":::
+
+Each 4-KB `Write` operation by the current parser to update the payload data results in two `Reads` for two blocks on the disk. The blocks are then updated and written back to the two disk blocks. Hyper-V in Windows Server 2016 mitigates some performance effects on 512e disks on the VHD stack. Hyper-V prepares the structures for alignment to 4-KB boundaries in the VHD format. The mitigation avoids the RMW effect on access to data within the virtual hard disk file and updates to the virtual hard disk metadata structures.
+
+As previously mentioned, VHDs copied from earlier versions of Windows Server aren't automatically aligned to 4 KB. You can manually convert the disk to optimally align via the **Copy from Source** disk option with the `Convert-VHD` command.
+
+By default, VHDs are exposed with a physical sector size of 512 bytes. This method ensures the physical-sector-size dependent applications aren't impacted when the application and VHDs are moved from an earlier version of Windows Server.
+
+By default, disks with the VHDX format are created with the 4-KB physical sector size to optimize their performance profile on regular disks and larger sector disks. 
+
+**Recommendation**: To reduce compatibility issues between disk sizes, implement 512e drives for transitional sizing. To make full use of 4-KB sectors, use VHDX format.
+
+## Native 4-KB disks
+
+Hyper-V in Windows Server 2012 R2 and later supports 4-KB native disks. You can also store VHD disk data on a 4-KB native disk by implementing a software RMW algorithm in the virtual storage stack layer. The algorithm converts 512-byte access and update requests to corresponding 4-KB accesses and updates.
+
+Because VHD files can only expose as 512-byte logical-sector size disks, it's likely there are applications that issue 512-byte I/O requests. In such cases, the RMW algorithm in the storage stack layer satisfies the requests and causes performance degradation. The same result occurs for VHDX disks with a logical-sector size of 512 bytes.
+
+It's possible to configure VHDX files to expose as a 4-KB logical-sector size disk. This implementation is an optimal configuration for performance for disks hosted on a 4-KB native physical device. However, be careful to ensure the 4-KB logical-sector size supports both the guest and application that use the virtual disk. The VHDX format works correctly on a 4-KB logical-sector size device.
+
+**Recommendation**: Avoid using 4-KB native disks with VHD and VHDX files, which can cause degraded performance. When 4-KB native disks are required, the VHDX format works correctly on a 4-KB logical-sector size device.
 
 ## Pass-through disks
 
-The VHD in a virtual machine can be mapped directly to a physical disk or logical unit number (LUN), instead of to a VHD file. The benefit is that this configuration bypasses the NTFS file system in the root partition, which reduces the CPU usage of storage I/O. The risk is that physical disks or LUNs can be more difficult to move between machines than VHD files.
+The VHD in a VM can be mapped directly to a physical disk or logical unit number (LUN), rather than a VHD file. The benefit of this approach is the ability to bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O. However, the pass-through approach involves the risk that physical disks or LUNs can be more difficult to move between machines than VHD files.
 
-Pass-through disks should be avoided due to the limitations introduced with virtual machine migration scenarios.
+**Recommendation**: Avoid using pass-through disks due to the limitations introduced with VM migration scenarios.
+
 
 ## Advanced storage features
 
-### Storage Quality of Service (QoS)
+There are a few more performance optimizations to consider for advanced storage features.
 
-Starting in Windows Server 2012 R2, Hyper-V includes the ability to set certain quality-of-service (QoS) parameters for storage on the virtual machines. Storage QoS provides storage performance isolation in a multitenant environment and mechanisms to notify you when the storage I/O performance doesn't meet the defined threshold to efficiently run your virtual machine workloads.
+### Storage quality of service (QoS)
 
-Storage QoS provides the ability to specify a maximum input/output operations per second (IOPS) value for your virtual hard disk. An administrator can throttle the storage I/O to stop a tenant from consuming excessive storage resources that may impact another tenant.
+In Windows Server 2012 R2 and later, Hyper-V includes the ability to set certain quality-of-service (QoS) parameters for storage on VMs. You can implement these parameters to gain several benefits:
 
-You can also set a minimum IOPS value. They'll be notified when the IOPS to a specified virtual hard disk is below a threshold that's needed for its optimal performance.
+- Configure storage performance isolation in a multi-tenant environment
 
-The virtual machine metrics infrastructure is also updated, with storage related parameters to allow the administrator to monitor the performance and chargeback related parameters.
+- Specify the maximum and minimum input/output operations per second (IOPS) for virtual hard disks
 
-Maximum and minimum values are specified in terms of normalized IOPS where every 8 KB of data is counted as an I/O.
+   Admins can throttle the storage I/O to prevent one tenant from consuming excessive storage resources that can affect other tenants. Set the minimum IOPS value and receive notifications when the threshold for optimal performance isn't met. The max/min IOPS values are specified in terms of normalized IOPS where every 8 KB of data is counted as an I/O.
 
-Some of the limitations are as follows:
+- Receive notifications when storage I/O performance falls below defined thresholds to efficiently run VM workloads
 
-- Only for virtual disks
+- Access storage parameters for VM metrics infrastructure and enable admins to monitor performance and charge-back related parameters
+
+Storage QoS also has some limitations:
+
+- Only available for virtual disks
 
 - Differencing disk can't have parent virtual disk on a different volume
 
-- Replica - QoS for replica site configured separately from primary site
+- QoS for a replica site is configured separately from the primary site
 
 - Shared VHDX isn't supported
 
-For more info on Storage Quality of Service, see [Storage Quality of Service for Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282281(v=ws.11)).
+For more information, see [Storage quality of service for Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282281(v=ws.11)).
 
-### NUMA I/O
+**Recommendation**: Implement Storage QoS to access extra storage parameters, set max/min IOPS thresholds for virtual hard disks, and monitor disk performance. 
 
-Windows Server 2012 and beyond supports large virtual machines, and any large virtual machine configuration (for example, a configuration with Microsoft SQL Server running with 64 virtual processors) will also need scalability in terms of I/O throughput.
+### NUMA I/O registry settings for large VMs
 
-The following key improvements first introduced in the Windows Server 2012 storage stack and Hyper-V provide the I/O scalability needs of large virtual machines:
+Windows Server 2012 and later supports projecting a virtual, nonuniform memory access (NUMA) topology into Hyper-V VMs. NUMA support helps to improve the performance of workloads running on VMs configured with large amounts of memory (or, _large VMs_). To enable this support, large VM configurations require scalability in terms of I/O throughput. An example of a large VM is Microsoft SQL Server running with 64 virtual processors.
 
-- An increase in the number of communication channels created between the guest devices and host storage stack.
+The following Windows Server enhancements enable the I/O scalability requirements of large VMs:
 
-- A more efficient I/O completion mechanism involving interrupt distribution amongst the virtual processors to avoid expensive interprocessor interruptions.
+- An increase in the number of communication channels created between guest devices and the host storage stack.
 
-Introduced in Windows Server 2012, there are a few registry entries, located at HKLM\\System\\CurrentControlSet\\Enum\\VMBUS\\{device id}\\{instance id}\\StorChannel, that allow the number of channels to be adjusted. They also align the virtual processors that handle the I/O completions to the virtual CPUs that are assigned by the application to be the I/O processors. The registry settings are configured on a per-adapter basis on the device's hardware key.
+- A more efficient I/O completion mechanism involving interrupt distribution among the virtual processors to avoid expensive interprocessor interruptions.
 
-- **ChannelCount (DWORD)** The total number of channels to use, with a maximum of 16. It defaults to a ceiling, which is the number of virtual processors/16.
+#### Registry keys
 
-- **ChannelMask (QWORD)** The processor affinity for the channels. If it isn't set or is set to 0, it defaults to the existing channel distribution algorithm that you use for normal storage or for networking channels. This ensures that your storage channels won't conflict with your network channels.
+To support the enhancements, a few registry entries were added or updated to allow the number of channels to be adjusted. The entries are located at `HKLM\System\CurrentControlSet\Enum\VMBUS\<device id>\<instance id>\StorChannel`, where the `<device id>\<instance id>\` portion of the path corresponds to your configuration.
+
+The registry entries also align the virtual processors that handle the I/O completions to the virtual CPUs assigned by the application to be the I/O processors. The registry settings are configured on a per-adapter basis on the device's hardware key.
+
+Here are two key settings to consider:
+
+- **ChannelCount (DWORD)**: The total number of channels to use. The maximum value is 16. The channel count defaults to a ceiling, equal to the number of virtual processors divided by 16.
+
+- **ChannelMask (QWORD)**: The processor affinity for the channels. If this key setting isn't specified or the value is 0, the channel mask defaults to the existing channel distribution algorithm for normal storage or networking channels. The default action ensures your storage channels don't conflict with your network channels.
+
+**Recommendation**: Use the Windows Server NUMA registry key settings to improve the performance of workloads running on large VMs.
 
 ### Offloaded Data Transfer integration
 
-Crucial maintenance tasks for VHDs, such as merge, move, and compact, depend copying large amounts of data. The current method of copying data requires data to be read in and written to different locations, which can be a time-consuming process. It also uses CPU and memory resources on the host, which could've been used to service virtual machines.
+Crucial maintenance tasks for VHDs, such as merge, move, and compact, involve copying large amounts of data. The current method of copying data requires data to be read in and written to different locations, which can be a time-consuming process. This method also uses CPU and memory resources on the host that could be used for other purposes, such as servicing VMs.
 
-Storage area network (SAN) vendors are working to provide near-instantaneous copy operations of large amounts of data. This storage is designed to allow the system above the disks to specify the move of a specific data set from one location to another. This hardware feature is known as an Offloaded Data Transfer.
+Storage area network (SAN) vendors are working to provide near-instantaneous copy operations of large amounts of data. This storage is designed to allow the system above the disks to specify the move of a specific data set from one location to another. This hardware feature is known as an _Offloaded Data Transfer_.
 
-Hyper-V in Windows Server 2012 and beyond supports Offload Data Transfer (ODX) operations so that these operations can be passed from the guest operating system to the host hardware. This ensures that the workload can use ODX-enabled storage as it would if it were running in a non-virtualized environment. The Hyper-V storage stack also issues ODX operations during maintenance operations for VHDs such as merging disks and storage migration meta-operations where large amounts of data are moved.
+Hyper-V in Windows Server 2012 and later supports Offload Data Transfer (ODX) operations so the copied data can be passed from the guest OS to the host hardware. This method ensures the workload can use ODX-enabled storage similar to running in a nonvirtualized environment. The Hyper-V storage stack also issues ODX operations during maintenance operations for VHDs. Examples of maintenance operations include merging disks and storage migration meta-operations where large amounts of data are moved.
 
-### Unmap integration
+**Recommendation**: Implement ODX operations to ensure the VM workload can use ODX-enabled storage similar to running in a nonvirtualized environment. 
 
-Virtual hard disk files exist as files on a storage volume, and they share available space with other files. Because the size of these files tends to be large, the space that they consume can grow quickly. Demand for more physical storage affects the IT hardware budget. It's important to optimize the use of physical storage as much as possible.
+### Unmap notification integration
 
-Before Windows Server 2012, when applications delete content within a virtual hard disk, which effectively abandoned the content's storage space, the Windows storage stack in the guest operating system and the Hyper-V host had limitations that prevented this information from being communicated to the virtual hard disk and the physical storage device. This prevented the Hyper-V storage stack from optimizing the space usage by the VHD-based virtual disk files. It also prevented the underlying storage device from reclaiming the space that was previously occupied by the deleted data.
+Virtual hard disk files exist as files on a storage volume, and they share available space with other files. Because the size of these files tends to be large, the space they consume can grow quickly. Demand for more physical storage affects the IT hardware budget. It's important to optimize the use of physical storage as much as possible.
 
-Starting from Windows Server 2012, Hyper-V supports unmap notifications, which allow VHDX files to be more efficient in representing that data within it. This results in smaller files size, and it allows the underlying physical storage device to reclaim unused space.
+Prior to Windows Server 2012, limitations in the Windows storage stack in the guest OS and the Hyper-V host had limitations. When applications deleted content within a virtual hard disk, the content's storage space was abandoned. The deleted information wasn't communicated to the virtual hard disk and the physical storage device. This behavior prevented the Hyper-V storage stack from optimizing the space usage by the VHD-based virtual disk files. It also prevented the underlying storage device from reclaiming the space that stored the deleted data.
 
-Only Hyper-V-specific SCSI, enlightened IDE, and Virtual Fibre Channel controllers allow the unmap command from the guest to reach the host virtual storage stack. On the virtual hard disks, only virtual disks formatted as VHDX support unmap commands from the guest.
+In Windows Server 2012 and later, Hyper-V supports _unmap notifications_. This feature allows VHDX files to be more efficient in representing their contained data. This method produces smaller size files, and allows the underlying physical storage device to reclaim unused space.
 
-For these reasons, we recommend that you use VHDX files attached to a SCSI controller when not using Virtual Fibre Channel disks.
+Only Hyper-V-specific SCSI, enlightened IDE, and Virtual Fibre Channel controllers allow the `unmap` command from the guest OS to reach the host virtual storage stack. On the virtual hard disks, only virtual disks formatted as VHDX support `unmap` commands from the guest OS.
 
-## Additional References
+**Recommendation**: Integrate unmap notifications to improve the efficiency of VHDX files and enable the underlying physical storage device to reclaim unused space.
+
+## Related links
 
 - [Hyper-V terminology](terminology.md)
 
@@ -277,6 +347,6 @@ For these reasons, we recommend that you use VHDX files attached to a SCSI contr
 
 - [Hyper-V network I/O performance](network-io-performance.md)
 
-- [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
+- [Detect bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
 
-- [Linux Virtual Machines](linux-virtual-machine-considerations.md)
+- [Linux virtual machines](linux-virtual-machine-considerations.md)
