@@ -2,8 +2,7 @@
 title: Troubleshoot Active Directory Federation Services with events and logging
 description:  Learn how to use the admin and Tracelog to troubleshoot various Active Directory Federation Services issues.
 author: billmath
-ms.author: billmath
-manager: amycolannino
+ms.author: wscontent
 ms.date: 05/25/2023
 ms.topic: article
 ---
@@ -58,17 +57,17 @@ The following table explains the available auditing levels.
 |Basic (Default)|Set-AdfsProperties -AuditLevel Basic|No more than five events are logged for a single request.|
 |Verbose|Set-AdfsProperties -AuditLevel Verbose|All events are logged. This level logs a significant amount of information per request.|
 
-To view the current auditing level, you can use the PowerShell cmdlet: ``Get-AdfsProperties``.
+To view the current auditing level, you can use the PowerShell cmdlet: `Get-AdfsProperties`.
 
  :::image type="content" source="media/ad-fs-tshoot-logging/ADFS_Audit_1.PNG" alt-text="Screenshot of the PowerShell window showing the results of the Get-AdfsProperties cmdlet with the Audit Level property called out.":::
 
-You can raise or lower the auditing level by using the PowerShell cmdlet: ``Set-AdfsProperties -AuditLevel``.
+You can raise or lower the auditing level by using the PowerShell cmdlet: `Set-AdfsProperties -AuditLevel`.
 
 :::image type="content" source="media/ad-fs-tshoot-logging/ADFS_Audit_2.png" alt-text="Screenshot of the PowerShell window showing the Set-AdfsProperties -AuditLevel Verbose cmdlet typed in the command prompt.":::
 
 ## Types of events
 
-AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it. he type of events can be differentiated between login requests and system requests. Your login requests might be token requests, and your system requests might be server-server calls, including fetching configuration information.
+AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it. The type of events can be differentiated between login requests and system requests. Your login requests might be token requests, and your system requests might be server-server calls, including fetching configuration information.
 
 The following table describes the basic types of events.
 
@@ -93,7 +92,7 @@ Security auditing of the AD FS service account can sometimes help track issues w
 1. Go to the **Security Settings\Local Policies\User Rights Management** folder, and then double-click **Generate security audits**.
 1. On the **Local Security Setting** tab, verify that the AD FS service account is listed. If it isn't present, select **Add User** or **Group**, and add it to the list. Then select **OK**.
 1. Open a command prompt with elevated privileges and run the following command to enable auditing:
-   ``auditpol.exe /set /subcategory:"Application Generated" /failure:enable /success:enable``
+   `auditpol.exe /set /subcategory:"Application Generated" /failure:enable /success:enable`
 1. Close **Local Security Policy**, and then open the AD FS Management snap-in.
 1. To open the AD FS Management snap-in, select **Start**. Go to **Programs** > **Administrative Tools**, and then select **AD FS Management**.
 1. In the **Actions** pane, select **Edit Federation Service Properties**.
@@ -104,7 +103,7 @@ Security auditing of the AD FS service account can sometimes help track issues w
     :::image type="content" source="media/ad-fs-tshoot-logging/event4.PNG" alt-text="Screenshot of the Events tab of the Federation Service Properties dialog box showing that the Success audits and Failure audits options are selected.":::
 
 > [!NOTE]
-> The previous instructions are used only when AD FS is on a stand-alone member server.  If AD FS is running on a domain controller, instead of the **Local Security Policy**, use the **Default Domain Controller Policy** located in **Group Policy Management/Forest/Domains/Domain Controllers**. Select **edit** and go to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Management**.
+> The previous instructions are used only when AD FS is on a stand-alone member server. If AD FS is running on a domain controller, instead of the **Local Security Policy**, use the **Default Domain Controller Policy** located in **Group Policy Management/Forest/Domains/Domain Controllers**. Select **edit** and go to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Management**.
 
 ## Windows Communication Foundation and Windows Identity Foundation messages
 
