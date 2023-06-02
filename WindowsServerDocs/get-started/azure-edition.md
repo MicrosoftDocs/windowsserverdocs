@@ -23,8 +23,8 @@ The following table summarizes the key differences:
 | Product updates | With new release | Yearly, with two major updates in the first 3 years |
 | Support | 5 years of mainstream support, plus 5 years of extended support | 5 years of mainstream support, plus 5 years of extended support |
 | Servicing channels | Long-Term Servicing Channel | Long-Term Servicing Channel |
-| Who can use it? | All customers through all channels | TODO: Software Assurance and cloud customers only? |
-| Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience only |
+| Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure-stack/hci/manage/vm-activate) and cloud customers only |
+| Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience only. Windows Server containers aren't supported. |
 
 Capabilities vary by image, see [Getting started with Windows Server Datacenter: Azure Edition](#getting-started-with-windows-server-datacenter-azure-edition) for more detail.
 
@@ -44,6 +44,9 @@ Beginning with Windows Server 2022 Datacenter: Azure Edition, Hotpatch gives you
 |--|--|--|
 | Windows Server 2022 Datacenter: Azure Edition (Core) | Generally available (GA) | Public preview |
 | Windows Server 2022 Datacenter: Azure Edition (Desktop Experience) | Public preview | Public preview |
+
+> [!NOTE]
+> Hotpatch is not supported on Windows Server containers base images.
 
 ### SMB over QUIC
 

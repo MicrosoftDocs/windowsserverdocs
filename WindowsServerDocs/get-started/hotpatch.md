@@ -27,6 +27,9 @@ Hotpatching is a way to install updates on supported _Windows Server Datacenter:
 | Windows Server 2022 Datacenter: Azure Edition Server Core | Generally available (GA) | Preview |
 | Windows Server 2022 Datacenter: Azure Edition with Desktop Experience | Preview | Preview |
 
+> [!NOTE]
+> Hotpatch is not supported on Windows Server containers base images.
+
 To get started using Hotpatch, use your preferred method to create an Azure or Azure Stack HCI VM, and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use. Hotpatch is selected by default when creating an Azure VM in the Azure portal.
 
 ### Preview access
@@ -79,7 +82,11 @@ Hotpatch is an extension of Windows Update and typical orchestration processes. 
 
   - Virtual machine health, as determined through platform health signals, is monitored to detect patching failures.
 
-- **Azure Stack HCI:** Hotpatch updates are orchestrated either in the operating system (Windows Update), using Windows Server Update Services (WSUS), or manually by an administrator. To learn more about using WSUS to manage and distribute updates, see [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
+- **Azure Stack HCI:** Hotpatch updates for virtual machines create on Azure Stack HCI are
+  orchestrated either in the operating system (Windows Update), using Windows Server Update Services
+  (WSUS), or manually by an administrator. To learn more about using WSUS to manage and distribute
+  updates, see
+  [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
 
 TODO: check WSUS can deliver Hotpatches?
 
