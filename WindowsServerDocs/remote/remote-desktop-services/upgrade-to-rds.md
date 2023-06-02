@@ -1,7 +1,7 @@
 ---
 title: Upgrade Remote Desktop Services deployments
 description: Learn about which Remote Desktop Services versions can be upgraded and the order to upgrade your Remote Desktop role services.
-ms.author: spatnaik
+ms.author: wscontent
 ms.date: 06/01/2023
 ms.topic: article
 ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
@@ -10,7 +10,7 @@ manager: scottman
 ---
 # Upgrade Remote Desktop Services deployments
 
->Applies to: Windows Server 2022, Windows Server 2019, and Windows Server 2016
+> Applies to: Windows Server 2022, Windows Server 2019, and Windows Server 2016
 
 In this article, learn about which Remote Desktop Services (RDS) versions can be upgraded and the order to upgrade your Remote Desktop (RD) role services.
 
@@ -73,5 +73,5 @@ If it isn't present, open an elevated PowerShell prompt, then run the following 
   ```powershell
   $registryPath = "HKLM:SOFTWARE\Microsoft\Terminal Server Web Access\IsInstalled"
   New-Item -Path $registryPath
-  New-ItemProperty -Path $registryPath  -Name Version -PropertyType String -Value "6.0"
+  New-ItemProperty -Path $registryPath -Name Version -PropertyType String -Value "6.0"
   ```
