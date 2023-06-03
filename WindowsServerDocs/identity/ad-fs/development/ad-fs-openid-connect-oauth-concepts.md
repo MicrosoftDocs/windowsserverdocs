@@ -108,7 +108,7 @@ A diagram of the high-level flow follows.
 
 1. If you include the `scope = allatclaims` in the authentication request, it customizes the [ID token](custom-id-tokens-in-ad-fs.md) to include claims in the access token based on the defined claim rules.
 
-1. Once the required tokens are generated and customized, AD FS responds to the client and includes the tokens. The ID token response is only included in the responsenly if the authentication request includes `scope = openid`. The client can always get the ID token after authentication by using the token endpoint.
+1. Once the required tokens are generated and customized, AD FS responds to the client and includes the tokens. The ID token response is only included in the response if the authentication request includes `scope = openid`. The client can always get the ID token after authentication by using the token endpoint.
 
 ## Types of libraries
 
