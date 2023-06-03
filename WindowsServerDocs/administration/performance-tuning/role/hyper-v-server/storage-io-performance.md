@@ -24,13 +24,13 @@ Hyper-V offers three types of virtual controllers: IDE, SCSI, and virtual Fibre 
 
 ### IDE
 
-IDE controllers expose IDE disks to the VM. The IDE controller is emulated. It's the only controller available for guest VMs running earlier versions of Windows without [Hyper-V VM integration services](/virtualization/hyper-v-on-windows/reference/integration-services). Disk I/O performed by using the IDE filter driver provided with integration services is significantly better than the disk I/O performance provided with the emulated IDE controller.
+IDE (Integrated Drive Electronics) controllers expose IDE disks to the VM. The IDE controller is emulated. It's the only controller available for guest VMs running earlier versions of Windows without [Hyper-V VM integration services](/virtualization/hyper-v-on-windows/reference/integration-services). Disk I/O performed by using the IDE filter driver provided with integration services is significantly better than the disk I/O performance provided with the emulated IDE controller.
 
 **Recommendation**: Only use IDE disks for operating system (OS) disks. OS disks have performance limitations due to the maximum I/O size that can be issued to these devices.
 
 ### SCSI (SAS controller)
 
-SCSI controllers expose SCSI disks to the VM. Each virtual SCSI controller can support up to 64 devices. The SCSI path isn't emulated, which makes it the preferred controller for any disk other than the OS disk. For Generation 2 VMs, SCSI disks are the only type of controller possible. Support for SCSI disks is available in Windows Server 2012 R2 and later, where the controller is reported as SAS to support shared VHDX.
+SCSI (small computer system interface) controllers expose SCSI disks to the VM. Each virtual SCSI controller can support up to 64 devices. The SCSI path isn't emulated, which makes it the preferred controller for any disk other than the OS disk. For Generation 2 VMs, SCSI disks are the only type of controller possible. Support for SCSI disks is available in Windows Server 2012 R2 and later, where the controller is reported as SAS to support shared VHDX.
 
 **Recommendation**: For optimal performance, attach multiple disks to a single virtual SCSI controller. Create other controllers only as required to scale the number of disks connected to the VM. 
 
@@ -72,7 +72,6 @@ In this example, the source disk to convert is **test.vhd**, and the new (conver
 
 > [!NOTE]
 > The new (converted) VHD is created with the data from the source VHD via the **Copy from Source** disk option. For more information, see the [Convert-VHD](/powershell/module/hyper-v/convert-vhd) command in the Window PowerShell Hyper-V reference.
-
 
 #### Check disk alignment
 
@@ -254,7 +253,6 @@ The VHD in a VM can be mapped directly to a physical disk or logical unit number
 
 **Recommendation**: Avoid using pass-through disks due to the limitations introduced with VM migration scenarios.
 
-
 ## Advanced storage features
 
 There are a few more performance optimizations to consider for advanced storage features.
@@ -299,9 +297,13 @@ The following Windows Server enhancements enable the I/O scalability requirement
 
 #### Registry keys
 
-To support the enhancements, a few registry entries were added or updated to allow the number of channels to be adjusted. The entries are located at `HKLM\System\CurrentControlSet\Enum\VMBUS\<device id>\<instance id>\StorChannel`, where the `<device id>\<instance id>\` portion of the path corresponds to your configuration.
+To support the enhancements, a few registry entries were added or updated to allow the number of channels to be adjusted. The entries are located at:
 
-The registry entries also align the virtual processors that handle the I/O completions to the virtual CPUs assigned by the application to be the I/O processors. The registry settings are configured on a per-adapter basis on the device's hardware key.
+```registry
+HKLM\System\CurrentControlSet\Enum\VMBUS\<device id>\<instance id>\StorChannel
+```
+
+The `<device id>\<instance id>\` portion of the path corresponds to your configuration. The registry entries also align the virtual processors that handle the I/O completions to the virtual CPUs assigned by the application to be the I/O processors. The registry settings are configured on a per-adapter basis on the device's hardware key.
 
 Here are two key settings to consider:
 
