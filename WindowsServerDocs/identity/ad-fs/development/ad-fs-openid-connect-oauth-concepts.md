@@ -2,7 +2,7 @@
 title: AD FS OpenID Connect/OAuth concepts
 description: Learn about Active Directory Federation Services modern authentication concepts.
 author: billmath
-ms.author: billmath
+ms.author: wscontent
 manager: amycolannino
 ms.date: 05/25/2023
 ms.topic: article
@@ -11,7 +11,7 @@ ms.custom: inhenkel
 
 # AD FS OpenID Connect/OAuth concepts
 
->Applies to Active Directory Federation Services (AD FS) 2016 and later
+> Applies to Active Directory Federation Services (AD FS) 2016 and later
 
 ## Modern authentication actors
 
@@ -98,7 +98,7 @@ A diagram of the high-level flow follows.
 
 1. If [another authentication method](../operations/configure-additional-authentication-methods-for-ad-fs.md) is required as per the resource policy or the global authentication policy, AD FS triggers the extra authentication.
 
-1. AD FS uses [Azure AD Multi-Factor Authentication](../operations/configure-ad-fs-and-azure-mfa.md) or [third-party MFA](../operations/additional-authentication-methods-ad-fs.md) to do the authentication.
+1. AD FS uses [Azure AD Multi-Factor Authentication](../operations/configure-ad-fs-and-azure-mfa.md) or [third-party Multi-Factor Authentication](../operations/additional-authentication-methods-ad-fs.md) to do the authentication.
 
 1. Once the user is authenticated, AD FS applies the [claim rules](../deployment/configuring-claim-rules.md). Claim rules determine the claims sent to the resource as a part of the security tokens. AD FS also applies the [access control polices](../operations/ad-fs-client-access-policies.md) that confirm the user meets the required conditions to access the resource.
 
@@ -120,7 +120,7 @@ Use two types of libraries with AD FS:
 
 ## Customize ID token (extra claims in ID token)
 
-In certain scenarios, it's possible that the web app, the client, needs extra claims in an ID token to help in the functionality. Set up extra claims in an ID token by using one of the following options:
+In certain scenarios, it's possible that the web app client needs extra claims in an ID token to help in the functionality. Set up extra claims in an ID token by using one of the following options:
 
 **Option 1:** Use this option when you have a public client and the web app doesn't have a resource that it's trying to access. This option requires:
 
