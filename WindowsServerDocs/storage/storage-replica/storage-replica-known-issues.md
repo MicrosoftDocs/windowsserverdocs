@@ -484,6 +484,8 @@ There's a known code defect in Windows Server, version 1709, which caused this e
 
 Storage Replica does not support disks with physical sector sizes greater than 4K today. We are exploring implementing this feature in future releases.
 
+Please see [this document](https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size#resolutions) for more information & workarounds.
+
 ## Next steps
 
 Now you understand some of the known issues with Storage Replica in Windows Servers, here are some articles that might help you as you use it.
