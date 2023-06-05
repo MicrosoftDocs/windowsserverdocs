@@ -41,7 +41,8 @@ This topic contains configuration information specific to the following authenti
   - [EAP-AKA and EAP-AKA' configuration settings](#eap-aka-configuration-settings)
 
 - **Tunnel EAP (TEAP)**  
-Standards-based tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. 
+
+  Standards-based tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chaining - authenticating the machine and user within one authentication session.
 
 ## EAP-TLS, PEAP, and EAP-TTLS
 
