@@ -40,6 +40,9 @@ This topic contains configuration information specific to the following authenti
   - [EAP-SIM configuration settings](#eap-sim-configuration-settings)
   - [EAP-AKA and EAP-AKA' configuration settings](#eap-aka-configuration-settings)
 
+- **Tunnel EAP (TEAP)**  
+Standards-based tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. 
+
 ## EAP-TLS, PEAP, and EAP-TTLS
 
 You can access the EAP properties for 802.1X authenticated wired and wireless access in the following ways:
@@ -483,3 +486,4 @@ For additional information about authenticated wireless settings in Group Policy
 For additional information about authenticated wired settings in Group Policy, see [Managing the New Wired Network (IEEE 802.3) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831813(v=ws.11))
 
 For information about advanced settings for authenticated wired access and authenticated wireless access, see [Advanced Security Settings for Wired and Wireless Network Policies](/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994696(v=ws.11)).
+
