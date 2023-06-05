@@ -2,14 +2,14 @@
 title: Session host virtual machine sizing guidelines for Azure Virtual Desktop and Remote Desktop Services
 description: Learn about sizing for session host virtual machines based on different workload types when used with Azure Virtual Desktop or Remote Desktop Services.
 ms.author: helohr
-ms.date: 06/02/2023
+ms.date: 06/05/2023
 ms.topic: article
 author: Heidilohr
 manager: femila
 ---
 # Session host virtual machine sizing guidelines
 
-Whether you're running your session host virtual machines (VM) on Remote Desktop Services or Azure Virtual Desktop, different types of workloads require different VM configurations. The examples in this article are generic guidelines and you should only use them for initial performance estimates. For the best possible experience, scale your deployment depending on your users' needs.
+Whether you're running your session host virtual machines (VM) on Remote Desktop Services or Azure Virtual Desktop, different types of workloads require different VM configurations. The examples in this article are generic guidelines, and you should only use them for initial performance estimates. For the best possible experience, scale your deployment depending on your users' needs.
 
 ## Workloads
 
@@ -49,7 +49,7 @@ The following table shows examples of standard or larger user workloads:
 | Heavy | 2 | 8 vCPUs, 16-GB RAM, 32-GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
 | Power | 1 | 6 vCPUs, 56-GB RAM, 340-GB storage | D16ds_v5, D16s_v4, D16as_v4, NV6, NV16as_v4 | 30 GB |
 
-For multi-session, we recommend limiting VM size to between 4 vCPUs and 24 vCPUs for the following reasons:
+For multi-session, you should limit VM size to between 4 vCPUs and 24 vCPUs for the following reasons:
 
 - **All VMs should have more than two cores**: the UI components in Windows rely on the use of at least two parallel threads for some of the heavier rendering operations. For multi-session, having multiple users on a two-core VM leads to the UI and apps becoming unstable, which lowers the quality of user experience. Four cores are the lowest recommended number of cores that a stable multi-session VM should have.
 
@@ -59,7 +59,7 @@ The recommended range between 4 and 24 cores generally provides better capacity 
 
 This recommendation is true at a larger scale. For scenarios with 20 or more users connected to a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more users to sign in within 10 minutes of each other on the same session host with 16 cores, two 8-core VMs will handle the workload better. You can also use breadth-first load balancing to evenly distribute users across different VMs, rather than depth-first where a session host is saturated before you use another one.
 
-It's also better to use a large number of smaller VMs instead of a few large VMs. It's easier to shut down VMs that need to be updated or aren't currently in use. With larger VMs, you're more likely to have at least one user signed in at any time, which prevents you from shutting down the VM. When you have many smaller VMs, it's more likely you have some that don't have any users signed in. You can safely shut these unused VMs to conserve resources, either manually or automatically by using autoscale in Azure Virtual Desktop. Conserving resources makes your deployment more resilient, easier to maintain, and less expensive.
+It's also better to use a large number of smaller VMs instead of a few large VMs. It's easier to shut down VMs that need to be updated or aren't currently in use. With larger VMs, you're more likely to have at least one user signed in at any time, which prevents you from shutting down the VM. When you have many smaller VMs, it's more likely you have some that don't have any users signed in. You can safely shut down these unused VMs to conserve resources, either manually or automatically by using autoscale in Azure Virtual Desktop. Conserving resources makes your deployment more resilient, easier to maintain, and less expensive.
 
 ## General virtual machine recommendations
 
@@ -71,4 +71,4 @@ Graphics processing units (GPUs) are a good choice for users who regularly use g
 
 ## Test your workload
 
-Finally, we recommend you use simulation tools to test your deployment with both stress tests and real-life usage simulations. Make sure your system is responsive and resilient enough to meet user needs, and remember to vary the load size to avoid surprises.
+Finally, you should use simulation tools to test your deployment with both stress tests and real-life usage simulations. Make sure your system is responsive and resilient enough to meet user needs, and remember to vary the load size to avoid surprises.
