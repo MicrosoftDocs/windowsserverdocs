@@ -148,7 +148,7 @@ For more information about these commands, see the following topics see [Set-Dhc
 
 ## Configure IPv4 DHCP server
 
-After you have successfully installed and authorized your IPv4 DHCP server, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server]() for guidance.  
+After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server]() for guidance.  
 
 ## Related links
 
