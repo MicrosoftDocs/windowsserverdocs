@@ -10,9 +10,13 @@ ms.contributors: rnitsch
 
 # NCSI overview
 
-The Network Connectivity Status Indicator (NCSI) is a feature that helps to provide a visual display of the current network connection status. The NCSI icon is found on the bottom-right of the taskbar by default. Depending on how your device is connected to the network will change its appearance.  
+The Network Connectivity Status Indicator (NCSI) is a feature that helps to provide a visual display of the current network connection status. The NCSI icon is found on the bottom-right of the taskbar by default. Depending on how your device is connected to the network and what operating system you're running will determine its appearance.
 
-:::image type="icon" source="../media/NCSI/ncsi-icon-connected.jpg":::
+|Icon|Description|
+|--|--|
+|:::image type="icon" source="../media/NCSI/ncsi-icon-connected-wired.jpg":::| Connected (Wired) |
+|:::image type="icon" source="../media/NCSI/ncsi-icon-connected-wireless.jpg":::| Connected (Wireless) |
+|:::image type="icon" source="../media/NCSI/ncsi-icon-connected-no-internet.jpg":::| Connected (No internet) |
 
 The network status can be viewed by clicking this icon and further network adapter details can be seen by following the **Network and Internet settings** link. Depending on the version of Windows you're running, the taskbar options for the NCSI icon may vary.
 
