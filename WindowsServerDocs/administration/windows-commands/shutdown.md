@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: xelu86
 ms.author: wscontent
-ms.date: 05/25/2023
+ms.date: 06/05/2023
 ---
 
 # shutdown
@@ -15,7 +15,7 @@ Enables you to shut down or restart local or remote computers, one at a time.
 ## Syntax
 
 ```
-shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw] [/f] [/m \\computer][/t xxx][/d [p|u:]xx:yy [/c "comment"]]
+shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/soft] [/fw] [/f] [/m \\computer][/t xxx][/d [p|u:]xx:yy [/c "comment"]]
 ```
 
 ### Parameters
@@ -32,6 +32,7 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw]
 | /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it shuts down when you use **/p**, but the power to the computer will remain on. |
 | /h | Puts the local computer into hibernation, if hibernation is enabled. The **/f** switch can be used with the **/h** switch. |
 | /hybrid | Shuts down the device and prepares it for fast startup. This option must be used with the **/s** option. |
+| /soft | Allows running processes and applications to gracefully close instead of forcibly terminating. |
 | /fw | Combining this option with a shutdown option causes the next restart to go to the firmware user interface. |
 | /e | Enables you to document the reason for an unexpected shutdown of a computer in the [Shutdown Event Tracker](/troubleshoot/windows-server/application-management/description-shutdown-event-tracker). |
 | /o | Goes to the **Advanced boot options** menu and restarts the device. This option must be used with the **/r** option. |
