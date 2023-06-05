@@ -9,7 +9,7 @@ ms.author: wscontent
 
 # What is Azure Edition for Windows Server Datacenter?
 
-Windows Server: Azure Edition (WSAE) is a an edition of Windows Server focused on innovation and
+Windows Server: Azure Edition (WSAE) is an edition of Windows Server focused on innovation and
 virtualization optimized to run on Azure. WSAE features a Long-Term Servicing Channel (LTSC) and
 yearly product updates, with two major product updates in the first 3 years. WSAE also brings new
 functionality to Windows Server users faster than the Standard and Datacenter editions of Windows
@@ -64,7 +64,7 @@ hotpatching. To learn more, see [Hotpatch for new virtual machines](hotpatch.md)
 | Windows Server 2022 Datacenter: Azure Edition (Desktop Experience) | Public preview | Public preview |
 
 > [!NOTE]
-> Hotpatch is not supported on Windows Server containers base images.
+> Hotpatch isn't supported on Windows Server containers base images.
 
 ### SMB over QUIC
 
