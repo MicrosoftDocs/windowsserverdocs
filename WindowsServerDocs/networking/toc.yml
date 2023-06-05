@@ -167,6 +167,8 @@ items:
             href: dns/deploy/anycast.md
           - name: DNS policies overview
             href: dns/deploy/DNS-Policies-Overview.md
+          - name: What is DNSSEC?
+            href: dns/dnssec-overview.md
       - name: Quickstarts
         items: 
           - name: Install and configure DNS server
@@ -175,6 +177,8 @@ items:
         items:
           - name: DNS zones
             href: dns/zone-types.md
+          - name: Validate and secure DNS responses using DNSSEC
+            href: dns/validate-dns-responses.md
       - name: How-to guides
         items:
           - name: Manage DNS zones
