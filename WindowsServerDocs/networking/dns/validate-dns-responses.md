@@ -32,7 +32,7 @@ If your DNS client is DNSSEC-aware, it can be configured to require that the DNS
 
 The following figure shows the validation process.
 
-:::image type="content" source="../media/DNSSEC/validation-process.jpeg" alt-text="Image showing a summary of the DNSSEC validation process" lightbox="media/article-folder-name/image-file-expanded.png":::
+:::image type="content" source="../media/DNSSEC/validation-process.jpeg" alt-text="Image showing a summary of the DNSSEC validation process":::
 
 DNSKEYs are used to compute hash values and decrypt RRSIG records. The figure doesn't display all validation processes that are performed. More validation is also carried out to ensure the DNSKEYs are valid and that DS records are valid, if they exist (not shown in the screenshot).
 
@@ -46,7 +46,7 @@ In the following example, a DNS client computer queries a recursive (caching) DN
 
 The following figure shows the recursive DNS query process.
 
-:::image type="content" source="../media/DNSSEC/recursive-query-process.jpeg" alt-text="Image showing the recursive DNS query process as summarized in the following table" lightbox="media/article-folder-name/image-file-expanded.png":::
+:::image type="content" source="../media/DNSSEC/recursive-query-process.jpeg" alt-text="Image showing the recursive DNS query process as summarized in the following table":::
 
 The following table shows the steps in a DNS query and response with optional DNSSEC data.
 
