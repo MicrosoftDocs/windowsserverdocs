@@ -1,8 +1,8 @@
 ---
-title: Network Connectivity Status Indicator Overview
+title: Network Connectivity Status Indicator overview for Windows
 description: The Network Connectivity Status Indicator (NCSI) helps to detect network connectivity and troubleshoot via network probing and passive polling.
 ms.topic: article
-ms.date: 05/30/2023
+ms.date: 06/06/2023
 ms.author: wscontent
 author: xelu86
 ms.contributors: rnitsch
@@ -14,15 +14,15 @@ The Network Connectivity Status Indicator (NCSI) is a feature that helps to prov
 
 |Icon|Description|
 |--|--|
-|:::image type="icon" source="../media/NCSI/ncsi-icon-connected-wired.jpg":::| Connected (Wired) |
-|:::image type="icon" source="../media/NCSI/ncsi-icon-connected-wireless.jpg":::| Connected (Wireless) |
-|:::image type="icon" source="../media/NCSI/ncsi-icon-connected-no-internet.jpg":::| Connected (No internet) |
+|:::image type="icon" source="../media/ncsi/ncsi-icon-connected-wired.jpg":::| Connected (Wired) |
+|:::image type="icon" source="../media/ncsi/ncsi-icon-connected-wireless.jpg":::| Connected (Wireless) |
+|:::image type="icon" source="../media/ncsi/ncsi-icon-connected-no-internet.jpg":::| Connected (No internet) |
 
 The network status can be viewed by clicking this icon and further network adapter details can be seen by following the **Network and Internet settings** link. Depending on the version of Windows you're running, the taskbar options for the NCSI icon may vary.
 
 ## NCSI functionality
 
-NCSI uses network probes that are network requests sent to an endpoint followed by a response. NCSI’s probe, referred to as an “active probe”, is a HTTP request/response. It also uses passive polling, referred to as "passive probe", which examines network traffic passively to determine connectivity.
+NCSI uses network probes that are network requests sent to an endpoint followed by a response. NCSI’s probe, referred to as an “active probe”, is an HTTP request/response. It also uses passive polling, referred to as "passive probe", which examines network traffic passively to determine connectivity.
 
 ### What is the purpose of NCSI in Windows?
 
@@ -52,11 +52,11 @@ NCSI sends separate IPv4 and IPv6 active probes in parallel. If either probe suc
 Similar to active probing, passive probing uses learned information from received packets to determine network status. Both probing methods complement one another as they determine intermittent network conditions differently. Certain conditions prevent active probes from functioning correctly, such as, a temporary router having intermittent connectivity issue where a client device doesn't experience any change in the interface state. In case of such intermittent connectivity issues, which can cause active probing to have false negative results, passive polling can determine the connectivity status due to network traffic and keep internet connectivity.
 
 > [!NOTE]
-> As of Windows 11, NCSI is hosted within the Network List Manager service (aka the Network Profile Manager). Previous OS iterations were hosted in the Network Location Awareness (NLA) service.
+> As of Windows 11, NCSI is hosted within the Network List Manager service, also known as the Network Profile Manager. Previous OS iterations were hosted in the Network Location Awareness (NLA) service.
 
 The main goal of the passive probe is to update NCSI’s connectivity status for all active network interfaces based on packet data received. For each active interface, the probe can update the status to either internet or local by constantly inspecting inbound packets for the number of hops traversed from the sender.
 
-Both active and passive probing may encounter issue's. To learn more, see [reasons for network probe failure](ncsi-frequently-asked-questions.md#reasons-for-network-probe-failure).
+Both active and passive probing may encounter issues. To learn more, see [reasons for network probe failure](ncsi-frequently-asked-questions.md#reasons-for-network-probe-failure).
 
 ### Proxies
 

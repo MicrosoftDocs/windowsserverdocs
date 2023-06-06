@@ -1,16 +1,16 @@
 ---
-title: Network Connectivity Status Indicator FAQ
+title: Network Connectivity Status Indicator FAQ for Windows
 description: 'Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.'
 ms.topic: article
-ms.date: 05/25/2023
+ms.date: 06/06/2023
 ms.author: wscontent
 author: xelu86
 ms.contributors: rnitsch
 ---
 
-# Answers To Common Questions about NCSI
+# Answers To common questions about NCSI
 
-The following section is to provide a quick Q&A surrounding the Network Connectivity Status Indicator (NCSI) in Windows.
+The following section is to provide a quick FAQ surrounding the Network Connectivity Status Indicator (NCSI) in Windows.
 
 ## When are active probes sent?
 
@@ -43,12 +43,12 @@ A successful probe provides the following output:
 
 Many things can prevent an active probe from reaching the internet probe server or receiving a response from a server reaching the client successfully. They are as follows:
 
-1. Proxy errors, misconfiguration, intermittent environmental conditions.
-1. PAC file issues that prevent packets from going to the correct proxy or even the client not being aware that a proxy exists that it must send the probe through.
-1. VPN configuration, setup processing delays, and misrouting of the probe to a place where it can't easily reach the internet due to connectivity time out.
-1. DNS server resolution issues for the well-known NCSI lookup names. These are most often intermittent problems and not missing records.
+- Proxy errors, misconfiguration, intermittent environmental conditions.
+- PAC file issues that prevent packets from going to the correct proxy or even the client not being aware that a proxy exists that it must send the probe through.
+- VPN configuration, setup processing delays, and misrouting of the probe to a place where it can't easily reach the internet due to connectivity time out.
+- DNS server resolution issues for the well-known NCSI lookup names. These are most often intermittent problems and not missing records.
 
-## How does passive probing determines connectivity?
+## How does passive probing determine connectivity?
 
 If the hop count recorded for the interface is at least the system minimum, it updates the interface capability to internet. No more active probes are done for this interface unless one of the events described in “[When are active probes sent?](#when-are-active-probes-sent)” occurs.
 
@@ -70,8 +70,8 @@ The default hop count is **8** but this isn't always optimal for enterprises. A 
 
 There are various factors that determine if a passive probe should be ran based on the passive poll information. The following must be true:
 
-1. Allowed by group policy. When group policy isn't configured, by default it’s allowed. This can be verified in group policy by navigating to **Computer Configuration\Administrative Templates\Network\Network Connectivity Status Indicator\Specify passive polling**.
-1. A user is logged in or has been logged in within the last 30 seconds.
+- Allowed by group policy. When group policy isn't configured, by default it’s allowed. This can be verified in group policy by navigating to **Computer Configuration\Administrative Templates\Network\Network Connectivity Status Indicator\Specify passive polling**.
+- A user is logged in or has been logged in within the last 30 seconds.
 
 If the passive probe is allowed to run, it does so every 15 seconds. This can be overridden by editing the following registry key:
 
@@ -88,7 +88,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet
 ```
 
 > [!NOTE]
-> Starting with Win10 build 14393 (1607) web probe (HTTP) requests are sent to `www.msftconnecttest.com/connecttest.txt`.
+> Starting with Windows 10 build 14393 (1607), web probe (HTTP) requests are sent to `www.msftconnecttest.com/connecttest.txt`.
 
 The expected response for HTTP 200 OK should contain the payload “Microsoft Connect Test” as seen below:
 
@@ -102,12 +102,12 @@ Prior to that `www.msftncsi.com/ncsi.txt` was used, and the expected response is
 For a DNS probe, the query is sent to "dns.msftncsi.com" as seen below:
 
 ```
-Query  for dns.msftncsi.com of type A on class Internet
+Query for dns.msftncsi.com of type A on class Internet
 Response - Success, 131.107.255.255
 ```
 
 > [!NOTE]
-> **4-c-0003.c-msedge.net** is typically recognizable as the entry point to MSFT’s services network which includes Microsoft’s hosted internet probe servers. The “4” is for IPv4.  6-c-0003.c-msedge.net is for IPv6.
+> **4-c-0003.c-msedge.net** is typically recognizable as the entry point to MSFT’s services network which includes Microsoft’s hosted internet probe servers. The “4” is for IPv4. **6-c-0003.c-msedge.net** is for IPv6.
 
 ## How does NCSI know whether to use an HTTP or DNS probe?
 
@@ -141,7 +141,7 @@ Here's an output of a probe failure:
 ```
 
 > [!NOTE]
-> If the probe failure was due to traversing a proxy NCSI will set the connectivity state to None. If the failed probe did not traverse (went direct), NCSI will set the connectivity state to set to Local
+> If the probe failure was due to traversing a proxy NCSI will set the connectivity state to None. If the failed probe did not traverse (went direct), NCSI will set the connectivity state to Local.
 
 ## When does NCSI exit hotspot mode?
 
@@ -194,7 +194,7 @@ Additionally, some Linux applications don't perform connectivity checks. They se
 > - Routers
 > - Third-party software intercepting the probe
 >
-> For general consumers, there are less potential hindrances that does not require user configuration out of the box. Issues occur when VPNs or third-party software are introduced which can intercept, misroute, or delay NCSI active probes.
+> For general consumers, there are less potential hindrances that do not require user configuration out of the box. Issues occur when VPNs or third-party software are introduced which can intercept, misroute, or delay NCSI active probes.
 
 ## Additional references
 
