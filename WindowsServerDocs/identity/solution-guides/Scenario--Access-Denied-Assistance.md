@@ -32,7 +32,7 @@ Access-denied assistance in  Windows Server 2012  provides file server administr
 
 -   If the user requests access to the resource, the server sends an email with the access request information to the folder owner.
 
-You can find planning information for configuring access-denied assistance in [Plan for Access-Denied Assistance](/previous-versions/orphan-topics/ws.11/jj574182(v=ws.11)).
+You can find planning information for configuring access-denied assistance in [Plan for Access-Denied Assistance](/previous-versions/orphan-topics/ws.11/jj574182(v=ws.11)?redirectedfrom=MSDN).
 
 You can find steps about configuring access-denied assistance in [Deploy Access-Denied Assistance &#40;Demonstration Steps&#41;](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md).
 
