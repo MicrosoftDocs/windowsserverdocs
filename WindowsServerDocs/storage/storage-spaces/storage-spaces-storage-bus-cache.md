@@ -20,7 +20,7 @@ The storage bus cache for standalone servers can significantly improve read and 
 |None (Simple space)     | Read and write         |
 |Mirror accelerated parity     |Read       |
 
-If your system doesn't require resiliency or has external backups, the storage bus cache supports both read and write caching. For resilient systems, the storage bus cache only serves as a read cache, and you should choose ReFS [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md) as the volume resiliency. This combination improves random read performance as data is read from the parity tier and cached on the faster mirror tier. The mirror tier also provides write caching capabilities if the Provision Mode is set to Shared (default).
+If your system doesn't require resiliency or has external backups, the storage bus cache supports both read and write caching. For resilient systems, the storage bus cache only serves as a read cache, and you should choose Resilient File System (ReFS) [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md) as the volume resiliency. This combination improves random read performance as data is read from the parity tier and cached on the faster mirror tier. The mirror tier also provides write caching capabilities if the Provision Mode is set to Shared (default).
 
 :::image type="content" source="media/storage-bus-cache/sbc-map.png" alt-text="Diagram of storage bus cache read and write paths.":::
 
@@ -33,13 +33,13 @@ In this tutorial, you learn about:
 
 ## Prerequisites
 
-### ![Green checkmark icon.](media/storage-bus-cache/supported.png) You should consider storage bus cache if
+### :::image type="icon" source="media/storage-bus-cache/supported.png"::: You should consider storage bus cache if your environment matches all of the following characteristics
 
 * Your server runs Windows Server 2022; and
 * Your server has 2 media/ drive types, one of which must be HDD (for example: SSD+HDD or NVMe+HDD); and
 * Your server has the Failover Clustering feature installed
 
-### ![Red X icon.](media/storage-bus-cache/unsupported.png) You can't use storage bus cache if
+### :::image type="icon" source="media/storage-bus-cache/unsupported.png"::: You can't use storage bus cache if your environment matches any of the following characteristics
 
 * Your server runs Windows Server 2016 or 2019; or
 * Your server has an all flash configuration; or
@@ -73,7 +73,7 @@ Enabled                        : False
 
 ### Provision Mode
 
-This field determines if the faster media tier, or only a portion of it, is used for caching. This field can't be modified after enabling the storage bus cache.
+This field determines if the faster media tier, or only a portion of it, is used for caching. This field can't be modified after enabling the storage bus cache. Prvision Mode has two options:
 
 * Shared (default): The cache only takes up a portion of the faster media tier. The exact percentage is configurable by the Shared Cache Percentage field.
 * Cache: Dedicate most of the faster media tier to caching as opposed to only a portion. For more information, see  [Understanding the storage pool cache](/azure-stack/hci/concepts/cache).
