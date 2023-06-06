@@ -25,16 +25,18 @@ This topic contains configuration information specific to the following authenti
 
   This section contains configuration information for the two default inner EAP methods that are provided with PEAP.
 
-   - EAP-Transport Layer Security (TLS)
+  - EAP-Transport Layer Security (TLS)
 
-       Appearing as **Smart Card or other Certificate (EAP-TLS)** in the Windows, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. If EAP-TLS is set up as an inner authentication method, it will have the same configuration settings as EAP-TLS when it's used as an outer method. The only difference is that the method will be configured to work within PEAP. For configuration details, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items).
+     Appearing as **Smart Card or other Certificate (EAP-TLS)** in the Windows, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. If EAP-TLS is set up as an inner authentication method, it will have the same configuration settings as EAP-TLS when it's used as an outer method. The only difference is that the method will be configured to work within PEAP. For configuration details, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items).
 
-   - EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
+  - EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
 
-       Appearing as **Secure password (EAP-MSCHAP v2)** in Windows, EAP-MSCHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MSCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
+     Appearing as **Secure password (EAP-MSCHAP v2)** in Windows, EAP-MSCHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MSCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless. EAP-MSCHAP v2 is the EAP method that encapsulates the MS-CHAPv2 authentication protocol.
 
 
 - **EAP-Tunneled Transport Layer Security (TTLS)**
+
+  Encapsulates a TLS session that authenticates the server to client and authenticates the client to the server using another inner authentication mechanism such as EAP or a non-EAP protocol, such as Password Authentication Protocol (PAP). Support was added to client in Windows 8.
 
 - **EAP-Subscriber Identity Module (SIM), EAP-Authentication and Key Agreement (AKA), and EAP-AKA Prime (AKA')**
 
@@ -47,7 +49,7 @@ This topic contains configuration information specific to the following authenti
 
 - **Tunnel EAP (TEAP)**  
 
-  Standards-based tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chaining - authenticating the machine and user within one authentication session.
+  Standards-based tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chaining - authenticating the machine and user within one authentication session. Support was added to client in Windows 10, version 2004 (Build 19041)
 
 ## EAP-TLS, PEAP, and EAP-TTLS
 
