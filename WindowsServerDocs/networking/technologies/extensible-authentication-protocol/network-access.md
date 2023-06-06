@@ -351,7 +351,7 @@ then the user is prompted whether to accept the root certificate. If the user ac
 
    Default = N/A
 
-      > [!NOTE]
+   > [!NOTE]
    > When both **Certificate Issuer** and **Extended Key Usage (EKU)** are enabled, only those certificates that satisfy both conditions are considered valid for the purpose of authenticating the client to the server.
 
    ## Select EKUs
