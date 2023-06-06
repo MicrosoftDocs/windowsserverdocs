@@ -46,7 +46,7 @@ In this tutorial, you learn about:
 * Your server is a member of a Failover Cluster
 
 > [!NOTE]
-> This feature requires your server to have the Failover Clustering feature installed, but your server cannot be a part of a Failover Cluster.
+> This feature requires your server to have the Failover Clustering feature installed, but your server can't be a part of a Failover Cluster.
 
 ## Feature overview
 
@@ -166,11 +166,11 @@ Because the storage bus cache has been successfully enabled, the next step is to
 
 ## Create a volume
 
-What volume you should create depends on whether you're creating a volume with or with resiliency.
+The volume you should create depends on whether you're creating that volume with or without resiliency.
 
 ### Volumes with resiliency
 
-The following PowerShell cmdlet creates a 1-TiB mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
+The following PowerShell cmdlet creates a 1-TiB mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the configuration you should use for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
 ```PowerShell
 New-Volume –FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -StorageTierFriendlyNames MirrorOnSSD, ParityOnHDD -StorageTierSizes 200GB, 800GB
@@ -184,11 +184,11 @@ The following PowerShell cmdlet creates a 1-TB Simple volume that can't tolerate
 New-Volume -FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -ResiliencySettingName Simple -Size 1TB
 ```
 
-## Making changes after enabling storage bus cache
+## Make changes after enabling storage bus cache
 
 After you run `Enable-StorageBusCache`, the Provision mode, Shared cache percent, Cache metadata reserve bytes, Cache mode HDD, Cache mode SSD, and Cache page size can't be modified. Limited changes can be made to the physical setup. For more information, see the following common scenarios.
 
-### Adding or replacing capacity drives (HDDs)
+### Add or replace capacity drives (HDDs)
 
 Once the drive has been manually added, run the following cmdlet to finish the intake process.
 
@@ -196,9 +196,9 @@ Once the drive has been manually added, run the following cmdlet to finish the i
 Update-StorageBusCache
 ```
 
-### Adding or replacing cache drives (NVMes or SSDs)
+### Add or replace cache drives (NVMes or SSDs)
 
-There's no cmdlet to unbind/rebind existing bindings and balance out the relationship. The following steps cause the existing read cache to be lost.
+There's no cmdlet to unbind/rebind existing bindings and balance the relationship. The following steps cause the existing read cache to be lost.
 
 ```PowerShell
 Remove-StorageBusBinding
@@ -213,13 +213,13 @@ Use the following cmdlet to check the existing cache and capacity bindings.
 Get-StorageBusBinding
 ```
 
-In the following example, the first column lists capacity drives, and the third column lists the cache drives that they're bound to. Follow the instructions in Adding or replacing cache drives to balance, so the existing cache isn't preserved.
+In the following example, the first column lists capacity drives, and the third column lists the cache drives that they're bound to. Follow the instructions in adding or replacing cache drives to balance, so the existing cache isn't preserved.
 
 :::image type="content" source="media/storage-bus-cache/get-storagebusbinding.png" alt-text="Screenshot showing the output of Get-StorageBusBinding.":::
 
 ## Storage bus cache FAQ
 
-This section answers frequently asked questions about the storage bus cache on Windows Server 2022
+This section answers frequently asked questions about the storage bus cache on Windows Server 2022.
 
 ### Why does the Failover Clustering feature need to be installed when the server isn't a part of a Failover Cluster?
 
@@ -227,7 +227,7 @@ This feature is designed for standalone servers but built on top of the storage 
 
 ### Will the storage bus cache work with an all flash configuration?
 
-No, this feature only works when there are two media types, one of which must be HDD. This feature doesn't work with RAID, SAN, or all flash systems.
+No, this feature only works when there are two media types, one of which must be HDD. This feature doesn't work with RAID, SAN, or flash systems.
 
 ### How can the storage bus cache settings be changed?
 
