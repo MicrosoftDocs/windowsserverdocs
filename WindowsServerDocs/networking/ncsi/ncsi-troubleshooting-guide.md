@@ -18,7 +18,7 @@ Troubleshooting NCSI (Network Connectivity Status Indicator) issues are generall
 [ ![Screenshot of the Start button context menu with Event Viewer highlighted.](../media/ncsi/ncsi-event-viewer-1.jpg)](../media/ncsi/ncsi-event-viewer-1.jpg#lightbox)
 
 1. Expand **Applications and Service Logs** > **Microsoft** > **Windows** > **NCSI**.
-[ ![Screenshot of the Event Viewer with expanded Applications and Service Logs, Microsoft, Windows, and NCSI highlighted.](../media/ncsi/ncsi-event-viewer-2.jpg)](../media/ncsi-event-viewer-2.jpg#lightbox)
+[ ![Screenshot of the Event Viewer with expanded Applications and Service Logs, Microsoft, Windows, and NCSI highlighted.](../media/ncsi/ncsi-event-viewer-2.jpg)](../media/ncsi/ncsi-event-viewer-2.jpg#lightbox)
 
 1. Right-click **NCSI**, select **View** > **Show Analytic and Debug Logs**.
 [ ![Screenshot of the Event Viewer with NCSI highlighted with Show Analytic and Debug Logs enabled.](../media/ncsi/ncsi-event-viewer-3.jpg)](../media/ncsi/ncsi-event-viewer-3.jpg#lightbox)
