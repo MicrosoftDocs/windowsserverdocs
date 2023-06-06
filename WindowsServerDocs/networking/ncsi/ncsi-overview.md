@@ -14,9 +14,9 @@ The Network Connectivity Status Indicator (NCSI) is a feature that helps to prov
 
 |Icon|Description|
 |--|--|
-|:::image type="icon" source="../media/ncsi/icons/ncsi-icon-connected-wired.jpg":::| Connected (Wired) |
-|:::image type="icon" source="../media/ncsi/icons/ncsi-icon-connected-wireless.jpg":::| Connected (Wireless) |
-|:::image type="icon" source="../media/ncsi/icons/ncsi-icon-connected-no-internet.jpg":::| Connected (No internet) |
+|:::image type="icon" source="../media/ncsi/ncsi-overview/ncsi-icon-connected-wired.jpg":::| Connected (Wired) |
+|:::image type="icon" source="../media/ncsi/ncsi-overview/ncsi-icon-connected-wireless.jpg":::| Connected (Wireless) |
+|:::image type="icon" source="../media/ncsi/ncsi-overview/ncsi-icon-connected-no-internet.jpg":::| Connected (No internet) |
 
 The network status can be viewed by clicking this icon and further network adapter details can be seen by following the **Network and Internet settings** link. Depending on the version of Windows you're running, the taskbar options for the NCSI icon may vary.
 

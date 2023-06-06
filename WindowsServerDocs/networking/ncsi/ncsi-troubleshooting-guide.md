@@ -15,17 +15,17 @@ Troubleshooting NCSI (Network Connectivity Status Indicator) issues are generall
 ## View NCSI data using Event Viewer
 
 1. To open the **Event Viewer**, right-click on **Start** > **Event Viewer**. <br>_Alternatively_, open the Run prompt by pressing **Win+R** and typing eventviewer.exe.
-[ ![Screenshot of the Start button context menu with Event Viewer highlighted.](../media/ncsi/troubleshooting/ncsi-event-viewer-1.jpg)](../media/ncsi/troubleshooting/ncsi-event-viewer-1.jpg#lightbox)
+[ ![Screenshot of the Start button context menu with Event Viewer highlighted.](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-1.jpg)](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-1.jpg#lightbox)
 
 1. Expand **Applications and Service Logs** > **Microsoft** > **Windows** > **NCSI**.
-[ ![Screenshot of the Event Viewer with expanded Applications and Service Logs, Microsoft, Windows, and NCSI highlighted.](../media/ncsi/troubleshooting/ncsi-event-viewer-2.jpg)](../media/ncsi/troubleshooting/ncsi-event-viewer-2.jpg#lightbox)
+[ ![Screenshot of the Event Viewer with expanded Applications and Service Logs, Microsoft, Windows, and NCSI highlighted.](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-2.jpg)](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-2.jpg#lightbox)
 
 1. Right-click **NCSI**, select **View** > **Show Analytic and Debug Logs**.
-[ ![Screenshot of the Event Viewer with NCSI highlighted with Show Analytic and Debug Logs enabled.](../media/ncsi/troubleshooting/ncsi-event-viewer-3.jpg)](../media/ncsi/troubleshooting/ncsi-event-viewer-3.jpg#lightbox)
+[ ![Screenshot of the Event Viewer with NCSI highlighted with Show Analytic and Debug Logs enabled.](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-3.jpg)](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-3.jpg#lightbox)
 
 1. Right-click on **Analytic** under the **NCSI** folder, select **Enable Log**.
 <br>_A dialog box may notify you that you may lose Analytic and Debug log events when logging is enabled. Select **Ok** to proceed._
-[ ![Screenshot of the Event Viewer with the NCSI Analytic event logging enabled.](../media/ncsi/troubleshooting/ncsi-event-viewer-4.jpg)](../media/ncsi/troubleshooting/ncsi-event-viewer-4.jpg#lightbox)
+[ ![Screenshot of the Event Viewer with the NCSI Analytic event logging enabled.](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-4.jpg)](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-4.jpg#lightbox)
 
 ## Retrieve NCSI data using Event Viewer
 
@@ -33,10 +33,10 @@ Performing the actions mentioned above will facilitate in data retrieval. For ea
 
 1. Expand **Applications and Service Logs** > **Microsoft** > **Windows** > **NCSI**.
 1. Right-click on **Analytic**, select **Save All Events As**.
-[ ![Screenshot of the Event Viewer with the NCSI Analytic event with save all events being enabled.](../media/ncsi/troubleshooting/ncsi-event-viewer-5.jpg)](../media/ncsi/troubleshooting/ncsi-event-viewer-5.jpg#lightbox)
+[ ![Screenshot of the Event Viewer with the NCSI Analytic event with save all events being enabled.](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-5.jpg)](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-5.jpg#lightbox)
 
 1. The "Save As" dialog box opens. Set the "save as type" to text (*.txt), name your file and select your location. Select **Save**.
-[ ![Screenshot of the save as dialog window with NCSI logs being saved to the documents folder.](../media/ncsi/troubleshooting/ncsi-event-viewer-6.jpg)](../media/ncsi/troubleshooting/ncsi-event-viewer-6.jpg#lightbox)
+[ ![Screenshot of the save as dialog window with NCSI logs being saved to the documents folder.](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-6.jpg)](../media/ncsi/ncsi-troubleshooting-guide/ncsi-event-viewer-6.jpg#lightbox)
 
 Here's an example of a successful connection output:
 
