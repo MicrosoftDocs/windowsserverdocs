@@ -11,7 +11,6 @@ ms.date: 12/28/2020
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 11, Windows 10, Windows 8.1
 
-
 The Extensible Authentication Protocol (EAP) is an authentication framework that allows for the use of different authentication methods for secure network access technologies. Examples of these technologies include wireless access using IEEE 802.1X, wired access using IEEE 802.1X, and Point-to-Point Protocol (PPP) connections like Virtual Private Networking (VPN). EAP isn't a specific authentication method like MS-CHAP v2, but rather a framework that enables networking vendors to develop and install new authentication methods, known as EAP methods, on the access client and authentication server.
 
 ## Authentication methods
@@ -32,7 +31,7 @@ This topic contains configuration information specific to the following authenti
 
      - EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
 
-   y=>y.attrs.isDirty&&!E0(y)&&y.attrs.depth!==void 0?(l.delim=l.repeat(" ",3*y.attrs.depth),l.delim):"" Appearing as **Secure password (EAP-MSCHAP v2)** in Windows, EAP-MSCHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MSCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
+       Appearing as **Secure password (EAP-MSCHAP v2)** in Windows, EAP-MSCHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MSCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
 
 
 - **EAP-Tunneled Transport Layer Security (TTLS)**
@@ -131,8 +130,7 @@ By default, the following options are provided:
 
   - or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
 
-y=>y.attrs.isDirty&&!E0(y)&&y.attrs.depth!==void 0?(l.delim=l.repeat(" ",3*y.attrs.depth),l.delim):""then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. In this option, if the root certificate isn't present on the computer, the user isn't notified, and the connection attempts fails.
-
+then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. In this option, if the root certificate isn't present on the computer, the user isn't notified, and the connection attempts fails.
 
 - Case 3: **Tell user if the server’s identity cannot be verified** specifies that if:
 
