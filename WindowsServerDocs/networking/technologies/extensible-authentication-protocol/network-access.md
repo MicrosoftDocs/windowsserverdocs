@@ -11,11 +11,15 @@ ms.date: 12/28/2020
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
 
-The Extensible Authentication Protocol (EAP) is an architectural framework that provides extensibility for authentication methods for commonly used protected network access technologies, such as IEEE 802.1X-based wireless access, IEEE 802.1X-based wired access, and Point-to-Point Protocol (PPP) connections such as Virtual Private Networking (VPN). EAP is not an authentication method like MS-CHAP v2, but rather a framework on the access client and authentication server that allows networking vendors to develop and easily install new authentication methods known as EAP methods.
+The Extensible Authentication Protocol (EAP) is an authentication framework that allows for the use of different authentication methods for secure network access technologies. Examples of these technologies include wireless access using IEEE 802.1X, wired access using IEEE 802.1X, and Point-to-Point Protocol (PPP) connections like Virtual Private Networking (VPN). EAP is not a specific authentication method like MS-CHAP v2, but rather a framework that enables networking vendors to develop and install new authentication methods, known as EAP methods, on the access client and authentication server.
 
 ## Authentication methods
 
-This topic contains configuration information specific to the following authentication methods in EAP. Note that EAP authentication methods that are used within tunneled EAP methods are commonly known as **inner methods** or **EAP types**.
+This topic contains configuration information specific to the following authentication methods in EAP. 
+
+> [!NOTE]
+>    EAP authentication methods that are used within tunneled EAP methods are commonly known as **inner methods** or **EAP types**.
+> 
 
 - **Protected EAP (PEAP)**
 
@@ -79,7 +83,12 @@ This item specifies that the client verifies that server certificates presented 
 
 ### Connect to these servers
 
-This item allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the **Subject** field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one "" in the string specified. For example, you can specify nps.example.com to specify the RADIUS server nps1.example.com or nps2.example.com.
+This item allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. 
+
+> [!TIP]
+> You must type the name **exactly** as it appears in the **Subject** field of each RADIUS server certificate or use regular expressions to specify the server name. 
+
+The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one `*` in the string specified. For example, you can specify `nps*.example.com` to specify the RADIUS server `nps1.example.com` or `nps2.example.com` but not `nps12.example.com`.
 
 Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
@@ -132,7 +141,7 @@ By default, the following options are provided:
 
 ### Select authentication method
 
-This item allows you to select the EAP type to use with PEAP for network authentication. By default, two EAP types are available, **Secure password (EAP-MSCHAP v2)** and **Smart card or other certificate (EAP-TLS)**. However, EAP is a flexible protocol that allows inclusion of additional EAP methods, and it is not restricted to these two types.
+This item allows you to select the EAP type to use with PEAP for network authentication. There are two EAP types available by default: Secure password (EAP-MSCHAP v2) and Smart card or other certificate (EAP-TLS). However, EAP is a flexible protocol that allows for the addition of other EAP methods. It is not limited to only these two types.
 
 For more information, see:
 
@@ -148,15 +157,15 @@ This item provides access to property settings for the specified EAP type.
 
 ### Enable fast reconnect
 
-Enables the ability to create a new or refreshed security association more efficiently or in a smaller number of round-trips, in the case where a security association was previously established.
+Enables the ability to create a new or refreshed security association more efficiently and with a smaller number of round-trips if a security association was previously established.
 
-For VPN connections, Fast Reconnect uses IKEv2 technology to provide seamless and consistent VPN connectivity, when users temporarily lose their Internet connections. Users who connect by using wireless mobile broadband will benefit most from this capability.
+For VPN connections, Fast Reconnect uses IKEv2 technology to provide seamless and consistent VPN connectivity, when users temporarily lose their Internet connections. This feature is especially useful for users who connect via wireless mobile broadband.
 
-An example of this benefit is a common scenario in which a user is traveling on a train, uses a wireless mobile broadband card to connect to the Internet, and then establishes a VPN connection to the corporate network.
+For example, a user might be on a train and using a wireless mobile broadband card to connect to the Internet and establish a VPN connection to their corporate network. 
 
-As the train passes through a tunnel, the Internet connection is lost. When the train is outside the tunnel, the wireless mobile broadband card automatically reconnects to the Internet.
+If the train passes through a tunnel and the Internet connection is lost, the wireless mobile broadband card will automatically reconnect to the Internet when the train is back outside the tunnel.
 
-Fast Reconnect automatically re-establishes active VPN connections when internet connectivity is re-established. Although the reconnection might take several seconds to occur, it is performed transparently to users.
+When the Internet connection is re-established, Fast Reconnect will automatically re-establish active VPN connections. Although this process might take a few seconds, it will happen seamlessly and transparently to users.
 
 Default = enabled
 
@@ -168,7 +177,7 @@ Default = not enabled
 
 ### Disconnect if server does not present cryptobinding TLV
 
-This item specifies that connecting clients must end the network authentication process if the RADIUS server does not present cryptobinding Type-Length-Value (TLV). Cryptobinding TLV increases the security of the TLS tunnel in PEAP by combining the inner method and the outer method authentications together so that attackers cannot perform man-in-the-middle attacks by redirecting an MS-CHAP v2 authentication by using the PEAP channel.
+This item specifies that connecting clients must end the network authentication process if the RADIUS server does not present cryptobinding Type-Length-Value (TLV). Cryptobinding TLV is a security feature that enhances the security of the TLS tunnel in PEAP. It does this by combining the inner and outer method authentications, making it difficult for attackers to perform man-in-the-middle attacks by redirecting an MS-CHAP v2 authentication through the PEAP channel.
 
 Default = not enabled
 
@@ -232,7 +241,12 @@ Default = enabled
 
 ### Connect to these servers
 
-This item allows you to specify the name for RADIUS servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one "" in the string that is specified. For example, you can specify nps.example.com to specify the RADIUS server nps1.example.com or nps2.example.com.
+This item allows you to specify the name for RADIUS servers that provide network authentication and authorization. 
+
+> [!TIP]
+> You must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate or use regular expressions to specify the server name. 
+
+The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one `*` in the string that is specified. For example, you can specify `nps*.example.com` to specify the RADIUS server `nps1.example.com` or `nps2.example.com` but not `nps12.example.com`.
 
 Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
@@ -262,7 +276,7 @@ This item enables you to view the properties of the selected certificate.
 
 ### Do not prompt user to authorize new servers or trusted certification authorities
 
-This item prevents the user from being prompted to trust a server certificate if that certificate is incorrectly configured, is not already trusted, or both (if enabled). It is recommended that you select this check box to simplify the user experience and to prevent users from inadvertently choosing to trust a server that is deployed by an attacker.
+This item prevents the user from being prompted to trust a server certificate if that certificate is incorrectly configured, is not already trusted, or both (if enabled). To simplify the user experience and prevent users from mistakenly trusting a server deployed by an attacker, it is recommended that you select this checkbox.
 
 Default = not enabled
 
@@ -274,7 +288,7 @@ Default = not enabled
 
 ## Configure New Certificate Selection configuration items
 
-Use **New Certificate Selection** to configure the criteria that client computers use to automatically select the right certificate on the client computer for the purpose of authentication. When the configuration is provided to network client computers through the Wired Network (IEEE 802.3) Policies, the Wireless Network (IEEE 802.11) Policies, or through Connection Manager Administration Kit (CMAK) for VPN, clients are automatically provisioned with the specified authentication criteria.
+Use **New Certificate Selection** to configure the criteria that client computers will use to automatically select the appropriate certificate for authentication purposes. This configuration can be provided to network client computers through the Wired Network (IEEE 802.3) Policies, the Wireless Network (IEEE 802.11) Policies, or through Connection Manager Administration Kit (CMAK) for VPN. This mean that clients will be automatically provisioned with the specified authentication criteria.
 
 This section lists the configuration items for **New Certificate Selection**, along with a description of each.
 
@@ -306,19 +320,19 @@ Default = not enabled
 
 ### All Purpose
 
-When selected, this item specifies that certificates having the **All Purpose** EKU are considered valid certificates for the purpose of authenticating the client to the server.
+When selected, this item specifies that certificates having the **All Purpose** EKU are considered valid certificates for the purpose of authenticating the client to the server. The Object Identifier (OID) for **All Purpose** is `0` or empty.
 
 Default = selected when **Extended Key Usage (EKU)** is selected
 
 ### Client Authentication
 
-When selected, this item specifies that certificates having the **Client Authentication** EKU, and the specified list of EKUs are considered valid certificates for the purpose of authenticating the client to the server.
+When selected, this item specifies that certificates having the **Client Authentication** EKU, and the specified list of EKUs are considered valid certificates for the purpose of authenticating the client to the server. The Object Identifier (OID) for **Client Authentication** is `1.3.6.1.5.5.7.3.2`.
 
 Default = selected when **Extended Key Usage (EKU)** is selected
 
 ### Any Purpose
 
-When selected, this item specifies that all certificates having **Any Purpose** EKU and the specified list of EKUs are considered valid certificates for the purpose of authenticating the client to the server.
+When selected, this item specifies that all certificates having **Any Purpose** EKU and the specified list of EKUs are considered valid certificates for the purpose of authenticating the client to the server. The Object Identifier (OID) for **All Purpose** is `1.3.6.1.4.1.311.10.12.1`.
 
 Default = selected when **Extended Key Usage (EKU)** is selected
 
@@ -356,7 +370,7 @@ You can select an EKU from the list provided, or add a new EKU.
 
 ## TTLS configuration items
 
-EAP-TTLS is a standards-based EAP tunneling method that supports mutual authentication and provides a secure tunnel for client inclusion authentication by using EAP methods and other legacy protocols. The addition of EAP-TTLS in Windows Server 2012 provides only client-side support, for the purpose of supporting interoperation with the most commonly-deployed RADIUS servers that support EAP-TTLS.
+EAP-TTLS is a standards-based EAP tunneling method that supports mutual authentication and provides a secure tunnel for client inclusion authentication by using EAP methods and other legacy protocols. In Windows Server 2012, the inclusion of EAP-TTLS only provides support on the client-side. This is done to enable interoperation with the most commonly deployed RADIUS servers that support EAP-TTLS.
 
 This section lists the items that can be configured for EAP-TTLS.
 
@@ -370,7 +384,14 @@ Default = not enabled
 
 ### Connect to these servers
 
-This item enables you to specify the name for RADIUS servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name. But to differentiate a regular expression with the literal string, you must use at least one * in the string specified. For example, you can specify nps*.example.com to specify the RADIUS server nps1.example.com or nps2.example.com. Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+This item enables you to specify the name for RADIUS servers that provide network authentication and authorization. 
+
+> [!TIP]
+> You must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate or use regular expressions to specify the server name. 
+
+The complete syntax of the regular expression can be used to specify the server name. But to differentiate a regular expression with the literal string, you must use at least one `*` in the string that is specified. For example, you can specify `nps*.example.com` to specify the RADIUS server `nps1.example.com` or `nps2.example.com` but not `nps12.example.com`.
+
+Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
 Default = none
 
@@ -384,8 +405,9 @@ You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Mic
 
 Do not specify a trusted root CA certificate that is not already listed in client computers’ **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**.
 
-   > [!NOTE]
-   > If you designate a certificate that is not installed on client computers, authentication will fail.
+> [!WARNING]
+>    If you designate a certificate that is not installed on client computers, authentication will fail.
+> 
 
 Default = not enabled, no trusted root CAs selected
 
@@ -487,4 +509,5 @@ For additional information about authenticated wireless settings in Group Policy
 For additional information about authenticated wired settings in Group Policy, see [Managing the New Wired Network (IEEE 802.3) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831813(v=ws.11))
 
 For information about advanced settings for authenticated wired access and authenticated wireless access, see [Advanced Security Settings for Wired and Wireless Network Policies](/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994696(v=ws.11)).
+
 
