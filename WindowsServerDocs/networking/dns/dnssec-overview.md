@@ -1,5 +1,5 @@
 ---
-title: What is DNSSEC?
+title: What is DNSSEC for DNS Server in Windows Server?
 description: Learn about how Domain Name System Security Extensions (DNSSEC) adds security to the DNS protocol for DNS Server in Windows Server.
 ms.topic: overview
 ms.author: wscontent
@@ -25,28 +25,9 @@ The core DNSSEC extensions are specified in the following Request for Comments (
 
 The following figure shows an example of the DNS resource records for the zone contoso.com before and after zone signing.
 
-![DNS resource records](RackMultipart20230503-1-7urv46_html_49ac0cb03196381.gif) alt-text="Screenshot showing DNS resource records in the zone contoso.com before and after zone signing"
+:::image type="content" source="../media/DNSSEC/zone-signing-records.jpeg" alt-text="Image showing example DNS resource records in the zone contoso.com before and after zone DNSSEC signing" lightbox="media/article-folder-name/image-file-expanded.png":::
 
-For more information about each of these resource records, see [DNSSEC-related resource records](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj200221(v=ws.11)).
-
-When a DNSSEC-aware recursive or forwarding DNS server receives a query from a DNS client for a DNSSEC-signed zone, it requests that the authoritative DNS server also sends DNSSEC records. The DNS server attempts to validate the DNS response using the DNSSEC records. A recursive or forwarding DNS server recognizes that the zone supports DNSSEC if it has a DNSKEY, also called a trust anchor, for that zone.
-
-> [!IMPORTANT]
-> A non-authoritative DNS server might use recursion or forwarding to resolve a DNS query. This topic refers to the non-authoritative server as a recursive DNS server; however, if the server uses forwarding, then the process used for DNSSEC validation of DNS responses is the same.
-
-### What is the DNSKEY?
-
-A recursive DNS server uses the _DNSKEY_ resource record to validate responses from the authoritative DNS server. To validate responses, the DNS server decrypts the digital signatures contained in DNSSEC-related resource records and compares the hash values. If hash values are identical, it provides a reply to the DNS client with the DNS data that it requested, such as a host (A) resource record. If hash values don't match, it replies with a `SERVFAIL` message. In this way, a DNSSEC-capable, resolving DNS server with a valid trust anchor installed protects against DNS spoofing attacks whether or not DNS clients are DNSSEC-aware.
-
-If your DNS client is DNSSEC-aware, it can be configured to require that the DNS server perform DNSSEC validation.
-
-The following figure shows the validation process.
-
-![Validation process](RackMultipart20230503-1-7urv46_html_49ac0cb03196381.gif) alt-text="Screenshot showing validation process"
-
-DNSKEYs are used to compute hash values and decrypt RRSIG records. The figure doesn't display all validation processes that are performed. More validation is also carried out to ensure the DNSKEYs are valid and that DS records are valid, if they exist (not shown in the screenshot).
-
-For information about how to add DNSSEC data to the DNS query and response process, see [Validate DNS responses](/validate-dns-responses.md).
+For more information about each of these resource records, see [DNSSEC resource records](#dnssec-resource-records).
 
 ### DNSSEC resource records
 
@@ -67,9 +48,9 @@ NSEC or NSEC3 records are automatically added to a zone during zone signing. How
 
 ### Trust anchors
 
-DNSKEY and DS resource records are also called  **trust anchors**  or  **trust points**. A trust anchor must be distributed to all nonauthoritative DNS servers that perform DNSSEC validation of DNS responses for a signed zone. If the DNS server is running on a domain controller, trust anchors are stored in the forest directory partition in Active Directory Domain Services (AD DS) and can be replicated to all domain controllers in the forest. On standalone DNS servers, trust anchors are stored in a file named  **TrustAnchors.dns**. A DNS server running Windows Server 2012 or a later operating system also displays configured trust anchors in the DNS Manager console tree in the  **Trust Points**  container. You can also use Windows PowerShell or dnscmd.exe to view trust anchors (note: dnscmd.exe is deprecated and might be removed in a future version of Windows Server).
+DNSKEY and DS resource records are also called  _trust anchors_  or  _trust points_. A trust anchor must be distributed to all nonauthoritative DNS servers that perform DNSSEC validation of DNS responses for a signed zone. If the DNS server is running on a domain controller, trust anchors are stored in the forest directory partition in Active Directory Domain Services (AD DS) and can be replicated to all domain controllers in the forest. On standalone DNS servers, trust anchors are stored in a file named  `TrustAnchors.dns`.
 
-Use Windows PowerShell to view the trust anchors for a zone using the [Get-DnsServerTrustAnchor](/powershell/module/dnsserver/get-dnsservertrustanchor) command. To view all the current trust points on a server, use the  [Get-DnsServerTrustPoint](/powershell/module/dnsserver/Get-DnsServerTrustPoint) PowerShell command.
+Use Windows PowerShell to view the trust anchors for a zone using the [Get-DnsServerTrustAnchor](/powershell/module/dnsserver/get-dnsservertrustanchor) command. To view all the current trust points on a server, use the  [Get-DnsServerTrustPoint](/powershell/module/dnsserver/Get-DnsServerTrustPoint) PowerShell command. A DNS server running Windows Server 2012 or a later operating system also displays configured trust anchors in the DNS Manager console tree in the  **Trust Points**  container.
 
 ## Next steps
 
