@@ -1,6 +1,6 @@
 ---
 title: Storage Spaces Direct troubleshooting
-description: Learn how to troubleshoot your Storage Spaces Direct deployment.
+description: Learn how to troubleshoot your Storage Spaces Direct deployment by confirming the make and model of your SSD, inspecting for faulty drives, and more.
 ms.author: kaushika
 ms.topic: article
 author: kaushika-msft
@@ -15,12 +15,12 @@ Use the information in this article to troubleshoot your Storage Spaces Direct d
 
 In general, start with these steps:
 
-1. Confirm the make and model of SSD is certified for Windows Server 2016 and Windows Server 2019 using the Windows Server Catalog. Confirm with the vendor that the drives are supported for Storage Spaces Direct.
-2. Inspect the storage for any faulty drives. Use storage management software to check the status of the drives. If any of the drives are faulty, work with your vendor.
-3. Update the storage and drive firmware if necessary.
+1. Confirm the make and model of SSD is certified for Windows Server 2016 and Windows Server 2019 by using the Windows Server Catalog. Confirm with the vendor that the drives are supported for Storage Spaces Direct.
+1. Inspect the storage for any faulty drives. Use storage management software to check the status of the drives. If any of the drives are faulty, work with your vendor.
+1. Update the storage and drive firmware if necessary.
    Ensure that the latest Windows Updates are installed on all nodes. You can get the latest updates for Windows Server 2016 from [Windows 10 and Windows Server 2016 update history](https://aka.ms/update2016). Get the latest updates for Windows Server 2019 from [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619).
-4. Update the network adapter drivers and firmware.
-5. Run cluster validation and review the Storage Space Direct section. Ensure that the drives you use for the cache are reported correctly and have no errors.
+1. Update the network adapter drivers and firmware.
+1. Run cluster validation and review the Storage Space Direct section. Ensure that the drives you use for the cache are reported correctly and have no errors.
 
 If you're still having problems, review the troubleshooting information for each of the specific issues in this article.
 
@@ -88,7 +88,7 @@ To fix this issue, follow these steps:
    Add-ClusterSharedVolume -name "Physical Disk Resource Name"
    ```
 
-`DiskRecoveryAction` is an override switch that lets you attach the Space volume in read-write mode without any checks. The property lets you diagnose why a volume isn't coming online. It's similar to maintenance mode but you can invoke it on a resource in a failed state. It also lets you access the data so you can copy it. This access is helpful in no redundancy situations. The `DiskRecoveryAction` property was added in the February 22, 2018, update, KB 4077525.
+`DiskRecoveryAction` is an override switch that lets you attach the Space volume in read-write mode without any checks. The property lets you diagnose why a volume isn't coming online. It's similar to maintenance mode but you can invoke it on a resource in a failed state. It also lets you access the data so you can copy it. This access is helpful in no-redundancy situations. The `DiskRecoveryAction` property was added in the February 22, 2018, update, KB 4077525.
 
 ## Detached status in a cluster
 
@@ -119,10 +119,10 @@ Data on the disk is out-of-sync and a data integrity scan is required.
 To start the scan, run this command:
 Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask
 
-Once you have resolved the condition listed above, you can online the disk by using these commands in PowerShell:
+Once you have resolved that condition, you can online the disk by using these commands in PowerShell:
 
 Get-VirtualDisk | ?{ $_.ObjectId -Match "{GUID}" } | Get-Disk | Set-Disk -IsReadOnly $false
-Get-VirtualDisk | ?{ $_.ObjectId -Match "{GUID}" } | Get-Disk | Set-Disk -IsOffline  $false
+Get-VirtualDisk | ?{ $_.ObjectId -Match "{GUID}" } | Get-Disk | Set-Disk -IsOffline $false
 ------------------------------------------------------------
 
 Log Name: System
@@ -231,7 +231,7 @@ Event ID: 1135
 Description: Cluster node 'NODENAME'was removed from the active failover cluster membership. The Cluster service on this node might have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
-A change introduced in May 8, 2018 to Windows Server 2016 was a cumulative update to add SMB Resilient Handles for the Storage Spaces Direct intra-cluster SMB network sessions. This update was made to improve resiliency to transient network failures and improve how RoCE handles network congestion. These improvements also inadvertently increased timeouts when SMB connections try to reconnect and waits to time out when a node is restarted. These issues can affect a system that is under stress. During unplanned downtime, IO pauses of up to 60 seconds have also been observed while the system waits for connections to time out. To fix this issue, install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version.
+A change introduced in May 8, 2018 to Windows Server 2016 was a cumulative update to add SMB Resilient Handles for the Storage Spaces Direct intra-cluster SMB network sessions. This update was made to improve resiliency to transient network failures and improve how RoCE handles network congestion. These improvements also inadvertently increased timeouts when SMB connections try to reconnect and waits to time out when a node is restarted. These issues can affect a system that's under stress. During unplanned downtime, IO pauses up to 60 seconds have also been observed while the system waits for connections to time out. To fix this issue, install the [October 18, 2018, cumulative update for Windows Server 2016](https://support.microsoft.com/help/4462928) or a later version.
 
 > [!NOTE]
 > This update aligns the CSV time-outs with SMB connection time-outs to fix this issue. It doesn't implement the changes to disable live dump generation mentioned in the Workaround section.
@@ -239,33 +239,33 @@ A change introduced in May 8, 2018 to Windows Server 2016 was a cumulative updat
 ### Shutdown process flow
 
 1. Run the Get-VirtualDisk cmdlet, and make sure that the HealthStatus value is Healthy.
-2. Drain the node by running this cmdlet:
+1. Drain the node by running this cmdlet:
 
    ```powershell
    Suspend-ClusterNode -Drain
    ```
 
-3. Put the disks on that node in storage maintenance mode by running this cmdlet:
+1. Put the disks on that node in storage maintenance mode by running this cmdlet:
 
    ```powershell
    Get-StorageFaultDomain -type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Enable-StorageMaintenanceMode
    ```
 
-4. Run the `Get-PhysicalDisk` cmdlet, and make sure that the `OperationalStatus` value is `In Maintenance` mode.
-5. Run the `Restart-Computer` cmdlet to restart the node.
-6. After node restarts, remove the disks on that node from storage maintenance mode by running this cmdlet:
+1. Run the `Get-PhysicalDisk` cmdlet, and make sure that the `OperationalStatus` value is `In Maintenance` mode.
+1. Run the `Restart-Computer` cmdlet to restart the node.
+1. After node restarts, remove the disks on that node from storage maintenance mode by running this cmdlet:
 
    ```powershell
    Get-StorageFaultDomain -type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Disable-StorageMaintenanceMode
    ```
 
-7. Resume the node by running this cmdlet:
+1. Resume the node by running this cmdlet:
 
    ```powershell
    Resume-ClusterNode
    ```
 
-8. Check the status of the resync jobs by running this cmdlet:
+1. Check the status of the resync jobs by running this cmdlet:
 
    ```powershell
    Get-StorageJob
@@ -284,7 +284,7 @@ To mitigate the effects of live dump generation on systems with a great amount o
 
 #### Disable all dumps
 
-To completely disable all dumps, including live dumps system-wide, follow these steps. We recommend this procedure for this scenario.
+To completely disable all dumps, including live dumps system-wide, follow these steps. Use this procedure for this scenario:
 
 1. Create the following registry key: HKLM\System\CurrentControlSet\Control\CrashControl\ForceDumpsDisabled
 2. Under the new **ForceDumpsDisabled** key, create a REG_DWORD property as GuardedHost, and then set its value to 0x10000000.
@@ -346,8 +346,8 @@ There are two ways to check:
 
 1. Use Get-PhysicalDisk.xml from the SDDCDiagnosticInfo.
     1. Open the XML file by using "$d = Import-Clixml GetPhysicalDisk.XML".
-    2. Run `ipmo storage`.
-    3. Run `$d`. Notice that Usage is Auto-Select, not Journal.
+    1. Run `ipmo storage`.
+    1. Run `$d`. Notice that Usage is Auto-Select, not Journal.
    You see output like this:
 
    |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| Usage| Size|
@@ -377,7 +377,7 @@ Now, if you run **Get-PhysicalDisk** on any of the nodes, you see all the disks 
 
 |Number| Friendly Name| Serial Number|HealthStatus|OperationalStatus|Total Size| Partition Style|
 |-|-|-|-|-|-|-|-|
-|0|Msft Virtu...  ||Healthy | Online|  127 GB| GPT|
+|0|Msft Virtu... ||Healthy | Online| 127 GB| GPT|
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
@@ -395,9 +395,9 @@ Now, if you run **Get-PhysicalDisk** on any of the nodes, you see all the disks 
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
 
-## Error message about "unsupported media type" when you create a Storage Spaces Direct cluster using Enable-ClusterS2D
+## Error message about "unsupported media type" when you create a Storage Spaces Direct cluster by using Enable-ClusterS2D
 
-You might see errors similar to this one when you run the **Enable-ClusterS2D** cmdlet:
+You might see similar errors when you run the **Enable-ClusterS2D** cmdlet:
 
 ![Scenario 6 error message](media/troubleshooting/scenario-error-message.png)
 
@@ -407,9 +407,9 @@ To fix this issue, ensure the HBA adapter is configured in HBA mode. No HBA shou
 
 You see the following information in the validation report:
 
-Disk `<identifier>` connected to node `<nodename>` returned a SCSI Port Association and the corresponding enclosure device couldn't be found. The hardware isn't compatible with Storage Spaces Direct (S2D), contact the hardware vendor to verify support for SCSI Enclosure Services (SES).
+Disk `<identifier>` connected to node `<nodename>` returned a SCSI Port Association and the corresponding enclosure device couldn't be found. The hardware isn't compatible with Storage Spaces Direct (S2D). Contact the hardware vendor to verify support for SCSI Enclosure Services (SES).
 
-The issue is with the HPE SAS expander card that lies between the disks and the HBA card. The SAS expander creates a duplicate ID between the first drive connected to the expander and the expander itself.  This issue has been resolved in [HPE Smart Array Controllers SAS Expander Firmware: 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3).
+The issue is with the HPE SAS expander card that lies between the disks and the HBA card. The SAS expander creates a duplicate ID between the first drive connected to the expander and the expander itself. This issue has been resolved in [HPE Smart Array Controllers SAS Expander Firmware: 4.02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3).
 
 ## Intel SSD DC P4600 series has a nonunique NGUID
 
@@ -423,7 +423,7 @@ You might see an issue where an Intel SSD DC P4600 series device seems to be rep
 | eui.0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
 | eui.0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
 
-To fix this issue, update the firmware on the Intel drives to the latest version.  Firmware version QDV101B1 from May 2018 is known to resolve this issue.
+To fix this issue, update the firmware on the Intel drives to the latest version. Firmware version QDV101B1 from May 2018 is known to resolve this issue.
 
 The [May 2018 release of the Intel SSD Data Center Tool](https://downloadmirror.intel.com/27778/eng/Intel_SSD_Data_Center_Tool_3_0_12_Release_Notes_330715-026.pdf) includes a firmware update, QDV101B1, for the Intel SSD DC P4600 series.
 
@@ -453,11 +453,11 @@ Here are some examples showing how to run the script:
 
 ## File copy is slow
 
-You might see that the file copy takes longer than expected when using File Explorer to copy a large VHD to the virtual disk.
+You might see that the file copy takes longer than expected when you use File Explorer to copy a large VHD to the virtual disk.
 
 We don't recommend that you use File Explorer, Robocopy, or Xcopy to copy a large VHD to the virtual disk. It results in slower than expected performance. The copy process doesn't go through the Storage Spaces Direct stack, which sits lower on the storage stack, and instead acts like a local copy process.
 
-If you want to test Storage Spaces Direct performance, we recommend using VMFleet and Diskspd to load and stress test the servers to get a base line and set expectations of the Storage Spaces Direct performance.
+If you want to test Storage Spaces Direct performance, we recommend you use VMFleet and Diskspd to load and stress test the servers to get a base line and set expectations of the Storage Spaces Direct performance.
 
 ## Expected events that you would see on rest of the nodes during the reboot of a node
 
@@ -473,9 +473,9 @@ If you're running Azure VMs, you can ignore this event: `Event ID 32: The driver
 
 ## Slow performance or "Lost Communication," "IO Error," "Detached," or "No Redundancy" errors for deployments that use Intel P3x00 NVMe devices
 
-We've identified a critical issue that affects some Storage Spaces Direct users who are using hardware based on the Intel P3x00 family of NVM Express (NVMe) devices with firmware versions before "Maintenance Release 8."
+We've identified a critical issue that affects some Storage Spaces Direct users who use hardware based on the Intel P3x00 family of NVM Express (NVMe) devices with firmware versions before "Maintenance Release 8."
 
 > [!NOTE]
 > Individual OEMs might have devices that are based on the Intel P3x00 family of NVMe devices with unique firmware version strings. Contact your OEM for more information of the latest firmware version.
 
-If you're using hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8).
+If you use hardware in your deployment based on the Intel P3x00 family of NVMe devices, we recommend that you immediately apply the latest available firmware (at least Maintenance Release 8).
