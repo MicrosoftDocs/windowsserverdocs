@@ -11,7 +11,7 @@ ms.custom: template-tutorial #Required; leave this attribute/value as-is.
 
 # Tutorial: Enable storage bus cache with Storage Spaces on standalone servers
 
->Applies to: Windows Server 2022
+> Applies to: Windows Server 2022
 
 The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. This feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. For more information, see [Understanding the storage pool cache](/azure-stack/hci/concepts/cache). By default, only a portion of the faster media tier is reserved for the cache.
 
@@ -52,13 +52,13 @@ In this tutorial, you learn about:
 
 This section explains what each configurable field of the storage bus cache is and applicable values.
 
-```PowerShell
+```powershell
 Get-StorageBusCache
 ```
 
 When not enabled, the output should resemble the following example:
 
-```PowerShell
+```powershell
 ProvisionMode                  : Shared
 SharedCachePercent             : 15
 CacheMetadataReserveBytes      : 34359738368
@@ -76,7 +76,7 @@ Enabled                        : False
 This field determines if the faster media tier, or only a portion of it, is used for caching. This field can't be modified after enabling the storage bus cache. Prvision Mode has two options:
 
 * Shared (default): The cache only takes up a portion of the faster media tier. The exact percentage is configurable by the Shared Cache Percentage field.
-* Cache: Dedicate most of the faster media tier to caching as opposed to only a portion. For more information, see  [Understanding the storage pool cache](/azure-stack/hci/concepts/cache).
+* Cache: Dedicate most of the faster media tier to caching as opposed to only a portion. For more information, see [Understanding the storage pool cache](/azure-stack/hci/concepts/cache).
 
 ### Shared cache percentage
 
@@ -105,7 +105,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
 1. Import the module.
 
-    ```PowerShell
+    ```powershell
     Import-Module StorageBusCache 
     ```
 
@@ -118,7 +118,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
 1. Check the drive status.
 
-    ```PowerShell
+    ```powershell
     Get-PhysicalDisk
     ```
 
@@ -128,7 +128,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
 1. Enable storage bus cache.
 
-    ```PowerShell
+    ```powershell
     Enable-StorageBusCache
     ```
 
@@ -146,13 +146,13 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
     Check that the fields are correct and the Enabled field is now set to true.
 
-    ```PowerShell
+    ```powershell
     Get-StorageBusCache 
     ```
 
     The output should resemble the following example:
 
-    ```PowerShell
+    ```powershell
     ProvisionMode                  : Shared
     SharedCachePercent             : 15
     CacheMetadataReserveBytes      : 34359738368
@@ -172,7 +172,7 @@ The volume you should create depends on whether you're creating that volume with
 
 The following PowerShell cmdlet creates a 1-TiB mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the configuration you should use for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
-```PowerShell
+```powershell
 New-Volume –FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -StorageTierFriendlyNames MirrorOnSSD, ParityOnHDD -StorageTierSizes 200GB, 800GB
 ```
 
@@ -180,7 +180,7 @@ New-Volume –FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyNam
 
 The following PowerShell cmdlet creates a 1-TB Simple volume that can't tolerate any disk failure. Both read and write caching is supported.
 
-```PowerShell
+```powershell
 New-Volume -FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -ResiliencySettingName Simple -Size 1TB
 ```
 
@@ -192,7 +192,7 @@ After you run `Enable-StorageBusCache`, the Provision mode, Shared cache percent
 
 Once the drive has been manually added, run the following cmdlet to finish the intake process.
 
-```PowerShell
+```powershell
 Update-StorageBusCache
 ```
 
@@ -200,7 +200,7 @@ Update-StorageBusCache
 
 There's no cmdlet to unbind/rebind existing bindings and balance the relationship. The following steps cause the existing read cache to be lost.
 
-```PowerShell
+```powershell
 Remove-StorageBusBinding
 New-StorageBusBinding 
 ```
@@ -209,7 +209,7 @@ New-StorageBusBinding
 
 Use the following cmdlet to check the existing cache and capacity bindings.
 
-```PowerShell
+```powershell
 Get-StorageBusBinding
 ```
 
@@ -233,6 +233,6 @@ No, this feature only works when there are two media types, one of which must be
 
 See the following example for changing the Provision mode from Shared (default) to Cache. Default settings are recommended, and any changes should be made before the storage bus cache is enabled.
 
-```PowerShell
+```powershell
 Set-StorageBusCache -ProvisionMode Cache
 ```
