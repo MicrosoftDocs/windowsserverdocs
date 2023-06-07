@@ -20,11 +20,7 @@ When a DNSSEC-aware recursive or forwarding DNS server receives a query from a D
 > [!IMPORTANT]
 > A non-authoritative DNS server might use recursion or forwarding to resolve a DNS query. This topic refers to the non-authoritative server as a recursive DNS server; if the server uses forwarding, the process used for DNSSEC validation of DNS responses is the same.
 
-A recursive DNS server uses the DNSKEY resource record to validate responses from the authoritative DNS server by decrypting digital signatures contained in DNSSEC-related resource records. The recursive DNS server then computes and compares hash values. If hash values are identical, the server provides a reply to the DNS client with the requested DNS data, such as a host (A) resource record. If hash values don't match, the server replies with a `SERVFAIL` message. In this way, a DNSSEC-capable, resolving DNS server with a valid trust anchor installed protects against DNS spoofing attacks whether or not DNS clients are DNSSEC-aware.
-
-If the DNS client is DNSSEC-aware, it can be configured to require that the DNS server perform DNSSEC validation.
-
-## DNSKEY
+### DNSKEY
 
 A recursive DNS server uses the _DNSKEY_ resource record to validate responses from the authoritative DNS server. To validate responses, the DNS server decrypts the digital signatures contained in DNSSEC-related resource records and compares the hash values. If hash values are identical, it provides a reply to the DNS client with the DNS data that it requested, such as a host (A) resource record. If hash values don't match, it replies with a `SERVFAIL` message. In this way, a DNSSEC-capable, resolving DNS server with a valid trust anchor installed protects against DNS spoofing attacks whether or not DNS clients are DNSSEC-aware.
 
