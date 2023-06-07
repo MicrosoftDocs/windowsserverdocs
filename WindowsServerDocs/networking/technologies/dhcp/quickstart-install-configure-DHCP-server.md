@@ -20,12 +20,25 @@ Before you can deploy your IPv4 DHCP server, you must meet the following prerequ
 - A static IP.
 - An account that's a member of the Administrators group, or equivalent.
 
-## Deploy DHCP Using Server Manager
+## Install DHCP Server
 
-Deploying DHCP involves adding the DNS Server role to an existing
-Windows Server server.
+<!-- leading verbiage  --> Installing DHCP involves adding the DNS Server role to an existing Windows Server server.
 
 To install the DNS Server role as a standalone server, perform the following steps:
+
+#### [PowerShell](#tab/powershell)
+
+Here's how to deploy DHCP using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
+
+1. Run PowerShell on your computer in an elevated session.
+
+1. Run the following command. The installation doesn't require a reboot.
+
+   ```powershell
+   Install-WindowsFeature DHCP -IncludeManagementTools
+   ```
+
+#### [GUI](#tab/gui)
 
 Here's how to install the DHCP Server role using Server Manager from the Windows desktop.
 
@@ -57,25 +70,13 @@ Here's how to install the DHCP Server role using Server Manager from the Windows
 
 1. Once the installation is complete, select **Close**. The installation doesn't require a reboot.
 
-## Deploy DHCP using Power Shell
+---
 
-To deploy DHCP using PowerShell:
+## Configure DHCP server 
 
-#### [PowerShell](#tab/powershell)
+After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server]() for guidance.
 
-Here's how to deploy DHCP using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
-
-1. Run PowerShell on your computer in an elevated session.
-
-1. Run the following command. The installation doesn't require a reboot.
-
-   ```powershell
-   Install-WindowsFeature DHCP -IncludeManagementTools
-   ```
-
-#### [GUI](#tab/gui)
-
-## Authorize the DHCP server in Active Directory \(Optional\)
+### Authorize the DHCP server in Active Directory \(Optional\)
 
 If you are installing DHCP in a domain environment, you must perform the following steps to authorize the DHCP server to operate in the domain.
 
@@ -85,21 +86,13 @@ If you are installing DHCP in a domain environment, you must perform the followi
 > [!TIP]
 > When you install Active Directory Domain Services (AD DS) with the Active Directory Domain Services Installation Wizard, the wizard gives you the option to authorize DHCP. The resulting DNS > zone is integrated with the AD DS domain namespace. To learn more, see [Understanding Active Directory Domain Services Integration](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc726034(v=ws.11)).
 
-To authorize the DHCP server using Active Directory:
 
-1. In Server Manager, open a DHCP administration window.
-1. Right-select the IPv4 DHCP server name in the list and select Authorize.
-1. Authorization can take a few seconds to resolve. Refresh the server list to confirm that the DHCP Server is now authorized (green icon appears in each scope.)
-
-### Authorizing DHCP server in DNS
 
 Follow these steps to authorize your DHCP server in a domain environment.
 
 #### [PowerShell](#tab/powershell)
 
-<!-- (powershell version) -->
-
-#### [GUI](#tab/gui)
+<!-- (powershell version) --> Leading verbiage
 
 You can use the following command to add the DHCP server to the list of authorized DHCP servers in Active Directory.
 
@@ -124,31 +117,23 @@ IPAddress	DnsName
 10.0.0.3 	DHCP1.corp.contoso.com
 ```
 
+#### [GUI](#tab/gui)
+
+To authorize the DHCP server using Active Directory:
+
+1. In Server Manager, open a DHCP administration window.
+1. Right-select the IPv4 DHCP server name in the list and select Authorize.
+1. Authorization can take a few seconds to resolve. Refresh the server list to confirm that the DHCP Server is now authorized (green icon appears in each scope.)'
+
 For more information about these commands, see the following topics.
 
 - [Add-DhcpServerInDC](/powershell/module/dhcpserver/add-dhcpserverindc)
-- [Get-DhcpServerInDC](/powershell/module/dhcpserver/get-dhcpserverindc)
+- [Get-DhcpServerInDC](/powershell/module/dhcpserver/get-dhcpserverindc) 
 
-### Set server level DNS dynamic update configuration settings \(Optional\)
+### Configure new scope in IPv4 server
 
-If you want the DHCP server to perform DNS dynamic updates for DHCP client computers, you can run the following command to configure this setting. This is a server level setting, not a scope level setting, so it'll affect all scopes that you configure on the server. This example command also configures the DHCP server to delete DNS resource records for clients when the client least expires.
+<!--  -->
 
-```
-Set-DhcpServerv4DnsSetting -ComputerName "DHCP1.corp.contoso.com" -DynamicUpdates "Always" -DeleteDnsRRonLeaseExpiry $True
-```
-
-You can use the following command to configure the credentials that the DHCP server uses to register or unregister client records on a DNS server. This example saves a credential on a DHCP server. The first command uses **Get-Credential** to create a **PSCredential** object, and then stores the object in the **$Credential** variable. The command prompts you for user name and password, so ensure that you provide credentials for an account that has permission to update resource records on your DNS server.
-
-```
-$Credential = Get-Credential
-Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.contoso.com"
-```
-
-For more information about these commands, see the following topics see [Set-DhcpServerv4DnsSetting](/powershell/module/dhcpserver/set-dhcpserverv4dnssetting) and [Set-DhcpServerDnsCredential](/powershell/module/dhcpserver/set-dhcpserverdnscredential)
-
-## Configure IPv4 DHCP server
-
-After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server]() for guidance.  
 
 ## Related links
 
