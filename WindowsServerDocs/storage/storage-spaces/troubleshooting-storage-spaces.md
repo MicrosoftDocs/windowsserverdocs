@@ -11,7 +11,7 @@ ms.date: 06/06/2023
 
 >Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Use the following information to troubleshoot your Storage Spaces Direct deployment.
+Use the information in this article to troubleshoot your Storage Spaces Direct deployment.
 
 In general, start with these steps:
 
@@ -22,7 +22,7 @@ In general, start with these steps:
 4. Update the network adapter drivers and firmware.
 5. Run cluster validation and review the Storage Space Direct section. Ensure that the drives you use for the cache are reported correctly and have no errors.
 
-If you're still having issues, review these scenarios.
+If you're still having problems, review the troubleshooting information for each of the specific issues in this article.
 
 ## Virtual disk resources are in No Redundancy state
 
