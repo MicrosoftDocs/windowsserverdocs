@@ -36,8 +36,6 @@ The following figure shows the validation process.
 
 DNSKEYs are used to compute hash values and decrypt RRSIG records. The figure doesn't display all validation processes that are performed. More validation is also carried out to ensure the DNSKEYs are valid and that DS records are valid, if they exist (not shown in the screenshot).
 
-For information about how to add DNSSEC data to the DNS query and response process, see [Validate DNS responses](/validate-dns-responses.md).
-
 ## DNS query and response process
 
 A simple example illustrates how you can incorporate DNSSEC into the DNS query-and-response process to provide validation.
@@ -149,7 +147,7 @@ When `DO=0`, the DNS server doesn't send DNSSEC data in the DNS reply. When `DO=
 
 In both example 1 and example 2, validation isn't required for the `secure.contoso.com` zone because the Name Resolution Policy Table (NRPT) isn't configured to require validation.
 
-You can use the  **Get-DnsClientNrptPolicy**  cmdlet to view current NRPT rules. For more information, see [Get-DnsClientNrptPolicy](https://technet.microsoft.com/library/jj590779.aspx).
+You can use the  **Get-DnsClientNrptPolicy**  cmdlet to view current NRPT rules. For more information, see [Get-DnsClientNrptPolicy](/powershell/module/dnsclient/get-dnsclientnrptpolicy).
 
 **Example 3** : In the following example, an NRPT rule is displayed for `secure.contoso.com`.
 
