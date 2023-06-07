@@ -54,4 +54,4 @@ Use Windows PowerShell to view the trust anchors for a zone using the [Get-DnsSe
 
 ## Next steps
 
-To learn more about how DNSSEC uses resource records to validate and secure DNS responses, see [Validate DNS responses](validate-dns-responses.md).
+To learn more about how DNSSEC uses resource records to validate and secure DNS responses, see [Validate DNS responses](validate-dnssec-responses.md).
