@@ -1,5 +1,5 @@
 ---
-title: What is DNSSEC for DNS Server in Windows Server?
+title: DNSSEC for DNS Server in Windows Server?
 description: Learn about how Domain Name System Security Extensions (DNSSEC) adds security to the DNS protocol for DNS Server in Windows Server.
 ms.topic: overview
 ms.author: wscontent
