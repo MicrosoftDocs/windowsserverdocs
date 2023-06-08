@@ -70,7 +70,7 @@ The PCIe Location path is required to dismount and mount the device from the Hos
 
 ### Get the location path by using Device Manager
 
-:::image type="content" source="../deploy/media/dda-devicemanager.png"  alt-text="Screenshot of the device manager, showing the selections for finding a device path." border="false":::
+:::image type="content" source="../deploy/media/dda-devicemanager.png" alt-text="Screenshot of the device manager, showing the selections for finding a device path." border="false":::
 
 1. Open Device Manager and locate the device.
 1. Right-click the device and select **Properties**.
