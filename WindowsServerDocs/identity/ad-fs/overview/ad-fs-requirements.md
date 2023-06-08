@@ -17,7 +17,7 @@ The following are the requirements for deploying Active Directory Federation Ser
 
 - [Hardware requirements](ad-fs-requirements.md#Hardware-requirements)
 
-- [Proxy requirements](ad-fs-requirements.md#Proxy-requirements3)
+- [Proxy requirements](ad-fs-requirements.md#Proxy-requirements)
 
 - [AD DS requirements](ad-fs-requirements.md#AD-DS-requirements)
 
