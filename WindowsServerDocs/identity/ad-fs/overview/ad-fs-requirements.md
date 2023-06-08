@@ -118,7 +118,7 @@ If you're using SQL Server for your AD FS configuration database, size the SQL S
 
 - For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role.
 
-- Third-party proxies must support the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb) to be supported as an AD FS proxy. For a list of third-party vendors, see the [FAQ](AD-FS-FAQ.yml).
+- Third-party proxies must support the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb) to be supported as an AD FS proxy. For a list of third-party vendors, see the [Frequently asked questions (FAQ) about AD FS](AD-FS-FAQ.yml).
 
 - AD FS 2016 requires Web Application Proxy servers on Windows Server 2016. A downlevel proxy can't be configured for an AD FS 2016 farm running at the 2016 farm behavior level.
 
@@ -220,7 +220,7 @@ Both the firewalls located between the Web Application Proxy and the federation 
 
 Also, if you need client user certificate authentication, clientTLS authentication using X509 user certificates, and you don't have port 443 on the certauth endpoint enabled. AD FS 2016 requires that you enable TCP port 49443 inbound on the firewall between the clients and the Web Application Proxy. This requirement doesn't apply to the firewall between the Web Application Proxy and the federation servers.
 
-For more information on hybrid port requirements, see [Hybrid Identity Ports and Protocols](/azure/active-directory/connect/active-directory-aadconnect-ports).
+For more information on hybrid port requirements, see [Hybrid Identity Required Ports and Protocols](/azure/active-directory/connect/active-directory-aadconnect-ports).
 
 For more information, see [Best practices for securing Active Directory Federation Services](../deployment/Best-Practices-Securing-AD-FS.md)
 
