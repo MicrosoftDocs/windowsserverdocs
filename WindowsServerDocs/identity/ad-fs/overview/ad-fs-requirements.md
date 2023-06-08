@@ -29,7 +29,7 @@ The following are the requirements for deploying AD FS:
 
 - [Permissions requirements](ad-fs-requirements.md#BKMK_13)
 
-## <a name="BKMK_1"></a>Certificate requirements
+## Certificate requirements
 
 ### TLS/SSL Certificates
 
@@ -94,7 +94,7 @@ Use the AD FS default, internally generated, self-signed token decrypting certif
 
 - When you use x509 user certificate authentication with AD FS, all user certificates must chain up to a root certification authority that the AD FS and Web Application Proxy servers trust.
 
-## <a name="BKMK_2"></a>Hardware requirements
+## Hardware requirements
 
 AD FS and Web Application Proxy hardware requirements (physical or virtual) are gated on CPU, so you should size your farm for processing capacity.
 
@@ -111,7 +111,7 @@ The memory and disk requirements for AD FS are fairly static. The requirements a
 
 If you're using SQL Server for your AD FS configuration database, size the SQL Server according to the most basic SQL Server recommendations.  The AD FS database size is small, and AD FS doesn't put a significant processing load on the database instance.  AD FS does, however, connect to the database multiple times during an authentication, so the network connection should be robust.  Unfortunately, SQL Azure isn't supported for the AD FS configuration database.
 
-## <a name="BKMK_3"></a>Proxy requirements
+## Proxy requirements
 
 - For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role.
 
@@ -121,7 +121,7 @@ If you're using SQL Server for your AD FS configuration database, size the SQL S
 
 - A federation server and the Web Application Proxy role service can't be installed on the same computer.
 
-## <a name="BKMK_4"></a>AD DS requirements
+## AD DS requirements
 
 **Domain controller requirements**
 
@@ -172,7 +172,7 @@ If you're using SQL Server for your AD FS configuration database, size the SQL S
 
 - The AD FS service account must have permissions to read user attributes in every domain that contains users authenticating to the AD FS service.
 
-## <a name="BKMK_5"></a>Configuration database requirements
+## Configuration database requirements
 
 This section describes the requirements and restrictions for AD FS farms that use respectively the Windows Internal Database (WID) or SQL Server as the database:
 
@@ -195,7 +195,7 @@ The following table provides a summary of how many AD FS servers are supported i
 
 - Both SAML artifact resolution and token replay detection are supported in a SQL Server farm.
 
-## <a name="BKMK_6"></a>Browser requirements
+## Browser requirements
 
 When AD FS authentication is performed via a browser or browser control, your browser must comply with the following requirements:
 
@@ -209,7 +209,7 @@ When AD FS authentication is performed via a browser or browser control, your br
 
 - For seamless sign-on using Windows Integrated Authentication, the federation service name (such as https:\/\/fs.contoso.com) must be configured in local intranet zone or trusted sites zone.
 
-## <a name="BKMK_7"></a>Network requirements
+## Network requirements
 
 **Firewall Requirements**
 
@@ -247,6 +247,6 @@ For more information, see [Best practices for securing Active Directory Federati
 - It's NOT recommended to use DNS round robin as a way to load balance. Using this type of load balancing doesn't provide an automated way to remove a node from the load balancer using health probes.
 - It's NOT recommended to use IP-based session affinity or sticky sessions for authentication traffic to AD FS within the load balancer. You could cause an overload of certain nodes when using legacy authentication protocol for mail clients to connect to Office 365 mail services (Exchange Online).
 
-## <a name="BKMK_13"></a>Permissions requirements
+## Permissions requirements
 
 The administrator that performs the installation and the initial configuration of AD FS must have local administrator permissions on the AD FS server.  If the local administrator doesn't have permissions to create objects in Active Directory, they must first have a domain admin create the required AD objects, then configure the AD FS farm using the AdminConfiguration parameter.
