@@ -13,21 +13,21 @@ ms.topic: article
 
 The following are the requirements for deploying Active Directory Federation Services (AD FS):
 
-- [Certificate requirements](ad-fs-requirements.md#Certificate-requirements)
+- [Certificate requirements](#certificate-requirements)
 
-- [Hardware requirements](ad-fs-requirements.md#Hardware-requirements)
+- [Hardware requirements](#hardware-requirements)
 
-- [Proxy requirements](ad-fs-requirements.md#Proxy-requirements)
+- [Proxy requirements](#proxy-requirements)
 
-- [AD DS requirements](ad-fs-requirements.md#AD-DS-requirements)
+- [AD DS requirements](#ad-ds-requirements)
 
-- [Configuration database requirements](ad-fs-requirements.md#Configuration-database-requirements)
+- [Configuration database requirements](#configuration-database-requirements)
 
-- [Browser requirements](ad-fs-requirements.md#Browser-requirements)
+- [Browser requirements](#browser-requirements)
 
-- [Network requirements](ad-fs-requirements.md#Network-requirements)
+- [Network requirements](#network-requirements)
 
-- [Permissions requirements](ad-fs-requirements.md#Permissions-requirements)
+- [Permissions requirements](#permissions-requirements)
 
 ## Certificate requirements
 
