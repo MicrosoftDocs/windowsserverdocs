@@ -19,7 +19,7 @@ To learn about other methods of GPU virtualization, see [Plan for GPU accelerati
 
 ## Supported Virtual Machines and Guest Operating Systems
 
-Discrete Device Assignment is supported for Generation 1 or 2 VMs. The guests supported include Windows 10 or later, Windows Server 2016 or later, and Windows Server 2012 R2 with the [Update to add Discrete Device Assignment support for Azure that runs on Windows Server 2012 R2-based guest VMs](https://support.microsoft.com/kb/3133690). For more information, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
+Discrete Device Assignment is supported for Generation 1 or 2 VMs. The guests supported include Windows 10 or later, Windows Server 2016 or later, and Windows Server 2012 R2 with the [Update to add Discrete Device Assignment support for Azure](https://support.microsoft.com/kb/3133690). For more information, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
 
 ## System Requirements
 
@@ -87,7 +87,7 @@ curl -o SurveyDDA.ps1 https://raw.githubusercontent.com/MicrosoftDocs/Virtualiza
 .\SurveyDDA.ps1
 ```
 
-For devices that can be assigned, the script displays the MMIO requirements of a given device. The following is an example of the script output:
+For devices that can be assigned, the script displays the MMIO requirements of a given device. For an example, see the following script output:
 
 ```PowerShell
 NVIDIA GRID K520
