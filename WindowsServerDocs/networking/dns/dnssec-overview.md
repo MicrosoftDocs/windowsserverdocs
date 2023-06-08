@@ -25,7 +25,7 @@ The core DNSSEC extensions are specified in the following Request for Comments (
 
 The following figure shows an example of the DNS resource records for the zone contoso.com before and after zone signing.
 
-:::image type="content" source="../media/dnssec-overview/zone-signing-records.png" alt-text="Image showing example DNS resource records in the zone contoso.com before and after zone DNSSEC signing":::
+:::image type="content" source="../media/dnssec-overview/zone-signing-records.png" alt-text="Diagram showing example DNS resource records in the zone contoso.com before and after zone DNSSEC signing.":::
 
 For more information about each of these resource records, see [DNSSEC resource records](#dnssec-resource-records).
 
