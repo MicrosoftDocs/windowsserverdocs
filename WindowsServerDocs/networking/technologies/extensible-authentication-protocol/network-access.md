@@ -20,7 +20,7 @@ EAP authentication methods that are used within tunneled EAP methods are commonl
 
 **Protected EAP (PEAP)**: This section contains configuration information for the two default inner EAP methods that are provided with PEAP.
 
-- **EAP-Transport Layer Security (TLS)**: Appears as **Smart Card or other Certificate (EAP-TLS)** in the Windows, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. If EAP-TLS is set up as an inner authentication method, it has the same configuration settings as EAP-TLS when it's used as an outer method. The only difference is that the method will be configured to work within PEAP. For configuration details, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items).
+- **EAP-Transport Layer Security (TLS)**: Appears as **Smart Card or other Certificate (EAP-TLS)** in the Windows, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. If EAP-TLS is set up as an inner authentication method, it has the same configuration settings as EAP-TLS when it's used as an outer method. The only difference is that the method will be configured to work within PEAP.
 
 - **EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)**: Appears as **Secure password (EAP-MSCHAP v2)** in Windows, EAP-MSCHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MSCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless. EAP-MSCHAP v2 is the EAP method that encapsulates the MS-CHAPv2 authentication protocol.
 
@@ -52,8 +52,6 @@ By default, you can configure EAP settings for the following network authenticat
 - Microsoft: EAP-TTLS
 
 The MS-CHAP-V2 network authentication method is available for VPN by default.
-
-## 
 
 ## Protected EAP configuration settings
 
@@ -93,13 +91,13 @@ The following table explains the configurable settings for PEAP.
 
 ## Selecting EKUs
 
-You can select an EKU from the list provided, or add a new EKU.
+You can select an EKU from the list provided or add a new EKU from the **Configure Certificate Selection** dialog box.
 
-| Item          | Details |
-| :------------ | :------ |
-| **Add**       | Opens the **Add or Edit EKU** dialog box, which enables you to define and add custom EKUs. In **Select the EKUs from the list below**, select an EKU in the list, and then click **OK** to add that EKU to the **Client Authentication** or the **Any Purpose** list. |
-| **Edit**      | Opens the **Add or Edit EKU** dialog box, and enables you to edit custom EKUs that you have added. You can't edit the default, predefined EKUs. |
-| **Remove**    | Removes the selected custom EKU from the list of EKUs in the **Select EKUs** dialog box. You can't remove the default, predefined EKUs. |
+| Item | Details |
+|--|--|
+| **Add** | Opens the **Add or Edit EKU** dialog box, which enables you to define and add custom EKUs. In **Select the EKUs from the list below**, select an EKU in the list, and then click **OK** to add that EKU to the **Client Authentication** or the **AnyPurpose** list. |
+| **Edit** | Opens the **Add or Edit EKU** dialog box, and enables you to edit custom EKUs that you have added. You can't edit the default, predefined EKUs. |
+| **Remove** | Removes the selected custom EKU from the list of EKUs in the **Select EKUs** dialog box. You can't remove the default, predefined EKUs. |
 
 ## Add or Edit EKU
 
@@ -191,10 +189,6 @@ This item specifies whether an EAP type or a non-EAP type is used for authentica
 
    > [!NOTE]
    > The **Select an EAP method for authentication** drop-down list will enumerate all the EAP methods that are installed on the server, except for **PEAP** and **FAST** tunnel methods. The EAP types are listed in the order that they are discovered by the computer.
-
-### Configure
-
-Opens the properties dialog box of the specified EAP type. For details about the default EAP types, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items) or [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-properties-configuration-items).
 
 ## EAP-SIM configuration settings
 
