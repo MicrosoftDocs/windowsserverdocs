@@ -1,10 +1,10 @@
 ---
 title: Plan for deploying devices by using Discrete Device Assignment
-description: Learn about how DDA works in Windows Server
+description: Learn how Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.
 ms.topic: article
 ms.author: wscontent
 author: robinharwood
-ms.date: 06/07/2023
+ms.date: 06/08/2023
 ---
 
 # Plan for Deploying Devices by using Discrete Device Assignment
