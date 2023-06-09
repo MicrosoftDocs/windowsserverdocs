@@ -200,6 +200,8 @@ EAP-AKA' is defined in [RFC 5448](https://www.rfc-editor.org/rfc/rfc5448). EAP-A
 | **Ignore network name mismatch** | The client compares the name of network known to it, with the name sent by the RADIUS server during authentication. If there's a mismatch, it's ignored if this option is selected. If not selected, authentication fails. |
 | **Enable Fast Reauthentication** | Specifies that fast reauthentication is enabled. Fast Reauthentication is useful when SIM authentication happens frequently. The encryption keys that are derived from full authentication are reused. As a result, the SIM algorithm isn't required to run for every authentication attempt, and the number of network operations that result from frequent authentication attempts is reduced. |
 
+---
+
 ## Additional resources
 
 - [Managing the New Wireless Network (IEEE 802.11) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994701(v=ws.11))
