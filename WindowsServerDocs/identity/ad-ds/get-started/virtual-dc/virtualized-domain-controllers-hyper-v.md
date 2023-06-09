@@ -24,7 +24,7 @@ The following sections outline planning considerations for virtualizing a DC. Re
 
 To install and use the Hyper-V role, you must have the following configuration:
 
-- **x64 processor**. Hyper-V is available in x64-based versions of Windows Server 2008 and later.
+- **An x64 processor**. Hyper-V is available in x64-based versions of Windows Server 2008 and later.
 
 - **Hardware-assisted virtualization**. This feature is available in processors that include a virtualization option, specifically, Intel Virtualization Technology (Intel VT) or AMD Virtualization (AMD-V).
 
