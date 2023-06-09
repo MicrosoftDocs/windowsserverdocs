@@ -9,7 +9,7 @@ ms.date: 06/08/2023
 
 # Plan for deploying devices by using Discrete Device Assignment
 
->Applies to:  Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019, Windows Server 2022,
+>Applies to: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019, Windows Server 2022,
 
 Discrete Device Assignment allows physical Peripheral Component Interconnect Express (PCIe) hardware to be directly accessible from within a virtual machine (VM). This article discusses the type of devices that can be used, host system requirements, limitations imposed on the VMs, and security implications.
 
