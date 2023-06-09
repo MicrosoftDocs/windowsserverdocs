@@ -129,8 +129,6 @@ tools vary depending on your platform. To orchestration Hotpatch:
   updates, see
   [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
 
-TODO: check WSUS can deliver Hotpatches?
-
 ### Understanding the patch status for your VM in Azure
 
 To view the patch status for your VM, browse to the VM Overview in the Azure Portal, under
