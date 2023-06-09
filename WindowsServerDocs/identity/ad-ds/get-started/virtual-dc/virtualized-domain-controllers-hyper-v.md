@@ -10,11 +10,11 @@ ms.custom: inhenkel
 
 # Virtualizing domain controllers with Hyper-V
 
-> Applies to: Windows Server 2022, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019, Windows Server 2016, Windows Server 2012
+> Applies to: Windows Server 2022, Microsoft Hyper-V Server 2019, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Windows Server 2012 and later support the implementation of virtualized domain controllers (DCs) with safeguards to prevent update sequence number (USN) rollback on virtual DCs and the ability to clone virtual DCs. Hyper-V consolidates different server roles onto a single physical computer. For more information, see [Introduction to Active Directory Domain Services (AD DS) virtualization (Level 100)](../../introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
+Windows Server 2012 and later support the implementation of virtualized domain controllers (DCs) with safeguards to prevent update sequence number (USN) rollback on virtual DCs and the ability to clone virtual DCs. Hyper-V consolidates different server roles onto a single physical computer. For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](../../introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
 
-This guide describes how to run DCs as 32-bit or 64-bit guest OSs (OSs).
+This guide describes how to run DCs as 32-bit or 64-bit guest operating systems (OSs).
 
 ## Planning for virtualization
 
@@ -60,7 +60,8 @@ Keep the following security considerations in mind when you're planning to virtu
 
 - [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) can provide other controls to protect your DCs.
 
-For information about RODCs, see [Read-only domain controller planning and deployment guide](../../deploy/rodc/read-only-domain-controller-updates.md).
+<!-- Reviewers: The following link is no longer useful and doesn't target a "guide." Can you suggest an alternate target? -->
+For information about RODCs, see [Read-only domain controller updates](../../deploy/rodc/read-only-domain-controller-updates.md).
 
 For more information about securing DCs, see the [Best practice guide for securing Active Directory installations](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
@@ -95,6 +96,8 @@ Review these extra security considerations:
 
 With the new microkernel 64-bit architecture, there are significant increases in Hyper-V performance from previous virtualization platforms. For best host performance, the host should be a Server Core installation of Windows Server 2008 or later, and it shouldn't have server roles other than Hyper-V installed.
 
+<!-- Reviewers: The MAP toolkit link is no longer valid. Can you suggest an alternate target? -->
+
 Performance of VMs depends specifically on the workload. To guarantee satisfactory Active Directory performance, test specific topologies. Assess the current workload over a period of time with a tool such as the Reliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](/previous-versions/tn-archive/cc936627(v=technet.10)). The MAP tool can also be valuable if you want to take an inventory of all of the servers and server roles that currently exist in your network.
 
 To get a general idea of the performance of virtualized DCs, the following performance tests were carried out with the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
@@ -112,7 +115,7 @@ Lightweight Directory Access Protocol (LDAP) tests were run on a physical DC wit
 | Successful binds/sec | Use NTLM to perform binds (B5) | 1068 | 1056 | -1.12% |
 | Writes/sec | Write multiple attributes (W2) | 6467 | 5885 | -9.00% |
 
-To ensure satisfactory performance, integration components (IC) were installed to allow the guest OS to use _enlightenments_ (hypervisor-aware synthetic drivers). During the installation process, it can be necessary to use emulated Integrated Drive Electronics (IDE) or network adapter drivers. In production environments, you should replace these emulated drivers with synthetic drivers to increase performance.
+To ensure satisfactory performance, integration components (IC) were installed to allow the guest OS to use hypervisor-aware synthetic drivers. During the installation process, it can be necessary to use emulated Integrated Drive Electronics (IDE) or network adapter drivers. In production environments, you should replace these emulated drivers with synthetic drivers to increase performance.
 
 Review the following performance recommendations:
 
@@ -128,11 +131,13 @@ The following sections describe common VM practices to avoid when deploying DCs,
 
 ### Deployment practices to avoid
 
+<!-- Reviewers: Open Issue https://github.com/MicrosoftDocs/windowsserverdocs/issues/5393 requests changes to this section to denote specifics for Gen1 and Gen2 VMs. -->
+
 Virtualization platforms, such as Hyper-V, offer many convenience features that make managing, maintaining, backing up, and migrating computers easier. However, the following common deployment practices and features should be avoided for virtual DCs:
 
 - **Don't deploy virtual DC database files on virtual IDE disks**. To ensure durability of Active Directory writes, don't deploy a virtual DC's database files (the Active Directory database **NTDS.DIT**, logs, and SYSVOL) on virtual IDE disks. Instead, create a second VHD attached to a virtual SCSI controller and ensure the database, logs, and SYSVOL are placed on the VM's SCSI disk during DC installation.
 
-- **Don't implement differencing disk VHDs on a DC VM**. Don't implement differencing disk virtual hard disks (VHDs) on a VM that you're configuring as a DC. This approach makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New Virtual Hard Disk Wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
+- **Don't implement differencing disk VHDs on a DC VM**. Don't implement differencing disk virtual hard disks (VHDs) on a VM that you're configuring as a DC. This approach makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 
 - **Don't deploy Active Directory domains and forests that aren't prepared with Sysprep**. Don't deploy new Active Directory domains and forests on a copy of a Windows Server OS without first preparing them by using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
 
@@ -205,7 +210,7 @@ To optimize the performance of the DC VM and ensure durability of Active Directo
 - **Guest storage**. Store the Active Directory database file (Ntds.dit), log files, and SYSVOL files on a separate virtual disk from the OS files. Create a second VHD attached to a virtual SCSI controller and store the database, logs, and SYSVOL on the VM's virtual SCSI disk. Virtual SCSI disks provide increased performance compared to virtual IDE and they support Forced Unit Access (FUA). FUA ensures that the OS writes and reads data directly from the media bypassing all caching mechanisms.
 
    > [!NOTE]
-   > To use BitLocker for the virtual DC guest, make sure the extra volumes are configured for "auto unlock." For more information about configuring auto unlock, see [Enable-BitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock).
+   > To use BitLocker for the virtual DC guest, make sure the extra volumes are configured for "auto unlock." For more information about configuring auto unlock, see the PowerShell reference topic for the [Enable-BitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock) cmdlet.
 
 - **Host storage of VHD files**. Host storage recommendations address storage of VHD files. For maximum performance, don't store VHD files on a disk frequently used by other services or applications, such as the system disk where the host Windows OS is installed. Store each VHD file on a separate partition from the host OS and any other VHD files. The ideal configuration is to store each VHD file on a separate physical drive.
 
@@ -221,7 +226,7 @@ To optimize the performance of the DC VM and ensure durability of Active Directo
 
    - The system ensures the disk's write-caching feature is disabled.
 
-- **Fixed VHD versus pass-through disks**. There are many ways to configure storage for VMs. When VHD files are used, fixed-size VHDs are more efficient than dynamic VHDs because the memory for fixed-size VHDs is allocated when they're created. Pass-through disks, which VMs can use to access physical storage media, are even more optimized for performance. Pass-through disks are essentially physical disks or logical unit numbers (LUNs) that are attached to a VM. Pass-through disks don't support the snapshot feature. Therefore, pass-through disks are the preferred hard disk configuration because the use of snapshots with DCs isn't recommended.
+- **Fixed VHD versus pass-through disks**. There are many ways to configure storage for VMs. When VHD files are used, fixed-size VHDs are more efficient than dynamic VHDs because the memory for fixed-size VHDs is allocated when they're created. Pass-through disks, which VMs can use to access physical storage media, are even more optimized for performance. Pass-through disks are physical disks or logical unit numbers (LUNs) that are attached to a VM. Pass-through disks don't support the snapshot feature. Therefore, pass-through disks are the preferred hard disk configuration because the use of snapshots with DCs isn't recommended.
 
 - **Use virtual SCSI controllers**. To reduce the chance of corruption of Active Directory data, use virtual SCSI controllers:
 
@@ -233,7 +238,7 @@ To optimize the performance of the DC VM and ensure durability of Active Directo
 
 Domain controllers running on VMs have operational restrictions that don't apply to DCs running on physical machines. When you use a virtualized DC, avoid the following virtualization software features and practices:
 
-- **Don't pause, stop, or store the saved state longer than the tombstone lifetime**. Don't pause, stop, or store the saved state of a DC in a VM for time periods longer than the tombstone lifetime of the forest, and then resume from the paused or saved state. These operations can interfere with replication. To learn how to determine the tombstone lifetime for the forest, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
+- **Don't pause, stop, or store the saved state longer than the tombstone lifetime**. Don't pause, stop, or store the saved state of a DC in a VM longer than the forest's tombstone lifetime, and resume from the paused or saved state. These types of operations can interfere with replication. To learn how to determine the tombstone lifetime for the forest, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
 
 - **Don't copy or clone virtual hard disks (VHDs)**. Even with the safeguards in place for the guest VM, individual VHDs can still be copied and cause USN roll-back.
 
@@ -251,24 +256,24 @@ These recommendations can help you avoid the possibility of an update sequence n
 
 Backing up DCs is a critical requirement for any environment. Backups protect against data loss for DC failures or administrative errors. If such an event occurs, it's necessary to roll back the system state of the DC to a point in time before the failure or error. The supported method of restoring a DC to a healthy state is to use a backup application to restore a system state backup that originated from the current installation of the DC. The back application should be compatible with Active Directory, such as Windows Server Backup. For more information about Windows Server Backup and Active Directory Domain Services (AD DS), see the [AD DS backup and recovery step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)).
 
-With VM technology, certain requirements of Active Directory restore operations take on added significance. If you restore a DC by using a copy of the VHD file, you bypass the critical step of updating the database version of a DC after it's restored. Replication proceeds with inaccurate tracking numbers, which results in an inconsistent database among DC replicas. In most cases, this problem is undetected by the replication system and no errors are reported, despite inconsistencies between DCs.
+With VM technology, certain requirements of Active Directory restore operations take on added significance. If you restore a DC by using a copy of the VHD file, you bypass the critical step of updating the database version of a DC after it's restored. Replication proceeds with inaccurate tracking numbers that cause an inconsistent database among DC replicas. In most cases, this problem is undetected by the replication system and no errors are reported, despite inconsistencies between DCs.
 
 ### Windows Server Backup and guest OS
 
 There's one supported way to perform backup and restore of a virtualized DC and that's to run Windows Server Backup in the guest OS.
 
-In Hyper-V hosts and guests in Windows Server 2012 and later, you can take supported backups of DCs by using snapshots, guest VM export and import, and also Hyper-V Replication. However, none of these approaches is a good fit for creating a proper backup history with the slight exception of guest VM export.
+In Hyper-V hosts and guests in Windows Server 2012 and later, you can take supported backups of DCs by using snapshots, guest VM export and import, and also Hyper-V Replication. However, none of these approaches are a good fit for creating a proper backup history with the slight exception of guest VM export.
 
 Windows Server 2016 Hyper-V and later support "production snapshots." The Hyper-V server triggers a VSS-based backup of the guest. When the guest is done with the snapshot, the host fetches the VHDs and stores them in the backup location. This approach works in Windows Server 2012 and later, but there's an incompatibility with BitLocker:
 
 - When doing a VSS snapshot, Active Directory wants to perform a post-snapshot task. The task can mark the database as coming from a backup, or when preparing an IFM source for RODC, remove credentials from the database.
-- 
+
 - When Hyper-V mounts the snapshot volume for this task, no facility unlocks the Volume for unencrypted access. The Active Directory database engine fails in the attempt to access the database and eventually fails the snapshot.
 
 > [!NOTE]
 > The shielded VM project mentioned earlier has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
 
-### Back up and restore practices to avoid
+### Backup and restore practices to avoid
 
 As mentioned, DCs running in VMs have restrictions that don't apply to DCs running in physical machines. When you back up or restore a virtual DC, avoid the following virtualization software features and practices:
 
@@ -278,11 +283,11 @@ As mentioned, DCs running in VMs have restrictions that don't apply to DCs runni
 
 ### Restoration of virtual DC
 
-To restore a DC when it fails, you must regularly back up system state. System state includes Active Directory data and log files, the registry, the system volume (SYSVOL folder), and various elements of the OS. This requirement is the same for physical and virtual DCs. System state restore procedures that Active Directory–compatible backup applications perform are designed to ensure the consistency of local and replicated Active Directory databases after a restore process, including the notification to replication partners of invocation ID resets. However, the use of virtual hosting environments and disk or OS imaging applications makes it possible for administrators to bypass the checks and validations that ordinarily occur when DC system state is restored.
+To restore a DC when it fails, you must regularly back up system state. System state includes Active Directory data and log files, the registry, the system volume (SYSVOL folder), and various elements of the OS. This requirement is the same for physical and virtual DCs. System state restoration procedures performed by Active Directory–compatible backup applications are designed to ensure the consistency of local and replicated Active Directory databases after a restore process, including the notification to replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications allow administrators to bypass the standard checks and validations that occur during DC system state restore.
 
 When a DC VM fails and a USN rollback hasn't occurred, there are two supported situations for restoring the VM:
 
-- If a valid system state data backup that predates the failure exists, you can restore system state by using the restore option of the backup utility that you used to create the backup. The system state data backup must have been created by using an Active Directory–compatible backup utility within the span of the tombstone lifetime, which is by default, no more than 180 days. You should back up your DCs at least every half tombstone lifetime. For instructions about how to determine the specific tombstone lifetime for your forest, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
+- If there's a valid system state data backup that predates the failure, you can restore system state with the restore option of the backup utility used to create the backup. To do so, the system state data backup must be created with an Active Directory–compatible backup utility within the span of the tombstone lifetime. The default tombstone lifetime is no more than 180 days. You should back up your DCs at least every half tombstone lifetime. For instructions about how to determine the specific tombstone lifetime for your forest, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
 
 - If a working copy of the VHD file is available, but no system state backup is available, you can remove the existing VM. Restore the existing VM by using a previous copy of the VHD. Be sure to start the VM in DSRM and configure the registry properly as described in the following section. Then, restart the DC in normal mode.
 
@@ -290,7 +295,7 @@ Use the process in the following diagram to determine the best way to restore yo
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif" alt-text="Diagram that shows how to restore a virtualized DC." border="false":::
 
-The restoration process and decisions are simpler for RODCs, as shown in this diagram.
+The restoration process and decisions are simpler for RODCs, as shown in the next diagram.
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif" alt-text="Diagram that shows how to restore a read-only DC (RODC)." border="false":::
 
@@ -354,7 +359,7 @@ You can use the following steps to restore to a previous version of a virtual DC
    The **Database restored from backup entry** option is available on the following DCs running Windows Server:
 
    - Windows 2000 Server with Service Pack 4 (SP4)
-   - Windows Server 2003 with the updates specified in [How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base installed
+   - Windows Server 2003 with specified updates installed (For details, see [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base.)
    - Windows Server 2008
 
 1. Restart the DC in normal mode.
@@ -433,7 +438,7 @@ DSA invocationID: b0d9208b-8eb6-4205-863d-d50801b325a9
 
 When AD DS is properly restored on a DC, the `invocationID` attribute is reset. This change causes an increase in replication traffic, where the duration is relative to the size of the partition being replicated.
 
-Consider a scenario where VDC1 and DC2 are two DCs in the same domain. The following figure shows the perception of DC2 about VDC1 when the `invocationID` value is reset in a proper restore situation.
+Consider a scenario where VDC1 and DC2 are two DCs in the same domain. The following diagram shows the perception of DC2 about VDC1 when the `invocationID` value is reset in a proper restore situation.
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif" alt-text="Diagram that demonstrates the scenario when the invocationID value is reset properly." border="false":::
 
@@ -456,11 +461,11 @@ Take the following precautions to ensure USN rollback doesn't occur:
 
 - Don't restore a DC or attempt to roll back the contents of an Active Directory database by any other means than a supported backup solution, such as Windows Server Backup.
 
-Sometimes, USN rollback can go undetected, and at other time, USN rollback might cause replication errors. It can be necessary to identify the extent of the problem and address it in a timely manner. For more information about how to remove lingering objects that can occur as a result of USN rollback, see [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1388-1988) in the Microsoft Knowledge Base.
+Sometimes, USN rollback can go undetected, and at other time, USN rollback might cause replication errors. It can be necessary to identify the extent of the problem and address it in a timely manner. For more information about how to remove lingering objects that can occur as a result of USN rollback, see [Active Directory replication Event ID 1388 or 1988: A lingering object is detected](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1388-1988) in the Microsoft Knowledge Base.
 
 ### USN rollback detection
 
-In most cases, USN rollbacks without a corresponding reset of the `invocationID` attribute caused by improper restore procedures are detected. Windows Server 2008 provides protections against inappropriate replication after an improper DC restore operation. These protections are triggered by the fact that an improper restore operation results in lower USNs that represent originating changes that the replication partners have already received.
+In most cases, USN rollbacks without a corresponding reset of the `invocationID` attribute caused by improper restore procedures are detected. Windows Server 2008 provides protections against inappropriate replication after an improper DC restore operation. These protections trigger when an improper restore operation causes lower USNs that represent originating changes already received by the replication partners.
 
 In Windows Server 2008 and Windows Server 2003 SP1, when a destination DC requests changes by using a previously used USN, the response by its source replication partner is interpreted by the destination DC to mean its replication metadata is outdated. This outcome indicates the Active Directory database on the source DC has been rolled back to a previous state. An example is when the VHD file of a VM has been rolled back to a previous version. In this case, the destination DC initiates the following quarantine measures on the DC that has been identified as having undergone an improper restore:
 
@@ -485,21 +490,21 @@ If the Directory Service event log reports Event ID 2095, complete the followin
 
    You can use the Repadmin tool to make this determination. For information about how to use Repadmin, see [Monitoring and troubleshooting Active Directory replication with Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)). If you're unable to make a determination, contact [Microsoft Support](https://support.microsoft.com) for assistance.
 
-1. Forcefully demote the DC. This operation involves cleaning up the DC's metadata and seizing the operations master (also known as flexible single master operations or FSMO) roles. For more information, see the "Recovering from USN rollback" section of [How to detect and recover from a USN rollback in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base.
+1. Forcefully demote the DC. This operation involves cleaning up the DC's metadata and seizing the operations master (also known as flexible single master operations or FSMO) roles. For more information, see the "Recovering from USN rollback" section of [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base.
 
 1. Delete all former VHD files for the DC.
 
 ### Undetected USN rollback
 
-USN rollback might not be detected in one of two circumstances:
+USN rollback might not be detected in two scenarios:
 
 - The VHD file is attached to different VMs running in multiple locations simultaneously.
 
 - The USN on the restored DC has increased past the last USN received by the other DC.
 
-In the first circumstance, other DCs might replicate with either one of the VMs, and changes might occur on either VM without being replicated to the other. This divergence of the forest is difficult to detect, and it causes unpredictable directory responses. This situation can occur after a P2V migration if both the physical DC and VM are run on the same network. This situation can also happen if multiple virtual DCs are created from the same physical DC and then run on the same network.
+In the first scenario, other DCs might replicate with either one of the VMs, and changes might occur on either VM without being replicated to the other. This divergence of the forest is difficult to detect, and it causes unpredictable directory responses. This situation can occur after a P2V migration if both the physical DC and VM are run on the same network. This situation can also happen if multiple virtual DCs are created from the same physical DC and then run on the same network.
 
-In the second circumstance, a range of USNs applies to two different sets of changes. This scenario can continue for extended periods without being detected. Whenever an object that's created during that time is modified, a lingering object is detected and reported as Event ID 1988 in Event Viewer. The following diagram shows how USN rollback might not be detected in such a circumstance.
+In the second scenario, a range of USNs applies to two different sets of changes. This scenario can continue for extended periods without being detected. Whenever an object that's created during that time is modified, a lingering object is detected and reported as Event ID 1988 in Event Viewer. The following diagram shows how USN rollback might not be detected in such a circumstance.
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif" alt-text="Diagram that demonstrates a scenario where USN rollback isn't detected." border="false":::
 
@@ -509,4 +514,5 @@ RODCs are DCs that host read-only copies of the partitions in an Active Directo
 
 Restoring an RODC by using a snapshot isn't recommended. Restore an RODC by using an Active Directory–compatible backup application. Also, as with writeable DCs, care must be taken to not allow an RODC to be offline for more than the tombstone lifetime. This condition can result in lingering objects on the RODC.
 
+<!-- Reviewers: The following link is no longer useful and doesn't target a "guide." Can you suggest an alternate target? -->
 For more information about RODCs, see the [Read-only DC planning and deployment guide](../../deploy/rodc/read-only-domain-controller-updates.md).
