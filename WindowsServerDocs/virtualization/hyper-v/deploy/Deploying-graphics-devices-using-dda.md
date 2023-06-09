@@ -13,6 +13,9 @@ ms.date: 06/08/2023
 
 Starting with Windows Server 2016, you can use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM). Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
+> [!IMPORTANT]
+> If [Single Root I/O Virtualization (SR-IOV)](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-) isn't enabled or supported, this solution might not work.
+
 There are three steps to using a device with DDA:
 
 - [Configure the VM for DDA](#configure-the-vm-for-dda)
