@@ -248,7 +248,7 @@ Domain controllers running on VMs have operational restrictions that don't apply
 
 - **Don't use the Export feature on a VM running a DC**.
 
-- **Don't restore or roll back by any means other than a supported backup**. Don't restore a DC or attempt to roll back the contents of an Active Directory database by any means other than a supported backup. For more information, see [Backup and restore considerations for virtualized DCs](#backup-and-restore-practices-to-avoid).
+- **Don't restore or roll back by any means other than a supported backup**. Don't restore a DC or attempt to roll back the contents of an Active Directory database by any means other than a supported backup.
 
 These recommendations can help you avoid the possibility of an update sequence number (USN) rollback. For more information about USN rollback, see the [USN and USN rollback](#usn-and-usn-rollback) section.
 
@@ -273,7 +273,7 @@ Windows Server 2016 Hyper-V and later support "production snapshots." The Hyper-
 > [!NOTE]
 > The shielded VM project mentioned earlier has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
 
-### Backup and restore practices to avoid
+### Back up and restore practices to avoid
 
 As mentioned, DCs running in VMs have restrictions that don't apply to DCs running in physical machines. When you back up or restore a virtual DC, avoid the following virtualization software features and practices:
 
@@ -510,7 +510,7 @@ In the second scenario, a range of USNs applies to two different sets of changes
 
 ### Read-only DCs
 
-RODCs are DCs that host read-only copies of the partitions in an Active Directory database. RODCs avoid most USN rollback issues because they don't replicate any changes to the other DCs. However, if an RODC replicates from a writeable DC that has been affected by USN rollback, the RODC is affected as well.
+RODCs are DCs that host read-only copies of the partitions in an Active Directory database. RODCs avoid most USN rollback issues because they don't replicate any changes to the other DCs. However, if an RODC replicates from a writeable DC affected by USN rollback, the RODC is also affected.
 
 Restoring an RODC by using a snapshot isn't recommended. Restore an RODC by using an Active Directory–compatible backup application. Also, as with writeable DCs, care must be taken to not allow an RODC to be offline for more than the tombstone lifetime. This condition can result in lingering objects on the RODC.
 
