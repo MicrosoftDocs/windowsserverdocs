@@ -72,7 +72,7 @@ The following table explains the configurable settings for each authentication m
 
 |Setting|Default|Description|
 |--|--|--|
-|<a id="use-my-smart-card" />**Use my smart card**|Wired/Wireless: Disabled<p>VPN: Enabled|Specifies that clients making authentication requests must present a smart card certificate for network authentication.|
+|[**Use my smart card**](#use-my-smart-card)|Wired/Wireless: Disabled<p>VPN: Enabled|Specifies that clients making authentication requests must present a smart card certificate for network authentication.|
 |**Use a certificate on this computer**|Wired/Wireless: Enabled<p>VPN: Disabled|Specifies that authenticating clients must use a certificate located in the Current User or Local Computer certificate stores.|
 |**Use simple certificate selection (Recommended)**|Wired/Wireless: Enabled<p>VPN: Disabled|Specifies whether Windows filters out certificates that are unlikely to meet authentication requirements. This serves to limit the list of available certificates when prompting the user to select a certificate.|
 |**Advanced**||Opens the [Configure Certificate Selection](#configure-certificate-selection) dialog box.|
@@ -103,11 +103,11 @@ The following lists the configuration settings for **Configure Certificate Selec
 |Setting|Default|Description|
 |--|--|--|
 |**Verify the server's identity by validating the certificate**|Enabled|This item specifies that the client verifies that server certificates presented to the client computer have the correct signatures, haven't expired, and were issued by a trusted root certification authority (CA).<p> **Disabling this check box causes client computers to be unable to verify the identity of your servers during the authentication process. If server authentication does not occur, users are exposed to severe security risks, including the possibility that users might unknowingly connect to a rogue network.**|
-|**Connect to these servers** | Wired/Wireless: Disabled<p>VPN: Enabled| See [Connect to these servers](#connect-to-these-servers). |
+|**Connect to these servers** | Wired/Wireless: Disabled<p>VPN: Enabled| See [Connect to these servers](#tab/eap-tls#connect-to-these-servers). |
 |**Trusted Root Certification Authorities**|No trusted root CAs are selected | See [Trusted Root Certification Authorities](#trusted-root-certification-authorities).|
 |**Notifications before connecting**|Tell user if the server’s identity can't be verified|Specifies whether the user is notified if the server name or root certificate isn't specified, or whether the server’s identity can't be verified. Here are the available options to choose from and what each specifies:<p> 1. **Do not ask user to authorize new servers or trusted CAs** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user isn't notified and connection attempts fail.<p> 2. **Tell user if the server name or root certificate isn't specified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. With this option, if the root certificate isn't present on the computer, the user isn't notified and connection attempts fail.<p> 3. **Tell user if the server’s identity cannot be verified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, connection attempts fail. |
 |**Select authentication method**|Secure password (EAP-MSCHAP v2)| Allows you to select the EAP type to use with PEAP for network authentication. There are two EAP types available, **Secure password (EAP-MSCHAP v2)** and **Smart card or other certificate (EAP-TLS)**. EAP is a flexible protocol that allows for the addition of other EAP methods and isn't limited to only these two types. |
-|**Configure**||This item provides access to property settings for the specified EAP type.<p> If **Secure password (EAP-MSCHAP v2)** is selected, the **Automatically use my Windows logon name and password (and domain if any)** checkbox is available, which specifies that the current user-based Windows sign-in name and password are used as network authentication credentials. The default settings for this option are:<br><ul><li>Wired/Wireless = Enabled<li>VPN = Disabled</ul></li><p> If **Smart card or other certificate (EAP-TLS)** is selected, it opens the [**Smart Card or other Certificate Properties**](#use-my-smart-card) dialog box for further configuration of this EAP type. |
+|**Configure**||This item provides access to property settings for the specified EAP type.<p> If **Secure password (EAP-MSCHAP v2)** is selected, the **Automatically use my Windows logon name and password (and domain if any)** checkbox is available, which specifies that the current user-based Windows sign-in name and password are used as network authentication credentials. The default settings for this option are:<br><ul><li>Wired/Wireless = Enabled<li>VPN = Disabled</ul></li><p> If **Smart card or other certificate (EAP-TLS)** is selected, it opens the dialog box for <a id="use-my-smart-card" />Smart Card or other Certificate Properties. |
 |**Enable fast reconnect**|Enabled|Enables the ability to create a new or refreshed security association more efficiently and with a smaller number of round-trips if a security association was previously established. For VPN connections, **fast reconnect** uses IKEv2 technology to provide seamless and consistent VPN connectivity when users temporarily lose their Internet connections. This feature is especially useful for users who connect via wireless mobile broadband as when an Internet connection drops, **fast reconnect** will automatically re-establish active VPN connections seamlessly and transparently to users. |
 |**Disconnect if server does not present cryptobinding TLV**|Disabled|Specifies that connecting clients must end the network authentication process if the RADIUS server doesn't present cryptobinding Type-Length-Value (TLV). Cryptobinding TLV is a security feature that enhances the security of the TLS tunnel in PEAP. It does this by combining the inner and outer method authentications, making it difficult for attackers to perform man-in-the-middle attacks by redirecting an MS-CHAP v2 authentication through the PEAP channel.|
 |**Enable identity privacy**|Disabled| **This setting applies only to computers running Windows 8 and earlier.**<p> Specifies that clients are configured so that they can't send their identity before the client has authenticated the RADIUS server, and optionally, provides a place to type an anonymous identity value. If you select **Enable Identity Privacy** and then type `guest` as the anonymous identity value, the identity response for a user with identity `alice@example` is `guest@example`. If you select **Enable Identity Privacy** but don't provide an anonymous identity value, the identity response for the user `alice@example` is `@example`.|
@@ -139,11 +139,13 @@ The following lists the configuration settings for **Configure Certificate Selec
 
 ---
 
-## EAP-SIM configuration settings
+## Cellular authentication configuration settings
+
+The following lists the configuration settings for EAP-SIM, EPA-AKA, and EPA-AKA' respectively.
+
+## [EAP-SIM](#tab/eap-sim)
 
 EAP-SIM is defined in [RFC 4186](https://www.rfc-editor.org/rfc/rfc4186). EAP Subscriber Identity Module (SIM) is used for authentication and session key distribution for the Global System for Mobile Communications (GSM).
-
-The following table lists the configuration settings for EAP-SIM.
 
 | Item | Description |
 |--|--|
@@ -152,11 +154,9 @@ The following table lists the configuration settings for EAP-SIM.
 | **Enable usage of realms** | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
 | **Specify a realm** | Provides a place to type the realm name |
 
-## EAP-AKA configuration settings
+## [EAP-AKA](#tab/eap-aka1)
 
-EAP-AKA' is defined in [RFC 4187](https://www.rfc-editor.org/rfc/rfc4187). EAP Authentication and Key Agreement (AKA) for Universal Mobile Telecommunications System (UMTS) is used for authentication and session key distribution by using the UMTS Universal Subscriber Identity Module (USIM). EAP AKA is defined in RFC 4187.
-
-The following table lists the configuration settings for EAP-AKA.
+EAP-AKA' is defined in [RFC 4187](https://www.rfc-editor.org/rfc/rfc4187). EAP Authentication and Key Agreement (AKA) for Universal Mobile Telecommunications System (UMTS) is used for authentication and session key distribution by using the UMTS Universal Subscriber Identity Module (USIM).
 
 | Item | Description |
 |--|--|
@@ -164,15 +164,13 @@ The following table lists the configuration settings for EAP-AKA.
 | **Enable usage of realms** | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
 | **Specify a realm** | Provides a place to type the realm name. |
 
-## EAP-AKA' configuration settings
+## [EAP-AKA'](#tab/eap-aka2)
 
 EAP-AKA' is defined in [RFC 5448](https://www.rfc-editor.org/rfc/rfc5448). EAP-AKA Prime (AKA') is a modified version of EAP-AKA that is used to enable access to the 3rd-Generation Partnership Project (3GPP)-based networks by using non-3GPP standards, such as:
 
 - WiFi - sometimes referred to as wireless fidelity
 - Evolution-Data Optimized (EVDO)
 - Worldwide Interoperability for Microwave Access (WiMax)
-
-The following table lists the configuration settings for EAP-AKA'.
 
 | Item | Description |
 |--|--|
