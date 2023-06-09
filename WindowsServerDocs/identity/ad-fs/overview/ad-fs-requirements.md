@@ -47,7 +47,7 @@ TLS/SSL certificates on federation servers must meet the following requirements:
 - Certificate contains the Server Authentication Enhanced Key Usage (EKU) value.
 - Certificate contains the federation service name, such as `fs.contoso.com` in the Subject or Subject Alternative Name (SAN).
 - For user certificate authentication on port 443, certificate contains `certauth.\<federation service name\>`, such as `certauth.fs.contoso.com` in the SAN.
-- For device registration or for modern authentication to on premises resources using pre-Windows 10 clients, the SAN must contain `enterpriseregistration.\<upn suffix\>` for each User Principal Name (UPN) suffix in use in your organization.
+- For device registration or for modern authentication to on-premises resources using pre-Windows 10 clients, the SAN must contain `enterpriseregistration.\<upn suffix\>` for each User Principal Name (UPN) suffix in use in your organization.
 
 TLS/SSL certificates on the Web Application Proxy must meet the following requirements:
 
@@ -75,7 +75,7 @@ Use the AD FS default, internally generated, self-signed token signing certifica
 #### Requirements for Token Signing Certificate
 
 - If your organization requires that certificates from the enterprise public key infrastructure (PKI) be used for token signing, you can meet this requirement by using the *SigningCertificateThumbprint* parameter of the **Install-AdfsFarm** cmdlet.
-- Whether you use the default internally generated certificates or externally enrolled certificates, when the token signing certificate is changed you must ensure all relying parties are updated with the new certificate information. Otherwise, sign-ins to any relying parties not updated fail.
+- Whether you use the default internally generated certificates or externally enrolled certificates, when the token signing certificate is changed you must ensure all relying parties are updated with the new certificate information. Otherwise, those relying parties can't sign in.
 
 ### Token Encrypting/Decrypting Certificate
 
@@ -88,7 +88,7 @@ Use the AD FS default, internally generated, self-signed token decrypting certif
 #### Requirements for Token Encrypting/Decrypting Certificate
 
 - If your organization requires that certificates from the enterprise PKI be used for token signing, you can meet this requirement by using the *DecryptingCertificateThumbprint* parameter of the **Install-AdfsFarm** cmdlet.
-- Whether you use the default internally generated certificates or externally enrolled certificates, when the token decrypting certificate is changed you must ensure all claims providers are updated with the new certificate information.  Otherwise, logons using any claims providers not updated fail.
+- Whether you use the default internally generated certificates or externally enrolled certificates, when the token decrypting certificate is changed you must ensure all claims providers are updated with the new certificate information.  Otherwise, sign ins using any claims providers not updated fail.
 
 > [!CAUTION]
 > Certificates that are used for token\-signing and token\-decrypting\/encrypting are critical to the stability of the Federation Service. Customers managing their own token\-signing & token\-decrypting\/encrypting certificates should ensure that these certificates are backed up and are available independently during a recovery event.
@@ -112,7 +112,7 @@ The memory and disk requirements for AD FS are fairly static. The requirements a
 
 ### SQL Server Hardware Requirements
 
-If you're using SQL Server for your AD FS configuration database, size the SQL Server according to the most basic SQL Server recommendations. The AD FS database size is small, and AD FS doesn't put a significant processing load on the database instance. AD FS does, however, connect to the database multiple times during an authentication, so the network connection should be robust. Unfortunately, SQL Azure isn't supported for the AD FS configuration database.
+If you're using Azure SQL for your AD FS configuration database, size the SQL Server according to the most basic SQL Server recommendations. The AD FS database size is small, and AD FS doesn't put a significant processing load on the database instance. AD FS does, however, connect to the database multiple times during an authentication, so the network connection should be robust. Unfortunately, SQL Azure isn't supported for the AD FS configuration database.
 
 ## Proxy requirements
 
@@ -137,9 +137,9 @@ If you're using SQL Server for your AD FS configuration database, size the SQL S
 
 ### Domain functional\-level requirements
 
-- All user account domains and the domain to which the AD FS servers are joined must be operating at the domain functional level of Windows Server 2003 or higher.
+- All user account domains and the domain to which the AD FS servers are joined must be operating at the domain functional level of Windows Server 2003 or later.
 
-- A Windows Server 2008 domain functional level or higher is required for client certificate authentication if the certificate is explicitly mapped to a user's account in AD DS.
+- A Windows Server 2008 domain functional level or later is required for client certificate authentication if the certificate is explicitly mapped to a user's account in AD DS.
 
 ### Schema requirements
 
@@ -149,13 +149,13 @@ If you're using SQL Server for your AD FS configuration database, size the SQL S
 
 ### Service account requirements
 
-- Any standard domain account can be used as a service account for AD FS. Group Managed Service Accounts are also supported. The permissions required at runtime are automatically when you configure AD FS.
+- Any standard domain account can be used as a service account for AD FS. Group Managed Service Accounts are also supported. The permissions required at runtime are automatically added back when you configure AD FS.
 
 - The User Rights Assignment required for the AD service account is Sign-in as a Service.
 
 - The User Rights Assignments required for the `NT Service\adfssrv` and `NT Service\drs` are Generate Security Audits and Sign-in as a Service.
 
-- Group managed service accounts require at least one domain controller running Windows Server 2012 or higher. The group Managed Service Account gMSA must live under the default `CN=Managed Service Accounts` container.
+- Group managed service accounts require at least one domain controller running Windows Server 2012 or later. The group Managed Service Account gMSA must live under the default `CN=Managed Service Accounts` container.
 
 - For Kerberos authentication, the service principal name ‘`HOST/<adfs\_service\_name>`' must be registered on the AD FS service account. By default, AD FS configures this requirement when creating a new AD FS farm. If this process fails, such as if there's a collision or insufficient permissions, you see a warning and you should add it manually.
 
@@ -194,7 +194,7 @@ The following table provides a summary of how many AD FS servers are supported i
 
 ### SQL Server
 
-- For AD FS in Windows Server 2016, SQL Server 2008 and higher versions are supported.
+- For AD FS in Windows Server 2016, SQL Server 2008 and later versions are supported.
 
 - Both SAML artifact resolution and token replay detection are supported in a SQL Server farm.
 
@@ -218,7 +218,7 @@ When AD FS authentication is performed via a browser or browser control, your br
 
 Both the firewalls located between the Web Application Proxy and the federation server farm and between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.
 
-Also, if you need client user certificate authentication, clientTLS authentication using X509 user certificates, and you don't have port 443 on the certauth endpoint enabled. AD FS 2016 requires that you enable TCP port 49443 inbound on the firewall between the clients and the Web Application Proxy. This requirement doesn't apply to the firewall between the Web Application Proxy and the federation servers.
+Also, if you need client user certificate authentication (clientTLS authentication using X509 user certificates) and you don't have port 443 on the certauth endpoint enabled. AD FS 2016 requires that you enable TCP port 49443 inbound on the firewall between the clients and the Web Application Proxy. This requirement doesn't apply to the firewall between the Web Application Proxy and the federation servers.
 
 For more information on hybrid port requirements, see [Hybrid Identity Required Ports and Protocols](/azure/active-directory/connect/active-directory-aadconnect-ports).
 
@@ -234,9 +234,9 @@ For more information, see [Best practices for securing Active Directory Federati
 
 - For Windows Integrated authentication, you must use a DNS A record \(not CNAME\) for the federation service name.
 
-- For user certificate authentication on port 443, "certauth.\<federation service name\>" must be configured in DNS to resolve to the federation server or web application proxy.
+- For user certificate authentication on port 443, "certauth.\<federation service name\>" must be configured in DNS to resolve to the federation server or Web Application Proxy.
 
-- For device registration or for modern authentication to on premises resources using pre-Windows 10 clients, `enterpriseregistration.\<upn suffix\>`, for each UPN suffix in use in your organization, you must configure them to resolve to the federation server or web application proxy.
+- For device registration or for modern authentication to on-premises resources using pre-Windows 10 clients, `enterpriseregistration.\<upn suffix\>`, for each UPN suffix in use in your organization, you must configure them to resolve to the federation server or Web Application Proxy.
 
 ### Load Balancer requirements
 
