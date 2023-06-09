@@ -15,7 +15,7 @@ The following feature distribution map indicates the features that are present i
 
 ## Table legend
 
-* **Built in** - LIS are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution, so don't install it. The kernel module version numbers for the built-in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built-in LIS is out of date.
+* **Built in** - Linux integration services (LIS) are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution, so don't install it. The kernel module version numbers for the built-in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built-in LIS is out of date.
 
 * &#10004; - Feature available
 
@@ -71,7 +71,7 @@ The following feature distribution map indicates the features that are present i
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
    ```
 
-1. The latest upstream kernel capabilities are only available by using the kernels available in the [Debian Backports repository](https://wiki.debian.org/Backports).
+1. The latest upstream kernel capabilities are only available by using the kernels available in the [Debian backports repository](https://wiki.debian.org/Backports).
 
 1. While Debian 7.x is out of support and uses an older kernel, the kernel included in Debian backports for Debian 7.x has improved Hyper-V capabilities.
 
