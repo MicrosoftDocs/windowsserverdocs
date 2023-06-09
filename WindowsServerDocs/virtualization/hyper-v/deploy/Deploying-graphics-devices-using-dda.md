@@ -1,99 +1,112 @@
 ---
-title: Deploy graphics devices using Discrete Device Assignment
+title: Deploy graphics devices by using Discrete Device Assignment
 description: Learn how to use DDA to deploy graphics devices in Windows Server
 ms.topic: article
 ms.author: benarm
 author: BenjaminArmstrong
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
-ms.date: 08/21/2019
+ms.date: 06/08/2023
 ---
-# Deploy graphics devices using Discrete Device Assignment
+# Deploy graphics devices by using Discrete Device Assignment
 
 >Applies to: Windows Server 2022, Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
-Starting with Windows Server 2016, you can use Discrete Device Assignment, or DDA, to pass an entire PCIe Device into a VM.  This will allow high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or Graphics Cards from within a VM while being able to leverage the devices native drivers.  Please visit the [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) for more details on which devices work, what are the possible security implications, etc.
+Starting with Windows Server 2016, you can use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM). Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
-There are three steps to using a device with Discrete Device Assignment:
--	Configure the VM for Discrete Device Assignment
--	Dismount the Device from the Host Partition
--	Assigning the Device to the Guest VM
+There are three steps to using a device with DDA:
 
-All command can be executed on the Host on a Windows PowerShell console as an Administrator.
+- [Configure the VM for DDA](#configure-the-vm-for-dda)
+- [Dismount the device from the host partition](#dismount-the-device-from-the-host-partition)
+- [Assign the device to the guest VM](#assign-the-device-to-the-guest-vm)
+
+You can execute all commands on the host on a Windows PowerShell console as an administrator.
 
 ## Configure the VM for DDA
-Discrete Device Assignment imposes some restrictions to the VMs and the following step needs to be taken.
 
-1.	Configure the “Automatic Stop Action” of a VM to TurnOff by executing
+DDA imposes some restrictions to the VMs, so the following step must be taken.
 
-```
-Set-VM -Name VMName -AutomaticStopAction TurnOff
-```
+- Configure the “Automatic Stop Action” of a VM to TurnOff by executing
 
-### Some Additional VM preparation is required for Graphics Devices
+  ```
+  Set-VM -Name VMName -AutomaticStopAction TurnOff
+  ```
 
-Some hardware performs better if the VM in configured in a certain way.  For details on whether or not you need the following configurations for your hardware, please reach out to the hardware vendor. Additional details can be found on [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) and on this [blog post.](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266)
+### Some extra VM preparation is required for graphics devices
+
+Some hardware performs better if the VM in configured in a certain way. For details on whether you need the following configurations for your hardware, reach out to the hardware vendor. More details can be found at [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) and on this [blog post.](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266)
 
 1. Enable Write-Combining on the CPU
    ```
    Set-VM -GuestControlledCacheTypes $true -VMName VMName
    ```
-2. Configure the 32 bit MMIO space
+1. Configure the 32-bit MMIO space
    ```
    Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
    ```
-3. Configure greater than 32 bit MMIO space
+1. Configure greater than 32-bit MMIO space
    ```
    Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
    ```
+
    > [!TIP]
-   > The MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values. Consult [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to learn how to precisely calculate MMIO requirements.
+   > The MMIO space values shown are reasonable values to set for experimenting with a single GPU. If after starting the VM the device is reporting an error relating to not enough resources, you'll likely need to modify these values. Consult [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to learn how to precisely calculate MMIO requirements.
 
-## Dismount the Device from the Host Partition
-### Optional - Install the Partitioning Driver
-Discrete Device Assignment provide hardware venders the ability to provide a security mitigation driver with their devices.  Note that this driver is not the same as the device driver that will be installed in the guest VM.  It's up to the hardware vendor's discretion to provide this driver, however, if they do provide it, please install it prior to dismounting the device from the host partition.  Please reach out to the hardware vendor for more information on if they have a mitigation driver
-> If no Partitioning driver is provided, during dismount you must use the `-force` option to bypass the security warning. Please read more about the security implications of doing this on [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
+## Dismount the device from the host partition
 
-### Locating the Device's Location Path
-The PCI Location path is required to dismount and mount the device from the Host.  An example location path looks like the following: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.  More details on located the Location Path can be found here: [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
+### Optional - Install the partitioning driver
 
-### Disable the Device
-Using Device Manager or PowerShell, ensure the device is “disabled.”
+DDA provides hardware vendors the ability to provide a security mitigation driver with their devices. This driver isn't the same as the device driver installed in the guest VM. It's up to the hardware vendor's discretion to provide this driver. But if they do provide it, install it prior to dismounting the device from the host partition. Reach out to the hardware vendor to see if they have a mitigation driver.
+> If no partitioning driver is provided, during dismount you must use the `-force` option to bypass the security warning. Read more about the security implications of doing this at [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
-### Dismount the Device
-Depending on if the vendor provided a mitigation driver, you'll either need to use the “-force” option or not.
+### Locate the device's location path
+
+The PCI location path is required to dismount and mount the device from the host. An example location path looks like this: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`. More details on locating the location path can be found at [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
+
+### Disable the device
+
+Use Device Manager or PowerShell to ensure the device is “disabled.”
+
+### Dismount the device
+
+Depending on whether the vendor provided a mitigation driver, you must either use the “-force” option or not, as shown here:
+
 - If a Mitigation Driver was installed
   ```
   Dismount-VMHostAssignableDevice -LocationPath $locationPath
   ```
-- If a Mitigation Driver was not installed
+- If a Mitigation Driver wasn't installed
   ```
   Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
   ```
 
-## Assigning the Device to the Guest VM
-The final step is to tell Hyper-V that a VM should have access to the device.  In addition to the location path found above, you'll need to know the name of the vm.
+## Assign the device to the guest VM
+
+The final step is to tell Hyper-V that a VM should have access to the device. In addition to the location path, you need to know the name of the VM.
 
 ```
 Add-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 ```
 
-## What's Next
-After a device is successfully mounted in a VM, you're now able to start that VM and interact with the device as you normally would if you were running on a bare metal system.  This means that you're now able to install the Hardware Vendor's drivers in the VM and applications will be able to see that hardware present.  You can verify this by opening device manager in the Guest VM and seeing that the hardware now shows up.
+## What's next
 
-## Removing a Device and Returning it to the Host
-If you want to return he device back to its original state, you will need to stop the VM and issue the following:
+After a device is successfully mounted in a VM, you're now able to start that VM and interact with the device as though you were running on a bare metal system. You're now able to install the hardware vendor's drivers in the VM, and applications are able to see the hardware. You can verify it by opening Device Manager in the guest VM and seeing that the hardware is available.
+
+## Remove a device and return it to the host
+
+If you want to return the device back to its original state, you must stop the VM and issue this command:
 ```
 #Remove the device from the VM
 Remove-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 #Mount the device back in the host
 Mount-VMHostAssignableDevice -LocationPath $locationPath
 ```
-You can then re-enable the device in device manager and the host operating system will be able to interact with the device again.
 
-## Example
+You can then re-enable the device in Device Manager, and the host operating system is able to interact with the device again.
 
-### Mounting a GPU to a VM
-In this example we use PowerShell to configure a VM named “ddatest1” to take the first GPU available by the manufacturer NVIDIA and assign it into the VM.
+## Example: Mount a GPU to a VM
+
+This example uses PowerShell to configure a VM named “ddatest1” to take the first GPU available by the manufacturer NVIDIA and assign it into the VM.
+
 ```
 #Configure the VM for a Discrete Device Assignment
 $vm = 	"ddatest1"
@@ -123,12 +136,16 @@ Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
 Add-VMAssignableDevice -LocationPath $locationPath -VMName $vm
 ```
 
-## Troubleshooting
+### Troubleshooting
 
-If you've passed a GPU into a VM but Remote Desktop or an application isn't recognizing the GPU, check for the following common issues:
+If you've passed a GPU into a VM but Remote Desktop Services or an application isn't recognizing the GPU, check for the following common issues:
 
-- Make sure you've installed the most recent version of the GPU vendor's supported driver and that the driver isn't reporting errors by checking the device state in Device Manager.
+- Make sure you've installed the most recent version of the GPU vendor's supported driver, and that the driver isn't reporting errors, by checking the device state in Device Manager.
 - Make sure your device has enough MMIO space allocated within the VM. To learn more, see [MMIO Space](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md#mmio-space).
-- Make sure you're using a GPU that the vendor supports being used in this configuration. For example, some vendors prevent their consumer cards from working when passed through to a VM.
-- Make sure the application being run supports running inside a VM, and that both the GPU and its associated drivers are supported by the application. Some applications have allow-lists of GPUs and environments.
-- If you're using the Remote Desktop Session Host role or Windows Multipoint Services on the guest, you will need to make sure that a specific Group Policy entry is set to allow use of the default GPU. Using a Group Policy Object applied to the guest (or the Local Group Policy Editor on the guest), navigate to the following Group Policy item: **Computer Configuration** > **Administrator Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Remote Session Environment** > **Use the hardware default graphics adapter for all Remote Desktop Services sessions**. Set this value to Enabled, then reboot the VM once the policy has been applied.
+- Make sure you use a GPU that the vendor supports being used in this configuration. For example, some vendors prevent their consumer cards from working when passed through to a VM.
+- Make sure the application supports running inside a VM, and that the application supports both the GPU and its associated drivers. Some applications have allowlists of GPUs and environments.
+- If you use the Remote Desktop Session Host role or Windows Multipoint Services on the guest, you must make sure that a specific Group Policy entry is set to allow use of the default GPU. Use a Group Policy Object applied to the guest (or the Local Group Policy Editor on the guest) to navigate to the following Group Policy item:
+
+  **Computer Configuration** > **Administrator Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Remote Session Environment** > **Use the hardware default graphics adapter for all Remote Desktop Services sessions**.
+
+  Set this value to **Enabled**, then reboot the VM once the policy has been applied.
