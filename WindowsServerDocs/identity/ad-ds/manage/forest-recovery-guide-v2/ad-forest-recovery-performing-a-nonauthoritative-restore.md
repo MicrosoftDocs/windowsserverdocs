@@ -20,19 +20,18 @@ are using a different backup solution or if you intend to complete the
 authoritative restore of SYSVOL later in the forest recovery process, you can
 perform an authoritative restore of SYSVOL by using these alternative methods:
 
-- Determine if SYSVOL is replicated by FRS, see [Determining Whether a Domain Controller's SYSVOL Folder is Replicated by DFSR or FRS](/windows/win32/vss/backing-up-and-restoring-an-frs-replicated-sysvol-folder.md#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).
+- Determine if SYSVOL is replicated by FRS, see [Determining Whether a Domain Controller's SYSVOL Folder is Replicated by DFSR or FRS](/windows/win32/vss/backing-up-and-restoring-an-frs-replicated-sysvol-folder#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).
 
 - If you are still using File Replication Service (FRS), please consider to
     switch to Distributed File System (DFS) Replication as soon as possible.  
-    If you still use FRS to replicate SYSVOL, follow the steps in [article
-    290762](/troubleshoot/windows-server/networking/use-burflags-to-reinitialize-frs.md)
+    If you still use FRS to replicate SYSVOL, follow the steps in [article 290762](/troubleshoot/windows-server/networking/use-burflags-to-reinitialize-frs)
     in the Microsoft Knowledge Base, using the **BurFlags** registry key to
     reinitialize FRS replica sets, or if necessary, article
     [315457](https://support.microsoft.com/kb/315457) to rebuild the SYSVOL
     tree.
 
 - If you are using Distributed File System (DFS) Replication to replicate
-    SYSVOL, see [Perform an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-sysvol.md).
+    SYSVOL, see [Perform an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-SYSVOL.md).
 
 ## Performing a nonauthoritative restore
 

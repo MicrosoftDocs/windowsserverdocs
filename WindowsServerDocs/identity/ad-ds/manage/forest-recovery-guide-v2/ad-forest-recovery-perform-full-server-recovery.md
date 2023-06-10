@@ -35,7 +35,7 @@ Keep in mind the following:
     isolation precautions needed depending on your recovery scenario.
 
 - After you perform a full server recovery, you need to separately perform an
-    authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-sysvol.md).
+    authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-SYSVOL.md).
 
 Depending on your scenario, use one of the following procedures to perform a
 full restore.
@@ -90,9 +90,7 @@ image**
     ![Screenshot that shows the progress of the image restoration.](media/379d865f820f6d2fa20f0d78c283bc87.png)
 
 10. Once this completes perform an authoritative restore of SYSVOL, as described
-    in [AD Forest Recovery - Performing an authoritative synchronization of
-    DFSR-replicated
-    SYSVOL](ad-forest-recovery-authoritative-recovery-sysvol).
+    in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-SYSVOL.md).
 
 ## Perform a full server restore with any image local or remote
 
@@ -147,7 +145,7 @@ image**
     continue. Click **Yes**.
 
 14. Once this completes perform an authoritative restore of SYSVOL, as described
-    in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-sysvol.md).
+    in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-SYSVOL.md).
 
 ## Enabling the network adapter for a network backup
 
