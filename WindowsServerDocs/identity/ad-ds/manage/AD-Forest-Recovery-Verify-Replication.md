@@ -1,6 +1,6 @@
 ---
-title: AD Forest Recovery - Verify Replication
-description: Learn more about resources to verify replication.
+title: AD Forest Recovery - Verify Replication legacy
+description: Learn more about resources to verify replication. legacy
 ms.topic: article
 ms.author: daveba
 author: iainfoulds
@@ -8,7 +8,7 @@ ms.date: 04/01/2023
 
 
 ---
-# AD Forest Recovery - Verify Replication
+# AD Forest Recovery - Verify Replication legacy
 
 Applies to: Windows Server (All supported versions)
 

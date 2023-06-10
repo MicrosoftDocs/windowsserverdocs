@@ -21,7 +21,7 @@ Use the following procedure to add the global catalog to a DC.
 3. Expand the **Servers** container, and then expand the server object for the DC to which you want to add the global catalog.
 4. Right-click **NTDS Settings**, and then click **Properties**.
 5. Select the **Global Catalog** check box.
-![Add GC](media/AD-Forest-Recovery-Add-GC/addgc1.png)
+![Add GC](media/addgc1.png)
 
 ## To add the global catalog using Repadmin
 

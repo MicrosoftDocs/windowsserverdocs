@@ -50,7 +50,7 @@ Controller backup to authenticate using gMSA calculated credentials. You need to
 replace all gMSAs in the domains of the forest that use the exposed KDS Root Key
 objects, with gMSA accounts using a new KDS Root Key object. The overall
 procedure is in this
-[article](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md)
+[article](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts)
 with a few important changes.
 
 The steps are:
@@ -153,7 +153,7 @@ Removing lingering objects is advantageous for larger organizations that cannot
 risk the down time associated with rehosting the domain naming context.
 
 For more information, see [Use Repadmin to remove lingering
-objects](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc785298(v=ws.10)). <!-- fix link -->
+objects](/previous-versions/windows/it-pro/windows-server-2003/cc785298(v=ws.10)).
 
 ## Next steps
 

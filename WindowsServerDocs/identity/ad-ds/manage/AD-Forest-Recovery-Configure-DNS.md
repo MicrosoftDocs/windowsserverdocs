@@ -1,13 +1,13 @@
 ---
-description: "Learn more about: AD Forest Recovery - Configuring the DNS Server service"
-title: AD Forest Recovery - Configure DNS Server service
+description: "Learn more about: AD Forest Recovery - Configuring the DNS Server service legacy"
+title: AD Forest Recovery - Configure DNS Server service legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ---
-# AD Forest Recovery - Configuring the DNS Server service
+# AD Forest Recovery - Configuring the DNS Server service legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
