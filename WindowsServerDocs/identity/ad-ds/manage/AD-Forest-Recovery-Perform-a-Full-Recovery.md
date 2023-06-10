@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: AD Forest Recovery - Performing a full server recovery"
-title: AD Forest Recovery - Performing a full server recovery
+description: "Learn more about: AD Forest Recovery - Performing a full server recovery legacy"
+title: AD Forest Recovery - Performing a full server recovery legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -9,7 +9,8 @@ ms.topic: article
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
 ms.custom: inhenkel
 ---
-# AD Forest Recovery - Performing a full server recovery
+
+# AD Forest Recovery - Performing a full server recovery legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

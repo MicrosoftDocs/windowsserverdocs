@@ -1,15 +1,15 @@
 ---
-description: "Learn more about: AD Forest Recovery - Backing up a full server"
-title: AD Forest Recovery - Backing up a full server
+description: "Learn more about: AD Forest Recovery - Backing up a full server - legacy"
+title: AD Forest Recovery - Backing up a full server legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 08/09/2018
+ms.date: 06/10/2023
 ms.topic: article
 ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
 ---
 
-# AD Forest Recovery - Backing up a full server
+# AD Forest Recovery - Backing up a full server legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

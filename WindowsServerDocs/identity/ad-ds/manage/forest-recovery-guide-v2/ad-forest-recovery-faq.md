@@ -7,7 +7,7 @@ ms.date: 06/09/2023
 ms.topic: article
 ---
 
-## AD Forest Recovery - FAQ moving this part
+# AD Forest Recovery - FAQ moving this part
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
 
@@ -59,7 +59,7 @@ achieve shorter recovery times by:
         in sync with the main datacenter DCs. To do this, designate one DC as
         the computer account reference and only there let KDCSVC run. On the
         other DCs you restored, follow this article:  
-        [Reset domain controller's password with Netdom.exe](/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password.md)
+        [Reset domain controller's password with Netdom.exe](/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password)
 
 - Deploying read-only domain controllers (RODCs)
 
@@ -117,7 +117,7 @@ the following:
   - Using the Active Directory Database Mounting Tool (Dsamain.exe) to
         identify the best backup to use for restore operations. For more
         information about using the Active Directory Database Mounting Tool, see
-        the [Active Directory Database Mounting Tool Step-by-Step Guide](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753609(v=ws.10)). <!-- change this link -->
+        the [Active Directory Database Mounting Tool Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753609(v=ws.10)). <!-- change this link -->
 
   - Labeling the backup media clearly and storing the media in an organized
         fashion at a convenient, yet secure, location that allows fast
@@ -130,7 +130,7 @@ the following:
     reinstall the operating system on the DCs.
 
   - For more information about forcing the removal of AD DS from a DC, see [Forcing the Removal of a Windows Server 2008 Domain
-        Controller](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731871(v=ws.10))
+        Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731871(v=ws.10))
         (<https://go.microsoft.com/fwlink/?LinkId=132627>). <!-- change this link -->
 
 - Use faster tape devices or disk backups to reduce the time that is required

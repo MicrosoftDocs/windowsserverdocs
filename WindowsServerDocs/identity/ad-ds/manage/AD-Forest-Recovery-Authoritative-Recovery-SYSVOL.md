@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL"
-title: AD Forest Recovery - Authoritative sync of SYSVOL
+description: "Learn more about: AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL legacy"
+title: AD Forest Recovery - Authoritative sync of SYSVOL legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -9,7 +9,8 @@ ms.topic: article
 ms.assetid: 38a1c543-c76d-4b8e-a06b-53742aaa172f
 ms.custom: inhenkel
 ---
-# AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL
+
+# AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
