@@ -17,7 +17,7 @@ This document contains frequently asked questions (FAQs) regarding forest recove
 
 Although speed of recovery is not the primary goal of this guide, you can
 achieve shorter recovery times by:
-
+<!-- 
 - Creating a detailed forest recovery plan, updating it on a regular basis,
     and practicing it in a simulated test environment of reasonable size at
     least once a year.
@@ -117,7 +117,7 @@ the following:
   - Using the Active Directory Database Mounting Tool (Dsamain.exe) to
         identify the best backup to use for restore operations. For more
         information about using the Active Directory Database Mounting Tool, see
-        the [Active Directory Database Mounting Tool Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753609(v=ws.10)). <!-- change this link -->
+        the [Active Directory Database Mounting Tool Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753609(v=ws.10)).
 
   - Labeling the backup media clearly and storing the media in an organized
         fashion at a convenient, yet secure, location that allows fast
@@ -131,13 +131,14 @@ the following:
 
   - For more information about forcing the removal of AD DS from a DC, see [Forcing the Removal of a Windows Server 2008 Domain
         Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731871(v=ws.10))
-        (<https://go.microsoft.com/fwlink/?LinkId=132627>). <!-- change this link -->
+        (<https://go.microsoft.com/fwlink/?LinkId=132627>).
 
 - Use faster tape devices or disk backups to reduce the time that is required
     for restore operations.
 
 Businesses that have a more aggressive service-level agreement (SLA) might
 consider altering the forest recovery procedures to speed recovery.
+-->
 
 ## Can I automate the forest recovery process?
 

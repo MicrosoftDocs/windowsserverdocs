@@ -74,8 +74,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         SYSVOL:
 
     - Perform a full server recovery and then force an authoritative
-        synchronization of SYSVOL. For detailed procedures, see [Performing a
-        full server recovery](ad-forest-recovery-perform-a-full-recovery.md)
+        synchronization of SYSVOL. For detailed procedures, see [Performing a full server recovery](ad-forest-recovery-perform-a-full-recovery.md)
         and [Perform an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-sysvol.md).
 
     - Perform a full server recovery followed by a system state restore. This

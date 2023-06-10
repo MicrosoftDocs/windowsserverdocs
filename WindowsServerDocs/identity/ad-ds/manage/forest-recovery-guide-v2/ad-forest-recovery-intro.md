@@ -33,7 +33,7 @@ In general, it is a good practice to archive the Administrator account and DSRM
 password history in a safe place for as long as the backups are valid, that is,
 within the tombstone lifetime period or within the deleted object lifetime
 period if Active Directory Recycle Bin is enabled. You can also synchronize the
-DSRM password with a domain user account in order to make it easier to remember. For more information, see [this article](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754363(v=ws.11)). <!-- fix this link -->
+DSRM password with a domain user account in order to make it easier to remember. For more information, see [this article](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754363(v=ws.11)).
 Synchronizing the DSRM account must be done in advance of the forest recovery,
 as part of preparation.
 
@@ -91,7 +91,7 @@ requiring you to restart any DC in Directory Services Restore Mode (DSRM) to
 examine the contents of the backup of AD DS.
 
 For more information about using the Active Directory database mounting tool,
-see the [Active Directory Database Mounting Tool Step-by-Step Guide](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753609(v=ws.10)?redirectedfrom=MSDN%22HYPERLINK%20%22https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fprevious-versions%2Fwindows%2Fit-pro%2Fwindows-server-2008-R2-and-2008%2Fcc771232(v%3Dws.10)).<!-- fix this link -->
+see the [Active Directory Database Mounting Tool Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753609(v=ws.10)?redirectedfrom=MSDN%22HYPERLINK%20%22https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fprevious-versions%2Fwindows%2Fit-pro%2Fwindows-server-2008-R2-and-2008%2Fcc771232(v%3Dws.10)).<!-- fix this link -->
 
 You can also use the **ntdsutil snapshot** command to create snapshots of the
 Active Directory database. By scheduling a task to periodically create
@@ -101,7 +101,7 @@ failure occurred and then choose the best backup to restore. To create
 snapshots, use **ntdsutil** or the Remote Server Administration Tools (RSAT).
 The target DC can run any version of Windows Server. For more information about
 using the **ntdsutil snapshot** command, see
-[Snapshot](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731620(v=ws.11)). <!-- fix thi link -->
+[Snapshot](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731620(v=ws.11)). <!-- fix thi link -->
 
 ## Determine which domain controllers to restore
 
@@ -114,7 +114,7 @@ recovery, and not contend with different configurations, such as whether the DC
 holds operations master roles or not, or whether it is a GC or DNS server or
 not.
 
-> [!NOTE] 
+> [!NOTE]
 > It is not recommended to restore an operations master role holder in the interest of simplicity, as you always seizes all roles. There is the case of a
 SYSVOL recovery using a backup taken from the PDC Emulator operation master, as typically the PDC has the best copy of SYSVOL data.
 
