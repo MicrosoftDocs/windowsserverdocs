@@ -80,7 +80,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     - Perform a full server recovery followed by a system state restore. This
         option requires that you create both types of backups in advance: a full
         server backup and a system state backup. For detailed procedures, see
-        [Performing a full server recovery](ad-forest-recovery-perform-a-full-recovery.md) and [Performing a nonauthoritative restore of Active Directory Domain Services](ad-forest-recovery-nonauthoritative-restore.md).
+        [Performing a full server recovery](ad-forest-recovery-perform-full-server-recovery.md) and [Performing a nonauthoritative restore of Active Directory Domain Services](ad-forest-recovery-perform-nonauthoritative-restore.md).
 
 3. After you restore and restart the writeable DC, verify that the failure did
     not affect the data on the DC. If the DC data is damaged, then repeat step 2
@@ -101,8 +101,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         outbound replication with its known replica partners before it
         advertises itself as domain controller and starts providing services to
         clients. For more information about initial synchronization
-        requirements, see “[Active Directory FSMO
-        Roles](/troubleshoot/windows-server/identity/fsmo-roles.md)”.
+        requirements, see [Active Directory FSMO Roles](/troubleshoot/windows-server/identity/fsmo-roles)”.
 
         Continue to the next steps only after you restore and verify the data
         and before you join this computer to the production network.
@@ -118,7 +117,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     In this case also work on replacing all GMSA passwords as if an
     administrative account was taken over, the attacker may have retrieved
     information that allows him to authenticate as GMSA. For details see the
-    article about the [golden GMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack.md)”.
+    article about the [golden GMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack)”.
 
 5. If you suspect user accounts have been compromised, you also need to plan
     for a user password reset for all users in the domain.
@@ -135,9 +134,8 @@ Then perform the following steps. Procedures for performing certain steps are in
     post-recovery process, you can redistribute the operations master roles as
     needed. For more information about seizing operations master roles, see
     [Seizing an operations master role](ad-forest-recovery-seizing-operations-master-role.md).
-    For recommendations about where to place operations master roles, see [What Are Operations
-    Masters?](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc779716(v=ws.10)).<!-- fix link -->
-    Also see [Flexible Single-Master Operation (FSMO) placement and optimization on AD DCs](/troubleshoot/windows-server/identity/fsmo-placement-and-optimization-on-ad-dcs.md).
+    For recommendations about where to place operations master roles, see [What Are Operations Masters?](/previous-versions/windows/it-pro/windows-server-2003/cc779716(v=ws.10)).
+    Also see [Flexible Single-Master Operation (FSMO) placement and optimization on AD DCs](/troubleshoot/windows-server/identity/fsmo-placement-and-optimization-on-ad-dcs).
 
 7. Clean up metadata of all other writeable DCs in the forest root domain that
     you are not restoring from backup (all writeable DCs in the domain except
@@ -146,8 +144,8 @@ Then perform the following steps. Procedures for performing certain steps are in
     Windows Server 2012 or later or RSAT for Windows 10 or later, metadata
     cleanup is performed automatically when you delete a DC object. In addition,
     the server object and computer object for the deleted DC are also deleted
-    automatically. For more information, see [Cleaning metadata of removed writable DCs](ad-forest-recovery-cleaning-metadata.md)and
-    [Clean up AD DS server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup.md).
+    automatically. For more information, see [Cleaning metadata of removed writable DCs](ad-forest-recovery-cleaning-metadata-of-removed-dcs.md)and
+    [Clean up AD DS server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
 
     Cleaning up metadata prevents possible duplication of NTDS-settings objects
     if AD DS is installed on a DC in a different site. Potentially, this could
@@ -172,9 +170,8 @@ Then perform the following steps. Procedures for performing certain steps are in
     In the forest root domain, configure the restored DC with its own IP address
     as its preferred DNS server. You can configure this setting in the TCP/IP
     properties of the local area network (LAN) adapter. This is the first DNS
-    server in the forest. For more information, see [Recommendations for Domain
-    Name System (DNS) client
-    settings](/troubleshoot/windows-server/networking/best-practices-for-dns-client-settings#domain-controller-with-dns-installed.md).
+    server in the forest. For more information, see [Recommendations for Domain Name System (DNS) client
+    settings](/troubleshoot/windows-server/networking/best-practices-for-dns-client-settings#domain-controller-with-dns-installed).
 
     In each child domain, configure the restored DC with the IP address of the
     first DNS server in the forest root domain as its preferred DNS server. You
@@ -277,7 +274,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     [How to recover from a Golden gMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack.md)  
 
     The document  
-    [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](ad-forest-recovery-single-domain-in-multidomain-recovery.md)
+    [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](ad-forest-recovery-recover-single-domain-multidomain-forest.md)
     has steps on how to replace the gMSAs and make sure they use secure key
     material.  
 
@@ -285,7 +282,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     emulator to synchronize time from an external time source. For more
     information, see [Configure the Windows Time service on the PDC emulator in
     the Forest Root
-    Domain](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731191%28v=ws.10%29). <!-- fix link -->
+    Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731191%28v=ws.10%29). <!-- fix link -->
 
 ## Reconnect each restored writeable domain controller to a common network
 

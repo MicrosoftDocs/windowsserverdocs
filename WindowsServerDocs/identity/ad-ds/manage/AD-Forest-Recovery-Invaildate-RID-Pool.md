@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: AD Forest Recovery - Invalidating the current RID pool"
-title: AD Forest Recovery - Invalidating the RID Pool
+description: "Learn more about: AD Forest Recovery - Invalidating the current RID pool legacy"
+title: AD Forest Recovery - Invalidating the RID Pool legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -8,7 +8,7 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 2f5f84df-bd85-4ca4-bdd3-835bd1d45c11
 ---
-# AD Forest Recovery - Invalidating the current RID pool
+# AD Forest Recovery - Invalidating the current RID pool legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: AD Forest Recovery - Seizing an operations master role"
-title: AD Forest Recovery - Seizing an Operations Master Role
+description: "Learn more about: AD Forest Recovery - Seizing an operations master role legacy"
+title: AD Forest Recovery - Seizing an Operations Master Role legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -8,7 +8,7 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 7e6bb370-f840-4416-b5e2-86b0ba715f4f
 ---
-# AD Forest Recovery - Seizing an operations master role
+# AD Forest Recovery - Seizing an operations master role legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
