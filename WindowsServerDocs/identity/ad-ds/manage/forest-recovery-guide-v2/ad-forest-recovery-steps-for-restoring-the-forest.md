@@ -1,6 +1,6 @@
 ---
 title: AD Forest Recovery - Steps for Restoring the forest
-description: 
+description: This section provides an overview of the recommended path for recovering a forest. The forest recovery steps are described in detail later.
 ms.author: inhenkel
 author: IngridAtMicrosoft
 ms.date: 06/09/2023
@@ -32,7 +32,7 @@ The following list summarizes the recovery steps at a high level:
     Work with IT and Microsoft Support to determine the scope of the problem and
     potential causes and evaluate possible remedies with all business
     stakeholders. In many cases total forest recovery should be the last option.
-2. [Decide how to recover the forest](ad-forest-recovery-determine-how-to-recover.md)
+2. [Decide how to recover the forest](ad-forest-recovery-intro.md)
 
     After you determine that forest recovery is necessary, complete preliminary
     steps to prepare for it: determine the current forest structure, identify

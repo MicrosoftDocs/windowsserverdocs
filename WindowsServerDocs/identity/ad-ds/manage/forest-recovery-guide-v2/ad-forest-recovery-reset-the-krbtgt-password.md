@@ -30,7 +30,7 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 
 4. In the details pane, right-click the **krbtgt** user account, and then click **Reset Password**.
 
-   ![Reset Password](media/AD-Forest-Recovery-Resetting-the-krbtgt-password/resetpass1.png)
+   ![Reset Password](media/resetpass1.png)
 
 5. In **New password**, type a new password, retype the password in **Confirm password**, and then click **OK**. The password that you specify is not significant because the system will generate a strong password automatically independent of the password that you specify.
 

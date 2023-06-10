@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: AD Forest Recovery - Redeploy remaining DCs"
-title: AD Forest Recovery - Redeploy remaining DCs
+description: "Learn more about: AD Forest Recovery - Redeploy remaining DCs legacy"
+title: AD Forest Recovery - Redeploy remaining DCs legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -9,7 +9,8 @@ ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.custom: inhenkel
 ---
-# AD Forest Recovery - Redeploy remaining DCs
+
+# AD Forest Recovery - Redeploy remaining DCs legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

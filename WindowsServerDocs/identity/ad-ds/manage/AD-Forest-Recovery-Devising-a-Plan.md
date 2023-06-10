@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: AD Forest Recovery - Devising an AD Forest Recovery Plan"
-title: AD Forest Recovery - Devising an AD Forest Recovery Plan
+description: "Learn more about: AD Forest Recovery - Devising an AD Forest Recovery Plan legacy"
+title: AD Forest Recovery - Devising an AD Forest Recovery Plan legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -8,7 +8,8 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 17381f30-55f2-4e00-977a-b701675fa4ff
 ---
-# AD Forest Recovery - Devising an AD Forest Recovery Plan
+
+# AD Forest Recovery - Devising an AD Forest Recovery Plan legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
