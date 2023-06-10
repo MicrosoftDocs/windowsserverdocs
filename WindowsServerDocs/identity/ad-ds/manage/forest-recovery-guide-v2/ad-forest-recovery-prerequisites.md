@@ -97,7 +97,7 @@ documentation/procedure. Contact your Customer Success Account Management (CSAM)
 
 In addition, you should have backed up and restored AD DS and SYSVOL in a lab
 environment on a regular basis. For more information, see [AD Forest Recovery - Backing up a full server](ad-forest-recovery-backing-up-a-full-server.md).
-and [Performing Nonauthoritative Restore of Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816627(v=ws.10)).<!-- fix link -->
+and [Performing Nonauthoritative Restore of Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816627(v=ws.10)).
 
 ## Next steps
 

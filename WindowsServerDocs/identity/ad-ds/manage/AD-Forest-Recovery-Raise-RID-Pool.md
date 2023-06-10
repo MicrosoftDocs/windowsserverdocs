@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: AD Forest Recovery - Raising the value of available RID pools"
-title: AD Forest Recovery - Raising RID pools
+description: "Learn more about: AD Forest Recovery - Raising the value of available RID pools legacy"
+title: AD Forest Recovery - Raising RID pools legacy
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -8,7 +8,8 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
 ---
-# AD Forest Recovery - Raising the value of available RID pools
+
+# AD Forest Recovery - Raising the value of available RID pools legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
