@@ -186,8 +186,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     nltest.exe /dsderegdns:server.domain.tld
 
 9. Raise the value of the available RID pool by 100,000. For more information,
-    see [Raising the value of available RID
-    pools](ad-forest-recovery-raise-rid-pool).
+    see [Raising the value of available RID pools](ad-forest-recovery-raise-rid-pool.md).
     If you have reason to believe that raising the RID Pool by 100,000 is
     insufficient for your particular situation, you should determine, taking
     into account the average rid consumption on your environment, the lowest
@@ -224,7 +223,7 @@ Then perform the following steps. Procedures for performing certain steps are in
 11. Reset the computer account password of this DC twice. For more information,
     see [Resetting the computer account password of the domain controller](ad-forest-recovery-reset-computer-account-dc.md).
 
-12. Reset the krbtgt password twice. For more information, see [Resetting the krbtgt password](ad-forest-recovery-resetting-the-krbtgt-password.md).
+12. Reset the krbtgt password twice. For more information, see [Resetting the krbtgt password](ad-forest-recovery-reset-the-krbtgt-password.md).
 
     Because the krbtgt password history is two passwords, reset passwords twice to remove the original (prefailure) password from password history.
 
@@ -271,7 +270,7 @@ Then perform the following steps. Procedures for performing certain steps are in
 
 14. If you are using gMSA ascounts, you may need to re-create them as the
     password generation details may be exposed to an attacker, see:  
-    [How to recover from a Golden gMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack.md)  
+    [How to recover from a Golden gMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack)  
 
     The document  
     [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](ad-forest-recovery-recover-single-domain-multidomain-forest.md)

@@ -18,9 +18,9 @@ domain controllers and Active Directory.
 
 - [Backing up a full server](ad-forest-recovery-backing-up-a-full-server.md)
 - [Backing up the System State data](ad-forest-recovery-backing-up-system-state.md)
-- [Performing a full server recovery](ad-forest-recovery-perform-a-full-recovery.md)
+- [Performing a full server recovery](ad-forest-recovery-perform-full-server-recovery.md)
 - [Performing an authoritative synch of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-sysvol.md)
-- [Performing a nonauthoritative restore of Active Directory Domain Services](ad-forest-recovery-nonauthoritative-restore.md)
+- [Performing a nonauthoritative restore of Active Directory Domain Services](ad-forest-recovery-perform-nonauthoritative-restore.md)
 
 These steps explain how to perform an authoritative restore of SYSVOL at the
 same time.

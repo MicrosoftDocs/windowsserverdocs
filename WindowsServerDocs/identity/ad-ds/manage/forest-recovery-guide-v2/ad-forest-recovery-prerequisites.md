@@ -38,7 +38,7 @@ before devising a forest recovery plan or attempting a recovery.
         guide to perform forest recovery. However, you will need to take
         specific measures for DNS recovery based on your own environment. For
         more information about using Active Directory–integrated DNS, see
-        [Creating a DNS Infrastructure Design](/windows-server/identity/ad-ds/plan/creating-a-dns-infrastructure-design.md).
+        [Creating a DNS Infrastructure Design](/windows-server/identity/ad-ds/plan/creating-a-dns-infrastructure-design).
 
 3. You may have special configuration for the handling of Domain Controller
     disk volumes in your physical or virtual hosting, such as solutions to
@@ -74,7 +74,7 @@ be familiar with the following:
 
   - Domain naming master
 
-        Domain-wide Operation Master Roles:
+    <!-- fix this. Check against word doc formatting -->    Domain-wide Operation Master Roles:
 
   - Relative ID (RID) master
 
