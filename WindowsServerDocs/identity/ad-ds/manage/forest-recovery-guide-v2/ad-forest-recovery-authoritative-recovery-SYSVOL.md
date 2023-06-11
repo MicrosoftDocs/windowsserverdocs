@@ -3,7 +3,7 @@ title: AD Forest Recovery - Performing an authoritative synchronization of DFSR-
 description: There are different ways to perform an authoritative restore of SYSVOL. You can either edit the **msDFSR-Options** attribute or perform a system state restore using wbadmin –authsysvol. If you have the option to restore a system state backup (that is, you are restoring AD DS to the same hardware and operating system instance) then using wbadmin –authsysvol is simpler. But if you need to perform a bare metal restore, then you need to edit the **msDFSR-Options** attribute.
 ms.author: inhenkel
 author: IngridAtMicrosoft
-ms.date: 06/09/2023
+ms.date: 06/10/2023
 ms.topic: article
 ---
 

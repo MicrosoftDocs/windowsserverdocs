@@ -4,7 +4,7 @@ title: AD Forest Recovery - Remove the global catalog
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 08/09/2018
+ms.date: 06/10/2023
 ms.topic: article
 ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
 ---

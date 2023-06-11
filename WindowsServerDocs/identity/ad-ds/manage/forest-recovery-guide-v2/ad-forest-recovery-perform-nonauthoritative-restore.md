@@ -4,7 +4,7 @@ description: The following procedures use the wbadmin.exe to perform a nonauthor
 perform an authoritative restore of SYSVOL by using these alternative methods:
 ms.author: inhenkel
 author: IngridAtMicrosoft
-ms.date: 06/09/2023
+ms.date: 06/10/2023
 ms.topic: article
 ---
 

@@ -4,10 +4,11 @@ title: AD Forest Recovery - Cleanup
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 08/09/2018
+ms.date: 06/10/2023
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ---
+
 # AD Forest Recovery - Cleanup
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2

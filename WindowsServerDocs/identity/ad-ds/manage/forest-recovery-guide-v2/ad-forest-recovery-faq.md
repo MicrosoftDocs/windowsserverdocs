@@ -3,7 +3,7 @@ title:  AD Forest Recovery - FAQ moving this part
 description: This document contains frequently asked questions (FAQs) regarding forest recovery.
 ms.author: inhenkel
 author: IngridAtMicrosoft
-ms.date: 06/09/2023
+ms.date: 06/10/2023
 ms.topic: article
 ---
 
