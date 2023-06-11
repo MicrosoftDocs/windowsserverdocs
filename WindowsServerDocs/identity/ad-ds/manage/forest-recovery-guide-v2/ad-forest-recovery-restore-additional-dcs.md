@@ -9,6 +9,7 @@ ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.custom: inhenkel
 ---
+
 # AD Forest Recovery - Redeploy remaining DCs
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
@@ -23,9 +24,9 @@ In a large enterprise faced with a worldwide infrastructure, a more sophisticate
 
 - Cloning
    - For virtualized environments that run Windows Server 2012, cloning is the fastest and simplest way to recover a large number of DCs. You can automate the recovery of all virtualized DCs in a domain after you restore a single virtualized DC from backup.
-   - For more information about cloning and prerequisites, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](./managing-rid-issuance.md).
+   - For more information about cloning and prerequisites, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../managing-rid-issuance.md).
 - Reinstall AD DS by using Windows PowerShell on servers that run Windows Server 2012 (or Dcpromo.exe on servers that run earlier versions of Windows Server) or by using the user interface
-   - To expedite reinstalling AD DS, you can use Install from Media (IFM) option to reduce replication traffic during the installation. For more information about using the **ntdsutil ifm** command to create installation media, see [Installing AD DS from Media](./managing-rid-issuance.md).
+   - To expedite reinstalling AD DS, you can use Install from Media (IFM) option to reduce replication traffic during the installation. For more information about using the **ntdsutil ifm** command to create installation media, see [Installing AD DS from Media](../managing-rid-issuance.md).
 
 Consider the following additional points for each replica DC that is recovered in the forest by virtualized DC cloning or by installing AD DS (as opposed to restoring from backup):
 
@@ -35,19 +36,11 @@ Consider the following additional points for each replica DC that is recovered i
 - Configure each server with the first DNS server in the forest (the first DC that was restored in the root domain) as the preferred DNS server in the TCP/IP properties of its network adapter. For more information, see [Configure TCP/IP to use DNS](/previous-versions/windows/it-pro/windows-server-2003/cc779282(v=ws.10)).
 - Redeploy all RODCs in the domain, either by virtualized DC cloning if several RODCs are deployed in a central location, or by the traditional method of rebuilding them by removing and reinstalling AD DS if they're deployed individually in isolated located locations such as branch offices.
    - Rebuilding RODCs ensures that they don't contain any lingering objects and can help prevent replication conflicts from occurring later. When you remove AD DS from an RODC, *choose the option to retain DC metadata*. Using this option retains the krbtgt account for the RODC and retains the permissions for the delegated RODC administrator account and the Password Replication Policy (PRP), and prevents you from having to use Domain Admin credentials to remove and reinstall AD DS on an RODC. It also retains the DNS server and global catalog roles if they're installed on the RODC originally.
-   - When you rebuild DCs (RODCs or writeable DCs), there may be increased replication traffic during their reinstallation. To help reduce that impact, you can stagger the schedule of the RODC installations, and you can use the Install From Media (IFM) option. If you use the IFM option, run the **ntdsutil ifm** command on a writeable DC that you trust to be free of damaged data. This helps prevent possible corruption from appearing on the RODC after the AD DS reinstallation is complete. For more information about IFM, see [Installing AD DS from Media](./managing-rid-issuance.md).
+   - When you rebuild DCs (RODCs or writeable DCs), there may be increased replication traffic during their reinstallation. To help reduce that impact, you can stagger the schedule of the RODC installations, and you can use the Install From Media (IFM) option. If you use the IFM option, run the **ntdsutil ifm** command on a writeable DC that you trust to be free of damaged data. This helps prevent possible corruption from appearing on the RODC after the AD DS reinstallation is complete. For more information about IFM, see [Installing AD DS from Media](../managing-rid-issuance.md).
    - For more information about rebuilding RODCs, see [RODC Removal and Reinstallation](/previous-versions/windows/it-pro/windows-server-2003/cc779282(v=ws.10)).
 - If a DC was running the DNS Server service before the forest malfunction, install and configure the DNS Server service during the installation of AD DS. Otherwise, configure its former DNS clients with other DNS servers.
 - If you require additional global catalogs to share authentication or query load for users or applications, you can either add the global catalog to the source virtualized DC before cloning or you can make a DC a global catalog server during the installation of AD DS.
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery - Prerequisites](AD-Forest-Recovery-Prerequisties.md)
-- [AD Forest Recovery - Devising a custom forest recovery plan](AD-Forest-Recovery-Devising-a-Plan.md)
-- [AD Forest Recovery - Identify the problem](AD-Forest-Recovery-Identify-the-Problem.md)
-- [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
-- [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
-- [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
-- [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

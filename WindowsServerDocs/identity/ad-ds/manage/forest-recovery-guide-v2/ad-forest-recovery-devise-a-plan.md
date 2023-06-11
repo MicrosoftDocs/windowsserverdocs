@@ -18,14 +18,6 @@ For example, in your forest recovery plan, you should have a detailed topology m
 
 You should practice your forest recovery plan at least once a year. Also, it is a good idea to perform a forest recovery drill when there are membership changes to the Enterprise Admins or Domain Admins group. This helps ensure that your information technology (IT) staff fully understands the forest recovery plan.
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery - Prerequisites](AD-Forest-Recovery-Prerequisties.md)
-- [AD Forest Recovery - Devising a custom forest recovery plan](AD-Forest-Recovery-Devising-a-Plan.md)
-- [AD Forest Recovery - Identify the problem](AD-Forest-Recovery-Identify-the-Problem.md)
-- [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
-- [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
-- [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
-- [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

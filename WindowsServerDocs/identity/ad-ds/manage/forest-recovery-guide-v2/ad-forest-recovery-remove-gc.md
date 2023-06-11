@@ -24,7 +24,7 @@ ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
 3. Expand the **Servers** container, and then expand the *server* object for the DC from which you want to remove the global catalog.
 4. Right-click **NTDS Settings**, and then click **Properties**.
 5. Clear the **Global Catalog** check box.
-   ![Remove GC](media/AD-Forest-Recovery-Remove-GC/removegc1.png)
+   ![Remove GC](media/removegc1.png)
 6. Click **Apply**.
 
 ## To remove the global catalog using Repadmin
