@@ -59,7 +59,7 @@ The steps are:
     4098 (workstation type + disabled).
 
 - Create a new KDS Root Key object per this
-    [guide](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md).
+    [guide](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key).
 
 <!-- this note bullshit needs to stop -->
 - **Important**: Restart the “Microsoft Key Distribution Service” (KDSSVC) on

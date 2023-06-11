@@ -16,6 +16,6 @@ ms.author: inhenkel
 - [AD Forest Recovery - Perform initial recovery](../ad-forest-recovery-perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](../ad-forest-recovery-procedures.md)
 - [AD Forest Recovery - Frequently Asked Questions](../ad-forest-recovery-faq.md)
-- [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](../ad-forest-recovery-single-domain-in-multidomain-forest.md)
+- [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](../ad-forest-recovery-recover-single-domain-multidomain-forest.md)
 - [AD Forest Recovery - Redeploy remaining DCs](../ad-forest-recovery-restore-additional-dcs.md)
 - [AD Forest Recovery - Virtualization](../ad-forest-recovery-virtualization.md)

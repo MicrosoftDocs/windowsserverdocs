@@ -34,7 +34,7 @@ delete the associated server object and NTDS Settings object before you can
 delete the DC object. Metadata cleanup can also be done through command line,
 via NTDSUtil or using PowerShell with Active Directory Module.
 
-For information about installing RSAT, see the article [Remote Server Administration Tools](/windows-server/remote/remote-server-administration-tools.md).
+For information about installing RSAT, see the article [Remote Server Administration Tools](/windows-server/remote/remote-server-administration-tools).
 
 **To delete a domain controller object using Active Directory Users and
 Computers in RSAT**

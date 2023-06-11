@@ -34,10 +34,9 @@ The requirements for virtualized DC cloning are:
     the Cloneable Domain Controllers group.
 
 The PDC Emulator must be available during cloning operations.For step-by-step
-instructions about how to perform virtualized DC cloning, see [Safely
-virtualizing Active Directory Domain Services (AD DS) (Level 100)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
+instructions about how to perform virtualized DC cloning, see [Safely virtualizing Active Directory Domain Services (AD DS) (Level 100)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100).
 For details about how virtualized DC cloning works, see Technical Reference
-(Level 300). <!-- find link -->
+(Level 300).
 
 ## Next steps
 

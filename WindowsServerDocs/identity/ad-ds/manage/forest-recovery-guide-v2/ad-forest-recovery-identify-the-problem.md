@@ -39,7 +39,7 @@ When symptoms of a forest-wide failure appear, such as in event logs or other mo
     **Important**
 
     This paper does not cover security recommendations about how to recover a
-    forest that has been hacked or compromised. In general, it is recommended to follow [Best Practices for Securing Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory.md)
+    forest that has been hacked or compromised. In general, it is recommended to follow [Best Practices for Securing Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory)
     and Pass-the-Hash mitigation techniques to harden the environment. For more
     information, see [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques](https://www.microsoft.com/download/details.aspx?id=36036).
 
