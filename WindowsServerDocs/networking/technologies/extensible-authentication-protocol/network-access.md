@@ -4,7 +4,7 @@ description: This article presents information about the Extensible Authenticati
 author: xelu86
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 06/09/2023
+ms.date: 06/12/2023
 ms.contributor: samyun
 ---
 
@@ -12,23 +12,27 @@ ms.contributor: samyun
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 11, Windows 10, Windows 8.1
 
-The Extensible Authentication Protocol (EAP) is an authentication framework that allows for the use of different authentication methods for secure network access technologies. Examples of these technologies include wireless access using IEEE 802.1X, wired access using IEEE 802.1X, and Point-to-Point Protocol (PPP) connections like Virtual Private Networking (VPN). EAP isn't a specific authentication method like MS-CHAP v2, but rather a framework that enables networking vendors to develop and install new authentication methods, known as EAP methods, on the access client and authentication server.
+The Extensible Authentication Protocol (EAP) is an authentication framework that allows for the use of different authentication methods for secure network access technologies. Examples of these technologies include wireless access using IEEE 802.1X, wired access using IEEE 802.1X, and Point-to-Point Protocol (PPP) connections like Virtual Private Networking (VPN). EAP isn't a specific authentication method like MS-CHAP v2, but rather a framework that enables networking vendors to develop and install new authentication methods, known as EAP methods, on the access client and authentication server. The EAP framework is originally defined by [RFC3748](https://www.ietf.org/rfc/rfc3748.txt) and extended by various other RFCs and standards.
 
 ## Authentication methods
 
-EAP authentication methods that are used within tunneled EAP methods are commonly known as **inner methods** or **EAP types**. This article contains configuration information specific to the following authentication methods in EAP.
+EAP authentication methods that are used within tunneled EAP methods are commonly known as **inner methods** or **EAP types**. Methods that are set up as **inner methods** have the same configuration settings as they would when used as an outer method. This article contains configuration information specific to the following authentication methods in EAP.
 
-**Protected EAP (PEAP)**: This section contains configuration information for the two default inner EAP methods that are provided with PEAP.
+**EAP-Transport Layer Security (EAP-TLS)**: [Standards-based](https://datatracker.ietf.org/doc/html/rfc5216) EAP method that uses TLS with certificates for mutual authentication. Appears as **Smart Card or other Certificate (EAP-TLS)** in Windows. EAP-TLS can be deployed as an **inner method** for another EAP method or as a standalone EAP method. 
+> [!TIP]
+> EAP methods that use EAP-TLS, being certificate-based, generally offer the highest level of security. For example, EAP-TLS is the only allowed EAP method for WPA3-Enterprise 192-bit mode.
 
-- **EAP-Transport Layer Security (TLS)**: Appears as **Smart Card or other Certificate (EAP-TLS)** in the Windows, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. If EAP-TLS is set up as an inner authentication method, it has the same configuration settings as EAP-TLS when it's used as an outer method. The only difference is that the method will be configured to work within PEAP.
+**EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (EAP-MSCHAPv2)**: [Standards-based](/openspecs/windows_protocols/ms-chap) EAP method that encapsulates the [MSCHAPv2 authentication protocol](https://www.ietf.org/rfc/rfc2759.txt), which uses username and password, for authentication. Appears as **Secure password (EAP-MSCHAP v2)** in Windows. EAP-MSCHAPv2 can be used as a standalone method for VPN, but only as an **inner method** for wired/wireless.
+> [!WARNING]
+> MSCHAPv2-based connections are subject to similar attacks as for NTLMv1. Windows 11 Enterprise, version 22H2 (build 22621) enables [Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-considerations#wi-fi-and-vpn-considerations) which may cause issues with MSCHAPv2-based connections.
 
-- **EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)**: Appears as **Secure password (EAP-MSCHAP v2)** in Windows, EAP-MSCHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MSCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless. EAP-MSCHAP v2 is the EAP method that encapsulates the MS-CHAPv2 authentication protocol.
+**Protected EAP (PEAP)**: [Microsoft-defined](/openspecs/windows_protocols/ms-peap) EAP method that encapsulates EAP within a TLS tunnel. The TLS tunnel secures the inner EAP method, which could be unprotected otherwise. Windows supports EAP-TLS and EAP-MSCHAPv2 as inner methods.
 
-**EAP-Tunneled Transport Layer Security (TTLS)**: Encapsulates a TLS session that authenticates the server to client and authenticates the client to the server using another inner authentication mechanism such as EAP or a non-EAP protocol, such as Password Authentication Protocol (PAP). In Windows Server 2012, the inclusion of EAP-TTLS only provides support on the client-side. This is done to enable interoperation with the most commonly deployed RADIUS servers that support EAP-TTLS.
+**EAP-Tunneled Transport Layer Security (EAP-TTLS)**: Encapsulates a TLS session that authenticates the server to client and authenticates the client to the server using another inner authentication mechanism such as EAP or a non-EAP protocol, such as Password Authentication Protocol (PAP). In Windows Server 2012, the inclusion of EAP-TTLS only provides support on the client-side (in Windows 8). This is done to enable interoperation with the most commonly deployed RADIUS servers that support EAP-TTLS.
 
-**EAP-Subscriber Identity Module (SIM), EAP-Authentication and Key Agreement (AKA), and EAP-AKA Prime (AKA')**: Enables authentication by using SIM cards, and is implemented when a customer purchases a wireless broadband service plan from a mobile network operator. As part of the plan, the customer commonly receives a wireless profile that is preconfigured for SIM authentication.
+**EAP-Subscriber Identity Module (EAP-SIM), EAP-Authentication and Key Agreement (AKA), and EAP-AKA Prime (AKA')**: Enables authentication by using SIM cards, and is implemented when a customer purchases a wireless broadband service plan from a mobile network operator. As part of the plan, the customer commonly receives a wireless profile that is preconfigured for SIM authentication.
 
-**Tunnel EAP (TEAP)**: Standards-based tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chain-authenticating the machine and user within one authentication session. Support for the Windows 10 client was added in version 2004 (build 19041).
+**Tunnel EAP (TEAP)**: Standards-based tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chain-authenticating the machine and user within one authentication session. Support for the Windows client was added in Windows 10, version 2004 (build 19041).
 
 ## EAP-TLS, PEAP, and EAP-TTLS
 
@@ -80,7 +84,7 @@ To access the configuration settings for the authentication method of choice, pe
 
 1. Click **Start** > type **ncpa.cpl** > hit <kbd>Enter</kbd>.
 1. Right-click on the Wi-Fi network you want to edit and select **Properties**.
-1. Click the **Security** tab > under **Security type**, select **WPA2-Enterprise**.
+1. Click the **Security** tab > under **Security type**, select a security type that supports 802.1X, such as **WPA2-Enterprise** or **WPA3-Enterprise**.
 1. Under **Choose a network authentication method**, choose the authentication method you want to configure, then select **Settings**.
 
 > [!CAUTION]
@@ -206,4 +210,4 @@ EAP-AKA' is defined in [RFC 5448](https://www.rfc-editor.org/rfc/rfc5448). EAP-A
 
 - [Managing the New Wireless Network (IEEE 802.11) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994701(v=ws.11))
 - [Managing the New Wired Network (IEEE 802.3) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831813(v=ws.11))
-- [Advanced Security Settings for Wired and Wireless Network Policies](/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994696(v=ws.11)).
+- [Advanced Security Settings for Wired and Wireless Network Policies](/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994696(v=ws.11))
