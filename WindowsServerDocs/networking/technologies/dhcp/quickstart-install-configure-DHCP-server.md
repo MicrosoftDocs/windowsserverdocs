@@ -22,7 +22,7 @@ Before you can deploy your IPv4 DHCP server, you must meet the following prerequ
 
 ## Install DHCP Server
 
-<!-- leading verbiage  --> Installing DHCP involves adding the DNS Server role to an existing Windows Server server.
+Installing DHCP involves adding the DNS Server role to an existing Windows Server server.
 
 To install the DNS Server role as a standalone server, perform the following steps:
 
@@ -72,7 +72,7 @@ Here's how to install the DHCP Server role using Server Manager from the Windows
 
 ---
 
-## Configure DHCP server 
+## Configure DHCP server
 
 After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server]() for guidance.
 
@@ -86,13 +86,9 @@ If you are installing DHCP in a domain environment, you must perform the followi
 > [!TIP]
 > When you install Active Directory Domain Services (AD DS) with the Active Directory Domain Services Installation Wizard, the wizard gives you the option to authorize DHCP. The resulting DNS > zone is integrated with the AD DS domain namespace. To learn more, see [Understanding Active Directory Domain Services Integration](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc726034(v=ws.11)).
 
-
-
 Follow these steps to authorize your DHCP server in a domain environment.
 
 #### [PowerShell](#tab/powershell)
-
-<!-- (powershell version) --> Leading verbiage
 
 You can use the following command to add the DHCP server to the list of authorized DHCP servers in Active Directory.
 
@@ -132,11 +128,47 @@ For more information about these commands, see the following topics.
 
 ### Configure new scope in IPv4 server
 
-<!--  -->
+After you suceessfullly have installed and authorized your IPv4 DHCP Server, you can proceed to create a new DHCP scope. Scopes are used to indicate the range of IP addresses for your DHCP server and its clients. Note that IP address ranges must be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server]() for guidance. 
 
+To create a new DHCP scope using PowerShell, open a PowerShell window on the DHCP server.
+
+#### [PowerShell](#tab/powershell)
+
+Here's how to create a new scope using the Add-DhcpServerv4Scope command.
+
+1. Run PowerShell on your computer in an elevated session.
+
+1. Run the following command.
+
+```
+Add-DhcpServerv4Scope -Name "Lab-4 Network" -StartRange 10.10.10.1 -EndRange 10.10.10.254 -SubnetMask 255.255.255.0
+```
+
+This example adds a new scope for 10.10.10.0/24 subnet on the DHCP server service that runs on the local computer.
+
+#### [GUI](#tab/gui)
+
+#### Create new scope using Active Directory
+
+Here's how to create a new DHCP scope using Server Manager from the Windows desktop.
+
+1. In Server Manager, open DHCP Management Console.
+
+1. Expand the name of the DHCP Server, right-select **IPv4**, and then select **New Scope**.
+
+1. On the **New Scope Wizard** welcome page, select **Next**.
+
+1. On the **Scope Name** page, in the Name field, type the name of your new scope and select **Next**.
+
+1. On the **IP Address Range page**, specify the range of IP addresses for your DHCP clients and specify the subnet mask, using your preferred method. Select **Next**
+
+1. On the **Add Exclusions and Delay** page, specify any addresses or range of addresses that you do not want the server to distribute. Select **Next**.
+
+1. On the **Lease Duration** page, specify the lifespan for the IP addresses assigned to each DHCP client. Select **Next**.
+
+Use the **Configure DHCP Options** page to configure common DHCP options including IP addresses of routers (default gateways), DNS servers, and WIN settings for your new scope.
 
 ## Related links
 
 - [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
 - [DHCP Subnet selection options](/dhcp-subnet-options)
-- []()
