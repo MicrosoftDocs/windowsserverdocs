@@ -1,27 +1,27 @@
 ---
 title: Supported Debian virtual machines on Hyper-V
-description: Learn about the Debin and Linux integration services and features included in each version and known issues and workarounds for each distribution.
+description: Learn about the Debian and Linux integration services and features included in each version and known issues and workarounds for each distribution.
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 ms.author: kkashanjat
 author: kkkashan
-ms.date: 06/09/2023
+ms.date: 06/12/2023
 ---
 # Supported Debian virtual machines on Hyper-V
 
 >Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
-The following feature distribution map indicates the features that are present in each version. The known issues and workarounds for each distribution are listed after the table.
+The following feature distribution map indicates the features that are present in each version of Windows Server. The known issues and workarounds for each distribution are listed after the table.
 
 ## Table legend
 
-* **Built in** - Linux integration services (LIS) are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution, so don't install it. The kernel module version numbers for the built-in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built-in LIS is out of date.
+* **Built in** - Linux integration services (LIS) are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution. Don't install the Microsoft package. The kernel module version numbers for the built-in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built-in LIS is out of date.
 
 * &#10004; - Feature available
 
 * (*blank*) - Feature not available
 
-| **Feature**                                                                                                                                  | **Windows Server operating system version** | **11 (Bullseye)** | **10.0-10.3 (Buster)** |
+| **Feature**                                                                                                                                  | **Windows Server version** | **11 (Bullseye)** | **10.0-10.3 (Buster)** |
 |----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------|------------------------|
 | **Availability**                                                                                                                             |                                             | Built in        | Built in               |
 | **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2                         | ✔               | ✔                      |
@@ -65,7 +65,7 @@ The following feature distribution map indicates the features that are present i
 
 1. Starting with Debian 8.3, the manually installed Debian package "hyperv-daemons" contains the key-value pair, fcopy, and VSS daemons. On Debian 7.x and 8.0-8.2, the hyperv-daemons package must come from [Debian backports](https://wiki.debian.org/Backports).
 
-1. On Windows Server 2012 R2 Generation 2 virtual machines have secure boot enabled by default, and some Linux virtual machines don't boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager**, or you can disable it by using PowerShell:
+1. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default, and some Linux virtual machines don't boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager**, or you can disable it by using PowerShell:
 
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
@@ -87,6 +87,6 @@ The following feature distribution map indicates the features that are present i
 
 * [Supported FreeBSD virtual machines on Hyper-V](Supported-FreeBSD-virtual-machines-on-Hyper-V.md)
 
-* [Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
+* [Feature descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 
-* [Best Practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
+* [Best practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
