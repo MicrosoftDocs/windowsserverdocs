@@ -11102,7 +11102,38 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md",
       "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Nonauthoritative-Restore.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide/ad-forest-recovery-perform-nonauthoritative-restore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Perform-a-Full-Recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide/ad-forest-recovery-perform-full-server-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Perform-initial-recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide/ad-forest-recovery-perform-initial-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Prerequisites.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide/ad-forest-recovery-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Procedures.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide/ad-forest-recovery-procedures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Raise-RID-Pool.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide/ad-forest-recovery-raise-rid-pool",
+      "redirect_document_id": false
+    },
+    
   ]
 }
 
