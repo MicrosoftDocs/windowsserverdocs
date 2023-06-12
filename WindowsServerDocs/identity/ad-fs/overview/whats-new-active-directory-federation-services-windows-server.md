@@ -102,7 +102,7 @@ With AD FS on Server 2019, you can now pass the resource value embedded in the s
 The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope.
 
 > [!NOTE]
-> Only one resource can be specified in the authentication request. If more than one resource is included in the request, AD FS will return an error and authentication will not succeed.
+> Only one resource can be specified in the authentication request. If more than one resource is included in the request, AD FS returns an error and authentication doesn't not succeed.
 
 ### Proof Key for Code Exchange (PKCE) support for oAuth
 
@@ -179,18 +179,18 @@ There's no support to trigger a particular extra auth provider if the RP is usin
 
 #### FAQ
 
-**Q.** How do I resolve the AD FS Admin event logs error, “Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'
+**Q.** How do I resolve the AD FS Admin event logs error, “Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'."
 **A.** Follow these steps to remediate the issue:
 
 1. Launch AD FS management console. Go to **Services > Scope Descriptions**.
 1. Select more options on "**Scope Descriptions**, and select **Add Scope Description**.
-1. Under name enter "ugs" and Select **Apply > OK**.
+1. Under name, enter "ugs" and Select **Apply > OK**.
 1. Launch PowerShell as Administrator.
-1. Run the command ``Get-AdfsApplicationPermission``. Look for the ScopeNames :{openid, aza} that has the ClientRoleIdentifier. Make a note of the ObjectIdentifier.
+1. Run the command ``Get-AdfsApplicationPermission``. Look for the `ScopeNames :{openid, aza}` that has the `ClientRoleIdentifier`. Make a note of the `ObjectIdentifier`.
 1. Run the command ``Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'``.
 1. Restart the AD FS service.
-1. On the client, restart the client. You should be prompted to provision Windows Hello for Business (WHFB).
-1. If the provisioning window does not pop up, then you need to collect trace logs and troubleshoot further.
+1. On the client, restart the client. You should be prompted to configure Windows Hello for Business (WHFB).
+1. If the configuration window doesn't pop up, then you need to collect trace logs and troubleshoot further.
 
 **Q.** Can I pass a resource value as part of the scope value like how requests are done against Azure AD?
 **A.** With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example:
