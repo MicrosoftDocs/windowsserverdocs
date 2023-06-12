@@ -9,7 +9,7 @@ ms.date: 06/08/2023
 
 # Plan for deploying devices by using Discrete Device Assignment
 
->Applies to: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019, Windows Server 2022,
+> Applies to: Windows Server 2022, Microsoft Hyper-V Server 2019, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
 
 Discrete Device Assignment allows physical Peripheral Component Interconnect Express (PCIe) hardware to be directly accessible from within a virtual machine (VM). This article discusses the type of devices that can be used, host system requirements, limitations imposed on the VMs, and security implications.
 
@@ -33,7 +33,7 @@ Your system must meet the [Hardware Requirements for Windows Server](../../../ge
 
 These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings. If the same capabilities are required for SR-IOV support and in the BIOS, you might need to set "Enable SR-IOV." Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
-To help ensure the hardware is capable of Discrete Device Assignment, you can run the [Machine Profile Script](#machine-profile-script) on a Hyper-V enabled host. The script tests if your server is correctly set up and what devices are capable of Discrete Device Assignment.
+To help ensure the hardware is capable of Discrete Device Assignment, you can run the [machine profile script](#machine-profile-script) on a Hyper-V enabled host. The script tests if your server is correctly set up and what devices are capable of Discrete Device Assignment.
 
 ## Device requirements
 
@@ -66,7 +66,7 @@ If you would like to bypass the security checks for a device that doesn't have a
 
 ## PCIe location path
 
-The PCIe Location path is required to dismount and mount the device from the Host. An example location path is `PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)`. The [Machine Profile Script](#machine-profile-script) also returns the Location Path of the PCIe device.
+The PCIe location path is required to dismount and mount the device from the Host. An example location path is `PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)`. The [Machine Profile Script](#machine-profile-script) also returns the location path of the PCIe device.
 
 ### Get the location path by using Device Manager
 
@@ -81,21 +81,21 @@ The PCIe Location path is required to dismount and mount the device from the Hos
 
 Some devices, especially GPUs, require more MMIO space to be allocated to the VM for the memory of that device to be accessible. By default, each VM starts off with 128 MB of low MMIO space and 512 MB of high MMIO space allocated to it. However, a device might require more MMIO space, or multiple devices might be passed through such that the combined requirements exceed these values. Changing MMIO Space is straightforward and can be performed in PowerShell by using the following commands:
 
-```PowerShell
+```powershell
 Set-VM -LowMemoryMappedIoSpace 3Gb -VMName $vm
 Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName $vm
 ```
 
 The easiest way to determine how much MMIO space to allocate is to use the [Machine Profile Script](#machine-profile-script). To download and run the Machine Profile Script, run the following commands in a PowerShell console:
 
-```PowerShell
+```powershell
 curl -o SurveyDDA.ps1 https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1
 .\SurveyDDA.ps1
 ```
 
 For devices that can be assigned, the script displays the MMIO requirements of a given device. The following script output is an example:
 
-```PowerShell
+```powershell
 NVIDIA GRID K520
 Express Endpoint -- more secure.
     ...
@@ -112,7 +112,7 @@ Consider the previous example. If you assign a single K520 GPU, set the MMIO spa
 
 For a more in-depth look at MMIO space, see [Discrete Device Assignment - GPUs](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266) on the Tech Community blog.
 
-## Machine Profile Script
+## Machine profile script
 
 To identify if the server is configured correctly, and what devices can be passed through by using Discrete Device Assignment, run the [SurveyDDA.ps1.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1) PowerShell script.
 
