@@ -168,6 +168,8 @@ Here's how to create a new DHCP scope using Server Manager from the Windows desk
 
 Use the **Configure DHCP Options** page to configure common DHCP options including IP addresses of routers (default gateways), DNS servers, and WIN settings for your new scope.
 
+---
+
 ## Related links
 
 - [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
