@@ -18,13 +18,13 @@ The Extensible Authentication Protocol (EAP) is an authentication framework that
 
 EAP authentication methods that are used within tunneled EAP methods are commonly known as **inner methods** or **EAP types**. Methods that are set up as **inner methods** have the same configuration settings as they would when used as an outer method. This article contains configuration information specific to the following authentication methods in EAP.
 
-**EAP-Transport Layer Security (EAP-TLS)**: [Standards-based](https://datatracker.ietf.org/doc/html/rfc5216) EAP method that uses TLS with certificates for mutual authentication. Appears as **Smart Card or other Certificate (EAP-TLS)** in Windows. EAP-TLS can be deployed as an **inner method** for another EAP method or as a standalone EAP method. 
+**EAP-Transport Layer Security (EAP-TLS)**: [Standards-based](https://datatracker.ietf.org/doc/html/rfc5216) EAP method that uses TLS with certificates for mutual authentication. Appears as **Smart Card or other Certificate (EAP-TLS)** in Windows. EAP-TLS can be deployed as an **inner method** for another EAP method or as a standalone EAP method.
 > [!TIP]
 > EAP methods that use EAP-TLS, being certificate-based, generally offer the highest level of security. For example, EAP-TLS is the only allowed EAP method for WPA3-Enterprise 192-bit mode.
 
-**EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (EAP-MSCHAP v2)**: [Standards-based](/openspecs/windows_protocols/ms-chap) EAP method that encapsulates the [MSCHAP v2 authentication protocol](https://www.ietf.org/rfc/rfc2759.txt), which uses username and password, for authentication. Appears as **Secure password (EAP-MSCHAP v2)** in Windows. EAP-MSCHAPv2 can be used as a standalone method for VPN, but only as an **inner method** for wired/wireless.
+**EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (EAP-MSCHAP v2)**: [Microsoft-defined](/openspecs/windows_protocols/ms-chap) EAP method that encapsulates the [MSCHAP v2 authentication protocol](https://www.ietf.org/rfc/rfc2759.txt), which uses username and password, for authentication. Appears as **Secure password (EAP-MSCHAP v2)** in Windows. EAP-MSCHAPv2 can be used as a standalone method for VPN, but only as an **inner method** for wired/wireless.
 > [!WARNING]
-> MSCHAPv2-based connections are subject to similar attacks as for NTLMv1. Windows 11 Enterprise, version 22H2 (build 22621) enables [Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-considerations#wi-fi-and-vpn-considerations) which may cause issues with MSCHAPv2-based connections. 
+> MSCHAPv2-based connections are subject to similar attacks as for NTLMv1. Windows 11 Enterprise, version 22H2 (build 22621) enables [Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-considerations#wi-fi-and-vpn-considerations) which may cause issues with MSCHAPv2-based connections.
 
 **Protected EAP (PEAP)**: [Microsoft-defined](/openspecs/windows_protocols/ms-peap) EAP method that encapsulates EAP within a TLS tunnel. The TLS tunnel secures the inner EAP method, which could be unprotected otherwise. Windows supports EAP-TLS and EAP-MSCHAP v2 as inner methods.
 
@@ -32,7 +32,7 @@ EAP authentication methods that are used within tunneled EAP methods are commonl
 
 **EAP-Subscriber Identity Module (EAP-SIM), EAP-Authentication and Key Agreement (EAP-AKA), and EAP-AKA Prime (EAP-AKA')**: Described by various RFCs, enables authentication by using SIM cards, and is implemented when a customer purchases a wireless broadband service plan from a mobile network operator. As part of the plan, the customer commonly receives a wireless profile that is preconfigured for SIM authentication.
 
-**Tunnel EAP (TEAP)**: Descripbed by [RFC 7170](https://www.rfc-editor.org/rfc/rfc7170), tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chaining - authenticating the machine and user within one authentication session. In Windows Server 2022, the inclusion of TEAP only provides support for the client-side -Windows 10, version 2004 (build 19041). NPS does not support TEAP at this time. Windows supports EAP-TLS and EAP-MSCHAP v2 as innner methods. 
+**Tunnel EAP (TEAP)**: Described by [RFC 7170](https://www.rfc-editor.org/rfc/rfc7170), tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chaining - authenticating the machine and user within one authentication session. In Windows Server 2022, the inclusion of TEAP only provides support for the client-side - Windows 10, version 2004 (build 19041). NPS does not support TEAP at this time. Windows supports EAP-TLS and EAP-MSCHAP v2 as inner methods.
 
 ## Configuring EAP properties
 
@@ -53,8 +53,9 @@ You can access the EAP properties for virtual private network (VPN) connections 
 - Using Connection Manager Administration Kit (CMAK) to configure VPN connections.
 
 ## Authentication method configuration settings
+
 > [!CAUTION]
-> If a Network Access Server is configured to allow the same type of authentication method for a tunneled EAP method (e.g. PEAP) and a non-tunneled EAP method (e.g. EAP-MSCHAP v2), there is a potential security vulnerability. When you deploy both a tunneled EAP method and EAP (which isn't protected), don't use the same authentication type. For example, if you deploy PEAP-TLS, do not also deploy EAP-TLS. This is because if you require the protection of the tunnel, it serves no purpose to permit the method to be executed outside of the tunnel as well. 
+> If a Network Access Server is configured to allow the same type of authentication method for a tunneled EAP method (e.g. PEAP) and a non-tunneled EAP method (e.g. EAP-MSCHAP v2), there is a potential security vulnerability. When you deploy both a tunneled EAP method and EAP (which isn't protected), don't use the same authentication type. For example, if you deploy PEAP-TLS, do not also deploy EAP-TLS. This is because if you require the protection of the tunnel, it serves no purpose to permit the method to be executed outside of the tunnel as well.
 
 The following table explains the configurable settings for each authentication method.
 
