@@ -87,7 +87,7 @@ dir Cert:\LocalMachine\My\
 
 #### Other considerations for TLS/SSL certificates in default certificate authentication binding and alternate TLS binding mode
 
-- The **Set-AdfsSslCertificate** and **Set-AdfsAlternateTlsClientBinding** cmdlets are multi-node cmdlets, so they only have to run from the primary. The cmdlets also update all nodes in the farm. This change is new in Server 2016. On Server 2012 R2, you had to run the cmdelet on each server.
+- The **Set-AdfsSslCertificate** and **Set-AdfsAlternateTlsClientBinding** cmdlets are multi-node cmdlets, so they only have to run from the primary. The cmdlets also update all nodes in the farm. This change is new in Server 2016. On Server 2012 R2, you had to run the cmdlet on each server.
 - The **Set-AdfsSslCertificate** and **Set-AdfsAlternateTlsClientBinding** cmdlets have to run only on the primary server. The primary server has to run Server 2016, and you should raise the farm behavior level to 2016.
 - The **Set-AdfsSslCertificate** and **Set-AdfsAlternateTlsClientBinding** cmdlets use PowerShell Remoting to configure the other AD FS servers, make sure port 5985 (TCP) is open on the other nodes.
 - The **Set-AdfsSslCertificate** and **Set-AdfsAlternateTlsClientBinding** cmdlets grant the adfssrv principal read permissions to the private keys of the TLS/SSL certificate. This principal represents the AD FS service. It's not necessary to grant the AD FS service account read access to the private keys of the TLS/SSL certificate.
