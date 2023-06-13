@@ -1,6 +1,6 @@
 ---
-title: Deploy DHCP Server
-description: You can use this topic to deploy a Windows Server Internet Protocol (IP) version 4 DHCP server that provides automatic IP addresses and DHCP options to IPv4 DHCP clients connected to one or more subnets on your network.
+title: Install DHCP Server
+description: You can use this topic to install a Windows Server Internet Protocol (IP) version 4 DHCP server that provides automatic IP addresses and DHCP options to IPv4 DHCP clients connected to one or more subnets on your network.
 ms.topic: quickstart
 author: robinharwood
 ms.author: wscontent
@@ -10,11 +10,11 @@ ms.date: 06/01/2023
 ---
 Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This quickstart shows you how to deploy an Internet Protocol (IP) version 4 Dynamic Host Configuration Protocol \(DHCP\) server that automatically assigns IP addresses and DHCP options to IPv4 DHCP clients that are connected to one or more subnets on your network.
+This quickstart shows you how to install an Internet Protocol (IP) version 4 Dynamic Host Configuration Protocol \(DHCP\) server that automatically assigns IP addresses and DHCP options to IPv4 DHCP clients that are connected to one or more subnets on your network.
 
 ## Prerequisites
 
-Before you can deploy your IPv4 DHCP server, you must meet the following prerequisites:
+Before you can install your IPv4 DHCP server, you must meet the following prerequisites:
 
 - A computer running a supported version of Windows Server.
 - A static IP.
@@ -28,7 +28,7 @@ To install the DNS Server role as a standalone server, perform the following ste
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to deploy DHCP using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
+Here's how to install DHCP using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
 
 1. Run PowerShell on your computer in an elevated session.
 
