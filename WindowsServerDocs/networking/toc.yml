@@ -175,10 +175,13 @@ items:
         items:
           - name: DNS zones
             href: dns/zone-types.md
+          - name: dns/resource-record-types.md
       - name: How-to guides
         items:
           - name: Manage DNS zones
             href: dns/manage-dns-zones.md
+          - name: Manage DNS resource records
+            href: dns/manage-resource-records.md
           - name: Secure DNS Client over HTTPS (DoH)
             href: dns/doh-client-support.md
       - name: Tutorials
