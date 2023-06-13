@@ -1,5 +1,5 @@
 ---
-description: Learn more about DNS resource records in Windows Server
+description: Learn more about DNS resource records using DNS Server on Windows Server
 title: DNS resource records 
 author: robinharwood
 ms.author: wscontent
@@ -47,10 +47,10 @@ Resource records can be added to an existing zone using the
 [Add-DNSServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord) PowerShell
 command. Some common resource record types have other PowerShell commands where you don't need to
 specify the resource record type. You can also add resource records using the DNS Manager console.
-See [Managing DNS resource records](managing-resource-records-how-to-powershell.md) for guidance on
+See [Managing DNS resource records](manage-resource-records.md) for guidance on
 working with resource records, including creating and modifying existing resource records of all
 types.
 
 ## Related links
 
-- [Managing DNS resource records](managing-resource-records-how-to-powershell.md)
+- [Managing DNS resource records](manage-resource-records.md)

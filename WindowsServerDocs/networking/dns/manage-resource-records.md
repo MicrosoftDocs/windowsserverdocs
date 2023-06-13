@@ -1,6 +1,6 @@
 ---
-description: Learn more about how to manage DNS resource records in Windows Server
-title: DNS resource records 
+description: Learn more about how to manage DNS resource records on Windows Server
+title: Manage DNS resource records using DNS server on Windows Server
 author: robinharwood
 ms.author: wscontent
 ms.custom: template-quickstart, team=cloud_advocates
@@ -10,26 +10,39 @@ ms.date: 06/01/2023
 ---
 # Manage DNS resource records
 
-Applies to: Windows Server: (All supported versions)
+Create, modify, and delete DNS resource records using the DNS server role in Windows Server. You can
+add resource records using DNS manager, using Windows PowerShell, or automatically when
+Windows-based, Dynamic Host Configuration Protocol (DHCP)–enabled clients join a network using
+dynamic update.
 
-This guide provides instructions on how to manage resource records in Windows Server, including how to create new records, modify existing records, and delete records.
-
-You can add resource records directly, or they can be added automatically when Windows-based, Dynamic Host Configuration Protocol (DHCP)–enabled clients join a network using dynamic update.
-
-Resource records contain the information that a zone maintains about the resources (such as hosts) that the zone contains. Resource record information includes record type, owner name, host address and other information. See [DNS resource records](managing-resource-records-conceptual.md) to learn more about resource records in Windows Server.
+Resource records contain the information that a zone maintains about the resources (such as hosts)
+that the zone contains. Resource record information includes record type, owner name, host address
+and other information. To learn more about resource records in Windows Server, see
+[DNS resource records](managing-resource-records-conceptual.md) .
 
 ## Prerequisites
 
-Before you can manage DNS resource records in Windows Server, you need to complete the following prerequisites:
+Before you can manage DNS resource records in Windows Server, you need to complete the following
+prerequisites:
 
-- A Windows Server with the DNS Server role installed and configured. See [Quickstart: Install and configure DNS Server](../networking/dns/quickstart-install-configure-dns-server) for more information on how to get stared.
-- Determine the type of zone you want to create, see DNS zones to learn more.
+- A Windows Server with the DNS Server role installed and configured. See
+  [Quickstart: Install and configure DNS Server](../networking/dns/quickstart-install-configure-dns-server)
+  for more information on how to get stared.
+- Determine the type of record you want to create, see
+[DNS resource records](managing-resource-records-conceptual.md).
 - An account that is a member of the Administrators group, or equivalent.
-- You need the fully qualified domain name (FQDN) and the IP address of the  resource record  you want to create.
+- You need the fully qualified domain name (FQDN) and the IP address of the resource record you want
+  to create.
 
-## Add resource records
+You can add resource records to an existing zone using the
+[Add-DNSServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord) PowerShell
+cmdlet. Some common resource record types have additional PowerShell commands where you don't need
+to specify the resource record type. You can also add the following types of resource records using
+the DNS Manager console.
 
-You can add resource records to an existing zone using the Add-DNSServerResourceRecord PowerShell cmdlet. Some common resource record types have additional PowerShell cmdlets where you don't need to specify the resource record type. You can also add the following types of resource records using the DNS Manager console by right-selecting on the DNS zone you want to add the resource record to and selecting from one of the following options and completing the entries in the dialog box:
+## Create resource records
+
+The following sections contain steps for creating the following types of resource records:
 
 - New Host (A or AAAA)
 - New Alias (CNAME)
@@ -38,187 +51,282 @@ You can add resource records to an existing zone using the Add-DNSServerResource
 - New Delegation
 - Other New Records
 
-The following sectons contain instructions and Powershell examples for managing different types of resource records. 
+#### Create a host record
 
-### Host record
-
-Host records map DNS names to IPv4 addresses. To add a host record use the Add-DnsServerResourceRecord cmdlet with the -A parameter. For example, to add the host resource record Host34 mapped to IP address 10.17.1.34 to zone contoso.com, use the command:
-
-#### [PowerShell](#tab/powershell)
-
-To add the host resource record Host34 mapped to IP address 10.17.1.34 to zone contoso.com, use the command:
-
-```
-Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "Host34" -AllowUpdateAny -IPv4Address "10.17.1.34" -TimeToLive 01:00:00 -AgeRecord
-```
-
-#### [GUI](#tab/gui)
-
-You can also add a host record using the Add-DnsServerResourceRecordA cmdlet. For example, to add the record Host35 mapped to IP address 172.18.99.35 to zone contoso.com, use the command:
+Host (A) records map DNS names to IPv4 addresses. To create an IPv4 host (A) record, select the
+relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-To add the record Host35 mapped to IP address 172.18.99.35 to zone contoso.com, use the command:
+Here's how to create an IPv4 host (A) using the
+[Add-DnsServerResourceRecord](/powershell/module/dnsserver/Add-DnsServerResourceRecord) PowerShell
+command.
 
+To create a host resource record for `Host34` mapped to the IP address `10.17.1.34` for the zone
+`contoso.com`, run the following command.
+
+```powershell
+Add-DnsServerResourceRecordA -Name "Host34" -ZoneName "Contoso.com" -IPv4Address "10.17.1.34" -TimeToLive 01:00:00
 ```
-Add-DnsServerResourceRecordA -Name "Host35" -ZoneName "contoso.com" -AllowUpdateAny -IPv4Address "172.18.99.35" -TimeToLive 01:00:00
-```
+
+You can also add an IPv4 host (A) record using the
+[Add-DnsServerResourceRecord](/powershell/module/dnsserver/Add-DnsServerResourceRecord).
 
 #### [GUI](#tab/gui)
+
+Here's how to create an IPv4 host (A) record for `Host34` mapped to the IP address `10.17.1.34` for
+the zone `contoso.com` using DNS Manager.
+
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
+
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, right-click, then select **New Host (A or AAAA)**.
+
+1. On the **New Host** screen, specify the name and IP address of the host record. For example,
+   `Host32` and `10.17.1.34`.
+
+1. Select **Add Host** to create the record.
 
 ### AAAA resource record
 
-AAAA resource records map DNS names to IPv6 addresses. To add a AAAA resource record use the Add-DNSServerResourceRecord cmdlet with the -AAAA parameter. For example, to add the AAAA resource record Host36 to map to IPv6 address 3ffe::1
+Host (AAAA) records map DNS names to IPv6 addresses.To create an IPv6 host (AAAA) record, select the
+relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-To add the AAAA resource record Host36 to map to IPv6 address 3ffe::1, use the command:
+Here's how to create an IPv6 host (AAAA) using the
+[Add-DnsServerResourceRecordAAAA](/powershell/module/dnsserver/Add-DnsServerResourceRecordAAAA)
+PowerShell command.
 
+To add the AAAA resource record `Host36` to map to IPv6 address `3ffe::1`, use the command:
+
+```powershell
+Add-DnsServerResourceRecordAAAA -Name "Host37" -ZoneName "contoso.com" -IPv6Address "3ffe::1" -TimeToLive 01:00:00
 ```
-Add-DnsServerResourceRecord -AAAA -Name "Host36" -ZoneName "Contoso.com" -AllowUpdateAny -IPv6Address "3ffe::1" -TimeToLive 01:00:00 -AgeRecord
-```
+
+You can also add an IPv6 host (AAAA) record using the
+[Add-DnsServerResourceRecord](/powershell/module/dnsserver/Add-DnsServerResourceRecord).
+
 #### [GUI](#tab/gui)
 
-As an alternative you can use the Add-DnsServerResourceRecordAAA cmdlet to map DNS names to IPv6 addresses. For example, to add the AAAA resource record Host36 to map to IPv6 address 3ffe::1
+Here's how to create an IPv6 AAAA record for `Host34` mapped to the IPv6 address `3ffe::1` for
+the zone `contoso.com` using DNS Manager.
 
-#### [PowerShell](#tab/powershell)
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
-To add the AAAA resource record Host36 to map to IPv6 address 3ffe::1, us ethe command:
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, right-click, then select **New Host (A or AAAA)**.
 
-```
-Add-DnsServerResourceRecordAAAA -Name "Host37" -ZoneName "contoso.com" -AllowUpdateAny -IPv6Address "3ffe::1" -TimeToLive 01:00:00
-```
-#### [GUI](#tab/gui)
+1. On the **New Host** screen, specify the name and IP address of the host record. For example,
+   `Host34` and `3ffe::1`.
+
+1. Select **Add Host** to create the record.
 
 ### CNAME records
 
-Alias (CNAME) resource records are also termed canonical name resource records. With these records, you can use more than one DNS name to point to a single host. You can create CNAME records with the Add-DNSServerResourceRecord cmdlet with the -CNAME parameter. For example, to have the CNAME labhost34 be created in the contoso.com zone and point to the existing DNS record Host34.lab.contoso.com use the following PowerShell command:
+Alias (CNAME) resource records are also termed canonical name resource records. With these records,
+you can use more than one DNS name to point to a single host.
+
+To create an alias (CNAME) record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-To have the CNAME labhost34 be created in the contoso.com zone and point to the existing DNS record Host34.lab.contoso.com, use the following PowerShell command:
+Here's how to create an CNAME resource record using the
+[Add-DnsServerResourceRecordCName](/powershell/module/dnsserver/Add-DnsServerResourceRecordCName)
+PowerShell command.
 
-```
-Add-DnsServerResourceRecord -CName -Name "labhost34" -HostNameAlias "Host34.lab.contoso.com" -ZoneName "Contoso.com" -AllowUpdateAny -TimeToLive 01:00:00
+To have the CNAME `labhost34` be created in the `contoso.com` zone and point to the existing DNS
+record `Host34.lab.contoso.com`, use the following PowerShell command:
+
+```powershell
+Add-DnsServerResourceRecordCName -Name "labhost34" -HostNameAlias "Host34.lab.contoso.com" -ZoneName "contoso.com" -TimeToLive 01:00:00
 ```
 
 #### [GUI](#tab/gui)
 
-You can also use the Add-DnsServerResourceRecordCName cmdlet to add CNAME records to a DNS zone. For example, to add the CNAME record labsvr1 to the contoso.com zone pointing at the existing DNS record srv1.lab.contoso.com, use the PowerShell command:
+Here's how to create an CNAME resource record for `labhost34` in the `contoso.com` zone, pointing to
+the existing DNS record `Host34.lab.contoso.com` using DNS Manager.
 
-#### [PowerShell](#tab/powershell)
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
-To add the CNAME record labsvr1 to the contoso.com zone pointing at the existing DNS record srv1.lab.contoso.com, use the PowerShell command:
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, right-click, then select **New Alias (CNAME)**.
 
-```
-Add-DnsServerResourceRecordCName -Name "labsrv1" -HostNameAlias "srv1.lab.contoso.com" -ZoneName "contoso.com"
-```
-#### [GUI](#tab/gui)
+1. On the **New Resource Record** screen, specify the alias name and FQDN for the target host. For
+   example, `labhost34` and `Host34.lab.contoso.com`.
+
+1. Select **OK** to create the resource record.
 
 ### MX records
 
-E-mail applications use the mail exchanger (MX) resource record to locate a mail server based on a DNS domain name in the destination address for the e-mail recipient of a message. If multiple mail exchanger (MX) resource records exist, the DNS Client service attempts to contact mail servers in the order of preference from lowest value (highest priority) to highest value (lowest priority). You add MX records using the Add-DnsServerResourceRecord cmdlet and specifying the -MX parameter. For example, to add a MX record with preference set to 10 to the contoso.com zone that points to host mail.contoso.com, use the command:
+E-mail applications use the mail exchanger (MX) resource record to locate a mail server based on a
+DNS domain name in the destination address for the e-mail recipient of a message. If multiple mail
+exchanger (MX) resource records exist, the DNS Client service attempts to contact mail servers in
+the order of preference from lowest value (highest priority) to highest value (lowest priority).
+
+To create an MX record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-To add a MX record with preference set to 10 to the contoso.com zone that points to host mail.contoso.com, use the command:
+Here's how to create an CNAME resource record using the
+[Add-DnsServerResourceRecordMX](/powershell/module/dnsserver/Add-DnsServerResourceRecordMX)
+PowerShell command.
 
-```
-Add-DnsServerResourceRecord -Name "." -MX -ZoneName "contoso.com" -MailExchange "mail.contoso.com" -Preference 10
+To add a MX record for the host `mail.contoso.com` with a preference set to `10` for the
+`contoso.com` zone, use the following PowerShell command:
+
+```powershell
+Add-DnsServerResourceRecordMX -Preference 10 -Name "." -TimeToLive 01:00:00 -MailExchange "mail.contoso.com" -ZoneName "contoso.com"
 ```
 
 #### [GUI](#tab/gui)
 
-You can also use the Add-DnsServerResourceRecordMX cmdlet to perform this task. For example, to add a MX record with preference set to 20 to the contoso.com zone that points to host mail2.contoso.com, use the command:
+Here's how to create an MX resource record for the host `mail2.contoso.com` with a preference set to
+`20` for the `contoso.com` zone using DNS Manager.
 
-#### [PowerShell](#tab/powershell)
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
-To add a MX record with preference set to 20 to the contoso.com zone that points to host mail2.contoso.com, use the command:
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, right-click, then select **New Mail Exchanger (MX)**.
 
-```
-Add-DnsServerResourceRecordMX -Preference 20 -Name "." -TimeToLive 01:00:00 -MailExchange "mail2.contoso.com" -ZoneName "contoso.com"
-```
+1. On the **New Resource Record** screen, specify the host or child domain, if applicable, the FQDN
+   of the mail server, and the mail server priority. For example, leave the host of child domain
+   blank, enter `mail2.contoso.com` for the mail server and `20` for the mail server priority.
 
-#### [GUI](#tab/gui)
+1. Select **OK** to create the resource record.
 
 ### PTR records
 
-Pointer (PTR) resource records support the reverse lookup process, based on zones that are created and rooted in the in-addr.arpa domain. You need to have the appropriate reverse lookup zone present on your DNS server to create a PTR record that maps an IP address to a specific hostname. You create PTR records by using the Add-DnsServerResourceRecord cmdlet with the -PTR parameter. For example to add a pointer record named host77.contoso.com for the IP address 192.168.0.77 to the reverse lookup zone 0.168.192.in-addr.arpa use the command:
+Pointer (PTR) resource records support the reverse lookup process, based on zones that are created
+and rooted in the `in-addr.arpa` domain. You need to have the appropriate reverse lookup zone
+present on your DNS server to create a PTR record that maps an IP address to a specific hostname.
+
+To create a PTR record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-To add a pointer record named host77.contoso.com for the IP address 192.168.0.77 to the reverse lookup zone 0.168.192.in-addr.arpa, use the command:
+Here's how to create a PTR resource record using the
+[Add-DnsServerResourceRecordPtr](/powershell/module/dnsserver/Add-DnsServerResourceRecordPtr)
+PowerShell command.
 
-```
+To add a pointer record named `host77.contoso.com` for the IP address `192.168.0.77` in the reverse
+lookup zone `0.168.192.in-addr.arpa`, use the following PowerShell command:
+
+```powershell
 Add-DnsServerResourceRecord -Name "77" -Ptr -ZoneName "0.168.192.in-addr.arpa" -AllowUpdateAny -PtrDomainName "host77.contoso.com"
 ```
 
 #### [GUI](#tab/gui)
 
+Here's how to create a pointer record named `host77.contoso.com` for the IP address `192.168.0.77` in the reverse
+lookup zone `0.168.192.in-addr.arpa` using DNS Manager.
+
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
+
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Reverse Lookup Zone, right-click, then select **New Pointer (PTR)**.
+
+1. On the **New Resource Record** screen, specify the host IP address, and host name. For example,
+   enter `192.168.0.77` for the host IP address and `host77.contoso.com` for the host name.
+
+1. Select **OK** to create the resource record.
+
 ### SRV records
 
-Service location (SRV) resource records are required when clients use DNS to locate location services such as Active Directory domain controllers. You can use the Add-DnsServerResourceRecord cmdlet with the SRV parameter to add a SRV resource record to a DNS zone. For example, to add a service locator (SRV) resource record for the \_sip service on port 5060 with a weight and priority of 0 to the contoso.com domain pointing to sipserver1.contoso.com use the command:
+Service location (SRV) resource records are required when clients use DNS to locate location services such as Active Directory domain controllers.
+
+To create an SRV record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-To add a service locator (SRV) resource record for the \_sip service on port 5060 with a weight and priority of 0 to the contoso.com domain pointing to sipserver1.contoso.com, use the command:
+Here's how to create a SRV resource record using the
+[Add-DnsServerResourceRecord](/powershell/module/dnsserver/Add-DnsServerResourceRecord)
+PowerShell command.
 
-```
+To add a service locator (SRV) resource record for the `_sip` service on port `5060` with a weight
+and priority of `0` for the `contoso.com` domain pointing to `sipserver1.contoso.com`, use the
+following PowerShell command:
+
+```powershell
 Add-DnsServerResourceRecord -Srv -Name "sip" -ZoneName "contoso.com" -DomainName "sipserver1.contoso.com" -Priority 0 -Weight 0 -Port 5060
 ```
 
 #### [GUI](#tab/gui)
 
+Here's how to create a SRV resource record for the `_sip` service on port `5060` with a weight and
+priority of `0` for the `contoso.com` domain pointing to `sipserver1.contoso.com` using DNS Manager.
+
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
+
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, right-click, then select **Other New Records**.
+
+1. Select **Service Locator (SRV)** from the list, then select **Create Record**.
+
+1. On the **New Resource Record** screen, specify the service, protocol, priority, weight, port
+   number, and host offering this service. For example, enter `_sip` for service, `5060` for the
+   port, a weight and priority of `0`, and `sipserver1.contoso.com` as the host.
+
+1. Select **OK** to create the resource record.
+
 ### TXT records
 
-Text records let you to add text information that can be returned by querying DNS. TXT records are often used to authenticate ownership of DNS zones. To create a TXT record use the Add-DnsServerResourceRecord cmdlet with both the -txt parameter and the DescriptiveText parameters. For example, to create a TXT record named example with the text value “Example DNS record text” in the contoso.com zone use the following PowerShell commands:
+Text records let you to add text information that can be returned by querying DNS. TXT records are
+often used to authenticate ownership of DNS zones.
+
+To create an TXT record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-To create a TXT record named example with the text value “Example DNS record text” in the contoso.com zone, use the following PowerShell commands:
+Here's how to create a TXT resource record using the
+[Add-DnsServerResourceRecord](/powershell/module/dnsserver/Add-DnsServerResourceRecord)
+PowerShell command.
 
-```
+To create a TXT record named example with the text value `Example DNS record text` in the
+`contoso.com` zone, use the following PowerShell command:
+
+```powershell
 $recordtext = “Example DNS record text”
 Add-DnsServerResourceRecord -DescriptiveText $recordtext -Name example -zonename contoso.com
 ```
 
 #### [GUI](#tab/gui)
 
-### Managing DNS Resource Records
+Here's how to create a TXT record named example with the text value `Example DNS record text` in the
+`contoso.com` zone using DNS Manager.
 
-You can use the Get-DnsServerResourceRecord command to view all of the DNS records in a specific zone or the properties of a specific resource record. For example, to view all the resource records associated with the contoso.com DNS zone, use the command:
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
-#### [PowerShell](#tab/powershell)
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, right-click, then select **Other New Records**.
 
-To view all the resource records associated with the contoso.com DNS zone, use the command:
+1. Select **Text (TXT)** from the list, then select **Create Record**.
 
-```
-Get-DnsServerResourceRecord contoso.com
-```
+1. On the **New Resource Record** screen, specify the record name and the text value. For example,
+   leave the record name as blank to use the `contoso.com` parent domain, then enter the text
+   `Example DNS record text`.
 
-#### [GUI](#tab/gui)
+1. Select **OK** to create the resource record.
 
-To view the properties of a specific DNS resource record, use the -Name and the -ZoneName parameters. For example to view the properties of the dc1.contoso.com resource record, use the command:
-
-#### [PowerShell](#tab/powershell)
-
-To view the properties of the dc1.contoso.com resource record, use the command:
-
-```
-Get-DnsServerResourceRecord -name dc1 -zonename contoso.com
-```
-
-#### [GUI](#tab/gui)
-
-You can use the Set-DnsServerResourceRecord cmdlet to modify an existing DNS server resource record. You can use the OldInputObject parameter to specify a resource record object that you want to change and NewInputObject to specify a new resource record.
-
-For example, to update the resource record host01.contoso.com so that the TTL is now 2 hours, run the following commands:
+## Update resource records
 
 #### [PowerShell](#tab/powershell)
 
-To update the resource record host01.contoso.com so that the TTL is now 2 hours, run the following commands:
+You can use the
+[Get-DnsServerResourceRecord](/powershell/module/dnsserver/Get-DnsServerResourceRecord) PowerShell
+command to view all of the DNS records in a specific zone or the properties of a specific resource
+record. Use the
+[Set-DnsServerResourceRecord](/powershell/module/dnsserver/Set-DnsServerResourceRecord) PowerShell
+command to modify an existing DNS server resource record.
 
-```
+The following example updates the resource record `host01.contoso.com` so that the TTL is now 2
+hours. In this example you use the **OldInputObject** parameter to specify a resource record object
+that you want to change and the **NewInputObject** parameter to specify the updated values.
+
+To update the resource record `host01.contoso.com` so that the TTL is now 2 hours, run the following
+PowerShell commands:
+
+```powershell
 $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
 $NewObj = [ciminstance]::new(\$OldObj)
 $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
@@ -227,7 +335,20 @@ Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -Zon
 
 #### [GUI](#tab/gui)
 
+To view the properties of a specific DNS resource record, use the -Name and the -ZoneName parameters. For example to view the properties of the dc1.contoso.com resource record, use the command:
+
+
+
+
+#### [PowerShell](#tab/powershell)
+
+
+
+#### [GUI](#tab/gui)
+
 The Set-DnsServerResourceRecord cmdlet can't change the Name or Type of a DNS server resource record object. If you want to perform those actions, it's simpler to remove the existing resource record and create a new one. You remove a DNS record using the Remove-DnsServerResourceRecord cmdlet. For example, to remove the DNS record example.contoso.com use the following command:
+
+## Remove resource records
 
 #### [PowerShell](#tab/powershell)
 
