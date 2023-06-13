@@ -58,7 +58,7 @@ You can access the EAP properties for virtual private network (VPN) connections 
 
 ## XML profiles for EAP
 
-The profiles used for different connections types are XML files that contain the configuration options for that connection. Each different connection type will follow a specific schema:
+The profiles used for different connections types are XML files that contain the configuration options for that connection. Each different connection type follows a specific schema:
 
 - [Wi-Fi profiles](/windows/win32/nativewifi/wlan-profileschema-elements)
 - [Wired network profiles](/windows/win32/nativewifi/lan-profileschema-schema)
@@ -80,7 +80,7 @@ The following table explains the configurable settings for each authentication m
 
 ## [EAP-TLS](#tab/eap-tls)
 
-The EAP-TLS settings in the UI map to [EapTlsConnectionPropertiesV1](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-schema) which is extended by [EapTlsConnectionPropertiesV2](/windows/win32/eaphost/eaptlsconnectionpropertiesv2schema-schema) and [EapTlsConnectionPropertiesV3](/openspecs/windows_protocols/ms-gpwl/65562521-4153-4e20-9c4a-612e190886ee).
+The EAP-TLS settings in the UI map to [EapTlsConnectionPropertiesV1](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-schema), which is extended by [EapTlsConnectionPropertiesV2](/windows/win32/eaphost/eaptlsconnectionpropertiesv2schema-schema) and [EapTlsConnectionPropertiesV3](/openspecs/windows_protocols/ms-gpwl/65562521-4153-4e20-9c4a-612e190886ee).
 
 |Setting|Default|XML element|Description|
 |--|--|--|--|
@@ -111,7 +111,7 @@ The following lists the configuration settings for <a id="cert-filteringinfo">**
 
 ## [PEAP](#tab/peap)
 
-The PEAP settings in the UI map to [MsPeapConnectionPropertiesV1](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-schema) which is extended by [MsPeapConnectionPropertiesV2](/windows/win32/eaphost/mspeapconnectionpropertiesv2schema-schema).
+The PEAP settings in the UI map to [MsPeapConnectionPropertiesV1](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-schema), which is extended by [MsPeapConnectionPropertiesV2](/windows/win32/eaphost/mspeapconnectionpropertiesv2schema-schema).
 
 |Setting|Default|XML element|Description|
 |--|--|--|--|
