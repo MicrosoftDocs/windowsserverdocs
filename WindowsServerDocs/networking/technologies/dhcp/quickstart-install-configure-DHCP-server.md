@@ -74,7 +74,7 @@ Here's how to install the DHCP Server role using Server Manager from the Windows
 
 ## Configure DHCP server
 
-After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server]() for guidance.
+After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server](---) for guidance.
 
 ### Authorize the DHCP server in Active Directory \(Optional\)
 
