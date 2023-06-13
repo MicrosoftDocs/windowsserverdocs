@@ -318,7 +318,7 @@
         - name: AD Forest Recovery - Procedures
           href: ad-ds/manage/AD-Forest-Recovery-Procedures.md
         - name: AD Forest Recovery - FAQ
-          href: ad-ds/manage/forest-recovery-guide-ad-forest-recovery-faq.yml
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
         - name: AD Forest Recovery - Recovering a single domain with multidomain forest
           href: ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md
         - name: AD Forest Recovery - Virtualization
