@@ -175,6 +175,12 @@ items:
         items:
           - name: DNS zones
             href: dns/zone-types.md
+          - name: DNSSEC
+            items:
+            - name: What is DNSSEC?
+              href: dns/dnssec-overview.md
+            - name: Validate and secure DNS responses
+              href: dns/validate-dnssec-responses.md
       - name: How-to guides
         items:
           - name: Manage DNS zones
