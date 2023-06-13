@@ -69,7 +69,7 @@ However, when configured to use EAP, each profile schema has a child element [Ea
 - Wired/Wireless: `EapHostConfig` is a child element of the [EAPConfig](/windows/win32/nativewifi/onexschema-eapconfig-onex-element) element. **MSM > security** ([Wired](/windows/win32/nativewifi/lan-profileschema-security-msm-element)/[Wireless](/windows/win32/nativewifi/wlan-profileschema-security-msm-element)) **>** [OneX](/windows/win32/nativewifi/onexschema-elements) **> EAPConfig**
 - VPN: `EapHostConfig` is a child element of **NativeProfile > Authentication > Eap > Configuration**
 
-This configuration syntax is defined in the [Group Policy: Wireless/Wired Protocol Extension](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gpwl/08908c01-c52d-4777-ad4e-2edb95adeed8) specification.
+This configuration syntax is defined in the [Group Policy: Wireless/Wired Protocol Extension](openspecs/windows_protocols/ms-gpwl) specification.
 
 ## Authentication method configuration settings
 
@@ -79,6 +79,8 @@ This configuration syntax is defined in the [Group Policy: Wireless/Wired Protoc
 The following table explains the configurable settings for each authentication method.
 
 ## [EAP-TLS](#tab/eap-tls)
+
+The EAP-TLS settings in the UI map to [EapTlsConnectionPropertiesV1](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-schema) which is extended by [EapTlsConnectionPropertiesV2](/windows/win32/eaphost/eaptlsconnectionpropertiesv2schema-schema)
 
 |Setting|Default|Description|
 |--|--|--|
