@@ -40,7 +40,9 @@ You can access the EAP properties for 802.1X authenticated wired and wireless ac
 
 - Configuring the Wired Network (IEEE 802.3) Policies and Wireless Network (IEEE 802.11) Policies extensions in Group Policy.
   - Computer Configuration > Policies > Windows Settings > Security Settings
-- Using Mobile Device Management (MDM) software, such as Intune ([Wired](/mem/intune/configuration/wired-network-settings-windows)/[Wi-Fi](/mem/intune/configuration/wi-fi-settings-windows))
+- Using Mobile Device Management (MDM) software, such as Intune ([Wi-Fi](/mem/intune/configuration/wi-fi-settings-windows)/[Wired](/mem/intune/configuration/wired-network-settings-windows))
+  - [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp)
+  - [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp)
 - Manually configuring wired or wireless connections on client computers.
 
 > [!NOTE]
@@ -48,9 +50,26 @@ You can access the EAP properties for 802.1X authenticated wired and wireless ac
 
 You can access the EAP properties for virtual private network (VPN) connections in the following ways:
 
-- Using Mobile Device Management (MDM) software, such as [Intune](/mem/intune/configuration/vpn-settings-configure)
+- Using Mobile Device Management (MDM) software, such as [Intune](/mem/intune/configuration/vpn-settings-windows-10)
+  - [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp)
+  - [VPN profile options](/windows/security/operating-system-security/network-security/vpn/vpn-profile-options)
 - Manually configuring VPN connections on client computers.
 - Using Connection Manager Administration Kit (CMAK) to configure VPN connections.
+
+## XML profiles for EAP
+
+The profiles used for different connections types are XML files that contain the configuration options for that connection. Each different connection type will follow a specific schema:
+
+- [Wi-Fi profiles](/windows/win32/nativewifi/wlan-profileschema-elements)
+- [Wired network profiles](/windows/win32/nativewifi/lan-profileschema-schema)
+- [VPN profiles](/windows/client-management/mdm/vpnv2-csp#profilexml-xsd-schema)
+
+However, when configured to use EAP, each profile schema has a child element [EapHostConfig](/windows/win32/eaphost/eaphostconfigschema-schema) element.
+
+- Wired/Wireless: `EapHostConfig` is a child element of the [EAPConfig](/windows/win32/nativewifi/onexschema-eapconfig-onex-element) element. **MSM > security** ([Wired](/windows/win32/nativewifi/lan-profileschema-security-msm-element)/[Wireless](/windows/win32/nativewifi/wlan-profileschema-security-msm-element)) **>** [OneX](/windows/win32/nativewifi/onexschema-elements) **> EAPConfig**
+- VPN: `EapHostConfig` is a child element of **NativeProfile > Authentication > Eap > Configuration**
+
+This configuration syntax is defined in the [Group Policy: Wireless/Wired Protocol Extension](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gpwl/08908c01-c52d-4777-ad4e-2edb95adeed8) specification.
 
 ## Authentication method configuration settings
 
