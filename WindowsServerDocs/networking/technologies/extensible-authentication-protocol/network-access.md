@@ -46,7 +46,7 @@ You can access the EAP properties for 802.1X authenticated wired and wireless ac
 - Manually configuring wired or wireless connections on client computers.
 
 > [!NOTE]
-> The various configuration GUIs do not always show every technically possible option. For example, Windows Server 2019 and earlier are unable to configure TEAP in UI. However, it is often possible to import an existing XML profile that has previously been configured.
+> The various configuration GUIs don't always show every technically possible option. For example, Windows Server 2019 and earlier are unable to configure TEAP in UI. However, it is often possible to import an existing XML profile that has previously been configured.
 
 You can access the EAP properties for virtual private network (VPN) connections in the following ways:
 
@@ -74,7 +74,7 @@ This configuration syntax is defined in the [Group Policy: Wireless/Wired Protoc
 ## Authentication method configuration settings
 
 > [!CAUTION]
-> If a Network Access Server is configured to allow the same type of authentication method for a tunneled EAP method (e.g. PEAP) and a non-tunneled EAP method (e.g. EAP-MSCHAP v2), there is a potential security vulnerability. When you deploy both a tunneled EAP method and EAP (which isn't protected), don't use the same authentication type. For example, if you deploy PEAP-TLS, do not also deploy EAP-TLS. This is because if you require the protection of the tunnel, it serves no purpose to permit the method to be executed outside of the tunnel as well.
+> If a Network Access Server is configured to allow the same type of authentication method for a tunneled EAP method (e.g. PEAP) and a non-tunneled EAP method (e.g. EAP-MSCHAP v2), there is a potential security vulnerability. When you deploy both a tunneled EAP method and EAP (which isn't protected), don't use the same authentication type. For example, if you deploy PEAP-TLS, don't also deploy EAP-TLS. This is because if you require the protection of the tunnel, it serves no purpose to permit the method to be executed outside of the tunnel as well.
 
 The following table explains the configurable settings for each authentication method.
 
@@ -142,7 +142,7 @@ The EAP-TTLS settings in the UI map to [EapTtlsConnectionPropertiesV1](/openspec
 
 ## [TEAP](#tab/teap)
 
-The EAP-TTLS settings in the UI map to [EapTeapConnectionPropertiesV1](/openspecs/windows_protocols/ms-gpwl/94cf6896-c28e-4865-b12a-d83ee38cd3ea). TEAP is available in Windows 10, version 2004 (build 19041) and Windows Server 2022.
+The TEAP settings in the UI map to [EapTeapConnectionPropertiesV1](/openspecs/windows_protocols/ms-gpwl/94cf6896-c28e-4865-b12a-d83ee38cd3ea). TEAP is available in Windows 10, version 2004 (build 19041) and Windows Server 2022.
 
 |Setting|Default|XML element|Description|
 |--|--|--|--|
@@ -163,22 +163,28 @@ The following lists the configuration settings for EAP-SIM, EPA-AKA, and EPA-AKA
 
 EAP-SIM is defined in [RFC 4186](https://www.rfc-editor.org/rfc/rfc4186). EAP Subscriber Identity Module (SIM) is used for authentication and session key distribution using the 2nd generation mobile network Global System for Mobile Communications (GSM) Subscriber Identity Module (SIM).
 
-| Item | Description |
-|--|--|
-| **Use strong Cipher keys** | Specifies that if selected, the profile uses strong encryption. |
-| **Do not reveal real identity to server when pseudonym identity is available** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user isn't revealed during authentication. |
-| **Enable usage of realms** | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
-| **Specify a realm** | Provides a place to type the realm name |
+The EAP-SIM settings in the UI map to [EapSimConnectionPropertiesV1](/openspecs/windows_protocols/ms-gpwl/e5838db5-8b54-43fa-8a53-5fbc43cf80d0).
+
+| Item | XML element | Description |
+|--|--|--|
+| **Use strong cipher keys** | **UseStrongCipherKeys** | Specifies that if selected, the profile uses strong encryption. |
+| **Don't reveal real identity to server when pseudonym identity is available** | **DontRevealPermanentID** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user isn't revealed during authentication. |
+| | **ProviderName** | Only available in XML, a string that indicates the provider name that is allowed for authentication. |
+| **Enable usage of realms** | **Realm**=`true` | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
+| **Specify a realm** | **Realm** | Provides a place to type a realm name. If **Enable usage of realms** is enabled, this string is used. If this field is empty, the derived realm is used. |
 
 ## [EAP-AKA](#tab/eap-aka1)
 
 EAP-AKA is defined in [RFC 4187](https://www.rfc-editor.org/rfc/rfc4187). EAP Authentication and Key Agreement (AKA) is used for authentication and session key distribution by using the AKA mechanism. AKA is used in the 3rd generation mobile networks Universal Mobile Telecommunications System (UMTS) and CDMA2000. AKA is based on symmetric keys and typically runs in a Subscriber Identity Module (SIM).
 
-| Item | Description |
-|--|--|
-| **Do not reveal real identity to server when pseudonym identity is available** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user isn't revealed during authentication. |
-| **Enable usage of realms** | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
-| **Specify a realm** | Provides a place to type the realm name. |
+The EAP-AKA settings in the UI map to [EapAkaConnectionPropertiesV1](/openspecs/windows_protocols/ms-gpwl/c12544ae-6c0a-4587-8912-688514ad3002).
+
+| Item | XML element | Description |
+|--|--|--|
+| **Don't reveal real identity to server when pseudonym identity is available** | **DontRevealPermanentID** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user isn't revealed during authentication. |
+| | **ProviderName** | Only available in XML, a string that indicates the provider name that is allowed for authentication. |
+| **Enable usage of realms** | **Realm**=`true` | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
+| **Specify a realm** | **Realm** | Provides a place to type a realm name. If **Enable usage of realms** is enabled, this string is used. If this field is empty, the derived realm is used. |
 
 ## [EAP-AKA'](#tab/eap-aka2)
 
@@ -188,13 +194,16 @@ EAP-AKA' is defined in [RFC 5448](https://www.rfc-editor.org/rfc/rfc5448) and [R
 - Evolution-Data Optimized (EVDO)
 - Worldwide Interoperability for Microwave Access (WiMax)
 
-| Item | Description |
-|--|--|
-| **Do not reveal real identity to server when pseudonym identity is available** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user isn't revealed during authentication. |
-| **Enable usage of realms** | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
-| **Specify a realm** | Provides a place to type the realm name. |
-| **Ignore network name mismatch** | The client compares the name of network known to it, with the name sent by the RADIUS server during authentication. If there's a mismatch, it's ignored if this option is selected. If not selected, authentication fails. |
-| **Enable Fast Reauthentication** | Specifies that fast reauthentication is enabled. Fast Reauthentication is useful when SIM authentication happens frequently. The encryption keys that are derived from full authentication are reused. As a result, the SIM algorithm isn't required to run for every authentication attempt, and the number of network operations that result from frequent authentication attempts is reduced. |
+The EAP-AKA' settings in the UI map to [EapAkaPrimeConnectionPropertiesV1](/openspecs/windows_protocols/ms-gpwl/f0f56906-2776-43df-a9b6-f506d1f20dc5).
+
+| Item | XML element | Description |
+|--|--|--|
+| **Don't reveal real identity to server when pseudonym identity is available** | **DontRevealPermanentID** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user isn't revealed during authentication. |
+| | **ProviderName** | Only available in XML, a string that indicates the provider name that is allowed for authentication. |
+| **Enable usage of realms** | **Realm**=`true` | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
+| **Specify a realm** | **Realm** | Provides a place to type a realm name. If **Enable usage of realms** is enabled, this string is used. If this field is empty, the derived realm is used. |
+| **Ignore network name mismatch** | **IgnoreNetworkNameMismatch** | The client compares the name of network known to it, with the name sent by the RADIUS server during authentication. If there's a mismatch, it's ignored if this option is selected. If not selected, authentication fails. |
+| **Enable Fast Reauthentication** | **EnableFastReauth** | Specifies that fast reauthentication is enabled. Fast Reauthentication is useful when SIM authentication happens frequently. The encryption keys that are derived from full authentication are reused. As a result, the SIM algorithm isn't required to run for every authentication attempt, and the number of network operations that result from frequent authentication attempts is reduced. |
 
 ---
 
