@@ -37,7 +37,7 @@ prerequisites:
 
 You can add resource records to an existing zone using the
 [DnsServer](/powershell/module/dnsserver) PowerShell module. Some common resource record types have
-additional PowerShell commands where you don't need to specify the resource record type. You can
+other PowerShell commands where you don't need to specify the resource record type. You can
 also add the following types of resource records using the DNS Manager console.
 
 The following sections contain steps for creating the following types of resource records:
@@ -89,7 +89,7 @@ the zone `contoso.com` using DNS Manager.
 
 ### AAAA resource record
 
-Host (AAAA) records map DNS names to IPv6 addresses.To create an IPv6 host (AAAA) record, select the
+Host (AAAA) records map DNS names to IPv6 addresses. To create an IPv6 host (AAAA) record, select the
 relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
@@ -133,7 +133,7 @@ To create an alias (CNAME) record, select the relevant method and follow the ste
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to create an CNAME resource record using the
+Here's how to create a CNAME resource record using the
 [Add-DnsServerResourceRecordCName](/powershell/module/dnsserver/Add-DnsServerResourceRecordCName)
 PowerShell command.
 
@@ -146,7 +146,7 @@ Add-DnsServerResourceRecordCName -Name "labhost34" -HostNameAlias "Host34.lab.co
 
 #### [GUI](#tab/gui)
 
-Here's how to create an CNAME resource record for `labhost34` in the `contoso.com` zone, pointing to
+Here's how to create a CNAME resource record for `labhost34` in the `contoso.com` zone, pointing to
 the existing DNS record `Host34.lab.contoso.com` using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
@@ -172,11 +172,11 @@ To create an MX record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to create an CNAME resource record using the
+Here's how to create an MX resource record using the
 [Add-DnsServerResourceRecordMX](/powershell/module/dnsserver/Add-DnsServerResourceRecordMX)
 PowerShell command.
 
-To add a MX record for the host `mail.contoso.com` with a preference set to `10` for the
+To add an MX record for the host `mail.contoso.com` with a preference set to `10` for the
 `contoso.com` zone, use the following PowerShell command:
 
 ```powershell
@@ -247,7 +247,7 @@ To create an SRV record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to create a SRV resource record using the
+Here's how to create an SRV resource record using the
 [Add-DnsServerResourceRecord](/powershell/module/dnsserver/Add-DnsServerResourceRecord)
 PowerShell command.
 
@@ -261,7 +261,7 @@ Add-DnsServerResourceRecord -Srv -Name "sip" -ZoneName "contoso.com" -DomainName
 
 #### [GUI](#tab/gui)
 
-Here's how to create a SRV resource record for the `_sip` service on port `5060` with a weight and
+Here's how to create an SRV resource record for the `_sip` service on port `5060` with a weight and
 priority of `0` for the `contoso.com` domain pointing to `sipserver1.contoso.com` using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
@@ -281,10 +281,10 @@ priority of `0` for the `contoso.com` domain pointing to `sipserver1.contoso.com
 
 ### TXT records
 
-Text records let you to add text information that can be returned by querying DNS. TXT records are
+Text records let you add text information that can be returned by querying DNS. TXT records are
 often used to authenticate ownership of DNS zones.
 
-To create an TXT record, select the relevant method and follow the steps.
+To create a TXT record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
@@ -330,7 +330,7 @@ Here's how to modify the time to live (TTL) for a DNS resource record using the
 commands.
 
 The following example updates the resource record `host01.contoso.com` so that the TTL is now 2
-hours. In this example you use the **OldInputObject** parameter to specify a resource record object
+hours. In this example, you use the **OldInputObject** parameter to specify a resource record object
 that you want to change and the **NewInputObject** parameter to specify the updated values.
 
 To update the resource record `host01.contoso.com` so that the TTL is now 2 hours, run the following
@@ -374,7 +374,7 @@ Here's how to a DNS resource record using the
 [Remove-DnsServerResourceRecord](/powershell/module/dnsserver/Set-DnsServerResourceRecord)
 PowerShell command.
 
-To remove the DNS record `example.contoso.com` run the following command:
+To remove the DNS record `example.contoso.com`, run the following command:
 
 ```powershell
 Remove-DnsServerResourceRecord -name "Example" -Zonename "contoso.com" -RRType A
@@ -382,7 +382,7 @@ Remove-DnsServerResourceRecord -name "Example" -Zonename "contoso.com" -RRType A
 
 #### [GUI](#tab/gui)
 
-Here's how to removed a record named `example` in the `contoso.com` zone using DNS Manager.
+Here's how to remove a record named `example` in the `contoso.com` zone using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
