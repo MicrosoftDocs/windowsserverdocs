@@ -87,6 +87,8 @@ the zone `contoso.com` using DNS Manager.
 
 1. Select **Add Host** to create the record.
 
+---
+
 ### AAAA resource record
 
 Host (AAAA) records map DNS names to IPv6 addresses.To create an IPv6 host (AAAA) record, select the
@@ -122,6 +124,8 @@ the zone `contoso.com` using DNS Manager.
 
 1. Select **Add Host** to create the record.
 
+---
+
 ### CNAME records
 
 Alias (CNAME) resource records are also termed canonical name resource records. With these records,
@@ -156,6 +160,8 @@ the existing DNS record `Host34.lab.contoso.com` using DNS Manager.
    example, `labhost34` and `Host34.lab.contoso.com`.
 
 1. Select **OK** to create the resource record.
+
+---
 
 ### MX records
 
@@ -195,6 +201,8 @@ Here's how to create an MX resource record for the host `mail2.contoso.com` with
 
 1. Select **OK** to create the resource record.
 
+---
+
 ### PTR records
 
 Pointer (PTR) resource records support the reverse lookup process, based on zones that are created
@@ -230,6 +238,8 @@ lookup zone `0.168.192.in-addr.arpa` using DNS Manager.
    enter `192.168.0.77` for the host IP address and `host77.contoso.com` for the host name.
 
 1. Select **OK** to create the resource record.
+
+---
 
 ### SRV records
 
@@ -268,6 +278,8 @@ priority of `0` for the `contoso.com` domain pointing to `sipserver1.contoso.com
    port, a weight and priority of `0`, and `sipserver1.contoso.com` as the host.
 
 1. Select **OK** to create the resource record.
+
+---
 
 ### TXT records
 
@@ -308,16 +320,16 @@ Here's how to create a TXT record named example with the text value `Example DNS
 
 1. Select **OK** to create the resource record.
 
+---
+
 ## Update resource records
 
 #### [PowerShell](#tab/powershell)
 
-You can use the
-[Get-DnsServerResourceRecord](/powershell/module/dnsserver/Get-DnsServerResourceRecord) PowerShell
-command to view all of the DNS records in a specific zone or the properties of a specific resource
-record. Use the
+Here's how to modify the time to live (TTL) for a DNS resource record using the
+[Get-DnsServerResourceRecord](/powershell/module/dnsserver/Get-DnsServerResourceRecord) and
 [Set-DnsServerResourceRecord](/powershell/module/dnsserver/Set-DnsServerResourceRecord) PowerShell
-command to modify an existing DNS server resource record.
+commands.
 
 The following example updates the resource record `host01.contoso.com` so that the TTL is now 2
 hours. In this example you use the **OldInputObject** parameter to specify a resource record object
@@ -328,37 +340,60 @@ PowerShell commands:
 
 ```powershell
 $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
-$NewObj = [ciminstance]::new(\$OldObj)
+$NewObj = [ciminstance]::new($OldObj)
 $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
 ```
 
 #### [GUI](#tab/gui)
 
-To view the properties of a specific DNS resource record, use the -Name and the -ZoneName parameters. For example to view the properties of the dc1.contoso.com resource record, use the command:
+Here's how to create a TXT record named example with the text value `Example DNS record text` in the
+`contoso.com` zone using DNS Manager.
 
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
+1. Expand **View** menu from the menu bar, then select **Advanced**.
 
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, find and right-click the record, then select **Properties**.
 
-#### [PowerShell](#tab/powershell)
+1. On the **Properties** screen, specify the TTL value. For example, enter a TTL of 2 hours in the
+   format `0:2:0:0`.
 
+1. Select **OK** to update the resource record.
 
-
-#### [GUI](#tab/gui)
-
-The Set-DnsServerResourceRecord cmdlet can't change the Name or Type of a DNS server resource record object. If you want to perform those actions, it's simpler to remove the existing resource record and create a new one. You remove a DNS record using the Remove-DnsServerResourceRecord cmdlet. For example, to remove the DNS record example.contoso.com use the following command:
+---
 
 ## Remove resource records
 
+The Set-DnsServerResourceRecord cmdlet can't change the Name or Type of a DNS server resource record
+object. If you want to perform those actions, it's simpler to remove the existing resource record
+and create a new one.
+
 #### [PowerShell](#tab/powershell)
 
-To remove the DNS record example.contoso.com use the following command:
+Here's how to a DNS resource record using the
+[Remove-DnsServerResourceRecord](/powershell/module/dnsserver/Set-DnsServerResourceRecord)
+PowerShell command.
 
-```
-Remove-DnsServerResourceRecord -name Example -Zonename "contoso.com" -RRType A
+To remove the DNS record `example.contoso.com` run the following command:
+
+```powershell
+Remove-DnsServerResourceRecord -name "Example" -Zonename "contoso.com" -RRType A
 ```
 
 #### [GUI](#tab/gui)
+
+Here's how to removed a record named `example` in the `contoso.com` zone using DNS Manager.
+
+1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
+
+1. Expand **View** menu from the menu bar, then select **Advanced**.
+
+1. In the console tree, connect to the DNS server you wish to manage, expand the DNS server, expand
+   your Forward Lookup Zone, find and right-click the record, then select **Delete**.
+
+---
 
 ## Related links
 
