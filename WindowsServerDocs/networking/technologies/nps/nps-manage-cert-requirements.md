@@ -1,12 +1,12 @@
 ---
 title: Configure Certificate Templates for PEAP and EAP Requirements
 description: This topic provides information about using certificates with Network Policy Server and Remote Access in Windows Server 2016.
-manager: brianlic
 ms.topic: article
 ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
-ms.author: jgerend
-author: JasonGerend
-ms.date: 08/07/2020
+ms.author: wscontent
+author: xelu86
+ms.date: 06/14/2023
+ms.contributor: samyun
 ---
 # Configure Certificate Templates for PEAP and EAP Requirements
 
@@ -34,18 +34,18 @@ The client computer accepts the authentication attempt of the server when the se
 
 - The computer certificate on the server chains to a trusted root certification authority (CA) and does not fail any of the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy.
 
-- The computer certificate for the NPS or VPN server is configured with the Server Authentication purpose in Extended Key Usage (EKU) extensions. (The object identifier for Server Authentication is 1.3.6.1.5.5.7.3.1.)
+- The computer certificate for the NPS or VPN server is configured with the Server Authentication purpose in Extended Key Usage (EKU) extensions. (The object identifier for Server Authentication is `1.3.6.1.5.5.7.3.1`.)
 
 - Configure the server certificate with the required cryptography setting:
 
     1. Open Certificate Templates.
     2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
     3. Click the **Cryptography** tab and make sure to configure the following:
-       - **Provider Category:** Key Storage Provider
-       - **Algorithm Name:** RSA
-       - **Providers:** Microsoft Platform Crypto Provider
-       - **Minimum key size:** 2048
-       - **Hash Algorithm:** SHA2
+       - **Provider Category:** e.g. Key Storage Provider
+       - **Algorithm Name:** e.g. RSA
+       - **Providers:** e.g. Microsoft Platform Crypto Provider
+       - **Minimum key size:** e.g. 2048
+       - **Hash Algorithm:** e.g. SHA256
     4. Click **Next**.
 
 - The Subject Alternative Name (SubjectAltName) extension, if used, must contain the DNS name of the server. To configure the certificate template with the Domain Name System (DNS) name of the enrolling server:
@@ -71,7 +71,7 @@ With EAP-TLS or PEAP-TLS, the server accepts the client authentication attempt w
 
 - The client certificate is issued by an enterprise CA or mapped to a user or computer account in Active Directory Domain Services \(AD DS\).
 
-- The user or computer certificate on the client chains to a trusted root CA, includes the Client Authentication purpose in EKU extensions \(the object identifier for Client Authentication is 1.3.6.1.5.5.7.3.2\), and fails neither the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy nor the Certificate object identifier checks that are specified in NPS network policy.
+- The user or computer certificate on the client chains to a trusted root CA, includes the Client Authentication purpose in EKU extensions \(the object identifier for Client Authentication is `1.3.6.1.5.5.7.3.2`\), and fails neither the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy nor the Certificate object identifier checks that are specified in NPS network policy.
 
 - The 802.1X client does not use registry-based certificates that are either smart card-logon or password-protected certificates.
 
@@ -99,3 +99,4 @@ With PEAP\-TLS and EAP\-TLS, clients display a list of all installed certificate
 
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+For more information about EAP, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).
