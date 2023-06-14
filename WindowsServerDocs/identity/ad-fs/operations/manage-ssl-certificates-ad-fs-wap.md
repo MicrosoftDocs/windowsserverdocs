@@ -18,11 +18,11 @@ This article describes how to deploy a new TLS/SSL certificate to your Active Di
 
 ## Obtain your TLS/SSL certificates
 
-For production, AD FS farms a publicly trusted TLS/SSL certificate is recommended. AD FS obtains this certificate by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are various ways to generate the CSR, including from a Windows 7 or higher PC. Your vendor should have documentation for this process.
+For production AD FS farms, a publicly trusted TLS/SSL certificate is recommended. AD FS obtains this certificate by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are various ways to generate the CSR, including from a Windows 7 or higher PC. Your vendor should have documentation for this process.
 
 - Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
 
-### How many certificates are needed
+### Certificates needed
 
 You should use a common TLS/SSL certificate across all AD FS and WAP servers. For detailed requirements, see [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
 
@@ -33,7 +33,7 @@ For requirements, including naming root of trust and extensions, see [AD FS and 
 ## Replace the TLS/SSL certificate for AD FS
 >
 > [!NOTE]
-> The AD FS TLS/SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in. To change the AD FS TLS/SSL certificate, you need to use PowerShell.
+> The AD FS TLS/SSL certificate isn't the same as the AD FS Service communications certificate found in the AD FS Management snap-in. To change the AD FS TLS/SSL certificate, you need to use PowerShell.
 
 First, determine whether your AD FS servers run default certificate authentication binding mode or alternate client TLS binding mode.
 
@@ -46,7 +46,7 @@ In this mode, use the PowerShell cmdlet **Set-AdfsSslCertificate** to manage the
 
     - Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
 
-1. Once you get the response from your certificate provider, import it to the local machine store on each AD FS and WAP.
+1. After you get the response from your certificate provider, import it to the local machine store on each AD FS and WAP.
 
 1. On the **primary** AD FS server, use the following cmdlet to install the new TLS/SSL certificate:
 
@@ -62,16 +62,16 @@ dir Cert:\LocalMachine\My\
 
 ### Replace the TLS/SSL certificate for AD FS running in alternate TLS binding mode
 
-When configured in alternate client TLS binding mode, AD FS performs device certificate authentication on port 443. It also performs user certificate authentication on port 443 as well, on a different hostname. The user certificate hostname is the AD FS hostname prepended with `certauth`, for example `certauth.fs.contoso.com`.
+When configured in alternate client TLS binding mode, AD FS performs device certificate authentication on port 443. It also performs user certificate authentication on port 443, on a different hostname. The user certificate hostname is the AD FS hostname prepended with `certauth`, for example `certauth.fs.contoso.com`.
 In this mode, use the PowerShell cmdlet **Set-AdfsAlternateTlsClientBinding** to manage the TLS/SSL certificate. This cmdlet manages not only the alternative client TLS binding but all other bindings on which AD FS sets the TLS/SSL certificate as well.
 
-Use the following steps to replacing your TLS/SSL certificate for AD FS running in alternate TLS binding mode.
+Use the following steps to replace your TLS/SSL certificate for AD FS running in alternate TLS binding mode.
 
 1. First, you need to obtain the new certificate. You can get it by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are various ways to generate the CSR, including from a Windows 7 or higher computer. Your vendor should have documentation for this process.
 
     - Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
 
-1. Once you get the response from your certificate provider, import it to the local machine store on each AD FS and WAP.
+1. After you get the response from your certificate provider, import it to the local machine store on each AD FS and WAP.
 
 1. On the **primary** AD FS server, use the following cmdlet to install the new TLS/SSL certificate:
 
@@ -94,14 +94,14 @@ dir Cert:\LocalMachine\My\
 
 ## Replace the TLS/SSL certificate for the Web Application Proxy
 
-If you want to configure both, the default certificate authentication binding or alternate client TLS binding mode on the WAP we can use the **Set-WebApplicationProxySslCertificate** cmdlet.
+If you want to configure both, the default certificate authentication binding or alternate client TLS binding mode on the WAP, you can use the **Set-WebApplicationProxySslCertificate** cmdlet.
 To replace the WAP TLS/SSL certificate on each WAP server, use the following cmdlet to install the new TLS/SSL certificate:
 
 ```powershell
 Set-WebApplicationProxySslCertificate -Thumbprint '<thumbprint of new cert>'
 ```
 
-If the above cmdlet fails because the old certificate has already expired, reconfigure the proxy using the following cmdlets:
+If the above cmdlet fails because the old certificate has already expired, reconfigure the proxy by using the following cmdlets:
 
 ```powershell
 $cred = Get-Credential
