@@ -323,6 +323,10 @@ $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
 ```
 
+The [Set-DnsServerResourceRecord](/powershell/module/dnsserver/Set-DnsServerResourceRecord)
+PowerShell command can't change the **Name** or **Type** of a DNS server resource record object. If
+you want to perform those actions, remove the existing resource record and create a new one.
+
 #### [GUI](#tab/gui)
 
 Here's how to create a TXT record named example with the text value `Example DNS record text` in the
@@ -343,10 +347,6 @@ Here's how to create a TXT record named example with the text value `Example DNS
 ---
 
 ## Remove resource records
-
-The Set-DnsServerResourceRecord cmdlet can't change the Name or Type of a DNS server resource record
-object. If you want to perform those actions, it's simpler to remove the existing resource record
-and create a new one.
 
 #### [PowerShell](#tab/powershell)
 
