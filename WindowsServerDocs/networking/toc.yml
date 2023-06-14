@@ -175,7 +175,8 @@ items:
         items:
           - name: DNS zones
             href: dns/zone-types.md
-          - name: dns/resource-record-types.md
+          - name: DNS resource records
+            href: dns/resource-record-types.md
       - name: How-to guides
         items:
           - name: Manage DNS zones
