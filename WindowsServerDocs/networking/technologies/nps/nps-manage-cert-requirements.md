@@ -43,7 +43,7 @@ The client computer accepts the authentication attempt of the server when the se
     3. Click the **Cryptography** tab and make sure to configure the following:
        - **Provider Category:** e.g. Key Storage Provider
        - **Algorithm Name:** e.g. RSA
-       - **Providers:** e.g. Microsoft Platform Crypto Provider
+       - **Providers:** e.g. Microsoft Software Key Storage Provider
        - **Minimum key size:** e.g. 2048
        - **Hash Algorithm:** e.g. SHA256
     4. Click **Next**.
