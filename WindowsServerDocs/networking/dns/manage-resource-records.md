@@ -302,6 +302,8 @@ Here's how to create a TXT record named example with the text value `Example DNS
 
 ## Update resource records
 
+To update a resource record, select the relevant method and follow the steps.
+
 #### [PowerShell](#tab/powershell)
 
 Here's how to modify the time to live (TTL) for a DNS resource record using the
@@ -347,6 +349,8 @@ Here's how to create a TXT record named example with the text value `Example DNS
 ---
 
 ## Remove resource records
+
+To remove a resource record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
