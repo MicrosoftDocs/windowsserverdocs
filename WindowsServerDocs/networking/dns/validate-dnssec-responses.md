@@ -323,7 +323,7 @@ Let's consider each of these four statements in more detail.
 
 Here are some articles to learn more about DNSSEC for DNS Server.
 
-- [DNSSEC in Window Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593674(v=ws.11))
+- [DNSSEC in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593674(v=ws.11))
 - [DNSSEC in Windows DNS client](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593685(v=ws.11))
 - [Signing a DNS zone](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593642(v=ws.11))
 - [Types of trust anchors](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593672(v=ws.11))
