@@ -3,9 +3,9 @@ title: shutdown
 description: Reference article for the shutdown command, which enables you to shut down or restart local or remote computers, one at a time.
 ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
-author: JasonGerend
-ms.author: alalve
-ms.date: 01/27/2023
+author: xelu86
+ms.author: wscontent
+ms.date: 06/05/2023
 ---
 
 # shutdown
@@ -15,7 +15,7 @@ Enables you to shut down or restart local or remote computers, one at a time.
 ## Syntax
 
 ```
-shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw] [/f] [/m \\computer][/t xxx][/d [p|u:]xx:yy [/c "comment"]]
+shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/soft] [/fw] [/f] [/m \\computer][/t xxx][/d [p|u:]xx:yy [/c "comment"]]
 ```
 
 ### Parameters
@@ -23,15 +23,16 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw]
 | Parameter | Description |
 |--|--|
 | /i | Displays the **Remote Shutdown** box. The **/i** option must be the first parameter following the command. If **/i** is specified, all other options are ignored. |
-| /l | Logs off the current user immediately, with no time-out period. You cannot use **/l** with **/m** or **/t**. |
+| /l | Logs off the current user immediately, with no time-out period. You can't use **/l** with **/m** or **/t**. |
 | /s | Shuts down the computer. |
 | /sg | Shuts down the computer. On the next boot, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /r | Restarts the computer after shutdown. |
 | /g | Shuts down the computer. On the next restart, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /a | Aborts a system shutdown. This can only be used during the time-out period. Combine with /fw to clear any pending boots to firmware. |
-| /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it will shut down when you use **/p**, but the power to the computer will remain on. |
+| /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it shuts down when you use **/p**, but the power to the computer will remain on. |
 | /h | Puts the local computer into hibernation, if hibernation is enabled. The **/f** switch can be used with the **/h** switch. |
 | /hybrid | Shuts down the device and prepares it for fast startup. This option must be used with the **/s** option. |
+| /soft | Allows running processes and applications to gracefully close instead of forcibly terminating. |
 | /fw | Combining this option with a shutdown option causes the next restart to go to the firmware user interface. |
 | /e | Enables you to document the reason for an unexpected shutdown of a computer in the [Shutdown Event Tracker](/troubleshoot/windows-server/application-management/description-shutdown-event-tracker). |
 | /o | Goes to the **Advanced boot options** menu and restarts the device. This option must be used with the **/r** option. |
@@ -74,6 +75,12 @@ To restart the remote computer *myremoteserver* with the same parameters as the 
 
 ```
 shutdown /r /m \\myremoteserver /t 60 /c "Reconfiguring myapp.exe" /f /d p:4:1
+```
+
+To restart the remote computer *myremoteserver* in 5 minutes due to a security update and include this reason in the shutdown event tracker, type:
+
+```
+shutdown /r /t 300 /e /c "Security Update" /m \\myremoteserver
 ```
 
 ## Related links

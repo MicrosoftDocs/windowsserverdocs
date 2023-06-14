@@ -5,7 +5,7 @@ title: SPN and UPN uniqueness
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/01/2023
+ms.date: 05/18/2023
 ms.topic: article
 ms.custom: inhenkel
 ---
@@ -47,7 +47,7 @@ Error codes 8467 or 8468 or their hex, symbolic or string equivalents are logged
 
 |Decimal|Hex|Symbolic|String|
 |-----------|-------|------------|----------|
-|8467|21C7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because SPN value provided for addition/modification isn't unique forest-wide.|
+|8647|21C7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because SPN value provided for addition/modification isn't unique forest-wide.|
 |8648|21C8|ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because UPN value provided for addition/modification isn't unique forest-wide.|
 
 ## New user creation fails if UPN isn't unique

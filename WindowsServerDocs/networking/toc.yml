@@ -177,6 +177,12 @@ items:
             href: dns/zone-types.md
           - name: DNS resource records
             href: dns/resource-record-types.md
+          - name: DNSSEC
+            items:
+            - name: What is DNSSEC?
+              href: dns/dnssec-overview.md
+            - name: Validate and secure DNS responses
+              href: dns/validate-dnssec-responses.md
       - name: How-to guides
         items:
           - name: Manage DNS zones
@@ -326,6 +332,14 @@ items:
             href: technologies/ipam/View-Roles-and-Role-Permissions.md
         - name: Manage role-based access control with Windows PowerShell
           href: technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-powershell.md
+  - name: Network Connectivity Status Indicator
+    items:
+    - name: NCSI overview
+      href: ncsi/ncsi-overview.md
+    - name: NCSI troubleshooting guide
+      href: ncsi/ncsi-troubleshooting-guide.md
+    - name: NCSI frequently asked questions
+      href: ncsi/ncsi-frequently-asked-questions.md
   - name: Network Load Balancing
     href: technologies/Network-Load-Balancing.md
   - name: Network Policy Server (NPS)
