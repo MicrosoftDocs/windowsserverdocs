@@ -1,5 +1,5 @@
 ---
-title: Obtain and Configure Token Signing and Token Decryption Certificates for AD FS
+title: Obtain and configure token signing and token decryption certificates for AD FS
 description: Learn about tasks and procedures you can perform to ensure your AD FS token signing and token decryption certificates are up to date.
 author: jenfieldmsft
 ms.author: billmath
@@ -8,9 +8,9 @@ ms.date: 06/13/2023
 ms.topic: article
 ---
 
-# Obtain and Configure TS and TD Certificates for AD FS
+# Obtain and configure TS and TD certificates for AD FS
 
-This article describes tasks and procedures you can perform to ensure your AD FS token signing and token decryption certificates are up to date.
+This article describes tasks and procedures that ensure your AD FS token signing and token decryption certificates are up to date.
 
 Token signing certificates are standard X509 certificates used to securely sign all tokens that the federation server issues. Token decryption certificates are standard X509 certificates used to decrypt any incoming tokens. They're also published in federation metadata.
 
@@ -32,16 +32,11 @@ If AD FS isn't configured to renew token signing and token decrypting certificat
 
 If AD FS is configured to renew token signing and token decrypting certificates automatically (`AutoCertificateRollover` is set to `True`), you can determine when they're renewed:
 
-`CertificateGenerationThreshold` describes how many days in advance of the certificate's **Not After** date a new certificate is generated.
+* `CertificateGenerationThreshold` describes how many days in advance of the certificate's **Not After** date a new certificate is generated.
 
-`CertificatePromotionThreshold` determines how many days after the new certificate is generated that it's promoted to be the primary certificate. In other words, AD FS uses `CertificatePromotionThreshold` to sign tokens that it issues and decrypt tokens that are from identity providers.
+* `CertificatePromotionThreshold` determines how many days after the new certificate is generated that it's promoted to be the primary certificate. AD FS uses `CertificatePromotionThreshold` to sign tokens that it issues and decrypt tokens that are from identity providers.
 
-:::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts2.png" alt-text="Screenshot of the PowerShell window, highlighting the CertificateGenerationThreshold and CertificatePromotionThreshhold values." border="false":::
-
-If AD FS is configured to renew token signing and token decrypting certificates automatically (`AutoCertificateRollover` is set to `True`), you can determine when they're being renewed:
-
-- `CertificateGenerationThreshold` describes how many days in advance of the certificate's **Not After** date a new certificate is generated.
-- `CertificatePromotionThreshold` determines how many days after the new certificate is generated that it's promoted to be the primary certificate. In other words, AD FS starts by using `CertificatePromotionThreshold` to sign tokens that it issues and decrypt tokens from identity providers.
+:::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts2.png" alt-text="Screenshot of the PowerShell window, highlighting the CertificateGenerationThreshold and CertificatePromotionThreshhold values.":::
 
 ## Determine when the current certificates expire
 
@@ -63,7 +58,7 @@ You can generate a new self-signed certificate manually prior to the end of the 
 
 1. Ensure that you're logged on to the primary AD FS server.
 1. Open Windows PowerShell and run the following command: `Add-PSSnapin "microsoft.adfs.powershell"`
-1. Optionally, you can check the current signing certificates in AD FS. To do so, run the following command: `Get-ADFSCertificate –CertificateType token-signing`. Look at the command output to see the **Not After** dates of any certificates listed.
+1. You can check the current signing certificates in AD FS. To do so, run the following command: `Get-ADFSCertificate –CertificateType token-signing`. Look at the command output to see the **Not After** dates of any certificates listed.
 1. To generate a new certificate, execute the following command to renew and update the certificates on the AD FS server: `Update-ADFSCertificate –CertificateType token-signing`.
 1. Verify the update by running the following command again: `Get-ADFSCertificate –CertificateType token-signing`
 1. Two certificates should be listed now. One should have a **Not After** date of approximately one year in the future. The other should have the **IsPrimary** value **False**.
@@ -73,9 +68,9 @@ You can generate a new self-signed certificate manually prior to the end of the 
 
 ## If you don't use self-signed certificates
 
-If you don't use the default automatically generated, self-signed token signing and token decryption certificates, you must renew and configure these certificates manually.
+If you don't use the default, automatically generated, self-signed token signing and token decryption certificates, you must renew and configure these certificates manually.
 
-First, you must obtain a new certificate from your certificate authority and import it into the local machine personal certificate store on each federation server. For instructions, see the [Import a certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754489(v=ws.11)) article.
+First, you must obtain a new certificate from your certificate authority and import it into the local machine personal certificate store on each federation server. For instructions, see [Import a certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754489(v=ws.11)).
 
 Then you must configure this certificate as the secondary AD FS token signing or decryption certificate. You configure it as a secondary certificate to allow your federation partners enough time to consume this new certificate before you promote it to the primary certificate.
 
@@ -105,7 +100,7 @@ Federation partners consume your new certificates by pulling your federation met
 
 ## Update federation partners
 
-You must update your federation partners differently, depending on Whether your they can or can't consume federation metadata.
+You must update your federation partners differently, depending on whether they can consume federation metadata.
 
 ### Partners who can consume federation metadata
 
