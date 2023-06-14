@@ -17,8 +17,7 @@ dynamic update.
 
 Resource records contain the information that a zone maintains about the resources (such as hosts)
 that the zone contains. Resource record information includes record type, owner name, host address
-and other information. To learn more about resource records in Windows Server, see
-[DNS resource records](managing-resource-records-conceptual.md) .
+and other information.
 
 ## Prerequisites
 
@@ -26,21 +25,20 @@ Before you can manage DNS resource records in Windows Server, you need to comple
 prerequisites:
 
 - A Windows Server with the DNS Server role installed and configured. See
-  [Quickstart: Install and configure DNS Server](../networking/dns/quickstart-install-configure-dns-server)
-  for more information on how to get stared.
+  [Quickstart: Installing and configure DNS Server](quickstart-install-configure-dns-server.md) for
+  more information on how to get stared.
 - Determine the type of record you want to create, see
-[DNS resource records](managing-resource-records-conceptual.md).
+[DNS resource records](resource-record-types.md).
 - An account that is a member of the Administrators group, or equivalent.
 - You need the fully qualified domain name (FQDN) and the IP address of the resource record you want
   to create.
 
-You can add resource records to an existing zone using the
-[Add-DNSServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord) PowerShell
-cmdlet. Some common resource record types have additional PowerShell commands where you don't need
-to specify the resource record type. You can also add the following types of resource records using
-the DNS Manager console.
-
 ## Create resource records
+
+You can add resource records to an existing zone using the
+[DnsServer](/powershell/module/dnsserver) PowerShell module. Some common resource record types have
+additional PowerShell commands where you don't need to specify the resource record type. You can
+also add the following types of resource records using the DNS Manager console.
 
 The following sections contain steps for creating the following types of resource records:
 
@@ -394,7 +392,3 @@ Here's how to removed a record named `example` in the `contoso.com` zone using D
    your Forward Lookup Zone, find and right-click the record, then select **Delete**.
 
 ---
-
-## Related links
-
-- [DNS resource records ](managing-resource-records-conceptual.md)
