@@ -1,5 +1,5 @@
 ---
-description: Learn more about how to manage DNS resource records on Windows Server
+description: Learn more about how to manage DNS resource records on Windows Server.
 title: Manage DNS resource records using DNS server on Windows Server
 author: robinharwood
 ms.author: wscontent
