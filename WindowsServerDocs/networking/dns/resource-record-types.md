@@ -6,7 +6,7 @@ ms.author: wscontent
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ms.topic: article
-ms.date: 06/01/2023
+ms.date: 06/14/2023
 ---
 # DNS resource records
 
