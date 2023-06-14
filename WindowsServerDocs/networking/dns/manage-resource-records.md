@@ -70,7 +70,7 @@ You can also add an IPv4 host (A) record using the
 
 #### [GUI](#tab/gui)
 
-Here's how to create an IPv4 host (A) record for `Host34` mapped to the IP address `10.17.1.34` for
+Here's how to create an IPv4 host (A) record for `Host32` mapped to the IP address `10.17.1.32` for
 the zone `contoso.com` using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
@@ -79,7 +79,7 @@ the zone `contoso.com` using DNS Manager.
    your Forward Lookup Zone, right-click, then select **New Host (A or AAAA)**.
 
 1. On the **New Host** screen, specify the name and IP address of the host record. For example,
-   `Host32` and `10.17.1.34`.
+   `Host32` and `10.17.1.32`.
 
 1. Select **Add Host** to create the record.
 
@@ -98,7 +98,7 @@ PowerShell command.
 To add the AAAA resource record `Host36` to map to IPv6 address `3ffe::1`, use the command:
 
 ```powershell
-Add-DnsServerResourceRecordAAAA -Name "Host37" -ZoneName "contoso.com" -IPv6Address "3ffe::1" -TimeToLive 01:00:00
+Add-DnsServerResourceRecordAAAA -Name "Host36" -ZoneName "contoso.com" -IPv6Address "3ffe::1" -TimeToLive 01:00:00
 ```
 
 You can also add an IPv6 host (AAAA) record using the
@@ -106,7 +106,7 @@ You can also add an IPv6 host (AAAA) record using the
 
 #### [GUI](#tab/gui)
 
-Here's how to create an IPv6 AAAA record for `Host34` mapped to the IPv6 address `3ffe::1` for
+Here's how to create an IPv6 host (AAAA) record for `Host34` mapped to the IPv6 address `3ffe::1` for
 the zone `contoso.com` using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
@@ -209,7 +209,7 @@ Add-DnsServerResourceRecord -Name "77" -Ptr -ZoneName "0.168.192.in-addr.arpa" -
 
 #### [GUI](#tab/gui)
 
-Here's how to create a pointer record named `host77.contoso.com` for the IP address `192.168.0.77` in the reverse
+Here's how to create a PTR record named `host77.contoso.com` for the IP address `192.168.0.77` in the reverse
 lookup zone `0.168.192.in-addr.arpa` using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
@@ -319,7 +319,7 @@ To update the resource record `host01.contoso.com` so that the TTL is now 2 hour
 PowerShell commands:
 
 ```powershell
-$OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
+$OldObj = Get-DnsServerResourceRecord -Name "host01" -ZoneName "contoso.com" -RRType "A"
 $NewObj = [ciminstance]::new($OldObj)
 $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
@@ -331,8 +331,7 @@ you want to perform those actions, remove the existing resource record and creat
 
 #### [GUI](#tab/gui)
 
-Here's how to create a TXT record named example with the text value `Example DNS record text` in the
-`contoso.com` zone using DNS Manager.
+Here's how to modify the time to live (TTL) for a DNS resource record using DNS Manager.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
 
@@ -354,7 +353,7 @@ To remove a resource record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to a DNS resource record using the
+Here's how to remove a DNS resource record using the
 [Remove-DnsServerResourceRecord](/powershell/module/dnsserver/Set-DnsServerResourceRecord)
 PowerShell command.
 
