@@ -175,6 +175,8 @@ items:
         items:
           - name: DNS zones
             href: dns/zone-types.md
+          - name: DNS resource records
+            href: dns/resource-record-types.md
           - name: DNSSEC
             items:
             - name: What is DNSSEC?
@@ -185,6 +187,8 @@ items:
         items:
           - name: Manage DNS zones
             href: dns/manage-dns-zones.md
+          - name: Manage DNS resource records
+            href: dns/manage-resource-records.md
           - name: Secure DNS Client over HTTPS (DoH)
             href: dns/doh-client-support.md
       - name: Tutorials
