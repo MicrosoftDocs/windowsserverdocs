@@ -74,7 +74,7 @@ Here's how to install the DHCP Server role using Server Manager from the Windows
 
 ## Configure DHCP server
 
-After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Planning IP addresses across multiple scopes on DHCP IPv4 server](---) for guidance.
+After you have successfully installed and authorized your IPv4 DHCP server and even set server level DNS dynamic update configuration settings, there are several configuration steps to perform, including setting up multiple scopes on the DHCP server, one scope per subnet. Note that your IP address ranges should already be planned prior to setting up scopes. See [Plan IPv4 addresses for DHCP server on Windows Server](plan-IP-addresses-DHCP-server.md) for guidance.
 
 ### Authorize the DHCP server in Active Directory \(Optional\)
 
@@ -119,7 +119,7 @@ To authorize the DHCP server using Active Directory:
 
 1. In Server Manager, open a DHCP administration window.
 1. Right-select the IPv4 DHCP server name in the list and select Authorize.
-1. Authorization can take a few seconds to resolve. Refresh the server list to confirm that the DHCP Server is now authorized (green icon appears in each scope.)'
+1. Authorization can take a few seconds to resolve. Refresh the server list to confirm that the DHCP Server is now authorized (green icon appears in each scope.)
 
 For more information about these commands, see the following topics.
 
@@ -166,7 +166,19 @@ Here's how to create a new DHCP scope using Server Manager from the Windows desk
 
 1. On the **Lease Duration** page, specify the lifespan for the IP addresses assigned to each DHCP client. Select **Next**.
 
-Use the **Configure DHCP Options** page to configure common DHCP options including IP addresses of routers (default gateways), DNS servers, and WIN settings for your new scope.
+The **Configure DHCP Options** page lets you configure common DHCP options including IP addresses of routers (default gateways), DNS servers, and WIN settings for your new scope. At minimum, you must configure routers and DNS servers before proceeding.
+
+1. On the **Configure DHCP Options** page, select **Yes, I want to configure these options now** and then select **Next**.
+
+1. On the **Router (Default Gateway)** page, enter the IP address of the Gateway that DHCP clients will use and then select **Add**.
+
+1. On the **Domain Name and DNS Servers** page, specify the domain name that clients use for DNS name resolution. Specify the DNS servers by typing the hostname or the IP address in the correct field. Select **Next**.
+
+1. On the **WINS Servers** page, enter the names and IP addresses of any WINS servers that you use in your deployment. If WINS servers are not present in your deployment, you can select **Next** to skip this step.
+
+1. Use the **Activate Scope** page to activate the DHCP scope. Selecting **Yes, I want to activate this scope** will enable your DHCP Server to immediately begin assigning IP addresses to clients. You can also activate your new scope at a later time by selecting **No, I will activate this scope later**.
+
+1. Select **Finish** to exit the **New Scope Wizard**.
 
 ---
 
