@@ -12,12 +12,11 @@ ms.date: 06/01/2023
 
 Create, modify, and delete DNS resource records using the DNS server role in Windows Server. You can
 add resource records using DNS manager, using Windows PowerShell, or automatically when
-Windows-based, Dynamic Host Configuration Protocol (DHCP)–enabled clients join a network using
+Windows-based, Dynamic Host Configuration Protocol (DHCP) enabled clients join a network using
 dynamic update.
 
-Resource records contain the information that a zone maintains about the resources (such as hosts)
-that the zone contains. Resource record information includes record type, owner name, host address
-and other information.
+Resource records contain the information that a zone maintains about the resources (such as hosts).
+Resource record information includes record type, owner name, host address and other information.
 
 ## Prerequisites
 
@@ -42,17 +41,16 @@ also add the following types of resource records using the DNS Manager console.
 
 The following sections contain steps for creating the following types of resource records:
 
-- New Host (A or AAAA)
-- New Alias (CNAME)
-- New Mail Exchanger (MX)
-- New Domain
-- New Delegation
-- Other New Records
+- Host (A or AAAA)
+- Alias (CNAME)
+- Mail Exchanger (MX)
+- Pointer (PTR)
+- Service Locator (SRV)
+- Text (TXT)
 
-#### Create a host record
+### Create a host record
 
-Host (A) records map DNS names to IPv4 addresses. To create an IPv4 host (A) record, select the
-relevant method and follow the steps.
+To create an IPv4 host (A) record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
@@ -89,8 +87,7 @@ the zone `contoso.com` using DNS Manager.
 
 ### AAAA resource record
 
-Host (AAAA) records map DNS names to IPv6 addresses. To create an IPv6 host (AAAA) record, select the
-relevant method and follow the steps.
+To create an IPv6 host (AAAA) record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
 
@@ -126,9 +123,6 @@ the zone `contoso.com` using DNS Manager.
 
 ### CNAME records
 
-Alias (CNAME) resource records are also termed canonical name resource records. With these records,
-you can use more than one DNS name to point to a single host.
-
 To create an alias (CNAME) record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
@@ -162,11 +156,6 @@ the existing DNS record `Host34.lab.contoso.com` using DNS Manager.
 ---
 
 ### MX records
-
-E-mail applications use the mail exchanger (MX) resource record to locate a mail server based on a
-DNS domain name in the destination address for the e-mail recipient of a message. If multiple mail
-exchanger (MX) resource records exist, the DNS Client service attempts to contact mail servers in
-the order of preference from lowest value (highest priority) to highest value (lowest priority).
 
 To create an MX record, select the relevant method and follow the steps.
 
@@ -203,10 +192,6 @@ Here's how to create an MX resource record for the host `mail2.contoso.com` with
 
 ### PTR records
 
-Pointer (PTR) resource records support the reverse lookup process, based on zones that are created
-and rooted in the `in-addr.arpa` domain. You need to have the appropriate reverse lookup zone
-present on your DNS server to create a PTR record that maps an IP address to a specific hostname.
-
 To create a PTR record, select the relevant method and follow the steps.
 
 #### [PowerShell](#tab/powershell)
@@ -240,8 +225,6 @@ lookup zone `0.168.192.in-addr.arpa` using DNS Manager.
 ---
 
 ### SRV records
-
-Service location (SRV) resource records are required when clients use DNS to locate location services such as Active Directory domain controllers.
 
 To create an SRV record, select the relevant method and follow the steps.
 
@@ -280,9 +263,6 @@ priority of `0` for the `contoso.com` domain pointing to `sipserver1.contoso.com
 ---
 
 ### TXT records
-
-Text records let you add text information that can be returned by querying DNS. TXT records are
-often used to authenticate ownership of DNS zones.
 
 To create a TXT record, select the relevant method and follow the steps.
 
