@@ -15,7 +15,7 @@ Automatic Reconnection allows the client to seamlessly reconnect to their existi
 When using Automatic Reconnection, it is crucial to note that the lock screen of the Remote Desktop session is not designed to function as a security boundary. When a policy or the user locks the remote session and the network connection is lost or disrupted, the Remote Desktop Services retains the session state and connection information, and the client will reconnect without needing to re-authenticate. If the automatic reconnection of locked sessions raises concerns for your specific use case, we recommend implementing additional security measures. This could include disabling automatic reconnection on either the RDS Host or the Client:
 
 **Client Option(s) to Disable Automatic Reconnection:**
-- Organizations can configure Remote Desktop Protocol (RDP) properties centrally in Remote Desktop Services (RDS) to disable automatic reconnection. More information can be found here: [Supported RDP properties with Remote Desktop Services | Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/rdp-files#session-behavior).
+- Organizations can configure the following Remote Desktop Protocol (RDP) property centrally in RDS to disable automatic reconnection. More information can be found here: [Supported RDP properties with Remote Desktop Services | Microsoft Learn](https://learn.microsoft.com/windows-server/remote/remote-desktop-services/clients/rdp-files#session-behavior).
   1. **RDP Property**: `autoreconnection enabled:i:value` 
 
 **Host Option(s) to Disable Automatic Reconnection:**
