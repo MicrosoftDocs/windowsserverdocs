@@ -32,9 +32,12 @@ The client computer accepts the authentication attempt of the server when the se
   3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
   4. In **Subject name format**, select a value other than **None**.
 
-- The computer certificate on the server chains to a trusted root certification authority (CA) and doesn't fail any of the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy.
-
-- The computer certificate for the NPS or VPN server is configured with the Server Authentication purpose in Extended Key Usage (EKU) extensions. (The object identifier for Server Authentication is `1.3.6.1.5.5.7.3.1`.)
+- The computer certificate on the server:
+  - chains to a trusted root certification authority (CA),
+  - includes the `Server Authentication` purpose in EKU extensions (the object identifier (OID) for `Server Authentication` is `1.3.6.1.5.5.7.3.1`),
+  - and passes:
+    - the checks that are performed by CryptoAPI, and
+    - the checks that are specified in the remote access policy or network policy
 
 - Configure the server certificate with the required cryptography setting:
 
@@ -57,7 +60,7 @@ The client computer accepts the authentication attempt of the server when the se
 
 When using PEAP and EAP-TLS, NPS displays a list of all installed certificates in the computer certificate store, with the following exceptions:
 
-- Certificates that don't contain the Server Authentication purpose in EKU extensions aren't displayed.
+- Certificates that don't contain the `Server Authentication` purpose in EKU extensions aren't displayed.
 
 - Certificates that don't contain a Subject name aren't displayed.
 
@@ -74,7 +77,7 @@ With EAP-TLS or PEAP-TLS, the server accepts the client authentication attempt w
 - The user or computer certificate on the client:
 
   - chains to a trusted root CA,
-  - includes the Client Authentication purpose in EKU extensions (the object identifier for Client Authentication is `1.3.6.1.5.5.7.3.2`),
+  - includes the `Client Authentication` purpose in EKU extensions (the OID for `Client Authentication` is `1.3.6.1.5.5.7.3.2`),
   - and passes:
     - the checks that are performed by CryptoAPI,
     - the checks that are specified in the remote access policy or network policy and,
@@ -102,7 +105,7 @@ With PEAP-TLS and EAP-TLS, clients display a list of all installed certificates 
 
 - Wireless clients and VPN clients don't display password-protected certificates.
 
-- Certificates that don't contain the Client Authentication purpose in EKU extensions aren't displayed.
+- Certificates that don't contain the `Client Authentication` purpose in EKU extensions aren't displayed.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
 For more information about EAP, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).
