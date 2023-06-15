@@ -201,7 +201,12 @@ The following table lists the server validation options applicable to each EAP m
 
 ### Server validation user prompt
 
-### [EAP-TLS](#tab/serveruserprompt/eap-tls)
+The following table lists the server validation user prompt options applicable to each EAP method. These options would be used, in the case of an untrusted server certificate, to either:
+
+- immediately fail the connection, or
+- allow the user to manually accept or reject the connection.
+
+### [EAP-TLS](#tab/serveruserprompt-eap-tls)
 
 |Setting|XML element|
 |--|--|
@@ -209,7 +214,7 @@ The following table lists the server validation options applicable to each EAP m
 
 Prevents the user from being prompted to trust a server certificate if that certificate is incorrectly configured, isn't already trusted, or both (if enabled). To simplify the user experience and prevent users from mistakenly trusting a server deployed by an attacker, it's recommended that you select this checkbox.
 
-### [PEAP](#tab/serveruserprompt/peap)
+### [PEAP](#tab/serveruserprompt-peap)
 
 |Setting|XML element|
 |--|--|
@@ -221,7 +226,7 @@ Specifies whether the user is notified if the server name or root certificate is
 1. **Tell user if the server name or root certificate isn't specified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. With this option, if the root certificate isn't present on the computer, the user isn't notified and connection attempts fail.
 1. **Tell user if the server's identity cannot be verified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, connection attempts fails.
 
-### [EAP-TTLS](#tab/serveruserprompt/eap-ttls)
+### [EAP-TTLS](#tab/serveruserprompt-ttls)
 
 |Setting|XML element|
 |--|--|
@@ -233,7 +238,7 @@ Specifies, when not selected, that if server certificate validation fails due to
 1. One or more of the intermediate root certificates in the certificate chain isn't found.
 1. The subject name in the server certificate doesn't match any of the servers that are specified in the **Connect to these servers** list.
 
-### [TEAP](#tab/serveruserprompt/teap)
+### [TEAP](#tab/serveruserprompt-teap)
 
 |Setting|XML element|
 |--|--|
