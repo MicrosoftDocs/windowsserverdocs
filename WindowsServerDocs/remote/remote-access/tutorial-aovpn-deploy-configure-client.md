@@ -42,7 +42,7 @@ For more information about EAP settings, see [EAP configuration](/windows/client
 
 1. For **VPN type**, select *IKEv2*.
 
-1. For **Type of sing-in info**, select *Certificate*.
+1. For **Type of sign-in info**, select *Certificate*.
 
 1. Select **Save**.
 
