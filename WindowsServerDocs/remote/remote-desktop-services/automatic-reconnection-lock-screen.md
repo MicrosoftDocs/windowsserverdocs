@@ -24,7 +24,7 @@ When using Automatic Reconnection, it is crucial to note that the lock screen of
 
   1.  Open the **Group Policy Edito**r. This can be accessed by typing `gpedit.msc` in the **Start** menu or the **Run** dialog box.
     
-  2.  Navigate through the following path:
+  2.  Navigate to the following path: `Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections`.
     
       1.   Local Computer Policy
       2.   Computer Configuration
