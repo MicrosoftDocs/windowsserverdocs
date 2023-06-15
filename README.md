@@ -16,7 +16,7 @@ There are two separate locations where we keep Windows Server technical content.
 
   - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/github-browser-updates.md) article.
 
-## Public (`windowsserverdocs-pr`) and private (`windowsserverdocs`) repos
+## Public (`windowsserverdocs`) and private (`windowsserverdocs-pr`) repos
 
 These repos are actively managed and contain the source for Windows Server technical content published to [Microsoft Learn](https://learn.microsoft.com):
 
