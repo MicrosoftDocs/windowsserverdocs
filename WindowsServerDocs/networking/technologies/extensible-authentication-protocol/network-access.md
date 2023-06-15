@@ -234,21 +234,21 @@ Specifies whether the user is notified if the server name or root certificate is
 
 Specifies, when not selected, that if server certificate validation fails due to any of the following reasons, the user is prompted to accept or reject the server:
 
-1. A root certificate for the server certificate isn't found or not selected in the **Trusted Root Certification Authorities** list.
-1. One or more of the intermediate root certificates in the certificate chain isn't found.
-1. The subject name in the server certificate doesn't match any of the servers that are specified in the **Connect to these servers** list.
+- A root certificate for the server certificate isn't found or not selected in the **Trusted Root Certification Authorities** list.
+- One or more of the intermediate root certificates in the certificate chain isn't found.
+- The subject name in the server certificate doesn't match any of the servers that are specified in the **Connect to these servers** list.
 
 ### [TEAP](#tab/serveruserprompt-teap)
 
 |Setting|XML element|
 |--|--|
-|**Don't prompt user if unable to authorize server**|**ServerValidation > DisablePrompt**|
+|**Don't prompt user if unable to authorize server**|**ServerValidation** ><br> DisablePrompt**|
 
 Specifies, when not selected, that if server certificate validation fails due to any of the following reasons, the user is prompted to accept or reject the server:
 
-1. A root certificate for the server certificate isn't found or not selected in the **Trusted Root Certification Authorities** list.
-1. One or more of the intermediate root certificates in the certificate chain isn't found.
-1. The subject name in the server certificate doesn't match any of the servers that are specified in the **Connect to these servers** list.
+- A root certificate for the server certificate isn't found or not selected in the **Trusted Root Certification Authorities** list.
+- One or more of the intermediate root certificates in the certificate chain isn't found.
+- The subject name in the server certificate doesn't match any of the servers that are specified in the **Connect to these servers** list.
 
 ---
 
