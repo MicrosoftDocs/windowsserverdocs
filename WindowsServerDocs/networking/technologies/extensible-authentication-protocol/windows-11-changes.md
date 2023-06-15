@@ -82,4 +82,4 @@ TLS 1.3 uses new simplified TLS suites, of which only `TLS_AES_256_GCM_SHA384` i
 > [!CAUTION]
 > Current versions of Windows 11 do not enforce all of these restrictions. A future version of Windows will enforce these restrictions. To prepare your enterprise network for this change, we suggest testing with [Windows Insider](/windows-insider/get-started) builds.
 
-To configure a network for WPA3-Enterprise 192-bit mode, Windows requires EAP-TLS be used with a certificate that meeds to previous requirements.
+To configure a network for WPA3-Enterprise 192-bit mode, Windows requires EAP-TLS be used with a certificate that meets the requirements described above.
