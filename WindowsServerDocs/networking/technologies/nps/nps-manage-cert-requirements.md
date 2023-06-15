@@ -12,14 +12,14 @@ ms.contributor: samyun
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-All certificates that are used for network access authentication with Extensible Authentication Protocol\-Transport Layer Security \(EAP\-TLS\), Protected Extensible Authentication Protocol\-Transport Layer Security \(PEAP\-TLS\), and PEAP\-Microsoft Challenge Handshake Authentication Protocol version 2 \(MS\-CHAP v2\) must meet the requirements for X.509 certificates and work for connections that use Secure Socket Layer/Transport Level Security (SSL/TLS). Both client and server certificates have additional requirements.
+All certificates that are used for network access authentication with Extensible Authentication Protocol-Transport Layer Security (EAP-TLS), Protected Extensible Authentication Protocol-Transport Layer Security (PEAP-TLS), and PEAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2) must meet the requirements for X.509 certificates and work for connections that use Secure Socket Layer/Transport Level Security (SSL/TLS). Both client and server certificates have additional requirements.
 
->[!IMPORTANT]
->This topic provides instructions for configuring certificate templates. To use these instructions, it is required that you have deployed your own Public Key Infrastructure \(PKI\) with Active Directory Certificate Services \(AD CS\).
+> [!IMPORTANT]
+> This topic provides instructions for configuring certificate templates. To use these instructions, it is required that you have deployed your own Public Key Infrastructure (PKI) with Active Directory Certificate Services (AD CS).
 
 ## Minimum server certificate requirements
 
-With PEAP\-MS\-CHAP v2, PEAP\-TLS, or EAP\-TLS as the authentication method, the NPS must use a server certificate that meets the minimum server certificate requirements.
+With PEAP-MS-CHAP v2, PEAP-TLS, or EAP-TLS as the authentication method, the NPS must use a server certificate that meets the minimum server certificate requirements.
 
 Client computers can be configured to validate server certificates by using the **Validate server certificate** option on the client computer or in Group Policy.
 
@@ -69,27 +69,27 @@ For more information, see [Deploy Server Certificates for 802.1X Wired and Wirel
 
 With EAP-TLS or PEAP-TLS, the server accepts the client authentication attempt when the certificate meets the following requirements:
 
-- The client certificate is issued by an enterprise CA or mapped to a user or computer account in Active Directory Domain Services \(AD DS\).
+- The client certificate is issued by an enterprise CA or mapped to a user or computer account in Active Directory Domain Services (AD DS).
 
-- The user or computer certificate on the client chains to a trusted root CA, includes the Client Authentication purpose in EKU extensions \(the object identifier for Client Authentication is `1.3.6.1.5.5.7.3.2`\), and fails neither the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy nor the Certificate object identifier checks that are specified in NPS network policy.
+- The user or computer certificate on the client chains to a trusted root CA, includes the Client Authentication purpose in EKU extensions (the object identifier for Client Authentication is `1.3.6.1.5.5.7.3.2`), and fails neither the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy nor the Certificate object identifier checks that are specified in NPS network policy.
 
 - The 802.1X client does not use registry-based certificates that are either smart card-logon or password-protected certificates.
 
-- For user certificates, the Subject Alternative Name \(SubjectAltName\) extension in the certificate contains the user principal name \(UPN\). To configure the UPN in a certificate template:
+- For user certificates, the Subject Alternative Name (SubjectAltName) extension in the certificate contains the user principal name (UPN). To configure the UPN in a certificate template:
 
   1. Open Certificate Templates.
   2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
   3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
-  4. In **Include this information in alternate subject name**, select **User principal name \(UPN\)**.
+  4. In **Include this information in alternate subject name**, select **User principal name (UPN)**.
 
-- For computer certificates, the Subject Alternative Name \(SubjectAltName\) extension in the certificate must contain the fully qualified domain name \(FQDN\) of the client, which is also called the *DNS name*. To configure this name in the certificate template:
+- For computer certificates, the Subject Alternative Name (SubjectAltName) extension in the certificate must contain the fully qualified domain name (FQDN) of the client, which is also called the *DNS name*. To configure this name in the certificate template:
 
   1. Open Certificate Templates.
   2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
   3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
   4. In **Include this information in alternate subject name**, select **DNS name**.
 
-With PEAP\-TLS and EAP\-TLS, clients display a list of all installed certificates in the Certificates snap-in, with the following exceptions:
+With PEAP-TLS and EAP-TLS, clients display a list of all installed certificates in the Certificates snap-in, with the following exceptions:
 
 - Wireless clients do not display registry-based and smart card-logon certificates.
 
