@@ -15,27 +15,27 @@ Windows 11 supports WPA3-Enterprise, a Wi-Fi security standard that defines a se
 
 ## Updated server certificate validation behavior in Windows 11
 
-In previous Windows releases, including Windows 10, the server certificate validation logic varied between EAP methods. In Windows 11 we have adjusted all EAP methods to behave in a consistent and predictable way, which is also consistent with the WPA3-Enterprise specification. This new behavior applies to any EAP authentication using the first party EAP methods that ship with Windows, including Wi-Fi, Ethernet, and VPN scenarios.
+In previous Windows releases, including Windows 10, the server certificate validation logic varied between EAP methods. In Windows 11, we've adjusted all EAP methods to behave in a consistent and predictable way, which is also consistent with the WPA3-Enterprise specification. This new behavior applies to any EAP authentication using the first party EAP methods that ship with Windows, including Wi-Fi, Ethernet, and VPN scenarios.
 
-Windows will trust the server certificate if one of the following conditions are met:
+Windows will trust the server certificate if one of the following conditions is met:
 
 - The server certificate thumbprint has been added to the profile.
   > [!NOTE]
   > If the user is connecting without a pre-configured profile or if user prompts for server validation are enabled in the profile, the thumbprint will automatically be added to the profile if the user accepts the server through the UI prompt.
 - All of the following conditions are met:
   1. The server certificate chain is trusted by the machine or user.
-      - This is based on the root certificate being present in the machine or user trusted root store, depending on the OneX [authMode](/windows/win32/nativewifi/onexschema-authmode-onex-element).
+      - This trust is based on the root certificate being present in the machine or user trusted root store, depending on the OneX [authMode](/windows/win32/nativewifi/onexschema-authmode-onex-element).
   1. The trusted root certificate thumbprint has been added to the profile.
   1. If server name validation is enabled (recommended), the name matches what is specified in the profile.
-      - See [Server validation](network-access.md#server-validation) for more information about configuring server name validation in the profile.
+      - For more information, see [Server validation](network-access.md#server-validation) for more information about configuring server name validation in the profile.
 
 ### Potential issues upgrading from Windows 10 to Windows 11
 
-In Windows 10, under certain circumstances, PEAP and EAP-TLS authentications could successfully validate the server based solely on the presence of the trusted root certificate in the Windows trusted root store. If you observe that an EAP authentication is consistently failing after upgrading to Windows 11, please check the WLAN, LAN or VPN profiles to ensure they adhere to the new requirements for the behavior described above.
+In Windows 10, under certain circumstances, PEAP and EAP-TLS authentications could successfully validate the server based solely on the presence of the trusted root certificate in the Windows trusted root store. If you observe that an EAP authentication is consistently failing after upgrading to Windows 11, check the WLAN, LAN or VPN profiles to ensure they adhere to the new requirements for the behavior described above.
 
 In most cases, specifying the trusted root certificate thumbprint in the profile is enough to address the issue, assuming the root certificate is already present in the trusted root store.
 
-Another thing to note is that server name matching is case sensitive in Windows 11 version 21H2 (build number 22000). This was adjusted back to be case in-sensitive in Windows 11 version 22H2 (build number 22621). If you are using server name validation, please ensure that the name specified in the profile matches the server name exactly or upgrade to Windows 11 version 22H2 or later.
+Another thing to note is that server name matching is case sensitive in Windows 11 version 21H2 (build number 22000). The server name matching was adjusted back to be case in-sensitive in Windows 11 version 22H2 (build number 22621). If you're using server name validation, ensure that the name specified in the profile matches the server name exactly or upgrade to Windows 11 version 22H2 or later.
 
 ## TLS 1.3
 
@@ -43,13 +43,13 @@ Windows 11 enabled TLS 1.3 by default systemwide, but the Windows EAP methods co
 
 ### Known issues with TLS 1.3 and Windows 11
 
-- NPS does not support TLS 1.3 at this time.
-- Some older versions of third-party RADIUS servers may incorrectly advertise TLS 1.3 support. If you are experiencing issues with authenticating EAP-TLS with TLS 1.3 with Windows 11 22H2, please ensure the RADIUS server is patched and up to date or has TLS 1.3 disabled.
-- There is a known issue with PEAP session resumption tickets when using TLS 1.3. An upcoming Windows Update will address this issue.
+- NPS doesn't support TLS 1.3 at this time.
+- Some older versions of third-party RADIUS servers may incorrectly advertise TLS 1.3 support. If you're experiencing issues with authenticating EAP-TLS with TLS 1.3 with Windows 11 22H2, ensure the RADIUS server is patched and up to date or has TLS 1.3 disabled.
+- There's a known issue with PEAP session resumption tickets when using TLS 1.3. An upcoming Windows Update will address this issue.
 
 ## WPA3-Enterprise 192-bit mode
 
-WPA3-Enterprise 192-bit mode is a special mode for WPA3-Enterprise that enforces certain high security requirements on the wireless connection to provide a minimum of 192-bits of security. These requirements align with the [Commercial National Security Algorithm (CNSA) Suite, CNSSP 15](https://www.cnss.gov/CNSS/issuances/Policies.cfm), which is a set of cryptographic algorithms that is approved to protect classified and top secret information by the United States National Security Agency (NSA). 192-bit mode can sometimes be refered to as "Suite B mode", which is a reference to the NSA Suite B Cryptography specification, which was replaced by CNSA in 2016.
+WPA3-Enterprise 192-bit mode is a special mode for WPA3-Enterprise that enforces certain high security requirements on the wireless connection to provide a minimum of 192 bits of security. These requirements align with the [Commercial National Security Algorithm (CNSA) Suite, CNSSP 15](https://www.cnss.gov/CNSS/issuances/Policies.cfm), which is a set of cryptographic algorithms that is approved to protect classified and top secret information by the United States National Security Agency (NSA). 192-bit mode can sometimes be referred to as "Suite B mode," which is a reference to the NSA Suite B Cryptography specification, which was replaced by CNSA in 2016.
 
 The following table lists the algorithms required by the CNSA Suite.
 
@@ -75,11 +75,11 @@ Aligning with CNSA, WPA3-Enterprise 192-bit mode requires that EAP-TLS is used w
 >
 > SHA-384 is in the SHA-2 family of hash functions. Other algorithms and variants, such as SHA-512 or SHA3-384, are not permitted.
 
-Windows supports only the `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384` cipher suites for WPA3-Enterprise 192-bit mode. The `TLS_DHE_RSA_AES_256_GCM_SHA384` cipher suite is not supported.
+Windows supports only the `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384` cipher suites for WPA3-Enterprise 192-bit mode. The `TLS_DHE_RSA_AES_256_GCM_SHA384` cipher suite isn't supported.
 
-TLS 1.3 uses new simplified TLS suites, of which only `TLS_AES_256_GCM_SHA384` is compatible with WPA3-Enterprise 192-bit mode. As TLS 1.3 requires (EC)DHE and allows ECDSA or RSA certificates, along with the AES-256 AEAD and SHA384 hash, `TLS_AES_256_GCM_SHA384` is equivalent to `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`. However, [RFC 8446](https://www.rfc-editor.org/rfc/rfc8446) requires that TLS 1.3-compliant applications support P-256, which is forbidden by CNSA. Therefore, WPA3-Enterprise 192-bit mode cannot be fully compliant with TLS 1.3. However, there are no known interoperability issues with TLS 1.3 and WPA3-Enterprise 192-bit mode.
+TLS 1.3 uses new simplified TLS suites, of which only `TLS_AES_256_GCM_SHA384` is compatible with WPA3-Enterprise 192-bit mode. As TLS 1.3 requires (EC)DHE and allows ECDSA or RSA certificates, along with the AES-256 AEAD and SHA384 hash, `TLS_AES_256_GCM_SHA384` is equivalent to `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`. However, [RFC 8446](https://www.rfc-editor.org/rfc/rfc8446) requires that TLS 1.3-compliant applications support P-256, which is forbidden by CNSA. Therefore, WPA3-Enterprise 192-bit mode can't be fully compliant with TLS 1.3. However, there are no known interoperability issues with TLS 1.3 and WPA3-Enterprise 192-bit mode.
 
 > [!CAUTION]
 > Current versions of Windows 11 do not enforce all of these restrictions. A future version of Windows will enforce these restrictions. To prepare your enterprise network for this change, we suggest testing with [Windows Insider](/windows-insider/get-started) builds.
 
-To configure a network for WPA3-Enterprise 192-bit mode, Windows requires EAP-TLS be used with a certificate that meets the requirements described above.
+To configure a network for WPA3-Enterprise 192-bit mode, Windows requires EAP-TLS be used with a certificate that meets the requirements described previously.
