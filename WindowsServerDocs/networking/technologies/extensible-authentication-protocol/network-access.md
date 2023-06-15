@@ -242,7 +242,7 @@ Specifies, when not selected, that if server certificate validation fails due to
 
 |Setting|XML element|
 |--|--|
-|**Don't prompt user if unable to authorize server**|**ServerValidation** ><br> DisablePrompt**|
+|**Don't prompt user if unable to authorize server**|**ServerValidation** ><br> **DisablePrompt**|
 
 Specifies, when not selected, that if server certificate validation fails due to any of the following reasons, the user is prompted to accept or reject the server:
 
