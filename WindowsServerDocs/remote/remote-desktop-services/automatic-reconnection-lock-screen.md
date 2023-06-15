@@ -22,7 +22,7 @@ When using Automatic Reconnection, it is crucial to note that the lock screen of
 - In the **session properties for a specific Collection**, Administrators have the ability to disable the reconnection feature. It's important to note that this feature is enabled by default, and therefore, requires explicit action from the administrators to disable it.
 - **Group Policy**:
 
-  1.  Open the **Group Policy Edito**r. This can be accessed by typing `gpedit.msc` in the **Start** menu or the **Run** dialog box.
+  1.  Open the **Group Policy Editor**. This can be accessed by typing `gpedit.msc` in the **Start** menu or the **Run** dialog box.
     
   2.  Navigate to the following path: `Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections`.
     
