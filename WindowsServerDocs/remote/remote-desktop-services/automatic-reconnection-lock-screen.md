@@ -26,7 +26,7 @@ When using Automatic Reconnection, it is crucial to note that the lock screen of
     
   2.  Navigate to the following path: `Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections`.
     
-  3.  In the '**Connections**' section, you will find an option named '**Automatic reconnection**'.
+  3.  In the **Connections** section, you will find an option named **Automatic reconnection**.
     
   4.  Select this **Automatic reconnection** option.
     
