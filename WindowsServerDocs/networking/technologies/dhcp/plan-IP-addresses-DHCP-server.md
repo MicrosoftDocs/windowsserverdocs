@@ -33,7 +33,7 @@ Before you begin, be sure to record the router’s IP address. This is the defau
 
 Your network includes servers, routers, switches, printers, and other devices that may require static IP addresses. Make a list of these devices while adding additional placeholder addresses for use as your needs expand.
 
-If there are any IP addresses you wish to prevent clients from using, make a list of these so that you optionally can enter them manually later in the DHCP server Management Console as part of creating a new DHCP scope. See []() for more information on configuring DHCP server new scope settings.. Otherwise, you can establish the range of static IPs, including unused addresses to retain as your network inevitably grows. 
+If there are any IP addresses you wish to prevent clients from using, make a list of these so that you optionally can enter them manually later in the DHCP server Management Console as part of creating a new DHCP scope. See []() for more information on configuring DHCP server new scope settings. Otherwise, you can establish the range of static IPs, including unused addresses to retain as your network inevitably grows. 
 
 ## Related links
 
