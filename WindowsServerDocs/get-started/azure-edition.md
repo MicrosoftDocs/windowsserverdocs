@@ -1,5 +1,5 @@
 ---
-title: What is Azure Edition for Windows Server Datacenter? 
+title: What is Azure Edition for Windows Server? 
 description: Overview of Azure Edition for Windows Server, including key features and next steps.
 author: robinharwood
 ms.topic: overview
@@ -7,19 +7,19 @@ ms.date: 05/16/2023
 ms.author: wscontent 
 ---
 
-# What is Azure Edition for Windows Server Datacenter?
+# What is Azure Edition for Windows Server?
 
-Windows Server: Azure Edition (WSAE) is an edition of Windows Server focused on innovation and
-virtualization optimized to run on Azure. WSAE features a Long-Term Servicing Channel (LTSC) and
-yearly product updates, with two major product updates in the first 3 years. WSAE also brings new
-functionality to Windows Server users faster than the Standard and Datacenter editions of Windows
-Server.
+Windows Server Datacenter: Azure Edition is an edition of Windows Server focused on innovation and
+virtualization optimized to run on Azure. Azure Edition features a Long-Term Servicing Channel
+(LTSC) and yearly product updates, with two major product updates in the first 3 years. Azure
+Edition also brings new functionality to Windows Server users faster than the Standard and
+Datacenter editions of Windows Server.
 
-The annual WSAE updates are delivered using Windows Update, rather than a full OS upgrade. As part
-of this annual update cadence, the WSAE Insider preview program gives the opportunity to access
-early builds - leading to general availability. If you're a registered Microsoft Server Insider, you
-have access to create and use virtual machine images from this preview. Details regarding each
-preview is shared in release announcements posted to the
+The annual Azure Edition updates are delivered using Windows Update, rather than a full OS upgrade.
+As part of this annual update cadence, the Azure Edition Insider preview program gives the
+opportunity to access early builds - leading to general availability. If you're a registered
+Microsoft Server Insider, you have access to create and use virtual machine images from this
+preview. Details regarding each preview is shared in release announcements posted to the
 [Windows Server Insiders](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
 space on Microsoft Tech Community.
 
@@ -35,10 +35,18 @@ The following table summarizes the key differences:
 | Servicing channels | Long-Term Servicing Channel | Long-Term Servicing Channel |
 | Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure-stack/hci/manage/vm-activate) and cloud customers only |
 | Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience only. Windows Server containers aren't supported. |
+| Operating system environments (OSE) | Physical or virtual | Virtual only |
+| Associated virtualization rights | 2 virtual OSEs for Standard, Unlimited virtual OSEs for Datacenter | None |
 
 Capabilities vary by image, see
 [Getting started with Windows Server Datacenter: Azure Edition](#getting-started-with-windows-server-datacenter-azure-edition)
 for more detail.
+
+> [!TIP]
+> For more information, see the
+> [Microsoft Software Licensing Terms](https://www.microsoft.com/useterms/). The licensing terms may
+> vary based on the distribution channel, for example, a Commercial Licensing program, Retail,
+> Original Equipment Manufacturer (OEM), and so on.
 
 ## Key capabilities
 

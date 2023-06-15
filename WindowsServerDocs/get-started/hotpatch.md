@@ -124,10 +124,13 @@ tools vary depending on your platform. To orchestration Hotpatch:
     patching failures.
 
 - **Azure Stack HCI:** Hotpatch updates for virtual machines create on Azure Stack HCI are
-  orchestrated either in the operating system (Windows Update), using Windows Server Update Services
-  (WSUS), or manually by an administrator. To learn more about using WSUS to manage and distribute
-  updates, see
-  [Windows Server Update Services (WSUS)](../administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md).
+  orchestrated using:
+
+      - Group Policy to configure the Windows Update client settings.
+
+      - Configuring Windows Update client settings, or SCONFIG for Server Core.
+
+      - A third-party patch management solution.
 
 ### Understanding the patch status for your VM in Azure
 
@@ -157,6 +160,10 @@ Similar to on-demand assessment, you can also install patches on-demand for your
 classifications. You can also specify updates to include or exclude by providing a list of
 individual knowledge base articles. Patches installed on-demand aren't installed using
 availability-first principles and may require more reboots and VM downtime for update installation.
+
+You can also view the installed patches using the
+[Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix) PowerShell command or
+using the Settings app when using the Desktop Experience.
 
 ## Next steps
 
