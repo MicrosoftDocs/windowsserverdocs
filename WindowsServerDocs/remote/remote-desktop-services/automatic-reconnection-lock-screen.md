@@ -18,7 +18,7 @@ When using Automatic Reconnection, it is crucial to note that the lock screen of
 - Organizations can configure the following Remote Desktop Protocol (RDP) property centrally in RDS to disable automatic reconnection. More information can be found here: [Supported RDP properties with Remote Desktop Services | Microsoft Learn](https://learn.microsoft.com/windows-server/remote/remote-desktop-services/clients/rdp-files#session-behavior).
   1. **RDP Property**: `autoreconnection enabled:i:value` 
 
-**Host Option(s) to Disable Automatic Reconnection:**
+**Host option(s) to disable Automatic Reconnection:**
 - In the **session properties for a specific Collection**, Administrators have the ability to disable the reconnection feature. It's important to note that this feature is enabled by default, and therefore, requires explicit action from the administrators to disable it.
 - **Group Policy**:
 
