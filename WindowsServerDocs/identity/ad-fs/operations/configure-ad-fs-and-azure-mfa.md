@@ -1,10 +1,10 @@
 ---
 title: Configure AD FS and Azure AD Multi-Factor Authentication
-description: Learn more about configuring Azure AD Multi-Factor Authentication as authentication provider using AD FS
+description: Learn more about configuring Azure AD Multi-Factor Authentication as authentication provider using AD FS.
 ms.author: billmath
 author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 06/15/2023
 ms.topic: article
 ---
 
@@ -12,11 +12,11 @@ ms.topic: article
 
 Applies to: Windows 2016 and later
 
-If your organization is federated with Azure AD, you can use Azure AD Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure AD Multi-Factor Authentication enables you to eliminate passwords and provide a more secure way to authenticate.  With AD FS, you can configure Azure AD Multi-Factor Authentication for primary authentication or use it as an additional authentication provider.
+If your organization is federated with Azure AD, you can use Azure AD Multi-Factor Authentication to secure AD FS resources, both on-premises and in the cloud. Azure AD Multi-Factor Authentication enables you to eliminate passwords and provide a more secure way to authenticate. With AD FS, you can configure Azure AD Multi-Factor Authentication for primary authentication or use it as an extra authentication provider.
 
 Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure AD Multi-Factor Authentication adapter integrates directly with Azure AD and doesn't require an on premises Azure AD Multi-Factor Authentication server. The Azure AD Multi-Factor Authentication adapter is built in to Windows Server 2016. No other installation is required.
 
-## Registering users for Azure AD Multi-Factor Authentication using AD FS
+## Register users for Azure AD Multi-Factor Authentication using AD FS
 
 AD FS doesn't support inline "proofup" (registration of Azure AD Multi-Factor Authentication security verification information such as phone number or mobile app). Without support for inline proof, users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) prior to using Azure AD Multi-Factor Authentication to authenticate to AD FS applications.
 When a user that hasn't yet proofed up in Azure AD tries to authenticate with Azure AD Multi-Factor Authentication at AD FS, you get an AD FS error.  As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead.  You can do this using onload.js customization to detect the error message string within the AD FS page and show a new message to direct the user to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) to reattempt authentication. For detailed guidance, see [Customize the AD FS web page to guide users to register MFA verification methods](#customize-the-ad-fs-web-page-to-guide-users-to-register-mfa-verification-methods) in this article.
@@ -36,11 +36,11 @@ There are a couple of great reasons to use Azure AD Multi-Factor Authentication 
 - To avoid passwords for sign-in to Azure AD, Office 365 and other AD FS apps
 - To protect password based sign-in by requiring another factor such as verification code prior to the password
 
-You also may want to use Azure AD Multi-Factor Authentication as the primary authentication method and Azure AD conditional access, including true MFA by prompting for additional factors. To use Azure AD MFA on premises, you can configure the Azure AD domain setting by setting `SupportsMfa` to `$True`. In this configuration, Azure AD can prompt AD FS to perform additional authentication or &#34;true MFA&#34; for conditional access scenarios that require it.
+You also may want to use Azure AD Multi-Factor Authentication as the primary authentication method and Azure AD conditional access, including true MFA by prompting for extra factors. To use Azure AD MFA on premises, you can configure the Azure AD domain setting by setting `SupportsMfa` to `$True`. In this configuration, Azure AD can prompt AD FS to perform extra authentication or &#34;true MFA&#34; for conditional access scenarios that require it.
 
 Any AD FS user who isn't registered (hasn't yet configured MFA verification information) should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. Once configured they can reattempt their AD FS sign-in.
 
-Azure AD Multi-Factor Authentication as primary authentication is considered a single factor. After initial configuration users need to provide an additional factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
+Azure AD Multi-Factor Authentication as primary authentication is considered a single factor. After initial configuration users need to provide another factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
 
 >[!NOTE]
 > With AD FS 2019, you're required to make a modification to the anchor claim type for the Active Directory Claims Provider trust and modify this from the `windowsaccountname` to UPN. Execute the following PowerShell cmdlet. This has no impact on the internal functioning of the AD FS farm. It's possible a few users may be re-prompted for credentials after this change is made. After logging in again, end users will see no difference.
@@ -49,7 +49,7 @@ Azure AD Multi-Factor Authentication as primary authentication is considered a s
 Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -TargetName "Active Directory"
 ```
 
-### Azure AD Multi-Factor Authentication as additional authentication to Office 365
+### Azure AD Multi-Factor Authentication as extra authentication to Office 365
 
 Azure AD Multi-Factor Authentication adapter for AD FS enables your users to do MFA on AD FS. To secure your Azure AD resource, it's recommended you require MFA through a [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). You must also set the domain setting `SupportsMfa` to `$True` and [emit the multipleauthn claim](/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully.
 
@@ -140,13 +140,13 @@ Windows Server without the latest service pack doesn't support the `-Environment
     | StsUrl             | https://login.microsoftonline.us |
     | ResourceUri        | https://adnotifications.windowsazure.us/StrongAuthenticationService.svc/Connector |
 
-1. Restart the AD FS service on each server in the farm before these changes take effect. For minimal impact, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
+1. Restart the AD FS service on each server in the farm before these changes take effect. To reduce the effect on your systems, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
 
 After this step, you'll see that Azure AD Multi-Factor Authentication is available as a primary authentication method for intranet and extranet use.
 
 ![Screenshot of the Edit Authentication Methods dialog box showing the Azure M F A option highlighted in both the Extranet and Intranet sections.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
 
-If you want to use Azure AD Multi-Factor Authentication as a secondary authentication method, on the Edit Authentication Methods box, select the Multi-factor tab (the Additional tab in AD FS 2019) and ensure that it's enabled. Otherwise you might receive error messages, such as, "No valid strong authentication method found. Contact your administrator to configure and enable an appropriate strong authentication provider".
+If you want to use Azure AD Multi-Factor Authentication as a secondary authentication method, on the Edit Authentication Methods box, select the Multi-factor tab (the Additional tab in AD FS 2019) and ensure that it's enabled. Otherwise you might receive error messages, such as, "No valid strong authentication method found. Contact your administrator to configure and enable an appropriate strong authentication provider."
 
 ## Renew and Manage AD FS Azure AD Multi-Factor Authentication Certificates
 
@@ -156,7 +156,7 @@ By default, when you configure AD FS with Azure AD Multi-Factor Authentication, 
 
 1. Assess AD FS Azure AD Multi-Factor Authentication certificate expiration date
 
-    On each AD FS server, in the local computer My store, there's a self signed certificate with "Microsoft AD FS Azure MFA" in the Issuer and Subject. This certificate is the Azure AD Multi-Factor Authentication certificate. Check the validity period of this certificate on each AD FS server to determine the expiration date.
+    On each AD FS server, in the local computer My store, there's a self signed certificate with "Microsoft AD FS Azure AD Multi-Factor Authentication" in the Issuer and Subject. This certificate is the Azure AD Multi-Factor Authentication certificate. Check the validity period of this certificate on each AD FS server to determine the expiration date.
 
 1. Create a new AD FS Azure AD Multi-Factor Authentication Certificate on each AD FS server
 
@@ -224,7 +224,7 @@ If you're using Azure AD Multi-Factor Authentication as primary authentication, 
         </div>
 ```
 
-When Azure AD as additional authentication is being attempted, the unproofed user sees an AD FS error page containing the following messages:
+When Azure AD as extra authentication is being attempted, the unproofed user sees an AD FS error page containing the following messages:
 
 ```html
 <div id='mfaGreetingDescription' class='groupMargin'>For security reasons, we require additional information to verify your account (mahesh@jenfield.net)</div>
