@@ -5,7 +5,8 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 12/25/2019
+ms.date: 06/15/2023
+ms.contributor: alalve
 ---
 
 # High CPU usage issue on the SMB server
@@ -16,7 +17,7 @@ This article discusses how to troubleshoot the high CPU usage issue on the SMB s
 
 Storage performance issues can cause high CPU usage on SMB servers. Before you troubleshoot, make sure that the latest update rollup is installed on the SMB server to eliminate any known issues in srv2.sys.
 
-In most cases, you will notice the issue of high CPU usage in the system process. Before you proceed, use Process Explorer to make sure that srv2.sys or ntfs.sys is consuming excessive CPU resources.
+In most cases, you'll notice the issue of high CPU usage in the system process. Before you proceed, use Process Explorer to make sure that srv2.sys, or ntfs.sys is consuming excessive CPU resources.
 
 ### Storage area network (SAN) scenario
 
@@ -51,26 +52,26 @@ When an application creates an IO request, it sends the request to the Windows I
 
 ![Stack flow](media/high-cpu-usage-issue-on-smb-server-1.png)
 
-Perfmon does not create any performance data per second. Instead, it consumes data that is provided by other subsystems within Windows.
+Perfmon doesn't create any performance data per second. Instead, it consumes data that is provided by other subsystems within Windows.
 
 For the "physical disk performance object," the data is captured at the "Partition manager" level in the storage stack.
 
-When we measure the counters that are mentioned in the previous section, we are measuring all the time that is spent by the request below the "Partition manager" level. When the IO request is sent by the partition manager down the stack, we time stamp it. When it returns, we time stamp it again and calculate the time difference. The time difference is the latency.
+When we measure the counters that are mentioned in the previous section, we're measuring all the time that is spent by the request below the "Partition manager" level. When the IO request is sent by the partition manager down the stack, we time stamp it. When it returns, we time stamp it again and calculate the time difference. The time difference is the latency.
 
-By doing this, we are accounting for the time that is spent in the
+By doing this, we're accounting for the time that is spent in the
 following components:
 
 - Class Driver - This manages the device type, such as disks, tapes, and so on.
 
 - Port Driver - This manages the transport protocol, such as SCSI, FC, SATA, and so on.
 
-- Device Miniport Driver - This is the device driver for the Storage Adapter. It is supplied by the manufacturer of the devices, such as Raid Controller, and FC HBA.
+- Device Miniport Driver - This is the device driver for the Storage Adapter. It's supplied by the manufacturer of the devices, such as Raid Controller, and FC HBA.
 
 - Disk Subsystem - This includes everything that is below the Device Miniport Driver. This could be as simple as a cable that is connected to a single physical hard disk, or as complex as a Storage Area Network. If the issue is determined to be caused by this component, you can contact the hardware vendor for more information about troubleshooting.
 
 ### Disk queuing
 
-There is a limited amount of IO that a disk subsystem can accept at a given time. The excess IO gets queued until the disk can accept IO again. The time that IO spends in the queues below the "Partition manager" level is accounted for in the Perfmon physical disk latency measurements. As queues grow larger and IO must wait longer, the measured latency also grows.
+There's a limited amount of IO that a disk subsystem can accept at a given time. The excess IO gets queued until the disk can accept IO again. The time that IO spends in the queues below the "Partition manager" level is accounted for in the Perfmon physical disk latency measurements. As queues grow larger and IO must wait longer, the measured latency also grows.
 
 There are multiple queues below the "Partition manager" level, as
 follows:
@@ -85,9 +86,9 @@ We also account for the time that the hard disk spends actively servicing the IO
 
 Finally, we have to pay special attention to the Port Driver Queue (for SCSI Storport.sys). The Port Driver is the last Microsoft component to touch an IO before we hand it off to the manufacturer-supplied Device Miniport Driver.
 
-If the Device Miniport Driver can't accept any more IO because its queue or the hardware queues below it are saturated, we will start accumulating IO on the Port Driver Queue. The size of the Microsoft Port Driver queue is limited only by the available system memory (RAM), and it can grow very large. This causes large measured latency.
+If the Device Miniport Driver can't accept any more IO because its queue or the hardware queues below it are saturated, we'll start accumulating IO on the Port Driver Queue. The size of the Microsoft Port Driver queue is limited only by the available system memory (RAM), and it can grow very large. This causes large measured latency.
 
-## High CPU caused by enumerating folders 
+## High CPU caused by enumerating folders
 
 To troubleshoot this issue, disable the Access Based Enumeration (ABE) feature.
 
@@ -100,8 +101,7 @@ Get-SmbShare | Select Name, FolderEnumerationMode
 Unrestricted = ABE disabled. <br />
 AccessBase = ABE enabled.
 
-
-You can enable ABE in **Server Manager**. Navigatie to **File and Storage Services** > **Shares**, right-click the share, select **Properties**, go to **Settings** and then select **Enable access-based enumeration**.
+You can enable ABE in **Server Manager**. Navigate to **File and Storage Services** > **Shares**, right-click the share, select **Properties**, go to **Settings** and then select **Enable access-based enumeration**.
 
 ![UI options](media/high-cpu-usage-issue-on-smb-server-2.png)
 
