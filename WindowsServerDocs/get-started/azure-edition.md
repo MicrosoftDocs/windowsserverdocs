@@ -17,9 +17,9 @@ Datacenter editions of Windows Server.
 
 The annual Azure Edition updates are delivered using Windows Update, rather than a full OS upgrade.
 As part of this annual update cadence, the Azure Edition Insider preview program gives the
-opportunity to access early builds - leading to general availability. If you're a registered
-Microsoft Server Insider, you have access to create and use virtual machine images from this
-preview. Details regarding each preview is shared in release announcements posted to the
+opportunity to access early builds - leading to general availability. To get started with Azure
+Edition Insider preview, visit the [Azure Edition preview](https://aka.ms/createWSAEpreview) Azure
+Marketplace offer. Details regarding each preview is shared in release announcements posted to the
 [Windows Server Insiders](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
 space on Microsoft Tech Community.
 
