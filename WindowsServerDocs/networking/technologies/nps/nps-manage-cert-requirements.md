@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
 ms.author: wscontent
 author: xelu86
-ms.date: 06/14/2023
+ms.date: 06/15/2023
 ms.contributor: samyun
 ---
 # Configure Certificate Templates for PEAP and EAP Requirements
@@ -27,10 +27,10 @@ The client computer accepts the authentication attempt of the server when the se
 
 - The Subject name contains a value. If you issue a certificate to your server running Network Policy Server (NPS) that has a blank Subject name, the certificate is not available to authenticate your NPS. To configure the certificate template with a Subject name:
 
-	1. Open Certificate Templates.
-	2. In the details pane, right-click the certificate template that you want to change, and then click **Properties** .
-	3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
-	4. In **Subject name format**, select a value other than **None**.
+  1. Open Certificate Templates.
+  2. In the details pane, right-click the certificate template that you want to change, and then click **Properties** .
+  3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
+  4. In **Subject name format**, select a value other than **None**.
 
 - The computer certificate on the server chains to a trusted root certification authority (CA) and does not fail any of the checks that are performed by CryptoAPI and that are specified in the remote access policy or network policy.
 
@@ -50,10 +50,10 @@ The client computer accepts the authentication attempt of the server when the se
 
 - The Subject Alternative Name (SubjectAltName) extension, if used, must contain the DNS name of the server. To configure the certificate template with the Domain Name System (DNS) name of the enrolling server:
 
-	1. Open Certificate Templates.
-	2. In the details pane, right-click the certificate template that you want to change, and then click **Properties** .
-	3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
-	4. In **Include this information in alternate subject name**, select **DNS name**.
+  1. Open Certificate Templates.
+  2. In the details pane, right-click the certificate template that you want to change, and then click **Properties** .
+  3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
+  4. In **Include this information in alternate subject name**, select **DNS name**.
 
 When using PEAP and EAP-TLS, NPSs display a list of all installed certificates in the computer certificate store, with the following exceptions:
 
@@ -77,17 +77,17 @@ With EAP-TLS or PEAP-TLS, the server accepts the client authentication attempt w
 
 - For user certificates, the Subject Alternative Name \(SubjectAltName\) extension in the certificate contains the user principal name \(UPN\). To configure the UPN in a certificate template:
 
-	1. Open Certificate Templates.
-	2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
-	3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
-	4. In **Include this information in alternate subject name**, select **User principal name \(UPN\)**.
+  1. Open Certificate Templates.
+  2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
+  3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
+  4. In **Include this information in alternate subject name**, select **User principal name \(UPN\)**.
 
 - For computer certificates, the Subject Alternative Name \(SubjectAltName\) extension in the certificate must contain the fully qualified domain name \(FQDN\) of the client, which is also called the *DNS name*. To configure this name in the certificate template:
 
-	1. Open Certificate Templates.
-	2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
-	3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
-	4. In **Include this information in alternate subject name**, select **DNS name**.
+  1. Open Certificate Templates.
+  2. In the details pane, right-click the certificate template that you want to change, and then click **Properties**.
+  3. Click the **Subject Name** tab, and then click **Build from this Active Directory information**.
+  4. In **Include this information in alternate subject name**, select **DNS name**.
 
 With PEAP\-TLS and EAP\-TLS, clients display a list of all installed certificates in the Certificates snap-in, with the following exceptions:
 
@@ -96,7 +96,6 @@ With PEAP\-TLS and EAP\-TLS, clients display a list of all installed certificate
 - Wireless clients and VPN clients do not display password-protected certificates.
 
 - Certificates that do not contain the Client Authentication purpose in EKU extensions are not displayed.
-
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
 For more information about EAP, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).
