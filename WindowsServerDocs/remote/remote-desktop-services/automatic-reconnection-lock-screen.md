@@ -35,7 +35,7 @@ When using Automatic Reconnection, it is crucial to note that the lock screen of
       7.   Connections
   3.  In the '**Connections**' section, you will find an option named '**Automatic reconnection**'.
     
-  4.  Select this '**Automatic reconnection**' option.
+  4.  Select this **Automatic reconnection** option.
     
   5.  In the new dialog box that appears, select the '**Disabled**' option.
     
