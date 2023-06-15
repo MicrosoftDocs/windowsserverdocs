@@ -126,11 +126,11 @@ tools vary depending on your platform. To orchestration Hotpatch:
 - **Azure Stack HCI:** Hotpatch updates for virtual machines create on Azure Stack HCI are
   orchestrated using:
 
-      - Group Policy to configure the Windows Update client settings.
+  - Group Policy to configure the Windows Update client settings.
 
-      - Configuring Windows Update client settings, or SCONFIG for Server Core.
+  - Configuring Windows Update client settings, or SCONFIG for Server Core.
 
-      - A third-party patch management solution.
+  - A third-party patch management solution.
 
 ### Understanding the patch status for your VM in Azure
 
