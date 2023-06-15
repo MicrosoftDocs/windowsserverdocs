@@ -248,7 +248,10 @@ items:
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
   - name: Extensible Authentication Protocol (EAP)
-    href: technologies/extensible-authentication-protocol/network-access.md 
+    href: technologies/extensible-authentication-protocol/network-access.md
+    items:
+    - name: What's changed in Windows 11
+      href: technologies/extensible-authentication-protocol/windows-11-changes.md
   - name: High-Performance Networking (HPN)
     href: technologies/hpn/hpn-top.md
     items:
