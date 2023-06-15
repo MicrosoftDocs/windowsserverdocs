@@ -39,5 +39,5 @@ When using Automatic Reconnection, it is crucial to note that the lock screen of
     
   5.  In the new dialog box that appears, select the **Disabled** option.
     
-  6.  Click on '**Apply**' and then '**OK**' to save the changes.
+  6.  Click on **Apply** and then **OK** to save the changes.
 
