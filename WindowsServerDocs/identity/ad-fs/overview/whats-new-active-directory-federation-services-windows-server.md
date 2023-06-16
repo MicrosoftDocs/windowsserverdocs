@@ -202,6 +202,16 @@ With AD FS on Server 2019, you can now pass the resource value embedded in the s
 
 AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow.
 
+## What's new in Active Directory Federation Services for Windows Server 2016
+
+If you're looking for information on earlier versions of AD FS, see the following articles: [AD FS in Windows Server 2012 or 2012 R2](../../active-directory-federation-services.md) and [AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd727958(v=ws.10)).
+
+ AD FS provides access control and single sign-on across a wide variety of applications including Office 365, cloud based SaaS applications, and applications on the corporate network.
+
+- For the IT organization, it enables you to provide sign on and access control to both modern and legacy applications on any machine, based on the same set of credentials and policies.
+- For the user, it provides seamless sign-on using the same, familiar account credentials.
+- For the developer, it provides an easy way to authenticate users whose identities live in the organizational directory so that you can focus your efforts on your application, not authentication or identity.
+
 ## Eliminate Passwords from the extranet
 
 AD FS 2016 enables three new options for sign-on without passwords, enabling organizations to avoid risk of network compromise from phished, leaked, or stolen passwords.
@@ -320,13 +330,3 @@ Now, moving from AD FS on Windows Server 2012 R2 to AD FS on Windows Server 2016
 Then, add new Windows Server 2016 servers to the farm, verify the functionality and remove the older servers from the load balancer. After all farm nodes are running Windows Server 2016, you're ready to upgrade the farm behavior level to 2016 and begin using the new features.
 
 For more information, see [Upgrading to AD FS in Windows Server 2016](../deployment/upgrading-to-ad-fs-in-windows-server.md).
-
-## What's new in Active Directory Federation Services for Windows Server 2016
-
-If you're looking for information on earlier versions of AD FS, see the following articles: [AD FS in Windows Server 2012 or 2012 R2](../../active-directory-federation-services.md) and [AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd727958(v=ws.10)).
-
- AD FS provides access control and single sign-on across a wide variety of applications including Office 365, cloud based SaaS applications, and applications on the corporate network.
-
-- For the IT organization, it enables you to provide sign on and access control to both modern and legacy applications on any machine, based on the same set of credentials and policies.
-- For the user, it provides seamless sign-on using the same, familiar account credentials.
-- For the developer, it provides an easy way to authenticate users whose identities live in the organizational directory so that you can focus your efforts on your application, not authentication or identity.
