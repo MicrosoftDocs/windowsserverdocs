@@ -14,8 +14,8 @@ virtual machines (VMs) that doesn’t require a reboot after installation. It wo
 in-memory code of running processes without the need to restart the process. This article covers
 information about hotpatch for supported VMs, which has the following benefits:
 
-- Lower workload impact with fewer reboots.
 - Fewer binaries mean update install faster and consume less disk and CPU resources.
+- Lower workload impact with fewer reboots.
 - Better protection, as the hotpatch update packages are scoped to Windows security updates that
   install faster without rebooting.
 - Reduces the time exposed to security risks and change windows, and easier patch orchestration with

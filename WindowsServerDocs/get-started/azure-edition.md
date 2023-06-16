@@ -95,7 +95,7 @@ stays enabled for maximum continuity of service.
 To learn more, see [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic) and
 [SMB over QUIC management with Automanage machine best practices](/azure/automanage/automanage-smb-over-quic).
 
-## Storage Replica compression for data transfer
+### Storage Replica compression for data transfer
 
 Beginning with Update 1 for Windows Server 2022 Datacenter: Azure Edition, you can compress Storage
 Replica data between source and destination server. The compression results in fewer network packets
