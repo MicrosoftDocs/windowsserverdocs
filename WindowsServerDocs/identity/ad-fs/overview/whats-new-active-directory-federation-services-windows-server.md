@@ -3,7 +3,7 @@ description: Learn more about what's new in Active Directory Federation Services
 ms.assetid: aa892a85-f95a-4bf1-acbb-e3c36ef02b0d
 title: What's new in Active Directory Federation Services for Windows Server 2016
 author: billmath
-ms.author: billmath
+ms.author: wscontent
 manager: amycolannino
 ms.date: 05/26/2023
 ms.topic: article
@@ -85,7 +85,7 @@ The following Security Assertion Markup Language (SAML) update is in AD FS 2019:
 
 - **Bug fix: Fix bugs in aggregated federation**. There have been numerous bug fixes around aggregated federation support (for example, InCommon). The following areas have received fixes:
   - Improved scaling for a large number of entities in the aggregated federation metadata doc. Previously, scaling would fail with an "ADMIN0017" error.
-  - Query using 'ScopeGroupID' parameter via Get-AdfsRelyingPartyTrustsGroup PSH (PowerShell) cmdlet.
+  - Query using 'ScopeGroupID' parameter via `Get-AdfsRelyingPartyTrustsGroup` PowerShell cmdlet.
   - Handling error conditions around duplicate entityID.
 
 ### Azure AD style resource specification in scope parameter
@@ -126,7 +126,7 @@ AD FS already supports triggering extra authentication based on a claim rule pol
 
 For example, 2012 R2 onwards admin can already write the following rule to prompt extra authentication if the request comes from extranet.
 
-```PowerShell
+```powershell
 Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );' 
 ```
 
@@ -143,8 +143,8 @@ Now in 2019 they can modify the previous claim rule to choose auth providers bas
 Transitioning from one other authentication provider to another:
 You can modify the previously mentioned rule to choose Azure AD Multi-Factor Authentication for users that are in group SID S-1-5-21-608905689-872870963-3921916988-12345. For example you could use this modification for a group you manage by enterprise, which tracks the users that have registered for Azure AD Multi-Factor Authentication. This modification also works for the rest of the users that an admin wants to use certificate auth.
 
-```PowerShell
-'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+```powershell
+'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
 
  c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "`https://schemas.microsoft.com/claims/authnmethodsproviders`", Value = "AzureMfaAuthentication"); 
 
@@ -155,16 +155,16 @@ This example shows how to set two different auth providers for two different app
 
 Set Application A to use Azure AD Multi-Factor Authentication as an extra auth provider:
 
-```PowerShell
-Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+```powershell
+Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
 
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication");' 
 ```
 
 Set Application B to use Certificate as an extra auth provider:
 
-```PowerShell
-Set- Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
+```powershell
+Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
 
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");' 
  ```
@@ -177,37 +177,30 @@ To get all the other authentication providers allowed, admin can use the cmdlet 
 
 There's no support to trigger a particular extra auth provider if the RP is using [Access Control Policies in AD FS Windows Server 2016 | Microsoft Docs](../operations/access-control-policies-in-ad-fs.md). When you move an application away from Access control policy, AD FS copies the corresponding policy from Access Control Policy to AdditionalAuthenticationRules and IssuanceAuthorizationRules. So if an admin wants to use a particular auth provider, they can move away from not using access control policy and then modify AdditionalAuthenticationRules to trigger a specific auth provider.
 
-#### FAQ
+### FAQ
 
-**Q.** How do I resolve the AD FS Admin event logs error, “Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'."
-**A.** Follow these steps to remediate the issue:
+#### How do I resolve the AD FS Admin event logs error, “Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'."?
+
+Follow these steps to remediate the issue:
 
 1. Launch AD FS management console. Go to **Services > Scope Descriptions**.
 1. Select more options on "**Scope Descriptions**, and select **Add Scope Description**.
 1. Under name, enter "ugs" and Select **Apply > OK**.
 1. Launch PowerShell as Administrator.
-1. Run the command ``Get-AdfsApplicationPermission``. Look for the `ScopeNames :{openid, aza}` that has the `ClientRoleIdentifier`. Make a note of the `ObjectIdentifier`.
-1. Run the command ``Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'``.
+1. Run the command `Get-AdfsApplicationPermission`. Look for the `ScopeNames :{openid, aza}` that has the `ClientRoleIdentifier`. Make a note of the `ObjectIdentifier`.
+1. Run the command `Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'`.
 1. Restart the AD FS service.
 1. On the client, restart the client. You should be prompted to configure Windows Hello for Business (WHFB).
 1. If the configuration window doesn't pop up, then you need to collect trace logs and troubleshoot further.
 
-**Q.** Can I pass a resource value as part of the scope value like how requests are done against Azure AD?
-**A.** With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example:
-``< create a valid sample request>``
+#### Can I pass a resource value as part of the scope value like how requests are done against Azure AD?
 
-**Q.** Does AD FS support PKCE extension?
-**A.** AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow.
+With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example:
+`<create a valid sample request>`
 
-## What's new in Active Directory Federation Services for Windows Server 2016
+#### Does AD FS support PKCE extension?
 
-If you're looking for information on earlier versions of AD FS, see the following articles: [AD FS in Windows Server 2012 or 2012 R2](../../active-directory-federation-services.md) and [AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd727958(v=ws.10)).
-
- AD FS provides access control and single sign-on across a wide variety of applications including Office 365, cloud based SaaS applications, and applications on the corporate network.
-
-- For the IT organization, it enables you to provide sign on and access control to both modern and legacy applications on any machine, based on the same set of credentials and policies.
-- For the user, it provides seamless sign-on using the same, familiar account credentials.
-- For the developer, it provides an easy way to authenticate users whose identities live in the organizational directory so that you can focus your efforts on your application, not authentication or identity.
+AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow.
 
 ## Eliminate Passwords from the extranet
 
@@ -227,7 +220,7 @@ For more information about Azure AD Multi-Factor Authentication with AD FS, see 
 
 ### Password-less access from compliant devices
 
-AD FS 2016 builds on previous device registration capabilities to enable sign on and access control based the device compliance status. Users can sign on using the device credential, and compliance is reevaluated when device attributes change so that you can always ensure policies are being enforced. This feature enables policies such as
+AD FS 2016 builds on previous device registration capabilities to enable sign on and access control based the device compliance status. Users can sign on using the device credential, and compliance is reevaluated when device attributes change so that you can always ensure policies are being enforced. This feature enables policies such as:
 
 - Enable Access only from devices that are managed and/or compliant.
 - Enable Extranet Access only from devices that are managed and/or compliant.
@@ -273,7 +266,7 @@ Previously, AD FS administrators had to configure policies by using the AD FS cl
 
 The templates are easy to customize by using a wizard driven process to add exceptions or extra policy rules and can be applied to one or many applications for consistent policy enforcement.
 
-For more information, see [Access control policies in AD FS.](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
+For more information, see [Access control policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
 
 ### Enable sign on with non-AD LDAP directories
 
@@ -283,7 +276,7 @@ Many organizations have a combination of Active Directory and third-party direct
 - Users in Active Directory forests to which an Active Directory two-way trust isn't configured.
 - Users in Active Directory Lightweight Directory Services (AD LDS).
 
-For more information, see [Configure AD FS to authenticate users stored in LDAP directories.](../../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md).
+For more information, see [Configure AD FS to authenticate users stored in LDAP directories](../../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md).
 
 ## Better Sign-in experience
 
@@ -293,7 +286,7 @@ The following changes improve the sign-in experience for AD FS.
 
 Previously, AD FS in Windows Server 2012 R2 provided a common sign-on experience for all relying party applications, with the ability to customize a subset of text-based content per application. With Windows Server 2016, you can customize not only the messages, but images, logo and web theme per application. Additionally, you can create new, custom web themes and apply these themes per relying party.
 
-For more information, see [AD FS user sign-in customization.](../../ad-fs/operations/AD-FS-user-sign-in-customization.md)
+For more information, see [AD FS user sign-in customization](../../ad-fs/operations/AD-FS-user-sign-in-customization.md).
 
 ## Manageability and operational enhancements
 
@@ -304,19 +297,19 @@ The following section describes the improved operational scenarios that are intr
 In AD FS for Windows Server 2012 R2, there were numerous audit events generated for a single request, and the relevant information about a sign-in or token issuance activity was either absent or spread across multiple audit events. By default the AD FS audit events are turned off due to their verbose nature.
 With the release of AD FS 2016, auditing has become more streamlined and less verbose.
 
-For more information, see [Auditing enhancements to AD FS in Windows Server 2016.](../../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md).
+For more information, see [Auditing enhancements to AD FS in Windows Server 2016](../../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md).
 
 ### Improved interoperability with SAML 2.0 for participation in confederations
 
 AD FS 2016 contains more SAML protocol support, including support for importing trusts based on metadata that contains multiple entities. This change enables you to configure AD FS to participate in confederations such as InCommon Federation and other implementations conforming to the eGov 2.0 standard.
 
-For more information, see [Improved interoperability with SAML 2.0.](../../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md).
+For more information, see [Improved interoperability with SAML 2.0](../../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md).
 
 ### Simplified password management for federated Microsoft 365 users
 
 You can configure Active Directory Federation Services (AD FS) to send password expiry claims to the relying party trusts (applications) that are protected by AD FS. How these claims are used depends on the application. For example, with Office 365 as your relying party, updates have been implemented to Exchange and Outlook to notify federated users of their soon-to-be-expired passwords.
 
-For more information, see [Configure AD FS to send password expiry claims.](../../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md).
+For more information, see [Configure AD FS to send password expiry claims](../../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md).
 
 ### Moving from AD FS in Windows Server 2012 R2 to AD FS in Windows Server 2016 is easier
 
@@ -326,4 +319,14 @@ Now, moving from AD FS on Windows Server 2012 R2 to AD FS on Windows Server 2016
 
 Then, add new Windows Server 2016 servers to the farm, verify the functionality and remove the older servers from the load balancer. After all farm nodes are running Windows Server 2016, you're ready to upgrade the farm behavior level to 2016 and begin using the new features.
 
-For more information, see [Upgrading to AD FS in Windows Server 2016.](../deployment/upgrading-to-ad-fs-in-windows-server.md).
+For more information, see [Upgrading to AD FS in Windows Server 2016](../deployment/upgrading-to-ad-fs-in-windows-server.md).
+
+## What's new in Active Directory Federation Services for Windows Server 2016
+
+If you're looking for information on earlier versions of AD FS, see the following articles: [AD FS in Windows Server 2012 or 2012 R2](../../active-directory-federation-services.md) and [AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd727958(v=ws.10)).
+
+ AD FS provides access control and single sign-on across a wide variety of applications including Office 365, cloud based SaaS applications, and applications on the corporate network.
+
+- For the IT organization, it enables you to provide sign on and access control to both modern and legacy applications on any machine, based on the same set of credentials and policies.
+- For the user, it provides seamless sign-on using the same, familiar account credentials.
+- For the developer, it provides an easy way to authenticate users whose identities live in the organizational directory so that you can focus your efforts on your application, not authentication or identity.
