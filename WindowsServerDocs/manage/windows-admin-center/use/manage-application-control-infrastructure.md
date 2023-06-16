@@ -80,10 +80,8 @@ File transfer based on UNC paths over SMB port 445 is critical for Windows Admin
 ### Installing
 Install Windows Admin Center on your WDAC enforced server or client machine just like you normally would. If the above requirements are met, Windows Admin Center should install and function as normal.
 
-For the preview, Windows Admin Center must be installed within the same Active Directory (AD) as your managed server or clusters. Cross-domain management is not yet supported.
-
 ### Connecting
-Connect to your WDAC enforced server, client, or cluster machines like you normally would. Once these connections are added to Windows Admin Center, you'll see a **tag** on the connections page indicating that this connection has WDAC enforced. Upon connecting to your server, you can track the enforcement status by a field on the **Overview** page.
+Connect to your WDAC enforced server, client, or cluster machines like you normally would. Upon connecting to your server, you can track the enforcement status by the "PowerShell Language Mode" field on the **Overview** page. If the value of this field is "Constrained", then WDAC is being enforced.
 
 When you connect to a WDAC enforced cluster for the first time, it may take a few minutes for Windows Admin Center to set up connection to your cluster. Subsequent connections won't have a delay.
 
@@ -91,15 +89,9 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 > If you change the WDAC enforcement status of your managed nodes, do not use Windows Admin Center for at least 30 seconds for this change to be reflected.
 
 ## Known issues
-- Sometimes, you may see a "File already exists" error when you click on a tool in Windows Admin Center. If this error occurs, reload the extension by navigating away from the extension and returning back.
-
-- Sometimes, you may see a "module not found" error when managing a WDAC enforced connection for the first time. If you see this, retry the connection.
-
 - Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
 
 - Using RBAC on a single server is currently not supported.
-
-- Windows Admin Center must be installed within the same Active Directory (AD) as your managed server or clusters. Cross-domain management is not yet supported.
 
 ## Troubleshooting
 - "Module not found" or "failed to connect" error
