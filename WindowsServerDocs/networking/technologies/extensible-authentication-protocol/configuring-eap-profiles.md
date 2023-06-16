@@ -15,7 +15,7 @@ This article presents information about commonly used different ways to configur
 
 ## XML Profiles
 
-As outlined in [XML profiles for EAP](network-access.md#xml-profiles-for-eap), connection profiles for Wi-Fi, Ethernet, and VPN are XML files that contain the configuration options for that connection. These profiles can be imported/exported and manually edited. When profiles are created or edited in UI (as detailed in the following sections), Windows internally sets the corresponding XML configuration options. As a result, you can use the UI to create a profile and then export it to see the XML configuration options that were set.
+As outlined in [XML profiles for EAP](network-access.md#xml-profiles-for-eap), connection profiles for Wi-Fi, Ethernet, and VPN are XML files that contain the configuration options for that connection. These profiles can be imported/exported and manually edited. When profiles are created or edited in UI (as detailed in the following sections), Windows internally sets the corresponding XML configuration options. As a result, you can use the UI to create a profile, and then export it to see the XML configuration options that were set.
 
 > [!NOTE]
 > Not every configuration option is exposed in the UI. It may be required, depending on your scenario, to manually edit the XML profile to set the desired configuration options, then import the updated profile for deployment.
@@ -54,13 +54,13 @@ Importing and exporting profiles using a command-line shell is often the only op
 | `netsh lan add profile filename="C:\Profiles\ProfileName.xml" interface="Ethernet"` | Adds a wired profile from the specified file to the specified interface. If no interface is specified, the profile is added as the machine profile. |
 | `netsh lan delete profile interface="ProfileName"` | Deletes a wired profile. If no interface is specified, the machine profile is deleted. |
 
-### powershell
+### PowerShell
 
 [Powershell](/PowerShell) is a command line shell and scripting language that can be used to view and configure various settings. It includes various commands (cmdlets) that can be used to import and export connection profiles. The [Get-Help](/powershell/module/microsoft.powershell.core/get-help) cmdlet can be used with any cmdlet to get more information about that cmdlet, including syntax.
 
 ### [VPN](#tab/powershell-vpn)
 
-For detailed information about these cmdlet, see [Get-VpnConnection](/powershell/module/vpnclient/get-vpnconnection), [Set-VpnConnection](/powershell/module/vpnclient/set-vpnconnection), and [Add-VpnConnection](/powershell/module/vpnclient/add-vpnconnection).
+For detailed information about these cmdlets, see [Get-VpnConnection](/powershell/module/vpnclient/get-vpnconnection), [Set-VpnConnection](/powershell/module/vpnclient/set-vpnconnection), and [Add-VpnConnection](/powershell/module/vpnclient/add-vpnconnection).
 
 | Command | Description |
 | --- | --- |
