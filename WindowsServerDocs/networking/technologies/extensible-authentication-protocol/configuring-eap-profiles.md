@@ -26,7 +26,7 @@ An example of a Wi-Fi profile can be found in [this sample](/windows/win32/nativ
 
 ### Importing and exporting profiles with command line tools
 
-Importing and exporting profiles using a command line tool is often the only option for many scenarios. For example, when configuring MDM or Group Policy isn't possible, manually or scripting these commands can be the quickest option.
+Importing and exporting profiles using a command line tool can be helpful in many scenarios. For example, when configuring MDM or Group Policy isn't possible, manually or scripting these commands can be the quickest option. It can also be used to export profiles after configuring them through other UI.
 
 ### netsh
 
