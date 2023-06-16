@@ -54,6 +54,8 @@ Importing and exporting profiles using a command-line shell is often the only op
 | `netsh lan add profile filename="C:\Profiles\ProfileName.xml" interface="Ethernet"` | Adds a wired profile from the specified file to the specified interface. If no interface is specified, the profile is added as the machine profile. |
 | `netsh lan delete profile interface="ProfileName"` | Deletes a wired profile. If no interface is specified, the machine profile is deleted. |
 
+---
+
 ### PowerShell
 
 [PowerShell](/PowerShell) is a command line shell and scripting language that can be used to view and configure various settings. It includes various commands (cmdlets) that can be used to import and export connection profiles. The [Get-Help](/powershell/module/microsoft.powershell.core/get-help) cmdlet can be used with any cmdlet to get more information about that cmdlet, including syntax.
