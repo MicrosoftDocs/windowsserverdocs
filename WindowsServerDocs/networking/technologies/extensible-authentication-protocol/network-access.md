@@ -4,8 +4,9 @@ description: This article presents information about the Extensible Authenticati
 author: xelu86
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 06/14/2023
+ms.date: 06/16/2023
 ms.contributor: samyun
+ms.reviewer: samyun
 ---
 
 # Extensible Authentication Protocol (EAP) for network access
@@ -55,12 +56,14 @@ You can access the EAP properties for virtual private network (VPN) connections 
 - Manually configuring VPN connections on client computers.
 - Using Connection Manager Administration Kit (CMAK) to configure VPN connections.
 
+For more information on configuring EAP properties, see [Configure EAP profiles and settings in Windows](configure-eap-profiles.md).
+
 ## XML profiles for EAP
 
 The profiles used for different connections types are XML files that contain the configuration options for that connection. Each different connection type follows a specific schema:
 
-- [Wi-Fi profiles](/windows/win32/nativewifi/wlan-profileschema-elements)
-- [Wired network profiles](/windows/win32/nativewifi/lan-profileschema-schema)
+- [Wi-Fi (WLAN) profiles](/windows/win32/nativewifi/wlan-profileschema-elements)
+- [Wired network (Ethernet) profiles](/windows/win32/nativewifi/lan-profileschema-schema)
 - [VPN profiles](/windows/client-management/mdm/vpnv2-csp#profilexml-xsd-schema)
 
 However, when configured to use EAP, each profile schema has a child element [EapHostConfig](/windows/win32/eaphost/eaphostconfigschema-schema) element.
@@ -89,13 +92,13 @@ The following table explains the configurable security settings for a profile th
 
 ### Advanced security settings > IEEE 802.1X
 
-If **Enforce advanced 802.1X settings** is checked, all of the following settings will be configured. If it's unchecked, default settings apply. In XML, all elements are optional, with the default values used if they are not present.
+If **Enforce advanced 802.1X settings** is checked, all of the following settings will be configured. If it's unchecked, default settings apply. In XML, all elements are optional, with the default values used if they aren't present.
 
 |Setting|XML element|Description|
 |--|--|--|
 |Max Eapol-Start Msgs|[maxStart](/windows/win32/nativewifi/onexschema-maxstart-onex-element)|Specifies the maximum number of EAPOL-Start messages that can be sent to the authenticator (RADIUS server) before the supplicant (Windows client) assumes there's no authenticator present, defaulting to `3`.|
 |Start Period (seconds)|[startPeriod](/windows/win32/nativewifi/onexschema-startperiod-onex-element)|Specifies the time period (in seconds) to wait before an EAPOL-Start message is sent to start the 802.1X authentication process, defaulting to `5`.|
-|Held Period (seconds)|[heldPeriod](/windows/win32/nativewifi/onexschema-heldperiod-onex-element)|Specifies the time period (in seconds) to wait after a failed authentication attempt to re-attempt authentication, defaulting to `1`.|
+|Held Period (seconds)|[heldPeriod](/windows/win32/nativewifi/onexschema-heldperiod-onex-element)|Specifies the time period (in seconds) to wait after a failed authentication attempt to reattempt authentication, defaulting to `1`.|
 |Auth Period (seconds)|[authPeriod](/windows/win32/nativewifi/onexschema-authperiod-onex-element)|Specifies the time period (in seconds) to wait for a response from the authenticator (RADIUS server) before assuming there's no authenticator present, defaulting to `18`.|
 |Eapol-Start Message|[supplicantMode](/windows/win32/nativewifi/onexschema-supplicantmode-onex-element)|Specifies the method of transmission used for EAPOL-Start messages. The following values are supported: <br><br>1. Do not transmit (`inhibitTransmission`)<br>2. Transmit (`includeLearning`)<br>3. Transmit per IEEE 802.1X (`compliant`)<br><br>"Computer", in this context, means "Machine" in other references. `compliant` is the default in Windows, and is the only valid option for wireless profiles.|
 
@@ -105,7 +108,7 @@ The following table explains the settings for [Single Sign On (SSO), formerly kn
 
 |Setting|XML element|Description|
 |--|--|--|
-|Enable Single Sign On for this network|[singleSignOn](/windows/win32/nativewifi/onexschema-singlesignon-onex-element)|Specifies whether SSO is enabled for this network, defaulting to `false`. Do not use `singleSignOn` in a profile if the network doesn't require it.|
+|Enable Single Sign On for this network|[singleSignOn](/windows/win32/nativewifi/onexschema-singlesignon-onex-element)|Specifies whether SSO is enabled for this network, defaulting to `false`. Don't use `singleSignOn` in a profile if the network doesn't require it.|
 |Perform immediately before User<br><br>Perform immediately after User|[type](/windows/win32/nativewifi/onexschema-type-singlesignon-element)|Specifies when SSO should be performed - either before or after the user logs on.|
 |Max delay for connectivity(seconds)|[maxDelay](/windows/win32/nativewifi/onexschema-maxdelay-singlesignon-element)|Specifies the maximum delay (in seconds) before the SSO attempt fails, defaulting to `10`.|
 |Allow additional dialogs to be displayed during Single Sign On|**allowAdditionalDialogs**|Specified whether to allow EAP dialogs to be displayed during SSO, defaulting to `false`.|
@@ -186,7 +189,7 @@ The TEAP settings in the UI map to [EapTeapConnectionPropertiesV1](/openspecs/wi
 
 ### Server validation
 
-Many EAP methods include an option for the client to validate the server's certificate. If the server certificate is not validated, the client cannot be sure that it is communicating with the correct server. This exposes the client to security risks, including the possibility that the client might unknowingly connect to a rogue network.
+Many EAP methods include an option for the client to validate the server's certificate. If the server certificate isn't validated, the client can't be sure that it's communicating with the correct server. This exposes the client to security risks, including the possibility that the client might unknowingly connect to a rogue network.
 
 > [!NOTE]
 > Windows requires the server certificate have the **Server Authentication** EKU. The object identifier (OID) for this EKU is `1.3.6.1.5.5.7.3.1`.
@@ -224,7 +227,7 @@ Specifies whether the user is notified if the server name or root certificate is
 
 1. **Don't ask user to authorize new servers or trusted CAs** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user isn't notified and connection attempts fail.
 1. **Tell user if the server name or root certificate isn't specified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. With this option, if the root certificate isn't present on the computer, the user isn't notified and connection attempts fail.
-1. **Tell user if the server's identity cannot be verified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, connection attempts fails.
+1. **Tell user if the server's identity cannot be verified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempts fail.
 
 ### [EAP-TTLS](#tab/serveruserprompt-ttls)
 
