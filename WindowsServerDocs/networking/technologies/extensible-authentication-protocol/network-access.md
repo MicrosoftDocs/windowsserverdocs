@@ -21,7 +21,7 @@ EAP authentication methods that are used within tunneled EAP methods are commonl
 **EAP-Transport Layer Security (EAP-TLS)**: [Standards-based](https://datatracker.ietf.org/doc/html/rfc5216) EAP method that uses TLS with certificates for mutual authentication. Appears as **Smart Card or other Certificate (EAP-TLS)** in Windows. EAP-TLS can be deployed as an **inner method** for another EAP method or as a standalone EAP method.
 
 > [!TIP]
-> EAP methods that use EAP-TLS, being certificate-based, generally offer the highest level of security. For example, EAP-TLS is the only allowed EAP method for WPA3-Enterprise 192-bit mode.
+> EAP methods that use EAP-TLS, being certificate-based, generally offer the highest level of security. For example, EAP-TLS is the only allowed EAP method for [WPA3-Enterprise 192-bit mode](#wpa3-enterprise-192-bit-mode).
 
 **EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (EAP-MSCHAP v2)**: [Microsoft-defined](/openspecs/windows_protocols/ms-chap) EAP method that encapsulates the [MSCHAP v2 authentication protocol](https://www.ietf.org/rfc/rfc2759.txt), which uses username and password, for authentication. Appears as **Secure password (EAP-MSCHAP v2)** in Windows. EAP-MSCHAPv2 can be used as a standalone method for VPN, but only as an **inner method** for wired/wireless.
 
@@ -173,7 +173,7 @@ The EAP-TTLS settings in the UI map to [EapTtlsConnectionPropertiesV1](/openspec
 
 ## [TEAP](#tab/teap)
 
-The TEAP settings in the UI map to [EapTeapConnectionPropertiesV1](/openspecs/windows_protocols/ms-gpwl/94cf6896-c28e-4865-b12a-d83ee38cd3ea). TEAP is available in Windows 10, version 2004 (build 19041) and Windows Server 2022.
+The TEAP settings in the UI map to [EapTeapConnectionPropertiesV1](/openspecs/windows_protocols/ms-gpwl/94cf6896-c28e-4865-b12a-d83ee38cd3ea). TEAP is available starting in Windows 10, version 2004 (build 19041) and Windows Server 2022.
 
 |Setting|XML element|Description|
 |--|--|--|
@@ -191,13 +191,13 @@ Many EAP methods include an option for the client to validate the server's certi
 > [!NOTE]
 > Windows requires the server certificate have the **Server Authentication** EKU. The object identifier (OID) for this EKU is `1.3.6.1.5.5.7.3.1`.
 
-The following table lists the server validation options applicable to each EAP method.
+The following table lists the server validation options applicable to each EAP method. Windows 11 updated the server validation logic to be more consistent (see [Updated server certificate validation behavior in Windows 11](windows-11-changes.md#updated-server-certificate-validation-behavior-in-windows-11)). Should they conflict, the descriptions in the following table describe the behavior for Windows 10 and earlier.
 
 |Setting|XML element|Description|
 |--|--|--|
 |**Verify the server's identity by validating the certificate**|EAP-TLS:<br>[PerformServerValidation](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-performservervalidation-peapextensionstype-element)<br><br>PEAP:<br>[PerformServerValidation](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-performservervalidation-peapextensionstype-element)|This item specifies that the client verifies that server certificates presented to the client computer have the correct signatures, haven't expired, and were issued by a trusted root certification authority (CA).<p> **Disabling this check box causes client computers to be unable to verify the identity of your servers during the authentication process. If server authentication does not occur, users are exposed to severe security risks, including the possibility that users might unknowingly connect to a rogue network.**|
-|**Connect to these servers**|EAP-TLS:<br>[ServerValidation](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [ServerNames](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-servernames-servervalidationparameters-element)<br><br>PEAP:<br>[ServerValidation](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [ServerNames](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-servernames-servervalidationparameters-element)<br><br>EAP-TTLS:<br>**ServerValidation** ><br>**ServerNames**<br><br>TEAP:<br>**ServerValidation** ><br>**ServerNames**<br>|Allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization.<p> You must type the name **exactly** as it appears in the **subject** field of each RADIUS server certificate or use regular expressions to specify the server name.<p> The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one `*` in the string specified. For example, you can specify `nps.*\.example\.com` to specify the RADIUS server `nps1.example.com` or `nps2.example.com`.<p> You can also include a `;` to separate multiple servers.<p> **If no RADIUS servers are specified, the client verifies that the RADIUS server certificate was issued by a trusted root CA.**|
-|**Trusted Root Certification Authorities**|EAP-TLS:<br>[ServerValidation](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [TrustedRootCA](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-trustedrootca-servervalidationparameters-element)<br><br>PEAP:<br>[ServerValidation](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [TrustedRootCA](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-trustedrootca-servervalidationparameters-element)<br><br>EAP-TTLS:<br>**ServerValidation** ><br> **TrustedRootCAHashes**<br><br>TEAP:<br>**ServerValidation** ><br> **TrustedRootCAHashes**|Lists the trusted root certification authorities. The list is built from the trusted root CAs that are installed in the computer and in the user certificate stores. You can specify which trusted root CA certificates supplicants use to determine whether they trust your servers, such as your server running Network Policy Server (NPS) or your provisioning server. If no trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by an installed trusted root CA. If one or multiple trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by a selected trusted root CA. <p> **If no trusted root CAs are selected, the client verifies that the RADIUS server certificate was issued by a trusted root CA.** <p> If you have a public key infrastructure (PKI) on your network, and you use your CA to issue certificates to your RADIUS servers, your CA certificate is automatically added to the list of trusted root CAs. You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Microsoft trusted root CAs provide software with your purchased certificate that automatically installs the purchased certificate into the **Trusted Root Certification Authorities** certificate store. In this case, the trusted root CA automatically appears in the list of trusted root CAs.<p> Don't specify a trusted root CA certificate that isn't already listed in client computers' **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**. If you designate a certificate that isn't installed on client computers, authentication will fail.<p> In XML, this is the SHA-1 thumbprint (hash) of the certificate (or SHA-256 for TEAP).|
+|**Connect to these servers**|EAP-TLS:<br>[ServerValidation](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [ServerNames](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-servernames-servervalidationparameters-element)<br><br>PEAP:<br>[ServerValidation](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [ServerNames](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-servernames-servervalidationparameters-element)<br><br>EAP-TTLS:<br>**ServerValidation** ><br>**ServerNames**<br><br>TEAP:<br>**ServerValidation** ><br>**ServerNames**<br>|Allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization.<p> You must type the name **exactly** as it appears in the **subject** field of each RADIUS server certificate or use regular expressions (regex) to specify the server name.<p> The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one `*` in the string specified. For example, you can specify `nps.*\.example\.com` to specify the RADIUS server `nps1.example.com` or `nps2.example.com`.<p> You can also include a `;` to separate multiple servers.<p> **If no RADIUS servers are specified, the client only verifies that the RADIUS server certificate was issued by a trusted root CA.**|
+|**Trusted Root Certification Authorities**|EAP-TLS:<br>[ServerValidation](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [TrustedRootCA](/windows/win32/eaphost/eaptlsconnectionpropertiesv1schema-trustedrootca-servervalidationparameters-element)<br><br>PEAP:<br>[ServerValidation](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-servervalidation-eaptype-element) **>** [TrustedRootCA](/windows/win32/eaphost/mspeapconnectionpropertiesv1schema-trustedrootca-servervalidationparameters-element)<br><br>EAP-TTLS:<br>**ServerValidation** ><br> **TrustedRootCAHashes**<br><br>TEAP:<br>**ServerValidation** ><br> **TrustedRootCAHashes**|Lists the trusted root certification authorities. The list is built from the trusted root CAs that are installed in the computer and in the user certificate stores. You can specify which trusted root CA certificates supplicants use to determine whether they trust your servers, such as your server running Network Policy Server (NPS) or your provisioning server. If no trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by an installed trusted root CA. If one or multiple trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by a selected trusted root CA. <p> **If no trusted root CAs are selected, the client verifies that the RADIUS server certificate was issued by any trusted root CA.** <p> If you have a public key infrastructure (PKI) on your network, and you use your CA to issue certificates to your RADIUS servers, your CA certificate is automatically added to the list of trusted root CAs. You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Microsoft trusted root CAs provide software with your purchased certificate that automatically installs the purchased certificate into the **Trusted Root Certification Authorities** certificate store. In this case, the trusted root CA automatically appears in the list of trusted root CAs.<p> Don't specify a trusted root CA certificate that isn't already listed in client computers' **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**. If you designate a certificate that isn't installed on client computers, authentication will fail.<p> In XML, this is the SHA-1 thumbprint (hash) of the certificate (or SHA-256 for TEAP).|
 
 ### Server validation user prompt
 
@@ -242,7 +242,7 @@ Specifies, when not selected, that if server certificate validation fails due to
 
 |Setting|XML element|
 |--|--|
-|**Don't prompt user if unable to authorize server**|**ServerValidation** ><br> **DisablePrompt**|
+|**Don't prompt user if unable to authorize server**|**ServerValidation** > **DisablePrompt**|
 
 Specifies, when not selected, that if server certificate validation fails due to any of the following reasons, the user is prompted to accept or reject the server:
 
@@ -303,6 +303,42 @@ The EAP-AKA' settings in the UI map to [EapAkaPrimeConnectionPropertiesV1](/open
 | **Enable Fast Reauthentication** | **EnableFastReauth** | Specifies that fast reauthentication is enabled. Fast Reauthentication is useful when SIM authentication happens frequently. The encryption keys that are derived from full authentication are reused. As a result, the SIM algorithm isn't required to run for every authentication attempt, and the number of network operations that result from frequent authentication attempts is reduced. |
 
 ---
+
+## WPA3-Enterprise 192-bit mode
+
+WPA3-Enterprise 192-bit mode is a special mode for WPA3-Enterprise that enforces certain high security requirements on the wireless connection to provide a minimum of 192 bits of security. These requirements align with the [Commercial National Security Algorithm (CNSA) Suite, CNSSP 15](https://www.cnss.gov/CNSS/issuances/Policies.cfm), which is a set of cryptographic algorithms that is approved to protect classified and top secret information by the United States National Security Agency (NSA). 192-bit mode can sometimes be referred to as "Suite B mode," which is a reference to the NSA Suite B Cryptography specification, which was replaced by CNSA in 2016.
+
+Both WPA3-Enterprise and WPA3-Enterprise 192-bit mode are available starting in Windows 10, version 2004 (build 19041) and Windows Server 2022. However, WPA3-Enterprise was singled out as a separate authentication algorithm in Windows 11. In XML, this is specified in the [authEncryption](/windows/win32/nativewifi/wlan-profileschema-authencryption-security-element) element.
+
+The following table lists the algorithms required by the CNSA Suite.
+
+| Algorithm | Description | Parameters |
+| --- | --- | --- |
+| Advanced Encryption Standard (AES) | Symmetric block cipher used for encryption | 256-bit key (AES-256) |
+| Elliptic Curve Diffie-Hellman (ECDH) Key Exchange | Asymmetric algorithm used to establish a shared secret (key) | 384-bit prime modulus curve (P-384) |
+| Elliptic Curve Digital Signature Algorithm (ECDSA) | Asymmetric algorithm used for digital signatures | 384-bit prime modulus curve (P-384) |
+| Secure Hash Algorithm (SHA) | Cryptographic hash function | SHA-384 |
+| Diffie-Hellman (DH) Key Exchange | Asymmetric algorithm used to establish a shared secret (key) | 3072-bit modulus |
+| Rivest-Shamir-Adleman (RSA) | Asymmetric algorithm used for digital signatures or key-establishment | 3072-bit modulus |
+
+Aligning with CNSA, WPA3-Enterprise 192-bit mode requires that EAP-TLS is used with the following cipher suites with restrictions:
+
+- `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`
+  - ECDHE and ECDSA using the 384-bit prime modulus curve P-384
+- `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384` / `TLS_DHE_RSA_AES_256_GCM_SHA384`
+  - ECDHE using the 384-bit prime modulus curve P-384
+  - RSA >= 3072-bit modulus
+
+> [!NOTE]
+> P-384 is also known as `secp384r1` or `nistp384`. Other elliptic curves, such as P-521 are not permitted.
+>
+> SHA-384 is in the SHA-2 family of hash functions. Other algorithms and variants, such as SHA-512 or SHA3-384, are not permitted.
+
+Windows supports only the `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384` cipher suites for WPA3-Enterprise 192-bit mode. The `TLS_DHE_RSA_AES_256_GCM_SHA384` cipher suite isn't supported.
+
+TLS 1.3 uses new simplified TLS suites, of which only `TLS_AES_256_GCM_SHA384` is compatible with WPA3-Enterprise 192-bit mode. As TLS 1.3 requires (EC)DHE and allows ECDSA or RSA certificates, along with the AES-256 AEAD and SHA384 hash, `TLS_AES_256_GCM_SHA384` is equivalent to `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`. However, [RFC 8446](https://www.rfc-editor.org/rfc/rfc8446) requires that TLS 1.3-compliant applications support P-256, which is forbidden by CNSA. Therefore, WPA3-Enterprise 192-bit mode can't be fully compliant with TLS 1.3. However, there are no known interoperability issues with TLS 1.3 and WPA3-Enterprise 192-bit mode.
+
+To configure a network for WPA3-Enterprise 192-bit mode, Windows requires EAP-TLS be used with a certificate that meets the requirements described previously.
 
 ## Additional resources
 
