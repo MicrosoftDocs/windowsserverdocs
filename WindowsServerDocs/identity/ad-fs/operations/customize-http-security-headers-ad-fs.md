@@ -31,7 +31,7 @@ The following scenarios demonstrate the need admins might have to customize secu
 - An administrator needs to enable [Cross Origin Resource Sharing (CORS)](#cross-origin-resource-sharing-cors-headers), and they need to set the origin (domain) on AD FS to allow a single page application to access a web API with another domain.
 - An Administrator enabled the [Content Security Policy (CSP)](#content-security-policy-csp) header to prevent cross site scripting and data injection attacks by disallowing any cross-domain requests. However, due to a new business requirement they need to customize the header to allow web page to load images from any origin and restrict media to trusted providers.
 
-## HTTP Security Response Headers
+## HTTP security response headers
 
 AD FS includes the response headers in the outgoing HTTP response sent a web browser. You can list the headers by using the **Get-AdfsResponseHeaders** cmdlet as shown in the following screenshot.
 
@@ -52,7 +52,7 @@ All AD FS endpoints for web authentication traffic are opened exclusively over H
 - **max-age=&lt;expire-time&gt;**. The expiry time (in seconds) specifies how long the site should only be accessed using HTTPS. The default and recommended value is 31536000 seconds (one year).
 - **includeSubDomains**. This parameter is optional. If specified, the HSTS rule applies to all subdomains as well.
 
-#### HSTS Customization
+#### HSTS customization
 
 By default, the header is enabled and `max-age` is set to one year; however, administrators can modify the `max-age` (lowering max-age value isn't recommended) or enable HSTS for subdomains through the **Set-AdfsResponseHeaders** cmdlet.
 
@@ -84,7 +84,7 @@ This HTTP security response header is used to communicate to the browser whether
 - **sameorigin**. The page is only displayed in the frame if the origin is the same as the origin of the web page. The option isn't useful unless all ancestors are also in the same origin.
 - **allow-from \<specified origin>**. The page is only displayed in the frame if the origin (for example, `https://www.".com`) matches the specific origin in the header. Some browsers might not support this option.
 
-#### X-Frame-Options Customization
+#### X-Frame-Options customization
 
 By default, the header is set to deny; however, admins can modify the value through the **Set-AdfsResponseHeaders** cmdlet.
 
@@ -112,7 +112,7 @@ This HTTP security response header is used to stop web pages from loading when b
 - **1** enables XSS filtering. If an XSS attack is detected, the browser sanitizes the page.
 - **1; mode=block** enables XSS filtering. If an XSS attack is detected, the browser prevents rendering of the page. This setting is the default and recommended setting.
 
-#### X-XSS-Protection Customization
+#### X-XSS-Protection customization
 
 By default, the header is set to **1; mode=block;**. However, administrators can modify the value through the **Set-AdfsResponseHeaders** cmdlet.
 
@@ -179,7 +179,7 @@ Set-AdfsResponseHeaders -CORSTrustedOrigins https://example1.com,https://example
 
 This HTTP security response header is used to prevent cross-site scripting, clickjacking, and other data injection attacks by preventing browsers from inadvertently executing malicious content. Browsers that don't support Content Security Policy (CSP) ignore the CSP response headers.
 
-#### CSP Customization
+#### CSP customization
 
 Customization of the CSP header involves modifying the security policy that defines the resources that the browser is allowed to load for the web page. The default security policy is:
 
@@ -217,7 +217,7 @@ The following sources can be defined for the default-src policy:
 > [!NOTE]
 > AD FS uses JavaScript in the authentication process and therefore enables JavaScript by including 'unsafe-inline' and 'unsafe-eval' sources in default policy.
 
-### Custom Headers
+### Custom headers
 
 In addition to the previously listed security response headers (HSTS, CSP, X-Frame-Options, X-XSS-Protection and CORS), AD FS 2019 enables you to set new headers.
 
