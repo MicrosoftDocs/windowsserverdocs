@@ -108,4 +108,7 @@ With PEAP-TLS and EAP-TLS, clients display a list of all installed certificates 
 - Certificates that don't contain the `Client Authentication` purpose in EKU extensions aren't displayed.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+
 For more information about EAP, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).
+
+For more information about troubleshooting certificate issues with NPS, see [Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS](/troubleshoot/windows-server/networking/certificate-requirements-eap-tls-peap)
