@@ -25,15 +25,15 @@ You also can exclude specific IP addresses that you do not want clients to use.
 
 ### Define your dynamic IP address range
 
-When you define your IP address range for each scope use the full range of consecutive IP addresses that make up the local subnet of your DHCP service. As a best practice, you want to establish the entire range of addresses and then identify the static IPs within your range. You then can identify which of the remaining IPs are available for DHCP clients to lease. 
+When you define your IP address range for each scope use the full range of consecutive IP addresses that make up the local subnet of your DHCP service. As a best practice, you want to establish the entire range of addresses before identifying the static IPs within your range. You then can identify which of the remaining IPs are available for DHCP clients to lease.
 
 ### Static IP addresses
 
-Before you begin, be sure to record the router’s IP address. This is the default gateway value. A best practice is to choose either the first or the last address in the static IP address range.
-
 Your network includes servers, routers, switches, printers, and other devices that may require static IP addresses. Make a list of these devices while adding additional placeholder addresses for use as your needs expand.
 
-If there are any IP addresses you wish to prevent clients from using, make a list of these so that you optionally can enter them manually later in the DHCP server Management Console as part of creating a new DHCP scope. See []() for more information on configuring DHCP server new scope settings. Otherwise, you can establish the range of static IPs, including unused addresses to retain as your network inevitably grows. 
+Before you begin recording static IP addresses, be sure to record the router’s IP address. This is the default gateway value. A best practice is to choose either the first or the last address in the static IP address range.
+
+If there are any IP addresses you wish to prevent clients from using, make a list of these also so that you optionally can enter them manually later in the DHCP server Management Console as part of creating a new DHCP scope. See []() for more information on configuring DHCP server new scope settings. Otherwise, you can establish the range of static IPs, including unused addresses to retain as your network inevitably grows. 
 
 ## Related links
 
