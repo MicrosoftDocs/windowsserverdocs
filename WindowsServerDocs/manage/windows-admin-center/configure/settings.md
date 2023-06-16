@@ -38,7 +38,7 @@ Development settings in Windows Admin Center consist of the following sections:
 
 The **Advanced** tab gives Windows Admin Center extension developers additional capabilities.
 
-THe **Performance profile** tab lets you collect performance data about your Windows Admin Center session.
+The **Performance profile** tab lets you collect performance data about your Windows Admin Center session.
 
 ## Gateway settings
 
