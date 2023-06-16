@@ -1,7 +1,7 @@
 ---
-title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts
-description: Learn about performance counters you can use to diagnose app performance problems, such as your app running slowly, on RDSH.
-ms.author: elizapo
+title: Use performance counters to diagnose application responsiveness problems on Remote Desktop session hosts
+description: Learn about performance counters you can use to diagnose app performance problems, such as an app running slowly, on Remoste Desktop sessions.
+ms.author: wscontent
 ms.date: 05/31/2023
 ms.topic: article
 author: lizap
@@ -10,7 +10,7 @@ manager: dougkim
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10
+> Applies to: Windows Server 2022, Windows Server 2019, Windows 10
 
 Poor application performance is one of the most difficult problems to diagnose, especially for slow or nonresponsive applications. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics. You then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This situation makes it difficult to read the data and correlate it with the reported issue.
 
@@ -19,7 +19,7 @@ Poor application performance is one of the most difficult problems to diagnose, 
 > - Windows Server 2019 or later
 > - Windows 10, version 1809 or later
 
-The User Input Delay counter can help you quickly identify the root cause for bad end user Remote Desktop Performance (RDP) experiences. This counter measures how long any user input, such as mouse or keyboard usage, stays in the queue before a process picks it up. The counter works in both local and remote sessions.
+The User Input Delay counter can help you quickly identify the root cause for bad end user Remote Desktop performance experiences. This counter measures how long any user input, such as mouse or keyboard usage, stays in the queue before a process picks it up. The counter works in both local and remote sessions.
 
 The following image shows a rough representation of user input flow from client to application.
 
@@ -85,7 +85,7 @@ This table shows a visual example of these instances. You can get the same infor
 
 ## Counters used in an overloaded system
 
-Now let's look at what you see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the Remote Desktop Session Hosts (RDSH) server performance degrades over time as more users sign in.
+Now let's look at what you see in the report if performance for an app is degraded. The following graph shows readings for users working remotely in Microsoft Word. In this case, the performance degrades over time as more users sign in remotely.
 
 :::image type="content" source="./media/rds-user-input-perf-graph.png" alt-text="Screenshot of an example performance graph for the RDSH server running Microsoft Word.":::
 
