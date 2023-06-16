@@ -5,7 +5,7 @@ description: Learn more about AD FS Extranet Lockout and Extranet Smart Lockout 
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 06/15/2023
+ms.date: 06/16/2023
 ms.topic: article
 ---
 
@@ -21,8 +21,8 @@ ESL is only available for username and password authentication requests that com
 
 Extranet Smart Lockout in AD FS 2019 adds the following advantages compared to AD FS 2016:
 
-- Independent lockout thresholds for familiar and unfamiliar locations so that users in known good locations can have more room for error than requests from suspicious locations.
-- Audit mode for smart lockout while continuing to enforce previous soft lockout behavior. This distinction lets you learn about user-familiar locations and still be protected by the extranet lockout feature that's available from AD FS 2012R2.
+- Independent lockout thresholds for familiar and unfamiliar locations. Users in known good locations can have more room for error than requests from suspicious locations.
+- Audit mode for smart lockout while continuing to enforce previous soft lockout behavior. This distinction lets you learn about user-familiar locations and still be protected by the extranet lockout feature that's available from AD FS 2012 R2.
 
 ### Configuration information
 
@@ -38,9 +38,9 @@ All secondary nodes contact the primary node on each fresh sign-in through Port 
 
 ### Terminology
 
-- **FamiliarLocation**: During an authentication request, ESL checks all presented Internet Protocols (IPs). These IPs are a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. If the request is successful, all the IPs are added to the Account Activity table as “familiar IPs.” If the request has all the IPs present in the “familiar IPs,” the request is treated as a “Familiar” location.
+- **FamiliarLocation**: During an authentication request, ESL checks all presented Internet Protocols (IPs). These IPs are a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. If the request is successful, all the IPs are added to the Account Activity table as “familiar IPs.” If the request has all the IPs present in the “familiar IPs,” the request is treated as a “familiar” location.
 - **UnknownLocation**: If a request that comes in has at least one IP not present in the existing **FamiliarLocation** list, then the request is treated as an “Unknown” location. This action handles proxying scenarios such as Exchange Online legacy authentication where Exchange Online addresses handle both successful and failed requests.
-- **badPwdCount**: A value representing the number of times an incorrect password was submitted, and the authentication was unsuccessful. For each user, separate counters are kept for Familiar Locations and Unknown Locations.
+- **badPwdCount**: A value representing the number of times an incorrect password was submitted, and the authentication was unsuccessful. For each user, separate counters are kept for familiar locations and unknown locations.
 - **UnknownLockout**: A boolean value per user if the user is locked out from accessing from unknown locations. This value is calculated based on the **badPwdCountUnfamiliar** and **ExtranetLockoutThreshold** values.
 - **ExtranetLockoutThreshold**: This value determines the maximum number of bad password attempts. When the threshold is reached, AD FS rejects requests from the extranet until the observation window has passed.
 - **ExtranetObservationWindow**: This value determines the duration that username and password requests from unknown locations are locked out. When the window has passed, AD FS starts to perform username and password authentication from unknown locations again.
@@ -55,7 +55,7 @@ IPv4 and IPv6 addresses are supported.
 
 - **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs are a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the ```<IpAddress>``` field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
 
-  Based on these IPs, AD FS determines if the request is from a familiar location and then checks if the respective **badPwdCount** is less than the set threshold limit or if the last **failed** attempt happened longer than the observation window time frame. If one of these conditions is true, AD FS allows this transaction for further processing and credential validation. If both conditions are false, the account is already in a locked out state until the observation window passes. After the observation window passes, the user is allowed one attempt to authenticate. In Windows Server 2019, AD FS checks against the appropriate threshold limit based on if the IP address matches a familiar location.
+  Based on these IPs, AD FS determines if the request is from a familiar location and then checks if the respective **badPwdCount** is less than the set threshold limit or if the last failed attempt happened longer than the observation window time frame. If one of these conditions is true, AD FS allows this transaction for further processing and credential validation. If both conditions are false, the account is already in a locked out state until the observation window passes. After the observation window passes, the user is allowed one attempt to authenticate. In Windows Server 2019, AD FS checks against the appropriate threshold limit based on if the IP address matches a familiar location.
 - **Successful Login**: If the login succeeds, then the IPs from the request are added to the user's familiar location IP list.
 - **Failed Login**: If the login fails, the **badPwdCount** is increased. The user goes into a lockout state if the attacker sends more bad passwords to the system than the threshold allows. (badPwdCount > ExtranetLockoutThreshold)
 
@@ -78,17 +78,17 @@ The following sections describe the prerequisites and configurations for enablin
 
 ### Prerequisites for AD FS 2016
 
-1. **Install updates on all nodes in the farm**
+1. Install updates on all nodes in the farm.
 
    First, ensure all Windows Server 2016 AD FS servers are up to date as of the June 2018 Windows Updates and that the AD FS 2016 farm runs at the 2016 farm behavior level.
 
-1. **Verify Permissions**
+1. Verify Permissions.
 
    ESL requires that Windows Remote management is enabled on every AD FS server.
 
-1. **Update artifact database permissions**
+1. Update artifact database permissions.
 
-   ESL requires the AD FS service account to have permissions to create a new table in the AD FS artifact database. Sign in to any AD FS server as an AD FS admin. Then grant this permission in a PowerShell Command Prompt window by executing the following commands:
+   ESL requires the AD FS service account to have permissions to create a new table in the AD FS artifact database. Sign in to any AD FS server as an AD FS admin. Then grant this permission in a PowerShell Command Prompt window by running the following commands:
 
    ```powershell
    PS C:\>$cred = Get-Credential
@@ -150,7 +150,7 @@ This feature makes use of Security Audit logs, so auditing must be enabled in AD
 
 ### Configuration Instructions
 
-ESL uses the AD FS property **ExtranetLockoutEnabled**. This property was previously used to control Extranet Soft Lockout in Server 2012R2. If ESL is enabled, and you want to view the current property configuration, run `Get-AdfsProperties`.
+ESL uses the AD FS property **ExtranetLockoutEnabled**. This property was previously used to control Extranet Soft Lockout in Server 2012 R2. If ESL is enabled, and you want to view the current property configuration, run `Get-AdfsProperties`.
 
 ### Configuration Recommendations
 
@@ -160,9 +160,9 @@ When configuring ESL, follow best practices for setting thresholds:
 
 `ExtranetLockoutThreshold: Half of AD Threshold Value`
 
-AD value: 20, ExtranetLockoutThreshold: 10
+`AD value: 20, ExtranetLockoutThreshold: 10`
 
-Active Directory lockout works independently from ESL. However, if Active Directory lockout is enabled, **ExtranetLockoutThreshold** in AD FS < Account Lockout Threshold in AD.
+Active Directory lockout works independently from ESL. However, if Active Directory lockout is enabled, select **ExtranetLockoutThreshold** in AD FS and **Account Lockout Threshold** in AD.
 
 `ExtranetLockoutRequirePDC - $false`
 
@@ -176,26 +176,26 @@ Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -Ex
 
 ### Enable Log-Only Mode
 
-In **Log-Only** mode, AD FS populates users familiar location information and writes security audit events but doesn't block any requests. This mode is used to validate that smart lockout is running and to enable AD FS to “learn” familiar locations for users before enabling **Enforce** mode. As AD FS learns, it stores sign-in activity per user (whether in **Log-Only** mode or **Enforce** mode).
-Set the lockout behavior to **Log-Only** by running the following commandlet:
+In **Log-Only** mode, AD FS populates a user's familiar location information and writes security audit events but doesn't block any requests. This mode is used to validate that smart lockout is running and to enable AD FS to “learn” familiar locations for users before enabling **Enforce** mode. As AD FS learns, it stores sign-in activity per user (whether in **Log-Only** mode or **Enforce** mode).
+Set the lockout behavior to **Log-Only** by running the following cmdlet:
 
 `Set-AdfsProperties -ExtranetLockoutMode AdfsSmartlockoutLogOnly`
 
-**Log-Only** mode is intended to be a temporary state so that the system can learn sign-in behavior prior to introducing lockout enforcement with the smart lockout behavior. The recommended duration for **Log-Only** mode is 3-7 days. If accounts are actively under attack, **Log-Only** mode must be run for a minimum of 24 hours.
+**Log-Only** mode is intended to be a temporary state so that the system can learn sign-in behavior prior to introducing lockout enforcement with the smart lockout behavior. The recommended duration for **Log-Only** mode is 3-7 days. If accounts are actively under attack, **Log-Only** mode must run for a minimum of 24 hours.
 
-On AD FS 2016, if 2012R2 Extranet Soft Lockout behavior is enabled prior to enabling Extranet Smart Lockout, **Log-Only** mode disables the Extranet Soft Lockout behavior. AD FS Smart Lockout doesn't lock out users in **Log-Only** mode. However, on-premises AD might lock out the user based on the AD configuration. Review AD Lockout policies to learn how on-premises AD can lock out users.
+On AD FS 2016, if 2012 R2 Extranet Soft Lockout behavior is enabled prior to enabling Extranet Smart Lockout, **Log-Only** mode disables the Extranet Soft Lockout behavior. AD FS Smart Lockout doesn't lock out users in **Log-Only** mode. However, on-premises AD might lock out the user based on the AD configuration. Review AD Lockout policies to learn how on-premises AD can lock out users.
 
 On AD FS 2019, another advantage is to be able to enable **Log-Only** mode for smart lockout while continuing to enforce the previous soft lockout behavior by using the below PowerShell:
 
 `Set-AdfsProperties -ExtranetLockoutMode 3`
 
-For the new mode to take effect, restart the AD FS service on all nodes in the farm.
+For the new mode to take effect, restart the AD FS service on all nodes in the farm by using:
 
-`Restart-service adfssrv`
+   `Restart-service adfssrv`
 
 Once the mode is configured, you can enable smart lockout by using the **EnableExtranetLockout** parameter:
 
-`Set-AdfsProperties -EnableExtranetLockout $true`
+   `Set-AdfsProperties -EnableExtranetLockout $true`
 
 ### Enable Enforce Mode
 
@@ -212,13 +212,13 @@ For the new mode to take effect, restart the AD FS service on all nodes in the f
 AD FS provides three cmdlets to manage account activity data. These cmdlets automatically connect to the node in the farm that holds the primary role.
 
 > [!NOTE]
-> You can use Just Enough Administration (JEA) to delegate AD FS commandlets to reset account lockouts. For example, you can delegate permissions to Help Desk personnel to use ESL commandlets. For more information, see [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
+> You can use Just Enough Administration (JEA) to delegate AD FS commandlets to reset account lockouts. For example, you can delegate permissions to Help Desk personnel to use ESL commandlets. For more information, see [Delegate AD FS Powershell commandlet access to nonadmin Users](delegate-ad-fs-pshell-access.md)
 
 You can override this behavior by passing the `-Server` parameter.
 
 ### Get-ADFSAccountActivity -UserPrincipalName
 
-Read the current account activity for a user account. The cmdlet always automatically connects to the farm primary node by using the Account Activity REST endpoint. Therefore, all data should always be consistent.
+ The cmdlet automatically connects to the farm primary node by using the Account Activity REST endpoint. Therefore, all data should always be consistent. Read the current account activity for a user account by using:
 
 `Get-ADFSAccountActivity user@contoso.com`
 
@@ -234,13 +234,13 @@ Properties:
 
 ### Set-ADFSAccountActivity
 
-`Set-ADFSAccountActivity` adds new familiar locations. The familiar IP list has a maximum of 20 entries. If 20 entries are exceeded, the oldest IP in the list is removed.
+**Set-ADFSAccountActivity** adds new familiar locations. The familiar IP list has a maximum of 20 entries. If 20 entries are exceeded, the oldest IP in the list is removed.
 
 `Set-ADFSAccountActivity user@contoso.com -AdditionalFamiliarIps “1.2.3.4”`
 
 ### Reset-ADFSAccountLockout
 
-Resets the lockout counter for a user account for each Familiar location (**badPwdCountFamiliar**) or Unfamiliar Location counters (**badPwdCountUnfamiliar**). When you reset a counter, the **FamiliarLockout** or **UnfamiliarLockout** value updates, as the reset counter is less than the threshold.
+Resets the lockout counter for a user account for each Familiar location (**badPwdCountFamiliar**) or Unfamiliar Location counter (**badPwdCountUnfamiliar**). When you reset a counter, the **FamiliarLockout** or **UnfamiliarLockout** value updates, as the reset counter is less than the threshold.
 
 `Reset-ADFSAccountLockout user@contoso.com -Location Familiar`
 
@@ -265,7 +265,7 @@ AD FS writes extranet lockout events to the security audit log when:
 - A user is locked out, meaning that user reaches the lockout threshold for unsuccessful sign-in attempts.
 - AD FS receives a sign-in attempt for a user who is already in a lockout state.
 
-While in **Log-Only** mode, you can check the security audit log for lockout events. For any events found, you can check the user state by using the `Get-ADFSAccountActivity` cmdlet to determine if the lockout occurred from familiar or unfamiliar IP addresses. You can also use the `Get-ADFSAccountActivity` cmdlet to doublecheck the list of familiar IP addresses for that user.
+While in **Log-Only** mode, you can check the security audit log for lockout events. For any events found, you can check the user state by using the `Get-ADFSAccountActivity` cmdlet to determine if the lockout occurred from familiar or unfamiliar IP addresses. You can also use the `Get-ADFSAccountActivity` cmdlet to double check the list of familiar IP addresses for that user.
 
 |Event ID|Description|
 |-----|-----|
@@ -286,7 +286,7 @@ A: If AD FS Smart Lockout is set to **Enforce** mode, then you never see the leg
 
 **What happens if ESL is enabled and the bad actor has a user's password?**
 
-A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature doesn't block the access since the sign-in meets successful criteria of a correct password plus new IP. The bad actors IP would then appear as a familiar one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require Multi Factor Authentication for the users. You should install Azure AD Password Protection to ensure guessable passwords don't get into the system.
+A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature doesn't block the access since the sign-in meets successful criteria of a correct password plus new IP. The bad actors IP would then appear as a familiar one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require multi factor authentication for the users. You should install Azure AD Password Protection to ensure guessable passwords don't get into the system.
 
 **If my user has never signed in successfully from an IP and then tries with a wrong password a few times, will they be able to sign in once they finally type their password correctly?**
 
