@@ -3,7 +3,7 @@ ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Smart Lockout Protection
 description: Learn more about AD FS Extranet Lockout and Extranet Smart Lockout to protect your users from experiencing extranet account lockout from malicious activity.
 author: billmath
-ms.author: billmath
+ms.author: wscontent
 manager: amycolannino
 ms.date: 06/16/2023
 ms.topic: article
@@ -34,7 +34,7 @@ All secondary nodes contact the primary node on each fresh sign-in through Port 
 
 :::image type="content" source="media/configure-ad-fs-extranet-smart-lockout-protection/esl1.png" alt-text="Diagram showing the sign-in process between primary nodes, secondary nodes, and the client.":::
 
- If the secondary node can't contact the primary node, the secondary node writes error events into the AD FS admin log. Authentications continue to be processed, but AD FS only writes the updated state locally. AD FS retries contacting the primary node every 10 minutes. AD FS switches back to the primary node once the primary node is available.
+If the secondary node can't contact the primary node, the secondary node writes error events into the AD FS admin log. Authentications continue to be processed, but AD FS only writes the updated state locally. AD FS retries contacting the primary node every 10 minutes. AD FS switches back to the primary node once the primary node is available.
 
 ### Terminology
 
@@ -53,7 +53,7 @@ IPv4 and IPv6 addresses are supported.
 
 ### Anatomy of a transaction
 
-- **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs are a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the ```<IpAddress>``` field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
+- **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs are a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the `<IpAddress>` field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
 
   Based on these IPs, AD FS determines if the request is from a familiar location and then checks if the respective **badPwdCount** is less than the set threshold limit or if the last failed attempt happened longer than the observation window time frame. If one of these conditions is true, AD FS allows this transaction for further processing and credential validation. If both conditions are false, the account is already in a locked out state until the observation window passes. After the observation window passes, the user is allowed one attempt to authenticate. In Windows Server 2019, AD FS checks against the appropriate threshold limit based on if the IP address matches a familiar location.
 - **Successful Login**: If the login succeeds, then the IPs from the request are added to the user's familiar location IP list.
@@ -171,7 +171,7 @@ When enabled, extranet lockout requires a primary domain controller (PDC). When 
 To set this property run:
 
 ``` powershell
-Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (new-timespan -Minutes 30) -ExtranetLockoutRequirePDC $false
+Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow (New-TimeSpan -Minutes 30) -ExtranetLockoutRequirePDC $false
 ```
 
 ### Enable Log-Only Mode
@@ -212,13 +212,13 @@ For the new mode to take effect, restart the AD FS service on all nodes in the f
 AD FS provides three cmdlets to manage account activity data. These cmdlets automatically connect to the node in the farm that holds the primary role.
 
 > [!NOTE]
-> You can use Just Enough Administration (JEA) to delegate AD FS commandlets to reset account lockouts. For example, you can delegate permissions to Help Desk personnel to use ESL commandlets. For more information, see [Delegate AD FS Powershell commandlet access to nonadmin Users](delegate-ad-fs-pshell-access.md)
+> You can use Just Enough Administration (JEA) to delegate AD FS commandlets to reset account lockouts. For example, you can delegate permissions to Help Desk personnel to use ESL commandlets. For more information, see [Delegate AD FS Powershell commandlet access to nonadmin Users](delegate-ad-fs-pshell-access.md).
 
 You can override this behavior by passing the `-Server` parameter.
 
 ### Get-ADFSAccountActivity -UserPrincipalName
 
- The cmdlet automatically connects to the farm primary node by using the Account Activity REST endpoint. Therefore, all data should always be consistent. Read the current account activity for a user account by using:
+The cmdlet automatically connects to the farm primary node by using the Account Activity REST endpoint. Therefore, all data should always be consistent. Read the current account activity for a user account by using:
 
 `Get-ADFSAccountActivity user@contoso.com`
 
@@ -257,7 +257,7 @@ The recommended way to monitor user account activity is through Connect Health. 
 ### AD FS Extranet Smart Lockout events
 
 > [!NOTE]
-> Tto troubleshoot ESL, see [Mitigating password spray attacks and account lockouts](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8).
+> To troubleshoot ESL, see [Mitigating password spray attacks and account lockouts](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8).
 
 For Extranet Smart Lockout events to be written, ESL must be enabled in **Log-Only** or **Enforce** mode, and AD FS security auditing must be enabled.
 AD FS writes extranet lockout events to the security audit log when:
@@ -282,33 +282,31 @@ While in **Log-Only** mode, you can check the security audit log for lockout eve
 
 **Will an AD FS farm that uses Extranet Smart Lockout in Enforce mode ever see malicious user lockouts?**
 
-A: If AD FS Smart Lockout is set to **Enforce** mode, then you never see the legitimate user's account locked out by brute force or denial of service. The only way a malicious account lockout can prevent a user sign-in is if the bad actor has the user password or can send requests from a known good (familiar) IP address for that user.
+If AD FS Smart Lockout is set to **Enforce** mode, then you never see the legitimate user's account locked out by brute force or denial of service. The only way a malicious account lockout can prevent a user sign-in is if the bad actor has the user password or can send requests from a known good (familiar) IP address for that user.
 
 **What happens if ESL is enabled and the bad actor has a user's password?**
 
-A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature doesn't block the access since the sign-in meets successful criteria of a correct password plus new IP. The bad actors IP would then appear as a familiar one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require multi factor authentication for the users. You should install Azure AD Password Protection to ensure guessable passwords don't get into the system.
+The typical goal of the brute force attack scenario is to guess a password and successfully sign in. If a user is phished or if a password is guessed, then the ESL feature doesn't block the access since the sign-in meets successful criteria of a correct password plus new IP. The bad actors IP would then appear as a familiar one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require multi factor authentication for the users. You should install Azure AD Password Protection to ensure guessable passwords don't get into the system.
 
 **If my user has never signed in successfully from an IP and then tries with a wrong password a few times, will they be able to sign in once they finally type their password correctly?**
 
-A: If a user submits multiple bad passwords (for example, by mistyping) and on the following attempt gets the password correct, then the user immediately signs in successfully. This successful sign-in clears the bad password count and adds that IP to the **FamiliarIPs** list. However, if they go above the threshold of failed sign-ins from the unknown location, they enter into lockout state. They must then wait past the observation window and sign in with a valid password. They might require admin intervention to reset their account.
+If a user submits multiple bad passwords (for example, by mistyping) and on the following attempt gets the password correct, then the user immediately signs in successfully. This successful sign-in clears the bad password count and adds that IP to the **FamiliarIPs** list. However, if they go above the threshold of failed sign-ins from the unknown location, they enter into lockout state. They must then wait past the observation window and sign in with a valid password. They might require admin intervention to reset their account.
 
 **Does ESL work on intranet too?**
 
-A: If the clients connect directly to the AD FS servers and not via Web Application Proxy servers, then the ESL behavior doesn't apply.
+If the clients connect directly to the AD FS servers and not via Web Application Proxy servers, then the ESL behavior doesn't apply.
 
 **I'm seeing Microsoft IP addresses in the Client IP field. Does ESL block EXO proxied brute force attacks?**  
 
-A: ESL works well to prevent Exchange Online or other legacy authentication brute force attack scenarios. A legacy authentication has an “Activity ID” of 00000000-0000-0000-0000-000000000000. In these attacks, the bad actor is taking advantage of Exchange Online basic authentication (also known as legacy authentication) so that the client IP address appears as a Microsoft one. The Exchange Online servers in the cloud proxy the authentication verification on behalf of the Outlook client. In these scenarios, the IP address of the malicious submitter is in the x-ms-forwarded-client-ip, and the Microsoft Exchange Online server IP is in the x-ms-client-ip value.
+ESL works well to prevent Exchange Online or other legacy authentication brute force attack scenarios. A legacy authentication has an “Activity ID” of 00000000-0000-0000-0000-000000000000. In these attacks, the bad actor is taking advantage of Exchange Online basic authentication (also known as legacy authentication) so that the client IP address appears as a Microsoft one. The Exchange Online servers in the cloud proxy the authentication verification on behalf of the Outlook client. In these scenarios, the IP address of the malicious submitter is in the x-ms-forwarded-client-ip, and the Microsoft Exchange Online server IP is in the x-ms-client-ip value.
 Extranet Smart Lockout checks network IPs, forwarded IPs, the x-forwarded-client-IP, and the x-ms-client-ip value. If the request is successful, all the IPs are added to the familiar list. If a request comes in, and any of the presented IPs aren't in the familiar list, then the request is marked as unfamiliar. The familiar user is able to sign in successfully while requests from the unfamiliar locations are blocked.
 
 **Can I estimate the size of the ADFSArtifactStore before enabling ESL?**
 
-A: With ESL enabled, AD FS tracks the account activity and known locations for users in the **ADFSArtifactStore** database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the **ADFSArtifactStore** database to grow at a rate of up to 1 GB per 100,000 users. If the AD FS farm uses the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data\. To prevent filling this drive, ensure you have a minimum of 5 GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to 1 GB of RAM for a user population of 500,000 or less.
+With ESL enabled, AD FS tracks the account activity and known locations for users in the **ADFSArtifactStore** database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the **ADFSArtifactStore** database to grow at a rate of up to 1 GB per 100,000 users. If the AD FS farm uses the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data\. To prevent filling this drive, ensure you have a minimum of 5 GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to 1 GB of RAM for a user population of 500,000 or less.
 
 ## See also
 
-[Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
-
-[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
-
-[AD FS Operations](../ad-fs-operations.md)
+- [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
+- [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
+- [AD FS Operations](../ad-fs-operations.md)
