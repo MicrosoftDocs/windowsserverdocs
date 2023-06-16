@@ -24,11 +24,9 @@ As outlined in [XML profiles for EAP](network-access.md#xml-profiles-for-eap), c
 
 An example of a Wi-Fi profile can be found in [this sample](/windows/win32/nativewifi/wpa2-enterprise-with-tls-profile-sample).
 
-### Importing and exporting profiles
+### Importing and exporting profiles with command line tools
 
-### Command-line shell
-
-Importing and exporting profiles using a command-line shell is often the only option for many scenarios. For example, when configuring MDM or Group Policy isn't possible, manually or scripting these commands can be the quickest option.
+Importing and exporting profiles using a command line tool is often the only option for many scenarios. For example, when configuring MDM or Group Policy isn't possible, manually or scripting these commands can be the quickest option.
 
 ### netsh
 
