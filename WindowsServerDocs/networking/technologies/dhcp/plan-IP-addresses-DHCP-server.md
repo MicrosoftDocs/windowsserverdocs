@@ -23,7 +23,7 @@ Each subnet must have its own unique IP address range. The IP address range spec
 
 You also can exclude specific IP addresses that you do not want clients to use. 
 
-### Define your dynamic IP address range
+### Define IP address range
 
 When you define your IP address range for each scope use the full range of consecutive IP addresses that make up the local subnet of your DHCP service. As a best practice, you want to establish the entire range of addresses before identifying the static IPs within your range. You then can identify which of the remaining IPs are available for DHCP clients to lease.
 
