@@ -31,7 +31,7 @@ information about hotpatch for supported VMs, which has the following benefits:
 
 | Operating system | Azure | Azure Stack HCI |
 |--|--|--|
-| Windows Server 2022 Datacenter: Azure Edition Server Core | Generally available (GA) | Preview |
+| Windows Server 2022 Datacenter: Azure Edition Server Core | Generally available (GA) | Generally available (GA) |
 | Windows Server 2022 Datacenter: Azure Edition with Desktop Experience | Preview | Preview |
 
 > [!NOTE]

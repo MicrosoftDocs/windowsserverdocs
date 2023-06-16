@@ -68,7 +68,7 @@ hotpatching. To learn more, see [Hotpatch for new virtual machines](hotpatch.md)
 
 | Operating system | Azure | Azure Stack HCI |
 |--|--|--|
-| Windows Server 2022 Datacenter: Azure Edition (Core) | Generally available (GA) | Public preview |
+| Windows Server 2022 Datacenter: Azure Edition (Core) | Generally available (GA) | Generally available (GA) |
 | Windows Server 2022 Datacenter: Azure Edition (Desktop Experience) | Public preview | Public preview |
 
 > [!NOTE]
