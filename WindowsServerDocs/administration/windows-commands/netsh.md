@@ -43,3 +43,4 @@ netsh [-a <Aliasfile>][-c <Context>][-r <Remotecomputer>][-u [<domainname>\<user
 ## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Network shell (netsh)](/windows-server/networking/technologies/netsh/netsh)
