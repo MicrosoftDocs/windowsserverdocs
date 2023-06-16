@@ -33,7 +33,28 @@ Your network includes servers, routers, switches, printers, and other devices th
 
 Before you begin recording static IP addresses, be sure to record the router’s IP address. This is the default gateway value. A best practice is to choose either the first or the last address in the static IP address range.
 
-If there are any IP addresses you wish to prevent clients from using, make a list of these also so that you optionally can enter them manually later in the DHCP server Management Console as part of creating a new DHCP scope. See []() for more information on configuring DHCP server new scope settings. Otherwise, you can establish the range of static IPs, including unused addresses to retain as your network inevitably grows. 
+If there are any IP addresses you wish to prevent clients from using, make a list of these also so that you optionally can enter them manually later in the DHCP server Management Console as part of creating a new DHCP scope. See []() for more information on configuring DHCP server new scope settings. Otherwise, you can establish the range of static IPs, including unused addresses to retain as your network inevitably grows.
+
+### Exclusion ranges
+
+It might become necessary to manually configure some servers and other devices with static IP addresses from the same IP address range that the DHCP server is using. When you manually configure some servers and other devices with static IP addresses from the same IP address range that the DHCP server is using, it is possible to unintentionally create an IP address conflict in which you and the DHCP server both assign the same IP address to different devices.
+
+To solve this problem, you can create an exclusion range for the DHCP scope. An exclusion range is a contiguous range of IP addresses within the scope's IP address range that the DHCP server is not allowed to use. If you create an exclusion range, the DHCP server won't assign the addresses in that range, allowing you to manually assign these addresses without creating an IP address conflict.
+
+You should use exclusions for all devices that are configured with a static IP address. The excluded addresses should include all IP addresses that you assigned manually to other servers, non-DHCP clients, diskless workstations, or Routing and Remote Access and PPP clients. A simple spreadsheet can assist you in keeping track of your addresses and the purpose of each. 
+
+It is recommended that you configure your exclusion range with extra addresses to accommodate future network growth. The following table provides an example exclusion range for a scope with an IP address range of 10.0.0.1 - 10.0.0.254 and a subnet mask of 255.255.255.0.
+
+|Configuration items|Example values|
+|-----------------------|------------------|
+|Exclusion range Start IP Address|10.0.0.1|
+|Exclusion range End IP Address|10.0.0.25|
+
+## Related links
+
+- [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
+- [DHCP Subnet selection options](/dhcp-subnet-options)
+- []()
 
 ## Related links
 
