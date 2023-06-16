@@ -3,13 +3,13 @@ title: Supported Debian virtual machines on Hyper-V
 description: Learn about the Debian and Linux integration services and features included in each version and known issues and workarounds for each distribution.
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
-ms.author: kkashanjat
+ms.author: wscontent
 author: kkkashan
 ms.date: 06/12/2023
 ---
 # Supported Debian virtual machines on Hyper-V
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+> Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 This article outlines the support offered for Debian virtual machines (VMs) on Hyper-V.
 
@@ -69,7 +69,7 @@ The following feature distribution map indicates the features that are present i
 
 1. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default, and some Linux virtual machines don't boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager**, or you can disable it by using PowerShell:
 
-   ```Powershell
+   ```powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
    ```
 
