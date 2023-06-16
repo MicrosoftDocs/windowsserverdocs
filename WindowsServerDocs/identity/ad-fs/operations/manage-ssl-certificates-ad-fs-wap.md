@@ -20,15 +20,15 @@ This article describes how to deploy a new TLS/SSL certificate to your Active Di
 
 For production AD FS farms, a publicly trusted TLS/SSL certificate is recommended. AD FS obtains this certificate by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are various ways to generate the CSR, including from a Windows 7 or higher PC. Your vendor should have documentation for this process.
 
-- Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
+- Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](/windows-server/identity/ad-fs/overview/ad-fs-requirements#certificate-requirement).
 
 ### Certificates needed
 
-You should use a common TLS/SSL certificate across all AD FS and WAP servers. For detailed requirements, see [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
+You should use a common TLS/SSL certificate across all AD FS and WAP servers. For detailed requirements, see [AD FS and Web Application Proxy TLS/SSL certificate requirements](/windows-server/identity/ad-fs/overview/ad-fs-requirements#certificate-requirement).
 
 ### TLS/SSL certificate requirements
 
-For requirements, including naming root of trust and extensions, see [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
+For requirements, including naming root of trust and extensions, see [AD FS and Web Application Proxy TLS/SSL certificate requirements](/windows-server/identity/ad-fs/overview/ad-fs-requirements#certificate-requirement).
 
 ## Replace the TLS/SSL certificate for AD FS
 
@@ -44,7 +44,7 @@ In this mode, use the PowerShell cmdlet `Set-AdfsSslCertificate` to manage the T
 
 1. First, you need to obtain the new certificate. You can get it by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are various ways to generate the CSR, including from a Windows 7 or higher computer. Your vendor should have documentation for this process.
 
-    - Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
+    * Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](/windows-server/identity/ad-fs/overview/ad-fs-requirements#certificate-requirements)
 
 1. After you get the response from your certificate provider, import it to the local machine store on each AD FS and WAP.
 
@@ -69,7 +69,7 @@ Use the following steps to replace your TLS/SSL certificate for AD FS running in
 
 1. First, you need to obtain the new certificate. You can get it by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are various ways to generate the CSR, including from a Windows 7 or higher computer. Your vendor should have documentation for this process.
 
-    - Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1).
+    - Make sure the certificate meets the [AD FS and Web Application Proxy TLS/SSL certificate requirements](/windows-server/identity/ad-fs/overview/ad-fs-requirements#certificate-requirement).
 
 1. After you get the response from your certificate provider, import it to the local machine store on each AD FS and WAP.
 
