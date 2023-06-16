@@ -78,6 +78,8 @@ This configuration syntax is defined in the [Group Policy: Wireless/Wired Protoc
 >
 > The remainder of the article is intended to provide a mapping between the EAP specific portions of the Group Policy/Control Panel UI and the XML configuration options, as well as providing a description of the setting.
 
+More information about configuring XML profiles can be found in [XML Profiles](configure-eap-profiles.md#xml-profiles). An example of using an XML profile containing EAP settings can be found in [Provision a Wi-Fi profile via a website](/windows/win32/nativewifi/prov-wifi-profile-via-website).
+
 ## Security settings
 
 The following table explains the configurable security settings for a profile that uses 802.1X. These settings map to [OneX](/windows/win32/nativewifi/onexschema-schema).
