@@ -4,8 +4,9 @@ description: This article presents information about the Extensible Authenticati
 author: xelu86
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 06/14/2023
+ms.date: 06/16/2023
 ms.contributor: samyun
+ms.reviewer: samyun
 ---
 
 # Extensible Authentication Protocol (EAP) for network access
@@ -55,12 +56,14 @@ You can access the EAP properties for virtual private network (VPN) connections 
 - Manually configuring VPN connections on client computers.
 - Using Connection Manager Administration Kit (CMAK) to configure VPN connections.
 
+For more information on configuring EAP properties, see [Configuring EAP profiles and settings](configuring-eap-profiles.md).
+
 ## XML profiles for EAP
 
 The profiles used for different connections types are XML files that contain the configuration options for that connection. Each different connection type follows a specific schema:
 
-- [Wi-Fi profiles](/windows/win32/nativewifi/wlan-profileschema-elements)
-- [Wired network profiles](/windows/win32/nativewifi/lan-profileschema-schema)
+- [Wi-Fi (WLAN) profiles](/windows/win32/nativewifi/wlan-profileschema-elements)
+- [Wired network (Ethernet) profiles](/windows/win32/nativewifi/lan-profileschema-schema)
 - [VPN profiles](/windows/client-management/mdm/vpnv2-csp#profilexml-xsd-schema)
 
 However, when configured to use EAP, each profile schema has a child element [EapHostConfig](/windows/win32/eaphost/eaphostconfigschema-schema) element.
