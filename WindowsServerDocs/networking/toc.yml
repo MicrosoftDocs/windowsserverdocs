@@ -252,8 +252,8 @@ items:
     items:
     - name: What's changed in Windows 11
       href: technologies/extensible-authentication-protocol/windows-11-changes.md
-    - name: Configuring EAP profiles
-      href: technologies/extensible-authentication-protocol/configuring-eap-profiles.md
+    - name: Configure EAP profiles in Windows
+      href: technologies/extensible-authentication-protocol/configure-eap-profiles.md
   - name: High-Performance Networking (HPN)
     href: technologies/hpn/hpn-top.md
     items:
