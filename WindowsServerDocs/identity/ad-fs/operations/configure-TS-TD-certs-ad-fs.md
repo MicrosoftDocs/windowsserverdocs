@@ -1,11 +1,12 @@
 ---
 title: Obtain and configure token signing and token decryption certificates for AD FS
-description: Learn about tasks and procedures you can perform to ensure your AD FS token signing and token decryption certificates are up to date.
+description: Learn about tasks and procedures you can perform to ensure your Azure Directory Federation Services (AD FS) token signing and token decryption certificates are up to date.
 author: jenfieldmsft
-ms.author: billmath
+ms.author: wscontent
 manager: amycolannino
 ms.date: 06/13/2023
 ms.topic: article
+ms.contributor: billmath
 ---
 
 # Obtain and configure TS and TD certificates for AD FS
@@ -42,7 +43,7 @@ If AD FS is configured to renew token signing and token decrypting certificates 
 
 You can use the following procedure to identify the primary token signing and token decrypting certificates and to determine when the current certificates expire.
 
-You can run the following Windows PowerShell command: `Get-AdfsCertificate –CertificateType token-signing` (or `Get-AdfsCertificate –CertificateType token-decrypting `). You can also examine the current certificates in the MMC: Service->Certificates.
+You can run the following Windows PowerShell command: `Get-AdfsCertificate –CertificateType token-signing` (or `Get-AdfsCertificate –CertificateType token-decrypting`). You can also examine the current certificates in the MMC: Service->Certificates.
 
 :::image type="content" source="media/configure-TS-TD-certs-ad-fs/ts3.png" alt-text="Screenshot of the PowerShell window, highlighting the Not After date and the Is Primary properties.":::
 
@@ -63,8 +64,8 @@ You can generate a new self-signed certificate manually prior to the end of the 
 1. Verify the update by running the following command again: `Get-ADFSCertificate –CertificateType token-signing`.
 1. Two certificates should be listed now. One should have a **Not After** date of approximately one year in the future. The other should have the **IsPrimary** value **False**.
 
->[!IMPORTANT]
->To avoid a service outage, update the certificate information on Azure AD with a valid token-signing certificate.
+> [!IMPORTANT]
+> To avoid a service outage, update the certificate information on Azure AD with a valid token-signing certificate.
 
 ## If you don't use self-signed certificates
 
@@ -84,8 +85,8 @@ Then you must configure this certificate as the secondary AD FS token signing or
 1. Select the new certificate from the list of displayed certificates, and then select **OK**.
 1. Open PowerShell and run `Set-ADFSProperties -AutoCertificateRollover $true`.
 
->[!WARNING]
->Ensure the new certificate has a private key associated with it and that the AD FS service account is granted **Read** permissions to the private key. Verify this on each federation server. To do so, in the Certificates snap-in, right-click the new certificate, choose **All Tasks**, and then select **Manage Private Keys**.
+> [!WARNING]
+> Ensure the new certificate has a private key associated with it and that the AD FS service account is granted **Read** permissions to the private key. Verify this on each federation server. To do so, in the Certificates snap-in, right-click the new certificate, choose **All Tasks**, and then select **Manage Private Keys**.
 
 Federation partners consume your new certificates by pulling your federation metadata or by receiving the public key of your new certificate from you. Once you've allowed enough time for your federation partners to consume your new certificate, you must promote the secondary certificate to primary certificate.
 
