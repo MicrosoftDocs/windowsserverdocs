@@ -4,7 +4,8 @@ ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Active Directory Domain Services Functional Levels in Windows Server
 ms.author: daveba
 author: dknappettmsft
-ms.date: 05/09/2023
+ms.contributor: alalve
+ms.date: 06/15/2023
 ms.topic: article
 ms.custom: it-pro
 ---
@@ -17,7 +18,7 @@ Functional levels determine the available Active Directory Domain Services (AD D
 
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support. This way, you can use as many AD DS features as possible. When you deploy a new forest, you are prompted to set the forest functional level, and then set the domain functional level. You can set the domain functional level to a value that is higher than the forest functional level, but you cannot set the domain functional level to a value that is lower than the forest functional level.
 
-With the end of life of Windows Server 2003, 2008, and 2008 R2, these domain controllers (DCs) need to be updated to Windows Server 2012, 2012 R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2008 R2 and older should be removed from the domain.
+With the end of life of Windows Server 2003, 2008, and 2008 R2, these domain controllers (DCs) need to be updated to Windows Server 2012, 2012 R2, 2016, 2019, or 2022. As a result, any domain controller that runs Windows Server 2008 R2 and older should be removed from the domain.
 
 At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [Streamlined Migration of FRS to DFSR SYSVOL blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). Windows Server 2016 RS1 is the last Windows Server release that includes FRS.
 
