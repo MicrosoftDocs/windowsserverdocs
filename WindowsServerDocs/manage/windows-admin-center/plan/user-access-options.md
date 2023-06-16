@@ -21,7 +21,7 @@ When deployed on Windows Server, Windows Admin Center provides a centralized poi
 Windows Admin Center defines two roles for access to the gateway service: gateway users and gateway administrators.
 
 > [!NOTE]
-> Access to the gateway does not imply access to the target servers visible by the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
+> Access to the gateway does not imply access to the target servers visible to the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
 
 **Gateway users** can connect to the Windows Admin Center gateway service in order to manage servers through that gateway, but they cannot change access permissions nor the authentication mechanism used to authenticate to the gateway.
 
