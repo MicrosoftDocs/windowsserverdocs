@@ -41,8 +41,8 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 | -report [filename] | Specifies to create a text output report file. The filename, if not specified, is *workload.xml*. |
 | -lr | Specifies to be less restrictive. This uses best efforts for events that don't match the events schema. |
 | -export [filename] | Specifies to create an Event Schema export file. The filename, if not specified, is *schema.man*. |
-| [-l] `<value [value […]]>` | Specifies the Event Trace log file to process. |
-| -rt `<session_name [session_name […]]>` | Specifies the Real-time Event Trace Session data sources. |
+| [-l] `<value [value [...]]>` | Specifies the Event Trace log file to process. |
+| -rt `<session_name [session_name [...]]>` | Specifies the Real-time Event Trace Session data sources. |
 | -? | Displays help at the command prompt. |
 
 ## Examples

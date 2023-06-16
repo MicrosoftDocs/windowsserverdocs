@@ -19,7 +19,7 @@ Invokes a troubleshooting pack at the command line or as part of an automated sc
 ## Syntax
 
 ```
-msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <parameter> [options]>>
+msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] ... <parameter> [options]>>
 ```
 
 ### Parameters

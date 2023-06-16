@@ -52,9 +52,9 @@ Sets the specified list of controller ports as active for the currently selected
 #### Syntax
 
 ```
-associate controllers [add] <n>[,<n> [,…]]
-associate ports [add] <n-m>[,<n-m>[,…]]
-associate targets [add] <n>[,<n> [,…]]
+associate controllers [add] <n>[,<n> [,...]]
+associate ports [add] <n-m>[,<n-m>[,...]]
+associate targets [add] <n>[,<n> [,...]]
 ```
 
 ##### Parameters
@@ -66,7 +66,7 @@ associate targets [add] <n>[,<n> [,…]]
 | targets | Adds to or replaces the list of iSCSI targets that are associated with the currently selected LUN. Use only with VDS 1.1 providers. |
 | add | **If using VDS 1.0 providers:** Adds the specified controllers to the existing list of controllers associated with the LUN. If this parameter is not specified, the list of controllers replaces the existing list of controllers associated with this LUN.<p>**If using VDS 1.1 providers:** Adds the specified controller ports to the existing list of controller ports associated with the LUN. If this parameter is not specified, the list of controller ports replaces the existing list of controller ports associated with this LUN. |
 | `<n>[,<n> [, ...]]` | Use with the **controllers** or **targets** parameter. Specifies the numbers of the controllers or iSCSI targets to set to active or associate. |
-| `<n-m>[,<n-m>[,…]]` | Use with the **ports** parameter. Specifies the controller ports to set active using a controller number (*n*) and port number (*m*) pair. |
+| `<n-m>[,<n-m>[,...]]` | Use with the **ports** parameter. Specifies the controller ports to set active using a controller number (*n*) and port number (*m*) pair. |
 
 #### Example
 
@@ -241,8 +241,8 @@ Sets specified list of controller ports as inactive for the currently selected L
 
 ```
 dissociate controllers <n> [,<n> [,...]]
-dissociate ports <n-m>[,<n-m>[,…]]
-dissociate targets <n> [,<n> [,…]]
+dissociate ports <n-m>[,<n-m>[,...]]
+dissociate targets <n> [,<n> [,...]]
 ```
 
 ##### Parameter
@@ -252,8 +252,8 @@ dissociate targets <n> [,<n> [,…]]
 | controllers | Removes controllers from the list of controllers that are associated with the currently selected LUN. Use only with VDS 1.0 providers. |
 | ports | Removes controller ports from the list of controller ports that are associated with the currently selected LUN. Use only with VDS 1.1 providers. |
 | targets | Removes targets from the list of iSCSI targets that are associated with the currently selected LUN. Use only with VDS 1.1 providers. |
-| `<n> [,<n> [,…]]` | For use with the **controllers** or **targets** parameter. Specifies the numbers of the controllers or iSCSI targets to set as inactive or dissociate. |
-| `<n-m>[,<n-m>[,…]]` | For use with the **ports** parameter. Specifies the controller ports to set as inactive by using a controller number (*n*) and port number (*m*) pair. |
+| `<n> [,<n> [,...]]` | For use with the **controllers** or **targets** parameter. Specifies the numbers of the controllers or iSCSI targets to set as inactive or dissociate. |
+| `<n-m>[,<n-m>[,...]]` | For use with the **ports** parameter. Specifies the controller ports to set as inactive by using a controller number (*n*) and port number (*m*) pair. |
 
 #### Example
 
@@ -365,8 +365,8 @@ Sets the load balance policy on the currently selected LUN.
 #### Syntax
 
 ```
-lbpolicy set lun type=<type> [paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[,…]]]
-lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[,…]]
+lbpolicy set lun type=<type> [paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[,...]]]
+lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[,...]]
 ```
 
 ##### Parameters
@@ -410,7 +410,7 @@ Logs the specified iSCSI initiator adapter into the currently selected iSCSI tar
 #### Syntax
 
 ```
-login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none | oneway | mutual}] [iportal=<iportal>] [tportal=<tportal>] [<flag> [<flag> […]]]
+login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none | oneway | mutual}] [iportal=<iportal>] [tportal=<tportal>] [<flag> [<flag> [...]]]
 ```
 
 ##### Parameters
@@ -690,7 +690,7 @@ Makes the currently selected LUNs accessible from the specified hosts.
 #### Syntax
 
 ```
-unmask lun {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [;…]] | [add] initiator=<initiator>[;<initiator>[;…]]} [uninstall]
+unmask lun {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [;...]] | [add] initiator=<initiator>[;<initiator>[;...]]} [uninstall]
 ```
 
 ##### Parameters
