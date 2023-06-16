@@ -308,7 +308,7 @@ The EAP-AKA' settings in the UI map to [EapAkaPrimeConnectionPropertiesV1](/open
 
 WPA3-Enterprise 192-bit mode is a special mode for WPA3-Enterprise that enforces certain high security requirements on the wireless connection to provide a minimum of 192 bits of security. These requirements align with the [Commercial National Security Algorithm (CNSA) Suite, CNSSP 15](https://www.cnss.gov/CNSS/issuances/Policies.cfm), which is a set of cryptographic algorithms that is approved to protect classified and top secret information by the United States National Security Agency (NSA). 192-bit mode can sometimes be referred to as "Suite B mode," which is a reference to the NSA Suite B Cryptography specification, which was replaced by CNSA in 2016.
 
-Both WPA3-Enterprise and WPA3-Enterprise 192-bit mode are available starting in Windows 10, version 2004 (build 19041) and Windows Server 2022.
+Both WPA3-Enterprise and WPA3-Enterprise 192-bit mode are available starting in Windows 10, version 2004 (build 19041) and Windows Server 2022. However, WPA3-Enterprise was singled out as a separate authentication algorithm in Windows 11. In XML, this is specified in the [authEncryption](/windows/win32/nativewifi/wlan-profileschema-authencryption-security-element) element.
 
 The following table lists the algorithms required by the CNSA Suite.
 
@@ -337,9 +337,6 @@ Aligning with CNSA, WPA3-Enterprise 192-bit mode requires that EAP-TLS is used w
 Windows supports only the `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384` cipher suites for WPA3-Enterprise 192-bit mode. The `TLS_DHE_RSA_AES_256_GCM_SHA384` cipher suite isn't supported.
 
 TLS 1.3 uses new simplified TLS suites, of which only `TLS_AES_256_GCM_SHA384` is compatible with WPA3-Enterprise 192-bit mode. As TLS 1.3 requires (EC)DHE and allows ECDSA or RSA certificates, along with the AES-256 AEAD and SHA384 hash, `TLS_AES_256_GCM_SHA384` is equivalent to `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384` and `TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384`. However, [RFC 8446](https://www.rfc-editor.org/rfc/rfc8446) requires that TLS 1.3-compliant applications support P-256, which is forbidden by CNSA. Therefore, WPA3-Enterprise 192-bit mode can't be fully compliant with TLS 1.3. However, there are no known interoperability issues with TLS 1.3 and WPA3-Enterprise 192-bit mode.
-
-> [!CAUTION]
-> Current versions of Windows 11 do not enforce all of these restrictions. A future version of Windows will enforce these restrictions. To prepare your enterprise network for this change, we suggest testing with [Windows Insider](/windows-insider/get-started) builds.
 
 To configure a network for WPA3-Enterprise 192-bit mode, Windows requires EAP-TLS be used with a certificate that meets the requirements described previously.
 
