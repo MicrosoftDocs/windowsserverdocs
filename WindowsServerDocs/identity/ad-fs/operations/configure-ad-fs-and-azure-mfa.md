@@ -169,7 +169,7 @@ By default, when you configure AD FS with Azure AD Multi-Factor Authentication, 
     $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
     ```
 
-    If the certificate hasn't already expired, a new certificate that is valid from two days after the current day to two years plus two days in the future is generated. AD FS and Azure AD Multi-Factor Authentication operations aren't affected when running the cmdlet or renewing the certificate. The two-day delay is intentional and provides time to follow the next steps to configure the new certificate in the tenant before AD FS starts by using it for Azure AD Multi-Factor Authentication.
+    If the certificate hasn't already expired, the command generates a new certificate that is valid from two days after the current day to two years plus two days in the future. AD FS and Azure AD Multi-Factor Authentication operations aren't affected when running the cmdlet or renewing the certificate. The two-day delay is intentional and provides time to follow the next steps to configure the new certificate in the tenant before AD FS starts by using it for Azure AD Multi-Factor Authentication.
 
 1. Configure each new AD FS Azure AD Multi-Factor Authentication certificate in the Azure AD tenant.
 
