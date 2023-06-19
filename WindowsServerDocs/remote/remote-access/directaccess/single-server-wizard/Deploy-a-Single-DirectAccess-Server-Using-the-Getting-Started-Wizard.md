@@ -12,6 +12,9 @@ ms.date: 08/07/2020
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
+>[!IMPORTANT]
+>Microsoft highly recommends that you use VPN instead of DirectAccess for new deployments. For more information, see []().
+
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess in a few easy steps.
 
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites
