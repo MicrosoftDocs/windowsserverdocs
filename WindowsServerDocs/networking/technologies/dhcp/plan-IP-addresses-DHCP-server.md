@@ -11,7 +11,7 @@ ms.date: 07/01/2023
 
 Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-# Plan IP address ranges across multiple scopes on a DHCP server
+# Plan IP address ranges in DHCP server
 
 This article provides guidance on planning IP address ranges using multiple scopes on an authorized IPv4 DHCP server. 
 
