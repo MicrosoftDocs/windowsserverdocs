@@ -230,3 +230,9 @@ For more information on this dialog, see [EAP-AKA'](network-access.md?tabs=eap-a
 
 For more information on this dialog, see [TEAP](network-access.md?tabs=teap#authentication-method-configuration-settings).
 :::image type="content" source="images/group-policy/methods/teap-properties.png" alt-text="Screenshot showing the TEAP Properties dialog":::
+
+## Additional resources
+
+- [Managing the New Wireless Network (IEEE 802.11) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994701(v=ws.11))
+- [Managing the New Wired Network (IEEE 802.3) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831813(v=ws.11))
+- [Advanced Security Settings for Wired and Wireless Network Policies](/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994696(v=ws.11))
