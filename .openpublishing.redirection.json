@@ -6821,12 +6821,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-imagegroup-command .md",
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-imagegroup-command.md",
       "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-imagegroup",
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-approve-autoadddevices-command.md ",
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-approve-autoadddevices-command.md",
       "redirect_url": "/windows-server/administration/windows-commands/wdsutil-approve-autoadddevices",
       "redirect_document_id": false
     },
@@ -11007,10 +11007,91 @@
       "source_path": "WindowsServerDocs/remote/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
       "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/Deploy-RA-OTP.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment-5.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    
     }
-    
-    
-    
 
   ]
 }

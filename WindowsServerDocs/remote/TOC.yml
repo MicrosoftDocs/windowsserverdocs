@@ -375,38 +375,6 @@
                 href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md
               - name: Troubleshooting General Issues
                 href: remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md
-          - name: Deploy Remote Access with OTP Authentication
-            href: remote-access/ras/otp/Deploy-RA-OTP.md
-            items:
-            - name: Plan Remote Access with OTP Authentication
-              href: remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md
-              items:
-              - name: 'Step 1: Plan an Advanced Single Server Deployment'
-                href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-              - name: 'Step 2: Plan the RADIUS Server Deployment'
-                href: remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md
-              - name: 'Step 3: Plan OTP Certificate Deployment'
-                href: remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md
-              - name: 'Step 4: Plan for OTP on the Remote Access Server'
-                href: remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md
-            - name: Configure Remote Access with OTP Authentication
-              href: remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md
-              items:
-              - name: 'Step 1: Implement a Single Server Remote Access Deployment'
-                href: remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment-5.md
-              - name: 'Step 2: Configure the RADIUS Server'
-                href: remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md
-              - name: 'Step 3: Configure the Remote Access Server for OTP'
-                href: remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md
-              - name: 'Step 4: Verify DirectAccess with OTP'
-                href: remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md
-            - name: Troubleshoot an OTP Deployment
-              href: remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md
-              items:
-              - name: Troubleshooting Authentication Issues
-                href: remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md
-              - name: Troubleshooting Enabling OTP
-                href: remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md
           - name: Deploy Remote Access in a Multi-forest Environment
             href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
             items:
