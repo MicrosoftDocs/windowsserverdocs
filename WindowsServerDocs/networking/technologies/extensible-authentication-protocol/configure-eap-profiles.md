@@ -4,7 +4,7 @@ description: This article presents information about different ways to configure
 author: samyun
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 06/16/2023
+ms.date: 06/19/2023
 ---
 
 # Configure EAP profiles and settings in Windows

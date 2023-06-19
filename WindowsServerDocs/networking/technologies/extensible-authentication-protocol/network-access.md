@@ -4,7 +4,7 @@ description: This article presents information about the Extensible Authenticati
 author: xelu86
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 06/16/2023
+ms.date: 06/19/2023
 ms.contributor: samyun
 ms.reviewer: samyun
 ---
