@@ -6821,12 +6821,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-imagegroup-command.md",
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-imagegroup-command .md",
       "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-imagegroup",
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-approve-autoadddevices-command.md",
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-approve-autoadddevices-command.md ",
       "redirect_url": "/windows-server/administration/windows-commands/wdsutil-approve-autoadddevices",
       "redirect_document_id": false
     },
