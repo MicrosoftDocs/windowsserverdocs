@@ -228,10 +228,10 @@ In this section, you'll manually configure the Windows VPN client using a PowerS
     {
         #Detect and delete previous VPN profile.
         $deleteInstances = $session.EnumerateInstances($namespaceName, $className, $options)
-        $InstanceId = $deleteInstance.InstanceID
     
         foreach ($deleteInstance in $deleteInstances)
         {
+            $InstanceId = $deleteInstance.InstanceID
             if ("$InstanceId" -eq "$ProfileNameEscaped")
             {
                 $session.DeleteInstance($namespaceName, $deleteInstance, $options)
