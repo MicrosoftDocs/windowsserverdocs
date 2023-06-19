@@ -78,6 +78,8 @@ This configuration syntax is defined in the [Group Policy: Wireless/Wired Protoc
 >
 > The remainder of the article is intended to provide a mapping between the EAP specific portions of the Group Policy/Control Panel UI and the XML configuration options, as well as providing a description of the setting.
 
+More information about configuring XML profiles can be found in [XML Profiles](configure-eap-profiles.md#xml-profiles). An example of using an XML profile containing EAP settings can be found in [Provision a Wi-Fi profile via a website](/windows/win32/nativewifi/prov-wifi-profile-via-website).
+
 ## Security settings
 
 The following table explains the configurable security settings for a profile that uses 802.1X. These settings map to [OneX](/windows/win32/nativewifi/onexschema-schema).
@@ -226,8 +228,8 @@ Prevents the user from being prompted to trust a server certificate if that cert
 Specifies whether the user is notified if the server name or root certificate isn't specified, or whether the server's identity can't be verified. Here are the available options to choose from and what each specifies:
 
 1. **Don't ask user to authorize new servers or trusted CAs** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user isn't notified and connection attempts fail.
-1. **Tell user if the server name or root certificate isn't specified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. With this option, if the root certificate isn't present on the computer, the user isn't notified and connection attempts fail.
-1. **Tell user if the server's identity cannot be verified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempts fail.
+1. **Tell user if the server name or root certificate isn't specified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. With this option, if the root certificate isn't present on the computer, the user isn't notified and the connection attempt fails.
+1. **Tell user if the server's identity cannot be verified** - If the server name isn't in the **Connect to these servers** list, or the root certificate is found but isn't selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**, or the root certificate isn't found on the computer, then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails.
 
 ### [EAP-TTLS](#tab/serveruserprompt-ttls)
 

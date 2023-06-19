@@ -11,7 +11,7 @@ ms.date: 06/16/2023
 
 > Applies to: Windows Server 2022, Windows 11, Windows 10
 
-This article presents information about commonly used different ways to configure Extensible Authentication Protocol (EAP) settings. Specifically, it describes configuring EAP profiles using XML and command line tools.
+This article presents information about commonly used different ways to configure Extensible Authentication Protocol (EAP) settings. Specifically, it describes configuring EAP profiles using XML and command line tools. It also shows how to configure EAP settings and profiles using various UI in Windows.
 
 ## XML Profiles
 
@@ -68,3 +68,53 @@ For detailed information about these cmdlets, see [Get-VpnConnection](/powershel
 | `Get-VpnConnection -Name "ProfileName"` | Shows summary information about a specific VPN profile. |
 | `(Get-VpnConnection -Name "ProfileName").EapConfigXmlStream.InnerXml \| Out-File -FilePath "C:\Profiles\vpn_eap.xml"` | Exports the EAP configuration for a specific VPN profile to a file. |
 | `Set-VpnConnection -Name "ProfileName" -EapConfigXmlStream (Get-Content -Path "C:\Profiles\vpn_eap.xml")` | Imports the EAP configuration from a file and updates the specified VPN profile with it. |
+
+---
+
+## Settings app (Desktop Windows)
+
+On the Windows desktop client, some Wi-Fi and Ethernet settings can be configured through the Settings app. The following screenshots show the Windows 11 Settings app, but the UI is similar in Windows 10. However, certain features and options may only be available in Windows 11.
+
+### [Wi-Fi](#tab/settings-wifi)
+
+Windows 10 and 11 have support for adding Wi-Fi profiles with a specific configuration (including 802.1X) in the Settings app. This setting can be found in the Settings app under **Network & internet** > **Wi-Fi** > **Manage known networks** > **Add network**:
+:::image type="content" source="images/desktop/settings-l1.png" alt-text="Screenshot of Network & internet page on Windows 11 settings app.":::
+:::image type="content" source="images/desktop/wifi-l2.png" alt-text="Screenshot of Wi-Fi page on Windows 11 settings app.":::
+:::image type="content" source="images/desktop/wifi-manage-known-networks.png" alt-text="Screenshot of Manage known networks page on Windows 11 settings app.":::
+:::image type="content" source="images/desktop/add-new-wifi-network.png" alt-text="Screenshot of Add a new network dialog in Windows 11 settings app.":::
+
+This dialog allows you to configure the SSID, security type, and other settings for the Wi-Fi profile. When a security type supporting EAP is selected, such as **WPA3-Enterprise AES**, the dialog shows an option to configure the EAP settings:
+:::image type="content" source="images/desktop/add-new-wifi-network-eap-tls.png" alt-text="Screenshot of Add a new network dialog, showing WPA3-Enterprise and EAP-TLS, on Windows 11 settings app.":::
+
+> [!TIP]
+> Once the network is added, it is not possible to edit the EAP settings through the Settings app. To edit the EAP settings, either:
+>
+> * delete the profile and re-add it with the correct settings, or
+> * use the `netsh` commands described in [netsh](#netsh) to manually edit the profile.
+
+### [Wired](#tab/settings-wired)
+
+Windows 11 added support for changing 802.1X authentication settings on wired connections in the Settings app. This setting can be found in the Settings app under **Network & internet** > **Ethernet** > **Authentication settings** > **Edit** > **Ethernet authentication settings**:
+:::image type="content" source="images/desktop/settings-l1.png" alt-text="Screenshot of Network & internet page on Windows 11 settings app.":::
+:::image type="content" source="images/desktop/ethernet-l2.png" alt-text="Screenshot of Ethernet page on Windows 11 settings app.":::
+:::image type="content" source="images/desktop/ethernet-auth-dialog.png" alt-text="Screenshot of Ethernet authentication settings dialog in Windows 11 settings app.":::
+
+Toggling **On** the **Enable IEEE 802.1X authentication** setting allows you to edit the EAP settings for this profile:
+:::image type="content" source="images/desktop/ethernet-auth-dialog-expanded.png" alt-text="Screenshot of Ethernet authentication settings dialog, expanded, in Windows 11 settings app.":::
+
+If the computer has a machine profile configured or the interface has a profile configured by Group Policy, the **Enable IEEE 802.1X authentication** setting is disabled and can't be changed:
+:::image type="content" source="images/desktop/ethernet-auth-dialog-group-policy.png" alt-text="Screenshot of Ethernet authentication settings dialog, disabled by group policy, in Windows 11 settings app.":::
+
+### [VPN](#tab/settings-vpn)
+
+Windows 10 and 11 have support for modifying VPN profiles, including EAP options, in the Settings app. This setting can be found in the Settings app under **Network & internet** > **VPN**:
+:::image type="content" source="images/desktop/settings-l1.png" alt-text="Screenshot of Network & internet page on Windows 11 settings app.":::
+:::image type="content" source="images/desktop/vpn-l2.png" alt-text="Screenshot of VPN page on Windows 11 settings app.":::
+
+Selecting **Add VPN** allows you to add a new VPN profile:
+:::image type="content" source="images/desktop/vpn-add-dialog.png" alt-text="Screenshot of Add a VPN connection dialog in Windows 11 settings app.":::
+
+Once added, the VPN profile can be edited by expanding the profile and selecting **Advanced options** > **Edit**:
+:::image type="content" source="images/desktop/vpn-expanded.png" alt-text="Screenshot of VPN page with selected profile in Windows 11 settings app.":::
+:::image type="content" source="images/desktop/vpn-advanced-options.png" alt-text="Screenshot of VPN advanced options page for a profile in Windows 11 settings app.":::
+:::image type="content" source="images/desktop/vpn-edit-dialog.png" alt-text="Screenshot of VPN profile Edit dialog in Windows 11 settings app.":::
