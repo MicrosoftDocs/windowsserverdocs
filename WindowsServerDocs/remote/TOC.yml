@@ -252,6 +252,14 @@
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
         - name: 3- Deploy Always On VPN profile for Windows clients
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
+      - name: Migrate from Direct Access to Always on VPN
+        items:
+        - name: Overview of DirectAccess to Always On VPN migration
+          href: remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md
+        - name: Plan DirectAccess to Always On VPN migration
+          href: remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md
+        - name: Deploy DirectAccess to Always On VPN migration
+          href: remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md
       - name: DirectAccess
         items:
         - name: DirectAccess offline Domain Join

@@ -10988,21 +10988,7 @@
       "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
     },
-    {
-      "source_path": "WindowsServerDocs/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md",
-      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md",
-      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md",
-      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
-      "redirect_document_id": false
-    },
+  
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
       "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
