@@ -18,7 +18,7 @@ Federation Services (AD FS) when using Windows Internal Database (WID). Beginnin
 Server 2016, the farm behavior level (FBL) was introduced to AD FS. The FBL is farm-wide setting
 that determines the features the AD FS farm can use.
 
-Administrators can add new federation servers to an existing Windows Server farm in "mixed mode".
+Administrators can add new federation servers to an existing Windows Server farm in "mixed mode."
 Mixed mode operates at the same farm behavior level as the original farm to ensure consistent
 behavior. Features of the newer Windows Server AD FS versions can't be configured or used.
   
@@ -47,7 +47,7 @@ Before you can upgrade the farm behavior level, you must meet the following prer
   mode state for an extended period of time. Leaving AD FS in a mixed mode state may cause issues
   with the farm.
 
-- Backup your AD FS configuration and federation servers.
+- Back up your AD FS configuration and federation servers.
 
 ## Farm Behavior Levels
 
@@ -56,7 +56,7 @@ first farm node installed.
 
 An AD FS server of a later version can be joined to a farm with a lower FBL, the farm operates
 at the same FBL as the existing node(s). When you have multiple Windows Server versions operating in
-the same farm at the FBL value of the lowest version, your farm is said to be "mixed". However, you
+the same farm at the FBL value of the lowest version, your farm is said to be "mixed." However, you
 can't take advantage of the features of the later versions until the FBL is raised. If
 your organization is looking to test the new features prior to raising the FBL, you need to
 deploy a separate farm.
@@ -64,7 +64,7 @@ deploy a separate farm.
 The following table lists the possible FBL values and configuration database names by Windows Server
 version.
 
-| Windows Server Version | FBL | AD FS Configuration Database Name |
+| Windows Server Version | FBL value| AD FS Configuration Database Name |
 |---|---|---|
 | 2012 R2 | 1 | AdfsConfiguration |
 | 2016 | 3 | AdfsConfigurationV3 |
@@ -126,7 +126,7 @@ process. To begin the upgrade:
    Set-AdfsFarmInformation -RemoveNode "<old-server-FQDN>"
    ```
 
-Now you've your new federations server to farm and removed the previous ones, you're ready to
+Now you have your new federations server to farm and removed the previous ones, you're ready to
 upgrade the FBL. To learn more about decommissioning, see
 [Steps to decommission your AD FS Servers](../decommission/adfs-decommission-guide.md#steps-to-decommission-your-ad-fs-servers).
 
@@ -217,9 +217,9 @@ To remedy this error:
 
 1. Open the AD FS management console. Browse to **Services > Scope Descriptions**.
 
-1. Right click **Scope Descriptions** and select **Add Scope Description**.
+1. Right-click **Scope Descriptions** and select **Add Scope Description**.
 
-1. Under name, type _ugs_ and then select **Apply > OK**.
+1. Under name, enter **_ugs_**, and then select **Apply > OK**.
 
 1. Launch PowerShell as Administrator and run the following commands.
 
@@ -230,7 +230,7 @@ To remedy this error:
 
 1. Restart the AD FS service.
 
-1. Restart the client. The user should be prompted to provision Windows Hello for Business.
+1. Restart the client. The user should be prompted to configure Windows Hello for Business.
 
 ## Next steps
 
