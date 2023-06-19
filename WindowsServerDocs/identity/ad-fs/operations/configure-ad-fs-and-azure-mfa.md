@@ -16,13 +16,13 @@ If your organization is federated with Azure AD, you can use Azure AD Multi-Fact
 
 Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Azure AD Multi-Factor Authentication adapter integrates directly with Azure AD and doesn't require an on premises Azure AD Multi-Factor Authentication server. The Azure AD Multi-Factor Authentication adapter is built into Windows Server 2016. No other installation is required.
 
-## Register users for Azure AD Multi-Factor Authentication using AD FS
+## Register users for Azure AD Multi-Factor Authentication by using AD FS
 
-AD FS doesn't support inline "proofup" registration of Azure AD Multi-Factor Authentication security verification information, such as on a phone number or mobile app. Without support for inline proof, users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) prior to using Azure AD Multi-Factor Authentication to authenticate to AD FS applications.
-When a user that hasn't yet proofed up in Azure AD tries to authenticate with Azure AD Multi-Factor Authentication at AD FS, they get an AD FS error. As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead. You can create this message by using onload.js customization to detect the error message string within the AD FS page. Then you can show a new message to direct the user to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) so that they can reattempt authentication. For for information, see [Customize the AD FS web page to guide users to register MFA verification methods](#customize-the-ad-fs-web-page-to-guide-users-to-register-mfa-verification-methods).
+AD FS doesn't support inline "proofup" registration of Azure AD Multi-Factor Authentication security verification information, such as on a phone number or mobile app. Without support for inline proof, users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) before they use Azure AD Multi-Factor Authentication to authenticate to AD FS applications.
+When a user that hasn't yet proofed up in Azure AD tries to authenticate with Azure AD Multi-Factor Authentication at AD FS, they get an AD FS error. As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead. You can create this message by using onload.js customization to detect the error message string within the AD FS page. Then you can show a new message to direct the user to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) so that they can reattempt authentication. For more information, see [Customize the AD FS web page to guide users to register MFA verification methods](#customize-the-ad-fs-web-page-to-guide-users-to-register-mfa-verification-methods).
 
 >[!NOTE]
-> Prior to this update, users had to authenticate using Azure AD Multi-Factor Authentication for registration by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx). With this update, an AD FS user who has not yet registered Azure AD Multi-Factor Authentication verification information can access the Azure proofup page using the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) using only primary authentication, such as Windows Integrated Authentication or username and password at the AD FS web pages. If the user has no verification methods configured, Azure AD performs inline registration. The user sees the message, "Your admin has required that you set up this account for additional security verification." Then the user selects **Set it up now.**
+> Prior to this update, users had to authenticate by using Azure AD Multi-Factor Authentication for registration by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx). With this update, an AD FS user who hasn't yet registered Azure AD Multi-Factor Authentication verification information can access the Azure proofup page by using the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) with only primary authentication, such as Windows Integrated Authentication or username and password at the AD FS web pages. If the user has no verification methods configured, Azure AD performs inline registration. The user sees the message, "Your admin has required that you set up this account for additional security verification." Then the user selects **Set it up now.**
 > Users who already have at least one verification method configured will still be prompted to provide multi-factor authentication (MFA) when visiting the proofup page.
 
 ## Recommended deployment topologies
@@ -38,7 +38,7 @@ There are a couple of great reasons to use Azure AD Multi-Factor Authentication 
 
 You also might want to use Azure AD Multi-Factor Authentication as the primary authentication method and Azure AD conditional access, including true MFA by prompting for extra factors. To use Azure AD MFA on premises, you can configure the Azure AD domain setting by setting `SupportsMfa` to `$True`. In this configuration, Azure AD can prompt AD FS to perform extra authentication or &#34;true MFA&#34; for conditional access scenarios that require it.
 
-Any AD FS user who isn't registered (hasn't yet configured MFA verification information), should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. After it's configured, the user can reattempt their AD FS sign-in.
+Any AD FS user who isn't registered (hasn't yet configured MFA verification information), should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. After configuration, the user can reattempt their AD FS sign-in.
 
 Azure AD Multi-Factor Authentication as primary authentication is considered a single factor. After initial configuration users need to provide another factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
 
@@ -51,19 +51,19 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 
 ### Azure AD Multi-Factor Authentication as extra authentication to Office 365
 
-Azure AD Multi-Factor Authentication adapter for AD FS enables your users to do MFA on AD FS. To secure your Azure AD resource, it's recommended you require MFA through a [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). You must also set the domain setting `SupportsMfa` to `$True` and [emit the multipleauthn claim](/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully.
+Azure AD Multi-Factor Authentication adapter for AD FS enables your users to do MFA on AD FS. To secure your Azure AD resource, you should require MFA through a [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). You must also set the domain setting `SupportsMfa` to `$True` and [emit the multipleauthn claim](/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully.
 
-As described previously, any AD FS user who isn't registered (hasn't yet configured MFA verification information) should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. After it's configured, the user can reattempt their AD FS sign-in.
+As described previously, any AD FS user who isn't registered (hasn't yet configured MFA verification information) should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. After configuration, the user can reattempt their AD FS sign-in.
 
 ## Prerequisites
 
-The following prerequisites are required when using Azure AD Multi-Factor Authentication for authentication with AD FS:
+The following prerequisites are required when you use Azure AD Multi-Factor Authentication for authentication with AD FS:
 
 - [An Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).
 - [Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
 
 > [!NOTE]
-> Azure AD and Azure AD Multi-Factor Authentication are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  You do not need individual subscriptions if you have either of these applications installed.
+> Azure AD and Azure AD Multi-Factor Authentication are included in Azure AD Premium and the Enterprise Mobility Suite (EMS).  You don't need individual subscriptions if you have either of these applications installed.
 
 - A Windows Server 2016 AD FS on-premises environment.
   - The server needs to be able to communicate with the following URLs over port 443.
@@ -100,9 +100,9 @@ $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>
 In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the Service Principal for the Azure Multi-Factor Auth Client. The certificates generated by using the New-AdfsAzureMFaTenantCertificate cmdlet serve as these credentials. Open PowerShell, and perform the following steps to add the new credentials to the Azure Multi-Factor Auth Client Service Principal.
 
 > [!NOTE]
-> In order to complete this step you need to connect to your instance of Azure AD with PowerShell by using **Connect-MsolService**.  These steps assume you've already connected via PowerShell. For information see [Connect-MsolService](/previous-versions/azure/dn194123(v=azure.100)).
+> In order to complete this step you need to connect to your instance of Azure AD with PowerShell by using **Connect-MsolService**.  These steps assume you've already connected via PowerShell. For information, see [Connect-MsolService](/previous-versions/azure/dn194123(v=azure.100)).
 
-#### Step 3: Set the certificate as the new credential against the Azure Multi-Factor Auth Client
+### Step 3: Set the certificate as the new credential against the Azure Multi-Factor Auth Client
 
 ```powershell
 New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64
@@ -169,11 +169,11 @@ By default, when you configure AD FS with Azure AD Multi-Factor Authentication, 
     $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
     ```
 
-    If the certificate hasn't already expired, a new certificate that is valid from two days in the future to two days + 2 years is generated. AD FS and Azure AD Multi-Factor Authentication operations aren't affected when running the cmdlet or renewing the certificate. The two-day delay is intentional and provides time to follow the next steps to configure the new certificate in the tenant before AD FS starts using it for Azure AD Multi-Factor Authentication.
+    If the certificate hasn't already expired, a new certificate that is valid from two days after the current day to two years plus two days in the future is generated. AD FS and Azure AD Multi-Factor Authentication operations aren't affected when running the cmdlet or renewing the certificate. The two-day delay is intentional and provides time to follow the next steps to configure the new certificate in the tenant before AD FS starts by using it for Azure AD Multi-Factor Authentication.
 
 1. Configure each new AD FS Azure AD Multi-Factor Authentication certificate in the Azure AD tenant.
 
-    With the Azure AD PowerShell module, for each new certificate (on each AD FS server), update your Azure AD tenant settings as follows You must first connect to the tenant by using **Connect-MsolService** to run the following commands.
+    With the Azure AD PowerShell module, for each new certificate (on each AD FS server), update your Azure AD tenant settings as follows. You must first connect to the tenant by using **Connect-MsolService** to run the following commands.
 
     ```powershell
     New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
@@ -183,7 +183,7 @@ By default, when you configure AD FS with Azure AD Multi-Factor Authentication, 
 
 1. Verify that the new certificate(s) is used for Azure AD Multi-Factor Authentication.
 
-After the new certificate(s) become valid, AD FS will pick them up and start using each respective certificate for Azure AD Multi-Factor Authentication within a few hours to one day.  After AD FS begins using the new certificates, on each server you'll see an event logged in the AD FS Admin event log with the following information:
+After the new certificate(s) become valid, AD FS will pick them up and use each respective certificate for Azure AD Multi-Factor Authentication within a few hours to one day. After AD FS uses the new certificates, on each server you'll see an event logged in the AD FS Admin event log with the following information:
 
 ```Output
 Log Name:      AD FS/Admin
