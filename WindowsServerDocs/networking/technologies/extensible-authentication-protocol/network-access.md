@@ -37,6 +37,28 @@ EAP authentication methods that are used within tunneled EAP methods are commonl
 
 **Tunnel EAP (TEAP)**: Described by [RFC 7170](https://www.rfc-editor.org/rfc/rfc7170), tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chaining - authenticating the machine and user within one authentication session. In Windows Server 2022, the inclusion of TEAP only provides support for the client-side - Windows 10, version 2004 (build 19041). NPS doesn't support TEAP at this time. The client support enables interoperation with commonly deployed RADIUS servers that support TEAP. Windows supports EAP-TLS and EAP-MSCHAP v2 as inner methods.
 
+The following table lists some common EAP methods and their [IANA assigned method Type numbers](https://www.iana.org/assignments/eap-numbers/eap-numbers.xhtml#eap-numbers-4).
+
+| EAP method | IANA assigned **Type** number | Native Windows support |
+| --- | --- | --- |
+| MD5-Challenge (EAP-MD5) | 4 | ❌ |
+| One-Time Password (EAP-OTP) | 5 | ❌ |
+| Generic Token Card (EAP-GTC) | 6 | ❌ |
+| EAP-TLS | 13 | ✅ |
+| EAP-SIM | 18 | ✅ |
+| EAP-TTLS | 21 | ✅ |
+| EAP-AKA | 23 | ✅ |
+| PEAP | 25 | ✅ |
+| EAP-MSCHAP v2 | 29 | ✅ |
+| Protected One-Time Password (EAP-POTP) | 32 | ❌ |
+| EAP-FAST | 43 | ❌ |
+| Pre-Shared Key (EAP-PSK) | 47 | ✅ |
+| EAP-IKEv2 | 49 | ❌ |
+| EAP-AKA' | 50 | ✅ |
+| EAP-EKE | 53 | ❌ |
+| TEAP | 55 | ✅ |
+| EAP-NOOB | 56 | ❌ |
+
 ## Configuring EAP properties
 
 You can access the EAP properties for 802.1X authenticated wired and wireless access in the following ways:
