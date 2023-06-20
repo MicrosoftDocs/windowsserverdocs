@@ -10,7 +10,8 @@ ms.date: 01/06/2020
 
 Here's a listing of our latest released features:
 
-- Version [2211](https://aka.ms/wac2211) is the most recent generally available (GA) release - it includes support for 400% zoom and WDAC-enabled infrastructure, improvements to Azure Stack HCI management features, as well as bug fixes and updates in several extensions.
+- Version [2306](https://aka.ms/wac2306) is the most recent generally available (GA) release - it includes the WDAC-enabled infra GA, new Hyper-V features and improvements, the long awaited cluster-aware event viewer, as well as a plethora of bug fixes and improvements.
+- Version [2211](https://aka.ms/wac2211) includes support for 400% zoom and WDAC-enabled infrastructure, improvements to Azure Stack HCI management features, as well as bug fixes and updates in several extensions.
 - Version [2110.2](https://aka.ms/wac2110.2) includes major bug fixes to Role-based Access Control (RBAC), the connections page’s search feature, as well as bug fixes in several extensions.
 - Version [2110](https://aka.ms/wac2110) includes Angular 11 upgrades, performance and security enhancements. It also includes updated developer SDK for extension development using Angular 11 or upgrading of existing extensions, CredSSP enhancements, a better Virtual Machine tool, and two brand new tools for Security and GPU management.
 - Version [2103.2](https://aka.ms/wac2103.2) includes key bug fixes and feature updates to the Azure sign in process, support for Azure China, support for seamless over-the-air updates for Azure Stack HCI as well as additional updates to the Events and Remote Desktop tool experience.
