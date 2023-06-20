@@ -229,7 +229,7 @@ For more information on this dialog, see [EAP-AKA'](network-access.md?tabs=eap-a
 ### Microsoft: EAP-TEAP
 
 For more information on this dialog, see [TEAP](network-access.md?tabs=teap#authentication-method-configuration-settings).
-:::image type="content" source="images/group-policy/methods/teap-properties.png" alt-text="Screenshot showing the TEAP Properties dialog..":::
+:::image type="content" source="images/group-policy/methods/teap-properties.png" alt-text="Screenshot showing the TEAP Properties dialog.":::
 
 ## Additional resources
 
