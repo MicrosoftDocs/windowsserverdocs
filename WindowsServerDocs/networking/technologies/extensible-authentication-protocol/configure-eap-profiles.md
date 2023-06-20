@@ -128,26 +128,26 @@ Once added, the VPN profile can be edited by expanding the profile and selecting
 ### [Wi-Fi](#tab/group-policy-wifi)
 
 **Group Policy** options for Wi-Fi are located under **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Wireless Network (IEEE 802.11) Policies**:
-:::image type="content" source="images/group-policy/editor/wifi-l1.png" alt-text="Screenshot showing Wireless Network (IEEE 802.11) Policies option in Group Policy Management Editor":::
+:::image type="content" source="images/group-policy/editor/wifi-l1.png" alt-text="Screenshot showing Wireless Network (IEEE 802.11) Policies option in Group Policy Management Editor.":::
 
 Right-clicking on **Wireless Network (IEEE 802.11) Policies** and selecting **Create A New Wireless Network Policy for Windows Vista and Later Releases** opens the **New Wireless Network Policy Properties** dialog:
-:::image type="content" source="images/group-policy/editor/wifi-new-policy.png" alt-text="Screenshot showing Create A New Wireless Network Policy for Windows Vista and Later Releases option in Group Policy Management Editor":::
-:::image type="content" source="images/group-policy/editor/wifi-new-network.png" alt-text="Screenshot showing the New Wireless Network Policy Properties dialog":::
+:::image type="content" source="images/group-policy/editor/wifi-new-policy.png" alt-text="Screenshot showing Create A New Wireless Network Policy for Windows Vista and Later Releases option in Group Policy Management Editor.":::
+:::image type="content" source="images/group-policy/editor/wifi-new-network.png" alt-text="Screenshot showing the New Wireless Network Policy Properties dialog.":::
 
 This dialog allows you to set the policy name, a description, and **Add**/**Edit**/**Remove** profiles, as well as **Import** and **Export** [XML Profiles](#xml-profiles).
 
 Clicking **Add** and selecting **Infrastructure** opens the **New Profile properties** dialog:
-:::image type="content" source="images/group-policy/editor/wifi-new-profile.png" alt-text="Screenshot showing the New Profile properties dialog":::
+:::image type="content" source="images/group-policy/editor/wifi-new-profile.png" alt-text="Screenshot showing the New Profile properties dialog.":::
 
 This dialog allows you to set the **Profile Name** and add the SSIDs this profile applies to.
 
 Selecting **Security** allows you to configure the EAP settings for the profile:
-:::image type="content" source="images/group-policy/editor/wifi-new-profile-security.png" alt-text="Screenshot showing the Security tab of the New Profile properties dialog":::
+:::image type="content" source="images/group-policy/editor/wifi-new-profile-security.png" alt-text="Screenshot showing the Security tab of the New Profile properties dialog.":::
 
 This dialog allows you to configure the security type and other settings for the Wi-Fi profile. When an **Authentication** type supporting 802.1X authentication is selected (such as **WPA2-Enterprise**), the [802.1X security options](network-access.md#security-settings) are visible. See [EAP methods](#eap-methods) for details on each network authentication method.
 
 When the **Advanced...** button is selected, the **Advanced Security Settings** dialog is shown:
-:::image type="content" source="images/group-policy/editor/wifi-advanced-security.png" alt-text="Screenshot showing the Advanced security settings dialog for Wi-Fi":::
+:::image type="content" source="images/group-policy/editor/wifi-advanced-security.png" alt-text="Screenshot showing the Advanced security settings dialog for Wi-Fi.":::
 
 This dialog allows you to set some [advanced 802.1X settings](network-access.md#advanced-security-settings--ieee-8021x) and [Single Sign On](network-access.md#advanced-security-settings--single-sign-on) options.
 
@@ -157,11 +157,11 @@ This dialog allows you to set some [advanced 802.1X settings](network-access.md#
 ### [Wired](#tab/group-policy-wired)
 
 **Group Policy** options for Wired are located under **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Wired Network (IEEE 802.3) Policies**:
-:::image type="content" source="images/group-policy/editor/wired-l1.png" alt-text="Screenshot showing Wired Network (IEEE 802.3) Policies option in Group Policy Management Editor":::
+:::image type="content" source="images/group-policy/editor/wired-l1.png" alt-text="Screenshot showing Wired Network (IEEE 802.3) Policies option in Group Policy Management Editor.":::
 
 Right-clicking on **Wired Network (IEEE 802.3) Policies** and selecting **Create A New Wired Network Policy for Windows Vista and Later Releases** opens the **New Wired Network Policy Properties** dialog:
-:::image type="content" source="images/group-policy/editor/wired-new-policy.png" alt-text="Screenshot showing Create A New Wired Network Policy for Windows Vista and Later Releases option in Group Policy Management Editor":::
-:::image type="content" source="images/group-policy/editor/wired-new-policy-props.png" alt-text="Screenshot showing the New Wired Network Policy Properties dialog":::
+:::image type="content" source="images/group-policy/editor/wired-new-policy.png" alt-text="Screenshot showing Create A New Wired Network Policy for Windows Vista and Later Releases option in Group Policy Management Editor.":::
+:::image type="content" source="images/group-policy/editor/wired-new-policy-props.png" alt-text="Screenshot showing the New Wired Network Policy Properties dialog.":::
 
 This dialog allows you to set the policy name, a description, and the following options:
 
@@ -172,12 +172,12 @@ This dialog allows you to set the policy name, a description, and the following 
 |Enable block period (minutes)|**blockPeriod**|Defaulting to 20 minutes, specifies the duration for which automatic authentication attempts will be blocked from occurring after a failed authentication attempt.|
 
 Selecting **Security** allows you to configure the EAP settings for the profile:
-:::image type="content" source="images/group-policy/editor/wired-new-policy-security.png" alt-text="Screenshot showing the Security tab of the New Wired Network Properties dialog":::
+:::image type="content" source="images/group-policy/editor/wired-new-policy-security.png" alt-text="Screenshot showing the Security tab of the New Wired Network Properties dialog.":::
 
 This dialog allows you to configure the security type and other settings for the wired network. For more information, see [802.1X security options](network-access.md#security-settings). See [EAP methods](#eap-methods) for details on each network authentication method.
 
 When the **Advanced...** button is selected, the **Advanced Security Settings** dialog is shown:
-:::image type="content" source="images/group-policy/editor/wired-advanced-security.png" alt-text="Screenshot showing the Advanced security settings dialog for Wired":::
+:::image type="content" source="images/group-policy/editor/wired-advanced-security.png" alt-text="Screenshot showing the Advanced security settings dialog for Wired.":::
 
 This dialog allows you to set some [advanced 802.1X settings](network-access.md#advanced-security-settings--ieee-8021x) and [Single Sign On](network-access.md#advanced-security-settings--single-sign-on) options.
 
@@ -193,43 +193,43 @@ For an overview on the different EAP methods, see [Authentication methods](netwo
 ### Microsoft: Smart Card or other certificate
 
 For more information on this dialog, see [EAP-TLS](network-access.md?tabs=eap-tls#authentication-method-configuration-settings).
-:::image type="content" source="images/group-policy/methods/eap-tls-properties.png" alt-text="Screenshot showing the Smart Card or other certificate Properties dialog":::
+:::image type="content" source="images/group-policy/methods/eap-tls-properties.png" alt-text="Screenshot showing the Smart Card or other certificate Properties dialog.":::
 
 Selecting **Advanced** opens the [Configure Certificate Selection](network-access.md?tabs=eap-tls#cert-filteringinfo) dialog:
-:::image type="content" source="images/group-policy/methods/certificate-selection.png" alt-text="Screenshot showing the Configure Certificate Selection dialog":::
+:::image type="content" source="images/group-policy/methods/certificate-selection.png" alt-text="Screenshot showing the Configure Certificate Selection dialog.":::
 
 ### Microsoft: Protected EAP (PEAP)
 
 For more information on this dialog, see [PEAP](network-access.md?tabs=peap#authentication-method-configuration-settings).
-:::image type="content" source="images/group-policy/methods/peap-properties.png" alt-text="Screenshot showing the Protected EAP Properties dialog":::
+:::image type="content" source="images/group-policy/methods/peap-properties.png" alt-text="Screenshot showing the Protected EAP Properties dialog.":::
 
 Selecting **Configure...** when **Secured password (EAP-MSCHAP v2)** is selected opens the **EAP MSCHAPv2** dialog:
-:::image type="content" source="images/group-policy/methods/mschapv2-properties.png" alt-text="Screenshot showing the EAP MSCHAPv2 Properties dialog":::
+:::image type="content" source="images/group-policy/methods/mschapv2-properties.png" alt-text="Screenshot showing the EAP MSCHAPv2 Properties dialog.":::
 
 ### Microsoft: EAP-SIM
 
 For more information on this dialog, see [EAP-SIM](network-access.md?tabs=eap-sim#cellular-authentication-configuration-settings).
-:::image type="content" source="images/group-policy/methods/eap-sim-properties.png" alt-text="Screenshot showing the EAP-SIM Properties dialog":::
+:::image type="content" source="images/group-policy/methods/eap-sim-properties.png" alt-text="Screenshot showing the EAP-SIM Properties dialog.":::
 
 ### Microsoft: EAP-TTLS
 
 For more information on this dialog, see [EAP-TTLS](network-access.md?tabs=eap-ttls#authentication-method-configuration-settings).
-:::image type="content" source="images/group-policy/methods/eap-ttls-properties.png" alt-text="Screenshot showing the TTLS Properties dialog":::
+:::image type="content" source="images/group-policy/methods/eap-ttls-properties.png" alt-text="Screenshot showing the TTLS Properties dialog.":::
 
 ### Microsoft: EAP-AKA
 
 For more information on this dialog, see [EAP-AKA](network-access.md?tabs=eap-aka#cellular-authentication-configuration-settings).
-:::image type="content" source="images/group-policy/methods/eap-aka-properties.png" alt-text="Screenshot showing the EAP-AKA Properties dialog":::
+:::image type="content" source="images/group-policy/methods/eap-aka-properties.png" alt-text="Screenshot showing the EAP-AKA Properties dialog.":::
 
 ### Microsoft: EAP-AKA'
 
 For more information on this dialog, see [EAP-AKA'](network-access.md?tabs=eap-aka-prime#cellular-authentication-configuration-settings).
-:::image type="content" source="images/group-policy/methods/eap-aka-prime-properties.png" alt-text="Screenshot showing the EAP-AKA' Properties dialog":::
+:::image type="content" source="images/group-policy/methods/eap-aka-prime-properties.png" alt-text="Screenshot showing the EAP-AKA' Properties dialog.":::
 
 ### Microsoft: EAP-TEAP
 
 For more information on this dialog, see [TEAP](network-access.md?tabs=teap#authentication-method-configuration-settings).
-:::image type="content" source="images/group-policy/methods/teap-properties.png" alt-text="Screenshot showing the TEAP Properties dialog":::
+:::image type="content" source="images/group-policy/methods/teap-properties.png" alt-text="Screenshot showing the TEAP Properties dialog..":::
 
 ## Additional resources
 
