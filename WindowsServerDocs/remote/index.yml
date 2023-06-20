@@ -58,14 +58,14 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: Remote access
+            url: ./remote-access/Remote-Access.md
           - text: Always On VPN
             url: ./remote-access/overview-always-on-vpn.md
           - text: Border Gateway Protocol (BGP)
             url: ./remote-access/bgp/border-gateway-protocol-bgp.md
           - text: RAS Gateway
             url: ./remote-access/ras-gateway/ras-gateway.md
-          - text: Remote Access Server Role
-            url: ./remote-access/ras/remote-access-server-role-documentation.md
           - text: Virtual Private Networking (VPN)
             url: ./remote-access/vpn/vpn-top.md
 

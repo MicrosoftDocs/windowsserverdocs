@@ -10987,9 +10987,97 @@
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/index.md",
       "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
+    },
+  
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/Deploy-RA-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831379(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134227(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134170(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134220(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134161(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134154(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134229(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment-5.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134212(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134164(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134168(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134243(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618321(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618331(v=ws.11)",
+      "redirect_document_id": false
+
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618327(v=ws.11)",
+      "redirect_document_id": false
+    
     }
-    
-    
 
   ]
 }
