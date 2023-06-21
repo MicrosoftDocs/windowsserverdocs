@@ -6,7 +6,7 @@ ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 01/12/2023
+ms.date: 06/21/2023
 ---
 # Viewing and Managing Updates
 
@@ -154,6 +154,7 @@ Update classifications represent the type of update. For any given product or pr
 |--|--|
 |Critical Updates|Broadly released fixes for specific problems addressing critical, non-security related bugs.|
 |Definition Updates|Updates to virus or other definition files.|
+| Driver Sets | Packages of software modules designed to support the hardware of a specific model of computing device. |
 |Drivers|Software components designed to support new hardware.|
 |Feature packs|New feature releases, usually rolled into products at the next release.|
 |Security updates|Broadly released fixes for specific products, addressing security issues.|
@@ -161,6 +162,7 @@ Update classifications represent the type of update. For any given product or pr
 |Tools|Utilities or features that aid in accomplishing a task or set of tasks.|
 |Update rollups|A cumulative set of hotfixes, security updates, critical updates, and other updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a specific component, such as Internet Information Services (IIS).|
 |Updates|Broadly released fixes for specific problems addressing non-critical, non-security related bugs.|
+| Upgrades | New product releases upgrading a device to the next version. Upgrades contain bug fixes, design changes and other feature. |
 
 ## Icons used for updates in Windows Server Update Services
 
