@@ -9,7 +9,7 @@ author: anaharris-ms
 ms.date: 09/28/2022
 ---
 
-# Remote access
+# Remote access overview
 
 When you install the Remote Access Server Role with the *Add Roles and Features Wizard* or Windows PowerShell, you can choose to install one or more of the following three role services:
 
@@ -77,6 +77,5 @@ Now you've learned about what the Remote Access role is, here are some articles 
 - [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md)
 - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
 - [RAS Gateway](ras-gateway/RAS-Gateway.md)
-- [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
 - [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
 - [Virtual Private Networking (VPN)](vpn/vpn-top.md)

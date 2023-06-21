@@ -175,10 +175,20 @@ items:
         items:
           - name: DNS zones
             href: dns/zone-types.md
+          - name: DNS resource records
+            href: dns/resource-record-types.md
+          - name: DNSSEC
+            items:
+            - name: What is DNSSEC?
+              href: dns/dnssec-overview.md
+            - name: Validate and secure DNS responses
+              href: dns/validate-dnssec-responses.md
       - name: How-to guides
         items:
           - name: Manage DNS zones
             href: dns/manage-dns-zones.md
+          - name: Manage DNS resource records
+            href: dns/manage-resource-records.md
           - name: Secure DNS Client over HTTPS (DoH)
             href: dns/doh-client-support.md
       - name: Tutorials
@@ -238,7 +248,14 @@ items:
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
   - name: Extensible Authentication Protocol (EAP)
-    href: technologies/extensible-authentication-protocol/network-access.md 
+    href: technologies/extensible-authentication-protocol/network-access.md
+    items:
+    - name: What's changed in Windows 11
+      href: technologies/extensible-authentication-protocol/windows-11-changes.md
+    - name: Configure EAP profiles in Windows
+      href: technologies/extensible-authentication-protocol/configure-eap-profiles.md
+    - name: Passpoint (Hotspot 2.0)
+      href: /windows-hardware/drivers/mobilebroadband/hotspot-20
   - name: High-Performance Networking (HPN)
     href: technologies/hpn/hpn-top.md
     items:
