@@ -9,10 +9,10 @@ ms.author: wscontent
 
 # Hotpatch for virtual machines
 
-Hotpatching is a way to install updates on supported _Windows Server Datacenter: Azure Edition_
-virtual machines (VMs) that doesn’t require a reboot after installation. It works by patching the
-in-memory code of running processes without the need to restart the process. This article covers
-information about hotpatch for supported VMs, which has the following benefits:
+Hotpatching is a way to install OS security updates on supported _Windows Server Datacenter: Azure
+Edition_ virtual machines (VMs) that doesn’t require a reboot after installation. It works by
+patching the in-memory code of running processes without the need to restart the process. This
+article covers information about hotpatch for supported VMs, which has the following benefits:
 
 - Fewer binaries mean update install faster and consume less disk and CPU resources.
 - Lower workload impact with fewer reboots.
@@ -99,9 +99,9 @@ with hotpatch enabled. Reboots are still required to install updates that aren't
 hotpatch program. Reboots are also required periodically after a new baseline has been installed.
 Reboots keep the VM in sync with nonsecurity patches included in the latest cumulative update.
 
-- Patches that are currently not included in the hotpatch program include nonsecurity updates
-  released for Windows, and non-Windows updates (such as .NET patches). These types of patches need
-  to be installed during a baseline month, and require a reboot.
+- Patches that are currently not included in the hotpatch program include non security updates
+  released for Windows, .NET updates and non-Windows updates (such as drivers, firmware update
+  etc.). These types of patches may need a reboot during Hotpatch months.
 
 ## Patch orchestration process
 
