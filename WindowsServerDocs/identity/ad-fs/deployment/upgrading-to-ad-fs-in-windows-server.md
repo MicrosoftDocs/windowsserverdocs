@@ -1,7 +1,7 @@
 ---
-description: Learn how to upgrade the farm behavior level for an existing Active Directory Federation Service farm using Windows Internal Database in Windows Server.
+description: Learn how to upgrade the farm behavior level for an existing Active Directory Federation Service farm by using Windows Internal Database in Windows Server.
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
-title: Upgrade an AD FS farm using Windows Internal Database in Windows Server
+title: Upgrade an AD FS farm by using Windows Internal Database in Windows Server
 author: billmath
 manager: amycolannino
 ms.date: 02/13/2023
@@ -9,11 +9,11 @@ ms.topic: article
 ms.author: wscontent
 ---
 
-# Upgrade an existing AD FS farm using Windows Internal Database
+# Upgrade an existing AD FS farm by using Windows Internal Database
 
 [!INCLUDE [Migrate to Azure AD](../../../../includes/adfs-to-azure-ad-upgrade.md)]
 
-In this article, you learn how to upgrade the farm behavior level for Active Directory Federation Services (AD FS) when using Windows Internal Database (WID). Beginning in Windows Server 2016, the farm behavior level (FBL) was introduced to AD FS. The FBL is farm-wide setting that determines the features the AD FS farm can use.
+In this article, you learn how to upgrade the farm behavior level for Active Directory Federation Services (AD FS) by using Windows Internal Database (WID). Beginning in Windows Server 2016, the farm behavior level (FBL) was introduced to AD FS. The FBL is farm-wide setting that determines the features the AD FS farm can use.
 
 Administrators can add new federation servers to an existing Windows Server farm in "mixed mode." Mixed mode operates at the same farm behavior level as the original farm to ensure consistent behavior. Features of the newer Windows Server AD FS versions can't be configured or used.
   
@@ -37,7 +37,7 @@ Before you can upgrade the farm behavior level, you must meet the following prer
 
 By default, the FBL in a new AD FS farm matches the value for the Windows Server version of the first farm node installed.
 
-You can join an AD FS server of a later version to a farm with a lower FBL. The farm operates at the same FBL as the existing node(s). When you have multiple Windows Server versions operating in the same farm at the FBL value of the lowest version, your farm is said to be "mixed." However, you can't take advantage of the features of the later versions until you raise the FBL. If your organization is looking to test the new features prior to raising the FBL, you need to deploy a separate farm.
+You can join an AD FS server of a later version to a farm with a lower FBL. The farm operates at the same FBL as the existing node(s). When you have multiple Windows Server versions operating in the same farm at the FBL value of the lowest version, your farm is "mixed." However, you can't take advantage of the features of the later versions until you raise the FBL. If your organization is looking to test the new features prior to raising the FBL, you need to deploy a separate farm.
 
 The following table lists the possible FBL values and configuration database names by Windows Server version.
 
@@ -66,7 +66,7 @@ To find your current FBL:
 
 ## Migrate federation servers
 
-Once you've collected the current federation farm information, you're ready to begin the upgrade process. To begin the upgrade:
+After you've collected the current federation farm information, you're ready to begin the upgrade process. To begin the upgrade:
 
 1. Add the new federation server(s) to your existing farm. For more information, see [Add a federation server to an existing federation server farm](Configure-a-Federation-Server.md#add-a-federation-server-to-an-existing-federation-server-farm).
 
@@ -99,7 +99,7 @@ Now that you have your new federations server to farm and removed the previous o
 
 ## Upgrade the Farm Behavior Level
 
-Once you've collected the current federation farm information, you're ready to begin the upgrade process. To begin the upgrade:
+After you've collected the current federation farm information, you're ready to begin the upgrade process. To begin the upgrade:
 
 1. Sign into your primary federation server, then open an elevated PowerShell session.
 
@@ -109,7 +109,7 @@ Once you've collected the current federation farm information, you're ready to b
    Test-AdfsFarmBehaviorLevelRaise
    ```
 
-1. Once you've reviewed the output, to upgrade the farm behavior level, run the following command. You're prompted if you want to continue.
+1. Ater you've reviewed the output, to upgrade the farm behavior level, run the following command. You're prompted if you want to continue.
 
    ```powershell
    Invoke-AdfsFarmBehaviorLevelRaise
@@ -145,8 +145,7 @@ Now that you've updated your FBL, you need to upgrade Web Application Proxy (WAP
    ```
 
    > [!NOTE]
-   > Skip the next step if the ConfigurationVersion is `Windows Server 2016`. This is the correct
-   > value for Web Application Proxy on Windows Server 2016 and later.
+   > Skip the next step if the ConfigurationVersion is `Windows Server 2016`. This is the correct value for Web Application Proxy on Windows Server 2016 and later.
 
 1. Remove old Web Application Proxy servers, keeping only the new servers configured in the previous steps by running the following PowerShell cmdlet:
 
