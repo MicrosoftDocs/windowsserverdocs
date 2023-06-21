@@ -15,11 +15,11 @@ operating system security features. This article shows you how to configure Secu
 using Windows Admin Center and Windows PowerShell.
 
 Secured-core server is designed to deliver a secure platform for critical data and applications. For
-more information, [What is Secured-core server?](../security/secured-core-server.md)
+more information, see [What is Secured-core server?](../security/secured-core-server.md)
 
 ## Prerequisites
 
-Before you can configure Secured-core server, you must have the following security component
+Before you can configure Secured-core server, you must have the following security components
 installed and enabled in the BIOS:
 
 - Secure Boot.
@@ -31,7 +31,7 @@ installed and enabled in the BIOS:
   - Transparent Secure Memory Encryption is also required for AMD based systems.
 
 > [!IMPORTANT]
-> Enabling each of the security feature in the BIOS can vary based on your hardware vendor. Make
+> Enabling each of the security features in the BIOS can vary based on your hardware vendor. Make
 > sure to check your hardware manufacturer's Secured-core server enablement guide.
 
 ## Enable security features
@@ -41,7 +41,7 @@ select the relevant method and follow the steps.
 
 #### [GUI](#tab/gui)
 
-Here's how to enabled Secured-core server using the user interface.
+Here's how to enable Secured-core server using the user interface.
 
 1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools**, open
    **Computer Management**.
@@ -56,7 +56,7 @@ Once your server has restarted, your server is enabled for Secured-core server.
 
 #### [Windows Admin Center](#tab/WAC)
 
-Here's how to enabled Secured-core server using Windows Admin Center.
+Here's how to enable Secured-core server using Windows Admin Center.
 
 1. Sign into your Windows Admin Center portal.
 1. Select the server you want to connect to.
@@ -164,7 +164,7 @@ To learn more about the output values, see the [SecurityServicesRunning](/window
 
 ## Next steps
 
-Now you've configure Secured-core server is, here are some resources to learn more about:
+Now you've configured Secured-core server, here are some resources to learn more about:
 
 - [Virtualization-based Security (VBS)](/windows-hardware/design/device-experiences/oem-vbs)
 - [Memory integrity and VBS enablement](/windows-hardware/design/device-experiences/oem-hvci-enablement)
