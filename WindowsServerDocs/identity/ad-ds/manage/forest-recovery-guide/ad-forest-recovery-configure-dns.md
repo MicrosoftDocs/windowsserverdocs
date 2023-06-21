@@ -4,8 +4,9 @@ title: AD Forest Recovery - Configure DNS Server service
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 06/10/2023
+ms.date: 06/21/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 # AD Forest Recovery - Configuring the DNS Server service
 

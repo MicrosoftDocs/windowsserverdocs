@@ -4,10 +4,9 @@ title: AD Forest Recovery - Redeploy remaining DCs
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 06/10/2023
+ms.date: 06/21/2023
 ms.topic: article
-ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.custom: inhenkel
+ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 ---
 
 # AD Forest Recovery - Redeploy remaining DCs

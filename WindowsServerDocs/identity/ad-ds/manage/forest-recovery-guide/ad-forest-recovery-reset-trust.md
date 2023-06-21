@@ -4,9 +4,9 @@ title: AD Forest Recovery - Resetting a trust password
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 06/10/2023
+ms.date: 06/21/2023
 ms.topic: article
-ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
+ms.custom: 398918dc-c8ab-41a6-a377-95681ec0b543, inhenkel
 ---
 
 # Resetting a trust password on one side of the trust

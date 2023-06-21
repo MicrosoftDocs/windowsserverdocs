@@ -4,7 +4,7 @@ title: AD Forest Recovery - Invalidating the RID Pool
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 06/10/2023
+ms.date: 06/21/2023
 ms.topic: article
 ms.assetid: 2f5f84df-bd85-4ca4-bdd3-835bd1d45c11
 ---

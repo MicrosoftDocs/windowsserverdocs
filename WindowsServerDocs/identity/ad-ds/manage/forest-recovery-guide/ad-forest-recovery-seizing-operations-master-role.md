@@ -6,7 +6,7 @@ author: iainfoulds
 manager: daveba
 ms.date: 06/21/2023
 ms.topic: article
-ms.assetid: 7e6bb370-f840-4416-b5e2-86b0ba715f4f
+ms.custom: 7e6bb370-f840-4416-b5e2-86b0ba715f4f, inhenkel
 ---
 # AD Forest Recovery - Seizing an operations master role
 

@@ -4,7 +4,8 @@ description: Learn more about resources to verify replication.
 ms.topic: article
 ms.author: daveba
 author: iainfoulds
-ms.date: 04/01/2023
+ms.date: 06/21/2023
+ms.custom: inhenkel
 ---
 
 # AD Forest Recovery - Verify Replication
