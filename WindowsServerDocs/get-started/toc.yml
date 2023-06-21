@@ -85,7 +85,7 @@ items:
       href: enable-hotpatch-azure-edition.md
     - name: Perform an in-place upgrade
       href: perform-in-place-upgrade.md
-    - name: Configure Secured Core Server
+    - name: Configure Secured-core Server
       href: configure-secured-core.md
   - name: Troubleshooting
     items:
