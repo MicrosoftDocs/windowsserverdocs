@@ -8,7 +8,7 @@ ms.date: 06/21/2023
 ms.author: inhenkel
 ---
 
-- [AD Forest Recovery -Prerequisites](../ad-forest-recovery-prerequisites.md)
+- [AD Forest Recovery - Prerequisites](../ad-forest-recovery-prerequisites.md)
 - [AD Forest Recovery - Devising a custom forest recovery plan](../ad-forest-recovery-devise-a-plan.md)
 - [AD Forest Recovery - Steps for Recovery](../ad-forest-recovery-steps-for-restoring-the-forest.md)
 - [AD Forest Recovery - Identify the problem](../ad-forest-recovery-identify-the-problem.md)

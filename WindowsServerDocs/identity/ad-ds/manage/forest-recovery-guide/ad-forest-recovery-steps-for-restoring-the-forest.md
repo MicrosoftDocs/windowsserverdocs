@@ -7,7 +7,7 @@ ms.date: 06/21/2023
 ms.topic: article
 ---
 
-# AD Forest Recovery - Steps for Restoring the forest
+# AD Forest Recovery - Steps for restoring the forest
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
 
@@ -16,54 +16,39 @@ This section provides an overview of the recommended path for recovering a fores
 We recommend you run through a forest recovery on a regular basis to:
 
 - Practice the recovery.
-
 - Ensure the custom steps you defined for your environment are still working.
-
-- If steps don't work, you notice and update the existing plan to adopt for a
-    new kind of potential failure.
-
-- Verify the defaults you have for selecting the DCs to restore in each of the
-    domains is still a good choice.
+- If steps don't work, you notice and update the existing plan to adopt for a new kind of potential failure.
+- Verify the defaults you have for selecting the DCs to restore in each of the domains is still a good choice.
 
 The following list summarizes the recovery steps at a high level:
 
 1. [Identify the problem](ad-forest-recovery-identify-the-problem.md)
-
     Work with IT and Microsoft Support to determine the scope of the problem and
-    potential causes and evaluate possible remedies with all business
-    stakeholders. In many cases total forest recovery should be the last option.
-2. [Decide how to recover the forest](ad-forest-recovery-intro.md)
-
+    potential causes, and evaluate possible remedies with all business
+    stakeholders. In many cases, total forest recovery should be the last option.
+1. [Decide how to recover the forest](ad-forest-recovery-intro.md)
     After you determine that forest recovery is necessary, complete preliminary
-    steps to prepare for it: determine the current forest structure, identify
-    the functions that each DC performs, decide which DC to restore for each
-    domain, and ensure that all writeable DCs are taken offline.
-
-3. [Perform initial recovery](ad-forest-recovery-perform-initial-recovery.md)
-
-    In isolation, recover one DC for each domain, clean them, and reconnect the
+    steps to prepare for it: 
+    1. Determine the current forest structure
+    1. Identify the functions that each DC performs
+    1. Decide which DC to restore for each domain, and 
+    1. Ensure that all writeable DCs are taken offline.
+1. [Perform initial recovery](ad-forest-recovery-perform-initial-recovery.md)
+    In isolation, recover one DC for each domain, clean it, and reconnect the
     domains. Reset privileged accounts, and rectify problems caused by security
     breaches in this phase.
-
-4. [Redeploy remaining DCs](ad-forest-recovery-restore-additional-dcs.md)
-
-    Redeploy the forest to return it to its state before the failure. This step
-    will need to be adapted to your specific design and requirements.
-    Virtualized domain controller cloning can help expedite this process.
-
-5. [Cleanup](ad-forest-recovery-cleanup.md)
-
+1. [Redeploy remaining DCs](ad-forest-recovery-restore-additional-dcs.md)
+    Redeploy the forest to return it to its state before the failure. Adapt this step to your specific design and requirements. Virtualized domain controller cloning can help expedite this process.
+1. [Cleanup](ad-forest-recovery-cleanup.md)
     After functionality has been restored, reconfigure name resolution as
     needed, and get LOB applications working.
 
 The steps in this guide are designed to minimize the possibility of
-reintroducing dangerous data into the recovered forest. You might have to modify
+reintroducing dangerous data into the recovered forest. You may have to modify
 these steps to account for such factors as:
 
 - Scalability
-
 - Remote manageability
-
 - Speed of recovery
 
 ## Next steps
