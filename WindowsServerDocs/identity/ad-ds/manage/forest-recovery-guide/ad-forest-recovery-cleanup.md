@@ -15,11 +15,11 @@ ms.customer: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 
  Perform the following post recovery steps as needed:
 
-- After the entire forest is recovered, you can revert to the original DNS configuration, including configuration of the preferred and alternate DNS servers on each of the DCs. After the DNS servers are configured as they were before the malfunction, their previous name resolution capabilities will be restored. Delete any DNS records for DCs that have not been recovered.
-- Delete Windows Internet Name Service (WINS) records for all DCs that have not been recovered.
+- After the entire forest is recovered, you can revert to the original DNS configuration, including configuration of the preferred and alternate DNS servers on each of the DCs. After the DNS servers are configured as they were before the malfunction, their previous name resolution capabilities will be restored. Delete any DNS records for DCs that haven't been recovered.
+- Delete Windows Internet Name Service (WINS) records for all DCs that haven't been recovered.
 - You can transfer the operations master roles to other DCs in the domain or forest and add more global catalog servers based on the configuration before the failure.
 - Because the entire forest is restored to a previous state, any objects (such as users and computers) that were added and all updates (such as password changes) that were made to existing objects after this point are lost. Therefore, you should re-create these missing objects and reapply the missing updates as appropriate.
-- You might also need to restore outgoing trusts with external domains and forests, because these external trust relationships are not restored automatically from backups.
+- You might also need to restore outgoing trusts with external domains and forests, because these external trust relationships aren't restored automatically from backups.
 
 ## Next Steps
 

@@ -22,7 +22,7 @@ can prepare the first virtualized DC that you recover, shut it down, and then
 copy that virtual hard disk as many times as is necessary to create cloned
 virtualized DCs and build out the domain.
 
-## Requirements for vitualized DC cloning
+## Requirements for virtualized DC cloning
 
 The requirements for virtualized DC cloning are:
 

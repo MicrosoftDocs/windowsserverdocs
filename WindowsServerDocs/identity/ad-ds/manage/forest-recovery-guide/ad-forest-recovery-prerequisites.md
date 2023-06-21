@@ -18,7 +18,7 @@ before devising a forest recovery plan or attempting a recovery.
 
 1. You have worked with a Microsoft Support professional and:
 
-    - Determined the cause of the forest-wide failure. This guide does not
+    - Determined the cause of the forest-wide failure. This guide doesn't
         suggest a cause of the failure or recommend any procedures to prevent
         the failure.
 
@@ -34,25 +34,25 @@ before devising a forest recovery plan or attempting a recovery.
     should be an Active Directory–integrated DNS zone for each Active Directory
     domain.
 
-    - If this is not the case, you can still use the basic principles of this
-        guide to perform forest recovery. However, you will need to take
+    - If this isn't the case, you can still use the basic principles of this
+        guide to perform forest recovery. However, you'll need to take
         specific measures for DNS recovery based on your own environment. For
         more information about using Active Directory–integrated DNS, see
         [Creating a DNS Infrastructure Design](/windows-server/identity/ad-ds/plan/creating-a-dns-infrastructure-design).
 
 3. You may have special configuration for the handling of Domain Controller
     disk volumes in your physical or virtual hosting, such as solutions to
-    protect access to the disk volumes, like Bitlocker. As part of the
+    protect access to the disk volumes, like BitLocker. As part of the
     procedures you may require access to emergency situation information like
-    Bitlocker Recovery keys. You need to ensure this information is available
+    BitLocker Recovery keys. You need to ensure this information is available
     when needed during recovery.
 
 4. Although this guide is intended as a generic guide for forest recovery, not
-    all possible scenarios are covered. For instance, there is a Server Core
+    all possible scenarios are covered. For instance, there's a Server Core
     version, which is a version of Windows Server without the Desktop
-    Experience. Although it is possible to recover a forest consisting of just
+    Experience. Although it's possible to recover a forest consisting of just
     DCs that run Server Core, this guide has no detailed instructions. However,
-    based on the guidance discussed here you will be able to design the required
+    based on the guidance discussed here you'll be able to design the required
     command-line actions yourself.
 
 > [!NOTE]
@@ -85,7 +85,7 @@ be familiar with the following:
 In addition, you should have a documented recovery plan and procedures for AD DS
 domain/forest recoveries, object/subtree recoveries, and SYSVOL recoveries that
 have been tested in a lab environment using production backups. The recovery
-procedures should be vetted on a routine basis (e.g., annually) and the
+procedures should be vetted on a routine basis (for example, annually) and the
 documentation updated as required by OS upgrades, architectural changes to the
 AD DS environment, or any other changes that ensure the procedures are kept up
 to date. For more information and guidance on these procedures refer to the [AD Forest Recovery – Procedures](ad-forest-recovery-procedures.md)

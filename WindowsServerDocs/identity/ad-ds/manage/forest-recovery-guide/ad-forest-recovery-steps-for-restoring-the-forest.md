@@ -19,7 +19,7 @@ We recommend you run through a forest recovery on a regular basis to:
 
 - Ensure the custom steps you defined for your environment are still working.
 
-- If steps do not work, you notice and update the existing plan to adopt for a
+- If steps don't work, you notice and update the existing plan to adopt for a
     new kind of potential failure.
 
 - Verify the defaults you have for selecting the DCs to restore in each of the

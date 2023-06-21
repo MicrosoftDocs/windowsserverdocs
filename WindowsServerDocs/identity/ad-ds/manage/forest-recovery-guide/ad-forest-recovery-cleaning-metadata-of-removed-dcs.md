@@ -1,6 +1,6 @@
 ---
 title: AD Forest Recovery - Cleaning metadata of removed writable domain controllers  
-description: Metadata cleanup removes Active Directory data that identifies a DC to the replication system. Please note that outside of a Forest Recovery, metadata cleanup is part of the demotion process of domain controllers, however, when they are not reachable anymore, this process also applies. Use the following procedure to delete the DC objects for DCs that you plan to add back to the network by reinstalling AD DS.
+description: Metadata cleanup removes Active Directory data that identifies a DC to the replication system. Note that outside of a Forest Recovery, metadata cleanup is part of the demotion process of domain controllers, however, when they aren't reachable anymore, this process also applies. Use the following procedure to delete the DC objects for DCs that you plan to add back to the network by reinstalling AD DS.
 ms.author: inhenkel
 author: IngridAtMicrosoft
 ms.date: 06/10/2023
@@ -14,8 +14,8 @@ ms.topic: article
 Metadata cleanup removes Active Directory data that identifies a DC to the
 replication system.
 
-Please note that outside of a Forest Recovery, metadata cleanup is part of the
-demotion process of domain controllers, however, when they are not reachable
+Note that outside of a Forest Recovery, metadata cleanup is part of the
+demotion process of domain controllers, however, when they aren't reachable
 anymore, this process also applies.
 
 Use the following procedure to delete the DC objects for DCs that you plan to
@@ -39,23 +39,23 @@ For information about installing RSAT, see the article [Remote Server Administra
 **To delete a domain controller object using Active Directory Users and
 Computers in RSAT**
 
-1. Click **Start**, click **Administrative Tools**, and then click **Active
+1. Select **Start**, select **Administrative Tools**, and then select **Active
     Directory Users and Computers**.
 
 2. In the console tree, double-click the domain container, and then
     double-click the **Domain Controllers** organizational unit (OU).
 
 3. In the details pane, right-click the DC that you want to delete, and then
-    click **Delete**.
+    select **Delete**.
 
     ![Delete](media/86716786218562ce1d1abcdb4a22ce11.png)
 
-4. Click **Yes** to confirm the deletion. Select the **This Domain Controller
+4. Select **Yes** to confirm the deletion. Select the **This Domain Controller
     is permanently offline and can no longer be demoted using the Active
     Directory Domain Services Installation Wizard (DCPROMO)** check box and
-    click **Delete**.
+    select **Delete**.
 
-5. If the DC was a global catalog server, click **Yes** confirm that the
+5. If the DC was a global catalog server, select **Yes** confirm that the
     deletion.
 
 ## Next steps

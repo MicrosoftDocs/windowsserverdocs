@@ -1,6 +1,6 @@
 ---
 title: AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL
-description: There are different ways to perform an authoritative restore of SYSVOL. You can either edit the **msDFSR-Options** attribute or perform a system state restore using wbadmin –authsysvol. If you have the option to restore a system state backup (that is, you are restoring AD DS to the same hardware and operating system instance) then using wbadmin –authsysvol is simpler. But if you need to perform a bare metal restore, then you need to edit the **msDFSR-Options** attribute.
+description: There are different ways to perform an authoritative restore of SYSVOL. You can either edit the **msDFSR-Options** attribute or perform a system state restore using wbadmin –authsysvol. If you have the option to restore a system state backup (that is, you're restoring AD DS to the same hardware and operating system instance) then using wbadmin –authsysvol is simpler. But if you need to perform a bare metal restore, then you need to edit the **msDFSR-Options** attribute.
 ms.author: inhenkel
 author: IngridAtMicrosoft
 ms.date: 06/10/2023
@@ -14,40 +14,40 @@ ms.topic: article
 There are different ways to perform an authoritative restore of SYSVOL. You can
 either edit the **msDFSR-Options** attribute or perform a system state restore
 using wbadmin –authsysvol. If you have the option to restore a system state
-backup (that is, you are restoring AD DS to the same hardware and operating
+backup (that is, you're restoring AD DS to the same hardware and operating
 system instance) then using wbadmin –authsysvol is simpler. But if you need to
 perform a bare metal restore, then you need to edit the **msDFSR-Options**
 attribute.
 
 Use the following steps to perform an authoritative synchronization of SYSVOL
-(if it is replicated using DFSR) by editing the **msDFSR-Options** attribute.
-Please note it can also be done using PowerShell.
+(if it's replicated using DFSR) by editing the **msDFSR-Options** attribute.
+Note it can also be done using PowerShell.
 
 **To perform an authoritative synchronization of DFSR-replicated SYSVOL using
 Active Directory Users and Computers**
 
 1. Open Active Directory Users and Computers.
 
-2. Click **View**, and then select **Users, Contacts, Groups, and Computers as
+2. Select **View**, and then select **Users, Contacts, Groups, and Computers as
     containers** and **Advanced Features**.
 
     ![Screenshot that shows the Advanced Features option and Users, Contacts, Groups, and Computers option selected.](media/2a596a72680c054e00119332adab55d8.png)
 
-3. In the tree-view, click **Domain Controllers**, the name of the DC you
+3. In the tree-view, select **Domain Controllers**, the name of the DC you
     restored, **DFSR-LocalSettings**, and then **Domain System Volume**.
 
     ![Screenshot that highlights the Domain System Volume folder.](media/ce6e4c2fa09ce87da6eab16028af486b.png)
 
-4. In the Details pane, right-click **SYSVOL Subscription**, click
-    **Properties**, and click **Attribute Editor**.
+4. In the Details pane, right-click **SYSVOL Subscription**, select
+    **Properties**, and select **Attribute Editor**.
 
     ![Screenshot that shows the Attribute Editor tab in the SYSVOL Subscriptions Properties dialog box.](media/3433980453db8591e0b34f9cb3c93d1c.png)
 
-5. Click **msDFSR-Options**, click **Edit**, type **1**, and click **OK**
+5. Select **msDFSR-Options**, select **Edit**, type **1**, and select **OK**
 
     ![SYSVOL](media/d1396417ad4b6bd016052f8e5f7bd416.png)
 
-6. Click **OK** to close the Attribute Editor.
+6. Select **OK** to close the Attribute Editor.
 
 ## Verify if the authoritative restore is successful using PowerShell
 

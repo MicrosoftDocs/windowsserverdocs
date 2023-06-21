@@ -17,7 +17,7 @@ ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
 
  Reset the password on only the trusting domain side of the trust, also known as the incoming trust (the side where this domain belongs). Then, use the same password on the trusted domain side of the trust, also known as the outgoing trust. Reset the password of the outgoing trust when you restore the first DC in each of the other (trusted) domains.
 
- Resetting the trust password ensures that the DC does not replicate with potentially bad DCs outside its domain. By setting the same trust password while restoring the first DC in each of the domains, you ensure that this DC replicates with each of the recovered DCs. Subsequent DCs in the domain that are recovered by installing AD DS will automatically replicate these new passwords during the installation process.
+ Resetting the trust password ensures that the DC doesn't replicate with potentially bad DCs outside its domain. By setting the same trust password while restoring the first DC in each of the domains, you ensure that this DC replicates with each of the recovered DCs. Subsequent DCs in the domain that are recovered by installing AD DS will automatically replicate these new passwords during the installation process.
 
 ## To reset a trust password on one side of the trust
 
@@ -28,7 +28,7 @@ ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
    ```
 
 2. Use the syntax that this command provides for using the NetDom tool to reset the trust password.
-   For example, if there are two domains in the forest—parent and child—and you are running this command on the restored DC in the parent domain, use the following command syntax:
+   For example, if there are two domains in the forest—parent and child—and you're running this command on the restored DC in the parent domain, use the following command syntax:
 
    ```
    netdom trust parent domain name /domain:child domain name /resetOneSide /passwordT:password /userO:administrator /passwordO:*

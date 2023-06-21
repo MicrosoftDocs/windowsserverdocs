@@ -28,7 +28,7 @@ When symptoms of a forest-wide failure appear, such as in event logs or other mo
     Active Directory schema with malicious or conflicting changes.
 
 - The contents or a backup of a Domain Controller has been exposed to an
-    external party, but leaked credentials have not been used to modify AD data.
+    external party, but leaked credentials haven't been used to modify AD data.
     You may not need to restore the AD database from backup and reinstall all
     DCs in this case. You may need to reset all password of users, computers,
     trusts and (g)MSA accounts.
@@ -38,16 +38,16 @@ When symptoms of a forest-wide failure appear, such as in event logs or other mo
 
     **Important**
 
-    This paper does not cover security recommendations about how to recover a
-    forest that has been hacked or compromised. In general, it is recommended to follow [Best Practices for Securing Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory)
+    This paper doesn't cover security recommendations about how to recover a
+    forest that has been hacked or compromised. In general, it's recommended to follow [Best Practices for Securing Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory)
     and Pass-the-Hash mitigation techniques to harden the environment. For more
     information, see [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft Techniques](https://www.microsoft.com/download/details.aspx?id=36036).
 
 - None of the DCs can replicate with their replication partners.
 
-- Changes cannot be made to AD DS at any domain controller.
+- Changes can't be made to AD DS at any domain controller.
 
-- New DCs cannot be installed in any domain.
+- New DCs can't be installed in any domain.
 
 ## Next steps
 

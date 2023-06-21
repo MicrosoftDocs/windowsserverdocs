@@ -1,6 +1,6 @@
 ---
 title: Active Directory Forest Recovery - Performing a nonauthoritative restore of Active Directory Domain Services
-description: The following procedures use the wbadmin.exe to perform a nonauthoritative restore of Active Directory or Active Directory Domain Services (AD DS). If you are using a different backup solution or if you intend to complete the authoritative restore of SYSVOL later in the forest recovery process...
+description: The following procedures use the wbadmin.exe to perform a nonauthoritative restore of Active Directory or Active Directory Domain Services (AD DS). If you're using a different backup solution or if you intend to complete the authoritative restore of SYSVOL later in the forest recovery process...
 perform an authoritative restore of SYSVOL by using these alternative methods:
 ms.author: inhenkel
 author: IngridAtMicrosoft
@@ -15,22 +15,20 @@ ms.topic: article
 To perform a nonauthoritative restore, complete the following procedure.
 
 The following procedures use the wbadmin.exe to perform a nonauthoritative
-restore of Active Directory or Active Directory Domain Services (AD DS). If you
-are using a different backup solution or if you intend to complete the
+restore of Active Directory or Active Directory Domain Services (AD DS). If you're using a different backup solution or if you intend to complete the
 authoritative restore of SYSVOL later in the forest recovery process, you can
 perform an authoritative restore of SYSVOL by using these alternative methods:
 
 - Determine if SYSVOL is replicated by FRS, see [Determining Whether a Domain Controller's SYSVOL Folder is Replicated by DFSR or FRS](/windows/win32/vss/backing-up-and-restoring-an-frs-replicated-sysvol-folder#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).
 
-- If you are still using File Replication Service (FRS), please consider to
-    switch to Distributed File System (DFS) Replication as soon as possible.  
+- If you're still using File Replication Service (FRS), please consider switching to Distributed File System (DFS) Replication as soon as possible.  
     If you still use FRS to replicate SYSVOL, follow the steps in [article 290762](/troubleshoot/windows-server/networking/use-burflags-to-reinitialize-frs)
     in the Microsoft Knowledge Base, using the **BurFlags** registry key to
     reinitialize FRS replica sets, or if necessary, article
     [315457](https://support.microsoft.com/kb/315457) to rebuild the SYSVOL
     tree.
 
-- If you are using Distributed File System (DFS) Replication to replicate
+- If you're using Distributed File System (DFS) Replication to replicate
     SYSVOL, see [Perform an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-SYSVOL.md).
 
 ## Performing a nonauthoritative restore
@@ -38,7 +36,7 @@ perform an authoritative restore of SYSVOL by using these alternative methods:
 Use the following procedure to perform a nonauthoritative restore of AD DS and
 an authoritative restore of SYSVOL at the same time by using wbadmin.exe. The
 backup must explicitly include system state data; a full server backup that is
-used for full server recovery will not work. A Bare Metal Recovery Backup (BMR)
+used for full server recovery won't work. A Bare Metal Recovery Backup (BMR)
 will contain a system state backup. For more information about creating a system
 state backup, see [Backing up the System State data](ad-forest-recovery-backing-up-system-state.md).
 

@@ -29,13 +29,13 @@ When you increase the value of the large integer, you increase the value of the 
 
 ### To raise the value of available RID pools using adsiedit and the calculator
 
-1. Open Server Manager, click **Tools** and click **ADSI Edit**.
-2. Right-click, select **Connect to** and connect do the Default Naming Context and click **OK**.
+1. Open Server Manager, select **Tools** and select **ADSI Edit**.
+2. Right-click, select **Connect to** and connect do the Default Naming Context and select **OK**.
    ![Screenshot that shows how to connect to the Default Naming Context](media/adsi1.png)
 3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=\<domain name>**.
    ![Screenshot that shows how to browse to the distinguished name path.](media/adsi2.png)
 3. Right-click and select the properties of CN=RID Manager$.
-4. Select the attribute **rIDAvailablePool**, click **Edit**, and then copy the large integer value to the clipboard.
+4. Select the attribute **rIDAvailablePool**, select **Edit**, and then copy the large integer value to the clipboard.
    ![Screenshot that shows the selected rIDAvailablePool attribute.](media/adsi3.png)
 5. Start calculator, and from the **View** menu, select **Scientific Mode**.
 6. Add 100,000 to the current value.
@@ -43,26 +43,26 @@ When you increase the value of the large integer, you increase the value of the 
 7. Using ctrl-c, or the **Copy** command from the **Edit** menu, copy the value to the clipboard.
 8. In the edit dialog of adsiedit, paste this new value.
    ![ADSI Edit](media/adsi5.png)
-9. Click **OK** in the dialog, and **Apply** in the property sheet to update the **rIDAvailablePool** attribute.
+9. Select **OK** in the dialog, and **Apply** in the property sheet to update the **rIDAvailablePool** attribute.
 
 ### To raise the value of available RID pools using LDP
 
 1. At the command prompt, type the following command, and then press ENTER:
    **ldp**
-2. Click **Connection**, click **Connect**, type the name of RID manager, and then click **OK**.
+2. Select **Connection**, select **Connect**, type the name of RID manager, and then select **OK**.
    ![Screenshot that shows where to type the name of the RID manager.](media/ldp1.png)
-3. Click **Connection**, click **Bind**, select **Bind with credentials** and type your administrative credentials, and then click **OK**.
+3. Select **Connection**, select **Bind**, select **Bind with credentials** and type your administrative credentials, and then select **OK**.
    ![Screenshot that shows the Bind with credentials option.](media/ldp2.png)
-4. Click **View**, click **Tree** and then type the following distinguished name path:  CN=RID Manager$,CN=System,DC=*domain name*
+4. Select **View**, select **Tree** and then type the following distinguished name path:  CN=RID Manager$,CN=System,DC=*domain name*
    ![Screenshot that shows where you type the distinguished name path.](media/ldp3.png)
-5. Click **Browse**, and then click **Modify**.
+5. Select **Browse**, and then select **Modify**.
 6. Add 100,000 to the current **rIDAvailablePool** value, and then type the sum into **Values**.
 7. In **Dn**, type `cn=RID Manager$,cn=System,dc=`*<domain name\>*.
 8. In **Edit Entry Attribute**, type `rIDAvailablePool`.
-9. Select **Replace** as the operation, and then click **Enter**.
+9. Select **Replace** as the operation, and then select **Enter**.
    ![Screenshot that shows the Replace option.](media/ldp4.png)
-10. Click **Run** to run the operation. Click **Close**.
-11. To validate the change, click **View**, click **Tree**, and then type the following distinguished name path:   CN=RID Manager$,CN=System,DC=*domain name*.   Check the **rIDAvailablePool** attribute.
+10. Select **Run** to run the operation. Select **Close**.
+11. To validate the change, select **View**, select **Tree**, and then type the following distinguished name path:   CN=RID Manager$,CN=System,DC=*domain name*.   Check the **rIDAvailablePool** attribute.
    ![LDP](media/ldp5.png)
 
 ## Next steps

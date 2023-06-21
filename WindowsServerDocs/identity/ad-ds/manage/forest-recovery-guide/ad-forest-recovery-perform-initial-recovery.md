@@ -37,15 +37,15 @@ child to prevent any break in the trust hierarchy or DNS name resolution.
 
 For each domain that you recover, restore one writeable DC from backup. This is
 the most important part of the recovery because the DC must have a database that
-has not been influenced by whatever caused the forest to fail. It is important
-to have a trusted backup that is thoroughly tested before it is introduced into
+hasn't been influenced by whatever caused the forest to fail. It's important
+to have a trusted backup that is thoroughly tested before it's introduced into
 the production environment.
 
 Then perform the following steps. Procedures for performing certain steps are in
 [AD Forest Recovery - Procedures](ad-forest-recovery-procedures.md).
 
 1. If you plan to restore a physical server, ensure that the network cable of
-    the target DC is not attached and therefore is not connected to the
+    the target DC isn't attached and therefore isn't connected to the
     production network. For a virtual machine, you can remove the network
     adapter or use a network adapter that is attached to another network where
     you can test the recovery process while isolated from the production
@@ -56,7 +56,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     The restore operation must be completed by using an Active Directory-aware
     backup and restore application, such as Windows Server Backup (recommended).
     If Hyper-Vistor Generation ID is supported on the host, then you can also do
-    the non-authoritative restore using a VM snapshot.
+    the nonauthoritative restore using a VM snapshot.
 
     - An authoritative restore of SYSVOL is required on the first recovered
         DC, because replication of the SYSVOL folder must be restarted with the
@@ -69,7 +69,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         Perform an authoritative (or primary) restore operation of SYSVOL only
         for the first DC to be restored in the forest root domain. Incorrectly
         performing primary restore operations of the SYSVOL on other DCs leads
-        to replication conflicts of SYSVOL data.There are two options perform a
+        to replication conflicts of SYSVOL data. There are two options perform a
         nonauthoritative restore of AD DS and an authoritative restore of
         SYSVOL:
 
@@ -82,8 +82,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         server backup and a system state backup. For detailed procedures, see
         [Performing a full server recovery](ad-forest-recovery-perform-full-server-recovery.md) and [Performing a nonauthoritative restore of Active Directory Domain Services](ad-forest-recovery-perform-nonauthoritative-restore.md).
 
-3. After you restore and restart the writeable DC, verify that the failure did
-    not affect the data on the DC. If the DC data is damaged, then repeat step 2
+3. After you restore and restart the writeable DC, verify that the failure didn't affect the data on the DC. If the DC data is damaged, then repeat step 2
     with a different backup.
 
     - If the restored domain controller hosts an operations master role, you
@@ -114,7 +113,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     administrative account passwords should be completed before additional
     domain controllers are installed during the next phase of the forest
     recovery.  
-    In this case also work on replacing all GMSA passwords as if an
+    In this case also, work on replacing all GMSA passwords as if an
     administrative account was taken over, the attacker may have retrieved
     information that allows him to authenticate as GMSA. For details see the
     article about the [golden GMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack)”.
@@ -138,7 +137,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     Also see [Flexible Single-Master Operation (FSMO) placement and optimization on AD DCs](/troubleshoot/windows-server/identity/fsmo-placement-and-optimization-on-ad-dcs).
 
 7. Clean up metadata of all other writeable DCs in the forest root domain that
-    you are not restoring from backup (all writeable DCs in the domain except
+    you aren't restoring from backup (all writeable DCs in the domain except
     for this first DC). If you use the version of Active Directory Users and
     Computers or Active Directory Sites and Services that is included with
     Windows Server 2012 or later or RSAT for Windows 10 or later, metadata
@@ -155,15 +154,15 @@ Then perform the following steps. Procedures for performing certain steps are in
     in the domain will be deleted from DNS.
 
     Until the metadata of all other DCs in the domain is removed, this DC, if it
-    were a RID master before recovery, will not assume the RID master role and
-    therefore will not be able to issue new RIDs. You might see event ID 16650
+    were a RID master before recovery, won't assume the RID master role and
+    therefore won't be able to issue new RIDs. You might see event ID 16650
     in the System log in Event Viewer indicating this failure, but you should
     see event ID 16648 indicating success a little while after you have cleaned
     the metadata.
 
 8. If you have DNS zones that are stored in AD DS, ensure that the local DNS
     Server service is installed and running on the DC that you have restored. If
-    this DC was not a DNS server before the forest failure, you must install and
+    this DC wasn't a DNS server before the forest failure, you must install and
     configure the DNS server role on the DC or a DNS server needs to be
     available on the restoration environment.
 
@@ -190,17 +189,16 @@ Then perform the following steps. Procedures for performing certain steps are in
     If you have reason to believe that raising the RID Pool by 100,000 is
     insufficient for your particular situation, you should determine, taking
     into account the average rid consumption on your environment, the lowest
-    increase that is still safe to use. RIDs are a finite resource that should
-    not be used up needlessly.
+    increase that is still safe to use. RIDs are a finite resource that shouldn't be used up needlessly.
 
     If new security principals were created in the domain after the time of the
     backup that you use for the restore, these security principals might have
     access rights on certain objects. These security principals no longer exist
     after recovery because the recovery has reverted to the backup; however,
-    their access rights might still exist. If the available RID pool is not
+    their access rights might still exist. If the available RID pool isn't
     raised after a restore, new user objects that are created after the forest
     recovery might obtain identical security IDs (SIDs) and could have access to
-    those objects, which was not originally intended.
+    those objects, which wasn't originally intended.
 
     To illustrate, consider the example of the new employee named Amy that was
     mentioned in the introduction. The user object for Amy no longer exists
@@ -211,9 +209,9 @@ Then perform the following steps. Procedures for performing certain steps are in
     the new object would obtain those access rights.
 
 10. Invalidate the current RID pool. The current RID pool is invalidated after a
-    system state restore. But if a system state restore was not performed, the
+    system state restore. But if a system state restore wasn't performed, the
     current RID pool needs to be invalidated to prevent the restored DC from
-    re-issuing RIDs from the RID pool that was assigned at the time the backup
+    reissuing RIDs from the RID pool that was assigned at the time the backup
     was created. For more information, see [Invalidating the current RID pool](ad-forest-recovery-invaildate-rid-pool.md).
 
     >[!NOTE]
@@ -237,7 +235,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     server before the failure, clear the **Global catalog** check box in the
     NTDS Settings properties to remove the global catalog from the DC. The
     exception to this rule is the common case of a forest with just one domain.
-    In this case, it is not required to remove the global catalog. For more
+    In this case, it isn't required to remove the global catalog. For more
     information, see [Removing the global catalog](ad-forest-recovery-remove-gc.md).
 
     By restoring a global catalog from a backup that is more recent than other
@@ -248,13 +246,13 @@ Then perform the following steps. Procedures for performing certain steps are in
     is more recent than T1, and some objects were created between T1 and T2.
     After these DCs are restored, DC2, which is a global catalog, holds newer
     data for domain A's partial replica than domain A holds itself. DC2, in this
-    case, holds lingering objects because these objects are not present on DC1.
+    case, holds lingering objects because these objects aren't present on DC1.
 
     The presence of lingering objects can lead to problems. For instance, e-mail
     messages might not be delivered to a user whose user object was moved
     between domains. After you bring the outdated DC or global catalog server
     back online, both instances of the user object appear in the global catalog.
-    Both objects have the same e-mail address; therefore, e-mail messages cannot
+    Both objects have the same e-mail address; therefore, e-mail messages can't
     be delivered.
 
     A second problem is that a user account that no longer exists might still
@@ -268,7 +266,7 @@ Then perform the following steps. Procedures for performing certain steps are in
     flag will result in the computer losing all its partial replicas
     (partitions) and relegating itself to regular DC status.
 
-14. If you are using gMSA ascounts, you may need to re-create them as the
+14. If you're using gMSA accounts, you may need to re-create them as the
     password generation details may be exposed to an attacker, see:  
     [How to recover from a Golden gMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack)  
 
@@ -301,7 +299,7 @@ to verify forest replication health.
 
 - Run **repadmin /replsum** to check replication between DCs.
 
-- If the restored DC's are not direct replication partners, replication
+- If the restored DCs aren't direct replication partners, replication
     recovery will be much faster by creating temporary connection objects
     between them.
 
@@ -321,7 +319,7 @@ A global catalog is required for these and other reasons:
 - To enable the Net Logon service running on the DCs in each child domain to
     register and remove records on the DNS server in the root domain.
 
-Although it is preferred that the forest root DC become a global catalog, it is
+Although it's preferred that the forest root DC become a global catalog, it's
 generally recommended to elect all DCs to become a global catalog.
 
 >[!NOTE]
