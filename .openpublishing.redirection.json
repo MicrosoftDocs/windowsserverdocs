@@ -10988,7 +10988,6 @@
       "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
     },
-<<<<<<< HEAD
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Add-GC.md",
       "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-add-gc",
@@ -11138,9 +11137,7 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/ad-forest-recovery-faq.yml",
       "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq",
       "redirect_document_id": false
-    }
-=======
-  
+    },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
       "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
@@ -11231,7 +11228,6 @@
     
     }
 
->>>>>>> bda444b3b6cdd99efe895c101935ade2814320b9
   ]
 }
 
