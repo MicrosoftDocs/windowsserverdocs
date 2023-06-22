@@ -46,7 +46,7 @@ Back up at least two writeable DCs for each domain regularly so you have multipl
 
 Restoring system state backups depends on the original operating system and server of the backup. For example, you shouldn't restore a system state backup to a different server. In this case, you may see the following warning:
 
-    "The specified backup is of a different server than the current one. We don't recommend performing a system state recovery with the backup to an alternate server because the server might become unusable. Are you sure you want to use this backup for recovering the current server?"
+    The specified backup is of a different server than the current one. We don't recommend performing a system state recovery with the backup to an alternate server because the server might become unusable. Are you sure you want to use this backup for recovering the current server?
 
 If you need to restore Active Directory to different hardware, create full server backups and plan to perform a full server recovery.
 
@@ -70,7 +70,7 @@ For more information about using the Active Directory database mounting tool, se
 
 You can also use the `ntdsutil snapshot` command to create snapshots of the Active Directory database. By scheduling a task to periodically create snapshots, you can obtain additional copies of the Active Directory database over time. You can use these copies to better identify when the forest-wide failure occurred and then choose the best backup to restore. To create snapshots, use `ntdsutil` or the Remote Server Administration Tools (RSAT).
 
-The target DC can run any version of Windows Server. For more information about using the **ntdsutil snapshot** command, see [Snapshot](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731620(v=ws.11)).
+The target DC can run any version of Windows Server. For more information about using the `ntdsutil snapshot` command, see [Snapshot](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731620(v=ws.11)).
 
 ## Determine which domain controllers to restore
 

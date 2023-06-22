@@ -26,13 +26,9 @@ The following list summarizes the recovery steps at a high level:
     Work with IT and Microsoft Support to determine the scope of the problem and
     potential causes, and evaluate possible remedies with all business
     stakeholders. In many cases, total forest recovery should be the last option.
-1. [Decide how to recover the forest](ad-forest-recovery-intro.md)
+1. [Determine how to recover the forest](ad-forest-recovery-determine-how-to-recover.md)
     After you determine that forest recovery is necessary, complete preliminary
-    steps to prepare for it: 
-    1. Determine the current forest structure
-    1. Identify the functions that each DC performs
-    1. Decide which DC to restore for each domain, and 
-    1. Ensure that all writeable DCs are taken offline.
+    steps to prepare for it.
 1. [Perform initial recovery](ad-forest-recovery-perform-initial-recovery.md)
     In isolation, recover one DC for each domain, clean it, and reconnect the
     domains. Reset privileged accounts, and rectify problems caused by security
