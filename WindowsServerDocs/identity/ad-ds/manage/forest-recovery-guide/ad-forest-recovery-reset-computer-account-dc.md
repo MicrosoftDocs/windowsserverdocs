@@ -8,7 +8,8 @@ ms.date: 06/21/2023
 ms.topic: article
 ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 ---
-# AD Forest Recovery - Resetting the computer account on the DC legacy
+
+# Active Directory Forest Recovery - Resetting the computer account on the DC legacy
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

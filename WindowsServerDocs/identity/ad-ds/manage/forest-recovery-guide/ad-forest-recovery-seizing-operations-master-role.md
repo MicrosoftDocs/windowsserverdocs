@@ -8,7 +8,8 @@ ms.date: 06/21/2023
 ms.topic: article
 ms.custom: 7e6bb370-f840-4416-b5e2-86b0ba715f4f, inhenkel
 ---
-# AD Forest Recovery - Seizing an operations master role
+
+# Active Directory Forest Recovery - Seizing an operations master role
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

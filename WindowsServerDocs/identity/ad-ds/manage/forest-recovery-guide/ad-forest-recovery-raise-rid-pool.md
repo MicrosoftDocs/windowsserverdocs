@@ -8,7 +8,8 @@ ms.date: 06/21/2023
 ms.topic: article
 ms.custom: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4, inhenkel
 ---
-# AD Forest Recovery - Raising the value of available RID pools
+
+# Active Directory Forest Recovery - Raising the value of available RID pools
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

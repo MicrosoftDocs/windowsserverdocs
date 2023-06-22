@@ -9,7 +9,7 @@ ms.topic: article
 ms.custom: 17381f30-55f2-4e00-977a-b701675fa4ff, inhenkel
 ---
 
-# AD Forest Recovery - Devise an AD forest recovery plan
+# Active Directory Forest Recovery - Devise an AD forest recovery plan
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

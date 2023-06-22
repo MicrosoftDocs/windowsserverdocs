@@ -9,7 +9,7 @@ ms.topic: article
 ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 ---
 
-# AD Forest Recovery - Cleanup
+# Active Directory Forest Recovery - Cleanup
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 

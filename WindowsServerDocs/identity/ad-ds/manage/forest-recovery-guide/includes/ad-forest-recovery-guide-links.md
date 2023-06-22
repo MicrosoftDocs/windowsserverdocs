@@ -12,7 +12,7 @@ ms.author: inhenkel
 - [AD Forest Recovery - Devising a custom forest recovery plan](../ad-forest-recovery-devise-a-plan.md)
 - [AD Forest Recovery - Steps for Recovery](../ad-forest-recovery-steps-for-restoring-the-forest.md)
 - [AD Forest Recovery - Identify the problem](../ad-forest-recovery-identify-the-problem.md)
-- [AD Forest Recovery - Determine how to recover](../ad-forest-recovery-intro.md)
+- [AD Forest Recovery - Determine how to recover](../ad-forest-recovery-determine-how-to-recover.md)
 - [AD Forest Recovery - Perform initial recovery](../ad-forest-recovery-perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](../ad-forest-recovery-procedures.md)
 - [AD Forest Recovery - Frequently Asked Questions](../ad-forest-recovery-faq.yml)

@@ -8,7 +8,7 @@ ms.date: 06/21/2023
 ms.custom: inhenkel
 ---
 
-# AD Forest Recovery - Verify Replication
+# Active Directory Forest Recovery - Verify Replication
 
 Applies to: Windows Server (All supported versions)
 

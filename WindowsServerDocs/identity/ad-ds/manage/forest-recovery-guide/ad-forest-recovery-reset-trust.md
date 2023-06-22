@@ -9,7 +9,7 @@ ms.topic: article
 ms.custom: 398918dc-c8ab-41a6-a377-95681ec0b543, inhenkel
 ---
 
-# Resetting a trust password on one side of the trust
+# Active Directory Forest Recovery - Resetting a trust password on one side of the trust
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
