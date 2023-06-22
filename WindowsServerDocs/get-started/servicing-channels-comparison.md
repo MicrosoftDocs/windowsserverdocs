@@ -21,6 +21,9 @@ With the Long-Term Servicing Channel, a new major version of Windows Server is r
 
 ## Semi-Annual Channel
 
+> [!IMPORTANT]
+> The last version of the Semai-Annual Channel, version [20H2]() is no longer supported as of Aug 9, 2022. Customers must perform a clean install of Windows Server 2016 or later to continue receiving updates.
+
 The Semi-Annual Channel enabled customers who are innovating quickly to take advantage of new operating system capabilities at a faster pace, focused in on containers and microservices. Each release in this channel is supported for 18 months from the initial release.
 
 > [!NOTE]
