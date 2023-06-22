@@ -52,7 +52,7 @@ The following table lists some common EAP methods and their [IANA assigned metho
 | EAP-MSCHAP v2 | 26 | ✅ |
 | Protected One-Time Password (EAP-POTP) | 32 | ❌ |
 | EAP-FAST | 43 | ❌ |
-| Pre-Shared Key (EAP-PSK) | 47 | ✅ |
+| Pre-Shared Key (EAP-PSK) | 47 | ❌ |
 | EAP-IKEv2 | 49 | ❌ |
 | EAP-AKA' | 50 | ✅ |
 | EAP-EKE | 53 | ❌ |
