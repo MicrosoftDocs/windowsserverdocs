@@ -17,6 +17,13 @@ Scopes enable you to configure network settings for all clients, such as DNS ser
 
 The DHCP server administrator first creates a scope for each physical subnet and then uses the scope to define the parameters and policies that clients must follow.
 
+<!-- TYPES OF SCOPE 1. single scope - distribution of IP addreses; 2. multi-cast scope (dist. multicast network addresses; 3. scope options ... (need couple to be set ... pre-configured items (standard available options) + specific vendor-class options, e.g. extra Msft options ... custom confogurations ... define 'user classes'  4. super ) ...  -->
+
+planning IP addresses < pull in the planning UP addresses article into this article>
+address pools (see planning IP addreses) 
+address leases (similar to superscopes -- these are the active leases currently in use)
+reservations (the exclusions ... two methods 1. plan it with range so it doesn't include statis IP or; use this method -- exclusions)
+
 ## Scope properties
 
 A DHCP scope has the following properties:
