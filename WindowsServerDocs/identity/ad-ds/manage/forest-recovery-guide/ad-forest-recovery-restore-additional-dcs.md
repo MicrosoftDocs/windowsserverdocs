@@ -22,6 +22,7 @@ In a large enterprise faced with a worldwide infrastructure, a more sophisticate
  There are two methods to install additional DCs, both of which can be automated:
 
 ## Cloning
+
 For virtualized environments that run Windows Server 2012, cloning is the fastest and simplest way to recover a large number of DCs. You can automate the recovery of all virtualized DCs in a domain after you restore a single virtualized DC from backup. For more information about cloning and prerequisites, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../managing-rid-issuance.md).
 
 ## Reinstall AD DS using Windows Powershell

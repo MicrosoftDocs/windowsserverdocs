@@ -46,7 +46,8 @@ Back up at least two writeable DCs for each domain regularly so you have multipl
 
 Restoring system state backups depends on the original operating system and server of the backup. For example, you shouldn't restore a system state backup to a different server. In this case, you may see the following warning:
 
-    The specified backup is of a different server than the current one. We don't recommend performing a system state recovery with the backup to an alternate server because the server might become unusable. Are you sure you want to use this backup for recovering the current server?
+> [!WARNING]
+> The specified backup is of a different server than the current one. We don't recommend performing a system state recovery with the backup to an alternate server because the server might become unusable. Are you sure you want to use this backup for recovering the current server?
 
 If you need to restore Active Directory to different hardware, create full server backups and plan to perform a full server recovery.
 
@@ -56,7 +57,7 @@ If you need to restore Active Directory to different hardware, create full serve
 > 1. Perform a full server restore in order to restore the operating system and all files and applications.
 > 2. Perform a system state restore using wbadmin.exe in order to mark SYSVOL as authoritative.
 >
->  For more information, see Microsoft KB article **249694**. <!-- fix this link -->
+> For more information, see Microsoft KB article **249694**. <!-- fix this link -->
 
 If the time of failure is unknown, investigate further to identify backups that hold the last safe state of the forest. 
 
@@ -99,7 +100,7 @@ A good backup is a backup that can be restored successfully, was taken a few day
 
 ## Identify the current forest structure and DC functions
 
-Determine the current forest structure by identifying all the domains in the forest. Make a list of all of the DCs in each domain, particularly the DCs that have backups, and virtualized DCs which can be a source for cloning. 
+Determine the current forest structure by identifying all the domains in the forest. Make a list of all of the DCs in each domain, particularly the DCs that have backups, and virtualized DCs which can be a source for cloning.
 
 A list of DCs for the forest root domain is the most important because you'll recover this domain first. After you restore the forest root domain, you can obtain a list of the other domains, DCs, and the sites in the forest by using Active Directory snap-ins.
 
@@ -125,7 +126,7 @@ In this above example, there are four backup candidates: DC_1, DC_2, DC_4, and D
 
 > [!NOTE]
 > Because DC_5 is not a global catalog server, it has a slight advantage in that the global catalog doesn't need to be removed after the restore. However you would need to start recovery with the default Administrator account with Rid 500 or use registry value **ignoregcfailures**:  
-> 
+>
 >`Key: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa`  
 > `Value: IgnoreGCFailures`  
 > `Type: REG_DWORD`  

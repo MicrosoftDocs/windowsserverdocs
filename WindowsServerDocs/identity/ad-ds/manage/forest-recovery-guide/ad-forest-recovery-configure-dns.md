@@ -26,42 +26,33 @@ Complete the installation and configuration steps below.
 ### To install and the DNS Server service using Server Manager
 
 1. Open Server Manager and select **Add roles and features**.
-2. In the Add Roles Wizard, if the **Before You Begin** page appears, select **Next**.
-3. On the **Installation type** screen select **Role-based or feature based installation** and select **Next**.
-4. On the **Server Selection** screen select the server and select **Next**.
-5. On the **Server Roles** screen select **DNS Server**, if prompted select **Add Features** and select **Next**.
-6. On the **Features** screen select **Next**.
-7. Read the information on the **DNS Server** page, and then select **Next**.
-   ![Screenshot that shows the DNS Server page.](media/dns1.png)
-8. On the **Confirmation** page, verify that the DNS Server role will be installed, and then select **Install**.
+1. In the Add Roles Wizard, if the **Before You Begin** page appears, select **Next**.
+1. On the **Installation type** screen select **Role-based or feature based installation** and select **Next**.
+1. On the **Server Selection** screen select the server and select **Next**.
+1. On the **Server Roles** screen select **DNS Server**, if prompted select **Add Features** and select **Next**.
+1. On the **Features** screen select **Next**.
+1. Read the information on the **DNS Server** page, and then select **Next**.
+    :::image type="content" source="media/dns1.png" alt-text="Screenshot that shows the DNS Server page.":::
+1. On the **Confirmation** page, verify that the DNS Server role will be installed, and then select **Install**.
 
 ### To configure the DNS Server service
 
 1. Open Server Manager, select **Tools** and select **DNS**.
-   ![Screenshot that shows the DNS object.](media/dns2.png)
-2. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771566(v=ws.11))).
-3. Configure the DNS data as it existed before the critical malfunction. For example:
-
+   :::image type="content" source="media/dns2.png" alt-text="Screenshot that shows the DNS object.":::
+1. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771566(v=ws.11))).
+1. Configure the DNS data as it existed before the critical malfunction. For example:
    - Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771150(v=ws.11))).
    - Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753751(v=ws.11))).
-
-4. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753500(v=ws.11))).
-5. After you configure DNS, you can speed up registration of the NETLOGON Records.
-
+1. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753500(v=ws.11))).
+1. After you configure DNS, you can speed up registration of the NETLOGON Records.
    > [!NOTE]
    > Secure dynamic updates only work when a global catalog server is available.
-
    At the command prompt, type the following command, and then press ENTER:
+   `net stop netlogon`
+1. Type the following command, and then press ENTER:
+   `net start netlogon`
+    :::image type="content" source="media/dns3.png" alt-text="DNS server":::
 
-   **net stop netlogon**
+## Next steps
 
-6. Type the following command, and then press ENTER:
-
-   **net start netlogon**
-
-   ![DNS Server](media/dns3.png)
-
-## Next Steps
-
-- [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

@@ -62,7 +62,7 @@ To ensure the new gMSA uses the new KDS Root Key object, check the attribute
 
 `msDS-ManagedPasswordId` of the gMSA should have the GUID starting offset 24 with the first three parts of the GUID in byte-swapped order (red, green, blue), and the rest in normal byte order (orange):  
 
-:::image type="content" source="media/guid.png" alt-text="guid":::
+:::image type="content" source="media/guid.png" alt-text="guid with color coding":::
 
 If the first gMSA was created using the new KDS Root Key, all subsequent gMSA
 creations will be OK.
@@ -82,10 +82,10 @@ creations will be OK.
 >
 > *If unknown, obtain the* **Domain ID** *by using `whoami /all` for another account in each domain or run the following command to identify the RID 500.*
 > `\$DomainSID = (Get-ADDomain).DomainSID.Value`
->  `\$ObjSID = New-Object`
->  `System.Security.Principal.SecurityIdentifier("\$DomainSID-500")`
->   `\$RID500 = \$ObjSID.Translate([System.Security.Principal.NTAccount])`
->   `\$RID500.Value`
+> `\$ObjSID = New-Object`
+> `System.Security.Principal.SecurityIdentifier("\$DomainSID-500")`
+> `\$RID500 = \$ObjSID.Translate([System.Security.Principal.NTAccount])`
+> `\$RID500.Value`
 
 Rehosting all GCs can be done using `repadmin /unhost` and `repadmin /rehost`
 commands (part of `repadmin /experthelp`). You would run the `repadmin` commands on

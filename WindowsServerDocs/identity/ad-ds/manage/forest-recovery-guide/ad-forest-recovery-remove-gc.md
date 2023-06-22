@@ -20,22 +20,21 @@ ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
 ## To remove the global catalog using Active Directory Sites and Services
 
 1. Open Server Manager, select **Tools** and select **Active Directory Sites and Services**.
-2. In the console tree, expand the **Sites** container, and then select the appropriate site that contains the target server.
-3. Expand the **Servers** container, and then expand the *server* object for the DC from which you want to remove the global catalog.
-4. Right-click **NTDS Settings**, and then select **Properties**.
-5. Clear the **Global Catalog** check box.
-   ![Remove GC](media/removegc1.png)
-6. Select **Apply**.
+1. In the console tree, expand the **Sites** container, and then select the appropriate site that contains the target server.
+1. Expand the **Servers** container, and then expand the *server* object for the DC from which you want to remove the global catalog.
+1. Right-click **NTDS Settings**, and then select **Properties**.
+1. Clear the **Global Catalog** check box.
+   :::image type="content" source="media/removegc1.png" alt-text="Remove GC":::
+1. Select **Apply**.
 
 ## To remove the global catalog using Repadmin
 
 Open an elevated command prompt, type the following command, and press ENTER:
 
-   ```
+   ```cli
    repadmin.exe /options DC_NAME –IS_GC
    ```
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

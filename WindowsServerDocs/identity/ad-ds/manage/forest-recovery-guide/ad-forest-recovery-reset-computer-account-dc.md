@@ -19,13 +19,13 @@ ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 
 1. At a command prompt, type the following command, and then press ENTER:
 
-   ```
+   ```cli
    netdom help resetpwd
    ```
 
 2. Use the syntax that this command provides for using the Netdom command-line tool to reset the computer account password, for example:
 
-   ```
+   ```cli
    netdom resetpwd /server:domain controller name /userD:administrator /passwordd:*
    ```
 
@@ -34,7 +34,6 @@ ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
    > [!NOTE]
    > You should run this command twice.
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

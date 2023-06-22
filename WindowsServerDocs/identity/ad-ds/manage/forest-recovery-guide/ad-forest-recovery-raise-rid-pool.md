@@ -31,40 +31,40 @@ When you increase the value of the large integer, you increase the value of the 
 ### To raise the value of available RID pools using adsiedit and the calculator
 
 1. Open Server Manager, select **Tools** and select **ADSI Edit**.
-2. Right-click, select **Connect to** and connect do the Default Naming Context and select **OK**.
-   ![Screenshot that shows how to connect to the Default Naming Context](media/adsi1.png)
-3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=\<domain name>**.
-   ![Screenshot that shows how to browse to the distinguished name path.](media/adsi2.png)
-3. Right-click and select the properties of CN=RID Manager$.
-4. Select the attribute **rIDAvailablePool**, select **Edit**, and then copy the large integer value to the clipboard.
-   ![Screenshot that shows the selected rIDAvailablePool attribute.](media/adsi3.png)
-5. Start calculator, and from the **View** menu, select **Scientific Mode**.
-6. Add 100,000 to the current value.
-   ![Screenshot that shows where to add 100,000 to the current value.](media/adsi4.png)
-7. Using ctrl-c, or the **Copy** command from the **Edit** menu, copy the value to the clipboard.
-8. In the edit dialog of adsiedit, paste this new value.
-   ![ADSI Edit](media/adsi5.png)
-9. Select **OK** in the dialog, and **Apply** in the property sheet to update the **rIDAvailablePool** attribute.
+1. Right-click, select **Connect to** and connect do the Default Naming Context and select **OK**.
+    :::image type="content" source="media/adsi1.png" alt-text="Screenshot that shows how to connect to the Default Naming Context":::
+1. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=\<domain name>**.
+    :::image type="content" source="media/adsi2.png" alt-text="Screenshot that shows how to browse to the distinguished name path.":::
+1. Right-click and select the properties of **CN=RID Manager$**.
+1. Select the attribute **rIDAvailablePool**, select **Edit**, and then copy the large integer value to the clipboard.
+    :::image type="content" source="media/adsi3.png" alt-text="Screenshot that shows the selected rIDAvailablePool attribute.":::
+1. Start calculator, and from the **View** menu, select **Scientific Mode**.
+1. Add 100,000 to the current value.
+    :::image type="content" source="media/adsi4.png" alt-text="Screenshot that shows where to add 100,000 to the current value.":::
+1. Using ctrl-c, or the **Copy** command from the **Edit** menu, copy the value to the clipboard.
+1. In the edit dialog of adsiedit, paste this new value.
+    :::image type="content" source="media/adsi5.png" alt-text="ADSI Edit":::
+1. Select **OK** in the dialog, and **Apply** in the property sheet to update the **rIDAvailablePool** attribute.
 
 ### To raise the value of available RID pools using LDP
 
 1. At the command prompt, type the following command, and then press ENTER:
    **ldp**
-2. Select **Connection**, select **Connect**, type the name of RID manager, and then select **OK**.
-   ![Screenshot that shows where to type the name of the RID manager.](media/ldp1.png)
-3. Select **Connection**, select **Bind**, select **Bind with credentials** and type your administrative credentials, and then select **OK**.
-   ![Screenshot that shows the Bind with credentials option.](media/ldp2.png)
-4. Select **View**, select **Tree** and then type the following distinguished name path:  CN=RID Manager$,CN=System,DC=*domain name*
-   ![Screenshot that shows where you type the distinguished name path.](media/ldp3.png)
-5. Select **Browse**, and then select **Modify**.
-6. Add 100,000 to the current **rIDAvailablePool** value, and then type the sum into **Values**.
-7. In **Dn**, type `cn=RID Manager$,cn=System,dc=`*<domain name\>*.
-8. In **Edit Entry Attribute**, type `rIDAvailablePool`.
-9. Select **Replace** as the operation, and then select **Enter**.
-   ![Screenshot that shows the Replace option.](media/ldp4.png)
-10. Select **Run** to run the operation. Select **Close**.
-11. To validate the change, select **View**, select **Tree**, and then type the following distinguished name path:   CN=RID Manager$,CN=System,DC=*domain name*.   Check the **rIDAvailablePool** attribute.
-   ![LDP](media/ldp5.png)
+1. Select **Connection**, select **Connect**, type the name of RID manager, and then select **OK**.
+   :::image type="content" source="media/ldp1.png" alt-text="Screenshot that shows where to type the name of the RID manager.":::
+1. Select **Connection**, select **Bind**, select **Bind with credentials** and type your administrative credentials, and then select **OK**.
+   :::image type="content" source="media/ldp2.png" alt-text="Screenshot that shows the Bind with credentials option.":::
+1. Select **View**, select **Tree** and then type the following distinguished name path:  CN=RID Manager$,CN=System,DC=*domain name*
+   :::image type="content" source="media/ldp3.png" alt-text="Screenshot that shows where you type the distinguished name path.":::
+1. Select **Browse**, and then select **Modify**.
+1. Add 100,000 to the current **rIDAvailablePool** value, and then type the sum into **Values**.
+1. In **Dn**, type `cn=RID Manager$,cn=System,dc=`*<domain name\>*.
+1. In **Edit Entry Attribute**, type `rIDAvailablePool`.
+1. Select **Replace** as the operation, and then select **Enter**.
+   :::image type="content" source="media/ldp4.png" alt-text="Screenshot that shows the Replace option.":::
+1. Select **Run** to run the operation. Select **Close**.
+1. To validate the change, select **View**, select **Tree**, and then type the following distinguished name path:   CN=RID Manager$,CN=System,DC=*domain name*.   Check the **rIDAvailablePool** attribute.
+   :::image type="content" source="media/ldp5.png" alt-text="LDP":::
 
 ## Next steps
 

@@ -33,7 +33,6 @@ To verify the command completed successfully, check for event ID 16654 (source i
    $RootDSE.SetInfo()
    ```
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

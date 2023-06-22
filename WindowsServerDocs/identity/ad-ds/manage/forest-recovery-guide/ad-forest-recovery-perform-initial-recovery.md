@@ -61,7 +61,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         are added in the domain must resynchronize their SYSVOL folder with a
         copy of the folder that has been selected to be authoritative.
 
-        >[!WARNING] 
+        >[!WARNING]
         > Perform an authoritative (or primary) restore operation of SYSVOL only for the first DC to be restored in the forest root domain. Incorrectly performing primary restore operations of the SYSVOL on other DCs leads to replication conflicts of SYSVOL data. There are two options perform a nonauthoritative restore of AD DS and an authoritative restore of SYSVOL:
 
     - Perform a full server recovery and then force an authoritative
@@ -80,7 +80,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         unavailable until it has completed replication of a writeable directory
         partition:
 
-        ```
+        ```cli
         HKLM\\System\\CurrentControlSet\\Services\\NTDS\\Parameters\\Repl
         Perform Initial Synchronizations
         ```
@@ -94,7 +94,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         clients. For more information about initial synchronization
         requirements, see [Active Directory FSMO Roles](/troubleshoot/windows-server/identity/fsmo-roles).
 
-1. Continue to the next steps only after you restore and verify the data and before you join this computer to the production network.
+1. Continue to the Next steps only after you restore and verify the data and before you join this computer to the production network.
 1. If you suspect that the forest-wide failure was related to network intrusion
     or malicious attack, reset the account passwords for all administrative
     accounts, including members of the Enterprise Admins, Domain Admins, Schema
@@ -102,12 +102,12 @@ Then perform the following steps. Procedures for performing certain steps are in
     account complete password reset procedure is also needed.. The reset of
     administrative account passwords should be completed before additional
     domain controllers are installed during the next phase of the forest
-    recovery.  
-    
+    recovery.
+
     In this case also, work on replacing all GMSA passwords as if an
     administrative account was taken over, the attacker may have retrieved
     information that allows them to authenticate as GMSA. For details see the
-    article about the [golden GMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack)”.
+    article about the [golden GMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack).
 1. If you suspect user accounts have been compromised, you also need to plan
     for a user password reset for all users in the domain.
 1. On the first restored DC in the forest root domain, seize all domain-wide
@@ -205,7 +205,7 @@ Then perform the following steps. Procedures for performing certain steps are in
 1. Reset the computer account password of this DC twice. For more information, see [Resetting the computer account password of the domain controller](ad-forest-recovery-reset-computer-account-dc.md).
 1. Reset the krbtgt password twice. For more information, see [Resetting the krbtgt password](ad-forest-recovery-reset-the-krbtgt-password.md). Because the krbtgt password history is two passwords, reset passwords twice to remove the original (prefailure) password from password history.
 
-    >[!NOTE] 
+    >[!NOTE]
     > If the forest recovery is in response to a security breach, you may also reset the trust passwords. For more information, see [Resetting a trust password on one side of the trust](ad-forest-recovery-reset-trust.md).
 
 1. If the forest has multiple domains and the restored DC was a global catalog
@@ -232,8 +232,8 @@ Then perform the following steps. Procedures for performing certain steps are in
     be delivered.
 
     Another problem is that a user account that no longer exists may still
-    appear in the global address list. 
-    
+    appear in the global address list.
+
     Addtionally, a universal group that no longer exists might still appear in a user's access token.
 
     If you did restore a DC that was a global catalog—either inadvertently or
@@ -296,7 +296,7 @@ generally recommended to decide that all DCs to are a global catalog.
 
 Monitor the Directory Service event log in Event Viewer for event ID 1119, which indicates that this DC is a global catalog server, or verify the following registry key has a value of 1:
 
-```
+```cli
 **HKLM\\System\\CurrentControlSet\\Services\\NTDS\\Parameters\\Global Catalog
 Promotion Complete**
 ```

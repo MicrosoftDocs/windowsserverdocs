@@ -19,44 +19,36 @@ Use the following procedure to perform a system state backup on a DC by using Wi
 
 1. Open **Server Manager**, select **Tools**, and then select **Windows Server Backup**.
    - In Windows Server 2008 R2 and Windows Server 2008, select **Start**, point to **Administrative Tools**, and then select **Windows Server Backup**.
-
-   ![Screenshot that highlights the Windows Server Backup menu option.](media/fullbackup1.png)
-
-2. If you're prompted, in the **User Account Control** dialog box, provide Backup Operator credentials, and then select **OK**.
-3. Select **Local Backup**.
-4. On the **Action** menu, select **Backup once**.
-5. In the Backup Once Wizard, on the **Backup options** page, select **Different options**, and then select **Next**.
-
-   ![Screenshot that shows the Backup Options page with the Different Options option selected.](media/fullbackup3.png)
-
-6. On the **Select backup configuration** page, select **Custom)**, and then select **Next**.
-7. On the **Select Items for Backup** screen, select **Add Items** and select **System State** and select **Ok**.
+   :::image type="content" source="media/fullbackup1.png" alt-text="Screenshot that highlights the Windows Server Backup menu option.":::
+1. If you're prompted, in the **User Account Control** dialog box, provide Backup Operator credentials, and then select **OK**.
+1. Select **Local Backup**.
+1. On the **Action** menu, select **Backup once**.
+1. In the Backup Once Wizard, on the **Backup options** page, select **Different options**, and then select **Next**.
+    :::image type="content" source="media/fullbackup3.png" alt-text="Screenshot that shows the Backup Options page with the Different Options option selected.":::
+1. On the **Select backup configuration** page, select **Custom**, and then select **Next**.
+1. On the **Select Items for Backup** screen, select **Add Items** and select **System State** and select **Ok**.
    - In Windows Server 2008 R2 and Windows Server 2008, select the volumes to include in the backup. If you select the **Enable system recovery** check box, all critical volumes are selected.
-
-   ![Screenshot that shows the System State check box selected. ](media/systemstatebackup.png)
-
-8. On the **Specify destination type** page, select **Local drives** or **Remote shared folder**, and then select **Next**.  If you're backing up to a remote shared folder, do the following:
+    :::image type="content" source="media/systemstatebackup.png" alt-text="Screenshot that shows the System State check box selected.":::
+1. On the **Specify destination type** page, select **Local drives** or **Remote shared folder**, and then select **Next**.  If you're backing up to a remote shared folder, do the following:
    - Type the path to the shared folder.
    - Under **Access Control**, select **Do not inherit** or **Inherit** to determine access to the backup, and then select **Next**.
    - In the **Provide user credentials for Backup** dialog box, provide the user name and password for a user who has write access to the shared folder, and then select **OK**.
-
-9. For Windows Server 2008 R2 and Windows Server 2008, on the **Specify advanced option** page, select **VSS copy backup** and then select **Next**.
-10. On the **Select Backup Destination** page, choose the backup location.  If you selected local drive choose a local drive or if you selected remote share choose a network share.
-11. On the confirmation screen, select **Backup**.
-12. Once this has completed select **Close**.
-13. Close Windows Server Backup.
+1. For Windows Server 2008 R2 and Windows Server 2008, on the **Specify advanced option** page, select **VSS copy backup** and then select **Next**.
+1. On the **Select Backup Destination** page, choose the backup location.  If you selected local drive choose a local drive or if you selected remote share choose a network share.
+1. On the confirmation screen, select **Backup**.
+1. Once this has completed select **Close**.
+1. Close Windows Server Backup.
 
 ## To perform a system state backup using Wbadmin.exe
 
 Open an elevated command prompt, type the following command and press ENTER:
 
-   ```
+   ```cli
    wbadmin start systemstatebackup -backuptarget:<targetDrive>:
    ```
 
-   ![Install Backup](media/systemstatebackup2.png)
+   :::image type="content" source="media/systemstatebackup2.png" alt-text="Install backup":::
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

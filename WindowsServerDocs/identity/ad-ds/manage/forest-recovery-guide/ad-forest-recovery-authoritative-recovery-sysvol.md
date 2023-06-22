@@ -27,42 +27,31 @@ Note it can also be done using PowerShell.
 Active Directory Users and Computers**
 
 1. Open Active Directory Users and Computers.
-
-2. Select **View**, and then select **Users, Contacts, Groups, and Computers as
+1. Select **View**, and then select **Users, Contacts, Groups, and Computers as
     containers** and **Advanced Features**.
-
-    ![Screenshot that shows the Advanced Features option and Users, Contacts, Groups, and Computers option selected.](media/2a596a72680c054e00119332adab55d8.png)
-
-3. In the tree-view, select **Domain Controllers**, the name of the DC you
+    :::image type="content" source="media/2a596a72680c054e00119332adab55d8.png" alt-text="Screenshot that shows the Advanced Features option and Users, Contacts, Groups, and Computers option selected.":::
+1. In the tree-view, select **Domain Controllers**, the name of the DC you
     restored, **DFSR-LocalSettings**, and then **Domain System Volume**.
-
-    ![Screenshot that highlights the Domain System Volume folder.](media/ce6e4c2fa09ce87da6eab16028af486b.png)
-
-4. In the Details pane, right-click **SYSVOL Subscription**, select
+    :::image type="content" source="media/ce6e4c2fa09ce87da6eab16028af486b.png" alt-text="Screenshot that highlights the Domain System Volume folder.":::
+1. In the Details pane, right-click **SYSVOL Subscription**, select
     **Properties**, and select **Attribute Editor**.
-
-    ![Screenshot that shows the Attribute Editor tab in the SYSVOL Subscriptions Properties dialog box.](media/3433980453db8591e0b34f9cb3c93d1c.png)
-
-5. Select **msDFSR-Options**, select **Edit**, type **1**, and select **OK**
-
-    ![SYSVOL](media/d1396417ad4b6bd016052f8e5f7bd416.png)
-
-6. Select **OK** to close the Attribute Editor.
+    :::image type="content" source="media/3433980453db8591e0b34f9cb3c93d1c.png" alt-text="Screenshot that shows the Attribute Editor tab in the SYSVOL Subscriptions Properties dialog box.":::
+1. Select **msDFSR-Options**, select **Edit**, type **1**, and select **OK**.
+    :::image type="content" source="media/ad4b6bd016052f8e5f7bd416.png" alt-text="SYSVOL.":::
+1. Select **OK** to close the Attribute Editor.
 
 ## Verify if the authoritative restore is successful using PowerShell
 
 1. After the previous operation, restart the DFSR service:  
 
     **Restart-Service DFSR -PassThru**
-
-    ![Text Description automatically generated](media/18334b3759684f7f38a711e2a5c59337.png)
+    :::image type="content" source="media/18334b3759684f7f38a711e2a5c59337.png" alt-text="Restart the DFSR service.":::
 
 2. Verify the presence if Event ID 4602  
 
     **Get-WinEvent -LogName 'DFS Replication' \| Where-Object ID -EQ 4602 \|
     Format-Table -AutoSize -Wrap**
-
-![A picture containing text Description automatically generated](media/2352605524b280902670023231454ca6.png)
+    :::image type="content" source="media/2352605524b280902670023231454ca6.png" alt-text="Restart the DFSR service.":::
 
 ## Next steps
 

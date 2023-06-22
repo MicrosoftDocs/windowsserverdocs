@@ -15,29 +15,29 @@ ms.custom: 7e6bb370-f840-4416-b5e2-86b0ba715f4f, inhenkel
 
 Use the following procedure to seize an operations master role (also known as a flexible single master operations (FSMO) role). You can use Ntdsutil.exe, a command-line tool that is installed automatically on all DCs.
 
-## To seize an operations master role
+## Seize an operations master role
 
 1. At the command prompt, type the following command, and then press ENTER:
 
-   ```
+   ```cli
    ntdsutil
    ```
 
-2. At the **ntdsutil:** prompt, type the following command, and then press ENTER:
+1. At the **ntdsutil:** prompt, type the following command, and then press ENTER:
 
-   ```
+   ```cli
    roles
    ```
 
-3. At the **FSMO maintenance:** prompt, type the following command, and then press ENTER:
+1. At the **FSMO maintenance:** prompt, type the following command, and then press ENTER:
 
-   ```
+   ```cli
    connections
    ```
 
-4. At the **server connections:** prompt, type the following command, and then press ENTER:
+1. At the **server connections:** prompt, type the following command, and then press ENTER:
 
-   ```
+   ```cli
    Connect to server ServerFQDN
    ```
 
@@ -45,13 +45,13 @@ Use the following procedure to seize an operations master role (also known as a 
 
    If *ServerFQDN* does not succeed, use the NetBIOS name of the DC.
 
-5. At the **server connections:** prompt, type the following command, and then press ENTER:
+1. At the **server connections:** prompt, type the following command, and then press ENTER:
 
-   ```
+   ```cli
    quit
    ```
 
-6. Depending on the role that you want to seize, at the **FSMO maintenance:** prompt, type the appropriate command as described in the following table, and then press ENTER.
+1. Depending on the role that you want to seize, at the **FSMO maintenance:** prompt, type the appropriate command as described in the following table, and then press ENTER.
 
 |Role|Credentials|Command|
 |----------|-----------------|-------------|
@@ -66,7 +66,6 @@ After you confirm the request, Active Directory or AD DS attempts to transfer th
 > [!NOTE]
 > If this computer was not a RID master before the failure and you attempt to seize the RID master role, the computer tries to synchronize with a replication partner before accepting this role. However, because this step is performed when the computer is isolated, it will not succeed in synchronizing with a partner. Therefore, a dialog box appears asking you whether you want to continue with the operation despite this computer not being able to synchronize with a partner. Click **Yes**.
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

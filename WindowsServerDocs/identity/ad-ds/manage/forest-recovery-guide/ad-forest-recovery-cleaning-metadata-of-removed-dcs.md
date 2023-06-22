@@ -41,21 +41,16 @@ Computers in RSAT**
 
 1. Select **Start**, select **Administrative Tools**, and then select **Active
     Directory Users and Computers**.
-
-2. In the console tree, double-click the domain container, and then
+1. In the console tree, double-click the domain container, and then
     double-click the **Domain Controllers** organizational unit (OU).
-
-3. In the details pane, right-click the DC that you want to delete, and then
+1. In the details pane, right-click the DC that you want to delete, and then
     select **Delete**.
-
-    ![Delete](media/86716786218562ce1d1abcdb4a22ce11.png)
-
-4. Select **Yes** to confirm the deletion. Select the **This Domain Controller
+    :::image type="content" source="media/86716786218562ce1d1abcdb4a22ce11.png" alt-text="Delete":::
+1. Select **Yes** to confirm the deletion. Select the **This Domain Controller
     is permanently offline and can no longer be demoted using the Active
     Directory Domain Services Installation Wizard (DCPROMO)** check box and
     select **Delete**.
-
-5. If the DC was a global catalog server, select **Yes** confirm that the
+1. If the DC was a global catalog server, select **Yes** confirm that the
     deletion.
 
 ## Next steps

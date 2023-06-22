@@ -21,5 +21,4 @@ particular environment. These steps apply to DCs that run Microsoft Windows Serv
 
 ## Legacy guidance
 
-<!-- update this -->
-Older operating system guidance is found in the archive.
+Older operating system guidance is found in the [Windows Server archive](/previous-versions/windows/).

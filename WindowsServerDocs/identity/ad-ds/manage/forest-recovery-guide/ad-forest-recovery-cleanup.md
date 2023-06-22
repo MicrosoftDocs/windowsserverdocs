@@ -20,6 +20,7 @@ Perform the following post recovery steps as needed:
 After the entire forest is recovered, you can revert to the original DNS configuration, including configuration of the preferred and alternate DNS servers on each of the DCs. After the DNS servers are configured as they were before the malfunction, their previous name resolution capabilities will be restored. Delete any DNS records for DCs that haven't been recovered.
 
 ## Delete Windows Internet Name Service (WINS) records
+
 Delete Windows Internet Name Service (WINS) records for all DCs that haven't been recovered.
 
 ## Transfer operations master roles to other DCs
@@ -33,6 +34,6 @@ Because the entire forest is restored to a previous state, any objects (such as 
 ## Restore outgoing domains and trusts
 You might also need to restore outgoing trusts with external domains and forests, because these external trust relationships aren't restored automatically from backups.
 
-## Next Steps
+## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]

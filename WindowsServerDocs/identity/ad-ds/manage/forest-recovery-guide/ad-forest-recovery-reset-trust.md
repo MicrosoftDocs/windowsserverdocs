@@ -19,31 +19,30 @@ ms.custom: 398918dc-c8ab-41a6-a377-95681ec0b543, inhenkel
 
  Resetting the trust password ensures that the DC doesn't replicate with potentially bad DCs outside its domain. By setting the same trust password while restoring the first DC in each of the domains, you ensure that this DC replicates with each of the recovered DCs. Subsequent DCs in the domain that are recovered by installing AD DS will automatically replicate these new passwords during the installation process.
 
-## To reset a trust password on one side of the trust
+## Reset a trust password on one side of the trust
 
 1. At a command prompt, type the following command, and then press ENTER:
 
-   ```
+   ```cli
    netdom experthelp trust
    ```
 
-2. Use the syntax that this command provides for using the NetDom tool to reset the trust password.
+1. Use the syntax that this command provides for using the NetDom tool to reset the trust password.
    For example, if there are two domains in the forest—parent and child—and you're running this command on the restored DC in the parent domain, use the following command syntax:
 
-   ```
+   ```cli
    netdom trust parent domain name /domain:child domain name /resetOneSide /passwordT:password /userO:administrator /passwordO:*
    ```
 
    When you run this command in the child domain, use the following command syntax:
 
-   ```
+   ```cli
    netdom trust child domain name /domain:parent domain name /resetOneSide /passwordT:password /userO:administrator /passwordO:*
    ```
 
    > [!NOTE]
    > **passwordT** should be the same value on both sides of the trust. Run this command only once (unlike the **netdom resetpwd** command) because it automatically resets the password twice.
 
-## Next Steps
+## Next steps
 
-- [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
-- [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
+[!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
