@@ -37,7 +37,8 @@ Active Directory Users and Computers**
     **Properties**, and select **Attribute Editor**.
     :::image type="content" source="media/3433980453db8591e0b34f9cb3c93d1c.png" alt-text="Screenshot that shows the Attribute Editor tab in the SYSVOL Subscriptions Properties dialog box.":::
 1. Select **msDFSR-Options**, select **Edit**, type **1**, and select **OK**.
-    :::image type="content" source="media/ad4b6bd016052f8e5f7bd416.png" alt-text="SYSVOL.":::
+    <!-- can't find this image :::image type="content" source="media/ad4b6bd016052f8e5f7bd416.png" alt-text="SYSVOL."::: -->
+
 1. Select **OK** to close the Attribute Editor.
 
 ## Verify if the authoritative restore is successful using PowerShell
@@ -51,7 +52,7 @@ Active Directory Users and Computers**
 
     **Get-WinEvent -LogName 'DFS Replication' \| Where-Object ID -EQ 4602 \|
     Format-Table -AutoSize -Wrap**
-    :::image type="content" source="media/2352605524b280902670023231454ca6.png" alt-text="Restart the DFSR service.":::
+    :::image type="content" source="media/2352605524b280902670023231454ca6.png" alt-text="Verify the present of Event ID":::
 
 ## Next steps
 

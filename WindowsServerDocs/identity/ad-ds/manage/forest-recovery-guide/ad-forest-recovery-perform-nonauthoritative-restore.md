@@ -42,11 +42,11 @@ state backup, see [Backing up the System State data](ad-forest-recovery-backing-
 
 Include the **-authsysvol** switch in your recovery command, as shown in the following example:
 
-    `wbadmin start systemstaterecovery \<otheroptions\> -authsysvol`
+`wbadmin start systemstaterecovery \<otheroptions\> -authsysvol`
 
-    For example:
+For example:
 
-    `wbadmin start systemstaterecovery -version:01/01/2023-13:00 -authsysvol`
+`wbadmin start systemstaterecovery -version:01/01/2023-13:00 -authsysvol`
 
 :::image type="content" source="media/b81604238b4288f9fac4e3f791d82e5f.png" alt-text="Restore":::
 
