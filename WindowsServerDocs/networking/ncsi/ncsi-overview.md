@@ -2,13 +2,16 @@
 title: Network Connectivity Status Indicator overview for Windows
 description: The Network Connectivity Status Indicator (NCSI) helps to detect network connectivity and troubleshoot via network probing and passive polling.
 ms.topic: article
-ms.date: 06/06/2023
+ms.date: 06/23/2023
 ms.author: wscontent
 author: xelu86
 ms.contributors: rnitsch
 ---
 
 # NCSI overview
+
+> [!IMPORTANT]
+> The public NCSI probe servers formerly hosted by Azure Front Door are now being hosted by Akamai. This change occurred on June 20, 2023. To better understand how this affects users, see our [NCSI FAQ](ncsi-frequently-asked-questions.md) page.
 
 The Network Connectivity Status Indicator (NCSI) is a feature that helps to provide a visual display of the current network connection status. The NCSI icon is found on the bottom-right of the taskbar by default. Depending on how your device is connected to the network and what operating system you're running will determine its appearance.
 
@@ -34,7 +37,7 @@ This seems trivial until you consider that it must perform checks for a multitud
 
 An active probe is an http request sent to a web probe server for a specific NCSI address. The server is hosted by Microsoft on the internet but can also be an enterprise’s own private probe server, which is a more uncommon scenario. When NCSI sends the probe and receives a valid response, it considers the client device to have internet connectivity.
 
-When NCSI doesn’t detect internet connectivity, it's either that the probe is not completing, or the probe is completing with failure. Some reasons for not completing can be device, network configuration, or other environmental issues. An example of completing with a failure is receiving an **HTTP 403 Forbidden** response, usually indicating a proxy blocked the outbound probe.
+When NCSI doesn’t detect internet connectivity, it's either that the probe isn't completing, or the probe is completing with failure. Some reasons for not completing can be device, network configuration, or other environmental issues. An example of completing with a failure is receiving an **HTTP 403 Forbidden** response, usually indicating a proxy blocked the outbound probe.
 
 > [!WARNING]
 > Do not disable active probing as a resolution to a NCSI issue as passive polling alone is unable to determine all network connectivity issues.
