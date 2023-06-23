@@ -28,11 +28,8 @@ before devising a forest recovery plan or attempting a recovery.
     Active Directory–integrated Domain Name System (DNS). Specifically, there
     should be an Active Directory–integrated DNS zone for each Active Directory
     domain.
-    - If this isn't the case, you can still use the basic principles of this
-        guide to perform forest recovery. However, you'll need to take
-        specific measures for DNS recovery based on your own environment. For
-        more information about using Active Directory–integrated DNS, see
-        [Creating a DNS Infrastructure Design](/windows-server/identity/ad-ds/plan/creating-a-dns-infrastructure-design).
+
+    If this isn't the case, you can still use the basic principles of this guide to perform forest recovery. However, you'll need to take specific measures for DNS recovery based on your own environment. For more information about using Active Directory–integrated DNS, see [Creating a DNS Infrastructure Design](/windows-server/identity/ad-ds/plan/creating-a-dns-infrastructure-design).
 1. You may have a special configuration for the handling of Domain Controller
     disk volumes in your physical or virtual hosting, such as solutions to
     protect access to disk volumes, like BitLocker. As part of the
@@ -80,7 +77,7 @@ to date. For more information and guidance on these procedures, refer to the [AD
 > [!TIP]
 > Microsoft offers the **Active Directory Recovery Execution Service (ADRES)** service to assist customers with the development of this documentation/procedure. Contact your Customer Success Account Management (CSAM) for details.
 
-### You have backed up and restored AD DA and SYSVOL in a lab environment
+### You have backed up and restored AD DS and SYSVOL in a lab environment
 
 You should have backed up and restored AD DS and SYSVOL in a lab
 environment on a regular basis. For more information, see [AD Forest Recovery - Backing up a full server](ad-forest-recovery-backing-up-a-full-server.md).
