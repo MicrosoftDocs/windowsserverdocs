@@ -309,9 +309,9 @@
         items:
         - name: Prerequisites
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-prerequisites.md
-        - name: Devising a custom forest recovery plan
+        - name: Devise a custom forest recovery plan
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan.md
-        - name: Steps for Recovery
+        - name: Steps to recovery the forest
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest.md
         - name: Identify the problem
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem.md
@@ -321,9 +321,9 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery.md
         - name: Procedures
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
-        - name: Frequently Asked Questions
+        - name: FAQ
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
-        - name: Recovering a Single Domain within a Multidomain Forest
+        - name: Recover a single domain within a multidomain forest
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-recover-single-domain-multidomain-forest.md
         - name: Redeploy remaining DCs
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-restore-additional-dcs.md
