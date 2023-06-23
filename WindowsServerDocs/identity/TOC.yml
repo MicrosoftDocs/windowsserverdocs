@@ -304,7 +304,7 @@
     - name: AD DS Operations
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
       items:
-      - name: AD Forest Recovery Guide
+      - name: Introduction
         href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide.md
         items:
         - name: Prerequisites
