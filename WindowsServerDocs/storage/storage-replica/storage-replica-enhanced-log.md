@@ -67,7 +67,7 @@ New-Partition -DiskNumber <disk number> -DriveLetter 'f' -UseMaximumSize
 Create the new Storage Replica Partnership using the `-LogType RAW` parameter to specify the new logging service:
 
 ```powershell
-New-SRPartnership -SourceComputerName <computer name> -SourceRGName <source group name> -SourceVolumeName 'C:\ClusterStorage\south-data\' -SourceLogVolumeName e: -DestinationComputerName <source destination computer name> -DestinationRGName <destination resource group name> -DestinationVolumeName 'C:\ClusterStorage\north-data\' -DestinationLogVolumeName e: -LogType RAW -Enablecompression
+New-SRPartnership -SourceComputerName <computer name> -SourceRGName <source group name> -SourceVolumeName 'C:\ClusterStorage\south-data\' -SourceLogVolumeName e: -DestinationComputerName <source destination computer name> -DestinationRGName <destination resource group name> -DestinationVolumeName 'C:\ClusterStorage\north-data\' -DestinationLogVolumeName f: -LogType RAW -Enablecompression
 ```
 
 > [!NOTE]
