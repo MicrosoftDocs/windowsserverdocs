@@ -29,18 +29,18 @@ You must configure the following settings for WAC to be able to remotely manage 
 1. **Enable inbound connections on the [Amazon Web Services (AWS) console](https://aws.amazon.com/console/)**
     - From the top navigation bar, select a Region for the security group. Security groups are specific to a Region, so you should select the same Region in which you created your instance.
     - In the navigation pane, choose Instances.
-    ![Alt text](image.png)
+    :::image type="content" source="add-ews-ec2s-images/image.png" alt-text="":::
     - Select your instance and, in bottom half of the screen, choose the Security tab. Security groups list the security groups that are associated with the instance. Inbound rules displays a list of the inbound rules that are in effect for the instance.
     - For the security group to which you'll add the new rule, choose the security group ID link to open the security group.
-    ![Alt text](image-1.png)
+    :::image type="content" source="add-ews-ec2s-images/image-1.png" alt-text="":::
     - On the Inbound rules tab, choose **Edit inbound rules**.
-    ![Alt text](image-2.png)
+    :::image type="content" source="add-ews-ec2s-images/image-2.png" alt-text="":::
     - On the Edit inbound rules page, do the following:
         - Choose Add rule.
         - For Type, choose **WinRM-HTTP** and for port range enter **5985**, alternatively, you can choose **WinRM-HTTPS** and for port range enter **5986**
         - For Source, choose **IP Addresses**, then enter the Source IP address corresponding to your Windows Admin Center gateway.
         - Choose Save rules.
-    ![Alt text](image-3.png)
+    :::image type="content" source="add-ews-ec2s-images/image-3.png" alt-text="":::
 
 ## Connecting to the instance
 After completing the prerequisites above, add your EC2s as connections in Windows Admin Center with the following steps:
