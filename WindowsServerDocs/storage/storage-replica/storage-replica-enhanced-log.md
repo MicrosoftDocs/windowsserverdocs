@@ -8,7 +8,7 @@ author: wbsmolen
 ms.date: 06/19/2023
 ---
 
-# Known issues with Storage Replica
+# Deploying Storage Replica Enhanced Log
 
 >Applies to: Azure Stack HCI 23H2
 
@@ -16,9 +16,9 @@ Storage Replica leverages a general-purpose logging service for replicating IO t
 
 Follow the steps below to deploy Storage Replica
 
-# Enhanced Log for Stretched Clusters
+## Enhanced Log for Stretched Clusters
 
-## Step 1
+### Step 1
 
 Create standard new CSV_ReFS formatted volumes for Storage Replica data/data replication on each site's storage pool:
 
@@ -30,7 +30,7 @@ New-Volume -FriendlyName south-data -StoragePoolFriendlyName "pool for site Sout
 New-Volume -FriendlyName north-data -StoragePoolFriendlyName "pool for site North" -Size 1tb -FileSystem CSVFS_ReFS
 ```
 
- ## Step 2
+### Step 2
 
 Createa a new virtual disk for Storage Replica Logs and initialize the partition for each site:
 
@@ -42,7 +42,7 @@ New-VirtualDisk -FriendlyName south-log -StoragePoolFriendlyName "pool for site 
 New-VirtualDisk -FriendlyName north-log -StoragePoolFriendlyName "pool for site North" -Size 16gb
 ```
 
-## Step 3
+### Step 3
 
 Identify the disk number of the partitions you initialized in Step 2 so you can assign a drive letter:
 
@@ -58,7 +58,7 @@ On site 2:
 New-Partition -DiskNumber <disknumber> -DriveLetter 'f' -UseMaximumSize
 ```
 
-## Step 4
+### Step 4
 
 Create the new Storage Replica Partnership:
 
