@@ -71,4 +71,4 @@ New-SRPartnership -SourceComputerName <Source Computer Hostname> -SourceRGName <
 ```
 
 > [!NOTE]
-> `-EnableCompression` is only needed if its desired to use SMB compression for the storage replica traffic.
+> `-EnableCompression` is only needed if you intend to use SMB Compression for Storage Replica traffic.
