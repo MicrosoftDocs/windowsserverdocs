@@ -5,7 +5,7 @@ manager: candyc
 ms.author: billy
 ms.topic: troubleshooting
 author: wbsmolen
-ms.date: 06/19/2023
+ms.date: 06/23/2023
 ---
 
 # Deploying Storage Replica Enhanced Log
@@ -53,22 +53,22 @@ Get-Disk
 On site 1:
 
 ```powershell
-New-Partition -DiskNumber <disk number> -DriveLetter 'e' -UseMaximumSize
+New-Partition -DiskNumber <Disk Number> -DriveLetter 'e' -UseMaximumSize
 ```
 
 On site 2:
 
 ```powershell
-New-Partition -DiskNumber <disk number> -DriveLetter 'f' -UseMaximumSize
+New-Partition -DiskNumber <Disk Number> -DriveLetter 'f' -UseMaximumSize
 ```
 
 ### Step 4
 
-Create the new Storage Replica Partnership using the `-LogType RAW` parameter to specify the new logging service:
+Create the new Storage Replica Partnership using the `-LogType Raw` parameter to specify the new logging service:
 
 ```powershell
-New-SRPartnership -SourceComputerName <computer name> -SourceRGName <source group name> -SourceVolumeName 'C:\ClusterStorage\south-data\' -SourceLogVolumeName e: -DestinationComputerName <source destination computer name> -DestinationRGName <destination resource group name> -DestinationVolumeName 'C:\ClusterStorage\north-data\' -DestinationLogVolumeName f: -LogType RAW -Enablecompression
+New-SRPartnership -SourceComputerName <Source Computer Hostname> -SourceRGName <Source Replication Group Name> -SourceVolumeName 'C:\ClusterStorage\south-data\' -SourceLogVolumeName e: -DestinationComputerName <Destination Computer Name> -DestinationRGName <Destination Replication Group Name> -DestinationVolumeName 'C:\ClusterStorage\north-data\' -DestinationLogVolumeName f: -LogType Raw -EnableCompression
 ```
 
 > [!NOTE]
-> `-Enablecompression` is only needed if its desired to use SMB compression for the storage replica traffic.
+> `-EnableCompression` is only needed if its desired to use SMB compression for the storage replica traffic.
