@@ -9,13 +9,13 @@ ms.topic: article
 ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 ---
 
-# Active Directory Forest Recovery - Adding the GC
+# Active Directory Forest Recovery - Add the GC
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to add the global catalog to a DC.
 
-## To add the global catalog
+## Add the global catalog
 
 1. Select **Start**, point to **All Programs**, point to **Administrative Tools**, and then select **Active Directory Sites and Services**.
 1. In the console tree, expand the **Sites** container, and then select the appropriate site that contains the target server.
@@ -25,7 +25,7 @@ Use the following procedure to add the global catalog to a DC.
 
 :::image type="content" source="media/adsi1.png" alt-text="Add GC":::
 
-## To add the global catalog using Repadmin
+## Add the global catalog using repadmin
 
 - Open an elevated command prompt, type the following command, and press ENTER:
 

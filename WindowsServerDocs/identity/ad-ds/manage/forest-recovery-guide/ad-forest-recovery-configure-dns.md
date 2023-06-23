@@ -8,7 +8,7 @@ ms.date: 06/21/2023
 ms.topic: article
 ms.custom: inhenkel
 ---
-# Active Directory Forest Recovery - Configuring the DNS Server service
+# Active Directory Forest Recovery - Configure the DNS Server service
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
@@ -23,7 +23,7 @@ Complete this step for each restored DC that isn't running as a DNS server after
 
 Complete the installation and configuration steps below.
 
-### To install and the DNS Server service using Server Manager
+### Install and the DNS Server service using Server Manager
 
 1. Open Server Manager and select **Add roles and features**.
 1. In the Add Roles Wizard, if the **Before You Begin** page appears, select **Next**.
@@ -35,7 +35,7 @@ Complete the installation and configuration steps below.
     :::image type="content" source="media/dns1.png" alt-text="Screenshot that shows the DNS Server page.":::
 1. On the **Confirmation** page, verify that the DNS Server role will be installed, and then select **Install**.
 
-### To configure the DNS Server service
+### Configure the DNS Server service
 
 1. Open Server Manager, select **Tools** and select **DNS**.
    :::image type="content" source="media/dns2.png" alt-text="Screenshot that shows the DNS object.":::

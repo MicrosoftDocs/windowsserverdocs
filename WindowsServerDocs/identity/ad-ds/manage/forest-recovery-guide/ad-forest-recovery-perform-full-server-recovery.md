@@ -7,7 +7,7 @@ ms.date: 06/21/2023
 ms.topic: article
 ---
 
-# Active Directory Forest Recovery -  Performing a full server recovery
+# Active Directory Forest Recovery -  Perform a full server recovery
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
 
@@ -80,7 +80,7 @@ image**
     continue. Select **Yes**.
 1. Once this completes, perform an authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-SYSVOL.md).
 
-## Enabling the network adapter for a network backup
+## Enable the network adapter for a network backup
 
 If you need to enable a network adapter from the command prompt to restore from
 a network share, use the following steps.

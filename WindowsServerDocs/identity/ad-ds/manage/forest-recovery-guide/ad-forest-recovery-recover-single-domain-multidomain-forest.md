@@ -7,7 +7,7 @@ ms.date: 06/21/2023
 ms.topic: article
 ---
 
-# Active Directory Forest Recovery - Recovering a single domain in a multidomain forest
+# Active Directory Forest Recovery - Recover a single domain in a multidomain forest
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
 
@@ -35,7 +35,7 @@ The following sections provide general considerations for each option. The
 complete set of steps that need to be done for the recovery will vary for
 different Active Directory environments.
 
-## Re-Create Group Managed Service Accounts (gMSA)
+## Recreate Group Managed Service Accounts (gMSA)
 
 > [!WARNING]
 > If the KDS Root Key objects in the forest were compromised, you should re-create the gMSA accounts in multiple domains, even if the domain itself was not compromised.

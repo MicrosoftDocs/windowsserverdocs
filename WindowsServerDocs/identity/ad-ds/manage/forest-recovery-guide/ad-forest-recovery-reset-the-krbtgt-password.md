@@ -9,7 +9,7 @@ ms.topic: article
 ms.custom: 3bd6c1d0-d316-4b03-b7b4-557d4537635c, inhenkel
 ---
 
-# Active Directory Forest Recovery - Resetting the krbtgt password
+# Active Directory Forest Recovery - Reset the krbtgt password
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
@@ -20,7 +20,7 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 >
 > If you use a customized password filter (such as passfilt.dll) on a DC, then you might receive an error when you try to reset the krbtgt password. For more information, including a workaround, see Microsoft Knowledge Base [article 2549833](https://support.microsoft.com/kb/2549833).
 
-## To reset the krbtgt password
+## Reset the krbtgt password
 
 1. Select **Start**, point to **Control Panel**, point to **Administrative Tools**, and then select **Active Directory Users and Computers**.
 1. Select **View**, and then select **Advanced Features**.

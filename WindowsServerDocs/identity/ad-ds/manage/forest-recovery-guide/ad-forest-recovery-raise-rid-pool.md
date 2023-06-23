@@ -9,13 +9,13 @@ ms.topic: article
 ms.custom: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4, inhenkel
 ---
 
-# Active Directory Forest Recovery - Raising the value of available RID pools
+# Active Directory Forest Recovery - Raise the value of available RID pools
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to raise the value of the relative ID (RID) pools that the RID operations master will allocate after that DC is restored. By raising the value of the available RID pools, you can ensure that no DC allocates a RID for a security principal that was created after the backup that was used to restore the domain.
 
-## About Active Directory RID Pools and rIDAvailablePool
+## Active Directory RID Pools and rIDAvailablePool
 
 Each domain has an object **CN=RID Manager$,CN=System,DC**=<*domain_name*>. This object has an attribute named **rIDAvailablePool**. This attribute value maintains the global RID space for an entire domain. The value is a large integer with upper and lower parts. The upper part defines the number of security principals that can be allocated for each domain (0x3FFFFFFF or just over 1 billion). The lower part is the number of RIDs that have been allocated in the domain.
 
@@ -28,7 +28,7 @@ Each domain has an object **CN=RID Manager$,CN=System,DC**=<*domain_name*>. This
 
 When you increase the value of the large integer, you increase the value of the low part. For example, if you add 100,000 to the sample value of 4611686014132422708 for a sum of 4611686014132522708, the new low part is 102100. This indicates that the next RID pool that will be allocated by the RID master will begin with 102100 instead of 2100.
 
-### To raise the value of available RID pools using adsiedit and the calculator
+### Raise the value of available RID pools using adsiedit and the calculator
 
 1. Open Server Manager, select **Tools** and select **ADSI Edit**.
 1. Right-click, select **Connect to** and connect do the Default Naming Context and select **OK**.
@@ -46,7 +46,7 @@ When you increase the value of the large integer, you increase the value of the 
     :::image type="content" source="media/adsi5.png" alt-text="ADSI Edit":::
 1. Select **OK** in the dialog, and **Apply** in the property sheet to update the **rIDAvailablePool** attribute.
 
-### To raise the value of available RID pools using LDP
+### Raise the value of available RID pools using LDP
 
 1. At the command prompt, type the following command, and then press ENTER:
    **ldp**

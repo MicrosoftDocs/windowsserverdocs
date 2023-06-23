@@ -8,7 +8,7 @@ ms.date: 06/21/2023
 ms.topic: article
 ---
 
-# Active Directory Forest Recovery - Performing a nonauthoritative restore of Active Directory Domain Services
+# Active Directory Forest Recovery - Perform a nonauthoritative restore of Active Directory Domain Services
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
 
@@ -29,7 +29,7 @@ perform an authoritative restore of SYSVOL by using these alternative methods:
 - If you're using Distributed File System (DFS) Replication to replicate
     SYSVOL, see [Perform an authoritative synchronization of DFSR-replicated SYSVOL](ad-forest-recovery-authoritative-recovery-SYSVOL.md).
 
-## Performing a nonauthoritative restore
+## Perform a nonauthoritative restore
 
 Use the following procedure to perform a nonauthoritative restore of AD DS and
 an authoritative restore of SYSVOL at the same time by using wbadmin.exe. The

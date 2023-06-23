@@ -9,13 +9,13 @@ ms.topic: article
 ms.custom: 9238cb27-0020-42f7-90d6-fcebf7e3c0bc, inhenkel
 ---
 
-# Active Directory Forest Recovery - Backing up the System State data
+# Active Directory Forest Recovery - Back up the System State data
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to perform a system state backup on a DC by using Windows Server Backup or wbadmin.exe.
 
-## To perform a system state backup using Windows Server Backup
+## Perform a system state backup using Windows Server Backup
 
 1. Open **Server Manager**, select **Tools**, and then select **Windows Server Backup**.
    - In Windows Server 2008 R2 and Windows Server 2008, select **Start**, point to **Administrative Tools**, and then select **Windows Server Backup**.
@@ -39,7 +39,7 @@ Use the following procedure to perform a system state backup on a DC by using Wi
 1. Once this has completed select **Close**.
 1. Close Windows Server Backup.
 
-## To perform a system state backup using Wbadmin.exe
+## Perform a system state backup using Wbadmin.exe
 
 Open an elevated command prompt, type the following command and press ENTER:
 

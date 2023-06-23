@@ -37,7 +37,7 @@ You can also synchronize the DSRM password with a domain user account in order t
 > [!NOTE]
 > The Administrator account is a member of the built-in Administrators group by default, as are the Domain Admins and Enterprise Admins groups. This group has full control of all DCs in the domain.
 
-## Determining which backups to use
+## Determine which backups to use
 
 Back up at least two writeable DCs for each domain regularly so you have multiple backups to choose from. Select one or more DCs as required and the PDC Emulator operation master for SYSVOL data recovery.
 
@@ -153,7 +153,7 @@ If you're running virtualized DCs, you can move them to a virtual network that i
 
 If you're running DCs on physical hardware, disconnect the network cable of the first DC that you plan to restore in the forest root domain. If possible, also disconnect the network cables of all other DCs. This prevents DCs from replicating, if they're accidentally started during the forest recovery process.
 
-### Large forest
+### Large forests
 
 In a large forest spread across multiple locations, it can be difficult to guarantee that all writeable DCs are shut down. For this reason, the recovery steps—such as resetting the computer account and krbtgt account, in addition to metadata cleanup—are designed to ensure that the recovered writeable DCs don't replicate with dangerous writeable DCs (in case some are still online in the forest).
 

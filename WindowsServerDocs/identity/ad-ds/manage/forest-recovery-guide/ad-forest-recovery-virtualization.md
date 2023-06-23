@@ -11,7 +11,7 @@ ms.topic: article
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
 
-## Using virtualized domain controller cloning to expedite forest recovery
+## Use virtualized domain controller cloning to expedite forest recovery
 
 Virtualized domain controller (DC) cloning simplifies and expedites the process
 for installing additional virtualized DCs in a domain, especially in centralized

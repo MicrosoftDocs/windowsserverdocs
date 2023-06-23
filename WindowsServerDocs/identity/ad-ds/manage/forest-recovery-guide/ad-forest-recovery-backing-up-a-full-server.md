@@ -7,7 +7,7 @@ ms.date: 06/21/2023
 ms.topic: article
 ---
 
-# Active Directory Forest Recovery - Backing up a full server
+# Active Directory Forest Recovery - Back up a full server
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
 
