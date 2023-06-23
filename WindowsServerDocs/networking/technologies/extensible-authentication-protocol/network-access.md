@@ -4,7 +4,7 @@ description: This article presents information about the Extensible Authenticati
 author: xelu86
 ms.author: wscontent
 ms.topic: conceptual
-ms.date: 06/16/2023
+ms.date: 06/19/2023
 ms.contributor: samyun
 ms.reviewer: samyun
 ---
@@ -37,12 +37,34 @@ EAP authentication methods that are used within tunneled EAP methods are commonl
 
 **Tunnel EAP (TEAP)**: Described by [RFC 7170](https://www.rfc-editor.org/rfc/rfc7170), tunneled EAP method that establishes a secure TLS tunnel and executes other EAP methods inside that tunnel. Supports EAP chaining - authenticating the machine and user within one authentication session. In Windows Server 2022, the inclusion of TEAP only provides support for the client-side - Windows 10, version 2004 (build 19041). NPS doesn't support TEAP at this time. The client support enables interoperation with commonly deployed RADIUS servers that support TEAP. Windows supports EAP-TLS and EAP-MSCHAP v2 as inner methods.
 
+The following table lists some common EAP methods and their [IANA assigned method Type numbers](https://www.iana.org/assignments/eap-numbers/eap-numbers.xhtml#eap-numbers-4).
+
+| EAP method | IANA assigned **Type** number | Native Windows support |
+| --- | --- | --- |
+| MD5-Challenge (EAP-MD5) | 4 | ❌ |
+| One-Time Password (EAP-OTP) | 5 | ❌ |
+| Generic Token Card (EAP-GTC) | 6 | ❌ |
+| EAP-TLS | 13 | ✅ |
+| EAP-SIM | 18 | ✅ |
+| EAP-TTLS | 21 | ✅ |
+| EAP-AKA | 23 | ✅ |
+| PEAP | 25 | ✅ |
+| EAP-MSCHAP v2 | 26 | ✅ |
+| Protected One-Time Password (EAP-POTP) | 32 | ❌ |
+| EAP-FAST | 43 | ❌ |
+| Pre-Shared Key (EAP-PSK) | 47 | ❌ |
+| EAP-IKEv2 | 49 | ❌ |
+| EAP-AKA' | 50 | ✅ |
+| EAP-EKE | 53 | ❌ |
+| TEAP | 55 | ✅ |
+| EAP-NOOB | 56 | ❌ |
+
 ## Configuring EAP properties
 
 You can access the EAP properties for 802.1X authenticated wired and wireless access in the following ways:
 
 - Configuring the Wired Network (IEEE 802.3) Policies and Wireless Network (IEEE 802.11) Policies extensions in Group Policy.
-  - Computer Configuration > Policies > Windows Settings > Security Settings
+  - **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings**
 - Using Mobile Device Management (MDM) software, such as Intune ([Wi-Fi](/mem/intune/configuration/wi-fi-settings-windows)/[Wired](/mem/intune/configuration/wired-network-settings-windows))
   - [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp)
   - [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp)
@@ -275,7 +297,7 @@ The EAP-SIM settings in the UI map to [EapSimConnectionPropertiesV1](/openspecs/
 | **Enable usage of realms** | **Realm**=`true` | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
 | **Specify a realm** | **Realm** | Provides a place to type a realm name. If **Enable usage of realms** is enabled, this string is used. If this field is empty, the derived realm is used. |
 
-## [EAP-AKA](#tab/eap-aka1)
+## [EAP-AKA](#tab/eap-aka)
 
 EAP-AKA is defined in [RFC 4187](https://www.rfc-editor.org/rfc/rfc4187). EAP Authentication and Key Agreement (AKA) is used for authentication and session key distribution by using the AKA mechanism. AKA is used in the 3rd generation mobile networks Universal Mobile Telecommunications System (UMTS) and CDMA2000. AKA is based on symmetric keys and typically runs in a Subscriber Identity Module (SIM).
 
@@ -288,7 +310,7 @@ The EAP-AKA settings in the UI map to [EapAkaConnectionPropertiesV1](/openspecs/
 | **Enable usage of realms** | **Realm**=`true` | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
 | **Specify a realm** | **Realm** | Provides a place to type a realm name. If **Enable usage of realms** is enabled, this string is used. If this field is empty, the derived realm is used. |
 
-## [EAP-AKA'](#tab/eap-aka2)
+## [EAP-AKA'](#tab/eap-aka-prime)
 
 EAP-AKA' is defined in [RFC 5448](https://www.rfc-editor.org/rfc/rfc5448) and [RFC 9048](https://www.rfc-editor.org/rfc/rfc9048). EAP-AKA Prime (AKA') is a modified version of EAP-AKA that adds a new key derivation function to facilitate access to the 3rd-Generation Partnership Project (3GPP)-based networks by using non-3GPP standards, such as:
 

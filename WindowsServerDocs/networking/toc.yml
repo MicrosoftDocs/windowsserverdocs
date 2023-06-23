@@ -254,6 +254,8 @@ items:
       href: technologies/extensible-authentication-protocol/windows-11-changes.md
     - name: Configure EAP profiles in Windows
       href: technologies/extensible-authentication-protocol/configure-eap-profiles.md
+    - name: Passpoint (Hotspot 2.0)
+      href: /windows-hardware/drivers/mobilebroadband/hotspot-20
   - name: High-Performance Networking (HPN)
     href: technologies/hpn/hpn-top.md
     items:

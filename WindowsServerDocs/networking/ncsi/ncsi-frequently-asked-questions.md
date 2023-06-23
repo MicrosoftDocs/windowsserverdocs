@@ -2,7 +2,7 @@
 title: Network Connectivity Status Indicator FAQ for Windows
 description: 'Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.'
 ms.topic: article
-ms.date: 06/06/2023
+ms.date: 06/23/2023
 ms.author: wscontent
 author: xelu86
 ms.contributors: rnitsch
@@ -11,6 +11,23 @@ ms.contributors: rnitsch
 # Answers To common questions about NCSI
 
 The following section is to provide a quick FAQ surrounding the Network Connectivity Status Indicator (NCSI) in Windows.
+
+> [!IMPORTANT]
+> The public NCSI probe servers formerly hosted by Azure Front Door are now being hosted by Akamai. This change occurred on June 20, 2023.
+>
+> Microsoft recommends as best practices that firewall rules be used to allow NCSI traffic and should not be based on IP addresses. If you have observed failed NCSI probes, first check that the client probes are not being blocked by enterprise firewalls or proxies. If the probes used to work prior to the mentioned date, rules added to allow outbound HTTP requests to 13.107.4.52 is the issue.
+>
+> - You can modify your outbound rules in the **Windows Defender Firewall with Advanced Security** by clicking **Start** &gt; type **wf.msc** &gt; and hit **Enter**. An outbound rule should be created based on originating service.
+>
+> - NLS (Network List Service) applies to:
+>   - Windows Server 2022 and future iterations
+>   - Windows 11
+>
+> - NLA (Network Location Awareness) service applies to:
+>   - Windows Server 2019 and previous iterations
+>   - Windows 10 and previous iterations
+>
+> For users behind an external hardware-based firewall, we recommend that customers work with their hardware vendors to build the appropriate rules for their environment as each have different controls and configurations in implementation. NCSI probes follow the same requirement as Windows Updates regarding allowing the hostnames through and not mapping to specific IP addresses.
 
 ## When are active probes sent?
 
