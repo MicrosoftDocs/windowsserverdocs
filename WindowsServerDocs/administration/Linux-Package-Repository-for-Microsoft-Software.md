@@ -41,6 +41,8 @@ Note that not all supported distributions are listed here. See the current suppo
 
 - Enterprise Linux 8 (EL8)<p>`sudo dnf install https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm`
 
+- Enterprise Linux 9 (EL9)<p>`sudo rpm -Uvh https://packages.microsoft.com/config/rhel/9.0/packages-microsoft-prod.rpm`
+ 
 ### SUSE
 
 - SUSE Linux Enterprise Server 12<p>`sudo zypper install https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm`
