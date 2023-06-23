@@ -20,12 +20,12 @@ The following section is to provide a quick FAQ surrounding the Network Connecti
 > - You can modify your outbound rules in the **Windows Defender Firewall with Advanced Security** by clicking **Start** &gt; type **wf.msc** &gt; and hit **Enter**. An outbound rule should be created based on originating service.
 >
 > - NLS (Network List Service) applies to:
-    > - Windows Server 2022 and future iterations
-    > - Windows 11
+>   - Windows Server 2022 and future iterations
+>   - Windows 11
 >
 > - NLA (Network Location Awareness) service applies to:
-    > - Windows Server 2019 and previous iterations
-    > - Windows 10 and previous iterations
+>   - Windows Server 2019 and previous iterations
+>   - Windows 10 and previous iterations
 >
 > For users behind an external hardware-based firewall, we recommend that customers work with their hardware vendors to build the appropriate rules for their environment as each have different controls and configurations in implementation. NCSI probes follow the same requirement as Windows Updates regarding allowing the hostnames through and not mapping to specific IP addresses.
 
