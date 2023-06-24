@@ -21,7 +21,7 @@ Storage Replica leverages a general-purpose logging service for replicating IO t
 
 Traditional Log is based on the [Common Log File System (CLFS)](windows-hardware/drivers/kernel/introduction-to-the-common-log-file-system).
 
-Enhanced Log avoids file system abstractions, and their performance costs, by leveraging a raw format for logging IO that needs to be replicated.  Enhanced Log introduces an architecture that allows for multiple IO data records to be concurrently written to the secondary volume in a replication group, greatly improving overall workload performance.
+Enhanced Log avoids file system abstractions and their performance costs by leveraging a raw format for logging IO that needs to be replicated.  Enhanced Log introduces an architecture that allows for multiple IO data records to be concurrently written to the secondary volume in a replication group, greatly improving overall workload performance.
 
 > [!IMPORTANT]
 > There is no migration path from Storage Replica Traditional Log to Enhanced Log.
