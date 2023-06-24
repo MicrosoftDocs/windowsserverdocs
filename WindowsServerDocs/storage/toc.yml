@@ -255,7 +255,7 @@ items:
     items:
     - name: Stretch Cluster Replication using Shared Storage
       href: storage-replica/stretch-cluster-replication-using-shared-storage.md
-    - name: Deploying Storage Replica Enhanced Log
+    - name: Storage Replica Enhanced Log
       href: storage-replica/storage-replica-enhanced-log.md
     - name: Server to server storage replication
       href: storage-replica/server-to-server-storage-replication.md
