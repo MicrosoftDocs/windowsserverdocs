@@ -8,7 +8,7 @@ author: wbsmolen
 ms.date: 06/23/2023
 ---
 
-# Storage Replica Enhanced Log
+# Storage Replica Logging Engines
 
 >Applies to: Azure Stack HCI 23H2
 
@@ -17,9 +17,17 @@ Storage Replica leverages a general-purpose logging service for replicating IO t
 > [!IMPORTANT]
 > Enhanced Log will be coming to Windows Server as soon as possible.
 
-Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log:
+## Traditional Log
+
+Traditional Log is based on the [Common Log File System (CLFS)](windows-hardware/drivers/kernel/introduction-to-the-common-log-file-system).
+
+## Enhanced Log
+
+Storage Replica Enhanced Log avoids file system abstractions, and their performance costs, by leveraging a raw format for logging IO that needs to be replicated.  Enhanced Log introduces an architecture that allows for multiple IO data records to be concurrently written to the secondary volume in a replication group, greatly improving overall workload performance. 
 
 ## Deployment Steps
+
+Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log:
 
 1. Create standard new CSV_ReFS formatted volumes for Storage Replica data/data replication on each site's storage pool:
 
