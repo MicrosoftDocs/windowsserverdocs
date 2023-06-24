@@ -253,10 +253,10 @@ items:
   - name: Storage Replica
     href: storage-replica/storage-replica-overview.md
     items:
-    - name: Stretch Cluster Replication using Shared Storage
-      href: storage-replica/stretch-cluster-replication-using-shared-storage.md
     - name: Storage Replica Enhanced Log
       href: storage-replica/storage-replica-enhanced-log.md
+    - name: Stretch Cluster Replication using Shared Storage
+      href: storage-replica/stretch-cluster-replication-using-shared-storage.md
     - name: Server to Server Storage Replication
       href: storage-replica/server-to-server-storage-replication.md
     - name: Cluster to Cluster Storage Replication
