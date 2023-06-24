@@ -16,7 +16,7 @@ Storage Replica leverages a general-purpose logging service for replicating IO t
 
 Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log:
 
-## Enhanced Log for Stretched Clusters
+## Deployment Steps
 
 1. Create standard new CSV_ReFS formatted volumes for Storage Replica data/data replication on each site's storage pool:
 
@@ -66,3 +66,13 @@ Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log
     > `-EnableCompression` is only needed if you intend to use SMB Compression for Storage Replica traffic.
 
 You may use `-LogType FileBased` to deploy the Storage Replica Partnership using the Traditional Log format.
+
+## More information
+
+* [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
+* [Server to Server Storage Replication](server-to-server-storage-replication.md)
+* [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
+* [Storage Replica: Known Issues](storage-replica-known-issues.md)
+* [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
+* [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+* [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
