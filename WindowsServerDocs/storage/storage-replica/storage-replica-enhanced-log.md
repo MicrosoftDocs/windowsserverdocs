@@ -31,7 +31,7 @@ Follow the steps below to deploy a Storage Replica Partnership with Enhanced Log
     New-Volume -FriendlyName north-data -StoragePoolFriendlyName "Pool for Site North" -Size 1tb -FileSystem CSVFS_ReFS
     ```
 
-2. Createa a new virtual disk for Storage Replica logs and initialize the partition for each site:
+2. Create a new virtual disk for Storage Replica logs and initialize the partition for each site:
 
     ```powershell
     New-VirtualDisk -FriendlyName south-log -StoragePoolFriendlyName "Pool for Site South" -Size 16gb
