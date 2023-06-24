@@ -564,7 +564,7 @@ If replicating a physical disk resource (PDR) workload like File Server for gene
     -   The source log volume should be on a disk that uses SSD or similarly fast media, not spinning disks.
 
     ```PowerShell
-    New-SRPartnership -SourceComputerName sr-srv01 -SourceRGName rg01 -SourceVolumeName "C:\ClusterStorage\Volume1" -SourceLogVolumeName e: -DestinationComputerName sr-srv03 -DestinationRGName rg02 -DestinationVolumeName d: -DestinationLogVolumeName e:
+    New-SRPartnership -SourceComputerName sr-srv01 -SourceRGName rg01 -SourceVolumeName "C:\ClusterStorage\Volume1" -SourceLogVolumeName e: -DestinationComputerName sr-srv03 -DestinationRGName rg02 -DestinationVolumeName d: -DestinationLogVolumeName e: -LogType Raw
     ```
 
     > [!NOTE]
