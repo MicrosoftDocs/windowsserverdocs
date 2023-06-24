@@ -8,7 +8,7 @@ author: wbsmolen
 ms.date: 06/23/2023
 ---
 
-# Storage Replica Logging Engines
+# Storage Replica Enhanced Log
 
 >Applies to: Azure Stack HCI 23H2
 
