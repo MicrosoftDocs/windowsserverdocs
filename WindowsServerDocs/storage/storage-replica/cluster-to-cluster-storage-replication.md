@@ -1,5 +1,5 @@
 ---
-title: Cluster to cluster Storage Replication
+title: Cluster to Cluster Storage Replication
 manager: siroy
 ms.author: nedpyle
 ms.topic: how-to
@@ -8,7 +8,7 @@ author: nedpyle
 ms.date: 04/26/2019
 description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server.
 ---
-# Cluster to cluster Storage Replication
+# Cluster to Cluster Storage Replication
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 

@@ -9,7 +9,7 @@ ms.date: 05/31/2023
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 
-# Known issues with Storage Replica
+# Known Issues with Storage Replica
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 

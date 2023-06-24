@@ -78,7 +78,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic                                        |Description|
 |---                                                         |---           |
 |[Use Storage Migration Service to migrate a server](storage-migration-service/migrate-data.md)| Added some clarification on how we transfer files |
-|[Cluster to Cluster Storage Replica cross region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Added validation steps|
+|[Cluster to Cluster Storage Replica Cross-Region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Added validation steps|
 |[Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)|Added validation steps|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)| Added support statement for Data Deduplication|
 

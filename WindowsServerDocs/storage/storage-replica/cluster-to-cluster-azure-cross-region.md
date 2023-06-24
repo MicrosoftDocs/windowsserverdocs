@@ -1,13 +1,13 @@
 ---
-title: Cluster to Cluster Storage Replica cross region in Azure
-description: Cluster to Cluster Storage Replication cross region in Azure
+title: Cluster to Cluster Storage Replication Cross-Region in Azure
+description: Cluster to Cluster Storage Replication Cross-Region in Azure
 author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
 ms.topic: article
 manager: mchad
 ---
-# Cluster to Cluster Storage Replica cross region in Azure
+# Cluster to Cluster Storage Replication Cross-Region in Azure
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 

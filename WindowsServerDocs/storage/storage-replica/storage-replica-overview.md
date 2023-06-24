@@ -1,5 +1,5 @@
 ---
-description: "Learn more about: Storage Replica overview"
+description: Storage Replica Overview
 title: Storage Replica Overview
 manager: siroy
 ms.author: billy
@@ -8,7 +8,7 @@ author: wbsmolen
 ms.date: 10/04/2022
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
-# Storage Replica overview
+# Storage Replica Overview
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
