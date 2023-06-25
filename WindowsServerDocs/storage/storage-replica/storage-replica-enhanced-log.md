@@ -3,7 +3,7 @@ description: Learn about Storage Replica Enhanced Log and the performance improv
 title: Storage Replica Enhanced Log
 manager: candyc
 ms.author: billy
-ms.topic: troubleshooting
+ms.topic: how-to
 author: wbsmolen
 ms.date: 06/23/2023
 ---
@@ -86,5 +86,5 @@ You may use `-LogType FileBased` to deploy the Storage Replica Partnership using
 * [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known Issues](storage-replica-known-issues.md)
 * [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+* [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

@@ -196,5 +196,5 @@ For a list of new features in Storage Replica in Windows Server 2019, see [What'
 * [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known Issues](storage-replica-known-issues.md)
 * [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+* [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

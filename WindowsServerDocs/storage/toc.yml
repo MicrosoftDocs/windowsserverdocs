@@ -261,9 +261,9 @@ items:
       href: storage-replica/server-to-server-storage-replication.md
     - name: Cluster to Cluster Storage Replication
       href: storage-replica/cluster-to-cluster-storage-replication.md
-    - name: Cluster to Cluster Storage Replica Cross-Region in Azure
+    - name: Cluster to Cluster Storage Replication Cross-Region in Azure
       href: storage-replica/cluster-to-cluster-azure-cross-region.md
-    - name: Cluster to Cluster Storage Replica Within the Azure Region
+    - name: Cluster to Cluster Storage Replication Within one Azure Region
       href: storage-replica/cluster-to-cluster-azure-one-region.md
     - name: "Storage Replica: Known Issues"
       href: storage-replica/storage-replica-known-issues.md

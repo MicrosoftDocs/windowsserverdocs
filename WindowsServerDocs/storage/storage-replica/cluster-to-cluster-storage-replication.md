@@ -386,4 +386,4 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
--   [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+-   [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
