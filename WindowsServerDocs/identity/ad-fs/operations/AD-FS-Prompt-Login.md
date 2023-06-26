@@ -35,7 +35,7 @@ AD FS in Windows Server 2012 R2 with the July 2016 update rollup introduced nati
 The following is a list of AD FS versions that support the `prompt=login` parameter.
 
 - AD FS in Windows Server 2012 R2 with the July 2016 update rollup
-- AD FS in Windows Server 2016
+- AD FS in Windows Server 2016 or later 
 
 ## How to configure a federated domain to send prompt=login to AD FS
 
