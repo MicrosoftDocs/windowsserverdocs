@@ -12,7 +12,7 @@ ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 
 # Hardware requirements for Windows Server
 
-This article outlines the minimum hardware requirements to run Windows Server. If your computer has less than the minimum requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
+This article outlines the minimum hardware requirements to run Windows Server. If your computer has less than the minimum requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you wish to install and use.
 
 Unless otherwise specified, these minimum hardware requirements apply to all installation options (Server Core and Server with Desktop Experience) and both Standard and Datacenter editions.
 
@@ -96,7 +96,7 @@ The following items are only required for certain features:
 > [!NOTE]
 > A Trusted Platform Module (TPM) chip is required in order to use certain features such as BitLocker Drive Encryption. If your computer uses TPM, it must meet these requirements:
 >
-> - Hardware-based TPMs must implement version 2.0 of the TPM specification.
+> - Hardware-based TPMs must implement TPM specification version 2.0.
 > - TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.
 > - TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It is acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.
 >
