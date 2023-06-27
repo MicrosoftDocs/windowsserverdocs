@@ -84,8 +84,8 @@ To use SMB over QUIC, you need the following things:
 1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
 
 > [!NOTE]
-> SMB over QUIC doesn't require Active Directory domains, these steps are for the recommended use case. You can use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM. 
-   
+> We recommended using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
+
 1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
 1. Click a certificate under **Select a computer certificate for this file server**, click the server addresses clients can connect to or click **Select all**, and click **Enable**.
 
@@ -195,8 +195,8 @@ An expired SMB over QUIC certificate that you replace with a new certificate fro
 
 ## Notes
 
-- Windows Server 2022 Datacenter: Azure Edition is available on Azure Stack HCI 22H2, for customers not using Azure public cloud.
-- SMB over QUIC doesn't require Active Directory domains, it is just the recommended use case. You can use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM. Azure IaaS does support Azure Active Directory-joined Windows Servers (AAD-join of Windows Servers outside of Azure IaaS is not supported), but AAD and Windows do not support credentials for remote Windows security operations, because AAD doesn't contain a user SID or a group SIDs. This means you must use either a domain-based or local user account to access the SMB over QUIC share. 
+- For customers not using Azure public cloud, Windows Server 2022 Datacenter: Azure Edition is available on Azure Stack HCI beginning with version 22H2.
+- We recommended using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM, or Azure IaaS with Microsoft Azure Active Directory (Azure AD) joined Windows Servers. Azure AD joined Windows Servers for non-Azure IaaS based machines isn't supported. Azure AD joined Windows Servers don't support credentials for remote Windows security operations because Azure AD doesn't contain user or group SIDs. Azure AD joined Windows Servers must use either a domain-based or local user account to access the SMB over QUIC share.
 - You can't configure SMB over QUIC using WAC when the SMB server is in a workgroup (that is, not AD domain joined). In that scenario you must use the [New-SMBServerCertificateMapping](/powershell/module/smbshare/new-smbservercertificatemapping) cmdlet.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
 - Users should have strong passwords or, ideally, be configured using a [passwordless strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy) with [Windows Hello for Business MFA](/windows/security/identity-protection/hello-for-business) or [smart cards](/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference). Configure an account lockout policy for mobile users through [fine-grained password policy](../../identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#fine_grained_pswd_policy_mgmt) and you should deploy intrusion protection software to detect brute force or password spray attacks.
