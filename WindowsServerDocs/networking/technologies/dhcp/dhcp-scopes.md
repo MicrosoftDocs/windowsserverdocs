@@ -1,28 +1,21 @@
 ---
-title: Scopes in DHCP server
-description: This article helps you to understand how scopes work in IPv4 DHCP server. 
+title: Scopes and IP address range planning in DHCP server
+description: This article helps you to understand how scopes work in IPv4 DHCP server, including planning for IP address ranges
 ms.topic: article
 author: robinharwood
 ms.author: wscontent
 ms.custom: template-concept, team=cloud_advocates
 ms.contributors: orthomas
-ms.date: 07/01/2023
+ms.date: 07/10/2023
 ---
 
-# Scopes in DHCP server
+# Scopes and IP address range planning in DHCP server
 
-A DHCP scope is an administrative grouping of IP addresses for computers on a subnet that that the DHCP server can lease to clients. When you define one or more scopes on your DHCP server, the server can manage the distribution and assignment of IP addresses to DHCP clients. 
+A DHCP scope is an administrative grouping of IP addresses for computers on a subnet that that the DHCP server can lease to clients. When you define one or more scopes on your DHCP server, the server can manage the distribution and assignment of IP addresses to DHCP clients.
 
 Scopes enable you to configure network settings for all clients, such as DNS servers and network gateways. Scopes filter hosts by name, MAC address, and even operating system before assigning an IP address. You can configure policy for each scope.
 
 The DHCP server administrator first creates a scope for each physical subnet and then uses the scope to define the parameters and policies that clients must follow.
-
-<!-- TYPES OF SCOPE 1. single scope - distribution of IP addreses; 2. multi-cast scope (dist. multicast network addresses; 3. scope options ... (need couple to be set ... pre-configured items (standard available options) + specific vendor-class options, e.g. extra Msft options ... custom confogurations ... define 'user classes'  4. super ) ...  -->
-
-planning IP addresses < pull in the planning UP addresses article into this article>
-address pools (see planning IP addreses) 
-address leases (similar to superscopes -- these are the active leases currently in use)
-reservations (the exclusions ... two methods 1. plan it with range so it doesn't include statis IP or; use this method -- exclusions)
 
 ## Scope properties
 
@@ -42,19 +35,57 @@ A DHCP scope has the following properties:
 
 Before deploying your servers, list your subnets and the IP address range you want to use for each subnet.
 
+## Types of scopes
+
+In addition to a single DHCP scope configured with a standard distribution of IP addresses, other types of scopes available in an authorized IPv4 DHCP server can provide expanded functionality, depending on your user requirements and deployment considerations.
+
+### Single scope
+
+A single scope is the simplest configuration possible in DHCP. A single scope is a range of IP addresses and associated configuration options allocated to DHCP clients in a specific subnet.
+
+### Multicast scope
+
+Multicasting in Windows is the process of sending a message to a group of recipients, in contrast to a message that's sent to a specific recipient. In a single scope setup, DHCP assigns each DHCP client a single unique IP address from a range of IP addresses that you planned and configured prior to activating the scope. A multicast scope is a group of IP multicast network addresses that can be distributed by the DHCP server to other computers in your network using the Multicast Address Dynamic Client Allocation Protocol (MADCAP).  MADCAP controls how the DHCP servers dynamically assign IP addresses on a TCP/IP network. Multicast scopes enable you to configure a scope so that messages assigned to a multicast IP address are sent to all clients in a Windows multicast group. See [RFC2730](https://www.rfc-editor.org/rfc/rfc2730) for more information on MADCAP.
+
+### DHCP Superscope
+
+DHCP Superscope is an administrative feature of DHCP server that you can use to group multiple scopes as a single administrative entity. Identifying which scopes go with which networks can be a difficult administrative task. In an environment with multiple subnets defined on a single physical network, superscopes enable your DHCP server to assign leases to clients across those multiple subnets. See [DHCP Superscopes](../openspecs/windows_protocols/ms-dhcpm/4b3dafe4-70e5-4085-969e-4bb402d9c68b) to learn more about how to enable DHCP superscope.
+
+## Scope options
+
+Scope options configured at the server level will be applied to all DHCP clients regardless of which subnet they are on. Functionality that you want to be present across all DHCP clients should be configured at the server level. These standard options include:
+
+- Default gateway
+- Domain Name and DNS servers
+- WINS servers
+
+### Specific vendor-class options
+
+- Extra Msft options?
+- Custom configurations (including defining user classes)?
+
+## Defining a DHCP scope
+
+Each subnet can have only a single DHCP scope with a single continuous range of IP addresses. To use several address ranges within a single scope or subnet for DHCP service, you must first define the scope and then set any required exclusion ranges. The following section of this article provides guidance on planning for exclusion ranges.
+
 ## Planning address ranges
 
 Planning IP address ranges across multiple scopes on an authorized IPv4 DHCP server is central to understanding how scopes work and successfully creating new scopes. 
 
 IP address ranges must be planned prior to setting up scopes. See [Install DHCP Server](quickstart-install-configure-DHCP-server.md) for guidance on creating a new scope on an authorized DHCP IPv4 server.
 
-## Create IP address ranges
+planning IP addresses < pull in the planning UP addresses article into this article>
+address pools (see planning IP addreses) 
+address leases (similar to superscopes -- these are the active leases currently in use)
+reservations (the exclusions ... two methods 1. plan it with range so it doesn't include static IP or; use this method -- exclusions)
+
+## Creating IP address ranges
 
 Each subnet must have its own unique IP address range. The IP address range specifices which IP addresses to include or exclude for assignment to DHCP clients. In other words, you can select a range of IP addresses that can be used by devices connected to your DHCP service. These IP address ranges are represented on a DHCP server with scopes or groupings of IP addresses on the subnet that uses the DHCP service. 
 
 You also can exclude specific IP addresses that you do not want clients to use. 
 
-### Define IP address range
+### Defining IP address range
 
 When you define your IP address range for each scope use the full range of consecutive IP addresses that make up the local subnet of your DHCP service. As a best practice, you want to establish the entire range of addresses before identifying the static IPs within your range. You then can identify which of the remaining IPs are available for DHCP clients to lease.
 
@@ -85,23 +116,3 @@ It is recommended that you configure your exclusion range with extra addresses t
 
 - [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
 - [DHCP Subnet selection options](/dhcp-subnet-options)
-- []()
-
-## Related links
-
-- [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
-- [DHCP Subnet selection options](/dhcp-subnet-options)
-
-## Defining a DHCP scope
-
-Each subnet can have only a single DHCP scope with a single continuous range of IP addresses. To use several address ranges within a single scope or subnet for DHCP service, you must first define the scope and then set any required exclusion ranges. See []() for more information on planning and setting exclusion ranges. 
-
-## DHCP Superscope
-
-DHCP Superscope is an administrative feature of DHCP server that you can use to group multiple scopes as a single administrative entity. See [DHCP Superscopes](../openspecs/windows_protocols/ms-dhcpm/4b3dafe4-70e5-4085-969e-4bb402d9c68b) to learn more about how to enable DHCP superscope. 
-
-## Next steps
-
-- [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
-- [DHCP Subnet selection options](/dhcp-subnet-options)
- 
