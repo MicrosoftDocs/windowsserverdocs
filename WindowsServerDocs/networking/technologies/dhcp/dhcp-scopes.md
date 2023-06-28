@@ -1,6 +1,6 @@
 ---
-title: Scopes and IP address range planning in DHCP server
-description: This article helps you to understand how scopes work in IPv4 DHCP server, including planning for IP address ranges
+title: DHCP scopes in Windows Server
+description: Learn about how scopes work in DHCP server and how to design IP address ranges.
 ms.topic: article
 author: robinharwood
 ms.author: wscontent
@@ -9,17 +9,29 @@ ms.contributors: orthomas
 ms.date: 07/10/2023
 ---
 
-# Scopes and IP address range planning in DHCP server
+# DHCP scopes
 
 A DHCP scope is an administrative grouping of IP addresses for computers on a subnet that that the DHCP server can lease to clients. When you define one or more scopes on your DHCP server, the server can manage the distribution and assignment of IP addresses to DHCP clients.
 
 Scopes enable you to configure network settings for all clients, such as DNS servers and network gateways. Scopes filter hosts by name, MAC address, and even operating system before assigning an IP address. You can configure policy for each scope.
 
-The DHCP server administrator first creates a scope for each physical subnet and then uses the scope to define the parameters and policies that clients must follow.
+You will first create a scope for each physical subnet and then use that scope to define the parameters and policies that clients must follow.
 
-## Scope properties
+Before creating your new scope, you also must devote time to planning the IP address ranges it will use.
 
-A DHCP scope has the following properties:
+## Types of scopes
+
+DHCP server includes the following types of scopes:
+
+- Single scope
+- Multicast scope
+- DHCP Superscopes
+
+### Single scope
+
+A single scope is the simplest configuration possible in DHCP. A single scope is a range of IP addresses and associated configuration options allocated to DHCP clients in a specific subnet.
+
+Additionally, a typical DHCP scope has the following properties:
 
 - A range of IP addresses from which to include or exclude addresses used for DHCP service lease offerings.
 
@@ -33,23 +45,17 @@ A DHCP scope has the following properties:
 
 - Reservations are optionally used to ensure that a DHCP client always receives the same IP address.
 
-Before deploying your servers, list your subnets and the IP address range you want to use for each subnet.
+Before deploying your DHCP server, list your subnets and the IP address range you want to use for each subnet. 
 
-## Types of scopes
-
-In addition to a single DHCP scope configured with a standard distribution of IP addresses, other types of scopes available in an authorized IPv4 DHCP server can provide expanded functionality, depending on your user requirements and deployment considerations.
-
-### Single scope
-
-A single scope is the simplest configuration possible in DHCP. A single scope is a range of IP addresses and associated configuration options allocated to DHCP clients in a specific subnet.
+Other types of scopes available in an authorized IPv4 DHCP server can provide expanded functionality, depending on your user requirements and deployment considerations:
 
 ### Multicast scope
 
-Multicasting in Windows is the process of sending a message to a group of recipients, in contrast to a message that's sent to a specific recipient. In a single scope setup, DHCP assigns each DHCP client a single unique IP address from a range of IP addresses that you planned and configured prior to activating the scope. A multicast scope is a group of IP multicast network addresses that can be distributed by the DHCP server to other computers in your network using the Multicast Address Dynamic Client Allocation Protocol (MADCAP).  MADCAP controls how the DHCP servers dynamically assign IP addresses on a TCP/IP network. Multicast scopes enable you to configure a scope so that messages assigned to a multicast IP address are sent to all clients in a Windows multicast group. See [RFC2730](https://www.rfc-editor.org/rfc/rfc2730) for more information on MADCAP.
+Multicasting in Windows is the process of sending a message to a group of recipients, in contrast to a message that's sent to a specific recipient. In a single scope setup, DHCP assigns each client a single unique IP address from a range of IP addresses that you planned and configured prior to activating the scope. A multicast scope is a group of IP multicast network addresses that can be distributed by the DHCP server to other computers in your network using the Multicast Address Dynamic Client Allocation Protocol (MADCAP). MADCAP controls how the DHCP server dynamically assigns IP addresses. See [RFC2730](https://www.rfc-editor.org/rfc/rfc2730) for more information on MADCAP. 
 
-### DHCP Superscope
+### DHCP Superscopes
 
-DHCP Superscope is an administrative feature of DHCP server that you can use to group multiple scopes as a single administrative entity. Identifying which scopes go with which networks can be a difficult administrative task. In an environment with multiple subnets defined on a single physical network, superscopes enable your DHCP server to assign leases to clients across those multiple subnets. See [DHCP Superscopes](../openspecs/windows_protocols/ms-dhcpm/4b3dafe4-70e5-4085-969e-4bb402d9c68b) to learn more about how to enable DHCP superscope.
+DHCP Superscopes is an administrative feature of DHCP server that you can use to group multiple scopes as a single administrative entity. Superscopes simplify the identification of which scopes reside within which networks. In an environment with multiple subnets defined on a single physical network, superscopes enable your DHCP server to assign leases to clients across those multiple subnets. See [DHCP Superscopes](../openspecs/windows_protocols/ms-dhcpm/4b3dafe4-70e5-4085-969e-4bb402d9c68b) to learn more about how to enable DHCP superscope.
 
 ## Scope options
 
@@ -59,10 +65,7 @@ Scope options configured at the server level will be applied to all DHCP clients
 - Domain Name and DNS servers
 - WINS servers
 
-### Specific vendor-class options
-
-- Extra Msft options?
-- Custom configurations (including defining user classes)?
+In addition to standard options, you can configure user-defined or vendor-specific classes.
 
 ## Defining a DHCP scope
 
@@ -74,11 +77,6 @@ Planning IP address ranges across multiple scopes on an authorized IPv4 DHCP ser
 
 IP address ranges must be planned prior to setting up scopes. See [Install DHCP Server](quickstart-install-configure-DHCP-server.md) for guidance on creating a new scope on an authorized DHCP IPv4 server.
 
-planning IP addresses < pull in the planning UP addresses article into this article>
-address pools (see planning IP addreses) 
-address leases (similar to superscopes -- these are the active leases currently in use)
-reservations (the exclusions ... two methods 1. plan it with range so it doesn't include static IP or; use this method -- exclusions)
-
 ## Creating IP address ranges
 
 Each subnet must have its own unique IP address range. The IP address range specifices which IP addresses to include or exclude for assignment to DHCP clients. In other words, you can select a range of IP addresses that can be used by devices connected to your DHCP service. These IP address ranges are represented on a DHCP server with scopes or groupings of IP addresses on the subnet that uses the DHCP service. 
@@ -89,13 +87,13 @@ You also can exclude specific IP addresses that you do not want clients to use.
 
 When you define your IP address range for each scope use the full range of consecutive IP addresses that make up the local subnet of your DHCP service. As a best practice, you want to establish the entire range of addresses before identifying the static IPs within your range. You then can identify which of the remaining IPs are available for DHCP clients to lease.
 
-### Static IP addresses
+### Reservations
 
-Your network includes servers, routers, switches, printers, and other devices that may require static IP addresses. Make a list of these devices while adding additional placeholder addresses for use as your needs expand.
+Your network includes servers, routers, switches, printers, and other devices that may require reserved (static) IP addresses. Make a list of these devices while adding additional placeholder addresses for use as your needs expand. A DHCP reservation is a pre-set IP that’s provided by your DHCP server and given to a NIC when a NIC calls out to a DHCP server for an IP address. Devices must support DHCP to use reservations.
 
-Before you begin recording static IP addresses, be sure to record the router’s IP address. This is the default gateway value. A best practice is to choose either the first or the last address in the static IP address range.
+You can use reservations to assign an IP address to a specific client device (NIC) based on its MAC address. The device always receives the same IP address; it'll never change. The main disadvantage is that the device is competely dependent on your DHCP Server after the reservation is configured; if the DHCP server experiences issues and goes down, the device will not be available.
 
-If there are any IP addresses you wish to prevent clients from using, make a list of these also so that you optionally can enter them manually later in the DHCP server Management Console as part of creating a new DHCP scope. See []() for more information on configuring DHCP server new scope settings. Otherwise, you can establish the range of static IPs, including unused addresses to retain as your network inevitably grows.
+Reservations give you the ability to change IP addresses readily without having to log in to the device. You also can manage IP addresses for third-party devices if they are also set to DHCP.
 
 ### Exclusion ranges
 
@@ -116,3 +114,4 @@ It is recommended that you configure your exclusion range with extra addresses t
 
 - [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
 - [DHCP Subnet selection options](/dhcp-subnet-options)
+- [Install DHCP server]()
