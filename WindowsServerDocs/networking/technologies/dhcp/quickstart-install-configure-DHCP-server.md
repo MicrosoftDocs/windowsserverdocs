@@ -198,5 +198,5 @@ Here's how to create a new DHCP scope using the DHCP console.
 
 ## Next steps
 
-- [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
-- [DHCP Subnet selection options](/dhcp-subnet-options)
+- [DHCP Basics](../../../troubleshoot/dynamic-host-configuration-protocol-basics.md)
+- [DHCP Subnet selection options](dhcp-subnet-options.md)
