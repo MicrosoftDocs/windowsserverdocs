@@ -152,6 +152,8 @@
         href: extend/guides/extension-discovery-banner.md
       - name: Upgrade extensions to Angular 11
         href: extend/guides/upgrade-to-angular-11.md
+      - name: Extension management of Application Control enforced infrastructure
+        href: extend/guides/application-control-infrastructure-extensions.md
     - name: Publishing extensions
       href: extend/publish-extensions.md
     - name: Case Studies
