@@ -24,19 +24,18 @@ To ensure this requirement is met, follow these steps:
 1. Identify any PowerShell scripts in your manifest.json file.
 2. After defining any script content in your manifest.json file, remove the script content and store it in a .ps1 file in the ```resources/scripts``` directory of your extension. Script code in the extension manifest now follows the same rules as [other Windows Admin Center PowerShell](powershell.md). 
 3. Update the conditions property in the extension manifest to the following format:
-```json
-"conditions": [
-    {
-        "powerShell": {
-            "command": "Script-File-Name",
-            "module": "powerShellModuleName",
-            "script": "Your script text goes here."
+    ```json
+    "conditions": [
+        {
+            "powerShell": {
+                "command": "Script-File-Name",
+                "module": "powerShellModuleName",
+                "script": "Your script text goes here."
+            }
         }
-    }
-]
-```
-The PowerShell module name already exists in your extension manifest. **Its value in the manifest and in the PowerShell field must match.**
-
+    ]
+    ```
+    The PowerShell module name already exists in your extension manifest. **Its value in the manifest and in the PowerShell field must match.**
 4. Identify any other places where PowerShell scripts are being created dynamically. Creating a PowerShell script dynamically using string concatenation can allow an attacker to inject arbitrary PowerShell script to be executed. This method can be used to bypass limitations enforced on a remote user that is using a restricted run space. It can also be used to achieve standard command injection against any application that builds PowerShell scripts with user input and executes it.
 
 Example of script block created with string concatenation:
@@ -134,7 +133,7 @@ And here's the same WorkItem using the new method:
     }
 ```
 
-## Ensuring PowerShell scripts run in Constrained Language Mode
+## Ensuring PowerShell scripts run in Constrained Language mode
 Many WDAC policies force all PowerShell scripts to run in Constrained-Language mode. To maintain full functionality throughout Windows Admin Center, you should ensure that all scripts in your extension follow these best practices:
 1. If your script files are exported using PowerShell modules, they must explicitly export the functions by name without the use of wildcard characters. This requirement is to prevent inadvertently exposing helper functions that may not be meant to be used publicly. 
 2. Dot sourcing a script file brings all functions, variables, aliases from that script into the current scope. This functionality blocks a trusted script from being dot sourced into an untrusted script and exposing all its internal functions. Similarly, an untrusted script is prevented from being dot sourced into a trusted script so that it can't pollute the trusted scope.
