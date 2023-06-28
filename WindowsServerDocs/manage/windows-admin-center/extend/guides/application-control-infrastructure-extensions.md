@@ -10,7 +10,7 @@ ms.date: 06/27/2023
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center supports the management of Windows Defender Application Control (WDAC) enforced infrastructure at the platform level. Learn more about [managing WDAC enforced infrastructure in Windows Admin Center](/use/manage-application-control-infrastructure.md).
+Windows Admin Center supports the management of Windows Defender Application Control (WDAC) enforced infrastructure at the platform level. Learn more about [managing WDAC enforced infrastructure in Windows Admin Center](../../use/manage-application-control-infrastructure.md).
 
 Support for this management at the platform level doesn't mean extensions built for Windows Admin Center also support the management of WDAC enforced infrastructure by default. This guide outlines the requirements for an extension to support the management of WDAC enforced infrastructure.
 
@@ -18,11 +18,11 @@ Support for this management at the platform level doesn't mean extensions built 
 To manage WDAC enforced infrastructure, Windows Admin Center must ingest and run PowerShell scripts in a particular fashion to adhere to best security practices. To ensure your extension's scripts are run correctly, ensure your extension conforms to the following requirements.
 
 ### All PowerShell scripts must be stored in a file
-Historically, developers of WAC extensions may have chosen to include custom PowerShell code as a string in their extension manifest.json file. For example, one may choose to define the [conditions for a tool extension’s visibility](extend/guides/dynamic-tool-display.md) by providing a PowerShell script in the “script” property. For PowerShell scripts to be compatible with WDAC, they must be signed. Strings can't be signed.
+Historically, developers of WAC extensions may have chosen to include custom PowerShell code as a string in their extension manifest.json file. For example, one may choose to define the [conditions for a tool extension’s visibility](dynamic-tool-display.md) by providing a PowerShell script in the “script” property. For PowerShell scripts to be compatible with WDAC, they must be signed. Strings can't be signed.
 
 To ensure this requirement is met, follow these steps:
 1. Identify any PowerShell scripts in your manifest.json file.
-2. After defining any script content in your manifest.json file, remove the script content and store it in a .ps1 file in the ```resources/scripts``` directory of your extension. Script code in the extension manifest now follows the same rules as [other Windows Admin Center PowerShell](extend/guides/powershell.md). 
+2. After defining any script content in your manifest.json file, remove the script content and store it in a .ps1 file in the ```resources/scripts``` directory of your extension. Script code in the extension manifest now follows the same rules as [other Windows Admin Center PowerShell](powershell.md). 
 3. Update the conditions property in the extension manifest to the following format:
 ```json
 "conditions": [
@@ -198,4 +198,4 @@ wdacEnforced: boolean;
 ```
 
 ## Testing your extension on WDAC enforced infrastructure
-Read more about the [Windows Defender Application Control policy requirements for Windows Admin Center](/use/manage-application-control-infrastructure.md) to get started with testing your extension on WDAC enforced infrastructure. 
+Read more about the [Windows Defender Application Control policy requirements for Windows Admin Center](../../use/manage-application-control-infrastructure.md) to get started with testing your extension on WDAC enforced infrastructure. 
