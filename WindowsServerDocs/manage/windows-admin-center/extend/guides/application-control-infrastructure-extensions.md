@@ -10,7 +10,7 @@ ms.date: 06/27/2023
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center supports the management of Windows Defender Application Control (WDAC) enforced infrastructure at the platform level. Learn more about [managing WDAC enforced infrastructure in Windows Admin Center](/../../use/manage-application-control-infrastructure).
+Windows Admin Center supports the management of Windows Defender Application Control (WDAC) enforced infrastructure at the platform level. Learn more about [managing WDAC enforced infrastructure in Windows Admin Center](/use/manage-application-control-infrastructure).
 
 Support for this management at the platform level doesn'tt mean extensions built for Windows Admin Center also support the management of WDAC enforced infrastructure by default. This guide outlines the requirements for an extension to support the management of WDAC enforced infrastructure.
 
@@ -18,11 +18,11 @@ Support for this management at the platform level doesn'tt mean extensions built
 To manage WDAC enforced infrastructure, Windows Admin Center must ingest and run PowerShell scripts in a particular fashion to adhere to best security practices. To ensure your extension's scripts are run correctly, ensure your extension conforms to the following requirements.
 
 ### All PowerShell scripts must be stored in a file
-Historically, developers of WAC extensions may have chosen to include custom PowerShell code as a string in their extension manifest.json file. For example, one may choose to define the [conditions for a tool extension’s visibility](/dynamic-tool-display) by providing a PowerShell script in the “script” property. For PowerShell scripts to be compatible with WDAC, they must be signed. Strings can't be signed.
+Historically, developers of WAC extensions may have chosen to include custom PowerShell code as a string in their extension manifest.json file. For example, one may choose to define the [conditions for a tool extension’s visibility](extend/guides/dynamic-tool-display) by providing a PowerShell script in the “script” property. For PowerShell scripts to be compatible with WDAC, they must be signed. Strings can't be signed.
 
 To ensure this requirement is met, follow these steps:
 1. Identify any PowerShell scripts in your manifest.json file.
-2. After defining any script content in your manifest.json file, remove the script content and store it in a .ps1 file in the ```resources/scripts``` directory of your extension. This means script code in the extension manifest now follows the same rules as [other WAC PowerShell](/powershell). 
+2. After defining any script content in your manifest.json file, remove the script content and store it in a .ps1 file in the ```resources/scripts``` directory of your extension. This means script code in the extension manifest now follows the same rules as [other WAC PowerShell](extend/guides/powershell). 
 3. Update the conditions property in the extension manifest to the following format:
 ```json
 “powerShell”: {
@@ -112,7 +112,7 @@ You can validate that your PowerShell is in the proper format in one of two ways
 1.	When your extension is installed, you can view the ```ProgramData\Server Management Experience\UX\modules``` directory on your gateway machine (the one on which Windows Admin Center is running). Here you should see the ```powershell-module``` folder and contents as described above.
 2.	Extract the contents of your extension’s .nupkg artifact. The ```powershell-module``` folder should be present and contain the signed PowerShell module(s).
 
-In both cases, verifying that the .psd1 and .psm1 files themselves are signed can be done by running the [Get-AuthenticodeSignature command](/powershell/module/microsoft.powershell.security/get-authenticodesignature?view=powershell-7.3) on the file, or by right-clicking the file itself and validating the digital signature.
+In both cases, verifying that the .psd1 and .psm1 files themselves are signed can be done by running the [Get-AuthenticodeSignature command](/powershell/module/microsoft.powershell.security/get-authenticodesignature?view=powershell-7.3&preserve-view=true) on the file, or by right-clicking the file itself and validating the digital signature.
 
 ### WorkItems that utilize the "powerShellScript" property should be updated to use the "powerShellCommand" property
 The Windows Admin Center platform needs to be able to determine which module a PowerShell command belongs to. Because of this requirement, WorkItems that specify a PowerShell command using the ```powerShellScript``` property will cause an error. 
@@ -163,7 +163,7 @@ To follow the guidance in the previous section, you'll need to determine if the 
 
 This method has two outputs:
 - Status – HTTPStatusCode type
-- psLanguageMode – PsLanguageMode type ([enum](/dotnet/api/system.management.automation.pslanguagemode?view=powershellsdk-7.0.0))
+- psLanguageMode – PsLanguageMode type ([enum](/dotnet/api/system.management.automation.pslanguagemode?view=powershellsdk-7.0.0&preserve-view=true))
 
 You may consider WDAC to be enforced if PowerShell is running in Constrained Language Mode, which corresponds to a psLanguageMode value of 3.
 
@@ -207,4 +207,4 @@ wdacEnforced: boolean;
 ```
 
 ## Testing your extension on WDAC enforced infrastructure
-Read more about the [Windows Defender Application Control policy requirements for Windows Admin Center](/../../use/manage-application-control-infrastructure) to get started with testing your extension on WDAC enforced infrastructure. 
+Read more about the [Windows Defender Application Control policy requirements for Windows Admin Center](/use/manage-application-control-infrastructure) to get started with testing your extension on WDAC enforced infrastructure. 
