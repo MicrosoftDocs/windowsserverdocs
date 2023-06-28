@@ -77,8 +77,8 @@ In the **Settings** tab in the **Properties** box for a folder, you can enable t
 
 | Policy removal option | Selected setting | Result |
 | ----- | ----- | ----- |
-| Redirect the folder back to the user profile location when policy is removed<sup>1</sup> | Enabled | <li>The folder returns to its user profile location.<li>The contents are copied, not moved, back to the user profile location. <li>The contents aren't deleted from the redirected location.<li>The user continues to have access to the contents, but only on the local computer. |
-| Leave the folder in the new location when policy is removed | Enabled | <li>The folder remains at its redirected location.<li>The contents remain at the redirected location. <li>The user continues to have access to the contents at the redirected folder. |
+| Redirect the folder back to the user profile location when policy is removed<sup>1</sup> | Enabled | <br>- The folder returns to its user profile location.<br>- The contents are copied, not moved, back to the user profile location. <br>- The contents aren't deleted from the redirected location.<br>- The user continues to have access to the contents, but only on the local computer. |
+| Leave the folder in the new location when policy is removed | Enabled | <br>- The folder remains at its redirected location.<br>- The contents remain at the redirected location. <br>- The user continues to have access to the contents at the redirected folder. |
 
 <sup>1</sup> Moving all data back to the user profile can take a large amount of time, depending on
 the speed of the connection and volume of data. The time to move all data could be significant if
