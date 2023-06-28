@@ -95,9 +95,6 @@ authorize the DHCP server to operate in the domain.
 > is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP
 > addresses to clients on your network.
 
-When you install Active Directory Domain Services (AD DS) with the Active Directory Domain Services
-Installation Wizard, the wizard gives you the option to authorize DHCP.
-
 Follow these steps to authorize your DHCP server in a domain environment.
 
 #### [PowerShell](#tab/powershell)
