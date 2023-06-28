@@ -89,11 +89,11 @@ When you define your IP address range for each scope use the full range of conse
 
 ### Reservations
 
-Your network includes servers, routers, switches, printers, and other devices that may require reserved (static) IP addresses. Make a list of these devices while adding additional placeholder addresses for use as your needs expand. A DHCP reservation is a pre-set IP that’s provided by your DHCP server and given to a NIC when a NIC calls out to a DHCP server for an IP address. Devices must support DHCP to use reservations.
+Your network includes servers, routers, switches, printers, and other devices that can require reserved (static) IP addresses. It's a good idea to make a list of these devices and even adding additional placeholder addresses for use as your needs expand. A DHCP reservation is a pre-set IP address that’s provided by your DHCP server and given to a NIC when a NIC calls out to a DHCP server for an IP address. Keep in mind that a device must support DHCP to use reservations.
 
-You can use reservations to assign an IP address to a specific client device (NIC) based on its MAC address. The device always receives the same IP address; it'll never change. The main disadvantage is that the device is competely dependent on your DHCP Server after the reservation is configured; if the DHCP server experiences issues and goes down, the device will not be available.
+You can use reservations to assign an IP address to a specific client device (NIC) based on its MAC address. The device always receives the same IP address; it'll never change. A main disadvantage is that the device is competely dependent on your DHCP Server after the reservation is configured; if the DHCP server experiences issues and goes down, the DHCP reservation device will not be available.
 
-Reservations give you the ability to change IP addresses readily without having to log in to the device. You also can manage IP addresses for third-party devices if they are also set to DHCP.
+Reservations give you the ability to change IP addresses readily without having to log in to a device. You also can manage IP addresses for third-party devices if they are also set to DHCP.
 
 ### Exclusion ranges
 
