@@ -139,6 +139,8 @@ For more information about these commands, see the following articles.
 - [Add-DhcpServerInDC](/powershell/module/dhcpserver/add-dhcpserverindc)
 - [Get-DhcpServerInDC](/powershell/module/dhcpserver/get-dhcpserverindc)
 
+---
+
 ### Configure new scope in IPv4 server
 
 After you have successfully authorized your IPv4 DHCP Server, you can proceed to create a new DHCP

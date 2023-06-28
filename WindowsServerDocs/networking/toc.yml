@@ -217,7 +217,7 @@ items:
     - name: Quickstarts
       items: 
       - name: Install and configure DHCP server
-        href: dns/quickstart-install-configure-dhcp-server.md
+        href: technologies/dhcp/quickstart-install-configure-dhcp-server.md
     - name: What's new in DHCP
       href: technologies/dhcp/What-s-New-in-DHCP.md
       items:
