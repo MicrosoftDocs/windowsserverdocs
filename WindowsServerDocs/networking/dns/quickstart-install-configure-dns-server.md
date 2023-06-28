@@ -1,5 +1,5 @@
 ---
-title: Installing and configure DNS Server
+title: Install and configure DNS Server
 description: Get started installing and configuring a DNS server on Windows Server using PowerShell or Server Manager. 
 author: robinharwood
 ms.author: roharwoo
@@ -9,7 +9,7 @@ ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ---
 
-# Quickstart: Installing and configure DNS Server
+# Quickstart: Install and configure DNS Server
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
