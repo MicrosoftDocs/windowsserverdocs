@@ -205,6 +205,8 @@ items:
   - name: Folder Redirection and Roaming User Profiles
     href: folder-redirection/folder-redirection-rup-overview.md
     items:
+    - name: Folder Redirection using Group Policy
+      href: folder-redirection/folder-redirection-using-group-policy.md
     - name: Deploy Roaming User Profiles
       href: folder-redirection/deploy-roaming-user-profiles.md
     - name: Deploy Folder Redirection
