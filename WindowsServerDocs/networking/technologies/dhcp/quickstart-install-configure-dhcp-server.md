@@ -13,8 +13,8 @@ ms.date: 06/27/2023
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This quickstart shows you how to install an Dynamic Host Configuration Protocol (DHCP) server on
-Windows Server. You'll install the DHCP Server role, authorized the server in your Active Director
+This quickstart shows you how to install a Dynamic Host Configuration Protocol (DHCP) server on
+Windows Server. You'll install the DHCP Server role, authorize the server in your Active Director
 domain, and configure a scope to automatically assign DHCP IP addresses and options to IPv4 DHCP
 clients.
 
