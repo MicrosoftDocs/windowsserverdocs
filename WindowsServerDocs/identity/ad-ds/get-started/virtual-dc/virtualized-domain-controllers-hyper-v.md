@@ -2,7 +2,7 @@
 title: Virtualizing domain controllers with Hyper-V
 description: Learn about considerations for virtualizing Windows Server Active Directory domain controllers (DCs) in Hyper-V.
 author: daveba
-ms.author: daveba
+ms.author: wscontent
 ms.date: 06/09/2023
 ms.topic: article
 ms.custom: inhenkel
@@ -346,7 +346,7 @@ You can use the following steps to restore to a previous version of a virtual DC
     
    1. If the **User Account Control** dialog displays, confirm the displayed action is as expected, and select **Yes**.
 
-   1. In Registry Editor, expand the path `HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.
+   1. In Registry Editor, expand the path **HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**.
    
    1. Look for a value named **DSA Previous Restore Count**. If the value is present, make a note of the setting. Otherwise, the setting value is the default (0). If no value is shown, don't manually set the value.
 
