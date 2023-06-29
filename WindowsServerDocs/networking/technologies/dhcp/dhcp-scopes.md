@@ -93,7 +93,7 @@ Your network includes servers, routers, switches, printers, and other devices th
 
 You can use reservations to assign an IP address to a specific client device (NIC) based on its MAC address. The device always receives the same IP address; it'll never change. A main disadvantage is that the device is competely dependent on your DHCP Server after the reservation is configured; if the DHCP server experiences issues and goes down, the DHCP reservation device will not be available.
 
-Reservations give you the ability to change IP addresses readily without having to log in to a device. You also can manage IP addresses for third-party devices if they are also set to DHCP.
+Reservations give you the ability to change IP addresses readily without having to log in to a device. You also can manage IP addresses for third-party devices if they are set to DHCP.
 
 ### Exclusion ranges
 
