@@ -2,7 +2,7 @@
 title: Customize HTTP security response headers with AD FS
 description: Learn how to customize security headers to protect against security vulnerabilities with AD FS 2019.
 author: billmath
-ms.author: billmath
+ms.author: wscontent
 manager: amycolannino
 ms.reviewer: akgoel23
 ms.date: 06/14/2023
@@ -11,7 +11,7 @@ ms.topic: article
 
 # Customize HTTP security response headers with AD FS 2019
 
- Active Directory Federation Services (AD FS) 2019 adds the functionality to customize the HTTP security response headers sent by AD FS. These tools help administrators protect against common security vulnerabilities and allow them to take advantage of the latest advancements in browser-based protection mechanisms. This feature comes from the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.
+Active Directory Federation Services (AD FS) 2019 adds the functionality to customize the HTTP security response headers sent by AD FS. These tools help administrators protect against common security vulnerabilities and allow them to take advantage of the latest advancements in browser-based protection mechanisms. This feature comes from the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.
 
 > [!NOTE]
 > The functionality to customize the HTTP security response headers (except CORS Headers) by using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/help/4507459/windows-10-update-kb4507459).
@@ -140,16 +140,16 @@ To better understand a CORS request, the following scenario walks through an ins
 
 1. A user accesses SPA through the client browser and is redirected to AD FS auth endpoint for authentication. Since SPA is configured for implicit grant flow, the request returns an Access + ID token to the browser after successful authentication.
 1. After user authentication, the front-end JavaScript included in SPA makes a request to access the web API. The request is redirected to AD FS with following headers:
-    - Options – describes the communication options for the target resource.
-    - Origin – includes the origin of the web API.
-    - Access-Control-Request-Method – identifies the HTTP method (for example, DELETE) to be used when an actual request is made.
+    - Options - describes the communication options for the target resource.
+    - Origin - includes the origin of the web API.
+    - Access-Control-Request-Method - identifies the HTTP method (for example, DELETE) to be used when an actual request is made.
     - Access-Control-Request-Headers - identifies the HTTP headers to be used when an actual request is made.
 
    > [!NOTE]
    > A CORS request resembles a standard HTTP request. However, the presence of an origin header signals the incoming request is CORS related.
 1. AD FS verifies that the web API origin included in the header is listed in the trusted origins configured in AD FS. For more information on how to modify trusted origins, see [CORS Customization](#cors-customization). AD FS then responds with the following headers:
-    - Access-Control-Allow-Origin – value same as in the Origin header.
-    - Access-Control-Allow-Method – value same as in the Access-Control-Request-Method header.
+    - Access-Control-Allow-Origin - value same as in the Origin header.
+    - Access-Control-Allow-Method - value same as in the Access-Control-Request-Method header.
     - Access-Control-Allow-Headers - value same as in the Access-Control-Request-Headers header.
 1. The browser sends the actual request including the following headers:
     - HTTP method (for example, DELETE).
@@ -200,7 +200,7 @@ Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue
 frame-src 'self'; manifest-src 'self'; media-src 'self';"
 ```
 
-If a directive is explicitly listed, the specified value overrides the value given for default-src. In the following example, the img-src takes the value as ‘*' (allowing images to be loaded from any origin) while other -src directives take the value as ‘self' (restricting to same origin as the web page).
+If a directive is explicitly listed, the specified value overrides the value given for default-src. In the following example, the img-src takes the value as '*' (allowing images to be loaded from any origin) while other -src directives take the value as 'self' (restricting to same origin as the web page).
 
 ```powershell
 Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src 'self'; img-src *"
@@ -208,10 +208,10 @@ Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue
 
 The following sources can be defined for the default-src policy:
 
-- 'self' – specifying this source restricts the origin of the content to load to the origin of the web page.
-- 'unsafe-inline' – specifying this source in the policy allows the use of inline JavaScript and CSS.
-- 'unsafe-eval' – specifying this source in the policy allows the use of text to JavaScript mechanisms like eval.
-- 'none' – specifying this source restricts the content from any origin to load.
+- 'self' - specifying this source restricts the origin of the content to load to the origin of the web page.
+- 'unsafe-inline' - specifying this source in the policy allows the use of inline JavaScript and CSS.
+- 'unsafe-eval' - specifying this source in the policy allows the use of text to JavaScript mechanisms like eval.
+- 'none' - specifying this source restricts the content from any origin to load.
 - data: - specifying data: URIs allow content creators to embed small files inline in documents. Usage not recommended.
 
 > [!NOTE]
