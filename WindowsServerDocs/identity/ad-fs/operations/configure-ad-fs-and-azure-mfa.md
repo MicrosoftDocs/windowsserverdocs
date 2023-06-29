@@ -36,7 +36,7 @@ There are a couple of great reasons to use Azure AD Multi-Factor Authentication 
 - It avoids passwords for sign-in to Azure AD, Office 365, and other AD FS apps.
 - It protects password based sign-in by requiring another factor, such as verification code prior to the password.
 
-You also might want to use Azure AD Multi-Factor Authentication as the primary authentication method and Azure AD conditional access, including true MFA by prompting for extra factors. To use Azure AD MFA on premises, you can configure the Azure AD domain setting by setting `SupportsMfa` to `$True`. In this configuration, Azure AD can prompt AD FS to perform extra authentication or &#34;true MFA&#34; for conditional access scenarios that require it.
+You also might want to use Azure AD Multi-Factor Authentication as the primary authentication method and Azure AD conditional access, including true MFA by prompting for extra factors. To use Azure AD MFA on premises, you can configure the Azure AD domain setting by setting `SupportsMfa` to `$true`. In this configuration, Azure AD can prompt AD FS to perform extra authentication or &#34;true MFA&#34; for conditional access scenarios that require it.
 
 Any AD FS user who isn't registered (hasn't yet configured MFA verification information), should be prompted to configure verification information. To prompt unregistered users, you can use a customized AD FS error page to direct users to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) and configure verification information. After configuration, the user can reattempt their AD FS sign-in.
 
