@@ -163,8 +163,13 @@ PowerShell commands.
    `HypervisorEnforcedCodeIntegrity` and `3` should be shown in the running services. Here's an example output.
 
    ```powershell
-   DeviceGuardSecurityServicesConfigured : {HypervisorEnforcedCodeIntegrity, 3}
-   DeviceGuardSecurityServicesRunning    : {HypervisorEnforcedCodeIntegrity, 3}
+   DeviceGuardSmartStatus                                  : Off
+   DeviceGuardRequiredSecurityProperties                   : {BaseVirtualizationSupport, SecureBoot, DMAProtection}
+   DeviceGuardAvailableSecurityProperties                  : {BaseVirtualizationSupport, SecureBoot, DMAProtection, 5...}
+   DeviceGuardSecurityServicesConfigured                   : {HypervisorEnforcedCodeIntegrity, 3}
+   DeviceGuardSecurityServicesRunning                      : {HypervisorEnforcedCodeIntegrity, 3}
+   DeviceGuardCodeIntegrityPolicyEnforcementStatus         : EnforcementMode
+   DeviceGuardUserModeCodeIntegrityPolicyEnforcementStatus : Off
    ```
 
 To learn more about the output values, see the [SecurityServicesRunning](/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity) article.
