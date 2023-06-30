@@ -24,6 +24,9 @@ installed and enabled in the BIOS:
 
 - Secure Boot.
 - Trusted Platform Module (TPM) 2.0.
+- System fireware must enable Input/Output Memory Management Unit (IOMMU), known as Kernel DMA
+  Protection . For example, Intel VT-D or AMD-Vi. To learn more about Kernel DMA Protection, see
+  [Kernel DMA Protection (Memory Access Protection) for OEMs](/windows-hardware/design/device-experiences/oem-kernel-dma-protection).
 - A processor with support enabled in the BIOS for:
   - Virtualization extensions.
   - Input/Output Memory Management Unit (IOMMU).
@@ -33,6 +36,10 @@ installed and enabled in the BIOS:
 > [!IMPORTANT]
 > Enabling each of the security features in the BIOS can vary based on your hardware vendor. Make
 > sure to check your hardware manufacturer's Secured-core server enablement guide.
+
+You can find hardware certified for Secured-core server from the
+[Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
+[Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
 
 ## Enable security features
 
@@ -125,6 +132,8 @@ Here's how to verify your Secured-core server is configured using Windows Admin 
 1. Select **Security** using the left-hand panel, then select the **Secured-core** tab.
 1. Check the all Security Features have a status of _Configured_.
 
+   :::image type="content" source="../security/media/Secured-core/windows-admin-center-server.png" alt-text="Screenshot showing the Windows Admin Center security extension in a browser window with Secured-core enabled." lightbox="media/Secured-core/windows-admin-center-server.png":::
+
 #### [PowerShell](#tab/powershell)
 
 Here's how to verify your Secured-core server is configured using the
@@ -147,10 +156,10 @@ PowerShell commands.
    the following command from an elevated PowerShell prompt:
 
    ```powershell
-   Get-ComputerInfo | Select DeviceGuardSecurityServicesConfigured,DeviceGuardSecurityServicesRunning| fl
+   Get-ComputerInfo | Select DeviceGuard* | Format-List
    ```
 
-1. Verify the output shows `DMAProtection` in the configured services. Also
+1. Verify the output shows `DMAProtection` in the available and required services. Also the values
    `HypervisorEnforcedCodeIntegrity` and `3` should be shown in the running services. Here's an example output.
 
    ```powershell
