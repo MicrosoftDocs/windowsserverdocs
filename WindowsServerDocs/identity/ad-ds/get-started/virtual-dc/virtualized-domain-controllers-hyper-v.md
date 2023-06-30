@@ -60,8 +60,7 @@ Keep the following security considerations in mind when you're planning to virtu
 
 - [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) can provide other controls to protect your DCs.
 
-<!-- Reviewers: The following link is no longer useful and doesn't target a "guide." Can you suggest an alternate target? -->
-For information about RODCs, see [Read-only domain controller updates](../../deploy/rodc/read-only-domain-controller-updates.md).
+For information about RODCs, see [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](/windows-server/identity/ad-ds/deploy/rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-.md).
 
 For more information about securing DCs, see the [Best practice guide for securing Active Directory installations](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
@@ -96,9 +95,7 @@ Review these extra security considerations:
 
 With the new microkernel 64-bit architecture, there are significant increases in Hyper-V performance from previous virtualization platforms. For best host performance, the host should be a Server Core installation of Windows Server 2008 or later, and it shouldn't have server roles other than Hyper-V installed.
 
-<!-- Reviewers: The MAP toolkit link is no longer valid. Can you suggest an alternate target? -->
-
-Performance of VMs depends specifically on the workload. To guarantee satisfactory Active Directory performance, test specific topologies. Assess the current workload over a period of time with a tool such as the Reliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](/previous-versions/tn-archive/cc936627(v=technet.10)). The MAP tool can also be valuable if you want to take an inventory of all of the servers and server roles that currently exist in your network.
+Performance of VMs depends specifically on the workload. To guarantee satisfactory Active Directory performance, test specific topologies. Assess the current workload over a period of time with a tool such as the Reliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](https://www.microsoft.com/download/details.aspx?id=7826). The MAP tool can also be valuable if you want to take an inventory of all of the servers and server roles that currently exist in your network.
 
 To get a general idea of the performance of virtualized DCs, the following performance tests were carried out with the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
 
@@ -130,8 +127,6 @@ Review the following performance recommendations:
 The following sections describe common VM practices to avoid when deploying DCs, and special considerations for time synchronization and storage.
 
 ### Deployment practices to avoid
-
-<!-- Reviewers: Open Issue https://github.com/MicrosoftDocs/windowsserverdocs/issues/5393 requests changes to this section to denote specifics for Gen1 and Gen2 VMs. -->
 
 Virtualization platforms, such as Hyper-V, offer many convenience features that make managing, maintaining, backing up, and migrating computers easier. However, the following common deployment practices and features should be avoided for virtual DCs:
 
@@ -514,5 +509,4 @@ RODCs are DCs that host read-only copies of the partitions in an Active Directo
 
 Restoring an RODC by using a snapshot isn't recommended. Restore an RODC by using an Active Directory–compatible backup application. Also, as with writeable DCs, care must be taken to not allow an RODC to be offline for more than the tombstone lifetime. This condition can result in lingering objects on the RODC.
 
-<!-- Reviewers: The following link is no longer useful and doesn't target a "guide." Can you suggest an alternate target? -->
-For more information about RODCs, see the [Read-only DC planning and deployment guide](../../deploy/rodc/read-only-domain-controller-updates.md).
+For more information about implementing RODCs, see the [Read-Only Domain Controllers step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10)).
