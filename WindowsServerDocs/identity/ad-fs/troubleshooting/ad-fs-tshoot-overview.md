@@ -15,7 +15,7 @@ Active Directory Federation Services (AD FS) has many moving pieces, touches man
 > [!NOTE]
 > For more information, see [AD FS help](https://adfshelp.microsoft.com), which provides effective tools in one place that make it easier for users and administrators to resolve authentication issues at a quicker pace.
 
-## What to Check First
+## What to check first
 
 Before you dive into in-depth troubleshooting, there are a few things that you should check first. They are:
 
