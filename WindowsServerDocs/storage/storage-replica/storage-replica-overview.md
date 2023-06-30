@@ -1,6 +1,6 @@
 ---
-description: Storage Replica Overview
-title: Storage Replica Overview
+description: Storage Replica overview
+title: Overview of the Windows Storage Replica feature
 manager: siroy
 ms.author: billy
 ms.topic: how-to

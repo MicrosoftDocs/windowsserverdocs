@@ -1,6 +1,6 @@
 ---
-description: Stretch Cluster Replication Using Shared Storage
-title: Stretch Cluster Replication Using Shared Storage
+description: Stretch cluster replication using shared storage
+title: Stretch cluster replication using shared storage
 manager: eldenc
 ms.author: nedpyle
 ms.topic: how-to
@@ -129,7 +129,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 ## Configure a Hyper-V Failover Cluster or a File Server for a General Use Cluster
 
-After you setup your server nodes, the next step is to create one of the following types of clusters:
+After you set up your server nodes, the next step is to create one of the following types of clusters:
 *  [Hyper-V failover cluster](#BKMK_HyperV)
 *  [File Server for general use cluster](#BKMK_FileServer)
 
@@ -242,7 +242,7 @@ You will now create a normal failover cluster. After configuration, validation, 
    > [!NOTE]
    >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.
 
-2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
+2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, then an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
    ```PowerShell
    New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
    Add-ClusterResource -Name NewIPAddress -ResourceType "IP Address" -Group "Cluster Group"
@@ -379,7 +379,7 @@ For more information, review the Microsoft Ignite session Stretching Failover Cl
     > [!NOTE]
     >  You should expect storage errors from cluster validation, due to the use of asymmetric storage.
 
-2.  Create the Hyper-V compute cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
+2.  Create the Hyper-V compute cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, then an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
 
     ```PowerShell
     New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
@@ -658,7 +658,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 
     2.  To move the source replication from one site to another: right-click the source CSV, click **Move Storage**, click **Select Node**, and then select a node in another site. If you configured a preferred site, you can use best possible node to always move the source storage to a node in the preferred site. If using non-CSV storage for a role assigned disk, you move the role.
 
-    3.  To perform planned failover the replication direction from one site to another: shutdown both nodes in one site using **ServerManager.exe** or **SConfig**.
+    3.  To perform planned failover the replication direction from one site to another: shut down both nodes in one site using **ServerManager.exe** or **SConfig**.
 
     4.  To perform unplanned failover the replication direction from one site to another: cut power to both nodes in one site.
 

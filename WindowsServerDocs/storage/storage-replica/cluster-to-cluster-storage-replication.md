@@ -1,5 +1,5 @@
 ---
-title: Cluster to Cluster Storage Replication
+title: Cluster-to-cluster storage replication
 manager: siroy
 ms.author: nedpyle
 ms.topic: how-to

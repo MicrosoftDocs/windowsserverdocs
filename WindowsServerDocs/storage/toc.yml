@@ -253,18 +253,18 @@ items:
   - name: Storage Replica
     href: storage-replica/storage-replica-overview.md
     items:
-    - name: Storage Replica Enhanced Log
-      href: storage-replica/storage-replica-enhanced-log.md
-    - name: Stretch Cluster Replication using Shared Storage
+    - name: Stretch Cluster replication using shared storage
       href: storage-replica/stretch-cluster-replication-using-shared-storage.md
-    - name: Server to Server Storage Replication
+    - name: Server-to-server storage replication
       href: storage-replica/server-to-server-storage-replication.md
-    - name: Cluster to Cluster Storage Replication
+    - name: Cluster-to-cluster storage replication
       href: storage-replica/cluster-to-cluster-storage-replication.md
-    - name: Cluster to Cluster Storage Replication Cross-Region in Azure
+    - name: Cluster-to-cluster storage replication Cross-Region in Azure
       href: storage-replica/cluster-to-cluster-azure-cross-region.md
-    - name: Cluster to Cluster Storage Replication Within one Azure Region
+    - name: Cluster-to-cluster storage replication within one Azure region
       href: storage-replica/cluster-to-cluster-azure-one-region.md
+    - name: "Storage Replica: Enhanced Log"
+      href: storage-replica/storage-replica-enhanced-log.md
     - name: "Storage Replica: Known Issues"
       href: storage-replica/storage-replica-known-issues.md
     - name: "Storage Replica: Frequently Asked Questions"
