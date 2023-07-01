@@ -216,7 +216,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
 Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
 
-1. Ensure you are using an elevated Powershell console as an administrator.
+1. Ensure you are using an elevated PowerShell console as an administrator.
 2. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.
 
     ```PowerShell
