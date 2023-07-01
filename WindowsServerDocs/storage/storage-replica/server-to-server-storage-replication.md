@@ -1,6 +1,6 @@
 ---
 title: Server-to-server storage replication
-description: How to set up and use Storage Replica for server-to-server replication in Windows Server, including Windows Admin Center and PowerShell.
+description: How to set up and use Storage Replica for server-to-server replication in Windows Server, including Windows Admin Center and PowerShell
 manager: siroy
 ms.author: nedpyle
 ms.topic: how-to
@@ -8,9 +8,9 @@ author: nedpyle
 ms.date: 03/26/2020
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
-# Server-to-server storage replication with Storage Replica
+# Server to Server Storage Replication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use Storage Replica to configure two servers to sync data so that each has an identical copy of the same volume. This topic provides some background of this server-to-server replication configuration, as well as how to set it up and manage the environment.
 
@@ -216,11 +216,11 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
 Now you will configure server-to-server replication using Windows PowerShell. You must perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
 
-1. Ensure you are using an elevated Powershell console as an administrator.
+1. Ensure you are using an elevated PowerShell console as an administrator.
 2. Configure the server-to-server replication, specifying the source and destination disks, the source and destination logs, the source and destination nodes, and the log size.
 
     ```PowerShell
-    New-SRPartnership -SourceComputerName sr-srv05 -SourceRGName rg01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName sr-srv06 -DestinationRGName rg02 -DestinationVolumeName f: -DestinationLogVolumeName g:
+    New-SRPartnership -SourceComputerName sr-srv05 -SourceRGName rg01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName sr-srv06 -DestinationRGName rg02 -DestinationVolumeName f: -DestinationLogVolumeName g: -LogType Raw
     ```
 
    Output:
@@ -456,4 +456,4 @@ The process is, at a high level:
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)

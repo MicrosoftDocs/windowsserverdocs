@@ -9,9 +9,9 @@ ms.date: 05/31/2023
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 
-# Known issues with Storage Replica
+# Known Issues with Storage Replica
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes some of the known issues with Storage Replica in Windows Server.
 
@@ -480,7 +480,7 @@ If using a synchronous partnership type, test failover works normally.
 
 There's a known code defect in Windows Server, version 1709, which caused this error shown. To resolve this issue, install the [October 18, 2018 update](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). This issue isn't present in Windows Server 2019 and newer.
 
-## Unable to setup Storage Replica with physical sector sizes greater than 4K
+## Unable to set up Storage Replica with physical sector sizes greater than 4K
 
 Storage Replica does not support disks with physical sector sizes greater than 4K today. We are exploring implementing this feature in future releases.
 
