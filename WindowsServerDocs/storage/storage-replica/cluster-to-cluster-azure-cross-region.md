@@ -41,7 +41,7 @@ Watch the video below for a complete walk-through of the process.
 
 5. Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created resource groups.
 
-   Domain Controller (**az2azDC**). You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
+   Domain Controller (**az2azDC**). You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability sets. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
       - Install Active Directory Domain Service.
       - Create a domain (contoso.com)
       - Create a user with administrator privileges (contosoadmin)
