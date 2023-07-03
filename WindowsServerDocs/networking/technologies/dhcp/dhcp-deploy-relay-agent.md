@@ -11,7 +11,7 @@ ms.date: 07/10/2023
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This quickstart provides instructions on how to install an DHCP Relay Agent on a computer running the Windows Server operating system. A DHCP relay agent works as an intermediary between DHCP clients and DHCP servers that are not on the same subnet or local network. The DHCP Relay Agent forwards DHCP messages between clients and servers, enabling clients to obtain IP addresses and other network configuration information from a DHCP server located on a different subnet. 
+This quickstart provides instructions on how to install an DHCP Relay Agent on a computer running the Windows Server operating system. A DHCP relay agent works as an intermediary between DHCP clients and DHCP servers that are not on the same subnet or local network. The DHCP Relay Agent forwards DHCP messages between clients and servers, enabling clients to obtain IP addresses and other network configuration information from a DHCP server located on a different subnet.
 
 # Install DHCP relay agent using Server Manager
 
@@ -27,7 +27,7 @@ To install the DHCP relay agent on a Windows Server, you need to deploy the "Rem
 
 After you've installed the Remote Access role with the Routing role service, you can configure the DHCP relay agent:
 
-1. Open the Routing and Remote Access management console (rrasmgmt.msc) from the Start menu or by typing "rrasmgmt.msc" in the Run dialog box.
+1. Open the Routing and Remote Access management console (`rrasmgmt.msc`) from the Start menu or by entering `rrasmgmt.msc` in the Run dialog box.
 1. In the left pane, expand the server name, and then right-select **IPv4** or **IPv6** depending on which version you want to configure the relay agent for.
 1. Select **New Interface**.
 1. Choose the network interface you want to use for the DHCP relay agent. Select **OK**
@@ -82,5 +82,5 @@ After executing these PowerShell commands, the DHCP Relay Agent will be installe
 
 ## Next steps
 
--
+- 
 -
