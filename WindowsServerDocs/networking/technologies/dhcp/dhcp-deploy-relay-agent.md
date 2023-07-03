@@ -2,10 +2,11 @@
 title: Deploy DHCP Relay Agent
 description: You can use this topic to deploy a DHCP relay agent on a computer running the Windows Server operating system.
 ms.topic: article
-ms.author: jgerend
-author: JasonGerend
-contributor: orthomas
-ms.date: 04/26/2023
+author: robinharwood
+ms.author: wscontent
+ms.custom: template-concept, team=cloud_advocates
+ms.contributors: orthomas
+ms.date: 07/10/2023
 ---
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
