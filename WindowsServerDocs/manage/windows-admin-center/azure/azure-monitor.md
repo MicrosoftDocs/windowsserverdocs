@@ -30,7 +30,7 @@ Some solutions, like Azure Update Management, also depend on Azure Automation, w
 From within Windows Admin Center, you can enable two monitoring solutions:
 
 - [Azure Update Management](azure-update-management.md) (in the Updates tool)
-- Azure Monitor for VMs (in server Settings), also known as Virtual Machines insights
+- Azure Monitor for VMs (in the Server Manager connection page), also known as Virtual Machines insights
 
 You can get started using Azure Monitor from either of these tools. If you've never used Azure Monitor before, Windows Admin Center automatically provisions a Log Analytics workspace (and Azure Automation account, if needed). Windows Admin Center also installs and configures the Azure Monitor Agent on the target server, and installs the corresponding solution into the workspace.
 
@@ -46,7 +46,7 @@ If you connect to a different server and have already setup a Log Analytics work
 
 ## Azure Monitor for virtual machines (also known as Virtual Machine insights)
 
-When you set up Azure Monitor for VMs in server Settings, Windows Admin Center enables the Azure Monitor for VMs solution, also known as Virtual Machine insights. This solution allows you to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.
+When you set up Azure Monitor for VMs in the Server Manager connection page, Windows Admin Center enables the Azure Monitor for VMs solution, also known as Virtual Machine insights. This solution allows you to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.
 
 > [!NOTE]
 > Despite its name, VM insights works for physical servers as well as virtual machines.
@@ -55,11 +55,11 @@ You can try Azure Monitor using the free 5 GB of data/month/customer allowance. 
 
 ### Set up your server for use with Azure Monitor
 
-From the Overview page of a server connection, select the new button **Manage alerts**, or go to **Server Settings > Monitoring and alerts**. Within this page, onboard your server to Azure Monitor by selecting **Set up** and completing the setup pane. Windows Admin Center takes care of provisioning the Azure Log Analytics workspace, installing the necessary agent, and ensuring the VM insights solution is configured. Once complete, your server sends performance counter data to Azure Monitor, enabling you to view and create email alerts based on this server, from the Azure portal.
+From the Overview page of a server connection, go to **Tools > Azure Monitor**. Within the Azure Monitor page, onboard your server to Azure Monitor by selecting **Register with Azure and sign in**, once complete return to the same page, select **Setup** and follow the prompts. Windows Admin Center takes care of provisioning the Azure Log Analytics workspace, installing the necessary agent, and ensuring the VM insights solution is configured. Once complete, your server sends performance counter data to Azure Monitor, enabling you to view and create email alerts based on this server, from the Azure portal.
 
 ### Create email alerts
 
-Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the Settings > Monitoring and alerts page to navigate to the Azure portal. Windows Admin Center automatically enables performance counters to be collected, so you can easily [create new alerts](/azure/azure-monitor/platform/alerts-log) by using one of the predefined queries or writing your own.
+Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the **Tools > Azure Monitor** select **visit the Azure portal** to create new alerts. Windows Admin Center automatically enables performance counters to be collected, so you can easily [create new alerts](/azure/azure-monitor/platform/alerts-log) by using one of the predefined queries or writing your own.
 
 ### Consolidated view across multiple servers
 
