@@ -170,7 +170,7 @@ sections:
               HKEY_Local_Machine\Software\Microsoft\SMS
               DatabasePath = *path to the new database folder on a different volume*
           
-          6. Ensure that SYSTEM has full control to all files and subfolders of that folder
+          6. Ensure that the "SYSTEM" and "Network Service" accounts have full control to all files and subfolders of that folder
           7. Remove your own accounts permissions.
           8. Start the "Storage Migration Service" service.
           
