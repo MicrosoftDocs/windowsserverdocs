@@ -24,7 +24,7 @@ Traditional Log is based on the [Common Log File System (CLFS)](/windows-hardwar
 Enhanced Log avoids file system abstractions and their performance costs by leveraging a raw format for logging IO that needs to be replicated.  Enhanced Log introduces an architecture that allows for multiple IO data records to be concurrently written to the secondary volume in a replication group, greatly improving overall workload performance.
 
 > [!IMPORTANT]
-> There is no migration path from Storage Replica Traditional Log to Enhanced Log.
+> There is no migration path from Storage Replica Traditional Log to Enhanced Log, nor vice versa. The Log Format must be declared when the Storage Replica partnership is created.
 
 ## Enhanced Log Deployment Steps
 
