@@ -51,7 +51,7 @@ When you set up Azure Monitor for VMs in the Server Manager connection page, Win
 > [!NOTE]
 > Despite its name, VM insights works for physical servers as well as virtual machines.
 
-You can try Azure Monitor using the free 5 GB of data/month/customer allowance. To learn more about log ingestion plans and pricing, see [Azure Monitor pricing](https://azure.microsoft.com/en-gb/pricing/details/monitor/). The following sections show some of the benefits onboarding servers into Azure Monitor, for example having a consolidated view of systems performance across your environment.
+You can try Azure Monitor using the free 5 GB of data/month/customer allowance. To learn more about log ingestion plans and pricing, see [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/). The following sections show some of the benefits onboarding servers into Azure Monitor, for example having a consolidated view of systems performance across your environment.
 
 ### Set up your server for use with Azure Monitor
 
