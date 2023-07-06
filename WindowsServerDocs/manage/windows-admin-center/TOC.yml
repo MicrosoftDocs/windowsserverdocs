@@ -59,6 +59,8 @@
       href: use/manage-virtual-machines.md
     - name: Logging
       href: use/logging.md
+    - name: Manage AWS Machines
+      href: use/manage-aws-machines.md
   - name: Connect to Azure
     items:
     - name: Azure hybrid services
