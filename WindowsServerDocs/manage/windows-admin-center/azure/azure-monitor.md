@@ -21,7 +21,7 @@ Data generated from on-premises Windows Servers is collected in a Log Analytics 
 
 When you enable a monitoring solution in a Log Analytics workspace, all the servers reporting to that workspace starts collecting data relevant to that solution, so that the solution can generate insights for all the servers in the workspace.
 
-To collect telemetry data on an on-premises server and push it to the Log Analytics workspace, Azure Monitor requires the installation of the Azure Monitor Agent. Certain monitoring solutions also require a secondary agent. For example, Azure Monitor for VMs also needs on the Dependency agent for functionality that this solution provides.
+To collect telemetry data on an on-premises server and push it to the Log Analytics workspace, Azure Monitor requires the installation of the Microsoft Monitoring Agent, or the MMA. Certain monitoring solutions also require a secondary agent. For example, Azure Monitor for VMs also needs on the Dependency agent for functionality that this solution provides.
 
 Some solutions, like Azure Update Management, also depend on Azure Automation, which enables you to centrally manage resources across Azure and non-Azure environments. For example, Azure Update Management uses Azure Automation to schedule and orchestrate installation of updates across machines in your environment, centrally, from the Azure portal.
 
@@ -32,17 +32,17 @@ From within Windows Admin Center, you can enable two monitoring solutions:
 - [Azure Update Management](azure-update-management.md) (in the Updates tool)
 - Azure Monitor for VMs (in the Server Manager connection page), also known as Virtual Machines insights
 
-You can get started using Azure Monitor from either of these tools. If you've never used Azure Monitor before, Windows Admin Center automatically provisions a Log Analytics workspace (and Azure Automation account, if needed). Windows Admin Center also installs and configures the Azure Monitor Agent on the target server, and installs the corresponding solution into the workspace.
+You can get started using Azure Monitor from either of these tools. If you've never used Azure Monitor before, Windows Admin Center automatically provisions a Log Analytics workspace (and Azure Automation account, if needed). Windows Admin Center also installs and configures the Microsoft Monitor Agent (MMA) on the target server, and installs the corresponding solution into the workspace.
 
 For instance, if you first go to the Updates tool to set up Azure Update Management, Windows Admin Center will:
 
-1. Install the Azure Monitor Agent on the machine
+1. Install the MMA on the machine
 2. Create the Log Analytics workspace and the Azure Automation account (since an Azure Automation account is necessary in this case)
 3. Install the Update Management solution in the newly created workspace.
 
 If you want to add another monitoring solution from within Windows Admin Center on the same server, Windows Admin Center installs that solution into the existing workspace to which that server is connected. Windows Admin Center additionally installs any other necessary agents.
 
-If you connect to a different server and have already setup a Log Analytics workspace, you can also install the Azure Monitor Agent on the server, connecting it up to an existing workspace. When you connect a server into a workspace, it automatically starts collecting data and reporting to solutions installed in that workspace.
+If you connect to a different server and have already setup a Log Analytics workspace, you can also install the Microsoft Monitor Agent on the server, connecting it up to an existing workspace. When you connect a server into a workspace, it automatically starts collecting data and reporting to solutions installed in that workspace.
 
 ## Azure Monitor for virtual machines (also known as Virtual Machine insights)
 
@@ -59,7 +59,7 @@ From the Overview page of a server connection, go to **Tools > Azure Monitor**. 
 
 ### Create email alerts
 
-Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the **Tools > Azure Monitor** select **visit the Azure portal** to create new alerts. Windows Admin Center automatically enables performance counters to be collected, so you can easily [create new alerts](/azure/azure-monitor/platform/alerts-log) by using one of the predefined queries or writing your own.
+Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the **Tools > Azure Monitor**, under Alerts and actions, select **Configure monitoring and alerts from the Azure portal** to create new alerts. Windows Admin Center automatically enables performance counters to be collected, so you can easily [create new alerts](/azure/azure-monitor/platform/alerts-log) by using one of the predefined queries or writing your own.
 
 ### Consolidated view across multiple servers
 
@@ -74,7 +74,7 @@ When Windows Admin Center onboards a server into the VM insights solution within
 
 ## Disabling monitoring
 
-To completely disconnect your server from the Log Analytics workspace, uninstall the Azure Monitor Agent. With the agent uninstalled it means that this server no longer sends data to the workspace, and all the solutions installed in that workspace no longer collect and process data from that server. However, uninstalling the Azure Monitor Agent doesn't affect the workspace itself – all the resources reporting to that workspace continues to do so. To uninstall the Azure Monitor Agent within Windows Admin Center, connect to the server and then go to **Installed apps**, find the Azure Monitor Agent, and then select **Remove**.
+To completely disconnect your server from the Log Analytics workspace, uninstall the Microsoft Monitor Agent. With the agent uninstalled it means that this server no longer sends data to the workspace, and all the solutions installed in that workspace no longer collect and process data from that server. However, uninstalling the Microsoft Monitor Agent doesn't affect the workspace itself – all the resources reporting to that workspace continues to do so. To uninstall the Microsoft Monitoring Agent within Windows Admin Center, connect to the server and then go to **Installed apps**, find the Microsoft Monitor Agent, and then select **Remove**.
 
 If you want to turn off a specific solution within a workspace, you need to [remove the monitoring solution from the Azure portal](/azure/azure-monitor/insights/solutions#remove-a-management-solution). Removing a monitoring solution means that the insights created by that solution are no longer generated for _any_ of the servers reporting to that workspace. For example, uninstalling the Azure Monitor for VMs solution mean you can no longer see insights about VM or server performance from any of the machines connected to my workspace.
 
