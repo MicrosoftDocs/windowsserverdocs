@@ -10,12 +10,12 @@ ms.date: 06/23/2023
 
 # Storage Replica Enhanced Log
 
->Applies to: Azure Stack HCI 23H2
+>Applies to: Azure Stack HCI 23H2, Windows Server Insiders
 
 Storage Replica leverages a general-purpose logging service for replicating IO to the secondary volume in any replication group. Starting with Azure Stack HCI 23H2, users can opt in to a more performant logging service, **Enhanced Log**. To differentiate this redesigned logging service, we refer to the original logging service as **Traditional Log**.
 
-> [!IMPORTANT]
-> Enhanced Log will be coming to Windows Server as soon as possible.
+> [!NOTE]
+> Enhanced Log is generally available with Azure Stack HCI 23H2 and available in Public Preview on Windows Server Insiders.
 
 ## Enhanced vs. Traditional Log
 
