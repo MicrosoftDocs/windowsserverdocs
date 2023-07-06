@@ -22,6 +22,7 @@ To connect your Amazon EC2, you must have the following prerequisites ready befo
     - For Source, choose **IP Addresses**, then enter the Source IP address corresponding to your Windows Admin Center gateway.
 
 ## Prepare your machine
+
 1. **Enable WinRM access** to your target EC2 instance by running the following in PowerShell or run command on the target EC2 instance:  `winrm quickconfig`
 1. **Enable inbound connections to port 5985 for WinRM over HTTP** by running the following PowerShell script on the target EC2 to enable inbound connections to port 5985:  `Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any` alternatively you can set connections through **port 5986** over **HTTPS**
 
