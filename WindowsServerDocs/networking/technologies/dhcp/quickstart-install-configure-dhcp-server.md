@@ -214,6 +214,68 @@ Here's how to create a new DHCP scope using the DHCP console.
 
 ---
 
+### Managing Scope Options
+
+After configuring your new scope, you can manage scope options using either the DHCP console or using Powershell.
+
+#### [PowerShell](#tab/powershell)
+
+You can modify DHCP scope options using PowerShell with the Set-DhcpServerv4OptionValue cmdlet. For example, to set the DNS server option for the scope 192.168.15.0 and set the DNS servers to 192.168.15.10 and 192.168.15.11, use the command:
+
+```powershell
+Set-DhcpServerv4OptionValue -ScopeId 192.168.15.0 -OptionId 6 -Value "192.168.15.10", "192.168.15.11"
+```
+
+#### [GUI](#tab/gui)
+
+To modify scope options in the DHCP console, perform the following steps:
+
+1. In the DHCP console when connected to the DHCP server you wish to manage, expand the IPv4 node, then expand the Scope with the options you wish to modify, then select the Scope Options node.
+1. Right click on Scope Options and then click Configure Options. On th Scope Options page, from the list of options select the option you wish to configure, use the checkbox to enable, and then use the properties page to configure the properties of a specific option.
+
+---
+
+### Managing Reservations
+
+With client reservations, you can reserve an IP address for permanent use by a DHCP client. Reservations are stored using a NIC's MAC address and ensure that the DHCP server exclusively leases a specific IP address to a specific MAC address.
+
+#### [PowerShell](#tab/powershell)
+
+You can create reservations using the Add-DhcpServerv4Reservation PowerShell cmdlet. For example to add a reservation to the DHCP scope with the scope ID 192.168.15.0 for the IP address 192.168.15.100, associated with the MAC address "00-11-22-33-44-55" run the PowerShell command:
+
+```powershell
+Add-DhcpServerv4Reservation -ScopeId 192.168.15.0 -IPAddress 192.168.15.100 -ClientId "00-11-22-33-44-55" 
+```
+
+#### [GUI](#tab/gui)
+
+You can convert an existing DHCP lease to a reservation using the DHCP console by right clicking the lease in the Address Leases node of a specific Scope and then selecting Add to Reservation. You can create a new reservation for a specific scope by right clicking on the Reservations node of a scope and clicking New Reservation. You will then need to provide a name for the reservation, an IP address and then the MAC address associated with the host's NIC.
+
+---
+
+### Managing Exclusions
+
+Here's how to manage exclusion ranges in DHCP server.
+
+#### [PowerShell](#tab/powershell)
+
+You can use the Add-DhcpServerv4ExclusionRange cmdlet to add an exclusion range to a DHCP scope using PowerShell. For example to add the exclusion range 192.168.15.1 to 192.168.15.10 to the scope 192.168.15.0, run the following command:
+
+```powershell
+Add-DhcpServerv4ExclusionRange -ScopeId 192.168.15.0 -StartRange 192.168.15.1 -EndRange 192.168.15.10
+```
+
+#### [GUI](#tab/gui)
+
+To manage exclusions using the Microsoft Management Console tools:
+
+1. Open the DHCP console.
+1. In the console tree, select **Address Pool**.
+1. On the Action menu, click New Exclusion Range.
+1. In the Add Exclusion dialog box, in Start IP address, type the address that you want to exclude from this scope.
+1. To exclude a range of more than one IP address, type an IP address in End IP address.
+1. Click Add.
+
 ## Next steps
 
 - [DHCP Basics](../../../troubleshoot/dynamic-host-configuration-protocol-basics.md)
