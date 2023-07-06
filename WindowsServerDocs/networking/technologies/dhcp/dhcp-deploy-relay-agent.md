@@ -19,13 +19,13 @@ This quickstart provides instructions on how to install and configure an DHCP Re
 
 Before you can install your DHCP relay agent, you must meet the following prerequisites:
 
-- A computer running a supported version of Windows Server.
+- A computer with DHCP server successfully installed.
 - A static IP.
 - An account that's a member of the Administrators group, or equivalent.
 
 ## Install and configure the DHCP relay agent
 
-To install  the DHCP Relay Agent using PowerShell, you can follow these steps:
+To install the DHCP relay agent using PowerShell, you can follow these steps:
 
 #### [PowerShell](#tab/powershell)
 
@@ -67,7 +67,7 @@ Set-DhcpRelayAgent -InterfaceIndex $interfaceIndex -ServerAddress $dhcpServerIpA
 ```
 After executing these PowerShell commands, the DHCP Relay Agent will be installed and configured on your Windows Server.
 
-To install the DHCP relay agent on a Windows Server, you need to deploy the "Remote Access" server role. The DHCP relay agent is a feature of this role and isn't included in the DHCP server role. 
+To install the DHCP relay agent on Windows Server, you need to deploy the "Remote Access" server role. The DHCP relay agent is a feature of this role and isn't included in the DHCP server role. 
 
 #### [GUI](#tab/gui)
 
