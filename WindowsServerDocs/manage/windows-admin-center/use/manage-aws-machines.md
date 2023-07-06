@@ -34,4 +34,5 @@ After completing the prerequisites above, add your EC2s as connections in Window
 
 ## Next Steps
 Now you've set up your Amazon EC2 with Windows Admin Center, learn how to manage it:
+
 - [Manage Servers with Windows Admin Center](/windows-server/manage/windows-admin-center/use/manage-servers)
