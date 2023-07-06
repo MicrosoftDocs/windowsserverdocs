@@ -15,7 +15,7 @@ Using Windows Admin Center you can manage the Windows Server operating system of
 
 ## Prerequisites
 
-To connect your Amazon EC2, you must have the following prerequisites ready before you start:
+To connect your Windows Server Amazon EC2 instance, you must have the following prerequisites ready before you start:
 - Have a running Amazon EC2 instance
 - Enable inbound connections for your Amazon EC2 instance. For more information on how to, see [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/authorizing-access-to-an-instance.html).
     - For Type, choose **WinRM-HTTP** and for port range enter **5985**, alternatively, you can choose **WinRM-HTTPS** and for port range enter **5986**.
