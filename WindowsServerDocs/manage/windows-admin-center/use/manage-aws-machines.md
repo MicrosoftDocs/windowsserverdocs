@@ -38,7 +38,7 @@ Now you can add your Windows Server Amazon EC2 instance as connections in Window
 1. In the Server name field, enter the public IPv4 address of your Amazon EC2 instance.
 1. Next, choose ‘Use another account for this connection’ and enter your Windows credentials.
 
-## Next Steps
+## Next steps
 
 Now you've set up your Amazon EC2 with Windows Admin Center, learn how to manage it:
 - [Manage Servers with Windows Admin Center](/windows-server/manage/windows-admin-center/use/manage-servers).
