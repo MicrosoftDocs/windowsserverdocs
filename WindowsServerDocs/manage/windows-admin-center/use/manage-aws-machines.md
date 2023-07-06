@@ -11,7 +11,7 @@ ms.date: 07/05/2023
 
 # Manage Windows Server in Amazon EC2 using Windows Admin Center
 
-Using Windows Admin Center you can manage the Windows Server operating system of your machines hosted in Amazon Web Services. In this article, you’ll learn how to prepare and connect your Amazon EC2 Windows Server to Windows Admin Center using a public IP.
+Using Windows Admin Center you can manage Windows Server machines running on Amazon EC2 in Amazon Web Services. In this article, you’ll learn how to prepare and connect your Amazon EC2 Windows Server to Windows Admin Center using a public IP.
 
 ## Prerequisites
 
