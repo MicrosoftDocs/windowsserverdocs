@@ -102,7 +102,7 @@ In this section:
 
 ## RHEL/CentOS 8.x Series
 
-| **Feature**                                                                                                                              | **Host OS**                                              | **8.1-8.6**   | **8.0**      |
+| **Feature**                                                                                                                              | **Host OS**                                              | **8.1-8.6+**   | **8.0**      |
 |------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------|--------------|
 | LIS Availability                                                                                                                         |                                                          | Built in      | Built in     |
 | [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)                                                   | Windows Server 2022, 2019, 2016, 2012 R2 Azure Stack HCI | ✔             | ✔            |
