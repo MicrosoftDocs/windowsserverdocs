@@ -14,6 +14,7 @@ ms.date: 07/05/2023
 Using Windows Admin Center you can manage the Windows Server operating system of your machines hosted in Amazon Web Services. In this article, you’ll learn how to prepare and connect your Amazon EC2 Windows Server to Windows Admin Center using a public IP.
 
 ## Prerequisites
+
 To connect your Amazon EC2, you must have the following prerequisites ready before you start:
 - Have a running Amazon EC2 instance
 - Enable inbound connections for your Amazon EC2 instance. For more information on how to, see [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/authorizing-access-to-an-instance.html).
