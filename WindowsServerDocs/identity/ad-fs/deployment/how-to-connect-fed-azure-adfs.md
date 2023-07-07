@@ -6,7 +6,7 @@ ms.author: billmath
 manager: amycolannino
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
 ms.topic: how-to
-ms.date: 06/13/2023
+ms.date: 07/07/2023
 ---
 
 # Deploy Active Directory Federation Services in Azure
