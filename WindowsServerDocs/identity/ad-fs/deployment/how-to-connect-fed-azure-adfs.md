@@ -86,7 +86,7 @@ A Network security group (NSG) contains a list of Access Control List (ACL) rule
 
 The NSGs associated with your subnets automatically include some default inbound and outbound rules. You can't delete default security rules, but you can override them with rules that have a higher priority. And, you can add more inbound and outbound rules according to the level of security you want.
 
-Here, we'll add a couple of rules to each of our two security groups. For the first example, let's add an inbound security rule to the **NSG_INT** security group.
+Now, add a couple of rules to each of our two security groups. For the first example, let's add an inbound security rule to the **NSG_INT** security group.
 
 1. On your virtual network's **Subnets** page, select **NSG_INT**.
 1. On the left, select **Inbound security rules**, then select **+ Add**.
@@ -95,7 +95,7 @@ Here, we'll add a couple of rules to each of our two security groups. For the fi
     | Setting | Value |
     | ------- | ----- |
     | Source | **10.0.1.0/24**. |
-    | Source port ranges | Leave (or select) asterisk. An asterisk (*) allows traffic on any port. For this example, we'll choose asterisk for all of the rules you create.|
+    | Source port ranges | Leave (or select) asterisk. An asterisk (*) allows traffic on any port. For this example, choose asterisk for all of the rules you create.|
     | Destination | **10.0.0.0/24**. |
     | Service | Select **HTTPS**. <br> The settings for **Destination port ranges** and **Protocol** are automatically filled based on the specified **Service**.|
     | Action | Choose **Allow**. |
@@ -127,7 +127,7 @@ After configuration, the **NSG** pages look like this example:
 
 #### Create connection to on-premises
 
-We need a connection to on-premises to deploy the DC in Azure. Azure offers various options to connect your on-premises infrastructure to your Azure infrastructure.
+You need a connection to on-premises to deploy the DC in Azure. Azure offers various options to connect your on-premises infrastructure to your Azure infrastructure.
 
 - Point-to-site
 - Virtual Network site-to-site
@@ -139,7 +139,7 @@ While we recommend you use ExpressRoute, you can choose any connection method be
 
 ### Create storage accounts
 
-To maintain high availability and avoid dependence on a single storage account, we'll create two storage accounts. Divide the machines in each availability set into two groups, and then assign each group a separate storage account.
+To maintain high availability and avoid dependence on a single storage account, create two storage accounts. Divide the machines in each availability set into two groups, and then assign each group a separate storage account.
 
 To create your two storage accounts, search for and select **Storage accounts** in the Azure portal and choose **+ Create**
 
@@ -226,6 +226,7 @@ To create VMs, search for and select **Virtual machines** in the Azure portal.
 1. On the **Disks** tab under **Advanced**, deselect **Use managed disks** and then select the **contososac1** storage account that you created previously. When ready, select **Next : Networking**.
     :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vm-disks-tab.png" alt-text="Screenshot showing the Disks tab for how to create a virtual machine.":::
 1. In the **Networking** tab, enter or select this information:
+
     | Setting | Value |
     | ------- | ----- |
     | Virtual network | Select your virtual network that contains the subnets you created previously. |
@@ -282,6 +283,7 @@ To create and deploy an ILB, search for and select **Load Balancers** in the Azu
     Leave **SKU** and **Tier** as their defaults and then select **Next : Frontend IP Configuration**
     :::image type="content" source="./media/how-to-connect-fed-azure-adfs/add-load-balancer-basics.png" alt-text="Screenshot showing the Basics tab for how to create a load balancer.":::
 1. Select **+ Add a frontend IP configuration**, then enter or select this information in the **Add frontend IP configuration** page.
+
     | Setting | Value |
     | ------- | ----- |
     | Name | Enter a frontend IP configuration name. |
@@ -298,6 +300,7 @@ To create and deploy an ILB, search for and select **Load Balancers** in the Azu
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/add-load-balancer-backend-pool.png" alt-text="Screenshot showing how to add a backend pool when you create a load balancer.":::
 1. Select **Next : Inbound Rules**.
 1. On the **Inbound Rules** tab, select **Add a load balancing rule**, then enter or select this information in the **Add load balancing rule** page.
+
     | Setting | Value |
     | ------- | ----- |
     | Name | Enter a name for the rule. |
@@ -362,6 +365,7 @@ For more information on how to deploy WAP, see [Install and Configure the web ap
     :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-load-balancer-public.png" alt-text="Screenshot showing how to add public-facing load balancing rules.":::
 
 1. Select **+ Add a frontend IP configuration**, then enter or select this information in the **Add frontend IP configuration** page.
+
     | Setting | Value |
     | ------- | ----- |
     | Name | Enter a frontend IP configuration name. |
@@ -375,6 +379,7 @@ For more information on how to deploy WAP, see [Install and Configure the web ap
 1. On the **Add backend pool** page, select a VM to align with the backend pool, select **Add**, then select **Save**.
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/add-load-balancer-backend-pool.png" alt-text="Screenshot showing how to add a backend pool when you create a public load balancer.":::
 1. Select **Next : Inbound Rules**, select **Add a load balancing rule**, then enter or select this information in the **Add load balancing rule** page.
+
     | Setting | Value |
     | ------- | ----- |
     | Name | Enter a name for the rule. |
@@ -386,7 +391,7 @@ For more information on how to deploy WAP, see [Install and Configure the web ap
     | Health probe | Select **Create new** and then enter these values to create a health probe: <br> **Name**: Name of the health probe <br>**Protocol**: HTTP <br>**Port**: 80 (HTTP) <br>**Path**: /adfs/probe <br>**Interval**: 5 (default value) – The interval at which ILB probes the machines in the backend pool <br>Select **Save**.|
 
 1. Select **Save** to save the inbound rule.
-   :::image type="content" source="./media/how-to-connect-fed-azure-adfs/add-inbound-rules.png" alt-text="Screenshot showing how to create storage accounts.":::
+   :::image type="content" source="./media/how-to-connect-fed-azure-adfs/add-inbound-rules.png" alt-text="Screenshot showing how to create an inbound rule.":::
 
 1. Select **Review + Create** and if everything looks good, select **Create**.
 
