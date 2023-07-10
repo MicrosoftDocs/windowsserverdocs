@@ -45,7 +45,11 @@ To disable Automatic Reconnection, you can configure your server, client, or bot
 
 ### Client RDP Properties
 
-You can configure the following Remote Desktop Protocol (RDP) property to disable Automatic Reconnection using the Remote Desktop Connection app or by editing the `.rdp` file. More information can be found here: [Supported RDP properties with Remote Desktop Services](clients/rdp-files.md#supported-rdp-properties-with-remote-desktop-services). To disabled Automatic Reconnection follow the steps.
+You can configure the following Remote Desktop Protocol (RDP) property to disable Automatic Reconnection using the Remote Desktop Connection app or by editing the `.rdp` file. More information can be found here: [Supported RDP properties with Remote Desktop Services](clients/rdp-files.md#supported-rdp-properties-with-remote-desktop-services). To disabled Automatic Reconnection, select the relevant method and follow the steps.
+
+#### [RDP file](#tab/rdpfile)
+
+Here's how to disable Automatic Reconnection by editing the `.rdp` file.
 
 1. Locate your `.rdp` file, right-click the file, expand the **Open with** menu, then select **Choose another app**.
 
@@ -56,6 +60,18 @@ You can configure the following Remote Desktop Protocol (RDP) property to disabl
    ```RDP
    autoreconnection enabled:i:0
    ```
+
+#### [Remote Desktop Connection app](#tab/mstsc)
+
+Here's how to disable Automatic Reconnection using the Remote Desktop Connection app.
+
+1. Open the **Remote Desktop Connection** app and enter your connection information.
+
+1. Go to **Show Options**, then select the **Experience** tab.
+
+1. Clear the **Reconnect if the connection is dropped** checkbox.
+
+---
 
 ### Remote Desktop Services server configuration
 
@@ -74,8 +90,6 @@ Here's how to disable Automatic Reconnection for RDS session hosts using Group P
 1. Select **Disable**, from the radio buttons.
 
 1. Select **OK** to complete the configuration.
-
-New RDS sessions are no longer be able to automatically reconnect.
 
 #### [Server Manager](#tab/servermanager)
 
