@@ -9,7 +9,7 @@ ms.date: 07/10/2023
 ---
 # Disable Automatic Reconnection in Remote Desktop Service
 
-Learn about Desktop Services (RDS) lock screen security works and how to disabled automatic reconnection for RDS session hosts and clients using Server Manager, Group Policy, and Remote Desktop Protocol (RDP) properties.
+Learn about Automatic Reconnection in Remote Desktop Service (RDS), lock screen security, and how to disabled Automatic Reconnection for RDS session hosts and clients using Server Manager, Group Policy, and Remote Desktop Protocol (RDP) properties.
 
 ## Automatic Reconnection
 
