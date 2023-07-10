@@ -3,7 +3,7 @@ title: Active Directory Forest Recovery - Determine how to recover the forest
 description: Recovering an entire Active Directory forest involves restoring at least one Domain Controller (DC) in every domain from available backup. Recovering the forest restores each domain in the forest to its state at the time of the last trusted backup. Consequently, the restore operation will result in the loss of at least the following Active Directory data...
 ms.author: inhenkel
 author: IngridAtMicrosoft
-ms.date: 06/21/2023
+ms.date: 07/10/2023
 ms.topic: article
 ---
 
@@ -14,7 +14,7 @@ ms.topic: article
 Recovering an entire Active Directory forest involves restoring at least one
 Domain Controller (DC) in every domain from an available backup. Recovering the
 forest restores each domain in the forest to its state at the time of the last
-trusted backup. 
+trusted backup.
 
 ## What will be lost
 
@@ -30,7 +30,7 @@ The restore operation will result in the loss of at least the following Active D
 1. You must also know the DSRM password to perform a system state restore of a DC.
 
 It's a good practice to archive the Administrator account and DSRM password history in a safe place for as long as the backups are valid. That is, within the tombstone lifetime period or within the deleted object lifetime
-period if Active Directory Recycle Bin is enabled. 
+period if Active Directory Recycle Bin is enabled.
 
 You can also synchronize the DSRM password with a domain user account in order to make it easier to remember. For more information, see [this article](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754363(v=ws.11)). Synchronizing the DSRM account must be done in advance of the forest recovery, as part of preparation.
 
@@ -57,9 +57,9 @@ If you need to restore Active Directory to different hardware, create full serve
 > 1. Perform a full server restore in order to restore the operating system and all files and applications.
 > 2. Perform a system state restore using wbadmin.exe in order to mark SYSVOL as authoritative.
 >
-> For more information, see Microsoft KB article **249694**. <!-- fix this link -->
+> For more information, see [How to restore a Windows 7 installation](/troubleshoot/windows-server/backup-and-storage/how-to-restore-windows-installation).
 
-If the time of failure is unknown, investigate further to identify backups that hold the last safe state of the forest. 
+If the time of failure is unknown, investigate further to identify backups that hold the last safe state of the forest.
 
 This approach is less desirable. Therefore, we strongly recommend that you keep detailed logs about the health state of AD DS on a daily basis so that, if there's a forest-wide failure, the approximate time of failure can be identified. You should also keep a local copy of backups to enable faster recovery.
 
@@ -127,7 +127,7 @@ In this above example, there are four backup candidates: DC_1, DC_2, DC_4, and D
 > [!NOTE]
 > Because DC_5 is not a global catalog server, it has a slight advantage in that the global catalog doesn't need to be removed after the restore. However you would need to start recovery with the default Administrator account with Rid 500 or use registry value **ignoregcfailures**:  
 >
->`Key: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa`  
+>`Key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`  
 > `Value: IgnoreGCFailures`  
 > `Type: REG_DWORD`  
 > `Data: 0 – Require GlobalCatalog for logon (default)`  

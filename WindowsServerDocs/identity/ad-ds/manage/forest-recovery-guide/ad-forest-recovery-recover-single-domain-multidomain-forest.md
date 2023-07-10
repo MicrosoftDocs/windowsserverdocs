@@ -3,7 +3,7 @@ title: Active Directory Forest Recovery - Recovering a single domain in a multid
 description: In certain scenarios, it may be necessary to recover only a single domain within a forest that has multiple domains, rather than a full forest recovery. This topic covers considerations for recovering a single domain and possible strategies for recovery.
 ms.author: inhenkel
 author: IngridAtMicrosoft
-ms.date: 06/21/2023
+ms.date: 07/10/2023
 ms.topic: article
 ---
 
@@ -75,7 +75,7 @@ creations will be OK.
 ## Rehost all GCs
 
 > [!WARNING] 
-> The login name and password of the default Domain Administrator user account (“RID-500”) for all domains must known, and the account(s) enabled for use in case a problem that prevents access to a GC for logon.  
+> The login name and password of the default Domain Administrator user account (“RID-500”) for all domains must available, and the account(s) enabled for use in case a problem that prevents access to a GC for logon.  
 
 > [!NOTE]
 > To allow logon without the GC verification, it's possible also to configure `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\IgnoreGCFailures` value to 1.  

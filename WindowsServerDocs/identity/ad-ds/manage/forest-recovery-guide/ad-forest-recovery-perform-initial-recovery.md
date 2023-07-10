@@ -3,7 +3,7 @@ title:  Active Directory Forest Recovery - Perform initial recovery
 description: Beginning with a writeable DC in the forest root domain, complete the steps in this section in order to restore the first DC.
 ms.author: inhenkel
 author: IngridAtMicrosoft
-ms.date: 06/21/2023
+ms.date: 07/10/2023
 ms.topic: article
 ---
 
@@ -81,7 +81,7 @@ Then perform the following steps. Procedures for performing certain steps are in
         partition:
 
         ```cli
-        HKLM\\System\\CurrentControlSet\\Services\\NTDS\\Parameters\\Repl
+        HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Repl
         Perform Initial Synchronizations
         ```
 
@@ -297,7 +297,7 @@ generally recommended to decide that all DCs to are a global catalog.
 Monitor the Directory Service event log in Event Viewer for event ID 1119, which indicates that this DC is a global catalog server, or verify the following registry key has a value of 1:
 
 ```cli
-**HKLM\\System\\CurrentControlSet\\Services\\NTDS\\Parameters\\Global Catalog
+**HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Global Catalog
 Promotion Complete**
 ```
 
