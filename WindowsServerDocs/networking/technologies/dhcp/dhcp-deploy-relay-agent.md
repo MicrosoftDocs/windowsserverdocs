@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: wscontent
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
-ms.date: 07/10/2023
+ms.date: 07/14/2023
 ---
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
@@ -20,8 +20,7 @@ This quickstart provides instructions on how to install and configure an DHCP Re
 Before you can install your DHCP relay agent, you must meet the following prerequisites:
 
 - A computer with DHCP server successfully installed.
-- A static IP.
-- An account that's a member of the Administrators group, or equivalent.
+- A DHCP scope configured for the remote subnet.
 
 ## Install and configure the DHCP relay agent
 
