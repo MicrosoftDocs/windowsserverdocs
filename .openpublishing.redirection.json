@@ -10988,7 +10988,156 @@
       "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
       "redirect_document_id": false
     },
-  
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Add-GC.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-add-gc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-authoritative-recovery-sysvol",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Backing-up-a-Full-Server.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-a-full-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Backing-up-System-State.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-system-state",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Cleaning-Metadata.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleaning-metadata-of-removed-dcs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-cleanup.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Configure-DNS.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-configure-dns",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Determine-how-to-Recover.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-determine-how-to-recover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Devising-a-Plan.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Guide.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Identify-the-Problem.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Invaildate-RID-Pool.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-invaildate-rid-pool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Remove-GC.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-remove-gc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Reset-Computer-Account-DC.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-computer-account-dc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Reset-Trust.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Resetting-the-krbtgt-password.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Restore-Additional-DCs.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-restore-additional-dcs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Seizing-Operations-Master-Role.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-seizing-operations-master-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-recover-single-domain-multidomain-forest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Steps-For-Restoring.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Verify-Replication.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-verify-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Virtualization.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-verify-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Nonauthoritative-Restore.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-nonauthoritative-restore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Perform-a-Full-Recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-full-server-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Perform-initial-recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Prerequisties.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Procedures.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Raise-RID-Pool.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-raise-rid-pool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/ad-forest-recovery-faq.yml",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq",
+      "redirect_document_id": false
+    },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
       "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
