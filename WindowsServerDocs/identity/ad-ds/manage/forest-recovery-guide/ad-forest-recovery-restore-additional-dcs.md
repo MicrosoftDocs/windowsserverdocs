@@ -4,7 +4,7 @@ title: AD Forest Recovery - Redeploy remaining DCs
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 06/21/2023
+ms.date: 07/10/2023
 ms.topic: article
 ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 ---
@@ -23,11 +23,9 @@ In a large enterprise faced with a worldwide infrastructure, a more sophisticate
 
 ## Clone
 
-For virtualized environments that run Windows Server 2012, cloning is the fastest and simplest way to recover a large number of DCs. You can automate the recovery of all virtualized DCs in a domain after you restore a single virtualized DC from backup. For more information about cloning and prerequisites, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../managing-rid-issuance.md).
+You can automate the recovery of all virtualized DCs in a domain after you restore a single virtualized DC from backup. For more information about cloning and prerequisites, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../managing-rid-issuance.md).
 
 ## Reinstall AD DS using Windows Powershell
-
-Reinstall AD DS by using Windows PowerShell on servers that run Windows Server 2012 (or Dcpromo.exe on servers that run earlier versions of Windows Server) or by using the user interface.
 
 To expedite reinstalling AD DS, you can use Install from Media (IFM) option to reduce replication traffic during the installation. For more information about using the `ntdsutil ifm` command to create installation media, see [Installing AD DS from Media](../managing-rid-issuance.md).
 
