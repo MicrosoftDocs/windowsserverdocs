@@ -304,27 +304,31 @@
     - name: AD DS Operations
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
       items:
-      - name: AD Forest Recovery Guide
-        href: ad-ds/manage/AD-Forest-Recovery-Guide.md
+      - name: Introduction
+        href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide.md
         items:
-        - name: AD Forest Recovery - Prerequisites
-          href: ad-ds/manage/AD-Forest-Recovery-Prerequisties.md
-        - name: AD Forest Recovery - Steps for Recovery
-          href: ad-ds/manage/AD-Forest-Recovery-Steps-For-Restoring.md
-        - name: AD Forest Recovery - Identify the Problem
-          href: ad-ds/manage/AD-Forest-Recovery-Identify-the-Problem.md
-        - name: AD Forest Recovery - Perform Initial Recovery
-          href: ad-ds/manage/AD-Forest-Recovery-Perform-initial-recovery.md
-        - name: AD Forest Recovery - Procedures
-          href: ad-ds/manage/AD-Forest-Recovery-Procedures.md
-        - name: AD Forest Recovery - FAQ
-          href: ad-ds/manage/ad-forest-recovery-faq.yml
-        - name: AD Forest Recovery - Recovering a single domain with multidomain forest
-          href: ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md
-        - name: AD Forest Recovery - Virtualization
-          href: ad-ds/manage/AD-Forest-Recovery-Virtualization.md
-        - name: AD Forest Recovery - Windows Server 2003
-          href: ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md
+        - name: Prerequisites
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-prerequisites.md
+        - name: Devise a custom forest recovery plan
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan.md
+        - name: Steps to recovery the forest
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest.md
+        - name: Identify the problem
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem.md
+        - name: Determine how to recover
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-determine-how-to-recover.md
+        - name: Perform initial recovery
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery.md
+        - name: Procedures
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
+        - name: FAQ
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
+        - name: Recover a single domain within a multidomain forest
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-recover-single-domain-multidomain-forest.md
+        - name: Redeploy remaining DCs
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-restore-additional-dcs.md
+        - name: Virtualization
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-virtualization.md
       - name: Best Practices for Securing Active Directory
         href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
         items:

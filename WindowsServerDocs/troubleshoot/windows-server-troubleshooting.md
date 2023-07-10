@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Windows Server
 description: Get links to troubleshooting articles for Windows Server issues
-ms.date: 1/24/2020
+ms.date: 6/13/2023
 author: kaushika-msft
 ms.author: kaushika
 ms.topic: troubleshooting
@@ -45,7 +45,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot AD forest recovery
 
-- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/ad-forest-recovery-faq.yml)
+- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml)
 
 ## Troubleshoot AD replication
 
