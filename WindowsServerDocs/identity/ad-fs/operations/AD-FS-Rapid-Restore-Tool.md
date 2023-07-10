@@ -55,7 +55,7 @@ The `RngCryptoServiceProvider` Class generates the salt (binary blob) used by AE
 To get started with the AD FS Rapid Restore tool, first review the following system and tool requirements.
 
 - The tool works for AD FS in Windows Server 2016 and later.
-- The tool requires .NET framework 4.0 or later.
+- The tool requires .NET framework 4.6 or later.
 - If you use a WID, the tool must run on the primary AD FS server. Use the `Get-AdfsSyncProperties` cmdlet to check if your server is the primary server.
 - A restore must run on an AD FS server of the same version as the backup server, and use the same Active Directory account as the AD FS service account.
 
