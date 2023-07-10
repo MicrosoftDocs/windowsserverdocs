@@ -57,7 +57,7 @@ If you need to restore Active Directory to different hardware, create full serve
 > 1. Perform a full server restore in order to restore the operating system and all files and applications.
 > 2. Perform a system state restore using wbadmin.exe in order to mark SYSVOL as authoritative.
 >
-> For more information, see [How to restore a Windows 7 installation](troubleshoot/windows-server/backup-and-storage/how-to-restore-windows-installation).
+> For more information, see [How to restore a Windows 7 installation](/troubleshoot/windows-server/backup-and-storage/how-to-restore-windows-installation).
 
 If the time of failure is unknown, investigate further to identify backups that hold the last safe state of the forest.
 
