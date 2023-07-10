@@ -1,36 +1,111 @@
 ---
-title: Automatic Reconnection in RDS Lock Screen Security
-description: The article discusses Microsoft Remote Desktop Services and its Automatic Reconnection feature and emphasizes that the lock screen of the Remote Desktop session is not a security boundary as reconnection does not require re-authentication.
+title: Disable Automatic Reconnection in Remote Desktop Service for Windows Server
+description: Learn about the Remote Desktop Services Automatic Reconnection feature, lock screen security, and how to disable Automatic Reconnection.
 author: tyadon
 ms.author: riyadon
 ms.reviewer: spatnaik
-ms.topic: article
-ms.date: 06/06/2023
+ms.topic: how-to
+ms.date: 07/10/2023
 ---
-# Automatic Reconnection in RDS: Lock Screen Security
-Microsoft Remote Desktop Services (RDS) offers a wide range of features designed to enhance your remote working experience. One such feature is Automatic Reconnection. 
+# Disable Automatic Reconnection in Remote Desktop Service
 
-Automatic Reconnection allows the client to seamlessly reconnect to their existing sessions, giving a smooth, uninterrupted user experience in case of temporary network disruptions. This behavior and protocol can be understood by visiting: [Automatic Reconnection | Microsoft Learn](https://learn.microsoft.com/openspecs/windows_protocols/ms-rdpbcgr/e729948a-3f4e-4568-9aef-d355e30b5389)
+Learn about Desktop Services (RDS) lock screen security works and how to disabled automatic reconnection for RDS session hosts and clients using Server Manager, Group Policy, and Remote Desktop Protocol (RDP) properties.
 
-When using Automatic Reconnection, it is crucial to note that the lock screen of the Remote Desktop session is not designed to function as a security boundary. When a policy or the user locks the remote session and the network connection is lost or disrupted, the Remote Desktop Services retains the session state and connection information, and the client will reconnect without needing to re-authenticate. If the automatic reconnection of locked sessions raises concerns for your specific use case, we recommend implementing additional security measures. This could include disabling automatic reconnection on either the RDS Host or the Client:
+## Automatic Reconnection
 
-**Client option to disable Automatic Reconnection:**
-- Organizations can configure the following Remote Desktop Protocol (RDP) property centrally in RDS to disable automatic reconnection. More information can be found here: [Supported RDP properties with Remote Desktop Services | Microsoft Learn](https://learn.microsoft.com/windows-server/remote/remote-desktop-services/clients/rdp-files#session-behavior).
-  1. **RDP Property**: `autoreconnection enabled:i:value` 
+Microsoft Remote Desktop Services (RDS) offers a wide range of features designed to enhance your remote working experience, such as Automatic Reconnection. Automatic Reconnection allows the client to seamlessly reconnect to their existing sessions, giving a smooth, uninterrupted user experience when temporary network disruptions occur. To learn more about the automatic reconnection behavior, see the [Automatic Reconnection](/openspecs/windows_protocols/ms-rdpbcgr/e729948a-3f4e-4568-9aef-d355e30b5389) open specification.
 
-**Host option(s) to disable Automatic Reconnection:**
-- In the **session properties for a specific Collection**, Administrators have the ability to disable the reconnection feature. It's important to note that this feature is enabled by default, and therefore, requires explicit action from the administrators to disable it.
-- **Group Policy**:
+> [!IMPORTANT]
+> Automatic Reconnection is enabled by default, and therefore, requires explicit action from the administrators to disable it.
 
-  1.  Open the **Group Policy Editor**. This can be accessed by typing `gpedit.msc` in the **Start** menu or the **Run** dialog box.
-    
-  2.  Navigate to the following path: `Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections`.
-    
-  3.  In the **Connections** section, you will find an option named **Automatic reconnection**.
-    
-  4.  Select this **Automatic reconnection** option.
-    
-  5.  In the new dialog box that appears, select the **Disabled** option.
-    
-  6.  Click on **Apply** and then **OK** to save the changes.
+## Lock Screen Security
 
+When a policy or the user locks the remote session and the network connection is lost or disrupted, RDS retains the session state and connection information. By RDS retaining the session state and connection information, the client reconnects without needing to reauthenticate. The lock screen of the Remote Desktop session isn't designed to function as a security boundary. If the automatic reconnection of locked sessions raises concerns for your specific use case, we recommend implementing extra security measures. Other security measures can include disabling automatic reconnection on either the RDS host or the client.
+
+## Prerequisites
+
+Before you can configure Automatic Reconnection for RDS, you need to complete the following
+prerequisites:
+
+- A Windows Server with the RDS installed and configured. To learn more about deploying RDS, see [Deploy your Remote Desktop environment](rds-deploy-infrastructure.md).
+- A Remote Desktop Session Collection. To learn more about creating a Remote Desktop Session Collection, see [Create a Remote Desktop Services collection for desktops and apps to run](rds-create-collection.md).
+- A Windows client or Windows Server machine to connect from.
+- A domain account that is a member of the [Group Policy Creator Owners](../../identity/ad-ds/manage/understand-security-groups.md#group-policy-creator-owners) group, or equivalent.
+- An account that is a member of RDS session host administrators group, or equivalent.
+
+## Disable Automatic Reconnection
+
+To disable Automatic Reconnection, you can configure your server, client, or both. When configuring your server, you can only configure Group Policy or the Remote Desktop Session Collection, not both. Group Policy takes priority and prevents you from applying Automatic Reconnection setting for the Remote Desktop Session Collection.
+
+> [!TIP]
+>
+> - If you disable Automatic Reconnection from your server, clients will be unable to perform Automatic Reconnection to the RDS session host regardless or the client configuration.
+>
+> - Changes to the Automatic Reconnection setting only apply to new RDS sessions. Existing sessions will continue to use the Automatic Reconnection setting from the time of connection.
+
+### Client RDP Properties
+
+You can configure the following Remote Desktop Protocol (RDP) property to disable Automatic Reconnection using the Remote Desktop Connection app or by editing the `.rdp` file. More information can be found here: [Supported RDP properties with Remote Desktop Services](clients/rdp-files.md#supported-rdp-properties-with-remote-desktop-services). To disabled Automatic Reconnection follow the steps.
+
+1. Locate your `.rdp` file, right-click the file, expand the **Open with** menu, then select **Choose another app**.
+
+1. Select **Notepad**, then select **Just once**
+
+1. Scroll to the last line of the file, then enter the following text.
+
+   ```RDP
+   autoreconnection enabled:i:0
+   ```
+
+### Remote Desktop Services server configuration
+
+To disabled Automatic Reconnection for your RDS session host, select the relevant method and follow the steps.
+
+#### [Group Policy](#tab/gpo)
+
+Here's how to disable Automatic Reconnection for RDS session hosts using Group Policy.
+
+1. Open the **Group Policy Management Console**, create or edit a policy applied to your server.
+
+1. In the console tree, select **Computer Configuration > Administrative Templates > Windows Components > Remote Desktop Service > Remote Desktop Session Host > Connections**.
+
+1. For the setting, right-click **Automatic reconnection** and select **Edit**.
+
+1. Select **Disable**, from the radio buttons.
+
+1. Select **OK** to complete the configuration.
+
+New RDS sessions are no longer be able to automatically reconnect.
+
+#### [Server Manager](#tab/servermanager)
+
+Here's how to disable Automatic Reconnect install the DNS Server role using Server Manager from the Windows desktop.
+
+1. From the Windows desktop, open the **Start** menu, enter the *Server Manager* and select the matching service entry.
+
+1. From Server Manager, in the panel on left, select **Remote Desktop Services**, then select your collection.
+
+1. In the *Properties* section, select **TASKS**, then select **Edit Properties** from the drop-down menu.
+
+1. Select the Session Collection, select **Session**.
+
+1. From the *Configure Session Properties* page, uncheck the **Enable automatic reconnection** box, then select **OK**.
+
+#### [PowerShell](#tab/powershell)
+
+Here's how to disable Automatic reconnection using the
+[Set-RDSessionCollectionConfiguration](/powershell/module/remotedesktop/Set-RDSessionCollectionConfiguration) PowerShell
+command.
+
+To disabled Automatic Reconnection for the Remote Desktop Session Collection named `Desktops`, run the
+following command on a computer with the DNS server role installed:
+
+```powershell
+Set-RDSessionCollectionConfiguration Desktops -AutomaticReconnectionEnabled $false
+```
+
+---
+
+## Next steps
+
+- [Remote Desktop clients for Remote Desktop Services and remote PCs](clients/remote-desktop-clients.md).
