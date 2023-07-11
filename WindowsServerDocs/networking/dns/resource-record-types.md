@@ -6,7 +6,7 @@ ms.author: wscontent
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ms.topic: article
-ms.date: 06/14/2023
+ms.date: 07/10/2023
 ---
 # DNS resource records
 
@@ -16,7 +16,7 @@ hosts) that the zone contains. A typical resource record consists of the:
 - Name (host) of the resource record.
 - Information about how long the resource record can remain in the cache.
 - Resource record type, such as a host (A) resource record.
-- Data that's specific to the record type, such as the host's address.
+- Data that's specific to the record type, such as the host's IPv4 address.
 
 You can add resource records directly, or they can be added automatically when Windows-based,
 Dynamic Host Configuration Protocol (DHCP) enabled clients join a network using
