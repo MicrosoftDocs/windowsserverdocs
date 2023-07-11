@@ -321,6 +321,8 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery.md
         - name: Procedures
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
+        - name: Cleanup
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup.md
         - name: FAQ
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
         - name: Recover a single domain within a multidomain forest
