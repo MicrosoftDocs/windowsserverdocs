@@ -6,7 +6,7 @@ ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 04/21/2023
+ms.date: 07/12/2023
 ---
 # Plan your WSUS deployment
 
@@ -77,7 +77,7 @@ During the installation process, WSUS will install the following items by defaul
 
 ### UUP considerations
 <!--max7633666-->
-Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). The Windows 11, version 22H2 feature update will be updated monthly so you can easily deploy the latest build to your clients. UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. Clients that update using on-premises UUP gain the following capabilities:
+Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the [Unified Update Platform (UUP)](/windows/deployment/update/windows-update-overview). UUP on-premises interoperates with WSUS and [Microsoft Configuration Manager](/mem/configmgr/sum/). The Windows 11, version 22H2 feature update will be updated monthly so you can easily deploy the latest build to your clients. UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. While UUP updates can't be [approved for removal](../manage/update-operations.md#approving-udpates-for-removal) in WSUS, clients that update using on-premises UUP gain the following capabilities:
 
 - Ability for end users to acquire Features on Demand and language packs in WSUS or Configuration Manager environments.
 - Automatic corruption repair
