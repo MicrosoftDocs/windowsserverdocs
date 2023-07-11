@@ -40,15 +40,15 @@ different Active Directory environments.
 > [!WARNING]
 > If the KDS Root Key objects in the forest were compromised, you should re-create the gMSA accounts in multiple domains, even if the domain itself was not compromised.
 
-You need to prevent an attacker from using data harvested from a stolen Domain
-Controller backup to authenticate using gMSA calculated credentials. Replace all gMSAs in the domains of the forest that use the exposed KDS Root Key
-objects, with gMSA accounts using a new KDS Root Key object. The overall
-procedure is described in [Getting Started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts)
+The problem and resolution is discussed in [How to recover from a Golden gMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack).
+
+You must prevent an attacker from using data harvested from a stolen Domain
+Controller backup to authenticate using gMSA calculated credentials. Replace all gMSAs in the domains of the forest that use the exposed KDS Root Key objects, with gMSA accounts using a new KDS Root Key object. The procedure is described in [Getting Started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts)
 with a few important changes:
 
 - Disable all existing gMSA accounts, set the userAccountControl attribute to
     4098 (workstation type + disabled).
-- Create a new KDS Root Key object as described in [Create the Key Distruvyuion Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key).
+- Create a new KDS Root Key object as described in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key).
 
     > [!IMPORTANT]
     > Restart the Microsoft Key Distribution Service (KDSSVC) on the same domain controller. This is needed so the new object is picked up by KDSSVC. Create new gMSA accounts to replace the existing accounts on the same domain controller. At this point, edit the existing gMSA account as unique service principal names must be assigned to the active gMSA.
