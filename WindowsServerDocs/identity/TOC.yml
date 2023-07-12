@@ -305,8 +305,9 @@
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
       items:
       - name: Active Directory Forest Recovery Guide
-        href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide.md
         items:
+        - name: Introduction
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide.md
         - name: Prerequisites
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-prerequisites.md
         - name: Devise a custom forest recovery plan
