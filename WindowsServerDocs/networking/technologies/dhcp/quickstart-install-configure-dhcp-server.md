@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: wscontent
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
-ms.date: 06/27/2023
+ms.date: 07/11/2023
 ---
 
 # Quickstart: Install and configure DHCP Server
@@ -14,7 +14,7 @@ ms.date: 06/27/2023
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This quickstart shows you how to install a Dynamic Host Configuration Protocol (DHCP) server on
-Windows Server. You'll install the DHCP Server role, authorize the server in your Active Director
+Windows Server. You'll install the DHCP Server role, authorize the server in your Active Directory
 domain, and configure a scope to automatically assign DHCP IP addresses and options to IPv4 DHCP
 clients.
 
@@ -23,15 +23,15 @@ clients.
 Before you can install your DHCP server, you must meet the following prerequisites:
 
 - A computer running a supported version of Windows Server.
-- A static IP.
+- A static IPv4 address.
 - An IP address range for your DHCP scope.
 - An account that's a member of the Administrators group, or equivalent.
 
 ## Install DHCP Server
 
-Installing the DHCP Server involves adding the DNS Server role to an existing Windows Server server.
+Installing the DHCP Server involves adding the DHCP Server role to an existing Windows Server server.
 
-To install the DNS Server role as a standalone server, perform the following steps:
+To install the DHCP Server role as a standalone server, perform the following steps:
 
 #### [PowerShell](#tab/powershell)
 
