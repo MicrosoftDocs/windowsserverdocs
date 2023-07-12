@@ -6,19 +6,48 @@ ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 01/11/2023
+ms.date: 07/26/2023
 ---
-# WSUS and the Catalog Site
+# WSUS and the Microsoft Update Catalog site
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The [Catalog Site](https://www.catalog.update.microsoft.com) is the Microsoft location from which you can import software updates, drivers, and hotfixes.
+The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script.
 
-## The Microsoft Update Catalog Site
+## Prerequisites for importing updates into WSUS
 
-In order to import hotfixes into WSUS, you must access the Microsoft Update Catalog Site from a WSUS computer. Any computer that has the WSUS administrative console installed, whether or not it's a WSUS server, can be used to import hotfixes from the Catalog Site. You must be logged on to the computer as an administrator to import the hotfixes.
+In order to import hotfixes into WSUS with the PowerShell script, you must be able to access the Microsoft Update Catalog site from a computer that has the WSUS console installed. Any computer that has the WSUS administrative console installed, whether or not it's a WSUS server, can be used to import from the catalog. You must be signed in to the computer as an administrator to import hotfixes with PowerShell.
 
-### To access the Microsoft Update Catalog Site
+## The Microsoft Update Catalog site
+
+The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) lets you search on a variety of update fields and categories. These update fields include:
+- Update title
+- Description
+- Applicable products
+- Classifications
+- Knowledge base articles numbers in the format of `KB1234567`
+
+When searching for hardware updates, or drivers, you can also search for the following fields:
+- Driver model
+- Manufacturer
+- Class
+- The 4-part hardware id, such as `PCI\VEN_14E4&DEV_1677&SUBSYS_01AD1028`.
+
+You can narrow the scope of your search by adding additional search terms. 
+
+> [!Note]
+> The catalog also allows you to download updates directly from the site using the download button. However, updates downloaded this way are are in `.MSU` format.  WSUS can't import updates in `.MSU` format. This file type is commonly used by the [Windows Update Standalone installer](https://support.microsoft.com//topic/description-of-the-windows-update-standalone-installer-in-windows-799ba3df-ec7e-b05e-ee13-1cdae8f23b19), [DISM](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options), or other updates tools. Some tools require that you extract the files from the `.MSU` before they can be used.
+
+## Import updates into WSUS using PowerShell
+
+Use the below instructions to import updates into WSUS:
+
+1. Open the Microsoft Update Catalog site, [https://www.catalog.update.microsoft.com](https://www.catalog.update.microsoft.com), in a browser window.
+1. Search for an update you want to import into WSUS.
+
+<!--
+
+
 
 1. In the WSUS administrative console, select either the top server node or **Updates**, and in the **Actions** pane select **Import Updates**. A browser window will open at the Microsoft Update Catalog Web site.
 
@@ -30,8 +59,11 @@ Approved updates imported from the Microsoft Update Catalog Site are downloaded 
 
 You must access the Microsoft Update Catalog Site through the WSUS console to ensure that the updates are imported in a WSUS-compatible format. If you access the Microsoft Update Catalog website manually, any updates that you download aren't imported into the WSUS server, but instead are downloaded as individual `.MSU` files. WSUS doesn't currently have a supported mechanism for importing files in the `.MSU` format.
 
+-->
+
 > [!NOTE]
 > You can remove updates that are imported from the Microsoft Update Catalog that are set as either **Not Approved** or **Declined**, by running the WSUS Server cleanup Wizard. You can re-import updates that have been previously removed from your WSUS systems through the Microsoft Update Catalog.
+
 
 ## Restricting access to hotfixes
 
