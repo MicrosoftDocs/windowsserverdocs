@@ -305,8 +305,9 @@
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
       items:
       - name: Active Directory Forest Recovery Guide
-        href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide.md
         items:
+        - name: Introduction
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide.md
         - name: Prerequisites
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-prerequisites.md
         - name: Devise a custom forest recovery plan
@@ -321,8 +322,6 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery.md
         - name: Procedures
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
-        - name: Cleanup
-          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup.md
         - name: FAQ
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
         - name: Recover a single domain within a multidomain forest
@@ -331,6 +330,8 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-restore-additional-dcs.md
         - name: Virtualization
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-virtualization.md
+        - name: Cleanup
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup.md
       - name: Best Practices for Securing Active Directory
         href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
         items:
