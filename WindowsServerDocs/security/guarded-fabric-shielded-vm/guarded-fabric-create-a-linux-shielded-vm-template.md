@@ -118,7 +118,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     Specialization allows each VM to be set up securely with different users and SSH keys, networking configurations, and custom setup steps.
     Learn how to [obtain and install the VMM guest agent](/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
 
-14. Next, [add the Microsoft Linux Software Repository to your package manager](../../administration/linux-package-repository-for-microsoft-software.md).
+14. Next, [add the Microsoft Linux Software Repository to your package manager](/linux/packages).
 
 15. Using your package manager, install the lsvmtools package which contains the Linux shielded VM bootloader shim, provisioning components, and disk preparation tool.
 

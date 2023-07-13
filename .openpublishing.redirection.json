@@ -592,7 +592,7 @@
     },
     {
       "source_path": "WindowsServerDocs/compute/Linux-Package-Repository-for-Microsoft-Software.md",
-      "redirect_url": "/windows-server/administration/Linux-Package-Repository-for-Microsoft-Software",
+      "redirect_url": "/linux/packages",
       "redirect_document_id": true
     },
     {
