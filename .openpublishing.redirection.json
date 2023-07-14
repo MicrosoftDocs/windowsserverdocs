@@ -592,7 +592,7 @@
     },
     {
       "source_path": "WindowsServerDocs/compute/Linux-Package-Repository-for-Microsoft-Software.md",
-      "redirect_url": "/windows-server/administration/Linux-Package-Repository-for-Microsoft-Software",
+      "redirect_url": "/linux/packages",
       "redirect_document_id": true
     },
     {
@@ -11226,6 +11226,11 @@
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618327(v=ws.11)",
       "redirect_document_id": false
     
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/Linux-Package-Repository-for-Microsoft-Software.md",
+      "redirect_url": "/linux/packages",
+      "redirect_document_id": false
     }
 
   ]
