@@ -213,7 +213,7 @@ foreach ($uid in $updateList) {
 ### Script parameters
 
 **WsusServer**: &lt;string> </br>
-Specifies the name of a WSUS server. If not specified, the script connects to localhost. &lt; string> 
+Specifies the name of a WSUS server. If not specified, the script connects to localhost. 
 
 - **Required**: false
 - **Default value**: localhost
