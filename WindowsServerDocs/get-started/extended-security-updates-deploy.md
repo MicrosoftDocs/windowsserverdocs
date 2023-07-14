@@ -60,7 +60,7 @@ configured to receive updates.
 > [!NOTE]
 > Extended Security Updates are also free of charge in other Azure products such as Azure Dedicated
 > Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), and
-> require additional configuration. Contact
+> might require additional configuration. Contact
 > [Microsoft Support](https://support.microsoft.com/contactus?PID=17336) for more help.
 >
 > Azure Classic VMs (Microsoft.ClassicCompute) also require extra configuration to receive Extended
