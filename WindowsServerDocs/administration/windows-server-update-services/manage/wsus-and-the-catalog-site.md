@@ -44,6 +44,70 @@ Use the below instructions to import updates into WSUS:
 
 1. Open the Microsoft Update Catalog site, [https://www.catalog.update.microsoft.com](https://www.catalog.update.microsoft.com), in a browser window.
 1. Search for an update you want to import into WSUS.
+1. From the returned list, select the update you want to import into WSUS. The update details page will open.
+1. Use the **Copy** button to copy the update ID. The update ID is also the GUID located after the `?id=` in the URL of the update details page. For example, in the URL `https://www.catalog.update.microsoft.com/ScopedViewInline.aspx?updateid=12345678-90ab-cdef-1234-567890abcdef` the update ID is `12345678-90ab-cdef-1234-567890abcdef`.
+1. 
+
+Usage: C:\temp\ImportUpdateToWSUS.ps1 [-WsusServer] <String> [-PortNumber] <Int32> [-UseSsl] [-UpdateId] <String> [<CommonParameters>] 
+
+## PowerShell script to import updates into WSUS
+
+```powershell
+param(
+    [Parameter()][String]
+    # Specifies the name of a WSUS server, if not specified connects to localhost.
+    $WsusServer,
+
+    [Parameter()][Int32]
+    # Specifies the port number to use to communicate with the upstream WSUS server, default is 8530.
+    [ValidateSet("80","443","8530","8531")] 
+    $PortNumber = 8530,   
+    
+    [Parameter()][Switch]
+    # Specifies that the WSUS server should use Secure Sockets Layer (SSL) via HTTPS to communicate with an upstream server.
+    $UseSsl,
+    
+    [Parameter(Mandatory)][String]
+    [ValidateNotNullOrEmpty()]
+    # Specifies the update Id we should import to WSUS
+    $UpdateId
+)
+
+set-strictMode -version latest
+
+#Empty file list
+$FileList = @()
+
+#set server options 
+$serverOptions = "Get-WsusServer"
+if($psBoundParameters.containsKey('WsusServer')) { $serverOptions += " -Name $WsusServer -PortNumber $PortNumber" }
+if($UseSsl) { $serverOptions += " -UseSsl" }
+
+#Get WSUS Server and Import Update
+Try
+{
+    Write-Host "Attempting WSUS Connection"
+
+    #Attempt server connection
+    $server = invoke-expression $serverOptions
+
+    Write-Host "WSUS Connection Successful:" $server.Name
+    Write-Host "Attempting WSUS update import:" $UpdateId
+
+    #Call ImportUpdateFromCatalogSite on WSUS
+    $server.ImportUpdateFromCatalogSite($UpdateId,$FileList)
+
+    Write-Host "WSUS update import Successful"
+}
+Catch
+{
+    Write-Host $_
+}
+
+
+```
+
+### 
 
 <!--
 
