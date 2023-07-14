@@ -26,7 +26,7 @@ article covers information about hotpatch for supported VMs, which has the follo
 Hotpatch is supported on the following operating systems for VMs running on Azure and Azure Stack
 HCI:
 
-- Windows Server 2022 Datacenter: Azure Edition Server Core
+- Windows Server 2022 Datacenter: Azure Edition Core
 - Windows Server 2022 Datacenter: Azure Edition with Desktop Experience
 
 > [!NOTE]
@@ -37,7 +37,7 @@ and select one of the following images that you would like to use. Hotpatch is s
 when creating an Azure VM in the Azure portal.
 
 - Windows Server 2022 Datacenter: Azure Edition Hotpatch (Desktop Experience)
-- Windows Server 2022 Datacenter: Azure Edition (Server Core)<sup>1</sup>
+- Windows Server 2022 Datacenter: Azure Edition Core<sup>1</sup>
 
 <sup>1</sup> Hotpatch is enabled by default on Server Core images.
 
