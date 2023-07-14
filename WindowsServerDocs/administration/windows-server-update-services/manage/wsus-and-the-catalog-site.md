@@ -116,9 +116,10 @@ Writes logging information to standard output.
 .NOTES  
 # On error, try enabling TLS: https://learn.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client
 
-# Sample registry add from command line: reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUseStrongCrypto /T REG_DWORD /D 1
+# Sample registry add for the WSUS server from command line. Restarts the WSUSService and IIS after adding:
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUseStrongCrypto /T REG_DWORD /D 1
 
-## Sample registry add from PowerShell
+## Sample registry add for the WSUS server from PowerShell. Restarts WSUSService and IIS after adding:
 $registryPath = "HKLM:\Software\Microsoft\.NETFramework\v4.0.30319"
 $Name = "SchUseStrongCrypto"
 $value = "1" 
@@ -126,6 +127,7 @@ if (!(Test-Path $registryPath)) {
     New-Item -Path $registryPath -Force | Out-Null
 }
 New-ItemProperty -Path $registryPath -Name $name -Value $value -PropertyType DWORD -Force | Out-Null
+Restart-Service WsusService, w3svc
 
 # Update import logs/errors are under %ProgramFiles%\Update Services\LogFiles\SoftwareDistribution.log
 
