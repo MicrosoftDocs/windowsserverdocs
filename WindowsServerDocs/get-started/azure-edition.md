@@ -60,16 +60,11 @@ hotpatching. To learn more, see [Hotpatch for new virtual machines](hotpatch.md)
 
 #### Supported platforms
 
-> [!IMPORTANT]
-> Hotpatch is currently in PREVIEW for certain platforms in the following table. See the
-> [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)
-> for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet
-> released into general availability.
+Hotpatch is supported on the following operating systems for VMs running on Azure and Azure Stack
+HCI:
 
-| Operating system | Azure | Azure Stack HCI |
-|--|--|--|
-| Windows Server 2022 Datacenter: Azure Edition (Core) | Generally available (GA) | Generally available (GA) |
-| Windows Server 2022 Datacenter: Azure Edition (Desktop Experience) | Public preview | Public preview |
+- Windows Server 2022 Datacenter: Azure Edition Server Core
+- Windows Server 2022 Datacenter: Azure Edition with Desktop Experience
 
 > [!NOTE]
 > Hotpatch isn't supported on Windows Server containers base images.

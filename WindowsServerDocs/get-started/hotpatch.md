@@ -23,23 +23,27 @@ article covers information about hotpatch for supported VMs, which has the follo
 
 ## Supported platforms
 
-> [!IMPORTANT]
-> Hotpatch is currently in PREVIEW for certain platforms in the following table. See the
-> [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)
-> for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet
-> released into general availability.
+Hotpatch is supported on the following operating systems for VMs running on Azure and Azure Stack
+HCI:
 
-| Operating system | Azure | Azure Stack HCI |
-|--|--|--|
-| Windows Server 2022 Datacenter: Azure Edition Server Core | Generally available (GA) | Generally available (GA) |
-| Windows Server 2022 Datacenter: Azure Edition with Desktop Experience | Preview | Preview |
+- Windows Server 2022 Datacenter: Azure Edition Server Core
+- Windows Server 2022 Datacenter: Azure Edition with Desktop Experience
 
 > [!NOTE]
 > Hotpatch is not supported on Windows Server containers base images.
 
 To get started using Hotpatch, use your preferred method to create an Azure or Azure Stack HCI VM,
-and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use. Hotpatch
-is selected by default when creating an Azure VM in the Azure portal.
+and select one of the following images that you would like to use. Hotpatch is selected by default
+when creating an Azure VM in the Azure portal.
+
+- Windows Server 2022 Datacenter: Azure Edition Hotpatch (Desktop Experience)
+- Windows Server 2022 Datacenter: Azure Edition (Server Core)<sup>1</sup>
+
+<sup>1</sup> Hotpatch is enabled by default on Server Core images.
+
+For more information about the available images, see the
+[Windows Server 2022 Datacenter](https://aka.ms/hotpatchondesktopnewimage) Azure Marketplace
+product.
 
 ### Preview access
 
@@ -123,7 +127,7 @@ tools vary depending on your platform. To orchestration Hotpatch:
   - Virtual machine health, as determined through platform health signals, is monitored to detect
     patching failures.
 
-- **Azure Stack HCI:** Hotpatch updates for virtual machines create on Azure Stack HCI are
+- **Azure Stack HCI:** Hotpatch updates for virtual machines created on Azure Stack HCI are
   orchestrated using:
 
   - Group Policy to configure the Windows Update client settings.
