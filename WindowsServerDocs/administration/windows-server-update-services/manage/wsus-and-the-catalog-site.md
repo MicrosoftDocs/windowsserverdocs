@@ -24,7 +24,7 @@ The following prerequisites are required to import updates into WSUS with the Po
 
 ## The Microsoft Update Catalog site
 
-The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) lets you search on a variety of update fields and categories. These update fields include:
+The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) lets you search on various update fields and categories. These update fields include:
 - Update title
 - Description
 - Applicable products
@@ -35,7 +35,7 @@ When searching for hardware updates, or drivers, you can also search for the fol
 - Driver model
 - Manufacturer
 - Class
-- The 4-part hardware id, such as `PCI\VEN_14E4&DEV_1677&SUBSYS_01AD1028`.
+- The four-part hardware ID, such as `PCI\VEN_14E4&DEV_1677&SUBSYS_01AD1028`.
 
 You can narrow the scope of your search by adding additional search terms. To search a specific string, use double quotes.
 
@@ -49,7 +49,7 @@ Use the below instructions to import updates into WSUS:
 1. Copy the [PowerShell script to import updates into WSUS](#powershell-script-to-import-updates-into-wsus) from this article into a text editor and save it as `ImportUpdatesIntoWSUS.ps1`. Use a location you can easily access, such as `C:\temp`.
 1. Open the Microsoft Update Catalog site, [https://www.catalog.update.microsoft.com](https://www.catalog.update.microsoft.com), in a browser.
 1. Search for an update you want to import into WSUS.
-1. From the returned list, select the update you want to import into WSUS. The update details page will open.
+1. From the returned list, select the update you want to import into WSUS. The update details page opens.
 1. Use the **Copy** button on the update details page to copy the **UpdateID**.
    - The updateID is also the GUID located after the `?id=` in the URL of the update details page. For example, in the URL `https://www.catalog.update.microsoft.com/ScopedViewInline.aspx?updateid=12345678-90ab-cdef-1234-567890abcdef` the updateID is `12345678-90ab-cdef-1234-567890abcdef`.
 1. The script can be used to import a single update, or multiple updates.
@@ -71,7 +71,7 @@ Use the below instructions to import updates into WSUS:
     .\ImportUpdateToWSUS.ps1 -WsusServer WSUSServer.contoso.com -PortNumber 8531 -UseSsl -UpdateIdFilePath C:\temp\UpdateIDs.txt
     ```
 
-1. The update files for updates that are imported from the Microsoft Update Catalog Site are downloaded based on your **Update files** settings. They aren't downloaded at the time of import from the Microsoft Update Catalog Site. For instance, if you use the option to **Download update files to this serer only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
+1. The update files for updates that are imported from the Microsoft Update Catalog Site are downloaded based on your **Update files** settings. They aren't downloaded at the time of import from the Microsoft Update Catalog Site. For instance, if you use the option to **Download update files to this serer only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3 Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
 
 
 
@@ -152,42 +152,35 @@ foreach ($uid in $updateList) {
 
 ### Script parameters
 
-**WsusServer**: &lt; string> Specifies the name of a WSUS server. If not specified, the script connects to localhost.
-| | |
-|---|---|
-|Required|false|
-|Position|1|
-|Default value|localhost|
-|Accept pipeline input| false|
-|Accept wildcard characters|false|
-  
+**WsusServer**: &lt;string> </br>
+Specifies the name of a WSUS server. If not specified, the script connects to localhost. &lt; string> 
 
+- **Required**: false
+- **Default value**: localhost
 
-    - **PortNumber**: Specifies the port number to use to communicate with the upstream WSUS server. The default is 8530.
-    - **UseSsl**: Specifies that the WSUS server should use Secure Sockets Layer (SSL) via HTTPS to communicate with an upstream server.
-    - **UpdateId**: Specifies the update ID you want to import to WSUS. This parameter is required if you're importing a single update.
-    - **UpdateIdFilePath**: Specifies the path to a text file containing a list of update IDs on each line. This parameter is required if you're importing multiple updates.
-    - **Verbose**: Specifies that the script should display detailed information about the operation.
-    - **WhatIf**: Specifies that the script should simulate the operation. No changes are made to the WSUS server.
-    - **Confirm**: Specifies that the script should prompt you for confirmation before it runs.
-<!--
+**PortNumber**: &lt;Int32> </br>
+Specifies the port number to use to communicate with the upstream WSUS server. 
+- **Required**: false
+- **Default value**: 8530
+- **Allowed values**: 80, 443, 8530, 8531
 
+**UseSsl**: &lt;switch>  </br>
+Specifies if Secure Sockets Layer (SSL) via HTTPS should be used to communicate with the WSUS server. If this parameter name is present the parameter tests `$true` and the connection is made to the WSUS server using SSL, otherwise, `false`. When using the **USeSSL** parameter, set the **PortNumber** to either 443 or 8531.
 
+- **Required**: false
 
-1. In the WSUS administrative console, select either the top server node or **Updates**, and in the **Actions** pane select **Import Updates**. A browser window will open at the Microsoft Update Catalog Web site.
+**UpdateId**: &lt;string> </br>
+Specifies the update ID you want to import to WSUS. This parameter is required if you're importing a single update. **UpdateId** can't be used with **UpdateIdFilePath**.
 
-1. You can browse this site for Windows hotfixes and hardware drivers. When you have found the ones you want, add them to your basket.
+- **Required**: true, when importing a single updateID specified as a script parameter
 
-1. When you have finished browsing, go to the basket and select import to import your updates. To download the updates without importing them, clear the **Import directly into Windows Server Update Services** checkbox.
+**UpdateIdFilePath**: &lt;string> </br>
+Specifies the path to a text file containing a list of update IDs on each line. This parameter is required if you're importing multiple updates.
 
-Approved updates imported from the Microsoft Update Catalog Site are downloaded the next time the WSUS server synchronizes. They aren't downloaded at the time of import from the Microsoft Update Catalog Site.
+- **Required**: true, when using a text file to import multiple updates
 
-You must access the Microsoft Update Catalog Site through the WSUS console to ensure that the updates are imported in a WSUS-compatible format. If you access the Microsoft Update Catalog website manually, any updates that you download aren't imported into the WSUS server, but instead are downloaded as individual `.MSU` files. WSUS doesn't currently have a supported mechanism for importing files in the `.MSU` format.
-
--->
-
-
-
+**CommonParameters**: </br>
+Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see [About CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters)
 
 ## Restricting access to hotfixes
 
