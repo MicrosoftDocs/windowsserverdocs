@@ -6,7 +6,7 @@ ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 07/26/2023
+ms.date: 07/25/2023
 ---
 # WSUS and the Microsoft Update Catalog site
 
