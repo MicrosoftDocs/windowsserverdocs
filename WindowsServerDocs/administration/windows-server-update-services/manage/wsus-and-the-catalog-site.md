@@ -55,15 +55,20 @@ Use the below instructions to import updates into WSUS:
 1. The script can be used to import a single update, or multiple updates.
     - To import multiple updates into WSUS, paste the updateIDs for each update you want to import into a text file. List one update ID per line then save the text file when you're done. Use a location you can easily access, such as `C:\temp\UpdateIDs.txt`.
     - To import a single update, you only need to copy the single updateID.
-1. To import updates, open a PowerShell console as an administrator and run the script with the following syntax using any needed [parameters](#parameters):
+1. To import updates, open a PowerShell console as an administrator and run the script with the following syntax using any needed [parameters](#script-parameters):
 
    ```powershell
    C:\temp\ImportUpdateToWSUS.ps1 [-WsusServer] <String> [-PortNumber] <Int32> [-UseSsl] [-UpdateId] <String> [-UpdateIdFilePath] <string> [<CommonParameters>]
    ```
 
-    Example 1: While signed into a WSUS server that uses the default port, import a single update using the following command:
+    **Example 1**: While signed into a WSUS server that uses the default port, import a single update using the following syntax:
     ```powershell
-    PS C:\temp\ .\ImportUpdateToWSUS.ps1 -UpdateId 12345678-90ab-cdef-1234-567890abcdef
+    .\ImportUpdateToWSUS.ps1 -UpdateId 12345678-90ab-cdef-1234-567890abcdef
+    ```
+
+   Example 2: Using a remote computer, import multiple updates into a WSUS server using SSL with the following syntax:
+    ```powershell
+    .\ImportUpdateToWSUS.ps1 -WsusServer WSUSServer.contoso.com -PortNumber 8531 -UseSsl -UpdateIdFilePath C:\temp\UpdateIDs.txt
     ```
 
 1. The update files for updates that are imported from the Microsoft Update Catalog Site are downloaded based on your **Update files** settings. They aren't downloaded at the time of import from the Microsoft Update Catalog Site. For instance, if you use the option to **Download update files to this serer only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3. Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
@@ -145,10 +150,19 @@ foreach ($uid in $updateList) {
 
 ```
 
-### Parameters
+### Script parameters
 
-1. 
-    - **WsusServer**: Specifies the name of a WSUS server. If not specified, the script connects to localhost.
+**WsusServer**: &lt; string> Specifies the name of a WSUS server. If not specified, the script connects to localhost.
+| | |
+|---|---|
+|Required|false|
+|Position|1|
+|Default value|localhost|
+|Accept pipeline input| false|
+|Accept wildcard characters|false|
+  
+
+
     - **PortNumber**: Specifies the port number to use to communicate with the upstream WSUS server. The default is 8530.
     - **UseSsl**: Specifies that the WSUS server should use Secure Sockets Layer (SSL) via HTTPS to communicate with an upstream server.
     - **UpdateId**: Specifies the update ID you want to import to WSUS. This parameter is required if you're importing a single update.
@@ -172,8 +186,7 @@ You must access the Microsoft Update Catalog Site through the WSUS console to en
 
 -->
 
-> [!NOTE]
-> You can remove updates that are imported from the Microsoft Update Catalog that are set as either **Not Approved** or **Declined**, by running the WSUS Server cleanup Wizard. You can re-import updates that have been previously removed from your WSUS systems through the Microsoft Update Catalog.
+
 
 
 ## Restricting access to hotfixes
@@ -197,6 +210,9 @@ WSUS administrators might consider restricting access to the hotfixes they've do
 1. Set the permissions of these files so that only machine accounts of those machines can read them. You'll also need to allow the Network Service account full access to the files.
 
 1. Approve the hotfix for the WSUS target group created in Step 2.
+
+> [!NOTE]
+> You can remove updates that are imported from the Microsoft Update Catalog that are set as either **Not Approved** or **Declined**, by running the WSUS Server cleanup Wizard. You can re-import updates that have been previously removed from your WSUS systems through the Microsoft Update Catalog.
 
 ## Importing updates in different languages
 
