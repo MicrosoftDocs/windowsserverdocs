@@ -1,7 +1,7 @@
 ---
 title: Understanding and using Hyper-V hypervisor scheduler types
 description: Learn about new modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
-ms.author: benarm
+ms.author: wscontent
 author: BenjaminArmstrong
 ms.date: 06/12/2023
 ms.topic: article
@@ -10,7 +10,7 @@ ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 
 # Manage Hyper-V hypervisor scheduler types
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server (version 1803), Windows Server (version 1709), Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server version 1803, Windows Server version 1709, Windows 10
 
 This article describes new modes of virtual processor scheduling logic introduced in Windows Server 2016. These modes, or scheduler types, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can:
 
@@ -85,20 +85,12 @@ The core scheduler:
 - Optionally exposes SMT pairs to guest VMs.
 - Schedules groups of guest virtual processors from the same VM onto groups of SMT logical processors.
 
-This work happens symmetrically. If LPs are in groups of two, VPs are scheduled in groups of two, and a core is never shared between VMs.
-
-When you schedule the VP for a VM without SMT enabled, that VP consumes the entire core when it runs.
-
-The overall result of the core scheduler is that:
+This work happens symmetrically. If LPs are in groups of two, VPs are scheduled in groups of two, and a core is never shared between VMs. When you schedule the VP for a VM without SMT enabled, that VP consumes the entire core when it runs. The overall result of the core scheduler is that:
 
 - Guest VPs are constrained to run on underlying physical core pairs, isolating a VM to processor core boundaries, and reducing vulnerability to side-channel snooping attacks from malicious VMs.
-
 - Variability in throughput is reduced.
-
 - Performance is potentially reduced. If only one in a group of VPs can run, only one of the instruction streams in the core launches while the other is left idle.
-
 - The OS and applications running in the guest VM can use SMT behavior and programming interfaces (APIs) to control and distribute work across SMT threads, just as they would when not virtual.
-
 - A strong security boundary exists for guest workload isolation. Guest VPs are constrained to run on underlying physical core pairs, reducing vulnerability to side-channel snooping attacks.
 
 The core scheduler is used by default starting in Windows Server 2019. On Windows Server 2016, the core scheduler is optional. The Hyper-V host administrator must explicitly enable it. The classic scheduler is the default.
@@ -195,11 +187,8 @@ You can determine the current hypervisor scheduler type in use by examining the 
 Hypervisor launch event ID 2 denotes the hypervisor scheduler type, where:
 
 - 1 = Classic scheduler, SMT disabled
-
 - 2 = Classic scheduler
-
 - 3 = Core scheduler
-
 - 4 = Root scheduler
 
 ![Screenshot showing hypervisor launch event ID 2 details.](media/Hyper-V-CoreScheduler-EventID2-Details.png)
