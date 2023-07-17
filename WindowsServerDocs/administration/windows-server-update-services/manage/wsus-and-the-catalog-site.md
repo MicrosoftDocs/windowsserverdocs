@@ -1,6 +1,6 @@
 ---
-title: WSUS and the Catalog Site
-description: Windows Server Update Service (WSUS) article - How to import hotfixes into WSUS by accessing the Microsoft Update catalog site
+title: WSUS and the Catalog site
+description: Windows Server Update Service (WSUS) article - How to import updates into WSUS using PowerShell and the Microsoft Update catalog site
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: jgerend
@@ -12,7 +12,7 @@ ms.date: 07/25/2023
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script.
+The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update, or multiple updates, from the catalog site into WSUS. This article provides information about the update catalog, the import script, and how to use the script.
 
 ## Prerequisites for importing updates into WSUS
 
@@ -232,12 +232,12 @@ Specifies if Secure Sockets Layer (SSL) via HTTPS should be used to communicate 
 - **Required**: false
 
 **UpdateId**: &lt;string> </br>
-Specifies the update ID you want to import to WSUS. This parameter is required if you're importing a single update. **UpdateId** can't be used with **UpdateIdFilePath**.
+Specifies the update ID you want to import to WSUS. This parameter is required if you're importing a single update. **UpdateId** can't be used with **UpdateIdFilePath**. 
 
 - **Required**: true, when importing a single updateID specified as a script parameter
 
 **UpdateIdFilePath**: &lt;string> </br>
-Specifies the path to a text file containing a list of update IDs on each line. This parameter is required if you're importing multiple updates.
+Specifies the path to a text file containing a list of update IDs on each line. This parameter is required if you're importing multiple updates. **UpdateIdFilePath** can't be used with **UpdateId**.
 
 - **Required**: true, when using a text file to import multiple updates
 
