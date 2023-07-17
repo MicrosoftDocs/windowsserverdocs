@@ -21,19 +21,19 @@ understand what ESUs are, how long they're available for, and what your options 
 How you get ESUs depends on where your server is hosted. You can get access to
 ESUs through the following options.
 
-1. **Azure virtual machines** - Applicable virtual machines (VMs) hosted in Azure are automatically
+- **Azure virtual machines** - Applicable virtual machines (VMs) hosted in Azure are automatically
    enabled for ESUs and these updates are provided free of charge, there's no
    need to deploy a MAK key or take any other action. See
    [Extended Security Updates on Azure](#extended-security-updates-on-azure) to learn more.
 
-1. **Azure Arc-enabled servers** - If your servers are on-premises or in a hosted environment, you
+- **Azure Arc-enabled servers** - If your servers are on-premises or in a hosted environment, you
    can enroll your Windows Server 2012 and 2012 R2 or SQL Server 2012 machines for Extended Security
    Updates via the Azure portal, connect through Azure Arc, and you'll be billed monthly via your
    Azure subscription. See
    [Extended Security Updates enabled by Azure Arc](#extended-security-updates-enabled-by-azure-arc)
    to learn more. <sup>1</sup>
 
-1. **Non-Azure physical and virtual machines** - If you can't connect using Azure Arc, use Extended
+- **Non-Azure physical and virtual machines** - If you can't connect using Azure Arc, use Extended
    Security Updates on non-Azure VMs, by using a Multiple Activation Key (MAK) and applying it to
    the relevant servers. This MAK key lets the Windows Update servers know that you can continue to
    receive security updates. See
