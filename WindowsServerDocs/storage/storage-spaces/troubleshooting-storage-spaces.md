@@ -31,9 +31,9 @@ The nodes of a Storage Spaces Direct system restart unexpectedly because of a cr
 |FriendlyName|ResiliencySettingName| OperationalStatus| HealthStatus| IsManualAttach|Size| PSComputerName|
 |------------|---------------------| -----------------| ------------| --------------|-----| --------------|
 |Disk4| Mirror| OK|  Healthy| True|  10 TB|  Node-01.conto...|
-|Disk3         |Mirror                 |OK                          |Healthy       |True            |10 TB | Node-01.conto...|
-|Disk2         |Mirror                 |No Redundancy               |Unhealthy     |True            |10 TB | Node-01.conto...|
-|Disk1         |Mirror                 |{No Redundancy, InService}  |Unhealthy     |True            |10 TB | Node-01.conto...|
+|Disk3         |Mirror                 |OK                          |Healthy       |True            |10 TB | Node-01.contoso.|
+|Disk2         |Mirror                 |No Redundancy               |Unhealthy     |True            |10 TB | Node-01.contoso.|
+|Disk1         |Mirror                 |{No Redundancy, InService}  |Unhealthy     |True            |10 TB | Node-01.contoso.|
 
 Also, after an attempt to bring the virtual disk online, the following information is logged in the Cluster log, the `DiskRecoveryAction`.
 
@@ -98,10 +98,10 @@ This example shows the output from the `Get-VirtualDisk` cmdlet.
 
 |FriendlyName|  ResiliencySettingName|  OperationalStatus|   HealthStatus|  IsManualAttach|  Size|   PSComputerName|
 |-|-|-|-|-|-|-|
-|Disk4|         Mirror|                 OK|                  Healthy|       True|            10 TB|  Node-01.conto...|
-|Disk3|         Mirror|                 OK|                  Healthy|       True|            10 TB|  Node-01.conto...|
-|Disk2|         Mirror|                 Detached|            Unknown|       True|            10 TB|  Node-01.conto...|
-|Disk1|         Mirror|                 Detached|            Unknown|       True|            10 TB|  Node-01.conto...|
+|Disk4|         Mirror|                 OK|                  Healthy|       True|            10 TB|  Node-01.contoso.|
+|Disk3|         Mirror|                 OK|                  Healthy|       True|            10 TB|  Node-01.contoso.|
+|Disk2|         Mirror|                 Detached|            Unknown|       True|            10 TB|  Node-01.contoso.|
+|Disk1|         Mirror|                 Detached|            Unknown|       True|            10 TB|  Node-01.contoso.|
 
 Also, the following events might be logged on the nodes:
 
@@ -326,26 +326,26 @@ If you see slow IO performance, check if cache is enabled in your Storage Spaces
 
 There are two ways to check:
 
-1. Use the cluster log. Open the cluster log with a text editor of your choice and search for "[=== SBL Disks ===]." You see a list of the disk on the node the log was generated on.
+1. Use the cluster log. Open the cluster log with a text editor of your choice and search for "[=== SBL Disks ===]". You see a list of the disk on the node the log was generated on.
 
      Cache Enabled Disks Example: Notice that the state is `CacheDiskStateInitializedAndBound` and there's a GUID present here.
 
    ```
    [=== SBL Disks ===]
-    {26e2e40f-a243-1196-49e3-8522f987df76},3,false,true,1,48,{1ff348f1-d10d-7a1a-d781-4734f4440481},CacheDiskStateInitializedAndBound,1,8087,54,false,false,HGST    ,HUH721010AL4200 ,        7PG3N2ER,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
+    {26e2e40f-a243-1196-49e3-8522f987df76},3,false,true,1,48,{1ff348f1-d10d-7a1a-d781-4734f4440481},CacheDiskStateInitializedAndBound,1,8087,54,false,false,HGST,HUH721010AL4200,7PG3N2ER,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
     Cache Not Enabled: Here you can see that there's no GUID present and the state is `CacheDiskStateNonHybrid`.
 
    ```
    [=== SBL Disks ===]
-    {426f7f04-e975-fc9d-28fd-72a32f811b7d},12,false,true,1,24,{00000000-0000-0000-0000-000000000000},CacheDiskStateNonHybrid,0,0,0,false,false,HGST    ,HUH721010AL4200 ,        7PGXXG6C,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
+    {426f7f04-e975-fc9d-28fd-72a32f811b7d},12,false,true,1,24,{00000000-0000-0000-0000-000000000000},CacheDiskStateNonHybrid,0,0,0,false,false,HGST,HUH721010AL4200,7PGXXG6C,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
     Cache Not Enabled: When all disks are of the same type, case isn't enabled by default. Here you can see there's no GUID present and the state is `CacheDiskStateIneligibleDataPartition`.
 
     ```
-    {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe    ,INTEL SSDPE7KX02,  PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
+    {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe,INTEL SSDPE7KX02,PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
 1. Use Get-PhysicalDisk.xml from the SDDCDiagnosticInfo.
@@ -383,23 +383,23 @@ Now, if you run **Get-PhysicalDisk** on any of the nodes, you see all the disks 
 
 |Number| Friendly Name| Serial Number|HealthStatus|OperationalStatus|Total Size| Partition Style|
 |-|-|-|-|-|-|-|
-|0|Msft Virtu... ||Healthy | Online| 127 GB| GPT|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-|1|Msft Virtu...||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-|2|Msft Virtu...||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-|4|Msft Virtu...||Healthy| Offline| 100 GB| RAW|
-|3|Msft Virtu...||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
-||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
+|0|Msft Virtual ||Healthy | Online| 127 GB| GPT|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+|1|Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+|2|Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+|4|Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+|3|Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
+||Msft Virtual ||Healthy| Offline| 100 GB| RAW|
 
 ## Error message about "unsupported media type" when you create a Storage Spaces Direct cluster by using Enable-ClusterS2D
 
@@ -421,7 +421,7 @@ The issue is with the HPE SAS expander card that lies between the disks and the 
 
 You might see an issue where an Intel SSD DC P4600 series device seems to be reporting similar 16-byte NGUID for multiple namespaces such as 0100000001000000E4D25C000014E214 or 0100000001000000E4D25C0000EEE214 in this example.
 
-|               uniqueid               | deviceid | MediaType | BusType |               serialnumber               |      size      | canpool | friendlyname | OperationalStatus |
+|               UniqueId               | DeviceId | MediaType | BusType |               SerialNumber               |      Size      | CanPool | FriendlyName | OperationalStatus |
 |--------------------------------------|----------|-----------|---------|------------------------------------------|----------------|---------|--------------|-------------------|
 |           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  False  |     HGST     |  HUH721010AL4200  |
 | eui.0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  True   |    INTEL     |   SSDPE2KE016T7   |
@@ -433,7 +433,7 @@ To fix this issue, update the firmware on the Intel drives to the latest version
 
 The [May 2018 release of the Intel SSD Data Center Tool](https://downloadmirror.intel.com/27778/eng/Intel_SSD_Data_Center_Tool_3_0_12_Release_Notes_330715-026.pdf) includes a firmware update, QDV101B1, for the Intel SSD DC P4600 series.
 
-## HealthStatus for the physical disk and operational status
+## HealthStatus for the physical disk and OperationalStatus
 
 In a Windows Server 2016 Storage Spaces Direct cluster, you might see the HealthStatus for one or more physical disks as _Healthy_, while the OperationalStatus is _Removing from Pool, OK_.
 
@@ -441,7 +441,7 @@ The Removing from Pool status is an intent set when `Remove-PhysicalDisk` is cal
 
 - Remove the physical disk from the pool, and then add it back.
 - Import-Module Clear-PhysicalDiskHealthData.ps1.
-- Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. This script is available for download as a .txt file. You must save it as a .ps1 file before you can run it.
+- Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. This script is available for download as a .txt file. You must save it as a **ps1** file before you can run it.
 
 Here are some examples showing how to run the script:
 
