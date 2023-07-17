@@ -37,7 +37,7 @@ You can use the SSL Cipher Suite Order Group Policy settings to configure the de
    > [!WARNING]
    > The TLS cipher suite order list must be in strict comma delimited format. Each cipher suite string will end with a comma (,) to the right side of it.
    >
-   > An empty list will prevent any TLS cipher suites from being leveraged.
+   > An empty list or malformed input will prevent any TLS cipher suites from being leveraged.
    >
    > Additionally, the list of cipher suites is limited to 1,023 characters.
 
