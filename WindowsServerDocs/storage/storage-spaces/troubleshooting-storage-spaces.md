@@ -1,7 +1,7 @@
 ---
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment by confirming the make and model of your SSD, inspecting for faulty drives, and more.
-ms.author: kaushika
+ms.author: wscontent
 ms.topic: article
 author: kaushika-msft
 ms.date: 06/06/2023
@@ -9,7 +9,7 @@ ms.date: 06/06/2023
 
 # Troubleshoot Storage Spaces Direct
 
->Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the information in this article to troubleshoot your Storage Spaces Direct deployment.
 
@@ -39,8 +39,8 @@ Also, after an attempt to bring the virtual disk online, the following informati
 
 ```
 [Verbose] 00002904.00001040::YYYY/MM/DD-12:03:44.891 INFO [RES] Physical Disk <DiskName>: OnlineThread: SuGetSpace returned 0.
-[Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 WARN [RES] Physical Disk < DiskName>: Underlying virtual disk is in 'no redundancy' state; its volume(s) might fail to mount.
-[Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 ERR [RES] Physical Disk <DiskName>: Failing online due to virtual disk in 'no redundancy' state. If you would like to attempt to online the disk anyway, first set this resource's private property 'DiskRecoveryAction' to 1. We will try to bring the disk online for recovery, but even if successful, its volume(s) or CSV might be unavailable.
+[Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 WARN [RES] Physical Disk < DiskName>: Underlying virtual disk is in 'no redundancy' state; its volume(s) may fail to mount.
+[Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 ERR [RES] Physical Disk <DiskName>: Failing online due to virtual disk in 'no redundancy' state. If you would like to attempt to online the disk anyway, first set this resource's private property 'DiskRecoveryAction' to 1. We will try to bring the disk online for recovery, but even if successful, its volume(s) or CSV may be unavailable.
 ```
 
 The _No Redundancy Operational Status_ occurs if a disk failed or if the system is unable to access data on the virtual disk. This issue can happen if a reboot occurs on a node during maintenance on the nodes.
@@ -50,7 +50,7 @@ To fix this issue, follow these steps:
 1. Remove the affected virtual disks from CSV. Doing so puts them in the available storage group in the cluster and starts showing as a ResourceType of `Physical Disk`.
 
    ```powershell
-   Remove-ClusterSharedVolume -name "CSV Name"
+   Remove-ClusterSharedVolume -Name "CSV Name"
    ```
 
 1. On the node that owns the Available Storage group, run the following command on every disk that's in a no redundancy state. To identify which node the Available Storage group is on, you can run this command:
@@ -85,10 +85,10 @@ To fix this issue, follow these steps:
 1. Add the affected virtual disks back to CSV.
 
    ```powershell
-   Add-ClusterSharedVolume -name "Physical Disk Resource Name"
+   Add-ClusterSharedVolume -Name "Physical Disk Resource Name"
    ```
 
-`DiskRecoveryAction` is an override switch that lets you attach the Space volume in read-write mode without any checks. The property lets you diagnose why a volume isn't coming online. It's similar to maintenance mode but you can invoke it on a resource in a failed state. It also lets you access the data so you can copy it. This access is helpful in no-redundancy situations. The `DiskRecoveryAction` property was added in the February 22, 2018, update, KB 4077525.
+`DiskRecoveryAction` is an override switch that lets you attach the Space volume in read-write mode without any checks. The property lets you diagnose why a volume isn't coming online. It's similar to maintenance mode but you can invoke it on a resource in a failed state. It also lets you access the data so you can copy it. This access is helpful in no-redundancy situations. The `DiskRecoveryAction` property was added in the February 22, 2018 in update KB 4077525.
 
 ## Detached status in a cluster
 
@@ -154,7 +154,7 @@ To fix this issue, follow these steps:
 1. Remove the affected virtual disks from CSV.
 
    ```powershell
-   Remove-ClusterSharedVolume -name "CSV Name"
+   Remove-ClusterSharedVolume -Name "CSV Name"
    ```
 
 1. Run these commands on every disk that's not coming online.
@@ -197,7 +197,7 @@ To fix this issue, follow these steps:
 1. Add the affected virtual disks back to CSV.
 
    ```powershell
-   Add-ClusterSharedVolume -name "Physical Disk Resource Name"
+   Add-ClusterSharedVolume -Name "Physical Disk Resource Name"
    ```
 
    Use `DiskRunChkdsk value 7` to attach the Space volume and set the partition to read-only mode. This action enables Spaces to self-discover and self-heal by triggering a repair. Repair runs automatically once mounted. It also lets you access the data to copy it. For some fault conditions, such as a full DRT log, you need to run the Data Integrity Scan for Crash Recovery scheduled task.
@@ -213,7 +213,7 @@ For more information, see [Troubleshoot Storage Spaces Direct health and operati
 
 You might get event 5120 with STATUS_IO_TIMEOUT c00000b5 after you restart a node on Windows Server 2016 with cumulative update that was released from [May 8, 2018 KB 4103723](https://support.microsoft.com/help/4103723) to [October 9, 2018 KB 4462917](https://support.microsoft.com/help/4462917) installed.
 
-When you restart the node, Event 5120 is logged in the System event log and includes one of these error codes:
+When you restart the node, Event 5120 is logged in the System Event log and includes one of these error codes:
 
 ```
 Event Source: Microsoft-Windows-FailoverClustering
@@ -248,7 +248,7 @@ A change introduced in May 8, 2018 to Windows Server 2016 was a cumulative updat
 1. Put the disks on that node in storage maintenance mode by running this cmdlet:
 
    ```powershell
-   Get-StorageFaultDomain -type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Enable-StorageMaintenanceMode
+   Get-StorageFaultDomain -Type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Enable-StorageMaintenanceMode
    ```
 
 1. Run the `Get-PhysicalDisk` cmdlet, and make sure that the `OperationalStatus` value is `In Maintenance` mode.
@@ -256,7 +256,7 @@ A change introduced in May 8, 2018 to Windows Server 2016 was a cumulative updat
 1. After node restarts, remove the disks on that node from storage maintenance mode by running this cmdlet:
 
    ```powershell
-   Get-StorageFaultDomain -type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Disable-StorageMaintenanceMode
+   Get-StorageFaultDomain -Type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Disable-StorageMaintenanceMode
    ```
 
 1. Resume the node by running this cmdlet:
@@ -280,7 +280,7 @@ To mitigate the effects of live dump generation on systems with a great amount o
 - [Disable cluster generation](#disable-cluster-generation)
 
 > [!CAUTION]
->This procedure can prevent the collection of diagnostic information that Microsoft Support might need to investigate this problem. A Support agent might ask you to re-enable live dump generation based on specific troubleshooting scenarios.
+> This procedure can prevent the collection of diagnostic information that Microsoft Support might need to investigate this problem. A Support agent might ask you to re-enable live dump generation based on specific troubleshooting scenarios.
 
 #### Disable all dumps
 
@@ -293,16 +293,17 @@ To completely disable all dumps, including live dumps system-wide, follow these 
 > [!NOTE]
 > You must restart the computer for the nregistry change to take effect.
 
-After this registry key is set, live dump creation will fail and generate a "STATUS_NOT_SUPPORTED" error.
+After this registry key is set, live dump creation will fail and generate a **STATUS_NOT_SUPPORTED** error.
 
 #### Allow only one LiveDump
 
 By default, Windows Error Reporting allows only one LiveDump per report type per seven days and only one LiveDump per machine per five days. You can change that by setting the following registry keys to only allow one LiveDump on the machine forever.
 
-```
+```cmd
 reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelReports" /v SystemThrottleThreshold /t REG_DWORD /d 0xFFFFFFFF /f
 ```
-```
+
+```cmd
 reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelReports" /v ComponentThrottleThreshold /t REG_DWORD /d 0xFFFFFFFF /f
 ```
 
@@ -314,8 +315,9 @@ reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelR
 To disable cluster generation of live dumps (such as when an Event 5120 is logged), run this cmdlet:
 
 ```powershell
-(Get-Cluster).DumpPolicy = ((Get-Cluster).DumpPolicy -band 0xFFFFFFFFFFFFFFFE)
+(Get-Cluster).DumpPolicy = ((Get-Cluster).DumpPolicy -Band 0xFFFFFFFFFFFFFFFE)
 ```
+
 This cmdlet has an immediate effect on all cluster nodes without a computer restart.
 
 ## Slow IO performance
@@ -334,12 +336,14 @@ There are two ways to check:
     ```
 
     Cache Not Enabled: Here you can see that there's no GUID present and the state is `CacheDiskStateNonHybrid`.
-    ```
+
+   ```
    [=== SBL Disks ===]
     {426f7f04-e975-fc9d-28fd-72a32f811b7d},12,false,true,1,24,{00000000-0000-0000-0000-000000000000},CacheDiskStateNonHybrid,0,0,0,false,false,HGST    ,HUH721010AL4200 ,        7PGXXG6C,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
     Cache Not Enabled: When all disks are of the same type, case isn't enabled by default. Here you can see there's no GUID present and the state is `CacheDiskStateIneligibleDataPartition`.
+
     ```
     {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe    ,INTEL SSDPE7KX02,  PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
@@ -348,11 +352,12 @@ There are two ways to check:
     1. Open the XML file by using "$d = Import-Clixml GetPhysicalDisk.XML".
     1. Run `ipmo storage`.
     1. Run `$d`. Notice that Usage is Auto-Select, not Journal.
-   You see output like this:
+   
+   You should see an output similar to this:
 
    |FriendlyName|  SerialNumber| MediaType| CanPool| OperationalStatus| HealthStatus| Usage| Size|
    |-----------|------------|---------| -------| -----------------| ------------| -----| ----|
-   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| False|   OK|                Healthy|      Auto-Select 1.82 TB|
+   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| False|   OK|                Healthy|      Auto-Select| 1.82 TB|
    |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  False|    OK|                Healthy| Auto-Select| 1.82 TB|
    |NVMe INTEL SSDPE7KX02| PHLF7504005F2P0LGN| SSD|  False|  OK|                Healthy| Auto-Select| 1.82 TB|
    |NVMe INTEL SSDPE7KX02 |PHLF7504002A2P0LGN| SSD| False| OK|    Healthy| Auto-Select| 1.82 TB|
@@ -369,6 +374,7 @@ There are two ways to check:
 In a Storage Spaces Direct cluster, disable Storage Spaces Direct and use the clean-up process described in [Clean drives](deploy-storage-spaces-direct.md#step-31-clean-drives). The clustered storage pool still remains in an Offline state, and the Health Service is removed from cluster.
 
 The next step is to remove the phantom storage pool:
+   
    ```powershell
    Get-ClusterResource -Name "Cluster Pool 1" | Remove-ClusterResource
    ```
@@ -376,7 +382,7 @@ The next step is to remove the phantom storage pool:
 Now, if you run **Get-PhysicalDisk** on any of the nodes, you see all the disks that were in the pool. For example, in a lab with a 4-Node cluster with 4 SAS disks, 100 GB each presented to each node. In that case, after Storage Space Direct is disabled, which removes the SBL (Storage Bus Layer) but leaves the filter, if you run **Get-PhysicalDisk**, it should report 4 disks excluding the local OS disk. Instead it reported 16. This behavior is the same for all nodes in the cluster. When you run a **Get-Disk** command, you see the locally attached disks numbered as 0, 1, 2, and so on, as seen in this sample output:
 
 |Number| Friendly Name| Serial Number|HealthStatus|OperationalStatus|Total Size| Partition Style|
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
 |0|Msft Virtu... ||Healthy | Online| 127 GB| GPT|
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
 ||Msft Virtu... ||Healthy| Offline| 100 GB| RAW|
@@ -399,7 +405,7 @@ Now, if you run **Get-PhysicalDisk** on any of the nodes, you see all the disks 
 
 You might see similar errors when you run the **Enable-ClusterS2D** cmdlet:
 
-![Scenario 6 error message](media/troubleshooting/scenario-error-message.png)
+![A screenshot of errors when running the Enable-ClusterS2D cmdlet when unsupported media is present.](media/troubleshooting/scenario-error-message.png)
 
 To fix this issue, ensure the HBA adapter is configured in HBA mode. No HBA should be configured in RAID mode.
 
@@ -439,13 +445,13 @@ The Removing from Pool status is an intent set when `Remove-PhysicalDisk` is cal
 
 Here are some examples showing how to run the script:
 
-- Use the `SerialNumber` parameter to specify the disk you need to set to Healthy. You can get the serial number from `WMI MSFT_PhysicalDisk` or `Get-PhysicalDIsk`. This example uses zeros to stand for the serial number.
+- Use the `SerialNumber` parameter to specify the disk you need to set to Healthy. You can get the serial number from `WMI MSFT_PhysicalDisk` or `Get-PhysicalDisk`. This example uses zeros to stand for the serial number.
 
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -SerialNumber 000000000000000 -Verbose -Force
     ```
 
-- Use the `UniqueId` parameter to specify the disk, again from `WMI MSFT_PhysicalDisk` or `Get-PhysicalDIsk`.
+- Use the `UniqueId` parameter to specify the disk, again from `WMI MSFT_PhysicalDisk` or `Get-PhysicalDisk`.
 
    ```powershell
    Clear-PhysicalDiskHealthData -Intent -Policy -UniqueId 00000000000000000 -Verbose -Force
@@ -464,16 +470,16 @@ If you want to test Storage Spaces Direct performance, we recommend you use VMFl
 It's safe to ignore these events:
 
 ```
-Event ID 205: Windows lost communication with physical disk {XXXXXXXXXXXXXXXXXXXX }. This can occur if a cable failed or was disconnected, or if the disk itself failed.
+Event ID 205: Windows lost communication with physical disk {XXXXXXXXXXXXXXXXXXXX}. This can occur if a cable failed or was disconnected, or if the disk itself failed.
 
-Event ID 203: Windows lost communication with physical disk {xxxxxxxxxxxxxxxxxxxxxxxx }. This can occur if a cable failed or was disconnected, or if the disk itself failed.
+Event ID 203: Windows lost communication with physical disk {XXXXXXXXXXXXXXXXXXXX}. This can occur if a cable failed or was disconnected, or if the disk itself failed.
 ```
 
-If you're running Azure VMs, you can ignore this event: `Event ID 32: The driver detected that the device \Device\Harddisk5\DR5 has its write cache enabled. Data corruption might occur.`
+If you're running Azure VMs, you can ignore this event: **Event ID 32: The driver detected that the device \Device\Harddisk5\DR5 has its write cache enabled. Data corruption might occur**.
 
-## Slow performance or "Lost Communication," "IO Error," "Detached," or "No Redundancy" errors for deployments that use Intel P3x00 NVMe devices
+## Slow performance or "Lost Communication", "IO Error", "Detached" or "No Redundancy" errors for deployments that use Intel P3x00 NVMe devices
 
-We've identified a critical issue that affects some Storage Spaces Direct users who use hardware based on the Intel P3x00 family of NVM Express (NVMe) devices with firmware versions before "Maintenance Release 8."
+We've identified a critical issue that affects some Storage Spaces Direct users who use hardware based on the Intel P3x00 family of NVM Express (NVMe) devices with firmware versions before "Maintenance Release 8".
 
 > [!NOTE]
 > Individual OEMs might have devices that are based on the Intel P3x00 family of NVMe devices with unique firmware version strings. Contact your OEM for more information of the latest firmware version.
