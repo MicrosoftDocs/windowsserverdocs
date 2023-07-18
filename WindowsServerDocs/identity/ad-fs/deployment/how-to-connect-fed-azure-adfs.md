@@ -60,7 +60,7 @@ As outlined previously, you can either create two subnets in a single virtual ne
     | Virtual network name | Enter a name for your virtual network. |
     | Region | Choose a region. |
 
-    1. Select **Next**
+1. Select **Next**.
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vnet.png" alt-text="Screenshot showing the basics tab for the Create virtual network page.":::
 1. In the **Security** tab, enable any security service you might want and select **Next**.
 1. On the **IP addresses** tab, a default subnet is already created and ready for VMs to be added. For this example, select **default** to edit the subnet.
