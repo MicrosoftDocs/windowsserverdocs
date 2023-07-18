@@ -108,7 +108,7 @@ stretch an on-premises subnet into Azure to let on-premises virtual machines kee
 on-premises private IP addresses when migrating to Azure. To learn more, see  
 [Azure Extended Network](/windows-server/manage/windows-admin-center/azure/azure-extended-network).
 
-## Getting started with Windows Server Datacenter: Azure Edition
+## Get started with Windows Server Datacenter: Azure Edition
 
 To get started using Azure Edition, use your preferred method to create an Azure or Azure Stack HCI
 VM, and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use.  

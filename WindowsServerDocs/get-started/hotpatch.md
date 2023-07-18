@@ -73,7 +73,7 @@ implications of the patch itself.
 The following image is an example of an annual three-month schedule (including example unplanned
 baselines due to zero-day fixes).
 
-:::image type="content" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="Hotpatch Sample Schedule.":::
+:::image type="content" source="media\hotpatch\hotpatch-sample-schedule.png" alt-text="A diagram showing a Hotpatch sample schedule.":::
 
 There are two types of baselines: **Planned baselines** and **Unplanned baselines**.
 
@@ -136,9 +136,9 @@ tools vary depending on your platform. To orchestration Hotpatch:
 
   - A third-party patch management solution.
 
-### Understanding the patch status for your VM in Azure
+### Understand the patch status for your VM in Azure
 
-To view the patch status for your VM, browse to the VM Overview in the Azure Portal, under
+To view the patch status for your VM, browse to the VM Overview in the Azure portal, under
 Operations, select **Updates**. Under the **Recommended updates** section, you can view the latest
 patches and Hotpatch status for your VM.
 
@@ -147,11 +147,11 @@ patches for your VM that haven't been installed. As described in the ‘Patch in
 section, all security and critical updates are automatically installed on your VM using
 [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) and no extra
 actions are required. Patches with other update classifications aren't automatically installed.
-Instead, they're viewable in the list of available patches under the ‘Update compliance’ tab. You
-can also view the history of update deployments on your VM through the ‘Update history’. Update
+Instead, they're viewable in the list of available patches under the **Update compliance** tab. You
+can also view the history of update deployments on your VM through the **Update history**. Update
 history from the past 30 days is displayed, along with patch installation details.
 
-:::image type="content" source="media\hotpatch\hotpatch-management-ui.png" alt-text="Hotpatch Management.":::
+:::image type="content" source="media\hotpatch\hotpatch-management-ui.png" alt-text="A screenshot showing Hotpatch management from the Azure portal.":::
 
 With automatic VM guest patching, your VM is periodically and automatically assessed for available
 updates. These periodic assessments ensure that available patches are detected. You can view the
