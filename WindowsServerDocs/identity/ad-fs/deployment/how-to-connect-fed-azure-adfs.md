@@ -399,17 +399,13 @@ After you select **Create** and the public ILB deploys, you can see it in the li
 
 :::image type="content" source="./media/how-to-connect-fed-azure-adfs/list-of-load-balancers-public.png" alt-text="Screenshot showing how to save an inbound rule.":::
 
- <!-- #### Assign a DNS label to the public IP
+#### Assign a DNS label to the public IP
 
-Select the newly created load balancer entry in **Load balancers** to open the configuration page. Use the following steps to configure the DNS label for the public IP.
+Use the **Search resources** feature and search for **Public IP addresses**. Use the following steps to configure the DNS label for the public IP.
 
-1. Select the public IP address. This option opens the page for the public IP and its settings.
-1. Select **Configuration**.
-1. Provide a DNS label. This label becomes the public DNS label that you can access from anywhere, for example, contosofs.westus.cloudapp.azure.com. You can add an entry in the external DNS for the federation service (like fs.contoso.com) that resolves to the DNS label of the external load balancer (like contosofs.westus.cloudapp.azure.com).
-
-![Configure internet facing load balancer](./media/how-to-connect-fed-azure-adfs/elbdeployment3.png)
-
-![Configure internet facing load balancer (DNS)](./media/how-to-connect-fed-azure-adfs/elbdeployment4.png)-->
+1. Select your resource, under **Settings**, select **Configuration**.
+1. Under **Provide a DNS label (optional)**, add an entry in the text field (like fs.contoso.com) that resolves to the DNS label of the external load balancer (like contosofs.westus.cloudapp.azure.com).
+1. Select **Save** to complete assigning a DNS label.
 
 ### Test the AD FS sign-in
 
