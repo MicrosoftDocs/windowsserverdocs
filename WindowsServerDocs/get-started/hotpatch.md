@@ -45,17 +45,6 @@ For more information about the available images, see the
 [Windows Server 2022 Datacenter](https://aka.ms/hotpatchondesktopnewimage) Azure Marketplace
 product.
 
-### Preview access
-
-For images in preview, you must use a specific Azure Marketplace image. To create a preview virtual
-machine for Hotpatch with Desktop Experience, see the following articles:
-
-- **Azure:** visit the
-  [Microsoft Server 2022 Datacenter: Azure Edition Hotpatch Preview](https://aka.ms/HotpatchPreviewImage)
-  in the Azure Marketplace.
-
-- **Azure Stack HCI:** visit [Deploy Windows Server Azure Edition VMs in Azure Stack HCI](/azure-stack/hci/manage/windows-server-azure-edition?tabs=azure). Once you have deployed your VM, see [Enable Hotpatch for Azure Edition virtual machines built from ISO (preview)](enable-hotpatch-azure-edition.md).
-
 ## How Hotpatch works
 
 Hotpatch works by first establishing a baseline with the current Cumulative Update for Windows
@@ -173,4 +162,4 @@ using the Settings app when using the Desktop Experience.
 
 - [Azure Update Management](/azure/automation/update-management/overview)
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
-- [Enable Hotpatch for Azure Edition virtual machines built from ISO (preview)](enable-hotpatch-azure-edition.md)
+- [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
