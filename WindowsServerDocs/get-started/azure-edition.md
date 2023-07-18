@@ -39,7 +39,7 @@ The following table summarizes the key differences:
 | Associated virtualization rights | 2 virtual OSEs for Standard, Unlimited virtual OSEs for Datacenter | None |
 
 Capabilities vary by image, see
-[Getting started with Windows Server Datacenter: Azure Edition](#getting-started-with-windows-server-datacenter-azure-edition)
+[Getting started with Windows Server Datacenter: Azure Edition](#get-started-with-windows-server-datacenter-azure-edition)
 for more detail.
 
 > [!TIP]
