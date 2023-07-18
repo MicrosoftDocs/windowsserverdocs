@@ -24,7 +24,7 @@ Deploying AD FS in Azure can help achieve the high availability required with mi
 
 This diagram shows the recommended basic topology to start deploying your AD FS infrastructure in Azure.
 
-![Deployment design](./media/how-to-connect-fed-azure-adfs/deployment.png)
+![Screenshot of deployment design.](./media/how-to-connect-fed-azure-adfs/deployment.png)
 
 The following are principles behind the various components of the topology:
 
@@ -60,7 +60,7 @@ As outlined previously, you can either create two subnets in a single virtual ne
     | Virtual network name | Enter a name for your virtual network. |
     | Region | Choose a region. |
 
-    Select **Next**
+    1. Select **Next**
    :::image type="content" source="./media/how-to-connect-fed-azure-adfs/create-vnet.png" alt-text="Screenshot showing the basics tab for the Create virtual network page.":::
 1. In the **Security** tab, enable any security service you might want and select **Next**.
 1. On the **IP addresses** tab, a default subnet is already created and ready for VMs to be added. For this example, select **default** to edit the subnet.
@@ -416,7 +416,7 @@ The easiest way to test AD FS is by using the IdpInitiatedSignon.aspx page. To d
 1. From any external machine, access `https:\//adfs-server.contoso.com/adfs/ls/IdpInitiatedSignon.aspx`.
 1. You should see the following AD FS page:
 
-![Test login page](./media/how-to-connect-fed-azure-adfs/test1.png)
+![Screenshot of test login page.](./media/how-to-connect-fed-azure-adfs/test1.png)
 
 On successful sign-in, it provides you with a success message as shown here:
 
