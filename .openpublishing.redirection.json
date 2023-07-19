@@ -593,7 +593,7 @@
     {
       "source_path": "WindowsServerDocs/compute/Linux-Package-Repository-for-Microsoft-Software.md",
       "redirect_url": "/linux/packages",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/failover-clustering/deploy-a-cloud-witness-for-a-failover-cluster.md",
