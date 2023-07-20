@@ -19,7 +19,7 @@ AD FS supports several types of single sign-on experiences:
 
 - **Session SSO**
 
-     Session SSO eliminates extra prompts when the user switches applications during a particular session. If a particular session ends, the user will be prompted for their credentials again.Session SSO cookies are written for the authenticated user.
+     Session SSO eliminates extra prompts when the user switches applications during a particular session. If a particular session ends, the user will be prompted for their credentials again. Session SSO cookies are written for the authenticated user.
 
      AD FS will set session SSO cookies by default if users' devices aren't registered. If the browser session has ended and is restarted, this session cookie is deleted and isn't valid anymore.
 
