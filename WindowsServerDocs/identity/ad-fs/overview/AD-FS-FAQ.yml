@@ -284,11 +284,6 @@ sections:
           The AD FS UserInfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS doesn't support additional claims requested via the UserInfo endpoint. If you need more claims in an ID token, see [Custom ID tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
           
       - question: |
-          Why do I see a lot of 1021 errors on my AD FS servers?
-        answer: |
-          This event is usually logged for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused when the client erroneously tries to get an access token for the Azure AD Graph service. Because the resource isn't on AD FS, event 1021 occurs on the AD FS servers. It's safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS.
-
-      - question: |
           Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
         answer: |
           This group is created only when a Windows Server 2016 domain controller with the FSMO PDC role exists in the domain. To resolve the error, you can create the group manually. Take these steps to add the required permissions after you add the service account as a member of the group:
