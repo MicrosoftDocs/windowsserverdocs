@@ -9,13 +9,13 @@ ms.contributors: orthomas
 ms.date: 07/10/2023
 ---
 
-# DHCP scopes
+# DHCP scopes in Windows Server
 
-A Dynamic Host Configuration Protocol (DHCP) scope is an administrative grouping of IP addresses for computers on a subnet that that the DHCP server can lease to clients. When you define one or more scopes on your DHCP server, the server can manage the distribution and assignment of IP addresses to DHCP clients.
+A Dynamic Host Configuration Protocol (DHCP) scope is an administrative grouping of IP addresses for computers on a subnet that the DHCP server can lease to clients. When you define one or more scopes on your DHCP server, the server can manage the distribution and assignment of IP addresses to DHCP clients.
 
 Scopes enable you to configure network settings for all clients, such as Domain Name System (DNS) servers and network gateways. Scopes filter hosts by name, MAC address, and even operating system before assigning an IP address. You can configure policy for each scope.
 
-This article explains the parts of creating a scope for a Windows Server deployment and how to plan creating your scope. If you're looking for information about how to create and configure a DHCP scope, go to [Install DHCP server](/dhcp-deploy-wps.md) instead. Before creating your new scope, you also also plan the range of IP addresses it should use.
+This article explains the parts of creating a scope for a Windows Server deployment and how to plan creating your scope. If you're looking for information about how to create and configure a DHCP scope, go to [Install DHCP server](/dhcp-deploy-wps.md) instead. Before creating your new scope, you also plan the range of IP addresses it should use.
 
 ## Types of scopes
 
@@ -43,7 +43,7 @@ Additionally, a typical DHCP scope has the following properties:
 
 - Reservations are optionally used to ensure that a DHCP client always receives the same IP address.
 
-Before deploying your DHCP server, list your subnets and the IP address range you want to use for each subnet.
+Before you deploy your DHCP server, list your subnets and the IP address range you want to use for each subnet.
 
 Other types of scopes available in an authorized IPv4 DHCP server can provide expanded functionality, depending on your user requirements and deployment considerations.
 
@@ -57,7 +57,7 @@ DHCP Superscopes is an administrative feature of DHCP server that you can use to
 
 ## Scope options
 
-Scope options you configure at the server level are applied to all DHCP clients regardless of which subnet they're on. If you want a certain functionality to be available across all DHCP clients, you should configure it at the server level. These standard options include the following:
+Scope options you configure at the server level are applied to all DHCP clients regardless of which subnet they're on. If you want a certain functionality to be available across all DHCP clients, you should configure it at the server level. These standard options include:
 
 - Default gateway
 - Domain Name and DNS servers
@@ -67,15 +67,15 @@ In addition to standard options, you can configure user-defined or vendor-specif
 
 ## Define a DHCP scope
 
-Each subnet can have only a single DHCP scope with a single continuous range of IP addresses. To use several address ranges within a single scope or subnet for DHCP service, you must first define the scope and then set any required exclusion ranges. The following section of this article provides guidance on planning for exclusion ranges.
+Each subnet can have only a single DHCP scope with a single continuous range of IP addresses. To use several address ranges within a single scope or subnet for DHCP service, you must first define the scope, then set any required exclusion ranges. The following sections describe how to plan for exclusion ranges.
 
-## Plan address ranges
+### Plan address ranges
 
 Planning IP address ranges across multiple scopes on an authorized IPv4 DHCP server is central to understanding how scopes work and successfully creating new scopes.
 
 You must plan IP address ranges before setting up scopes. To learn more about how to create new scopes on an authorized DHCP IPv4 server, see [Install DHCP Server](quickstart-install-configure-DHCP-server.md).
 
-## Create IP address ranges
+### Create IP address ranges
 
 Each subnet must have its own unique IP address range. The IP address range specifies which IP addresses to include or exclude for assignment to DHCP clients. In other words, An IP address range lets you select which addresses devices connected to your DHCP can use. IP address ranges are represented on a DHCP server as scopes or groupings of IP addresses on the subnet that uses the DHCP service. You also can exclude specific IP addresses that you don't want clients to use.
 
@@ -87,7 +87,7 @@ When you define your IP address range for each scope, you must use the full rang
 
 Your network includes servers, routers, switches, printers, and other devices that can require reserved (static) IP addresses. It's a good idea to make a list of these devices, including extra placeholder addresses for you to use as your needs expand. A DHCP reservation is a preset IP address that’s provided by your DHCP server and given to a Network Interface Card (NIC) when a NIC calls out to a DHCP server for an IP address. Keep in mind that a device must support DHCP to use reservations.
 
-You can use reservations to assign an IP address to a specific client device (NIC) based on its MAC address. The device always receives the same IP address, and the address never changes. The device is completely dependent on your DHCP Server after you configure the reservation. If the DHCP server experiences issues and shuts down, the DHCP reservation device also becomes unavailable.
+You can use reservations to assign an IP address to a specific client device (NIC) based on its MAC address. The device always receives the same IP address, and the address never changes. The device is dependent on your DHCP Server after you configure the reservation. If the DHCP server experiences issues and shuts down, the DHCP reservation device also becomes unavailable.
 
 Reservations give you the ability to change IP addresses readily without having to sign in to a device. You also can manage IP addresses for third-party devices if they're set to DHCP.
 
@@ -95,7 +95,7 @@ Reservations give you the ability to change IP addresses readily without having 
 
 There are certain scenarios where you may need to manually configure servers or other devices with static IP addresses from the same IP address range as the DHCP server. In these situations, it's possible to unintentionally create an IP address conflict in which you and the DHCP server both assign the same IP address to different devices.
 
-To prevent address conflicts, you can create an exclusion range for the DHCP scope. An exclusion range is a contiguous range of IP addresses within the scope's IP address range that the DHCP server isn't allowed to use. If you create an exclusion range, the DHCP server won't assign addresses to that range, allowing you to manually assign these addresses without creating an IP address conflict.
+To prevent address conflicts, you can create an exclusion range for the DHCP scope. An exclusion range is a contiguous range of IP addresses within the scope's IP address range that the DHCP server isn't allowed to use. If you create an exclusion range, the DHCP server doesn't assign addresses to that range, allowing you to manually assign these addresses without creating an IP address conflict.
 
 You should use exclusions for all devices configured with a static IP address. The excluded addresses should include all IP addresses you assigned manually to other servers, non-DHCP clients, diskless workstations, or Routing and Remote Access and Point-to-Point Protocol (PPP) clients.
 
