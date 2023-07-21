@@ -58,7 +58,7 @@ To transfer the Key Master role using DNS Manager:
 > [!IMPORTANT]
 > The signed-in user must have Domain Admins group rights, or equivalent, on a DNS server in order for it to be displayed in the list.
 
-You can also perform this operation using Windows PowerShell with the **Reset-DnsServerZoneKeyMasterRole** cmdlet, as shown in the following example.
+You can also perform this operation using Windows PowerShell by running the **Reset-DnsServerZoneKeyMasterRole** cmdlet, as shown in the following example.
 
 ```powershell
 Reset-DnsServerZoneKeyMasterRole -ZoneName secure.contoso.com -KeyMasterServer dc2.contoso.com -force
@@ -76,52 +76,56 @@ The server that's designated as the Key Master should be online and highly avail
 > [!IMPORTANT]
 > The Key Master must have access to private key material for a DNSSEC-signed zone. If the current Key Master is offline, other DNS servers might have access to private key material if it's stored in a shared location, such as Active Directory. If private key material isn't stored in Active Directory, and the new Key Master can't access the private keys for a zone through other means, which means the Key Master must generate new keys and re-sign the zones with them. After re-signing with new keys, all trust anchors that exist on other DNS servers will be invalid and must be updated.
 
-To store private key material in Active Directory, select the **Replicate this private key to all DNS servers authoritative for this zone** check box in KSK settings for all KSKs you use, as shown in the following screenshot.
+To store private key material in Active Directory:
 
-<!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
+1. Select the **Replicate this private key to all DNS servers authoritative for this zone** check box in KSK settings for all KSKs you use, as shown in the following screenshot.
 
-![](RackMultipart20230503-1-ivry2q_html_d967ceef7a4ec266.png) 
+  <!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
 
-If you don't want to store private key material in Active Directory, you might also be able to provide access to private key material using a certificate or hardware storage module (HSM) device. This storage media must be accessible to the DNS server that's selected as the new Key Master.
+  ![](RackMultipart20230503-1-ivry2q_html_d967ceef7a4ec266.png) 
 
-If the private key material isn't stored in Active Directory or an external device, you can run the following PowerShell command to store this material in a certificate on the local computer.
+1. If you don't want to store private key material in Active Directory, you can provide access to private key material using a certificate or hardware storage module (HSM) device. This storage media must be accessible to the DNS server that's selected as the new Key Master.
 
-```powershell
-MakeCert -ss MS-DNSSEC -sr LocalMachine
-```
+1. If the private key material isn't stored in Active Directory or an external device, you can run the following PowerShell command to store this material in a certificate on the local computer.
 
-To use the [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) command, you must first download and install the Windows SDK from [https://go.microsoft.com/fwlink/p/?linkid=84091](https://go.microsoft.com/fwlink/p/?linkid=84091).
+  ```powershell
+  MakeCert -ss MS-DNSSEC -sr LocalMachine
+  ```
 
-If the new Key Master can't access private key material for the zone, a notification appears to tell you private key material isn't accessible and that you need to generate new keys, as shown in the following image.
+  To use the [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) command, you must first download and install the Windows SDK from [https://go.microsoft.com/fwlink/p/?linkid=84091](https://go.microsoft.com/fwlink/p/?linkid=84091).
 
-<!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
+1. If the new Key Master can't access private key material for the zone, a dialog box appears to tell you private key material isn't accessible and that you need to generate new keys, as shown in the following image.
 
-![](RackMultipart20230503-1-ivry2q_html_d092dac40daf0fb7.png)
+  <!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
 
-> [!IMPORTANT]
-> If you select **Yes** and continue seizing the Key Master role, the service won't automatically generate new ZSKs and KSKs for you. In order to generate new keys, you must re-sign the zone so that private key material is available. If trust anchors were distributed for the zone before you seized the role, you must also replace them. If the original Key Master becomes available before the zone is re-signed, you can transfer the Key Master role back to this server without the requirement to re-sign the zone and redistribute trust anchors.
+  ![](RackMultipart20230503-1-ivry2q_html_d092dac40daf0fb7.png)
 
-If the private key material is in Active Directory, you can seize the Key Master role on another primary, authoritative Active Directory-integrated DNS server and have full access to private key material. In this case, you don't need to replace the signing keys (ZSKs and KSKs).
+  > [!IMPORTANT]
+  > If you select **Yes** and continue seizing the Key Master role, the service won't automatically generate new ZSKs and KSKs for you. In order to generate new keys, you must re-sign the zone so that private key material is available. If trust anchors were distributed for the zone before you seized the role, you must also replace them. If the original Key Master becomes available before the zone is re-signed, you can transfer the Key Master role back to this server without the requirement to re-sign the zone and redistribute trust anchors.
 
-If you use DNS Manager to access an Active Directory-integrated authoritative DNS server with a primary copy of the zone when the Key Master is offline, a notification appears when you view DNSSEC properties of the zone. The dialog box tells you that the service can't load the DNSSEC settings, as shown in the following screenshot.
+  If the private key material is in Active Directory, you can seize the Key Master role on another primary, authoritative Active Directory-integrated DNS server and have full access to private key material. In this case, you don't need to replace the signing keys (ZSKs and KSKs).
 
-<!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
+1. If you use DNS Manager to access an Active Directory-integrated authoritative DNS server with a primary copy of the zone when the Key Master is offline, a notification appears when you view DNSSEC properties of the zone. The dialog box tells you that the service can't load the DNSSEC settings, as shown in the following screenshot.
 
-![](RackMultipart20230503-1-ivry2q_html_3ce7c487e3eb9ba1.png)
+  <!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
 
-If you see this dialog, you need to load the DNSSEC settings with the local server by selecting **OK**. The settings that load are the same settings configured during the last successful replication.
+  ![](RackMultipart20230503-1-ivry2q_html_3ce7c487e3eb9ba1.png)
 
-In the **Key Master** tab, you can choose a new Key Master from a list of available DNS servers, similar to the procedure described in [Transferring the Key Master role](#transferring-the-key-master-role).
+  If you see this dialog, you need to load the DNSSEC settings with the local server by selecting **OK**. The settings that load are the same settings configured during the last successful replication.
 
-After you choose a new Key Master, select **OK**. A notification is displayed with information about the changes to be made. Select **OK** again to proceed with the seizing operation. Another notification is displayed with the status of the role transfer, as shown in the following screenshots.
+1. In the **Key Master** tab, you can choose a new Key Master from a list of available DNS servers, similar to the procedure described in [Transferring the Key Master role](#transferring-the-key-master-role).
 
-<!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
+1. After you choose a new Key Master, select **OK**. A a dialog box appears with information about the changes to be made.
 
-![](RackMultipart20230503-1-ivry2q_html_f1825d7cc6d3626d.png)
+1. Select **OK** again to proceed with the seizing operation. Another dialog box appears to show the status of the role transfer, as shown in the following screenshots.
 
-![](RackMultipart20230503-1-ivry2q_html_3cf61127949b5a69.png)
+  <!--Images must be saved to a media folder in this repo and follow the image formatting guidelines in the contributor guide. They also must have alt text.-->
 
-Information about the new Key Master replicates in Active Directory to all primary DNS servers. After seizing the Key Master role on another server, if the old Key Master comes online, it detects that it is no longer the Key Master, which means you don't need to configure any other settings.
+  ![](RackMultipart20230503-1-ivry2q_html_f1825d7cc6d3626d.png)
+
+  ![](RackMultipart20230503-1-ivry2q_html_3cf61127949b5a69.png)
+
+Information about the new Key Master replicates in Active Directory to all primary DNS servers. After seizing the Key Master role on another server, if the old Key Master comes online, it detects that it's no longer the Key Master, which means you don't need to configure any other settings.
 
 ## Next steps
 
