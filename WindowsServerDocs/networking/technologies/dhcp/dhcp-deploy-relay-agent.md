@@ -87,7 +87,7 @@ After you've installed the Remote Access role with the Routing role service, you
 1. In the left pane, expand the server name, then right-click **IPv4** or **IPv6** depending on which version you want to configure the relay agent for.
 1. Select **New Interface**.
 1. Select the network interface you want to use for the DHCP relay agent. Select **OK**.
-1. In the properties of the newly-added interface, go to the **General** tab.
+1. In the properties of the newly added interface, go to the **General** tab.
 1. If you want to allow broadcast-based name resolution, select **Enable broadcast name resolution**. If not, don't select it.
 1. Go to the **DHCP Relay Agent** tab.
 1. Select **Enable DHCP relay agent**.
