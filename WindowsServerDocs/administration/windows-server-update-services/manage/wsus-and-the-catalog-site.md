@@ -3,21 +3,20 @@ title: WSUS and the Microsoft Update Catalog
 description: Windows Server Update Service (WSUS) article - How to import updates into WSUS using PowerShell and the Microsoft Update Catalog.
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
-ms.author: jgerend
+ms.author: wscontent
 author: JasonGerend
 manager: mtillman
 ms.date: 07/25/2023
 ---
 # WSUS and the Microsoft Update Catalog
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The [Microsoft Update Catalog](https://catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update, or multiple updates into WSUS. This article provides information about the catalog, the import script, and how to use the script.
 
 ## Prerequisites for importing updates into WSUS
 
 The following prerequisites are required to import updates into WSUS with the PowerShell script:
-
 
 - Any computer that has the WSUS administrative console installed, whether or not it's a WSUS server, can be used to import updates.
   - When importing from a WSUS server, use an account that's a member of the WSUS Administrators group or the Local Administrators group.
@@ -26,6 +25,7 @@ The following prerequisites are required to import updates into WSUS with the Po
 ## The Microsoft Update Catalog
 
 The [Microsoft Update Catalog](https://catalog.update.microsoft.com) lets you search on various update fields and categories. These update fields include:
+
 - Update title
 - Description
 - Applicable products
@@ -33,6 +33,7 @@ The [Microsoft Update Catalog](https://catalog.update.microsoft.com) lets you se
 - Knowledge base articles numbers in the format of `KB1234567`
 
 When searching for hardware updates, or drivers, you can also search for the following fields:
+
 - Driver model
 - Manufacturer
 - Class
@@ -40,7 +41,7 @@ When searching for hardware updates, or drivers, you can also search for the fol
 
 You can narrow the scope of your search by adding additional search terms. To search a specific string, use double quotes.
 
-> [!Note]
+> [!NOTE]
 > The catalog also allows you to download updates directly from the site using the download button. However, updates downloaded this way are are in `.MSU` format.  WSUS can't import updates in `.MSU` format. This file type is commonly used by the [Windows Update Standalone installer](https://support.microsoft.com//topic/description-of-the-windows-update-standalone-installer-in-windows-799ba3df-ec7e-b05e-ee13-1cdae8f23b19), [DISM](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options), or other updates tools. Some tools require that you extract the files from the `.MSU` before they can be used.
 
 ## Import updates into WSUS using PowerShell
@@ -62,18 +63,18 @@ Use the below instructions to import updates into WSUS:
    ```
 
     **Example 1**: While signed into a WSUS server that uses the default port, import a single update using the following syntax:
+   
     ```powershell
     .\ImportUpdateToWSUS.ps1 -UpdateId 12345678-90ab-cdef-1234-567890abcdef
     ```
 
-   Example 2: Using a remote computer, import multiple updates into a WSUS server using SSL with the following syntax:
+   **Example 2**: Using a remote computer, import multiple updates into a WSUS server using SSL with the following syntax:
+   
     ```powershell
     .\ImportUpdateToWSUS.ps1 -WsusServer WSUSServer.contoso.com -PortNumber 8531 -UseSsl -UpdateIdFilePath C:\temp\UpdateIDs.txt
     ```
 
 1. The update files for updates that are imported are downloaded based on your **Update files** settings. For instance, if you use the option to **Download update files to this serer only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3 Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
-
-
 
 ## PowerShell script to import updates into WSUS
 
@@ -249,21 +250,13 @@ Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutB
 WSUS administrators might consider restricting access to the hotfixes they've downloaded from the Microsoft Update Catalog. To restrict the available hotfixes complete the following steps:
 
 1. Start the **Internet Information Services (IIS) Manager** console.
-
 1. Navigate to the **Content** node under **WSUS Administration** web site.
-
 1. On the **Content Home** pane, double-click in the **Authentication** option.
-
 1. Select **Anonymous Authentication** and select **Disable** in the **Actions** pane on the right.
-
 1. Select **Windows Authentication** and select **Enable** in the **Actions** pane on the right.
-
 1. In the WSUS administrative console, create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client computers and WSUS computer Groups](managing-wsus-client-computers-and-wsus-computer-groups.md) in this guide, and [Configure WSUS computer groups](../deploy/2-configure-wsus.md#24-configure-wsus-computer-groups) in the WSUS deployment guide.
-
 1. Download the files for the hotfix.
-
 1. Set the permissions of these files so that only machine accounts of those machines can read them. You'll also need to allow the Network Service account full access to the files.
-
 1. Approve the hotfix for the WSUS target group created in Step 2.
 
 > [!NOTE]
