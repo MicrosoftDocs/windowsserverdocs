@@ -12,7 +12,7 @@ ms.date: 07/25/2023
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update, or multiple updates into WSUS. This article provides information about the catalog, the import script, and how to use the script.
+The [Microsoft Update Catalog](https://catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update, or multiple updates into WSUS. This article provides information about the catalog, the import script, and how to use the script.
 
 ## Prerequisites for importing updates into WSUS
 
@@ -25,7 +25,7 @@ The following prerequisites are required to import updates into WSUS with the Po
 
 ## The Microsoft Update Catalog
 
-The [Microsoft Update Catalog](https://www.catalog.update.microsoft.com) lets you search on various update fields and categories. These update fields include:
+The [Microsoft Update Catalog](https://catalog.update.microsoft.com) lets you search on various update fields and categories. These update fields include:
 - Update title
 - Description
 - Applicable products
@@ -48,7 +48,7 @@ You can narrow the scope of your search by adding additional search terms. To se
 Use the below instructions to import updates into WSUS:
 
 1. Copy the [PowerShell script to import updates into WSUS](#powershell-script-to-import-updates-into-wsus) from this article into a text editor and save it as `ImportUpdatesIntoWSUS.ps1`. Use a location you can easily access, such as `C:\temp`.
-1. Open the Microsoft Update Catalog, [https://www.catalog.update.microsoft.com](https://www.catalog.update.microsoft.com), in a browser.
+1. Open the Microsoft Update Catalog, [https://catalog.update.microsoft.com](https://catalog.update.microsoft.com), in a browser.
 1. Search for an update you want to import into WSUS.
 1. From the returned list, select the update you want to import into WSUS. The update details page opens.
 1. Use the **Copy** button on the update details page to copy the **UpdateID**.
