@@ -101,8 +101,8 @@ To do this, open Windows PowerShell and run the following command to add the AD 
  To back up any webpage customizations, copy the AD FS webpages and the **web.config** file from the directory that is mapped to the virtual path **“/adfs/ls”** in IIS. By default, it is in the **%systemdrive%\inetpub\adfs\ls** directory.
 
 ## Next Steps
- [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-ad-fs-fed-server.md)
- [Prepare to Migrate the AD FS 2.0 Federation Server Proxy](prepare-to-migrate-ad-fs-fed-proxy.md)
- [Migrate the AD FS 2.0 Federation Server](migrate-the-ad-fs-fed-server.md)
- [Migrate the AD FS 2.0 Federation Server Proxy](migrate-the-ad-fs-2-fed-server-proxy.md)
- [Migrate the AD FS 1.1 Web Agents](migrate-the-ad-fs-web-agent.md)
+ [Prepare to Migrate the AD FS 2.0 Federation Server](prepare-to-migrate-ad-fs-fed-server.md)  
+ [Prepare to Migrate the AD FS 2.0 Federation Server Proxy](prepare-to-migrate-ad-fs-fed-proxy.md)  
+ [Migrate the AD FS 2.0 Federation Server](migrate-the-ad-fs-fed-server.md)  
+ [Migrate the AD FS 2.0 Federation Server Proxy](migrate-the-ad-fs-2-fed-server-proxy.md)  
+ [Migrate the AD FS 1.1 Web Agents](migrate-the-ad-fs-web-agent.md)  
