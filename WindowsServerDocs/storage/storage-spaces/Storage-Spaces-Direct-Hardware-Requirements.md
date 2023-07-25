@@ -1,11 +1,11 @@
 ---
 title: Storage Spaces Direct hardware requirements
 description: Learn about the minimum hardware requirements for Storage Spaces Direct.
-ms.author: eldenc
+ms.author: wscontent
 manager: eldenc
 ms.topic: article
 author: eldenchristensen
-ms.date: 06/14/2022
+ms.date: 07/24/2023
 ---
 # Storage Spaces Direct hardware requirements
 
@@ -19,6 +19,9 @@ For production, Microsoft recommends purchasing a validated hardware/software so
    > Want to evaluate Storage Spaces Direct but don't have hardware? Use Hyper-V or Azure virtual machines as described in [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
 ## Base requirements
+
+> [!IMPORTANT]
+> In scenarios where cluster nodes are implemented, NIC adapters, drivers, and firmware must be an exact match for SET teaming to function properly.
 
 Systems, components, devices, and drivers must be certified for the operating system you’re using in the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, we recommend that servers and network adapters have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
 
