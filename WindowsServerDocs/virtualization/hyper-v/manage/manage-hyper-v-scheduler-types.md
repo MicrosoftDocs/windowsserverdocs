@@ -12,10 +12,10 @@ ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server version 1803, Windows Server version 1709, Windows 10
 
-This article describes new modes of virtual processor scheduling logic introduced in Windows Server 2016. These modes, or scheduler types, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can:
+This article describes new modes of virtual processor scheduling logic introduced in Windows Server 2016. These modes, or *scheduler types*, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can:
 
-- Select hypervisor scheduler types that are best suited for the guest virtual machines (VMs).
-- Configure the VMs to take advantage of the scheduling logic.
+- Select hypervisor scheduler types best suited for guest virtual machines (VMs).
+- Configure VMs to take advantage of scheduling logic.
 
 > [!NOTE]
 > Updates are required to use the hypervisor scheduler features described in this document. For more information, see [Required updates](#required-updates).
@@ -26,7 +26,7 @@ Before discussing the logic and controls behind Hyper-V virtual processor schedu
 
 ### Understand SMT
 
-Simultaneous multithreading (SMT) is a technique in modern processor designs that lets separate, independent execution threads share the processor's resources. SMT generally offers a modest performance boost to most workloads. It parallelizes computations when possible, increasing instruction throughput. No performance gain or even a slight loss in performance might occur when contention between threads for shared processor resources occurs.
+Simultaneous multithreading (SMT) is a technique in modern processor designs that lets separate, independent execution threads share processor resources. SMT usually gives a modest performance boost to most workloads. It parallelizes computations when possible, increasing instruction throughput. No performance gain or even a slight loss in performance might occur when contention between threads for shared processor resources occurs.
 
 Processors supporting SMT are available from both Intel and AMD. Intel refers to their SMT offerings as Intel Hyper Threading Technology, or Intel HT.
 
