@@ -5,6 +5,8 @@
     href: gdpr/gdpr-winserver-whitepaper.md
   - name: Secured-core server
     href: secured-core-server.md
+  - name: Configure Secured-core Server
+    href: configure-secured-core.md
   - name: Set up HGS for a guarded fabric and shielded VMs
     href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
     items:

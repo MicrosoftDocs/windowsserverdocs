@@ -24,8 +24,9 @@ installed and enabled in the BIOS:
 
 - Secure Boot.
 - Trusted Platform Module (TPM) 2.0.
-- System fireware must enable Input/Output Memory Management Unit (IOMMU), known as Kernel DMA
-  Protection . For example, Intel VT-D or AMD-Vi. To learn more about Kernel DMA Protection, see
+- System firmware must meet pre-boot DMA protection requirements and set appropriate flags in ACPI
+  tables to opt into and enable Kernel DMA Protection. To learn more about Kernel DMA Protection,
+  see
   [Kernel DMA Protection (Memory Access Protection) for OEMs](/windows-hardware/design/device-experiences/oem-kernel-dma-protection).
 - A processor with support enabled in the BIOS for:
   - Virtualization extensions.
@@ -123,6 +124,8 @@ Here's how to verify your Secured-core server is configured using the user inter
     1. **Virtualization-based security Services** Running shows **Hypervisor enforced Code
        Integrity** and **Secure Launch**.
 
+       :::image type="content" source="media/Secured-core/secured-core-msinfo32.png" alt-text="Screenshot showing the System Information application window with Secured-core enabled." lightbox="media/Secured-core/secured-core-msinfo32.png":::
+
 #### [Windows Admin Center](#tab/WAC)
 
 Here's how to verify your Secured-core server is configured using Windows Admin Center.
@@ -132,7 +135,7 @@ Here's how to verify your Secured-core server is configured using Windows Admin 
 1. Select **Security** using the left-hand panel, then select the **Secured-core** tab.
 1. Check the all Security Features have a status of _Configured_.
 
-   :::image type="content" source="../security/media/Secured-core/windows-admin-center-server.png" alt-text="Screenshot showing the Windows Admin Center security extension in a browser window with Secured-core enabled." lightbox="media/Secured-core/windows-admin-center-server.png":::
+   :::image type="content" source="media/Secured-core/windows-admin-center-server.png" alt-text="Screenshot showing the Windows Admin Center security extension in a browser window with Secured-core enabled." lightbox="media/Secured-core/windows-admin-center-server.png":::
 
 #### [PowerShell](#tab/powershell)
 
