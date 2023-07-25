@@ -18,7 +18,7 @@ This article describes new modes of virtual processor scheduling logic introduce
 - Configure VMs to take advantage of scheduling logic.
 
 > [!NOTE]
-> Updates are required to use the hypervisor scheduler features described in this document. For more information, see [Required updates](#required-updates).
+> You must have all [required updates](#required-updates) in order to use the hypervisor scheduler features.
 
 ## Background
 
