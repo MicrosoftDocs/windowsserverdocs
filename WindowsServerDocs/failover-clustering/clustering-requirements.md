@@ -3,9 +3,9 @@ title: Failover clustering hardware requirements and storage options
 description: Hardware requirements and storage options for creating a failover cluster.
 ms.topic: article
 author: JasonGerend
-ms.author: jgerend
+ms.author: wscontent
 manager: lizross
-ms.date: 10/20/2021
+ms.date: 07/24/2023
 ---
 # Failover clustering hardware requirements and storage options
 
@@ -61,7 +61,7 @@ When deploying a storage area network (SAN) with a failover cluster, follow thes
 - **Consider using multipath I/O software or teamed network adapters**: In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software or network adapter teaming (also called load balancing and failover, or LBFO). This provides the highest level of redundancy and availability. For Windows Server 2012 R2 or Windows Server 2012, your multipath solution must be based on Microsoft Multipath I/O (MPIO). Your hardware vendor will typically supply an MPIO device-specific module (DSM) for your hardware, although Windows Server includes one or more DSMs as part of the operating system.
 
     >[!IMPORTANT]
-    >Host bus adapters and multipath I/O software can be very version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running.
+    >Host bus adapters and multipath I/O software can be version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running. NIC adapters, drivers, and firmware must be an exact match for SET teaming to function properly in all of the cluster nodes.
 
 - **Consider using Storage Spaces**: If you plan to deploy serial attached SCSI (SAS) clustered storage that's configured using Storage Spaces, see [Deploy Clustered Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>) for the requirements.
 
