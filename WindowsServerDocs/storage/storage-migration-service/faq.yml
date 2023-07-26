@@ -44,7 +44,7 @@ sections:
       - question: |
           Are destinations other than Windows Server supported?
         answer: |
-          The Storage Migration Service supports migrating to Windows Server 2022, Windows Server 2019, and Windows Failover Clusters running those operating systems. It doesn't support migration to Samba, NetApp, or Azure Files. The Storage Migration Services does support migration to a Windows Server or cluster running Azure File Sync with cloud tiering when using the latest version of Windows Admin Center and Windows Server 2022, or Windows Server 2019 after installation of cumulative update [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1)
+          The Storage Migration Service supports migrating to Windows Server 2022, Windows Server 2019, and Windows Failover Clusters running those operating systems. It doesn't support migration to Samba, NetApp, or Azure Files. The Storage Migration Services does support migration to a Windows Server or cluster running Azure File Sync with cloud tiering when using the latest version of Windows Admin Center and Windows Server 2022, or Windows Server 2019 after installation of cumulative update [KB5006744](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5006744).
 
       - question: |
           Do local groups and local users migrate?
