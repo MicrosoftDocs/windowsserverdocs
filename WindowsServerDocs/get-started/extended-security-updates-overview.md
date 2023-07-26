@@ -12,9 +12,11 @@ ms.sitesec: library
 ms.custom: contperf-fy22q3
 ---
 
-# Extended Security Updates for Windows Server Overview
+# Extended Security Updates for Windows Server overview
 
 The Extended Security Update (ESU) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. Windows Server [Long Term Servicing Channel](servicing-channels-comparison.md) (LTSC) has a minimum of ten years of support: five years for mainstream support and five years for extended support, which includes regular security updates.
+
+<!--Was it the long term or short term servicing channel that's obsolete?-->
 
 However, once products reach the end of support, it also means the end of security updates and bulletins. This scenario can cause security or compliance issues and put business applications at risk. Microsoft recommends that you [upgrade to the current version of Windows Server](install-upgrade-migrate.md) for the most advanced security, performance, and innovation.
 
@@ -28,7 +30,7 @@ Versions of Windows Server that have reached or are reaching the end of extended
 
 ## What are Extended Security Updates?
 
-Extended Security Updates for Windows Server include security updates and bulletins rated *critical* and *important*, for a maximum period of time from the end of extended support, depending on the version (see below). They are available free of charge for servers hosted in Azure, and available to purchase for servers not hosted in Azure. Extended Security Updates don't include new features, customer-requested non-security hotfixes, or design change requests. For more information, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
+Extended Security Updates for Windows Server include security updates and bulletins rated *critical* and *important* for a maximum period of time from the end of extended support, depending on the version. They're available free of charge for servers hosted in Azure, and available to purchase for servers not hosted in Azure. Extended Security Updates don't include new features, customer-requested non-security hotfixes, or design change requests. For more information, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
 
 With Extended Security Updates, the different phases for these versions of Windows Server are as follows:
 
