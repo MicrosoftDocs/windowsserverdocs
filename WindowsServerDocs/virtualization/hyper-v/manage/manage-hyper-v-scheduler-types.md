@@ -1,5 +1,5 @@
 ---
-title: Understanding and using Hyper-V hypervisor scheduler types
+title: Manage Hyper-V hypervisor scheduler types
 description: Learn about new modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
 ms.author: wscontent
 author: BenjaminArmstrong
@@ -26,7 +26,7 @@ Before discussing the logic and controls behind Hyper-V virtual processor schedu
 
 ### Understand SMT
 
-Simultaneous multithreading (SMT) is a technique in modern processor designs that lets separate, independent execution threads share processor resources. SMT usually gives a modest performance boost to most workloads. It parallelizes computations when possible, increasing instruction throughput. However, there are also times where there's no noticeable improvement in performance or even a slight loss when when threads compete with each other for shared processor resources.
+Simultaneous multithreading (SMT) is a technique in modern processor designs that lets separate, independent execution threads share processor resources. SMT usually gives a modest performance boost to most workloads. It parallelizes computations when possible, increasing instruction throughput. However, there are also times where there's no noticeable improvement in performance or even a slight loss when threads compete with each other for shared processor resources.
 
 Processors supporting SMT are available from both Intel and Advanced Micro Devices (AMD). Intel refers to their SMT offerings as Intel Hyper Threading Technology (Intel HT).
 
@@ -131,7 +131,7 @@ We don't currently recommend using the root scheduler with Hyper-V on servers. I
 
 ## Enable SMT in guest VMs
 
-Once you configure the virtualization host's hypervisor to use the core scheduler type, you can also configure guest VMs to use SMT.Exposing the fact that VPs are hyperthreaded to a guest VM lets the scheduler in the guest operating system and workloads running in the VM detect and use the SMT topology in their own work scheduling.
+Once you configure the virtualization host's hypervisor to use the core scheduler type, you can also configure guest VMs to use SMT. Exposing the fact that VPs are hyperthreaded to a guest VM lets the scheduler in the guest operating system and workloads running in the VM detect and use the SMT topology in their own work scheduling.
 
 - In Windows Server 2016, guest SMT isn't configured by default. A Hyper-V host administrator must explicitly enable it.
 - In Windows Server 2019, new VMs you create on the host inherit the host SMT topology by default. For example, a version 9.0 VM that you create on a host with two SMT threads per core would also have two SMT threads per core.
