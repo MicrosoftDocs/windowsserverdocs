@@ -3,7 +3,7 @@ title: Hotpatch for Windows Server Azure Edition
 description: 'Learn how hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
-ms.date: 05/16/2023
+ms.date: 07/27/2023
 ms.author: wscontent
 ---
 
@@ -158,8 +158,18 @@ You can also view the installed patches using the
 [Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix) PowerShell command or
 using the Settings app when using the Desktop Experience.
 
+### Virtual Machine Scale Sets Uniform Orchestration on Azure-Edition images
+
+* The [Windows Server 2022 Azure Edition Images](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsserver.windowsserver?tab=PlansAndPrice) provide the best in class operating system that includes the innovation built into Windows Server 2022 images plus additional features. Since Azure Edition images support Hotpatching, VM scale sets (VMSS) with Uniform Orchestration can't be created on these images. The blockade on using VMSS Uniform Orchestration on these images will be lifted once [Auto Guest Patching](https://learn.microsoft.com/azure/virtual-machines/automatic-vm-guest-patching?toc=https%3A%2F%2Flearn.microsoft.com%2F%2Fazure%2Fvirtual-machine-scale-sets%2Ftoc.json&bc=https%3A%2F%2Flearn.microsoft.com%2F%2Fazure%2Fbread%2Ftoc.json) and Hotpatching are supported.
+
+### Rollback Support on Hotpatching
+
+* The installation of Hotpatch or Baseline updates does not support an automatic rollback. In the event a VM experiences an issue during or after an update, you will have to uninstall the latest update and install the last known good baseline update. This process will require a VM reboot.
+
+
+
 ## Next steps
 
-- [Azure Update Management](/azure/automation/update-management/overview)
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
+- [Azure Update Management](/azure/automation/update-management/overview)
