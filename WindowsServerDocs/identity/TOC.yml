@@ -983,7 +983,7 @@
       - name: Concepts
         items:
         - name: What is the Certification Authority Role Service?
-          href: ad-cs/certificate-authority-role.md
+          href: ad-cs/certification-authority-role.md
         - name: Network Device Enrollment Service
           href: ad-cs/network-device-enrollment-service-overview.md
         - name: Certificates and trust
