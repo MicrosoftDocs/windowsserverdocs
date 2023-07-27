@@ -16,17 +16,17 @@ ms.custom: contperf-fy22q3
 
 The Extended Security Update (ESU) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. Windows Server [Long Term Servicing Channel](servicing-channels-comparison.md) (LTSC) has a minimum of ten years of support: five years for mainstream support and five years for extended support, which includes regular security updates.
 
-<!--Was it the long term or short term servicing channel that's obsolete?-->
-
 However, once products reach the end of support, it also means the end of security updates and bulletins. This scenario can cause security or compliance issues and put business applications at risk. Microsoft recommends that you [upgrade to the current version of Windows Server](install-upgrade-migrate.md) for the most advanced security, performance, and innovation.
 
 > [!TIP]
 > You can find information on support dates on [Microsoft Lifecycle](/lifecycle/products/).
 
-Versions of Windows Server that have reached or are reaching the end of extended support are:
+The following versions of Windows Server have reached or are in the process of reaching the end of extended support:
 
 - Extended support for [Windows Server 2008](/lifecycle/products/windows-server-2008) and [Windows Server 2008 R2](/lifecycle/products/windows-server-2008-r2) ended on January 14, 2020.
 - Extended support for [Windows Server 2012](/lifecycle/products/windows-server-2012) and [Windows Server 2012 R2](/lifecycle/products/windows-server-2012-r2) will be ending on October 10, 2023.
+
+<!--Windows Server 2008 is long past expired. Ask if I should take this out.-->
 
 ## What are Extended Security Updates?
 
@@ -36,13 +36,13 @@ With Extended Security Updates, the different phases for these versions of Windo
 
 :::image type="content" source="media/esu-phases.png" alt-text="Diagram showing the phases with Extended Security Updates":::
 
-If you haven't already upgraded your servers, the following options will help protect your applications and data during the transition:
+If you haven't already upgraded your servers, you can do the following things to protect your applications and data during the transition:
 
-- **Migrate the affected existing Windows Server workloads as-is to Azure Virtual Machines (VM)**: this migration to Azure automatically provides Extended Security Updates for the defined period. There's no additional charge for Extended Security Updates on top of an Azure VM's cost, and there's no additional configuration required.
+- Migrate the affected existing Windows Server workloads as-is to Azure Virtual Machines (VM). Migrating to Azure automatically provides Extended Security Updates for the defined period. There's no additional charge for Extended Security Updates on top of an Azure VM's cost, and there's no additional configuration required.
 
-- **Purchase an Extended Security Update subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version**: these updates are provided for the defined period. Once the subscription is purchased, you need to obtain a product key and install it on each applicable server. For more information, see [How to get Extended Security Updates](extended-security-updates-deploy.md).
+- Purchase an Extended Security Update subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version. Wen you have an Extended Security Update subscription, Microsoft provides updates for the defined period. Once you purchase a subscription, you must get a product key and install it on each applicable server. For more information, see [How to get Extended Security Updates](extended-security-updates-deploy.md).
 
-The period of time Extended Security Updates will be provided depends on the version of Windows Server, and where it's hosted:
+WHen you get the Extended Security Updates depends on which version of Windows Server you're using and where it's hosted. The following table lists the Extended Security Update duration for each version of Windows Server.
 
 | Product version | Hosted | ESU duration | ESU end date |
 |--|--|--|--|
