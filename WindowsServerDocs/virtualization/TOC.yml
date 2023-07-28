@@ -66,7 +66,7 @@
       - name: Discrete Device Assignment
         href: hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md
       - name: What is Nested Virtualization?
-        href: /virtualization/hyper-v-on-windows/user-guide/nested-virtualization?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        href: /virtualization/hyper-v-on-windows/user-guide/nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Deploy
       href: hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md
       items:
@@ -83,7 +83,7 @@
       - name: Deploy storage devices using DDA
         href: hyper-v/deploy/deploying-storage-devices-using-dda.md
       - name: Enable Nested Virtualization
-        href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Manage
       href: hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md
       items:
