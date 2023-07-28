@@ -99,7 +99,7 @@ Reboots keep the VM in sync with nonsecurity patches included in the latest cumu
 ## Patch orchestration process
 
 Hotpatch is an extension of Windows Update and typical orchestration processes. Patch orchestration
-tools vary depending on your platform. To orchestration Hotpatch:
+tools vary depending on your platform. To orchestrate Hotpatch:
 
 - **Azure:** Virtual machines created in Azure are enabled for
   [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) by default with
@@ -115,6 +115,9 @@ tools vary depending on your platform. To orchestration Hotpatch:
 
   - Virtual machine health, as determined through platform health signals, is monitored to detect
     patching failures.
+
+  > [!NOTE]
+  > You can't create VM scale sets (VMSS) with Uniform orchestration on Azure Edition images with Hotpatch. To learn more about which features are supported by Uniform orchestration for scale sets, see [A comparison of Flexible, Uniform, and availability sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes).
 
 - **Azure Stack HCI:** Hotpatch updates for virtual machines created on Azure Stack HCI are
   orchestrated using:
@@ -158,15 +161,11 @@ You can also view the installed patches using the
 [Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix) PowerShell command or
 using the Settings app when using the Desktop Experience.
 
-### Virtual Machine Scale Sets Uniform Orchestration on Azure-Edition images
+## Rollback support on Hotpatching
 
-* The [Windows Server 2022 Azure Edition Images](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsserver.windowsserver?tab=PlansAndPrice) provide the best in class operating system that includes the innovation built into Windows Server 2022 images plus additional features. Since Azure Edition images support Hotpatching, VM scale sets (VMSS) with Uniform Orchestration can't be created on these images. The blockade on using VMSS Uniform Orchestration on these images will be lifted once [Auto Guest Patching](https://learn.microsoft.com/azure/virtual-machines/automatic-vm-guest-patching?toc=https%3A%2F%2Flearn.microsoft.com%2F%2Fazure%2Fvirtual-machine-scale-sets%2Ftoc.json&bc=https%3A%2F%2Flearn.microsoft.com%2F%2Fazure%2Fbread%2Ftoc.json) and Hotpatching are supported.
-
-### Rollback Support on Hotpatching
-
-* The installation of Hotpatch or Baseline updates does not support an automatic rollback. In the event a VM experiences an issue during or after an update, you will have to uninstall the latest update and install the last known good baseline update. This process will require a VM reboot.
-
-
+The installation of Hotpatch or Baseline updates doesn't support automatic rollback. If a VM
+experiences an issue during or after an update, you'll have to uninstall the latest update and
+install the last known good baseline update. You'll need to reboot the VM after rollback.
 
 ## Next steps
 
