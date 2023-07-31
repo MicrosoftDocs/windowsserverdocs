@@ -221,7 +221,7 @@ The Windows Admin Center extension can communicate through a proxy server by usi
 
 ```powershell
 $wacPort = "6516"
-$settings = @{"port" = $wacPort; "proxy" = @{mode = "application"; address = "http://[address]:[port]";}}
+$settings = @{"port" = $wacPort; "proxy" = @{"mode" = "application"; "address" = "http://[address]:[port]";}}
 New-AzConnectedMachineExtension -Name AdminCenter -ExtensionType AdminCenter -Publisher Microsoft.AdminCenter -ResourceGroupName <resource-group-name> -MachineName <arc-server-name> -Location <arc-server-location> -Setting $settings -SubscriptionId <subscription-id>
 ```
 
