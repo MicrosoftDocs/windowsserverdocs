@@ -3,7 +3,7 @@ title: Manage Hyper-V hypervisor scheduler types
 description: Learn about new modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
 ms.author: wscontent
 author: BenjaminArmstrong
-ms.date: 06/12/2023
+ms.date: 07/31/2023
 ms.topic: article
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---
@@ -17,20 +17,26 @@ This article describes new modes of virtual processor scheduling logic introduce
 - Select hypervisor scheduler types best suited for guest virtual machines (VMs).
 - Configure VMs to take advantage of scheduling logic.
 
-> [!NOTE]
-> You must have all [required updates](#required-updates) in order to use the hypervisor scheduler features.
+## Prerequisites
+
+You must install the following updates in order to use the [hypervisor scheduler](#hypervisor-scheduler-types) features described later in this article. These updates include changes to support the new `hypervisorschedulertype` BCD option, which is necessary for host configuration.
+
+| Version | Release  | Update Required | KB Article |
+|--------------------|------|---------|-------------:|
+|Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
+|Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
+|Windows Server 2016 | 1709 | 2018.07 C | [KB4338817](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) |
+|Windows Server 2019 | 1804 | None | None |
 
 ## Background
 
-Before discussing the logic and controls behind Hyper-V virtual processor scheduling, it's helpful to review the basic concepts covered in this article.
+Before discussing the logic and controls behind Hyper-V virtual processor scheduling, it's important to understand certain concepts like simultaneous multithreading and how Hyper-V virtualizes processors.
 
 ### Understand SMT
 
 Simultaneous multithreading (SMT) is a technique in modern processor designs that lets separate, independent execution threads share processor resources. SMT usually gives a modest performance boost to most workloads. It parallelizes computations when possible, increasing instruction throughput. However, there are also times where there's no noticeable improvement in performance or even a slight loss when threads compete with each other for shared processor resources.
 
-Processors supporting SMT are available from both Intel and Advanced Micro Devices (AMD). Intel refers to their SMT offerings as Intel Hyper Threading Technology (Intel HT).
-
-<!--Do we need this third-party information? ^ -->
+In order to use SMT with Windows Server, you must have a compatible processor. For example, a processor with Intel Hyper-Threading technology or Advanced Micro Devices (AMD) Multithreading (SMT).
 
 For the purposes of this article, the descriptions of SMT and how it's used by Hyper-V apply equally to both Intel and AMD systems.
 
@@ -38,7 +44,7 @@ For the purposes of this article, the descriptions of SMT and how it's used by H
 
 - For more information on AMD SMT, see [The "Zen" Core Architecture](https://www.amd.com/en/technologies/zen-core).
 
-## Understand how Hyper-V virtualizes processors
+### Understand how Hyper-V virtualizes processors
 
 Before considering hypervisor scheduler types, you should understand Hyper-V architecture. You can find a more detailed summary of how this architecture works in the [Hyper-V technology overview](../hyper-v-technology-overview.md), but for now, you should keep the following concepts in mind:
 
@@ -46,9 +52,9 @@ Before considering hypervisor scheduler types, you should understand Hyper-V arc
 
 - The root partition is itself a VM partition, although it has unique properties and greater privileges than guest VMs. The root partition:
 
-  - Providing management services that control all guest VMs.
-  - Providing virtual device support for guests.
-  - Managing all device input and output for guest VMs.
+  - Provides management services that control all guest VMs.
+  - Provides virtual device support for guests.
+  - Manages all device input and output for guest VMs.
 
   We recommend not running any application workloads in the root partition.
 
@@ -70,7 +76,7 @@ In Windows Server 2016, the Hyper-V hypervisor supports several modes of schedul
 
 The classic scheduler has been the default for all versions of the Windows Hyper-V hypervisor since its inception, including Windows Server 2016 Hyper-V. The classic scheduler provides a fair share, preemptive, round-robin scheduling model for guest virtual processors.
 
-The classic scheduler type is the most appropriate for most traditional Hyper-V uses, such as private clouds, hosting providers, and so on. The performance characteristics of the classic scheduler type is best optimized to support a wide range of virtualization scenarios, such as:
+The classic scheduler type is the most appropriate for most traditional Hyper-V uses, such as private clouds, hosting providers, and so on. The performance characteristics of the classic scheduler type are best optimized to support a wide range of virtualization scenarios, such as:
 
 - Over-subscribing of VPs to LPs.
 - Running many heterogeneous VMs and workloads at the same time.
@@ -112,12 +118,10 @@ The root scheduler addresses the unique requirements to support a utility partit
 
 #### Root scheduler use on client systems
 
-Beginning with Windows 10, version 1803, the root scheduler is used by default on client systems only, which means:
+Starting with Windows 10, version 1803, the root scheduler is used by default on client systems only, which means:
 
-- The hypervisor might be enabled in support of virtualization-based security and WDAG workload isolation.
-- Proper operation of future systems with heterogeneous core architectures is helpful.
-
-<!--come back and take another look at this bulleted list-->
+- You can enable the hypervisor to support virtualization-based security and WDAG workload isolation.
+- It's important to properly operate future systems with heterogenous core architectures.
 
 This configuration is the only supported hypervisor scheduler configuration for client systems. Administrators shouldn't attempt to override the default hypervisor scheduler type on Windows client systems.
 
@@ -134,7 +138,7 @@ We don't recommend using the root scheduler with Hyper-V on servers. Its perform
 Once you configure the virtualization host's hypervisor to use the core scheduler type, you can also configure guest VMs to use SMT. Exposing the fact that VPs are hyperthreaded to a guest VM lets the scheduler in the guest operating system and workloads running in the VM detect and use the SMT topology in their own work scheduling.
 
 - In Windows Server 2016, guest SMT isn't configured by default. A Hyper-V host administrator must explicitly enable it.
-- Beginning with Windows Server 2019, new VMs you create on the host inherit the host SMT topology by default. For example, a version 9.0 VM that you create on a host with two SMT threads per core would also have two SMT threads per core.
+- Starting with Windows Server 2019, new VMs you create on the host inherit the host SMT topology by default. For example, a version 9.0 VM that you create on a host with two SMT threads per core would also have two SMT threads per core.
 
 You must use PowerShell to enable SMT in a guest VM. There's no user interface provided in Hyper-V Manager.
 To enable SMT in a guest VM:
@@ -159,17 +163,6 @@ Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by defau
 ## Windows Server 2019 Hyper-V defaults to using the core scheduler
 
 To ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 Hyper-V now uses the core hypervisor scheduler model by default. The host administrator might optionally configure the host to use the legacy classic scheduler. Prior to overriding the default settings, administrators should carefully read, understand, and consider the impacts each scheduler type has on the security and performance of virtualization hosts. For more information, see [About Hyper-V hypervisor scheduler type selection](./about-hyper-v-scheduler-type-selection.md).
-
-### Required updates
-
-The following updates are required to use the hypervisor scheduler features described in this document. These updates include changes to support the new `hypervisorschedulertype` BCD option, which is necessary for host configuration.
-
-| Version | Release  | Update Required | KB Article |
-|--------------------|------|---------|-------------:|
-|Windows Server 2016 | 1607 | 2018.07 C | [KB4338822](https://support.microsoft.com/help/4338822/windows-10-update-kb4338822) |
-|Windows Server 2016 | 1703 | 2018.07 C | [KB4338827](https://support.microsoft.com/help/4338827/windows-10-update-kb4338827) |
-|Windows Server 2016 | 1709 | 2018.07 C | [KB4338817](https://support.microsoft.com/help/4338817/windows-10-update-kb4338817) |
-|Windows Server 2019 | 1804 | None | None |
 
 ## Select the hypervisor scheduler type on Windows Server
 
