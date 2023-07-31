@@ -96,26 +96,33 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 Windows Admin Center is supported in the following Azure regions:
 
-- West Central US
-- West US 2
-- West Europe
-- Southeast Asia
-- East US
-- Australia East
-- South Central US
-- East US 2
-- North Europe
-- France Central
-- Japan East
-- UK South
-- East Asia
-- Canada Central
-- Korea Central
-- North Central US
-- West US
-- West US 3
-- Central US
-- UK West
+- Australia East
+- Brazil South
+- Canada Central
+- Canada East
+- Central India
+- Central US
+- East Asia
+- East US
+- East US 2
+- France Central
+- Japan East
+- Korea Central
+- North Central US
+- North Europe
+- South Africa North
+- South Central US
+- Southeast Asia
+- Sweden Central
+- Switzerland North
+- UAE North
+- UK South
+- UK West
+- West Central US
+- West Europe
+- West US
+- West US 2
+- West US 3
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
@@ -134,21 +141,15 @@ The hybrid machine must meet the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
-  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) (for extension versions less than 0.0.0.203)
-  - `*.waconazure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) (for extension versions greater than or equal to 0.0.0.203)
+  - `*service.waconazure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags)
   - `pas.windows.net`
   - `*.servicebus.windows.net`
 
 > [!NOTE]
 > No inbound ports are required in order to use Windows Admin Center.
 
-
-> [!NOTE]
-> Confiuring Windows Admin Center to communicate through an HTTP/HTTPS proxy server is currently not supported.
-
-
 The management machine where the Azure Portal is running must meet the following networking requirements:
-- Outbound internet access over port `6443`
+- Outbound internet access over port `443`
 
 Make sure you review the [supported devices and recommended browsers](/azure/azure-portal/azure-portal-supported-browsers-devices) before accessing the Azure portal from the management machine or system.
 
@@ -204,6 +205,25 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 - [Assign Azure roles using the Azure CLI examples](/cli/azure/role/assignment#az-role-assignment-create). Azure CLI can also be used in the Azure Cloud Shell experience.
 - [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 - [Assign Azure roles using Azure PowerShell](/azure/role-based-access-control/role-assignments-powershell).
+
+## Proxy configuration
+If the machine connects through a proxy server to communicate over the internet, review the following requirements to understand the network configuration required.
+
+The Windows Admin Center extension can communicate through a proxy server by using the HTTPS protocol. Use the extensions settings for configuration as described in the following steps. Authenticated proxies are not supported.
+
+> [!NOTE]
+> Proxy configuration is only supported for extension versions greater than 0.0.0.321.
+
+1. Use this flowchart to determine the values of the `Settings` parameters
+    :::image type="content" source="../../media/manage-vm/enterprise-proxy-workflow.png" alt-text="Workflow for customers to understand the configuration needed to use proxies with Windows Admin Center." lightbox="../../media/manage-vm/enterprise-proxy-workflow.png":::
+
+1. After you determine the `Settings` parameter values, provide these other parameters when you deploy the AdminCenter Agent. Use PowerShell commands, as shown in the following example:
+
+```powershell
+$wacPort = "6516"
+$settings = @{"port" = $wacPort; "proxy" = @{mode = "application"; address = "http://[address]:[port]";}}
+New-AzConnectedMachineExtension -Name AdminCenter -ExtensionType AdminCenter -Publisher Microsoft.AdminCenter -ResourceGroupName <resource-group-name> -MachineName <arc-server-name> -Location <arc-server-location> -Setting $settings -SubscriptionId <subscription-id>
+```
 
 ## How it works
 
