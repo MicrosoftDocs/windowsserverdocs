@@ -188,9 +188,7 @@ You can encounter this issue when the system has network or DNS issues.
 
 #### Solution: troubleshoot network connections and DNS
 
-To resolve this issue, troubleshoot your network connections and DNS.
-
-<!--And how do we do this? Very vague.-->
+To resolve this issue, troubleshoot your network connections and DNS by following the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
 ### 0x8007232B DNS name does not exist
 
