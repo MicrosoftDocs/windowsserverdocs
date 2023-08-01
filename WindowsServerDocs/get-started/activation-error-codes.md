@@ -13,10 +13,6 @@ manager: dcscontentpm
 
 # Resolve Windows activation error codes
 
-<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=winact" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common issues related to KMS and MAK activation</span>
-
-<!--No inline markdown, so I'll eventually need to take this out, but is there a better template to include this agent button link?-->
-
 > [!NOTE]
 > This article is intended for technical support agents and IT professionals. If you're looking for more information about Windows activation error messages, see [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).
 
@@ -27,6 +23,8 @@ For more information about volume activation, see [Plan for volume activation](/
 For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](/windows/deployment/volume-activation/volume-activation-windows-10).
 
 For more information about volume activation for older versions of Windows, see [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+
+You can also try [our Virtual Agent](https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=winact), which can help you quickly identify and troubleshoot issues related to KMS and MAK activation.
 
 ## Diagnostic tool
 
@@ -60,7 +58,7 @@ The following table lists known error codes for Windows Activation, and includes
 |[0x8004FE21](#0x8004fe21-this-computer-is-not-running-genuine-windows) |This computer is not running genuine Windows.  |MAK<br />KMS client |
 |[0x80070005](#0x80070005-access-denied) |Access denied. The requested action requires elevated privileges. |MAK<br />KMS client<br />KMS host |
 |[0x8007007b](#0x8007007b-dns-name-does-not-exist) |0x8007007b DNS name does not exist. |KMS client |
-|[0x80070490](#0x80070490-the-product-key-you-entered-didnt-work) |The product key you entered didn't work. Check the product key and try again, or enter a different one. |MAK |
+|[0x80070490](#0x80070490-the-product-key-didnt-work) |The product key you entered didn't work. Check the product key and try again, or enter a different one. |MAK |
 |[0x800706BA](#0x800706ba-the-rpc-server-is-unavailable) |The RPC server is unavailable. |KMS client |
 |[0x8007232A](#0x8007232a-dns-server-failure) |DNS server failure.  |KMS host  |
 |[0x8007232B](#0x8007232b-dns-name-does-not-exist) |DNS name does not exist. |KMS client |
@@ -78,8 +76,8 @@ The following table lists known error codes for Windows Activation, and includes
 |[0xC004F02C](#0xc004f02c-the-software-protection-service-reported-that-the-format-for-the-offline-activation-data-is-incorrect) |The Software Protection Service reported that the format for the offline activation data is incorrect. |MAK<br />KMS client |
 |[0xC004F035](#0xc004f035-invalid-volume-license-key) |The Software Protection Service reported that the computer could not be activated with a Volume license product key. |KMS client<br />KMS host |
 |[0xC004F038](#0xc004f038-the-count-reported-by-your-key-management-service-kms-is-insufficient) |The Software Protection Service reported that the computer could not be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator. |KMS client |
-|[0xC004F039](#0xc004f039-the-key-management-service-kms-is-not-enabled) |The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) is not enabled. |KMS client |
-|[0xC004F041](#0xc004f041-the-software-protection-service-determined-that-the-key-management-server-kms-is-not-activated) |The Software Protection Service determined that the Key Management Server (KMS) is not activated. KMS needs to be activated.  |KMS client |
+|[0xC004F039](#0xc004f039-the-key-management-service-kms-isnt-enabled) |The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) is not enabled. |KMS client |
+|[0xC004F041](#0xc004f041-the-software-protection-service-determined-that-the-key-management-server-kms-isnt-activated) |The Software Protection Service determined that the Key Management Server (KMS) is not activated. KMS needs to be activated.  |KMS client |
 |[0xC004F042](#0xc004f042-the-software-protection-service-determined-that-the-specified-key-management-service-kms-cannot-be-used) |The Software Protection Service determined that the specified Key Management Service (KMS) cannot be used. |KMS client |
 |[0xC004F050](#0xc004f050-the-software-protection-service-reported-that-the-product-key-is-invalid) |The Software Protection Service reported that the product key is invalid. |MAK<br />KMS<br />KMS client |
 |[0xC004F051](#0xc004f051-the-software-protection-service-reported-that-the-product-key-is-blocked) |The Software Protection Service reported that the product key is blocked. |MAK<br />KMS |
@@ -202,7 +200,12 @@ This error message appears when the KMS client can't find KMS server resource re
 
 #### Solution 1: point the KMS client to the correct KMS host
 
-Make sure you've installed a KMS and the DNS publishing is enabled (default). If the DNS isn't available, point the KMS client to the KMS host by opening an elevated command-prompt and running **slmgr.vbs /skms <*kms_host_name*>**.
+Make sure you've installed a KMS and the DNS publishing is enabled (default). If the DNS isn't available, point the KMS client to the KMS host by opening an elevated command-prompt and running the following command:
+
+```cmd
+slmgr.vbs /skms <kms_host_name>
+```
+
 
 #### Solution 2: get a MAK
 
