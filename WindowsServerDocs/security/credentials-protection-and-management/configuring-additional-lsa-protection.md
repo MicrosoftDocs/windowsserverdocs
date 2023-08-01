@@ -27,6 +27,8 @@ For an LSA plug-in or driver to successfully load as a protected process, it mus
     LSA plug-ins that are drivers, such as smart card drivers, need to be signed by using the WHQL Certification. For more information, see [WHQL Release Signature](/windows-hardware/drivers/install/whql-release-signature).
 
     LSA plug-ins that don't have a WHQL Certification process, must be signed by using the [file signing service for LSA](/windows-hardware/drivers/dashboard/).
+    
+    It is not sufficient for the module to be signed by a private certification authority. It needs to be signed by Microsoft via the above partner program.
 
 2. Adherence to the Microsoft Security Development Lifecycle (SDL) process guidance
 
