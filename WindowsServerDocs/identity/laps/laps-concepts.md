@@ -131,7 +131,7 @@ When you design your password retrieval security model, consider the information
 
 The diagram illustrates the suggested Windows Server Active Directory password security layers and their relationship to each other.
 
-The outermost circle (green) is composed of security principals that have been granted permission to read or set the password expiration time attribute on computer objects in the directory. This ability is a sensitive permission but is considered non-destructive. An attacker who acquires this permission can force managed devices to rotate their managed devices more frequently.
+The outermost circle (green) is composed of security principals that have been granted permission to read or set the password expiration time attribute on computer objects in the directory. This ability is a sensitive permission but is considered nondestructive. An attacker who acquires this permission can force managed devices to rotate their managed devices more frequently.
 
 The middle circle (yellow) is composed of security principals that have been granted permission to read or set password attributes on computer objects in the directory. This ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for members of the Domain Admins security group.
 
