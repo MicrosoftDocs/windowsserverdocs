@@ -60,7 +60,7 @@ Before considering hypervisor scheduler types, you should understand Hyper-V arc
 
 - Each virtual processor (VP) of the root partition is mapped one-to-one to an underlying logical processor (LP). A host VP always runs on the same underlying LP. There's no migration of the root partition's VPs.
 
-- By default, the LPs on which host the root partition's VPs run can also run guest VPs.
+- By default, the LPs which host the root partition's VPs run can also run guest VPs.
 
 - Hypervisor might schedule the guest VP to run on any available logical processor. While the hypervisor scheduler tries to consider temporal cache locality, non-uniform memory access (NUMA) topology, and many other factors when scheduling a guest VP, ultimately the VP can be scheduled on any host LP.
 
