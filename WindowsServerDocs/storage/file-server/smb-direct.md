@@ -4,7 +4,7 @@ description: SMB Direct allows for faster file transfer and more efficient netwo
 ms.topic: how-to
 author: xelu86
 ms.author: wscontent
-ms.date: 08/01/2023
+ms.date: 08/02/2023
 ---
 
 # SMB Direct
@@ -54,7 +54,7 @@ Beginning in Windows Server 2022 and Windows 11, SMB Direct now supports encrypt
 
 Furthermore, Windows Server failover clusters now support granular control of encrypting intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct and SMB Direct, you can decide to encrypt east-west communications within the cluster itself for higher security.
 
-## Disabling and Enabling SMB Direct features
+## Disabling and enabling SMB Direct features
 
 The SMB client automatically detects and uses multiple network connections if an appropriate configuration is identified. As SMB Direct is enabled by default, once disabled, it needs to be manually re-enabled whenever needed.
 
