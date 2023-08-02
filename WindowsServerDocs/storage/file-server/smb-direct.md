@@ -4,7 +4,7 @@ description: SMB Direct allows for faster file transfer and more efficient netwo
 ms.topic: how-to
 author: xelu86
 ms.author: wscontent
-ms.date: 05/19/2023
+ms.date: 08/01/2023
 ---
 
 # SMB Direct
@@ -32,7 +32,11 @@ SMB Direct requires the following:
 - At least two computers running one or more of the following operating systems:
   - Windows Server 2012 and later.
   - Windows 10 Enterprise and later.
+  - Windows 10 Education and later.
   - Windows 10 Pro and later.
+
+> [!NOTE]
+> Windows 10 and Windows 11 family are restricted to client-only and can't act as an SMB Direct server.
 
 ### SMB Multichannel
 
@@ -56,12 +60,12 @@ The SMB client automatically detects and uses multiple network connections if an
 
 # [Disable](#tab/disable)
 
-Typically, you won't need to disable SMB Direct, however, you can disable it, along with its features, by running the following Windows PowerShell commands.
+Typically, you won't need to disable SMB Direct, however, you can disable it along with its features, by running the following Windows PowerShell commands.
 
 To disable SMB Direct, type:
 
 ```powershell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" -Name "DisableRDMA" -Value 1 -Type DWord -Force
+Disable-WindowsOptionalFeature -Online -FeatureName SMBDirect
 ```
 
 To disable SMB Multichannel on the server-side, type:
@@ -97,7 +101,7 @@ After disabling SMB Direct and its features, you can re-enable them by running t
 To enable SMB Direct, type:
 
 ```powershell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" -Name "DisableRDMA" -Value 0 -Type DWord -Force
+Enable-WindowsOptionalFeature -Online -FeatureName SMBDirect
 ```
 
 To enable SMB Multichannel on the server-side, type:
@@ -128,6 +132,12 @@ RDMA must be enabled on both the client and the server to start using it again.
 
 ---
 
+To verify which state of operability SMB Direct is currently configured to, run the following cmdlet:
+
+```powershell
+Get-WindowsOptionalFeature -Online -FeatureName SMBDirect
+```
+
 ## Testing SMB Direct
 
 You can test the performance of SMB Direct by measuring the throughput when running a large file copy. Prior to testing, verify that the network adapter supports RDMA using PowerShell.
@@ -153,6 +163,14 @@ Once the network adapter is verified RDMA-capable, perform the following test:
    1. Copy a large amount of data (more data than memory is capable of handling).
    1. Copy the data twice, with the first copy as practice and then timing the second copy.
    1. Restart both the server and the client before each test to ensure they operate under similar conditions.
+
+Additionally, you can observe the performance counters during testing using the same scenario utilizing the Performance Monitor tool by performing the following:
+
+1. Select **Start**, type **perfmon**, hit <kbd>Enter</kbd>.
+1. In the left pane, under **Monitoring Tools** > select **Performance Monitor**.
+1. In the right pane, select the green "**+**" icon to add a new counter.
+1. In the **Add Counters** dialog box, expand **SMB Direct Connection**.
+1. Select both **Bytes RDMA Read/sec** and **Bytes RDMA Written/sec**, select **Add**, then select **OK**.
 
 ## SMB Direct failover capability
 
