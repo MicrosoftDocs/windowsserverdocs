@@ -90,6 +90,8 @@ The following table lists known error codes for Windows Activation, and includes
 
 ### 0x8004FE21 This computer is not running genuine Windows
 
+<!--Missing intro-->
+
 #### 0x8004FE21 Causes
 
 This issue can occur for several reasons:
@@ -125,6 +127,8 @@ To resolve this issue:
 
 ### 0x8007007b DNS name does not exist
 
+<!--Missing intro-->
+
 #### 0x8007007b Cause
 
 This issue can occur if the KMS client can't find the KMS SRV resource records in DNS.
@@ -159,6 +163,8 @@ To work around this issue and activate the computer:
 
 ### 0x800706BA The RPC server is unavailable
 
+<!--Missing intro-->
+
 #### 0x800706BA cause
 
 You can encounter this issue because of the following things:
@@ -182,6 +188,8 @@ You can also follow the instructions in [Common troubleshooting procedures for K
 
 ### 0x8007232A DNS server failure
 
+<!--Missing intro-->
+
 #### 0x8007232A cause
 
 You can encounter this issue when the system has network or DNS issues.
@@ -191,6 +199,8 @@ You can encounter this issue when the system has network or DNS issues.
 To resolve this issue, troubleshoot your network connections and DNS by following the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
 ### 0x8007232B DNS name does not exist
+
+<!--Missing intro-->
 
 #### 0x8007232B cause
 
@@ -204,7 +214,6 @@ Make sure you've installed a KMS and the DNS publishing is enabled (default). If
 slmgr.vbs /skms <kms_host_name>
 ```
 
-
 #### Solution 2: get a MAK
 
 If you don't have a KMS host, get and install an MAK, then try activating the system again.
@@ -212,6 +221,8 @@ If you don't have a KMS host, get and install an MAK, then try activating the sy
 If these solutions don't resolve the issue, see the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
 ### 0x8007251D No records found for DNS query
+
+<!--Missing intro-->
 
 #### 0x8007251D cause
 
@@ -223,6 +234,8 @@ To resolve this issue, follow the instructions in [Common troubleshooting proced
 
 ### 0x80092328 DNS name does not exist
 
+<!--Missing intro-->
+
 #### 0x80092328 cause
 
 You can encounter this issue if the KMS client can't find the KMS SRV resource records in DNS.
@@ -232,6 +245,8 @@ You can encounter this issue if the KMS client can't find the KMS SRV resource r
 To resolve this issue, follow the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md) to troubleshoot your network connections and DNS.
 
 ### 0xC004B100 The activation server determined that the computer could not be activated
+
+<!--Missing intro-->
 
 #### 0xC004B100 cause
 
@@ -243,6 +258,8 @@ To troubleshoot this issue, verify that the MAK you're using is the same MAK tha
 
 ### 0xC004C001 The activation server determined the specified product key is invalid
 
+<!--Missing intro-->
+
 #### 0xC004C001 cause
 
 You can encounter this issue when the MAK you enter isn't valid.
@@ -253,15 +270,19 @@ You can try reentering the MAK to make sure you entered the correct information.
 
 ### 0xC004C003 The activation server determined the specified product key is blocked
 
-#### Possible cause
+<!--Missing intro-->
 
-The MAK is blocked on the activation server.
+#### 0xC004C003 cause
+
+You can encounter this issue if the MAK is blocked on the activation server.
 
 #### Solution: get a new MAK
 
 To obtain a new MAK, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers). After you obtain the new MAK, try installing and activating Windows again.
 
 ### 0xC004C008 The activation server determined that the specified product key could not be used
+
+<!--Missing intro-->
 
 #### 0xC004C008 cause
 
@@ -273,6 +294,8 @@ If you require more activations, contact the [Microsoft Licensing Activation Cen
 
 ### 0xC004C020 The activation server reported that the Multiple Activation Key has exceeded its limit
 
+<!--Missing intro-->
+
 #### 0xC004C020 cause
 
 This error message appears when the MAK exceeds its activation limit. By design, you can only activate a MAK a limited number of times.
@@ -283,15 +306,19 @@ If you require more activations, contact the [Microsoft Licensing Activation Cen
 
 ### 0xC004C021 The activation server reported that the Multiple Activation Key extension limit has been exceeded
 
+<!--Missing intro-->
+
 #### 0xC004C021 cause
 
 This error message appears when the MAK exceeds its activation limit. By design, you can only activate a MAK a limited number of times.
 
-#### Solution: rquest more activations to increase extension limit
+#### Solution: request more activations to increase extension limit
 
 If you need additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004F009 The Software Protection Service reported that the grace period expired
+
+<!--Missing intro-->
 
 #### 0xC004F009 cause
 
@@ -303,15 +330,15 @@ For assistance, contact the [Microsoft Licensing Activation Centers](https://www
 
 ### 0xC004F00F The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance
 
+<!--Missing intro-->
+
 #### 0xC004F00F cause
 
 This error message appears when the system hardware changes or its drivers update.
 
 #### Solution 1: reactivate the system during the grace period
 
-If you're using MAK activation, reactivate the system phone by using either online or phone activation during the OOT grace period.
-
-<!--Note to self: look up this acronym.-->
+If you're using MAK activation, reactivate the system phone by using either online or phone activation during the Out of Tolerance (OOT) grace period.
 
 ### Solution 2: restart Windows or run a command
 
@@ -325,6 +352,8 @@ If you're using KMS activation, try one of the following things:
    ```
 
 ### 0xC004F014 The Software Protection Service reported that the product key is not available
+
+<!--Missing intro-->
 
 #### 0xC004F014 cause
 
@@ -341,15 +370,15 @@ If you're using KMS activation:
 
 ### 0xC004F02C The Software Protection Service reported that the format for the offline activation data is incorrect
 
+<!--Missing intro-->
+
 #### 0xC004F02C cause
 
 This error message appears when the system detects the data entered during phone activation isn't valid.
 
-#### Solution: reenter your CID
+#### Solution: reenter your caller ID
 
-To resolve this issue, make sure you entered the CID correctly.
-
-<!--Note to self: define CID acronym-->
+To resolve this issue, make sure you entered the caller ID (CID) correctly.
 
 ### 0xC004F035 Invalid Volume License Key
 
