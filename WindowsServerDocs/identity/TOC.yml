@@ -984,6 +984,8 @@
         items:
         - name: What is the Certification Authority Role Service?
           href: ad-cs/certification-authority-role.md
+        - name: PKI design considerations
+          href: ad-cs/pki-design-considerations.md
         - name: Network Device Enrollment Service
           href: ad-cs/network-device-enrollment-service-overview.md
         - name: Certificates and trust
