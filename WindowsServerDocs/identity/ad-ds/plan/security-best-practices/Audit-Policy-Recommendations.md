@@ -42,9 +42,9 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 | **Notation** | **Recommendation** |
 | --- | --- |
-| YES | Enable in general scenarios |
-| NO | Do **not** enable in general scenarios |
-| IF | Enable if needed for a specific scenario, or if a role or feature for which auditing is desired is installed on the machine |
+| Yes | Enable in general scenarios |
+| No | Do not enable in general scenarios |
+| If | Enable if needed for a specific scenario, or if a role or feature for which auditing is desired is installed on the machine |
 | DC | Enable on domain controllers |
 | [Blank] | No recommendation |
 
