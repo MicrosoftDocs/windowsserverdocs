@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 01/17/2022
+ms.date: 08/03/2023
 ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -40,7 +40,7 @@ If you haven't already upgraded your servers, you can do the following things to
 
 - Migrate the affected existing Windows Server workloads as-is to Azure Virtual Machines (VM). Migrating to Azure automatically provides Extended Security Updates for the defined period. There's no extra charge for Extended Security Updates on top of an Azure VM's cost, and you don't need to do any other configuration.
 
-- Purchase an Extended Security Update subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version. Wen you have an Extended Security Update subscription, Microsoft provides updates for the defined period. Once you purchase a subscription, you must get a product key and install it on each applicable server. For more information, see [How to get Extended Security Updates](extended-security-updates-deploy.md).
+- Purchase an Extended Security Update subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version. When you have an Extended Security Update subscription, Microsoft provides updates for the defined period. Once you purchase a subscription, you must get a product key and install it on each applicable server. For more information, see [How to get Extended Security Updates](extended-security-updates-deploy.md).
 
 When you get the Extended Security Updates depends on which version of Windows Server you're using and where it's hosted. The following table lists the Extended Security Update duration for each version of Windows Server.
 
@@ -58,7 +58,7 @@ When you get the Extended Security Updates depends on which version of Windows S
 
 ## Migrate to Azure
 
-You can migrate your on-premises servers that run a version of Windows Server that's reached or has almost reached the end of extended support to Azure, where you can continue to run them as virtual machines. When you migrate to Azure, you not only stay compliant with security requirements, but also become more secure and add cloud innovation to your work. The benefits of migrating to Azure include:
+You can migrate your on-premises servers that run a version of Windows Server that has reached or is almost reaching the end of extended support to Azure, where you can continue to run them as virtual machines. When you migrate to Azure, you not only stay compliant with security requirements, but also become more secure and add cloud innovation to your work. The benefits of migrating to Azure include:
 
 - Security updates in Azure.
 - Get Windows Server critical and important security updates for a certain period of time, included at no extra charge.
@@ -84,7 +84,7 @@ If you need to keep your servers on-premises instead of migrating to Azure and t
 
 In-place upgrades can typically upgrade Windows Server through at least one version, sometimes even two versions. For example, Windows Server 2012 R2 can upgrade in-place to Windows Server 2019. However, if you're running Windows Server 2008 or Windows Server 2008 R2, there's no direct upgrade path to Windows Server 2016 or later. Instead, you must first upgrade to Windows Server 2012 R2, then upgrade to Windows Server 2016 or Windows Server 2019.
 
-As you upgrade, you can also migrate to Azure at any time. For more information about your on-premises upgrade options [supported upgrade paths for Windows Server](supported-upgrade-paths.md).
+As you upgrade, you can also migrate to Azure at any time. For more information about your on-premises upgrade options, see [supported upgrade paths for Windows Server](supported-upgrade-paths.md).
 
 ## Upgrade SQL Server in parallel with your Windows Servers
 
