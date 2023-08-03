@@ -94,11 +94,17 @@ Within this document, permissions refers to capabilities that are granted or den
 It is for this reason that this document encourages you to avoid using powerful accounts and groups for day-to-day administration, rather than trying to restrict the capabilities of the accounts and groups. It is not effectively possible to stop a determined user who has access to powerful credentials from using those credentials to gain access to any securable resource.
 
 ### Built-in Privileged Accounts and Groups
+
 Active Directory is intended to facilitate delegation of administration and the principle of least privilege in assigning rights and permissions. "Regular" users who have accounts in an Active Directory domain are, by default, able to read much of what is stored in the directory, but are able to change only a very limited set of data in the directory. Users who require additional privilege can be granted membership in various privileged groups that are built into the directory so that they may perform specific tasks related to their roles, but cannot perform tasks that are not relevant to their duties.
 
-Within Active Directory, there are three built-in groups that comprise the highest privilege groups in the directory: the Enterprise Admins (EA) group, the Domain Admins (DA) group, and the built-in Administrators (BA) group.
+Within Active Directory, there are three built-in groups that comprise the highest privilege groups in the directory, plus a fourth group, the Schema Admins (SA) group: 
 
-A fourth group, the Schema Admins (SA) group, has privileges that, if abused, can damage or destroy an entire Active Directory forest, but this group is more restricted in its capabilities than the EA, DA, and BA groups.
+- [Enterprise Admins (EA)](#enterprise-admins)
+- [Domain Admins (DA)](#domain-admins)
+- [Built-in Administrators (BA)](#administrators)
+- [Schema Admins (SA)](#schema-admins)
+
+The Schema Admins (SA) group, has privileges that, if abused, can damage or destroy an entire Active Directory forest, but this group is more restricted in its capabilities than the EA, DA, and BA groups.
 
 In addition to these four groups, there are a number of additional built-in and default accounts and groups in Active Directory, each of which is granted rights and permissions that allow specific administrative tasks to be performed. Although this appendix does not provide a thorough discussion of every built-in or default group in Active Directory, it does provide a table of the groups and accounts that you're most likely to see in your installations.
 
