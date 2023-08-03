@@ -25,7 +25,7 @@ This page is updated monthly, so revisit it regularly.
 ### New features
 - Introduced support for proxies. You can now configure a proxy to monitor/filter all outbound traffic from the AdminCenter extension.
 - Updated the build of Windows Admin Center to v2306. For a full summary of new features, visit [our blog post](https://aka.ms/wac2306)
-- Introduced new management capabiltiies for Azure Stack HCI - Remote Support and Diagnostics
+- Introduced new management capabilities for Azure Stack HCI - Remote Support and Diagnostics
 
 ## Version 0.0.0.313 - April 2023
 
