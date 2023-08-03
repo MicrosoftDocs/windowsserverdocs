@@ -5,7 +5,7 @@ description: Addresses the Windows default audit policy settings, baseline recom
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 08/03/2023
 ms.topic: article
 ---
 
