@@ -186,7 +186,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 
 To configure role assignments for your hybrid machines using the Azure AD Portal experience:
 
-1. Open the hybird machine that you wish to manage using Windows Admin Center
+1. Open the hybrid machine that you wish to manage using Windows Admin Center
 
 1. Select **Access control (IAM)**.
 
