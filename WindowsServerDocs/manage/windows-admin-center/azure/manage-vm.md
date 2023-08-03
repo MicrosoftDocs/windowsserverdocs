@@ -273,13 +273,13 @@ Here are some tips to try in case something isn't working. For general help trou
 This could occur if your browser blocks third party cookies. Currently, Windows Admin Center requires that you don't block third party cookies, and we're actively working to remove this requirement. In the meantime, please allow third party cookies in your browser.
 
 1. On **Edge**:
-    1. Navigate to the elipses on the top right corner, and navigate to **Settings**
+    1. Navigate to the ellipses on the top right corner, and navigate to **Settings**
     1. Navigate to **Cookies and site permissions**
     1. Navigate to **Manage and delete cookies and site data**
     1. Ensure that the checkbox for **Block third-party cookies** is turned **off**
 
 1. On **Chrome**
-    1. Navigate to the elipses on the top right corner, and navigate to **Settings**
+    1. Navigate to the ellipses on the top right corner, and navigate to **Settings**
     1. Navigate to **Privacy and Security**
     1. Navigate to **Cookies and other site data**
     1. Select the radio button for either **Block third-party cookies in Incognito** or **Allow all cookies**
