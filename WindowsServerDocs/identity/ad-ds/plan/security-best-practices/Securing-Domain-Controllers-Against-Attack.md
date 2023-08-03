@@ -60,7 +60,7 @@ You should run all domain controllers on the newest version of Windows Server th
 
 ## Secure Configuration of Domain Controllers
 
-Tools can be used to create an initial security configuration baseline for domain controllers that can later be enforced by GPOs. These tools are described in [Administer security policy settings](/windows/security/threat-protection/security-policy-settings/administer-security-policy-settings) section of Microsoft operating systems documentation.
+Tools can be used to create an initial security configuration baseline for domain controllers that can later be enforced by GPOs. These tools are described in [Administer security policy settings](/windows/security/threat-protection/security-policy-settings/administer-security-policy-settings) section of Microsoft operating systems documentation or [Desired State Configuration (DSC) for Windows](/powershell/dsc/overview).
 
 ### RDP Restrictions
 
