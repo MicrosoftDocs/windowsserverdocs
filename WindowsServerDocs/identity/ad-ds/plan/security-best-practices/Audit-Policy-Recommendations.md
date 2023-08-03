@@ -125,7 +125,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit Authentication Policy Change | `Yes | No` | `Yes | No` | `Yes | Yes` |
 | Audit Authorization Policy Change |  |  |  |
 | Audit Filtering Platform Policy Change |  |  |  |
-| Audit MPSSVC Rule-Level Policy Change |  |  | Yes |
+| Audit MPSSVC Rule-Level Policy Change |  |  | `Yes` |
 | Audit Other Policy Change Events |  |  |  |
 
 | Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
@@ -231,7 +231,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit Authentication Policy Change | `Yes | No` | `Yes | No` | `Yes | Yes` |
 | Audit Authorization Policy Change |  |  |  |
 | Audit Filtering Platform Policy Change |  |  |  |
-| Audit MPSSVC Rule-Level Policy Change |  |  | Yes |
+| Audit MPSSVC Rule-Level Policy Change |  |  | `Yes` |
 | Audit Other Policy Change Events |  |  |  |
 
 | Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
