@@ -20,7 +20,7 @@ Microsoft Remote Desktop Services (RDS) offers a wide range of features designed
 
 ## Lock Screen Security
 
-When a policy or the user locks the remote session and the network connection is lost or disrupted, RDS retains the session state and connection information. By RDS retaining the session state and connection information, the client reconnects without needing to reauthenticate. The lock screen of the Remote Desktop session isn't designed to function as a security boundary. If the automatic reconnection of locked sessions raises concerns for your specific use case, we recommend implementing extra security measures. Security measures can include disabling Automatic Reconnection on either the RDS session host or the client. This article describes how to disabled Automatic Reconnection.
+When a policy or the user locks the remote session and the network connection is lost or disrupted, RDS retains the session state and connection information. If the automatic reconnection of locked sessions raises concerns for your specific use case, we recommend implementing extra security measures. Because RDS retains the session state and connection information, the client reconnects without needing to reauthenticate. The lock screen of the Remote Desktop session isn't designed to function as a security boundary.  Security measures can include disabling Automatic Reconnection on either the RDS session host or the client. This article describes how to disabled Automatic Reconnection.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ prerequisites:
 
 ## Methods to disable Automatic Reconnection
 
-To disable Automatic Reconnection, you can configure your server, client, or both. When configuring your server, you can only configure Group Policy or the Remote Desktop Session Collection, not both. Group Policy takes priority and prevents you from applying Automatic Reconnection setting for the Remote Desktop Session Collection.
+To disable Automatic Reconnection, you can configure your server, client, or both. When configuring your server, you can only configure Group Policy or the Remote Desktop Session Collection. Group Policy takes priority and prevents you from applying Automatic Reconnection setting for the Remote Desktop Session Collection.
 
 > [!TIP]
 >
