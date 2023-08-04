@@ -10,47 +10,60 @@ manager: dcscontentpm
 
 # Guidelines for troubleshooting the Key Management Service (KMS)
 
-As part of their deployment process, many enterprise customers set up the Key Management Service (KMS) to enable activation of Windows in their environment. It is a simple process to set up the KMS host, after which the KMS clients discover the host and try to activate on their own. But what happens if that process doesn’t work? What do you do next? This article walks you through the resources that you require in order to troubleshoot the issue. For more information about event log entries and the Slmgr.vbs script, see [Volume Activation Technical Reference](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502529(v=ws.11)).
+<!--This intro part feels more like a conceptual article. The information about what each item means feels conceptual, too. Is this necessarily troubleshooting?-->
+
+Enterprise customers set up Key Management Service (KMS) as part of their deployment process because it lets them use a simple, straightforward process to activate Windows in their environments. Usually, once you set up the KMS host, the KMS clients connect to the host automatically and activate on their own. However, sometimes the process doesn't work as expected. This article walks you through how to troubleshoot any issues you may encounter.
+
+For more information about event log entries and the Slmgr.vbs script, see [Volume Activation Technical Reference](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502529(v=ws.11)).
 
 ## KMS overview
 
-Let’s start with a quick refresher on KMS activation. KMS is a client-server model. Conceptually, it resembles DHCP. Instead of handing out IP addresses to clients on their request, KMS enables product activation. KMS is also a renewal model, in which the clients try to reactivate on a regular interval. There are two roles: the *KMS host* and the *KMS client*.
+Let’s start with a quick refresher on KMS activation. KMS is a client-server model that has some similarities to Dynamic Host Configuration Protocol (DHCP). However, instead of handing out IP addresses to clients on their request, KMS enables product activation. KMS is also a renewal model, in which the clients try to reactivate on a regular interval. There are two roles: the *KMS host* and the *KMS client*.
 
-- The **KMS host** runs the activation service and enables activation in the environment. To configure a KMS host, you have to install a  KMS key from the Volume License Service Center (VLSC) and then activate the service.
-- The **KMS client** is the Windows operating system that is deployed in the environment and has to activate. KMS clients can be running any edition of Windows that uses volume activation. The KMS clients are supplied with a pre-installed key, called the Generic Volume License Key (GVLK) or KMS Client Setup Key. The presence of the GVLK is what makes a system a KMS client. The KMS clients use DNS SRV records (_vlmcs._tcp) to identify the KMS host. Then the clients automatically try to discover and use this service to activate themselves. During the 30-day out-of-the-box grace period, they will try to activate every two hours. After activating, the KMS clients try to renew their activation every seven days.
+- The KMS host runs the activation service and enables activation in the environment. To configure a KMS host, you must install KMS key from the Volume License Service Center (VLSC) and then activate the service.
+- The KMS client is the Windows operating system that you deploy in the environment and need to activate. KMS clients can run any edition of Windows that uses volume activation. The KMS clients come with a pre-installed key, called the *Generic Volume License Key (GVLK)* or *KMS Client Setup Key*. The presence of the GVLK is what makes a system a KMS client. The KMS clients use DNS SRV records (_vlmcs._tcp) to identify the KMS host. Next, the clients automatically try to discover and use this service to activate themselves. During the 30-day out-of-the-box grace period, they try to activate every two hours. After activating, the KMS clients try to renew their activation every seven days.
 
-From a troubleshooting perspective, you may have to look at both sides (host and client) to determine what is going on.
+From a troubleshooting perspective, you may have to look at both the host and client sides to figure out why an issue is happening.
 
-## KMS host
+## Troubleshooting on the KMS host
 
-There are two areas to examine on the KMS host. First, check the status of the host software license service. Second, check the Event Viewer for events that are related to licensing or activation.
+When you're examining the KMS host during troubleshooting, there are two areas you should look at:
 
-### Slmgr.vbs and the Software Licensing service
+- Check the status of the host software license service using the **slmgr.vbs** command in a command-line prompt.
+- Check the Event Viewer for events related to licensing or activation.
 
-To see verbose output from the Software Licensing service, open an elevated Command Prompt window and enter **slmgr.vbs /dlv** at the command prompt. The following screenshot shows the results of this command on one of our KMS hosts within Microsoft.
+### Check the Software Licensing service using the slmgr.vbs command
 
-![KMS host Slmgr output](./media/ee939272.kms_slmgr_output(en-us,technet.10).png)
+To see verbose output from the Software Licensing service, open an elevated command prompt window and enter `slmgr.vbs /dlv`. The following screenshot shows the results of running this command on one of our KMS hosts within Microsoft.
 
-The most important fields for troubleshooting are the following. What you are looking for may differ, depending on the issue to be solved.
+:::image type="content" source="./media/ee939272.kms_slmgr_output(en-us,technet.10).png" alt-text="KMS host Slmgr output.":::
 
-- **Version Information**. At the top of the **slmgr.vbs /dlv** output is the Software Licensing Service Version. This may be useful to determine whether the current version of the service is installed. For example, updates to the KMS service on Windows Server 2003 support different KMS host keys. This data can be used to evaluate whether or not the version is current and supports the KMS host key that you are trying to install. For more information about these updates, see [An update is available for Windows Vista and for Windows Server 2008 to extend KMS activation support for Windows 7 and for Windows Server 2008 R2](https://support.microsoft.com/help/968912/an-update-is-available-for-windows-vista-and-for-windows-server-2008-t).
-- **Name**. This indicates the edition of Windows that is installed on the KMS host system. This can be important for troubleshooting if you are having trouble adding or changing the KMS host key (for example, to verify that the key is supported on that OS edition).
-- **Description**. This is where you see the key that is installed. Use this field to verify which key was used to activate the service and whether or not it is the correct one for the KMS clients that you have deployed.
-- **License Status**. This is the status of the KMS host system. The value should be **Licensed**. Any other value means that something is wrong and you may have to reactivate the host.
-- **Current Count**. The count displayed will be between **0** and **50**. The count is cumulative (between operating systems) and indicates the number of valid systems that have tried to activate within a 30-day period.
+<!--This image is pretty complicated, but it's got useful info on it. Not sure how to write the alt text with the limited space I've got in a way that gets everything across.-->
+
+Here are some variables you should pay attention to in the output while troubleshooting:
+
+- The *Version Information* is at the top of the **slmgr.vbs /dlv** output. The version information is useful for determining whether the service is up-to-date. Making sure everything's up to date is important because updates to the KMS service on Windows Server 2003 support different KMS host keys. You can use this data to evaluate whether or not the version you're currently using supports the KMS host key you're trying to install. For more information about updates, see [An update is available for Windows Vista and for Windows Server 2008 to extend KMS activation support for Windows 7 and for Windows Server 2008 R2](https://support.microsoft.com/help/968912/an-update-is-available-for-windows-vista-and-for-windows-server-2008-t).
+- The *Name* indicates which edition of Windows is running on the KMS host system. You can use this information to troubleshoot issues that involve adding or changing the KMS host key. For example, you can use this information to verify if the OS edition supports the key you're trying to use.
+- The *Description* shows you which key is currently installed. Use this field to verify whether the key that first activated the service was the correct one for the KMS clients you've deployed.
+- The *License Status* shows the status of the KMS host system. The value should be **Licensed**. Any other value means you should reactivate the host.
+- The *Current Count* displays a count between **0** and **50**. The count is cumulative between operating systems and indicates the number of valid systems that have tried to activate within a 30-day period.
 
   If the count is **0**, either the service was recently activated or no valid clients have connected to the KMS host.
 
-  The count will not increase above **50**, no matter how many valid systems exist in the environment. This is because they count is set to cache only twice the maximum license policy that is returned by a KMS client. The maximum policy today is set by the Windows client OS, which requires a count of **25** or higher from the KMS host to activate itself. Therefore, the highest count on the KMS host is 2 x 25, or 50. Note that in environments that contain only Windows Server KMS clients, the maximum count on the KMS host will be **10**. This is because the threshold for Windows Server editions is **5** (2 x 5, or 10).
+  The count doesn't increase above **50**, no matter how many valid systems exist in the environment. The count is set to cache only twice the maximum license policy returned by a KMS client. The maximum policy set by the Windows client OS requires a count of **25** or higher from the KMS host to activate itself. Therefore, the highest count the KMS host can have is 2 x 25, or 50. In environments that contain only Windows Server KMS clients, the maximum count on the KMS host will be **10**. This limit is because the threshold for Windows Server editions is **5** (2 x 5, or 10).
 
-  A common issue that is related to the count is if the environment has an activated KMS host and enough clients, but the count does not increase beyond one. The core problem is that the deployed client image was not configured correctly (**sysprep /generalize**) and the systems do not have unique Client Machine IDs (CMIDs). For more information, see [KMS client](#kms-client) and [The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista). One of our Support Escalation Engineers has also blogged about this issue, in [KMS Host Client Count not Increasing Due to Duplicate CMID’S](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids).
+  A common issue related to the count happens when the environment has an activated KMS host and enough clients, but the count doesn't increase beyond one. When this issue happens, it means the deployed client image wasn't configured correctly, so the systems don't have unique Client Machine IDs (CMIDs). For more information, see [KMS client](#kms-client) and [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista). One of our Support Escalation Engineers has also blogged about this issue at [KMS Host Client Count not Increasing Due to Duplicate CMIDs](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids).
 
   Another reason why the count may not be increasing is that there are too many KMS hosts in the environment and the count is distributed over all of them.
 - **Listening on Port**. Communication with KMS uses anonymous RPC. By default, the clients use the 1688 TCP port to connect to the KMS host. Make sure that this port is open between your KMS clients and the KMS host. You can change or configure the port on the KMS host. During their communication, the KMS host sends the port designation to the KMS clients. If you change the port on a KMS client, the port designation is overwritten when that client contacts the host.
 
-We often get asked about the “cumulative requests” section of the **slmgr.vbs /dlv** output. Generally this data is not helpful for troubleshooting. The KMS host keeps an ongoing record of the state of each KMS client that tries to activate or reactivate. Failed requests indicate KMS clients that the KMS host does not support. For example, if a Windows 7 KMS client tries to activate against a KMS host that was activated by using a Windows Vista KMS key, the activation fails. The “Requests with License Status” lines describe all the possible license states, past and present. From a troubleshooting perspective, this data is relevant only if the count is not increasing as expected. In that case, you should see the number of failed requests increasing. This indicates that you should check the product key that was used to activate the KMS host system. Also, notice that the cumulative request values reset only if you reinstall the KMS host system.
+We often get asked about the *cumulative requests* section of the **slmgr.vbs /dlv** output. Generally, this data isn't helpful for troubleshooting. The KMS host keeps an ongoing record of the state of each KMS client that tries to activate or reactivate. Failed requests indicate the KMS host doesn't support certain KMS clients. For example, if a Windows 7 KMS client tries to activate against a KMS host that was activated by using a Windows Vista KMS key, the activation fails.
+
+The *Requests with License Status* lines describe all possible license states, past and present. From a troubleshooting perspective, this data is relevant only if the count isn't increasing as expected. In that case, you should see the number of failed requests increasing. To resolve this issue, you should check the product key that was used to first activate the KMS host system. Also, notice that the cumulative request values reset only if you reinstall the KMS host system.
 
 ### Useful KMS host events
+
+<!--There has to be another way to format this. Is this an error code list or a conceptual article?-->
 
 #### Event ID 12290
 
