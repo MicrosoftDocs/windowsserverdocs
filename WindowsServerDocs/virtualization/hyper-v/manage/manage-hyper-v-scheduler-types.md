@@ -3,7 +3,7 @@ title: Manage Hyper-V hypervisor scheduler types
 description: Learn about new modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
 ms.author: wscontent
 author: BenjaminArmstrong
-ms.date: 07/31/2023
+ms.date: 08/04/2023
 ms.topic: article
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---
@@ -151,7 +151,7 @@ To enable SMT in a guest VM:
 
 The following screenshot shows system information taken from the guest operating system running in a VM. There are two virtual processors and SMT enabled. The guest operating system is detecting two logical processors belonging to the same core.
 
-![Screenshot that shows msinfo32 in a guest VM with SMT enabled.](media/Hyper-V-CoreScheduler-VM-Msinfo32.png)
+:::image type="content" source="media/Hyper-V-CoreScheduler-VM-Msinfo32.png" alt-text="Screenshot that shows msinfo32 in a guest VM with SMT enabled.":::
 
 ## Configure the hypervisor scheduler type on Windows Server 2016 Hyper-V
 
@@ -193,9 +193,9 @@ Hypervisor launch event ID 2 denotes the hypervisor scheduler type, where:
 - 3 = Core scheduler
 - 4 = Root scheduler
 
-![Screenshot showing hypervisor launch event ID 2 details.](media/Hyper-V-CoreScheduler-EventID2-Details.png)
+:::image type="content" source="media/Hyper-V-CoreScheduler-EventID2-Details.png" alt-text="A screenshot of the hypervisor launch event ID 2 properties window. The user has selected the General tab, showing that the hypervisor scheduler type is 0x2.":::
 
-![Screenshot showing Event Viewer displaying hypervisor launch event ID 2.](media/Hyper-V-CoreScheduler-EventViewer.png)
+:::image type="content" source="media/Hyper-V-CoreScheduler-EventViewer.png" alt-text="A screenshot of the Event Viewer window. The user has selected Hyper-V Hypervisor launch event ID 2 from the list of events, highlighting it in dark blue.":::
 
 ### Query the Hyper-V hypervisor scheduler type launch event using PowerShell
 
@@ -205,4 +205,4 @@ To query for hypervisor event ID 2 using PowerShell, run the following commands 
 Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Hypervisor"; ID=2} -MaxEvents 1
 ```
 
-![Screenshot showing PowerShell query and results for hypervisor launch event ID 2.](media/Hyper-V-CoreScheduler-PowerShell.png)
+:::image type="content" source="media/Hyper-V-CoreScheduler-PowerShell.png" alt-text="A screenshot of a query for hypervisor launch event ID 2. The results say hypervisor scheduler type is 0x2.":::
