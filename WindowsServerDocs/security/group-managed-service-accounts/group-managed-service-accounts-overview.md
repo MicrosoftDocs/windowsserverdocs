@@ -20,7 +20,8 @@ A standalone Managed Service Account (sMSA) is a managed domain account that pro
 
 The group Managed Service Account (gMSA) provides the same functionality within the domain and also extends that functionality over multiple servers. When you connect to a service hosted on a server farm, such as a Network Load Balanced solution, the authentication protocols supporting mutual authentication require all instances of the services to use the same principal. When you use a gMSA as a service principal, the Windows operating system manages the password for the account instead of relying on the administrator to manage the password.
 
-The Microsoft Key Distribution Service (kdssvc.dll) lets you securely obtain the latest key or a specific key with a key identifier for an Active Directory account. The Key Distribution Service shares a secret that's used to create keys for the account. These keys periodically change. For a gMSA, the domain controller computes the password on the key that the Key Distribution Services provides, along with other attributes of the gMSA.  Member hosts can obtain the current and preceding password values by contacting a domain controller.
+The Microsoft Key Distribution Service (`kdssvc.dll`) lets you securely obtain the latest key or a specific key with a key identifier for an Active Directory account. The Key Distribution Service shares a secret that's used to create keys for the account. These keys periodically change. For a gMSA, the domain controller computes the password on the key that the Key Distribution Services provides, along with other attributes of the gMSA.  Member hosts can obtain the current and preceding password values by contacting a domain controller.
+
 
 ## Practical applications
 
