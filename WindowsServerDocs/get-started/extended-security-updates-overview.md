@@ -26,8 +26,6 @@ The following versions of Windows Server have reached or are in the process of r
 - Extended support for [Windows Server 2008](/lifecycle/products/windows-server-2008) and [Windows Server 2008 R2](/lifecycle/products/windows-server-2008-r2) ended on January 14, 2020.
 - Extended support for [Windows Server 2012](/lifecycle/products/windows-server-2012) and [Windows Server 2012 R2](/lifecycle/products/windows-server-2012-r2) will be ending on October 10, 2023.
 
-<!--Windows Server 2008 is long past expired. Ask if I should take this out.-->
-
 ## What are Extended Security Updates?
 
 Extended Security Updates for Windows Server include security updates and bulletins rated *critical* and *important* for a maximum period of time from the end of extended support, depending on the version. They're available free of charge for servers hosted in Azure, and available to purchase for servers not hosted in Azure. Extended Security Updates don't include new features, customer-requested non-security hotfixes, or design change requests. For more information, see [Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
