@@ -3,7 +3,7 @@ title: Hotpatch for Windows Server Azure Edition
 description: 'Learn how hotpatch for Windows Server Datacenter: Azure Edition works and how to enable it'
 author: robinharwood
 ms.topic: conceptual
-ms.date: 05/16/2023
+ms.date: 07/27/2023
 ms.author: wscontent
 ---
 
@@ -99,7 +99,7 @@ Reboots keep the VM in sync with nonsecurity patches included in the latest cumu
 ## Patch orchestration process
 
 Hotpatch is an extension of Windows Update and typical orchestration processes. Patch orchestration
-tools vary depending on your platform. To orchestration Hotpatch:
+tools vary depending on your platform. To orchestrate Hotpatch:
 
 - **Azure:** Virtual machines created in Azure are enabled for
   [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching) by default with
@@ -115,6 +115,9 @@ tools vary depending on your platform. To orchestration Hotpatch:
 
   - Virtual machine health, as determined through platform health signals, is monitored to detect
     patching failures.
+
+  > [!NOTE]
+  > You can't create VM scale sets (VMSS) with Uniform orchestration on Azure Edition images with Hotpatch. To learn more about which features are supported by Uniform orchestration for scale sets, see [A comparison of Flexible, Uniform, and availability sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes).
 
 - **Azure Stack HCI:** Hotpatch updates for virtual machines created on Azure Stack HCI are
   orchestrated using:
@@ -158,8 +161,14 @@ You can also view the installed patches using the
 [Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix) PowerShell command or
 using the Settings app when using the Desktop Experience.
 
+## Rollback support on Hotpatching
+
+The installation of Hotpatch or Baseline updates doesn't support automatic rollback. If a VM
+experiences an issue during or after an update, you'll have to uninstall the latest update and
+install the last known good baseline update. You'll need to reboot the VM after rollback.
+
 ## Next steps
 
-- [Azure Update Management](/azure/automation/update-management/overview)
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
+- [Azure Update Management](/azure/automation/update-management/overview)
