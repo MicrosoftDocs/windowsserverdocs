@@ -20,6 +20,13 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.0.0.322 - July 2023
+
+### New features
+- Introduced support for proxies. You can now configure a proxy to monitor/filter all outbound traffic from the AdminCenter extension.
+- Updated the build of Windows Admin Center to v2306. For a full summary of new features, visit [our blog post](https://aka.ms/wac2306)
+- Introduced new management capabilities for Azure Stack HCI - Remote Support and Diagnostics
+
 ## Version 0.0.0.313 - April 2023
 
 ### New features
