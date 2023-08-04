@@ -58,7 +58,7 @@ When you get the Extended Security Updates depends on which version of Windows S
 
 ## Migrate to Azure
 
-You can migrate your on-premises servers that run a version of Windows Server that has reached or is almost reaching the end of extended support to Azure, where you can continue to run them as virtual machines. When you migrate to Azure, you not only stay compliant with security requirements, but also become more secure and add cloud innovation to your work. The benefits of migrating to Azure include:
+You can migrate your on-premises servers that run a version of Windows Server that has reached or is almost reaching the end of extended support to Azure, where you can continue to run them as virtual machines. When you migrate to Azure, you not only stay compliant with security updates, but also add cloud innovation to your work. The benefits of migrating to Azure include:
 
 - Security updates in Azure.
 - Get Windows Server critical and important security updates for a certain period of time, included at no extra charge.
