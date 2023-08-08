@@ -67,33 +67,35 @@ The *Requests with License Status* lines describe all possible license states, p
 
 #### Event ID 12290
 
-The KMS host logs Event ID 12290 when a KMS client contacts the host in order to activate. Event ID 12290 provides a significant amount of information that you can use to figure out what kind of client contacted the host and why a failure occurred. The following segment of an event ID 12290 entry comes from the Key Management Service event log of our KMS host.
+The KMS host creates a log labeled *Event ID 12290* when a KMS client contacts the host when it's trying to activate. Event ID 12290 contains information you can use to figure out what kind of client contacted the host and why a failure occurred. The following segment of an event ID 12290 entry comes from the Key Management Service event log of our KMS host.
 
 ![KMS 12290 Event](./media/ee939272.kms_12290_event(en-us,technet.10).png)
 
+<!--Note to self: update image format-->
+
 The event details include the following information:
 
-- **Minimum count needed to activate**. The KMS client is reporting that the count from the KMS host must be **5** in order to activate. That means that this is a Windows Server OS, although it does not indicate a specific edition. If your clients are not activating, make sure that the count is sufficient on the host.
-- **Client Machine ID (CMID)**. This is a unique value on each system. If this value is not unique, it is because an image was not prepared correctly for distribution (**sysprep /generalize**). This issue manifests on the KMS host as a count that will not increase, even though there are enough clients in the environment. For more information, see [The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista).
-- **License State and Time to State Expiration**. This is the current license state of the client. It can help you differentiate a client that is trying to activate for the first time from one that is trying to reactivate. The time entry tells you how much longer the client will remain in that state, if nothing changes.
+- The *Minimum count needed to activate*, which reports that the count from the KMS host must be **5** in order for the client to activate. That means that this is a Windows Server OS, although this variable alone doesn't indicate which edition the client is using. If your clients aren't activating, make sure that the host's count will allow the client to activate.
+- The *Client Machine ID (CMID)*, which is a unique value on each system. If this value isn't unique, it's because the image wasn't correctly configured for distribution (**sysprep /generalize**). When you encounter this issue, the KMS host count doesn't increase even though there are enough clients in the environment. For more information, see [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista).
+- The *License State and Time to State Expiration*, which is the current license state of the client. This variable can help you tell whether a client is trying to activate for the first time or if it's trying to reactivate. The time entry can also tell you how long the client will remain in that state if nothing else changes.
 
-If you are troubleshooting a client and cannot find a corresponding event ID 12290 on the KMS host, that client is not connecting to the KMS host. Some reasons why an event ID 12290 entry may not exist are as follows:
+If you're troubleshooting a client and can't find a corresponding event ID 12290 on the KMS host, then the client isn't connecting to the KMS host. Reasons why the event ID 12290 entry is missing can include:
 
-- A network outage has occurred.
-- The host is not resolving or is not registered in DNS.
+- There's been a network outage.
+- The host isn't resolving or isn't registered in DNS.
 - The firewall is blocking TCP 1688.
-   The port could be blocked in many places within the environment, including on the KMS host system itself. By default, the KMS host has a firewall exception for KMS, but it is not automatically enabled. You have to turn on the exception.
+  - The port could also be blocked in other places within the environment, including on the KMS host system itself. By default, the KMS host has a firewall exception for KMS, but this exception isn't automatically enabled. You have to enable the exception manually.
 - The event log is full.
 
-KMS clients log two corresponding events, event ID 12288 and event ID 12289. For information about these events, see the [KMS client](#kms-client) section.
+KMS clients log two corresponding events: event ID 12288 and event ID 12289. For information about these events, see the [KMS client](#kms-client) section.
 
 #### Event ID 12293
 
-Another relevant event to look for on your KMS host is event ID 12293. This event indicates that the host did not publish the required records in DNS. This situation is known to cause failures, and it is something that you should verify *after* you set up your host and *before* you deploy clients. For more information about DNS issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
+Another relevant event to look for on your KMS host is *Event ID 12293*. This event indicates that the host didn't publish the required records in DNS. This scenario can potentially cause failures, and you should make sure the event isn't there after you set up your host and before you deploy clients. For more information about DNS issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
 ## KMS client
 
-On the clients you use the same tools (Slmgr and Event Viewer) to troubleshoot activation.
+You can also use slmgr.vbs and Event Viewer to troubleshoot activation on the KMS clients.
 
 ### Slmgr.vbs and the Software Licensing service
 
@@ -101,43 +103,52 @@ To see verbose output from the Software Licensing service, open an elevated Comm
 
 ![KMS client Slmgr output](./media/ee939272.kms_client_slmgr_output(en-us,technet.10).png)
 
-The following list includes the most important fields for troubleshooting. What you are looking for may differ, depending on the issue to be solved.
+<!--Note to self: update image formatting.-->
 
-- **Name**. This value is the edition of Windows that is installed on the KMS client system. Use this to verify that the version of Windows you are trying to activate can use KMS. For example, our Help desk has seen incidents in which customers try to install the KMS Client Setup Key on an edition of Windows that does not use volume activation, such as Windows Vista Ultimate.
-- **Description**. This value shows the key that is installed. VOLUME_KMSCLIENT indicates that the KMS Client Setup Key (or GVLK) is installed (the default configuration for volume license media) and that this system automatically tries to activate by using a KMS host. If you see something else here, such as MAK, you’ll have to reinstall the GVLK to configure this system as a KMS client. You can manually install the key by using **slmgr.vbs /ipk &lt;*GVLK*&gt;** (as described in [KMS client setup keys](kmsclientkeys.md)) or use the Volume Activation Management Tool (VAMT). For information about obtaining and using VAMT, see [Volume Activation Management Tool (VAMT) Technical Reference](/windows/deployment/volume-activation/volume-activation-management-tool).
-- **Partial Product Key**. As the **Name** field, you can use this information to determine whether the correct KMS Client Setup Key is installed on this computer (in other words, the key matches the operating system that is installed on the KMS client). By default, the correct key is present on systems that are built by using media from the Volume License Service Center (VLSC) portal. In some cases, customers may use Multiple Activation Key (MAK) activation until there are enough systems in the environment to support KMS activation. The KMS Client Setup key has to be installed on these systems to transition them from MAK to KMS. Use VAMT to install this key and make sure that the correct key is applied.
-- **License Status**. This value shows the status of the KMS client system. For a system that was activated by using KMS, this value should be **Licensed**. Any other value may indicate that there is a problem. For example, if the KMS host is functioning correctly and the KMS client does not activate (for example, it remains in a **Grace** state), something may be preventing the client from reaching the host system (such as a firewall issue, network outage, or something similar).
-- **Client Machine ID (CMID)**. Each KMS client should have a unique CMID. As mentioned in the [KMS host](#kms-host) section, a common issue related to count is if the environment has an activated KMS host and enough clients, but the count does not increase beyond **1**. For more information, see [The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista).
-- **KMS Machine Name from DNS**. This value shows the FQDN of the KMS host that the client successfully used for activation, and the TCP port used for the communication.
-- **KMS Host Caching**. The final value shows whether or not caching is enabled. By default, it is enabled. What this means is that the KMS client caches the name KMS host that it used for activation, and it communicates directly with this host (instead of querying DNS) when it is time to reactivate. If the client cannot contact the cached KMS host, it queries DNS to discover a new KMS host.
+Here are some variables you should pay attention to in the output while troubleshooting:
+
+- *Name*, which tells you which edition of Windows the KMS client system is using. You can use this to verify that the version of WIndows you're trying to activate is compatible with KMS.
+- *Description*, which shows you which key was installed. For example, VOLUME_KMSCLIENT indicates that the system has installed the KMS Client Setup Key, or GVLK, which is the default configuration for volume license media. A system with a GVLK automatically tries to activate by using a KMS host. If you see a different value here, such as MAK, you must reinstall the GVLK to configure this system as a KMS client. You can manually install the key by following the instructions to run `slmgr.vbs /ipk <GVLK>` in [KMS client setup keys](kmsclientkeys.md), or follow the directions in [Volume Activation Management Tool (VAMT) Technical Reference](/windows/deployment/volume-activation/volume-activation-management-tool) to use the VAMT instead.
+- The *Partial Product Key*, which you can use to determine whether the KMS Client Setup Key matches the operating system the KMS client is using. By default, the correct key is present on systems that are built using media from the Volume License Service Center (VLSC) portal. In some cases, customers may use Multiple Activation Key (MAK) activation until there are enough systems in the environment to support KMS activation. You must install the KMS Client Setup key on these systems to transition them from MAK to KMS. Use VAMT to install this key and make sure you're using the correct key.
+- *License Status*, which shows the status of the KMS client system. For a system activated by KMS, this value should be **Licensed**. Any other value may indicate that there is a problem. For example, if the KMS host is functioning correctly and the KMS client still doesn't activate or is stuck in a **Grace** state, that means something is preventing the client from reaching the host system. This blockage can be a firewall issue, network outage, and so on.
+- The *Client Machine ID (CMID)*, which should be unique in every KMS client. As mentioned in [KMS host](#kms-host), a common issue related to count is if the count doesn't increase beyond **1** no matter how many KMS hosts or clients you activate in the environment. For more information, see [The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista).
+- The *KMS Machine Name from DNS*, which shows both the FQDN of the KMS host that the client successfully used for activation and which TCP port it used to communicate.
+- *KMS Host Caching*, which shows whether or not caching is enabled. Caching is typically enabled by default. When caching is enabled, the KMS client caches the name KMS host that it used for activation and communicates directly with this host instead of querying DNS when it's time to reactivate. If the client can't contact the cached KMS host, it queries DNS to discover a new KMS host.
 
 ### Useful KMS client events
 
+<!--No intro here-->
+
 #### Event ID 12288 and Event ID 12289
 
-When a KMS client successfully activates or reactivates, the client logs two events: event ID 12288 and event ID 12289. The following segment of an event ID 12288 entry comes from the Key Management Service event log of our KMS client.
+When a KMS client successfully activates or reactivates, the client logs two events: event ID 12288 and event ID 12289. The following screenshot showing a segment of an event ID 12288 entry comes from the Key Management Service event log of our KMS client.
 
 ![KMS client event ID 12288](./media/ee939272.client_12288(en-us,technet.10).png)
 
-If you see only event ID 12288 (without a corresponding event ID 12289), this means that the KMS client was not able to reach the KMS host, the KMS host did not respond, or the client did not receive the response. In this case, verify that the KMS host is discoverable and that the KMS clients can contact it.
+<!--Update image format-->
 
-The most relevant information in event ID 12288 is the data in the Info section. For example, this section shows the current state of the client plus the FQDN and TCP port that the client used when it tried to activate. You can use the FQDN to troubleshoot cases in which the count on a KMS host is not increasing. For example, if there are too many KMS hosts available to the clients (either legitimate or rogue systems) then the count may be distributed over all of them.
+If you see only event ID 12288 without a corresponding event ID 12289, either the KMS client couldn't reach the KMS host, the KMS host didn't respond, or the client didn't receive the host's response. In these cases, you must verify that the KMS host is discoverable and that the KMS clients can contact it.
+
+The most relevant information in event ID 12288 is the data in the *Info* field. For example, Info shows the current state of the client and which FQDN and TCP port the client used when it tried to activate. You can use the FQDN to troubleshoot scenarios where the count on a KMS host doesn't increase. For example, if there are too many KMS hosts available to the clients (either legitimate or unsupported systems), then the count may be distributed over all of them.
 
 An unsuccessful activation does not always mean that the client has 12288 and not 12289. A failed activation or reactivation may also have both events. In this case, you have to examine the second event to verify the reason for the failure.
 
 ![KMS client event ID 12289](./media/ee939272.client_12289(en-us,technet.10).png)
 
+<!--Reformat image-->
+
 The Info section of event ID 12289 provides the following information:
 
-- **Activation Flag**. This value indicates whether the activation succeeded(**1**) or failed (**0**).
-- **Current Count on the KMS Host**. This value reflects the count value on the KMS host when the client tries to activate. If activation fails, it may be because the count is insufficient for this client OS or that there are not enough systems in the environment to build the count.
+- *Activation Flag*, which indicates whether the activation succeeded (**1**) or failed (**0**).
+- *Current Count on the KMS Host*, which shows the count value on the KMS host when the client tries to activate. If activation fails, it may be because the count is insufficient for this client OS or that there aren't enough systems in the environment to build the count.
 
 ## What does support ask for?
 
 If you have to call Support to troubleshoot activation, the Support Engineer typically asks for the following information:
 
-- **Slmgr.vbs /dlv** output from the KMS host and KMS client systems. Whether you use wscript or cscript to run the command, you can use Ctrl+C to copy the output, and then paste it into Notepad to send it to the support contact.
-- Event logs from both the KMS host (Key Management Service log) and KMS client systems (Application log)
+- **Slmgr.vbs /dlv** output from the KMS host and KMS client systems.
+- Event logs from both the KMS host (Key Management Service log) and KMS client systems (Application log).
 
-## Additional References
+## Next steps
+
 - [Ask the Core Team: #Activation](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids)
