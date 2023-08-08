@@ -19,7 +19,7 @@ Sets up or disables the TAPI client. For TAPI to function correctly, you must ru
 ## Syntax
 
 ```
-tcmsetup [/q] [/x] /c <server1> [<server2> …]
+tcmsetup [/q] [/x] /c <server1> [<server2> ...]
 tcmsetup  [/q] /c /d
 ```
 
@@ -31,7 +31,7 @@ tcmsetup  [/q] /c /d
 | /x | Specifies that connection-oriented callbacks will be used for heavy traffic networks where packet loss is high. When this parameter is omitted, connectionless callbacks will be used. |
 | /c | Required. Specifies client setup. |
 | `<server1>` | Required. Specifies the name of the remote server that has the TAPI service providers that the client will use. The client will use the service providers' lines and phones. The client must be in the same domain as the server or in a domain that has a two-way trust relationship with the domain that contains the server. |
-| `<server2>…` | Specifies any additional server or servers that will be available to this client. If you specify a list of servers is, use a space to separate the server names. |
+| `<server2>...` | Specifies any additional server or servers that will be available to this client. If you specify a list of servers is, use a space to separate the server names. |
 | /d | Clears the list of remote servers. Disables the TAPI client by preventing it from using the TAPI service providers that are on the remote servers. |
 | /? | Displays help at the command prompt. |
 
