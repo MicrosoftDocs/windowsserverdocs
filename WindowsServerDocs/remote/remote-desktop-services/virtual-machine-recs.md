@@ -2,7 +2,7 @@
 title: Session host virtual machine sizing guidelines for Azure Virtual Desktop and Remote Desktop Services
 description: Learn about sizing for session host virtual machines based on different workload types when used with Azure Virtual Desktop or Remote Desktop Services.
 ms.author: helohr
-ms.date: 06/05/2023
+ms.date: 08/10/2023
 ms.topic: article
 author: Heidilohr
 manager: femila
@@ -32,9 +32,9 @@ The following table shows examples of typical workloads:
 
 | Workload type | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 |--|--|--|--|
-| Light | 2 vCPUs, 8 GB RAM, 32 GB storage | D2s_v5, D2s_v4 | 30 GB |
-| Medium | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v5, D4s_v4 | 30 GB |
-| Heavy | 8 vCPUs, 32 GB RAM, 32 GB storage | D8s_v5, D8s_v4 | 30 GB |
+| Light | 2 vCPUs, 8-GB RAM, 32-GB storage | D2s_v5, D2s_v4 | 30 GB |
+| Medium | 4 vCPUs, 16-GB RAM, 32-GB storage | D4s_v5, D4s_v4 | 30 GB |
+| Heavy | 8 vCPUs, 32-GB RAM, 32-GB storage | D8s_v5, D8s_v4 | 30 GB |
 
 ## Multi-session recommendations
 
@@ -44,10 +44,10 @@ The following table lists the maximum suggested number of users per virtual cent
 
 | Workload type | Maximum users per vCPU | Minimum vCPU/RAM/OS storage | Example Azure instances | Minimum profile storage |
 | --- | --- | --- | --- | --- |
-| Light | 6 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D16ds_v5, D16s_v4, D16as_v4, NV6, NV16as_v4 | 30 GB |
+| Light | 6 | 8 vCPUs, 16-GB RAM, 32-GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
+| Medium | 4 | 8 vCPUs, 16-GB RAM, 32-GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
+| Heavy | 2 | 8 vCPUs, 16-GB RAM, 32-GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
+| Power | 1 | 6 vCPUs, 56-GB RAM, 340-GB storage | D16ds_v5, D16s_v4, D16as_v4, NV6, NV16as_v4 | 30 GB |
 
 For multi-session workloads, you should limit VM size to between 4 vCPUs and 24 vCPUs for the following reasons:
 
@@ -57,7 +57,7 @@ For multi-session workloads, you should limit VM size to between 4 vCPUs and 24 
 
 The recommended range between 4 and 24 cores generally provides better capacity returns for your users as you increase the number of cores. For example, if you have 12 users sign in at the same time to a VM with four cores, the ratio is three users per core. Meanwhile, on a VM with 8 cores and 14 users, the ratio is 1.75 users per core. In this scenario, the latter configuration with a ratio of 1.75 offers greater burst capacity for your applications that have short-term CPU demand.
 
-This recommendation is true at a larger scale. For scenarios with 20 or more users connected to a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more users to sign in within 10 minutes of each other on the same session host with 16 cores, two 8-core VMs would handle the workload better. You can also use breadth-first load balancing to evenly distribute users across different VMs instead of depth-first load balancing where a session host must be full of users before you can use a new one.
+This recommendation is true at a larger scale. For scenarios with 20 or more users connected to a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more users to sign in within 10 minutes of each other on the same session host with 16 cores, two 8-core VMs would handle the workload better. You can also use breadth-first load balancing to evenly distribute users across different VMs instead of depth-first load balancing, where you can only use a new session host after the existing one is full of users.
 
 It's also better to use a large number of smaller VMs instead of a few large VMs. It's easier to shut down VMs that need to be updated or aren't currently in use. With larger VMs, you're more likely to have at least one user signed in at any time, which prevents you from shutting down the VM. When you have many smaller VMs, it's more likely you have some VMs without active users. You can safely shut down these unused VMs to conserve resources, either manually or automatically by using autoscale in Azure Virtual Desktop. Conserving resources makes your deployment more resilient, easier to maintain, and less expensive.
 
