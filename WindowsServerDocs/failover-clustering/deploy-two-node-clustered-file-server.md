@@ -270,127 +270,138 @@ Before creating a cluster, we highly recommend that you validate your configurat
 
 1. If the **Before you begin** window opens, select **Next**.
 
-1. In the **Select Servers or a Cluster** window, enter the names of the two machines that you plan to make the new nodes for the cluster.  For example, if your planned node names are NODE1 and NODE2, enter those names and select **Add**.  You can also choose the **Browse** button to search Active Directory for the names of existing nodes you can use. Once both nodes are listed under **Selected Servers**, select **Next**.
+1. In the **Select Servers or a Cluster** window, enter the names of the two machines that you plan to make the new nodes for the cluster.  For example, if your planned node names are NODE1 and NODE2, enter those names and select **Add**.  You can also select the **Browse** button to search Active Directory for the names of existing nodes you can use. Once both nodes are listed under **Selected Servers**, select **Next**.
 
-5. In the **Testing Options** window, select **Run all tests (recommended)**, and **Next**.
+1. In the **Testing Options** window, select **Run all tests (recommended)**, then select **Next**.
 
-6. On the **Confirmation** page, it will give you the listing of all the tests it will check.  Choose **Next** and the tests will begin.
+1. On the **Confirmation** page is a list of tests the service runs for validation. Select **Next** and wait for the tests to finish.
 
-7. Once completed, the **Summary** page appears after the tests run. To view Help topics that will help you interpret the results, click **More about cluster validation tests**.
+1. Once testing is done, the **Summary** page should appear. To see more information about the tests and what their output means, select **More about cluster validation tests**.
 
-8. While still on the Summary page, click View Report and read the test results. Make any necessary changes in the configuration and rerun the tests. <br>To view the results of the tests after you close the wizard, see *SystemRoot\Cluster\Reports\Validation Report date and time.html*.
+1. Select **View Report** and read the test results.
 
-9. To view Help topics about cluster validation after you close the wizard, in Failover Cluster Management, click Help, click Help Topics, click the Contents tab, expand the contents for the failover cluster Help, and click Validating a Failover Cluster Configuration.
+1. Make any necessary changes in the configuration and rerun the tests. To view test results after you've exited this workflow, go to **SystemRoot** > **Cluster** > **Reports** > **Validation Report date and time.html**.
+
+1. If you need more information about cluster validation after you've exited the workflow, go to **Failover Cluster Management** > **Help** > **Help Topics** > **Contents** > **Help** > **Validating a Failover Cluster Configuration**.
 
 #### [PowerShell](#tab/powershell)
 
-1. Open an administrative PowerShell session by right-clicking the Start button and then selecting **Windows PowerShell (Admin)**.
+1. Open an administrative PowerShell session by right-clicking **Start** and selecting **Windows PowerShell (Admin)**.
 
-2. To validate the machines (for example, the machine names being NODE1 and NODE2) for Failover Clustering, run the command:
+1. Run the following command to validate the machines for failover flustering.
 
     ```PowerShell
-    Test-Cluster -Node "NODE1","NODE2"
+    Test-Cluster -Node "<Node name 1>","<Node name 2>"
     ```
 
-4. To view the results of the tests after you close the wizard, see the file specified (in SystemRoot\Cluster\Reports\), then make any necessary changes in the configuration and rerun the tests.
+1. To view the validation test results after you've exited the setup workflow, go to **SystemRoot** > **Cluster** > **Reports**. Make any necessary changes based on the test results, then repeat the process to run the test again until you see your desired results.
 
 ---
 
-For more info, see [Validating a Failover Cluster Configuration](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
+For more information about validation tests for failover clusters, see [Validating a Failover Cluster Configuration](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
 
-### Step 4: Create the Cluster
+### Step 4: Create the cluster
 
-The following will create a cluster out of the machines and configuration you have.
+To create a cluster from the machines you configured:
 
 #### [Server Manager](#tab/server-manager)
 
-1. From **Server Manager**, choose the **Tools** drop down and select **Failover Cluster Manager**.
+1. Open **Server Manager**, then open the **Tools** drop-down menu and select **Failover Cluster Manager**.
 
-2. In **Failover Cluster Manager**, go to the middle column under **Management** and choose **Create Cluster**.
+1. In **Failover Cluster Manager**, go to the middle column under **Management** and select **Create Cluster**.
 
-3. If the **Before you begin** window opens, choose **Next**.
+1. If the **Before you begin** window opens, select **Next**.
 
-4. In the **Select Servers** window, add in the names of the two machines that will be the nodes of the cluster.  For example, if the names are NODE1 and NODE2, enter the name and select **Add**.  You can also choose the **Browse** button to search Active Directory for the names.  Once both are listed under **Selected Servers**, choose **Next**.
+1. In the **Select Servers** window, enter the names of the two machines that you plan to make the new nodes for the cluster.  For example, if your planned node names are NODE1 and NODE2, enter those names and select **Add**.  You can also select the **Browse** button to search Active Directory for the names of existing nodes you can use. Once both nodes are listed under **Selected Servers**, select **Next**.
 
-5. In the **Access Point for Administering the Cluster** window, input the name of the cluster you will be using.  Please note that this is not the name you will be using to connect to your file shares with.  This is for simply administrating the cluster.
+1. In the **Access Point for Administering the Cluster** window, enter the name of the cluster you plan to use. This isn't the name you use to connect to your file shares, but is for administrating the cluster only.
 
    > [!NOTE]
-   > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
+   > If you're using static IP Addresses, you need to manually select which network to use and enter its IP Address into the cluster name field. If you're using DHCP for your IP Addresses, the IP Address is configured automatically.
 
-6. Choose **Next**.
+1. Select **Next**.
 
-7. On the **Confirmation** page, verify what you have configured and select **Next** to create the Cluster.
+1. On the **Confirmation** page, make sure your configuration is correct, then select **Next** to create the cluster.
 
-8. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the creation.
+1. Once the creation process is done, the **Summary** page should show you information about your configuration. You can select **View Report** to see more detailed information.
 
 #### [PowerShell](#tab/powershell)
 
-1. Open an administrative PowerShell session by right-clicking the Start button and then selecting **Windows PowerShell (Admin)**.
+1. Right-click **Start**, then select **Windows PowerShell (Admin)** to open an administrative PowerShell session.
 
-2. Run the following command to create the cluster if you are using static IP Addresses.  For example, the machine names are NODE1 and NODE2, the name of the cluster will be CLUSTER, and the IP Address will be 1.1.1.1.
+1. Run one of the following commands depending on what kind of IP address you're using.
 
-   ```PowerShell
-    New-Cluster -Name CLUSTER -Node "NODE1","NODE2" -StaticAddress 1.1.1.1
-   ```
+1. Run the following command to create the cluster if you're using static IP addresses.
 
-3. Run the following command to create the cluster if you are using DHCP for IP Addresses.  For example, the machine names are NODE1 and NODE2, and the name of the cluster will be CLUSTER.
+   - If you're using static IP addresses, run this command:
 
-   ```PowerShell
-   New-Cluster -Name CLUSTER -Node "NODE1","NODE2"
-   ```
+    ```PowerShell
+    New-Cluster -Name <CLUSTER NAME> -Node "<Node name 1>","<Node name 2>" -StaticAddress <IP address>
+    ```
+
+   - If you're using DHCP for IP addresses, run this command:
+
+    ```PowerShell
+    New-Cluster -Name <CLUSTER NAME> -Node "<Node name 1>","<NOde name 2>"
+    ```
 
 ---
 
 ### Configure a file server failover cluster
 
-To configure a file server failover cluster, follow the below steps.
+To configure a file server failover cluster:
 
-1. From **Server Manager**, choose the **Tools** drop down and select **Failover Cluster Manager**.
+1. Open **Server Manager**, then open the **Tools** drop-down menu and select **Failover Cluster Manager**.
 
-2. When Failover Cluster Manager opens, it should automatically bring in the name of the cluster you created.  If it does not, go to the middle column under **Management** and choose **Connect to Cluster**.  Input the name of the cluster you created and **OK**.
+1. When you open the Failover Cluster Manager, you should see the name of the cluster you created. If not, go to the middle column under **Management** and select **Connect to Cluster**. Enter the name of your cluster and select **OK**.
 
-3. In the console tree, click the ">" sign next to the cluster that you created to expand the items underneath it.
+1. In the console tree, select **>** next to your cluster name to view the items it contains.
 
-4. Right mouse click on **Roles** and select **Configure Role**.
+1. Right-click **Roles**, then select **Configuration Role**.
 
-5. If the **Before you begin** window opens, choose **Next**.
+1. If the **Before you begin** window opens, select **Next**.
 
-6. In the list of roles, choose **File Server** and **Next**.
+1. In the list of roles, select **File Server**, then select **Next**.
 
-7. For the File Server Type, select **File Server for general use** and **Next**.<br>For info about Scale-Out File Server, see [Scale-Out File Server overview](sofs-overview.md).
+1. For the File Server Type, select **File Server for general use**, then select **Next**.
+
+   For more information about the Scale-Out File Server, see [Scale-Out File Server overview](sofs-overview.md).
 
    ![File Server Type](media/Cluster-File-Server/Cluster-FS-File-Server-Type.png)
+   <!--Reformat this image-->
 
-8. In the **Client Access Point** window, input the name of the file server you will be using.  Please note that this is not the name of the cluster.  This is for the file share connectivity.  For example, if I want to connect to \\SERVER, the name inputted would be SERVER.
-
-   > [!NOTE]
-   > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
-
-9. Choose **Next**.
-
-10. In the **Select Storage** window, select the additional drive (not the witness) that will hold your shares, and click **Next**.
-
-11. On the **Confirmation** page, verify your configuration and select **Next**.
-
-12. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the file server role creation.
+1. In the **Client Access Point** window, enter the name of the file server you plan to use. This isn't the name of the cluster, but the name you use for file share connectivity. For example, if you want to connect to `\\SERVER`, you would enter **SERVER**.
 
    > [!NOTE]
-   > If the role does not add or start correctly, the CNO (Cluster Name Object) may not have permission to create objects in Active Directory. The File Server role requires a Computer object of the same name as the "Client Access Point" provided in Step 8.
+   > If you're using static IP Addresses, you need to manually select which network to use and enter its IP Address into the cluster name field. If you're using DHCP for your IP Addresses, the IP Address is configured automatically.P Addresses, the IP Address will be configured automatically for you.
 
-13. Under **Roles** in the console tree, you will see the new role you created listed as the name you created.  With it highlighted, under the **Actions** pane on the right, choose **Add a share**.
+1. Select **Next**.
 
-14. Run through the share wizard inputting the following:
+1. In the **Select Storage** window, select the additional drive (not the witness) that you plan to use to hold your file share. 
 
-    - Type of share it will be
-    - Location/path the folder shared will be
-    - The name of the share users will connect to
-    - Additional settings such as Access-based enumeration, caching, encryption, etc.
-    - File level permissions if they will be other than the defaults
+1. Select **Next**.
 
-15. On the **Confirmation** page, verify what you have configured, and select **Create** to create the file server share.
+1. On the **Confirmation** page, make sure your configuration looks correct, then select **Next**.
 
-16. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
+1. On the **Summary** page, you should see a brief summary of the configuration you just created. For more detailed information, select **View Report**.
 
-17. Choose **Close**.
+   > [!NOTE]
+   > If the service didn't add the role or the role doesn't work as intended, the Cluster Name Object (CNO) may not have permission to create objects in Active Directory. The File Server role requires a Computer object with the same name as the Client Access Point.
 
-18. Repeat this process for any additional shares.
+1. Under **Roles** in the console tree, you should see the new role you created listed as the name you created. Select the name to highlight it, then look at the **Actions** pane on the right side of the screen and select **Add a share**.
+
+1. Enter the following information into the **Add a share** workflow:
+
+    - Share type.
+    - Intended share folder path.
+    - Share name.
+    - Configure any additional settings, such as access-based enumeration, caching, encryption, and so on.
+    - If you're choosing file-level permissions that aren't default, specify those as well.
+
+1. On the **Confirmation** page, make sure your configuration looks correct, then select **Create** to create the file server share.
+
+1. On the **Results** page, if the service created the share successfully, select **Close**. If not, you should see a list of errors you can troubleshoot.
+
+1. Select **Close**.
+
+1. Repeat this process for any additional shares.
