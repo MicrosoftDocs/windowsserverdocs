@@ -63,7 +63,7 @@ It's also better to use a large number of smaller VMs instead of a few large VMs
 
 ## General virtual machine recommendations
 
-In order to run your chosen OS in Azure, you must us a Premium SSD storage for production workloads that require a service level agreement (SLA). For more information, see the [Service Level Agreements (SLA) for Online Services](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/).
+In order to run your chosen OS in Azure, you must use a Premium SSD storage for production workloads that require a service level agreement (SLA). For more information, see the [Service Level Agreements (SLA) for Online Services](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/).
 
 Graphics processing units (GPUs) are a good choice for users who regularly use graphics-intensive programs for video rendering, 3D design, and simulations. Azure has several graphics acceleration deployment options and multiple available GPU VM sizes. Learn more at [GPU optimized virtual machine sizes](/azure/virtual-machines/windows/sizes-gpu). For more general information about graphics acceleration in Remote Desktop Services, see [Remote Desktop Services - GPU acceleration](rds-graphics-virtualization.md)
 
