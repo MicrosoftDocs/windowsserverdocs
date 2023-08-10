@@ -111,5 +111,5 @@ We recommend you configure your exclusion range with extra placeholder addresses
 Learn more about DHCP scopes at the following resources:
 
 - [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
-- [DHCP Subnet selection options](/dhcp-subnet-options)
+- [DHCP Subnet selection options](/dhcp-subnet-options.md)
 - [Install DHCP server](/dhcp-deploy-wps.md)
