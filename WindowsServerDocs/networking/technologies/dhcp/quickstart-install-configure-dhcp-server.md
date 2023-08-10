@@ -11,7 +11,7 @@ ms.date: 07/11/2023
 
 # Quickstart: Install and configure DHCP Server
 
-Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This quickstart shows you how to install a Dynamic Host Configuration Protocol (DHCP) server on
 Windows Server. You'll install the DHCP Server role, authorize the server in your Active Directory
@@ -81,18 +81,19 @@ Here's how to install the DHCP Server role using Server Manager from the Windows
 
 ## Configure DHCP server
 
-After you successfully have installed the DHCP Server role, you need to authorize and configure your DHCP server.
+After you have successfully installed the DHCP Server role, you need to authorize and configure your
+DHCP server.
 
 ### Authorize the DHCP server in Active Directory
 
 If you're installing DHCP in a domain environment, you must perform the following steps to
 authorize the DHCP server to operate in the domain.
 
- [!NOTE]
- Unauthorized DHCP servers that are installed in Active Directory domains can't function properly
- and don't lease IP addresses to DHCP clients. The automatic disabling of unauthorized DHCP servers
- is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP
- addresses to clients on your network.
+> [!NOTE]
+> Unauthorized DHCP servers that are installed in Active Directory domains can't function properly
+> and don't lease IP addresses to DHCP clients. The automatic disabling of unauthorized DHCP servers
+> is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP
+> addresses to clients on your network.
 
 Follow these steps to authorize your DHCP server in a domain environment.
 
