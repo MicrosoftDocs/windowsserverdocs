@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: DC locator changes"
 ms.assetid: c256176d-24ef-401a-8548-5176ac1f9f8b
-title: DC locator changes
+title: Active Directory DC locator changes
 author: jay98014
 ms.author: jsimmons
 ms.date: 07/04/2023
@@ -12,7 +12,7 @@ ms.topic: article
 
 >Applies to: Windows Insider Preview Builds 25921 and later
 
-This article discusses upcoming changes to the domain controller (DC) location algorithm, including deprecation announcements and related changes.
+This article discusses upcoming changes to the Active Directory domain controller (DC) location algorithm, including deprecation announcements and related changes.
 
 ## Overview
 
@@ -103,9 +103,9 @@ For example:
 
 These mappings may be configured using the Active Directory Domains and Trusts management snap-in as follows:
 
-- right-click on the domain
-- select Properties
-- select the "DC locator mappings" tab.
+1. Right-click on the domain
+1. Select Properties
+1. Select the "DC locator mappings" tab.
 
 The Netlogon service downloads and caches the custom mappings in the DCLocatorDomainNameMappings object every 12 hours. This information is then automatically used when mapping NetBIOS-style domain names to DNS domain names.
 
