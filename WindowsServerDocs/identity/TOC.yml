@@ -578,7 +578,7 @@
         href: ad-fs/deployment/AD-FS-Deployment-Guide.md
       - name: Best Practices for Securing AD FS
         href: ad-fs/deployment/Best-Practices-Securing-AD-FS.md
-      - name: Plan Device-based Conditional Access on-Premises
+      - name: Plan Device-based Conditional Access on-premises
         href: ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md
       - name: Required updates for AD FS and WAP
         href: ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md
@@ -833,7 +833,7 @@
         href: ad-fs/operations/AD-FS-Compound-Authentication-and-AD-DS-claims.md
       - name: Configure AD FS for user certificate authentication
         href: ad-fs/operations/Configure-User-Certificate-Authentication.md
-      - name: Configure AD FS 2016 and Azure MFA
+      - name: Configure AD FS 2016 and Azure AD Multi-Factor Authentication
         href: ad-fs/operations/Configure-AD-FS-and-Azure-MFA.md
       - name: Configure AD FS Extranet Soft Lockout Protection
         href: ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md
@@ -851,7 +851,7 @@
         href: ad-fs/operations/Configure-Authentication-Policies.md
       - name: Configure Claim Rules
         href: ad-fs/operations/Configure-Claim-Rules.md
-      - name: Configure Device-based Conditional Access on-Premises
+      - name: Configure Device-based Conditional Access on-premises
         href: ad-fs/operations/Configure-Device-based-Conditional-Access-on-Premises.md
       - name: Configure intranet forms-based authentication for devices that do not support WIA
         href: ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md
@@ -865,7 +865,7 @@
         href: ad-fs/operations/create-a-Relying-Party-Trust.md
       - name: Customize HTTP security response headers with AD FS
         href: ad-fs/operations/customize-http-security-headers-ad-fs.md
-      - name: Delegate AD FS Powershell Commandlet Access to Non-Admin Users
+      - name: Delegate AD FS PowerShell Commandlet Access to Non-Admin Users
         href: ad-fs/operations/delegate-ad-fs-pshell-access.md
       - name: Device Authentication Controls in AD FS
         href: ad-fs/operations/device-authentication-controls-in-AD-FS.md
@@ -883,7 +883,7 @@
         href: ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP.md
       - name: Managing SSL Protocols in AD FS
         href: ad-fs/operations/Manage-SSL-Protocols-in-AD-FS.md
-      - name: Plan Device-based Conditional Access on-Premises
+      - name: Plan Device-based Conditional Access on-premises
         href: ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md
       - name: Set up an AD FS lab environment
         href: ad-fs/operations/Set-up-an-AD-FS-lab-environment.md
@@ -984,6 +984,8 @@
         items:
         - name: What is the Certification Authority Role Service?
           href: ad-cs/certification-authority-role.md
+        - name: PKI design considerations
+          href: ad-cs/pki-design-considerations.md
         - name: Network Device Enrollment Service
           href: ad-cs/network-device-enrollment-service-overview.md
         - name: Certificates and trust

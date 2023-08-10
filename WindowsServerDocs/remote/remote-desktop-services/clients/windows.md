@@ -6,7 +6,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/13/2023
+ms.date: 08/08/2023
 ---
 # Get started with the Remote Desktop app for Windows
 
@@ -20,9 +20,9 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 > If you want to connect to Azure Virtual Desktop instead of Remote Desktop Services or a remote PC, see [Connect to Azure Virtual Desktop with the Remote Desktop app for Windows](/azure/virtual-desktop/users/connect-microsoft-store).
 
 > [!IMPORTANT]
-> We're no longer updating the Remote Desktop app for Windows with new features.
+> We're no longer updating the Remote Desktop app for Windows with new features and support for Azure Virtual Desktop will be removed in the future.
 >
-> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and updates, we recommend you download the [Azure Virtual Desktop Store app for Windows](/azure/virtual-desktop/users/connect-windows-avd-app) instead.
+> For the best Azure Virtual Desktop experience that includes the latest features and updates, we recommend you download the [Windows Desktop client](/azure/virtual-desktop/users/connect-windows) instead.
 
 ## Get the Remote Desktop app and start using it
 
