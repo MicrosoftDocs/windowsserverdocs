@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: wscontent
 ms.custom: template-concept, team=cloud_advocates
 ms.contributors: orthomas
-ms.date: 07/10/2023
+ms.date: 08/11/2023
 ---
 
 # DHCP scopes in Windows Server
