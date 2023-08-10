@@ -20,7 +20,7 @@ Microsoft Remote Desktop offers a wide range of features designed to enhance you
 
 ## Lock Screen Security
 
-When a policy or the user locks the remote session and the network connection is lost or disrupted, RDS retains the session state and connection information. By RDS retaining the session state and connection information, the client reconnects without needing to reauthenticate. The lock screen of the Remote Desktop session isn't designed to function as a security boundary. If the automatic reconnection of locked sessions raises concerns for your specific use case, we recommend implementing extra security measures. Security measures can include disabling Automatic Reconnection on either the RDS session host or the client. This article describes how to disable Automatic Reconnection.
+When a policy or the user locks the remote session and the network connection is lost or disrupted, RDS retains the session state and connection information. If the automatic reconnection of locked sessions raises concerns for your specific use case, we recommend implementing extra security measures. Because RDS retains the session state and connection information, the client reconnects without needing to reauthenticate. The lock screen of the Remote Desktop session isn't designed to function as a security boundary.  Security measures can include disabling Automatic Reconnection on either the RDS session host or the client. This article describes how to disabled Automatic Reconnection.
 
 ## Prerequisites
 
