@@ -40,13 +40,13 @@ If you're using RDS, you also need:
 
 ## Methods to disable Automatic Reconnection
 
-To disable Automatic Reconnection, you can configure your server, client, or both. When configuring your server, you can only configure Group Policy or the Remote Desktop Session Collection, not both. Group Policy takes priority and prevents you from applying Automatic Reconnection setting for the Remote Desktop Session Collection.
+To disable Automatic Reconnection, you can configure your server, client, or both. When configuring your Remote Desktop server, you can configure Group Policy.
 
 > [!TIP]
 >
-> - If you disable Automatic Reconnection from your server, clients will be unable to perform Automatic Reconnection to the RDS session host regardless of the client configuration.
+> - If you disable Automatic Reconnection from your server, clients will be unable to perform Automatic Reconnection regardless of the client configuration.
 >
-> - Changes to the Automatic Reconnection setting only apply to new RDS sessions. Existing sessions will continue to use the Automatic Reconnection setting from the time of connection.
+> - Changes to the Automatic Reconnection setting only apply to new sessions. Existing sessions will continue to use the Automatic Reconnection setting from the time of connection.
 
 ### Client RDP Properties
 
@@ -81,6 +81,9 @@ Here's how to disable Automatic Reconnection using the Remote Desktop Connection
 ### Remote Desktop Services server configuration
 
 To disabled Automatic Reconnection for your RDS session host, select the relevant method and follow the steps.
+
+> [!TIP]
+> The applied Group Policy setting for each session host takes priority over the Automatic Reconnection setting for the Remote Desktop Session Collection
 
 #### [Group Policy](#tab/gpo)
 
