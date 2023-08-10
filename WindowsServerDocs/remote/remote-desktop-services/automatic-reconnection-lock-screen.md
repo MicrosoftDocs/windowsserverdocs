@@ -83,7 +83,7 @@ Here's how to disable Automatic Reconnection using the Remote Desktop Connection
 To disabled Automatic Reconnection for your RDS session host, select the relevant method and follow the steps.
 
 > [!TIP]
-> The applied Group Policy setting for each session host takes priority over the Automatic Reconnection setting for the Remote Desktop Session Collection
+> The Group Policy setting applied to each session host takes priority over the Automatic Reconnection setting for the Remote Desktop Session Collection
 
 #### [Group Policy](#tab/gpo)
 
