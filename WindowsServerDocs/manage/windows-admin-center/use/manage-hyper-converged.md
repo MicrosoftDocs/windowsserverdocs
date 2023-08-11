@@ -175,38 +175,24 @@ If you're just getting started, here are some quick tutorials to help you learn 
                <li>(0:26) <a href="https://youtu.be/DbjF8r2F6Jo">How to delete a volume</a></li>
 </ul>
 
-<table>
-    <tr>
-        <td>
-            <strong>Create volume, three-way mirror</strong>
-            > [!VIDEO https://www.youtube-nocookie.com/embed/o66etKq70N8]
-        </td>
-        <td>
-            <strong>Create volume, mirror-accelerated parity</strong>
-            > [!VIDEO https://www.youtube-nocookie.com/embed/R72QHudqWpE]
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Open volume and add files</strong>
-            > [!VIDEO https://www.youtube-nocookie.com/embed/j59z7ulohs4]
-        </td>
-        <td>
-            <strong>Turn on deduplication and compression</strong>
-            > [!VIDEO https://www.youtube-nocookie.com/embed/PRibTacyKko]
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Expand volume</strong>
-            > [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
-        </td>
-        <td>
-            <strong>Delete volume</strong>
-            > [!VIDEO https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo]
-        </td>
-    </tr>
-</table>
+#### Create volume, three-way mirror
+> [!VIDEO https://www.youtube-nocookie.com/embed/o66etKq70N8]
+       
+#### Create volume, mirror-accelerated parity
+> [!VIDEO https://www.youtube-nocookie.com/embed/R72QHudqWpE]
+
+#### Open volume and add files
+> [!VIDEO https://www.youtube-nocookie.com/embed/j59z7ulohs4]
+        
+#### Turn on deduplication and compression
+> [!VIDEO https://www.youtube-nocookie.com/embed/PRibTacyKko]
+        
+#### Expand volume
+> [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
+        
+#### strong>Delete volume</strong>
+> [!VIDEO https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo]
+        
 
 ### Create a new virtual machine
 
