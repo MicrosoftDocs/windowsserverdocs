@@ -6,6 +6,8 @@ ms.author: jgerend
 author: JasonGerend
 manager: mtillman
 ms.date: 09/16/2020
+f.author: InvalidAccountNameEntered
+f.date: 08/11/2023
 ---
 
 # schtasks query
@@ -15,7 +17,7 @@ Lists all the tasks scheduled to run on the computer.
 Syntax
 
 ```
-schtasks [/query] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <computer> [/u [<domain>\]<user> [/p <password>]]]
+schtasks [/query] [/tn <taskname>] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <computer> [/u [<domain>\]<user> [/p <password>]]]
 ```
 
 ### Parameters
@@ -23,6 +25,7 @@ schtasks [/query] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <computer> [/u [<dom
 | Parameter | Description |
 |--|--|
 | /query | Optionally, specifies the name of the operation. Using this query without an parameters performs a query. |
+| /tn `<taskname>` | Return 1 entry matching the specified taskname, inclusive of path to task location (assumes from "\" by default). |
 | /fo `<format>` | Specifies the output format. The valid values are *TABLE*, *LIST*, or *CSV*. |
 | /nh | Removes column headings from the table display. This parameter is valid with the *TABLE* or *CSV* output formats. |
 | /v | Adds the advanced properties of the task to the display. This parameter is valid with the *LIST* or *CSV* output formats. |
@@ -57,6 +60,12 @@ schtasks /query /s Reskit16 /fo csv /nh >> \\svr01\data\tasklogs\p0102.csv
 ```
 
 You can use this command format to collect and track tasks that are scheduled for multiple computers. This command uses the **/s** parameter to identify the remote computer, *Reskit16*, the **/fo** parameter to specify the format and the **/nh** parameter to suppress the column headings. The **>>** append symbol redirects the output to the task log, *p0102.csv*, on the local computer, *Svr01*. Because the command runs on the remote computer, the local computer path must be fully qualified.
+
+```
+schtasks /query /tn "\Microsoft\Office\Office Subscription Maintenance"
+```
+
+This command gets information for the *Office Subscription Maintenance* task, located in *\Microsoft\Office\*.
 
 ## Related links
 
