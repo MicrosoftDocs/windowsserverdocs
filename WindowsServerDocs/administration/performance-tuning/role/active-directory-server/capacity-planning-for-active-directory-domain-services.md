@@ -9,20 +9,22 @@ ms.date: 7/3/2019
 
 # Capacity planning for Active Directory Domain Services
 
-This topic is originally written by Ken Brumfield, Program Manager at Microsoft, and provides recommendations for capacity planning for Active Directory Domain Services (AD DS).
+This article provides recommendations for capacity planning for Active Directory Domain Services (AD DS).
+
+<!--Should I have deleted the author information?-->
 
 ## Goals of capacity planning
 
-Capacity planning is not the same as troubleshooting performance incidents. They are closely related, but quite different. The goals of capacity planning are:
+Capacity planning isn't the same as troubleshooting performance incidents. The goals of capacity planning are:
 
-- Properly implement and operate an environment
-- Minimize the time spent troubleshooting performance issues.
+- Properly implement and operate an environment.
+- Minimize time spent troubleshooting performance issues.
 
-In capacity planning, an organization might have a baseline target of 40% processor utilization during peak periods in order to meet client performance requirements and accommodate the time necessary to upgrade the hardware in the datacenter. Whereas, to be notified of abnormal performance incidents, a monitoring alert threshold might be set at 90% over a 5 minute interval.
+In capacity planning, an organization might have a baseline target of 40% processor utilization during peak periods to meet client performance requirements and give enough time to upgrade the hardware in the datacenter. Meanwhile, they set their monitoring alert threshold for performance issues at 90% over a five-minute interval.
 
-The difference is that when a capacity management threshold is continually exceeded (a one-time event is not a concern), adding capacity (that is, adding in more or faster processors) would be a solution or scaling the service across multiple servers would be a solution. Performance alert thresholds indicate that client experience is currently suffering and immediate steps are needed to address the issue.
+When you continually exceed the capacity management threshold, then either adding more or faster processors to increase capacity or scaling the service across multiple servers would be a solution. Performance alert thresholds let you know when you need to take immediate action when performance issues negatively affect client experience. In contrast, a troubleshooting solution would be more concerned with addressing one-time events.
 
-As an analogy: capacity management is about preventing a car accident (defensive driving, making sure the brakes are working properly, and so on) whereas performance troubleshooting is what the police, fire department, and emergency medical professionals do after an accident. This is about “defensive driving,” Active Directory-style.
+Capacity management is like the preventative measures you'd take to avoid a car accident, such as defensive driving, making sure the brakes are working properly, and so on. Performance troubleshooting is more like when the police, fire department, and emergency medical professionals respond to an accident. In summary, capacity management is “defensive driving,” Active Directory-style.
 
 Over the last several years, capacity planning guidance for scale-up systems has changed dramatically. The following changes in system architectures have challenged fundamental assumptions about designing and scaling a service:
 
@@ -32,7 +34,7 @@ Over the last several years, capacity planning guidance for scale-up systems has
 - SSD storage
 - Cloud scenarios
 
-Additionally, the approach is shifting from a server-based capacity planning exercise to a service-based capacity planning exercise. Active Directory Domain Services (AD DS), a mature distributed service that many Microsoft and third-party products use as a backend, becomes one the most critical products to plan correctly to ensure the necessary capacity for other applications to run.
+The approach to capacity planning is also shifting from server-based planning exercises to service-based ones. Active Directory Domain Services (AD DS), a mature distributed service that many Microsoft and third-party products use as a backend, is now one the most critical products in ensuring your other applications have the the necessary capacity to run.
 
 ### Baseline requirements for capacity planning guidance
 
