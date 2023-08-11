@@ -63,7 +63,7 @@ The deprecation of WINS and mailslot messages means that those mechanisms are lo
 
 #### BlockNetBIOSDiscovery Netlogon policy setting
 
-BlockNetBIOSDiscovery is a new boolean Group Policy setting for the Netlogon service. To access the policy in  Group Policy Management Editor, go to Computer Configuration > Administrative Templates > System > Net sign-in -> DC Locator DNS Records -> Block NetBIOS-based discovery for domain controller location.
+BlockNetBIOSDiscovery is a new boolean Group Policy setting for the Netlogon service. To access the policy in  Group Policy Management Editor, go to Computer Configuration > Administrative Templates > System > Net Logon -> DC Locator DNS Records -> Block NetBIOS-based discovery for domain controller location.
 
 When set to TRUE, DC locator doesn't allow the use of NetBIOS-style DC location.
 
