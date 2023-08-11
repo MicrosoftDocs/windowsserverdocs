@@ -179,31 +179,31 @@ If you're just getting started, here are some quick tutorials to help you learn 
     <tr>
         <td>
             <strong>Create volume, three-way mirror</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/o66etKq70N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            > [!VIDEO https://www.youtube-nocookie.com/embed/o66etKq70N8]
         </td>
         <td>
             <strong>Create volume, mirror-accelerated parity</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/R72QHudqWpE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            > [!VIDEO https://www.youtube-nocookie.com/embed/R72QHudqWpE]
         </td>
     </tr>
     <tr>
         <td>
             <strong>Open volume and add files</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/j59z7ulohs4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            > [!VIDEO https://www.youtube-nocookie.com/embed/j59z7ulohs4]
         </td>
         <td>
             <strong>Turn on deduplication and compression</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/PRibTacyKko" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            > [!VIDEO https://www.youtube-nocookie.com/embed/PRibTacyKko]
         </td>
     </tr>
     <tr>
         <td>
             <strong>Expand volume</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/hqyBzipBoTI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            > [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
         </td>
         <td>
             <strong>Delete volume</strong>
-            <iframe width="375" height="210" src="https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+            > [!VIDEO https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo]
         </td>
     </tr>
 </table>
