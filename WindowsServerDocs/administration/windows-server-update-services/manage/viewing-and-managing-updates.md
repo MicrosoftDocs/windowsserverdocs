@@ -3,10 +3,10 @@ title: Viewing and Managing Updates
 description: Windows Server Update Service (WSUS) article - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 06/21/2023
+ms.author: wscontent
+author: robinharwood
+manager: femila
+ms.date: 08/11/2023
 ---
 # Viewing and Managing Updates
 
@@ -157,7 +157,7 @@ Update classifications represent the type of update. For any given product or pr
 | Driver Sets | Packages of software modules designed to support the hardware of a specific model of computing device. |
 |Drivers|Software components designed to support new hardware.|
 |Feature packs|New feature releases, usually rolled into products at the next release.|
-|Hotfix| Single cumulative package composed of one or more files used to address an issue in a product. Hotfixes address a specific customer situation and may not be distributed outside that customer organization.<br><br>Hotfixes were only published for Windows 8.1, Windows Server 2012 R2 and earlier. The classification only appears when you import a hotfix from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).  |
+|Hotfix| A single package composed of one or more files used to address an issue in a product. Hotfixes address a specific situation reported by one or more customers and aren't widely available.<br><br>Hotfixes were only published for Windows 8.1, Windows Server 2012 R2 and earlier. The classification only appears when you import a hotfix from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).  |
 |Security updates|Broadly released fixes for specific products, addressing security issues.|
 |Service packs|Cumulative sets of all hotfixes, security updates, critical updates, and updates created since the release of the product. Service packs might also contain a limited number of customer-requested design changes or features.|
 |Tools|Utilities or features that aid in accomplishing a task or set of tasks.|
