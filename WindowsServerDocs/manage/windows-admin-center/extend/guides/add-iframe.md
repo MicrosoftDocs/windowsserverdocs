@@ -35,6 +35,7 @@ Add the following content to the html file:
 
 ``` html
 <div>
+  <iframe  style="height: 850px;" src="https://www.bing.com"></iframe>
 </div>
 ```
 
