@@ -61,9 +61,9 @@ When none of these sources are able to find a DNS domain name, DC location may p
 
 The deprecation of WINS and mailslot messages means that those mechanisms are longer available as a fallback option when applications specify short NetBIOS-style domain name. This deprecation can therefore cause disruption in some environments. The following sections describe various improvements that have been made as of Windows Insider Preview Release build 25921.
 
-#### BlockNetbiosDiscovery Netlogon policy setting
+#### BlockNetBIOSDiscovery Netlogon policy setting
 
-BlockNetbiosDiscovery is a new boolean Group Policy setting for the Netlogon service.
+BlockNetBIOSDiscovery is a new boolean Group Policy setting for the Netlogon service. To access the policy in  Group Policy Management Editor, go to Computer Configuration > Administrative Templates > System > Net sign-in -> DC Locator DNS Records -> Block NetBIOS-based discovery for domain controller location.
 
 When set to TRUE, DC locator doesn't allow the use of NetBIOS-style DC location.
 
@@ -71,13 +71,17 @@ When set to FALSE, DC locator allows the use of WINS\mailslot-based discovery, i
 
 When not explicitly set, the default setting is TRUE.
 
-The BlockNetbiosDiscovery setting is used to enforce a secure-by-default posture for DC location. BlockNetbiosDiscovery should only be disabled for temporary periods while other mitigations are being pursued.
+The BlockNetBIOSDiscovery setting is used to enforce a secure-by-default posture for DC location. BlockNetBIOSDiscovery should only be disabled for temporary periods while other mitigations are being pursued.
+
+The new policy setting looks like this:
+
+:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-blocknetbiosdiscovery_policy.png" border="false" alt-text="BlockNetBIOSDiscovery Group Policy Setting.":::
 
 > [!IMPORTANT]
-> Microsoft recommends that BlockNetbiosDiscovery always be set to TRUE.
+> Microsoft recommends that BlockNetBIOSDiscovery always be set to TRUE.
 
 > [!TIP]
-> The ability to use mailslots is separately enabled or disabled on a machine-wide basis using the SMB `EnableMailslots` policy setting. In order for DC locator to use mailslots for DC discovery, mailslots must be 1) enabled at the SMB level AND 2) BlockNetbiosDiscovery must be disabled. You can query and set the `EnableMailslots` setting using the `Get-SmbClientConfiguration` and `Set-SmbClientConfiguration` PowerShell cmdlets.
+> The ability to use mailslots is separately enabled or disabled on a machine-wide basis using the SMB `EnableMailslots` policy setting. In order for DC locator to use mailslots for DC discovery, mailslots must be 1) enabled at the SMB level AND 2) BlockNetBIOSDiscovery must be disabled. You can query and set the `EnableMailslots` setting using the `Get-SmbClientConfiguration` and `Set-SmbClientConfiguration` PowerShell cmdlets.
 
 #### Netlogon downloads\caches full domain information for all trusting forests
 
@@ -107,7 +111,11 @@ These mappings may be configured using the Active Directory Domains and Trusts m
 1. Select Properties
 1. Select the "DC locator mappings" tab.
 
-The Netlogon service downloads and caches the custom mappings in the DCLocatorDomainNameMappings object every 12 hours. This information is then automatically used when mapping NetBIOS-style domain names to DNS domain names.
+The Netlogon service on clients then downloads and caches the custom mappings in the DCLocatorDomainNameMappings object every 12 hours. This information is then automatically used when mapping NetBIOS-style domain names to DNS domain names.
+
+The new Active Directory Domains and Trusts management page looks like this:
+
+:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-addt-dclocatormappings-property-page.png" border="false" alt-text="Manage DC locator domain name mappings via the Active Directory Domains and Trusts snapin.":::
 
 > [!IMPORTANT]
 > Administrator-configured forest-level domain name mappings should only be configured when it has been demonstrated that all other name mapping sources are insufficient. As a general rule, such arbitrary mappings will only be necessary when no trust relationship exists between clients and the target domains, and client applications can't be migrated over to specifying DNS-style domain names.
