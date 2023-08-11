@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Always On VPN
-description: This topic provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
+description: This article provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
-ms.date: 11/15/2021
+ms.date: 08/14/2023
 ms.author: inhenkel
 author: Teresa-MOTIV
 ---
@@ -11,162 +11,37 @@ author: Teresa-MOTIV
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-If your Always On VPN setup isn't connecting clients to your internal network, you may have encountered one of the following issues:
+If your Always On Virtual Private Network (VPN) setup isn't connecting clients to your internal network, you may have encountered one of the following issues:
 
 - The VPN certificate is invalid
-- The NPS policies are incorrect
+- The Network Policy Server (NPS) policies are incorrect
 - Issues with client deployment scripts or Routing and Remote Access
 
 The first step in troubleshooting and testing your VPN connection is understanding the core components of the Always On VPN infrastructure.
 
-You can troubleshoot connection issues in several ways. For client-side issues and general troubleshooting, the application logs on client computers are invaluable. For authentication-specific issues, the NPS log on the NPS server can help you determine the source of the problem.
+You can troubleshoot connection issues in several ways. For client-side issues and general troubleshooting, the application logs on client computers are invaluable. For authentication-specific issues, the NPS log located on the NPS server can help you determine the source of the problem.
 
-The following sections describe commonly encountered errors and how to resolve them.
+## General troubleshooting for Always On VPN connection issues
 
-## Error 800: the remote connection couldn't connect
+Always On VPN clients go through several steps before establishing a connection. As a result, there are several places where connections can be blocked, and sometimes it's difficult to figure out where the issue is.
 
-This issue happens when the service can't make a remote connection because the attempted VPN tunnels failed, often because the VPN server isn't reachable. If your connection is trying to use an L2TP or IPsec tunnel, this error means the required security parameters for IPsec negotiation aren't configured properly.
+If you're encountering issues, here are some general steps you can take to figure out what's going on:
 
-### Cause: VPN tunnel type
+- Run a **whatismyip** scan to make sure your template machine isn't externally connected. If the machine has a public IP address that doesn't belong to you, then you should change the IP to a private one.
 
-You can encounter this issue when the VPN tunnel type is set to **Automatic** and your connection attempt is unsuccessful in all VPN tunnels.
+- Go to **Control Panel** > **Network** and **Internet** > **Network Connections**, open the properties for your VPN Profile, and check to make sure the value in the **General** tab can publicly resolve through DNS. If not, the Remote Access server or VPN server being unable to resolve to an IP address is likely the cause of the issue.
 
-### Solution: check your VPN configuration
+- Open the Internet Control Message Protocol (ICMP) to the external interface and ping the VPN server from the remote client. If the ping succeeds, you can remove the ICMP allow rule. If not, then your VPN server being inaccessible is probably causing the issue.
 
-Because this issue is caused by VPN settings, you should troubleshoot your VPN settings and connection by trying the following things:
+- Check the configuration for the internal and external NICs on your VPN server. In particular, make sure they're on the same subnet and that the external NIC connects to the correct interface on your firewall.
 
-- If you know which tunnel to use for your deployment, set the type of VPN to that particular tunnel type on the VPN client side.
-- Make sure the IKE ports (UDP ports 500 and 4500) aren't blocked.
-- Make sure both the client and server have correct certificates for IKE.
+- Check the client firewall, server firewall, and any hardware firewalls to make sure they allow UDP 500 and 4500 port activity through. Also, if you're using UDP port 500, make sure IPSEC isn't disabled or blocked anywhere. If not, the ports not being open from the client to the VPN server external interface is causing the issue.
 
-## Error 809: can't establish a connection between local machine and VPN server
+- Make sure the NPS server has a Server Authentication certificate that can service IKE requests. Also, make sure your NPS client has the correct VPN server IP in its settings. You should only authenticate with PEAP and the PEAP properties should only allow certificate authentication. You can check for authentication issues in the NPS event log. For more information, see [Install and Configure the NPS Server](/windows-server/networking/technologies/nps/nps-manage-install).
 
-This issue happens when the remote server doesn't respond, which prevents your local machine and the VPN server from connecting. This could be because one of the network devices (for example, firewalls, NAT, routers) between your computer and the remote server isn't configured to allow VPN connections. Contact your administrator or your service provider to determine which device may be causing the problem.
+- If you can connect but don't have internet or local network access, check your DHCP or VPN server IP pools for configuration issues. Also, make sure your clients can reach those resources. You can use the VPN server to route requests.
 
-### Error 809 cause
-
-You can encounter this issue when the UDP 500 or 4500 ports on the VPN server or firewall are blocked. Blocking can happen when one of the network devices between your computer and the remote server, such as the firewall, NAT, or routers, aren't configured correctly.
-
-### Solution: check the ports on devices between your local machine and remote server
-
-To address this issue, you should first contact your administrator or service provider to find out which device is blocked. After that, make sure the firewalls for that device allow the UDP 500 and 4500 ports through. If that doesn't address the issue, check the firewalls on every device between your local machine and the remote server.
-
-## Error 812: can't connect to Always On VPN
-
-This issue occurs when your RAS or VPN server can't connect to Always On VPN. The authentication method the server used to verify your user name and password didn't match the authentication method configured in your connection profile.
-
-Whenever you encounter error 812, we recommend that you contact your RAS server administrator immediately to let them know what happened.
-
-If you're using the Event Viewer to troubleshoot, you can find this issue in your log marked as event log 20276. This event usually appears when an RRAS-based VPN server authentication protocol setting doesn't match the settings on the VPN client computer.
-
-### Error 812 causes
-
-You typically encounter this error when the NPS specified an authentication condition the client can't meet. For example, if the NPS specifies it needs a certificate to secure the PEAP connection, then it won't be able to authenticate if the client is trying to use EAP-MSCHAPv2 instead.
-
-### Solution: check your client and NPS server authentication settings
-
-To resolve this issue, make sure the authentication requirements for your client and the NPS server match. If not, change them accordingly.
-
-## Error 13806: IKE can't find a valid machine certificate
-
-<!--Note to self: go back through this article and mark all the unlabeled acronyms-->
-
-This issue occurs when IKE can't find a valid machine certificate.
-
-### Error 13806 cause
-
-You usually encounter this error when the VPN server doesn't have the required machine or root machine certificate.
-
-### Solution: install a valid certificate in the relevant certificate store
-
-To resolve this issue, make sure the required certificates are installed on both the client machine and the VPN server. If not, contact your network security administrator and ask them to install valid certificates in the relevant certificate store.
-
-## Error 13801: the IKE authentication credentials are invalid
-
-You encounter this issue when either the server or client can't accept the IKE authentication credentials.
-
-### Error 13801 cause
-
-This error can be caused by multiple things:
-
-- The machine certificate used for IKEv2 validation on the RAS server doesn't have **Server Authentication** enabled under **Enhanced Key Usage**.
-- The machine certificate on the RAS server expired.
-- The client machine doesn't have the root certificate for validating the RAS server certificate.
-- The client machine's VPN server name doesn't match the *subjectName* value on the server certificate.
-
-### Solution 1: verify the server certificate settings
-
-If the issue is the RAS server machine certificate, make sure the certificate includes **Server Authentication** under **Enhanced Key Usage**.
-
-### Solution 2: make sure the machine certificate is still valid
-
-If the issue is that the RAS machine certificate expired, make sure it's still valid. If it isn't, install a valid certificate.
-
-### Solution 3: make sure the client machine has a root certificate
-
-If the issue is related to the client machine not having a root certificate, first check the **Trusted Root Certification Authorities** on the RRAS server to make sure the certification authority you're using is there. If it isn't there, install a valid root certificate.
-
-### Solution 4: make the client machine's VPN server name matches the server certificate
-
-First, make sure the VPN client connects by using the same fully qualified domain name (FQDN) that the VPN server certificate uses. If not, change the client name to match the server certificate name.
-
-## Error 0x80070040: server certificate doesn't have Server Authentication in its usage entries
-
-This issue occurs when the server certificate doesn't have **Server Authentication** as one of its certificate usage entries.
-
-### Error 0x80070040 cause
-
-This error occurs when the RAS server doesn't have a server authentication certificate installed.
-
-### Solution: make sure the machine certificate has the required certificate usage entry
-
-To address this issue, make sure the machine certificate the RAS server uses for IKEv2 validation includes **Server Authentication** in its list of certificate usage entries.
-
-## Error 0x800B0109: a certificate chain processed but terminated in a root certificate
-
-The full error description is, "A certificate chain processed but terminated in a root certificate that the trust provider doesn't trust."
-
-Generally, the VPN client machine is joined to an Active Directory (AD)-based domain. If you use domain credentials to sign in to the VPN server, the service automatically installs the certificate in the Trusted Root Certification Authorities store. You may encounter this issue  if the computer isn't joined to an AD domain or you use an alternative certificate chain.
-
-### Error 0x800B0109 cause
-
-You may encounter this error if the client computer doesn't have an appropriate trusted root CA certificate installed in its Trusted Root Certification Authorities store.
-
-### Solution: install the trusted root certificate
-
-To resolve this issue, make sure the client machine has a trusted root certificate installed in its Trusted Root Certification Authorities store. If not, install an appropriate root certificate.
-
-## Logs
-
-<!--This needs intro text-->
-
-<!--Also, this needs to be split off from the error codes, I think.-->
-
-### Application logs
-
-The application logs on client machines record most higher-level details of VPN connection events.
-
-When you're troubleshooting Always On VPN, look for events labeled *RasClient*. All error messages return the error code at the end of the message. The following sections list some of the more common error codes. For a full list of error codes, see [Routing and Remote Access Error Codes](/windows/win32/rras/routing-and-remote-access-error-codes).
-
-<!--Wait, there's a more comprehensive list of error codes in another article? Do we need this section, then?-->
-
-## NPS logs
-
-NPS creates and stores the NPS accounting logs. By default, these are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named `IN<date of log creation>.txt`.
-
-By default, these logs are in comma-separated values format, but they don't include a heading row. The following code block contains the heading row:
-
-```text
-ComputerName,ServiceName,Record-Date,Record-Time,Packet-Type,User-Name,Fully-Qualified-Distinguished-Name,Called-Station-ID,Calling-Station-ID,Callback-Number,Framed-IP-Address,NAS-Identifier,NAS-IP-Address,NAS-Port,Client-Vendor,Client-IP-Address,Client-Friendly-Name,Event-Timestamp,Port-Limit,NAS-Port-Type,Connect-Info,Framed-Protocol,Service-Type,Authentication-Type,Policy-Name,Reason-Code,Class,Session-Timeout,Idle-Timeout,Termination-Action,EAP-Friendly-Name,Acct-Status-Type,Acct-Delay-Time,Acct-Input-Octets,Acct-Output-Octets,Acct-Session-Id,Acct-Authentic,Acct-Session-Time,Acct-Input-Packets,Acct-Output-Packets,Acct-Terminate-Cause,Acct-Multi-Ssn-ID,Acct-Link-Count,Acct-Interim-Interval,Tunnel-Type,Tunnel-Medium-Type,Tunnel-Client-Endpt,Tunnel-Server-Endpt,Acct-Tunnel-Conn,Tunnel-Pvt-Group-ID,Tunnel-Assignment-ID,Tunnel-Preference,MS-Acct-Auth-Type,MS-Acct-EAP-Type,MS-RAS-Version,MS-RAS-Vendor,MS-CHAP-Error,MS-CHAP-Domain,MS-MPPE-Encryption-Types,MS-MPPE-Encryption-Policy,Proxy-Policy-Name,Provider-Type,Provider-Name,Remote-Server-Address,MS-RAS-Client-Name,MS-RAS-Client-Version
-```
-
-If you paste this heading row as the first line of the log file, then import the file into Microsoft Excel, then Excel will properly label the columns.
-
-The NPS logs can help you diagnose policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771748(v=ws.10)).
-
-<!--Are these next sections supposed to be a "Known Issues" section? This is a totally different format from the error codes section. Should we split this into another article?-->
-
-## VPN_Profile.ps1 script issues
+## General troubleshooting for VPN_Profile.ps1 script issues
 
 The most common issues when manually running the VPN_Profile.ps1 script include:
 
@@ -176,52 +51,165 @@ The most common issues when manually running the VPN_Profile.ps1 script include:
 
 - If you've enabled other PowerShell security features, make sure your PowerShell execution policy isn't blocking the script. Disable Constrained Language mode before running the script, then reactivate it after the script is finished running.
 
-## Always On VPN client connection issues
+## Logs
 
-<!--I feel like this should go earlier in the article? Like...what's the intent of this article? Is it trying to give error codes or more generic troubleshooting steps?-->
+You can also check the application logs and NPS logs for events that can indicate when and were an issue is happening.
 
-Always On VPN clients go through several steps before establishing a connection. As a result, there are several places where connections can be blocked, and sometimes it's difficult to figure out where the issue is.
+### Application logs
 
-If you're encountering issues, here are some general steps you can take to figure out what's going on:
+The application logs on client machines record most higher-level details of VPN connection events.
 
-- Run a **whatismyip** scan to make sure your template machine isn't externally connected. If the machine has a public IP address that doesn't belong to you, then you should change the IP to a private one.
+When you're troubleshooting Always On VPN, look for events labeled *RasClient*. All error messages return the error code at the end of the message. [Error codes](#error-codes) lists some of the more common error codes related to Always On VPN. For a full list of error codes, see [Routing and Remote Access Error Codes](/windows/win32/rras/routing-and-remote-access-error-codes).
 
-- Go to **Control Panel** > **Network** and **Internet** > **Network Connections**, open the properties for your VPN Profile, and check to make sure the value in the **General** tab can publicly resolve through DNS. If not, then the issue is caused by the Remote Access or VPN server being unable to resolve to an IP address.
+### NPS logs
 
-- Open the Internet Control Message Protocol (ICMP) to the external interface and ping the VPN server from the remote client. If the ping succeeds, you can remove the ICMP allow rule. If not, your issue is likely caused by your VPN server being inaccessible.
+NPS creates and stores the NPS accounting logs. By default, logs are stored in %SYSTEMROOT%\\System32\\Logfiles\\ in a file named `IN<date of log creation>.txt`.
 
-- Check the configuration for the internal and external NICs on your VPN server. In particular, make sure they're on the same subnet and that the external NIC connects to the correct interface on your firewall.
+By default, these logs are in comma-separated values format, but they don't include a heading row. The following code block contains the heading row:
 
-- Check the client firewall, server firewall, and any hardware firewalls to make sure they allow UDP 500 and 4500 port activity through. Also, if you're using UDP port 500, make sure IPSEC isn't disabled or blocked anywhere. If not, your issue is likely caused by the ports not being open from the client to the VPN server external interface.
+```text
+ComputerName,ServiceName,Record-Date,Record-Time,Packet-Type,User-Name,Fully-Qualified-Distinguished-Name,Called-Station-ID,Calling-Station-ID,Callback-Number,Framed-IP-Address,NAS-Identifier,NAS-IP-Address,NAS-Port,Client-Vendor,Client-IP-Address,Client-Friendly-Name,Event-Timestamp,Port-Limit,NAS-Port-Type,Connect-Info,Framed-Protocol,Service-Type,Authentication-Type,Policy-Name,Reason-Code,Class,Session-Timeout,Idle-Timeout,Termination-Action,EAP-Friendly-Name,Acct-Status-Type,Acct-Delay-Time,Acct-Input-Octets,Acct-Output-Octets,Acct-Session-Id,Acct-Authentic,Acct-Session-Time,Acct-Input-Packets,Acct-Output-Packets,Acct-Terminate-Cause,Acct-Multi-Ssn-ID,Acct-Link-Count,Acct-Interim-Interval,Tunnel-Type,Tunnel-Medium-Type,Tunnel-Client-Endpt,Tunnel-Server-Endpt,Acct-Tunnel-Conn,Tunnel-Pvt-Group-ID,Tunnel-Assignment-ID,Tunnel-Preference,MS-Acct-Auth-Type,MS-Acct-EAP-Type,MS-RAS-Version,MS-RAS-Vendor,MS-CHAP-Error,MS-CHAP-Domain,MS-MPPE-Encryption-Types,MS-MPPE-Encryption-Policy,Proxy-Policy-Name,Provider-Type,Provider-Name,Remote-Server-Address,MS-RAS-Client-Name,MS-RAS-Client-Version
+```
 
-- Make sure the NPS server has a Server Authentication certificate that can service IKE requests. Also, make sure your NPS client has the correct VPN server IP in its settings. You should only authenticate with PEAP <!--Get acronym--> and the PEAP properties should only allow certificate authentication. You can check for authentication issues in teh NPS event log. For more information, see [Install and Configure the NPS Server](/windows-server/networking/technologies/nps/nps-manage-install).
+If you paste this heading row as the first line of the log file, then import the file into Microsoft Excel, then Excel properly labels the columns.
 
-- If you can connect but don't have internet or local network access, check your DHCP or VPN server IP pools for configuration issues. Also, make sure your clients can reach those resources. You can use the VPN server to route requests.
+The NPS logs can help you diagnose policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771748(v=ws.10)).
 
-## Azure AD Conditional Access connection issues
+## Error codes
 
-<!--Another error code list? How does this relate to Always On VPN?-->
+The following sections describe commonly encountered errors and how to resolve them.
 
-### Oops - You can't get to this yet
+### Error 800: the remote connection couldn't connect
 
-When this issue appears, the Conditional Access policy isn't satisfied, blocking the VPN connection but then connecting after the user closes the dialog window. If the user selects **OK**, it starts another authentication attempt that also doesn't succeed and prompts an identical error message. The client's AAD Operational Event log records these events.
+This issue happens when the service can't make a remote connection because the attempted VPN tunnels failed, often because the VPN server isn't reachable. If your connection is trying to use a Layer 2 Tunneling Protocol (L2TP) or IPsec tunnel, this error means the required security parameters for IPsec negotiation aren't configured properly.
 
-#### Oops error cause
+#### Cause: VPN tunnel type
+
+You can encounter this issue when the VPN tunnel type is set to **Automatic** and your connection attempt is unsuccessful in all VPN tunnels.
+
+#### Solution: check your VPN configuration
+
+Because VPN settings cause this issue, you should troubleshoot your VPN settings and connection by trying the following things:
+
+- If you know which tunnel to use for your deployment, set the type of VPN to that particular tunnel type on the VPN client side.
+- Make sure the Internet Key Exchange (IKE) ports on User Datagram Protocol (UDP) ports 500 and 4500 aren't blocked.
+- Make sure both the client and server have correct certificates for IKE.
+
+### Error 809: can't establish a connection between local machine and VPN server
+
+In this issue, the remote server doesn't respond, which prevents your local machine and the VPN server from connecting. This could be because one of the network devices (for example, firewalls, Network Address Translation (NAT), and routers) between your computer and the remote server isn't configured to allow VPN connections. Contact your administrator or your service provider to determine which device may be causing the problem.
+
+#### Error 809 cause
+
+You can encounter this issue when the UDP 500 or 4500 ports on the VPN server or firewall are blocked. Blocking can happen when one of the network devices between your computer and the remote server, such as the firewall, NAT, or routers, aren't configured correctly.
+
+#### Solution: check the ports on devices between your local machine and remote server
+
+To address this issue, you should first contact your administrator or service provider to find out which device is blocked. After that, make sure the firewalls for that device allow the UDP 500 and 4500 ports through. If that doesn't address the issue, check the firewalls on every device between your local machine and the remote server.
+
+### Error 812: can't connect to Always On VPN
+
+This issue occurs when your remote access server (RAS) or VPN server can't connect to Always On VPN. The authentication method the server used to verify your user name and password didn't match the authentication method configured in your connection profile.
+
+Whenever you encounter error 812, we recommend that you contact your RAS server administrator immediately to let them know what happened.
+
+If you're using the Event Viewer to troubleshoot, you can find this issue in your log marked as event log 20276. This event usually appears when a routing and remote access (RRAS)-based VPN server authentication protocol setting doesn't match the settings on the VPN client computer.
+
+#### Error 812 causes
+
+You typically encounter this error when the NPS specified an authentication condition the client can't meet. For example, if the NPS specifies it needs a certificate to secure the Protected Extensible Authentication Protocol (PEAP) connection, then it can't authenticate if the client is trying to use EAP-MSCHAPv2 instead.
+
+#### Solution: check your client and NPS server authentication settings
+
+To resolve this issue, make sure the authentication requirements for your client and the NPS server match. If not, change them accordingly.
+
+### Error 13806: IKE can't find a valid machine certificate
+
+This issue occurs when IKE can't find a valid machine certificate.
+
+#### Error 13806 cause
+
+You usually encounter this error when the VPN server doesn't have the required machine or root machine certificate.
+
+#### Solution: install a valid certificate in the relevant certificate store
+
+To resolve this issue, make sure the required certificates are installed on both the client machine and the VPN server. If not, contact your network security administrator and ask them to install valid certificates in the relevant certificate store.
+
+### Error 13801: the IKE authentication credentials are invalid
+
+You encounter this issue when either the server or client can't accept the IKE authentication credentials.
+
+#### Error 13801 cause
+
+This error can happen for many reasons:
+
+- The machine certificate used for IKEv2 validation on the RAS server doesn't have **Server Authentication** enabled under **Enhanced Key Usage**.
+- The machine certificate on the RAS server expired.
+- The client machine doesn't have the root certificate for validating the RAS server certificate.
+- The client machine's VPN server name doesn't match the *subjectName* value on the server certificate.
+
+#### Solution 1: verify the server certificate settings
+
+If the issue is the RAS server machine certificate, make sure the certificate includes **Server Authentication** under **Enhanced Key Usage**.
+
+#### Solution 2: make sure the machine certificate is still valid
+
+If the issue is that the RAS machine certificate expired, make sure it's still valid. If it isn't, install a valid certificate.
+
+#### Solution 3: make sure the client machine has a root certificate
+
+If the issue is related to the client machine not having a root certificate, first check the **Trusted Root Certification Authorities** on the RRAS server to make sure the certification authority you're using is there. If it isn't there, install a valid root certificate.
+
+#### Solution 4: make the client machine's VPN server name matches the server certificate
+
+First, make sure the VPN client connects by using the same fully qualified domain name (FQDN) that the VPN server certificate uses. If not, change the client name to match the server certificate name.
+
+### Error 0x80070040: server certificate doesn't have Server Authentication in its usage entries
+
+This issue occurs when the server certificate doesn't have **Server Authentication** as one of its certificate usage entries.
+
+#### Error 0x80070040 cause
+
+This error occurs when the RAS server doesn't have a server authentication certificate installed.
+
+#### Solution: make sure the machine certificate has the required certificate usage entry
+
+To address this issue, make sure the machine certificate the RAS server uses for IKEv2 validation includes **Server Authentication** in its list of certificate usage entries.
+
+### Error 0x800B0109: a certificate chain processed but terminated in a root certificate
+
+The full error description is, "A certificate chain processed but terminated in a root certificate that the trust provider doesn't trust."
+
+Generally, the VPN client machine is joined to an Active Directory (AD)-based domain. If you use domain credentials to sign in to the VPN server, the service automatically installs the certificate in the Trusted Root Certification Authorities store. You may encounter this issue  if the computer isn't joined to an AD domain or you use an alternative certificate chain.
+
+#### Error 0x800B0109 cause
+
+You may encounter this error if the client computer doesn't have an appropriate trusted root CA certificate installed in its Trusted Root Certification Authorities store.
+
+#### Solution: install the trusted root certificate
+
+To resolve this issue, make sure the client machine has a trusted root certificate installed in its Trusted Root Certification Authorities store. If not, install an appropriate root certificate.
+
+### Error: Oops, you can't get to this yet
+
+This error message is associated with Azure AD Conditional Access connection issues. When this issue appears, the Conditional Access policy isn't satisfied, blocking the VPN connection but then connecting after the user closes the dialog window. If the user selects **OK**, it starts another authentication attempt that also doesn't succeed and prompts an identical error message. The client's Azure AD Operational Event log records these events.
+
+#### Azure AD Conditional Access error cause
 
 There are a few reasons why this issue can happen:
 
-- The user has a client authentication certificate in their Personal Certificate store that's valid but wasn't issued by Azure AD.
+- The user has a client authentication certificate in their Personal Certificate store that's valid but didn't come from Azure AD.
 
 - The VPN profile \<TLSExtensions\> section is either missing or doesn't contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without the  \<EKUName> and \<EKUOID> entries, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds.
 
-- The RADIUS server (NPS) hasn't been configured to only accept client certificates that contain the **AAD Conditional Access** OID. <!--Acronym-->
+- The RADIUS server (NPS) hasn't been configured to only accept client certificates that contain the **AAD Conditional Access** object identifier (OID).
 
 #### Solution: use PowerShell to determine certificate status
 
 To escape this loop:
 
 1. In Windows PowerShell, run the **Get-WmiObject** cmdlet to dump the VPN profile configuration.
-2. Verify that the *<TLSExtensions>*, *<EKUName>*, and *<EKUOID>* variables exist and their output shows the correct name and OID.
+1. Verify that the *<TLSExtensions>*, *<EKUName>*, and *<EKUOID>* variables exist and their output shows the correct name and OID.
 
   The following code is an example output of the **Get-WmiObject** command output.
 
@@ -254,7 +242,7 @@ To escape this loop:
   PSComputerName          : DERS2
   ```
 
-3. Next, run the **Certutil** command to determine if there are valid certificates in the user's certificate store:
+1. Next, run the **Certutil** command to determine if there are valid certificates in the user's certificate store:
 
   ```powershell
   C:\>certutil -store -user My
@@ -299,7 +287,7 @@ To escape this loop:
 
 ### Unable to delete the certificate from the VPN connectivity tab
 
-This is when you can't delete certificates on the VPN connectivity tab.
+This issue is when you can't delete certificates on the VPN connectivity tab.
 
 #### Cause
 
