@@ -190,7 +190,7 @@ If you're just getting started, here are some quick tutorials to help you learn 
 #### Expand volume
 > [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
         
-#### strong>Delete volume</strong>
+#### strong>Delete volume
 > [!VIDEO https://www.youtube-nocookie.com/embed/DbjF8r2F6Jo]
         
 
