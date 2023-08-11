@@ -103,25 +103,16 @@ mediatype:{Boot \| Install}|Specifies the type of image to be replaced.|
 ## Examples
 To replace a boot image, type one of the following:
 ```
-WDSUTIL /Replace-Image /Image:"WinPE Boot Image" /ImageType:Boot
-/Architecture:x86 /ReplacementImage /ImageFile:"C:\MyFolder\Boot.wim"
+WDSUTIL /Replace-Image /Image:"WinPE Boot Image" /ImageType:Boot /Architecture:x86 /ReplacementImage /ImageFile:"C:\MyFolder\Boot.wim"
 
-WDSUTIL /Verbose /Progress /Replace-Image /Image:"WinPE Boot Image"
-/Server:MyWDSServer /ImageType:Boot /Architecture:x64 /Filename:boot.wim
-/ReplacementImage /ImageFile:\\MyServer\Share\Boot.wim
-/Name:"My WinPE Image" /Description:"WinPE Image with drivers"
+WDSUTIL /Verbose /Progress /Replace-Image /Image:"WinPE Boot Image" /Server:MyWDSServer /ImageType:Boot /Architecture:x64 /Filename:boot.wim /ReplacementImage /ImageFile:\\MyServer\Share\Boot.wim /Name:"My WinPE Image" /Description:"WinPE Image with drivers"
 ```
 To replace an install image, type one of the following:
 ```
 WDSUTIL /Replace-Image /Image:"Windows 10 Home"
 /ImageType:Install /ReplacementImage /ImageFile:"C:\MyFolder\Install.wim"
 
-WDSUTIL /Verbose /Progress /Replace-Image /Image:"Windows 10 Pro"
-/Server:MyWDSServer /ImageType:Install /ImageGroup:ImageGroup1
-/Filename:Install.wim /ReplacementImage /ImageFile:\\MyServer\Share
-\Install.wim /SourceImage:"Windows 10 Pro"
-/Name:"Windows Vista Desktop" /Description:"Windows 10 Pro with
-standard business applications."
+WDSUTIL /Verbose /Progress /Replace-Image /Image:"Windows 10 Pro" /Server:MyWDSServer /ImageType:Install /ImageGroup:ImageGroup1 /Filename:Install.wim /ReplacementImage /ImageFile:\\MyServer\Share \Install.wim /SourceImage:"Windows 10 Pro" /Name:"Windows Vista Desktop" /Description:"Windows 10 Pro with standard business applications."
 ```
 ## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
