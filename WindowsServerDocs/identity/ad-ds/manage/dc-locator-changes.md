@@ -75,7 +75,7 @@ The BlockNetBIOSDiscovery setting is used to enforce a secure-by-default posture
 
 The new policy setting looks like this:
 
-:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-blocknetbiosdiscovery_policy.png" border="false" alt-text="BlockNetBIOSDiscovery Group Policy Setting.":::
+:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-blocknetbiosdiscovery-policy.png" border="false" alt-text="Screenshot of the BlockNetBIOSDiscovery Group Policy setting.":::
 
 > [!IMPORTANT]
 > Microsoft recommends that BlockNetBIOSDiscovery always be set to TRUE.
@@ -115,7 +115,7 @@ The Netlogon service on clients then downloads and caches the custom mappings in
 
 The new Active Directory Domains and Trusts management page looks like this:
 
-:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-addt-dclocatormappings-property-page.png" border="false" alt-text="Manage DC locator domain name mappings via the Active Directory Domains and Trusts snap-in.":::
+:::image type="content" source="./media/dc-locator-changes/dc-locator-changes-addt-dc-locator-mappings-property-page.png" border="false" alt-text="Screenshot of the DC locator domain name mappings property page in the Active Directory Domains and Trusts snap-in.":::
 
 > [!IMPORTANT]
 > Administrator-configured forest-level domain name mappings should only be configured when it has been demonstrated that all other name mapping sources are insufficient. As a general rule, such arbitrary mappings will only be necessary when no trust relationship exists between clients and the target domains, and client applications can't be migrated over to specifying DNS-style domain names.
