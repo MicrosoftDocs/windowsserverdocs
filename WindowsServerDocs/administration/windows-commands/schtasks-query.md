@@ -25,7 +25,7 @@ schtasks [/query] [/tn <taskname>] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <co
 | Parameter | Description |
 |--|--|
 | /query | Optionally, specifies the name of the operation. Using this query without an parameters performs a query. |
-| /tn `<taskname>` | Return 1 entry matching the specified taskname, inclusive of path to task location (assumes from "\" by default). |
+| /tn `<taskname>` | Return 1 entry matching the specified taskname, inclusive of path to task location (assumes from "\\" by default). |
 | /fo `<format>` | Specifies the output format. The valid values are *TABLE*, *LIST*, or *CSV*. |
 | /nh | Removes column headings from the table display. This parameter is valid with the *TABLE* or *CSV* output formats. |
 | /v | Adds the advanced properties of the task to the display. This parameter is valid with the *LIST* or *CSV* output formats. |
@@ -65,7 +65,7 @@ You can use this command format to collect and track tasks that are scheduled fo
 schtasks /query /tn "\Microsoft\Office\Office Subscription Maintenance"
 ```
 
-This command gets information for the *Office Subscription Maintenance* task, located in *\Microsoft\Office\*.
+This command gets information for the *Office Subscription Maintenance* task, located in *\\Microsoft\\Office\\*.
 
 ## Related links
 
