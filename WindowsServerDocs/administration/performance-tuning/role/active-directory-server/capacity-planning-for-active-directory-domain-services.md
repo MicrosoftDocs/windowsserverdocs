@@ -36,51 +36,55 @@ Over the last several years, capacity planning guidance for scale-up systems has
 
 The approach to capacity planning is also shifting from server-based planning exercises to service-based ones. Active Directory Domain Services (AD DS), a mature distributed service that many Microsoft and third-party products use as a backend, is now one the most critical products in ensuring your other applications have the the necessary capacity to run.
 
-### Baseline requirements for capacity planning guidance
+### Important information to consider before you start planning
 
-Throughout this article, the following baseline requirements are expected:
+<!--Should I have changed this title? At first I thought it was a prerequisites section, but now I'm not so sure if I'm changing the intended meaning.-->
 
-- Readers have read and are familiar with [Performance Tuning Guidelines for Windows Server 2012 R2](/previous-versions/dn529133(v=vs.85)).
-- The Windows Server platform is an x64 based architecture. But even if your Active Directory environment is installed on Windows Server 2003 x86 (now beyond the end of the support lifecycle) and has a directory information tree (DIT) that is less 1.5 GB in size and that can easily be held in memory, the guidelines from this article are still applicable.
-- Capacity planning is a continuous process and you should regularly review how well the environment is meeting expectations.
-- Optimization will occur over multiple hardware lifecycles as hardware costs change. For example, memory becomes cheaper, the cost per core decreases, or the price of different storage options change.
-- Plan for the peak busy period of the day. It is recommended to look at this in either 30 minute or hour intervals. Anything greater may hide the actual peaks and anything less may be distorted by “transient spikes.”
-- Plan for growth over the course of the hardware lifecycle for the enterprise. This may include a strategy of upgrading or adding hardware in a staggered fashion, or a complete refresh every three to five years. Each will require a “guess” as how much the load on Active Directory will grow. Historical data, if collected, will help with this assessment.
-- Plan for fault tolerance. Once an estimate *N* is derived, plan for scenarios that include *N* &ndash; 1, *N* &ndash; 2, *N* &ndash; *x*.
-  - Add in additional servers according to organizational need to ensure that the loss of a single or multiple servers does not exceed maximum peak capacity estimates.
-  - Also consider that the growth plan and fault tolerance plan need to be integrated. For example, if one DC is required to support the load, but the estimate is that the load will be doubled in the next year and require two DCs total, there will not be enough capacity to support fault tolerance. The solution would be to start with three DCs. One could also plan to add the third DC after 3 or 6 months if budgets are tight.
+In order to get the most out of this article, you should do the following things:
+
+- Make sure you've read and understand the [Performance Tuning Guidelines for Windows Server 2012 R2](/previous-versions/dn529133(v=vs.85)).
+- Understand that the Windows Server platform is an x64-based architecture. Also, you must understand that this article's guidelines still apply even if your Active Directory environment is installed on Windows Server 2003 x86 (now beyond the end of the support lifecycle) and has a directory information tree (DIT) that's smaller than 1.5 GB and can easily be stored in memory.
+- Understand that capacity planning is a continuous process, so you should regularly review how well the environment you build is meeting your expectations.
+- Understand that optimization will occur over multiple hardware lifecycles as hardware costs change. For example, if memory becomes cheaper, cost per core decreases, or the price of different storage options change.
+- Plan for the peak busy period of every day. We recommend you make your plans based on either 30 minute or hour intervals. Intervals greater than one hour may hide when your service actually reaches peak capacity, and intervals less than 30 minutes can give you inaccurate information that makes transient increases look more important than they actually are.
+- Plan for growth over the course of the hardware lifecycle for the enterprise. This planning can include strategies for upgrading or adding hardware in a staggered fashion, or a complete refresh every three to five years. Each growth plan will require you estimate how much the load on Active Directory will grow. Historical data can help you make a more accurate assessment.
+- Plan for fault tolerance. Once you've derived the estimate *N*, plan for scenarios that include *N* &ndash; 1, *N* &ndash; 2, and *N* &ndash; *x*.
+  - Based on your growth plan, add additional servers according to organizational need to ensure that losing one or more servers doesn't cause the system to exceed maximum peak capacity estimates.
+  - Also remember that you must integrate your growth and fault tolerance plans. For example, if you know your deployment currently requires one domain controller (DC) to support the load but your estimate says the load will double in the next year and require two DCs to carry, then your system doesn't have enough capacity to support fault tolerance. In order to prevent this lack of capacity, you should instead plan to start with three DCs. If your budget doesn't allow for three DCs, you can also start with two DCs, then plan to add a third after three or six months.
 
     > [!NOTE]
     > Adding Active Directory-aware applications might have a noticeable impact on the DC load, whether the load is coming from the application servers or clients.
 
-### Three-step process for the capacity planning cycle
+### The three-part capacity planning cycle
 
-In capacity planning, first decide what quality of service is needed. For example, a core datacenter supports a higher level of concurrency and requires more consistent experience for users and consuming applications, which requires greater attention to redundancy and minimizing system and infrastructure bottlenecks. In contrast, a satellite location with a handful of users does not need the same level of concurrency or fault tolerance. Thus, the satellite office might not need as much attention to optimizing the underlying hardware and infrastructure, which may lead to cost savings. All recommendations and guidance herein are for optimal performance, and can be selectively relaxed for scenarios with less demanding requirements.
+Before you start your planning cycle, you need to decide what quality of service your organization requires. All recommendations and guidance in this article are for optimal performance environments. However, you can selectively relax them in cases where you don't need optimization. For example, if your organization needs a higher level of concurrency and more consistent user experience, you should look at setting up a datacenter. Datacenters let you pay greater attention to redundancy and minimize system and infrastructure bottlenecks. In contrast, if you're planning a deployment for a satellite office with only a few users, you don't need to worry as much about hardware and infrastructure optimization, which will let you choose lower-cost options.
 
-The next question is: virtualized or physical? From a capacity planning perspective, there is no right or wrong answer; there is only a different set of variables to work with. Virtualization scenarios come down to one of two options:
+Next, you should decide whether to go with virtual or physical machines. From a capacity planning standpoint, there's no right or wrong answer. However, you do need to keep in mind that each scenario gives you a different set of variables to work with.
 
-- “Direct mapping” with one guest per host (where virtualization exists solely to abstract the physical hardware from the server)
-- “Shared host”
+Virtualization scenarios give you two options:
 
-Testing and production scenarios indicate that the “direct mapping” scenario can be treated identically to a physical host. “Shared host,” however, introduces a number of considerations spelled out in more detail later. The “shared host” scenario means that AD DS is also competing for resources, and there are penalties and tuning considerations for doing so.
+- *Direct mapping*, where you have only one guest per host.
+- *Shared host* scenarios, where you have multiple guests per host.
 
-With these considerations in mind, the capacity planning cycle is an iterative three-step process:
+You can treat direct mapping scenarios identically to physical hosts. If you choose a shared host scenario, it introduces other variables that you should take into consideration that we discuss in a later section. <!--Missing link to future section?--> Shared hosts also compete for resources with Active Directory Domain Services (AD DS), which may affect system performance and user experience.
 
-1. Measure the existing environment, determine where the system bottlenecks currently are, and get environmental basics necessary to plan the amount of capacity needed.
-1. Determine the hardware needed according to the criteria outlined in step 1.
-1. Monitor and validate that the infrastructure as implemented is operating within specifications. Some data collected in this step becomes the baseline for the next cycle of capacity planning.
+Now that we've answered those questions, let's look at the capacity planning cycle itself. Each capacity planning cycle involves a three-step process:
+
+1. Measure the existing environment, determine where the system bottlenecks currently are, and get environmental basics necessary to plan the amount of capacity your deployment needs.
+1. Determine what hardware you need based on your capacity requirements.
+1. Monitor and validate that the infrastructure you set up is operating within specifications. Data you collect in this step becomes the baseline for the next cycle of capacity planning.
 
 ### Applying the process
 
-To optimize performance, ensure these major components are correctly selected and tuned to the application loads:
+To optimize performance, ensure the following major components are correctly selected and tuned to the application loads:
 
-1. Memory
-1. Network
-1. Storage
-1. Processor
-1. Net Logon
+- Memory
+- Network
+- Storage
+- Processor
+- Net Logon <!--Is "logon" the right word to use?-->
 
-The basic storage requirements of AD DS and the general behavior of well written client software allow environments with as many as 10,000 to 20,000 users to forego heavy investment in capacity planning with regards to physical hardware, as almost any modern server class system will handle the load. That said, the following table summarizes how to evaluate an existing environment in order to select the right hardware. Each component is analyzed in detail in subsequent sections to help AD DS administrators evaluate their infrastructure using baseline recommendations and environment-specific principals.
+Basic storage requirements for AD DS and the general behavior of compatible client software allows environments with as many as 10,000 to 20,000 users to ignore capacity planning for physical hardware, as most modern server-class systems can already handle a load that size. However, the tables in [Data collection summary tables](#data-collection-summary-tables) explain how to evaluate your existing environment to select the right hardware. The sections after that one go into more detail about baseline recommendations and environment-specific principles for hardware to help AD DS admins evaluate their infrastructure.
 
 In general:
 
