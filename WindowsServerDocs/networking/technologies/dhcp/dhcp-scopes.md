@@ -15,7 +15,7 @@ A Dynamic Host Configuration Protocol (DHCP) scope is an administrative grouping
 
 Scopes enable you to configure network settings for all clients, such as Domain Name System (DNS) servers and network gateways. Scopes filter hosts by name, MAC address, and even operating system before assigning an IP address. You can configure policy for each scope.
 
-This article explains the different types of scopes, their option, and how to plan for creating your scope. If you're looking for information about how to create and configure a DHCP scope, see [Install DHCP server](/dhcp-deploy-wps.md) instead. Before creating your new scope, you should also plan the range of IP addresses it should use.
+This article explains the different types of scopes, their option, and how to plan for creating your scope. If you're looking for information about how to create and configure a DHCP scope, see [Quickstart: Install and configure DHCP Server](quickstart-install-configure-dhcp-server.md) instead. Before creating your new scope, you should also plan the range of IP addresses it should use.
 
 ## Types of scopes
 
@@ -106,6 +106,6 @@ We recommend you configure your exclusion range with extra placeholder addresses
 
 Learn more about DHCP scopes at the following resources:
 
-- [DHCP Basics](../troubleshoot/dynamic-host-configuration-protocol-basics)
-- [DHCP Subnet selection options](/dhcp-subnet-options.md)
-- [Install DHCP server](/dhcp-deploy-wps.md)
+- [DHCP (Dynamic Host Configuration Protocol) Basics](../../../troubleshoot/dynamic-host-configuration-protocol-basics.md)
+- [DHCP Subnet Selection Options](dhcp-subnet-options.md)
+- [Quickstart: Install and configure DHCP Server](quickstart-install-configure-dhcp-server.md)
