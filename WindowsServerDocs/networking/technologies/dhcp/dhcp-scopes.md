@@ -9,7 +9,7 @@ ms.contributors: orthomas
 ms.date: 08/11/2023
 ---
 
-# DHCP scopes in Windows Server
+# DHCP scopes
 
 A Dynamic Host Configuration Protocol (DHCP) scope is an administrative grouping of IP addresses for computers on a subnet that the DHCP server can lease to clients. When you define one or more scopes on your DHCP server, the server can manage the distribution and assignment of IP addresses to DHCP clients.
 
