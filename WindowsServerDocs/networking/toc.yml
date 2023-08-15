@@ -235,8 +235,14 @@ items:
         href: technologies/dhcp/dhcp-subnet-options.md
       - name: DHCP logging events for DNS record registrations
         href: technologies/dhcp/dhcp-dns-events.md
-    - name: Deploy DHCP using Windows PowerShell
-      href: technologies/dhcp/dhcp-deploy-wps.md
+    - name: Concepts
+      items:
+      - name: DHCP scopes
+        href: technologies/dhcp/dhcp-scopes.md
+    - name: How-to guides
+      items:
+      - name: Deploy DHCP using Windows PowerShell
+        href: technologies/dhcp/dhcp-deploy-wps.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
