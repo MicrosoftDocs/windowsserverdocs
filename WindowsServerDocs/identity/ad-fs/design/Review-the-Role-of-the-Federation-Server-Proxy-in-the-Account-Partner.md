@@ -5,7 +5,7 @@ title: Review the Role of the Federation Server Proxy in the Account Partner
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

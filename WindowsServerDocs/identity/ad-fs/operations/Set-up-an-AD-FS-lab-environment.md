@@ -4,7 +4,7 @@ ms.assetid: 276a7f7d-5faa-4c00-a51c-3fa511fe52f9
 title: Set up an AD FS lab environment
 author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 
