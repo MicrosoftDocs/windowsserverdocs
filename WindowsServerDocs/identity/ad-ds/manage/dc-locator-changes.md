@@ -1,5 +1,5 @@
 ---
-description: Learn about changes to the Active Directory domain DC location algorithm.
+description: Learn about changes to the Active Directory domain controller (DC) location algorithm.
 ms.assetid: c256176d-24ef-401a-8548-5176ac1f9f8b
 title: Active Directory DC locator changes
 author: jay98014
