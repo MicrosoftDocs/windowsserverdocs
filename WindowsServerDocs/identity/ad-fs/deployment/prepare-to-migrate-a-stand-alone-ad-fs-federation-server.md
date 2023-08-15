@@ -4,7 +4,7 @@ description: Learn how to export and back up the AD FS configuration data from t
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
