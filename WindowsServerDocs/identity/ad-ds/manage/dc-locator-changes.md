@@ -28,7 +28,7 @@ DC location in Windows can operate in two basic modes:
 
 - **DNS-based discovery**: This mode is based on domain controller advertisement via DNS.
 
-  Domain controllers register various SRV records in DNS. Examples include records that represent key capabilities (Key Distribution Center or Global Catalog) or records that describe locality (Active Directory site records). Clients query DNS for the appropriate SRV records and then ping those servers by using User Datagram Protocol (UDP)-based Lightweight Directory Access Protocol (LDAP) pings.
+  Domain controllers register various SRV records in DNS. Examples include records that represent key capabilities (Key Distribution Center or Global Catalog) or records that describe locality (Active Directory site records). Clients query DNS for the appropriate SRV records and then ping those servers by using UDP-based LDAP pings.
 
   This mode is supported only when you use DNS domain names. This mode is supported with Windows 2000 and later domain controllers. Windows 2000 and later clients prefer this mode, but they can fall back to the other mode under some circumstances.
 
@@ -71,7 +71,7 @@ When none of these sources can find a DNS domain name, DC location can proceed w
 
 The deprecation of WINS and mailslot messages means that those mechanisms are longer available as a fallback option when applications specify short NetBIOS-style domain names. This deprecation can therefore cause disruption in some environments.
 
-The following sections describe various improvements in Windows Insider Preview Release build 25921.
+The following sections describe improvements in Windows Insider Preview Release build 25921.
 
 ### BlockNetBIOSDiscovery Netlogon policy setting
 
@@ -80,7 +80,7 @@ The following sections describe various improvements in Windows Insider Preview 
 The following settings apply to `BlockNetBIOSDiscovery`:
 
 - `TRUE` (default): DC locator doesn't allow the use of NetBIOS-style DC location.
-- `FALSE`: DC locator allows the use of WINS/mailslot-based discovery, if it's also allowed by all legacy constraints.
+- `FALSE`: DC locator allows the use of WINS/mailslot-based discovery, if all legacy constraints also allow it.
 
 You use the `BlockNetBIOSDiscovery` setting to enforce a secure-by-default posture for DC location. We recommend that you keep it set to `TRUE`. Disable it only for temporary periods while you're pursuing other mitigations.
 
@@ -97,7 +97,7 @@ Netlogon downloads and caches naming information about domains and child domains
 
 ### Downloading and caching of administrator-configured domain name mappings
 
-If an application or environment requires other domain name mappings other sources don't automatically provide, forest administrators can configure custom mappings from DNS domain name to NetBIOS domain name at the forest level. Administrator-configured mappings are an optional mechanism that you should use only when all other options are insufficient.
+If an application or environment requires other domain name mappings that other sources don't automatically provide, forest administrators can configure custom mappings from DNS domain name to NetBIOS domain name at the forest level. Administrator-configured mappings are an optional mechanism that you should use only when all other options are insufficient.
 
 The custom domain name mappings are stored in a `serviceConnectionPoint` object located in the naming context for the Active Directory configuration. For example:
 
