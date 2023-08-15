@@ -5,7 +5,7 @@ author: billmath
 ms.author: billmath
 manager: amycolannino
 ms.date: 08/15/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Scenario: Web API calling Web API (On Behalf Of Scenario)
