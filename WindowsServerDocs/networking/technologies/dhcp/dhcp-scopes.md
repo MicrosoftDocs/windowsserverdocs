@@ -1,7 +1,7 @@
 ---
 title: DHCP scopes in Windows Server
 description: Learn about how scopes work in DHCP server and how to design IP address ranges.
-ms.topic: article
+ms.topic: conceptual
 author: robinharwood
 ms.author: wscontent
 ms.custom: template-concept, team=cloud_advocates
@@ -15,15 +15,15 @@ A Dynamic Host Configuration Protocol (DHCP) scope is an administrative grouping
 
 Scopes enable you to configure network settings for all clients, such as Domain Name System (DNS) servers and network gateways. Scopes filter hosts by name, MAC address, and even operating system before assigning an IP address. You can configure policy for each scope.
 
-This article explains the parts of creating a scope for a Windows Server deployment and how to plan creating your scope. If you're looking for information about how to create and configure a DHCP scope, go to [Install DHCP server](/dhcp-deploy-wps.md) instead. Before creating your new scope, you also plan the range of IP addresses it should use.
+This article explains the different types of scopes, their option, and how to plan for creating your scope. If you're looking for information about how to create and configure a DHCP scope, see [Install DHCP server](/dhcp-deploy-wps.md) instead. Before creating your new scope, you should also plan the range of IP addresses it should use.
 
 ## Types of scopes
 
 DHCP server includes the following types of scopes:
 
-- Single scope
-- Multicast scope
-- DHCP Superscopes
+- Single scope.
+- Multicast scope.
+- DHCP Superscopes.
 
 ### Single scope
 
@@ -43,7 +43,7 @@ Additionally, a typical DHCP scope has the following properties:
 
 - Reservations are optionally used to ensure that a DHCP client always receives the same IP address.
 
-Before you deploy your DHCP server, list your subnets and the IP address range you want to use for each subnet.
+Before you deploy your DHCP server, list your subnets, and the IP address range you want to use for each subnet.
 
 Other types of scopes available in an authorized IPv4 DHCP server can provide expanded functionality, depending on your user requirements and deployment considerations.
 
@@ -53,15 +53,15 @@ Multicasting in Windows is the process of sending a message to a group of recipi
 
 ### DHCP Superscopes
 
-DHCP Superscopes is an administrative feature of DHCP server that you can use to group multiple scopes as a single administrative entity. Superscopes make it easier to identify which scopes reside within which networks. In an environment with multiple subnets defined on a single physical network, superscopes enable your DHCP server to assign leases to clients across those multiple subnets. See [DHCP Superscopes](/openspecs/windows_protocols/ms-dhcpm/4b3dafe4-70e5-4085-969e-4bb402d9c68b) to learn more about how to enable DHCP Superscopes.
+DHCP Superscopes are an administrative feature of DHCP server you can use to group multiple scopes as a single administrative entity. Superscopes make it easier to identify which scopes reside within which networks. In an environment with multiple subnets defined on a single physical network, superscopes enable your DHCP server to assign leases to clients across those multiple subnets. See [DHCP Superscopes](/openspecs/windows_protocols/ms-dhcpm/4b3dafe4-70e5-4085-969e-4bb402d9c68b) to learn more about how to enable DHCP Superscopes.
 
 ## Scope options
 
 Scope options you configure at the server level are applied to all DHCP clients regardless of which subnet they're on. If you want a certain functionality to be available across all DHCP clients, you should configure it at the server level. These standard options include:
 
-- Default gateway
-- Domain Name and DNS servers
-- Windows Internet Name Service (WINS) servers
+- Default gateway.
+- Domain Name and DNS servers.
+- Windows Internet Name Service (WINS) servers.
 
 In addition to standard options, you can configure user-defined or vendor-specific classes.
 
@@ -73,15 +73,11 @@ Each subnet can have only a single DHCP scope with a single continuous range of 
 
 Planning IP address ranges across multiple scopes on an authorized IPv4 DHCP server is central to understanding how scopes work and successfully creating new scopes.
 
-You must plan IP address ranges before setting up scopes. To learn more about how to create new scopes on an authorized DHCP IPv4 server, see [Install DHCP Server](quickstart-install-configure-DHCP-server.md).
-
-### Create IP address ranges
-
 Each subnet must have its own unique IP address range. The IP address range specifies which IP addresses to include or exclude for assignment to DHCP clients. In other words, An IP address range lets you select which addresses devices connected to your DHCP can use. IP address ranges are represented on a DHCP server as scopes or groupings of IP addresses on the subnet that uses the DHCP service. You also can exclude specific IP addresses that you don't want clients to use.
 
-### Define the IP address range
-
 When you define your IP address range for each scope, you must use the full range of consecutive IP addresses that make up the local subnet of your DHCP service. We highly recommend you establish the entire range of addresses before identifying the static IPs within your range. After you establish the range, it's easier for you to identify which of the remaining IPs are available for DHCP clients to lease.
+
+You must plan IP address ranges before setting up scopes. To learn more about how to create new scopes on an authorized DHCP IPv4 server, see [Install DHCP Server](quickstart-install-configure-DHCP-server.md).
 
 ### Reservations
 
