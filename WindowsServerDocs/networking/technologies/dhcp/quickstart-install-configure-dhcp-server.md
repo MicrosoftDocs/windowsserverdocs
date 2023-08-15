@@ -255,6 +255,8 @@ To manage exclusions using the DHCP console:
 1. To exclude a range of more than one IP address, enter last address in the range in **End IP address**.
 1. Select **Add**.
 
+---
+
 ## Next steps
 
 - [DHCP Basics](../../../troubleshoot/dynamic-host-configuration-protocol-basics.md)
