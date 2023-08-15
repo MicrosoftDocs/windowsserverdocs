@@ -130,7 +130,9 @@ To authorize the DHCP server using Active Directory:
 
 ### Configure an IPv4 scope
 
-After you have successfully authorized your DHCP Server, you can proceed to create a new DHCP scope. Scopes are used to indicate the range of IP addresses for your DHCP server and its clients. To learn more about planning your scope ranges, see [Planning DHCP networks](/previous-versions/windows/it-pro/windows-server-2003/cc786002(v=ws.10)) for guidance.
+After you have successfully authorized your DHCP Server, you can proceed to create a new DHCP scope.
+Scopes are used to indicate the range of IP addresses for your DHCP server and its clients. To learn
+more about planning your scope ranges, see [DHCP scopes](dhcp-scopes.md)for guidance.
 
 To create a new IPv4 DHCP scope, select the relevant method and follow the steps.
 

@@ -426,6 +426,8 @@
         href: ad-ds/manage/how-to-configure-protected-accounts.md
       - name: How LDAP server cookies are handled
         href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
+      - name: DC locator changes
+        href: ad-ds/manage/dc-locator-changes.md
     - name: AD DS Troubleshooting
       href: ad-ds/manage/AD-DS-Troubleshooting.md
       items:
