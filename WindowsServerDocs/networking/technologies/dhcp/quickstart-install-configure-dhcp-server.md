@@ -92,26 +92,26 @@ To authorize your DHCP server in a domain environment:
 
 1. Run the following command to add the DHCP server to the list of authorized DHCP servers in Active Directory.
 
-  > [!NOTE]
-  > If you don't have a domain environment, don't run this command.
+   > [!NOTE]
+   > If you don't have a domain environment, don't run this command.
 
-  ```powershell
-  Add-DhcpServerInDC -DnsName DHCP1.corp.contoso.com -IPAddress 10.0.0.3
-  ```
+   ```powershell
+   Add-DhcpServerInDC -DnsName DHCP1.corp.contoso.com -IPAddress 10.0.0.3
+   ```
 
 1. To verify that the DHCP server is authorized in Active Directory, run the following command:
 
-  ```powershell
-  Get-DhcpServerInDC
-  ```
+   ```powershell
+   Get-DhcpServerInDC
+   ```
 
-  The following example shows the output you should see in Windows PowerShell.
+   The following example shows the output you should see in Windows PowerShell.
 
-  ```powershell
-  IPAddress	  DnsName
-  ---------	  -------
-  10.0.0.3 	  DHCP1.corp.contoso.com
-  ```
+   ```powershell
+   IPAddress     DnsName
+   ---------     -------
+   10.0.0.3      DHCP1.corp.contoso.com
+   ```
 
 For more information about these commands, see the following articles:
 
