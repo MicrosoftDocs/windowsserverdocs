@@ -5,7 +5,7 @@ title: AD FS 2016 Deployment
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 05/31/2017
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # AD FS Deployment

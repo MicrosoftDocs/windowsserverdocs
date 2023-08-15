@@ -4,7 +4,7 @@ description: Learn how to build a Web API calling another Web API.
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
