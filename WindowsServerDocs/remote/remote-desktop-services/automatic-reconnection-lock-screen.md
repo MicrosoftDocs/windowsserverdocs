@@ -40,7 +40,7 @@ If you're using RDS, you also need:
 
 ## Methods to disable Automatic Reconnection
 
-To disable Automatic Reconnection, you can configure your server, client, or both. When configuring your Remote Desktop server, you can configure Group Policy.
+To disable Automatic Reconnection, you can configure your server, client, or both.
 
 > [!TIP]
 >
@@ -68,7 +68,7 @@ Here's how to disable Automatic Reconnection by editing the `.rdp` file.
 
 #### [Remote Desktop Connection app](#tab/mstsc)
 
-Here's how to disable Automatic Reconnection using the Remote Desktop Connection app.
+Here's how to disable Automatic Reconnection using the Remote Desktop Connection app (`mstsc.exe`).
 
 1. Open the **Remote Desktop Connection** app and enter your connection information.
 
@@ -80,7 +80,7 @@ Here's how to disable Automatic Reconnection using the Remote Desktop Connection
 
 ### Remote Desktop Services server configuration
 
-To disabled Automatic Reconnection for your RDS session host, select the relevant method and follow the steps.
+To disable Automatic Reconnection for your RDS session host, select the relevant method and follow the steps.
 
 > [!TIP]
 > If you have an RDS deployment and want to configure Automatic Reconnection using the Session Collection properties, Group Policy must be in the **Not Configured** state for each session host. The Group Policy setting applied to each session host takes priority over the Automatic Reconnection setting for the Remote Desktop Session Collection.
@@ -101,7 +101,7 @@ Here's how to disable Automatic Reconnection for RDS session hosts using Group P
 
 #### [Server Manager](#tab/servermanager)
 
-Here's how to disable Automatic Reconnect install the DNS Server role using Server Manager from the Windows desktop.
+Here's how to disable Automatic Reconnect using Server Manager from the Windows desktop.
 
 1. From the Windows desktop, open the **Start** menu, enter the *Server Manager* and select the matching service entry.
 
@@ -120,10 +120,10 @@ Here's how to disable Automatic reconnection using the
 command.
 
 To disabled Automatic Reconnection for the Remote Desktop Session Collection named `Desktops`, run the
-following command on a computer with the DNS server role installed:
+following command on a computer with the Remote Desktop Services server role installed:
 
 ```powershell
-Set-RDSessionCollectionConfiguration Desktops -AutomaticReconnectionEnabled $false
+Set-RDSessionCollectionConfiguration -CollectionName "Desktops" -AutomaticReconnectionEnabled $false
 ```
 
 ---
