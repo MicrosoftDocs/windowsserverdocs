@@ -5,7 +5,7 @@ title: Set up the lab environment for AD FS in Windows Server 2012 R2
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
