@@ -179,93 +179,99 @@ In a virtual machine (VM), the recommended amount to start with for this example
 
 ## Network
 
-<!--Where I left off.-->
-
-This section is less about evaluating the demands regarding replication traffic, which is focused on traffic traversing the WAN and is thoroughly covered in [Active Directory Replication Traffic](/previous-versions/windows/it-pro/windows-2000-server/bb742457(v=technet.10)), than it is about evaluating total bandwidth and network capacity needed, inclusive of client queries, Group Policy applications, and so on. For existing environments, this can be collected by using performance counters “Network Interface(\*)\Bytes Received/sec,” and “Network Interface(\*)\Bytes Sent/sec.” Sample intervals for Network Interface counters in either 15, 30, or 60 minutes. Anything less will generally be too volatile for good measurements; anything greater will smooth out daily peeks excessively.
+This section is about evaluating how much total bandwidth and network capacity your deployment needs, inclusive of client queries, Group Policy settings, and so on. You can collect data to make your estimate by using the `Network Interface(*)\Bytes Received/sec` and `Network Interface(*)\Bytes Sent/sec` performance counters. Sample intervals for Network Interface counters should be either 15, 30, or 60 minutes. Anything less will be too volatile for good measurements, and anything greater will excessively smooth out daily peaks.
 
 > [!NOTE]
-> Generally, the majority of network traffic on a DC is outbound as the DC responds to client queries. This is the reason for the focus on outbound traffic, though it is recommended to evaluate each environment for inbound traffic also. The same approaches can be used to address and review inbound network traffic requirements. For more information, see Knowledge Base article [929851: The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008](https://support.microsoft.com/kb/929851).
+> Generally, the majority of network traffic on a DC is outbound as the DC responds to client queries. As a result, this section mainly focuses on outbound traffic. However, we also recommend you also evaluate each of your environments for inbound traffic. You can use the guidelines in this article to evaluate inbound network traffic requirements as well. For more information, see [929851: The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008](https://support.microsoft.com/kb/929851).
 
 ### Bandwidth needs
 
-Planning for network scalability covers two distinct categories: the amount of traffic and the CPU load from the network traffic. Each of these scenarios is straight-forward compared to some of the other topics in this article.
+Planning for network scalability covers two distinct categories: the amount of traffic and the CPU load from the network traffic.
 
-In evaluating how much traffic must be supported, there are two unique categories of capacity planning for AD DS in terms of network traffic. The first is replication traffic that traverses between domain controllers and is covered thoroughly in the reference [Active Directory Replication Traffic](/previous-versions/windows/it-pro/windows-2000-server/bb742457(v=technet.10)) and is still relevant to current versions of AD DS. The second is the intrasite client-to-server traffic. One of the simpler scenarios to plan for, intrasite traffic predominantly receives small requests from clients relative to the large amounts of data sent back to the clients. 100 MB will generally be adequate in environments up to 5,000 users per server, in a site. Using a 1 GB network adapter and Receive Side Scaling (RSS) support is recommended for anything above 5,000 users. To validate this scenario, particularly in the case of server consolidation scenarios, look at Network Interface(\*)\Bytes/sec across all the DCs in a site, add them together, and divide by the target number of domain controllers to ensure that there is adequate capacity. The easiest way to do this is to use the “Stacked Area” view in Windows Reliability and Performance Monitor (formerly known as Perfmon), making sure all of the counters are scaled the same.
+There are two things you need to take into account when capacity planning for traffic support. First, you need to know how much [Active Directory Replication Traffic](/previous-versions/windows/it-pro/windows-2000-server/bb742457(v=technet.10)) goes between your DCs. Second, you must evaluate your intrasite client-to-server traffic. Intrasite traffic mainly receives small requests from clients relative to the large amounts of data it sends back to clients. 100 MB is usually enough for environments with up to 5,000 users per server. For environments of over 5,000 users, we recommend you use a 1 GB network adapter and Receive Side Scaling (RSS) support instead.
 
-Consider the following example (also known as, a really, really complex way to validate that the general rule is applicable to a specific environment). The following assumptions are made:
+To evaluate intrasite traffic capacity, particularly in server consolidation scenarios, you should look at the `Network Interface(*)\Bytes/sec` performance counter across all DCs in a site, add them together, then divide the sum by the target number of DCs. An easy way to calculate this number is to open the **Windows Reliability and Performance Monitor** and look at the **Stacked Area** view. Make sure all the counters are scaled the same.
 
-- The goal is to reduce the footprint to as few servers as possible. Ideally, one server will carry the load and an additional server is deployed for redundancy (*N* + 1 scenario).
-- In this scenario, the current network adapter supports only 100 MB and is in a switched environment.
-  The maximum target network bandwidth utilization is 60% in an N scenario (loss of a DC).
+Let's take a look at an example of a more complex way to validate that this general rule applies to a specific environment. In this example, we're making the following assumptions:
+
+- The goal is to reduce the footprint to as few servers as possible. Ideally, one server carries the load, then you deploy an additional server for redundancy (*n* + 1 scenario).
+- In this scenario, the current network adapter only supports 100 MB and is in a switched environment.
+- The maximum target network bandwidth utilization is 60% in an *n* scenario (loss of a DC).
 - Each server has about 10,000 clients connected to it.
 
-Knowledge gained from the data in the chart (Network Interface(\*)\Bytes Sent/sec):
+Now, let's take a look at what the chart in the `Network Interface(*)\Bytes Sent/sec` counter says about this example scenario:
 
-1. The business day starts ramping up around 5:30 and winds down at 7:00 PM.
-1. The peak busiest period is from 8:00 AM to 8:15 AM, with greater than 25 Bytes sent/sec on the busiest DC.
+1. The business day starts ramping up around 5:30 AM and winds down at 7:00 PM.
+1. The peak busiest period is from 8:00 AM to 8:15 AM, with greater than 25 bytes sent per second on the busiest DC.
    > [!NOTE]
-   > All performance data is historical. So the peak data point at 8:15 indicates the load from 8:00 to 8:15.
-1. There are spikes before 4:00 AM, with more than 20 Bytes sent/sec on the busiest DC, which could indicate either load from different time zones or background infrastructure activity, such as backups. Since the peak at 8:00 AM exceeds this activity, it is not relevant.
-1. There are five Domain Controllers in the site.
-1. The max load is about 5.5 MB/s per DC, which represents 44% of the 100 MB connection. Using this data, it can be estimated that the total bandwidth needed between 8:00 AM and 8:15 AM is 28 MB/s.
+   > All performance data is historical, so the peak data point at 8:15 AM indicates the load from 8:00 AM to 8:15 AM.
+1. There are spikes before 4:00 AM, with more than 20 bytes sent per second on the busiest DC, which could indicate either load from different time zones or background infrastructure activity, such as backups. Since the peak at 8:00 AM exceeds this activity, it's not relevant.
+1. There are five DCs in the site.
+1. The maximum load is about 5.5 MBps per DC, which represents 44% of the 100 MB connection. Using this data, we can estimate that the total bandwidth needed between 8:00 AM and 8:15 AM is 28 MBps.
    > [!NOTE]
-   > Be careful with the fact that Network Interface sent/receive counters are in bytes and network bandwidth is measured in bits. 100 MB &divide; 8 = 12.5 MB, 1 GB &divide; 8 = 128 MB.
+   > The Network Interface send/receive counters are in bytes, but the network bandwidth is measured in bits. Therefore, to calculate the total bandwidth, you'd need to do 100 MB ÷ 8 = 12.5 MB and 1 GB ÷ 8 = 128 MB.
 
-Conclusions:
+Now that we've reviewed the data, what conclusions can we draw from it?
 
-1. This current environment does meet the N+1 level of fault tolerance at 60% target utilization. Taking one system offline will shift the bandwidth per server from about 5.5 MB/s (44%) to about 7 MB/s (56%).
-1. Based on the previously stated goal of consolidating to one server, this both exceeds the maximum target utilization and theoretically the possible utilization of a 100 MB connection.
-1. With a 1 GB connection this will represent 22% of the total capacity.
-1. Under normal operating conditions in the *N* + 1 scenario, client load will be relatively evenly distributed at about 14 MB/s per server or 11% of total capacity.
-1. To ensure that capacity is adequate during unavailability of a DC, the normal operating targets per server would be about 30% network utilization or 38 MB/s per server. Failover targets would be 60% network utilization or 72 MB/s per server.
+- The current environment meets the *n* + 1 level of fault tolerance at 60% target utilization. Taking one system offline will shift the bandwidth per server from about 5.5 MBps (44%) to about 7 MBps (56%).
+- Based on the previously stated goal of consolidating to one server, this both exceeds the maximum target utilization and possible utilization of a 100 MB connection.
+- With a 1 GB connection, this value represents 22% of the total capacity.
+- Under normal operating conditions in the *n* + 1 scenario, the client load is relatively evenly distributed at about 14 MBps per server or 11% of total capacity.
+- To make sure you have enough capacity while a DC is unavailable, the normal operating targets per server would be about 30% network utilization or 38 MBps per server. Failover targets would be 60% network utilization or 72 MBps per server.
 
-In short, the final deployment of systems must have a 1 GB network adapter and be connected to a network infrastructure that will support said load. A further note is that given the amount of network traffic generated, the CPU load from network communications can have a significant impact and limit the maximum scalability of AD DS. This same process can be used to estimate the amount of inbound communication to the DC. But given the predominance of outbound traffic relative to inbound traffic, it is an academic exercise for most environments. Ensuring hardware support for RSS is important in environments with greater than 5,000 users per server. For scenarios with high network traffic, balancing of interrupt load can be a bottleneck. This can be detected by Processor(\*)\% Interrupt Time being unevenly distributed across CPUs. RSS enabled NICs can mitigate this limitation and increase scalability.
+The final system deployment must have 1 GB network adapter and a connection to a network infrastructure that will support said load. Because of the amount of network traffic, the CPU load from network communications can potentially limit the maximum scalability of AD DS. You can use this same process to estimate inbound communication to the DC. However, in most scenarios, you won't need to calculate the inbound traffic because it's smaller than the outbound traffic.
+
+It's important to make sure your hardware supports RSS in environments with over 5,000 users per server. For high network traffic scenarios, balancing interrupt load can be a bottleneck. You can detect potential bottlenecks by checking the `Processor(*)\% Interrupt Time` counter to see if interrupt time is unevenly distributed across CPUs. RSS-enabled NICs <!--Acronym--> can mitigate these limitations and increase scalability.
 
 > [!NOTE]
-> A similar approach can be used to estimate the additional capacity necessary when consolidating data centers, or retiring a domain controller in a satellite location. Simply collect the outbound and inbound traffic to clients and that will be the amount of traffic that will now be present on the WAN links.
+> You can take a similar approach to estimate if you need more capacity when consolidating datacenters or retiring a DC in a satellite location. To estimate the required capacity, simply look at the data for outbound and inbound traffict to clients. The result is the amount od traffic present in the WAN <!--Acronym--> links.
 >
 > In some cases, you might experience more traffic than expected because traffic is slower, such as when certificate checking fails to meet aggressive time-outs on the WAN. For this reason, WAN sizing and utilization should be an iterative, ongoing process.
 
 ### Virtualization considerations for network bandwidth
 
-It is easy to make recommendations for a physical server: 1 GB for servers supporting greater than 5000 users. Once multiple guests start sharing an underlying virtual switch infrastructure, additional attention is necessary to ensure that the host has adequate network bandwidth to support all the guests on the system, and thus requires the additional rigor. This is nothing more than an extension of ensuring the network infrastructure into the host machine. This is regardless whether the network is inclusive of the domain controller running as a virtual machine guest on a host with the network traffic going over a virtual switch, or whether connected directly to a physical switch. The virtual switch is just one more component where the uplink needs to support the amount of data being transmitted. Thus the physical host physical network adapter linked to the switch should be able to support the DC load plus all other guests sharing the virtual switch connected to the physical network adapter.
+The typical recommendations for a physical server are 1 GB for servers supporting over 5,000 users. Once multiple guests start sharing an underlying virtual switch infrastructure, you should pay extra attention to whether the host has adequate network bandwidth to support all the guests in the system. You need to consider bandwidth regardless of whether the network includes the DC running as a VM on a host with network traffic going over a virtual switch or directly connected to a physical switch. Virtual switches are components where the uplink must support the amount of data the connection transmits, which means the physical host network adapter linked to the switch should be able to support the DC load plus all other guests sharing the virtual switch connected to the physical network adapter.
 
-### Calculation summary example
+### Network calculation summary example
+
+The following table contains values from an example scenario that we can use to calculate network capacity:
 
 | System | Peak bandwidth |
 |--|--|
-| DC 1 | 6.5 MB/s |
-| DC 2 | 6.25 MB/s |
-| DC 3 | 6.25 MB/s |
-| DC 4 | 5.75 MB/s |
-| DC 5 | 4.75 MB/s |
-| Total | 28.5 MB/s |
+| DC 1 | 6.5 MBps |
+| DC 2 | 6.25 MBps |
+| DC 3 | 6.25 MBps |
+| DC 4 | 5.75 MBps |
+| DC 5 | 4.75 MBps |
+| Total | 28.5 MBps |
 
-**Recommended: 72 MB/s** (28.5 MB/s divided by 40%)
+Based on this table, the recommended bandwidth would be 72 MBps (28.5 MBps ÷ 40%).
 
-|Target system(s) count|Total bandwidth (from above)|
+|Target system count|Total bandwidth (from above)|
 |-|-|
-|2|28.5 MB/s|
-|Resulting normal behavior|28.5 &divide; 2 = 14.25 MB/s|
+|2|28.5 MBps|
+|Resulting normal behavior|28.5 ÷ 2 = 14.25 MBps|
 
-As always, over time the assumption can be made that client load will increase and this growth should be planned for as best as possible. The recommended amount to plan for would allow for an estimated growth in network traffic of 50%.
+As always, you should assume that client load will increase over time, so you should plan for this growth as early as possible. We recommend you plan for at least 50% estimated network traffic growth.
 
 ## Storage
 
-Planning storage constitutes two components:
+There are two things you should consider when capacity planning for storage:
 
-- Capacity, or storage size
+- Capacity or storage size
 - Performance
 
-A great amount of time and documentation is spent on planning capacity, leaving performance often completely overlooked. With current hardware costs, most environments are not large enough that either of these is actually a concern, and the recommendation to “put in as much RAM as the database size” usually covers the rest, though it may be overkill for satellite locations in larger environments.
+Although capacity is important, it's important to not neglect performance. With current hardware costs, most environments aren't large enough for either factor to be a major concern. Therefore, the usual recommendation is to just put in as much RAm as the database size. However, this recommendation might be overkill for satellite locations in larger environments.
 
 ### Sizing
 
 #### Evaluating for storage
 
-Compared to 13 years ago when Active Directory was introduced, a time when 4 GB and 9 GB drives were the most common drive sizes, sizing for Active Directory is not even a consideration for all but the largest environments. With the smallest available hard drive sizes in the 180 GB range, the entire operating system, SYSVOL, and NTDS.dit can easily fit on one drive. As such, it is recommended to deprecate heavy investment in this area.
+Compared to when Active Directory first arrived at a time when 4 GB and 9 GB drives were the most common drive sizes, now sizing for Active Directory isn't even a consideration for all but the largest environments. With the smallest available hard drive sizes in the 180 GB range, the entire operating system, SYSVOL, and NTDS.dit can easily fit on one drive. As a result, we recommend you avoid investing too heavily in this area.
 
-The only recommendation for consideration is to ensure that 110% of the NTDS.dit size is available in order to enable defrag. Additionally, accommodations for growth over the life of the hardware should be made.
+Our only recommendation is that you ensure 110% of the NTS.dit size is available in order to enable defrag. Beyond that, you should take the usual considerations in accommodating future growth.
+
+<!--Where I left off-->
 
 The first and most important consideration is evaluating how large the NTDS.dit and SYSVOL will be. These measurements will lead into sizing both fixed disk and RAM allocation. Due to the (relatively) low cost of these components, the math does not need to be rigorous and precise. Content about how to evaluate this for both existing and new environments can be found in the [Data Storage](/previous-versions/windows/it-pro/windows-2000-server/cc961771(v=technet.10)) series of articles. Specifically, refer to the following articles:
 
@@ -743,7 +749,7 @@ The operating system creates a First In/First Out (FIFO) I/O queue for each disk
 
 Starting with a simple example (a single hard drive inside a computer) a component-by-component analysis will be given. Breaking this down into the major storage subsystem components, the system consists of:
 
-- **1 –** 10,000 RPM Ultra Fast SCSI HD (Ultra Fast SCSI has a 20 MB/s transfer rate)
+- **1 –** 10,000 RPM Ultra Fast SCSI HD (Ultra Fast SCSI has a 20 MBps transfer rate)
 - **1 –** SCSI Bus (the cable)
 - **1 –** Ultra Fast SCSI Adapter
 - **1 –** 32-bit 33 MHz PCI bus
@@ -759,7 +765,7 @@ Once the components are identified, an idea of how much data can transit the sys
   > [!NOTE]
   > This example does not reflect the disk cache, where the data of one cylinder is typically kept. In this case, the 10 ms are needed on the first I/O and the disk reads the whole cylinder. All other sequential I/O is satisfied from the cache. As a result, in-disk caches might improve sequential I/O performance.
 
-  So far, the transfer rate of the hard drive has been irrelevant. Whether the hard drive is 20 MB/s Ultra Wide or an Ultra3 160 MB/s, the actual amount of IOPS the can be handled by the 10,000-RPM HD is ~100 random or ~300 sequential I/O. As block sizes change based on the application writing to the drive, the amount of data that is pulled per I/O is different. For example, if the block size is 8 KB, 100 I/O operations will read from or write to the hard drive a total of 800 KB. However, if the block size is 32 KB, 100 I/O will read/write 3,200 KB (3.2 MB) to the hard drive. As long as the SCSI transfer rate is in excess of the total amount of data transferred, getting a “faster” transfer rate drive will gain nothing. See the following tables for comparison.
+  So far, the transfer rate of the hard drive has been irrelevant. Whether the hard drive is 20 MBps Ultra Wide or an Ultra3 160 MBps, the actual amount of IOPS the can be handled by the 10,000-RPM HD is ~100 random or ~300 sequential I/O. As block sizes change based on the application writing to the drive, the amount of data that is pulled per I/O is different. For example, if the block size is 8 KB, 100 I/O operations will read from or write to the hard drive a total of 800 KB. However, if the block size is 32 KB, 100 I/O will read/write 3,200 KB (3.2 MB) to the hard drive. As long as the SCSI transfer rate is in excess of the total amount of data transferred, getting a “faster” transfer rate drive will gain nothing. See the following tables for comparison.
 
   | Description | 7200 RPM 9ms seek, 4ms access | 10,000 RPM 7ms seek, 3ms access | 15,000 RPM 4ms seek, 2ms access |
   |--|--|--|--|
@@ -771,17 +777,17 @@ Once the components are identified, an idea of how much data can transit the sys
   | Random I/O | 800 KB/s |
   | Sequential I/O | 2400 KB/s |
 
-- **SCSI backplane (bus) –** Understanding how the “SCSI backplane (bus)”, or in this scenario the ribbon cable, impacts throughput of the storage subsystem depends on knowledge of the block size. Essentially the question would be, how much I/O can the bus handle if the I/O is in 8 KB blocks? In this scenario, the SCSI bus is 20 MB/s, or 20480 KB/s. 20480 KB/s divided by 8 KB blocks yields a maximum of approximately 2500 IOPS supported by the SCSI bus.
+- **SCSI backplane (bus) –** Understanding how the “SCSI backplane (bus)”, or in this scenario the ribbon cable, impacts throughput of the storage subsystem depends on knowledge of the block size. Essentially the question would be, how much I/O can the bus handle if the I/O is in 8 KB blocks? In this scenario, the SCSI bus is 20 MBps, or 20480 KB/s. 20480 KB/s divided by 8 KB blocks yields a maximum of approximately 2500 IOPS supported by the SCSI bus.
 
   > [!NOTE]
   > The figures in the following table represent an example. Most attached storage devices currently use PCI Express, which provides much higher throughput.
 
   | I/O supported by SCSI bus per block size | 2 KB block size | 8 KB block size (AD Jet) (SQL Server 7.0/SQL Server 2000) |
   |--|--|--|
-  | 20 MB/s | 10,000 | 2,500 |
-  | 40 MB/s | 20,000 | 5,000 |
-  | 128 MB/s | 65,536 | 16,384 |
-  | 320 MB/s | 160,000 | 40,000 |
+  | 20 MBps | 10,000 | 2,500 |
+  | 40 MBps | 20,000 | 5,000 |
+  | 128 MBps | 65,536 | 16,384 |
+  | 320 MBps | 160,000 | 40,000 |
 
   As can be determined from this chart, in the scenario presented, no matter what the use, the bus will never be a bottleneck, as the spindle maximum is 100 I/O, well below any of the above thresholds.
 
@@ -792,12 +798,12 @@ Once the components are identified, an idea of how much data can transit the sys
 
   In this example, the assumption that 1,000 I/O can be handled will be made.
 
-- **PCI bus –** This is an often overlooked component. In this example, this will not be the bottleneck; however as systems scale up, it can become a bottleneck. For reference, a 32 bit PCI bus operating at 33Mhz can in theory transfer 133 MB/s of data. Following is the equation:
-  > 32 bits &divide; 8 bits per byte &times; 33 MHz = 133 MB/s.
+- **PCI bus –** This is an often overlooked component. In this example, this will not be the bottleneck; however as systems scale up, it can become a bottleneck. For reference, a 32 bit PCI bus operating at 33Mhz can in theory transfer 133 MBps of data. Following is the equation:
+  > 32 bits &divide; 8 bits per byte &times; 33 MHz = 133 MBps.
 
   Note that is the theoretical limit; in reality only about 50% of the maximum is actually reached, although in certain burst scenarios, 75% efficiency can be obtained for short periods.
 
-  A 66Mhz 64-bit PCI bus can support a theoretical maximum of (64 bits &divide; 8 bits per byte &times; 66 Mhz) = 528 MB/sec. Additionally, any other device (such as the network adapter, second SCSI controller, and so on) will reduce the bandwidth available as the bandwidth is shared and the devices will contend for the limited resources.
+  A 66Mhz 64-bit PCI bus can support a theoretical maximum of (64 bits &divide; 8 bits per byte &times; 66 Mhz) = 528 MBps. Additionally, any other device (such as the network adapter, second SCSI controller, and so on) will reduce the bandwidth available as the bandwidth is shared and the devices will contend for the limited resources.
 
 After analysis of the components of this storage subsystem, the spindle is the limiting factor in the amount of I/O that can be requested, and consequently the amount of data that can transit the system. Specifically, in an AD DS scenario, this is 100 random I/O per second in 8 KB increments, for a total of 800 KB per second when accessing the Jet database. Alternatively, the maximum throughput for a spindle that is exclusively allocated to log files would suffer the following limitations: 300 sequential I/O per second in 8 KB increments, for a total of 2400 KB (2.4 MB) per second.
 
@@ -809,11 +815,11 @@ Now, having analyzed a simple configuration, the following table demonstrates wh
 | After adding 7 disks, the disk configuration still represents the bottleneck at 3200 KB/s. | **Add 7 disks (Total=8)**  <p>I/O is random<p>4 KB block size<p>10,000 RPM HD | 800 I/Os total.<br />3200 KB/s total |  |  |  |
 | After changing I/O to sequential, the network adapter becomes the bottleneck because it is limited to 1000 IOPS. | Add 7 disks (Total=8)<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD |  |  | 2400 I/O sec can be read/written to disk, controller limited to 1000 IOPS |  |
 | After replacing the network adapter with a SCSI adapter that supports 10,000 IOPS, the bottleneck returns to the disk configuration. | Add 7 disks (Total=8)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade SCSI adapter (now supports 10,000 I/O)** | 800 I/Os total.<br />3,200 KB/s total |  |  |  |
-| After increasing the block size to 32 KB, the bus becomes the bottleneck because it only supports 20 MB/s. | Add 7 disks (Total=8)<p>I/O is random<p>**32 KB block size**<p>10,000 RPM HD |  | 800 I/Os total. 25,600 KB/s (25 MB/s) can be read/written to disk.<p>The bus only supports 20 MB/s |  |  |
-| After upgrading the bus and adding more disks, the disk remains the bottleneck. | **Add 13 disks (Total=14)**<p>Add second SCSI adapter with 14 disks<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade to 320 MB/s SCSI bus** | 2800 I/Os<p>11,200 KB/s (10.9 MB/s) |  |  |  |
-| After changing I/O to sequential, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI Adapter with 14 disks<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD<p>Upgrade to 320 MB/s SCSI bus | 8,400 I/Os<p>33,600 KB\s<p>(32.8 MB\s) |  |  |  |
-| After adding faster hard drives, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>4 KB block size<p>**15,000 RPM HD**<p>Upgrade to 320 MB/s SCSI bus | 14,000 I/Os<p>56,000 KB/s<p>(54.7 MB/s) |  |  |  |
-| After increasing the block size to 32 KB, the PCI bus becomes the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>**32 KB block size**<p>15,000 RPM HD<p>Upgrade to 320 MB/s SCSI bus |  |  |  | 14,000 I/Os<p>448,000 KB/s<p>(437 MB/s) is the read/write limit to the spindle.<p>The PCI bus supports a theoretical maximum of 133 MB/s (75% efficient at best). |
+| After increasing the block size to 32 KB, the bus becomes the bottleneck because it only supports 20 MBps. | Add 7 disks (Total=8)<p>I/O is random<p>**32 KB block size**<p>10,000 RPM HD |  | 800 I/Os total. 25,600 KB/s (25 MBps) can be read/written to disk.<p>The bus only supports 20 MBps |  |  |
+| After upgrading the bus and adding more disks, the disk remains the bottleneck. | **Add 13 disks (Total=14)**<p>Add second SCSI adapter with 14 disks<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade to 320 MBps SCSI bus** | 2800 I/Os<p>11,200 KB/s (10.9 MBps) |  |  |  |
+| After changing I/O to sequential, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI Adapter with 14 disks<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD<p>Upgrade to 320 MBps SCSI bus | 8,400 I/Os<p>33,600 KB\s<p>(32.8 MB\s) |  |  |  |
+| After adding faster hard drives, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>4 KB block size<p>**15,000 RPM HD**<p>Upgrade to 320 MBps SCSI bus | 14,000 I/Os<p>56,000 KB/s<p>(54.7 MBps) |  |  |  |
+| After increasing the block size to 32 KB, the PCI bus becomes the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>**32 KB block size**<p>15,000 RPM HD<p>Upgrade to 320 MBps SCSI bus |  |  |  | 14,000 I/Os<p>448,000 KB/s<p>(437 MBps) is the read/write limit to the spindle.<p>The PCI bus supports a theoretical maximum of 133 MBps (75% efficient at best). |
 
 ### Introducing RAID
 
@@ -870,11 +876,11 @@ When designing any system for redundancy, additional components are included to 
 
 When analyzing the behavior of the SCSI or Fibre Channel hard drive, the method of analyzing the behavior as outlined previously does not change. Although there are certain advantages and disadvantages to each protocol, the limiting factor on a per disk basis is the mechanical limitation of the hard drive.
 
-Analyzing the channel on the storage unit is exactly the same as calculating the resources available on the SCSI bus, or bandwidth (such as 20 MB/s) divided by block size (such as 8 KB). Where this deviates from the simple previous example is in the aggregation of multiple channels. For example, if there are 6 channels, each supporting 20 MB/s maximum transfer rate, the total amount of I/O and data transfer that is available is 100 MB/s (this is correct, it is not 120 MB/s). Again, fault tolerance is a major player in this calculation, in the event of the loss of an entire channel, the system is only left with 5 functioning channels. Thus, to ensure continuing to meet performance expectations in the event of failure, total throughput for all of the storage channels should not exceed 100 MB/s (this assumes load and fault tolerance is evenly distributed across all channels). Turning this into an I/O profile is dependent on the behavior of the application. In the case of Active Directory Jet I/O, this would correlate to approximately 12,500 I/O per second (100 MB/s &divide; 8 KB per I/O).
+Analyzing the channel on the storage unit is exactly the same as calculating the resources available on the SCSI bus, or bandwidth (such as 20 MBps) divided by block size (such as 8 KB). Where this deviates from the simple previous example is in the aggregation of multiple channels. For example, if there are 6 channels, each supporting 20 MBps maximum transfer rate, the total amount of I/O and data transfer that is available is 100 MBps (this is correct, it is not 120 MBps). Again, fault tolerance is a major player in this calculation, in the event of the loss of an entire channel, the system is only left with 5 functioning channels. Thus, to ensure continuing to meet performance expectations in the event of failure, total throughput for all of the storage channels should not exceed 100 MBps (this assumes load and fault tolerance is evenly distributed across all channels). Turning this into an I/O profile is dependent on the behavior of the application. In the case of Active Directory Jet I/O, this would correlate to approximately 12,500 I/O per second (100 MBps &divide; 8 KB per I/O).
 
 Next, obtaining the manufacturer's specifications for the controller modules is required in order to gain an understanding of the throughput each module can support. In this example, the SAN has two controller modules that support 7,500 I/O each. The total throughput of the system may be 15,000 IOPS if redundancy is not desired. In calculating maximum throughput in the case of failure, the limitation is the throughput of one controller, or 7,500 IOPS. This threshold is well below the 12,500 IOPS (assuming 4 KB block size) maximum that can be supported by all of the storage channels, and thus, is currently the bottleneck in the analysis. Still for planning purposes, the desired maximum I/O to be planned for would be 10,400 I/O.
 
-When the data exits the controller module, it transits a Fibre Channel connection rated at 1 GB/s (or 1 Gigabit per second). To correlate this with the other metrics, 1 GB/s turns into 128 MB/s (1 GB/s &divide; 8 bits/byte). As this is in excess of the total bandwidth across all channels in the storage unit (100 MB/s), this will not bottleneck the system. Additionally, as this is only one of the two channels (the additional 1 GB/s Fibre Channel connection being for redundancy), if one connection fails, the remaining connection still has enough capacity to handle all the data transfer demanded.
+When the data exits the controller module, it transits a Fibre Channel connection rated at 1 GBps (or 1 Gigabit per second). To correlate this with the other metrics, 1 GBps turns into 128 MBps (1 GBps &divide; 8 bits/byte). As this is in excess of the total bandwidth across all channels in the storage unit (100 MBps), this will not bottleneck the system. Additionally, as this is only one of the two channels (the additional 1 GBps Fibre Channel connection being for redundancy), if one connection fails, the remaining connection still has enough capacity to handle all the data transfer demanded.
 
 En route to the server, the data will most likely transit a SAN switch. As the SAN switch has to process the incoming I/O request and forward it out the appropriate port, the switch will have a limit to the amount of I/O that can be handled, however, manufacturers specifications will be required to determine what that limit is. For example, if there are two switches and each switch can handle 10,000 IOPS, the total throughput will be 20,000 IOPS. Again, fault tolerance being a concern, if one switch fails, the total throughput of the system will be 10,000 IOPS. As it is desired not to exceed 80% utilization in normal operation, using no more than 8000 I/O should be the target.
 
@@ -942,7 +948,7 @@ Applying this knowledge:
   - Active Directory database pages are 8 KB in size.
   - A minimum of 128 pages need to be read in from disk.
   - Assuming nothing is cached, at the floor (10 ms) this is going to take a minimum 1.28 seconds to load the data from disk in order to return it to the client. At 20 ms, where the throughput on storage has long since maxed out and is also the recommended maximum, it will take 2.5 seconds to get the data from disk in order to return it to the end user.
-- **At what rate will the cache be warmed –** Making the assumption that the client load is going to maximize the throughput on this storage example, the cache will warm at a rate of 2400 IOPS &times; 8 KB per IO. Or, approximately 20 MB/s per second, loading about 1 GB of database into RAM every 53 seconds.
+- **At what rate will the cache be warmed –** Making the assumption that the client load is going to maximize the throughput on this storage example, the cache will warm at a rate of 2400 IOPS &times; 8 KB per IO. Or, approximately 20 MBps per second, loading about 1 GB of database into RAM every 53 seconds.
 
 > [!NOTE]
 > It is normal for short periods to observe the latencies climb when components aggressively read or write to disk, such as when the system is being backed up or when AD DS is running garbage collection. Additional head room on top of the calculations should be provided to accommodate these periodic events. The goal being to provide enough throughput to accommodate these scenarios without impacting normal function.
