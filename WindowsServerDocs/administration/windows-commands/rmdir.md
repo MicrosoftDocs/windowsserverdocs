@@ -35,7 +35,7 @@ rmdir [<drive>:]<path> [/s [/q]]
 
 #### Remarks
 
-- You can't delete a directory that contains files, including hidden or system files. If you attempt to do so, the following message appears:
+- You can't delete a directory that contains subdirectories or files, including hidden or system files. If you attempt to do so, the following message appears:
 
     `The directory is not empty`
 
