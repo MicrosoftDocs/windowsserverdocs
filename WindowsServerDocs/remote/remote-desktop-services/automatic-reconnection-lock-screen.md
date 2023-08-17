@@ -119,7 +119,7 @@ Here's how to disable Automatic reconnection using the
 [Set-RDSessionCollectionConfiguration](/powershell/module/remotedesktop/Set-RDSessionCollectionConfiguration) PowerShell
 command.
 
-To disabled Automatic Reconnection for the Remote Desktop Session Collection named `Desktops`, run the
+To disable Automatic Reconnection for the Remote Desktop Session Collection named `Desktops`, run the
 following command on a computer with the Remote Desktop Services server role installed:
 
 ```powershell
