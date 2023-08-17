@@ -273,28 +273,27 @@ Our only recommendation is that you ensure 110% of the NTS.dit size is available
 
 <!--Where I left off-->
 
-The first and most important consideration is evaluating how large the NTDS.dit and SYSVOL will be. These measurements will lead into sizing both fixed disk and RAM allocation. Due to the (relatively) low cost of these components, the math does not need to be rigorous and precise. Content about how to evaluate this for both existing and new environments can be found in the [Data Storage](/previous-versions/windows/it-pro/windows-2000-server/cc961771(v=technet.10)) series of articles. Specifically, refer to the following articles:
-
-- **For existing environments &ndash;** The section titled “To activate logging of disk space that is freed by defragmentation” in the article [Storage Limits](/previous-versions/windows/it-pro/windows-2000-server/cc961769(v=technet.10)).
-- **For new environments &ndash;** The article titled [Growth Estimates for Active Directory Users and Organizational Units](/previous-versions/windows/it-pro/windows-2000-server/cc961779(v=technet.10)).
+If you are going to evaluate your storage, then first you must evaluate how large the NTDS.dit and SYSVOL need to be. These measurements will help you size both the fixed disk and RAM allocations. Because the components are relatively low cost, you don't need to be super precise when doing the math. For more information about storage evaluation, see [Storage Limits](/previous-versions/windows/it-pro/windows-2000-server/cc961769(v=technet.10)) and [Growth Estimates for Active Directory Users and Organizational Units](/previous-versions/windows/it-pro/windows-2000-server/cc961779(v=technet.10)).
 
   > [!NOTE]
-  > The articles are based on data size estimates made at the time of the release of Active Directory in Windows 2000. Use object sizes that reflect the actual size of objects in your environment.
+  > The articles linked in the previous paragraph are based on data size estimates made during the release of Active Directory in Windows 2000. When making your own estimate, use object sizes that reflect the actual size of objects in your environment.
 
-When reviewing existing environments with multiple domains, there may be variations in database sizes. Where this is true, use the smallest global catalog (GC) and non-GC sizes.
+As you review existing environments with multiple domains, you may notice variations in database sizes. When you spot these variations, use the smallest global catalog (GC) and non-GC sizes.
 
-The database size can vary between operating system versions. DCs that run earlier operating systems such as Windows Server 2003 has a smaller database size than a DC that runs a later operating system such as Windows Server 2008 R2, especially when features such Active Directory Recycle Bin or Credential Roaming are enabled.
+Database sizes can vary between OS versions. DCs running earlier versions of OSes like Windows Server 2003 have smaller database sizes than one running a later version like Windows Server 2008 R2. The DC having features like Active Directory REcycle Bin or Credential Roaming enabled can also affect database size.
 
 > [!NOTE]
 >
->- For new environments, notice that the estimates in Growth Estimates for Active Directory Users and Organizational Units indicate that 100,000 users (in the same domain) consume about 450 MB of space. Please note that the attributes populated can have a huge impact on the total amount. Attributes will be populated on many objects by both third-party and Microsoft products, including Microsoft Exchange Server and Lync. An evaluation based on the portfolio of the products in the environment is preferred, but the exercise of detailing out the math and testing for precise estimates for all but the largest environments may not actually be worth significant time and effort.
->- Ensure that 110% of the NTDS.dit size is available as free space in order to enable offline defrag, and plan for growth over a three to five year hardware lifespan. Given how cheap storage is, estimating storage at 300% the size of the DIT as storage allocation is safe to accommodate growth and the potential need for offline defrag.
+> - For new environments, remember that 100,000 users in the same domain consume about 450 MB of space. The attributes you populate can have a huge impact on the total amount of space consumed. Attributes are populated by many objects from both third-party and Microsoft products, including Microsoft Exchange Server and Lync. As a result, we recommend you evaluate based on the environment's product portfolio. However, you should also keep in mind that doing the math and testing for precise estimates for all but the largest environments may not be worth significant time or effort.
+> - Make sure the free space you have available is 110% of the NTDS.dit size to enable offline defrag. This free space also lets you plan for growth over the server's three to five year hardware lifespan. If you have the storage for it, allocating enough free space to equal 300% of the DIT for storage is a safe way to accommodate growth and defragging.
 
 #### Virtualization considerations for storage
 
-In a scenario where multiple Virtual Hard Disk (VHD) files are being allocated on a single volume use a fixed sized disk of at least 210% (100% of the DIT + 110% free space) the size of the DIT to ensure that there is adequate space reserved.
+In scenarios where you allocate multiple Virtual Hard Disk (VHD) files to a single volume, you should use a fixed state disk of at least 210% the size of the DIT (100% of the DIT + 110% free space) to ensure you have enough space reserved for your needs.
 
-#### Calculation summary example
+#### Storage calculation summary example
+
+The following table lists the values you'd use to estimate the space requirements for a hypothetical storage scenario.
 
 | Data collected from evaluation phase | Size |
 |--|--|
@@ -303,51 +302,58 @@ In a scenario where multiple Virtual Hard Disk (VHD) files are being allocated o
 | Total storage needed | 73.5 GB |
 
 > [!NOTE]
-> This storage needed is in addition to the storage needed for SYSVOL, operating system, page file, temporary files, local cached data (such as installer files), and applications.
+> The storage estimate should also include how much storage you need for SYSVOL, the OS, the page file, temporary files, local cached data such as installer files, and applications.
 
 ### Storage performance
 
-#### Evaluating performance of storage
+As the slowest component within any computer, storage can have the biggest adverse impact on client experience. For environments large enough that the RAM sizing recommendations in this article aren't feasible, the consequences of overlooking capacity planning for storage can be devastating for system performance. THe complexities and varieties of available storage technology further increase risk, as the typical recommendation to put the OS, logs, and database on separate physical disks doesn't apply universally across all scenarios.
 
-As the slowest component within any computer, storage can have the biggest adverse impact on client experience. For those environments large enough for which the RAM sizing recommendations are not feasible, the consequences of overlooking planning storage for performance can be devastating.  Also, the complexities and varieties of storage technology further increase the risk of failure as the relevance of long standing best practices of “put operating system, logs, and database” on separate physical disks is limited in it's useful scenarios.  This is because the long standing best practice is based on the assumption that is that a “disk” is a dedicated spindle and this allowed I/O to be isolated.  This assumptions that make this true are no longer relevant with the introduction of:
+The old recommendations about disks assumed that a disk was a dedicated spindle that allowed for isolated I/O. This assumption is no longer true due to the introduction of the following storage types:
 
 - RAID
 - New storage types and virtualized and shared storage scenarios
 - Shared spindles on a Storage Area Network (SAN)
 - VHD file on a SAN or network-attached storage
-- Solid State Drives
-- Tiered storage architectures (i.e. SSD storage tier caching larger spindle based storage)
+- Solid State Drives (SSDs)
+- Tiered storage architectures, such as SSD storage tier caching larger spindle-based storage
 
-Specifically, shared storage (RAID, SAN, NAS, JBOD (i.e. Storage Spaces), VHD) all have the ability to be oversubscribed/overloaded by other work loads that are placed on the back end storage. They also add in the challenge that SAN/network/driver issues (everything between the physical disk and the AD application) can cause throttling and/or delays. For clarification, these are not "bad" configurations, they are more complex configurations that require every component along the way to be working properly, thus requiring additional attention to ensure that performance is acceptable.  See Appendix C, subsection "Introducing SANs," and Appendix D later in this document for more detailed explanations. Also, whereas Solid State Drives do not have the limitation of spinning disks (Hard Drives) regarding only allowing one IO at a time to be processed, they do still have IO limitations, and overloading/oversubscribing of SSDs is possible. In short, the end goal of all storage performance efforts, regardless of underlying storage architecture and design, is to ensure that the needed amount of Input/output Operations Per Second (IOPS) is available and that those IOPS happen within an acceptable time frame (as specified elsewhere in this document). For those scenarios with locally attached storage, reference Appendix C for the basics in how to design traditional local storage scenarios. These principals are generally applicable to more complex storage tiers and will also help in dialog with the vendors supporting backend storage solutions.
+<!--Where I left off-->
 
-- Given the wide breadth of storage options available, it is recommended to engage the expertise of hardware support teams or vendors to ensure that the specific solution meets the needs of AD DS. The following numbers are the information that would be provided to the storage specialists.
+Shared storage, such as RAID, SAN, NAS, JBOD, Storage Spaces, and VHD, are capable of being overloaded by other workloads you place on the back-end storage. These types of storage also present an extra challenge: SAN, network, or driver issues between the physical disk and the AD application can cause throttling and delays. To clarify, these aren't bad configurations, but they are more complex, which means you need to pay extra attention to make sure every component is working as intended. For more detailed explanations, see [Appendix C](#appendix-c-fundamentals-regarding-the-operating-system-interacting-with-storage) and [Appendix D](#appendix-d---discussion-on-storage-troubleshooting---environments-where-providing-at-least-as-much-ram-as-the-database-size-is-not-a-viable-option) later in this article. Also, while SSDs aren't limited by hard drives that can only process one IO at a time, they still have IO limitations that can be overloaded.
 
-For environments where the database is too large to be held in RAM, use the performance counters to determine how much I/O needs to be supported:
+In summary, the goal of all storage performance planning, regardless of storage architecture, is to ensure that the needed amount of IOs is always available and that they happen within an acceptable timeframe. For scenarios with locally attached storage, see [Appendix C](#appendix-c-fundamentals-regarding-the-operating-system-interacting-with-storage) for more information about design and planning. You can apply the principles in the appendix to more complex storage scenarios, as well as conversations with vendors supporting your back-end storage solutions.
 
-- LogicalDisk(\*)\Avg Disk sec/Read (for example, if NTDS.dit is stored on the D:/ drive, the full path would be LogicalDisk(D:)\Avg Disk sec/Read)
-- LogicalDisk(\*)\Avg Disk sec/Write
-- LogicalDisk(\*)\Avg Disk sec/Transfer
-- LogicalDisk(\*)\Reads/sec
-- LogicalDisk(\*)\Writes/sec
-- LogicalDisk(\*)\Transfers/sec
+Due to how many storage options are available today, we recommend you consult your hardware support teams or vendors while planning to ensure the solution meets the needs of your AD DS deployment. During these conversations, you may find the following performance counters helpful, especially when your database is too large for your RAM:
 
-These should be sampled in 15/30/60 minute intervals to benchmark the demands of the current environment.
+- `LogicalDisk(*)\Avg Disk sec/Read` (for example, if NTDS.dit is stored on drive D, the full path would be `LogicalDisk(D:)\Avg Disk sec/Read`)
+- `LogicalDisk(*)\Avg Disk sec/Write`
+- `LogicalDisk(*)\Avg Disk sec/Transfer`
+- `LogicalDisk(*)\Reads/sec`
+- `LogicalDisk(*)\Writes/sec`
+- `LogicalDisk(*)\Transfers/sec`
+
+When you provide the data, you should make sure it's sampled in intervals of 15, 30, or 60 minutes to give the most accurate picture of your current environment possible.
 
 #### Evaluating the results
 
-> [!NOTE]
-> The focus is on reads from the database as this is usually the most demanding component, the same logic can be applied to writes to the log file by substituting LogicalDisk(*\<NTDS Log\>*)\Avg Disk sec/Write and LogicalDisk(*\<NTDS Log\>*)\Writes/sec):
->
-> - LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read indicates whether or not the current storage is adequately sized.  If the results are roughly equal to the Disk Access Time for the disk type, LogicalDisk(*\<NTDS\>*)\Reads/sec is a valid measure.  Check the manufacturer specifications for the storage on the back end, but good ranges for LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read would roughly be:
->   - 7200 – 9 to 12.5 milliseconds (ms)
->   - 10,000 – 6 to 10 ms
->   - 15,000 – 4 to 6 ms
->   - SSD – 1 to 3 ms
->   - > [!NOTE]
->     > Recommendations exist stating that storage performance is degraded at 15ms to 20ms (depending on source).  The difference between the above values and the other guidance is that the above values are the normal operating range.  The other recommendations are troubleshooting guidance to identify when client experience significantly degrades and becomes noticeable.  Reference Appendix C for a deeper explanation.
+This section focuses on reads from the database, as the database is usually the most demanding component. You can apply the same logic to writes to the log file by substituting `<NTDS Log>)\Avg Disk sec/Write` and `LogicalDisk(<NTDS Log>)\Writes/sec)`.
+
+The `LogicalDisk(<NTDS>)\Avg Disk sec/Read` counter shows whether the current storage is adequately sized. If the value is roughly equal to the expected Disk Access TIme for the disk type, the `LogicalDisk(<NTDS>)\Reads/sec` counter is a valid measure. If the results are roughly equal to the Disk Access Time for the disk type, the `LogicalDisk(<NTDS>)\Reads/sec` counter is a valid measure. Although this can change depending on which manufacturer specifications your back-end storage has, but good ranges for `LogicalDisk(<NTDS>)\Avg Disk sec/Read` would roughly be:
+
+- 7200 – 9 to 12.5 milliseconds (ms)
+- 10,000 – 6 to 10 ms
+- 15,000 – 4 to 6 ms
+- SSD – 1 to 3 ms
+
+<!--I need more context for what these numbers mean.-->
+
+You may hear from other sources that storage performance is degraded at 15 ms to 20 ms. The difference between those values and the values in the preceding list is that the list values show the normal operating range. The other values are for troubleshooting purposes, which help you identify when client experience has degraded enough that it becomes noticeable. For more information, see [Appendix C](#appendix-c-fundamentals-regarding-the-operating-system-interacting-with-storage).
+
+<!--I have no idea what this following list of counters is. This whole section was a mess with duplicate content, and it's not clear where this should go because the context here is so poor compared to the other sections.-->
+
 > - LogicalDisk(*\<NTDS\>*)\Reads/sec is the amount of I/O that is being performed.
 >   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is within the optimal range for the backend storage, LogicalDisk(*\<NTDS\>*)\Reads/sec can be used directly to size the storage.
->   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is not within the optimal range for the backend storage, additional I/O is needed according to the following formula: (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read) &divide; (Physical Media Disk Access Time) &times; (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read)
+>   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is not within the optimal range for the backend storage, additional I/O is needed according to the following formula: (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read) ÷ (Physical Media Disk Access Time) × (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read)
 
 Considerations:
 
@@ -368,13 +374,13 @@ Determining the amount of I/O needed for a healthy system under normal operating
 
 - LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec during the peak period 15 minute period
 - To determine the amount of I/O needed for storage where the capacity of the underlying storage is exceeded:
-  >*Needed IOPS* = (LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read &divide; *\<Target Avg Disk sec/Read\>*) &times; LogicalDisk(*\<NTDS Database Drive\>*)\Read/sec
+  >*Needed IOPS* = (LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read ÷ *\<Target Avg Disk sec/Read\>*) × LogicalDisk(*\<NTDS Database Drive\>*)\Read/sec
 
 | Counter | Value |
 |--|--|
 | Actual LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer | .02 seconds (20 milliseconds) |
 | Target LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer | .01 seconds |
-| Multiplier for change in available IO | 0.02 &divide; 0.01 = 2 |
+| Multiplier for change in available IO | 0.02 ÷ 0.01 = 2 |
 
 | Value name | Value |
 |--|--|
@@ -398,9 +404,9 @@ Note that the rate calculated, while accurate, will not be exact because previou
 
 | Calculation step | Formula | Result |
 |--|--|--|
-| Calculate size of database in pages | (2 GB &times; 1024 &times; 1024) = *Size of database in KB* | 2,097,152 KB |
-| Calculate number of pages in database | 2,097,152 KB &divide; 8 KB = *Number of pages* | 262,144 pages |
-| Calculate IOPS necessary to fully warm the cache | 262,144 pages &divide; 600 seconds = *IOPS needed* | 437 IOPS |
+| Calculate size of database in pages | (2 GB × 1024 × 1024) = *Size of database in KB* | 2,097,152 KB |
+| Calculate number of pages in database | 2,097,152 KB ÷ 8 KB = *Number of pages* | 262,144 pages |
+| Calculate IOPS necessary to fully warm the cache | 262,144 pages ÷ 600 seconds = *IOPS needed* | 437 IOPS |
 
 ## Processing
 
@@ -534,9 +540,9 @@ Throughout the analysis and calculation of the CPU quantities necessary to suppo
 
 | Target system(s) count | Total bandwidth (from above) |
 |--|--|
-| CPUs needed at 40% target | 4.85 &divide; .4 = 12.25 |
+| CPUs needed at 40% target | 4.85 ÷ .4 = 12.25 |
 
-Repeating due to the importance of this point, *remember to plan for growth*. Assuming 50% growth over the next three years, this environment will need 18.375 CPUs (12.25 &times; 1.5) at the three-year mark. An alternate plan would be to review after the first year and add in additional capacity as needed.
+Repeating due to the importance of this point, *remember to plan for growth*. Assuming 50% growth over the next three years, this environment will need 18.375 CPUs (12.25 × 1.5) at the three-year mark. An alternate plan would be to review after the first year and add in additional capacity as needed.
 
 ### Cross-trust client authentication load for NTLM
 
@@ -563,7 +569,7 @@ There are multiple approaches to managing cross-trust load, which in practice ar
 
 For tuning **MaxConcurrentAPI** on an existing server, the equation is:
 
-> *New_MaxConcurrentApi_setting* &ge; (*semaphore_acquires* + *semaphore_time-outs*) &times; *average_semaphore_hold_time* &divide; *time_collection_length*
+> *New_MaxConcurrentApi_setting* &ge; (*semaphore_acquires* + *semaphore_time-outs*) × *average_semaphore_hold_time* ÷ *time_collection_length*
 
 For more information, see [KB article 2688798: How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
 
@@ -580,8 +586,8 @@ None, this is an operating system tuning setting.
 | Semaphore Timeouts | 0 |
 | Average Semaphore Hold Time | 0.012 |
 | Collection Duration (seconds) | 1:11 minutes (71 seconds) |
-| Formula (from KB 2688798) | ((6762 &ndash; 6161) + 0) &times; 0.012 / |
-| Minimum value for **MaxConcurrentAPI** | ((6762 &ndash; 6161) + 0) &times; 0.012 &divide; 71 = .101 |
+| Formula (from KB 2688798) | ((6762 &ndash; 6161) + 0) × 0.012 / |
+| Minimum value for **MaxConcurrentAPI** | ((6762 &ndash; 6161) + 0) × 0.012 ÷ 71 = .101 |
 
 For this system for this time period, the default values are acceptable.
 
@@ -636,7 +642,7 @@ Consider the following analogies in these considerations: think of a highway, wi
    > [!NOTE]
    > The analogy about the rush hour scenario is extended in the next section: Response Time/How the System Busyness Impacts Performance.
 
-As a result, specifics about more or faster processors become highly subjective to application behavior, which in the case of AD DS is very environmentally specific and even varies from server to server within an environment. This is why the references earlier in the article do not invest heavily in being overly precise, and a margin of safety is included in the calculations. When making budget-driven purchasing decisions, it is recommended that optimizing usage of the processors at 40% (or the desired number for the environment) occurs first, before considering buying faster processors. The increased synchronization across more processors reduces the true benefit of more processors from the linear progression (2&times; the number of processors provides less than 2&times; available additional compute power).
+As a result, specifics about more or faster processors become highly subjective to application behavior, which in the case of AD DS is very environmentally specific and even varies from server to server within an environment. This is why the references earlier in the article do not invest heavily in being overly precise, and a margin of safety is included in the calculations. When making budget-driven purchasing decisions, it is recommended that optimizing usage of the processors at 40% (or the desired number for the environment) occurs first, before considering buying faster processors. The increased synchronization across more processors reduces the true benefit of more processors from the linear progression (2× the number of processors provides less than 2× available additional compute power).
 
 > [!NOTE]
 > Amdahl's Law and Gustafson's Law are the relevant concepts here.
@@ -645,11 +651,11 @@ As a result, specifics about more or faster processors become highly subjective 
 
 Queuing theory is the mathematical study of waiting lines (queues). In queuing theory, the Utilization Law is represented by the equation:
 
-*U* k = *B* &divide; *T*
+*U* k = *B* ÷ *T*
 
 Where *U* k is the utilization percentage, *B* is the amount of time busy, and *T* is the total time the system was observed. Translated into the context of Windows, this means the number of 100-nanosecond (ns) interval threads that are in a Running state divided by how many 100-ns intervals were available in given time interval. This is exactly the formula for calculating % Processor Utility (reference [Processor Object](/previous-versions/ms804036(v=msdn.10)) and [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10))).
 
-Queuing theory also provides the formula: *N* = *U* k &divide; (1 &ndash; *U* k) to estimate the number of waiting items based on utilization ( *N* is the length of the queue). Charting this over all utilization intervals provides the following estimates to how long the queue to get on the processor is at any given CPU load.
+Queuing theory also provides the formula: *N* = *U* k ÷ (1 &ndash; *U* k) to estimate the number of waiting items based on utilization ( *N* is the length of the queue). Charting this over all utilization intervals provides the following estimates to how long the queue to get on the processor is at any given CPU load.
 
 ![Queue length](media/capacity-planning-considerations-queue-length.png)
 
@@ -701,7 +707,7 @@ Applying the principals above of 40% CPU as reasonable target for the host as we
 
 Throughout the sections on processor selection the assumption is made that the processor is running at 100% of clock speed the entire time the data is being collected and that the replacement systems will have the same speed processors. Despite both assumptions in practice being false, particularly with Windows Server 2008 R2 and later, where the default power plan is **Balanced**, the methodology still stands as it is the conservative approach. While the potential error rate may increase, it only increases the margin of safety as processor speeds increase.
 
-- For example, in a scenario where 11.25 CPUs are demanded, if the processors were running at half speed when the data was collected, the more accurate estimate might be 5.125 &divide; 2.
+- For example, in a scenario where 11.25 CPUs are demanded, if the processors were running at half speed when the data was collected, the more accurate estimate might be 5.125 ÷ 2.
 - It is impossible to guarantee that doubling the clock speeds would double the amount of processing that happens for a given time period. This is due to the fact the amount of time that the processors spend waiting on RAM or other system components could stay the same. The net effect is that the faster processors might spend a greater percentage of the time idle while waiting on data to be fetched. Again, it is recommended to stick with the lowest common denominator, being conservative, and avoid trying to calculate a potentially false level of accuracy by assuming a linear comparison between processor speeds.
 
 Alternatively, if processor speeds in replacement hardware are lower than current hardware, it would be safe to increase the estimate of processors needed by a proportionate amount. For example, it is calculated that 10 processors are needed to sustain the load in a site, and the current processors are running at 3.3 Ghz and replacement processors will run at 2.6 Ghz, this is a 21% decrease in speed. In this case, 12 processors would be the recommended amount.
@@ -718,11 +724,11 @@ To adjust estimates for different processors, it used to be safe, excluding othe
     1. Under **Simple Request**, enter the search criteria for the target processor, for example **Processor Matches E5-2630 (baselinetarget)** and **Processor Matches E5-2650 (baseline)**.
     1. Find the server and processor configuration to be used (or something close, if an exact match is not available) and note the value in the **Result** and **# Cores** columns.
 1. To determine the modifier use the following equation:
-   >((*Target platform per-core score value*) &times; (*MHz per-core of baseline platform*)) &divide; ((*Baseline per-core score value*) &times; (*MHz per-core of target platform*))
+   >((*Target platform per-core score value*) × (*MHz per-core of baseline platform*)) ÷ ((*Baseline per-core score value*) × (*MHz per-core of target platform*))
 
     Using the above example:
-   >(35.83 &times; 2000) &divide; (33.75 &times; 2300) = 0.92
-1. Multiply the estimated number of processors by the modifier.  In the above case to go from the E5-2650 processor to the E5-2630 processor multiply the calculated 11.25 CPUs &times; 0.92 = 10.35 processors needed.
+   >(35.83 × 2000) ÷ (33.75 × 2300) = 0.92
+1. Multiply the estimated number of processors by the modifier.  In the above case to go from the E5-2650 processor to the E5-2630 processor multiply the calculated 11.25 CPUs × 0.92 = 10.35 processors needed.
 
 ## Appendix C: Fundamentals regarding the operating system interacting with storage
 
@@ -799,11 +805,11 @@ Once the components are identified, an idea of how much data can transit the sys
   In this example, the assumption that 1,000 I/O can be handled will be made.
 
 - **PCI bus –** This is an often overlooked component. In this example, this will not be the bottleneck; however as systems scale up, it can become a bottleneck. For reference, a 32 bit PCI bus operating at 33Mhz can in theory transfer 133 MBps of data. Following is the equation:
-  > 32 bits &divide; 8 bits per byte &times; 33 MHz = 133 MBps.
+  > 32 bits ÷ 8 bits per byte × 33 MHz = 133 MBps.
 
   Note that is the theoretical limit; in reality only about 50% of the maximum is actually reached, although in certain burst scenarios, 75% efficiency can be obtained for short periods.
 
-  A 66Mhz 64-bit PCI bus can support a theoretical maximum of (64 bits &divide; 8 bits per byte &times; 66 Mhz) = 528 MBps. Additionally, any other device (such as the network adapter, second SCSI controller, and so on) will reduce the bandwidth available as the bandwidth is shared and the devices will contend for the limited resources.
+  A 66Mhz 64-bit PCI bus can support a theoretical maximum of (64 bits ÷ 8 bits per byte × 66 Mhz) = 528 MBps. Additionally, any other device (such as the network adapter, second SCSI controller, and so on) will reduce the bandwidth available as the bandwidth is shared and the devices will contend for the limited resources.
 
 After analysis of the components of this storage subsystem, the spindle is the limiting factor in the amount of I/O that can be requested, and consequently the amount of data that can transit the system. Specifically, in an AD DS scenario, this is 100 random I/O per second in 8 KB increments, for a total of 800 KB per second when accessing the Jet database. Alternatively, the maximum throughput for a spindle that is exclusively allocated to log files would suffer the following limitations: 300 sequential I/O per second in 8 KB increments, for a total of 2400 KB (2.4 MB) per second.
 
@@ -831,19 +837,19 @@ In RAID 0, the data is striped across all the disks in the RAID set. This means 
 
 In RAID 1, the data is mirrored (duplicated) across a pair of spindles for redundancy. Thus, when a read I/O operation is performed, data can be read from both of the spindles in the set. This effectively makes the I/O capacity from both disks available during a read operation. The caveat is that write operations gain no performance advantage in a RAID 1. This is because the same data needs to be written to both drives for the sake of redundancy. Though it does not take any longer, as the write of data occurs concurrently on both spindles, because both spindles are occupied duplicating the data, a write I/O operation in essence prevents two read operations from occurring. Thus, every write I/O costs two read I/O. A formula can be created from that information to determine the total number of I/O operations that are occurring:
 
-> *Read I/O* + 2 &times; *Write I/O* = *Total available disk I/O consumed*
+> *Read I/O* + 2 × *Write I/O* = *Total available disk I/O consumed*
 
 When the ratio of reads to writes and the number of spindles are known, the following equation can be derived from the above equation to identify the maximum I/O that can be supported by the array:
 
-> *Maximum IOPS per spindle* &times; 2 spindles &times; [(*%Reads* + *%Writes*) &divide; (*%Reads* + 2 &times; *%Writes*)] = *Total IOPS*
+> *Maximum IOPS per spindle* × 2 spindles × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 2 × *%Writes*)] = *Total IOPS*
 
 RAID 1+ 0, behaves exactly the same as RAID 1 regarding the expense of reading and writing. However, the I/O is now striped across each mirrored set. If
 
-> *Maximum IOPS per spindle* &times; 2 spindles &times; [(*%Reads* + *%Writes*) &divide; (*%Reads* + 2 &times; *%Writes*)] = *Total I/O*
+> *Maximum IOPS per spindle* × 2 spindles × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 2 × *%Writes*)] = *Total I/O*
 
-in a RAID 1 set, when a multiplicity (*N*) of RAID 1 sets are striped, the Total I/O that can be processed becomes N &times; I/O per RAID 1 set:
+in a RAID 1 set, when a multiplicity (*N*) of RAID 1 sets are striped, the Total I/O that can be processed becomes N × I/O per RAID 1 set:
 
-> *N* &times; {*Maximum IOPS per spindle* &times; 2 spindles &times; [(*%Reads* + *%Writes*) &divide; (*%Reads* + 2 &times; *%Writes*)] } = *Total IOPS*
+> *N* × {*Maximum IOPS per spindle* × 2 spindles × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 2 × *%Writes*)] } = *Total IOPS*
 
 In RAID 5, sometimes referred to as *N* + 1 RAID, the data is striped across *N* spindles and parity information is written to the “+ 1” spindle. However, RAID 5 is much more expensive when performing a write I/O than RAID 1 or 1 + 0. RAID 5 performs the following process every time a write I/O is submitted to the array:
 
@@ -854,11 +860,11 @@ In RAID 5, sometimes referred to as *N* + 1 RAID, the data is striped across *N*
 
 As every write I/O request that is submitted to the array controller by the operating system requires four I/O operations to complete, write requests submitted take four times as long to complete as a single read I/O. To derive a formula to translate I/O requests from the operating system perspective to that experienced by the spindles:
 
-> *Read I/O* + 4 &times; *Write I/O* = *Total I/O*
+> *Read I/O* + 4 × *Write I/O* = *Total I/O*
 
 Similarly in a RAID 1 set, when the ratio of reads to writes and the number of spindles are known, the following equation can be derived from the above equation to identify the maximum I/O that can be supported by the array (Note that total number of spindles does not include the “drive” lost to parity):
 
-> *IOPS per spindle* &times; (*Spindles* – 1) &times; [(*%Reads* + *%Writes*) &divide; (*%Reads* + 4 &times; *%Writes*)] = *Total IOPS*
+> *IOPS per spindle* × (*Spindles* – 1) × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 4 × *%Writes*)] = *Total IOPS*
 
 ### Introducing SANs
 
@@ -876,11 +882,11 @@ When designing any system for redundancy, additional components are included to 
 
 When analyzing the behavior of the SCSI or Fibre Channel hard drive, the method of analyzing the behavior as outlined previously does not change. Although there are certain advantages and disadvantages to each protocol, the limiting factor on a per disk basis is the mechanical limitation of the hard drive.
 
-Analyzing the channel on the storage unit is exactly the same as calculating the resources available on the SCSI bus, or bandwidth (such as 20 MBps) divided by block size (such as 8 KB). Where this deviates from the simple previous example is in the aggregation of multiple channels. For example, if there are 6 channels, each supporting 20 MBps maximum transfer rate, the total amount of I/O and data transfer that is available is 100 MBps (this is correct, it is not 120 MBps). Again, fault tolerance is a major player in this calculation, in the event of the loss of an entire channel, the system is only left with 5 functioning channels. Thus, to ensure continuing to meet performance expectations in the event of failure, total throughput for all of the storage channels should not exceed 100 MBps (this assumes load and fault tolerance is evenly distributed across all channels). Turning this into an I/O profile is dependent on the behavior of the application. In the case of Active Directory Jet I/O, this would correlate to approximately 12,500 I/O per second (100 MBps &divide; 8 KB per I/O).
+Analyzing the channel on the storage unit is exactly the same as calculating the resources available on the SCSI bus, or bandwidth (such as 20 MBps) divided by block size (such as 8 KB). Where this deviates from the simple previous example is in the aggregation of multiple channels. For example, if there are 6 channels, each supporting 20 MBps maximum transfer rate, the total amount of I/O and data transfer that is available is 100 MBps (this is correct, it is not 120 MBps). Again, fault tolerance is a major player in this calculation, in the event of the loss of an entire channel, the system is only left with 5 functioning channels. Thus, to ensure continuing to meet performance expectations in the event of failure, total throughput for all of the storage channels should not exceed 100 MBps (this assumes load and fault tolerance is evenly distributed across all channels). Turning this into an I/O profile is dependent on the behavior of the application. In the case of Active Directory Jet I/O, this would correlate to approximately 12,500 I/O per second (100 MBps ÷ 8 KB per I/O).
 
 Next, obtaining the manufacturer's specifications for the controller modules is required in order to gain an understanding of the throughput each module can support. In this example, the SAN has two controller modules that support 7,500 I/O each. The total throughput of the system may be 15,000 IOPS if redundancy is not desired. In calculating maximum throughput in the case of failure, the limitation is the throughput of one controller, or 7,500 IOPS. This threshold is well below the 12,500 IOPS (assuming 4 KB block size) maximum that can be supported by all of the storage channels, and thus, is currently the bottleneck in the analysis. Still for planning purposes, the desired maximum I/O to be planned for would be 10,400 I/O.
 
-When the data exits the controller module, it transits a Fibre Channel connection rated at 1 GBps (or 1 Gigabit per second). To correlate this with the other metrics, 1 GBps turns into 128 MBps (1 GBps &divide; 8 bits/byte). As this is in excess of the total bandwidth across all channels in the storage unit (100 MBps), this will not bottleneck the system. Additionally, as this is only one of the two channels (the additional 1 GBps Fibre Channel connection being for redundancy), if one connection fails, the remaining connection still has enough capacity to handle all the data transfer demanded.
+When the data exits the controller module, it transits a Fibre Channel connection rated at 1 GBps (or 1 Gigabit per second). To correlate this with the other metrics, 1 GBps turns into 128 MBps (1 GBps ÷ 8 bits/byte). As this is in excess of the total bandwidth across all channels in the storage unit (100 MBps), this will not bottleneck the system. Additionally, as this is only one of the two channels (the additional 1 GBps Fibre Channel connection being for redundancy), if one connection fails, the remaining connection still has enough capacity to handle all the data transfer demanded.
 
 En route to the server, the data will most likely transit a SAN switch. As the SAN switch has to process the incoming I/O request and forward it out the appropriate port, the switch will have a limit to the amount of I/O that can be handled, however, manufacturers specifications will be required to determine what that limit is. For example, if there are two switches and each switch can handle 10,000 IOPS, the total throughput will be 20,000 IOPS. Again, fault tolerance being a concern, if one switch fails, the total throughput of the system will be 10,000 IOPS. As it is desired not to exceed 80% utilization in normal operation, using no more than 8000 I/O should be the target.
 
@@ -948,7 +954,7 @@ Applying this knowledge:
   - Active Directory database pages are 8 KB in size.
   - A minimum of 128 pages need to be read in from disk.
   - Assuming nothing is cached, at the floor (10 ms) this is going to take a minimum 1.28 seconds to load the data from disk in order to return it to the client. At 20 ms, where the throughput on storage has long since maxed out and is also the recommended maximum, it will take 2.5 seconds to get the data from disk in order to return it to the end user.
-- **At what rate will the cache be warmed –** Making the assumption that the client load is going to maximize the throughput on this storage example, the cache will warm at a rate of 2400 IOPS &times; 8 KB per IO. Or, approximately 20 MBps per second, loading about 1 GB of database into RAM every 53 seconds.
+- **At what rate will the cache be warmed –** Making the assumption that the client load is going to maximize the throughput on this storage example, the cache will warm at a rate of 2400 IOPS × 8 KB per IO. Or, approximately 20 MBps per second, loading about 1 GB of database into RAM every 53 seconds.
 
 > [!NOTE]
 > It is normal for short periods to observe the latencies climb when components aggressively read or write to disk, such as when the system is being backed up or when AD DS is running garbage collection. Additional head room on top of the calculations should be provided to accommodate these periodic events. The goal being to provide enough throughput to accommodate these scenarios without impacting normal function.
