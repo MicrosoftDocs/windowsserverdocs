@@ -197,7 +197,8 @@ TIMESERV is another related Domain Services Flag which indicates whether a machi
 
 If you want to configure a DC as a GTIMESERV, this can be configured manually using the following command. In this case the DC is using another machine(s) as the master clock. This could be an appliance or dedicated machine.
 
-```
+
+```dockerfile
 w32tm /config /manualpeerlist:"master_clock1,0x8 master_clock2,0x8" /syncfromflags:manual /reliable:yes /update
 ```
 
@@ -208,7 +209,8 @@ If the DC has the GPS hardware installed, you need to use these steps to disable
 
 Start by disabling the NTP Client and enable the NTP Server using these registry key changes.
 
-```
+
+```powershell
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpClient /v Enabled /t REG_DWORD /d 0 /f
 
 reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProviders\NtpServer /v Enabled /t REG_DWORD /d 1 /f
@@ -216,19 +218,22 @@ reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\TimeProvide
 
 Next, restart the Windows Time Service
 
-```
+
+```sql
 net stop w32time && net start w32time
 ```
 
 Finally, you indicate that this machine has a reliable time source using.
 
-```
+
+```dockerfile
 w32tm /config /reliable:yes /update
 ```
 
 To check that the changes have been done properly, you can run the following commands which affect the results shown below.
 
-```
+
+```sql
 w32tm /query /configuration
 
 Value|Expected Setting|
@@ -260,14 +265,16 @@ Since the chain of time hierarchy to the master clock source is dynamic in a dom
 
 Given you want to troubleshoot a specific client; the first step is to understand its time source by using this w32tm command.
 
-```
+
+```dockerfile
 w32tm /query /status
 ```
 
 The results display the Source among other things. The Source indicates with whom you synchronize time in the domain. This is the first step of this machines time hierarchy.
 Next use Source entry from above and use the /StripChart parameter to find the next time source in the chain.
 
-```
+
+```yaml
 w32tm /stripchart /computer:MySourceEntry /packetinfo /samples:1
 ```
 
@@ -432,9 +439,9 @@ W32time in Server 2016 includes the Secure Time Seeding feature. This feature de
 
 You can disable the feature with these steps:
 
-1. Set the UtilizeSSLTimeData registry configuration value to 0 on a specific machine:
-
-    ```
+1. Use Group Policy to manage SecureTimeSeeding. See the section that referes to the setting "UtilizeSslTimeData: Learn: [Policy CSP - ADMX_W32Time](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fclient-management%2Fmdm%2Fpolicy-csp-admx-w32time&data=05%7C01%7Carrenc%40microsoft.com%7Ce724dc94ef7341f932d608db9f5fe793%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638279006494333241%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=L6lLtbgDVD5jnmzVu2NnXVYHOSmTSMRx1Xyn0BMxlxc%3D&reserved=0"https://nam06.safelinks.protection.outlook.com/?url=https%3a%2f%2flearn.microsoft.com%2fen-us%2fwindows%2fclient-management%2fmdm%2fpolicy-csp-admx-w32time&data=05%7c01%7carrenc%40microsoft.com%7ce724dc94ef7341f932d608db9f5fe793%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c638279006494333241%7cunknown%7ctwfpbgzsb3d8eyjwijoimc4wljawmdailcjqijoiv2lumziilcjbtii6ik1hawwilcjxvci6mn0%3d%7c3000%7c%7c%7c&sdata=l6lltbgdvd5jnmzvu2nnxvyhosmtsmrx1xyn0bmxlxc%3d&reserved=0")
+1. Alternatively, you can maually set the registry value.  Set the UtilizeSSLTimeData registry configuration value to 0 on a specific machine:
+    ```yaml
     reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Config /v UtilizeSslTimeData /t REG_DWORD /d 0 /f
     ```
 
@@ -447,3 +454,4 @@ You can disable the feature with these steps:
 3. Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections. The latter part has a very small overhead and should not be a perf concern.
 
 4. To apply this setting in an entire domain, please set the UtilizeSSLTimeData value in W32time group policy setting to 0 and publish the setting. When the setting is picked up by a Group Policy Client, W32time service is notified and it will stop time monitoring and enforcement using SSL time data. The SSL time data collection will stop when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you may want to exclude such machines from this policy change. These devices will eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
+
