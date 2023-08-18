@@ -67,7 +67,7 @@ The following table lists known error codes for Windows Activation, and includes
 |[0xC004B100](#0xc004b100-the-activation-server-determined-that-the-computer-couldnt-be-activated) |The activation server determined that the computer couldn't be activated. |MAK |
 |[0xC004C001](#0xc004c001-the-activation-server-determined-the-specified-product-key-is-invalid) |The activation server determined the specified product key is invalid |MAK|
 |[0xC004C003](#0xc004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |The activation server determined the specified product key is blocked |MAK |
-|[0xC004C008](#0xc004c008-the-activation-server-determined-that-the-specified-product-key-couldn't-be-used) |The activation server determined that the specified product key couldn't be used. |KMS |
+|[0xC004C008](#0xc004c008-the-activation-server-determined-that-the-specified-product-key-couldnt-be-used) |The activation server determined that the specified product key couldn't be used. |KMS |
 |[0xC004C020](#0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |The activation server reported that the Multiple Activation Key has exceeded its limit. |MAK |
 |[0xC004C021](#0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded) |The activation server reported that the Multiple Activation Key extension limit has been exceeded. |MAK |
 |[0xC004F009](#0xc004f009-the-software-protection-service-reported-that-the-grace-period-expired) |The Software Protection Service reported that the grace period expired. |MAK |
