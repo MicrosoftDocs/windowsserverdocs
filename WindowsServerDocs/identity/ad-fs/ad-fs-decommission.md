@@ -4,7 +4,7 @@ title: AD FS Decommission Reference
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/06/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # AD FS Decommission

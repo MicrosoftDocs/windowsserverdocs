@@ -3,7 +3,7 @@ title: Additional authentication methods with AD FS in Windows Server
 description: This article describes new authentication methods available with AD FS in Windows Server.
 author: billmath
 ms.author: billmath
-ms.date: 04/01/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
