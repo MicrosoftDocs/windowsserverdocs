@@ -200,7 +200,7 @@ There are a few reasons why this issue can happen:
 
 - The user has a client authentication certificate in their Personal Certificate store that's valid but didn't come from Azure AD.
 
-- The VPN profile \<TLSExtensions\> section is either missing or doesn't contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without the  \<EKUName> and \<EKUOID> entries, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds.
+- The VPN profile `<TLSExtensions>` section is either missing or doesn't contain the `<EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID>` entries. The `<EKUName>` and `<EKUOID>` entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without the  `<EKUName>` and `<EKUOID>` entries, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds.
 
 - The RADIUS server (NPS) hasn't been configured to only accept client certificates that contain the **AAD Conditional Access** object identifier (OID).
 
