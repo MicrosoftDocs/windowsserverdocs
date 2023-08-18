@@ -5,7 +5,7 @@ description: Addresses the Windows default audit policy settings, baseline recom
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 08/03/2023
 ms.topic: article
 ---
 
@@ -42,9 +42,9 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 | **Notation** | **Recommendation** |
 | --- | --- |
-| YES | Enable in general scenarios |
-| NO | Do **not** enable in general scenarios |
-| IF | Enable if needed for a specific scenario, or if a role or feature for which auditing is desired is installed on the machine |
+| Yes | Enable in general scenarios |
+| No | Do not enable in general scenarios |
+| If | Enable if needed for a specific scenario, or if a role or feature for which auditing is desired is installed on the machine |
 | DC | Enable on domain controllers |
 | [Blank] | No recommendation |
 
@@ -52,33 +52,33 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 **Audit Policy**
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Account Logon** |  |  |  |
-| Audit Credential Validation | `No  \ | No` | `Yes  \ | No` | `Yes  \ | Yes` |
-| Audit Kerberos Authentication Service |  |  | `Yes  \ | Yes` |
-| Audit Kerberos Service Ticket Operations |  |  | `Yes  \ | Yes` |
-| Audit Other Account Logon Events |  |  | `Yes  \ | Yes` |
+| Audit Credential Validation | `No | No` | `Yes | No` | `Yes | Yes` |
+| Audit Kerberos Authentication Service |  |  | `Yes | Yes` |
+| Audit Kerberos Service Ticket Operations |  |  | `Yes | Yes` |
+| Audit Other Account Logon Events |  |  | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Account Management** |  |  |  |
 | Audit Application Group Management |  |  |  |
-| Audit Computer Account Management |  | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit Computer Account Management |  | `Yes | No` | `Yes | Yes` |
 | Audit Distribution Group Management |  |  |  |
-| Audit Other Account Management Events |  | `Yes  \|  No` | `Yes  \|  Yes` |
-| Audit Security Group Management |  | `Yes  \|  No` | `Yes  \|  Yes` |
-| Audit User Account Management | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit Other Account Management Events |  | `Yes | No` | `Yes | Yes` |
+| Audit Security Group Management |  | `Yes | No` | `Yes | Yes` |
+| Audit User Account Management | `Yes | No` | `Yes | No` | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Detailed Tracking** |  |  |  |
-| Audit DPAPI Activity |  |  | `Yes  \|  Yes` |
-| Audit Process Creation |  | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit DPAPI Activity |  |  | `Yes | Yes` |
+| Audit Process Creation |  | `Yes | No` | `Yes | Yes` |
 | Audit Process Termination |  |  |  |
 | Audit RPC Events |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **DS Access** |  |  |  |
 | Audit Detailed Directory Service Replication |  |  |  |
@@ -86,21 +86,21 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit Directory Service Changes |  |  |  |
 | Audit Directory Service Replication |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Logon and Logoff** |  |  |  |
-| Audit Account Lockout | `Yes  \|  No` |  | `Yes  \|  No` |
+| Audit Account Lockout | `Yes | No` |  | `Yes | No` |
 | Audit User/Device Claims |  |  |  |
 | Audit IPsec Extended Mode |  |  |  |
-| Audit IPsec Main Mode |  |  | `IF  \|  IF` |
+| Audit IPsec Main Mode |  |  | `IF | IF` |
 | Audit IPsec Quick Mode |  |  |  |
-| Audit Logoff | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  No` |
-| Audit Logon <sup>1</sup> | `Yes  \|  Yes` | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Network Policy Server | `Yes  \|  Yes` |  |  |
+| Audit Logoff | `Yes | No` | `Yes | No` | `Yes | No` |
+| Audit Logon <sup>1</sup> | `Yes | Yes` | `Yes | Yes` | `Yes | Yes` |
+| Audit Network Policy Server | `Yes | Yes` |  |  |
 | Audit Other Logon/Logoff Events |  |  |  |
-| Audit Special Logon | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit Special Logon | `Yes | No` | `Yes | No` | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Object Access** |  |  |  |
 | Audit Application Generated |  |  |  |
@@ -118,33 +118,33 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit SAM |  |  |  |
 | Audit Central Access Policy Staging |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Policy Change** |  |  |  |
-| Audit Audit Policy Change | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Authentication Policy Change | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit Audit Policy Change | `Yes | No` | `Yes | Yes` | `Yes | Yes` |
+| Audit Authentication Policy Change | `Yes | No` | `Yes | No` | `Yes | Yes` |
 | Audit Authorization Policy Change |  |  |  |
 | Audit Filtering Platform Policy Change |  |  |  |
-| Audit MPSSVC Rule-Level Policy Change |  |  | Yes |
+| Audit MPSSVC Rule-Level Policy Change |  |  | `Yes` |
 | Audit Other Policy Change Events |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Privilege Use** |  |  |  |
 | Audit Non Sensitive Privilege Use |  |  |  |
 | Audit Other Privilege Use Events |  |  |  |
 | Audit Sensitive Privilege Use |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **System** |  |  |  |
-| Audit IPsec Driver |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Other System Events | `Yes  \|  Yes` |  |  |
-| Audit Security State Change | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Security System Extension |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit System Integrity | `Yes  \|  Yes` | `Yes  \|  Yes` | `Yes  \|  Yes` |
+| Audit IPsec Driver |  | `Yes | Yes` | `Yes | Yes` |
+| Audit Other System Events | `Yes | Yes` |  |  |
+| Audit Security State Change | `Yes | No` | `Yes | Yes` | `Yes | Yes` |
+| Audit Security System Extension |  | `Yes | Yes` | `Yes | Yes` |
+| Audit System Integrity | `Yes | Yes` | `Yes | Yes` | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Global Object Access Auditing** |  |  |  |
 | Audit IPsec Driver |  |  |  |
@@ -158,55 +158,55 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 **Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings Recommendations**
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Account Logon** |  |  |  |
-| Audit Credential Validation | `No  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Kerberos Authentication Service |  |  | `Yes  \|  Yes` |
-| Audit Kerberos Service Ticket Operations |  |  | `Yes  \|  Yes` |
-| Audit Other Account Logon Events |  |  | `Yes  \|  Yes` |
+| Audit Credential Validation | `No | No` | `Yes | Yes` | `Yes | Yes` |
+| Audit Kerberos Authentication Service |  |  | `Yes | Yes` |
+| Audit Kerberos Service Ticket Operations |  |  | `Yes | Yes` |
+| Audit Other Account Logon Events |  |  | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Account Management** |  |  |  |
 | Audit Application Group Management |  |  |  |
-| Audit Computer Account Management |  | `Yes  \|  DC` | `Yes  \|  Yes` |
+| Audit Computer Account Management |  | `Yes | DC` | `Yes | Yes` |
 | Audit Distribution Group Management |  |  |  |
-| Audit Other Account Management Events |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Security Group Management |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit User Account Management | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
+| Audit Other Account Management Events |  | `Yes | Yes` | `Yes | Yes` |
+| Audit Security Group Management |  | `Yes | Yes` | `Yes | Yes` |
+| Audit User Account Management | `Yes | No` | `Yes | Yes` | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Detailed Tracking** |  |  |  |
-| Audit DPAPI Activity |  |  | `Yes  \|  Yes` |
-| Audit Process Creation |  | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit DPAPI Activity |  |  | `Yes | Yes` |
+| Audit Process Creation |  | `Yes | No` | `Yes | Yes` |
 | Audit Process Termination |  |  |  |
 | Audit RPC Events |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **DS Access** |  |  |  |
 | Audit Detailed Directory Service Replication |  |  |  |
-| Audit Directory Service Access |  | `DC  \|  DC` | `DC  \|  DC` |
-| Audit Directory Service Changes |  | `DC  \|  DC` | `DC  \|  DC` |
+| Audit Directory Service Access |  | `DC | DC` | `DC | DC` |
+| Audit Directory Service Changes |  | `DC | DC` | `DC | DC` |
 | Audit Directory Service Replication |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Logon and Logoff** |  |  |  |
-| Audit Account Lockout | `Yes  \|  No` |  | `Yes  \|  No` |
+| Audit Account Lockout | `Yes | No` |  | `Yes | No` |
 | Audit User/Device Claims |  |  |  |
 | Audit IPsec Extended Mode |  |  |  |
-| Audit IPsec Main Mode |  |  | `IF  \|  IF` |
+| Audit IPsec Main Mode |  |  | `IF | IF` |
 | Audit IPsec Quick Mode |  |  |  |
-| Audit Logoff | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  No` |
-| Audit Logon | `Yes  \|  Yes` | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Network Policy Server | `Yes  \|  Yes` |  |  |
-| Audit Other Logon/Logoff Events |  |  | `Yes  \|  Yes` |
-| Audit Special Logon | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit Logoff | `Yes | No` | `Yes | No` | `Yes | No` |
+| Audit Logon | `Yes | Yes` | `Yes | Yes` | `Yes | Yes` |
+| Audit Network Policy Server | `Yes | Yes` |  |  |
+| Audit Other Logon/Logoff Events |  |  | `Yes | Yes` |
+| Audit Special Logon | `Yes | No` | `Yes | No` | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Object Access** |  |  |  |
 | Audit Application Generated |  |  |  |
@@ -224,33 +224,33 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit SAM |  |  |  |
 | Audit Central Access Policy Staging |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Policy Change** |  |  |  |
-| Audit Audit Policy Change | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Authentication Policy Change | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  Yes` |
+| Audit Audit Policy Change | `Yes | No` | `Yes | Yes` | `Yes | Yes` |
+| Audit Authentication Policy Change | `Yes | No` | `Yes | No` | `Yes | Yes` |
 | Audit Authorization Policy Change |  |  |  |
 | Audit Filtering Platform Policy Change |  |  |  |
-| Audit MPSSVC Rule-Level Policy Change |  |  | Yes |
+| Audit MPSSVC Rule-Level Policy Change |  |  | `Yes` |
 | Audit Other Policy Change Events |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Privilege Use** |  |  |  |
 | Audit Non Sensitive Privilege Use |  |  |  |
 | Audit Other Privilege Use Events |  |  |  |
 | Audit Sensitive Privilege Use |  |  |  |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **System** |  |  |  |
-| Audit IPsec Driver |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Other System Events | `Yes  \|  Yes` |  |  |
-| Audit Security State Change | `Yes  \|  No` | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit Security System Extension |  | `Yes  \|  Yes` | `Yes  \|  Yes` |
-| Audit System Integrity | `Yes  \|  Yes` | `Yes  \|  Yes` | `Yes  \|  Yes` |
+| Audit IPsec Driver |  | `Yes | Yes` | `Yes | Yes` |
+| Audit Other System Events | `Yes | Yes` |  |  |
+| Audit Security State Change | `Yes | No` | `Yes | Yes` | `Yes | Yes` |
+| Audit Security System Extension |  | `Yes | Yes` | `Yes | Yes` |
+| Audit System Integrity | `Yes | Yes` | `Yes | Yes` | `Yes | Yes` |
 
-| Audit Policy Category or Subcategory | Windows Default<p>`Success \ | Failure` | Baseline Recommendation<p>`Success \ | Failure` | Stronger Recommendation<p>`Success \ | Failure` |
+| Audit Policy Category or Subcategory | Windows Default<p>`Success | Failure` | Baseline Recommendation<p>`Success | Failure` | Stronger Recommendation<p>`Success | Failure` |
 | --- | --- | --- | --- |
 | **Global Object Access Auditing** |  |  |  |
 | Audit IPsec Driver |  |  |  |

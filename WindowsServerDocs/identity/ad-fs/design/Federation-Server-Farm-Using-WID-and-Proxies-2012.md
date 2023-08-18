@@ -5,7 +5,7 @@ title: AD FS Federation Server Farm Using WID and Proxies
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/27/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

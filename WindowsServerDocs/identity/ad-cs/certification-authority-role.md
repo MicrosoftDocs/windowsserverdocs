@@ -74,5 +74,6 @@ HSMs must be installed and configured before you set up any CAs with keys that n
 
 ## Next steps
 
+- [PKI design considerations using Active Directory Certificate Services](pki-design-considerations.md)
 - [Certification Authority role for AD CS](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831574(v=ws.11))
 - [Implement and manage Active Directory Certificate Services](/training/modules/implement-manage-active-directory-certificate-services/)

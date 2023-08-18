@@ -77,6 +77,8 @@
       href: rds-create-collection.md
     - name: Set up the Remote Desktop web client for your users
       href: clients/remote-desktop-web-client-admin.md
+    - name: Disable Automatic Reconnection
+      href: automatic-reconnection-lock-screen.md
     - name: Set up email discovery for your users
       href: rds-email-discovery.md
     - name: License your Remote Desktop deployment
