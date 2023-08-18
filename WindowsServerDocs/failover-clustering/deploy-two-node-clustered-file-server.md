@@ -23,17 +23,13 @@ Servers in a failover cluster can function in a variety of roles, including the 
 
 A failover cluster usually includes a storage unit that's physically connected to all servers within the cluster, although only one server at a time can access the volumes in the storage. The following diagram shows a two-node failover cluster connected to a storage unit.
 
-![Two Node Cluster](media/Cluster-File-Server/Cluster-FS-Overview.png)
-
-<!--Reformat this image-->
+:::image type="content" source="media/Cluster-File-Server/Cluster-FS-Overview.png" alt-text="A diagram depicting the basic architecture of a two-node cluster.":::
 
 Storage volumes or logical unit numbers (LUNs) exposed to the nodes in a cluster must not be exposed to other servers, including servers in another cluster. The following diagram illustrates this.
 
 <!--Illustrates what?-->
 
-![LUNs in Storage](media/Cluster-File-Server/Cluster-FS-LUNs.png)
-
-<!--Reformat this image-->
+:::image type="content" source="media/Cluster-File-Server/Cluster-FS-LUNs.png" alt-text="A diagram depicting the basic architecture of a LUN in a cluster. Ther'es a blue box surrounding them to depict how they're isolated from other servers.":::
 
 To guarantee maximum availability for any server, it's important to follow best practices for server management. For example, you should carefully manage the physical environment of the servers by testing software changes before fully implementing them and tracking software updates and configuration changes on all clustered servers.
 
@@ -197,7 +193,7 @@ Next, you need to install the file server role and failover cluster feature. Bot
 
 1. Open **Server Manager**, then open the the **Manage** drop-down menu and select **Add Roles and Features**.
 
-   ![Screenshot of the Manage drop-down list in Server Manager with the Add Roles and Features option highlighted.](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
+   :::image type="content" source="media/Cluster-File-Server/Cluster-FS-Add-Feature.png" alt-text="Screenshot of the Manage drop-down list in Server Manager with the Add Roles and Features option highlighted.":::
 
 1. If the **Before you begin** window opens, select **Next**.
 
@@ -211,13 +207,13 @@ Next, you need to install the file server role and failover cluster feature. Bot
 
 1. For the Server Role, from the list of roles, open **File Services** and select **File Server**.
 
-   ![Screenshot of the Server Roles  page of the Add Roles and Features dialog box showing the File Server option selected and highlighted.](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
+   :::image type="content" source="media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png" alt-text="Screenshot of the Server Roles page of the Add Roles and Features dialog box showing the File Server option selected and highlighted.":::
 
 1. Select **Next**.
 
 1. In **Features**, select **Failover Clustering** from the list of features. A window will appear showing a list of all administration tools currently being installed. Make sure not to unselect any currently selected features, then select **Add Features**, then select **Next**.
 
-   ![Add Feature](media/Cluster-File-Server/Cluster-FS-Add-WSFC-1.png)
+   :::image type="content" source="media/Cluster-File-Server/Cluster-FS-Add-WSFC-1.png" alt-text="A screenshot of the Features menu. The user has selected Failover Clustering and a dialog window for Add Roles and Features has appeared.":::
 
 1. On the **Confirmation** page, select **Install**.
 
