@@ -708,7 +708,7 @@ Do not restore all domain controllers in a single domain simultaneously. If all 
 > [How to force an authoritative and non-authoritative synchronization for DFSR-replicated SYSVOL (like "D4/D2" for FRS)](https://support.microsoft.com/kb/2218556)
 
 > [!WARNING]
-> Do not run all domain controllers in a forest or domain on the same hypervisor host. That introduces a single point of failure that cripples AD DS, Exchange, SQL, and other enterprise operations each time the hypervisor goes offline. This is no different from using only one domain controller for an entire domain or forest. Multiple domain controllers on multiple platforms help provide redundancy and fault tolerance.
+> Do not run all domain controllers in a forest or domain on the same hypervisor host. That introduces a single point of failure that debilitates AD DS, Exchange, SQL, and other enterprise operations each time the hypervisor goes offline. This is no different from using only one domain controller for an entire domain or forest. Multiple domain controllers on multiple platforms help provide redundancy and fault tolerance.
 
 #### Post-Snapshot Replication
 Do not restore snapshots until all locally originating changes made since snapshot creation have replicated outbound. Any originating changes are lost forever if other domain controllers did not already receive them through replication.
