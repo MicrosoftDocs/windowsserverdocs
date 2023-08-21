@@ -89,7 +89,7 @@ In order to use two-node failover clusters, you also need the following infrastr
 
     If you have private networks that aren't routed to the rest of your network infrastructure, make sure each private network uses a unique subnet. You have to make sure the subnets are unique even if you've already given each network adapter a unique IP address. For example, if you have one cluster node in a central office and another in a branch office with a separate physical network, don't specify 10.0.0.0/24 for the subnet of both networks even if you give each adapter a unique IP address.
 
-    For more information about how to set up your network adapters, see [Requirements for a two-node failover cluster](#requirements-for-a-two-node-failover-cluster).
+    For more information about how to set up your network adapters, see [Prerequisites](#prerequisites).
 
 - The servers in your cluster must use Domain Name System (DNS) for name resolution. You can also use he DNS dynamic update protocol.
 
