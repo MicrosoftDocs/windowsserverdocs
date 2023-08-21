@@ -75,6 +75,8 @@
       href: rds-deploy-infrastructure.md
     - name: Create and deploy a Remote Desktop Services collection
       href: rds-create-collection.md
+    - name: Configure the RD Gateway role
+      href: remote-desktop-gateway-role.md
     - name: Set up the Remote Desktop web client for your users
       href: clients/remote-desktop-web-client-admin.md
     - name: Disable Automatic Reconnection
@@ -182,6 +184,10 @@
         href: clients/remote-desktop-web-client.md
       - name: What's new in the web client
         href: clients/web-client-whatsnew.md
+    - name: Remote Desktop Connection client for Windows (MSTSC)
+      items:
+      - name: Connect to an Azure VM using single sign-on with Azure AD
+        href: clients/mstsc-connect-azure-ad-single-sign-on.md
     - name: Setting up your PC for Remote Desktop
       items:
       - name: Supported PCs
@@ -192,8 +198,6 @@
         href: clients/remote-desktop-allow-outside-access.md
       - name: Change the RD listening port on your PC
         href: clients/change-listening-port.md
-      - name: Configure the RD Gateway role
-        href: remote-desktop-gateway-role.md
       - name: Uninstall and reinstall Remote Desktop Connection
         href: clients/uninstall-remote-desktop-connection.md
     - name: Advanced information
