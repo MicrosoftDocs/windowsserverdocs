@@ -6,7 +6,7 @@ ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: wscontent
 author: JasonGerend
 manager: mtillman
-ms.date: 07/25/2023
+ms.date: 08/08/2023
 ---
 # WSUS and the Microsoft Update Catalog
 
@@ -48,7 +48,7 @@ You can narrow the scope of your search by adding additional search terms. To se
 
 Use the below instructions to import updates into WSUS:
 
-1. Copy the [PowerShell script to import updates into WSUS](#powershell-script-to-import-updates-into-wsus) from this article into a text editor and save it as `ImportUpdatesIntoWSUS.ps1`. Use a location you can easily access, such as `C:\temp`.
+1. Copy the [PowerShell script to import updates into WSUS](#powershell-script-to-import-updates-into-wsus) from this article into a text editor and save it as `ImportUpdateToWSUS.ps1`. Use a location you can easily access, such as `C:\temp`.
 1. Open the Microsoft Update Catalog, [https://catalog.update.microsoft.com](https://catalog.update.microsoft.com), in a browser.
 1. Search for an update you want to import into WSUS.
 1. From the returned list, select the update you want to import into WSUS. The update details page opens.

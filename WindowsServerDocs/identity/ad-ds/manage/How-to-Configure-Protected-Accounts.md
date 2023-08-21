@@ -72,6 +72,9 @@ Protected accounts have the following deployment requirements:
 
 -   To provide domain controller-side restrictions for Protected Users, that is to restrict usage of NTLM authentication, and other restrictions, the domain functional level must be  Windows Server 2012 R2 . For more information about functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
 
+> [!NOTE]
+> The builtin domain Administrator (`S-1-5-<domain>-500`) is always exempt from Authentication Policies, even when they are assigned to an Authentication Policy Silo.
+
 ### <a name="BKMK_TrubleshootingEvents"></a>Troubleshoot events related to Protected Users
 This section covers new logs to help troubleshoot events that are related to Protected Users and how Protected Users can impact changes to troubleshoot either ticket-granting tickets (TGT) expiration or delegation issues.
 
