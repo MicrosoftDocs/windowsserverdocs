@@ -69,9 +69,7 @@ The *Requests with License Status* lines describe all possible license states, p
 
 The KMS host creates a log labeled *Event ID 12290* when a KMS client contacts the host when it's trying to activate. Event ID 12290 contains information you can use to figure out what kind of client contacted the host and why a failure occurred. The following segment of an event ID 12290 entry comes from the Key Management Service event log of our KMS host.
 
-![KMS 12290 Event](./media/ee939272.kms_12290_event(en-us,technet.10).png)
-
-<!--Note to self: update image format-->
+:::image type="content" source="./media/ee939272.kms_12290_event(en-us,technet.10).png" alt-text="A screenshot of the KMS event log. There are labels highlighting important areas of the Info field and what the number strings mean.":::
 
 The event details include the following information:
 
