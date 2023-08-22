@@ -1,11 +1,11 @@
 ---
 title: certutil
-description: Reference article for the certutil command. certutil is a command-line program that displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
+description: Reference article for the certutil command. Certutil is a command-line program that displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components. This program also verifies certificates, key pairs, and certificate chains.
 ms.service: 
 ms.topic: reference
 author: xelu86
 ms.author: wscontent
-ms.date: 08/18/2023
+ms.date: 08/22/2023
 ---
 
 # certutil
@@ -15,7 +15,7 @@ Certutil.exe is a command-line program, installed as part of Certificate Service
 If certutil is run on a certification authority without other parameters, it displays the current certification authority configuration. If certutil is run on a non-certification authority, the command defaults to running the `certutil [-dump]` command.
 
 > [!IMPORTANT]
-> Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
+> Earlier versions of certutil may not provide all of the options that are described in this document. You can see the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
 ## Parameters
 
@@ -712,9 +712,41 @@ Where:
 [-f] [-config Machine\CAName] [-p password]
 ```
 
+### -exportPFX
+
+Exports the certificates and private keys. For more information, see the `-store` parameter in this article.
+
+```
+certutil [options] -exportPFX [CertificateStoreName] CertId PFXFile [Modifiers]
+```
+
+Where:
+
+- **CertificateStoreName** is the name of the certificate store.
+
+- **CertId** is the certificate or CRL match token.
+
+- **PFXFile** is the PFX file to be exported.
+
+- **Modifiers** are the comma-separated list, which can include one or more of the following:
+
+  - **CryptoAlgorithm=** specifies the cryptographic algorithm to use for encrypting the PFX file, such as `TripleDES-Sha1` or `Aes256-Sha256`.
+
+  - **EncryptCert** - Encrypts the private key associated with the certificate with a password.
+
+  - **ExportParameters**  -Exports the private key parameters in addition to the certificate and private key.
+
+  - **ExtendedProperties** - Includes all extended properties associated with the certificate in the output file.
+
+  - **NoEncryptCert** - Exports the private key without encrypting it.
+
+  - **NoChain** - Doesn't import the certificate chain.
+
+  - **NoRoot** - Doesn't import the root certificate.
+
 ### -importPFX
 
-Import the certificate and private key. For more information, see the `-store` parameter in this article.
+Imports the certificates and private keys. For more information, see the `-store` parameter in this article.
 
 ```
 certutil [options] -importPFX [CertificateStoreName] PFXFile [Modifiers]
@@ -728,35 +760,35 @@ Where:
 
 - **Modifiers** are the comma-separated list, which can include one or more of the following:
 
-  - **AT_KEYEXCHANGE** - Changes the keyspec to key exchange
+  - **AT_KEYEXCHANGE** - Changes the keyspec to key exchange.
 
-  - **AT_SIGNATURE** - Changes the keyspec to signature
+  - **AT_SIGNATURE** - Changes the keyspec to signature.
 
-  - **ExportEncrypted** - Exports the private key associated with the certificate with password encryption
+  - **ExportEncrypted** - Exports the private key associated with the certificate with password encryption.
 
-  - **FriendlyName=** - Specifies a friendly name for the imported certificate
+  - **FriendlyName=** - Specifies a friendly name for the imported certificate.
 
-  - **KeyDescription=** - Specifies a description for the private key associated with the imported certificate
+  - **KeyDescription=** - Specifies a description for the private key associated with the imported certificate.
 
-  - **KeyFriendlyName=** - Specifies a friendly name for the private key associated with the imported certificate
+  - **KeyFriendlyName=** - Specifies a friendly name for the private key associated with the imported certificate.
 
-  - **NoCert** - Doesn't import the certificate
+  - **NoCert** - Doesn't import the certificate.
 
-  - **NoChain** - Doesn't import the certificate chain
+  - **NoChain** - Doesn't import the certificate chain.
 
-  - **NoExport** - Makes the private key non-exportable
+  - **NoExport** - Makes the private key non-exportable.
 
-  - **NoProtect** - Doesn't password protect keys by using a password
+  - **NoProtect** - Doesn't password protect keys by using a password.
 
-  - **NoRoot** - Doesn't import the root certificate
+  - **NoRoot** - Doesn't import the root certificate.
 
-  - **Pkcs8** - Uses PKCS8 format for the private key in the PFX file
+  - **Pkcs8** - Uses PKCS8 format for the private key in the PFX file.
 
-  - **Protect** - Protects keys by using a password
+  - **Protect** - Protects keys by using a password.
 
-  - **ProtectHigh** - Specifies that a high-security password must be associated with the private key
+  - **ProtectHigh** - Specifies that a high-security password must be associated with the private key.
 
-  - **VSM** - Stores the private key associated with the imported certificate in the Virtual Smart Card (VSC) container
+  - **VSM** - Stores the private key associated with the imported certificate in the Virtual Smart Card (VSC) container.
 
 ```
 [-f] [-Enterprise] [-user] [-GroupPolicy] [-Silent] [-p Password] [-csp Provider]
@@ -948,7 +980,7 @@ Where:
 
 - **CertificateStoreName** is the certificate store name.
 
-- **certID** is the certificate or CRL match token.
+- **CertId** is the certificate or CRL match token.
 
 ```
 [-Enterprise] [-user] [-GroupPolicy] [-Silent] [-split] [-dc DCName] [-t Timeout]
@@ -1220,7 +1252,7 @@ Where:
 
 - **DSCDPContainer** is the DS CDP container CN, usually the CA machine name.
 
-- **DSCDPCN** is the DS CDP object CN, usually based on the sanitized CA short name and key index.
+- **DSCDPCN** is the DS CDP object CN based on the sanitized CA short name and key index.
 
 - Use `-f` to create a new DS object.
 
@@ -1275,6 +1307,20 @@ certutil [options] -CATemplates [Template]
 ```
 [-f] [-user] [-ut] [-mt] [-config Machine\CAName] [-dc DCName]
 ```
+
+### -SetCATemplates
+
+Sets the certificate templates that the Certificate Authority can issue.
+
+```
+certutil [options] -SetCATemplates [+ | -] TemplateList
+```
+
+Where:
+
+ - The `+` sign adds certificate templates to the CA's available template list.
+
+ - The `-` sign removes certificate templates to the CA's available template list.
 
 ### -SetCASites
 
@@ -1641,7 +1687,7 @@ Where:
 
 - **DeltaCRLFile** is the optional delta CRL file.
 
-- **Modifiers**
+- **Modifiers**:
 
   - Strong - Strong signature verification
 
@@ -1753,11 +1799,11 @@ The following files are downloaded by using the automatic update mechanism:
 
 For example, `certutil -syncWithWU \\server1\PKI\CTLs`.
 
-If you use a non-existent local path or folder as the destination folder, you'll see the error:
+If you use a nonexistent local path or folder as the destination folder, you'll see the error:
   
   `The system can't find the file specified. 0x80070002 (WIN32: 2 ERROR_FILE_NOT_FOUND)`
 
-If you use a non-existent or unavailable network location as the destination folder, you'll see the error:
+If you use a nonexistent or unavailable network location as the destination folder, you'll see the error:
 
   `The network name can't be found. 0x80070043 (WIN32: 67 ERROR_BAD_NET_NAME)`
 
@@ -1813,7 +1859,7 @@ Where:
 
 - **CTLFile** is the output CTL file to be generated.
 
-- **SSTFile** is the optional .sst file to be created that contains all of the certificates used for pinning.
+- **SSTFile** is the optional `.sst` file to be created that contains all of the certificates used for pinning.
 
 - **QueryFilesPrefix** are optional **Domains.csv** and **Keys.csv** files to be created for database query.
 
@@ -2454,6 +2500,20 @@ Where:
 
 The Certificate Authority may also need to be configured to support foreign certificates. To do this, type `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
 
+### -key
+
+Lists the keys stored in a key container.
+
+```
+certutil [options] -key [KeyContainerName | -]
+```
+
+Where:
+
+- **KeyContainerName** is the key container name for the key to verify. This option defaults to machine keys. To switch to user keys, use `-user`.
+
+- Using the `-` sign refers to using the default key container.  
+
 ### -GetKey
 
 Retrieves an archived private key recovery blob, generates a recovery script, or recovers archived keys.
@@ -2632,7 +2692,7 @@ certutil [options] -get-sth-consistency LogId TreeSize1 TreeSize2
 
 Gets proof of a hash from a timestamp server.
 
-```  
+```
 certutil [options] -get-proof-by-hash LogId Hash [TreeSize]
 ```
 
@@ -2700,11 +2760,11 @@ certutil -? -v
 
 Where:
 
-- **-?** displays the full list of parameters
+- **-?** displays the list of parameters
 
 - **-`<name_of_parameter>` -?** displays help content for the specified parameter.
 
-- **-? -v** displays a full list of parameters and options.
+- **-? -v** displays a list of parameters and options.
 
 ## Options
 
@@ -2713,8 +2773,8 @@ This section defines all of the options you're able to specify, based on the com
 | Options | Description |
 | ------- | ----------- |
 | -anonymous | Use anonymous SSL credentials. |
-| -cert certID | Signing certificate. |
-| -clientcertificate clientcertID | Use X.509 Certificate SSL credentials. For selection U/I, use `-clientcertificate`. |
+| -cert CertId | Signing certificate. |
+| -clientcertificate clientCertId | Use X.509 Certificate SSL credentials. For selection U/I, use `-clientcertificate`. |
 | -config Machine\CAName | Certificate Authority and computer name string. |
 | -csp provider | Provider:<br>**KSP** - Microsoft Software Key Storage Provider <br>**TPM** - Microsoft Platform Crypto Provider <br>**NGC** - Microsoft Passport Key Storage Provider <br>**SC** - Microsoft Smart Card Key Storage Provider |
 | -dc DCName | Target a specific Domain Controller. |
@@ -2757,7 +2817,5 @@ Hash algorithms: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512.
 For some more examples about how to use this command, see
 
 - [Active Directory Certificate Services (AD CS)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
-
 - [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
-
 - [Configure trusted roots and disallowed certificates in Windows](../../identity/ad-cs/configure-trusted-roots-disallowed-certificates.md)
