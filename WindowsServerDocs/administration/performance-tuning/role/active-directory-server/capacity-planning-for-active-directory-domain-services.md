@@ -351,51 +351,65 @@ You may hear from other sources that storage performance is degraded at 15 ms to
 
 <!--I have no idea what this following list of counters is. This whole section was a mess with duplicate content, and it's not clear where this should go because the context here is so poor compared to the other sections.-->
 
-> - LogicalDisk(*\<NTDS\>*)\Reads/sec is the amount of I/O that is being performed.
->   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is within the optimal range for the backend storage, LogicalDisk(*\<NTDS\>*)\Reads/sec can be used directly to size the storage.
->   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is not within the optimal range for the backend storage, additional I/O is needed according to the following formula: (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read) ÷ (Physical Media Disk Access Time) × (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read)
+<!--Is the LogicalDisk string supposed to be an equation or a file path/command?-->
 
-Considerations:
+> - `LogicalDisk(<NTDS>)\Reads/sec` is the amount of I/O the system is currently performing.
+>   - If `LogicalDisk(<NTDS>)\Avg Disk sec/Read` is within the optimal range for the backend storage, you can directly use `LogicalDisk(<NTDS>)\Reads/sec` to size the storage.
+>   - If `LogicalDisk(<NTDS>)\Avg Disk sec/Read` is not within the optimal range for the backend storage, additional I/O is needed according to the following formula: `LogicalDisk(<NTDS>)\Avg Disk sec/Read` ÷ Physical Media Disk Access Time × `LogicalDisk(<NTDS>)\Avg Disk sec/Read`
 
-- Note that if the server is configured with a sub-optimal amount of RAM, these values will be inaccurate for planning purposes.  They will be erroneously on the high side and can still be used as a worst case scenario.
-- Adding/Optimizing RAM specifically will drive a decrease in the amount of read I/O (LogicalDisk(*\<NTDS\>*)\Reads/Sec.  This means the storage solution may not have to be as robust as initially calculated.  Unfortunately, anything more specific than this general statement is environmentally dependent on client load and general guidance cannot be provided.  The best option is to adjust storage sizing after optimizing RAM.
+When you're making these calculations, here are some things you should consider:
+
+- If the server has a sub-optimal amount of RAM, the resulting values will be too high and won't be accurate enough to be useful for planning. However, you can still use them to predict worst-case scenarios.
+- If you add or optimize RAM, you also decrease the amount of read I/O `LogicalDisk(<NTDS>)\Reads/Sec`. This decrease can cause the storage solution to not be as robust as the original calculations guessed. Unfortunately, we can't give more specifics about what this statement means, as calculations vary widely depending on individual environments, particularly client load. However, we do recommend that you adjust storage sizing after you optimize the RAM.
 
 #### Virtualization considerations for performance
 
-Similar to all of the preceding virtualization discussions, the key here is to ensure that the underlying shared infrastructure can support the DC load plus the other resources using the underlying shared media and all pathways to it. This is true whether a physical domain controller is sharing the same underlying media on a SAN, NAS, or iSCSI infrastructure as other servers or applications, whether it is a guest using pass through access to a SAN, NAS, or iSCSI infrastructure that shares the underlying media, or if the guest is using a VHD file that resides on shared media locally or a SAN, NAS, or iSCSI infrastructure. The planning exercise is all about making sure that the underlying media can support the total load of all consumers.
+Much like the previous sections, our goal here is to make sure the shared infrastructure can support the total load of all consumers. You need to keep this goal in mind when planning for the following scenarios:
 
-Also, from a guest perspective, as there are additional code paths that must be traversed, there is a performance impact to having to go through a host to access any storage. Not surprisingly, storage performance testing indicates that the virtualizing has an impact on throughput that is subjective to the processor utilization of the host system (see Appendix A: CPU Sizing Criteria), which is obviously influenced by the resources of the host demanded by the guest. This contributes to the virtualization considerations regarding processing needs in a virtualized scenario (see [Virtualization considerations for processing](#virtualization-considerations-for-processing)).
+- A physical CD sharing the same media on a SAN, NAS, or iSCSI infrastructure as other servers or applications.
+- A user using pass-through access to a SAN, NAS, or iSCSI infrastructure that shares the media.
+- A user using a VHD file on shared media locally or a SAN, NAS, or iSCSI infrastructure.
 
-Making this more complex is that there are a variety of different storage options that are available that all have different performance impacts. As a safe estimate when migrating from physical to virtual, use a multiplier of 1.10 to adjust for different storage options for virtualized guests on Hyper-V, such as pass-through storage, SCSI Adapter, or IDE. The adjustments that need to be made when transferring between the different storage scenarios are irrelevant as to whether the storage is local, SAN, NAS, or iSCSI.
+From the perspective of a guest user, having to go through a host to access any storage impacts performance, as the user must travel down additional code paths to gain access. Performance testing indicates virtualizing impacts throughput based on how much of the processor the host system utilizes. Processor utilization is also influenced by how many resources the guest user demands of the host. This demand contributes to the [Virtualization considerations for processing](#virtualization-considerations-for-processing) you should take for processing needs in virtualized scenarios. For more information, see [Appendix A](#appendix-a-cpu-sizing-criteria).
 
-#### Calculation summary example
+Further complicating matters is the huge number of currently available storage options, each with wildly different performance impacts. These options include pass-through storage, SCSI adapters, and IDE. When migrating from a physical to a virtual environment, you should adjust for different storage options for virtualized guest users by using a multiplier of 1.10. <!--To do what? What value are we multiplying?--> However, you don't need to consider adjustments when transferring between different storage scenarios, as whether the storage is local, SAN, NAS, or iSCSI matters more.
+
+#### Virtualization calculation example
 
 Determining the amount of I/O needed for a healthy system under normal operating conditions:
 
-- LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec during the peak period 15 minute period
+<!--I'm attempting to translate this into a more standard equation. This may be hilariously inaccurate, so please leave comments if you spot something.-->
+
+<!--What's the difference between Read/sec and sec/Read?-->
+
+- LogicalDisk(`<NTDS Database Drive>`) ÷ Transfers per second during the peak period 15 minute period
 - To determine the amount of I/O needed for storage where the capacity of the underlying storage is exceeded:
-  >*Needed IOPS* = (LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read ÷ *\<Target Avg Disk sec/Read\>*) × LogicalDisk(*\<NTDS Database Drive\>*)\Read/sec
+  >*Needed IOPS* = (LogicalDisk(`<NTDS Database Drive>`)) ÷ Avg Disk sec/Read ÷ `<Target Avg Disk sec/Read>`) × LogicalDisk(`<NTDS Database Drive>`)\Read/sec
 
 | Counter | Value |
 |--|--|
-| Actual LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer | .02 seconds (20 milliseconds) |
-| Target LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer | .01 seconds |
+| Actual LogicalDisk(`<NTDS Database Drive>`)\Avg Disk sec/Transfer | .02 seconds (20 milliseconds) |
+| Target LogicalDisk(`<NTDS Database Drive>`)\Avg Disk sec/Transfer | .01 seconds |
 | Multiplier for change in available IO | 0.02 ÷ 0.01 = 2 |
 
 | Value name | Value |
 |--|--|
-| LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec | 400 |
+| LogicalDisk(`<NTDS Database Drive>`)\Transfers/sec | 400 |
 | Multiplier for change in available IO | 2 |
 | Total IOPS needed during peak period | 800 |
 
-To determine the rate at which the cache is desired to be warmed:
+To determine the rate at which you should warm the cache:
 
-- Determine the maximum acceptable time to warm the cache. It is either the amount of time that it should take to load the entire database from disk, or for scenarios where the entire database cannot be loaded in RAM, this would be the maximum time to fill RAM.
-- Determine the size of the database, excluding white space.  For more information, see [Evaluating for storage](#evaluating-for-storage).
-- Divide the database size by 8 KB; that will be the total IOs necessary to load the database.
+- Determine the maximum time you find acceptable for to spend on cache warming. In typical scenarios, an acceptable amount of time would be how long it should take to load the entire database from a disk. In scenarios where the RAM can't load the entire database, use the time it would take to fill the entire RAM.
+- Determine the size of the database, excluding space that will be unused. For more information, see [Evaluating for storage](#evaluating-for-storage).
+- Divide the database size by 8 KB to get the total number of IOs you need to load the database.
 - Divide the total IOs by the number of seconds in the defined time frame.
 
-Note that the rate calculated, while accurate, will not be exact because previously loaded pages are evicted if ESE is not configured to have a fixed cache size, and AD DS by default uses variable cache size.
+<!--Note to self: address inconsistent use of I/O and IO-->
+
+The number you calculate is mostly accurate, but may not be exact because you haven't configured ESE <!--Acronym--> to have a fixed cache size, then AD DS will evict previously loaded pages because it uses variable cache size by default.
+
+<!--No context given for this table-->
 
 | Data points to collect | Values |
 |--|--|
@@ -412,16 +426,18 @@ Note that the rate calculated, while accurate, will not be exact because previou
 
 ### Evaluating Active Directory processor usage
 
-For most environments, after storage, RAM, and networking are properly tuned as described in the Planning section, managing the amount of processing capacity will be the component that deserves the most attention. There are two challenges in evaluating CPU capacity needed:
+For most environments, managing processing capacity is the component that deserves the most attention. When you're evaluating how much CPU capacity your deployment needs, you should consider the following two things:
 
-- Whether or not the applications in the environment are being well-behaved in a shared services infrastructure, and is discussed in the section titled “Tracking Expensive and Inefficient Searches” in the article Creating More Efficient Microsoft Active Directory-Enabled Applications or migrating away from down-level SAM calls to LDAP calls.
+- Do the applications in your environment behave as intended within a shared services infrastructure based on the criteria outlined in [Tracking expensive and inefficient searches](/previous-versions/ms808539(v=msdn.10)#tracking-expensive-and-inefficient-searches)? In larger environments, poorly coded applications can make the CPU load become volatile, take an inordinate amount of CPU time at the expense of other applications, drive up capacity needs, and unevenly distribute load against the DCs.
+- AD DS is a distributed envrionment with many potential clients whose processing needs vary widely. Estimated costs for each client can vary due to usage patterns and how many applications are using AD DS. Much like in [Network](#network), you should approach estimating as an evaluation of total needed capacity in the environment instead of looking at each client one at a time.
 
-  In larger environments, the reason this is important is that poorly coded applications can drive volatility in CPU load, “steal” an inordinate amount of CPU time from other applications, artificially drive up capacity needs, and unevenly distribute load against the DCs.
-- As AD DS is a distributed environment with a large variety of potential clients, estimating the expense of a “single client” is environmentally subjective due to usage patterns and the type or quantity of applications leveraging AD DS. In short, much like the networking section, for broad applicability, this is better approached from the perspective of evaluating the total capacity needed in the environment.
+You should only make this estimate after you've completed your [storage](#storage) estimate, as you won't be able to make an accurate guess without valid data about your processor load. It's also important to make sure any bottlenecks aren't being caused by storage before troubleshooting the processor. As you remove processor wait states, CPU utilization increases because it no longer needs to wait on the data. Therefore, the performance counters you should pay the most attention to are `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read`and `Process(lsass)\ Processor Time`. If the `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` counter is over 10 or 15 milliseconds, then the data in `Process(lsass)\ Processor Time` is artifically low and the issue is related to storage performance. We recommend you set sample intervals to 15, 30, or 60 minutes for the most accurate data possible.
 
-For existing environments, as storage sizing was discussed previously, the assumption is made that storage is now properly sized and thus the data regarding processor load is valid. To reiterate, it is critical to ensure that the bottleneck in the system is not the performance of the storage. When a bottleneck exists and the processor is waiting, there are idle states that will go away once the bottleneck is removed.  As processor wait states are removed, by definition, CPU utilization increases as it no longer has to wait on the data. Thus, collect performance counters “Logical Disk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read” and “Process(lsass)\\% Processor Time”. The data in “Process(lsass)\\% Processor Time” will be artificially low if “Logical Disk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read” exceeds 10 to 15 ms, which is a general threshold that Microsoft support uses for troubleshooting storage-related performance issues. As before, it is recommended that sample intervals be either 15, 30, or 60 minutes. Anything less will generally be too volatile for good measurements; anything greater will smooth out daily peeks excessively.
+### Processing overview
 
-### Introduction
+<!---Make sure new titles are consistent-->
+
+<!--Wait, most of the content in this section sounds exactly like what was in the previous section. Let's come back to this later and see if we need to remove it.-->
 
 In order to plan capacity planning for domain controllers, processing power requires the most attention and understanding. When sizing systems to ensure maximum performance, there is always a component that is the bottleneck and in a properly sized Domain Controller this will be the processor.
 
@@ -431,7 +447,9 @@ Unfortunately, due to the huge variability of client applications that leverage 
 
 #### Target site behavior profile
 
-As mentioned previously, when planning capacity for an entire site, the goal is to target a design with an *N* + 1 capacity design, such that failure of one system during the peak period will allow for continuation of service at a reasonable level of quality. That means that in an “*N*” scenario, load across all the boxes should be less than 100% (better yet, less than 80%) during the peak periods.
+When you're capacity planning for an entire site, your goal should be an *N* + 1 capacity design. In this design, even if one system fails during the peak period, service can still continue at acceptable levels of quality. In an *N* scenario, load across all boxes should be less than 80%-100% during peak periods.
+
+<!--Where I left off.-->
 
 Additionally, if the applications and clients in the site are using best practices for locating domain controllers (that is, using the [DsGetDcName function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea)), the clients should be relatively evenly distributed with minor transient spikes due to any number of factors.
 
@@ -601,7 +619,7 @@ Throughout this article, it has been discussed that planning and scaling go towa
 | RAM (Windows Server 2008 R2 or earlier) | Memory\Available MB | < 100 MB | N/A | < 100 MB |
 | RAM (Windows Server 2012) | Memory\Long-Term Average Standby Cache Lifetime(s) | 30 min | Must be tested | Must be tested |
 | Network | Network Interface(\*)\Bytes Sent/sec<p>Network Interface(\*)\Bytes Received/sec | 30 min | 40% | 60% |
-| Storage | LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read<p>LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Write | 60 min | 10 ms | 15 ms |
+| Storage | LogicalDisk((`<NTDS Database Drive>`))\Avg Disk sec/Read<p>LogicalDisk((`<NTDS Database Drive>`))\Avg Disk sec/Write | 60 min | 10 ms | 15 ms |
 | AD Services | Netlogon(\*)\Average Semaphore Hold Time | 60 min | 0 | 1 second |
 
 ## Appendix A: CPU sizing criteria
@@ -937,7 +955,7 @@ For both the cold cache and warm cache scenario, the question becomes how fast t
 
 AD DS, in most scenarios, is predominantly read IO, usually a ratio of 90% read/10% write. Read I/O often tends to be the bottleneck for user experience, and with write IO, causes write performance to degrade. As I/O to the NTDS.dit is predominantly random, caches tend to provide minimal benefit to read IO, making it that much more important to configure the storage for read I/O profile correctly.
 
-For normal operating conditions, the storage planning goal is minimize the wait times for a request from AD DS to be returned from disk. This essentially means that the number of outstanding and pending I/O is less than or equivalent to the number of pathways to the disk. There are a variety of ways to measure this. In a performance monitoring scenario, the general recommendation is that LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read be less than 20 ms. The desired operating threshold must be much lower, preferably as close to the speed of the storage as possible, in the 2 to 6 millisecond (.002 to .006 second) range depending on the type of storage.
+For normal operating conditions, the storage planning goal is minimize the wait times for a request from AD DS to be returned from disk. This essentially means that the number of outstanding and pending I/O is less than or equivalent to the number of pathways to the disk. There are a variety of ways to measure this. In a performance monitoring scenario, the general recommendation is that LogicalDisk((`<NTDS Database Drive>`))\Avg Disk sec/Read be less than 20 ms. The desired operating threshold must be much lower, preferably as close to the speed of the storage as possible, in the 2 to 6 millisecond (.002 to .006 second) range depending on the type of storage.
 
 Example:
 
