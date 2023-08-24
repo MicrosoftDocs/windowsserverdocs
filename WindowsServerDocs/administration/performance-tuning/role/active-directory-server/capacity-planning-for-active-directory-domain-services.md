@@ -451,7 +451,7 @@ When you're capacity planning for an entire site, your goal should be an *N* + 1
 
 <!--Where I left off.-->
 
-Also, if the applications and clients in the site are using the recommended [DsGetDcName function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) method for locating DCs, your clients should be evenly distributed with minor transient spikes due to other factors.
+Also, the site's applications and clients use the recommended [DsGetDcName function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) method for locating DCs, they should already be evenly distributed with only minor transient spikes.
 
 Now we're going to look at two examples of environments that are on target and off target. First, we're going to take a look at an example of an environment that works as intended and doesn't exceed the capacity planning target.
 
@@ -479,7 +479,7 @@ Now, let's take a look at the `(Processor Information(_Total)\% Processor Utilit
 
 Next, let's look at an example of an environment that doesn't have good CPU usage and exceeds the capacity planning target.
 
-In this example, we have two DCs running at 40%. One domain controller goes offline, which causes the estimaged CPU usage on the remaining DC to reach 80%. This level of CPU usage far exceeds the threshold for the capacity plan and begins to limit the amount of headroom for the 10% to 20% of the load profile. As a result, every spike could potentially drive the DC to 90% or even 100 % during the *N* scenario, reducing its responsiveness.
+In this example, we have two DCs running at 40%. One domain controller goes offline, which causes the estimated CPU usage on the remaining DC to reach 80%. This level of CPU usage far exceeds the threshold for the capacity plan and begins to limit the amount of headroom for the 10% to 20% of the load profile. As a result, every spike could potentially drive the DC to 90% or even 100 % during the *N* scenario, reducing its responsiveness.
 
 ### Calculating CPU demands
 
@@ -569,11 +569,11 @@ When you're capacity planning for a virtualized environment, there are two level
 
 In a direct-mapped scenario with one guest per host, you must bring in all capacity planning estimates you've done in the previous sections in order to make your estimate. For a shared host scenario, there's about 10% impact on the efficiency of the underlying processors, which means if a site needs 10 CPUs at a target of 40%, the recommended amount of virtual CPUs you should allocate across all *N* guests would be 11. In sites with mixed distributions of physical and virtual servers, this modifier only applies to the virtual machines (VMs). For example, in an *N* + 1 scenario, one physical or direct-mapped server with 10 CPUs is almost equal to one guest with 11 CPUs on a host with 11 more CPUs reserved for the DC.
 
-
-
-Throughout the analysis and calculation of the CPU quantities necessary to support AD DS load, the numbers of CPUs that map to what can be purchased in terms physical hardware do not necessarily map cleanly. Virtualization eliminates the need to round up. Virtualization decreases the effort necessary to add compute capacity to a site, given the ease with which a CPU can be added to a VM. It does not eliminate the need to accurately evaluate the compute power needed so that the underlying hardware is available when additional CPUs need to be added to the guests.  As always, remember to plan and monitor for growth in demand.
+While you're analyzing and calculating how many CPUs you need to support AD DS load, keep in mind that if you plan to purchase physical hardware, the types of hardware available on the market may not map exactly to your estimates. With virtualization, that isn't a problem. It decreases the effort needed for you to add compute capacity to a site, as you can add as many CPUs with the exact specifications you want to a VM. However, virtualization doesn't eliminate your responsibility to accurately evaluate how much compute power you need to guarantee your underlying hardware is available when guests need more CPU. As always, remember to plan ahead for growth.
 
 ### Virtualization calculation summary example
+
+<!--Intro for these tables once I get more context-->
 
 | System | Peak CPU |
 |--|--|--|
@@ -586,42 +586,51 @@ Throughout the analysis and calculation of the CPU quantities necessary to suppo
 |--|--|
 | CPUs needed at 40% target | 4.85 ÷ .4 = 12.25 |
 
-Repeating due to the importance of this point, *remember to plan for growth*. Assuming 50% growth over the next three years, this environment will need 18.375 CPUs (12.25 × 1.5) at the three-year mark. An alternate plan would be to review after the first year and add in additional capacity as needed.
+When planning ahead for growth in this scenario, if you assume that demand will grow by 50% over the next three years, you need to make sure it has 18.375 CPUs (12.25 × 1.5) by that time. Alternatively, you can review demand after the first year, then add extra capacity based on what the results tell you.
 
 ### Cross-trust client authentication load for NTLM
 
+<!--Need intro here-->
+
 #### Evaluating cross-trust client authentication load
 
-Many environments may have one or more domains connected by a trust. An authentication request for an identity in another domain that does not use Kerberos authentication needs to traverse a trust using the domain controller's secure channel to another domain controller either in the destination domain or the next domain in the path to the destination domain. The number of concurrent calls using the secure channel that a domain controller can make to a domain controller in a trusted domain is controlled by a setting known as **MaxConcurrentAPI**. For domain controllers, ensuring that the secure channel can handle the amount of load is accomplished by one of two approaches: tuning **MaxConcurrentAPI** or, within a forest, creating shortcut trusts. To gauge the volume of traffic across an individual trust, refer to [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
+Many environments may have one or more domains connected by a trust. Authentication requests for identities in other domains that don't use Kerberos need to traverse a trust using a secure channel between two domain controllers. The domain controller the user is trying to access in the site connects to another domain controller that's located in either the destination domain or somewhere further up the path towards the destination domain. How many calls the DC can make to the other DC in the trusted domain is controlled by the **MaxConcurrentAPI* setting. In order to ensure the secure channel can handle the amount of load required for the DCs to communicate with each other, you can either tune MaxConcurrentAPI or, if you're in a forest, create shortcut trusts. Learn more about how to determine traffic volume across trusts at [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
 
-During data collection, this, as with all the other scenarios, must be collected during the peak busy periods of the day for the data to be useful.
+As with the previous scenarios, you must collect data during the peak busy periods of the day in order for it to be useful.
 
 > [!NOTE]
-> Intraforest and interforest scenarios may cause the authentication to traverse multiple trusts and each stage would need to be tuned.
+> Intraforest and interforest scenarios may cause the authentication to traverse multiple trusts, which means you need to tune during each stage of the process.
 
-#### Planning
+#### Virtualization planning
 
-There are a number of applications that use NTLM authentication by default, or use it in a certain configuration scenario. Application servers grow in capacity and service an increasing number of active clients. There is also a trend that clients keep sessions open for a limited time and rather reconnect on a regular basis (such as email pull sync). Another common example for high NTLM load is web proxy servers that require authentication for Internet access.
+There are a few things you should keep in mind when capacity planning for virtualizaiton:
 
-These applications can cause a significant load for NTLM authentication, which can put significant stress on the DCs, especially when users and resources are in different domains.
+- Many applications use NTLM <!--Acronym--> authentication by default or in certain configurations.
+- As the number of active clients increases, so does the need for application servers to have more capacity.
+- Clients sometimes keep sessions open for a limited time and instead reconnect on a regular basis for services like email pull sync.
+- Web proxy servers that require authentication for internet access can cause high NTLM load.
 
-There are multiple approaches to managing cross-trust load, which in practice are used in conjunction rather than in an exclusive either/or scenario. The possible options are:
+These applications can create a large load for NTLM authentication, which puts significant stress on the DCs, especially when users and resources are in different domains.
 
-- Reduce cross-trust client authentication by locating the services that a user consumes in the same domain that the user is resident in.
-- Increase the number of secure-channels available. This is relevant to intraforest and cross-forest traffic and are known as shortcut trusts.
+There are many approaches you can take to manage cross-trust load, which often you can and should use together at the same time:
+
+- Reduce cross-trust client authentication by locating the services that a user consumes in the domain they're located in.
+- Increase the number of secure channels available. These channels are called *shortcut trusts* and are relevant to intraforest and cross-forest traffic.
 - Tune the default settings for **MaxConcurrentAPI**.
 
-For tuning **MaxConcurrentAPI** on an existing server, the equation is:
+To tune **MaxConcurrentAPI** on an existing server, use the following equation:
 
-> *New_MaxConcurrentApi_setting* &ge; (*semaphore_acquires* + *semaphore_time-outs*) × *average_semaphore_hold_time* ÷ *time_collection_length*
+*New_MaxConcurrentApi_setting* ≥ (*semaphore_acquires* + *semaphore_time-outs*) × *average_semaphore_hold_time* ÷ *time_collection_length*
 
 For more information, see [KB article 2688798: How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
 
 ## Virtualization considerations
 
-None, this is an operating system tuning setting.
+There aren't any special considerations you need to make, as virtualization is an operating system tuning setting.
 
-### Calculation summary example
+### Virtualization tuning calculation example
+
+<!--Intro w/ more context-->
 
 | Data type | Value |
 |--|--|
@@ -630,18 +639,20 @@ None, this is an operating system tuning setting.
 | Semaphore Timeouts | 0 |
 | Average Semaphore Hold Time | 0.012 |
 | Collection Duration (seconds) | 1:11 minutes (71 seconds) |
-| Formula (from KB 2688798) | ((6762 &ndash; 6161) + 0) × 0.012 / |
-| Minimum value for **MaxConcurrentAPI** | ((6762 &ndash; 6161) + 0) × 0.012 ÷ 71 = .101 |
+| Formula (from KB 2688798) | ((6762 - 6161) + 0) × 0.012 / |
+| Minimum value for **MaxConcurrentAPI** | ((6762 - 6161) + 0) × 0.012 ÷ 71 = .101 |
 
 For this system for this time period, the default values are acceptable.
 
 ## Monitoring for compliance with capacity planning goals
 
-Throughout this article, it has been discussed that planning and scaling go towards utilization targets. Here is a summary chart of the recommended thresholds that must be monitored to ensure the systems are operating within adequate capacity thresholds. Keep in mind that these are not performance thresholds, but capacity planning thresholds. A server operating in excess of these thresholds will work, but is time to start validating that all the applications are well behaved. If said applications are well behaved, it is time to start evaluating hardware upgrades or other configuration changes.
+Throughout this article, we've discussed how planning and scaling go towards utilization targets. The following table summarizes the recommended thresholds you must monitor to ensure systems are operating as intended. Keep in mind that these aren't performance thresholds, just capacity planning thresholds. A server operating in excess of these thresholds will still work, but you need to validate your applications are working as intended before you start seeing performance issues as user demand increases. If the applications are okay, then you should start evaluating hardware upgrades or other configuration changes.
+
+<!--Combe back to formatting later once I understand whether these text strings are equations or performance counter names.-->
 
 | Category | Performance counter | Interval/Sampling | Target | Warning |
 |--|--|--|--|--|
-| Processor | Processor Information(_Total)\\% Processor Utility | 60 min | 40% | 60% |
+| Processor | `Processor Information(_Total)\% Processor Utility` | 60 min | 40% | 60% |
 | RAM (Windows Server 2008 R2 or earlier) | Memory\Available MB | < 100 MB | N/A | < 100 MB |
 | RAM (Windows Server 2012) | Memory\Long-Term Average Standby Cache Lifetime(s) | 30 min | Must be tested | Must be tested |
 | Network | Network Interface(\*)\Bytes Sent/sec<p>Network Interface(\*)\Bytes Received/sec | 30 min | 40% | 60% |
@@ -650,80 +661,93 @@ Throughout this article, it has been discussed that planning and scaling go towa
 
 ## Appendix A: CPU sizing criteria
 
-### Definitions
+<!--Should these be in their own conceptual article(s)? This article is long enough already.-->
 
-**Processor (microprocessor) –** a component that reads and executes program instructions
+This appendix discusses useful terms and concepts that can help you estimate your environment's CPU sizing needs.
 
-**CPU –** Central Processing Unit
+### Definitions: CPU sizing
 
-**Multi-Core processor –** multiple CPUs on the same integrated circuit
+- A *processor (microprocessor)* is a component that reads and executes program instructions.
 
-**Multi-CPU –** multiple CPUs, not on the same integrated circuit
+- A *multi-core processor* has multiple CPUs on the same integrated circuit.
 
-**Logical Processor –** one logical computing engine from the perspective of the operating system
+- A *multi-CPU* system has multiple CPUs that aren't on the same integrated circuit.
+
+- A *logical processor* is a processor that only has one logical computing engine from the perspective of the operating system.
 
 This includes hyper-threaded, one core on multi-core processor, or a single core processor.
+<!--What includes hyper-threaded processors? No clear subject for this sentence.-->
 
-As today's server systems have multiple processors, multiple multi-core processors, and hyper-threading, this information is generalized to cover both scenarios. As such, the term logical processor will be used as it represents the operating system and application perspective of the available computing engines.
+As today's server systems have multiple processors, multiple multi-core processors, and hyper-threading, these definitions are generalized to cover both scenarios. We use the term logical processor because it represents the OS and application perspective of the available computing engines.
 
 ### Thread-level parallelism
 
-Each thread is an independent task, as each thread has its own stack and instructions. Because AD DS is multi-threaded and the number of available threads can be tuned by using [How to view and set LDAP policy in Active Directory by using Ntdsutil.exe](https://support.microsoft.com/kb/315071), it scales well across multiple logical processors.
+Each thread is an independent task, as each thread has its own stack and instructions. AD DS is multi-threaded and you can tune the number of available threads by following the directions in [How to view and set LDAP policy in Active Directory by using Ntdsutil.exe](https://support.microsoft.com/kb/315071), it scales well across multiple logical processors.
 
 ### Data-level parallelism
 
-This involves sharing data across multiple threads within one process (in the case of the AD DS process alone) and across multiple threads in multiple processes (in general). With concern to over-simplifying the case, this means that any changes to data are reflected to all running threads in all the various levels of cache (L1, L2, L3) across all cores running said threads as well as updating shared memory. Performance can degrade during write operations while all the various memory locations are brought consistent before instruction processing can continue.
+Data-level parallelism is when a service shares data across many threads for the same process and sharing many threads across multiple processes. The AD DS process alone would count as a service sharing data across several threads for a single process. Any changes to the data are reflected across all running threads in all levels of the cache, every core, and any updates to the shared memory. Performance can degrade during write operations because all memory locations adjust to the changes before instruction processing can continue.
 
-### CPU speed vs. multiple-core considerations
+### CPU speed versus multiple-core considerations
 
-The general rule of thumb is faster logical processors reduce the duration it takes to process a series of instructions, while more logical processors means that more tasks can be run at the same time. These rules of thumb break down as the scenarios become inherently more complex with considerations of fetching data from shared-memory, waiting on data-level parallelism, and the overhead of managing multiple threads. This is also why scalability in multi-core systems is not linear.
+Generally, faster logical processors reduce the time required to process a series of instructions. More logical processors means you can run more tasks at the same time. However, these rules don't apply in scenarios that are more complex, such as fetching data from shared memory, waiting on data-level parallelism, and the overhead of managing multiple threads at once. As a result, scalability in multi-core systems isn't linear.
 
-Consider the following analogies in these considerations: think of a highway, with each thread being an individual car, each lane being a core, and the speed limit being the clock speed.
+To understand why this change happens, it helps to think of these scenarios like a highway. Each thread is an individual car, each lane is a core, and the speed limit is the clock speed.
 
-1. If there is only one car on the highway, it doesn't matter if there are two lanes or 12 lanes. That car is only going to go as fast as the speed limit will allow.
-1. Assume that the data the thread needs is not immediately available. The analogy would be that a segment of road is shutdown. If there is only one car on the highway, it doesn't matter what the speed limit is until the lane is reopened (data is fetched from memory).
-1. As the number of cars increase, the overhead to manage the number of cars increases. Compare the experience of driving and the amount of attention necessary when the road is practically empty (such as late evening) versus when the traffic is heavy (such as mid-afternoon, but not rush hour). Also, consider the amount of attention necessary when driving on a two-lane highway, where there is only one other lane to worry about what the drivers are doing, versus a six-lane highway where one has to worry about what a lot of other drivers are doing.
-   > [!NOTE]
-   > The analogy about the rush hour scenario is extended in the next section: Response Time/How the System Busyness Impacts Performance.
+If there's only one car on the highway, it doesn't matter if there are two or 12 lanes. That car only goes as fast as the speed limit allows.
 
-As a result, specifics about more or faster processors become highly subjective to application behavior, which in the case of AD DS is very environmentally specific and even varies from server to server within an environment. This is why the references earlier in the article do not invest heavily in being overly precise, and a margin of safety is included in the calculations. When making budget-driven purchasing decisions, it is recommended that optimizing usage of the processors at 40% (or the desired number for the environment) occurs first, before considering buying faster processors. The increased synchronization across more processors reduces the true benefit of more processors from the linear progression (2× the number of processors provides less than 2× available additional compute power).
+If the data the thread needs isn't immediately available, then the thread can't process instructions until it fetches the relevant data from memory. It's like if a segment of the highway is shut down. Even if there's only one car on the highway, the speed limit won't affect its ability to travel, because it can't go anywhere until the road is reopened.
+
+As the number of cars increases, the overhead the highway needs to manage the number of cars also increases. Drivers need to focus harder when driving on the highway during rush hour traffic as opposed to the late evening when the road is mostly empty. Also, driving on a two-lane highway where you only need to worry about one other lane requires less focus than driving on a six-lane highway where you have five other lanes of traffic to pay attention to.
+
+In summary, questions about whether you should add more or faster processors become highly subjective and should be considered on a case-by-case basis. For AD DS in particular, its processing needs depend on environmental factors and can vary from server to server within a single environment. As a result, the earlier sections in this article didn't invest heavily on making super precise calculations. When you make budget-driven buying decisions, we recommend you first optimize processor usage at either 40% or whichever number your specific environment requires. If your system isn't optimized, then you don't benefit as much from buying additional processors.
 
 > [!NOTE]
-> Amdahl's Law and Gustafson's Law are the relevant concepts here.
+> [Amdahl's law](https://wikipedia.org/wiki/Amdahl%27s_law) and [Gustafson's law](https://wikipedia.org/wiki/Gustafson%27s_law) are the relevant concepts here. <!--Are we allowed to link to Wikipedia? I feel like having ref links would be helpful as users might not know what these laws specifically mean depending on their familiarity with the topic.-->
 
-### Response time/How the system busyness impacts performance
+### Response time and how system activity levels impact performance
 
-Queuing theory is the mathematical study of waiting lines (queues). In queuing theory, the Utilization Law is represented by the equation:
+Queuing theory is the mathematical study of waiting lines, or *queues*. In queuing theory for computing, the utilization law is represented by t equation:
 
 *U* k = *B* ÷ *T*
 
-Where *U* k is the utilization percentage, *B* is the amount of time busy, and *T* is the total time the system was observed. Translated into the context of Windows, this means the number of 100-nanosecond (ns) interval threads that are in a Running state divided by how many 100-ns intervals were available in given time interval. This is exactly the formula for calculating % Processor Utility (reference [Processor Object](/previous-versions/ms804036(v=msdn.10)) and [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10))).
+Where *U* k is the utilization percentage, *B* is the amount of time spent being busy, and *T* is the total time spent observing the system. In a Microsoft context, this means the number of 100-nanosecond (ns) interval threads that are in a Running state divided by how many 100-ns intervals were available in the given time interval. This is the same formula that calculates  percentage of processor utilization shown in [Processor Object](/previous-versions/ms804036(v=msdn.10)) and [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)).
 
-Queuing theory also provides the formula: *N* = *U* k ÷ (1 &ndash; *U* k) to estimate the number of waiting items based on utilization ( *N* is the length of the queue). Charting this over all utilization intervals provides the following estimates to how long the queue to get on the processor is at any given CPU load.
+Queuing theory also provides the formula: *N* = *U* k ÷ (1 - *U* k) to estimate the number of waiting items based on utilization, where *N* is the length of the queue. Charting this equation over all utilization intervals provides the following estimates of how long the queue to get on the processor is at any given CPU load.
 
 ![Queue length](media/capacity-planning-considerations-queue-length.png)
+<!--Reformat image-->
+<!--Maybe also give a text-only version for accessibility purposes?-->
 
-It is observed that after 50% CPU load, on average there is always a wait of one other item in the queue, with a noticeably rapid increase after about 70% CPU utilization.
+Based on this estimate, we can observe that after 50% CPU load, the average wait usually includes one other item in the queue, and increases rapidly to 70% CPU utilization.
 
-Returning to the driving analogy used earlier in this section:
+To understand how queuing theory applies to your AD DS deployment, let's return to the highway metaphor we used in [CPU speed versus multiple-core considerations](#cpu-speed-versus-multiple-core-considerations).
 
-- The busy times of “mid-afternoon” would, hypothetically, fall somewhere into the 40% to 70% range. There is enough traffic such that one's ability to pick any lane is not majorly restricted, and the chance of another driver being in the way, while high, does not require the level of effort to “find” a safe gap between other cars on the road.
-- One will notice that as traffic approaches rush hour, the road system approaches 100% capacity. Changing lanes can become very challenging because cars are so close together that increased caution must be exercised to do so.
+Busier times in the mid-afternoon would fall somewhere into the 40% to 70% capacity range. There's enough traffic that your ability to choose a lane to drive in isn't majorly restricted. While the chance of another driver getting in your way is high, it doesn't require the same level of effort you'd need to find a safe gap between other cars in the lane as during rush hour.
 
-This is why the long term averages for capacity conservatively estimated at 40% allows for head room for abnormal spikes in load, whether said spikes transitory (such as poorly coded queries that run for a few minutes) or abnormal bursts in general load (the morning of the first day after a long weekend).
+As rush hour approaches, the road system approaches 100% capacity. Changing lanes during rush hour becomes very challenging because cars are so close together that you don't have as much room to maneuver when changing lanes.
 
-The above statement regards % Processor Time calculation being the same as the Utilization Law is a bit of a simplification for the ease of the general reader. For those more mathematically rigorous:
+This is why estimating longterm averages for capacity at 40% allows for more headroom for abnormal load spikes, whether those spikes are transitory, such as with poorly-coded queries that take a while to run, or abnormal bursts in general load, like the spike in activity the morning after a holiday weekend.
+
+The previous statement regards the percentage of processor time calculation as being the same as the utilization law equation. This simplified version is meant to introduce the concept to new users. However, for more advanced math, you can use the following references as a guide:
+
 - Translating the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10))
-  - *B* = The number of 100-ns intervals “Idle” thread spends on the logical processor. The change in the “*X*” variable in the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)) calculation
-  - *T* = the total number of 100-ns intervals in a given time range. The change in the “*Y*” variable in the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)) calculation.
-  - *U* k = The utilization percentage of the logical processor by the “Idle Thread” or % Idle Time.
+  - *B* = The number of 100-ns intervals Idle thread spends on the logical processor. The change in the *X* variable in the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)) calculation
+  - *T* = the total number of 100-ns intervals in a given time range. The change in the *Y* variable in the [PERF_100NSEC_TIMER_INV](/previous-versions/windows/embedded/ms901169(v=msdn.10)) calculation.
+  - *U* k = The utilization percentage of the logical processor by the Idle Thread or % Idle Time.
 - Working out the math:
   - *U* k = 1 – %Processor Time
   - %Processor Time = 1 – *U* k
   - %Processor Time = 1 – *B* / *T*
   - %Processor Time = 1 – *X1* – *X0* / *Y1* – *Y0*
 
-### Applying the concepts to capacity planning
+<!--Let's come back to this bulleted list later.-->
+
+### Applying these concepts to capacity planning
+
+<!--I need to figure out a more specific title for this, because I suspect it's going to duplicate in the other appendices.-->
+
+<!--Where I left off-->
 
 The preceding math may make determinations about the number of logical processors needed in a system seem overwhelmingly complex. This is why the approach to sizing the systems is focused on determining maximum target utilization based on current load and calculating the number of logical processors required to get there. Additionally, while logical processor speeds will have a significant impact on performance, cache efficiencies, memory coherence requirements, thread scheduling and synchronization, and imperfectly balanced client load will all have significant impacts on performance that will vary on a server-by-server basis. With the relatively cheap cost of compute power, attempting to analyze and determine the perfect number of CPUs needed becomes more an academic exercise than it does provide business value.
 
