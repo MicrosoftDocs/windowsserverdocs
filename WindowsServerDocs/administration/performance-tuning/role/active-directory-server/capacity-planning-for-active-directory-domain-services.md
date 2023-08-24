@@ -451,69 +451,83 @@ When you're capacity planning for an entire site, your goal should be an *N* + 1
 
 <!--Where I left off.-->
 
-Additionally, if the applications and clients in the site are using best practices for locating domain controllers (that is, using the [DsGetDcName function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea)), the clients should be relatively evenly distributed with minor transient spikes due to any number of factors.
+Also, if the applications and clients in the site are using the recommended [DsGetDcName function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea) method for locating DCs, your clients should be evenly distributed with minor transient spikes due to other factors.
 
-In the next example, the following assumptions are made:
+Now we're going to look at two examples of environments that are on target and off target. First, we're going to take a look at an example of an environment that works as intended and doesn't exceed the capacity planning target.
 
-- Each of the five DCs in the site has four of CPUs.
-- Total target CPU usage during business hours is 40% under normal operating conditions (“*N* + 1”) and 60% otherwise (“*N*”). During non-business hours, the target CPU usage is 80% because backup software and other maintenance are expected to consume all available resources.
+For the first example, we're making the following assumptions:
+
+- Each of the five DCs in the site has four CPUs.
+- Total target CPU usage during business hours is 40% under normal operating conditions (*N* + 1) and 60% otherwise (*N*). During non-business hours, the target CPU usage is 80% because we expect the backup software and other maintenance processes to consume all available resources.
+
+Now, let's take a look at the `(Processor Information(_Total)\% Processor Utility)` chart, for each of the DCs, as shown in the following image.
 
 ![CPU usage chart](media/capacity-planning-considerations-cpu-chart.png)
 
-Analyzing the data in the chart `(Processor Information(_Total)\% Processor Utility)` for each of the DCs:
-
-- For the most part, the load is relatively evenly distributed which is what would be expected when clients use DC locator and have well written searches.
-- There are a number of five-minute spikes of 10%, with some as large as 20%. Generally, unless they cause the capacity plan target to be exceeded, investigating these is not worthwhile.
-- The peak period for all systems is between about 8:00 AM and 9:15 AM. With the smooth transition from about 5:00 AM through about 5:00 PM, this is generally indicative of the business cycle. The more randomized spikes of CPU usage on a box-by-box scenario between 5:00 PM and 4:00 AM would be outside of the capacity planning concerns.
+- The load is relatively evenly distributed, which is what we'd expect when clients use the DC locator and well-written searches.
+- In several five-minute intervals, there are spikes at 10%, sometimes even 20%. However, unless these spikes cause the CPU usage to exceed the capacity plan target, you don't need to investigate them.
+- The peak period for all systems is between 8:00 AM and 9:15 AM. The average business day lasts from 5:00 AM to 5:00 PM. Therefore, any randomized spikes of CPU usage that happen between 5:00 PM and 4:00 AM are outside of business hours, and therefore you don't need to include them in your capacity planning concerns.
 
   > [!NOTE]
-  > On a well-managed system, said spikes are might be backup software running, full system antivirus scans, hardware or software inventory, software or patch deployment, and so on. Because they fall outside the peak user business cycle, the targets are not exceeded.
+  > On a well-managed system, spikes that happen during the off-peak period are usually caused by backup software, full system antivirus scans, hardware or software inventory, software or patch deployment, and so on. Because these spikes happen outside of business hours, they don't count towards exceeding capacity planning targets.
 
-- As each system is about 40% and all systems have the same numbers of CPUs, should one fail or be taken offline, the remaining systems would run at an estimated 53% (System D's 40% load is evenly split and added to System A's and System C's existing 40% load). For a number of reasons, this linear assumption is NOT perfectly accurate, but provides enough accuracy to gauge.
+<!--Can we clarify what these percentages mean? 40% of what? CPU usage? I feel like I'm missing something here.-->
+- Because each system is about 40% and they all have the same number of CPUs, if one of them goes offline, the remaining systems run at an estimated 53%. System D has a 40% load that's evenly split and added to System A and C's existing 40% load. This linear assumption isn't perfectly accurate, but provides enough accuracy to gauge.
+<!--System A? Was this in the graphic or did I miss something?-->
 
-  **Alternate scenario –** Two domain controllers running at 40%: One domain controller fails, estimated CPU on the remaining one would be an estimated 80%. This far exceeds the thresholds outlined above for capacity plan and also starts to severely limit the amount of head room for the 10% to 20% seen in the load profile above, which means that the spikes would drive the DC to 90% to 100% during the “*N*” scenario and definitely degrade responsiveness.
+<!--Why are we flipping into an 'alternate scenario' now? This section is really confusing.-->
+
+Next, let's look at an example of an environment that doesn't have good CPU usage and exceeds the capacity planning target.
+
+In this example, we have two DCs running at 40%. One domain controller goes offline, which causes the estimaged CPU usage on the remaining DC to reach 80%. This level of CPU usage far exceeds the threshold for the capacity plan and begins to limit the amount of headroom for the 10% to 20% of the load profile. As a result, every spike could potentially drive the DC to 90% or even 100 % during the *N* scenario, reducing its responsiveness.
 
 ### Calculating CPU demands
 
-The “Process\\% Processor Time” performance object counter sums the total amount of time that all of the threads of an application spend on the CPU and divides by the total amount of system time that has passed. The effect of this is that a multi-threaded application on a multi-CPU system can exceed 100% CPU time, and would be interpreted VERY differently than “Processor Information\\% Processor Utility”. In practice the “Process(lsass)\\% Processor Time” can be viewed as the count of CPUs running at 100% that are necessary to support the process's demands. A value of 200% means that 2 CPUs, each at 100%, are needed to support the full AD DS load. Although a CPU running at 100% capacity is the most cost efficient from the perspective of money spent on CPUs and power and energy consumption, for a number of reasons detailed in Appendix A, better responsiveness on a multi-threaded system occurs when the system is not running at 100%.
+The `Process\% Processor Time` performance counter tracks the total amount of time all application threads spend on the CPU, then divides that sum by the total amount of system time that's passed. A mutli-threaded application on a multi-CPU system can exceed 100% CPU time, and you'd interpret its data very differently than the `Processor Information\% Processor Utility` counter. In practice, the `Process(lsass)\% Processor Time` counter tracks how many CPUs running at 100% the system requires to support a process' demands. For example, if the counter has a value of 200%, that means the system needs two CPUs running at 100% to support the full AD DS load. Although a CPU running at 100% capacity is the most cost-efficient in terms of power and energy consumption, for reasons outlined in [Appendix A](#appendix-a-cpu-sizing-criteria), a multi-threaded system is more responsive when its system isn't running on 100%.
 
-To accommodate transient spikes in client load, it is recommended to target a peak period CPU of between 40% and 60% of system capacity. Working with the example above, that would mean that between 3.33 (60% target) and 5 (40% target) CPUs would be needed for the AD DS (lsass process) load. Additional capacity should be added in according to the demands of the base operating system and other agents required (such as antivirus, backup, monitoring, and so on). Although the impact of agents needs to be evaluated on a per environment basis, an estimate of between 5% and 10% of a single CPU can be made. In the current example, this would suggest that between 3.43 (60% target) and 5.1 (40% target) CPUs are necessary during peak periods.
+To accommodate transient spikes in client load, we recommend you target a peak period CPU between 40% and 60% of system capacity. For example, in the first example in [Target site behavior profile](#target-site-behavior-profile), you'd need between 3.33 CPUs (60% target) and 5 CPUs (40% target) to support the AD DS load. You should add extra capacity according to the demands of the OS and any other required agents, such as antivirus, backup, monitoring, and so on. Although you should evaluate the impact of agents on CPU agents on a per-environment basis, generally you can allot between 5% and 10% for agent processes on a single CPU. To revisit our example, we would need between 3.43 (60% target) and 5.1 (40% target) CPUs to support load during peak periods.
 
-The easiest way to do this is to use the “Stacked Area” view in Windows Reliability and Performance Monitor (perfmon), making sure all of the counters are scaled the same.
+Now, let's take a look at an example of calculating for a specific process. In this case, we'll look at the lsass process.
 
-Assumptions:
+#### Calculating CPU usage for the lsass process
 
-- Goal is to reduce footprint to as few servers as possible. Ideally, one server would carry the load and an additional server added for redundancy (*N* + 1 scenario).
+In this example, the system is an *N* + 1 scenario where one server carries the AD DS load while an extra server is there for redundancy.
+
+The following chart shows the processor time for the lsass process over all processors for this example scenario. This data was gathered from the `Process(lsass)\% Processor Time` performance counter.
 
 ![Processor time chart for lsass process (over all processors)](media/capacity-planning-considerations-proc-time-chart.png)
 
-Knowledge gained from the data in the chart (Process(lsass)\\% Processor Time):
+<!--Reformat image-->
 
-- The business day starts ramping up around 7:00 and decreases at 5:00 PM.
-- The peak busiest period is from 9:30 AM to 11:00 AM.
-  > [!NOTE]
-  > All performance data is historical. The peak data point at 9:15 indicates the load from 9:00 to 9:15.
-- There are spikes before 7:00 AM which could indicate either load from different time zones or background infrastructure activity, such as backups. Because the peak at 9:30 AM exceeds this activity, it is not relevant.
+Here's what this chart tells us about the scenario environment:
+
 - There are three domain controllers in the site.
+- The business day starts ramping up around 7:00 AM, then ramps down at 5:00 PM.
+- The busiest period of the day is from 9:30 AM to 11:00 AM.
+  > [!NOTE]
+  > All performance data is historical. The peak data point at 9:15 AM indicates the load from 9:00 AM to 9:15 AM.
+- Spikes before 7:00 AM could indicate extra load from different time zones or background infrastructure activity, such as backups. However, since this spike is lower than peak activity at 9:30 AM, it's not a cause for concern.
 
-At maximum load, lsass consumes about 485% of one CPU, or 4.85 CPUs running at 100%. As per the math earlier, this means the site needs about 12.25 CPUs for AD DS. Add in the above suggestions of 5% to 10% for background processes and that means replacing the server today would need approximately 12.30 to 12.35 CPUs to support the same load. An environmental estimate for growth now needs to be factored in.
+At maximum load, the lsass process consumes around 4.85 CPUs running at 100%, which would be 485% on a single CPU. These results suggest the scenario site needs about 12/25 CPUs to handle AD DS. When you bring in the recommended 5% to 10% extra capacity for background processes, that means the server would need 12.30 to 12.25 CPUs to support its current load. Estimates anticipating future growth will make this number even higher.
 
 ### When to tune LDAP weights
 
-There are several scenarios where tuning [LdapSrvWeight](/previous-versions/windows/it-pro/windows-2000-server/cc957291(v=technet.10)) should be considered. Within the context of capacity planning, this would be done when the application or user loads are not evenly balanced, or the underlying systems are not evenly balanced in terms of capability. Reasons to do so beyond capacity planning are outside of the scope of this article.
+There are certain scenarios where you should consider tuning [LdapSrvWeight](/previous-versions/windows/it-pro/windows-2000-server/cc957291(v=technet.10)). In the context of capacity planning, you'd tune it when your applications, user loads, or underlying system capabilities aren't evenly balanced.
 
-There are two common reasons to tune LDAP Weights:
+The following sections describe two example scenarios where you should tune the Lightweight Directory Access Protocol (LDAP) weights.
 
-- The PDC emulator is an example that affects every environment for which user or application load behavior is not evenly distributed. As certain tools and actions target the PDC emulator, such as the Group Policy management tools, second attempts in the case of authentication failures, trust establishment, and so on, CPU resources on the PDC emulator may be more heavily demanded than elsewhere in the site.
-  - It is only useful to tune this if there is a noticeable difference in CPU utilization in order  to reduce the load on the PDC emulator and increase the load on other domain controllers will allow a more even distribution of load.
-  - In this case, set LDAPSrvWeight between 50 and 75 for the PDC emulator.
-- Servers with differing counts of CPUs (and speeds) in a site.  For example, say there are two eight-core servers and one four-core server.  The last server has half the processors of the other two servers.  This means that a well distributed client load will increase the average CPU load on the four-core box to roughly twice that of the eight-core boxes.
-  - For example, the two eight-core boxes would be running at 40% and the four-core box would be running at 80%.
-  - Also, consider the impact of loss of one eight-core box in this scenario, specifically the fact that the four-core box would now be overloaded.
+#### Example 1: PDC emulator environment
 
-#### Example 1 - PDC
+If you're using a Primary Domain Controller (PDC) emulator, unevenly distributed user or application behavior can affect multiple environments at once. CPU resources on the PDC emulator are often more heavily demanded than elsewhere in the deployment because several tools and actions target it, such as Group Policy management tools, second authentication attempts, trust establishment, and so on.
 
-| System | Utilization with defaults | New LdapSrvWeight | Estimated new utilization |
+- You should tune your PDC emulator only if there's a noticeable difference in CPU utilization. Tuning should reduce the load on the PDC emulator and increase the load on other DCs, allowing for more even load distribution.
+- In these cases, set the value for `LDAPSrvWeight` between 50 and 75 for the PDC emulator.
+
+The following table...
+
+<!--Give this a better intro when I have more context.-->
+
+| System | CPU utilization with defaults | New LdapSrvWeight | Estimated new CPU utilization |
 |--|--|--|--|
 | DC 1 (PDC emulator)| 53% | 57 | 40% |
 | DC 2| 33% | 100 | 40% |
@@ -521,15 +535,25 @@ There are two common reasons to tune LDAP Weights:
 
 The catch here is that if the PDC emulator role is transferred or seized, particularly to another domain controller in the site, there will be a dramatic increase on the new PDC emulator.
 
-Using the example from the section [Target site behavior profile](#target-site-behavior-profile), an assumption was made that all three domain controllers in the site had four CPUs. What should happen, under normal conditions, if one of the domain controllers had eight CPUs? There would be two domain controllers at 40% utilization and one at 20% utilization. While this is not bad, there is an opportunity to balance the load a little bit better. Leverage LDAP weights to accomplish this.  An example scenario would be:
+<!--A dramatic increase of WHAT?-->
 
-#### Example 2 - Differing CPU counts
+In this example scenario, we assume based on [Target site behavior profile](#target-site-behavior-profile) that all three domain controllers in this site have four CPUs. Under normal conditions, what would happen if one of these DCs had eight CPUs? There would be two DCs at 40% utilization and one at 20% utilization. While this configuration isn't necessarily bad, there's an opportunity here for you to use LDAP weight tuning to balance the load better.
 
-| System | Processor Information\\ %&nbsp;Processor Utility(_Total)<br />Utilization with defaults | New LdapSrvWeight | Estimated new utilization |
+#### Example 2: environment with different CPU counts
+
+When you have servers with different CPU counts and speeds in the same site, you need to make sure they're evenly distributed. For example, if your site has two eight-core servers and one four-core server, the four-core server only has half the processing power of the other two servers. If the client load is evenly distributed, that means the four-core server needs to work twice as hard as the two eight-core servers to manage its CPU load. On top of that, if one of the eight-core servers goes offline, the four-core server gets overloaded.
+
+The following table...
+
+<!--Better intro once I can get more context-->
+
+| System | Processor Information\\ % Processor Utility(_Total)<br />CPU utilization with defaults | New LdapSrvWeight | Estimated new CPU utilization |
 |--|--|--|--|
 | 4-CPU DC 1 | 40 | 100 | 30% |
 | 4-CPU DC 2 | 40 | 100 | 30% |
 | 8-CPU DC 3 | 20 | 200 | 30% |
+
+<!--I think I need more context before I can properly rewrite this.-->
 
 Be very careful with these scenarios though. As can be seen above, the math looks really nice and pretty on paper. But throughout this article, planning for an “*N* + 1” scenario is of paramount importance. The impact of one DC going offline must be calculated for every scenario. In the immediately preceding scenario where the load distribution is even, in order to ensure a 60% load during an “*N*” scenario, with the load balanced evenly across all servers, the distribution will be fine as the ratios stay consistent. Looking at the PDC emulator tuning scenario, and in general any scenario where user or application load is unbalanced, the effect is very different:
 
@@ -541,13 +565,15 @@ Be very careful with these scenarios though. As can be seen above, the math look
 
 ### Virtualization considerations for processing
 
-There are two layers of capacity planning that need to be done in a virtualized environment. At the host level, similar to the identification of the business cycle outlined for the domain controller processing previously, thresholds during the peak period need to be identified. Because the underlying principals are the same for a host machine scheduling guest threads on the CPU as for getting AD DS threads on the CPU on a physical machine, the same goal of 40% to 60% on the underlying host are recommended. At the next layer, the guest layer, since the principals of thread scheduling have not changed, the goal within the guest remains in the 40% to 60% range.
+When you're capacity planning for a virtualized environment, there are two levels you need to consider: the host level and the guest level. At the host level, you must identify the peak periods of your business cycle. Because scheduling guest threads on the CPU for a virtual machine is similar to getting AD DS threads on the CPU for a physical machine, we still recommend you use 40% to 60% of the underlying host. At the guest level, because the underlying thread scheduling principles haven't changed, we also still recommend you keep <!--noun--> within the 40% to 60% range.
 
-In a direct mapped scenario, one guest per host, all the capacity planning done to this point needs to be added to the requirements (RAM, disk, network) of the underlying host operating system. In a shared host scenario, testing indicates that there is 10% impact on the efficiency of the underlying processors. That means if a site needs 10 CPUs at a target of 40%, the recommended amount of virtual CPUs to allocate across all the “*N*” guests would be 11. In a site with a mixed distribution of physical servers and virtual servers, the modifier only applies to the VMs. For example, if a site has an “*N* + 1” scenario, one physical or direct-mapped server with 10 CPUs would be about equivalent to one guest with 11 CPUs on a host, with 11 CPUs reserved for the domain controller.
+In a direct-mapped scenario with one guest per host, you must bring in all capacity planning estimates you've done in the previous sections in order to make your estimate. For a shared host scenario, there's about 10% impact on the efficiency of the underlying processors, which means if a site needs 10 CPUs at a target of 40%, the recommended amount of virtual CPUs you should allocate across all *N* guests would be 11. In sites with mixed distributions of physical and virtual servers, this modifier only applies to the virtual machines (VMs). For example, in an *N* + 1 scenario, one physical or direct-mapped server with 10 CPUs is almost equal to one guest with 11 CPUs on a host with 11 more CPUs reserved for the DC.
+
+
 
 Throughout the analysis and calculation of the CPU quantities necessary to support AD DS load, the numbers of CPUs that map to what can be purchased in terms physical hardware do not necessarily map cleanly. Virtualization eliminates the need to round up. Virtualization decreases the effort necessary to add compute capacity to a site, given the ease with which a CPU can be added to a VM. It does not eliminate the need to accurately evaluate the compute power needed so that the underlying hardware is available when additional CPUs need to be added to the guests.  As always, remember to plan and monitor for growth in demand.
 
-### Calculation summary example
+### Virtualization calculation summary example
 
 | System | Peak CPU |
 |--|--|--|
