@@ -424,12 +424,14 @@ The number you calculate is mostly accurate, but may not be exact because you ha
 
 ## Processing
 
+<!--Intro-->
+
 ### Evaluating Active Directory processor usage
 
 For most environments, managing processing capacity is the component that deserves the most attention. When you're evaluating how much CPU capacity your deployment needs, you should consider the following two things:
 
 - Do the applications in your environment behave as intended within a shared services infrastructure based on the criteria outlined in [Tracking expensive and inefficient searches](/previous-versions/ms808539(v=msdn.10)#tracking-expensive-and-inefficient-searches)? In larger environments, poorly coded applications can make the CPU load become volatile, take an inordinate amount of CPU time at the expense of other applications, drive up capacity needs, and unevenly distribute load against the DCs.
-- AD DS is a distributed envrionment with many potential clients whose processing needs vary widely. Estimated costs for each client can vary due to usage patterns and how many applications are using AD DS. Much like in [Network](#network), you should approach estimating as an evaluation of total needed capacity in the environment instead of looking at each client one at a time.
+- AD DS is a distributed environment with many potential clients whose processing needs vary widely. Estimated costs for each client can vary due to usage patterns and how many applications are using AD DS. Much like in [Network](#network), you should approach estimating as an evaluation of total needed capacity in the environment instead of looking at each client one at a time.
 
 You should only make this estimate after you've completed your [storage](#storage) estimate, as you won't be able to make an accurate guess without valid data about your processor load. It's also important to make sure any bottlenecks aren't being caused by storage before troubleshooting the processor. As you remove processor wait states, CPU utilization increases because it no longer needs to wait on the data. Therefore, the performance counters you should pay the most attention to are `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read`and `Process(lsass)\ Processor Time`. If the `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` counter is over 10 or 15 milliseconds, then the data in `Process(lsass)\ Processor Time` is artifically low and the issue is related to storage performance. We recommend you set sample intervals to 15, 30, or 60 minutes for the most accurate data possible.
 
@@ -749,135 +751,186 @@ The previous statement regards the percentage of processor time calculation as b
 
 <!--Where I left off-->
 
-The preceding math may make determinations about the number of logical processors needed in a system seem overwhelmingly complex. This is why the approach to sizing the systems is focused on determining maximum target utilization based on current load and calculating the number of logical processors required to get there. Additionally, while logical processor speeds will have a significant impact on performance, cache efficiencies, memory coherence requirements, thread scheduling and synchronization, and imperfectly balanced client load will all have significant impacts on performance that will vary on a server-by-server basis. With the relatively cheap cost of compute power, attempting to analyze and determine the perfect number of CPUs needed becomes more an academic exercise than it does provide business value.
+The math in the previous section probably makes determining how many logical processors you need in a system seem very complex. As a result, your approach to sizing the system should focus on determining maximum target utilization based on current load, then calculating the number of logical processors you need to reach that target. Furthermore, your estimate doesn't need to be perfectly exact. While logical processor speeds do have a significant impact on synchronization, performance can also be affected by other areas:
 
-Forty percent is not a hard and fast requirement, it is a reasonable start. Various consumers of Active Directory require various levels of responsiveness. There may be scenarios where environments can run at 80% or 90% utilization as a sustained average, as the increased wait times for access to the processor will not noticeably impact client performance. It is important to re-iterate that there are many areas in the system that are much slower than the logical processor in the system, including access to RAM, access to disk, and transmitting the response over the network. All of these items need to be tuned in conjunction. Examples:
+- Cache efficiency
+- Memory coherence requirements
+- Thread scheduling and synchronization
+- Imperfectly balanced client loads
 
-- Adding more processors to a system running 90% that is disk-bound is probably not going to significantly improve performance. Deeper analysis of the system will probably identify that there are a lot of threads that are not even getting on the processor because they are waiting on I/O to complete.
-- Resolving the disk-bound issues potentially means that threads that were previously spending a lot of time in a waiting state will no longer be in a waiting state for I/O and there will be more competition for CPU time, meaning that the 90% utilization in the previous example will go to 100% (because it can not go higher). Both components need to be tuned in conjunction.
+Since compute power is relatively low-cost, it's not worth investing too much time in calculating the perfectly exact number of CPUs you need.
+
+It's also important to remember that the 40% recommendation, in this case, isn't a mandatory requirement. We use it as a reasonable start for making calculations. Different kinds of AD users need different levels of responsiveness. There may even be scenarios where environments can run at 80% or even 90% utilization at a sustained average without the increased wait times for processor access noticeably affecting client performance.
+
+There are also other areas in the system that are much slower than the logical processor which you should also tune, including RAM access, disk access, and transmitting responses over the network. For example:
+
+- If you add processors to a system running at 90% utilization that's disk-bound, it probably won't significantly improve performance. If you look more closely at the system, there are lots of threads that aren't even getting onto the processor because they're waiting for IO operations to complete.
+- Resolving disk-bound issues can mean that threads previously stuck in waiting state stop being stuck, creating more competition for CPU time. As a result, the 90% utilization will go to 100%. You need to tune both components in order to bring utilization back down to manageable levels.
+  
   > [!NOTE]
-  > Processor Information(*)\\% Processor Utility can exceed 100% with systems that have a "Turbo" mode.  This is where the CPU exceeds the rated processor speed for short periods.  Reference CPU manufacturers documentation and description of the counter for greater insight.
+  > The `Processor Information(*)\% Processor Utility` counter can exceed 100% with systems that have a Turbo mode. Turbo mode lets the CPU exceeds the rated processor speed for short periods. If you need more information, look at the CPU manufacturers' documentation and counter descriptions.
 
-Discussing whole system utilization considerations also brings into the conversation domain controllers as virtualized guests. [Response time/How the system busyness impacts performance](#response-timehow-the-system-busyness-impacts-performance) applies to both the host and the guest in a virtualized scenario. This is why in a host with only one guest, a domain controller (and generally any system) has near the same performance it does on physical hardware. Adding additional guests to the hosts increases the utilization of the underlying host, thereby increasing the wait times to get access to the processors as explained previously. In short, logical processor utilization needs to be managed at both the host and at the guest levels.
+Discussing whole-system utilization considerations also involves domain controllers as virtualized guests. [Response time and how system activity levels impact performance](#response-time-and-how-system-activity-levels-impact-performance) applies to both host and guest in a virtualized scenario. In a host with only one guest, a DC or system has almost the same performance as it would on physical hardware. Adding more guests to the hosts increases the utilization of the underlying host, also increasing wait times to get access to the processors. Therefore, you must manage logical processor utilization at both host and guest levels.
 
-Extending the previous analogies, leaving the highway as the physical hardware, the guest VM will be analogized with a bus (an express bus that goes straight to the destination the rider wants). Imagine the following four scenarios:
+Let's revisit the highway metaphor from the previous sections, only this time we're imagining the guest VM as an express bus. Express buses, as opposed to public transit or school buses, go straight to the rider's destination without making any stops.
 
-- It is off hours, a rider gets on a bus that is nearly empty, and the bus gets on a road that is also nearly empty. As there is no traffic to contend with, the rider has a nice easy ride and gets there just as fast as if the rider had driven instead. The rider's travel times are still constrained by the speed limit.
-- It is off hours so the bus is nearly empty but most of the lanes on the road are closed, so the highway is still congested. The rider is on an almost-empty bus on a congested road. While the rider does not have a lot of competition in the bus for where to sit, the total trip time is still dictated by the rest of the traffic outside.
-- It is rush hour so the highway and the bus are congested. Not only does the trip take longer, but getting on and off the bus is a nightmare because people are shoulder to shoulder and the highway is not much better. Adding more buses (logical processors to the guest) does not mean they can fit on the road any more easily, or that the trip will be shortened.
-- The final scenario, though it may be stretching the analogy a little, is where the bus is full, but the road is not congested. While the rider will still have trouble getting on and off the bus, the trip will be efficient after the bus is on the road. This is the only scenario where adding more buses (logical processors to the guest) will improve guest performance.
+Now, let's imagine four scenarios:
 
-From there it is relatively easy to extrapolate that there are a number of scenarios in between the 0%-utilized and the 100%-utilized state of the road and the 0%- and 100%-utilized state of the bus that have varying degrees of impact.
+- A system's off-peak hours are like riding an express bus late at night. When the rider gets on, there are almost no other passengers and the road is nearly empty. Because there's no traffic for the bus to contend with, the ride is easy and just as fast as if the rider had driven there in their own car. However, the rider's travel time is also constrained by the local speed limit.
+- Off-peak hours when a system's CPU utilization is too high is like a late night ride when most of the lanes on the highway are closed. Even though the bus itself is mostly empty, the road is still congested from leftover traffic dealing with the restricted lanes. While the rider is free to sit anywhere they want, their actual trip time is determined by the traffic outside of the bus.
+- A system with high CPU utilization during peak hours is like a crowded bus during rush hour. Not only does the trip take longer, but getting on and off the bus is harder because the bus is full of other passengers. Adding more logical processors to the guest system to try to speed up wait times would be like trying to solve the traffic problem by adding more buses. The problem isn't the number of buses, but how long the trip takes.
+- A system with high CPU utilization during off-peak hours is like that same crowded bus on a mostly empty road at night. While riders may have trouble finding seats or getting on and off the bus, the trip will be fairly smooth once the bus picks up all its passengers. This scenario is the only one where performance would improve by adding more buses.
 
-Applying the principals above of 40% CPU as reasonable target for the host as well as the guest is a reasonable start for the same reasoning as above, the amount of queuing.
+Based on the previous examples, you can see that there are many scenarios between 0% and 100% utilization that have varying degrees of impact on performance. Also, adding more logical processors doesn't necessarily improve performance outside of very specific scenarios. It should be fairly simple to apply these principles to the recommended 40% CPU utilization target for hosts and guests.
 
-## Appendix B: Considerations regarding different processor speeds, and the effect of processor power management on processor speeds
+## Appendix B: Considerations regarding different processor speeds
 
-Throughout the sections on processor selection the assumption is made that the processor is running at 100% of clock speed the entire time the data is being collected and that the replacement systems will have the same speed processors. Despite both assumptions in practice being false, particularly with Windows Server 2008 R2 and later, where the default power plan is **Balanced**, the methodology still stands as it is the conservative approach. While the potential error rate may increase, it only increases the margin of safety as processor speeds increase.
+In [Processsing](#processing), we assumed that the processor is running at 100% clock speed while you collect data, and that any replacement systems have the same processing speed. Despite these assumptions not being accurate, especially for Windows Server 2008 R2 and later, where the default power plan is Balanced, these assumptions still work for conservative estimates. While potential errors may increase, it only increases the margin of safety as processor speeds increase.
 
-- For example, in a scenario where 11.25 CPUs are demanded, if the processors were running at half speed when the data was collected, the more accurate estimate might be 5.125 ÷ 2.
-- It is impossible to guarantee that doubling the clock speeds would double the amount of processing that happens for a given time period. This is due to the fact the amount of time that the processors spend waiting on RAM or other system components could stay the same. The net effect is that the faster processors might spend a greater percentage of the time idle while waiting on data to be fetched. Again, it is recommended to stick with the lowest common denominator, being conservative, and avoid trying to calculate a potentially false level of accuracy by assuming a linear comparison between processor speeds.
+- For example, in a scenario that demands 11.25 CPUs, if the processors ran at half speed when you collected your data, the more accurate estimate of their demand would be 5.125 ÷ 2. <!--Is this right? He's not really clear about where this number came from.-->
+- It's impossible to guarantee that doubling clock speed doubles the amount of processing that happens within the recorded time period. The amount of time processors spend waiting on RAM or other components stays roughly the same. Therefore, faster processors might spend a greater percentage of time idle while waiting for the system to fetch data. We recommend you stick with the lowest common denominator, keep your estimates conservative, and avoid assuming a linear comparison between processor speeds that could make your results inaccurate.
 
-Alternatively, if processor speeds in replacement hardware are lower than current hardware, it would be safe to increase the estimate of processors needed by a proportionate amount. For example, it is calculated that 10 processors are needed to sustain the load in a site, and the current processors are running at 3.3 Ghz and replacement processors will run at 2.6 Ghz, this is a 21% decrease in speed. In this case, 12 processors would be the recommended amount.
+If processor speeds in your replacement hardware are lower than your current hardware, you should proportionally increase the estimate of how many processors you need. For example, let's look at a scenario where you calculate you need 10 processors to sustain your site's load. The current processors run at 3.3 GHz, and the processors you plan to replace them with run at 2.6 GHz. Replacing only the 10 original processors would give you a 21% decrease in speed. To increase speed, you need to get at least 12 processors instead of 10.
 
-That said, this variability would not change the Capacity Management processor utilization targets. As processor clock speeds will be adjusted dynamically based on the load demanded, running the system under higher loads will generate a scenario where the CPU spends more time in a higher clock speed state, making the ultimate goal to be at 40% utilization in a 100% clock speed state at peak. Anything less than that will generate power savings as CPU speeds will be throttled back during off peak scenarios.
+However, this variability doesn't change capacity management processor utilization targets. Processor clock speeds adjust dynamically based on load demand, so running the system under higher loads causes the CPU to spend more time in a higher clock speed state. The ultimate goal is to have the CPU be at 40% utilization in a 100% clock speed state during peak business hours. Anything less will generate power savings by throttling CPU speeds during off-peak scenarios.
 
 > [!NOTE]
-> An option would be to turn off power management on the processors (setting the power plan to **High Performance**) while data is collected. That would give a more accurate representation of the CPU consumption on the target server.
+> You can turn off power management on the processors during data collection by setting the power plan to **High Performance**. Turning power management off gives you more accurate readings of CPU consumption in the target server.
 
-To adjust estimates for different processors, it used to be safe, excluding other system bottlenecks outlined above, to assume that doubling processor speeds doubled the amount of processing that could be performed.  Today, the internal architecture of processors is different enough between processors, that a safer way to gauge the effects of using different processors than data was taken from is to leverage the SPECint_rate2006 benchmark from Standard Performance Evaluation Corporation.
+To adjust estimates for different processors, we recommend you use the SPECint_rate2006 benchmark from Standard Performance Evaluation Corporation. To use this benchmark:
 
-1. Find the SPECint_rate2006 scores for the processor that are in use and that plan to be used.
-    1. On the website of the Standard Performance Evaluation Corporation, select **Results**, highlight **CPU2006**, and select **Search all SPECint_rate2006 results**.
-    1. Under **Simple Request**, enter the search criteria for the target processor, for example **Processor Matches E5-2630 (baselinetarget)** and **Processor Matches E5-2650 (baseline)**.
-    1. Find the server and processor configuration to be used (or something close, if an exact match is not available) and note the value in the **Result** and **# Cores** columns.
-1. To determine the modifier use the following equation:
-   >((*Target platform per-core score value*) × (*MHz per-core of baseline platform*)) ÷ ((*Baseline per-core score value*) × (*MHz per-core of target platform*))
+1. Go to the [Standard Performance Evaluation Corporation (SPEC) website](https://spec.org/).
+1. Select **Results**.
+1. Enter **CPU2006** and select **Search**.
+1. In the drop-down menu for **Available Configurations**, select **All SPEC CPU2006**.
+1. In the **Search Form Request** field, select **Simple**, then select **Go!**.
+1. Under **Simple Request**, enter the search criteria for your target processor. FOr example, if you're looking for an ES-2630 processor, in the drop-down menu, select **Processor**, then enter the processor name in the search field. When finished, select **Execute Simple Fetch**.
+1. Look for your server and processor configuration in the search results. If the search engine doesn't return an exact match, look for the closest match possible.
+1. Record the values in the **Result** and **# Cores** columns.
+1. Determine the modifier by using this equation:
+   
+   ((*Target platform per-core score value*) × (*MHz per-core of baseline platform*)) ÷ ((*Baseline per-core score value*) × (*MHz per-core of target platform*))
 
-    Using the above example:
-   >(35.83 × 2000) ÷ (33.75 × 2300) = 0.92
-1. Multiply the estimated number of processors by the modifier.  In the above case to go from the E5-2650 processor to the E5-2630 processor multiply the calculated 11.25 CPUs × 0.92 = 10.35 processors needed.
+   For example, here's how you'd find the modifier for an ES-2630 processor:
 
-## Appendix C: Fundamentals regarding the operating system interacting with storage
+   (35.83 × 2000) ÷ (33.75 × 2300) = 0.92
 
-The queuing theory concepts outlined in [Response time/How the system busyness impacts performance](#response-timehow-the-system-busyness-impacts-performance) are also applicable to storage. Having a familiarity of how the operating system handles I/O is necessary to apply these concepts. In the Microsoft Windows operating system, a queue to hold the I/O requests is created for each physical disk. However, a clarification on physical disk needs to be made. Array controllers and SANs present aggregations of spindles to the operating system as single physical disks. Additionally, array controllers and SANs can aggregate multiple disks into one array set and then split this array set into multiple “partitions”, which is in turn presented to the operating system as multiple physical disks (ref. figure).
+1. Multiply the number of processors you estimate you need by this modifier.
+
+   For the ES-2630 processor example, 0.92 × 10.3 = 10.35 processors.
+
+## Appendix C: How the operating system interacts with storage
+
+The queuing theory concepts we discussed in [Response time and how system activity levels impact performance](#response-time-and-how-system-activity-levels-impact-performance) also apply to storage. You need to be familiar with how your OS handles IO in order to apply these concepts effectively. In Windows OSes, the OS creates a queue that holds IO requests for each physical disk. However, a physical disk isn't necessarily a single disk. The OS can also register an aggregation of spindles on an array controller or SAN as a physical disk. Array controllers and SANs can also aggregate multiple disks into an single array set, split it into multiple partitions, then use each partition as a physical disk, as shown in the following image.
 
 ![Block spindles](media/capacity-planning-considerations-block-spindles.png)
+<!--Reformat image-->
 
-In this figure the two spindles are mirrored and split into logical areas for data storage (Data 1 and Data 2). These logical areas are viewed by the operating system as separate physical disks.
+In this illustration, the two spindles are mirrored and split into logical areas for data storage, labeled Data 1 and Data 2. The OS registers each of these logical areas as separate physical disks.
 
-Although this can be highly confusing, the following terminology is used throughout this appendix to identify the different entities:
+Now that we've clarified what defines a physical disk, you should also get familiar with the following terms to help you better understand the information in this Appendix.
 
-- **Spindle –** the device that is physically installed in the server.
-- **Array –** a collection of spindles aggregated by controller.
-- **Array partition –** a partitioning of the aggregated array
-- **LUN –** an array, used when referring to SANs
-- **Disk –** What the operating system observes to be a single physical disk.
-- **Partition –** a logical partitioning of what the operating system perceives as a physical disk.
+- A *spindle* is the device physically installed in the server.
+- An *array* is a collection of spindles aggregated by the controller.
+- An *array partition* is a partitioning of the aggregated array.
+- A *Logical Unit Number (LUN)* is an array of SCSI devices connected to a computer. This article uses these terms when talking about SANs.
+- A *disk* includes any spindle or partition that the OS registers as a single physical disk.
+- A *partition* is a logical partioning of what the OS registers as a physical disk. <!--Does this match teh definition given in the earlier paragraph?-->
 
 ### Operating system architecture considerations
 
-The operating system creates a First In/First Out (FIFO) I/O queue for each disk that is observed; this disk may be representing a spindle, an array, or an array partition. From the operating system perspective, with regard to handling I/O, the more active queues the better. As a FIFO queue is serialized, meaning that all I/Os issued to the storage subsystem must be processed in the order the request arrived. By correlating each disk observed by the operating system with a spindle/array, the operating system now maintains an I/O queue for each unique set of disks, thereby eliminating contention for scarce I/O resources across disks and isolating I/O demand to a single disk. As an exception, Windows Server 2008 introduces the concept of I/O prioritization, and applications designed to use the “Low” priority fall out of this normal order and take a back seat. Applications not specifically coded to leverage the “Low” priority default to “Normal.”
+The OS creates a First In, First Out (FIFO) IO queue for each disk it registers. These disks can be spindles, arrays, or array partitions. When it comes to how the OS handles IO, the more active queues, the better. When the OS serializes the FIFO queue, it must process all FIFO IO requests issued to the storage subsystem in order of arrival. By correlating each disk with a spindle or array, the OS maintains an IO queue for each unique set of disks, eliminating competition for scarce IO resources across disks and isolating IO demand to a single disk. However, Windows Server 2008 introduced an exception in the form of *IO prioritization*. Applications designed to use low priority IO are moved to the back of the queue no matter when the OS received them. Applications not specifically coded to use the low priority setting default to normal priority instead.
 
 ### Introducing simple storage subsystems
 
-Starting with a simple example (a single hard drive inside a computer) a component-by-component analysis will be given. Breaking this down into the major storage subsystem components, the system consists of:
+In this section, we talk about simple storage subsystems. Let's start with an example: a single hard drive inside a computer. If we break this system iown into its major storage subsystem components, here's what we get:
 
-- **1 –** 10,000 RPM Ultra Fast SCSI HD (Ultra Fast SCSI has a 20 MBps transfer rate)
-- **1 –** SCSI Bus (the cable)
-- **1 –** Ultra Fast SCSI Adapter
-- **1 –** 32-bit 33 MHz PCI bus
+- One 10,000 RPM Ultra Fast SCSI HD (Ultra Fast SCSI has a 20 MBps transfer rate)
+- One SCSI Bus (the cable)
+- One Ultra Fast SCSI Adapter
+- One 32-bit 33 MHz PCI bus
 
-Once the components are identified, an idea of how much data can transit the system, or how much I/O can be handled, can be calculated. Note that the amount of I/O and quantity of data that can transit the system is correlated, but not the same. This correlation depends on whether the disk I/O is random or sequential and the block size. (All data is written to the disk as a block, but different applications using different block sizes.) On a component-by-component basis:
+Once you identify the components, you can begin to get an idea of how much data the system can transmit and how much IO it can handle. The amount of IO and quantity of data that can transit the system are related to each other, but not the same value. This correlation depends on the block size and whether the disk IO is random or sequential. The system writes all data to the disk as a block, but different applications can use different block sizes.
 
-- **The hard drive –** The average 10,000-RPM hard drive has a 7-millisecond (ms) seek time and a 3 ms access time. Seek time is the average amount of time it takes the read/write head to move to a location on the platter. Access time is the average amount of time it takes to read or write the data to disk, once the head is in the correct location. Thus, the average time for reading a unique block of data in a 10,000-RPM HD constitutes a seek and an access, for a total of approximately 10 ms (or .010 seconds) per block of data.
+Next, let's analyze these items on a compoment-by-component basis.
 
-  When every disk access requires movement of the head to a new location on the disk, the read/write behavior is referred to as “random.” Thus, when all I/O is random, a 10,000-RPM HD can handle approximately 100 I/O per second (IOPS) (the formula is 1000 ms per second divided by 10 ms per I/O or 1000/10=100 IOPS).
+### The hard drive
 
-  Alternatively, when all I/O occurs from adjacent sectors on the HD, this is referred to as sequential I/O. Sequential I/O has no seek time because when the first I/O is complete, the read/write head is at the start of where the next block of data is stored on the HD. Thus a 10,000-RPM HD is capable of handling approximately 333 I/O per second (1000 ms per second divided by 3 ms per I/O).
+The average 10,000-RPM hard drive has a 7 ms seek time and a 3 ms access time. Seek time is the average amount of time it takes the read or write head to move to a location on the platter. Access time is the average amount of time it takes for the head to read or write the data to disk once it's in the correct location. Therefore, the average time for reading a unique block of data in a 10,000-RPM HD includes both seek and access times for a total of approximately 10 ms, or .010 seconds, per block of data.
 
-  > [!NOTE]
-  > This example does not reflect the disk cache, where the data of one cylinder is typically kept. In this case, the 10 ms are needed on the first I/O and the disk reads the whole cylinder. All other sequential I/O is satisfied from the cache. As a result, in-disk caches might improve sequential I/O performance.
+When every disk access requires the head move to a new location on the disk, the read or write behavior is called random. When all I/O is random, a 10,000-RPM HD can handle approximately 100 I/O per second (IOPS), based on this formula:
 
-  So far, the transfer rate of the hard drive has been irrelevant. Whether the hard drive is 20 MBps Ultra Wide or an Ultra3 160 MBps, the actual amount of IOPS the can be handled by the 10,000-RPM HD is ~100 random or ~300 sequential I/O. As block sizes change based on the application writing to the drive, the amount of data that is pulled per I/O is different. For example, if the block size is 8 KB, 100 I/O operations will read from or write to the hard drive a total of 800 KB. However, if the block size is 32 KB, 100 I/O will read/write 3,200 KB (3.2 MB) to the hard drive. As long as the SCSI transfer rate is in excess of the total amount of data transferred, getting a “faster” transfer rate drive will gain nothing. See the following tables for comparison.
+1000 ms per second ÷ 10 ms per I/O
+<!--Double check equation format in style guide-->
 
-  | Description | 7200 RPM 9ms seek, 4ms access | 10,000 RPM 7ms seek, 3ms access | 15,000 RPM 4ms seek, 2ms access |
-  |--|--|--|--|
-  | Random I/O | 80 | 100 | 150 |
-  | Sequential I/O | 250 | 300 | 500 |
+When all I/O occurs from adjacent sectors on the hard drive, we call it *sequential IO*. Sequential IO has no seek time because, after the first IO finishes, the read or write head is at the start of where the hard drive is storing the next data block. For example, a Thus a 10,000-RPM HD is capable of handling approximately 333 I/O per second, based on the following equation:
 
-  | 10,000 RPM drive | 8 KB block size (Active Directory Jet) |
-  |--|--|
-  | Random I/O | 800 KB/s |
-  | Sequential I/O | 2400 KB/s |
+1000 ms per second ÷ 3 ms per I/O
 
-- **SCSI backplane (bus) –** Understanding how the “SCSI backplane (bus)”, or in this scenario the ribbon cable, impacts throughput of the storage subsystem depends on knowledge of the block size. Essentially the question would be, how much I/O can the bus handle if the I/O is in 8 KB blocks? In this scenario, the SCSI bus is 20 MBps, or 20480 KB/s. 20480 KB/s divided by 8 KB blocks yields a maximum of approximately 2500 IOPS supported by the SCSI bus.
+> [!NOTE]
+> This example doesn't reflect the disk cache where the system typically keeps the data of one cylinder. In this case, the first IO needs 10 ms <!--Of what?--> and the disk reads the whole cylinder. All other sequential I/Os are satisfied by the cache. As a result, in-disk caches might improve sequential I/O performance.
 
-  > [!NOTE]
-  > The figures in the following table represent an example. Most attached storage devices currently use PCI Express, which provides much higher throughput.
+So far, the transfer rate of the hard drive hasn't been relevant to our example. No matter the hard drive size, the actual amount of IOPS the 10,000-RPM HD can handle is always about 100 random or 300 sequential I/Os. As block sizes change based on which application is writing to the drive, the amount of data pulled per IO also changes. For example, if the block size is 8 KB, 100 I/O operations will read from or write to the hard drive a total of 800 KB. However, if the block size is 32 KB, 100 I/O will read or write 3,200 KB (3.2 MB) to the hard drive. If the SCSI transfer rate exceeds the total amount of transferred data, then getting a faster transfer rate doesn't change anything.
 
-  | I/O supported by SCSI bus per block size | 2 KB block size | 8 KB block size (AD Jet) (SQL Server 7.0/SQL Server 2000) |
-  |--|--|--|
-  | 20 MBps | 10,000 | 2,500 |
-  | 40 MBps | 20,000 | 5,000 |
-  | 128 MBps | 65,536 | 16,384 |
-  | 320 MBps | 160,000 | 40,000 |
+The following tables give a comparison between...<!--Between what and what? Original text didn't specify.-->
 
-  As can be determined from this chart, in the scenario presented, no matter what the use, the bus will never be a bottleneck, as the spindle maximum is 100 I/O, well below any of the above thresholds.
+| Description | 7200 RPM 9ms seek, 4ms access | 10,000 RPM 7ms seek, 3ms access | 15,000 RPM 4ms seek, 2ms access |
+|--|--|--|--|
+| Random I/O | 80 | 100 | 150 |
+| Sequential I/O | 250 | 300 | 500 |
 
-  > [!NOTE]
-  > This assumes that the SCSI bus is 100% efficient.
+| 10,000 RPM drive | 8 KB block size (Active Directory Jet) |
+|--|--|
+| Random I/O | 800 KB/s |
+| Sequential I/O | 2400 KB/s |
 
-- **SCSI adapter –** For determining the amount of I/O that this can handle, the manufacturer's specifications need to be checked. Directing I/O requests to the appropriate device requires processing of some sort, thus the amount of I/O that can be handled is dependent on the SCSI adapter (or array controller) processor.
+#### The SCISI backplane (bus)
 
-  In this example, the assumption that 1,000 I/O can be handled will be made.
+How the SCSI backplane, which in this example scenario is the ribbon cable, impacts throughput of the storage subsystem depends on block size. How much I/O can the bus handle if the I/O is in 8 KB blocks? In this scenario, the SCSI bus is 20 MBps, or 20480 KB/s. 20480 KB/s divided by 8 KB blocks yields a maximum of approximately 2500 IOPS supported by the SCSI bus.
 
-- **PCI bus –** This is an often overlooked component. In this example, this will not be the bottleneck; however as systems scale up, it can become a bottleneck. For reference, a 32 bit PCI bus operating at 33Mhz can in theory transfer 133 MBps of data. Following is the equation:
-  > 32 bits ÷ 8 bits per byte × 33 MHz = 133 MBps.
+> [!NOTE]
+> The figures in the following table represent an example scenario. Most attached storage devices currently use PCI Express, which provides much higher throughput.
 
-  Note that is the theoretical limit; in reality only about 50% of the maximum is actually reached, although in certain burst scenarios, 75% efficiency can be obtained for short periods.
+| I/O supported by SCSI bus per block size | 2 KB block size | 8 KB block size (AD Jet) (SQL Server 7.0/SQL Server 2000) |
+|--|--|--|
+| 20 MBps | 10,000 | 2,500 |
+| 40 MBps | 20,000 | 5,000 |
+| 128 MBps | 65,536 | 16,384 |
+| 320 MBps | 160,000 | 40,000 |
 
-  A 66Mhz 64-bit PCI bus can support a theoretical maximum of (64 bits ÷ 8 bits per byte × 66 Mhz) = 528 MBps. Additionally, any other device (such as the network adapter, second SCSI controller, and so on) will reduce the bandwidth available as the bandwidth is shared and the devices will contend for the limited resources.
+As the previous table shows, in our example scenario, the bus is never a bottleneck because teh spindle maximum is 100 IO, way below any of the listed thresholds.
+
+> [!NOTE]
+> In this scenario, we're assuming that the SCSI bus is 100% efficient.
+
+#### The SCSI adapter
+
+In order to determine how much IO the system can handle, you must check the manufacturer's specifications. Directing IO requests to the appropriate device requires processing power, so how much IO the system can handle depends on the SCSI adaptor or array controller processor.
+
+In this example scenario, we're assuming that the system can handle 1,000 I/O.
+
+#### The PCI bus
+
+The PCI bus is an oft-overlooked component. In this example scenario, the PCI bus isn't the bottleneck. However, as systems scale up, it can potentially become a bottleneck in the future.
+
+We can see how much a PCI bus can transfer data in our example scenario by using this equation:
+
+32 bits ÷ 8 bits per byte × 33 MHz = 133 MBps
+
+Therefore, we can assume a 32 bit PCI bus operating at 33Mhz can transfer 133 MBps of data.
+
+>[!NOTE]
+>This equation's result represents the theoretical limit of transferred data. In reality, most systems only reach about 50% of maximum limit. In certain burst scenarios, the system can reach 75% of the limit for short periods.
+
+A 66 MHz 64-bit PCI bus can support a theoretical maximum of 528 MBps based on this equation: 
+
+64 bits ÷ 8 bits per byte × 66 Mhz = 528 MBps
+
+Adding any other device, such as a network adapter or a second SCSI controller, reduces bandwidth available to the system, as all devices share the bandwidth and can compete with each other for limited processing resources.
+
+#### Analyzing Storage subsystems to find bottlenecks
+
+<!--Where I left off.-->
 
 After analysis of the components of this storage subsystem, the spindle is the limiting factor in the amount of I/O that can be requested, and consequently the amount of data that can transit the system. Specifically, in an AD DS scenario, this is 100 random I/O per second in 8 KB increments, for a total of 800 KB per second when accessing the Jet database. Alternatively, the maximum throughput for a spindle that is exclusively allocated to log files would suffer the following limitations: 300 sequential I/O per second in 8 KB increments, for a total of 2400 KB (2.4 MB) per second.
 
