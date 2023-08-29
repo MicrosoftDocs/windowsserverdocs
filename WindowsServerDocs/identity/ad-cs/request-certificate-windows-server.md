@@ -2,7 +2,7 @@
 title: Request a certificate using the Certification Authority Web Enrollment Role Service in Windows Server
 description: Learn how to request a certificate using the Certification Authority Web Enrollment Role Service in Windows Server.
 author: gswashington
-ms.topic: how-to
+ms.topic: quickstart
 ms.author: orthomas
 ms.date: 09/09/2023
 ---
@@ -12,6 +12,11 @@ ms.date: 09/09/2023
 Applies To: Windows Server 2012 R2, Windows Server 2012
 
 This article shows you how to request a certificate using the Certification Authority (CA) Web Enrollment Role Service in Windows Server. The CA Web Enrollment role service provides a set of web pages that allow interaction with the Certification Authority role service. See [Certification Authority Web Enrollment Guidance](/certification-authority-role.md) for more information about the CA Web Enrollment role service.
+
+## Prerequisites
+
+- Computer with Certificate Enrollment Web Service is installed that is a member of the domain and running Windows Server 2008 R2 or Windows Server 2012.
+- Client computers must be running at least Windows 7 or Windows Server 2008 R2.
 
 ## Request a basic certificate using Internet Explorer
 
@@ -77,9 +82,9 @@ This article shows you how to request a certificate using the Certification Auth
 
       - **Denied**. Contact the administrator of the certification authority for further information.
 
-## Related content
+## Next steps
 
-- [You cannot download CA certificate from web enrollment pages](https://social.technet.microsoft.com/wiki/contents/articles/you-cannot-download-ca-certificate-from-web-enrollment-pages.aspx)
+- [Certification Authority Web Enrollment Guidance](/certification-authority-role.md)
 
 - [AD CS: Web Enrollment](https://technet.microsoft.com/library/cc732517.aspx)
 
