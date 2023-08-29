@@ -12,7 +12,7 @@ ms.custom: template-how-to-pattern
 
 Secured-core is a collection of capabilities that offers built-in hardware, firmware, driver and
 operating system security features. This article shows you how to configure Secured-core server by
-using Windows Admin Center and Windows PowerShell.
+using Windows Admin Center, the Windows Server Desktop Experience, and Group Policy.
 
 Secured-core server is designed to deliver a secure platform for critical data and applications. For
 more information, see [What is Secured-core server?](../security/secured-core-server.md)
@@ -24,7 +24,7 @@ installed and enabled in the BIOS:
 
 - Secure Boot.
 - Trusted Platform Module (TPM) 2.0.
-- System firmware must meet pre-boot DMA protection requirements and set appropriate flags in ACPI
+- System firmware must meet preboot DMA protection requirements and set appropriate flags in ACPI
   tables to opt into and enable Kernel DMA Protection. To learn more about Kernel DMA Protection,
   see
   [Kernel DMA Protection (Memory Access Protection) for OEMs](/windows-hardware/design/device-experiences/oem-kernel-dma-protection).
@@ -38,7 +38,7 @@ installed and enabled in the BIOS:
 > Enabling each of the security features in the BIOS can vary based on your hardware vendor. Make
 > sure to check your hardware manufacturer's Secured-core server enablement guide.
 
-You can find hardware certified for Secured-core server from the
+You can find hardware certified for Secured-core server from the 
 [Windows Server Catalog](https://www.windowsservercatalog.com/), and Azure Stack HCI servers in the
 [Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net/#/catalog?FeatureSupported=securedCoreServer).
 
@@ -136,46 +136,6 @@ Here's how to verify your Secured-core server is configured using Windows Admin 
 1. Check the all Security Features have a status of _Configured_.
 
    :::image type="content" source="media/Secured-core/windows-admin-center-server.png" alt-text="Screenshot showing the Windows Admin Center security extension in a browser window with Secured-core enabled." lightbox="media/Secured-core/windows-admin-center-server.png":::
-
-#### [PowerShell](#tab/powershell)
-
-Here's how to verify your Secured-core server is configured using the
-[Confirm-SecureBootUEFI](/powershell/module/secureboot/confirm-securebootuefi) and
-[Get-ComputerInfo](/powershell/module/microsoft.powershell.management/get-computerinfo) Windows
-PowerShell commands.
-
-1. Open an elevated PowerShell prompt.
-
-1. To confirm SecureBoot is supported and enabled, run the following command from an elevated
-   PowerShell prompt:
-
-   ```powershell
-   Confirm-SecureBootUEFI
-   ```
-
-1. Verify the output shows `True` to validate SecureBoot is supported and enabled.
-
-1. To confirm Hypervisor enforced Code Integrity and DMA protection is configured and enabled, run
-   the following command from an elevated PowerShell prompt:
-
-   ```powershell
-   Get-ComputerInfo | Select DeviceGuard* | Format-List
-   ```
-
-1. Verify the output shows `DMAProtection` in the available and required services. Also the values
-   `HypervisorEnforcedCodeIntegrity` and `3` should be shown in the running services. Here's an example output.
-
-   ```powershell
-   DeviceGuardSmartStatus                                  : Off
-   DeviceGuardRequiredSecurityProperties                   : {BaseVirtualizationSupport, SecureBoot, DMAProtection}
-   DeviceGuardAvailableSecurityProperties                  : {BaseVirtualizationSupport, SecureBoot, DMAProtection, 5...}
-   DeviceGuardSecurityServicesConfigured                   : {HypervisorEnforcedCodeIntegrity, 3}
-   DeviceGuardSecurityServicesRunning                      : {HypervisorEnforcedCodeIntegrity, 3}
-   DeviceGuardCodeIntegrityPolicyEnforcementStatus         : EnforcementMode
-   DeviceGuardUserModeCodeIntegrityPolicyEnforcementStatus : Off
-   ```
-
-To learn more about the output values, see the [SecurityServicesRunning](/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity) article.
 
 ---
 
