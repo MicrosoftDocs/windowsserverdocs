@@ -3,10 +3,9 @@ title: cmd
 description: Reference article for the cmd command, which starts a new instance of the command interpreter, Cmd.exe.
 ms.topic: reference
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 08/11/2022
+ms.author: wscontent
+author: alalve
+ms.date: 08/29/2023
 ---
 
 # cmd
@@ -23,8 +22,8 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 
 | Parameter | Description |
 | --------- | ----------- |
-| /c | Carries out the command specified by *string* and then stops. |
-| /k | Carries out the command specified by *string* and continues. |
+| /c | Carries out the command specified by *string* and then exits the command processor. |
+| /k | Carries out the command specified by *string* and keeps the command processor running. |
 | /s | Modifies the treatment of *string* after **/c** or **/k**. |
 | /q | Turns echo off. |
 | /d | Disables execution of AutoRun commands. |
@@ -87,7 +86,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
     - The *string* within quotation marks is the name of an executable file.
 
-    If the previous conditions aren't met, *string* is processed by examining the first character to verify whether it is an opening quotation mark. If the first character is an opening quotation mark, it is stripped along with the closing quotation mark. Any text following the closing quotation marks is preserved.
+    If the previous conditions aren't met, *string* is processed by examining the first character to verify whether it's an opening quotation mark. If the first character is an opening quotation mark, it's stripped along with the closing quotation mark. Any text following the closing quotation marks is preserved.
 
 - If you don't specify **/d** in *string*, Cmd.exe looks for the following registry subkeys:
 
@@ -112,6 +111,7 @@ The following table lists valid hexadecimal digits that you can use as the value
     > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
     When you enable command extensions, the following commands are affected:
+
     - **assoc**
 
     - **call**
@@ -150,7 +150,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 - If you enable delayed environment variable expansion, you can use the exclamation point character to substitute the value of an environment variable at run time.
 
-- File and directory name completion is not enabled by default. You can enable or disable file name completion for a particular process of the **cmd** command with **/f:**{**on** | **off**}. You can enable or disable file and directory name completion for all processes of the **cmd** command on a computer or for a user logon session by setting the following **REG_DWORD** values:
+- File and directory name completion isn't enabled by default. You can enable or disable file name completion for a particular process of the **cmd** command with **/f:**{**on** | **off**}. You can enable or disable file and directory name completion for all processes of the **cmd** command on a computer or for a user logon session by setting the following **REG_DWORD** values:
 
     - **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD**
 
@@ -165,9 +165,9 @@ The following table lists valid hexadecimal digits that you can use as the value
     > [!CAUTION]
     > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
-- If you enable file and directory name completion by using **/f:on**, use **CTRL+D** for directory name completion and **CTRL+F** for file name completion. To disable a particular completion character in the registry, use the value for white space [**0×20**] because it is not a valid control character.
+- If you enable file and directory name completion by using **/f:on**, use **CTRL+D** for directory name completion and **CTRL+F** for file name completion. To disable a particular completion character in the registry, use the value for white space [**0×20**] because it isn't a valid control character.
 
-  - Pressing **CTRL+D** or **CTRL+F**, processes the file and directory name completion. These key combination functions append a wildcard character to *string* (if one is not present), builds a list of paths that match, and then displays the first matching path.<p>If none of the paths match, the file and directory name completion function beeps and does not change the display. To move through the list of matching paths, press **CTRL+D** or **CTRL+F** repeatedly. To move through the list backwards, press the **SHIFT** key and **CTRL+D** or **CTRL+F** simultaneously. To discard the saved list of matching paths and generate a new list, edit *string* and press **CTRL+D** or **CTRL+F**. If you switch between **CTRL+D** and **CTRL+F**, the saved list of matching paths is discarded, and a new list is generated. The only difference between the key combinations **CTRL+D** and **CTRL+F** is that **CTRL+D** only matches directory names and **CTRL+F** matches both file and directory names. If you use file and directory name completion on any of the built-in directory commands (that is, **CD**, **MD**, or **RD**), directory completion is assumed.
+  - Pressing **CTRL+D** or **CTRL+F**, processes the file and directory name completion. These key combination functions append a wildcard character to *string* (if one isn't present), builds a list of paths that match, and then displays the first matching path.<p>If none of the paths match, the file and directory name completion function beeps and doesn't change the display. To move through the list of matching paths, press **CTRL+D** or **CTRL+F** repeatedly. To move through the list backwards, press the **SHIFT** key and **CTRL+D** or **CTRL+F** simultaneously. To discard the saved list of matching paths and generate a new list, edit *string* and press **CTRL+D** or **CTRL+F**. If you switch between **CTRL+D** and **CTRL+F**, the saved list of matching paths is discarded, and a new list is generated. The only difference between the key combinations **CTRL+D** and **CTRL+F** is that **CTRL+D** only matches directory names and **CTRL+F** matches both file and directory names. If you use file and directory name completion on any of the built-in directory commands (that is, **CD**, **MD**, or **RD**), directory completion is assumed.
 
   - File and directory name completion correctly processes file names that contain white space or special characters if you place quotation marks around the matching path.
 
