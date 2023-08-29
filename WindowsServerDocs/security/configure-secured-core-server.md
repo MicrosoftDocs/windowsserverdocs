@@ -76,7 +76,7 @@ Here's how to enable Secured-core server using Windows Admin Center.
 
 Once your server has restarted, your server is enabled for Secured-core server.
 
-#### [Group Policy](#tab/powershell)
+#### [Group Policy](#tab/group-policy)
 
 Here's how to enable Secured-core server for domain members using Group Policy.
 
