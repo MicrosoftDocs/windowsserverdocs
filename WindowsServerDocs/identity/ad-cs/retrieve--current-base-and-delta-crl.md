@@ -3,16 +3,20 @@ title: Retrieve the current base and delta CRLs in Certification Authority Web E
 description: Learn how to retrieve the current base and delta CRLs in CA Web Enrollment role service
 author: gswashington
 ms.author: wscontent
-ms.topic: overview
+ms.topic: quickstart
 ms.date: 09/09/2023
-
 ---
 
 # Retrieve the current base and delta CRLs in Certification Authority Web Enrollment role service
 
 >Applies To: Windows Server 2012 R2, Windows Server 2012
 
-This article shows you how to retrive current base and delta CRLs in Certification Authority (CA) Web Enrollment role service. The CA Web Enrollment role service provides a set of web pages that allow interaction with the Certification Authority role service. See [Certification Authority Web Enrollment Guidance](/certification-authority-role.md) for more information about the CA Web Enrollment role service.
+This article shows you how to retrive current base and delta certificate revocation lists (CRLs) in Certification Authority (CA) Web Enrollment role service. The CA Web Enrollment role service provides a set of web pages that allow interaction with the Certification Authority role service. See [Certification Authority Web Enrollment Guidance](/certification-authority-role.md) for more information about the CA Web Enrollment role service.
+
+## Prerequisites
+
+- Computer with Certificate Enrollment Web Service is installed that is a member of the domain and running Windows Server 2008 R2 or Windows Server 2012.
+- Client computers must be running at least Windows 7 or Windows Server 2008 R2.
 
 ## To retrieve a certificate revocation list by using Internet Explorer
 
@@ -47,9 +51,7 @@ This article shows you how to retrive current base and delta CRLs in Certificati
 
 ## Next steps
 
-For more information about Web Enrollment and troubleshooting common issues, see the following articles:
-
-- [You cannot download CA certificate from web enrollment pages](https://social.technet.microsoft.com/wiki/contents/articles/you-cannot-download-ca-certificate-from-web-enrollment-pages.aspx)
+- [Certification Authority Web Enrollment Guidance](/certification-authority-role.md)
 
 - [AD CS: Web Enrollment](https://technet.microsoft.com/library/cc732517.aspx)
 
