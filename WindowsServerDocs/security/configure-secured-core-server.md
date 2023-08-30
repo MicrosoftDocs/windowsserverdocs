@@ -179,7 +179,7 @@ In the output, confirm the Device Guard settings are applied under the Administr
                 Folder Id: SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\ConfigureSystemGuardLaunch
                 Value:       1, 0, 0, 0
                 State:       Enabled
-``````
+```
 
 To verify your Secured-core server is configured follow the steps.
 
