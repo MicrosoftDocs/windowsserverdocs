@@ -137,6 +137,27 @@ Here's how to verify your Secured-core server is configured using Windows Admin 
 
    :::image type="content" source="media/Secured-core/windows-admin-center-server.png" alt-text="Screenshot showing the Windows Admin Center security extension in a browser window with Secured-core enabled." lightbox="media/Secured-core/windows-admin-center-server.png":::
 
+#### [Group Policy](#tab/group-policy)
+
+To verify Group Policy has applied to your server, run the following command from an elevated command prompt.
+
+```cli
+gpresult /SCOPE COMPUTER /R /V
+```
+
+In the output, confirm the Device Guard settings are applied under the Administrative Templates section.
+
+To verify your Secured-core server is configured follow the steps.
+
+1. From the Windows desktop, open the **Start** menu, type `msinfo32.exe` to open System
+   Information. From the System Summary page, confirm:
+    1. **Secure Boot State** and **Kernel DMA Protection** is On.
+    1. **Virtualization-based security** is Running.
+    1. **Virtualization-based security Services** Running shows **Hypervisor enforced Code
+       Integrity** and **Secure Launch**.
+
+       :::image type="content" source="media/Secured-core/secured-core-msinfo32.png" alt-text="Screenshot showing the System Information application window with Secured-core enabled." lightbox="media/Secured-core/secured-core-msinfo32.png":::
+
 ---
 
 ## Next steps
