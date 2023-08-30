@@ -10,9 +10,7 @@ ms.date: 08/31/2023
 
 # Certification Authority Web Enrollment guidance
 
->Applies To: Windows Server 2012 R2, Windows Server 2012
-
-The Certification Authority (CA) Web Enrollment role service provides a set of web pages that allow interaction with the Certification Authority role service. These web pages are located at https://\<servername\>/certsrv, where \<servername\> is the name of the server that hosts the hosts the CA Web Enrollment pages. The certsrv portion of the URL should always be in lowercase letters; otherwise, users can have trouble checking and retrieving pending certificates.
+The Certification Authority (CA) Web Enrollment role service provides a set of web pages that allow interaction with the Certification Authority role service. These web pages are located at `https://<servername>/certsrv`, where \<servername\> is the name of the server that hosts the hosts the CA Web Enrollment pages. The certsrv portion of the URL should always be in lowercase letters; otherwise, users can have trouble checking and retrieving pending certificates.
 
 > [!NOTE]
 > The CA Web Enrollment role service pages require that you secure them with secure sockets layer (SSL) or transport layer security (TLS). If you don't, you'll see the following error message: "In order to complete the certificate enrollment, the website for the CA must be configured to use HTTPS authentication." To resolve this issue, you must configure HTTPS authentication. For more information, see [Active Directory Certificate Services (AD CS): Error: "In order to complete certificate enrollment, the website for the CA must be configured to use HTTPS authentication](https://social.technet.microsoft.com/wiki/contents/articles/12039.active-directory-certificate-services-ad-cs-error-in-order-to-complete-certificate-enrollment-the-web-site-for-the-ca-must-be-configured-to-use-https-authentication.aspx).
@@ -108,7 +106,7 @@ If you've been granted access permissions, you can perform the following tasks f
     > In general, you use a PKCS #10 file to submit a request for a new certificate and a PKCS #7 file to submit a request to renew an existing certificate. Submitting requests with files is useful when the certificate requester is unable to submit a request online to the certification authority.
 
     > [!NOTE]
-    > You might need to make https://<servername> a trusted site for Internet Explorer to browse for a file on the computer's hard disk drive. To make https://servername a trusted site, open Microsoft Edge, then go to **Tools** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**, then enter the URL and select **OK**. Replace <servername> in the example URL with the host name of the server you want to connect to. If you typically use the fully qualified domain name (FQDN) to connect to the server, either create your entry using the FQDN instead of the host name or enter the FQDN and the host name together.
+    > You might need to make https://<servername> a trusted site for Internet Explorer to browse for a file on the computer's hard disk drive. To make https://servername a trusted site, open Internet Explorer, then go to **Tools** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**, then enter the URL and select **OK**. Replace <servername> in the example URL with the host name of the server you want to connect to. If you typically use the fully qualified domain name (FQDN) to connect to the server, either create your entry using the FQDN instead of the host name or enter the FQDN and the host name together.
 
  - If you submit the request and you immediately get a message that asks if you want to submit the request even though it doesn't contain a BEGIN or END tag, select **OK**.
 
