@@ -50,7 +50,11 @@ Use Windows LAPS to regularly rotate and manage local administrator account pass
 
 The following videos offer an informative way to learn more about the Windows LAPS feature.
 
+Windows Technical Takeoff presentation (November 2022):
+
 >[!Video https://www.youtube.com/embed/jdEDIXm4JgU]
+
+Windows Tackling Tech discussion (August 2023):
 
 >[!Video https://www.youtube.com/embed/bcs1gPB4dOQ]
 
