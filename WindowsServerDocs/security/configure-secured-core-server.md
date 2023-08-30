@@ -145,7 +145,41 @@ To verify Group Policy has applied to your server, run the following command fro
 gpresult /SCOPE COMPUTER /R /V
 ```
 
-In the output, confirm the Device Guard settings are applied under the Administrative Templates section.
+In the output, confirm the Device Guard settings are applied under the Administrative Templates section. The follow example shows the settings applied to a server.
+
+```cli
+        Administrative Templates
+        ------------------------
+            GPO: Local Group Policy
+                Folder Id: SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\LsaCfgFlags
+                Value:       3, 0, 0, 0
+                State:       Enabled
+
+            GPO: Local Group Policy
+                Folder Id: SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\RequirePlatformSecurityFeatures
+                Value:       3, 0, 0, 0
+                State:       Enabled
+
+            GPO: Local Group Policy
+                Folder Id: SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\EnableVirtualizationBasedSecurity
+                Value:       1, 0, 0, 0
+                State:       Enabled
+
+            GPO: Local Group Policy
+                Folder Id: SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\HypervisorEnforcedCodeIntegrity
+                Value:       2, 0, 0, 0
+                State:       Enabled
+
+            GPO: Local Group Policy
+                Folder Id: SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\HVCIMATRequired
+                Value:       0, 0, 0, 0
+                State:       Enabled
+
+            GPO: Local Group Policy
+                Folder Id: SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\ConfigureSystemGuardLaunch
+                Value:       1, 0, 0, 0
+                State:       Enabled
+``````
 
 To verify your Secured-core server is configured follow the steps.
 
