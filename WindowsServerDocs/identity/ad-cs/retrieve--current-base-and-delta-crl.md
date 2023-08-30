@@ -9,14 +9,12 @@ ms.date: 09/09/2023
 
 # Retrieve the current base and delta CRLs in Certification Authority Web Enrollment role service
 
->Applies To: Windows Server 2012 R2, Windows Server 2012
-
 This article shows you how to retrive current base and delta certificate revocation lists (CRLs) in Certification Authority (CA) Web Enrollment role service. The CA Web Enrollment role service provides a set of web pages that allow interaction with the Certification Authority role service. See [Certification Authority Web Enrollment Guidance](/certification-authority-role.md) for more information about the CA Web Enrollment role service.
 
 ## Prerequisites
 
-- Computer with Certificate Enrollment Web Service is installed that is a member of the domain and running Windows Server 2008 R2 or Windows Server 2012.
-- Client computers must be running at least Windows 7 or Windows Server 2008 R2.
+- Computer with Certificate Enrollment Web Service is installed that is a member of the domain and running Windows Server.
+- Client computers must be running Windows or Windows Server.
 
 ## To retrieve a certificate revocation list by using Internet Explorer
 
@@ -55,10 +53,6 @@ This article shows you how to retrive current base and delta certificate revocat
 
 - [AD CS: Web Enrollment](https://technet.microsoft.com/library/cc732517.aspx)
 
-- [Windows Server Security Forum](https://aka.ms/adcsforum)
-
 - [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
 
 - [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
-
-- [Windows PKI Blog](https://blogs.technet.com/b/pki/)
