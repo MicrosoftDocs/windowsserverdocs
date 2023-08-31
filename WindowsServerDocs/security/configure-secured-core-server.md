@@ -138,7 +138,7 @@ To verify Group Policy has applied to your server, run the following command fro
 gpresult /SCOPE COMPUTER /R /V
 ```
 
-In the output, confirm the Device Guard settings are applied under the Administrative Templates section. The follow example shows the settings applied to a server.
+In the output, confirm the Device Guard settings are applied under the Administrative Templates section. The following example shows the output when the settings are applied.
 
 ```cli
         Administrative Templates
@@ -174,7 +174,7 @@ In the output, confirm the Device Guard settings are applied under the Administr
                 State:       Enabled
 ```
 
-To verify your Secured-core server is configured follow the steps.
+Verify your Secured-core server is configured by following the steps.
 
 1. From the Windows desktop, open the **Start** menu, type `msinfo32.exe` to open System
    Information. From the System Summary page, confirm:
