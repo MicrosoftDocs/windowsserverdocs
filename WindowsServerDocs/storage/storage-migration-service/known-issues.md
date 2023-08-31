@@ -52,9 +52,9 @@ To work around this issue for evaluation, install a retail, MSDN, OEM, or Volume
 
 We've fixed this issue in a later release of Windows Server.
 
-## Storage Migration Service times out downloading the transfer error CSV
+## Storage Migration Service times out downloading the transfer or errors CSV
 
-When using Windows Admin Center or PowerShell to download the transfer operations detailed errors-only CSV log, you receive error:
+When using Windows Admin Center or PowerShell to download the transfer operations detailed CSV log, you receive error:
 
 ```
 Transfer Log - Please check file sharing is allowed in your firewall. : This request operation sent to net.tcp://localhost:28940/sms/service/1/transfer did not receive a reply within the configured timeout (00:01:00). The time allotted to this operation may have been a portion of a longer timeout. This may be because the service is still processing the operation or because the service was unable to send a reply message. Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
@@ -64,13 +64,13 @@ This issue is caused by an extremely large number of transferred files that can'
 
 To work around this issue:
 
-1. On the orchestrator computer, edit the *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* file using Notepad.exe to change the "sendTimeout" from its 1 minute default to 10 minutes
+1. On the orchestrator computer, edit the *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* file using Notepad.exe to change the "sendTimeout" from its 1 minute default to 10 hours.
 
     ```
     <bindings>
       <netTcpBinding>
         <binding name="NetTcpBindingSms"
-                 sendTimeout="00:10:00"
+                 sendTimeout="10:00:00"
     ```
 
 2. Restart the "Storage Migration Service" service on the orchestrator computer.
@@ -89,13 +89,18 @@ To work around this issue:
 
 8. In the Base data box, click "Decimal"
 
-9. In the Value data box, type "10", and then click OK.
+9. In the Value data box, type "600", and then click OK.
 
 10. Exit Registry Editor.
 
 11. Attempt to download the errors-only CSV file again.
 
-You may need to increase this timeout to more than 10 minutes if you are migrating an extremely large number of files. 
+If still seeing issues while using WAC, instead use PowerShell. Run one of the following commands on the Orchestrator computer, setting your own job name and source server FQDN values:
+
+   ```PowerShell
+   Get-SmsState -Name job -TransferFileDetail -computername sourcefqdn | export-csv -path log.csv
+   Get-SmsState -Name job -TransferFileDetail -ErrorsOnly -computername sourcefqdn | export-csv -path errlog.csv
+   ```
 
 ## Validation warnings for destination proxy and credential administrative privileges
 
