@@ -9,18 +9,16 @@ ms.date: 09/09/2023
 
 # Request a certificate using the Certification Authority Web Enrollment Role Service in Windows Server
 
-Applies To: Windows Server 2012 R2, Windows Server 2012
-
 This article shows you how to request a certificate using the Certification Authority (CA) Web Enrollment Role Service in Windows Server. The CA Web Enrollment role service provides a set of web pages that allow interaction with the Certification Authority role service. See [Certification Authority Web Enrollment Guidance](/certification-authority-role.md) for more information about the CA Web Enrollment role service.
 
 ## Prerequisites
 
-- Computer with Certificate Enrollment Web Service is installed that is a member of the domain and running Windows Server 2008 R2 or Windows Server 2012.
-- Client computers must be running at least Windows 7 or Windows Server 2008 R2.
+- Computer with Certificate Enrollment Web Service is installed that is a member of the domain and running Windows Server.
+- Client computers must be running Windows or Windows Server.
 
 ## Request a basic certificate using Internet Explorer
 
-1. In Internet Explorer, connect to https://\<servername\>/certsrv, where \<servername\> is the host name of the computer running the CA Web Enrollment role service.
+1. In Internet Explorer, connect to `https://<servername>/certsrv`, where `<servername>` is the host name of the computer running the CA Web Enrollment role service.
 
 1. Select **Request a certificate**.
 
@@ -46,7 +44,7 @@ This article shows you how to request a certificate using the Certification Auth
 
 #### To use Internet Explorer to create an advanced certificate request
 
-1. In Internet Explorer, connect to https://\<servername\>/certsrv, where \<servername\> is the host name of the computer running the CA Web Enrollment role service.
+1. In Internet Explorer, connect to `https://<servername>/certsrv`, where `<servername>` is the host name of the computer running the CA Web Enrollment role service.
 
 1. Select **Request a certificate**.
 
@@ -68,7 +66,7 @@ This article shows you how to request a certificate using the Certification Auth
 
 #### To check a pending certificate request using Internet Explorer
 
-1. In Internet Explorer, open https://\<servername\>/certsrv, where \<servername\> is the hostname of the computer running the CA Web Enrollment role service.
+1. In Internet Explorer, open `https://<servername>/certsrv`, where `<servername>` is the hostname of the computer running the CA Web Enrollment role service.
 
 1. Select **View the status of a pending certificate request**.
 
@@ -88,10 +86,6 @@ This article shows you how to request a certificate using the Certification Auth
 
 - [AD CS: Web Enrollment](https://technet.microsoft.com/library/cc732517.aspx)
 
-- [Windows Server Security Forum](https://aka.ms/adcsforum)
-
 - [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
 
 - [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
-
-- [Windows PKI Blog](https://blogs.technet.com/b/pki/)
