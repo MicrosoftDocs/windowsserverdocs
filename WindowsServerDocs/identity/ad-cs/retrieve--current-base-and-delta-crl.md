@@ -18,7 +18,7 @@ This article shows you how to retrive current base and delta certificate revocat
 
 ## To retrieve a certificate revocation list by using Internet Explorer
 
-1. In Internet Explorer, connect to https://\<servername\>/certsrv, where \<servername\> is the name of the computer running the CA Web Enrollment role service.
+1. In Internet Explorer, connect to `https://<servername>/certsrv`, where `<servername>` is the name of the computer running the CA Web Enrollment role service.
 
 1. Click **Download a CA certificate, certificate chain, or CRL**.
 
@@ -34,18 +34,16 @@ This article shows you how to retrive current base and delta certificate revocat
 
       - Click **Download latest delta CRL**.
 
-
         > [!NOTE]
-        > <BR>The latest base CRL must already be installed for the delta CRL to function.
+        > The latest base CRL must already be installed for the delta CRL to function.
 
+1. When the **File Download** dialog box appears, click **Save**. Select a folder on your computer to store the .crl file, and then click **Save**.
 
-1.  When the **File Download** dialog box appears, click **Save**. Select a folder on your computer to store the .crl file, and then click **Save**.
+1. Open Windows Explorer and locate the .crl file you just saved.
 
-1.  Open Windows Explorer and locate the .crl file you just saved.
+1. Right-click the .cer or .crl file and click **Install Certificate** or **Install CRL**, and then click **Next**.
 
-1.  Right-click the .cer or .crl file and click **Install Certificate** or **Install CRL**, and then click **Next**.
-
-1.  When the Certificate Import Wizard opens, click **Automatically select the certificate store based on the type of certificate**.
+1. When the Certificate Import Wizard opens, click **Automatically select the certificate store based on the type of certificate**.
 
 ## Next steps
 
