@@ -125,7 +125,7 @@ sections:
           Windows LAPS passwords are always protected in transit (https) when sent from the managed device to the
           cloud. Windows LAPS passwords that are stored in the cloud are always encrypted with AES256. The keys are
           available only to internally authorized Azure AD services, which have a technical need to actually handle
-          the clear-text passwords, for example during storage or query operations). This encryption layer is specific
+          the clear-text passwords, for example during storage or query operations. This encryption layer is specific
           to Windows LAPS passwords, and is always enabled in addition to the default Azure AD data protection 
           mechanisms - see [Azure Active Directory Data Security Considerations](https://azure.microsoft.com/resources/azure-active-directory-data-security-considerations).
 
