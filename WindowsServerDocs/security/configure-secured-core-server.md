@@ -81,18 +81,12 @@ Once your server has restarted, your server is enabled for Secured-core server.
 Here's how to enable Secured-core server for domain members using Group Policy.
 
 1. Open the **Group Policy Management Console**, create or edit a policy applied to your server.
-
 1. In the console tree, select **Computer Configuration > Administrative Templates > System >
     Device Guard**.
-
 1. For the setting, right-click **Turn On Virtualization Based Security** and select **Edit**.
-
 1. Select **Enabled**, from the drop down menus select the following:
-
    1. Select **Secure Boot and DMA Protection** for the Platform Security Level.
-
    1. Select either **Enabled without lock** or  **Enabled with UEFI lock** for Virtualization Based Protect of Code Integrity.
-
    1. Select **Enabled** for the Secure Launch Configuration.
 
    > [!CAUTION]
@@ -102,7 +96,6 @@ Here's how to enable Secured-core server for domain members using Group Policy.
    > in order to clear configuration persisted in UEFI.
 
 1. Select **OK** to complete the configuration.
-
 1. Restart your server to apply the Group Policy.
 
 Once your server has restarted, your server is enabled for Secured-core server.
