@@ -54,7 +54,7 @@ You can install CA Web Enrollment on a server that isn't a CA to separate web tr
 If you install the CA Web Enrollment pages on a computer that's not the target CA, the computer account where you installed the CA Web Enrollment pages must be trusted for delegation. For more information, see the following resources:
 
 - [Install Web Enrollment Support on Another Computer (Optional)](/previous-versions/windows/it-pro/windows-2000-server/cc962056(v=technet.10))
-- [How to configure the Windows Server 2008 CA Web Enrollment Proxy](archive/blogs/askds/how-to-configure-the-windows-server-2008-ca-web-enrollment-proxy)
+- [How to configure the Windows Server 2008 CA Web Enrollment Proxy](/archive/blogs/askds/how-to-configure-the-windows-server-2008-ca-web-enrollment-proxy)
 
 > [!TIP]
 > If the CA Web Enrollment pages don't install successfully on a migrated CA, it's possible the setup status in the registry isn't configured properly. For more information, see [Certification Authority Web Enrollment Configuration Failed 0x80070057 (WIN32: 87)](https://social.technet.microsoft.com/wiki/contents/articles/12035.certification-authority-web-enrollment-configuration-failed-0x80070057-win32-87-en-us.aspx)
