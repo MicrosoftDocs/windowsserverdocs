@@ -4,8 +4,9 @@ description:  This document describes how to troubleshoot various aspects of AD 
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 08/15/2023
 ms.topic: article
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # AD FS Troubleshooting - Azure AD

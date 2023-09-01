@@ -5,8 +5,9 @@ title: Configure AD FS support for user certificate authentication
 author: jenfieldmsft
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 08/15/2023
 ms.topic: article
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # Configure AD FS support for user certificate authentication
