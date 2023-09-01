@@ -104,7 +104,7 @@ Once your server has restarted, your server is enabled for Secured-core server.
 
 ## Verify Secured-core server configuration
 
-Now you've configured Secured-core server, select the relevant method to verify your configuration.
+Now that you've configured Secured-core server, select the relevant method to verify your configuration.
 
 #### [GUI](#tab/gui)
 
@@ -189,7 +189,7 @@ Verify your Secured-core server is configured by following the steps.
 
 ## Next steps
 
-Now you've configured Secured-core server, here are some resources to learn more about:
+Now that you've configured Secured-core server, here are some resources to learn more about:
 
 - [Virtualization-based Security (VBS)](/windows-hardware/design/device-experiences/oem-vbs)
 - [Memory integrity and VBS enablement](/windows-hardware/design/device-experiences/oem-hvci-enablement)
