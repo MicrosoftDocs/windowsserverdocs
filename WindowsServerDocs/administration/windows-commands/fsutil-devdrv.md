@@ -1,5 +1,5 @@
 ---
-title: fsutil volume
+title: fsutil devdrv
 description: Reference article for the fsutil devdrv command, which groups lots of dev drive related functionalites.
 manager: nealch
 ms.author: chandkv
@@ -168,4 +168,4 @@ fsutil devdrv clearFiltersAllowed /f D:
 ## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [fsutil](fsutil.md)
-- [Dev Drive](https://learn.microsoft.com/en-us/windows/dev-drive/)
+- [Dev Drive](https://learn.microsoft.com/windows/dev-drive/)
