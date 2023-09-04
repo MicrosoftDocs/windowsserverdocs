@@ -986,6 +986,8 @@
       items:
       - name: What is the Certification Authority Role Service?
         href: ad-cs/certification-authority-role.md
+      - name: Certification Authority Web Enrollment Role Service
+        href: ad-cs/certificate-authority-web-enrollment.md
       - name: PKI design considerations
         href: ad-cs/pki-design-considerations.md
       - name: Network Device Enrollment Service
@@ -998,6 +1000,8 @@
         href: ad-cs/create-domain-user-account-ndes-service-account.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
+      - name: Retrieve base and delta CRLs
+        href: ad-cs/retrieve-base-and-delta-crl.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies

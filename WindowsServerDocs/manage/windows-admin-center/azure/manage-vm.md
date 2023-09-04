@@ -75,6 +75,7 @@ To use Windows Admin Center in the Azure portal, we install Windows Admin Center
 The VM also has the following networking requirements, which we step through during the installation procedure:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the `WindowsAdminCenter` and `AzureActiveDirectory` service tag
+- Outbound internet access to `pkgs.dev.azure.com`, if you are using a proxy
 
 - An inbound port rule if using a public IP address to connect to the VM (not recommended)
 
