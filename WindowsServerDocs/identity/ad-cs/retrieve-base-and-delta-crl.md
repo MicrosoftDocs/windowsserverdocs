@@ -49,7 +49,7 @@ Before you can you base and delta CRLs, your computer must meet the following re
 
 ## Next steps
 
-- [Certification Authority Web Enrollment Guidance](/ertification-authority-role.md)
+- [Certification Authority Web Enrollment Guidance](certification-authority-role.md)
 
 - [AD CS: Web Enrollment](https://technet.microsoft.com/library/cc732517.aspx)
 
