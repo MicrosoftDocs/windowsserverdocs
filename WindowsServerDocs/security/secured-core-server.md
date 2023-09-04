@@ -149,6 +149,7 @@ vectors.
 
 Now you understand what Secured-core server is, here are some resources to get you started. Learn about how:
 
+- [Configure Secured-core server](configure-secured-core-server.md).
 - [Microsoft brings advanced hardware security to Server and Edge with Secured-core](https://www.microsoft.com/security/blog/2021/03/02/microsoft-brings-advanced-hardware-security-to-server-and-edge-with-secured-core/) in the Microsoft Security Blog.
 - [New Secured-core servers are now available from the Microsoft ecosystem to help secure your infrastructure](https://www.microsoft.com/security/blog/2021/12/07/new-secured-core-servers-are-now-available-from-the-microsoft-ecosystem-to-help-secure-your-infrastructure/) in the Microsoft Security Blog.
 - Building Windows-compatible devices, systems, and filter drivers across all Windows Platforms in
