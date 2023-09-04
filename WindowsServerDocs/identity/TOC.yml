@@ -1000,6 +1000,10 @@
         href: ad-cs/create-domain-user-account-ndes-service-account.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
+      - name: Request certificates using Web Enrollment
+        href: ad-cs/request-certificate-windows-server.md
+      - name: Retrieve base and delta CRLs
+        href: ad-cs/retrieve-base-and-delta-crl.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
