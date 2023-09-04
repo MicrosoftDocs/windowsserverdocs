@@ -1,6 +1,6 @@
 ---
-title: Submit certificate requests using a PKCS \#10 or a PKCS \#7 file in AD CS
-description: Learn how to submit a certificate in CA Web Enrollment role service by using a PKCS \#10 file or a PKCS \#7 file using Certification Authority Web Enrollment role service in Windows Server
+title: Submit certificate requests using a PKCS #10 or PKCS #7 file in AD CS
+description: Learn how to submit a certificate in CA Web Enrollment role service by using a PKCS #10 file or a PKCS #7 file using Certification Authority Web Enrollment role service in Windows Server
 author: gswashington
 ms.author: wscontent
 ms.topic: how-to
@@ -43,7 +43,7 @@ Before you can submit a request, you must meet the following requirements:
 
 If you see the **Certificate Pending** web page, you can check the status of your request in the following section.
 
-### Check a pending certificate request
+## Check pending certificate requests
 
 1. Using a web browser, open `https://<servername>/certsrv`, where `<servername>` is the hostname of the computer running the CA Web Enrollment role service.
 
