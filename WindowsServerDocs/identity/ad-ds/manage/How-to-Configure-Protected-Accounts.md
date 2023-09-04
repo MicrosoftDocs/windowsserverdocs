@@ -72,9 +72,6 @@ Protected accounts have the following deployment requirements:
 
 -   To provide domain controller-side restrictions for Protected Users, that is to restrict usage of NTLM authentication, and other restrictions, the domain functional level must be  Windows Server 2012 R2 . For more information about functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
 
-> [!NOTE]
-> The builtin domain Administrator (`S-1-5-<domain>-500`) is always exempt from Authentication Policies, even when they are assigned to an Authentication Policy Silo.
-
 ### <a name="BKMK_TrubleshootingEvents"></a>Troubleshoot events related to Protected Users
 This section covers new logs to help troubleshoot events that are related to Protected Users and how Protected Users can impact changes to troubleshoot either ticket-granting tickets (TGT) expiration or delegation issues.
 
@@ -174,6 +171,9 @@ You can restrict service ticket requests through a ticket-granting service (TGS)
 |Restrict user sign-on|-    Windows Server 2012 R2  domain functional level account domains with Dynamic Access Control support<br />-   Windows 8, Windows 8.1,  Windows Server 2012  or  Windows Server 2012 R2  devices with Dynamic Access Control support|
 |Restrict service ticket issuance that is based on user account and security groups| Windows Server 2012 R2  domain functional level resource domains|
 |Restrict service ticket issuance based on user claims or device account, security groups, or claims| Windows Server 2012 R2  domain functional level resource domains with Dynamic Access Control support|
+
+> [!NOTE]
+> The builtin domain Administrator (`S-1-5-<domain>-500`) is always exempt from Authentication Policies, even when they are assigned to an Authentication Policy Silo.
 
 ### Restrict a user account to specific devices and hosts
 A high-value account with administrative privilege should be a member of the **Protected Users** group. By default, no accounts are members of the **Protected Users** group. Before you add accounts to the group, configure domain controller support and create an audit policy to ensure that there are no blocking issues.
