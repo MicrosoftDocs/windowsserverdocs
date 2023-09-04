@@ -13,7 +13,7 @@ This article shows you how to retrieve the current base and delta certificate re
 
 ## Prerequisites
 
-Before you can you base and delta CRLs, your computer must meet the following requirements:
+Before you can retrieve base and delta CRLs, your computer must meet the following requirements:
 
 - Have a server that is a domain member with the Certificate Enrollment Web Service installed.
 - Client computers must be running Windows or Windows Server.
