@@ -2,9 +2,9 @@
 title: Request a certificate using the Certification Authority Web Enrollment Role Service in Windows Server
 description: Learn how to request a certificate using the Certification Authority Web Enrollment Role Service in Windows Server.
 author: gswashington
-ms.topic: quickstart
-ms.author: orthomas
-ms.date: 09/09/2023
+ms.topic: how-to
+ms.author: wscontent
+ms.date: 09/04/2023
 ---
 
 # Request a certificate using the Certification Authority Web Enrollment Role Service in Windows Server
