@@ -7,6 +7,7 @@ ms.author: billmath
 manager: amycolannino
 ms.date: 08/15/2023
 ms.topic: article
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # Configure AD FS support for user certificate authentication
