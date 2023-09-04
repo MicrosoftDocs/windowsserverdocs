@@ -14,7 +14,7 @@ This article shows you how to submit a certificate in Certification Authority (C
 
 ## Prerequisites
 
-Before you can submit a request, your computer must meet the following requirements:
+Before you can submit a request, you must meet the following requirements:
 
 - Have a server that is a domain member with the Certificate Enrollment Web Service installed.
 - Client computers must be running Windows or Windows Server.
