@@ -257,4 +257,4 @@ fsutil devdrv clearFiltersAllowed /f D:
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [fsutil](fsutil.md)
-- [Dev Drive](https://learn.microsoft.com/windows/dev-drive/)
+- [Dev Drive](/windows/dev-drive/)
