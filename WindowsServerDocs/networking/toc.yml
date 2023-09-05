@@ -484,8 +484,6 @@ items:
       href: technologies/pktmon/pktmon-sdn-data-path-wac-extension.md
     - name: Microsoft Network Monitor (Netmon) support
       href: technologies/pktmon/pktmon-netmon-support.md
-    - name: Wireshark (pcapng format) support
-      href: technologies/pktmon/pktmon-pcapng-support.md
   - name: Quality of Service (QoS) policy
     href: technologies/qos/qos-policy-top.md
     items:
