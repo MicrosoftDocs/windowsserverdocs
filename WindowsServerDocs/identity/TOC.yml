@@ -1002,6 +1002,8 @@
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
+      - name: "Submit certificate requests using a PKCS #10 or PKCS #7 file"
+        href: ad-cs/submit-pkcs-certificate-request.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
   - name: Administrative tools and logon types reference
