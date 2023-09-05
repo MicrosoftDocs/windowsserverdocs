@@ -574,6 +574,8 @@
         href: fsutil-8dot3name.md
       - name: fsutil behavior
         href: fsutil-behavior.md
+      - name: fsutil-devdrv
+        href: fsutil-devdrv.md
       - name: fsutil dirty
         href: fsutil-dirty.md
       - name: fsutil file
