@@ -63,7 +63,7 @@ If cutover is failing due to an environmental condition, you can manually comple
 
    a. For the steps stating "remove the lingering object name", this operation is using `NETDOM COMPUTERNAME /REMOVE` to remove any alternate names assigned to the source computer. Then the operation uses `NETDOM COMPUTERNAME /ADD` to add those old alternate names to your new destination server.
 
-   b. For the steps stating to disable or enable the local token filter policy, there's no need to change the policy state unless the policy was disabled during the failed automatic cutover. To revert the policy to be enabled, delete the settings at [How to disable UAC remote restrictions](https://learn.microsoft.com//troubleshoot/windows-server/windows-security/user-account-control-and-remote-restriction#how-to-disable-uac-remote-restrictions)
+   b. For the steps stating to disable or enable the local token filter policy, there's no need to change the policy state unless the policy was disabled during the failed automatic cutover. To revert the policy to be enabled, delete the settings at [How to disable UAC remote restrictions](/troubleshoot/windows-server/windows-security/user-account-control-and-remote-restriction#how-to-disable-uac-remote-restrictions)
 
 ## Detailed stages
 
