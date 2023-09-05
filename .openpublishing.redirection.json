@@ -11234,7 +11234,7 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/pktmon/pktmon-pcapng-support.md",
-      "redirect_url": "windows-server/administration/windows-commands/pktmon-etl2pcap",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
       "redirect_document_id": true
     }  
 
