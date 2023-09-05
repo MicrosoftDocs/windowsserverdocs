@@ -151,6 +151,7 @@ If you aren't sure where your feedback should go, submit it using any of the abo
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 - [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
+- [LAPS PowerShell module reference](/powershell/module/laps)
 
 ## Next steps
 
