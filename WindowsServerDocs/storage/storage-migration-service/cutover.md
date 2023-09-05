@@ -51,26 +51,26 @@ After cutover finishes, the destination computer has taken on the identity of th
 
 ## Manual cutover
 
-In the even that cutover is failing due to some environmental condition, such as networking, custom security settings, or a third party product interfering, you can manually complete the cutover.
+If cutover is failing due to an environmental condition, you can manually complete the cutover. For example, problems such as networking, custom security settings, or a third party product interaction, could all cause cutover to fail. Manually complete the cutover following these steps:
 
-1. Note the step where the cutover has failed or hung. The table below states where this specifically is in operations
-   
-2. On the SMS orchestrator, run the following Powershell command in an elevated console, where _<name>_ is the name of the migration job:
+1. Note the step where the cutover has failed or hung. The table in [Detailed stages](#detailed-stages) states where specifically the cutover is in its operations.
 
-`Stop-SmsTransfer -Name <string>`
+1. On the SMS orchestrator, run the following PowerShell command in an elevated console, where `<name>` is the name of the migration job:
 
-3. Manually follow the remaining steps in the Summary section above.
+   `Stop-SmsTransfer -Name <string>`
 
-   a. For the steps stating "remove the lingering object name" this specifically means using NETDOM COMPUTERNAME /REMOVE to remove any alternate names assigned to the source computer. Then use NETDOM COMPUTERNAME /ADD to add those old alternate names to your new destination server.
+1. Manually follow the remaining steps in the previous [Summary](#summary) section.
 
-   b. For the steps stating to disable or enable the local token filter policy, there is no need to change these unless the policy was disabled during the failed atuomatic cutover. To set the policy back to enabled, delete the settings at [How to disable UAC remote restrictions](https://learn.microsoft.com//troubleshoot/windows-server/windows-security/user-account-control-and-remote-restriction#how-to-disable-uac-remote-restrictions)
+   a. For the steps stating "remove the lingering object name", this operation is using `NETDOM COMPUTERNAME /REMOVE` to remove any alternate names assigned to the source computer. Then the operation uses `NETDOM COMPUTERNAME /ADD` to add those old alternate names to your new destination server.
+
+   b. For the steps stating to disable or enable the local token filter policy, there's no need to change the policy state unless the policy was disabled during the failed automatic cutover. To revert the policy to be enabled, delete the settings at [How to disable UAC remote restrictions](https://learn.microsoft.com//troubleshoot/windows-server/windows-security/user-account-control-and-remote-restriction#how-to-disable-uac-remote-restrictions)
 
 ## Detailed stages
 
 ![Cutover Stage Description Screenshot](media/cutover/cutover_stage_description.png)
 __Figure 2: Storage Migration Service showing a cutover stage description__
 
-You can keep track of cutover progress through descriptions of each stage that appear as shown in the figure above. The following table shows each possible stage along with its progress, description, and any clarifying notes.
+You can keep track of cutover progress through descriptions of each stage that appear as shown in figure 2. The following table shows each possible stage along with its progress, description, and any clarifying notes.
 
 |  Progress | Description                                                                                               |  Notes |
 |:-----|:--------------------------------------------------------------------------------------------------------------------|:---|
