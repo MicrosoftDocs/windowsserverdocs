@@ -61,7 +61,7 @@ If you see the **Certificate Pending** web page, you can check the status of you
 
 ## Next steps
 
-- [Certification Authority Web Enrollment Guidance](/certification-authority-role.md)
+- [Certification Authority Web Enrollment Guidance](certification-authority-role.md)
 
 - [AD CS: Web Enrollment](https://technet.microsoft.com/library/cc732517.aspx)
 
