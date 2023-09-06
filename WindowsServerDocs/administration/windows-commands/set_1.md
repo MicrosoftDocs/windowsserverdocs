@@ -4,7 +4,7 @@ description: Reference article for set, which displays, sets, or removes cmd.exe
 ms.topic: reference
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
 ms.author: wscontent
-author: JasonGerend
+author: xelu86
 ms.date: 09/06/2023
 ---
 
@@ -115,6 +115,12 @@ To display a list of all of the environment variables that begin with the letter
 
 ```
 set p
+```
+
+To display a list of all of the environment variables on the current device, type:
+
+```
+set
 ```
 
 ## Related links
