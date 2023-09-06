@@ -93,7 +93,7 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
   HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\Smb2CreditsMax
   ```
 
-  The defaults are 512 and 8192, respectively. These parameters allow the server to throttle client operation concurrency dynamically within the specified boundaries. Some clients might achieve increased throughput with higher concurrency limits, for example, copying files over high-bandwidth, high-latency links.
+  The defaults are 512 and 8192 for Windows Server, respectively. These parameters allow the server to throttle client operation concurrency dynamically within the specified boundaries. Some clients might achieve increased throughput with higher concurrency limits, for example, copying files over high-bandwidth, high-latency links. These default values apply to Windows Server, not Windows.
 
   > [!TIP]
   > Prior to Windows 10 and Windows Server 2016, the number of credits granted to the client varied dynamically between Smb2CreditsMin and Smb2CreditsMax based on an algorithm that attempted to determine the optimal number of credits to grant based on network latency and credit usage. In Windows 10 and Windows Server 2016, the SMB server was changed to unconditionally grant credits upon request up to the configured maximum number of credits. As part of this change, the credit throttling mechanism, which reduces the size of each connection's credit window when the server is under memory pressure, was removed. The kernel's low memory event that triggered throttling is only signaled when the server is so low on memory (< a few MB) as to be useless. Since the server no longer shrinks credit windows the Smb2CreditsMin setting is no longer necessary and is now ignored.
@@ -108,22 +108,25 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
 
     The default is 0, which means that no additional critical kernel worker threads are added. This value affects the number of threads that the file system cache uses for read-ahead and write-behind requests. Raising this value can allow for more queued I/O in the storage subsystem, and it can improve I/O performance, particularly on systems with many logical processors and powerful storage hardware.
 
+>[!Note]
+  >This setting mainly applies to Windows 7/Windows Server 2008 R2 and older operating systems. In later operating systems. While Cache Manager still indirectly consumes this value, Cache Manager does not create dedicated worker threads in later operating systems; rather, this value indirectly influences how many work-items of each type (generic workers, lazy writers, etc.) Cache Manager will allocate for later submission to the kernel thread pool. 
+
     >[!TIP]
     > The value may need to be increased if the amount of cache manager dirty data (performance counter Cache\\Dirty Pages) is growing to consume a large portion (over ~25%) of memory or if the system is doing lots of synchronous read I/Os.
 
-- **MaxThreadsPerQueue**
+- **MaxThreadsPerNumaNode**
 
   ```
-  HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\MaxThreadsPerQueue
+  HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\MaxThreadsPerNumaNode
   ```
 
-  The default is 20. Increasing this value raises the number of threads that the file server can use to service concurrent requests. When a large number of active connections need to be serviced, and hardware resources, such as storage bandwidth, are sufficient, increasing the value can improve server scalability, performance, and response times.
+  The default is 20. Increasing this value raises the number of threads that the file server can use to service concurrent requests. When a large number of active connections need to be serviced, increasing the value might improve performance when inefficient third party filter drivers are affecting IO. It is better to install updated third party filter drivers and print drivers that process IO more efficiently instead of altering this setting. 
 
   >[!TIP]
   > An indication that the value may need to be increased is if the SMB2 work queues are growing very large (performance counter ‘Server Work Queues\\Queue Length\\SMB2 NonBlocking \*'  is consistently above ~100).
 
   >[!Note]
-  >In Windows 10, Windows Server 2016, and Windows Server 2022, MaxThreadsPerQueue is unavailable. The number of threads for a thread pool will be "20 * the number of processors in a NUMA node".
+  >In SMB1 and in Windows Server 2012 and Windows Server 2008, MaxThreadsPerQueue was used to control this setting. SMB1 is deprecated and no longer installed, and this setting itself is now defunct.
 
 
 - **AsynchronousCredits**
@@ -132,7 +135,7 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
   HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters\AsynchronousCredits
   ```
 
-  The default is 512. This parameter limits the number of concurrent asynchronous SMB commands that are allowed on a single connection. Some cases (such as when there is a front-end server with a back-end IIS server) require a large amount of concurrency (for file change notification requests, in particular). The value of this entry can be increased to support these cases.
+  The default is 512. This parameter limits the number of concurrent asynchronous SMB commands that are allowed on a single connection. Some cases (such as when there is a front-end server with a back-end IIS server) require a large amount of concurrency (for file change notification requests, in particular). The value of this entry can be increased to support these cases. The default value is for Windows Server, not Windows.
   
 - **RemoteFileDirtyPageThreshold**
 
@@ -149,7 +152,6 @@ The following settings can optimize a computer for file server performance in ma
 | Parameter                       | Value | Default |
 |---------------------------------|-------|---------|
 | AdditionalCriticalWorkerThreads | 64    | 0       |
-| MaxThreadsPerQueue              | 64    | 20      |
 
 
 ### SMB client performance monitor counters
