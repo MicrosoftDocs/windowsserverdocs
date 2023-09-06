@@ -99,6 +99,10 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
   If you have a disk that contains files in subdirectories and you want to copy it to a disk that has a different format, use the `xcopy` command instead of **diskcopy**. Because the **diskcopy** command copies disks track by track, your source and destination disks must have the same format. The `xcopy` command does not have this requirement. Use `xcopy` unless you need a complete disk image copy.
 
+- Insufficient memory error
+
+  An "insufficient memory" error may occur if running `xcopy` to copy a file or folder whose filename path is greater than 255 characters.
+  
 - Exit codes for `xcopy`
 
   To process exit codes returned by `xcopy`, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Related links](#related-links). The following table lists each exit code and a description.
@@ -110,10 +114,6 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
   |2|The user pressed CTRL+C to terminate `xcopy`.|
   |4|Initialization error occurred. There is not enough memory or disk space, or you entered an invalid drive name or invalid syntax on the command line.|
   |5|Disk write error occurred.|
-
-- Insufficient memory error
-
-  An insufficient memory error occurs if you ask `xcopy` to copy a file or folder whose filename plus path has more than 255 characters in it.
 
 ## Examples
 
