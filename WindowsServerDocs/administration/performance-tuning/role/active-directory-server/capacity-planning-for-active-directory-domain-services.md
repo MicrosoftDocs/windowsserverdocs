@@ -1034,69 +1034,88 @@ Finally, the HBA you install in the server also limits how much I/O it can handl
 
 Caches are one of the components that can significantly impact overall performance anywhere in the storage system. However, a detailed analysis of caching algorithms is beyond the scope of this article. Instead, we'll give you a quick list of things you should know about caching on disk subsystems.
 
-<!--Where I left off.-->
-
-- Caching does improved sustained sequential write I/O as it can buffer many smaller write operations into larger I/O blocks and de-stage to storage in fewer, but larger block sizes. This will reduce total random I/O and total sequential I/O, thus providing more resource availability for other I/O.
-- Caching does not improve sustained write I/O throughput of the storage subsystem. It only allows for the writes to be buffered until the spindles are available to commit the data. When all the available I/O of the spindles in the storage subsystem is saturated for long periods, the cache will eventually fill up. In order to empty the cache, enough time between bursts, or extra spindles, need to be allotted in order to provide enough I/O to allow the cache to flush.
-
-  Larger caches only allow for more data to be buffered. This means longer periods of saturation can be accommodated.
-
-  In a normally operating storage subsystem, the operating system will experience improved write performance as the data only needs to be written to cache. Once the underlying media is saturated with I/O, the cache will fill and write performance will return to disk speed.
-
-- When caching read I/O, the scenario where the cache is most advantageous is when the data is stored sequentially on the disk, and the cache can read-ahead (it makes the assumption that the next sector contains the data that will be requested next).
-- When read I/O is random, caching at the drive controller is unlikely to provide any enhancement to the amount of data that can be read from the disk. Any enhancement is non-existent if the operating system or application-based cache size is greater than the hardware-based cache size.
-
-  In the case of Active Directory, the cache is only limited by the amount of RAM.
+- Caching improves sustained sequential write I/O because it buffers many smaller write operations into larger I/O blocks. It also destages operations to storage in a few big blocks instead of many tiny ones. This optimization reduces total random and sequential I/O operations, making more resources available for other I/O operations.
+- Caching doesn't improve sustained write I/O throughput on the storage subsystem because it only buffers writes until spindles are available to commit the data. When all available I/O from the spindles is saturated by data for long periods of time, then the cache eventually fills up. To empty the cache, you must provide enough I/O for the cache to clear itself by providing extra spindles or giving enough time between bursts for the system to catch up.
+- Larger caches allow for more data to buffer, which means the cache can handle longer periods of saturation.
+- In typical storage subsystems, the OS experiences improved write performance with caches, as the system only needs to write the data to the cache. However, once the underlying media is saturated with I/O operations, the cache fills up and write performance returns to regular disk speed.
+- When you cache read I/O, the cache is most useful when you store data sequentially on the desk and allow the cache to read ahead. Reading ahead is when the cache can immediately move to the next sector as if the next sector contains the data the system will request next.
+- When read I/O is random, caching at the drive controller doesn't increase how much data the disk can read. If the OS or application-based cache size is bigger than the hardware-based cache size, then any attempts to enhance the disk read speed don't change anything.
+- In Active Directory, the cache is only limited by the amount of RAM the system holds.
 
 ### SSD considerations
 
-SSDs are a completely different animal than spindle-based hard disks. Yet the two key criteria remain: “How many IOPS can it handle?” and “What is the latency for those IOPS?” In comparison to spindle-based hard disks, SSDs can handle higher volumes of I/O and can have lower latencies. In general and as of this writing, while SSDs are still expensive in a cost-per-Gigabyte comparison, they are very cheap in terms of cost-per-I/O and deserve significant consideration in terms of storage performance.
+Solid state drives (SSDs) are fundamentally different than spindle-based hard disks. SSDs can handle higher volumes of I/O with lower latency. While SSDs can be expensive on a cost-per-Gigabyte basis, they're very cheap in terms of cost-per-I/O. However, capacity planning with SSDs involves asking yourself the same questions that you would about spindles: how many IOPS can it handle and and what is the latency of those IOPS?
 
-Considerations:
+Here are some things you should consider when planning for SSDs:
 
-- Both IOPS and latencies are very subjective to the manufacturer designs and in some cases have been observed to be poorer performing than spindle based technologies. In short, it is more important to review and validate the manufacturer specs drive by drive and not assume any generalities.
-- IOPS types can have very different numbers depending on whether it is read or write. AD DS services, in general, being predominantly read-based, will be less affected than some other application scenarios.
-- “Write endurance” – this is the concept that SSD cells will eventually wear out. Various manufacturers deal with this challenge different fashions. At least for the database drive, the predominantly read I/O profile allows for downplaying the significance of this concern as the data is not highly volatile.
+- Both IOPS and latency are subject to manufacturer designs. In some cases, certain SSD designs can perform worse than spindle-based technologies. When trying to decide whether you should use SSD or spindles, you should review and validate manufacturer specs drive by drive instead of assuming all technologies work a certain way.
+- IOPS types can have different values depending on wether they're read or write. AD DS services are predominantly read-based, and therefore are less effected by which write technology you use compare dto other application scenarios.
+- Write endurance is the assumption that SSD cells have a limited lifespan and will eventually wear out after you use them a lot. For database drives, a predominantly read I/O profile extends the write endurance of cells to the point where you don't need to worry about write endurance that much.
 
 ### Summary
 
-One way to think about storage is picturing household plumbing. Imagine the IOPS of the media that the data is stored on is the household main drain. When this is clogged (such as roots in the pipe) or limited (it is collapsed or too small), all the sinks in the household back up when too much water is being used (too many guests). This is perfectly analogous to a shared environment where one or more systems are leveraging shared storage on an SAN/NAS/iSCSI with the same underlying media. Different approaches can be taken to resolve the different scenarios:
+Imagine storage as being like a house's indoor plumbing. The IOPS of the media you store your data in is like the home's main drain. When the main drain gets clogged or limited by size or pipe collapse, then the drains back up and don't work properly when the household uses a lot of water. This scenario is like when a shared environment has one or more systems using shared storage on the same SAN, NAS, or iSCSI with the same underlying media. Because user demand exceeds the system's ability to keep up, performance suffers.
 
-- A collapsed or undersized drain requires a full scale replacement and fix. This would be similar to adding in new hardware or redistributing the systems using the shared storage throughout the infrastructure.
-- A “clogged” pipe usually means identification of one or more offending problems and removal of those problems. In a storage scenario this could be storage or system level backups, synchronized antivirus scans across all servers, and synchronized defragmentation software running during peak periods.
+Likewise, in our imaginary plumbing scenario, you can take different approaches to resolve clogs and other performance issues:
 
-In any plumbing design, multiple drains feed into the main drain. If anything stops up one of those drains or a junction point, only the things behind that junction point back up. In a storage scenario, this could be an overloaded switch (SAN/NAS/iSCSI scenario), driver compatibility issues (wrong driver/HBA Firmware/storport.sys combination), or backup/antivirus/defragmentation. To determine if the storage “pipe” is big enough, IOPS and I/O size needs to be measured. At each joint add them together to ensure adequate “pipe diameter.”
+- To address a collapsed drain pipe or a drain that's too small, you need to replace the pipes with working and correctly sized ones. In shared storage terms, it's like adding new hardware or redistributing usage on the shared systems throughout the infrastructure.
+- Unclogging a drain requires identifying the underlying problems and their locations, then removing them with the appropriate tool. For example, a relatively simple clog in a kitchen sink drain only needs a plunger or drain cleaner to remove, while more complex clogs that involve a trapped object may require a drain snake. Likewise, in a shared storage system, identifying the cause of performance issues helps you figure you out whether you need to create a system-level backup, synchronize antivirus scans across all servers, or synchronize the defragmentation software you run during peak periods.
 
-## Appendix D - Discussion on storage troubleshooting - Environments where providing at least as much RAM as the database size is not a viable option
+In most plumbing designs, multiple drains feed into the main drain. When a drain gets clogged, water only gets trapped behind the point where the clog is. If a junction gets clogged, then all the drains behind that junction point stop draining. In a storage scenario, a junction getting clogged is like an overloaded switch, a driver compatibility issue, or unsynchronized software tasks. You must measure the IOPS and I/O size to determine whether your storage system can handle the load, then adjust the system as needed.
 
-It is helpful to understand why these recommendations exist so that the changes in storage technology can be accommodated. These recommendations exist for two reasons. The first is isolation of IO, such that performance issues (that is, paging) on the operating system spindle do not impact performance of the database and I/O profiles. The second is that log files for AD DS (and most databases) are sequential in nature, and spindle-based hard drives and caches have a huge performance benefit when used with sequential I/O as compared to the more random I/O patterns of the operating system and almost purely random I/O patterns of the AD DS database drive. By isolating the sequential I/O to a separate physical drive, throughput can be increased. The challenge presented by today's storage options is that the fundamental assumptions behind these recommendations are no longer true. In many virtualized storage scenarios, such as iSCSI, SAN, NAS, and Virtual Disk image files, the underlying storage media is shared across multiple hosts, thus completely negating both the “isolation of IO” and the “sequential I/O optimization” aspects. In fact these scenarios add an additional layer of complexity in that other hosts accessing the shared media can degrade responsiveness to the domain controller.
+## Appendix D: storage troubleshooting in environments where more RAM isn't an option
 
-In planning storage performance, there are three categories to consider: cold cache state, warmed cache state, and backup/restore. The cold cache state occurs in scenarios such as when the domain controller is initially rebooted or the Active Directory service is restarted and there is no Active Directory data in RAM. Warm cache state is where the domain controller is in a steady state and the database is cached. These are important to note as they will drive very different performance profiles, and having enough RAM to cache the entire database does not help performance when the cache is cold. One can consider performance design for these two scenarios with the following analogy, warming the cold cache is a “sprint” and running a server with a warm cache is a “marathon.”
+<!--This title is too long, too many dashes.-->
 
-For both the cold cache and warm cache scenario, the question becomes how fast the storage can move the data from disk into memory. Warming the cache is a scenario where, over time, performance improves as more queries reuse data, the cache hit rate increases, and the frequency of needing to go to disk decreases. As a result the adverse performance impact of going to disk decreases. Any degradation in performance is only transient while waiting for the cache to warm and grow to the maximum, system-dependent allowed size. The conversation can be simplified to how quickly the data can be gotten off of disk, and is a simple measure of the IOPS available to Active Directory, which is subjective to IOPS available from the underlying storage. From a planning perspective, because warming the cache and backup/restore scenarios happen on an exceptional basis, normally occur off hours, and are subjective to the load of the DC, general recommendations do not exist except in that these activities be scheduled for non-peak hours.
+Many storage recommendations before virtualized storage served two purposes:
 
-AD DS, in most scenarios, is predominantly read IO, usually a ratio of 90% read/10% write. Read I/O often tends to be the bottleneck for user experience, and with write IO, causes write performance to degrade. As I/O to the NTDS.dit is predominantly random, caches tend to provide minimal benefit to read IO, making it that much more important to configure the storage for read I/O profile correctly.
+- Isolating I/O to prevent performance issues on the OS spindle from impacting performance for the database and I/O profiles.
+- Taking advantage of the performance boost that spindle-based hard drives and caches can give your system when used with the sequential I/O of AD DS log files. Isolating sequential I/O to a separate physical drive can also increase throughput.
 
-For normal operating conditions, the storage planning goal is minimize the wait times for a request from AD DS to be returned from disk. This essentially means that the number of outstanding and pending I/O is less than or equivalent to the number of pathways to the disk. There are a variety of ways to measure this. In a performance monitoring scenario, the general recommendation is that LogicalDisk((`<NTDS Database Drive>`))\Avg Disk sec/Read be less than 20 ms. The desired operating threshold must be much lower, preferably as close to the speed of the storage as possible, in the 2 to 6 millisecond (.002 to .006 second) range depending on the type of storage.
+With new storage options, a lot fundamental assumptions behind earlier storage recommendations are no longer true. Virtualized storage scenarios, such as iSCSI, SAN, NAS, and Virtual Disk image files, often share underlying storage media across multiple hosts. This difference negates the assumptions that you must isolate I/O and optimize sequential I/O. Now other hosts that access the shared media can reduce responsiveness to the domain controller.
 
-Example:
+When you capacity plan for storage performance, you should consider three things:
+
+- Cold cache state
+- Warm cache state
+- Backup and restore
+
+The *cold cache* state is when you initially reboot the domain controller or restart the Active Directory service, so there's no Active Directory data in the RAM. A *warm cache* state is when the domain controller is operating in a steady state and has cached the database. In terms of performance design, warming a cold cache is like a sprint, while running a server with a fully warmed cache is like a marathon. Defining these states and the different performance profiles they drive is important, as you need to consider them both when estimating capacity. For example, just because you have enough RAM to cache the entire database during a warm cache state doesn't help you optimize performance during cold cache state.
+
+For both cache scenarios, the most important thing is how fast storage can move data from disk to memory. When you warm the cache, over time performance improves as queries reuse data, the cache hit rate increases, and the frequency of going to the disk to retrieve data decreases. As a result, adverse performance impacts from having to go to the disk also decrease. Any performance degradations are temporary and usually go away when the cache reaches its warm state and the maximum size the system allows.
+
+You can measure how quickly the system can get data from the disk by measuring the available IOPS in Active Directory. How many available IOPS there are is also subject to to how many IOPS are available in the underlying storage. From a planning perspective, because warming the cache and backup or restore states are exceptional events that usually occur off peak hours and are subject to DC load, we can't give general recommendations beyond only entering these states during off-peak hours.
+
+In most scenarios, AD DS is predominantly read I/O with a ratio of 90% read to 10% write. Read I/O is the typical bottleneck for user experience, while write I/O is the bottleneck that degrades write performance. Caches tend to provide minimal benefit to read I/O because I/O operations for the NTDS.dit file are predominantly random. Therefore, your main priority is to make sure you configure the read I/O profile storage correctly.
+
+Under normal operating conditions, your storage planning goal is to minimize wait times for the system to return requests from AD DS to the disk. The number of outstanding and pending I/O operations should be less than or equal to the number of pathways in the disk. For performance monitoring scenarios, we generally recommend that the `LogicalDisk((<NTDS Database Drive>))\Avg Disk sec/Read` counter should be less than 20 ms. You should set the operating threshold much lower, as close to the speed of storage as possible, within a range of two to six milliseconds depending on the type of storage.
+
+The following line graph shows <!--program name--> measurement of the latency withing a storage system.
+
+<!--Reformat this image-->
 
 ![Storage latency chart](media/capacity-planning-considerations-storage-latency.png)
 
-Analyzing the chart:
+Let's analyze this line graph:
 
-- **Green oval on the left –** The latency remains consistent at 10 ms. The load increases from 800 IOPS to 2400 IOPS. This is the absolute floor to how quickly an I/O request can be processed by the underlying storage. This is subject to the specifics of the storage solution.
-- **Burgundy oval on the right –** The throughput remains flat from the exit of the green circle through to the end of the data collection while the latency continues to increase. This is demonstrating that when the request volumes exceed the physical limitations of the underlying storage, the longer the requests spend sitting in the queue waiting to be sent out to the storage subsystem.
+- The area on the left of the chart that's circled in green shows the latency is consistent at 10 ms as the load increases from 800 IOPS to 2,400 IOPS. This area is the baseline for how quickly the underlying storage can process an I/O request. However, this baseline is affected by what kind of storage solution you use.
+- The area on the right side of the chart circled in maroon shows the system throughput between the baseline and the end of data collection. The throughput itself doesn't change, but the latency increases. This area demonstrates how requests spend a longer time waiting in the queue to be sent to the storage subsystem whenever request volumes exceed the physical limits of the underlying storage.
 
-Applying this knowledge:
+Now, let's think about what this data tells us.
 
-- **Impact to a user querying membership of a large group –** Assume this requires reading 1 MB of data from the disk, the amount of I/O and how long it takes can be evaluated as follows:
-  - Active Directory database pages are 8 KB in size.
-  - A minimum of 128 pages need to be read in from disk.
-  - Assuming nothing is cached, at the floor (10 ms) this is going to take a minimum 1.28 seconds to load the data from disk in order to return it to the client. At 20 ms, where the throughput on storage has long since maxed out and is also the recommended maximum, it will take 2.5 seconds to get the data from disk in order to return it to the end user.
-- **At what rate will the cache be warmed –** Making the assumption that the client load is going to maximize the throughput on this storage example, the cache will warm at a rate of 2400 IOPS × 8 KB per IO. Or, approximately 20 MBps per second, loading about 1 GB of database into RAM every 53 seconds.
+First, let's assume a user querying membership of a large group requires the system read 1 MB of data from the disk. You can evaluate the amount of I/O required and how long the operations will take with these values:
 
-> [!NOTE]
-> It is normal for short periods to observe the latencies climb when components aggressively read or write to disk, such as when the system is being backed up or when AD DS is running garbage collection. Additional head room on top of the calculations should be provided to accommodate these periodic events. The goal being to provide enough throughput to accommodate these scenarios without impacting normal function.
+- The size of each Active Directory database page is 8 KB.
+- The minimum number of pages the system needs to read is 128.
+- Therefore, at the baseline area in the diagram, the system should take at least 1.28 seconds to load the data from the disk and return it to the client. At the 20 ms mark, where the throughput goes well above the recommended maximum, the process takes 2.5 seconds.
 
-As can be seen, there is a physical limit based on the storage design to how quickly the cache can possibly warm. What will warm the cache are incoming client requests up to the rate that the underlying storage can provide. Running scripts to “pre-warm” the cache during peak hours will provide competition to load driven by real client requests. That can adversely affect delivering data that clients need first because, by design, it will generate competition for scarce disk resources as artificial attempts to warm the cache will load data that is not relevant to the clients contacting the DC.
+Based on those numbers, you can calculate how fast the cache will warm by using this equation:
+
+2,400 IOPS × 8 KB per IO
+
+After running this calculation, we can say that the cache warm rate in this scenario is 20 MBps. In other words, the system loads about 1 GB of database into the RAM every 53 seconds.
+
+>[!NOTE]
+>It's normal to see latency go up for short periods while components are aggressively reading or writing to the disk. For example, latency increases when the system is backing up or AD DS runs garbage collection. You should provide additional room for these periodic events on top of your original usage estimates. Your goal is to give enough throughput to accommodate these spikes without affecting overall functioning.
+
+There's a physical limit to how quickly the cache warms based on how you design the storage system. The only thing that can warm the cache up to the rate the underlying storage can accommodate are incoming client requests. Running scripts to try to pre-warm the cache during peak hours competes with real client requests, increases overall load, loads data that's not relevant to client requests, and degrades performance. We recommend you avoid using artificial measures to warm the cache.
