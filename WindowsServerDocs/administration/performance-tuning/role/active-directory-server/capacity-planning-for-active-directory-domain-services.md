@@ -928,94 +928,113 @@ A 66 MHz 64-bit PCI bus can support a theoretical maximum of 528 MBps based on t
 
 Adding any other device, such as a network adapter or a second SCSI controller, reduces bandwidth available to the system, as all devices share the bandwidth and can compete with each other for limited processing resources.
 
-#### Analyzing Storage subsystems to find bottlenecks
+#### Analyzing storage subsystems to find bottlenecks
 
 <!--Where I left off.-->
 
-After analysis of the components of this storage subsystem, the spindle is the limiting factor in the amount of I/O that can be requested, and consequently the amount of data that can transit the system. Specifically, in an AD DS scenario, this is 100 random I/O per second in 8 KB increments, for a total of 800 KB per second when accessing the Jet database. Alternatively, the maximum throughput for a spindle that is exclusively allocated to log files would suffer the following limitations: 300 sequential I/O per second in 8 KB increments, for a total of 2400 KB (2.4 MB) per second.
+In this scenario, the spindle is the limiting factor for how much I/O you can request. As a result, this bottleneck also limits how much data the system can transmit. Because our example is an AD DS scenario, the amount of transmittable data is 100 random I/O per second in 8 KB increments, for a total of 800 KB per second when you access the Jet database. In contrast, the maximum throughput for a spindle you configure to exclusively allocate to log files would be limited to 300 sequential I/O per second in 8 KB installments, totalling at 2,400 KB or 2.4 MB per second.
 
-Now, having analyzed a simple configuration, the following table demonstrates where the bottleneck will occur as components in the storage subsystem are changed or added.
+Now that we've analyzed the components of our example configuration, let's look at a table that demonstrates where bottlenecks can happen as we add and change components in the storage subsystem.
+
+<!--I think I'll need to go in and rework this. The author used table format to try to make this data visually "snappier," but it might need to be written out instead.-->
 
 | Notes | Bottleneck analysis | Disk | Bus | Adapter | PCI bus |
 |--|--|--|--|--|--|
 | This is the domain controller configuration after adding a second disk. The disk configuration represents the bottleneck at 800 KB/s. | Add 1 disk (Total=2)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD | 200 I/Os total<br />800 KB/s total. |  |  |  |
-| After adding 7 disks, the disk configuration still represents the bottleneck at 3200 KB/s. | **Add 7 disks (Total=8)**  <p>I/O is random<p>4 KB block size<p>10,000 RPM HD | 800 I/Os total.<br />3200 KB/s total |  |  |  |
-| After changing I/O to sequential, the network adapter becomes the bottleneck because it is limited to 1000 IOPS. | Add 7 disks (Total=8)<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD |  |  | 2400 I/O sec can be read/written to disk, controller limited to 1000 IOPS |  |
-| After replacing the network adapter with a SCSI adapter that supports 10,000 IOPS, the bottleneck returns to the disk configuration. | Add 7 disks (Total=8)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade SCSI adapter (now supports 10,000 I/O)** | 800 I/Os total.<br />3,200 KB/s total |  |  |  |
-| After increasing the block size to 32 KB, the bus becomes the bottleneck because it only supports 20 MBps. | Add 7 disks (Total=8)<p>I/O is random<p>**32 KB block size**<p>10,000 RPM HD |  | 800 I/Os total. 25,600 KB/s (25 MBps) can be read/written to disk.<p>The bus only supports 20 MBps |  |  |
-| After upgrading the bus and adding more disks, the disk remains the bottleneck. | **Add 13 disks (Total=14)**<p>Add second SCSI adapter with 14 disks<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade to 320 MBps SCSI bus** | 2800 I/Os<p>11,200 KB/s (10.9 MBps) |  |  |  |
-| After changing I/O to sequential, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI Adapter with 14 disks<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD<p>Upgrade to 320 MBps SCSI bus | 8,400 I/Os<p>33,600 KB\s<p>(32.8 MB\s) |  |  |  |
-| After adding faster hard drives, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>4 KB block size<p>**15,000 RPM HD**<p>Upgrade to 320 MBps SCSI bus | 14,000 I/Os<p>56,000 KB/s<p>(54.7 MBps) |  |  |  |
-| After increasing the block size to 32 KB, the PCI bus becomes the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>**32 KB block size**<p>15,000 RPM HD<p>Upgrade to 320 MBps SCSI bus |  |  |  | 14,000 I/Os<p>448,000 KB/s<p>(437 MBps) is the read/write limit to the spindle.<p>The PCI bus supports a theoretical maximum of 133 MBps (75% efficient at best). |
+| After adding 7 disks, the disk configuration still represents the bottleneck at 3200 KB/s. | Add 7 disks (Total=8)  <p>I/O is random<p>4 KB block size<p>10,000 RPM HD | 800 I/Os total.<br />3200 KB/s total |  |  |  |
+| After changing I/O to sequential, the network adapter becomes the bottleneck because it is limited to 1000 IOPS. | Add 7 disks (Total=8)<p>I/O is sequential<p>4 KB block size<p>10,000 RPM HD |  |  | 2400 I/O sec can be read/written to disk, controller limited to 1000 IOPS |  |
+| After replacing the network adapter with a SCSI adapter that supports 10,000 IOPS, the bottleneck returns to the disk configuration. | Add 7 disks (Total=8)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>Upgrade SCSI adapter (now supports 10,000 I/O) | 800 I/Os total.<br />3,200 KB/s total |  |  |  |
+| After increasing the block size to 32 KB, the bus becomes the bottleneck because it only supports 20 MBps. | Add 7 disks (Total=8)<p>I/O is random<p>32 KB block size<p>10,000 RPM HD |  | 800 I/Os total. 25,600 KB/s (25 MBps) can be read/written to disk.<p>The bus only supports 20 MBps |  |  |
+| After upgrading the bus and adding more disks, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>Upgrade to 320 MBps SCSI bus | 2800 I/Os<p>11,200 KB/s (10.9 MBps) |  |  |  |
+| After changing I/O to sequential, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI Adapter with 14 disks<p>I/O is sequential<p>4 KB block size<p>10,000 RPM HD<p>Upgrade to 320 MBps SCSI bus | 8,400 I/Os<p>33,600 KB\s<p>(32.8 MB\s) |  |  |  |
+| After adding faster hard drives, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>4 KB block size<p>15,000 RPM HD<p>Upgrade to 320 MBps SCSI bus | 14,000 I/Os<p>56,000 KB/s<p>(54.7 MBps) |  |  |  |
+| After increasing the block size to 32 KB, the PCI bus becomes the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>32 KB block size<p>15,000 RPM HD<p>Upgrade to 320 MBps SCSI bus |  |  |  | 14,000 I/Os<p>448,000 KB/s<p>(437 MBps) is the read/write limit to the spindle.<p>The PCI bus supports a theoretical maximum of 133 MBps (75% efficient at best). |
 
 ### Introducing RAID
 
-The nature of a storage subsystem does not change dramatically when an array controller is introduced; it just replaces the SCSI adapter in the calculations. What does change is the cost of reading and writing data to the disk when using the various array levels (such as RAID 0, RAID 1, or RAID 5).
+When you introduce an array controller to your storage subsystem, it doesn't dramatically change its nature. The array controller only replaces the SCSI adapter in the calculations. However, the cost of reading and writing data to the disk when you use the various array levels does change.
 
-In RAID 0, the data is striped across all the disks in the RAID set. This means that during a read or a write operation, a portion of the data is pulled from or pushed to each disk, increasing the amount of data that can transit the system during the same time period. Thus, in one second, on each spindle (again assuming 10,000-RPM drives), 100 I/O operations can be performed. The total amount of I/O that can be supported is N spindles times 100 I/O per second per spindle (yields 100*N I/O per second).
+In RAID 0, writing data stripes it across all disks in the RAID set. During a read or write operation, the system pulls data from or pushes it to each disk, increasing the amount of data the system can transmit during this particular time period. Therefore, in this example where we're using 10,000 RPM drives, using RAID 0 would let you perform 100 I/O operations. The total amount of I/O the system supports is *N* spindles times 100 1/O per second per spindle, or *N* spindles × 100 I/O per second per spindle.
+
+<!--Reformat image-->
 
 ![Logical d: drive](media/capacity-planning-considerations-logical-d-drive.png)
 
-In RAID 1, the data is mirrored (duplicated) across a pair of spindles for redundancy. Thus, when a read I/O operation is performed, data can be read from both of the spindles in the set. This effectively makes the I/O capacity from both disks available during a read operation. The caveat is that write operations gain no performance advantage in a RAID 1. This is because the same data needs to be written to both drives for the sake of redundancy. Though it does not take any longer, as the write of data occurs concurrently on both spindles, because both spindles are occupied duplicating the data, a write I/O operation in essence prevents two read operations from occurring. Thus, every write I/O costs two read I/O. A formula can be created from that information to determine the total number of I/O operations that are occurring:
+In RAID 1, the system mirrors, or duplicates, data across a pair of spindles for redundancy. When the system performs a read I/O operation, it can read data from both spindles in the set. This mirroring makes I/O capacity for both disks available during a read operation. However, RAID 1 doesn't give write operations any performance advantages, because the system also needs to mirror written data on the pair of spindles. Although mirroring doesn't make write operations take longer, it does prevent the system from making more than one read operation at the same time. Therefore, every write I/O operation costs two read I/O operations.
 
-> *Read I/O* + 2 × *Write I/O* = *Total available disk I/O consumed*
+The following equation calculates how many I/O operations are happening in this scenario:
 
-When the ratio of reads to writes and the number of spindles are known, the following equation can be derived from the above equation to identify the maximum I/O that can be supported by the array:
+*Read I/O* + 2 × *Write I/O* = *Total available disk I/O consumed*
 
-> *Maximum IOPS per spindle* × 2 spindles × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 2 × *%Writes*)] = *Total IOPS*
+When you know the ratio of reads to writes and the number of spindles in your deployment, you can use this equation to calculate how much I/O your array can support:
 
-RAID 1+ 0, behaves exactly the same as RAID 1 regarding the expense of reading and writing. However, the I/O is now striped across each mirrored set. If
+*Maximum IOPS per spindle* × 2 spindles × [(*% Reads* + *% Writes*) ÷ (*% Reads* + 2 × *% Writes*)] = *Total IOPS*
 
-> *Maximum IOPS per spindle* × 2 spindles × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 2 × *%Writes*)] = *Total I/O*
+A scenario using both RAID 1 and RAID 0 behaves exactly like RAID 1 in the cost of reading and writing operations. However, the I/O is now striped across each mirrored set. This means the equation will change to this:
 
-in a RAID 1 set, when a multiplicity (*N*) of RAID 1 sets are striped, the Total I/O that can be processed becomes N × I/O per RAID 1 set:
+*Maximum IOPS per spindle* × 2 spindles × [(*% Reads* + *% Writes*) ÷ (*% Reads* + 2 × *% Writes*)] = *Total I/O*
 
-> *N* × {*Maximum IOPS per spindle* × 2 spindles × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 2 × *%Writes*)] } = *Total IOPS*
+in a RAID 1 set, when you stripe *N* number of RAID 1 sets, the total I/O your array can process becomes *N* × I/O per RAID 1 set:
 
-In RAID 5, sometimes referred to as *N* + 1 RAID, the data is striped across *N* spindles and parity information is written to the “+ 1” spindle. However, RAID 5 is much more expensive when performing a write I/O than RAID 1 or 1 + 0. RAID 5 performs the following process every time a write I/O is submitted to the array:
+*N* × {*Maximum IOPS per spindle* × 2 spindles × [(*% Reads* + *% Writes*) ÷ (*% Reads* + 2 × *% Writes*)]} = *Total IOPS*
 
-1. Read the old data
-1. Read the old parity
-1. Write the new data
-1. Write the new parity
+We sometimes call RAID 5 *N + 1* RAID because the system stripes the data across *N* spindles and writes parity information to the *+ 1* spindle. However, RAID 5 uses more resources when performing a write I/O than RAID 1 or RAID 1 + 0. RAID 5 performs the following process every time the operating system submits a write I/O to the array:
 
-As every write I/O request that is submitted to the array controller by the operating system requires four I/O operations to complete, write requests submitted take four times as long to complete as a single read I/O. To derive a formula to translate I/O requests from the operating system perspective to that experienced by the spindles:
+1. Read the old data.
+1. Read the old parity.
+1. Write the new data.
+1. Write the new parity.
 
-> *Read I/O* + 4 × *Write I/O* = *Total I/O*
+Every write I/O request that the OS sends to the array controller requires four I/O operations to finish. Therefore, *N* + 1 RAID write requests take four times as long as a read I/O to finish. In other words, to determine how many I/O requests from the OS translate to how many requests the spindles get, you use this equation:
 
-Similarly in a RAID 1 set, when the ratio of reads to writes and the number of spindles are known, the following equation can be derived from the above equation to identify the maximum I/O that can be supported by the array (Note that total number of spindles does not include the “drive” lost to parity):
+*Read I/O* + 4 × *Write I/O* = *Total I/O*
 
-> *IOPS per spindle* × (*Spindles* – 1) × [(*%Reads* + *%Writes*) ÷ (*%Reads* + 4 × *%Writes*)] = *Total IOPS*
+Similarly, in a RAID 1 set where you know the ratio of reads to writes and how many spindles there are, you can use this equation to identify how much I/O your array can support:
+
+*IOPS per spindle* × (*Spindles* – 1) × [(*% Reads* + *% Writes*) ÷ (*% Reads* + 4 × *% Writes*)] = *Total IOPS*
+
+>[!NOTE]
+>The previous equation's result doesn't include the drive lost to parity.
 
 ### Introducing SANs
 
-Expanding the complexity of the storage subsystem, when a SAN is introduced into the environment, the basic principles outlined do not change, however I/O behavior for all of the systems connected to the SAN needs to be taken into account. As one of the major advantages in using a SAN is an additional amount of redundancy over internally or externally attached storage, capacity planning now needs to take into account fault tolerance needs. Also, more components are introduced that need to be evaluated. Breaking a SAN down into the component parts:
+When you introduce a storage area network (SAN) into your environment, it doesn't affect the planning principles we've described in the earlier sections. However, you should take into account that the SAN can change the I/O behavior for all systems connected to it. One of the main advantages of using a SAN is that it gives you more redundancy over internally or externally attached storage, but it also means your capacity planing needs to account for fault tolerance needs. Also, as you introduce more components to your system, you also need to factor these new parts into your calculations.
 
-- SCSI or Fibre Channel hard drive
-- Storage unit channel backplane
-- Storage units
-- Storage controller module
-- SAN switch(es)
-- HBA(s)
-- The PCI bus
+Now, let's break down a SAN into its components:
 
-When designing any system for redundancy, additional components are included to accommodate the potential of failure. It is very important, when capacity planning, to exclude the redundant component from available resources. For example, if the SAN has two controller modules, the I/O capacity of one controller module is all that should be used for total I/O throughput available to the system. This is due to the fact that if one controller fails, the entire I/O load demanded by all connected systems will need to be processed by the remaining controller. As all capacity planning is done for peak usage periods, redundant components should not be factored into the available resources and planned peak utilization should not exceed 80% saturation of the system (in order to accommodate bursts or anomalous system behavior). Similarly, the redundant SAN switch, storage unit, and spindles should not be factored into the I/O calculations.
+- The SCSI or Fibre Channel hard drive
+- The storage unit channel backplane
+- The storage units themselves
+- The storage controller module
+- One or more SAN switches
+- One or more host bus adapters (HBAs)
+- The peripheral component interconnect (PCI) bus
 
-When analyzing the behavior of the SCSI or Fibre Channel hard drive, the method of analyzing the behavior as outlined previously does not change. Although there are certain advantages and disadvantages to each protocol, the limiting factor on a per disk basis is the mechanical limitation of the hard drive.
+When you design a system for redundancy, you must include extra components to ensure your system keeps working during a crisis scenario where one or more of the original components stop working. However, when you're capacity planning, you need to exclude redundant components from available resources to get an accurate estimate of your system's baseline capacity, as those components don't usually come online unless there's an emergency. For example, if your SAN has two controller modules, you only need to use one when calculating total available I/O throughput, as the other won't turn on unless the original module stops working. You also shouldn't bring the redundant SAN switch, storage unit, or spindles into I/O calculations.
 
-Analyzing the channel on the storage unit is exactly the same as calculating the resources available on the SCSI bus, or bandwidth (such as 20 MBps) divided by block size (such as 8 KB). Where this deviates from the simple previous example is in the aggregation of multiple channels. For example, if there are 6 channels, each supporting 20 MBps maximum transfer rate, the total amount of I/O and data transfer that is available is 100 MBps (this is correct, it is not 120 MBps). Again, fault tolerance is a major player in this calculation, in the event of the loss of an entire channel, the system is only left with 5 functioning channels. Thus, to ensure continuing to meet performance expectations in the event of failure, total throughput for all of the storage channels should not exceed 100 MBps (this assumes load and fault tolerance is evenly distributed across all channels). Turning this into an I/O profile is dependent on the behavior of the application. In the case of Active Directory Jet I/O, this would correlate to approximately 12,500 I/O per second (100 MBps ÷ 8 KB per I/O).
+Also, because your capacity planning only considers periods of peak usage, you shouldn't factor redundant components into your available resources. Peak utilization shouldn't exceed 80% saturation of the system in order to accommodate bursts or other unusual system behavior.
 
-Next, obtaining the manufacturer's specifications for the controller modules is required in order to gain an understanding of the throughput each module can support. In this example, the SAN has two controller modules that support 7,500 I/O each. The total throughput of the system may be 15,000 IOPS if redundancy is not desired. In calculating maximum throughput in the case of failure, the limitation is the throughput of one controller, or 7,500 IOPS. This threshold is well below the 12,500 IOPS (assuming 4 KB block size) maximum that can be supported by all of the storage channels, and thus, is currently the bottleneck in the analysis. Still for planning purposes, the desired maximum I/O to be planned for would be 10,400 I/O.
+When you analyze the behavior of the SCSI or Fibre Channel hard drive, you should analyze it according to the principles we outlined in previous sections. Despite each protocol having their own advantages and disadvantages, the main thing that limits performance on a per-disk basis is the mechanical limitations of the hard drive.
 
-When the data exits the controller module, it transits a Fibre Channel connection rated at 1 GBps (or 1 Gigabit per second). To correlate this with the other metrics, 1 GBps turns into 128 MBps (1 GBps ÷ 8 bits/byte). As this is in excess of the total bandwidth across all channels in the storage unit (100 MBps), this will not bottleneck the system. Additionally, as this is only one of the two channels (the additional 1 GBps Fibre Channel connection being for redundancy), if one connection fails, the remaining connection still has enough capacity to handle all the data transfer demanded.
+When you analyze the channel on the storage unit, you should take the same approach you did when calculating how many resources were available on the SCSI bus: divide the bandwidth by the block size. For example, if your storage unit has six channels that each support a 20 MBps maximum transfer rate, your total amount of available I/O and data transfer is 100 MBps. The reason the total is 100 MBps instead of 120 MBps is because the storage channel total throughput shouldn't exceed the amount of throughput it would use if one of the channels were to suddenly turn off, leaving it with only five functioning channels. Of course, this example also assumes that the system is evenly distributing load and fault tolerance across all channels.
 
-En route to the server, the data will most likely transit a SAN switch. As the SAN switch has to process the incoming I/O request and forward it out the appropriate port, the switch will have a limit to the amount of I/O that can be handled, however, manufacturers specifications will be required to determine what that limit is. For example, if there are two switches and each switch can handle 10,000 IOPS, the total throughput will be 20,000 IOPS. Again, fault tolerance being a concern, if one switch fails, the total throughput of the system will be 10,000 IOPS. As it is desired not to exceed 80% utilization in normal operation, using no more than 8000 I/O should be the target.
+Whether you can turn the previous example into an I/O profile depends on the application behavior. For Active Directory Jet I/O, the maximum value would be approximately 12,500 I/O per second, or 100 MBps ÷ 8 KB per I/O.
 
-Finally, the HBA installed in the server would also have a limit to the amount of I/O that it can handle. Usually, a second HBA is installed for redundancy, but just like with the SAN switch, when calculating maximum I/O that can be handled, the total throughput of *N* &ndash; 1 HBAs is what the maximum scalability of the system is.
+In order to understand how much throughput your controller modules support, you also need to get their manufacturer specifications. In this example, the SAN has two controller modules that support 7,500 I/O each. If you aren't using redundancy, then the total system throughput would be 15,000 IOPS. However, in a scenario where redundancy is required, you'd calculate the maximum throughput based on the limits of only one of the controllers, which is 7,500 IOPS. Assuming that the block size is 4 KB, this threshold is well below the 12,500 IOPS maximum that the storage channels can support, and is therefore the bottleneck in your analysis. However, for planning purposes, the desired maximum I/O you should plan for is 10,400 I/O.
+
+<!--How exactly did the original author get to this number? Not much context in the original paragraph.-->
+
+When the data leaves the controller module, it transmits a Fibre Channel connection rated at 1 GBps, or 128 MBps. Because this amount exceeds the total bandwidth of 100 MBps across all the storage unit channels, it won't bottleneck the system. Also, because this transmission is on only one of the two Fibre Channels due to redundancy, if one Fibre Channel connection stops working, the remaining connection still has enough capacity to handle the data transfer demand.
+
+The data then transits a SAN switch on its way to the server. The switch limits the amount of I/O it can handle because it needs to process the incoming request and then forward it to the appropriate port. However, you can only know what the switch limit is if you look at the manufacturer specifications. For example, if your system has two switches and each switch can handle 10,000 IOPS, the total throughput will be 20,000 IOPS. Based on the rules of fault tolerance, if one switch stops working, the total system throughput will be 10,000 IOPS. Therefore, during normal circumstances, you shouldn't use more than 80% utilization, or 8,000 I/O.
+
+Finally, the HBA you install in the server also limits how much I/O it can handle. Typically, you install a second HBA for redundancy, but like with the SAN switch, when you calculate how much I/O the system can handle, the total throughput will be *N* - 1 HBA.
 
 ### Caching considerations
 
-Caches are one of the components that can significantly impact the overall performance at any point in the storage system. Detailed analysis about caching algorithms is beyond the scope of this article; however, some basic statements about caching on disk subsystems are worth illuminating:
+Caches are one of the components that can significantly impact overall performance anywhere in the storage system. However, a detailed analysis of caching algorithms is beyond the scope of this article. Instead, we'll give you a quick list of things you should know about caching on disk subsystems.
+
+<!--Where I left off.-->
 
 - Caching does improved sustained sequential write I/O as it can buffer many smaller write operations into larger I/O blocks and de-stage to storage in fewer, but larger block sizes. This will reduce total random I/O and total sequential I/O, thus providing more resource availability for other I/O.
 - Caching does not improve sustained write I/O throughput of the storage subsystem. It only allows for the writes to be buffered until the spindles are available to commit the data. When all the available I/O of the spindles in the storage subsystem is saturated for long periods, the cache will eventually fill up. In order to empty the cache, enough time between bursts, or extra spindles, need to be allotted in order to provide enough I/O to allow the cache to flush.
