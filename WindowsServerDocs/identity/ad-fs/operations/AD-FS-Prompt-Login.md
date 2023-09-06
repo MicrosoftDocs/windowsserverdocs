@@ -6,7 +6,7 @@ ms.author: billmath
 manager: amycolannino
 ms.date: 08/15/2023
 ms.topic: article
-ms.custom: it-pro
+ms.custom: it-pro, has-azure-ad-ps-ref
 ---
 
 # Active Directory Federation Services prompt=login parameter support
