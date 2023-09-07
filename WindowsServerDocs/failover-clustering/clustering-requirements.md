@@ -63,7 +63,7 @@ In most cases, attached storage should contain multiple, separate disks configur
 
 Some clusters have a disk that functions as the *disk witness*, which is a disk in cluster storage that holds the cluster configuration database. Failover clusters only have disk witnesses if the disk witness is supposed to be part of the specified quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum). The other disks contain required files for clustered roles.
 
-In addition to the LUNs and finding out whether your cluster needs a disk witness, here are some other storage requirements you should consider:
+You should also consider these additional storage requirements:
 
 - When you use native disk support included in failover clustering, you should only use basic disks, not dynamic disks.
 - We recommend you format disk partitions with New Technology File System (NTFS). If you use Cluster Shared Volumes (CSV), you must format the partitions for each CSV with NTFS.
@@ -71,7 +71,7 @@ In addition to the LUNs and finding out whether your cluster needs a disk witnes
   >[!NOTE]
   >If you have a disk witness for your quorum configuration, you can format the disk with either NTFS or Resilient File System (ReFS).
 
-- For the partition style of the disk, you can use either master boot record (MBR) or GUID partition table (GPT).
+- For the partition style of the disk, you can use either a Master Boot Record (MBR) or a GUID Partition Table (GPT).
 
 ## Hardware requirements for Hyper-V
 
@@ -96,7 +96,7 @@ If you're deploying a storage area network (SAN) with a failover cluster, follow
   >[!IMPORTANT]
   >HBAs and multipath I/O software can be version-sensitive. Work closely with your hardware vendor to choose the correct adapters, firmware, and software that are compatible with your system's version of Windows Server. Network Interface Card (NIC) adapters, drivers, and firmware must exactly match for Switch Embedded Teaming (SET) to function properly in all cluster nodes.
 
-- Use Storage Spaces. If you're planning to deploy serial-attached SCSI (SAS) clustered storage you've configured using Storage Spaces, make sure you read the requuirements in [Deploy Clustered Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)).
+- Use Storage Spaces. If you're planning to deploy serial-attached SCSI (SAS) clustered storage you've configured using Storage Spaces, make sure you read the requirements in [Deploy Clustered Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)).
 
 ## Related content
 
