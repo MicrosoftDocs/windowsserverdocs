@@ -65,7 +65,6 @@
       - name: Active Directory Domain Services Overview
         href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
       - name: Active Directory Administrative Center
-        href: ad-ds/get-started/adac/active-directory-Administrative-Center.md
         items:
         - name: AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History
           href: ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md
