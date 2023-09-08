@@ -43,7 +43,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 1. At the **DISKPART** prompt, enter `select volume <volumenumber>`. Select the simple volume *volumenumber* you want to shrink.
 
-1. At the **DISKPART** prompt, enter `shrink [desired=<desiredsize>] [minimum=<minimumsize>]`. Shrink the selected volume to *desiredsize* in megabytes (MB) if possible or to *minimumsize* if *desiredsize* is too large.
+1. At the **DISKPART** prompt, enter `shrink [desired=<desiredsize>] [minimum=<minimumsize>]`. Shrink the selected volume by the amount specified in *desiredsize* in megabytes (MB) if possible, or by the amount specified in *minimumsize* if *desiredsize* is too large.
 
 | Value             | Description |
 | ---               | ----------- |
