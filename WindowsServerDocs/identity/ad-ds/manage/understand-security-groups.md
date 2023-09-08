@@ -385,8 +385,8 @@ The DHCP Administrators group applies to the Windows Server operating system in 
 |Attribute|Value|
 |--- |--- |
 |Well-known SID/RID|S-1-5-21-\<domain>|
-|Type|Builtin Local|
-|Default container|CN=Builtin, DC=\<domain>, DC=|
+|Type|Domain Local|
+|Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|[Users](#users)|
 |Protected by AdminSDHolder?|No|
@@ -403,8 +403,8 @@ The DHCP Users group applies to the Windows Server operating system in [Default 
 |Attribute|Value|
 |--- |--- |
 |Well-known SID/RID|S-1-5-21-\<domain>|
-|Type|Builtin Local|
-|Default container|CN=Builtin, DC=\<domain>, DC=|
+|Type|Domain Local|
+|Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|[Users](#users)|
 |Protected by AdminSDHolder?|No|
@@ -631,7 +631,7 @@ The Event Log Readers group applies to the Windows Server operating system in [D
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-573|
 |Type|Domain Local|
-|Default container|CN=Users, DC=\<domain>, DC=|
+|Default container|CN=Builtin, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
