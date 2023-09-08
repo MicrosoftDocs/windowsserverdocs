@@ -62,9 +62,9 @@ conceptualContent:
 
     - title: Identity and access
       links:
-        - url: ./identity/ad-ds/ad-ds-getting-started.md
+        - url: ./identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview.md
           itemType: overview
-          text: Getting started with Active Directory Domain Services (AD DS)
+          text: Active Directory Domain Services Overview
         - url: ./identity/active-directory-federation-services.md
           itemType: overview
           text: Active Directory Federation Services (AD FS)
