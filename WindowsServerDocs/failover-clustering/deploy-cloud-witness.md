@@ -62,6 +62,8 @@ You can use a cloud witness as a quorum witness in the following supported scena
 
 We recommend you always configure a witness if you're using Windows Server 2012 R2 and later, because clusters in later versions of Windows Server automatically manage the witness vote and their nodes vote with Dynamic Quorum.
 
+You also must make sure all firewalls between the failover cluster and Azure storage account service allow traffic from port 443, also known as the HTTPS port. Cloud Witness uses the HTTPS REST interface for the Azure Storage Account service. Therefore, you must have port 443 open on all nodes in your failover cluster.
+
 ## Create an Azure Storage Account to use as a Cloud Witness
 
 This section describes how to create a storage account and view and copy endpoint URLs and access keys for that account.
@@ -90,95 +92,101 @@ To create an Azure storage account:
    - If the cluster you're configuring Cloud Witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)**.
    - If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)**.
 
-### View and copy storage access keys for your Azure Storage Account
+### View and copy storage access keys for your Azure storage account
 
 <!--Where I left off.-->
 
-When you create a Microsoft Azure Storage Account, it is associated with two Access Keys that are automatically generated - Primary Access key and Secondary Access key. For a first-time creation of Cloud Witness, use the **Primary Access Key**. There is no restriction regarding which key to use for Cloud Witness.
+When you create a Microsoft Azure storage account, Azure associates it with automatically generated primary and secondary access keys. When you set up Cloud Witness for the first time, we recommend you use the primary access key. After that, you can use either the primary or secondary access key.
 
-#### To view and copy storage access keys
+To access the menu where you can view and copy your storage keys:
 
-In the Azure portal, navigate to your storage account, click **All settings** and then click **Access Keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications, as shown in the following screenshot.
+1. In the Azure portal, go to your storage account and select **All settings**.
+1. Select **Access Keys**.
+
+In the **Access Keys** tab, you can also view and copy preconfigured connection strings that use your primary and secondary keys for use in your applications, as shown in the following screenshot.
 
 :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png" alt-text="A screenshot of the Manage Access Keys dialog in Microsoft Azure.":::
 
-### View and copy endpoint URL Links
+### View and copy endpoint URLs
 
-When you create a Storage Account, the following URLs are generated using the format: `https://<Storage Account Name>.<Storage Type>.<Endpoint>`
+When you create a Storage Account, Azure generates endpoint URLs using the format: `https://<Storage Account Name>.<Storage Type>.<Endpoint>`.
 
-Cloud Witness always uses **Blob** as the file storage type in a general purpose storage account. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different endpoint as per your scenario (for example the Microsoft Azure datacenter in China has a different endpoint).
+Cloud Witness always uses blob storage as the file storage type in a general purpose storage account. Azure uses `.core.windows.net` as the default endpoint. When you configure Cloud Witness, you may need to change the endpoint based on what your scenario needs. For example, if your Azure datacenter is in China, you need to use a special endpoint specific to Azure locations in China.
 
 > [!NOTE]
-> The endpoint URL is generated automatically by the Cloud Witness resource. Make sure that port 443 is open in your firewalls and that `*.core.windows.net` is included in any firewall allow lists you're using between the cluster and Azure Storage.
+> Cloud Witness uses HTTPS at default port 443 to automatically generates its own endpoint URL. To use this URL, make sure your firewalls aren't blocking port 443. Also, make sure you've included the `*.core.windows.net` domain in the allow lists for all firewalls between your cluster and Azure Storage.
 
-#### To view and copy endpoint URL links
+To access the menu that lets you view and copy your endpoint URLs:
 
-In the Azure portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs, as shown in the following screenshot.
+1. In the Azure portal, go to your storage account.
+1. Select **All settings**.
+1. Select **Properties**.
+
+Once you're in **Properties**, you can copy your endpoint URLs to use during the setup process, as shown in the following screenshot.
 
 :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png" alt-text="A screenshot of the Cloud Witness endpoint URL links.":::
 
-For more information about creating and managing Azure Storage Accounts, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create)
+For more information about creating and managing Azure Storage Accounts, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create).
 
 ## Configure Cloud Witness as a quorum witness for your cluster
 
-Cloud Witness configuration is well integrated within the existing Quorum Configuration Wizard built into the Failover Cluster Manager.
+You can configure Cloud Witness using the Quorum Configuration setup workflow built into the Failover Cluster Manager application.
 
-### To configure Cloud Witness as a Quorum Witness
+To use the Quorum Configuration setup workflow to configure Cloud Witness:
 
 1. Launch Failover Cluster Manager.
 
-2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings**, as shown in the following screenshot. This launches the Configure Cluster Quorum wizard.
+1. Right-click the name of your cluster.
+
+1. Go to **More Actions** > **Configure Cluster Quorum Settings**, as shown in the following screenshot to launch the Configure Cluster Quorum workflow.
 
     :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png" alt-text="A screenshot of the menu path to Configure Cluster Quorum Settings in the Failover Cluster Manager UI.":::
 
-3. On the **Select Quorum Configurations** page, select **Select the quorum witness**, as shown in the following screenshot.
+1. On the **Select Quorum Configurations** page, select **Select the quorum witness**, as shown in the following screenshot.
 
     :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png" alt-text="A screenshot of the select the quorum witness radio button in the Cluster Quorum wizard.":::
 
-4. On the **Select Quorum Witness** page, select **Configure a cloud witness**, as shown in the following screenshot.
+1. On the **Select Quorum Witness** page, select **Configure a cloud witness**, as shown in the following screenshot.
 
     :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_9.png" alt-text="A screenshot of the appropriate radio button to select a cloud witness.":::
 
-5. On the **Configure Cloud Witness** page, enter the following information:
-   1. (Required parameter) Azure Storage Account Name.
-   2. (Required parameter) Access Key corresponding to the Storage Account.
-       1. When creating for the first time, use Primary Access Key.
-       2. When rotating the Primary Access Key, use Secondary Access Key.
-   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.
+1. On the **Configure Cloud Witness** page, enter the following information:
+
+   - Your Azure storage account name.
+
+   - The access key associated with your storage account.
+
+       - If you're creating a cloud witness for the first time, use your primary access key.
+
+       - If you're rotating your primary access key, then use the secondary access key instead.
+
+         > [!NOTE]
+         > Instead of storing access keys directly, your failover cluster generates a Shared Access Security (SAS) token to securely store instead. The token is only valid as long as the access key it's associated with remains valid. When you rotate the primary access key, you must update the cloud witnesses on all clusters using that storage account with the secondary key before you can regenerate the primary key.
+
+   - Optionally, you can update **Endpoint server name** if you plan to use a different Azure service endpoint for your cloud witness, such as Azure China.
 
       :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png" alt-text="A screenshot of the Cloud Witness configuration pane in the Cluster Quorum wizard.":::
 
-6. Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in, as shown in the following screenshot.
+1. After you successfully create your cloud witness, you can view it in the Failover Cluster Manager accordion menu, as shown in the following screenshot.
 
     :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png" alt-text="A screenshot of the message that appears when you successfully configure Cloud Witness.":::
 
 ### Configuring Cloud Witness using PowerShell
 
-The existing Set-ClusterQuorum PowerShell command has new additional parameters corresponding to Cloud Witness.
+<!--Should I use tabs for these two methods?-->
 
-You can configure Cloud Witness with the cmdlet [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) using the following PowerShell command:
+You can also use PowerShell to configure Cloud Witness by using the [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format:
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
 ```
 
-In case you need to use a different endpoint (rare):
+If you need to change the endpoint, you can add the *-Endpoint* parameter to the end, as shown in the following example:
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
 ```
 
-### Azure Storage Account considerations with Cloud Witness
-
-When configuring a Cloud Witness as a quorum witness for your failover cluster, consider the following:
-- Instead of storing the Access Key, your failover cluster will generate and securely store a Shared Access Security (SAS) token.
-- The generated SAS token is valid as long as the Access Key remains valid. When rotating the Primary Access Key, it is important to first update the Cloud Witness (on all your clusters that are using that Storage Account) with the Secondary Access Key before regenerating the Primary Access Key.
-- Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.
-
-### Proxy considerations with Cloud Witness
-
-Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy. Azure uses **.core.windows.net** as the Endpoint. You need to ensure that it is included in any firewall allow lists you're using between the cluster and Azure Storage.
-
-## See Also
+## Related content
 
 - [What's New in failover clustering in Windows Server](whats-new-in-failover-clustering.md)
