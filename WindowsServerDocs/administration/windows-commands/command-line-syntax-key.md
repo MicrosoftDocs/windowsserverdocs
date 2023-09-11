@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: 338c0381-ad63-4a4c-bd2c-42c7a93821fe
 author: JasonGerend
 ms.author: alalve
-ms.date: 09/15/2022
+ms.date: 09/08/2023
 ---
 
 # Command-line syntax key
