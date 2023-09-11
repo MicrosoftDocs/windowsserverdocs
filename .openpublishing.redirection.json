@@ -11238,6 +11238,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/identity/Active-Directory-Federation-Services.md",
+      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/get-started/adac/Active-Directory-Administrative-Center.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-",
       "redirect_document_id": true

@@ -438,7 +438,6 @@
         - name: Additional Resources
           href: additional-Resources_12.md
   - name: Active Directory Federation Services
-    href: active-directory-Federation-Services.md
     items:
     - name: AD FS Overview
       href: ad-fs/AD-FS-Overview.md
