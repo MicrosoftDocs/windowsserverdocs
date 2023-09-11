@@ -11236,7 +11236,12 @@
       "source_path": "WindowsServerDocs/networking/technologies/pktmon/pktmon-pcapng-support.md",
       "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
       "redirect_document_id": true
-    }  
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/Active-Directory-Federation-Services.md",
+      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-overview",
+      "redirect_document_id": true
+    }    
 
   ]
 }
