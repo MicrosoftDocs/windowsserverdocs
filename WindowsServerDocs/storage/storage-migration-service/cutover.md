@@ -55,15 +55,20 @@ If cutover is failing due to an environmental condition, you can manually comple
 
 1. Note the step where the cutover has failed or hung. The table in [Detailed stages](#detailed-stages) states where specifically the cutover is in its operations.
 
-1. On the SMS orchestrator, run the following PowerShell command in an elevated console, where `<name>` is the name of the migration job:
+1. In SMS orchestrator, run the following PowerShell command in an elevated console, where `<name>` is the name of the migration job:
 
    `Stop-SmsTransfer -Name <string>`
 
 1. Manually follow the remaining steps in the previous [Summary](#summary) section.
 
-   a. For the steps stating "remove the lingering object name", this operation is using `NETDOM COMPUTERNAME /REMOVE` to remove any alternate names assigned to the source computer. Then the operation uses `NETDOM COMPUTERNAME /ADD` to add those old alternate names to your new destination server.
+   a. For the __Removing alternate computer names on the source__ step, performed when the progress is 57%, the operation is using `NETDOM COMPUTERNAME /REMOVE` to remove any alternate names assigned to the source computer. Then the operation uses `NETDOM COMPUTERNAME /ADD` to add those old alternate names to your new destination server.
 
-   b. For the steps stating to disable or enable the local token filter policy, there's no need to change the policy state unless the policy was disabled during the failed automatic cutover. To revert the policy to be enabled, delete the settings at [How to disable UAC remote restrictions](/troubleshoot/windows-server/windows-security/user-account-control-and-remote-restriction#how-to-disable-uac-remote-restrictions)
+   b. For the following steps, there's no need to change the filter policy state unless the policy was disabled during the failed automatic cutover. To revert the policy to be enabled, delete the settings at [How to disable UAC remote restrictions](/troubleshoot/windows-server/windows-security/user-account-control-and-remote-restriction#how-to-disable-uac-remote-restrictions).
+
+   * __Setting the local account token filter policy on the source computer__ is shown when the progress is at 13%.
+   * __Setting the local account token filter policy on the destination computer__ is shown when the progress is at 25%.
+   * __Resetting the local account token filter policy on the source computer__ is shown when the progress is at 61%.
+   * __Resetting the local account token filter policy on the destination computer__ is shown when the progress is at 97%.
 
 ## Detailed stages
 
