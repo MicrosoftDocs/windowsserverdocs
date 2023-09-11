@@ -56,7 +56,7 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
 
   - If you need to look up only a single piece of data, or you're using nslookup in scripts, command lines, or PowerShell, use the noninteractive mode. In noninteractive mode, also called command mode, the first command line parameter is the name or IP address of the computer that you want to look up. The second parameter is the name or IP address of a DNS name server. If you omit the second argument, nslookup uses the default DNS name server.
 
-  - If you need to look up more than one piece of data or set several configurations, you can use interactive mode. To enter interactive mode, type a hyphen (-) instead of the first parameter in the nslookup command line. Enter the name or IP address of a DNS name server for the second parameter. If you omit the second argument, nslookup uses the default DNS name server. You can also invoke interactive mode by simply entering `nslookup` at the command prompt, and then entering names or IP addresses to search in the interactive command line.
+  - If you need to look up more than one piece of data or set several configurations, you can use interactive mode. To enter interactive mode, type a hyphen (-) instead of the first parameter in the nslookup command line. Enter the name or IP address of a DNS name server for the second parameter. If you omit the second argument, nslookup uses the default DNS name server. You can also invoke interactive mode by simply entering `nslookup` at the command prompt, and then entering names or IP addresses to search for in the interactive command line.
   
   - Once you enter `nslookup -`, the command prompt changes to the interactive prompt `>`. While in interactive mode, you can:
 
@@ -77,14 +77,14 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
   | No response from server | No DNS name server is running on the server computer. |
   | No records | The DNS name server doesn't have resource records of the current query type for the computer, although the computer name is valid. The query type is specified with the [nslookup set querytype](nslookup-set-querytype.md) command. |
   | Nonexistent domain | The computer or DNS domain name doesn't exist. |
-  | Connection refused or Network is unreachable | The connection to the DNS name server or finger server could not be made. This error commonly occurs with the **ls** and **finger** requests. |
-  | Server failure | The DNS name server found an internal inconsistency in its database and could not return a valid answer. |
+  | Connection refused or Network is unreachable | The connection to the DNS name server or finger server couldn't be made. This error commonly occurs with the **ls** and **finger** requests. |
+  | Server failure | The DNS name server found an internal inconsistency in its database and couldn't return a valid answer. |
   | Refused | The DNS name server refused to service the request. |
-  | format error | The DNS name server found that the request packet was not in the proper format. It may indicate an error in **nslookup**. |
+  | format error | The DNS name server found that the request packet wasn't in the proper format. It may indicate an error in **nslookup**. |
 
 ## Examples
 
-In nslookup noninteractive mode, you specify parameters and options on the command line. In interactive mode, you specify arguments and options in separate lines.
+In nslookup noninteractive mode, you specify parameters and options on the command line. In interactive mode, you specify arguments and options on separate lines.
 
 ### Noninteractive mode
 
@@ -96,10 +96,10 @@ In nslookup noninteractive mode, the first parameter is the computer to find, an
   nslookup mydomain.com 1.1.1.1
   ```
 
-- If you don't specify a second parameter, nslookup uses the default DNS name server. The following example looks up the domain name for the IP address `1.1.1.1` on the default DNS name server:
+- If you don't specify a second parameter, nslookup uses the default DNS name server. The following example looks up the IP addresses for the domain `mydomain.com` on the default DNS name server:
 
   ```cmd
-  nslookup 1.1.1.1
+  nslookup mydomain.com
   ```
 
 - To specify options, you can use `nslookup -<option>`. For example, the following command turns on the nslookup `debug` option to get more information about packets sent.
@@ -120,7 +120,7 @@ In nslookup noninteractive mode, the first parameter is the computer to find, an
   ```
 ### Interactive mode
 
-To use interactive mode, enter `-` instead of the first parameter of a nslookup command line. The command prompt then changes to the interactive prompt `>`. The following examples show interactive mode.
+To use interactive mode, enter `-` instead of the first parameter of a nslookup command line, or simply enter `nslookup`. The command prompt then changes to the interactive prompt `>`. The following examples show interactive mode commands.
 
 -  The following command places nslookup in interactive mode and sets `1.1.1.1` as the default DNS lookup server:
 
