@@ -58,12 +58,12 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
 
   - If you need to look up more than one piece of data or set several configurations, you can use interactive mode. To enter interactive mode, type a hyphen (-) instead of the first parameter in the nslookup command line. Enter the name or IP address of a DNS name server for the second parameter. If you omit the second argument, nslookup uses the default DNS name server. You can also invoke interactive mode by simply entering `nslookup` at the command prompt, and then entering names or IP addresses to search for in the interactive command line.
   
-  - Once you enter `nslookup -`, the command prompt changes to the interactive prompt `>`. While in interactive mode, you can:
+- Once you enter `nslookup -` or `nslookup` alone, the command prompt changes to the interactive prompt `>`. While in interactive mode, you can:
 
-    - Enter names or IP addresses, `set` variables, and other options on separate lines.
-    - Interrupt interactive commands at any time by pressing CTRL+B.
-    - Exit, by entering `exit`.
-    - Treat a built-in command as a computer name by preceding it with the escape character (`\`). An unrecognized command is interpreted as a computer name.
+  - Enter names or IP addresses, `set` variables, and other options on separate lines.
+  - Interrupt interactive commands at any time by pressing CTRL+B.
+  - Exit, by entering `exit`.
+  - Treat a built-in command as a computer name by preceding it with the escape character (`\`). An unrecognized command is interpreted as a computer name.
 
 - If the computer to find is an IP address and the query is for an **A** or **PTR** resource record type, the name of the computer is returned.
 
@@ -84,7 +84,7 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
 
 ## Examples
 
-In nslookup noninteractive mode, you specify parameters and options on the command line. In interactive mode, you specify arguments and options on separate lines.
+In nslookup noninteractive mode, you specify parameters and options in the Windows command line or script. In interactive mode, you specify arguments and options on separate lines at the interactive command prompt.
 
 ### Noninteractive mode
 
@@ -122,7 +122,7 @@ In nslookup noninteractive mode, the first parameter is the computer to find, an
 
 To use interactive mode, enter `-` instead of the first parameter of a nslookup command line, or simply enter `nslookup`. The command prompt then changes to the interactive prompt `>`. The following examples show interactive mode commands.
 
--  The following command places nslookup in interactive mode and sets `1.1.1.1` as the default DNS lookup server:
+- The following command places nslookup in interactive mode and sets `1.1.1.1` as the default DNS lookup server:
 
   ```cmd
   nslookup - 1.1.1.1
@@ -133,25 +133,25 @@ To use interactive mode, enter `-` instead of the first parameter of a nslookup 
   set all
   ```
 
-- The following interactive command returns the IP addresses for `mydomain.com`:
+- The following command at the interactive prompt returns the IP addresses for `mydomain.com`:
 
    ```cmd
   mydomain.com
   ```
 
-- The following interactive command changes the default DNS name server to `4.4.4.4`:
+- The following command at the interactive prompt changes the default DNS name server to `4.4.4.4`:
 
    ```cmd
   server 4.4.4.4
   ```
 
-- The following interactive command sets the query resource record type to `HINFO`:
+- The following command at the interactive prompt sets the query resource record type to `HINFO`:
 
    ```cmd
   set type=HINFO
   ```
 
-- The following interactive command exits interactive mode and returns to the Windows command prompt:
+- The following command at the interactive prompt exits interactive mode and returns to the Windows command prompt:
 
    ```cmd
   exit
