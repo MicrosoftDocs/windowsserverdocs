@@ -55,17 +55,14 @@
     - name: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
       href: solution-guides/certificate-enrollment-certificate-key-based-renewal.md
   - name: Active Directory Domain Services
-    href: ad-ds/active-directory-Domain-Services.md
     items:
+    - name: Active Directory Domain Services Overview
+      href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
     - name: What's new in Active Directory Domain Services
       href: whats-new-active-directory-domain-services.md
     - name: AD DS Getting started
-      href: ad-ds/AD-DS-Getting-started.md
       items:
-      - name: Active Directory Domain Services Overview
-        href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
       - name: Active Directory Administrative Center
-        href: ad-ds/get-started/adac/active-directory-Administrative-Center.md
         items:
         - name: AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History
           href: ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md

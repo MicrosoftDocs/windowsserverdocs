@@ -78,7 +78,7 @@ you'll be billed monthly via your Azure subscription. You also don't need to act
 
 Azure Arc-enabled servers also enable to you to use other Azure services, such as:
 
-- Update Management Center.
+- Azure Update Manager.
 - Microsoft Defender for Cloud.
 - Azure Policy (Machine Configuration).
 - Azure Monitor (VM Insights).
