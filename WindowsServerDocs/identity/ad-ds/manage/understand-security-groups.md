@@ -4,7 +4,7 @@ description: Learn about Windows Server Active Directory security groups, group 
 author: dansimp
 ms.author: alalve
 ms.topic: article
-ms.date: 04/10/2023
+ms.date: 09/08/2023
 ---
 
 # Active Directory security groups
