@@ -88,7 +88,7 @@ In nslookup noninteractive mode, you specify parameters and options in the Windo
 
 ### Noninteractive mode
 
-In nslookup noninteractive mode, the first parameter is the computer to find, and the second parameter is the DNS name server to use. The following examples use `nslookup` in noninteractive mode.
+In nslookup noninteractive mode, the first parameter is the computer to find, and the second parameter is the DNS name server to use. If you don't specify a second parameter, nslookup uses the default DNS name server. The following examples use `nslookup` in noninteractive mode.
 
 - The following example looks up the IP addresses for the domain name `mydomain.com` on the DNS name server at `1.1.1.1`:
 
@@ -96,10 +96,10 @@ In nslookup noninteractive mode, the first parameter is the computer to find, an
   nslookup mydomain.com 1.1.1.1
   ```
 
-- If you don't specify a second parameter, nslookup uses the default DNS name server. The following example looks up the IP addresses for the domain `mydomain.com` on the default DNS name server:
+- The following example looks up the domain name for the IP address `4.4.4.4` on the default DNS name server:
 
   ```cmd
-  nslookup mydomain.com
+  nslookup 4.4.4.4
   ```
 
 - To specify options, you can use `nslookup -<option>`. For example, the following command turns on the nslookup `debug` option to get more information about packets sent.
