@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: xelu86
 ms.author: wscontent
-ms.date: 06/05/2023
+ms.date: 09/08/2023
 ---
 
 # shutdown

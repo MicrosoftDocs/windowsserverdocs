@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/23/2022
+ms.date: 09/06/2023
 ---
 
 # xcopy
