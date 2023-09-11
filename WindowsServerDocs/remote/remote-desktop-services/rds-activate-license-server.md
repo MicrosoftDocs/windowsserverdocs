@@ -22,14 +22,15 @@ The Remote Desktop Services license server issues client access licenses (CALs) 
 1. Specify the server on which you'll install the licensing role.
 1. On the **Server Roles** page, check the box for **Remote Desktop Services**, then select **Next** until you see the **Remote Desktop Services** page.
 1. Select the roles you want to install. Make sure you include the **Remote Desktop Licensing** role.
+1. In the **Add Roles and Features Wizard** dialog box, select **Add Features**.
 1. Select **Next** until you see the **Confirmation** page, then select **Install**.
 
 For detailed information and other installation options, see [Install or uninstall roles, role services, or features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
 
 ## Activate the license server
 
-1. In Server Manager, select **Remote Desktop Services** > **Servers**. Right-click the server where you installed the Remote Desktop Licensing role and select **Remote Desktop Licensing Manager**.
-1. In Remote Desktop Licensing Manager, select the server, and then select **Action** > **Activate Server**.
-1. Accept the remaining default values in the Activate Server Wizard until you see the **Company information** page, Enter your company information.
+1. In Server Manager, select **Remote Desktop Services** > **Servers**. Right-click the server where you installed the Remote Desktop Licensing role and select **RD Licensing Manager**.
+1. In the **RD Licensing Manager**, select the server, and then select **Action** > **Activate Server**.
+1. Accept the remaining default values in the Activate Server Wizard until you see the **Company information** page, then enter your company information.
 1. Accept the defaults for the remaining pages until the final page. Clear **Start Install Licenses Wizard now**, and then select **Finish**.
-1. Select **Action > Review Configuration > Add to Group > OK** and enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Azure AD Domain Services, but you can ignore any warnings or errors.
+1. Select **Action** > **Review Configuration** > **Add to Group** > **OK** and enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Azure AD Domain Services, but you can ignore any warnings or errors.
