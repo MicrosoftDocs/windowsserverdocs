@@ -62,21 +62,28 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 ## Remarks
 
-- To redirect command output to the input of another command, use the pipe (`|`) character. For example, `cmd foo.exe | bar.exe`.
+- To redirect command output to the input of another command, use the pipe (`|`) character. For example:
 
-- To redirect command output to a file, use the greater than angle bracket `>` character. For example, `cmd foo.exe > bar.txt`.
+  ```
+  <command1> | <command2>`
+  ```
+- To redirect command output to a file, use the greater-than angle bracket `>` character. For example:
 
+  ```
+  <command1> > <file1.txt>
+  ```
 - To use multiple commands for `<string>`, separate them by the command separator `&&`. For example:
 
   ```
   <command1>&&<command2>&&<command3>
   ```
 
-- If the directory path and files have spaces in their name, they must be enclosed in double quotation marks. For example:
+- If the directory path, files, or any information you supply contains spaces, you must use double quotation marks (`"`) around the text, such as `"Computer Name"`. For example:
 
   ```
   mkdir Test&&mkdir "Test 2"&&move "Test 2" Test
   ```
+- You must use quotation marks around the following special characters: & < > [ ] | { } ^ = ; ! ' + , ` ~ [white space].
 
 - If you specify `/c` or `/k`, the `cmd` processes, the remainder of `<string>`, and the quotation marks are preserved only if all of the following conditions are met:
 
@@ -110,7 +117,7 @@ The following table lists valid hexadecimal digits that you can use as the value
   > [!CAUTION]
   > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
-  When you enable command extensions, the following commands are affected:
+- When you enable command extensions, the following commands are affected:
 
   - `assoc`
   - `call`
@@ -152,7 +159,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 - If you enable file and directory name completion by using `/f:on`, use **CTRL+D** for directory name completion and **CTRL+F** for file name completion. The only difference between the key combinations **CTRL+D** and **CTRL+F** is that **CTRL+D** only matches directory names and **CTRL+F** matches both file and directory names.
 
-- If you use file and directory name completion on any of the built-in directory commands, that is `cd`, `md`, or `rd`, directory completion is assumed.
+  If you use file and directory name completion on any of the built-in directory commands, that is `cd`, `md`, or `rd`, directory completion is assumed.
 
 - Pressing **CTRL+D** or **CTRL+F** processes the file and directory name completion. These key combination functions append a wildcard character to `<string>` if one isn't present, build a list of paths that match, and then display the first matching path. If none of the paths match, the file and directory name completion function beeps and doesn't change the display.
 
@@ -164,10 +171,6 @@ The following table lists valid hexadecimal digits that you can use as the value
 - File and directory name completion correctly processes file names that contain white space or special characters if you place quotation marks around the matching path.
 
 - If you process file and directory name completion from within `<string>`, at the point in `<string>` where the completion was processed, any part of the *path* to the right of the cursor is discarded.
-
-- You must use quotation marks around the following special characters: & < > [ ] | { } ^ = ; ! ' + , ` ~ [white space].
-
-- If the information that you supply contains spaces, you must use quotation marks around the text (for example, "Computer Name").
 
 ## Related links
 
