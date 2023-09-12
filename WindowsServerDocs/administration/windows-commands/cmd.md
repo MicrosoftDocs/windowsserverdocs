@@ -24,7 +24,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 | --------- | ----------- |
 | /c | Carries out the command specified by `<string>` and then exits the command processor. |
 | /k | Carries out the command specified by `<string>` and keeps the command processor running. |
-| /s | When used with `/c` or `/k`, triggers special non-parsing rules that strip the first and last quotes (`"`) around the `<string>` but leave the rest of the command unchanged. |
+| /s | When used with `/c` or `/k`, triggers special non-parsing rules that strip the first and last quotes (`"`) around the `<string>` but leaves the rest of the command unchanged. |
 | /q | Turns echo off. |
 | /d | Disables execution of AutoRun commands. |
 | /a | Formats command output as American National Standards Institute (ANSI). |
@@ -67,11 +67,13 @@ The following table lists valid hexadecimal digits that you can use as the value
   ```
   <command1> | <command2>
   ```
+  
 - To redirect command output to a file, use the greater-than angle bracket `>` character. For example:
 
   ```
   <command1> > <file1.txt>
   ```
+  
 - To use multiple commands for `<string>`, separate them by the command separator `&&`. For example:
 
   ```
@@ -83,6 +85,7 @@ The following table lists valid hexadecimal digits that you can use as the value
   ```
   mkdir Test&&mkdir "Test 2"&&move "Test 2" Test
   ```
+  
 - You must use quotation marks around the following special characters: & < > [ ] | { } ^ = ; ! ' + , ` ~ [white space].
 
 - If you specify `/c` or `/k`, the `cmd` processes, the remainder of `<string>`, and the quotation marks are preserved only if all of the following conditions are met:
