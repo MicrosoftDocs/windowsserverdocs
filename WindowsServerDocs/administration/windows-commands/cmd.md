@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
 ms.author: wscontent
 author: xelu86
-ms.date: 09/11/2023
+ms.date: 09/12/2023
 ---
 
 # cmd
@@ -65,7 +65,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 - To redirect command output to the input of another command, use the pipe (`|`) character. For example:
 
   ```
-  <command1> | <command2>`
+  <command1> | <command2>
   ```
 - To redirect command output to a file, use the greater-than angle bracket `>` character. For example:
 
@@ -95,7 +95,7 @@ The following table lists valid hexadecimal digits that you can use as the value
   
   If the previous conditions aren't met, `<string>` is processed by examining the first character to verify whether it's an opening quotation mark. If the first character is an opening quotation mark, it's stripped along with the closing quotation mark. Any text following the closing quotation marks is preserved.
 
-- If you don't specify `/d` in `<string>`, Cmd.exe looks for the following registry subkeys:
+- If you don't specify `/d`, Cmd.exe looks for the following registry subkeys:
 
   - **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun\REG_SZ**
 
@@ -140,7 +140,9 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 - If you enable delayed environment variable expansion, you can use the exclamation point character (`!`) to substitute the value of an environment variable at run time.
 
-- File and directory name completion isn't enabled by default. You can enable or disable file name completion for a particular process of the `cmd` command with `/f:{on | off}`. You can enable or disable file and directory name completion for all processes of the `cmd` command on a computer or for a user logon session by setting the following **REG_DWORD** values:
+- File and directory name completion isn't enabled by default. You can enable or disable file name completion for a particular process of the `cmd` command with `/f:{on | off}`.
+
+- You can enable or disable file and directory name completion for all processes of the `cmd` command on a computer or for a user logon session by setting the following **REG_DWORD** values:
 
   - **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD**
 
@@ -150,16 +152,12 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   - **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar\REG_DWORD**
 
-  To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0×9** is TAB and **0×08** is BACKSPACE). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
-
-  To disable a particular completion character in the registry, use the value for white space [**0×20**], because it isn't a valid control character.
+  To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0×9** is TAB and **0×08** is BACKSPACE). Use the [**0×20**] value for white space, because it isn't a valid control character. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
   > [!CAUTION]
   > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
-- If you enable file and directory name completion by using `/f:on`, use **CTRL+D** for directory name completion and **CTRL+F** for file name completion. The only difference between the key combinations **CTRL+D** and **CTRL+F** is that **CTRL+D** only matches directory names and **CTRL+F** matches both file and directory names.
-
-  If you use file and directory name completion on any of the built-in directory commands, that is `cd`, `md`, or `rd`, directory completion is assumed.
+- If you enable file and directory name completion by using `/f:on`, use **CTRL+D** for directory name completion and **CTRL+F** for file name completion. The only difference between the key combinations **CTRL+D** and **CTRL+F** is that **CTRL+D** only matches directory names and **CTRL+F** matches both file and directory names. If you use file and directory name completion on the built-in directory commands `cd`, `md`, or `rd`, directory completion is assumed.
 
 - Pressing **CTRL+D** or **CTRL+F** processes the file and directory name completion. These key combination functions append a wildcard character to `<string>` if one isn't present, build a list of paths that match, and then display the first matching path. If none of the paths match, the file and directory name completion function beeps and doesn't change the display.
 
