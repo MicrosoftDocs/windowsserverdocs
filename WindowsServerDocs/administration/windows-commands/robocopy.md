@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: xelu86
 ms.author: wscontent
-ms.date: 05/31/2023
+ms.date: 09/01/2023
 ---
 
 # robocopy
