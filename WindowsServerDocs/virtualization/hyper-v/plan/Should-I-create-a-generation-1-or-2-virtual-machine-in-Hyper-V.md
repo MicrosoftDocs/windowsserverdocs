@@ -224,7 +224,7 @@ Here are some additional tips about using generation 2 virtual machines.
 ### Work with VHDX files
 
 - You can resize a VHDX file that contains the boot volume for a generation 2 virtual machine while the virtual machine is running.
-- We don't support or recommend that you create a single virtual disk (VHD or VHDX file) that is bootable to both generation 1 and generation 2 virtual machines.
+- We don't support or recommend that you create a single virtual disk (VHD or VHDX file) that is bootable to **both** generation 1 and generation 2 virtual machines. Instead, create bootable VHDX files that target only generation 1 **or** generation 2 virtual machines.
 - The virtual machine generation is a property of the virtual machine, not a property of the virtual hard disk. So you can't tell if a VHDX file was created by a generation 1 or a generation 2 virtual machine.
 - A VHDX file created with a generation 2 virtual machine can be attached to the IDE controller or the SCSI controller of a generation 1 virtual machine. However, if this is a bootable VHDX file, the generation 1 virtual machine won't boot.
 
