@@ -16,7 +16,7 @@ ms.date: 11/9/2021
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:
 
-- You're using an existing, pre-built virtual disk (VHD or VHDX) which is not [compatible with UEFI](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
+- You're using an existing, pre-built virtual disk (VHD or VHDX), which isn't [compatible with UEFI](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
 - Generation 2 doesn't support the operating system you want to run on the virtual machine.
 - Generation 2 doesn't support the boot method you want to use.
 
@@ -181,7 +181,7 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
   To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.
 
 - **Larger boot volume**
-  The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2TB for a .VHDX and 2040GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831446(v=ws.11)).
+  The maximum boot volume for generation 2 virtual machines is 64 TB. This is the maximum disk size supported by a .VHDX. For generation 1 virtual machines, the maximum boot volume is 2 TB for a .VHDX and 2040 GB for a .VHD. For more information, see [Hyper-V Virtual Hard Disk Format Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831446(v=ws.11)).
 
   You may also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
@@ -197,10 +197,10 @@ The following table compares the devices available between generation 1 and gene
 |Legacy network adapter|Synthetic network adapter|Network boot with IPv4 and IPv6|
 |Floppy controller and DMA controller|No floppy controller support|N/A|
 |Universal asynchronous receiver/transmitter (UART) for COM ports|Optional UART for debugging|Faster and more reliable|
-|i8042 keyboard controller|Software-based input|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|
-|PS/2 keyboard|Software-based keyboard|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|
-|PS/2 mouse|Software-based mouse|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|
-|S3 video|Software-based video|Uses fewer resources because there is no emulation. Also reduces the attack surface from the guest operating system.|
+|i8042 keyboard controller|Software-based input|Uses fewer resources because there's no emulation. Also reduces the attack surface from the guest operating system.|
+|PS/2 keyboard|Software-based keyboard|Uses fewer resources because there's no emulation. Also reduces the attack surface from the guest operating system.|
+|PS/2 mouse|Software-based mouse|Uses fewer resources because there's no emulation. Also reduces the attack surface from the guest operating system.|
+|S3 video|Software-based video|Uses fewer resources because there's no emulation. Also reduces the attack surface from the guest operating system.|
 |PCI bus|No longer required|N/A|
 |Programmable interrupt controller (PIC)|No longer required|N/A|
 |Programmable interval timer (PIT)|No longer required|N/A|
@@ -219,7 +219,7 @@ Here are some additional tips about using generation 2 virtual machines.
 
 - Secure Boot or UEFI firmware isn't required on the physical Hyper-V host. Hyper-V provides virtual firmware to virtual machines that is independent of what's on the Hyper-V host.
 - UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.
-- We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they are compiled directly from the sources. If these applications are not appropriately digitally signed, you must disable Secure Boot for the virtual machine.
+- We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they're compiled directly from the sources. If these applications aren't appropriately digitally signed, you must disable Secure Boot for the virtual machine.
 
 ### Work with VHDX files
 
@@ -230,7 +230,7 @@ Here are some additional tips about using generation 2 virtual machines.
 
 ### Use IPv6 instead of IPv4
 
-When booting from network with PXE, generation 2 virtual machines use IPv4 by default. To use IPv6 instead, run the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:
+When you boot from network with PXE, generation 2 virtual machines use IPv4 by default. To use IPv6 instead, run the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:
 
 ```powershell
 Set-VMFirmware -VMName 'TestVM' -IPProtocolPreference IPv6
