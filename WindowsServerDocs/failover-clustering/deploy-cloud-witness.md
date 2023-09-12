@@ -15,17 +15,17 @@ description: How to use Microsoft Azure to host the witness for a Windows Server
 
 Cloud Witness is a type of failover cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This article contains an overview of the Cloud Witness feature, which scenarios it supports, and instructions for how to configure a cloud witness for a failover cluster. For more information, see [Set up a cluster witness](/azure-stack/hci/manage/witness).
 
-## What is a cloud witness?
+## What is Cloud Witness?
 
-Before we begin, you should refresh your memory about what a cluster quorum and a quorum witness are by reading [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum).
+Before we begin, you should refresh your memory about what cluster quorums and quorum witnesses are by reading [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum).
 
 Now, let's start by looking at an example configuration of a multi-site stretched failover cluster quorum for Windows Server 2016, shown in the following diagram.
 
 :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png" alt-text="A diagram depicting a cluster quorum with a site labeled file share witness connected to site one and site two.":::
 
-This example is a super simple configuration with two nodes in two on-site datacenters. While in typical clusters, each node has one vote, Cloud Witness gives one extra vote to the quorum witness. This extra vote lets the cluster keep running even if one of the datacenters turns off. In this example, the cluster quorum has five possible votes, and only needs three votes to continue running.
+This example is a super simplified configuration with two nodes in two on-site datacenters. In typical clusters, each node has one vote, but Cloud Witness gives one extra vote to the quorum witness. This extra vote lets the cluster keep running even if one of the datacenters turns off. In the example we're using, the cluster quorum has five possible votes, and only needs three votes to continue running.
 
-However, you may notice that, in addition to the two datacenters,  there's a third datacenter called a *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
+However, you may notice that, in addition to the two datacenters, there's also a third datacenter called a *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
 
 Having a file share witness provides enough redundancy to keep your file server highly available. However, you should remember that hosting the file share witness on a guest OS requires setup and regular maintenance when hosting virtual machines (VMs) in the public cloud.
 
@@ -33,7 +33,7 @@ Cloud Witness is different from traditional cluster quorum witness configuration
 
 :::image type="content" source="media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png" alt-text="A diagram depicting a failover cluster with Cloud Witness connected to site one and site two.":::
 
-As you can see, Cloud Witness configurations don't require a third separate datacenter. Cloud Witness, like any other quorum witness, gets an extra vote and helps prevent total shutdowns if one of the other datacenters turns off. However, it doesn't need an extra site to store the quorum witness on. Cloud Witness also doesn't need the regular physical maintenance required for an on-site datacenter.
+As you can see, Cloud Witness configurations don't require a third separate datacenter. Cloud Witness, like any other quorum witness, gets an extra vote and helps prevent total shutdowns if one of the other datacenters turns off. However, it doesn't need an extra site for storing the quorum witness. Cloud Witness also doesn't need the regular physical maintenance required for an on-site datacenter.
 
 Along with redundancy, there are some other benefits to using the Cloud Witness feature:
 
@@ -55,7 +55,7 @@ You can also use this account and the msft-cloud-witness container that Cloud Wi
 
 You can use a cloud witness as a quorum witness in the following supported scenarios:
 
-- Disaster recovery for stretched multi-site clusters, as shown in [What is a cloud witness](#what-is-a-cloud-witness).
+- Disaster recovery for stretched multi-site clusters, as shown in [What is Cloud Witness](#what-is-cloud-witness).
 
 - Failover clusters without shared storage, such as SQL Always On.
 
@@ -101,7 +101,7 @@ To create an Azure Storage account:
    - If the cluster you're configuring Cloud Witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)**.
    - If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)**.
 
-### View and copy storage access keys for your Azure storage account
+### View and copy storage access keys for your Azure Storage account
 
 When you create an Azure Storage account, Azure associates it with automatically generated primary and secondary access keys. When you set up Cloud Witness for the first time, we recommend you use the primary access key. After that, you can use either the primary or secondary access key.
 
