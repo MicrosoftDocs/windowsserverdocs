@@ -123,7 +123,8 @@ The credential provider enumerates logon tiles in the following instances:
 
 The following diagram shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.
 
-![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic](../media/credentials-processes-in-windows-authentication/authn_credman_credprov.png)
+![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.](../media/credentials-processes-in-windows-authentication/authn_credman_credprov.png)
+
 
 ## <a name="BKMK_CredentialInputForApplicationAndServiceLogon"></a>Credential input for application and service logon
 Windows authentication is designed to manage credentials for applications or services that do not require user interaction. Applications in user mode are limited in terms of what system resources they have access to, while services can have unrestricted access to the system memory and external devices.
