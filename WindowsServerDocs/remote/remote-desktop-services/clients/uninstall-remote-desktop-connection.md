@@ -5,13 +5,15 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/12/2023
+ms.date: 09/13/2023
 ---
 # Uninstall and reinstall Remote Desktop Connection
 
-<!--Introduction goes here-->
+You can now uninstall the built-in Remote Desktop Connection app from the Windows operating system. This article shows not only how to uninstall the app, but also how to reinstall it should you change your mind about removing it later.
+
 > [!IMPORTANT]
 > When you uninstall Remote Desktop Connection, you also become unable to use the *RemoteApp and Desktop Connection* app in the Control Panel.
+
 ## Prerequisites
 
 In order to uninstall and reinstall Remote Desktop Connection, you must use Windows 11 23H2 or later.
