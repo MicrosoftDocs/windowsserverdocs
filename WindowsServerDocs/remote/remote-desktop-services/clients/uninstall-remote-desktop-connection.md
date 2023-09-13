@@ -44,7 +44,7 @@ To uninstall Remote Desktop Connection:
   mstsc /uninstall /noPromptBeforeRestart
   ```
 
-When you run the command, it uninstalls Remote Desktop Connection from your machine, then restarts the machine if required without prompting.
+When you run the command, it uninstalls Remote Desktop Connection from your machine, then restarts the machine if necessary without prompting.
 
 > [!TIP]
 > You can also run the previous command using Intune or Configuration Manager to uninstall the app at scale.
