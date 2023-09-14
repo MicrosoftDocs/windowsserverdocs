@@ -4,7 +4,7 @@ description: Learn how to perform an in-place upgrade to Windows Server.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 09/13/2023
+ms.date: 09/14/2023
 # Customer intent: As a server administrator, I want upgrade Windows Server, so that my server
 # remains supported and I can use the latest features.
 ---
@@ -15,6 +15,8 @@ An in-place upgrade allows you to go from an older operating system to a newer o
 your settings, server roles, and data intact. This article teaches you how to move to a later
 version of Windows Server by using an in-place upgrade.
 
+> [!IMPORTANT]
+> This article covers the in-place Windows Server upgrade process for non-Azure servers and virtual machines (VMs) only. To do an in-place upgrade of Windows Server running in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 ## Prerequisites
 
@@ -29,10 +31,7 @@ Before you start upgrading, fulfill the following prerequisites:
 - Review any third-party application vendor support requirements.
 - Make sure your computer:
   - Meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
-  - Has PowerShell 5.1 or later.
   - Isn't running in Azure.
-    > [!IMPORTANT]
-    > To do an in-place upgrade of Windows Server running in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 > [!NOTE]
 > If you're upgrading a Windows Server 2012 or Windows Server 2012 R2 server with Configuration Manager installed, also follow the pre-upgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
