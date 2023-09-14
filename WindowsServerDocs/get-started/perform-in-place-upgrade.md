@@ -29,10 +29,10 @@ Before you start upgrading, fulfill the following prerequisites:
 - Review any third-party application vendor support requirements.
 - Make sure your computer:
   - Meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
+  - Has PowerShell 5.1 or later.
   - Isn't running in Azure.
     > [!IMPORTANT]
     > To do an in-place upgrade of Windows Server running in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
-- Has PowerShell 5.1 or later.
 
 > [!NOTE]
 > If you're upgrading a Windows Server 2012 or Windows Server 2012 R2 server with Configuration Manager installed, also follow the pre-upgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
@@ -54,14 +54,11 @@ To collect your information:
    ipconfig /all | Out-File -FilePath ipconfig.txt
    ```
 
+   > [!TIP]
+   > `Get-ComputerInfo` requires PowerShell 5.1 or later. If your Windows Server version doesn't include Powershell, you can find this information in the registry. Open Registry Editor, go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and then copy and paste the Windows Server **BuildLabEx** and **EditionID** values.
+
 1. Using **File Explorer**, navigate to the directory you noted down, and **copy** the files to a
    USB flash drive or network location off of your computer.
-
-> [!TIP]
-> Get-ComputerInfo requires PowerShell 5.1 or later. If your Windows Server version doesn't include
-> Powershell you can find this information in the registry. Open Registry Editor, go to the
-> **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and then copy and paste
-> the Windows Server **BuildLabEx** and **EditionID** values.
 
 After you've collected all of your Windows Server-related information, we recommend that you back up
 your server operating system, apps, and VMs. You must also shut down, quick migrate, or
@@ -81,7 +78,7 @@ To perform the in-place upgrade:
 
     > [!IMPORTANT]
     > Depending on your security settings, User Account Control may prompt you to allow setup to
-    > make changes to your device. If you're happy to continue select **Yes**.
+    > make changes to your device. If you're happy to continue, select **Yes**.
 
 1. By default, setup automatically downloads updates for the installation. If you're okay with
    the default settings, select **Next** to continue.
