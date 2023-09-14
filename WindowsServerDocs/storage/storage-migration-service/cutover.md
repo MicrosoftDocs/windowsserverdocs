@@ -49,12 +49,33 @@ Then, Storage Migration Service takes the following steps to cut over the source
 
 After cutover finishes, the destination computer has taken on the identity of the source computer, and you can then decommission the source computer.
 
+## Manual cutover
+
+If cutover is failing due to an environmental condition, you can manually complete the cutover. For example, problems such as networking, custom security settings, or a third party product interaction, could all cause cutover to fail. Manually complete the cutover following these steps:
+
+1. Note the step where the cutover has failed or hung. The table in [Detailed stages](#detailed-stages) states where specifically the cutover is in its operations.
+
+1. In SMS orchestrator, run the following PowerShell command in an elevated console, where `<name>` is the name of the migration job:
+
+   `Stop-SmsTransfer -Name <string>`
+
+1. Manually follow the remaining steps in the previous [Summary](#summary) section.
+
+   a. For the __Removing alternate computer names on the source__ step, performed when the progress is 57%, the operation is using `NETDOM COMPUTERNAME /REMOVE` to remove any alternate names assigned to the source computer. Then the operation uses `NETDOM COMPUTERNAME /ADD` to add those old alternate names to your new destination server.
+
+   b. For the following steps, there's no need to change the filter policy state unless the policy was disabled during the failed automatic cutover. To revert the policy to be enabled, delete the settings at [How to disable UAC remote restrictions](/troubleshoot/windows-server/windows-security/user-account-control-and-remote-restriction#how-to-disable-uac-remote-restrictions).
+
+   * __Setting the local account token filter policy on the source computer__ is shown when the progress is at 13%.
+   * __Setting the local account token filter policy on the destination computer__ is shown when the progress is at 25%.
+   * __Resetting the local account token filter policy on the source computer__ is shown when the progress is at 61%.
+   * __Resetting the local account token filter policy on the destination computer__ is shown when the progress is at 97%.
+
 ## Detailed stages
 
 ![Cutover Stage Description Screenshot](media/cutover/cutover_stage_description.png)
 __Figure 2: Storage Migration Service showing a cutover stage description__
 
-You can keep track of cutover progress through descriptions of each stage that appear as shown in the figure above. The following table shows each possible stage along with its progress, description, and any clarifying notes.
+You can keep track of cutover progress through descriptions of each stage that appear as shown in figure 2. The following table shows each possible stage along with its progress, description, and any clarifying notes.
 
 |  Progress | Description                                                                                               |  Notes |
 |:-----|:--------------------------------------------------------------------------------------------------------------------|:---|
