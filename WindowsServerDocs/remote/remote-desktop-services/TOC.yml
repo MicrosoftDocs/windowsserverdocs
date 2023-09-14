@@ -79,6 +79,8 @@
       href: clients/remote-desktop-web-client-admin.md
     - name: Set up email discovery for your users
       href: rds-email-discovery.md
+    - name: Fair Share technologies
+      href: fair-share-enabled-by-default-in-rds.md
     - name: License your Remote Desktop deployment
       href: rds-client-access-license.md
       items:
