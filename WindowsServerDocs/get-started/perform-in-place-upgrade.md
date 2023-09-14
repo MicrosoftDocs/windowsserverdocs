@@ -4,7 +4,7 @@ description: Learn how to perform an in-place upgrade to Windows Server.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 01/06/2023
+ms.date: 09/13/2023
 # Customer intent: As a server administrator, I want upgrade Windows Server, so that my server
 # remains supported and I can use the latest features.
 ---
@@ -15,32 +15,27 @@ An in-place upgrade allows you to go from an older operating system to a newer o
 your settings, server roles, and data intact. This article will teach you how to move to a later
 version of Windows Server using an in-place upgrade.
 
-> [!IMPORTANT]
-> Looking to perform an in-place upgrade of Windows Server running in an Azure VM? See
-> [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 ## Prerequisites
 
-Before you start upgrading, your computer must meet the following requirements:
+Before you start upgrading, fulfill the following prerequisites:
 
-- Determine
-  [which version of Windows Server to upgrade to](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
-- The hardware meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
-- Must not be running in Azure.
-- The install media is ready to use.
-- A valid product key and activation method are available. Keys and methods may depend based on the
-  distribution channel that you received Windows Server media from, for example, a Commercial
-  Licensing program, Retail, Original Equipment Manufacturer (OEM), and so on.
-- PowerShell 5.1 or later.
-- A location to store files away from your computer. For example, a USB flash drive or network
-  location.
-- Review the
-  [upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md)
-  article.
-- Review the
-  [Microsoft server applications compatibility](application-compatibility-windows-server-2022.md)
-  article.
-- Review any third party application vendors support requirements.
+- Determine [which version of Windows Server to upgrade to](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
+- Make sure you have a valid product key and activation method. Keys and methods may vary depending on the distribution channel you received Windows Server media from, for example a Commercial Licensing program, Retail, or Original Equipment Manufacturer (OEM).
+- Ensure that the install media is ready to use.
+- Have a location to store files away from your computer, such as a USB flash drive or network location.
+- Review [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
+- Review [Microsoft server applications compatibility](application-compatibility-windows-server-2022.md).
+- Review any third-party application vendor support requirements.
+- Make sure your computer:
+  - Meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
+  - Isn't running in Azure.
+    > [!IMPORTANT]
+    > To do an in-place upgrade of Windows Server running in an Azure VM, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+- Has PowerShell 5.1 or later.
+
+> [!IMPORTANT]
+> If you're upgrading a Windows Server 2012 or Windows Server 2012 R2 server with Configuration Manager installed, follow the pre-upgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
 
 ### Collect diagnostic information
 
