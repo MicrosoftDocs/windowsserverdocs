@@ -83,7 +83,7 @@ To perform the in-place upgrade:
     > Depending on your security settings, User Account Control may prompt you to allow setup to
     > make changes to your device. If you're happy to continue select **Yes**.
 
-1. By default, setup will automatically download updates for the installation. If you're okay with
+1. By default, setup automatically downloads updates for the installation. If you're okay with
    the default settings, select **Next** to continue.
 
    If you don't want Setup to automatically download updates, select **Change how Setup downloads updates**, choose the option appropriate to your environment, and then select **Next**.
