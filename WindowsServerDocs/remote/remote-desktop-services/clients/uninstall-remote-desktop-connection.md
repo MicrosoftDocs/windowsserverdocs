@@ -40,9 +40,8 @@ To uninstall Remote Desktop Connection:
 
 1. Run the following command:
 
-  ```cmd
-  mstsc /uninstall /noPromptBeforeRestart
-  ```
+   ```cmd
+   mstsc /uninstall /noPromptBeforeRestart
 
 When you run the command, it uninstalls Remote Desktop Connection from your machine, then restarts the machine if necessary without prompting.
 
