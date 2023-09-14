@@ -96,7 +96,7 @@ To perform the in-place upgrade:
 
 1. Select **Keep personal files and apps** to choose to do an in-place upgrade, and then select **Next**.
 
-1. After Setup finishes analyzing your device, it displays the **Ready to install screen**. To continue the upgrade, select **Install**.
+1. After Setup finishes analyzing your device, it displays the **Ready to install** screen. To continue the upgrade, select **Install**.
 
 The in-place upgrade starts, and you should see a progress bar. After the upgrade finishes, your server restarts.
 
