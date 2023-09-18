@@ -398,6 +398,8 @@ items:
       href: technologies/netsh/netsh-contexts.md
     - name: Network Shell (Netsh) example batch file
       href: technologies/netsh/netsh-wins.md
+    - name: Netsh bridge
+      href: technologies/netsh/netsh-bridge.md
     - name: Netsh http commands
       href: technologies/netsh/netsh-http.md
     - name: Netsh interface portproxy commands
