@@ -75,6 +75,11 @@ To use SMB over QUIC, you need the following things:
     :::image type="content" source="./media/smb-over-quic/mmccert.png" alt-text="image showing the steps covered 3":::
 
 > [!NOTE]
+> Do not use IP addresses for SMB over QUIC server Subject Alternative Names.
+> 1. IP addresses will require the use of NTLM, even if Kerberos is available from a domain controller or through KDC Proxy.
+> 2. Azure IaaS VMs running SMB over QUIC use NAT for a public interface back to a private interface. SMB over QUIC does not support using the IP address for the server name through a NAT, you must use a fully qualified DNS name that resolves to the public interface IP address only in this case.
+
+> [!NOTE]
 > If you're using a certificate file issued by a third party certificate authority, you can use the Certificates snap-in or Windows Admin Center to import it.
 
 ### Step 2: Configure SMB over QUIC
