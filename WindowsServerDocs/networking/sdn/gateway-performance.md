@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 11/04/2021
+ms.date: 09/18/2023
 ---
 
 # Windows Server 2019 Gateway Performance
@@ -27,6 +27,11 @@ For **IPsec connections**, by default, when you create the connection for you
    3. Restart the gateway VM.
       The active connections on this gateway failover to a redundant gateway VM.
    4. Repeat the previous steps for rest of the gateway VMs.
+
+The following requirements must be met for high performance IPsec connections to work:
+
+- Network Address Translation-Traversal (NAT-T) should be enabled on your on-premises gateway. When enabling high performance IPsec connections, SDN gateway configures a NAT rule, hence you also need to enable NAT-T on your on-premises gateway.
+- The on-premises gateway should allow User Datagram Protocol (UDP) packets on ports 500 and 4500 and protocol 50 and 51.
 
 >[!TIP]
 >For the best performance results, ensure that the cipherTransformationConstant and authenticationTransformConstant in quickMode settings of the IPsec connection uses the **GCMAES256** cipher suite.
