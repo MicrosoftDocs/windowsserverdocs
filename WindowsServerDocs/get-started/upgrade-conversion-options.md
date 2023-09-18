@@ -53,7 +53,7 @@ If you haven't already activated Windows, the bottom right-hand corner of the de
 
 If your server is running an evaluation version of Windows Server Standard or Datacenter edition, you can convert it to an available retail version. Run the following commands in an elevated command prompt or PowerShell session.
 
-1. Determine the current edition name by running the following command. The output is an abbreviated form of the edition name. For example, Windows Server Datacenter (Desktop Experience) edition is `ServerDatacenter`.
+1. Determine the current edition name by running the following command. The output is an abbreviated form of the edition name. For example, Windows Server Datacenter (Desktop Experience) Evaluation edition is `ServerDatacenterEval`.
 
    ```cmd
    DISM /online /Get-CurrentEdition
