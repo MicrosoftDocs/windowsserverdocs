@@ -51,40 +51,38 @@ The SaRA tool troubleshoots by attempting to start up Windows. If Windows return
 
 The following table lists known error codes for Windows Activation, and includes links to relevant sections later in this article that can help you resolve related issues.
 
-<!--This article may need to be split in two: one article for error code lists and one article for actual troubleshooting instructions. The article as-is is quite long.-->
-
 |Error code |Error message |Activation type|
 |-----------|--------------|----------------|
-|[0x8004FE21](#0x8004fe21-this-computer-isnt-running-genuine-windows) |This computer isn't running genuine Windows.  |MAK<br />KMS client |
-|[0x80070005](#0x80070005-access-denied) |Access denied. The requested action requires elevated privileges. |MAK<br />KMS client<br />KMS host |
-|[0x8007007b](#0x8007007b-dns-name-doesnt-exist) |0x8007007b DNS name doesn't exist. |KMS client |
-|[0x80070490](#0x80070490-the-product-key-didnt-work) |The product key you entered didn't work. Check the product key and try again, or enter a different one. |MAK |
-|[0x800706BA](#0x800706ba-the-rpc-server-is-unavailable) |The RPC server is unavailable. |KMS client |
-|[0x8007232A](#0x8007232a-dns-server-failure) |DNS server failure.  |KMS host  |
-|[0x8007232B](#0x8007232b-dns-name-doesnt-exist) |DNS name doesn't exist. |KMS client |
-|[0x8007251D](#0x8007251d-no-records-found-for-dns-query) |No records found for DNS query. |KMS client |
-|[0x80092328](#0x80092328-dns-name-doesnt-exist) |DNS name doesn't exist.  |KMS client |
-|[0xC004B100](#0xc004b100-the-activation-server-determined-that-the-computer-couldnt-be-activated) |The activation server determined that the computer couldn't be activated. |MAK |
-|[0xC004C001](#0xc004c001-the-activation-server-determined-the-specified-product-key-is-invalid) |The activation server determined the specified product key is invalid |MAK|
-|[0xC004C003](#0xc004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |The activation server determined the specified product key is blocked |MAK |
-|[0xC004C008](#0xc004c008-the-activation-server-determined-that-the-specified-product-key-couldnt-be-used) |The activation server determined that the specified product key couldn't be used. |KMS |
-|[0xC004C020](#0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |The activation server reported that the Multiple Activation Key has exceeded its limit. |MAK |
-|[0xC004C021](#0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded) |The activation server reported that the Multiple Activation Key extension limit has been exceeded. |MAK |
-|[0xC004F009](#0xc004f009-the-software-protection-service-reported-that-the-grace-period-expired) |The Software Protection Service reported that the grace period expired. |MAK |
-|[0xC004F00F](#0xc004f00f-the-software-licensing-server-reported-that-the-hardware-id-binding-is-beyond-level-of-tolerance) |The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance. |MAK<br />KMS client<br />KMS host |
-|[0xC004F014](#0xc004f014-the-software-protection-service-reported-that-the-product-key-isnt-available) |The Software Protection Service reported that the product key isn't available |MAK<br />KMS client |
-|[0xC004F02C](#0xc004f02c-the-software-protection-service-reported-that-the-format-for-the-offline-activation-data-is-incorrect) |The Software Protection Service reported that the format for the offline activation data is incorrect. |MAK<br />KMS client |
-|[0xC004F035](#0xc004f035-invalid-volume-license-key) |The Software Protection Service reported that the computer couldn't be activated with a Volume license product key. |KMS client<br />KMS host |
-|[0xC004F038](#0xc004f038-the-count-reported-by-your-key-management-service-kms-is-insufficient) |The Software Protection Service reported that the computer couldn't be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator. |KMS client |
-|[0xC004F039](#0xc004f039-the-key-management-service-kms-isnt-enabled) |The Software Protection Service reported that the computer couldn't be activated. The Key Management Service (KMS) isn't enabled. |KMS client |
-|[0xC004F041](#0xc004f041-the-software-protection-service-determined-that-the-key-management-server-kms-isnt-activated) |The Software Protection Service determined that the Key Management Server (KMS) isn't activated. KMS needs to be activated.  |KMS client |
-|[0xC004F042](#0xc004f042-the-software-protection-service-determined-that-the-specified-key-management-service-kms-cant-be-used) |The Software Protection Service determined that the specified Key Management Service (KMS) can't be used. |KMS client |
-|[0xC004F050](#0xc004f050-the-software-protection-service-reported-that-the-product-key-is-invalid) |The Software Protection Service reported that the product key is invalid. |MAK<br />KMS<br />KMS client |
-|[0xC004F051](#0xc004f051-the-software-protection-service-reported-that-the-product-key-is-blocked) |The Software Protection Service reported that the product key is blocked. |MAK<br />KMS |
-|[0xC004F064](#0xc004f064-the-software-protection-service-reported-that-the-non-genuine-grace-period-expired) |The Software Protection Service reported that the non-genuine grace period expired. |MAK |
-|[0xC004F065](#0xc004f065-the-software-protection-service-reported-that-the-application-is-running-within-the-valid-non-genuine-period) |The Software Protection Service reported that the application is running within the valid non-genuine period. |MAK<br />KMS client |
-|[0xC004F06C](#0xc004f06c-the-request-timestamp-is-invalid) |The Software Protection Service reported that the computer couldn't be activated. The Key Management Service (KMS) determined that the request timestamp is invalid.  |KMS client |
-|[0xC004F074](#0xc004f074-no-key-management-service-kms-could-be-contacted) |The Software Protection Service reported that the computer couldn't be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.  |KMS client |
+|[0x8004FE21](#0x8004fe21-this-computer-isnt-running-genuine-windows) |`This computer is not running genuine Windows.`  |MAK<br />KMS client |
+|[0x80070005](#0x80070005-access-denied) |`Access denied. The requested action requires elevated privileges.` |MAK<br />KMS client<br />KMS host |
+|[0x8007007b](#0x8007007b-dns-name-doesnt-exist) |`0x8007007b DNS name does not exist.` |KMS client |
+|[0x80070490](#0x80070490-the-product-key-didnt-work) |`The product key you entered did not work. Check the product key and try again, or enter a different one.` |MAK |
+|[0x800706BA](#0x800706ba-the-rpc-server-is-unavailable) |`The RPC server is unavailable.` |KMS client |
+|[0x8007232A](#0x8007232a-dns-server-failure) |`DNS server failure.`  |KMS host  |
+|[0x8007232B](#0x8007232b-dns-name-doesnt-exist) |`DNS name does not exist.` |KMS client |
+|[0x8007251D](#0x8007251d-no-records-found-for-dns-query) |`No records found for DNS query.` |KMS client |
+|[0x80092328](#0x80092328-dns-name-doesnt-exist) |`DNS name does not exist.`  |KMS client |
+|[0xC004B100](#0xc004b100-the-activation-server-determined-that-the-computer-couldnt-be-activated) |`The activation server determined that the computer could not be activated.` |MAK |
+|[0xC004C001](#0xc004c001-the-activation-server-determined-the-specified-product-key-is-invalid) |`The activation server determined the specified product key is invalid` |MAK|
+|[0xC004C003](#0xc004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |`The activation server determined the specified product key is blocked` |MAK |
+|[0xC004C008](#0xc004c008-the-activation-server-determined-that-the-specified-product-key-couldnt-be-used) |`The activation server determined that the specified product key could not be used.` |KMS |
+|[0xC004C020](#0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |`The activation server reported that the Multiple Activation Key has exceeded its limit.` |MAK |
+|[0xC004C021](#0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded) |`The activation server reported that the Multiple Activation Key extension limit has been exceeded.` |MAK |
+|[0xC004F009](#0xc004f009-the-software-protection-service-reported-that-the-grace-period-expired) |`The Software Protection Service reported that the grace period expired.` |MAK |
+|[0xC004F00F](#0xc004f00f-the-software-licensing-server-reported-that-the-hardware-id-binding-is-beyond-level-of-tolerance) |`The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance.` |MAK<br />KMS client<br />KMS host |
+|[0xC004F014](#0xc004f014-the-software-protection-service-reported-that-the-product-key-isnt-available) |`The Software Protection Service reported that the product key is not available` |MAK<br />KMS client |
+|[0xC004F02C](#0xc004f02c-the-software-protection-service-reported-that-the-format-for-the-offline-activation-data-is-incorrect) |`The Software Protection Service reported that the format for the offline activation data is incorrect.` |MAK<br />KMS client |
+|[0xC004F035](#0xc004f035-invalid-volume-license-key) |`The Software Protection Service reported that the computer could not be activated with a Volume license product key.` |KMS client<br />KMS host |
+|[0xC004F038](#0xc004f038-the-count-reported-by-your-key-management-service-kms-is-insufficient) |`The Software Protection Service reported that the computer could not be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator.` |KMS client |
+|[0xC004F039](#0xc004f039-the-key-management-service-kms-isnt-enabled) |`The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) is not enabled.` |KMS client |
+|[0xC004F041](#0xc004f041-the-software-protection-service-determined-that-the-key-management-server-kms-isnt-activated) |`The Software Protection Service determined that the Key Management Server (KMS) is not activated. KMS needs to be activated.`  |KMS client |
+|[0xC004F042](#0xc004f042-the-software-protection-service-determined-that-the-specified-key-management-service-kms-cant-be-used) |`The Software Protection Service determined that the specified Key Management Service (KMS) cannot be used.` |KMS client |
+|[0xC004F050](#0xc004f050-the-software-protection-service-reported-that-the-product-key-is-invalid) |`The Software Protection Service reported that the product key is invalid.` |MAK<br />KMS<br />KMS client |
+|[0xC004F051](#0xc004f051-the-software-protection-service-reported-that-the-product-key-is-blocked) |`The Software Protection Service reported that the product key is blocked.` |MAK<br />KMS |
+|[0xC004F064](#0xc004f064-the-software-protection-service-reported-that-the-non-genuine-grace-period-expired) |`The Software Protection Service reported that the non-genuine grace period expired.` |MAK |
+|[0xC004F065](#0xc004f065-the-software-protection-service-reported-that-the-application-is-running-within-the-valid-non-genuine-period) |`The Software Protection Service reported that the application is running within the valid non-genuine period.` |MAK<br />KMS client |
+|[0xC004F06C](#0xc004f06c-the-request-timestamp-is-invalid) |`The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) determined that the request timestamp is invalid.`  |KMS client |
+|[0xC004F074](#0xc004f074-no-key-management-service-kms-could-be-contacted) |`The Software Protection Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.`  |KMS client |
 
 ## Causes and resolutions
 
