@@ -24,14 +24,14 @@ The available commands are:
 
 | Command | Description |
 |--|--|
-| [help](#display-help) | Display a list of commands for the `netsh bridge` context. |
-| [list](#list-bridge) | List all available bridges by their unique bridge GUIDs. |
-| [show adapter](#show-adapter) | List all network adapters that can be bridged and network adapters that already form a bridge. |
-| [create](#create-bridge) | Create a bridge using least two network adapters. |
-| [add](#add-adapter-to-bridge) | Add a network adapter to an existing bridge. |
-| [remove](#remove-adapter-from-bridge) | Remove a bridged network adapter from an existing bridge. |
-| [remove all frp,](#remove-all-adapters-from) | Remove all bridged network adapters from an existing bridge and  destroy the bridge. |
-| [destroy](#destroy-bridge) | Remove all bridged network adapters from an existing bridge and destroy the bridge. |
+| [help](#netsh-bridge-help) | Display a list of commands for the `netsh bridge` context. |
+| [list](#netsh-bridge-list-bridge | List all available bridges by their unique bridge GUIDs. |
+| [show adapter](#netsh-bridge-show-adapter) | List all network adapters that can be bridged and network adapters that already form a bridge. |
+| [create](#netsh-bridge-create-bridge) | Create a bridge using least two network adapters. |
+| [add](#netsh-bridge-add) | Add a network adapter to an existing bridge. |
+| [remove](#netsh-bridge-remove) | Remove a bridged network adapter from an existing bridge. |
+| [remove all from](#netsh-bridge-remove-all-from) | Remove all bridged network adapters from an existing bridge and  destroy the bridge. |
+| [destroy](#netsh-bridge-destroy) | Remove all bridged network adapters from an existing bridge and destroy the bridge. |
 
 ## Netsh bridge syntax
 
