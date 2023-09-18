@@ -25,7 +25,7 @@ The available commands are:
 | Command | Description |
 |--|--|
 | [help](#netsh-bridge-help) | Display a list of commands for the `netsh bridge` context. |
-| [list](#netsh-bridge-list-bridge | List all available bridges by their unique bridge GUIDs. |
+| [list](#netsh-bridge-list-bridge) | List all available bridges by their unique bridge GUIDs. |
 | [show adapter](#netsh-bridge-show-adapter) | List all network adapters that can be bridged and network adapters that already form a bridge. |
 | [create](#netsh-bridge-create-bridge) | Create a bridge using least two network adapters. |
 | [add](#netsh-bridge-add) | Add a network adapter to an existing bridge. |
