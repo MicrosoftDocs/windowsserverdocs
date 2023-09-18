@@ -35,11 +35,11 @@ The following general guidelines are for in-place upgrade paths where Windows Se
 
 You can convert evaluation versions and editions of Windows Server to retail versions and editions. For example, if you've installed the evaluation version of Standard (Desktop Experience) edition, you can convert it to the retail version of either the Standard (Desktop Experience) edition or the Datacenter (Desktop Experience) edition.
 
-However, you can't convert all Windows Server evaluation versions and editions to all retail versions or editions. For example, if you've installed the evaluation Datacenter (Desktop Experience) edition, you can convert it only to the retail Datacenter (Desktop Experience) edition, not to the Standard retail version.
+However, you can't convert all Windows Server evaluation versions and editions to all retail versions or editions. For example, if you've installed the evaluation Datacenter edition, you can convert it only to the retail Datacenter edition, not to the retail Standard edition.
 
 In Windows Server versions after 2016, if you've installed Desktop Experience evaluation versions, you can't convert them to Core retail versions. If you install the Standard Core evaluation version, you can convert it only to retail Datacenter Core, not to retail Standard Core.
 
-It's important to run the `DISM /online /Get-TargetEditions` command as instructed in the following procedure to determine which retail versions you can upgrade to. If the retail version you want isn't listed as a target version, you need to do a fresh install of the retail Windows Server version you want.
+It's important to run the `DISM /online /Get-TargetEditions` command as instructed in the following procedure to determine which retail versions you can upgrade to. If the retail version you want isn't listed as a target version, you need to do a fresh install of the retail version you want.
 
 > [!NOTE]
 > To verify that your server is running an evaluation version, you can run either of the following commands at an elevated command prompt:
@@ -51,7 +51,7 @@ If you haven't already activated Windows, the bottom right-hand corner of the de
 
 ### Windows Server Standard or Datacenter
 
-If your server is running an evaluation version of Windows Server Standard or Datacenter edition, you can convert it to an available retail version by running the following commands at an elevated command prompt or PowerShell session.
+If your server is running an evaluation version of Windows Server Standard or Datacenter edition, you can convert it to an available retail version by running the following commands in an elevated command prompt or PowerShell session.
 
 1. Determine the current edition name by running the following command. The output is an abbreviated form of the edition name. For example, Windows Server Datacenter (Desktop Experience) edition is `ServerDatacenter`.
 
@@ -87,7 +87,7 @@ If your server is running an evaluation version of Windows Server Standard or Da
 > For more information about Dism.exe, see [DISM Command-line options](/previous-versions/orphan-topics/ws.10/dd772580(v=ws.10)).
 
 > [!IMPORTANT]
-> You can't convert an Active Directory domain controller from an evaluation to a retail version. In this case, install an additional domain controller on a server that runs a retail version, migrate any FSMO roles held, and remove Active Directory Domain Services (AD DS) from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server](../identity/ad-ds/deploy//identity/ad-ds/deploy/upgrade-domain-controllers.md).
+> You can't convert an Active Directory domain controller from an evaluation to a retail version. In this case, install an additional domain controller on a server that runs a retail version, migrate any FSMO roles held, and remove Active Directory Domain Services (AD DS) from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
 
 ### Windows Server Essentials
 
