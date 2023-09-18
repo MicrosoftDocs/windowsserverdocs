@@ -2,7 +2,7 @@
 title: Resolve Windows activation error codes
 description: Learn how to troubleshoot activation error codes
 ms.topic: troubleshooting
-ms.date: 8/24/2023
+ms.date: 9/19/2023
 author: kaushika-msft
 ms.author: kaushika
 ms.custom:
@@ -88,7 +88,11 @@ The following table lists known error codes for Windows Activation, and includes
 
 ### 0x8004FE21 This computer isn't running genuine Windows
 
-<!--Missing intro-->
+When you receive this error, you see the following output:
+
+```output
+This computer is not running genuine Windows.
+```
 
 #### 0x8004FE21 Causes
 
@@ -125,7 +129,11 @@ To resolve this issue:
 
 ### 0x8007007b DNS name doesn't exist
 
-<!--Missing intro-->
+When you encounter this error, you see the following output:
+
+```output
+DNS name does not exist.
+```
 
 #### 0x8007007b Cause
 
@@ -161,7 +169,11 @@ To work around this issue and activate the computer:
 
 ### 0x800706BA The RPC server is unavailable
 
-<!--Missing intro-->
+When you encounter this error, you see the following output:
+
+```output
+The RPC server is unavailable.
+```
 
 #### 0x800706BA cause
 
@@ -186,7 +198,11 @@ You can also follow the instructions in [Common troubleshooting procedures for K
 
 ### 0x8007232A DNS server failure
 
-<!--Missing intro-->
+When you encounter this issue, you see the following output:
+
+```output
+DNS server failure.
+```
 
 #### 0x8007232A cause
 
@@ -198,7 +214,11 @@ To resolve this issue, troubleshoot your network connections and DNS by followin
 
 ### 0x8007232B DNS name doesn't exist
 
-<!--Missing intro-->
+When you encounter this error, you see the following output:
+
+```output
+DNS name does not exist
+```
 
 #### 0x8007232B cause
 
@@ -220,7 +240,11 @@ If these solutions don't resolve the issue, see the instructions in [Common trou
 
 ### 0x8007251D No records found for DNS query
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+No records found for DNS query.
+```
 
 #### 0x8007251D cause
 
@@ -232,7 +256,11 @@ To resolve this issue, follow the instructions in [Common troubleshooting proced
 
 ### 0x80092328 DNS name doesn't exist
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+DNS name does not exist.
+```
 
 #### 0x80092328 cause
 
@@ -244,7 +272,11 @@ To resolve this issue, follow the instructions in [Common troubleshooting proced
 
 ### 0xC004B100 The activation server determined that the computer couldn't be activated
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The activation server determined that the computer could not be activated.
+```
 
 #### 0xC004B100 cause
 
@@ -256,7 +288,11 @@ To troubleshoot this issue, verify that the MAK you're using is the same MAK tha
 
 ### 0xC004C001 The activation server determined the specified product key is invalid
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The activation server determined the specified product key is invalid.
+```
 
 #### 0xC004C001 cause
 
@@ -268,7 +304,11 @@ You can try reentering the MAK to make sure you entered the correct information.
 
 ### 0xC004C003 The activation server determined the specified product key is blocked
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The activation server determined the specified product key is blocked.
+```
 
 #### 0xC004C003 cause
 
@@ -280,7 +320,11 @@ To obtain a new MAK, contact the [Microsoft Licensing Activation Centers](https:
 
 ### 0xC004C008 The activation server determined that the specified product key couldn't be used
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The activation server determined that the specified product key could not be used.
+```
 
 #### 0xC004C008 cause
 
@@ -292,7 +336,11 @@ If you require more activations, contact the [Microsoft Licensing Activation Cen
 
 ### 0xC004C020 The activation server reported that the Multiple Activation Key has exceeded its limit
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The activation server reported that the Multiple Activation Key has exceeded its limit.
+```
 
 #### 0xC004C020 cause
 
@@ -302,9 +350,13 @@ This error message appears when the MAK exceeds its activation limit. By design,
 
 If you require more activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
-### 0xC004C021 The activation server reported that the Multiple Activation Key extension limit has been exceeded
+### 0xC004C021 Multiple Activation Key extension limit exceeded
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The activation server reported that teh Multiple Activation Key extension limit has been exceeded.
+```
 
 #### 0xC004C021 cause
 
@@ -316,7 +368,11 @@ If you need more activations, contact the [Microsoft Licensing Activation Center
 
 ### 0xC004F009 The Software Protection Service reported that the grace period expired
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that the grace period expired.
+```
 
 #### 0xC004F009 cause
 
@@ -326,9 +382,13 @@ This error message appears when the grace period expires before you activate the
 
 For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
-### 0xC004F00F The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance
+### 0xC004F00F hardware ID binding is beyond level of tolerance
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The Software Licensing Server reported that the Hardware ID binding is beyond level of tolerance.
+```
 
 #### 0xC004F00F cause
 
@@ -351,7 +411,11 @@ If you're using KMS activation, try one of the following things:
 
 ### 0xC004F014 The Software Protection Service reported that the product key isn't available
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that the product key is not available.
+```
 
 #### 0xC004F014 cause
 
@@ -366,9 +430,13 @@ If you're using KMS activation:
 1. Check the **Pid.txt** file located on the installation media in the \sources folder for a KMS Setup key.
 1. Install the key.
 
-### 0xC004F02C The Software Protection Service reported that the format for the offline activation data is incorrect
+### 0xC004F02C the format for the offline activation data is incorrect
 
-<!--Missing intro-->
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that the format for the offline activation data is incorrect.
+```
 
 #### 0xC004F02C cause
 
@@ -437,13 +505,15 @@ This issue occurs when the KMS host hasn't been activated.
 
 #### Solution: activate the KMS host
 
-To resolve this issue, activate the KMS host by using either online or telephone activation.
+To resolve this issue, activate the KMS host by using either [online or telephone activation](/windows/deployment/volume-activation/activate-using-key-management-service-vamt#configure-kms-in-windows-10).
 
-<!--Should we link to instructions for how to do this?-->
+### 0xC004F042 the specified Key Management Service (KMS) can't be used
 
-### 0xC004F042 The Software Protection Service determined that the specified Key Management Service (KMS) can't be used
+When you encounter this error, you see this error message:
 
-<!--No intro-->
+```output
+The Software Protection Service determined that teh specified Key Management Service cannot be read.
+```
 
 #### 0xC004F042 cause
 
@@ -455,7 +525,11 @@ To resolve this issue, make sure your KMS clients are connection to the correct 
 
 ### 0xC004F050 The Software Protection Service reported that the product key is invalid
 
-<!--No intro-->
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that the product key is invalid
+```
 
 #### 0xC004F050 cause
 
@@ -467,7 +541,11 @@ To resolve this issue, make sure you're installing the correct KMS key on the co
 
 ### 0xC004F051 The Software Protection Service reported that the product key is blocked
 
-<!--no intro-->
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that the product key is blocked.
+```
 
 #### 0xC004F051 cause
 
@@ -479,7 +557,11 @@ To resolve this issue, get a new MAK or KMS key, install it on the system, then 
 
 ### 0xC004F064 The Software Protection Service reported that the non-genuine grace period expired
 
-<!--no intro-->
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that teh non-genuine grace period expired.
+```
 
 #### 0xC004F064 cause
 
@@ -489,7 +571,13 @@ This error occurs when Windows Activation Tools (WAT) determines that a system t
 
 To resolve this issue, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers) for assistance.
 
-### 0xC004F065 The Software Protection Service reported that the application is running within the valid non-genuine period
+### 0xC004F065 the application is running within the valid non-genuine period
+
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that the application is running within the valid non-genuine period.
+```
 
 #### 0xC004F065 cause
 
