@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/23/2022
+ms.date: 09/06/2023
 ---
 
 # xcopy
@@ -32,20 +32,20 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/v|Verifies each file as it is written to the destination file to make sure that the destination files are identical to the source files.|
 |/q|Suppresses the display of `xcopy` messages.|
 |/f|Displays source and destination file names while copying.|
-|/l|Generates a list of files that are to be copied, but does not actively copy the files.|
-|/g|Creates decrypted _destination_ files when the destination does not support encryption.|
-|/d [:MM-DD-YYYY]|Copies source files changed on or after the specified date only. If you do not include a *MM-DD-YYYY* value, `xcopy` copies all _source_ files that are newer than existing _destination_ files. This command-line option allows you to update files that have changed.|
+|/l|Generates a list of files that are to be copied, but doesn't actively copy the files.|
+|/g|Creates decrypted _destination_ files when the destination doesn't support encryption.|
+|/d [:MM-DD-YYYY]|Copies source files changed on or after the specified date only. If you don't include a *MM-DD-YYYY* value, `xcopy` copies all _source_ files that are newer than existing _destination_ files. This command-line option allows you to update files that have changed.|
 |/u|Copies files from _source_ that exist on _destination_ only.|
-|/i|If _source_ is a directory or contains wildcards and _destination_ does not exist, `xcopy` assumes _destination_ specifies a directory name and creates a new directory. Then, `xcopy` copies all specified files into the new directory. By default, `xcopy` prompts you to specify whether _destination_ is a file or a directory.|
-|/s|Copies directories and subdirectories, unless they are empty. If you omit **/s**, `xcopy` works within a single directory.|
-|/e|Copies all subdirectories, even if they are empty. Use **/e** with the **/s** and **/t** command-line options.|
+|/i|If _source_ is a directory or contains wildcards and _destination_ doesn't exist, `xcopy` assumes _destination_ specifies a directory name and creates a new directory. Then, `xcopy` copies all specified files into the new directory. By default, `xcopy` prompts you to specify whether _destination_ is a file or a directory.|
+|/s|Copies directories and subdirectories, unless they're empty. If you omit **/s**, `xcopy` works within a single directory.|
+|/e|Copies all subdirectories, even if they're empty. Use **/e** with the **/s** and **/t** command-line options.|
 |/t|Copies the subdirectory structure (that is, the tree) only, not files. To copy empty directories, you must include the **/e** command-line option.|
 |/k|Copies files and retains the read-only attribute on _destination_ files if present on the _source_ files. By default, `xcopy` removes the read-only attribute.|
 |/r|Copies read-only files.|
-|/h|Copies files with hidden and system file attributes. By default, `xcopy` does not copy hidden or system files|
-|/a|Copies only _source_ files that have their archive file attributes set. **/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Related links](#related-links).|
+|/h|Copies files with hidden and system file attributes. By default, `xcopy` doesn't copy hidden or system files|
+|/a|Copies only _source_ files that have their archive file attributes set. **/a** doesn't modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Related links](#related-links).|
 |/m|Copies _source_ files that have their archive file attributes set. Unlike **/a**, **/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Related links](#related-links).|
-|/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the _destination_ file system. The _destinatio_* file system can be FAT or NTFS.|
+|/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the _destination_ file system. The _destination_ file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
 |/exclude:FileName1[+[FileName2]][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file. When any of the strings match any part of the absolute path of the file to be copied, that file will be excluded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
@@ -65,11 +65,11 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
 - Using **/y** in the COPYCMD environment variable.
 
-  You can use **/y** in the COPYCMD environment variable. You can override this command by using **/-y** on the command line. By default, you are prompted to overwrite.
+  You can use **/y** in the COPYCMD environment variable. You can override this command by using **/-y** on the command line. By default, you're prompted to overwrite.
 
 - Copying encrypted files
 
-  Copying encrypted files to a volume that does not support EFS results in an error. Decrypt the files first or copy the files to a volume that does support EFS.
+  Copying encrypted files to a volume that doesn't support EFS results in an error. Decrypt the files first or copy the files to a volume that does support EFS.
 
 - Appending files
 
@@ -81,13 +81,13 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 
 - Specifying whether _destination_ is a file or directory
 
-  If _destination_ does not contain an existing directory and does not end with a backslash (\), the following message appears:
+  If _destination_ doesn't contain an existing directory and doesn't end with a backslash (\), the following message appears:
 
   ```
   Does <Destination> specify a file name or directory name on the target(F = file, D = directory)?
   ```
 
-Press F if you want the file or files to be copied to a file. Press D if you want the file or files to be copied to a directory.
+  Press F if you want the file or files to be copied to a file. Press D if you want the file or files to be copied to a directory.
 
   You can suppress this message by using the **/i** command-line option, which causes `xcopy` to assume that the destination is a directory if the source is more than one file or a directory.
 
@@ -95,10 +95,14 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 
   The `xcopy` command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Related links](#related-links).
 
-- Comparing `**`xcopy`**` and **diskcopy**
+- Comparing `xcopy` and **diskcopy**
 
   If you have a disk that contains files in subdirectories and you want to copy it to a disk that has a different format, use the `xcopy` command instead of **diskcopy**. Because the **diskcopy** command copies disks track by track, your source and destination disks must have the same format. The `xcopy` command does not have this requirement. Use `xcopy` unless you need a complete disk image copy.
 
+- Insufficient memory error
+
+  An "insufficient memory" error may occur if running `xcopy` to copy a file or folder whose filename path is greater than 255 characters.
+  
 - Exit codes for `xcopy`
 
   To process exit codes returned by `xcopy`, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Related links](#related-links). The following table lists each exit code and a description.

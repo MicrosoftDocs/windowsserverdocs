@@ -3,7 +3,7 @@ title: Windows LAPS overview
 description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
 author: jay98014
 ms.author: jsimmons
-ms.date: 11/08/2022
+ms.date: 09/06/2023
 ms.topic: overview
 ---
 
@@ -36,23 +36,6 @@ The  Windows LAPS on-premises Active Directory scenarios are fully supported as 
 >
 > [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 
-### Legacy LAPS Interop issues with the April 11 2023 Update
-
-> [!IMPORTANT]
-> The April 11, 2023 update has two potential regressions related to interoperability with legacy LAPS scenarios. Please read the following to understand the scenario parameters plus possible workarounds.
->
-> Issue #1: If you install the legacy LAPS CSE on a device patched with the April 11, 2023 security update and an applied legacy LAPS policy, both Windows LAPS and legacy LAPS will enter a broken state where neither feature will update the password for the managed account. Symptoms include Windows LAPS event log IDs 10031 and 10033, as well as legacy LAPS event ID 6. The password that is stored in Active Directory will not match the password stored on the local account, resulting in authentication errors. Microsoft is working on a fix for this issue.
->
-> Two primary workarounds exist for the above issue:
->
-> a. Uninstall the legacy LAPS CSE (result: Windows LAPS will take over management of the managed account)
->
-> b. [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) (result: legacy LAPS will take over management of the managed account)
->
-> **UPDATE:** the May 9th, 2023 update contains a fix for issue #1 on all supported Windows LAPS platforms. The fix prevents the issue from reoccurring in future, but does not immediately solve the problem of the local password not matching the AD-stored password. The passwords will be made consistent the next time the legacy LAPS CSE runs during a GPO refresh and sees an expired password expiry time in AD. You can accelerate that process by manually forcing a pwd expiry via Reset-AdmPwdPassword.
->
-> Issue #2: If you apply a legacy LAPS policy to a device patched with the April 11, 2023 update, Windows LAPS will immediately enforce\honor the legacy LAPS policy, which may be disruptive (for example if done during OS deployment workflow). [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) may also be used to prevent those issues.
-
 ## Benefits of using Windows LAPS
 
 Use Windows LAPS to regularly rotate and manage local administrator account passwords and get these benefits:
@@ -63,9 +46,17 @@ Use Windows LAPS to regularly rotate and manage local administrator account pass
 - A fine-grained security model (access control lists and optional password encryption) for securing passwords that are stored in Windows Server Active Directory
 - Support for the Azure role-based access control model for securing passwords that are stored in Azure Active Directory
 
-Watch this video to learn about Windows LAPS.
+## Informational videos
+
+The following videos offer an informative way to learn more about the Windows LAPS feature.
+
+Windows Technical Takeoff presentation (November 2022):
 
 >[!Video https://www.youtube.com/embed/jdEDIXm4JgU]
+
+Windows Tackling Tech discussion (August 2023):
+
+>[!Video https://www.youtube.com/embed/bcs1gPB4dOQ]
 
 ## Key Windows LAPS scenarios
 
@@ -160,6 +151,7 @@ If you aren't sure where your feedback should go, submit it using any of the abo
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 - [Windows LAPS Troubleshooting Guidance](/troubleshoot/windows-server/windows-security/windows-laps-troubleshooting-guidance)
+- [LAPS PowerShell module reference](/powershell/module/laps)
 
 ## Next steps
 

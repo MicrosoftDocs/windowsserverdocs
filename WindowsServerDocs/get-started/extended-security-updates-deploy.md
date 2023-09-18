@@ -78,7 +78,7 @@ you'll be billed monthly via your Azure subscription. You also don't need to act
 
 Azure Arc-enabled servers also enable to you to use other Azure services, such as:
 
-- Update Management Center.
+- Azure Update Manager.
 - Microsoft Defender for Cloud.
 - Azure Policy (Machine Configuration).
 - Azure Monitor (VM Insights).
@@ -97,7 +97,7 @@ To prepare for activating Windows Server 2012 and 2012R2 ESUs on your Arc-enable
    [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 To learn more about ESUs with Azure Arc, see
-[Prepare to deliver Extended Security Updates for Windows Server 2012](/azure/azure-arc/servers/prepare-extended-security-updates).
+[Prepare to deliver Extended Security Updates for Windows Server 2012](/azure/azure-arc/servers/prepare-extended-security-updates) and [Deliver Extended Security Updates for Windows 2012 and 2012 R2](/azure/azure-arc/servers/deliver-extended-security-updates).
 
 ### Access your Multiple Activation Key from the Microsoft 365 Admin Center
 

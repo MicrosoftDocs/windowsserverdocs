@@ -81,6 +81,8 @@
       href: automatic-reconnection-lock-screen.md
     - name: Set up email discovery for your users
       href: rds-email-discovery.md
+    - name: Fair Share technologies
+      href: fair-share-enabled-by-default-rds.md
     - name: License your Remote Desktop deployment
       href: rds-client-access-license.md
       items:

@@ -338,6 +338,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [fsutil](fsutil.md)
   - [fsutil 8dot3name](fsutil-8dot3name.md)
   - [fsutil behavior](fsutil-behavior.md)
+  - [fsutil devdrv](fsutil-devdrv.md)
   - [fsutil dirty](fsutil-dirty.md)
   - [fsutil file](fsutil-file.md)
   - [fsutil fsinfo](fsutil-fsinfo.md)

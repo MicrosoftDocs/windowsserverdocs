@@ -5,8 +5,7 @@ ms.topic: article
 ms.assetid: 48c60816-fb8b-447c-9c8e-800c2e05b14f
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/12/2016
+ms.date: 09/13/2023
 ---
 # Credentials Processes in Windows Authentication
 
@@ -22,7 +21,7 @@ Local security information is stored in the registry under **HKEY_LOCAL_MACHINE\
 
 The following diagram shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.
 
-![Diagram that shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.](../media/credentials-processes-in-windows-authentication/AuthN_LSA_Architecture_Client.gif)
+![Diagram that shows the components that are required and the paths that credentials take through the system to authenticate the user or process for a successful logon.](../media/credentials-processes-in-windows-authentication/authn_lsa_architecture_client.png)
 
 The following table describes each component that manages credentials in the authentication process at the point of logon.
 
@@ -124,7 +123,8 @@ The credential provider enumerates logon tiles in the following instances:
 
 The following diagram shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.
 
-![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic](../media/credentials-processes-in-windows-authentication/AuthN_CredMan_CredProv.gif)
+![Diagram that shows the credential process for the operating systems designated in the **Applies To** list at the beginning of this topic.](../media/credentials-processes-in-windows-authentication/authn_credman_credprov.png)
+
 
 ## <a name="BKMK_CredentialInputForApplicationAndServiceLogon"></a>Credential input for application and service logon
 Windows authentication is designed to manage credentials for applications or services that do not require user interaction. Applications in user mode are limited in terms of what system resources they have access to, while services can have unrestricted access to the system memory and external devices.

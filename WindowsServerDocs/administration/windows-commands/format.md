@@ -50,6 +50,7 @@ format volume [/Q]
 | /DAX:`<state>` | NTFS only. Enable direct access storage (DAX) mode for this volume. In DAX mode, the volume is accessed via the memory bus, boosting IO performance. A volume can be formatted with DAX mode only if the hardware is DAX capable. State is either **enable** or **disable**. **/DAX** is considered the same as **/DAX:enable**. |
 | /LogSize::`<size>` | NTFS only Specifies the size for NTFS log file in kilobytes. The minimum supported size is 2MB, so specifying a size smaller than 2MB results in a 2MB log file. Zero indicates the default value. The default value generally depends on the volume size. |
 | /NoRepairLogs | NTFS only. Disables NTFS repair logs. If the **spotfix** flag for chkdsk is specified (for example, chkdsk /spotfix), then the /NoReairLogs parameter doesn't work. |
+| /DevDrv | ReFS Only: Format the volume as a dev drive.  A dev drive or a developer volume, is a volume optimized for performance of developer scenarios.  Gives administrators control over what mini-filters are attached to this volume. |
 | /? | Displays help at the command prompt. |
 
 ## Remarks
