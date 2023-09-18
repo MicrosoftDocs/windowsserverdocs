@@ -86,6 +86,8 @@ The following table lists known error codes for Windows Activation, and includes
 
 ## Causes and resolutions
 
+This section describes the causes of each error message as well as troubleshooting steps you can take to resolve them.
+
 ### 0x8004FE21 This computer isn't running genuine Windows
 
 When you receive this error, you see the following output:
