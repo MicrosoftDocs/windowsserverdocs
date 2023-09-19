@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
 author: xelu86
 ms.author: wscontent
-ms.date: 06/05/2023
+ms.date: 09/08/2023
 ---
 
 # shutdown
@@ -27,7 +27,7 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 | /s | Shuts down the computer. |
 | /sg | Shuts down the computer. On the next boot, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /r | Restarts the computer after shutdown. |
-| /g | Shuts down the computer. On the next restart, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
+| /g | Fully shuts down and restarts the computer. On restart, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /a | Aborts a system shutdown. This can only be used during the time-out period. Combine with /fw to clear any pending boots to firmware. |
 | /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it shuts down when you use **/p**, but the power to the computer will remain on. |
 | /h | Puts the local computer into hibernation, if hibernation is enabled. The **/f** switch can be used with the **/h** switch. |

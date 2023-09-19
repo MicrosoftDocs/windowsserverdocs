@@ -6,6 +6,7 @@ author: billmath
 manager: amycolannino
 ms.date: 06/15/2023
 ms.topic: article
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # Configure Azure AD Multi-Factor Authentication as authentication provider using AD FS

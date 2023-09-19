@@ -25,7 +25,8 @@ Below are general guidelines for in-place upgrade paths where Windows Server is 
 - Upgrades from pre-release versions (previews) of Windows Server are not supported. Perform a clean installation of Windows Server.
 - Upgrades that switch from a Server Core installation to a Server with Desktop Experience installation (or vice versa) are not supported.
 - Upgrades from a previous Windows Server installation to an evaluation copy of Windows Server are not supported. Evaluation versions should be installed as a clean installation.
-- You can only change from Standard edition to Datacenter edition when upgrading. Changing from Datacenter edition to Standard edition is not supported.
+- When upgrading from a previous version to a new version, by default, you retain the existing operating system edition. You upgrade from Standard (previous version) to Standard (new version), from Datacenter (previous version) to Datacenter (new version), or from Datacenter: Azure Edition (previous version) to Datacenter: Azure Edition (new version).
+- Alternatively, you can change from Standard to Datacenter, or to Datacenter: Azure Edition when upgrading. You can also change from Datacenter to Datacenter: Azure Edition. Changing from Datacenter to Standard, or from Datacenter: Azure Edition to either Standard or Datacenter is not supported.
 
 > [!IMPORTANT]
 > If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.

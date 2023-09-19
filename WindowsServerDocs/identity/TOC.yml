@@ -55,17 +55,14 @@
     - name: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
       href: solution-guides/certificate-enrollment-certificate-key-based-renewal.md
   - name: Active Directory Domain Services
-    href: ad-ds/active-directory-Domain-Services.md
     items:
+    - name: Active Directory Domain Services Overview
+      href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
     - name: What's new in Active Directory Domain Services
       href: whats-new-active-directory-domain-services.md
     - name: AD DS Getting started
-      href: ad-ds/AD-DS-Getting-started.md
       items:
-      - name: Active Directory Domain Services Overview
-        href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
       - name: Active Directory Administrative Center
-        href: ad-ds/get-started/adac/active-directory-Administrative-Center.md
         items:
         - name: AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History
           href: ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md
@@ -441,7 +438,6 @@
         - name: Additional Resources
           href: additional-Resources_12.md
   - name: Active Directory Federation Services
-    href: active-directory-Federation-Services.md
     items:
     - name: AD FS Overview
       href: ad-fs/AD-FS-Overview.md
@@ -986,6 +982,8 @@
       items:
       - name: What is the Certification Authority Role Service?
         href: ad-cs/certification-authority-role.md
+      - name: Certification Authority Web Enrollment Role Service
+        href: ad-cs/certificate-authority-web-enrollment.md
       - name: PKI design considerations
         href: ad-cs/pki-design-considerations.md
       - name: Network Device Enrollment Service
@@ -998,6 +996,12 @@
         href: ad-cs/create-domain-user-account-ndes-service-account.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
+      - name: Request certificates using Web Enrollment
+        href: ad-cs/request-certificate-windows-server.md
+      - name: "Submit certificate requests using a PKCS #10 or PKCS #7 file"
+        href: ad-cs/submit-pkcs-certificate-request.md
+      - name: Retrieve base and delta CRLs
+        href: ad-cs/retrieve-base-and-delta-crl.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
