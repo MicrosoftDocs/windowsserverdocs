@@ -10,8 +10,6 @@ manager: dcscontentpm
 
 # Guidelines for troubleshooting the Key Management Service (KMS)
 
-<!--Is this a pure troubleshooting article or would it work better as a conceptual article?-->
-
 Enterprise customers set up Key Management Service (KMS) as part of their deployment process because it lets them use a simple, straightforward process to activate Windows in their environments. Usually, once you set up the KMS host, the KMS clients connect to the host automatically and activate on their own. However, sometimes the process doesn't work as expected. This article walks you through how to troubleshoot any issues you may encounter.
 
 For more information about event log entries and the `slmgr.vbs` script, see [Volume Activation Technical Reference](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502529(v=ws.11)).
@@ -101,7 +99,7 @@ To see verbose output from the Software Licensing service, open an elevated Comm
 
 Here are some variables you should pay attention to in the output while troubleshooting:
 
-- *Name*, which tells you which edition of Windows the KMS client system is using. You can use this variable to verify that the version of WIndows you're trying to activate is compatible with KMS.
+- *Name*, which tells you which edition of Windows the KMS client system is using. You can use this variable to verify that the version of Windows you're trying to activate is compatible with KMS.
 - *Description*, which shows you which key was installed. For example, `VOLUME_KMSCLIENT` indicates that the system has installed the KMS Client Setup Key, or GVLK, which is the default configuration for volume license media. A system with a GVLK automatically tries to activate by using a KMS host. If you see a different value here, such as MAK, you must reinstall the GVLK to configure this system as a KMS client. You can manually install the key by following the instructions to run `slmgr.vbs /ipk <GVLK>` in [KMS client setup keys](kmsclientkeys.md), or follow the directions in [Volume Activation Management Tool (VAMT) Technical Reference](/windows/deployment/volume-activation/volume-activation-management-tool) to use the VAMT instead.
 - The *Partial Product Key*, which you can use to determine whether the KMS Client Setup Key matches the operating system the KMS client is using. By default, the correct key is present on systems that are built using media from the Volume License Service Center (VLSC) portal. In some cases, customers may use Multiple Activation Key (MAK) activation until there are enough systems in the environment to support KMS activation. You must install the KMS Client Setup key on these systems to transition them from MAK to KMS. Use VAMT to install this key and make sure you're using the correct key.
 - *License Status* shows the status of the KMS client system. For a system activated by KMS, this value should be **Licensed**. Any other value may indicate that there's a problem. For example, if the KMS host is functioning correctly and the KMS client still doesn't activate or is stuck in a **Grace** state, that means something is preventing the client from reaching the host system. This blockage can be a firewall issue, network outage, and so on.
