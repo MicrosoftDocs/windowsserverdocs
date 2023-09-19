@@ -86,7 +86,7 @@ The following table lists known error codes for Windows Activation, and includes
 
 ## Causes and resolutions
 
-This section describes the causes of each error message as well as troubleshooting steps you can take to resolve them.
+This section describes the causes of each error message and troubleshooting steps you can take to resolve them.
 
 ### 0x8004FE21 This computer isn't running genuine Windows
 
@@ -188,11 +188,11 @@ You can encounter this issue because of the following things:
 
 On the KMS host, make sure you've enabled the firewall exception for the Key Management Service on TCP port 1688.
 
-### Solution 2: inspect DNS SRV records
+#### Solution 2: inspect DNS SRV records
 
 Check your DNS SRV records and make sure they point to a valid KMS host.
 
-### Solution 3: Troubleshoot network connections
+#### Solution 3: Troubleshoot network connections
 
 If you still see this error after performing solutions 1 and 2, check your network connections to make sure you can access the server.
 
@@ -400,7 +400,7 @@ This error message appears when the system hardware changes or its drivers updat
 
 If you're using MAK activation, reactivate the system phone by using either online or phone activation during the Out of Tolerance (OOT) grace period.
 
-### Solution 2: restart Windows or run a command
+#### Solution 2: restart Windows or run a command
 
 If you're using KMS activation, try one of the following things:
 
