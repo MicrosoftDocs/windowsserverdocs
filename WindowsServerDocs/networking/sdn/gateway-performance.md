@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: Windows Server 2019 Gateway Performance"
-title: Windows Server 2019 Gateway Performance
+description: "Learn more about SDN gateway performance"
+title: SDN gateway performance
 manager: grcusanz
 ms.topic: how-to
 ms.author: anpaul
@@ -8,15 +8,15 @@ author: AnirbanPaul
 ms.date: 09/18/2023
 ---
 
-# Windows Server 2019 Gateway Performance
+# SDN gateway performance
 
->Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 22H2 and 21H2
 
 In Windows Server 2016, one of the customer concerns was the inability of SDN gateway to meet the throughput requirements of modern networks. The network throughput of IPsec and GRE tunnels had limitations with the single connection throughput for IPsec connectivity being about 300 Mbps and for GRE connectivity being about 2.5 Gbps.
 
-We have improved significantly in Windows Server 2019, with the numbers soaring to 1.8 Gbps and 15 Gbps for IPsec and GRE connections, respectively. All this, with significant reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
+Starting with Windows Server 2019, we have significantly improved SDN gateway performance, with the numbers soaring to 1.8 Gbps and 15 Gbps for IPsec and GRE connections, respectively. All this, with significant reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
 
-## Enable high performance with gateways in Windows Server 2019
+## Enable high performance with gateways
 
 For **GRE connections**, once you deploy/upgrade to Windows Server 2019 builds on the gateway VMs, you should automatically see the improved performance. No manual steps are involved.
 
