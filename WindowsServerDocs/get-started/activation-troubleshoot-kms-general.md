@@ -2,7 +2,7 @@
 title: Guidelines for troubleshooting KMS
 description: Provides information about the KMS service, and suggests tools and approaches for troubleshooting activation issues
 ms.topic: troubleshooting
-ms.date: 8/22/2023
+ms.date: 9/19/2023
 author: Teresa-Motiv
 ms.author: wscontent
 manager: dcscontentpm
@@ -40,7 +40,7 @@ To see verbose output from the Software Licensing service, open an elevated comm
 
 Here are some variables you should pay attention to in the output while troubleshooting:
 
-- The *Version Information* is at the top of the `slmgr.vbs /dlv` output. The version information is useful for determining whether the service is up-to-date. Making sure everything's up to date is important because the KMS service support different KMS host keys. You can use this data to evaluate whether or not the version you're currently using supports the KMS host key you're trying to install. For more information about updates, see [An update is available for Windows Vista and for Windows Server 2008 to extend KMS activation support for Windows 7 and for Windows Server 2008 R2](https://support.microsoft.com/help/968912/an-update-is-available-for-windows-vista-and-for-windows-server-2008-t).
+- The *Version Information* is at the top of the `slmgr.vbs /dlv` output. The version information is useful for determining whether the service is up-to-date. Making sure everything's up to date is important because the KMS service supports different KMS host keys. You can use this data to evaluate whether or not the version you're currently using supports the KMS host key you're trying to install. For more information about updates, see [An update is available for Windows Vista and for Windows Server 2008 to extend KMS activation support for Windows 7 and for Windows Server 2008 R2](https://support.microsoft.com/help/968912/an-update-is-available-for-windows-vista-and-for-windows-server-2008-t).
 - The *Name* indicates which edition of Windows is running on the KMS host system. You can use this information to troubleshoot issues that involve adding or changing the KMS host key. For example, you can use this information to verify if the OS edition supports the key you're trying to use.
 - The *Description* shows you which key is currently installed. Use this field to verify whether the key that first activated the service was the correct one for the KMS clients you've deployed.
 - The *License Status* shows the status of the KMS host system. The value should be **Licensed**. Any other value means you should reactivate the host.
@@ -72,7 +72,7 @@ The KMS host creates a log labeled *Event ID 12290* when a KMS client contacts t
 The event details include the following information:
 
 - The *Minimum count needed to activate*, which reports that the count from the KMS host must be **5** in order for the client to activate. That means that this OS is a Windows Server OS, although this variable alone doesn't indicate which edition the client is using. If your clients aren't activating, make sure that the host's count allows the client to activate.
-- The *Client Machine ID (CMID)*, which is a unique value on each system. If this value isn't unique, it's because the image wasn't correctly configured for distribution using sysprep. To learn more about generalising your computers, see [Sysprep (Generalize) a Windows installation](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation). When you encounter this issue, the KMS host count doesn't increase even though there are enough clients in the environment. For more information, see [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista).
+- The *Client Machine ID (CMID)*, which is a unique value on each system. If this value isn't unique, it's because the image wasn't correctly configured for distribution using sysprep. To learn more about generalizing your computers, see [Sysprep (Generalize) a Windows installation](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation). When you encounter this issue, the KMS host count doesn't increase even though there are enough clients in the environment. For more information, see [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](https://support.microsoft.com/help/929829/the-kms-current-count-does-not-increase-when-you-add-new-windows-vista).
 - The *License State and Time to State Expiration*, which is the current license state of the client. This variable can help you tell whether a client is trying to activate for the first time or if it's trying to reactivate. The time entry can also tell you how long the client remains in that state if nothing else changes.
 
 If you're troubleshooting a client and can't find a corresponding event ID 12290 on the KMS host, then the client isn't connecting to the KMS host. Reasons why the event ID 12290 entry is missing can include:
@@ -134,8 +134,7 @@ The Info section of event ID 12289 provides the following information:
 
 ## What does support ask for?
 
-If your activations aren't working as expected after troubleshooting, you can
-[contact Microsoft Support](https://support.microsoft.com/contactus) for technical assistance. The Support Engineer typically asks for the following information:
+If your activations aren't working as expected after troubleshooting, you can [contact Microsoft Support](https://support.microsoft.com/contactus) for technical assistance. The Support Engineer typically asks for the following information:
 
 - `slmgr.vbs /dlv` output from the KMS host and KMS client systems.
 - Event logs from both the KMS host (Key Management Service log) and KMS client systems (Application log).
