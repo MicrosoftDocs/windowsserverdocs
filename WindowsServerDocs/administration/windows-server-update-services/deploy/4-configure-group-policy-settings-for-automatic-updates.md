@@ -168,18 +168,19 @@ Specifies whether automatic updates are enabled on this computer.
 |---------|-------|
 |Windows operating systems that are still within their [Microsoft Product Support Lifecycle](/lifecycle/)|Windows RT|
 
+Configure automatic updates under **Computer Configuration\Administrative Templates\Windows Components\Windows update\Configure Automatic Updates**.
 
 - If this setting is set to **Not Configured**, the use of automatic updates isn't specified at the Group Policy level. An administrator can still configure automatic updates through the Settings app, under **Settings** > **Update & security** > **Windows Update** > **Advanced options**.
 
 - If this setting is set to **Enabled**, Windows recognizes when the computer is online and uses its internet connection to search Windows Update for available updates. To use this setting, you must select one of the five options that the setting provides.
 
-  When this setting is enabled, local administrators are allowed to use the Windows Update control panel item to select a configuration option of their choice. However, local administrators aren't allowed to disable the configuration for automatic updates. 
+  When this setting is enabled, local administrators are allowed to use the Windows Update control panel item to select a configuration option of their choice. However, local administrators aren't allowed to set the automatic updates configuration to **Disabled**.
 
 - If this setting is set to **Disabled**, users must manually download and install any available client updates from the public Windows Update service by going to **Settings** > **Update & security** > **Windows Update**.
 
-To configure automatic updates, under **Computer Configuration\Administrative Templates\Windows Components\Windows update\Configure Automatic Updates**, select **Enabled**. Then in **Options** under **Configure automatic updating**, select one of the options: **2**, **3**, **4**, **5**, or **7**.
+After you set this setting to **Enabled**, select one of the following options under **Options**:
 
-|Policy setting state|Behavior|
+|Option|Behavior|
 |-|-|
 |**2 - Notify for download and auto install**|When Windows Update finds updates that apply to the computer, users are notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.|
 |**3 - Auto download and notify for install**|This is the default setting. Windows Update finds applicable updates and downloads them in the background. The user isn't notified or interrupted during the process. When the downloads are complete, users are notified that updates are ready to install. Users can then run Windows Update to install the downloaded updates.|
