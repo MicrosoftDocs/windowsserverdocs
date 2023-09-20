@@ -332,10 +332,6 @@
       - name: Best Practices for Securing Active Directory
         href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
         items:
-        - name: Executive Summary
-          href: ad-ds/manage/component-updates/executive-Summary.md
-        - name: Introduction
-          href: ad-ds/manage/component-updates/Introduction.md
         - name: Avenues to compromise
           href: ad-ds/plan/security-best-practices/Avenues-to-compromise.md
         - name: Attractive Accounts for Credential Theft

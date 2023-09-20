@@ -11256,6 +11256,16 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/AD-DS-Getting-Started.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Executive-Summary.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Introduction.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+      "redirect_document_id": false
     }
   ]
 }
