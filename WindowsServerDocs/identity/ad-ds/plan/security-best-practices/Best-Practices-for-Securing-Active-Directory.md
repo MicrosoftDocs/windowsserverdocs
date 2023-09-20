@@ -17,9 +17,9 @@ ms.topic: article
 
 Attacks against computing infrastructure have increased over the last decade in all parts of the world. We live in an age of cyber-warfare, cybercrime, and hacktivism. As a result, organizations of all sizes all over the world have had to deal with information leaks, theft of intellectual property (IP), denial-of-service (DDoS) attacks, or even destroyed infrastructure.
 
-However, as the threat landscape has changed over the years, the security landscape has also adapted to counter these threats. While no organization with an information technology (IT) infrastructure is ever perfectly immune to attack, the ultimate goal of security isn't preventing attack attempts altogether, but protecting the IT infrastructure from being compromised by attacks. With the right policies, processes, and controls, you can protect key parts of your IT infrastructure from compromise.
+However, as the threat landscape has changed over the years, the security landscape has also adapted to counter these threats. While no organization with an information technology (IT) infrastructure is ever perfectly immune to attack, the ultimate goal of security isn't preventing attack attempts altogether, but protecting the IT infrastructure from attacks. With the right policies, processes, and controls, you can protect key parts of your IT infrastructure from compromise.
 
-In this article, we describe the most common types of vulnerabilities we've observed in Active Directory (AD) deployments. Next, we arm you with recommendations for how to protect these weak points from compromises. We designed these recommendations based on the expertise of our Microsoft IT (MSIT) and Microsoft Information Security and Risk Managment (ISRM) organizations. We also show you steps you can take to reduce how much vulnerable infrastructure, or attack surface, on your AD is exposed to the outside world. In the event of total system compromise, we also include suggestions for how to recover vital data and infrastructure function.
+In this article, we describe the most common types of vulnerabilities we've observed in Active Directory (AD) deployments. Next, we arm you with recommendations for how to protect these weak points from compromises. We designed these recommendations based on the expertise of our Microsoft IT (MSIT) and Microsoft Information Security and Risk Management (ISRM) organizations. We also show you steps you can take to reduce how much vulnerable infrastructure, or attack surface, on your AD is exposed to the outside world. We also include suggestions for how to recover vital data and infrastructure function if there's a security compromise.
 
 ## Common security vulnerabilities
 
@@ -29,7 +29,7 @@ Now, let's look at the most common security vulnerabilities in the average AD de
 
 ### Common entry points
 
-Initial breach targets, or entry points, are areas where attackers can most easily enter your IT infrastructure. Entry points are usually gaps in security or updates that attackers can exploit to gain access to a system within your infrastructure. Attackers usually start with one or two systems at a time, then escalate their attack as they spread their influence across more and more systems undetected.
+Initial breach targets, or entry points, are areas where attackers can most easily enter your IT infrastructure. Entry points are usually gaps in security or updates that attackers can exploit to gain access to a system within your infrastructure. Attackers usually start with one or two systems at a time, then escalate their attack as they spread their influence across more systems undetected.
 
 The most common vulnerabilities are:
 
@@ -79,7 +79,7 @@ You can prevent attacks is by reducing the *attack surface* on your Active Direc
 
 Credential theft attacks depend on the admins granting certain accounts excessive privileges. You can prevent these attacks is to do the following things:
 
-- Remember there are three built-in groups that have the highest privileges in Active Directory by default: Enterprise Admins, Domain Admins, and Administrators. Make sure you take steps to protect those three groups as well as any other groups your organization gave elevated privileges to.
+- Remember there are three built-in groups that have the highest privileges in Active Directory by default: Enterprise Admins, Domain Admins, and Administrators. Make sure you take steps to protect those three groups, along with any other groups your organization gave elevated privileges to.
 
 - Implement a least-privilege administrative model. Don't use highly privileged accounts for everyday administrative tasks if you can avoid it. Also, make sure your admin accounts only have the baseline privileges required to do their jobs, with no extra privileges they may not need. Avoid giving excessive privileges to user accounts that don't need them. Make sure you don't accidentally give an account the same privileges across systems unless they absolutely need them.
 
@@ -95,13 +95,13 @@ For more information, see [Implementing least-privilege administrative models](I
 
 ### Use secure administrative hosts
 
-Secure administrative hosts are computers configured to support administration for Active Directories and other connected systems. These hosts don't run non-administrative software like email applications, web browsers, or productivity software like Microsoft Office.
+Secure administrative hosts are computers configured to support administration for Active Directories and other connected systems. These hosts don't run nonadministrative software like email applications, web browsers, or productivity software like Microsoft Office.
 
 When configuring a secure administrative host, you must follow these general principles:
 
 - Never administer a trusted system from a less-trusted host.
 - Only use multi-factor authentication when using privileged accounts or doing administrative tasks.
-- Physical security for your administrative hosts is just as important as system and network security.
+- Physical security for your administrative hosts is as important as system and network security.
 
 For more information, see [Implementing secure administrative hosts](Implementing-Secure-Administrative-Hosts.md).
 
@@ -154,7 +154,7 @@ Each measure is also categorized based on whether it's tactical, strategic, prev
 | Eliminate permanent membership in highly privileged groups. | Tactical | Preventative |
 | Implement controls to grant temporary membership in privileged groups when needed. | Tactical | Preventative |
 | Implement secure administrative hosts. | Tactical | Preventative |
-| Use application allowslists on domain controllers, administrative hosts, and other sensitive systems. | Tactical | Preventative |
+| Use application allowlists on domain controllers, administrative hosts, and other sensitive systems. | Tactical | Preventative |
 | Identify critical assets, and prioritize their security and monitoring. | Tactical | Both |
 | Implement least-privilege, role-based access controls for administration of the directory, its supporting infrastructure, and domain-joined systems. | Strategic | Preventative |
 | Isolate legacy systems and applications. | Tactical | Preventative |
