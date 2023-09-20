@@ -142,7 +142,7 @@ Specifies whether a restart timer always begins immediately after Windows Update
 **Options:** If this setting is enabled, you can specify the amount of time that elapses after updates are installed before a forced computer restart occurs.
 
 #### Automatic Updates detection frequency
-Specifies the hours that Windows uses to determine how long to wait before checking for available updates. The exact wait time is determined by using the hours specified here minus 0 to 20 percent of the hours specified. For example, if this policy is used to specify a 20-hour detection frequency, all clients to which this policy is applied check for updates anywhere between 16 and 20 hours.
+Specifies the hours that Windows uses to determine how long to wait before checking for available updates. The exact wait time is determined by using the hours specified here minus 0 to 20 percent of the hours specified. For example, if this policy is used to specify a 20-hour detection frequency, all clients to which this policy applies check for updates anywhere between 16 and 20 hours.
 
 |Supported on|Excluding|
 |---------|-------|
@@ -579,15 +579,15 @@ The following procedures describe how to work with Group Policy objects (GPOs) a
      2.  In **New GPO**, in **Name**, enter a name for the new Group Policy object, and then select **OK**.
      3.  Right-click your new Group Policy object, and then select **edit**. GPME opens.
 
-#### To open the Windows Update or Maintenance Scheduler extensions of Group Policy
+#### To open the Windows Update or Scheduled Maintenance extensions of Group Policy
 
 In the Group Policy Management Editor, do one of the following:
 
-- Open **Computer Configuration** > **Windows Update extension of Group Policy**. Then go to *PolicyName* > **computer Configuration** > **Policies** / **Administrative Templates** > **Windows components** > **Windows Update**.
+- Expand **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Update**.
 
-- Open **User Configuration** > **Windows Update extension of Group Policy**. Then go to *PolicyName* > **User Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Windows Update**.
+- Expand **User Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Update**.
 
-- Open **Computer Configuration** > **Maintenance Scheduler extension of Group Policy**. Then go to *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**.
+- Expand **Computer Configuration** > **Policies** > **Administrative Templates** > **System** > **Troubleshooting and Diagnostics** > **Scheduled Maintenance**.
 
 For more information about Group Policy, see [Group Policy overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831791(v=ws.11)).
 
