@@ -36,7 +36,7 @@ For a virtualization server host to run guest VMs, you must activate it. To do s
 AVMA requires a Windows Server Datacenter edition with the Hyper-V server host role installed. The Windows Server version of the host determines which versions it can activate in a guest VM. The following table lists the guest VM versions that each host version is able to activate. A host version can access all the editions (Datacenter, Standard, or Essentials) of its eligible guest VM versions.
 
 | Server host version | Windows Server 2022 guest VM | Windows Server 2019 guest VM | Windows Server 2016 guest VM | Windows Server 2012 R2 guest VM |
-|--|--|--|--|--|
+|--|:--:|:--:|:--:|:--:|
 | Windows Server 2022 | X | X | X | X |
 | Windows Server 2019 | | X | X | X |
 | Windows Server 2016 | | | X | X |
@@ -50,16 +50,16 @@ AVMA requires a Windows Server Datacenter edition with the Hyper-V server host r
 
 To activate VMs with AVMA, you use a generic AVMA key (detailed in [AVMA keys](#avma-keys)) that corresponds to the version of Windows Server that you want to activate. To create a VM and activate it with an AVMA key, follow these steps:
 
-1. On the server that will host the VMs, install and configure the Microsoft Hyper-V Server role. For more information, see [Install Hyper-V Server](../virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server.md). Ensure that the server is successfully activated.
+1. On the server that will host the VMs, install and configure the Microsoft Hyper-V Server role. Ensure that the server is successfully activated. For more information, see [Install Hyper-V Server](../virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server.md). 
 
 1. [Create a virtual machine](../virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v.md) and install a supported Windows Server operating system on it.
 
    > [!IMPORTANT]
    > The [Data Exchange integration service](../virtualization/hyper-v/manage/Manage-Hyper-V-integration-services.md) (also known as Key-Value Pair Exchange) must be enabled in the VM settings for AVMA to work. It is enabled by default for new VMs.
 
-1. Once Windows Server is installed on the VM, you install the AVMA key in the VM. From PowerShell or an elevated command prompt, run the following command:
+1. After you've finished installing Windows Server on the VM, install the AVMA key on the VM. From PowerShell or an elevated command prompt, run the following command:
 
-    ```
+    ```powershell
     slmgr /ipk <AVMA_key>
     ```
 
