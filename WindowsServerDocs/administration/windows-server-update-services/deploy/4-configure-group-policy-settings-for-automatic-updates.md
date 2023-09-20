@@ -172,21 +172,21 @@ Configure automatic updates under **Computer Configuration\Administrative Templa
 
 - If this setting is set to **Not Configured**, the use of automatic updates isn't specified at the Group Policy level. An administrator can still configure automatic updates through the Settings app, under **Settings** > **Update & security** > **Windows Update** > **Advanced options**.
 
-- If this setting is set to **Enabled**, Windows recognizes when the computer is online and uses its internet connection to search Windows Update for available updates. To use this setting, you must select one of the five options that the setting provides.
-
-  When this setting is enabled, local administrators are allowed to use the Windows Update control panel item to select a configuration option of their choice. However, local administrators aren't allowed to set the automatic updates configuration to **Disabled**.
-
 - If this setting is set to **Disabled**, users must manually download and install any available client updates from the public Windows Update service by going to **Settings** > **Update & security** > **Windows Update**.
 
-After you set this setting to **Enabled**, select one of the following options under **Options**:
+- If this setting is set to **Enabled**, Windows recognizes when the computer is online and uses its internet connection to search Windows Update for available updates. To use this setting, you must select one of the five options that the setting provides.
 
-|Option|Behavior|
-|-|-|
-|**2 - Notify for download and auto install**|When Windows Update finds updates that apply to the computer, users are notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.|
-|**3 - Auto download and notify for install**|This is the default setting. Windows Update finds applicable updates and downloads them in the background. The user isn't notified or interrupted during the process. When the downloads are complete, users are notified that updates are ready to install. Users can then run Windows Update to install the downloaded updates.|
-|**4 - Auto download and schedule the install**|You can specify the schedule by using the options in this Group Policy setting. If no schedule is specified, the default schedule for all installations is every day at 3:00 AM. If any updates require a restart to complete the installation, Windows restarts the computer automatically. If a user is signed in to the computer when Windows is ready to restart, the user is notified and given the option to delay the restart.<p>Starting with Windows 8, you can set updates to install during automatic maintenance instead of using a specific schedule tied to Windows Update. Automatic maintenance installs updates when the computer isn't in use, and avoids installing updates when the computer is running on battery power. If automatic maintenance can't install updates within two days, Windows Update installs the updates right away. Users are then notified about a pending restart. A pending restart happens only if there's no potential for accidental data loss.<p>You can specify schedule options in the GPME Maintenance Scheduler settings in the path *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler** > **Automatic Maintenance Activation Boundary**. For setting details, see [Maintenance Scheduler settings](#computer-configuration--maintenance-scheduler-policy-settings).|
-|**5 - Allow local admin to choose setting**|This option isn't available in Windows 10 or later. This option specifies whether local administrators are allowed to use the automatic updates control panel to choose a configuration option. For example, a local administrator could choose a scheduled installation time. Local administrators aren't allowed to set the configuration for automatic updates to **Disabled**. |
-|**7 - Auto Download, Notify to install, Notify to Restart**|This option is available only in Windows Server 2016 and later. With this option, local administrators can use Windows Update to proceed with installations or reboots manually. Windows downloads applicable updates to the device, and notifies users that updates are ready to be installed. Once updates are installed, users are notified to restart the device.|
+  When this setting is enabled, local administrators are allowed to use the Windows Update control panel to select a configuration option of their choice. However, local administrators aren't allowed to set the automatic updates configuration to **Disabled**.
+
+  After you set this setting to **Enabled**, select one of the following options under **Options**:
+
+  |Option|Behavior|
+  |-|-|
+  |**2 - Notify for download and auto install**|When Windows Update finds updates that apply to the computer, users are notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.|
+  |**3 - Auto download and notify for install**|This is the default setting. Windows Update finds applicable updates and downloads them in the background. The user isn't notified or interrupted during the process. When the downloads are complete, users are notified that updates are ready to install. Users can then run Windows Update to install the downloaded updates.|
+  |**4 - Auto download and schedule the install**|You can specify the schedule by using the options in this Group Policy setting. If no schedule is specified, the default schedule for all installations is every day at 3:00 AM. If any updates require a restart to complete the installation, Windows restarts the computer automatically. If a user is signed in to the computer when Windows is ready to restart, the user is notified and given the option to delay the restart.<p>Starting with Windows 8, you can set updates to install during automatic maintenance instead of using a specific schedule tied to Windows Update. Automatic maintenance installs updates when the computer isn't in use, and avoids installing updates when the computer is running on battery power. If automatic maintenance can't install updates within two days, Windows Update installs the updates right away. Users are then notified about a pending restart. A pending restart happens only if there's no potential for accidental data loss.<p>You can specify schedule options in the GPME Maintenance Scheduler settings in the path *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler** > **Automatic Maintenance Activation Boundary**. For setting details, see [Maintenance Scheduler settings](#computer-configuration--maintenance-scheduler-policy-settings).|
+  |**5 - Allow local admin to choose setting**|This option isn't available in Windows 10 or later. This option specifies whether local administrators are allowed to use the automatic updates control panel to choose a configuration option. For example, a local administrator could choose a scheduled installation time. Local administrators aren't allowed to set the configuration for automatic updates to **Disabled**. |
+  |**7 - Auto Download, Notify to install, Notify to Restart**|This option is available only in Windows Server 2016 and later. With this option, local administrators can use Windows Update to proceed with installations or reboots manually. Windows downloads applicable updates to the device, and notifies users that updates are ready to be installed. Once updates are installed, users are notified to restart the device.|
 
 #### Delay restart for scheduled installations
 Specifies the amount of time automatic updates wait before proceeding with a scheduled restart.
@@ -206,7 +206,7 @@ Specifies the amount of time automatic updates wait before proceeding with a sch
 
 **Options:** If this setting is enabled, you can specify the amount of time in minutes that automatic updates wait before proceeding with a scheduled restart.
 
-#### Don't adjust default option to Install Updates and Shut Down in Shut Down Windows dialog
+#### Do not adjust default option to Install Updates and Shut Down in Shut Down Windows dialog
 This policy setting enables you to specify whether the **Install Updates and Shut Down** option is permitted as the default choice in the **Shut Down Windows** dialog.
 
 |Supported on|Excluding|
@@ -224,7 +224,7 @@ This policy setting enables you to specify whether the **Install Updates and Shu
 
 **Options:** There are no options for this setting.
 
-#### Don't connect to any Windows Update Internet locations
+#### Do not connect to any Windows Update Internet locations
 Even when Windows Update is configured to receive updates from an intranet update service, it periodically retrieves information from the public Windows Update service. This information enables future connections to Windows Update and other services, such as Microsoft Update or Microsoft Store.
 
 > [!NOTE]
