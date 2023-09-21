@@ -194,6 +194,8 @@
         href: clients/change-listening-port.md
       - name: Configure the RD Gateway role
         href: remote-desktop-gateway-role.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: clients/uninstall-remote-desktop-connection.md
     - name: Advanced information
       items:
       - name: 'Compare the clients: features'
