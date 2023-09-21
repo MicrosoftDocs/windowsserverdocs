@@ -453,13 +453,13 @@ Renews a certification authority certificate.
 certutil [options] -renewCert [ReuseKeys] [Machine\ParentCAName]
 ```
 
-- Use `-f` to ignore an outstanding renewal request, and to generate a new request.
-
 Options:
 
 ```cmd
 [-f] [-silent] [-config Machine\CAName]
 ```
+
+- Use `-f` to ignore an outstanding renewal request, and to generate a new request.
 
 ### -schema
 
@@ -472,7 +472,6 @@ certutil [options] -schema [Ext | Attrib | CRL]
 Where:
 
 - The command defaults to the Request and Certificate table.
-
 - **Ext** is the extension table.
 - **Attribute** is the attribute table.
 - **CRL** is the CRL table.
@@ -886,20 +885,6 @@ Options:
 [-f] [-Enterprise] [-user] [-GroupPolicy] [-dc DCName]
 ```
 
-### -delkey
-
-Deletes the named key container.
-
-```cmd
-certutil [options] -delkey KeyContainerName
-```
-
-Options:
-
-```cmd
-[-user] [-Unicode] [-gmt] [-seconds] [-Silent] [-v] [-privatekey] [-pin PIN] [-csp Provider] [-Location AlternateStorageLocation] [-sid WELL_KNOWN_SID_TYPE]
-```
-
 ### -delstore
 
 Deletes a certificate from the store. For more information, see the `-store` parameter in this article.
@@ -1145,13 +1130,13 @@ Where:
 - **DSCDPContainer** is the DS CDP container CN, usually the CA machine name.
 - **DSCDPCN** is the DS CDP object CN based on the sanitized CA short name and key index.
 
-- Use `-f` to create a new DS object.
-
 Options:
 
 ```cmd
 [-f] [-user] [-dc DCName]
 ```
+
+- Use `-f` to create a new DS object.
 
 ### -ADTemplate
 
@@ -1160,6 +1145,8 @@ Displays Active Directory templates.
 ```cmd
 certutil [options] -ADTemplate [Template]
 ```
+
+Options:
 
 ```cmd
 [-f] [-user] [-ut] [-mt] [-dc DCName]
@@ -1332,7 +1319,6 @@ certutil [options] -PolicyCache [delete]
 Where:
 
 - **delete** deletes the policy server cache entries.
-
 - **-f** deletes all cache entries
 
 Options:
@@ -1562,7 +1548,6 @@ Options:
 #### Remarks
 
 - If no arguments are specified, each signing CA certificate is verified against its private key.
-
 - This operation can only be performed against a local CA or local keys.
 
 ### -verify
@@ -1627,7 +1612,9 @@ Where:
   - **Disallowed** reads the registry-cached Disallowed Certificates CTL. Use with `-f` and an untrusted **CertFile** to force the registry cached **AuthRoot** and Disallowed Certificate CTLs to update.
     - **PinRules** reads the registry cached PinRules CTL. Using `-f` has the same behavior as with **PinRulesWU**.
   - **CTLFileName** specifies the file or http path to the CTL or CAB file.
+
 - **CertDir** specifies the folder containing certificates matching the CTL entries. Defaults to the same folder or website as the **CTLobject**. Using an http folder path requires a path separator at the end. If you don't specify **AuthRoot** or **Disallowed**, multiple locations are searched for matching certificates, including local certificate stores, crypt32.dll resources and the local URL cache. Use `-f` to download from Windows Update, as needed.
+
 - **CertFile** specifies the certificate(s) to verify. Certificates are matched against CTL entries, displaying the results. This option suppresses most of the default output.
 
 Options:
@@ -1654,7 +1641,6 @@ Where:
 - **v** is a verbose operation.
 - **PIN** is the Smart Card PIN.
 - **WELL_KNOWN_SID_TYPE** is a numeric SID:
-
   - 22 - Local System
   - 23 - Local Service
   - 24 - Network Service
@@ -1671,27 +1657,21 @@ The following files are downloaded by using the automatic update mechanism:
 For example, `certutil -syncWithWU \\server1\PKI\CTLs`.
 
 - If you use a nonexistent local path or folder as the destination folder, you see the error:
-  
   `The system can't find the file specified. 0x80070002 (WIN32: 2 ERROR_FILE_NOT_FOUND)`
 
 - If you use a nonexistent or unavailable network location as the destination folder, you see the error:
-
   `The network name can't be found. 0x80070043 (WIN32: 67 ERROR_BAD_NET_NAME)`
 
 - If your server can't connect over TCP port 80 to Microsoft Automatic Update servers, you receive the following error:
-
   `A connection with the server couldn't be established 0x80072efd (INet: 12029 ERROR_INTERNET_CANNOT_CONNECT)`
 
 - If your server is unable to reach the Microsoft Automatic Update servers with the DNS name `ctldl.windowsupdate.com`, you receive the following error:
-
   `The server name or address couldn't be resolved 0x80072ee7 (INet: 12007 ERROR_INTERNET_NAME_NOT_RESOLVED).`
 
 - If you don't use the `-f` switch, and any of the CTL files already exist in the directory, you receive a file exists error:
-
   `certutil: -syncWithWU command FAILED: 0x800700b7 (WIN32/HTTP: 183 ERROR_ALREADY_EXISTS) Certutil: Can't create a file when that file already exists.`
 
 - If there's a change in the trusted root certificates, you see:
-
   `Warning! Encountered the following no longer trusted roots: <folder path>\<thumbprint>.crt. Use "-f" option to force the delete of the above ".crt" files. Was "authrootstl.cab" updated? If yes, consider deferring the delete until all clients have been updated.`
 
 Options:
@@ -1888,20 +1868,16 @@ Where:
 - **StartDate+dd:hh** is the new validity period for the certificate or CRL files, including:
   - optional date plus
   - optional days and hours validity period
-
   If multiple fields are used, use a (+) or (-) separator. Use `now[+dd:hh]` to start at the current time. Use `now-dd:hh+dd:hh` to start at a fixed offset from the current time and a fixed validity period. Use `never` to have no expiration date (for CRLs only).
-
 - **SerialNumberList** is the comma-separated serial number list of the files to add or remove.
 - **ObjectIdList** is the comma-separated extension ObjectId list of the files to remove.
 - **@ExtensionFile** is the INF file that contains the extensions to update or remove. For example:
-
   ```cmd
   [Extensions]
       2.5.29.31 = ; Remove CRL Distribution Points extension
       2.5.29.15 = {hex} ; Update Key Usage extension
       _continue_=03 02 01 86
   ```
-
 - **HashAlgorithm** is the name of the hash algorithm. This must only be the text preceded by the `#` sign.
 - **AlternateSignatureAlgorithm** is the alternate signature algorithm specifier.
 
@@ -2089,7 +2065,6 @@ Options:
 - If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
 - Use `i64` as a suffix to create a REG_QWORD value.
 - Use `chain\chaincacheresyncfiletime @now` to effectively flush cached CRLs.
-
 - Registry aliases:
   - Config
   - CA
@@ -2180,7 +2155,6 @@ Options:
 - If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
 - Use `i64` as a suffix to create a REG_QWORD value.
 - Use `chain\chaincacheresyncfiletime @now` to effectively flush cached CRLs.
-
 - Registry aliases:
   - Config
   - CA
@@ -2292,6 +2266,20 @@ Options:
 
 - For **retrieve**, any extension is truncated and a certificate-specific string and the `.rec` extensions are appended for each key recovery blob. Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 - For **recover**, any extension is truncated and the `.p12` extension is appended. Contains the recovered certificate chains and associated private keys, stored as a PFX file.
+
+### -delkey
+
+Deletes the named key container.
+
+```cmd
+certutil [options] -delkey KeyContainerName
+```
+
+Options:
+
+```cmd
+[-user] [-Unicode] [-gmt] [-seconds] [-Silent] [-v] [-privatekey] [-pin PIN] [-csp Provider] [-Location AlternateStorageLocation] [-sid WELL_KNOWN_SID_TYPE]
+```
 
 ### -RecoverKey
 
