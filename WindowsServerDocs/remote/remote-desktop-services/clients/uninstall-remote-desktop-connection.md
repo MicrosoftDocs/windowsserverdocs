@@ -60,7 +60,7 @@ After you uninstall the Remote Desktop Connection app, you can reinstall it by f
 
 1. Download the Remote Desktop Connection installer file.
 
-   - [Windows 86-bit](https://go.microsoft.com/fwlink/?linkid=2247660)
+   - [Windows 86-bit](https://go.microsoft.com/fwlink/?linkid=2247660) (most common)
    - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2247659)
    - [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2247577)
 
