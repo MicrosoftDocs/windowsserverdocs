@@ -3,7 +3,7 @@ title: Step 4 - Configure Group Policy settings for automatic updates
 description: This article is step four in a four-step process for deploying Windows Server Update Services (WSUS).
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
-ms.author: wscintent
+ms.author: wscontent
 author: JasonGerend
 manager: mtillman
 ms.date: 09/21/2023
@@ -38,7 +38,7 @@ This section provides information about the following three extensions of Group 
 > [!NOTE]
 > This article assumes that you already use and are familiar with Group Policy. If you're not familiar with Group Policy, we advise that you review the information in the [Supplemental information](#supplemental-information) section of this article before you try to configure policy settings for WSUS.
 
-### Group Policy Windows Update settings
+### Group Policy Windows Update policy settings
 
 This section provides details about the following computer-based policy settings:
 
@@ -147,7 +147,7 @@ Specifies whether a restart timer always begins immediately after Windows Update
 
 #### Automatic Updates detection frequency
 
-Specifies the hours that Windows uses to determine how long to wait before checking for available updates. The exact wait time is determined by using the hours specified here minus 0 to 20 percent of the hours specified. For example, if this policy is used to specify a 20-hour detection frequency, all clients to which this policy applies checks for updates anywhere between 16 and 20 hours.
+Specifies the hours that Windows uses to determine how long to wait before checking for available updates. The exact wait time is determined by using the hours specified here minus 0 to 20 percent of the hours specified. For example, if this policy is used to specify a 20-hour detection frequency, all clients to which this policy applies check for updates anywhere between 16 and 20 hours.
 
 |Supported on|Excluding|
 |---------|-------|
