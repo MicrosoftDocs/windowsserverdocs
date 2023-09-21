@@ -17,7 +17,7 @@ Hyper-V Integration Services enhance virtual machine performance and provide con
 For details about each integration service, see [Hyper-V Integration Services](/virtualization/hyper-v-on-windows/reference/integration-services).
 
 > [!IMPORTANT]
-> Each service you want to use must be enabled in both the host and guest in order to function. All integration services except *Hyper-V Guest Service Interface* are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
+> Each service you want to use must be enabled in both the host and guest in order to function. When you enable a service in the host, it automatically starts running in the guest. All integration services except *Hyper-V Guest Service Interface* are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
 
 ## Turn an integration service on or off using Hyper-V Manager
 
