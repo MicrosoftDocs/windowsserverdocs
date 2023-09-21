@@ -38,7 +38,7 @@ This section provides information about the following three extensions of Group 
 > [!NOTE]
 > This article assumes that you already use and are familiar with Group Policy. If you're not familiar with Group Policy, we advise that you review the information in the [Supplemental information](#supplemental-information) section of this article before you try to configure policy settings for WSUS.
 
-### Group Policy Windows Update policy settings
+### Computer Configuration > Windows Update policy settings
 
 This section provides details about the following computer-based policy settings:
 
