@@ -81,6 +81,8 @@
       href: automatic-reconnection-lock-screen.md
     - name: Set up email discovery for your users
       href: rds-email-discovery.md
+    - name: Fair Share technologies
+      href: fair-share-enabled-by-default-rds.md
     - name: License your Remote Desktop deployment
       href: rds-client-access-license.md
       items:
@@ -192,6 +194,8 @@
         href: clients/change-listening-port.md
       - name: Configure the RD Gateway role
         href: remote-desktop-gateway-role.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: clients/uninstall-remote-desktop-connection.md
     - name: Advanced information
       items:
       - name: 'Compare the clients: features'

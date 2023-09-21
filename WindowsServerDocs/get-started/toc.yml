@@ -85,6 +85,8 @@ items:
         href: kms-client-activation-keys.md
     - name: Get Extended Security Updates
       href: extended-security-updates-deploy.md
+    - name: Deliver Extended Security Updates with Azure Arc
+      href: /azure/azure-arc/servers/deliver-extended-security-updates?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Enable Azure Edition Hotpatch from ISO
       href: enable-hotpatch-azure-edition.md
     - name: Perform an in-place upgrade

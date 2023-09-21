@@ -97,7 +97,7 @@ To prepare for activating Windows Server 2012 and 2012R2 ESUs on your Arc-enable
    [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 To learn more about ESUs with Azure Arc, see
-[Prepare to deliver Extended Security Updates for Windows Server 2012](/azure/azure-arc/servers/prepare-extended-security-updates).
+[Prepare to deliver Extended Security Updates for Windows Server 2012](/azure/azure-arc/servers/prepare-extended-security-updates) and [Deliver Extended Security Updates for Windows 2012 and 2012 R2](/azure/azure-arc/servers/deliver-extended-security-updates).
 
 ### Access your Multiple Activation Key from the Microsoft 365 Admin Center
 
