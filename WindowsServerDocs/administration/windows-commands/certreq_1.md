@@ -214,6 +214,30 @@ Requesttype = Cert
 _continue_ = %szOID_PKIX_KP_CLIENT_AUTH%
 ```
 
+To specify a Subject Alternate Name (SAN), add it in the [Extensions] section of your INF. For example:
+
+```
+[Version]
+Signature=$Windows NT$
+ 
+[Strings]
+szOID_ENHANCED_KEY_USAGE = 2.5.29.37
+szOID_PKIX_KP_SERVER_AUTH = 1.3.6.1.5.5.7.3.1
+szOID_PKIX_KP_CLIENT_AUTH = 1.3.6.1.5.5.7.3.2
+
+[NewRequest]
+Subject = CN=TestSelfSignedCert
+Requesttype = Cert
+
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "DNS=example.com"
+_continue_ = "DNS=www.example.com"
+_continue_ = "IP Address=192.168.1.1"
+```
+
+In this example, `2.5.29.17` is the OID defining the SAN. To specify multiple SANs, the `"\_continue_"` extension OID is used, which lets you separate and specify each SAN extension.
+
 ### certreq -accept
 
 The `–accept` parameter links the previously generated private key with the issued certificate and removes the pending certificate request from the system where the certificate is requested (if there is a matching request).
