@@ -2068,7 +2068,7 @@ Options:
 ```
 
 ### -csplist
-List the cryptographic service providers (CSPs) installed on this machine.
+Lists the cryptographic service providers (CSPs) installed on this machine for cryptographic operations.
 
 ```cmd
 certutil [options] -csplist [Algorithm]
