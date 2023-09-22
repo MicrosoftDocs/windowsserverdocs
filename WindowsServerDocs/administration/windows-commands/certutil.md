@@ -2770,60 +2770,6 @@ Where:
 This section defines all of the options you're able to specify, based on the command. Each parameter includes information about which options are valid for use.
 
 | Option | Description |
-| ------- | ----------- |
+| ------ | ----------- |
 | -admin | Use ICertAdmin2 for CA properties. |
-| -anonymous | Use anonymous SSL credentials. |
-| -cert CertId | Signing certificate. |
-| -clientcertificate clientCertId | Use X.509 Certificate SSL credentials. For selection UI, use `-clientcertificate`. |
-| -config Machine\CAName | Certificate Authority and computer name string. |
-| -csp provider | Provider:<br>**KSP** - Microsoft Software Key Storage Provider <br>**TPM** - Microsoft Platform Crypto Provider <br>**NGC** - Microsoft Passport Key Storage Provider <br>**SC** - Microsoft Smart Card Key Storage Provider |
-| -dc DCName | Target a specific Domain Controller. |
-| -enterprise | Use the local machine enterprise registry certificate store. |
-| -f | Force overwrite. |
-| -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism. |
-| -gmt | Display times using GMT. |
-| -GroupPolicy | Use the group policy certificate store. |
-| -idispatch | Use IDispatch instead of COM native methods.|
-| -kerberos | Use Kerberos SSL credentials. |
-| -location alternatestoragelocation | `(-loc)` AlternateStorageLocation. |
-| -mt | Display machine templates. |
-| -nocr | Encode text without CR characters.|
-| -nocrlf | Encode text without CR-LF characters.|
-| -nullsign | Use the hash of the data as a signature. |
-| -oldpfx | Use old PFX encryption.
-| -out columnlist | Comma-separated column list. |
-| -p password | Password |
-| -pin PIN | Smart card PIN. |
-| -policyserver URLorID | Policy Server URL or ID. For selection U/I, use `-policyserver`. For all Policy Servers, use `-policyserver *`|
-| -privatekey | Display password and private key data. |
-| -protect | Protect keys with password.|
-| -protectto SAMnameandSIDlist | Comma-separated SAM name/SID list. |
-| -restrict restrictionlist | Comma-separated Restriction List. Each restriction consists of a column name, a relational operator, and a constant integer, string, or date. One column name may be preceded by a plus or minus sign to indicate the sort order. For example: `requestID = 47`, `+requestername >= a, requestername`, or `-requestername > DOMAIN, Disposition = 21`. |
-| -reverse | Reverse Log and Queue columns.|
-| -seconds | Display times using seconds and milliseconds. |
-| -service | Use service certificate store.|
-| -sid | Numeric SID:<br>**22** - Local System<br>**23** - Local Service<br>**24** - Network Service |
-| -silent | Use the `silent` flag to acquire crypt context. |
-| -split | Split embedded ASN.1 elements, and save to files. |
-| -sslpolicy servername | SSL Policy matching ServerName. |
-| -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES** |
-| -syncWithWU DestinationDir | Sync with Windows Update. |
-| -t timeout | URL fetch timeout in milliseconds. |
-| -Unicode | Write redirected output in Unicode. |
-| -UnicodeText | Write output file in Unicode. |
-| -urlfetch | Retrieve and verify AIA Certs and CDP CRLs. |
-| -user | Use the HKEY_CURRENT_USER keys or certificate store. |
-| -username username | Use named account for SSL credentials. For selection UI, use `-username`. |
-| -ut | Display user templates. |
-| -v | Provide more detailed (verbose) information. |
-| -v1 | Use V1 interfaces.|
 
-Hash algorithms: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512.
-
-## Related links
-
-For more examples of how to use this command, see the following articles:
-
-- [Active Directory Certificate Services (AD CS)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
-- [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
-- [Configure trusted roots and disallowed certificates in Windows](../../identity/ad-cs/configure-trusted-roots-disallowed-certificates.md)
