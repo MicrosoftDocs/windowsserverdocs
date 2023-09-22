@@ -2772,4 +2772,29 @@ This section defines all of the options you're able to specify, based on the com
 | Option | Description |
 | ------ | ----------- |
 | -admin | Use ICertAdmin2 for CA properties. |
+| -anonymous | Use anonymous SSL credentials. |
+| -cert CertId | Signing certificate. |
+| -clientcertificate clientCertId | Use X.509 Certificate SSL credentials. For selection UI, use `-clientcertificate`. |
+| -config Machine\CAName | Certificate Authority and computer name string. |
+| -csp provider | Provider:<br>**KSP** - Microsoft Software Key Storage Provider <br>**TPM** - Microsoft Platform Crypto Provider <br>**NGC** - Microsoft Passport Key Storage Provider <br>**SC** - Microsoft Smart Card Key Storage Provider |
+| -dc DCName | Target a specific Domain Controller. |
+| -enterprise | Use the local machine enterprise registry certificate store. |
+| -f | Force overwrite. |
+| -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism. |
+| -gmt | Display times using GMT. |
+| -GroupPolicy | Use the group policy certificate store. |
+| -idispatch | Use IDispatch instead of COM native methods.|
+| -kerberos | Use Kerberos SSL credentials. |
+| -location alternatestoragelocation | `(-loc)` AlternateStorageLocation. |
+| -mt | Display machine templates. |
+| -nocr | Encode text without CR characters. |
+| -nocrlf | Encode text without CR-LF characters. |
+| -nullsign | Use the hash of the data as a signature. |
+| -oldpfx | Use old PFX encryption. |
+| -out columnlist | Comma-separated column list. |
+| -p password | Password |
+| -pin PIN | Smart card PIN. |
+| -policyserver URLorID | Policy Server URL or ID. For selection U/I, use `-policyserver`. For all Policy Servers, use `-policyserver *`|
+| -privatekey | Display password and private key data. |
+| -protect | Protect keys with password. |
 
