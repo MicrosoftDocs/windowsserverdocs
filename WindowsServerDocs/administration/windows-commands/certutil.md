@@ -2769,9 +2769,9 @@ Where:
 
 This section defines all of the options you're able to specify, based on the command. Each parameter includes information about which options are valid for use.
 
-| Options | Description |
+| Option | Description |
 | ------- | ----------- |
-| -admin | Use ICertAdmin2 for CA properties.|
+| -admin | Use ICertAdmin2 for CA properties. |
 | -anonymous | Use anonymous SSL credentials. |
 | -cert CertId | Signing certificate. |
 | -clientcertificate clientCertId | Use X.509 Certificate SSL credentials. For selection UI, use `-clientcertificate`. |
