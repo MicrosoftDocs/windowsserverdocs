@@ -2806,4 +2806,15 @@ This section defines all of the options you're able to specify, based on the com
 | -silent | Use the `silent` flag to acquire crypt context. |
 | -split | Split embedded ASN.1 elements, and save to files. |
 | -sslpolicy servername | SSL Policy matching ServerName. |
+| -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES** |
+| -syncWithWU DestinationDir | Sync with Windows Update. |
+| -t timeout | URL fetch timeout in milliseconds. |
+| -Unicode | Write redirected output in Unicode. |
+| -UnicodeText | Write output file in Unicode. |
+| -urlfetch | Retrieve and verify AIA Certs and CDP CRLs. |
+| -user | Use the HKEY_CURRENT_USER keys or certificate store. |
+| -username username | Use named account for SSL credentials. For selection UI, use `-username`. |
+| -ut | Display user templates. |
+| -v | Provide more detailed (verbose) information. |
+| -v1 | Use V1 interfaces. |
 
