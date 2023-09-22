@@ -15,7 +15,10 @@ Certutil.exe is a command-line program installed as part of Certificate Services
 If certutil is run on a certification authority without other parameters, it displays the current certification authority configuration. If certutil is run on a non-certification authority without other parameters, the command defaults to running the `certutil [-dump]` command.
 
 > [!IMPORTANT]
-> Earlier versions of certutil may not provide all of the options that are described in this document. You can see the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
+> Not all versions of certutil provide all of the parameters and options that this document describes. You can see the choices that your version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
+
+> [!NOTE]
+> Certutil `Date` arguments expect the format `mm/dd/yyyy`, for example `5/6/2022` for May 6, 2022. If your server isn't configured with US regional settings, using certutil with `Date` arguments might produce unexpected results.
 
 ## Parameters
 
@@ -56,7 +59,7 @@ Parse and display the contents of a file using Abstract Syntax Notation (ASN.1) 
 certutil [options] -asn File [type]
 ```
 
-`[type]`: numeric CRYPT_STRING_* decoding type
+- `[type]`: numeric CRYPT_STRING_* decoding type
 
 ### -decodehex
 
@@ -66,12 +69,28 @@ Decodes a hexadecimal-encoded file.
 certutil [options] -decodehex InFile OutFile [type]
 ```
 
-`[type]`: numeric CRYPT_STRING_* encoding type
+- `[type]`: numeric CRYPT_STRING_* decoding type
 
 Options:
 
 ```cmd
 [-f]
+```
+
+### -encodehex
+
+Encodes a file in hexadecimal.
+
+```cmd
+certutil [options] -encodehex InFile OutFile [type]
+```
+
+- `[type]`: numeric CRYPT_STRING_* encoding type
+
+Options:
+
+```cmd
+[-f] [-nocr] [-nocrlf] [-UnicodeText]
 ```
 
 ### -decode
@@ -235,7 +254,35 @@ certutil [options] -getconfig
 Options:
 
 ```cmd
-[-config Machine\CAName]
+[-idispatch] [-config Machine\CAName]
+```
+
+### -getconfig2
+
+Gets the default configuration string via ICertGetConfig.
+
+```cmd
+certutil [options] -getconfig2
+```
+
+Options:
+
+```cmd
+[-idispatch] 
+```
+
+### -getconfig3
+
+Gets configuration via ICertConfig.
+
+```cmd
+certutil [options] -getconfig3
+```
+
+Options:
+
+```cmd
+[-idispatch] 
 ```
 
 ### -ping
@@ -331,13 +378,26 @@ Where:
   - **xchgcount** - CA exchange cert count
   - **xchgcrlchain** `[Index]` - CA exchange cert chain with CRLs
 - **index** is the optional zero-based property index.
-
 - **errorcode** is the numeric error code.
 
 Options:
 
 ```cmd
 [-f] [-split] [-config Machine\CAName]
+```
+
+### -CAPropInfo
+
+Displays CA Property Type information.
+
+```cmd
+certutil [options] -CAInfo [InfoName [Index | ErrorCode]]
+```
+
+Options:
+
+```cmd
+[-idispatch] [-v1] [-admin] [-config Machine\CAName]
 ```
 
 ### -ca.cert
@@ -774,21 +834,6 @@ Generates and displays a cryptographic hash over a file.
 certutil [options] -hashfile InFile [HashAlgorithm]
 ```
 
-### -csplist
-Lists all the CNG and CryptoAPI CSPs installed on this machine.
-
-```cmd
-certutil [options] -csplist [Algorithm]
-```
-
-Options:
-
-```cmd
-[-Enterprise] [-user] [-Unicode] [-gmt] [-seconds] [-Silent] [-v] [privatekey] [pin PIN] [-csp Provider] [-sid WELL_KNOWN_SID_TYPE]
-```
-
-You can see where the key of each certificate is stored by running `certutil -store -user my`.
-
 ### -store
 
 Dumps the certificate store.
@@ -1093,6 +1138,20 @@ Invokes the certutil interface.
 certutil [options] -UI File [import]
 ```
 
+### -TPMInfo
+
+Displays Trusted Platform Module Information.
+
+```cmd
+certutil [options] -TPMInfo
+```
+
+Options:
+
+```cmd
+[-f] [-Silent] [-split]
+```
+
 ### -attest
 
 Specifies that the certificate request file should be attested.
@@ -1105,6 +1164,48 @@ Options:
 
 ```cmd
 [-user] [-Silent] [-split]
+```
+
+### -getcert
+
+Selects a certificate from a selection UI.
+
+```cmd
+certutil [options] [ObjectId | ERA | KRA [CommonName]]
+```
+
+Options:
+
+```cmd
+[-Silent] [-split]
+```
+
+### -ds
+
+Displays directory service (DS) distinguished names (DNs).
+
+```cmd
+certutil [options] -ds [CommonName]
+```
+
+Options:
+
+```cmd
+[-f] [-user] [-split] [-dc DCName]
+```
+
+### -dsDel
+
+Deletes DS DNs.
+
+```cmd
+certutil [options] -dsDel [CommonName]
+```
+
+Options:
+
+```cmd
+[-user] [-split] [-dc DCName]
 ```
 
 ### -dsPublish
@@ -1138,6 +1239,76 @@ Options:
 
 - Use `-f` to create a new DS object.
 
+### -dsCert
+
+Displays DS certificates.
+
+```cmd
+certutil [options] -dsCert [FullDSDN] | [CertId [OutFile]]
+```
+
+Options:
+
+```cmd
+[-Enterprise] [-user] [-config Machine\CAName] [-dc DCName]
+```
+
+### -dsCRL
+
+Displays DS CRLs.
+
+```cmd
+certutil [options] -dsCRL [FullDSDN] | [CRLIndex [OutFile]]
+```
+  
+Options:
+
+```cmd
+[-idispatch] [-Enterprise] [-user] [-config Machine\CAName] [-dc DCName]
+```
+
+### -dsDeltaCRL
+
+Displays DS delta CRLs.
+
+```cmd
+certutil [options] -dsDeltaCRL [FullDSDN] | [CRLIndex [OutFile]]
+```
+  
+Options:
+
+```cmd
+[-Enterprise] [-user] [-config Machine\CAName] [-dc DCName]
+```
+
+### -dsTemplate
+
+Displays DS template attributes.
+
+```cmd
+certutil [options] -dsTemplate [Template]
+```
+  
+Options:
+
+```cmd
+[Silent] [-dc DCName]
+```
+
+### -dsAddTemplate
+
+Adds DS templates.
+
+```cmd
+certutil [options] -dsAddTemplate TemplateInfFile
+```
+
+Options:
+
+```cmd
+[-dc DCName]
+```
+
 ### -ADTemplate
 
 Displays Active Directory templates.
@@ -1162,7 +1333,11 @@ Options:
 certutil [options] -Template [Template]
 ```
 
-A certificate doesn't contain the template name, only the object identifier (OID) for the template. You can extract the OID for a specific certificate template from Active Directory and then filter based on the appropriate extension.
+#### Remarks
+
+- Certificate templates are a blueprint of settings that Enterprise CAs use when creating a certificate. Templates include Extended Key Usages (EKUs), which are object identifiers (OIDs) that describe how the certificate is used. Templates also include enrollment permissions, certificate expiration, issuance requirements, and cryptography settings.
+
+- Certificate templates don't refer to template names. To base a certutil `restrict` option on templates, you can extract the EKUs for a specific certificate template from Active Directory and then filter based on that extension.
 
 Options:
 
@@ -1364,6 +1539,20 @@ Options:
 [-dc DCName]
 ```
 
+### -URL
+
+Verifies certificate or CRL URLs.
+
+```cmd
+certutil [options] -URL InFile | URL
+```
+
+Options:
+
+```cmd
+[-f] [-split]
+```
+
 ### -URLCache
 
 Displays or deletes URL cache entries.
@@ -1515,12 +1704,44 @@ Options:
 [-f] [-split] [-p Password]
 ```
 
+### -key
+
+Lists the keys stored in a key container.
+
+```cmd
+certutil [options] -key [KeyContainerName | -]
+```
+
+Where:
+
+- **KeyContainerName** is the key container name for the key to verify. This option defaults to machine keys. To switch to user keys, use `-user`.
+- Using the `-` sign refers to using the default key container.  
+
+Options:
+
+```cmd
+[-user] [-Silent] [-split] [-csp Provider] [-Location AlternateStorageLocation]
+```
+
+### -delkey
+
+Deletes the named key container.
+
+```cmd
+certutil [options] -delkey KeyContainerName
+```
+
+Options:
+
+```cmd
+[-user] [-Silent] [-split] [-csp Provider] [-Location AlternateStorageLocation]
+```
+
 ### -DeleteHelloContainer
 
-Deletes the Windows Hello container, removing all associated credentials that are stored on the
-device, including any WebAuthn and FIDO credentials.
+Deletes the Windows Hello container, removing all associated credentials that are stored on the device, including any WebAuthn and FIDO credentials.
 
-Users will need to sign out after using this option for it to complete.
+Users need to sign out after using this option for it to complete.
 
 ```cmd
 certutil [options] -DeleteHelloContainer
@@ -1849,6 +2070,45 @@ Options:
 [-f]
 ```
 
+### -csplist
+Lists all the CNG and CryptoAPI CSPs installed on this machine.
+
+```cmd
+certutil [options] -csplist [Algorithm]
+```
+
+Options:
+
+```cmd
+[-user] [-Silent] [-csp Provider]
+```
+
+### -csptest
+Tests the CSPs installed on this machine.
+
+```cmd
+certutil [options] -csptest [Algorithm]
+```
+
+Options:
+
+```cmd
+[-user] [-Silent] [-csp Provider]
+```
+
+### -CNGConfig
+Displays CNG crypto configuration on this machine.
+
+```cmd
+certutil [options] -CNGConfig
+```
+
+Options:
+
+```cmd
+[-Silent]
+```
+
 ### -sign
 
 Re-signs a certificate revocation list (CRL) or certificate.
@@ -1990,9 +2250,31 @@ Where:
   - **ClientCertificate** uses X.509 Certificate SSL credentials.
 - **KeyBasedRenewal** allows use of a KeyBasedRenewal policy server.
 
+### -Class
+
+Displays COM registry information.
+
+```cmd
+certutil [options] -Class [ClassId | ProgId | DllName | *]
+```
+
+Options:
+
+```cmd
+[-f]
+```
+
+### -7f
+
+Checks certificate for 0x7f length encodings.
+
+```cmd
+certutil [options] -7f CertFile
+```
+
 ### -oid
 
-Displays the object identifier or set a display name.
+Displays the object identifier or sets a display name.
 
 ```cmd
 certutil [options] -oid ObjectId [DisplayName | delete [LanguageId [type]]]
@@ -2027,6 +2309,28 @@ Displays the message text associated with an error code.
 
 ```cmd
 certutil [options] -error ErrorCode
+```
+
+### -getsmtpinfo
+
+Gets Simple Mail Transfer Protocol (SMTP) information.
+
+```cmd
+certutil [options] -getsmtpinfo
+```
+
+### -setsmtpinfo
+
+Sets SMTP information.
+
+```cmd
+certutil [options] -setsmtpinfo LogonName
+```
+
+Options:
+
+```cmd
+[-config Machine\CAName] [-p Password]
 ```
 
 ### -getreg
@@ -2217,19 +2521,6 @@ Options:
 
 The Certificate Authority may also need to be configured to support foreign certificates. To do this, type `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
 
-### -key
-
-Lists the keys stored in a key container.
-
-```cmd
-certutil [options] -key [KeyContainerName | -]
-```
-
-Where:
-
-- **KeyContainerName** is the key container name for the key to verify. This option defaults to machine keys. To switch to user keys, use `-user`.
-- Using the `-` sign refers to using the default key container.  
-
 ### -GetKey
 
 Retrieves an archived private key recovery blob, generates a recovery script, or recovers archived keys.
@@ -2266,20 +2557,6 @@ Options:
 
 - For **retrieve**, any extension is truncated and a certificate-specific string and the `.rec` extensions are appended for each key recovery blob. Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 - For **recover**, any extension is truncated and the `.p12` extension is appended. Contains the recovered certificate chains and associated private keys, stored as a PFX file.
-
-### -delkey
-
-Deletes the named key container.
-
-```cmd
-certutil [options] -delkey KeyContainerName
-```
-
-Options:
-
-```cmd
-[-user] [-Unicode] [-gmt] [-seconds] [-Silent] [-v] [-privatekey] [-pin PIN] [-csp Provider] [-Location AlternateStorageLocation] [-sid WELL_KNOWN_SID_TYPE]
-```
 
 ### -RecoverKey
 
@@ -2500,43 +2777,52 @@ This section defines all of the options you're able to specify, based on the com
 
 | Options | Description |
 | ------- | ----------- |
-| -`anonymous` | Use anonymous SSL credentials. |
-| -`cert <CertId>` | Signing certificate. |
-| -`clientcertificate <clientCertId>` | Use X.509 Certificate SSL credentials. For selection UI, use `-clientcertificate`. |
-| -`config <Machine\CAName>` | Certificate Authority and computer name string. |
-| -`csp <provider>` | Provider:<br>**KSP** - Microsoft Software Key Storage Provider <br>**TPM** - Microsoft Platform Crypto Provider <br>**NGC** - Microsoft Passport Key Storage Provider <br>**SC** - Microsoft Smart Card Key Storage Provider |
-| -`dc <DCName>` | Target a specific Domain Controller. |
-| -`enterprise` | Use the local machine enterprise registry certificate store. |
-| -`f` | Force overwrite. |
-| -`generateSSTFromWU <SSTFile>` | Generate SST by using the automatic update mechanism. |
-| -`gmt` | Display times using GMT. |
-| -`GroupPolicy` | Use the group policy certificate store. |
-| -`kerberos` | Use Kerberos SSL credentials. |
-| -`location <alternatestoragelocation>` | `(-loc)` AlternateStorageLocation. |
-| -`mt` | Display machine templates. |
-| -`nullsign` | Use the hash of the data as a signature. |
-| -`out <columnlist>` | Comma-separated column list. |
-| -`p <password>` | Password |
-| -`pin <PIN>` | Smart card PIN. |
-| -`policyserver <URLorID>` | Policy Server URL or ID. For selection U/I, use `-policyserver`. For all Policy Servers, use `-policyserver *`|
-| -`privatekey` | Display password and private key data. |
-| -`protectto <SAMnameandSIDlist>` | Comma-separated SAM name/SID list. |
-| -`restrict <restrictionlist>` | Comma-separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string, or date. One column name may be preceded by a plus or minus sign to indicate the sort order. For example: `requestID = 47`, `+requestername >= a, requestername`, or `-requestername > DOMAIN, Disposition = 21`. |
-| -`seconds` | Display times using seconds and milliseconds. |
-| -`sid` | Numeric SID:<br>**22** - Local System<br>**23** - Local Service<br>**24** - Network Service |
-| -`silent` | Use the `silent` flag to acquire crypt context. |
-| -`split` | Split embedded ASN.1 elements, and save to files. |
-| -`sslpolicy <servername>` | SSL Policy matching ServerName. |
-| -`symkeyalg <symmetrickeyalgorithm[,keylength]>` | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES` |
-| -`syncWithWU <DestinationDir>` | Sync with Windows Update. |
-| -`t <timeout>` | URL fetch timeout in milliseconds. |
-| -`Unicode` | Write redirected output in Unicode. |
-| -`UnicodeText` | Write output file in Unicode. |
-| -`urlfetch` | Retrieve and verify AIA Certs and CDP CRLs. |
-| -`user` | Use the HKEY_CURRENT_USER keys or certificate store. |
-| -`username <username>` | Use named account for SSL credentials. For selection UI, use `-username`. |
-| -`ut` | Display user templates. |
-| -`v` | Provide more detailed (verbose) information. |
+| -admin | Use ICertAdmin2 for CA properties.|
+| -anonymous | Use anonymous SSL credentials. |
+| -cert CertId | Signing certificate. |
+| -clientcertificate clientCertId | Use X.509 Certificate SSL credentials. For selection UI, use `-clientcertificate`. |
+| -config Machine\CAName | Certificate Authority and computer name string. |
+| -csp provider | Provider:<br>**KSP** - Microsoft Software Key Storage Provider <br>**TPM** - Microsoft Platform Crypto Provider <br>**NGC** - Microsoft Passport Key Storage Provider <br>**SC** - Microsoft Smart Card Key Storage Provider |
+| -dc DCName | Target a specific Domain Controller. |
+| -enterprise | Use the local machine enterprise registry certificate store. |
+| -f | Force overwrite. |
+| -generateSSTFromWU SSTFile | Generate SST by using the automatic update mechanism. |
+| -gmt | Display times using GMT. |
+| -GroupPolicy | Use the group policy certificate store. |
+| -idispatch | Use IDispatch instead of COM native methods.|
+| -kerberos | Use Kerberos SSL credentials. |
+| -location alternatestoragelocation | `(-loc)` AlternateStorageLocation. |
+| -mt | Display machine templates. |
+| -nocr | Encode text without CR characters.|
+| -nocrlf | Encode text without CR-LF characters.|
+| -nullsign | Use the hash of the data as a signature. |
+| -oldpfx | Use old PFX encryption.
+| -out columnlist | Comma-separated column list. |
+| -p password | Password |
+| -pin PIN | Smart card PIN. |
+| -policyserver URLorID | Policy Server URL or ID. For selection U/I, use `-policyserver`. For all Policy Servers, use `-policyserver *`|
+| -privatekey | Display password and private key data. |
+| -protect | Protect keys with password.|
+| -protectto SAMnameandSIDlist | Comma-separated SAM name/SID list. |
+| -restrict restrictionlist | Comma-separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string, or date. One column name may be preceded by a plus or minus sign to indicate the sort order. For example: `requestID = 47`, `+requestername >= a, requestername`, or `-requestername > DOMAIN, Disposition = 21`. |
+| -reverse | Reverse Log and Queue columns.|
+| -seconds | Display times using seconds and milliseconds. |
+| -service | Use service certificate store.|
+| -sid | Numeric SID:<br>**22** - Local System<br>**23** - Local Service<br>**24** - Network Service |
+| -silent | Use the `silent` flag to acquire crypt context. |
+| -split | Split embedded ASN.1 elements, and save to files. |
+| -sslpolicy servername | SSL Policy matching ServerName. |
+| -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES** |
+| -syncWithWU DestinationDir | Sync with Windows Update. |
+| -t timeout | URL fetch timeout in milliseconds. |
+| -Unicode | Write redirected output in Unicode. |
+| -UnicodeText | Write output file in Unicode. |
+| -urlfetch | Retrieve and verify AIA Certs and CDP CRLs. |
+| -user | Use the HKEY_CURRENT_USER keys or certificate store. |
+| -username username | Use named account for SSL credentials. For selection UI, use `-username`. |
+| -ut | Display user templates. |
+| -v | Provide more detailed (verbose) information. |
+| -v1 | Use V1 interfaces.|
 
 Hash algorithms: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512.
 
