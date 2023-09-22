@@ -5,7 +5,7 @@ ms.service:
 ms.topic: reference
 author: xelu86
 ms.author: wscontent
-ms.date: 09/20/2023
+ms.date: 09/22/2023
 ---
 
 # certutil
@@ -16,6 +16,9 @@ If `certutil` is run on a certification authority without other parameters, it d
 
 > [!IMPORTANT]
 > Not all versions of certutil provide all of the parameters and options that this document describes. You can see the choices that your version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
+
+> [!TIP]
+> To see complete Help for all certutil verbs and options, including ones that are hidden from the `-?` argument, run `certutil -v -uSAGE`. The `uSAGE` switch is case-sensitive.
 
 > [!NOTE]
 > Certutil `Date` arguments expect the format `mm/dd/yyyy`, for example `5/6/2022` for May 6, 2022. If your server isn't configured with US regional settings, using certutil with `Date` arguments might produce unexpected results.
@@ -2065,7 +2068,7 @@ Options:
 ```
 
 ### -csplist
-Lists all the CNG and CryptoAPI CSPs installed on this machine.
+List the cryptographic service providers (CSPs) installed on this machine.
 
 ```cmd
 certutil [options] -csplist [Algorithm]
@@ -2091,7 +2094,7 @@ Options:
 ```
 
 ### -CNGConfig
-Displays CNG crypto configuration on this machine.
+Displays CNG cryptographic configuration on this machine.
 
 ```cmd
 certutil [options] -CNGConfig
