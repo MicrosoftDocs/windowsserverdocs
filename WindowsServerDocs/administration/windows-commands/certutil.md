@@ -12,7 +12,7 @@ ms.date: 09/20/2023
 
 Certutil.exe is a command-line program installed as part of Certificate Services. You can use certutil.exe to display certification authority (CA) configuration information, configure Certificate Services, and back up and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
 
-If certutil is run on a certification authority without other parameters, it displays the current certification authority configuration. If certutil is run on a non-certification authority without other parameters, the command defaults to running the `certutil [-dump]` command.
+If `certutil` is run on a certification authority without other parameters, it displays the current certification authority configuration. If `certutil` is run on a non-certification authority without other parameters, the command defaults to running the `certutil -dump` command.
 
 > [!IMPORTANT]
 > Not all versions of certutil provide all of the parameters and options that this document describes. You can see the choices that your version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
@@ -53,7 +53,7 @@ Options:
 
 ### -asn
 
-Parse and display the contents of a file using Abstract Syntax Notation (ASN.1) syntax. File types include .CER, .DER and PKCS #7 formatted files.
+Parses and displays the contents of a file using Abstract Syntax Notation (ASN.1) syntax. File types include .CER, .DER and PKCS #7 formatted files.
 
 ```cmd
 certutil [options] -asn File [type]
@@ -330,39 +330,39 @@ Where:
 - **InfoName** indicates the CA property to display, based on the following infoname argument syntax:
   - **\*** - Displays all properties
   - **ads** - Advanced Server
-  - **aia** `[Index]` - AIA URLs
-  - **cdp** `[Index]` - CDP URLs
-  - **cert** `[Index]` - CA cert
-  - **certchain** `[Index]` - CA cert chain
+  - **aia [Index]** - AIA URLs
+  - **cdp [Index]** - CDP URLs
+  - **cert [Index]** - CA cert
+  - **certchain [Index]** - CA cert chain
   - **certcount** - CA cert count
-  - **certcrlchain** `[Index]` - CA cert chain with CRLs
-  - **certstate** `[Index]` - CA cert
-  - **certstatuscode** `[Index]` - CA cert verify status
-  - **certversion** `[Index]` - CA cert version
-  - **CRL** `[Index]` - Base CRL
-  - **crlstate** `[Index]` - CRL
-  - **crlstatus** `[Index]` - CRL Publish Status
-  - **cross-** `[Index]` - Backward cross cert
-  - **cross+** `[Index]` - Forward cross cert
-  - **crossstate-** `[Index]` - Backward cross cert
-  - **crossstate+** `[Index]` - Forward cross cert
-  - **deltacrl** `[Index]` - Delta CRL
-  - **deltacrlstatus** `[Index]` - Delta CRL Publish Status
+  - **certcrlchain [Index]** - CA cert chain with CRLs
+  - **certstate [Index]** - CA cert
+  - **certstatuscode [Index]** - CA cert verify status
+  - **certversion [Index]** - CA cert version
+  - **CRL [Index]** - Base CRL
+  - **crlstate [Index]** - CRL
+  - **crlstatus [Index]** - CRL Publish Status
+  - **cross- [Index]** - Backward cross cert
+  - **cross+ [Index]** - Forward cross cert
+  - **crossstate- [Index]** - Backward cross cert
+  - **crossstate+ [Index]** - Forward cross cert
+  - **deltacrl [Index]** - Delta CRL
+  - **deltacrlstatus [Index]** - Delta CRL Publish Status
   - **dns** - DNS Name
   - **dsname** - Sanitized CA short name (DS name)
   - **error1 ErrorCode** - Error message text
   - **error2 ErrorCode** - Error message text and error code
-  - **exit** `[Index]` - Exit module description
+  - **exit [Index]** - Exit module description
   - **exitcount** - Exit module count
   - **file** - File version
   - **info** - CA info
-  - **kra** `[Index]` - KRA cert
+  - **kra [Index]** - KRA cert
   - **kracount** - KRA cert count
-  - **krastate** `[Index]` - KRA cert
+  - **krastate [Index]** - KRA cert
   - **kraused** - KRA cert used count
   - **localename** - CA locale name
   - **name** - CA name
-  - **ocsp** `[Index]` - OCSP URLs
+  - **ocsp [Index]** - OCSP URLs
   - **parent** - Parent CA
   - **policy** - Policy module description
   - **product** - Product version
@@ -373,10 +373,10 @@ Where:
   - **subjecttemplateoids** - Subject Template OIDs
   - **templates** - Templates
   - **type** - CA type
-  - **xchg** `[Index]` - CA exchange cert
-  - **xchgchain** `[Index]` - CA exchange cert chain
+  - **xchg [Index]** - CA exchange cert
+  - **xchgchain [Index]** - CA exchange cert chain
   - **xchgcount** - CA exchange cert count
-  - **xchgcrlchain** `[Index]` - CA exchange cert chain with CRLs
+  - **xchgcrlchain [Index]** - CA exchange cert chain with CRLs
 - **index** is the optional zero-based property index.
 - **errorcode** is the numeric error code.
 
@@ -577,7 +577,7 @@ Options:
 - To display the entire CRL table, type: `CRL`
 - Use `Date[+|-dd:hh]` for date restrictions.
 - Use `now+dd:hh` for a date relative to the current time.
-
+- Templates contain Extended Key Usages (EKUs), which are object identifiers (OIDs) that describe how the certificate is used. Certificates don't always include template common names or display names, but they always contain the template EKUs. You can extract the EKUs for a specific certificate template from Active Directory and then restrict views based on that extension.
 ### -db
 
 Dumps the raw database.
@@ -622,7 +622,7 @@ Options:
 - To delete CRLs that expired by January 22, 2001, type: `1/22/2001 crl`
 
 >[!NOTE]
->Certutil `Date` arguments expect the format `mm/dd/yyyy`, for example `5/6/2022` for May 6, 2022. If your server isn't configured with US regional settings, using certutil with `Date` arguments might produce unexpected results.
+>Certutil **Date** arguments expect the format `mm/dd/yyyy`, for example `5/6/2022` for May 6, 2022. If your server isn't configured with US regional settings, using certutil with **Date** arguments might produce unexpected results.
 
 ### -backup
 
@@ -854,7 +854,7 @@ Where:
   - `ldap: (AD computer object certificates)`
   - `-user ldap: (AD user object certificates)`
   
-- **CertId** is the certificate or CRL match token. This can be a:
+- **CertId** is the certificate or CRL match token. This ID can be a:
 
   - Serial number
   - SHA-1 certificate
@@ -872,7 +872,7 @@ Where:
   - EKU or Application Policies ObjectId
   - CRL issuer Common Name.
 
-Many of these may result in multiple matches.
+Many of these identifiers might result in multiple matches.
 
 - **OutputFile** is the file used to save the matching certificates.
 
@@ -1332,12 +1332,6 @@ Options:
 ```cmd
 certutil [options] -Template [Template]
 ```
-
-#### Remarks
-
-- Certificate templates are a blueprint of settings that Enterprise CAs use when creating a certificate. Templates include Extended Key Usages (EKUs), which are object identifiers (OIDs) that describe how the certificate is used. Templates also include enrollment permissions, certificate expiration, issuance requirements, and cryptography settings.
-
-- Certificate templates don't refer to template names. To base a certutil `restrict` option on templates, you can extract the EKUs for a specific certificate template from Active Directory and then filter based on that extension.
 
 Options:
 
@@ -2768,8 +2762,8 @@ certutil -? -v
 Where:
 
 - **-?** displays the list of parameters
-- **-`<name_of_parameter>` -?** displays help content for the specified parameter.
-- **-? -v** displays a list of parameters and options.
+- **-\<name_of_parameter> -?** displays help content for the specified parameter.
+- **-? -v** displays a verbose list of parameters and options.
 
 ## Options
 
@@ -2804,7 +2798,7 @@ This section defines all of the options you're able to specify, based on the com
 | -privatekey | Display password and private key data. |
 | -protect | Protect keys with password.|
 | -protectto SAMnameandSIDlist | Comma-separated SAM name/SID list. |
-| -restrict restrictionlist | Comma-separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string, or date. One column name may be preceded by a plus or minus sign to indicate the sort order. For example: `requestID = 47`, `+requestername >= a, requestername`, or `-requestername > DOMAIN, Disposition = 21`. |
+| -restrict restrictionlist | Comma-separated Restriction List. Each restriction consists of a column name, a relational operator, and a constant integer, string, or date. One column name may be preceded by a plus or minus sign to indicate the sort order. For example: `requestID = 47`, `+requestername >= a, requestername`, or `-requestername > DOMAIN, Disposition = 21`. |
 | -reverse | Reverse Log and Queue columns.|
 | -seconds | Display times using seconds and milliseconds. |
 | -service | Use service certificate store.|
@@ -2825,9 +2819,6 @@ This section defines all of the options you're able to specify, based on the com
 | -v1 | Use V1 interfaces.|
 
 Hash algorithms: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512.
-
->[!NOTE]
->Certutil `Date` arguments expect the format `mm/dd/yyyy`, for example `5/6/2022` for May 6, 2022. If your server isn't configured with US regional settings, using certutil with `Date` arguments might produce unexpected results.
 
 ## Related links
 
