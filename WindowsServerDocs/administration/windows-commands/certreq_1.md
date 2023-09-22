@@ -3,7 +3,7 @@ title: certreq
 description: Reference article for the certreq command, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.
 ms.topic: reference
 ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
-ms.author: jgerend
+ms.author: wscontent
 author: JasonGerend
 manager: mtillman
 ms.date: 09/21/2023
@@ -132,7 +132,7 @@ This area of the INF file is mandatory for any new certificate request templates
 
 <sup>2</sup>Parameter to the right of the equal sign (=)
 
-#### [extensions]
+#### [Extensions]
 
 This section is optional.
 
@@ -236,7 +236,7 @@ _continue_ = "DNS=www.example.com"
 _continue_ = "IP Address=192.168.1.1"
 ```
 
-In this example, `2.5.29.17` is the OID defining the SAN. To specify multiple SANs, the `"\_continue_"` extension OID is used, which lets you separate and specify each SAN extension.
+In this example, `2.5.29.17` is the OID defining the SAN. To specify multiple SANs, the `_continue_` extension OID is used, which lets you separate and specify each SAN extension.
 
 ### certreq -accept
 
@@ -283,9 +283,9 @@ certreq -submit myrequest_sign.req myrequest_cert.cer
 
 - Signing the qualified subordination request may require **Enterprise Administrator** credentials. This is a best practice for issuing signing certificates for qualified subordination.
 
-- The certificate used to sign the qualified subordination request uses the qualified subordination template. Enterprise Administrators will have to sign the request or grant user permissions to the individuals signing the certificate.
+- The certificate used to sign the qualified subordination request uses the qualified subordination template. Enterprise Administrators have to sign the request or grant user permissions to the individuals signing the certificate.
 
-- You might be required to have additional personnel sign the CMC request after you. This will depend on the assurance level associated with the qualified subordination.
+- You might be required to have additional personnel sign the CMC request after you. This depends on the assurance level associated with the qualified subordination.
 
 - If the parent CA of the qualified subordinate CA you're installing is offline, you must obtain the CA certificate for the qualified subordinate CA from the offline parent. If the parent CA is online, specify the CA certificate for the qualified subordinate CA during the **Certificate Services Installation** wizard.
 
@@ -323,8 +323,8 @@ You can only renew valid certificates. Expired certificates can't be renewed and
 | -clientcertificate `<ClientCertId>` | You can replace the `<ClientCertId>` with a certificate thumbprint, CN, EKU, template, email, UPN, or the new `name=value` syntax. |
 | -username `<username>` | Used with Certificate Enrollment web services. You can substitute `<username>` with the SAM name or **domain\user** value. This option is for use with the `-p` option. |
 | -p `<password>` | Used with Certificate Enrollment web services. Substitute `<password>` with the actual user's password. This option is for use with the `-username` option. |
-| -user | Configures the `-user` context for a new certificate request or specifies the context for an a certificate acceptance. This is the default context, if none is specified in the INF or template. |
-| -machine | Configures a new certificate request or specifies the context for an a certificate acceptance for the machine context. For new requests it must be consistent with the MachineKeyset INF key and the template context. If this option is not specified and the template does not set a context, then the default is the user context. |
+| -user | Configures the `-user` context for a new certificate request or specifies the context for a certificate acceptance. This is the default context, if none is specified in the INF or template. |
+| -machine | Configures a new certificate request or specifies the context for an a certificate acceptance for the machine context. For new requests it must be consistent with the MachineKeyset INF key and the template context. If this option isn't specified and the template doesn't set a context, then the default is the user context. |
 | -crl | Includes certificate revocation lists (CRLs) in the output to the base64-encoded PKCS #7 file specified by `certchainfileout` or to the base64-encoded file specified by `requestfileout`. |
 | -rpc | Instructs Active Directory Certificate Services (AD CS) to use a remote procedure call (RPC) server connection instead of Distributed COM. |
 | -adminforcemachine | Use the Key Service or impersonation to submit the request from Local System context. Requires that the user invoking this option be a member of Local Administrators. |
