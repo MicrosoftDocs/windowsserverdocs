@@ -235,7 +235,7 @@ _continue_ = "DNS=www.example.com"
 _continue_ = "IP Address=192.168.1.1"
 ```
 
-In this example, `2.5.29.17` is the OID defining the SAN. To specify multiple SANs, the `"_continue_"` extension OID is used, which lets you separate and specify each SAN extension.
+In this example, `2.5.29.17` is the OID defining the SAN. To specify multiple SANs, the `_continue_` extension OID is used, which lets you separate and specify each SAN extension.
 
 ### certreq -accept
 
