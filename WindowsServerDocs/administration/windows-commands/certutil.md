@@ -2129,12 +2129,14 @@ Where:
 - **SerialNumberList** is the comma-separated serial number list of the files to add or remove.
 - **ObjectIdList** is the comma-separated extension ObjectId list of the files to remove.
 - **@ExtensionFile** is the INF file that contains the extensions to update or remove. For example:
+
   ```cmd
   [Extensions]
       2.5.29.31 = ; Remove CRL Distribution Points extension
       2.5.29.15 = {hex} ; Update Key Usage extension
       _continue_=03 02 01 86
   ```
+  
 - **HashAlgorithm** is the name of the hash algorithm. This must only be the text preceded by the `#` sign.
 - **AlternateSignatureAlgorithm** is the alternate signature algorithm specifier.
 
