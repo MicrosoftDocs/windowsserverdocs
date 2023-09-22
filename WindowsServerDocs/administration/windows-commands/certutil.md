@@ -2806,25 +2806,4 @@ This section defines all of the options you're able to specify, based on the com
 | -silent | Use the `silent` flag to acquire crypt context. |
 | -split | Split embedded ASN.1 elements, and save to files. |
 | -sslpolicy servername | SSL Policy matching ServerName. |
-| -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES** |
-| -syncWithWU DestinationDir | Sync with Windows Update. |
-| -t timeout | URL fetch timeout in milliseconds. |
-| -Unicode | Write redirected output in Unicode. |
-| -UnicodeText | Write output file in Unicode. |
-| -urlfetch | Retrieve and verify AIA Certs and CDP CRLs. |
-| -user | Use the HKEY_CURRENT_USER keys or certificate store. |
-| -username username | Use named account for SSL credentials. For selection UI, use `-username`. |
-| -ut | Display user templates. |
-| -v | Provide more detailed (verbose) information. |
-| -v1 | Use V1 interfaces. |
-
-Hash algorithms: MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512.
-
-## Related links
-
-For more examples of how to use this command, see the following articles:
-
-- [Active Directory Certificate Services (AD CS)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
-- [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
-- [Configure trusted roots and disallowed certificates in Windows](../../identity/ad-cs/configure-trusted-roots-disallowed-certificates.md)
 
