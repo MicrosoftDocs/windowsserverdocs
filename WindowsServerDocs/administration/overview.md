@@ -10,7 +10,11 @@ ms.date: 02/24/2022
 ---
 # Windows Server management overview
 
-Windows Server is the platform for building an infrastructure of connected applications, networks, and web services. As a Windows Server administrator, you've probably used many of the native Windows Server Microsoft Management Consoles (MMC) to keep the infrastructure secure and available. As the foundation of many on-premises, hybrid, and cloud native applications, the Windows Server teams have continued to invest in making the management and administration of your Windows Server instances easier by offering management tools like Azure Arc, Azure Automanage, Windows Admin Center, and System Center. These tools are designed to work together, and each have capabilities to meet you where you are in your server management needs.
+Windows Server is the platform for building an infrastructure of connected applications, networks, and web services. As a Windows Server administrator, you've probably used many of the native Windows Server Microsoft Management Consoles (MMC) to keep your infrastructure secure and available. As the foundation of many on-premises, hybrid, and cloud native applications, the Windows Server teams have continued to invest in making the management and administration of your Windows Server instances easier by offering management tools like Azure Arc, Azure Automanage, Windows Admin Center, and System Center. These tools are designed to work together, and each have capabilities to meet you where you are in your server management needs.
+
+<!--I don't think front-loading a summary into an image is the most accesible thing we can do, especially since the table beneath it is tied to it.-->
+
+<!--Was this image somebody's attempt at creating a landing page? It looks like the links in the table beneath it were meant to be attached to each component of the diagram, which are styled to look like links you'd find on the landing pages.-->
 
 :::image type="content" source="media/windows-server-management-overview.png" alt-text="Windows Server Management Overview":::
 
@@ -20,7 +24,7 @@ Windows Server is the platform for building an infrastructure of connected appli
 
 ## Cloud-based management using Azure Arc + Azure Automanage
 
-Azure Arc-enabled server enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more. In conjunction with Azure Automanage, you eliminate the need for service discovery, enrollment, configuration and monitoring of the Azure services that conform to server management best practices.
+Azure Arc-enabled servers let you manage your Windows and Linux physical servers and virtual machines (VMs) hosted outside of Azure on your corporate network or other cloud provider. We've designed this management experience to feel like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more. When you use Azure Arc-enabled servers with Azure Automanage, you eliminate the need for service discovery, enrollment, configuration and monitoring of Azure services that follow server management guidelines.
 
 | Details | Description |
 | --------------- | --------------- |
