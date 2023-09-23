@@ -50,7 +50,7 @@ When you use the Per Device model, a temporary license is issued the first time 
 
 The next time that device connects, as long as the license server is activated and there are available RDS CALs, the license server upgrades the temporary RDS CAL token to a full RDS CAL token and issues a permanent RDS Per Device CAL. If no license tokens are available, the temporary RDS CAL token continues to function for 90 days.
 
-Every time the client device connects to the RDS Host, it presents its RDS CAL certificate to the server. The server checks not only whether the client device has a valid certificate, but also the expiration date of that certificate. If the expiration date of the certificate is within 7 days of the current date, the RDS Host connects to the license server to renew the license for another random period of 52 to 89 days.
+Every time the client device connects to the RDS Host, it presents its RDS CAL certificate to the server. The server checks not only whether the client device has a valid certificate, but also the expiration date of that certificate. If the expiration date of the certificate is within seven days of the current date, the RDS Host connects to the license server to renew the license for another random period of 52 to 89 days.
 
 ### Per User CALs
 
@@ -60,7 +60,7 @@ Per User RDS CALs show as expiring 60 days after they're issued. Shortly before 
 
 For most license agreements, 90 days is the more relevant time period, because it's the minimum time required before a license can be reassigned to a different user, except under special circumstances.
 
-You can use the Remote Desktop Licensing Manager to track and generate reports on RDS Per User CALs. To ensure you're in compliance with the Remote Desktop Services license terms, track the number of RDS Per User CALs used in your organization, and be sure to have enough RDS Per User CALs installed on the license server for all of your users.
+You can use the Remote Desktop Licensing Manager to track and generate reports on RDS Per User CALs. To ensure you're in compliance with the Remote Desktop Services license terms, track the number of RDS Per User CALs used in your organization. Be sure to have enough RDS Per User CALs installed on the license server for all of your users.
 
 ## RDS CAL version compatibility
 
