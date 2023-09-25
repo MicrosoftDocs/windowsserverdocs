@@ -5,7 +5,7 @@ ms.reviewer: cosmosdarwin
 author: JasonGerend
 ms.author: jgerend
 manager: daveba
-ms.date: 06/20/2019
+ms.date: 09/25/2023
 ms.topic: reference
 ---
 
@@ -26,9 +26,9 @@ cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/
 | Parameter | Description |
 | --------- | ----------- |
 | /d `<driveletter>` | Specifies the drive that you want Disk Cleanup to clean.<p>**NOTE:** The **/d** option is not utilized with `/sagerun:n`. |
-| /sageset:n | Displays the **Disk Cleanup Settings** dialog box and also creates a registry key to store the settings that you select. The `n` value, which is stored in the registry, allows you to specify tasks for Disk Cleanup to run. The `n` value can be any integer value from 0 to 9999. |
+| /sageset:n | Displays the **Disk Cleanup Settings** dialog box and also creates a registry key to store the settings that you select. The `n` value, which is stored in the registry, allows you to specify tasks for Disk Cleanup to run. The `n` value can be any integer value from 0 to 9999. For more information, see [Registry key information](/troubleshoot/windows-server/backup-and-storage/automating-disk-cleanup-tool#registry-key-information). |
 | /sagerun:n | Runs the specified tasks that are assigned to the n value if you use the **/sageset** option. All drives on the computer are enumerated and the selected profile runs against each drive. |
-| /tuneup:n | Run **/sageset** and **/sagerun** for the same `n` . |
+| /tuneup:n | Run **/sageset** and **/sagerun** for the same `n`. |
 | /lowdisk | Run with the default settings. |
 | /verylowdisk | Run with the default settings, no user prompts. |
 | /? | Displays help at the command prompt. |
