@@ -263,7 +263,7 @@ $subscription = "<subscription_id>"
 $port = "6516"
         
 #Deploy Windows Admin Center
-$Setting = @{ "port" = $port }
+$Setting = @{"port" = $port; "proxy" = @{"mode" = "application"; "address" = "http://[address]:[port]";}} #proxy configuration is optional
 New-AzConnectedMachineExtension -Name "AdminCenter" -ResourceGroupName $resourceGroup -MachineName $machineName -Location $location -Publisher "Microsoft.AdminCenter" -Settings $Setting -ExtensionType "AdminCenter" -SubscriptionId $subscription
         
 #Allow connectivity
