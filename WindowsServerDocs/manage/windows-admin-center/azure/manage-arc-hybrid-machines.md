@@ -268,7 +268,11 @@ New-AzConnectedMachineExtension -Name "AdminCenter" -ResourceGroupName $resource
         
 #Allow connectivity
 $putPayload = "{'properties': {'type': 'default'}}"
-Invoke-AzRestMethod -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" -Payload $putPayload
+Invoke-AzRestMethod -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2023-03-15" -Payload $putPayload
+
+$patch = @{ "properties" =  @{ "serviceName" = "WAC"; "port" = $port}} 
+$patchPayload = ConvertTo-Json $patch 
+Invoke-AzRestMethod -Method PUT -Path /subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default/serviceconfigurations/WAC?api-version=2023-03-15 -Payload $patchPayload
 ```
 
 ## Troubleshooting
