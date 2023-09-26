@@ -12,9 +12,7 @@ ms.date: 09/26/2023
 
 This article explains how to configure added protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 
-The LSA, which includes the Local Security Authority Server Service (LSASS) process, validates users for local and remote sign-ins and enforces local security policies. Windows 8.1 or Windows Server 2012 R2 operating systems and later can provide added protection for the LSA, to prevent reading memory and code injection by nonprotected processes. This feature provides added security for the credentials that LSA stores and manages.
-
-You can configure the protected process setting for LSA in Windows 8.1 or Windows Server 2012 R2 and later. Except in Windows 8.1 RT, this functionality is disabled by default and must be enabled in the registry or using Group Policy. When this setting is used with UEFI lock and Secure Boot, you get even more protection, because disabling the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key has no effect.
+The LSA, which includes the Local Security Authority Server Service (LSASS) process, validates users for local and remote sign-ins and enforces local security policies. Starting with Windows 8.1 and later, added protection for the LSA is provided to prevent reading memory and code injection by nonprotected processes. This feature provides added security for the credentials that LSA stores and manages. Further protection is achieved when using UEFI lock and Secure Boot, because disabling the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key has no effect.
 
 ## Protected process requirements for plug-ins or drivers
 
@@ -171,6 +169,30 @@ You can enable LSA protection on a single computer by using the registry or by u
    - **00000001** to enable LSA protection with a UEFI variable.
    - **00000002** to enable LSA protection without a UEFI variable, only enforced on Windows 11 version 22H2 and later.
 11. Select **OK**.
+
+### Enable LSA protection by creating a custom device configuration profile
+
+For devices running Windows 11 version 22H2 and later, you can enable and configure LSA protection by creating a custom device configuration profile in the [Microsoft Intune admin center](https://devicemanagement.microsoft.com).
+
+1. In the Intune admin center, navigate to **Devices** > **Windows** > **Configuration profiles** and select **Create profile**.
+1. On the **Create a profile** screen, select the following options:
+   - **Platform**: Windows 10 and later
+   - **Profile type**: Select **Templates**, and then select **Custom**.
+1. Select **Create**.
+1. On the **Basics** screen, enter a **Name** and optional **Description** for the profile, and then select **Next**.
+1. On the **Configuration settings** screen, select **Add**.
+1. On the **Add row** screen, provide the following information:
+   - **Name**: Provide a name for the OMA-URI setting.
+   - **OMA-URI**: Enter *./Device/Vendor/MSFT/Policy/Config/LocalSecurityAuthority/ConfigureLsaProtectedProcess*.
+   - **Data type**: Select **Integer**.
+   - **Value**: Enter *1* to configure LSASS to run as a protected process with UEFI lock, or *2* to configure LSASS to run as a protected process without UEFI lock.
+1. Select **Save**, and then select **Next**.
+1. On the **Assignments** page, configure the assignments, and then select **Next**.
+1. On the **Applicability Rules** page, configure any applicability rules, and then select **Next**.
+1. On the **Review + create** page, verify the configuration, and then select **Create**.
+1. Restart the computer.
+
+For more information about this Policy CSP, see [LocalSecurityAuthority - ConfigureLsaProtectedProcess](/windows/client-management/mdm/policy-csp-lsa#configurelsaprotectedprocess).
 
 ### Disable LSA protection
 
