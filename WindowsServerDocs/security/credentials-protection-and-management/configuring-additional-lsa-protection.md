@@ -12,9 +12,9 @@ ms.date: 09/25/2023
 
 This article explains how to configure added protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 
-The LSA, which includes the Local Security Authority Server Service (LSASS) process, validates users for local and remote sign-ins and enforces local security policies. The Windows 8.1 operating system and later provide added protection for the LSA, to prevent reading memory and code injection by nonprotected processes. This feature provides added security for the credentials that LSA stores and manages.
+The LSA, which includes the Local Security Authority Server Service (LSASS) process, validates users for local and remote sign-ins and enforces local security policies. Windows 8.1 or Windows Server 2012 R2 operating systems and later can provide added protection for the LSA, to prevent reading memory and code injection by nonprotected processes. This feature provides added security for the credentials that LSA stores and manages.
 
-You can configure the protected process setting for LSA in Windows 8.1 and later. When this setting is used with UEFI lock and Secure Boot, you get even more protection, because disabling the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key has no effect.
+Except in Windows 8.1 RT, this functionality is disabled by default and must be enabled in the registry or using Group Policy. You can configure the protected process setting for LSA in Windows 8.1 or Windows Server 2012 R2 and later. When this setting is used with UEFI lock and Secure Boot, you get even more protection, because disabling the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key has no effect.
 
 ## Protected process requirements for plug-ins or drivers
 
@@ -27,17 +27,17 @@ Protected mode requires any plug-in that's loaded into the LSA to be digitally s
 - LSA plug-ins that are drivers, such as smart card drivers, need to be signed by using the WHQL Certification. For more information, see [WHQL Release Signature](/windows-hardware/drivers/install/whql-release-signature).
 - LSA plug-ins that don't have a WHQL Certification process must be signed by using the [file signing service for LSA](/windows-hardware/drivers/dashboard/file-signing-manage).
 
-### Adherence to the Microsoft Security Development Lifecycle (SDL) process guidance
+### Adherence to Microsoft Security Development Lifecycle (SDL) process guidance
 
 - All plug-ins must conform to the applicable SDL process guidance. For more information, see the [Microsoft Security Development Lifecycle (SDL) – Process Guidance](/previous-versions/windows/desktop/cc307891(v=msdn.10)).
 - Even if the plug-ins are properly signed with a Microsoft signature, noncompliance with the SDL process can result in failure to load a plug-in.
 
 ### Recommended practices
 
-Use the following list to thoroughly test that LSA protection is enabled before you broadly deploy the feature:
+Use the following list to thoroughly test enabling LSA protection before you broadly deploy the feature:
 
-- Identify all of the LSA plug-ins and drivers that are in use within your organization. Include non-Microsoft drivers or plug-ins such as smart card drivers and cryptographic plug-ins, and any internally developed software that's used to enforce password filters or password change notifications.
-- Ensure that all of the LSA plug-ins are digitally signed with a Microsoft certificate so that the plug-ins don't fail to load.
+- Identify all of the LSA plug-ins and drivers that your organization uses. Include non-Microsoft drivers or plug-ins such as smart card drivers and cryptographic plug-ins, and any internally developed software that's used to enforce password filters or password change notifications.
+- Ensure that all of the LSA plug-ins are digitally signed with a Microsoft certificate so they don't fail to load under LSA protection.
 - Ensure that all of the correctly signed plug-ins can successfully load into LSA and that they perform as expected.
 - Use the audit logs to identify LSA plug-ins and drivers that fail to run as a protected process.
 
@@ -45,9 +45,9 @@ Use the following list to thoroughly test that LSA protection is enabled before 
 
 If added LSA protection is enabled, you can't debug a custom LSA plug-in. You can't attach a debugger to LSASS when it's a protected process. In general, there's no supported way to debug a running protected process.
 
-## Audit to identify LSA plug-ins and drivers that fail to run as a protected process
+## Audit for LSA plug-ins and drivers that won't load as a protected process
 
-You can use the audit mode to identify LSA plug-ins and drivers that fail to load in LSA protected mode. While in audit mode, the system generates event logs, identifying all of the plug-ins and drivers that fail to load under LSA if LSA protection is enabled. The messages are logged without blocking the plug-ins or drivers.
+Before you enable LSA protection, use audit mode to identify LSA plug-ins and drivers that will fail to load in LSA protected mode. While in audit mode, the system generates event logs that identify all of the plug-ins and drivers that fail to load under LSA if LSA protection is enabled. The messages are logged without actually blocking the plug-ins or drivers.
 
 The events described in this section are located in Event Viewer in the **Operational** log under **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity**. These events can help you identify LSA plug-ins and drivers that fail to load due to signing reasons. To manage these events, you can use the **wevtutil** command-line tool. For information about this tool, see [Wevtutil](../../administration/windows-commands/Wevtutil.md).
 
@@ -63,15 +63,15 @@ The events described in this section are located in Event Viewer in the **Operat
 2. Set the value of the registry key to **AuditLevel=dword:00000008**.
 3. Restart the computer.
 
-After these steps, analyze the results of event 3065 and event 3066. Check for these events in Event Viewer under **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity**.
+After taking these steps, analyze the results of event 3065 and event 3066. In Event Viewer, check for these events in the **Operational** log under **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity**.
 
-- **Event 3065** records that a code integrity check determined that a process, usually LSASS.exe, attempted to load a particular driver that didn't meet the security requirements for Shared Sections. However, due to the system policy that is set, the image was allowed to load.
-- **Event 3066** records that a code integrity check determined that a process, usually LSASS.exe, attempted to load a particular driver that didn't meet the Microsoft signing level requirements. However, due to the system policy that is set, the image was allowed to load.
+- **Event 3065** records that a code integrity check determined that a process, usually LSASS.exe, attempted to load a driver that didn't meet the security requirements for Shared Sections. However, due to the system policy currently set, the image was allowed to load.
+- **Event 3066** records that a code integrity check determined that a process, usually LSASS.exe, attempted to load a driver that didn't meet the Microsoft signing level requirements. However, due to the system policy currently set, the image was allowed to load.
+
+If a plug-in or driver contains Shared Sections, Event 3066 is logged with Event 3065. Removing the Shared Sections should prevent both events from occurring unless the plug-in doesn't meet the Microsoft signing level requirements.
 
 > [!IMPORTANT]
 > These operational events aren't generated when a kernel debugger is attached and enabled on a system.
-
-If a plug-in or driver contains Shared Sections, Event 3066 is logged with Event 3065. Removing the Shared Sections should prevent both events from occurring unless the plug-in doesn't meet the Microsoft signing level requirements.
 
 ### Enable audit mode for LSASS.exe on multiple computers
 
@@ -94,9 +94,9 @@ To enable audit mode for multiple computers in a domain, you can use the Registr
 
 To opt in for added LSA protection on multiple computers, you can use the Registry Client-Side Extension for Group Policy to modify **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**. For instructions, see [Configure added LSA credentials protection](#BKMK_HowToConfigure) later in this article.
 
-#### Identify plug-ins and drivers that LSASS.exe failed to load
+#### Identify plug-ins and drivers that LSASS.exe fails to load
 
-When the LSA protected process is enabled, the system generates event logs that identify all of the plug-ins and drivers that fail to load under LSA. After you opt in to added LSA protection, you can use the event log to identify LSA plug-ins and drivers that failed to load in LSA protection mode.
+When LSA protection is enabled, the system generates event logs that identify all of the plug-ins and drivers that fail to load under LSA. After you opt in to added LSA protection, you can use the event log to identify LSA plug-ins and drivers that fail to load in LSA protection mode.
 
 Check for the following events in Event Viewer **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**:
 
@@ -105,17 +105,17 @@ Check for the following events in Event Viewer **Applications and Services Logs*
 
 Shared Sections are typically the result of programming techniques that allow instance data to interact with other processes that use the same security context, which can create security vulnerabilities.
 
-## <a name="BKMK_HowToConfigure"></a>Configure added LSA credentials protection
+## <a name="BKMK_HowToConfigure"></a>Enable and configure added LSA credentials protection
 
-On devices running Windows 8.1 or later, configuration is possible by performing the procedures described in this section.
+You can configure added LSA protection for devices running Windows 8.1 or later, or Windows Server 2012 R2 or later, by using the procedures in this section.
 
 ### Devices that use Secure Boot and UEFI
 
-On x86-based or x64-based devices that use Secure Boot or UEFI, a UEFI variable can be stored in the UEFI firmware when LSA protection is enabled by using registry key or policy. When enabled with UEFI lock, LSASS runs as a protected process and this setting is stored in a UEFI variable in the firmware.
+When you enable LSA protection on x86-based or x64-based devices that use Secure Boot or UEFI, you can store a UEFI variable in the UEFI firmware by using a registry key or policy. When enabled with UEFI lock, LSASS runs as a protected process and this setting is stored in a UEFI variable in the firmware.
 
-When the setting is stored in the firmware, the UEFI variable can't be deleted or changed to enable added LSA protection by modifying the registry or by policy. The UEFI variable must be reset by using the instructions at [Remove the LSA protection UEFI variable](#remove-the-lsa-protection-uefi-variable).
+When the setting is stored in the firmware, the UEFI variable can't be deleted or changed to configure added LSA protection by modifying the registry or by policy. The UEFI variable must be reset by using the instructions at [Remove the LSA protection UEFI variable](#remove-the-lsa-protection-uefi-variable).
 
-When enabled without a UEFI lock, LSASS runs as a protected process and this setting isn't stored in a UEFI variable. This setting is enabled by default for devices with a new install of Windows 11 version 22H2 or later.
+When enabled without a UEFI lock, LSASS runs as a protected process and this setting isn't stored in a UEFI variable. This setting is applied by default on devices with a new install of Windows 11 version 22H2 or later.
 
 On x86-based or x64-based devices that don't support UEFI or where Secure Boot is disabled, you can't store the configuration for LSA protection in the firmware. These devices rely solely on the presence of the registry key. In this scenario, it's possible to disable LSA protection by using remote access to the device. Disablement of LSA protection doesn't take effect until the device reboots.
 
@@ -213,9 +213,6 @@ For more information about managing Secure Boot, see [UEFI Firmware](/previous-v
 To determine whether LSA started in protected mode when Windows started, check **Windows Logs** > **System** in Event Viewer for the following WinInit event:
 
 - **12: LSASS.exe was started as a protected process with level: 4**
-
-> [!NOTE]
-> Windows Security might display a security notification or warning that **Local Security protection is off** with a persistent prompt to restart. If you've enabled LSA protection and restarted your device at least once, and Event Viewer shows that Wininit event 12 occurred at startup, you can ignore this warning. For more information, see ["Local Security Authority protection is off" with persistent restart](/windows/release-health/resolved-issues-windows-11-22h2#3048msgdesc).
 
 ## LSA and Credential Guard
 
