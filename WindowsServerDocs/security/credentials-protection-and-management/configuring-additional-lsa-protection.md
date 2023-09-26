@@ -92,7 +92,7 @@ To enable audit mode for multiple computers in a domain, you can use the Registr
 
 To opt in for added LSA protection on multiple computers, you can use the Registry Client-Side Extension for Group Policy to modify **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**. For instructions, see [Configure added LSA credentials protection](#BKMK_HowToConfigure) later in this article.
 
-#### Identify plug-ins and drivers that LSASS.exe fails to load
+### Identify plug-ins and drivers that LSASS.exe fails to load
 
 When LSA protection is enabled, the system generates event logs that identify all of the plug-ins and drivers that fail to load under LSA. After you opt in to added LSA protection, you can use the event log to identify LSA plug-ins and drivers that failed to load in LSA protection mode.
 
@@ -194,18 +194,18 @@ For devices running Windows 11 version 22H2 and later, you can enable and config
 
 For more information about this Policy CSP, see [LocalSecurityAuthority - ConfigureLsaProtectedProcess](/windows/client-management/mdm/policy-csp-lsa#configurelsaprotectedprocess).
 
-### Disable LSA protection
+## Disable LSA protection
 
 You can disable LSA protection by using the registry or by using Local Group Policy. If the device is using Secure Boot and you set the LSA protection UEFI variable in the firmware, you can use a tool to remove the UEFI variable.
 
-#### Disable by using the registry
+### Disable by using the registry
 
 1. Open the Registry Editor, RegEdit.exe, and navigate to the registry key **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**.
 1. Set the value of the registry key to **"RunAsPPL"=dword:00000000**, or delete the **DWORD**.
 3. If PPL was enabled with a UEFI variable, use the [Local Security Authority Protected Process Opt-out tool](#remove-the-lsa-protection-uefi-variable) to remove the UEFI variable.
 1. Restart the computer.
 
-#### Disable by using local policy on Windows 11 version 22H2 and later
+### Disable by using local policy on Windows 11 version 22H2 and later
 
 1. Open the Local Group Policy Editor by entering *gpedit.msc*.
 1. Expand **Computer Configuration** > **Administrative Templates** > **System** > **Local Security Authority**.
@@ -218,7 +218,7 @@ You can disable LSA protection by using the registry or by using Local Group Pol
 > [!NOTE]
 > If you set this policy to **Not Configured** and the policy was previously enabled, the prior setting doesn't get cleaned up and continues to be enforced. You must set the policy to **Disabled** under the **Options** dropdown to disable the feature.
 
-#### Remove the LSA protection UEFI variable
+### Remove the LSA protection UEFI variable
 
 You can use the [Local Security Authority (LSA) Protected Process Opt-out tool (LSAPPLConfig)](https://www.microsoft.com/download/details.aspx?id=40897) from the Microsoft Download Center to delete the UEFI variable if the device is using Secure Boot.
 
