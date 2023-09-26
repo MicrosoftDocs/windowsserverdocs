@@ -31,6 +31,7 @@ cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/
 | /tuneup:n | Run **/sageset** and **/sagerun** for the same `n`. |
 | /lowdisk | Run with the default settings. |
 | /verylowdisk | Run with the default settings, no user prompts. |
+| /autoclean | Automatically deletes the files that are left behind after you upgrade Windows. |
 | /? | Displays help at the command prompt. |
 
 #### Options
