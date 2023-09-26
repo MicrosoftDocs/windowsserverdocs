@@ -141,7 +141,7 @@ Here's how to set the SMB performance option using PowerShell.
 
 1. Get all cluster nodes using the following command.
 
-1. ```powershell
+   ```powershell
    $ClusterNodes = (Get-ClusterNode).name
    ```
 
