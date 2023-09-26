@@ -71,9 +71,9 @@ After these steps, analyze the results of event 3065 and event 3066. Check for t
 > [!IMPORTANT]
 > These operational events aren't generated when a kernel debugger is attached and enabled on a system.
 
-If a plug-in or driver contains Shared Sections, Event 3066 is logged with Event 3065. Removing the Shared Sections should prevent both the events from occurring unless the plug-in doesn't meet the Microsoft signing level requirements.
+If a plug-in or driver contains Shared Sections, Event 3066 is logged with Event 3065. Removing the Shared Sections should prevent both events from occurring unless the plug-in doesn't meet the Microsoft signing level requirements.
 
-### Enable the audit mode for LSASS.exe on multiple computers
+### Enable audit mode for LSASS.exe on multiple computers
 
 To enable audit mode for multiple computers in a domain, you can use the Registry Client-Side Extension for Group Policy to deploy the LSASS.exe audit-level registry value. You need to modify the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe** registry key.
 
@@ -92,7 +92,7 @@ To enable audit mode for multiple computers in a domain, you can use the Registr
 > [!NOTE]
 > For the GPO take effect, the GPO change must be replicated to all domain controllers in the domain.
 
-To opt in for added LSA protection on multiple computers, you can use the Registry Client-Side Extension for Group Policy to modify **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**. For instructions, see [Configure added LSA protection of credentials](#BKMK_HowToConfigure) in this article.
+To opt in for added LSA protection on multiple computers, you can use the Registry Client-Side Extension for Group Policy to modify **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**. For instructions, see [Configure added LSA credentials protection](#BKMK_HowToConfigure) later in this article.
 
 #### Identify plug-ins and drivers that LSASS.exe failed to load
 
@@ -115,7 +115,7 @@ On x86-based or x64-based devices that use Secure Boot or UEFI, a UEFI variable 
 
 When the setting is stored in the firmware, the UEFI variable can't be deleted or changed to enable added LSA protection by modifying the registry or by policy. The UEFI variable must be reset by using the instructions at [Remove the LSA protection UEFI variable](#remove-the-lsa-protection-uefi-variable).
 
-When enabled without a UEFI lock, LSASS runs as a protected process and this setting isn't stored in a UEFI variable. This setting is the default for devices with a new install of Windows 11 version 22H2.
+When enabled without a UEFI lock, LSASS runs as a protected process and this setting isn't stored in a UEFI variable. This setting is enabled by default for devices with a new install of Windows 11 version 22H2 or later.
 
 On x86-based or x64-based devices that don't support UEFI or where Secure Boot is disabled, you can't store the configuration for LSA protection in the firmware. These devices rely solely on the presence of the registry key. In this scenario, it's possible to disable LSA protection by using remote access to the device. Disablement of LSA protection doesn't take effect until the device reboots.
 
@@ -136,7 +136,7 @@ Automatic enablement of added LSA protection on Windows 11 version 22H2 and late
 
 You can enable LSA protection on a single computer by using the registry or by using Local Group Policy.
 
-#### Enable by using the Registry
+#### Enable by using the registry
 
 1. Open the Registry Editor RegEdit.exe, and navigate to the registry key **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**.
 1. Set the value of the registry key to:
@@ -205,7 +205,7 @@ You can use the [Local Security Authority (LSA) Protected Process Opt-out tool (
 
 For more information about managing Secure Boot, see [UEFI Firmware](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
 
-> [!IMPORTANT]
+> [!CAUTION]
 > When Secure Boot is turned off, all the Secure Boot and UEFI-related configurations are reset. You should turn off Secure Boot only when all other means to disable LSA protection have failed.
 
 ## Verify LSA protection
@@ -215,21 +215,17 @@ To determine whether LSA started in protected mode when Windows started, check *
 - **12: LSASS.exe was started as a protected process with level: 4**
 
 > [!NOTE]
-> You might receive a security notification or warning that **Local Security protection is off** with a persistent prompt to restart. If you've enabled LSA protection and restarted your device at least once, and Event Viewer shows that Wininit event 12 occurred at startup, you can ignore this warning. For more information, see ["Local Security Authority protection is off" with persistent restart](/windows/release-health/resolved-issues-windows-11-22h2#3048msgdesc).
+> Windows Security might display a security notification or warning that **Local Security protection is off** with a persistent prompt to restart. If you've enabled LSA protection and restarted your device at least once, and Event Viewer shows that Wininit event 12 occurred at startup, you can ignore this warning. For more information, see ["Local Security Authority protection is off" with persistent restart](/windows/release-health/resolved-issues-windows-11-22h2#3048msgdesc).
 
 ## LSA and Credential Guard
 
-LSA protection is a security feature that defends sensitive information like credentials from theft by blocking untrusted LSA code injection and process memory dumping. LSA Protection runs in the background by isolating the LSA process in a container and preventing other processes, like malicious actors or apps, from accessing the feature. This isolation makes LSA Protection a vital security feature, which is why it's enabled by default in Windows 11.
+LSA protection is a security feature that defends sensitive information like credentials from theft by blocking untrusted LSA code injection and process memory dumping. LSA protection runs in the background by isolating the LSA process in a container and preventing other processes, like malicious actors or apps, from accessing the feature. This isolation makes LSA Protection a vital security feature, which is why it's enabled by default in Windows 11.
 
 Starting in Windows 10, Credential Guard also helps prevent credential theft attacks by protecting NTLM password hashes, Kerberos Ticket Granting Tickets (TGTs), and credentials stored by applications as domain credentials. Kerberos, NTLM, and Credential Manager isolate secrets by using virtualization-based security (VBS).
 
 With Credential Guard enabled, the LSA process talks to a component called the isolated LSA process, or LSAIso.exe, that stores and protects secrets. Data stored by the isolated LSA process is protected by using VBS and isn't accessible to the rest of the operating system. LSA uses remote procedure calls to communicate with the isolated LSA process.
 
-Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by default on all devices that meet the system requirements. LSA Protection and Credential Guard are complimentary, and systems that support Credential Guard or have it enabled by default can also enable and benefit from LSA protection. 
-
-Credential Guard is supported on 64-bit Secure Boot devices only. Credential Guard doesn't protect credentials for local accounts, Microsoft accounts, Active Directory databases on Windows Server domain controllers, or credential input pipelines such as Windows Server running Remote Desktop Gateway. 
-
-Enabling Credential Guard on domain controllers isn't recommended. Credential Guard doesn't provide any added security to domain controllers, and can cause application compatibility issues. For more information about Credential Guard, see [Credential Guard overview](/windows/security/identity-protection/credential-guard).
+Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by default on all devices that meet the system requirements. Credential Guard is supported on 64-bit Secure Boot devices only. LSA protection and Credential Guard are complimentary, and systems that support Credential Guard or have it enabled by default can also enable and benefit from LSA protection. For more information about Credential Guard, see [Credential Guard overview](/windows/security/identity-protection/credential-guard).
 
 ## More resources
 
