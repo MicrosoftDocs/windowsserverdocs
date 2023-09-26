@@ -88,7 +88,7 @@ To enable audit mode for multiple computers in a domain, you can use the Registr
 11. Select **OK**.
 
 > [!NOTE]
-> For the GPO take effect, the GPO change must be replicated to all domain controllers in the domain.
+> For the GPO to take effect, the GPO change must be replicated to all domain controllers in the domain.
 
 To opt in for added LSA protection on multiple computers, you can use the Registry Client-Side Extension for Group Policy to modify **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa**. For instructions, see [Configure added LSA credentials protection](#BKMK_HowToConfigure) later in this article.
 
