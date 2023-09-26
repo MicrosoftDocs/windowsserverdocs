@@ -80,8 +80,8 @@ To calculate the bandwidth limit factor, follow the steps.
    > [!IMPORTANT]
    > Cluster nodes should have the same number of network adapters across all nodes in the cluster.
    > The connected network adapters should also be connected at the same speeds as the other nodes
-   > in the cluster. If they don't the bandwidth limit factor will be calculated differently on
-   > those nodes.
+   > in the cluster. If the cluster nodes are consistent, the bandwidth limit will be calculated
+   > differently on those nodes.
 
 1. Determine how much bandwidth you wish to reserve.
 
