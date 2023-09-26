@@ -14,7 +14,7 @@ Use `netsh bridge` commands to create and manage a network bridge of at least tw
 > [!NOTE]
 >
 > - This command is available beginning with 2023-09 Cumulative Update for Windows 11,
-> version 22H2 ([KB1234567](https://support.microsoft.com/help/1234567)).
+> version 22H2 ([KB5030310](https://support.microsoft.com/help/5030310)).
 >
 > - The `netsh bridge` commands is not available on Windows Server 2022 and earlier.
 
