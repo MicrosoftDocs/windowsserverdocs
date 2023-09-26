@@ -222,7 +222,7 @@ Starting in Windows 10, Credential Guard also helps prevent credential theft att
 
 With Credential Guard enabled, the LSA process talks to a component called the isolated LSA process, or LSAIso.exe, that stores and protects secrets. Data stored by the isolated LSA process is protected by using VBS and isn't accessible to the rest of the operating system. LSA uses remote procedure calls to communicate with the isolated LSA process.
 
-Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by default on all devices that meet the system requirements. Credential Guard is supported on 64-bit Secure Boot devices only. LSA protection and Credential Guard are complimentary, and systems that support Credential Guard or have it enabled by default can also enable and benefit from LSA protection. For more information about Credential Guard, see [Credential Guard overview](/windows/security/identity-protection/credential-guard).
+Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by default on all devices that meet the system requirements. Credential Guard is supported on 64-bit Secure Boot devices only. LSA protection and Credential Guard are complementary, and systems that support Credential Guard or have it enabled by default can also enable and benefit from LSA protection. For more information about Credential Guard, see [Credential Guard overview](/windows/security/identity-protection/credential-guard).
 
 ## More resources
 
