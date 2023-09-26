@@ -6,7 +6,7 @@ ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 09/25/2023
+ms.date: 09/26/2023
 ---
 # Configure added LSA protection
 
@@ -14,7 +14,7 @@ This article explains how to configure added protection for the Local Security A
 
 The LSA, which includes the Local Security Authority Server Service (LSASS) process, validates users for local and remote sign-ins and enforces local security policies. Windows 8.1 or Windows Server 2012 R2 operating systems and later can provide added protection for the LSA, to prevent reading memory and code injection by nonprotected processes. This feature provides added security for the credentials that LSA stores and manages.
 
-Except in Windows 8.1 RT, this functionality is disabled by default and must be enabled in the registry or using Group Policy. You can configure the protected process setting for LSA in Windows 8.1 or Windows Server 2012 R2 and later. When this setting is used with UEFI lock and Secure Boot, you get even more protection, because disabling the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key has no effect.
+You can configure the protected process setting for LSA in Windows 8.1 or Windows Server 2012 R2 and later. Except in Windows 8.1 RT, this functionality is disabled by default and must be enabled in the registry or using Group Policy. When this setting is used with UEFI lock and Secure Boot, you get even more protection, because disabling the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key has no effect.
 
 ## Protected process requirements for plug-ins or drivers
 
@@ -96,7 +96,7 @@ To opt in for added LSA protection on multiple computers, you can use the Regist
 
 #### Identify plug-ins and drivers that LSASS.exe fails to load
 
-When LSA protection is enabled, the system generates event logs that identify all of the plug-ins and drivers that fail to load under LSA. After you opt in to added LSA protection, you can use the event log to identify LSA plug-ins and drivers that fail to load in LSA protection mode.
+When LSA protection is enabled, the system generates event logs that identify all of the plug-ins and drivers that fail to load under LSA. After you opt in to added LSA protection, you can use the event log to identify LSA plug-ins and drivers that failed to load in LSA protection mode.
 
 Check for the following events in Event Viewer **Applications and Services Logs** > **Microsoft** > **Windows** > **CodeIntegrity** > **Operational**:
 
@@ -210,7 +210,7 @@ For more information about managing Secure Boot, see [UEFI Firmware](/previous-v
 
 ## Verify LSA protection
 
-To determine whether LSA started in protected mode when Windows started, check **Windows Logs** > **System** in Event Viewer for the following WinInit event:
+To determine whether LSA started in protected mode when Windows started, check **Windows Logs** > **System** in Event Viewer for the following **WinInit** event:
 
 - **12: LSASS.exe was started as a protected process with level: 4**
 
