@@ -96,7 +96,7 @@ The bandwidth limit is calculated as a percentage of the total bandwidth availab
 The total bandwidth is 40GB and the SMB Live Migration reservation needs to be 10GB. Therefore, the
 SMB bandwidth limit factor is 2500, or 25%, as shown in the following example.
 
-:::image type="content" source="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation-example.png" alt-text="eq" lightbox="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-equation-example.png":::
+:::image type="content" source="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation-example.png" alt-text="eq" lightbox="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation-example.png":::
 
 ## Configure Live Migration performance options
 
