@@ -122,7 +122,7 @@ through Microsoft 365 Admin Center:
 
 Delivery, download, and application of ESUs for Windows Server is no different than other Windows Updates. The updates provided through ESUs are only *Security* updates.
 
-Before you can download and install ESUs, you must have installed the Licensing Preparation Package. To learn more about the steps required to install the Licensing Preparation Package, see [KB5031043: Procedure to continue receiving security updates after extended support has ended on October 10, 2023](https://support.microsoft.com/help/5031043).
+Before you can download and install ESUs, you must have installed the latest Servicing Stack Update (SSU) and the Licensing Preparation Package. To learn more about the steps required to install the latest SSU and Licensing Preparation Package, see [KB5031043: Procedure to continue receiving security updates after extended support has ended on October 10, 2023](https://support.microsoft.com/help/5031043).
 
 You can install the updates using whatever tools and processes you already have in place. The only difference is that the system must be registered using the key generated in the previous section for the updates to download and install.
 
