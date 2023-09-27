@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot problems on the DHCP server
-description: This article introduces how to troubleshoot problems on the DHCP server and collect data.
+description: Find out how to troubleshoot problems on the DHCP server and collect data.
 manager: dcscontentpm
-ms.date: 5/26/2020
+ms.date: 09/27/2023
 ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
@@ -57,22 +57,10 @@ For more information, see [Analyze DHCP Server Log Files](/previous-versions/win
 
 ### Network trace
 
-A correlating network trace may indicate what the DHCP server was doing at the time that the event was logged. To create such a trace, follow these steps:
+A correlating network trace may indicate what the DHCP server was doing at the time that the event was logged. To create such a trace, follow the instructions at [DHCP troubleshooting guidance - Data collection](/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance#data-collection).
 
-1.  Go to [GitHub](https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS), and download the tss\_tools.zip file.
+## See also
 
-2.  Copy the Tss\_tools.zip file, and expand it to a location on the local disk, such as to the C:\\tools folder.
-
-3.  Run the following command from C:\\tools in an elevated Command Prompt window:
-    ```console
-    TSS Ron Trace <Stop:Evt:>20321:<Other:>DhcpAdminEvents NoSDP NoPSR NoProcmon NoGPresult
-    ```
-
-    >[!Note]
-    >In this command, replace \<*Stop:Evt:*\> and \<*Other:*\> with the event ID and the event channel that you are going to focus on in your tracing session.
-    >The Tss.cmd\_ReadMe\_Help.docx files that are contained in the Tss\_tools.zip file provide more information about all available settings.
-
-4.  After the event is triggered, the tool creates a folder that is named C:\\MS\_DATA. This folder will contain some useful output files that provide general information about the network and domain configuration of the computer.
-    The most interesting file in this folder is %Computername%\_date\_time\_packetcapture\_InternetClient\_dbg.etl.
-    By using the [Network Monitor](https://www.microsoft.com/download/4865) application, you can load the file, and set the display filter on the “DHCP or
-    DNS” protocol to examine what is going on behind the scenes.
+- [DHCP troubleshooting guidance](/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance).
+- [Troubleshooting guide for Dynamic Host Configuration Protocol (DHCP)](troubleshoot-dhcp-issue.md)
+- [Introduction to TroubleShootingScript toolset (TSS)](/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss)
