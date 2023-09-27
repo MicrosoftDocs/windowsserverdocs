@@ -124,7 +124,7 @@ The following feature distribution map indicates the features in each version. T
        # sudo mv shimx64.efi bootx64.efi
        ```
 
-1. In order to perform live migrations for VMs that are Generation 2 configured, the **Migrate to a physical computer with a different processor version** option must be enabled under *Processor* > *Compatability* in your VM settings. To learn more, see [Processor compatibility mode in Hyper-V](../hyper-v/manage/processor-compatibility-mode-hyper-v.md).
+1. In order to perform live migrations for VMs that are Generation 2 configured, the **Migrate to a physical computer with a different processor version** option must be enabled under *Processor* > *Compatibility* in your VM settings. To learn more, see [Processor compatibility mode in Hyper-V](../hyper-v/manage/processor-compatibility-mode-hyper-v.md).
 
 ## See Also
 
