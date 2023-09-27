@@ -63,13 +63,13 @@ The following feature distribution map indicates the features in each version. T
 
 1. Static IP injection may not work if **NetworkManager** has been configured for a given Hyper-V-specific network adapter on the virtual machine as it can override static IP settings that have been manually configured. To ensure smooth functioning of static IP injection, ensure that Network Manager is turned off completely or has been turned off for a specific network adapter through its **ifcfg-ethX** file.
 
-2. While using virtual fiber channel devices, ensure that logical unit number 0 (LUN 0) has been populated. If LUN 0 has not been populated, a Linux virtual machine might not be able to mount fiber channel devices natively.
+1. While using virtual fiber channel devices, ensure that logical unit number 0 (LUN 0) has been populated. If LUN 0 hasn't been populated, a Linux virtual machine might not be able to mount fiber channel devices natively.
 
-3. If there are open file handles during a live virtual machine backup operation, then in some corner cases, the backed-up VHDs might have to undergo a file system consistency check (`fsck`) on restore.
+1. If there are open file handles during a live virtual machine backup operation, then in some corner cases, the backed-up VHDs might have to undergo a file system consistency check (`fsck`) on restore.
 
-4. Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).
+1. Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).
 
-5. On long term support (LTS) releases use latest virtual Hardware Enablement (HWE) kernel for up to date Linux Integration Services.
+1. On long term support (LTS) releases use latest virtual Hardware Enablement (HWE) kernel for up to date Linux Integration Services.
 
    To install the Azure-tuned kernel on 16.04, 18.04 and 20.04, run the following commands as root (or sudo):
 
@@ -78,25 +78,25 @@ The following feature distribution map indicates the features in each version. T
    # apt-get install linux-azure
    ```
 
-6. Dynamic memory support is only available on 64-bit virtual machines.
+1. Dynamic memory support is only available on 64-bit virtual machines.
 
-7. Dynamic Memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:
+1. Dynamic Memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:
 
    * Startup memory and minimal memory should be equal to or greater than the amount of memory that the distribution vendor recommends.
 
    * Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.
 
-8. If you are using Dynamic Memory on Windows Server 2019, Windows Server 2016 or Windows Server 2012/2012 R2 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
+1. If you're using Dynamic Memory on Windows Server 2019, Windows Server 2016 or Windows Server 2012/2012 R2 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
 
-9. In Windows Server 2019, Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
+1. In Windows Server 2019, Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
 
-10. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
+1. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines won't boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
 
     ```Powershell
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
     ```
 
-11. Before attempting to copy the VHD of an existing Generation 2 VHD virtual machine to create new Generation 2 virtual machines, follow these steps:
+1. Before attempting to copy the VHD of an existing Generation 2 VHD virtual machine to create new Generation 2 virtual machines, follow these steps:
 
     1. Log in to the existing Generation 2 virtual machine.
 
@@ -123,6 +123,8 @@ The following feature distribution map indicates the features in each version. T
        ```bash
        # sudo mv shimx64.efi bootx64.efi
        ```
+
+1. In order to perform live migrations for VMs that are Generation 2 configured, the **Migrate to a physical computer with a different processor version** option must be enabled under *Processor* > *Compatability* in your VM settings. To learn more, see [Processor compatibility mode in Hyper-V](../hyper-v/manage/processor-compatibility-mode-hyper-v.md).
 
 ## See Also
 
