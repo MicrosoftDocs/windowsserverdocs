@@ -443,7 +443,7 @@ domain. These settings must be reconfigured, if you want to change them.
   - **Key**: `SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot`
   - **Type**: `REG_DWORD`
   - **Name**: `EnableDisallowedCertAutoUpdate`
-  - **Data**: `0` to enabled or `1` to disable.
+  - **Data**: `1` to enabled or `0` to disable.
   - **Default**: There is no key present by default. Without a key present, the default is enabled.
 
 - Set the shared CTL file location (HTTP or the FILE path):
