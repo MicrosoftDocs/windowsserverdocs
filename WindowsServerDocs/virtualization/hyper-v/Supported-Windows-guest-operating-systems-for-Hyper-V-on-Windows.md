@@ -19,19 +19,19 @@ Some operating systems have the integration services built-in. Others require th
 
 Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V on Windows Server.
 
-| Guest operating system (server) | Maximum number of virtual processors | Integration Services | Notes |
-|--|--|--|--|
-| Windows Server 2022 | 240 for generation 2;<br>64 for generation 1 | Built-in | Hosted on Windows Server 2019 or above <br/> Azure Stack HCI, version 20H2 or above. |
-| Windows Server, version 1909 | 240 for generation 2;<br>64 for generation 1 | Built-in | Greater than 240 virtual processor support requires Windows Server, version 1903 or later guest operating systems. |
-| Windows Server, version 1903 | 240 for generation 2;<br>64 for generation 1 | Built-in |  |
-| Windows Server, version 1809 | 240 for generation 2;<br>64 for generation 1 | Built-in |  |
-| Windows Server 2019 | 240 for generation 2;<br>64 for generation 1 | Built-in |  |
-| Windows Server, version 1803 | 240 for generation 2;<br>64 for generation 1 | Built-in |  |
-| Windows Server 2016 | 240 for generation 2;<br>64 for generation 1 | Built-in |  |
-| Windows Server 2012 R2 | 64 | Built-in |  |
-| Windows Server 2012 | 64 | Built-in |  |
-| Windows Server 2008 R2 with Service Pack 1 (SP 1) | 64 | Install all critical Windows updates after you set up the guest operating system. | Datacenter, Enterprise, Standard and Web editions. |
-| Windows Server 2008 with Service Pack 2 (SP2) | 8 | Install all critical Windows updates after you set up the guest operating system. | Datacenter, Enterprise, Standard and Web editions (32-bit and 64-bit). |
+|Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|
+|-------------------------------------|----------------------------------------|------------------------|---------|
+|Windows Server 2022 |240 for generation 2;<br>64 for generation 1;<br>1024 available to the host OS (root partition)|Built-in| Hosted on Windows Server 2019 or above, Azure Stack HCI, version 20H2 or above.|
+|Windows Server, version 1909 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server, version 1903 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server, version 1809 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server 2019 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
+|Windows Server, version 1803 |240 for generation 2;<br>64 for generation 1|Built-in||
+|Windows Server 2016 |240 for generation 2;<br>64 for generation 1;<br>320 available to the host OS (root partition)|Built-in||
+|Windows Server 2012 R2 |64|Built-in||
+|Windows Server 2012 |64|Built-in||
+|Windows Server 2008 R2 with Service Pack 1 (SP 1)|64|Install all critical Windows updates after you set up the guest operating system.|Datacenter, Enterprise, Standard and Web editions.|
+|Windows Server 2008 with Service Pack 2 (SP2)|8|Install all critical Windows updates after you set up the guest operating system.|Datacenter, Enterprise, Standard and Web editions (32-bit and 64-bit).|
 
 ## Supported Windows client guest operating systems
 
