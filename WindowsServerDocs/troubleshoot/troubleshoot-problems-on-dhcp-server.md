@@ -57,10 +57,10 @@ For more information, see [Analyze DHCP Server Log Files](/previous-versions/win
 
 ### Network trace
 
-A correlating network trace may indicate what the DHCP server was doing at the time that the event was logged. To create such a trace, follow the instructions at [DHCP troubleshooting guidance - Data collection](/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance#data-collection).
+A correlating network trace may indicate what the DHCP server was doing at the time that the event was logged. To create such a trace by using the [Windows TroubleShooting Tools (TSS)](https://aka.ms/getTSS), follow the instructions at [DHCP troubleshooting guidance - Data collection](/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance#data-collection).
 
 ## See also
 
-- [DHCP troubleshooting guidance](/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance).
+- [DHCP troubleshooting guidance](/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance)
 - [Troubleshooting guide for Dynamic Host Configuration Protocol (DHCP)](troubleshoot-dhcp-issue.md)
 - [Introduction to TroubleShootingScript toolset (TSS)](/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss)
