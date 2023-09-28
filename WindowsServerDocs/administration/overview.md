@@ -6,11 +6,22 @@ ms.author: thmaure
 manager: carmencr
 ms.reviewer: carmencr
 ms.topic: overview
-ms.date: 02/24/2022
+ms.date: 09/29/2023
 ---
 # Windows Server management overview
 
-Windows Server is the platform for building an infrastructure of connected applications, networks, and web services. As a Windows Server administrator, you've probably used many of the native Windows Server Microsoft Management Consoles (MMC) to keep your infrastructure secure and available. As the foundation of many on-premises, hybrid, and cloud native applications, the Windows Server teams have continued to invest in making the management and administration of your Windows Server instances easier by offering management tools like Azure Arc, Azure Automanage, Windows Admin Center, and System Center. These tools are designed to work together, and each have capabilities to meet you where you are in your server management needs.
+Windows Server has many tools that let administrators connect applications, networks, and web services into an infrastructure. You may already be familiar with some of these tools, such as the Windows Server Microsoft Management Consoles (MMC). However, it's important to be familiar with all the management tools Windows Server offers so you can choose which one is right for your organization.
+
+We designed these management tools to work together in Windows Server environments because on-premises, hybrid, and cloud-native infrastructures have complex and interconnected needs when it comes to management and administration. You may find that your infrastructure is so complex that you need to use every available option for your own personal management solution.
+
+The four main options for managing your Windows Server infrastructure are:
+
+- [Azure Arc and Azure Automanage](#azure-arc-and-azure-automanage)
+- [Windows Admin Center](#windows-admin-center)
+- [System Center](#system-center)
+- [Local management tools](#local-management-tools)
+
+This article walks you through each one, describing their capabilities, and gives you resources to download and configure them.
 
 ## Azure Arc and Azure Automanage
 
