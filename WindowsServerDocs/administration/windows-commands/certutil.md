@@ -20,9 +20,6 @@ If `certutil` is run on a certification authority without other parameters, it d
 > [!TIP]
 > To see complete Help for all certutil verbs and options, including ones that are hidden from the `-?` argument, run `certutil -v -uSAGE`. The `uSAGE` switch is case-sensitive.
 
-> [!NOTE]
-> Certutil `Date` arguments expect the format `mm/dd/yyyy`, for example `5/6/2022` for May 6, 2022. If your server isn't configured with US regional settings, using certutil with `Date` arguments might produce unexpected results.
-
 ## Parameters
 
 ### -dump
@@ -625,7 +622,7 @@ Options:
 - To delete CRLs that expired by January 22, 2001, type: `1/22/2001 crl`
 
 >[!NOTE]
->Certutil **Date** arguments expect the format `mm/dd/yyyy`, for example `5/6/2022` for May 6, 2022. If your server isn't configured with US regional settings, using certutil with **Date** arguments might produce unexpected results.
+>**Date** expects the format `mm/dd/yyyy` rather then `dd/mm/yyyy`, for example `1/22/2001` rather than `22/1/2001` for January 22, 2001. If your server isn't configured with US regional settings, using the **Date** argument might produce unexpected results.
 
 ### -backup
 
