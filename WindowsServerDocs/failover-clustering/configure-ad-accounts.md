@@ -84,7 +84,7 @@ The following diagram illustrates how problems can result if the cluster name ac
 
 If the type of problem shown in the diagram occurs, a certain event (1193, 1194, 1206, or 1207) is logged in Event Viewer. For more information about these events, see [https://go.microsoft.com/fwlink/?LinkId=118271](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756188(v=ws.10)).
 
-Note that a similar problem with creating an account for a clustered service or application can occur if the domain-wide quota for creating computer objects (by default, 10) has been reached. If it has, it might be appropriate to consult with the domain administrator about increasing the quota, although this is a domain-wide setting and should be changed only after careful consideration, and only after confirming that the preceding diagram does not describe your situation. For more information, see [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts), later in this guide.
+Note that a similar problem with creating an account for a clustered service or application can occur if the domain-wide quota for creating computer objects (by default, 10) has been reached. If it has, it might be appropriate to consult with the domain administrator about increasing the quota, although this is a domain-wide setting and should be changed only after careful consideration, and only after confirming that the preceding diagram does not describe your situation. For more information, see [Troubleshoot issues caused by changes in cluster-related Active Directory accounts](/troubleshoot/windows-server/high-availability/troubleshoot-issues-accounts-used-failover-clusters#troubleshoot-issues-caused-by-changes-in-cluster-related-active-directory-accounts).
 
 ## Requirements related to failover clusters, Active Directory domains, and accounts
 
@@ -105,7 +105,7 @@ As described in the preceding three sections, certain requirements must be met b
 
 ### Planning ahead for password resets and other account maintenance
 
-The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Steps for troubleshooting password problems with the cluster name account](#steps-for-troubleshooting-password-problems-with-the-cluster-name-account), later in this guide.
+The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it is a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Troubleshoot password issues with the cluster name account](/troubleshoot/windows-server/high-availability/troubleshoot-issues-accounts-used-failover-clusters#troubleshoot-password-issues-with-the-cluster-name-account).
 
 ## Steps for configuring the account for the person who installs the cluster
 
