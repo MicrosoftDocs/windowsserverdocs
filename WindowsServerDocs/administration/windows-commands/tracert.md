@@ -3,9 +3,8 @@ title: tracert
 description: Reference article for tracert, which determines the path taken to a destination, by sending Internet Control Message Protocol (ICMP) echo requests or ICMPv6 messages to the destination with incrementally increasing time to Live (TTL) field values.
 ms.topic: reference
 ms.assetid: 9032a032-2e5e-49d4-9e86-f821600e4ba6
-ms.author: jgerend
+ms.author: wscontent
 author: JasonGerend
-manager: mtillman
 ms.date: 09/27/2023
 ---
 
@@ -47,7 +46,7 @@ tracert [/d] [/h <maximumhops>] [/j <hostlist>] [/w <timeout>] [/R] [/S <srcaddr
 
 ## Examples
 
-To trace the path to the host named *www.microsoft.com*, type:
+To trace the path to the host named `www.microsoft.com`, type:
 
 ```
 tracert www.microsoft.com
@@ -82,17 +81,17 @@ Trace complete.
 
 The beginning column displays the hop number starting from 1 and incrementing with each hop along the route from your device to the destination. Each hop represents an intermediate device, such as a router, that the packet passes through while traveling to the final destination.
 
-The three center columns display the round-trip time in milliseconds (ms) for a packet to travel from your device to the router, at that specific hop, and back to your device. It's known as the "ping time" or "ping latency" and measures the delay in milliseconds for data to travel to the router and return. Network latency can be affected by factors such as network congestion, the quality of network links, and the distance between hops. An asterisk (**\***) indicates that the network packet sent to that particular hop didn't return within the expected time frame.
+The three center columns display the round-trip time in milliseconds (ms) for a packet to travel from your device to the router, at that specific hop, and back to your device. It's known as the "ping time" or "ping latency" and measures the delay in milliseconds for data to travel to the router and return. Network latency can be affected by factors such as network congestion, the quality of network links, and the distance between hops.
 
 The end column displays either the IP address or the hostname of the router or intermediate device at that specific hop in the network path. In most cases, you'll see the IP address, but if reverse DNS lookup is successful, it displays the hostnames, which can help identify routers by name.
 
-To trace the path to the host named *www.microsoft.com* and prevent the resolution of each IP address to its name, type:
+To trace the path to the host named `www.microsoft.com` and prevent the resolution of each IP address to its name, type:
 
 ```
 tracert /d www.microsoft.com
 ```
 
-To trace the path to the host named *www.microsoft.com* and use the loose source route *10.12.0.1/10.29.3.1/10.1.44.1*, type:
+To trace the path to the host named `www.microsoft.com` and use the loose source route *10.12.0.1/10.29.3.1/10.1.44.1*, type:
 
 ```
 tracert /j 10.12.0.1 10.29.3.1 10.1.44.1 www.microsoft.com
