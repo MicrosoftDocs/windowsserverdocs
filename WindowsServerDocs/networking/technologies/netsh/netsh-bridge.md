@@ -1,6 +1,6 @@
 ---
 title: Netsh Commands for a network bridge of different network adapters.
-description: Use netsh bridge commands to create and manage a bridge of network adapters for sharing connectivity.
+description: Use Netsh bridge commands to create and manage a bridge of network adapters for sharing connectivity.
 author: hiepkhuuMS
 ms.author: msedgedevrel
 ms.topic: how-to 
@@ -24,14 +24,14 @@ The available commands are:
 
 | Command | Description |
 |--|--|
-| [help](#netsh-bridge-help) | Display a list of commands for the `netsh bridge` context. |
-| [list](#netsh-bridge-list-bridge) | List all available bridges by their unique bridge GUIDs. |
-| [show adapter](#netsh-bridge-show-adapter) | List all network adapters that can be bridged and network adapters that already form a bridge. |
-| [create](#netsh-bridge-create-bridge) | Create a bridge using least two network adapters. |
-| [add](#netsh-bridge-add) | Add a network adapter to an existing bridge. |
-| [remove](#netsh-bridge-remove) | Remove a bridged network adapter from an existing bridge. |
-| [remove all from](#netsh-bridge-remove-all-from) | Remove all bridged network adapters from an existing bridge and  destroy the bridge. |
-| [destroy](#netsh-bridge-destroy) | Remove all bridged network adapters from an existing bridge and destroy the bridge. |
+| [help](#Netsh-bridge-help) | Display a list of commands for the `netsh bridge` context. |
+| [list](#Netsh-bridge-list-bridge) | List all available bridges by their unique bridge GUIDs. |
+| [show adapter](#Netsh-bridge-show-adapter) | List all network adapters that can be bridged and network adapters that already form a bridge. |
+| [create](#Netsh-bridge-create-bridge) | Create a bridge using least two network adapters. |
+| [add](#Netsh-bridge-add) | Add a network adapter to an existing bridge. |
+| [remove](#Netsh-bridge-remove) | Remove a bridged network adapter from an existing bridge. |
+| [remove all from](#Netsh-bridge-remove-all-from) | Remove all bridged network adapters from an existing bridge and  destroy the bridge. |
+| [destroy](#Netsh-bridge-destroy) | Remove all bridged network adapters from an existing bridge and destroy the bridge. |
 
 ## Netsh bridge syntax
 
@@ -51,19 +51,19 @@ netsh bridge remove all from [<Bridge GUID>]
 netsh bridge destroy [<Bridge GUID>]
 ```
 
-## netsh bridge help
+## Netsh bridge help
 
 The help command provides more detailed information about the supported `netsh bridge` commands.
 
-### netsh bridge help parameters
+### Netsh bridge help parameters
 
 | Parameter | Description |
 |--|--|
 | `<command>` | Shows information about the commands. |
 
-### netsh bridge help examples
+### Netsh bridge help examples
 
-The following command is an example of the command to show all supported netsh bridge commands.
+The following command is an example of the command to show all supported Netsh bridge commands.
 
 ```dos
 netsh bridge help
@@ -86,11 +86,11 @@ dump    - Displays a configuration script.
 set     - Sets configuration information
 ```
 
-## netsh bridge list bridge
+## Netsh bridge list bridge
 
 Command lists all available created bridges, identified by their unique bridge GUIDs.
 
-### netsh bridge list bridge examples
+### Netsh bridge list bridge examples
 
 The following command is an example of this command and its expected result:
 
@@ -110,13 +110,13 @@ GUID                                Bridge Name
 -------------------------------------------------------------
 ```
 
-## netsh bridge show adapter
+## Netsh bridge show adapter
 
 The command shows the bridgeable network adapters and any network adapters that form a bridge.
 
 Each adapter is identified with its unique ID, which can be adapter GUID or interface index (namely, IfIndex) or Adapter Name.
 
-### netsh bridge show adapter examples
+### Netsh bridge show adapter examples
 
 The following command is an example of this command.
 
@@ -135,17 +135,17 @@ IfIndex GUID                        Adapter Name        IsBridged Bridgeable Com
 ------------------------------------------------------------------------------------------
 ```
 
-## netsh bridge create bridge
+## Netsh bridge create bridge
 
 Creates a bridge of at least two network adapters joining onto the bridge. Providing two network adapters are required as parameters for the command. A successfully created bridge is identified with its unique bridge GUID and can be confirmed using the command `netsh bridge list`.
 
-### netsh bridge create bridge parameters
+### Netsh bridge create bridge parameters
 
 | Parameter | Description | Requirement |
 |--|--|--|
 | `Adapter ID` | Uniquely identifies a network adapter that can join a bridge, and can be acquired from command `netsh bridge show adapters`. An adapter ID can be either of followings: `GUID` or `Adapter Name`, or `IfIndex` | Required |
 
-### netsh bridge create bridge examples
+### Netsh bridge create bridge examples
 
 #### Example 1: Create a bridge of two network adapters by IfIndex
 
@@ -192,18 +192,18 @@ Successfully added adapter Wi-Fi onto the bridge.
 Successfully added adapter Ethernet onto the bridge.
 ```
 
-## netsh bridge add
+## Netsh bridge add
 
 This command adds a bridgeable network adapter to an existing bridge.
 
-### netsh bridge add parameters
+### Netsh bridge add parameters
 
 | Parameter | Description | Requirement |
 |--|--|--|
 | `Adapter ID` | An adapter ID can be either of followings: `Adapter GUID` or `Adapter Name`, or `IfIndex`. The parameter uniquely identifies the network adapter that can join a bridge, and can be found from command `netsh bridge show adapters`. | Required |
 | `Bridge GUID` | GUID uniquely identifies the bridge found from command `netsh bridge list`. | Required |
 
-### netsh bridge add examples
+### Netsh bridge add examples
 
 The following command is an example of this command.
 
@@ -217,18 +217,18 @@ The following output confirms the operation was successful for the adapter ID an
 Successfully added adapter <Adapter ID> to <Bridge GUID>
 ```
 
-## netsh bridge remove
+## Netsh bridge remove
 
 Removes a bridged network adapter from an existing bridge.
 
-### netsh bridge remove parameters
+### Netsh bridge remove parameters
 
 | Parameter | Description | Requirement |
 |--|--|--|
 | `Adapter ID` | An adapter ID can be either of followings: `GUID` or `Adapter Name`, or `IfIndex`. The parameter uniquely identifies the network adapter that can join a bridge, and can be found from command `netsh bridge show adapters`. | Required |
 | `Bridge GUID` | GUID uniquely identifies the bridge acquired from command `netsh bridge list`. | Required |
 
-### netsh bridge remove examples
+### Netsh bridge remove examples
 
 The following command is an example of this command.
 
@@ -242,17 +242,17 @@ The following output confirms the adapter was successfully removed.
 Successfully removed adapter <Adapter ID> from bridge.
 ```
 
-## netsh bridge remove all from
+## Netsh bridge remove all from
 
 Removes all bridged network adapters from an existing bridge and destroys the bridge.
 
-### netsh bridge remove all from parameters
+### Netsh bridge remove all from parameters
 
 | Parameter | Description | Requirement |
 |--|--|--|
 | `Bridge GUID` | Specifies the GUID to be removed. You can identify the bridge using the command `netsh bridge list`. | Required |
 
-### netsh bridge remove all examples
+### Netsh bridge remove all examples
 
 The following command is an example of this command.
 
@@ -266,17 +266,17 @@ The output confirms the bridge was successfully destroyed for the bridge GUID.
 Successfully destroyed bridge <Bridge GUID>.
 ```
 
-## netsh bridge destroy
+## Netsh bridge destroy
 
 Removes all bridged network adapters from an existing bridge and then destroys the bridge.
 
-### netsh bridge destroy parameters
+### Netsh bridge destroy parameters
 
 | Parameter | Description | Requirement |
 |--|--|--|
 | `Bridge GUID` | Specifies the GUID to be removed. You can identify the bridge using the command `netsh bridge list`. | Required |
 
-### netsh bridge destroy examples
+### Netsh bridge destroy examples
 
 The following command is an example of this command.
 
