@@ -11256,6 +11256,11 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/AD-DS-Getting-Started.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/windows-server-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
+      "redirect_document_id": false
     }
   ]
 }
