@@ -56,8 +56,8 @@ To install the web client for the first time, follow these steps:
     >
     >```powershell
     >[Net.ServicePointManager]::SecurityProtocol =
-    [Net.ServicePointManager]::SecurityProtocol -bor
-    [Net.SecurityProtocolType]::Tls12
+    >[Net.ServicePointManager]::SecurityProtocol -bor
+    >[Net.SecurityProtocolType]::Tls12
     >```
     
     >[!IMPORTANT]
@@ -114,7 +114,7 @@ When a new version of the Remote Desktop web client is available, follow these s
     Publish-RDWebClientPackage -Type Test -Latest
     ```
 
-    The client should appear on the test URL that corresponds to your web client URL (for example, <https://server_FQDN/RDWeb/webclient-test/index.html>).
+    The client should appear on the test URL that corresponds to your web client URL (for example, `<https://server_FQDN/RDWeb/webclient-test/index.html>`).
 3. Publish the client for users by running the following cmdlet:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
