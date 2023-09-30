@@ -27,7 +27,7 @@ Your system must meet the following requirements before you can deploy a Protect
   - Windows 8.1 or later
   - Windows Server 2012 R2 or later
 
-- If you need to host a PDC emulator role on a domain controller running an earlier version of Windows Server, you must create the Protected Users group by [transferring the primary domain controller (PDC) emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2 and replicating that group object to the other domain controllers.
+- If you need to host a PDC emulator role on a domain controller running an earlier version of Windows Server, you must create the Protected Users group by following the directions in [Adding a Protected User global security group to down-level domains](#adding-a-protected-user-global-security-group-to-down-level-domains) to [transfer the primary domain controller (PDC) emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2, then replicate that group object to the other domain controllers.
 
 - The domain functional level must be Windows Server 2012 R2. For more information about functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
 
@@ -88,16 +88,22 @@ To avoid lockouts and missing AES keys, we recommend you follow these guidelines
 - Change passwords for every user before you add them as members of the Protected Users group. Alternatively, make sure their passwords changed recently on a domain controller running Windows Server 2008 or later.
 <!--Old text-->
 
-<!--Where I left off-->
-
 ### Adding a Protected User global security group to down-level domains
 
-Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded.
+Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This way, these members can benefit from device protections before you upgrade the domain.
 
 > [!NOTE]
-> The domain controllers will not support domain protections.
+> Domain controllers running earlier versions of Windows than 8.1 don't support domain protections.
 
-Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
+To create a Protected Users group on a domain controller running an earlier version of WIndows Server:
+
+1. [Transfer the PDC emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2.
+
+1. Replicate the group object to the other domain controllers.
+
+After that, you should be able to host the PDC emulator role on a domain controller running an earlier version of Windows Server.
+
+<!--Where I left off.-->
 
 ### Protected Users group AD properties
 
