@@ -5,7 +5,7 @@ manager: femila
 ms.topic: article
 ms.author: wscontent
 author: robinharwood
-ms.date: 08/21/2023
+ms.date: 10/03/2023
 ---
 # Deploying a two-node clustered file server
 
@@ -191,13 +191,13 @@ Next, you need to install the file server role and failover cluster feature. Bot
 
 1. Select **Next**.
 
-1. For the Server Role, from the list of roles, open **File Services** and select **File Server**.
+1. For the Server Role, select **File and Storage Services** > **File and iSCSI Services** > **File Server**.
 
    :::image type="content" source="media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png" alt-text="Screenshot of the Server Roles page of the Add Roles and Features dialog box showing the File Server option selected and highlighted.":::
 
 1. Select **Next**.
 
-1. In **Features**, select **Failover Clustering** from the list of features. A window should appear and show you a list of all administration tools currently being installed. Make sure not to unselect any currently selected features, then select **Add Features**, then select **Next**.
+1. In **Features**, select **Failover Clustering** > **Include management tools (if applicable)** > **Add Features**, then select **Next**.
 
    :::image type="content" source="media/Cluster-File-Server/Cluster-FS-Add-WSFC-1.png" alt-text="A screenshot of the Features menu. The user has selected Failover Clustering and a dialog window for Add Roles and Features has appeared.":::
 
