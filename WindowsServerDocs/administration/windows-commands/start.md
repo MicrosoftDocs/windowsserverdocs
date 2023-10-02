@@ -29,7 +29,7 @@ start <"title"> [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
 | Parameter | Description |
 |--|--|
-| `<"title">` | Specifies the title to display in the **Command Prompt** window title bar. |
+| `"title"` | Specifies the title to display in the **Command Prompt** window title bar. |
 | /d `<path>` | Specifies the startup directory. |
 | /i | Passes the Cmd.exe startup environment to the new **Command Prompt** window. If `/i` isn't specified, the current environment is used. |
 | `{/min | /max}` | Specifies to minimize (`/min`) or maximize (`/max`) the new **Command Prompt** window. |
