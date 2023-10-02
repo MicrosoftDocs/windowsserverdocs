@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 ms.author: wscontent
 author: xelu86
-ms.date: 09/30/2023
+ms.date: 10/02/2023
 ---
 
 # Netsh command syntax, contexts, and formatting
@@ -169,14 +169,32 @@ You can use the following formatting legend to interpret and use correct netsh c
 - Text that is between braces {&nbsp;} with choices separated by a pipe provides a set of choices from which you must select only one, such as `{enable|disable}`.
 - Text that is formatted with the Courier font is code or program output.
 
-## Typing parameter string values for netsh commands
+## String values for netsh commands
 
-Throughout the netsh command reference, there are commands that contain parameters for which a string value is required.
+There are commands that contain parameters for which a string value is required. In the case where a string value contains spaces between characters, it's required that you enclose the string value in double quotation marks.
 
-In the case where a string value contains spaces between characters, such as string values that consist of more than one word, it's required that you enclose the string value in quotation marks. For example, for the parameter named **interface** with a string value of **Wireless Network Connection**, use quotation marks around the string value.
+When setting the **interface** parameter for IPv4 networks with a string value of **Wireless Network Connection** to DHCP, use double quotation marks around the string value. For example:
 
-For example: interface="Wireless Network Connection"
+```
+netsh interface ipv4>set address name="Wireless Network Connection" dhcp
+```
 
-## See Also
+Alternatively, for network interfaces, the index number can be used in place of the name associated to it. For example:
+
+```
+netsh interface ipv4>set address name=15 dhcp
+```
+
+To find the name or index of the connected interfaces, you must be in the IPv4 or IPv6 interface subcontext and type **show interfaces**. For example:
+
+```
+netsh interface ipv4>show interfaces
+```
+
+```
+netsh interface ipv6>show interfaces
+```
+
+## See also
 
 - [Netsh Command Reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754516(v=ws.10))
