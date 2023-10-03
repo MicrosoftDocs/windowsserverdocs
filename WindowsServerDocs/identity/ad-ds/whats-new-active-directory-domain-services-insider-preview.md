@@ -77,7 +77,7 @@ Active Directory uses an [ESE database engine](/windows/win32/extensible-storage
 A new domain controller is installed with a 32k page database and uses 64-bit Long Value IDs (LIDs) and runs in an "8k page mode" for compatibility with previous versions. An upgraded Domain Controller continues to use its current database format and 8k pages. Moving to 32k database pages is done on a forest-wide basis and requires that all Domain Controllers in the forest have a 32k page capable database.
 
 To enable the 32k database pages, the forest functional level must be raised to the new level
-described in [New Forest and Domain Functional Levels](#New-forest-and-domain-functional-levels), and
+described in [New Forest and Domain Functional Levels](#new-forest-and-domain-functional-levels), and
 the **Database 32k Pages Feature** optional feature must be enabled.
 
 The 32k database page size is also an optional feature for AD LDS.
@@ -109,7 +109,7 @@ Performance counters have been added to monitor and troubleshoot performance of 
 
 :::image type="content" source="../media/whats-new-active-directory-domain-services-insider-preview/dc-locator.png" alt-text="Screenshot showing the new DC Locators performance counters.":::
 
-These performance counters are also available in Windows Server 2022 after installing Windows Update [KB 5029250](https://support.microsoft.com/en-us/topic/august-8-2023-kb5029250-os-build-20348-1906-2db4a1ac-8e18-443e-b4d6-ee17435cf94c) and later.
+These performance counters are also available in Windows Server 2022 after installing Windows Update [KB 5029250](https://support.microsoft.com/help/5029250) and later.
 
 #### LDAP Client performance counters
 
@@ -117,7 +117,7 @@ Performance counters have been added to monitor and troubleshoot LDAP client req
 
 :::image type="content" source="../media/whats-new-active-directory-domain-services-insider-preview/ldap-client.png" alt-text="Screenshot showing the new LDAP Client performance counters.":::
 
-These performance counters are also available in Windows Server 2022 after installing Windows Update [KB 5029250](https://support.microsoft.com/en-us/topic/august-8-2023-kb5029250-os-build-20348-1906-2db4a1ac-8e18-443e-b4d6-ee17435cf94c) and later.
+These performance counters are also available in Windows Server 2022 after installing Windows Update [KB 5029250](https://support.microsoft.com/help/5029250) and later.
 
 #### Improvements in DC-location algorithm
 
