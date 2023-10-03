@@ -31,7 +31,7 @@ The following new features offer improvements and new capabilities in Active Dir
 - Security enhancements
 
 ### Active Directory functional levels
-#### New forest and domain functional levels
+#### New Forest and Domain Functional Levels
 Added support for a new domain and forest functional level. The new functional levels are also applicable to AD LDS.
 
 :::image type="content" source="../media/whats-new-active-directory-domain-services-insider-preview/dcpromo-new-ffl.png" alt-text="Screenshot showing the Active Directory Domain Services Configuration Wizard domain and forest functional level.":::
@@ -77,7 +77,7 @@ Active Directory uses an [ESE database engine](/windows/win32/extensible-storage
 A new domain controller is installed with a 32k page database and uses 64-bit Long Value IDs (LIDs) and runs in an "8k page mode" for compatibility with previous versions. An upgraded Domain Controller continues to use its current database format and 8k pages. Moving to 32k database pages is done on a forest-wide basis and requires that all Domain Controllers in the forest have a 32k page capable database.
 
 To enable the 32k database pages, the forest functional level must be raised to the new level
-described in [New Active Directory functional levels](#new-active-directory-functional-levels), and
+described in [New Forest and Domain Functional Levels](#New-forest-and-domain-functional-levels), and
 the **Database 32k Pages Feature** optional feature must be enabled.
 
 The 32k database page size is also an optional feature for AD LDS.
@@ -149,11 +149,11 @@ LDAP uses latest SCHANNEL implementation and supports TLS 1.3 for LDAP over TLS 
 Secure protocols such as Kerberos are the preferred way to change domain user passwords. On Domain Controllers, the latest SAM RPC password change method [SamrUnicodeChangePasswordUser4](/openspecs/windows_protocols/ms-samr/bbc1c5e5-9b81-4038-b2b9-c87d3569ed38) using AES is accepted by default when called remotely.
 
 The following legacy SAM RPC methods are blocked by default when called remotely:
-- [SamrChangePasswordUser](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/9699d8ca-e1a4-433c-a8c3-d7bebeb01476) 
-- [SamrOemChangePasswordUser2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/8d0bf63e-fa5f-4c75-be22-558c52075842)
-- [SamrUnicodeChangePasswordUser2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880)
+- [SamrChangePasswordUser](https://learn.microsoft.com/openspecs/windows_protocols/ms-samr/9699d8ca-e1a4-433c-a8c3-d7bebeb01476) 
+- [SamrOemChangePasswordUser2](https://learn.microsoft.com/openspecs/windows_protocols/ms-samr/8d0bf63e-fa5f-4c75-be22-558c52075842)
+- [SamrUnicodeChangePasswordUser2](https://learn.microsoft.com/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880)
 
-For domain users that are members of the [Protected users group](security/credentials-protection-and-management/protected-users-security-group.md) and for local accounts on domain member computers, all remote password changes through the legacy SAM RPC interface are blocked by default including SamrUnicodeChangePasswordUser4. 
+For domain users that are members of the [Protected users group](\WindowsServerDocs\security\credentials-protection-and-management\protected-users-security-group.md) and for local accounts on domain member computers, all remote password changes through the legacy SAM RPC interface are blocked by default including SamrUnicodeChangePasswordUser4. 
 
 This behavior can be controlled using the Group Policy setting: 
 
