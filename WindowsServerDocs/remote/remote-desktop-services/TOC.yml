@@ -186,8 +186,10 @@
         href: clients/web-client-whatsnew.md
     - name: Remote Desktop Connection client for Windows (MSTSC)
       items:
-      - name: Connect to an Azure VM using single sign-on with Azure AD
+      - name: Connect using single sign-on with Microsoft Entra authentication
         href: clients/mstsc-connect-azure-ad-single-sign-on.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: clients/uninstall-remote-desktop-connection.md
     - name: Setting up your PC for Remote Desktop
       items:
       - name: Supported PCs
@@ -198,8 +200,6 @@
         href: clients/remote-desktop-allow-outside-access.md
       - name: Change the RD listening port on your PC
         href: clients/change-listening-port.md
-      - name: Uninstall and reinstall Remote Desktop Connection
-        href: clients/uninstall-remote-desktop-connection.md
     - name: Advanced information
       items:
       - name: 'Compare the clients: features'
