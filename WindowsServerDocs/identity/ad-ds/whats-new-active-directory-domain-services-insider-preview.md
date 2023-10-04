@@ -4,7 +4,7 @@ description: Find out what is new in the Windows Server Insider Preview for Acti
 ms.topic: article
 author: lindakup
 ms.author: lindakup
-ms.date: 09/13/2023
+ms.date: 10/03/2023
 ---
 # What's new in Active Directory Domain Services Insider Preview
 
@@ -16,7 +16,7 @@ This article describes some of the new features in the Windows Server Insider Pr
 Active Directory Domain Services (AD DS) and Active Directory Lightweight Domain Services (AD LDS).
 
 To get started with Windows Server Insider Preview, visit
-[Getting started with the Windows Insider Program for Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
+[Getting started with the Windows Insider Program for Windows Server](https://insider.windows.com/for-business-getting-started-server/).
 Details regarding each preview is shared in release announcements posted to the
 [Windows Server Insiders](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
 space on Microsoft Tech Community.
@@ -31,7 +31,9 @@ The following new features offer improvements and new capabilities in Active Dir
 - Security enhancements
 
 ### Active Directory functional levels
+
 #### New Forest and Domain Functional Levels
+
 Added support for a new domain and forest functional level. The new functional levels are also applicable to AD LDS.
 
 :::image type="content" source="../media/whats-new-active-directory-domain-services-insider-preview/dcpromo-new-ffl.png" alt-text="Screenshot showing the Active Directory Domain Services Configuration Wizard domain and forest functional level.":::
@@ -50,13 +52,13 @@ You can learn more about functional levels in the following articles.
 
 - [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11))
 
-#### Deprecation of older Active Directory and Active Directory LDS functional levels
+#### Minimum Active Directory and Active Directory LDS functional levels
 
 New AD forests or AD LDS configuration sets are required to have a functional level of Windows Server 2016 or greater.
 
 Promotion of an AD or AD LDS replica requires that the existing domain or config set is already running with a functional level of Windows Server 2016 or greater.
 
- Microsoft recommends that all customers begin planning now to upgrade their AD and AD LDS servers to Windows Server 2022 or later. To learn more about the windows Server lifecycle, see [Modern Lifecycle Policy](/lifecycle/).
+Microsoft recommends that all customers begin planning now to upgrade their AD and AD LDS servers to Windows Server 2022 in preparation of the next release. To learn more about the windows Server lifecycle, see [Modern Lifecycle Policy](/lifecycle/).
 
 ### Active Directory schema updates
 
@@ -89,9 +91,9 @@ AD DS now takes advantage of NUMA capable hardware by utilizing CPUs in all proc
 > [!TIP]
 > NUMA support for Active Directory is also available on Window Server 2022 beginning with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems ([KB 5016693](https://support.microsoft.com/help/5016693)).
 
-#### Replication Priority Boost
+#### Replication priority order
 
-Active Directory now allows user to increase the system calculated replication priority with a particular replication partner for a particular naming context.  This feature allows more flexibility in replication order to fit various user specific configurations.
+Active Directory now allows administrators to increase the system calculated replication priority with a particular replication partner for a particular naming context.  This feature allows more flexibility in configuring the replication order to address specific scenarios.
 
 ### Supportability enhancements
 
@@ -125,7 +127,7 @@ Microsoft previously [announced the deprecation of both WINS and mailslots](http
 
 Windows doesn't use mailslots during DC discovery operations. The DC discovery algorithm has been improved with new functionality to improve the mapping of short NetBIOS-style domain names to DNS-style domain names, to help ease the transition away from mailslots. See [Active Directory DC locator changes](manage/dc-locator-changes.md).
 
-### Security Enhancements
+### Security  enhancements
 
 #### Improved security for confidential attributes
 
@@ -137,39 +139,40 @@ LDAP Channel Binding audit events 3074 and 3075 can now be enabled for LDAP chan
 
 These audit events are also available in Windows Server 2022 and later [KB4520412](https://support.microsoft.com/help/4520412)
 
-#### LDAP prefers SASL encryption by default
+#### LDAP prefers encryption by default
 
-All LDAP client communication over SASL bind prefers LDAP sealing by default.
+All LDAP client communication after a Simple Authentication and Security Layer (SASL) bind prefers LDAP sealing by default. To learn more about SASL, see [SASL Authentication](/openspecs/windows_protocols/ms-adts/989e0748-0953-455d-9d37-d08dfbf3998b).
 
 #### LDAP support for TLS 1.3
 
-LDAP uses latest SCHANNEL implementation and supports TLS 1.3 for LDAP over TLS connections.
+LDAP uses the latest SCHANNEL implementation and supports TLS 1.3 for LDAP over TLS connections. Using TLS 1.3 eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. Learn more about [supported TLS versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and about [supported cipher suites](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 
-#### Deprecation of legacy remote SAM RPC password change methods.
+#### Changes to default behavior of legacy SAM RPC password change methods
+
 Secure protocols such as Kerberos are the preferred way to change domain user passwords. On Domain Controllers, the latest SAM RPC password change method [SamrUnicodeChangePasswordUser4](/openspecs/windows_protocols/ms-samr/bbc1c5e5-9b81-4038-b2b9-c87d3569ed38) using AES is accepted by default when called remotely.
 
 The following legacy SAM RPC methods are blocked by default when called remotely:
-- [SamrChangePasswordUser](https://learn.microsoft.com/openspecs/windows_protocols/ms-samr/9699d8ca-e1a4-433c-a8c3-d7bebeb01476) 
-- [SamrOemChangePasswordUser2](https://learn.microsoft.com/openspecs/windows_protocols/ms-samr/8d0bf63e-fa5f-4c75-be22-558c52075842)
-- [SamrUnicodeChangePasswordUser2](https://learn.microsoft.com/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880)
 
-For domain users that are members of the [Protected users group](\WindowsServerDocs\security\credentials-protection-and-management\protected-users-security-group.md) and for local accounts on domain member computers, all remote password changes through the legacy SAM RPC interface are blocked by default including SamrUnicodeChangePasswordUser4. 
+- [SamrChangePasswordUser](/openspecs/windows_protocols/ms-samr/9699d8ca-e1a4-433c-a8c3-d7bebeb01476)
+- [SamrOemChangePasswordUser2](/openspecs/windows_protocols/ms-samr/8d0bf63e-fa5f-4c75-be22-558c52075842)
+- [SamrUnicodeChangePasswordUser2](/openspecs/windows_protocols/ms-samr/acb3204a-da8b-478e-9139-1ea589edb880)
 
-This behavior can be controlled using the Group Policy setting: 
+For domain users that are members of the [Protected users group](../../security/credentials-protection-and-management/protected-users-security-group.md) and for local accounts on domain member computers, all remote password changes through the legacy SAM RPC interface are blocked by default including `SamrUnicodeChangePasswordUser4`.
+
+This behavior can be controlled using the following Group Policy setting:
 
 **Windows Settings > Administrative Templates > System > Security Accounts Manager > Configure SAM change password RPC methods policy**
 
-#### Deprecation of "Network security: Don't store LAN Manager hash value on next password change" policy
+#### Removal of the policy Network security: Don't store LAN Manager hash value on next password change
 
 The Security Group Policy setting **Network security: Don't store LAN Manager hash value on next password change** is no longer present and applicable to new versions of Windows.
 
 #### Kerberos support for AES SHA256/384
 
-The Kerberos protocol has been updated to support stronger encryption and signing mechanisms with support for RFC 8009 by adding SHA-256 and SHA-384.
+The Kerberos protocol implementation has been updated to support stronger encryption and signing mechanisms with support for [RFC 8009](https://datatracker.ietf.org/doc/rfc8009/) by adding SHA-256 and SHA-384.
 
 RC4 has been deprecated and moved to the do-not-use cipher list.
 
-#### Kerberos PKINIT support for Cryptographic Agility
+#### Kerberos PKINIT support for cryptographic agility
 
-The Kerberos PKINIT protocol has been updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
-
+The Kerberos Public Key Cryptography for Initial Authentication in Kerberos (PKINIT) protocol implementation has been updated to allow for cryptographic agility by supporting more algorithms and removing hardcoded algorithms.
