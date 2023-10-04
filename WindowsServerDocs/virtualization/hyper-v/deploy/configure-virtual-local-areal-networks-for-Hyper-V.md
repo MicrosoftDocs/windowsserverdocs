@@ -35,7 +35,7 @@ All traffic that goes through the physical network adapter connected to the virt
 
 1. On the **Settings** screen, under **Hardware** in the left pane, select a **Network Adapter** that has a virtual switch that's set up with a VLAN.
 
-1. In the right pane, select **Enable virtual LAN identification**, and then type the same VLAN ID as the one you specified for the virtual switch.
+1. Under **VLAN ID** in the right pane, select **Enable virtual LAN identification**, and then type the same VLAN ID as the one you specified for the virtual switch.
 
 1. Select **OK**.
 
