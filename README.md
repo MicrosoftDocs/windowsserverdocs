@@ -25,23 +25,23 @@ These repos are actively managed and contain the source for Windows Server techn
 
 ## GitHub content feedback guidelines
 
-As the Windows Server repo in GitHub is only monitored for content issues, users can help in contributing by reporting documentation issues. Select the "**This page**" button under the **Feedback** section of the page to generate a GitHub issue where feedback can be provided concerning a documentation issue. Suggestions for improvement are welcomed and specific updates to our content are under consideration.
+The Windows Server GitHub repo is only monitored for documentation issues, you can help  contribute by reporting any documentation issues you find. Select the "**This page**" button under the **Feedback** section of the page to generate a GitHub issue where documentation feedback can be provided. Suggestions for improvement are welcomed and specific updates to our content are under consideration.
 
-A best practice in providing valuable feedback is to capture the issue directly by quoting where the issue is found within the document. The following list provides insight to issues that are addressable:
+To provide valuable feedback, capture the issue directly by quoting where the issue is found within the document. The following list provides insight to issues that are addressable:
 
 - Incorrect spelling, typos or duplicate text in the documentation.
 - Broken, outdated or incorrectly referenced hyperlinks to our content.
 - The step-by-step directions provided don't match the product, steps are missing or are outdated.
 - Incorrect code, missing parameters, or improper examples of command line usage or PowerShell cmdlets.
 
-There are cases where the given feedback is outside the scope of what can be addressed as the issue pertains to the product or service rather than the documentation itself. For reference:
+There are cases where feedback pertains to the product or service rather than the documentation itself. For example:
 
 - Technical support for specific or case-based scenarios where troubleshooting is involved.
 - Fixing a software bug, application feature requests, or experiencing product performance issues.
 - Dislike of a product GUI change or removal of a product feature.
 - Other issues that don't relate to the actual content.
 
-We offer other channels for engaging with us whether you have a support question, want to provide product feedback, or other suggestions. Use one or more of these channels:
+To help you, we offer other channels for engaging with us, whether you have a support question, want to provide product feedback, or other suggestions. Use one or more of these channels:
 
 - Open a ticket with [Microsoft Support](https://support.microsoft.com/ContactUs).
 - You can submit feedback by visiting our [Feedback portal](https://learn.microsoft.com/microsoft-365/admin/misc/feedback-provide-microsoft?view=o365-worldwide).
