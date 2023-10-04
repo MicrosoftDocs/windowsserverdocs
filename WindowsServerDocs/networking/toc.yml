@@ -474,7 +474,7 @@ items:
     - name: Performance tools for network workloads
       href: technologies/network-subsystem/net-sub-performance-tools.md
   - name: NIC Teaming
-    href: /azure-stack/hci/concepts/host-network-requirements
+    href: windows-server-supported-networking-scenarios.md#bkmk_nicteam
   - name: Packet Monitor (Pktmon)
     href: technologies/pktmon/pktmon.md
     items:
