@@ -4,7 +4,7 @@ description: Learn more about Certificate Enrollment Policy Web Service, includi
 author: robinharwood
 ms.topic: overview
 ms.author: gswashington
-ms.date: 09/21/2023
+ms.date: 10/16/2023
 ---
 
 # Certificate Enrollment Policy Web Service guidance
