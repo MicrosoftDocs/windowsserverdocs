@@ -36,7 +36,7 @@ The following new features offer improvements and new capabilities in Active Dir
 
 Added support for a new domain and forest functional level. The new functional levels are also applicable to AD LDS.
 
-:::image type="content" source="../media/whats-new-active-directory-domain-services-insider-preview/dcpromo-new-ffl.png" alt-text="Screenshot showing the Active Directory Domain Services Configuration Wizard domain and forest functional level.":::
+:::image type="content" source="../media/whats-new-active-directory-domain-services-insider-preview/dcpromo.png" alt-text="Screenshot showing the Active Directory Domain Services Configuration Wizard domain and forest functional level.":::
 
 The new functional level is used for general supportability, and is required for the new 32K database page feature as described in this document.
 
