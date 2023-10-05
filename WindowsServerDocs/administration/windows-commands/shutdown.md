@@ -70,7 +70,7 @@ The shutdown or restart reasons uses the following legend:
 - **P**: Planned - A planned shutdown or restart scheduled in advance, such as system maintenance, software installation or other.
 - **C**: Customer Defined - Specify a custom reason for the system shutdown or restart.
 
-|Reason Type|Major|Minor|Description|
+|Reason type|Major|Minor|Description|
 |-|-|-|-|
 |U|0|0|Other (Unplanned)|
 |E|0|0|Other (Unplanned)|
