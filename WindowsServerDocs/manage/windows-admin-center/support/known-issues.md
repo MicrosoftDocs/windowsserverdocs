@@ -148,6 +148,8 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
   - Windows Key
   - PrtScn
 
+- When using the Remote Desktop to connect to a machine, keyboard language mapping may not work properly.
+
 ### Roles and Features
 
 - When selecting roles or features with unavailable sources for install, they are skipped. [12946914]
