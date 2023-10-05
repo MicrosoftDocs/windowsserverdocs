@@ -15,10 +15,10 @@ For other Azure hybrid benefits (for example, SQL Server), see [Azure Hybrid Ben
 
 ## What qualifies you for Azure Hybrid Benefit?
 
-To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance or qualifying subscription licenses. Software Assurance is a comprehensive Volume Licensing program. Software Assurance and qualifying subscription licenses are only available as part of Commercial Licensing agreements. To learn more about Commercial Licensing, see [Microsoft Licensing Resources](https://www.microsoft.com/licensing/default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
+To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance or qualifying subscription licenses. Software Assurance and qualifying subscription licenses are only available as part of Commercial Licensing agreements. To learn more about Commercial Licensing, see [Microsoft Licensing Resources](https://www.microsoft.com/licensing/default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
 
 > [!IMPORTANT]
-> Workloads using Azure Hybrid Benefit can run only during the Software Assurance or subscription license term. When the Software Assurance or subscription license term approaches expiration, you must either renew your agreement with either Software Assurance or a subscription license, disable the hybrid benefit functionality, or de-provision those workloads that are using Azure Hybrid Benefit.
+> Workloads using Azure Hybrid Benefit can run only during the Software Assurance or subscription license term. When the Software Assurance or subscription license term approaches expiration, you must either renew your agreement with either Software Assurance or a subscription license, disable the hybrid benefit functionality, or deprovision those workloads that are using Azure Hybrid Benefit.
 
 ## What's included in Azure Hybrid Benefit?
 
@@ -30,7 +30,7 @@ Azure Hybrid Benefit includes the following cost savings:
 
 - **Azure Stack HCI:** The Azure Stack HCI host fee and Windows Server subscription fee are waived with Azure Hybrid Benefit. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Stack HCI (for example, customer-managed hardware, Azure services, and workloads). Software Assurance must be active to use this benefit.
 
-- **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You'll still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for Azure Hybrid Benefit for Azure Stack HCI. With Azure Hybrid Benefit for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
+- **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for Azure Hybrid Benefit for Azure Stack HCI. With Azure Hybrid Benefit for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
 
 ![Illustration showing Azure Hybrid Benefit savings for Windows Server VMs on Azure, AKS on Azure Stack HCI and Windows Server.](media/azure-hybrid-benefit/azure-hybrid-benefit-savings.png)
 
@@ -54,8 +54,8 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 #### Types of license
 
-- Windows Server Standard with active Software Assurance or subscription.
-- Windows Server Datacenter with active Software Assurance or subscription.
+- Windows Server Standard with active Software Assurance.
+- Windows Server Datacenter with active Software Assurance.
 
 #### Number of licenses
 
@@ -83,13 +83,13 @@ To learn how to deploy Windows Server VMs in Azure with Azure Hybrid Benefit, fo
 
 ### How to maintain compliance
 
-If you apply Azure Hybrid Benefit to your Windows Server VMs, verify the number of eligible licenses and the Software Assurance (or subscription) coverage period before you activate this benefit. Use the guidelines above to make sure you deploy the correct number of Windows Server VMs with this benefit.
+If you apply Azure Hybrid Benefit to your Windows Server VMs, verify the number of eligible licenses and the Software Assurance (or subscription) coverage period before you activate this benefit. Use the preceding guidelines to make sure you deploy the correct number of Windows Server VMs with this benefit.
 
 If you already have Windows Server VMs running with Azure Hybrid Benefit, perform an inventory to see how many units you're running, and check this number against your Software Assurance or subscription licenses. You can contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
 
 To see and count all VMs that are deployed with Azure Hybrid Benefit in an Azure subscription, [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) using the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
 
-You can also look at your Microsoft Azure bill to determine how many VMs with Azure Hybrid Benefit for Windows Server you are running. You'll find information about the number of instances with the benefit under **Additional Info**:
+You can also look at your Microsoft Azure bill to determine how many VMs with Azure Hybrid Benefit for Windows Server you're running. You can find information about the number of instances with the benefit under **Additional Info**:
 
 ```json
 "{"ImageType":"WindowsServerBYOL","ServiceType":"Standard_A1","VMName":"","UsageType":"ComputeHR"}"
