@@ -182,7 +182,7 @@ To use these benefits, your Software Assurance or qualifying subscription must b
 
 #### What is Software Assurance?
 
-Software Assurance is a comprehensive Volume Licensing program. Software Assurance is only available through Volume Licensing and is purchased when you buy or renew a Volume Licensing agreement. It's included with some agreements and is an optional purchase with others. Software Assurance benefits include new product version rights, support, license mobility rights, and a unique set of technologies and servicesto maximize your IT investments. .
+Software Assurance is a comprehensive Volume Licensing program. Software Assurance is only available through Volume Licensing and is purchased when you buy or renew a Volume Licensing agreement. It's included with some agreements and is an optional purchase with others. Software Assurance benefits include new product version rights, support, license mobility rights, and a unique set of technologies and services to maximize your IT investments.
 
 For information about Volume Licensing, see [Microsoft Licensing](https://www.microsoft.com/en-us/Licensing/default). To learn more about Software Assurance benefits, and how each benefit can help meet your business needs, see [Software Assurance benefits](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-by-benefits).
 
