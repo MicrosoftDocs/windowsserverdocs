@@ -473,8 +473,6 @@ items:
       href: technologies/network-subsystem/net-sub-performance-counters.md
     - name: Performance tools for network workloads
       href: technologies/network-subsystem/net-sub-performance-tools.md
-  - name: NIC Teaming
-    href: /azure-stack/hci/concepts/host-network-requirements
   - name: Packet Monitor (Pktmon)
     href: technologies/pktmon/pktmon.md
     items:
@@ -627,6 +625,8 @@ items:
       items:
       - name: Troubleshoot the Windows Server Software Defined Networking Stack
         href: sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md
+  - name: Switch Embedded Teaming (SET)
+    href: /azure-stack/hci/concepts/host-network-requirements
   - name: Virtual Private Networking (VPN)
     href: ../remote/remote-access/vpn/vpn-top.md
   - name: Windows Internet Name Service (WINS)
