@@ -39,8 +39,8 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 | /f | Forces running applications to close without warning users.<br>**Caution:** Using the **/f** option might result in loss of unsaved data. |
 | /m `\\<computername>` | Specifies the target computer. Can't be used with the **/l** option. |
 | /t `<xxx>` | Sets the time-out period before shutdown to *xxx* seconds. The valid range is 0-315360000 (10 years), with a default of 30. If the timeout period is greater than 0, the **/f** parameter is implied. |
-| /d `[p | u:]<xx>:<yy>` | Lists the reason for the system restart or shutdown. The supported parameter values are:<ul><li>**P** - Indicates that the restart or shutdown is planned.</li><li>**U** - Indicates that the reason is user-defined.<p>**NOTE**<br>If **p** or **u** aren't specified, the restart or shutdown is unplanned.</li><li>*xx* - Specifies the major reason number (a positive integer, less than 256).</li><li>*yy* Specifies the minor reason number (a positive integer, less than 65536).</li></ul> |
-| /c `<comment>` | Enables you to create a custom reason for the system shutdown or restart, which must be enclosed in double quotation marks. You can use a maximum of 512 characters. |
+| /d `[p \| u:]<xx>:<yy>` | Lists the reason for the system restart or shutdown. The supported parameter values are:<br><ul><li>**P** - Indicates that the restart or shutdown is planned.</li><li>**U** - Indicates that the reason is user-defined.<br>If **p** or **u** aren't specified, the restart or shutdown is unplanned.</li><br><li>*xx* - Specifies the major reason number (a positive integer, less than 256).</li><li>*yy* Specifies the minor reason number (a positive integer, less than 65536).</li></ul> |
+| /c `<comment>` | Enables you to create a custom reason for the system shutdown or restart, which must be enclosed in double quotation marks. You can use a maximum of 512 characters. Can also be used with the **/d** parameter. |
 | /? | Displays help at the command prompt, including a list of the major and minor reasons that are defined on your local computer. |
 
 #### Remarks
