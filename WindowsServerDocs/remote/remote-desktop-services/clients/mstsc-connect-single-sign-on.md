@@ -49,7 +49,7 @@ Here's how to connect to a remote PC using single sign-on with Microsoft Entra a
 
 1. Select **Connect**.
 
-1. If prompted for credentials, your user account in Microsoft Entra ID may be automatically selected. If not your account is not automatically selected, specify the user name for your account in the format `user@domain.com` (the User Principal Name (UPN)).
+1. If prompted for credentials, your user account in Microsoft Entra ID may be automatically selected. If your account is not automatically selected, specify the user name for your account in the format `user@domain.com` (the User Principal Name (UPN)).
 
 1. Select **OK** to connect. You're prompted to allow the remote desktop connection when connecting to a new remote PC. Microsoft Entra ID remembers up to 15 hosts for 30 days before prompting again. If you see this dialogue, select **Yes** to connect.
 
