@@ -83,7 +83,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | AxInstSV |
-| **Description** | Provides User Account Control validation for the installation of ActiveX controls from the Internet and enables management of ActiveX control installation based on Group Policy settings. This service is started on demand and if disabled the installation of ActiveX controls will behave according to default browser settings. |
+| **Description** | Provides User Account Control validation for the installation of ActiveX controls from the Internet and enables management of ActiveX control installation based on Group Policy settings. This service is started on demand, and, if disabled, the installation of ActiveX controls behave according to default browser settings. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -94,7 +94,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | AJRouter |
-| **Description** | Routes AllJoyn messages for the local AllJoyn clients. If this service is stopped the AllJoyn clients that do not have their own bundled routers will be unable to run. |
+| **Description** | Routes AllJoyn messages for the local AllJoyn clients. If this service is stopped, the AllJoyn clients that don't have their own bundled routers are unable to run. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -116,7 +116,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | AppIDSvc |
-| **Description** | Determines and verifies the identity of an application. Disabling this service will prevent AppLocker from being enforced. |
+| **Description** | Determines and verifies the identity of an application. Disabling this service prevents AppLocker from being enforced. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -127,7 +127,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Appinfo |
-| **Description** | Facilitates the running of interactive applications with additional administrative privileges. If this service is stopped, users will be unable to launch applications with the additional administrative privileges they may require to perform desired user tasks. |
+| **Description** | Facilitates the running of interactive applications with additional administrative privileges. If this service is stopped, users can't launch applications with the additional administrative privileges they may require to perform desired user tasks. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -138,7 +138,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | ALG |
-| **Description** | Provides support for third-party protocol plug-ins for Internet Connection Sharing |
+| **Description** | Provides support for third-party protocol plug-ins for Internet Connection Sharing. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -149,7 +149,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | AppMgmt |
-| **Description** | Processes installation, removal, and enumeration requests for software deployed through Group Policy. If the service is disabled, users will be unable to install, remove, or enumerate software deployed through Group Policy. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Processes installation, removal, and enumeration requests for software deployed through Group Policy. If the service is disabled, users are unable to install, remove, or enumerate software deployed through Group Policy, and any services that explicitly depend on Application Management are unable to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -160,7 +160,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | AppXSvc |
-| **Description** | Provides infrastructure support for deploying Store applications. This service is started on demand and if disabled Store applications will not be deployed to the system, and may not function properly. |
+| **Description** | Provides infrastructure support for deploying Store applications. This service starts on demand and, if disabled, Store applications don't deploy to the system and may not function properly. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -182,7 +182,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | BITS |
-| **Description** | Transfers files in the background using idle network bandwidth. If the service is disabled, then any applications that depend on BITS, such as Windows Update or MSN Explorer, will be unable to automatically download programs and other information. |
+| **Description** | Transfers files in the background using idle network bandwidth. If the service is disabled, then any applications that depend on BITS, such as Windows Update or MSN Explorer, are unable to automatically download programs and other information. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -204,7 +204,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | BFE |
-| **Description** | The Base Filtering Engine (BFE) is a service that manages firewall and Internet Protocol security (IPsec) policies and implements user mode filtering. Stopping or disabling the BFE service will significantly reduce the security of the system. It will also result in unpredictable behavior in IPsec management and firewall applications. |
+| **Description** | The Base Filtering Engine (BFE) is a service that manages firewall and Internet Protocol security (IPsec) policies and implements user mode filtering. Stopping or disabling the BFE service significantly reduces system security and causes unpredictable behavior in IPsec management and firewall applications. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -226,7 +226,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | CDPUserSvc |
-| **Description** | This user service is used for Connected Devices Platform scenarios |
+| **Description** | This user service is used for Connected Devices Platform scenarios. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Automatic |
 | **Recommendation** | OK to disable |
@@ -237,7 +237,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | CertPropSvc |
-| **Description** | Copies user certificates and root certificates from smart cards into the current user's certificate store, detects when a smart card is inserted into a smart card reader, and if needed, installs the smart card Plug and Play minidriver. |
+| **Description** | Copies user certificates and root certificates from smart cards into the current user's certificate store, detects when a smart card is inserted into a smart card reader, and, if needed, installs the smart card Plug and Play minidriver. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -248,7 +248,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | ClipSVC |
-| **Description** | Provides infrastructure support for the Microsoft Store. This service is started on demand and if disabled applications bought using Microsoft Store will not behave correctly. |
+| **Description** | Provides infrastructure support for the Microsoft Store. This service starts on demand,and, if disabled, applications bought using Microsoft Store don't behave correctly. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -260,7 +260,7 @@ This article describes each service one by one, using the following variables.
 |--|--|
 | **Service name** | KeyIso
 | **Description** | The CNG key isolation service is hosted in the LSA process. The service provides key process isolation to private keys and associated cryptographic operations as required by the Common Criteria. The service stores and uses long-lived keys in a secure process complying with Common Criteria requirements.
-| **Installation** | Always installed
+| **Installation** | Always installed |
 | **Startup type** | Manual
 | **Recommendation** | No guidance
 | **Comments** | None |
