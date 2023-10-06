@@ -23,14 +23,14 @@ article covers information about hotpatch for supported VMs, which has the follo
 
 ## Supported platforms
 
-Hotpatch is supported on the following operating systems for VMs running on Azure and Azure Stack
+Hotpatch is supported on the following images for VMs running on Azure and Azure Stack
 HCI:
 
 - Windows Server 2022 Datacenter: Azure Edition Core
 - Windows Server 2022 Datacenter: Azure Edition with Desktop Experience
 
 > [!NOTE]
-> Hotpatch is not supported on Windows Server containers base images.
+> Hotpatch is not supported on Windows Server containers base images or customized images.
 
 To get started using Hotpatch, use your preferred method to create an Azure or Azure Stack HCI VM,
 and select one of the following images that you would like to use. Hotpatch is selected by default
