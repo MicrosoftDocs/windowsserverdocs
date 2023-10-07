@@ -94,7 +94,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | AJRouter |
-| **Description** | Routes AllJoyn messages for the local AllJoyn clients. If this service is stopped, the AllJoyn clients that don't have their own bundled routers are unable to run. |
+| **Description** | Routes AllJoyn messages for the local AllJoyn clients. If you stop this service, the AllJoyn clients that don't have their own bundled routers are unable to run. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -127,7 +127,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Appinfo |
-| **Description** | Facilitates the running of interactive applications with additional administrative privileges. If this service is stopped, users can't launch applications with the additional administrative privileges they may require to perform desired user tasks. |
+| **Description** | Facilitates the running of interactive applications with additional administrative privileges. If you stop this service, users can't launch applications with the additional administrative privileges they may require to perform desired user tasks. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -248,7 +248,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | ClipSVC |
-| **Description** | Provides infrastructure support for the Microsoft Store. This service starts on demand,and, if disabled, applications bought using Microsoft Store don't behave correctly. |
+| **Description** | Provides infrastructure support for the Microsoft Store. This service starts on demand, and, if disabled, applications bought using Microsoft Store don't behave correctly. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -259,7 +259,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | KeyIso
-| **Description** | The CNG key isolation service is hosted in the LSA process. The service provides key process isolation to private keys and associated cryptographic operations as required by the Common Criteria. The service stores and uses long-lived keys in a secure process complying with Common Criteria requirements.
+| **Description** | The CNG key isolation service is hosted in the LSA process. The service provides key process isolation to private keys and associated cryptographic operations, as required by the Common Criteria. The service stores and uses long-lived keys in a secure process that complies with Common Criteria requirements.
 | **Installation** | Always installed |
 | **Startup type** | Manual
 | **Recommendation** | No guidance
@@ -270,7 +270,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | EventSystem |
-| **Description** | Supports System Event Notification Service (SENS), which provides automatic distribution of events to subscribing Component Object Model (COM) components. If the service is stopped, SENS will close and will not be able to provide logon and logoff notifications. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Supports System Event Notification Service (SENS), which provides automatic distribution of events to subscribing Component Object Model (COM) components. If the service is stopped, SENS closes and is unable to provide logon and logoff notifications. If you disable this service, any services that explicitly depend on it are unable to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -281,7 +281,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | COMSysApp |
-| **Description** | Manages the configuration and tracking of Component Object Model (COM)+-based components. If the service is stopped, most COM+-based components will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Manages the configuration and tracking of Component Object Model (COM)-based components. If the service stops, most COM+-based components stop functioning properly. If you disable this service, any services that explicitly depend on it are unable to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -292,7 +292,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Browser |
-| **Description** | Maintains an updated list of computers on the network and supplies this list to computers designated as browsers. If this service is stopped, this list will not be updated or maintained. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Maintains an updated list of computers on the network and supplies this list to computers designated as browsers. If this service stops, this list doesn't update or maintain itself, and any services that explicitly depend on Computer Browser are unable to start. |
 | **Installation** | Always installed |
 | **Startup type** | Disabled |
 | **Recommendation** | Already disabled |
@@ -303,7 +303,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | CDPSvc |
-| **Description** | This service is used for Connected Devices and Universal Glass scenarios |
+| **Description** | This service is used for Connected Devices and Universal Glass scenarios. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -314,7 +314,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | DiagTrack |
-| **Description** | The Connected User Experiences and Telemetry service enables features that support in-application and connected user experiences. Additionally, this service manages the event-driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics. |
+| **Description** | The Connected User Experiences and Telemetry service enables features that support in-application and connected user experiences. When the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics, this service also manages the event-driven collection and transmission of diagnostic and usage information that Microsoft uses to improve the experience and quality of the Windows Platform. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -347,7 +347,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | VaultSvc |
-| **Description** | Provides secure storage and retrieval of credentials to users, applications and security service packages. |
+| **Description** | Provides secure storage and retrieval of credentials to users, applications, and security service packages. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -358,7 +358,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | CryptSvc |
-| **Description** | Provides three management services: Catalog Database Service, which confirms the signatures of Windows files and allows new programs to be installed; Protected Root Service, which adds and removes Trusted Root Certification Authority certificates from this computer; and Automatic Root Certificate Update Service, which retrieves root certificates from Windows Update and enable scenarios such as SSL. If this service is stopped, these management services will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Provides three management services: Catalog Database Service, which confirms the signatures of Windows files and allows new programs to be installed; Protected Root Service, which adds and removes Trusted Root Certification Authority certificates from this computer; and Automatic Root Certificate Update Service, which retrieves root certificates from Windows Update and enable scenarios such as SSL. If you stop this service, these management services are unable to function properly and any services that explicitly depend on it are unable to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -380,7 +380,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | DcpSvc |
-| **Description** | The DCP (Data Collection and Publishing) service supports first-party apps to upload data to cloud. |
+| **Description** | The Data Collection and Publishing (DCP) service supports first-party apps to upload data to cloud. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -391,7 +391,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | DcomLaunch |
-| **Description** | The DCOMLAUNCH service launches COM and DCOM servers in response to object activation requests. If this service is stopped or disabled, programs using COM or DCOM will not function properly. It is strongly recommended that you have the DCOMLAUNCH service running. |
+| **Description** | The DCOMLAUNCH service launches Component Object Model (COM) and Distributed Component Object Model (DCOM) servers in response to object activation requests. If you stop or disable this service, programs using COM or DCOM are unable to function properly. We highly recommend that you let the DCOMLAUNCH service run. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -413,7 +413,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | DeviceInstall |
-| **Description** | Enables a computer to recognize and adapt to hardware changes with little or no user input. Stopping or disabling this service will result in system instability. |
+| **Description** | Enables a computer to recognize and adapt to hardware changes with little or no user input. Stopping or disabling this service results in system instability. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -435,7 +435,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | DsmSvc |
-| **Description** | Enables the detection, download and installation of device-related software. If this service is disabled, devices may be configured with outdated software, and may not work correctly. |
+| **Description** | Enables the detection, download, and installation of device-related software. If you disable this service, devices may be configured with outdated software and not work correctly. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -446,7 +446,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | DevQueryBroker |
-| **Description** | Enables apps to discover devices with a backgroud task |
+| **Description** | Enables apps to discover devices with a background task. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -457,7 +457,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Dhcp |
-| **Description** | Registers and updates IP addresses and DNS records for this computer. If this service is stopped, this computer will not receive dynamic IP addresses and DNS updates. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Registers and updates IP addresses and DNS records for this computer. If you stop this service, this computer doesn't receive dynamic IP addresses and DNS updates. If you disable this service, then any services that explicitly depend on it are unable to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -468,18 +468,20 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | DPS |
-| **Description** | The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function. |
+| **Description** | The Diagnostic Policy Service enables problem detection, troubleshooting, and resolution for Windows components. If you stop this service, diagnostics stops functioning. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
 | **Comments** | None |
+
+<!--Where I left off.-->
 
 ## Diagnostic Service Host
 
 | Name | Description |
 |--|--|
 | **Service name** | WdiServiceHost |
-| **Description** | The Diagnostic Service Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local Service context. If this service is stopped, any diagnostics that depend on it will no longer function. |
+| **Description** | The Diagnostic Service Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local Service context. If you stop this service, any diagnostics that depend on it will no longer function. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -490,7 +492,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | WdiSystemHost |
-| **Description** | The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context. If this service is stopped, any diagnostics that depend on it will no longer function. |
+| **Description** | The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context. If you stop this service, any diagnostics that depend on it will no longer function. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -512,7 +514,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | MSDTC |
-| **Description** | Coordinates transactions that span multiple resource managers, such as databases, message queues, and file systems. If this service is stopped, these transactions will fail. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Coordinates transactions that span multiple resource managers, such as databases, message queues, and file systems. If you stop this service, these transactions will fail. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -567,7 +569,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | EFS |
-| **Description** | Provides the core file encryption technology used to store encrypted files on NTFS file system volumes. If this service is stopped or disabled, applications will be unable to access encrypted files. |
+| **Description** | Provides the core file encryption technology used to store encrypted files on NTFS file system volumes. If you stop this service or disabled, applications will be unable to access encrypted files. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -617,7 +619,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | FDResPub |
-| **Description** | Publishes this computer and resources attached to this computer so they can be discovered over the network. If this service is stopped, network resources will no longer be published and they will not be discovered by other computers on the network. |
+| **Description** | Publishes this computer and resources attached to this computer so they can be discovered over the network. If you stop this service, network resources will no longer be published and they will not be discovered by other computers on the network. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -799,7 +801,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | UI0Detect |
-| **Description** | Enables user notification of user input for interactive services, which enables access to dialogs created by interactive services when they appear. If this service is stopped, notifications of new interactive service dialogs will no longer function and there might not be access to interactive service dialogs. If this service is disabled, both notifications of and access to new interactive service dialogs will no longer function. |
+| **Description** | Enables user notification of user input for interactive services, which enables access to dialogs created by interactive services when they appear. If you stop this service, notifications of new interactive service dialogs will no longer function and there might not be access to interactive service dialogs. If you disable this service, both notifications of and access to new interactive service dialogs will no longer function. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -825,7 +827,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | iphlpsvc |
-| **Description** | Provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS. If this service is stopped, the computer will not have the enhanced connectivity benefits that these technologies offer. |
+| **Description** | Provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS. If you stop this service, the computer will not have the enhanced connectivity benefits that these technologies offer. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -864,7 +866,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | KtmRm |
-| **Description** | Coordinates transactions between the Distributed Transaction Coordinator (MSDTC) and the Kernel Transaction Manager (KTM). If it is not needed, it is recommended that this service remain stopped. If it is needed, both MSDTC and KTM will start this service automatically. If this service is disabled, any MSDTC transaction interacting with a Kernel Resource Manager will fail and any services that explicitly depend on it will fail to start. |
+| **Description** | Coordinates transactions between the Distributed Transaction Coordinator (MSDTC) and the Kernel Transaction Manager (KTM). If it is not needed, it is recommended that this service remain stopped. If it is needed, both MSDTC and KTM will start this service automatically. If you disable this service, any MSDTC transaction interacting with a Kernel Resource Manager will fail and any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -877,7 +879,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | lltdsvc |
-| **Description** | Creates a Network Map, consisting of PC and device topology (connectivity) information, and metadata describing each PC and device. If this service is disabled, the Network Map will not function properly. |
+| **Description** | Creates a Network Map, consisting of PC and device topology (connectivity) information, and metadata describing each PC and device. If you disable this service, the Network Map will not function properly. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -916,7 +918,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | wlidsvc |
-| **Description** | Enables user sign-in through Microsoft account identity services. If this service is stopped, users will not be able to log on to the computer with their Microsoft account. |
+| **Description** | Enables user sign-in through Microsoft account identity services. If you stop this service, users will not be able to log on to the computer with their Microsoft account. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -942,7 +944,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | MSiSCSI |
-| **Description** | Manages Internet SCSI (iSCSI) sessions from this computer to remote iSCSI target devices. If this service is stopped, this computer will not be able to login or access iSCSI targets. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Manages Internet SCSI (iSCSI) sessions from this computer to remote iSCSI target devices. If you stop this service, this computer will not be able to login or access iSCSI targets. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | Do not disable |
@@ -955,7 +957,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | NgcSvc |
-| **Description** | Provides process isolation for cryptographic keys used to authenticate to a user's associated identity providers. If this service is disabled, all uses and management of these keys will not be available, which includes machine logon and single-sign on for apps and websites. This service starts and stops automatically. It is recommended that you do not reconfigure this service. |
+| **Description** | Provides process isolation for cryptographic keys used to authenticate to a user's associated identity providers. If you disable this service, all uses and management of these keys will not be available, which includes machine logon and single-sign on for apps and websites. This service starts and stops automatically. It is recommended that you do not reconfigure this service. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -968,7 +970,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | NgcCtnrSvc |
-| **Description** | Manages local user identity keys used to authenticate user to identity providers as well as TPM virtual smart cards. If this service is disabled, local user identity keys and TPM virtual smart cards will not be accessible. It is recommended that you do not reconfigure this service. |
+| **Description** | Manages local user identity keys used to authenticate user to identity providers as well as TPM virtual smart cards. If you disable this service, local user identity keys and TPM virtual smart cards will not be accessible. It is recommended that you do not reconfigure this service. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -981,7 +983,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | swprv |
-| **Description** | Manages software-based volume shadow copies taken by the Volume Shadow Copy service. If this service is stopped, software-based volume shadow copies cannot be managed. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Manages software-based volume shadow copies taken by the Volume Shadow Copy service. If you stop this service, software-based volume shadow copies cannot be managed. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -994,7 +996,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | smphost |
-| **Description** | Host service for the Microsoft Storage Spaces management provider. If this service is stopped or disabled, Storage Spaces cannot be managed. |
+| **Description** | Host service for the Microsoft Storage Spaces management provider. If you stop this service or disabled, Storage Spaces cannot be managed. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | Do not disable |
@@ -1020,7 +1022,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Netlogon |
-| **Description** | Maintains a secure channel between this computer and the domain controller for authenticating users and services. If this service is stopped, the computer may not authenticate users and services and the domain controller cannot register DNS records. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Maintains a secure channel between this computer and the domain controller for authenticating users and services. If you stop this service, the computer may not authenticate users and services and the domain controller cannot register DNS records. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1085,7 +1087,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | NlaSvc |
-| **Description** | Collects and stores configuration information for the network and notifies programs when this information is modified. If this service is stopped, configuration information might be unavailable. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Collects and stores configuration information for the network and notifies programs when this information is modified. If you stop this service, configuration information might be unavailable. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -1098,7 +1100,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | NetSetupSvc |
-| **Description** | The Network Setup Service manages the installation of network drivers and permits the configuration of low-level network settings. If this service is stopped, any driver installations that are in-progress may be cancelled. |
+| **Description** | The Network Setup Service manages the installation of network drivers and permits the configuration of low-level network settings. If you stop this service, any driver installations that are in-progress may be cancelled. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1111,7 +1113,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | nsi |
-| **Description** | This service delivers network notifications (e.g. interface addition/deleting etc) to user mode clients. Stopping this service will cause loss of network connectivity. If this service is disabled, any other services that explicitly depend on this service will fail to start. |
+| **Description** | This service delivers network notifications (e.g. interface addition/deleting etc) to user mode clients. Stopping this service will cause loss of network connectivity. If you disable this service, any other services that explicitly depend on this service will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -1150,7 +1152,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | PerfHost |
-| **Description** | Enables remote users and 64-bit processes to query performance counters provided by 32-bit DLLs. If this service is stopped, only local users and 32-bit processes will be able to query performance counters provided by 32-bit DLLs. |
+| **Description** | Enables remote users and 64-bit processes to query performance counters provided by 32-bit DLLs. If you stop this service, only local users and 32-bit processes will be able to query performance counters provided by 32-bit DLLs. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1163,7 +1165,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | pla |
-| **Description** | Performance Logs and Alerts Collects performance data from local or remote computers based on preconfigured schedule parameters, then writes the data to a log or triggers an alert. If this service is stopped, performance information will not be collected. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Performance Logs and Alerts Collects performance data from local or remote computers based on preconfigured schedule parameters, then writes the data to a log or triggers an alert. If you stop this service, performance information will not be collected. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1267,7 +1269,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | PcaSvc |
-| **Description** | This service provides support for the Program Compatibility Assistant (PCA). PCA monitors programs installed and run by the user and detects known compatibility problems. If this service is stopped, PCA will not function properly. |
+| **Description** | This service provides support for the Program Compatibility Assistant (PCA). PCA monitors programs installed and run by the user and detects known compatibility problems. If you stop this service, PCA will not function properly. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Automatic |
 | **Recommendation** | OK to disable |
@@ -1319,7 +1321,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | RasMan |
-| **Description** | Manages dial-up and virtual private network (VPN) connections from this computer to the Internet or other remote networks. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Manages dial-up and virtual private network (VPN) connections from this computer to the Internet or other remote networks. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1371,7 +1373,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | RpcSs |
-| **Description** | The RPCSS service is the Service Control Manager for COM and DCOM servers. It performs object activations requests, object exporter resolutions and distributed garbage collection for COM and DCOM servers. If this service is stopped or disabled, programs using COM or DCOM will not function properly. It is strongly recommended that you have the RPCSS service running. |
+| **Description** | The RPCSS service is the Service Control Manager for COM and DCOM servers. It performs object activations requests, object exporter resolutions and distributed garbage collection for COM and DCOM servers. If you stop this service or disabled, programs using COM or DCOM will not function properly. It is strongly recommended that you have the RPCSS service running. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -1397,7 +1399,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | RemoteRegistry |
-| **Description** | Enables remote users to modify registry settings on this computer. If this service is stopped, the registry can be modified only by users on this computer. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Enables remote users to modify registry settings on this computer. If you stop this service, the registry can be modified only by users on this computer. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | Do not disable |
@@ -1436,7 +1438,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | RpcEptMapper |
-| **Description** | Resolves RPC interfaces identifiers to transport endpoints. If this service is stopped or disabled, programs using Remote Procedure Call (RPC) services will not function properly. |
+| **Description** | Resolves RPC interfaces identifiers to transport endpoints. If you stop this service or disabled, programs using Remote Procedure Call (RPC) services will not function properly. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -1449,7 +1451,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | seclogon |
-| **Description** | Enables starting processes under alternate credentials. If this service is stopped, this type of logon access will be unavailable. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Enables starting processes under alternate credentials. If you stop this service, this type of logon access will be unavailable. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1462,7 +1464,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | SstpSvc |
-| **Description** | Provides support for the Secure Socket Tunneling Protocol (SSTP) to connect to remote computers using VPN. If this service is disabled, users will not be able to use SSTP to access remote servers. |
+| **Description** | Provides support for the Secure Socket Tunneling Protocol (SSTP) to connect to remote computers using VPN. If you disable this service, users will not be able to use SSTP to access remote servers. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | Do not disable |
@@ -1501,7 +1503,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | SensrSvc |
-| **Description** | Monitors various sensors in order to expose data and adapt to system and user state. If this service is stopped or disabled, the display brightness will not adapt to lighting conditions. Stopping this service may affect other system functionality and features as well. |
+| **Description** | Monitors various sensors in order to expose data and adapt to system and user state. If you stop this service or disabled, the display brightness will not adapt to lighting conditions. Stopping this service may affect other system functionality and features as well. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -1513,7 +1515,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | SensorService |
-| **Description** | A service for sensors that manages the functionality of different sensors. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes. If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped. |
+| **Description** | A service for sensors that manages the functionality of different sensors. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes. If you stop this service or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -1525,7 +1527,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | LanmanServer |
-| **Description** | Supports file, print, and named-pipe sharing over the network for this computer. If this service is stopped, these functions will be unavailable. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Supports file, print, and named-pipe sharing over the network for this computer. If you stop this service, these functions will be unavailable. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | Do not disable |
@@ -1551,7 +1553,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | SCardSvr |
-| **Description** | Manages access to smart cards read by this computer. If this service is stopped, this computer will be unable to read smart cards. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Manages access to smart cards read by this computer. If you stop this service, this computer will be unable to read smart cards. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Disabled |
 | **Recommendation** | Already disabled |
@@ -1564,7 +1566,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | ScDeviceEnum |
-| **Description** | Creates software device nodes for all smart card readers accessible to a given session. If this service is disabled, WinRT APIs will not be able to enumerate smart card readers. |
+| **Description** | Creates software device nodes for all smart card readers accessible to a given session. If you disable this service, WinRT APIs will not be able to enumerate smart card readers. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -1590,7 +1592,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | SNMPTRAP |
-| **Description** | Receives trap messages generated by local or remote Simple Network Management Protocol (SNMP) agents and forwards the messages to SNMP management programs running on this computer. If this service is stopped, SNMP-based programs on this computer will not receive SNMP trap messages. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Receives trap messages generated by local or remote Simple Network Management Protocol (SNMP) agents and forwards the messages to SNMP management programs running on this computer. If you stop this service, SNMP-based programs on this computer will not receive SNMP trap messages. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1642,7 +1644,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | SSDPSRV |
-| **Description** | Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer. If this service is stopped, SSDP-based devices will not be discovered. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer. If you stop this service, SSDP-based devices will not be discovered. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -1746,7 +1748,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | SystemEventsBroker |
-| **Description** | Coordinates execution of background work for WinRT application. If this service is stopped or disabled, then background work might not be triggered. |
+| **Description** | Coordinates execution of background work for WinRT application. If you stop this service or disabled, then background work might not be triggered. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | Do not disable |
@@ -1759,7 +1761,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Schedule |
-| **Description** | Enables a user to configure and schedule automated tasks on this computer. The service also hosts multiple Windows system-critical tasks. If this service is stopped or disabled, these tasks will not be run at their scheduled times. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Enables a user to configure and schedule automated tasks on this computer. The service also hosts multiple Windows system-critical tasks. If you stop this service or disabled, these tasks will not be run at their scheduled times. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -1772,7 +1774,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | lmhosts |
-| **Description** | Provides support for the NetBIOS over TCP/IP (NetBT) service and NetBIOS name resolution for clients on the network, therefore enabling users to share files, print, and log on to the network. If this service is stopped, these functions might be unavailable. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Provides support for the NetBIOS over TCP/IP (NetBT) service and NetBIOS name resolution for clients on the network, therefore enabling users to share files, print, and log on to the network. If you stop this service, these functions might be unavailable. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1815,7 +1817,7 @@ This article describes each service one by one, using the following variables.
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Automatic |
 | **Recommendation** | Do not disable |
-| **Comments** | Start menu breaks if this service is disabled |
+| **Comments** | Start menu breaks If you disable this service |
 
 
 
@@ -1824,7 +1826,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | TimeBrokerSvc |
-| **Description** | Coordinates execution of background work for WinRT application. If this service is stopped or disabled, then background work might not be triggered. |
+| **Description** | Coordinates execution of background work for WinRT application. If you stop this service or disabled, then background work might not be triggered. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | Do not disable |
@@ -1863,7 +1865,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | upnphost |
-| **Description** | Allows UPnP devices to be hosted on this computer. If this service is stopped, any hosted UPnP devices will stop functioning and no additional hosted devices can be added. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Allows UPnP devices to be hosted on this computer. If you stop this service, any hosted UPnP devices will stop functioning and no additional hosted devices can be added. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -1928,7 +1930,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | UserManager |
-| **Description** | User Manager provides the runtime components required for multi-user interaction. If this service is stopped, some applications may not operate correctly. |
+| **Description** | User Manager provides the runtime components required for multi-user interaction. If you stop this service, some applications may not operate correctly. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -1941,7 +1943,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | ProfSvc |
-| **Description** | This service is responsible for loading and unloading user profiles. If this service is stopped or disabled, users will no longer be able to successfully sign in or sign out, apps might have problems getting to users' data, and components registered to receive profile event notifications won't receive them. |
+| **Description** | This service is responsible for loading and unloading user profiles. If you stop this service or disabled, users will no longer be able to successfully sign in or sign out, apps might have problems getting to users' data, and components registered to receive profile event notifications won't receive them. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -1967,7 +1969,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | VSS |
-| **Description** | Manages and implements Volume Shadow Copies used for backup and other purposes. If this service is stopped, shadow copies will be unavailable for backup and the backup may fail. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Manages and implements Volume Shadow Copies used for backup and other purposes. If you stop this service, shadow copies will be unavailable for backup and the backup may fail. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -1993,7 +1995,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Audiosrv |
-| **Description** | Manages audio for Windows-based programs. If this service is stopped, audio devices and effects will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start |
+| **Description** | Manages audio for Windows-based programs. If you stop this service, audio devices and effects will not function properly. If you disable this service, any services that explicitly depend on it will fail to start |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -2006,7 +2008,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | AudioEndpointBuilder |
-| **Description** | Manages audio devices for the Windows Audio service. If this service is stopped, audio devices and effects will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start |
+| **Description** | Manages audio devices for the Windows Audio service. If you stop this service, audio devices and effects will not function properly. If you disable this service, any services that explicitly depend on it will fail to start |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
@@ -2110,7 +2112,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | WerSvc |
-| **Description** | Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. If this service is stopped, error reporting might not work correctly and results of diagnostic services and repairs might not be displayed. |
+| **Description** | Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. If you stop this service, error reporting might not work correctly and results of diagnostic services and repairs might not be displayed. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | Do not disable |
@@ -2123,7 +2125,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Wecsvc |
-| **Description** | This service manages persistent subscriptions to events from remote sources that support WS-Management protocol. This includes Windows Vista event logs, hardware and IPMI-enabled event sources. The service stores forwarded events in a local Event Log. If this service is stopped or disabled event subscriptions cannot be created and forwarded events cannot be accepted. |
+| **Description** | This service manages persistent subscriptions to events from remote sources that support WS-Management protocol. This includes Windows Vista event logs, hardware and IPMI-enabled event sources. The service stores forwarded events in a local Event Log. If you stop this service or disabled event subscriptions cannot be created and forwarded events cannot be accepted. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | Do not disable |
@@ -2201,7 +2203,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | msiserver |
-| **Description** | Adds, modifies, and removes applications provided as a Windows Installer (*.msi, *.msp) package. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Adds, modifies, and removes applications provided as a Windows Installer (*.msi, *.msp) package. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -2227,7 +2229,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | Winmgmt |
-| **Description** | Provides a common interface and object model to access management information about operating system, devices, applications and services. If this service is stopped, most Windows-based software will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Provides a common interface and object model to access management information about operating system, devices, applications and services. If you stop this service, most Windows-based software will not function properly. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -2253,7 +2255,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | TrustedInstaller |
-| **Description** | Enables installation, modification, and removal of Windows updates and optional components. If this service is disabled, install or uninstall of Windows updates might fail for this computer. |
+| **Description** | Enables installation, modification, and removal of Windows updates and optional components. If you disable this service, install or uninstall of Windows updates might fail for this computer. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -2318,7 +2320,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | W32Time |
-| **Description** | Maintains date and time synchronization on all clients and servers in the network. If this service is stopped, date and time synchronization will be unavailable. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Maintains date and time synchronization on all clients and servers in the network. If you stop this service, date and time synchronization will be unavailable. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -2331,7 +2333,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | wuauserv |
-| **Description** | Enables the detection, download, and installation of updates for Windows and other programs. If this service is disabled, users of this computer will not be able to use Windows Update or its automatic updating feature, and programs will not be able to use the Windows Update Agent (WUA) API. |
+| **Description** | Enables the detection, download, and installation of updates for Windows and other programs. If you disable this service, users of this computer will not be able to use Windows Update or its automatic updating feature, and programs will not be able to use the Windows Update Agent (WUA) API. |
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | No guidance |
@@ -2383,7 +2385,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | LanmanWorkstation |
-| **Description** | Creates and maintains client network connections to remote servers using the SMB protocol. If this service is stopped, these connections will be unavailable. If this service is disabled, any services that explicitly depend on it will fail to start. |
+| **Description** | Creates and maintains client network connections to remote servers using the SMB protocol. If you stop this service, these connections will be unavailable. If you disable this service, any services that explicitly depend on it will fail to start. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
@@ -2396,7 +2398,7 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | XblAuthManager |
-| **Description** | Provides authentication and authorization services for interacting with Xbox Live. If this service is stopped, some applications may not operate correctly. |
+| **Description** | Provides authentication and authorization services for interacting with Xbox Live. If you stop this service, some applications may not operate correctly. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | Should be disabled |
@@ -2409,8 +2411,8 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | XblGameSave |
-| **Description** | This service syncs save data for Xbox Live save enabled games. If this service is stopped, game save data will not upload to or download from Xbox Live. |
+| **Description** | This service syncs save data for Xbox Live save enabled games. If you stop this service, game save data will not upload to or download from Xbox Live. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | Should be disabled |
-| **Comments** | This service syncs save data for Xbox Live save enabled games. If this service is stopped, game save data will not upload to or download from Xbox Live. |
+| **Comments** | This service syncs save data for Xbox Live save enabled games. If you stop this service, game save data will not upload to or download from Xbox Live. |
