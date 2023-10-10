@@ -26,7 +26,7 @@ Thus, mirror is predisposed to deliver performance-sensitive storage while parit
 
 ## Data rotation on mirror-accelerated parity
 
-ReFS actively rotates data between mirror and parity, in real-time. This allows incoming writes to be quickly written to mirror then rotated to parity to be stored efficiently. In doing so, incoming IO is serviced quickly in mirror while cold data is stored efficiently in parity, delivering both optimal performance and lost-cost storage within the same volume.
+ReFS actively rotates data between mirror and parity, in real-time. This allows incoming writes to be quickly written to mirror then rotated to parity to be stored efficiently. In doing so, incoming IO is serviced quickly in mirror while cold data is stored efficiently in parity, delivering both optimal performance and cost-efficient storage within the same volume.
 
 To rotate data between mirror and parity, ReFS logically divides the volume into regions of 64 MiB, which are the unit of rotation. The image below depicts a mirror-accelerated parity volume divided into regions.
 
