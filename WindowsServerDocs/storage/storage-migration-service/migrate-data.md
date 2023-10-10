@@ -68,7 +68,7 @@ Before you get started, install Storage Migration Service and make sure the nece
 
 In this step, specify what servers to migrate and then scan them to collect info on their files and configurations.
 
-1. Select **New job**, name the job, and then select whether to migrate Windows servers and clusters, Linux servers that use Samba, or NetApp FAS array. Then select **OK**.
+1. In Storage Migration Service, select **New job**, name the job, and then select whether to migrate Windows servers and clusters, Linux servers that use Samba, or NetApp FAS array. Then select **OK**.
 1. On the **Check prerequisites** page, review the prerequisites. Then select **Next**.
 1. If you're migrating from a NetApp FAS Array, on the **Select the NetApp FAS array** page, enter your NetApp FAS Array IP address, admin credential, and password. Then select **Next**.
 1. If you're migrating from a Windows server or cluster, on the **Enter credentials** page, enter admin credentials for the servers you want to migrate from, and then select **Next**.

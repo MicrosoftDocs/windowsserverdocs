@@ -11258,6 +11258,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/troubleshoot/windows-server-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Executive-Summary.md",
       "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
       "redirect_document_id": false

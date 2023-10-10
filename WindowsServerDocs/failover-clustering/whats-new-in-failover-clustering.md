@@ -3,22 +3,21 @@ description: "Learn more about: What's new in Failover Clustering"
 ms.assetid: 350aa5a3-5938-4921-93dc-289660f26bad
 title: What's new in Failover Clustering in Windows Server
 ms.topic: how-to
-manager: lizross
-author: JasonGerend
-ms.author: jgerend
-ms.date: 10/20/2021
+author: xelu86
+ms.author: wscontent
+ms.date: 10/10/2023
 ---
 # What's new in Failover Clustering
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
-This topic explains the new and changed functionality in Failover Clustering for Azure Stack HCI, Windows Server 2019, and Windows Server 2016.
+This article explains the new and changed functionality in Failover Clustering for Azure Stack HCI, Windows Server 2019, and Windows Server 2016.
 
 ## What's new in Windows Server 2019 and Azure Stack HCI
 
 - **Cluster sets**
 
-    (Applies only to Windows Server 2019) Cluster sets enable you to increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. This is accomplished by grouping multiple clusters into a cluster set--a loosely-coupled grouping of multiple failover clusters: compute, storage and hyper-converged.
+    (Applies only to Windows Server 2019) Cluster sets enable you to increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. This is accomplished by grouping multiple clusters into a cluster set, a loosely coupled grouping of multiple failover clusters: compute, storage and hyper-converged.
     With cluster sets, you can move online virtual machines (live migrate) between clusters within the cluster set.
 
     For more info, see [Cluster sets](cluster-set.md).
@@ -33,7 +32,7 @@ This topic explains the new and changed functionality in Failover Clustering for
 
 - **USB witness**
 
-    You can now use a simple USB drive attached to a network switch as a witness in determining quorum for a cluster. This extends the File Share Witness to support any SMB2-compliant device.
+    You can now use a USB drive attached to a network switch as a witness in determining quorum for a cluster. This extends the File Share Witness to support any SMB2-compliant device.
 
 - **Cluster infrastructure improvements**
 
@@ -46,10 +45,10 @@ This topic explains the new and changed functionality in Failover Clustering for
 - **File share witness enhancements**
 
     We enabled the use of a file share witness in the following scenarios:
-  - Absent or extremely poor Internet access because of a remote location, preventing the use of a cloud witness.
+  - Absent or poor Internet access because of a remote location, preventing the use of a cloud witness.
   - Lack of shared drives for a disk witness. This could be a Storage Spaces Direct hyperconverged configuration, a SQL Server Always On Availability Groups (AG), or an * Exchange Database Availability Group (DAG), none of which use shared disks.
   - Lack of a domain controller connection due to the cluster being behind a DMZ.
-  - A workgroup or cross-domain cluster for which there is no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: Failover Cluster File Share Witness and DFS.
+  - A workgroup or cross-domain cluster for which there's no Active Directory cluster name object (CNO). Find out more about these enhancements in the following post in Server & Management Blogs: Failover Cluster File Share Witness and DFS.
 
     We now also explicitly block the use of a DFS Namespaces share as a location. Adding a file share witness to a DFS share can cause stability issues for your cluster, and this configuration has never been supported. We added logic to detect if a share uses DFS Namespaces, and if DFS Namespaces is detected, Failover Cluster Manager blocks creation of the witness and displays an error message about not being supported.
 
@@ -69,7 +68,7 @@ Cluster Operating System Rolling Upgrade enables an administrator to upgrade the
 
 **What value does this change add?**
 
-Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`.
+Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster continues to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`.
 
 > [!WARNING]
 > - After you update the cluster functional level, you cannot go back to a  Windows Server 2012 R2 cluster functional level.
@@ -78,7 +77,7 @@ Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2
 
 **What works differently?**
 
-A Hyper-V or Scale-Out File Server failover cluster can now easily be upgraded without any downtime or need to build a new cluster with nodes that are running the Windows Server 2016 operating system. Migrating clusters to Windows Server 2012 R2 involved taking the existing cluster offline and reinstalling the new operating system for each nodes, and then bringing the cluster back online. The old process was cumbersome and required downtime. However, in Windows Server 2016, the cluster does not need to go offline at any point.
+A Hyper-V or Scale-Out File Server failover cluster can now easily be upgraded without any downtime or need to build a new cluster with nodes that are running the Windows Server 2016 operating system. Migrating clusters to Windows Server 2012 R2 involved taking the existing cluster offline and reinstalling the new operating system for each node, and then bringing the cluster back online. The old process was cumbersome and required downtime. However, in Windows Server 2016, the cluster doesn't need to go offline at any point.
 
 The cluster operating systems for the upgrade in phases are as follows for each node in a cluster:
 -   The node is paused and drained of all virtual machines that are running on it.
@@ -93,7 +92,7 @@ The cluster operating systems for the upgrade in phases are as follows for each 
 For more information, see [Cluster Operating System Rolling Upgrade](cluster-operating-system-rolling-upgrade.md).
 
 ### <a name="BKMK_SR"></a>Storage Replica
-Storage Replica is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.
+Storage Replica is a new feature that enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, and stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.
 
 **What value does this change add?**
 
@@ -133,7 +132,7 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Leverages Microsoft Azure and eliminates the need for a third separate datacenter.
 
--   Uses the standard publicly available Microsoft Azure Blob Storage which eliminates the extra maintenance overhead of VMs hosted in a public cloud.
+-   Uses the standard publicly available Microsoft Azure Blob Storage, which eliminates the extra maintenance overhead of VMs hosted in a public cloud.
 
 -   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique ID used as blob file name).
 
@@ -157,7 +156,7 @@ This capability is new in Windows Server 2016.
 
 -   **Quarantine of unhealthy nodes:** Unhealthy nodes are quarantined and are no longer allowed to join the cluster. This prevents flapping nodes from negatively effecting other nodes and the overall cluster.
 
-For more information virtual machine compute resiliency workflow and node quarantine settings that control how your node is placed in isolation or quarantine, see [Virtual Machine Compute Resiliency in Windows Server 2016](https://blogs.msdn.com/b/clustering/archive/2015/06/03/10619308.aspx).
+For more information virtual machine compute resiliency workflow and node quarantine settings that control how your node is placed in isolation or quarantine, see [Virtual Machine Compute Resiliency in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/virtual-machine-compute-resiliency-in-windows-server-2016/ba-p/372027).
 
 **Storage Resiliency** In Windows Server 2016, virtual machines are more resilient to transient storage failures. The improved virtual machine resiliency helps preserve tenant virtual machine session states in the event of a storage disruption. This is achieved by intelligent and quick virtual machine response to storage infrastructure issues.
 
@@ -171,7 +170,7 @@ To help diagnose issues with failover clusters, Windows Server 2016 includes the
 
 - Several enhancements to cluster log files (such as Time Zone Information and DiagnosticVerbose log) that makes it easier to troubleshoot failover clustering issues. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372005).
 
-- A new  a dump type of **Active memory dump**, which filters out most memory pages allocated to virtual machines, and therefore makes the memory.dmp much smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372008).
+- A new type of **Active memory dump**, which filters out most memory pages allocated to virtual machines, and therefore makes the memory.dmp much smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372008).
 
 ### <a name="BKMK_SiteAware"></a>Site-aware Failover Clusters
 
@@ -183,9 +182,9 @@ In  Windows Server 2012 R2  and previous versions, a cluster can only be created
 
 -   **Single-domain Clusters.** Clusters with all nodes joined to the same domain.
 
--   **Multi-domain Clusters.** Clusters with nodes which are members of different domains.
+-   **Multi-domain Clusters.** Clusters with nodes that are members of different domains.
 
--   **Workgroup Clusters.** Clusters with nodes which are member servers / workgroup (not domain joined).
+-   **Workgroup Clusters.** Clusters with nodes that are member servers / workgroup (not domain joined).
 
 For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/workgroup-and-multi-domain-clusters-in-windows-server-2016/ba-p/372059)
 
@@ -195,7 +194,7 @@ Virtual machine Load Balancing is a new feature in Failover Clustering that faci
 
 ### <a name="BKMK_VMStartOrder"></a>Virtual Machine Start Order
 
-Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for Virtual machines (and all groups) in a cluster. Virtual machines can now be grouped into tiers, and start order dependencies can be created between different tiers. This ensures that the most important virtual machines (such as Domain Controllers or Utility virtual machines) are started first. Virtual machines are not started until the virtual machines that they have a dependency on are also started.
+Virtual machine Start Order is a new feature in Failover Clustering that introduces start order orchestration for Virtual machines (and all groups) in a cluster. Virtual machines can now be grouped into tiers, and start order dependencies can be created between different tiers. This ensures that the most important virtual machines (such as Domain Controllers or Utility virtual machines) are started first. Virtual machines aren't started until the virtual machines that they have a dependency on are also started.
 
 ### <a name="BKMK_SMBMultiChannel"></a> Simplified SMB Multichannel and Multi-NIC Cluster Networks
 
@@ -205,5 +204,5 @@ For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Net
 
 ## See Also
 
-* [Storage](../storage/storage.yml)
-* [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md)
+- [Storage](../storage/storage.yml)
+- [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md)
