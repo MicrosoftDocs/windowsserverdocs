@@ -182,7 +182,7 @@ Any user who accesses the system through a dial-up connection has the Dialup ide
 
 ### Enterprise Domain Controllers
 
-This group includes all domain controllers in an Active Directory forest. Domain controllers with enterprise-wide roles and responsibilities have the Enterprise Domain Controllers identity. Except for account passwords, a read-only domain controller (RODC) holds all the Active Directory objects and attributes that a writable domain controller holds. Membership is controlled by the operating system.
+This group includes all domain controllers in an Active Directory forest. Domain controllers with enterprise-wide roles and responsibilities have the Enterprise Domain Controllers identity. This identity allows domain controllers to perform certain tasks in the enterprise by using transitive trusts. Membership is controlled by the operating system.
 
 |Attribute|Value|
 | --- | --- |
@@ -195,12 +195,12 @@ This group includes all domain controllers in an Active Directory forest. Domain
 
 This group includes all Read-only Domain Controllers in an Active Directory forest. Membership is controlled by the operating system.
 
-| Attribute | Value |
-|  :--: | :--: |
-| Well-Known SID/RID | S-1-5-21-\<RootDomain>-498|
-|Object Class|  Group|
+|Attribute|Value|
+| --- | --- |
+|Well-Known SID/RID|S-1-5-21-\<RootDomain>-498|
+|Object Class|Group|
 |Default Location in Active Directory |cn=Users, dc=\<forestRootDomain\>|
-|Default User Rights|None|
+|Default user rights|None|
 
 ### Everyone
 
