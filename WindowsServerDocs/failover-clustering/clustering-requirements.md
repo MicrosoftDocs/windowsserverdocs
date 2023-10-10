@@ -5,7 +5,7 @@ ms.topic: article
 author: JasonGerend
 ms.author: wscontent
 manager: lizross
-ms.date: 09/07/2023
+ms.date: 10/10/2023
 ---
 # Failover clustering hardware requirements and storage options
 
@@ -32,7 +32,7 @@ We recommend that you use a set of matching computers that contain the same or s
 
 ### Network adapters and cables
 
-If you use Internet Small Computer Systems Interface (iSCSI), you should only dedicate each network adapter to either network communication or iSCSI. If you try to dedicate an adapter to both iSCSI and communication, then the failover cluster may not work as intended.
+If you use Internet Small Computer Systems Interface (iSCSI), you should only dedicate each network adapter to either network communication or iSCSI.
 
 In the network infrastructure that connects your cluster nodes, avoid having single points of failure. For example, you can connect your cluster nodes by multiple, distinct networks. You can also connect your cluster nodes using a network with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure.
 
