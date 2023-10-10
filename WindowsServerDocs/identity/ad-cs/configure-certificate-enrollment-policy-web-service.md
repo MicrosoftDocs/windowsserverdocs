@@ -7,101 +7,104 @@ ms.author: gswashington
 ms.date: 10/16/2023
 ---
 
-# Certificate Enrollment Policy Web Service guidance
+# Configure the Certificate Enrollment Policy Web Service
 
-Applies To: Windows Server 2012 R2, Windows Server 2012
+Applies to: Windows Server 2012 R2, Windows Server 2012
 
-The Certificate Enrollment Policy Web Service enables users and computers to obtain certificate enrollment policy information even when the computer is not a member of a domain or if a domain-joined computer is temporarily outside the security boundary of the corporate network. The Certificate Enrollment Policy Web Service works with the Certificate Enrollment Web Service to provide policy-based automatic certificate enrollment for these users and computers. See [Certificate Enrollment Policy Web Service Guidance](/certificate-enrollment-policy-web-service-conceptual.md) for more information on how the Certificate Enrollment Policy Web Service service works, including installation requirements as well as information for the Server Manager configuration pages.
+The Certificate Enrollment Policy Web Service lets users and computers obtain certificate enrollment policy information even when the computer isn't a member of a domain or if a domain-joined computer is temporarily outside the security boundary of the corporate network. The Certificate Enrollment Policy Web Service works with the Certificate Enrollment Web Service to provide policy-based automatic certificate enrollment for these users and computers. See [Certificate Enrollment Policy Web Service Guidance](/certificate-enrollment-policy-web-service-conceptual.md) for more information on how the Certificate Enrollment Policy Web Service works, including installation requirements as well as information for the Server Manager configuration pages.
 
-## Certificate Enrollment Policy Web Service Configuration
+## How to configure the Certificate Enrollment Policy Web Service
 
-After you install the Certificate Enrollment Policy Web Service, there are two additional configuration steps to complete.
+After you install the Certificate Enrollment Policy Web Service, you need to configure a friendly name value for the service and create a Group Policy setting to enable using the service. 
 
-1. Configure a friendly name value for the Certificate Enrollment Policy Web Service.
+### Configure a friendly name value for the Certificate Enrollment Policy Web Service
 
-1. Configure Group Policy to enable use of the Certificate Enrollment Policy Web Service.
-
-### To configure a friendly name value for the Certificate Enrollment Policy Web Service
+To configure a friendly name value for the Certificate Enrollment Policy Web Service:
 
 1. Open the Internet Information Services (IIS) Manager console.
 
 1. In the **Connections** pane, expand the web server that's hosting the Certificate Enrollment Policy Web Service.
 
     > [!NOTE]
-    > If you are asked to get started with the Microsoft Web Platform, select **No**.
+    > If you see a prompt that asks you to get started with the Microsoft Web Platform, select **No**.
 
+1. Go to **Sites** > **Default Web Site**. Select the appropriate installation virtual application name. The name of the virtual application name changes based on how you installed the service, but should follow the basic syntax of *KeyBasedRenewal* **\_ADPolicyProvider\_CEP\_** *AuthenticationType*.
 
-1. Expand **Sites**, expand **Default Web Site**, and then select the appropriate installation virtual application name. The name of the virtual application name varies with the type of installation that you performed. The variation is as follows:
+      - If you enabled key-based renewal and configured client certificate authentication, the virtual application name should is **KeyBasedRenewal\_ADPolicyProvider\_CEP\_Certificate**.
 
-    *KeyBasedRenewal* **\_ADPolicyProvider\_CEP\_** *AuthenticationType*
+      - If you didn't enable key-based renewal and configured username and password authentication, the virtual application name is **ADPolicyProvider\_CEP\_UsernamePassword**.
 
-    For example:
+      - If you didn't enable key-based renuwal but configured Windows integrated authentication, the virtual application name is **ADPolicyProvider\_CEP\_Kerberos**.
 
-      - **KeyBasedRenewal\_ADPolicyProvider\_CEP\_Certificate** is the virtual application name if you enabled key-based renewal and configured client certificate authentication.
+1. In the *virtual application name* Home pane, open **Application Settings**, then open **FriendlyName**.
 
-      - **ADPolicyProvider\_CEP\_UsernamePassword** is the virtual application name if you didn't enable key-based renewal and you configured user name and password authentication.
+1. In the **Edit Application Setting** dialog box, under **Value**, enter the name that you want to use as the friendly name for the service.
 
-      - **ADPolicyProvider\_CEP\_Kerberos** is the virtual application name if you didn't enable key-based renewal and you configured Windows integrated authentication.
+1. Select **OK**.
 
-1. In the *virtual application name* Home pane, double-select **Application Settings**, and then double-select **FriendlyName**.
+1. In the **Application Settings** pane, open **URI**. Record this value somewhere you can access later, as the Group Policy requires the URI to let clients connect to the service.
 
-1. In the **Edit Application Setting** dialog box, under **Value**, type the name that you want to configure as a friendly name for the service. For example, you might type **Client Certificate Enrollment** as the friendly name for the service. Select **OK**.
+1. Select **Cancel**.
 
-1. In the **Application Settings** pane, double-select **URI**. The value that's shown for URI is significant because that's the path that clients will use to connect to the service. Copy this value, because you'll use it when you configure Group Policy. Select **Cancel**.
+1. Close the IIS Manager console.
 
-1. Close the Internet Information Services (IIS) Manager console.
-
-To provide domain client users or their computers with the ability to obtain certificates using Certificate Enrollment Policy Web Services, you can set the URI that you obtained by using the previous procedure. This will allow domain clients to request certificates by using the Certificates console, without the clients having to know the URI to the Certificate Enrollment Policy Web Services virtual application name.
+You can use the URI you got from following the previous directions to give domain client users or their computers the ability to obtain certificates using Certificate Enrollment Policy Web Services. Domain clients can request certificates by using the Certificates console, without the clients having to know the URI to the Certificate Enrollment Policy Web Services virtual application name.
 
 > [!NOTE]
-> Domain users could input the URI by configuring a custom certificate request, but this is typically not a practical solution because the URI is long and the procedure is complex. However, administrators can perform custom certificate requests to validate the configuration of the Certificate Enrollment Policy Web Service. For more information, see [Certificate Enrollment Web Services](https://go.microsoft.com/fwlink/?linkid=258862).
+> Domain users can enter the URI by configuring a custom certificate request, but this is typically not a practical solution because the URI is long and the procedure is complex. However, administrators can perform custom certificate requests to validate the configuration of the Certificate Enrollment Policy Web Service. For more information, see [Certificate Enrollment Web Services](https://go.microsoft.com/fwlink/?linkid=258862).
 
-### To configure Group Policy to enable use of the Certificate Enrollment Policy Web Service
+### Configure Group Policy to enable using the Certificate Enrollment Policy Web Service
 
-1. Open the Group Policy Management console. To do so, from Server Manager, select **Tools**, and then select **Group Policy Management**.
+To configure Group Policy to enable using the Certificate Enrollment Policy Web Service:
+
+1. Go to **Server Manager** > **Tools** > **Group Policy Management** to open the Group Policy Management console.
 
     > [!NOTE]
-    > Ensure that you sign in by using an account with membership in Domain Admins or Enterprise Admins so that you can configure Group Policy settings. You can configure a Group Policy setting for the entire domain, an OU, or (if the account you are using is a member of Enterprise Admins), an entire site. The following instructions assume that you want to set a new Group Policy for the domain.
+    > You can only configure Group Policy settings if you've signed in using an account that's a member of the Domain Admins or Enterprise Admins groups.
 
-1. Expand the forest that you want to target for the new Group Policy. Expand **Domains**. Right-select the domain, and then select **Create a GPO in this domain, and link it here**.
+1. Navigate to the forest you want to target for the new Group Policy, then go to **Domains**. 
 
-1. In the **New GPO** dialog box, under **Name**, type a name that is appropriate for the new Group Policy Object (GPO), for example, **Certificate Enrollment Policy Web Service Certificates**. Select **OK**.
+1. Right-select the domain, then select **Create a GPO in this domain and link it here**.
 
-1. Select the linked GPO that you just created. If you see a warning message about Group Policy Management Console, review the message, and then select **OK**.
+1. In the **New GPO** dialog box, under **Name**, enter an appropriate name for the new Group Policy Object (GPO), such as **Certificate Enrollment Policy Web Service Certificates**. Select **OK**.
 
-1. Right-select the linked GPO that you just created, and then select **Edit**.
+1. Select the linked GPO that you just created. If you see a warning message about Group Policy Management Console, review the message, then select **OK**.
 
-1. There are two types of certificates that you can distribute by using a GPO: computer certificates or user certificates. The following instructions describe setting the URI for both the **Computer Configuration** and **User Configuration** parts of the GPO. You can set either separately or set them both.
+1. Right-click the linked GPO that you just created and select **Edit**.
 
-1. To distribute certificates for computers, in the console pane, under **Computer Configuration**, select **Policies**, select **Windows Settings**, select **Security Settings**, and then select **Public Key Policies**.
+1. There are two types of certificates that you can distribute by using a GPO: computer certificates or user certificates. The following instructions describe setting the URI for both the **Computer Configuration** and **User Configuration** parts of the GPO. You can either set them separately or set both at the same time.
 
-    1. In the details pane, double-select **Certificate Services Client - Certificate Enrollment Policy**.
+To distribute certificates for computers:
 
-    1. Set **Configuration Model** to **Enabled**, and then select **Add**.
+1. In the console pane, under **Computer Configuration**, select **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
 
-    1. In the **Certificate Enrollment Policy Server** dialog box, under **Enter enrollment policy server URI**, enter the URI that you copied in the previous procedure.
+1. In the **Details** pane, open **Certificate Services Client - Certificate Enrollment Policy**.
 
-    1. In **Authentication type**, set the authentication type that you configured for the Certificate Enrollment Web Policy Service. See [Certificate Enrollment Policy Web Service Guidance](/certificate-enrollment-policy-web-service-conceptual.md) for information on choosing an authentication type.
+1. Set **Configuration Model** to **Enabled**, then select **Add**.
 
-    1. Select **Validate Server**, and when the server is validated, select **Add**. Select **OK**.
+1. In the **Certificate Enrollment Policy Server** dialog box, under **Enter enrollment policy server URI**, enter the URI that you copied in the previous procedure.
+
+1. In **Authentication type**, set the authentication type that you configured for the Certificate Enrollment Web Policy Service. See [Certificate Enrollment Policy Web Service Guidance](/certificate-enrollment-policy-web-service-conceptual.md) for information on choosing an authentication type.
+
+1. Select **Validate Server**, and when the server is validated, select **Add**. Select **OK**.
 
         > [!NOTE]
         > You can only validate the server if you have the appropriate credentials. This could be an issue if you have selected client certificate validation and you don't already have a certificate for the computer. If this is the case, you'll first have to obtain a certificate for the computer. You will need a computer certificate with the following characteristics: Enhanced Key Usage Client Authentication 1.3.6.1.5.5.7.3.2.
 
-1. To distribute certificates for users, in the console pane, under **User Configuration**, select **Policies**, select **Windows Settings**, select **Security Settings**, and then select **Public Key Policies**.
+1. To distribute certificates for users, in the **Console** pane, under **User Configuration**, select **Policies** > **Windows Settings** > **Security Settings** > **Public Key Policies**.
 
-    1. In the details pane, double-select **Certificate Services Client - Certificate Enrollment Policy**.
+    1. In the **Details** pane, open **Certificate Services Client - Certificate Enrollment Policy**.
 
-    1. Set **Configuration Model** to **Enabled**, and then select **Add**.
+    1. Set **Configuration Model** to **Enabled**, then select **Add**.
 
     1. In the **Certificate Enrollment Policy Server** dialog box, under **Enter enrollment policy server URI**, enter the URI that you copied in the previous procedure.
 
     1. In **Authentication type**, set the authentication type that you configured for the Certificate Enrollment Web Policy Service.
 
-    1. Select **Validate Server**, and when the server is validated, select **Add**. Select **OK**.
+    1. Select **Validate Server**, then wait for the validation process to finish. After validation is done, select **Add**, then select **OK**.
 
         > [!NOTE]
-        > You can only validate the server if you have the appropriate credentials. This could be an issue if you have selected client certificate validation and you do not already have a certificate for the user. If this is the case, you will first have to obtain a certificate for the user. You will need a user certificate that includes an enhanced key usage (EKU) of Client Authentication with object ID (OID) 1.3.6.1.5.5.7.3.2.
+        > You can only validate the server if you have the appropriate credentials. If you installed the service with client certificate validation and you don't already have a certificate for the computer, then before you can validate the server, you must get a certificate for the computer. You need a computer certificate with Enhanced Key Usage Client Authentication 1.3.6.1.5.5.7.3.2.
 
 1. Close the Group Policy Management Editor and the Group Policy Management Console.
 
