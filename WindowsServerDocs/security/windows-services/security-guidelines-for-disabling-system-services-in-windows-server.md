@@ -1902,52 +1902,44 @@ This article describes each service one by one, using the following variables.
 | Name | Description |
 |--|--|
 | **Service name** | EventLog |
-| **Description** | This service manages events and event logs. It supports logging events, querying events, subscribing to events, archiving event logs, and managing event metadata. It can display events in both XML and plain text format. Stopping this service may compromise security and reliability of the system. |
+| **Description** | This service manages events and event logs. It supports logging events, querying events, subscribing to events, archiving event logs, and managing event metadata. Windows Event Log can display events in both XML and plaintext format. Stopping this service may compromise system security and reliability. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
 | **Comments** | None |
-
-
 
 ## Windows Firewall
 
 | Name | Description |
 |--|--|
 | **Service name** | MpsSvc |
-| **Description** | Windows Firewall helps protect your computer by preventing unauthorized users from gaining access to your computer through the Internet or a network. |
+| **Description** | Windows Firewall protects your computer by preventing unauthorized users from gaining access to your computer through the Internet or a network. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
 | **Comments** | None |
-
-
 
 ## Windows Font Cache Service
 
 | Name | Description |
 |--|--|
 | **Service name** | FontCache |
-| **Description** | Optimizes performance of applications by caching commonly used font data. Applications will start this service if it is not already running. It can be disabled, though doing so will degrade application performance. |
+| **Description** | Optimizes performance of applications by caching commonly used font data. Applications automatically start this service if it's not already running. You can disable this service, but disabling it degrades application performance. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | No guidance |
 | **Comments** | None |
-
-
 
 ## Windows Image Acquisition (WIA)
 
 | Name | Description |
 |--|--|
 | **Service name** | stisvc |
-| **Description** | Provides image acquisition services for scanners and cameras |
+| **Description** | Provides image acquisition services for scanners and cameras. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
 | **Comments** | None |
-
-
 
 ## Windows Insider Service
 
@@ -1958,9 +1950,7 @@ This article describes each service one by one, using the following variables.
 | **Installation** | Always installed |
 | **Startup type** | Manual |
 | **Recommendation** | OK to disable |
-| **Comments** | Server doesn't support flighting, so it's a no-op on Server. Feature can be disabled via GP as well. |
-
-
+| **Comments** | Server doesn't support flighting, so it's a no-op on Server. You can also disable the feature using Group Policy. |
 
 ## Windows Installer
 
