@@ -3,9 +3,9 @@ title: reg add
 description: Reference article for the reg add command, which adds a new subkey or entry to the registry.
 ms.topic: reference
 ms.assetid: d9ad143e-dc10-4e2e-a229-408393c40079
-ms.author: alalve
-author: JasonGerend
-ms.date: 10/31/2022
+ms.author: wscontent
+author: xelu86
+ms.date: 09/19/2023
 ---
 
 # reg add
@@ -15,7 +15,7 @@ Adds a new subkey or entry to the registry.
 ## Syntax
 
 ```
-reg add <keyname> [{/v valuename | /ve}] [/t datatype] [/s separator] [/d data] [/f]
+reg add <keyname> [/v valuename | /ve] [/t datatype] [/s separator] [/d data] [/f] [/reg:32 | /reg:64]
 ```
 
 ### Parameters
@@ -29,6 +29,8 @@ reg add <keyname> [{/v valuename | /ve}] [/t datatype] [/s separator] [/d data] 
 | /s `<Separator>` | Specifies the character to be used to separate multiple instances of data when the **REG_MULTI_SZ** data type is specified and more than one entry is listed. If not specified, the default separator is **\0**. |
 | /d `<Data>` | Specifies the data for the new registry entry. |
 | /f | Adds the registry entry without prompting for confirmation. |
+| /reg:32 | Specifies the key should be accessed using the 32-bit registry view. |
+| /reg:64 | Specifies the key should be accessed using the 64-bit registry view. |
 | /? | Displays help at the command prompt. |
 
 #### Remarks
