@@ -54,4 +54,4 @@ Windows 11 enabled TLS 1.3 by default systemwide, and while EAP-TLS used TLS 1.3
 
 - NPS doesn't support TLS 1.3 at this time.
 - Some older versions of third-party RADIUS servers may incorrectly advertise TLS 1.3 support. If you're experiencing issues with authenticating EAP-TLS with TLS 1.3 with Windows 11 22H2, ensure the RADIUS server is patched and up to date or has TLS 1.3 disabled.
-- There's a known issue with PEAP session resumption tickets when using TLS 1.3. An upcoming Windows Update addresses this issue.
+- Session resumption is not currently supported. Windows clients will always do a full authentication.
