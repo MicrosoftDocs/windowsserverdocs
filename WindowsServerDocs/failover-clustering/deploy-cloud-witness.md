@@ -126,24 +126,24 @@ To configure Cloud Witness using PowerShell:
 
 1. Run the `Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) cmdlet in the following format to set up Cloud Witness.
 
-  ```powershell
-  Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
-  ```
+   ```powershell
+   Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
+   ```
 
-  If you need to change the endpoint, you can add the *-Endpoint* parameter to the end, as shown in the following example:
+   If you need to change the endpoint, you can add the *-Endpoint* parameter to the end, as shown in the following example:
 
-  ```PowerShell
-  Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
-  ```
+   ```PowerShell
+   Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>
+   ```
 
 1. To verify that the setup process was successful, run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) cmdlet.
 
-  ```powershell
-  Get-ClusterQuorum
-   [[-Cluster] <String>]
-   [-InputObject <PSObject>]
-   [<CommonParameters>]
-  ```
+   ```powershell
+   Get-ClusterQuorum
+    [[-Cluster] <String>]
+    [-InputObject <PSObject>]
+    [<CommonParameters>]
+   ```
 
 #### [Windows Admin Center](#tab/windowsadmin)
 
