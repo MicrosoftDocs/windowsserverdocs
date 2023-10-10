@@ -13,7 +13,7 @@ ms.date: 10/10/2023
 
 In order to create a failover cluster, your system must meet the following requirements:
 
-- Have all hardware listed in [Basic hardware requirements](#basic-hardware-requirements)
+- Have all hardware listed in [Hardware requirements](#hardware-requirements)
 - Certify all hardware for the version of Windows Server you're currently running
 - All parts of the failover cluster must pass the validation tests in [Validate a Configuration](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)#step-2-validate-a-new-or-existing-failover-cluster).
 
