@@ -62,7 +62,7 @@ To log off a user from a session by using the name of the session and server, fo
 logoff TERM04 /server:Server1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

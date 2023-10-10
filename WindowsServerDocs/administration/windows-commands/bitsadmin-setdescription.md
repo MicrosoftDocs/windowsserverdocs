@@ -34,7 +34,7 @@ To retrieve the description for the job named *myDownloadJob*:
 bitsadmin /setdescription myDownloadJob music_downloads
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

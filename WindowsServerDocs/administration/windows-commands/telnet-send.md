@@ -42,6 +42,6 @@ To send the **Are you there?** command to the telnet server, type:
 sen ayt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

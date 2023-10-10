@@ -31,9 +31,11 @@ landingContent:
           - text: 'Windows 10 for the enterprise: Ways to use devices for work'
             url: /azure/active-directory/devices/overview
           - text: Active Directory Domain Services
-            url: ../identity/ad-ds/Active-Directory-Domain-Services.md
+            url: ../identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview.md
           - text: Active Directory Federation Services
             url: Active-Directory-Federation-Services.md
+          - text: Windows Local Administrator Password Solution (LAPS)
+            url: ../identity/laps/laps.md
 
   # Card
   - title: Solutions and Scenario Guides

@@ -36,7 +36,7 @@ To allocate 500 MB to the default system drive:
 bdehdcfg -target default -size 500
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

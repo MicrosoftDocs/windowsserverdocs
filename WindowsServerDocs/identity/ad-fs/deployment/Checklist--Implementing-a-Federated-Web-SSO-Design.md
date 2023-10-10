@@ -3,8 +3,8 @@ description: "Learn more about: Checklist: Implementing a Federated Web SSO Desi
 ms.assetid: 6b49cde3-d2cb-4ece-b9b7-dc600e037495
 title: Checklist - Implementing a Federated Web SSO Design
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

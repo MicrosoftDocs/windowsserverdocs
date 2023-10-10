@@ -4,13 +4,14 @@ ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS Operations
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # AD FS Operations
 
 
+[!INCLUDE [Migrate to Azure AD](../../../includes/adfs-to-azure-ad-upgrade.md)]
 
 This document contains a list of all of the documentation operations for AD FS.
 

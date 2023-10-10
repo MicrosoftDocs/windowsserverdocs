@@ -42,7 +42,7 @@ To save an abbreviated list of files and subdirectories for *dir1* and *dir2* in
 mls dir1 dir2 dirlist.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

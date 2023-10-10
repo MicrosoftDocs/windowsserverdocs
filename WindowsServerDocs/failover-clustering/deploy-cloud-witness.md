@@ -28,7 +28,7 @@ Most organizations do not have a third separate datacenter that will host File S
 
 Cloud Witness is a new type of Failover Cluster quorum witness that uses Microsoft Azure as the arbitration point (see the following figure). It uses Azure Blob Storage to read/write a blob file which is then used as an arbitration point in case of split-brain resolution.
 
-There are significant benefits which this approach:
+There are significant benefits with this approach:
 - Uses Microsoft Azure (no need for third separate datacenter).
 - Uses standard available Azure Blob Storage (no extra maintenance overhead of virtual machines hosted in public cloud).
 - Same Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique ID used as blob file name).

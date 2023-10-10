@@ -2,7 +2,7 @@
 title: Resolve Windows activation error codes
 description: Learn how to troubleshoot activation error codes
 ms.topic: troubleshooting
-ms.date: 9/18/2019
+ms.date: 9/19/2023
 author: kaushika-msft
 ms.author: kaushika
 ms.custom:
@@ -13,428 +13,606 @@ manager: dcscontentpm
 
 # Resolve Windows activation error codes
 
-<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=winact" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common issues related to KMS and MAK activation</span>
-
 > [!NOTE]
 > This article is intended for technical support agents and IT professionals. If you're looking for more information about Windows activation error messages, see [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).
 
-This article provides troubleshooting information to help you respond to error messages that you may receive when you try to use a Multiple Activation Key (MAK) or the Key Management Service (KMS) to perform Volume Activation on one or more Windows-based computers. Look for the error code in the following table, and then select the link to see more information about that error code and how to resolve it.
+This article provides troubleshooting information to help you respond to error messages that you may receive when you try to use a Multiple Activation Key (MAK) or the Key Management Service (KMS) to perform Volume Activation on one or more Windows-based computers. Look for the error code in the following tables, then select the link to see more information about that error code and how to resolve it.
 
 For more information about volume activation, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client).
 
 For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](/windows/deployment/volume-activation/volume-activation-windows-10).
 
-For more information about volume activation for older versions of Windows, see KB 929712, [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+For more information about volume activation for older versions of Windows, see [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+
+You can also try [our Virtual Agent](https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=winact), which can help you quickly identify and troubleshoot issues related to KMS and MAK activation.
 
 ## Diagnostic tool
 
 > [!NOTE]
-> This tool is intended to help fix Windows activation problems on computers that run Enterprise, Professional, or Server edition of Windows.
+> This tool is intended to resolve Windows activation issues on computers that run Enterprise, Professional, or Server editions of Windows.
 
-
-Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. 
+Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-WindowsActivation)
 
-This tool will try to activate Windows. If it returns an activation error code, the tool will display targeted solutions for known error codes.
+The SaRA tool troubleshoots by attempting to start up Windows. If Windows returns an activation error code, the tool then displays targeted solutions for the following known error codes:
 
-The following error codes are supported: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008, 0x8007007b, 0xC004C003, 0x8007232B.
+- 0xC004F038
+- 0xC004F039
+- 0xC004F041
+- 0xC004F074
+- 0xC004C008
+- 0x8007007b
+- 0xC004C003
+- 0x8007232B
 
 ## Summary of error codes
 
-|Error code |Error message |Activation&nbsp;type|
+The following table lists known error codes for Windows Activation, and includes links to relevant sections later in this article that can help you resolve related issues.
+
+|Error code |Error message |Activation type|
 |-----------|--------------|----------------|
-|[0x8004FE21](#0x8004fe21-this-computer-is-not-running-genuine-windows) |This computer is not running genuine Windows.  |MAK<br />KMS client |
-|[0x80070005](#0x80070005-access-denied) |Access denied. The requested action requires elevated privileges. |MAK<br />KMS client<br />KMS host |
-|[0x8007007b](#0x8007007b-dns-name-does-not-exist) |0x8007007b DNS name does not exist. |KMS client |
-|[0x80070490](#0x80070490-the-product-key-you-entered-didnt-work) |The product key you entered didn't work. Check the product key and try again, or enter a different one. |MAK |
-|[0x800706BA](#0x800706ba-the-rpc-server-is-unavailable) |The RPC server is unavailable. |KMS client |
-|[0x8007232A](#0x8007232a-dns-server-failure) |DNS server failure.  |KMS host  |
-|[0x8007232B](#0x8007232b-dns-name-does-not-exist) |DNS name does not exist. |KMS client |
-|[0x8007251D](#0x8007251d-no-records-found-for-dns-query) |No records found for DNS query. |KMS client |
-|[0x80092328](#0x80092328-dns-name-does-not-exist) |DNS name does not exist.  |KMS client |
-|[0xC004B100](#0xc004b100-the-activation-server-determined-that-the-computer-could-not-be-activated) |The activation server determined that the computer could not be activated. |MAK |
-|[0xC004C001](#0xc004c001-the-activation-server-determined-the-specified-product-key-is-invalid) |The activation server determined the specified product key is invalid |MAK|
-|[0xC004C003](#0xc004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |The activation server determined the specified product key is blocked |MAK |
-|[0xC004C008](#0xc004c008-the-activation-server-determined-that-the-specified-product-key-could-not-be-used) |The activation server determined that the specified product key could not be used. |KMS |
-|[0xC004C020](#0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |The activation server reported that the Multiple Activation Key has exceeded its limit. |MAK |
-|[0xC004C021](#0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded) |The activation server reported that the Multiple Activation Key extension limit has been exceeded. |MAK |
-|[0xC004F009](#0xc004f009-the-software-protection-service-reported-that-the-grace-period-expired) |The Software Protection Service reported that the grace period expired. |MAK |
-|[0xC004F00F](#0xc004f00f-the-software-licensing-server-reported-that-the-hardware-id-binding-is-beyond-level-of-tolerance) |The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance. |MAK<br />KMS client<br />KMS host |
-|[0xC004F014](#0xc004f014-the-software-protection-service-reported-that-the-product-key-is-not-available) |The Software Protection Service reported that the product key is not available |MAK<br />KMS client |
-|[0xC004F02C](#0xc004f02c-the-software-protection-service-reported-that-the-format-for-the-offline-activation-data-is-incorrect) |The Software Protection Service reported that the format for the offline activation data is incorrect. |MAK<br />KMS client |
-|[0xC004F035](#0xc004f035-invalid-volume-license-key) |The Software Protection Service reported that the computer could not be activated with a Volume license product key. |KMS client<br />KMS host |
-|[0xC004F038](#0xc004f038-the-count-reported-by-your-key-management-service-kms-is-insufficient) |The Software Protection Service reported that the computer could not be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator. |KMS client |
-|[0xC004F039](#0xc004f039-the-key-management-service-kms-is-not-enabled) |The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) is not enabled. |KMS client |
-|[0xC004F041](#0xc004f041-the-software-protection-service-determined-that-the-key-management-server-kms-is-not-activated) |The Software Protection Service determined that the Key Management Server (KMS) is not activated. KMS needs to be activated.  |KMS client |
-|[0xC004F042](#0xc004f042-the-software-protection-service-determined-that-the-specified-key-management-service-kms-cannot-be-used) |The Software Protection Service determined that the specified Key Management Service (KMS) cannot be used. |KMS client |
-|[0xC004F050](#0xc004f050-the-software-protection-service-reported-that-the-product-key-is-invalid) |The Software Protection Service reported that the product key is invalid. |MAK<br />KMS<br />KMS client |
-|[0xC004F051](#0xc004f051-the-software-protection-service-reported-that-the-product-key-is-blocked) |The Software Protection Service reported that the product key is blocked. |MAK<br />KMS |
-|[0xC004F064](#0xc004f064-the-software-protection-service-reported-that-the-non-genuine-grace-period-expired) |The Software Protection Service reported that the non-genuine grace period expired. |MAK |
-|[0xC004F065](#0xc004f065-the-software-protection-service-reported-that-the-application-is-running-within-the-valid-non-genuine-period) |The Software Protection Service reported that the application is running within the valid non-genuine period. |MAK<br />KMS client |
-|[0xC004F06C](#0xc004f06c-the-request-timestamp-is-invalid) |The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) determined that the request timestamp is invalid.  |KMS client |
-|[0xC004F074](#0xc004f074-no-key-management-service-kms-could-be-contacted) |The Software Protection Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.  |KMS client |
+|[0x8004FE21](#0x8004fe21-this-computer-isnt-running-genuine-windows) |`This computer is not running genuine Windows.`  |MAK<br />KMS client |
+|[0x80070005](#0x80070005-access-denied) |`Access denied. The requested action requires elevated privileges.` |MAK<br />KMS client<br />KMS host |
+|[0x8007007b](#0x8007007b-dns-name-doesnt-exist) |`0x8007007b DNS name does not exist.` |KMS client |
+|[0x80070490](#0x80070490-the-product-key-didnt-work) |`The product key you entered did not work. Check the product key and try again, or enter a different one.` |MAK |
+|[0x800706BA](#0x800706ba-the-rpc-server-is-unavailable) |`The RPC server is unavailable.` |KMS client |
+|[0x8007232A](#0x8007232a-dns-server-failure) |`DNS server failure.`  |KMS host  |
+|[0x8007232B](#0x8007232b-dns-name-doesnt-exist) |`DNS name does not exist.` |KMS client |
+|[0x8007251D](#0x8007251d-no-records-found-for-dns-query) |`No records found for DNS query.` |KMS client |
+|[0x80092328](#0x80092328-dns-name-doesnt-exist) |`DNS name does not exist.`  |KMS client |
+|[0xC004B100](#0xc004b100-the-activation-server-determined-that-the-computer-couldnt-be-activated) |`The activation server determined that the computer could not be activated.` |MAK |
+|[0xC004C001](#0xc004c001-the-activation-server-determined-the-specified-product-key-is-invalid) |`The activation server determined the specified product key is invalid` |MAK|
+|[0xC004C003](#0xc004c003-the-activation-server-determined-the-specified-product-key-is-blocked) |`The activation server determined the specified product key is blocked` |MAK |
+|[0xC004C008](#0xc004c008-the-activation-server-determined-that-the-specified-product-key-couldnt-be-used) |`The activation server determined that the specified product key could not be used.` |KMS |
+|[0xC004C020](#0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit) |`The activation server reported that the Multiple Activation Key has exceeded its limit.` |MAK |
+|[0xC004C021](#0xc004c021-multiple-activation-key-extension-limit-exceeded) |`The activation server reported that the Multiple Activation Key extension limit has been exceeded.` |MAK |
+|[0xC004F009](#0xc004f009-the-software-protection-service-reported-that-the-grace-period-expired) |`The Software Protection Service reported that the grace period expired.` |MAK |
+|[0xC004F00F](#0xc004f00f-hardware-id-binding-is-beyond-level-of-tolerance) |`The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance.` |MAK<br />KMS client<br />KMS host |
+|[0xC004F014](#0xc004f014-the-software-protection-service-reported-that-the-product-key-isnt-available) |`The Software Protection Service reported that the product key is not available` |MAK<br />KMS client |
+|[0xC004F02C](#0xc004f02c-the-format-for-the-offline-activation-data-is-incorrect) |`The Software Protection Service reported that the format for the offline activation data is incorrect.` |MAK<br />KMS client |
+|[0xC004F035](#0xc004f035-invalid-volume-license-key) |`The Software Protection Service reported that the computer could not be activated with a Volume license product key.` |KMS client<br />KMS host |
+|[0xC004F038](#0xc004f038-the-count-reported-by-your-key-management-service-kms-is-insufficient) |`The Software Protection Service reported that the computer could not be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator.` |KMS client |
+|[0xC004F039](#0xc004f039-the-key-management-service-kms-isnt-enabled) |`The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) is not enabled.` |KMS client |
+|[0xC004F041](#0xc004f041-the-software-protection-service-determined-that-the-key-management-server-kms-isnt-activated) |`The Software Protection Service determined that the Key Management Server (KMS) is not activated. KMS needs to be activated.`  |KMS client |
+|[0xC004F042](#0xc004f042-the-specified-key-management-service-kms-cant-be-used) |`The Software Protection Service determined that the specified Key Management Service (KMS) cannot be used.` |KMS client |
+|[0xC004F050](#0xc004f050-the-software-protection-service-reported-that-the-product-key-is-invalid) |`The Software Protection Service reported that the product key is invalid.` |MAK<br />KMS<br />KMS client |
+|[0xC004F051](#0xc004f051-the-software-protection-service-reported-that-the-product-key-is-blocked) |`The Software Protection Service reported that the product key is blocked.` |MAK<br />KMS |
+|[0xC004F064](#0xc004f064-the-software-protection-service-reported-that-the-non-genuine-grace-period-expired) |`The Software Protection Service reported that the non-genuine grace period expired.` |MAK |
+|[0xC004F065](#0xc004f065-the-application-is-running-within-the-valid-non-genuine-period) |`The Software Protection Service reported that the application is running within the valid non-genuine period.` |MAK<br />KMS client |
+|[0xC004F06C](#0xc004f06c-the-request-timestamp-is-invalid) |`The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) determined that the request timestamp is invalid.`  |KMS client |
+|[0xC004F074](#0xc004f074-no-key-management-service-kms-could-be-contacted) |`The Software Protection Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.`  |KMS client |
 
 ## Causes and resolutions
 
-### 0x8004FE21 This computer is not running genuine Windows
+This section describes the causes of each error message and troubleshooting steps you can take to resolve them.
 
-#### Possible cause
+### 0x8004FE21 This computer isn't running genuine Windows
 
-This issue can occur for several reasons. The most likely reason is that language packs (MUI) have been installed on computers that are running Windows editions that are not licensed for additional language packs.
+When you receive this error, you see the following output:
 
-> [!NOTE]
-> This issue is not necessarily an indication of tampering. Some applications can install multi-lingual support even when that edition of Windows is not licensed for those language packs.)
+```output
+This computer is not running genuine Windows.
+```
 
-This issue may also occur if Windows has been modified by malware to allow additional features to be installed. This issue may also occur if certain system files are corrupted.
+#### 0x8004FE21 Causes
 
-#### Resolution
+This issue can occur for several reasons:
+
+- A user or program installed language packs (MUI) on computers running editions of Windows not licensed for extra language packs.
+
+  > [!NOTE]
+  > This issue doesn't necessarily indicate tampering. Some applications can install multilingual support even when that edition of Windows isn't licensed for those language packs.
+
+- When malware modifies Windows in order to install more features.
+- Certain system files are corrupted.
+
+#### Solution: reinstall operating system
 
 To resolve this issue, you must reinstall the operating system.
 
 ### 0x80070005 Access denied
 
-The full text of this error message resembles the following:
+The full text of this error message says, "Access denied. The requested action requires elevated privileges."
 
-> Access denied. The requested action requires elevated privileges.
-
-#### Possible cause
+#### 0x80070005 Cause
 
 User Account Control (UAC) prohibits activation processes from running in a non-elevated Command Prompt window.
 
-#### Resolution
+#### Solution: run slmgr.vbs
 
-Run **slmgr.vbs** from an elevated command prompt. To do this, on the **Start menu**, right-click **cmd.exe**, and then select **Run as administrator**.
+To resolve this issue:
 
-### 0x8007007b DNS name does not exist
+1. Open the **Start menu** and search for **Command prompt**.
+1. Right-click **Command prompt**.
+1. Select **Run as administrator**.
+1. In the command prompt, run `slmgr.vbs`.
 
-#### Possible cause
+### 0x8007007b DNS name doesn't exist
 
-This issue may occur if the KMS client cannot find the KMS SRV resource records in DNS.
+When you encounter this error, you see the following output:
 
-#### Resolution
+```output
+DNS name does not exist.
+```
+
+#### 0x8007007b Cause
+
+This issue can occur if the KMS client can't find the KMS SRV resource records in DNS.
+
+#### Resolution: check the documentation
 
 For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
-### 0x80070490 The product key you entered didn't work
+### 0x80070490 The product key didn't work
 
-The full text of this error resembles the following:
-> The product key that you entered didn't work. Check the product key and try again, or enter a different one.
+When you encounter this issue, you see an error message that says, "The product key that you entered didn't work. Check the product key and try again, or enter a different one."
 
 #### Possible cause
 
-This issue occurs because the MAK that was entered was not valid, or because of a known issue in Windows Server 2019.
+There are two reasons why you may encounter this issue:
 
-#### Resolution
+- The Multiple Activation Key (MAK) wasn't valid.
+- A known issue in Windows Server 2019 interfered with authenticating the product key.
 
-To work around this issue and activate the computer, run **slmgr -ipk <5x5 key>** at an elevated command prompt.
+#### Solution: run a command on an elevated command prompt
+
+To work around this issue and activate the computer:
+
+1. Open the **Start menu** and search for **Command prompt**.
+1. Right-click **Command prompt**.
+1. Select **Run as administrator**.
+1. In the command prompt, run the following command:
+
+   ```cmd
+   slmgr -ipk <5x5 key>
+   ```
 
 ### 0x800706BA The RPC server is unavailable
 
-#### Possible cause
+When you encounter this error, you see the following output:
 
-Firewall settings are not configured on the KMS host, or DNS SRV records are stale.
+```output
+The RPC server is unavailable.
+```
 
-#### Resolution
+#### 0x800706BA cause
 
-On the KMS host, make sure that a firewall exception is enabled for the Key Management Service (TCP port 1688).
+You can encounter this issue because of the following things:
 
-Make sure that the DNS SRV records point to a valid KMS host.
+- The KMS host doesn't have configured firewall settings.
+- DNS SRV records are stale.
 
-Troubleshoot network connections.
+#### Solution 1: inspect the firewall
 
-For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
+On the KMS host, make sure you've enabled the firewall exception for the Key Management Service on TCP port 1688.
+
+#### Solution 2: inspect DNS SRV records
+
+Check your DNS SRV records and make sure they point to a valid KMS host.
+
+#### Solution 3: Troubleshoot network connections
+
+If you still see this error after performing solutions 1 and 2, check your network connections to make sure you can access the server.
+
+You can also follow the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
 ### 0x8007232A DNS server failure
 
-#### Possible cause
+When you encounter this issue, you see the following output:
 
-The system has network or DNS issues.
+```output
+DNS server failure.
+```
 
-#### Resolution
+#### 0x8007232A cause
 
-Troubleshoot network and DNS.
+You can encounter this issue when the system has network or DNS issues.
 
-### 0x8007232B DNS name does not exist
+#### Solution: troubleshoot network connections and DNS
 
-#### Possible cause
+To resolve this issue, troubleshoot your network connections and DNS by following the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
-The KMS client cannot find KMS server resource records (SRV RRs) in DNS.
+### 0x8007232B DNS name doesn't exist
 
-#### Resolution
+When you encounter this error, you see the following output:
 
-Verify that a KMS host has been installed and DNS publishing is enabled (default). If DNS is unavailable, point the KMS client to the KMS host by using **slmgr.vbs /skms <*kms_host_name*>**.
+```output
+DNS name does not exist
+```
 
-If you do not have a KMS host, obtain and install an MAK. Then, activate the system.
+#### 0x8007232B cause
 
-For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
+This error message appears when the KMS client can't find KMS server resource records (SRV RRs) in DNS.
+
+#### Solution 1: point the KMS client to the correct KMS host
+
+Make sure you've installed a KMS and the DNS publishing is enabled (default). If the DNS isn't available, point the KMS client to the KMS host by opening an elevated command-prompt and running the following command:
+
+```cmd
+slmgr.vbs /skms <kms_host_name>
+```
+
+#### Solution 2: get a MAK
+
+If you don't have a KMS host, get and install an MAK, then try activating the system again.
+
+If these solutions don't resolve the issue, see the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
 
 ### 0x8007251D No records found for DNS query
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The KMS client cannot find KMS SRV records in DNS.
+```output
+No records found for DNS query.
+```
 
-#### Resolution
+#### 0x8007251D cause
 
-Troubleshoot network connections and DNS. For more information about how to troubleshoot such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
+This error message appears when the KMS client can't find the KMS SRV records in the DNS.
 
-### 0x80092328 DNS name does not exist
+#### Solution: troubleshoot network connections and connection with DNS
 
-#### Possible cause
+To resolve this issue, follow the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md) to troubleshoot your network connections and DNS.
 
-This issue may occur if the KMS client cannot find the KMS SRV resource records in DNS.
+### 0x80092328 DNS name doesn't exist
 
-#### Resolution
+When you encounter this error, you see this error message:
 
-For more information about troubleshooting such DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
+```output
+DNS name does not exist.
+```
 
-### 0xC004B100 The activation server determined that the computer could not be activated
+#### 0x80092328 cause
 
-#### Possible cause
+You can encounter this issue if the KMS client can't find the KMS SRV resource records in DNS.
 
-The MAK is not supported.
+#### Solution: troubleshoot connections
 
-#### Resolution
+To resolve this issue, follow the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md) to troubleshoot your network connections and DNS.
 
-To troubleshoot this issue, verify that the MAK that you are using is the MAK that was provided by Microsoft. To verify that the MAK is valid, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
+### 0xC004B100 The activation server determined that the computer couldn't be activated
+
+When you encounter this error, you see this error message:
+
+```output
+The activation server determined that the computer could not be activated.
+```
+
+#### 0xC004B100 cause
+
+You can encounter this issue when Microsoft doesn't support the MAK you're using.
+
+#### Solution: verify that the MAK is valid
+
+To troubleshoot this issue, verify that the MAK you're using is the same MAK that Microsoft provided to you. To verify that the MAK is valid, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004C001 The activation server determined the specified product key is invalid
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The MAK that you entered is not valid.
+```output
+The activation server determined the specified product key is invalid.
+```
 
-#### Resolution
+#### 0xC004C001 cause
 
-Verify that the key is the MAK that was provided by Microsoft. For additional assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
+You can encounter this issue when the MAK you enter isn't valid.
+
+#### Solution: reenter the MAK key and verify it's valid
+
+You can try reentering the MAK to make sure you entered the correct information. Otherwise, verify the MAK you're using is valid by contacting the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004C003 The activation server determined the specified product key is blocked
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The MAK is blocked on the activation server.
+```output
+The activation server determined the specified product key is blocked.
+```
 
-#### Resolution
+#### 0xC004C003 cause
+
+You can encounter this issue if the MAK is blocked on the activation server.
+
+#### Solution: get a new MAK
 
 To obtain a new MAK, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers). After you obtain the new MAK, try installing and activating Windows again.
 
-### 0xC004C008 The activation server determined that the specified product key could not be used
+### 0xC004C008 The activation server determined that the specified product key couldn't be used
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The KMS key has exceeded its activation limit. A KMS host key can be activated up to 10 times on up to six different computers.
+```output
+The activation server determined that the specified product key could not be used.
+```
 
-#### Resolution
+#### 0xC004C008 cause
 
-If you require additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
+This error message appears when the KMS key has exceeded its activation limit. You can only activate KMS host keys up to 10 times on no more than six different computers.
+
+#### Solution: request more activations for activation server permission
+
+If you require more activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004C020 The activation server reported that the Multiple Activation Key has exceeded its limit
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The MAK has exceeded its activation limit. By design, MAKs can be activated a limited number of times.
+```output
+The activation server reported that the Multiple Activation Key has exceeded its limit.
+```
 
-#### Resolution
+#### 0xC004C020 cause
 
-If you require additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
+This error message appears when the MAK exceeds its activation limit. By design, you can only activate a MAK a limited number of times.
 
-### 0xC004C021 The activation server reported that the Multiple Activation Key extension limit has been exceeded
+#### Solution: request more activations to increase limit
 
-#### Possible cause
+If you require more activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
-The MAK has exceeded its activation limit. By design, MAKs activate a limited number of times.
+### 0xC004C021 Multiple Activation Key extension limit exceeded
 
-#### Resolution
+When you encounter this error, you see this error message:
 
-If you need additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
+```output
+The activation server reported that teh Multiple Activation Key extension limit has been exceeded.
+```
+
+#### 0xC004C021 cause
+
+This error message appears when the MAK exceeds its activation limit. By design, you can only activate a MAK a limited number of times.
+
+#### Solution: request more activations to increase extension limit
+
+If you need more activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004F009 The Software Protection Service reported that the grace period expired
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The grace period expired before the system was activated. Now, the system is in the Notifications state.
+```output
+The Software Protection Service reported that the grace period expired.
+```
 
-#### Resolution
+#### 0xC004F009 cause
+
+This error message appears when the grace period expires before you activate the system. The system is currently in the Notifications state.
+
+#### Solution: contact the Microsoft Licensing Activation Centers
 
 For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
-### 0xC004F00F The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance
+### 0xC004F00F hardware ID binding is beyond level of tolerance
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The hardware has changed or the drivers were updated on the system.
+```output
+The Software Licensing Server reported that the Hardware ID binding is beyond level of tolerance.
+```
 
-#### Resolution
+#### 0xC004F00F cause
 
-If you are using MAK activation, use either online or phone activation to reactivate the system during the OOT grace period.
+This error message appears when the system hardware changes or its drivers update.
 
-If you are using KMS activation, restart Windows or run **slmgr.vbs /ato**.
+#### Solution 1: reactivate the system during the grace period
 
-### 0xC004F014 The Software Protection Service reported that the product key is not available
+If you're using MAK activation, reactivate the system phone by using either online or phone activation during the Out of Tolerance (OOT) grace period.
 
-#### Possible cause
+#### Solution 2: restart Windows or run a command
 
-No product keys are installed on the system.
+If you're using KMS activation, try one of the following things:
 
-#### Resolution
+- Restart Windows.
+- Open an elevated command-prompt and run the following command:
+  
+   ```cmd
+   slmgr.vbs /ato
+   ```
 
-If you are using MAK activation, install a MAK product key.
+### 0xC004F014 The Software Protection Service reported that the product key isn't available
 
-If you are using KMS activation, check the Pid.txt file (located on the installation media in the \sources folder) for a KMS Setup key. Install the key.
+When you encounter this error, you see this error message:
 
-### 0xC004F02C The Software Protection Service reported that the format for the offline activation data is incorrect
+```output
+The Software Protection Service reported that the product key is not available.
+```
 
-#### Possible cause
+#### 0xC004F014 cause
 
-The system has detected that the data entered during phone activation is not valid.
+This issue happens when no product keys are installed on the system.
 
-#### Resolution
+#### Resolution: install product keys
 
-Verify that the CID is entered correctly.
+If you're using MAK activation, install a MAK product key.
+
+If you're using KMS activation:
+
+1. Check the **Pid.txt** file located on the installation media in the \sources folder for a KMS Setup key.
+1. Install the key.
+
+### 0xC004F02C the format for the offline activation data is incorrect
+
+When you encounter this error, you see this error message:
+
+```output
+The Software Protection Service reported that the format for the offline activation data is incorrect.
+```
+
+#### 0xC004F02C cause
+
+This error message appears when the system detects the data entered during phone activation isn't valid.
+
+#### Solution: reenter your caller ID
+
+To resolve this issue, make sure you entered the caller ID (CID) correctly.
 
 ### 0xC004F035 Invalid Volume License Key
 
-The full text of this error message resembles the following:
+When you encounter this error, an error message appears that says, "Error: Invalid Volume License Key. In order to activate, you need to change your product key to a valid Multiple Activation Key (MAK) or Retail key. You must have a qualifying operating system license AND a Volume license Windows 7 upgrade license, or a full license for Windows 7 from a retail source. ANY OTHER INSTALLATION OF THIS SOFTWARE IS IN VIOLATION OF YOUR AGREEMENT AND APPLICABLE COPYRIGHT LAW."
 
-> Error: Invalid Volume License Key. In order to activate, you need to change your product key to a valid Multiple Activation Key (MAK) or Retail key. You must have a qualifying operating system license AND a Volume license Windows 7 upgrade license, or a full license for Windows 7 from a retail source. ANY OTHER INSTALLATION OF THIS SOFTWARE IS IN VIOLATION OF YOUR AGREEMENT AND APPLICABLE COPYRIGHT LAW.
+This error message indicates that the computer doesn't have a Windows marker in its BIOS that identifies it as an OEM system running a qualifying edition of Windows. In short, this message means the Volume License Key is invalid. This information is required for KMS client activation.
 
-The error text is correct, but is ambiguous. This error indicates that the computer is missing a Windows marker in its BIOS that identifies it as an OEM system that is running a qualifying edition of Windows. This information is required for KMS client activation. The more specific meaning of this code is "Error: Invalid Volume License Key"
+#### 0xC004F035 cause
 
-#### Possible cause
+Microsoft only licenses Windows 7 Volume editions for upgrade. Microsoft doesn't support installing a Volume operating system on a computer that doesn't already have a qualifying operating system installed.
 
-Windows 7 Volume editions are licensed only for upgrade. Microsoft does not support installing a Volume operating system on a computer that does not have a qualifying operating system installed.
+#### Solution: activate your Volume License Key
 
-#### Resolution
+To activate your Volume License Key:
 
-In order to activate, you need to do one of the following:
+1. Change your product key to a valid Multiple Activation Key (MAK) or Retail key. To change your key, you must have both a qualifying operating system license and a Volume license Windows 7 upgrade license, or a full license for Windows 7 from a retail source.
+1. Try to activate your key again.
 
-- Change your product key to a valid Multiple Activation Key (MAK) or Retail key. You must have a qualifying operating system license AND a Volume license Windows 7 upgrade license, or a full license for Windows 7 from a retail source.
-  > [!NOTE]
-  > If you receive error 0x80072ee2 when you attempt to activate, use the phone activation method that follows instead.
-- Activate by phone by following these steps:
-   1. Run **slmgr /dti** and then record the value of the Installation ID. </li>
-   1. Contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers) and provide the Installation ID in order to receive a Confirmation ID.</li>
-   1. To activate by using the Confirmation ID, run **slmgr /atp &lt;Confirmation ID&gt;**.
+If you see error message 0x80072ee2 when you attempt to activate your key again, you need to activate your key by phone.
+
+To activate your key by phone:
+
+1. Open a command prompt and run `slmgr /dti`, then record the value of the Installation ID.
+1. Contact the [Microsoft Licensing Activation Center](https://www.microsoft.com/Licensing/existing-customer/activation-centers) and provide the Installation ID in order to receive a Confirmation ID.
+1. To activate by using the Confirmation ID, run `slmgr /atp <Confirmation ID>`.
 
 ### 0xC004F038 The count reported by your Key Management Service (KMS) is insufficient
 
-The full text of this error message resembles the following:
+When you encounter this issue, an error message appears that says, "The Software Protection Service reported that the computer couldn't be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator."
 
-> The Software Protection Service reported that the computer could not be activated. The count reported by your Key Management Service (KMS) is insufficient. Please contact your system administrator.
+#### 0xC004F038 cause
 
-#### Possible cause
+You normally encounter this issue when the count on the KMS host isn't high enough. For Windows Server, the KMS count must be greater than or equal to five. For Windows (client), the KMS count must be greater than or equal to 25.
 
-The count on the KMS host is not high enough. For Windows Server, the KMS count must be greater than or equal to 5. For Windows (client), the KMS count must be greater than or equal to 25.
+#### Solution: add computers to the KMS pool
 
-#### Resolution
-Before you can use KMS to activate Windows, you must have more computers in the KMS pool. To obtain the current count on the KMS host, run **Slmgr.vbs /dli**.
+Before you can use KMS to activate Windows, you must have more computers in the KMS pool. To obtain the current count on the KMS host, run `Slmgr.vbs /dli`.
 
-### 0xC004F039 The Key Management Service (KMS) is not enabled
+### 0xC004F039 The Key Management Service (KMS) isn't enabled
 
-The full text of this error message resembles the following:
+When you encounter this issue, an error message appears that says, "The Software Protection Service reported that the computer couldn't be activated. The Key Management Service (KMS) isn't enabled."
 
-> The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) is not enabled.
+#### 0xC004F039 cause
 
-#### Possible cause
+This issue occurs when KMS doesn't respond to a KMS request.
 
-KMS did not respond to the KMS request.
+#### Solution: troubleshoot the KMS connection
 
-#### Resolution
+To resolve this issue, troubleshoot the network connection between the KMS host and the client. Make sure that a firewall isn't blocking or otherwise filtering TCP port 1688 (default).
 
-Troubleshoot the network connection between the KMS host and the client. Make sure that TCP port 1688 (default) is not blocked by a firewall or is otherwise filtered.
+### 0xC004F041 The Software Protection Service determined that the Key Management Server (KMS) isn't activated
 
-### 0xC004F041 The Software Protection Service determined that the Key Management Server (KMS) is not activated
+When you encounter this issue, an error message appears that says, "The Software Protection Service determined that the Key Management Server (KMS) isn't activated. KMS needs to be activated."
 
-The full text of this error message resembles the following:
+#### 0xC004F041 cause
 
-> The Software Protection Service determined that the Key Management Server (KMS) is not activated. KMS needs to be activated.
+This issue occurs when the KMS host hasn't been activated.
 
-#### Possible cause
+#### Solution: activate the KMS host
 
-The KMS host is not activated.
+To resolve this issue, activate the KMS host by using either [online or telephone activation](/windows/deployment/volume-activation/activate-using-key-management-service-vamt#configure-kms-in-windows-10).
 
-#### Resolution
+### 0xC004F042 the specified Key Management Service (KMS) can't be used
 
-Activate the KMS host by using either online or telephone activation.
+When you encounter this error, you see this error message:
 
-### 0xC004F042 The Software Protection Service determined that the specified Key Management Service (KMS) cannot be used
+```output
+The Software Protection Service determined that teh specified Key Management Service cannot be read.
+```
 
-#### Possible cause
+#### 0xC004F042 cause
 
-This error occurs if the KMS client contacted a KMS host that could not activate the client software. This can be common in mixed environments that contain application-specific and operating system-specific KMS hosts, for example.
+You may encounter this issue when the KMS client tried to contact a KMS host that couldn't activate the client software. This scenario is common in mixed environments with application-specific and operating system-specific KMS hosts.
 
-#### Resolution
+#### Solution: make sure the KMS client connects to the correct host
 
-Make sure that if you use specific KMS hosts to activate specific applications or operating systems, the KMS clients connect to the correct hosts.
+To resolve this issue, make sure your KMS clients are connection to the correct hosts, especially if you're using specific KMS hosts to activate specific applications or OSes.
 
 ### 0xC004F050 The Software Protection Service reported that the product key is invalid
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-This can be caused by a typo in the KMS key or by typing in a Beta key on a Released version of the operating system.
+```output
+The Software Protection Service reported that the product key is invalid
+```
 
-#### Resolution
+#### 0xC004F050 cause
 
-Install the appropriate KMS key on the corresponding version of Windows. Check the spelling. If the key is being copied and pasted, make sure that em-dashes were not substituted for the hyphens in the key.
+You can encounter an issue if there was a typo or if you try to use a Beta key on a generally available version of the operating system.
+
+#### Solution: make sure you're using the right key
+
+To resolve this issue, make sure you're installing the correct KMS key on the corresponding version of Windows. Make sure you've entered the correct characters and numbers. If you're copying and pasting the key, make sure the Clipboard didn't replace the hyphens with em-dashes.
 
 ### 0xC004F051 The Software Protection Service reported that the product key is blocked
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-The activation server determined that Microsoft has blocked the product key.
+```output
+The Software Protection Service reported that the product key is blocked.
+```
 
-#### Resolution
+#### 0xC004F051 cause
 
-Obtain a new MAK or KMS key, install it on the system, and activate.
+This error message appears when Microsoft blocks the product key.
+
+#### Solution: get a new MAK or KMS key
+
+To resolve this issue, get a new MAK or KMS key, install it on the system, then try activating again.
 
 ### 0xC004F064 The Software Protection Service reported that the non-genuine grace period expired
 
-#### Possible cause
+When you encounter this error, you see this error message:
 
-Windows Activation Tools (WAT) has determined that the system is not genuine.
+```output
+The Software Protection Service reported that teh non-genuine grace period expired.
+```
 
-#### Resolution
+#### 0xC004F064 cause
 
-For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
+This error occurs when Windows Activation Tools (WAT) determines that a system that's trying to be activated isn't authentic.
 
-### 0xC004F065 The Software Protection Service reported that the application is running within the valid non-genuine period
+#### Solution: contact assistance
 
-#### Possible cause
+To resolve this issue, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers) for assistance.
 
-Windows Activation Tools has determined that the system is not genuine. The system will continue to run during the Non-Genuine grace period.
+### 0xC004F065 the application is running within the valid non-genuine period
 
-#### Resolution
+When you encounter this error, you see this error message:
 
-Obtain and install a genuine product key, and activate the system during the grace period. Otherwise, the system will go into the Notifications state at the end of the grace period.
+```output
+The Software Protection Service reported that the application is running within the valid non-genuine period.
+```
+
+#### 0xC004F065 cause
+
+You may encounter this error message because WAT has determined the system trying to activate isn't genuine. However, because of the Non-Genuine Grace Period, the system continues to run.
+
+#### Solution: get and install a genuine product key before the grace period ends
+
+To resolve this issue, you must get and install a genuine product key, then activate the system before the grace period ends. If you don't, the system goes into the Notification state at the end of the grace period.
 
 ### 0xC004F06C The request timestamp is invalid
 
-The full text of this error message resembles the following:
+When you encounter this issue, an error message appears that says, "The Software Protection Service reported that the computer couldn't be activated. The Key Management Service (KMS) determined that the request timestamp is invalid."
 
-> The Software Protection Service reported that the computer could not be activated. The Key Management Service (KMS) determined that the request timestamp is invalid.
+#### 0xC004F06C cause
 
-#### Possible cause
+You can encounter this issue if the system time on the client computer is too different from the time on the KMS host. Time synchronization is important to system and network security, so desynchronization can cause issues to occur.
 
-The system time on the client computer is too different from the time on the KMS host. Time sync is important to system and network security for a variety of reasons.
+#### Solution: change the system times of the client to match the KMS host
 
-#### Resolution
-
-Fix this issue by changing the system time on the client to sync with the KMS host. We recommend that you use a Network Time Protocol (NTP) time source or Active Directory Domain Services for time synchronization. This issue uses UTP time and does not depend on Time Zone selection.
+To resolve this issue, you need to change the system time on the client to match the KMS host. We recommend you use a Network Time Protocol (NTP) time source or Active Directory Domain Services for time synchronization. This issue uses UTP time, so time zone selection doesn't affect it.
 
 ### 0xC004F074 No Key Management Service (KMS) could be contacted
 
-The full text of this error message resembles the following:
+When you encounter this issue, an error message appears that says, "The Software Protection Service reported that the computer couldn't be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information."
 
-> The Software Protection Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information.
+#### 0xC004F074 cause
 
-#### Possible cause
+This issue occurs when all the KMS host systems your client tires to contact return errors.
 
-All of the KMS host systems returned an error.
+#### Solution: troubleshoot all returned errors
 
-#### Resolution
+To resolve this issue:
 
-In the Application Event Log, identify each event that has Event ID 12288 and is associated with the activation attempt. Troubleshoot the errors from these events.
-
-For more information about troubleshooting DNS-related issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
+1. Open the **Application Event Log**.
+1. Identify each event associated with the activation attempt that has an Event ID of 12288.
+1. Troubleshoot each of these errors by following the instructions in [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).

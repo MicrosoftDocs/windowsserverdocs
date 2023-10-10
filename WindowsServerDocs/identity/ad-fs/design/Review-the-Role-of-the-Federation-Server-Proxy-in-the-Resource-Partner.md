@@ -4,8 +4,8 @@ ms.assetid: 14aa112d-ae31-4181-97e4-92623b5c9270
 title: Review the Role of the Federation Server Proxy in the Resource Partner
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

@@ -62,7 +62,7 @@ To disconnect the session named *TERM04*, type:
 tsdiscon TERM04
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

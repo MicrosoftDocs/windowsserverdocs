@@ -15,20 +15,20 @@ ms.topic: article
 
 This topic covers:
 
-- [Installation Considerations](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_InstallConsiderations)
+- [Installation Considerations](#BKMK_InstallConsiderations)
 
     This includes platform requirements and other important constraints.
 
-- [Virtualized Domain Controller Cloning](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_VDCCloning)
+- [Virtualized Domain Controller Cloning](#BKMK_VDCCloning)
 
     This explains in detail the entire virtualized domain controller cloning process.
 
-- [Virtualized Domain Controller Safe Restore](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_VDCSafeRestore)
+- [Virtualized Domain Controller Safe Restore](#BKMK_VDCSafeRestore)
 
     This explains in detail the validations that are made during virtualized domain controller safe restore.
 
 ## <a name="BKMK_InstallConsiderations"></a>Installation Considerations
-There is no special role or feature installation for virtualized domain controllers; all domain controllers automatically contain cloning and safe restore capabilities. You cannot remove or disable these capabilities.
+There is no special role or feature installation for virtualized domain controllers; all domain controllers automatically contain cloning and safe restore capabilities. You can't remove or disable these capabilities.
 
 Use of Windows Server 2012 domain controllers requires a Windows Server 2012 AD DS Schema version 56 or higher and forest functional level equal to Windows Server 2003 Native or higher.
 
@@ -60,7 +60,7 @@ Review the table below for virtualization products and whether they support virt
 |**Windows Server 2008 R2 and Windows Server 2008**|No|
 |**Non-Microsoft virtualization solutions**|Contact vendor|
 
-Even though Microsoft supports Windows 7 Virtual PC, Virtual PC 2007, Virtual PC 2004, and Virtual Server 2005, they cannot run 64-bit guests, nor do they support VM-GenerationID.
+Even though Microsoft supports Windows 7 Virtual PC, Virtual PC 2007, Virtual PC 2004, and Virtual Server 2005, they can't run 64-bit guests, nor do they support VM-GenerationID.
 
 For help with third party virtualization products and their support stance with virtualized domain controllers, contact that vendor directly.
 
@@ -76,7 +76,7 @@ Virtualized domain controllers do *not* support safe restore of the following:
 > [!NOTE]
 > VHDX files are new to Windows Server 2012 Hyper-V.
 
-Neither of these operations is covered under VM-GenerationID semantics and therefore do not change the VM-Generation ID. Restoring domain controllers using these methods could either result in a USN rollback and either quarantine the domain controller or introduce lingering objects and the need for forest wide cleanup operations.
+Neither of these operations is covered under VM-GenerationID semantics and therefore don't change the VM-Generation ID. Restoring domain controllers using these methods could either result in a USN rollback and either quarantine the domain controller or introduce lingering objects and the need for forest wide cleanup operations.
 
 > [!WARNING]
 > Virtualized domain controller safe restore is not a replacement for system state backups and the AD DS Recycle Bin.
@@ -92,7 +92,7 @@ There are a number of stages and steps to cloning a virtualized domain controlle
 
 - Step 1: Validate that the hypervisor supports VM-Generation ID and therefore, cloning
 
-- Step 2: Verify the PDC emulator role is hosted by a domain controller that runs  Windows Server 2012  and that it is online and reachable by the cloned domain controller during cloning.
+- Step 2: Verify the PDC emulator role is hosted by a domain controller that runs  Windows Server 2012  and that it's online and reachable by the cloned domain controller during cloning.
 
 **Prepare the source domain controller**
 
@@ -112,7 +112,7 @@ There are a number of stages and steps to cloning a virtualized domain controlle
 
 - Step 9: Start the new virtual machine to commence cloning
 
-There are no procedural differences in the operation when using graphical tools such as the Hyper-V Management Console or command-line tools such as Windows PowerShell, so the steps are presented only once with both interfaces. This topic provides Windows PowerShell samples for you to explore end-to-end automation of the cloning process; they are not required for any steps. There is no graphical management tool for virtualized domain controllers included in Windows Server 2012.
+There are no procedural differences in the operation when using graphical tools such as the Hyper-V Management Console or command-line tools such as Windows PowerShell, so the steps are presented only once with both interfaces. This topic provides Windows PowerShell samples for you to explore end-to-end automation of the cloning process; they aren't required for any steps. There is no graphical management tool for virtualized domain controllers included in Windows Server 2012.
 
 There are several points in the procedure where you have choices for how to create the cloned computer and how you add the xml files; these steps are noted in the details below. The process is otherwise unalterable.
 
@@ -121,9 +121,9 @@ The following diagram illustrates the virtualized domain controller cloning proc
 ![Diagram that illustrates the virtualized domain controller cloning process, where the domain already exists.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_CloningProcessFlow.png)
 
 ### Step 1 - Validate the Hypervisor
-Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor-independent and do not require Hyper-V.
+Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor-independent and don't require Hyper-V.
 
-If the hypervisor is Microsoft Hyper-V, ensure it is running on  Windows Server 2012 . You can validate this using Device Management
+If the hypervisor is Microsoft Hyper-V, ensure it's running on  Windows Server 2012 . You can validate this using Device Management
 
 Open **Devmgmt.msc** and examine **System Devices** for installed Microsoft Hyper-V devices and drivers. The specific system device required for a virtualized domain controller is the **Microsoft Hyper-V Generation Counter** (driver: vmgencounter.sys).
 
@@ -143,11 +143,11 @@ Before you attempt to clone a DC, you must validate that the domain controller h
     >
     > Use of this new method always requires direct access to the PDC emulator domain controller from the caller.
     >
-    > Because this RPC method is new, your network analysis software requires updated parsers to include fields for the new Opnum 28 in the existing UUID E3514235-4B06-11D1-AB04-00C04FC2DCD2. Otherwise, you cannot parse this traffic.
+    > Because this RPC method is new, your network analysis software requires updated parsers to include fields for the new Opnum 28 in the existing UUID E3514235-4B06-11D1-AB04-00C04FC2DCD2. Otherwise, you can't parse this traffic.
     >
     > For more information, see [4.1.29 IDL_DRSAddCloneDC (Opnum 28)](/openspecs/windows_protocols/ms-drsr/ef0bfb1d-037b-4626-a6d9-cc7589bc5786).
 
-***This also means when using non-fully routed networks, virtualized domain controller cloning requires network segments with access to the PDCE***. It is acceptable to move a cloned domain controller to a different network after cloning - just like a physical domain controller - as long as you are careful to update the AD DS logical site information.
+***This also means when using non-fully routed networks, virtualized domain controller cloning requires network segments with access to the PDCE***. It's acceptable to move a cloned domain controller to a different network after cloning - just like a physical domain controller - as long as you're careful to update the AD DS logical site information.
 
 > [!IMPORTANT]
 > When cloning a domain that contains only a single domain controller, you must ensure the source DC is back online before starting the clone copies. A production domain should always contain at least two domain controllers.
@@ -237,7 +237,7 @@ Any programs or services previously returned by Get-ADDCCloningExcludedApplicati
 > [!WARNING]
 > Any incompatible program or service not uninstalled or added to the CustomDCCloneAllowList.xml prevents cloning.
 
-Use the Get-AdComputerServiceAccount cmdlet to locate any standalone Managed Service Accounts (MSAs) in the domain and if this computer is using any of them. If any MSA is installed, use the Uninstall-ADServiceAccount cmdlet to remove the locally installed service account. Once you are done with taking the source domain controller offline in step 6, you can re-add the MSA using Install-ADServiceAccount when the server is back online. For more information, see [Uninstall-ADServiceAccount](/openspecs/windows_protocols/ms-drsr/ef0bfb1d-037b-4626-a6d9-cc7589bc5786).
+Use the Get-AdComputerServiceAccount cmdlet to locate any standalone Managed Service Accounts (MSAs) in the domain and if this computer is using any of them. If any MSA is installed, use the Uninstall-ADServiceAccount cmdlet to remove the locally installed service account. Once you're done with taking the source domain controller offline in step 6, you can re-add the MSA using Install-ADServiceAccount when the server is back online. For more information, see [Uninstall-ADServiceAccount](/openspecs/windows_protocols/ms-drsr/ef0bfb1d-037b-4626-a6d9-cc7589bc5786).
 
 > [!IMPORTANT]
 > Standalone MSAs - first released in Windows Server 2008 R2 - were replaced in Windows Server 2012 with group MSAs. Group MSAs support cloning.
@@ -256,7 +256,7 @@ The Active Directory Windows PowerShell module contains a new cmdlet in Windows 
 New-ADDCCloneConfigFile
 ```
 
-You run the cmdlet on the proposed source domain controller that you intend to clone. The cmdlet supports multiple arguments and when used, always tests the computer and environment where it is run unless you specify the -offline argument.
+You run the cmdlet on the proposed source domain controller that you intend to clone. The cmdlet supports multiple arguments and when used, always tests the computer and environment where it's run unless you specify the -offline argument.
 
 |**ActiveDirectory**<p>**Cmdlet**|**Arguments**|**Explanation**|
 |--|--|--|
@@ -287,7 +287,7 @@ Tests performed when run in online mode:
 ![Screenshot of a terminal window that shows the tests that are run.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSNewDCCloneConfig.png)
 
 ### Step 6 - Take the Source Domain Controller Offline
-You cannot copy a running source DC; it must be shutdown gracefully. Do not clone a domain controller stopped by graceless power loss.
+You can't copy a running source DC; it must be shutdown gracefully. Don't clone a domain controller stopped by graceless power loss.
 
 #### Graphical Method
 Use the shutdown button within the running DC, or the Hyper-V Manager shutdown button.
@@ -339,7 +339,7 @@ To delete snapshots, select a VM and delete the snapshot subtree.
 
 ![Screenshot that shows how to delete a snapshot.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVDeleteSnapshot.gif)
 
-You can then manually copy the VHD or VHDX files using Windows Explorer, Xcopy.exe, or Robocopy.exe. No special steps are required. It is a best practice to change the file names even if moving to another folder.
+You can then manually copy the VHD or VHDX files using Windows Explorer, Xcopy.exe, or Robocopy.exe. No special steps are required. It's a best practice to change the file names even if moving to another folder.
 
 > [!NOTE]
 > If copying between host computers on a LAN (1-Gbit or greater), the **Xcopy.exe /J** option copies VHD/VHDX files considerably faster than any other tool, at the cost of much greater bandwidth usage.
@@ -358,7 +358,7 @@ For example, you can return all IDE hard drives from a VM named **DC2** with the
 
 ![Screenshot that shows how to return all IDE hard drives from a VM named DC2.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_ReturnIDE.png)
 
-If the disk path points to an AVHD or AVHDX file, it is a snapshot. To delete the snapshots associated with a disk and merge in the real VHD or VHDX, use cmdlets:
+If the disk path points to an AVHD or AVHDX file, it's a snapshot. To delete the snapshots associated with a disk and merge in the real VHD or VHDX, use cmdlets:
 
 ```
 Get-VMSnapshot
@@ -384,7 +384,7 @@ Get-VMIdeController dc2-sourceclone | Get-VMHardDiskDrive | select-Object {copy-
 ![Screenshot that shows to copy the drive of an offline source domain controller named DC2-SOURCECLONE to a new disk called c:\temp\copy.vhd without the need to know the exact path to its system drive.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSCopyDrive.png)
 
 > [!IMPORTANT]
-> You cannot use passthru disks with cloning, as they do not use a virtual disk file but instead an actual hard disk.
+> You can't use passthru disks with cloning, as they don't use a virtual disk file but instead an actual hard disk.
 
 > [!NOTE]
 > For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).
@@ -425,7 +425,7 @@ To create a merged disk using Hyper-V Manager:
 
 1. Click **Edit Disk**.
 
-2. Browse for the lowest child disk. For example, if you are using a differencing disk, the child disk is the lowest child. If the virtual machine has a snapshot (or multiple ones), the currently selected snapshot is the lowest child disk.
+2. Browse for the lowest child disk. For example, if you're using a differencing disk, the child disk is the lowest child. If the virtual machine has a snapshot (or multiple ones), the currently selected snapshot is the lowest child disk.
 
 3. Select the **Merge** option to create a single disk out of the entire parent-child structure.
 
@@ -453,7 +453,7 @@ The following locations can contain the DcCloneConfig.xml file:
 
 3. Removable read/write media, in order of drive letter, at the root of the drive
 
-These paths are not configurable. After cloning begins, the cloning checks these locations in that specific order and uses the first DcCloneConfig.xml file found, regardless of the other folder's contents.
+These paths aren't configurable. After cloning begins, the cloning checks these locations in that specific order and uses the first DcCloneConfig.xml file found, regardless of the other folder's contents.
 
 The following locations can contain the CustomDCCloneAllowList.xml file:
 
@@ -584,7 +584,7 @@ If you previously exported your VM, you now need to import it back in as a copy.
 If you intend to create additional copies from the same exported VM, make as many copies of the exported VM as necessary. Then use Import for each copy.
 
 > [!IMPORTANT]
-> It is important to use the **Copy** option, as export preserves all information from the source; importing the server with **Move** or **In Place** causes information collision if done on the same Hyper-V host server.
+> It's important to use the **Copy** option, as export preserves all information from the source; importing the server with **Move** or **In Place** causes information collision if done on the same Hyper-V host server.
 
 ##### Hyper-V Manager Method
 To import using the Hyper-V Manager snap-in:
@@ -659,7 +659,7 @@ For example:
 
 ![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSStartVM.png)
 
-Once the computer restarts after cloning completes, it is a domain controller and you can logon on normally to confirm normal operation. If there are any errors, the server is set to start in Directory Services Restore Mode for investigation.
+Once the computer restarts after cloning completes, it's a domain controller and you can logon on normally to confirm normal operation. If there are any errors, the server is set to start in Directory Services Restore Mode for investigation.
 
 ## <a name="BKMK_VDCSafeRestore"></a>Virtualization safeguards
 Unlike virtualized domain controller cloning, Windows Server 2012 virtualization safeguards have no configuration steps. The feature works without intervention as long as you meet some simple conditions:
@@ -669,11 +669,11 @@ Unlike virtualized domain controller cloning, Windows Server 2012 virtualization
 - There is a valid partner domain controller that a restored domain controller can replicate changes from non-authoritatively.
 
 ### Validate the Hypervisor
-Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor-independent and do not require Hyper-V.
+Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor-independent and don't require Hyper-V.
 
-Review the previous [Platform Requirements](../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md#BKMK_PlatformReqs) section for known VM-Generation ID support.
+Review the previous [Platform Requirements](#BKMK_PlatformReqs) section for known VM-Generation ID support.
 
-If you are migrating VMs from a source hypervisor to a different target hypervisor, virtualization safeguards may or may not be triggered depending on whether the hypervisors support VM-Generation ID, as explained in the following table.
+If you're migrating VMs from a source hypervisor to a different target hypervisor, virtualization safeguards may or may not be triggered depending on whether the hypervisors support VM-Generation ID, as explained in the following table.
 
 |Source hypervisor|Target hypervisor|Result|
 |---------------------|---------------------|----------|
@@ -692,13 +692,13 @@ With this new capability come several requirements and limitations:
 
 - Any changes originating from a restored domain controller that have not yet replicated outbound since the snapshot was taken are lost forever
 
-While the troubleshooting section covers these scenarios, details below ensure you do not create a topology that could cause problems.
+While the troubleshooting section covers these scenarios, details below ensure you don't create a topology that could cause problems.
 
 #### Writable Domain Controller Availability
-If restored, a domain controller must have connectivity to a writable domain controller; a read-only domain controller cannot send the delta of updates. The topology is likely correct for this already, as a writable domain controller always needed a writable partner. However, if all writable domain controllers are restoring simultaneously, none of them can find a valid source. The same goes if the writable domain controllers are offline for maintenance or otherwise unreachable through the network.
+If restored, a domain controller must have connectivity to a writable domain controller; a read-only domain controller can't send the delta of updates. The topology is likely correct for this already, as a writable domain controller always needed a writable partner. However, if all writable domain controllers are restoring simultaneously, none of them can find a valid source. The same goes if the writable domain controllers are offline for maintenance or otherwise unreachable through the network.
 
 #### Simultaneous Restore
-Do not restore all domain controllers in a single domain simultaneously. If all snapshots restore at once, Active Directory replication works normally but SYSVOL replication halts. The restore architecture of FRS and DFSR require setting their replica instance to non-authoritative sync mode. If all domain controllers restore at once, and each domain controller marks itself non-authoritative for SYSVOL, they all will then try to synchronize group policies and scripts from an authoritative partner; at that point, though, all partners are also non-authoritative.
+Don't restore all domain controllers in a single domain simultaneously. If all snapshots restore at once, Active Directory replication works normally but SYSVOL replication halts. The restore architecture of FRS and DFSR require setting their replica instance to non-authoritative sync mode. If all domain controllers restore at once, and each domain controller marks itself non-authoritative for SYSVOL, they all will then try to synchronize group policies and scripts from an authoritative partner; at that point, though, all partners are also non-authoritative.
 
 > [!IMPORTANT]
 > If all domain controllers are restored at once, use the following articles to set one domain controller - typically the PDC emulator - as authoritative, so that the other domain controllers can return to normal operation:
@@ -708,10 +708,10 @@ Do not restore all domain controllers in a single domain simultaneously. If all 
 > [How to force an authoritative and non-authoritative synchronization for DFSR-replicated SYSVOL (like "D4/D2" for FRS)](https://support.microsoft.com/kb/2218556)
 
 > [!WARNING]
-> Do not run all domain controllers in a forest or domain on the same hypervisor host. That introduces a single point of failure that cripples AD DS, Exchange, SQL, and other enterprise operations each time the hypervisor goes offline. This is no different from using only one domain controller for an entire domain or forest. Multiple domain controllers on multiple platforms help provide redundancy and fault tolerance.
+> Don't run all domain controllers in a forest or domain on the same hypervisor host. That introduces a single point of failure that debilitates AD DS, Exchange, SQL, and other enterprise operations each time the hypervisor goes offline. This is no different from using only one domain controller for an entire domain or forest. Multiple domain controllers on multiple platforms help provide redundancy and fault tolerance.
 
 #### Post-Snapshot Replication
-Do not restore snapshots until all locally originating changes made since snapshot creation have replicated outbound. Any originating changes are lost forever if other domain controllers did not already receive them through replication.
+Don't restore snapshots until all locally originating changes made since snapshot creation have replicated outbound. Any originating changes are lost forever if other domain controllers did not already receive them through replication.
 
 Use Repadmin.exe to show any un-replicated outbound changes between a domain controller and its partners:
 
@@ -755,7 +755,7 @@ DC=corp,DC=contoso,DC=com
         Last attempt @ 2011-11-11 15:04:15 was successful.
 ```
 
-Now you know that it is replicating with DC2 and DC3. You then show the list of changes that DC2 states it still does not have from DC4, and see that there is one new group:
+Now you know that it's replicating with DC2 and DC3. You then show the list of changes that DC2 states it still does not have from DC4, and see that there is one new group:
 
 ```
 C:\>repadmin /showchanges dc2.corp.contoso.com 5d083398-4bd3-48a4-a80d-fb2ebafb984f dc=corp,dc=contoso,dc=com
@@ -784,9 +784,9 @@ Objects:              1Object Additions:     1Object Modifications: 0Object Dele
 ```
 
 > [!IMPORTANT]
-> Test all writable partners if you see any failures or outstanding replication. As long as at least one is converged, it is generally safe to restore the snapshot, as transitive replication eventually reconciles the other servers.
+> Test all writable partners if you see any failures or outstanding replication. As long as at least one is converged, it's generally safe to restore the snapshot, as transitive replication eventually reconciles the other servers.
 >
-> Be sure to note any errors in replication shown by /showchanges and do not proceed until they are fixed.
+> Be sure to note any errors in replication shown by /showchanges and don't proceed until they are fixed.
 
 ### Windows PowerShell Snapshot Cmdlets
 The following Windows PowerShell Hyper-V module cmdlets provide snapshot capabilities in Windows Server 2012:

@@ -86,6 +86,6 @@ New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -Virtua
 ## Testing Results
 
 We have done extensive performance testing for the SDN gateways in our test labs. In the tests, we have compared gateway network performance with Windows Server 2019 in SDN scenarios and non-SDN scenarios. You can find the results and test setup details captured in the blog article
-[here](https://blogs.technet.microsoft.com/networking/2018/08/15/high-performance-gateways/).
+[here](https://techcommunity.microsoft.com/t5/networking-blog/top-10-networking-features-in-windows-server-2019-6-high/ba-p/339766).
 
 ---

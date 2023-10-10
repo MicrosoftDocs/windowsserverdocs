@@ -30,7 +30,7 @@ To mark the partition with focus as the active partition, type:
 active
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

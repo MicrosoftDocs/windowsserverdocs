@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/07/2020
+ms.date: 02/06/2023
 ---
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access
@@ -47,11 +47,7 @@ The following sections provide links to documentation that shows you how to depl
 
 This guide is designed for network and system administrators who have followed the instructions in the Windows Server 2016 **Core Network Guide** to deploy a core network, or for those who have previously deployed the core technologies included in the core network, including AD DS, Domain Name System \(DNS\), Dynamic Host Configuration Protocol \(DHCP\), TCP\/IP, NPS, and Windows Internet Name Service \(WINS\).
 
-The Core Network Guide is available at the following locations:
-
-- The Windows Server 2016 [Core Network Guide](../../core-network-guide.md) is available in the Windows Server 2016 Technical Library.
-
-- The [Core Network Guide](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683) is also available in Word format at TechNet Gallery, at [https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).
+The Windows Server 2016 [Core Network Guide](../../core-network-guide.md) is available in the Windows Server 2016 Technical Library.
 
 #### Server certificate dependencies
 There are two available options for enrolling authentication servers with server certificates for use with 802.1X authentication - deploy your own public key infrastructure by using Active Directory Certificate Services \(AD CS\) or use server certificates that are enrolled by a public certification authority \(CA\).
@@ -61,7 +57,7 @@ Network and system administrators deploying authenticated wireless must follow t
 
 This guide is available at the following location.
 
-- The Windows Server 2016 Core Network Companion Guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md?f=255&MSPPError=-2147217396) in HTML format in the Technical Library.
+- The Windows Server 2016 Core Network Companion Guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md) in HTML format in the Technical Library.
 
 ##### Public CA
 You can purchase server certificates from a public CA, such as VeriSign, that client computers already trust.
@@ -183,8 +179,8 @@ Wireless security encryption is used to protect the wireless transmissions that 
 
 In Windows Server 2016, the following AES\-based wireless encryption methods are available for configuration in wireless profile properties when you select an authentication method of WPA2\-Enterprise, which is recommended.
 
-1. **AES\-CCMP**. Counter Mode Cipher Block Chaining Message Authentication Code Protocol \(CCMP\) implements the 802.11i standard and is designed for higher security encryption than that provided by WEP, and uses 128 bit AES encryption keys.
-2. **AES\-GCMP**. Galois Counter Mode Protocol \(GCMP\) is supported by 802.11ac, is more efficient than AES\-CCMP and provides better performance for wireless clients. GCMP uses 256 bit AES encryption keys.
+1. **AES\-CCMP**. Counter Mode Cipher Block Chaining Message Authentication Code Protocol \(CCMP\) implements the 802.11i standard and is designed for higher security encryption than that provided by WEP, and uses 128-bit AES encryption keys.
+2. **AES\-GCMP**. Galois Counter Mode Protocol \(GCMP\) is supported by 802.11ac, is more efficient than AES\-CCMP and provides better performance for wireless clients. GCMP uses 256-bit AES encryption keys.
 
 > [!IMPORTANT]
 > Wired Equivalency Privacy \(WEP\) was the original wireless security standard that was used to encrypt network traffic. You should not deploy WEP on your network because there are well\-known vulnerabilities in this outdated form of security.

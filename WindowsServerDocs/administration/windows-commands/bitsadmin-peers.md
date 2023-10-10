@@ -31,7 +31,7 @@ bitsadmin /peers /list
 | [bitsadmin peers and clear](bitsadmin-peers-and-clear.md) | Clears the peers list. |
 | [bitsadmin peers and list](bitsadmin-peers-and-list.md) | Lists all peers. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

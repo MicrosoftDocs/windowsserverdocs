@@ -4,8 +4,8 @@ ms.assetid: bb9b9e18-bf2f-4115-be77-9a165944db41
 title: Planning Your Deployment
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

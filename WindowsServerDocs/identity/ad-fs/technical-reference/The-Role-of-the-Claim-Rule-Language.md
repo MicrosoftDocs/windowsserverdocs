@@ -3,8 +3,8 @@ description: "Learn more about: The Role of the Claim Rule Language"
 title: The Role of the Claim Rule Language
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 07/07/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ---

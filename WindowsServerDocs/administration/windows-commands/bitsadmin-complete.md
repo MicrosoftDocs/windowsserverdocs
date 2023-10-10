@@ -35,7 +35,7 @@ bitsadmin /complete myDownloadJob
 
 If multiple jobs use *myDownloadJob* as their name, you must use the job's GUID to uniquely identify it for completion.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

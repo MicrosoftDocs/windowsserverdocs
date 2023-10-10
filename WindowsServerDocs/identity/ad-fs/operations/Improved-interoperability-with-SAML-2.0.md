@@ -4,8 +4,8 @@ ms.assetid: 80b5335b-fa02-4944-900c-5fe4f5c6111d
 title: Improved interoperability with SAML 2.0
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # Improved interoperability with SAML 2.0

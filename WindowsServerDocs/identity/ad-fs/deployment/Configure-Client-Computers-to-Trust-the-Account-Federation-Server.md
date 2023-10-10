@@ -3,8 +3,8 @@ description: "Learn more about: Configure Client Computers to Trust the Account 
 ms.assetid: 4ae26970-e42e-4e69-887a-b16d2f8d0695
 title: Configure Client Computers to Trust the Account Federation Server
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

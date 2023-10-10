@@ -54,6 +54,6 @@ To copy all values under the key MyCo on the computer named ZODIAC to the key My
 reg copy \\ZODIAC\HKLM\Software\MyCo HKLM\Software\MyCo1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -19,8 +19,6 @@
     items:
     - name: Build anywhere
       href: rds-plan-build-anywhere.md
-    - name: Remote Desktop workloads
-      href: remote-desktop-workloads.md
     - name: Network guidelines
       href: network-guidance.md
     - name: Virtual machine sizing guidelines
@@ -40,12 +38,12 @@
     - name: Choose how you pay
       href: rds-plan-choose-how-you-pay.md
     - name: Office 2016 in RDS and VDI deployments
-      href: /deployoffice/rds-office-vdi-rdsh
+      href: /deployoffice/rds-office-vdi-rdsh?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
       items:
-      - name: Dealing with Outlook search in non-persistent environments
-        href: /deployoffice/rds-outlook-search
+      - name: Outlook search in non-persistent environments
+        href: /deployoffice/rds-outlook-search?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
       - name: OneDrive for Business and VDI environments
-        href: /deployoffice/rds-onedrive-business-vdi
+        href: /sharepoint/sync-vdi-support?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
     - name: Desktop Hosting Reference Architecture
       href: Desktop-Hosting-Reference-Architecture.md
       items:
@@ -77,10 +75,16 @@
       href: rds-deploy-infrastructure.md
     - name: Create and deploy a Remote Desktop Services collection
       href: rds-create-collection.md
+    - name: Configure the RD Gateway role
+      href: remote-desktop-gateway-role.md
     - name: Set up the Remote Desktop web client for your users
       href: clients/remote-desktop-web-client-admin.md
+    - name: Disable Automatic Reconnection
+      href: automatic-reconnection-lock-screen.md
     - name: Set up email discovery for your users
       href: rds-email-discovery.md
+    - name: Fair Share technologies
+      href: fair-share-enabled-by-default-rds.md
     - name: License your Remote Desktop deployment
       href: rds-client-access-license.md
       items:
@@ -88,6 +92,8 @@
         href: rds-activate-license-server.md
       - name: Install RDS CALs on the license server
         href: rds-install-cals.md
+      - name: License RDS session hosts
+        href: rds-license-session-hosts.md
       - name: Track the CALs used in your deployment
         href: rds-track-cals.md
     - name: Integrate Azure services
@@ -148,18 +154,6 @@
     items:
     - name: Available Remote Desktop clients
       href: clients/remote-desktop-clients.md
-    - name: Windows Desktop client
-      items:
-      - name: Get started with the Windows Desktop client
-        href: clients/windowsdesktop.md
-      - name: Windows Desktop client for admins
-        href: clients/windowsdesktop-admin.md
-      - name: What's new in the Windows Desktop client
-        href: clients/windowsdesktop-whatsnew.md
-      - name: Supported configurations
-        href: clients/windowsdesktop-supported-config.md
-      - name: Shortcut keys
-        href: /windows/win32/termserv/terminal-services-shortcut-keys
     - name: Microsoft Store client
       items:
       - name: Get started with the Microsoft Store client
@@ -190,6 +184,12 @@
         href: clients/remote-desktop-web-client.md
       - name: What's new in the web client
         href: clients/web-client-whatsnew.md
+    - name: Remote Desktop Connection client for Windows (MSTSC)
+      items:
+      - name: Connect using single sign-on with Microsoft Entra authentication
+        href: clients/remote-desktop-connection-single-sign-on.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: clients/uninstall-remote-desktop-connection.md
     - name: Setting up your PC for Remote Desktop
       items:
       - name: Supported PCs
@@ -200,15 +200,13 @@
         href: clients/remote-desktop-allow-outside-access.md
       - name: Change the RD listening port on your PC
         href: clients/change-listening-port.md
-      - name: Configure the RD Gateway role
-        href: remote-desktop-gateway-role.md
     - name: Advanced information
       items:
       - name: 'Compare the clients: features'
         href: clients/remote-desktop-features.md
       - name: 'Compare the clients: redirections'
         href: clients/remote-desktop-app-compare.md
-      - name: Supported Remote Desktop RDP file settings
+      - name: Supported RDP properties
         href: clients/rdp-files.md
       - name: Remote Desktop URI scheme
         href: clients/remote-desktop-uri.md
@@ -240,5 +238,4 @@
         href: troubleshoot/input-method-editor-error.md
       - name: '"Out of memory" error'
         href: troubleshoot/out-of-memory-error.md
-  - name: Additional resources
-    href: rds-get-support.md
+

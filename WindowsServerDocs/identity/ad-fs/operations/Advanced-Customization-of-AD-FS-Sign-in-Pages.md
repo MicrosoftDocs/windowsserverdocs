@@ -1,137 +1,173 @@
 ---
-ms.assetid: 882abec8-0189-4f73-99c5-792987168080
-title: Advanced Customization of AD FS Sign-in Pages
-description: How to make advanced customizations of the AD FS sign-in pages
+title: Advanced customization of AD FS sign-in pages
+description: Learn how to make advanced customizations of the Active Directory Federation Services (ADFS) sign-in pages in Windows Server.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 01/16/2019
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
+ms.assetid: 882abec8-0189-4f73-99c5-792987168080
 ---
 
+# Advanced customization of AD FS sign-in pages
 
+Active Directory Federation Services (AD FS) in Windows Server 2012 R2 and later supports customization of the user sign-in experience. For most scenarios, you can use the built-in Windows PowerShell cmdlets to configure the AD FS sign-in pages. The recommended approach is to use the built-in Windows PowerShell commands for customization whenever possible. For more information, see [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md).
 
-# Advanced Customization of AD FS Sign-in Pages
+Sometimes, you might need to provide a sign-in experience that can't be enabled by using the PowerShell commands that come with AD FS. You can configure the sign-in experience by adding custom code to the **onload.js** file provided with AD FS. The file code is executed on all AD FS pages.
 
+## Considerations
 
-## Advanced Customization of AD FS Sign\-in Pages
-AD FS in Windows Server 2012 R2 provides built\-in support for customizing the sign\-in experience. For a majority of these scenarios, the built\-in Windows PowerShell cmdlets are all that is required.  It is recommended that you use the built\-in Windows PowerShell commands to customize standard elements for AD FS sign\-in experience whenever possible.  See [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md) for more information.
+Before you start customizing AD FS sign-in pages, review the following important considerations.
 
-In some cases, AD FS administrators may want to provide additional sign\-in experiences that are not possible through the existing PowerShell commands that ship in\-box with AD FS. In certain instances, it is feasible \(within the guidelines provided below\) for administrators to customize the sign\-in experience further by adding additional logic to **onload.js** that is provided by AD FS and will be executed on all the AD FS pages.
+> [!IMPORTANT]
+> Any customization change that impacts redirect flows or modifies protocol parameters used by AD FS isn't supported.
 
-## Things to know before you start
+- The onload.js file is executed on all AD FS pages, including form-based sign-in pages, home realm discovery pages, and so on. Always ensure your custom code executes only as intended and not unexpectedly.
 
--   Any change that impacts the redirect flows or modifies protocol parameters that AD FS works with is not supported.
+- AD FS comes with a built-in web theme called **default**. You can't modify the onload.js content that creates the default web theme. To update the onload.js file, create and use a custom web theme for AD FS sign-in pages. For more information, see [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md).
 
--   The original onload.js, the one that comes with the default web theme, contains code that handles page rendering for different form factors. It is recommended not to modify the original onload.js content but only append your code to the existing onload.js that handles custom logic.
+- The original onload.js file for the default web theme also contains code to handle page rendering for different form factors. The recommended customization approach is to append your custom logic code to the existing onload.js file. Don't modify the original onload.js file content.
 
--   AD FS ships with a built\-in web theme which is called Default. You cannot modify the onload.js of the Default web theme. To update onload.js, you have to create and use a custom web theme for AD FS sign\-in pages.  See [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md) for information on how to create a custom web theme.
+- When you reference HTML elements, always check for the existence of the element prior to acting on the element. This step provides robustness and ensures custom logic isn't executed on pages that don't contain this element. To identify existing HTML elements, view the HTML source on the AD FS sign-in pages.
 
--   The same onload.js will execute on all AD FS pages \(ex. form\-based logon page, home realm discovery page and etc.\). You need to make sure the code in your script only gets executed as it is designed and does not get executed unexpectedly.
+- It's recommended to validate your customizations in an alternate environment and run tests prior to moving your customizations onto production AD FS servers. This step reduces the chances of exposing end users to customizations prior to validation.
 
--   When referencing any HTML element, ensure that you always check for the existence of the element prior to acting on the element. This provides robustness and ensures that the custom logic would not be executed on pages that do not contain this element. You can simply view the HTML source on the AD FS sign\-in pages to view the existing elements.
+## Customization steps
 
--   It is strongly recommended to validate your customizations in an alternate environment and test them prior to rolling it out onto production AD FS servers. This reduces the chances of end users being exposed to these customizations prior to validation.
+The following sections provide the steps to customize the onload.js file content for AD FS sign-in pages.
 
-## Customizing the AD FS sign\-in experience by using onload.js
-Use the following steps when customizing the onload.js for the AD FS service.
+### Create custom web theme
 
-#### Customizing onload.js for the AD FS Service
+To add your custom logic to the onload.js file, the first step is to create a custom web theme. A quick method is to export the Default web theme and then use the original code as the basis for your customizations.
 
-1.  To add your custom logic to onload.js, you need to first create a custom web theme. The theme that is shipped out\-of\-the\-box is called Default. You can export the default theme and use it so that you can start quickly. The following cmdlet creates a custom web theme, which duplicates the default web theme:
+Run the following cmdlet to create a custom web theme by duplicating the default web theme:
 
-    ```
-    New-AdfsWebTheme –Name custom –SourceName default
-
-    ```
-
-2.  You can then export the custom or default web theme to get onload.js file. To export a web theme, use the following cmdlet:
-
-    ```
-    Export-AdfsWebTheme –Name default –DirectoryPath c:\theme
-
-    ```
-
-    You will find onload.js under the script folder in the directory that you specify in the export cmdlet above and add your custom logic to the script \(see use cases in the Example section below\).
-
-3.  Make the necessary modification to customize onload.js based on your need.
-
-4.  Update the theme with the modified onload.js. Use the following cmdlet to apply the update onload.js to custom web theme:
-
-     For AD FS on Windows Server 2012 R2:
-
-    ```
-    Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';path="c:\theme\script\onload.js"}
-
-    ```
-    For AD FS on Windows Server 2016:
-
-     ```
-    Set-AdfsWebTheme -TargetName custom -OnLoadScriptPath "c:\theme\script\onload.js"
-
-    ```
-
-5.  To apply the custom web theme to AD FS, use the following cmdlet:
-
-    ```
-    Set-AdfsWebConfig -ActiveThemeName custom
-    ```
-
-## Additional Customization Examples
-The following are the examples of custom code added to onload.js for different fine\-tune purposes. When adding the custom code, please always append your custom code to the bottom of the onload.js.
-
-### Example 1: change "Sign in with organizational account" string
-The default AD FS form\-based sign\-in page has a title of "Sign in with your organizational account" above user input boxes.
-
-If you want to replace this string with your own string, you can add the following code to onload.js.
-
+```powershell
+New-AdfsWebTheme –Name custom –SourceName default
 ```
-// Sample code to change "Sign in with organizational account" string.
 
-// Check whether the loginMessage element is present on this page.
+### Generate onload.js file
+
+The next step is to export your custom web theme so you have an onload.js file that you can update.
+
+Run the following cmdlet to export your custom web theme and generate an onload.js file:
+
+```powershell
+Export-AdfsWebTheme –Name default –DirectoryPath c:\theme
+```
+
+The onload.js file is placed in the **script** folder in the directory specified in the cmdlet. In the example, the specified folder is `c:\theme`.
+
+### Add customizations
+
+Now you're ready to modify the onload.js content and add custom logic code for your scenarios. As mentioned, be sure to add your custom code to the end of the onload.js file.
+
+See the following [Examples](#examples) section for code snippets that demonstrate common customizations.
+
+### Change target onload.js file
+
+After you add your customizations, you need to update the AD FS web theme to use your onload.js file rather than the original onload.js file.
+
+Run the following cmdlet to set your onload.js file as the target for web theme definitions:
+
+- **For AD FS on Windows Server 2016 and later**:
+
+   ```powershell
+   Set-AdfsWebTheme -TargetName custom -OnLoadScriptPath "c:\theme\script\onload.js"
+   ```
+
+- **For AD FS on Windows Server 2012 R2**:
+
+   ```powershell
+   Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';path="c:\theme\script\onload.js"}
+   ```
+
+### Apply customizations to AD FS
+
+The last step is to apply your customizations to the AD FS sign-in pages.
+
+Run the following cmdlet to update AD FS with your customizations:
+
+```powershell
+Set-AdfsWebConfig -ActiveThemeName custom
+```
+
+## Examples
+
+The following examples provide custom code that you can add to the onload.js file to configure AD FS sign-in pages.
+
+> [!NOTE]
+> Always append custom code to the end of the onload.js file.
+
+### Change sign-in page title string
+
+The AD FS form-based sign-in page displays a title above the user input fields. The default title value is "Sign in with your organizational account."
+
+Replace the default string value with a custom string by adding the following code to the onload.js file. In the code, set the value of the `loginMessage.innerHTML` parameter to the custom string to use for the title.
+
+```javascript
+// Sample code to change page title string
+
+// Check if loginMessage element is present
 var loginMessage = document.getElementById('loginMessage');
 if (loginMessage)
 {
-       // loginMessage element is present, modify its properties.
-       loginMessage.innerHTML = 'Your company description text';
+       // If loginMessage element is present, change title to custom value
+       loginMessage.innerHTML = 'Custom title string value';
 }
-
 ```
 
-### Example 2: accept SAM\-account name as a login format on an AD FS form\-based sign\-in page
-The default AD FS form\-based sign\-in page supports login format of User Principal Names \(UPNs\) \(for example, <strong>johndoe@contoso.com</strong>\) or domain qualified sam\-account names \(**contoso\\johndoe** or **contoso.com\\johndoe**\). In case all of your users come from the same domain and they only know about sam\-account names, you may want to support the scenario where the users can sign in using them sam\-account names only. You can add the following code to onload.js to support this scenario, just replace the domain "contoso.com" in the example below with the domain that you want to use.
+### Accept SAM account name sign in
 
-```
+The AD FS form-based sign-in page supports two sign in methods by default:
+
+-  `userPrincipalName": A user principal name (UPN), such as `user@contoso.com`.
+-  `samAccountName`: A domain qualified Security Account Manager (SAM) account name, such as `contoso\user` or `contoso.com\user`.
+
+Consider a scenario where all users are in the same domain and the users know only their SAM account name. You can update the sign-page to allow the users to sign in by using their SAM account name only.
+
+Enable sign in from SAM accounts only by adding the following code to the onload.js file. In the code, set the value of the `userNameValue` parameter to the desired domain.
+
+```javascript
+// Sample code to enable user login from SAM account name only
+
 if (typeof Login != 'undefined'){
+
     Login.submitLoginRequest = function () {
+    
     var u = new InputUtil();
     var e = new LoginErrors();
     var userName = document.getElementById(Login.userNameInput);
     var password = document.getElementById(Login.passwordInput);
+
+    // Update login method with desired domain value
     if (userName.value && !userName.value.match('[@\\\\]'))
     {
         var userNameValue = 'contoso.com\\' + userName.value;
         document.forms['loginForm'].UserName.value = userNameValue;
     }
-
+    
+    // Check for user name errors
     if (!userName.value) {
        u.setError(userName, e.userNameFormatError);
        return false;
     }
 
+    // Check for password errors
     if (!password.value)
     {
         u.setError(password, e.passwordEmpty);
         return false;
     }
+
+    // Update the form page 
     document.forms['loginForm'].submit();
     return false;
-};
-}
+    };
 
+}
 ```
 
-## Additional references
-[AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md)
+## Related links
 
-
+- [AD FS user sign-in customization](AD-FS-user-sign-in-customization.md)

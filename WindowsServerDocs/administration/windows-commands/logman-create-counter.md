@@ -67,7 +67,7 @@ To create a counter called *perf_log* using the % Processor time counter from th
 logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -rf 01:00
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

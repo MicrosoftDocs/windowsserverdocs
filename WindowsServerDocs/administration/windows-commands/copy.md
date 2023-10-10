@@ -146,7 +146,7 @@ To combine all files with the .txt extension, and then to combine all files with
 copy *.txt + *.ref Combined.doc
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

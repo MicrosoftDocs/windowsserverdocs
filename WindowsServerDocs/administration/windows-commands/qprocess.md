@@ -18,7 +18,7 @@ Displays information about processes that are running on a Remote Desktop Sessio
 > [!NOTE]
 > This command is the same as the [query process command](query-process.md).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -25,6 +25,6 @@ Information and links to each of the associated NFS command-line tools:
 | [rpcinfo](rpcinfo.md) | List programs on remote computers. |
 | [showmount](showmount.md) | Display mounted directories. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

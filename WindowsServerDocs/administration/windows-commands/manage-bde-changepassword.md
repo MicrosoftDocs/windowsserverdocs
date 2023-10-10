@@ -37,7 +37,7 @@ To change the password used to unlock BitLocker on data drive D, type:
 manage-bde –changepassword D:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

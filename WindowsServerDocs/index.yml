@@ -4,11 +4,11 @@ title: Windows Server documentation
 summary: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
 
 metadata:
-  title: Windows Server Documentation - Microsoft Docs
+  title: Windows Server documentation
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
   author: robinharwood
   manager: femila
-  ms.service: windows-server
+  ms.prod: windows-server
   ms.topic: hub-page
   ms.date: 08/05/2022
   ms.author: roharwoo
@@ -62,9 +62,9 @@ conceptualContent:
 
     - title: Identity and access
       links:
-        - url: ./identity/ad-ds/ad-ds-getting-started.md
+        - url: ./identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview.md
           itemType: overview
-          text: Getting started with Active Directory Domain Services (AD DS)
+          text: Active Directory Domain Services Overview
         - url: ./identity/active-directory-federation-services.md
           itemType: overview
           text: Active Directory Federation Services (AD FS)
@@ -143,10 +143,10 @@ conceptualContent:
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview
-        - url: ./security/windows-authentication/windows-authentication-overview.md
+        - url: ./security/secured-core-server.md
           itemType: overview
           text: Secured-core server
-        - url: ./security/secured-core-server.md
+        - url: ./security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           itemType: how-to-guide
           text: Getting started with group-managed service accounts
         - url: ./security/windows-authentication/credentials-processes-in-windows-authentication.md
@@ -222,5 +222,5 @@ additionalContent:
         summary: Archive of technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
         url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
       - title: Windows Server Essentials
-        summary: Technical content for for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
+        summary: Technical content for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
         url: /windows-server-essentials/get-started/get-started

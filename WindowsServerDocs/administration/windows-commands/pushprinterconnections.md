@@ -29,7 +29,7 @@ pushprinterconnections <-log> <-?>
 | <-log> | Writes a per user debug log file to *%temp*, or writes a per machine debug log to *%windir%\temp*. |
 | <-?> | Displays Help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

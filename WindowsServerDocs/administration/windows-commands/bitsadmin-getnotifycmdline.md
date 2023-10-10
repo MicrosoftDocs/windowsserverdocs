@@ -36,7 +36,7 @@ To retrieve the command-line command used by the service when the job named *myD
 bitsadmin /getnotifycmdline myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

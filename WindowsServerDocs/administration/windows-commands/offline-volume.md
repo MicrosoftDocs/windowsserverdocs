@@ -36,6 +36,6 @@ To take the disk with focus offline, type:
 offline volume
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

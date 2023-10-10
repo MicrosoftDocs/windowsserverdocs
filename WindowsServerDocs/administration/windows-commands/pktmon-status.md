@@ -25,7 +25,7 @@ pktmon status [--buffer-info]
 | ------------- | --------------- |
 | **-b, --buffer-info** | Display ETW buffer information. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

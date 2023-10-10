@@ -33,7 +33,7 @@ To verify that the rollback .inf file, *secRBKcontoso.inf*, is still valid after
 secedit /validate secRBKcontoso.inf
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

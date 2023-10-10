@@ -58,5 +58,5 @@ The following scenarios and guidance are included as part of this content set:
 |**Planning**|- [Planning a Central Access Policy Deployment](./scenario--central-access-policy.md)<br>- [Plan for File Access Auditing](Plan-for-File-Access-Auditing.md)|
 |**Deployment**|- [Active Directory Deployment](../ad-ds/deploy/ad-ds-deployment.md)<br>- [File and Storage Services Deployment](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v=ws.11))|
 |**Operations**|[Dynamic Access Control PowerShell Reference](/powershell/module/activedirectory/)|
-<!--|**Tools and settings**|[Data Classification Toolkit](/learn/modules/intro-to-data-classification-protection/)|-->
+<!--|**Tools and settings**|[Data Classification Toolkit](/training/modules/intro-to-data-classification-protection/)|-->
 |**Community resources**|[Directory Services Forum](/answers/topics/windows-active-directory.html)|

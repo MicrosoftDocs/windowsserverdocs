@@ -4,8 +4,8 @@ ms.assetid: 2bac7744-9de3-491a-b0a2-4e843cec7344
 title: Add Help Desk Link
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

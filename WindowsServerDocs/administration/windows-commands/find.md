@@ -58,7 +58,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <"string"> [[<drive>:][<path>]<filename>[.
 
 - This command doesn't recognize carriage returns. When you use this command to search for text in a file that includes carriage returns, you must limit the search string to text that can be found between carriage returns (that is, a string that is not likely to be interrupted by a carriage return). For example, this command doesn't report a match for the string tax file if a carriage return occurs between the words tax and file.
 
-- The command accepts wildcards for file names. When searching in file (or files) it will print the file of the processed file predeceased by ten dashes.
+- The command accepts wildcards for file names. When searching in file (or files) it will print the file of the processed file preceded by ten dashes.
 
 - **Find** command cannot read alternate data streams. For searching in alternate data streams use **findstr**, **more** or **for /f** commands.
 
@@ -100,7 +100,7 @@ Check if a service is running:
 sc query  Winmgmt | find "RUNNING" >nul 2>&1 && (echo service is started) || (echo service is stopped)
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -38,6 +38,6 @@ Output that is similar to the following displays:
 1 provider registered.
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

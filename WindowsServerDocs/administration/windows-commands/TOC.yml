@@ -421,8 +421,6 @@
         href: convert-mbr.md
     - name: copy
       href: copy.md
-    - name: cprofile
-      href: cprofile.md
     - name: create
       href: create.md
       items:
@@ -448,6 +446,8 @@
       href: cscript.md
     - name: date
       href: date.md
+    - name: dcdiag
+      href: dcdiag.md
     - name: dcgpofix
       href: dcgpofix.md
     - name: defrag
@@ -529,10 +529,6 @@
       href: erase.md
     - name: eventcreate
       href: eventcreate.md
-    - name: eventquery
-      href: eventquery.md
-    - name: eventtriggers
-      href: eventtriggers.md
     - name: Evntcmd
       href: evntcmd.md
     - name: exec
@@ -578,6 +574,8 @@
         href: fsutil-8dot3name.md
       - name: fsutil behavior
         href: fsutil-behavior.md
+      - name: fsutil-devdrv
+        href: fsutil-devdrv.md
       - name: fsutil dirty
         href: fsutil-dirty.md
       - name: fsutil file
@@ -725,8 +723,6 @@
       href: import_1.md
     - name: inactive
       href: inactive.md
-    - name: inuse
-      href: inuse.md
     - name: ipconfig
       href: ipconfig.md
     - name: ipxroute
@@ -1110,8 +1106,6 @@
       href: quser.md
     - name: qwinsta
       href: qwinsta.md
-    - name: rcp
-      href: rcp.md
     - name: rd
       href: rd.md
     - name: rdpsign
@@ -1639,8 +1633,6 @@
       href: winnt.md
     - name: winnt32
       href: winnt32.md
-    - name: winpop
-      href: winpop.md
     - name: winrs
       href: winrs.md
     - name: winsat mem

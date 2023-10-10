@@ -44,6 +44,6 @@ To save the current performance registry settings and explanatory text to file *
 lodctr /s:"perf backup1.txt"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

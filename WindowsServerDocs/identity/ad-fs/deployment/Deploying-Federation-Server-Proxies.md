@@ -3,8 +3,8 @@ description: "Learn more about: Deploying Legacy AD FS Federation Server Proxies
 ms.assetid: 1b21b0a9-1fe6-4fd1-8a25-92e578d774ed
 title: Deploying Federation Server Proxies in AD FS
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

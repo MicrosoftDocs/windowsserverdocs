@@ -29,7 +29,7 @@ To stop the services, type one of the following:
 wdsutil /Stop-TransportServer
 wdsutil /verbose /Stop-TransportServer /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md)
 - [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)

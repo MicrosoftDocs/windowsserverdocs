@@ -39,6 +39,6 @@ To remove the current **Performance counter names** and **Explain text** for the
 unlodctr SMTPSVC
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -10,7 +10,7 @@ ms.date: 10/18/2021
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-If you haven't already, familiarize yourself with the [user access control options in Windows Admin Center](../plan/user-access-options.md)
+If you haven't already, familiarize yourself with the [user access control options in Windows Admin Center.](../plan/user-access-options.md)
 
 > [!NOTE]
 > Group based access in Windows Admin Center is not supported in workgroup environments or across non-trusted domains.
@@ -28,7 +28,7 @@ There is also an additional role specific to the management of CredSSP:
 **Windows Admin Center CredSSP Administrators** are registered with the Windows Admin Center CredSSP endpoint and have permissions to perform predefined CredSSP operations. This group is especially useful for installations of Windows Admin Center in desktop mode, where only the user account that installed Windows Admin Center is given these permissions by default.
 
 > [!NOTE]
-> Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server.
+> Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server. This is because most Windows Admin Center tools require administrative permissions to use.
 
 ## Active Directory or local machine groups
 
@@ -53,7 +53,7 @@ If your organization uses Azure Active Directory (Azure AD), you can choose to a
 Depending on the browser used, some users accessing Windows Admin Center with Azure AD authentication configured will receive an additional prompt **from the browser** where they need to provide their Windows account credentials for the machine on which Windows Admin Center is installed. After entering that information, the users will get the additional Azure Active Directory authentication prompt, which requires the credentials of an Azure account that has been granted access in the Azure AD application in Azure.
 
 > [!NOTE]
-> Users who's Windows account has **Administrator rights** on the gateway machine will not be prompted for the Azure AD authentication.
+> Users whose Windows account has **Administrator rights** on the gateway machine will not be prompted for the Azure AD authentication.
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center Preview
 
@@ -189,11 +189,10 @@ When you expand the zip archive, you'll see the following folder structure:
 - JustEnoughAdministration (directory)
 - Modules (directory)
     - Microsoft.SME.\* (directories)
-    - WindowsAdminCenter.Jea (directory)
 
 To configure support for role-based access control on a node, you need to perform the following actions:
 
-1.  Copy the **JustEnoughAdministration**, **Microsoft.SME.\***, and **WindowsAdminCenter.Jea** modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
+1.  Copy the **JustEnoughAdministration** and **Microsoft.SME.\*** modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
 2.  Update **InstallJeaFeature.ps1** file to match your desired configuration for the RBAC endpoint.
 3.  Run `InstallJeaFeature.ps1` to compile the DSC resource.
 4.  Deploy your DSC configuration to all of your machines to apply the configuration.

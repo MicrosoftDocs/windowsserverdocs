@@ -43,7 +43,7 @@ To enable Microsoft .NET Framework 4.8, add the program name to the SQM report, 
 fondue.exe /enable-feature:NETFX4 /caller-name:Admin.bat /hide-ux:all
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

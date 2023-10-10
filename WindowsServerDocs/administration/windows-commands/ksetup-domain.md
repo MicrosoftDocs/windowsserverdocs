@@ -35,7 +35,7 @@ ksetup /mapuser principal@realm domain-user /domain domain-name
 
 After a successful connection, you'll receive a new TGT or an existing TGT will be refreshed.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

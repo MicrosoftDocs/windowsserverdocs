@@ -38,7 +38,7 @@ To roll back the security policy on a computer at IP address *172.16.0.0*, type:
 scwcmd rollback /m:172.16.0.0
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

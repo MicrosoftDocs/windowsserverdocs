@@ -1,14 +1,17 @@
 ---
 description: "Learn more about: AD FS Overview"
 ms.assetid: 5007a619-ef57-4636-9aa9-93b0f02be1fc
-title: AD FS 2016 Overview
+title: Active Directory Federation Services Overview
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # AD FS Overview
+
+
+[!INCLUDE [Migrate to Azure AD](../../../includes/adfs-to-azure-ad-upgrade.md)]
 
 Active Directory Federation Service (AD FS) enables Federated Identity and Access Management by securely sharing digital identity and entitlements rights across security and enterprise boundaries. AD FS extends the ability to use single sign-on functionality that is available within a single security or enterprise boundary to Internet-facing applications to enable customers, partners, and suppliers a streamlined user experience while accessing the web-based applications of an organization.
 

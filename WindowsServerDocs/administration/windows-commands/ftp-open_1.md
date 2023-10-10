@@ -42,7 +42,7 @@ To connect to the ftp server at *ftp.microsoft.com* that is listening on TCP por
 open ftp.microsoft.com 755
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -40,7 +40,7 @@ To enable automatic unlocking of data drive E, type:
 manage-bde –autounlock -enable E:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

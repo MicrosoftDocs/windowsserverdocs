@@ -26,6 +26,6 @@ vol [<drive>:]
 | `<drive>:` | Specifies the drive that contains the disk for which you want to display the volume label and serial number. |
 | /? | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

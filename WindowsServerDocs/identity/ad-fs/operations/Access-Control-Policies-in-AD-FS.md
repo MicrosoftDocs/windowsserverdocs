@@ -4,17 +4,20 @@ ms.assetid: 102eeeb1-6c55-42a2-b321-71a7dab46146
 title: Access Control Policies in AD FS Windows Server 2016
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
+
 # Access Control Policies in Windows Server 2016 AD FS
 
-
 ## Access Control Policy Templates in AD FS
+
 Active Directory Federation Services now supports the use of access control policy templates.  By using access control policy templates, an administrator can enforce policy settings by assigning the policy template to a group of relying parties (RPs). Administrator can also make updates to the policy template and the changes will be applied to the relying parties automatically if there is no user interaction needed.
 
 ## What are Access Control Policy Templates?
+
 The AD FS core pipeline for policy processing has three phases: authentication, authorization and claim issuance. Currently, AD FS administrators have to configure a policy for each of these phases separately.  This also involves understanding the implications of these policies and if these policies have inter-dependency. Also, administrators have to understand the claim rule language and author custom rules to enable some simple/common policy (ex. block external access).
 
 What access control policy templates do is replace this old model where administrators have to configure Issuance Authorization Rules using claims language.  The old PowerShell cmdlets of issuance authorization rules still apply but it is mutually exclusive of the new model. Administrators can choose either to use the new model or the old model.  The new model allows administrators to control when to grant access, including enforcing multi-factor authentication.
@@ -24,6 +27,7 @@ Access control policy templates use a permit model.  This means by default, no o
 ![Screenshot that shows where to view the Access Control Policies.](media/Access-Control-Policies-in-AD-FS/ADFSACP2.PNG)
 
 ## Built-in access control policy templates vs custom access control policy templates
+
 AD FS includes several built-in access control policy templates.  These target some common scenarios which have the same set of policy requirements, for example client access policy for Office 365.  These templates cannot be modified.
 
 ![Screenshot that shows the built-in Access Control Policies.](media/Access-Control-Policies-in-AD-FS/ADFSACP3.PNG)
@@ -50,7 +54,6 @@ If an administrator selects multiple conditions, they are of **AND** relationshi
 |non-work place joined device accessing from extranet requires MFA<p>Permit AD fabric for intranet and extranet access|**Rule #1**<p>from **intranet**<p>And from **AD Fabric** group<p>Permit<p>**Rule #2**<p>from **extranet**<p>and from **non-workplace joined** device<p>and from **AD Fabric** group<p>and with MFA<p>Permit<p>**Rule #3**<p>from **extranet**<p>and from **workplace joined** device<p>and from **AD Fabric** group<p>Permit|
 
 ## Parameterized policy template vs non-parameterized policy template
-Access control policies can be
 
 A parameterized policy template is a policy template that has parameters. An Administrator needs to input the value for those parameters when assigning this template to RPs.An administrator cannot make changes to parameterized policy template after it has been created.  An example of a parameterized policy is the built-in policy, Permit specific group.  Whenever this policy is applied to an RP, this parameter needs to be specified.
 
@@ -107,6 +110,7 @@ To create a parameterized access control policy use the following procedure
     ![Screenshot that shows how to accept the selected option.](media/Access-Control-Policies-in-AD-FS/ADFSACP9.PNG)
 
 ## How to create a custom access control policy with an exception
+
 To create a access control policy with an exception use the following procedure.
 
 #### To create a custom access control policy with an exception

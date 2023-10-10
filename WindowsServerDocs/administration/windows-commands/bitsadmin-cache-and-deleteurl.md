@@ -33,7 +33,7 @@ To delete all cache entries for `https://www.contoso.com/en/us/default.aspx`:
 bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

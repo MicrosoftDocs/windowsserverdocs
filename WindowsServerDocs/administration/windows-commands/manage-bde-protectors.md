@@ -153,7 +153,7 @@ To back up all recovery information for drive C to AD DS, type (where `-id` is t
 manage-bde -protectors -adbackup C: -id '{00000000-0000-0000-0000-000000000000}'
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

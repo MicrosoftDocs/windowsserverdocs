@@ -3,8 +3,8 @@ description: "Learn more about: Checklist: Configuring the Resource Partner Orga
 ms.assetid: 80d50a9f-428e-40fe-b6b3-9837fd9a3efc
 title: Checklist - Configuring the Resource Partner Organization
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

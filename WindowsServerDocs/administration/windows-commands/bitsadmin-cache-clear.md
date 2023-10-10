@@ -1,17 +1,17 @@
 ---
 title: bitsadmin cache and clear
-description: Reference article for the bitsadmin cache and clear command, which purges the local cache.
+description: Reference article for the bitsadmin cache and clear command that purges the local cache.
 ms.topic: reference
-ms.assetid: 125426bc-5f90-4cdb-ba14-24be428c66c7
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 01/06/2023
 ---
 
 # bitsadmin cache and clear
 
-Purges the local cache.
+Applies to: Windows Server (All supported versions)
+
+The bitsadmin cache and clear command purges the local cache.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ To purge the local cache:
 bitsadmin /cache /clear
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

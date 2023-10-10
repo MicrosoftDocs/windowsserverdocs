@@ -3,18 +3,18 @@ title: Comparison of Standard and Datacenter editions Windows Server 2019
 description: Comparison of Standard and Datacenter editions of Windows Server 2019.
 ms.topic: conceptual
 author: jasongerend
-ms.author: jgerend
-manager: femila
-ms.date: 8/16/2021
+ms.author: alalve
+ms.date: 09/16/2022
 ms.prod: windows-server
-ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 ---
 
 # Comparison of Standard and Datacenter editions of Windows Server 2019
 
 Use this article to compare Standard and Datacenter editions of Windows Server 2019 to see which will be most appropriate.
 
-## Features available generally
+## Features generally available
+
+# [Full Comparison](#tab/full-comparison)
 
 |Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
@@ -31,7 +31,7 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |SMB Direct and SMB over RDMA|Yes|Yes|
 |Software-defined Networking|No| **Yes** |
 |Storage Migration  Service|Yes|Yes|
-| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, **unlimited** |
+| Storage Replica | Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** |
 |Storage Spaces|Yes|Yes|
 |Storage Spaces Direct|No| **Yes** |
 |Volume Activation Services|Yes|Yes|
@@ -41,7 +41,20 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
 |Work Folders|Yes|Yes|
 
+# [Version Differences](#tab/version-differences)
+
+|Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|Software-defined Networking|No| **Yes** |
+| Storage Replica | Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** |
+|Storage Spaces Direct|No| **Yes** |
+|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
+
+---
+
 ## Locks and Limits
+
+# [Full Comparison](#tab/full-comparison)
 
 | Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
@@ -59,7 +72,17 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 | DirectAccess                    | yes                           | yes |
 | DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
+# [Version Differences](#tab/version-differences)
+
+| Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| -------------------              | ---------------------------  | --------------------------- |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+
+---
+
 ## Server roles
+
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|----------|---------------------------|
@@ -96,9 +119,20 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Windows Deployment Services| |Yes*|Yes*|
 |Windows Server Update Services| |Yes|Yes|
 
-*WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the Semi-Annual Channel starting with Windows Server, version 1803)
+> [!NOTE]
+> WDS Transport Server is new to Server Core installations in Windows Server 2019 and also included in the Semi-Annual Channel starting with Windows Server version 1803.
+
+# [Version Differences](#tab/version-differences)
+
+|Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|----------|---------------------------|
+|Network Controller| |No| **Yes** |
+
+---
 
 ## Features
+
+# [Full Comparison](#tab/full-comparison)
 
 |Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
@@ -168,3 +202,12 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Wireless LAN Service|Yes|Yes|
 |WoW64 Support|Yes|Yes|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
+
+# [Version Differences](#tab/version-differences)
+
+|Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (**unlimited Windows and Hyper-V containers**) |
+|Host Guardian Hyper-V Support|No| **Yes** |
+
+---

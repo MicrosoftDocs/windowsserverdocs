@@ -20,6 +20,6 @@ Displays current volume shadow copy backups and all installed shadow copy writer
 | [vssadmin list writers](vssadmin-list-writers.md) | Lists all subscribed volume shadow copy writers on the system. | Client and Server |
 | [vssadmin resize shadowstorage](vssadmin-resize-shadowstorage.md) | Resizes the maximum size for a shadow copy storage association. | Client and Server |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

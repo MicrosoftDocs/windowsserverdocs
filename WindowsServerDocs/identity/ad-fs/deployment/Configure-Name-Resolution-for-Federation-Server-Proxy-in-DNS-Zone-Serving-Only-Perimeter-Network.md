@@ -3,8 +3,8 @@ description: "Learn more about: Configure Name Resolution for a Federation Serve
 ms.assetid: b7109e46-b66e-4c5c-8b87-a6611d68415a
 title: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

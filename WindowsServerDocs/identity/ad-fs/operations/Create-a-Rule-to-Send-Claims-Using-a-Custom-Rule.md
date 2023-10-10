@@ -4,8 +4,8 @@ ms.assetid: 38eb3726-e97b-484e-9926-67e8a046b0c5
 title: Create a Rule to Send Claims Using a Custom Rule
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

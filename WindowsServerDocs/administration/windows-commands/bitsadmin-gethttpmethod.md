@@ -32,7 +32,7 @@ To retrieve the HTTP verb to use with the job named *myDownloadJob*:
 bitsadmin /gethttpmethod myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

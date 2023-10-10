@@ -92,6 +92,8 @@ items:
       href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
     - name: Secure SMB traffic
       href: file-server/smb-secure-traffic.md
+    - name: Protect SMB traffic from interception
+      href: file-server/smb-interception-defense.md
     - name: Network File System overview
       href: nfs/nfs-overview.md
     - name: Deploy Network File System
@@ -203,6 +205,8 @@ items:
   - name: Folder Redirection and Roaming User Profiles
     href: folder-redirection/folder-redirection-rup-overview.md
     items:
+    - name: Folder Redirection using Group Policy
+      href: folder-redirection/folder-redirection-using-group-policy.md
     - name: Deploy Roaming User Profiles
       href: folder-redirection/deploy-roaming-user-profiles.md
     - name: Deploy Folder Redirection
@@ -251,17 +255,19 @@ items:
   - name: Storage Replica
     href: storage-replica/storage-replica-overview.md
     items:
-    - name: Stretch Cluster Replication using Shared Storage
+    - name: Stretch Cluster replication using shared storage
       href: storage-replica/stretch-cluster-replication-using-shared-storage.md
-    - name: Server to server storage replication
+    - name: Server-to-server storage replication
       href: storage-replica/server-to-server-storage-replication.md
-    - name: Cluster to cluster storage replication
+    - name: Cluster-to-cluster storage replication
       href: storage-replica/cluster-to-cluster-storage-replication.md
-    - name: Cluster to Cluster Storage Replica cross region in Azure
+    - name: Cluster-to-cluster storage replication Cross-Region in Azure
       href: storage-replica/cluster-to-cluster-azure-cross-region.md
-    - name: Cluster to Cluster Storage Replica within the same region in Azure
+    - name: Cluster-to-cluster storage replication within one Azure region
       href: storage-replica/cluster-to-cluster-azure-one-region.md
-    - name: "Storage Replica: known issues"
+    - name: "Storage Replica: Enhanced Log"
+      href: storage-replica/storage-replica-enhanced-log.md
+    - name: "Storage Replica: Known Issues"
       href: storage-replica/storage-replica-known-issues.md
     - name: "Storage Replica: Frequently Asked Questions"
       href: storage-replica/storage-replica-frequently-asked-questions.yml
@@ -333,10 +339,8 @@ items:
         href: storage-spaces/remove-servers.md
       - name: Update drive firmware
         href: update-firmware.md
-      - name: Extend volumes
-        href: /azure-stack/hci/manage/extend-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: Delete volumes
-        href: /azure-stack/hci/manage/delete-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Manage volumes
+        href: /azure-stack/hci/manage/manage-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Performance history
         href: storage-spaces/performance-history.md
         items:

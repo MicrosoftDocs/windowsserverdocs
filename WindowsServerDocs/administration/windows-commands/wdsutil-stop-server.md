@@ -30,7 +30,7 @@ To stop the services, type one of the following:
 wdsutil /Stop-Server
 wdsutil /verbose /Stop-Server /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-server command](wdsutil-disable-server.md)
 - [wdsutil enable-server command](wdsutil-enable-server.md)

@@ -128,6 +128,6 @@ To list every file containing the word computer and any other words that begin w
 findstr /s /i /m \<comp.* *.*
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

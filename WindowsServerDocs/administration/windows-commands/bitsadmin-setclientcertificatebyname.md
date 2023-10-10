@@ -36,7 +36,7 @@ To specify the name of the client certificate *myCertificate* to use for client 
 bitsadmin /setclientcertificatebyname myDownloadJob 1 MY myCertificate
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

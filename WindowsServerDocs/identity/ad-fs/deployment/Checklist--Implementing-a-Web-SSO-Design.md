@@ -3,8 +3,8 @@ description: "Learn more about: Checklist: Implementing a Web SSO Design"
 ms.assetid: 30657638-5709-48c5-87aa-98f688e07b4c
 title: Checklist - Implementing a Web SSO Design
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

@@ -27,7 +27,7 @@ For the latest news on Windows Server, visit the [Windows Server blog](https://c
 
 ## Learn
 
-Browse several learning paths for Windows Server at [Microsoft Learn](/learn/browse/?source=learn&terms=Windows%20Server&resource_type=learning%20path) to help learn new skills and accelerate your deployment with step-by-step guidance. You can learn how to deploy, configure and administer Windows Server, as well as network infrastructure, file servers and storage management, Hyper-V and virtualization, plus much more.
+Browse [learning paths for Windows Server](/training/browse/?source=learn&terms=Windows%20Server&resource_type=learning%20path) to help learn new skills and accelerate your deployment with step-by-step guidance. You can learn how to deploy, configure and administer Windows Server, as well as network infrastructure, file servers and storage management, Hyper-V and virtualization, plus much more.
 
 ## Windows Insider Program
 
@@ -42,5 +42,5 @@ To get started, find out more from these resources.
 * Compare the [differences in the editions in Windows Server 2022](../get-started/editions-comparison-windows-server-2022.md).
 * Choose the right installation option based on whether you want the [Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md) or a [minimal Core interface](Getting-Started-with-Server-Core.md).
 * Understand the [hardware requirements](../get-started/hardware-requirements.md) to run Windows Server.
-* Follow the Microsoft Learn learning path on [Windows Server deployment, configuration, and administration](/learn/paths/windows-server-deployment-configuration-administration/).
+* Follow the learning path for [Windows Server deployment, configuration, and administration](/training/paths/windows-server-deployment-configuration-administration/).
 * If you still need to use Windows Server 2008, Windows Server 2008 R2 (and in future Windows Server 2012, or Windows Server 2012 R2) [Extended Security Updates](extended-security-updates-overview.md) are available to help keep you safe with security updates and bulletins rated critical and important.

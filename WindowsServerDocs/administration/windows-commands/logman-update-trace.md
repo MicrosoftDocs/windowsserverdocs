@@ -68,7 +68,7 @@ To update an existing event trace data collector called *trace_log*, changing th
 logman update trace trace_log -max 10 -f csv -v mmddhhmm
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

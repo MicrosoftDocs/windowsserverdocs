@@ -46,7 +46,7 @@ To set the identifier of the GPT disk with focus to the GUID value baf784e7-6bbd
 uniqueid disk id=baf784e7-6bbd-4cfb-aaac-e86c96e166ee
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

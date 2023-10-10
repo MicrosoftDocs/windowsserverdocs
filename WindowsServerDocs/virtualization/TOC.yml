@@ -42,7 +42,7 @@
       items:
       - name: Install Hyper-V
         href: hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md
-      - name: Create a virtual switch
+      - name: Create and configure a virtual switch
         href: hyper-v/get-started/create-a-virtual-switch-for-Hyper-V-virtual-machines.md
       - name: Create a virtual machine
         href: hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md
@@ -65,6 +65,8 @@
         href: hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md
       - name: Discrete Device Assignment
         href: hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md
+      - name: What is Nested Virtualization?
+        href: /virtualization/hyper-v-on-windows/user-guide/nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Deploy
       href: hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md
       items:
@@ -80,6 +82,8 @@
         href: hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md
       - name: Deploy storage devices using DDA
         href: hyper-v/deploy/deploying-storage-devices-using-dda.md
+      - name: Enable Nested Virtualization
+        href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Manage
       href: hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md
       items:
@@ -130,7 +134,5 @@
     - name: Manage Hyper-V Virtual Switch
       href: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
       items:
-      - name: Configure and View VLAN Settings on Hyper-V Virtual Switch Ports
-        href: hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md
       - name: Create Security Policies with extended Port Access Control lists
         href: hyper-v-virtual-switch/create-Security-Policies-with-extended-Port-Access-Control-lists.md

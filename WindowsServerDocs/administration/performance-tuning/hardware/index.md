@@ -2,8 +2,8 @@
 title: Server Hardware Performance Considerations
 description: Server hardware performance considerations for Windows Server 2022
 ms.topic: landing-page
-ms.author: phstee
-author: phstee
+ms.author: wscontent
+author: robinharwood
 ms.date: 01/08/2018
 ---
 

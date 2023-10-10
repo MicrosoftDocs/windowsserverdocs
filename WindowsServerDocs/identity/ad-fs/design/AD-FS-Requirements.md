@@ -4,8 +4,8 @@ ms.assetid: 8ce6e7c4-cf8e-4b55-980c-048fea28d50f
 title: AD FS Requirements for Windows Server
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
@@ -42,22 +42,22 @@ The following are the various requirements that you must conform to when deployi
 - [Permissions requirements](AD-FS-Requirements.md#BKMK_13)
 
 ## <a name="BKMK_1"></a>Certificate requirements
-Certificates play the most critical role in securing communications between federation servers, Web Application Proxies, claims-aware applications, and Web clients. The requirements for certificates vary, depending on whether you are setting up a federation server or a proxy computer, as described in this section.
+Certificates play the most critical role in securing communications between federation servers, Web Application Proxies, claims-aware applications, and Web clients. The requirements for certificates vary, depending on whether you're setting up a federation server or a proxy computer, as described in this section.
 
 **Federation server certificates**
 
 | **Certificate type** | **Requirements, Support & Things to Know** |
 |--|--|
-| **Secure Sockets Layer (SSL) certificate:** This is a standard SSL certificate that is used for securing communications between federation servers and clients. | - This certificate must be a publicly trusted* X509 v3 certificate.<br>- All clients that access any AD FS endpoint must trust this certificate. It is strongly recommended to use certificates that are issued by a public (third-party) certification authority (CA). You can use a self-signed SSL certificate successfully on federation servers in a test lab environment. However, for a production environment, we recommend that you obtain the certificate from a public CA.<br>- Supports any key size supported by Windows Server 2012 R2 for SSL certificates.<br>- Does not support certificates that use CNG keys.<br>- When used together with Workplace Join/Device Registration Service, the subject alternative name of the SSL certificate for the AD FS service must contain the value enterpriseregistration that is followed by the User Principal Name (UPN) suffix of your organization, for example, enterpriseregistration.contoso.com.<br>- Wild card certificates are supported. When you create your AD FS farm, you will be prompted to provide the service name for the AD FS service (for example, **adfs.contoso.com**.<br>- It is strongly recommended to use the same SSL certificate for the Web Application Proxy. This is however **required** to be the same when supporting Windows Integrated Authentication endpoints through the Web Application Proxy and when Extended Protection Authentication is turned on (default setting).<br>- The Subject name of this certificate is used to represent the Federation Service name for each instance of AD FS that you deploy. For this reason, you may want to consider choosing a Subject name on any new CA-issued certificates that best represents the name of your company or organization to partners.<br> The identity of the certificate must match the federation service name (for example, fs.contoso.com).The identity is either a subject alternative name extension of type dNSName or, if there are no subject alternative name entries, the subject name specified as a common name. Multiple subject alternative name entries can be present in the certificate, provided one of them matches the federation service name.<br>- **Important:** it's strongly recommended to use the same SSL certificate across all nodes of your AD FS farm as well as all Web Application proxies in your AD FS farm. |
-| **Service communication certificate:** This certificate enables WCF message security for securing communications between federation servers. | - By default, the SSL certificate is used as the service communications certificate.  But you also have the option to configure another certificate as the service communication certificate.<br>- **Important:** if you are using the SSL certificate as the service communication certificate, when the SSL certificate expires, make sure to configure the renewed SSL certificate as your service communication certificate. This does not happen automatically.<br>- This certificate must be trusted by clients of AD FS that use WCF Message Security.<br>- We recommend that you use a server authentication certificate that is issued by a public (third-party) certification authority (CA).<br>- The service communication certificate cannot be a certificate that uses CNG keys.<br>- This certificate can be managed using the AD FS Management console. |
-| **Token-signing certificate:** This is a standard X509 certificate that is used for securely signing all tokens that the federation server issues. | - By default, AD FS creates a self-signed certificate with 2048 bit keys.<br>- CA issued certificates are also supported and can be changed using the AD FS Management snap-in<br>- CA issued certificates must be stored & accessed through a CSP Crypto Provider.<br>- The token signing certificate cannot be a certificate that uses CNG keys.<br>- AD FS does not require externally enrolled certificates for token signing.<br> AD FS automatically renews these self-signed certificates before they expire, first configuring the new certificates as secondary certificates to allow for partners to consume them, then flipping to primary in a process called automatic certificate rollover.We recommend that you use the default, automatically generated certificates for token signing.<br> If your organization has policies that require different certificates to be configured for token signing, you can specify the certificates at installation time using Powershell (use the –SigningCertificateThumbprint parameter of the Install-AdfsFarm cmdlet).  After installation, you can view and manage token signing certificates using the AD FS Management console or Powershell cmdlets Set-AdfsCertificate and Get-AdfsCertificate.<br> When externally enrolled certificates are used for token signing, AD FS does not perform automatic certificate renewal or rollover.  This process must be performed by an administrator.<br> To allow for certificate rollover when one certificate is close to expiring, a secondary token signing certificate can be configured in AD FS. By default, all token signing certificates are published in federation metadata, but only the primary token-signing certificate is used by AD FS to actually sign tokens. |
-| **Token-decryption/encryption certificate:** This is a standard X509 certificate that is used to decrypt/encrypt any incoming tokens. It is also published in federation metadata. | - By default, AD FS creates a self-signed certificate with 2048 bit keys.<br>- CA issued certificates are also supported and can be changed using the AD FS Management snap-in<br>- CA issued certificates must be stored & accessed through a CSP Crypto Provider.<br>- The token-decryption/encryption certificate cannot be a certificate that uses CNG keys.<br>- By default, AD FS generates and uses its own, internally generated and self-signed certificates for token decryption.  AD FS does not require externally enrolled certificates for this purpose.<br> In addition, AD FS automatically renews these self-signed certificates before they expire.<br> **We recommend that you use the default, automatically generated certificates for token decryption.**<br> If your organization has policies that require different certificates to be configured for token decryption, you can specify the certificates at installation time using Powershell (use the –DecryptionCertificateThumbprint parameter of the Install-AdfsFarm cmdlet).  After installation, you can view and manage token decryption certificates using the AD FS Management console or Powershell cmdlets Set-AdfsCertificate and Get-AdfsCertificate.<br> **When externally enrolled certificates are used for token decryption, AD FS does not perform automatic certificate renewal.  This process must be performed by an administrator**.<br>- The AD FS service account must have access to the token-signing certificate's private key in the personal store of the local computer. This is taken care of by Setup. You can also use the AD FS Management snap-in to ensure this access if you subsequently change the token-signing certificate. |
+| **Secure Sockets Layer (SSL) certificate:** This is a standard SSL certificate that is used for securing communications between federation servers and clients. | - This certificate must be a publicly trusted* X509 v3 certificate.<br>- All clients that access any AD FS endpoint must trust this certificate. It's strongly recommended to use certificates that are issued by a public (third-party) certification authority (CA). You can use a self-signed SSL certificate successfully on federation servers in a test lab environment. However, for a production environment, we recommend that you obtain the certificate from a public CA.<br>- Supports any key size supported by Windows Server 2012 R2 for SSL certificates.<br>- Doesn't support certificates that use CNG keys.<br>- When used together with Workplace Join/Device Registration Service, the subject alternative name of the SSL certificate for the AD FS service must contain the value enterpriseregistration that is followed by the User Principal Name (UPN) suffix of your organization, for example, enterpriseregistration.contoso.com.<br>- Wild card certificates are supported. When you create your AD FS farm, you'll be prompted to provide the service name for the AD FS service (for example, **adfs.contoso.com**.<br>- It's strongly recommended to use the same SSL certificate for the Web Application Proxy. This is however **required** to be the same when supporting Windows Integrated Authentication endpoints through the Web Application Proxy and when Extended Protection Authentication is turned on (default setting).<br>- The Subject name of this certificate is used to represent the Federation Service name for each instance of AD FS that you deploy. For this reason, you may want to consider choosing a Subject name on any new CA-issued certificates that best represents the name of your company or organization to partners.<br> The identity of the certificate must match the federation service name (for example, fs.contoso.com).The identity is either a subject alternative name extension of type dNSName or, if there are no subject alternative name entries, the subject name specified as a common name. Multiple subject alternative name entries can be present in the certificate, provided one of them matches the federation service name.<br>- **Important:** it's strongly recommended to use the same SSL certificate across all nodes of your AD FS farm as well as all Web Application proxies in your AD FS farm. |
+| **Service communication certificate:** This certificate enables WCF message security for securing communications between federation servers. | - By default, the SSL certificate is used as the service communications certificate.  But you also have the option to configure another certificate as the service communication certificate.<br>- **Important:** if you're using the SSL certificate as the service communication certificate, when the SSL certificate expires, make sure to configure the renewed SSL certificate as your service communication certificate. This doesn't happen automatically.<br>- This certificate must be trusted by clients of AD FS that use WCF Message Security.<br>- We recommend that you use a server authentication certificate that is issued by a public (third-party) certification authority (CA).<br>- The service communication certificate can't be a certificate that uses CNG keys.<br>- This certificate can be managed using the AD FS Management console. |
+| **Token-signing certificate:** This is a standard X509 certificate that is used for securely signing all tokens that the federation server issues. | - By default, AD FS creates a self-signed certificate with 2048 bit keys.<br>- CA issued certificates are also supported and can be changed using the AD FS Management snap-in<br>- CA issued certificates must be stored & accessed through a CSP Crypto Provider.<br>- The token signing certificate can't be a certificate that uses CNG keys.<br>- AD FS doesn't require externally enrolled certificates for token signing.<br> AD FS automatically renews these self-signed certificates before they expire, first configuring the new certificates as secondary certificates to allow for partners to consume them, then flipping to primary in a process called automatic certificate rollover.We recommend that you use the default, automatically generated certificates for token signing.<br> If your organization has policies that require different certificates to be configured for token signing, you can specify the certificates at installation time using PowerShell (use the –SigningCertificateThumbprint parameter of the Install-AdfsFarm cmdlet).  After installation, you can view and manage token signing certificates using the AD FS Management console or PowerShell cmdlets Set-AdfsCertificate and Get-AdfsCertificate.<br> When externally enrolled certificates are used for token signing, AD FS doesn't perform automatic certificate renewal or rollover.  This process must be performed by an administrator.<br> To allow for certificate rollover when one certificate is close to expiring, a secondary token signing certificate can be configured in AD FS. By default, all token signing certificates are published in federation metadata, but only the primary token-signing certificate is used by AD FS to actually sign tokens. |
+| **Token-decryption/encryption certificate:** This is a standard X509 certificate that is used to decrypt/encrypt any incoming tokens. It's also published in federation metadata. | - By default, AD FS creates a self-signed certificate with 2048 bit keys.<br>- CA issued certificates are also supported and can be changed using the AD FS Management snap-in<br>- CA issued certificates must be stored & accessed through a CSP Crypto Provider.<br>- The token-decryption/encryption certificate can't be a certificate that uses CNG keys.<br>- By default, AD FS generates and uses its own, internally generated and self-signed certificates for token decryption.  AD FS doesn't require externally enrolled certificates for this purpose.<br> In addition, AD FS automatically renews these self-signed certificates before they expire.<br> **We recommend that you use the default, automatically generated certificates for token decryption.**<br> If your organization has policies that require different certificates to be configured for token decryption, you can specify the certificates at installation time using PowerShell (use the –DecryptionCertificateThumbprint parameter of the Install-AdfsFarm cmdlet).  After installation, you can view and manage token decryption certificates using the AD FS Management console or PowerShell cmdlets Set-AdfsCertificate and Get-AdfsCertificate.<br> **When externally enrolled certificates are used for token decryption, AD FS doesn't perform automatic certificate renewal.  This process must be performed by an administrator**.<br>- The AD FS service account must have access to the token-signing certificate's private key in the personal store of the local computer. This is taken care of by Setup. You can also use the AD FS Management snap-in to ensure this access if you subsequently change the token-signing certificate. |
 
 > [!CAUTION]
 > Certificates that are used for token-signing and token-decrypting/encrypting are critical to the stability of the Federation Service. Customers managing their own token-signing & token-decrypting/encrypting certificates should ensure that these certificates are backed up and are available independently during a recovery event.
 
 > [!NOTE]
-> In AD FS you can change the Secure Hash Algorithm (SHA) level that is used for digital signatures to either SHA-1 or SHA-256 (more secure). AD FS does not support the use of certificates with other hash methods, such as MD5 (the default hash algorithm that is used with the Makecert.exe command-line tool). As a security best practice, we recommend that you use SHA-256 (which is set by default) for all signatures. SHA-1 is recommended for use only in scenarios in which you must interoperate with a product that does not support communications using SHA-256, such as a non-Microsoft product or legacy versions of AD FS.
+> In AD FS you can change the Secure Hash Algorithm (SHA) level that is used for digital signatures to either SHA-1 or SHA-256 (more secure). AD FS doesn't support the use of certificates with other hash methods, such as MD5 (the default hash algorithm that is used with the Makecert.exe command-line tool). As a security best practice, we recommend that you use SHA-256 (which is set by default) for all signatures. SHA-1 is recommended for use only in scenarios in which you must interoperate with a product that doesn't support communications using SHA-256, such as a non-Microsoft product or legacy versions of AD FS.
 
 > [!NOTE]
 > After you receive a certificate from a CA, make sure that all certificates are imported into the personal certificate store of the local computer. You can import certificates to the personal store with the Certificates MMC snap-in.
@@ -77,7 +77,7 @@ The following AD FS requirements are for the server functionality that is built 
 
 - For extranet access, you must deploy the Web Application Proxy role service - part of the Windows Server&reg; 2012 R2 Remote Access server role. Prior versions of a federation server proxy are not supported with AD FS in Windows Server&reg; 2012 R2.
 
-- A federation server and the Web Application Proxy role service cannot be installed on the same computer.
+- A federation server and the Web Application Proxy role service can't be installed on the same computer.
 
 ## <a name="BKMK_4"></a>AD DS requirements
 
@@ -99,13 +99,13 @@ Most AD FS features do not require AD DS functional-level modifications to opera
 
 **Schema requirements**
 
-- AD FS does not require schema changes or functional-level modifications to AD DS.
+- AD FS doesn't require schema changes or functional-level modifications to AD DS.
 
 - To use Workplace Join functionality, the schema of the forest that AD FS servers are joined to must be set to Windows Server 2012 R2.
 
 **Service account requirements**
 
-- Any standard service account can be used as a service account for AD FS. Group Managed Service accounts are also supported. This requires at least one domain controller (it is recommended that you deploy two or more) that is running Windows Server 2012 or higher.
+- Any standard service account can be used as a service account for AD FS. Group managed service accounts are also supported. This requires at least one domain controller (it is recommended that you deploy two or more) that is running Windows Server 2012 or higher.
 
 - For Kerberos authentication to function between domain-joined clients and AD FS, the 'HOST/<adfs_service_name>' must be registered as a SPN on the service account. By default, AD FS will configure this when creating a new AD FS farm if it has sufficient permissions to perform this operation.
 
@@ -130,11 +130,11 @@ The following are the requirements and restrictions that apply based on the type
 
 **WID**
 
-- A WID farm has a limit of 30 federation servers if you have 100 or fewer relying party trusts.
+- A WID farm has a limit of 30 federation servers if you've 100 or fewer relying party trusts.
 
-- Artifact resolution profile in SAML 2.0 is not supported in the WID configuration database.  Token Replay Detection is not supported in the WID configuration database. This functionality is only used only in scenarios where AD FS is acting as the federation provider and consuming security tokens from external claims providers.
+- Artifact resolution profile in SAML 2.0 isn't supported in the WID configuration database.  Token Replay Detection isn't supported in the WID configuration database. This functionality is only used only in scenarios where AD FS is acting as the federation provider and consuming security tokens from external claims providers.
 
-- Deploying AD FS servers in distinct data centers for failover or geographic load balancing is supported as long as the number of servers does not exceed 30.
+- Deploying AD FS servers in distinct data centers for failover or geographic load balancing is supported as long as the number of servers doesn't exceed 30.
 
 The following table provides a summary for using a WID farm.  Use it to plan your implementation.
 
@@ -170,16 +170,16 @@ Several key browsers and platforms have undergone validation for rendering and f
 | Chrome [v27] | Windows 7, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Mac OS-X 10.7 |
 
 > [!IMPORTANT]
-> Known issue - Firefox: Workplace Join functionality that identifies the device using device certificate is not functional on Windows platforms. Firefox does not currently support performing SSL client certificate authentication using certificates provisioned to the user certificate store on Windows clients.
+> Known issue - Firefox: Workplace Join functionality that identifies the device using device certificate isn't functional on Windows platforms. Firefox doesn't currently support performing SSL client certificate authentication using certificates provisioned to the user certificate store on Windows clients.
 
 **Cookies**
 
-AD FS creates session-based and persistent cookies that must be stored on client computers to provide sign-in, sign-out, single sign-on (SSO), and other functionality. Therefore, the client browser must be configured to accept cookies. Cookies that are used for authentication are always Secure Hypertext Transfer Protocol (HTTPS) session cookies that are written for the originating server. If the client browser is not configured to allow these cookies, AD FS cannot function correctly. Persistent cookies are used to preserve user selection of the claims provider. You can disable them by using a configuration setting in the configuration file for the AD FS sign-in pages. Support for TLS/SSL is required for security reasons.
+AD FS creates session-based and persistent cookies that must be stored on client computers to provide sign-in, sign-out, single sign-on (SSO), and other functionality. Therefore, the client browser must be configured to accept cookies. Cookies that are used for authentication are always Secure Hypertext Transfer Protocol (HTTPS) session cookies that are written for the originating server. If the client browser isn't configured to allow these cookies, AD FS can't function correctly. Persistent cookies are used to preserve user selection of the claims provider. You can disable them by using a configuration setting in the configuration file for the AD FS sign-in pages. Support for TLS/SSL is required for security reasons.
 
 ## <a name="BKMK_extranet"></a>Extranet requirements
 To provide extranet access to the AD FS service, you must deploy the Web Application Proxy role service as the extranet facing role that proxies authentication requests in a secure manner to the AD FS service. This provides isolation of the AD FS service endpoints as well as isolation of all security keys (such as token signing certificates) from requests that originate from the internet. In addition, features such as Soft Extranet Account Lockout require the use of the Web Application Proxy. For more information about Web Application Proxy, see [Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584107(v=ws.11)).
+`
 
-If you want to use a third-party proxy for extranet access, this third-party proxy must support the protocol defined in [http://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf).
 
 ## <a name="BKMK_7"></a>Network requirements
 Configuring the following network services appropriately is critical for successful deployment of AD FS in your organization:
@@ -188,10 +188,10 @@ Configuring the following network services appropriately is critical for success
 
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.
 
-In addition, if client user certificate authentication (clientTLS authentication using X509 user certificates) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers).
+In addition, if client user certificate authentication (clientTLS authentication using X509 user certificates) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This isn't required on the firewall between the Web Application Proxy and the federation servers).
 
 > [!NOTE]
-> Also make sure that port 49443 is not used by any other services on the AD FS and Web Application Proxy server.
+> Also make sure that port 49443 isn't used by any other services on the AD FS and Web Application Proxy server.
 
 **Configuring DNS**
 
@@ -219,7 +219,7 @@ AD FS requires at least one attribute store to be used for authenticating users 
 
 When you work with other Lightweight Directory Access Protocol (LDAP)-based attribute stores, you must connect to an LDAP server that supports Windows Integrated authentication. The LDAP connection string must also be written in the format of an LDAP URL, as described in RFC 2255.
 
-It is also required that the service account for the AD FS service has the right to retrieve user information in the LDAP attribute store.
+It's also required that the service account for the AD FS service has the right to retrieve user information in the LDAP attribute store.
 
 **SQL Server Attribute Stores**
 
@@ -281,7 +281,7 @@ For Certificate Authentication:
 
 - Extends to smartcards that can be pin protected.
 
-- The GUI for the user to enter their pin is not provided by AD FS and is required to be part of the client operating system that is displayed when using client TLS.
+- The GUI for the user to enter their pin isn't provided by AD FS and is required to be part of the client operating system that is displayed when using client TLS.
 
 - The reader and cryptographic service provider (CSP) for the smart card must work on the computer where the browser is located.
 
@@ -295,7 +295,7 @@ For Certificate Authentication:
 
 For seamless Windows Integrated Authentication using Kerberos in the intranet,
 
-- It is required for the service name to be part of the Trusted Sites or the Local Intranet sites.
+- It's required for the service name to be part of the Trusted Sites or the Local Intranet sites.
 
 - In addition, the HOST/<adfs_service_name> SPN must be set on the service account that the AD FS farm runs on.
 
@@ -325,9 +325,9 @@ The following table provides additional cryptography support information on the 
 
 |**Algorithm**|**Key lengths**|**Protocols/Applications/Comments**|
 |--|--|--|
-|TripleDES – Default 192 (Supported 192 – 256) - [http://www.w3.org/2001/04/xmlenc#tripledes-cbc](http://www.w3.org/2001/04/xmlenc#tripledes-cbc)|>= 192|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm is not supported.|
-|AES128 - [http://www.w3.org/2001/04/xmlenc#aes128-cbc](http://www.w3.org/2001/04/xmlenc#aes128-cbc)|128|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm is not supported.|
-|AES192 - [http://www.w3.org/2001/04/xmlenc#aes192-cbc](http://www.w3.org/2001/04/xmlenc#aes192-cbc)|192|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm is not supported.|
+|TripleDES – Default 192 (Supported 192 – 256) - [http://www.w3.org/2001/04/xmlenc#tripledes-cbc](http://www.w3.org/2001/04/xmlenc#tripledes-cbc)|>= 192|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm isn't supported.|
+|AES128 - [http://www.w3.org/2001/04/xmlenc#aes128-cbc](http://www.w3.org/2001/04/xmlenc#aes128-cbc)|128|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm isn't supported.|
+|AES192 - [http://www.w3.org/2001/04/xmlenc#aes192-cbc](http://www.w3.org/2001/04/xmlenc#aes192-cbc)|192|Supported algorithm for Decrypting the security token. Encrypting the security token with this algorithm isn't supported.|
 |AES256 - [http://www.w3.org/2001/04/xmlenc#aes256-cbc](http://www.w3.org/2001/04/xmlenc#aes256-cbc)|256|**Default**. Supported algorithm for Encrypting the security token.|
 |TripleDESKeyWrap - [http://www.w3.org/2001/04/xmlenc#kw-tripledes](http://www.w3.org/2001/04/xmlenc#kw-tripledes)|All Key sizes supported by .NET 4.0+|Supported algorithm for Encrypting the symmetric key that encrypts a security token.|
 |AES128KeyWrap - [http://www.w3.org/2001/04/xmlenc#kw-aes128](http://www.w3.org/2001/04/xmlenc#kw-aes128)|128|Supported algorithm for Encrypting the symmetric key that encrypts the security token.|
@@ -336,7 +336,7 @@ The following table provides additional cryptography support information on the 
 |RsaV15KeyWrap - [http://www.w3.org/2001/04/xmlenc#rsa-1_5](http://www.w3.org/2001/04/xmlenc#rsa-1_5)|1024|Supported algorithm for Encrypting the symmetric key that encrypts the security token.|
 |RsaOaepKeyWrap - [http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p](http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p)|1024|Default. Supported algorithm for Encrypting the symmetric key that encrypts the security token.|
 |SHA1-[http://www.w3.org/PICS/DSig/SHA1_1_0.html](http://www.w3.org/PICS/DSig/SHA1_1_0.html)|N/A|Used by AD FS Server in artifact SourceId generation:  In this scenario, the STS uses SHA1 (per the recommendation in the SAML 2.0 standard) to create a short 160 bit value for the artifact sourceiD.<p>Also used by the AD FS web agent (legacy component from WS2003 timeframe) to identify changes in a "last updated" time value so that it knows when to update information from the STS.|
-|SHA1withRSA-<p>[http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html](http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html)|N/A|Used in cases when AD FS Server validates the signature of SAML AuthenticationRequest, sign the artifact resolution request or response, create token-signing certificate.<p>In these cases, SHA256 is the default, and SHA1 is only used if the partner (relying party) cannot support SHA256 and must use SHA1.|
+|SHA1withRSA-<p>[http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html](http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html)|N/A|Used in cases when AD FS Server validates the signature of SAML AuthenticationRequest, sign the artifact resolution request or response, create token-signing certificate.<p>In these cases, SHA256 is the default, and SHA1 is only used if the partner (relying party) can't support SHA256 and must use SHA1.|
 
 ## <a name="BKMK_13"></a>Permissions requirements
 The administrator that performs the installation and the initial configuration of AD FS must have domain administrator permissions in the local domain (in other words, the domain to which the federation server is joined to.)

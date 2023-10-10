@@ -41,7 +41,7 @@ To display the syntax for the *feat* remote command, type:
 remotehelp feat
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

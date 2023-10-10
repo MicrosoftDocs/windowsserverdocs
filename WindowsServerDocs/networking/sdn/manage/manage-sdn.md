@@ -19,7 +19,7 @@ You can use the topics in this section to manage Software Defined Networking, in
 >- [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
 >- [Plan SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
 >- [Deploy SDN](../deploy/deploy-a-software-defined-network-infrastructure.md)
->- [Security for SDN](../security/sdn-security-top.md)
+>- [Security for SDN](/azure-stack/hci/manage/nc-security)
 >- [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
 This section contains the following topics.

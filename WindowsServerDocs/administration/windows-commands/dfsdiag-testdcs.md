@@ -41,7 +41,7 @@ To verify the configuration of domain controllers in the *contoso.com* domain, t
 dfsdiag /testdcs /domain:contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

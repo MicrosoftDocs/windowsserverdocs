@@ -59,7 +59,7 @@ ksetup /delrealmflags CONTOSO ncsupported delegate
 
 To verify the realm flags have been removed, type `ksetup` and then view the output, looking for the text, **Realm flags =**.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -29,7 +29,7 @@ ms.date: 10/16/2017
 | [wdsutil add-drivergroup command](wdsutil-add-drivergroup.md) | Adds a driver group to a server. |
 | [wdsutil add-drivergroupfilter command](wdsutil-add-drivergroupfilter.md) | Adds a filter to a driver group on a server. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

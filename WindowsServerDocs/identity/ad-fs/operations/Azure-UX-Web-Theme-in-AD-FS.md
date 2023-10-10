@@ -3,8 +3,8 @@ title: Azure AD UX Web Theme in AD FS
 description: The following document describes how to change the AD FS forms sign-in so that it resembles the Azure AD user experience.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 10/24/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

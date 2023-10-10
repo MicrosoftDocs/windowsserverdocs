@@ -4,8 +4,8 @@ ms.assetid: 299e4fb9-8f1a-4275-ad7d-dad4f1594657
 title: Walkthrough - Workplace Join with an iOS Device
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 10/18/2018
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

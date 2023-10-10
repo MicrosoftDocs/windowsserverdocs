@@ -3,8 +3,8 @@ title: Build Plug-ins with AD FS 2019 Risk Assessment Model
 description: "Learn more about: Build Plug-ins with AD FS 2019 Risk Assessment Model"
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 05/05/2020
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

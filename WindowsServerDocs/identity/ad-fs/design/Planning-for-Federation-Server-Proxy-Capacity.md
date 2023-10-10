@@ -4,8 +4,8 @@ ms.assetid: 3ecb6e87-17f1-4d38-97d2-9c4d52b7cf39
 title: Planning for Federation Server Proxy Capacity
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

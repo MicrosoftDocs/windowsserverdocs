@@ -9,10 +9,6 @@ items:
       items:
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
-      - name: Windows Server, versions 2004 and 20H2
-        href: whats-new-in-windows-server-2004-20h2.md
-      - name: Windows Server, versions 1903 and 1909
-        href: whats-new-in-windows-server-1903-1909.md
       - name: Windows Server 2019
         href: whats-new-in-windows-server-2019.md
       - name: Windows Server 2016
@@ -21,6 +17,8 @@ items:
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
       items:
+      - name: Azure Edition
+        href: azure-edition.md
       - name: Windows Server 2022
         href: editions-comparison-windows-server-2022.md
       - name: Windows Server 2019
@@ -33,8 +31,6 @@ items:
       items:
       - name: Windows Server 2022
         href: removed-deprecated-features-windows-server-2022.md
-      - name: Windows Server, version 1903 and 1909
-        href: removed-deprecated-features-windows-server-1903-1909.md
       - name: Windows Server 2019
         href: removed-deprecated-features-windows-server-2019.md
       - name: Windows Server 2016
@@ -75,6 +71,10 @@ items:
         href: application-compatibility-windows-server-2016.md
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
+    - name: What is Hotpatch?
+      href: hotpatch.md
+    - name: Secured-core server
+      href: ../security/secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
   - name: How-to guides
     items:
     - name: Activation
@@ -85,8 +85,14 @@ items:
         href: kms-client-activation-keys.md
     - name: Get Extended Security Updates
       href: extended-security-updates-deploy.md
+    - name: Deliver Extended Security Updates with Azure Arc
+      href: /azure/azure-arc/servers/deliver-extended-security-updates?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Enable Azure Edition Hotpatch from ISO
+      href: enable-hotpatch-azure-edition.md
     - name: Perform an in-place upgrade
       href: perform-in-place-upgrade.md
+    - name: Configure Secured-core Server
+      href: ../security/configure-secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
   - name: Troubleshooting
     items:
     - name: Activation

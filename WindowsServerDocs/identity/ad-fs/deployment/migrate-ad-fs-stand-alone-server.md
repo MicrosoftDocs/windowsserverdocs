@@ -3,8 +3,8 @@ title: Migrate a stand-alone AD FS federation server or a single-node AD FS farm
 description: Provides information on migrating a stand alone or single-node AD FS 2.0 server to Windows Server 2012
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 06/28/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

@@ -104,6 +104,6 @@ To display information for drivers in the *Network Driver Interface Specificatio
 sc.exe query type= driver group= NDIS
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

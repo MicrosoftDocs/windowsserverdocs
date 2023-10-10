@@ -36,7 +36,7 @@ Here are a few things you can use Windows Admin Center for:
 Here's a video to give you an overview, followed by a poster giving more details:
 > [!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
-[![Windows Admin Center poster](media/WAC1910Poster_thumb_small.PNG)](media/WAC1910Poster_thumb.png)
+![Windows Admin Center poster](media/WAC1910Poster_thumb_small.PNG)
 
 [Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/main/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
@@ -111,7 +111,7 @@ Admin Center to Azure</a></li>
             <td>
             <h3>Windows Admin Center in Azure</h3>
             <ul>
-            <li><a href="azure/manage-vm.md">Manage a Windows Server VM (preview)</a>
+            <li><a href="azure/manage-vm.md">Manage a Windows Server IaaS VMs</a>
             <li><a href="azure/manage-arc-hybrid-machines.md">Manage Azure Arc-enabled Servers (preview)</a>
             <li><a href="azure/manage-hci-clusters.md">Manage Azure Stack HCI clusters (preview)</a>
             </ul>

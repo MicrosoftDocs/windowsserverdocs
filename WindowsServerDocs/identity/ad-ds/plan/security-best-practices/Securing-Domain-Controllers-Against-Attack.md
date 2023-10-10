@@ -4,16 +4,15 @@ ms.assetid: ba28bd05-16e6-465f-982b-df49633cfde4
 title: Securing Domain Controllers Against Attack
 ms.author: joflore
 author: MicrosoftGuyJFlo
-manager: karenhoran
-ms.date: 06/23/2022
+ms.date: 04/10/2023
 ms.topic: article
 ms.reviewer: rickys
 ---
 # Securing Domain Controllers Against Attack
 
->Applies to: Windows Server 2022 Preview, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)
+*Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](/security/zero-trust/ten-laws-of-security#immutable-laws-of-security-v2).
 
 Domain controllers provide the physical storage for the Active Directory Domain Services (AD DS) database, in addition to providing the services and data that allow enterprises to effectively manage their servers, workstations, users, and applications. If privileged access to a domain controller is obtained by a malicious user, they can modify, corrupt, or destroy the AD DS database and, by extension, all of the systems and accounts that are managed by Active Directory.
 
@@ -61,7 +60,7 @@ You should run all domain controllers on the newest version of Windows Server th
 
 ## Secure Configuration of Domain Controllers
 
-Tools can be used to create an initial security configuration baseline for domain controllers that can later be enforced by GPOs. These tools are described in [Administer security policy settings](/windows/security/threat-protection/security-policy-settings/administer-security-policy-settings) section of Microsoft operating systems documentation.
+Tools can be used to create an initial security configuration baseline for domain controllers that can later be enforced by GPOs. These tools are described in [Administer security policy settings](/windows/security/threat-protection/security-policy-settings/administer-security-policy-settings) section of Microsoft operating systems documentation or [Desired State Configuration (DSC) for Windows](/powershell/dsc/overview).
 
 ### RDP Restrictions
 

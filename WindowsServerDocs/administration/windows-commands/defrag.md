@@ -3,14 +3,13 @@ title: defrag
 description: Reference article for the defrag command, which locates and consolidates fragmented files on local volumes to improve system performance.
 ms.topic: reference
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: wscontent
+author: xelu86
+ms.date: 09/28/2023
 ---
 # defrag
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 11, Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 
@@ -30,22 +29,23 @@ defrag <volume> [<parameters>]
 | Parameter | Description |
 | --------- | ----------- |
 | `<volume>` | Specifies the drive letter or mount point path of the volume to be defragmented or analyzed. |
-| /a | Perform analysis on the specified volumes. |
-| /c | Perform the operation on all volumes. |
-| /d | Perform traditional defrag (this is the default). On a tiered volume though, traditional defrag is performed only on the Capacity tier. |
-| /e | Perform the operation on all volumes except those specified. |
-| /g | Optimize the storage tiers on the specified volumes. |
-| /h | Run the operation at normal priority (default is low). |
+| /a | Performs an analysis on the specified volumes. |
+| /b | Performs boot optimization to increase boot performance. |
+| /c | Performs the operation on all volumes. |
+| /d | Performs traditional defrag (this is the default). On a tiered volume though, traditional defrag is performed only on the Capacity tier. |
+| /e | Performs the operation on all volumes except those specified. |
+| /g | Optimizes the storage tiers on the specified volumes. |
+| /h | Runs the operation at normal priority (default is low). |
 | /i [n] | Tier optimization would run for at most n seconds on each volume. |
-| /k | Perform slab consolidation on the specified volumes. |
-| /l | Perform retrim on the specified volumes. |
-| /m [n] | Run the operation on each volume in parallel in the background. At most n threads optimize the storage tiers in parallel. |
-| /o | Perform the proper optimization for each media type. |
-| /t | Track an operation already in progress on the specified volume. |
-| /u | Print the progress of the operation on the screen. |
-| /v | Print verbose output containing the fragmentation statistics. |
-| /x | Perform free space consolidation on the specified volumes. |
-| /? | Displays this help information. |
+| /k | Performs slab consolidation on the specified volumes. |
+| /l | Performs retrim on the specified volumes. |
+| /m [n] | Runs the operation on each volume in parallel in the background. At most, *n* threads optimize the storage tiers in parallel. |
+| /o | Performs the proper optimization for each media type. |
+| /t | Tracks an operation already in progress on the specified volume. |
+| /u | Prints the progress of the operation on the screen. |
+| /v | Prints verbose output containing the fragmentation statistics. |
+| /x | Performs free space consolidation on the specified volumes. |
+| /? | Displays the help information. |
 
 #### Remarks
 
@@ -67,13 +67,13 @@ defrag <volume> [<parameters>]
 
 - While **defrag** is analyzing and defragmenting a volume, it displays a blinking cursor. When **defrag** is finished analyzing and defragmenting the volume, it displays the analysis report, the defragmentation report, or both reports, and then exits to the command prompt.
 
-- By default, **defrag** displays a summary of both the analysis and defragmentation reports if you do not specify the **/a** or **/v** parameters.
+- By default, **defrag** displays a summary of both the analysis and defragmentation reports if you don't specify the **/a** or **/v** parameters.
 
 - You can send the reports to a text file by typing **>**<em>FileName.txt</em>, where *FileName.txt* is a file name you specify. For example: `defrag volume /v > FileName.txt`
 
 - To interrupt the defragmentation process, at the command line, press **CTRL+C**.
 
-- Running the **defrag** command and Disk defragmenter are mutually exclusive. If you are using Disk defragmenter to defragment a volume and you run the **defrag** command at a command-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk defragmenter, the defragmentation options in Disk defragmenter are unavailable.
+- Running the **defrag** command and Disk defragmenter are mutually exclusive. If you're using Disk defragmenter to defragment a volume and you run the **defrag** command at a command-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk defragmenter, the defragmentation options in Disk defragmenter are unavailable.
 
 ## Examples
 
@@ -103,13 +103,13 @@ defrag /c /h /v
 
 ## Scheduled task
 
-The defragmentation process runs scheduled task as a maintenance task, which typically runs every week. As an Administrator, you can change the how often the task runs by using the **Optimize Drives** app.
+The defragmentation process runs scheduled task as a maintenance task, which typically runs every week. As an Administrator, you can change how often the task runs by using the **Optimize Drives** app.
 
 - When run from the scheduled task, **defrag** uses the below policy guidelines for SSDs:
 
-  - **Traditional optimization processes**. Includes **traditional defragmentation**, for example moving files to make them reasonably contiguous and **retrim**. This is done once per month. However, if both **traditional defragmentation** and **retrim** are skipped, then **analysis** isn't run. Changing the frequency of the scheduled task does not affect the once per month cadence for the SSDs.
+  - **Traditional optimization processes**. Includes **traditional defragmentation**, for example moving files to make them reasonably contiguous and **retrim**. This is done once per month. However, if both **traditional defragmentation** and **retrim** are skipped, then **analysis** isn't run. Changing the frequency of the scheduled task doesn't affect the once per month cadence for the SSDs.
 
-  - If you manually run **traditional defragmentation** on a SSD, between your normally scheduled runs, the next scheduled task run performs **analysis** and **retrim**, but skips **traditional defragmentation** on that SSD.
+  - If you manually run **traditional defragmentation** on an SSD, between your normally scheduled runs, the next scheduled task run performs **analysis** and **retrim**, but skips **traditional defragmentation** on that SSD.
 
   - If you skip **analysis**, you won't see an updated **Last run** time in the **Optimize Drives** app. Because of that, the **Last run** time can be up to a month old.
 
@@ -119,9 +119,9 @@ The defragmentation process runs scheduled task as a maintenance task, which typ
 
     - The computer isn't plugged in. The process won't run if the computer is running on battery power.
 
-    - The computer started back up (resumed from idle).
+    - The computer is resumed from being idle.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -131,4 +131,4 @@ The defragmentation process runs scheduled task as a maintenance task, which typ
 
 - [fsutil dirty](fsutil-dirty.md)
 
-- [Optimize-Volume Powershell](/powershell/module/storage/optimize-volume)
+- [Optimize-Volume PowerShell](/powershell/module/storage/optimize-volume)

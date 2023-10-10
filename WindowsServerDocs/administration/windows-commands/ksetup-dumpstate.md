@@ -41,7 +41,7 @@ To locate the Kerberos realm configurations on a computer, type:
 ksetup /dumpstate
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -37,7 +37,7 @@ To display the drive information for the C: drive:
 bdehdcfg  driveinfo C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

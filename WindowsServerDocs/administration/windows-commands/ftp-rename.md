@@ -36,7 +36,7 @@ To rename the remote file *example.txt* to *example1.txt*, type:
 rename example.txt example1.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

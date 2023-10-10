@@ -61,7 +61,7 @@ To list existing disk quotas for a disk volume that is specified with the drive 
 fsutil quota query C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

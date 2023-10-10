@@ -50,7 +50,7 @@ To get information by using the GUID string, type:
 wdsutil /verbose /Get-Device /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6 /forest:Yes
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil set-device command](wdsutil-set-device.md)

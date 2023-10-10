@@ -38,6 +38,6 @@ To register the .dll for the Active Directory Schema, type:
 regsvr32 schmmgmt.dll
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

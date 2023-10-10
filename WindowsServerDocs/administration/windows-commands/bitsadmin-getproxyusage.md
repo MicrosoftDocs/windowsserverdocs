@@ -45,7 +45,7 @@ To retrieve the proxy usage for the job named *myDownloadJob*:
 bitsadmin /getproxyusage myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

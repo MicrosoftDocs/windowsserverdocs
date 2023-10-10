@@ -65,7 +65,7 @@ wdsutil /remove-MulticastTransmission /Server:MyWDSServer
 /Image:Vista with Officemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /force
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)
 - [wdsutil get-multicasttransmission command](wdsutil-get-multicasttransmission.md)

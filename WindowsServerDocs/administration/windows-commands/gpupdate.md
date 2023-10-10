@@ -39,6 +39,6 @@ To force a background update of all Group Policy settings, regardless of whether
 gpupdate /force
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

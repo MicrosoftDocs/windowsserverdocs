@@ -34,7 +34,7 @@ To set the display name for the job to *myDownloadJob*:
 bitsadmin /setdisplayname myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -3,10 +3,10 @@ title: AD FS prompt=login
 description: Learn about the native support for the prompt=login parameter that is available in AD FS.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 06/27/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
-ms.custom: it-pro
+ms.custom: it-pro, has-azure-ad-ps-ref
 ---
 
 # Active Directory Federation Services prompt=login parameter support
@@ -35,7 +35,7 @@ AD FS in Windows Server 2012 R2 with the July 2016 update rollup introduced nati
 The following is a list of AD FS versions that support the `prompt=login` parameter.
 
 - AD FS in Windows Server 2012 R2 with the July 2016 update rollup
-- AD FS in Windows Server 2016
+- AD FS in Windows Server 2016 or later 
 
 ## How to configure a federated domain to send prompt=login to AD FS
 

@@ -19,7 +19,7 @@ Monitors a queue for incoming messages and performs an action, in the form of an
 mqtgsvc.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

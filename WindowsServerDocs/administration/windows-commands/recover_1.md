@@ -38,6 +38,6 @@ To recover the disk group that contains the disk with focus, type:
 recover
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

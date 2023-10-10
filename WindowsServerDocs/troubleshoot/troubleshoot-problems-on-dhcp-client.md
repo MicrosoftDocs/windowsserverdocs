@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot problems on the DHCP client
-description: This artilce introduces how to troubleshoot problems on the DHCP client and collect data.
+description: This article introduces how to troubleshoot problems on the DHCP client and collect data.
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: troubleshooting
@@ -8,6 +8,9 @@ author: Deland-Han
 ms.author: delhan
 ---
 # Troubleshoot problems on the DHCP client
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806271" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DHCP issues.
 
 This article discusses how to troubleshoot problems that occur on DHCP clients.
 
