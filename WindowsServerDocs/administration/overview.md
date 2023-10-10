@@ -6,7 +6,7 @@ ms.author: thmaure
 manager: carmencr
 ms.reviewer: carmencr
 ms.topic: overview
-ms.date: 09/29/2023
+ms.date: 10/10/2023
 ---
 # Windows Server management overview
 
