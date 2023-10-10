@@ -99,7 +99,7 @@ You might need to configure the repository as Trusted for the command to succeed
 
 The next step is to create an Azure Active Directory application that's configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 
-The app needs to be configured with two permissions: `Device.Read.All` and either `Device.LocalCredential.Read` or `Device.LocalCredential.ReadAll`. `DeviceManagementManagedDevices.Read.All` may also be required in order to query passwords for Microsoft Managed Desktop devices.
+The app needs to be configured with two permissions: `Device.Read.All` and either `DeviceLocalCredential.ReadBasic.All` or `DeviceLocalCredential.Read.All`. `DeviceManagementManagedDevices.Read.All` may also be required in order to query passwords for Microsoft Managed Desktop devices.
 
 > [!IMPORTANT]
 >
