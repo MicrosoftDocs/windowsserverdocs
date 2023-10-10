@@ -41,6 +41,8 @@ The format of the CSV file starts with the four headings ```"name","type","tags"
 "teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
 "myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
 ```
+> [!NOTE]
+> The CSV file is case-sensitive.
 
 ## Import RDCman connections
 
