@@ -5,7 +5,7 @@ manager: lizross
 ms.author: jgerend
 ms.topic: article
 author: JasonGerend
-ms.date: 09/11/2023
+ms.date: 10/10/2023
 description: How to use Microsoft Azure to host the witness for a Windows Server failover cluster in the cloud - also known as how to deploy a Cloud Witness.
 ---
 
