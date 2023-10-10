@@ -10,7 +10,7 @@ ms.date: 10/10/2023
 ---
 # Windows Server management overview
 
-Windows Server has many tools that let administrators connect applications, networks, and web services into an infrastructure. You may already be familiar with some of these tools, such as the Windows Server Microsoft Management Consoles (MMC). However, it's important to be familiar with all the management tools Windows Server offers so you can choose which one is right for your organization.
+Windows Server has many tools that let administrators connect applications, networks, and web services into an infrastructure. You should already be familiar with some of these tools, such as the Windows Server Microsoft Management Consoles (MMC). However, it's important to be familiar with all the management tools Windows Server offers so you can choose which one is right for your organization.
 
 We designed these management tools to work together in Windows Server environments because on-premises, hybrid, and cloud-native infrastructures have complex and interconnected needs when it comes to management and administration.
 
@@ -130,7 +130,7 @@ You can use local management tools for Windows Server in the following situation
 - You're an IT professional who wants a straightforward management console to manage local and remote Windows servers.
 - You want to use Win32 console commands to run scripts or scripting tools to automate tasks.
 - You want to use PowerShell to automate management for Windows Server and other systems.
-- You want to use Sconfig to manage Windows Server Core.
+- You want to use SConfig to manage Windows Server Core.
 
 ### More resources for local management tools
 
