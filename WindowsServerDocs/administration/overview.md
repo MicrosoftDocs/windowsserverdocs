@@ -12,7 +12,7 @@ ms.date: 09/29/2023
 
 Windows Server has many tools that let administrators connect applications, networks, and web services into an infrastructure. You may already be familiar with some of these tools, such as the Windows Server Microsoft Management Consoles (MMC). However, it's important to be familiar with all the management tools Windows Server offers so you can choose which one is right for your organization.
 
-We designed these management tools to work together in Windows Server environments because on-premises, hybrid, and cloud-native infrastructures have complex and interconnected needs when it comes to management and administration. You may find that your infrastructure is so complex that you need to use every available option for your own personal management solution.
+We designed these management tools to work together in Windows Server environments because on-premises, hybrid, and cloud-native infrastructures have complex and interconnected needs when it comes to management and administration.
 
 The four main options for managing your Windows Server infrastructure are:
 
@@ -25,14 +25,14 @@ This article walks you through each one, describing their capabilities, and give
 
 ## Azure Arc and Azure Automanage
 
-Azure Arc provides cloud-based management for servers. When you enable Azure Arc, you can manage physical servers running Windows or Linux and virtual machines (VMs) even if they're hosted outside of Azure on your corporate network or another cloud provider. The management experience is so seamless it feels like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
+Azure Arc provides cloud-based management for servers. When you enable Azure Arc, you can manage physical servers running Windows or Linux and virtual machines (VMs) even if they're hosted outside of Azure on your corporate network or another cloud provider. The management experience is seamless, so it feels like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
 
 You can use Azure Automanage with your Azure Arc-enabled servers to further streamline your management experience. If your Arc-enabled servers already follow server management guidelines, Automanage manages them for you. Automanage handles service discovery, enrollment, configuration, and monitoring for the Azure services your servers use.
 
 Here's a brief summary of the capabilities of Azure Arc and Azure Automanage:
 
-- Limitless scaling across Windows and Linux servers
-- Includes a web browser interface, REST API, and command-line tools
+- Scaling across Windows and Linux servers
+- Web-based browser interface, REST API, and command-line tools
 - Limited support for disconnected mode
 - Focused on at-scale governance, security, monitoring, and reducing operating expenses.
 
