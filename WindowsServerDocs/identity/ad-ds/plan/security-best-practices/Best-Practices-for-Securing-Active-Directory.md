@@ -5,13 +5,11 @@ title: Best Practices for Securing Active Directory
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 09/21/2023
+ms.date: 10/10/2023
 ms.topic: article
 ---
 
 # Best Practices for Securing Active Directory
-
-<!--Note to self: this is the base document I'm consolidating everything into.-->
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
