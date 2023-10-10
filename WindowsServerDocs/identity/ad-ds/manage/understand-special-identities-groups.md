@@ -197,7 +197,7 @@ This group includes all Read-only Domain Controllers in an Active Directory fore
 
 |Attribute|Value|
 | --- | --- |
-|Well-Known SID/RID|S-1-5-21-\<RootDomain>-498|
+|Well-known SID/RID|S-1-5-21-\<RootDomain>-498|
 |Object Class|Group|
 |Default location in Active Directory |cn=Users, dc=\<forestRootDomain\>|
 |Default user rights|None|
@@ -374,7 +374,7 @@ This group includes all RODCs in the domain with read-only rights to the Active 
 |Attribute|Value|
 | --- | --- |
 |Well-known SID/RID|S-1-5-21-\<domain>-521|
-|Object class| Group|
+|Object class|Group|
 |Default location in Active Directory |cn=Users, dc=\<rootDomain\>|
 |Default user rights|None|
 
