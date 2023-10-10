@@ -25,7 +25,7 @@ In this article, we describe the most common types of vulnerabilities we've obse
 
 In order to learn how to best protect your infrastructure, you first need to understand where attacks are most likely to strike and how they work. This article only covers general recommendations, but if you want to go into more detail, we've included links to more thorough articles.
 
-Now, let's look at the most common security vulnerabilities in the average AD deployment.
+Now, let's look at the most common security vulnerabilities.
 
 ### Common entry points
 
@@ -41,7 +41,7 @@ The most common vulnerabilities are:
 
 ### Credential theft
 
-Credential theft attacks are when an attacker gains privileged access to a computer on a network by using tools to extract credentials from sessions of accounts that are currently signed in. Attackers often go for specific accounts that already have elevated privileges. The attacker steals the credentials of this account to mimic its identity, fooling the security system into letting them into the network.
+Credential theft attacks are when an attacker gains privileged access to a computer on a network by using tools to extract credentials from sessions of accounts that are currently signed in. Attackers often go for specific accounts that already have elevated privileges. The attacker steals the credentials of this account to mimic its identity to gain access to the system.
 
 Credential thieves usually target these kinds of accounts:
 
@@ -61,7 +61,7 @@ Users with highly privileged accounts raise the risk of having their credentials
 
 - Browsing the internet while signed in to a privileged account
 
-You should also avoid engaging in the following risky behaviors at all costs to protect the credential security of your users:
+You should also avoid poor and risky configurations to protect the credential security of your system, such as:
 
 - Configuring local privileged accounts with the same credentials across all systems.
 
@@ -73,11 +73,11 @@ For more information about vulnerable accounts, see [Attractive accounts for cre
 
 ## Reduce Active Directory attack surface
 
-You can prevent attacks is by reducing the *attack surface* on your Active Directory. In other words, you make your deployment safer by closing up gaps in security that we mentioned in the previous section.
+You can prevent attacks by reducing the *attack surface* on your Active Directory deployment. In other words, you make your deployment safer by closing up gaps in security that we mentioned in the previous section.
 
 ### Avoid granting excessive privileges
 
-Credential theft attacks depend on the admins granting certain accounts excessive privileges. You can prevent these attacks is to do the following things:
+Credential theft attacks depend on admins granting certain accounts excessive privileges. You can prevent these attacks is to do the following things:
 
 - Remember there are three built-in groups that have the highest privileges in Active Directory by default: Enterprise Admins, Domain Admins, and Administrators. Make sure you take steps to protect those three groups, along with any other groups your organization gave elevated privileges to.
 
@@ -100,7 +100,7 @@ Secure administrative hosts are computers configured to support administration f
 When configuring a secure administrative host, you must follow these general principles:
 
 - Never administer a trusted system from a less-trusted host.
-- Only use multi-factor authentication when using privileged accounts or doing administrative tasks.
+- Require multi-factor authentication when using privileged accounts or doing administrative tasks.
 - Physical security for your administrative hosts is as important as system and network security.
 
 For more information, see [Implementing secure administrative hosts](Implementing-Secure-Administrative-Hosts.md).
@@ -135,7 +135,7 @@ Here's a brief summary of things you should do when planning for security compro
 
 - Classify all AD data as systems, applications, or users
 
-Once again, to read about these practices in more detail, see [Maintaining a more secure environment](Maintaining-a-More-Secure-Environment.md).
+To continue reading more detail about these practices, see [Maintaining a more secure environment](Maintaining-a-More-Secure-Environment.md).
 
 ## Security measure summary table
 
