@@ -83,7 +83,7 @@ items:
         href: kms-create-host.md
       - name: KMS client activation
         href: kms-client-activation-keys.md
-    - name: Connect Windows Server machines to Azure Arc
+    - name: Connect Windows Server to Azure Arc
       href: /azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Get Extended Security Updates
       href: extended-security-updates-deploy.md
