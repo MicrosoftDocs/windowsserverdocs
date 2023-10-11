@@ -41,7 +41,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Storage Replica Compression|No|No|**Yes**|
 |Storage Spaces|Yes|Yes|Yes|
 |Storage Spaces Direct|No|**Yes**|**Yes**|
-|Volume Activation Services|Yes|Yes|Yes|
+|Volume Activation Services|Yes|Yes|Yes, (Cannot Configure as a KMS host)|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|Yes|
 |Server license logging|Yes|Yes|Yes|
