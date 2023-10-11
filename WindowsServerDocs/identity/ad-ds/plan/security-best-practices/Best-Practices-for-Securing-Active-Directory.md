@@ -32,9 +32,13 @@ Initial breach targets, or entry points, are areas where attackers can most easi
 The most common vulnerabilities are:
 
 - Gaps in antivirus and antimalware deployments
+
 - Incomplete patching
+
 - Outdated applications and operating systems
+
 - Misconfiguration
+
 - Lack of secure application development practices
 
 ### Credential theft
@@ -84,9 +88,13 @@ Credential theft attacks depend on admins granting certain accounts excessive pr
 - Check the following areas of your infrastructure to make sure you aren't granting excessive privileges to user accounts:
   
   - Active Directory
+
   - Member servers
+
   - Workstations
+
   - Applications
+
   - Data repositories
 
 For more information, see [Implementing least-privilege administrative models](Implementing-Least-Privilege-Administrative-Models.md).
@@ -98,7 +106,9 @@ Secure administrative hosts are computers configured to support administration f
 When configuring a secure administrative host, you must follow these general principles:
 
 - Never administer a trusted system from a less-trusted host.
+
 - Require multifactor authentication when using privileged accounts or doing administrative tasks.
+
 - Physical security for your administrative hosts is as important as system and network security.
 
 For more information, see [Implementing secure administrative hosts](Implementing-Secure-Administrative-Hosts.md).
@@ -108,7 +118,9 @@ For more information, see [Implementing secure administrative hosts](Implementin
 If an attacker gains privileged access to a domain controller, they can modify, corrupt, and destroy the AD database. An attack on the domain controller potentially threatens all AD-managed systems and accounts within your organization. Therefore, it's important you take the following measures to keep your domain controllers safe:
 
 - Keep your domain controllers physically secure within their datacenters, branch offices, and remote locations.
+
 - Become familiar with your domain controller operating system.
+
 - Configure your domain controllers with built-in and freely available configuration tools to make security configuration baselines you can enforce with group policy objects (GPOs).
 
 For more information, see [Securing domain controllers against attack](Securing-Domain-Controllers-Against-Attack.md).
