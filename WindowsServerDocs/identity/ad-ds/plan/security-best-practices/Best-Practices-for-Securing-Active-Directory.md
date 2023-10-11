@@ -5,7 +5,7 @@ title: Best Practices for Securing Active Directory
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 10/10/2023
+ms.date: 10/11/2023
 ms.topic: article
 ---
 
