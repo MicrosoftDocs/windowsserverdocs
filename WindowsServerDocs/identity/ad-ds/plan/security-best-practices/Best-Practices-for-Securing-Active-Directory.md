@@ -79,7 +79,7 @@ Credential theft attacks depend on admins granting certain accounts excessive pr
 
 - Remember there are three built-in groups that have the highest privileges in Active Directory by default: Enterprise Admins, Domain Admins, and Administrators. Make sure you take steps to protect those three groups, along with any other groups your organization gave elevated privileges to.
 
-- Implement a least-privilege administrative model. Don't use highly privileged accounts for everyday administrative tasks if you can avoid it. Also, make sure your admin accounts only have the baseline privileges required to do their jobs, with no extra privileges they may not need. Avoid giving excessive privileges to user accounts that don't need them. Make sure you don't accidentally give an account the same privileges across systems unless they absolutely need them.
+- Implement a least-privilege administrative model. Don't use highly privileged accounts for everyday administrative tasks if you can avoid it. Also, make sure your admin accounts only have the baseline privileges required to do their jobs, with no extra privileges they don't need. Avoid giving excessive privileges to user accounts that don't need them. Make sure you don't accidentally give an account the same privileges across systems unless they absolutely need them.
 
 - Check the following areas of your infrastructure to make sure you aren't granting excessive privileges to user accounts:
   
@@ -98,7 +98,7 @@ Secure administrative hosts are computers configured to support administration f
 When configuring a secure administrative host, you must follow these general principles:
 
 - Never administer a trusted system from a less-trusted host.
-- Require multi-factor authentication when using privileged accounts or doing administrative tasks.
+- Require multifactor authentication when using privileged accounts or doing administrative tasks.
 - Physical security for your administrative hosts is as important as system and network security.
 
 For more information, see [Implementing secure administrative hosts](Implementing-Secure-Administrative-Hosts.md).
