@@ -9,7 +9,7 @@ ms.date: 06/02/2023
 
 # Hyper-V storage I/O performance
 
-This article explores different options and considerations for tuning storage I/O performance in a virtual machine (VM). The storage I/O path extends across four successive stages:
+This article explores different options and considerations for tuning storage input/output (I/O) performance in a virtual machine (VM). The storage I/O path extends across four successive stages:
 
 1. Guest storage stack
 1. Host virtualization layer
@@ -20,49 +20,55 @@ The following sections describe the optimizations possible for each stage.
 
 ## Virtual controllers
 
-Hyper-V offers three types of virtual controllers: IDE, SCSI, and virtual Fibre Channel host bus adapters (HBAs).
+Hyper-V offers three types of virtual controllers:
+
+- Integrated Drive Electronics (IDE)
+
+- Small computer system interface (SCSI)
+
+- Virtual Fibre Channel host bus adapters (HBAs)
 
 ### IDE
 
-IDE (Integrated Drive Electronics) controllers expose IDE disks to the VM. The IDE controller is emulated. It's the only controller available for guest VMs running earlier versions of Windows without [Hyper-V VM integration services](/virtualization/hyper-v-on-windows/reference/integration-services). Disk I/O performed by using the IDE filter driver provided with integration services is significantly better than the disk I/O performance provided with the emulated IDE controller.
+IDE controllers are emulatee controllers that expose IDE disks to the VM. This type of controller is the only option for guest VMs running earlier versions of Windows without [Hyper-V VM integration services](/virtualization/hyper-v-on-windows/reference/integration-services). The IDE filter driver that integration services provides can perform disk I/O much better than the emulated IDE controller.
 
-**Recommendation**: Only use IDE disks for operating system (OS) disks. OS disks have performance limitations due to the maximum I/O size that can be issued to these devices.
+We recommend that you only use IDE disks for OS disks. OS disks have performance limitations based on the maximum I/O size for their devices.
 
 ### SCSI (SAS controller)
 
-SCSI (small computer system interface) controllers expose SCSI disks to the VM. Each virtual SCSI controller can support up to 64 devices. The SCSI path isn't emulated, which makes it the preferred controller for any disk other than the OS disk. For Generation 2 VMs, SCSI disks are the only type of controller possible. Support for SCSI disks is available in Windows Server 2012 R2 and later, where the controller is reported as SAS to support shared VHDX.
+SCSI controllers are virtual controllers that expose SCSI disks to the VM. Each SCSI controller supports up to 64 devices. The SCSI path isn't emulated, which makes it the preferred controller for any disk other than the OS disk. SCSI controllers are supported by Windows Server 2012 R2 and later, but only in scenarios where you report the controller as a Serial Attached SCSI (SAS) for supporting a shared virtual hard disk (VHDX).
 
-**Recommendation**: For optimal performance, attach multiple disks to a single virtual SCSI controller. Create other controllers only as required to scale the number of disks connected to the VM. 
+For best performance, we recommend you attach multiple disks to a single virtual SCSI controller. You should only crate more controllers if you have no other options for scaling how many disks are connected to the VM.
 
 ### Virtual Fibre Channel HBAs
 
-Configure Virtual Fibre Channel HBAs to allow direct access for VMs to Fibre Channel and Fibre Channel over Ethernet (FCoE) LUNs. Virtual Fibre Channel disks bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O.
+Configure Virtual Fibre Channel HBAs to allow VMs to directly access Fibre Channel and Fibre Channel over Ethernet (FCoE) logical unit numbers (LUNs). Virtual Fibre Channel disks bypass the NTFS file system in the root partition, which reduces storage I/O central processing unit (CPU) usage. Virtual Fibre Channel disks are great for large data drives and drives shared between multiple VMs in guest clustering scenarios.
 
-Large data drives and drives shared between multiple VMs (for guest clustering scenarios) are prime candidates for virtual Fibre Channel disks.
+To use Virtual Fibre Channel disks, you must install one or more Fibre Channel HBAs on the host machine. Each host HBA must use HBA drivers that support Windows Server 2016 Virtual Fibre Channel or N_Port ID Virtualization (NPIV) capabilities. The Storage Area Network (SAN) fabric should also support NPIV, and you should configure the HBA ports for the Fibre Channel in a Fiber Channel topology that supports NPIV.
 
-Virtual Fibre Channel disks require one or more Fibre Channel HBAs to be installed on the host. Each host HBA is required to use an HBA driver that supports Windows Server 2016 Virtual Fibre Channel/NPIV capabilities. The SAN fabric should support NPIV, and HBA ports used for the virtual Fibre Channel should be set up in a Fibre Channel topology that supports NPIV.
-
-**Recommendation**: To maximize throughput on hosts installed with more than one HBA, configure multiple virtual HBAs inside the Hyper-V VM. Up to four HBAs can be configured for each VM. Hyper-V automatically makes a best effort to balance virtual HBAs to host HBAs that access the same virtual SAN.
+To maximize throughput on hosts with more than one HBA, we recommend you configure many virtual HBAs inside the Hyper-V VM. You can configure up to four HBAs for each VM. Hyper-V automatically balances virtual HBAs to host HBAs accessing the same virtual SAN.
 
 ## Virtual disks
 
-Virtual disks can be exposed to the VMs through the virtual controllers. These disks can be virtual hard disks that are file abstractions of a disk or a pass-through disk on the host.
+Virtual disks are exposed to the VMs by virtual controllers and can be virtual hard disks or pass-through disks on the host.
 
-There are two virtual hard disk formats: VHD and VHDX. Each format supports three types of virtual hard disk files.
+Virtual disks come in VHD or VHDX formats. Each format supports three types of virtual hard disk files.
 
-**Recommendation**: When you upgrade to Windows Server 2016, convert all VHD files to the VHDX format. For details, see the following [VHDX](#vhdx-format) section.
+If you upgrade your deployment to Windows Server 2106 or later, we recommend you convert all VHD files to VHDX format. For more information, see [VHDX format](#vhdx-format).
 
 ### VHD format
 
-Earlier versions of Hyper-V support only the VHD format. The VHD format is available in Windows Server 2012 and later. Later versions of Hyper-V contain improvements for the VHD format to allow better alignment. The updates result in significantly better performance on new large sector disks.
+Windows Server 2012 and later support the VHD format. Earlier versions of Hyper-V only support VHD format. Later versions of Hyper-V include improvements to their VHD format that allows for better alignment. <!--Is this talking about VHDX?--> As a result, later versions of Hyper-V perform much better on large sector disks.
 
-A VHD created in Windows Server 2012 or later has the optimal 4-KB alignment. The aligned format is fully compatible with previous Windows Server versions. However, the alignment property is broken for new allocations from parsers that aren't 4 KB alignment-aware. Examples include a VHD parser from an earlier version of Windows Server or a non-Microsoft parser.
+Any VHD you create in Windows Server 2012 or later has the optimal four-kilobyte alignment. This aligned format is fully compatible with earlier versions of WIndows Server. However, the alignment property doesn't support new allocations from parsers that aren't 4 KB alignment-aware, such as a parser from an earlier version of WIndows Server or a non-Microsoft parser.
 
 #### Convert disk to VHD format
 
+<!--Where I left off-->
+
 When you move a VHD from an earlier release of Hyper-V or Windows Server to a later release, the system doesn't automatically convert the disk to the newer improved VHD format.
 
-To convert an existing virtual disk to use the newer VHD format, you can use the `Convert-VHD` PowerShell command: 
+To convert an existing virtual disk to use the newer VHD format, you can use the `Convert-VHD` PowerShell command:
 
 ```powershell
 Convert-VHD –Path E:\vms\testvhd\test.vhd –DestinationPath E:\vms\testvhd\test-converted.vhd
