@@ -158,7 +158,7 @@ Each measure is also categorized based on whether it's tactical, strategic, prev
 | Patch applications. | Tactical | Preventative |
 | Patch operating systems. | Tactical | Preventative |
 | Deploy and promptly update antivirus and antimalware software across all systems and monitor for attempts to remove or disable it. | Tactical | Both |
-| Monitor sensitive Active Directory objects for modification attempts and Windows for events that may indicate attempted compromise. | Tactical | Detective |
+| Monitor sensitive Active Directory objects for modification attempts and Windows for events that might indicate attempted compromise. | Tactical | Detective |
 | Protect and monitor accounts for users who have access to sensitive data | Tactical | Both |
 | Prevent powerful accounts from being used on unauthorized systems. | Tactical | Preventative |
 | Eliminate permanent membership in highly privileged groups. | Tactical | Preventative |
