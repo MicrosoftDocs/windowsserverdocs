@@ -66,37 +66,41 @@ Any VHD you create in Windows Server 2012 or later has the optimal four-kilobyte
 
 <!--Where I left off-->
 
-When you move a VHD from an earlier release of Hyper-V or Windows Server to a later release, the system doesn't automatically convert the disk to the newer improved VHD format.
+When you migrate a VHD from an earlier version of Hyper-V or Windows Server to a later one, the system doesn't automatically convert the disk to VHD format.
 
-To convert an existing virtual disk to use the newer VHD format, you can use the `Convert-VHD` PowerShell command:
+You can convert an existing virtual disk to VHD by opening a PowerShell window and running the following command:
+
+```powershell
+Convert-VHD –Path <SourceDiskFilePath> –DestinationPath <ConvertedDiskFilePath>
+```
+
+For example, if you planned to convert a source disk named `test.vhd` in drive E to a renamed converted disk named `test-converted.vhd` in the same folder, you'd run this command:
 
 ```powershell
 Convert-VHD –Path E:\vms\testvhd\test.vhd –DestinationPath E:\vms\testvhd\test-converted.vhd
 ```
 
-In this example, the source disk to convert is **test.vhd**, and the new (converted) disk is **test-converted.vhd**. When you run the command, update the `-Path` and `-DestinationPath` values as required for your disk conversion.
-
 > [!NOTE]
-> The new (converted) VHD is created with the data from the source VHD via the **Copy from Source** disk option. For more information, see the [Convert-VHD](/powershell/module/hyper-v/convert-vhd) command in the Window PowerShell Hyper-V reference.
+> When you convert a VHD, PowerShell uses the data from the source VHD based on teh **Copy from Source** disk option. For more information, see [Convert-VHD](/powershell/module/hyper-v/convert-vhd).
 
 #### Check disk alignment
 
-You can check the `Alignment` property for the VHDs in your system. After you convert a disk, you can view the property to ensure the new disk uses the optimal 4-KB alignment. 
+After you convert a disk, you can check its *Alignment* variable to make sure it's using the optimal 4-KB alignment by running the `Get-VHD` command in PowerShell. Make sure to run the command for the source disk and the converted disk, then compare the values to make sure the converted disk is 4-KB alignment-aware.
 
-To check the alignment setting for a disk, you can use the `Get-VHD` PowerShell command. Run the command for the source disk, and then again for the converted disk. Compare the values for the `Alignment` property to ensure the new (converted) disk is 4 KB alignment-aware.
+To view the alignment of your disks:
 
-1. Run the `Get-VHD` command to view the alignment setting for the source disk. 
+1. Open a PowerShell window.
+
+1. Run the `Get-VHD` command to view the alignment setting for the source disk.
 
    ```powershell
-   Get-VHD –Path E:\vms\testvhd\test.vhd
+   Get-VHD –Path <SourceVHDFilePath>
    ```
-
-   In this example, the source disk is named **test.vhd**. When you run the command on your system, update the `-Path` value for your source disk.
 
 1. In the output, notice the value for the `Alignment` property. In this example, the value is `0`, which means the disk isn't 4 KB alignment-aware.
 
-   ```output
-   Path                    : E:\vms\testvhd\test.vhd
+   ```powershell
+   Path                    : <SourceVHDFilePath>
    VhdFormat               : VHD
    VhdType                 : Dynamic
    FileSize                : 69245440
@@ -114,18 +118,16 @@ To check the alignment setting for a disk, you can use the `Get-VHD` PowerShell 
    Number                  :
    ```
 
-1. Run the  `Get-VHD` command again to get the details for the new (converted) disk. 
+1. Run the  `Get-VHD` command again, but this time use the file path for the converted disk.
 
    ```powershell
-   Get-VHD –Path E:\vms\testvhd\test-converted.vhd
+   Get-VHD –Path <ConvertedDiskFilePath>
    ```
-
-   In this example, the new (converted) disk is named **test-converted.vhd**. When you run the command on your system, update the `-Path` value for your converted disk.
 
 1. In the output, check the value for the `Alignment` property. The value should be `1`, which means the disk is successfully converted to the newer VHD format and is 4 KB alignment-aware.
 
    ```output
-   Path                    : E:\vms\testvhd\test-converted.vhd
+   Path                    : <ConvertedDiskFilePath>
    VhdFormat               : VHD
    VhdType                 : Dynamic
    FileSize                : 69369856
@@ -142,10 +144,10 @@ To check the alignment setting for a disk, you can use the `Get-VHD` PowerShell 
    IsDeleted               : False
    Number                  :
    ```
-
+<!--What should the customer do if the value isn't 1?--->
 ### VHDX format
 
-VHDX is a new virtual hard disk format introduced in Windows Server 2012. This format allows you to create resilient high-performance virtual disks up to 64 terabytes.
+VHDX is an updated hard disk format introduced in Windows Server 2012. This format can create resilient, high-performance virtual disks with up to 64 terabytes of capacity.
 
 Here are some benefits of the VHDX format:
 
@@ -153,26 +155,34 @@ Here are some benefits of the VHDX format:
 
 - Protection against data corruption during power failures by logging updates to the VHDX metadata structures
 
-- Ability to store custom metadata for a file that a user might want to record, such as the OS version or applied patches
+- Stores custom metadata for a file based on what the user configuring it wants to record, such as the OS version or applied patches
 
 The VHDX format also provides several performance features:
 
-- Improved alignment of the virtual hard disk format to work well on large sector disks
+- Improved alignment of the virtual hard disk format, improving performance on large sector disks
 
-- Larger block sizes for dynamic and differential disks to enable disks to adjust for workload requirements
+- Larger block sizes for dynamic and differential disks, which lets disks adjust for workload requirements
 
-- 4-KB logical sector virtual disk to support increased performance when used by applications and workloads designed for 4-KB sectors
+- A 4 KB logical sector virtual disk to support increased performance when used by applications and workloads designed for 4-KB sectors
 
 - Efficiency in representing data to produce smaller file sizes and allow underlying physical storage device to reclaim unused space
 
    > [!NOTE]
    > Trimming requires pass-through or SCSI disks and trim-compatible hardware.
 
-**Recommendation**: When you upgrade to Windows Server 2016, convert all VHD files to the VHDX format. Only maintain files in VHD format when the VM can potentially move to an earlier release of Hyper-V that doesn't support VHDX format.
+If you're upgrading to Windows Server 2016 or later, we recommend you convert all VHD files to VHDX format. Only keep files in VHD format if you need to move the VM to an earlier Hyper-V release that doesn't support VHDX format.
 
 ## Virtual files
 
-There are three types of VHD files: fixed, dynamic, and differencing. 
+There are three types of VHD files:
+
+- Fixed files are for improving resiliency and performance, and you should use them when storage on the hosting value isn't actively monitored. Make sure there's enough disk space when expanding the VHD file at runtime. You can use them on any disk format.
+
+- Dynamic files are for resiliency guarantees and allocating disk space as the deployment needs it. You can only use them on VHDX.
+
+- Differencing files keep VM snapshot chains short to maintain good disk I/O performance. You can use them on any disk format.
+
+<!--Okay, so this section was trying to be an intro without being obvious about it, causing me to miss the point of the initial list. There's gotta be a better way to format all this. Also, the table seems...eh?-->
 
 **Recommendation**: As you compare the VHD file types, consider the following recommendations.
 
