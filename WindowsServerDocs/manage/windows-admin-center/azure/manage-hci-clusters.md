@@ -50,7 +50,6 @@ Using Windows Admin Center in the Azure portal, you can manage:
 - Scheduled tasks
 - Services
 - Storage
-- Updates
 - Virtual machines
 - Virtual switches
 
@@ -317,6 +316,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
+- Updates isn’t supported. Users cannot apply updates to Azure Stack HCI cluster with CAU (Cluster-Aware Updating).
 
 ## Frequently asked questions
 
