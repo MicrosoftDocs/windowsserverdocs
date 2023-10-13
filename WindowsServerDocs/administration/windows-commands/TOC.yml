@@ -555,12 +555,12 @@
           href: select-vdisk.md
         - name: select volume
           href: select-volume.md
-        - name: set id
-          href: set-id.md
-        - name: shrink
-          href: shrink.md
-        - name: uniqueid
-          href: uniqueid.md   
+      - name: set id
+        href: set-id.md
+      - name: shrink
+        href: shrink.md
+      - name: uniqueid
+        href: uniqueid.md   
     - name: diskperf
       href: diskperf.md
     - name: diskraid
