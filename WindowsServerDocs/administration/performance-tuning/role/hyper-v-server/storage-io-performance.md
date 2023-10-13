@@ -188,70 +188,72 @@ There are three types of VHD files:
 
 | File type | Disk format | Recommendation |
 | --- | --- | --- |
-| **Fixed** | VHD | Use the fixed file type for optimal resiliency and performance. |
-| **Fixed** | Any | Use the fixed file type when storage on the hosting volume isn't actively monitored. Ensure sufficient disk space is present when expanding the VHD file at run time. |
-| **Dynamic** | VHDX | Use the dynamic file type for resiliency guarantees and to allocate disk space only as needed. |
-| **Differencing** | Any | Keep VM snapshot chains short to maintain good disk I/O performance. |
+| Fixed | VHD | Use the fixed file type for optimal resiliency and performance. |
+| Fixed | Any | Use the fixed file type when storage on the hosting volume isn't actively monitored. Ensure sufficient disk space is present when expanding the VHD file at run time. |
+| Dynamic | VHDX | Use the dynamic file type for resiliency guarantees and to allocate disk space only as needed. |
+| Differencing | Any | Keep VM snapshot chains short to maintain good disk I/O performance. |
 
 ### Fixed file type
 
-Space for the VHD is first allocated when the VHD file is created. This type of VHD file is less likely to fragment, which reduces the I/O throughput when a single I/O is split into multiple I/Os. The fixed file type has the lowest CPU overhead of the three options because `Reads` and `Writes` don't need to look up the mapping of the block.
+When you create a fixed VHD file, the system allocates space for it. Fixed files are less likely to fragment, reducing the I/O throughput when a single I/O splits into multiple ones. It also has the lowest CPU overhead of the three file options because `Reads` and `Writes` don't need to look up the mapping of the block.
+
+We recommend...
 
 ### Dynamic file type
 
-Space for the VHD is allocated on demand. The blocks in the disk start as unallocated blocks. No actual space in the file backs the unallocated blocks. When a block receives the first Write, the virtualization stack must allocate space within the VHD file for the block, and then update the metadata. This action increases the number of necessary disk I/Os for the Write and increases CPU usage. `Reads` and `Writes` to existing blocks incur disk access and CPU overhead when looking up the blocks' mapping in the metadata.
+When you create a dynamic VHD file, the system allocates space for it on-demand. Blocks in the file start as allocated blocks, and no space in the file backs the unallocated blocks. When a block receives its first write, the virtualization stack then must allocate space for the block in the VHD file, then update the metadata. This allocation increases the number of disk I/Os requried for the write, increasing CPU usage. `Reads` and `Writes` to existing blocks incur disk access and CPU overhead when looking up the blocks' mapping in the metadata.
+
+We recommend....
 
 ### Differencing file type
 
-Snapshots of a VM create a differencing VHD to store `Writes` to the disks. The VHD points to a parent VHD file. Any `Writes` to blocks without existing `Writes` cause space to be allocated in the VHD file, as with a dynamically expanding VHD. `Reads` are serviced from the VHD file if the block contains `Writes`. Otherwise, the blocks are serviced from the parent VHD file. In both cases, the metadata is read to determine the mapping of the block. `Reads` and `Writes` to this VHD can consume more CPU and result in more I/Os than a fixed VHD file.
+Differencing files are snapshots of a VM that store `Writes` to the disks. If you write to a block without existing writes, the system allocates space in the VHD file like it would with a dynamically expanding VHD. The system services `Reads` from the VHD file if the block already contains `Writes`. Otherwise, it services blocks from the parent VHD file. In both cases, the system reads metadata to determine the block mapping. `Reads` and `Writes` to this VHD can consume more CPU and result in more I/Os than a fixed VHD file.
 
-When there are only a few snapshots, the CPU usage of storage I/Os can be elevated, but performance might not be noticeably affected except in highly I/O-intensive server workloads. Maintaining a large chain of snapshots can noticeably affect performance. Reading from the VHD can require checking for the requested blocks in many differencing VHDs. It's important to keep snapshot chains short to maintain good disk I/O performance.
+When there are only a few snapshots, storage I/Os can potentially use more CPU than normal, but this doesn't noticeably affect performance except in highly I/O-intensive server workloads. Creating and using a large chain of VM snapshots does cause performance issues. In differencing files, the system needs to check for the requested blocks in many different differencing VHDs just to read from the VHD. Therefore, if you use differencing files, you should keep snapshot chains short to maintain good disk I/O performance.
 
 ## Size considerations
 
-There are two size implementations to consider for disk optimization: blocks and sectors.
+When you're planning for disk optimization, you should consider both block size and sector size. This section describes recommendations for sizing blocks and sectors.
 
 ### Block size
 
-Block size can significantly affect performance. The best approach is to match the block size to the allocation patterns of the workloads that use the disk. If an application allocates blocks in chunks of 16 MB, it's optimal to have a virtual hard disk block size of 16 MB. A block size larger than 2 MB is possible only on virtual hard disks with the VHDX format. When the block size is larger than the allocation pattern for a random I/O workload, you can significantly increase the space usage on the host.
-
-**Recommendation**: Match the disk block size to the allocation patterns of the workloads that use the disk. 
+Because block size can significantly affect performance, we recommend you match block size to the allocation patterns of the workloads using the disk. If an application allocates blocks in chunks of 16 MB, then you should ideally use a VHD block size of 16 MB. Block sizes larger than 2 MB are only possible on VHDs using the VHDX file format. When block size is larger than the allocation pattern for a random I/O workload, it increases the amount of space the VHD uses on the host.
 
 ### Sector size
 
-Software organizations frequently depend on disk sectors of 512 bytes, but the industry standard is moving to 4-KB disk sectors. To reduce compatibility issues that can arise from changes in sector size, hard drive vendors are introducing a transitional size referred to as **512 emulation drives (512e)**.
+Software organizations frequently depend on disk sectors of 512 bytes, but the industry standard is moving to 4-KB disk sectors. To reduce compatibility issues that can arise from changes in sector size, hard drive vendors are introducing a transitional size referred to as *512 emulation drives (512e)*.
 
-Emulation drives offer some of the advantages provided by 4-KB disk sector native drives, such as improved format efficiency and an improved scheme for error correction codes (ECC). Emulation drives present fewer compatibility issues that can occur by exposing a 4-KB sector size at the disk interface.
+Emulation drives offer some of the advantages provided by 4-KB disk sector native drives, such as improved format efficiency and an improved scheme for error correction codes (ECC). Emulation drives present fewer compatibility issues when exposing a 4-KB sector size at the disk interface.
 
-**Recommendation**: To make full use of 4-KB sectors, use VHDX format rather than disk sectors of 512 bytes. To reduce compatibility issues between disk sizes, implement 512e drives for transitional sizing.
+To make full use of 4-KB sectors, we recommend you use the VHDX format instead of disk sectors of 512 bytes. To reduce compatibility issues between disk sizes, implement 512e drives for transitional sizing.
 
 #### Support transitional size with 512e disks
 
-A 512e disk can perform a Write only in terms of a physical sector. This type of disk can't directly write a 512-byte sector to which it's issued. The disk has an internal process that makes the `Write` operations possible. The process involves `Read-Modify-Write` (RMW) operations and implements the following steps:
+A 512e disk can perform a Write only in terms of a physical sector. This type of disk can't directly write a 512-byte sector the system issues it to. The disk has an internal process that makes write operations possible, which involves involves `Read-Modify-Write` (RMW) operations in the following order:
 
-1. The disk `Reads` the 4-KB physical sector to its internal cache. The cache contains the 512-byte logical sector referred to in the `Write` operation.
+- First, the disk reads the 4-KB physical sector to its internal cache. The cache contains the 512-byte logical sector referred to in the write operation.
 
-1. The disk `Modifies` the data in the 4-KB buffer to include the updated 512-byte sector.
+- Next, the disk modifies the data in the 4-KB buffer to include the updated 512-byte sector.
 
-1. The disk `Writes` the updated 4-KB buffer back to its physical sector on the disk.
+- Finally, the disk writes the updated 4-KB buffer back to its physical sector on the disk.
 
-The overall performance impact of the RMW process depends on the workloads. The RMW process causes performance degradation in virtual hard disks for the following reasons:
+The overall performance impact of the RMW process depends on the workloads. The RMW process can cause performance degradation in virtual hard disks for the following reasons:
 
-- Dynamic and differencing virtual hard disks have a 512-byte sector bitmap in front of their data payload. Footer, header, and parent locators align to a 512-byte sector. It's common for the virtual hard disk driver to execute 512-byte `Write` operations to update these structures, which result in the RMW process previously described.
+- Dynamic and differencing VHDs have a 512-byte sector bitmap in front of their data payload. Footer, header, and parent locators align to a 512-byte sector. It's common for the virtual hard disk driver to execute 512-byte write operations to update these structures, which cause the disk to run the RMW process.
 
-- Applications commonly execute `Reads` and `Writes` in multiples of 4-KB sizes (the default cluster size of NTFS). Dynamic and differencing virtual hard disks have a 512-byte sector bitmap in front of the data payload block. This bitmap causes the 4-KB blocks to not align to the physical 4-KB boundary. The following figure shows a VHD 4-KB block (highlighted) that's not aligned with the physical 4-KB boundary.
+- Applications commonly execute read and write operations in multiples of 4-KB sizes, as 4 KB is the default cluster size of NTFS. Dynamic and differencing virtual hard disks have a 512-byte sector bitmap in front of the data payload block. This bitmap causes the 4-KB blocks to not align to the physical 4-KB boundary. The following diagram shows a highlighted VHD 4-KB block that isn't aligned with the physical 4-KB boundary.
 
    :::image type="content" source="../../media/perftune-guide-vhd-4kb-block.png" alt-text="Diagram of a VHD 4-KB block that's not aligned with the physical 4-KB boundary." border="false":::
 
-Each 4-KB `Write` operation by the current parser to update the payload data results in two `Reads` for two blocks on the disk. The blocks are then updated and written back to the two disk blocks. Hyper-V in Windows Server 2016 mitigates some performance effects on 512e disks on the VHD stack. Hyper-V prepares the structures for alignment to 4-KB boundaries in the VHD format. The mitigation avoids the RMW effect on access to data within the virtual hard disk file and updates to the virtual hard disk metadata structures.
+Each 4-KB write operation by the current parser to update the payload data results in two reads for two blocks on the disk. The system then updates the blocks and writes them back to the two disk blocks. Hyper-V in Windows Server 2016 mitigates some performance effects on 512e disks on the VHD stack. Hyper-V prepares the structures for alignment to 4-KB boundaries in the VHD format. The mitigation avoids the RMW effect on access to data within the virtual hard disk file and updates to the virtual hard disk metadata structures.
 
-As previously mentioned, VHDs copied from earlier versions of Windows Server aren't automatically aligned to 4 KB. You can manually convert the disk to optimally align via the **Copy from Source** disk option with the `Convert-VHD` command.
+As previously mentioned, VHDs copied from earlier versions of Windows Server aren't automatically aligned to 4 KB. You can manually convert the disk to optimally align by using the **Copy from Source** disk option with the `Convert-VHD` command.
 
-By default, VHDs are exposed with a physical sector size of 512 bytes. This method ensures the physical-sector-size dependent applications aren't impacted when the application and VHDs are moved from an earlier version of Windows Server.
+By default, VHDs are exposed with a physical sector size of 512 bytes. This method ensures the physical-sector-size dependent applications aren't impacted when you migrate the application and VHDs from an earlier version of Windows Server.
 
-By default, disks with the VHDX format are created with the 4-KB physical sector size to optimize their performance profile on regular disks and larger sector disks. 
+By default, the system creates VHDX disks with a 4-KB physical sector size to optimize their performance profile on regular disks and larger sector disks.
 
-**Recommendation**: To reduce compatibility issues between disk sizes, implement 512e drives for transitional sizing. To make full use of 4-KB sectors, use VHDX format.
+To reduce compatibility issues between disk sizes, we recommend you implement 512e drives for transitional sizing. To make full use of 4-KB sectors, use VHDX format.
 
 ## Native 4-KB disks
 
