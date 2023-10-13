@@ -37,5 +37,5 @@ This service is enabled by default in Windows client devices.
 
 ## See also
 
-- [Wireless access deployment overview](../core-network-guide/cncg/wireless/b-wireless-access-deploy-overview.md)
-- [Wireless technology troubleshooting guidance](https://learn.microsoft.com/troubleshoot/windows-server/networking/troubleshoot-wireless-technologies)
+- [Wireless access deployment overview](../../core-network-guide/cncg/wireless/b-wireless-access-deploy-overview.md)
+- [Wireless technology troubleshooting guidance](/troubleshoot/windows-server/networking/troubleshoot-wireless-technologies)
