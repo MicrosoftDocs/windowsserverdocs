@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 10/11/2023
+ms.date: 10/13/2023
 ms.prod: windows-server
 ---
 
@@ -17,7 +17,7 @@ Is it time to move to a newer version of Windows Server? Depending on what you'r
 > Extended support for Windows Server 2008 R2 and Windows Server 2008 ended in January 2020. Extended Security Updates (ESU) are available, with one option to migrate your on-premises servers to Azure, where you can continue to run them on virtual machines. To find out more, see [Extended Security Updates overview](extended-security-updates-overview.md).
 
 > [!TIP]
-> You can download and try Windows Server free of charge at [Try Windows Server in the cloud with an Azure free account](https://azure.microsoft.com/free/windows-server-on-azure/).
+> You can download and try Windows Server free of charge at [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022).
 
 ## Clean install
 
@@ -25,11 +25,13 @@ A *clean install*, where you install a blank server or overwrite an existing ope
 
 ## In-place upgrade
 
-In-place upgrades let you upgrade to a later version of Windows Server while keeping your original settings, server roles, features, and data. However, not all earlier OS versions are able to use in-place upgrades, particularly if it has settings or features that later OS versions no longer support. In-place upgrades work best with virtual machines (VMs) that don't need specific OEM hardware drivers to upgrade successfully.
+*In-place upgrades* let you upgrade to a later version of Windows Server while keeping your original settings, server roles, features, and data. You can upgrade between up to two Server versions at a time. For more information, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to). Keep in mind that some roles and features don't support in-place upgrades. In-place upgrades work best with virtual machines (VMs) that don't need specific Original Equipment Manufacturer (OEM) hardware drivers to upgrade successfully.
+
+- For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade](perform-in-place-upgrade.md).
 
 - For more information about how upgrades work, see the [Windows Server upgrade overview](../get-started/upgrade-overview.md).
 
-- For step-by-step instructions for how to upgrade, see [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
+- For more detailed guides for how to upgrade for different versions of Windows Server, including information about which roles and features support in-place upgrades, see [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
 
 ## Cluster Operating System rolling upgrade
 
