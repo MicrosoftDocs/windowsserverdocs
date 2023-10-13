@@ -3,13 +3,12 @@ title: break (shadow copy volume)
 description: Reference article for the break command, which disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
 ms.topic: reference
 ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: wscontent
+author: xelu86
 ms.date: 10/16/2017
 ---
 
-# break (shadow copy volume)
+# break
 
 Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume. The volume can then be accessed using a drive letter (if assigned) or volume name. If used without parameters, **break** displays help at the command prompt.
 
