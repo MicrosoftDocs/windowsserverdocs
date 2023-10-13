@@ -33,7 +33,7 @@ In-place upgrades let you upgrade to a later version of Windows Server while kee
 
 ## Cluster Operating System rolling upgrade
 
-The *Cluster Operating System rolling upgrade* gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a rolling upgrade to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements. For more information, see [Cluster OS rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
+The *Cluster operating system rolling upgrade* gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your clusters are running an earlier version of Windows Server, your admin can use a rolling upgrade to install a later version on them without having to turn off the cluster, which would otherwise affect Service Level Agreements. For more information, see [Cluster OS rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
 ## Migration
 
