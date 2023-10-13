@@ -144,7 +144,6 @@ The hybrid machine must meet the following networking requirements:
   - `*service.waconazure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags)
   - `pas.windows.net`
   - `*.servicebus.windows.net`
-  - `pkgs.dev.azure.com` (if you are using a proxy)
 
 > [!NOTE]
 > No inbound ports are required in order to use Windows Admin Center.
