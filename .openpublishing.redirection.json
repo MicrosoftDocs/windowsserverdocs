@@ -3956,11 +3956,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/management/windows-commands/exit_2.md",
-      "redirect_url": "/windows-server/administration/windows-commands/exit_2",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "WindowsServerDocs/management/windows-commands/expand-vdisk.md",
       "redirect_url": "/windows-server/administration/windows-commands/expand-vdisk",
       "redirect_document_id": true

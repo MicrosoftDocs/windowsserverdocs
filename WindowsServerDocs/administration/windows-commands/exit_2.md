@@ -1,5 +1,5 @@
 ---
-title: exit
+title: exit (diskshadow)
 description: Reference article for exit, which exits the DiskShadow command interpreter.
 ms.topic: reference
 ms.author: wscontent
@@ -7,7 +7,7 @@ author: xelu86
 ms.date: 10/12/2023
 ---
 
-# exit
+# exit (diskshadow)
 
 Exits the DiskShadow command line interpreter.
 

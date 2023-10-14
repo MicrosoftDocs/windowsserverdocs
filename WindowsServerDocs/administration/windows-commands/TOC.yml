@@ -568,7 +568,7 @@
     - name: diskshadow
       href: diskshadow.md
       items:
-      - name: add (diskshadow)
+      - name: add
         href: add.md
         items:
         - name: add alias
@@ -579,9 +579,9 @@
         href: begin-backup.md
       - name: begin restore
         href: begin-restore.md
-      - name: break (diskshadow)
+      - name: break
         href: break_2.md
-      - name: create (diskshadow)
+      - name: create
         href: create_2.md
       - name: delete shadows
         href: delete-shadows.md
@@ -591,13 +591,13 @@
         href: end-restore.md
       - name: exec
         href: exec.md
-      - name: exit (diskshadow)
+      - name: exit
         href: exit_2.md
       - name: expose
         href: expose.md
       - name: import
         href: import.md
-      - name: list (diskshadow)
+      - name: list
         href: list_2.md
         items:
         - name: list providers

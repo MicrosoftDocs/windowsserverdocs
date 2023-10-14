@@ -1,5 +1,5 @@
 ---
-title: list
+title: list (diskshadow)
 description: Reference article for the list command, which displays information about the shadow copy (snapshot) set of an existing drive or volume.
 ms.topic: reference
 ms.author: wscontent
@@ -7,7 +7,7 @@ author: xelu86
 ms.date: 10/12/2023
 ---
 
-# list
+# list (diskshadow)
 
 Lists writers, shadow copies, or currently registered shadow copy providers that are on the system. If used without parameters, list displays help at the command prompt.
 
