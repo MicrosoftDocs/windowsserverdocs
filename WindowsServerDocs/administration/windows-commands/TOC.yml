@@ -592,7 +592,7 @@
       - name: exec
         href: exec.md
       - name: exit
-        href: exit_2.md
+        href: exit-diskshadow.md
       - name: expose
         href: expose.md
       - name: import
