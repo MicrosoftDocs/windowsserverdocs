@@ -60,6 +60,8 @@
       href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
     - name: What's new in Active Directory Domain Services
       href: whats-new-active-directory-domain-services.md
+    - name: What's new in Active Directory Domain Services Insider Preview
+      href: ad-ds/whats-new-active-directory-domain-services-insider-preview.md
     - name: AD DS Getting started
       items:
       - name: Active Directory Administrative Center
@@ -332,10 +334,6 @@
       - name: Best Practices for Securing Active Directory
         href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
         items:
-        - name: Executive Summary
-          href: ad-ds/manage/component-updates/executive-Summary.md
-        - name: Introduction
-          href: ad-ds/manage/component-updates/Introduction.md
         - name: Avenues to compromise
           href: ad-ds/plan/security-best-practices/Avenues-to-compromise.md
         - name: Attractive Accounts for Credential Theft
