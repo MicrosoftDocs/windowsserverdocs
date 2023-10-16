@@ -267,29 +267,29 @@ We recommend you avoid using 4-KB native disks with VHD and VHDX files, as it ca
 
 ## Pass-through disks
 
-The VHD in a VM can be mapped directly to a physical disk or logical unit number (LUN), rather than a VHD file. The benefit of this approach is the ability to bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O. However, the pass-through approach involves the risk that physical disks or LUNs can be more difficult to move between machines than VHD files.
+You can map the VHD in a VM directly to a physical isk or logical unit number (LUN) instead of a VHD file. This *pass-through disk* lets you bypass the NTFS file system in the root partition, which reduces the CPU usage of storage I/O. However, this pass-through approach also involves a risk of physical disks or LUNs becoming more difficult to move between machines than VHD files.
 
-**Recommendation**: Avoid using pass-through disks due to the limitations introduced with VM migration scenarios.
+We recommend you avoid using pass-through disks due to the limitations they introduce in VM migration scenarios.
 
 ## Advanced storage features
 
-There are a few more performance optimizations to consider for advanced storage features.
+This section discusses some more performance optimizations you should consider for advanced storage features.
 
 ### Storage quality of service (QoS)
 
-In Windows Server 2012 R2 and later, Hyper-V includes the ability to set certain quality-of-service (QoS) parameters for storage on VMs. You can implement these parameters to gain several benefits:
+In Windows Server 2012 R2 and later, Hyper-V includes the ability to set certain quality-of-service (QoS) parameters for storage on VMs. We recommend you implement Storage QoS to access extra storage parameters, set maximum and minimum IOPS thresholds for virtual hard disks, and monitor disk performance. You can implement these parameters to gain the following benefits:
 
 - Configure storage performance isolation in a multi-tenant environment
 
 - Specify the maximum and minimum input/output operations per second (IOPS) for virtual hard disks
 
-   Admins can throttle the storage I/O to prevent one tenant from consuming excessive storage resources that can affect other tenants. Set the minimum IOPS value and receive notifications when the threshold for optimal performance isn't met. The max/min IOPS values are specified in terms of normalized IOPS where every 8 KB of data is counted as an I/O.
+  - Admins can throttle the storage I/O to prevent one tenant from consuming excessive storage resources that can affect other tenants. Set the minimum IOPS value and receive notifications when the system doesn't meet the threshold for optimal performance. We specify the maximum or minimum IOPS values in terms of normalized IOPS where we every 8 KB of data as an I/O.
 
 - Receive notifications when storage I/O performance falls below defined thresholds to efficiently run VM workloads
 
 - Access storage parameters for VM metrics infrastructure and enable admins to monitor performance and charge-back related parameters
 
-Storage QoS also has some limitations:
+However, also keep in mind that Storage QoS has the following limitations:
 
 - Only available for virtual disks
 
@@ -297,17 +297,17 @@ Storage QoS also has some limitations:
 
 - QoS for a replica site is configured separately from the primary site
 
-- Shared VHDX isn't supported
+- Storage QoS doesn't support shared VHDX
 
 For more information, see [Storage quality of service for Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282281(v=ws.11)).
 
-**Recommendation**: Implement Storage QoS to access extra storage parameters, set max/min IOPS thresholds for virtual hard disks, and monitor disk performance. 
-
 ### NUMA I/O registry settings for large VMs
 
-Windows Server 2012 and later supports projecting a virtual, nonuniform memory access (NUMA) topology into Hyper-V VMs. NUMA support helps to improve the performance of workloads running on VMs configured with large amounts of memory (or, _large VMs_). To enable this support, large VM configurations require scalability in terms of I/O throughput. An example of a large VM is Microsoft SQL Server running with 64 virtual processors.
+Windows Server 2012 and later supports projecting a virtual, nonuniform memory access (NUMA) topology into Hyper-V VMs. NUMA support improves performance of workloads running on VMs configured with large amounts of memory, or *large VMs*. To enable this support, large VM configurations require scalability in terms of I/O throughput. An example of a large VM is Microsoft SQL Server running with 64 virtual processors.
 
-The following Windows Server enhancements enable the I/O scalability requirements of large VMs:
+<!--Where I left off-->
+
+The following Windows Server enhancements meet the I/O scalability requirements of large VMs:
 
 - An increase in the number of communication channels created between guest devices and the host storage stack.
 
