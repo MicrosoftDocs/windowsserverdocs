@@ -5,7 +5,7 @@ manager: femila
 ms.topic: article
 ms.author: wscontent
 author: robinharwood
-ms.date: 10/03/2023
+ms.date: 10/16/2023
 ---
 # Deploying a two-node clustered file server
 
@@ -35,15 +35,21 @@ The following scenario describes one of the possible ways to configure a file se
 
 You must meet the following prerequisites for your failover cluster to meet the criteria for an officially supported deployment:
 
-- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server, you'll need the Certified for Windows Server logo. For more information about what hardware and software systems have been certified, see the [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx).
+- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server, need the Certified for Windows Server logo. For more information about what hardware and software systems have been certified, see the [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx).
 
 - The fully configured solution (servers, network, and storage) must pass all tests in the validation workflow, which is included with the failover cluster snap-in.
 
-In order to use a two-node failover cluster, you'll also need to meet the prerequisites in the following sections.
+In order to use a two-node failover cluster, you also need to meet the prerequisites in the following sections.
 
 ### Servers
 
-We recommend using matching computers with the same or similar components. Servers for a two-node failover cluster must run the same version of Windows Server. They should also have the same software updates.
+For servers, you should follow these recommendations:
+
+- We recommend using matching computers with the same or similar components.
+
+- Servers for a two-node failover cluster should run the same version of Windows Server.
+
+- Servers for a two-node failover cluster should also have the same software updates.
 
 ### Network adapters and cables
 
@@ -54,6 +60,7 @@ If you use iSCSI, you must dedicate the network adapters to either network commu
 In the network infrastructure that connects your cluster nodes, avoid having single points of failure. There are two ways you can avoid having a single point of failure:
 
 - Connect your cluster nodes with multiple, distinct networks.
+
 - Connect your cluster nodes with one network constructed with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure.
 
    > [!NOTE]
@@ -76,9 +83,13 @@ For this two-node cluster example, the quorum configuration is Node and Disk Maj
 Here are some other storage requirements you should consider:
 
 - You must use basic disks to use the native disk support included in failover clustering, not dynamic disks.
+
 - We recommend that you format partitions with NTFS. For witness disks, you must format the partition with NTFS instead.
+
 - For the partition style of the disk, you can use either primary boot record (MBR) or GUID partition table (GPT).
+
 - The storage must respond correctly to specific SCSI commands. Storage must also follow the standard called SCSI Primary Commands-3 (SPC-3). In particular, the storage must support Persistent Reservations as specified in the SPC-3 standard.
+
 - The miniport driver the storage uses must be compatible with Microsoft Storport storage drivers.
 
 ### Network infrastructure and domain account requirements
@@ -103,8 +114,6 @@ In order to use two-node failover clusters, you also need the following infrastr
 
 ## Shared folders in a failover cluster
 
-<!--What is this section trying to describe? It doesn't sound like a specific scenario as multiple scenarios. What are these specific scenarios meant to illustrate? After this, it immediately segues into how-to style instructions.-->
-
 The following list describes shared folder configuration functionality integrated into failover clustering:
 
 - Display is scoped to clustered shared folders only. You can't mix them with non-clustered shared folders. When a user views shared folders by specifying the path of a clustered file server, the display includes only the shared folders that are part of the specific file server role. It excludes non-clustered shared folders and shares part of separate file server roles that happen to be on a node of the cluster.
@@ -125,7 +134,7 @@ When deploying a storage area network (SAN) with a failover cluster, you must fo
 
 - Isolate storage devices, one cluster per device. Servers from different clusters must not be able to access the same storage devices. In most cases, you should isolate a LUN you use for one set of cluster servers from all other servers by using LUN masking or zoning.
 
-- Consider using multipath I/O software. In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software. This configuration provides the highest level of redundancy and availability. However, you must base your multipath solution on Microsoft Multipath I/O (MPIO). Your storage hardware vendor may also supply an MPIO device-specific module (DSM) for your hardware, although Windows Server 2016 and Windows Server 2019 include one or more DSMs as part of the operating system.
+- Consider using multipath I/O software. In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software. This configuration provides the highest level of redundancy and availability. However, you must base your multipath solution on Microsoft Multipath I/O (MPIO). Your storage hardware vendor can also supply an MPIO device-specific module (DSM) for your hardware, although Windows Server 2016 and Windows Server 2019 include one or more DSMs as part of the operating system.
 
 ## Install a two-node file server cluster
 
@@ -159,15 +168,19 @@ To connect the cluster servers to the networks and storage:
 
 1. On one of the servers that you want to cluster, go to **Start** > **Administrative Tools** > **Computer Management** > **Disk Management**.
 
-   1. If the User Account Control dialog box appears, confirm that the action it displays is what you want, then select **Continue**.
+    - If the User Account Control dialog box appears, confirm that the action it displays is what you want, then select **Continue**.
 
 1. In **Disk Management**, confirm that the cluster disks are visible.
 
 1. (Optional) If you want a storage volume larger than 2 terabytes and you're using the Windows interface to control the format of the disk, convert that disk to the partition style called *GUID partition table (GPT)*. To convert the disk:
-   - Back up any data on the disk.
-   - Delete all volumes on the disk.
-   - In **Disk Management**, right-click the disk (not a partition) and select **Convert to GPT Disk**.
-   - For volumes smaller than 2 terabytes, instead of using GPT, you can use the partition style called *master boot record (MBR)*.
+
+    - Back up any data on the disk.
+  
+    - Delete all volumes on the disk.
+
+    - In **Disk Management**, right-click the disk (not a partition) and select **Convert to GPT Disk**.
+
+    - For volumes smaller than 2 terabytes, instead of using GPT, you can use the partition style called *master boot record (MBR)*.
 
 1. Check the format of any exposed volume or LUN. We recommend you use NTFS for the format. For the witness disk, you must use NTFS.
 
@@ -317,15 +330,15 @@ To create a cluster from the machines you configured:
 
    - If you're using static IP addresses, run this command:
 
-    ```PowerShell
-    New-Cluster -Name <CLUSTER NAME> -Node "<Node name 1>","<Node name 2>" -StaticAddress <IP address>
-    ```
+     ```PowerShell
+     New-Cluster -Name <CLUSTER NAME> -Node "<Node name 1>","<Node name 2>" -StaticAddress <IP address>
+     ```
 
    - If you're using DHCP for IP addresses, run this command:
 
-    ```PowerShell
-    New-Cluster -Name <CLUSTER NAME> -Node "<Node name 1>","<NOde name 2>"
-    ```
+     ```PowerShell
+     New-Cluster -Name <CLUSTER NAME> -Node "<Node name 1>","<Node name 2>"
+     ```
 
 ---
 
@@ -372,9 +385,13 @@ To configure a file server failover cluster:
 1. Enter the following information into the **Add a share** workflow:
 
     - Share type.
+
     - Intended share folder path.
+
     - Share name.
+
     - Configure any other settings you need, such as access-based enumeration, caching, encryption, and so on.
+
     - If you're choosing file-level permissions that aren't default, specify those permissions as well.
 
 1. On the **Confirmation** page, make sure your configuration looks correct, then select **Create** to create the file server share.
