@@ -27,19 +27,19 @@ Storage volumes or logical unit numbers (LUNs) exposed to the nodes in a cluster
 
 :::image type="content" source="media/Cluster-File-Server/Cluster-FS-LUNs.png" alt-text="A diagram depicting the basic architecture of a LUN in a cluster. There's a blue box surrounding them to depict how they're isolated from other servers.":::
 
-To guarantee maximum availability for any server, it's important to follow best practices for server management. For example, you should carefully manage the physical environment of the servers by testing software changes before fully implementing them and tracking software updates and configuration changes on all clustered servers.
+To guarantee maximum availability for any server, it's important to follow best practices for server management. For example, you should carefully manage the physical environment of the servers by testing changes before fully implementing them and tracking software updates and configuration changes on all clustered servers.
 
-The following scenario describes one way to configure a file server failover cluster. The files the server shares are on the cluster storage, and either clustered server can act as the file server that shares them.
+The following scenario describes one of the possible ways to configure a file server failover cluster. The files the server shares are located on the cluster storage, meaning either node can act as the file server that shares them.
 
 ## Prerequisites
 
-You must meet the following requirements for your failover cluster in Windows Server 2019 or 2016 to meet the criteria for an officially supported deployment:
+You must meet the following prerequisites for your failover cluster to meet the criteria for an officially supported deployment:
 
-- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2016, you need the "Certified for Windows Server 2016" logo. For Windows Server 2019, you need the "Certified for Windows Server 2019" logo. For more information about what hardware and software systems have been certified, see the [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx).
+- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server, you'll need the Certified for Windows Server logo. For more information about what hardware and software systems have been certified, see the [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx).
 
 - The fully configured solution (servers, network, and storage) must pass all tests in the validation workflow, which is included with the failover cluster snap-in.
 
-In order to use a two-node failover cluster, you need to meet the requirements in the following sections.
+In order to use a two-node failover cluster, you'll also need to meet the prerequisites in the following sections.
 
 ### Servers
 
@@ -47,7 +47,7 @@ We recommend using matching computers with the same or similar components. Serve
 
 ### Network adapters and cables
 
-The network hardware, like other components in the failover cluster solution, must be compatible with Windows Server 2016 or Windows Server 2019.
+The network hardware, like other components in the failover cluster solution, must be compatible with Windows Server.
 
 If you use iSCSI, you must dedicate the network adapters to either network communication or iSCSI, not both.
 
@@ -65,7 +65,7 @@ If you're using a Serial Attached Small Computer System Interface (SCSI) or Fibr
 
 If you're using an internet Small Computer Systems Interface (iSCSI), each clustered server must have one or more network adapters or host bus adapters that are dedicated to the iSCSI storage. You shouldn't use the network you're already using for iSCSI for network communication. In all clustered servers, the network adapters you use to connect to the iSCSI storage target should be identical, and we recommend that you use Gigabit Ethernet or higher.
 
-### Storage requirements
+### Storage
 
 You must use shared storage that's certified for Windows Server 2016 or Windows Server 2019.
 
@@ -159,7 +159,7 @@ To connect the cluster servers to the networks and storage:
 
 1. On one of the servers that you want to cluster, go to **Start** > **Administrative Tools** > **Computer Management** > **Disk Management**.
 
-1. If the User Account Control dialog box appears, confirm that the action it displays is what you want, then select **Continue**.
+   1. If the User Account Control dialog box appears, confirm that the action it displays is what you want, then select **Continue**.
 
 1. In **Disk Management**, confirm that the cluster disks are visible.
 
