@@ -197,13 +197,13 @@ There are three types of VHD files:
 
 When you create a fixed VHD file, the system allocates space for it. Fixed files are less likely to fragment, reducing the I/O throughput when a single I/O splits into multiple ones. It also has the lowest CPU overhead of the three file options because `Reads` and `Writes` don't need to look up the mapping of the block.
 
-We recommend...
+We recommend... <!--Fix--->
 
 ### Dynamic file type
 
-When you create a dynamic VHD file, the system allocates space for it on-demand. Blocks in the file start as allocated blocks, and no space in the file backs the unallocated blocks. When a block receives its first write, the virtualization stack then must allocate space for the block in the VHD file, then update the metadata. This allocation increases the number of disk I/Os requried for the write, increasing CPU usage. `Reads` and `Writes` to existing blocks incur disk access and CPU overhead when looking up the blocks' mapping in the metadata.
+When you create a dynamic VHD file, the system allocates space for it on-demand. Blocks in the file start as allocated blocks, and no space in the file backs the unallocated blocks. When a block receives its first write, the virtualization stack then must allocate space for the block in the VHD file, then update the metadata. This allocation increases the number of disk I/Os required for the write, increasing CPU usage. `Reads` and `Writes` to existing blocks incur disk access and CPU overhead when looking up the blocks' mapping in the metadata.
 
-We recommend....
+We recommend....<!--Fix--->
 
 ### Differencing file type
 
@@ -229,7 +229,7 @@ To make full use of 4-KB sectors, we recommend you use the VHDX format instead o
 
 #### Support transitional size with 512e disks
 
-A 512e disk can perform a Write only in terms of a physical sector. This type of disk can't directly write a 512-byte sector the system issues it to. The disk has an internal process that makes write operations possible, which involves involves `Read-Modify-Write` (RMW) operations in the following order:
+A 512e disk can perform a write operation only in terms of a physical sector. This type of disk can't directly write a 512-byte sector the system issues it to. The disk has an internal process that makes write operations possible, which involves involves `Read-Modify-Write` (RMW) operations in the following order:
 
 - First, the disk reads the 4-KB physical sector to its internal cache. The cache contains the 512-byte logical sector referred to in the write operation.
 
@@ -261,9 +261,9 @@ Hyper-V in Windows Server 2012 R2 and later supports 4-KB native disks. You ca
 
 Because VHD files can only expose as 512-byte logical-sector size disks, it's likely there are applications that issue 512-byte I/O requests. In such cases, the RMW algorithm in the storage stack layer satisfies the requests and causes performance degradation. The same result occurs for VHDX disks with a logical-sector size of 512 bytes.
 
-It's possible to configure VHDX files to expose as a 4-KB logical-sector size disk. This implementation is an optimal configuration for performance for disks hosted on a 4-KB native physical device. However, be careful to ensure the 4-KB logical-sector size supports both the guest and application that use the virtual disk. The VHDX format works correctly on a 4-KB logical-sector size device.
+You can configure VHDX files to expose as a 4-KB logical-sector size disk. This implementation is an optimal configuration for performance for disks hosted on a 4-KB native physical device. However, make sure the 4-KB logical-sector size supports both the guest and application that use the virtual disk. The VHDX format works correctly on a 4-KB logical-sector size device.
 
-**Recommendation**: Avoid using 4-KB native disks with VHD and VHDX files, which can cause degraded performance. When 4-KB native disks are required, the VHDX format works correctly on a 4-KB logical-sector size device.
+We recommend you avoid using 4-KB native disks with VHD and VHDX files, as it can cause performance degradation. When your scenario requires 4-KB native disks, you should use the VHDX format on a 4-KB logical-sector size device.
 
 ## Pass-through disks
 
