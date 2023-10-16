@@ -102,7 +102,7 @@ In order to use two-node failover clusters, you also need the following infrastr
 
     For more information about how to set up your network adapters, see [Prerequisites](#prerequisites).
 
-- The servers in your cluster must use Domain Name System (DNS) for name resolution. You can also use he DNS dynamic update protocol.
+- The servers in your cluster must use Domain Name System (DNS) for name resolution. You can also use the DNS dynamic update protocol.
 
 - All servers in your cluster must be in the same Active Directory domain. Your servers should also have the same domain role, either as a member server or domain controller. We recommend you use the member server role.
 
