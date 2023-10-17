@@ -315,35 +315,35 @@ The following Windows Server enhancements meet the I/O scalability requirements 
 
 #### Registry keys
 
-To support the enhancements, a few registry entries were added or updated to allow the number of channels to be adjusted. The entries are located at:
+We've added and updated some registry entries to support the enhancements in the previous section and allow you to adjust the number of channels. You can find the entries at `HKLM\System\CurrentControlSet\Enum\VMBUS\<device id>\<instance id>\StorChannel`.
 
-```registry
-HKLM\System\CurrentControlSet\Enum\VMBUS\<device id>\<instance id>\StorChannel
-```
-
-The `<device id>\<instance id>\` portion of the path corresponds to your configuration. The registry entries also align the virtual processors that handle the I/O completions to the virtual CPUs assigned by the application to be the I/O processors. The registry settings are configured on a per-adapter basis on the device's hardware key.
+The `<device id>\<instance id>\` portion of the path corresponds to the relevant values in your configuration. These registry entries align the virtual processors that handle the I/O completions to the virtual CPUs the application assigned to be the I/O processors. The system configures registry settings on a per-adapter basis on the device's hardware key.
 
 Here are two key settings to consider:
 
-- **ChannelCount (DWORD)**: The total number of channels to use. The maximum value is 16. The channel count defaults to a ceiling, equal to the number of virtual processors divided by 16.
+- *ChannelCount (DWORD)* is the total number of communication channels your deployment can use. The maximum value is 16. The channel count defaults to a value equal to the number of virtual processors divided by 16.
 
-- **ChannelMask (QWORD)**: The processor affinity for the channels. If this key setting isn't specified or the value is 0, the channel mask defaults to the existing channel distribution algorithm for normal storage or networking channels. The default action ensures your storage channels don't conflict with your network channels.
+- *ChannelMask (QWORD)* is the processor affinity for the channels. If you don't specify this key setting or set the value to 0, the channel mask defaults to the existing channel distribution algorithm for normal storage or networking channels. The default action ensures your storage channels don't conflict with your network channels.
 
-**Recommendation**: Use the Windows Server NUMA registry key settings to improve the performance of workloads running on large VMs.
+We recommend you use the Windows Server NUMA registry key settings to improve the performance of workloads running on large VMs.
+
+<!--Bring recommendations to tops of sections?-->
 
 ### Offloaded Data Transfer integration
 
-Crucial maintenance tasks for VHDs, such as merge, move, and compact, involve copying large amounts of data. The current method of copying data requires data to be read in and written to different locations, which can be a time-consuming process. This method also uses CPU and memory resources on the host that could be used for other purposes, such as servicing VMs.
+Crucial maintenance tasks for VHDs, such as merging, moving, and compacting, involve copying large amounts of data. The current method of copying data requires the system read and write data to different locations, which is time-consuming and uses CPU and memory resources that could've gone towards servicing VMs.
 
-Storage area network (SAN) vendors are working to provide near-instantaneous copy operations of large amounts of data. This storage is designed to allow the system above the disks to specify the move of a specific data set from one location to another. This hardware feature is known as an _Offloaded Data Transfer_.
+Storage area network (SAN) vendors can provide a hardware feature called *Offloaded Data Transfer*. This feature provides near-instantaneous copy operations for large amounts of data. Offloaded Data Transfer (ODX) allows the system, not the disks, to specify how to move specific data sets from one location to another.
 
-Hyper-V in Windows Server 2012 and later supports Offload Data Transfer (ODX) operations so the copied data can be passed from the guest OS to the host hardware. This method ensures the workload can use ODX-enabled storage similar to running in a nonvirtualized environment. The Hyper-V storage stack also issues ODX operations during maintenance operations for VHDs. Examples of maintenance operations include merging disks and storage migration meta-operations where large amounts of data are moved.
+Hyper-V in Windows Server 2012 and later supports ODX operations to pass down copied data from the guest OS to the host hardware. The workload can use ODX-enabled storage just like it would in a non-virtualized environment. The Hyper-V storage stack can also issue ODX oparations during maintenance operations for VHDs, such as merging disks and storing migration meta-operations during huge data migrations.
 
-**Recommendation**: Implement ODX operations to ensure the VM workload can use ODX-enabled storage similar to running in a nonvirtualized environment. 
+We recommend you use ODX operations to ensure the VM workload can use ODX-enabled storage the way it can in a physical environment.
 
 ### Unmap notification integration
 
-Virtual hard disk files exist as files on a storage volume, and they share available space with other files. Because the size of these files tends to be large, the space they consume can grow quickly. Demand for more physical storage affects the IT hardware budget. It's important to optimize the use of physical storage as much as possible.
+VHD files exist on a storage volume where they share available space with other files. Because their file size tends to be large, the space VHD files can take up a lot of space. Greater demand for storage space affects IT hardware budgets, which means you should optimize physical space usage wherever possible.
+
+In versions of Windows Server earlier than Windows Server 2012, the Windows storage stack in the guest OS and the Hyper-V host had limitations that prevented them from optimizing storage space. When 
 
 Prior to Windows Server 2012, limitations in the Windows storage stack in the guest OS and the Hyper-V host had limitations. When applications deleted content within a virtual hard disk, the content's storage space was abandoned. The deleted information wasn't communicated to the virtual hard disk and the physical storage device. This behavior prevented the Hyper-V storage stack from optimizing the space usage by the VHD-based virtual disk files. It also prevented the underlying storage device from reclaiming the space that stored the deleted data.
 
