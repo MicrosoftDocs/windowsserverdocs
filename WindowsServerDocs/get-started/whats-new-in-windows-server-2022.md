@@ -4,7 +4,7 @@ description: Find out what is new in Windows Server 2022.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 04/18/2023
+ms.date: 10/19/2023
 ms.prod: windows-server
 ---
 
@@ -193,6 +193,14 @@ You can increase your efficiency and agility with built-in hybrid capabilities i
 #### Azure Arc enabled Windows Servers
 
 Azure Arc enabled servers with Windows Server 2022 brings on-premises and multicloud Windows Servers to Azure with Azure Arc. This management experience is designed to be consistent with how you manage native Azure virtual machines. When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. More information can be found at the [Azure Arc enables servers documentation](/azure/azure-arc/servers/overview).
+
+##### Add Windows Servers
+
+As of the [KB5031364](https://support.microsoft.com/help/5031364) update, you can now add Windows Servers with an easy, simple process.
+
+To add new Windows Servers, go to the Azure Arc icon in the bottom-right corner of the taskbar and launch the Azure Arc Setup program to install and configure an Azure Connected Machine Agent. Once installed, you can use the Azure Connected Machine Agent at no extra charge to your Azure account. Once you've enabled Azure Arc on your server, you can see the status information in the taskbar icon.
+
+To learn more, see [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server).
 
 #### Windows Admin Center
 
