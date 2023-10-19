@@ -20,14 +20,6 @@ If `certutil` is run on a certification authority without other parameters, it d
 > [!TIP]
 > To see complete Help for all certutil verbs and options, including ones that are hidden from the `-?` argument, run `certutil -v -uSAGE`. The `uSAGE` switch is case-sensitive.
 
-> [!NOTE]
-> Performance issues are observed when using the `-store` option given these two aspects:
->
-> 1. When the number of certificates in the store exceeds 10.
-> 1. When a **CertId** is specified, it's used to match all the listed types for every certificate. If a **serial number** is provided, it will also attempt to match all other listed types.
->
-> If you are concerned about performance issues, PowerShell commands are recommended where it will only match the specified certificate type.
-
 ## Parameters
 
 ### -dump
@@ -900,6 +892,14 @@ For example:
 - `-enterprise Root 37`
 - `-user My 26e0aaaf000000000004`
 - `CA .11`
+
+> [!NOTE]
+> Performance issues are observed when using the `-store` option given these two aspects:
+>
+> 1. When the number of certificates in the store exceeds 10.
+> 1. When a **CertId** is specified, it's used to match all the listed types for every certificate. If a **serial number** is provided, it will also attempt to match all other listed types.
+>
+> If you are concerned about performance issues, PowerShell commands are recommended where it will only match the specified certificate type.
 
 ### -enumstore
 
