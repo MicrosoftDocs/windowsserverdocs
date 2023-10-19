@@ -5,20 +5,28 @@ ms.service:
 ms.topic: reference
 author: xelu86
 ms.author: wscontent
-ms.date: 09/22/2023
+ms.date: 10/19/2023
 ---
 
 # certutil
 
+> [!CAUTION]
+> Certutil isn't recommended to be used in any production code and doesn't provide any guarantees of live site support or app compatibilities. It's a tool utilized by developers and IT admins to view certificate content information on devices.
+
 Certutil.exe is a command-line program installed as part of Certificate Services. You can use certutil.exe to display certification authority (CA) configuration information, configure Certificate Services, and back up and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
 
-If `certutil` is run on a certification authority without other parameters, it displays the current certification authority configuration. If `certutil` is run on a non-certification authority without other parameters, the command defaults to running the `certutil -dump` command.
-
-> [!IMPORTANT]
-> Not all versions of certutil provide all of the parameters and options that this document describes. You can see the choices that your version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
+If `certutil` is run on a certification authority without other parameters, it displays the current certification authority configuration. If `certutil` is run on a non-certification authority without other parameters, the command defaults to running the `certutil -dump` command. Not all versions of certutil provide all of the parameters and options that this document describes. You can see the choices that your version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
 > [!TIP]
 > To see complete Help for all certutil verbs and options, including ones that are hidden from the `-?` argument, run `certutil -v -uSAGE`. The `uSAGE` switch is case-sensitive.
+
+> [!NOTE]
+> Performance issues are observed when using the `-store` option given these two aspects:
+>
+> 1. When the number of certificates in the store exceeds 10.
+> 1. When a **CertId** is specified, it's used to match all the listed types for every certificate. If a **serial number** is provided, it will also attempt to match all other listed types.
+>
+> If you are concerned about performance issues, PowerShell commands are recommended where it will only match the specified certificate type.
 
 ## Parameters
 
@@ -2515,7 +2523,7 @@ Options:
 
 #### Remarks
 
-The Certificate Authority may also need to be configured to support foreign certificates. To do this, type `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
+The Certificate Authority may also need to be configured to support foreign certificates by running `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
 
 ### -GetKey
 
