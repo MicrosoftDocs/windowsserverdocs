@@ -10,117 +10,152 @@ ms.date: 06/07/2019
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-If you encounter an issue not described on this page, [let us know](https://aka.ms/WACfeedback).
+If you encounter an issue not described on this page, let us know at the [Windows Admin Center feedback page](https://aka.ms/WACfeedback).
 
 ## Installer
 
-- When installing Windows Admin Center using your own certificate, be mindful that if you copy the thumbprint from the certificate manager MMC tool, [it will contain an invalid character at the beginning.](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra) As a workaround, type the first character of the thumbprint, and copy/paste the rest.
+- When installing Windows Admin Center using your own certificate, if you copy the thumbprint from the certificate manager Microsoft Management Center (MMC) tool, when you pase it, [it contains an invalid character at the beginning](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra). As a workaround, enter the first character of the thumbprint, then copy and paste the characters that come after the first.
 
-- Using port below 1024 isn't supported. In service mode, you may optionally configure port 80 to redirect to your specified port.
+- Windows Admin Center doesn't support ports lower than 1024. In service mode, you can optionally configure port 80 to redirect to your specified port.
 
 ## General
-> [!NOTE]
-> Self-signed certificiates accessed on "https://localhost:[port]" may cause Windows Admin Center to be blocked on both Microsoft Edge and Google Chrome browsers. When this happens, you may see an error explaining that your connection is not private. Update your Windows Admin Center installation to the latest version to fix this issue.
 
-- Using certain versions of extensions with older versions of Windows Admin Center may result in icons not displaying properly. To fix this issue, please upgrade to the latest build of Windows Admin Center. 
+- Self-signed certificates accessed on `https://localhost:[port]` can cause the Microsoft Edge and Google Chrome browsers to block Windows Admin Center. When this happens, you may see an error message that says your connection isn't private. To resolve this issue, update Windows Admin Center to the latest version.
 
-- In the 1910.2 release of Windows Admin Center, you may not be able to connect to Hyper-V servers on specific hardware. If you are blocked on this issue, [download our previous build](https://aka.ms/wacprevious).
+- Using certain versions of extensions with earlier versions of Windows Admin Center may result in icons not displaying properly. To resolve this issue, update to the latest version of Windows Admin Center
 
-- If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019. The patch for Windows Server 2016 was included the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
+- In the 1910.2 release of Windows Admin Center, you may not be able to connect to Hyper-V servers on specific hardware. To resolve this issue, either [download the previous version](https://aka.ms/wacprevious) or try updating to the latest version.
 
-- If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
+- If you have Windows Admin Center installed as a heavily used gateway on Windows Server 2016, the service may crash with an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This error is because of a bug that we've fixed as of Windows Server 2019. However, we've also release a patch for Windows Server 2016 to address this issue in the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
+
+- If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, follow these steps:
 
    > [!WARNING]
-   >This will delete the connection list and settings for all Windows Admin Center users on the gateway.
+   >The procedure in these instructions deletes the connection list and settings for all Windows Admin Center users on the gateway.
 
-  1. Uninstall Windows Admin Center
-  2. Delete the **Server Management Experience** folder under **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
-  3. Reinstall Windows Admin Center
+  1. Uninstall Windows Admin Center.
+  
+  1. Go to **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft** and delete the **Server Management Experience** folder.
+  
+  1. Reinstall Windows Admin Center.
 
-- If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
+- If you leave the tool open and idle for a long period of time, you may get several error messages that say "The runspace state is not valid for this operation." If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
 
-- There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the third Party Software Notice.
+- There may be minor differences between version numbers of open-source software (OSS) running in Windows Admin Center modules versus what's listed in the third Party Software Notice.
 
-- Windows Admin Center tool APIs may be accessed and used through other methods while a session of Windows Admin Center is active and a user has access to that session. The actions taken using these APIs will only affect the gateway machine (the machine Windows Admin Center is installed on). This will not affect machines managed remotely without authentication through the Windows Admin Center gateway.
+- You can access and use Windows Admin Center tool application programming interfaces (APIs) through other methods during an active session of Windows Admin Center if you have access to that session. The actions you take using these APIs only affect the machine you installed Windows Admin Center on, also known as the gateway machine. They won't affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
 ### Extension Manager
 
 - When you update Windows Admin Center, you must reinstall your extensions.
-- If you add an extension feed that is inaccessible, there is no warning. [14412861]
+
+- If you add an extension feed that is inaccessible, no warning or error message appears.
 
 ## Partner extension issues
 
-- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. This API (for example, NodeExtensionInstall) only works when the user is a gateway administrator and doesn't support non-admin use.
+- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. APIs such as NodeExtensionInstall only work when the user is a gateway administrator; it doesn't support non-admin use.
 
-## Browser Specific Issues
+## Browser-specific issues
+
+This section describes issues that can happen when you use Windows Admin Center in an internet browser.
 
 ### Microsoft Edge
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-microsoft-edge). [17990376]
+If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after opening a new browser window. There isn't currently a solution for this issue, but you can work around it by adding `https://login.microsoftonline.com`, `https://login.live.com`, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser.
+
+For more information, see the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-microsoft-edge).
 
 ### Google Chrome
 
-- Prior to version 70 (released late October 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the WebSockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
+- Prior to version 70 (released late October 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) that affected the WebSockets protocol and Windows New Technology Local Area Network Manager (NTLM) authentication. This bug also affects the following programs:
 
-- Chrome may pop up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
+  - Windows Events
+  
+  - PowerShell
+  
+  - Remote Desktop
 
-- If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work.
+- Many credential prompts might appear while you're using Chrome, especially when you're adding connections in a workgroup environment.
+
+- If you have Windows Admin Center deployed as a service, you must enable popups from the gateway URL to use Azure integration.
 
 ### Mozilla Firefox
 
-Windows Admin Center isn't tested with Mozilla Firefox, but most functionality should work.
+- Windows Admin Center isn't tested with Mozilla Firefox, but most functionality should work.
 
-- Windows 10 Installation: Mozilla Firefox has its own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
+- If you're using Windows 10, you need to import the Windows Admin Center Client certificate into Firefox to use Windows Admin Center.
 
 ## WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, Packet Monitoring, and Events modules in Windows Admin Center use the WebSocket protocol, which is often not supported when using a proxy service.
+Scenarios involving using Windows Admin Center with a proxy service often don't support the WebSocket protocol, which can affect the following programs:
 
-## Support for Windows Server versions before 2016 (2012 R2, 2012, 2008 R2)
+- Remote Desktop
 
-> [!NOTE]
-> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 R2, 2012, or 2008 R2. If you will manage Windows Server these with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers.
+- PowerShell
 
-Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher.
+- Packet Monitoring
 
-If it isn't installed, you can [download and install WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
+- Windows Events
+
+## Support for Windows Server 2012 R2, 2012, and 2008 R2
+
+Windows Admin Center requires PowerShell features that aren't included in Windows Server 2012 R2, 2012, or 2008 R2. You must install Windows Management Framework (WMF) version 5.1 or later on any servers using these versions of Windows Server with Windows Admin Center.
+
+To install WMF:
+
+1. Open a PowerShell window.
+
+1. Enter `$PSVersiontable` to verify if you have WMF installed and check the version number.
+
+1. If you haven't already installed WMF, [download and install it](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## Role Based Access Control (RBAC)
 
-- RBAC deployment won't succeed on machines that are configured to use Windows Defender Application Control (WDAC, formerly known as Code Integrity.) [16568455]
+- RBAC deployment won't work on machines configured to use Windows Defender Application Control (WDAC).
 
 - To use RBAC in a cluster, you must deploy the configuration to each member node individually.
 
-- When RBAC is deployed, you may get unauthorized errors that are incorrectly attributed to the RBAC configuration. [16369238]
+- When you deploy RBAC, you may get unauthorized errors incorrectly attributed to the RBAC configuration.
 
 ## Server Manager solution
 
+This section describes common issues you can run into in Server Manager on Windows Admin Center.
+
 ### Certificates
 
-- Cannot import .PFX Encrypted Certificate in to current user store. [11818622]
+Server Manager on Windows Admin Center doesn't currently support importing the .PFX Encrypted Certificate into the current user store.
 
 ### Events
 
-- Events are affected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
+- Events is affected by the issue described in [WebSocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service).
 
-- You may get an error that references “packet size” when exporting large log files.
+- You may get an error message that references “packet size” when exporting large log files.
 
-  - To resolve this, use the following command in an elevated command prompt on the gateway machine: ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
+  To resolve this issue:
+  
+  1. Open an elevated command prompt on the gateway machine.
+  
+  1. Run the following command:
+
+   ```cmd
+   winrm set winrm/config @{MaxEnvelopeSizekb="8192"}
+   ```
 
 ### Files
 
-- Uploading or downloading large files not yet supported. (\~100mb limit) [12524234]
+Server Manager on Windows Admin Center doesn't currently support uploading or downloading files over 100 MB in size.
 
 ### PowerShell
 
-- PowerShell is affected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
+- PowerShell is affected by the issue described in [WebSocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service).
 
-- Pasting with a single right-click as in the desktop PowerShell console doesn't work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
+- PowerShell in Server Manager doesn't support pasting into the window by right-clicking. To paste into the window, you need to right-click and select **Paste** from the drop-down context menu or use the **Ctrl+V** shortcut.
 
-- Ctrl-C to copy doesn't work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
+- PowerShell in Server Manager doesn't support the Ctrl+C shortcut to copy content to the clipboard. To copy content, highlight the text, right-click it, then select **Copy**.
 
-- When you make the Windows Admin Center window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to its previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
+- When you make the Windows Admin Center window smaller, the terminal content adjusts to fit the new window size. When you return the window to its original size, the content might not return to its original state. You can restore the text by using the `Clear-Host` command, or disconnect and reconnect using the button above the terminal.
+
+<!--Where I left off.-->
 
 ### Registry Editor
 
