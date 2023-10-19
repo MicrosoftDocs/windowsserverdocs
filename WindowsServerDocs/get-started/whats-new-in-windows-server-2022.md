@@ -230,6 +230,12 @@ To learn more about the new features, see [What's new for Windows containers in 
 
 ### Other key features
 
+#### Remote Desktop IP virtualization
+
+As of the [KB5030216](https://support.microsoft.com/help/5030216) update, you can now use Remote Desktop IP Virtualization.
+
+Remote Desktop IP Virtualization simulates a single-user desktop by supporting per-session and per-program Remote Desktop IP Virtualization for Winsock applications. To learn more, see [Remote Desktop IP Virtualization in Windows Server](/troubleshoot/windows-server/remote/remote-desktop-ip-virtualization).
+
 #### Task Scheduler and Hyper-V Manager for Server Core installations
 
 We added two management tools to the App Compatibility Feature on Demand feature package in this version, Task Scheduler (taskschd.msc) and Hyper-V Manager (virtmgmt.msc). For more information, see [Server Core App Compatibility Feature on Demand (FOD)](../get-started/server-core-app-compatibility-feature-on-demand.md).
