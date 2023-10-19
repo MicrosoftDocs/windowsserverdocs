@@ -186,6 +186,8 @@ If specified, the specified user or group can decrypt the password that's stored
 >
 > The principal identified (either by SID or by user or group name) must exist and be resolvable by the device.
 >
+> NOTE: the data specified in this setting must be entered as-is; for example, do *not* add enclosing quotes or parentheses.
+>
 > This setting is ignored unless ADPasswordEncryptionEnabled is configured to True and all other prerequisites are met.
 >
 > This setting is ignored when Directory Services Repair Mode (DSRM) account passwords are backed up on a domain controller. In that scenario, this setting always defaults to the Domain Admins group of the domain controller's domain.
