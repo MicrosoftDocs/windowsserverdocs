@@ -11,7 +11,7 @@ ms.date: 10/19/2023
 # certutil
 
 > [!CAUTION]
-> `Certutil` isn't recommended to be used in any production code and doesn't provide any guarantees of live site support or app compatibilities. It's a tool utilized by developers and IT admins to view certificate content information on devices.
+> `Certutil` isn't recommended to be used in any production code and doesn't provide any guarantees of live site support or application compatibilities. It's a tool utilized by developers and IT administrators to view certificate content information on devices.
 
 Certutil.exe is a command-line program installed as part of Certificate Services. You can use certutil.exe to display certification authority (CA) configuration information, configure Certificate Services, and back up and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
 
@@ -2523,7 +2523,7 @@ Options:
 
 #### Remarks
 
-The Certificate Authority may also need to be configured to support foreign certificates. To do this, type `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
+The Certificate Authority may also need to be configured to support foreign certificates by running `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
 
 ### -GetKey
 
