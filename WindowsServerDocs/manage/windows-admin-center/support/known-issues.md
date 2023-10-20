@@ -159,70 +159,81 @@ Server Manager on Windows Admin Center doesn't currently support uploading or do
 
 ### Registry Editor
 
-- Search functionality not implemented. [13820009]
+Registry Editor for Windows Admin Center for Windows Server hasn't implemented search functionality.
 
 ### Remote Desktop
 
-- When Windows Admin Center is deployed as a service, the Remote Desktop tool may fail to load after updating the Windows Admin Center service to a new version. To work around this issue, clear your browser cache.   [23824194]
+- When you deploy Windows Admin Center as a service, the Remote Desktop tool sometimes doesn't load after the Windows Admin Center service updates to a new version. To work around this issue, clear your browser cache.
 
-- The Remote Desktop tool may fail to connect when managing Windows Server 2012. [20258278]
+- The Remote Desktop tool sometimes doesn't connect when managing Windows Server 2012.
 
-- When using the Remote Desktop to connect to a machine that isn't Domain joined, you must enter your account in the ```MACHINENAME\USERNAME``` format.
+- When using the Remote Desktop to connect to a machine that isn't Domain joined, you must enter your account in the `MACHINENAME\USERNAME` syntax.
 
-- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
+- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, go to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host Connections** and enable the **Allow Users to connect remotely by using Remote Desktop Services** setting.
 
-- Remote Desktop is affected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
+- Remote Desktop is affected by the issue described in [Websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service).
 
-- The Remote Desktop tool doesn't currently support any text, image, or file copy/paste between the local desktop and the remote session.
+- The Remote Desktop tool doesn't currently support any text, image, or file copy and paste between the local desktop and the remote session.
 
-- To do any copy/paste within the remote session, you can copy as normal (right-click + copy or Ctrl+C), but paste requires right-click + paste (Ctrl+V doesn't work)
+- You can copy text the same way you would during a local session by either right-clicking and selecting **Copy** or pressing the **Ctrl+C** keys, but you can only paste by right-clicking and selecting **Paste**.
 
-- You cannot send the following key commands to the remote session
+- Remote sessions don't support the following keys and keyboard shortcuts:
+
   - Alt+Tab
+
   - Function keys
+
   - Windows Key
+
   - PrtScn
 
 ### Roles and Features
 
-- When selecting roles or features with unavailable sources for install, they are skipped. [12946914]
+- When you select roles or features that don't have available installation sources, the system skips them.
 
-- If you choose not to automatically reboot after role installation, we won't ask again. [13098852]
+- If you choose to not automatically restart after installing a role, you won't see any more notification messages asking you to restart.
 
-- If you do choose to automatically reboot, the reboot will occur before the status gets updated to 100%. [13098852]
+- If you do choose to automatically reboot, the reboot occurs before the status bar reaches 100%.
 
 ### Storage
 
-- Down-level: DVD/CD/Floppy drives don't appear as volumes on down-level.
+- DVD, CD, and Floppy drives don't appear as volumes on down-level.
 
-- Down-level: Some properties in Volumes and Disks are not available down-level so they appear unknown or blank in details panel.
+- Some properties in Volumes and Disks appear as unknown or blank in the Details panel because they aren't available in down-level storage.
 
-- Down-level: When creating a new volume, ReFS only supports an allocation unit size of 64K on Windows 2012 and 2012 R2 machines. If a ReFS volume is created with a smaller allocation unit size on down-level targets, file system formatting will fail. The new volume won't be usable. The resolution is to delete the volume and use 64K allocation unit size.
+- If you're creating a new Resilient File System (ReFS) volume, ReFS only supports an allocation unit size of 64K on Windows 2012 and 2012 R2 machines. If you create a ReFS volume with a smaller allocation unit size on down-level targets, file system formatting doesn't work, making the new volume unusable. To resolve this issue, delete the unusable volume, then create a new one with 64K allocation unit size.
 
 ### Updates
 
-- After installing updates, install status may be cached and require a browser refresh.
+- After installing updates, the system sometimes caches the install status and requires a browser refresh.
 
-- You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, try the following remediation steps on the managed node -
-    1. Stop ‘Cryptographic Services' service.
-    2. Change folder options to show hidden files (if required).
-    3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
-    4. Restart ‘Cryptographic Services' service.
-    5. Repeat setting up Update Management with Windows Admin Center
+- If you see an error message that says "Keyset does not exist" when attempting to set up Azure Update management, follow these directions on the managed node:
 
-### Virtual Machines
+  1. Stop the **Cryptographic Services** service.
+  
+  1. Change the folder options to show hidden files, if required.
+  
+  1. Go to the **%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18** folder and delete all its contents.
 
-- When managing the virtual machines on a Windows Server 2012 host, the in-browser VM connect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
+  1. Restart the **Cryptographic Services** service.
+  
+  1. Reinstall Update Management with Windows Admin Center.
 
-- Azure Site Recovery – If Azure Site Recovery is set up on the host outside of Windows Admin Center, you will be unable to protect a VM from within Windows Admin Center [18972276]
+### Virtual machines
 
-- Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
+- If you're managing your virtual machines (VMs) on a Windows Server 2012 session host, the in-browser VM connect tool can't connect to the VM. You can resolve this issue by downloading the .rdp file to connect to the VM.
 
-### Virtual Switches
+- If you've set up Azure Site Recovery on a host outside of Windows Admin Center, it can't protect VMs from inside Windows Admin Center.
 
-- Switch Embedded Teaming (SET): When adding NICs to a team, they must be on the same subnet.
+- Windows Admin Center doesn't currently support advanced features available in Hyper-V Manager, such as Virtual SAN Manager, Move VM, Export VM, and VM Replication.
 
-## Computer Management Solution
+### Virtual switches
+
+When you add network interface controllers (NICs) to a team for switch-embedded teaming (SET), you must make sure they're on the same subnet.
+
+<!--Where I left off.-->
+
+## Computer Management solution
 
 The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, and the following Computer Management solution-specific issues:
 
