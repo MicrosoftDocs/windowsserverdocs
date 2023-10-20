@@ -104,6 +104,15 @@ Options for Windows include:
 
 Azure-based monitoring and reporting solutions are available when you back up passwords to Azure Active Directory.
 
+## Deprecation of legacy Microsoft LAPS product
+
+> [!IMPORTANT]
+> NOTE: the legacy Microsoft LAPS product is deprecated starting with the next versions of Windows 11 and Windows Server. Installation of the legacy Microsoft LAPS MSI package is blocked on newer OSes, and we will no longer consider code changes for the legacy Microsoft LAPS product.
+>
+> Please use Windows LAPS, available on Windows Server 2019 and above, and on supported Windows 10 and Windows 11 clients, for managing local administrator account passwords.
+>
+> Microsoft will continue to support using Legacy LAPS on OSes for which it was previously supported. That support will end upon the normal End of Support for those OSes.
+
 ## Windows LAPS vs. legacy Microsoft LAPS
 
 You can still download an earlier version of Local Administrator Password Solution, [legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
@@ -113,11 +122,17 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 > [!IMPORTANT]
 > Windows LAPS doesn't require you to install legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features without installing or referring to legacy Microsoft LAPS. But to help migrate an existing legacy Microsoft LAPS deployment, Windows LAPS offers [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
 
+> [!IMPORTANT]
+> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation_of_legacy_microsoft_laps_product).
+
 ## Support statement
 
 Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=46899). Windows LAPS shipped as part of Windows Updates released on April 11, 2023 for the platforms listed in [Windows LAPS supported platforms and Azure AD LAPS preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
-Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products.
+Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products. 
+
+> [!IMPORTANT]
+> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation_of_legacy_microsoft_laps_product).
 
 Microsoft strongly recommends that customers begin planning now to migrate their Windows LAPS-capable systems from using legacy Microsoft LAPS over to the new Windows LAPS feature. Windows LAPS offers many new security features and improved product servicing.
 
