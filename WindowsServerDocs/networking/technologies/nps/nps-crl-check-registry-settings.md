@@ -5,14 +5,14 @@ ms.topic: article
 ms.assetid: 
 ms.author: wscontent
 author: marcussa
-ms.date: 10/12//2023
+ms.date: 10/12/2023
 ms.contributor: marcussa
 ---
 # NPS CRL Check Registry Settings
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-You can use the following registry settings to change the way Network Policy Server (NPS) performs certificate revocation list (CRL) checks when EAP-TLS or PEAP-TLS is used.
+You can use the following registry settings to change the way Network Policy Server (NPS) performs Certificate Revocation List (CRL) checks when EAP-TLS or PEAP-TLS is used.
 
 > [!Warning]
 > Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.  
