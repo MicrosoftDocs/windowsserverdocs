@@ -5,7 +5,6 @@ ms.topic: article
 ms.date: 07/06/2023
 ms.author: wscontent
 author: anaharris-ms
-
 ---
 
 # Conditional access for VPN connectivity using Azure AD
@@ -30,7 +29,7 @@ An EAP-TLS client cannot connect unless the NPS server completes a revocation ch
 
 In this section, you'll add `IgnoreNoRevocationCheck` and `NoRevocationCheck`. By default, `IgnoreNoRevocationCheck` and `NoRevocationCheck` are set to 0 (disabled).
 
-For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [NPS CRL Check Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771995(v=ws.10)#ignorenorevocationcheck).
+To learn more about CRL registry settings, see [NPS CRL Check Registry Settings](../../networking/technologies/nps/nps-crl-check-registry-settings.md).
 
 >[!IMPORTANT]
 >If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set `IgnoreNoRevocationCheck=1` on both servers.
@@ -56,7 +55,6 @@ For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13     |EAP-TLS         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 
-
 ## Create root certificates for VPN authentication with Azure AD
 
 In this section, you configure conditional access root certificates for VPN authentication with Azure AD, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
@@ -68,7 +66,7 @@ In this section, you configure conditional access root certificates for VPN auth
 > [!IMPORTANT]
 > Once a VPN certificate is created in the Azure portal, Azure AD will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server to avoid any issues with credential validation of the VPN client.
 
-When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Azure AD issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client. 
+When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Azure AD issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client.
 
 The VPN client then sends the certificate issued by Azure AD to the VPN for credential validation. 
 
@@ -151,7 +149,6 @@ This step covers creation of the most basic Conditional Access policy.  If desi
     ![Enable policy](../media/Always-On-Vpn/15.png)
 
 9. On the **New** page, select **Create**.
-
 
 ## Deploy conditional access root certificates to on-premises AD
 
