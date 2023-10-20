@@ -123,7 +123,7 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 > Windows LAPS doesn't require you to install legacy Microsoft LAPS. You can fully deploy and use all Windows LAPS features without installing or referring to legacy Microsoft LAPS. But to help migrate an existing legacy Microsoft LAPS deployment, Windows LAPS offers [legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md).
 
 > [!IMPORTANT]
-> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](aka.ms/LegacyLAPSDeprecation).
+> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation-of-legacy-microsoft-laps-product).
 
 ## Support statement
 
@@ -132,7 +132,7 @@ Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on th
 Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products. 
 
 > [!IMPORTANT]
-> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](aka.ms/LegacyLAPSDeprecation).
+> The legacy Microsoft LAPS product is deprecated on newer Microsoft OS versions - see [Deprecation of legacy Microsoft LAPS product](laps-overview.md#deprecation-of-legacy-microsoft-laps-product).
 
 Microsoft strongly recommends that customers begin planning now to migrate their Windows LAPS-capable systems from using legacy Microsoft LAPS over to the new Windows LAPS feature. Windows LAPS offers many new security features and improved product servicing.
 
