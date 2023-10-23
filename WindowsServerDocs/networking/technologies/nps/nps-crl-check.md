@@ -15,7 +15,7 @@ ms.contributor: marcussa
 
 By default, the server running Network Policy Server (NPS) checks for certificate revocation for all of the certificates in the certificate chain sent by the client computer during the EAP-TLS and PEAP-TLS authentication process. If certificate revocation fails for any of the certificates in the chain, the connection attempt is not authenticated and is denied.
 
-Certificate revocation checking behavior for NPS can be modified with registry settings. For more information, see NPS CRL Check Registry Settings.
+Certificate revocation checking behavior for NPS can be modified with registry settings. For more information, see [NPS CRL Check Registry Settings](nps-crl-check-registry-settings.md).
 
 Because certificate revocation checking can prevent client access due to the unavailability or expiration of certificate revocation lists (CRLs) for each certificate in the certificate chain, design your public key infrastructure (PKI) for high availability of CRLs. For example, configure multiple CRL distribution points for each certification authority (CA) in the certificate hierarchy and configure publication schedules that ensure that the most current CRL is always available.
 
