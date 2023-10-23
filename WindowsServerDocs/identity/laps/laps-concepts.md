@@ -20,9 +20,6 @@ Learn about the basic design and security concepts for Windows Local Administrat
 - Account password tampering protection
 - Windows safe mode
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
-
 ## Windows LAPS architecture
 
 The following figure depicts the Windows LAPS architecture:
