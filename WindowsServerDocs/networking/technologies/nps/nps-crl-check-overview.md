@@ -9,9 +9,9 @@ ms.date: 10/12/2023
 ms.contributor: marcussa
 ---
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
-
 # NPS CRL checks  
+
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 By default, the Network Policy Server (NPS) checks for certificate revocation for all certificates in the certificate chain sent by the client computer during EAP-TLS or PEAP-TLS authentication. If certificate revocation fails for any of the certificates in the chain, the connection attempt is not authenticated and is denied.
 
