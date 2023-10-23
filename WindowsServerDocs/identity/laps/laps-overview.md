@@ -25,7 +25,7 @@ All supported editions of the above platforms have been updated with Windows LAP
 
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
-## Windows LAPS Entra ID
+## Windows LAPS and Entra ID
 
 Windows LAPS with Microsoft Entra ID and Microsoft Intune support is now in General Availability as of October 23 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999), and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
 
