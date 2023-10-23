@@ -12,7 +12,7 @@ metadata:
   ms.prod: windows-server
 title: Frequently asked questions about the Remote Desktop clients
 summary: |
-  >Applies to: Windows 11, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+  >Applies to: Windows 11, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016.
   
   Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients.
   
@@ -256,7 +256,7 @@ sections:
       - question: |
           What does "RPC Error 23014" or "Error 0x59e6" mean?
         answer: |
-          In case of an **RPC error 23014** or **Error 0x59E6 try again after waiting a few minutes**, the RD Gateway server has reached the maximum number of active connections. Depending on the Windows version running on the RD Gateway the maximum number of connections differs: The Windows Server 2008 R2 Standard implementation limits the number of connections to 250. The Windows Server 2008 R2 Foundation implementation limits the number of connections to 50. All other Windows implementations allow an unlimited number of connections.
+          In case of an **RPC error 23014** or **Error 0x59E6 try again after waiting a few minutes**, the RD Gateway server has reached the maximum number of active connections. Most Windows implementations allow an unlimited number of connections, although earlier versions might have limits.
           
       - question: |
           What does the "Failed to parse NTLM challenge" error mean?

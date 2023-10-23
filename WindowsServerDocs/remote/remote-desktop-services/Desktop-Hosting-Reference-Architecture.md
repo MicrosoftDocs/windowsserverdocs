@@ -35,7 +35,7 @@ After reading this document, the reader should understand:
 - The building blocks for providing a secure, reliable, multitenant desktop hosting solution based in Microsoft Azure Services.
 - The purpose of each building block and how they fit together.
 
-There are multiple ways to build a desktop hosting solution based on this architecture. This architecture outlines integration and improvements in Azure with Windows Server 2016. Other deployment options are available with the [Desktop Hosting Reference Architecture Guide](https://go.microsoft.com/fwlink/p/?LinkId=517389) for Windows Server 2012 R2.
+There are multiple ways to build a desktop hosting solution based on this architecture. This architecture outlines integration and improvements in Azure with Windows Server 2016. Other deployment options are available with the [Desktop Hosting Reference Architecture Guide](https://go.microsoft.com/fwlink/p/?LinkId=517389).
 
 The following topics are covered:
 

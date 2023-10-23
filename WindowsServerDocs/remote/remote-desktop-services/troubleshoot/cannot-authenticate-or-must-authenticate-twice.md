@@ -44,7 +44,7 @@ If the user is already a member of this group (or if multiple group members have
 
 This behavior is most likely to occur if your domain controllers are running Windows Server 2016 or later, and users attempt to connect by using a customized connection app. In particular, applications that access the user's profile information in Active Directory will be denied access.
 
-This behavior results from a change to Windows. In Windows Server 2012 R2 and earlier versions, when a user signs in to a remote desktop, the Remote Connection Manager (RCM) contacts the domain controller (DC) to query the configurations that are specific to Remote Desktop on the user object in Active Directory Domain Services (AD DS). This information is displayed in the Remote Desktop Services Profile tab of a user's object properties in the Active Directory Users and Computers MMC snap-in.
+This behavior results from a change to Windows. In earlier versions of Windows Server, when a user signs in to a remote desktop, the Remote Connection Manager (RCM) contacts the domain controller (DC) to query the configurations that are specific to Remote Desktop on the user object in Active Directory Domain Services (AD DS). This information is displayed in the Remote Desktop Services Profile tab of a user's object properties in the Active Directory Users and Computers MMC snap-in.
 
 Starting in Windows Server 2016, RCM no longer queries the user's object in AD DS. If you need RCM to query AD DS because you're using Remote Desktop Services attributes, you must manually enable the query.
 
@@ -81,23 +81,13 @@ To work around this issue, try one of the following things:
 
 Be advised that all of these solutions require compromises in either performance or security level.
 
-### User can't sign in to a Windows Server 2008 SP2 computer using a smart card
-
-This issue occurs when users sign in to a Windows Server 2008 SP2 computer that has been updated with KB4093227 (2018.4B). When users attempt to sign in using a smart card, they are denied access with messages such as "No valid certificates found. Check that the card is inserted correctly and fits tightly." At the same time, the Windows Server computer records the Application event "An error occurred while retrieving a digital certificate from the inserted smart card. Invalid Signature."
-
-To resolve this issue, update the Windows Server computer with the 2018.06 B re-release of KB 4093227, [Description of the security update for the Windows Remote Desktop Protocol (RDP) denial of service vulnerability in Windows Server 2008: April 10, 2018](https://support.microsoft.com/help/4093227/security-update-for-vulnerabilities-in-windows-server-2008).
-
 ### Can't stay signed in with a smart card and Remote Desktop Services service hangs
 
 This issue occurs when users sign in to a Windows or Windows Server computer that has been updated with KB 4056446. At first, the user may be able to sign in to the system by using a smart card, but then receives a "SCARD\_E\_NO\_SERVICE" error message. The remote computer may become unresponsive.
 
 To work around this issue, restart the remote computer.
 
-To resolve this issue, update the remote computer with the appropriate fix:
-
-  - Windows Server 2008 SP2: KB 4090928, [Windows leaks handles in the lsm.exe process and smart card applications may display "SCARD\_E\_NO\_SERVICE" errors](https://support.microsoft.com/help/4090928/scard-e-no-service-errors-when-windows-leaks-handles-in-the-lsm-exe)
-  - Windows Server 2012 R2: KB 4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103724/windows-81-update-kb4103724)
-  - Windows Server 2016 and Windows 10, version 1607: KB 4103720, [May 17, 2018—KB4103720 (OS Build 14393.2273)](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)
+To resolve this issue, update the remote computer with the [KB 4103720](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720) update.
 
 ## If the remote PC is locked, the user needs to enter a password twice
 
@@ -107,7 +97,7 @@ To resolve this issue, update the Windows 10 version 1709 computer with KB 43438
 
 ## User can't sign in and receives "authentication error" and "CredSSP encryption oracle remediation" messages
 
-When users try to sign in using any version of Windows from Windows Vista SP2 and later versions or Windows Server 2008 SP2 and later versions, they're denied access and recieve messages like these:
+When users try to sign in using any version of Windows from Windows Vista SP2 and later versions or Windows Server, they're denied access and receive messages like these:
 
 ```
 An authentication error has occurred. The function requested is not supported.
@@ -148,13 +138,7 @@ When users sign in to Remote Desktop using a computer running Windows 7 or Windo
   - Windows 7: KB 4103718, [May 8, 2018—KB4103718 (Monthly Rollup)](https://support.microsoft.com/help/4103718/windows-7-update-kb4103718)
   - Windows 10 1709: KB 4103727, [May 8, 2018—KB4103727 (OS Build 16299.431)](https://support.microsoft.com/help/4103727/windows-10-update-kb4103727)
 
-To resolve this issue, ensure that the computers that the users want to connect to (as well as RDSH or RDVI servers) are fully updated through June, 2018. This includes the following updates:
-
-  - Windows Server 2016: KB 4284880, [June 12, 2018—KB4284880 (OS Build 14393.2312)](https://support.microsoft.com/help/4284880/windows-10-update-kb4284880)
-  - Windows Server 2012 R2: KB 4284815, [June 12, 2018—KB4284815 (Monthly Rollup)](https://support.microsoft.com/help/4284815/windows-81-update-kb4284815)
-  - Windows Server 2012: KB 4284855, [June 12, 2018—KB4284855 (Monthly Rollup)](https://support.microsoft.com/help/4284855/windows-server-2012-update-kb4284855)
-  - Windows Server 2008 R2: KB 4284826, [June 12, 2018—KB4284826 (Monthly Rollup)](https://support.microsoft.com/help/4284826/windows-7-update-kb4284826)
-  - Windows Server 2008 SP2: KB4056564, [Description of the security update for the CredSSP remote code execution vulnerability in Windows Server 2008, Windows Embedded POSReady 2009, and Windows Embedded Standard 2009: March 13, 2018](https://support.microsoft.com/help/4056564/security-update-for-vulnerabilities-in-windows-server-2008)
+To resolve this issue, ensure that the computers that the users want to connect to (as well as RDSH or RDVI servers) are running at least the [KB 4284880](https://support.microsoft.com/help/4284880/windows-10-update-kb4284880) update.
 
 ## Users are denied access on a deployment that uses Remote Credential Guard with multiple RD Connection Brokers
 

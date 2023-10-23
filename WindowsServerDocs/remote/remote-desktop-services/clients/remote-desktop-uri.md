@@ -10,7 +10,7 @@ ms.date: 06/01/2020
 ---
 # Remote Desktop URI scheme
 
->Applies to: Windows Server 2022, Windows Server, version 1803, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server, version 1803, Windows Server 2019, Windows Server 2016
 
 This document defines the format of Uniform Resource Identifiers (URIs) for Remote Desktop. These URI schemes allow for Remote Desktop clients to be invoked with various commands.
 

@@ -24,10 +24,6 @@ You can connect to PCs that run the following Windows operating systems:
 - Windows 7 Professional
 - Windows 7 Enterprise
 - Windows 7 Ultimate
-- Windows Server 2008
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
 - Windows Server 2016
 - Windows Multipoint Server 2011
 - Windows Multipoint Server 2012
@@ -36,18 +32,11 @@ You can connect to PCs that run the following Windows operating systems:
 
 The following computers can run the Remote Desktop gateway:
 
-- Windows Server 2008
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
 - Windows Server 2016
 - Windows Small Business Server 2011
 
 The following operating systems can serve as RD Web Access or RemoteApp servers:
 
-- Windows Server 2008 R2
-- Windows Server 2012
-- Windows Server 2012 R2
 - Windows Server 2016
 
 ## Unsupported Windows Versions and Editions

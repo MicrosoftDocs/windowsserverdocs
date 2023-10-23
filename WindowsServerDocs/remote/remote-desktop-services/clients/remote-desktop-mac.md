@@ -10,7 +10,7 @@ ms.date: 11/03/2022
 ---
 # Get started with the macOS client
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
 
@@ -148,7 +148,7 @@ By default, the remote session will use the same keyboard locale as the OS you'r
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
-Windows Server 2012 R2 introduced support for a new authentication method, Remote Desktop Gateway pluggable authentication and authorization, which provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client.
+Remote Desktop Gateway pluggable authentication and authorization provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client.
 
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.

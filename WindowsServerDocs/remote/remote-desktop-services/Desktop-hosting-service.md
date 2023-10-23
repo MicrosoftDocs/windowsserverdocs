@@ -34,7 +34,7 @@ There are multiple ways to deploy AD DS:
 For more information, see the following articles:
 
 * [Azure Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
-* [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Desktop Hosting Reference Architecture Guide](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 * [Create a site-to-site connection in the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
 ## SQL database

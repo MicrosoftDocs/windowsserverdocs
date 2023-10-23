@@ -12,10 +12,8 @@ manager: scottman
 
 >Applies to: Windows Server 2016
 
-## Supported OS upgrades with RDS role installed
-Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2.
-
 ## RD Virtualization Host servers in the deployment where VMs are stored locally
+
 These servers should be upgraded all at once. Follow the following steps to upgrade:
 
 1. Log off all users.
@@ -25,7 +23,7 @@ These servers should be upgraded all at once. Follow the following steps to upgr
 
 ## RD Virtualization Host servers in the deployment where VMs are stored in Cluster Shared Volumes (CSV)
 
-1. Determine an upgrade strategy where some of the RDVH servers will be upgraded and some will continue to host VMs on Windows Server 2012 R2.
+1. Determine an upgrade strategy where some of the RDVH servers will be upgraded and some will continue to host VMs on the earlier version of Windows Server.
 2. Isolate one or more of the RDVH servers, targeted for the initial round of upgrading, by migrating all VMs to other 'not to be upgraded yet' RDVH servers that will remain part of the original 2012 R2 cluster.
     1. Open Failover Cluster Manager.
     1. Click **Roles**.

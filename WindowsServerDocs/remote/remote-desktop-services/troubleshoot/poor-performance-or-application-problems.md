@@ -19,10 +19,7 @@ This issue affects virtual machines that have been recently provisioned. After t
 
 To work around this issue, disconnect from the virtual machine, wait for at least 20 minutes, and then connect again.
 
-To resolve this issue, apply the following updates to the virtual machines, as appropriate:
-
-  - Windows 10 and Windows Server 2016: KB 4343884, [August 30, 2018—KB4343884 (OS Build 14393.2457)](https://support.microsoft.com/help/4343884/windows-10-update-kb4343884)
-  - Windows Server 2012 R2: KB 4343891, [August 30, 2018—KB4343891 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4343891/windows-81-update-kb4343891)
+To resolve this issue, apply the [KB 4343884 update](https://support.microsoft.com/help/4343884/windows-10-update-kb4343884) to the virtual machines.
 
 ### Video playback issues on Windows 10 version 1709
 
@@ -46,10 +43,10 @@ To resolve this issue, apply KB 4340917, [July 24, 2018—KB4340917 (OS Build 17
 
 ### Black screen issue
 
-This issue occurs in Windows 8.0, Windows 8.1, Windows 10 RTM, and Windows Server 2012 R2. A user launches multiple applications in a remote desktop, then disconnects from the session. Periodically, the user reconnects to the remote desktop to interact with the applications, and then disconnects again. At some point, when the user reconnects, the remote desktop session only shows a black screen. To get the session to display properly again, the user then has to end their session from either the remote computer's console or the RDSH server console and stop their session's applications.
+This issue occurs in Windows 8.0, Windows 8.1, and Windows 10 RTM. A user launches multiple applications in a remote desktop, then disconnects from the session. Periodically, the user reconnects to the remote desktop to interact with the applications, and then disconnects again. At some point, when the user reconnects, the remote desktop session only shows a black screen. To get the session to display properly again, the user then has to end their session from either the remote computer's console or the RDSH server console and stop their session's applications.
 
 To resolve this issue, apply the following updates as appropriate:
 
-  - Windows 8 and Windows Server 2012: KB4103719, [May 17, 2018—KB4103719 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103719/windows-server-2012-update-kb4103719)
-  - Windows 8.1 and Windows Server 2012 R2: KB4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103724/windows-81-update-kb4103724) and KB 4284863, [June 21, 2018—KB4284863 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4284863/windows-81-update-kb4284863)
+  - Windows 8: KB4103719, [May 17, 2018—KB4103719 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103719/windows-server-2012-update-kb4103719)
+  - Windows 8.1: KB4103724, [May 17, 2018—KB4103724 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4103724/windows-81-update-kb4103724) and KB 4284863, [June 21, 2018—KB4284863 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4284863/windows-81-update-kb4284863)
   - Windows 10: Fixed in KB4284860, [June 12, 2018—KB4284860 (OS Build 10240.17889)](https://support.microsoft.com/help/4284860/windows-10-update-kb4284860)

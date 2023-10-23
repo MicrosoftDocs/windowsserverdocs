@@ -22,8 +22,9 @@ Before getting started, keep the following things in mind:
 * Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users connect to are running one of the following OS versions:
+  
   * Windows 10
-  * Windows Server 2008R2 or later
+  * Windows Server 2016 or later
 
 Your users will see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
 
