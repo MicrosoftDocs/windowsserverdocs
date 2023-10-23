@@ -11,7 +11,7 @@ ms.topic: overview
 
 Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
-## Windows LAPS supported platforms and Azure AD LAPS preview status
+## Windows LAPS supported platforms and Entra ID
 
 Windows LAPS is now available on the following OS platforms with the specified update or later installed:
 
@@ -25,7 +25,9 @@ All supported editions of the above platforms have been updated with Windows LAP
 
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
-Windows LAPS with Microsoft Entra (Azure AD) and Microsoft Intune support is now in General Availability as of October 23rd 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999), and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
+## Windows LAPS Entra ID
+
+Windows LAPS with Microsoft Entra ID and Microsoft Intune support is now in General Availability as of October 23rd 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999), and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
 
 ## Benefits of using Windows LAPS
 
@@ -35,7 +37,7 @@ Use Windows LAPS to regularly rotate and manage local administrator account pass
 - Improved security for remote help desk scenarios
 - Ability to sign in to and recover devices that are otherwise inaccessible
 - A fine-grained security model (access control lists and optional password encryption) for securing passwords that are stored in Windows Server Active Directory
-- Support for the Azure role-based access control model for securing passwords that are stored in Azure Active Directory
+- Support for the Entra role-based access control model for securing passwords that are stored in Entra ID
 
 ## Informational videos
 
