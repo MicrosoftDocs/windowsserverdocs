@@ -13,18 +13,18 @@ ms.contributor: marcussa
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-By default, the Network Policy Server (NPS) checks for certificate revocation for all certificates in the certificate chain sent by the client computer during EAP-TLS or PEAP-TLS authentication. If certificate revocation fails for any of the certificates in the chain, the connection attempt is not authenticated and is denied.
+If a certificate based authentication method, like EAP-TLS or PEAP-TLS, is used the client sends certificates to the NPS (Network Policy Server). By default, the Network Policy Server (NPS) checks the revocation status for all certificates in the certificate chain. If the certificate revocation check fails for **any** of the certificates in the chain, the connection attempt is denied. A CA (Certificate Authority) publishes the information about revoked certificates in a CRL (Certificate Revocation List).  
 
-Certificate revocation checking behavior for NPS can be modified with registry settings. For more information, see [NPS CRL Check Registry Settings](nps-crl-check-registry-settings.md).
+The behaviour of the certificate revocation check on NPS can be modified with registry settings. For more information, see [NPS CRL Check Registry Settings](nps-crl-check-registry-settings.md).
 
-Because certificate revocation checking can prevent client access if the certificate revocation list (CRL) for any certificate in the certificate chain has expired or is unavailable, design your public key infrastructure (PKI) for high availability of CRLs. For example, configure multiple CRL distribution points for each certification authority (CA) in the certificate hierarchy and configure publication schedules that ensure that the most current CRL is always available.
+Because certificate revocation checking can prevent client access if the CRL for any certificate in the certificate chain has expired or is unavailable, design your public key infrastructure (PKI) for high availability of CRLs. For example, configure multiple CRL distribution points for each CA in the certificate hierarchy and configure publication schedules that ensure that the most current CRL is always available.
 
 Certificate revocation checking is only as accurate as the CRL on the NPS. CRLs are
-- published based on a schedule that can be configured and
+- published by the CA based on a schedule that can be configured and
 - cached on a NPS server for the time they are valid.
 
-If a certificate is revoked, by default the new CRL containing the newly revoked certificate is not automatically published. Also, the CRL on the NPS server is not updated as long as the cached one is valid.  
-This means that the revoked certificate can still be used to authenticate until the CRL on the NPS is updated.
+If a certificate gets revoked, the new CRL, containing the newly revoked certificate, is not automatically published. Also, the CRL on the NPS server is not updated as long as the cached CRL is valid.  
+This means, that the revoked certificate can still be used to authenticate until the new CRL is published by the CA and updated on the NPS.
 
 To prevent this from occurring, the network administrator must manually publish the updated CRL and manually update the CRL on the NPS Server.  
 Please ask your PKI administrator for how to publish the new CRL.  
