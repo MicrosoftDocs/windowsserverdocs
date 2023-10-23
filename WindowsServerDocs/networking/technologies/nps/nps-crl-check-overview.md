@@ -9,7 +9,7 @@ ms.date: 10/12/2023
 ms.contributor: marcussa
 ---
 
-# NPS CRL checks  
+# NPS CRL check overview  
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
@@ -26,10 +26,17 @@ Certificate revocation checking is only as accurate as the CRL on the NPS. CRLs 
 If a certificate is revoked, by default the new CRL containing the newly revoked certificate is not automatically published. Also, the CRL on the NPS server is not updated as long as the cached one is valid.  
 This means that the revoked certificate can still be used to authenticate until the CRL on the NPS is updated.
 
-To prevent this from occurring, the network administrator must manually publish the new CRL with the newly revoked certificate and manually update the CRL on the NPS Server.
+To prevent this from occurring, the network administrator must manually publish the updated CRL and manually update the CRL on the NPS Server.  
+Please ask your PKI administrator for how to publish the new CRL.  
+To manually update the CRL on your NPS server run these commands in an elevated command prompt (CMD):  
+
+```
+certutil -urlcache * delete
+certutil -setreg chain\ChainCacheResyncFiletime @now
+```
 
 > [!Important]
-> When using certificates for computer or user network access authentication, ensure that the CRLs are published in a primary and at least one secondary location that are accessible by all computers, especially all NPS and other RADIUS servers. If the NPS servers attempts to perform CRL validation of user or computer certificates, but cannot locate the CRLs, the NPS server rejects all certificate-based connection attempts and authentication fails.
+> When using certificates for computer or user authentication, ensure that the CRLs are published in a primary and at least one secondary location that are accessible by all computers, especially all NPS and other RADIUS servers. If the NPS servers attempts to perform CRL validation of user or computer certificates, but cannot locate the CRLs, the NPS server rejects all certificate-based connection attempts and authentication fails.
 
 The certificate revocation check for a certificate can fail for the following reasons:
 
