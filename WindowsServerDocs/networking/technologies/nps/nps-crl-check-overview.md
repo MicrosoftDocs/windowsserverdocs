@@ -1,6 +1,6 @@
 ---
-title: NPS CRL Check Registry Settings
-description: This topic provides information about configuring Certificate Revocation List settings for EAP-TLS authentication on a Network Policy Server.
+title: NPS CRL Check overview
+description: This topic provides information about Certificate Revocation handling by NPS (Network Policy Server).
 ms.topic: article
 ms.assetid: 
 ms.author: wscontent
