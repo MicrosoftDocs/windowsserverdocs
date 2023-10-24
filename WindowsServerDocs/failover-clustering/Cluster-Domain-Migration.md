@@ -67,6 +67,9 @@ Moving a cluster from one domain is a straight-forward process. To accomplish th
 **New-ClusterNameAccount** – creates a Cluster Name Account in Active Directory
 **Remove-ClusterNameAccount** – removes the Cluster Name Accounts from Active Directory
 
+   > [!NOTE]
+   > It is possible that Remove-ClusterNameAccount will fail to run. If you encounter problems, follow the same steps as before Windows Server 2016. Microsoft is aware of the problem.
+
 The process to accomplish this is to change the cluster from one domain to a workgroup and back to the new domain.  The need to destroy a cluster, rebuild a cluster, install applications, etc is not a requirement. For example, it would look like this:
 
 ![Migrate](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-3.gif)
