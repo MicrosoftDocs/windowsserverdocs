@@ -36,5 +36,5 @@ Before you dive into in-depth troubleshooting, there are a few things that you s
 |[WS-Federation with Fiddler](ad-fs-tshoot-fiddler-ws-fed.md)|Detailed Fiddler trace of a WS-Federation interaction.|
 |[Claim rules syntax](ad-fs-tshoot-claims-rules.md)|Information on troubleshooting claim rules and their syntax.|
 |[Integrated Windows authentication](ad-fs-tshoot-iwa.md)|Information on troubleshooting integrated authentication.|
-|[Azure AD](ad-fs-tshoot-azure.md)|Information on troubleshooting AD FS interaction with Azure AD.|
+|[Microsoft Entra ID](ad-fs-tshoot-azure.md)|Information on troubleshooting AD FS interaction with Microsoft Entra ID.|
 |[AD FS Diagnostics Analyzer](ad-fs-diagnostics-analyzer.md)|AD FS Help Diagnostics Analyzer performs basic AD FS checks by using the diagnostics PowerShell module.|
