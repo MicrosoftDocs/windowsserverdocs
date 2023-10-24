@@ -30,7 +30,7 @@ This page is updated monthly, so revisit it regularly.
 ## Version 0.0.0.313 - April 2023
 
 ### New features
-- Introduced Azure AD authentication for Azure Stack HCI. Note that this functionality is in preview. Please create a support ticket for all issues.
+- Introduced Microsoft Entra authentication for Azure Stack HCI. Note that this functionality is in preview. Please create a support ticket for all issues.
 - Introduced a **Network** tool
 - Introduced Virtual Machine Live Storage Migration
 - Introduced new security experiences for Azure Stack HCI clusters with the supplemental package
@@ -52,11 +52,11 @@ This page is updated monthly, so revisit it regularly.
 
 ### Fixed
 
-- Fixed Azure AD authentication when managing domain controllers. Azure AD authentication isn't supported on domain controllers and users must enter local administrator credentials.
+- Fixed Microsoft Entra authentication when managing domain controllers. Microsoft Entra authentication isn't supported on domain controllers and users must enter local administrator credentials.
 
 ## Version 0.0.0.221 - October 2022
 
 ### New features
 
-- Introduced Azure AD authentication for Windows Server Azure Virtual Machines and Arc-enabled Servers. Azure Stack HCI doesn't support Azure AD authentication yet.
+- Introduced Microsoft Entra authentication for Windows Server Azure Virtual Machines and Arc-enabled Servers. Azure Stack HCI doesn't support Microsoft Entra authentication yet.
 - Windows Admin Center for Azure Virtual Machines is now generally available. Windows Admin Center for Arc-enabled servers and Azure Stack HCI remains in Public Preview.

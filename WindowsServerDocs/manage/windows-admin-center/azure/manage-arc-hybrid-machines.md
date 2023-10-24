@@ -171,7 +171,7 @@ After you've installed Windows Admin Center on your hybrid machine, perform the 
 2. Select **Connect**.
 
 > [!NOTE]
-> Starting August 2022, Windows Admin Center now allows you to use Azure AD-based authentication for your hybrid machine. You will no longer be prompted for the credentials of a local administrator account.
+> Starting August 2022, Windows Admin Center now allows you to use Microsoft Entra ID-based authentication for your hybrid machine. You will no longer be prompted for the credentials of a local administrator account.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
@@ -184,7 +184,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
 
-To configure role assignments for your hybrid machines using the Azure AD Portal experience:
+To configure role assignments for your hybrid machines using the Microsoft Entra admin center experience:
 
 1. Open the hybrid machine that you wish to manage using Windows Admin Center
 

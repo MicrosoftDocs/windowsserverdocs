@@ -150,7 +150,7 @@ After you've installed Windows Admin Center on your cluster, perform the followi
 2. Select **Connect**.
 
 > [!NOTE]
-> Starting April 2023, Windows Admin Center now allows you to use Azure AD-based authentication for your 22H2 or higher clusters running the AdminCenter extension greater than 0.0.0.313. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
+> Starting April 2023, Windows Admin Center now allows you to use Microsoft Entra ID-based authentication for your 22H2 or higher clusters running the AdminCenter extension greater than 0.0.0.313. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
@@ -163,7 +163,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
 
-To configure role assignments for your cluster using the Azure AD Portal experience:
+To configure role assignments for your cluster using the Microsoft Entra admin center experience:
 
 1. Select the **Resource Group** containing the cluster and the associated Azure Arc resources.
 

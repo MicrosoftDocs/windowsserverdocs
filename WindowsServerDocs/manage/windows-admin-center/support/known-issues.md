@@ -191,7 +191,7 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, and the following Computer Management solution-specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (Azure AD) to log on to your Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account. [16568455]
+- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Microsoft Entra ID to log on to your Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account. [16568455]
 
 - When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
 
@@ -369,11 +369,11 @@ In the 2009 release, you may run into issues logging into Azure or registering y
 
 ### Azure File Sync permissions
 
-Azure File Sync requires permissions in Azure that Windows Admin Center did not provide prior to version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than Windows Admin Center version 1910, you will need to update your Azure Active Directory application to get the correct permissions to use Azure File Sync in the latest version of Windows Admin Center. The additional permission allows Azure File Sync to perform automatic configuration of storage account access as described in this article: [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
+Azure File Sync requires permissions in Azure that Windows Admin Center did not provide prior to version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than Windows Admin Center version 1910, you will need to update your Microsoft Entra application to get the correct permissions to use Azure File Sync in the latest version of Windows Admin Center. The additional permission allows Azure File Sync to perform automatic configuration of storage account access as described in this article: [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
 
-To update your Azure Active Directory app, you can do one of two things
-1. Go to **Settings** > **Azure** > **Unregister**, and then register Windows Admin Center with Azure again, making sure you choose to create a new Azure Active Directory application.
-2. Go to your Azure Active Directory application and manually add the permission needed to your existing Azure Active Directory app registered with Windows Admin Center. To do this, go to **Settings** > **Azure** > **View in Azure**. From the **App Registration** blade in Azure, go to **API permissions**, select **Add a permission**. Scroll down to select **Azure Active Directory Graph**, select **Delegated permissions**, expand **Directory**, and select **Directory.AccessAsUser.All**. Click **Add permissions** to save the updates to the app.
+To update your Microsoft Entra app, you can do one of two things
+1. Go to **Settings** > **Azure** > **Unregister**, and then register Windows Admin Center with Azure again, making sure you choose to create a new Microsoft Entra application.
+2. Go to your Microsoft Entra application and manually add the permission needed to your existing Microsoft Entra app registered with Windows Admin Center. To do this, go to **Settings** > **Azure** > **View in Azure**. From the **App Registration** blade in Azure, go to **API permissions**, select **Add a permission**. Scroll down to select **Azure Active Directory Graph**, select **Delegated permissions**, expand **Directory**, and select **Directory.AccessAsUser.All**. Click **Add permissions** to save the updates to the app.
 
 ### Options for setting up Azure management services
 
