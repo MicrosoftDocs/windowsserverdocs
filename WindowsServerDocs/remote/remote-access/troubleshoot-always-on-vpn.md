@@ -192,17 +192,19 @@ To resolve this issue, make sure the client machine has a trusted root certifica
 
 ### Error: Oops, you can't get to this yet
 
-This error message is associated with Azure AD Conditional Access connection issues. When this issue appears, the Conditional Access policy isn't satisfied, blocking the VPN connection but then connecting after the user closes the dialog window. If the user selects **OK**, it starts another authentication attempt that also doesn't succeed and prompts an identical error message. The client's Azure AD Operational Event log records these events.
+This error message is associated with Microsoft Entra Conditional Access connection issues. When this issue appears, the Conditional Access policy isn't satisfied, blocking the VPN connection but then connecting after the user closes the dialog window. If the user selects **OK**, it starts another authentication attempt that also doesn't succeed and prompts an identical error message. The client's Microsoft Entra Operational Event log records these events.
 
-#### Azure AD Conditional Access error cause
+<a name='azure-ad-conditional-access-error-cause'></a>
+
+#### Microsoft Entra Conditional Access error cause
 
 There are a few reasons why this issue can happen:
 
-- The user has a client authentication certificate in their Personal Certificate store that's valid but didn't come from Azure AD.
+- The user has a client authentication certificate in their Personal Certificate store that's valid but didn't come from Microsoft Entra ID.
 
 - The VPN profile `<TLSExtensions>` section is either missing or doesn't contain the `<EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID>` entries. The `<EKUName>` and `<EKUOID>` entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without the  `<EKUName>` and `<EKUOID>` entries, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds.
 
-- The RADIUS server (NPS) hasn't been configured to only accept client certificates that contain the **AAD Conditional Access** object identifier (OID).
+- The RADIUS server (NPS) hasn't been configured to only accept client certificates that contain the **Microsoft Entra Conditional Access** object identifier (OID).
 
 #### Solution: use PowerShell to determine certificate status
 

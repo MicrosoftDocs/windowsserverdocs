@@ -27,13 +27,13 @@ The tenant's forest does not require any trust relationship with the provider's 
 
 There are multiple ways to deploy AD DS:
 
-1. Enable Azure Active Directory Domain Services in the tenant's virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
+1. Enable Microsoft Entra Domain Services in the tenant's virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Microsoft Entra ID.
 2. Set up a stand-alone AD DS server in the tenant's virtual networking environment. This gives you all of the full control of the AD DS instance running on virtual machines.
 3. Create a site-to-site VPN connection to an AD DS server located on the tenant's premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, and so on.
 
 For more information, see the following articles:
 
-* [Azure Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
+* [Microsoft Entra Domain Services documentation](/azure/active-directory-domain-services/)
 * [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 * [Create a site-to-site connection in the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
