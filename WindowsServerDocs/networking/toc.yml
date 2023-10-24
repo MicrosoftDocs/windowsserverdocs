@@ -414,10 +414,12 @@ items:
       - name: Manage certificates used with NPS
         href: technologies/nps/nps-manage-certificates.md
         items:
-        - name: Configure certificate templates for PEAP and EAP requirements
-          href: technologies/nps/nps-manage-cert-requirements.md
-        - name: NPS CRL Check Registry Settings
+        - name: NPS CRL check overview
+          href: technologies/nps/nps-crl-check-overview.md
+        - name: NPS CRL check registry settings
           href: technologies/nps/nps-crl-check-registry-settings.md
+        - name: Configure certificate templates for PEAP and EAP requirements
+          href: technologies/nps/nps-manage-cert-requirements.md          
       - name: Manage NPSs
         href: technologies/nps/nps-manage-servers.md
         items:

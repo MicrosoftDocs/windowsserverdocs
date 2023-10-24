@@ -1,11 +1,11 @@
 ---
-title: NPS Certificate Revocation List check registry settings
-description: This article provides information about configuring Certificate Revocation List settings for EAP-TLS authentication on a Network Policy Server.
+title: NPS Certificate Revocation List check registry settings for Windows Server
+description: This article provides information about configuring Certificate Revocation List settings for EAP-TLS authentication on a Network Policy Server in a Windows Server environment.
 ms.topic: article
 ms.assetid: 
 ms.author: wscontent
 author: marcussa
-ms.date: 10/23/2023
+ms.date: 10/24/2023
 ms.contributor: alalve
 ---
 
@@ -13,19 +13,10 @@ ms.contributor: alalve
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Certificate revocation checking can prevent client access due to the unavailability or expiration
-of certificate revocation lists (CRLs) for each certificate in the certificate chain, design your
-public key infrastructure (PKI) for high availability of CRLs in your Network Policy Server (NPS).
-For example, configure multiple CRL distribution points for each certification authority (CA) in
-the certificate hierarchy and configure publication schedules that ensure that the most current CRL
-is always available.
+Certificate revocation checking can prevent client access due to the unavailability or expiration of certificate revocation lists (CRLs) for each certificate in the certificate chain, design your public key infrastructure (PKI) for high availability of CRLs in your Network Policy Server (NPS). For example, configure multiple CRL distribution points for each certification authority (CA) in the certificate hierarchy and configure publication schedules that ensure that the most current CRL is always available.
 
 By default, the server running the NPS checks for certificate revocation for all of the certificates in the certificate chain sent by the client computer during the EAP-TLS and
-PEAP-TLS authentication process. If certificate revocation fails for any of the certificates in the
-chain, the connection attempt isn't authenticated and is denied.
-
-> [!IMPORTANT]
-> When using certificates for computer-level or user-level network access authentication, ensure that the CRLs are published in a primary and at least one secondary location that are accessible by all computers, especially all NPS and other RADIUS servers. If the NPS-RADIUS servers attempt to perform CRL validation of the user or computer certificate, but cannot locate the CRLs, the NPS RADIUS servers reject all certificate-based connection attempts and authentication fails.
+PEAP-TLS authentication process. If certificate revocation fails for any of the certificates in the chain, the connection attempt isn't authenticated and is denied.
 
 ## NPS CRL registry settings
 
@@ -92,26 +83,6 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\1
 
 ---
 
-## Certificate revocation check failures
-
-The certificate revocation check for a certificate can fail for the following reasons:
-
-- The certificate has been revoked.
-
-- The certificate doesn't include the CRL information.
-
-- The CRL isn't current.
-
-  Each published CRL has a range of valid dates. If the CRL Next update date has passed, the CRL is considered invalid and the certificate revocation check fails. New CRLs should be published before the expiration date of the last published CRL.
-
-- The publisher of the CRL didn't issue the certificate.
-  
-  Included in the CRL is the publishing CA. If the publishing CA of the CRL doesn't match the issuing CA for the certificate for which certificate revocation is being checked, then the certificate revocation check fails.
-
-- The CRL for the certificate can't be reached or isn't available.
-
-  CAs maintain CRLs and publish them to CRL distribution points. The CRL distribution points are included in the CRL Distribution Points property of the certificate. If the CRL distribution points can't be contacted to check for certificate revocation, then the certificate revocation check fails. If there are no CRL distribution points in the certificate, the NPS server can't verify that the certificate hasn't been revoked which causes the certificate revocation check to fail.
-  
 ## See also
 
-[Network Policy Server (NPS)](nps-top.md).  
+[Network Policy Server (NPS)](nps-top.md)
