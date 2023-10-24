@@ -33,7 +33,7 @@ Duplicate UPN values break synchronization between on-premises AD and Office 365
 
 |Feature|Comment|
 |-----------|-----------|
-|UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Microsoft Azure AD-based services such as Office 365.|
+|UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Microsoft Entra ID-based services such as Office 365.|
 |SPN uniqueness|Kerberos requires SPNs for mutual authentication.  Duplicate SPNs result in authentication failures.|
 
 For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](/openspecs/windows_protocols/ms-adts/3c154285-454c-4353-9a99-fb586e806944).
@@ -360,4 +360,3 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
 5.  Attempt to use the Recycle Bin GUI to restore the account
 
 6.  Imagine you have been presented with the error you see in the previous step.  (and don't have a history of the steps you just performed) Your goal is to complete the restore of the account.  See the workbook, for example,  steps.
-
