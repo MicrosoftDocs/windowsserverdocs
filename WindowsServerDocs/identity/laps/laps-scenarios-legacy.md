@@ -13,9 +13,6 @@ You can set up Windows Local Administrator Password Solution (Windows LAPS) to h
 
 Like Microsoft LAPS, emulation mode supports storage of passwords in Windows Server Active Directory only in clear-text form. To increase security, we recommend that you migrate to using Windows LAPS natively so that you can take advantage of password encryption.
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
-
 ## Setup and configuration
 
 When you configure Windows LAPS in legacy Microsoft LAPS emulation mode, Windows LAPS assumes that your Windows Server Active Directory environment is set up to run legacy Microsoft LAPS. For more information about legacy Microsoft LAPS configuration, see the legacy Microsoft LAPS documentation.
