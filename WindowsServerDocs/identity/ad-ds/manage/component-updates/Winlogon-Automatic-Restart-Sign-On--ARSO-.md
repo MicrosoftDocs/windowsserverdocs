@@ -161,9 +161,9 @@ In enterprise environments where the security for user data protected by Data Pr
 | MSA account - Yes | MSA account - Yes | MSA account - No | MSA account - No |
 | Azure AD joined account - Yes | Azure AD joined account - Yes | Azure AD joined account - Yes (if hybrid) | Azure AD joined account - Yes |
 
-### Windows Defender Credential Guard interaction
+### Credential Guard interaction
 
-ARSO is supported with Windows Defender Credential Guard enabled on devices beginning with Windows 10 version 2004.
+ARSO is supported with Credential Guard enabled on devices beginning with Windows 10 version 2004.
 
 ## Additional resources
 
