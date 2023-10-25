@@ -235,143 +235,195 @@ When you add network interface controllers (NICs) to a team for switch-embedded 
 
 ## Computer Management solution
 
-The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, and the following Computer Management solution-specific issues:
+The Computer Management solution contains some Server Manager tools, so the same known issues that apply to Server Manager apply here. We're aware of the following Computer Management solution-specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (Azure AD) to log on to your Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account. [16568455]
+- If you sign in to your Windows 10 device with [a Microsoft Account](https://account.microsoft.com/account/) (MSA) or Azure Active Directory (Azure AD), you must use manage-as to provide credentials for a local administrator account.
 
-- When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
+- When you try to manage the local host, a message appears telling you to elevate the gateway process. If you select **No** in the User Account Control window that appears, you must cancel the connection attempt and start over.
 
-- Windows 10 doesn't have WinRM/PowerShell remoting on by default.
+- Windows 10 has WinRM and PowerShell remoting disabled by default.
 
-  - To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
+  - To enable management of the Windows 10 Client, open an elevated PowerShell prompt and run the ```Enable-PSRemoting``` command.
 
-  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, see how to [enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
+  - You should also update your firewall to allow connections from outside the local subnet by running the ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any``` command. For more information about how to update your firewall in more restrictive network scenarios, see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
 
-## Cluster Deployment
+## Cluster deployment
 
-### Step 1.2
-Mixed workgroup machines are currently not supported when adding servers. All machines used for clustering need to belong to same workgroup. If they don't, the next button will be disabled, and the following error will appear: "Cannot create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again."
+This section describes known issues that affect cluster deployment.
 
-### Step 1.4
-Hyper-V needs to be installed on virtual machines running the Azure Stack HCI OS. Trying to enable the Hyper-V feature for these virtual machines will fail with the error below:
+### Adding servers to cluster groups
+
+Windows Admin Center doesn't currently support scenarios with mixed work group machines when adding servers. All machines you add to cluster groups must be part of the same work group. If they aren't, an error message appears that says "Cannot create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again." You can't proceed with setting up the cluster unless you use machines from the same work group.
+
+### Enabling Hyper-V on VMs
+
+You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying to enable Hyper-V on VMs without Azure Stack HCI results in an error, as show in the following screenshot.
+
+<!--Needs better alt text.-->
 
 ![Screenshot of Hyper-V enablement error](../media/cluster-create-install-hyperv.png)
 
-To install Hyper-V on virtual machines running the Azure Stack HCI OS, run the following command:
+To install Hyper-V on VMs running Azure Stack HCI, open an elevated POwerShell prompt and run the following command:
 
 ```PowerShell
 Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
 ```
 
-### Step 1.7
-Sometimes servers take longer than expected to restart after updates are installed. The Windows Admin Center cluster deployment wizard will check the server restart state periodically to know if the server was restarted successfully. However, if the user restarts the server outside of the wizard manually, then the wizard doesn't have a way to capture the server state in an appropriate way.
+### Server restart time after updates
 
-If you would like to restart the server manually, exit the current wizard session. After you have restarted the server, you may restart the wizard.
+Sometimes servers can take longer than expected to restart after you install updates. Windows Admin Center cluster deployment checks the server restart state periodically to make sure the restart succeeds. However, if you try to restart the server manually without cluster deployment active, then Windows Admin Center can't capture the server state.
 
-### Stage 4 Storage
-In stage 4, an error can occur if a user has deleted a cluster and has not cleared the storage pools from the cluster. That means the storage pools that are on the system are locked by the old cluster object and only the user can manually clear them. 
+To work around this issue, close the cluster deployment feature before manually restarting the server. Once you've restarted the server, you can open cluster deployment again.
 
-To clear the configuration, the user needs to run:
+### Storage error after deleting a cluster
 
-1. On all nodes run: ```Clear-ClusterNode```
-2. Remove all previous storage pools, you can then run: 
-    ```PowerShell
+If you delete a cluster, you can encounter an error if you haven't cleared the storage pools from the deleted cluster yet. The storage pools are locked by the old cluster object, so you must manually clear them.
+
+If you've already encountered this error message, here's how to clear the deleted cluster object from the storage pools:
+
+1. Open an elevated PowerShell window.
+
+1. On all nodes, run the following command:
+
+   ```powershell
+   Clear-ClusterNode
+   ```
+
+1. Next, remove all pervious storage pools.
+
+1. Run the following commands:
+
+    ```powershell
     get-storagepool
     get-storagepool -IsPrimordial 0 | remove-storagepool
     ```
-  > [!Note]
-  > If the storage pools are set as readonly which can sometimes happen if the cluster is improperly destroyed, then the user needs to first make sure the storage pools are changed to editable before removing. Run the following before the commands above: ```
-  Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false```
+  
+1. If you've configured the storage pools to be read only, then you must change the storage pools to write mode before removing them by running the following command:
 
-To avoid this scenario in the first place, the user will need to run the following: 
+    ```powershell
+    Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false
+    ```
 
-1. Remove virtual disk:
+If you haven't encountered this error but want to avoid it, follow these instructions.
+
+1. Open an elevated PowerShell window.
+
     ```PowerShell
     get-virtualdisk | Remove-VirtualDisk
     ```
-2. Remove storage pools:
+
+1. Run this command to remove the virtual disk:
+
     ```PowerShell
     get-storagepool
     get-storagepool -IsPrimordial 0 | remove-storagepool
     ```
-3. Remove cluster resources:
+
+1. Next, Run this command to remove the storage pools:
+
+    ```PowerShell
+    get-storagepool
+    get-storagepool -IsPrimordial 0 | remove-storagepool
+    ```
+
+1. After that, run this command to remove resources associated with the cluster:
+
     ```PowerShell
     Get-ClusterResource | ? ResourceType -eq "virtual machine" | Remove-ClusterResource
     Get-ClusterResource | ? ResourceType -like "*virtual machine*" | Remove-ClusterResource
     ```
-4. Cleaning up:
+
+1. Now, run this command to clean up:
+
     ```PowerShell
     Remove-Cluster -CleanupAD
     ```
-5. On all nodes run: 
+
+1. Finally, run this command on all nodes:
+
     ```PowerShell
     Clear-ClusterNode
     ```
 
 ### Stretch cluster creation
+
 It is recommended to use servers that are domain-joined when creating a stretch cluster. There is a network segmentation issue when trying to use workgroup machines for stretch cluster deployment due to WinRM limitations.
 
 ### Undo and start over
+
 When using same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) for instructions on how to clean up your cluster.
 
 ### CredSSP in cluster creation
-The Windows Admin Center cluster deployment wizard uses CredSSP in several places. You run into the error message **There was an error during the validation. Review error and try again** (this occurs most frequently in the Validate cluster step):
+
+The Windows Admin Center cluster deployment feature uses CredSSP. Sometimes, CredSSP can cause an error message that says "There was an error during the validation. Review error and try again" appear when you're validating a cluster, as shown in the following screenshot.
+
+<!--Needs better alt text.-->
 
 :::image type="content" source="../media/cluster-create-credssp-error.jpg" alt-text="Screenshot of cluster create CredSSP error.":::
 
-You can use the following steps to troubleshoot:
+To resolve this issue:
 
-1. Disable CredSSP settings on all nodes and the Windows Admin Center gateway machine. Run the first command on your gateway machine and the second command on all of the nodes in your cluster:
-   
-   ```PowerShell
-   Disable-WsmanCredSSP -Role Client
-   ```
-   
-   ```PowerShell
-   Disable-WsmanCredSSP -Role Server
-   ```
+1. Open an elevated PowerShell window.
 
-2. Repair the trust on all nodes. Run the following command on all nodes:
-   
+1. Disable CredSSP settings on all nodes and the Windows Admin Center gateway machine.
+
+   - Run this command on your gateway machine:  
+
+     ```PowerShell
+     Disable-WsmanCredSSP -Role Client
+     ```
+  
+   - Run this command on all nodes in your cluster:
+
+     ```PowerShell
+     Disable-WsmanCredSSP -Role Server
+     ```
+
+1. Run the following command on all nodes to repair their trusts.
+
    ```PowerShell
    Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
    ```
 
-3. Reset group policy propagated data by running the following command on all nodes:
-   
-   ```Command Line
+1. Next, open a command prompt and run the following command on all nodes to reset group policy propagated data:
+
+   ```cmd
    gpupdate /force
    ```
 
-4. Reboot each node. After reboot, test the connectivity between your gateway machine and target nodes, and your connectivity between nodes, using the following command:
-   
+1. Reboot each node.
+
+1. After rebooting the nodes, open PowerShell again and run the following command to test the connectivity between your gateway machine and target nodes.
+
    ```PowerShell
    Enter-PSSession -computername <node fqdn>
    ```
-   
+
 ## CredSSP
 
-- The **Updates** tool will sometimes throw the CredSSP error **You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials**:
+- When you use the Updates tool, you sometimes see an error message that says "You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials" when you try to update new clusters, as shown in the following screenshot.
 
     :::image type="content" source="../media/updates-tool-credssp-error.png" alt-text="Screenshot of Updates tool using Cluster-Aware Updating with Cred S S P error.":::
 
-    This error was widely seen when new clusters are created and then you try to access the **Updates** tool for these clusters in Windows Admin Center. This issue is fixed in Windows Admin Center v2110. [36734941]
+    <!--Needs better alt text.-->
 
-- The CredSSP session endpoint permission issue is a common CredSSP error that can be seen when Windows Admin Center runs on Windows client machines. This issue is widely seen when the user who is using Windows Admin Center isn't the same user who installed Windows Admin Center on the client machine.
+    To resolve this issue, update Windows Admin Center to version 2110 or later.
 
-    To mitigate this problem, we have introduced the Windows Admin Center CredSSP administrators' group. The user facing this problem should be added to this group and then relogin to the desktop computer running Windows Admin Center. Below is an image of what the error notification was before (left) and after (right) the modification:
+- The CredSSP session endpoint permission issue is a common CredSSP error that appears when Windows Admin Center is running on Windows client machines. To resolve this issue, you should add affected users to the Windows Admin Center CredSSP administrators group, then ask the user to sign back in to the desktop computer running WIndows Admin Center.
 
-    :::image type="content" source="../media/notification-credssp-error.png" alt-text="A side by side comparison of the error notification for Cred S S P.":::
+### Nested virtualization
 
-### Nested Virtualization
-When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below PowerShell command:
+When you're validating Azure Stack HCI cluster deployments on VMs, you must enable nested virtualization before you enable roles or features by running the following command in PowerShell:
 
 ```PowerShell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
 ```
 
-  > [!Note]
-  > For virtual switch teaming to be successful in a virtual machine environment, the following command needs to be run in PowerShell on the host soon after the virtual machines are created: Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
+If you're using virtual switch teaming in a VM environment, you also need to run this command on the session host after creating a VM:
+
+```powershell
+Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
+```
 
 If you are a deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To do this, run the following command before creating the virtual machines:
 
@@ -379,51 +431,99 @@ If you are a deploying a cluster using the Azure Stack HCI OS, there's an extra 
 Install-WindowsFeature –VHD <Path to the VHD> -Name Hyper-V, RSAT-Hyper-V-Tools, Hyper-V-PowerShell
 ```
 
-### Support for RDMA
-The cluster deployment wizard in Windows Admin Center version 2007 doesn't provide support for RDMA configuration.
+## Remote direct memory access support
+
+The cluster deployment feature in Windows Admin Center 2007 doesn't support remote direct memory access (RDMA) configurations. To resolve this issue, update to a later version of Windows Admin Center.
 
 ## Failover Cluster Manager solution
 
-- When managing a cluster, (either Hyper-Converged or traditional) you may encounter a **shell was not found** error. If this happens either reload your browser, or navigate away to another tool and back. [13882442]
+- When managing a hyper-converged or traditional cluster, you can sometimes see an error message that says "Shell not found." You can do one of the following things to resolve this issue:
 
-- An issue can occur when managing a down-level (Windows Server 2012 or 2012 R2) cluster that hasn't been configured completely. The fix for this issue is to ensure that the Windows feature **RSAT-Clustering-PowerShell** has been installed and enabled on **each member node** of the cluster. To do this with PowerShell, enter the command `Install-WindowsFeature -Name RSAT-Clustering-PowerShell` on all the cluster nodes. [12524664]
+  - Reload your browser
+  - Go to another tool, then return to Failover Cluster Manager
 
-- The Cluster may need to be added with the entire FQDN to be discovered correctly.
+- You can sometimes encounter an issue when managing a down-level cluster with an incomplete configuration. To resolve this issue, make sure the cluster has the RSAT-Clustering-PowerShell feature installed and enabled on each member node. If not, open PowerShell and enter the following command on each cluster node:
+  
+  ```powershell
+  Install-WindowsFeature -Name RSAT-Clustering-PowerShell
+  ```
 
-- When connecting to a cluster using Windows Admin Center installed as a gateway, and providing explicit username/password to authenticate, you must select **Use these credentials for all connections** so that the credentials are available to query the member nodes.
+- If Windows Admin Center can't discover the cluster, try adding it with the entire fully-qualified domain name (FQDN).
+
+- When connecting to a cluster using Windows Admin Center installed as a gateway while using a username and password to authenticate, you must select **Use these credentials for all connections** so to make the credentials available to query the member nodes.
 
 ## Hyper-Converged Cluster Manager solution
 
-- Some commands such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open** are disabled and currently not supported.
+Windows Admin Center has disabled certain commands, such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open**, because it doesn't currently support them.
 
 ## Azure services
 
+The following sections describe issues you can encounter when using Azure services while in Windows Admin Center.
+
 ### Azure login and gateway registration
-When attempting to register your Windows Admin Center gateway in the Azure China or Azure US Gov cloud domains in version 2211, you may be redirected to the Azure Global sign-in experience. To work around this issue, please use an earlier version of Windows Admin Center.    
-   
-In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
 
-* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
+- When attempting to register your Windows Admin Center gateway in the Azure China or Azure US Gov cloud domains in version 2211, you may be redirected to the Azure Global sign-in experience. To work around this issue, use an earlier version of Windows Admin Center.
 
-* If you successfully sign into Azure during gateway registration but don't see visual confirmation on the **Azure** page of your Windows Admin Center settings, try navigating to a different page in settings before navigating back to the **Azure** page. 
+- In the 2009 release, you may run into issues signing in to Azure or registering your Windows Admin Center gateway with Azure. Try doing the following things to troubleshoot the issue:
 
-* The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
+  - Before using any Azure features in Windows Admin Center, including gateway registration, make sure you've signed in to your Azure account in a different tab or window. We recommend you sign in through the [Azure portal](https://portal.azure.com/).  
 
-* If you have already given admin approval for Windows Admin Center in the Azure portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
-   
-* If your proxy is mis-configured, then you may get the error message "Error: Value cannot be null. Parameter name: httpClientFactory." Ensure that your proxy is configured correctly by going to **Settings** page. 
+  - If you successfully sign in to Azure during gateway registration but don't see visual confirmation on the **Azure** page of your Windows Admin Center settings, refresh the page by going to another page, then returning.
+
+  - The Azure sign-in window sometimes appears more frequently in the 2009 version, forcing administrators to grant users Windows Admin Center permissions more frequently.
+
+  - If you've already given admin approval for Windows Admin Center in the portal but still see an error message that says "Need admin approval," try signing in to Azure using the banners around Windows Admin Center instead of going to the Settings page.
+
+  - If your proxy is misconfigured, you can see an error message that says "Error: Value cannot be null. Parameter name: httpClientFactory." To resolve this issue, go to the **Settings** page and adjust your settings to the correct configuration.
 
 ### Azure File Sync permissions
 
-Azure File Sync requires permissions in Azure that Windows Admin Center did not provide prior to version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than Windows Admin Center version 1910, you will need to update your Azure Active Directory application to get the correct permissions to use Azure File Sync in the latest version of Windows Admin Center. The additional permission allows Azure File Sync to perform automatic configuration of storage account access as described in this article: [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
+Azure File Sync requires permissions in Azure that Windows Admin Center didn't provide before version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than 1910, you must update your Azure Active Directory application in order to use Azure File Sync in the latest version of Windows Admin Center. The additional permissions let Azure File Sync automatically configure storage account access as described in [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
 
-To update your Azure Active Directory app, you can do one of two things
-1. Go to **Settings** > **Azure** > **Unregister**, and then register Windows Admin Center with Azure again, making sure you choose to create a new Azure Active Directory application.
-2. Go to your Azure Active Directory application and manually add the permission needed to your existing Azure Active Directory app registered with Windows Admin Center. To do this, go to **Settings** > **Azure** > **View in Azure**. From the **App Registration** blade in Azure, go to **API permissions**, select **Add a permission**. Scroll down to select **Azure Active Directory Graph**, select **Delegated permissions**, expand **Directory**, and select **Directory.AccessAsUser.All**. Click **Add permissions** to save the updates to the app.
+There are two ways you can update Azure AD.
+
+<!--Do we change "Azure AD" to "Azure Entra?"-->
+
+To update using the registration method:
+
+1. Go to **Settings** > **Azure** > **Unregister**
+
+1. Register Windows Admin Center with Azure again, making sure you choose to create a new Azure Active Directory application.
+
+To update using Azure:
+
+1. Open Azure AD.
+
+1. Go go to **Settings** > **Azure** > **View in Azure**.
+
+1. In teh **App Registration** tab, go to **API permissions**.
+
+1. Select **Add a permission**.
+
+1. Select **Azure Active Directory Graph** > **Delegated permissions** > **Directory** > **Directory.AccessAsUser.All**.
+
+1. Finally, select **Add permissions** to save the changes you made to the app.
 
 ### Options for setting up Azure management services
 
-Azure management services including Azure Monitor, Azure Update Management, and Azure Security Center, use the same agent for an on-premises server: the Microsoft Monitoring Agent. Azure Update Management has a more limited set of supported regions and requires the Log Analytics workspace to be linked to an Azure Automation account. Because of this limitation, if you wish to set up multiple services in Windows Admin Center, you must set up Azure Update Management first, and then either Azure Security Center or Azure Monitor. If you've configured any Azure management services that use the Microsoft Monitoring Agent, and then try to set up Azure Update Management using Windows Admin Center, Windows Admin Center will only allow you to configure Azure Update Management if the existing resources linked to the Microsoft Monitoring Agent support Azure Update Management. If not, you have two options:
+Azure management services, including Azure Monitor, Azure Update Management, and Azure Security Center, all use the Microsoft Monitoring Agent for on-premises servers. Azure Update Management supports limited regions and needs its Log Analytics workspace linked to an Azure Automation account. If you want to set up multiple services in Windows Admin Center, you need to set up Azure Update Management first, then either Azure Security Center or Azure Monitor.
 
-1. Go to the Control Panel > Microsoft Monitoring Agent to [disconnect your server from the existing Azure management solutions](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (like Azure Monitor or Azure Security Center). Then set up Azure Update Management in Windows Admin Center. After that, you can go back to set up your other Azure management solutions through Windows Admin Center without issues.
-2. You can [manually set up the Azure resources needed for Azure Update Management](/azure/automation/update-management/overview) and then [manually update the Microsoft Monitoring Agent](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) (outside of Windows Admin Center) to add the new workspace corresponding to the Update Management solution you wish to use.
+If you've already configured Azure management services that use the Microsoft Monitoring Agent before trying to use Azure Update Management in Windows Admin Center, the service only lets you configure Azure Update Management if existing resources linked to the Microsoft Monitoring Agent support it.
+
+If the linked resources don't support Azure Update Management, there are two ways you can work around it.
+
+To resolve the issue using the Control Panel:
+
+1. On the Start menu, go to **Control Panel** > **Microsoft Monitoring Agent**.
+
+1. Follow the directions in [How do I stop an agent from communicating wtih Log Analytics](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) to disconnect your server from Azure Monitor, Azure Security Center, or other Azure management solutions you're currently using.
+
+1. Set up Azure Update Management in Windows Admin Center.
+
+1. Reconnect to the Azure management solutions you disconnected in step 2.
+
+To resolve the issue using Azure Update Management:
+
+1. Follow the instructions in [Update Management overview](/azure/automation/update-management/overview) to manually set up the Azure resources you need for Azure Update Management.
+
+1. Follow the directions in [Adding or removing a workspace](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) to manually update the Microsoft Monitoring Agent outside of Windows Admin Center and add the new workspace for the Update Management solution you want to use.
