@@ -14,19 +14,19 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 ## Installer
 
-- When installing Windows Admin Center using your own certificate, if you copy the thumbprint from the certificate manager Microsoft Management Center (MMC) tool, when you pase it, [it contains an invalid character at the beginning](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra). As a workaround, enter the first character of the thumbprint, then copy and paste the characters that come after the first.
+- When you install Windows Admin Center using your own certificate, if you copy the thumbprint from the certificate manager Microsoft Management Center (MMC) tool, when you paste it, [it contains an invalid character at the beginning](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra). As a workaround, enter the first character of the thumbprint, then copy and paste the characters that come after the first.
 
 - Windows Admin Center doesn't support ports lower than 1024. In service mode, you can optionally configure port 80 to redirect to your specified port.
 
 ## General
 
-- Self-signed certificates accessed on `https://localhost:[port]` can cause the Microsoft Edge and Google Chrome browsers to block Windows Admin Center. When this happens, you may see an error message that says your connection isn't private. To resolve this issue, update Windows Admin Center to the latest version.
+- Self-signed certificates accessed on `https://localhost:[port]` can cause the Microsoft Edge and Google Chrome browsers to block Windows Admin Center. When you're blocked, you should see an error message that says your connection isn't private. To resolve this issue, update Windows Admin Center to the latest version.
 
-- Using certain versions of extensions with earlier versions of Windows Admin Center may result in icons not displaying properly. To resolve this issue, update to the latest version of Windows Admin Center
+- Using certain versions of extensions with earlier versions of Windows Admin Center can result in icons not displaying properly. To resolve this issue, update to the latest version of Windows Admin Center
 
-- In the 1910.2 release of Windows Admin Center, you may not be able to connect to Hyper-V servers on specific hardware. To resolve this issue, either [download the previous version](https://aka.ms/wacprevious) or try updating to the latest version.
+- In the 1910.2 release of Windows Admin Center, you can't connect to Hyper-V servers on specific hardware. To resolve this issue, either [download the previous version](https://aka.ms/wacprevious) or try updating to the latest version.
 
-- If you have Windows Admin Center installed as a heavily used gateway on Windows Server 2016, the service may crash with an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This error is because of a bug that we've fixed as of Windows Server 2019. However, we've also release a patch for Windows Server 2016 to address this issue in the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
+- If you have Windows Admin Center installed as a heavily used gateway on Windows Server 2016, the service can crash and display an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This error happens because of a bug that we've fixed as of Windows Server 2019. However, we've also release a patch for Windows Server 2016 to address this issue in the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, follow these steps:
 
@@ -39,11 +39,11 @@ If you encounter an issue not described on this page, let us know at the [Window
   
   1. Reinstall Windows Admin Center.
 
-- If you leave the tool open and idle for a long period of time, you may get several error messages that say "The runspace state is not valid for this operation." If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
+- If you leave the tool open and idle for a long period of time, several error messages appear that say "The runspace state is not valid for this operation." If this issue occurs, refresh your browser. If you encounter this error, [send us feedback](https://aka.ms/WACfeedback).
 
-- There may be minor differences between version numbers of open-source software (OSS) running in Windows Admin Center modules versus what's listed in the third Party Software Notice.
+- There can be minor differences between version numbers of open-source software (OSS) running in Windows Admin Center modules versus what's listed in the third Party Software Notice.
 
-- You can access and use Windows Admin Center tool application programming interfaces (APIs) through other methods during an active session of Windows Admin Center if you have access to that session. The actions you take using these APIs only affect the machine you installed Windows Admin Center on, also known as the gateway machine. They won't affect machines managed remotely without authentication through the Windows Admin Center gateway.
+- You can access and use Windows Admin Center tool application programming interfaces (APIs) through other methods during an active session of Windows Admin Center if you have access to that session. The actions you take using these APIs only affect the machine you installed Windows Admin Center on, also known as the gateway machine. They don't affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
 ### Extension Manager
 
