@@ -187,6 +187,18 @@ Windows LAPS rejects unexpected attempts to modify the account's password with a
 
 When Windows is started in safe mode, DSRM mode, or in any other non-default boot mode, Windows LAPS is disabled and no passwords are backed up.
 
+## Windows LAPS integration with smart card policy
+
+The Windows LAPS-managed account is exempted when the "Interactive logon: Require Windows Hello for Business or smart card" policy (also known as SCForceOption) is enabled. See [Additional smart card Group Policy settings and registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#additional-smart-card-group-policy-settings-and-registry-keys).
+
+Windows LAPS integration with the smart-card-auth-only policy is available on the following OS platforms with the specified update or later installed:
+
+- [Windows 11 22H2 - October 10 2023 Update](https://support.microsoft.com/help/5031354)
+- [Windows 11 21H2 - October 10 2023 Update](https://support.microsoft.com/help/5031358)
+- [Windows 10 - October 10 2023 Update](https://support.microsoft.com/help/5031356)
+- [Windows Server 2022 - October 10 2023 Update](https://support.microsoft.com/help/5031364)
+- [Windows Server 2019 - October 10 2023 Update](https://support.microsoft.com/help/5031361)
+
 ## See also
 
 - [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
