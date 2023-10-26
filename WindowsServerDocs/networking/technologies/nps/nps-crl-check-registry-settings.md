@@ -1,24 +1,25 @@
 ---
-title: NPS Certificate Revocation List check registry settings for Windows Server
-description: This article provides information about configuring Certificate Revocation List settings for EAP-TLS authentication on a Network Policy Server in a Windows Server environment.
-ms.topic: article
-ms.assetid: 
+title: Configure Network Policy Server Certificate Revocation List registry settings for Windows Server
+description: This article provides information about configuring Certificate Revocation List registry settings for EAP-TLS authentication on a Network Policy Server in a Windows Server environment.
+ms.topic: how-to
+ms.assetid: 9624b301-d9f9-4d97-8651-39bf4bbae83e
 ms.author: wscontent
 author: marcussa
-ms.date: 10/24/2023
+ms.date: 10/26/2023
 ms.contributor: alalve
 ---
 
-# NPS CRL checks
+# Configure NPS CRL checks
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Certificate revocation checking can prevent client access due to the unavailability or expiration of certificate revocation lists (CRLs) for each certificate in the certificate chain, design your public key infrastructure (PKI) for high availability of CRLs in your Network Policy Server (NPS). For example, configure multiple CRL distribution points for each certification authority (CA) in the certificate hierarchy and configure publication schedules that ensure that the most current CRL is always available.
+When using a Network Policy Server (NPS) to enforce certificate-based authentication for network access, it's important to configure Certificate Revocation Lists (CRLs) to ensure that only valid certificates are accepted. CRLs are used to check whether a digital certificate has been revoked by the Certificate Authority (CA) before its scheduled expiration date. In a NPS, CRLs can be configured to be checked during the authentication process to ensure that only valid certificates are used for network access. Configuring NPS CRLs is an important step in implementing a secure network access infrastructure.
 
-By default, the server running the NPS checks for certificate revocation for all of the certificates in the certificate chain sent by the client computer during the EAP-TLS and
-PEAP-TLS authentication process. If certificate revocation fails for any of the certificates in the chain, the connection attempt isn't authenticated and is denied.
+## Prerequisites
 
-## NPS CRL registry settings
+The **Network Policy and Access Services** role is required to set up your device as an NPS server. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+
+## Understanding NPS CRL registry settings
 
 The registry settings for the NPS can be configured in the following registry path and are entered as a **DWORD** entry with a value of **0** for **disabled**, or **1** for **enabled**:  
 
@@ -83,6 +84,9 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\1
 
 ---
 
-## See also
+To manually update the CRL on your NPS server, run these commands in the command prompt or PowerShell:
 
-[Network Policy Server (NPS)](nps-top.md)
+```
+certutil -urlcache * delete
+certutil -setreg chain\ChainCacheResyncFiletime @now
+```
