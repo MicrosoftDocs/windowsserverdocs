@@ -237,7 +237,7 @@ When you add network interface controllers (NICs) to a team for switch-embedded 
 
 The Computer Management solution contains some Server Manager tools, so the same known issues that apply to Server Manager apply here. We're aware of the following Computer Management solution-specific issues:
 
-- If you sign in to your Windows 10 device with [a Microsoft Account](https://account.microsoft.com/account/) (MSA) or Azure Active Directory (Azure AD), you must use manage-as to provide credentials for a local administrator account.
+- If you sign in to your Windows 10 device with [a Microsoft Account](https://account.microsoft.com/account/) (MSA) or Microsoft Entra ID, you must use manage-as to provide credentials for a local administrator account.
 
 - When you try to manage the local host, a message appears telling you to elevate the gateway process. If you select **No** in the User Account Control window that appears, you must cancel the connection attempt and start over.
 
@@ -478,21 +478,19 @@ The following sections describe issues you can encounter when using Azure servic
 
 ### Azure File Sync permissions
 
-Azure File Sync requires permissions in Azure that Windows Admin Center didn't provide before version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than 1910, you must update your Azure Active Directory application in order to use Azure File Sync in the latest version of Windows Admin Center. The extra permissions let Azure File Sync automatically configure storage account access as described in [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
+Azure File Sync requires permissions in Azure that Windows Admin Center didn't provide before version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than 1910, you must update your Microsoft Entra application in order to use Azure File Sync in the latest version of Windows Admin Center. The extra permissions let Azure File Sync automatically configure storage account access as described in [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
 
-There are two ways you can update Azure AD.
-
-<!--Do we change "Azure AD" to "Azure Entra?"-->
+There are two ways you can update Microsoft Entra ID.
 
 To update using the registration method:
 
 1. Go to **Settings** > **Azure** > **Unregister**
 
-1. Register Windows Admin Center with Azure again, making sure you choose to create a new Azure Active Directory application.
+1. Register Windows Admin Center with Azure again, making sure you choose to create a new Microsoft Entra application.
 
 To update using Azure:
 
-1. Open Azure AD.
+1. Open Microsoft Entra ID.
 
 1. Go go to **Settings** > **Azure** > **View in Azure**.
 
@@ -500,7 +498,7 @@ To update using Azure:
 
 1. Select **Add a permission**.
 
-1. Select **Azure Active Directory Graph** > **Delegated permissions** > **Directory** > **Directory.AccessAsUser.All**.
+1. Select **Microsoft Entra Graph** > **Delegated permissions** > **Directory** > **Directory.AccessAsUser.All**.
 
 1. Finally, select **Add permissions** to save the changes you made to the app.
 
