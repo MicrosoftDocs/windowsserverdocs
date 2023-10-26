@@ -53,7 +53,7 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 ## Partner extension issues
 
-- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. APIs such as NodeExtensionInstall only work when the user is a gateway administrator; it doesn't support non-admin use.
+Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. APIs such as NodeExtensionInstall only work when the user is a gateway administrator; it doesn't support non-admin use.
 
 ## Browser-specific issues
 
