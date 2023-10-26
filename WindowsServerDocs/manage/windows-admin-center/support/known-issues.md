@@ -61,13 +61,13 @@ This section describes issues that can happen when you use Windows Admin Center 
 
 ### Microsoft Edge
 
-If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after opening a new browser window. There isn't currently a solution for this issue, but you can work around it by adding `https://login.microsoftonline.com`, `https://login.live.com`, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser.
+If you have Windows Admin Center deployed as a service and you're using Microsoft Edge as your browser, you might not be able to connect your gateway to Azure after opening a new browser window. There isn't currently a solution for this issue, but you can work around it by adding `https://login.microsoftonline.com`, `https://login.live.com`, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser.
 
 For more information, see the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-microsoft-edge).
 
 ### Google Chrome
 
-- Prior to version 70 (released late October 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) that affected the WebSockets protocol and Windows New Technology Local Area Network Manager (NTLM) authentication. This bug also affects the following programs:
+- Before version 70, Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) that affected the WebSockets protocol and Windows New Technology Local Area Network Manager (NTLM) authentication. This bug also affects the following programs:
 
   - Windows Events
   
@@ -111,7 +111,7 @@ To install WMF:
 
 ## Role Based Access Control (RBAC)
 
-- RBAC deployment won't work on machines configured to use Windows Defender Application Control (WDAC).
+- RBAC can't deploy on machines configured to use Windows Defender Application Control (WDAC).
 
 - To use RBAC in a cluster, you must deploy the configuration to each member node individually.
 
@@ -127,9 +127,9 @@ Server Manager on Windows Admin Center doesn't currently support importing the .
 
 ### Events
 
-- Events is affected by the issue described in [WebSocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service).
+- The issue described in [WebSocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service) affects Windows Events.
 
-- You may get an error message that references “packet size” when exporting large log files.
+- When you export large log files, you can sometimes receive an error message about packet size.
 
   To resolve this issue:
   
@@ -147,7 +147,7 @@ Server Manager on Windows Admin Center doesn't currently support uploading or do
 
 ### PowerShell
 
-- PowerShell is affected by the issue described in [WebSocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service).
+- The issue described in [WebSocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service) affects PowerShell.
 
 - PowerShell in Server Manager doesn't support pasting into the window by right-clicking. To paste into the window, you need to right-click and select **Paste** from the drop-down context menu or use the **Ctrl+V** shortcut.
 
@@ -169,9 +169,9 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
 - When using the Remote Desktop to connect to a machine that isn't Domain joined, you must enter your account in the `MACHINENAME\USERNAME` syntax.
 
-- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, go to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host Connections** and enable the **Allow Users to connect remotely by using Remote Desktop Services** setting.
+- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you're blocked by this issue, go to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host Connections** and enable the **Allow Users to connect remotely by using Remote Desktop Services** setting.
 
-- Remote Desktop is affected by the issue described in [Websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service).
+- The issue described in [Websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service) affects Remote Desktop.
 
 - The Remote Desktop tool doesn't currently support any text, image, or file copy and paste between the local desktop and the remote session.
 
@@ -191,7 +191,7 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
 - When you select roles or features that don't have available installation sources, the system skips them.
 
-- If you choose to not automatically restart after installing a role, you won't see any more notification messages asking you to restart.
+- If you choose to not automatically restart after you install a role, you won't see any more notification messages asking you to restart.
 
 - If you do choose to automatically reboot, the reboot occurs before the status bar reaches 100%.
 
@@ -205,13 +205,13 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
 ### Updates
 
-- After installing updates, the system sometimes caches the install status and requires a browser refresh.
+- After the system installs updates, it sometimes caches the install status and requires a browser refresh.
 
 - If you see an error message that says "Keyset does not exist" when attempting to set up Azure Update management, follow these directions on the managed node:
 
   1. Stop the **Cryptographic Services** service.
   
-  1. Change the folder options to show hidden files, if required.
+  1. Change the folder options to show hidden files, if necessary.
   
   1. Go to the **%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18** folder and delete all its contents.
 
@@ -221,7 +221,7 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
 ### Virtual machines
 
-- If you're managing your virtual machines (VMs) on a Windows Server 2012 session host, the in-browser VM connect tool can't connect to the VM. You can resolve this issue by downloading the .rdp file to connect to the VM.
+- If you're managing your virtual machines (VMs) on a Windows Server 2012 session host, the in-browser VMConnect tool can't connect to the VM. You can resolve this issue by downloading the .rdp file to connect to the VM.
 
 - If you've set up Azure Site Recovery on a host outside of Windows Admin Center, it can't protect VMs from inside Windows Admin Center.
 
@@ -263,7 +263,7 @@ You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying t
 
 ![Screenshot of Hyper-V enablement error](../media/cluster-create-install-hyperv.png)
 
-To install Hyper-V on VMs running Azure Stack HCI, open an elevated POwerShell prompt and run the following command:
+To install Hyper-V on VMs running Azure Stack HCI, open an elevated PowerShell prompt and run the following command:
 
 ```PowerShell
 Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
@@ -277,7 +277,7 @@ To work around this issue, close the cluster deployment feature before manually 
 
 ### Storage error after deleting a cluster
 
-If you delete a cluster, you can encounter an error if you haven't cleared the storage pools from the deleted cluster yet. The storage pools are locked by the old cluster object, so you must manually clear them.
+If you delete a cluster, you can encounter an error if you haven't cleared the storage pools from the deleted cluster yet. The deleted cluster object locks the storage pools, so you must manually clear the pools.
 
 If you've already encountered this error message, here's how to clear the deleted cluster object from the storage pools:
 
@@ -347,11 +347,11 @@ If you haven't encountered this error but want to avoid it, follow these instruc
 
 ### Stretch cluster creation
 
-It is recommended to use servers that are domain-joined when creating a stretch cluster. There is a network segmentation issue when trying to use workgroup machines for stretch cluster deployment due to WinRM limitations.
+We recommend you use domain-joined servers when you create a stretch cluster. Due to WinRM limitations, you can encounter a network segmentation issue when you try to use work group machines while deploying a stretch cluster.
 
 ### Undo and start over
 
-When using same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) for instructions on how to clean up your cluster.
+When you use the same machines repeatedly while deploying clusters, you need to regularly clean up that set of machines. For more information about how to run cleanup processes on your cluster, see [Deploy hyperconverged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over).
 
 ### CredSSP in cluster creation
 
@@ -409,7 +409,7 @@ To resolve this issue:
 
     To resolve this issue, update Windows Admin Center to version 2110 or later.
 
-- The CredSSP session endpoint permission issue is a common CredSSP error that appears when Windows Admin Center is running on Windows client machines. To resolve this issue, you should add affected users to the Windows Admin Center CredSSP administrators group, then ask the user to sign back in to the desktop computer running WIndows Admin Center.
+- The CredSSP session endpoint permission issue is a common CredSSP error that appears when Windows Admin Center is running on Windows client machines. To resolve this issue, you should add affected users to the Windows Admin Center CredSSP administrators group, then ask the user to sign back in to the desktop computer running Windows Admin Center.
 
 ### Nested virtualization
 
@@ -425,7 +425,7 @@ If you're using virtual switch teaming in a VM environment, you also need to run
 Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
 ```
 
-If you are a deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To do this, run the following command before creating the virtual machines:
+If you're deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To preinstall these features, run the following command before creating the VMs:
 
 ```PowerShell
 Install-WindowsFeature –VHD <Path to the VHD> -Name Hyper-V, RSAT-Hyper-V-Tools, Hyper-V-PowerShell
@@ -448,7 +448,7 @@ The cluster deployment feature in Windows Admin Center 2007 doesn't support remo
   Install-WindowsFeature -Name RSAT-Clustering-PowerShell
   ```
 
-- If Windows Admin Center can't discover the cluster, try adding it with the entire fully-qualified domain name (FQDN).
+- If Windows Admin Center can't discover the cluster, try adding it with the entire fully qualified domain name (FQDN).
 
 - When connecting to a cluster using Windows Admin Center installed as a gateway while using a username and password to authenticate, you must select **Use these credentials for all connections** so to make the credentials available to query the member nodes.
 
@@ -462,9 +462,9 @@ The following sections describe issues you can encounter when using Azure servic
 
 ### Azure login and gateway registration
 
-- When attempting to register your Windows Admin Center gateway in the Azure China or Azure US Gov cloud domains in version 2211, you may be redirected to the Azure Global sign-in experience. To work around this issue, use an earlier version of Windows Admin Center.
+- When attempting to register your Windows Admin Center gateway in the Azure China 21Vianet or Azure US Gov cloud domains in version 2211, the gateway can sometimes redirect you to the Azure Global sign-in experience. To work around this issue, use an earlier version of Windows Admin Center.
 
-- In the 2009 release, you may run into issues signing in to Azure or registering your Windows Admin Center gateway with Azure. Try doing the following things to troubleshoot the issue:
+- In the 2009 release, you can run into issues signing in to Azure or registering your Windows Admin Center gateway with Azure. Try doing the following things to troubleshoot the issue:
 
   - Before using any Azure features in Windows Admin Center, including gateway registration, make sure you've signed in to your Azure account in a different tab or window. We recommend you sign in through the [Azure portal](https://portal.azure.com/).  
 
@@ -478,7 +478,7 @@ The following sections describe issues you can encounter when using Azure servic
 
 ### Azure File Sync permissions
 
-Azure File Sync requires permissions in Azure that Windows Admin Center didn't provide before version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than 1910, you must update your Azure Active Directory application in order to use Azure File Sync in the latest version of Windows Admin Center. The additional permissions let Azure File Sync automatically configure storage account access as described in [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
+Azure File Sync requires permissions in Azure that Windows Admin Center didn't provide before version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than 1910, you must update your Azure Active Directory application in order to use Azure File Sync in the latest version of Windows Admin Center. The extra permissions let Azure File Sync automatically configure storage account access as described in [Ensure Azure File Sync has access to the storage account](/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
 
 There are two ways you can update Azure AD.
 
@@ -496,7 +496,7 @@ To update using Azure:
 
 1. Go go to **Settings** > **Azure** > **View in Azure**.
 
-1. In teh **App Registration** tab, go to **API permissions**.
+1. In the **App Registration** tab, go to **API permissions**.
 
 1. Select **Add a permission**.
 
@@ -516,9 +516,9 @@ To resolve the issue using the Control Panel:
 
 1. On the Start menu, go to **Control Panel** > **Microsoft Monitoring Agent**.
 
-1. Follow the directions in [How do I stop an agent from communicating wtih Log Analytics](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) to disconnect your server from Azure Monitor, Azure Security Center, or other Azure management solutions you're currently using.
+1. Follow the directions in [How do I stop an agent from communicating with Log Analytics](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) to disconnect your server from Azure Monitor, Azure Security Center, or other Azure management solutions you're currently using.
 
-1. Set up Azure Update Management in Windows Admin Center.
+1. Configure Azure Update Management in Windows Admin Center.
 
 1. Reconnect to the Azure management solutions you disconnected in step 2.
 
