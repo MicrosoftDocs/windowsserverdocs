@@ -12,27 +12,31 @@ ms.custom: inhenkel
 
 > Applies to: Windows Server 2022, Microsoft Hyper-V Server 2019, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Windows Server 2012 and later support the implementation of virtualized domain controllers (DCs) with safeguards to prevent update sequence number (USN) rollback on virtual DCs and the ability to clone virtual DCs. Hyper-V consolidates different server roles onto a single physical computer. For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](../../introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
+Windows Server 2012 and later support virtualized domain controllers (DCs) with safeguards to prevent update sequence number (USN) rollback on virtual DCs and the ability to clone virtual DCs. Hyper-V consolidates different server roles onto a single physical machine. For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](../../introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
 
-This guide describes how to run DCs as 32-bit or 64-bit guest operating systems (OSs).
+This guide describes how to run DCs as 32-bit or 64-bit guest operating systems (OSes).
 
 ## Planning for virtualization
 
-The following sections outline planning considerations for virtualizing a DC. Review the hardware requirements and learn how to avoid single points of failure. Explore how to select the appropriate DC and VM configuration, and consider security and performance decisions.
+The following sections contain planning considerations you should know when virtualizing a DC, including hardware requirements, architecture, configuration, and managing security and performance.
 
 ### Hyper-V requirements
 
-To install and use the Hyper-V role, you must have the following configuration:
+To install and use the Hyper-V role, your hardware must meet the following requirements:
 
-- **An x64 processor**. Hyper-V is available in x64-based versions of Windows Server 2008 and later.
+- You must have an x64 processor.
 
-- **Hardware-assisted virtualization**. This feature is available in processors that include a virtualization option, specifically, Intel Virtualization Technology (Intel VT) or AMD Virtualization (AMD-V).
+- Your processor must let you enable the hardware-assisted virtualization feature.
 
-- **Hardware Data Execution Protection (DEP)**. Hardware DEP must be available and enabled. Specifically, you must enable Intel XD bit (execute disable bit) or AMD NX bit (no execute bit).
+  - You can find this setting in processors that use Intel Virtualization Technology (Intel VT) or Advanced Micro Devices Virtualization (AMD-V).
 
-### Practices to avoid single point of failure
+- Your processor must support Hardware Data Execution Protection (DEP).
+  
+  - You can only use Hyper-V when you enable the Intel execute disable (XD) bit or the AMD no execute (NX) bit.
 
-As you plan your virtual DC deployment, prepare a strategy to avoid creating single points of failure. You can avoid introducing potential single points of failure by implementing system redundancy. 
+### Avoid single points of failure
+
+As you plan your virtual DC deployment, you should prepare a strategy to avoid creating single points of failure. You can avoid introducing potential single points of failure by implementing system redundancy. <!--Put link to more information about single point/redundancy here?-->
 
 Consider the following recommendations and also keep in mind the potential for increases in the cost of administration:
 
