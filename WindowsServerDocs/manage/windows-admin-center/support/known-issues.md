@@ -155,8 +155,6 @@ Server Manager on Windows Admin Center doesn't currently support uploading or do
 
 - When you make the Windows Admin Center window smaller, the terminal content adjusts to fit the new window size. When you return the window to its original size, the content might not return to its original state. You can restore the text by using the `Clear-Host` command, or disconnect and reconnect using the button above the terminal.
 
-<!--Where I left off.-->
-
 ### Registry Editor
 
 Registry Editor for Windows Admin Center for Windows Server hasn't implemented search functionality.
@@ -231,8 +229,6 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
 When you add network interface controllers (NICs) to a team for switch-embedded teaming (SET), you must make sure they're on the same subnet.
 
-<!--Where I left off.-->
-
 ## Computer Management solution
 
 The Computer Management solution contains some Server Manager tools, so the same known issues that apply to Server Manager apply here. We're aware of the following Computer Management solution-specific issues:
@@ -257,11 +253,9 @@ Windows Admin Center doesn't currently support scenarios with mixed work group m
 
 ### Enabling Hyper-V on VMs
 
-You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying to enable Hyper-V on VMs without Azure Stack HCI results in an error, as show in the following screenshot.
+You can only install and enable Hyper-V on VMs running Azure Stack HCI. Trying to enable Hyper-V on VMs without Azure Stack HCI makes an error message that says "A prerequisite check for the Hyper-V feature failed," as shown in the following screenshot.
 
-<!--Needs better alt text.-->
-
-![Screenshot of Hyper-V enablement error](../media/cluster-create-install-hyperv.png)
+:::image type="content" source="../media/cluster-create-install-hyperv.png" alt-text="A screenshot of the Windows Admin Center Server Manager Roles and Features page displaying the enabling Hyper-V error message.":::
 
 To install Hyper-V on VMs running Azure Stack HCI, open an elevated PowerShell prompt and run the following command:
 
@@ -357,9 +351,7 @@ When you use the same machines repeatedly while deploying clusters, you need to 
 
 The Windows Admin Center cluster deployment feature uses CredSSP. Sometimes, CredSSP can cause an error message that says "There was an error during the validation. Review error and try again" appear when you're validating a cluster, as shown in the following screenshot.
 
-<!--Needs better alt text.-->
-
-:::image type="content" source="../media/cluster-create-credssp-error.jpg" alt-text="Screenshot of cluster create CredSSP error.":::
+:::image type="content" source="../media/cluster-create-credssp-error.jpg" alt-text="A screenshot of the Cred S S P error message in Windows Admin Center cluster deployment that can appear when the user tries to validate the cluster.":::
 
 To resolve this issue:
 
@@ -403,9 +395,7 @@ To resolve this issue:
 
 - When you use the Updates tool, you sometimes see an error message that says "You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials" when you try to update new clusters, as shown in the following screenshot.
 
-    :::image type="content" source="../media/updates-tool-credssp-error.png" alt-text="Screenshot of Updates tool using Cluster-Aware Updating with Cred S S P error.":::
-
-    <!--Needs better alt text.-->
+    :::image type="content" source="../media/updates-tool-credssp-error.png" alt-text="A screenshot of the Cluster-Aware updating tool displaying the Cred S S P error message.":::
 
     To resolve this issue, update Windows Admin Center to version 2110 or later.
 
