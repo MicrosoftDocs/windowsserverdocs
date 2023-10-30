@@ -38,62 +38,68 @@ To install and use the Hyper-V role, your hardware must meet the following requi
 
 As you plan your virtual DC deployment, you should prepare a strategy to avoid creating single points of failure. You can avoid introducing potential single points of failure by implementing system redundancy. <!--Put link to more information about single point/redundancy here?-->
 
-Consider the following recommendations and also keep in mind the potential for increases in the cost of administration:
+The following recommendations can help prevent single points of failure. However, it's also important to remember that following these recommendations can increase administration costs.
 
-- Run at least two virtualized DCs per domain on different virtualization hosts. This configuration reduces the risk of losing all DCs if a single virtualization host fails.
+- Run at least two virtualized DCs per domain on different virtualization hosts. This configuration reduces the risk of losing all DCs if a virtualization host stops working.
 
-- As recommended for other technologies, diversify the hardware that runs the DCs, such as using different CPUs, motherboards, network adapters, or other hardware. Hardware diversification limits damage caused by a malfunction due to vendor configuration, driver, or hardware.
+- Diversify the hardware that runs your DCs. For example, use different CPUs, motherboards, network adapters, and so on. Diverse hardware prevents damage from device and hardware malfunctions or vendor configuration.
 
-- As possible, run DCs on hardware located in different regions of the world. This approach helps to reduce the consequences of a disaster or failure that affects a site at which the DCs are hosted.
+- If possible, run your DCs on hardware located in different regions. This approach reduces consequences of disasters that affect one of the sites hosting your DCs.
 
-- Maintain physical DCs in each of your domains. This configuration mitigates the risk of a virtualization platform malfunction that affects all host systems that use the platform.
+- Add physical DCs to all of your domains. Configuring your system to have physical DCs prevents your host systems from being affected by virtualization platform malfunctions.
 
 ### Security considerations
 
-The host computer where virtual DCs run must be managed as carefully as a writeable DC, even if the computer is only a domain-joined or workgroup computer. This consideration is critical for security. A mismanaged host is vulnerable to an elevation-of-privilege attack. This type of attack occurs when a malicious user gains access and system privileges that are unauthorized or illegitimately assigned. A malicious user can use this type of attack to compromise all the VMs, domains, and forests hosted by the computer.
+You must manage the host computer where you run your virtual DCs as carefully as you would a writeable DC, even if the computer is only a domain-joined or workgroup computer. This requirement is for security reasons. Mismanaged hosts are vulnerable to elevation-of-privilege attacks, where malicious users gain access to higher privileges than they're supposed to because the admin assigned the wrong level of permission to a lower-level role assignment. These attacks can compromise all VMs, domains, and forests hosted by the affected computer.
 
-Keep the following security considerations in mind when you're planning to virtualize DCs:
+When you plan to virtualize your DC, keep the following security considerations in mind:
 
-- The local administrator of a computer that hosts virtual writeable DCs should be considered equivalent in credentials to the default domain administrator of all the domains and forests to which the DCs belong.
+- The local admin of a computer that hosts virtual writeable DCs should be equal in credentials to the default domain admin of all domains and forests those DCs belong to.
 
-- The recommended configuration to avoid security and performance issues is a host running a Server Core installation of Windows Server 2008 or later, with no applications other than Hyper-V. This configuration limits the number of applications and services that are installed on the server. The limitation should result in increased performance and fewer applications and services that can be maliciously exploited to attack the computer or network. The effect of this type of configuration is known as a _reduced attack surface_. 
+- We recommend you configure your system to have a host running a Server Core installation of Windows Server 2008 or later with no applications besides Hyper-V. This configuration limits how many applications and servers you install on the server. This limitation results in better system performance and also creates a *reduced attack surface*, where there are fewer entry points for malicious attacks through applications and services.
 
-- In a branch office or other locations that can't be satisfactorily secured, a read-only DC (RODC) is recommended. If a separate management network exists, we recommend the host is connected to the management network only.
+- For branch offices or other locations that you can't completely secure, we recommend you use read-only DCs (RODCs). If you have a separate management network, we recommend that you only connect the host to the management network. For more information about RODCs, see [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](/windows-server/identity/ad-ds/deploy/rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-).
 
-- You can use BitLocker with your DCs. In Windows Server 2016 and later, you can use the virtual TPM feature to also give the guest key material to unlock the system volume.
+- You can secure your DCs with BitLocker. In Windows Server 2016 and later, you can also use the virtual Trusted Platform Module (TPM) feature to give you the guest key material required to unlock the system volume.
 
 - [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) can provide other controls to protect your DCs.
-
-For information about RODCs, see [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](/windows-server/identity/ad-ds/deploy/rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-).
 
 For more information about securing DCs, see the [Best practice guide for securing Active Directory installations](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
 ### Security boundaries for host and guest configurations
 
-You can have many different configurations of DCs when you implement VMs. Careful consideration must be given to the way VMs affect boundaries and trusts in your Active Directory topology. Possible configurations for an Active Directory DC and host (Hyper-V server) and its guest computers (VMs running on the Hyper-V server) are described in the following table.
+You can implement virtual machines (VMs) on many different types of DC configurations. Therefore, you need to carefully consider how those VMs affect boundaries and trusts in your Active Directory topology. The following list describes two configurations you can set up for Active Directory DCs and hosts on a Hyper-V server and guest computers that are VMs running on the Hyper-V server:
 
-| Machine | Configuration 1 | Configuration 2 |
-|---|---|---|
-| **Host** | Workgroup or member computer | Workgroup or member computer |
-| **Guest** | Domain controller | Workgroup or member computer |
+- A host that's a workgroup or member computer with a guest that's a DC.
+- A host that's a workgroup or member computer with a guest that's also a workgroup or member computer.
 
-The following diagram demonstrates security boundaries a possible configuration of three guest DC VMs hosted on a Hyper-V server:
+The following diagram shows a possible configuration of three guest DC VMs hosted on a Hyper-V server.
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.f44706fd-317e-4f0b-9578-4243f4db225f(WS.10).gif" alt-text="Diagram that shows security boundaries in a configuration of three guest DC VMs hosted on a Hyper-V server." border="false":::
 
-Consider the configuration in the previous diagram, and review the following points when planning for security boundaries:
+Based on the example configuration in the previous diagram, here are some important considerations you should make when planning a deployment like this one:
 
-- **Administrator access**. The administrator on the host computer has the same access as a domain administrator on the writable DC guests and must be treated as such. For an RODC guest, the administrator of the host computer has the same access as a local administrator on the guest RODC. 
+- Administrator access
+  
+  - The administrator on the host computer should have the same access privileges as the domain administrator on the writable DC. For an RODC guest, the administrator of the host computer should have the same access privileges as the local administrator on the guest RODC.
 
-- **DC administrative rights on host**. A DC in a VM has administrative rights on the host if the host is joined to the same domain. There's an opportunity for a malicious user to compromise all VMs if the malicious user first gains access to VM 1. This scenario is known as an attack vector. If there are DCs for multiple domains or forests, these domains should have centralized administration in which the administrator of one domain is trusted on all domains.
+- DC administrative rights on the host computer
+  
+  - A DC in a VM has administrative rights on the host if you join the host to the same domain. However, this access privilege can also give malicious users an opportunity to compromise all VMs in the system if they can gain access to VM 1. This scenario is called an *attack vector*. You can prevent attack vector scenarios by making sure any DCs configured for multiple domains or forests have centralized administration where the admin of one domain has trust for all domains.
 
-- **Strategy to avoid attacks**. The opportunity for attack from VM 1 exists even if VM 1 is installed as an RODC. Although an administrator of an RODC doesn't explicitly have domain administrator rights, the RODC can be used to send policies to the host computer. These policies might include startup scripts. If this operation is successful, the host computer can be compromised, and it can then be used to compromise the other VMs on the host computer.
+- Avoiding attacks
 
-Review these extra security considerations:
+  - Malicious users can attack VM 1 even if you install it as an RODC. Although RODC admins don't explicitly have domain admin rights, they can still use the RODC to send policies to the host computer. These policies might include startup scripts. If a malicious actor finds a way to get RODC admin rights and sends a policy with a malicious startup script, they can compromise the host computer and use it to compromise other VMs on the host.
 
-- **Security of VHD files**. A VHD file of a virtual DC is equivalent to the physical hard drive of a physical DC. As such, it should be protected with the same amount of care that goes into securing the hard drive of a physical DC. Make sure that only reliable and trusted administrators are allowed access to the VHD files for the DCs.
+- VHD file security
 
-- **RODCs**. One benefit of RODCs is the ability to place them at locations where physical security can't be guaranteed, such as at branch offices. You can use Windows BitLocker Drive Encryption to protect VHD files themselves (not the file systems therein) from being compromised on the host through theft of the physical disk.
+  - VHD files for a virtual DC are like the physical hard drive of a physical DC. You should be just as careful securing the VHD file as you would with a hard drive. Make sure you only allow reliable and trusted admins to access these VHD files.
+
+- RODCs
+
+  - You can place RODCs at locations where physical security isn't guaranteed, such as branch offices. You can protect their VHD files using Windows BitLocker Drive Encryption from attacks on the host involving theft of the physical disk. However, these protections don't apply to the file systems inside of the RODC.
+
+<!--Where I left off.-->
 
 ### Performance considerations
 
