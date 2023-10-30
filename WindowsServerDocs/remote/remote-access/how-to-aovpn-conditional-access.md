@@ -68,7 +68,7 @@ In this section, you configure conditional access root certificates for VPN auth
 
 When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Azure AD issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client.
 
-The VPN client then sends the certificate issued by Azure AD to the VPN for credential validation. 
+The VPN client then sends the certificate issued by Azure AD to the VPN for credential validation.
 
 > [!NOTE]
 > Azure AD uses the most recently created certificate in the VPN connectivity blade as the Issuer. Azure AD Conditional Access VPN connection leaf certificates now support strong certificate mappings, a certificate-based authentication requirement introduced by [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). VPN connection leaf certificates now include a [SID extension](/openspecs/windows_protocols/ms-wcce/e563cff8-1af6-4e6f-a655-7571ca482e71) of (1.3.6.1.4.1.311.25.2), which contains an encoded version of the user’s SID obtained from the onPremisesSecurityIdentifier attribute.
