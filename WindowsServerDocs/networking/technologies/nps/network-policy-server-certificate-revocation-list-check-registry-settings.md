@@ -9,7 +9,7 @@ ms.date: 10/30/2023
 ms.contributor: alalve
 ---
 
-# Configure Network Policy Server Certificate Revocation List
+# Configure Network Policy Server Certificate Revocation List check registry settings
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
