@@ -2,7 +2,7 @@
 title: Configure conditional access for VPN connectivity using Azure AD
 description: Learn how to configure conditional access for VPN connectivity using Azure AD.
 ms.topic: article
-ms.date: 10/30/2023
+ms.date: 10/31/2023
 ms.author: wscontent
 author: anaharris-ms
 ---
@@ -29,7 +29,7 @@ An EAP-TLS client cannot connect unless the NPS server completes a revocation ch
 
 In this section, you'll add `IgnoreNoRevocationCheck` and `NoRevocationCheck`. By default, `IgnoreNoRevocationCheck` and `NoRevocationCheck` are set to 0 (disabled).
 
-To learn more about CRL registry settings, see [NPS CRL Check Registry Settings](../../networking/technologies/nps/nps-crl-check-registry-settings.md).
+To learn more about NPS CRL registry settings, see [Configure Network Policy Server Certificate Revocation List check registry settings](network-policy-server-certificate-revocation-list-check-registry-settings.md).
 
 >[!IMPORTANT]
 >If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set `IgnoreNoRevocationCheck=1` on both servers.

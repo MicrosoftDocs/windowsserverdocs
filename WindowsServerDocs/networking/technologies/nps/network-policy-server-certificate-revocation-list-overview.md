@@ -5,7 +5,7 @@ ms.topic: concept-article
 ms.assetid: 13468d55-0acf-4160-a858-4f4c137e2993
 ms.author: wscontent
 author: marcussa
-ms.date: 10/30/2023
+ms.date: 10/31/2023
 ms.contributor: alalve
 ---
 
@@ -46,4 +46,4 @@ The certificate revocation check for a certificate can fail for the following re
 
 ## Next steps
 
-The behavior of the certificate revocation check on the NPS can be modified with registry settings. For more information on editing these settings, see [NPS CRL check registry settings](nps-crl-check-registry-settings.md).
+The behavior of the certificate revocation check on the NPS can be modified with registry settings. For more information on editing these settings, see [Configure Network Policy Server Certificate Revocation List check registry settings](network-policy-server-certificate-revocation-list-check-registry-settings.md).
