@@ -77,9 +77,9 @@ The process is to change the cluster from one domain to a workgroup and back to 
 
 In the following steps, a cluster is being moved from the Contoso.com domain to the new Fabrikam.com domain. The cluster name is *CLUSCLUS* and with a file server role called *FS-CLUSCLUS*.
 
-1. Create a local Administrator account with the same name and password on all servers in the cluster. This may be needed to log in while the servers are moving between domains.
+1. Create a local Administrator account with the same name and password on all servers in the cluster. This might be needed to log in while the servers are moving between domains.
 2. Sign in to the first server with a domain user or administrator account that has Active Directory permissions to the Cluster Name Object (CNO), Virtual Computer Objects (VCO), has access to the Cluster, and open PowerShell.
-3. Ensure all Cluster Network Name resources are in an offline state and run the following command to remove the Active Directory objects that the cluster may have.
+3. Ensure all Cluster Network Name resources are in an offline state and run the following command to remove the Active Directory objects that the cluster might have.
 
    ```powershell
    Remove-ClusterNameAccount -Cluster CLUSCLUS -DeleteComputerObjects
@@ -119,7 +119,8 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
    New-ClusterNameAccount -Name ClusterName -Domain NewDomainName.com -UpgradeVCOs
    ```
 
-    NOTE: If you don't have any additional groups with network names, such as a Hyper-V Cluster with only virtual machines, the `-UpgradeVCOs` parameter isn't needed.
+    >[!NOTE]
+    >If you don't have any additional groups with network names, such as a Hyper-V Cluster with only virtual machines, the `-UpgradeVCOs` parameter isn't needed.
 
 9. Use **Active Directory Users and Computers** to check the new domain and ensure the associated computer objects were created. If they have, then bring the remaining resources in the groups online.
 
