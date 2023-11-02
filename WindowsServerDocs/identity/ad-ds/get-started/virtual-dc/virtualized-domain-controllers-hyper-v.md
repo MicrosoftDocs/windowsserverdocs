@@ -103,13 +103,15 @@ Based on the example configuration in the previous diagram, here are some import
 
 ### Performance considerations
 
-With the new microkernel 64-bit architecture, there are significant increases in Hyper-V performance from previous virtualization platforms. For best host performance, the host should be a Server Core installation of Windows Server 2008 or later, and it shouldn't have server roles other than Hyper-V installed.
+Microkernel 64-bit architecture has significantly increased Hyper-V performance from previous virtualization platforms. For best host performance, we recommend you only use hosts with server cores running Windows Server 2008 or later, and only run it with Hyper-V installed server roles.
 
-Performance of VMs depends specifically on the workload. To guarantee satisfactory Active Directory performance, test specific topologies. Assess the current workload over a period of time with a tool such as the Reliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](https://www.microsoft.com/download/details.aspx?id=7826). The MAP tool can also be valuable if you want to take an inventory of all of the servers and server roles that currently exist in your network.
+VM performance depends on the workload you use it for. We recommend you test specific VM topologies to make sure you're satisfied with your Active Directory deployment performance. You can assess performance under workloads over a specific period of time using tools like the REliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](https://www.microsoft.com/download/details.aspx?id=7826). The MAP tool can also help you take inventory of all servers and server roles currently within your network.
 
-To get a general idea of the performance of virtualized DCs, the following performance tests were carried out with the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
+To give you an idea of how testing virtualized DC performance works, we've set up an example performance test using the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
 
-Lightweight Directory Access Protocol (LDAP) tests were run on a physical DC with ADTest.exe and then on a VM hosted on a server identical to the physical DC. Only one logical processor was used for the physical computer, and only one virtual processor was used for the VM to easily reach 100-percent CPU utilization. In the following table, the letter and number in parenthesis after each test indicate the specific test in ADTest.exe. As this data shows, virtualized DC performance was 88 to 98 percent of the physical DC performance.
+We first ran Lightweight Directory Access Protocol (LDAP) tests on a physical DC using the ADTest.exe program. Next, we ran the same tests on a virtualized DC, which consisted of a VM hosted on a server identical to the physical DC. In our example build, we only used one logical processor for the physical computer and only one virtual processor for the VM. This configuration allowed our deployment to easily reach 100 percent CPU utilization.
+
+The following table lists the test results for the physical and virtual DCs. The letters and numbers in parentheses next to the test names are their labels in ADTest.exe. This data shows that the virtualized DC performance was between 88 to 98 percent of the physical DC performance.
 
 | Measurement  | Test                                              | Physical | Virtual | Delta |
 |--------------|---------------------------------------------------|----------|---------|-------|
@@ -122,15 +124,15 @@ Lightweight Directory Access Protocol (LDAP) tests were run on a physical DC wit
 | Successful binds/sec | Use NTLM to perform binds (B5) | 1068 | 1056 | -1.12% |
 | Writes/sec | Write multiple attributes (W2) | 6467 | 5885 | -9.00% |
 
-To ensure satisfactory performance, integration components (IC) were installed to allow the guest OS to use hypervisor-aware synthetic drivers. During the installation process, it can be necessary to use emulated Integrated Drive Electronics (IDE) or network adapter drivers. In production environments, you should replace these emulated drivers with synthetic drivers to increase performance.
+To maximize performance in our test deployment, we installed integration components (IC) in this test build to allow the guest OS to use hypervisor-aware synthetic drivers. When you install an IC, sometimes you need to use emulated Integrated Drive Electronics (IDE) or network adapter drivers. In production environments, you should replace these emulated drivers with synthetic drivers to increase performance.
 
-Review the following performance recommendations:
+Based on this test, we can give you the following recommendations for improving performance:
 
-- When you monitor performance of VMs with Reliability and Performance Manager (Perfmon.msc), the CPU information within the VM isn't entirely accurate as a result of the way the virtual CPU is scheduled on the physical processor. To obtain CPU information for a VM running on a Hyper-V server, use the Hyper-V Hypervisor Logical Processor counters in the host partition. For more information about performance tuning of both AD DS and Hyper-V, see [Performance tuning guidelines for Windows Server](../../../../administration/performance-tuning/index.md).
+- When you monitor VM performance using the Perfmon.msc tool, sometimes the CUP information for the VM isn't entirely accurate. This inaccuracy is because of how the virtual CPU is scheduled to run on the physical processor. For more accurate CPU information for VM running on Hyper-V servers, use the Hyper-V Hypervisor Logical Processor counters in the host partition instead. For more information about performance tuning of both AD DS and Hyper-V, see [Performance tuning guidelines for Windows Server](../../../../administration/performance-tuning/index.md).
 
-- Don't plan to use a differencing disk VHD on a VM that's configured as a DC because the differencing disk VHD can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
+- We recommend you avoid using differencing disk VHDs on a VM configured as a DC, as differencing disk VHDs can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 
-- For more information regarding AD DS in virtual hosting environments, see [Things to consider when you host Active Directory DCs in virtual hosting environments](/troubleshoot/windows-server/identity/ad-dc-in-virtual-hosting-environment) in the Microsoft Knowledge Base.
+- We also recommend you get familiar with the information about how to use AD DS in virtual hosting environments by reading [Things to consider when you host Active Directory DCs in virtual hosting environments](/troubleshoot/windows-server/identity/ad-dc-in-virtual-hosting-environment).
 
 ## Deployment considerations
 
@@ -138,52 +140,61 @@ The following sections describe common VM practices to avoid when deploying DCs,
 
 ### Deployment practices to avoid
 
-Virtualization platforms, such as Hyper-V, offer many convenience features that make managing, maintaining, backing up, and migrating computers easier. However, the following common deployment practices and features should be avoided for virtual DCs:
+Virtualization platforms like Hyper-V have many features that make managing, maintaining, backing up, and migrating machine easier. However, there are certain deployment practices you should avoid in order to take advantage of these features for your virtual DCs.
 
-- **Don't deploy virtual DC database files on virtual IDE disks**. To ensure durability of Active Directory writes, don't deploy a virtual DC's database files (the Active Directory database **NTDS.DIT**, logs, and SYSVOL) on virtual IDE disks. Instead, create a second VHD attached to a virtual SCSI controller and ensure the database, logs, and SYSVOL are placed on the VM's SCSI disk during DC installation.
+- To ensure your Active Directory writes are durable, don't deploy virtual DC database files, such as the **NTDS.DIT** Active Directory database, logs, and SYSVOL, on virtual IDE disks. Instead, create a second virtual hard disk (VHD) attached to a virtual SCSI controller <!--Acronyms--> and ensure the database files are on the VM SCSI disk when you install the DC.
 
-- **Don't implement differencing disk VHDs on a DC VM**. Don't implement differencing disk virtual hard disks (VHDs) on a VM that you're configuring as a DC. This approach makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
+- Don't implement differncing disk VHDs on a VM you're configuring to be a DC. While this approach makes it easy to revert your deployment to previous versions, it also decreases performance. For more information about VHD types, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 
-- **Don't deploy Active Directory domains and forests that aren't prepared with Sysprep**. Don't deploy new Active Directory domains and forests on a copy of a Windows Server OS without first preparing them by using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
+- Don't deploy Active Directory domains and forests on a copy of a Windows Server OS without first using the System Preparation tool (sysprep) to prepare them for deployment. For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
 
    > [!WARNING]
-   > Running Sysprep on an already promoted DC isn't supported.
+   > You can't run Sysprep on a DC that's already promoted.
 
-- **Don't use copies of a VHD file for an already deployed DC to deploy other DCs**. To help prevent a potential update sequence number (USN) rollback situation, don't use copies of a VHD file that represents an already deployed DC to deploy more DCs. For more information about USN rollback, see the [USN and USN rollback](#usn-and-usn-rollback) section.
+- Don't deploy other DCs with a copy of a VHD file from a DC you've already deployed. Not using copies prevents potential update sequence number (USN) rollback scenarios. For more information about USN rollback, see [USN and USN rollback](#usn-and-usn-rollback).
 
-   In Windows Server 2012 and later, administrators can clone DC images to deploy more DCs, when the images are properly prepared.
+  - In Windows Server 2012 and later, administrators can clone DC images to deploy more DCs, but only if they've properly prepared the images.
 
-- **Don't use the Hyper-V Export feature to export a VM running a DC**.
+- Don't use the Hyper-V Export feature to export a VM that's running a DC.
 
-   In Windows Server 2012 and later, an export and import of a DC virtual guest is handled like a nonauthoritative restore. The process detects a change of the Generation ID and it isn't configured for cloning.
+  - In Windows Server 2012 and later, the system handles exporting and importing DC virtual guests like a nonauthoritative restore. This process detects if the Generation ID changed and if the DC isn't configured for cloning.
 
-   Ensure the exported guest is no longer used. You can use Hyper-V Replication to keep a second inactive copy of a DC. If you start the replicated image, you also need to perform proper cleanup for the same reason as not using the source after exporting a DC guest image.
+  - When you export a guest VM, you must make sure nobody's using it. To make things easier, you can use Hyper-V Replication to create an inactive copy of the DC. When you start using the replicated image, you must also perform cleanup like you would for the source image after exporting a DC guest image.
 
-### Physical-to-virtual migration
+### Physical-to-virtual conversion
 
-System Center VM Manager (VMM) 2008 provides unified management of physical machines and VMs and the ability to migrate a physical machine to a VM. This process is known as physical-to-VM conversion (P2V conversion). During the P2V conversion process, the new VM and the physical DC that's being migrated must not run at the same time. Ensuring the VM and DC don't run at the same time helps to avoid a USN rollback situation as described in the [USN and USN rollback](#usn-and-usn-rollback) section.
+System Center VM Manager (VMM) 2008 lets you manage physical machines and VMs in a unified way. You can also use VMM to migrate a physical machine to a VM. This migration process is called *physical-to-VM conversion*, or P2V conversion. In order to start the P2V conversion process, you must make sure the VM and physical DC you're migrating aren't running at the same time. Ensuring the two machines aren't running at the same time prevents USN rollback scenarios, as described in [USN and USN rollback](#usn-and-usn-rollback).
 
-You should perform P2V conversion by using offline mode to ensure the directory data is consistent when the DC is turned back on. The offline mode option is offered and recommended in the Convert Physical Server Wizard. For a description of the difference between online mode and offline mode, see [P2V: Convert physical computers to VMs in VMM](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc764232(v=technet.10)). During P2V conversion, the VM shouldn't be connected to the network. The network adapter of the VM should be enabled only after the P2V conversion process is complete and verified. At this point, the physical source machine should be off. Don't bring the physical source machine back onto the network again before you reformat the hard disk.
+You should perform P2V conversion in offline mode to keep the directory data consistent when you turn the DC back on. You can toggle offline mode in the Convert Physical Server installer. For more information about how to use offline mode, see [P2V: Convert physical computers to VMs in VMM](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc764232(v=technet.10)).
 
-#### Practices to avoid risk of USN rollback
+You should also disconnect teh Vm from the network during P2V conversion. You should only enable the network adapter after you've finished the conversion process and verified that everything works. At that point, you should have turned the physical source machine off. Don't turn the physical source machine back on and reconnect it to the network until you've reformatted the hard disk.
 
-There are safer options to create virtual DCs that don't run the risks of creating a USN rollback. You can set up a new virtual DC by regular promotion, promotion from Install from Media (IfM), and also by using Domain Controller cloning, if you already have at least one virtual DC. This approach also helps to avoid problems with hardware or platform-related problems P2V-converted virtual guests might encounter.
+#### Avoiding USN rollback
+
+When you create virtual DCs, you should avoid creating USN rollback scenarios. To avoid rollback, you can set up a new virtual DC with regular promotion, promotion from Install from Media (IfM), or by cloning the DC if you already have at least one virtual DC. This approach also lets you avoid hardware or platform problems P2V-converted virtual guests might encounter.
 
 > [!WARNING]
-> To prevent issues with Active Directory replication, ensure that only one instance (physical or virtual) of a given DC exists on a given network at any point in time. You can lower the likelihood of the old clone being a problem by using one of the following methods:
+> To prevent issues with Active Directory replication, ensure that only one physical or virtual DC exists on a given network at any point in time. You can lower the likelihood of the old clone being a problem by using one of the following methods:
 >
-> - When the new virtual DC is running, change the computer account password twice by using the following command:
->    `netdom resetpwd /Server:\<domain-controller\> ...`
+> - When the new virtual DC is running, run the following command to change the computer account password twice:
+>
+> ```cmd
+> netdom resetpwd /Server:<domain-controller> ...
+> ```
 >
 > - Export and import the new virtual guest to force it to become a new Generation ID and a database invocation ID.
 
 ### Test environments and P2V migration
 
-You can use P2V migration through the VMM to create test environments. You can migrate production DCs from physical machines to VMs to create a test environment without permanently bringing down the production DCs. However, the test environment must be on a different network from the production environment to enable two instances of the same DC to exist. Great care must be taken in the creation of test environments with P2V migration to avoid USN rollbacks that can affect your test and production environments.
+You can use P2V migration in combination with the VMM to create test environments. With this method, you can migrate production DCs from physical machines to VMs to create a test environment without permanently bringing down the production DCs. However, you must build the test environment on a separate network from the production environment to allow for two instances of the same DC to exist. It's very important to avoid USN rollbacks when you create test environments using P2V migration.
 
-#### Practices to create a test environment
+#### Creating a test environment
 
-You can use the following approach to create test environments with P2V.
+You can use one of the following methods to create test environments using P2V:
+
+<!--Where I left off--->
+
+- 
 
 - Migrate one in-production DC from each domain to a test VM by using P2V according to the guidelines stated in the [Physical-to-virtual migration](#physical-to-virtual-migration) section.
 
