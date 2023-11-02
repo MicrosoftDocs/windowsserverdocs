@@ -171,6 +171,8 @@ You should also disconnect teh Vm from the network during P2V conversion. You sh
 
 #### Avoiding USN rollback
 
+<!--There's a whole other section about USN rollback later in this article that defines what it is and tells you not to do it, and not doing it is repeated over and over again. We need to do something about this repetitive content.-->
+
 When you create virtual DCs, you should avoid creating USN rollback scenarios. To avoid rollback, you can set up a new virtual DC with regular promotion, promotion from Install from Media (IfM), or by cloning the DC if you already have at least one virtual DC. This approach also lets you avoid hardware or platform problems P2V-converted virtual guests might encounter.
 
 > [!WARNING]
@@ -190,93 +192,83 @@ You can use P2V migration in combination with the VMM to create test environment
 
 #### Creating a test environment
 
-You can use one of the following methods to create test environments using P2V:
+We recommend you do the following things when you create test environments using P2V:
 
 <!--Where I left off--->
 
-- 
+- Migrate one in-production DC from each domain to a test VM by using P2V based on the recommendations in [Physical-to-virtual conversion](#physical-to-virtual-conversion).
 
-- Migrate one in-production DC from each domain to a test VM by using P2V according to the guidelines stated in the [Physical-to-virtual migration](#physical-to-virtual-migration) section.
+- Put the physical production machines and the test VMs in different networks when you bring them back online.
 
-- Be sure to locate the physical production machines and test VMs in different networks when they're brought back online.
+- To avoid [USN rollbacks](#usn-and-usn-rollback) in the test environment, disconnect all DCs you plan to migrate from the network. You can disconnect your DCs by stopping the ntds service or restarting the machines in Directory Services Restore Mode (DSRM).
 
-- To avoid USN rollbacks in the test environment, take all DCs to be migrated from physical machines to VMs offline. You can take the DCs offline by stopping the ntds service or by restarting the computer in Directory Services Restore Mode (DSRM).
+- Don't introduce any new updates to the environment after you've disconnected the DCs from the network.
 
-- After the DCs are offline, no new updates should be introduced to the environment.
+- Don't connect any of the machines to the network during P2V migration. You can only reconnect them once you've finished migrating all machines.
 
-- All of the computers must remain offline during the P2V migration. No computers should be brought back online until all computers are fully migrated.
-
-- Subsequent test DCs should be promoted as replicas in the test environment.
-
-To learn more about USN rollback, see the [USN and USN rollback](#usn-and-usn-rollback) section.
+- You should only promote test DCs you make after P2V conversion as replicas in the test environment.
 
 ### Time service and synchronization
 
-For VMs that are configured as DCs, it's recommended that you disable time synchronization between the host system and guest OS that's acting as a DC. This practice enables your guest DC to synchronize time from the domain hierarchy.
+For VMs you've configured as DCs, we recommend that you disable time synchronization between the host system and guest OS that's acting as a DC. If the guest DC doesn't synchronize with the host system, then it synchronizes with the domain hierarchy instead.
 
-To disable the Hyper-V time synchronization provider, shut down the VM and clear the **Time synchronization** check box under **Integration Services**.
-
-> [!NOTE]
-> The time service guidance has been recently updated to reflect the current recommendation: synchronize time for the guest DC from only the domain hierarchy. The previous recommendation was to partially disable time synchronization between the host system and guest DC.
+To disable the Hyper-V time synchronization provider, turn the VM off, then go to **Integration Services** and uncheck the **Time synchronization** check box.
 
 ### Storage and optimization
 
-To optimize the performance of the DC VM and ensure durability of Active Directory writes, follow these recommended practices for storing OSs, Active Directory, and VHD files:
+We recommend you follow the storage recommendations in this section to optimize your DC VM performance and ensure your Active Directory writes are durable.
 
-- **Guest storage**. Store the Active Directory database file (Ntds.dit), log files, and SYSVOL files on a separate virtual disk from the OS files. Create a second VHD attached to a virtual SCSI controller and store the database, logs, and SYSVOL on the VM's virtual SCSI disk. Virtual SCSI disks provide increased performance compared to virtual IDE and they support Forced Unit Access (FUA). FUA ensures that the OS writes and reads data directly from the media bypassing all caching mechanisms.
+- For guest storage, store the Active Directory database file (Ntds.dit) and the log and SYSVOL files on a separate virtual disk from the OS files. We recommend that you store these files in a virtual SCSI disk in a second VHD attached to a virtual SCSI controller. A virtual SCSI disk will increase performance and supports Forced Unit Access (FUA). With FUA, the OS writes and reads directly from the media, bypassing any caching mechanisms.
 
-   > [!NOTE]
-   > To use BitLocker for the virtual DC guest, make sure the extra volumes are configured for "auto unlock." For more information about configuring auto unlock, see the PowerShell reference topic for the [Enable-BitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock) cmdlet.
+- If you're using BitLocker to secure your virtual DC guest, configure the extra volumes for auto unlock using the [Enable-BitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock) PowerShell cmdlet.
 
-- **Host storage of VHD files**. Host storage recommendations address storage of VHD files. For maximum performance, don't store VHD files on a disk frequently used by other services or applications, such as the system disk where the host Windows OS is installed. Store each VHD file on a separate partition from the host OS and any other VHD files. The ideal configuration is to store each VHD file on a separate physical drive.
+- When storing VHD files on hosts, you should use a disk that isn't frequently used by other services or applications, such as the system disk for the host OS. Store each VHD file on a separate partition from the host OS and other VHD files, preferably on a separate physical drive.
 
-   The host physical disk system must also satisfy **at least one** of the following criteria to meet the requirements of virtualized workload data integrity:
+- Your host physical disk system must meet at least one of the following criteria to meet virtualized workload data integrity requirements:
 
-   - The system uses server-class disks (SCSI, Fibre Channel).
+  - The system uses server-class disks, such as SCSI or Fibre Channel.
 
-   - The system ensures the disks are connected to a battery-backed caching host bus adapter (HBA).
+  - The system ensures the disks are connected to a battery-backed caching HBA.
 
-   - The system uses a storage controller like a RAID system as the storage device.
+  - The system uses a storage controller like a RAID <!--Acronym--> system as its storage device.
 
-   - The system ensures power to the disk is protected by an uninterruptible power supply (UPS).
+  - The system uses an uninterruptible power supply (UPS) to power the disk.
 
-   - The system ensures the disk's write-caching feature is disabled.
+  - The system has disabled the disk's write-caching feature by default.
 
-- **Fixed VHD versus pass-through disks**. There are many ways to configure storage for VMs. When VHD files are used, fixed-size VHDs are more efficient than dynamic VHDs because the memory for fixed-size VHDs is allocated when they're created. Pass-through disks, which VMs can use to access physical storage media, are even more optimized for performance. Pass-through disks are physical disks or logical unit numbers (LUNs) that are attached to a VM. Pass-through disks don't support the snapshot feature. Therefore, pass-through disks are the preferred hard disk configuration because the use of snapshots with DCs isn't recommended.
+- When using VHD files, we recommend you use pass-through disks or fixed-size VHDs instead of dynamic VHDs. Pass-through disks are ideal because they're optimized for performance on VMs and don't support the snapshot feature, which we don't recommend using for DCs.
 
-- **Use virtual SCSI controllers**. To reduce the chance of corruption of Active Directory data, use virtual SCSI controllers:
+- We recommend you use virtual SCSI controllers to reduce the chance of your Active Directory data corrupting.
 
-   - Use SCSI physical drives (as opposed to IDE/ATA drives) on Hyper-V servers that host virtual DCs. If you can't use SCSI drives, ensure write caching is disabled on the ATA/IDE drives that host virtual DCs. For more information, see [Event ID 1539 – Database Integrity](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941847(v=ws.10)).
+  - On Hyper-V servers that host virtual DCs, you should use SCSI physical drives. If your scenario doesn't let you use SCSI drives, you should disable write caching on the ATA/IDE <!--acronym--> drive you're using instead. For more information, see [Event ID 1539 – Database Integrity](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941847(v=ws.10)).
 
-   - To guarantee the durability of Active Directory writes, the Active Directory database, logs, and SYSVOL must be placed on a virtual SCSI disk. Virtual SCSI disks support Forced Unit Access (FUA). FUA ensures that the OS writes and reads data directly from the media bypassing all caching mechanisms.
+### Operational practices to avoid <!--Better title?--->
 
-### Operational practices to avoid
+Domain controllers running on VMs have operational restrictions that don't apply to DCs running on physical machines. When you use a virtualized DC, you must follow these guidelines:
 
-Domain controllers running on VMs have operational restrictions that don't apply to DCs running on physical machines. When you use a virtualized DC, avoid the following virtualization software features and practices:
+- Don't pause, stop, or store the saved state of a DC in a VM longer than the forest's tombstone lifetime. Resuming a saved state that's been paused or saved longer than the tombstone lifetime can interfere with replication. To learn how to determine the tombstone lifetime for the forest, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
 
-- **Don't pause, stop, or store the saved state longer than the tombstone lifetime**. Don't pause, stop, or store the saved state of a DC in a VM longer than the forest's tombstone lifetime, and resume from the paused or saved state. These types of operations can interfere with replication. To learn how to determine the tombstone lifetime for the forest, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
+- Don't copy or clone VHDs.
 
-- **Don't copy or clone virtual hard disks (VHDs)**. Even with the safeguards in place for the guest VM, individual VHDs can still be copied and cause USN roll-back.
+- Don't take or use snapshots of virtual DCs. You should use a more permanent and reliable backup method instead.
 
-- **Don't take or use a snapshot of a virtual DC**. This practice is technically supported in Windows Server 2012 and later, but it isn't a replacement for a good backup strategy. There are few reasons for taking DC snapshots or restoring the snapshots.
+- Don't use differencing disk VHDs on a VM you've configured as a DC. <!--We've already talked about this in a previous section. I think I should remove one of the redundant sections and put it either in that section or this one.-->
 
-- **Don't use a differencing disk VHD on a VM configured as a DC**. This practice makes reverting to a previous version too easy, and also decreases performance.
+- Don't use the Export feature on a VM running a DC.
 
-- **Don't use the Export feature on a VM running a DC**.
+- Don't restore or roll back your DC or the contents of an Active Directory database using a method that isn't a supported backup.
 
-- **Don't restore or roll back by any means other than a supported backup**. Don't restore a DC or attempt to roll back the contents of an Active Directory database by any means other than a supported backup.
+## Backup and restore considerations
 
-These recommendations can help you avoid the possibility of an update sequence number (USN) rollback. For more information about USN rollback, see the [USN and USN rollback](#usn-and-usn-rollback) section.
+You must back up your DCs to prevent data loss due to disaster scenarios or administrative errors. The backup method that Active Directory supports is using a backup application to restore a system state backup made from the current installation of the DC. The application should be one that's compatible with Active Directory, such as Windows Server Backup. For more information about supported backup methods, see [AD DS backup and recovery step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)).
 
-## Back up and restore considerations
-
-Backing up DCs is a critical requirement for any environment. Backups protect against data loss for DC failures or administrative errors. If such an event occurs, it's necessary to roll back the system state of the DC to a point in time before the failure or error. The supported method of restoring a DC to a healthy state is to use a backup application to restore a system state backup that originated from the current installation of the DC. The back application should be compatible with Active Directory, such as Windows Server Backup. For more information about Windows Server Backup and Active Directory Domain Services (AD DS), see the [AD DS backup and recovery step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)).
-
-With VM technology, certain requirements of Active Directory restore operations take on added significance. If you restore a DC by using a copy of the VHD file, you bypass the critical step of updating the database version of a DC after it's restored. Replication proceeds with inaccurate tracking numbers that cause an inconsistent database among DC replicas. In most cases, this problem is undetected by the replication system and no errors are reported, despite inconsistencies between DCs.
+In virtualized deployments, you need to pay special attention to certain requirements for Active Directory backup operations. For example, if you restore a DC using a copy of the VHD file, you don't update the database version of the DC after restoring it, which can cause problems with replication due to inaccurate tracking numbers among the DC replicas. In most cases, the replication doesn't detect this issue and doesn't report any errors, but inconsistencies between DCs can potentially cause problems in certain scenarios.
 
 ### Windows Server Backup and guest OS
 
-There's one supported way to perform backup and restore of a virtualized DC and that's to run Windows Server Backup in the guest OS.
+The method for backing up and restoring virtualized DCs that Active Directory currently supports is to run Windows Server Backup in the guest OS.
+
+<!--Where I left off. Am working on rewriting this paragraph.-->
 
 In Hyper-V hosts and guests in Windows Server 2012 and later, you can take supported backups of DCs by using snapshots, guest VM export and import, and also Hyper-V Replication. However, none of these approaches are a good fit for creating a proper backup history with the slight exception of guest VM export.
 
