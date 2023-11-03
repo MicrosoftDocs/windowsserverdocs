@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: xelu86
 ms.author: wscontent
-ms.date: 09/01/2023
+ms.date: 11/03/2023
 ---
 
 # robocopy
@@ -35,7 +35,6 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | `<destination>` | Specifies the path to the destination directory. |
 | `<file>` | Specifies the file or files to be copied. Wildcard characters (**&#42;** or **?**) are supported. If you don't specify this parameter, `*.*` is used as the default value. |
 | `<options>` | Specifies the options to use with the **robocopy** command, including **copy**, **file**, **retry**, **logging**, and **job** options. |
-|/SPARSE|Enable retaining the sparse state of files during copy.|
 
 #### Copy options
 
@@ -77,6 +76,7 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /nooffload | Copies files without using the Windows Copy Offload mechanism. |
 | /compress | Requests network compression during file transfer, if applicable. |
 | /sparse | Enables retaining sparse state during copy. |
+| /SPARSE | Enables retaining the sparse state of files during copy. |
 
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:
