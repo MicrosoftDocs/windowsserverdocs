@@ -266,38 +266,38 @@ In virtualized deployments, you need to pay special attention to certain require
 
 ### Windows Server Backup and guest OS
 
-The method for backing up and restoring virtualized DCs that Active Directory currently supports is to run Windows Server Backup in the guest OS.
+The method for backing up and restoring virtualized DCs that Active Directory currently supports is to run Windows Server Backup in the guest OS. While in Windows Server 2012 or later you can take snapshots and use guest VM export or import or Hyper-V Replication to make temporary backups, these methods can't give you a permanent backup history.
 
 <!--Where I left off. Am working on rewriting this paragraph.-->
 
-In Hyper-V hosts and guests in Windows Server 2012 and later, you can take supported backups of DCs by using snapshots, guest VM export and import, and also Hyper-V Replication. However, none of these approaches are a good fit for creating a proper backup history with the slight exception of guest VM export.
-
-Windows Server 2016 Hyper-V and later support "production snapshots." The Hyper-V server triggers a VSS-based backup of the guest. When the guest is done with the snapshot, the host fetches the VHDs and stores them in the backup location. This approach works in Windows Server 2012 and later, but there's an incompatibility with BitLocker:
-
-- When doing a VSS snapshot, Active Directory wants to perform a post-snapshot task. The task can mark the database as coming from a backup, or when preparing an IFM source for RODC, remove credentials from the database.
-
-- When Hyper-V mounts the snapshot volume for this task, no facility unlocks the Volume for unencrypted access. The Active Directory database engine fails in the attempt to access the database and eventually fails the snapshot.
+You can also create VSS-based <!--Acronym--> production snapshots in Windows Server 2016 Hyper-V and later. However, while these snapshots are compatible with Windows Server 2012 and later, it's incompatible with BitLocker because of an issue that prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
 
 > [!NOTE]
-> The shielded VM project mentioned earlier has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
+> The shielded VM project mentioned earlier <!--Where?--> has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
 
-### Back up and restore practices to avoid
+### Backup and restore practices to avoid
 
-As mentioned, DCs running in VMs have restrictions that don't apply to DCs running in physical machines. When you back up or restore a virtual DC, avoid the following virtualization software features and practices:
+DCs running in VMs have restrictions that don't apply to DCs running in physical machines. When you back up or restore a virtual DC, you should avoid doing the following things:
 
-- **Don't copy or clone VHD files of DCs instead of performing regular backups**. If the VHD file is copied or cloned, the file becomes stale. If the VHD is started in normal mode, a USN rollback occurs. You should perform proper backup operations supported by AD DS, such as working with the Windows Server Backup feature.
+<!--...We've already brought up these things in previous sections. Do we really need to go over them again?-->
 
-- **Don't use the Snapshot feature as a backup to restore a VM configured as a DC**. Problems can occur with replication when you revert the VM to an earlier state with Windows Server 2008 R2 and later. For more information, see the [USN and USN rollback](#usn-and-usn-rollback) section. You can use a snapshot to restore a read-only DC (RODC) and not encounter replication issues, but this restore method isn't recommended.
+- Don't copy or clone VHD files of DCs instead of performing regular backups. If the VHD file is copied or cloned, the file becomes stale. If the VHD is started in normal mode, a USN rollback occurs. You should perform proper backup operations supported by AD DS, such as working with the Windows Server Backup feature.
 
-### Restoration of virtual DC
+- Don't use the Snapshot feature as a backup to restore a VM configured as a DC. Problems can occur with replication when you revert the VM to an earlier state with Windows Server 2008 R2 and later. For more information, see the [USN and USN rollback](#usn-and-usn-rollback) section. You can use a snapshot to restore a read-only DC (RODC) and not encounter replication issues, but this restore method isn't recommended.
 
-To restore a DC when it fails, you must regularly back up system state. System state includes Active Directory data and log files, the registry, the system volume (SYSVOL folder), and various elements of the OS. This requirement is the same for physical and virtual DCs. System state restoration procedures performed by Active Directory–compatible backup applications are designed to ensure the consistency of local and replicated Active Directory databases after a restore process, including the notification to replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications allow administrators to bypass the standard checks and validations that occur during DC system state restore.
+### Restoring a virtual DC
 
-When a DC VM fails and a USN rollback hasn't occurred, there are two supported situations for restoring the VM:
+<!--I think this should be its own how-to article.-->
 
-- If there's a valid system state data backup that predates the failure, you can restore system state with the restore option of the backup utility used to create the backup. To do so, the system state data backup must be created with an Active Directory–compatible backup utility within the span of the tombstone lifetime. The default tombstone lifetime is no more than 180 days. You should back up your DCs at least every half tombstone lifetime. For instructions about how to determine the specific tombstone lifetime for your forest, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
+You must regularly back up your system state in order to restore a physical or virtual DC in case of a disaster recovery scenario. System state includes Active Directory data and log files, the registry, the system volume, and various elements of the OS. Active Directory-compatible backup applications ensure consistent local and replicated Active Directory databases after a restore process, including notifying replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications let administrators bypass standard checks and validations that occur during DC system state restore.
 
-- If a working copy of the VHD file is available, but no system state backup is available, you can remove the existing VM. Restore the existing VM by using a previous copy of the VHD. Be sure to start the VM in DSRM and configure the registry properly as described in the following section. Then, restart the DC in normal mode.
+If your DC VM fails but you haven't encountered a USN rollback, there are two ways you can restore the VM:
+
+- If your system has a valid system state data backup from before the failure, you can restore it using the Active Direcotry-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, and you should back up your DCs every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
+
+- If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM <!--Acronym-->, then configure the registry property as described in [Restoring a system state backup](#restoring-a-system-state-backup). After that, restart the DC in normal mode.
+
+<!--These next diagrams aren't accessible for readers with low vision. I'll need to either give it complex long text or figure out a way to describe it using lead-in text.-->
 
 Use the process in the following diagram to determine the best way to restore your virtualized DC.
 
@@ -307,18 +307,18 @@ The restoration process and decisions are simpler for RODCs, as shown in the nex
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif" alt-text="Diagram that shows how to restore a read-only DC (RODC)." border="false":::
 
-### Restoration of system state backup
+### Restoring a system state backup
 
-If a valid system state backup exists for the DC VM, you can safely restore the backup by following the restore procedure prescribed by the backup tool that you used to back up the VHD file.
+If a valid system state backup exists for the DC VM, you can safely restore the backup by following the restore procedure for the backup tool that you used to back up the VHD file.
 
 > [!IMPORTANT]
-> To properly restore the DC, you must start the DC in DSRM. You must not allow the DC to start in normal mode. If you miss the opportunity to enter DSRM during system startup, turn off the DC's VM before it can fully start in normal mode. It's important to start the DC in DSRM because starting a DC in normal mode increments the USNs, even if the DC is disconnected from the network. For more information about USN rollback, see the [USN and USN rollback](#usn-and-usn-rollback) section.
+> To properly restore the DC, you must start the DC in DSRM, not normal mode. If you miss the opportunity to enter DSRM during system startup, turn off the DC's VM before it can fully start in normal mode. It's important to start the DC in DSRM because starting a DC in normal mode increments the USNs, even if the DC is disconnected from the network. For more information about USN rollback, see [USN and USN rollback](#usn-and-usn-rollback).
 
 #### Restore the system state backup of virtual DC
 
-Follow these steps to restore the system state data backup of a virtual DC:
+To restore the system state data backup of a virtual DC:
 
-1. Start the DC's VM, and press F5 to access **Windows Boot Manager**.
+1. Start the DC's VM, then press the F5 key to access **Windows Boot Manager**.
 
    If you're prompted to enter connection credentials, follow these steps:
 
@@ -327,58 +327,64 @@ Follow these steps to restore the system state data backup of a virtual DC:
    1. Select the **Play** button on the VM.
    1. Select inside the VM window, and press F5.
    
-   If **Windows Boot Manager** doesn't open, and the DC begins to start in normal mode, turn off the VM to pause the process. Repeat this step as many times as necessary until you're able to access Windows Boot Manager. You can't access DSRM from the Windows Error Recovery menu. Therefore, turn off the VM and try again if the Windows Error Recovery menu appears.
+   If **Windows Boot Manager** doesn't open and the DC begins to start in normal mode, turn the VM off to pause the process. Repeat this step as many times as necessary until you're able to access Windows Boot Manager. You can't access DSRM from the Windows Error Recovery menu. Therefore, turn off the VM and try again if the Windows Error Recovery menu appears.
 
-1. In **Windows Boot Manager**, press F8 to access advanced boot options.
+1. In **Windows Boot Manager**, press the F8 key to access advanced boot options.
 
-1. Under **Advanced Boot Options**, select **Directory Services Restore Mode**, and then press ENTER to start the DC in DSRM.
+1. Under **Advanced Boot Options**, select **Directory Services Restore Mode**, and then press the Enter key to start the DC in DSRM.
 
-1. Use the appropriate restore method for the tool that you used to create the system state backup. If you used Windows Server Backup, see [Performing a nonauthoritative restore of AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730683(v=ws.10)).
+1. Use the appropriate restore method for the tool that you used to create the system state backup. If you used Windows Server Backup, follow the directions in [Performing a nonauthoritative restore of AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730683(v=ws.10)).
 
 ### Restoration of virtual DC without system state backup
 
-If you don't have a system state data backup that predates the VM failure, you can use a previous VHD file to restore a DC that's running on a VM. As possible, make a copy of the VHD. If you encounter an issue during the procedure or miss a step, you can try again with the copied VHD.
+<!--....Do we need those "summary" bullets in the intro section if the intro goes over the information again? There's a lot of redundant stuff in this article that I think I should merge/cut.-->
 
-#### Restore previous version of virtual DC VHD without system state backup
+If you don't have a system state data backup that predates the VM failure, you can use the VHD file to restore a DC that's running on a VM. Make sure you make a copy of the VHD file before you start. That way, if you encounter an issue during the procedure or miss a step, you can try again with the copied VHD.
 
-You can use the following steps to restore to a previous version of a virtual DC VHD without a system state data backup.
+#### Restore a previous version of the virtual DC VHD without system state backup
+
+To restore a virtual DC with a VHD file:
 
 > [!WARNING]
-> The following procedure shouldn't be used as a substitute for regularly planned and scheduled backups. Restores performed with this procedure aren't supported by Microsoft. Use this procedure only when there's no alternative.
+> You shouldn't use this procedure as a substitute for regularly planned and scheduled backups. Restores performed with this procedure aren't supported by Microsoft. Use this procedure only when there's no alternative.
 >
-> Don't use this procedure if the copy of the VHD to restore has been started in normal mode by any VM.
+> Don't use this procedure if any VM has already started the copy of the VHD you plan to use for the restoration in normal mode.
 
-1. Using the previous VHD, start the virtual DC in DSRM, as described in the previous section. Don't allow the DC to start in normal mode. If you miss the **Windows Boot Manager** screen and the DC begins to start in normal mode, turn off the VM to prevent it from completing startup. See the previous section for detailed instructions for entering DSRM.
-
-1. Open **Registry Editor**. You can open the editor by selecting **Start** > **Run**, then enter **regedit**, and select **OK**.
-    
-   1. If the **User Account Control** dialog displays, confirm the displayed action is as expected, and select **Yes**.
-
-   1. In Registry Editor, expand the path **HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**.
+1. Using the previous VHD, start the virtual DC in DSRM.
    
-   1. Look for a value named **DSA Previous Restore Count**. If the value is present, make a note of the setting. Otherwise, the setting value is the default (0). If no value is shown, don't manually set the value.
+   - Don't start the DC in normal mode. If you miss the **Windows Boot Manager** screen and the DC begins to start in normal mode, turn the VM off to prevent it from starting up.
+
+1. Open the **Registry Editor**. You can open the editor by selecting **Start** > **Run**, then enter **regedit** and select **OK**.
+
+   - If the **User Account Control** dialog displays, confirm the displayed action is as expected, then select **Yes**.
+
+   - In Registry Editor, expand the path **HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**.
+
+   - Look for a value named **DSA Previous Restore Count**. If the value is present, make a note of the setting. Otherwise, the setting value is the default (0). If no value is shown, don't manually set the value.
 
 1. Right-click the **Parameters** key, select **New**, and then select **DWORD (32-bit) Value**.
 
-1. Enter the new name **Database restored from backup**, and then press ENTER.
+1. Enter the new name **Database restored from backup**, then press the Enter key.
 
-1. Double-click the value you just created to open the **Edit DWORD (32-bit) Value** dialog, and enter **1** in the **Value data** box.
+1. Double-click the value you just created to open the **Edit DWORD (32-bit) Value** dialog, then find the **Value data** field and enter **1**.
 
    The **Database restored from backup entry** option is available on the following DCs running Windows Server:
 
    - Windows 2000 Server with Service Pack 4 (SP4)
-   - Windows Server 2003 with specified updates installed (For details, see [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base.)
+   - Windows Server 2003 with specified updates installed. For details, see [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback).
    - Windows Server 2008
 
 1. Restart the DC in normal mode.
 
-1. When the DC restarts, open **Event Viewer**. To open Event Viewer, select **Start** > **Control Panel**. Double-click **Administrative Tools**, and then double-click **Event Viewer**.
+1. When the DC restarts, open **Event Viewer**. To open Event Viewer, select **Start** > **Control Panel**. Double-click **Administrative Tools**, then double-click **Event Viewer**.
 
-1. Expand **Application and Services Logs**, and then select the **Directory Services** log. Ensure the events appear in the details pane.
+1. Expand **Application and Services Logs**, then select the **Directory Services** log. Ensure the events appear in the details pane.
 
-1. Right-click the **Directory Services** log, and then select **Find**. In **Find what**, enter **1109**, and then select **Find Next**.
+1. Right-click the **Directory Services** log, then select **Find**.
 
-1. You should see at least one entry for Event ID 1109. If you don't see this entry, proceed to the next step. Otherwise, double-click the entry, and review the text. Confirm the text shows that the update was made to the InvocationID:
+1. In the **Find what** field, enter **1109**, then select **Find Next**.
+
+1. You should see at least one entry for Event ID 1109. If you don't see this entry, proceed to the next step. Otherwise, double-click the entry and review the text. Confirm the text shows that the update was made to the InvocationID, as shown in the following example output:
 
     ```output
     Active Directory has been restored from backup media, or has been configured to host an application partition.
@@ -394,13 +400,12 @@ You can use the following steps to restore to a previous version of a virtual DC
 
 1. Close **Event Viewer**.
 
-1. Use **Registry Editor** to verify the value for the **DSA Previous Restore Count** setting is equal to the previous value plus one. If the correct value isn't shown, and you can't find an entry for Event ID 1109 in **Event Viewer**, verify that the DC's service packs are current.
+1. Use **Registry Editor** to verify the value for the **DSA Previous Restore Count** setting is equal to the previous value plus one. If the correct value isn't there and you can't find an entry for Event ID 1109 in **Event Viewer**, verify that the DC's service packs are current.
 
    > [!NOTE]
    > You can't try this procedure again on the same VHD. You can try again on a copy of the VHD or a different VHD that hasn't been started in normal mode by starting again from step 1.
 
-1. Close **Registry Editor**.
-
+1. Close the **Registry Editor**.
 
 ## USN and USN rollback
 
@@ -408,33 +413,33 @@ This section describes replication issues that can occur as a result of an incor
 
 ### How AD DS and DCs use USNs
 
-AD DS uses USNs to keep track of replication of data between DCs. Each time a change is made to data in the directory, the USN is incremented to indicate a new change.
+AD DS uses USNs to keep track of replication of data between DCs. Each time you change data in the directory, the USN increments to indicate a new change.
 
-For each directory partition stored by a destination DC, USNs are used to track the latest originating update that a DC introduced to its database. The USN also tracks the status of every other DC that stores a replica of the directory partition. When DCs replicate changes to one another, they query their replication partners for changes with USNs that are greater than the USN of the last change that the DC received from each partner.
+Destination DCs use USNs to track updates to each directory partition it stores. The USN also tracks the status of every DC that stores replicas of these directory partitions. When DCs replicate changes to one another, they query their replication partners for changes with USNs greater than the last change the DC received from its partner.
 
-Two replication metadata tables contain USNs: up-to-dateness vector and high water mark. Source and destination DCs use the USNs in these tables to filter updates that the destination DC requires.
+You can find the replication metadata tables that contain the USNs in the up-to-dateness vector and high water mark. Both the source and destination DCs use these tables to filter required updates for the destination DC.
 
-The **up-to-dateness vector** table is maintained by the destination DC to track originating updates received from all source DCs. When a destination DC requests changes for a directory partition, it provides its up-to-dateness vector to the source DC. The source DC then uses this value to filter the updates that it sends to the destination DC. The source DC sends its up-to-dateness vector to the destination at the completion of a successful replication cycle. The USN is used to ensure the destination DC knows that it has synchronized with every DC's originating updates and the updates are at the same level as the source.
+The destination DC maintains the up-to-dateness vector table to track originating updates it receives from all source DCs. When a destination DC requests changes for a directory partition, it provides its up-to-dateness vector to the source DC. The source DC then uses this value to filter the updates that it sends to the destination DC. The source DC sends its up-to-dateness vector to the destination DC after a successful replication cycle finishes. The source DC uses the USN to track if it's synchronized with the originating updates at every DC, and that the updates to the destinations are at the same level as the source.
 
-The **high water mark** table is maintained by the destination DC to track the most recent changes received from a specific source DC for a specific partition. The high water mark prevents the source DC from sending out changes that the destination DC has already received from it.
+The destination DC maintains the high water mark table to track the most recent changes it received from a specific source DC for a specific partition. The high water mark table prevents the source DC from sending out changes that the destination DC has already received from it.
 
 ### Directory database identity
 
-In addition to USNs, DCs keep track of the directory database of source replication partners. The identity of the directory database running on the server is maintained separately from the identity of the server object itself. The directory database identity on each DC is stored in the `invocationID` attribute of the `NTDS Settings` object, which is located under the Lightweight Directory Access Protocol (LDAP) path `cn=NTDS Settings, cn=ServerName, cn=Servers, cn=*SiteName*, cn=Sites, cn=Configuration, dc=*ForestRootDomain*`. 
+In addition to USNs, DCs keep track of the directory database of source replication partners. The system maintains identity of the directory database running on the server separately from the identity of the server object itself. The directory database identity on each DC is stored in the `invocationID` attribute of the `NTDS Settings` object, which is located under the Lightweight Directory Access Protocol (LDAP) path `cn=NTDS Settings, cn=ServerName, cn=Servers, cn=*SiteName*, cn=Sites, cn=Configuration, dc=*ForestRootDomain*`.
 
-The server object identity is stored in the `objectGUID` attribute of the `NTDS Settings` object. The identity of the server object never changes. However, the identity of the directory database changes under certain circumstances:
+The system stores the server object identity iin the `objectGUID` attribute of the `NTDS Settings` object. The identity of the server object never changes. However, the identity of the directory database changes under the following circumstances:
 
-- When a system state restore procedure occurs on the server
+- When a system state restore procedure occurs on the server.
 
-- When an application directory partition is added, then removed, and later readded from the server
+- When you add an application directory partition to the server, then remove it, then add it again.
 
-- When a Hyper-V instance triggers its VSS writers on a partition containing a virtual DC's VHD
+- When a Hyper-V instance triggers its VSS writers on a partition containing a virtual DC's VHD.
 
-   In this scenario, the guest triggers its own VSS writers. This action is the same mechanism used by the backup/restore process mentioned earlier. This method results in another means by which the `invocationID` is reset.
+   In this scenario, the guest triggers its own VSS writers. This action is the same mechanism that the backup and restore process uses. This method resets the `invocationID` attribute.
 
-So, the `invocationID` attribute effectively relates a set of originating updates on a DC with a specific version of the directory database. The up-to-dateness vector and the high water mark tables use the `invocationID` and DC GUID respectively so the DCs recognize the copy of the Active Directory database from where the replication information is coming.
+The `invocationID` attribute relates a set of originating updates on a DC with a specific version of the directory database. The up-to-dateness vector and the high water mark tables use the `invocationID` and DC GUID respectively so the DCs recognize which copy of the Active Directory database the replication information is coming from.
 
-The `invocationID` attribute is a globally unique identifier (GUID) value that's visible near the top of the output after you run the command `repadmin /showrepl`. The following text represents example output from the command:
+The `invocationID` attribute is a globally unique identifier (GUID) value that's visible near the top of the output after you run the `repadmin /showrepl` command. The following text represents example output from the command:
 
 ```output
 Repadmin: running command /showrepl against full DC local host
@@ -444,14 +449,17 @@ DSA object GUID: 966651f3-a544-461f-9f2c-c30c91d17818
 DSA invocationID: b0d9208b-8eb6-4205-863d-d50801b325a9
 ```
 
-When AD DS is properly restored on a DC, the `invocationID` attribute is reset. This change causes an increase in replication traffic, where the duration is relative to the size of the partition being replicated.
+When you've restored Microsoft Entra ID on a DC, the system resets the `invocationID` attribute. This change increases replication traffic, with duration relative to the size of the partition you're replicating.
+
+<!--Needs better lead-in text and alt text.--->
 
 Consider a scenario where VDC1 and DC2 are two DCs in the same domain. The following diagram shows the perception of DC2 about VDC1 when the `invocationID` value is reset in a proper restore situation.
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif" alt-text="Diagram that demonstrates the scenario when the invocationID value is reset properly." border="false":::
 
-
 ### USN rollback
+
+<!--Where I left off-->
 
 USN rollback occurs when the normal updates of the USNs are circumvented and a DC tries to use a USN that's lower than its latest update. In most cases, USN rollback is detected and replication is stopped before divergence in the forest is created.
 
