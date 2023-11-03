@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
 manager: femila
-ms.date: 07/31/2023
+ms.date: 11/03/2023
 ms.prod: windows-server
 ---
 
@@ -39,6 +39,8 @@ We're no longer actively developing these features and may remove them from a fu
 
 | Feature | Explanation |
 |--|--|
+| Computer Browser | The Computer Browser driver and service are deprecated. The browser (browser protocol and service) is a dated and insecure device location protocol. This protocol, service, and driver were first disabled by default in Windows 10 with the removal of the SMB1 service. For more information on Computer Browser, see [MS-BRWS Common Internet File System](/openspecs/windows_protocols/ms-brws/3cfbad92-09b3-4abc-808f-c6f6347d5677). |
+| Remote Mailslots | Remote Mailslots are deprecated. The Remote Mailslot protocol is a dated, simple, unreliable, insecure IPC method first introduced in MS DOS. This protocol was first disabled by default in [Windows 11 Insider Preview Build ](https://blogs.windows.com/windows-insider/2023/03/08/announcing-windows-11-insider-preview-build-25314/). For more information on Remote Mailslots, see [About Mailslots](/windows/win32/ipc/about-mailslots) and [[MS-MAIL]: Remote Mailslot Protocol](/openspecs/windows_protocols/ms-mail/8ea19aa4-6e5a-4aed-b628-0b5cd75a1ab9).|
 | WebDAV Redirector service | The WebDAV Redirector service is deprecated. The service isn't installed by default in Windows Server. For more information on the WebDAV Redirector service, see [WebDAV - Win32 apps](/windows/win32/webdav/webdav-portal). |
 | TLS 1.0 and 1.1 | Over the past several years, internet standards and regulatory bodies have [deprecated or disallowed](https://www.ietf.org/rfc/rfc8996.html) TLS versions 1.0 and 1.1 due to various security issues. In a future release of Windows Server, TLS 1.0 and 1.1 will be disabled by default. For more information, see [TLS versions 1.0 and 1.1 disablement resources](/windows/whats-new/deprecated-features-resources). |
 | Windows Internet Name Service (WINS) | WINS is a legacy computer name registration and resolution service. You should replace WINS with Domain Name System (DNS). For more information, see [Windows Internet Name Service (WINS)](../networking/technologies/wins/wins-top.md). |
