@@ -4,7 +4,7 @@ description: Learn how the Microsoft Root Certificate Program works to distribut
 author: gswashington
 ms.author: wscontent
 ms.topic: overview
-ms.date: 03/31/2023
+ms.date: 08/22/2023
 
 ---
 
@@ -74,7 +74,7 @@ Automatic update functionality using the CTL Updater delivers several benefits:
   the set of trusted root certificates in your enterprise environment. You can view and select the
   set of trusted root certificates, export them to a serialized certificate store, and distribute
   them by using Group Policy. For more information, see the
-  [Certutil -generateSSTFromWU SSTFile](../../administration/windows-commands/certutil.md#-generatesstfromwu-sstfile)
+  [Certutil -generateSSTFromWU SSTFile](../../administration/windows-commands/certutil.md#-generatesstfromwu)
   Windows command reference.
 
 - **Independent configurability** The automatic update mechanism for trusted and untrusted

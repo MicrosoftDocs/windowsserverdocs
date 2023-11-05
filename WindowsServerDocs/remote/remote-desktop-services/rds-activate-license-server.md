@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: eb24ddd2-0361-41fe-bd6b-c7c63427cb71
 author: lizap
 ms.author: elizapo
-ms.date: 09/20/2016
+ms.date: 09/09/2023
 manager: dongill
 ---
 # Activate the Remote Desktop Services license server
@@ -14,24 +14,23 @@ manager: dongill
 
 The Remote Desktop Services license server issues client access licenses (CALs) to users and devices when they access the RD Session Host. You can activate the license server by using the Remote Desktop Licensing Manager.
 
-## Install the RD Licensing role
+## Install the RD licensing role
 
 1. Sign into the server you want to use as the license server using an administrator account.
-2. In Server Manager, click **Roles Summary**, and then click **Add Roles**.
-   Click **Next** on the first page of the roles wizard.
-3. Select **Remote Desktop Services**, and then click **Next**, and then **Next** on the Remote Desktop Services page.
-4. Select **Remote Desktop Licensing**, and then click **Next**.
-5. Configure the domain - select **Configure a discovery scope for this license server**, click **This domain**, and then click **Next**.
-6. Click **Install**.
+1. In Server Manager, select **Manage** > **Add Roles and Features**.
+1. On the **Select installation type** page, select **Role-based or feature-based installation**.
+1. Specify the server on which you'll install the licensing role.
+1. On the **Server Roles** page, check the box for **Remote Desktop Services**, then select **Next** until you see the **Remote Desktop Services** page.
+1. Select the roles you want to install. Make sure you include the **Remote Desktop Licensing** role.
+1. In the **Add Roles and Features Wizard** dialog box, select **Add Features**.
+1. Select **Next** until you see the **Confirmation** page, then select **Install**.
+
+For detailed information and other installation options, see [Install or uninstall roles, role services, or features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
 
 ## Activate the license server
 
-1. Open the Remote Desktop Licensing Manager: click **Start > Administrative Tools > Remote Desktop Services > Remote Desktop Licensing Manager**.
-2. Right-click the license server, and then click **Activate Server**.
-3. Click **Next** on the welcome page.
-4. For the connection method, select **Automatic connection (recommended)**, and then click **Next**.
-5. Enter your company information (your name, the company name, your geographic region), and then click **Next**.
-6. Optionally enter any other company information (for example, email and company addresses), and then click **Next**.
-7. Make sure that **Start Install Licenses Wizard now** is not selected (we'll install the licenses in a later step), and then click **Next**.
-
-Your license server is now ready to start issuing and managing licenses.
+1. In Server Manager, select **Remote Desktop Services** > **Servers**. Right-click the server where you installed the Remote Desktop Licensing role and select **RD Licensing Manager**.
+1. In the **RD Licensing Manager**, select the server, and then select **Action** > **Activate Server**.
+1. Accept the remaining default values in the Activate Server Wizard until you see the **Company information** page, then enter your company information.
+1. Accept the defaults for the remaining pages until the final page. Clear **Start Install Licenses Wizard now**, and then select **Finish**.
+1. Select **Action** > **Review Configuration** > **Add to Group** > **OK** and enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Azure AD Domain Services, but you can ignore any warnings or errors.

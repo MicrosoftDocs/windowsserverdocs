@@ -26,7 +26,7 @@ Your system data is stored on your machine, and this data is analyzed by predict
 
 ## Get started
 
-<iframe src=https://www.youtube-nocookie.com/embed/AJxQkx5WSaA width=560 height=315 allowfullscreen></iframe>
+> [!VIDEO https://www.youtube-nocookie.com/embed/AJxQkx5WSaA]
 
 >[!TIP]
 >Watch these short videos to learn the information you need to get started and confidently manage System Insights: [Getting started with System Insights in 10 minutes](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)

@@ -5,7 +5,7 @@ title: Create a Rule to Pass Through or Filter an Incoming Claim
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 01/30/2023
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

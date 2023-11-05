@@ -235,8 +235,14 @@ items:
         href: technologies/dhcp/dhcp-subnet-options.md
       - name: DHCP logging events for DNS record registrations
         href: technologies/dhcp/dhcp-dns-events.md
-    - name: Deploy DHCP using Windows PowerShell
-      href: technologies/dhcp/dhcp-deploy-wps.md
+    - name: Concepts
+      items:
+      - name: DHCP scopes
+        href: technologies/dhcp/dhcp-scopes.md
+    - name: How-to guides
+      items:
+      - name: Deploy DHCP using Windows PowerShell
+        href: technologies/dhcp/dhcp-deploy-wps.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
@@ -408,8 +414,12 @@ items:
       - name: Manage certificates used with NPS
         href: technologies/nps/nps-manage-certificates.md
         items:
+        - name: NPS CRL check overview
+          href: technologies/nps/network-policy-server-certificate-revocation-list-overview.md
+        - name: NPS CRL check registry settings
+          href: technologies/nps/network-policy-server-certificate-revocation-list-check-registry-settings.md
         - name: Configure certificate templates for PEAP and EAP requirements
-          href: technologies/nps/nps-manage-cert-requirements.md
+          href: technologies/nps/nps-manage-cert-requirements.md          
       - name: Manage NPSs
         href: technologies/nps/nps-manage-servers.md
         items:
@@ -446,6 +456,8 @@ items:
       href: technologies/netsh/netsh-contexts.md
     - name: Network Shell (Netsh) example batch file
       href: technologies/netsh/netsh-wins.md
+    - name: Netsh bridge
+      href: technologies/netsh/netsh-bridge.md
     - name: Netsh http commands
       href: technologies/netsh/netsh-http.md
     - name: Netsh interface portproxy commands
@@ -465,8 +477,6 @@ items:
       href: technologies/network-subsystem/net-sub-performance-counters.md
     - name: Performance tools for network workloads
       href: technologies/network-subsystem/net-sub-performance-tools.md
-  - name: NIC Teaming
-    href: /azure-stack/hci/concepts/host-network-requirements
   - name: Packet Monitor (Pktmon)
     href: technologies/pktmon/pktmon.md
     items:
@@ -478,8 +488,6 @@ items:
       href: technologies/pktmon/pktmon-sdn-data-path-wac-extension.md
     - name: Microsoft Network Monitor (Netmon) support
       href: technologies/pktmon/pktmon-netmon-support.md
-    - name: Wireshark (pcapng format) support
-      href: technologies/pktmon/pktmon-pcapng-support.md
   - name: Quality of Service (QoS) policy
     href: technologies/qos/qos-policy-top.md
     items:
@@ -621,6 +629,8 @@ items:
       items:
       - name: Troubleshoot the Windows Server Software Defined Networking Stack
         href: sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md
+  - name: Switch Embedded Teaming (SET)
+    href: /azure-stack/hci/concepts/host-network-requirements
   - name: Virtual Private Networking (VPN)
     href: ../remote/remote-access/vpn/vpn-top.md
   - name: Windows Internet Name Service (WINS)

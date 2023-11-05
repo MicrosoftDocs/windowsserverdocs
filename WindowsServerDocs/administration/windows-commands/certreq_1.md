@@ -3,10 +3,10 @@ title: certreq
 description: Reference article for the certreq command, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.
 ms.topic: reference
 ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
-ms.author: jgerend
+ms.author: wscontent
 author: JasonGerend
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 09/21/2023
 ---
 
 # certreq
@@ -52,7 +52,7 @@ certreq –enroll –cert certId [options] renew [reusekeys]
 
 ### certreq -submit
 
-To submit a simple certificate request:
+To submit a basic certificate request:
 
 ```
 certreq –submit certrequest.req certnew.cer certnew.pfx
@@ -74,9 +74,9 @@ certreq -retrieve 20 MyCertificate.cer
 
 #### Remarks
 
-- Use certreq -retrieve *requestid* to retrieve the certificate after the certificate authority has issued it. The *requestid* PKC can be a decimal or hex with 0x prefix and it can be a certificate serial number with no 0x prefix. You can also use it to retrieve any certificate that has ever been issued by the certificate authority, including revoked or expired certificates, without regard to whether the certificate's request was ever in the pending state.
+- Use certreq -retrieve *requestid* to retrieve the certificate after the certificate authority has issued it. The *requestid* PKC can be a decimal or hex with 0x prefix and it can be a certificate serial number with no 0x prefix. You can also use it to retrieve any certificate that has ever been issued by the certificate authority, including revoked or expired certificates, without considering if the certificate's request was ever in the pending state.
 
-- If you submit a request to the certificate authority, the policy module of the certificate authority might leave the request in a pending state and return the *requestid* to the certreq caller for display. Eventually, the certificate authority's administrator will issue the certificate or deny the request.
+- If you submit a request to the certificate authority, the policy module of the certificate authority might leave the request in a pending state and return the *requestid* to the certreq caller for display. Eventually, the certificate authority's administrator issues the certificate or deny the request.
 
 ### certreq -new
 
@@ -98,41 +98,41 @@ This area of the INF file is mandatory for any new certificate request templates
 | --- | ---------- | ----- | ------- |
 | Subject | Several apps rely on the subject information in a certificate. We recommend specifying a value for this key. If the subject isn't set here, we recommend you include a subject name as part of the subject alternative name certificate extension. | Relative Distinguished Name string values | Subject = CN=computer1.contoso.com Subject=CN=John Smith,CN=Users,DC=Contoso,DC=com |
 | Exportable | If set to TRUE, the private key can be exported with the certificate. To ensure a high level of security, private keys shouldn't be exportable; however, in some cases, it might be required if several computers or users must share the same private key. | `true | false` | `Exportable = TRUE`. CNG keys can distinguish between this and plaintext exportable. CAPI1 keys can't. |
-| ExportableEncrypted | Specifies whether the private key should be set to be exportable. | `true | false` | `ExportableEncrypted = true`<p>**Tip:** Not all public key sizes and algorithms will work with all hash algorithms. The specified CSP must also support the specified hash algorithm. To see the list of supported hash algorithms, you can run the command: `certutil -oid 1 | findstr pwszCNGAlgid | findstr /v CryptOIDInfo` |
+| ExportableEncrypted | Specifies whether the private key should be set to be exportable. | `true | false` | `ExportableEncrypted = true`<p>**Tip:** Not all public key sizes and algorithms work with all hash algorithms. The specified CSP must also support the specified hash algorithm. To see the list of supported hash algorithms, you can run the command: `certutil -oid 1 | findstr pwszCNGAlgid | findstr /v CryptOIDInfo` |
 | HashAlgorithm | Hash Algorithm to be used for this request. | `Sha256, sha384, sha512, sha1, md5, md4, md2` | `HashAlgorithm = sha1`. To see the list of supported hash algorithms use: certutil -oid 1 \| findstr pwszCNGAlgid \| findstr /v CryptOIDInfo|
-| KeyAlgorithm| The algorithm that will be used by the service provider to generate a public and private key pair.| `RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521` | `KeyAlgorithm = RSA` |
+| KeyAlgorithm| The algorithm that's used by the service provider to generate a public and private key pair.| `RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521` | `KeyAlgorithm = RSA` |
 | KeyContainer | We don't recommend setting this parameter for new requests where new key material is generated. The key container is automatically generated and maintained by the system.<p>For requests where the existing key material should be used, this value can be set to the key-container name of the existing key. Use the `certutil –key` command to display the list of available key containers for the machine context. Use the `certutil –key –user` command for the current user's context.| Random string value<p>**Tip:** Use double quotes around any INF key value that has blanks or special characters to avoid potential INF parsing issues. | `KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}` |
 | KeyLength | Defines the length of the public and private key. The key length has an impact on the security level of the certificate. Greater key length usually provides a higher security level; however, some applications may have limitations regarding the key length. | Any valid key length that is supported by the cryptographic service provider. | `KeyLength = 2048` |
 | KeySpec | Determines if the key can be used for signatures, for Exchange (encryption), or for both. | `AT_NONE, AT_SIGNATURE, AT_KEYEXCHANGE` | `KeySpec = AT_KEYEXCHANGE` |
 | KeyUsage | Defines what the certificate key should be used for. | <ul><li>`CERT_DIGITAL_SIGNATURE_KEY_USAGE -- 80 (128)`</li><li>`CERT_NON_REPUDIATION_KEY_USAGE -- 40 (64)`</li><li>`CERT_KEY_ENCIPHERMENT_KEY_USAGE -- 20 (32)`</li><li>`CERT_DATA_ENCIPHERMENT_KEY_USAGE -- 10 (16)`</li><li>`CERT_KEY_AGREEMENT_KEY_USAGE -- 8`</li><li>`CERT_KEY_CERT_SIGN_KEY_USAGE -- 4`</li><li>`CERT_OFFLINE_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_ENCIPHER_ONLY_KEY_USAGE -- 1`</li><li>`CERT_DECIPHER_ONLY_KEY_USAGE -- 8000 (32768)`</li></ul> | `KeyUsage = CERT_DIGITAL_SIGNATURE_KEY_USAGE | CERT_KEY_ENCIPHERMENT_KEY_USAGE`<p>**Tip:** Multiple values use a pipe (\|) symbol separator. Ensure that you use double-quotes when using multiple values to avoid INF parsing issues. The values shown are hexadecimal (decimal) values for each bit definition. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, `KeyUsage = 0xa0`. |
 | KeyUsageProperty | Retrieves a value that identifies the specific purpose for which a private key can be used. | <ul><li>`NCRYPT_ALLOW_DECRYPT_FLAG -- 1`</li><li>`NCRYPT_ALLOW_SIGNING_FLAG -- 2`</li><li>`NCRYPT_ALLOW_KEY_AGREEMENT_FLAG -- 4`</li><li>`NCRYPT_ALLOW_ALL_USAGES -- ffffff (16777215)`</li></ul> | `KeyUsageProperty = NCRYPT_ALLOW_DECRYPT_FLAG | NCRYPT_ALLOW_SIGNING_FLAG` |
-| MachineKeySet | This key is important when you need to create certificates that are owned by the machine and not a user. The key material that is generated is maintained in the security context of the security principal (user or computer account) that has created the request. When an administrator creates a certificate request on behalf of a computer, the key material must be created in the machine's security context and not the administrator's security context. Otherwise, the machine could not access its private key since it would be in the administrator's security context. | `true | false`. The default is false. | `MachineKeySet = true` |
-| NotBefore | Specifies a date or date and time before which the request cannot be issued. `NotBefore` can be used with `ValidityPeriod` and `ValidityPeriodUnits`. | Date or date and time | `NotBefore = 7/24/2012 10:31 AM`<p>**Tip:** `NotBefore` and `NotAfter` are for R`equestType=cert` only. Date parsing attempts to be locale-sensitive. Using month names will disambiguate and should work in every locale. |
-| NotAfter | Specifies a date or date and time after which the request cannot be issued. `NotAfter` cannot be used with `ValidityPeriod` or `ValidityPeriodUnits`. | Date or date and time | `NotAfter = 9/23/2014 10:31 AM`<p>**Tip:** `NotBefore` and `NotAfter` are for `RequestType=cert` only. Date parsing attempts to be locale-sensitive. Using month names will disambiguate and should work in every locale. |
+| MachineKeySet | This key is important when you need to create certificates that are owned by the machine and not a user. The key material that is generated is maintained in the security context of the security principal (user or computer account) that has created the request. When an administrator creates a certificate request on behalf of a computer, the key material must be created in the machine's security context and not the administrator's security context. Otherwise, the machine couldn't access its private key since it would be in the administrator's security context. | `true | false`. The default is false. | `MachineKeySet = true` |
+| NotBefore | Specifies a date or date and time before which the request can't be issued. `NotBefore` can be used with `ValidityPeriod` and `ValidityPeriodUnits`. | Date or date and time | `NotBefore = 7/24/2012 10:31 AM`<p>**Tip:** `NotBefore` and `NotAfter` are for R`equestType=cert` only. Date parsing attempts to be locale-sensitive. Using month names will disambiguate and should work in every locale. |
+| NotAfter | Specifies a date or date and time after which the request can't be issued. `NotAfter` can't be used with `ValidityPeriod` or `ValidityPeriodUnits`. | Date or date and time | `NotAfter = 9/23/2014 10:31 AM`<p>**Tip:** `NotBefore` and `NotAfter` are for `RequestType=cert` only. Date parsing attempts to be locale-sensitive. Using month names will disambiguate and should work in every locale. |
 | PrivateKeyArchive | The PrivateKeyArchive setting works only if the corresponding RequestType is set to CMC because only the Certificate Management Messages over CMS (CMC) request format allows for securely transferring the requester's private key to the CA for key archival. | `true | false` | `PrivateKeyArchive = true` |
 | EncryptionAlgorithm | The encryption algorithm to use. | Possible options vary, depending on the operating system version and the set of installed cryptographic providers. To see the list of available algorithms, run the command: `certutil -oid 2 | findstr pwszCNGAlgid`. The specified CSP used must also support the specified symmetric encryption algorithm and length. | `EncryptionAlgorithm = 3des` |
 | EncryptionLength | Length of encryption algorithm to use. | Any length allowed by the specified EncryptionAlgorithm. | `EncryptionLength = 128` |
-| ProviderName | The provider name is the display name of the CSP. | If you don't know the provider name of the CSP you are using, run `certutil –csplist` from a command line. The command will display the names of all CSPs that are available on the local system | `ProviderName = Microsoft RSA SChannel Cryptographic Provider` |
-| ProviderType | The provider type is used to select specific providers based on specific algorithm capability such as RSA Full. | If you do not know the provider type of the CSP you are using, run `certutil –csplist` from a command-line prompt. The command will display the provider type of all CSPs that are available on the local system. | `ProviderType = 1` |
-| RenewalCert | If you need to renew a certificate that exists on the system where the certificate request is generated, you must specify its certificate hash as the value for this key. | The certificate hash of any certificate that is available at the computer where the certificate request is created. If you do not know the certificate hash, use the Certificates MMC Snap-In and look at the certificate that should be renewed. Open the certificate properties and see the `Thumbprint` attribute of the certificate. Certificate renewal requires either a `PKCS#7` or a `CMC` request format. | `RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D` |
-| RequesterName | Makes the request to enroll on behalf of another user request.The request must also be signed with an Enrollment Agent certificate, or the CA will reject the request. Use the `-cert` option to specify the enrollment agent certificate. The requester name can be specified for certificate requests if the `RequestType` is set to `PKCS#7` or `CMC`. If the `RequestType` is set to `PKCS#10`, this key will be ignored. The `Requestername` can only be set as part of the request. You cannot manipulate the `Requestername` in a pending request. | `Domain\User` | `Requestername = Contoso\BSmith` |
-| RequestType | Determines the standard that is used to generate and send the certificate request. | <ul><li>`PKCS10 -- 1`</li><li>`PKCS7 -- 2`</li><li>`CMC -- 3`</li><li>`Cert -- 4`</li><li>`SCEP -- fd00 (64768)`</li></ul>**Tip:** This option indicates a self-signed or self-issued certificate. It doesn't generate a request, but rather a new certificate and then installs the certificate. Self-signed is the default. Specify a signing cert by using the –cert option to create a self-issued certificate that is not self-signed. | `RequestType = CMC` |
+| ProviderName | The provider name is the display name of the CSP. | If you don't know the provider name of the CSP you're using, run `certutil –csplist` from a command line. The command displays the names of all CSPs that are available on the local system | `ProviderName = Microsoft RSA SChannel Cryptographic Provider` |
+| ProviderType | The provider type is used to select specific providers based on specific algorithm capability such as RSA Full. | If you don't know the provider type of the CSP you're using, run `certutil –csplist` from a command-line prompt. The command displays the provider type of all CSPs that are available on the local system. | `ProviderType = 1` |
+| RenewalCert | If you need to renew a certificate that exists on the system where the certificate request is generated, you must specify its certificate hash as the value for this key. | The certificate hash of any certificate that is available at the computer where the certificate request is created. If you don't know the certificate hash, use the Certificates MMC Snap-In and look at the certificate that should be renewed. Open the certificate properties and see the `Thumbprint` attribute of the certificate. Certificate renewal requires either a `PKCS#7` or a `CMC` request format. | `RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D` |
+| RequesterName | Makes the request to enroll on behalf of another user request. The request must also be signed with an Enrollment Agent certificate, or the CA rejects the request. Use the `-cert` option to specify the enrollment agent certificate. The requester name can be specified for certificate requests if the `RequestType` is set to `PKCS#7` or `CMC`. If the `RequestType` is set to `PKCS#10`, this key is ignored. The `Requestername` can only be set as part of the request. You can't manipulate the `Requestername` in a pending request. | `Domain\User` | `Requestername = Contoso\BSmith` |
+| RequestType | Determines the standard that is used to generate and send the certificate request. | <ul><li>`PKCS10 -- 1`</li><li>`PKCS7 -- 2`</li><li>`CMC -- 3`</li><li>`Cert -- 4`</li><li>`SCEP -- fd00 (64768)`</li></ul>**Tip:** This option indicates a self-signed or self-issued certificate. It doesn't generate a request, but rather a new certificate and then installs the certificate. Self-signed is the default. Specify a signing cert by using the –cert option to create a self-issued certificate that isn't self-signed. | `RequestType = CMC` |
 | SecurityDescriptor | Contains the security information associated with securable objects. For most securable objects, you can specify an object's security descriptor in the function call that creates the object.Strings based on [security descriptor definition language](/windows/win32/secauthz/security-descriptor-definition-language).<p>**Tip:** This is relevant only for machine context non-smart card keys. | `SecurityDescriptor = D:P(A;;GA;;;SY)(A;;GA;;;BA)` |
 | AlternateSignatureAlgorithm | Specifies and retrieves a Boolean value that indicates whether the signature algorithm object identifier (OID) for a PKCS#10 request or certificate signature is discrete or combined. | `true | false` | `AlternateSignatureAlgorithm = false`<p>For an RSA signature, `false` indicates a `Pkcs1 v1.5`, while `true` indicates a `v2.1` signature. |
 | Silent | By default, this option allows the CSP access to the interactive user desktop and request information such as a smart card PIN from the user. If this key is set to TRUE, the CSP must not interact with the desktop and will be blocked from displaying any user interface to the user. | `true | false` | `Silent = true` |
-| SMIME | If this parameter is set to TRUE, an extension with the object identifier value 1.2.840.113549.1.9.15 is added to the request. The number of object identifiers depends on the on the operating system version installed and CSP capability, which refer to symmetric encryption algorithms that may be used by Secure Multipurpose Internet Mail Extensions (S/MIME) applications such as Outlook. | `true | false` | `SMIME = true` |
-| UseExistingKeySet | This parameter is used to specify that an existing key pair should be used in building a certificate request. If this key is set to TRUE, you must also specify a value for the RenewalCert key or the KeyContainer name. You must not set the Exportable key because you cannot change the properties of an existing key. In this case, no key material is generated when the certificate request is built. | `true | false` | `UseExistingKeySet = true` |
+| SMIME | If this parameter is set to TRUE, an extension with the object identifier value 1.2.840.113549.1.9.15 is added to the request. The number of object identifiers depends on the operating system version installed and CSP capability, which refers to symmetric encryption algorithms that may be used by Secure Multipurpose Internet Mail Extensions (S/MIME) applications such as Outlook. | `true | false` | `SMIME = true` |
+| UseExistingKeySet | This parameter is used to specify that an existing key pair should be used in building a certificate request. If this key is set to TRUE, you must also specify a value for the RenewalCert key or the KeyContainer name. You must not set the Exportable key because you can't change the properties of an existing key. In this case, no key material is generated when the certificate request is built. | `true | false` | `UseExistingKeySet = true` |
 | KeyProtection | Specifies a value that indicates how a private key is protected before use. | <ul><li>`XCN_NCRYPT_UI_NO_PROTCTION_FLAG -- 0`</li><li>`XCN_NCRYPT_UI_PROTECT_KEY_FLAG -- 1`</li><li>`XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG -- 2`</li></ul> | `KeyProtection = NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG` |
 | SuppressDefaults | Specifies a Boolean value that indicates whether the default extensions and attributes are included in the request. The defaults are represented by their object identifiers (OIDs). | `true | false` | `SuppressDefaults = true` |
 | FriendlyName | A friendly name for the new certificate. | Text | `FriendlyName = Server1` |
-| ValidityPeriodUnits | Specifies a number of units that is to be used with ValidityPeriod. Note: This is used only when the `request type=cert`. | Numeric | `ValidityPeriodUnits = 3` |
-| ValidityPeriod | ValidityPeriod must be an US English plural time period. Note: This is used only when the request type=cert. | `Years |  Months | Weeks | Days | Hours | Minutes | Seconds` | `ValidityPeriod = Years` |
+| ValidityPeriodUnits | Specifies many units that are to be used with ValidityPeriod. Note: This is used only when the `request type=cert`. | Numeric | `ValidityPeriodUnits = 3` |
+| ValidityPeriod | ValidityPeriod must be a US English plural time period. Note: This is used only when the request type=cert. | `Years |  Months | Weeks | Days | Hours | Minutes | Seconds` | `ValidityPeriod = Years` |
 
 <sup>1</sup>Parameter to the left of the equal sign (=)
 
 <sup>2</sup>Parameter to the right of the equal sign (=)
 
-#### [extensions]
+#### [Extensions]
 
 This section is optional.
 
@@ -188,7 +188,7 @@ OID = 1.3.6.1.5.5.7.3.1
 OID = 1.3.6.1.5.5.7.3.2
 ```
 
-On the computer for which you are requesting a certificate:
+On the computer for which you're requesting a certificate:
 
 ```
 certreq –new requestconfig.inf certrequest.req
@@ -214,9 +214,33 @@ Requesttype = Cert
 _continue_ = %szOID_PKIX_KP_CLIENT_AUTH%
 ```
 
+To specify a Subject Alternate Name (SAN), add it in the [Extensions] section of your INF. For example:
+
+```
+[Version]
+Signature=$Windows NT$
+ 
+[Strings]
+szOID_ENHANCED_KEY_USAGE = 2.5.29.37
+szOID_PKIX_KP_SERVER_AUTH = 1.3.6.1.5.5.7.3.1
+szOID_PKIX_KP_CLIENT_AUTH = 1.3.6.1.5.5.7.3.2
+
+[NewRequest]
+Subject = CN=TestSelfSignedCert
+Requesttype = Cert
+
+[Extensions]
+2.5.29.17 = "{text}"
+_continue_ = "DNS=example.com"
+_continue_ = "DNS=www.example.com"
+_continue_ = "IP Address=192.168.1.1"
+```
+
+In this example, `2.5.29.17` is the OID defining the SAN. To specify multiple SANs, the `_continue_` extension OID is used, which lets you separate and specify each SAN extension.
+
 ### certreq -accept
 
-The `–accept` parameter links the previously generated private key with the issued certificate and removes the pending certificate request from the system where the certificate is requested (if there is a matching request).
+The `–accept` parameter links the previously generated private key with the issued certificate and removes the pending certificate request from the system where the certificate is requested (if there's a matching request).
 
 To manually accept a certificate:
 
@@ -237,7 +261,7 @@ To build a cross certificate request:
 certreq -policy certsrv.req policy.inf newcertsrv.req
 ```
 
-Using `certreq -policy` without any additional parameter opens a dialog window, allowing you to select the requested file (.req, .cmc, .txt, .der, .cer or .crt). After you select the requested file and click **Open**, another dialog window opens, allowing you to select the policy.inf file.
+Using `certreq -policy` without any other parameter opens a dialog window, allowing you to select the requested file (.req, .cmc, .txt, .der, .cer or .crt). After you select the requested file and click **Open**, another dialog window opens, allowing you to select the policy.inf file.
 
 #### Examples
 
@@ -255,15 +279,15 @@ certreq -submit myrequest_sign.req myrequest_cert.cer
 
 #### Remarks
 
-- Using `certreq -sign` without any additional parameter it will open a dialog window so you can select the requested file (req, cmc, txt, der, cer or crt).
+- Using `certreq -sign` without any other parameter it opens a dialog window so you can select the requested file (req, cmc, txt, der, cer or crt).
 
 - Signing the qualified subordination request may require **Enterprise Administrator** credentials. This is a best practice for issuing signing certificates for qualified subordination.
 
-- The certificate used to sign the qualified subordination request uses the qualified subordination template. Enterprise Administrators will have to sign the request or grant user permissions to the individuals signing the certificate.
+- The certificate used to sign the qualified subordination request uses the qualified subordination template. Enterprise Administrators have to sign the request or grant user permissions to the individuals signing the certificate.
 
-- You might be required to have additional personnel sign the CMC request after you. This will depend on the assurance level associated with the qualified subordination.
+- You might be required to have additional personnel sign the CMC request after you. This depends on the assurance level associated with the qualified subordination.
 
-- If the parent CA of the qualified subordinate CA you are installing is offline, you must obtain the CA certificate for the qualified subordinate CA from the offline parent. If the parent CA is online, specify the CA certificate for the qualified subordinate CA during the **Certificate Services Installation** wizard.
+- If the parent CA of the qualified subordinate CA you're installing is offline, you must obtain the CA certificate for the qualified subordinate CA from the offline parent. If the parent CA is online, specify the CA certificate for the qualified subordinate CA during the **Certificate Services Installation** wizard.
 
 ### certreq -enroll
 
@@ -299,8 +323,8 @@ You can only renew valid certificates. Expired certificates can't be renewed and
 | -clientcertificate `<ClientCertId>` | You can replace the `<ClientCertId>` with a certificate thumbprint, CN, EKU, template, email, UPN, or the new `name=value` syntax. |
 | -username `<username>` | Used with Certificate Enrollment web services. You can substitute `<username>` with the SAM name or **domain\user** value. This option is for use with the `-p` option. |
 | -p `<password>` | Used with Certificate Enrollment web services. Substitute `<password>` with the actual user's password. This option is for use with the `-username` option. |
-| -user | Configures the `-user` context for a new certificate request or specifies the context for an a certificate acceptance. This is the default context, if none is specified in the INF or template. |
-| -machine | Configures a new certificate request or specifies the context for an a certificate acceptance for the machine context. For new requests it must be consistent with the MachineKeyset INF key and the template context. If this option is not specified and the template does not set a context, then the default is the user context. |
+| -user | Configures the `-user` context for a new certificate request or specifies the context for a certificate acceptance. This is the default context, if none is specified in the INF or template. |
+| -machine | Configures a new certificate request or specifies the context for an a certificate acceptance for the machine context. For new requests it must be consistent with the MachineKeyset INF key and the template context. If this option isn't specified and the template doesn't set a context, then the default is the user context. |
 | -crl | Includes certificate revocation lists (CRLs) in the output to the base64-encoded PKCS #7 file specified by `certchainfileout` or to the base64-encoded file specified by `requestfileout`. |
 | -rpc | Instructs Active Directory Certificate Services (AD CS) to use a remote procedure call (RPC) server connection instead of Distributed COM. |
 | -adminforcemachine | Use the Key Service or impersonation to submit the request from Local System context. Requires that the user invoking this option be a member of Local Administrators. |

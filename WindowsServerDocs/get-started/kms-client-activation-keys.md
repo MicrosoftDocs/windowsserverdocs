@@ -4,7 +4,7 @@ description: Get the product keys needed for setup and activation of Windows Ser
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: alalve
-ms.date: 04/26/2023
+ms.date: 09/05/2023
 ms.prod: windows-server
 ---
 
@@ -77,7 +77,7 @@ In the tables that follow, you'll find the GVLKs for each version and edition of
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 > [!IMPORTANT]
-> Windows Server, version 20H2 reached end of service on August 9, 2022. This includes the retirement of Windows Server Semi-Annual Channel (SAC) with **[no future releases](servicing-channels-comparison.md#semi-annual-channel)** and will no longer receive security updates after August 9, 2022.
+> Windows Server, version 20H2 reached end of service on August 9, 2022 and is no longer receiving security updates. This includes the retirement of Windows Server Semi-Annual Channel (SAC) with no future releases.
 >
 > Customers using Windows Server SAC should move to **[Azure Stack HCI](/azure-stack/hci/)**. Alternatively, customers may use the Long-Term Servicing Channel of Windows Server.
 
@@ -159,6 +159,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2012 MultiPoint Standard | HM7DN-YVMH3-46JC3-XYTG7-CYQJJ |
 | Windows Server 2012 MultiPoint Premium  | XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G |
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
+| Windows Server 2012 Essentials          | HTDQM-NBMMG-KGYDT-2DTKT-J2MPV |
 
 #### Windows Server 2008 R2
 

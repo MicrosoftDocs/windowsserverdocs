@@ -5,7 +5,7 @@ description: Learn about the requirements for installing Active Directory Federa
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 06/08/2023
+ms.date: 09/21/2023
 ms.topic: article
 ---
 
@@ -243,10 +243,10 @@ For more information, see [Best practices for securing Active Directory Federati
 - The load balancer must not terminate TLS/SSL. AD FS supports multiple use cases with certificate authentication, which breaks when terminating TLS/SSL. Terminating TLS/SSL at the load balancer isn't supported for any use case.
 - Use a load balancer that supports SNI. In the event it doesn't, using the 0.0.0.0 fallback binding on your AD FS or Web Application Proxy server should provide a workaround.
 - Use the HTTP (not HTTPS) health probe endpoints to perform load balancer health checks for routing traffic. This requirement avoids any issues relating to SNI. The response to these probe endpoints is an HTTP 200 OK and is served locally with no dependence on back-end services. The HTTP probe can be accessed over HTTP using the path '/adfs/probe'
-  - `http://&lt;Web Application Proxy name&gt;/adfs/probe`
-  - `http://&lt;AD FS server name&gt;/adfs/probe`
-  - `http://&lt;Web Application Proxy IP address&gt;/adfs/probe`
-  - `http://&lt;AD FS IP address&gt;/adfs/probe`
+  - `http://<Web Application Proxy name>/adfs/probe`
+  - `http://<AD FS server name>/adfs/probe`
+  - `http://<Web Application Proxy IP address>/adfs/probe`
+  - `http://<AD FS IP address>/adfs/probe`
 - It's not recommended to use DNS round robin as a way to load balance. Using this type of load balancing doesn't provide an automated way to remove a node from the load balancer using health probes.
 - It's not recommended to use IP-based session affinity or sticky sessions for authentication traffic to AD FS within the load balancer. You could cause an overload of certain nodes when using legacy authentication protocol for mail clients to connect to Office 365 mail services (Exchange Online).
 
