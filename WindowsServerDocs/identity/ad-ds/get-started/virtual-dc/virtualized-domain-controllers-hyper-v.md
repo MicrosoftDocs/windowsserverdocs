@@ -455,79 +455,88 @@ When you've restored Microsoft Entra ID on a DC, the system resets the `invocati
 
 Consider a scenario where VDC1 and DC2 are two DCs in the same domain. The following diagram shows the perception of DC2 about VDC1 when the `invocationID` value is reset in a proper restore situation.
 
+<!--Better alt text?-->
+
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif" alt-text="Diagram that demonstrates the scenario when the invocationID value is reset properly." border="false":::
 
 ### USN rollback
 
 <!--Where I left off-->
 
-USN rollback occurs when the normal updates of the USNs are circumvented and a DC tries to use a USN that's lower than its latest update. In most cases, USN rollback is detected and replication is stopped before divergence in the forest is created.
+USN rollback occurs when the system can't update a USN as normal, a user circumvents USN updates, or a DC tries to use a USN lower than its latest update. When the system detects a USN rollback, it stops replication before the mismatch can cause a divergence in the forest.
 
-USN rollback can be caused in many ways. Some examples include when old virtual hard disk (VHD) files are used or physical-to-virtual conversion (P2V conversion) is performed without ensuring that the physical machine stays offline permanently after the conversion.
+USN rollback can be caused by many things. For example, it can happen if you use old VHD files or perform P2V conversion without permanently disconnecting the physical machine after the conversion.
 
-#### Practices to prevent USN rollback
+#### Preventing USN rollback
 
-Take the following precautions to ensure USN rollback doesn't occur:
+You can prevent USN rollbacks by taking the following precautions:
 
 - When not running Windows Server 2012 or later, don't take or use a snapshot of a DC VM.
 
 - Don't copy the DC VHD file.
 
-- When not running Windows Server 2012 or later, don't export the VM that's running a DC.
+- When not running Windows Server 2012 or later, don't export a VM that's running a DC.
 
-- Don't restore a DC or attempt to roll back the contents of an Active Directory database by any other means than a supported backup solution, such as Windows Server Backup.
+- Only restore a DC or roll back the contents of an Active Directory database using supported first-party backup solutions, such as Windows Server Backup.
 
-Sometimes, USN rollback can go undetected, and at other time, USN rollback might cause replication errors. It can be necessary to identify the extent of the problem and address it in a timely manner. For more information about how to remove lingering objects that can occur as a result of USN rollback, see [Active Directory replication Event ID 1388 or 1988: A lingering object is detected](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1388-1988) in the Microsoft Knowledge Base.
+Sometimes the system can't detect USN rollback before it can cause replication errors. When you encounter replication errors, you must identify the extent of the problem and address it as soon as possible. For more information about how to remove lingering objects that can occur as a result of USN rollback, see [Active Directory replication Event ID 1388 or 1988: A lingering object is detected](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1388-1988).
 
-### USN rollback detection
+#### USN rollback detection
 
-In most cases, USN rollbacks without a corresponding reset of the `invocationID` attribute caused by improper restore procedures are detected. Windows Server 2008 provides protections against inappropriate replication after an improper DC restore operation. These protections trigger when an improper restore operation causes lower USNs that represent originating changes already received by the replication partners.
+<!--The version numbers described here are very old. Do we need this section/need to rewrite it? Also, a lot of the info here has been described in earlier sections, I think. Not to mention this feels like a conceptual article jammed into a how-to.-->
 
-In Windows Server 2008 and Windows Server 2003 SP1, when a destination DC requests changes by using a previously used USN, the response by its source replication partner is interpreted by the destination DC to mean its replication metadata is outdated. This outcome indicates the Active Directory database on the source DC has been rolled back to a previous state. An example is when the VHD file of a VM has been rolled back to a previous version. In this case, the destination DC initiates the following quarantine measures on the DC that has been identified as having undergone an improper restore:
+In most cases, the system can detect USN rollbacks by tracking inconsistencies in the `invocationID` attribute caused by restoring a DC without resetting the attribute. Windows Server 2008 provides protections against replication errors after unsupported DC restore operations. These protections trigger when an unsupported restore creates USNs lower than the original versions, representing changes that replication partners have already received.
+
+In windows Server 2008 and 2003 SP1, when a destination DC requests changes using a previously used USN, the destination DC interprets the replication partner response to mean its replication metadata is outdated. Outdated metadata means that the Active Directory database on the source DC has rolled back to a previous state, so the system responds accordingly.
+
+For example, let's say a VM's VHD file has rolled back to a previous version. In this case, the destination DC initiates the following quarantine measures on the DC it identified as having undergone an unsupported restore:
 
 - AD DS pauses the Net Logon service, which prevents user accounts and computer accounts from changing account passwords. This action prevents the loss of such changes if they occur after an improper restore.
 
 - AD DS disables inbound and outbound Active Directory replication.
 
-- AD DS generates Event ID 2095 in the Directory Service event log to indicate the condition.
+- AD DS generates Event ID 2095 in the Directory Service event log to record what happened.
 
-The following diagram shows the sequence of events that occur when USN rollback is detected on VDC2, the destination DC that's running on a VM. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value previously seen by the destination DC. This condition indicates that VDC2's database has rolled back in time improperly.
+The following diagram shows the sequence of events that occur when AD DS detects USN rollback on VDC2, the destination DC that's running on a VM. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value previously seen by the destination DC. This condition indicates that VDC2 database has experienced a rollback.
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.373b0504-43fc-40d0-9908-13fdeb7b3f14(WS.10).gif" alt-text="Diagram that demonstrates what happens when USN rollback is detected." border="false":::
 
-
 #### Resolve Event ID 2095 issues
 
-If the Directory Service event log reports Event ID 2095, complete the following procedure immediately:
+<!--I feel like this should be in troubleshooting.-->
+
+If you see Event ID 2095 in the Directory Service event log, follow these instructions immediately:
 
 1. Isolate the VM that recorded the error from the network.
 
-1. Attempt to determine whether any changes originated from this DC and propagated to other DCs. If the event was a result of a snapshot or copy of a VM being started, try to determine the time the USN rollback occurred. You can then check the replication partners of that DC to determine whether replication occurred in the time since the rollback.
+1. Check if the reported changes originated from this DC and propagated to other DCs. If the event was a result of using a snapshot or copy of a VM, try to find out when the USN rollback occurred. Once you have the time, you can check the replication partners of that DC to determine whether replication occurred after the rollback.
 
-   You can use the Repadmin tool to make this determination. For information about how to use Repadmin, see [Monitoring and troubleshooting Active Directory replication with Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)). If you're unable to make a determination, contact [Microsoft Support](https://support.microsoft.com) for assistance.
+   You can use the Repadmin tool check where the changes came from. For information about how to use Repadmin, see [Monitoring and troubleshooting Active Directory replication with Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)). If you're unable to make a determination, contact [Microsoft Support](https://support.microsoft.com) for assistance.
 
-1. Forcefully demote the DC. This operation involves cleaning up the DC's metadata and seizing the operations master (also known as flexible single master operations or FSMO) roles. For more information, see the "Recovering from USN rollback" section of [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback) in the Microsoft Knowledge Base.
+1. Forcefully demote the DC. This operation involves cleaning up the DC's metadata and seizing the operations master roles, also known as flexible single master operations (FSMO) roles. For more information, see [Recover from USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback#recover-from-usn-rollback).
 
 1. Delete all former VHD files for the DC.
 
 ### Undetected USN rollback
 
-USN rollback might not be detected in two scenarios:
+The DC might not detect USN rollback in the following scenarios:
 
 - The VHD file is attached to different VMs running in multiple locations simultaneously.
 
 - The USN on the restored DC has increased past the last USN received by the other DC.
 
-In the first scenario, other DCs might replicate with either one of the VMs, and changes might occur on either VM without being replicated to the other. This divergence of the forest is difficult to detect, and it causes unpredictable directory responses. This situation can occur after a P2V migration if both the physical DC and VM are run on the same network. This situation can also happen if multiple virtual DCs are created from the same physical DC and then run on the same network.
+In the VHD file scenario, other DCs might replicate with either one of the VMs, and changes might occur on either VM without being replicated to the other. This divergence of the forest is difficult to detect, and it causes unpredictable directory responses. This situation can occur after a P2V migration if both the physical DC and VM are run on the same network. This situation can also happen if multiple virtual DCs are created from the same physical DC and then run on the same network.
 
-In the second scenario, a range of USNs applies to two different sets of changes. This scenario can continue for extended periods without being detected. Whenever an object that's created during that time is modified, a lingering object is detected and reported as Event ID 1988 in Event Viewer. The following diagram shows how USN rollback might not be detected in such a circumstance.
+In the USN scenario, a range of USNs applies to two different sets of changes. This scenario can continue for extended periods without being detected. When you modify an object you created during the divergence, the system detects a lingering object and reports it as Event ID 1988 in the Event Viewer. The following diagram shows why the DC might not detect USN rollback in this scenario.
+
+<!--Better alt text--->
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif" alt-text="Diagram that demonstrates a scenario where USN rollback isn't detected." border="false":::
 
 ### Read-only DCs
 
-RODCs are DCs that host read-only copies of the partitions in an Active Directory database. RODCs avoid most USN rollback issues because they don't replicate any changes to the other DCs. However, if an RODC replicates from a writeable DC affected by USN rollback, the RODC is also affected.
+Read-only domain controllers (RODCs) are DCs that host read-only copies of the partitions in an Active Directory database. RODCs avoid most USN rollback issues because they don't replicate any changes to the other DCs. However, if an RODC replicates from a writeable DC affected by USN rollback, the rollback also affects the RODC.
 
-Restoring an RODC by using a snapshot isn't recommended. Restore an RODC by using an Active Directory–compatible backup application. Also, as with writeable DCs, care must be taken to not allow an RODC to be offline for more than the tombstone lifetime. This condition can result in lingering objects on the RODC.
+Restoring an RODC by using a snapshot isn't recommended. Restore an RODC by using an Active Directory–compatible backup application. Also, as with writeable DCs, you must not allow an RODC to be offline for more than the tombstone lifetime. This condition can result in lingering objects on the RODC.
 
 For more information about implementing RODCs, see the [Read-Only Domain Controllers step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10)).
