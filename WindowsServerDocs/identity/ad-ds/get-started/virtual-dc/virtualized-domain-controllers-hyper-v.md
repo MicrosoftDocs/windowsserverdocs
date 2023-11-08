@@ -266,7 +266,7 @@ In virtualized deployments, you need to pay special attention to certain require
 
 The method for backing up and restoring virtualized DCs that Active Directory currently supports is to run Windows Server Backup in the guest OS. While in Windows Server 2012 or later you can take snapshots and use guest VM export or import or Hyper-V Replication to make temporary backups, these methods can't give you a permanent backup history.
 
-You can also create Volume Snapshot Service (VSS)-based production snapshots in Windows Server 2016 Hyper-V and later. However, while these snapshots are compatible with Windows Server 2012 and later, it's incompatible with BitLocker because of an issue that prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
+You can also create Visual SourceSafe (VSS)-based production snapshots in Windows Server 2016 Hyper-V and later. However, while these snapshots are compatible with Windows Server 2012 and later, it's incompatible with BitLocker because of an issue that prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
 
 > [!NOTE]
 > The shielded VM project described in [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
