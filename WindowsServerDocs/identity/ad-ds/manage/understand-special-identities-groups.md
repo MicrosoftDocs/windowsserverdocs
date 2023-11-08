@@ -325,7 +325,7 @@ The Network Service account is similar to the Authenticated User account. Member
 
 ### Other Organization
 
-This group implicitly includes all users who are logged on to the system through a dial-up connection. Membership is controlled by the operating system.
+A group that includes all users and computers from another organization.
 
 |Attribute|Value|
 | --- | --- |
