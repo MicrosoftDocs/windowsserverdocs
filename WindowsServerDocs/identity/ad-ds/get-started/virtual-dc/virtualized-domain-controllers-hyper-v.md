@@ -36,7 +36,7 @@ To install and use the Hyper-V role, your hardware must meet the following requi
 
 ### Avoid single points of failure
 
-As you plan your virtual DC deployment, you should prepare a strategy to avoid creating single points of failure. You can avoid introducing potential single points of failure by implementing system redundancy. <!--Put link to more information about single point/redundancy here?-->
+As you plan your virtual DC deployment, you should prepare a strategy to avoid creating single points of failure. You can avoid introducing potential single points of failure, or areas where downtime can cause the whole system to stop working, by implementing system redundancy.
 
 The following recommendations can help prevent single points of failure. However, it's also important to remember that following these recommendations can increase administration costs.
 
@@ -75,8 +75,6 @@ You can implement virtual machines (VMs) on many different types of DC configura
 
 The following diagram shows a possible configuration of three guest DC VMs hosted on a Hyper-V server.
 
-<!--Alt text-->
-
 :::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.f44706fd-317e-4f0b-9578-4243f4db225f(WS.10).gif" alt-text="Diagram that shows security boundaries in a configuration of three guest DC VMs hosted on a Hyper-V server." border="false":::
    A diagram of an example deployment of three virtual machines (VMs) and a Hyper-V server. The three VMs are inside of a blue rectangle labeled "guest machines." All three VMs are domain controllers. VM 1 is in the Corp domain and in the Contoso.com forest. VM2 is in the Fabrikam domain and the Fabrikam.com forest. VM 3 is in the HQ domain and the Fineartschool.net forest. The Hyper-V server is outside of the blue rectangle. It's a member server located in the Corp domain and the Contoso.com forest.
 :::image-end:::
@@ -102,8 +100,6 @@ Based on the example configuration in the previous diagram, here are some import
 - RODCs
 
   - You can place RODCs at locations where physical security isn't guaranteed, such as branch offices. You can protect their VHD files using Windows BitLocker Drive Encryption from attacks on the host involving theft of the physical disk. However, these protections don't apply to the file systems inside of the RODC.
-
-<!--Where I left off.-->
 
 ### Performance considerations
 
@@ -146,7 +142,7 @@ The following sections describe common VM practices to avoid when deploying DCs,
 
 Virtualization platforms like Hyper-V have many features that make managing, maintaining, backing up, and migrating machine easier. However, there are certain deployment practices you should avoid in order to take advantage of these features for your virtual DCs.
 
-- To ensure your Active Directory writes are durable, don't deploy virtual DC database files, such as the **NTDS.DIT** Active Directory database, logs, and SYSVOL, on virtual IDE disks. Instead, create a second virtual hard disk (VHD) attached to a virtual SCSI controller <!--Acronyms--> and ensure the database files are on the VM SCSI disk when you install the DC.
+- To ensure your Active Directory writes are durable, don't deploy virtual DC database files, such as the **NTDS.DIT** Active Directory database, logs, and SYSVOL, on virtual IDE disks. Instead, create a second virtual hard disk (VHD) attached to a virtual Small Computer System Interface (SCSI) controller and ensure the database files are on the VM SCSI disk when you install the DC.
 
 - Don't implement differncing disk VHDs on a VM you're configuring to be a DC. While this approach makes it easy to revert your deployment to previous versions, it also decreases performance. For more information about VHD types, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 
@@ -198,8 +194,6 @@ You can use P2V migration in combination with the VMM to create test environment
 
 We recommend you do the following things when you create test environments using P2V:
 
-<!--Where I left off--->
-
 - Migrate one in-production DC from each domain to a test VM by using P2V based on the recommendations in [Physical-to-virtual conversion](#physical-to-virtual-conversion).
 
 - Put the physical production machines and the test VMs in different networks when you bring them back online.
@@ -234,7 +228,7 @@ We recommend you follow the storage recommendations in this section to optimize 
 
   - The system ensures the disks are connected to a battery-backed caching HBA.
 
-  - The system uses a storage controller like a RAID <!--Acronym--> system as its storage device.
+  - The system uses a storage controller like a redundant array of independent disks (RAID) system as its storage device.
 
   - The system uses an uninterruptible power supply (UPS) to power the disk.
 
@@ -244,7 +238,7 @@ We recommend you follow the storage recommendations in this section to optimize 
 
 - We recommend you use virtual SCSI controllers to reduce the chance of your Active Directory data corrupting.
 
-  - On Hyper-V servers that host virtual DCs, you should use SCSI physical drives. If your scenario doesn't let you use SCSI drives, you should disable write caching on the ATA/IDE <!--acronym--> drive you're using instead. For more information, see [Event ID 1539 – Database Integrity](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941847(v=ws.10)).
+  - On Hyper-V servers that host virtual DCs, you should use SCSI physical drives. If your scenario doesn't let you use SCSI drives, you should disable write caching on the Advanced Technology Attachment (ATA) or Integrated Drive Electronics (IDE) drive you're using instead. For more information, see [Event ID 1539 – Database Integrity](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941847(v=ws.10)).
 
 ### Operational practices to avoid <!--Better title?--->
 
@@ -272,12 +266,10 @@ In virtualized deployments, you need to pay special attention to certain require
 
 The method for backing up and restoring virtualized DCs that Active Directory currently supports is to run Windows Server Backup in the guest OS. While in Windows Server 2012 or later you can take snapshots and use guest VM export or import or Hyper-V Replication to make temporary backups, these methods can't give you a permanent backup history.
 
-<!--Where I left off. Am working on rewriting this paragraph.-->
-
-You can also create VSS-based <!--Acronym--> production snapshots in Windows Server 2016 Hyper-V and later. However, while these snapshots are compatible with Windows Server 2012 and later, it's incompatible with BitLocker because of an issue that prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
+You can also create Volume Snapshot Service (VSS)-based production snapshots in Windows Server 2016 Hyper-V and later. However, while these snapshots are compatible with Windows Server 2012 and later, it's incompatible with BitLocker because of an issue that prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
 
 > [!NOTE]
-> The shielded VM project mentioned earlier <!--Where?--> has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
+> The shielded VM project described in [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
 
 ### Backup and restore practices to avoid
 
@@ -297,29 +289,23 @@ You must regularly back up your system state in order to restore a physical or v
 
 If your DC VM fails but you haven't encountered a USN rollback, there are two ways you can restore the VM:
 
-- If your system has a valid system state data backup from before the failure, you can restore it using the Active Direcotry-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, and you should back up your DCs every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
+- If your system has a valid system state data backup from before the failure, you can restore it using the Active Directory-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, and you should back up your DCs every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
 
-- If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM <!--Acronym-->, then configure the registry property as described in [Restoring a system state backup](#restoring-a-system-state-backup). After that, restart the DC in normal mode.
+- If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM, then configure the registry property as described in [Restoring a system state backup](#restoring-a-system-state-backup). After that, restart the DC in normal mode.
 
-<!--These next diagrams aren't accessible for readers with low vision. I'll need to either give it complex long text or figure out a way to describe it using lead-in text.-->
+<!--Relying exclusively on diagrams to give instructions isn't accessible for readers with low vision. I've tried giving it complex alt text, but I'm wondering if we should just convert these into step-by-step instructions instead.-->
 
 Use the process in the following diagram to determine the best way to restore your virtualized DC.
 
-<!--Alt text-->
-
 :::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif" alt-text="Diagram that shows how to restore a virtualized DC." border="false":::
-   <long description here>
+   A diagram showing the restoration process for a virtualized domain controller. When a writable domain controller virtual machine fails, do you have critical data on the DC that doesn't exist on a copy? If not, then you'll lose the data and will need to remove the associated AD DS role and account from the failed domain controller and install the AD DS role on the server you will use to replace it. If yes, you should use a backup from before the DC failed. If you don't have a backup, do you have a previous instance of the DC available from before the failure? If no, see the instructions about AD DS roles. If yes, does the previous instance run Windows Server 2012 on a hypervisor that supports VM-GenerationId? If yes, deploy the VHD against a new VM and restart the DC in normal mode. If not, have you started any previous instances of the VM in normal mode without first setting the data base restored from backup registry value to one? If yes, disconnect the DC from the network, recover and save required unique data, then never use the failed virtual DC ever again, remove its AD DS role and account, and restore its data on the new DC. If no, then restore the VM instance that predates teh failure by starting in DSRM, setting the database restored from backup registry value to 1, then restarting the domain controller in normal mode.
 :::image-end:::
-
-:::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif" alt-text="Diagram that shows how to restore a virtualized DC." border="false":::
 
 The restoration process and decisions are simpler for RODCs, as shown in the next diagram.
 
 :::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif" alt-text="Diagram that shows how to restore a read-only DC (RODC)." border="false":::
-   <long description here>
+   First, the domain controller virtual machine fails. Is a system state data backup that predates the failure available? If os, remove the domain controller using the backup and the appropriate restoration tools. If not, do you have a previous version of the VHD file available? If yes, restore the Vm by removing the failed Vm, then creating and starting a new VM using the data from the VHD file with the previous version. If no, remove the AD DS role from the domain controller using the dcpromo /forceremoval command in a command prompt, then install the AD DS role and start the server on RODC.
 :::image-end:::
-
-:::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif" alt-text="Diagram that shows how to restore a read-only DC (RODC)." border="false":::
 
 ### Restoring a system state backup
 
@@ -467,15 +453,11 @@ When you've restored Microsoft Entra ID on a DC, the system resets the `invocati
 
 To demonstrate this scenario, the following diagram depicts an example environment where virtual domain controller VDC1 and domain controller DC2 are two DCs in the same domain. This diagram shows how DC2 detects the `invocationID` value in VDC1 after a reset in a supported restore scenario.
 
-<!--Better alt text?-->
-
 :::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif" alt-text="Diagram that demonstrates the scenario when the invocationID value is reset properly." border="false":::
    A diagram depicting a flow chart of VDC1's view of itself and DC2's view of VDC1. On the VDC1 line, VDC1 starts off with a USN of 1000 and an Invocation ID of B. It then is restored to its previous version, which has a USN of 500 and an InvocationID value of B. Changes occur on VDC1, bringing it back up to USN 600 while the Invocation ID stays the same. On the line that says "DC2 view of VDC1," DC2 starts with an Invocation ID of VDC1(A)@USN1000. After VDC1 gets restored, DC2 resets its expected USN from 1000 to 500, making its value for Invocation ID B VDC1(B)@USN500. It continues to track both Invocation ID A and Invocation ID B. After the next set of changes on VDC1, DC2 now tracks VDC1's invocation ID A of USN 1000 and its new Invocation ID B of USN 600.
 :::image-end:::
 
 ### USN rollback
-
-<!--Where I left off-->
 
 USN rollback occurs when the system can't update a USN as normal, a user circumvents USN updates, or a DC tries to use a USN lower than its latest update. When the system detects a USN rollback, it stops replication before the mismatch can cause a divergence in the forest.
 
