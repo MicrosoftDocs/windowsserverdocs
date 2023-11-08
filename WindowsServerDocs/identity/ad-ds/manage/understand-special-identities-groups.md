@@ -327,7 +327,7 @@ The Network Service account is similar to the Authenticated User account. Member
 
 Identifies users coming across a trust that is marked for selective authentication. Membership is controlled by the operating system. Its opposite is "This Organization".
 
-See "[How selective authentication affects domain controller behavior](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc755321(v=ws.10)#how-selective-authentication-affects-domain-controller-behavior)"
+See "[How selective authentication affects domain controller behavior](/previous-versions/windows/it-pro/windows-server-2003/cc755321(v=ws.10)#how-selective-authentication-affects-domain-controller-behavior)"
 
 |Attribute|Value|
 | --- | --- |
@@ -451,7 +451,7 @@ Any user that's accessing the system through Terminal Services has the Terminal 
 
 Identifies users who access resources locally within a trusting forest or across a trust that is not marked for selective authentication. Membership is controlled by the operating system. Its opposite is "Other Organization".
 
-See "[How selective authentication affects domain controller behavior](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc755321(v=ws.10)#how-selective-authentication-affects-domain-controller-behavior)"
+See "[How selective authentication affects domain controller behavior](/previous-versions/windows/it-pro/windows-server-2003/cc755321(v=ws.10)#how-selective-authentication-affects-domain-controller-behavior)"
 
 |Attribute|Value|
 | --- | --- |
