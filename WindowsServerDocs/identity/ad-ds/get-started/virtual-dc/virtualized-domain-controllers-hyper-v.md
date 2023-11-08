@@ -75,7 +75,11 @@ You can implement virtual machines (VMs) on many different types of DC configura
 
 The following diagram shows a possible configuration of three guest DC VMs hosted on a Hyper-V server.
 
-:::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.f44706fd-317e-4f0b-9578-4243f4db225f(WS.10).gif" alt-text="Diagram that shows security boundaries in a configuration of three guest DC VMs hosted on a Hyper-V server." border="false":::
+<!--Alt text-->
+
+:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.f44706fd-317e-4f0b-9578-4243f4db225f(WS.10).gif" alt-text="Diagram that shows security boundaries in a configuration of three guest DC VMs hosted on a Hyper-V server." border="false":::
+   A diagram of an example deployment of three virtual machines (VMs) and a Hyper-V server. The three VMs are inside of a blue rectangle labeled "guest machines." All three VMs are domain controllers. VM 1 is in the Corp domain and in the Contoso.com forest. VM2 is in the Fabrikam domain and the Fabrikam.com forest. VM 3 is in the HQ domain and the Fineartschool.net forest. The Hyper-V server is outside of the blue rectangle. It's a member server located in the Corp domain and the Contoso.com forest.
+:::image-end:::
 
 Based on the example configuration in the previous diagram, here are some important considerations you should make when planning a deployment like this one:
 
@@ -301,9 +305,19 @@ If your DC VM fails but you haven't encountered a USN rollback, there are two wa
 
 Use the process in the following diagram to determine the best way to restore your virtualized DC.
 
+<!--Alt text-->
+
+:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif" alt-text="Diagram that shows how to restore a virtualized DC." border="false":::
+   <long description here>
+:::image-end:::
+
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif" alt-text="Diagram that shows how to restore a virtualized DC." border="false":::
 
 The restoration process and decisions are simpler for RODCs, as shown in the next diagram.
+
+:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif" alt-text="Diagram that shows how to restore a read-only DC (RODC)." border="false":::
+   <long description here>
+:::image-end:::
 
 :::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif" alt-text="Diagram that shows how to restore a read-only DC (RODC)." border="false":::
 
@@ -451,13 +465,13 @@ DSA invocationID: b0d9208b-8eb6-4205-863d-d50801b325a9
 
 When you've restored Microsoft Entra ID on a DC, the system resets the `invocationID` attribute. This change increases replication traffic, with duration relative to the size of the partition you're replicating.
 
-<!--Needs better lead-in text and alt text.--->
-
-Consider a scenario where VDC1 and DC2 are two DCs in the same domain. The following diagram shows the perception of DC2 about VDC1 when the `invocationID` value is reset in a proper restore situation.
+To demonstrate this scenario, the following diagram depicts an example environment where virtual domain controller VDC1 and domain controller DC2 are two DCs in the same domain. This diagram shows how DC2 detects the `invocationID` value in VDC1 after a reset in a supported restore scenario.
 
 <!--Better alt text?-->
 
-:::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif" alt-text="Diagram that demonstrates the scenario when the invocationID value is reset properly." border="false":::
+:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.ca71fc12-b484-47fb-991c-5a0b7f516366(WS.10).gif" alt-text="Diagram that demonstrates the scenario when the invocationID value is reset properly." border="false":::
+   A diagram depicting a flow chart of VDC1's view of itself and DC2's view of VDC1. On the VDC1 line, VDC1 starts off with a USN of 1000 and an Invocation ID of B. It then is restored to its previous version, which has a USN of 500 and an InvocationID value of B. Changes occur on VDC1, bringing it back up to USN 600 while the Invocation ID stays the same. On the line that says "DC2 view of VDC1," DC2 starts with an Invocation ID of VDC1(A)@USN1000. After VDC1 gets restored, DC2 resets its expected USN from 1000 to 500, making its value for Invocation ID B VDC1(B)@USN500. It continues to track both Invocation ID A and Invocation ID B. After the next set of changes on VDC1, DC2 now tracks VDC1's invocation ID A of USN 1000 and its new Invocation ID B of USN 600.
+:::image-end:::
 
 ### USN rollback
 
@@ -499,7 +513,9 @@ For example, let's say a VM's VHD file has rolled back to a previous version. In
 
 The following diagram shows the sequence of events that occur when AD DS detects USN rollback on VDC2, the destination DC that's running on a VM. In this illustration, the detection of USN rollback occurs on VDC2 when a replication partner detects that VDC2 has sent an up-to-dateness USN value previously seen by the destination DC. This condition indicates that VDC2 database has experienced a rollback.
 
-:::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.373b0504-43fc-40d0-9908-13fdeb7b3f14(WS.10).gif" alt-text="Diagram that demonstrates what happens when USN rollback is detected." border="false":::
+:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.373b0504-43fc-40d0-9908-13fdeb7b3f14(WS.10).gif" alt-text="Diagram that demonstrates what happens when USN rollback is detected." border="false":::
+   A diagram depicting a flowchart of VDC2 updates and DC1 up-to-dateness value for VDC2. VDC2 starts off with a USN of 100 and Invocation ID A. It then updates its USNs from 101 to 200, which is replicated onto DC1. However, the user also makes a VHD copy of VDC2 USN 200. Next, VDC2 updates to USN 201 to 350, and replicates those changes onto DC1. However, VDC2 then fails. The user then restores VDC2 with the copy they made on the USN 200 VHD. After that, the user makes another update to VDC2 for a new version of USNs 201-355. DC1 requests changes greater than USN 350 from VDC2 and gets replicated because the USN on VDC2 is higher than DC1. However, the new version of USNs 201 through 350 aren't the same as the ones on DC1, causing a USN rollback.
+:::image-end:::
 
 #### Resolve Event ID 2095 issues
 
@@ -529,9 +545,9 @@ In the VHD file scenario, other DCs might replicate with either one of the VMs, 
 
 In the USN scenario, a range of USNs applies to two different sets of changes. This scenario can continue for extended periods without being detected. When you modify an object you created during the divergence, the system detects a lingering object and reports it as Event ID 1988 in the Event Viewer. The following diagram shows why the DC might not detect USN rollback in this scenario.
 
-<!--Better alt text--->
-
-:::image type="content" source="media/virtualized-domain-controller-architecture/Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif" alt-text="Diagram that demonstrates a scenario where USN rollback isn't detected." border="false":::
+:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.63565fe0-d970-4b4e-b5f3-9c76bc77e2d4(WS.10).gif" alt-text="Diagram that demonstrates a scenario where USN rollback isn't detected." border="false":::
+   Diagram that shows a flow chart for the rollback detection process in an example build. There are two domain controllers labeled "VDC1" and "DC2". The initial stage of the flow chart shows the virtual DC, VDC1, take a snapshot when its USN is 2000. After the snapshot, VDC1 creates 100 users, and the updated VDC1 now has a USN of 2100. The updates on VDC1 replicate to DC2, which now shares the USN of 2100. However, the VDC1 then uses the snapshot it took to revert to its USN 2000 version. The reverted version of VDC1 creates 150 new users, which brings its USN up to 2150. The updated VDC1 replicates to DC2, but it's not detected because its USN is higher than the DC2's USN of 2100. Text on the bottom says, "USN rollback is not detected, which results in an undetected divergence where USNs 2001 through 2100 are not the same between the two domain controllers.
+:::image-end:::
 
 ### Read-only DCs
 
