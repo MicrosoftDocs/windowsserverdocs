@@ -59,7 +59,7 @@ Consolidating small drives into fewer high-capacity drives can reduce overall st
 
 The use of SSD and high speed flash disks is useful for read mostly disks with high I/O rates or latency sensitive I/O. Boot disks are good candidates for the use of SSD or high speed flash disks as they can improve boot times significantly.
 
-NVMe SSDs offer superior performance with greater command queue depths, more efficient interrupt processing, and greater efficiency for 4KB commands. This particularly benefits scenarios that requires heavy simultaneous I/O.
+NVMe SSDs offer superior performance with greater command queue depths, more efficient interrupt processing, and greater efficiency for 4KB commands. This particularly benefits scenarios that requires heavy simultaneous I/O. PCI Gen 5 devices outperform the CPU and system bus, so The Windows Server OS cannot optimize the IO mechanism for tools to display the peak performance accurately.
 
 
 ## Network and Storage Adapter Recommendations
