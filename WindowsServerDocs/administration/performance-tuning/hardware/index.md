@@ -49,7 +49,7 @@ In Windows Server 2022, the primary storage and network interfaces should be PC
 
 ## Disk recommendations
 
-Choose disks with higher rotational speeds to reduce random request service times (~2 ms on average when you compare 7,200- and 15,000-RPM drives) and to increase sequential request bandwidth. However, there are cost, power, and other considerations associated with disks that have high rotational speeds.
+Choose disks with higher rotational speeds to reduce random request service times (~2 ms on average when you compare 7,200-RPM and 15,000-RPM drives) and to increase sequential request bandwidth. However, there are cost, power, and other considerations associated with disks that have high rotational speeds.
 
 2.5-inch enterprise-class disks can service a significantly larger number of random requests per second compared to equivalent 3.5-inch drives.
 
