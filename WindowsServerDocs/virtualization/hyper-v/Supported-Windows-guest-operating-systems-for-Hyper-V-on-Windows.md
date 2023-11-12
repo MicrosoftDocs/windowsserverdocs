@@ -1,5 +1,5 @@
 ---
-title: Supported Windows guest operating systems for Hyper-V on Windows Server
+title: Supported Windows guest operating systems for Hyper-V on Windows Server and Azure Stack HCI
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
@@ -9,7 +9,7 @@ ms.date: 09/26/2023
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019, Azure Stack HCI, version 20H2-22H2
 
 Hyper-V supports several versions of Windows Server, Windows, and Linux distributions to run in virtual machines, as guest operating systems. This article covers supported Windows Server and Windows guest operating systems. For Linux and FreeBSD distributions, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).
 
@@ -17,7 +17,7 @@ Some operating systems have the integration services built-in. Others require th
 
 ## Supported Windows Server guest operating systems
 
-Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V on Windows Server.
+Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V on Windows Server and Azure Stack HCI.
 
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|
 |-------------------------------------|----------------------------------------|------------------------|---------|
