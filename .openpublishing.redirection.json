@@ -6456,9 +6456,9 @@
       "redirect_document_id": true
     },
     {
-    "source_path": "WindowsServerDocs/administration/windows-commands/timeout_1.md",
-    "redirect_url": "/windows-server/administration/windows-commands/timeout",
-    "redirect_document_id": false
+      "source_path": "WindowsServerDocs/administration/windows-commands/timeout_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/timeout",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/administration/windows-commands/title_1.md",
@@ -10789,7 +10789,7 @@
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md",
       "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-configure-client",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md",
       "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
@@ -10885,7 +10885,6 @@
       "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
-
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/development/single-page-application-with-ad-fs.md",
       "redirect_url": "/azure/active-directory/develop/msal-migration",
@@ -10911,14 +10910,12 @@
       "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
-
     {
       "source_path": "WindowsServerDocs/administration/windows-commands/rcp.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
       "redirect_document_id": false
     },
     {
-
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10.md",
       "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
       "redirect_document_id": false
@@ -11147,85 +11144,71 @@
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/Deploy-RA-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831379(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134227(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134170(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134220(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134161(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134154(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134229(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment-5.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134212(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134164(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134168(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134243(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618321(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618331(v=ws.11)",
       "redirect_document_id": false
-
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618327(v=ws.11)",
       "redirect_document_id": false
-    
     },
     {
       "source_path": "WindowsServerDocs/administration/Linux-Package-Repository-for-Microsoft-Software.md",
@@ -11271,9 +11254,236 @@
       "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Introduction.md",
       "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/activation-error-codes.md",
+      "redirect_url": "/troubleshoot/windows-server/deployment/troubleshoot-activation-error-codes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/activation-troubleshoot-adba-clients.md",
+      "redirect_url": "/troubleshoot/windows-server/deployment/troubleshoot-adba-clients-not-activate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/troubleshoot-domain-controller-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/software-restriction-policies/troubleshoot-software-restriction-policies.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/troubleshoot-software-restriction-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/troubleshooting-cluster-event-id-1135.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/troubleshoot-cluster-event-id-1135",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/problem-nodes-failover-cluster.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/problem-nodes-failover-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/nodes-failover-cluster-vmware.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/nodes-failover-cluster-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/iaas-sql-failover-cluster.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/iaas-sql-failover-cluster-network-thresholds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/system-events.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/failover-clustering-system-log-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/general-guidance-to-troubleshoot-dhcp.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/general-guidance-troubleshoot-dhcp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/troubleshoot/troubleshoot-problems-on-dhcp-client.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-problems-dhcp-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md",
+      "redirect_url": "/troubleshoot/windows-server/software-defined-networking/troubleshoot-software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md",
+      "redirect_url": "/troubleshoot/windows-server/software-defined-networking/troubleshoot-windows-server-software-defined-networking-stack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/windows-time-service/support-boundary.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/support-boundary-high-accuracy-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-multisite-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-enabling-multisite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Adding-Entry-Points.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-adding-entry-points",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-setting-entry-point-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-general-issues-related-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-web-application-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/Troubleshooting-DirectAccess.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-directaccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-error-general-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/credential-limit.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/credential-limit-per-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-class-not-registered.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-error-class-not-registered",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/cannot-authenticate-or-must-authenticate-twice.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/cannot-authenticate-must-authenticate-twice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/remote-desktop-service-currently-busy.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-service-currently-busy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-client-disconnects-cannot-reconnect-same-session",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/remote-laptop-disconnects-wireless-network.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-laptop-disconnects-wireless-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/poor-performance-or-application-problems.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/poor-performance-application-problems-rdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/input-method-editor-error.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/input-method-editor-issue-remoteapp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/out-of-memory-error.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/out-of-memory-error-avd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-diagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-hgs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-hosts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-shielded-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/troubleshooting-disk-management.md",
+      "redirect_url": "/troubleshoot/windows-server/backup-and-storage/troubleshoot-disk-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/tcp-three-way-handshake-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/tcp-three-way-handshake-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/negotiate-session-setup-tree-connect-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/negotiate-session-setup-tree-connect-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/abort-during-validate-negotiate.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/tcp-connection-abort-validate-negotiate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/slow-file-transfer.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/slow-smb-file-transfer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/high-cpu-usage-issue-on-smb-server.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/high-cpu-usage-issue-smb-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/troubleshoot-event-id-50-error.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-event-id-50-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/file-server/troubleshoot/smb-multichannel-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/smb-multichannel-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/fsrm/troubleshooting-file-server-resource-manager.md",
+      "redirect_url": "/troubleshoot/windows-server/backup-and-storage/troubleshoot-file-server-resource-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/folder-redirection/troubleshoot-user-profiles-events.md",
+      "redirect_url": "/troubleshoot/windows-server/user-profiles-and-logon/troubleshoot-user-profiles-events",
+      "redirect_document_id": false
     }
   ]
 }
-
-
-
