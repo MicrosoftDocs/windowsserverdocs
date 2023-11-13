@@ -298,8 +298,6 @@
           href: ad-ds/deploy/Domain-Wide-Updates.md
         - name: Forest-Wide Updates
           href: ad-ds/deploy/RODC/forest-Wide-Updates.md
-      - name: Troubleshooting Domain Controller Deployment
-        href: ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md
     - name: AD DS Operations
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
       items:
@@ -786,7 +784,6 @@
         href: ad-fs/development/ad-fs-risk-assessment-model.md
       - name: Single log-out for OpenID Connect with AD FS
         href: ad-fs/development/ad-fs-logout-openid-connect.md
-
       - name: MSAL
         items:
         - name: Native app calling Web API
@@ -996,7 +993,7 @@
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
-      - name: "Submit certificate requests using a PKCS #10 or PKCS #7 file"
+      - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
         href: ad-cs/submit-pkcs-certificate-request.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
@@ -1016,8 +1013,6 @@
         href: software-restriction-policies/work-with-software-restriction-policies-rules.md
     - name: Use software restriction policies to help protect your computer against an email virus
       href: software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md
-    - name: Troubleshoot Software Restriction Policies
-      href: software-restriction-policies/troubleshoot-software-restriction-policies.md
   - name: Windows Local Administrator Password Solution
     items:
     - name: What is Windows LAPS?
@@ -1048,5 +1043,3 @@
       href: laps/laps-technical-reference.md
     - name: Windows LAPS FAQ
       href: laps/laps-faq.yml
-
-

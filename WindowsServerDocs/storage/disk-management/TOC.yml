@@ -27,5 +27,3 @@
       href: extend-a-basic-volume.md
     - name: Shrink a basic volume
       href: shrink-a-basic-volume.md
-  - name: Troubleshooting Disk Management
-    href: troubleshooting-disk-management.md

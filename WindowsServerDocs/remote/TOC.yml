@@ -236,20 +236,20 @@
         href: remote-access/overview-always-on-vpn.md
       - name: About DirectAccess
         href: remote-access/directaccess/directAccess.md
-      - name: About RAS Gateway 
+      - name: About RAS Gateway
         href: remote-access/ras-gateway/RAS-Gateway.md
     - name: Getting started
       items:
       - name: Install Remote Access as a VPN Server
-        href: remote-access/get-started-install-ras-as-vpn.md 
+        href: remote-access/get-started-install-ras-as-vpn.md
     - name: Tutorials
       items:
       - name: Deploy Always on VPN
         items:
-        - name: 1- Set up infrastructure for Always On VPN 
-          href: remote-access/tutorial-aovpn-deploy-setup.md        
+        - name: 1- Set up infrastructure for Always On VPN
+          href: remote-access/tutorial-aovpn-deploy-setup.md
         - name: 2- Configure Always On VPN certificates
-          href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
+          href: remote-access/tutorial-aovpn-deploy-create-certificates.md
         - name: 3- Deploy Always On VPN profile for Windows clients
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
       - name: Migrate from Direct Access to Always on VPN
@@ -325,7 +325,6 @@
           href: remote-access/ras/manage-remote-access.md
         - name: Deploy Remote Access in an Enterprise
           href: remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md
-          items:
         - name: Deploy Remote Access in a Load Balancing Cluster
           href: remote-access/ras/cluster/Deploy-remote-Access-In-Cluster.md
           items:
@@ -372,24 +371,13 @@
                 href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
               - name: 'Step 4: Verify the Multisite Deployment'
                 href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
-            - name: Troubleshoot a Multisite Deployment
-              href: remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md
-              items:
-              - name: Troubleshooting Enabling Multisite
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md
-              - name: Troubleshooting adding Entry Points
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-adding-Entry-Points.md
-              - name: Troubleshooting Setting the Entry Point Domain Controller
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md
-              - name: Troubleshooting General Issues
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md
           - name: Deploy Remote Access in a Multi-forest Environment
             href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
             items:
             - name: Plan a Multi-forest Deployment
               href: remote-access/ras/multi-forest/Plan-a-Multi-forest-Deployment.md
             - name: Configure a Multi-forest Deployment
-              href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md 
+              href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md
         - name: Use Remote Access Monitoring and Accounting
           href: remote-access/ras/monitoring-and-accounting/Use-remote-Access-Monitoring-and-Accounting.md
           items:
@@ -423,7 +411,7 @@
             - name: 'Step 2: Configure the Remote Access Server'
               href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
             - name: 'Step 3: Verify the Deployment'
-              href:  remote-access/ras/manage-remote-clients/install/Step-3-Verify-the-Deployment_2.md
+              href: remote-access/ras/manage-remote-clients/install/Step-3-Verify-the-Deployment_2.md
           - name: Publishing Applications using AD FS Preauthentication
             href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
           - name: Publishing Applications with SharePoint, Exchange and RDG
@@ -442,8 +430,8 @@
           href: remote-access/how-to-always-on-vpn-conditional-access-network-policy-server.md
         - name: Block VPN clients that use a revoked certificate
           href: remote-access/how-to-always-on-vpn-block-clients-revoked-certificates.md
-      - name: Virtual Private Networking (VPN) 
-        items: 
+      - name: Virtual Private Networking (VPN)
+        items:
         - name: Configure VPN device tunneling
           href: remote-access/vpn/vpn-device-tunnel-config.md
         - name: How to configure Diffie Hellman protocol over IKEv2 VPN connections
@@ -598,4 +586,3 @@
               href: remote-access/directaccess/tlg-otp-securid/STEP-7-Test-directAccess-Connectivity-from-the-Internet.md
       - name: Routing and Remote Access Snap-In
         href: /previous-versions/windows/it-pro/windows-2000-server/cc957873(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
-

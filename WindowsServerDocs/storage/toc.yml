@@ -1,13 +1,12 @@
-items:
 - name: Storage
   href: storage.yml
   items:
-  - name: "What's new in Storage"
+  - name: What's new in Storage
     href: whats-new-in-storage.md
   - name: Data Deduplication
     href: data-deduplication/overview.md
     items:
-    - name: "What's new in Data Deduplication"
+    - name: What's new in Data Deduplication
       href: data-deduplication/whats-new.md
     - name: Understand Data Deduplication
       href: data-deduplication/understand.md
@@ -22,9 +21,9 @@ items:
   - name: DFS Namespaces
     href: dfs-namespaces/dfs-overview.md
     items:
-    - name: "Checklist: Deploy DFS Namespaces"
+    - name: 'Checklist: Deploy DFS Namespaces'
       href: dfs-namespaces/checklist-deploy-dfs-namespaces.md
-    - name: "Checklist: Tune a DFS Namespace"
+    - name: 'Checklist: Tune a DFS Namespace'
       href: dfs-namespaces/checklist-tune-a-dfs-namespace.md
     - name: Deploying DFS Namespaces
       href: dfs-namespaces/deploying-dfs-namespaces.md
@@ -88,7 +87,7 @@ items:
       href: file-server/smb-compression.md
     - name: SMB security enhancements
       href: file-server/smb-security.md
-    - name: "SMB: File and printer sharing ports should be open"
+    - name: 'SMB: File and printer sharing ports should be open'
       href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
     - name: Secure SMB traffic
       href: file-server/smb-secure-traffic.md
@@ -131,9 +130,9 @@ items:
   - name: File Server Resource Manager
     href: fsrm/fsrm-overview.md
     items:
-    - name: "Checklist: Apply a Quota to a Volume or Folder"
+    - name: 'Checklist: Apply a Quota to a Volume or Folder'
       href: fsrm/checklist-apply-quota-to-volume-or-folder.md
-    - name: "Checklist: Apply a File Screen to a Volume or Folder"
+    - name: 'Checklist: Apply a File Screen to a Volume or Folder'
       href: fsrm/checklist-apply-file-screen-to-volume-or-folder.md
     - name: Setting File Server Resource Manager Options
       href: fsrm/setting-file-server-resource-manager-options.md
@@ -200,8 +199,6 @@ items:
         href: fsrm/connect-to-remote-computer.md
       - name: Command-Line Tools
         href: fsrm/command-line-tools.md
-    - name: Troubleshooting File Server Resource Manager
-      href: fsrm/troubleshooting-file-server-resource-manager.md
   - name: Folder Redirection and Roaming User Profiles
     href: folder-redirection/folder-redirection-rup-overview.md
     items:
@@ -219,8 +216,6 @@ items:
       href: folder-redirection/enable-always-offline.md
     - name: Enable optimized folder moving
       href: folder-redirection/enable-optimized-moving.md
-    - name: Troubleshoot user profiles
-      href: folder-redirection/troubleshoot-user-profiles-events.md
   - name: iSCSI
     items:
     - name: iSCSI Target Server
@@ -265,11 +260,11 @@ items:
       href: storage-replica/cluster-to-cluster-azure-cross-region.md
     - name: Cluster-to-cluster storage replication within one Azure region
       href: storage-replica/cluster-to-cluster-azure-one-region.md
-    - name: "Storage Replica: Enhanced Log"
+    - name: 'Storage Replica: Enhanced Log'
       href: storage-replica/storage-replica-enhanced-log.md
-    - name: "Storage Replica: Known Issues"
+    - name: 'Storage Replica: Known Issues'
       href: storage-replica/storage-replica-known-issues.md
-    - name: "Storage Replica: Frequently Asked Questions"
+    - name: 'Storage Replica: Frequently Asked Questions'
       href: storage-replica/storage-replica-frequently-asked-questions.yml
   - name: Storage Spaces
     href: storage-spaces/overview.md
