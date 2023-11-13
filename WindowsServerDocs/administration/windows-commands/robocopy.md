@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: xelu86
 ms.author: wscontent
-ms.date: 09/01/2023
+ms.date: 11/11/2023
 ---
 
 # robocopy
@@ -66,7 +66,7 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /256 | Turns off support for paths longer than 256 characters. |
 | /mon:`<n>` | Monitors the source and runs again when more than *n* changes are detected. |
 | /mot:`<m>` | Monitors the source and runs again in *m* minutes if changes are detected. |
-| /rh:hhmm-hhmm | Specifies run times when new copies may be started. |
+| /rh:hhmm-hhmm | Specifies run times when new copies can be started. |
 | /pf | Checks run times on a per-file (not per-pass) basis. |
 | /ipg:`<n>` | Specifies the inter-packet gap to free bandwidth on slow lines. |
 | /sj | Copies junctions (soft-links) to the destination path instead of link targets. |
@@ -75,7 +75,7 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /nodcopy | Copies no directory info (the default **/dcopy:DA** is done). |
 | /nooffload | Copies files without using the Windows Copy Offload mechanism. |
 | /compress | Requests network compression during file transfer, if applicable. |
-| /sparse | Enables retaining sparse state during copy. |
+| /sparse | Enables retaining the sparse state of files during copy. |
 
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:
@@ -182,9 +182,9 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 
 - The **/DCOPY:E** flag requests that extended attribute copying should be attempted for directories. Robocopy will continue if a directory's EAs couldn't be copied. This flag isn't included in **/COPYALL**.
 
-- If either **/IoMaxSize** or **/IoRate** are specified, robocopy will enable copy file throttling to reduce system load. Both may be adjusted to optimal values and copy parameters, but the system and robocopy are allowed to adjust them to allowed values as necessary.
+- If either **/IoMaxSize** or **/IoRate** are specified, robocopy will enable copy file throttling to reduce system load. Both can be adjusted to optimal values and copy parameters, but the system and robocopy are allowed to adjust them to allowed values as necessary.
 
-- If **/Threshold** is used, it specifies a minimum file size for engaging throttling. Files below that size won't be throttled. Values for all three parameters may be followed by an optional suffix character such as [KMG] (kilo, mega, giga).
+- If **/Threshold** is used, it specifies a minimum file size for engaging throttling. Files below that size won't be throttled. Values for all three parameters can be followed by an optional suffix character such as [KMG] (kilo, mega, giga).
 
 - Using **/LFSM** requests robocopy to operate in 'low free space mode'. In this mode, robocopy will pause whenever a file copy would cause the destination volume's free space to go below a 'floor' value. This value can be explicitly specified using **/LFSM:_n_**[KMG] flag.
 
