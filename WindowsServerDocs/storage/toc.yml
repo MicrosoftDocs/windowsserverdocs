@@ -110,23 +110,6 @@
         href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
       - name: SMBv1 is not installed by default
         href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
-    - name: SMB Known issues
-      href: file-server/Troubleshoot/smb-known-issues.md
-      items:
-      - name: TCP three-way handshake failure
-        href: file-server/Troubleshoot/tcp-three-way-handshake-fails.md
-      - name: Negotiate, Session Setup, and Tree Connect Failures
-        href: file-server/Troubleshoot/negotiate-session-setup-tree-connect-fails.md
-      - name: TCP connection is aborted during Validate Negotiate
-        href: file-server/Troubleshoot/abort-during-validate-negotiate.md
-      - name: Slow SMB files transfer speed
-        href: file-server/Troubleshoot/slow-file-transfer.md
-      - name: High CPU usage
-        href: file-server/Troubleshoot/high-cpu-usage-issue-on-smb-server.md
-      - name: Troubleshooting Event ID 50
-        href: file-server/Troubleshoot/troubleshoot-event-id-50-error.md
-      - name: Troubleshooting SMB Multichannel issues
-        href: file-server/Troubleshoot/smb-multichannel-troubleshooting.md
   - name: File Server Resource Manager
     href: fsrm/fsrm-overview.md
     items:

@@ -475,15 +475,9 @@
       - name: Web Application Proxy
         href: remote-access/web-application-proxy/web-app-proxy-windows-server.md
     - name: Troubleshooting
-      items:
-      - name: Always On VPN
-        href: remote-access/troubleshoot-always-on-vpn.md
-      - name: DirectAccess
-        href: remote-access/directaccess/Troubleshooting-directAccess.md
+      items: 
       - name: DirectAccess Known Issues
-        href: remote-access/directaccess/directAccess-Known-Issues.md
-      - name: Troubleshooting Web Application Proxy
-        href: remote-access//web-application-proxy/Troubleshooting-Web-Application-Proxy.md
+        href: remote-access/directaccess/directAccess-Known-Issues.md      
     - name: Reference
       items:
       - name: BGP Windows PowerShell Command reference
