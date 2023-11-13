@@ -60,7 +60,7 @@ When you plan to virtualize your DC, keep the following security considerations 
 
 - For branch offices or other locations that are difficult to secure, we recommend you use read-only DCs (RODCs). If you have a separate management network, we recommend that you only connect the host to the management network. For more information about RODCs, see [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](/windows-server/identity/ad-ds/deploy/rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-).
 
-- You can secure your DCs with BitLocker. In Windows Server 2016 and later, you can also use the virtual Trusted Platform Module (TPM) feature to give you the guest key material required to unlock the system volume.
+- You can secure your DCs with BitLocker. In Windows Server 2016 and later, you can also use the virtual Trusted Platform Module (TPM) feature that provides the guest key material required to unlock the system volume.
 
 - [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) can provide other controls to protect your DCs.
 
@@ -73,7 +73,7 @@ You can implement virtual machines (VMs) on many different types of DC configura
 - A host that's a workgroup or member computer with a guest that's a DC.
 - A host that's a workgroup or member computer with a guest that's also a workgroup or member computer.
 
-The following diagram shows a possible configuration of three guest DC VMs hosted on a Hyper-V server.
+The following diagram demonstrates a configuration of three guest DC VMs hosted on a Hyper-V server.
 
 :::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.f44706fd-317e-4f0b-9578-4243f4db225f(WS.10).gif" alt-text="Diagram that shows security boundaries in a configuration of three guest DC VMs hosted on a Hyper-V server." border="false":::
    A diagram of an example deployment of three virtual machines (VMs) and a Hyper-V server. The three VMs are inside of a blue rectangle labeled "guest machines." All three VMs are domain controllers. VM 1 is in the Corp domain and in the Contoso.com forest. VM2 is in the Fabrikam domain and the Fabrikam.com forest. VM 3 is in the HQ domain and the Fineartschool.net forest. The Hyper-V server is outside of the blue rectangle. It's a member server located in the Corp domain and the Contoso.com forest.
@@ -105,7 +105,7 @@ Based on the example configuration in the previous diagram, here are some import
 
 Microkernel 64-bit architecture has better Hyper-V performance from previous virtualization platforms. For best host performance, we recommend you only use hosts with server cores running Windows Server 2008 or later, and only run it with Hyper-V installed server roles.
 
-VM performance depends on the workload you use it for. We recommend you test specific VM topologies to make sure you're satisfied with your Active Directory deployment performance. You can assess performance under workloads over a specific period of time using tools like the REliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](https://www.microsoft.com/download/details.aspx?id=7826). The MAP tool can also help you take inventory of all servers and server roles currently within your network.
+VM performance depends on the workload you use it for. We recommend you test specific VM topologies to make sure you're satisfied with your Active Directory deployment performance. You can assess performance under workloads over a specific period of time using tools like the Reliability and Performance Monitor (Perfmon.msc) or the [Microsoft Assessment and Planning (MAP) toolkit](https://www.microsoft.com/download/details.aspx?id=7826). The MAP tool can also help you take inventory of all servers and server roles currently within your network.
 
 To give you an idea of how testing virtualized DC performance works, we created an example performance test using the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
 
@@ -132,7 +132,7 @@ Based on this test, we can give you the following recommendations for improving 
 
 - We recommend you avoid using differencing disk VHDs on a VM configured as a DC, as differencing disk VHDs can reduce performance. To learn more about Hyper-V disk types, including differencing disks, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 
-- We also recommend you get familiar with the information about how to use AD DS in virtual hosting environments by reading [Things to consider when you host Active Directory DCs in virtual hosting environments](/troubleshoot/windows-server/identity/ad-dc-in-virtual-hosting-environment).
+- We also recommend you become familiar with the information about how to use AD DS in virtual hosting environments by reading [Things to consider when you host Active Directory DCs in virtual hosting environments](/troubleshoot/windows-server/identity/ad-dc-in-virtual-hosting-environment).
 
 ## Deployment considerations
 
@@ -140,16 +140,21 @@ The following sections describe common VM practices to avoid when deploying DCs,
 
 ### Deployment recommendations
 
-Virtualization platforms like Hyper-V have many features that make managing, maintaining, backing up, and migrating machine easier. However, there are certain recommendations you need to follow in order to take advantage of these features for your virtual DCs.
+Virtualization platforms like Hyper-V have many features that make managing, maintaining, backing up, and migrating machines easier. However, there are certain recommendations you need to follow in order to take advantage of these features for your virtual DCs.
 
 - To ensure your Active Directory writes are durable, don't deploy virtual DC database files, such as the **NTDS.DIT** Active Directory database, logs, and SYSVOL, on virtual IDE disks. Instead, create a second virtual hard disk (VHD) attached to a virtual Small Computer System Interface (SCSI) controller and ensure the database files are on the VM SCSI disk when you install the DC.
 
-- Don't implement differencing disk VHDs on a VM you're configuring to be a DC. While this approach makes it easy to revert your deployment to previous versions, it also decreases performance. For more information about VHD types, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
+- Don't implement differencing disk VHDs on a VM you're configuring as the DC. While this approach makes it easy to revert your deployment to previous versions, it also decreases performance. For more information about VHD types, see [New virtual hard disk wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771866(v=ws.11)).
 
 - Don't deploy Active Directory domains and forests on a copy of a Windows Server OS without first using the System Preparation tool (sysprep) to prepare them for deployment. For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
 
    > [!WARNING]
-   > You can't run Sysprep on a DC that's already promoted.
+   > We don't recommend running Sysprep on a promoted DC because it can negatively affect the AD database and related components, causing the following issues:
+   >
+   > - Data loss
+   > - AD database corruption
+   > - Stability and functionality issues
+   > - Application, services, and drivers issues
 
 - Don't deploy other DCs with a copy of a VHD file from a DC you deployed. Not using copies prevents potential update sequence number (USN) rollback scenarios. For more information about USN rollback, see [USN and USN rollback](#usn-and-usn-rollback).
 
@@ -178,10 +183,10 @@ When you create virtual DCs, you should avoid creating USN rollback scenarios. T
 > [!WARNING]
 > To prevent issues with Active Directory replication, ensure that only one physical or virtual DC exists on a given network at any point in time. You can lower the likelihood of the old clone being a problem by using one of the following methods:
 >
-> - When the new virtual DC is running, run the following command to change the computer account password twice:
+> - When the new virtual DC is running, run the following command twice to change the computer account password:
 >
 >   ```cmd
->   netdom resetpwd /Server:<domain-controller> ...
+>   netdom resetpwd /Server:<domain-controller>
 >   ```
 >
 > - Export and import the new virtual guest to force it to become a new Generation ID and a database invocation ID.
@@ -192,11 +197,11 @@ You can use P2V migration in combination with the VMM to create test environment
 
 #### Creating a test environment
 
-We recommend you do the following things when you create test environments using P2V:
+We recommend you do the following when you create test environments using P2V:
 
 - Migrate one in-production DC from each domain to a test VM by using P2V based on the recommendations in [Physical-to-virtual conversion](#physical-to-virtual-conversion).
 
-- Put the physical production machines and the test VMs in different networks when you bring them back online.
+- Place the physical production machines and the test VMs in different networks when you bring them back online.
 
 - To avoid [USN rollbacks](#usn-and-usn-rollback) in the test environment, disconnect all DCs you plan to migrate from the network. You can disconnect your DCs by stopping the NTDS service or restarting the machines in Directory Services Restore Mode (DSRM).
 
@@ -234,7 +239,7 @@ We recommend you follow the storage recommendations in this section to optimize 
 
   - The system disables the disk's write-caching feature by default.
 
-- When using VHD files, we recommend you use pass-through disks or fixed-size VHDs instead of dynamic VHDs. Pass-through disks are ideal because they're optimized for performance on VMs and don't support the snapshot feature, which we don't recommend using for DCs.
+- When using VHD files, we recommend using pass-through disks or fixed-size VHDs because they're optimized for performance. We don't recommend dynamically expanding and differencing disks because they can cause delays, performance degradation during high disk activity, and potential data loss when rolling back to a previous snapshot.
 
 - We recommend you use virtual SCSI controllers to reduce the chance of your Active Directory data corrupting.
 
@@ -249,8 +254,6 @@ Domain controllers running on VMs have operational restrictions that don't apply
 - Don't copy or clone VHDs.
 
 - Don't take or use snapshots of virtual DCs. You should use a more permanent and reliable backup method instead.
-
-- Don't use differencing disk VHDs on a VM you configured to be a DC. <!--We've already talked about this in a previous section. I think I should remove one of the redundant sections and put it either in that section or this one.-->
 
 - Don't use the Export feature on a VM running a DC.
 
