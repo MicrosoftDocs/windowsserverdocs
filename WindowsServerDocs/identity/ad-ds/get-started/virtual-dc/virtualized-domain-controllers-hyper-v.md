@@ -278,132 +278,6 @@ While you can technically use snapshots or copies of VHD files to restore a back
 > [!NOTE]
 > The shielded VM project described in [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
 
-### Restoring a virtual DC
-
-<!--I think this should be its own how-to article.-->
-
-You must regularly back up your system state in order to restore a physical or virtual DC during a disaster recovery scenario. System state includes Active Directory data and log files, the registry, the system volume, and various elements of the OS. Active Directory-compatible backup applications ensure consistent local and replicated Active Directory databases after a restore process, including notifying replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications let administrators bypass standard checks and validations that occur during DC system state restore.
-
-If your DC VM fails but you don't see signs of a USN rollback, there are two ways you can restore the VM:
-
-- If your system has a valid system state data backup from before the failure, you can restore it using the Active Directory-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, and you should back up your DCs every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
-
-- If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM, then configure the registry property as described in [Restoring a system state backup](#restoring-a-system-state-backup). After that, restart the DC in normal mode.
-
-<!--Relying exclusively on diagrams to give instructions isn't accessible for readers with low vision. I've tried giving it complex alt text, but I'm wondering if we should just convert these into step-by-step instructions instead.-->
-
-Use the process in the following diagram to determine the best way to restore your virtualized DC.
-
-:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.85c97481-7b95-4705-92a7-006e48bc29d0(WS.10).gif" alt-text="Diagram that shows how to restore a virtualized DC." border="false":::
-   A diagram showing the restoration process for a virtualized domain controller. When a writable domain controller virtual machine fails, do you have critical data on the DC that doesn't exist on a copy? If not, then you the data and need to remove the associated AD DS role and account from the failed domain controller and install the AD DS role on the server you use to replace it. If yes, you should use a backup from before the DC failed. If you don't have a backup, do you have a previous instance of the DC available from before the failure? If no, see the instructions about AD DS roles. If yes, does the previous instance run Windows Server 2012 on a hypervisor that supports VM-GenerationId? If yes, deploy the VHD against a new VM and restart the DC in normal mode. If not, have you started any previous instances of the VM in normal mode without first setting the data base restored from backup registry value to one? If yes, disconnect the DC from the network, recover and save required unique data, then never use the failed virtual DC ever again, remove its AD DS role and account, and restore its data on the new DC. If no, then restore the VM instance that predates the failure by starting in DSRM, setting the database restored from backup registry value to 1, then restarting the domain controller in normal mode.
-:::image-end:::
-
-The restoration process and decisions are simpler for RODCs, as shown in the next diagram.
-
-:::image type="complex" source="media/virtualized-domain-controller-architecture/Dd363553.4c5c5eda-df95-4c6b-84e0-d84661434e5d(WS.10).gif" alt-text="Diagram that shows how to restore a read-only DC (RODC)." border="false":::
-   First, the domain controller virtual machine fails. Is a system state data backup that predates the failure available? If os, remove the domain controller using the backup and the appropriate restoration tools. If not, do you have a previous version of the VHD file available? If yes, restore the Vm by removing the failed Vm, then creating and starting a new VM using the data from the VHD file with the previous version. If no, remove the AD DS role from the domain controller using the dcpromo /forceremoval command in a command prompt, then install the AD DS role and start the server on RODC.
-:::image-end:::
-
-### Restoring a system state backup
-
-If a valid system state backup exists for the DC VM, you can safely restore the backup by following the restore procedure for the backup tool that you used to back up the VHD file.
-
-> [!IMPORTANT]
-> To properly restore the DC, you must start the DC in DSRM, not normal mode. If you miss the opportunity to enter DSRM during system startup, turn off the DC's VM before it can fully start in normal mode. It's important to start the DC in DSRM because starting a DC in normal mode increments the USNs, even if the DC is disconnected from the network. For more information about USN rollback, see [USN and USN rollback](#usn-and-usn-rollback).
-
-#### Restore the system state backup of virtual DC
-
-To restore the system state data backup of a virtual DC:
-
-1. Start the DC's VM, then press the F5 key to access **Windows Boot Manager**.
-
-   If you're prompted to enter connection credentials, follow these steps:
-
-   1. Immediately select the **Pause** button on the VM to pause the process.
-   1. Enter your connection credentials.
-   1. Select the **Play** button on the VM.
-   1. Select inside the VM window, and press F5.
-   
-   If **Windows Boot Manager** doesn't open and the DC begins to start in normal mode, turn the VM off to pause the process. Repeat this step as many times as necessary until you're able to access Windows Boot Manager. You can't access DSRM from the Windows Error Recovery menu. Therefore, turn off the VM and try again if the Windows Error Recovery menu appears.
-
-1. In **Windows Boot Manager**, press the F8 key to access advanced boot options.
-
-1. Under **Advanced Boot Options**, select **Directory Services Restore Mode**, and then press the Enter key to start the DC in DSRM.
-
-1. Use the appropriate restore method for the tool that you used to create the system state backup. If you used Windows Server Backup, follow the directions in [Performing a nonauthoritative restore of AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730683(v=ws.10)).
-
-### Restoration of virtual DC without system state backup
-
-<!--....Do we need those "summary" bullets in the intro section if the intro goes over the information again? There's a lot of redundant stuff in this article that I think I should merge/cut.-->
-
-If you don't have a system state data backup that predates the VM failure, you can use the VHD file to restore a DC that's running on a VM. Make sure you create a copy of the VHD file before you start. That way, if you encounter an issue during the procedure or miss a step, you can try again with the copied VHD.
-
-#### Restore a previous version of the virtual DC VHD without system state backup
-
-To restore a virtual DC with a VHD file:
-
-> [!WARNING]
-> You shouldn't use this procedure as a substitute for regularly planned and scheduled backups. Restores performed with this procedure aren't supported by Microsoft. Use this procedure only when there's no alternative.
->
-> Don't use this procedure if any VM has already started the copy of the VHD you plan to use for the restoration in normal mode.
-
-1. Using the previous VHD, start the virtual DC in DSRM.
-   
-   - Don't start the DC in normal mode. If you miss the **Windows Boot Manager** screen and the DC begins to start in normal mode, turn the VM off to prevent it from starting up.
-
-1. Open the **Registry Editor**. You can open the editor by selecting **Start** > **Run**, then enter **regedit** and select **OK**.
-
-   - If the **User Account Control** dialog displays, confirm the displayed action is as expected, then select **Yes**.
-
-   - In Registry Editor, expand the path **HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**.
-
-   - Look for a value named **DSA Previous Restore Count**. If the value is present, make a note of the setting. Otherwise, the setting value is the default (0). If no value is shown, don't manually set the value.
-
-1. Right-click the **Parameters** key, select **New**, and then select **DWORD (32-bit) Value**.
-
-1. Enter the new name **Database restored from backup**, then press the Enter key.
-
-1. Double-click the value you just created to open the **Edit DWORD (32-bit) Value** dialog, then find the **Value data** field and enter **1**.
-
-   The **Database restored from backup entry** option is available on the following DCs running Windows Server:
-
-   - Windows 2000 Server with Service Pack 4 (SP4)
-   - Windows Server 2003 with specified updates installed. For details, see [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback).
-   - Windows Server 2008
-
-1. Restart the DC in normal mode.
-
-1. When the DC restarts, open **Event Viewer**. To open Event Viewer, select **Start** > **Control Panel**. Double-click **Administrative Tools**, then double-click **Event Viewer**.
-
-1. Expand **Application and Services Logs**, then select the **Directory Services** log. Ensure the events appear in the details pane.
-
-1. Right-click the **Directory Services** log, then select **Find**.
-
-1. In the **Find what** field, enter **1109**, then select **Find Next**.
-
-1. You should see at least one entry for Event ID 1109. If you don't see this entry, proceed to the next step. Otherwise, double-click the entry and review the text. Confirm the text shows that the update was made to the InvocationID, as shown in the following example output:
-
-    ```output
-    Active Directory has been restored from backup media, or has been configured to host an application partition.
-    The invocationID attribute for this directory server has been changed.
-    The highest update sequence number at the time the backup was created is <time>
-
-    InvocationID attribute (old value):<Previous InvocationID value>
-    InvocationID attribute (new value):<New InvocationID value>
-    Update sequence number:<USN>
-
-    The InvocationID is changed when a directory server is restored from backup media or is configured to host a writeable application directory partition.
-    ```
-
-1. Close **Event Viewer**.
-
-1. Use **Registry Editor** to verify the value for the **DSA Previous Restore Count** setting is equal to the previous value plus one. If the correct value isn't there and you can't find an entry for Event ID 1109 in **Event Viewer**, verify that the DC's service packs are current.
-
-   > [!NOTE]
-   > You can't try this procedure again on the same VHD. You can try again on a copy of the VHD or a different VHD that hasn't been started in normal mode by starting again from step 1.
-
-1. Close the **Registry Editor**.
-
 ## USN and USN rollback
 
 This section describes replication issues that can occur as a result of an incorrect restoration of the Active Directory database with an older version of a VM. For more information about the Active Directory replication process, see [Active Directory replication concepts](../replication/active-directory-replication-concepts.md).
@@ -535,3 +409,7 @@ Read-only domain controllers (RODCs) are DCs that host read-only copies of the p
 We don't recommend using a snapshot to restore an RODC. You should only restore an RODC using an Active Directory–compatible backup application. Also, as with writeable DCs, you must not allow an RODC to be offline for more than the tombstone lifetime. This condition can result in lingering objects on the RODC.
 
 For more information about implementing RODCs, see the [Read-Only Domain Controllers step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10)).
+
+## Additional content
+
+Learn how to restore virtualized DCs at [Restore virtualized domain controllers](../../manage/virtual-dc/restore-virtualized-domain-controller.md).
