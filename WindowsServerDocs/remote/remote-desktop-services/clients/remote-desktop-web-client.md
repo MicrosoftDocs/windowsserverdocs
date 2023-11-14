@@ -84,10 +84,18 @@ To enable IME input using the web client:
 
 1. Before you connect to the remote session, go to the web client **Settings** panel.
 2. In **Select Remote Keyboard Layout** section, expand the drop-down menu and select the keyboard you want to use in the remote session. 
-3. If you are using either an IME-based keyboard or a keyboard with alternate layout, select either **Remote** OR pick any of the languages from the list. 
-4. Connect to the remote session.
+   Azure Virtual Desktop web client settings options:
+    * Auto: This configuration will send KeyCodes on key press, which means the local key is directly sent to the remote machine. For this option, the local machine keyboard layout is important and should match the layout on all the hops taken to the remote machine.
+    * Remote: This configuration will send Scan Codes to the remote machine. For this option, the local machine keyboard layout is not as important, but the keyboard layout on all other hops taken to the remote machine should match the selected layout.
+    * Language specific: If you select a specific language and the language pack is installed on the remote machine, that language will automatically be selected on new Windows sessions only. For example, if you use English UK, you can select it from the drop down. Make sure to sign out of ALL the Windows user sessions you're trying to connect to. When opening a new session, all the hops should automatically default to using the English UK layout.
+
+      Note: There's a known issue when using KeyCodes for PowerShell. By selecting a mode on AVD Web Client that uses scancode (either Remote or English UK for example), PowerShell should work as expected.
+4. If you are using either an IME-based keyboard or a keyboard with alternate layout, select either **Remote** OR pick any of the languages from the list. 
+5. Connect to the remote session.
 
 The web client will suppress the local IME window when you're focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window. Additionally, IMEs do not work with the Auto setting.
+
+
 
 >[!NOTE]
 >If the language pack isn't installed on the host virtual machine, the remote session will default to the English (United States) keyboard.
