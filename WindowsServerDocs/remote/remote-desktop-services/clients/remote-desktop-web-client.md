@@ -80,7 +80,7 @@ The web client currently supports copying and pasting text only. Files can't be 
 
 The web client supports using an Input Method Editor (IME) in the remote session in version 1.0.21.16 or later. Before you can use the IME, you must install the language pack for the keyboard you want to use in the remote session on the host virtual machine. To learn more about setting up language packs in the remote session, see [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs).
 
-To enable IME input using the web client:
+To select alternative keyboard layout or language:
 
 1. Before you connect to the remote session, go to the web client **Settings** panel.
 2. In **Select Remote Keyboard Layout** section, expand the drop-down menu and select the keyboard you want to use in the remote session. 
