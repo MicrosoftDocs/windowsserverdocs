@@ -2,7 +2,7 @@
 title: Get started with the web client for Remote Desktop Services
 description: Describes how to sign in to the Remote Desktop web client.
 ms.author: helohr
-ms.date: 12/16/2022
+ms.date: 11/10/2023
 ms.topic: article
 author: Heidilohr
 ---
@@ -76,18 +76,18 @@ To download files from the remote session to your local computer:
 
 The web client currently supports copying and pasting text only. Files can't be copied or pasted to and from the web client. Additionally, you can only use **Ctrl+C** and **Ctrl+V** to copy and paste text.
 
-## Use an Input Method Editor (IME) in the remote session
+## Keyboard settings in the remote session 
 
-The web client supports using an Input Method Editor (IME) in the remote session in version 1.0.21.16 or later. Before you can use the IME, you must install the language pack for the keyboard you want to use in the remote session on the host virtual machine. To learn more about setting up language packs in the remote session, check out [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs).
+The web client supports using an Input Method Editor (IME) in the remote session in version 1.0.21.16 or later. Before you can use the IME, you must install the language pack for the keyboard you want to use in the remote session on the host virtual machine. To learn more about setting up language packs in the remote session, see [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs).
 
 To enable IME input using the web client:
 
 1. Before you connect to the remote session, go to the web client **Settings** panel.
-2. Toggle the **Enable Input Method Editor** setting to **On**.
-3. In the drop-down menu, select the keyboard you want to use in the remote session.
+2. In **Select Remote Keyboard Layout** section, expand the drop-down menu and select the keyboard you want to use in the remote session. 
+3. If you are using either an IME-based keyboard or a keyboard with alternate layout, select either **Remote** OR pick any of the languages from the list. 
 4. Connect to the remote session.
 
-The web client will suppress the local IME window when you're focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window.
+The web client will suppress the local IME window when you're focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window. Additionally, IMEs do not work with the Auto setting.
 
 >[!NOTE]
 >If the language pack isn't installed on the host virtual machine, the remote session will default to the English (United States) keyboard.
