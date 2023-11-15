@@ -151,7 +151,7 @@ If you're using Azure SQL for your AD FS configuration database, size the SQL Se
 
 - Any standard domain account can be used as a service account for AD FS. Group Managed Service Accounts are also supported. The permissions required at runtime are automatically added back when you configure AD FS.
 
-- The User Rights Assignment required for the AD service account is Sign-in as a Service.
+- The User Rights Assignment required for the AD service account is 'Log on as a Service'.
 
 - The User Rights Assignments required for the `NT Service\adfssrv` and `NT Service\drs` are Generate Security Audits and Sign-in as a Service.
 
