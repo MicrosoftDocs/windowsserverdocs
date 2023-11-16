@@ -11484,6 +11484,11 @@
       "source_path": "WindowsServerDocs/storage/folder-redirection/troubleshoot-user-profiles-events.md",
       "redirect_url": "/troubleshoot/windows-server/user-profiles-and-logon/troubleshoot-user-profiles-events",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/troubleshoot-always-on-vpn.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn",
+      "redirect_document_id": false
     }
   ]
 }
