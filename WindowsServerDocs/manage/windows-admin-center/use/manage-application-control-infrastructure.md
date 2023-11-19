@@ -78,7 +78,7 @@ By default, Windows Admin Center communicates with your servers over WinRM over 
 File transfer based on UNC paths over SMB port 445 is critical for Windows Admin Center to manage these environments. Make sure you're an administrator on the managed server or cluster and file transfers aren't blocked by any security policies.
 
 ### PowerShell execution policy
-The default PowerShell [ExecutionPolicy](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) is sufficient for Windows Admin Center to manage a Windows Defender Application Control enforced machine. However, if the default ExecutionPolicy has changed on the machine, you need to ensure the ```LocalMachine```'s scope is set to ```RemoteSigned``` to allow signed scripts to be loaded and executed. This is a PowerShell security feature and changes should be done only when appropriate and necessary.
+The default PowerShell [ExecutionPolicy](/powershell/module/microsoft.powershell.core/about/about_execution_policies) is sufficient for Windows Admin Center to manage a Windows Defender Application Control enforced machine. However, if the default ExecutionPolicy has changed on the machine, you need to ensure the ```LocalMachine```'s scope is set to ```RemoteSigned``` to allow signed scripts to be loaded and executed. This is a PowerShell security feature and changes should be done only when appropriate and necessary.
 
 ## Installing and connecting
 ### Installing
