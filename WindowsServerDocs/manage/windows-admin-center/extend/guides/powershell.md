@@ -43,7 +43,7 @@ const session = this.appContextService.powerShell.createSession('{!TargetNode}')
 ```
 Then we will create the PowerShell script with an input parameter:
 ```ts
-const script = PowerShell.createScript(PowerShellScripts.Get_NodeName, {stringFormat: 'The name of the node is {0}!'});
+const command = PowerShell.createCommand(PowerShellScripts.Get_NodeName, {stringFormat: 'The name of the node is {0}!'});
 ```
 Lastly, we need to run that script in the session we created:
 ``` ts
@@ -52,8 +52,8 @@ Lastly, we need to run that script in the session we created:
   }
 
   public getNodeName(): Observable<any> {
-    const script = PowerShell.createScript(PowerShellScripts.Get_NodeName.script, { stringFormat: 'The name of the node is {0}!'});
-    return this.appContextService.powerShell.run(this.session, script)
+    const command = PowerShell.createCommand(PowerShellScripts.Get_NodeName, { stringFormat: 'The name of the node is {0}!'});
+    return this.appContextService.powerShell.run(this.session, command)
     .pipe(
         map(
         response => {
