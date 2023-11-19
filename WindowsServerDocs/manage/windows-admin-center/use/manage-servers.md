@@ -137,7 +137,7 @@ The following features are supported in Backup:
 ## Azure hybrid center
 
 **Azure hybrid center** is your centralized location for learning about and onboarding to Azure hybrid services.
-[Learn more about Azure hybrid services in Windows Admin Center.](../manage/windows-admin-center/azure.md)
+[Learn more about Azure hybrid services in Windows Admin Center.](../manage/windows-admin-center/azure/index.md)
 
 ## Azure Monitor
 
