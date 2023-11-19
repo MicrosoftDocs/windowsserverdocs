@@ -2,8 +2,8 @@
 title: Windows Admin Center Overview
 description: Learn how to manage Windows Server using Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 01/07/2020
 ---
 
@@ -11,7 +11,7 @@ ms.date: 01/07/2020
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It is a free product and is ready to use in production.
+Windows Admin Center is a remote management tool for Windows Server running anywhere&mdash; physical, virtual, on-premises, in Azure, or in a hosted environment&mdash; at no additional cost.
 
 To find out what's new, see [Release history](support/release-history.md).
 
