@@ -20,6 +20,7 @@ This section provides the requirements for using Windows Admin Center to manage 
 - [Policy requirements](#policy-requirements)
 - [Networking requirements](#networking-requirements)
 - [Permissions](#permissions)
+- [PowerShell execution policy](#powershell-execution-policy)
 
 ### Policy requirements
 Depending on your use case, you'll need to allowlist one or more certificates as part of your base or supplemental policies. Learn more about [deploying a base or supplemental policy](/windows/security/threat-protection/windows-defender-application-control/types-of-devices).
@@ -76,6 +77,9 @@ By default, Windows Admin Center communicates with your servers over WinRM over 
 ### Permissions
 File transfer based on UNC paths over SMB port 445 is critical for Windows Admin Center to manage these environments. Make sure you're an administrator on the managed server or cluster and file transfers aren't blocked by any security policies.
 
+### PowerShell execution policy
+The default PowerShell [ExecutionPolicy](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) is sufficient for Windows Admin Center to manage a Windows Defender Application Control enforced machine. However, if the default ExecutionPolicy has changed on the machine, you need to ensure the ```LocalMachine```'s scope is set to ```RemoteSigned``` to allow signed scripts to be loaded and executed. This is a PowerShell security feature and changes should be done only when appropriate and necessary.
+
 ## Installing and connecting
 ### Installing
 Install Windows Admin Center on your WDAC enforced server or client machine just like you normally would. If the above requirements are met, Windows Admin Center should install and function as normal.
@@ -92,6 +96,8 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 - Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
 
 - Using RBAC on a single server is currently not supported.
+
+- Certain operations in the Certificates tool are currently not supported.
 
 ## Troubleshooting
 - "Module not found" or "failed to connect" error
