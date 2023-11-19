@@ -17,7 +17,7 @@ In case you're not yet familiar with how Windows Admin Center works, let's start
 
 ![A diagram of a Windows Admin Center architecture.](../media/understand-extensions/wac-architecture-500px.png)
 
-The Windows Admin Center UI web pages served by the web service has two main UI components from an extensibility perspective, solutions and tools, which are implemented as extensions, and, a third extension type called gateway plugins.
+The Windows Admin Center UI web pages served by the web service have two main UI components from an extensibility perspective, solutions and tools, which are implemented as extensions, and, a third extension type called gateway plugins.
 
 ## Solution extensions
 
