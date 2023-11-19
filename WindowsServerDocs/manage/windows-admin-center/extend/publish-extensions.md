@@ -2,8 +2,8 @@
 title: Publishing extensions for Windows Admin Center
 description: Publishing extensions for Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: daniellee-msft
-ms.author: jol
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 04/01/2023
 ---
 # Publishing Extensions
@@ -124,7 +124,7 @@ Any `.dll` files included in your extension are required to be signed with a cer
 We recommend that you sign the extension NuGet package to ensure the integrity of the package.
 
 > [!NOTE]
-> If you plan on your extension supporting [Windows Defender Application Control](../guides/application-control-infrastructure-extensions.md), your package and all files within must be signed. [Learn more about signing with Windows Defender Application Control.](https://learn.microsoft.com/windows/security/application-security/application-control/windows-defender-application-control/deployment/use-code-signing-for-better-control-and-protection) 
+> If you plan on your extension supporting [Windows Defender Application Control](/guides/application-control-infrastructure-extensions.md), your package and all files within must be signed. [Learn more about signing with Windows Defender Application Control.](/windows/security/application-security/application-control/windows-defender-application-control/deployment/use-code-signing-for-better-control-and-protection) 
 
 ### Test your extension NuGet package
 
