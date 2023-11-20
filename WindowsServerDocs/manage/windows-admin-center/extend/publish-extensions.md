@@ -100,7 +100,7 @@ Here's an example `.nuspec` file and the list of required or recommended propert
 | Property Name | Required / Recommended | Description |
 | ---- | ---- | ---- |
 | packageType | Required | Use `WindowsAdminCenterExtension`, which is the NuGet package type defined for Windows Admin Center extensions. |
-| id | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
+| ID | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
 | title | Required for publishing to the Windows Admin Center feed | Friendly name for the package that's displayed in Windows Admin Center Extension Manager. |
 | version | Required | Extension version. Using [Semantic Versioning (SemVer convention)](http://semver.org/spec/v1.0.0.html) is recommended but not required. |
 | authors | Required | If publishing on behalf of your company, use your company name. |
