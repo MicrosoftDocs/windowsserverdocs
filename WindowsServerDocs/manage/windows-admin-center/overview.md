@@ -17,7 +17,7 @@ To find out what's new, see [Release history](support/release-history.md).
 
 ## Download now
 
-**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use.
+**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center)** from the Microsoft Evaluation Center.
 
 For help installing, see [Install](deploy/install.md). For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
 
@@ -146,7 +146,7 @@ Admin Center to Azure</a></li>
 
 "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%."<br> *- Rand Morimoto, President, Convergent Computing* 
 
-"Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* 
+"Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the multifactor authentication."<br/> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* 
 
 “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb*
 
