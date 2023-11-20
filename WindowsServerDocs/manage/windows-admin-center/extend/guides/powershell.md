@@ -37,7 +37,7 @@ Param
  Write-Output $nodeName
 ```
 
-We will create a PowerShell session for our target node :
+We will create a PowerShell session for our target node:
 ``` ts
 const session = this.appContextService.powerShell.createSession('{!TargetNode}');
 ```
@@ -84,12 +84,12 @@ By providing the node name to the createSession method, a new PowerShell session
 ### Key Options ###
 A few options are available when calling the PowerShell API. Each time a session is created it can be created with or without a key.
 
-**Key:** This creates a keyed session that can be looked up and reused, even across components (meaning that Component1 can create a session with key "SME-ROCKS," and Component2 can use that same session).If a key is provided, the session that is created must be disposed of by calling dispose() as was done in the example above. A session should not be kept without being disposed of for more than 5 minutes.
+**Key:** This creates a keyed session that can be looked up and reused, even across components (meaning that Component 1 can create a session with key "SME-ROCKS," and Component 2 can use that same session). If a key is provided, the session that is created must be disposed of by calling dispose() as was done in the example above. A session should not be kept without being disposed of for more than 5 minutes.
 ```ts
   const session = this.appContextService.powerShell.createSession('{!TargetNode}', '{!Key}');
 ```
 
-**Keyless:** A key will automatically be created for the session. This session with be disposed of automatically after 3 minutes. Using keyless allows your extension to recycle the use of any Runspace that is already available at the time of creation of a session. If no Runspace is available than a new one will be created. This functionality is good for one-off calls, but repeated use can affect performance. A session takes approximately 1 second to create, so continuously recycling sessions can cause slowdowns.
+**Keyless:** A key will automatically be created for the session. This session with be disposed of automatically after 3 minutes. Using keyless allows your extension to recycle the use of any runspace that is already available at the time of creation of a session. If no runspace is available then a new one will be created. This functionality is good for one-off calls, but repeated use can affect performance. A session takes approximately 1 second to create, so continuously recycling sessions can cause slowdowns.
 
 ```ts
   const session = this.appContextService.powerShell.createSession('{!TargetNodeName}');
@@ -155,7 +155,7 @@ return this.appContextService.workItem.submit('{!TargetNode}', workItem);
 | submit() | Submits the work item
 | submitAndWait() | Submit the work item and wait for the completion of its execution
 | wait() | Wait for existing work item to complete
-| query() | Query for an existing work item by id
+| query() | Query for an existing work item by ID
 | find() | Find and existing work item by the TargetNodeName, ModuleName, or typeId.
 
 ### PowerShell Batch APIs ###
