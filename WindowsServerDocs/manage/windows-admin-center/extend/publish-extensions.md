@@ -30,7 +30,7 @@ You can also create your own NuGet feed to publish your extensions to using one 
 
 ### Publishing to a file share
 
-To restrict access of your extension to your organization or to a limited group of people, you can use an SMB file share as an extension feed. Using the file share, file and folder permissions are applied for allowing access to the feed.
+To restrict access of your extension to your organization or to a limited group of people, you can use an SMB file share as an extension feed. When using the file share, file and folder permissions are applied to manage access to the feed.
 
 ## Preparing your extension for release
 
