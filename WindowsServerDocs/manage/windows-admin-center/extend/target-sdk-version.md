@@ -11,12 +11,12 @@ ms.date: 09/18/2018
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Keeping your extension up to date with SDK changes and platform changes is easy.  We use [NPM tags](https://www.npmjs.com/package/@microsoft/windows-admin-center-sdk?activeTab=versions) to organize the release of new features into SDK versions.
+Keeping your extension up to date with SDK changes and platform changes is easy.  We use [NuGet Package Manager tags](https://www.npmjs.com/package/@microsoft/windows-admin-center-sdk?activeTab=versions) to organize the release of new features into SDK versions.
 
 There are two SDK versions you can choose from and three which are deprecated:
 
-* ```latest``` – this SDK package aligns with the current GA release of Windows Admin Center
-* ```experimental``` – this SDK package contains the most recent changes and functionality, but may be potentially unstable
+* ```latest``` – this SDK package aligns with the current GA release of Windows Admin Center and is the most stable
+* ```experimental``` – this SDK package contains the most recent changes and functionality, but might be unstable
 * ```insider``` –  this SDK package has been deprecated, use latest or experimental instead
 * ```next``` – this SDK package has been deprecated, use latest or experimental instead
 * ```legacy``` – this SDK package has been deprecated, use latest or experimental instead
