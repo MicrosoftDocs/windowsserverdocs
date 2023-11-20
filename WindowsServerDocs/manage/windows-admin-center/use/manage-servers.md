@@ -101,7 +101,7 @@ The following features are supported in Server Manager Overview:
 
 ### Active Directory features
 
-The following Active Directory management are available:
+The following Active Directory management features are available:
 
 - Create user
 - Create group
@@ -182,7 +182,7 @@ The following features are supported in Devices:
 
 ### DHCP features
 
-- Create/configure/view IPV4 and IPV6 scopes
+- Create, configure, and view IPV4 and IPV6 scopes
 - Create address exclusions and configure start and end IP address
 - Create address reservations and configure client MAC address (IPV4), DUID and IAID (IPV6)
 
@@ -258,7 +258,7 @@ The following features are supported in Firewall:
 
 ## Installed apps
 
-**Installed apps** allows you to list and uninstall application that are installed.
+**Installed apps** allows you to list and uninstall applications that are installed.
 
 ## Local users and groups
 
