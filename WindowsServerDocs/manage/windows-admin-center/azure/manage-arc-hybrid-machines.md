@@ -13,6 +13,10 @@ ms.custom: references_regions
 > Windows Admin Center in the Azure portal is currently in preview.
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
+> [!IMPORTANT]
+> Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
+> If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
+
 Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
 With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Arc-enabled servers in the Azure portal. Windows Server infrastructure and workload management  no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Server Manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
@@ -144,7 +148,6 @@ The hybrid machine must meet the following networking requirements:
   - `*service.waconazure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags)
   - `pas.windows.net`
   - `*.servicebus.windows.net`
-  - `pkgs.dev.azure.com` (if you are using a proxy)
 
 > [!NOTE]
 > No inbound ports are required in order to use Windows Admin Center.
@@ -278,6 +281,10 @@ Invoke-AzRestMethod -Method PUT -Path /subscriptions/${subscription}/resourceGro
 ## Troubleshooting
 
 Here are some tips to try in case something isn't working. For general  Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
+
+### Failed to connect with "404 endpoint not found"
+1. Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
+2. If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
 
 ### Failed to connect error
 

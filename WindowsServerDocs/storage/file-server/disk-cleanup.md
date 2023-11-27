@@ -2,11 +2,10 @@
 title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clear certain files.
 ms.reviewer: cosmosdarwin
-author: iangpgh
-ms.author: jgerend
-manager: daveba
+author: xelu86
+ms.author: wscontent
 ms.topic: article
-ms.date: 03/09/2023
+ms.date: 09/28/2023
 ---
 
 # Use Disk Cleanup on Windows Server
@@ -22,9 +21,9 @@ You can also run Disk Cleanup by using the [cleanmgr Windows command](../../admi
 > [!NOTE]
 > If you're just looking to free up disk space, consider using Azure File Sync with cloud tiering enabled. This method lets you cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For more information, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
-## Enable Disk Cleanup on an earlier version of Windows Server
+## Enable Disk Cleanup on previous versions of Windows Server
 
-Follow these steps to use the Add Roles and Features Wizard to install the Desktop Experience on a server running Windows Server 2012 R2 or earlier. This process also installs the Disk Cleanup tool.
+The Disk Cleanup tool (cleanmgr.exe) isn't present by default prior to versions of Windows Server 2016 unless you have the Desktop Experience feature installed. Follow these steps to use the Add Roles and Features Wizard to install the Desktop Experience:
 
 1. If Server Manager is already open, go to the next step. If Server Manager isn't open yet, launch it by doing one of the following options.
 
@@ -52,11 +51,9 @@ Follow these steps to use the Add Roles and Features Wizard to install the Deskt
 
    :::image type="content" source="media/disk-cleanup.png" alt-text="Screenshot of the Disk Properties dialog with the Disk Cleanup button highlighted.":::
 
-## Manually add Disk Cleanup to an earlier version of Windows Server
+## Manually add Disk Cleanup to Windows Server 2008 R2
 
-The Disk Cleanup tool (cleanmgr.exe) isn't present on Windows Server 2012 R2 or earlier unless you have the Desktop Experience feature installed.
-
-To use cleanmgr.exe, install the Desktop Experience as described earlier, or copy two files that are already present on the server, cleanmgr.exe and cleanmgr.exe.mui. Use the following table to locate the files for your operating system.
+To use cleanmgr.exe, install the Desktop Experience as described earlier, or copy the two files that are already present on the server, **cleanmgr.exe** and **cleanmgr.exe.mui**. Use the following table to locate the files for your operating system.
 
 | Operating System  | Architecture  | File Location  |
 | ----------------- | -------------- | --------------- |
@@ -69,7 +66,7 @@ Locate cleanmgr.exe.mui and move the files to **%systemroot%\System32\en-US**.
 
 You can launch the Disk Cleanup tool by running Cleanmgr.exe from a Command Prompt window, or by selecting **Start** and entering **Cleanmgr** in the search field.
 
-To set up the Disk Cleanup button to appear on a disk's Properties dialog, you need to install the Desktop Experience feature, as shown in the [previous section](#enable-disk-cleanup-on-an-earlier-version-of-windows-server).
+To set up the Disk Cleanup button to appear on a disk's Properties dialog, you need to install the Desktop Experience feature, as shown in the [previous section](#enable-disk-cleanup-on-previous-versions-of-windows-server).
 
 ## Related links
 
