@@ -612,7 +612,7 @@
       items:
       - name: Configure virtual network peering
         href: sdn/vnet-peering/sdn-configure-vnet-peering.md
-    - name: Windows Server 2019 gateway performance
+    - name: SDN gateway performance
       href: sdn/gateway-performance.md
     - name: Gateway bandwidth allocation
       href: sdn/gateway-allocation.md
