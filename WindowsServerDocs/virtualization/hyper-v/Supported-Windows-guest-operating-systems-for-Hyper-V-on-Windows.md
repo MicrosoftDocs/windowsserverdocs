@@ -9,7 +9,7 @@ ms.date: 09/26/2023
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server
 
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019, Azure Stack HCI, version 20H2
+> Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 Hyper-V supports several versions of Windows Server, Windows, and Linux distributions to run in virtual machines, as guest operating systems. This article covers supported Windows Server and Windows guest operating systems. For Linux and FreeBSD distributions, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).
 
@@ -37,12 +37,12 @@ Following are the versions of Windows Server that are supported as guest operati
 
 Following are the versions of Windows client that are supported as guest operating systems for Hyper-V on Windows Server.
 
-|Guest operating system (client)|Maximum number of virtual processors|Integration Services|Notes|
-|-------------------------------------|----------------------------------------|------------------------|---------|
-|Windows 11|32|Built-in|Generation 2 virtual machine hosted on Windows Server 2019 or above, Azure Stack HCI, version 20H2 or above.|
-|Windows 10|32|Built-in||
-|Windows 8.1|32|Built-in||
-|Windows 7 with Service Pack 1 (SP1)|4|Upgrade the integration services after you set up the guest operating system.|Ultimate, Enterprise, and Professional editions (32-bit and 64-bit).|
+| Guest operating system (client) | Maximum number of virtual processors | Integration Services | Notes |
+|--|--|--|--|
+| Windows 11 | 32 | Built-in | Generation 2 virtual machine hosted on Windows Server 2019 or above <br/> Azure Stack HCI, version 20H2 or above. |
+| Windows 10 | 32 | Built-in |  |
+| Windows 8.1 | 32 | Built-in |  |
+| Windows 7 with Service Pack 1 (SP1) | 4 | Upgrade the integration services after you set up the guest operating system. | Ultimate, Enterprise, and Professional editions (32-bit and 64-bit). |
 
 ## Guest operating system support on other versions of Windows
 

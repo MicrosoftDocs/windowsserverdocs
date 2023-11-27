@@ -11,9 +11,6 @@ ms.topic: conceptual
 
 Windows Local Administrator Password Solution (Windows LAPS) supports various settings you can control by using policy. Learn about the settings and how to administer them.
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
-
 ## Supported policy roots
 
 Although we don't recommend it, you can administer a device by using multiple policy management mechanisms. To support this scenario in an understandable and predictable way, each Windows LAPS policy mechanism is assigned a distinct registry root key:
@@ -185,6 +182,8 @@ If specified, the specified user or group can decrypt the password that's stored
 > - `lapsadmins@contoso.com`
 >
 > The principal identified (either by SID or by user or group name) must exist and be resolvable by the device.
+>
+> NOTE: the data specified in this setting must be entered as-is; for example, do *not* add enclosing quotes or parentheses.
 >
 > This setting is ignored unless ADPasswordEncryptionEnabled is configured to True and all other prerequisites are met.
 >
