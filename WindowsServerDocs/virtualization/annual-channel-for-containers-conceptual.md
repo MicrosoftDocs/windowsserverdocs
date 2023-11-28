@@ -31,6 +31,5 @@ Azure Kubernetes Services is supported by Windows Server 2019 and Windows Server
 
 ## See also
 
-[](.md)
-
-[](.md)
+- [](.md)
+- [](.md)
