@@ -127,8 +127,8 @@ To enable this policy:
 
 ## Related content
 
-- [IP Address Management (IPAM) in Windows Server](../networking/technologies/ipam/manage-ipam.md)
+- [Remote Desktop Services Virtualization recommendations](rds-vdi-recommendations.md)
 
-- [Dynamic Host Configuration Protocol](../networking/technologies/dhcp/dhcp-top.md)
+- [Scale out your Remote Desktop Services deployment by adding an RD Session Host farm](rds-scale-rdsh-farm.md)
 
-- [Hyper-V Network Virtualization in Windows Server](../networking/sdn/technologies/hyper-v-network-virtualization/hyper-v-network-virtualization.md)
+- [Manage users in your RDS collection](rds-user-management.md)
