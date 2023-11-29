@@ -2,14 +2,14 @@
 title: Remote Desktop IP virtualization in Windows Server 2019 and Windows Server 2022
 description: How to virtualize a Remote Desktop IP in Windows Server 2019 and Windows Server 2022.
 ms.author: helohr
-ms.date: 11/27/2023
+ms.date: 11/29/2023
 ms.topic: article
 author: Heidilohr
 manager: femila
 ---
 # Remote Desktop IP Virtualization in Windows Server 2019 and Windows Server 2022
 
-Starting with Windows Server 2008 R2, Remote Desktop session hosts support per-session and per-program Remote Desktop IP Virtualization for Winsock applications. Remote Desktop assigns individual IP addresses to user sessions to avoid avoid the application compatibility issues that come with all Remote Desktop users in the same location sharing the same IP address. This article will show you how to virtualize IP addresses for your organization's Remote Desktop users.
+As of Windows Server 2008 R2, Remote Desktop session hosts support per-session and per-program Remote Desktop IP Virtualization for Winsock applications. Remote Desktop assigns individual IP addresses to user sessions to avoid application compatibility issues that can happen when all Remote Desktop users in the same location share the same IP address. This article gives instructions for how to virtualize IP addresses for your organization's Remote Desktop users.
 
 > [!NOTE]
 > This article's instructions for virtualizing IPs only apply to on-premises environments.
@@ -28,7 +28,7 @@ You can configure IP Virtualization using the Microsoft Management Console (MMC)
 
 ### [Microsoft Management Console](#tab/mmc)
 
-1. Open the RD Session Host Configuration MMC on the machine you've assigned the RD Session Host server role.
+1. Open the RD Session Host Configuration MMC on the machine you the RD Session Host server role.
 
 1. Go to **Edit settings**.
 
@@ -115,7 +115,11 @@ To enable this policy:
 
 1. Restart your machine for the changes to take effect.
 
-1. Enable the **Turn on Remote Desktop IP Virtualization** group policy. <!--Is there a way we can do this in PowerShell?-->
+1. Run the following command to enable the **Turn on Remote Desktop IP Virtualization** group policy.
+
+   ```powershell
+   Set-GPRegistryValue -Name "Remote Desktop IP Virtualization" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" -ValueName "IPFilterBitmaps" -Type DWORD -Value 1
+   ```
 
 1. Restart your machine for the changes to take effect.
 
@@ -123,4 +127,8 @@ To enable this policy:
 
 ## Related content
 
-<!--Placeholder-->
+- [IP Address Management (IPAM) in Windows Server](../networking/technologies/ipam/manage-ipam.md)
+
+- [Dynamic Host Configuration Protocol](../networking/technologies/dhcp/dhcp-top.md)
+
+- [Hyper-V Network Virtualization in Windows Server](../networking/sdn/technologies/hyper-v-network-virtualization/hyper-v-network-virtualization.md)
