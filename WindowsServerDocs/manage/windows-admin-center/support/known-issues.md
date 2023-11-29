@@ -24,7 +24,7 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 - Using certain versions of extensions with older versions of Windows Admin Center may result in icons not displaying properly. To fix this issue, please upgrade to the latest build of Windows Admin Center. 
 
-- In the 1910.2 release of Windows Admin Center, you may not be able to connect to Hyper-V servers on specific hardware. If you are blocked on this issue, [download our previous build](https://aka.ms/wacprevious).
+- Manually modifying URLs to include the names of different machines while using Windows Admin Center, without going through the connection experience in the UI, may result in improper loading of extensions, especially those which are compatible with specific hardware. The manual modification of URLs for navigation in Windows Admin Center is not recommended.
 
 - If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019. The patch for Windows Server 2016 was included the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
