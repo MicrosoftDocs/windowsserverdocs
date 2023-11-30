@@ -4,7 +4,7 @@ description: Server hardware performance considerations for Windows Server 2022
 ms.topic: landing-page
 ms.author: wscontent
 author: robinharwood
-ms.date: 11/13/2023
+ms.date: 11/14/2023
 ---
 
 # Server hardware performance considerations
@@ -59,6 +59,8 @@ Consolidating small drives into fewer high-capacity drives can reduce overall st
 
 The use of SSD and high speed flash disks is useful for read mostly disks with high I/O rates or latency sensitive I/O. Boot disks are good candidates for the use of SSD or high speed flash disks as they can improve boot times significantly.
 
+## Network and Storage Adapter recommendations
+
 NVMe SSDs offer superior performance with greater command queue depths, more efficient interrupt processing, and greater efficiency for 4KB commands. This particularly benefits scenarios that require heavy simultaneous I/O. PCI Gen 5 devices outperform the CPU and system bus, so the Windows Server OS can't optimize the IO mechanism for tools to display the peak performance accurately.
 
 ## Network and storage adapter recommendations
@@ -69,9 +71,10 @@ The following section lists the recommended characteristics for network and stor
 
 Use an adapter that has passed the Windows Hardware Certification test suite.
 
-### 64-bit
+### 64-bit 
 
 Adapters that are 64-bit-capable can perform direct memory access (DMA) operations to and from high physical memory locations (greater than 4 GB). If the driver doesn't support DMA greater than 4 GB, the system double-buffers the I/O to a physical address space of less than 4 GB.
+
 
 ### Copper and fiber adapters
 
@@ -103,7 +106,7 @@ Offload-capable adapters offer CPU savings that yield improved performance.
 
 ### Dynamic interrupt and deferred procedure call (DPC) redirection
 
-In Windows Server 2022, Numa I/O enables PCIe storage adapters to dynamically redirect interrupts and DPCs and can help any multiprocessor system by improving workload partitioning, cache hit rates, and on-board hardware interconnect usage for I/O-intensive workloads.
+In Windows Server 2022, Numa I/O enables PCIe storage adapters to dynamically redirect interrupts and DPCs and can help any multiprocessor system by improving workload partitioning, cache hit rates, and on-board hardware interconnect usage for I/O-intensive workloads.
 
 ## See also
 

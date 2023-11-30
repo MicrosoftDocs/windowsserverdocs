@@ -1,9 +1,10 @@
-items:
 - name: Get started
+  expanded: true
   items:
   - name: Get started with Windows Server
     href: get-started-with-windows-server.md
   - name: Overview
+    expanded: true
     items:
     - name: What's new in Windows Server
       items:
@@ -41,7 +42,6 @@ items:
       href: extended-security-updates-overview.md
     - name: Upgrade Windows Server
       href: upgrade-overview.md
-    expanded: true
   - name: Concepts
     items:
     - name: Install, upgrade, or migrate
@@ -107,8 +107,6 @@ items:
         href: activation-slmgr-vbs-options.md
       - name: Solutions to common activation issues
         items:
-        - name: Resolve Windows activation error codes
-          href: activation-error-codes.md
         - name: 'KMS activation: known issues'
           href: activation-troubleshoot-KMS-issues.md
         - name: 'MAK activation: known issues'
@@ -117,8 +115,6 @@ items:
           href: common-troubleshooting-procedures-kms-dns.md
         - name: Rebuild the Tokens.dat file
           href: activation-rebuild-tokens-dat-file.md
-        - name: 'Example: Troubleshooting ADBA clients that do not activate'
-          href: activation-troubleshoot-adba-clients.md
   - name: Resources
     items:
     - name: Windows release health
@@ -127,4 +123,3 @@ items:
       href: https://www.microsoft.com/windows-server
     - name: Windows Server license terms
       href: ../windows-server-licensing/windows-server-licensing.md
-  expanded: true
