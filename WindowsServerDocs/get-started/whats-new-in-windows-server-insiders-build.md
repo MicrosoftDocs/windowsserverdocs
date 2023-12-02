@@ -2,8 +2,8 @@
 title: What's new in Windows Server Insiders Preview
 description: This article describes some of the new features in Windows Server Insiders Preview.
 ms.topic: article
-author: wscontent
-ms.author: alalve
+author: xelu86
+ms.author: wscontent
 ms.contributor: stacycl
 ms.date: 12/04/2023
 ms.prod: windows-server
@@ -18,7 +18,7 @@ This article describes some of the new features in Windows Server Insiders Previ
 
 ## Download Windows Server for Insiders Preview
 
-If you're a registered Insider, you can access the [Windows Insider Preview Downloads](/software-download/windowsinsiderpreviewserver) page directly to view available Window Server Preview builds. If you'd like to participate as an Insider, you can refer to the [Getting started with the Windows Insider Program for Windows Server](/windowsinsider/for-business-getting-started-server).
+If you're a registered Insider, you can access the [Windows Insider Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) page directly to view available Window Server Preview builds. If you'd like to participate as an Insider, you can refer to the [Getting started with the Windows Insider Program for Windows Server](https://www.microsoft.com/windowsinsider/for-business-getting-started-server).
 
 The following keys are valid only for preview builds and expire on September 15, 2024:
 
@@ -51,7 +51,7 @@ The following new features are specific to Windows Server with Desktop Experienc
 
 ### Azure Arc
 
-The Azure Arc service loads by default and can be found in the taskbar system tray. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Azure Arc](/products/azure-arc/#overview).
+The Azure Arc service loads by default and can be found in the taskbar system tray. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Azure Arc](/azure/azure-arc/overview).
 
 ### Bluetooth
 
