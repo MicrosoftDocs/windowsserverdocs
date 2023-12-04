@@ -11,9 +11,6 @@ ms.topic: reference
 
 Use detailed information about schema extensions and extended rights to help you deploy or manage Windows Local Administrator Password Solution (Windows LAPS) in your Windows Server Active Directory deployment.
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
-
 ## Schema extensions
 
 Windows LAPS offers specific schema elements for Windows Server Active Directory. To use any of the following Windows LAPS Windows Server Active Directory-based features, you must add these new schema elements to the forest by running the `Update-LapsADSchema PowerShell` cmdlet.

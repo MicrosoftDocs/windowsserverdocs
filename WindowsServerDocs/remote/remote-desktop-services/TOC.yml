@@ -216,26 +216,5 @@
         href: clients/remote-privacy-settings.md
     - name: Known issues
       items:
-      - name: General Remote Desktop connection troubleshooting
-        href: troubleshoot/rdp-error-general-troubleshooting.md
-      - name: Credential limit per app
-        href: troubleshoot/credential-limit.md
-      - name: Clients can't connect and get the "Class not registered" error
-        href: troubleshoot/rdp-error-class-not-registered.md
       - name: Clients can't connect and see "No licenses available" error
         href: troubleshoot/rdp-error-no-licenses-available.md
-      - name: User can't authenticate or must authenticate twice
-        href: troubleshoot/cannot-authenticate-or-must-authenticate-twice.md
-      - name: '"Remote Desktop Service is currently busy" error on connecting'
-        href: troubleshoot/remote-desktop-service-currently-busy.md
-      - name: Remote Desktop client disconnects and can't reconnect to the same session
-        href: troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md
-      - name: Remote laptop disconnects from wireless network
-        href: troubleshoot/remote-laptop-disconnects-wireless-network.md
-      - name: Poor performance or application problems during remote desktop connection
-        href: troubleshoot/poor-performance-or-application-problems.md
-      - name: Input method editor issue in RemoteApp scenarios
-        href: troubleshoot/input-method-editor-error.md
-      - name: '"Out of memory" error'
-        href: troubleshoot/out-of-memory-error.md
-
