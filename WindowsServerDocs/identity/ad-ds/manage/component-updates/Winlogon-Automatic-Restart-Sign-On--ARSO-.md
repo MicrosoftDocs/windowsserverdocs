@@ -23,7 +23,7 @@ After the final Windows Update reboot, the user will automatically be logged in 
 
 By automatically logging in and locking the user on the console, Windows Update can complete the user specific processes before the user returns to the device. In this way, the user can immediately start using their device.
 
-ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory. Active Directory join is not supported.
+ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Microsoft Entra ID.
 
 | Windows Update | shutdown -g -t 0 | User-initiated reboots | APIs with SHUTDOWN_ARSO / EWX_ARSO flags |
 |--|--|--|--|
@@ -56,7 +56,7 @@ This policy setting controls whether a device will automatically sign in and loc
 
 It only occurs if the last interactive user didn't sign out before the restart or shutdown.
 
-If the device is joined to Active Directory or Azure Active Directory, this policy only applies to Windows Update restarts. Otherwise, it applies to both Windows Update restarts and user-initiated restarts and shutdowns.
+If the device is joined to Active Directory or Microsoft Entra ID, this policy only applies to Windows Update restarts. Otherwise, it applies to both Windows Update restarts and user-initiated restarts and shutdowns.
 
 If you don't configure this policy setting, it's enabled by default. When the policy is enabled, the user is automatically signed in. Additionally, after the device boots, the session is locked with all lock screen apps configured for that user.
 
@@ -163,7 +163,8 @@ In enterprise environments where the security for user data protected by Data Pr
 |--|--|--|--|
 | Local account - Yes | Local account - Yes | Local account - No | Local account - No |
 | MSA account - Yes | MSA account - Yes | MSA account - No | MSA account - No |
-| Azure AD joined account - Yes | Azure AD joined account - Yes | Azure AD joined account - Yes (if hybrid) | Azure AD joined account - Yes |
+| Microsoft Entra joined account - Yes | Microsoft Entra joined account - Yes | Microsoft Entra joined account - Yes (if hybrid) | Microsoft Entra joined account - Yes |
+| Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes (if hybrid) |
 
 ### Credential Guard interaction
 

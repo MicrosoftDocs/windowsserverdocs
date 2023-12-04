@@ -57,7 +57,7 @@ TLS/SSL certificates on the Web Application Proxy must meet the following requir
 
 ### Service Communication Certificate
 
-This certificate isn't required for most AD FS scenarios including Azure AD and Office 365.
+This certificate isn't required for most AD FS scenarios including Microsoft Entra ID and Office 365.
 By default, AD FS configures the TLS/SSL certificate provided upon initial configuration as the service communication certificate.
 
 #### Recommendation for Service Communication Certificate
