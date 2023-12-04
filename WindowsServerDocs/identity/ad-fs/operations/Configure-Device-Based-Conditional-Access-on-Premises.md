@@ -112,7 +112,7 @@ The above PSH creates the following objects:
 
 ![Screenshot that shows the successful completion message.](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png)
 
-###        Create Service Connection Point (SCP) in AD
+### Create Service Connection Point (SCP) in AD
 If you plan to use Windows 10 domain join (with automatic registration to Microsoft Entra ID) as described here, execute the following commands to create a service connection point in AD DS
 1.  Open Windows PowerShell and execute the following:
 
