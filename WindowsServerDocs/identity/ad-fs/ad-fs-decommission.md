@@ -29,11 +29,11 @@ Additional resources to help you migrate authentication to Microsoft Entra ID.
 | [Migrate from federation to cloud authentication](/azure/active-directory/hybrid/migrate-from-federation-to-cloud-authentication)|Detailed information on how to move from using federated authentication with AD FS to cloud authentication with Microsoft Entra ID.|
 | [Deployment plan: Migrating from AD FS to password hash sync](https://aka.ms/ADFSTOPHSDPDownload) | With password hash synchronization, hashes of user passwords are synchronized from on-premises Active Directory to Microsoft Entra ID. This allows Microsoft Entra ID to authenticate users without interacting with the on-premises Active Directory.|
 | [Deployment plan: Migrating from AD FS to pass-through authentication](https://aka.ms/ADFSTOPTADPDownload)|Microsoft Entra pass-through authentication helps users sign in to both on-premises and cloud-based applications by using the same password. This feature provides your users with a better experience since they have one less password to remember. It also reduces IT helpdesk costs because users are less likely to forget how to sign in when they only need to remember one password. When people sign in using Microsoft Entra ID, this feature validates users' passwords directly against your on-premises Active Directory.|
-| [Deployment plans](/azure/active-directory/fundamentals/active-directory-deployment-plans) | Find more deployment plans for deploying features such as Microsoft Entra multifactor authentication, Conditional Access, user provisioning, seamless SSO, self-service password reset, and more! 
+| [Deployment plans](/azure/active-directory/fundamentals/active-directory-deployment-plans) | Find more deployment plans for deploying features such as Microsoft Entra multifactor authentication, Conditional Access, user provisioning, seamless SSO, self-service password reset, and more! |
 | [Tool: Active Directory Federation Services Migration Readiness Script](https://aka.ms/migrateapps/adfstools) | This is a script you can run on your on-premises Active Directory Federation Services (AD FS) server to determine the readiness of apps for migration to Microsoft Entra ID.|
-<a name='resources-for-migrating-applications-from-ad-fs-to-azure-active-directory'></a>
 
 ## Resources for migrating applications from AD FS to Microsoft Entra ID
+<a name='resources-for-migrating-applications-from-ad-fs-to-azure-active-directory'></a>
 
 Additional resources to help you migrate application access to Microsoft Entra ID.
 
