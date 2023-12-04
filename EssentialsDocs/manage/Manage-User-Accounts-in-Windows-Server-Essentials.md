@@ -53,7 +53,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 -   Assign user groups ( Windows Server Essentials only).
 
 > [!NOTE]
-> - Non-ASCII characters are not supported in  Microsoft Entra ID. Do not use any non-ASCII characters in your password, if your server is integrated with  Microsoft Entra ID.
+> - Non-ASCII characters are not supported in Microsoft Entra ID. Do not use any non-ASCII characters in your password, if your server is integrated with Microsoft Entra ID.
 >   -   The email options are only available if you install an add-in that provides email service.
 
 ##### To add a user account
