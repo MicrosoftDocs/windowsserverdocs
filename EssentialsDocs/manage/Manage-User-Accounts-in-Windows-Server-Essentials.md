@@ -292,7 +292,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 
    > [!IMPORTANT]
    > - You may not be able to change your password if the password policy for your account has been set to **Passwords never expire**.
-   >   -   Non-ASCII characters are not supported in  Microsoft Entra ID. Therefore, if your server is integrated with  Microsoft Entra ID, do not use any non-ASCII characters in your password.
+   >   - Non-ASCII characters are not supported in Microsoft Entra ID. Therefore, if your server is integrated with Microsoft Entra ID, do not use any non-ASCII characters in your password.
    >   -   If a Microsoft online account (known in  Windows Server Essentials as a Microsoft 365 account) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Microsoft 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).
 
 ###  <a name="BKMK_Access3"></a> What you should know about password policies
