@@ -68,7 +68,8 @@ To configure this scenario, you must configure the device registration capabilit
 
 To do this, follow the steps under [Setting up Microsoft Entra join in your organization](/azure/active-directory/devices/device-management-azure-portal)
 
-## Setup AD FS
+## Set up AD FS
+
 1. Create a [new AD FS 2016 farm](../deployment/deploying-a-federation-server-farm.md).
 2.  Or [migrate](../deployment/upgrading-to-ad-fs-in-windows-server.md) a farm to AD FS 2016 from AD FS 2012 R2
 4. Deploy [Microsoft Entra Connect](../deployment/upgrading-to-ad-fs-in-windows-server.md) using the Custom path to connect AD FS to Microsoft Entra ID.
