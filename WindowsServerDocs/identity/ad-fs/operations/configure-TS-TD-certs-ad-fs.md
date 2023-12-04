@@ -65,7 +65,7 @@ You can generate a new self-signed certificate manually prior to the end of the 
 1. Two certificates should be listed now. One should have a **Not After** date of approximately one year in the future. The other should have the **IsPrimary** value **False**.
 
 > [!IMPORTANT]
-> To avoid a service outage, update the certificate information on Azure AD with a valid token-signing certificate.
+> To avoid a service outage, update the certificate information on Microsoft Entra ID with a valid token-signing certificate.
 
 ## If you don't use self-signed certificates
 
@@ -115,6 +115,8 @@ If your federation partners can't consume your federation metadata, you must man
 
 If **AutoCertificateRollover** is set to `False`, AD FS doesn't automatically generate or use new token signing or token decrypting certificates. You must perform these tasks manually. After allowing a sufficient period of time for all of your federation partners to consume the new secondary certificate, promote this secondary certificate to primary. In the MMC snap-in, select the secondary token signing certificate and in the Actions pane, select **Set As Primary**.
 
-## Update Azure AD
+<a name='update-azure-ad'></a>
 
-AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials. For more information, see [Renew federation certificates for Office 365 and Azure AD](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+## Update Microsoft Entra ID
+
+AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials. For more information, see [Renew federation certificates for Office 365 and Microsoft Entra ID](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
