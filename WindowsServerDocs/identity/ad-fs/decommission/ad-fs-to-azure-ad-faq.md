@@ -28,7 +28,7 @@ Yes you can. This is quite common. Using staged rollout can help you validate a 
 
 There are a few ways. The first and recommend way is to [Microsoft Entra hybrid join](/azure/active-directory/devices/concept-azure-ad-join-hybrid) your existing Windows 10/11 domain joined machines or use Microsoft Entra join. This will provide you with the same seamless signle-sign on experience. The second way would be to leverage [seamless single-sign on](/azure/active-directory/hybrid/how-to-connect-sso-how-it-works) for non Microsoft Entra hybrid joined machines or downlevel Windows clients can still get that same experience.
 
-**I’m registering Microsoft Entra hybrid joined (AADJ) devices using AD FS device claims. How do I allow devices to continue to complete their Hybrid AADJ process with AD FS?**
+**I’m registering Microsoft Entra hybrid joined devices using AD FS device claims. How do I allow devices to continue to complete their Hybrid AADJ process with AD FS?**
 
 You can follow the [configure Microsoft Entra hybrid join](/azure/active-directory/devices/howto-hybrid-azure-ad-join#managed-domains) process for devices to complete the registration process without AD FS.  
 
