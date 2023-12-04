@@ -131,7 +131,7 @@ The status of an ARSO configuration attempt is stored in the LSA event log. Chec
 
 | Event ID | Event description | Event source |
 | --- | --- | --- |
-| 320 | `Automatic restart sign on successfully configured the autologon credentials for: Account name: <accountName> Account Domain <accountDomain>` | LSA |
+| 320 | `Automatic restart sign on successfully configured the autologon credentials for: Account name: <accountName> Account Domain: <accountDomain>` | LSA |
 | 321 | `Automatic restart sign on successfully deleted autologon credentials from LSA memory` | LSA |
 | 322 | `Automatic restart sign on failed to configure the autologon credentials with error: <errorText>` | LSA |
 
