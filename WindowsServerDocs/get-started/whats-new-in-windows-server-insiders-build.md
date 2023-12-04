@@ -5,7 +5,7 @@ ms.topic: article
 author: xelu86
 ms.author: wscontent
 ms.contributor: stacycl
-ms.date: 12/04/2023
+ms.date: 12/08/2023
 ms.prod: windows-server
 ---
 
@@ -49,9 +49,7 @@ The following keys are valid only for preview builds and expire on September 15,
 
 The following new features are specific to Windows Server with Desktop Experience only. Having both the physical devices running the operating system and the correct drivers readily available are required.
 
-### Azure Arc
-
-The Azure Arc service loads by default and can be found in the taskbar system tray. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Azure Arc](/azure/azure-arc/overview).
+## Build 25997
 
 ### Bluetooth
 
@@ -83,13 +81,19 @@ When you install and sign in for the first time, you can observe that this previ
 
 - The SMB NTLM blocking feature now supports specifying exception lists for NTLM usage. This feature allows administrators to implement a general block on NTLM usage, but still permit clients to use NTLM for specific servers that don't support Kerberos. This scenario can occur for servers that aren't part of an Active Directory domain or third-party servers that don't have Kerberos support.
 
-### Storage Replica Enhanced Log
-
-Enhanced Logs help the Storage Replica log implementation to eliminate the performance costs associated with file system abstractions, leading to improved block replication performance. To learn more, see [Storage Replica Enhanced Log](/windows-server/storage/storage-replica/storage-replica-enhanced-log).
-
 ### Wi-Fi
 
 The Wireless LAN Service feature is installed by default and the WLAN AutoConfig service startup is set to automatic.
+
+## Build 25967
+
+### Azure Arc
+
+The Azure Arc service loads by default and can be found in the taskbar system tray. Azure Arc extends the capabilities of the Azure platform, allowing for the creation of applications and services that can operate in diverse environments. These include data centers, the edge, multicloud environments, and provide increased flexibility. To learn more, see [Azure Arc](/azure/azure-arc/overview).
+
+### Storage Replica Enhanced Log
+
+Enhanced Logs help the Storage Replica log implementation to eliminate the performance costs associated with file system abstractions, leading to improved block replication performance. To learn more, see [Storage Replica Enhanced Log](/windows-server/storage/storage-replica/storage-replica-enhanced-log).
 
 ### Windows Terminal
 
