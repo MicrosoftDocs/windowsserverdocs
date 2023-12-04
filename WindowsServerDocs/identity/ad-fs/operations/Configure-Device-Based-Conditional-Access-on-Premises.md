@@ -118,7 +118,8 @@ If you plan to use Windows 10 domain join (with automatic registration to Micros
 
     `PS C:>Import-Module -Name "C:\Program Files\Microsoft Azure Active Directory Connect\AdPrep\AdSyncPrep.psm1" `
 
->Note: if necessary, copy the AdSyncPrep.psm1 file from your Microsoft Entra Connect server.  This file is located in Program Files\Microsoft Entra Connect\AdPrep
+>[!NOTE]
+>If necessary, copy the AdSyncPrep.psm1 file from your Microsoft Entra Connect server. This file is located in Program Files\Microsoft Entra Connect\AdPrep
 
 ![Screenshot that shows the path to the AdSyncPrep file.](media/Configure-Device-Based-Conditional-Access-on-Premises/device6.png)
 
