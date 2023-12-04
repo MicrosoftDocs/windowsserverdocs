@@ -20,9 +20,6 @@ Learn about the basic design and security concepts for Windows Local Administrat
 - Account password tampering protection
 - Windows safe mode
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
-
 ## Windows LAPS architecture
 
 The following figure depicts the Windows LAPS architecture:
@@ -189,6 +186,18 @@ Windows LAPS rejects unexpected attempts to modify the account's password with a
 ## Disabled in Windows safe mode
 
 When Windows is started in safe mode, DSRM mode, or in any other non-default boot mode, Windows LAPS is disabled and no passwords are backed up.
+
+## Windows LAPS integration with smart card policy
+
+The Windows LAPS-managed account is exempted when the "Interactive logon: Require Windows Hello for Business or smart card" policy (also known as SCForceOption) is enabled. See [Additional smart card Group Policy settings and registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#additional-smart-card-group-policy-settings-and-registry-keys).
+
+Windows LAPS integration with the smart-card-auth-only policy is available on the following OS platforms with the specified update or later installed:
+
+- [Windows 11 22H2 - October 10 2023 Update](https://support.microsoft.com/help/5031354)
+- [Windows 11 21H2 - October 10 2023 Update](https://support.microsoft.com/help/5031358)
+- [Windows 10 - October 10 2023 Update](https://support.microsoft.com/help/5031356)
+- [Windows Server 2022 - October 10 2023 Update](https://support.microsoft.com/help/5031364)
+- [Windows Server 2019 - October 10 2023 Update](https://support.microsoft.com/help/5031361)
 
 ## See also
 

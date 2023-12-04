@@ -2,8 +2,8 @@
 title: Windows Admin Center Overview
 description: Learn how to manage Windows Server using Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 01/07/2020
 ---
 
@@ -11,13 +11,13 @@ ms.date: 01/07/2020
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It is a free product and is ready to use in production.
+Windows Admin Center is a remote management tool for Windows Server running anywhere&mdash;physical, virtual, on-premises, in Azure, or in a hosted environment&mdash;at no extra cost.
 
 To find out what's new, see [Release history](support/release-history.md).
 
 ## Download now
 
-**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use.
+**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center)** from the Microsoft Evaluation Center.
 
 For help installing, see [Install](deploy/install.md). For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
 
@@ -27,7 +27,7 @@ You can update non-preview versions of Windows Admin Center by using Microsoft U
 
 Here are a few things you can use Windows Admin Center for:
 
-- **Simplify server management** Manage your servers and clusters with modernized versions of familiar tools such as Server Manager. Install in under five minutes and manage servers in your environment immediately, no additional configuration required. For details, see [What is Windows Admin Center?](understand/what-is.md).
+- **Simplify server management** Manage your servers and clusters with modernized versions of familiar tools such as Server Manager. Install in under five minutes and manage servers in your environment immediately, no extra configuration required. For details, see [What is Windows Admin Center?](understand/what-is.md).
 
 - **Work with hybrid solutions** Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services. For details, see [Azure hybrid services](azure/index.md)
 

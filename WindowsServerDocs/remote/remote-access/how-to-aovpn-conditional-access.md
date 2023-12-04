@@ -2,15 +2,14 @@
 title: Configure conditional access for VPN connectivity using Microsoft Entra ID
 description: Learn how to configure conditional access for VPN connectivity using Microsoft Entra ID.
 ms.topic: article
-ms.date: 07/06/2023
+ms.date: 10/31/2023
 ms.author: wscontent
 author: anaharris-ms
-
 ---
 
 # Conditional access for VPN connectivity using Microsoft Entra ID
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows 11
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
 
 In this how-to guide, you'll learn how to grant VPN users access your resources using [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Microsoft Entra Conditional Access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Microsoft Entra connected application.
 
@@ -30,7 +29,7 @@ An EAP-TLS client cannot connect unless the NPS server completes a revocation ch
 
 In this section, you'll add `IgnoreNoRevocationCheck` and `NoRevocationCheck`. By default, `IgnoreNoRevocationCheck` and `NoRevocationCheck` are set to 0 (disabled).
 
-For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [NPS CRL Check Registry Settings](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771995(v=ws.10)#ignorenorevocationcheck).
+To learn more about NPS CRL registry settings, see [Configure Network Policy Server Certificate Revocation List check registry settings](../../networking/technologies/nps/network-policy-server-certificate-revocation-list-check-registry-settings.md).
 
 >[!IMPORTANT]
 >If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set `IgnoreNoRevocationCheck=1` on both servers.
@@ -58,7 +57,6 @@ For more information on `IgnoreNoRevocationCheck` and `NoRevocationCheck`, see [
 
 
 <a name='create-root-certificates-for-vpn-authentication-with-azure-ad'></a>
-
 ## Create root certificates for VPN authentication with Microsoft Entra ID
 
 In this section, you configure conditional access root certificates for VPN authentication with Microsoft Entra ID, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
@@ -153,7 +151,6 @@ This step covers creation of the most basic Conditional Access policy.  If desi
     ![Enable policy](../media/Always-On-Vpn/15.png)
 
 9. On the **New** page, select **Create**.
-
 
 ## Deploy conditional access root certificates to on-premises AD
 

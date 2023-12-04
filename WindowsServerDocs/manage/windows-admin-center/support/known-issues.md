@@ -2,8 +2,8 @@
 title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: article
-author: jwwool
-ms.author: jeffrew
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 06/07/2019
 ---
 # Windows Admin Center known issues
@@ -24,7 +24,7 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 - Using certain versions of extensions with older versions of Windows Admin Center may result in icons not displaying properly. To fix this issue, please upgrade to the latest build of Windows Admin Center. 
 
-- In the 1910.2 release of Windows Admin Center, you may not be able to connect to Hyper-V servers on specific hardware. If you are blocked on this issue, [download our previous build](https://aka.ms/wacprevious).
+- Manually modifying URLs to include the names of different machines while using Windows Admin Center, without going through the connection experience in the UI, may result in improper loading of extensions, especially those which are compatible with specific hardware. The manual modification of URLs for navigation in Windows Admin Center isn't recommended.
 
 - If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019. The patch for Windows Server 2016 was included the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
@@ -41,12 +41,12 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 - There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the third Party Software Notice.
 
-- Windows Admin Center tool APIs may be accessed and used through other methods while a session of Windows Admin Center is active and a user has access to that session. The actions taken using these APIs will only affect the gateway machine (the machine Windows Admin Center is installed on). This will not affect machines managed remotely without authentication through the Windows Admin Center gateway.
+- Windows Admin Center tool APIs may be accessed and used through other methods while a session of Windows Admin Center is active and a user has access to that session. The actions taken using these APIs will only affect the gateway machine (the machine Windows Admin Center is installed on). This won't affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
 ### Extension Manager
 
 - When you update Windows Admin Center, you must reinstall your extensions.
-- If you add an extension feed that is inaccessible, there is no warning. [14412861]
+- If you add an extension feed that is inaccessible, there's no warning. [14412861]
 
 ## Partner extension issues
 
@@ -56,7 +56,7 @@ If you encounter an issue not described on this page, [let us know](https://aka.
 
 ### Microsoft Edge
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-microsoft-edge). [17990376]
+- If you have Windows Admin Center deployed as a service and you're using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-microsoft-edge). [17990376]
 
 ### Google Chrome
 
@@ -79,12 +79,12 @@ Remote Desktop, PowerShell, Packet Monitoring, and Events modules in Windows Adm
 ## Support for Windows Server versions before 2016 (2012 R2, 2012, 2008 R2)
 
 > [!NOTE]
-> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 R2, 2012, or 2008 R2. If you will manage Windows Server these with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers.
+> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 R2, 2012, or 2008 R2. If you'll manage Windows Server these with Windows Admin Center, you'll need to install WMF version 5.1 or higher on those servers.
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it isn't installed, you can [download and install WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
+If it'sn't installed, you can [download and install WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## Role Based Access Control (RBAC)
 
@@ -98,7 +98,7 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 ### Certificates
 
-- Cannot import .PFX Encrypted Certificate in to current user store. [11818622]
+- can't import .PFX Encrypted Certificate in to current user store. [11818622]
 
 ### Events
 
@@ -116,7 +116,7 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 - PowerShell is affected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
 
-- Pasting with a single right-click as in the desktop PowerShell console doesn't work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
+- Pasting with a single right-click as in the desktop PowerShell console doesn't work. Instead you'll get the browser's context menu, where you can select paste. Ctrl-V works as well.
 
 - Ctrl-C to copy doesn't work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
 
@@ -142,7 +142,7 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 - To do any copy/paste within the remote session, you can copy as normal (right-click + copy or Ctrl+C), but paste requires right-click + paste (Ctrl+V doesn't work)
 
-- You cannot send the following key commands to the remote session
+- You can't send the following key commands to the remote session
   - Alt+Tab
   - Function keys
   - Windows Key
@@ -168,7 +168,7 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 - After installing updates, install status may be cached and require a browser refresh.
 
-- You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, try the following remediation steps on the managed node -
+- You may encounter the error: "Keyset doesn't exist" when attempting to set up Azure Update management. In this case, try the following remediation steps on the managed node -
     1. Stop ‘Cryptographic Services' service.
     2. Change folder options to show hidden files (if required).
     3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
@@ -177,9 +177,9 @@ If it isn't installed, you can [download and install WMF 5.1](https://www.micros
 
 ### Virtual Machines
 
-- When managing the virtual machines on a Windows Server 2012 host, the in-browser VM connect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
+- When managing the virtual machines on a Windows Server 2012 host, the in-browser VMConnect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
 
-- Azure Site Recovery – If Azure Site Recovery is set up on the host outside of Windows Admin Center, you will be unable to protect a VM from within Windows Admin Center [18972276]
+- Azure Site Recovery – If Azure Site Recovery is set up on the host outside of Windows Admin Center, you'll be unable to protect a VM from within Windows Admin Center [18972276]
 
 - Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
@@ -193,7 +193,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 
 - If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Microsoft Entra ID to log on to your Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account. [16568455]
 
-- When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
+- When you try to manage the localhost, you'll be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
 
 - Windows 10 doesn't have WinRM/PowerShell remoting on by default.
 
@@ -204,7 +204,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 ## Cluster Deployment
 
 ### Step 1.2
-Mixed workgroup machines are currently not supported when adding servers. All machines used for clustering need to belong to same workgroup. If they don't, the next button will be disabled, and the following error will appear: "Cannot create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again."
+Mixed workgroup machines are currently not supported when adding servers. All machines used for clustering need to belong to same workgroup. If they don't, the next button will be disabled, and the following error will appear: "can't create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again."
 
 ### Step 1.4
 Hyper-V needs to be installed on virtual machines running the Azure Stack HCI OS. Trying to enable the Hyper-V feature for these virtual machines will fail with the error below:
@@ -223,7 +223,7 @@ Sometimes servers take longer than expected to restart after updates are install
 If you would like to restart the server manually, exit the current wizard session. After you have restarted the server, you may restart the wizard.
 
 ### Stage 4 Storage
-In stage 4, an error can occur if a user has deleted a cluster and has not cleared the storage pools from the cluster. That means the storage pools that are on the system are locked by the old cluster object and only the user can manually clear them. 
+In stage 4, an error can occur if a user has deleted a cluster and hasn't cleared the storage pools from the cluster. That means the storage pools that are on the system are locked by the old cluster object and only the user can manually clear them. 
 
 To clear the configuration, the user needs to run:
 
@@ -263,7 +263,7 @@ To avoid this scenario in the first place, the user will need to run the followi
     ```
 
 ### Stretch cluster creation
-It is recommended to use servers that are domain-joined when creating a stretch cluster. There is a network segmentation issue when trying to use workgroup machines for stretch cluster deployment due to WinRM limitations.
+it's recommended to use servers that are domain-joined when creating a stretch cluster. there's a network segmentation issue when trying to use workgroup machines for stretch cluster deployment due to WinRM limitations.
 
 ### Undo and start over
 When using same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) for instructions on how to clean up your cluster.
@@ -327,7 +327,7 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
   > [!Note]
   > For virtual switch teaming to be successful in a virtual machine environment, the following command needs to be run in PowerShell on the host soon after the virtual machines are created: Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
 
-If you are a deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To do this, run the following command before creating the virtual machines:
+If you're a deploying a cluster using the Azure Stack HCI OS, there's an extra requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To do this, run the following command before creating the virtual machines:
 
 ```PowerShell
 Install-WindowsFeature –VHD <Path to the VHD> -Name Hyper-V, RSAT-Hyper-V-Tools, Hyper-V-PowerShell
@@ -357,15 +357,15 @@ When attempting to register your Windows Admin Center gateway in the Azure China
    
 In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
 
-* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
+* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you're signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
 
 * If you successfully sign into Azure during gateway registration but don't see visual confirmation on the **Azure** page of your Windows Admin Center settings, try navigating to a different page in settings before navigating back to the **Azure** page. 
 
 * The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
 
-* If you have already given admin approval for Windows Admin Center in the Azure portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
+* If you have already given admin approval for Windows Admin Center in the Azure portal and you're still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
    
-* If your proxy is mis-configured, then you may get the error message "Error: Value cannot be null. Parameter name: httpClientFactory." Ensure that your proxy is configured correctly by going to **Settings** page. 
+* If your proxy is mis-configured, then you may get the error message "Error: Value can't be null. Parameter name: httpClientFactory." Ensure that your proxy is configured correctly by going to **Settings** page. 
 
 ### Azure File Sync permissions
 

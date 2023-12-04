@@ -34,7 +34,7 @@ Microsoft strongly recommends customer upgrade to the latest available operating
 
 ## Update the Windows Server Active Directory schema
 
-The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. This operation can be performed on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but may also be performed on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
+The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. This operation can be performed on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but can also be performed on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
 
 ```powershell
 PS C:\> Update-LapsADSchema
@@ -101,6 +101,8 @@ If you want to configure a custom local administrator account, you should config
 
 You can configure other settings, like PasswordLength, as needed for your organization.
 
+When you don't configure a given setting, the default value is applied - be sure to understand those defaults. For example if you enable password encryption but don't configure the ADPasswordEncryptionPrincipal setting, the password is encrypted so that only Domain Admins can decrypt it. You can configure ADPasswordEncryptionPrincipal with a different setting if you want non-Domain Admins to be able to decrypt.
+
 ## Update a password in Windows Server Active Directory
 
 Windows LAPS processes the currently active policy on a periodic basis (every hour) and responds to Group Policy change notifications. It responds based on the policy and change notifications.
@@ -135,7 +137,7 @@ This output result indicates that password encryption is enabled (see `Source`).
 
 ## Rotate the password
 
-Windows LAPS reads the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password has expired, a new password is generated and stored immediately.
+Windows LAPS reads the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password is expired, a new password is generated and stored immediately.
 
 In some situations (for example, after a security breach or for ad-hoc testing), you might want to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
 

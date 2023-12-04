@@ -23,7 +23,7 @@ After the final Windows Update reboot, the user will automatically be logged in 
 
 By automatically logging in and locking the user on the console, Windows Update can complete the user specific processes before the user returns to the device. In this way, the user can immediately start using their device.
 
-ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory.
+ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory. Active Directory join is not supported.
 
 | Windows Update | shutdown -g -t 0 | User-initiated reboots | APIs with SHUTDOWN_ARSO / EWX_ARSO flags |
 |--|--|--|--|
@@ -120,17 +120,20 @@ If you disable or don't configure this setting, automatic sign on will default t
 
 ## Troubleshooting
 
-When Winlogon automatically locks, Winlogon's state trace is stored in the Winlogon event log.
+When Winlogon performs a sign-in, Winlogon's state trace is stored in the Winlogon event log. Check **Applications and Services Logs > Microsoft > Windows > Winlogon > Operational** in Event Viewer for the following Winlogon events:
 
-The status of an Autologon configuration attempt is logged
+| Event ID | Event description | Event source |
+| --- | --- | --- |
+| 1 | `Authentication started.` | Winlogon |
+| 2 | `Authentication stopped. Result 0` | Winlogon |
 
-- If it's successful
-   - records it as such
-- If it's a failure:
-   - records what the failure was
-- When BitLocker's state changes:
-   - the removal of credentials will be logged
-   - These are stored in the LSA Operational log.
+The status of an ARSO configuration attempt is stored in the LSA event log. Check **Applications and Services Logs > Microsoft > Windows > LSA > Operational** in Event Viewer for the following LSA events:
+
+| Event ID | Event description | Event source |
+| --- | --- | --- |
+| 320 | `Automatic restart sign on successfully configured the autologon credentials for: Account name: <accountName> Account Domain: <accountDomain>` | LSA |
+| 321 | `Automatic restart sign on successfully deleted autologon credentials from LSA memory` | LSA |
+| 322 | `Automatic restart sign on failed to configure the autologon credentials with error: <errorText>` | LSA |
 
 ### Reasons why autologon might fail
 
@@ -161,7 +164,6 @@ In enterprise environments where the security for user data protected by Data Pr
 | Local account - Yes | Local account - Yes | Local account - No | Local account - No |
 | MSA account - Yes | MSA account - Yes | MSA account - No | MSA account - No |
 | Azure AD joined account - Yes | Azure AD joined account - Yes | Azure AD joined account - Yes (if hybrid) | Azure AD joined account - Yes |
-| Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes (if hybrid) |
 
 ### Credential Guard interaction
 
