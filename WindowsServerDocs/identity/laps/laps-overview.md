@@ -64,7 +64,7 @@ Windows Tackling Tech discussion (August 2023):
 
 You can use Windows LAPS for several primary scenarios:
 
-- Back up local administrator account passwords to [Microsoft Entra ID](/azure/active-directory/devices/concept-azure-ad-join) (for Microsoft Entra joined devices)
+- Back up local administrator account passwords to [Microsoft Entra ID](/azure/active-directory/devices/concept-azure-ad-join) (for Microsoft Entra-joined devices)
 
 - Back up local administrator account passwords to Windows Server Active Directory (for Windows Server Active Directory-joined clients and servers)
 
