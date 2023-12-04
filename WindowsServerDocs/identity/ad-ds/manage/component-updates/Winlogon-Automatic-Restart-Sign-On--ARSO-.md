@@ -120,17 +120,20 @@ If you disable or don't configure this setting, automatic sign on will default t
 
 ## Troubleshooting
 
-When Winlogon automatically locks, Winlogon's state trace is stored in the Winlogon event log.
+When Winlogon performs a sign-in, Winlogon's state trace is stored in the Winlogon event log. Check **Applications and Services Logs > Microsoft > Windows > Winlogon > Operational** in Event Viewer for the following Winlogon events:
 
-The status of an Autologon configuration attempt is logged
+| Event ID | Event description | Event source |
+| --- | --- | --- |
+| 1 | `Authentication started.` | Winlogon |
+| 2 | `Authentication stopped. Result 0` | Winlogon |
 
-- If it's successful
-   - records it as such
-- If it's a failure:
-   - records what the failure was
-- When BitLocker's state changes:
-   - the removal of credentials will be logged
-   - These are stored in the LSA Operational log.
+The status of an ARSO configuration attempt is stored in the LSA event log. Check **Applications and Services Logs > Microsoft > Windows > LSA > Operational** in Event Viewer for the following LSA events:
+
+| Event ID | Event description | Event source |
+| --- | --- | --- |
+| 320 | `Automatic restart sign on successfully configured the autologon credentials for: Account name: <accountName> Account Domain: <accountDomain>` | LSA |
+| 321 | `Automatic restart sign on successfully deleted autologon credentials from LSA memory` | LSA |
+| 322 | `Automatic restart sign on failed to configure the autologon credentials with error: <errorText>` | LSA |
 
 ### Reasons why autologon might fail
 

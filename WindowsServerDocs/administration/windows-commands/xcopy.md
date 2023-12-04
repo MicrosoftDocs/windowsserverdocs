@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 ms.author: jgerend
 author: JasonGerend
-ms.date: 09/06/2023
+ms.date: 11/11/2023
 ---
 
 # xcopy
@@ -56,6 +56,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/j|Copies files without buffering. Recommended for very large files. This parameter was added in Windows Server 2008 R2.|
 |/compress|Request network compression during file transfer where applicable.|
 |/?|Displays help at the command prompt.|
+|/sparse|Enables retaining the sparse state of files during copy.|
 
 ## Remarks
 
