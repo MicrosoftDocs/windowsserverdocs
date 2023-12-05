@@ -11,7 +11,7 @@ metadata:
   ms.prod: windows-server
 title: Frequently asked questions about Storage Replica
 summary: |
-  >Applies to: Windows Server 2019, Windows Server 2016
+  >Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2019
   
   This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
   
@@ -271,6 +271,23 @@ sections:
           Can you place cluster disks in maintenance mode?
         answer: |
           Storage Replica will block any cluster disks from entering maintenance mode.  For tasks such as enabling or disabling Bitlocker, the disks must be in maintenance mode.  To perform tasks that require the disks to be in maintenance mode, the partnership would need to be broken first and created again once it is complete.
+
+      - question: |
+          Can you configure Storage Replica between different operating system version?
+        answer: |
+          Storage Replica will block a new partnership if the replication log versions do not match or if a capability is not supported by both servers. An example of a capability that does not match between OS versions is SR compression, which was first added in Windows Server 2022. Attempting to configure a partnership for an unsupported capability will return:
+         
+          "The requested operation is not supported."
+          
+          The current log version interoperability matrix is:
+
+          Server OS 1          |  Server OS 2          |   Replication supported
+          Windows Server 2016  |  Windows Server 2016  |   Yes
+          Windows Server 2016  |  Windows Server 2019  |   No
+          Windows Server 2016  |  Windows Server 2022  |   No
+          Windows Server 2019  |  Windows Server 2019  |   Yes
+          Windows Server 2019  |  Windows Server 2022  |   Yes
+          Windows Server 2022  |  Windows Server 2022  |   Yes
 
       - question: |
           Related topics
