@@ -4,32 +4,35 @@ description: Learn about Windows Server Annual Channel for containers
 ms.topic: conceptual
 author: gswashington
 msauthor: robinharwood
-ms.date: 11/30/2023
+ms.date: 12/17/2023
 
 ---
 
 # Windows Server Annual Channel for containers
 
-Applies To: Windows Server 2022 -- LTSC (Long-Term Servicing Channel) 23H2
-<!-- Need to clarify with Heidi or Robin on how to stipulate applicable versions of Windows Server here; the LTSC versions as I understand it apply to Windows 10 Enterprise OS  -->
+Applies to: Windows Server 2022
+<!-- alternately ... Applies To: Windows Server 2022 -- LTSC (Long-Term Servicing Channel) 23H2 -->
 
-Windows Server Annual Channel for Containers is an edition of Windows Server for Azure Kubernetes Services and container-focused Windows Server implemtations that focuses on improving efficiency and providing optimized portability that's compatible with Windows and Linux operating environments.
+Windows Server Annual Channel for Containers is an edition of Windows Server designed for Azure Kubernetes Services and container-focused Windows Server deployments to improve efficiency and provide optimized portability for both Windows and Linux environments.
 
-Windows Server Annual Channel for Containers features a Long-Term Servicing Channel (LTSC) and yearly product updates with new functionality options. Windows on Azure Kubernetes Services (AKS) customers can benefit through a new Windows operating system SKU with versioning aligned to Kubernetes versions, creating a parallel to the Linux upgrade process.
+Windows Server Annual Channel for Containers is updated on a Long-Term Servicing Channel (LTSC), which means it updates every year with new features and functionality. As an added benefit for Windows on Azure Kubernetes Services customers, its Windows operating system SKU has versioning aligned to Kubernetes versions, much like the Linux upgrade process.
 
 ## Portability
 
-Portability is a central feature of Windows Server Annual Channel for containers. Portability addresses a key difference between Windows and Linux containers that prevents your timely access to the latest Windows Server features. Windows containers previously required that workloads have matching container image versions. For example, Windows Server 2019 process-isolated containers can't run on a Windows Server 2022 host.
+Portability is a feature introduced in Windows Server Annual Channel for Containers that lets users run workloads with different container image versions. Previously, users could only run workloads with matching image versions. For example, a user running a Windows Server 2022 host couldn't run Windows Server 2019 process-isolated containers.
 
-The new portability functionality enables Windows Server 2022-based container image operating systems to run on newer versions of Windows Server host operating systems such as the new annual channel release. This support enables container services like AKS to provide updated container host versions of Windows Server on a frequent basis without requiring you to update their containers, much like Linux does already. Portability for Windows containers not only streamlines the upgrade process but empowers developers to leverage the benefits of container technology with enhanced flexibility and compatibility.
+Portability lets Windows Server 2022-based container images to run on session hosts running later versions of Windows Server. This increased support helps container services like AKS to update the OSes on container hosts on a more frequent basis without requiring you to update the containers themselves. Portability doesn't only streamline the upgrade process, but also helps developers take full advantage of the enhanced flexibility and compatibility that containers offer.
 
-Developers and operations teams can opt into the new annual channel by updating their container host to Annual channel version 23H2 without being required to rebuild Windows Server 2022 LTSC container images. To ensure the reliability of the annual channelOnce the new container host is released, you can deploy and test your Window Server 2022 LTSC container images to validate. Note Window Server 2022 is the only supported image on the 23H2 host.
+Developers and operations teams can opt into the new annual channel by updating their container host to Annual Channel Version 23H2 without being required to rebuild their existing Windows Server 2022 LTSC container images. Once you've set up the annual channel, make sure to validate your container images by deploying and testing them.
 
-All container images (Nano Server, Server Core, Windows Server) ship with Windows Server LTSCs such as Windows Server 2019 and Windows Server 2022. Container image portability enables you to upgrade your container hosts at a faster cadence without having to in-tandem update your container images, aligning more to the Linux container model.
+>[!NOTE]
+>Hosts running Annual Channel 23H2 currently only support Window Server 2022 containers.
 
-Azure Kubernetes Services is supported by Windows Server 2019 and Windows Server 2022 hosts. Windows Server Annual Channel for Containers is an additional operating system option (along with Kubernetes 1.28). You can create new node-pools based on the annual channel and keep deploying your Windows Server 2022 container images on those nodes. Microsoft will update the annual channel version automatically, annualy, along with new Kubernetes releases (similar to how Ubuntu updates are managed). Follow LTSC for image releases and update your operating system images appropriately.
+Nano Server, Server Core, and Windows Server container images come with Long-Term Servicing Channels (LTSCs) for containers running Windows Server 2019 and Windows Server 2022. Built-in portability allows these containers to upgrade at a faster cadence instead of needing in-tandem updates, making them align more closely with the Linux container model.
 
-## See also
+Azure Kubernetes Services currently support Windows Server 2019 and Windows Server 2022 hosts. Windows Server Annual Channel for Containers is another container OS option that Microsoft offers along with Kubernetes 1.28. You can create new node pools based on the annual channel and keep deploying your Windows Server 2022 container images on those nodes. Microsoft updates the annual channel version and any new Kubernetes releases on an annual basis automatically, much like Ubuntu updates. However, it's also a good idea to follow the latest LTSC releases to make sure your containers are up to date.
+
+## Related content
 
 - [](.md)
 - [](.md)
