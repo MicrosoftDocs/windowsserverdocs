@@ -48,21 +48,25 @@ Windows Server allows you to use the latest features – including the latest se
 delivers the best performance.
 
 > [!TIP]
-> You can upgrade to a newer version of Windows Server by up to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or Windows Server
-> 2022. If you are using the
+>
+> - Beginning with Windows Server 2025, you can upgrade from an older version of Windows Server from Windows Server 2016 and later.
+>
+> - With Windows Server 2022 and earlier, you can upgrade to a newer version of Windows Server by up
+> to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019
+> or Windows Server 2022. If you are using the
 > [Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
 > you can only one version at at time.
 
 In this table you can see the supported upgrade paths, based on the version you're currently on.
 
-| Upgrade from / to | Windows   Server 2008 R2 | Windows   Server 2012 | Windows   Server 2012 R2 | Windows   Server 2016 | Windows   Server 2019 | Windows   Server 2022 |
-|--|--|--|--|--|--|--|
-| Windows   Server 2008 | Yes | Yes | - | - | - | - |
-| Windows   Server 2008 R2 | - | Yes | Yes | - | - | - |
-| Windows   Server 2012 | - | - | Yes | Yes | - | - |
-| Windows   Server 2012 R2 | - | - | - | Yes | Yes | - |
-| Windows   Server 2016 | - | - | - | - | Yes | Yes |
-| Windows   Server 2019 | - | - | - | - | - | Yes |
+| Upgrade from / to | Windows   Server 2012 R2 | Windows   Server 2016 | Windows   Server 2019 | Windows   Server 2022 | Windows   Server 2025 |
+|--|--|--|--|--|--|
+| Windows   Server 2012 | Yes | Yes | - | - | - |
+| Windows   Server 2012 R2 | - | Yes | Yes | - | - |
+| Windows   Server 2016 | - | - | Yes | Yes | Yes |
+| Windows   Server 2019 | - | - | - | Yes | Yes |
+| Windows   Server 2022 | - | - | - | - | Yes |
+| Windows   Server 2025 | - | - | - | - | Yes |
 
 You can also upgrade from an evaluation version of the operating system to a retail version, from an
 older retail version to a newer version, or, in some cases, from a volume-licensed edition of the
