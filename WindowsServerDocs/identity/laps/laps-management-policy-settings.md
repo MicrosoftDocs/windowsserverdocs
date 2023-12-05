@@ -96,13 +96,13 @@ Use this setting to configure the name of the managed local administrator accoun
 If not specified, this setting defaults to managing the built-in local administrator account.
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage the built-in local administrator account, you must ensure that the account is enabled. Windows LAPS doesn't enable the account.
-
-> [!IMPORTANT]
 > Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created and enabled. Windows LAPS doesn't create or enable the account.
+> You can configure the specified account (built-in or custom) as either enabled or disabled. Windows LAPS will manage that account's password in either state. If left in a disabled state however, the account must obviously first be enabled in order to be actually used.
+
+> [!IMPORTANT]
+> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account.
 
 ### PasswordAgeDays
 
@@ -169,13 +169,13 @@ Supported values are either 1 (True) or 0 (False).
 
 ### ADPasswordEncryptionPrincipal
 
-Use this setting to configure the name or security identifier (SID) of a user or group that can decrypt the password that's stored in Active Directory.
+Use this setting to configure the name or security identifier (SID) of a user or group that can decrypt the password stored in Active Directory.
 
 This setting is ignored if the password currently is stored in Azure.
 
 If not specified, only members of the Domain Admins group in the device's domain can decrypt the password.
 
-If specified, the specified user or group can decrypt the password that's stored in Active Directory.
+If specified, the specified user or group can decrypt the password stored in Active Directory.
 
 > [!IMPORTANT]
 > The string that's stored in this setting must be either an SID in string form or the fully qualified name of a user or group. Valid examples include:
