@@ -76,11 +76,11 @@ enabled, this policy can be configured with the following settings:
 - **Require DoH**. Will require that queries are performed using DoH. If
     configured DNS servers don't support DoH, name resolution will fail.
 
-    ![screenshot of dns configuration](../media/doh-client-support/dns-configuration.png)
+    ![screenshot of dns configuration.](../media/doh-client-support/dns-configuration.png)
 
 Don't enable the Require DoH option for domain joined computers as
 Active Directory Domain Services is heavily reliant on DNS because the Windows
-Server DNS Server service does not support DoH queries. If you require DNS
+Server DNS Server service doesn't support DoH queries. If you require DNS
 query traffic on Active Directory Domain Services network to be encrypted,
 consider implementing IPsec based connection security rules to protect this
 traffic. See [Securing end-to-end IPsec connections by using IKEv2](/windows/security/threat-protection/windows-firewall/securing-end-to-end-ipsec-connections-by-using-ikev2) for more information.
