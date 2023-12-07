@@ -292,11 +292,9 @@ sections:
 
           | Replication from / to | Windows   Server 2016                                                     | Windows   Server 2019                                                                | Windows   Server 2022                                                                 |
           |-----------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-          | Windows   Server 2016 | :::image type="icon" source="../../../../media/yes.svg" border="false"::: | :::image type="icon" source="../../../../media/no.svg" border="false":::             | :::image type="icon" source="../../../../media/no.svg" border="false":::              |
-          | Windows   Server 2019 | :::image type="icon" source="../../../../media/no.svg" border="false":::  | :::image type="icon" source="../../../../media/yes.svg" border="false":::            | :::image type="icon" source="../../../../media/yes.svg" border="false":::<sup>1</sup> |
-          | Windows   Server 2022 | :::image type="icon" source="../../../../media/no.svg" border="false":::  | :::image type="icon" source="../../../../media/no.svg" border="false":::<sup>1</sup> | :::image type="icon" source="../../../../media/yes.svg" border="false":::             |
-
-          <sup>1</sup> One way |<sup>1</sup> One way
+          | Windows   Server 2016 | :::image type="icon" source="../../../media/yes.svg" border="false"::: | :::image type="icon" source="../../../media/no.svg" border="false":::             | :::image type="icon" source="../../../media/no.svg" border="false":::              |
+          | Windows   Server 2019 | :::image type="icon" source="../../../media/no.svg" border="false":::  | :::image type="icon" source="../../../media/yes.svg" border="false":::            | :::image type="icon" source="../../../media/yes.svg" border="false":::             |
+          | Windows   Server 2022 | :::image type="icon" source="../../../media/no.svg" border="false":::  | :::image type="icon" source="../../../media/no.svg" border="false":::             | :::image type="icon" source="../../../media/yes.svg" border="false":::             |
 
       - question: |
           Related topics
