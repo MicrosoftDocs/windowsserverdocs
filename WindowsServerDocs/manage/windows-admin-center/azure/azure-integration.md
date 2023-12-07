@@ -52,6 +52,23 @@ If you wish to configure an Azure AD app manually, rather than using the Azure A
 > [!NOTE]
 > If you have Microsoft Defender Application Guard enabled for your browser, you won't be able to register Windows Admin Center with Azure or sign into Azure.
 
+## Troubleshooting Single-Page Application error on Azure login
+
+If you've recently updated your Windows Admin Center instance to a newer version, and your gateway was previously registered with Azure, you may encounter an error stating "cross-origin token redemption is permitted only for the 'Single-Page Application' client type" upon signing into Azure. This is because Windows Admin Center has changed the way we perform authentication based on [general Microsoft guidance](/entra/identity-platform/v2-oauth-implicit-grant-flow#prefer-the-auth-code-flow.md). Where we previously used the implicit grant flow, we are now using the authorization code flow. 
+
+If you'd like to continue using your existing app registration for your Windows Admin Center application, use [Microsoft Entra admin center](https://entra.microsoft.com/) to update the registration's redirect URIs to the Single-Page Application (SPA) platform. Doing so enables the authorization code flow with Proof Key for Code Exchange (PKCE) and cross-origin resource sharing (CORS) support for applications that use that registration.
+
+Follow these steps for application registrations that are currently configured with **Web** platform redirect URIs:
+1.	Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+2.	Navigate to **Identity > Applications > App registrations**, select your application, and then **Authentication**.
+3.	In the **Web** platform tile under **Redirect URIs**, select the warning banner indicating that you should migrate your URIs.
+![img](../media/entra-uri-warning-banner.png)
+4. Select the redirect URI for your application and then select **Configure**. These redirect URIs should now appear in the **Single-page application** platform tile, showing that CORS support with the authorization code flow and PKCE is enabled for these URIs.
+![img](../media/entra-migrate-uris.png)
+
+Instead of updating existing URIs, you can instead create a new application registration for your gateway. App registrations that are newly created for Windows Admin Center through the gateway registration flow create Single-Page Application platform redirect URIs. 
+
+If you cannot migrate your application registration's redirect URIs to use auth code dlow, you can continue to use the existing application registration as is. To do so, you must unregister your Windows Admin Center gateway and re-register with the same application registration ID.
 
 ## Stay updated
 
