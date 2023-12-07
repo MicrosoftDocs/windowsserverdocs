@@ -13,7 +13,7 @@ ms.date: 09/12/2023
 Starts a new instance of the command interpreter, Cmd.exe. If used without parameters, **cmd** displays the version and copyright information of the operating system.
 
 > [!NOTE]
-> Going forward, our focus will be on ensuring the security of Cmd.exe, with no plans for introducing new features. The decision is rooted in the challenge of making improvements without inadvertently impacting users who rely on specific legacy features. While Cmd.exe remains an integral part of Windows operations, users seeking more advanced capabilities are encouraged to explore [PowerShell](https://learn.microsoft.com/powershell/) for enhanced scripting and automation.
+> Users seeking more advanced capabilities are encouraged to explore [PowerShell](https://learn.microsoft.com/powershell/) for enhanced scripting and automation.
 
 ## Syntax
 
