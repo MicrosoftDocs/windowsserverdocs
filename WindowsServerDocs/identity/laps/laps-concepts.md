@@ -14,27 +14,30 @@ Learn about the basic design and security concepts for Windows Local Administrat
 - Architecture
 - Basic scenario flow
 - Background policy processing cycle
-- Azure Active Directory passwords
+- Microsoft Entra passwords
 - Windows Server Active Directory passwords
 - Password reset after authentication
 - Account password tampering protection
 - Windows safe mode
 
+> [!IMPORTANT]
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md).
+
 ## Windows LAPS architecture
 
 The following figure depicts the Windows LAPS architecture:
 
-:::image type="content" source="./media/laps-concepts/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Azure Active Directory, and Windows Server Active Directory.":::
+:::image type="content" source="./media/laps-concepts/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
 
 The Windows LAPS architecture diagram has several key components:
 
 - **IT admin**: Represents collectively the various IT admin roles that might be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
 
-- **Managed device**: Represents an Azure Active Directory-joined or Windows Server Active Directory-joined device on which you want to manage a local administrator account. The feature is composed of a few key binaries: *laps.dll* for core logic, *lapscsp.dll* for configuration service provider (CSP) logic, and *lapspsh.dll* for PowerShell cmdlet logic. You also can configure Windows LAPS by using Group Policy. Windows LAPS responds to Group Policy Object (GPO) change notifications. The managed device can be a Windows Server Active Directory domain controller and be configured to back up Directory Services Repair Mode (DSRM) account passwords.
+- **Managed device**: Represents a Microsoft Entra joined or Windows Server Active Directory-joined device on which you want to manage a local administrator account. The feature is composed of a few key binaries: *laps.dll* for core logic, *lapscsp.dll* for configuration service provider (CSP) logic, and *lapspsh.dll* for PowerShell cmdlet logic. You also can configure Windows LAPS by using Group Policy. Windows LAPS responds to Group Policy Object (GPO) change notifications. The managed device can be a Windows Server Active Directory domain controller and be configured to back up Directory Services Repair Mode (DSRM) account passwords.
 
 - **Windows Server Active Directory**: An on-premises Windows Server Active Directory deployment.
 
-- **Azure Active Directory**: An Azure Active Directory deployment running in the cloud.
+- **Microsoft Entra ID**: a Microsoft Entra deployment running in the cloud.
 
 - **Microsoft Intune** The preferred Microsoft device policy management solution, also running in the cloud.
 
@@ -42,17 +45,17 @@ The Windows LAPS architecture diagram has several key components:
 
 The first step in a basic Windows LAPS scenario is to configure the Windows LAPS policy for your organization. We recommend that you use the following configuration options:
 
-- **Azure Active Directory-joined devices**: Use [Microsoft Intune](/mem/intune).
+- **Microsoft Entra joined devices**: Use [Microsoft Intune](/mem/intune).
 
 - **Windows Server Active Directory-joined devices**: Use Group Policy.
 
-- **Hybrid Azure Active Directory-joined devices that are enrolled with Microsoft Intune**: Use [Microsoft Intune](/mem/intune).
+- **Microsoft Entra hybrid joined devices that are enrolled with Microsoft Intune**: Use [Microsoft Intune](/mem/intune).
 
 After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a new, random password that's compliant with the current policy's length and complexity requirements. The password is validated against the local device's password complexity policy.
 
-When a new password is validated, the device stores the password in the configured directory, either Windows Server Active Directory or Azure Active Directory. An associated password expiration time that's based on the current policy's password age setting also is computed and stored in the directory. The device rotates the password automatically when the password expiration time is reached.
+When a new password is validated, the device stores the password in the configured directory, either Windows Server Active Directory or Microsoft Entra ID. An associated password expiration time that's based on the current policy's password age setting also is computed and stored in the directory. The device rotates the password automatically when the password expiration time is reached.
 
-When the local account password is stored in the relevant directory, an authorized IT admin can access the password. Passwords that are stored in Azure Active Directory are secured via a role-based access control model. Passwords that are stored in Windows Server Active Directory are secured via access control lists (ACLs) and also optionally via password encryption.
+When the local account password is stored in the relevant directory, an authorized IT admin can access the password. Passwords that are stored in Microsoft Entra ID are secured via a role-based access control model. Passwords that are stored in Windows Server Active Directory are secured via access control lists (ACLs) and also optionally via password encryption.
 
 You can rotate the password before the normally expected expiration time. Rotate a password before a scheduled expiration by using one of the following methods:
 
@@ -69,9 +72,9 @@ When the background task runs, it executes the following basic flow:
 
 :::image type="content" source="./media/laps-concepts/laps-concepts-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
 
-The obvious key difference between the Azure Active Directory flow and the Windows Server Active Directory flow is related to how password expiration time is checked. In both scenarios, password expiration time is stored side-by-side with the latest password in the directory.
+The obvious key difference between the Microsoft Entra ID flow and the Windows Server Active Directory flow is related to how password expiration time is checked. In both scenarios, password expiration time is stored side-by-side with the latest password in the directory.
 
-In the Azure Active Directory scenario, the managed device doesn't poll Azure Active Directory. Instead, the current password expiration time is maintained locally on the device.
+In the Microsoft Entra scenario, the managed device doesn't poll Microsoft Entra ID. Instead, the current password expiration time is maintained locally on the device.
 
 In the Windows Server Active Directory scenario, the managed device regularly polls the directory to query the password expiration time, and it acts when the password expires.
 
@@ -90,9 +93,11 @@ Windows LAPS does respond to Group Policy change notifications. You can manually
 > [!TIP]
 > The earlier released Microsoft LAPS (legacy Microsoft LAPS) was built as a Group Policy (GPO) Client Side Extension (CSE). GPO CSEs are loaded and invoked in every Group Policy refresh cycle. The frequency of the legacy Microsoft LAPS polling cycle is the same as the frequency of the Group Policy refresh cycle. Windows LAPS is not built as a CSE, so its polling cycle is hard-coded to once per hour. Windows LAPS is not affected by the Group Policy refresh cycle.
 
-## Azure Active Directory passwords
+<a name='azure-active-directory-passwords'></a>
 
-When you back up passwords to Azure Active Directory, managed local account passwords are stored on the Azure Active Directory device object. Windows LAPS authenticates to Azure Active Directory by using the device identity of the managed device. Data that's stored in Azure Active Directory is highly secure, but for extra protection, the password is further encrypted before it's persisted. This extra encryption layer is removed before the password is returned to authorized clients.
+## Microsoft Entra passwords
+
+When you back up passwords to Microsoft Entra ID, managed local account passwords are stored on the Microsoft Entra device object. Windows LAPS authenticates to Microsoft Entra ID by using the device identity of the managed device. Data that's stored in Microsoft Entra ID is highly secure, but for extra protection, the password is further encrypted before it's persisted. This extra encryption layer is removed before the password is returned to authorized clients.
 
 By default, only members of the Global Administrator, Cloud Device Administrator, and Intune Administrator roles can retrieve the clear-text password.
 
@@ -164,7 +169,7 @@ When encrypted password history is enabled and it's time to rotate the password,
 
 Windows LAPS supports backing up the DSRM account password on Windows Server domain controllers. DSRM account passwords can be backed up only to Windows Server Active Directory and if password encryption is enabled. Otherwise, this feature works almost identically to how encrypted password support works for Windows Server Active Directory-joined clients. 
 
-Backing up DSRM passwords to Azure Active Directory isn't supported.
+Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 
 > [!IMPORTANT]
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
@@ -210,5 +215,5 @@ Windows LAPS integration with the smart-card-auth-only policy is available on th
 Now that you understand the basic concepts of the Windows LAPS design, get started with one of the following scenarios:
 
 - [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
-- [Get started with Windows LAPS for Azure Active Directory](laps-scenarios-azure-active-directory.md)
+- [Get started with Windows LAPS for Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
