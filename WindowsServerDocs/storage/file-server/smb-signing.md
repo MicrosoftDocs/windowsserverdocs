@@ -1,5 +1,5 @@
 ---
-title: Disable SMB signing on third-party servers
+title: Control SMB signing behavior
 description: How to disable SMB singing on third-party servers using Windows 11.
 ms.topic: article
 author: Heidilohr
@@ -7,7 +7,7 @@ ms.author: helohr
 ms.date: 12/07/2023
 ms.prod: windows-server
 ---
-# Disable SMB signing on third-party servers (preview)
+# Control SMB signing behavior (preview)
 
 As of Windows 11 Insider Preview Build 25318, Windows Server now requires SMB signing by default (preview) for all connections.
 
