@@ -2,8 +2,8 @@
 title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: article
-author: jwwool
-ms.author: jeffrew
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 06/07/2019
 ---
 # Windows Admin Center known issues
@@ -23,6 +23,8 @@ If you encounter an issue not described on this page, let us know at the [Window
 - Self-signed certificates accessed on `https://localhost:[port]` can cause the Microsoft Edge and Google Chrome browsers to block Windows Admin Center. When you're blocked, you should see an error message that says your connection isn't private. To resolve this issue, update Windows Admin Center to the latest version.
 
 - Using certain versions of extensions with earlier versions of Windows Admin Center can result in icons not displaying properly. To resolve this issue, update to the latest version of Windows Admin Center
+
+- Manually modifying URLs to include the names of different machines while using Windows Admin Center without going through the connection experience in the UI can cause extensions to not load properly, especially extensions compatible with specific hardware. We don't recommend manually modifying URLs for navigation in Windows Admin Center.
 
 - In the 1910.2 release of Windows Admin Center, you can't connect to Hyper-V servers on specific hardware. To resolve this issue, either [download the previous version](/windows-server/manage/windows-admin-center/support/release-history) or try updating to the latest version.
 
@@ -93,6 +95,9 @@ Scenarios involving using Windows Admin Center with a proxy service often don't 
 
 - PowerShell
 
+> [!NOTE]
+> Windows Admin Center requires PowerShell features that aren't included in Windows Server 2012 R2, 2012, or 2008 R2. If you plan to manage Windows Server with Windows Admin Center, you must install Windows Management Framework (WMF) version 5.1 or later on those servers.
+
 - Packet Monitoring
 
 - Windows Events
@@ -107,7 +112,7 @@ To install WMF:
 
 1. Enter `$PSVersiontable` to verify if you have WMF installed and check the version number.
 
-1. If you haven't already installed WMF, [download and install it](https://www.microsoft.com/download/details.aspx?id=54616).
+1. [Download and install WMF](https://www.microsoft.com/download/details.aspx?id=54616) if you haven't already.
 
 ## Role Based Access Control (RBAC)
 
@@ -459,8 +464,6 @@ The following sections describe issues you can encounter when using Azure servic
   - Before using any Azure features in Windows Admin Center, including gateway registration, make sure you've signed in to your Azure account in a different tab or window. We recommend you sign in through the [Azure portal](https://portal.azure.com/).  
 
   - If you successfully sign in to Azure during gateway registration but don't see visual confirmation on the **Azure** page of your Windows Admin Center settings, refresh the page by going to another page, then returning.
-
-  - The Azure sign-in window sometimes appears more frequently in the 2009 version, forcing administrators to grant users Windows Admin Center permissions more frequently.
 
   - If you've already given admin approval for Windows Admin Center in the portal but still see an error message that says "Need admin approval," try signing in to Azure using the banners around Windows Admin Center instead of going to the Settings page.
 
