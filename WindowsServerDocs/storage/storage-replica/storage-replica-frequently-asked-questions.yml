@@ -281,20 +281,11 @@ sections:
           
           The current log version interoperability matrix is:
 
-          | Server OS 1          |  Server OS 2          |   Replication supported |
-          | --- | --- | --- |
-          | Windows Server 2016  |  Windows Server 2016  |   Yes |
-          | Windows Server 2016  |  Windows Server 2019  |   No |
-          | Windows Server 2016  |  Windows Server 2022  |   No |
-          | Windows Server 2019  |  Windows Server 2019  |   Yes |
-          | Windows Server 2019  |  Windows Server 2022  |   Yes |
-          | Windows Server 2022  |  Windows Server 2022  |   Yes |
-
           | Replication from / to | Windows   Server 2016                                                     | Windows   Server 2019                                                                | Windows   Server 2022                                                                 |
           |-----------------------|---------------------------------------------------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
           | Windows   Server 2016 | :::image type="icon" source="../../media/yes.svg" border="false"::: | :::image type="icon" source="../../media/no.svg" border="false":::             | :::image type="icon" source="../../media/no.svg" border="false":::              |
           | Windows   Server 2019 | :::image type="icon" source="../../media/no.svg" border="false":::  | :::image type="icon" source="../../media/yes.svg" border="false":::            | :::image type="icon" source="../../media/yes.svg" border="false":::             |
-          | Windows   Server 2022 | :::image type="icon" source="../../media/no.svg" border="false":::  | :::image type="icon" source="../../media/no.svg" border="false":::             | :::image type="icon" source="../../media/yes.svg" border="false":::             |
+          | Windows   Server 2022 | :::image type="icon" source="../../media/no.svg" border="false":::  | :::image type="icon" source="../../media/yes.svg" border="false":::             | :::image type="icon" source="../../media/yes.svg" border="false":::             |
 
       - question: |
           Related topics
