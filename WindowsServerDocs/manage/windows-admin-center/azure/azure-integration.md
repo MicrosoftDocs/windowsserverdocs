@@ -37,8 +37,8 @@ The Azure AD app created is used for all points of Azure integration in Windows 
 
 If you wish to configure an Azure AD app manually, rather than using the Azure AD app created automatically by Windows Admin Center during the gateway registration process, you must do the following.
 
-1. Grant the Azure AD app the required API permissions listed above. You can do so by navigating to your Azure AD app in the Azure portal. Go to the Azure portal > **Azure Active Directory** > **App registrations** > select your Azure AD app you wish to use. Then to to the **API permissions** tab and add the API permissions listed above.
-2. Add the Windows Admin Center gateway URL to the reply URLs (also known as the redirect URIs). Navigate to your Azure AD app, then go to **Manifest**. Find the "replyUrlsWithType" key in the manifest. Within the key, add an object containing two keys: "url" and "type." The key "url" should have a value of the Windows Admin Center gateway URL, appending a wildcard at the end. The key "type" key should have a value of "Single-Page Apllication." For example:
+1. Grant the Azure AD app the required API permissions listed above. You can do so by navigating to your Azure AD app in the Azure portal. Go to the Azure portal > **Azure Active Directory** > **App registrations** > select your Azure AD app you wish to use. Then to the **API permissions** tab and add the API permissions listed above.
+2. Add the Windows Admin Center gateway URL to the reply URLs (also known as the redirect URIs). Navigate to your Azure AD app, then go to **Manifest**. Find the "replyUrlsWithType" key in the manifest. Within the key, add an object containing two keys: "url" and "type." The key "url" should have a value of the Windows Admin Center gateway URL, appending a wildcard at the end. The key "type" key should have a value of "Single-Page Application." For example:
 
     ```json
     "replyUrlsWithType": [
@@ -62,9 +62,9 @@ Follow these steps for application registrations that are currently configured w
 1.	Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/).
 2.	Navigate to **Identity > Applications > App registrations**, select your application, and then **Authentication**.
 3.	In the **Web** platform tile under **Redirect URIs**, select the warning banner indicating that you should migrate your URIs.
-![Warning banner under web platform tile suggesting URI migration](../media/entra-uri-warning-banner.png)
+![Screenshot of warning banner under web platform tile suggesting URI migration.](../media/entra-uri-warning-banner.png)
 4. Select the redirect URI for your application and then select **Configure**. These redirect URIs should now appear in the **Single-page application** platform tile, showing that CORS support with the authorization code flow and PKCE is enabled for these URIs.
-![Migrate URIs selection page](../media/entra-migrate-uris.png)
+![Screenshot of migrate URIs selection page.](../media/entra-migrate-uris.png)
 
 Instead of updating existing URIs, you can instead create a new application registration for your gateway. App registrations that are newly created for Windows Admin Center through the gateway registration flow create Single-Page Application platform redirect URIs. 
 
