@@ -11,7 +11,7 @@ ms.prod: windows-server
 
 # Upgrade existing Windows Admin Center extensions to Angular 15
 
-Windows Admin Center has upgraded to Angular 15! This upgrade brings in the latest in features, security, and performance, and we're excited to have it available for you. So far, the shell of Windows Admin Center has been upgraded, and it is now your turn to update your extensions. 
+Windows Admin Center has upgraded to Angular 15! This upgrade brings in the latest in features, security, and performance, and we're excited to have it available for you. So far, the shell of Windows Admin Center has been upgraded, and it's now your turn to update your extensions. 
 
 We strongly recommend upgrading your extensions to the latest Angular version we support. All the new fixes and updates to our shell and SDK are only available for extensions on Angular 15. 
 
@@ -26,11 +26,11 @@ Before beginning the upgrade to Angular 15, it's essential to ensure that your p
 ### Transitioning from TSLint to ESLint
 Historically, Windows Admin Center has used the extensible tool TSLint to check TypeScript code for readability, maintainability, and functionality errors. TSLint has been deprecated and replaced by ESLint, a more powerful and widely supported tool. Windows Admin Center has shifted to using ESLint.
 
-To determine whether you are using TSLint or ESLint as the linter for your extension, navigate to the root directory of your extension project:
-- If there is a file titled **.eslintrc.json**, you are using ESLint. Skip ahead to **Configuring your environment for upgrade**.
-- If there is a file titled **tslint.json**, you are using TSLint. Continue on to learn how to migrate to ESLint.
+To determine whether you're using TSLint or ESLint as the linter for your extension, navigate to the root directory of your extension project:
+- If there's a file titled **.eslintrc.json**, you're using ESLint. Skip ahead to **Configuring your environment for upgrade**.
+- If there's a file titled **tslint.json**, you're using TSLint. Continue on to learn how to migrate to ESLint.
 
-We've created a command in the SDK to help with automating the transition to ESLint. To use it, do the following:
+We've created a command in the SDK to help with automating the transition to ESLint. To use it, follow these steps:
 1. Navigate to the root of your extension project.
 2. Pull down the latest version of the SDK by running `npm install -g @microsoft/windows-admin-center-sdk@latest`
 3. Run `npm install`.
@@ -38,7 +38,7 @@ We've created a command in the SDK to help with automating the transition to ESL
 5. Fix any violations by running `npx lint --fix` or by making manual changes.
 
 ### Configuring your environment for upgrade
-Before beginning the upgrade to Angular 15, you need to configure your developer environment with the latest Windows Admin Center shell and development tools. This includes upgrading your version of Node.
+Before beginning the upgrade to Angular 15, you need to configure your developer environment with the latest Windows Admin Center shell and development tools, including upgrading your version of Node.
 
 To manage your versions of Node, we suggest using [Node Version Manager](https://github.com/coreybutler/nvm-windows). Follow the instructions to install nvm-windows on your machine. The version should be 1.1.11 or later, as older versions may not support the Node.js versions necessary for this upgrade. 
 
@@ -72,12 +72,12 @@ To restore VSTS authentication, run ``` vsts-npm-auth -config .npmrc ``` at the 
 ## Automated upgrade process
 To facilitate a smoother upgrade from Angular 11 to Angular 15, we've developed a CLI command as a part of our SDK that automates much of the upgrade process.
 
-Before proceeding with the automatic upgrade steps, make sure your environment is set up correctly and you have switched to Angular 15. When you're ready to upgrade, follow these steps:
+Before proceeding with the automatic upgrade steps, make sure your environment is set up correctly, and you've switched to Angular 15. When you're ready to upgrade, follow these steps:
 1. Make sure you have the latest version of the WAC CLI by running `npm install -g @microsoft/windows-admin-center-sdk@latest`.
 2. Run `wac angular15Upgrade`.
 
 ### Post upgrade actions
-After running the upgrade command, a `log.txt` file will be generated at the root of your project. This file contains information on further actions.
+After you run the upgrade command, a `log.txt` file will be generated at the root of your project. This file contains information on further actions.
 
 After running the upgrade command, be sure to stage your changes. This command is designed to be run multiple times if necessary. 
 
@@ -86,8 +86,8 @@ You should now be able to run and test your extension as normal.
 ## Troubleshooting scenarios
 Some of the errors you may receive while debugging in the build step may be hard to diagnose. Here's some of the most common errors and how to mitigate them:
 
-- **AjaxResponse requires 1 type arguement**
-    - To fix this issue, try staging your current changes and then re-run the upgrade command. The upgrade command should have fixed this, but there might be edge cases. Ensure you manually fix these errors by changing `AjaxResponse` to `AjaxResponse<any>`.
+- **AjaxResponse requires 1 type argument**
+    - To fix this issue, try staging your current changes and then rerun the upgrade command. The upgrade command should've fixed this, but there might be edge cases. Ensure you manually fix these errors by changing `AjaxResponse` to `AjaxResponse<any>`.
 
 - **CSS syntax error in custom CSS files**
     ```cmd
@@ -100,9 +100,9 @@ Some of the errors you may receive while debugging in the build step may be hard
         1 │ :host >>> .summary-container {
                     ^
     ```
-     - To fix this issue, try staging your current changes and then re-run the upgrade command. The upgrade command should automatically handle this, but if it doesn't
+     - To fix this issue, try staging your current changes and then rerun the upgrade command. The upgrade command should automatically handle this, but if it doesn't
 
-- **Depedency warnings**
+- **Dependency warnings**
  
     ```
     Build at: 2023-11-14T19:31:35.361Z - Hash: 069ae6fa11d268d6 - Time: 32165ms
@@ -122,8 +122,8 @@ Some of the errors you may receive while debugging in the build step may be hard
 
 ## Other considerations when upgrading extensions to Angular 15
 
-- Sideloading of the shell and extensions should not be affected when working with two branches of shell.
-- When using copyTarget, be aware of which shell branch you are in. Only use this command in the 4.0 branch if the extension you are working with is also upgraded to Angular 15.
+- Sideloading of the shell and extensions shouldn't be affected when working with two branches of shell.
+- When using copyTarget, be aware of which shell branch you're in. Only use this command in the 4.0 branch if the extension you're working with is also upgraded to Angular 15.
 - If the repo has been upgraded to Angular 15, then use the latest 4.x.0 version of shell libraries. Otherwise continue to use the latest 2.x.0 version.
 
 You can tell if a repo is upgraded by looking at the package.json file.
