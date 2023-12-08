@@ -11,7 +11,7 @@ ms.date: 08/15/2023
 
 # Deploy Active Directory Federation Services in Azure
 
-Active Directory Federation Services (AD FS) provides simplified, secured identity federation and web single sign-on (SSO) capabilities. Federation with Azure AD or Microsoft 365 lets users authenticate using on-premises credentials and access all cloud resources. As a result, it becomes important to have a highly available AD FS infrastructure to ensure access to resources both on-premises and in the cloud.
+Active Directory Federation Services (AD FS) provides simplified, secured identity federation and web single sign-on (SSO) capabilities. Federation with Microsoft Entra ID or Microsoft 365 lets users authenticate using on-premises credentials and access all cloud resources. As a result, it becomes important to have a highly available AD FS infrastructure to ensure access to resources both on-premises and in the cloud.
 
 Deploying AD FS in Azure can help achieve the high availability required with minimal efforts. There are several advantages of deploying AD FS in Azure:
 
@@ -470,6 +470,6 @@ You can use an existing virtual network or create a new virtual network while de
 
 ## Next steps
 
-- [Integrate your on-premises identities with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity)
-- [Configure and managing your AD FS using Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-fed-whatis)
+- [Integrate your on-premises identities with Microsoft Entra ID](/azure/active-directory/hybrid/whatis-hybrid-identity)
+- [Configure and managing your AD FS using Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-fed-whatis)
 - [High availability cross-geographic AD FS deployment in Azure with Azure Traffic Manager](active-directory-adfs-in-azure-with-azure-traffic-manager.md)
