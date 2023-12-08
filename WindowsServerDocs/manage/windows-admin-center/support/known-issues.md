@@ -244,9 +244,9 @@ The Computer Management solution contains some Server Manager tools, so the same
 
 - Windows 10 has WinRM and PowerShell remoting disabled by default.
 
-  - To enable management of the Windows 10 Client, open an elevated PowerShell prompt and run the ```Enable-PSRemoting``` command.
+  - To enable management of the Windows 10 Client, open an elevated PowerShell prompt and run the `Enable-PSRemoting` command.
 
-  - You should also update your firewall to allow connections from outside the local subnet by running the ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any``` command. For more information about how to update your firewall in more restrictive network scenarios, see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
+  - You should also update your firewall to allow connections from outside the local subnet by running the `Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any` command. For more information about how to update your firewall in more restrictive network scenarios, see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
 
 ## Cluster deployment
 
