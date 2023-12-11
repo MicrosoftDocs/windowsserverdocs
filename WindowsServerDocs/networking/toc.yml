@@ -1,4 +1,3 @@
-items:
 - name: Networking documentation
   href: index.yml
   items:
@@ -153,79 +152,79 @@ items:
     href: ../remote/remote-access/directaccess/directaccess.md
   - name: Domain Name System (DNS)
     href: dns/dns-top.md
-    items: 
-      - name: Overview
-        href: dns/dns-top.md
-        items: 
-          - name: What's new in DNS
-            items: 
-              - name: What's new in DNS server in Windows Server
-                href: dns/What-s-New-in-DNS-Server.md
-              - name: What's new in DNS client in Windows Server
-                href: dns/What-s-New-in-DNS-Client.md
-          - name: Anycast DNS
-            href: dns/deploy/anycast.md
-          - name: DNS policies overview
-            href: dns/deploy/DNS-Policies-Overview.md
-      - name: Quickstarts
-        items: 
-          - name: Install and configure DNS server
-            href: dns/quickstart-install-configure-dns-server.md
-      - name: Concepts
+    items:
+    - name: Overview
+      href: dns/dns-top.md
+      items:
+      - name: What's new in DNS
         items:
-          - name: DNS zones
-            href: dns/zone-types.md
-          - name: DNS resource records
-            href: dns/resource-record-types.md
-          - name: DNSSEC
-            items:
-            - name: What is DNSSEC?
-              href: dns/dnssec-overview.md
-            - name: Validate and secure DNS responses
-              href: dns/validate-dnssec-responses.md
-      - name: How-to guides
+        - name: What's new in DNS server in Windows Server
+          href: dns/What-s-New-in-DNS-Server.md
+        - name: What's new in DNS client in Windows Server
+          href: dns/What-s-New-in-DNS-Client.md
+      - name: Anycast DNS
+        href: dns/deploy/anycast.md
+      - name: DNS policies overview
+        href: dns/deploy/DNS-Policies-Overview.md
+    - name: Quickstarts
+      items:
+      - name: Install and configure DNS server
+        href: dns/quickstart-install-configure-dns-server.md
+    - name: Concepts
+      items:
+      - name: DNS zones
+        href: dns/zone-types.md
+      - name: DNS resource records
+        href: dns/resource-record-types.md
+      - name: DNSSEC
         items:
-          - name: Manage DNS zones
-            href: dns/manage-dns-zones.md
-          - name: Manage DNS resource records
-            href: dns/manage-resource-records.md
-          - name: Secure DNS Client over HTTPS (DoH)
-            href: dns/doh-client-support.md
-      - name: Tutorials
-        items: 
-          - name: DNS policy
-            href: dns/deploy/DNS-Policy-Scenario-Guide.md
-            items: 
-              - name: Geo-location traffic management
-                href: dns/deploy/primary-geo-location.md
-              - name: geo-location traffic management with primary-secondary zones
-                href: dns/deploy/primary-secondary-geo-location.md
-              - name: Intelligent DNS responses based on time of day
-                href: dns/deploy/dns-tod-intelligent.md
-              - name: DNS responses based on time of day with an Azure cloud app server
-                href: dns/deploy/dns-tod-azure-cloud-app-server.md
-              - name: Split-Brain DNS in Active Directory
-                href: dns/deploy/dns-sb-with-ad.md
-              - name: Split-Brain DNS deployment
-                href: dns/deploy/split-brain-DNS-deployment.md
-              - name: Apply filters to DNS queries
-                href: dns/deploy/apply-filters-on-dns-queries.md
-              - name: DNS App load balancing
-                href: dns/deploy/app-lb.md
-              - name: DNS App load balancing with geo-location awareness
-                href: dns/deploy/app-lb-geo.md
-      - name: Troubleshooting DNS issues
-        href: dns/troubleshoot/troubleshoot-dns-data-collection.md
-        items: 
-          - name: Troubleshooting DNS clients
-            href: dns/troubleshoot/troubleshoot-dns-client.md
-          - name: Troubleshooting DNS servers
-            href: dns/troubleshoot/troubleshoot-dns-server.md
+        - name: What is DNSSEC?
+          href: dns/dnssec-overview.md
+        - name: Validate and secure DNS responses
+          href: dns/validate-dnssec-responses.md
+    - name: How-to guides
+      items:
+      - name: Manage DNS zones
+        href: dns/manage-dns-zones.md
+      - name: Manage DNS resource records
+        href: dns/manage-resource-records.md
+      - name: Secure DNS Client over HTTPS (DoH)
+        href: dns/doh-client-support.md
+    - name: Tutorials
+      items:
+      - name: DNS policy
+        href: dns/deploy/DNS-Policy-Scenario-Guide.md
+        items:
+        - name: Geo-location traffic management
+          href: dns/deploy/primary-geo-location.md
+        - name: geo-location traffic management with primary-secondary zones
+          href: dns/deploy/primary-secondary-geo-location.md
+        - name: Intelligent DNS responses based on time of day
+          href: dns/deploy/dns-tod-intelligent.md
+        - name: DNS responses based on time of day with an Azure cloud app server
+          href: dns/deploy/dns-tod-azure-cloud-app-server.md
+        - name: Split-Brain DNS in Active Directory
+          href: dns/deploy/dns-sb-with-ad.md
+        - name: Split-Brain DNS deployment
+          href: dns/deploy/split-brain-DNS-deployment.md
+        - name: Apply filters to DNS queries
+          href: dns/deploy/apply-filters-on-dns-queries.md
+        - name: DNS App load balancing
+          href: dns/deploy/app-lb.md
+        - name: DNS App load balancing with geo-location awareness
+          href: dns/deploy/app-lb-geo.md
+    - name: Troubleshooting DNS issues
+      href: dns/troubleshoot/troubleshoot-dns-data-collection.md
+      items:
+      - name: Troubleshooting DNS clients
+        href: dns/troubleshoot/troubleshoot-dns-client.md
+      - name: Troubleshooting DNS servers
+        href: dns/troubleshoot/troubleshoot-dns-server.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     href: technologies/dhcp/dhcp-top.md
     items:
     - name: Quickstarts
-      items: 
+      items:
       - name: Install and configure DHCP server
         href: technologies/dhcp/quickstart-install-configure-dhcp-server.md
     - name: What's new in DHCP
@@ -248,13 +247,6 @@ items:
       items:
       - name: Dynamic Host Configuration Protocol (DHCP) Basics
         href: ../troubleshoot/dynamic-host-configuration-protocol-basics.md
-      - name: General guidance to troubleshoot DHCP
-        href: ../troubleshoot/general-guidance-to-troubleshoot-dhcp.md
-        items:
-        - name: How to use automatic TCP/IP addressing without a DHCP server
-          href: ../troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh.md
-      - name: Troubleshoot problems on the DHCP client
-        href: ../troubleshoot/troubleshoot-problems-on-dhcp-client.md
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
   - name: Extensible Authentication Protocol (EAP)
@@ -283,7 +275,7 @@ items:
     - name: Receive Segment Coalescing (RSC) in the vSwitch
       href: technologies/hpn/rsc-in-the-vswitch.md
   - name: Host Compute Network (HCN) Service API
-    href: technologies/hcn/hcn-top.md   
+    href: technologies/hcn/hcn-top.md
     items:
     - name: Common HCN scenarios
       href: technologies/hcn/hcn-scenarios.md
@@ -414,6 +406,10 @@ items:
       - name: Manage certificates used with NPS
         href: technologies/nps/nps-manage-certificates.md
         items:
+        - name: NPS CRL check overview
+          href: technologies/nps/network-policy-server-certificate-revocation-list-overview.md
+        - name: NPS CRL check registry settings
+          href: technologies/nps/network-policy-server-certificate-revocation-list-check-registry-settings.md
         - name: Configure certificate templates for PEAP and EAP requirements
           href: technologies/nps/nps-manage-cert-requirements.md
       - name: Manage NPSs
@@ -473,8 +469,6 @@ items:
       href: technologies/network-subsystem/net-sub-performance-counters.md
     - name: Performance tools for network workloads
       href: technologies/network-subsystem/net-sub-performance-tools.md
-  - name: NIC Teaming
-    href: /azure-stack/hci/concepts/host-network-requirements
   - name: Packet Monitor (Pktmon)
     href: technologies/pktmon/pktmon.md
     items:
@@ -618,15 +612,12 @@ items:
       items:
       - name: Configure virtual network peering
         href: sdn/vnet-peering/sdn-configure-vnet-peering.md
-    - name: Windows Server 2019 gateway performance
+    - name: SDN gateway performance
       href: sdn/gateway-performance.md
     - name: Gateway bandwidth allocation
       href: sdn/gateway-allocation.md
-    - name: Troubleshoot SDN
-      href: sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md
-      items:
-      - name: Troubleshoot the Windows Server Software Defined Networking Stack
-        href: sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md
+  - name: Switch Embedded Teaming (SET)
+    href: /azure-stack/hci/concepts/host-network-requirements
   - name: Virtual Private Networking (VPN)
     href: ../remote/remote-access/vpn/vpn-top.md
   - name: Windows Internet Name Service (WINS)
@@ -638,8 +629,6 @@ items:
       href: windows-time-service/insider-preview.md
     - name: Accurate time for Windows Server 2016
       href: windows-time-service/accurate-time.md
-    - name: Support boundary for high-accuracy time
-      href: windows-time-service/support-boundary.md
     - name: Configuring systems for high accuracy
       href: windows-time-service/configuring-systems-for-high-accuracy.md
     - name: Windows Time for traceability

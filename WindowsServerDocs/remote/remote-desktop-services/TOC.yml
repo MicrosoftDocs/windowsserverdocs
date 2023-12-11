@@ -75,6 +75,8 @@
       href: rds-deploy-infrastructure.md
     - name: Create and deploy a Remote Desktop Services collection
       href: rds-create-collection.md
+    - name: Configure the RD Gateway role
+      href: remote-desktop-gateway-role.md
     - name: Set up the Remote Desktop web client for your users
       href: clients/remote-desktop-web-client-admin.md
     - name: Disable Automatic Reconnection
@@ -182,6 +184,12 @@
         href: clients/remote-desktop-web-client.md
       - name: What's new in the web client
         href: clients/web-client-whatsnew.md
+    - name: Remote Desktop Connection client for Windows (MSTSC)
+      items:
+      - name: Connect using single sign-on with Microsoft Entra authentication
+        href: clients/remote-desktop-connection-single-sign-on.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: clients/uninstall-remote-desktop-connection.md
     - name: Setting up your PC for Remote Desktop
       items:
       - name: Supported PCs
@@ -192,10 +200,6 @@
         href: clients/remote-desktop-allow-outside-access.md
       - name: Change the RD listening port on your PC
         href: clients/change-listening-port.md
-      - name: Configure the RD Gateway role
-        href: remote-desktop-gateway-role.md
-      - name: Uninstall and reinstall Remote Desktop Connection
-        href: clients/uninstall-remote-desktop-connection.md
     - name: Advanced information
       items:
       - name: 'Compare the clients: features'
@@ -212,26 +216,5 @@
         href: clients/remote-privacy-settings.md
     - name: Known issues
       items:
-      - name: General Remote Desktop connection troubleshooting
-        href: troubleshoot/rdp-error-general-troubleshooting.md
-      - name: Credential limit per app
-        href: troubleshoot/credential-limit.md
-      - name: Clients can't connect and get the "Class not registered" error
-        href: troubleshoot/rdp-error-class-not-registered.md
       - name: Clients can't connect and see "No licenses available" error
         href: troubleshoot/rdp-error-no-licenses-available.md
-      - name: User can't authenticate or must authenticate twice
-        href: troubleshoot/cannot-authenticate-or-must-authenticate-twice.md
-      - name: '"Remote Desktop Service is currently busy" error on connecting'
-        href: troubleshoot/remote-desktop-service-currently-busy.md
-      - name: Remote Desktop client disconnects and can't reconnect to the same session
-        href: troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md
-      - name: Remote laptop disconnects from wireless network
-        href: troubleshoot/remote-laptop-disconnects-wireless-network.md
-      - name: Poor performance or application problems during remote desktop connection
-        href: troubleshoot/poor-performance-or-application-problems.md
-      - name: Input method editor issue in RemoteApp scenarios
-        href: troubleshoot/input-method-editor-error.md
-      - name: '"Out of memory" error'
-        href: troubleshoot/out-of-memory-error.md
-

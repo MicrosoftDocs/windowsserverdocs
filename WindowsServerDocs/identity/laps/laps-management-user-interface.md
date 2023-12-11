@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn how to use the LAPS properties dialog in the Windows Server Active Directory Users and Computers management snap-in to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
 
 > [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## Windows LAPS snap-in availability
 

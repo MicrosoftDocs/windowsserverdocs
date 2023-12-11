@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory and how to retrieve them.
 
 > [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 ## Domain functional level and domain controller OS version requirements
 
@@ -34,7 +34,7 @@ Microsoft strongly recommends customer upgrade to the latest available operating
 
 ## Update the Windows Server Active Directory schema
 
-The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. This operation can be performed on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but may also be performed on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
+The Windows Server Active Directory schema must be updated prior to using Windows LAPS. This action is performed by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. This operation can be performed on a Windows Server 2022 or Windows Server 2019 domain controller updated with Windows LAPS, but can also be performed on a non-domain-controller as long as it supports the Windows LAPS PowerShell module.
 
 ```powershell
 PS C:\> Update-LapsADSchema
@@ -86,7 +86,7 @@ The first step is to choose how to apply policy to your devices.
 
 Most environments use [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy) to deploy the required settings to their Windows Server Active Directory-domain-joined devices.
 
-If your devices are also hybrid-joined to Azure Active Directory, you can deploy policy by using [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+If your devices are also hybrid-joined to Microsoft Entra ID, you can deploy policy by using [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
 ### Configure specific policies
 
@@ -100,6 +100,8 @@ If you want to configure a custom local administrator account, you should config
 > If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account. We recommend that you use the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) to create the account.
 
 You can configure other settings, like PasswordLength, as needed for your organization.
+
+When you don't configure a given setting, the default value is applied - be sure to understand those defaults. For example if you enable password encryption but don't configure the ADPasswordEncryptionPrincipal setting, the password is encrypted so that only Domain Admins can decrypt it. You can configure ADPasswordEncryptionPrincipal with a different setting if you want non-Domain Admins to be able to decrypt.
 
 ## Update a password in Windows Server Active Directory
 
@@ -135,7 +137,7 @@ This output result indicates that password encryption is enabled (see `Source`).
 
 ## Rotate the password
 
-Windows LAPS reads the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password has expired, a new password is generated and stored immediately.
+Windows LAPS reads the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password is expired, a new password is generated and stored immediately.
 
 In some situations (for example, after a security breach or for ad-hoc testing), you might want to rotate the password early. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
 
@@ -157,8 +159,8 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 
 ## See also
 
-- [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
-- [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
+- [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps)
 - [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups)
 - [Microsoft Intune](/mem/intune)
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)

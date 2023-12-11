@@ -75,7 +75,6 @@ To use Windows Admin Center in the Azure portal, we install Windows Admin Center
 The VM also has the following networking requirements, which we step through during the installation procedure:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the `WindowsAdminCenter` and `AzureActiveDirectory` service tag
-- Outbound internet access to `pkgs.dev.azure.com`, if you are using a proxy
 
 - An inbound port rule if using a public IP address to connect to the VM (not recommended)
 
@@ -131,7 +130,7 @@ After you've installed Windows Admin Center in an Azure VM, here's how to connec
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
 > [!NOTE]
-> Starting August 2022, Windows Admin Center now allows you to use Azure AD-based authentication for your Azure IaaS VM. You will no longer be prompted for the credentials of a local administrator account.
+> Starting August 2022, Windows Admin Center now allows you to use Microsoft Entra ID-based authentication for your Azure IaaS VM. You will no longer be prompted for the credentials of a local administrator account.
 
 :::image type="content" source="../../media/manage-vm/connect-to-vm.png" alt-text="Screenshot showing a VM's settings and connecting to Windows Admin Center by private IP address. "lightbox="../../media/manage-vm/connect-to-vm.png":::
 
@@ -166,7 +165,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
 
-To configure role assignments for your VMs using the Azure AD Portal experience:
+To configure role assignments for your VMs using the Microsoft Entra admin center experience:
 
 1. Select the **Resource Group** containing the VM and its associated Virtual Network, Network Interface, Public IP Address or Load Balancer resource.
 
