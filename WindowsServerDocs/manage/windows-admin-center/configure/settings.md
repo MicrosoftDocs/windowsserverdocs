@@ -22,7 +22,7 @@ User-level settings consist of the following sections:
 - Personalization
 - Suggestions
 
-In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Azure AD is configured to be the identity provider, the user can log out of their Azure AD account from this tab.
+In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Microsoft Entra ID is configured to be the identity provider, the user can log out of their Microsoft Entra account from this tab.
 
 In the **Language/Region** tab, users can change the language and region formats displayed by Windows Admin Center.
 
