@@ -25,7 +25,7 @@ Your system must meet the following requirements before you can deploy a Protect
 
 - If you need to host a PDC emulator role on a domain controller running an earlier version of Windows Server, you must create the Protected Users group by following the directions in [Adding a Protected User global security group to down-level domains](#adding-a-protected-user-global-security-group-to-down-level-domains) to [transfer the primary domain controller (PDC) emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2, then replicate that group object to the other domain controllers.
 
-- The domain functional level must be Windows Server 2012 R2. For more information about functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
+- The domain functional level must be Windows Server 2012 R2. For more information about functional levels, see [Forest and domain functional levels](../../identity/ad-ds/active-directory-functional-levels.md).
 
 > [!NOTE]
 > The built-in domain Administrator, `S-1-5-<domain>-500`, is always exempt from Authentication Policies, even when they're assigned to an Authentication Policy Silo.
