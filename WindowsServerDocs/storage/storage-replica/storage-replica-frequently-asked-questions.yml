@@ -266,10 +266,10 @@ sections:
       - question: |
           Can Storage Replica be configured to replicate in both directions?
         answer: |
-          Storage Replica is a one-way replication technology.  It only replicates from the source to the destination on a per volume basis.  The direction can be reversed at any time, but is still only in one direction.  That doesn't mean you can't have a set of volumes (source and destination) replicated in one direction and a different set of drives (source and destination) (stretch-cluster-replication-using-shared-storage.md in the opposite direction.  For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters L:, M:, N:, and O: and you wish to replicate drive M: from Server1 to Server2 but drive O: replicate from Server2 to Server1.  You can haver use configure as long as there are separate log drives for each of the groups. For example:
+          Storage Replica is a one-way replication technology.  It only replicates from the source to the destination on a per volume basis.  The direction can be reversed at any time, but is still only in one direction.  That doesn't mean you can't have a set of volumes (source and destination) replicated in one direction and a different set of drives (source and destination) (stretch-cluster-replication-using-shared-storage.md in the opposite direction.  For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters `L:`, `M:`, `N:`, and `O`: and you wish to replicate drive `M:` from `Server1` to `Server2` but drive `O:` replicate from `Server2` to `Server1`.  You can haver use configure as long as there are separate log drives for each of the groups. For example:
           
-          - Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
-          - Server2 source drive O: with source log drive N: replicating to Server1 destination drive O: with destination log drive N:
+          - `Server1` source drive `M:` with source log drive `L:` replicating to `Server2` destination `drive M:` with destination log drive `L:`
+          - `Server2` source drive `O:` with source log drive `N:` replicating to `Server1` destination `drive O:` with destination log drive `N:`
 
       - question: |
           Can you place cluster disks in maintenance mode?
