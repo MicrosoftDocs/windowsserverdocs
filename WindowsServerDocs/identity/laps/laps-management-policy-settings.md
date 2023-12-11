@@ -12,7 +12,7 @@ ms.topic: conceptual
 Windows Local Administrator Password Solution (Windows LAPS) supports various settings you can control by using policy. Learn about the settings and how to administer them.
 
 > [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md).
 
 ## Supported policy roots
 
@@ -34,11 +34,11 @@ Policy settings are never shared or inherited across policy key roots.
 
 ## Supported policy settings by BackupDirectory
 
-Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry. Some of these settings only apply when backing up passwords to Active Directory, and some settings are common to both the AD and Azure AD scenarios.
+Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry. Some of these settings only apply when backing up passwords to Active Directory, and some settings are common to both the AD and Microsoft Entra scenarios.
 
 The following table specifies which settings apply to devices that have the specified BackupDirectory setting:
 
-|Setting name|Applicable when BackupDirectory=Azure AD?|Applicable when BackupDirectory=AD?|
+|Setting name|Applicable when BackupDirectory=Microsoft Entra ID?|Applicable when BackupDirectory=AD?|
 |---|---|---|
 |AdministratorAccountName|Yes|Yes|
 |PasswordAgeDays|Yes|Yes|
@@ -71,7 +71,7 @@ The template for this new Group Policy object is installed as part of Windows at
 
 ## Windows LAPS CSP
 
-Windows LAPS includes a specific CSP that you can use to administer policy settings on Azure Active Directory-joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Intune](/mem/intune).
+Windows LAPS includes a specific CSP that you can use to administer policy settings on Microsoft Entra joined devices. Manage the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp) by using [Microsoft Intune](/mem/intune).
 
 ## Apply policy settings
 
@@ -84,7 +84,7 @@ Use this setting to control which directory the password for the managed account
 |Value|Description of setting|
 |--- |--- |
 |0|Disabled (password isn't backed up)|
-|1|Back up the password to Azure Active Directory only|
+|1|Back up the password to Microsoft Entra-only|
 |2|Back up the password to Windows Server Active Directory only|
 
 If not specified, this setting defaults to 0 (Disabled).
@@ -96,19 +96,19 @@ Use this setting to configure the name of the managed local administrator accoun
 If not specified, this setting defaults to managing the built-in local administrator account.
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage the built-in local administrator account, you must ensure that the account is enabled. Windows LAPS doesn't enable the account.
-
-> [!IMPORTANT]
 > Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created and enabled. Windows LAPS doesn't create or enable the account.
+> You can configure the specified account (built-in or custom) as either enabled or disabled. Windows LAPS will manage that account's password in either state. If left in a disabled state however, the account must obviously first be enabled in order to be actually used.
+
+> [!IMPORTANT]
+> If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account.
 
 ### PasswordAgeDays
 
 This setting controls the maximum password age of the managed local administrator account. Supported values are:
 
-- **Minimum**: 1 day (When the backup directory is configured to be Azure Active Directory, the minimum is 7 days.)
+- **Minimum**: 1 day (When the backup directory is configured to be Microsoft Entra ID, the minimum is 7 days.)
 - **Maximum**: 365 days
 
 If not specified, this setting defaults to 30 days.
@@ -169,13 +169,13 @@ Supported values are either 1 (True) or 0 (False).
 
 ### ADPasswordEncryptionPrincipal
 
-Use this setting to configure the name or security identifier (SID) of a user or group that can decrypt the password that's stored in Active Directory.
+Use this setting to configure the name or security identifier (SID) of a user or group that can decrypt the password stored in Active Directory.
 
 This setting is ignored if the password currently is stored in Azure.
 
 If not specified, only members of the Domain Admins group in the device's domain can decrypt the password.
 
-If specified, the specified user or group can decrypt the password that's stored in Active Directory.
+If specified, the specified user or group can decrypt the password stored in Active Directory.
 
 > [!IMPORTANT]
 > The string that's stored in this setting must be either an SID in string form or the fully qualified name of a user or group. Valid examples include:

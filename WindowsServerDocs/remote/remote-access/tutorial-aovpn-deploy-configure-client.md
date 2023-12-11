@@ -326,4 +326,4 @@ You have now configured your user tunnel for Always On VPN. If you want to learn
 
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).
 
-- To troubleshoot issues with Always On VPN, see [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md).
+- To troubleshoot issues with Always On VPN, see [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn).

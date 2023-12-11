@@ -2,8 +2,8 @@
 title: Publishing extensions for Windows Admin Center
 description: Publishing extensions for Windows Admin Center (Project Honolulu)
 ms.topic: article
-author: daniellee-msft
-ms.author: jol
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 04/01/2023
 ---
 # Publishing Extensions
@@ -30,7 +30,7 @@ You can also create your own NuGet feed to publish your extensions to using one 
 
 ### Publishing to a file share
 
-To restrict access of your extension to your organization or to a limited group of people, you can use an SMB file share as an extension feed. Using the file share, file and folder permissions are applied for allowing access to the feed.
+To restrict access of your extension to your organization or to a limited group of people, you can use an SMB file share as an extension feed. When using a file share to host your extension feed, file and folder permissions are applied to manage access to the feed.
 
 ## Preparing your extension for release
 
@@ -72,8 +72,8 @@ Here's an example `.nuspec` file and the list of required or recommended propert
 > The `<id>` value in the `.nuspec` file needs to match the `"name"` value in your project's `manifest.json` file, or else your published extension won't load successfully in Windows Admin Center.
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="https://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0">
+<package>
   <metadata>
     <id>contoso.project.extension</id>
     <version>1.0.0</version>
@@ -100,7 +100,7 @@ Here's an example `.nuspec` file and the list of required or recommended propert
 | Property Name | Required / Recommended | Description |
 | ---- | ---- | ---- |
 | packageType | Required | Use `WindowsAdminCenterExtension`, which is the NuGet package type defined for Windows Admin Center extensions. |
-| id | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
+| ID | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
 | title | Required for publishing to the Windows Admin Center feed | Friendly name for the package that's displayed in Windows Admin Center Extension Manager. |
 | version | Required | Extension version. Using [Semantic Versioning (SemVer convention)](http://semver.org/spec/v1.0.0.html) is recommended but not required. |
 | authors | Required | If publishing on behalf of your company, use your company name. |
@@ -122,6 +122,9 @@ Using the `.nuspec` file you created, you now need to create the NuGet package `
 Any `.dll` files included in your extension are required to be signed with a certificate from a trusted Certificate Authority (CA). By default, unsigned `.dll` files are blocked from being executed when Windows Admin Center is running in Production Mode.
 
 We recommend that you sign the extension NuGet package to ensure the integrity of the package.
+
+> [!NOTE]
+> If you plan on your extension supporting [Windows Defender Application Control](../extend/guides/application-control-infrastructure-extensions.md), your package and all files within must be signed. [Learn more about signing with Windows Defender Application Control.](/windows/security/application-security/application-control/windows-defender-application-control/deployment/use-code-signing-for-better-control-and-protection) 
 
 ### Test your extension NuGet package
 

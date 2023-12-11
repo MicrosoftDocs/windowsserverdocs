@@ -303,4 +303,4 @@ Now you've created your sample infrastructure you are ready to being configuring
 
 - [Deploy Always On VPN Tutorial: Configure Certification Authority templates](tutorial-aovpn-deploy-create-certificates.md)
 
-- [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md)
+- [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn)

@@ -107,7 +107,7 @@ AllowGroups sshusers
 For Windows OpenSSH, the only available authentication methods are `password` and `publickey`.
 
 > [!IMPORTANT]
-> Authentication using an Azure AD account is not currently supported.
+> Authentication using a Microsoft Entra account is not currently supported.
 
 ### AuthorizedKeysFile
 

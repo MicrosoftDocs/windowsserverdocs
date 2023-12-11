@@ -160,4 +160,4 @@ The following are more options for high availability.
 
 - [VPN auto-triggered profile options](/windows/access-protection/vpn/vpn-auto-trigger-profile): This topic provides an overview of VPN auto-triggered profile options, such as app trigger, name-based trigger, and Always On.
 
-- [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md)
+- [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn)
