@@ -102,11 +102,11 @@ Azure-based monitoring and reporting solutions are available when you back up pa
 ## Deprecation of legacy Microsoft LAPS product
 
 > [!IMPORTANT]
-> NOTE: As of October 23, 2023 the legacy [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated, starting with the next versions of Windows 11 and Windows Server. Installation of the legacy Microsoft LAPS MSI package is blocked on newer OS versions, and Microsoft will no longer consider code changes for the legacy Microsoft LAPS product.
+> NOTE: The legacy [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated as of Windows 11 23 H2 and later. Installation of the legacy Microsoft LAPS MSI package is blocked on newer OS versions, and Microsoft will no longer consider code changes for the legacy Microsoft LAPS product.
 >
 > Please use Windows LAPS, available on Windows Server 2019 and above, and on supported Windows 10 and Windows 11 clients, for managing local administrator account passwords.
 >
-> Microsoft will continue to support the legacy Microsoft LAPS product on those OSes on which it was previously supported. That support will end upon the normal End of Support for those OSes.
+> Microsoft will continue to support the legacy Microsoft LAPS product on older versions of Windows (prior to Windows 11 23 H2) on which it was previously supported. That support will end upon the normal End of Support for those OSes.
 
 ## Windows LAPS vs. legacy Microsoft LAPS
 

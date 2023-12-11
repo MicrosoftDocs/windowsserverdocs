@@ -11,6 +11,9 @@ ms.topic: conceptual
 
 Windows Local Administrator Password Solution (Windows LAPS) has a dedicated event log channel. All Windows LAPS operations are tracked with rich eventing. Learn about key events and how to view the log.
 
+> [!IMPORTANT]
+> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md).
+
 ## View the event log
 
 To view the Windows LAPS event log channel, in Windows Server Event Viewer, go to **Applications and Services** > **Logs** > **Microsoft** > **Windows** > **LAPS** > **Operational**.
@@ -79,7 +82,7 @@ Post authentication grace period (hours): 8
 Post authentication actions: 1
 ```
 
-When the policy is configured to back up the password to Azure Active Directory, a 10022 event is logged. Here's an example of a 10022 event:
+When the policy is configured to back up the password to Microsoft Entra ID, a 10022 event is logged. Here's an example of a 10022 event:
 
 ```output
 The current LAPS policy is configured as follows:
@@ -112,7 +115,7 @@ These specific policy setting values are examples and shouldn't be considered re
 
 ### Password update confirmation events
 
-When Windows LAPS successfully updates the configured directory (Windows Server Active Directory or Azure Active Directory) with a new password, a success event is logged: 10018 for password updates in Windows Server Active Directory, and 10029 for password updates in Azure Active Directory.
+When Windows LAPS successfully updates the configured directory (Windows Server Active Directory or Microsoft Entra ID) with a new password, a success event is logged: 10018 for password updates in Windows Server Active Directory, and 10029 for password updates in Microsoft Entra ID.
 
 Here's an example of a 10018 event:
 
