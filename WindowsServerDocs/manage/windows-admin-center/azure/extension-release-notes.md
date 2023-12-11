@@ -20,6 +20,23 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.0.0.329 - November 2023
+
+### Fixed
+- Removed the "Unrestricted" execution policy when Windows Admin Center scripts are executed
+- Added more logging when proxies are used for better debugging
+
+## Version 0.0.0.324 - September 2023
+
+### Fixed
+- Fixed an issue where Windows Admin Center's certificate validation would not cause Windows Admin Center to fail if a valid certificate is already available. This issue would show up during server reboots when the "Enable" operation is run.
+
+## Version 0.0.0.323 - August 2023
+
+### Fixed
+- Fixed an issue where an additional URL was required when using proxies
+- Updated the build of Windows Admin Center to the latest preview version.
+
 ## Version 0.0.0.322 - July 2023
 
 ### New features
