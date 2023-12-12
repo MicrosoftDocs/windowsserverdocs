@@ -14,6 +14,10 @@ ms.date: 05/06/2022
 > Windows Admin Center in the Azure portal is currently in preview.
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
+> [!IMPORTANT]
+> Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
+> If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
+
 Using Windows Admin Center in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
 With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure portal. Azure Stack HCI cluster and workload management no longer require you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
@@ -50,7 +54,6 @@ Using Windows Admin Center in the Azure portal, you can manage:
 - Scheduled tasks
 - Services
 - Storage
-- Updates
 - Virtual machines
 - Virtual switches
 
@@ -150,7 +153,7 @@ After you've installed Windows Admin Center on your cluster, perform the followi
 2. Select **Connect**.
 
 > [!NOTE]
-> Starting April 2023, Windows Admin Center now allows you to use Azure AD-based authentication for your 22H2 or higher clusters running the AdminCenter extension greater than 0.0.0.313. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
+> Starting April 2023, Windows Admin Center now allows you to use Microsoft Entra ID-based authentication for your 22H2 or higher clusters running the AdminCenter extension greater than 0.0.0.313. You will no longer be prompted for the credentials of a local administrator account. However, there may still be some experiences within Windows Admin Center that might require local administrator credentials. For example, when CredSSP is required. Clusters running 21H2 or below will continue to require local administrator credentials.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
@@ -163,7 +166,7 @@ Access to Windows Admin Center is controlled by the **Windows Admin Center Admin
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
 
-To configure role assignments for your cluster using the Azure AD Portal experience:
+To configure role assignments for your cluster using the Microsoft Entra admin center experience:
 
 1. Select the **Resource Group** containing the cluster and the associated Azure Arc resources.
 
@@ -233,6 +236,10 @@ Invoke-AzRestMethod -Method PATCH -Uri "https://management.azure.com/subscriptio
 ## Troubleshooting
 
 Here are some tips to try in case something isn't working. For general Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
+
+### Failed to connect with "404 endpoint not found"
+1. Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
+2. If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
 
 ### Failed to connect error
 
@@ -317,6 +324,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
+- Updates isn’t supported. Users cannot apply updates to Azure Stack HCI cluster with CAU (Cluster-Aware Updating).
 
 ## Frequently asked questions
 

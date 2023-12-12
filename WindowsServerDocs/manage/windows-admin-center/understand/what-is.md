@@ -44,11 +44,11 @@ Publish your Windows Admin Center gateway server to the public Internet, then yo
 
 ### Enhanced security for your management platform
 
-Windows Admin Center has many enhancements that make your management platform [more secure](../plan/user-access-options.md). Role-based access control lets you fine-tune which administrators have access to which management features. Gateway authentication options include local groups, local domain-based Active Directory, and cloud-based Azure Active Directory.  Also, [gain insight](../use/logging.md) into management actions performed in your environment.
+Windows Admin Center has many enhancements that make your management platform [more secure](../plan/user-access-options.md). Role-based access control lets you fine-tune which administrators have access to which management features. Gateway authentication options include local groups, local domain-based Active Directory, and cloud-based Microsoft Entra ID.  Also, [gain insight](../use/logging.md) into management actions performed in your environment.
 
 ### Azure integration for on-premises and hybrid machines
 
-Windows Admin Center has many points of [integration with Azure services](../azure/index.md), including Azure Active Directory, Azure Backup, Azure Site Recovery, and more.
+Windows Admin Center has many points of [integration with Azure services](../azure/index.md), including Microsoft Entra ID, Azure Backup, Azure Site Recovery, and more.
 
 ### Windows Admin Center in Azure
 
