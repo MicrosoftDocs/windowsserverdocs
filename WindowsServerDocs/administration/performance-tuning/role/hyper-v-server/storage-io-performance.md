@@ -58,7 +58,7 @@ If you upgrade your deployment to Windows Server 2016 or later, we recommend you
 
 ### VHD format
 
-Windows Server 2012 and later support the VHD format. Earlier versions of Hyper-V only support VHD format. Later versions of Hyper-V include improvements to their VHD format that allows for better alignment. As a result, later versions of Hyper-V perform better on large sector disks.
+Later versions of Hyper-V include improvements to their VHD format that allow for better alignment.Hyper-V in Windows Server 2012 and later supports both VHDX and VHD formats, as opposed to earlier versions that only support VHD format. As a result, later versions of Hyper-V perform better on large sector disks.
 
 Any VHD you create in Windows Server 2012 or later have the optimal 4 KB alignment. This aligned format is fully compatible with earlier versions of Windows Server. However, the alignment property doesn't support new allocations from parsers that aren't 4 KB alignment-aware, such as a parser from an earlier version of Windows Server or a non-Microsoft parser.
 
@@ -79,7 +79,7 @@ Convert-VHD –Path E:\vms\testvhd\test.vhd –DestinationPath E:\vms\testvhd\te
 ```
 
 > [!NOTE]
-> When you convert a VHD, PowerShell uses the data from the source VHD based on teh **Copy from Source** disk option. For more information, see [Convert-VHD](/powershell/module/hyper-v/convert-vhd).
+> When you convert a VHD, PowerShell uses the data from the source VHD based on the **Copy from Source** disk option. For more information, see [Convert-VHD](/powershell/module/hyper-v/convert-vhd).
 
 #### Check disk alignment
 
