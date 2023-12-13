@@ -4,7 +4,7 @@ description: Learn about storage I/O performance considerations in Hyper-V perfo
 ms.topic: article
 ms.author: wscontent
 author: phstee
-ms.date: 06/02/2023
+ms.date: 12/13/2023
 ---
 
 # Hyper-V storage I/O performance
@@ -58,7 +58,7 @@ If you upgrade your deployment to Windows Server 2016 or later, we recommend you
 
 ### VHD format
 
-Later versions of Hyper-V include improvements to their VHD format that allow for better alignment.Hyper-V in Windows Server 2012 and later supports both VHDX and VHD formats, as opposed to earlier versions that only support VHD format. As a result, later versions of Hyper-V perform better on large sector disks.
+Later versions of Hyper-V include improvements to their VHD format that allow for better alignment. Hyper-V in Windows Server 2012 and later supports both VHDX and VHD formats, as opposed to earlier versions that only support VHD format. As a result, later versions of Hyper-V perform better on large sector disks.
 
 Any VHD you create in Windows Server 2012 or later have the optimal 4 KB alignment. This aligned format is fully compatible with earlier versions of Windows Server. However, the alignment property doesn't support new allocations from parsers that aren't 4 KB alignment-aware, such as a parser from an earlier version of Windows Server or a non-Microsoft parser.
 
