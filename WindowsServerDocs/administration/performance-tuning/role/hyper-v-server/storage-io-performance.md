@@ -4,7 +4,7 @@ description: Learn about storage I/O performance considerations in Hyper-V perfo
 ms.topic: article
 ms.author: wscontent
 author: phstee
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ---
 
 # Hyper-V storage I/O performance
