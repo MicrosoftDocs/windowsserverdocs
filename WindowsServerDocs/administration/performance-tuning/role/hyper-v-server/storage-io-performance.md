@@ -36,7 +36,7 @@ IDE controllers are emulated controllers that expose IDE disks to the VM. This t
 
 ### SCSI (SAS controller)
 
-SCSI controllers are virtual controllers that expose SCSI disks to the VM. Each SCSI controller supports up to 64 devices. The SCSI path isn't emulated, which makes it the preferred controller for any disk other than the OS disk. Windows Server 2012 R2 and later support SCSI controllers, but only in scenarios where you report the controller as a Serial Attached SCSI (SAS) for supporting a shared virtual hard disk (VHDX).
+Virtual SCSI controllers expose SCSI disks to the VM. Each SCSI controller supports up to 64 devices. The SCSI path isn't emulated, which makes it the preferred controller for any disk other than the OS disk. Windows Server 2012 R2 and later support SCSI controllers, but only in scenarios where you report the controller as a Serial Attached SCSI (SAS) for supporting a shared virtual hard disk (VHDX).
 
 For best performance, we recommend you attach multiple disks to a single virtual SCSI controller. You should only create more controllers if you have no other options for scaling how many disks are connected to the VM.
 
