@@ -6,7 +6,7 @@ title:  Manage OpenSSH with Group Policy
 ---
 
 # How to manage OpenSSH with Group Policy
-## Prerequisits
+## Prerequisites
 Before you start, the following prerequisites must be met:
 - You have administrator rights on the local device and the appropriate permissions to update Group Policy on your domain controller
 - You are managing the in-box version of OpenSSH
