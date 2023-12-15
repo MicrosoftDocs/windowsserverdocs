@@ -20,9 +20,10 @@ To create a Group Policy to manage OpenSSH perform the following steps:
 4. Right-click `Group Policy Objects`, then select New to create a new Object
 5. Name the Object so that it can be identified as managing OpenSSH
 6. Double-click the new Object
-7. Right-click on `Computer Configuration`, then select `Edit...`
-8. In the navigation pane, expand `Computer Configuration`, expand `Policies`, expand `Windows Settings`, expand `Security Settings`, then select `System Services`
-9. Double-click `OpenSSH SSH Server` in the services list
-10. Click the checkmark `Define this policy setting`
-11. Select the desired service startup mode; `Automatic`, `Manual`, `Disabled`
-12. Select `Apply`
+7. Navigate to the `Settings` tab
+8. Right-click on `Computer Configuration`, then select `Edit...`
+9. In the navigation pane, expand `Computer Configuration`, expand `Policies`, expand `Windows Settings`, expand `Security Settings`, then select `System Services`
+10. Double-click `OpenSSH SSH Server` in the services list
+11. Click the checkmark `Define this policy setting`
+12. Select the desired service startup mode; `Automatic`, `Manual`, `Disabled`
+13. Select `Apply`
