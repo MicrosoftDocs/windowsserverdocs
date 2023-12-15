@@ -10,6 +10,9 @@ zone_pivot_groups: windows-os
 
 # Partition and share GPUs with virtual machines
 
+> [!TIP]
+> Select what you want to connect to using the buttons at the top of this article.
+
 :::zone pivot="azure-stack-hci"
 This article describes how to use the graphics processing unit (GPU) partitioning feature in Azure Stack HCI. It provides instructions on how to configure GPU partition count, assign GPU partitions, and unassign GPU partitions via Windows Admin Center and PowerShell.
 ::: zone-end
