@@ -26,8 +26,8 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
    A prompt for selecting a certificate for authentication is displayed.
 
-> [!NOTE]
-> In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), instead of being prompted for a certificate, you will be asked to log into the Windows Admin Center gateway. Step two does not apply.
+   > [!NOTE]
+   > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), instead of being prompted for a certificate, you will be asked to log into the Windows Admin Center gateway. Step two does not apply.
 1. Select the certificate labeled **Windows Admin Center Client**, then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
 
    :::image type="content" source="../media/launch/select-certificate.png" alt-text="Screenshot of the prompt showing options to select a certificate.":::
