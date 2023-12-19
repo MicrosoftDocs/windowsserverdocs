@@ -47,6 +47,8 @@ With our modernized gateway, we’ve made changes to our installer to offer more
 
 When running the installer, you're presented with three different installation modes: express localhost setup, express remote setup, and custom setup. 
 
+![Screenshot of modernized gateway installer with three installation modes](../media/modernized-gateway-installer.png)
+
 If you would like to configuration options for internal and external network ports, endpoint FQDN, WinRM over HTTPS, and more, continue to the [Custom setup](#custom-setup) section. If you're okay with the defaults, continue to the [Express setup options](#express-setup-options) section.
 
 ### Express setup options
@@ -78,7 +80,7 @@ Selecting custom setup allows you to configure all Windows Admin Center setup op
 If your installation failed, or Windows Admin Center fails to open after install, try uninstalling and reinstalling. This issue can also happen if you have an older version of a modernized gateway build installed, and you're trying to update to a newer version. To uninstall, follow the instructions in the [Uninstalling the modernized gateway](#uninstalling-the-modernized-gateway) section.
 
 ## Extension support
-The extension feed for the modernized gateway is not configured. Extensions not included in the Windows Admin Center installer, including external partner extensions, are not available unless you add an extension feed. 
+The extension feed for the modernized gateway isn't configured. Extensions not included in the Windows Admin Center installer, including external partner extensions, aren't available unless you add an extension feed. 
 
 The following extensions are available upon install of the modernized gateway build:
 - Apps & features
@@ -128,12 +130,12 @@ If you have to uninstall the Windows Admin Center modernized gateway, perform on
 - Navigate to the folder where the Windows Admin Center modernized gateway is installed (default directory is `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows Admin Center (v2)`) and select **Uninstall Windows Admin Center (v2)**
 - Run `C:\Program Files\WindowsAdminCenter\unins000.exe`
 
-Running the installer again doesn't provide an uninstall option at this time. To ensure your installation was removed successfully, check if a WindowsAdminCenter folder exists in `C:\ProgramData` or `C:\Program Files`. If it does not exist in either location, your application is successfully uninstalled.
+Running the installer again doesn't provide an uninstall option at this time. To ensure your installation was removed successfully, check if a WindowsAdminCenter folder exists in `C:\ProgramData` or `C:\Program Files`. If it doesn't exist in either location, your application is successfully uninstalled.
 
 During the uninstallation process, everything put on the machine during installation is removed, apart from the Windows Admin Center modernized gateway .exe installer file. If you have another build of Windows Admin Center also installed at the time of your modernized gateway uninstallation, no files or properties of the other build are touched during the uninstallation process. There are no interdependencies between the two installations.
 
 ## Known issues
-There are the follow known issues in the modernized gateway build of Windows Admin Center.
+There are the following known issues in the modernized gateway build of Windows Admin Center.
 
 If you encounter an issue not described on this page, [let us know](https://aka.ms/WACfeedback). To help us address the issue, specify that the issue was occurring in the modernized gateway build.
 
