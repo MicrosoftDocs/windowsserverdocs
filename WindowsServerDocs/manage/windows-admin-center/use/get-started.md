@@ -2,8 +2,8 @@
 title: Get started with Windows Admin Center
 description: Get started with Windows Admin Center
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 09/21/2022
 ---
 
