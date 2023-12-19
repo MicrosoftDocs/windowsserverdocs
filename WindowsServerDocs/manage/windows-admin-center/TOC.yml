@@ -12,7 +12,7 @@
     - name: Related management products
       href: understand/related-management.md
     - name: Windows Admin Center modernized gateway (preview)
-      href: understnad/modernized-gateway.md  
+      href: understand/modernized-gateway.md  
   - name: Plan
     items:
     - name: What type of installation is right for you?
