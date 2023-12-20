@@ -27,7 +27,7 @@ Learn about the basic design and security concepts for Windows Local Administrat
 
 The following figure depicts the Windows LAPS architecture:
 
-:::image type="content" source="./media/laps-concepts-overview/laps-concepts-overview-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
+:::image type="content" source="./media/laps-concepts-overview/laps-concepts-overview-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
 
 The Windows LAPS architecture diagram has several key components:
 

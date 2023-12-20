@@ -71,7 +71,7 @@ Windows LAPS rejects unexpected attempts to modify the account with a `STATUS_PO
 
 Manual mode is the best choice for situations that require unique and\or detailed configuration of the target account.
 
-Automatic mode is the best choice for situations with less detailed requirements, for exmaple you only need the managed account to be available and ready for use in a basic configuration with Administrator privileges. Automatic mode also supports creation of a custom new account.
+Automatic mode is the best choice for situations with less detailed requirements, for example you only need the managed account to be available and ready for use in a basic configuration with Administrator privileges. Automatic mode also supports creation of a custom new account.
 
 ||Manual mode|Automatic mode|
 |---|:---:|:---:|
