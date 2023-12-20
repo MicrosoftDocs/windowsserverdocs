@@ -73,7 +73,7 @@ Manual mode is the best choice for situations that require unique and\or detaile
 
 Automatic mode is the best choice for situations with less detailed requirements, for example you only need the managed account to be available and ready for use in a basic configuration with Administrator privileges. Automatic mode also supports creation of a custom new account.
 
-||Manual mode|Automatic mode|
+|Feature|Manual mode|Automatic mode|
 |---|:---:|:---:|
 |Default mode|Yes|No|
 |Password controlled by Windows LAPS|Yes|Yes|

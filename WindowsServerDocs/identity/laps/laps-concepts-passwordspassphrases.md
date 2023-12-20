@@ -61,8 +61,8 @@ Windows LAPS creates truly random passwords and passphrases (no human bias is po
 
 The supported password complexity settings are listed across the top of the table, and a sample of allowable password and passphrase lengths is listed down the left hand side. The entropy values for the default policy length settings are **bolded**:
 
-||1|2|3|4|5|6|7|8|
-|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|PasswordComplexity setting\password or passphrase length|1|2|3|4|5|6|7|8|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |3||||||39|31|31|
 |4||||||52|41|41|
 |5||||||65|52|52|
