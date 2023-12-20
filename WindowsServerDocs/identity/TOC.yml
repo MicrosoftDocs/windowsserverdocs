@@ -1019,8 +1019,8 @@
       href: laps/laps-overview.md
     - name: Windows LAPS concepts
       items:
-      - name: Architecture
-        href: laps/laps-concepts-architecture.md
+      - name: Overview
+        href: laps/laps-concepts-overview.md
       - name: Account management modes
         href: laps/laps-concepts-accountmanagementmodes.md
     - name: Windows LAPS scenarios

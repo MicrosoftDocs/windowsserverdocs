@@ -27,7 +27,7 @@ Learn about the basic design and security concepts for Windows Local Administrat
 
 The following figure depicts the Windows LAPS architecture:
 
-:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-overview-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
+:::image type="content" source="./media/laps-concepts-overview/laps-concepts-overview-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
 
 The Windows LAPS architecture diagram has several key components:
 
@@ -70,7 +70,7 @@ Windows LAPS uses a background task that wakes up every hour to process the curr
 
 When the background task runs, it executes the following basic flow:
 
-:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-overview-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
+:::image type="content" source="./media/laps-concepts-overview/laps-concepts-overview-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
 
 The obvious key difference between the Microsoft Entra ID flow and the Windows Server Active Directory flow is related to how password expiration time is checked. In both scenarios, password expiration time is stored side-by-side with the latest password in the directory.
 
@@ -129,7 +129,7 @@ The second line of password security uses the Windows Server Active Directory pa
 
 When you design your password retrieval security model, consider the information in the following figure:
 
-:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-overview-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
+:::image type="content" source="./media/laps-concepts-overview/laps-concepts-overview-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
 
 The diagram illustrates the suggested Windows Server Active Directory password security layers and their relationship to each other.
 
@@ -175,3 +175,31 @@ Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
 > But consider a catastrophic scenario in which all the domain controllers in a domain are down. In this scenario, no DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
+
+## Password reset after authentication
+
+Windows LAPS supports automatically rotating the local administrator account password if it detects that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. You can configure a grace period to give a user time to complete their intended actions.
+
+Password reset after authentication isn't supported for the DSRM account on domain controllers.
+
+## Account password tampering protection
+
+When Windows LAPS is configured to manage a local administrator account password, that account is protected against accidental or careless tampering. This protection extends to the DSRM account when the account is managed by Windows LAPS on a Windows Server Active Directory domain controller.
+
+Windows LAPS rejects unexpected attempts to modify the account's password with a `STATUS_POLICY_CONTROLLED_ACCOUNT` (0xC000A08B) or `ERROR_POLICY_CONTROLLED_ACCOUNT` (0x21CE\8654) error. Each such rejection is noted with a 10031 event in the Windows LAPS event log channel.
+
+## Disabled in Windows safe mode
+
+When Windows is started in safe mode, DSRM mode, or in any other non-default boot mode, Windows LAPS is disabled and no passwords are backed up.
+
+## Windows LAPS integration with smart card policy
+
+The Windows LAPS-managed account is exempted when the "Interactive logon: Require Windows Hello for Business or smart card" policy (also known as SCForceOption) is enabled. See [Additional smart card Group Policy settings and registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#additional-smart-card-group-policy-settings-and-registry-keys).
+
+Windows LAPS integration with the smart-card-auth-only policy is available on the following OS platforms with the specified update or later installed:
+
+- [Windows 11 22H2 - October 10 2023 Update](https://support.microsoft.com/help/5031354)
+- [Windows 11 21H2 - October 10 2023 Update](https://support.microsoft.com/help/5031358)
+- [Windows 10 - October 10 2023 Update](https://support.microsoft.com/help/5031356)
+- [Windows Server 2022 - October 10 2023 Update](https://support.microsoft.com/help/5031364)
+- [Windows Server 2019 - October 10 2023 Update](https://support.microsoft.com/help/5031361)

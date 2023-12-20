@@ -65,6 +65,8 @@ Each of the above policies supports a configuration mode that can be used to for
 
 Account tampering protection is expanded in automatic mode. Windows LAPS controls *all* configuration aspects of an automatically managed account. External attempts to modify the managed account are blocked. IT admins shouldn't author policies or scripts that attempt to modify the managed account.
 
+Windows LAPS rejects unexpected attempts to modify the account with a `STATUS_POLICY_CONTROLLED_ACCOUNT` (0xC000A08B) or `ERROR_POLICY_CONTROLLED_ACCOUNT` (0x21CE\8654) error. Each such rejection is noted with a 10101-10104 event in the Windows LAPS event log channel, with the various events corresponding to what type of modification was request (basic modify, modification of security descriptor, deletion, or removal from the local Administrators group).
+
 ## Choosing a mode
 
 Manual mode is the best choice for situations that require unique and\or detailed configuration of the target account.
