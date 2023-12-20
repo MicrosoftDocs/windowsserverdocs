@@ -1,9 +1,9 @@
 ---
-title: Key concepts in Windows LAPS
-description: Review basic design and security concepts for Windows Local Administrator Password Solution (Windows LAPS).
+title: Windows LAPS architecture
+description: Documents basic design concepts for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
 ms.author: jsimmons
-ms.date: 07/04/2022
+ms.date: 12/15/2023
 ms.topic: conceptual
 ---
 
@@ -51,7 +51,7 @@ The first step in a basic Windows LAPS scenario is to configure the Windows LAPS
 
 - **Microsoft Entra hybrid joined devices that are enrolled with Microsoft Intune**: Use [Microsoft Intune](/mem/intune).
 
-After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a new, random password that's compliant with the current policy's length and complexity requirements. The password is validated against the local device's password complexity policy.
+After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a new, random password that's compliant with the current policy's length and complexity requirements.
 
 When a new password is validated, the device stores the password in the configured directory, either Windows Server Active Directory or Microsoft Entra ID. An associated password expiration time that's based on the current policy's password age setting also is computed and stored in the directory. The device rotates the password automatically when the password expiration time is reached.
 
@@ -59,14 +59,14 @@ When the local account password is stored in the relevant directory, an authoriz
 
 You can rotate the password before the normally expected expiration time. Rotate a password before a scheduled expiration by using one of the following methods:
 
-- Manually intervene on the managed device itself by using an admin account. For example, you can use the `Reset-LapsPassword` cmdlet.
+- Manually rotate the password on the managed device itself, using the `Reset-LapsPassword` cmdlet.
 - Invoke the ResetPassword Execute action in the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp).
 - Modify the password expiration time in the directory (applies only to Windows Server Active Directory).
 - Trigger automatic rotation when the managed account is used to authenticate to the managed device.
 
 ## Background policy processing cycle
 
-Windows LAPS uses a background task that wakes up every hour to process the currently active policy. This task isn't implemented by using Windows Task Scheduler.
+Windows LAPS uses a background task that wakes up every hour to process the currently active policy. This task isn't implemented with a Windows Task Scheduler task and is not configurable.
 
 When the background task runs, it executes the following basic flow:
 
@@ -175,45 +175,3 @@ Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
 > But consider a catastrophic scenario in which all the domain controllers in a domain are down. In this scenario, no DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
-
-## Password reset after authentication
-
-Windows LAPS supports automatically rotating the local administrator account password if it detects that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. You can configure a grace period to give a user time to complete their intended actions.
-
-Password reset after authentication isn't supported for the DSRM account on domain controllers.
-
-## Account password tampering protection
-
-When Windows LAPS is configured to manage a local administrator account password, that account is protected against accidental or careless tampering. This protection extends to the DSRM account when the account is managed by Windows LAPS on a Windows Server Active Directory domain controller.
-
-Windows LAPS rejects unexpected attempts to modify the account's password with a `STATUS_POLICY_CONTROLLED_ACCOUNT` (0xC000A08B) or `ERROR_POLICY_CONTROLLED_ACCOUNT` (0x21CE\8654) error. Each such rejection is noted with a 10031 event in the Windows LAPS event log channel.
-
-## Disabled in Windows safe mode
-
-When Windows is started in safe mode, DSRM mode, or in any other non-default boot mode, Windows LAPS is disabled and no passwords are backed up.
-
-## Windows LAPS integration with smart card policy
-
-The Windows LAPS-managed account is exempted when the "Interactive logon: Require Windows Hello for Business or smart card" policy (also known as SCForceOption) is enabled. See [Additional smart card Group Policy settings and registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#additional-smart-card-group-policy-settings-and-registry-keys).
-
-Windows LAPS integration with the smart-card-auth-only policy is available on the following OS platforms with the specified update or later installed:
-
-- [Windows 11 22H2 - October 10 2023 Update](https://support.microsoft.com/help/5031354)
-- [Windows 11 21H2 - October 10 2023 Update](https://support.microsoft.com/help/5031358)
-- [Windows 10 - October 10 2023 Update](https://support.microsoft.com/help/5031356)
-- [Windows Server 2022 - October 10 2023 Update](https://support.microsoft.com/help/5031364)
-- [Windows Server 2019 - October 10 2023 Update](https://support.microsoft.com/help/5031361)
-
-## See also
-
-- [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
-- [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
-- [Microsoft Intune](/mem/intune)
-
-## Next steps
-
-Now that you understand the basic concepts of the Windows LAPS design, get started with one of the following scenarios:
-
-- [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
-- [Get started with Windows LAPS for Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
-- [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)

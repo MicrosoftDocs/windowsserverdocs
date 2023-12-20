@@ -43,6 +43,7 @@ The following table specifies which settings apply to devices that have the spec
 |AdministratorAccountName|Yes|Yes|
 |PasswordAgeDays|Yes|Yes|
 |PasswordLength|Yes|Yes|
+|PassphraseLength|Yes|Yes|
 |PasswordComplexity|Yes|Yes|
 |PostAuthenticationResetDelay|Yes|Yes|
 |PostAuthenticationActions|Yes|Yes|
@@ -51,6 +52,11 @@ The following table specifies which settings apply to devices that have the spec
 |ADEncryptedPasswordHistorySize|No|Yes|
 |ADBackupDSRMPassword|No|Yes|
 |PasswordExpirationProtectionEnabled|No|Yes|
+|AutomaticAccountManagementEnabled|Yes|Yes|
+|AutomaticAccountManagementTarget|Yes|Yes|
+|AutomaticAccountManagementNameOrPrefix|Yes|Yes|
+|AutomaticAccountManagementEnableAccount|Yes|Yes|
+|AutomaticAccountManagementRandomizeName|Yes|Yes|
 
 If BackupDirectory is set to Disabled, all other settings are ignored.
 
@@ -104,6 +110,9 @@ If not specified, this setting defaults to managing the built-in local administr
 > [!IMPORTANT]
 > If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account.
 
+> [!IMPORTANT]
+> This setting is ignored when AutomaticAccountManagementEnabled is enabled.
+
 ### PasswordAgeDays
 
 This setting controls the maximum password age of the managed local administrator account. Supported values are:
@@ -128,9 +137,22 @@ If not specified, this setting defaults to 14 characters.
 > [!IMPORTANT]
 > Do not configure PasswordLength to a value that is incompatible with the managed device's local password policy. This will result in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAP event log).
 
+The PasswordLength setting is ignored unless PasswordComplexity is configured to one of the password options.
+
+### PassphraseLength
+
+Use this setting to configure the number of words in the passphrase of the managed local administrator account. Supported values are:
+
+- **Minimum**: 3 words
+- **Maximum**: 10 words
+
+If not specified, this setting defaults to 6 words.
+
+The PassphraseLength setting is ignored unless PasswordComplexity is configured to one of the passphrase options.
+
 ### PasswordComplexity
 
-Use this setting to configure the required password complexity of the managed local administrator account.
+Use this setting to configure the required password complexity of the managed local administrator account, or to specify that a passphrase is created.
 
 |Value|Description of setting|
 |--- |--- |
@@ -138,6 +160,10 @@ Use this setting to configure the required password complexity of the managed lo
 |2|Large letters + small letters|
 |3|Large letters + small letters + numbers|
 |4|Large letters + small letters + numbers + special characters|
+|5|Large letters + small letters + numbers + special characters (improved readability)|
+|6|Passphrase (long words)|
+|7|Passphrase (short words)|
+|8|Passphrase (short words with unique prefixes)|
 
 If not specified, this setting defaults to 4.
 
@@ -165,7 +191,7 @@ Use this setting to enable encryption of passwords in Active Directory.
 Supported values are either 1 (True) or 0 (False).
 
 > [!IMPORTANT]
-> Enabling this setting requires that your Active Directory domain be running at Domain Functional Level 2016 or later.
+> Enabling this setting requires that your Active Directory domain is running at Domain Functional Level 2016 or later.
 
 ### ADPasswordEncryptionPrincipal
 
@@ -178,15 +204,15 @@ If not specified, only members of the Domain Admins group in the device's domain
 If specified, the specified user or group can decrypt the password stored in Active Directory.
 
 > [!IMPORTANT]
-> The string that's stored in this setting must be either an SID in string form or the fully qualified name of a user or group. Valid examples include:
+> The string that's stored in this setting is either an SID in string form or the fully qualified name of a user or group. Valid examples include:
 >
 > - `S-1-5-21-2127521184-1604012920-1887927527-35197`
 > - `contoso\LAPSAdmins`
 > - `lapsadmins@contoso.com`
 >
-> The principal identified (either by SID or by user or group name) must exist and be resolvable by the device.
+> The principal identified (either by SID or by user or group name) must exist and is resolvable by the device.
 >
-> NOTE: the data specified in this setting must be entered as-is; for example, do *not* add enclosing quotes or parentheses.
+> NOTE: the data specified in this setting is entered as-is; for example, do *not* add enclosing quotes or parentheses.
 >
 > This setting is ignored unless ADPasswordEncryptionEnabled is configured to True and all other prerequisites are met.
 >
@@ -235,8 +261,9 @@ This setting can have one of the following values:
 |Value|Name|Actions taken when the grace period expires|Comments|
 |--- |--- |--- |--- |
 |1|Reset password|The managed account password is reset.||
-|3|Reset password and sign out|The managed account password is reset, any interactive sign-in sessions that use the managed account are terminated, and any SMB sessions using the managed account are deleted.|Interactive sign-in sessions receive a nonconfigurable two-minute warning to save their work and sign out.|
+|3|Reset password and sign out|The managed account password is reset, interactive sign-in sessions using the managed account are terminated, and SMB sessions using the managed account are deleted.|Interactive sign-in sessions receive a nonconfigurable two-minute warning to save their work and sign out.|
 |5|Reset password and reboot|The managed account password is reset and the managed device is restarted.|The managed device is restarted after a nonconfigurable one-minute delay.|
+|11|Reset password and sign out|The managed account password is reset, interactive sign-in sessions using the managed account are terminated, SMB sessions using the managed account are deleted, and any remaining processes running under the managed account identity are terminated.|Interactive sign-in sessions receive a nonconfigurable two-minute warning to save their work and sign out.|
 
 If not specified, this setting defaults to 3.
 
@@ -244,6 +271,65 @@ If not specified, this setting defaults to 3.
 > The allowed post-authentication actions are intended to help limit the amount of time a Windows LAPS password can be used before it's reset. Signing out of the managed account or restarting the device are options that help ensure the time is limited. Abruptly terminating signed-in sessions or restarting the device might result in data loss.
 >
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid Windows LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
+
+### AutomaticAccountManagementEnabled
+
+Use this setting to enable automatic account management.
+
+Supported values are either 1 (True) or 0 (False).
+
+This setting defaults to 0 (False).
+
+### AutomaticAccountManagementTarget
+
+Use this setting to specify whether the built-in Administrator account is automatically managed, or a new custom account.
+
+|Value|Description of setting|
+|--- |--- |
+|0|Automatically manage the built-in Administrator account|
+|1|Automatically manage a new custom account|
+
+This setting defaults to 1.
+
+This setting is ignored unless AutomaticAccountManagementEnabled is enabled.
+
+### AutomaticAccountManagementNameOrPrefix
+
+Use this setting to specify the name or the name prefix of the automatically managed account.
+
+This setting defaults to "WLapsAdmin".
+
+This setting is ignored unless AutomaticAccountManagementEnabled is enabled.
+
+### AutomaticAccountManagementEnableAccount
+
+Use this setting to enable or disable the automatically managed account.
+
+|Value|Description of setting|
+|--- |--- |
+|0|Disable the automatically managed account|
+|1|Enable the automatically managed account|
+
+This setting defaults to 0.
+
+This setting is ignored unless AutomaticAccountManagementEnabled is enabled.
+
+### AutomaticAccountManagementRandomizeName
+
+Use this setting to enable randomization of the name of the automatically managed account.
+
+When this setting is enabled, the name of the managed account (determined by the AutomaticAccountManagementNameOrPrefix setting) is suffixed with a random six-digit suffix every time the password is rotated.
+
+Windows local account names have a maximum length of 20 characters, which means the name component must be 14 characters long at most to have sufficient space for the random suffix. Account names specified by AutomaticAccountManagementNameOrPrefix that are longer than 14 characters are  truncated.
+
+|Value|Description of setting|
+|--- |--- |
+|0|Don't randomize the name of the automatically managed account|
+|1|Randomize the name of the automatically managed account|
+
+This setting defaults to 0.
+
+This setting is ignored unless AutomaticAccountManagementEnabled is enabled.
 
 ## See also
 
