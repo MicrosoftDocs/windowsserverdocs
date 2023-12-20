@@ -20,9 +20,6 @@ Learn about the basic design and security concepts for Windows Local Administrat
 - Account password tampering protection
 - Windows safe mode
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md).
-
 ## Windows LAPS architecture
 
 The following figure depicts the Windows LAPS architecture:

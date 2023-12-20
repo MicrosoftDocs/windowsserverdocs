@@ -11,9 +11,6 @@ ms.topic: conceptual
 
 Windows Local Administrator Password Solution (Windows LAPS) includes a specific PowerShell module named LAPS. Learn how to use the cmdlets in this module and what they do.
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md).
-
 ## Cmdlet descriptions
 
 The following table describes the cmdlets that are available in the LAPS PowerShell module:

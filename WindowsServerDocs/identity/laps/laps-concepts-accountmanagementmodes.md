@@ -75,7 +75,6 @@ Automatic mode is the best choice for situations with less detailed requirements
 
 |Feature|Manual mode|Automatic mode|
 |---|:---:|:---:|
-|Default mode|Yes|No|
 |Password controlled by Windows LAPS|Yes|Yes|
 |IT admin can customize the account|Yes|No|
 |Supports automatic account creation|No|Yes|
