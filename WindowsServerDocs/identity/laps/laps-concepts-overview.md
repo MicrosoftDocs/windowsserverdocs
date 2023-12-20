@@ -164,7 +164,7 @@ When encrypted password history is enabled and it's time to rotate the password,
 
 ### DSRM password support
 
-Windows LAPS supports backing up the DSRM account password on Windows Server domain controllers. DSRM account passwords can be backed up only to Windows Server Active Directory and if password encryption is enabled. Otherwise, this feature works almost identically to how encrypted password support works for Windows Server Active Directory-joined clients. 
+Windows LAPS supports backing up the DSRM account password on Windows Server domain controllers. DSRM account passwords can be backed up only to Windows Server Active Directory and if password encryption is enabled. Otherwise, this feature works almost identically to how encrypted password support works for Windows Server Active Directory-joined clients.
 
 Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 
@@ -181,7 +181,7 @@ Password reset after authentication isn't supported for the DSRM account on doma
 
 ## Account password tampering protection
 
-When Windows LAPS is configured to manage a local administrator account password, that account is protected against accidental or careless tampering. This protection extends to the DSRM account when the account is managed by Windows LAPS on a Windows Server Active Directory domain controller.
+When Windows LAPS is configured to manage a local administrator account password, that account is protected against accidental or careless tampering. This protection extends to the DSRM account, when Windows LAPS is managing that account on a Windows Server Active Directory domain controller.
 
 Windows LAPS rejects unexpected attempts to modify the account's password with a `STATUS_POLICY_CONTROLLED_ACCOUNT` (0xC000A08B) or `ERROR_POLICY_CONTROLLED_ACCOUNT` (0x21CE\8654) error. Each such rejection is noted with a 10031 event in the Windows LAPS event log channel.
 
