@@ -172,4 +172,4 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 - [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
 - [Use Windows LAPS PowerShell cmdlets](laps-management-powershell.md)
-- [Key concepts in Windows LAPS](laps-concepts-architecture.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)

@@ -80,4 +80,4 @@ If you don't have permissions to read or decrypt the current password informatio
 ## Next steps
 
 - [Windows LAPS schema extensions reference](laps-technical-reference.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)

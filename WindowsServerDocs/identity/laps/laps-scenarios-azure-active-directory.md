@@ -233,4 +233,4 @@ While not required for Windows LAPS to operate, whenever you extend your on-prem
 
 - [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
-- [Key concepts in Windows LAPS](laps-concepts-architecture.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)

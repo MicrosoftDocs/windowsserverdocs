@@ -65,5 +65,5 @@ In addition to naming-related changes, the Windows LAPS PowerShell cmdlets for W
 
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)
 - [LAPS PowerShell Module](/powershell/module/laps/)

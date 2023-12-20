@@ -165,7 +165,7 @@ If you aren't sure where your feedback should go, submit it using any of the abo
 
 ## Next steps
 
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)
 - [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
 - [Get started with Windows LAPS for Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
