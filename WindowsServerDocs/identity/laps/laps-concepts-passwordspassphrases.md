@@ -53,11 +53,11 @@ Windows LAPS supports three different complexity settings that can be used to ge
 
 The length of passphrases is controlled using the PassphraseLength policy setting. Passphrases created by Windows LAPS default to six words in length, and can be configured to be anywhere from three to 10 terms in length. The first character of each word is always capitalized for improved readability. No punctuation or other dividing characters are used between words.
 
-Here is an example of a passphrase created with six words taken from the "Long words" list:
+Example of a passphrase created with six words taken from the "Long words" list:
 
 `SkiingProduceIdentifyStarlitOctaneDistress`
 
-Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Slight modifications made from the original are called out in the downloadable lists.
+Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Microsoft made slight modifications to the original word lists; all changes are detailed in the downloadable lists.
 
 ## Entropy considerations
 
