@@ -23,7 +23,7 @@ The more frequent releases of the AC enable customers to take advantage of innov
 
 ## Portability
 
-Portability is an important feature introduced in Windows Server Annual Channel for Containers that lets users run workloads with different container image versions. Portability lets Windows Server 2022-based container images run on session hosts running later versions of Windows Server. This increased support helps container services like AKS to update the OSes on container hosts on a more frequent basis without requiring you to update the containers themselves. Portability doesn't only streamline the upgrade process, but also helps developers take full advantage of the enhanced flexibility and compatibility that containers offer. See [Portability in Windows Server Annual Channel for containers]() for more information on how portability works.
+Portability is an important feature introduced in Windows Server Annual Channel for Containers that lets users run workloads with different container image versions. Portability lets Windows Server 2022-based container images run on session hosts running later versions of Windows Server. This increased support helps container services like AKS to update the OSes on container hosts on a more frequent basis without requiring you to update the containers themselves. Portability doesn't only streamline the upgrade process, but also helps developers take full advantage of the enhanced flexibility and compatibility that containers offer. See [Portability in Windows Server Annual Channel for containers](/.md) for more information on how portability works.
 
 ## Related content
 
