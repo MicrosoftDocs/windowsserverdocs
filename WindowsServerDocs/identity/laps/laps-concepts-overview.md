@@ -3,7 +3,7 @@ title: Windows LAPS architecture
 description: Documents basic design concepts for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
 ms.author: jsimmons
-ms.date: 12/15/2023
+ms.date: 12/25/2023
 ms.topic: conceptual
 ---
 
@@ -27,7 +27,7 @@ Learn about the basic design and security concepts for Windows Local Administrat
 
 The following figure depicts the Windows LAPS architecture:
 
-:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
+:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-overview-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
 
 The Windows LAPS architecture diagram has several key components:
 
@@ -70,7 +70,7 @@ Windows LAPS uses a background task that wakes up every hour to process the curr
 
 When the background task runs, it executes the following basic flow:
 
-:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-architecture-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
+:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-overview-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
 
 The obvious key difference between the Microsoft Entra ID flow and the Windows Server Active Directory flow is related to how password expiration time is checked. In both scenarios, password expiration time is stored side-by-side with the latest password in the directory.
 
@@ -129,7 +129,7 @@ The second line of password security uses the Windows Server Active Directory pa
 
 When you design your password retrieval security model, consider the information in the following figure:
 
-:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-architecture-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
+:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-overview-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
 
 The diagram illustrates the suggested Windows Server Active Directory password security layers and their relationship to each other.
 

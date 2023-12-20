@@ -3,7 +3,7 @@ title: Windows LAPS passwords and passphrases
 description: Documents password and passphrase details for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
 ms.author: jsimmons
-ms.date: 12/15/2023
+ms.date: 12/25/2023
 ms.topic: conceptual
 ---
 
@@ -35,6 +35,7 @@ When a complexity setting with multiple character sets is chosen, Windows LAPS e
 The length of passwords is controlled using the PasswordLength policy setting. Passwords created by Windows LAPS default to 14 characters in length, and can be configured to be anywhere from 8-64 characters in length.
 
 Password complexity setting five is equivalent to password complexity setting four, with  the following modifications made to improve readability and avoid confusion:
+
 - Removes the letters 'I', 'O', 'Q', 'l', and 'o'
 - Removes the numbers '0' and '1'
 - Removes the symbols ',', '.', '&', '{', '}', '[', ']', '(', ')', and ';'
@@ -52,7 +53,7 @@ Windows LAPS supports three different complexity settings that can be used to ge
 
 The length of passphrases is controlled using the PassphraseLength policy setting. Passphrases created by Windows LAPS default to six words in length, and can be configured to be anywhere from three to 10 terms in length. The first character of each word is always capitalized for improved readability. No punctuation or other dividing characters are used between words.
 
-Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Any modifications made from the original are called out in the downloadable lists.
+Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Slight modifications made from the original are called out in the downloadable lists.
 
 ## Entropy considerations
 
