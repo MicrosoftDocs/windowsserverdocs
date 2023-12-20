@@ -27,7 +27,7 @@ Learn about the basic design and security concepts for Windows Local Administrat
 
 The following figure depicts the Windows LAPS architecture:
 
-:::image type="content" source="./media/laps-concepts/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
+:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-architecture-diagram.png" border="false" alt-text="Diagram of Windows LAPS architecture that shows the managed device, Microsoft Entra ID, and Windows Server Active Directory.":::
 
 The Windows LAPS architecture diagram has several key components:
 
@@ -53,7 +53,7 @@ The first step in a basic Windows LAPS scenario is to configure the Windows LAPS
 
 After the managed device is configured with a policy that enables Windows LAPS, the device begins to manage the configured local account password. When the password expires, the device generates a new, random password that's compliant with the current policy's length and complexity requirements.
 
-When a new password is validated, the device stores the password in the configured directory, either Windows Server Active Directory or Microsoft Entra ID. An associated password expiration time that's based on the current policy's password age setting also is computed and stored in the directory. The device rotates the password automatically when the password expiration time is reached.
+When a new password is validated, the device stores the password in the configured directory, either Windows Server Active Directory or Microsoft Entra ID. An associated password expiration time, which is based on the current policy's password age setting, is also computed and stored in the directory. The device rotates the password automatically when the password expiration time is reached.
 
 When the local account password is stored in the relevant directory, an authorized IT admin can access the password. Passwords that are stored in Microsoft Entra ID are secured via a role-based access control model. Passwords that are stored in Windows Server Active Directory are secured via access control lists (ACLs) and also optionally via password encryption.
 
@@ -66,11 +66,11 @@ You can rotate the password before the normally expected expiration time. Rotate
 
 ## Background policy processing cycle
 
-Windows LAPS uses a background task that wakes up every hour to process the currently active policy. This task isn't implemented with a Windows Task Scheduler task and is not configurable.
+Windows LAPS uses a background task that wakes up every hour to process the currently active policy. This task isn't implemented with a Windows Task Scheduler task and isn't configurable.
 
 When the background task runs, it executes the following basic flow:
 
-:::image type="content" source="./media/laps-concepts/laps-concepts-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
+:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-architecture-processing-cycle.png" border="false" alt-text="Diagram of a flowchart that describes the Windows LAPS background processing cycle.":::
 
 The obvious key difference between the Microsoft Entra ID flow and the Windows Server Active Directory flow is related to how password expiration time is checked. In both scenarios, password expiration time is stored side-by-side with the latest password in the directory.
 
@@ -97,7 +97,7 @@ Windows LAPS does respond to Group Policy change notifications. You can manually
 
 ## Microsoft Entra passwords
 
-When you back up passwords to Microsoft Entra ID, managed local account passwords are stored on the Microsoft Entra device object. Windows LAPS authenticates to Microsoft Entra ID by using the device identity of the managed device. Data that's stored in Microsoft Entra ID is highly secure, but for extra protection, the password is further encrypted before it's persisted. This extra encryption layer is removed before the password is returned to authorized clients.
+When you back up passwords to Microsoft Entra ID, managed local account passwords are stored on the Microsoft Entra device object. Windows LAPS authenticates to Microsoft Entra ID by using the device identity of the managed device. Data stored in Microsoft Entra ID is highly secure, but for extra protection, the password is further encrypted before being persisted. This extra encryption layer is removed before the password is returned to authorized clients.
 
 By default, only members of the Global Administrator, Cloud Device Administrator, and Intune Administrator roles can retrieve the clear-text password.
 
@@ -114,7 +114,7 @@ When you back up passwords to Windows Server Active Directory, managed local acc
 
 #### ACLs
 
-The first line of password security in Windows Server Active Directory uses ACLs that are set up on the computer object that contains an Organizational Unit (OU). The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
+The frontline of password security in Windows Server Active Directory uses ACLs that are set up on the computer object that contains an Organizational Unit (OU). The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
 
 #### Encrypted passwords
 
@@ -129,15 +129,15 @@ The second line of password security uses the Windows Server Active Directory pa
 
 When you design your password retrieval security model, consider the information in the following figure:
 
-:::image type="content" source="./media/laps-concepts/laps-concepts-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
+:::image type="content" source="./media/laps-concepts-architecture/laps-concepts-architecture-password-security-layers.png" border="false" alt-text="Diagram that shows the Windows LAPS password security layers.":::
 
 The diagram illustrates the suggested Windows Server Active Directory password security layers and their relationship to each other.
 
-The outermost circle (green) is composed of security principals that have been granted permission to read or set the password expiration time attribute on computer objects in the directory. This ability is a sensitive permission but is considered nondestructive. An attacker who acquires this permission can force managed devices to rotate their managed devices more frequently.
+The outermost circle (green) is composed of security principals that are granted permission to read or set the password expiration time attribute on computer objects in the directory. This ability is a sensitive permission but is considered nondestructive. An attacker who acquires this permission can force managed devices to rotate their managed devices more frequently.
 
-The middle circle (yellow) is composed of security principals that have been granted permission to read or set password attributes on computer objects in the directory. This ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for members of the Domain Admins security group.
+The middle circle (yellow) is composed of security principals that are granted permission to read or set password attributes on computer objects in the directory. This ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for members of the Domain Admins security group.
 
-The inner circle (red) applies only when password encryption is enabled. It's composed of groups or users that have been granted decryption permissions for encrypted password attributes on computer objects in the directory. Like the permission in the middle circle, this ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for members of the Domain Admins group.
+The inner circle (red) applies only when password encryption is enabled. The inner circle is composed of groups or users that are granted decryption permissions for encrypted password attributes on computer objects in the directory. Like the permission in the middle circle, this ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for members of the Domain Admins group.
 
 > [!IMPORTANT]
 > Consider customizing your security layers to match the sensitivity of the managed machines in your organization. For example, it might be acceptable for front-line IT worker devices to be accessible to help desk administrators, but you likely will want to set tighter boundaries for corporate executive laptops.

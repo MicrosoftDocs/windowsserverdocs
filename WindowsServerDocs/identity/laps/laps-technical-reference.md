@@ -164,5 +164,5 @@ Like Windows LAPS, legacy Microsoft LAPS also requires you to use schema extensi
 
 ## Next steps
 
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-architecture.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)

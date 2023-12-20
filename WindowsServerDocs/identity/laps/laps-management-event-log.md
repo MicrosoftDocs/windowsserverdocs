@@ -205,4 +205,4 @@ The Windows LAPS event log channel contains events related to the local machine 
 ## Next steps
 
 - [Configure Windows LAPS for Windows Server Active Directory](laps-management-user-interface.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-architecture.md)
