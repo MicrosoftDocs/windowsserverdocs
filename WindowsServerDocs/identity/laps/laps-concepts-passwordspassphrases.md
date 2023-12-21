@@ -47,9 +47,9 @@ Windows LAPS supports three different complexity settings that can be used to ge
 
 |PasswordComplexity setting|Description|Number of words in list|
 |---|---|---|
-|5|Long words|7776|
-|6|Short words|1276|
-|7|Short words with unique prefixes|1276|
+|6|Long words|7776|
+|7|Short words|1276|
+|8|Short words with unique prefixes|1276|
 
 The length of passphrases is controlled using the PassphraseLength policy setting. Passphrases created by Windows LAPS default to six words in length, and can be configured to be anywhere from three to 10 terms in length. The first character of each word is always capitalized for improved readability. No punctuation or other dividing characters are used between words.
 
@@ -87,9 +87,13 @@ At the upper end of the allowable length ranges, the resultant entropy levels co
 
 ## See also
 
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)
+- [Windows LAPS account management modes](laps-concepts-accountmanagementmodes.md)
+- [Windows LAPS passwords and passphrases](laps-concepts-passwordspassphrases.md)
+
 ## Next steps
 
-Now that you understand the different account management modes, take a look at these other sections.
+Now that you understand how passwords and passphrases are created, take a look at these other sections.
 
 - [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
 - [Get started with Windows LAPS for Microsoft Entra ID](laps-scenarios-azure-active-directory.md)

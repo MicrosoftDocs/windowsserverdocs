@@ -89,6 +89,9 @@ Windows LAPS supports managing the password of the Directory Services Repair Mod
 
 ## See also
 
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)
+- [Windows LAPS passwords and passphrases](laps-concepts-passwordspassphrases.md)
+
 ## Next steps
 
 Now that you understand the different account management modes, take a look at these other sections.

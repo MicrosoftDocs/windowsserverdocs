@@ -200,3 +200,17 @@ Windows LAPS integration with the smart-card-auth-only policy is available on th
 - [Windows 10 - October 10 2023 Update](https://support.microsoft.com/help/5031356)
 - [Windows Server 2022 - October 10 2023 Update](https://support.microsoft.com/help/5031364)
 - [Windows Server 2019 - October 10 2023 Update](https://support.microsoft.com/help/5031361)
+
+## See also
+
+- [Windows LAPS account management modes](laps-concepts-accountmanagementmodes.md)
+- [Windows LAPS passwords and passphrases](laps-concepts-passwordspassphrases.md)
+- [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
+- [Microsoft Intune](/mem/intune)
+
+## Next steps
+
+Now that you understand the basic concepts of the Windows LAPS design, get started with one of the following scenarios:
+
+- [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
+- [Get started with Windows LAPS for Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
