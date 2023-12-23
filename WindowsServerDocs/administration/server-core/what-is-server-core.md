@@ -40,7 +40,7 @@ In addition to no UI, Server Core also differs from the Server with Desktop Expe
 
 The following table shows which applications are available *locally* on Server Core vs Server with Desktop Experience. **Important**: In most cases, applications that are listed as "not available" below can be run remotely from a Windows client computer or [Windows Admin Center](../../manage/windows-admin-center/overview.md) to manage your Server Core installation. 
 
-### Versioning and Downloads of Feature on Demand for Server Core
+### Versioning and Downloads of Feature on Demand (FoD) for Server Core
 
 The list below reflects the FoD level as of Version 1809 (Server 2019 LTSC). 
 You can greatly enchance your Server Core compatibility by applying a FoD package, newer than 1809.
