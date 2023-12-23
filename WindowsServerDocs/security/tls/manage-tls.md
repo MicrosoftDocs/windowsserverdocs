@@ -37,8 +37,10 @@ You can use the SSL Cipher Suite Order Group Policy settings to configure the de
 4. Right-click the selected text, and select **copy** from the pop-up menu.
 5. Paste the text into a text editor such as notepad.exe and update with the new cipher suite order list.
 
-   > [!NOTE]
+   > [!WARNING]
    > The TLS cipher suite order list must be in strict comma delimited format. Each cipher suite string will end with a comma (,) to the right side of it.
+   >
+   > An empty list or malformed input will prevent any TLS cipher suites from being leveraged.
    >
    > Additionally, the list of cipher suites is limited to 1,023 characters.
 
