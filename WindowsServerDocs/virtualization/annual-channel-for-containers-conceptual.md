@@ -16,6 +16,14 @@ Windows Server Annual Channel for Containers is an operating system to host Wind
 
 Windows Server Annual Channel for Containers means new features and functionality being released on an annual basis. The channel can only be installed with the Server Core installation option. The Annual Channel is available to volume-licensed customers with Software Assurance and loyalty programs such as Visual Studio Subscriptions. As an added benefit for Windows on Azure Kubernetes Services customers, its Windows operating system SKU has versioning aligned to Kubernetes versions, much like the Linux upgrade process.
 
+Developers and operations teams can opt into the new annual channel by updating container hosts to Annual channel version 23H2 without being required to rebuild Windows Server 2022 LTSC container images. To validate reliability of the annual channel after a new container host is released, users can deploy and test Window Server 2022 LTSC container images. 
+
+Window Server 2022 is the only supported image on the 23H2 host.
+
+All container images (Nano Server, Server Core, Windows Server) will continue to be shipped along with Windows Server LTSCs such as Windows Server 2019 and Windows Server 2022. With the Windows Server Annual Channel for Containers, there will be a yearly release of the container host starting with version 23H2.
+
+ ![Graphic that shows elastic pools in basic, standard, and premium editions](/media/what-is.png)
+
 The more frequent releases of the AC enable customers to take advantage of innovation more quickly, with a focus on containers and microservices. For a detailed comparison, see Windows Server servicing channels.To learn more about the lifecycle, see Windows Server 2022 lifecycle [](). Each release is named based on the release cycle; for example, version 23H2 is a release in the second half of the year 2023.
 
 >Note
