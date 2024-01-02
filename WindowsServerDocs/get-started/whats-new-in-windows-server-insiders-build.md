@@ -16,56 +16,19 @@ ms.prod: windows-server
 
 This article describes some of the new features in Windows Server Insiders Preview. Windows Server Insiders Preview is built on the strong foundation of Windows Server 2022 and brings many innovations.
 
-## Download Windows Server for Insiders Preview
-
-If you're a registered Insider, you can access the [Windows Insider Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) page directly to view available Window Server Preview builds. If you'd like to participate as an Insider, you can refer to the [Getting started with the Windows Insider Program for Windows Server](https://www.microsoft.com/windowsinsider/for-business-getting-started-server).
-
-The following keys are valid only for preview builds and expire on September 15, 2024:
-
-|Windows Server Version|Key|
-|-|-|
-|Standard|MFY9F-XBN2F-TYFMP-CCV49-RMYVH|
-|Datacenter|2KNJJ-33Y9H-2GXGX-KMQWH-G6H67|
-|Azure Edition|Keys aren't accepted|
-
-> [!NOTE]
-> Downloads may be restricted in certain countries. To learn more, see [Microsoft suspends new sales in Russia](https://blogs.microsoft.com/on-the-issues/2022/03/04/microsoft-suspends-russia-sales-ukraine-conflict/).
-
-### Insiders Preview known issues
-
-- The new Feedback Hub and Terminal apps aren't functioning properly in this release and will be addressed in a future build.
-
-- We advise against using this build to validate upgrades from Windows Server 2019 or 2022 due to identified intermittent upgrade failures.
-
-- Using the `wevtutil al` command to archive event logs causes the Windows Event Log service to crash and archive operation to fail. To resolve this issue, the service must be restarted by running the following in an elevated PowerShell prompt:
-
-  ```powershell
-  Start-Service EventLog
-  ```
-
-- If you have the Secure Launch or Dynamic Root of Trust for Measurement (DRTM) code path enabled, we recommend avoiding installing this build.
-
 ## What's new
 
 The following new features are specific to Windows Server with Desktop Experience only. Having both the physical devices running the operating system and the correct drivers readily available are required.
 
 ## Build 25997
 
-### Bluetooth
 
-You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server.
 
 ### Delegated Managed Service Account (dMSA)
 
 This new type of account enables migration from a Service Account to a dMSA. This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords.
 
-### Email & accounts
 
-In **Settings > Accounts > Email & accounts**, this feature was updated to align with the functionality of Windows 11. It's important to keep in mind that domain join is still required for most situations.
-
-### OOBE
-
-When you install and sign in for the first time, you can observe that this preview conforms to the style and appearance of the Windows 11 GUI.
 
 ### Server Message Block (SMB)
 
@@ -75,7 +38,7 @@ When you install and sign in for the first time, you can observe that this previ
 
   SMB over QUIC now supports using certificates with subject alternative names and not just a single subject. This feature allows using a Microsoft AD Certificate Authority and multiple endpoint names where self-signed test certificates aren't required.
 
-- Previously, when creating SMB shares on Windows, the default behavior of Windows Defender Firewall was to enable the rules in the "File and Printer Sharing" group for the relevant firewall profiles. Windows now configures a new group called "File and Printer Sharing (Restrictive)" that doesn't include inbound NetBIOS ports 137-139. In the future, the plan is to update this rule so that it removes inbound ICMP, LLMNR, and Spooler Service ports, restricting access to only the ports necessary for SMB sharing.
+- Previously, when creating SMB shares on Windows, the default behavior of the Windows Defender Firewall was to enable the rules in the "File and Printer Sharing" group for the relevant firewall profiles. Windows now configures a new group called "File and Printer Sharing (Restrictive)" that doesn't include inbound NetBIOS ports 137-139. In the future, the plan is to update this rule so that it removes inbound ICMP, LLMNR, and Spooler Service ports, restricting access to only the ports necessary for SMB sharing.
 
   This change raises the default standard for network security and aligns the [SMB firewall rules](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-firewall-rule-changes-in-windows-insider/ba-p/3974496) more closely with the behavior of the "File Server" role in Windows Server. Administrators can still configure the "File and Printer Sharing" group as needed. To learn more about SMB security, see [Secure SMB Traffic in Windows Server](/windows-server/storage/file-server/smb-secure-traffic).
 
@@ -85,7 +48,33 @@ When you install and sign in for the first time, you can observe that this previ
 
 The Wireless LAN Service feature is installed by default and the WLAN AutoConfig service startup is set to automatic.
 
+### Winget
+
+Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices.
+
+## Build 25977
+
+### Bluetooth
+
+You can now connect mice, keyboards, headsets, audio devices, and more via bluetooth in Windows Server.
+
+### Email & accounts
+
+In **Settings > Accounts > Email & accounts**, this feature was updated to align with the functionality of Windows 11. It's important to keep in mind that domain join is still required for most situations.
+
+### SMB over QUIC Client Access Control
+
+
+
+### OOBE
+
+When you install and sign in for the first time, you can observe that this preview conforms to the style and appearance of the Windows 11 GUI.
+
 ## Build 25967
+
+...
+
+## Build 25951
 
 ### Azure Arc
 
