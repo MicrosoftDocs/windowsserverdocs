@@ -4,7 +4,7 @@ description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
-ms.date: 06/07/2019
+ms.date: 01/03/2024
 ---
 # Windows Admin Center known issues
 
@@ -25,8 +25,6 @@ If you encounter an issue not described on this page, let us know at the [Window
 - Using certain versions of extensions with earlier versions of Windows Admin Center can result in icons not displaying properly. To resolve this issue, update to the latest version of Windows Admin Center
 
 - Manually modifying URLs to include the names of different machines while using Windows Admin Center without going through the connection experience in the UI can cause extensions to not load properly, especially extensions compatible with specific hardware. We don't recommend manually modifying URLs for navigation in Windows Admin Center.
-
-- In the 1910.2 release of Windows Admin Center, you can't connect to Hyper-V servers on specific hardware. To resolve this issue, either [download the previous version](/windows-server/manage/windows-admin-center/support/release-history) or try updating to the latest version.
 
 - If you have Windows Admin Center installed as a heavily used gateway on Windows Server 2016, the service can crash and display an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This error happens because of a bug that we've fixed as of Windows Server 2019. However, we've also released a patch for Windows Server 2016 to address this issue in the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
@@ -148,7 +146,7 @@ Server Manager on Windows Admin Center doesn't currently support importing the .
 
 ### Files
 
-Server Manager on Windows Admin Center doesn't currently support uploading or downloading files over 100 MB in size.
+Windows Admin Center doesn't currently support uploading or downloading files over 100 MB in size.
 
 ### PowerShell
 
@@ -485,13 +483,13 @@ To update using Azure:
 
 1. Open Microsoft Entra ID.
 
-1. Go go to **Settings** > **Azure** > **View in Azure**.
+1. Go to **App Registrations**, select the name of application you want to update to open its overview page.
 
-1. In the **App Registration** tab, go to **API permissions**.
+1. Once you're in the application overview page, go to **API permissions**.
 
 1. Select **Add a permission**.
 
-1. Select **Microsoft Entra Graph** > **Delegated permissions** > **Directory** > **Directory.AccessAsUser.All**.
+1. Select **Microsoft Graph** > **Delegated permissions** > **Directory** and select the **Directory.AccessAsUser.All** checkbox.
 
 1. Finally, select **Add permissions** to save the changes you made to the app.
 
