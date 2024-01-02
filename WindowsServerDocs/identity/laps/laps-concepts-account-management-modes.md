@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn about the different account management modes supported by Windows Local Administrator Password Solution (Windows LAPS).
 
 > [!IMPORTANT]
-> The Windows LAPS automatic account management feature is only available in Windows 11 Insider Preview Build 26020 and later.
+> The Windows LAPS automatic account management feature is only available in Windows 11 Insider Preview Build 26022 and later.
 
 ## Overview
 
@@ -45,9 +45,9 @@ Automatic mode is an off-by-default mode. Once enabled the IT admin can choose f
 
 When automatic mode is enabled, the managed account is configured as follows:
 
-- The account is a member of the local Administrators group
+- The account is made a member of the local Administrators group
 - The password-not-required setting is disabled
-- The password-not-required flag is disabled
+- The password-never-expires flag is disabled
 - The account description is modified to indicate that Windows LAPS is controlling the account
 
 ## Integration with local account management policies
