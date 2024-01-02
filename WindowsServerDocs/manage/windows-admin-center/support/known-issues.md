@@ -28,7 +28,7 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 - In the 1910.2 release of Windows Admin Center, you can't connect to Hyper-V servers on specific hardware. To resolve this issue, either [download the previous version](/windows-server/manage/windows-admin-center/support/release-history) or try updating to the latest version.
 
-- If you have Windows Admin Center installed as a heavily used gateway on Windows Server 2016, the service can crash and display an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This error happens because of a bug that we've fixed as of Windows Server 2019. However, we've also release a patch for Windows Server 2016 to address this issue in the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
+- If you have Windows Admin Center installed as a heavily used gateway on Windows Server 2016, the service can crash and display an error in the event log that contains `Faulting application name: sme.exe` and `Faulting module name: WsmSvc.dll`. This error happens because of a bug that we've fixed as of Windows Server 2019. However, we've also released a patch for Windows Server 2016 to address this issue in the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
 - If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, follow these steps:
 
