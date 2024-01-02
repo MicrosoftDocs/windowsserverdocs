@@ -11492,7 +11492,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/laps/laps-concepts.md",
-      "redirect_url": "WindowsServerDocs/identity/laps/laps-concepts-overview.md",
+      "redirect_url": "WindowsServerDocs/identity/laps/laps-concepts-overview",
       "redirect_document_id": false
     },
   ]

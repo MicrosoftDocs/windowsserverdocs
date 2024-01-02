@@ -203,7 +203,7 @@ Windows LAPS integration with the smart-card-auth-only policy is available on th
 
 ## See also
 
-- [Windows LAPS account management modes](laps-concepts-accountmanagementmodes.md)
+- [Windows LAPS account management modes](laps-concepts-account-management-modes.md)
 - [CNG DPAPI](/windows/win32/seccng/cng-dpapi)
 - [Microsoft Intune](/mem/intune)
 
