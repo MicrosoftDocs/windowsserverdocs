@@ -19,13 +19,13 @@ sections:
           Yes, this scenario is supported with the following condition. You must take care to
           configure Windows LAPS and the 3rd-party product to manage different local accounts. If
           you mistakenly configure both to manage the same account, Windows LAPS rejects attempts by
-          the 3rd-party product to modify the account's password. See [Account password tampering protection](laps-concepts.md#account-password-tampering-protection).
+          the 3rd-party product to modify the account's password. See [Account password tampering protection](laps-concepts-overview.md#account-password-tampering-protection).
 
       - question: Why can't I change the password of a local admin account currently managed by Windows LAPS?
         answer: |
           Windows LAPS prevents accidental or spurious changes to the managed account's password. This protection
           helps prevent a torn state situation where the password stored in the directory doesn't match the password
-          stored locally on the device. See [Account password tampering protection](laps-concepts.md#account-password-tampering-protection).
+          stored locally on the device. See [Account password tampering protection](laps-concepts-overview.md#account-password-tampering-protection).
 
       - question: Why isn't the Windows LAPS PowerShell module hosted on GitHub, PowerShell Gallery, or similar?
         answer: |
@@ -79,7 +79,7 @@ sections:
 
       - question: Are Windows LAPS DSRM passwords available during a catastrophic AD disaster scenario?
         answer: |
-          Windows LAPS DSRM password backup is only one component of a comprehensive Active Directory disaster recovery plan. For more information, see [DSRM password support](laps-concepts.md#dsrm-password-support).
+          Windows LAPS DSRM password backup is only one component of a comprehensive Active Directory disaster recovery plan. For more information, see [DSRM password support](laps-concepts-overview.md#dsrm-password-support).
 
       - question: Is it supported to run legacy Microsoft LAPS side-by-side with Windows LAPS?
         answer: |

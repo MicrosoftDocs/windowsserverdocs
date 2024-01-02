@@ -11,9 +11,6 @@ ms.topic: conceptual
 
 Windows Local Administrator Password Solution (Windows LAPS) has a dedicated event log channel. All Windows LAPS operations are tracked with rich eventing. Learn about key events and how to view the log.
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md).
-
 ## View the event log
 
 To view the Windows LAPS event log channel, in Windows Server Event Viewer, go to **Applications and Services** > **Logs** > **Microsoft** > **Windows** > **LAPS** > **Operational**.
@@ -205,4 +202,4 @@ The Windows LAPS event log channel contains events related to the local machine 
 ## Next steps
 
 - [Configure Windows LAPS for Windows Server Active Directory](laps-management-user-interface.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)
