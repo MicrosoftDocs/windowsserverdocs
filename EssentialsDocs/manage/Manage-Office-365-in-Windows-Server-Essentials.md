@@ -13,12 +13,12 @@ manager: mtillman
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-When you integrate your  Windows Server Essentials server with Microsoft 365, you can manage your  Microsoft 365 services and online accounts along with your on-premises resources from the  Windows Server Essentials Dashboard. In this topic, you'll find out what you can gain by integrating your server with  Microsoft 365, how to do it, and how to manage and troubleshoot your  Microsoft 365 integration.
+When you integrate your  Windows Server Essentials server with Microsoft 365, you can manage your Microsoft 365 services and online accounts along with your on-premises resources from the  Windows Server Essentials Dashboard. In this topic, you'll find out what you can gain by integrating your server with Microsoft 365, how to do it, and how to manage and troubleshoot your Microsoft 365 integration.
 
 
 
 > [!IMPORTANT]
->   Microsoft 365 integration is only supported in a single domain controller environment. In addition, the  Microsoft 365 integration wizard must run on a domain controller.
+>   Microsoft 365 integration is only supported in a single domain controller environment. In addition, the Microsoft 365 integration wizard must run on a domain controller.
 
 ## In this topic
 
@@ -31,23 +31,23 @@ When you integrate your  Windows Server Essentials server with Microsoft 365, yo
 -   [Troubleshoot Microsoft 365 integration](Manage-Office-365-in-Windows-Server-Essentials.md#BKMK_Troubleshoot)
 
 ##  <a name="BKMK_IntegrationOverview"></a> Why should I integrate Microsoft 365 with my server?
- There are a lot of good reasons to integrate  Microsoft 365 with your  Windows Server Essentials server. If you manage some of your resources in-house but use  Microsoft 365 for other services, you'll be able to manage your  Microsoft 365 services and resources from the Dashboard, along with your on-premises resources, instead of working in two places.
+ There are a lot of good reasons to integrate Microsoft 365 with your  Windows Server Essentials server. If you manage some of your resources in-house but use Microsoft 365 for other services, you'll be able to manage your Microsoft 365 services and resources from the Dashboard, along with your on-premises resources, instead of working in two places.
 
-- Manage the online accounts that give your users access to  Microsoft 365 along with your user accounts:
+- Manage the online accounts that give your users access to Microsoft 365 along with your user accounts:
 
   -   Create Microsoft Online Services accounts for your users in a single step, or create user accounts on the server for your existing online accounts. You can also add an online account to a new or existing user account.
 
-       When you create the online accounts from the Dashboard, users sign in to  Microsoft 365 with the same password they use on the server. If they change the password for their user account, the online password changes also. And you know that their online account passwords always meet the security requirements you set for your user accounts.
+       When you create the online accounts from the Dashboard, users sign in to Microsoft 365 with the same password they use on the server. If they change the password for their user account, the online password changes also. And you know that their online account passwords always meet the security requirements you set for your user accounts.
 
   -   Manage an online account along with the user account throughout the lifecycle of the user account. If you deactivate a user account, the online account is deactivated also. If you remove a user account, the online account also is removed.
 
   -   On a  Windows Server Essentials server, manage Exchange Online distribution groups for email also.
 
-- Send and receive email from your organization's Internet domain (for example, contoso.com) by linking a custom Internet domain to your  Microsoft 365 subscription.
+- Send and receive email from your organization's Internet domain (for example, contoso.com) by linking a custom Internet domain to your Microsoft 365 subscription.
 
-- Manage your subscription and  Microsoft 365 integration from the Dashboard.
+- Manage your subscription and Microsoft 365 integration from the Dashboard.
 
-- If your subscription includes  SharePoint Online libraries,  Microsoft 365 integration with a  Windows Server Essentials server lets you:
+- If your subscription includes  SharePoint Online libraries, Microsoft 365 integration with a  Windows Server Essentials server lets you:
 
   - Create and manage your  SharePoint Online libraries from the Dashboard.
 
@@ -58,7 +58,7 @@ When you integrate your  Windows Server Essentials server with Microsoft 365, yo
 
     For more information, see [Manage SharePoint Online](Manage-SharePoint-Online-in-Windows-Server-Essentials.md).
 
-- If you subscribe to Exchange Online,  Microsoft 365 integration with a  Windows Server Essentials server lets you manage the mobile devices that your users use to connect to your company email server:
+- If you subscribe to Exchange Online, Microsoft 365 integration with a  Windows Server Essentials server lets you manage the mobile devices that your users use to connect to your company email server:
 
   -   Require password protection when mobile devices connect to the company email server. Set a minimum password length, the number of failed sign-in attempts to allow, and the minimum time required between sign-in attempts.
 
@@ -73,7 +73,7 @@ When you integrate your  Windows Server Essentials server with Microsoft 365, yo
   -   Use the My Server 2012 R2 app to work with documents in your  SharePoint Online libraries from your laptop, mobile device, or Windows phone. For information, see [Use the My Server App](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md). This feature is only available in  Windows Server Essentials.
 
 ##  <a name="BKMK_Configure"></a> Set up Microsoft 365 integration
- You can integrate your server with  Microsoft 365 at any time after you complete the server installation. If you don't already have an  Microsoft 365 subscription, you can purchase one or sign up for a free trial subscription.
+ You can integrate your server with  Microsoft 365 at any time after you complete the server installation. If you don't already have a Microsoft 365 subscription, you can purchase one or sign up for a free trial subscription.
 
  You will do the following tasks:
 
