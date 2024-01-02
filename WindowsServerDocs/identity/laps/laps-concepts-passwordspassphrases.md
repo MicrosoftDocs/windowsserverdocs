@@ -63,14 +63,14 @@ Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Rando
 
 Windows LAPS creates truly random passwords and passphrases (no human bias is possible). It's therefore simple to calculate the resultant entropy for a given password\passphrase of a given length. The following table provides insights into the resulting entropy levels across a sample set of password\passphrase lengths.
 
-The supported password complexity settings are listed across the top of the table, and a sample of allowable password and passphrase lengths is listed down the left hand side. The entropy values for the default policy length settings are **bolded**:
+The supported password complexity settings are listed across the top of the table, and a sample of allowable password and passphrase lengths is listed down the left hand side. The entropy values for the *default* policy length settings are **bolded**:
 
 |PasswordComplexity setting\password or passphrase length|1|2|3|4|5|6|7|8|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |3||||||39|31|31|
 |4||||||52|41|41|
 |5||||||65|52|52|
-|6||||||**78**|**62**|**62**|
+|**6**||||||**78**|**62**|**62**|
 |7||||||90|72|72|
 |8|38|46|48|51|48|103|83|83|
 |9|42|51|54|57|54|116|93|93|
@@ -78,7 +78,7 @@ The supported password complexity settings are listed across the top of the tabl
 |11|52|63|65|70|66|||
 |12|56|68|71|76|72|||
 |13|61|74|77|82|78|||
-|14|**66**|**80**|**83**|**89**|**84**|||
+|**14**|**66**|**80**|**83**|**89**|**84**|||
 |20|94|114|119|126|120|||
 |40|188|228|238|253|240|||
 |60|282|342|357|379|360|||
