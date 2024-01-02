@@ -1023,8 +1023,6 @@
         href: laps/laps-concepts-overview.md
       - name: Account management modes
         href: laps/laps-concepts-accountmanagementmodes.md
-      - name: Passwords and passphrases
-        href: laps/laps-concepts-passwordspassphrases.md
     - name: Windows LAPS scenarios
       items:
       - name: Windows LAPS and Microsoft Entra ID
