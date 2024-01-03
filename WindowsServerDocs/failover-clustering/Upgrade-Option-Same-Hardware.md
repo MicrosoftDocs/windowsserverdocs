@@ -14,7 +14,7 @@ ms.date: 11/10/2023
 
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers, also called *nodes*, are connected by physical cables and by software. If one of the cluster nodes fails, a process called *failover* happens where another node begins to provide service. As a result, users experience minimum service disruptions during outages.
 
-It's important to keep your failover clusters as up to date as possible, particularly when your organization upgrades to a lat3er version of Windows Server. However, upgrading Windows Server doesn't require upgrading your hardware. This article tells you how to upgrade your existing cluster nodes to Windows Server 2016 or Windows Server 2019 without changing your hardware.
+It's important to keep your failover clusters as up to date as possible, particularly when your organization upgrades to a later version of Windows Server. However, upgrading Windows Server doesn't require upgrading your hardware. This article tells you how to upgrade your existing cluster nodes without changing your hardware.
 
 ## Overview
 
@@ -60,7 +60,7 @@ To evict and upgrade your deployment's first node:
 
 #### [Windows Server](#tab/windows-server)
 
-1. Open **Failover Cluster Manager**.
+1. Sign into the first node, then open **Failover Cluster Manager**.
 
 1. Drain all resources from NODE1 to NODE2 by right-clicking on the first node, then selecting **Pause** > **Drain Roles**.
 
@@ -72,7 +72,7 @@ To evict and upgrade your deployment's first node:
 
 1. If required, detach the node from the storage you're using. If you're not sure if you need to detach your storage or how to do it, ask your storage vendor for guidance.
 
-1. Upgrade the first node to Windows Server 2016. Ensure you have added all the necessary roles, features, drivers and security updates. <!--Should we have more specific directions for this/a link to more specific directions?-->
+1. Upgrade the first node to the target Windows Server version. Ensure you have added all the necessary roles, features, drivers and security updates. <!--Should we have more specific directions for this/a link to more specific directions?-->
 
 1. In Failover Cluster Manager, go to **Management** and select **Create Cluster** to create a new cluster. In this example, the new cluster is labeled CLUSTER1.
 
@@ -90,7 +90,7 @@ To evict and upgrade your deployment's first node:
 
 #### [PowerShell](#tab/powershell)
 
-1. Open a PowerShell window.
+1. Sign into the first node, then open a PowerShell window.
 
 1. Run the [Suspend-ClusterNode](/powershell/module/failoverclusters/suspend-clusternode) command to drain all resources from your existing nodes.
 
@@ -98,7 +98,7 @@ To evict and upgrade your deployment's first node:
 
 1. If required, detach the node from the storage you're using. If you're not sure if you need to detach your storage or how to do it, ask your storage vendor for guidance.
 
-1. Upgrade the first node with Windows Server 2016. Make sure you've added all necessary roles, features, drivers, and security updates.
+1. Upgrade the first node to the tartget Windows Server version. Make sure you've added all necessary roles, features, drivers, and security updates.
 
 1. Create a new cluster that contains the first node. <!--How to do this with PowerShell? If not an option, bring back text from Windows Server tab.-->
 
