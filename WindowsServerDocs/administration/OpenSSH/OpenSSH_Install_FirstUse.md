@@ -1,5 +1,5 @@
 ---
-title:  Get started with OpenSSH for Windows
+title: Get started with OpenSSH for Windows
 description: Learn how to install and connect to remote machines using the OpenSSH Client and Server for Windows.
 ms.date: 01/11/2023
 ms.topic: quickstart
