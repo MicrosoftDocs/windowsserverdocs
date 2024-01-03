@@ -11,6 +11,8 @@
       href: understand/case-studies.md
     - name: Related management products
       href: understand/related-management.md
+    - name: Windows Admin Center modernized gateway (preview)
+      href: understand/modernized-gateway.md  
   - name: Plan
     items:
     - name: What type of installation is right for you?
@@ -154,6 +156,8 @@
         href: extend/guides/extension-discovery-banner.md
       - name: Upgrade extensions to Angular 11
         href: extend/guides/upgrade-to-angular-11.md
+      - name: Upgrade extensions to Angular 15
+        href: extend/guides/upgrade-to-angular-15.md  
       - name: Extension management of Application Control enforced infrastructure
         href: extend/guides/application-control-infrastructure-extensions.md
     - name: Publishing extensions
