@@ -26,12 +26,6 @@ Before you start upgrading, review the information at [Windows Server upgrade co
 
 You can also use the [Cluster Migration Wizard](https://blogs.msdn.microsoft.com/clustering/2012/06/25/how-to-move-highly-available-clustered-vms-to-windows-server-2012-with-the-cluster-migration-wizard/) to upgrade your failover cluster, but it can only support upgrades that go two versions later than the current version you're running.
 
-The following graphic shows possible paths for Windows Server. Downward-pointing arrows represent the supported upgrade paths between one or two server versions.
-
-<!--Complex alt text needed here.-->
-
-![In-place Upgrade Diagram](media/In-Place-Upgrade/In-Place-Upgrade-1.png)
-
 The directions in this article cover upgrading Windows Server 2012 failover cluster server to Windows Server 2019.
 
 ## Prerequisites
@@ -46,7 +40,7 @@ Before you start upgrading, you should do the following things:
 
 You should also keep the following considerations and limitations in mind when planning your upgrade:
 
-- If your initial clusters are running Windows Server 2008 or 2008 R2, you may need to run through the following instructions multiple times.
+- If your initial clusters are running earlier versions of Windows Server, you might need to perform multiple in-place upgrades to reach the latest version.
 
 - If the cluster is running virtual machines (VMs), you must run the [Update-VmVersion](/powershell/module/hyper-v/update-vmversion) command in PowerShell to upgrade the VMs after you finish upgrading the clusters.
 
@@ -152,19 +146,17 @@ To upgrade the second node:
 
 1. Make sure you've deleted the original cluster.
 
-1. Now that the original cluster is gone, you can leave the new cluster name as-is or change its name to that of the original cluster. If you want to use the original cluster's name, follow these steps:
+1. Next, run the following command to rename the cluster:
 
-   - In Failover Cluster Manager, go to the first node and right-click the name of the cluster, then select **Properties**.
+    ```powershell
+    Get-ClusterGroup <OldName> | %{ $_.Name = "<NewName>" }
+    ```
 
-   - On the **General** tab, rename the cluster by entering the desired name into the name field.
+1. After that, run this command to add the second node to the cluster:
 
-   - Select **Apply**. You should see the following dialog box.
-
-    ![Screenshot of the Please confirm action dialog box.](media/In-Place-Upgrade/In-Place-Upgrade-6.png)
-
-    - Restart the cluster to finish applying the changes.
-
-1. In the Failover Cluster Manager, go to the first node, then right-click on **Nodes** and select **Add Node** to add the second node to the cluster.
+   ```powershell
+   Get-Cluster -Name <Cluster1NewName> | Add-ClusterNode -Name <Cluster2NewName>
+   ```
 
 1. Reattach the storage to the second node.
 
