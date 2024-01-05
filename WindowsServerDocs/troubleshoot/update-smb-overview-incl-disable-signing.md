@@ -8,13 +8,42 @@ ms.topic: troubleshooting
 ---
 # Overview of Server Message Block signing
 
-This article describes Server Message Block (SMB) 2.x and 3.x signing, and how to determine whether SMB signing is required.
+This article describes Server Message Block (SMB) 2.x and 3.x signing, how to determine whether SMB signing is required and enabled, and how to disable signing.
 
 ## Introduction
 
 SMB signing is a security feature that uses the session key and cipher suite to add a signature to a message going across a connection. This signature contains a hash of the entire message in the SMB header. If someone tampers with the message in transit, the data in the tampered message won't match the hash in the signature. The hash also includes the identities of the original sender and the intended recipient. Signature mismatches alert users to possible foul play, helping them protect their deployments from relay and spoofing attacks.
 
-SMB signing first appeared in Microsoft Windows 2000, Microsoft Windows NT 4.0, and Microsoft Windows 98. Signing algorithms have evolved over time. SMB 2.02 signing was improved by the introduction of hash-based message authentication code (HMAC) SHA-256, replacing the old MD5 method from the late 1990s that was used in SMB1. SMB 3.0 added AES-CMAC algorithms. In Windows Server 2022 and Windows 11 introduced added [AES-128-GMAC signing acceleration](/windows-server/storage/file-server/smb-security#new-signing-algorithm). If you want the best performance and protection combination, consider upgrading to the latest Windows versions.
+SMB signing first appeared in Microsoft Windows 2000, Microsoft Windows NT 4.0, and Microsoft Windows 98. Signing algorithms have evolved over time. SMB 2.02 signing introduced hash-based message authentication code (HMAC) SHA-256, replacing the MD5 method in SMB1. The security model in MS-SMB2 relies upon authenticating the client-user identity before accessing a share on the server. Once the user is authenticated, the server may mandate message signing or encryption. The server also controls access to the share based on which users, groups, or claims are authorized to have various levels of access. 
+
+SMB 3.0 added AES-CMAC algorithms. SMB 3.0 introduces end-to-end encryption built in the protocol. In SMB 3.1.1 (Windows 10), the encryption algorithm can be negotiated, and the cryptographic key computation is enhanced with pre-authentication integrity. Windows Server 2022 and Windows 11 introduced [AES-128-GMAC signing acceleration](/windows-server/storage/file-server/smb-security#new-signing-algorithm).
+
+### Security considerations in SMB2 and SMB3
+
+All cryptographic keys used in SMB 2.x and 3.x are derived from the SessionKey. Therefore, the security of SMB 2/3 signing and encryption relies in part on the session key. This key must be unique, kept secret, and genuinely impossible to guess.
+
+The server should choose an authentication mechanism that provides unique and randomly generated session keys to ensure the security of the signing key, encryption key, and decryption key.
+
+Signing and cryptographic keys in SMB2 and SMB3 directly or indirectly support the following security features:
+
+In SMB 2.0.2 and 2.1 dialects:
+
+- Message integrity across an authenticated session.
+
+In SMB 3.0 dialect:
+
+- Message integrity (with a stronger algorithm) across an authenticated session.
+- Encryption of traffic between client and server.
+- Session binding to multiple connections (multichannel).
+- Validation of negotiated information.
+
+In SMB 3.1.1 dialect:
+
+- All the above 3.0 dialect security features, except the validation of negotiated information.
+- Negotiation of encryption and integrity algorithms.
+- Protection of negotiation and session establishment.
+
+See the tutorial [SMB 2 and SMB 3 security in Windows 10: the anatomy of signing and cryptographic keys]() for detailed information on SMB2 and SMB3 security features.
 
 ## Prerequisites
 
@@ -34,7 +63,7 @@ You should also follow these recommendations to ensure your SMB signatures are e
 
 ## How SMB signing protects the connection
 
-If someone changes a message during transmission, the hash won't match, and SMB will know that someone tampered with the data. The signature also confirms the sender's and receiver's identities. This prevents relay attacks. Ideally, you are using Kerberos instead of NTLMv2 so that your session key starts strong. Don't connect to shares by using IP addresses and don't use CNAME records, or you will use NTLM instead of Kerberos. Use Kerberos instead. See [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064) for more information.
+If someone changes a message during transmission, the hash won't match, and SMB will know that someone tampered with the data. The signature also confirms the sender's and receiver's identities. This prevents relay attacks. Using Kerberos instead of NTLMv2 is recommended so that your session key starts strong. Don't connect to shares by using IP addresses and don't use CNAME records, or you'll use NTLM instead of Kerberos. Use Kerberos. See [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064) for more information.
 
 ## Policy locations for SMB signing
 
@@ -74,7 +103,7 @@ The **EnableSecuritySignature** registry setting for SMB2+ client and SMB2+ serv
 
 ## How to disable SMB signing
 
-SMB signing is enabled by default on the latest versions of Windows 11 and Windows Server 2022. All Windows environments support SMB signing. However, if your environment uses third-party servers, your system settings may prevent the default settings from taking effect.
+SMB signing is enabled by default on the latest versions of Windows 11 and Windows Server 2022. All Windows environments support SMB signing. However, if your environment uses third-party servers, your system settings can prevent the default settings from taking effect.
 
 >[!IMPORTANT]
 >We don't recommend using SMB1 as a workaround for third-party servers.
