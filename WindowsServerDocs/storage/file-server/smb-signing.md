@@ -17,8 +17,13 @@ ms.prod: windows-server
 
 SMB signing is a security feature that uses the session key and cipher suite to add a signature to a message going across a connection. This signature contains a hash of the entire message in the SMB header. If someone tampers with the message in transit, the data in the tampered message won't match the hash in the signature. The hash also includes the identities of the original sender and the intended recipient. Signature mismatches alert users to possible foul play, helping them protect their deployments from relay and spoofing attacks.
 
-> [!IMPORTANT]
-> As of Windows 11 Insider Preview Build 25318, Windows Server now requires SMB signing by default (preview) for all connections.
+SMB signing can involve both outbound signing, which covers traffic from the SMB server to the client, and inbound signing, which covers traffic from the client to the server. Different versions of Windows Server can require outbound signing only, inbound signing only, both, or neither. For example:
+
+- Windows 11 Insiders Enterprise and  Windows 11 Insiders Pro and Education require both outbound and inbound SMB signing.
+
+- Windows Server Vnext Insider requires outbound SMB signing only.
+
+- Windows 11 Insider Home edition doesn't require outbound or inbound SMB signing.
 
 ## Prerequisites
 
@@ -36,7 +41,7 @@ You should also follow these recommendations to ensure your SMB signatures are e
 
 - Don't connect to shares using IP addresses.
 
-- Don't use CNAME records.
+- Don't use CNAME DNS records. Instead, assign alternate computer names with NETDOM.EXE.
 
 ## Disable SMB signing
 
@@ -45,13 +50,13 @@ SMB signing is enabled by default on the latest Insider Preview builds of Window
 Enabling SMB signing also disables guest access to shares. In these cases, you must disable SMB signing manually to restore access for guest accounts.
 
 > [!CAUTION]
-> We don't recommend disabling SMB signing or using SMB1 as a workaround for third-party servers.
+> We don't recommend disabling SMB signing or using SMB1 as a workaround for third-party servers. WE also don't recommend trying to sign with guest accounts.
 
-To disable SMB signing manually on third-party servers:
+To disable SMB signing manually on servers running Windows or Windows Server:
 
 1. Open an elevated PowerShell window as an administrator.
 
-1. Run the following command to check the SMB signing settings for your server.
+1. Run the following command to check the SMB signing settings on Windows or Windows Server.
 
    ```powershell
    Get-SmbServerConfiguration | FL requiresecuritysignature
