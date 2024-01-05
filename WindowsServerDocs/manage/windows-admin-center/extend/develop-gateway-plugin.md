@@ -23,6 +23,11 @@ If you would like to communicate with a protocol other than PowerShell or WMI, s
 > [!NOTE]
 > Not familiar with the different extension types? Learn more about the [extensibility architecture and extension types](understand-extensions.md).
 
+> [!IMPORTANT]
+> The Windows Admin Center SDK and developer tools have not yet been updated to support development of gateway plug-ins compatible with the [Windows Admin Center modernized gateway](../understand/modernized-gateway.md). Following this guide will not result in an extension compatible with the modernized gateway.
+>
+> If you're interested in developing a gateway plug-in for the modernized gateway or upgrading your existing gateway plug-in, send an email to [wacextensionrequest@microsoft.com](mailto:wacextdevsupport@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Development%20Modernized%20Gateway).
+
 ## Prepare your environment
 
 If you haven't already, [prepare your environment](prepare-development-environment.md) by installing dependencies and global prerequisites required for all projects.
