@@ -4,7 +4,7 @@ description: How to disable SMB signing on third-party servers in Windows 11 and
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
-ms.date: 12/07/2023
+ms.date: 01/08/2024
 ms.prod: windows-server
 ---
 # Control SMB signing behavior (preview)
@@ -60,8 +60,6 @@ To disable SMB signing manually on servers running Windows or Windows Server:
 
 1. Select **Settings**.
 
-1. Select **File Shares**.
-
 1. Select **File Shares (SMB server)**.
 
 1. Under **SMB signing**, select **Required**.
@@ -69,8 +67,6 @@ To disable SMB signing manually on servers running Windows or Windows Server:
 1. Under **SMB 3 encryption**, select **Required from all clients (others are rejected)**.
 
 1. Select **Save**.
-
-<!--I'm going to need a bit of help to run through this for accuracy.-->
 
 #### [PowerShell](#tab/powershell)
 
