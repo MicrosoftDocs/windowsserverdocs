@@ -64,8 +64,6 @@ To disable SMB signing manually on servers running Windows or Windows Server:
 
 1. Under **SMB signing**, select **Required**.
 
-1. Under **SMB 3 encryption**, select **Required from all clients (others are rejected)**.
-
 1. Select **Save**.
 
 #### [PowerShell](#tab/powershell)
