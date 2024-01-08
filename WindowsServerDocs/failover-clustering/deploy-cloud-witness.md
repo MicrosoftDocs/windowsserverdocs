@@ -169,7 +169,7 @@ To set up Cloud Witness in the Windows Admin Center:
 
 ## Proxy considerations with Cloud Witness
 
-Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses **.core.windows.net** as the endpoint. You need to ensure that this endpoint is included in any firewall allow lists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, please configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses **.core.windows.net** as the endpoint. You need to ensure that this endpoint is included in any firewall allow lists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
 
 To use the Netsh command to configure a default proxy server, follow these steps: 
 
