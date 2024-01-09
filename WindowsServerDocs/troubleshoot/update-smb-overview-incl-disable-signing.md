@@ -14,6 +14,14 @@ This article describes Server Message Block (SMB) 2.x and 3.x signing, how to de
 
 SMB signing is a security feature that uses the session key and cipher suite to add a signature to a message going across a connection. This signature contains a hash of the entire message in the SMB header. If someone tampers with the message in transit, the data in the tampered message won't match the hash in the signature. The hash also includes the identities of the original sender and the intended recipient. Signature mismatches alert users to possible foul play, helping them protect their deployments from relay and spoofing attacks.
 
+SMB signing requirements can involve both outbound signing, which covers traffic from the SMB client, and inbound signing, which covers traffic to the server. Windows and Windows Server can require outbound signing only, inbound signing only, both, or neither. For example:
+
+- Windows 11 Insiders Enterprise, Pro, and Education require both outbound and inbound SMB signing.
+
+- Windows Server Vnext Insider requires outbound SMB signing only.
+
+- Windows 11 Insider Home edition doesn't require outbound or inbound SMB signing.
+
 SMB signing first appeared in Microsoft Windows 2000, Microsoft Windows NT 4.0, and Microsoft Windows 98. SMB2 message integrity manifests on a signed session where signed packets flow from client to server. On a signed session, every signed packet includes a signature that the receiver can validate. Unlike SMB1 signing which uses MD5 [RFC1321] as hashing algorithm, SMB2 uses a better hashing for signing. SMB 2.02 and SMB 2.1 use HMAC SHA-256. The security model in MS-SMB2 relies upon authenticating the client-user identity before accessing a share on the server. Once the user is authenticated, the server may mandate message signing or encryption. The server also controls access to the share based on which users, groups, or claims are authorized to have various levels of access. 
 
 SMB 3.0 introduces end-to-end encryption built in the protocol with the addition of AES-CMAC algorithms. In SMB 3.1.1 (Windows 10), the encryption algorithm can be negotiated, and the cryptographic key computation is enhanced with pre-authentication integrity. SMB 3.1.1 pre-authentication integrity enhances protection against security-downgrade attacks by verifying the integrity of all messages preceding the session establishment. This mandatory feature protects against any tampering with Negotiate and Session Setup messages by leveraging cryptographic hashing SHA-51. See [SMB 3.1.1 Pre-authentication integrity in Windows 10](https://blogs.msdn.microsoft.com/openspecification/2015/08/11/smb-3-1-1-pre-authentication-integrity-in-windows-10/) for more information. Windows Server 2022 and Windows 11 introduced AES-128-GMAC signing acceleration. See [AES-128-GMAC signing acceleration](/windows-server/storage/file-server/smb-security#new-signing-algorithm) for detailed guidance.
