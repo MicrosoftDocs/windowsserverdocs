@@ -439,7 +439,7 @@ W32time in Server 2016 includes the Secure Time Seeding feature. This feature de
 
 You can disable the feature with these steps:
 
-1. Use Group Policy to manage SecureTimeSeeding. See the section that referes to the setting "UtilizeSslTimeData: Learn: [Policy CSP - ADMX_W32Time](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fwindows%2Fclient-management%2Fmdm%2Fpolicy-csp-admx-w32time&data=05%7C01%7Carrenc%40microsoft.com%7Ce724dc94ef7341f932d608db9f5fe793%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638279006494333241%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=L6lLtbgDVD5jnmzVu2NnXVYHOSmTSMRx1Xyn0BMxlxc%3D&reserved=0"https://nam06.safelinks.protection.outlook.com/?url=https%3a%2f%2flearn.microsoft.com%2fen-us%2fwindows%2fclient-management%2fmdm%2fpolicy-csp-admx-w32time&data=05%7c01%7carrenc%40microsoft.com%7ce724dc94ef7341f932d608db9f5fe793%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c638279006494333241%7cunknown%7ctwfpbgzsb3d8eyjwijoimc4wljawmdailcjqijoiv2lumziilcjbtii6ik1hawwilcjxvci6mn0%3d%7c3000%7c%7c%7c&sdata=l6lltbgdvd5jnmzvu2nnxvyhosmtsmrx1xyn0bmxlxc%3d&reserved=0")
+1. Use Group Policy to manage SecureTimeSeeding. See the section that refers to the setting UtilizeSslTimeData: Learn: [Policy CSP - ADMX_W32Time](/windows/client-management/mdm/policy-csp-admx-w32time)
 1. Alternatively, you can maually set the registry value.  Set the UtilizeSSLTimeData registry configuration value to 0 on a specific machine:
     ```yaml
     reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Config /v UtilizeSslTimeData /t REG_DWORD /d 0 /f
