@@ -13,7 +13,7 @@ Windows Server 2016 has improved the algorithms it uses to correct time and cond
 
 ## Hyper-V
 
-Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time. This improvement allows us to stay with-in 10µs of the host with an RMS, (Root Mean Squared, which indicates variance), of 50µs, even on a machine with 75% load. For more information, see [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx).
+Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on VM start or VM restore and interrupt latency correction for samples provided to w32time. This improvement allows us to stay with-in 10µs of the host with an RMS (Root Mean Squared, which indicates variance) of 50µs, even on a machine with 75% load. For more information, see [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx).
 
 > [!NOTE]
 > Load was created using prime95 benchmark using balanced profile.
@@ -26,7 +26,7 @@ Performance monitor counters have been added. These allow you to baseline, monit
 
 |Counter|Description|
 |----- | ----- |
-|Computed Time Offset| The absolute time offset between the system clock and the chosen time source, as computed by W32Time Service in microseconds. When a new valid sample is available, the computed time is updated with the time offset indicated by the sample. This is the actual time offset of the local clock. W32time initiates clock correction using this offset and updates the computed time in between samples with the remaining time offset that needs to be applied to the local clock. Clock accuracy can be tracked using this performance counter with a low polling interval (eg:256 seconds or less) and looking for the counter value to be smaller than the desired clock accuracy limit.|
+|Computed Time Offset| The absolute time offset between the system clock and the chosen time source, as computed by W32Time Service in microseconds. When a new valid sample is available, the computed time is updated with the time offset indicated by the sample. This is the actual time offset of the local clock. W32time initiates clock correction using this offset and updates the computed time in between samples with the remaining time offset that needs to be applied to the local clock. Clock accuracy can be tracked using this performance counter with a low polling interval (eg: 256 seconds or less) and looking for the counter value to be smaller than the desired clock accuracy limit.|
 |Clock Frequency Adjustment| The absolute clock frequency adjustment made to the local system clock by W32Time in parts per billion. This counter helps visualize the actions being taken by W32time.|
 |NTP Roundtrip Delay| Most recent round-trip delay experienced by the NTP Client in receiving a response from the server in microseconds. This is the time elapsed on the NTP client between transmitting a request to the NTP server and receiving a valid response from the server. This counter helps characterize the delays experienced by the NTP client. Larger or varying roundtrips can add noise to NTP time computations, which in turn may affect the accuracy of time synchronization through NTP.|
 |NTP Client Source Count| Active number of NTP Time sources being used by the NTP Client. This is a count of active, distinct IP addresses of time servers that are responding to this client's requests. This number may be larger or smaller than the configured peers, depending on DNS resolution of peer names and current reach-ability.|
@@ -34,18 +34,18 @@ Performance monitor counters have been added. These allow you to baseline, monit
 |NTP Server Outgoing Responses| Number of requests answered by NTP Server (Responses/Sec).|
 
 The first 3 counters target scenarios for troubleshooting accuracy issues. The Troubleshooting Time Accuracy and NTP section below, under Best Practices, has more detail.
-The last 3 counters cover NTP server scenarios and are helpful when determine the load and baselining your current performance.
+The last 3 counters cover NTP server scenarios and are helpful when you're determining the load and baselining your current performance.
 
 ## Configuration Updates per Environment
 
-The following describes the changes in default configuration between Windows 2016 and previous versions for each Role. The settings for Windows Server 2016 and Windows 10 Anniversary Update (build 14393), are now unique which is why there are shown as separate columns.
+The following describes the changes in default configuration between Windows 2016 and previous versions for each Role. The settings for Windows Server 2016 and Windows 10 Anniversary Update (build 14393), are now unique which is why they're shown as separate columns.
 
 |Role|Setting|Windows Server 2016|Windows 10|Windows Server 2012 R2<br>Windows Server 2008 R2<br>Windows 10|
 |---|---|---|---|---|
 |**Standalone/Nano Server**||||
 | |Time Server|time.windows.com|NA|time.windows.com|
 | |Polling Frequency|64 - 1024 seconds|NA|Once a week|
-| |Clock Update Frequency|Once a second|NA|Once a hour|
+| |Clock Update Frequency|Once a second|NA|Once an hour|
 |**Standalone Client**||||
 | |*Time Server*|NA|time.windows.com|time.windows.com|
 | |*Polling Frequency*|NA|Once a day|Once a week|
@@ -92,7 +92,7 @@ Our domain source clock consisted of two high precision NTP servers with GPS har
 
 We used four different methods to measure accuracy with both physical and virtual machines. Multiple methods provided independent means to validate the results.
 
-1. Measure the local clock, that is conditioned by w32tm, against our reference test machine which has separate GPS hardware.
+1. Measure the local clock, which is conditioned by w32tm, against our reference test machine which has separate GPS hardware.
 
 2. Measure NTP pings from the NTP server to clients using W32tm “stripchart”
 
@@ -158,7 +158,7 @@ Based on the available candidates, a scoring system is used to find the best tim
 
 #### Mixed OS Environments (Win2012R2 and Win2008R2)
 
-While a pure Windows Server 2016 Domain environment is required for the best accuracy, there are still benefits in a mixed environment. Deploying Windows Server 2016 Hyper-V in a Windows 2012 domain will benefit the guests because of the improvements we mentioned above, but only if the guests are also Windows Server 2016. A Windows Server 2016 PDC, will be able to deliver more accurate time because of the improved algorithms it will be a more stable source. As replacing your PDC might not be an option, you can instead add a Windows Server 2016 DC with the GTIMESERV roll set which would be an upgrade in accuracy for your domain. A Windows Server 2016 DC can deliver better time to downstream time clients, however, it's only as good as its source NTP time.
+While a pure Windows Server 2016 Domain environment is required for the best accuracy, there are still benefits in a mixed environment. Deploying Windows Server 2016 Hyper-V in a Windows 2012 domain will benefit the guests because of the improvements we mentioned above, but only if the guests are also Windows Server 2016. A Windows Server 2016 PDC will be able to deliver more accurate time because of the improved algorithms it will be a more stable source. As replacing your PDC might not be an option, you can instead add a Windows Server 2016 DC with the GTIMESERV roll set which would be an upgrade in accuracy for your domain. A Windows Server 2016 DC can deliver better time to downstream time clients, however, it's only as good as its source NTP time.
 
 Also as stated above, the clock polling and refresh frequencies have been modified with Windows Server 2016. These can be changed manually to your down-level DCs or applied via group policy. While we haven't tested these configurations, they should behave well in Win2008R2 and Win2012R2 and deliver some benefits.
 
@@ -362,7 +362,7 @@ The Windows Server 2016 Windows Time service exposes performance counters which 
 And like any performance counter, you can monitor them remotely and create alerts using System Center Operations Manager. You can, for instance, use an alert to alarm you when the Time Offset drifts from the desired accuracy. The [System Center Management Pack](/system-center/scsm/management-packs) has more information.
 
 ### Windows Traceability Example
-From w32tm log files you will want to validate two pieces of information. The first is an indication that the log file is currently condition clock. This prove that your clock was being conditioned by the Windows Time Service at the disputed time.
+From w32tm log files you will want to validate two pieces of information. The first is an indication that the log file is currently condition clock. This proves that your clock was being conditioned by the Windows Time Service at the disputed time.
 
  151802 20:18:32.9821765s - ClockDispln Discipline: *SKEW*TIME* - PhCRR:223 CR:156250 UI:100 phcT:65 KPhO:14307
  151802 20:18:33.9898460s - ClockDispln Discipline: *SKEW*TIME* - PhCRR:1 CR:156250 UI:100 phcT:64 KPhO:41
@@ -440,7 +440,7 @@ W32time in Server 2016 includes the Secure Time Seeding feature. This feature de
 You can disable the feature with these steps:
 
 1. Use Group Policy to manage SecureTimeSeeding. See the section that refers to the setting UtilizeSslTimeData: Learn: [Policy CSP - ADMX_W32Time](/windows/client-management/mdm/policy-csp-admx-w32time)
-1. Alternatively, you can maually set the registry value.  Set the UtilizeSSLTimeData registry configuration value to 0 on a specific machine:
+1. Alternatively, you can manually set the registry value.  Set the UtilizeSSLTimeData registry configuration value to 0 on a specific machine:
     ```yaml
     reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Config /v UtilizeSslTimeData /t REG_DWORD /d 0 /f
     ```
