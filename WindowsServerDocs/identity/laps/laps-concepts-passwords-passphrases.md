@@ -91,7 +91,7 @@ At the higher end of the allowable length ranges, the resultant entropy levels c
 ## See also
 
 - [Key concepts in Windows LAPS](laps-concepts-overview.md)
-- [Windows LAPS account management modes](laps-concepts-accountmanagementmodes.md)
+- [Windows LAPS account management modes](laps-concepts-account-management-modes.md)
 
 ## Next steps
 
