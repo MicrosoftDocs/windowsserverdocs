@@ -64,11 +64,11 @@ Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Rando
 
 ## Entropy considerations
 
-Windows LAPS creates truly random passwords and passphrases (no human bias is possible). It's therefore simple to calculate the resultant entropy for a given password\passphrase of a given length. The following table provides insights into the resulting entropy levels across a sample set of password\passphrase lengths.
+Windows LAPS creates truly random passwords and passphrases (no human bias is possible). It's therefore simple to calculate the resultant bits of entropy for a password\passphrase of a given length. The following table lists the resulting bits of entropy across a sample set of password\passphrase lengths.
 
-The supported password complexity settings are listed across the top of the table, and a sample of allowable password and passphrase lengths is listed down the left hand side. The entropy values for the *default* policy length settings are **bolded**:
+The supported password complexity settings are listed across the top of the table, and password\passphrase lengths are listed down the left hand side. The entropy values for the *default* policy length settings are **bolded**:
 
-|PasswordComplexity setting\password or passphrase length|1|2|3|4|5|6|7|8|
+|PasswordComplexity setting -><br/><br/>Password or passphrase length<br/><br/>V|1|2|3|4|5|6|7|8|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |3||||||39|31|31|
 |4||||||52|41|41|
@@ -86,7 +86,7 @@ The supported password complexity settings are listed across the top of the tabl
 |40|188|228|238|253|240|||
 |60|282|342|357|379|360|||
 
-At the higher end of the allowable length ranges, the resultant entropy levels could be considered excessive for most normal IT environments. Consider that there's usually a security versus usability tradeoff involved. For example, human beings have difficulty in reading and typing long and complex passwords. Switching to passphrases is a useful way to provide improved ease-of-use while retaining a reasonable amount of entropy. If maximizing security is a paramount concern you should instead consider alternative risk mitigations, for example maintaining the managed account in a disabled state by default.
+At the higher end of the allowable length ranges, the entropy levels could be considered excessive for most normal IT environments. Consider that there's usually a security versus usability tradeoff involved. For example, it's difficult for human beings to read and type long and complex passwords. Switching to passphrases is a useful way to improve these issues while still retaining a reasonable amount of entropy. If maximizing security is a paramount concern you might instead consider alternative protections, for example maintaining the managed account in a disabled state by default.
 
 ## See also
 
