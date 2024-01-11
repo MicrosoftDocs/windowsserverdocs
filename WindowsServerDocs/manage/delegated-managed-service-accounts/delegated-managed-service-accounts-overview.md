@@ -1,10 +1,10 @@
 ---
 title: Delegated Managed Service Accounts overview in Windows Server Insider Preview
-description: Learn about Delegated Managed Service Accounts (DMSA) that authenticate specific machine identities mapped in Active Directory (AD) along with Credential Guard (CG) to ensure device credentials isolation in Windows Server Insiders Preview.
+description: Learn about delegated Managed Service Accounts (DMSA) that authenticate specific machine identities mapped in Active Directory (AD) along with Credential Guard (CG) to ensure device credentials isolation in Windows Server Insiders Preview.
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
-ms.date: 01/09/2024
+ms.date: 01/12/2024
 ---
 
 # Delegated Managed Service Accounts overview
@@ -20,21 +20,49 @@ dMSAs and gMSAs are two types of managed service accounts that are used to run s
 
 - Utilizing gMSA concepts to limit scope of usage using CG to bind machine authentication.
 - dMSA uses automatic rotating passwords that bind all service account tickets to CG and disables legacy accounts to provide more security.
-- Although gMSAs are secured with machine generate and auto-rotated passwords, the passwords are still not machine bound and can be stolen.
+- Although gMSAs are secured with machine generate and autorotated passwords, the passwords are still not machine bound and can be stolen.
 
 ## Functionality of dMSA
 
-dMSA allows users to create them as a standalone account, or to replace an existing standard service accounts. When a dMSA supersedes an existing account, authentication to that existing account using its password will be blocked. The request is redirected to the [Local Security Authority](/windows/win32/secauthn/lsa-authentication) (LSA) to authenticate using dMSA, which has access to everything the previous account could access in AD.
+dMSA allows users to create them as a standalone account, or to replace an existing standard service account. When a dMSA supersedes an existing account, authentication to that existing account using its password will be blocked. The request is redirected to the [Local Security Authority](/windows/win32/secauthn/lsa-authentication) (LSA) to authenticate using dMSA, which has access to everything the previous account could access in AD.
 
-During migration, dMSA can automatically learn the devices on which the service account will be used. This is then used to move from all existing service accounts.
+During migration, dMSA automatically learns the devices on which the service account to be used which is then used to move from all existing service accounts.
 
 dMSA uses a randomized secret (derived from the machine account credential) that is held by the Domain Controller (DC) to encrypt tickets. The secret can be further protected by enabling CG. While the secrets used by dMSA are updated periodically on an epoch like a gMSA, the key difference is that dMSA's secret can't be retrieved or found anywhere other than on the DC.
 
+## Migration flow for dMSA
+
+A quick concept of the migration flow process for a dMSA involves the following steps:
+
+1. The CG policy is configured to protect the machines identity.
+1. An administrator starts and completes migration of the service account.
+1. The service account refreshes the Ticket Granting Server (TGT).
+1. The service account adds the machine identity to allow principles.
+1. The original service account becomes disabled.
+
+Take note of the following when migrating dMSAs:
+
+- You can't migrate from a managed service account or a gMSA to a dMSA.
+- Wait at least two ticket lifetimes (equivalent to 14 days) after modifying the Security Descriptor (SD) before completing the dMSA migration. Keeping a service in the **start** state for four ticket lifetimes (28 days) is recommended. Delay the migration if your DCs are partitioned or replication is broken during onboarding.
+- Pay attention to sites where replication delays are longer than the default ticket renewal time of **10 hours**. The **groupMSAMembership** attribute is checked and updated at every ticket renewal, and every time the original service account logs on during the “start migration” state, which adds the machine account to the **groupMSAMembership** of the dMSA.
+  - Example, two sites utilize the same service account and each replication cycle takes more than 10 hours per ticket lifetime. In this scenario, a group membership is lost during the initial replication cycles.
+- Migration requires access to a Read-Write Domain Controller (RWDC) to query and modify the SD.
+- Unconstrained delegation stops working once the migration is complete if the old service account was using it. If you're using a dMSA protected by CG, unconstrained delegation stops working. To learn more, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
+
+> [!WARNING]
+> If you're going to migrate to a dMSA, all machines using the service account need to be updated to support dMSA. If this is not true, machines that don't support dMSA will fail authentication with the existing service account once the account becomes disabled during migration.
+
 ## Account attributes for dMSA
 
-This section describes how the attributes for dMSA changes in the AD schema. These attributes can be viewed using the **Active Directory Users and Computers** snap-in or running **ADSI Edit** on the DC. The following changes occur for security descriptors and service accounts:
+This section describes how the attributes for dMSA changes in the AD schema. These attributes can be viewed using the **Active Directory Users and Computers** snap-in or running **ADSI Edit** on the DC.
 
-**Starting a dMSA migration** (attribute is set to **1**)
+> [!NOTE]
+> The numerical attributes set for the account indicates that:
+>
+> - **1** - Account migration has begun.
+> - **2** - Account migration has completed.
+
+Running `Start-ADServiceAccountMigration` performs the following changes:
 
 - The service account is granted _Generic Read_ to all properties on the dMSA
 - The service account is granted _Write_ property to **msDS-groupMSAMembership**
@@ -43,7 +71,7 @@ This section describes how the attributes for dMSA changes in the AD schema. The
 - **msDS-SupersededAccountState** is changed to 1
 - **msDS-SupersededManagedServiceAccountLink** is set to the dMSA
 
-**Completing a dMSA migration** (attribute is set to **2**)
+Running `Complete-ADServiceAccountMigration` performs the following changes:
 
 - The service account is removed from _Generic Read_ to all properties on the dMSA
 - The service account is removed from _Write_ property on the **msDS-GroupMSAMembership** attribute
@@ -57,16 +85,6 @@ This section describes how the attributes for dMSA changes in the AD schema. The
 - **msDS-SupersededServiceAccountState** is set to 2
 - The service account is disabled via the UAC disable bit
 - The SPN are removed from the account
-
-## Migration considerations for dMSA
-
-Take note of the following when migrating dMSAs:
-
-- Wait at least two ticket lifetimes (equivalent to 14 days) after modifying the Security Descriptor (SD) before completing the dMSA migration. Keeping a service in the **start** state for four ticket lifetimes (28 days) is recommended. Delay the migration if your DCs are partitioned or replication is broken during onboarding.
-- Pay attention to sites where replication delays are longer than the default ticket renewal time of **10 hours**. The **groupMSAMembership** attribute is checked and updated at every ticket renewal, and every time the original service account logs on during the “start migration” state, which adds the machine account to the **groupMSAMembership** of the dMSA.
-  - Example, two sites utilize the same service account and each replication cycle takes more than 10 hours per ticket lifetime. In this scenario, a group membership is lost during the initial replication cycles.
-- Migration requires access to a Read-Write Domain Controller (RWDC) to query and modify the SD.
-- Unconstrained delegation stops working once the migration is complete if the old service account was using it. If you're using a dMSA protected by CG, unconstrained delegation stops working. To learn more, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
 
 ## See also
 

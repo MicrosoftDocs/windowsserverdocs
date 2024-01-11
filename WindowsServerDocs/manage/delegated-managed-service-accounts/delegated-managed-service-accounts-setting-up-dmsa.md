@@ -4,7 +4,7 @@ description: Learn how to set up delegated Managed Service Accounts (dMSA) in Wi
 ms.topic: how-to
 ms.author: alalve
 author: mariamgewida
-ms.date: 01/09/2024
+ms.date: 01/12/2024
 ---
 
 # Setting up delegated Managed Service Accounts
