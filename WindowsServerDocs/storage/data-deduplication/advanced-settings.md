@@ -86,7 +86,7 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 			<td>
 				<ul>
 					<li>High</li>
-					<li>Medium</li>
+					<li>Normal</li>
 					<li>Low</li>
 				</ul>
 			</td>
