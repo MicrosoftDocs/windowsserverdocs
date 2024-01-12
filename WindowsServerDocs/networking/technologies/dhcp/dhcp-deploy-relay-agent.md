@@ -13,19 +13,18 @@ ms.date: 01/12/2024
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This quickstart shows you how to install and configure a Dynamic Host Configuration Protocol (DHCP) Relay Agent on a computer running Windows Server. A DHCP relay agent works as an intermediary between DHCP clients and DHCP servers that aren't on the same subnet or local network. The DHCP Relay Agent forwards DHCP broadcast messages from clients to remote server, letting clients obtain IP addresses and other network configuration information from a DHCP server located on a different subnet.
+This article shows you how to install and configure a Dynamic Host Configuration Protocol (DHCP) Relay Agent on a computer running Windows Server. A DHCP relay agent works as an intermediary between DHCP clients and DHCP servers that aren't on the same subnet or local network. The DHCP Relay Agent forwards DHCP broadcast messages from clients to remote server, letting clients obtain IP addresses and other network configuration information from a DHCP server located on a different subnet.
+
+To install the DHCP relay agent on Windows Server, you need to deploy the *Remote Access* server role. The DHCP relay agent is a feature of Remote Access and isn't included in the DHCP server role.
 
 ## Prerequisites
 
-Before you can install your DHCP relay agent, you must meet the following prerequisites:
+Before you can install your DHCP relay agent, you must have the following prerequisites:
 
-- A computer running Windows Server with DHCP server successfully installed.
 - A computer running Windows Server in the remote subnet where you want to install the DHCP relay agent.
-- A DHCP scope configured for the remote subnet.
+- A DHCP server with a a DHCP scope configured for the remote subnet.
 
-## Install and configure LAN routing
-
-To install the DHCP relay agent on Windows Server, you need to deploy the *Remote Access* server role. The DHCP relay agent is a feature of this role and isn't included in the DHCP server role.
+## Install and configure the server role
 
 Here's how to install and configure LAN routing as part of the Remote Access server role from the Windows desktop.
 
