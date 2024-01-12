@@ -155,7 +155,7 @@ AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-P
 
 ## Extended rights
 
-Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permissions to read and write the encrypted password attributes that are described in the preceding sections.
+Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permissions to read and write various attributes that are described in the preceding sections.
 
 ```powershell
 Name: ms-LAPS-Encrypted-Password-Attributes

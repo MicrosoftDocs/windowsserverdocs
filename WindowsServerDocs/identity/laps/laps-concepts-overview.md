@@ -187,7 +187,7 @@ Windows LAPS rejects unexpected attempts to modify the account's password with a
 
 ## Disabled in Windows safe mode
 
-When Windows is started in safe mode, DSRM mode, or in any other non-normal boot mode, Windows LAPS is disabled. The managed account's password won't backed up during this time even if it is in an expired state.
+When Windows is started in safe mode, DSRM mode, or in any other non-normal boot mode, Windows LAPS is disabled. The managed account's password isn't backed up during this time even if it is in an expired state.
 
 ## Windows LAPS integration with smart card policy
 
@@ -205,14 +205,14 @@ Windows LAPS integration with the smart-card-auth-only policy is available on th
 
 When a live OS image is reverted to an earlier version, the result is often a “torn state” situation where the password stored in the directory no longer matches the password stored locally on the device. For example, the problem might occur when a Hyper-V virtual machine is restored to an earlier snapshot.
 
-Once the problem occurs, the IT admin is unable to sign into the device using the persisted Windows LAPS password. The problem isn't resolved until Windows LAPS rotates the password, but this repair might not occur for days or weeks depending on the password expires.
+Once the problem occurs, the IT admin is unable to sign into the device using the persisted Windows LAPS password. The problem isn't resolved until Windows LAPS rotates the password - but that might not occur for days or weeks depending on the current password expiration date.
 
-Windows LAPS solves this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the locally persisted copy. If the two GUIDs are different, the password is immediately rotated.
+Windows LAPS solves this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the local copy. If the two GUIDs are different, the password is immediately rotated.
 
 This feature is only supported when backing passwords up to Active Directory. Microsoft Entra ID isn't supported.
 
 > [!IMPORTANT]
-> The Windows LAPS OS image rollback detection and mitigation feature is only supported in Windows 11 Insider Preview Build 26022 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
+> The Windows LAPS OS image rollback detection and mitigation feature is only supported in Windows 11 Insider Preview Build 26026 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
 
 ## See also
 
