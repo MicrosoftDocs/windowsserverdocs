@@ -12,11 +12,11 @@ ms.date: 10/12/2016
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Protected Users is a global security group for Active Directory (AD) designed to protect against credential theft attacks. It's particularly effective with machines running Windows 8.1 and later or Windows Server 2012 R2 and later, as their host machines don't cache credentials that Protected Users doesn't support. If you plan to use Protected Users, we recommend you don't use earlier versions of Windows or Windows Server, as they lack the extra cache potential to maximize the security impact of the Protected Users group.
+Protected Users is a global security group for Active Directory (AD) designed to protect against credential theft attacks. The group triggers non-configurable protection on devices and host computers to prevent credentials from being cached when group members sign-in.
 
 ## Prerequisites
 
-Your system must meet the following requirements before you can deploy a Protected Users group:
+Your system must meet the following prerequisites before you can deploy a Protected Users group:
 
 - Hosts must be running one of the following operating systems:
   
@@ -34,11 +34,11 @@ Your system must meet the following requirements before you can deploy a Protect
 
 - You must replicate the global Protected Users security group across all domain controllers in the account domain.
 
-## Protected Users limitations
+## Protections applied
 
-For users with machines running Windows 8.1 and later or Windows Server 2012 R2 and later, becoming a member of the Protected Users group means AD automatically applies certain pre-configured limitations that the users won't be able to change unless they stop being group members.
+Becoming a member of the Protected Users group means AD automatically applies certain pre-configured controls that the users won't be able to change unless they stop being group members.
 
-The following features are limited or restricted for Protected Users group members running Windows 8.1 or later:
+The following device protections are applied to members of the Protected Users group when running on a domain member:
 
 - Default credential delegation (CredSSP) is disabled by default. AD won't cache plain text credentials even when the user enables the **Allow delegating default credentials** setting on their machine.
 
@@ -50,7 +50,7 @@ The following features are limited or restricted for Protected Users group membe
 
 - Sign-on offline is disabled because AD doesn't create a cached logon verifier.
 
-The following restrictions apply to group members in domains running Windows Server 2012 R2 or later:
+The following protections apply to group members signing into a AD DS domain controller:
 
 - Users can no longer authenticate using NTLM authentication.
 
@@ -58,7 +58,7 @@ The following restrictions apply to group members in domains running Windows Ser
 
 - You can't delegate users Users with unconstrained or constrained delegation.
 
-- Users can't renew user tickets (TGTs) beyond their initial four-hour lifetime.
+- Users can't renew user Ticket Granting Tickets (TGTs) beyond their initial four-hour lifetime.
 
 ## How the Protected Users group works
 
@@ -66,12 +66,13 @@ You can add users to the Protected Users group using the following methods:
 
 - [UI tools](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753515(v=ws.11)), such as Active Directory Administrative Center (ADAC) or Active Directory Users and Computers.
 - A command-line tool, such as [Dsmod group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732423(v=ws.11)).
-- With PowerShell, using the [`Add-ADGroupMember`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617210(v=technet.10)) cmdlet.
+- With PowerShell, using the [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember) cmdlet.
 
 >[!IMPORTANT]
->Never add accounts for services and computers to the Protected Users group. For those accounts, membership doesn't provide local protections because the password and certificiate is always available on the host.
 >
->Don't add accounts that are already members of highly privileged groups, such as the Enterprise Admins or Domain Admins groups, until you can guarantee adding them won't have negative consequences. Highly privileged users in the Protected Users are subject to the same [limitations and restrictions](#protected-users-limitations) as regular users, and it's not possible to work around or change those settings. If you add all members of those groups to the Protected Users group, it's possible to accidentally lock out their accounts. It's important to test your system to make sure the mandatory setting changes won't interfere with account access for these privileged user groups.
+> - Never add accounts for services and computers to the Protected Users group. For those accounts, membership doesn't provide local protections because the password and certiticate is always available on the host.
+>
+> - Don't add accounts that are already members of highly privileged groups, such as the Enterprise Admins or Domain Admins groups, until you can guarantee adding them won't have negative consequences. Highly privileged users in the Protected Users are subject to the same [limitations and restrictions](#protected-users-limitations) as regular users, and it's not possible to work around or change those settings. If you add all members of those groups to the Protected Users group, it's possible to accidentally lock out their accounts. It's important to test your system to make sure the mandatory setting changes won't interfere with account access for these privileged user groups.
 
 Members of the Protected Users group can only authenticate using Kerberos with Advanced Encryption Standards (AES). This method requires AES keys for the account in Active Directory. The built-in Administrator doesn't have an AES key unless the password for the domain running Windows Server 2008 or later changes. Any account who has their password changed by a domain controller running an earlier version of Windows Server is locked out of authentication.
 
@@ -88,15 +89,15 @@ To avoid lockouts and missing AES keys, we recommend you follow these guidelines
 Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This way, these members can benefit from device protections before you upgrade the domain.
 
 > [!NOTE]
-> Domain controllers running earlier versions of Windows than 8.1 don't support domain protections.
+> Domain controllers running earlier versions of Windows Server 2012 R2 don't support domain protections.
 
-To create a Protected Users group on a domain controller running an earlier version of WIndows Server:
+To create a Protected Users group on a domain controller running an earlier version of Windows Server:
 
-1. [Transfer the PDC emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2.
+1. [Transfer the PDC emulator role](/troubleshoot/windows-server/identity/view-transfer-fsmo-roles#transfer-the-rid-master-pdc-emulator-and-infrastructure-master-roles) to a domain controller that runs Windows Server 2012 R2.
 
 1. Replicate the group object to the other domain controllers.
 
-After that, you should be able to host the PDC emulator role on a domain controller running an earlier version of Windows Server.
+After that, you users to benefit from device protections before the domain is upgraded.
 
 ### Protected Users group AD properties
 
