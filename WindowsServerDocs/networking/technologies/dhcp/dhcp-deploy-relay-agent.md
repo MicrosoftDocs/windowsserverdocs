@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: wscontent
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
-ms.date: 07/14/2023
+ms.date: 01/12/2024
 ---
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
@@ -23,58 +23,11 @@ Before you can install your DHCP relay agent, you must meet the following prereq
 - A computer running Windows Server in the remote subnet where you want to install the DHCP relay agent.
 - A DHCP scope configured for the remote subnet.
 
-## Install and configure the DHCP relay agent
+## Install and configure LAN routing
 
 To install the DHCP relay agent on Windows Server, you need to deploy the *Remote Access* server role. The DHCP relay agent is a feature of this role and isn't included in the DHCP server role.
 
-To install the DHCP relay agent, perform the following steps:
-
-#### [PowerShell](#tab/powershell)
-
-Here's how to install the DHCP relay agent using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) and [Install-RemoteAccess](/powershell/module/remoteaccess/install-remoteaccess) commands.
-
-1. Sign into the computer where you want to install the DHCP relay agent, then run PowerShell on your computer in an elevated session.
-
-1. Run the following commands to install Remote Access Server Role and Routing Role Service:
-
-```powershell
-Install-WindowsFeature -Name RemoteAccess -IncludeManagementTools
-Install-WindowsFeature -Name DirectAccess-VPN -IncludeManagementTools
-```
-
-1. Run the following command to enable the Routing and Remote Access Service (RRAS):
-
-```powershell
-Install-RemoteAccess -VpnType RoutingOnly
-```
-
-1. Run the following commands to configure the DHCP Relay Agent:
-
-```powershell
-# Import RemoteAccess module if it isn't present on your computer.
-Import-Module RemoteAccess
-
-# Replace 'Ethernet' with the name of the network interface you want to use for the DHCP relay agent
-$interfaceName = 'Ethernet'
-
-# Retrieve the interface index for the specified interface
-$interfaceIndex = (Get-NetAdapter -Name $interfaceName).ifIndex
-
-# Add the DHCP relay agent for the specified interface
-Add-DhcpRelayAgent -InterfaceIndex $interfaceIndex
-
-# Replace '192.168.10.20' with the IP address of your DHCP server
-$dhcpServerIpAddress = '192.168.10.20'
-
-# Configure the DHCP relay agent with the DHCP server IP address
-Set-DhcpRelayAgent -InterfaceIndex $interfaceIndex -ServerAddress $dhcpServerIpAddress
-```
-
-After you run these commands, you'll have installed and configured the DHCP Relay Agent on your Windows Server.
-
-#### [GUI](#tab/gui)
-
-Here's how to install the DHCP Relay Agent role from the Windows desktop.
+Here's how to install and configure LAN routing as part of the Remote Access server role from the Windows desktop.
 
 1. Sign into the computer where you want to install the DHCP relay agent, then open the **Server Manager**.
 
@@ -84,37 +37,39 @@ Here's how to install the DHCP Relay Agent role from the Windows desktop.
 
 1. Expand the **Remote Access** role by selecting the accompanying checkbox or arrow.
 
-1. In **Role Services**, select **Routing**.
+1. In **Role Services**, select **Routing**, then **Add Features** when prompted.
 
 1. Select **Next** until you reach the **Confirm installation selections** page.
 
-1. Select **Install** to begin the installation. After the installation completes, select **Close**.
+1. Select **Install** to begin the installation. After the installation completes, select **Open the Getting Started Wizard**.
 
-After you've installed the Remote Access role with the Routing role service, you can configure the DHCP relay agent.
+1. In the Routing and Remote Access Microsoft Management Console (MMC), right-click the server, then select *Configure and Enable Routing and Remote Access* to open the Routing and Remote Access Server Setup Wizard.
 
-1. Open the **Routing and Remote Access management console** (`rrasmgmt.msc`) from the **Start** menu or by entering `rrasmgmt.msc` in the **Run** command-line.
+1. In the Welcome to the Routing and Remote Access Server Setup Wizard, select **Next**.
 
-1. In the left pane, expand the server name, then right-click **IPv4** or **IPv6** depending on which version you want to configure the relay agent for.
+1. In **Configuration**, select *LAN routing*, and then select **Next**.
 
-1. Select **New Interface**.
+1. In **Custom Configuration**, select *VPN access*, and then select **Next** to open the Completing the Routing and Remote Access Server Setup Wizard.
+
+1. Select **Finish** to close the wizard, then **Start service** when prompted.
+
+## Configure the DHCP Relay Agent
+
+Here's how to install the DHCP Relay Agent role from the Routing and Remote Access MMC.
+
+1. In the left pane, expand the server name, then right-click **General** under **IPv4** or **IPv6**, then select **New Routing Protocol**.
+
+1. In the left pane, then right-click **DHCP Relay Agent** under **IPv4** or **IPv6**, then select **New Interface**.
 
 1. Select the network interface you want to use for the DHCP relay agent. Select **OK**.
 
-1. In the properties of the newly added interface, go to the **General** tab.
+1. In the left pane, then right-click **DHCP Relay Agent** under **IPv4** or **IPv6**, then select **Properties**.
 
-1. If you want to allow broadcast-based name resolution, select **Enable broadcast name resolution**. If not, don't select it.
-
-1. Go to the **DHCP Relay Agent** tab.
-
-1. Select **Enable DHCP relay agent**.
-
-1. Select **Add** to add the IP address of your DHCP server.
+1. Enter the IP address of the DHCP server you want to relay DHCP requests to, then select **Add**.
 
 1. Select **OK** to save your settings.
 
 Now the DHCP Relay Agent is installed and configured on your Windows Server.
-
----
 
 ## Next steps
 
