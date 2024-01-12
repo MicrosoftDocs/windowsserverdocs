@@ -52,7 +52,7 @@ Here's how to install and configure LAN routing as part of the Remote Access ser
 
 1. Select **Finish** to close the wizard, then **Start service** when prompted.
 
-## Configure the DHCP Relay Agent
+## Configure DHCP Relay Agent
 
 Here's how to install the DHCP Relay Agent role from the Routing and Remote Access MMC.
 
