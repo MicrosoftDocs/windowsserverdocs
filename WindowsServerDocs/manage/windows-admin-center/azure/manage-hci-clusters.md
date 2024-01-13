@@ -15,8 +15,7 @@ ms.date: 05/06/2022
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 > [!IMPORTANT]
-> Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
-> If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
+> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
 
 Using Windows Admin Center in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
@@ -238,8 +237,7 @@ Invoke-AzRestMethod -Method PATCH -Uri "https://management.azure.com/subscriptio
 Here are some tips to try in case something isn't working. For general Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
 
 ### Failed to connect with "404 endpoint not found"
-1. Updating to the latest versions (1.36 and 1.35) of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This will be fixed in the December release of the agent (1.37). This message will be updated once that has been released.
-2. If you have upgraded and wish to downgrade, you can [download version 1.34](https://download.microsoft.com/download/b/3/2/b3220316-13db-4f1f-babf-b1aab33b364f/AzureConnectedMachineAgent.msi).
+1. Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
 
 ### Failed to connect error
 

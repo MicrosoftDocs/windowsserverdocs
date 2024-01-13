@@ -20,6 +20,15 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.0.0.332 - December 2023
+
+### New features
+- Updated the build of Windows Admin Center to v2311. For a full summary of new features, visit [our blog post](https://aka.ms/wac2311)
+- Added support for installation when TLS 1.3 is enabled
+
+### Fixed
+- Fixed an issue where momentarily losing access to IMDS/HIMDS does not result in Windows Admin Center installation failure
+
 ## Version 0.0.0.329 - November 2023
 
 ### Fixed
