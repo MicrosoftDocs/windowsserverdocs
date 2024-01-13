@@ -11,9 +11,6 @@ ms.topic: conceptual
 
 Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Microsoft Entra ID. The article describes the basic procedures for using Windows LAPS to back up passwords to Microsoft Entra ID and how to retrieve them.
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
-
 ## Supported Azure clouds
 
 See [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
@@ -233,4 +230,4 @@ While not required for Windows LAPS to operate, whenever you extend your on-prem
 
 - [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)

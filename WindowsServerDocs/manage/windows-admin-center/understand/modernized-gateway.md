@@ -4,7 +4,7 @@ description: Windows Admin Center (Project Honolulu) modernized gateway
 ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
-ms.date: 12/19/2023
+ms.date: 01/02/2024
 ---
 # What is the Windows Admin Center modernized gateway (preview)?
 
@@ -33,7 +33,7 @@ Previously, Windows Admin Center utilized [Katana](/aspnet/aspnet/overview/owin-
 
 [Kestrel](/aspnet/core/fundamentals/servers/kestrel) is the recommended web server for ASP.NET Core applications. Additionally, Kestrel supports the HTTP/2 web protocol, where previously we had only supported HTTP1.1 with the Katana components. The upgrade from HTTP1.1 to HTTP/2 brings reduced latency to our application and increased responsiveness through enhanced features like multiplexing and server push.
 
-### How this effects extensions
+### How this affects extensions
 Gateway plug-in extensions are most impacted by the changes to our modernized gateway. Windows Admin Center gateway plug-ins enable API communication from the UI of your tool or solution to a target node. Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plug-ins to be executed on target nodes. The gateway service can be extended to include custom gateway plug-ins that support protocols other than the default ones (PowerShell and WMI). 
 
 Because gateway plug-ins communicate with Windows Admin Center’s backend to enable API communication, gateway plug-in code can include components written with the .NET framework version 4.6.2, which won't function with .NET Core. This code needs to be updated to use the .NET Core framework. 

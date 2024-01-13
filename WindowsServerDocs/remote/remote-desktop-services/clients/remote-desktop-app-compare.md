@@ -33,7 +33,7 @@ If you remote into your personal desktop, there are other redirections that you 
 | Touch       | X                         | X             | X       | X   |       | X (except IE) |
 | Pen         | X                         |               | X       | X \*\* | | |
 
-\* View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
+\* View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices-and-redirection).
 
 \*\* Pen input redirection is not supported when connecting to Windows Server 2012, or Windows Server 2012 R2.
 
