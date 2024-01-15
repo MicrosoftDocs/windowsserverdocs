@@ -1,5 +1,5 @@
 ---
-title: Install DHCP relay agent
+title: Install DHCP relay agent for Windows Server
 description: Learn how to install a DHCP relay agent on a computer running the Windows Server operating system.
 ms.topic: quickstart
 author: robinharwood
@@ -22,7 +22,7 @@ To install the DHCP relay agent on Windows Server, you need to deploy the *Remot
 Before you can install your DHCP relay agent, you must have the following prerequisites:
 
 - A computer running Windows Server in the remote subnet where you want to install the DHCP relay agent.
-- A DHCP server with a a DHCP scope configured for the remote subnet.
+- A DHCP server with a DHCP scope configured for the remote subnet.
 
 ## Install and configure the server role
 
