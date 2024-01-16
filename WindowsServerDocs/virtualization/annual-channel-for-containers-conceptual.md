@@ -1,37 +1,42 @@
 ---
 title: What is Windows Server Annual Channel for Containers 
-description: Learn about Windows Server Annual Channel for containers 
+description: Learn about Windows Server Annual Channel for Containers 
 ms.topic: conceptual
 author: gswashington
-msauthor: robinharwood
-ms.date: 01/07/2024
+ms.author: robinharwood
+ms.date: 01/16/2024
 
 ---
 
-# Windows Server Annual Channel for containers
+# Windows Server Annual Channel for Containers
 
-Applies to: Windows Server 2022 -- LTSC (Long-Term Servicing Channel) 23H2
+>Applies to: Windows Server, version 23H2
 
-Windows Server Annual Channel for Containers is an operating system to host Windows Server containers. The Annual Channel enables customers who are innovating quickly to take advantage of new operating system capabilities at a faster pace, focusing on containers and microservices including optimized portability for both Windows and Linux environments.
+Windows Server Annual Channel for Containers is an operating system to host Windows Server containers. Annual Channel enables customers who are innovating quickly to take advantage of new operating system capabilities at a faster pace, focusing on containers, microservices, and portability.
 
-Windows Server Annual Channel for Containers means new features and functionality being released on an annual basis. The channel can only be installed with the Server Core installation option. The Annual Channel is available to volume-licensed customers with Software Assurance and loyalty programs such as Visual Studio Subscriptions. As an added benefit for Windows on Azure Kubernetes Services customers, its Windows operating system SKU has versioning aligned to Kubernetes versions, much like the Linux upgrade process.
+Windows Server Annual Channel for Containers means new features and functionality being released on an annual basis. The more frequent releases of Annual Channel enable customers to take advantage of innovation more quickly, with a focus on containers and microservices. For a detailed comparison, see Windows Server servicing channels. To learn more about the lifecycle, see the [Windows Server Annual Channel lifecycle article](/lifecycle/products/windows-server-annual-channel).
 
-Developers and operations teams can opt into the new annual channel by updating container hosts to Annual channel version 23H2 without being required to rebuild Windows Server 2022 LTSC container images. To validate reliability of the annual channel after a new container host is released, users can deploy and test Window Server 2022 LTSC container images. 
+To learn more about difference between servicing channels, see [Windows Server servicing channels](/windows-server/get-started/servicing-channels-comparison).
 
-Window Server 2022 is the only supported image on the 23H2 host.
+## Supported platforms
 
-All container images (Nano Server, Server Core, Windows Server) will continue to be shipped along with Windows Server LTSCs such as Windows Server 2019 and Windows Server 2022. With the Windows Server Annual Channel for Containers, there will be a yearly release of the container host starting with version 23H2.
-
- ![Graphic that shows upgrade and versioning support](/media/what-is-annual-channel-for-containers/container-host-image.png)
-
-The more frequent releases of the AC enable customers to take advantage of innovation more quickly, with a focus on containers and microservices. For a detailed comparison, see Windows Server servicing channels.To learn more about the lifecycle, see Windows Server 2022 lifecycle [](). Each release is named based on the release cycle; for example, version 23H2 is a release in the second half of the year 2023.
-
->Note
->To move to an Annual Channel release you must perform a clean installation.
+A Windows Server, version 23H2 container host only supports the Windows Server 2022 Long Term Servicing Channel (LTSC) container image.
 
 ## Portability
 
-Portability is an important feature introduced in Windows Server Annual Channel for Containers that lets users run workloads with different container image versions. Portability lets Windows Server 2022-based container images run on session hosts running later versions of Windows Server. This increased support helps container services like AKS to update the OSes on container hosts on a more frequent basis without requiring you to update the containers themselves. Portability doesn't only streamline the upgrade process, but also helps developers take full advantage of the enhanced flexibility and compatibility that containers offer. See [Portability in Windows Server Annual Channel for containers](/.md) for more information on how portability works.
+Portability is an important feature introduced in Windows Server Annual Channel for Containers that lets users run workloads with different container image versions. Portability lets Windows Server 2022-based container images run on session hosts running later versions of Windows Server. This increased support helps container services like AKS to update the operating systems on container hosts on a more frequent basis without requiring you to update the containers themselves. Portability doesn't only streamline the upgrade process, but also helps developers take full advantage of the enhanced flexibility and compatibility that containers offer. For more information about portability, see [Portability in Windows Server Annual Channel for containers](/.md).
+
+## Get started with Windows Server Annual Channel for Containers
+
+To get started using Annual Channel for Containers, use your preferred method to install Windows
+Server on your container host. Annual Channel is available to volume-licensed customers with Software Assurance and loyalty programs such as Visual Studio Subscriptions. You can get Annual Channel releases from:
+
+- Volume Licensing Service Center (VLSC): Volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and select **Sign In**. Finally, select **Downloads and Keys**, search for Annual Channel, then download the media.
+
+- Visual Studio Subscriptions: Visual Studio Subscribers can obtain Annual Channel releases by downloading them from the [Visual Studio Subscriber download page](https://my.visualstudio.com/Downloads?q=Windows%20Server,%20version). If you aren't already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber downloads page](https://my.visualstudio.com/Downloads?q=Windows%20Server,%20version). Releases obtained through Visual Studio Subscriptions are for development and testing only.
+
+> [!WARNING]
+> Annual Channel can only be installed with the Server Core installation option. To move to an Annual Channel release from LTSC, or to upgrade an existing Annual Channel installation, you must perform a clean installation.
 
 ## Related content
 
