@@ -18,17 +18,13 @@ SMB signing requirements can involve both outbound signing, which covers traffic
 
 SMB signing first appeared (SMB1) in Microsoft Windows 2000, Microsoft Windows NT 4.0, and Microsoft Windows 98. SMB2 message integrity manifests on a signed session where signed packets flow from client to server. On a signed session, every signed packet includes a signature that the receiver can validate. Unlike SMB1 signing which uses MD5 [RFC1321] as hashing algorithm, SMB2 uses a better hashing for signing. SMB 2.02 and SMB 2.1 use HMAC SHA-256. The security model in MS-SMB2 relies upon authenticating the client-user identity before accessing a share on the server. After the user is authenticated, the server can mandate message signing or encryption. The server also controls access to the share based on which users, groups, or claims are authorized to have various levels of access.
 
-SMB 3.0 introduces end-to-end encryption built in the protocol with the addition of AES-CMAC algorithms. In SMB 3.1.1 (Windows 10), the encryption algorithm can be negotiated, and the cryptographic key computation is enhanced with pre-authentication integrity. SMB 3.1.1 pre-authentication integrity enhances protection against security-downgrade attacks by verifying the integrity of all messages preceding the session establishment. This mandatory feature protects against any tampering with Negotiate and Session Setup messages by leveraging cryptographic hashing SHA-51. See [SMB 3.1.1 Pre-authentication integrity in Windows 10](https://blogs.msdn.microsoft.com/openspecification/2015/08/11/smb-3-1-1-pre-authentication-integrity-in-windows-10/) for more information. 
-
 Windows Server 2022 and Windows 11 introduced AES-128-GMAC signing acceleration. See [AES-128-GMAC signing acceleration](/windows-server/storage/file-server/smb-security#new-signing-algorithm) for detailed guidance.
 
-SMB signing is enabled by default on the latest versions of Windows 11 and Windows Server 2022. All Windows environments support SMB signing. However, if your environment uses third-party servers, your system settings can prevent the default settings from taking effect. In this case, you'll want to disable SMB signing. See []() for guidance on how to disable SMB signing.
+SMB signing is enabled in all versions of Windows. SMB signing requirements can involve both outbound signing, which covers traffic from the SMB client, and inbound signing, which covers traffic to the server. Windows and Windows Server can require outbound signing only, inbound signing only, both, or neither. If your environment uses third-party servers, your system settings can prevent the default settings and conncections from taking effect. In this case, you'll want to disable SMB signing. See [Control SMB signing behavior]() for guidance on how to disable SMB signing.
  
 ### Security considerations in SMB2 and SMB3
 
-All cryptographic keys used in SMB 2.x and 3.x signing are derived from the session key. The security of SMB 2/3 signing and encryption relies on the session key. This key must be unique, kept secret, and impossible to guess.
-
-The server should choose an authentication mechanism that provides unique and randomly generated session keys to ensure the security of the signing key, encryption key, and decryption key.
+All cryptographic keys used in SMB 2.x and 3.x signing are derived from the session key. The security of SMB 2/3 signing and encryption relies on the session key. Because the session key itself is derived from your password, using a long, complex, non-dictionary password enhances SMB signing and encryption.
 
 See the tutorial [SMB 2 and SMB 3 security in Windows 10: the anatomy of signing and cryptographic keys]() for detailed information on SMB2 and SMB3 security features.
 
@@ -67,7 +63,6 @@ The policies for SMB signing are located in **Computer Configuration** > **Windo
 
 The **EnableSecuritySignature** registry setting for SMB2+ client and SMB2+ server is ignored. Therefore, this setting does nothing unless you're using SMB1. SMB 2.02 and later signing is controlled solely by being required or not. This setting is used when either the server or client requires SMB signing. Only if both have signing set to **0** will signing not occur.
 
-<!-- convert to bullet list for server with each policy name -->
 |-|Server – RequireSecuritySignature=1|Server – RequireSecuritySignature=0|
 |---|---|---|
 |Client – RequireSecuritySignature=1|Signed|Signed|
