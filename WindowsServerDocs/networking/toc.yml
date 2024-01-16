@@ -242,6 +242,8 @@
       items:
       - name: Deploy DHCP using Windows PowerShell
         href: technologies/dhcp/dhcp-deploy-wps.md
+      - name: Install DHCP relay agent
+        href: technologies/dhcp/dhcp-deploy-relay-agent.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
