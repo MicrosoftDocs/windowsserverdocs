@@ -4,7 +4,7 @@ description: How to disable SMB signing on third-party servers in Windows 11 and
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
-ms.date: 01/08/2024
+ms.date: 01/16/2024
 ms.prod: windows-server
 ---
 # Control SMB signing behavior (preview)
@@ -15,13 +15,13 @@ ms.prod: windows-server
 
 ## How SMB signing works
 
-SMB signing is a security feature that uses the session key and cipher suite to add a signature to a message going across a connection. This signature contains a hash of the entire message in the SMB header. If someone tampers with the message in transit, the data in the tampered message won't match the hash in the signature. The hash also includes the identities of the original sender and the intended recipient. Signature mismatches alert users to possible foul play, helping them protect their deployments from relay and spoofing attacks.
+Server Message Block (SMB) signing is a security feature that uses the session key and cipher suite to add a signature to a message going across a connection. This signature contains a hash of the entire message in the SMB header. If someone tampers with the message in transit, the data in the tampered message doesn't match the hash in the signature. The hash also includes the identities of the original sender and the intended recipient. Signature mismatches alert users to possible foul play, helping them protect their deployments from relay and spoofing attacks.
 
 SMB signing requirements can involve both outbound signing, which covers traffic from the SMB client, and inbound signing, which covers traffic to the server. Windows and Windows Server can require outbound signing only, inbound signing only, both, or neither. For example:
 
 - Windows 11 Insiders Enterprise, Pro, and Education require both outbound and inbound SMB signing.
 
-- Windows Server Vnext Insider requires outbound SMB signing only.
+- Windows Server Insiders requires outbound SMB signing only.
 
 - Windows 11 Insider Home edition doesn't require outbound or inbound SMB signing.
 
