@@ -12,7 +12,7 @@ ms.topic: conceptual
 Learn about the different account management modes supported by Windows Local Administrator Password Solution (Windows LAPS).
 
 > [!IMPORTANT]
-> The Windows LAPS automatic account management feature is only available in Windows 11 Insider Preview Build 26026 and later.
+> The Windows LAPS automatic account management feature is supported in Windows 11 Insider Preview Build 26031 and later.
 
 ## Overview
 
