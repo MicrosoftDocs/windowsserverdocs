@@ -11,7 +11,7 @@ ms.date: 12/16/2022
 
 # Compare the clients: redirections
 
->Applies to: Windows Server 2022, Windows 10, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
 
 We're often asked how the different Remote Desktop clients compare to each other when connecting to Remote Desktop Services or remote PCs. Here's the answer to these questions.
 

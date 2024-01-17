@@ -12,7 +12,7 @@ manager: dongill
 
 >Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
-When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for OpenGL\OpenCL, Discrete Device Assignment, or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
+When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for OpenGL/OpenCL, Discrete Device Assignment, or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
 
 So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server.
 
@@ -21,7 +21,7 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 ## Best practices
 
-- Use Windows Server 2019 for your Remote Desktop infrastructure (the Web Access, Gateway, Connection Broker, and license server). Windows Server 2019 is backward-compatible with these components, which means a Windows Server 2016 RD Session Host can connect to a 2019 RD Connection Broker, but not the other way around.
+- Use the most recent version of Windows Server for your Remote Desktop infrastructure (the Web Access, Gateway, Connection Broker, and license server). Windows Server is backward-compatible with these components, which means a Windows Server 2016 RD Session Host can connect to a 2019 RD Connection Broker, but not the other way around.
 
 - For RD Session Hosts - all Session Hosts in a collection need to be at the same level, but you can have multiple collections. You can have a collection with Windows Server 2016 Session Hosts and one with Windows Server 2019 Session Hosts.
 
@@ -82,7 +82,7 @@ The following table shows support for GPU scenarios in the client OS.
 > [!NOTE]
 > Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
-Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server 2016. The following guest operating systems have RemoteFX vGPU support:
+Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server. The following guest operating systems have RemoteFX vGPU support:
 
 - Windows 7 SP1
 - Windows 8.1

@@ -41,8 +41,8 @@ This is the first and most important step for migrating: migrating your RD Conne
 3. Add Windows Server 2016 RD Connection Broker servers into the high availability deployment.
 
 > [!NOTE]
-> A mixed high availability configuration with Windows Server 2016 and an earlier version of Windows Server is not supported for RD Connection Broker servers.
-> An RD Connection Broker running Windows Server 2016 can serve session collections with RD Session Host servers running an earlier version of Windows Server, and it can serve virtual desktop collections with RD Virtualization Host servers running an earlier version of Windows Server.
+> - A mixed high availability configuration with different versions of Windows Server is not supported for RD Connection Broker servers.
+> - An RD Connection Broker running a newer version of Windows Server can serve session collections with RD Session Host servers running a previous version of Windows Server, and it can serve virtual desktop collections with RD Virtualization Host servers running a previous version of Windows Server.
 
 ## Migrate session collections
 
@@ -60,7 +60,7 @@ Follow these steps to migrate a session collection in an earlier version of Wind
    > [!NOTE]
    > If the UVHD template (UVHD-template.vhdx) is enabled in the session collection and the file server has been migrated to a new server, update the User Profile Disks: Location collection property with the new path. The User Profile Disks must be available at the same relative path in the new location as they were on the source server.
    >
-   > A session collection of RD Session Host servers with a mix of servers running both an earlier version of Windows Server and Windows Server 2016 is not supported.
+   > A session collection of RD Session Host servers with a mix of Windows Server versions isn't supported.
 
 ## Migrate virtual desktop collections
 

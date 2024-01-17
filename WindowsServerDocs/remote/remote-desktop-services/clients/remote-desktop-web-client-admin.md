@@ -23,7 +23,7 @@ Before getting started, keep the following things in mind:
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users connect to are running one of the following OS versions:
   
-  * Windows 10
+  * Windows 10 or later
   * Windows Server 2016 or later
 
 Your users will see better performance connecting to Windows Server 2016 (or later) and Windows 10 (version 1611 or later).
