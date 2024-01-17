@@ -29,7 +29,7 @@ Lists all the new features available for AD DS in Windows Server 2016.
 Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016.
 
 ## [Windows 10 for the enterprise: Ways to use devices for work](/azure/active-directory/devices/overview)
-Windows 10 provides you the ability to leverage Azure Active Directory. Windows 10 devices can be connected to Azure AD, and users can sign in to Windows with Azure AD accounts or add their Azure ID to gain access to business apps and resources.
+Windows 10 provides you the ability to leverage Microsoft Entra ID. Windows 10 devices can be connected to Microsoft Entra ID, and users can sign in to Windows with Microsoft Entra accounts or add their Azure ID to gain access to business apps and resources.
 
 ## [Active Directory Domain Services](../identity/ad-ds/Active-Directory-Domain-Services.md)
 Detailed documentation on all of the features available for AD DS in Windows Server 2016.

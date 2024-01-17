@@ -57,7 +57,7 @@ Here's how to enable Secured-core server using the user interface.
    1. For AMD based systems, confirm the DRTM Boot Driver device is present before continuing
 1. From Windows desktop, open the **Start** menu, select **Windows Security**.
 1. Select **Device security > Core isolation details**, then enable **Memory Integrity** and
-   **Firmware Protection**.
+   **Firmware Protection**. You might not be able to enable Memory Integrity until you've enabled Firmware Protection first and restarted your server.
 1. Restart your server when prompted.
 
 Once your server has restarted, your server is enabled for Secured-core server.

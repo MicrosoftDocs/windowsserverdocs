@@ -213,7 +213,7 @@ On computers running Windows 2000 and earlier, the Everyone group included the 
 |Well-known SID/RID|S-1-1-0 |
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
-|Default user rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p> [Act as part of the operating system](/windows/device-security/security-policy-settings/act-as-part-of-the-operating-system): SeTcbPrivilege<p> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
+|Default user rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
 
 ### Fresh Public Key identity
 

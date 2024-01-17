@@ -27,7 +27,7 @@ Applies to AD FS 2019 and later
 ## Implicit grant flow
 
 > [!NOTE]
-> Microsoft highly recommends migrating to Azure AD instead of upgrading to a newer AD FS version. For more information on implicit grant flow in Azure AD, see [Implicit grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow).
+> Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on implicit grant flow in Microsoft Entra ID, see [Implicit grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow).
 
 For single page applications (AngularJS, Ember.js, React.js, and so on), AD FS supports the OAuth 2.0 Implicit Grant flow. The implicit flow is described in the [OAuth 2.0 Specification](https://tools.ietf.org/html/rfc6749#section-4.2). Its primary benefit is that it allows the app to get tokens from AD FS without performing a backend server credential exchange. This flow allows the app to sign in the user, maintain session, and get tokens to other web APIs within the client JavaScript code. There are a few important security considerations to take into account when using the implicit flow specifically around [client](https://tools.ietf.org/html/rfc6749#section-10.3).
 
@@ -103,7 +103,7 @@ The implicit grant doesn't provide refresh tokens. Both `id_tokens` and `acc
 ## Authorization code grant flow
 
 > [!NOTE]
-> Microsoft highly recommends migrating to Azure AD instead of upgrading to a newer AD FS version. For more information on authorization code grant flow in Azure AD, see [Authorization code grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+> Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on authorization code grant flow in Microsoft Entra ID, see [Authorization code grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 The OAuth 2.0 authorization code grant can be used in web apps to gain access to protected resources, such as web APIs. The OAuth 2.0 authorization code flow is described in [section 4.1 of the OAuth 2.0 specification](https://tools.ietf.org/html/rfc6749). It's used to perform authentication and authorization in most app types, including web apps and natively installed apps. The flow enables apps to securely acquire access_tokens that can be used to access resources that trust AD FS.
 
@@ -280,7 +280,7 @@ A successful token response looks like:
 ## On-Behalf-Of flow
 
 > [!NOTE]
-> Microsoft highly recommends migrating to Azure AD instead of upgrading to a newer AD FS version. For more information on On-Behalf-Of flow in Azure AD, see [On-Behalf-Of flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow).
+> Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on On-Behalf-Of flow in Microsoft Entra ID, see [On-Behalf-Of flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow).
 
 The OAuth 2.0 On-Behalf-Of flow (OBO) serves the use case where an application invokes a service/web API, which in turn needs to call another service/web API. The idea is to propagate the delegated user identity and permissions through the request chain. For the middle-tier service to make authenticated requests to the downstream service, it needs to secure an access token from the AD FS, on behalf of the user.
 
@@ -418,7 +418,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFCbmZpRy1tQ…
 ## Client credentials grant flow
 
 > [!NOTE] 
-> Microsoft highly recommends migrating to Azure AD instead of upgrading to a newer AD FS version. For more information on client credentials grant flow in Azure AD, see [Client credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow).
+> Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on client credentials grant flow in Microsoft Entra ID, see [Client credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow).
 
 You can use the OAuth 2.0 client credentials grant specified in [RFC 6749](https://tools.ietf.org/html/rfc6749#section-4.4), to access web-hosted resources by using the identity of an application. This type of grant is commonly used for server-to-server interactions that must run in the background, without immediate interaction with a user. These types of applications are often referred to as daemons or service accounts.
 
@@ -492,7 +492,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZn
 ## Resource owner password credentials grant flow (Not recommended)
 
 > [!NOTE] 
-> Microsoft highly recommends migrating to Azure AD instead of upgrading to a newer AD FS version. For more information on resource owner password credentials grant flow in Azure AD, see [Resource owner password credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth-ropc).
+> Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on resource owner password credentials grant flow in Microsoft Entra ID, see [Resource owner password credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth-ropc).
 
 Resource owner password credential (ROPC) grant allows an application to sign in the user by directly handling their password. The ROPC flow requires a high degree of trust and user exposure and you should only use this flow when other, more secure, flows can't be used.
 
@@ -559,7 +559,7 @@ You can use the refresh token to acquire new access tokens and refresh tokens us
 ## Device code flow
 
 > [!NOTE] 
-> Microsoft highly recommends migrating to Azure AD instead of upgrading to a newer AD FS version. For more information on device code flow in Azure AD, see [Device code flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-device-code).
+> Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on device code flow in Microsoft Entra ID, see [Device code flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-device-code).
 
 Device code grant allows users to sign in to input-constrained devices such as a smart TV, IoT device, or printer. To enable this flow, the device has the user visit a webpage in their browser on another device to sign in. Once the user signs in, the device is able to get access tokens and refresh tokens as needed.
 

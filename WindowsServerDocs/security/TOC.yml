@@ -122,17 +122,6 @@
         href: guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md
       - name: Upgrade a guarded fabric to Windows Server 2019
         href: guarded-fabric-shielded-vm/guarded-fabric-upgrade-to-2019.md
-    - name: Troubleshoot
-      href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md
-      items:
-      - name: Guarded Fabric Diagnostic Tool
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md
-      - name: HGS
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md
-      - name: Guarded Hosts
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md
-      - name: Shielded VMs
-        href: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md
   - name: Device Health attestation
     href: device-health-attestation.md
   - name: Disabling System Services in Windows Server 2016
@@ -205,7 +194,7 @@
       href: kerberos/passwords-technical-overview.md
     - name: System key utility technical overview
       href: kerberos/system-key-utility-technical-overview.md
-  - name: RPC Interface Restriction 
+  - name: RPC Interface Restriction
     href: rpc-interface-restrict.md
   - name: TLS - SSL (Schannel SSP)
     href: tls/tls-ssl-schannel-ssp-overview.md
