@@ -59,7 +59,7 @@ SearchFlags: 904
 AttributeSecurityGuid: <not set>
 ```
 
-The data that's stored in this attribute is a JSON string that contains multiple name-value pairs. For example:
+The data stored in this attribute is a JSON string that contains multiple name-value pairs. For example:
 
 `{"n":"Administrator","t":"1d8161b41c41cde","p":"A6a3#7%eb!57be4a4B95Z43394ba956de69e5d8975#$8a6d)4f82da6ad500HGx"}`
 
@@ -135,9 +135,27 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
+### msLAPS-CurrentPasswordVersion
+
+This attribute contains a binary GUID. The value represents the logical version of the most recently persisted password.
+
+```powershell
+Name: ms-LAPS-CurrentPasswordVersion
+LDAP display name: msLAPS-CurrentPasswordVersion
+OID: 1.2.840.113556.1.6.44.1.7
+Syntax: 2.5.5.10
+OmSyntax: 4
+IsSingleValued: True
+IsMemberOfPartialAttributeSet: False
+RangerLower: 16
+RangerUpper: 16
+SearchFlags: 904
+AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
+```
+
 ## Extended rights
 
-Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permissions to read and write the encrypted password attributes that are described in the preceding sections.
+Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permissions to read and write various attributes that are described in the preceding sections.
 
 ```powershell
 Name: ms-LAPS-Encrypted-Password-Attributes
