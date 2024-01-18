@@ -9,7 +9,7 @@ metadata:
   ms.author: elizapo
   ms.date: 02/07/2022
   ms.localizationpriority: medium
-  ms.prod: windows-server
+  ms.service: windows-server
 title: Frequently asked questions about the Remote Desktop clients
 summary: |
   >Applies to: Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016.
