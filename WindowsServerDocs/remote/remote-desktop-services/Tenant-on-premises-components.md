@@ -33,4 +33,4 @@ Some larger and more sophisticated tenants may choose to host an Active Director
 Additional information:
 
 - [Microsoft Azure Virtual Network Overview](/azure/virtual-network/virtual-networks-overview)
-- [Create a resource manager VNet with a Site-to-Site VPN connection using the Azure Portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+- [Create a resource manager VNet with a Site-to-Site VPN connection using the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)

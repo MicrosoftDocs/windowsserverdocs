@@ -19,7 +19,7 @@ Before getting started, keep the following things in mind:
 
 * Make sure your [Remote Desktop deployment](../rds-deploy-infrastructure.md) has an RD Gateway, an RD Connection Broker, and RD Web Access running on Windows Server 2016 or 2019.
 * Make sure your deployment is configured for [per-user client access licenses](../rds-client-access-license.md) (CALs) instead of per-device, otherwise all licenses will be consumed.
-* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
+* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contain this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users connect to are running one of the following OS versions:
   
