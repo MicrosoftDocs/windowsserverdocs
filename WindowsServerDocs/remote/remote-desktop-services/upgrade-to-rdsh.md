@@ -17,7 +17,7 @@ manager: scottman
 
 ## Upgrading a RDS session-based collection
 
-In order to keep the down-time to a minimum, it is best to follow the steps below while upgrading a RDS session-based collection:
+In order to keep the down-time to a minimum, it's best to follow these steps while upgrading a RDS session-based collection:
 
 1. Identify the servers to be upgraded, say, half the servers in the collection.
 2. Prevent new connections to these servers by setting **Allow New Connections** to false.
