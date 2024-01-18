@@ -15,7 +15,7 @@ This article will tell you more about the desktop hosting service's components.
 
 ## Tenant environment
 
-As described in [Remote Desktop service roles](rds-roles.md), each role plays a distinct part in the tenant envrionment.
+As described in [Remote Desktop service roles](rds-roles.md), each role plays a distinct part in the tenant environment.
 
 The provider's desktop hosting service is implemented as a set of isolated tenant environments. Each tenant's environment consists of a storage container, a set of virtual machines, and a combination of Azure services, all communicating over an isolated virtual network. Each virtual machine contains one or more of the components that make up the tenant's hosted desktop environment. The following subsections describe the components that make up each tenant's hosted desktop environment.
 
@@ -34,7 +34,7 @@ There are multiple ways to deploy AD DS:
 For more information, see the following articles:
 
 * [Azure Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
-* [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Desktop Hosting Reference Architecture Guide](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 * [Create a site-to-site connection in the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
 ## SQL database
