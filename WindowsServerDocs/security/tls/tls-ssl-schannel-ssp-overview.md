@@ -26,7 +26,7 @@ The Schannel authentication protocol suite provides several protocols that all u
 - Private Communications Transport (PCT)
 
 > [!NOTE]
-> TLS 1.0 and TLS 1.1 is being deprecated in Windows starting with Windows 11 September Insider Preview build and later releases. To learn more, see [TLS 1.0 and TLS 1.1 deprecation in Windows](/win32/secauthn/tls-10-11-deprecation-in-windows).
+> TLS 1.0 and TLS 1.1 is being deprecated in Windows starting with Windows 11 September Insider Preview build and later releases. To learn more, see [TLS 1.0 and TLS 1.1 deprecation in Windows](/windows/win32/secauthn/tls-10-11-deprecation-in-windows).
 
 ## Applications
 
