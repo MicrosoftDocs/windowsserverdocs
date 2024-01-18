@@ -197,10 +197,13 @@ This group includes all domain controllers in an Active Directory forest. Domain
 
 |Attribute|Value|
 | --- | --- |
-|Well-known SID/RID|S-1-5-21-\<RootDomain>|
+|Well-known SID/RID|S-1-5-21-\<RootDomain>-498|
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default user rights|None|
+
+> [!NOTE]
+> The `<RootDomain>` identifier in the SID represents the three sub-authority values associated with the root domain.
 
 ### Everyone
 
@@ -373,12 +376,14 @@ This group includes all RODCs in the forest with read-only rights to the Active 
 
 |Attribute|Value|
 | --- | --- |
-|Well-known SID/RID|S-1-5-21-\<domain>|
+|Well-known SID/RID|S-1-5-21-\<domain>-521|
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default user rights|None|
 
 > [!NOTE]
+> The `<domain>` identifier in the SID represents the three sub-authority values associated with the domain.
+> 
 > The [Denied RODC Password Replication group](understand-security-groups.md#denied-rodc-password-replication) is created automatically when an RODC account is created in the forest. Passwords can't be replicated in the Denied RODC Password Replication group.
 
 ### Remote Interactive Logon
