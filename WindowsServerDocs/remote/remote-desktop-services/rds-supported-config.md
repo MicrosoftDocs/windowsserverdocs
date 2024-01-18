@@ -84,22 +84,20 @@ The following table shows support for GPU scenarios in the client OS.
 
 Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server. The following guest operating systems have RemoteFX vGPU support:
 
-- Windows 7 SP1
-- Windows 8.1
-- Windows 10 1703 or later
-- Windows Server 2016 in a single-session deployment only
+- Windows 11
+- Windows 10
+- Windows Server in a single-session deployment only
 
 ### Discrete Device Assignment support
 
 Remote Desktop Services supports Physical GPUs presented with Discrete Device Assignment from Hyper-V hosts running Windows Server 2016 or later. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
 
-## VDI deployment – supported guest OSes
+## VDI deployment – supported guest operating systems
 
-Windows Server 2016 or later RD Virtualization Host servers support the following guest OSes:
+Windows Server RD Virtualization Host servers support the following guest operating systems:
 
+- Windows 11 Enterprise
 - Windows 10 Enterprise
-- Windows 8.1 Enterprise
-- Windows 7 SP1 Enterprise
 
 > [!NOTE]
 > - Remote Desktop Services doesn't support heterogeneous session collections. The OSes of all VMs in a collection must be the same version.
