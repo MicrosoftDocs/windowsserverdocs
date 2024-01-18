@@ -165,7 +165,7 @@ initially.
 
 > [!NOTE]
 > This example shows the steps for creating the `administrators_authorized_keys` file. This only
-> applies to administrator accounts and must be user instead of the per user file within the user's
+> applies to administrator accounts and must be used instead of the per user file within the user's
 > profile location.
 
 ```powershell
