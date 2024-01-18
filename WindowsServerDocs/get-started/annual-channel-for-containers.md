@@ -3,8 +3,8 @@ title: What is Windows Server Annual Channel for Containers
 description: Learn about Windows Server Annual Channel for Containers 
 ms.topic: conceptual
 author: gswashington
-ms.author: robinharwood
-ms.date: 01/16/2024
+ms.author: roharwoo
+ms.date: 01/18/2024
 
 ---
 
