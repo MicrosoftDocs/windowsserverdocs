@@ -28,7 +28,7 @@ These servers should be upgraded all at once. Follow the following steps to upgr
     1. Open Failover Cluster Manager.
     1. Click **Roles**.
     1. Select one or more VMs. Right-click to open the context menu.
-    1. Click **Move** and choose either **Live** or **Quick Migration** to move the VMs to one or more of the RD Virtualization Host Servers that are not part of the initial upgrade. Use **Live** or **Quick** Migration depending on factors such as hardware compatibility or online requirements.
+    1. Click **Move** and choose either **Live** or **Quick Migration** to move the VMs to one or more of the RD Virtualization Host Servers that aren't part of the initial upgrade. Use **Live** or **Quick** Migration depending on factors such as hardware compatibility or online requirements.
 3. Evict the RDVH servers, prepared for upgrading, from the original cluster.
 4. Upgrade the isolated RDVH servers.
 5. After the targeted RDVH servers have been successfully upgraded, create a new cluster and CSV, which needs to be on an entirely different SAN volume.
@@ -62,4 +62,4 @@ These servers should be upgraded all at once. Follow the following steps to upgr
 12. Once you have relocated all VMs, upgrade the remaining RDVH servers. Use the above steps for balancing VM locations as appropriate.
 
 > [!NOTE]
-> Heterogeneous Hyper-V servers in a cluster are not supported.
+> Heterogeneous Hyper-V servers in a cluster aren't supported.
