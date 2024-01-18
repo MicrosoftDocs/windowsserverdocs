@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davean
 ms.custom: sap:administration, csstroubleshoot
-ms.service: windows-server, ms.subservice: rds
+ms.service: windows-server
 ---
 # Fair Share technologies are enabled by default in Remote Desktop Services
 
