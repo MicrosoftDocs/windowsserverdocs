@@ -15,7 +15,7 @@ This article will tell you more about the desktop hosting service's components.
 
 ## Tenant environment
 
-As described in [Remote Desktop service roles](rds-roles.md), each role plays a distinct part in the tenant envrionment.
+As described in [Remote Desktop service roles](rds-roles.md), each role plays a distinct part in the tenant environment.
 
 The provider's desktop hosting service is implemented as a set of isolated tenant environments. Each tenant's environment consists of a storage container, a set of virtual machines, and a combination of Azure services, all communicating over an isolated virtual network. Each virtual machine contains one or more of the components that make up the tenant's hosted desktop environment. The following subsections describe the components that make up each tenant's hosted desktop environment.
 
