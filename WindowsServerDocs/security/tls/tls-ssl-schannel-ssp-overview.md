@@ -3,8 +3,9 @@ title: TLS/SSL overview (Schannel SSP)
 description: Learn about the TLS and SSL implementations in Windows using the Schannel Security Service Provider (SSP).
 ms.topic: article
 ms.assetid: 1b7b0432-1bef-4912-8c9a-8989d47a4da9
-ms.date: 10/25/2023
+ms.date: 01/18/2024
 ---
+
 # TLS/SSL overview (Schannel SSP)
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
@@ -17,10 +18,15 @@ Schannel is a Security Support Provider (SSP) that implements the Secure Sockets
 
 The Security Support Provider Interface (SSPI) is an API used by Windows systems to perform security-related functions including authentication. The SSPI functions as a common interface to several SSPs, including the Schannel SSP.
 
-TLS versions 1.0, 1.1, and 1.2, SSL versions 2.0 and 3.0, as well as the Datagram Transport Layer Security (DTLS) protocol version 1.0, and the Private Communications Transport (PCT) protocol are based on public key cryptography. The Schannel authentication protocol suite provides these protocols. All Schannel protocols use a client/server model.
+The Schannel authentication protocol suite provides several protocols that all use a client/server model. The following protocols are based on public key cryptography:
+
+- TLS versions 1.0, 1.1, 1.2, and 1.3
+- SSL versions 2.0 and 3.0
+- Datagram Transport Layer Security (DTLS) versions 1.0 and 1.2
+- Private Communications Transport (PCT)
 
 > [!NOTE]
-> TLS 1.0 and TLS 1.1 is being deprecated in Windows starting with Windows 11 September Insider Preview Build and later releases. To learn more, see [Disablement of TLS 1.0 and TLS 1.1 in Windows](/win32/secauthn/tls-10-11-deprecation).
+> TLS 1.0 and TLS 1.1 is being deprecated in Windows starting with Windows 11 September Insider Preview build and later releases. To learn more, see [TLS 1.0 and TLS 1.1 deprecation in Windows](/win32/secauthn/tls-10-11-deprecation-in-windows).
 
 ## Applications
 
