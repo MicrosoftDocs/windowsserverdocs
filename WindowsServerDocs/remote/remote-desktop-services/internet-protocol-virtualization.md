@@ -2,7 +2,7 @@
 title: Remote Desktop IP virtualization in Windows Server 2019 and Windows Server 2022
 description: How to virtualize a Remote Desktop IP in Windows Server 2019 and Windows Server 2022.
 ms.author: helohr
-ms.date: 11/29/2023
+ms.date: 01/18/2024
 ms.topic: article
 author: Heidilohr
 manager: femila
