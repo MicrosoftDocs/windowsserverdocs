@@ -1,7 +1,7 @@
 ---
 title: Overview of Server Message Block signing
 description: Learn how to configure SMB signing, how to determine whether SMB signing is enabled, and how to disable SMB signing.
-ms.date: 01/19/2024
+ms.date: 01/31/2024
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
@@ -63,10 +63,45 @@ The policies for SMB signing are located in **Computer Configuration** > **Windo
 
 The **EnableSecuritySignature** registry setting for SMB2+ client and SMB2+ server is ignored. Therefore, this setting does nothing unless you're using SMB1. SMB 2.02 and later signing is controlled solely by being required or not. This setting is used when either the server or client requires SMB signing. Only if both have signing set to **0** will signing not occur.
 
-|-|Server – RequireSecuritySignature=1|Server – RequireSecuritySignature=0|
-|---|---|---|
-|Client – RequireSecuritySignature=1|Signed|Signed|
-|Client – RequireSecuritySignature=0|Signed|Not signed|
+### WHen is a message signed?
+
+The SMB2+ client and server negotiate signing by using the SecurityMode field in the SMB2 Negotiate request and response exchange. The client also communicates the SecurityMode in the SessionSetup Request.
+
+`SMB2_NEGOTIATE_SIGNING_ENABLED (0x0001)`
+`SMB2_NEGOTIATE_SIGNING_REQUIRED (0x0002)`
+
+Windows SMB 2/3 clients always set SMB2_NEGOTIATE_SIGNING_ENABLED flag in the negotiate request and Windows-based servers set it likewise in the response because all entities support signing.
+
+MS-SMB2 requires all SMB 2/3 servers to implement signing, regardless of whether they set the SMB2_NEGOTIATE_SIGNING_ENABLED flag.
+
+#### Signing configuration
+
+By default, Windows client and server have the following settings:
+
+Get-SmbClientConfiguration  | fl EnableSecuritySignature,RequireSecuritySignature
+EnableSecuritySignature  : True
+RequireSecuritySignature : False
+
+The corresponding registry keys on the client are under HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
+
+Get-SmbServerConfiguration | fl EnableSecuritySignature,RequireSecuritySignature
+EnableSecuritySignature  : False
+RequireSecuritySignature : False
+
+The corresponding registry keys on the server are under HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
+
+See [Basics of SMB Signing](https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2) for more information on signing configuration and behavior.
+
+#### Requiring signing
+
+A session will have Session.SigningRequired = TRUE if one the following conditions is met:
+
+- Signing is required by negotiation.
+- The server configuration requires message signing.
+- The SessionSetup requires signing.
+
+> [!NOTE]
+> Guest (anonymous) sessions can't have signing required. Guest sessions don't have proper security context for SMB signing.
 
 ## Related content
 
