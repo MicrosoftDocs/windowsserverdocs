@@ -245,6 +245,7 @@ The well-known SIDs are listed in the following table:
 | S-1-5-64-10| NTLM Authentication| A SID that's used when the NTLM authentication package authenticates the client.|
 | S-1-5-64-14 | SChannel Authentication| A SID that's used when the SChannel authentication package authenticates the client.|
 | S-1-5-64-21 | Digest Authentication| A SID that's used when the Digest authentication package authenticates the client.|
+| S-1-5-64-36 | Cloud Account Authentication | A SID that's used when the Cloud authentication package authenticates the client.|
 | S-1-5-80 | NT Service | A SID that's used as an NT Service account prefix.|
 | S-1-5-80-0 | All Services| A group that includes all service processes that are configured on the system. Membership is controlled by the operating system. SID S-1-5-80-0 equals NT SERVICES\ALL SERVICES. This SID was introduced in Windows Server 2008 R2.|
 | S-1-5-83-0| NT VIRTUAL MACHINE\Virtual Machines| A built-in group. The group is created when the Hyper-V role is installed. Membership in the group is maintained by the Hyper-V Management Service (VMMS). This group requires the *Create Symbolic Links* right (SeCreateSymbolicLinkPrivilege) and the *Log on as a Service* right (SeServiceLogonRight). |
