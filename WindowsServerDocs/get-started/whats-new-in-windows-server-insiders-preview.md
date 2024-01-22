@@ -32,7 +32,7 @@ You can now connect mice, keyboards, headsets, audio devices, and more via bluet
 
 When you sign in for the first time, the desktop shell experience conforms to the style and appearance of Windows 11.
 
-## Delegated Managed Service Account (dMSA)
+### Delegated Managed Service Account (dMSA)
 
 This new type of account enables migration from a service account to a dMSA. This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords.
 
@@ -52,7 +52,7 @@ Flighting is only available for the Canary Channel release beginning in early 20
 
 Pinning your most used apps is now available through the **Start** menu and is customizable to suit your needs. As of build 26010, the default pinned apps in Preview are currently **Edge**, **File Explorer**, and **Settings**.
 
-## Server Message Block (SMB)
+### Server Message Block (SMB)
 
 - The [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic) server feature, which was only available in Windows Server Azure Edition, is now available in both Windows Server Standard and Windows Server Datacenter versions.
 
@@ -72,7 +72,7 @@ Enhanced Logs help the Storage Replica log implementation to eliminate the perfo
 
 ### Wi-Fi
 
-It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start WlanSvc` in the Command Prompt, Windows Terminal or PowerShell.
+It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start wlansvc` in the Command Prompt, Windows Terminal or PowerShell.
 
 ### Winget
 
