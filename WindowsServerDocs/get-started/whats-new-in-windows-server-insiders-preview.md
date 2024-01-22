@@ -72,11 +72,11 @@ Enhanced Logs help the Storage Replica log implementation to eliminate the perfo
 
 ### Wi-Fi
 
-The Wireless LAN Service feature is installed by default and the WLAN AutoConfig service startup is set to automatic.
+It's now easier to enable wireless capabilities as the Wireless LAN Service feature is now installed by default. The wireless startup service is set to manual and can be enabled by running `net start WlanSvc` in the Command Prompt, Windows Terminal or PowerShell.
 
 ### Winget
 
-Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices.
+Winget is installed by default, which is a command line Windows Package Manager tool that provides comprehensive package manager solutions for installing applications on Windows devices. To learn more, see [Use the winget tool to install and manage applications](/windows/package-manager/winget).
 
 ### Windows Insider Program
 
