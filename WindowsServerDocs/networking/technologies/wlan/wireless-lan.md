@@ -1,10 +1,10 @@
 ---
-title: Wireless LAN Service Overview
-description: WLAN service allows for wireless configuration, discovery, and connectivity using a wireless adapter in Windows Server and Windows client.
-ms.topic: article
+title: Wireless LAN service overview
+description: The WLAN service allows for wireless configuration, discovery, and connectivity using a wireless adapter in Windows devices.
+ms.topic: how-to
 ms.author: wscontent
 author: xelu86
-ms.date: 10/13/2023
+ms.date: 01/23/2024
 
 ---
 
@@ -14,26 +14,46 @@ The Wireless LAN (WLAN) service is a feature in Windows Server that allows you t
 
 WLAN also offers various security measures to safeguard data transmission over wireless networks using authentication and encryption protocols. To learn more, see [Extensible Authentication Protocol (EAP) for network access](../extensible-authentication-protocol/network-access.md).
 
-## Enable WLAN for Windows Server
+## Prerequisites
 
-WLAN service isn't installed in Windows Server by default. To install the WLAN service, follow these steps:
+- A Windows Server 2012 operating system or later.
+- Drivers for supported wireless adapters.
+
+### Install WLAN for Windows Server
+
+The WLAN feature isn't installed in Windows Server by default. To install the WLAN and related service, follow these steps:
 
 1. Open **Server Manager**, select **Add Roles and Features**, select **Next**, then select **Next** again.
 1. In the **Select server roles** page, select **Next**, select **Wireless LAN Service**, then select **Next**.
 1. In the **Confirm installations selections** page, select **Install**, then select **Close**.
+1. Restart your device for these changes to apply.
 
-Alternatively, WLAN can also be installed in PowerShell by running:
+Alternatively, the WLAN feature can also be installed in PowerShell by running:
 
 ```powershell
 Install-WindowsFeature -Name Wireless-Networking
 ```
 
 > [!NOTE]
-> Installing the WLAN service requires you to reboot your device for these changes to apply.
+> In Windows Server Insiders Preview, the WLAN feature is installed by default and you're required to enable this service to utilize wireless capabilities.
 
-## Enable WLAN for Windows client
+### Enable WLAN service
 
-This service is enabled by default in Windows client devices.
+After your device is restarted, the **wlansvc** service needs to be enabled in the **Services** app by following these steps:
+
+1. Select **Start** > type **services.msc** > select **Services**.
+1. In the right pane, scroll to the bottom until you see **WLAN AutoConfig**.
+1. Right-click on **WLAN AutoConfig** and select **Start**.
+
+Alternatively, the WLAN service can be started using the Command Prompt or PowerShell by running:
+
+```powershell
+net start wlansvc
+```
+
+### Install WLAN for Windows client
+
+This service is already installed and enabled by default in Windows client devices.
 
 ## See also
 
