@@ -142,9 +142,7 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 ### How to apply Azure Hybrid Benefit for Azure Stack HCI
 
-You can learn how to deploy Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure-stack/hci/concepts/azure-hybrid-benefit). One method is to activate the benefit from the **Configuration** pane of the Azure Stack HCI resource, as shown in the following screenshot.
-
-![Screenshot of the screen for activating Azure Hybrid Benefit for Azure Stack HCI.](media/azure-hybrid-benefit/activate-azure-hybrid-benefit-for-azure-stack-hci.png)
+You need to activate Azure Hybrid Benefit for your Azure Stack HCI cluster. You can learn how to activate Azure Hybrid Benefit for Azure Stack HCI by following the steps in [Azure Stack HCI billing and payment](/azure-stack/hci/concepts/azure-hybrid-benefit).
 
 # [AKS](#tab/aks)
 
