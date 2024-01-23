@@ -1,5 +1,5 @@
 ---
-title: Wireless LAN service overview
+title: Wireless LAN overview
 description: The WLAN service allows for wireless configuration, discovery, and connectivity using a wireless adapter in Windows devices.
 ms.topic: how-to
 ms.author: wscontent
@@ -8,7 +8,7 @@ ms.date: 01/23/2024
 
 ---
 
-# Wireless LAN service overview
+# Wireless LAN overview
 
 The Wireless LAN (WLAN) service is a feature in Windows Server that allows you to configure, discover, and connect to wireless networks. Once enabled, the WLAN AutoConfig service dynamically scans and selects which wireless network your device can automatically connect to using a wireless network adapter. The AutoConfig service automatically connects to a more preferred wireless network when one becomes available.
 
@@ -47,8 +47,12 @@ After your device is restarted, the **wlansvc** service needs to be enabled in t
 
 Alternatively, the WLAN service can be started using the Command Prompt or PowerShell by running:
 
-```powershell
+```cmd
 net start wlansvc
+```
+
+```powershell
+Start-Service -Name wlansvc
 ```
 
 ### Install WLAN for Windows client
@@ -57,5 +61,6 @@ This service is already installed and enabled by default in Windows client devic
 
 ## See also
 
+- [NCSI overview](../../ncsi/ncsi-overview.md)
 - [Wireless access deployment overview](../../core-network-guide/cncg/wireless/b-wireless-access-deploy-overview.md)
 - [Wireless technology troubleshooting guidance](/troubleshoot/windows-server/networking/troubleshoot-wireless-technologies)
