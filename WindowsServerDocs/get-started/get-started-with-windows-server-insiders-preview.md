@@ -62,5 +62,5 @@ Use your registered Windows 10 or Windows 11 device and open the [Feedback Hub](
 
 ## See also
 
-- [What's new in Windows Server Insiders Preview](whats-new-in-windows-server-insiders-preview.md)
+- [What's new in Windows Server Insiders Preview](whats-new-windows-server-insiders-preview.md)
 - [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app)
