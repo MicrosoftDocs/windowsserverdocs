@@ -56,11 +56,11 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 - The [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic) server feature, which was only available in Windows Server Azure Edition, is now available in both Windows Server Standard and Windows Server Datacenter versions.
 
-  Starting with build 25997, the latest update to the SMB client allows for connecting to an SMB server via TCP, QUIC, or RDMA using nondefault network ports. Previously, SMB only supported TCP/445, QUIC/443, and RDMA iWARP/5445 with hardcoded defaults. The SMB over QUIC server in Windows Server will soon be able to support SMB over QUIC endpoints configured with ports other than the default of 443. Windows Server doesn't have a built-in option to configure alternative SMB server TCP ports that third-party solutions, like Samba, can offer. You can specify an alternative SMB client port using the [net use](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155(v=ws.11)) command or [New-SmbMapping](/powershell/module/smbshare/new-smbmapping?view=windowsserver2022-ps&preserve-view=true) PowerShell cmdlet.
+  Starting with build 25997, the latest update to the SMB client allows for connecting to an SMB server via TCP, QUIC, or RDMA using nondefault network ports. Previously, SMB only supported TCP/445, QUIC/443, and RDMA iWARP/5445 with hardcoded defaults. The SMB over QUIC server in Windows Server supports SMB over QUIC endpoints configured with ports other than the default of 443. Windows Server doesn't have a built-in option to configure alternative SMB server TCP ports that third-party solutions, like Samba, can offer. You can specify an alternative SMB client port using the [net use](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155(v=ws.11)) command or [New-SmbMapping](/powershell/module/smbshare/new-smbmapping?view=windowsserver2022-ps&preserve-view=true) PowerShell cmdlet.
 
   SMB over QUIC now supports using certificates with subject alternative names and not just a single subject. This feature allows using a Microsoft AD Certificate Authority and multiple endpoint names where self-signed test certificates aren't required.
 
-- Previously, when creating SMB shares on Windows, the default behavior of Windows Defender Firewall was to enable the rules in the "File and Printer Sharing" group for the relevant firewall profiles. Windows now configures a new group called "File and Printer Sharing (Restrictive)" that doesn't include inbound NetBIOS ports 137-139. In the future, the plan is to update this rule so that it removes inbound ICMP, LLMNR, and Spooler Service ports, restricting access to only the ports necessary for SMB sharing.
+- Previously, when creating SMB shares on Windows, the default behavior of Windows Defender Firewall was to enable the rules in the "File and Printer Sharing" group for the relevant firewall profiles. Windows now configures a new group called "File and Printer Sharing (Restrictive)" that doesn't include inbound NetBIOS ports 137-139. An update to this rule removes inbound ICMP, LLMNR, and Spooler Service ports that restrict access to only the ports necessary for SMB sharing.
 
   This change raises the default standard for network security and aligns the [SMB firewall rules](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-firewall-rule-changes-in-windows-insider/ba-p/3974496) more closely with the behavior of the "File Server" role in Windows Server. Administrators can still configure the "File and Printer Sharing" group as needed. To learn more about SMB security, see [Secure SMB Traffic in Windows Server](/windows-server/storage/file-server/smb-secure-traffic).
 
@@ -85,3 +85,7 @@ The Windows Insider Program provides early access to the latest Windows OS relea
 ### Windows Terminal
 
 The Windows Terminal, a powerful and efficient multishell application for command-line users, is available in this build. Search for "Terminal" in the search bar.
+
+## See also
+
+- [Windows Server Insiders Community discussions](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)

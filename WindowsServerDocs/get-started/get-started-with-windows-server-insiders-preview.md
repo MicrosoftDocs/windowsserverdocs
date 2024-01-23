@@ -36,7 +36,7 @@ The following keys are valid only for preview builds and expire on September 15,
 
 - Installing the **WinPE-Powershell** optional component via any method doesn't install properly and related cmdlets fail. Customers who are dependent on PowerShell in WinPE shouldn't use this build.
 
-- The new **Feedback Hub** and **Terminal** apps aren't functioning properly in this release and will be addressed in future builds.
+- The new **Feedback Hub** and **Terminal** apps aren't functioning properly in this release.
 
 - We advise against using this build to validate upgrades from Windows Server 2019 or 2022 due to identified intermittent upgrade failures.
 
