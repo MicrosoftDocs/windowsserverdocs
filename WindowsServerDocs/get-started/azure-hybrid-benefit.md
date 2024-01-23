@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
-ms.date: 10/05/2023
+ms.date: 01/23/2024
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
@@ -9,26 +9,28 @@ ms.author: daknappe
 
 # Azure Hybrid Benefit for Windows Server
 
-Azure Hybrid Benefit enables commercial customers to use their on-premises licenses that also have either active Software Assurance (SA) or a qualifying subscription to get Windows virtual machines (VMs) on Azure at a reduced cost. This article focuses on benefits for Windows Server licenses with SA or a qualifying subscription to get cost savings for Windows Server VMs in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) hybrid deployments.
+Azure Hybrid Benefit enables commercial customers to use their qualifying on-premises licenses to get Windows virtual machines (VMs) on Azure at a reduced cost. This article focuses on the benefits of using qualifying Windows Server licenses to get cost savings for Windows Server VMs in Azure, Azure Stack HCI, and Azure Kubernetes Service (AKS) hybrid deployments.
 
-For other Azure hybrid benefits (for example, SQL Server), see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit).
+For other Azure hybrid benefits (for example, Microsoft SQL Server), see [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/#why-azure-hybrid-benefit).
 
 ## What qualifies you for Azure Hybrid Benefit?
 
-To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server with active Software Assurance or qualifying subscription licenses. Software Assurance and qualifying subscription licenses are only available as part of Commercial Licensing agreements. To learn more about Commercial Licensing, see [Microsoft Licensing Resources](https://www.microsoft.com/licensing/default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server?rtc=1).
+To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server from an applicable program with active Software Assurance or qualifying subscription licenses. Software Assurance and qualifying subscription licenses are only available as part of certain commercial licensing agreements. To learn more about commercial icensing, see [Microsoft Licensing Resources](https://www.microsoft.com/licensing/default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server).
 
 > [!IMPORTANT]
-> Workloads using Azure Hybrid Benefit can run only during the Software Assurance or subscription license term. When the Software Assurance or subscription license term approaches expiration, you must either renew your agreement with either Software Assurance or a subscription license, disable the hybrid benefit functionality, or deprovision those workloads that are using Azure Hybrid Benefit.
+> - Workloads using Azure Hybrid Benefit can run only during the Software Assurance or subscription license term. When the Software Assurance or subscription license term approaches expiration, you must either renew your agreement with either Software Assurance or a subscription license, disable the hybrid benefit functionality, or deprovision those workloads that are using Azure Hybrid Benefit.
+>
+> - The Microsoft Product Terms for your program take precedent over this article. For more information, see [Microsoft Azure Product Terms](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure) and select your program to show the terms.
 
 ## What's included in Azure Hybrid Benefit?
 
-Customers with Windows Server Software Assurance or qualifying subscription licenses can use Azure Hybrid Benefit to further reduce costs in the cloud and in datacenter and edge locations.
+Customers with Windows Server licensed by an applicable program with active Software Assurance or qualifying subscription licenses can use Azure Hybrid Benefit to further reduce costs in the cloud and in datacenter and edge locations.
 
 Azure Hybrid Benefit includes the following cost savings:
 
 - **Windows Server VMs on Azure:** The license for Windows Server is covered by Azure Hybrid Benefit, so you only need to pay for the base compute rate of the VM. The base compute rate is equal to the Linux rate for VMs.
 
-- **Azure Stack HCI:** The Azure Stack HCI host fee and Windows Server subscription fee are waived with Azure Hybrid Benefit. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Stack HCI (for example, customer-managed hardware, Azure services, and workloads). Software Assurance must be active to use this benefit.
+- **Azure Stack HCI:** The Azure Stack HCI host fee and Windows Server subscription fee are waived with Azure Hybrid Benefit. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Stack HCI (for example, customer-managed hardware, Azure services, and workloads).
 
 - **AKS:** Run AKS on Windows Server and Azure Stack HCI at no extra cost. You still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for Azure Hybrid Benefit for Azure Stack HCI. With Azure Hybrid Benefit for Azure Stack HCI, you can waive fees for the Azure Stack HCI host and Windows Server subscription.
 
@@ -44,7 +46,11 @@ To evaluate your potential cost savings, you can use these resources:
 
 - **Azure Kubernetes Service (AKS):** [AKS on Azure Stack HCI pricing](https://azure.microsoft.com/pricing/details/azure-stack/aks-hci).
 
-## Getting Azure Hybrid Benefit for Windows VMs in Azure
+## Getting Azure Hybrid Benefit
+
+Select the tab for your scenario.
+
+# [Azure](#tab/azure)
 
 Follow the guidance in this section to get and maintain Azure Hybrid Benefit for your Windows VMs in Azure.
 
@@ -54,8 +60,8 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 #### Types of license
 
-- Windows Server Standard with active Software Assurance.
-- Windows Server Datacenter with active Software Assurance.
+- Windows Server Standard with active Software Assurance or subscription.
+- Windows Server Datacenter with active Software Assurance or subscription.
 
 #### Number of licenses
 
@@ -110,9 +116,9 @@ If you don't have enough eligible Windows Server licenses for your deployed VMs,
 > [!NOTE]
 > Microsoft reserves the right to audit customers at any time to verify eligibility for Azure Hybrid Benefit utilization.
 
-## Getting Azure Hybrid Benefit for Azure Stack HCI
+# [Azure Stack HCI](#tab/azure-stack-hci)
 
-Use the guidance in this section to get Azure Hybrid Benefit for your Azure Stack HCI infrastructure.
+Use the guidance in this section to get Azure Hybrid Benefit for your Windows VMs on Azure Stack HCI infrastructure.
 
 ### Licensing prerequisites
 
@@ -120,7 +126,7 @@ To qualify for Azure Hybrid Benefit for Azure Stack HCI, you must meet the follo
 
 #### Types of license
 
-- Windows Server Datacenter with active Software Assurance licenses only. Software Assurance must be active to use this benefit.
+- Windows Server Datacenter with an Enterprise Agreement (EA) with active software assurance, or a Cloud Solution Provider (CSP) subscription.
 
 #### Number of licenses
 
@@ -140,7 +146,7 @@ You can learn how to deploy Azure Hybrid Benefit for Azure Stack HCI by followin
 
 ![Screenshot of the screen for activating Azure Hybrid Benefit for Azure Stack HCI.](media/azure-hybrid-benefit/activate-azure-hybrid-benefit-for-azure-stack-hci.png)
 
-## Getting Azure Hybrid Benefit for AKS
+# [AKS](#tab/aks)
 
 Follow the guidance in this section to get [Azure Hybrid Benefit for AKS](/azure/aks/hybrid/azure-hybrid-benefit).
 
@@ -170,6 +176,8 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 To get started with Azure Hybrid Benefit for AKS, see [Azure Hybrid Benefit for AKS](/azure/aks/hybrid/azure-hybrid-benefit).
 
+---
+
 ## FAQ: Azure Hybrid Benefit
 
 #### Which regions are eligible for Azure Hybrid Benefit?
@@ -184,7 +192,7 @@ To use these benefits, your Software Assurance or qualifying subscription must b
 
 Software Assurance is a comprehensive Volume Licensing program. Software Assurance is only available through Volume Licensing and is purchased when you buy or renew a Volume Licensing agreement. It's included with some agreements and is an optional purchase with others. Software Assurance benefits include new product version rights, support, license mobility rights, and a unique set of technologies and services to maximize your IT investments.
 
-For information about Volume Licensing, see [Microsoft Licensing](https://www.microsoft.com/en-us/Licensing/default). To learn more about Software Assurance benefits, and how each benefit can help meet your business needs, see [Software Assurance benefits](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-by-benefits).
+For information about Volume Licensing, see [Microsoft Licensing](https://www.microsoft.com/Licensing/). To learn more about Software Assurance benefits, and how each benefit can help meet your business needs, see [Software Assurance benefits](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-by-benefits).
 
 #### What is a subscription license?
 
