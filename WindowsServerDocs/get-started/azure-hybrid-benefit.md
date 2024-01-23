@@ -118,7 +118,7 @@ If you don't have enough eligible Windows Server licenses for your deployed VMs,
 
 # [Azure Stack HCI](#tab/azure-stack-hci)
 
-Use the guidance in this section to get Azure Hybrid Benefit for your Windows VMs on Azure Stack HCI infrastructure.
+Follow the guidance in this section to get Azure Hybrid Benefit for your Windows VMs on Azure Stack HCI infrastructure.
 
 ### Licensing prerequisites
 
