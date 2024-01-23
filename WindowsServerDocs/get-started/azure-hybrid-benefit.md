@@ -3,8 +3,8 @@ title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Stack HCI and Azure Kubernetes Service (AKS) on Azure Stack HCI and Windows Server at no extra cost.
 ms.date: 01/23/2024
 ms.topic: conceptual
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: wscontent
 ---
 
 # Azure Hybrid Benefit for Windows Server
