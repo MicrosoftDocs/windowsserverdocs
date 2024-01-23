@@ -654,4 +654,4 @@ items:
       - name: Windows Time service tools and settings
         href: windows-time-service/Windows-Time-Service-Tools-and-Settings.md
   - name: Wireless networking 
-    href: wireless-networking.md  
+    href: technologies/wlan/wireless-networking.md
