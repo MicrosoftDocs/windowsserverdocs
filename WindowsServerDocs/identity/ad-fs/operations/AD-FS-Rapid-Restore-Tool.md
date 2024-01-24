@@ -325,6 +325,14 @@ A log file is created for every backup and restore operation. The log files can 
 
 The following sections identify version details for the AD FS Rapid Restore tool.
 
+### Version 2.0.2464.1
+
+Release: December 2023
+
+**Fixed issues:**
+
+- Bug fix: Distinguish CNG & CSP keys during restore
+
 ### Version 1.0.82.3
 
 Release: April 2020

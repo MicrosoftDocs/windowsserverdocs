@@ -5,6 +5,8 @@
     href: windows-server-supported-networking-scenarios.md
   - name: What's new in networking
     href: What-s-New-in-Networking.md
+  - name: Configure secure protocol options for WinHTTP
+    href: configure-secure-protocol-options-winhttp.md
   - name: Core network guidance for Windows Server
     href: core-network-guide/core-network-guide-windows-server.md
     items:
@@ -642,5 +644,5 @@
         href: windows-time-service/How-the-Windows-Time-Service-Works.md
       - name: Windows Time service tools and settings
         href: windows-time-service/Windows-Time-Service-Tools-and-Settings.md
-  - name: Configure secure protocol options for WinHTTP
-    href: configure-secure-protocol-options-winhttp.md
+  - name: Wireless networking 
+    href: technologies/wlan/wireless-networking.md
