@@ -195,7 +195,7 @@ Attempt to access a member server or workstation over the network that affected 
 
 4. In the **PowerShell** window, type **net use \\\\\<Server Name\>\c$**, where \<Server Name\> is the name of the member server or workstation you are attempting to access over the network.
 
-5. You should recieve a message that the user has not been granted the requested logon type.
+5. You should receive a message that the user has not been granted the requested logon type.
 
 ##### Verify "Deny log on as a batch job" GPO Settings
 
