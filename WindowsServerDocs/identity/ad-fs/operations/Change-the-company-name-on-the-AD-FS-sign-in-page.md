@@ -4,8 +4,8 @@ ms.assetid: 28043fc4-a34d-4710-ac3b-5c9d4d6a895c
 title: Change the  company name on the AD FS sign-in page
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # Change the company name on the AD FS sign-in page

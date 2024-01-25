@@ -83,6 +83,6 @@ To remove the compressed attribute from the directory c:\tmp, without changing t
 compact /u c:\tmp
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

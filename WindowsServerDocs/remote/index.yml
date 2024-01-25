@@ -58,14 +58,14 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: Remote access
+            url: ./remote-access/Remote-Access.md
           - text: Always On VPN
-            url: ./remote-access/vpn/always-on-vpn/index.yml
+            url: ./remote-access/overview-always-on-vpn.md
           - text: Border Gateway Protocol (BGP)
             url: ./remote-access/bgp/border-gateway-protocol-bgp.md
           - text: RAS Gateway
             url: ./remote-access/ras-gateway/ras-gateway.md
-          - text: Remote Access Server Role
-            url: ./remote-access/ras/remote-access-server-role-documentation.md
           - text: Virtual Private Networking (VPN)
             url: ./remote-access/vpn/vpn-top.md
 
@@ -74,8 +74,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Web Application Proxy in Windows Server 2016
-            url: ./remote-access/web-application-proxy/web-application-proxy-windows-server.md
+          - text: Web Application Proxy in Windows Server
+            url: ./remote-access/web-application-proxy/web-app-proxy-windows-server.md
       - linkListType: how-to-guide
         links:
           - text: Publishing Applications using AD FS Preauthentication

@@ -58,6 +58,6 @@ set "_CLUSTER_NETWORK_NAME_=Altered Computer Name"
 hostname
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

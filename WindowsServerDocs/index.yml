@@ -4,21 +4,21 @@ title: Windows Server documentation
 summary: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
 
 metadata:
-  title: Windows Server Documentation - Microsoft Docs
+  title: Windows Server documentation
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
-  author: JasonGerend
+  author: robinharwood
   manager: femila
-  ms.service: windows-server
+  ms.prod: windows-server
   ms.topic: hub-page
-  ms.date: 08/19/2021
-  ms.author: jgerend
+  ms.date: 12/01/2023
+  ms.author: roharwoo
 
 highlightedContent:
   items:
     - title: Get started with Windows Server
       itemType: get-started
       url: ./get-started/get-started-with-windows-server.md
-    - title: What's new in Windows Server 2022?
+    - title: What's new in Windows Server?
       itemType: whats-new
       url: ./get-started/whats-new-in-windows-server-2022.md
     - title: Windows Admin Center
@@ -30,7 +30,7 @@ highlightedContent:
     - title: Connect to Azure hybrid services
       itemType: how-to-guide
       url: ./manage/windows-admin-center/azure/index.md
-    - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
+    - title: Use Windows Server Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates-overview.md
     - title: Windows Insider Program for Windows Server
@@ -62,9 +62,9 @@ conceptualContent:
 
     - title: Identity and access
       links:
-        - url: ./identity/ad-ds/ad-ds-getting-started.md
+        - url: ./identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview.md
           itemType: overview
-          text: Getting started with Active Directory Domain Services (AD DS)
+          text: Active Directory Domain Services Overview
         - url: ./identity/active-directory-federation-services.md
           itemType: overview
           text: Active Directory Federation Services (AD FS)
@@ -95,6 +95,9 @@ conceptualContent:
         - url: ./manage/windows-admin-center/overview.md
           itemType: overview
           text: Use Windows Admin Center to manage your environment
+        - url: ./administration/OpenSSH/OpenSSH_Overview.md
+          itemType: overview
+          text: OpenSSH in Windows Overview
         - url: ./manage/system-insights/overview.md
           itemType: overview
           text: System Insights overview
@@ -140,10 +143,10 @@ conceptualContent:
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview
-        - url: ./security/windows-authentication/windows-authentication-overview.md
+        - url: ./security/secured-core-server.md
           itemType: overview
           text: Secured-core server
-        - url: ./security/secured-core-server.md
+        - url: ./security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
           itemType: how-to-guide
           text: Getting started with group-managed service accounts
         - url: ./security/windows-authentication/credentials-processes-in-windows-authentication.md
@@ -197,6 +200,20 @@ conceptualContent:
       footerLink:
         url: ./virtualization/virtualization.yml
         text: See more
+    - title: Reference
+      links:
+        - url: /powershell/windows/get-started
+          itemType: reference
+          text: Windows and Windows Server PowerShell modules
+        - url: ./administration/windows-commands/windows-commands.md
+          itemType: reference
+          text: Windows built-in commands
+        - url: /windows/win32/server-and-system-technologies
+          itemType: reference
+          text: Develop with server technologies using the Win32 API
+        - url: /openspecs/windows_protocols/ms-winprotlp
+          itemType: reference
+          text: Windows protocols
 
 additionalContent:
   sections:
@@ -205,5 +222,5 @@ additionalContent:
         summary: Archive of technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
         url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
       - title: Windows Server Essentials
-        summary: Technical content for for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
+        summary: Technical content for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
         url: /windows-server-essentials/get-started/get-started

@@ -84,6 +84,10 @@ Your first WSUS server must have outbound access to ports 80 and 443 on the foll
 
 - https\://dl.delivery.mp.microsoft.com
 
+- http\://*.delivery.mp.microsoft.com
+
+- https\://*.delivery.mp.microsoft.com
+
 > [!IMPORTANT]
 > You must configure your firewall to allow the first WSUS server to access any URL within these domains. The IP addresses associated with these domains are constantly changing, so don't try to use IP address ranges instead.
 

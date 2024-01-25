@@ -3,8 +3,8 @@ description: "Learn more about: Controlling Access to Organizational Data with A
 title: Client Access Control policies in AD FS
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
@@ -20,9 +20,9 @@ Since the introduction of Active Directory Federation Services, authorization po
 
 ## AD FS and Conditional Access in a Hybrid Organization
 
-AD FS provides the on premises component of conditional access policy in a hybrid scenario. AD FS based authorization rules should be used for non Azure AD resources, such as on premises applications federated directly to AD FS.  The cloud component is provided by [Azure AD Conditional Access](/azure/active-directory/active-directory-conditional-access).  Azure AD Connect provides the control plane connecting the two.
+AD FS provides the on premises component of conditional access policy in a hybrid scenario. AD FS based authorization rules should be used for non Microsoft Entra resources, such as on premises applications federated directly to AD FS.  The cloud component is provided by [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access).  Microsoft Entra Connect provides the control plane connecting the two.
 
-For example, when you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.
+For example, when you register devices with Microsoft Entra ID for conditional access to cloud resources, the Microsoft Entra Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.
 
 ![conditional access](../deployment/media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
@@ -40,14 +40,14 @@ Often the underlying need behind these policies is to mitigate risk of data leak
 
 While the above documented policies for AD FS work in the specific scenarios documented, they have limitations because they depend on client data that is not consistently available.  For example, the identity of the client application has only been available for Exchange Online based services and not for resources such as SharePoint Online, where the same data might be accessed via the browser or a 'thick client' such as Word or Excel.  Also AD FS is unaware of the resource within Office 365 being accessed, such as SharePoint Online or Exchange Online.
 
-To address these limitations and provide a more robust way to use polices to manage access to business data in Office 365 or other Azure AD based resources, Microsoft has introduced Azure AD Conditional Access.  Azure AD Conditional Access policies can be configured for a specific resource, or for any or all resources within Office 365, SaaS or custom applications in Azure AD.  These policies pivot on device trust, location, and other factors.
+To address these limitations and provide a more robust way to use polices to manage access to business data in Office 365 or other Microsoft Entra ID based resources, Microsoft has introduced Microsoft Entra Conditional Access.  Microsoft Entra Conditional Access policies can be configured for a specific resource, or for any or all resources within Office 365, SaaS or custom applications in Microsoft Entra ID.  These policies pivot on device trust, location, and other factors.
 
-To find out more about Azure AD Conditional Access, see [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
+To find out more about Microsoft Entra Conditional Access, see [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access)
 
 A key change enabling these scenarios is [modern authentication](https://blogs.office.com/2015/11/19/updated-office-365-modern-authentication-public-preview/), a new way of authenticating users and devices that works the same way across Office clients, Skype, Outlook, and browsers.
 
 ## Next Steps
 For more information on controlling access across the cloud and on premises see:
 
-- [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
+- [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access)
 - [Access Control Policies in AD FS 2016](Access-Control-Policies-in-AD-FS.md)

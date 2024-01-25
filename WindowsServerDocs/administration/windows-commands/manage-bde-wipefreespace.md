@@ -52,7 +52,7 @@ manage-bde -w -cancel C:
 manage-bde -wipefreespace -cancel C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

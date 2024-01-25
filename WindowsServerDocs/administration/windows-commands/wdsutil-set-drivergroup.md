@@ -36,6 +36,6 @@ wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes
 ```
 wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Name:colorprinterdrivers /Applicability:All
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 [Subcommand: set-DriverGroupFilter](./wdsutil-set-drivergroupfilter.md)

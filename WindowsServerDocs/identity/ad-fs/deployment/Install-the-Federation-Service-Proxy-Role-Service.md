@@ -3,8 +3,8 @@ description: "Learn more about: Install the Federation Service Proxy Role Servic
 ms.assetid: c50ecc6a-9504-4b4a-816f-e762dcf3a95e
 title: Install the Federation Service Proxy Role Service
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

@@ -4,8 +4,8 @@ ms.assetid: 77aa61bf-9c04-4889-a5d2-6f45bc1b8bd2
 title: When to Use a Transform Claim Rule
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

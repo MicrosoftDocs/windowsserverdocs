@@ -5,7 +5,7 @@ ms.prod: windows-server
 ms.topic: article
 author: NedPyle
 ms.author: inhenkel
-ms.date: 06/07/2021
+ms.date: 05/18/2023
 ---
 
 # SMB over QUIC
@@ -75,6 +75,12 @@ To use SMB over QUIC, you need the following things:
     :::image type="content" source="./media/smb-over-quic/mmccert.png" alt-text="image showing the steps covered 3":::
 
 > [!NOTE]
+> Don't use IP addresses for SMB over QUIC server Subject Alternative Names.
+>
+> 1. IP addresses will require the use of NTLM, even if Kerberos is available from a domain controller or through KDC Proxy.
+> 1. Azure IaaS VMs running SMB over QUIC use NAT for a public interface back to a private interface. SMB over QUIC does not support using the IP address for the server name through a NAT, you must use a fully qualified DNS name that resolves to the public interface IP address only in this case.
+
+> [!NOTE]
 > If you're using a certificate file issued by a third party certificate authority, you can use the Certificates snap-in or Windows Admin Center to import it.
 
 ### Step 2: Configure SMB over QUIC
@@ -82,6 +88,10 @@ To use SMB over QUIC, you need the following things:
 1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) server.
 1. Install the latest version of Windows Admin Center on a management PC or the file server. You need the latest version of the *Files & File Sharing* extension. It's installed automatically by Windows Admin Center if *Automatically update extensions* is enabled in **Settings > Extensions**.
 1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
+
+> [!NOTE]
+> We recommended using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM.
+
 1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
 1. Click a certificate under **Select a computer certificate for this file server**, click the server addresses clients can connect to or click **Select all**, and click **Enable**.
 
@@ -118,9 +128,15 @@ By default, a Windows 11 device won't have access to an Active Directory domain 
 
 #### Windows Admin Center method
 
-1. Ensure you are using at least Windows Admin Center version 2110.
-2. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on the file servers.
-3. Configure the following group policy setting to apply to the Windows 11 device:
+1. Ensure you're using at least Windows Admin Center version 2110.
+1. Configure SMB over QUIC normally. Starting in Windows Admin Center 2110, the option to configure
+   KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on
+   the file servers. The default KDC proxy port is 443 and assigned automatically by Windows Admin Center.
+
+   > [!NOTE]
+   > You cannot configure an SMB over QUIC server joined to a Workgroup using Windows Admin Center. You must join the server to an Active Directory domain or use the steps in [Manual Method](#manual-method) section.
+
+1. Configure the following group policy setting to apply to the Windows 11 device:
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
@@ -131,8 +147,8 @@ By default, a Windows 11 device won't have access to an Active Directory domain 
     `value: <https fsedge1.contoso.com:443:kdcproxy />`
 
     This Kerberos realm mapping means that if user *ned@corp.contoso.com* tried to connect to a file server name *fs1edge.contoso.com*, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal *corp.contoso.com* domain. The communication with the client will be over HTTPS on port 443 and user credentials aren't directly exposed on the client-file server network.
-4. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
-5. Apply the group policy and restart the Windows 11 device.  
+1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
+1. Apply the group policy and restart the Windows 11 device.  
 
 #### Manual Method
 
@@ -185,9 +201,12 @@ An expired SMB over QUIC certificate that you replace with a new certificate fro
 
 ## Notes
 
-- Windows Server 2022 Datacenter: Azure Edition will also eventually be available on Azure Stack HCI 21H2, for customers not using Azure public cloud.
+- For customers not using Azure public cloud, Windows Server 2022 Datacenter: Azure Edition is available on Azure Stack HCI beginning with version 22H2.
+- We recommended using SMB over QUIC with Active Directory domains, however it isn't required. You can also use SMB over QUIC on a workgroup-joined server with local user credentials and NTLM, or Azure IaaS with Microsoft Azure Active Directory (Azure AD) joined Windows Servers. Azure AD joined Windows Servers for non-Azure IaaS based machines isn't supported. Azure AD joined Windows Servers don't support credentials for remote Windows security operations because Azure AD doesn't contain user or group SIDs. Azure AD joined Windows Servers must use either a domain-based or local user account to access the SMB over QUIC share.
+- You can't configure SMB over QUIC using WAC when the SMB server is in a workgroup (that is, not AD domain joined). In that scenario you must use the [New-SMBServerCertificateMapping](/powershell/module/smbshare/new-smbservercertificatemapping) cmdlet.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
 - Users should have strong passwords or, ideally, be configured using a [passwordless strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy) with [Windows Hello for Business MFA](/windows/security/identity-protection/hello-for-business) or [smart cards](/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference). Configure an account lockout policy for mobile users through [fine-grained password policy](../../identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#fine_grained_pswd_policy_mgmt) and you should deploy intrusion protection software to detect brute force or password spray attacks.
+
 
 ## More references
 

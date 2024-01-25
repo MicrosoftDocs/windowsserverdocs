@@ -27,7 +27,7 @@ To list all cache entries in verbose format.
 bitsadmin /cache /list /verbose
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

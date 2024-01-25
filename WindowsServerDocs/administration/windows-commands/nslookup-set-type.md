@@ -32,7 +32,7 @@ set type=<resourcerecordtype>
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

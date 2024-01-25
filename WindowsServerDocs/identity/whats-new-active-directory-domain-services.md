@@ -4,7 +4,6 @@ ms.assetid: 6a852428-c1ec-4703-b3b3-a4bfdf8cbb9d
 title: What's new in Active Directory Domain Services in Windows Server 2016
 ms.author: joflore
 author: MicrosoftGuyJFlo
-manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
 ---

@@ -4,8 +4,8 @@ ms.assetid: 460792e4-9f1d-4e7b-b6b2-53e057f839df
 title: Using AD DS Claims with AD FS
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

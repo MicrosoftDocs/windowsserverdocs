@@ -31,7 +31,7 @@ To turn the BITS client analytic channel on or off.
 bitsadmin /util / enableanalyticchannel TRUE
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

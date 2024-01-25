@@ -7,7 +7,6 @@ ms.date: 12/15/2020
 
 ms.author: joflore
 author: MicrosoftGuyJFlo
-manager: daveba
 ms.reviewer: mas
 ---
 # Administrative tools and logon types

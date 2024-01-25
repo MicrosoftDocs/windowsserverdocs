@@ -4,8 +4,8 @@ ms.assetid: 3d770385-9834-4ebe-b66c-b684e0245971
 title: Create a Rule to Permit or Deny Users Based on an Incoming Claim
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

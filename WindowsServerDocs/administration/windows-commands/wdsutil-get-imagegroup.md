@@ -43,7 +43,7 @@ To view information including metadata, type:
 wdsutil /verbose /Get-ImageGroup ImageGroup:ImageGroup1 /Server:MyWDSServer /detailed
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-imagegroup command](wdsutil-add-imagegroup.md)

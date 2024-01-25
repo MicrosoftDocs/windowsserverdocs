@@ -4,8 +4,8 @@ ms.assetid: ef91f1d8-2991-4d90-b687-5fa189737c88
 title: Planning for AD FS Server Capacity
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

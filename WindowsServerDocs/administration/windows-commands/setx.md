@@ -160,6 +160,6 @@ To display the contents of the *Ipconfig.out* file, along with the contents' cor
 setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

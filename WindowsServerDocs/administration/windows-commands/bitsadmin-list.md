@@ -34,7 +34,7 @@ To retrieve information about jobs owned by the current user.
 bitsadmin /list
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

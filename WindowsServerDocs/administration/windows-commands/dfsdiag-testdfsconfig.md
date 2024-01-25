@@ -47,7 +47,7 @@ To verify the configuration of Distributed File System (DFS) namespaces in *cont
 dfsdiag /testdfsconfig /DFSroot:\\contoso.com\MyNamespace
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

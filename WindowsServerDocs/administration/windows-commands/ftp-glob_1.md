@@ -29,7 +29,7 @@ To toggle whether to allow wildcard expansion of local file names, type:
 glob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

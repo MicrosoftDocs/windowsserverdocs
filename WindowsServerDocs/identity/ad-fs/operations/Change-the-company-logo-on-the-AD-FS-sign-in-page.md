@@ -4,8 +4,8 @@ ms.assetid: f7f6bac2-1100-4b00-a248-4ca3eb3cdbe9
 title: Changing the company logo on the AD FS sign-in page
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 03/08/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # Changing the company logo on the AD FS sign-in page

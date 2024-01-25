@@ -149,6 +149,6 @@ To delete a subscription named *sub1*, type:
 wecutil ds sub1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -45,7 +45,7 @@ To copy *test.txt* to the local computer as *test1.txt* using the current file t
 get test.txt test1.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

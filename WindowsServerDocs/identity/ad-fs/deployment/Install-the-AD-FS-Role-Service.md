@@ -4,8 +4,8 @@ ms.assetid: c28a1b8b-5bec-4eed-8c95-a1a29cfc957c
 title: Install the AD FS Role Service
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

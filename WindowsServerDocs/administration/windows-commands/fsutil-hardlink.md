@@ -33,7 +33,7 @@ fsutil hardlink list <filename>
 | \<existingfilename> | Specifies the file that you want to create a hard link from. |
 | list | Lists the hard links to *filename*. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

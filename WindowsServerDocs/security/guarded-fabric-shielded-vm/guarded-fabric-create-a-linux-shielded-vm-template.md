@@ -19,7 +19,7 @@ This topic explains how to prepare a template disk for Linux shielded VMs that c
 
 To prepare and test a Linux shielded VM, you will need the following resources available:
 
-- A server with virtualization capababilities running Windows Server, version 1709 or later
+- A server with virtualization capabilities running Windows Server, version 1709 or later
 - A second computer (Windows 10 or Windows Server 2016) capable of running Hyper-V Manager to connect to the running VM's console
 - An ISO image for one of the supported Linux shielded VM OSes:
     - Ubuntu 16.04 LTS with the 4.4 kernel
@@ -82,7 +82,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 10. Proceed through the setup process for your selected Linux distribution.
     While each Linux distribution uses a different setup wizard, the following requirements must be met for VMs that will become Linux shielded VM template disks:
 
-    - The disk must be partitioned using the GUID Paritioning Table (GPT) layout
+    - The disk must be partitioned using the GUID Partitioning Table (GPT) layout
     - The root partition must be encrypted with dm-crypt. The passphrase should be set to **passphrase** (all lowercase). This passphrase will be randomized and the partition re-encrypted when a shielded VM is provisioned.
     - The boot partition must use the **ext2** file system
 
@@ -118,7 +118,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     Specialization allows each VM to be set up securely with different users and SSH keys, networking configurations, and custom setup steps.
     Learn how to [obtain and install the VMM guest agent](/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
 
-14. Next, [add the Microsoft Linux Software Repository to your package manager](../../administration/linux-package-repository-for-microsoft-software.md).
+14. Next, [add the Microsoft Linux Software Repository to your package manager](/linux/packages).
 
 15. Using your package manager, install the lsvmtools package which contains the Linux shielded VM bootloader shim, provisioning components, and disk preparation tool.
 

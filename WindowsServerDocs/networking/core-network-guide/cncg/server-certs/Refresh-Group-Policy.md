@@ -19,8 +19,8 @@ You can use this procedure to manually refresh Group Policy on the local compute
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
 
-### To refresh Group Policy on the local computer
+## To refresh Group Policy on the local computer
 
-1.  On the computer where [**Network Policy Server (NPS)**](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-top) is installed, open Windows PowerShell&reg; by using the icon on the taskbar.
+1. On the computer where [Network Policy Server (NPS)](/windows-server/networking/technologies/nps/nps-top) is installed, open PowerShell by using the icon on the taskbar.
 
-2.  At the Windows PowerShell prompt, type **gpupdate**, and then press ENTER.
+2. At the PowerShell prompt, type `gpupdate`, and then press `Enter`.

@@ -3,8 +3,8 @@ title: Verify the AD FS 2.0 migration to Windows Server 2012 R2
 description: Learn how to verify that federation servers in your farm are operational; that is, that any client on the same network can reach your federation servers.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 07/10/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

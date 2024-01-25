@@ -35,6 +35,6 @@ To force an Indoubt transaction with GUID 311a9209-03f4-11dc-918f-00188b8f707b t
 ktmutil force commit {311a9209-03f4-11dc-918f-00188b8f707b}
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

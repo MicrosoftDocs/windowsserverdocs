@@ -3,8 +3,8 @@ title: AD FS Troubleshooting - Fiddler - WS-Federation
 description:  This document shows an in-depth trace of a WS-Federation exchange with AD FS
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 01/18/2018
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
@@ -20,7 +20,7 @@ This is the beginning of our trace.  In this frame we see the following:
 
 Request:
 
-- HTTP GET to our relying party (http://sql1.contoso.com/SampApp)
+- HTTP GET to our relying party (https://sql1.contoso.com/SampApp)
 
 Response:
 

@@ -1,14 +1,14 @@
 ---
-title: Azure AD UX Web Theme in AD FS
-description: The following document describes how to change the AD FS forms sign-in so that it resembles the Azure AD user experience.
+title: Microsoft Entra UX Web Theme in AD FS
+description: The following document describes how to change the AD FS forms sign-in so that it resembles the Microsoft Entra user experience.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 10/24/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
-# Using an Azure AD UX Web Theme in Active Directory Federation Services
+# Using a Microsoft Entra UX Web Theme in Active Directory Federation Services
 The AD FS forms sign in currently does not mirror the Azure/O365 sign-in experience.  To provide a more uniform and seamless experience for end-users, we have released the follow cascading style sheet web theme which can be applied to your AD FS servers.  Currently, the forms sign-in for AD FS on Windows Server 2016 looks like following:
 
 ![Current sign-in](media/Azure-UX-Web-Theme-in-AD-FS/one.png)
@@ -23,7 +23,9 @@ You can download the web theme from the following Github [location](https://gith
 ## Enabling the new web theme
 To enable the new web theme use the following procedure:
 
-### To enable the new Azure AD UX web theme in AD FS
+<a name='to-enable-the-new-azure-ad-ux-web-theme-in-ad-fs'></a>
+
+### To enable the new Microsoft Entra UX web theme in AD FS
 1. Start PowerShell as an Administrator
 2. Create a new web theme using PowerShell:  `New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"}`
 3. Set the new theme as the active theme using PowerShell:  `Set-AdfsWebConfig -ActiveThemeName custom`
@@ -35,7 +37,7 @@ To enable the new web theme use the following procedure:
 > You need to ensure that idpinitiatedsignon has been enabled.  It is not enabled by default.  To enable idpinitiatedsignon use the following PowerShell command:  `Set-AdfsProperties –EnableIdpInitiatedSignonPage $True`
 
 ## Image Recommendations
-Enabling the centered UI enables you to use the same images for background and logo that you might already have for Azure Active Directory company branding. Generally, the same recommendations for size, ratio, and format do apply.
+Enabling the centered UI enables you to use the same images for background and logo that you might already have for Microsoft Entra company branding. Generally, the same recommendations for size, ratio, and format do apply.
 
 ### Logo
 

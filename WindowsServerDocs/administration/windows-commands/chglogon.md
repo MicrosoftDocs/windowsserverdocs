@@ -18,7 +18,7 @@ Enables or disables logons from client sessions on an Remote Desktop Session Hos
 > [!NOTE]
 > This command has been replaced by the **change log command**. For more information, including the syntax and parameter details, see [change logon command](change-logon.md).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

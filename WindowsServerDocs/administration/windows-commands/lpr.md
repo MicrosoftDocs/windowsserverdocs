@@ -49,7 +49,7 @@ To print the *PostScript_file.ps* Adobe PostScript file to the *Laserprinter1* p
 lpr -S 10.0.0.45 -P Laserprinter1 -o l PostScript_file.ps
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

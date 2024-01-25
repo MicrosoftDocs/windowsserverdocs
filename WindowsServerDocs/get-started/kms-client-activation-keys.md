@@ -3,22 +3,20 @@ title: Key Management Services (KMS) client activation and product keys for Wind
 description: Get the product keys needed for setup and activation of Windows Server and other Windows products from a KMS host server.
 ms.topic: conceptual
 author: dknappettmsft
-ms.author: daknappe
-manager: femila
-ms.date: 9/13/2021
+ms.author: alalve
+ms.date: 09/05/2023
 ms.prod: windows-server
-ms.custom: contperf-fy22q1
 ---
 
 # Key Management Services (KMS) client activation and product keys
 
-To use KMS, you need to have a KMS host available on your local network. Computers that activate with a KMS host need to have a specific product key. This key is sometimes referred to as the KMS client key, but it is formally known as a Microsoft Generic Volume License Key (GVLK). Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed as the relevant GVLK is already there.
+To use KMS, you need to have a KMS host available on your local network. Computers that activate with a KMS host need to have a specific product key. This key is sometimes referred to as the KMS client key, but it's formally known as a Microsoft Generic Volume License Key (GVLK). Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed as the relevant GVLK is already there.
 
-There are some scenarios, however, where you will need to add the GVLK to the computer you wish to activate against a KMS host, such as:
+There are some scenarios, however, where you'll need to add the GVLK to the computer you wish to activate against a KMS host, such as:
 
 - Converting a computer from using a Multiple Activation Key (MAK)
 - Converting a retail license of Windows to a KMS client
-- If the computer was previously a KMS host.
+- If the computer was previously a KMS host
 
 > [!IMPORTANT]
 > To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see how to [create a KMS host](kms-create-host.md) to learn more.
@@ -27,7 +25,7 @@ There are some scenarios, however, where you will need to add the GVLK to the co
 
 ## Install a product key
 
-If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list below. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
+If you're converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list below. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
 
 ```
 slmgr /ipk <product key>
@@ -41,7 +39,7 @@ slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
 
 ## Generic Volume License Keys (GVLK)
 
-In the tables that follow, you will find the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
+In the tables that follow, you'll find the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
 
 ### Windows Server (LTSC versions)
 
@@ -50,6 +48,7 @@ In the tables that follow, you will find the GVLKs for each version and edition 
 | Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
 | Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
+| Windows Server 2022 Datacenter<br/>Azure Edition | NTBV8-9K7Q8-V27C6-M2BTV-KHMXV |
 | Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
 
 #### Windows Server 2019
@@ -76,6 +75,11 @@ In the tables that follow, you will find the GVLKs for each version and edition 
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
+
+> [!IMPORTANT]
+> Windows Server, version 20H2 reached end of service on August 9, 2022 and is no longer receiving security updates. This includes the retirement of Windows Server Semi-Annual Channel (SAC) with no future releases.
+>
+> Customers using Windows Server SAC should move to **[Azure Stack HCI](/azure-stack/hci/)**. Alternatively, customers may use the Long-Term Servicing Channel of Windows Server.
 
 ### Windows 11 and Windows 10 (Semi-Annual Channel versions)
 
@@ -155,6 +159,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2012 MultiPoint Standard | HM7DN-YVMH3-46JC3-XYTG7-CYQJJ |
 | Windows Server 2012 MultiPoint Premium  | XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G |
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
+| Windows Server 2012 Essentials          | HTDQM-NBMMG-KGYDT-2DTKT-J2MPV |
 
 #### Windows Server 2008 R2
 
@@ -211,3 +216,12 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 7 Enterprise     | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
 | Windows 7 Enterprise N   | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
 | Windows 7 Enterprise E   | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
+
+#### Windows Vista
+
+| Operating system edition | KMS Client Product Key        |
+|--------------------------|-------------------------------|
+|Windows Vista Business | YFKBB-PQJJV-G996G-VWGXY-2V3X8 |
+|Windows Vista Business N | HMBQG-8H2RH-C77VX-27R82-VMQBT |
+|Windows Vista Enterprise | VKK3X-68KWM-X2YGT-QR4M6-4BWMV |
+|Windows Vista Enterprise N | VTC42-BM838-43QHV-84HX6-XJXKV |

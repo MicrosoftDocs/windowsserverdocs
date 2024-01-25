@@ -84,7 +84,7 @@ To set the auditing options to the enabled state for the CrashOnAuditFail option
 auditpol /set /option:CrashOnAuditFail /value:enable
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

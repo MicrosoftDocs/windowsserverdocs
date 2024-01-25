@@ -4,8 +4,8 @@ ms.assetid: aa20c8b3-7f01-4165-8b73-92642bff9676
 title: When to Create a Federation Server Proxy
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

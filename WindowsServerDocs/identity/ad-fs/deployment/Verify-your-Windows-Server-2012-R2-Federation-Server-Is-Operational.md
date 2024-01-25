@@ -4,8 +4,8 @@ ms.assetid: 1115d276-00f6-4c23-9278-eedcc31295d8
 title: Verify your Windows Server 2012 R2 Federation Server is Operational
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

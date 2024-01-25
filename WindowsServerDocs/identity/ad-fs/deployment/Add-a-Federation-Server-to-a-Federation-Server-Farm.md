@@ -3,8 +3,8 @@ description: "Learn more about: Add a Federation Server to a Federation Server F
 ms.assetid: 6ecf8d85-cd61-4c87-add8-00a679a6e3ff
 title: Add a Federation Server to a Federation Server Farm
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

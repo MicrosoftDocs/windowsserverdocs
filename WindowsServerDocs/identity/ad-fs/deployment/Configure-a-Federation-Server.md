@@ -4,8 +4,8 @@ ms.assetid: 434fd617-373a-405e-bae4-da324ea83efc
 title: Configure a Federation Server for Windows Server 2012 R2 AD FS
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

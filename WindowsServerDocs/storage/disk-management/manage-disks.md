@@ -1,33 +1,38 @@
 ---
 title: Manage disks
-description: This article describes how to manage disks
-ms.date: 06/07/2019
+description: Learn how to manage disks in a computer using Disk Management and discover whether a disk is online or offline and how to bring it online.
+ms.date: 03/08/2023
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ---
+
 # Manage disks
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This topic and its subtopics discuss using Disk Management to manage the disks in a computer, and includes information about initializing new disks, converting disks between different partition styles, and how Windows handles the online status of new disks.
+This article and the related topics show you how to use Disk Management to manage the disks in a computer. It includes information about how Windows manages the online status of new disks.
 
 ## Online and offline status
 
-Disk Management displays whether a disk is online (available), or offline.
+Disk Management displays whether a disk is online (available) or offline.
 
-In Windows, by default, all newly-discovered disks are brought online with read and write access. In Windows Server, by default, newly-discovered disks are brought online with read and write access unless they are on a shared bus (such as SCSI, iSCSI, Serial Attached SCSI, or Fibre Channel). Disks on a shared bus are offline the first time they are detected.
+- In Windows, by default, all newly discovered disks are brought online with read and write access.
+- In Windows Server, by default, newly discovered disks are brought online with read and write access unless they're on a shared bus (such as SCSI, iSCSI, Serial Attached SCSI, or Fibre Channel). Disks on a shared bus are offline the first time they're detected.
 
 If a disk is offline, you must bring it online before you can initialize it or create volumes on it.
 
-To bring a disk online or take it offline, right-click the disk name and then choosing the appropriate action.
+To bring a disk online or take it offline, follow these steps.
 
-## See Also
+1. Open Disk Management. In the search box on the taskbar, enter **Computer Management** and select **Storage** > **Disk Management**.
+1. Right-click the disk name, then select the appropriate action.
 
--   [Initialize new disks](initialize-new-disks.md)
--   [Move Disks to Another Computer](move-disks-to-another-computer.md)
--   [Change a dynamic disk back to a basic disk](change-a-dynamic-disk-back-to-a-basic-disk.md)
--   [Change a Master Boot Record disk into a GUID Partition Table disk](change-an-mbr-disk-into-a-gpt-disk.md)
--   [Change a GUID Partition Table disk into a Master Boot Record disk](change-a-gpt-disk-into-an-mbr-disk.md)
--   [Manage Virtual Hard Disks](manage-virtual-hard-disks.md)
+## Related topics
+
+- [Initialize new disks](initialize-new-disks.md)
+- [Move disks to another computer](move-disks-to-another-computer.md)
+- [Change a dynamic disk back to a basic disk](change-a-dynamic-disk-back-to-a-basic-disk.md)
+- [Covert an MBR disk into a GPT disk](change-an-mbr-disk-into-a-gpt-disk.md)
+- [Convert a GPT disk into an MBR disk](change-a-gpt-disk-into-an-mbr-disk.md)
+- [Manage Virtual Hard Disks](manage-virtual-hard-disks.md)

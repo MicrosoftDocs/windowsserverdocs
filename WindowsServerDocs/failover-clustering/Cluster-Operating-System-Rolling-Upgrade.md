@@ -6,7 +6,7 @@ ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
 manager: lizross
-ms.date: 01/07/2022
+ms.date: 03/20/2023
 ---
 # Cluster operating system rolling upgrade
 
@@ -196,6 +196,7 @@ Cluster OS Rolling upgrade includes the steps below for upgrading from Windows S
     >
     > - After you update the cluster functional level, you cannot go back to Windows Server 2012 R2 functional level and Windows Server 2012 R2 nodes cannot be added to the cluster.
     > - Until the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet is run, the process is fully reversible and Windows Server 2012 R2 nodes can be added to this cluster and Windows Server 2016 nodes can be removed.
+    > - Some cluster operations, such as node drain can lead to a node becoming isolated for a short period of time. This behavior can occur when the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) operation hasn't been run.
     > - After the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet is run, new features will be available.
 
     1. Using the Failover Cluster Manager UI or the [`Get-ClusterGroup`](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet, check that all cluster roles are running on the cluster as expected. In the following example, Available Storage is not being used, instead CSV is used, hence, Available Storage displays an **Offline** status (see Figure 18).

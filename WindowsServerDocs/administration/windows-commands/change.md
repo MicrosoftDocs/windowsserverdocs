@@ -34,7 +34,7 @@ Changes Remote Desktop Session Host server settings for logons, COM port mapping
 | [change port command](change-port.md) | Lists or changes the COM port mappings to be compatible with MS-DOS applications. |
 | [change user command](change-user.md) | Changes the install mode for the Remote Desktop Session Host server. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

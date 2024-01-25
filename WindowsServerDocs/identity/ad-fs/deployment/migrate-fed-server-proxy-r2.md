@@ -3,8 +3,8 @@ title: Migrate the AD FS 2.0 federation proxy server
 description: Provides information on migrating an AD FS proxy server to Windows Server 2012 R2.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 07/10/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

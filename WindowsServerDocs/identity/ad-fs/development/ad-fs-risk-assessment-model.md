@@ -3,8 +3,8 @@ title: Build Plug-ins with AD FS 2019 Risk Assessment Model
 description: "Learn more about: Build Plug-ins with AD FS 2019 Risk Assessment Model"
 author: billmath
 ms.author: billmath
-manager: mtillman
-ms.date: 05/05/2020
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
@@ -29,7 +29,7 @@ The model allows to plug-in code at any of three stages of AD FS authentication 
 To better understand how to build a risk assessment plug-in and run it in line with AD FS process, let's build a sample plug-in that blocks the requests coming from certain **extranet** IPs identified as risky, register the plug-in with AD FS and finally test the functionality.
 
 > [!NOTE]
-> Alternatively, you can build [Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection), a sample plug-in that leverages user risk level determined by Azure AD Identity Protection to block authentication or enforce multi-factor authentication (MFA). Steps to build Risky User Plug-in are available [here](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection).
+> Alternatively, you can build [Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection), a sample plug-in that leverages user risk level determined by Microsoft Entra ID Protection to block authentication or enforce multi-factor authentication (MFA). Steps to build Risky User Plug-in are available [here](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection).
 
 ## Building a sample plug-in
 
@@ -345,4 +345,4 @@ The method returns the [Risk Score](/dotnet/api/microsoft.identityserver.authent
 
 |  Name  | Description |
 | :----- | :---------- |
-| [Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection) | Sample plug-in that blocks authentication or enforces MFA based on user risk level determined by Azure AD Identity Protection. |
+| [Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection) | Sample plug-in that blocks authentication or enforces MFA based on user risk level determined by Microsoft Entra ID Protection. |

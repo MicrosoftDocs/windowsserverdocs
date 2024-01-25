@@ -3,9 +3,9 @@ description: "Learn more about: Federation Server Farm Using WID"
 ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
 title: AD FS Federation Server Farm Using WID
 author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+ms.author: alalve
+manager: amycolannino
+ms.date: 11/03/2022
 ms.topic: article
 ---
 
@@ -46,7 +46,7 @@ This section describes various considerations about the intended audience, benef
 
 ### What are the limitations of using this topology?
 
--   A WID farm has a limit of five federation servers. For more information, see [AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md).
+-   A WID farm has a limit of 30 federation servers. For more information, see [AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md).
 
 -   A WID farm does not support token replay detection or artifact resolution \(part of the Security Assertion Markup Language \(SAML\) protocol\).
 

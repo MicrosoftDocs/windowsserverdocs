@@ -3,8 +3,8 @@ description: "Learn more about: Checklist: Creating Claim Rules for a Claims Pro
 ms.assetid: 503733f8-be0c-429c-81f0-cd4205e8b118
 title: Checklist - Creating Claim Rules for a Claims Provider Trust
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

@@ -33,7 +33,7 @@ To retrieve the creation time for the job named *myDownloadJob*:
 bitsadmin /getcreationtime myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -88,7 +88,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Azure Storage
-            url: https://azure.microsoft.com/documentation/services/storage/
+            url: /azure/storage/
           - text: Azure StorSimple
             url: https://www.microsoft.com/cloud-platform/azure-storsimple
           - text: Azure Shared Disk

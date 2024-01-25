@@ -4,8 +4,8 @@ ms.assetid: 03c82f43-ae2d-4038-b286-ae3858aed35a
 title: Configure AD FS to Send Password Expiry Claims
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # Configure AD FS to Send Password Expiry Claims

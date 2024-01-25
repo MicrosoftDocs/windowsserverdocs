@@ -79,7 +79,7 @@ To specify that the default Transactional Resource Manager will clean the transa
 fsutil resource setautoreset true c:\
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

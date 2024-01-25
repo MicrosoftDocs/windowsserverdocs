@@ -1,0 +1,29 @@
+- name: Disk Management
+  href: overview-of-disk-management.md
+  items:
+  - name: Manage disks
+    href: manage-disks.md
+    items:
+    - name: Initialize new disks
+      href: initialize-new-disks.md
+    - name: Move disks to another computer
+      href: move-disks-to-another-computer.md
+    - name: Change a dynamic disk back to a basic disk
+      href: change-a-dynamic-disk-back-to-a-basic-disk.md
+    - name: Convert an MBR disk into a GPT disk
+      href: change-an-mbr-disk-into-a-gpt-disk.md
+    - name: Convert a GPT disk into an MBR disk
+      href: change-a-gpt-disk-into-an-mbr-disk.md
+    - name: Manage Virtual Hard Disks
+      href: manage-virtual-hard-disks.md
+  - name: Manage basic volumes
+    href: manage-basic-volumes.md
+    items:
+    - name: Change a drive letter
+      href: change-a-drive-letter.md
+    - name: Assign a mount point folder path to a drive
+      href: assign-a-mount-point-folder-path-to-a-drive.md
+    - name: Extend a basic volume
+      href: extend-a-basic-volume.md
+    - name: Shrink a basic volume
+      href: shrink-a-basic-volume.md

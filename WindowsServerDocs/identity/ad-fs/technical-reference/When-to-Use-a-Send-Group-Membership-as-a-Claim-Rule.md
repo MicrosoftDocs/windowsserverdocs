@@ -4,8 +4,8 @@ ms.assetid: af16e847-47c2-461e-9df1-cc352a322043
 title: When to Use a Send Group Membership as a Claim Rule
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

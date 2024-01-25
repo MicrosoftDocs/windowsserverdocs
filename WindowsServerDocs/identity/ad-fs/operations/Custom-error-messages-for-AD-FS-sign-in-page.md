@@ -4,8 +4,8 @@ ms.assetid: 1df78c2a-5054-4b54-8310-c48ea62e6e0b
 title: Custom error messages for AD FS sign-in page
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

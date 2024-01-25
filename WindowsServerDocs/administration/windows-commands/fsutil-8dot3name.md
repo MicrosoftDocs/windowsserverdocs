@@ -2,11 +2,11 @@
 title: fsutil 8dot3name
 description: Reference article for the fsutil 8dot3name command, which queries or changes the settings for short name (8dot3 name) behavior.
 manager: dmoss
-ms.author: toklima
+ms.author: alalve
 author: toklima
 ms.assetid: a0c6dbfe-d898-496d-9356-825f7fbd90ec
 ms.topic: reference
-ms.date: 10/16/2017
+ms.date: 11/22/2022
 ---
 
 # fsutil 8dot3name
@@ -66,7 +66,7 @@ To remove 8dot3 file names in the *D:\MyData* directory and all subdirectories, 
 fsutil 8dot3name strip /l mylogfile.log /s d:\MyData
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

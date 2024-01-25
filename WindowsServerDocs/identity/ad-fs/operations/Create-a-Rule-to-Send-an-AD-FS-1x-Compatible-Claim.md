@@ -4,8 +4,8 @@ ms.assetid: 0039fbbb-b981-4526-a550-f3456ff27635
 title: Create a Rule to Send an AD FS 1.x Compatible Claim
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
@@ -25,7 +25,7 @@ In situations in which you are using Active Directory Federation Services \(AD�
 
     -   Group
 
-    -   Any other claim type that begins with https://schemas.xmlsoap.org/claims/, such as https://schemas.xmlsoap.org/claims/EmployeeID
+    -   Any other claim type that begins with `https://schemas.xmlsoap.org/claims/`, such as `https://schemas.xmlsoap.org/claims/EmployeeID`
 
 Depending on the needs of your organization, use one of the following procedures to create an AD FS 1.*x* compatible NameID claim:
 

@@ -33,7 +33,7 @@ To remove the client certificate from the job named *myDownloadJob*:
 bitsadmin /removeclientcertificate myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

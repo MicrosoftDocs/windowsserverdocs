@@ -9,7 +9,7 @@ author: JasonGerend
 ms.date: 08/07/2020
 ---
 
-# Step 1 Complete the DirectAccess Configuration with OTP Authentication
+# Step 1 Complete the DirectAccess Configuration OTP Authentication and RSA SecurID
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 

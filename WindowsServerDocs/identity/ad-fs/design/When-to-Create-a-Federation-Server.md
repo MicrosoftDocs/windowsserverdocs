@@ -4,14 +4,14 @@ ms.assetid: 824005ae-c3c1-459b-9baa-1660158918ab
 title: When to Create a Federation Server
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
 # When to Create a Federation Server
 
-When you create a federation serverin Active Directory Federation Services \(AD FS\), you provide a means by which your organization can:
+When you create a federation server in Active Directory Federation Services \(AD FS\), you provide a means by which your organization can:
 
 -   Engage in Web single\-sign\-on \(SSO\)–based communication with another organization \(that also has at least one federation server\) and, when necessary, with the employees in your own organization \(who need access over the Internet\).
 

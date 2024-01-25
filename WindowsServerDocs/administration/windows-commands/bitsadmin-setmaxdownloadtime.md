@@ -34,7 +34,7 @@ To set the timeout for the job named *myDownloadJob* to 10 seconds.
 bitsadmin /setmaxdownloadtime myDownloadJob 10
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

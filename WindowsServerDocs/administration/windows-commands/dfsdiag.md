@@ -34,6 +34,6 @@ dfsdiag /testreferral /DFSpath:<DFS path to get referrals> [/full]
 | [dfsdiag testreferral](dfsdiag-testreferral.md) | Checks referral responses. |
 | /? | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

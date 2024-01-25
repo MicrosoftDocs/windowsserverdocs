@@ -48,7 +48,7 @@ To transfer 100 bytes from offset 0, 100 bytes from offset 2000, and the remaini
 bitsadmin /addfilewithranges http://downloadsrv/10mb.zip c:\10mb.zip 0:100,2000:100,5000:eof
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

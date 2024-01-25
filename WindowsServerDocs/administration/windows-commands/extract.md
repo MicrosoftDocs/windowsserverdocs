@@ -69,6 +69,6 @@ Extrac32 [/Y] /C source destination
 | /L dir    | Location to place extracted files (default is current directory). |
 | /Y        | Do not prompt before overwriting an existing file. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

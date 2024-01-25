@@ -3,10 +3,10 @@ title: AD FS prompt=login
 description: Learn about the native support for the prompt=login parameter that is available in AD FS.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 06/27/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
-ms.custom: it-pro
+ms.custom: it-pro, has-azure-ad-ps-ref
 ---
 
 # Active Directory Federation Services prompt=login parameter support
@@ -15,11 +15,11 @@ The following document describes the native support for the prompt=login paramet
 
 ## What is prompt=login?
 
-When applications need to request fresh authentication from Azure AD, meaning that they need Azure AD to re-authenticate the user even if the user has already been authenticated, they can send the `prompt=login` parameter to Azure AD as part of the authentication request.
+When applications need to request fresh authentication from Microsoft Entra ID, meaning that they need Microsoft Entra ID to re-authenticate the user even if the user has already been authenticated, they can send the `prompt=login` parameter to Microsoft Entra ID as part of the authentication request.
 
-When this request is for a federated user, Azure AD needs to inform the IdP, like AD FS, that the request is for fresh authentication.
+When this request is for a federated user, Microsoft Entra ID needs to inform the IdP, like AD FS, that the request is for fresh authentication.
 
-By default, Azure AD translates `prompt=login` to `wfresh=0` and `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` when sending this type of authentication requests to the federated IdP.
+By default, Microsoft Entra ID translates `prompt=login` to `wfresh=0` and `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` when sending this type of authentication requests to the federated IdP.
 
 These parameters mean:
 
@@ -28,21 +28,21 @@ These parameters mean:
 
 This can cause problems with corporate intranet and multi-factor authentication scenarios in which an authentication type other than username and password, as  requested by the `wauth` parameter, is desired.
 
-AD FS in Windows Server 2012 R2 with the July 2016 update rollup introduced native support for the `prompt=login` parameter. This means that now Azure AD can send this parameter as-is to AD FS service as part of Azure AD and Office 365 authentication requests.
+AD FS in Windows Server 2012 R2 with the July 2016 update rollup introduced native support for the `prompt=login` parameter. This means that now Microsoft Entra ID can send this parameter as-is to AD FS service as part of Microsoft Entra ID and Office 365 authentication requests.
 
 ## AD FS versions that support prompt=login
 
 The following is a list of AD FS versions that support the `prompt=login` parameter.
 
 - AD FS in Windows Server 2012 R2 with the July 2016 update rollup
-- AD FS in Windows Server 2016
+- AD FS in Windows Server 2016 or later 
 
 ## How to configure a federated domain to send prompt=login to AD FS
 
 Use the Azure AD PowerShell module to configure the setting.
 
 > [!NOTE]
-> The `prompt=login` capability (enabled by the `PromptLoginBehavior` property) is currently available only in the [version 1.0 of the Azure AD Powershell module](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0' of the Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”. This is a per domain setting. If you have multiple domains federated with one single federation, it is required to apply the changes for each of the domains desired.
+> The `prompt=login` capability (enabled by the `PromptLoginBehavior` property) is currently available only in the [version 1.0 of the Azure AD PowerShell module](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0' of the Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”. This is a per domain setting. If you have multiple domains federated with one single federation, it is required to apply the changes for each of the domains desired.
 
 1. First obtain the current values of `PreferredAuthenticationProtocol`, `SupportsMfa`, and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
 
@@ -66,6 +66,6 @@ Use the Azure AD PowerShell module to configure the setting.
 
 Following are the possible values of `PromptLoginBehavior` parameter and their meaning:
 
-- **TranslateToFreshPasswordAuth**: means the default Azure AD behavior of translating `prompt=login` to `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` and `wfresh=0`.
+- **TranslateToFreshPasswordAuth**: means the default Microsoft Entra behavior of translating `prompt=login` to `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` and `wfresh=0`.
 - **NativeSupport**: means that the `prompt=login` parameter will be sent as is to AD FS. This is the recommended value if AD FS is in Windows Server 2012 R2 with the July 2016 update rollup or higher.
 - **Disabled**: means that only `wfresh=0` is sent to AD FS.

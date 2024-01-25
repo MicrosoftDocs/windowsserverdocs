@@ -17,7 +17,7 @@ Lists or changes the COM port mappings to be compatible with MS-DOS applications
 > [!NOTE]
 > This command has been replaced by the **change port command**. For more information, including the syntax and parameter details, see [change port command](change-port.md).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

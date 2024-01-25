@@ -43,7 +43,7 @@ To initialize the server and set the remoteInstall shared folder to the C: drive
 wdsutil /verbose /Progress /Initialize-Server /Server:MyWDSServer /remInst:C:\remoteInstall
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-server command](wdsutil-disable-server.md)

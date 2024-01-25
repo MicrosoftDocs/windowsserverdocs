@@ -37,7 +37,7 @@ You must run **wbadmin** from an elevated command prompt, by right-clicking **Co
 | [wbadmin start systemstaterecovery](wbadmin-start-systemstaterecovery.md) | Runs a system state recovery. |
 | [wbadmin stop job](wbadmin-stop-job.md) | Stops the currently running backup or recovery operation. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

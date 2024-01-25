@@ -4,8 +4,8 @@ ms.assetid: a0f7bb11-47a5-47ff-a70c-9e6353382b39
 title: Manage Risk with Conditional Access Control
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

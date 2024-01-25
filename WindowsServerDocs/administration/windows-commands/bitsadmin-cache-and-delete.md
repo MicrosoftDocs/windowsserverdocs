@@ -33,7 +33,7 @@ To delete the cache entry with the RecordID of {6511FB02-E195-40A2-B595-E8E2F8F4
 bitsadmin /cache /delete {6511FB02-E195-40A2-B595-E8E2F8F47702}
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

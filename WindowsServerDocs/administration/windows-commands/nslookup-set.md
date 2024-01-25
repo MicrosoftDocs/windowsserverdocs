@@ -41,6 +41,6 @@ set all [class | d2 | debug | domain | port | querytype | recurse | retry | root
 | [nslookup set type](nslookup-set-type.md) | Changes the resource record type for the query. |
 | [nslookup set vc](nslookup-set-vc.md) | Specifies whether to use a virtual circuit when sending requests to the server. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

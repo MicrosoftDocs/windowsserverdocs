@@ -42,6 +42,6 @@ wdsutil /remove-DriverPackages /Filtertype:PackageArchitecture /Operator:Equal
 wdsutil /verbose /remove-DriverPackages /Server:MyWdsServer
 /Filtertype:Packagedateadded /Operator:LessOrEqual /Value:2008/01/01
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil remove-driverpackage command](wdsutil-remove-driverpackage.md)

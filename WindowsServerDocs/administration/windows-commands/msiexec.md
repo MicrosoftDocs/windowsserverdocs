@@ -134,9 +134,7 @@ msiexec.exe [/i][/x] <path_to_package> [/L{i|w|e|a|r|u|c|m|o|p|v|x+|!|*}] <path_
 | /lm | Turns on logging and includes out-of-memory or fatal exit information in the output log file. |
 | /lo | Turns on logging and includes out-of-disk-space messages in the output log file. |
 | /lp | Turns on logging and includes terminal properties in the output log file. |
-| /lp | Turns on logging and includes terminal properties in the output log file. |
 | /lv | Turns on logging and includes verbose output in the output log file. |
-| /lp | Turns on logging and includes terminal properties in the output log file. |
 | /lx | Turns on logging and includes extra debugging information in the output log file. |
 | /l+ | Turns on logging and appends the information to an existing log file. |
 | /l! | Turns on logging and flushes each line to the log file. |
@@ -220,7 +218,7 @@ msiexec.exe /fa {AAD3D77A-7476-469F-ADF4-04424124E91D}
 
 You can set public properties through this command. For information about the available properties and how to set them, see [Public Properties](/windows/win32/msi/public-properties).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

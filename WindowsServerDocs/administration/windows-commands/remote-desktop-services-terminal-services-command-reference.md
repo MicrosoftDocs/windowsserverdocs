@@ -49,6 +49,6 @@ Learn about the available Remote Desktop Services (Terminal Services) command-li
 | [tskill](tskill.md) | Ends a process running in a session on an Remote Desktop Session Host server. |
 | [tsprof](tsprof.md) | Copies the Remote Desktop Services user configuration information from one user to another. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -37,6 +37,6 @@ select volume
 
 - If a partition is selected with a corresponding volume, the volume will be automatically selected.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

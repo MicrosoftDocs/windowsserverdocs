@@ -3,10 +3,10 @@ title: High availability cross-geographic AD FS deployment in Azure with Azure T
 description: How to deploy AD FS in Azure for high availability.
 services: active-directory
 author: anandyadavmsft
-manager: mtillman
+manager: amycolannino
 ms.assetid: a14bc870-9fad-45ed-acd5-a90ccd432e54
 ms.topic: how-to
-ms.date: 09/01/2016
+ms.date: 08/15/2023
 ms.author: billmath
 
 ---

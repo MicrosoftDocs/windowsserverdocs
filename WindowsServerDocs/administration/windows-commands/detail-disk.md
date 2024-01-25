@@ -27,7 +27,7 @@ To see the properties of the selected disk, and information about the volumes in
 detail disk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -48,6 +48,6 @@ To copy the contents of a file called *readme.txt* to the Windows clipboard, typ
 clip < readme.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

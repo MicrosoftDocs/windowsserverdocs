@@ -4,8 +4,8 @@ ms.assetid: 2e751308-1c86-4d4f-88e4-6a78d3ca4696
 title: Planning Federation Server Placement
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

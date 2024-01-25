@@ -12,7 +12,7 @@ manager: dongill
 
 >Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
-When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server - for example, you may have an existing Windows Server 2012 R2 RDS deployment but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for OpenGL\OpenCL, Discrete Device Assignment, or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
+When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server. For example, you may have an existing RDS deployment running an earlier version of Windows Server but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for OpenGL/OpenCL, Discrete Device Assignment, or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
 
 So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server.
 
@@ -21,7 +21,7 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 ## Best practices
 
-- Use Windows Server 2019 for your Remote Desktop infrastructure (the Web Access, Gateway, Connection Broker, and license server). Windows Server 2019 is backward-compatible with these components, which means a Windows Server 2016 or Windows Server 2012 R2 RD Session Host can connect to a 2019 RD Connection Broker, but not the other way around.
+- Use the most recent version of Windows Server for your Remote Desktop infrastructure (the Web Access, Gateway, Connection Broker, and license server). Windows Server is backward-compatible with these components, which means a Windows Server 2016 RD Session Host can connect to a 2019 RD Connection Broker, but not the other way around.
 
 - For RD Session Hosts - all Session Hosts in a collection need to be at the same level, but you can have multiple collections. You can have a collection with Windows Server 2016 Session Hosts and one with Windows Server 2019 Session Hosts.
 
@@ -35,12 +35,11 @@ So with that in mind, here are basic guidelines for supported configurations of 
 
 Windows Server 2016 removes the restriction for the number of Connection Brokers you can have in a deployment when using Remote Desktop Session Hosts (RDSH) and Remote Desktop Virtualization Hosts (RDVH) that also run Windows Server 2016. The following table shows which versions of RDS components work in a highly available deployment with three or more Connection Brokers.
 
-|3+ Connection Brokers in HA|RDSH or RDVH 2022|RDSH or RDVH 2019|RDSH or RDVH 2016|RDSH or RDVH 2012 R2|
-|---|---|---|---|---|
- |Windows Server 2022 Connection Broker|Supported|Supported|Supported|Supported|
- |Windows Server 2019 Connection Broker|N/A|Supported|Supported|Supported|
- |Windows Server 2016 Connection Broker|N/A|N/A|Supported|Supported|
- |Windows Server 2012 R2 Connection Broker|N/A|N/A|N/A|Not Supported|
+|3+ Connection Brokers in HA|RDSH or RDVH 2022|RDSH or RDVH 2019|RDSH or RDVH 2016|
+|---|---|---|---|
+ |Windows Server 2022 Connection Broker|Supported|Supported|Supported|
+ |Windows Server 2019 Connection Broker|N/A|Supported|Supported|
+ |Windows Server 2016 Connection Broker|N/A|N/A|Supported|
 
 ## Support for graphics processing unit (GPU) acceleration
 
@@ -58,13 +57,13 @@ GPUs presented by a non-Microsoft hypervisor or Cloud Platform must have drivers
 
 The following table shows the scenarios supported by different versions of RDSH hosts.
 
-|Feature|Windows Server 2008 R2|Windows Server 2012 R2|Windows Server 2016|Windows Server 2019|Windows Server 2022|
-|---|---|---|---|---|---|
-|Use of hardware GPU for all RDP sessions|No|Yes|Yes|Yes|Yes|
-|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Yes|Yes|Yes|
-|Load balancing between multiple GPUs presented to the OS|No|No|No|Yes|Yes|
-|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|No|Yes|Yes|
-|H.264/AVC support for 4K resolution|No|No|No|Yes|Yes|
+|Feature|Windows Server 2016|Windows Server 2019|Windows Server 2022|
+|---|---|---|---|
+|Use of hardware GPU for all RDP sessions|Yes|Yes|Yes|
+|H.264/AVC hardware encoding (if supported by the GPU)|Yes|Yes|Yes|
+|Load balancing between multiple GPUs presented to the OS|No|Yes|Yes|
+|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|Yes|Yes|
+|H.264/AVC support for 4K resolution|No|Yes|Yes|
 
 ### VDI support for GPUs
 
@@ -83,24 +82,22 @@ The following table shows support for GPU scenarios in the client OS.
 > [!NOTE]
 > Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
-Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server 2012 R2 or Windows Server 2016. The following guest operating systems have RemoteFX vGPU support:
+Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server. The following guest operating systems have RemoteFX vGPU support:
 
-- Windows 7 SP1
-- Windows 8.1
-- Windows 10 1703 or later
-- Windows Server 2016 in a single-session deployment only
+- Windows 11
+- Windows 10
+- Windows Server in a single-session deployment only
 
 ### Discrete Device Assignment support
 
 Remote Desktop Services supports Physical GPUs presented with Discrete Device Assignment from Hyper-V hosts running Windows Server 2016 or later. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
 
-## VDI deployment – supported guest OSes
+## VDI deployment – supported guest operating systems
 
-Windows Server 2016 or later RD Virtualization Host servers support the following guest OSes:
+Windows Server RD Virtualization Host servers support the following guest operating systems:
 
+- Windows 11 Enterprise
 - Windows 10 Enterprise
-- Windows 8.1 Enterprise
-- Windows 7 SP1 Enterprise
 
 > [!NOTE]
 > - Remote Desktop Services doesn't support heterogeneous session collections. The OSes of all VMs in a collection must be the same version.
@@ -129,4 +126,4 @@ For more information about creating VDI deployment of Remote Desktop Services, c
 
 ## Using Remote Desktop Services with application proxy services
 
-You can use Remote Desktop Services with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-application-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.
+You can use Remote Desktop Services with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-app-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.

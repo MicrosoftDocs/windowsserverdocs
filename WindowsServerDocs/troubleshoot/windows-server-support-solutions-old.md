@@ -15,7 +15,7 @@ Microsoft regularly releases both updates and solutions for Windows Server. To e
 These are the top Microsoft Support solutions for the most common issues experienced when using Windows Server 2016. The links below include links to KB articles, updates, and library articles.
 
 >[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/). You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
 ## Solutions for installing or upgrading Windows Server
 
@@ -48,7 +48,7 @@ These are the top Microsoft Support solutions for the most common issues experie
 - [Known Issues for Installing and Removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10))
 
 ## Solutions for Active Directory Federation Services (AD FS)
-- [How to configure automatic registration of Windows domain-joined devices with Azure Active Directory](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
+- [How to configure automatic registration of Windows domain-joined devices with Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
 - [Setup issuance of claims](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims)
 - [Configure AD FS to authenticate users stored in LDAP directories](../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md)
 - [AD FS support for alternate hostname binding for certificate authentication](../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)

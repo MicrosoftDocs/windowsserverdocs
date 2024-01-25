@@ -38,7 +38,7 @@ To ensure that contosogiftservices.com customers get a responsive experience fro
 Contoso Gift Services gets a public IP address from Azure for the VM (192.68.31.44) and develops the automation to deploy the Web Server every day on Azure between 5-10 PM, allowing for a one hour contingency period.
 
 > [!NOTE]
-> For more information about Azure VMs, see [Virtual Machines documentation](https://azure.microsoft.com/documentation/services/virtual-machines/)
+> For more information about Azure VMs, see [Virtual Machines documentation](/azure/virtual-machines/)
 
 The DNS servers are configured with zone scopes and DNS policies so that between 5-9 PM every day, 30% of queries are sent to the instance of the Web server that is running in Azure.
 

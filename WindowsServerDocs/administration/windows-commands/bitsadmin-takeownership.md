@@ -33,7 +33,7 @@ To take ownership of the job named *myDownloadJob*:
 bitsadmin /takeownership myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -3,8 +3,8 @@ description: "Learn more about: Client Access Control policies in AD FS 2.0"
 title: Client Access Control policies in Active Directory Federation Services 2.0
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # Client Access Control policies in AD FS 2.0
@@ -22,7 +22,7 @@ Download the [Update Rollup 2 for Active Directory Federation Services (AD FS) 2
 
 Once Update Rollup 2 has been installed on all of the AD FS servers and proxies, use the following procedure to add a set of claims rules that makes the new claim types available to the policy engine.
 
-To do this, you will be adding five acceptance transform rules for each of the new request context claim types using the following procedure.
+To do this, you'll be adding five acceptance transform rules for each of the new request context claim types using the following procedure.
 
 On the Active Directory claims provider trust, create a new acceptance transform rule to pass through each of the new request context claim types.
 
@@ -43,14 +43,12 @@ On the Active Directory claims provider trust, create a new acceptance transform
 
     `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
+   `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
-~~~
-`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+   `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
-`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+   `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
 
-`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
-~~~
 
 ### Step 3: Update the Microsoft Office 365 Identity Platform relying party trust
 
@@ -115,7 +113,7 @@ The following example allows access to all Office 365 applications, including Ex
 The rule set builds on the default Issuance Authorization rule titled Permit Access to All Users. Use the following steps to add an Issuance Authorization rule to the Microsoft Office 365 Identity Platform relying party trust using the Claim Rule Wizard:
 
 >[!NOTE]
->This scenario is not supported with a third-party proxy because of limitations on client access policy headers with passive (Web-based) requests.
+>This scenario isn't supported with a third-party proxy because of limitations on client access policy headers with passive (Web-based) requests.
 
 #### To create a rule to block all external access to Office 365 except browser-based applications
 
@@ -160,14 +158,14 @@ The following example enables access from internal clients based on IP address. 
 
 |                                                                                                   Description                                                                                                   |                                                                     Claim Rule language syntax                                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|              Default AD FS rule to Permit Access to All Users. This rule should already exist in the Microsoft Office 365 Identity Platform relying party trust Issuance Authorization Rules list.              |                                  => issue(Type = "<https://schemas.microsoft.com/authorization/claims/permit>", Value = "true");                                   |
+|              Default AD FS rule to Permit Access to All Users. This rule should already exist in the Microsoft Office 365 Identity Platform relying party trust Issuance Authorization Rules list.              |                                  `=> issue(Type = "<https://schemas.microsoft.com/authorization/claims/permit>", Value = "true")`;                                   |
 |                               Adding this clause to a new, custom rule specifies that the request has come from the federation server proxy (i.e., it has the x-ms-proxy header)                                |                                                                                                                                                                    |
-|                                                                                 It is recommended that all rules include this.                                                                                  |                                    exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy>"])                                    |
-|                                                         Used to establish that the request is from a client with an IP in the defined acceptable range.                                                         | NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", Value=~"customer-provided public ip address regex"]) |
-|                                    This clause is used to specify that if the application being accessed is not Microsoft.Exchange.ActiveSync the request should be denied.                                     |       NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", Value=="Microsoft.Exchange.ActiveSync"])        |
-|                                                      This rule allows you to determine whether the call was through a Web browser, and will not be denied.                                                      |              NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", Value == "/adfs/ls/"])               |
-| This rule states that the only users in a particular Active Directory group (based on SID value) should be denied. Adding NOT to this statement means a group of users will be allowed, regardless of location. |             exists([Type == "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", Value =~ "{Group SID value of allowed AD group}"])              |
-|                                                                This is a required clause to issue a deny when all preceding conditions are met.                                                                 |                                   => issue(Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");                                    |
+|                                                                                 It's recommended that all rules include this.                                                                                  |                                    `exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy>"]`)                                    |
+|                                                         Used to establish that the request is from a client with an IP in the defined acceptable range.                                                         | `NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip>", Value=~"customer-provided public ip address regex"])` |
+|                                    This clause is used to specify that if the application being accessed isn't Microsoft.Exchange.ActiveSync the request should be denied.                                     |       `NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application>", Value=="Microsoft.Exchange.ActiveSync"])`        |
+|                                                      This rule allows you to determine whether the call was through a Web browser, and won't be denied.                                                      |              `NOT exists([Type == "<https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path>", Value == "/adfs/ls/"])`               |
+| This rule states that the only users in a particular Active Directory group (based on SID value) should be denied. Adding NOT to this statement means a group of users will be allowed, regardless of location. |             `exists([Type == "<https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid>", Value =~ "{Group SID value of allowed AD group}"])`              |
+|                                                                This is a required clause to issue a deny when all preceding conditions are met.                                                                 |                                  ` => issue(Type = "<https://schemas.microsoft.com/authorization/claims/deny>", Value = "true");`                                    |
 
 ### Building the IP address range expression
 
@@ -183,17 +181,17 @@ A single IP address: The IP address of the client that is directly connected to 
 
 Clients that are connected to the corporate network by a VPN or by Microsoft DirectAccess (DA) may appear as internal corporate clients or as external clients depending upon the configuration of VPN or DA.
 
-One or more IP addresses: When Exchange Online cannot determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP-based requests and is supported by many clients, load balancers, and proxies on the market.
+One or more IP addresses: When Exchange Online can't determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP-based requests and is supported by many clients, load balancers, and proxies on the market.
 
 >[!Note]
 >Multiple IP addresses, indicating the client IP address and the address of each proxy that passed the request, will be separated by a comma.
 
-IP addresses related to Exchange Online infrastructure will not appear on the list.
+IP addresses related to Exchange Online infrastructure won't appear on the list.
 
 
 #### Regular Expressions
 
-When you have to match a range of IP addresses, it becomes necessary to construct a regular expression to perform the comparison. In the next series of steps, we will provide examples for how to construct such an expression to match the following address ranges (note that you will have to change these examples to match your public IP range):
+When you have to match a range of IP addresses, it becomes necessary to construct a regular expression to perform the comparison. In the next series of steps, we'll provide examples for how to construct such an expression to match the following address ranges (note that you'll have to change these examples to match your public IP range):
 
 
 - 192.168.1.1 – 192.168.1.25
@@ -231,7 +229,7 @@ And putting them together, the following expression should match all the address
 
 #### Testing the Expression
 
-Regex expressions can become quite tricky, so we highly recommend using a regex verification tool. If you do an internet search for “online regex expression builder”, you will find several good online utilities that will allow you to try out your expressions against sample data.
+Regex expressions can become quite tricky, so we highly recommend using a regex verification tool. If you do an internet search for “online regex expression builder”, you'll find several good online utilities that will allow you to try out your expressions against sample data.
 
 When testing the expression, it's important that you understand what to expect to have to match. The Exchange online system may send many IP addresses, separated by commas. The expressions provided above will work for this. However, it's important to think about this when testing your regex expressions. For example, one might use the following sample input to verify the examples above:
 
@@ -259,7 +257,7 @@ To enable the logging of audit events to the security log on an AD FS server, fo
 
 ### Event Logging
 
-By default, failed requests are logged to the application event log located under Applications and Services Logs \ AD FS 2.0 \ Admin.For more information on event logging for AD FS, see [Set up AD FS 2.0 event logging](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641696(v=ws.10)).
+By default, failed requests are logged to the Application event log located under Applications and Services Logs \ AD FS 2.0 \ Admin.For more information on event logging for AD FS, see [Set up AD FS 2.0 event logging](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641696(v=ws.10)).
 
 ### Configuring Verbose AD FS Tracing Logs
 

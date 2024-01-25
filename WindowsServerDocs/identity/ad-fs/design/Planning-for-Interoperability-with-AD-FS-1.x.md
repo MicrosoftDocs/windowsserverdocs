@@ -4,8 +4,8 @@ ms.assetid: 04b63d9f-e924-4146-9b1d-785ed8b4239c
 title: Planning for Interoperability with AD FS 1.x
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
@@ -30,15 +30,15 @@ The Name ID claim type is the equivalent of the identity claim type that AD FS 1
 
 |      Name ID format       |               Corresponding URI                |
 |---------------------------|------------------------------------------------|
-| AD FS 1.*x* Email Address | http://schemas.xmlsoap.org/claims/EmailAddress |
-|   AD FS 1.*x* Email UPN   |     http://schemas.xmlsoap.org/claims/UPN      |
-|        Common Name        |  http://schemas.xmlsoap.org/claims/CommonName  |
-|           Group           |    http://schemas.xmlsoap.org/claims/Group     |
+| AD FS 1.*x* Email Address | `http://schemas.xmlsoap.org/claims/EmailAddress` |
+|   AD FS 1.*x* Email UPN   |     `http://schemas.xmlsoap.org/claims/UPN`      |
+|        Common Name        |  `http://schemas.xmlsoap.org/claims/CommonName`  |
+|           Group           |    `http://schemas.xmlsoap.org/claims/Group`     |
 
 Only one Name ID claim in the appropriate format must be sent. When that criterion is satisfied, many other claims may be sent as well, assuming that they conform to the restrictions described in the table.
 
 > [!NOTE]
-> An AD FS 1.*x* Federation Service can interpret only incoming claim types that begin with the Uniform Resource Identifier \(URI\) of http://schemas.xmlsoap.org/claims/.
+> An AD FS 1.*x* Federation Service can interpret only incoming claim types that begin with the Uniform Resource Identifier \(URI\) of `http://schemas.xmlsoap.org/claims/`.
 
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

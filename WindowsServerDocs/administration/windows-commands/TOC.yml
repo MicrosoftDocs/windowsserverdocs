@@ -1,0 +1,1668 @@
+- name: Windows Commands
+  href: windows-commands.md
+  items:
+  - name: Command-Line Syntax Key
+    href: command-line-syntax-key.md
+  - name: Reference
+    items:
+    - name: Commands by Server Role
+      href: commands-by-server-role.md
+      items:
+      - name: Print Command Reference
+        href: print-command-reference.md
+      - name: Services for Network File System Command Reference
+        href: services-for-network-file-system-command-reference.md
+      - name: Remote Desktop Services (Terminal Services) Command Reference
+        href: remote-desktop-services-terminal-services-command-reference.md
+      - name: Windows Server Backup Command Reference
+        href: windows-server-backup-command-reference.md
+    - name: append
+      href: append.md
+    - name: arp
+      href: arp.md
+    - name: assoc
+      href: assoc.md
+    - name: at
+      href: at.md
+    - name: atmadm
+      href: atmadm.md
+    - name: attrib
+      href: attrib.md
+    - name: auditpol
+      href: auditpol.md
+      items:
+      - name: auditpol backup
+        href: auditpol-backup.md
+      - name: auditpol clear
+        href: auditpol-clear.md
+      - name: auditpol get
+        href: auditpol-get.md
+      - name: auditpol list
+        href: auditpol-list.md
+      - name: auditpol remove
+        href: auditpol-remove.md
+      - name: auditpol resourcesacl
+        href: auditpol-resourcesacl.md
+      - name: auditpol restore
+        href: auditpol-restore.md
+      - name: auditpol set
+        href: auditpol-set.md
+    - name: autochk
+      href: autochk.md
+    - name: autoconv
+      href: autoconv.md
+    - name: autofmt
+      href: autofmt.md
+    - name: bcdboot
+      href: bcdboot.md
+    - name: bcdedit
+      href: bcdedit.md
+    - name: bdehdcfg
+      href: bdehdcfg.md
+      items:
+      - name: bdehdcfg driveinfo
+        href: bdehdcfg-driveinfo.md
+      - name: bdehdcfg newdriveletter
+        href: bdehdcfg-newdriveletter.md
+      - name: bdehdcfg quiet
+        href: bdehdcfg-quiet.md
+      - name: bdehdcfg restart
+        href: bdehdcfg-restart.md
+      - name: bdehdcfg size
+        href: bdehdcfg-size.md
+      - name: bdehdcfg target
+        href: bdehdcfg-target.md
+    - name: bitsadmin
+      href: bitsadmin.md
+      items:
+      - name: bitsadmin addfile
+        href: bitsadmin-addfile.md
+      - name: bitsadmin addfileset
+        href: bitsadmin-addfileset.md
+      - name: bitsadmin addfilewithranges
+        href: bitsadmin-addfilewithranges.md
+      - name: bitsadmin cache
+        href: bitsadmin-cache.md
+        items:
+        - name: bitsadmin cache and delete
+          href: bitsadmin-cache-and-delete.md
+        - name: bitsadmin cache and deleteurl
+          href: bitsadmin-cache-and-deleteurl.md
+        - name: bitsadmin cache and getexpirationtime
+          href: bitsadmin-cache-and-getexpirationtime.md
+        - name: bitsadmin cache and getlimit
+          href: bitsadmin-cache-and-getlimit.md
+        - name: bitsadmin cache and help
+          href: bitsadmin-cache-and-help.md
+        - name: bitsadmin cache and info
+          href: bitsadmin-cache-and-info.md
+        - name: bitsadmin cache and list
+          href: bitsadmin-cache-and-list.md
+        - name: bitsadmin cache and setexpirationtime
+          href: bitsadmin-cache-and-setexpirationtime.md
+        - name: bitsadmin cache and setlimit
+          href: bitsadmin-cache-and-setlimit.md
+        - name: bitsadmin cache and clear
+          href: bitsadmin-cache-clear.md
+      - name: bitsadmin cancel
+        href: bitsadmin-cancel.md
+      - name: bitsadmin complete
+        href: bitsadmin-complete.md
+      - name: bitsadmin create
+        href: bitsadmin-create.md
+      - name: bitsadmin examples
+        href: bitsadmin-examples.md
+      - name: bitsadmin getaclflags
+        href: bitsadmin-getaclflags.md
+      - name: bitsadmin getbytestotal
+        href: bitsadmin-getbytestotal.md
+      - name: bitsadmin getbytestransferred
+        href: bitsadmin-getbytestransferred.md
+      - name: bitsadmin getclientcertificate
+        href: bitsadmin-getclientcertificate.md
+      - name: bitsadmin getcompletiontime
+        href: bitsadmin-getcompletiontime.md
+      - name: bitsadmin getcreationtime
+        href: bitsadmin-getcreationtime.md
+      - name: bitsadmin getcustomheaders
+        href: bitsadmin-getcustomheaders.md
+      - name: bitsadmin getdescription
+        href: bitsadmin-getdescription.md
+      - name: bitsadmin getdisplayname
+        href: bitsadmin-getdisplayname.md
+      - name: bitsadmin geterror
+        href: bitsadmin-geterror.md
+      - name: bitsadmin geterrorcount
+        href: bitsadmin-geterrorcount.md
+      - name: bitsadmin getfilestotal
+        href: bitsadmin-getfilestotal.md
+      - name: bitsadmin getfilestransferred
+        href: bitsadmin-getfilestransferred.md
+      - name: bitsadmin gethelpertokenflags
+        href: bitsadmin-gethelpertokenflags.md
+      - name: bitsadmin gethelpertokensid
+        href: bitsadmin-gethelpertokensid.md
+      - name: bitsadmin gethttpmethod
+        href: bitsadmin-gethttpmethod.md
+      - name: bitsadmin getmaxdownloadtime
+        href: bitsadmin-getmaxdownloadtime.md
+      - name: bitsadmin getminretrydelay
+        href: bitsadmin-getminretrydelay.md
+      - name: bitsadmin getmodificationtime
+        href: bitsadmin-getmodificationtime.md
+      - name: bitsadmin getnoprogresstimeout
+        href: bitsadmin-getnoprogresstimeout.md
+      - name: bitsadmin getnotifycmdline
+        href: bitsadmin-getnotifycmdline.md
+      - name: bitsadmin getnotifyflags
+        href: bitsadmin-getnotifyflags.md
+      - name: bitsadmin getnotifyinterface
+        href: bitsadmin-getnotifyinterface.md
+      - name: bitsadmin getowner
+        href: bitsadmin-getowner.md
+      - name: bitsadmin getpeercachingflags
+        href: bitsadmin-getpeercachingflags.md
+      - name: bitsadmin getpriority
+        href: bitsadmin-getpriority.md
+      - name: bitsadmin getproxybypasslist
+        href: bitsadmin-getproxybypasslist.md
+      - name: bitsadmin getproxylist
+        href: bitsadmin-getproxylist.md
+      - name: bitsadmin getproxyusage
+        href: bitsadmin-getproxyusage.md
+      - name: bitsadmin getreplydata
+        href: bitsadmin-getreplydata.md
+      - name: bitsadmin getreplyfilename
+        href: bitsadmin-getreplyfilename.md
+      - name: bitsadmin getreplyprogress
+        href: bitsadmin-getreplyprogress.md
+      - name: bitsadmin getsecurityflags
+        href: bitsadmin-getsecurityflags.md
+      - name: bitsadmin getstate
+        href: bitsadmin-getstate.md
+      - name: bitsadmin gettemporaryname
+        href: bitsadmin-gettemporaryname.md
+      - name: bitsadmin gettype
+        href: bitsadmin-gettype.md
+      - name: bitsadmin getvalidationstate
+        href: bitsadmin-getvalidationstate.md
+      - name: bitsadmin help
+        href: bitsadmin-help.md
+      - name: bitsadmin info
+        href: bitsadmin-info.md
+      - name: bitsadmin list
+        href: bitsadmin-list.md
+      - name: bitsadmin listfiles
+        href: bitsadmin-listfiles.md
+      - name: bitsadmin makecustomheaderswriteonly
+        href: bitsadmin-makecustomheaderswriteonly.md
+      - name: bitsadmin monitor
+        href: bitsadmin-monitor.md
+      - name: bitsadmin nowrap
+        href: bitsadmin-nowrap.md
+      - name: bitsadmin peercaching
+        href: bitsadmin-peercaching.md
+        items:
+        - name: bitsadmin peercaching and getconfigurationflags
+          href: bitsadmin-peercaching-and-getconfigurationflags.md
+        - name: bitsadmin peercaching and help
+          href: bitsadmin-peercaching-and-help.md
+        - name: bitsadmin peercaching and setconfigurationflags
+          href: bitsadmin-peercaching-and-setconfigurationflags.md
+      - name: bitsadmin peers
+        href: bitsadmin-peers.md
+        items:
+        - name: bitsadmin peers and clear
+          href: bitsadmin-peers-and-clear.md
+        - name: bitsadmin peers and discover
+          href: bitsadmin-peers-and-discover.md
+        - name: bitsadmin peers and help
+          href: bitsadmin-peers-and-help.md
+        - name: bitsadmin peers and list
+          href: bitsadmin-peers-and-list.md
+      - name: bitsadmin rawreturn
+        href: bitsadmin-rawreturn.md
+      - name: bitsadmin removeclientcertificate
+        href: bitsadmin-removeclientcertificate.md
+      - name: bitsadmin removecredentials
+        href: bitsadmin-removecredentials.md
+      - name: bitsadmin replaceremoteprefix
+        href: bitsadmin-replaceremoteprefix.md
+      - name: bitsadmin reset
+        href: bitsadmin-reset.md
+      - name: bitsadmin resume
+        href: bitsadmin-resume.md
+      - name: bitsadmin setaclflag
+        href: bitsadmin-setaclflag.md
+      - name: bitsadmin setclientcertificatebyid
+        href: bitsadmin-setclientcertificatebyid.md
+      - name: bitsadmin setclientcertificatebyname
+        href: bitsadmin-setclientcertificatebyname.md
+      - name: bitsadmin setcredentials
+        href: bitsadmin-setcredentials.md
+      - name: bitsadmin setcustomheaders
+        href: bitsadmin-setcustomheaders.md
+      - name: bitsadmin setdescription
+        href: bitsadmin-setdescription.md
+      - name: bitsadmin setdisplayname
+        href: bitsadmin-setdisplayname.md
+      - name: bitsadmin sethelpertoken
+        href: bitsadmin-sethelpertoken.md
+      - name: bitsadmin sethelpertokenflags
+        href: bitsadmin-sethelpertokenflags.md
+      - name: bitsadmin sethttpmethod
+        href: bitsadmin-sethttpmethod.md
+      - name: bitsadmin setmaxdownloadtime
+        href: bitsadmin-setmaxdownloadtime.md
+      - name: bitsadmin setminretrydelay
+        href: bitsadmin-setminretrydelay.md
+      - name: bitsadmin setnoprogresstimeout
+        href: bitsadmin-setnoprogresstimeout.md
+      - name: bitsadmin setnotifycmdline
+        href: bitsadmin-setnotifycmdline.md
+      - name: bitsadmin setnotifyflags
+        href: bitsadmin-setnotifyflags.md
+      - name: bitsadmin setpeercachingflags
+        href: bitsadmin-setpeercachingflags.md
+      - name: bitsadmin setpriority
+        href: bitsadmin-setpriority.md
+      - name: bitsadmin setproxysettings
+        href: bitsadmin-setproxysettings.md
+      - name: bitsadmin setreplyfilename
+        href: bitsadmin-setreplyfilename.md
+      - name: bitsadmin setsecurityflags
+        href: bitsadmin-setsecurityflags.md
+      - name: bitsadmin setvalidationstate
+        href: bitsadmin-setvalidationstate.md
+      - name: bitsadmin suspend
+        href: bitsadmin-suspend.md
+      - name: bitsadmin takeownership
+        href: bitsadmin-takeownership.md
+      - name: bitsadmin transfer
+        href: bitsadmin-transfer.md
+      - name: bitsadmin util
+        href: bitsadmin-util.md
+        items:
+        - name: bitsadmin util and enableanalyticchannel
+          href: bitsadmin-util-and-enableanalyticchannel.md
+        - name: bitsadmin util and getieproxy
+          href: bitsadmin-util-and-getieproxy.md
+        - name: bitsadmin util and help
+          href: bitsadmin-util-and-help.md
+        - name: bitsadmin util and repairservice
+          href: bitsadmin-util-and-repairservice.md
+        - name: bitsadmin util and setieproxy
+          href: bitsadmin-util-and-setieproxy.md
+        - name: bitsadmin util and version
+          href: bitsadmin-util-and-version.md
+      - name: bitsadmin wrap
+        href: bitsadmin-wrap.md
+    - name: bootcfg
+      href: bootcfg.md
+      items:
+      - name: bootcfg addsw
+        href: bootcfg-addsw.md
+      - name: bootcfg copy
+        href: bootcfg-copy.md
+      - name: bootcfg dbg1394
+        href: bootcfg-dbg1394.md
+      - name: bootcfg debug
+        href: bootcfg-debug.md
+      - name: bootcfg default
+        href: bootcfg-default.md
+      - name: bootcfg delete
+        href: bootcfg-delete.md
+      - name: bootcfg ems
+        href: bootcfg-ems.md
+      - name: bootcfg query
+        href: bootcfg-query.md
+      - name: bootcfg raw
+        href: bootcfg-raw.md
+      - name: bootcfg rmsw
+        href: bootcfg-rmsw.md
+      - name: bootcfg timeout
+        href: bootcfg-timeout.md
+    - name: break
+      href: break.md
+    - name: cacls
+      href: cacls.md
+    - name: call
+      href: call.md
+    - name: cd
+      href: cd.md
+    - name: certreq
+      href: certreq_1.md
+    - name: certutil
+      href: certutil.md
+    - name: change
+      href: change.md
+      items:
+      - name: change logon
+        href: change-logon.md
+      - name: change port
+        href: change-port.md
+      - name: change user
+        href: change-user.md
+    - name: chcp
+      href: chcp.md
+    - name: chdir
+      href: chdir.md
+    - name: chglogon
+      href: chglogon.md
+    - name: chgport
+      href: chgport.md
+    - name: chgusr
+      href: chgusr.md
+    - name: chkdsk
+      href: chkdsk.md
+    - name: chkntfs
+      href: chkntfs.md
+    - name: choice
+      href: choice.md
+    - name: cipher
+      href: cipher.md
+    - name: cleanmgr
+      href: cleanmgr.md
+    - name: clip
+      href: clip.md
+    - name: cls
+      href: cls.md
+    - name: cmd
+      href: cmd.md
+    - name: cmdkey
+      href: cmdkey.md
+    - name: cmstp
+      href: cmstp.md
+    - name: color
+      href: color.md
+    - name: comp
+      href: comp.md
+    - name: compact
+      href: compact.md
+    - name: copy
+      href: copy.md
+    - name: cscript
+      href: cscript.md
+    - name: date
+      href: date.md
+    - name: dcdiag
+      href: dcdiag.md
+    - name: dcgpofix
+      href: dcgpofix.md
+    - name: defrag
+      href: defrag.md
+    - name: del
+      href: del.md
+    - name: dfsdiag
+      href: dfsdiag.md
+      items:
+      - name: dfsdiag testdcs
+        href: dfsdiag-testdcs.md
+      - name: dfsdiag testdfsconfig
+        href: dfsdiag-testdfsconfig.md
+      - name: dfsdiag testdfsintegrity
+        href: dfsdiag-testdfsintegrity.md
+      - name: dfsdiag testreferral
+        href: dfsdiag-testreferral.md
+      - name: dfsdiag testsites
+        href: dfsdiag-testsites.md
+    - name: dfsrmig
+      href: dfsrmig.md
+    - name: diantz
+      href: diantz.md
+    - name: dir
+      href: dir.md
+    - name: diskcomp
+      href: diskcomp.md
+    - name: diskcopy
+      href: diskcopy.md
+    - name: diskpart
+      href: diskpart.md
+      items:
+      - name: active
+        href: active.md
+      - name: add
+        href: add_2.md  
+      - name: assign
+        href: assign.md
+      - name: attach vdisk
+        href: attach-vdisk.md
+      - name: attributes
+        href: attributes.md
+        items:
+        - name: attributes disk
+          href: attributes-disk.md
+        - name: attributes volume
+          href: attributes-volume.md
+      - name: automount
+        href: automount.md  
+      - name: break
+        href: break.md 
+      - name: clean
+        href: clean.md
+      - name: compact vdisk
+        href: compact-vdisk.md
+      - name: convert
+        href: convert.md
+        items: 
+        - name: convert basic
+          href: convert-basic.md
+        - name: convert dynamic
+          href: convert-dynamic.md
+        - name: convert gpt
+          href: convert-gpt.md
+        - name: convert mbr
+          href: convert-mbr.md
+      - name: create
+        href: create.md
+        item:
+        - name: create partition efi
+          href: create-partition-efi.md
+        - name: create partition extended
+          href: create-partition-extended.md
+        - name: create partition logical
+          href: create-partition-logical.md
+        - name: create partition msr
+          href: create-partition-msr.md
+        - name: create partition primary
+          href: create-partition-primary.md
+        - name: create volume mirror
+          href: create-volume-mirror.md
+        - name: create volume raid
+          href: create-volume-raid.md
+        - name: create volume simple
+          href: create-volume-simple.md
+        - name: create volume stripe
+          href: create-volume-stripe.md
+      - name: delete
+        href: delete.md
+        items:
+        - name: delete disk
+          href: delete-disk.md
+        - name: delete partition
+          href: delete-partition.md
+        - name: delete volume
+          href: delete-volume.md
+      - name: detach vdisk
+        href: detach-vdisk.md
+      - name: detail
+        href: detail.md
+        items:
+        - name: detail disk
+          href: detail-disk.md
+        - name: detail partition
+          href: detail-partition.md
+        - name: detail vdisk
+          href: detail-vdisk.md
+        - name: detail volume
+          href: detail-volume.md
+      - name: exit
+        href: exit.md
+      - name: expand vdisk
+        href: expand-vdisk.md
+      - name: extend
+        href: extend.md
+      - name: filesystems
+        href: filesystems.md
+      - name: format  
+        href: format.md 
+      - name: gpt
+        href: gpt.md
+      - name: import
+        href: import_1.md
+      - name: inactive
+        href: inactive.md
+      - name: list
+        href: list.md
+      - name: merge vdisk
+        href: merge-vdisk.md
+      - name: offline
+        href: offline.md
+        items: 
+        - name: offline disk
+          href: offline-disk.md
+        - name: offline volume
+          href: offline-volume.md
+      - name: online
+        href: online.md
+        items:
+        - name: online disk
+          href: online-disk.md
+        - name: online volume
+          href: online-volume.md
+      - name: recover
+        href: recover.md
+      - name: rem
+        href: rem.md
+      - name: remove
+        href: remove.md
+      - name: repair
+        href: repair.md
+      - name: rescan
+        href: rescan.md
+      - name: retain
+        href: retain.md
+      - name: san
+        href: san.md
+      - name: select
+        href: select.md
+        items:
+        - name: select disk
+          href: select-disk.md
+        - name: select partition
+          href: select-partition.md
+        - name: select vdisk
+          href: select-vdisk.md
+        - name: select volume
+          href: select-volume.md
+      - name: set id
+        href: set-id.md
+      - name: shrink
+        href: shrink.md
+      - name: uniqueid
+        href: uniqueid.md   
+    - name: diskperf
+      href: diskperf.md
+    - name: diskraid
+      href: diskraid.md
+    - name: diskshadow
+      href: diskshadow.md
+      items:
+      - name: add
+        href: add.md
+        items:
+        - name: add alias
+          href: add-alias.md
+        - name: add volume
+          href: add-volume.md  
+      - name: begin backup
+        href: begin-backup.md
+      - name: begin restore
+        href: begin-restore.md
+      - name: break
+        href: break_2.md
+      - name: create
+        href: create_2.md
+      - name: delete shadows
+        href: delete-shadows.md
+      - name: end backup
+        href: end-backup.md
+      - name: end restore
+        href: end-restore.md
+      - name: exec
+        href: exec.md
+      - name: exit
+        href: exit-diskshadow.md
+      - name: expose
+        href: expose.md
+      - name: import
+        href: import.md
+      - name: list
+        href: list_2.md
+        items:
+        - name: list providers
+          href: list-providers.md
+        - name: list shadows
+          href: list-shadows.md
+        - name: list writers
+          href: list-writers.md
+      - name: load metadata
+        href: load-metadata.md
+      - name: mask
+        href: mask.md
+      - name: reset
+        href: reset.md
+      - name: reset session
+        href: reset-session.md
+      - name: revert
+        href: revert.md  
+      - name: set
+        href: set.md
+        items:
+        - name: set context
+          href: set-context.md
+        - name: set metadata
+          href: set-metadata.md
+        - name: set option
+          href: set-option.md
+        - name: set verbose
+          href: set-verbose.md
+      - name: simulate restore
+        href: simulate-restore.md  
+      - name: unexpose
+        href: unexpose.md
+      - name: writer
+        href: writer.md
+    - name: dispdiag
+      href: dispdiag.md
+    - name: dnscmd
+      href: dnscmd.md
+    - name: doskey
+      href: doskey.md
+    - name: driverquery
+      href: driverquery.md
+    - name: echo
+      href: echo.md
+    - name: edit
+      href: edit.md
+    - name: endlocal
+      href: endlocal.md
+    - name: erase
+      href: erase.md
+    - name: eventcreate
+      href: eventcreate.md
+    - name: evntcmd
+      href: evntcmd.md
+    - name: expand
+      href: expand.md
+    - name: extract
+      href: extract.md
+    - name: fc
+      href: fc.md
+    - name: find
+      href: find.md
+    - name: findstr
+      href: findstr.md
+    - name: finger
+      href: finger.md
+    - name: flattemp
+      href: flattemp.md
+    - name: fondue
+      href: fondue.md
+    - name: for
+      href: for.md
+    - name: forfiles
+      href: forfiles.md
+    - name: freedisk
+      href: freedisk.md
+    - name: fsutil
+      href: fsutil.md
+      items:
+      - name: fsutil 8dot3name
+        href: fsutil-8dot3name.md
+      - name: fsutil behavior
+        href: fsutil-behavior.md
+      - name: fsutil-devdrv
+        href: fsutil-devdrv.md
+      - name: fsutil dirty
+        href: fsutil-dirty.md
+      - name: fsutil file
+        href: fsutil-file.md
+      - name: fsutil fsinfo
+        href: fsutil-fsinfo.md
+      - name: fsutil hardlink
+        href: fsutil-hardlink.md
+      - name: fsutil objectid
+        href: fsutil-objectid.md
+      - name: fsutil quota
+        href: fsutil-quota.md
+      - name: fsutil repair
+        href: fsutil-repair.md
+      - name: fsutil reparsepoint
+        href: fsutil-reparsepoint.md
+      - name: fsutil resource
+        href: fsutil-resource.md
+      - name: fsutil sparse
+        href: fsutil-sparse.md
+      - name: fsutil tiering
+        href: fsutil-tiering.md
+      - name: fsutil transaction
+        href: fsutil-transaction.md
+      - name: fsutil usn
+        href: fsutil-usn.md
+      - name: fsutil volume
+        href: fsutil-volume.md
+      - name: fsutil wim
+        href: fsutil-wim.md
+    - name: ftp
+      href: ftp.md
+      items:
+      - name: ftp append
+        href: ftp-append.md
+      - name: ftp ascii
+        href: ftp-ascii.md
+      - name: ftp bell
+        href: ftp-bell_1.md
+      - name: ftp binary
+        href: ftp-binary.md
+      - name: ftp bye
+        href: ftp-bye.md
+      - name: ftp cd
+        href: ftp-cd.md
+      - name: ftp close
+        href: ftp-close_1.md
+      - name: ftp debug
+        href: ftp-debug.md
+      - name: ftp delete
+        href: ftp-delete.md
+      - name: ftp dir
+        href: ftp-dir.md
+      - name: ftp disconnect
+        href: ftp-disconnect_1.md
+      - name: ftp get
+        href: ftp-get.md
+      - name: ftp glob
+        href: ftp-glob_1.md
+      - name: ftp hash
+        href: ftp-hash_1.md
+      - name: ftp lcd
+        href: ftp-lcd.md
+      - name: ftp literal
+        href: ftp-literal_1.md
+      - name: ftp ls
+        href: ftp-ls_1.md
+      - name: ftp mget
+        href: ftp-mget.md
+      - name: ftp mkdir
+        href: ftp-mkdir.md
+      - name: ftp mls
+        href: ftp-mls_1.md
+      - name: ftp mput
+        href: ftp-mput_1.md
+      - name: ftp open
+        href: ftp-open_1.md
+      - name: ftp prompt
+        href: ftp-prompt_1.md
+      - name: ftp put
+        href: ftp-put.md
+      - name: ftp pwd
+        href: ftp-pwd_1.md
+      - name: ftp quit
+        href: ftp-quit.md
+      - name: ftp quote
+        href: ftp-quote.md
+      - name: ftp recv
+        href: ftp-recv.md
+      - name: ftp remotehelp
+        href: ftp-remotehelp_1.md
+      - name: ftp rename
+        href: ftp-rename.md
+      - name: ftp rmdir
+        href: ftp-rmdir.md
+      - name: ftp send
+        href: ftp-send_1.md
+      - name: ftp status
+        href: ftp-status.md
+      - name: ftp trace
+        href: ftp-trace_1.md
+      - name: ftp type
+        href: ftp-type.md
+      - name: ftp user
+        href: ftp-user.md
+      - name: ftp verbose
+        href: ftp-verbose_1.md
+      - name: ftp mdelete
+        href: ftp.mdelete_1.md
+      - name: ftp mdir
+        href: ftp.mdir.md
+    - name: ftype
+      href: ftype.md
+    - name: fveupdate
+      href: fveupdate.md
+    - name: getmac
+      href: getmac.md
+    - name: gettype
+      href: gettype.md
+    - name: goto
+      href: goto.md
+    - name: gpfixup
+      href: gpfixup.md
+    - name: gpresult
+      href: gpresult.md
+    - name: gpupdate
+      href: gpupdate.md
+    - name: graftabl
+      href: graftabl.md
+    - name: help
+      href: help.md
+    - name: helpctr
+      href: helpctr.md
+    - name: hostname
+      href: hostname.md
+    - name: icacls
+      href: icacls.md
+    - name: if
+      href: if.md
+    - name: ipconfig
+      href: ipconfig.md
+    - name: ipxroute
+      href: ipxroute.md
+    - name: irftp
+      href: irftp.md
+    - name: jetpack
+      href: jetpack.md
+    - name: klist
+      href: klist.md
+    - name: ksetup
+      href: ksetup.md
+      items:
+      - name: ksetup addenctypeattr
+        href: ksetup-addenctypeattr.md
+      - name: ksetup addhosttorealmmap
+        href: ksetup-addhosttorealmmap.md
+      - name: ksetup addkdc
+        href: ksetup-addkdc.md
+      - name: ksetup addkpasswd
+        href: ksetup-addkpasswd.md
+      - name: ksetup addrealmflags
+        href: ksetup-addrealmflags.md
+      - name: ksetup changepassword
+        href: ksetup-changepassword.md
+      - name: ksetup delenctypeattr
+        href: ksetup-delenctypeattr.md
+      - name: ksetup delhosttorealmmap
+        href: ksetup-delhosttorealmmap.md
+      - name: ksetup delkdc
+        href: ksetup-delkdc.md
+      - name: ksetup delkpasswd
+        href: ksetup-delkpasswd.md
+      - name: ksetup delrealmflags
+        href: ksetup-delrealmflags.md
+      - name: ksetup domain
+        href: ksetup-domain.md
+      - name: ksetup dumpstate
+        href: ksetup-dumpstate.md
+      - name: ksetup getenctypeattr
+        href: ksetup-getenctypeattr.md
+      - name: ksetup listrealmflags
+        href: ksetup-listrealmflags.md
+      - name: ksetup mapuser
+        href: ksetup-mapuser.md
+      - name: ksetup removerealm
+        href: ksetup-removerealm.md
+      - name: ksetup server
+        href: ksetup-server.md
+      - name: ksetup setcomputerpassword
+        href: ksetup-setcomputerpassword.md
+      - name: ksetup setenctypeattr
+        href: ksetup-setenctypeattr.md
+      - name: ksetup setrealm
+        href: ksetup-setrealm.md
+      - name: ksetup setrealmflags
+        href: ksetup-setrealmflags.md
+    - name: ktmutil
+      href: ktmutil.md
+    - name: ktpass
+      href: ktpass.md
+    - name: label
+      href: label.md
+    - name: lodctr
+      href: lodctr.md
+    - name: logman
+      href: logman.md
+      items:
+      - name: logman create
+        href: logman-create.md
+      - name: logman create alert
+        href: logman-create-alert.md
+      - name: logman create api
+        href: logman-create-api.md
+      - name: logman create cfg
+        href: logman-create-cfg.md
+      - name: logman create counter
+        href: logman-create-counter.md
+      - name: logman create trace
+        href: logman-create-trace.md
+      - name: logman delete
+        href: logman-delete.md
+      - name: logman import and logman export
+        href: logman-import-export.md
+      - name: logman query
+        href: logman-query.md
+      - name: logman start and logman stop
+        href: logman-start-stop.md
+      - name: logman update
+        href: logman-update.md
+      - name: logman update alert
+        href: logman-update-alert.md
+      - name: logman update api
+        href: logman-update-api.md
+      - name: logman update cfg
+        href: logman-update-cfg.md
+      - name: logman update counter
+        href: logman-update-counter.md
+      - name: logman update trace
+        href: logman-update-trace.md
+    - name: logoff
+      href: logoff.md
+    - name: lpq
+      href: lpq.md
+    - name: lpr
+      href: lpr.md
+    - name: macfile
+      href: macfile.md
+    - name: makecab
+      href: makecab.md
+    - name: manage bde
+      href: manage-bde.md
+      items:
+      - name: manage bde status
+        href: manage-bde-status.md
+      - name: manage bde on
+        href: manage-bde-on.md
+      - name: manage bde off
+        href: manage-bde-off.md
+      - name: manage bde pause
+        href: manage-bde-pause.md
+      - name: manage bde resume
+        href: manage-bde-resume.md
+      - name: manage bde lock
+        href: manage-bde-lock.md
+      - name: manage bde unlock
+        href: manage-bde-unlock.md
+      - name: manage bde autounlock
+        href: manage-bde-autounlock.md
+      - name: manage bde protectors
+        href: manage-bde-protectors.md
+      - name: manage bde tpm
+        href: manage-bde-tpm.md
+      - name: manage bde setidentifier
+        href: manage-bde-setidentifier.md
+      - name: manage bde forcerecovery
+        href: manage-bde-forcerecovery.md
+      - name: manage bde changepassword
+        href: manage-bde-changepassword.md
+      - name: manage bde changepin
+        href: manage-bde-changepin.md
+      - name: manage bde changekey
+        href: manage-bde-changekey.md
+      - name: manage bde keypackage
+        href: manage-bde-keypackage.md
+      - name: manage bde upgrade
+        href: manage-bde-upgrade.md
+      - name: manage bde wipefreespace
+        href: manage-bde-wipefreespace.md
+    - name: mapadmin
+      href: mapadmin.md
+    - name: md
+      href: md.md
+    - name: mkdir
+      href: mkdir.md
+    - name: mklink
+      href: mklink.md
+    - name: mmc
+      href: mmc.md
+    - name: mode
+      href: mode.md
+    - name: more
+      href: more.md
+    - name: mount
+      href: mount.md
+    - name: mountvol
+      href: mountvol.md
+    - name: move
+      href: move.md
+    - name: mqbkup
+      href: mqbkup.md
+    - name: mqsvc
+      href: mqsvc.md
+    - name: mqtgsvc
+      href: mqtgsvc.md
+    - name: msdt
+      href: msdt.md
+    - name: msg
+      href: msg.md
+    - name: msiexec
+      href: msiexec.md
+    - name: msinfo32
+      href: msinfo32.md
+    - name: mstsc
+      href: mstsc.md
+    - name: nbtstat
+      href: nbtstat.md
+    - name: netcfg
+      href: netcfg.md
+    - name: net print
+      href: net-print.md
+    - name: netsh
+      href: netsh.md
+    - name: netstat
+      href: netstat.md
+    - name: nfsadmin
+      href: nfsadmin.md
+    - name: nfsshare
+      href: nfsshare.md
+    - name: nfsstat
+      href: nfsstat.md
+    - name: nlbmgr
+      href: nlbmgr.md
+    - name: nslookup
+      href: nslookup.md
+      items:
+      - name: nslookup exit Command
+        href: nslookup-exit-command.md
+      - name: nslookup finger Command
+        href: nslookup-finger-command.md
+      - name: nslookup help
+        href: nslookup-help.md
+      - name: nslookup ls
+        href: nslookup-ls.md
+      - name: nslookup lserver
+        href: nslookup-lserver.md
+      - name: nslookup root
+        href: nslookup-root.md
+      - name: nslookup server
+        href: nslookup-server.md
+      - name: nslookup set
+        href: nslookup-set.md
+      - name: nslookup set all
+        href: nslookup-set-all.md
+      - name: nslookup set class
+        href: nslookup-set-class.md
+      - name: nslookup set d2
+        href: nslookup-set-d2.md
+      - name: nslookup set debug
+        href: nslookup-set-debug.md
+      - name: nslookup set domain
+        href: nslookup-set-domain.md
+      - name: nslookup set port
+        href: nslookup-set-port.md
+      - name: nslookup set querytype
+        href: nslookup-set-querytype.md
+      - name: nslookup set recurse
+        href: nslookup-set-recurse.md
+      - name: nslookup set retry
+        href: nslookup-set-retry.md
+      - name: nslookup set root
+        href: nslookup-set-root.md
+      - name: nslookup set search
+        href: nslookup-set-search.md
+      - name: nslookup set srchlist
+        href: nslookup-set-srchlist.md
+      - name: nslookup set timeout
+        href: nslookup-set-timeout.md
+      - name: nslookup set type
+        href: nslookup-set-type.md
+      - name: nslookup set vc
+        href: nslookup-set-vc.md
+      - name: nslookup view
+        href: nslookup-view.md
+    - name: ntbackup
+      href: ntbackup.md
+    - name: ntcmdprompt
+      href: ntcmdprompt.md
+    - name: ntfrsutl
+      href: ntfrsutl.md
+    - name: openfiles
+      href: openfiles.md
+    - name: pagefileconfig
+      href: pagefileconfig.md
+    - name: path
+      href: path.md
+    - name: pathping
+      href: pathping.md
+    - name: pause
+      href: pause.md
+    - name: pbadmin
+      href: pbadmin.md
+    - name: pentnt
+      href: pentnt.md
+    - name: perfmon
+      href: perfmon.md
+    - name: ping
+      href: ping.md
+    - name: pktmon
+      href: pktmon.md
+      items:
+      - name: pktmon counters
+        href: pktmon-counters.md
+      - name: pktmon etl2pcap
+        href: pktmon-etl2pcap.md
+      - name: pktmon etl2txt
+        href: pktmon-etl2txt.md
+      - name: pktmon filter
+        href: pktmon-filter.md
+      - name: pktmon filter add
+        href: pktmon-filter-add.md
+      - name: pktmon hex2pkt
+        href: pktmon-hex2pkt.md
+      - name: pktmon list
+        href: pktmon-list.md
+      - name: pktmon reset
+        href: pktmon-reset.md
+      - name: pktmon start
+        href: pktmon-start.md
+      - name: pktmon status
+        href: pktmon-status.md
+      - name: pktmon unload
+        href: pktmon-unload.md
+    - name: pnpunattend
+      href: pnpunattend.md
+    - name: pnputil
+      href: pnputil.md
+    - name: popd
+      href: popd.md
+    - name: powershell
+      href: powershell.md
+    - name: powershell ise
+      href: powershell_ise.md
+    - name: print
+      href: print.md
+    - name: prncnfg
+      href: prncnfg.md
+    - name: prndrvr
+      href: prndrvr.md
+    - name: prnjobs
+      href: prnjobs.md
+    - name: prnmngr
+      href: prnmngr.md
+    - name: prnport
+      href: prnport.md
+    - name: prnqctl
+      href: prnqctl.md
+    - name: prompt
+      href: prompt.md
+    - name: pubprn
+      href: pubprn.md
+    - name: pushd
+      href: pushd.md
+    - name: pushprinterconnections
+      href: pushprinterconnections.md
+    - name: pwlauncher
+      href: pwlauncher.md
+    - name: qappsrv
+      href: qappsrv.md
+    - name: qprocess
+      href: qprocess.md
+    - name: query
+      href: query.md
+      items:
+      - name: query process
+        href: query-process.md
+      - name: query session
+        href: query-session.md
+      - name: query termserver
+        href: query-termserver.md
+      - name: query user
+        href: query-user.md
+    - name: quser
+      href: quser.md
+    - name: qwinsta
+      href: qwinsta.md
+    - name: rd
+      href: rd.md
+    - name: rdpsign
+      href: rdpsign.md
+    - name: recover disk group
+      href: recover_1.md
+    - name: refsutil
+      href: refsutil.md
+    - name: reg
+      href: reg.md
+      items:
+      - name: reg add
+        href: reg-add.md
+      - name: reg compare
+        href: reg-compare.md
+      - name: reg copy
+        href: reg-copy.md
+      - name: reg delete
+        href: reg-delete.md
+      - name: reg export
+        href: reg-export.md
+      - name: reg import
+        href: reg-import.md
+      - name: reg load
+        href: reg-load.md
+      - name: reg query
+        href: reg-query.md
+      - name: reg restore
+        href: reg-restore.md
+      - name: reg save
+        href: reg-save.md
+      - name: reg unload
+        href: reg-unload.md
+    - name: regini
+      href: regini.md
+    - name: regsvr32
+      href: regsvr32.md
+    - name: relog
+      href: relog.md
+    - name: ren
+      href: ren.md
+    - name: rename
+      href: rename.md
+    - name: repair bde
+      href: repair-bde.md
+    - name: replace
+      href: replace.md
+    - name: rexec
+      href: rexec.md
+    - name: risetup
+      href: risetup.md
+    - name: rmdir
+      href: rmdir.md
+    - name: robocopy
+      href: robocopy.md
+    - name: route ws2008
+      href: route_ws2008.md
+    - name: rpcinfo
+      href: rpcinfo.md
+    - name: rpcping
+      href: rpcping.md
+    - name: rsh
+      href: rsh.md
+    - name: rundll32
+      href: rundll32.md
+    - name: rundll32 printui
+      href: rundll32-printui.md
+    - name: rwinsta
+      href: rwinsta.md
+    - name: sc config
+      href: sc-config.md
+    - name: sc create
+      href: sc-create.md
+    - name: sc delete
+      href: sc-delete.md
+    - name: sc query
+      href: sc-query.md
+    - name: schtasks
+      href: schtasks.md
+      items:
+      - name: schtasks-change
+        href: schtasks-change.md
+      - name: schtasks-create
+        href: schtasks-create.md
+      - name: schtasks-delete
+        href: schtasks-delete.md
+      - name: schtasks-end
+        href: schtasks-end.md
+      - name: schtasks-query
+        href: schtasks-query.md
+      - name: schtasks-run
+        href: schtasks-run.md
+    - name: scwcmd
+      href: scwcmd.md
+      items:
+      - name: scwcmd analyze
+        href: scwcmd-analyze.md
+      - name: scwcmd configure
+        href: scwcmd-configure.md
+      - name: scwcmd register
+        href: scwcmd-register.md
+      - name: scwcmd rollback
+        href: scwcmd-rollback.md
+      - name: scwcmd transform
+        href: scwcmd-transform.md
+      - name: scwcmd view
+        href: scwcmd-view.md
+    - name: secedit
+      href: secedit.md
+      items:
+      - name: secedit analyze
+        href: secedit-analyze.md
+      - name: secedit configure
+        href: secedit-configure.md
+      - name: secedit export
+        href: secedit-export.md
+      - name: secedit generaterollback
+        href: secedit-generaterollback.md
+      - name: secedit import
+        href: secedit-import.md
+      - name: secedit validate
+        href: secedit-validate.md
+    - name: serverceipoptin
+      href: serverceipoptin.md
+    - name: servermanagercmd
+      href: servermanagercmd.md
+    - name: serverweroptin
+      href: serverweroptin.md
+    - name: Services for Network File System (NFS) command reference
+      href: services-for-network-file-system-command-reference.md
+    - name: set environmental variables
+      href: set_1.md
+    - name: setx
+      href: setx.md
+    - name: sfc
+      href: sfc.md
+    - name: shadow
+      href: shadow.md
+    - name: shift
+      href: shift.md
+    - name: showmount
+      href: showmount.md
+    - name: shutdown
+      href: shutdown.md
+    - name: simulate restore
+      href: simulate-restore.md
+    - name: sort
+      href: sort.md
+    - name: start
+      href: start.md
+    - name: subst
+      href: subst.md
+    - name: sxstrace
+      href: sxstrace.md
+    - name: sysocmgr
+      href: sysocmgr.md
+    - name: systeminfo
+      href: systeminfo.md
+    - name: takeown
+      href: takeown.md
+    - name: tapicfg
+      href: tapicfg.md
+      items:
+      - name: tapicfg install
+        href: tapicfg-install.md
+      - name: tapicfg remove
+        href: tapicfg-remove.md
+      - name: tapicfg publishscp
+        href: tapicfg-publishscp.md
+      - name: tapicfg removescp
+        href: tapicfg-removescp.md
+      - name: tapicfg show
+        href: tapicfg-show.md
+      - name: tapicfg makedefault
+        href: tapicfg-makedefault.md
+    - name: taskkill
+      href: taskkill.md
+    - name: tasklist
+      href: tasklist.md
+    - name: tcmsetup
+      href: tcmsetup.md
+    - name: telnet
+      href: telnet.md
+      items:
+      - name: telnet close
+        href: telnet-close.md
+      - name: telnet display
+        href: telnet-display.md
+      - name: telnet open
+        href: telnet-open.md
+      - name: telnet quit
+        href: telnet-quit.md
+      - name: telnet send
+        href: telnet-send.md
+      - name: telnet set
+        href: telnet-set.md
+      - name: telnet status
+        href: telnet-status.md
+      - name: telnet unset
+        href: telnet-unset.md
+    - name: tftp
+      href: tftp.md
+    - name: time
+      href: time.md
+    - name: timeout
+      href: timeout.md
+    - name: title
+      href: title.md
+    - name: tlntadmn
+      href: tlntadmn.md
+    - name: tpmtool
+      href: tpmtool.md
+    - name: tpmvscmgr
+      href: tpmvscmgr.md
+    - name: tracerpt
+      href: tracerpt.md
+    - name: tracert
+      href: tracert.md
+    - name: tree
+      href: tree.md
+    - name: tscon
+      href: tscon.md
+    - name: tsdiscon
+      href: tsdiscon.md
+    - name: tsecimp
+      href: tsecimp.md
+    - name: tskill
+      href: tskill.md
+    - name: tsprof
+      href: tsprof.md
+    - name: type
+      href: type.md
+    - name: typeperf
+      href: typeperf.md
+    - name: tzutil
+      href: tzutil.md
+    - name: unlodctr
+      href: unlodctr.md
+    - name: ver
+      href: ver.md
+    - name: verifier
+      href: verifier.md
+    - name: verify
+      href: verify.md
+    - name: vol
+      href: vol.md
+    - name: vssadmin
+      href: vssadmin.md
+      items:
+      - name: vssadmin delete shadows
+        href: vssadmin-delete-shadows.md
+      - name: vssadmin list shadows
+        href: vssadmin-list-shadows.md
+      - name: vssadmin list writers
+        href: vssadmin-list-writers.md
+      - name: vssadmin resize shadowstorage
+        href: vssadmin-resize-shadowstorage.md
+    - name: waitfor
+      href: waitfor.md
+    - name: wbadmin
+      href: wbadmin.md
+      items:
+      - name: wbadmin delete catalog
+        href: wbadmin-delete-catalog.md
+      - name: wbadmin delete systemstatebackup
+        href: wbadmin-delete-systemstatebackup.md
+      - name: wbadmin disable backup
+        href: wbadmin-disable-backup.md
+      - name: wbadmin enable backup
+        href: wbadmin-enable-backup.md
+      - name: wbadmin get disks
+        href: wbadmin-get-disks.md
+      - name: wbadmin get items
+        href: wbadmin-get-items.md
+      - name: wbadmin get status
+        href: wbadmin-get-status.md
+      - name: wbadmin get versions
+        href: wbadmin-get-versions.md
+      - name: wbadmin restore catalog
+        href: wbadmin-restore-catalog.md
+      - name: wbadmin start backup
+        href: wbadmin-start-backup.md
+      - name: wbadmin start recovery
+        href: wbadmin-start-recovery.md
+      - name: wbadmin start sysrecovery
+        href: wbadmin-start-sysrecovery.md
+      - name: wbadmin start systemstatebackup
+        href: wbadmin-start-systemstatebackup.md
+      - name: wbadmin start systemstaterecovery
+        href: wbadmin-start-systemstaterecovery.md
+      - name: wbadmin stop job
+        href: wbadmin-stop-job.md
+    - name: wdsutil
+      href: wdsutil.md
+      items:
+      - name: wdsutil add
+        href: wdsutil-add.md
+      - name: wdsutil add alldriverpackages
+        href: wdsutil-add-alldriverpackages.md
+      - name: wdsutil add device
+        href: wdsutil-add-device.md
+      - name: wdsutil add drivergroup
+        href: wdsutil-add-drivergroup.md
+      - name: wdsutil add drivergroupfilter
+        href: wdsutil-add-drivergroupfilter.md
+      - name: wdsutil add drivergrouppackage
+        href: wdsutil-add-drivergrouppackage.md
+      - name: wdsutil add drivergrouppackages
+        href: wdsutil-add-drivergrouppackages.md
+      - name: wdsutil add driverpackage
+        href: wdsutil-add-driverpackage.md
+      - name: wdsutil add image
+        href: wdsutil-add-image.md
+      - name: wdsutil add imagedriverpackage
+        href: wdsutil-add-imagedriverpackage.md
+      - name: wdsutil add imagedriverpackages
+        href: wdsutil-add-imagedriverpackages.md
+      - name: wdsutil add imagegroup
+        href: wdsutil-add-imagegroup.md
+      - name: wdsutil approve autoadddevices
+        href: wdsutil-approve-autoadddevices.md
+      - name: wdsutil convert riprepimage
+        href: wdsutil-convert-riprepimage.md
+      - name: wdsutil copy
+        href: wdsutil-copy.md
+      - name: wdsutil copy drivergroup
+        href: wdsutil-copy-drivergroup.md
+      - name: wdsutil copy image
+        href: wdsutil-copy-image.md
+      - name: wdsutil delete autoadddevices
+        href: wdsutil-delete-autoadddevices.md
+      - name: wdsutil disable
+        href: wdsutil-disable.md
+      - name: wdsutil disable server
+        href: wdsutil-disable-server.md
+      - name: wdsutil disable transportserver
+        href: wdsutil-disable-transportserver.md
+      - name: wdsutil disconnect client
+        href: wdsutil-disconnect-client.md
+      - name: wdsutil enable
+        href: wdsutil-enable.md
+      - name: wdsutil enable server
+        href: wdsutil-enable-server.md
+      - name: wdsutil enable transportserver
+        href: wdsutil-enable-transportserver.md
+      - name: wdsutil export image
+        href: wdsutil-export-image.md
+      - name: wdsutil get
+        href: wdsutil-get.md
+      - name: wdsutil get alldevices
+        href: wdsutil-get-alldevices.md
+      - name: wdsutil get alldrivergroups
+        href: wdsutil-get-alldrivergroups.md
+      - name: wdsutil get alldriverpackages
+        href: wdsutil-get-alldriverpackages.md
+      - name: wdsutil get allimagegroups
+        href: wdsutil-get-allimagegroups.md
+      - name: wdsutil get allimages
+        href: wdsutil-get-allimages.md
+      - name: wdsutil get allmulticasttransmissions
+        href: wdsutil-get-allmulticasttransmissions.md
+      - name: wdsutil get allnamespaces
+        href: wdsutil-get-allnamespaces.md
+      - name: wdsutil get allservers
+        href: wdsutil-get-allservers.md
+      - name: wdsutil get autoadddevices
+        href: wdsutil-get-autoadddevices.md
+      - name: wdsutil get device
+        href: wdsutil-get-device.md
+      - name: wdsutil get drivergroup
+        href: wdsutil-get-drivergroup.md
+      - name: wdsutil get driverpackage
+        href: wdsutil-get-driverpackage.md
+      - name: wdsutil get image
+        href: wdsutil-get-image.md
+      - name: wdsutil get imagefile
+        href: wdsutil-get-imagefile.md
+      - name: wdsutil get imagegroup
+        href: wdsutil-get-imagegroup.md
+      - name: wdsutil get multicasttransmission
+        href: wdsutil-get-multicasttransmission.md
+      - name: wdsutil get namespace
+        href: wdsutil-get-namespace.md
+      - name: wdsutil get server
+        href: wdsutil-get-server.md
+      - name: wdsutil get transportserver
+        href: wdsutil-get-transportserver.md
+      - name: wdsutil initialize server
+        href: wdsutil-initialize-server.md
+      - name: wdsutil new
+        href: wdsutil-new.md
+      - name: wdsutil new captureimage
+        href: wdsutil-new-captureimage.md
+      - name: wdsutil new discoverimage
+        href: wdsutil-new-discoverimage.md
+      - name: wdsutil new multicasttransmission
+        href: wdsutil-new-multicasttransmission.md
+      - name: wdsutil new namespace
+        href: wdsutil-new-namespace.md
+      - name: wdsutil progress
+        href: wdsutil-progress.md
+      - name: wdsutil reject autoadddevices
+        href: wdsutil-reject-autoadddevices.md
+      - name: wdsutil remove
+        href: wdsutil-remove.md
+      - name: wdsutil remove drivergroup
+        href: wdsutil-remove-drivergroup.md
+      - name: wdsutil remove drivergroupfilter
+        href: wdsutil-remove-drivergroupfilter.md
+      - name: wdsutil remove drivergrouppackage
+        href: wdsutil-remove-drivergrouppackage.md
+      - name: wdsutil remove drivergrouppackages
+        href: wdsutil-remove-drivergrouppackages.md
+      - name: wdsutil remove driverpackage
+        href: wdsutil-remove-driverpackage.md
+      - name: wdsutil remove driverpackages
+        href: wdsutil-remove-driverpackages.md
+      - name: wdsutil remove image
+        href: wdsutil-remove-image.md
+      - name: wdsutil remove imagegroup
+        href: wdsutil-remove-imagegroup.md
+      - name: wdsutil remove multicasttransmission
+        href: wdsutil-remove-multicasttransmission.md
+      - name: wdsutil remove namespace
+        href: wdsutil-remove-namespace.md
+      - name: wdsutil replace image
+        href: wdsutil-replace-image.md
+      - name: wdsutil set
+        href: wdsutil-set.md
+      - name: wdsutil set device
+        href: wdsutil-set-device.md
+      - name: wdsutil set drivergroup
+        href: wdsutil-set-drivergroup.md
+      - name: wdsutil set drivergroupfilter
+        href: wdsutil-set-drivergroupfilter.md
+      - name: wdsutil set driverpackage
+        href: wdsutil-set-driverpackage.md
+      - name: wdsutil set image
+        href: wdsutil-set-image.md
+      - name: wdsutil set imagegroup
+        href: wdsutil-set-imagegroup.md
+      - name: wdsutil set server
+        href: wdsutil-set-server.md
+      - name: wdsutil set transportserver
+        href: wdsutil-set-transportserver.md
+      - name: wdsutil start multicasttransmission
+        href: wdsutil-start-multicasttransmission.md
+      - name: wdsutil start namespace
+        href: wdsutil-start-namespace.md
+      - name: wdsutil start server
+        href: wdsutil-start-server.md
+      - name: wdsutil start transportserver
+        href: wdsutil-start-transportserver.md
+      - name: wdsutil stop server
+        href: wdsutil-stop-server.md
+      - name: wdsutil stop transportserver
+        href: wdsutil-stop-transportserver.md
+      - name: wdsutil uninitialize server
+        href: wdsutil-uninitialize-server.md
+      - name: wdsutil update serverfiles
+        href: wdsutil-update-serverfiles.md
+      - name: wdsutil verbose
+        href: wdsutil-verbose.md
+    - name: wecutil
+      href: wecutil.md
+    - name: wevtutil
+      href: wevtutil.md
+    - name: where
+      href: where.md
+    - name: whoami
+      href: whoami.md
+    - name: winnt
+      href: winnt.md
+    - name: winnt32
+      href: winnt32.md
+    - name: winrs
+      href: winrs.md
+    - name: winsat mem
+      href: winsat-mem.md
+    - name: winsat mfmedia
+      href: winsat-mfmedia.md
+    - name: wmic
+      href: wmic.md
+    - name: wscript
+      href: wscript.md
+    - name: xcopy
+      href: xcopy.md

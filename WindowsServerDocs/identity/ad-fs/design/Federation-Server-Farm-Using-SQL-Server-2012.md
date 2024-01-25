@@ -4,8 +4,8 @@ ms.assetid: 6618b3ce-0e94-4009-b887-d8e05453358b
 title: AD FS Federation Server Farm Using SQL Server
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

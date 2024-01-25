@@ -35,7 +35,7 @@ To change the working directory on the local computer to *c:\dir1*, type:
 lcd c:\dir1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

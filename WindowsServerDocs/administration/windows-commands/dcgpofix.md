@@ -44,6 +44,6 @@ To configure the Default Domain Controllers Policy GPO only to set user rights a
 dcgpofix /ignoreschema /target:dc
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

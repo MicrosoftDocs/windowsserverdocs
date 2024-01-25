@@ -1,0 +1,220 @@
+- name: Security and Assurance
+  href: security-and-assurance.yml
+  items:
+  - name: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
+    href: gdpr/gdpr-winserver-whitepaper.md
+  - name: Secured-core server
+    href: secured-core-server.md
+  - name: Configure Secured-core Server
+    href: configure-secured-core-server.md
+  - name: Set up HGS for a guarded fabric and shielded VMs
+    href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
+    items:
+    - name: Overview
+      href: guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md
+    - name: Plan
+      href: guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md
+      items:
+      - name: Plan for hosters
+        href: guarded-fabric-shielded-vm/guarded-fabric-planning-for-hosters.md
+        items:
+        - name: Compatible hardware
+          href: guarded-fabric-shielded-vm/guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md
+      - name: Plan for tenants
+        href: guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-planning-for-tenants.md
+    - name: Deploy
+      href: guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md
+      items:
+      - name: Quick start
+        href: guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md
+      - name: Deploy HGS
+        href: guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md
+        items:
+        - name: Prerequisites
+          href: guarded-fabric-shielded-vm/guarded-fabric-prepare-for-hgs.md
+        - name: Obtain certificates
+          href: guarded-fabric-shielded-vm/guarded-fabric-obtain-certs.md
+        - name: Install HGS
+          href: guarded-fabric-shielded-vm/guarded-fabric-choose-where-to-install-hgs.md
+          items:
+          - name: New forest (default)
+            href: guarded-fabric-shielded-vm/guarded-fabric-install-hgs-default.md
+          - name: Bastion forest
+            href: guarded-fabric-shielded-vm/guarded-fabric-install-hgs-in-a-bastion-forest.md
+        - name: Initialize HGS
+          href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs.md
+          items:
+          - name: TPM mode
+            href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode.md
+            items:
+            - name: Dedicated forest (default)
+              href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-default.md
+            - name: Bastion forest
+              href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode-bastion.md
+            - name: Install TPM root certs
+              href: guarded-fabric-shielded-vm/guarded-fabric-install-trusted-tpm-root-certificates.md
+            - name: Configure fabric DNS
+              href: guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-tpm.md
+          - name: Key mode
+            href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode.md
+            items:
+            - name: Dedicated forest (default)
+              href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode-default.md
+            - name: Bastion forest
+              href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-key-mode-bastion.md
+          - name: AD mode
+            href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode.md
+            items:
+            - name: Dedicated forest (default)
+              href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode-default.md
+            - name: Bastion forest
+              href: guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-ad-mode-bastion.md
+            - name: Configure fabric DNS
+              href: guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns-ad.md
+            - name: Configure HGS DNS and a one-way trust
+              href: guarded-fabric-shielded-vm/guarded-fabric-configure-dns-forwarding-and-trust.md
+        - name: Configure HTTPS
+          href: guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https.md
+        - name: Add nodes
+          href: guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md
+      - name: Deploy guarded hosts
+        href: guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md
+        items:
+        - name: Prerequisites
+          href: guarded-fabric-shielded-vm/guarded-fabric-guarded-host-prerequisites.md
+        - name: TPM mode
+          href: guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware.md
+        - name: Key mode
+          href: guarded-fabric-shielded-vm/guarded-fabric-create-host-key.md
+        - name: AD mode
+          href: guarded-fabric-shielded-vm/guarded-fabric-admin-trusted-attestation-creating-a-security-group.md
+        - name: Confirm attestation
+          href: guarded-fabric-shielded-vm/guarded-fabric-confirm-hosts-can-attest-successfully.md
+        - name: Using VMM
+          href: /system-center/vmm/guarded-deploy-host?toc=%2fwindows-server%2fvirtualization%2ftoc.json
+      - name: Deploy shielded VMs
+        href: guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md
+        items:
+        - name: Create a Windows template disk
+          href: guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-template.md
+        - name: Create a Linux template disk
+          href: guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template.md
+        - name: Set up Windows Azure Pack
+          href: guarded-fabric-shielded-vm/guarded-fabric-hoster-sets-up-windows-azure-pack.md
+        - name: Create OS specialization answer file
+          href: guarded-fabric-shielded-vm/guarded-fabric-sample-unattend-xml-file.md
+        - name: Create shielding data file
+          href: guarded-fabric-shielded-vm/guarded-fabric-tenant-creates-shielding-data.md
+        - name: Deploy a shielded VM using PowerShell
+          href: guarded-fabric-shielded-vm/guarded-fabric-create-a-shielded-vm-using-powershell.md
+        - name: Deploy using VMM
+          href: guarded-fabric-shielded-vm/guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md
+        - name: Deploy using Windows Azure Pack
+          href: guarded-fabric-shielded-vm/guarded-fabric-shielded-vm-windows-azure-pack.md
+        - name: Shield an existing VM
+          href: guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md
+    - name: Manage
+      href: guarded-fabric-shielded-vm/guarded-fabric-manage-overview.md
+      items:
+      - name: Manage the Host Guardian Service
+        href: guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md
+      - name: Branch office considerations
+        href: guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md
+      - name: Upgrade a guarded fabric to Windows Server 2019
+        href: guarded-fabric-shielded-vm/guarded-fabric-upgrade-to-2019.md
+  - name: Device Health attestation
+    href: device-health-attestation.md
+  - name: Disabling System Services in Windows Server 2016
+    href: windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md
+  - name: Disabling Per-User Services in Windows
+    href: /windows/application-management/per-user-services-in-windows
+  - name: Windows Authentication
+    href: windows-authentication/windows-authentication-overview.md
+    items:
+    - name: Windows Authentication Technical Overview
+      href: windows-authentication/windows-authentication-technical-overview.md
+      items:
+      - name: Windows Authentication Concepts
+        href: windows-authentication/windows-authentication-concepts.md
+      - name: Windows Logon Scenarios
+        href: windows-authentication/windows-logon-scenarios.md
+      - name: Windows Authentication Architecture
+        href: windows-authentication/windows-authentication-architecture.md
+        items:
+        - name: Security Support Provider Interface Architecture
+          href: windows-authentication/security-support-provider-interface-architecture.md
+        - name: Credentials Processes in Windows Authentication
+          href: windows-authentication/credentials-processes-in-windows-authentication.md
+      - name: Group Policy Settings Used in Windows Authentication
+        href: windows-authentication/group-policy-settings-used-in-windows-authentication.md
+  - name: Credentials Protection and Management
+    href: credentials-protection-and-management/credentials-protection-and-management.md
+    items:
+    - name: Configuring additional LSA Protection
+      href: credentials-protection-and-management/configuring-additional-lsa-protection.md
+    - name: What's New in Credential Protection
+      href: credentials-protection-and-management/whats-new-in-credential-protection.md
+    - name: Protect derived domain credentials with Credential Guard
+      href: /windows/security/identity-protection/credential-guard/credential-guard
+    - name: Protect Remote Desktop credentials with Remote Credential Guard
+      href: /windows/security/identity-protection/remote-credential-guard
+    - name: Protected Users Security Group
+      href: credentials-protection-and-management/protected-users-security-group.md
+    - name: Authentication Policies and Authentication Policy Silos
+      href: credentials-protection-and-management/authentication-policies-and-authentication-policy-silos.md
+  - name: Group Managed Service Accounts
+    href: group-managed-service-accounts/group-managed-service-accounts-overview.md
+    items:
+    - name: Getting started with Group Managed Service Accounts
+      href: group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+      items:
+      - name: Create the Key Distribution Services KDS Root Key
+        href: group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
+      - name: Configuring Kerberos delegation for group Managed Service Accounts
+        href: group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
+  - name: Kerberos Authentication
+    href: kerberos/kerberos-authentication-overview.md
+    items:
+    - name: What's new in Kerberos authentication
+      href: kerberos/whats-new-in-kerberos-authentication.md
+    - name: Domain-joined Device Public Key Authentication
+      href: kerberos/domain-joined-device-public-key-authentication.md
+    - name: Kerberos Constrained delegation
+      href: kerberos/kerberos-constrained-delegation-overview.md
+    - name: Preventing Kerberos change password that uses RC4 secret keys
+      href: kerberos/preventing-kerberos-change-password-that-uses-rc4-secret-keys.md
+    - name: Configuring Kerberos for IP Addresses
+      href: kerberos/configuring-kerberos-over-ip.md
+  - name: NTLM
+    href: kerberos/ntlm-overview.md
+  - name: Passwords
+    href: kerberos/passwords-overview.md
+    items:
+    - name: Passwords technical overview
+      href: kerberos/passwords-technical-overview.md
+    - name: System key utility technical overview
+      href: kerberos/system-key-utility-technical-overview.md
+  - name: RPC Interface Restriction
+    href: rpc-interface-restrict.md
+  - name: TLS - SSL (Schannel SSP)
+    href: tls/tls-ssl-schannel-ssp-overview.md
+    items:
+    - name: TLS changes in Windows 10 and Windows Server 2016
+      href: tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md
+    - name: Manage TLS
+      href: tls/manage-tls.md
+    - name: TLS Registry Settings
+      href: tls/tls-registry-settings.md
+    - name: Schannel Security Support Provider Technical Reference
+      href: tls/schannel-security-support-provider-technical-reference.md
+      items:
+      - name: Transport Layer Security protocol
+        href: tls/transport-layer-security-protocol.md
+      - name: Datagram Transport Layer Security protocol
+        href: tls/datagram-transport-layer-security-protocol.md
+  - name: How User Account Control Works
+    href: user-account-control/how-user-account-control-works.md
+  - name: Token Binding
+    href: token-binding/introducing-token-binding.md
+  - name: Windows Defender Antivirus
+    href: windows-defender/windows-defender-overview-windows-server.md

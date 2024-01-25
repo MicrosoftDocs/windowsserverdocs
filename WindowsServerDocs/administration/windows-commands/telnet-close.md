@@ -29,6 +29,6 @@ To close the current telnet connection, type:
 c
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -27,6 +27,6 @@ attributes volume
 | [attributes disk](attributes-disk.md) | Displays, sets, or clears the attributes of a disk. |
 | [attributes volume](attributes-volume.md) | Displays, sets, or clears the attributes of a volume. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -46,7 +46,7 @@ bootcfg /debug edit /port com2 /baud 19200 /id 2
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /debug off /id 2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

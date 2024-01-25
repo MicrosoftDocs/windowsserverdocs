@@ -4,8 +4,8 @@ ms.assetid: f67b0bc9-e5af-4891-9da0-d9be539af42d
 title: Determine Your AD FS Deployment Topology
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 

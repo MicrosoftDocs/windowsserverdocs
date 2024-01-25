@@ -34,7 +34,7 @@ To set the security flags to enable a CRL check for the job named *myDownloadJob
 bitsadmin /setsecurityflags myDownloadJob 0x0001
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

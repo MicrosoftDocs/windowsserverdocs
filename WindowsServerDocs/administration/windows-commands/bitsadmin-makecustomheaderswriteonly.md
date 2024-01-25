@@ -35,7 +35,7 @@ To make Custom HTTP Headers write-only for the job named *myDownloadJob*:
 bitsadmin /makecustomheaderswriteonly myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

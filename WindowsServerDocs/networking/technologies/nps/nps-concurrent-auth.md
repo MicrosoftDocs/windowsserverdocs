@@ -21,10 +21,12 @@ To do this, you must edit the following registry key:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`
 
-Add a new value named **MaxConcurrentApi** and assign to it a value from 2 through 5.
+Add a new DWORD value named **MaxConcurrentApi** and assign to it a value of 150.
 
 >[!CAUTION]
 >If you assign a value to **MaxConcurrentApi** that is too high, your NPS might place an excessive load on your domain controller.
+
+For more information about MaxConcurrentApi, see [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](/troubleshoot/windows-server/windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi)
 
 For more information about managing NPS, see [Manage Network Policy Server](nps-manage-top.md).
 

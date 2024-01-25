@@ -3,8 +3,8 @@ description: "Learn more about: Interoperating with AD FS 1.x"
 ms.assetid: 97999892-29c6-4076-be19-5e5259d8ada6
 title: Interoperating with AD FS 1.x
 author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ms.author: billmath
 ---

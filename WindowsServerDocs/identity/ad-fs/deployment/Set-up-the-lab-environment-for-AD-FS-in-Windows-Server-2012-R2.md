@@ -4,8 +4,8 @@ ms.assetid: 6b38480e-5b1c-49f0-9d46-8cf22f70f0d2
 title: Set up the lab environment for AD FS in Windows Server 2012 R2
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 
@@ -200,8 +200,6 @@ Set up a virtual machine (WebServ1) by installing the  Windows Server 2012 R2  o
 
 To complete the walkthroughs that were referenced earlier in this topic, you must have a sample application that is secured by your federation server (ADFS1).
 
-You can download Windows Identity Foundation SDK ([https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451), which includes a sample claims-based application.
-
 You must complete the following steps to set up a web server with this sample claims-based application.
 
 > [!NOTE]
@@ -242,7 +240,7 @@ You must complete the following steps to set up a web server with this sample cl
 
 ### <a name="BKMK_13"></a>Install Windows Identity Foundation SDK
 
-1.  Run WindowsIdentityFoundation-SDK-3.5.msi to install Windows Identity Foundation SDK 3.5 (https://www.microsoft.com/download/details.aspx?id=4451). Choose all of the default options.
+1.  Run WindowsIdentityFoundation-SDK-3.5.msi to install Windows Identity Foundation SDK 3.5. Choose all of the default options.
 
 ### <a name="BKMK_9"></a>Configure the simple claims app in IIS
 

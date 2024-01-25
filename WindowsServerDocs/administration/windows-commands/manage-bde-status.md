@@ -56,7 +56,7 @@ To display the status of drive C, type:
 manage-bde –status C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

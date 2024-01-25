@@ -1,0 +1,138 @@
+- name: Virtualization
+  href: virtualization.yml
+  items:
+  - name: Guarded fabric and shielded VMs
+    href: ../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md
+  - name: Hyper-V
+    href: hyper-v/Hyper-V-on-Windows-Server.md
+    items:
+    - name: Technology Overview
+      href: hyper-v/Hyper-V-Technology-Overview.md
+    - name: What's new in Hyper-V
+      href: hyper-v/What-s-new-in-Hyper-V-on-Windows.md
+    - name: System requirements
+      href: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
+    - name: Supported Windows guest operating systems
+      href: hyper-v/Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md
+    - name: Supported Linux and FreeBSD VMs
+      href: hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md
+      items:
+      - name: CentOS and Red Hat Enterprise Linux VMs
+        href: hyper-v/Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md
+      - name: Debian VMs
+        href: hyper-v/Supported-Debian-virtual-machines-on-Hyper-V.md
+      - name: Oracle Linux VMs
+        href: hyper-v/Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md
+      - name: SUSE VMs
+        href: hyper-v/Supported-SUSE-virtual-machines-on-Hyper-V.md
+      - name: Ubuntu VMs
+        href: hyper-v/Supported-Ubuntu-virtual-machines-on-Hyper-V.md
+      - name: FreeBSD VMs
+        href: hyper-v/Supported-FreeBSD-virtual-machines-on-Hyper-V.md
+      - name: Feature Descriptions for Linux and FreeBSD VMs
+        href: hyper-v/Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md
+      - name: Best Practices for running Linux
+        href: hyper-v/Best-Practices-for-running-Linux-on-Hyper-V.md
+      - name: Best practices for running FreeBSD
+        href: hyper-v/Best-practices-for-running-FreeBSD-on-Hyper-V.md
+    - name: Feature compatibility by generation and guest
+      href: hyper-v/Hyper-V-feature-compatibility-by-generation-and-guest.md
+    - name: Get started
+      href: hyper-v/get-started/Get-started-with-Hyper-V-on-Windows.md
+      items:
+      - name: Install Hyper-V
+        href: hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md
+      - name: Create and configure a virtual switch
+        href: hyper-v/get-started/create-a-virtual-switch-for-Hyper-V-virtual-machines.md
+      - name: Create a virtual machine
+        href: hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md
+    - name: Plan
+      href: hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md
+      items:
+      - name: Compatibility
+        items:
+        - name: Guest operating system and application supportability
+          href: hyper-v/plan/guest-operating-system-application-supportability.md
+      - name: VM Generation
+        href: hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md
+      - name: Networking
+        href: hyper-v/plan/plan-hyper-v-networking-in-windows-server.md
+      - name: Scalability
+        href: hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md
+      - name: Security
+        href: hyper-v/plan/plan-hyper-v-security-in-windows-server.md
+      - name: GPU acceleration
+        href: hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md
+      - name: Discrete Device Assignment
+        href: hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md
+      - name: What is Nested Virtualization?
+        href: /virtualization/hyper-v-on-windows/user-guide/nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Deploy
+      href: hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md
+      items:
+      - name: Export and import virtual machines
+        href: hyper-v/deploy/Export-and-import-virtual-machines.md
+      - name: Set up hosts for live migration
+        href: hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
+      - name: Upgrade virtual machine version
+        href: hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md
+      - name: Deploy graphics devices using DDA
+        href: hyper-v/deploy/deploying-graphics-devices-using-dda.md
+      - name: Deploy graphics devices using RemoteFX vGPU
+        href: hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md
+      - name: Deploy storage devices using DDA
+        href: hyper-v/deploy/deploying-storage-devices-using-dda.md
+      - name: Enable Nested Virtualization
+        href: /virtualization/hyper-v-on-windows/user-guide/enable-nested-virtualization?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Manage
+      href: hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md
+      items:
+      - name: Configuring Persistent Memory Devices for Hyper-V VMs
+        href: hyper-v/manage/persistent-memory-cmdlets.md
+      - name: Choose between standard or production checkpoints
+        href: hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md
+      - name: Create a VHD set
+        href: hyper-v/manage/Create-VHDSet-file.md
+      - name: Enable or disable checkpoints
+        href: hyper-v/manage/Enable-or-disable-checkpoints-in-Hyper-V.md
+      - name: Manage hosts with Hyper-V Manager
+        href: hyper-v/manage/Remotely-manage-Hyper-V-hosts.md
+      - name: Manage host CPU resource controls
+        href: hyper-v/manage/manage-hyper-v-minroot-2016.md
+      - name: Using VM CPU Groups
+        href: hyper-v/manage/manage-hyper-v-cpugroups.md
+      - name: Manage hypervisor scheduler types
+        href: hyper-v/manage/manage-hyper-v-scheduler-types.md
+      - name: About Hyper-V scheduler type selection
+        href: hyper-v/manage/about-hyper-v-scheduler-type-selection.md
+      - name: Manage Integration Services
+        href: hyper-v/manage/Manage-Hyper-V-integration-services.md
+      - name: Manage Windows VMs with PowerShell Direct
+        href: hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md
+      - name: Set up Hyper-V Replica
+        href: hyper-v/manage/Set-up-Hyper-V-Replica.md
+      - name: Enable Intel Performance Monitoring Hardware
+        href: hyper-v/manage/Performance-Monitoring-Hardware.md
+      - name: Enable processor compatibility mode
+        href: hyper-v/manage/processor-compatibility-mode-hyper-v.md
+      - name: Move VMs with live migration
+        href: hyper-v/manage/Live-migration-overview.md
+        items:
+        - name: Live Migration Overview
+          href: hyper-v/manage/Live-migration-overview.md
+        - name: Set up hosts for live migration
+          href: hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
+        - name: Use live migration without Failover Clustering
+          href: hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md
+    - name: Hyper-V Performance Tuning
+      href: ../administration/performance-tuning/role/hyper-v-server/index.md
+  - name: Hyper-V Virtual Switch
+    href: hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+    items:
+    - name: Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)
+      href: /azure-stack/hci/concepts/host-network-requirements
+    - name: Manage Hyper-V Virtual Switch
+      href: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
+      items:
+      - name: Create Security Policies with extended Port Access Control lists
+        href: hyper-v-virtual-switch/create-Security-Policies-with-extended-Port-Access-Control-lists.md

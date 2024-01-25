@@ -4,8 +4,8 @@ ms.assetid: a33bd54c-e6db-4b58-8264-c0f34bd8ba39
 title: Walkthrough - Workplace Join to an Android device
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: amycolannino
+ms.date: 08/15/2023
 ms.topic: article
 ---
 # Walkthrough: Workplace Join to an Android device
@@ -15,7 +15,7 @@ ms.topic: article
 ## Join your device with Workplace Join
 
 > [!NOTE]
-> Android workplace join requires Azure Active Directory Device Registration Service. In order to enforce conditional device policies on-premises, Directory Synchronization Tool (DirSync) must be deployed with device object write-back option enabled. At the present time, device write-back to Active Directory from Azure Active Directory can take up-to 3 hours. As such, users must wait for 3 hours to access on-premises web applications, after creating a work account. For more information about deploying Azure Active Directory Device Registration service, see, [Azure Active Directory Device Registration Service Overview](/previous-versions/azure/dn788908(v=azure.100))
+> Android workplace join requires Microsoft Entra Device Registration Service. In order to enforce conditional device policies on-premises, Directory Synchronization Tool (DirSync) must be deployed with device object write-back option enabled. At the present time, device write-back to Active Directory from Microsoft Entra ID can take up-to 3 hours. As such, users must wait for 3 hours to access on-premises web applications, after creating a work account. For more information about deploying Microsoft Entra Device Registration service, see, [Microsoft Entra Device Registration Service Overview](/previous-versions/azure/dn788908(v=azure.100))
 
 #### Create a Work account that joins your device with workplace Join
 
@@ -23,4 +23,4 @@ ms.topic: article
 
 ## See Also
 [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
-[Setting up On-premises Conditional Access using Azure Active Directory Device Registration Service](/azure/active-directory/active-directory-device-registration-on-premises-setup)
+[Setting up On-premises Conditional Access using Microsoft Entra Device Registration Service](/azure/active-directory/active-directory-device-registration-on-premises-setup)

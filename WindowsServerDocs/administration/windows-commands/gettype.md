@@ -1,20 +1,20 @@
 ---
 title: gettype
-description: Reference article for the gettype command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
+description: Reference article for the gettype command. This command is deprecated and may not be supported in future releases of Windows.
 ms.topic: reference
-ms.assetid: a423030b-2bae-4e6f-8020-36163058fa3a
 ms.author: jgerend
 author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.date: 04/01/2023
 ---
 
 # gettype
 
-The **gettype** command has been deprecated, and isn't guaranteed to be supported in Windows.
+Applies to: Windows Server (All supported versions)
 
-This tool is included in Windows Server 2003. For more information, see [gettype](/previous-versions/orphan-topics/ws.10/cc773104(v=ws.10)).
+The `gettype` command is deprecated and may not be supported in future releases of Windows.
 
-## Additional References
+`gettype` is included in Windows Server 2003. For more information, see [gettype](/previous-versions/orphan-topics/ws.10/cc773104(v=ws.10)).
+
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

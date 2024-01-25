@@ -73,7 +73,7 @@ Ram Disk
 To query the volume information for volume E, type:
 
 ```
-fsinfo volumeinfo e:\
+fsutil fsinfo volumeinfo e:
 ```
 
 Output similar to the following displays:
@@ -105,7 +105,7 @@ Mft Zone End : 0x0000000000004700
 To query the file system's underlying hardware for sector information, type:
 
 ```
-fsinfo sectorinfo d:
+fsutil fsinfo sectorinfo d:
 ```
 
 Output similar to the following displays:
@@ -121,7 +121,7 @@ DAX capable
 To query the file system statistics for drive E, type:
 
 ```
-fsinfo statistics e:
+fsutil fsinfo statistics e:
 ```
 
 Output similar to the following displays:
@@ -134,7 +134,7 @@ UserFileReadBytes : 1305244512
 LogFileWriteBytes : 180936704
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

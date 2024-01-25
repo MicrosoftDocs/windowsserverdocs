@@ -35,7 +35,7 @@ To get the maximum download time for the job named *myDownloadJob* in seconds:
 bitsadmin /getmaxdownloadtime myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

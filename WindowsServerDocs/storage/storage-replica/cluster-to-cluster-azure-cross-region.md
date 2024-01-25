@@ -1,15 +1,15 @@
 ---
-title: Cluster to Cluster Storage Replica cross region in Azure
-description: Cluster to Cluster Storage Replication cross region in Azure
+title: Cluster-to-cluster storage replication cross-region in Azure
+description: Cluster-to-cluster storage replication cross-region in Azure
 author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
 ms.topic: article
 manager: mchad
 ---
-# Cluster to Cluster Storage Replica cross region in Azure
+# Cluster to Cluster Storage Replication Cross-Region in Azure
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 
@@ -41,7 +41,7 @@ Watch the video below for a complete walk-through of the process.
 
 5. Create Windows Server [virtual machines](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) in the previously created resource groups.
 
-   Domain Controller (**az2azDC**). You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability set. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
+   Domain Controller (**az2azDC**). You can choose to create a 3rd availability set for your domain controller or add the domain controller in one of the two availability sets. If you are adding this to the availability set created for the two clusters, assign it a Standard public IP address during VM creation.
       - Install Active Directory Domain Service.
       - Create a domain (contoso.com)
       - Create a user with administrator privileges (contosoadmin)
@@ -186,5 +186,5 @@ Run the command:
 ```powershell
 PowerShell
 
-New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName SRAZCross -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDiskCross -DestinationLogVolumeName  g:
+New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName SRAZCross -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDiskCross -DestinationLogVolumeName  g: -LogType Raw
 ```
