@@ -7,7 +7,7 @@ ms.author: billmath
 manager: amycolannino
 ms.date: 08/15/2023
 ms.topic: article
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # Configure AD FS support for user certificate authentication
@@ -132,7 +132,7 @@ You can use online SSL tools to check your AD FS and WAP servers and see if they
 
 Many Office 365 applications send `prompt=login` to Microsoft Entra ID. Microsoft Entra ID, by default, converts it to a fresh password login to AD FS. As a result, even if you configured certificate authentication in AD FS, your users see only a password login. To fix this problem:
 
-1. Get the federated domain settings by using the `Get-MsolDomainFederationSettings` cmdlet.
+1. Get the federated domain settings by using the `Get-MgDomainFederationConfiguration` cmdlet.
 1. Ensure that the `PromptLoginBehavior` parameter is set to either `Disabled` or `NativeSupport`.
 
 For more information, see [AD FS prompt=login parameter support](ad-fs-prompt-login.md).
