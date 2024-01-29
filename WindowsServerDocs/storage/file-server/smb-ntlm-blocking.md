@@ -61,15 +61,21 @@ To enable a list of exceptions to NTLM blocking:
 
 #### [PowerShell](#tab/powershell)
 
-There isn't currently a PowerShell equivalent to the Block NTLM Server Exception List that lets you block only specific existing remote machines. However, you can block NTLM when mapping new SMB drives by running the following commands.
+There isn't currently a PowerShell equivalent to the Block NTLM Server Exception List Group Policy object. In order to set up an exception list, you must go into the Group Policy Editor and configure the setting manually. However, once you've completed the manual setup, you can make individual exceptions for certain IPs by running this command:
 
-1. Run this command to specify NTLM blocking when mapping a drive with NET USE:
+  ```powershell
+  Set-SmbServerConfiguration -ExceptionList "<IP Address>"
+  ```
+
+You can also block NTLM when mapping new SMB drives by running the following commands.
+
+Run this command to specify NTLM blocking when mapping a drive with NET USE:
 
    ```powershell
    NET USE \\server\share /BLOCKNTLM
    ```
 
-1. Run this command to specify NTLM blocking when mapping an SMB drive:
+Run this command to specify NTLM blocking when mapping an SMB drive:
 
    ```powershell
    New-SmbMapping -RemotePath \\server\share -BlockNTLM $true
