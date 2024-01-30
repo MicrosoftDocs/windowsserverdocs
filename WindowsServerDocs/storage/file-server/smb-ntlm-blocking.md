@@ -1,7 +1,7 @@
 ---
 title: Block NTLM connections on SMB (preview)
 description: Learn how to make SMB more secure by blocking NTLM.
-ms.topic: article
+ms.topic: how-to
 author: Heidilohr
 ms.author: helohr
 ms.date: 01/22/2024
@@ -17,7 +17,7 @@ The SMB client now supports blocking NTLM queries for remote outbound connection
 
 ## Configure SMB client NTLM blocking
 
-Beginning with Windows Server Preview build 25951 and Windows 11 NTLM blocking is enabled by default. To improved the security of deployments running earlier versions of Windows, you must disable NTLM manually, either by editing the relevant Group Policy or running a specific command in PowerShell.
+Starting with Windows Server Preview build 25951 and Windows 11, the SMB client blocks NTLM by default. To improve the security of deployments running earlier versions of Windows, you must disable NTLM manually, either by editing the relevant Group Policy or running a specific command in PowerShell.
 
 To configure NTLM blocking:
 
@@ -67,6 +67,10 @@ There isn't currently a PowerShell equivalent to the Block NTLM Server Exception
   Set-SmbServerConfiguration -ExceptionList "<IP Address>"
   ```
 
+---
+
+## Block NTLM while mapping SMB drives
+
 You can also block NTLM when mapping new SMB drives by running the following commands.
 
 Run this command to specify NTLM blocking when mapping a drive with NET USE:
@@ -80,8 +84,6 @@ Run this command to specify NTLM blocking when mapping an SMB drive:
    ```powershell
    New-SmbMapping -RemotePath \\server\share -BlockNTLM $true
    ```
-
----
 
 ## Related content
 
