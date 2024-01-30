@@ -15,6 +15,13 @@ ms.prod: windows-server
 
 The SMB client now supports blocking NTLM queries for remote outbound connections. Blocking NTLM queries prevents bad actors from tricking clients into sending NTLM requests to malicious servers, counteracting brute force, cracking, and pass-the-hash attacks. NTLM blocking is also required for switching an organization's authentication protocols to Kerberos, which is more secure than NTLM because it can verify server identities with its ticket system. However, organizations can also enable this layer of protection without having to disable NTLM entirely.
 
+## Prerequisites
+
+In order to use NTLM blocking for the SMB client, you need the following things:
+
+- A Windows 11 deployment.
+- Windows Server Preview build 25951 or later.
+
 ## Configure SMB client NTLM blocking
 
 Starting with Windows Server Preview build 25951 and Windows 11, the SMB client blocks NTLM by default. To improve the security of deployments running earlier versions of Windows, you must disable NTLM manually, either by editing the relevant Group Policy or running a specific command in PowerShell.
