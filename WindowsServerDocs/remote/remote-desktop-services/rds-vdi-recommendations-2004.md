@@ -1,9 +1,9 @@
 ---
 title: Optimizing Windows 10, Build 2004, for a Virtual Desktop role
 description: Recommended settings and configuration to minimize overhead for Windows 10, version 2004 desktops used as VDI images.
-ms.prod: windows-server
+ms.service: windows-server
 ms.reviewer: robsmi, timuessi
-ms.technology: remote-desktop-services
+ms.subservice: remote-desktop-services
 author: Heidilohr
 ms.author: helohr
 ms.topic: article
