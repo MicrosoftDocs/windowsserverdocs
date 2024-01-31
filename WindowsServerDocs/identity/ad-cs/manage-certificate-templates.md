@@ -1,16 +1,15 @@
 ---
-title: Manage Certificate Templates
-description: You can use this article to understand how to manage Active Directory Certificate Services Certificate Templates.
+title: Manage Certificate Templates in Windows Server
+description: This article describes how to manage Active Directory Certificate Services Certificate Templates in Windows Server.
 author: Orin-Thomas
 ms.topic: conceptual
 ms.author: orthomas
-contributor: orthomas
-ms.date: 01/10/2024
+ms.date: 01/31/2024
 ---
 
 # Manage Certificate Templates
 
-Certificate Templates are managed through the Certificate Templates Microsoft Management Console (MMC) snap-in. You can use this snap-in to manage AD CS both locally and remotely.  You must be a member of Domain Admins to access and administer certificate templates for a domain. To add this snap-in, install the AD CS management tools on the management computer. The AD CS management tools are part of the Remote Server Administration Tools (RSAT). You can install the management tools on a Windows Server computer by running the following PowerShell command from an elevated PowerShell session:
+Certificate Templates are managed through the Certificate Templates Microsoft Management Console (MMC) snap-in. You can use this snap-in to manage Active Directory Certificate Services (AD CS) both locally and remotely. You must be a member of Domain Admins to access and administer certificate templates for a domain. To add this snap-in, install the AD CS management tools on the management computer. The AD CS management tools are part of the Remote Server Administration Tools (RSAT). You can install the management tools on a Windows Server computer by running the following PowerShell command from an elevated PowerShell session:
 
 ```powershell
 Install-WindowsFeature RSAT-ADCS
@@ -19,8 +18,8 @@ Install-WindowsFeature RSAT-ADCS
 To configure an MMC to use the Certificate Templates snap-in:
 
 1. Right click Start, click Run, and then type mmc.
-2. On the File menu, click Add/Remove Snap-in.
-3. On the Add and Remove Snap-ins dialog box, double-click the Certificate Templates snap-in to add it to the list. Click OK.
+1. On the File menu, click Add/Remove Snap-in.
+1. On the Add and Remove Snap-ins dialog box, double-click the Certificate Templates snap-in to add it to the list. Click OK.
 
 ## Create a new certificate template
 
@@ -29,9 +28,9 @@ You can create a new certificate template by duplicating an existing template an
 To create a new certificate template:
 
 1. Open the Certificate Templates snap-in and connect to the AC CS Enterprise root or subordinate server.
-2. Right-click the template to copy from, and then click Duplicate Template.
-3. Choose the minimum operating system version of AD CS CA that you want to support. Currently the most recent version of Windows Server that you can select is Windows Server 2016. You can also select the minimum recipient operating system for the certificate template, with the most recent version being Windows 10/Windows Server 2016.
-4. Provide a name for the certificate template and configure the template settings.
+1. Right-click the template to copy from, and then click Duplicate Template.
+1. Choose the minimum operating system version of AD CS CA that you want to support. Currently the most recent version of Windows Server that you can select is Windows Server 2016. You can also select the minimum recipient operating system for the certificate template, with the most recent version being Windows 10/Windows Server 2016.
+1. Provide a name for the certificate template and configure the template settings.
  
 ## Delete a certificate template
 
@@ -40,8 +39,8 @@ You can delete a certificate template when you no longer want it to be available
 To delete a certificate template, perform the following steps:
 
 1. Open an MMC with the Certificate Templates snap-in.
-2. Right-click the template you want to delete, and then click Delete.
-3. Click Yes to confirm that you want to delete the template.
+1. Right-click the template you want to delete, and then click Delete.
+1. Click Yes to confirm that you want to delete the template.
 
 ## Rename a certificate template
 
@@ -50,9 +49,9 @@ The names of default certificate templates cannot be changed. Administrators can
 To change a certificate template name:
 
 1. Open the Certificate Templates snap-in and connect to the AD CS CA.
-2. Select the certificate template you want to modify. On the Action menu, click Change Names.
-3. Type a new name in the Template name box or the Template display name box, or both.
-4. Click OK to save changes.
+1. Select the certificate template you want to modify. On the Action menu, click Change Names.
+1. Type a new name in the Template name box or the Template display name box, or both.
+1. Click OK to save changes.
 
 If the modified template is already published to issuing CAs, remove the template from Certificate Templates on those issuing CAs, then restart these issuing CA computers, and then add the renamed template to the issuing CAs. If another template supersedes the modified template, then update the superseding template by adding the modified template to the list of superseded templates.
 
@@ -63,8 +62,8 @@ When you create an enterprise certification authority (CA), certificate template
 To configure a CA to issue certificates based on a certificate template, perform the following steps:
 
 1. Open the Certification Authority snap-in, and double-click the name of the CA.
-2. Right-click Certificate Templates, click New, and then click Certificate Template to Issue.
-3. Select the certificate template, and click OK.
+1. Right-click Certificate Templates, click New, and then click Certificate Template to Issue.
+1. Select the certificate template, and click OK.
 
 ## Remove a Certificate Template from a CA.
 
@@ -73,7 +72,7 @@ It may be necessary to remove a certificate template from a certification author
 To remove a certificate template from a CA:
 
 1. Open the Certification Authority snap-in.
-2. In the console tree, click Certificate Templates.
-3. In the details pane, right-click the certificate template that you want to delete, and then click Delete.
+1. In the console tree, click Certificate Templates.
+1. In the details pane, right-click the certificate template that you want to delete, and then click Delete.
 
 You cannot remove the built in certificate templates.
