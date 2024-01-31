@@ -15,7 +15,8 @@ ms.custom: inhenkel, orthomas
 
 ## Appendix C: Protected Accounts and Groups in Active Directory
 
-Within Active Directory, a default set of highly privileged accounts and groups are considered protected accounts and groups. With most objects in Active Directory, users delegated permissions to manage Active Directory objects can change permissions on the objects, this including altering permissions to allow themselves to modify membership of special groups.
+Within Active Directory, a default set of highly privileged accounts and groups are considered protected accounts and groups. With most objects in Active Directory, users delegated permissions to manage Active Directory objects can change permissions on the objects, including altering permissions to allow themselves to modify membership of special groups.
+
 
 Protected accounts and groups are special objects where permissions are set and enforced via an automatic process that ensures the permissions on the objects remains consistent. These permissions remain even if you move the objects to different locations in Active Directory. If a protected object's permissions are modified, existing processes ensure that permissions are returned to their defaults quickly.
 
