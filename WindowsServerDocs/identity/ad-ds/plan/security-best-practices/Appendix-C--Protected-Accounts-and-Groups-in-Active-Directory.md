@@ -17,30 +17,25 @@ ms.custom: inhenkel, orthomas
 
 Within Active Directory, a default set of highly privileged accounts and groups are considered protected accounts and groups. With most objects in Active Directory, users delegated permissions to manage Active Directory objects can change permissions on the objects, including altering permissions to allow themselves to modify membership of special groups.
 
-
 Protected accounts and groups are special objects where permissions are set and enforced via an automatic process that ensures the permissions on the objects remains consistent. These permissions remain even if you move the objects to different locations in Active Directory. If a protected object's permissions are modified, existing processes ensure that permissions are returned to their defaults quickly.
 
 ### Protected Groups
 
-The following table contains the protected groups in Active Directory listed by domain controller operating system.
-
-#### Protected Accounts and Groups in Active Directory by Operating System
-
 The following security accounts and groups are protected in Active Directory Domain Services:
 
-Account Operators
-Administrator
-Administrators
-Backup Operators
-Domain Admins
-Domain Controllers
-Enterprise Admins
-Krbtgt
-Print Operators
-Read-only Domain Controllers
-Replicator
-Schema Admins
-Server Operators
+- Account Operators
+- Administrator
+- Administrators
+- Backup Operators
+- Domain Admins
+- Domain Controllers
+- Enterprise Admins
+- Krbtgt
+- Print Operators
+- Read-only Domain Controllers
+- Replicator
+- Schema Admins
+- Server Operators
 
 #### AdminSDHolder
 
