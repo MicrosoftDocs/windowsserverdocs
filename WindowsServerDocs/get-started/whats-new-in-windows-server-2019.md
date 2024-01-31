@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 11/28/2022
-ms.prod: windows-server
 ---
 
 # What's new in Windows Server 2019

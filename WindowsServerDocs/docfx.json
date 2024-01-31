@@ -58,7 +58,9 @@
             "security/**/*.md": "windows-server",
             "administration/**/*.md": "windows-server",
             "virtualization/**/*.md": "windows-server",
-            "networking/**/*.md": "windows-server"
+            "networking/**/*.md": "windows-server",
+            "upgrade/**/*.md": "windows-server",
+            "windows-server-licensing/**/*.md": "windows-server"
          },
          "ms.subservice": {
             "storage/storage-spaces/**/*.md": "storage-spaces",
@@ -93,8 +95,6 @@
           "security/tls/*.md": "wscontent"
         },
         "ms.prod": {
-          "upgrade/**/*.md": "windows-server",
-          "windows-server-licensing/**/*.md": "windows-server"
         },
         "ms.technology": {
           "upgrade/**/*.md": "upgrade"

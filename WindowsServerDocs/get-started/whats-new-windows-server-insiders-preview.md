@@ -6,7 +6,6 @@ author: xelu86
 ms.author: wscontent
 ms.contributor: stacycl
 ms.date: 01/23/2024
-ms.prod: windows-server
 ---
 
 # What's new in Windows Server Insiders Preview
