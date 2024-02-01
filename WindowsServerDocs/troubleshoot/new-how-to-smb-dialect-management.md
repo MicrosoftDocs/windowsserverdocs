@@ -10,9 +10,9 @@ ms.date: 02/14/2024
 
 # Managing SMB dialects in Windows Server Insider builds
 
->Applies to: Windows Server Insider Builds
+>Applies to: Windows and Windows Server Insider Builds
 
-To improve security in Windows and Windows Server, SMB server supports the ability to manage SMB2 and SMB3 dialects in Windows Server Insider builds. Previously, Windows SMB Server automatically negotiated the highest matched server dialect from SMB 2.0.2 to 3.1.1 clients. Windows 10 introduced the ability to manage SMB client dialects, but not SMB server dialects. 
+To improve security in Windows and Windows Server, SMB server supports the ability to manage SMB2 and SMB3 dialects in Windows Server Insider builds. Previously, Windows SMB Server automatically negotiated the highest matched server dialect from SMB 2.0.2 to 3.1.1 clients. Windows 10 introduced the ability to manage SMB client dialects, but not SMB server dialects.
 
 You can remove specific SMB protocols from usage in your organization, blocking older, less secure, less capable Windows devices and third parties from connecting to the server. For example, you can limit users to SMB 3.1.1, the most secure dialect of the protocol.
 
