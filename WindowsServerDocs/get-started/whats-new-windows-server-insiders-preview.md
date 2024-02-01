@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server I
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 01/30/2024
+ms.date: 02/01/2024
 ms.prod: windows-server
 ---
 
@@ -41,7 +41,13 @@ This new type of account enables migration from a service account to a delegated
 
 ### Email & accounts
 
-You can now add a Microsoft account, work account, or school account in **Settings > Accounts > Email & accounts** for Windows Server Preview. It's important to keep in mind that domain join is still required for most situations.
+You can now add the following accounts in **Settings > Accounts > Email & accounts** for Windows Server Preview:
+
+- Microsoft Entra ID
+- Microsoft account
+- Work or school account
+
+It's important to keep in mind that domain join is still required for most situations.
 
 ### Feedback Hub
 
@@ -63,15 +69,25 @@ Pinning your most used apps is now available through the **Start** menu and is c
 
 Server Message Block (SMB) is one of the most widely used protocols in networking in providing a reliable way to share files and other resources between devices on your network. Windows Server Preview brings the following SMB capabilities:
 
-- The [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic) server feature, which was only available in Windows Server Azure Edition, is now available in both Windows Server Standard and Windows Server Datacenter versions. Starting with build 25997, the latest update to the SMB client allows for connecting to an SMB server via TCP, QUIC, or RDMA using nondefault network ports. Previously, SMB only supported TCP/445, QUIC/443, and RDMA iWARP/5445 with hardcoded defaults. The SMB over QUIC server in Windows Server supports SMB over QUIC endpoints configured with ports other than the default of 443. Windows Server doesn't have a built-in option to configure alternative SMB server TCP ports that third-party solutions, like Samba, can offer. You can specify an alternative SMB client port using the [net use](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/gg651155(v=ws.11)) command or [New-SmbMapping](/powershell/module/smbshare/new-smbmapping?view=windowsserver2022-ps&preserve-view=true) PowerShell cmdlet.
+- The [SMB over Quick UDP Internet Connections](/windows-server/storage/file-server/smb-over-quic) (QUIC) server feature, which was only available in Windows Server Azure Edition, is now available in both Windows Server Standard and Windows Server Datacenter versions. SMB over QUIC adds the benefits of the QUIC which provides low-latency, encrypted connections over the internet. See [SMB over QUIC now available in Windows Server Insider Datacenter and Standard editions](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-over-quic-now-available-in-windows-server-insider-datacenter/ba-p/3975242) for more details.
 
-  SMB over QUIC now supports using certificates with subject alternative names and not just a single subject. This feature allows using a Microsoft AD Certificate Authority and multiple endpoint names where self-signed test certificates aren't required.
+  Previously, SMB server in Windows has mandated inbound connections to use the IANA-registered port TCP/445 while the SMB TCP client has only allowed outbound connections to that same TCP port. Now, SMB over QUIC allows for [SMB alternative ports](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-alternative-ports-now-supported-in-windows-insider/ba-p/3974509) where QUIC-mandated UDP/443 ports are available for both server and client devices.
 
-- Previously, when creating SMB shares on Windows, the default behavior of Windows Defender Firewall was to enable the rules in the "File and Printer Sharing" group for the relevant firewall profiles. Windows now configures a new group called "File and Printer Sharing (Restrictive)" that doesn't include inbound NetBIOS ports 137-139. An update to this rule removes inbound ICMP, LLMNR, and Spooler Service ports that restrict access to only the ports necessary for SMB sharing.
+  Another feature that has been introduced to SMB over QUIC is [client access control](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-over-quic-client-access-control-now-supported-in-windows/ba-p/3951938), which is alternative to TCP and RDMA that supplies secure connectivity to edge file servers over untrusted networks.
 
-  This change raises the default standard for network security and aligns the [SMB firewall rules](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-firewall-rule-changes-in-windows-insider/ba-p/3974496) more closely with the behavior of the "File Server" role in Windows Server. Administrators can still configure the "File and Printer Sharing" group as needed. To learn more about SMB security, see [Secure SMB Traffic in Windows Server](/windows-server/storage/file-server/smb-secure-traffic).
+- Previously, when a share was created, the [SMB firewall rules](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-firewall-rule-changes-in-windows-insider/ba-p/3974496) would be automatically configured to enable the "File and Printer Sharing" group for the relevant firewall profiles. Now, the creation of an SMB share in Windows results in the automatic configuration of the new "File and Printer Sharing (Restrictive)" group, which no longer permits inbound NetBIOS ports 137-139.
 
-- The SMB NTLM blocking feature now supports specifying exception lists for NTLM usage. This feature allows administrators to implement a general block on NTLM usage, but still permit clients to use NTLM for specific servers that don't support Kerberos. This scenario can occur for servers that aren't part of an Active Directory domain or third-party servers that don't have Kerberos support.
+- Starting with build 25997, an update has been made to [enforce SMB encryption](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-client-encryption-mandate-now-supported-in-windows-insider/ba-p/3964037) for all outbound SMB client connections. With this update, administrators can set a mandate that all destination servers support SMB 3.x and encryption. If a server lacks these capabilities, the client will be unable to establish a connection.
+
+- Also in build 25997, the [SMB authentication rate limiter](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-authentication-rate-limiter-now-on-by-default-in-windows/ba-p/3634244), which limits the number of authentication attempts that can be made within a certain time period, is set to enabled by default.
+
+- Starting with build 25951, the SMB client has been updated to support [NTLM blocking](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-ntlm-blocking-now-supported-in-windows-insider/ba-p/3916206) for remote outbound connections. This is a departure from the previous behavior, where the Windows Simple and Protected GSSAPI Negotiation Mechanism ([SPNEGO](/openspecs/windows_protocols/ms-spng/b16309d8-4a93-4fa6-9ee2-7d84b2451c84)) would negotiate Kerberos, NTLM, and other mechanisms with the destination server to determine a supported security package.
+
+- Also introduced in build 25951, is the [SMB dialect management](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-dialect-management-now-supported-in-windows-insider/ba-p/3916368) feature where the SMB server now controls which SMB 2 and SMB 3 dialects it negotiates compared to the previous behavior matching only the highest dialect.
+
+- Beginning with build 25931, [SMB signing](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-signing-required-by-default-in-windows-insider/ba-p/3831704) is now required by default for all SMB outbound connections where previously this was only required when connecting to shares named **SYSVOL** and **NETLOGON** on AD domain controllers.
+
+- The [Remote Mailslot](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-beginning-of-the-end-of-remote-mailslots-as-part-of-windows/ba-p/3762048) protocol is disabled by default starting in build 25314.
 
 ### Storage Replica Enhanced Log
 
