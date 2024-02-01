@@ -5,7 +5,6 @@ ms.topic: conceptual
 ms.author: ericam
 author: phstee
 ms.date: 10/16/2017
-ms.custom: contperf-fy22q2
 ---
 
 # Tuning IIS 10.0
