@@ -8,7 +8,6 @@ manager: femila
 ms.date: 07/12/2023
 ms.prod: windows-server
 ms.mktglfcycl: manage
-ms.custom: contperf-fy22q3
 ---
 
 # How to get Extended Security Updates (ESU) for Windows Server

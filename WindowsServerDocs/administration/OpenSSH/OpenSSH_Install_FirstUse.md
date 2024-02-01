@@ -5,7 +5,6 @@ ms.date: 01/09/2024
 ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
-ms.custom: contperf-fy21q4
 ---
 
 # Get started with OpenSSH for Windows
