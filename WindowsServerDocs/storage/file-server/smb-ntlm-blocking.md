@@ -17,7 +17,7 @@ The SMB client now supports blocking NTLM queries for remote outbound connection
 
 ## Prerequisites
 
-In order to use NTLM blocking for the SMB client, you need the following things:
+NTLM blocking for the SMB client requires the following:
 
 - A Windows 11 deployment.
 - Windows Server Preview build 25951 or later.
@@ -71,7 +71,13 @@ To enable a list of exceptions to NTLM blocking:
 There isn't currently a PowerShell equivalent to the Block NTLM Server Exception List Group Policy object. In order to set up an exception list, you must go into the Group Policy Editor and configure the setting manually. However, once you've completed the manual setup, you can make individual exceptions for certain IPs by running this command:
 
   ```powershell
-  Set-SmbServerConfiguration -ExceptionList "<IP Address>"
+  $params = @{
+    Path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation"
+    Name = "BlockNTLMServerExceptionList"
+  }
+  $CurrentValue = (Get-ItemProperty @params).BlockNTLMServerExceptionList
+  $params["Value"] = if ($CurrentValue -eq $null) { @("") } else { $CurrentValue + "<IP Address>" }
+  Set-ItemProperty @params 
   ```
 
 ---
