@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 01/11/2022
-ms.prod: windows-server
 ---
 
 # Guest operating system and application supportability on Hyper-V

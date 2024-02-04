@@ -5,7 +5,6 @@ ms.topic: article
 author: Heidilohr
 ms.author: helohr
 ms.date: 01/16/2024
-ms.prod: windows-server
 ---
 # Control SMB signing behavior (preview)
 

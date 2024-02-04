@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 07/12/2023
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ---
 
