@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 08/17/2021
-ms.prod: windows-server
 ---
 
 # Server Core vs Server with Desktop Experience install options

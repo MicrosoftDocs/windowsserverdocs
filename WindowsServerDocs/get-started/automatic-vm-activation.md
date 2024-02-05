@@ -5,7 +5,6 @@ ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 09/19/2023
-ms.prod: windows-server
 ---
 
 # Automatic Virtual Machine Activation in Windows Server

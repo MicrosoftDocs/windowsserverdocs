@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: alalve
 manager: femila
 ms.date: 09/16/2022
-ms.prod: windows-server
 ---
 
 # Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022

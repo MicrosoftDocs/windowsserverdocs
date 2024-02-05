@@ -5,7 +5,6 @@ ms.topic: article
 author: xelu86
 ms.author: wscontent
 ms.date: 02/01/2024
-ms.prod: windows-server
 ---
 
 # What's new in Windows Server Insiders Preview

@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 11/25/2022
-ms.prod: windows-server
 ---
 
 # Features removed or no longer developed starting with Windows Server 2019
