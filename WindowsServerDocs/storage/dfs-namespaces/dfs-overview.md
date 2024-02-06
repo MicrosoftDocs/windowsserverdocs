@@ -109,7 +109,7 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 
 Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested.
 
-- You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory.
+- You can host domain-based namespaces in Azure virtual machines, including environments with Microsoft Entra ID.
 - You can cluster stand-alone namespaces in Azure virtual machines using failover clusters that use [Shared Disk](/azure/virtual-machines/disks-shared) or [Ultra Disks](/azure/virtual-machines/disks-enable-ultra-ssd).
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](/azure/virtual-machines/).

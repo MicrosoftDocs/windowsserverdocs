@@ -33,4 +33,4 @@ For detailed information and other installation options, see [Install or uninsta
 1. In the **RD Licensing Manager**, select the server, and then select **Action** > **Activate Server**.
 1. Accept the remaining default values in the Activate Server Wizard until you see the **Company information** page, then enter your company information.
 1. Accept the defaults for the remaining pages until the final page. Clear **Start Install Licenses Wizard now**, and then select **Finish**.
-1. Select **Action** > **Review Configuration** > **Add to Group** > **OK** and enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Azure AD Domain Services, but you can ignore any warnings or errors.
+1. Select **Action** > **Review Configuration** > **Add to Group** > **OK** and enter credentials for a user in the AAD DC Administrators group, and register as SCP. This step might not work if you are using Microsoft Entra Domain Services, but you can ignore any warnings or errors.

@@ -61,7 +61,7 @@
     - name: What's new in Active Directory Domain Services
       href: whats-new-active-directory-domain-services.md
     - name: What's new in Active Directory Domain Services Insider Preview
-      href: ad-ds/whats-new-active-directory-domain-services-insider-preview.md
+      href: ../get-started/whats-new-windows-server-insiders-preview.md
     - name: AD DS Getting started
       items:
       - name: Active Directory Administrative Center
