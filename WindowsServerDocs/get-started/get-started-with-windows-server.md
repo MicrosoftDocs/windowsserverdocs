@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 6/17/2021
-ms.prod: windows-server
 ---
 
 # Get started with Windows Server

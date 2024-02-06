@@ -11,9 +11,6 @@ ms.topic: conceptual
 
 Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Windows Server Active Directory and how to retrieve them.
 
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Microsoft Entra LAPS scenario, see [Windows LAPS availability and Microsoft Entra LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
-
 ## Domain functional level and domain controller OS version requirements
 
 If your domain is configured below 2016 Domain Functional Level (DFL), you can't enable Windows LAPS password encryption period. Without password encryption, clients can only be configured to store passwords in clear-text (secured by Active Directory ACLs) and DCs can't be configured to manage their local DSRM account.
@@ -60,7 +57,7 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 > [!TIP]
 > If you prefer to set the inheritable permissions on the root of the domain, this is possible by specifying the entire domain root using DN syntax. For example, specify 'DC=laps,DC=com' for the -Identity parameter.
 
-## Remove Extended Rights permissions
+## Query Extended Rights permissions
 
 Some users or groups might already be granted Extended Rights permission on the managed device's OU. This permission is problematic because it grants the ability to read confidential attributes (all of the Windows LAPS password attributes are marked as confidential). One way to check to see who is granted these permissions is by using the `Find-LapsADExtendedRights` cmdlet. For example:
 
@@ -172,4 +169,4 @@ You can use the `Reset-LapsPassword` cmdlet to locally force an immediate rotati
 - [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
 - [Use Windows LAPS PowerShell cmdlets](laps-management-powershell.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)

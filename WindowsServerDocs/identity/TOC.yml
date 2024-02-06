@@ -1017,8 +1017,14 @@
     items:
     - name: What is Windows LAPS?
       href: laps/laps-overview.md
-    - name: Key concepts in Windows LAPS
-      href: laps/laps-concepts.md
+    - name: Windows LAPS concepts
+      items:
+      - name: Overview
+        href: laps/laps-concepts-overview.md
+      - name: Account management modes
+        href: laps/laps-concepts-account-management-modes.md
+      - name: Passwords and passphrases
+        href: laps/laps-concepts-passwords-passphrases.md
     - name: Windows LAPS scenarios
       items:
       - name: Windows LAPS and Microsoft Entra ID

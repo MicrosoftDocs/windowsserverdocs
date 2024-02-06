@@ -136,6 +136,8 @@
     items:
     - name: Manage personal desktop session collections
       href: rds-manage-personal-collection.md
+    - name: Remote Desktop IP Virtualization
+      href: internet-protocol-virtualization.md
     - name: Recommended configuration for VDI desktops
       href: rds-vdi-recommendations.md
     - name: Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role

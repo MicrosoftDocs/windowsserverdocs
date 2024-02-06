@@ -1,7 +1,6 @@
 ---
 title: SMB over QUIC
 description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter Azure Edition, Windows 11  
-ms.prod: windows-server
 ms.topic: article
 author: NedPyle
 ms.author: inhenkel

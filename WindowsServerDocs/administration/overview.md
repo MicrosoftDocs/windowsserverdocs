@@ -16,18 +16,16 @@ We designed these management tools to work together in Windows Server environmen
 
 The four main options for managing your Windows Server infrastructure are:
 
-- [Azure Arc and Azure Automanage](#azure-arc-and-azure-automanage)
+- [Azure Arc](#azure-arc)
 - [Windows Admin Center](#windows-admin-center)
 - [System Center](#system-center)
 - [Local management tools](#local-management-tools)
 
 This article walks you through each one, describing their capabilities, and gives you resources to download and configure them.
 
-## Azure Arc and Azure Automanage
+## Azure Arc
 
 Azure Arc provides cloud-based management for servers. When you enable Azure Arc, you can manage physical servers running Windows or Linux and virtual machines (VMs) even if they're hosted outside of Azure on your corporate network or another cloud provider. The management experience is seamless, so it feels like managing native Azure virtual machines. You can manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
-
-You can use Azure Automanage with your Azure Arc-enabled servers to further streamline your management experience. If your Arc-enabled servers already follow server management guidelines, Automanage manages them for you. Automanage handles service discovery, enrollment, configuration, and monitoring for the Azure services your servers use.
 
 Here's a brief summary of the capabilities of Azure Arc and Azure Automanage:
 
@@ -36,7 +34,7 @@ Here's a brief summary of the capabilities of Azure Arc and Azure Automanage:
 - Limited support for disconnected mode
 - Focused on at-scale governance, security, monitoring, and reducing operating expenses.
 
-### When to use Azure Arc and Azure Automanage
+### When to use Azure Arc
 
 You can use Azure Arc and Azure Automanage in the following situations:
 
@@ -44,13 +42,12 @@ You can use Azure Arc and Azure Automanage in the following situations:
 - You want to manage your system using Automation runbooks or solutions like Update Management
 - You want to secure your Windows Server using Microsoft Defender for Cloud.
 - You want to use Azure Policy Guest Configuration to govern your Windows Server machines.
-- You want to use Azure Automanage to automatically, enroll, configure and monitor Azure services that follow server management guidelines.
 
-### Azure Arc and Azure Automanage resources
+### Azure Arc resources
 
 You can start setting up Azure Arc for your servers at [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
-Otherwise, you can learn more about Azure Arc at [What is an Azure Arc-enabled server](/azure/azure-arc/servers/overview) and [Azure Automanage machine best practices](/azure/automanage/automanage-virtual-machines).
+Otherwise, you can learn more about Azure Arc at [What is an Azure Arc-enabled server](/azure/azure-arc/servers/overview).
 
 ## Windows Admin Center
 
