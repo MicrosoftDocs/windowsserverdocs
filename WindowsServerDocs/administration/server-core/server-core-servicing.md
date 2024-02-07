@@ -21,7 +21,7 @@ You can patch a server running Server Core installation in the following ways:
 ## View the updates installed on your Server Core server
 Before you add a new update to Server Core, it's a good idea to see what updates have already been installed.
 
-To view updates by using Windows PowerShell, run **Get-Hotfix**.
+To view updates by using Windows PowerShell, run **Get-Hotfix | Sort-Object InstalledOn**.
 
 To view updates by running a command, run **systeminfo.exe**. There might be a short delay while the tool inspects your system.
 
@@ -29,7 +29,12 @@ You can also run **wmic qfe list** from the command line.
 
 ## Patch Server Core automatically with Windows Update
 
-Use the following steps to patch the server automatically with Windows Update:
+Use [sconfig](https://github.com/MicrosoftDocs/windowsserverdocs/edit/main/WindowsServerDocs/administration/server-core/server-core-sconfig.md) to check for updates and configure Windows Update settings, including Automatic Updates.
+
+Starting with Windows Server 2022, sconfig will be launched automatically by default in Windows Server Core installation option, unless this has been deactivated.
+
+As Windows Scripting is on the going to be deprecated we encourage you using sconfig over the following wsf scripts.
+
 
 1. Verify the current Windows Update setting:
    ```
@@ -52,6 +57,8 @@ Use the following steps to patch the server automatically with Windows Update:
    Net start wuauserv
    ```
 
+
+
 If the server is a member of a domain, you can also configure Windows Update using Group Policy. For more information, see https://go.microsoft.com/fwlink/?LinkId=192470. However, when you use this method, only option 4 ("Auto download and schedule the install") is relevant to Server Core installations because of the lack of a graphical interface. For more control over which updates are installed and when, you can use a script which provides a command-line equivalent of most of the Windows Update graphical interface. For information about the script, see https://go.microsoft.com/fwlink/?LinkId=192471.
 
 To force Windows Update to immediately detect and install any available updates, run the following command:
@@ -65,6 +72,13 @@ Depending on the updates that are installed, you may need to restart the compute
 ## Patch the server with WSUS
 
 If the Server Core server is a member of a domain, you can configure it to use a WSUS server with Group Policy. For more information, download the [Group Policy reference information](https://www.microsoft.com/download/details.aspx?id=25250). You can also review [Configure Group Policy Settings for Automatic Updates](../windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md)
+
+
+## Patch the server with Azure Update Manager
+
+The latest option patching Windows Server (Core) installation option is to leverage [Azure Update Manager](https://learn.microsoft.com/azure/update-manager/overview?tabs=azure-arc-vms) from the Azure Portal.
+
+
 
 ## Patch the server manually
 
@@ -80,6 +94,8 @@ Depending on the updates that are installed, you may need to restart the compute
 To uninstall an update manually, run the following command:
 
 ```
-Wusa /uninstall <update>.msu /quiet
+To remove the LCU after installing the combined SSU and LCU package, use the DISM/Remove-Package command line option with the LCU package name as the argument. You can find the package name by using this command: DISM /online /get-packages.
+
+Do not use wusa.exe on Windows Server 2019 or newer to uninstall updates.
 ```
 
