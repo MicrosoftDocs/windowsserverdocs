@@ -30,7 +30,7 @@ GPU partitioning allows you to share a physical GPU device with multiple virtual
 The GPU partitioning feature uses the [Single Root IO Virtualization (SR-IOV) interface](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-), which provides a hardware-backed security boundary with predictable performance for each VM. Each VM can access only the GPU resources dedicated to them and the secure hardware partitioning prevents unauthorized access by other VMs.
 
 > [!NOTE]
-> Currently, we support only Nvidia A2, A10, A16, A40 GPUs for GPU partitioning on Azure Stack HCI. We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support additional GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA) or GPU passthrough. Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Use GPUs with clustered VMs](../manage/use-gpu-with-clustered-vm.md).
+> Currently, we support only Nvidia A2, A10, A16, A40 GPUs for GPU partitioning. We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support additional GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA) or GPU passthrough. Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Use GPUs with clustered VMs](../manage/use-gpu-with-clustered-vm.md).
 
 ## When to use GPU partitioning
 
@@ -42,29 +42,39 @@ You may prefer to keep certain workloads on premises because they require low la
 
 ## Supported guest operating systems
 
+:::zone pivot="windows-server"
+GPU partitioning on Windows Server supports these guest operating systems:
+:::zone-end
+
+:::zone pivot="azure-stack-hci"
 GPU partitioning on Azure Stack HCI supports these guest operating systems:
+:::zone-end
 
 - Windows 10, Windows 11, Windows 10 Enterprise multi-session​, Windows 11 Enterprise multi-session
 - Windows Server 2019, Windows Server 2022
 - Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​
 
-## GPU partitioning caveats
+## Caveats
 
 Consider the following caveats when using the GPU partitioning feature:
 
 - For best performance, we recommend that you create a homogeneous configuration for GPUs across all the servers in your cluster. A homogeneous configuration consists of installing the same make and model of the GPU, and configuring the same partition count in the GPUs across all the servers in the cluster. For example, in a cluster of two servers with one or more GPUs installed, all the GPUs must have the same make, model, and size. The partition count on each GPU must also match. Azure Stack HCI doesn't support GPU partitioning if your configuration isn't homogeneous. Here are some examples of unsupported configurations:
 
-    - Mixing GPUs from different vendors in the same cluster.
-    
-    - Using different GPU models from different product families from the same vendor in the same cluster.
+  - Mixing GPUs from different vendors in the same cluster.
 
-- You can't assign a physical GPU as both [Discrete Device Assignment (DDA)](../manage/use-gpu-with-clustered-vm.md) or partitionable GPU. You can either assign it as DDA or as partitionable GPU, but not both.
+  - Using different GPU models from different product families from the same vendor in the same cluster.
+
+- You can't assign a physical GPU as both [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md) or partitionable GPU. You can either assign it as DDA or as partitionable GPU, but not both.
 
 - You can assign only a single GPU partition to a VM.
+
+:::zone pivot="azure-stack-hci"
 
 - Azure Stack HCI auto-assigns the partition to the VMs. You can't choose a specific partition for a specific VM.
 
 - Currently, GPU partitioning on Azure Stack HCI doesn't support live migration of VMs. But VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
+
+:::zone-end
 
 - You can partition your GPU using Windows Admin Center or using PowerShell. We recommend that you use Windows Admin Center to configure and assign GPU partitions. Windows Admin Center automatically validates for a homogeneous configuration of the GPUs across all the servers in your cluster. It provides appropriate warnings and errors to take any corrective action needed.
 
@@ -72,8 +82,22 @@ Consider the following caveats when using the GPU partitioning feature:
 
 ## Next steps
 
+:::zone pivot="windows-server"
+
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md)
-- [Use GPUs with clustered VMs](../manage/use-gpu-with-clustered-vm.md)
+- [Use GPUs with clustered VMs](/azure-stack/hci/manage/use-gpu-with-clustered-vm?toc=/windows-server/virtualization/toc.json&bc=/windows-server/breadcrumbs/toc.json)
 - [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
+
+:::zone-end
+
+:::zone pivot="azure-stack-hci"
+
+For more information on using GPUs with your VMs and GPU partitioning, see:
+
+- [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md?toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumbs/toc.json&pivots=azure-stack-hci)
+- [Use GPUs with clustered VMs](/azure-stack/hci/manage/use-gpu-with-clustered-vm)
+- [Accelerate your edge workloads with affordable NVIDIA GPU-powered Azure Stack HCI solutions](https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-your-edge-workloads-with-affordable-nvidia-gpu/ba-p/3692795) blog
+
+:::zone-end
