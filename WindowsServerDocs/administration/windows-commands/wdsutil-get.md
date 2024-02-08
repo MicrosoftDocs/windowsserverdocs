@@ -25,7 +25,7 @@ Retrieves properties or attributes about the specified object.
 |[wdsutil get-allnamespaces command](wdsutil-get-allnamespaces.md)|Displays the attributes of all namespaces.|
 |[wdsutil get-allservers command](wdsutil-get-allservers.md)|Displays information about all Windows Deployment Services servers.|
 |[wdsutil get-autoadddevices command](wdsutil-get-autoadddevices.md)|Displays computers that are pending administrative approval on a specified server.|
-|[wdsutil get-device command](wdsutil-get-device.md)|Displays the attributes of an pending computer.|
+|[wdsutil get-device command](wdsutil-get-device.md)|Displays the attributes of a pending computer.|
 |[wdsutil get-image command](wdsutil-get-image.md)|Displays the attributes of an existing image.|
 |[wdsutil get-imagefile command](wdsutil-get-imagefile.md)|Displays information about images in a specified .wim file.|
 |[wdsutil get-imagegroup command](wdsutil-get-imagegroup.md)|Displays information about a specified image group.|
