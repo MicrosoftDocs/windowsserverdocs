@@ -76,9 +76,9 @@
         href: hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
       - name: Upgrade virtual machine version
         href: hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md
-      - name: Partition and share GPUs
+      - name: GPU Partitioning
         href: hyper-v/gpu-partitioning.md
-      - name: Partition and assign GPUs to a virtual machine in Hyper-V
+      - name: Partition and assign GPUs to a virtual machine
         href: hyper-v/partition-assign-vm-gpu.md
       - name: Deploy graphics devices using DDA
         href: hyper-v/deploy/deploying-graphics-devices-using-dda.md
