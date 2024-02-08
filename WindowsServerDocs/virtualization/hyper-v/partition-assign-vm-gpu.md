@@ -12,7 +12,7 @@ zone_pivot_groups: windows-os
 
 # Partition and assign GPUs to a virtual machine
 
-:::zone pivot="window-server"
+:::zone pivot="windows-server"
 >Applies to: Windows Server 2025
 
 > [!IMPORTANT]
@@ -22,6 +22,9 @@ zone_pivot_groups: windows-os
 :::zone pivot="azure-stack-hci"
 >Applies to: Azure Stack HCI, versions 23H2 and 22H2
 
+[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
+
+[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-stack/includes/hci-arc-vm.md)]
 inlcudes here
 ::: zone-end
 
