@@ -10,7 +10,7 @@ zone_pivot_groups: windows-os
 
 # GPU partitioning
 
-::zone pivot="windows-server"
+:::zone pivot="windows-server"
 >Applies to: Windows Server 2025
 
 > [!IMPORTANT]
