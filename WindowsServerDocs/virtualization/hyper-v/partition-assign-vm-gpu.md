@@ -57,7 +57,7 @@ If you're using Windows Admin Center to provision GPU partitioning, you must ins
 
 After you install the extension, it appears under the **Installed extensions** tab as shown in the following screenshot. Make sure the version of the **GPUs** extension is 2.8.0 or later.
 
-:::image type="content" source="/media/partition-assign-vm-gpu/gpu-extension.png" alt-text="Screenshot of the Installed extensions tab in Windows Admin Center to verify the GPUs extension is installed." lightbox="/media/partition-assign-vm-gpu/gpu-extension.png" :::
+:::image type="content" source="../media/partition-assign-vm-gpu/gpu-extension.png" alt-text="Screenshot of the Installed extensions tab in Windows Admin Center to verify the GPUs extension is installed." lightbox="./media/partition-assign-vm-gpu/gpu-extension.png" :::
 
 ### Prerequisites for PowerShell
 
@@ -101,7 +101,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
     
     - **Not assignable**. Indicates that the GPU isn't assignable because it's an older PCI-style device or switch port.
 
-        :::image type="content" source="/media/partition-assign-vm-gpu/gpu-tab.png" alt-text="Screenshot of the GPUs tab showing the inventory of the servers and their installed GPU devices." lightbox="/media/partition-assign-vm-gpu/gpu-tab.png" :::
+        :::image type="content" source="./media/partition-assign-vm-gpu/gpu-tab.png" alt-text="Screenshot of the GPUs tab showing the inventory of the servers and their installed GPU devices." lightbox="./media/partition-assign-vm-gpu/gpu-tab.png" :::
 
 1. Proceed further in the GPU partitioning workflow only if the **Assigned status** column shows **Partitioned** for the GPUs in all the servers in your cluster.
 
@@ -250,7 +250,7 @@ Follow these steps to configure partition count via Windows Admin Center:
 
 1. Select a GPU or a GPU partition to display its details in the bottom section of the page, under **Selected item details**. For example, if you select a GPU, it displays the GPU name, GPU ID, available encoder and decoder, available VRAM, valid partition count, and the current partition count. If you select a GPU partition, it displays the partition ID, VM ID, instance path, partition VRAM, partition encode, and partition decode.
 
-   :::image type="content" source="/media/partition-assign-vm-gpu/gpu-partitions-tab.png" alt-text="Screenshot of the GPU partitions tab showing the inventory of the servers and their installed GPU devices. The bottom section on the page displays the details of the selected resource." lightbox="/media/partition-assign-vm-gpu/gpu-partitions-tab.png" :::
+   :::image type="content" source="./media/partition-assign-vm-gpu/gpu-partitions-tab.png" alt-text="Screenshot of the GPU partitions tab showing the inventory of the servers and their installed GPU devices. The bottom section on the page displays the details of the selected resource." lightbox="./media/partition-assign-vm-gpu/gpu-partitions-tab.png" :::
 
 1. Select **Configure partition count**.
 
@@ -258,31 +258,31 @@ Follow these steps to configure partition count via Windows Admin Center:
 
 1. Select a set of homogeneous GPUs. A set of homogeneous GPUs is the one that has GPUs of the same size, manufacturer, model number, and number of partitions. By default, Windows Admin Center automatically selects a set of homogenous GPUs if it detects one, as shown in the following screenshot:
 
-   :::image type="content" source="/media/partition-assign-vm-gpu/configure-partition-count.png" alt-text="Screenshot of the Configure partition count on GPUs showing the inventory of GPUs to configure the partition count." lightbox="/media/partition-assign-vm-gpu/configure-partition-count.png" :::
+   :::image type="content" source="./media/partition-assign-vm-gpu/configure-partition-count.png" alt-text="Screenshot of the Configure partition count on GPUs showing the inventory of GPUs to configure the partition count." lightbox="./media/partition-assign-vm-gpu/configure-partition-count.png" :::
    
     You may see a warning or an error depending on what selections you make:
 
     - **Warning.** If you deselect one or more GPUs from the homogeneous set of GPUs, Windows Admin Center gives you a warning, but doesn't stop you from proceeding further. Warning text indicates that you're not selecting all the GPUs and it may result in different partition count, which isn't recommended.
     
-        :::image type="content" source="/media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" alt-text="Screenshot showing a warning when all the GPUs within a homogeneous set aren't selected." lightbox="/media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" :::
+        :::image type="content" source="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" alt-text="Screenshot showing a warning when all the GPUs within a homogeneous set aren't selected." lightbox="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" :::
 
     - **Warning.** If not all the GPUs across all the servers have the same configuration, Windows Admin Center gives a warning. You must manually select the GPUs with the same configuration to proceed further.
     
-        :::image type="content" source="/media/partition-assign-vm-gpu/warning-different-configuration.png" alt-text="Screenshot showing a warning when you have GPUs with different configurations." lightbox="/media/partition-assign-vm-gpu/warning-different-configuration.png" :::
+        :::image type="content" source="./media/partition-assign-vm-gpu/warning-different-configuration.png" alt-text="Screenshot showing a warning when you have GPUs with different configurations." lightbox="./media/partition-assign-vm-gpu/warning-different-configuration.png" :::
     
     - **Error.** If you select GPUs with different configurations, Windows Admin Center gives you an error, and doesn't let you proceed.
     
-        :::image type="content" source="/media/partition-assign-vm-gpu/error-different-configuration.png" alt-text="Screenshot showing an error when you select GPUs with different configurations." lightbox="/media/partition-assign-vm-gpu/error-different-configuration.png" :::
+        :::image type="content" source="./media/partition-assign-vm-gpu/error-different-configuration.png" alt-text="Screenshot showing an error when you select GPUs with different configurations." lightbox="./media/partition-assign-vm-gpu/error-different-configuration.png" :::
     
     - **Error.** If you select a GPU partition that is already assigned to a VM, Windows Admin Center gives you an error, and doesn't let you proceed. You must first unassign the partition from the VM before proceeding further. See [Unassign a partition from a VM](#unassign-a-partition-from-a-vm).
     
-        :::image type="content" source="/media/partition-assign-vm-gpu/error-assigned-partition-selection.png" alt-text="Screenshot showing an error when you select a partition that is already assigned to a VM." lightbox="/media/partition-assign-vm-gpu/error-assigned-partition-selection.png" :::
+        :::image type="content" source="./media/partition-assign-vm-gpu/error-assigned-partition-selection.png" alt-text="Screenshot showing an error when you select a partition that is already assigned to a VM." lightbox="./media/partition-assign-vm-gpu/error-assigned-partition-selection.png" :::
 
 1. After you select a homogeneous set of GPUs, select the partition count from the **Number of Partitions** dropdown list. This list automatically populates the partition counts configured by your GPU manufacturer. The counts displayed in the list can vary depending on the type of GPU you selected.
 
     As soon as you select a different partition count, a tooltip appears below the dropdown list, which dynamically displays the size of VRAM that each partition gets. For example, if the total VRAM is 16 GB for 16 partitions in the GPU, changing the partition count from 16 to 8 assigns each partition with 1.85 GB of VRAM.
 
-    :::image type="content" source="/media/partition-assign-vm-gpu/tooltip-about-vram.png" alt-text="Screenshot showing the tooltip that appears when you select a different partition count." lightbox="/media/partition-assign-vm-gpu/tooltip-about-vram.png" :::
+    :::image type="content" source="./media/partition-assign-vm-gpu/tooltip-about-vram.png" alt-text="Screenshot showing the tooltip that appears when you select a different partition count." lightbox="./media/partition-assign-vm-gpu/tooltip-about-vram.png" :::
 
 1. Select **Configure partition count**.
 
@@ -390,7 +390,7 @@ You must save your workloads before assigning partitions. If your VM is currentl
 
 1. On the **GPU partitions** tab, select **+ Assign partition**.
 
-    :::image type="content" source="/media/partition-assign-vm-gpu/assign-partition.png" alt-text="Screenshot showing the GPU partitions tab with the Assign partition option highlighted." lightbox="/media/partition-assign-vm-gpu/assign-partition.png" :::
+    :::image type="content" source="./media/partition-assign-vm-gpu/assign-partition.png" alt-text="Screenshot showing the GPU partitions tab with the Assign partition option highlighted." lightbox="./media/partition-assign-vm-gpu/assign-partition.png" :::
 
     The **Assign GPU partition to VM** page is displayed.
 
@@ -408,7 +408,7 @@ You must save your workloads before assigning partitions. If your VM is currentl
 
 1. Select **Assign partition**. This assigns partition of the selected VRAM size to the selected VM on the selected host server.
 
-    :::image type="content" source="/media/partition-assign-vm-gpu/assign-gpu-partition.png" alt-text="Screenshot showing the Assign GPU partition to VM page." lightbox="/media/partition-assign-vm-gpu/assign-gpu-partition.png" :::
+    :::image type="content" source="./media/partition-assign-vm-gpu/assign-gpu-partition.png" alt-text="Screenshot showing the Assign GPU partition to VM page." lightbox="./media/partition-assign-vm-gpu/assign-gpu-partition.png" :::
 
     After the partition is assigned, Windows Admin Center notifies you that the partition is successfully assigned and displays the **GPU partitions** tab again. On the **GPU partitions** tab, the VM appears on the GPU partition row under the server it's installed on.
 
@@ -503,7 +503,7 @@ Follow these steps to unassign a partition from a VM:
 
 1. Select **- Unassign partition**.
 
-    :::image type="content" source="/media/partition-assign-vm-gpu/unassign-partition.png" alt-text="Screenshot showing the GPU partitions tab with the Unassign partition option highlighted." lightbox="/media/partition-assign-vm-gpu/unassign-partition.png" :::
+    :::image type="content" source="./media/partition-assign-vm-gpu/unassign-partition.png" alt-text="Screenshot showing the GPU partitions tab with the Unassign partition option highlighted." lightbox="./media/partition-assign-vm-gpu/unassign-partition.png" :::
 
     The **Unassign GPU partition from VM** page is displayed.
 
@@ -513,7 +513,7 @@ Follow these steps to unassign a partition from a VM:
 
 1. Select **Unassign partition**.
 
-    :::image type="content" source="/media/partition-assign-vm-gpu/unassign-gpu-partition.png" alt-text="Screenshot showing the Unassign GPU partition from VM page." lightbox="/media/partition-assign-vm-gpu/unassign-gpu-partition.png" :::
+    :::image type="content" source="./media/partition-assign-vm-gpu/unassign-gpu-partition.png" alt-text="Screenshot showing the Unassign GPU partition from VM page." lightbox="./media/partition-assign-vm-gpu/unassign-gpu-partition.png" :::
 
     After the partition is unassigned, Windows Admin Center notifies you that the partition is successfully unassigned and displays the **GPU partitions** tab again. On the **GPU partitions** tab, the VM from which the partition is unassigned no longer shows on the GPU partition row.
 
