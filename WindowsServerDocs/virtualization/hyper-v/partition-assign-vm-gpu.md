@@ -57,7 +57,7 @@ If you're using Windows Admin Center to provision GPU partitioning, you must ins
 
 After you install the extension, it appears under the **Installed extensions** tab as shown in the following screenshot. Make sure the version of the **GPUs** extension is 2.8.0 or later.
 
-:::image type="content" source="../media/partition-assign-vm-gpu/gpu-extension.png" alt-text="Screenshot of the Installed extensions tab in Windows Admin Center to verify the GPUs extension is installed." lightbox="./media/partition-assign-vm-gpu/gpu-extension.png" :::
+:::image type="content" source="./media/partition-assign-vm-gpu/gpu-extension.png" alt-text="Screenshot of the Installed extensions tab in Windows Admin Center to verify the GPUs extension is installed." lightbox="./media/partition-assign-vm-gpu/gpu-extension.png" :::
 
 ### Prerequisites for PowerShell
 
