@@ -11492,12 +11492,12 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/laps/laps-concepts.md",
-      "redirect_url": "WindowsServerDocs/identity/laps/laps-concepts-overview",
+      "redirect_url": "/windows-server/identity/laps/laps-concepts-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/whats-new-active-directory-domain-services-insider-preview.md",
-      "redirect_url": "WindowsServerDocs/get-started/whats-new-windows-server-insiders-preview",
+      "redirect_url": "/windows-server/get-started/whats-new-windows-server-insiders-preview",
       "redirect_document_id": false
     },
   ]
