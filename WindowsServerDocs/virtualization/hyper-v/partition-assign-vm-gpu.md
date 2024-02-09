@@ -27,7 +27,7 @@ zone_pivot_groups: windows-os
 
 This article describes how to configure graphics processing unit (GPU) partitions and assign a partition to a virtual machine (VM). It provides instructions on how to configure GPU partition count, assign GPU partitions, and unassign GPU partitions via Windows Admin Center and PowerShell.
 
-To provision the GPU partitioning feature you'll need to complete the following steps:
+To provision the GPU partitioning feature, you'll need to complete the following steps:
 
 1. [Complete all the prerequisites](#prerequisites).
 1. [Verify GPU driver installation](#verify-gpu-driver-installation).
@@ -61,7 +61,7 @@ There are several requirements and things to consider before you begin to use th
 
 :::zone pivot="windows-server"
 
-- Cluster hosts will need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi.
+- Cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi.
 
 > [!NOTE]
 > When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration will automatically fall back to using TCP/IP with compression. This has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
@@ -265,7 +265,7 @@ Follow these steps to configure GPU partition count in PowerShell:
 > [!NOTE]
 > When using PowerShell, you must manually ensure the GPU configuration is homogenous across all the servers in your cluster.
 
-1. Refer to the **Name** and **ValidPartitionCounts** values you noted earlier when you ran the `Get-VMHostPartitionableGpu` command. See the PowerShell tab in the [Verify GPU driver installation](#verify-gpu-driver-installation) section, above.
+1. Refer to the **Name** and **ValidPartitionCounts** values you noted earlier when you ran the `Get-VMHostPartitionableGpu` command. See the PowerShell tab in the [Verify GPU driver installation](#verify-gpu-driver-installation) previous section.
 
 1. Connect to the server whose GPU partition count you want to configure.
 
@@ -370,7 +370,7 @@ Follow these steps to assign GPU partition to a VM using PowerShell:
     Add-VMGpuPartitionAdapter -VMName $VMName
     Get-VMGpuPartitionAdapter -VMName $VMName | FL InstancePath,PartitionId,PartitionVfLuid
     ```
-FIXME:
+
     Here's a sample output:
 
     ```powershell
@@ -393,7 +393,7 @@ You must save your workloads before unassigning partitions.
 
 ## [Windows Admin Center](#tab/windows-admin-center)
 
-If your VM is currently turned on or running, Windows Admin Center automatically turns it off first, unassigns the partition, and then automatically turns it on.
+If your VM is currently turned on or running, Windows Admin Center automatically turns it off first, unassigns the partition, then automatically turns it on.
 
 Follow these steps to unassign a partition from a VM:
 
