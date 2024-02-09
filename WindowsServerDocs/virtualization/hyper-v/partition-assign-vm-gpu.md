@@ -27,13 +27,31 @@ zone_pivot_groups: windows-os
 
 This article describes how to configure graphics processing unit (GPU) partitions and assign a partition to a virtual machine (VM). It provides instructions on how to configure GPU partition count, assign GPU partitions, and unassign GPU partitions via Windows Admin Center and PowerShell.
 
+To provision the GPU partitioning feature you'll need to complete the following steps:
+
+1. [Complete all the prerequisites](#prerequisites).
+1. [Verify GPU driver installation](#verify-gpu-driver-installation).
+1. [Configure partition count](#configure-gpu-partition-count).
+1. [Assign GPU partition to a VM](#assign-gpu-partition-to-a-vm).
+1. [If necessary, unassign a GPU partition from a VM](#unassign-a-partition-from-a-vm).
+
 ## Prerequisites
 
 There are several requirements and things to consider before you begin to use the GPU partitioning feature:
 
 ### Prerequisites for the host server
 
-- Install Azure Stack HCI, version 22H2 operating system on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](../deploy/operating-system.md).
+:::zone pivot="windows-server"
+
+- A Windows Server with the Hyper-V role installed and configured. See [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md) to found out how to get stared.
+
+::: zone-end
+
+:::zone pivot="azure-stack-hci"
+
+- Install Azure Stack HCI, version 22H2 operating system on all the servers in your cluster. See [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
+
+::: zone-end
 
 - Install the physical GPU device of the same make, model, and size on every server of the cluster. Refer to your OEM-provided documentation when installing the GPU device on your physical servers in the cluster.
 
@@ -41,11 +59,18 @@ There are several requirements and things to consider before you begin to use th
 
 - Ensure that the virtualization support and SR-IOV are enabled in the BIOS of each server in the cluster. Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
+:::zone pivot="windows-server"
+
+- Cluster hosts will need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi.
+
+> [!NOTE]
+> When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration will automatically fall back to using TCP/IP with compression. This has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
+
+::: zone-end
+
 ### Prerequisites for the VMs
 
-- Create VM on the server installed with Azure Stack HCI operating system. See [Manage VMs with Windows Admin Center](../manage/vm.md) and [Manage VMs with PowerShell](../manage/vm-powershell.md).
-
-- Install your chosen guest operating system on the VM. See [Supported guest operating systems](#supported-guest-operating-systems) for a list of supported guest operating systems.
+- Deploy a VM using a guest operating system from the [Supported guest operating systems](gpu-partitioning.md#supported-guest-operating-systems) list.
 
 - Install the GPU drivers on the VM by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [Nvidia vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
 
@@ -62,16 +87,6 @@ After you install the extension, it appears under the **Installed extensions** t
 If you're using PowerShell to provision GPU partitioning, you must run all PowerShell commands as the Administrator user.
 
 For detailed information on how to use PowerShell commands for GPU partitioning, see the [Add-VMGpuPartitionAdapter](/powershell/module/hyper-v/add-vmgpupartitionadapter), [Get-VMGpuPartitionAdapter](/powershell/module/hyper-v/get-vmgpupartitionadapter), and [Remove-VMGpuPartitionAdapter](/powershell/module/hyper-v/remove-vmgpupartitionadapter) reference documentation.
-
-## GPU partitioning workflow
-
-Here's a high-level workflow to provision the GPU partitioning feature:
-
-1. [Complete all the prerequisites](#prerequisites).
-1. [Verify GPU driver installation](#verify-gpu-driver-installation).
-1. [Configure partition count](#configure-gpu-partition-count).
-1. [Assign GPU partition to a VM](#assign-gpu-partition-to-a-vm).
-1. [If necessary, unassign a GPU partition from a VM](#unassign-a-partition-from-a-vm).
 
 ## Verify GPU driver installation
 
@@ -90,13 +105,13 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
    The **GPUs** tab on the **GPU** page displays inventory of all the servers and the physical GPUs that are installed on each server.
 
 1. Check the **Assigned status** column for each GPU for all the servers. The **Assigned status** column can have one of these statuses:
-    
+
     - **Ready for DDA assignment**. Indicates that the GPU is available for DDA assignment. You can't use it for GPU partitioning.
-    
+
     - **Partitioned**. Indicates that the GPU is partitionable.
-    
+
     - **Paravirtualization**. Indicates that the GPU has the partitioned driver capability installed but SR-IOV on the server isn't enabled.
-    
+
     - **Not assignable**. Indicates that the GPU isn't assignable because it's an older PCI-style device or switch port.
 
         :::image type="content" source="./media/partition-assign-vm-gpu/gpu-tab.png" alt-text="Screenshot of the GPUs tab showing the inventory of the servers and their installed GPU devices." lightbox="./media/partition-assign-vm-gpu/gpu-tab.png" :::
@@ -132,7 +147,12 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
     If the driver is installed, you see an output similar to the following sample:
 
     ```powershell
-    PS C:\Users> Nvidia-smi
+    Nvidia-smi
+    ```
+
+    Here's a sample output:
+
+    ```output
     Wed Nov 30 15:22:36 2022
     +-----------------------------------------------------------------------------+
     | NVIDIA-SMI 527.27       Driver Version: 527.27       CUDA Version: N/A      |
@@ -162,7 +182,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
 1. Run the following command to verify that the host server has the required GPU adapters installed by listing the GPUs that support GPU partitioning.
 
     ```powershell
-    Get-VMHostPartitionableGpu
+    Get-VMHostPartitionableGpu | FL Name,ValidPartitionCounts
     ```
 
     Note down the **Name** and **ValidPartitionCounts** values from the output of the `Get-VMHostPartitionableGpu` command. You'll use them later to configure partition count.
@@ -175,57 +195,9 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
 
     Name                    : \\?\PCI#VEN_10DE&DEV_25B6&SUBSYS_157E10DE&REV_A1#4&18416dc3&0&0000#{064092b3-625e-43bf-9eb5-dc845897dd59}
     ValidPartitionCounts    : {16, 8, 4, 2...}
-    PartitionCount          : 16
-    TotalVRAM               : 15918030848
-    AvailableVRAM           : 15918030848
-    MinPartitionVRAM        : 939524096
-    MaxPartitionVRAM        : 939524096
-    OptimalPartitionVRAM    : 939524096
-    TotalEncode             : 36
-    AvailableEncode         : 36
-    MinPartitionEncode      : 2
-    MaxPartitionEncode      : 2
-    OptimalPartitionEncode  : 2
-    TotalDecode             : 24
-    AvailableDecode         : 24
-    MinPartitionDecode      : 1
-    MaxPartitionDecode      : 1
-    OptimalPartitionDecode  : 1
-    TotalCompute            : 2048
-    AvailableCompute        : 2048
-    MinPartitionCompute     : 128
-    MaxPartitionCompute     : 128
-    OptimalPartitionCompute : 128
-    CimSession              : CimSession: .
-    ComputerName            : C4P1077002803B
-    IsDeleted               : False
 
     Name                    : \\?\PCI#VEN_10DE&DEV_25B6&SUBSYS_157E10DE&REV_A1#4&5906f5e&0&0010#{064092b3-625e-43bf-9eb5-dc845897dd59}
     ValidPartitionCounts    : {16, 8, 4, 2...}
-    PartitionCount          : 4
-    TotalVRAM               : 15918030848
-    AvailableVRAM           : 15918030848
-    MinPartitionVRAM        : 3825205248
-    MaxPartitionVRAM        : 3825205248
-    OptimalPartitionVRAM    : 3825205248
-    TotalEncode             : 36
-    AvailableEncode         : 36
-    MinPartitionEncode      : 9
-    MaxPartitionEncode      : 9
-    OptimalPartitionEncode  : 9
-    TotalDecode             : 24
-    AvailableDecode         : 24
-    MinPartitionDecode      : 6
-    MaxPartitionDecode      : 6
-    OptimalPartitionDecode  : 6
-    TotalCompute            : 2048
-    AvailableCompute        : 2048
-    MinPartitionCompute     : 512
-    MaxPartitionCompute     : 512
-    OptimalPartitionCompute : 512
-    CimSession              : CimSession: .
-    ComputerName            : C4P1077002803B
-    IsDeleted               : False
     ```
 
 ---
@@ -257,23 +229,23 @@ Follow these steps to configure partition count via Windows Admin Center:
 1. Select a set of homogeneous GPUs. A set of homogeneous GPUs is the one that has GPUs of the same size, manufacturer, model number, and number of partitions. By default, Windows Admin Center automatically selects a set of homogenous GPUs if it detects one, as shown in the following screenshot:
 
    :::image type="content" source="./media/partition-assign-vm-gpu/configure-partition-count.png" alt-text="Screenshot of the Configure partition count on GPUs showing the inventory of GPUs to configure the partition count." lightbox="./media/partition-assign-vm-gpu/configure-partition-count.png" :::
-   
+
     You may see a warning or an error depending on what selections you make:
 
     - **Warning.** If you deselect one or more GPUs from the homogeneous set of GPUs, Windows Admin Center gives you a warning, but doesn't stop you from proceeding further. Warning text indicates that you're not selecting all the GPUs and it may result in different partition count, which isn't recommended.
-    
+
         :::image type="content" source="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" alt-text="Screenshot showing a warning when all the GPUs within a homogeneous set aren't selected." lightbox="./media/partition-assign-vm-gpu/warning-partial-selection-homogenous-set.png" :::
 
     - **Warning.** If not all the GPUs across all the servers have the same configuration, Windows Admin Center gives a warning. You must manually select the GPUs with the same configuration to proceed further.
-    
+
         :::image type="content" source="./media/partition-assign-vm-gpu/warning-different-configuration.png" alt-text="Screenshot showing a warning when you have GPUs with different configurations." lightbox="./media/partition-assign-vm-gpu/warning-different-configuration.png" :::
-    
+
     - **Error.** If you select GPUs with different configurations, Windows Admin Center gives you an error, and doesn't let you proceed.
-    
+
         :::image type="content" source="./media/partition-assign-vm-gpu/error-different-configuration.png" alt-text="Screenshot showing an error when you select GPUs with different configurations." lightbox="./media/partition-assign-vm-gpu/error-different-configuration.png" :::
-    
+
     - **Error.** If you select a GPU partition that is already assigned to a VM, Windows Admin Center gives you an error, and doesn't let you proceed. You must first unassign the partition from the VM before proceeding further. See [Unassign a partition from a VM](#unassign-a-partition-from-a-vm).
-    
+
         :::image type="content" source="./media/partition-assign-vm-gpu/error-assigned-partition-selection.png" alt-text="Screenshot showing an error when you select a partition that is already assigned to a VM." lightbox="./media/partition-assign-vm-gpu/error-assigned-partition-selection.png" :::
 
 1. After you select a homogeneous set of GPUs, select the partition count from the **Number of Partitions** dropdown list. This list automatically populates the partition counts configured by your GPU manufacturer. The counts displayed in the list can vary depending on the type of GPU you selected.
@@ -309,66 +281,20 @@ Follow these steps to configure GPU partition count in PowerShell:
     PS C:\Users> Set-VMHostPartitionableGpu -Name "\\?\PCI#VEN_10DE&DEV_25B6&SUBSYS_157E10DE&REV_A1#4&18416dc3&0&0000#{064092b3-625e-43bf-9eb5-dc845897dd59}" -PartitionCount 4
     ```
 
-    You can run the `Get-VMHostPartitionableGpu` again to verify if the partition count is set to 4.
+    You can run the `Get-VMHostPartitionableGpu | FL Name,ValidPartitionCounts,PartitionCount` again to verify if the partition count is set to 4.
 
     Here's a sample output:
 
     ```powershell
-    PS C:\Users> Get-VMHostPartitionableGPU
+    PS C:\Users> Get-VMHostPartitionableGpu | FL Name,ValidPartitionCounts,PartitionCount
 
     Name                    : \\?\PCI#VEN_10DE&DEV_25B6&SUBSYS_157E10DE&REV_A1#4&18416dc3&0&0000#{064092b3-625e-43bf-9eb5-dc845897dd59}
     ValidPartitionCounts    : {16, 8, 4, 2...}
     PartitionCount          : 4
-    TotalVRAM               : 15918030848
-    AvailableVRAM           : 15918030848
-    MinPartitionVRAM        : 3825205248
-    MaxPartitionVRAM        : 3825205248
-    OptimalPartitionVRAM    : 3825205248
-    TotalEncode             : 36
-    AvailableEncode         : 36
-    MinPartitionEncode      : 9
-    MaxPartitionEncode      : 9
-    OptimalPartitionEncode  : 9
-    TotalDecode             : 24
-    AvailableDecode         : 24
-    MinPartitionDecode      : 6
-    MaxPartitionDecode      : 6
-    OptimalPartitionDecode  : 6
-    TotalCompute            : 2048
-    AvailableCompute        : 2048
-    MinPartitionCompute     : 512
-    MaxPartitionCompute     : 512
-    OptimalPartitionCompute : 512
-    CimSession              : CimSession: .
-    ComputerName            : C4P1077002803B
-    IsDeleted               : False
 
     Name                    : \\?\PCI#VEN_10DE&DEV_25B6&SUBSYS_157E10DE&REV_A1#4&5906f5e&0&0010#{064092b3-625e-43bf-9eb5-dc845897dd59}
     ValidPartitionCounts    : {16, 8, 4, 2...}
     PartitionCount          : 4
-    TotalVRAM               : 15918030848
-    AvailableVRAM           : 15918030848
-    MinPartitionVRAM        : 3825205248
-    MaxPartitionVRAM        : 3825205248
-    OptimalPartitionVRAM    : 3825205248
-    TotalEncode             : 36
-    AvailableEncode         : 36
-    MinPartitionEncode      : 9
-    MaxPartitionEncode      : 9
-    OptimalPartitionEncode  : 9
-    TotalDecode             : 24
-    AvailableDecode         : 24
-    MinPartitionDecode      : 6
-    MaxPartitionDecode      : 6
-    OptimalPartitionDecode  : 6
-    TotalCompute            : 2048
-    AvailableCompute        : 2048
-    MinPartitionCompute     : 512
-    MaxPartitionCompute     : 512
-    OptimalPartitionCompute : 512
-    CimSession              : CimSession: .
-    ComputerName            : C4P1077002803B
-    IsDeleted               : False
     ```
 
 1. To keep the configuration homogeneous, repeat the partition count configuration steps on each server in your cluster.
@@ -421,6 +347,7 @@ Follow these steps to assign GPU partition to a VM using PowerShell:
     ```powershell
     Get-ClusterResource -name vmname | Set-ClusterParameter -Name "OfflineAction" -Value 3
     ```
+
     > [!NOTE]
     > If a failure occurs, you need to shutdown the VM, drain the server, and manually fail over the VM to another server.
 
@@ -433,50 +360,23 @@ Follow these steps to assign GPU partition to a VM using PowerShell:
 1. Run the following command to verify if the partition is assigned:
 
     ```powershell
-    Get-VMGpuPartitionAdapter -VMName $VMName
+    Get-VMGpuPartitionAdapter -VMName $VMName | FL InstancePath,PartitionId,PartitionVfLuid
     ```
 
     For example, run the following commands to first assign a partition to the **mytestgpu-vm1** VM and then verify the assignment:
 
     ```powershell
-    PS C:\Users> $VMname = "mytestgpu-vm1"
-    PS C:\Users> Add-VMGpuPartitionAdapter -VMName $VMName
-    PS C:\Users> Get-VMGpuPartitionAdapter -VMName $VMName
+    $VMname = "mytestgpu-vm1"
+    Add-VMGpuPartitionAdapter -VMName $VMName
+    Get-VMGpuPartitionAdapter -VMName $VMName | FL InstancePath,PartitionId,PartitionVfLuid
     ```
-
+FIXME:
     Here's a sample output:
 
     ```powershell
     InstancePath            : \\?\PCI#VEN_10DE&DEV_25B6&SUBSYS_157E10DE&REV_A1#4&18416dc3&0&0000#{064092b3-625e-43bf-9eb5-dc845897dd59}
-    CurrentPartitionVRAM    : 3825205248
-    MinPartitionVRAM        :
-    MaxPartitionVRAM        :
-    OptimalPartitionVRAM    :
-    CurrentPartitionEncode  : 9
-    MinPartitionEncode      :
-    MaxPartitionEncode      :
-    OptimalPartitionEncode  :
-    CurrentPartitionDecode  : 6
-    MinPartitionDecode      :
-    MaxPartitionDecode      :
-    OptimalPartitionDecode  :
-    CurrentPartitionCompute : 512
-    MinPartitionCompute     :
-    MaxPartitionCompute     :
-    OptimalPartitionCompute :
     PartitionId             : 0
     PartitionVfLuid         : 10-973909323
-    Name                    : GPU Partition Settings
-    Id                      : Microsoft:711CEE18-60DB-43B4-BE7E-CEDCE5E25DD0\A2B5B4B1-24B6-49B6-97E1-FBAF8BA0AF9B
-    VMId                    : 711cee18-60db-43b4-be7e-cedce5e25dd0
-    VMName                  : mytestgpu-vm1
-    VMSnapshotId            : 00000000-0000-0000-0000-000000000000
-    VMSnapshotName          :
-    CimSession              : CimSession: .
-    ComputerName            : C4P1077002803B
-    IsDeleted               : False
-    VMCheckpointId          : 00000000-0000-0000-0000-000000000000
-    VMCheckpointName        :
     ```
 
 1. Start the VM using PowerShell or Windows Admin Center to resolve the partitions.
@@ -526,7 +426,7 @@ Follow these steps to unassign a GPU partition from a VM using PowerShell:
     ```powershell
     Get-ClusterResource -name vmname | Set-ClusterParameter -Name "OfflineAction" -Value 3
     ```
-    
+
     > [!NOTE]
     > If a failure occurs, you need to shutdown the VM, drain the server, and manually fail over the VM to another server.
 1. Run the following command to remove the partition:
@@ -542,4 +442,3 @@ Follow these steps to unassign a GPU partition from a VM using PowerShell:
     ```
 
 ---
-

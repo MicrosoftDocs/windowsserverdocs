@@ -8,12 +8,9 @@ ms.date: 04/05/2023
 zone_pivot_groups: windows-os
 ---
 
-
+# GPU partitioning
 
 :::zone pivot="windows-server"
-
-# GPU partitioning for Windows Server
-
 >Applies to: Windows Server Insider Preview build 26040 or later
 
 > [!IMPORTANT]
@@ -21,8 +18,6 @@ zone_pivot_groups: windows-os
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"
-
-# GPU partitioning for Azure Stack HCI
 
 [!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
 
@@ -34,12 +29,17 @@ GPU partitioning allows you to share a physical GPU device with multiple virtual
 
 The GPU partitioning feature uses the [Single Root IO Virtualization (SR-IOV) interface](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-), which provides a hardware-backed security boundary with predictable performance for each VM. Each VM can access only the GPU resources dedicated to them and the secure hardware partitioning prevents unauthorized access by other VMs.
 
-> [!NOTE]
-> Currently, we support only Nvidia A2, A10, A16, A40 GPUs for GPU partitioning. We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support additional GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA) or GPU passthrough. Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
+:::zone pivot="windows-server"
+
+Windows Server introduces live migration with GPU partitioning. There are specific requirements to use GPU partitioning live migration. Aside from recommended live migration best practices, your cluster hosts will need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs will be automatically restarted and placed where GPU resources are available.
+
+:::zone-end
 
 ## When to use GPU partitioning
 
-You may prefer to keep certain workloads on premises because they require low latency or need to be compliant with the data sovereignty laws of your country/region. Certain workloads, such as virtual desktop infrastructure (VDI) and Machine Learning (ML) inferencing require GPU acceleration, and GPU partitioning can help reduce your total cost of ownership for your overall infrastructure.
+Some workloads, such as virtual desktop infrastructure (VDI), Artificial Intelligent (AI) and Machine Learning (ML) inferencing require GPU acceleration, GPU partitioning can help reduce your total cost of ownership for your overall infrastructure.
+
+For example:
 
 - VDI applications: Distributed edge customers run basic productivity apps, such as Microsoft Office and graphics-heavy visualization workloads in their VDI environments, which require GPU acceleration. For such workloads, you can achieve the required GPU acceleration via DDA or GPU partitioning. With GPU partitioning, you can create multiple partitions and assign each partition to VM hosting a VDI environment. GPU partitioning helps you achieve the desired density and scale the number of supported users by an order of magnitude.
 
@@ -59,11 +59,24 @@ GPU partitioning on Azure Stack HCI supports these guest operating systems:
 - Windows Server 2019, Windows Server 2022
 - Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​
 
-## Caveats
+## Supported GPUs
 
-Consider the following caveats when using the GPU partitioning feature:
+The following GPUs support GPU partitioning:
 
-- For best performance, we recommend that you create a homogeneous configuration for GPUs across all the servers in your cluster. A homogeneous configuration consists of installing the same make and model of the GPU, and configuring the same partition count in the GPUs across all the servers in the cluster. For example, in a cluster of two servers with one or more GPUs installed, all the GPUs must have the same make, model, and size. The partition count on each GPU must also match. Azure Stack HCI doesn't support GPU partitioning if your configuration isn't homogeneous. Here are some examples of unsupported configurations:
+- NVIDIA A2
+- NVIDIA A10
+- NVIDIA A16
+- NVIDIA A40
+
+We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support additional GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA) or GPU passthrough. Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
+
+For best performance, we recommend that you create a homogeneous configuration for GPUs across all the servers in your cluster. A homogeneous configuration consists of installing the same make and model of the GPU, and configuring the same partition count in the GPUs across all the servers in the cluster. For example, in a cluster of two servers with one or more GPUs installed, all the GPUs must have the same make, model, and size. The partition count on each GPU must also match.
+
+## Limitations
+
+Consider the following limitations when using the GPU partitioning feature:
+
+-  GPU partitioning is unsupported if your configuration isn't homogeneous. Here are some examples of unsupported configurations:
 
   - Mixing GPUs from different vendors in the same cluster.
 
@@ -75,7 +88,7 @@ Consider the following caveats when using the GPU partitioning feature:
 
 :::zone pivot="azure-stack-hci"
 
-- Azure Stack HCI auto-assigns the partition to the VMs. You can't choose a specific partition for a specific VM.
+- FIXME: Azure Stack HCI auto-assigns the partition to the VMs. You can't choose a specific partition for a specific VM.
 
 - Currently, GPU partitioning on Azure Stack HCI doesn't support live migration of VMs. But VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
 
