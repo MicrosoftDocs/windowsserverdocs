@@ -86,9 +86,9 @@ Consider the following limitations when using the GPU partitioning feature:
 
 - You can assign only a single GPU partition to a VM.
 
-:::zone pivot="azure-stack-hci"
+- Partition are auto-assigned to the VMs. You can't choose a specific partition for a specific VM.
 
-- FIXME: Azure Stack HCI auto-assigns the partition to the VMs. You can't choose a specific partition for a specific VM.
+:::zone pivot="azure-stack-hci"
 
 - Currently, GPU partitioning on Azure Stack HCI doesn't support live migration of VMs. But VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
 
@@ -97,6 +97,12 @@ Consider the following limitations when using the GPU partitioning feature:
 - You can partition your GPU using Windows Admin Center or using PowerShell. We recommend that you use Windows Admin Center to configure and assign GPU partitions. Windows Admin Center automatically validates for a homogeneous configuration of the GPUs across all the servers in your cluster. It provides appropriate warnings and errors to take any corrective action needed.
 
 - If using PowerShell to provision GPU partitioning, you must perform the provisioning steps on each server in the cluster. You must manually ensure that the homogeneous configuration is maintained for GPUs across all the servers in your cluster.
+
+:::zone pivot="windows-server"
+
+- When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration will automatically fall back to using TCP/IP with compression. This has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
+
+:::zone-end
 
 ## Next steps
 
