@@ -43,6 +43,8 @@ echo [on | off]
 
 - To display a pipe (`|`), ampersand (`&`) or redirection character (`<` or `>`) when you're using **echo**, use a caret (`^`) immediately before that character. For example, `^|`, `^&`, `^>`, or `^<`. To display a caret, type two carets in succession (`^^`).
 
+- When inside a block terminated by parentheses (`()`), both opening and closing parentheses must also be escaped using the caret (`^`) immediately before each. For example, `This is ^(now^) correct` will correctly display `This is (now) correct`.
+
 ### Examples
 
 To display the current **echo** setting, type:
@@ -88,7 +90,7 @@ The following batch file searches the current directory for files with the .txt 
 if not exist *.txt (
 echo This directory contains no text files.
 ) else (
-   echo This directory contains the following text files:
+   echo This directory contains the following text file^(s^):
    echo.
    dir /b *.txt
    )
@@ -103,7 +105,8 @@ This directory contains no text files.
 If .txt files are found when the batch file is run the following output displays (for this example, assume the files File1.txt, File2.txt, and File3.txt exist):
 
 ```
-This directory contains the following text files:
+This directory contains the following text file(s):
+
 File1.txt
 File2.txt
 File3.txt
