@@ -8,16 +8,21 @@ ms.date: 04/05/2023
 zone_pivot_groups: windows-os
 ---
 
-# GPU partitioning
+
 
 :::zone pivot="windows-server"
+
+# GPU partitioning for Windows Server
+
 >Applies to: Windows Server Insider Preview build 26040 or later
 
 > [!IMPORTANT]
-> Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> GPU partitioning in Windows Server Insider builds is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"
+
+# GPU partitioning for Azure Stack HCI
 
 [!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
 

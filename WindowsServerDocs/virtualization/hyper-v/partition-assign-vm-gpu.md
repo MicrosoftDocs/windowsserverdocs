@@ -6,8 +6,6 @@ ms.author: roharwoo
 ms.topic: how-to
 ms.date: 02/08/2024
 zone_pivot_groups: windows-os
-
-#CustomerIntent: As a < type of user >, I want < what? > so that < why? >.
 ---
 
 # Partition and assign GPUs to a virtual machine
@@ -16,7 +14,7 @@ zone_pivot_groups: windows-os
 >Applies to: Windows Server Insider Preview build 26040 or later
 
 > [!IMPORTANT]
-> Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> GPU partitioning in Windows Server Insider builds is in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 ::: zone-end
 
 :::zone pivot="azure-stack-hci"
