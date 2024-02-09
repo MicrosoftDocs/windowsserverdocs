@@ -55,7 +55,7 @@ There are several requirements and things to consider before you begin to use th
 
 - Install the physical GPU device of the same make, model, and size on every server of the cluster. Refer to your OEM-provided documentation when installing the GPU device on your physical servers in the cluster.
 
-- Install the GPU drivers on every server of the cluster by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [Nvidia vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
+- Install the GPU drivers on every server of the cluster by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
 
 - Ensure that the virtualization support and SR-IOV are enabled in the BIOS of each server in the cluster. Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
@@ -72,7 +72,7 @@ There are several requirements and things to consider before you begin to use th
 
 - Deploy a VM using a guest operating system from the [Supported guest operating systems](gpu-partitioning.md#supported-guest-operating-systems) list.
 
-- Install the GPU drivers on the VM by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [Nvidia vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
+- Install the GPU drivers on the VM by following instructions from your GPU IHVs. For NVIDIA GPU drivers, see the [NVIDIA vGPU documentation](https://docs.nvidia.com/grid/15.0/grid-vgpu-release-notes-microsoft-azure-stack-hci/).
 
 ### Prerequisites for Windows Admin Center
 
@@ -147,7 +147,7 @@ Follow these steps to verify if the GPU driver is installed and partitionable us
     If the driver is installed, you see an output similar to the following sample:
 
     ```powershell
-    Nvidia-smi
+    nvidia-smi
     ```
 
     Here's a sample output:
