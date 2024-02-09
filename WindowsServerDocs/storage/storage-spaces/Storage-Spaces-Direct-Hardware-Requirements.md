@@ -97,7 +97,8 @@ Here's how drives can be connected for Storage Spaces Direct:
 - Direct-attached NVMe drives
 - SAS host-bus adapter (HBA) with SAS drives
 - SAS host-bus adapter (HBA) with SATA drives
-- **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode for any storage devices used for Storage Spaces Direct.
+- RAID controller cards directly passing through the physical storage devices, reporting them as BusType SAS
+- **NOT SUPPORTED:** RAID controller cards (except for the direct pass through of SAS physical storage devices)  or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode for any storage devices used for Storage Spaces Direct
 
 ![Diagram showing supported drive interconnects, with RAID cards not supported](media/hardware-requirements/drive-interconnect-support-1.png)
 
