@@ -67,7 +67,7 @@ Active Directory Domain Services includes improvements to help organizations sec
 
 ### Active Directory Federation Services
 
-What's New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md).
+Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md).
 
 ### Web Application Proxy
 
@@ -209,3 +209,31 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 - The DSN name limit is enlarged from 256 bytes to 3072 bytes. See [IDtcToXaHelperFactory::Create](/previous-versions/windows/desktop/ms686861(v=vs.85)), [IDtcToXaHelperSinglePipe::XARMCreate](/previous-versions/windows/desktop/ms679248(v=vs.85)), or [IDtcToXaMapper::RequestNewResourceManager](/previous-versions/windows/desktop/ms680310(v=vs.85)) for details.
 
 - Improved tracing allowing you to set a registry key to include an image file path in the trace log file name so you can tell which trace log file to check. See [How to enable diagnostic tracing for MS DTC on a Windows-based computer](https://support.microsoft.com/kb/926099) for details on configuring tracing for MSDTC.
+
+## DNS
+
+Windows Server 2016 contains the following updates for DNS <!--Acronym--> .
+
+### DNS policies
+
+You can configure DNS policies to specify how a DNS server responds to DNS queries. You can configure DNS responses based on client IP address, time of day, and several other parameters. DNS policies can enable location-aware DNS, traffic management, load balancing, split-brain DNS, and other scenarios. For more information, see the [DNS Policy Scenario Guide](../networking/dns/deploy/DNS-Policies-Overview.md).
+
+### Response Rate Limiting (RRL)
+
+You can enable response rate limiting on your DNS servers to prevent malicious systems from using your DNS servers to initiate a denial of service attack on a DNS client.
+
+### DANE support
+
+You can use DANE support (RFC 6394 and 6698) <!---Acronym--> to specify which certificate authority your DNS clients should expect certificates from for domain names hosted in your DNS server. This prevents a form of man-in-the-middle attack where a malicious actor corrupts a DNS cache and points a DNS name to their own IP address.
+
+### Unknown record support
+
+You can add records that the DNS server doesn't explicitly support by using the unknown record functionality. A record is unknown when the DNS server doesn't recognize its RDATA format. Windows Server 2016 supports unknown record (RFC 3597) types, so you can add unknown records to Windows DNS server zones in binary on-wire format. The windows caching resolver can already process unknown record types. Windows DNS server doesn't perform record-specific processing for unknown records, but can send them in response to queries it receives.
+
+### IPv6 root hints
+
+Windows DNS server now includes IPv6 root hints published by IANA. <!--Acronym---> Support for IPv6 root hints lets you make internet queries that use the IPv6 root servers to perform name resolutions.
+
+### Windows PowerShell support
+
+Windows Server 2016 includes new commands you can use to configure DNS in PowerShell. For more information, see [Windwows Server 2016 DnsServer module](/powershell/module/dnsserver/?view=windowsserver2016-ps) and [Windows Server 2016 DnsClient module](/powershell/module/dnsclient/?view=windowsserver2016-ps).
