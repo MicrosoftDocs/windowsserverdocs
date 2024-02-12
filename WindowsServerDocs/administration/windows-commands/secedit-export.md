@@ -16,14 +16,14 @@ Exports security settings stored in a database configured with security template
 ## Syntax
 
 ```
-secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
+secedit /export [/db <database file name>] [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 |--|--|
-| /db | Required. Specifies the path and file name of the database containing the stored configuration against which the export is performed. If the file name specifies a database that hasn't had a security template (as represented by the configuration file) associated with it, the `/cfg <configuration file name>` option must also be specified. |
+| /db | Specifies the path and file name of the database containing the stored configuration against which the export is performed. If not specified, system security database will be used. If the file name specifies a database that hasn't had a security template (as represented by the configuration file) associated with it, the `/cfg <configuration file name>` option must also be specified. |
 | /mergedpolicy | Merges and exports domain and local policy security settings. |
 | /cfg | Required. Specifies the path and file name for the security template that will be imported into the database for analysis. This option is only valid when used with the `/db <database file name>` parameter. If this parameter isn't also specified, the analysis is performed against any configuration already stored in the database. |
 | /areas | Specifies the security areas to be applied to the system. If this parameter is not specified, all security settings defined in the database are applied to the system. To configure multiple areas, separate each area by a space. The following security areas are supported:<ul><li>**securitypolicy:** Local policy and domain policy for the system, including account policies, audit policies, security options, and so on.</li><li>  **group_mgmt:** Restricted group settings for any groups specified in the security template.</li><li>**user_rights:** User logon rights and granting of privileges.</li><li>**regkeys:** Security on local registry keys.</li><li>**filestore:** Security on local file storage.</li><li>**services:** Security for all defined services.</li></ul> |
