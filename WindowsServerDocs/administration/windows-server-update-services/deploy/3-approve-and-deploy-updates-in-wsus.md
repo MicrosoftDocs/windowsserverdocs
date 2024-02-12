@@ -1,19 +1,16 @@
 ---
 title: Step 3 - Approve and Deploy Updates in WSUS
-description: "Windows Server Update Service (WSUS) topic - Approve and Deploy Updates in WSUS is step three in a four step process for deploying WSUS"
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.technology: manage-wsus
+description: Windows Server Update Service (WSUS) topic - Approve and Deploy Updates in WSUS is step three in a four step process for deploying WSUS
 ms.topic: article
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
+ms.date: 04/24/2023
 ---
 # Step 3: Approve and Deploy Updates in WSUS
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Computers in a computer group automatically contact the WSUS server over the next 24 hours to obtain updates. You can use the WSUS reporting feature to determine whether those updates were deployed to the test computers. When the tests are successfully completed, you can approve the updates for the applicable computer groups in your organization. The following checklist describes the steps to approve and deploy updates by using WSUS management console.
 
@@ -23,7 +20,7 @@ Computers in a computer group automatically contact the WSUS server over the nex
 |[3.2. Configure auto-approval rules](3-approve-and-deploy-updates-in-wsus.md#BKM_3.2.a.)|Configure WSUS to automatically approve installation of updates for selected groups, and how to approve revisions to existing updates.|
 |[3.3. Review installed updates with WSUS Reports](3-approve-and-deploy-updates-in-wsus.md#BKM_3.3.)|Review the updates that were installed, the computers that received those updates and other details by using the WSUS Reporting feature.|
 
-## <a name="BKM_3.1."></a>3.1. Approve and deploy WSUS updates
+## <a name=BKM_3.1.></a>3.1. Approve and deploy WSUS updates
 Use the following procedure to approve and deploy updates.
 
 #### To approve and deploy WSUS updates
@@ -42,7 +39,7 @@ Use the following procedure to approve and deploy updates.
 
 7.  The **Approval Progress** window appears, which shows the progress of the tasks that affect update approval. When the approval process is complete, click **Close**.
 
-## <a name="BKM_3.2.a."></a>3.2. Configure auto-approval rules
+## <a name=BKM_3.2.a.></a>3.2. Configure auto-approval rules
 Automatic Approvals enables you to specify how to automatically approve installation of updates for selected groups, and how to approve revisions to existing updates.
 
 #### To configure Automatic Approvals
@@ -56,10 +53,10 @@ Automatic Approvals enables you to specify how to automatically approve installa
 4.  In **add Rule**, in **Step 1: select Properties**, select any single option, or combination of options from the following:
 
     -   **When an update is in a specific classification**
-
+        - When selecting the **Upgrades** classification, be aware that Windows feature updates that get published monthly are also classified as **Upgrades**. Automatically approving these updates could cause devices to upgrade their OS. For example, applicable Windows 10 devices could get upgraded to Windows 11. Additionally, feature updates would require additional disk space. For more information, see [UUP considerations when planning your WSUS deployment](../plan/plan-your-wsus-deployment.md#uup-considerations).
     -   **When an update is in a specific product**
 
-    -   **Set a deadline for the approva**l
+    -   **Set a deadline for the approval**
 
 5.  In **Step 2: edit the properties**, click each of the options listed, and then select the appropriate options for each.
 
@@ -67,7 +64,7 @@ Automatic Approvals enables you to specify how to automatically approve installa
 
 7.  Click **OK** to close the Automatic Approvals dialog.
 
-## <a name="BKM_3.3."></a>3.3. Review installed updates with WSUS Reports
+## <a name=BKM_3.3.></a>3.3. Review installed updates with WSUS Reports
 24 hours after you approve the updates, you can use the WSUS Reports feature to determine whether the updates were deployed to the test group computers. To check the status of an update, you can use the WSUS Reports feature as follows.
 
 #### To review updates

@@ -1,18 +1,15 @@
 ---
 title: Current list of icons in Windows Admin Center
 description: Current list of icons in Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
-ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Current list of icons in Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ```
 .icon-win-globalNavButton:before { content: "\E700"; }

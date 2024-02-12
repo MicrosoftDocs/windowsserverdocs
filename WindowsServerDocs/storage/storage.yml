@@ -1,0 +1,105 @@
+### YamlMime:Landing
+
+title: Windows Server Storage documentation
+summary: 'Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. Applies to: Windows Server 2019, Windows Server 2016.'
+
+metadata:
+  title: Windows Server Storage documentation
+  description: Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. 
+  ms.topic: landing-page # Required
+  author: JasonGerend
+  ms.author: jgerend
+  ms.date: 07/15/2020 
+  ms.service: windows-server
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About Windows Server Storage
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: What's new?
+            url: whats-new-in-storage.md
+
+  # Card
+  - title: Software-defined storage for virtualized workloads
+    linkLists:            
+      - linkListType: overview
+        links:
+          - text: Storage Spaces Direct
+            url: storage-spaces/overview.md
+          - text: Storage Replica
+            url: storage-replica/storage-replica-overview.md
+          - text: Storage Quality of Service (QoS)
+            url: storage-qos/storage-qos-overview.md
+          - text: Data Deduplication
+            url: data-deduplication/overview.md                   
+
+  # Card
+  - title: General-purpose file servers
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Storage Migration Service
+            url: storage-migration-service/overview.md
+          - text: Work Folders
+            url: work-folders/work-folders-overview.md
+          - text: Offline Files and Folder Redirection
+            url: folder-redirection/folder-redirection-rup-overview.md
+          - text: Roaming User Profiles
+            url: folder-redirection/deploy-roaming-user-profiles.md
+          - text: DFS Namespaces
+            url: dfs-namespaces/dfs-overview.md
+          - text: DFS Replication
+            url: dfs-replication/dfsr-overview.md
+          - text: File Server Resource Manager
+            url: fsrm/fsrm-overview.md
+          - text: iSCSI Target Server
+            url: iscsi/iscsi-target-server.md
+          - text: iSCSI target boot
+            url: iscsi/iscsi-boot-overview.md
+  # Card
+  - title: File systems, protocols, etc
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: SMB over QUIC
+            url: file-server/smb-over-quic.md
+          - text: ReFS
+            url: refs/refs-overview.md
+          - text: Server Message Block (SMB) protocol
+            url: file-server/file-server-smb-overview.md
+          - text: Storage-class memory
+            url: storage-spaces/Storage-class-memory-health.md
+          - text: BitLocker Drive Encryption
+            url: /previous-versions/windows/it-pro/windows-vista/cc766295(v=ws.10)
+          - text: NTFS
+            url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466522(v=ws.11)
+          - text: Network File System (NFS)
+            url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj592688(v=ws.11)
+
+  # Card
+  - title: In Azure
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Azure Storage
+            url: /azure/storage/
+          - text: Azure StorSimple
+            url: https://www.microsoft.com/cloud-platform/azure-storsimple
+          - text: Azure Shared Disk
+            url: /azure/virtual-machines/windows/disks-shared
+
+  # Card
+  - title: Older versions of Windows Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows previous versions documentation
+            url: /previous-versions/windows/
+          - text: Search for specific information
+            url: /search/?dataSource=previousVersions&search=Windows Server

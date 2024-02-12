@@ -2,8 +2,6 @@
 title: Create a File Screen
 description: This article describes how to create a file screen
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -11,7 +9,7 @@ ms.author: jgerend
 ---
 # Create a File Screen
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 When creating a new file screen, you can choose to save a file screen template that is based on the custom file screen properties that you define. The advantage of this is that a link is maintained between file screens and the template that is used to create them, so that in the future, changes to the template can be applied to all file screens that derive from it. This is a feature that simplifies the implementation of storage policy changes by providing one central point where you can make all updates.
 
@@ -48,7 +46,7 @@ When creating a new file screen, you can choose to save a file screen template t
 
 12. Click **OK**.
 
-## See also
+## Additional References
 
 -   [File Screening Management](file-screening-management.md)
 -   [Define File Groups for Screening](define-file-groups-for-screening.md)

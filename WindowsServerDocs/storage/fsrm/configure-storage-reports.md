@@ -2,8 +2,6 @@
 title: Configure Storage Reports
 description: This article describes how to configure the default parameters for storage reports
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -11,7 +9,7 @@ ms.author: jgerend
 ---
 # Configure Storage Reports
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 You can configure the default parameters for storage reports. These default parameters are used for the incident reports that are generated when a quota or file screening event occurs. They are also used for scheduled and on-demand reports, and you can override the default parameters when you define the specific properties of these reports.
 
@@ -34,7 +32,7 @@ You can configure the default parameters for storage reports. These default para
 
 7.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Storage Reports Management](storage-reports-management.md)

@@ -1,0 +1,150 @@
+### YamlMime:Landing
+
+title: Windows Server Security documentation
+summary: Windows Server Security provides layers of protection built into the operating system to safeguard against security breaches, help block malicious attacks, and enhance the security of your virtual machines, applications, and data.
+
+metadata:
+  title: Windows Server Security documentation
+  description: An overview of Security in Windows Server.
+  ms.topic: landing-page # Required
+  author: JasonGerend
+  ms.author: jgerend
+  ms.date: 5/19/2020
+  ms.service: windows-server
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: An overview of Security in Windows Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows Server Security Blog Post
+            url: https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/
+          - text: Datacenter and Private Cloud Security Blog
+            url: /archive/blogs/datacentersecurity/
+          - text: Addressing emerging threats and landscape shifts
+            url: https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be
+          - text: Protecting Your Datacenter and Cloud from Emerging Threats blog post
+            url: https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx
+
+  # Card
+  - title: Secure virtualization with Shielded VMs
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Shielded VM Demo
+            url: https://www.youtube.com/watch?v=xip5Qtk-7d8
+          - text: Shielded Virtual Machines in Windows Server video walkthrough
+            url: /shows/oemtv/1758
+      - linkListType: how-to-guide
+        links:
+          - text: Guarded Fabric Deployment Guide
+            url: guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md
+          - text: Shielded VM and Guarded Fabric in Branch Offices
+            url: guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md
+          - text: Shielded VM and Guarded Fabric Troubleshooting Guide
+            url: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md
+
+  # Card
+  - title: Hardening the OS and applications
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows Defender Application Control (WDAC) Deployment Guide
+            url: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide
+          - text: Transport Layer Security Registry Settings
+            url: ./tls/tls-registry-settings.md
+          - text: Control Flow Guard
+            url: /windows/desktop/SecBP/control-flow-guard
+          - text: Windows Defender
+            url: ./windows-defender/windows-defender-overview-windows-server.md
+          - text: Secured-core server
+            url: secured-core-server.md
+      - linkListType: video
+        links:
+          - text: Device Guard demo video
+            url: https://www.youtube.com/watch?v=F-pTkesjkhI
+
+  # Card
+  - title: Privileged Access Management
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Securing Privileged Access
+            url: /security/compass/overview
+          - text: Just in Time Administration with Microsoft Identity Manager
+            url: /microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services
+          - text: Just Enough Administration Article
+            url: https://aka.ms/JEA
+      - linkListType: video
+        links:
+          - text: Just Enough Administration demo video
+            url: https://www.youtube.com/watch?v=xnBrbkY9P20
+
+  # Card
+  - title: Credential Protection
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Protect derived domain credentials with Credential Guard
+            url: /windows/security/identity-protection/credential-guard/credential-guard
+          - text: Protect Remote Desktop credentials with Remote Credential Guard
+            url: /windows/security/identity-protection/remote-credential-guard
+      - linkListType: video
+        links:
+          - text: Credential Guard demo video
+            url: https://www.youtube.com/watch?v=eUpKOGSl7yk
+
+  # Card
+  - title: Detecting and Responding to Threats
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Microsoft Operations Management Suite (OMS)
+            url: https://www.youtube.com/watch?v=_SaDw1dRy2k
+          - text: OMS and Windows Server
+            url: https://www.youtube.com/watch?v=_SaDw1dRy2k
+      - linkListType: overview
+        links:
+          - text: Microsoft Advanced Threat Analytics
+            url: https://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx
+
+  # Card
+  - title: Network Security
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Datacenter Firewall Overview
+            url: /previous-versions/windows/server/dn920240(v=ws.12)
+          - text: What's New in DNS in Windows Server
+            url: ../networking/dns/what-s-new-in-dns-server.md
+
+  # Card
+  - title: Mapping security features to compliance regulations
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Hyper-V Shielded VMs compliance mapping whitepaper
+            url: https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf
+          - text: JEA and JIT compliance mapping whitepaper
+            url: https://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf
+          - text: Credential Guard compliance mapping whitepaper
+            url: https://download.microsoft.com/download/6/9/D/69D9E610-D23C-4F7E-A8CC-D65B87CEB4F8/Coalfire_Branded_Device_Guard_Whitepaper_EN_US.pdf
+          - text: Credential Guard compliance mapping whitepaper
+            url: https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf
+          - text: Windows Defender compliance mapping whitepaper
+            url: https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf
+
+ # Card
+  - title: Older versions of Windows Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows previous versions documentation
+            url: /previous-versions/windows/
+          - text: Search for specific information
+            url: /search/?dataSource=previousVersions&search=Windows+Server

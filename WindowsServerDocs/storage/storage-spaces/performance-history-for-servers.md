@@ -1,18 +1,15 @@
 ---
+description: "Learn more about: Performance history for servers"
 title: Performance history for servers
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
-ms.date: 02/0s/2018
-Keywords: Storage Spaces Direct
-ms.localizationpriority: medium
+ms.date: 02/05/2018
 ---
-
 # Performance history for servers
 
-> Applies To: Windows Server Insider Preview
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for servers. Performance history is available for every server in the cluster.
 
@@ -82,12 +79,12 @@ The `memory.*` series are (COMING SOON).
 
 ## Usage in PowerShell
 
-Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode) cmdlet:
+Use the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) cmdlet:
 
 ```PowerShell
 Get-ClusterNode <Name> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

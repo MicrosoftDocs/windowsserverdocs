@@ -1,0 +1,117 @@
+- name: Performance tuning guidelines for Windows Server 2022
+  href: index.md
+  items:
+  - name: Server Hardware Tuning
+    href: hardware/index.md
+    items:
+    - name: Performance considerations
+      href: hardware/index.md
+    - name: Power considerations
+      href: hardware/power.md
+      items:
+      - name: Power and performance tuning
+        href: hardware/power/power-performance-tuning.md
+      - name: Processor Power Management (PPM) tuning
+        href: hardware/power/processor-power-management-tuning.md
+  - name: Server Role Tuning
+    items:
+    - name: Active Directory Server
+      href: role/active-directory-server/index.md
+      items:
+      - name: Capacity planning for AD DS
+        href: role/active-directory-server/capacity-planning-for-active-directory-domain-services.md
+      - name: Site definition considerations
+        href: role/active-directory-server/site-definition-considerations.md
+      - name: Hardware considerations
+        href: role/active-directory-server/hardware-considerations.md
+      - name: Memory usage considerations
+        href: role/active-directory-server/memory-usage-considerations.md
+      - name: LDAP considerations
+        href: role/active-directory-server/ldap-considerations.md
+      - name: Troubleshoot ADDS performance
+        href: role/active-directory-server/troubleshoot.md
+    - name: File Server
+      href: role/file-server/index.md
+      items:
+      - name: SMB File Server
+        href: role/file-server/smb-file-server.md
+      - name: NFS File Server
+        href: role/file-server/nfs-file-server.md
+    - name: Hyper-V Server
+      href: role/hyper-v-server/index.md
+      items:
+      - name: Terminology
+        href: role/hyper-v-server/terminology.md
+      - name: Architecture
+        href: role/hyper-v-server/architecture.md
+      - name: Configuration
+        href: role/hyper-v-server/configuration.md
+      - name: Processor performance
+        href: role/hyper-v-server/processor-performance.md
+      - name: Memory performance
+        href: role/hyper-v-server/memory-performance.md
+      - name: Storage I/O performance
+        href: role/hyper-v-server/storage-io-performance.md
+      - name: Network I/O performance
+        href: role/hyper-v-server/network-io-performance.md
+      - name: Detecting bottlenecks in a virtualized environment
+        href: role/hyper-v-server/detecting-virtualized-environment-bottlenecks.md
+      - name: Linux virtual machine considerations
+        href: role/hyper-v-server/linux-virtual-machine-considerations.md
+    - name: Windows Server Containers
+      href: role/windows-server-container/index.md
+    - name: Remote Desktop Services
+      href: role/remote-desktop/session-hosts.md
+      items:
+      - name: Session hosts
+        href: role/remote-desktop/session-hosts.md
+      - name: Virtualization hosts
+        href: role/remote-desktop/virtualization-hosts.md
+      - name: Gateways
+        href: role/remote-desktop/gateways.md
+    - name: Web Server
+      href: role/web-server/index.md
+      items:
+      - name: Tuning IIS 10.0
+        href: role/web-server/tuning-iis-10.md
+      - name: HTTP 1.1/2
+        href: role/web-server/http-performance.md
+  - name: Server Subsystem Tuning
+    items:
+    - name: Cache and memory tuning
+      href: subsystem/cache-memory-management/index.md
+      items:
+      - name: Troubleshoot cache and memory manager performance
+        href: subsystem/cache-memory-management/troubleshoot.md
+      - name: Cache and memory manager improvements
+        href: subsystem/cache-memory-management/improvements-in-windows-server.md
+    - name: Network subsystem tuning
+      href: ../../networking/technologies/network-subsystem/net-sub-performance-top.md
+      items:
+      - name: Choose a network adapter
+        href: ../../networking/technologies/network-subsystem/net-sub-choose-nic.md
+      - name: Configure the order of network interfaces
+        href: ../../networking/technologies/network-subsystem/net-sub-interface-metric.md
+      - name: Network adapter tuning
+        href: ../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md
+      - name: Network-related performance counters
+        href: ../../networking/technologies/network-subsystem/net-sub-performance-counters.md
+      - name: Performance Tools for Network Workloads
+        href: ../../networking/technologies/network-subsystem/net-sub-performance-tools.md
+    - name: Software Defined Networking (SDN) tuning
+      href: subsystem/software-defined-networking/index.md
+      items:
+      - name: HNV gateway performance
+        href: subsystem/software-defined-networking/hnv-gateway-performance.md
+      - name: SLB gateway performance
+        href: subsystem/software-defined-networking/slb-gateway-performance.md
+    - name: Storage subsystem tuning
+      items:
+      - name: Storage Spaces Direct Overview
+        href: /azure-stack/hci/concepts/storage-spaces-direct-overview
+      - name: Storage Replication FAQ
+        href: ../../storage/storage-replica/storage-replica-frequently-asked-questions.yml
+      - name: Data Deduplication advanced settings
+        href: ../../storage/data-deduplication/advanced-settings.md
+  - name: Additional tuning resources
+    href: additional-resources.md

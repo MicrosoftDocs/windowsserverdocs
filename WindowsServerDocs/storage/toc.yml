@@ -1,0 +1,382 @@
+- name: Storage
+  href: storage.yml
+  items:
+  - name: What's new in Storage
+    href: whats-new-in-storage.md
+  - name: Data Deduplication
+    href: data-deduplication/overview.md
+    items:
+    - name: What's new in Data Deduplication
+      href: data-deduplication/whats-new.md
+    - name: Understand Data Deduplication
+      href: data-deduplication/understand.md
+    - name: Install and enable Data Deduplication
+      href: data-deduplication/install-enable.md
+    - name: Run Data Deduplication
+      href: data-deduplication/run.md
+    - name: Advanced Data Deduplication settings
+      href: data-deduplication/advanced-settings.md
+    - name: Data Deduplication interoperability
+      href: data-deduplication/interop.md
+  - name: DFS Namespaces
+    href: dfs-namespaces/dfs-overview.md
+    items:
+    - name: 'Checklist: Deploy DFS Namespaces'
+      href: dfs-namespaces/checklist-deploy-dfs-namespaces.md
+    - name: 'Checklist: Tune a DFS Namespace'
+      href: dfs-namespaces/checklist-tune-a-dfs-namespace.md
+    - name: Deploying DFS Namespaces
+      href: dfs-namespaces/deploying-dfs-namespaces.md
+      items:
+      - name: Choose a Namespace Type
+        href: dfs-namespaces/choose-a-namespace-type.md
+      - name: Create a DFS Namespace
+        href: dfs-namespaces/create-a-dfs-namespace.md
+      - name: Migrate a Domain-based Namespace to Windows Server 2008 Mode
+        href: dfs-namespaces/migrate-a-domain-based-namespace-to-windows-server-2008-mode.md
+      - name: Add Namespace Servers to a Domain-based DFS Namespace
+        href: dfs-namespaces/add-namespace-servers-to-a-domain-based-DFS-namespace.md
+      - name: Create a Folder in a DFS Namespace
+        href: dfs-namespaces/create-a-folder-in-a-dfs-namespace.md
+      - name: Add Folder Targets
+        href: dfs-namespaces/add-folder-targets.md
+      - name: Replicate Folder Targets using DFS Replication
+        href: dfs-namespaces/replicate-folder-targets-using-dfs-replication.md
+      - name: Delegate Management Permissions for DFS Namespaces
+        href: dfs-namespaces/delegate-management-permissions-for-dfs-namespaces.md
+    - name: Tuning DFS Namespaces
+      href: dfs-namespaces/tuning-dfs-namespaces.md
+      items:
+      - name: Enable or Disable Referrals and Client Failback
+        href: dfs-namespaces/enable-or-disable-referrals-and-client-failback.md
+      - name: Change the Amount of Time that Clients Cache Referrals
+        href: dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals.md
+      - name: Set the Ordering Method for Targets in Referrals
+        href: dfs-namespaces/set-the-ordering-method-for-targets-in-referrals.md
+      - name: Set Target Priority to Override Referral Ordering
+        href: dfs-namespaces/set-target-priority-to-override-referral-ordering.md
+      - name: Optimize Namespace Polling
+        href: dfs-namespaces/optimize-namespace-polling.md
+      - name: Enable Access-based Enumeration on a Namespace
+        href: dfs-namespaces/enable-access-based-enumeration-on-a-namespace.md
+      - name: Using Inherited Permissions with Access-based Enumeration
+        href: dfs-namespaces/using-inherited-permissions-with-access-based-enumeration.md
+  - name: DFS Replication
+    href: dfs-replication/dfsr-overview.md
+    items:
+    - name: Migrate SYSVOL replication to DFS Replication
+      href: dfs-replication/migrate-sysvol-to-dfsr.md
+    - name: Use robocopy to preseed files for DFS Replication
+      href: dfs-replication/preseed-dfsr-with-robocopy.md
+    - name: DFS Replication FAQ
+      href: dfs-replication/dfsr-faq.yml
+    - name: How to determine the minimum staging area DFSR needs for a replicated folder
+      href: ../troubleshoot/how-to-determine-the-minimum-staging-area-dfsr-needs-for-a-replicated-folder.md
+    - name: Understanding (the Lack of) Distributed File Locking in DFSR
+      href: ../troubleshoot/understanding-the-lack-of-distributed-file-locking-in-dfsr.md
+  - name: Disk Management
+    href: disk-management/overview-of-disk-management.md
+  - name: File Server and SMB
+    href: file-server/file-server-smb-overview.md
+    items:
+    - name: SMB Direct
+      href: file-server/smb-direct.md
+    - name: SMB over QUIC
+      href: file-server/smb-over-quic.md
+    - name: SMB compression
+      href: file-server/smb-compression.md
+    - name: SMB security enhancements
+      href: file-server/smb-security.md
+    - name: 'SMB: File and printer sharing ports should be open'
+      href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
+    - name: Secure SMB traffic
+      href: file-server/smb-secure-traffic.md
+    - name: Protect SMB traffic from interception
+      href: file-server/smb-interception-defense.md
+    - name: Control SMB signing behavior
+      href: file-server/smb-signing.md
+    - name: Network File System overview
+      href: nfs/nfs-overview.md
+    - name: Deploy Network File System
+      href: nfs/deploy-nfs.md
+    - name: NTFS overview
+      href: file-server/ntfs-overview.md
+    - name: Volume Shadow Copy Service
+      href: file-server/volume-shadow-copy-service.md
+    - name: Using Disk Cleanup
+      href: file-server/disk-cleanup.md
+    - name: Advanced Troubleshooting SMB
+      href: file-server/Troubleshoot/troubleshooting-smb.md
+      items:
+      - name: Detect, enable and disable SMBv1, SMBv2, and SMBv3
+        href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
+      - name: SMBv1 is not installed by default
+        href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
+  - name: File Server Resource Manager
+    href: fsrm/fsrm-overview.md
+    items:
+    - name: 'Checklist: Apply a Quota to a Volume or Folder'
+      href: fsrm/checklist-apply-quota-to-volume-or-folder.md
+    - name: 'Checklist: Apply a File Screen to a Volume or Folder'
+      href: fsrm/checklist-apply-file-screen-to-volume-or-folder.md
+    - name: Setting File Server Resource Manager Options
+      href: fsrm/setting-file-server-resource-manager-options.md
+      items:
+      - name: Configure E-mail Notifications
+        href: fsrm/configure-email-notifications.md
+      - name: Configure Notification Limits
+        href: fsrm/configure-notification-limits.md
+      - name: Configure Storage Reports
+        href: fsrm/configure-storage-reports.md
+      - name: Configure File Screen Audit
+        href: fsrm/configure-file-screen-audit.md
+    - name: Quota Management
+      href: fsrm/quota-management.md
+      items:
+      - name: Create a Quota
+        href: fsrm/create-quota.md
+      - name: Create an Auto Apply Quota
+        href: fsrm/create-auto-apply-quota.md
+      - name: Create a Quota template
+        href: fsrm/create-quota-template.md
+      - name: Edit Quota Template Properties
+        href: fsrm/edit-quota-template-properties.md
+      - name: Edit Auto Apply Quota Properties
+        href: fsrm/edit-auto-apply-quota-properties.md
+    - name: File screening Management
+      href: fsrm/file-screening-management.md
+      items:
+      - name: Define File Groups for Screening
+        href: fsrm/define-file-groups-for-screening.md
+      - name: Create a File Screen
+        href: fsrm/create-file-screen.md
+      - name: Create a File Screen Exception
+        href: fsrm/create-file-screen-exception.md
+      - name: Create a File Screen Template
+        href: fsrm/create-file-screen-template.md
+      - name: Edit File Screen Template Properties
+        href: fsrm/edit-file-screen-template-properties.md
+    - name: Storage Reports Management
+      href: fsrm/storage-reports-management.md
+      items:
+      - name: Schedule a Set of Reports
+        href: fsrm/schedule-set-of-reports.md
+      - name: Generate Reports on Demand
+        href: fsrm/generate-reports-on-demand.md
+    - name: Classification Management
+      href: fsrm/classification-management.md
+      items:
+      - name: Create an Automatic Classification Rule
+        href: fsrm/create-automatic-classification-rule.md
+      - name: Create a Classification Property
+        href: fsrm/create-classification-property.md
+    - name: File Management Tasks
+      href: fsrm/file-management-tasks.md
+      items:
+      - name: Create a File Expiration Task
+        href: fsrm/create-file-expiration-task.md
+      - name: Create a Custom File Management Task
+        href: fsrm/create-custom-file-management-task.md
+    - name: Managing Remote Storage Resources
+      href: fsrm/managing-remote-storage-resources.md
+      items:
+      - name: Connect to a Remote Computer
+        href: fsrm/connect-to-remote-computer.md
+      - name: Command-Line Tools
+        href: fsrm/command-line-tools.md
+  - name: Folder Redirection and Roaming User Profiles
+    href: folder-redirection/folder-redirection-rup-overview.md
+    items:
+    - name: Folder Redirection using Group Policy
+      href: folder-redirection/folder-redirection-using-group-policy.md
+    - name: Deploy Roaming User Profiles
+      href: folder-redirection/deploy-roaming-user-profiles.md
+    - name: Deploy Folder Redirection
+      href: folder-redirection/deploy-folder-redirection.md
+    - name: Deploy primary computers
+      href: folder-redirection/deploy-primary-computers.md
+    - name: Disable Offline Files on folders
+      href: folder-redirection/disable-offline-files-on-folders.md
+    - name: Enable always offline mode
+      href: folder-redirection/enable-always-offline.md
+    - name: Enable optimized folder moving
+      href: folder-redirection/enable-optimized-moving.md
+  - name: iSCSI
+    items:
+    - name: iSCSI Target Server
+      href: iscsi/iscsi-target-server.md
+    - name: iSCSI Target Server scalability limits
+      href: iscsi/iscsi-target-server-limits.md
+    - name: iSCSI boot
+      href: iscsi/iscsi-boot-overview.md
+  - name: ReFS
+    href: refs/refs-overview.md
+    items:
+    - name: Mirror-accelerated parity
+      href: refs/mirror-accelerated-parity.md
+    - name: Block cloning
+      href: refs/block-cloning.md
+    - name: Integrity streams
+      href: refs/integrity-streams.md
+    - name: ReFSUtil
+      href: ../administration/windows-commands/refsutil.md
+  - name: Storage Migration Service
+    items:
+    - name: Overview
+      href: storage-migration-service/overview.md
+    - name: Migrate a server
+      href: storage-migration-service/migrate-data.md
+    - name: How cutover works
+      href: storage-migration-service/cutover.md
+    - name: Frequently asked questions (FAQ)
+      href: storage-migration-service/faq.yml
+    - name: Known issues
+      href: storage-migration-service/known-issues.md
+  - name: Storage Replica
+    href: storage-replica/storage-replica-overview.md
+    items:
+    - name: Stretch Cluster replication using shared storage
+      href: storage-replica/stretch-cluster-replication-using-shared-storage.md
+    - name: Server-to-server storage replication
+      href: storage-replica/server-to-server-storage-replication.md
+    - name: Cluster-to-cluster storage replication
+      href: storage-replica/cluster-to-cluster-storage-replication.md
+    - name: Cluster-to-cluster storage replication Cross-Region in Azure
+      href: storage-replica/cluster-to-cluster-azure-cross-region.md
+    - name: Cluster-to-cluster storage replication within one Azure region
+      href: storage-replica/cluster-to-cluster-azure-one-region.md
+    - name: 'Storage Replica: Enhanced Log'
+      href: storage-replica/storage-replica-enhanced-log.md
+    - name: 'Storage Replica: Known Issues'
+      href: storage-replica/storage-replica-known-issues.md
+    - name: 'Storage Replica: Frequently Asked Questions'
+      href: storage-replica/storage-replica-frequently-asked-questions.yml
+  - name: Storage Spaces
+    href: storage-spaces/overview.md
+    items:
+    - name: Deploy Storage Spaces on a stand-alone server
+      href: storage-spaces/deploy-standalone-storage-spaces.md
+    - name: Enable storage bus cache with Storage Spaces on standalone servers
+      href: storage-spaces/storage-spaces-storage-bus-cache.md
+    - name: Health and operational states
+      href: storage-spaces/storage-spaces-states.md
+  - name: Storage Spaces Direct
+    href: /azure-stack/hci/concepts/storage-spaces-direct-overview?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    items:
+    - name: Understand
+      items:
+      - name: Understand the cache
+        href: /azure-stack/hci/concepts/cache?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Fault tolerance and storage efficiency
+        href: /azure-stack/hci/concepts/fault-tolerance?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Drive symmetry considerations
+        href: /azure-stack/hci/concepts/drive-symmetry-considerations?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Understand and monitor storage resync
+        href: /azure-stack/hci/concepts/understand-storage-resync?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Cluster and pool quorum
+        href: /azure-stack/hci/concepts/quorum?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Cluster sets
+        href: /azure-stack/hci/deploy/cluster-set?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Plan
+      items:
+      - name: Hardware requirements
+        href: storage-spaces/storage-spaces-direct-hardware-requirements.md
+      - name: Using the CSV in-memory read cache
+        href: /azure-stack/hci/manage/use-csv-cache?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Choose drives
+        href: /azure-stack/hci/concepts/choose-drives?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Plan volumes
+        href: /azure-stack/hci/concepts/plan-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Guest VM clusters
+        href: storage-spaces/storage-spaces-direct-in-vm.md
+      - name: Disaster recovery
+        href: storage-spaces/storage-spaces-direct-disaster-recovery.md
+    - name: Deploy
+      items:
+      - name: Deploy Storage Spaces Direct
+        href: storage-spaces/deploy-storage-spaces-direct.md
+      - name: Create volumes
+        href: /azure-stack/hci/manage/create-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Nested resiliency
+        href: /azure-stack/hci/concepts/nested-resiliency?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Configure quorum
+        href: ../failover-clustering/manage-cluster-quorum.md
+      - name: Upgrade a Storage Spaces Direct cluster
+        href: storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md
+      - name: Understand and deploy persistent memory
+        href: /azure-stack/hci/concepts/deploy-persistent-memory?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Understand and configure DAX
+        href: storage-spaces/persistent-memory-direct-access.md
+    - name: Manage
+      items:
+      - name: Manage with Windows Admin Center
+        href: ../manage/windows-admin-center/use/manage-hyper-converged.md
+      - name: Add servers or drives
+        href: storage-spaces/add-nodes.md
+      - name: Take a server offline for maintenance
+        href: /azure-stack/hci/manage/maintain-servers?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Remove servers
+        href: storage-spaces/remove-servers.md
+      - name: Update drive firmware
+        href: update-firmware.md
+      - name: Manage volumes
+        href: /azure-stack/hci/manage/manage-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Performance history
+        href: storage-spaces/performance-history.md
+        items:
+        - name: Drives
+          href: storage-spaces/performance-history-for-drives.md
+        - name: Network adapters
+          href: storage-spaces/performance-history-for-network-adapters.md
+        - name: Servers
+          href: storage-spaces/performance-history-for-servers.md
+        - name: VHDs
+          href: storage-spaces/performance-history-for-vhds.md
+        - name: VMs
+          href: storage-spaces/performance-history-for-vms.md
+        - name: Volumes
+          href: storage-spaces/performance-history-for-volumes.md
+        - name: Clusters
+          href: storage-spaces/performance-history-for-clusters.md
+        - name: Scripting samples
+          href: storage-spaces/performance-history-scripting.md
+      - name: Delimit the allocation of volumes
+        href: storage-spaces/delimit-volume-allocation.md
+      - name: Monitor with Azure Monitor
+        href: storage-spaces/configure-azure-monitor.md
+      - name: Adjustable storage repair speed
+        href: /azure-stack/hci/manage/storage-repair-speed?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Troubleshoot
+      items:
+      - name: Troubleshooting scenarios
+        href: storage-spaces/troubleshooting-storage-spaces.md
+      - name: Health and operational states
+        href: storage-spaces/storage-spaces-states.md
+      - name: Collect data
+        href: /azure-stack/hci/manage/collect-diagnostic-data?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Storage-class memory health management
+        href: storage-spaces/Storage-class-memory-health.md
+  - name: Work Folders
+    href: work-folders/work-folders-overview.md
+    items:
+    - name: Designing a Work Folders Implementation
+      href: work-folders/plan-work-folders.md
+    - name: Deploying Work Folders
+      href: work-folders/deploy-work-folders.md
+    - name: Deploying Work Folders with AD FS and Web Application Proxy (WAP)
+      href: work-folders/deploy-work-folders-adfs-overview.md
+      items:
+      - name: Step 1, Set up AD FS
+        href: work-folders/deploy-work-folders-adfs-step1.md
+      - name: Step 2, AD FS post-configuration
+        href: work-folders/deploy-work-folders-adfs-step2.md
+      - name: Step 3, Set up Work Folders
+        href: work-folders/deploy-work-folders-adfs-step3.md
+      - name: Step 4, Set up WAP
+        href: work-folders/deploy-work-folders-adfs-step4.md
+      - name: Step 5, Set up clients
+        href: work-folders/deploy-work-folders-adfs-step5.md
+  - name: Storage QoS
+    href: storage-qos/storage-qos-overview.md
+  - name: Change history for Storage topics
+    href: storage-change-history.md

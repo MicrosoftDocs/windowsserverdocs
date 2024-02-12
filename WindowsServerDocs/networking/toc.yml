@@ -1,0 +1,648 @@
+- name: Networking documentation
+  href: index.yml
+  items:
+  - name: Windows Server supported networking scenarios
+    href: windows-server-supported-networking-scenarios.md
+  - name: What's new in networking
+    href: What-s-New-in-Networking.md
+  - name: Configure secure protocol options for WinHTTP
+    href: configure-secure-protocol-options-winhttp.md
+  - name: Core network guidance for Windows Server
+    href: core-network-guide/core-network-guide-windows-server.md
+    items:
+    - name: Core network components
+      href: core-network-guide/Core-Network-Guide.md
+    - name: Core network companion guidance
+      href: core-network-guide/cncg/Core-Network-companion-Guides.md
+      items:
+      - name: Deploy server certificates for 802.1X wired and wireless deployments
+        href: core-network-guide/cncg/server-certs/Deploy-Server-Certificates-for-802.1X-Wired-and-Wireless-Deployments.md
+        items:
+        - name: Server certificate deployment overview
+          href: core-network-guide/cncg/server-certs/Server-Certificate-Deployment-Overview.md
+        - name: Server certificate deployment planning
+          href: core-network-guide/cncg/server-certs/Server-Certificate-Deployment-Planning.md
+        - name: Server certificate deployment
+          href: core-network-guide/cncg/server-certs/Server-Certificate-Deployment.md
+          items:
+          - name: Install the Web Server WEB1
+            href: core-network-guide/cncg/server-certs/Install-the-Web-Server-WEB1.md
+          - name: Create an alias (CNAME) record in DNS for WEB1
+            href: core-network-guide/cncg/server-certs/create-an-Alias-CNAME-Record-in-DNS-for-WEB1.md
+          - name: Configure WEB1 to distribute certificate revocation lists (CRLs)
+            href: core-network-guide/cncg/server-certs/Configure-WEB1-to-Distribute-Certificate-Revocation-lists.md
+          - name: Prepare the CAPolicy.inf File
+            href: core-network-guide/cncg/server-certs/Prepare-the-CAPolicy-inf-File.md
+          - name: Install the Certification Authority
+            href: core-network-guide/cncg/server-certs/Install-the-Certification-Authority.md
+          - name: Configure the CDP and AIA Extensions on CA1
+            href: core-network-guide/cncg/server-certs/Configure-the-cdP-and-AIA-Extensions-on-CA1.md
+          - name: Copy the CA certificate and CRL to the virtual directory
+            href: core-network-guide/cncg/server-certs/copy-the-CA-Certificate-and-CRL-to-the-Virtual-directory.md
+          - name: Configure the server certificate template
+            href: core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md
+          - name: Configure server certificate autoenrollment
+            href: core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md
+          - name: Refresh group policy
+            href: core-network-guide/cncg/server-certs/Refresh-Group-Policy.md
+          - name: Verify server enrollment of a server certificate
+            href: core-network-guide/cncg/server-certs/verify-Server-Enrollment-of-a-Server-Certificate.md
+      - name: Deploy password-based 802.1X authenticated wireless access
+        href: core-network-guide/cncg/wireless/a-deploy-8021X-wireless-access.md
+        items:
+        - name: Wireless access deployment overview
+          href: core-network-guide/cncg/wireless/b-wireless-access-deploy-overview.md
+        - name: Wireless access deployment process
+          href: core-network-guide/cncg/wireless/c-wireless-access-deploy-process.md
+        - name: Wireless access deployment planning
+          href: core-network-guide/cncg/wireless/d-wireless-access-planning.md
+        - name: Wireless access deployment
+          href: core-network-guide/cncg/wireless/e-wireless-access-deployment.md
+      - name: Deploy BranchCache hosted cache mode
+        href: core-network-guide/cncg/bc-hcm/1-Deploy-Bc-Hcm.md
+        items:
+        - name: BranchCache hosted cache mode deployment overview
+          href: core-network-guide/cncg/bc-hcm/2-Bc-Hcm-Deploy-Overview.md
+        - name: BranchCache hosted cache mode deployment planning
+          href: core-network-guide/cncg/bc-hcm/3-Bc-Hcm-Plan.md
+        - name: BranchCache hosted cache mode deployment
+          href: core-network-guide/cncg/bc-hcm/4-Bc-Hcm-Deployment.md
+          items:
+          - name: Install the BranchCache feature and configure the hosted cache server by Service Connection Point
+            href: core-network-guide/cncg/bc-hcm/5-Bc-Feature-Scp.md
+          - name: Move and resize the hosted cache (Optional)
+            href: core-network-guide/cncg/bc-hcm/6-Bc-move-Resize-Cache.md
+          - name: Prehash and preload content on the hosted cache server (Optional)
+            href: core-network-guide/cncg/bc-hcm/7-Bc-Prehash-Preload.md
+            items:
+            - name: Create content server data packages for web and file content (Optional)
+              href: core-network-guide/cncg/bc-hcm/8-Bc-Data-Packages.md
+            - name: Import data packages on the hosted cache server (Optional)
+              href: core-network-guide/cncg/bc-hcm/9-Bc-import-Data.md
+          - name: Configure client automatic hosted cache discovery by Service Connection Point
+            href: core-network-guide/cncg/bc-hcm/10-Bc-Client-By-Scp.md
+        - name: Additional resources
+          href: core-network-guide/cncg/bc-hcm/11-Bc-Hcm-additional-resources.md
+  - name: BranchCache
+    href: branchcache/BranchCache.md
+    items:
+    - name: BranchCache netsh and Windows PowerShell commands
+      href: branchcache/BranchCache-Network-Shell-and-Windows-powershell-Commands.md
+    - name: BranchCache deployment guidance
+      href: branchcache/deploy/BranchCache-Deployment-Guide.md
+      items:
+      - name: Choosing a BranchCache design
+        href: branchcache/plan/Choosing-a-BranchCache-Design.md
+      - name: Deploy BranchCache
+        href: branchcache/deploy/Deploy-BranchCache.md
+        items:
+        - name: Install and configure content servers
+          href: branchcache/deploy/Install-and-Configure-Content-Servers.md
+          items:
+          - name: Install content servers that use the BranchCache feature
+            href: branchcache/deploy/Install-Content-Servers-that-Use-the-BranchCache-Feature.md
+            items:
+            - name: Install the BranchCache feature
+              href: branchcache/deploy/Install-the-BranchCache-Feature.md
+            - name: Configure Windows Server Update Services (WSUS) content servers
+              href: branchcache/deploy/configure-wsus-content-servers.md
+          - name: Install File Services content servers
+            href: branchcache/deploy/Install-File-Services-Content-Servers.md
+            items:
+            - name: Configure the File Services server role
+              href: branchcache/deploy/Configure-the-File-Services-server-role.md
+              items:
+              - name: Install a new file server as a content server
+                href: branchcache/deploy/Install-a-New-File-Server-as-a-Content-Server.md
+              - name: Configure an existing file server as a content server
+                href: branchcache/deploy/Configure-an-Existing-File-Server-as-a-Content-Server.md
+            - name: Enable hash publication for file servers
+              href: branchcache/deploy/Enable-Hash-Publication-for-File-Servers.md
+              items:
+              - name: Enable hash publication for non-domain member file servers
+                href: branchcache/deploy/Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md
+              - name: Enable hash publication for domain member file servers
+                href: branchcache/deploy/Enable-Hash-Publication-for-Domain-Member-File-Servers.md
+                items:
+                - name: Create the BranchCache file servers Organizational Unit (OU)
+                  href: branchcache/deploy/create-the-BranchCache-File-Servers-Organizational-Unit.md
+                - name: Move file servers to the BranchCache file servers OU
+                  href: branchcache/deploy/move-File-Servers-to-the-BranchCache-File-Servers-Organizational-Unit.md
+                - name: Create the BranchCache hash publication Group Policy Object (GPO)
+                  href: branchcache/deploy/create-the-BranchCache-Hash-Publication-Group-Policy-Object.md
+                - name: Configure the BranchCache hash publication GPO
+                  href: branchcache/deploy/Configure-the-BranchCache-Hash-Publication-Group-Policy-Object.md
+            - name: Enable BranchCache on a file share (Optional)
+              href: branchcache/deploy/enable-bc-on-file-share.md
+        - name: Deploy hosted cache servers (Optional)
+          href: branchcache/deploy/deploy-hosted-cache-servers.md
+        - name: Prehashing and preloading content on hosted cache servers (Optional)
+          href: branchcache/deploy/prehashing-and-preloading.md
+        - name: Configure BranchCache client computers
+          href: branchcache/deploy/Configure-BranchCache-Client-computers.md
+          items:
+          - name: Use group policy to configure domain member client computers
+            href: branchcache/deploy/Use-Group-Policy-to-Configure-Domain-Member-Client-computers.md
+          - name: Use Windows PowerShell to configure non-domain member client computers
+            href: branchcache/deploy/Use-Windows-powershell-to-Configure-Non-Domain-Member-Client-computers.md
+            items:
+            - name: Configure firewall rules for non-domain members to allow BranchCache traffic
+              href: branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md
+          - name: Verify client computer settings
+            href: branchcache/deploy/verify-Client-computer-Settings.md
+  - name: DirectAccess
+    href: ../remote/remote-access/directaccess/directaccess.md
+  - name: Domain Name System (DNS)
+    href: dns/dns-top.md
+    items:
+    - name: Overview
+      href: dns/dns-top.md
+      items:
+      - name: What's new in DNS
+        items:
+        - name: What's new in DNS server in Windows Server
+          href: dns/What-s-New-in-DNS-Server.md
+        - name: What's new in DNS client in Windows Server
+          href: dns/What-s-New-in-DNS-Client.md
+      - name: Anycast DNS
+        href: dns/deploy/anycast.md
+      - name: DNS policies overview
+        href: dns/deploy/DNS-Policies-Overview.md
+    - name: Quickstarts
+      items:
+      - name: Install and configure DNS server
+        href: dns/quickstart-install-configure-dns-server.md
+    - name: Concepts
+      items:
+      - name: DNS zones
+        href: dns/zone-types.md
+      - name: DNS resource records
+        href: dns/resource-record-types.md
+      - name: DNSSEC
+        items:
+        - name: What is DNSSEC?
+          href: dns/dnssec-overview.md
+        - name: Validate and secure DNS responses
+          href: dns/validate-dnssec-responses.md
+    - name: How-to guides
+      items:
+      - name: Manage DNS zones
+        href: dns/manage-dns-zones.md
+      - name: Manage DNS resource records
+        href: dns/manage-resource-records.md
+      - name: Secure DNS Client over HTTPS (DoH)
+        href: dns/doh-client-support.md
+    - name: Tutorials
+      items:
+      - name: DNS policy
+        href: dns/deploy/DNS-Policy-Scenario-Guide.md
+        items:
+        - name: Geo-location traffic management
+          href: dns/deploy/primary-geo-location.md
+        - name: geo-location traffic management with primary-secondary zones
+          href: dns/deploy/primary-secondary-geo-location.md
+        - name: Intelligent DNS responses based on time of day
+          href: dns/deploy/dns-tod-intelligent.md
+        - name: DNS responses based on time of day with an Azure cloud app server
+          href: dns/deploy/dns-tod-azure-cloud-app-server.md
+        - name: Split-Brain DNS in Active Directory
+          href: dns/deploy/dns-sb-with-ad.md
+        - name: Split-Brain DNS deployment
+          href: dns/deploy/split-brain-DNS-deployment.md
+        - name: Apply filters to DNS queries
+          href: dns/deploy/apply-filters-on-dns-queries.md
+        - name: DNS App load balancing
+          href: dns/deploy/app-lb.md
+        - name: DNS App load balancing with geo-location awareness
+          href: dns/deploy/app-lb-geo.md
+    - name: Troubleshooting DNS issues
+      href: dns/troubleshoot/troubleshoot-dns-data-collection.md
+      items:
+      - name: Troubleshooting DNS clients
+        href: dns/troubleshoot/troubleshoot-dns-client.md
+      - name: Troubleshooting DNS servers
+        href: dns/troubleshoot/troubleshoot-dns-server.md
+  - name: Dynamic Host Configuration Protocol (DHCP)
+    href: technologies/dhcp/dhcp-top.md
+    items:
+    - name: Quickstarts
+      items:
+      - name: Install and configure DHCP server
+        href: technologies/dhcp/quickstart-install-configure-dhcp-server.md
+    - name: What's new in DHCP
+      href: technologies/dhcp/What-s-New-in-DHCP.md
+      items:
+      - name: DHCP subnet selection options
+        href: technologies/dhcp/dhcp-subnet-options.md
+      - name: DHCP logging events for DNS record registrations
+        href: technologies/dhcp/dhcp-dns-events.md
+    - name: Concepts
+      items:
+      - name: DHCP scopes
+        href: technologies/dhcp/dhcp-scopes.md
+    - name: How-to guides
+      items:
+      - name: Deploy DHCP using Windows PowerShell
+        href: technologies/dhcp/dhcp-deploy-wps.md
+      - name: Install DHCP relay agent
+        href: technologies/dhcp/dhcp-deploy-relay-agent.md
+    - name: Troubleshoot DHCP issues
+      href: ../troubleshoot/troubleshoot-dhcp-issue.md
+      items:
+      - name: Dynamic Host Configuration Protocol (DHCP) Basics
+        href: ../troubleshoot/dynamic-host-configuration-protocol-basics.md
+      - name: Troubleshoot problems on the DHCP server
+        href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
+  - name: Extensible Authentication Protocol (EAP)
+    href: technologies/extensible-authentication-protocol/network-access.md
+    items:
+    - name: What's changed in Windows 11
+      href: technologies/extensible-authentication-protocol/windows-11-changes.md
+    - name: Configure EAP profiles in Windows
+      href: technologies/extensible-authentication-protocol/configure-eap-profiles.md
+    - name: Passpoint (Hotspot 2.0)
+      href: /windows-hardware/drivers/mobilebroadband/hotspot-20
+  - name: High-Performance Networking (HPN)
+    href: technologies/hpn/hpn-top.md
+    items:
+    - name: Network offload and optimization technologies
+      href: technologies/hpn/network-offload-and-optimization.md
+      items:
+      - name: Software only (SO) features and technologies
+        href: technologies/hpn/hpn-software-only-features.md
+      - name: Software and hardware (SH) integrated features and technologies
+        href: technologies/hpn/hpn-software-hardware-features.md
+      - name: Hardware Only (HO) features and technologies
+        href: technologies/hpn/hpn-hardware-only-features.md
+      - name: NIC advanced properties
+        href: technologies/hpn/hpn-nic-advanced-properties.md
+    - name: Receive Segment Coalescing (RSC) in the vSwitch
+      href: technologies/hpn/rsc-in-the-vswitch.md
+  - name: Host Compute Network (HCN) Service API
+    href: technologies/hcn/hcn-top.md
+    items:
+    - name: Common HCN scenarios
+      href: technologies/hcn/hcn-scenarios.md
+    - name: RPC context handles for HCN
+      href: technologies/hcn/hcn-declaration-handles.md
+    - name: HCN JSON document schemas
+      href: technologies/hcn/hcn-json-document-schemas.md
+    - name: Example of C# generated code
+      href: technologies/hcn/example-c-sharp.md
+    - name: Example of Go generated code
+      href: technologies/hcn/example-go.md
+  - name: Hyper-V Virtual Switch
+    href: ../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md
+  - name: IP Address Management (IPAM)
+    href: technologies/ipam/ipam-top.md
+    items:
+    - name: What's new in IPAM
+      href: technologies/ipam/What-s-New-in-IPAM.md
+    - name: Manage IPAM
+      href: technologies/ipam/Manage-IPAM.md
+      items:
+      - name: DNS resource record management
+        href: technologies/ipam/DNS-Resource-Record-Management.md
+        items:
+        - name: Add a DNS resource record
+          href: technologies/ipam/add-a-DNS-Resource-Record.md
+        - name: Delete DNS resource records
+          href: technologies/ipam/delete-DNS-Resource-Records.md
+        - name: Filter the view of DNS resource records
+          href: technologies/ipam/Filter-the-View-of-DNS-Resource-Records.md
+        - name: View DNS resource records for a specific IP address
+          href: technologies/ipam/View-DNS-Resource-Records-for-a-Specific-IP-address.md
+      - name: DNS zone management
+        href: technologies/ipam/DNS-Zone-Management.md
+        items:
+        - name: Create a DNS zone
+          href: technologies/ipam/create-a-DNS-Zone.md
+        - name: Edit a DNS zone
+          href: technologies/ipam/edit-a-DNS-Zone.md
+        - name: View DNS resource records for a DNS zone
+          href: technologies/ipam/View-DNS-Resource-Records-for-a-DNS-Zone.md
+        - name: View DNS zones
+          href: technologies/ipam/View-DNS-Zones.md
+      - name: Manage resources in multiple active directory forests
+        href: technologies/ipam/Manage-Resources-in-Multiple-active-directory-forests.md
+      - name: Purge utilization data
+        href: technologies/ipam/Purge-Utilization-Data.md
+      - name: Role-based access control
+        href: technologies/ipam/Role-based-Access-Control.md
+        items:
+        - name: Manage role-based access control with Server Manager
+          href: technologies/ipam/Manage-Role-Based-Access-Control-with-server-manager.md
+          items:
+          - name: Create a user role for access control
+            href: technologies/ipam/create-a-User-Role-for-Access-Control.md
+          - name: Create an access policy
+            href: technologies/ipam/create-an-Access-Policy.md
+          - name: Set access scope for a DNS zone
+            href: technologies/ipam/Set-Access-Scope-for-a-DNS-Zone.md
+          - name: Set access scope for DNS resource records
+            href: technologies/ipam/Set-Access-Scope-for-DNS-Resource-Records.md
+          - name: View roles and role permissions
+            href: technologies/ipam/View-Roles-and-Role-Permissions.md
+        - name: Manage role-based access control with Windows PowerShell
+          href: technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-powershell.md
+  - name: Network Connectivity Status Indicator
+    items:
+    - name: NCSI overview
+      href: ncsi/ncsi-overview.md
+    - name: NCSI troubleshooting guide
+      href: ncsi/ncsi-troubleshooting-guide.md
+    - name: NCSI frequently asked questions
+      href: ncsi/ncsi-frequently-asked-questions.md
+  - name: Network Load Balancing
+    href: technologies/Network-Load-Balancing.md
+  - name: Network Policy Server (NPS)
+    href: technologies/nps/nps-top.md
+    items:
+    - name: NPS best practices
+      href: technologies/nps/nps-best-practices.md
+    - name: Getting started with NPS
+      href: technologies/nps/nps-getstart-top.md
+      items:
+      - name: Connection request processing
+        href: technologies/nps/nps-crp-top.md
+        items:
+        - name: Connection request policies
+          href: technologies/nps/nps-crp-crpolicies.md
+        - name: Realm names
+          href: technologies/nps/nps-crp-realm-names.md
+        - name: Remote RADIUS server groups
+          href: technologies/nps/nps-crp-rrsg.md
+      - name: Network policies
+        href: technologies/nps/nps-np-overview.md
+        items:
+        - name: Access permission
+          href: technologies/nps/nps-np-access.md
+      - name: NPS templates
+        href: technologies/nps/nps-templates.md
+      - name: RADIUS clients
+        href: technologies/nps/nps-radius-clients.md
+    - name: Plan NPS
+      href: technologies/nps/nps-plan-top.md
+      items:
+      - name: Plan NPS as a RADIUS server
+        href: technologies/nps/nps-plan-server.md
+      - name: Plan NPS as a RADIUS proxy
+        href: technologies/nps/nps-plan-proxy.md
+    - name: Deploy NPS
+      href: technologies/nps/nps-deploy.md
+    - name: Manage NPS
+      href: technologies/nps/nps-manage-top.md
+      items:
+      - name: Network Policy Server Management with Administration Tools
+        href: technologies/nps/nps-admintools.md
+      - name: Configure connection request policies
+        href: technologies/nps/nps-crp-configure.md
+      - name: Configure firewalls for RADIUS traffic
+        href: technologies/nps/nps-firewalls-configure.md
+      - name: Configure network policies
+        href: technologies/nps/nps-np-configure.md
+      - name: Configure NPS Accounting
+        href: technologies/nps/nps-accounting-configure.md
+      - name: Configure RADIUS clients
+        href: technologies/nps/nps-radius-clients-configure.md
+      - name: Configure remote RADIUS server groups
+        href: technologies/nps/nps-crp-rrsg-configure.md
+      - name: Manage certificates used with NPS
+        href: technologies/nps/nps-manage-certificates.md
+        items:
+        - name: NPS CRL check overview
+          href: technologies/nps/network-policy-server-certificate-revocation-list-overview.md
+        - name: NPS CRL check registry settings
+          href: technologies/nps/network-policy-server-certificate-revocation-list-check-registry-settings.md
+        - name: Configure certificate templates for PEAP and EAP requirements
+          href: technologies/nps/nps-manage-cert-requirements.md
+      - name: Manage NPSs
+        href: technologies/nps/nps-manage-servers.md
+        items:
+        - name: Configure NPS on a multihomed computer
+          href: technologies/nps/nps-multihomed-configure.md
+        - name: Configure NPS UDP port information
+          href: technologies/nps/nps-udp-ports-configure.md
+        - name: Disable NAS notification forwarding
+          href: technologies/nps/nps-disable-nas-notifications.md
+        - name: Export an NPS configuration for import on another server
+          href: technologies/nps/nps-manage-export.md
+        - name: Increase concurrent authentications processed by NPS
+          href: technologies/nps/nps-concurrent-auth.md
+        - name: Install NPS
+          href: technologies/nps/nps-manage-install.md
+        - name: NPS proxy server load balancing
+          href: technologies/nps/nps-manage-proxy-lb.md
+        - name: Register an NPS in an Active Directory Domain
+          href: technologies/nps/nps-manage-register.md
+        - name: Unregister an NPS from an Active Directory Domain
+          href: technologies/nps/nps-manage-unregister.md
+        - name: Use regular expressions in NPS
+          href: technologies/nps/nps-crp-reg-expressions.md
+        - name: Verify configuration after NPS changes
+          href: technologies/nps/nps-manage-verify.md
+        - name: NPS data collection
+          href: technologies/nps/nps-data-collection.md
+      - name: Manage NPS templates
+        href: technologies/nps/nps-manage-templates.md
+  - name: Network Shell (Netsh)
+    href: technologies/netsh/netsh.md
+    items:
+    - name: Netsh command syntax, contexts, and formatting
+      href: technologies/netsh/netsh-contexts.md
+    - name: Network Shell (Netsh) example batch file
+      href: technologies/netsh/netsh-wins.md
+    - name: Netsh bridge
+      href: technologies/netsh/netsh-bridge.md
+    - name: Netsh http commands
+      href: technologies/netsh/netsh-http.md
+    - name: Netsh interface portproxy commands
+      href: technologies/netsh/netsh-interface-portproxy.md
+    - name: Netsh mbn commands
+      href: technologies/netsh/netsh-mbn.md
+  - name: Network subsystem performance tuning
+    href: technologies/network-subsystem/net-sub-performance-top.md
+    items:
+    - name: Choosing a network adapter
+      href: technologies/network-subsystem/net-sub-choose-nic.md
+    - name: Configure the order of network interfaces
+      href: technologies/network-subsystem/net-sub-interface-metric.md
+    - name: Performance tuning network adapters
+      href: technologies/network-subsystem/net-sub-performance-tuning-nics.md
+    - name: Network-related performance counters
+      href: technologies/network-subsystem/net-sub-performance-counters.md
+    - name: Performance tools for network workloads
+      href: technologies/network-subsystem/net-sub-performance-tools.md
+  - name: Packet Monitor (Pktmon)
+    href: technologies/pktmon/pktmon.md
+    items:
+    - name: Pktmon command syntax and formatting
+      href: technologies/pktmon/pktmon-syntax.md
+    - name: Packet Monitoring Extension in Windows Admin Center
+      href: technologies/pktmon/pktmon-wac-extension.md
+    - name: SDN Data Path Diagnostics Extension in Windows Admin Center
+      href: technologies/pktmon/pktmon-sdn-data-path-wac-extension.md
+    - name: Microsoft Network Monitor (Netmon) support
+      href: technologies/pktmon/pktmon-netmon-support.md
+  - name: Quality of Service (QoS) policy
+    href: technologies/qos/qos-policy-top.md
+    items:
+    - name: Getting started with QoS policy
+      href: technologies/qos/qos-policy-get-started.md
+      items:
+      - name: How QoS policy works
+        href: technologies/qos/qos-policy-works.md
+      - name: QoS policy architecture
+        href: technologies/qos/qos-policy-architecture.md
+      - name: QoS policy scenarios
+        href: technologies/qos/qos-policy-scenarios.md
+    - name: Manage QoS policy
+      href: technologies/qos/qos-policy-manage.md
+      items:
+      - name: QoS policy events and errors
+        href: technologies/qos/qos-policy-errors.md
+    - name: QoS policy FAQ
+      href: technologies/qos/qos-policy-faq.yml
+  - name: Software Defined Networking (SDN)
+    href: sdn/index.yml
+    items:
+    - name: SDN technologies
+      href: sdn/technologies/Software-Defined-Networking-Technologies.md
+      items:
+      - name: Hyper-V network virtualization
+        href: sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md
+        items:
+        - name: Hyper-V network virtualization overview
+          href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md
+        - name: Hyper-V network virtualization technical details
+          href: sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md
+        - name: What's new in Hyper-V Network virtualization
+          href: sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md
+      - name: Internal DNS service (iDNS) for SDN
+        href: sdn/technologies/Idns-for-Sdn.md
+      - name: Network Controller
+        href: /azure-stack/hci/concepts/network-controller-overview
+        items:
+        - name: Network Controller high availability
+          href: sdn/technologies/network-controller/network-controller-high-availability.md
+        - name: Install the Network Controller server role using Server Manager
+          href: sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md
+        - name: Post-deployment steps for Network Controller
+          href: sdn/technologies/network-controller/post-deploy-steps-nc.md
+      - name: Network function virtualization
+        href: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
+        items:
+        - name: Datacenter firewall overview
+          href: /azure-stack/hci/concepts/datacenter-firewall-overview
+        - name: RAS Gateway for SDN
+          href: /azure-stack/hci/concepts/gateway-overview
+          items:
+          - name: RAS Gateway deployment architecture
+            href: sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md
+          - name: RAS Gateway high availability
+            href: sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md
+        - name: Software Load Balancing (SLB) for SDN
+          href: /azure-stack/hci/concepts/software-load-balancer
+      - name: Container networking
+        href: sdn/technologies/Containers/Container-networking-overview.md
+    - name: Plan for SDN
+      href: /azure-stack/hci/concepts/plan-software-defined-networking-infrastructure
+      items:
+      - name: Installation and preparation requirements for deploying Network Controller
+        href: /azure-stack/hci/concepts/network-controller
+    - name: Deploy SDN
+      items:
+      - name: Deploy an SDN Infrastructure
+        href: sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md
+        items:
+        - name: Deploy an SDN infrastructure using scripts
+          href: sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md
+      - name: Deploy SDN technologies using Windows PowerShell
+        href: sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md
+        items:
+        - name: Deploy Network Controller using Windows PowerShell
+          href: sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md
+    - name: Manage SDN
+      href: sdn/manage/manage-sdn.md
+      items:
+      - name: Manage tenant virtual networks
+        href: sdn/manage/Manage-Tenant-Virtual-Networks.md
+        items:
+        - name: Understanding usage of virtual networks and VLANs
+          href: sdn/manage/Understanding-Usage-of-Virtual-Networks-and-VLANs.md
+        - name: Use Access Control lists (ACLs) to manage datacenter network traffic flow
+          href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
+        - name: Create, delete, or update tenant virtual networks
+          href: sdn/manage/create,-delete,-or-Update-Tenant-Virtual-Networks.md
+        - name: Add a virtual gateway to a tenant virtual network
+          href: sdn/manage/add-a-Virtual-Gateway-to-a-Tenant-Virtual-Network.md
+        - name: Connect container endpoints to a tenant virtual network
+          href: sdn/manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md
+        - name: Configure encryption for a virtual subnet
+          href: sdn/vnet-encryption/sdn-config-vnet-encryption.md
+        - name: Egress metering in a virtual network
+          href: sdn/manage/sdn-egress.md
+      - name: Manage tenant workloads
+        href: sdn/manage/Manage-Tenant-Workloads.md
+        items:
+        - name: Create a VM and connect to a tenant virtual network or VLAN
+          href: sdn/manage/create-a-Tenant-VM.md
+        - name: Configure QoS for a tenant VM network adapter
+          href: sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md
+        - name: Configure datacenter firewall ACLs
+          href: /azure-stack/hci/manage/use-datacenter-firewall-powershell
+        - name: Configure the Software Load Balancer for load balancing and Network address Translation (NAT)
+          href: sdn/manage/Configure-SLB-and-Nat.md
+        - name: Use network virtual appliances on a virtual network
+          href: sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md
+        - name: Guest clustering in a virtual network
+          href: sdn/manage/guest-clustering.md
+      - name: Update, backup, and restore an SDN infrastructure
+        href: sdn/manage/Update-Backup-Restore.md
+    - name: Security for SDN
+      items:
+      - name: Secure the Network Controller
+        href: /azure-stack/hci/manage/nc-security?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Manage certificates for SDN
+        href: /azure-stack/hci/manage/sdn-manage-certs?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Update Network Controller certificates
+        href: /azure-stack/hci/manage/update-network-controller-certificates?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Kerberos with Service Principal Name (SPN)
+        href: /azure-stack/hci/manage/kerberos-with-spn?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: SDN firewall auditing
+        href: /azure-stack/hci/manage/use-datacenter-firewall-powershell?toc=/windows-server/networking/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Virtual network peering
+      href: sdn/vnet-peering/sdn-vnet-peering.md
+      items:
+      - name: Configure virtual network peering
+        href: sdn/vnet-peering/sdn-configure-vnet-peering.md
+    - name: SDN gateway performance
+      href: sdn/gateway-performance.md
+    - name: Gateway bandwidth allocation
+      href: sdn/gateway-allocation.md
+  - name: Switch Embedded Teaming (SET)
+    href: /azure-stack/hci/concepts/host-network-requirements
+  - name: Virtual Private Networking (VPN)
+    href: ../remote/remote-access/vpn/vpn-top.md
+  - name: Windows Internet Name Service (WINS)
+    href: technologies/wins/wins-top.md
+  - name: Windows Time service
+    href: windows-time-service/windows-time-service-top.md
+    items:
+    - name: Insider preview - Windows Time service in Windows Server 2019
+      href: windows-time-service/insider-preview.md
+    - name: Accurate time for Windows Server 2016
+      href: windows-time-service/accurate-time.md
+    - name: Configuring systems for high accuracy
+      href: windows-time-service/configuring-systems-for-high-accuracy.md
+    - name: Windows Time for traceability
+      href: windows-time-service/windows-time-for-traceability.md
+    - name: Windows Time service technical reference
+      href: windows-time-service/windows-time-service-tech-ref.md
+      items:
+      - name: How the Windows Time service works
+        href: windows-time-service/How-the-Windows-Time-Service-Works.md
+      - name: Windows Time service tools and settings
+        href: windows-time-service/Windows-Time-Service-Tools-and-Settings.md
+  - name: Wireless networking 
+    href: technologies/wlan/wireless-networking.md

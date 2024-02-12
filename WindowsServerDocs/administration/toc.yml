@@ -1,0 +1,214 @@
+items:
+- name: Management
+  href: manage-windows-server.yml
+  items: 
+    - name: Overview
+      items: 
+        - name: Windows Server Management Overview
+          href: overview.md
+        - name: Windows Server Azure Management
+          href: azure.md
+    - name: Azure Arc enabled server
+      items:
+        - name: What is Azure Arc-enabled servers?
+          href: /azure/azure-arc/servers/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Azure Automanage for Azure Arc-enabled servers
+          href: /azure/automanage/automanage-arc?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Connected Machine agent overview
+          href:  /azure/azure-arc/servers/agent-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Plan for deployment
+          href:  /azure/azure-arc/servers/plan-at-scale-deployment?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Windows Admin Center 
+      items:
+        - name: Windows Admin Center Overview
+          href: ../manage/windows-admin-center/overview.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: FAQ
+          href: ../manage/windows-admin-center/understand/faq.yml?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: System Center
+      items:
+        - name: System Center Overview
+          href: /system-center/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Data Protection Manager
+          href: /system-center/dpm/dpm-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Operations Manager
+          href: /system-center/scom/welcome/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Virtual Machine Manager
+          href: /system-center/vmm/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Orchestrator
+          href: /system-center/orchestrator/learn-about-orchestrator/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Service Management Automation
+          href: /system-center/sma/overview-of-service-management-automation/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Service Provider Foundation
+          href: /system-center/spf/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Built-in management tools
+      items: 
+        - name: What is the Server Core installation option?
+          href: server-core/what-is-server-core.md
+          items: 
+            - name: What's included in the Server Core installation option?
+              href: server-core/server-core-roles-and-services.md
+            - name: Basic administration tasks in Server Core
+              href: server-core/server-core-administer.md
+            - name: Configure Server Core with SConfig
+              href: server-core/server-core-sconfig.md
+            - name: Manage Server Core
+              href: server-core/server-core-manage.md
+            - name: Configure memory dump files
+              href: server-core/server-core-memory-dump.md
+            - name: Patch your Server Core installation
+              href: server-core/server-core-servicing.md
+        - name: Manage on-premises systems with Server Manager
+          href: server-manager/server-manager.md
+          items: 
+            - name: Manage the Local Server and the Server Manager Console
+              href: server-manager/manage-the-local-server-and-the-server-manager-console.md
+            - name: Configure Remote Management in Server Manager
+              href: server-manager/configure-remote-management-in-server-manager.md
+            - name: Add Servers to Server Manager
+              href: server-manager/add-servers-to-server-manager.md
+            - name: Install or Uninstall Roles, Role Services, or Features
+              href: server-manager/install-or-uninstall-roles-role-services-or-features.md
+              items: 
+                - name: Configure Features on Demand in Windows Server
+                  href: server-manager/configure-features-on-demand-in-windows-server.md
+            - name: View and Configure Performance, Event, and Service Data
+              href: server-manager/view-and-configure-performance-event-and-service-data.md
+            - name: View Task details and Notifications
+              href: server-manager/view-task-details-and-notifications.md
+            - name: Run Best Practices Analyzer Scans and Manage Scan Results
+              href: server-manager/run-best-practices-analyzer-scans-and-manage-scan-results.md
+            - name: Create and Manage Server Groups
+              href: server-manager/create-and-manage-server-groups.md
+            - name: Filter, sort, and query Data in Server Manager Tiles
+              href: server-manager/filter-sort-and-query-data-in-server-manager-tiles.md
+            - name: Keyboard Shortcuts for Server Manager
+              href: server-manager/keyboard-shortcuts-for-server-manager.md
+        - name: Manage Server Core and remote systems Remote Server Administration Tools
+          href: ../remote/remote-server-administration-tools.md
+        - name: Manage Windows with OpenSSH
+          items: 
+            - name: What is OpenSSH for Windows?
+              href: OpenSSH/OpenSSH_Overview.md
+            - name: Get started with OpenSSH for Windows
+              href: OpenSSH/OpenSSH_Install_FirstUse.md
+            - name: Server configuration options
+              href: OpenSSH/OpenSSH_Server_Configuration.md
+            - name: Key-based authentication
+              href: OpenSSH/OpenSSH_KeyManagement.md
+        - name: Windows Server Update Services (WSUS)
+          href: windows-server-update-services/get-started/windows-server-update-services-wsus.md
+          items: 
+            - name: Deploy Windows Server Update Services
+              href: windows-server-update-services/deploy/deploy-windows-server-update-services.md
+              items: 
+                - name: Plan your WSUS deployment
+                  href: windows-server-update-services/plan/plan-your-wsus-deployment.md
+                - name: "Step 1: Install the WSUS Server Role"
+                  href: windows-server-update-services/deploy/1-install-the-wsus-server-role.md
+                - name: "Step 2: Configure WSUS"
+                  href: windows-server-update-services/deploy/2-configure-wsus.md
+                - name: "Step 3: Approve and Deploy Updates in WSUS"
+                  href: windows-server-update-services/deploy/3-approve-and-deploy-updates-in-wsus.md
+                - name: "Step 4: Configure Group Policy Settings for Automatic Updates"
+                  href: windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md
+            - name: Update Management with Windows Server Update Services
+              href: windows-server-update-services/manage/update-management-with-windows-server-update-services.md
+              items: 
+                - name: Setting up Update Synchronizations
+                  href: windows-server-update-services/manage/setting-up-update-synchronizations.md
+                - name: Managing WSUS Client computers and WSUS computer Groups
+                  href: windows-server-update-services/manage/managing-wsus-client-computers-and-wsus-computer-groups.md
+                - name: Viewing and Managing Updates
+                  href: windows-server-update-services/manage/viewing-and-managing-updates.md
+                - name: WSUS and the Catalog Site
+                  href: windows-server-update-services/manage/wsus-and-the-catalog-site.md
+                - name: Updates Operations
+                  href: windows-server-update-services/manage/updates-operations.md
+                - name: The Server cleanup Wizard
+                  href: windows-server-update-services/manage/the-server-cleanup-wizard.md
+                - name: Running WSUS Replica mode
+                  href: windows-server-update-services/manage/running-wsus-replica-mode.md
+                - name: WSUS Messages and Troubleshooting Tips
+                  href: windows-server-update-services/manage/wsus-messages-and-troubleshooting-tips.md
+            - name: Express update delivery ISV support
+              href: windows-server-update-services/deploy/express-update-delivery-isv-support.md
+              items: 
+                - name: Monthly Delta-update ISV support without WSUS
+                  href: windows-server-update-services/deploy/monthly-delta-update-isv-support-without-WSUS.md
+            - name: Migrating the WSUS database from Windows Internal Database (WID) to SQL
+              href: windows-server-update-services/manage/wid-to-sql-migration.md
+        - name: Windows Console behavior in Windows Server
+          href: windows-console-changes.md
+        - name: Collect information about your environment and systems
+          items: 
+            - name: System Insights
+              href: ..\manage\system-insights\overview.md
+              items: 
+                - name: Understanding capabilities
+                  href: ..\manage\system-insights\understanding-capabilities.md
+                - name: Managing capabilities
+                  href: ..\manage\system-insights\managing-capabilities.md
+                - name: Adding and developing capabilities
+                  href: ..\manage\system-insights\adding-and-developing-capabilities.md
+                  items: 
+                    - name: Adding, removing, and updating capabilities
+                      href: ..\manage\system-insights\add-remove-update-capabilities.md
+                    - name: Choosing capability data sources
+                      href: ..\manage\system-insights\data-sources.md
+                - name: FAQ
+                  href: ..\manage\system-insights\faq.md
+            - name: Collect events with Setup and Boot Event Collection
+              href: Get-started-with-Setup-and-Boot-Event-Collection.md
+            - name: Collect information about software Software Inventory Logging (SIL)
+              href: software-inventory-logging/get-started-with-software-inventory-logging.md
+              items: 
+                - name: Manage Software Inventory Logging
+                  href: software-inventory-logging/manage-software-inventory-logging.md
+                - name: Software Inventory Logging Aggregator
+                  href: software-inventory-logging/software-inventory-logging-aggregator.md
+            - name: Collect user information with User Access Logging (UAL)
+              href: user-access-logging/get-started-with-user-access-logging.md
+              items: 
+                - name: Manage User Access Logging
+                  href: user-access-logging/manage-user-access-logging.md
+    - name: Tune your Windows Server performance
+      items: 
+        - name: Performance Tuning Guidelines
+          href: performance-tuning/index.md
+    - name: Windows Server on Azure
+      items: 
+        - name: Windows virtual machines in Azure overview
+          href: /azure/virtual-machines/windows/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Azure Automanage
+          href: /azure/automanage/automanage-windows-server/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Security
+          href: /azure/security/fundamentals/virtual-machines-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Updates and maintenance
+          href: /azure/virtual-machines/updates-maintenance-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Monitoring
+          href: /azure/virtual-machines/monitor-vm/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Backup and restore options
+          href: /azure/virtual-machines/backup-recovery/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Infrastructure automation tools
+          href: /azure/virtual-machines/infrastructure-automation/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Disks
+          href: /azure/virtual-machines/managed-disks-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Networking
+          href: /azure/virtual-network/network-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Availability options
+          href: /azure/virtual-machines/availability/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Command line and scripting
+      items: 
+        - name: Windows PowerShell scripting
+          href: /powershell/scripting/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Windows Commands
+          href: windows-commands/windows-commands.md
+    - name: Microsoft Learn
+      items: 
+        - name: Manage hybrid infrastructure with Azure Arc
+          href: /training/paths/manage-hybrid-infrastructure-with-azure-arc
+        - name: Windows Server deployment, configuration, and administration
+          href: /training/paths/windows-server-deployment-configuration-administration/
+        - name: Manage Windows Servers and workloads in a hybrid environment
+          href: /training/paths/manage-windows-servers-workloads-hybrid-environment/
+      

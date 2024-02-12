@@ -1,0 +1,85 @@
+### YamlMime:Landing
+
+title: Virtualization documentation # < 60 chars
+summary: Virtualization in Windows Server is one of the foundational technologies required to create your software defined infrastructure. Along with networking and storage, virtualization features deliver the flexibility you need to power workloads for your customers. # < 160 chars
+
+metadata:
+  title: Virtualization documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Virtualization in Windows Server is one of the foundational technologies required to create your software defined infrastructure. # Required; article description that is displayed in search results. < 160 chars.
+  ms.topic: landing-page # Required
+  author: JasonGerend #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jgerend #Required; microsoft alias of author; optional team alias.
+  ms.service: windows-server
+  manager: brianlic
+  ms.technology: compute
+  ms.assetid: c248b41f-0de3-7136-9a25-b4b07e41ebf0
+  ms.localizationpriority: high
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card
+  - title: Windows Containers
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows Containers
+            url: /virtualization/windowscontainers
+          - text: About Window containers
+            url: /virtualization/windowscontainers/about/
+          - text: Containers vs. virtual machines
+            url: /virtualization/windowscontainers/about/containers-vs-vm
+
+  # Card
+  - title: Hyper-V on Windows 10
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Hyper-V on Windows 10 overview
+            url: /virtualization/hyper-v-on-windows
+          - text: About Hyper-V on Windows 10
+            url: /virtualization/hyper-v-on-windows/about/
+      - linkListType: get-started
+        links:
+          - text: Install Hyper-V
+            url: /virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+          - text: Create a Virtual Machine
+            url: /virtualization/hyper-v-on-windows/quick-start/create-virtual-machine
+
+  # Card
+  - title: Hyper-V on Windows Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Hyper-V on Windows Server
+            url: hyper-v/Hyper-V-on-Windows-Server.md
+          - text: Hyper-V Technology Overview
+            url: hyper-v/Hyper-V-Technology-Overview.md
+      - linkListType: reference
+        links:
+          - text: Microsoft Hyper-V Server 2016
+            url: ./hyper-v/hyper-v-server-2016.md
+          - text: System requirements for Hyper-V on Windows Server
+            url: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
+
+  # Card
+  - title: Hyper-V Virtual Switch
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Hyper-V Virtual Switch
+            url: hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+      - linkListType: how-to-guide
+        links:
+          - text: Manage Hyper-V Virtual Switch
+            url: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
+
+  # Card
+  - title: Use a guarded fabric to provide a secure environment for VMs
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Guarded Fabric and Shielded VMs
+            url: ../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md

@@ -1,29 +1,19 @@
 ---
 title: Performance Tuning Remote Desktop Virtualization Hosts
 description: Performance Tuning for Remote Desktop Virtualization Hosts
-ms.prod: windows-server-threshold
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: HammadBu; VladmiS
+ms.author: hammadbu
 author: phstee
-ms.date: 10/16/2017
+ms.date: 10/22/2019
 ---
 
 # Performance Tuning Remote Desktop Virtualization Hosts
 
+Remote Desktop Virtualization Host (RD Virtualization Host) is a role service that supports Virtual Desktop Infrastructure (VDI) scenarios and lets multiple users run Windows-based applications in virtual machines hosted on a server running Windows Server and Hyper-V.
 
-Remote Desktop Virtualization Host (RD Virtualization Host) is a role service that supports Virtual Desktop Infrastructure (VDI) scenarios and lets multiple concurrent users run Windows-based applications in virtual machines that are hosted on a server running Windows Server 2016 and Hyper-V.
+Windows Server supports two types of virtual desktops: personal virtual desktops and pooled virtual desktops.
 
-Windows Server 2016 supports two types of virtual desktops, personal virtual desktops and pooled virtual desktops.
-
-**In this topic:**
-
--   [General considerations](#general)
-
--   [Performance optimizations](#perfopt)
-
-## <a href="" id="general"></a>General considerations
-
+## General considerations
 
 ### Storage
 
@@ -35,27 +25,26 @@ When appropriate, use Disk Deduplication and caching to reduce the disk read loa
 
 Introduced in Windows Server 2012 R2, Data Deduplication supports optimization of open files. In order to use virtual machines running on a deduplicated volume, the virtual machine files need to be stored on a separate host from the Hyper-V host. If Hyper-V and deduplication are running on the same machine, the two features will contend for system resources and negatively impact overall performance.
 
-The volume must also be configured to use the “Virtual Desktop Infrastructure (VDI)�? deduplication optimization type. You can configure this by using Server Manager (**File and Storage Services** -&gt; **Volumes** -&gt; **Dedup Settings**) or by using the following Windows PowerShell command:
+The volume must also be configured to use the "Virtual Desktop Infrastructure (VDI)" deduplication optimization type. You can configure this by using Server Manager (**File and Storage Services** -&gt; **Volumes** -&gt; **Dedup Settings**) or by using the following Windows PowerShell command:
 
 ``` syntax
 Enable-DedupVolume <volume> -UsageType HyperV
 ```
 
-**Note**  
-Data Deduplication optimization of open files is supported only for VDI scenarios with Hyper-V using remote storage over SMB 3.0.
-
+> [!NOTE]
+> Data Deduplication optimization of open files is supported only for VDI scenarios with Hyper-V using remote storage over SMB 3.0.
 
 ### Memory
 
 Server memory usage is driven by three main factors:
 
--   Operating system overhead
+- Operating system overhead
 
--   Hyper-V service overhead per virtual machine
+- Hyper-V service overhead per virtual machine
 
--   Memory allocated to each virtual machine
+- Memory allocated to each virtual machine
 
-For a typical knowledge worker workload, guest virtual machines running x86 Window 8 or Windows 8.1 should be given ~512 MB of memory as the baseline. However, Dynamic Memory will likely increase the guest virtual machine’s memory to about 800 MB, depending on the workload. For x64, we see about 800 MB starting, increasing to 1024 MB.
+For a typical knowledge worker workload, guest virtual machines running x86 Window 8 or Windows 8.1 should be given ~512 MB of memory as the baseline. However, Dynamic Memory will likely increase the guest virtual machine's memory to about 800 MB, depending on the workload. For x64, we see about 800 MB starting, increasing to 1024 MB.
 
 Therefore, it is important to provide enough server memory to satisfy the memory that is required by the expected number of guest virtual machines, plus allow a sufficient amount of memory for the server.
 
@@ -65,114 +54,7 @@ When you plan server capacity for an RD Virtualization Host server, the number 
 
 We recommend enabling hyper-threading, but be sure to calculate the oversubscription ratio based on the number of physical cores and not the number of logical processors. This ensures the expected level of performance on a per CPU basis.
 
-### Virtual GPU
-
-Microsoft RemoteFX for RD Virtualization Host delivers a rich graphics experience for Virtual Desktop Infrastructure (VDI) through host-side remoting, a render-capture-encode pipeline, a highly efficient GPU-based encode, throttling based on client activity, and a DirectX-enabled virtual GPU. RemoteFX for RD Virtualization Host upgrades the virtual GPU from DirectX9 to DirectX11. It also improves the user experience by supporting more monitors at higher resolutions.
-
-The RemoteFX DirectX11 experience is available without a hardware GPU, through a software-emulated driver. Although this software GPU provides a good experience, the RemoteFX virtual graphics processing unit (VGPU) adds a hardware accelerated experience to virtual desktops.
-
-To take advantage of the RemoteFX VGPU experience on a server running Windows Server 2016, you need a GPU driver (such as DirectX11.1 or WDDM 1.2) on the host server. For more information about GPU offerings to use with RemoteFX for RD Virtualization Host, contact your GPU provider.
-
-If you use the RemoteFX virtual GPU in your VDI deployment, the deployment capacity will vary based on usage scenarios and hardware configuration. When you plan your deployment, consider the following:
-
--   Number of GPUs on your system
-
--   Video memory capacity on the GPUs
-
--   Processor and hardware resources on your system
-
-### RemoteFX server system memory
-
-For every virtual desktop enabled with a virtual GPU, RemoteFX uses system memory in the guest operating system and in the RemoteFX-enabled server. The hypervisor guarantees the availability of system memory for a guest operating system. On the server, each virtual GPU-enabled virtual desktop needs to advertise its system memory requirement to the hypervisor. When the virtual GPU-enabled virtual desktop is starting, the hypervisor reserves additional system memory in the RemoteFX-enabled server for the VGPU-enabled virtual desktop.
-
-The memory requirement for the RemoteFX-enabled server is dynamic because the amount of memory consumed on the RemoteFX-enabled server is dependent on the number of monitors that are associated with the VGPU-enabled virtual desktops and the maximum resolution for those monitors.
-
-### RemoteFX server GPU video memory
-
-Every virtual GPU-enabled virtual desktop uses the video memory in the GPU hardware on the host server to render the desktop. In addition to rendering, the video memory is used by a codec to compress the rendered screen. The amount of memory needed is directly based on the amount of monitors that are provisioned to the virtual machine.
-
-The video memory that is reserved varies based on the number of monitors and the system screen resolution. Some users may require a higher screen resolution for specific tasks. There is greater scalability with lower resolution settings if all other settings remain constant.
-
-### RemoteFX processor
-
-The hypervisor schedules the RemoteFX-enabled server and the virtual GPU-enabled virtual desktops on the CPU. Unlike the system memory, there isn’t information that is related to additional resources that RemoteFX needs to share with the hypervisor. The additional CPU overhead that RemoteFX brings into the virtual GPU-enabled virtual desktop is related to running the virtual GPU driver and a user-mode Remote Desktop Protocol stack.
-
-On the RemoteFX-enabled server, the overhead is increased, because the system runs an additional process (rdvgm.exe) per virtual GPU-enabled virtual desktop. This process uses the graphics device driver to run commands on the GPU. The codec also uses the CPUs for compressing the screen data that needs to be sent back to the client.
-
-More virtual processors mean a better user experience. We recommend allocating at least two virtual CPUs per virtual GPU-enabled virtual desktop. We also recommend using the x64 architecture for virtual GPU-enabled virtual desktops because the performance on x64 virtual machines is better compared to x86 virtual machines.
-
-### RemoteFX GPU processing power
-
-For every virtual GPU-enabled virtual desktop, there is a corresponding DirectX process running on the RemoteFX-enabled server. This process replays all the graphics commands that it receives from the RemoteFX virtual desktop onto the physical GPU. For the physical GPU, it is equivalent to simultaneously running multiple DirectX applications.
-
-Typically, graphics devices and drivers are tuned to run a few applications on the desktop. RemoteFX stretches the GPUs to be used in a unique manner. To measure how the GPU is performing on a RemoteFX server, performance counters have been added to measure the GPU response to RemoteFX requests.
-
-Usually when a GPU resource is low on resources, Read and Write operations to the GPU take a long time to complete. By using performance counters, administrators can take preventative action, eliminating the possibility of any downtime for their end users.
-
-The following performance counters are available on the RemoteFX server to measure the virtual GPU performance:
-
-**RemoteFX graphics**
-
--   **Frames Skipped/Second - Insufficient Client Resources** Number of frames skipped per second due to insufficient client resources
-
--   **Graphics Compression Ratio** Ratio of the number of bytes encoded to the number of bytes input
-
-**RemoteFX root GPU management**
-
--   **Resources: TDRs in Server GPUs** Total number of times that the TDR times out in the GPU on the server
-
--   **Resources: Virtual machines running RemoteFX** Total number of virtual machines that have the RemoteFX 3D Video Adapter installed
-
--   **VRAM: Available MB per GPU** Amount of dedicated video memory that is not being used
-
--   **VRAM: Reserved % per GPU** Percent of dedicated video memory that has been reserved for RemoteFX
-
-**RemoteFX software**
-
--   **Capture Rate for monitor** \[1-4\] Displays the RemoteFX capture rate for monitors 1-4
-
--   **Compression Ratio** Deprecated in Windows 8 and replaced by **Graphics Compression Ratio**
-
--   **Delayed Frames/sec** Number of frames per second where graphics data was not sent within a certain amount of time
-
--   **GPU response time from Capture** Latency measured within RemoteFX Capture (in microseconds) for GPU operations to complete
-
--   **GPU response time from Render** Latency measured within RemoteFX Render (in microseconds) for GPU operations to complete
-
--   **Output Bytes** Total number of RemoteFX output bytes
-
--   **Waiting for client count/sec** Deprecated in Windows 8 and replaced by **Frames Skipped/Second - Insufficient Client Resources**
-
-**RemoteFX vGPU management**
-
--   **Resources: TDRs local to virtual machines** Total number of TDRs that have occurred in this virtual machine (TDRs that the server propagated to the virtual machines are not included)
-
--   **Resources: TDRs propagated by Server** Total number of TDRs that occurred on the server and that have been propagated to the virtual machine
-
-**RemoteFX virtual machine vGPU performance**
-
--   **Data: Invoked presents/sec** Total number (in seconds) of present operations to be rendered to the desktop of the virtual machine per second
-
--   **Data: Outgoing presents/sec** Total number of present operations sent by the virtual machine to the server GPU per second
-
--   **Data: Read bytes/sec** Total number of read bytes from the RemoteFX-enabled server per second
-
--   **Data: Send bytes/sec** Total number of bytes sent to the RemoteFX-enabled server GPU per second
-
--   **DMA: Communication buffers average latency (sec)** Average amount of time (in seconds) spent in the communication buffers
-
--   **DMA: DMA buffer latency (sec)** Amount of time (in seconds) from when the DMA is submitted until completed
-
--   **DMA: Queue length** DMA Queue length for a RemoteFX 3D Video Adapter
-
--   **Resources: TDR timeouts per GPU** Count of TDR timeouts that have occurred per GPU on the virtual machine
-
--   **Resources: TDR timeouts per GPU engine** Count of TDR timeouts that have occurred per GPU engine on the virtual machine
-
-In addition to the RemoteFX virtual GPU performance counters, you can also measure the GPU utilization by using Process Explorer, which shows video memory usage and the GPU utilization.
-
-## <a href="" id="perfopt"></a>Performance optimizations
-
+## Performance optimizations
 
 ### Dynamic Memory
 
@@ -192,13 +74,13 @@ This deployment configuration assures cost effective performance where performan
 
 ### CSV cache
 
-Failover Clustering in Windows Server 2012 and above provides caching on Cluster Shared Volumes (CSV). This is extremely beneficial for pooled virtual desktop collections where the majority of the read I/Os come from the management operating system. The CSV cache provides higher performance by several orders of magnitude because it caches blocks that are read more than once and delivers them from system memory, which reduces the I/O. For more info on CSV cache, see [How to Enable CSV Cache](http://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx).
+Failover Clustering in Windows Server 2012 and above provides caching on Cluster Shared Volumes (CSV). This is extremely beneficial for pooled virtual desktop collections where the majority of the read I/Os come from the management operating system. The CSV cache provides higher performance by several orders of magnitude because it caches blocks that are read more than once and delivers them from system memory, which reduces the I/O. For more info on CSV cache, see [How to Enable CSV Cache](https://blogs.msdn.com/b/clustering/archive/2012/03/22/10286676.aspx).
 
 ### Pooled virtual desktops
 
 By default, pooled virtual desktops are rolled back to the pristine state after a user signs out, so any changes made to the Windows operating system since the last user sign-in are abandoned.
 
-Although it’s possible to disable the rollback, it is still a temporary condition because typically a pooled virtual desktop collection is re-created due to various updates to the virtual desktop template.
+Although it's possible to disable the rollback, it is still a temporary condition because typically a pooled virtual desktop collection is re-created due to various updates to the virtual desktop template.
 
 It makes sense to turn off Windows features and services that depend on persistent state. Additionally, it makes sense to turn off services that are primarily for non-enterprise scenarios.
 
@@ -216,15 +98,9 @@ Each specific service should be evaluated appropriately prior to any broad deplo
 | Home group provider                          | Consumer centric service                                                                                                                                                                                  |
 | Internet connection sharing                  | Consumer centric service                                                                                                                                                                                  |
 | Media Center extended services               | Consumer centric service                                                                                                                                                                                  |
+> [!NOTE]
+> This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](/archive/blogs/jeff_stokes/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe).
 
- 
 
-**Note**  
-This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](http://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx).
-
- 
-
-**Note**  
-SuperFetch in Windows 8 is enabled by default. It is VDI-aware and should not be disabled. SuperFetch can further reduce memory consumption through memory page sharing, which is beneficial for VDI. Pooled virtual desktops running Windows 7, SuperFetch should be disabled, but for personal virtual desktops running Windows 7, it should be left on.
-
- 
+> [!NOTE]
+> SuperFetch in Windows 8 is enabled by default. It is VDI-aware and should not be disabled. SuperFetch can further reduce memory consumption through memory page sharing, which is beneficial for VDI. Pooled virtual desktops running Windows 7, SuperFetch should be disabled, but for personal virtual desktops running Windows 7, it should be left on.

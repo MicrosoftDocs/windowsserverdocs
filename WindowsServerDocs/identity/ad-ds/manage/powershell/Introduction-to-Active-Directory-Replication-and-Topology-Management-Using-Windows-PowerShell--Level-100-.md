@@ -1,26 +1,23 @@
 ---
+description: "Learn more about: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)"
 ms.assetid: c54b544f-cc32-4837-bb2d-a8656b22f3de
 title: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
-description:
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
-ms.technology: identity-adds
 ---
 
 # Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows PowerShell for Active Directory includes the ability to manage replication, sites, domains and forests, domain controllers, and partitions. Users of prior management tools such as the Active Directory Sites and Services snap-in and repadmin.exe will notice that similar functionality is now available from within the Windows PowerShell for Active Directory context. In addition, the cmdlets are compatible with the existing Windows PowerShell for Active Directory cmdlets, thus creating a streamlined experience and allowing customers to easily create automation scripts.
 
 > [!NOTE]
 > The Windows PowerShell for Active Directory replication and topology cmdlets are available in the following environments:
-> 
+>
 > -    Windows Server 2012  domain controller
 > -    Windows Server 2012  with the Remote Server Administration Tools for AD DS and AD LDS installed.
 > -   Windows&reg; 8 with the Remote Server Administration Tools for AD DS and AD LDS installed.
@@ -58,7 +55,7 @@ To complete the steps in the following procedures, you must be a member of the D
 
     > [!TIP]
     > You can use the Tab key to auto-complete commands in Windows PowerShell.
-    > 
+    >
     > Example: Type `Get-ADRep` and press Tab multiple times to skip through the matching commands until you reach `Get-ADReplicationSite`. Auto-complete also works for parameter names such as `Filter`.
 
     To format the output from the `Get-ADReplicationSite` command as a table and limit the display to specific fields, you can pipe the output to the `Format-Table` command (or "`ft`" for short):

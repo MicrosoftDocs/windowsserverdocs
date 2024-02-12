@@ -1,0 +1,95 @@
+### YamlMime:Landing
+
+title: Remote # < 60 chars
+summary: Guidance on leveraging remote access and server administration. # < 160 chars
+
+metadata:
+  title: Remote # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Guidance on leveraging remote access and server administration. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: windows-server
+  ms.technology: manage-rsat
+  author: JasonGerend
+  ms.author: jgerend
+  manager: mtillman
+  ms.localizationpriority: high
+  ms.topic: landing-page # Required
+  ms.date: 06/29/2020 #Required; mm/dd/yyyy format.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: MultiPoint Services
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Planning a MultiPoint Services Deployment
+            url: ./multipoint-services/planning-a-multipoint-services-deployment.md
+          - text: MultiPoint Services migration
+            url: ./multipoint-services/multipoint-services-migrate.md
+          - text: Deploying MultiPoint Services
+            url: ./multipoint-services/deploying-multipoint-services.md
+          - text: Managing MultiPoint Services
+            url: ./multipoint-services/managing-multipoint-services.md
+
+  # Card
+  - title: Remote Desktop Services
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Get started
+            url: ./remote-desktop-services/rds-get-started.md
+      - linkListType: how-to-guide
+        links:
+          - text: Plan and design
+            url: ./remote-desktop-services/rds-plan-and-design.md
+          - text: Build and deploy
+            url: ./remote-desktop-services/rds-build-and-deploy.md
+          - text: Run and tune
+            url: ./remote-desktop-services/rds-run-and-tune.md
+          - text: Access your Remote Desktop resources
+            url: ./remote-desktop-services/clients/remote-desktop-clients.md
+
+  # Card (optional)
+  - title: Remote Access
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Remote access
+            url: ./remote-access/Remote-Access.md
+          - text: Always On VPN
+            url: ./remote-access/overview-always-on-vpn.md
+          - text: Border Gateway Protocol (BGP)
+            url: ./remote-access/bgp/border-gateway-protocol-bgp.md
+          - text: RAS Gateway
+            url: ./remote-access/ras-gateway/ras-gateway.md
+          - text: Virtual Private Networking (VPN)
+            url: ./remote-access/vpn/vpn-top.md
+
+  # Card
+  - title: Web Application Proxy
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Web Application Proxy in Windows Server
+            url: ./remote-access/web-application-proxy/web-app-proxy-windows-server.md
+      - linkListType: how-to-guide
+        links:
+          - text: Publishing Applications using AD FS Preauthentication
+            url: ./remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md
+          - text: Publishing Applications with SharePoint, Exchange and RDG
+            url: ./remote-access/web-application-proxy/publishing-applications-with-sharepoint,-exchange-and-rdg.md
+          - text: Troubleshooting Web Application Proxy
+            url: ./remote-access/web-application-proxy/troubleshooting-web-application-proxy.md
+
+  # Card (optional)
+  - title: Tools
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Remote Server Administration Tools
+            url: ./remote-server-administration-tools.md
+          - text: OpenSSH in Windows
+            url: ../administration/openssh/openssh_overview.md

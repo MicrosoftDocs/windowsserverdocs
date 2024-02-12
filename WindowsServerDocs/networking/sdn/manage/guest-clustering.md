@@ -1,34 +1,28 @@
 ---
 title: Guest clustering in a virtual network
 description: Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network.  Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
-manager: dougkim
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: networking-sdn
-ms.tgt_pltfrm: na
+manager: grcusanz
 ms.topic: article
 ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
-author: shortpatti
-ms.date: 08/26/2018
+author: AnirbanPaul
+ms.date: 11/20/2021
 ---
 
 # Guest clustering in a virtual network
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
-Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network.  Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
+Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network. Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
 
 The method for making the floating IP reachable is to use a Software Load Balancer \(SLB\) virtual IP \(VIP\).  The software load balancer must be configured with a health probe on a port on that IP so that SLB directs traffic to the machine that currently has that IP.
 
 
 ## Example: Load balancer configuration
 
-This example assumes that you've already created the VMs which will become cluster nodes, and attached them to a Virtual Network.  For guidance, refer to [Create a VM and Connect to a Tenant Virtual Network or VLAN](https://technet.microsoft.com/windows-server-docs/networking/sdn/manage/create-a-tenant-vm).  
+This example assumes that you've already created the VMs that will become cluster nodes, and attached them to a Virtual Network. For guidance, refer to [Create a VM and Connect to a Tenant Virtual Network or VLAN](./create-a-tenant-vm.md).
 
-In this example you will create a virtual IP address (192.168.2.100) to represent the floating IP address of the cluster, and configure a health probe to monitor TCP port 59999 to determine which node is the active one.
+In this example, you will create a virtual IP address (192.168.2.100) to represent the floating IP address of the cluster, and configure a health probe to monitor TCP port 59999 to determine which node is the active one.
 
 1. Select the VIP.<p>Prepare by assigning a VIP IP address, which can be any unused or reserved address in the same subnet as the cluster nodes.  The VIP must match the floating address of the cluster.
 
@@ -68,10 +62,10 @@ In this example you will create a virtual IP address (192.168.2.100) to represen
    $LoadBalancerProperties.backendAddressPools += $BackEnd
    ```
 
-5. Add a probe to detect which cluster node the floating address is currently active on. 
+5. Add a probe to detect which cluster node the floating address is currently active on.
 
    >[!NOTE]
-   >The probe query against the VM's permanent address at the port defined below.  The port must only respond on the active node. 
+   >The probe query against the VM's permanent address at the port defined below.  The port must only respond on the active node.
 
    ```PowerShell
    $LoadBalancerProperties.probes += $lbprobe = new-object Microsoft.Windows.NetworkController.LoadBalancerProbe
@@ -85,7 +79,7 @@ In this example you will create a virtual IP address (192.168.2.100) to represen
    $lbprobe.properties.NumberOfProbes = 11
    ```
 
-6. Add the load balancing rules for TCP port 1433.<p>You can modify the protocol and port as needed.  You can also repeat this step multiple times for additional ports and protcols on this VIP.  It is important that EnableFloatingIP is set to $true because this tells the load balancer to send the packet to the node with the original VIP in place.
+6. Add the load balancing rules for TCP port 1433.<p>You can modify the protocol and port as needed.  You can also repeat this step multiple times for other ports and protocols on this VIP. It is important that EnableFloatingIP is set to $true because this tells the load balancer to send the packet to the node with the original VIP in place.
 
    ```PowerShell
    $LoadBalancerProperties.loadbalancingRules += $lbrule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
@@ -93,9 +87,9 @@ In this example you will create a virtual IP address (192.168.2.100) to represen
    $lbrule.ResourceId = "Rules1"
 
    $lbrule.properties.frontendipconfigurations += $FrontEnd
-   $lbrule.properties.backendaddresspool = $BackEnd 
+   $lbrule.properties.backendaddresspool = $BackEnd
    $lbrule.properties.protocol = "TCP"
-   $lbrule.properties.frontendPort = $lbrule.properties.backendPort = 1433 
+   $lbrule.properties.frontendPort = $lbrule.properties.backendPort = 1433
    $lbrule.properties.IdleTimeoutInMinutes = 4
    $lbrule.properties.EnableFloatingIP = $true
    $lbrule.properties.Probe = $lbprobe
@@ -123,9 +117,9 @@ In this example you will create a virtual IP address (192.168.2.100) to represen
    $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
    ```
 
-   Once you've created the load balancer and added the network interfaces to the backend pool, you are ready to configure the cluster.  
+   Once you've created the load balancer and added the network interfaces to the backend pool, you are ready to configure the cluster.
 
-9. (Optional) If you are using a Microsoft Failover Cluster, continue with the next example. 
+9. (Optional) If you are using a Microsoft Failover Cluster, continue with the next example.
 
 ## Example 2: Configuring a Microsoft failover cluster
 
@@ -138,10 +132,10 @@ You can use the following steps to configure a failover cluster.
    Import-module failoverclusters
 
    $ClusterName = "MyCluster"
-   
+
    $ClusterNetworkName = "Cluster Network 1"
-   $IPResourceName =  
-   $ILBIP = “192.168.2.100” 
+   $IPResourceName =
+   $ILBIP = "192.168.2.100"
 
    $nodes = @("DB1", "DB2")
    ```

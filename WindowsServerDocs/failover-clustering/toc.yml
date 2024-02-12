@@ -1,0 +1,76 @@
+- name: Failover Clustering
+  href: failover-clustering-overview.md
+- name: What's New in Failover Clustering
+  href: whats-new-in-failover-clustering.md
+- name: Understand
+  items:
+  - name: Scale-Out File Server for application data
+    href: sofs-overview.md
+  - name: Cluster and pool quorum
+    href: /azure-stack/hci/concepts/quorum
+  - name: Fault domain awareness
+    href: fault-domains.md
+  - name: Simplified SMB Multichannel and multi-NIC cluster networks
+    href: smb-multichannel.md
+  - name: VM load balancing
+    href: /azure-stack/hci/manage/vm-load-balancing
+  - name: Cluster sets
+    href: /azure-stack/hci/deploy/cluster-set
+  - name: Cluster affinity
+    href: cluster-affinity.md
+- name: Plan
+  items:
+  - name: Hardware requirements
+    href: clustering-requirements.md
+  - name: Use Cluster Shared Volumes (CSVs
+    href: failover-cluster-csvs.md
+  - name: Using guest VM clusters
+    href: ../storage/storage-spaces/storage-spaces-direct-in-vm.md
+- name: Deploy
+  items:
+  - name: Create a failover cluster
+    href: create-failover-cluster.md
+  - name: Deploy a two-node file server
+    href: deploy-two-node-clustered-file-server.md
+  - name: Deploy a cluster set
+    href: cluster-set.md
+  - name: Prestage a cluster in AD DS
+    href: prestage-cluster-adds.md
+    items:
+    - name: Configuring cluster accounts in Active Directory
+      href: configure-ad-accounts.md
+  - name: Manage quorum and witnesses
+    href: manage-cluster-quorum.md
+  - name: Deploy a Cloud Witness
+    href: deploy-cloud-witness.md
+  - name: Deploy a file share witness
+    href: file-share-witness.md
+  - name: Cluster operating system rolling upgrades
+    href: cluster-operating-system-rolling-upgrade.md
+  - name: Upgrading a failover cluster on the same hardware
+    href: upgrade-option-same-hardware.md
+- name: Manage
+  items:
+  - name: Cluster-Aware Updating
+    href: cluster-aware-updating.md
+    items:
+    - name: Requirements and best practices
+      href: cluster-aware-updating-requirements.md
+    - name: Advanced options
+      href: cluster-aware-updating-options.md
+    - name: FAQ
+      href: cluster-aware-updating-faq.yml
+    - name: Plug-ins
+      href: cluster-aware-updating-plug-ins.md
+  - name: Health Service reports
+    href: health-service-reports.md
+  - name: Health Service faults
+    href: health-service-faults.md
+  - name: Cluster-domain migration
+    href: cluster-domain-migration.md
+  - name: Troubleshooting using Windows Error Reporting
+    href: troubleshooting-using-WER-reports.md
+  - name: Use BitLocker with Cluster Shared Volumes
+    href: bitlocker-on-csv-in-ws-2022.md
+- name: Change history for Failover Clustering topics
+  href: clustering-change-history.md

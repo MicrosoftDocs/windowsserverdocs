@@ -1,9 +1,7 @@
 ---
 title: Configure Notification Limits
-description: This article describes how to add time limits to various notification types 
+description: This article describes how to add time limits to various notification types
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -11,7 +9,7 @@ ms.author: jgerend
 ---
 # Configure Notification Limits
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 To reduce the number of notifications that accumulate for repeatedly exceeding a quota threshold or attempting to save an unauthorized file, File Server Resource Manager applies time limits to the following notification types:
 
@@ -33,9 +31,9 @@ A default 60-minute limit is set for each notification type, but you can change 
 3.  Click **OK**.
 
 > [!Note]
-> To customize time limits that are associated with notifications for a specific quota or file screen, you can use the File Server Resource Manager command-line tools **Dirquota.exe** and **Filescrn.exe**, or use the [File Server Resource Manager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager) cmdlets.
+> To customize time limits that are associated with notifications for a specific quota or file screen, you can use the File Server Resource Manager command-line tools **Dirquota.exe** and **Filescrn.exe**, or use the [File Server Resource Manager](/powershell/module/fileserverresourcemanager/) cmdlets.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Command-Line Tools](command-line-tools.md)

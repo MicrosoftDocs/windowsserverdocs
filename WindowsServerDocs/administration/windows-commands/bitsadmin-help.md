@@ -1,25 +1,17 @@
 ---
 title: bitsadmin help
-description: "Windows Commands topic for **bitsadmin help** - Displays the command-line usage."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c30d89e4-25a3-4974-a002-37138d01e077
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+description: Reference article for the bitsadmin help command, which displays the command-line usage.
+ms.topic: reference
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/06/2023
 ---
 
 # bitsadmin help
 
+Applies to: Windows Server (All supported versions)
 
-
-Displays the command-line usage.
+The bitsadmin help command displays help-related information about the bitsadmin command-line parameters and options.
 
 ## Syntax
 
@@ -27,13 +19,16 @@ Displays the command-line usage.
 bitsadmin /help | /?
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example retrieves the command-line help.
+To retrieve the command-line help.
+
 ```
-C:\>bitsadmin /help
+bitsadmin /help
 ```
 
-#### Additional references
+## Related links
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

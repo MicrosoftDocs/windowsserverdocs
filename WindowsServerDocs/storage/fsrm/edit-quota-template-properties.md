@@ -2,8 +2,6 @@
 title: Edit Quota Template Properties
 description: This article describes how to edit quota template properties to extend changes to quotas created from the original quota template
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -11,7 +9,7 @@ ms.author: jgerend
 ---
 # Edit Quota Template Properties
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 When you make changes to a quota template, you have the option of extending those changes to quotas that were created from the original quota template. You can choose to modify only those quotas that still match the original template or all quotas that were derived from the original template, regardless of any modifications that were made to the quotas since they were created. This feature simplifies the process of updating the properties of your quotas by providing one central point where you can make all the changes.
 
@@ -36,7 +34,7 @@ When you make changes to a quota template, you have the option of extending thos
 
 6.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -   [Create a Quota Template](create-quota-template.md)

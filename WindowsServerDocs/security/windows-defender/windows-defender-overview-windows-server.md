@@ -1,41 +1,29 @@
 ---
-title: Windows Defender Overview for Windows Server 
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-windows-defender
-ms.tgt_pltfrm: na
+title: Windows Defender Overview for Windows Server
+description: Learn about Windows Defender Antivirus and how its malware protection that immediately and actively protects Windows Server 2016 against known malware. 
 ms.topic: article
 ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/12/2016
+ms.author: alalve
+author: JasonGerend
+ms.date: 10/10/2022
 ---
 # Windows Defender Antivirus for Windows Server
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows Server 2016 now includes Windows Defender Antivirus. Windows Defender AV is malware protection that immediately and actively protects Windows Server 2016 against known malware and can regularly update antimalware definitions through Windows Update.
 
-See the [Windows Defender Antivirus in Windows 10](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) documentation library for more information.
+View the [Windows Defender Antivirus in Windows 10](/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) documentation library for more information.
 
+While the functionality, configuration, and management for Windows Defender AV is largely the same in either Windows 10 or Windows Server 2016 and above, there are a few differences.
 
-While the functionality, configuration, and management is largely the same for Windows Defender AV either on Windows 10 or Windows Server 2016, there are a few key differences:
+> [!NOTE]
+> In Windows Server 2016, Windows Defender AV will not disable itself if you are running another antivirus product.
 
-- In Windows Server 2016, [automatic exclusions](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus) are applied based on your defined Server Role.
-- In Windows Server 2016, Windows Defender AV will not disable itself if you are running another antivirus product.
+To learn more, see the following articles:
 
-The [Windows Defender Antivirus on Windows Server 2016](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016) topic contains set up and configuration information specific to Windows Server 2016, including how to:
-
--   [Enable the interface](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016#BKMK_UsingDef)
-
--   [Verify Windows Defender AV is running]( https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016#BKMK_DefRun)
-
--   [Update antimalware definitions]( https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016#BKMK_UpdateDef)
-
--   [Submit Samples]( https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016#BKMK_DefSamples)
-
--   [Configure automatic exclusions]( https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016#BKMK_DefExclusions)
+- [Microsoft Defender Antivirus on Windows Server](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-on-windows-server)
+- [Enable and update Defender Antivirus to the latest version on Windows Server](/microsoft-365/security/defender-endpoint/enable-update-mdav-to-latest-ws)
+- [Configure Microsoft Defender Antivirus features](/microsoft-365/security/defender-endpoint/configure-microsoft-defender-antivirus-features)
+- [Configure Microsoft Defender Antivirus exclusions on Windows Server](/microsoft-365/security/defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus)
+- [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus)

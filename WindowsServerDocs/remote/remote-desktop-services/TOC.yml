@@ -1,0 +1,222 @@
+- name: Remote Desktop Services
+  href: welcome-to-rds.md
+  items:
+  - name: Get started
+    href: rds-get-started.md
+    items:
+    - name: What's new in RDS?
+      href: rds-whats-new.md
+    - name: Supported configurations for RDS
+      href: rds-supported-config.md
+    - name: Supported security configurations for Windows 10 VDI
+      href: rds-vdi-supported-config.md
+    - name: Planning poster for Remote Desktop Services
+      href: rds-poster.md
+    - name: Remote Desktop Services hosting partners
+      href: rds-hosting-partners.md
+  - name: Plan and design
+    href: rds-plan-and-design.md
+    items:
+    - name: Build anywhere
+      href: rds-plan-build-anywhere.md
+    - name: Network guidelines
+      href: network-guidance.md
+    - name: Virtual machine sizing guidelines
+      href: virtual-machine-recs.md
+    - name: Access from anywhere
+      href: rds-plan-access-from-anywhere.md
+    - name: High availability
+      href: rds-plan-high-availability.md
+    - name: Multifactor Authentication
+      href: rds-plan-mfa.md
+    - name: Secure data storage
+      href: rds-plan-secure-data-storage.md
+    - name: GPU acceleration
+      href: rds-graphics-virtualization.md
+    - name: Connect from any device
+      href: rds-plan-connect-from-any-device.md
+    - name: Choose how you pay
+      href: rds-plan-choose-how-you-pay.md
+    - name: Office 2016 in RDS and VDI deployments
+      href: /deployoffice/rds-office-vdi-rdsh?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
+      items:
+      - name: Outlook search in non-persistent environments
+        href: /deployoffice/rds-outlook-search?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
+      - name: OneDrive for Business and VDI environments
+        href: /sharepoint/sync-vdi-support?toc=/windows-server/remote/remote-desktop-services/toc.json&bc=/windows-server/remote/remote-desktop-services/breadcrumb/TOC.json
+    - name: Desktop Hosting Reference Architecture
+      href: Desktop-Hosting-Reference-Architecture.md
+      items:
+      - name: Remote Desktop Services architecture
+        href: Desktop-hosting-logical-architecture.md
+      - name: Desktop hosting service
+        href: Desktop-hosting-service.md
+      - name: Remote Desktop Services roles
+        href: rds-roles.md
+      - name: Azure services and considerations for desktop hosting
+        href: Azure-services-and-considerations-for-desktop-hosting.md
+  - name: Build and deploy
+    href: rds-build-and-deploy.md
+    items:
+    - name: Deploy a proof-of-concept RDS environment with ARM and Azure Marketplace
+      href: rds-in-azure.md
+    - name: Migrate your Remote Desktop Services deployments to Windows Server 2016
+      href: migrate-rds-role-services.md
+    - name: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
+      href: migrate-rds-cals.md
+    - name: Upgrade your Remote Desktop Services deployments to Windows Server 2016
+      href: upgrade-to-rds.md
+      items:
+      - name: Upgrade Remote Desktop Session Host servers
+        href: upgrade-to-rdsh.md
+      - name: Upgrade Remote Desktop Virtualization Host servers
+        href: upgrade-to-rdvh.md
+    - name: Deploy a Remote Desktop Services infrastructure
+      href: rds-deploy-infrastructure.md
+    - name: Create and deploy a Remote Desktop Services collection
+      href: rds-create-collection.md
+    - name: Configure the RD Gateway role
+      href: remote-desktop-gateway-role.md
+    - name: Set up the Remote Desktop web client for your users
+      href: clients/remote-desktop-web-client-admin.md
+    - name: Disable Automatic Reconnection
+      href: automatic-reconnection-lock-screen.md
+    - name: Set up email discovery for your users
+      href: rds-email-discovery.md
+    - name: Fair Share technologies
+      href: fair-share-enabled-by-default-rds.md
+    - name: License your Remote Desktop deployment
+      href: rds-client-access-license.md
+      items:
+      - name: Activate the license server
+        href: rds-activate-license-server.md
+      - name: Install RDS CALs on the license server
+        href: rds-install-cals.md
+      - name: License RDS session hosts
+        href: rds-license-session-hosts.md
+      - name: Track the CALs used in your deployment
+        href: rds-track-cals.md
+    - name: Integrate Azure services
+      href: rds-integrate-with-azure.md
+      items:
+      - name: Learn how to use Multi-factor Authentication with RDS
+        href: /azure/multi-factor-authentication/nps-extension-remote-desktop-gateway
+      - name: Integrate Microsoft Entra Domain Services with your RDS deployment
+        href: rds-azure-adds.md
+      - name: Publish Remote Desktop with Microsoft Entra application proxy
+        href: /azure/active-directory/application-proxy-publish-remote-desktop
+    - name: Extend your RDS environment for high availability
+      items:
+      - name: Scale out an existing RDS collection with an RD Session Host farm
+        href: rds-scale-rdsh-farm.md
+      - name: Add high availability to the RD Connection Broker infrastructure
+        href: rds-connection-broker-cluster.md
+      - name: Add high availability to the RD Web and RD Gateway web front
+        href: rds-rdweb-gateway-ha.md
+      - name: Deploy a two-node Storage Spaces Direct file system for UPD storage
+        href: rds-storage-spaces-direct-deployment.md
+      - name: Deploy and manage a personal session desktops environment
+        href: rds-personal-session-desktops.md
+      - name: Create VMs for RDS
+        href: rds-prepare-vms.md
+    - name: Set up disaster recovery for your RDS environment
+      href: rds-disaster-recovery.md
+      items:
+      - name: Create a geo-redundant RDS deployment
+        href: rds-multi-datacenter-deployment.md
+      - name: Set up Azure Site Recovery for RDS
+        href: rds-disaster-recovery-with-azure.md
+        items:
+        - name: Enable disaster recovery for RDS components
+          href: rds-enable-dr-with-asr.md
+        - name: Create your disaster recovery plan
+          href: rds-disaster-recovery-plan.md
+  - name: Run and tune
+    href: rds-run-and-tune.md
+    items:
+    - name: Manage personal desktop session collections
+      href: rds-manage-personal-collection.md
+    - name: Remote Desktop IP Virtualization
+      href: internet-protocol-virtualization.md
+    - name: Recommended configuration for VDI desktops
+      href: rds-vdi-recommendations.md
+    - name: Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
+      href: rds-vdi-recommendations-2004.md
+    - name: Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role
+      href: rds_vdi-recommendations-1909.md
+    - name: Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
+      href: rds-vdi-recommendations-1803.md
+    - name: Manage users in your RDS collection
+      href: rds-user-management.md
+    - name: Customize the RDS title "Work Resources" using PowerShell on Windows Server
+      href: rds-work-resources.md
+    - name: Diagnose app performance issues with performance counters
+      href: rds-rdsh-performance-counters.md
+  - name: Access your Remote Desktop resources
+    items:
+    - name: Available Remote Desktop clients
+      href: clients/remote-desktop-clients.md
+    - name: Microsoft Store client
+      items:
+      - name: Get started with the Microsoft Store client
+        href: clients/windows.md
+      - name: What's new in the Microsoft Store client
+        href: clients/windows-whatsnew.md
+    - name: Android client
+      items:
+      - name: Get started with the Android client
+        href: clients/remote-desktop-android.md
+      - name: What's new in the Android client
+        href: clients/android-whatsnew.md
+    - name: iOS client
+      items:
+      - name: Get started with the iOS client
+        href: clients/remote-desktop-ios.md
+      - name: What's new in the iOS client
+        href: clients/ios-whatsnew.md
+    - name: macOS client
+      items:
+      - name: Get started with the macOS client
+        href: clients/remote-desktop-mac.md
+      - name: What's new in the macOS client
+        href: clients/mac-whatsnew.md
+    - name: Web client
+      items:
+      - name: Get started with the web client
+        href: clients/remote-desktop-web-client.md
+      - name: What's new in the web client
+        href: clients/web-client-whatsnew.md
+    - name: Remote Desktop Connection client for Windows (MSTSC)
+      items:
+      - name: Connect using single sign-on with Microsoft Entra authentication
+        href: clients/remote-desktop-connection-single-sign-on.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: clients/uninstall-remote-desktop-connection.md
+    - name: Setting up your PC for Remote Desktop
+      items:
+      - name: Supported PCs
+        href: clients/remote-desktop-supported-config.md
+      - name: Grant Remote Desktop access to your PC
+        href: clients/remote-desktop-allow-access.md
+      - name: Grant access to your PC from outside your network
+        href: clients/remote-desktop-allow-outside-access.md
+      - name: Change the RD listening port on your PC
+        href: clients/change-listening-port.md
+    - name: Advanced information
+      items:
+      - name: 'Compare the clients: features'
+        href: clients/remote-desktop-features.md
+      - name: 'Compare the clients: redirections'
+        href: clients/remote-desktop-app-compare.md
+      - name: Supported RDP properties
+        href: clients/rdp-files.md
+      - name: Remote Desktop URI scheme
+        href: clients/remote-desktop-uri.md
+      - name: Remote Desktop client FAQ
+        href: clients/remote-desktop-client-faq.yml
+      - name: Privacy settings for managed apps and desktops
+        href: clients/remote-privacy-settings.md
+    - name: Known issues
+      items:
+      - name: Clients can't connect and see "No licenses available" error
+        href: troubleshoot/rdp-error-no-licenses-available.md

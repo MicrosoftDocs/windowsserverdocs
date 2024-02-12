@@ -1,0 +1,182 @@
+- name: Windows Admin Center
+  href: overview.md
+  items:
+  - name: Understand
+    items:
+    - name: What is Windows Admin Center?
+      href: understand/what-is.md
+    - name: FAQ
+      href: understand/faq.yml
+    - name: Case studies
+      href: understand/case-studies.md
+    - name: Related management products
+      href: understand/related-management.md
+    - name: Windows Admin Center modernized gateway (preview)
+      href: understand/modernized-gateway.md  
+  - name: Plan
+    items:
+    - name: What type of installation is right for you?
+      href: plan/installation-options.md
+    - name: User access options
+      href: plan/user-access-options.md
+  - name: Deploy
+    items:
+    - name: Prepare your environment
+      href: deploy/prepare-environment.md
+    - name: Network requirements
+      href: deploy/network-requirements.md
+    - name: Install Windows Admin Center
+      href: deploy/install.md
+    - name: High availability
+      href: deploy/high-availability.md
+  - name: Configure
+    items:
+    - name: Windows Admin Center settings
+      href: configure/settings.md
+    - name: User access control and permissions
+      href: configure/user-access-control.md
+    - name: Using extensions
+      href: configure/using-extensions.md
+    - name: Shared connections
+      href: configure/shared-connections.md
+    - name: Automate with PowerShell
+      href: configure/use-powershell.md
+    - name: Websocket validation
+      href: configure/websocket-validation.md
+  - name: Use
+    items:
+    - name: Get started
+      href: use/get-started.md
+    - name: Manage servers
+      href: use/manage-servers.md
+    - name: Manage Application Control enforced infrastructure
+      href: use/manage-application-control-infrastructure.md
+    - name: Deploy hyperconverged infrastructure
+      href: use/deploy-hyperconverged-infrastructure.md
+    - name: Manage hyper-converged infrastructure
+      href: use/manage-hyper-converged.md
+    - name: Manage failover clusters
+      href: use/manage-failover-clusters.md
+    - name: Manage Hyper-V virtual machines
+      href: use/manage-virtual-machines.md
+    - name: Logging
+      href: use/logging.md
+    - name: Manage AWS Machines
+      href: use/manage-aws-machines.md
+  - name: Connect to Azure
+    items:
+    - name: Azure hybrid services
+      href: azure/index.md
+      items:
+      - name: Azure Backup
+        href: azure/azure-backup.md
+      - name: Azure Site Recovery
+        href: azure/azure-site-recovery.md
+      - name: Azure File Sync
+        href: azure/azure-file-sync.md
+      - name: Azure Monitor
+        href: azure/azure-monitor.md
+      - name: Azure Network Adapter
+        href: azure/use-azure-network-adapter.md
+      - name: Azure Update Management
+        href: azure/azure-update-management.md
+    - name: Connect to Azure
+      href: azure/azure-integration.md
+    - name: Create Azure VMs
+      href: azure/create-azure-vms.md
+    - name: Manage Azure VMs
+      href: azure/manage-azure-vms.md
+    - name: Manually deploy a Windows Admin Center server in Azure
+      href: azure/deploy-wac-in-azure.md
+  - name: Windows Admin Center in Azure
+    items:
+    - name: Azure Virtual Machines
+      href: azure/manage-vm.md
+    - name: Azure Arc-enabled Servers
+      href: azure/manage-arc-hybrid-machines.md
+    - name: Azure Stack HCI
+      href: azure/manage-hci-clusters.md
+    - name: Azure extension release history
+      href: azure/extension-release-notes.md
+  - name: Support
+    items:
+    - name: Release history
+      href: support/release-history.md
+    - name: Support policy
+      href: support/index.md
+    - name: Common troubleshooting steps
+      href: support/troubleshooting.md
+    - name: Known issues
+      href: support/known-issues.md
+    - name: Windows Admin Center license terms
+      href: ../../windows-server-licensing/windows-admin-center-licensing.md
+  - name: Extend
+    items:
+    - name: Overview of extensions
+      href: extend/extensibility-overview.md
+    - name: Understanding extensions
+      href: extend/understand-extensions.md
+    - name: Develop an extension
+      href: extend/developing-extensions.md
+      items:
+      - name: Prepare your development environment
+        href: extend/prepare-development-environment.md
+      - name: Develop a tool extension
+        href: extend/develop-tool.md
+      - name: Develop a solution extension
+        href: extend/develop-solution.md
+      - name: Develop a gateway plugin
+        href: extend/develop-gateway-plugin.md
+      - name: Target an SDK version
+        href: extend/target-sdk-version.md
+    - name: Guides
+      href: extend/guides.md
+      items:
+      - name: Add a module to a tool extension
+        href: extend/guides/add-module.md
+      - name: Add an iFrame to a tool extension
+        href: extend/guides/add-iFrame.md
+      - name: Use a custom gateway plugin in your tool extension
+        href: extend/guides/use-custom-gateway-plugin.md
+      - name: Create a connection provider
+        href: extend/guides/create-connection-provider.md
+      - name: Modify root navigation behavior
+        href: extend/guides/modify-root-navigation.md
+      - name: Control your tool's visibility
+        href: extend/guides/dynamic-tool-display.md
+      - name: Strings and localization
+        href: extend/guides/strings-localization.md
+      - name: UI text and design style guide
+        href: extend/guides/ui-text-style-guide.md
+      - name: Using PowerShell in your extension
+        href: extend/guides/powershell.md
+      - name: CSS icon guide
+        href: extend/guides/cssicons.md
+      - name: Enable the extension discovery banner
+        href: extend/guides/extension-discovery-banner.md
+      - name: Upgrade extensions to Angular 11
+        href: extend/guides/upgrade-to-angular-11.md
+      - name: Upgrade extensions to Angular 15
+        href: extend/guides/upgrade-to-angular-15.md  
+      - name: Extension management of Application Control enforced infrastructure
+        href: extend/guides/application-control-infrastructure-extensions.md
+    - name: Publishing extensions
+      href: extend/publish-extensions.md
+    - name: Case Studies
+      items:
+      - name: BiitOps
+        href: extend/case-studies/biitops.md
+      - name: DataON
+        href: extend/case-studies/dataon.md
+      - name: Fujitsu
+        href: extend/case-studies/fujitsu.md
+      - name: Lenovo
+        href: extend/case-studies/lenovo.md
+      - name: NEC
+        href: extend/case-studies/nec.md
+      - name: Pure Storage
+        href: extend/case-studies/purestorage.md
+      - name: QCT
+        href: extend/case-studies/qct.md
+      - name: Thomas-Krenn
+        href: extend/case-studies/thomas-krenn.md

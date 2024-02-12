@@ -1,30 +1,14 @@
 ---
-title: What's new for Remote Desktop on Android?
-description: Learn about recent changes to the Remote Desktop client for Android
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
-ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 07/06/2018
-ms.localizationpriority: medium
+title: What's new in the Remote Desktop client for Android and Chrome OS - Remote Desktop Services
+description: Learn about recent changes to the Remote Desktop client for Android and Chrome OS
+ms.topic: conceptual
+author: heidilohr
+ms.author: helohr
+ms.date: 01/04/2023
 ---
-# What's new for the Remote Desktop client on Android?
 
-We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Check out the latest updates below.
+# What's new in the Remote Desktop client for Android and Chrome OS
 
-## Updates for version 8.1.61
-*Published date: 07/05/2018*
+In this article you'll learn about the latest updates for the Remote Desktop client for Android and Chrome OS. To learn more about using the Remote Desktop client for Android and Chrome OS with Remote Desktop Services, see [Get started with the Android client](remote-desktop-android.md).
 
-- Added initial support for Samsung DeX (Android 8.0+).
-
-## Updates for version 8.1.60
-*Published date: 04/30/2018*
-
-- Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
-- Fixed a crash when launching connections carried over from a previous version.
+[!INCLUDE [include-whats-new-client-android-chrome-os](~/../_azuredocs/articles/virtual-desktop/includes/include-whats-new-client-android-chrome-os.md)]

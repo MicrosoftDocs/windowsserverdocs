@@ -1,123 +1,125 @@
 ---
-title: Plan for deploying devices using Discrete Device Assignment
-description: Learn about how DDA works in Windows Server
-ms.prod: windows-server-threshold
-ms.service: na
-ms.technology: hyper-v
-ms.tgt_pltfrm: na
+title: Plan for deploying devices by using Discrete Device Assignment
+description: Learn how Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.
 ms.topic: article
-author: chrishuybregts
-ms.author: chrihu
-ms.date: 02/06/2018
+ms.author: wscontent
+author: robinharwood
+ms.date: 06/08/2023
 ---
-# Plan for Deploying Devices using Discrete Device Assignment
->Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
 
-Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.  This guide will discuss the type of devices that can use Discrete Device Assignment, host system requirements, limitations imposed on the virtual machines as well as security implications of Discrete Device Assignment.
+# Plan for deploying devices by using Discrete Device Assignment
 
-For Discrete Device Assignment's initial release, we have focused on two device classes to be formally supported by Microsoft: Graphics Adapters and NVMe Storage devices.  Other devices are likely to work and hardware vendors are able to offer statements of support for those devices.  For these other devices, please reach out to those hardware vendors for support.
+> Applies to: Windows Server 2022, Microsoft Hyper-V Server 2019, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
 
-If you are ready to try out Discrete Device Assignment, you can jump over to [Deploying Graphics Devices Using Discrete Device Assignment](../deploy/Deploying-graphics-devices-using-dda.md) or [Deploying Storage Devices using Discrete Device Assignment](../deploy/Deploying-storage-devices-using-dda.md) to get started!
+Discrete Device Assignment allows physical Peripheral Component Interconnect Express (PCIe) hardware to be directly accessible from within a virtual machine (VM). This article discusses the type of devices that can be used, host system requirements, limitations imposed on the VMs, and security implications.
 
-## Supported Virtual Machines and Guest Operating Systems
-Discrete Device Assignment is supported for Generation 1 or 2 VMs.  Additionally, the guests supported include Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012r2 with [KB 3133690](https://support.microsoft.com/kb/3133690) applied, and various distributions of the [Linux OS.](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md)
+For Discrete Device Assignment, Microsoft supports two device classes: Graphics Adapters and NVMe Storage devices. Other devices are likely to work, and hardware vendors are able to offer statements of support for those devices. For other devices, contact specific hardware vendors for support.
 
-## System Requirements
-In addition to the [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md), Discrete Device Assignment requires server class hardware that is capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support "Access Control Services" (ACS), which enables Hyper-V to force all PCIe traffic through the I/O MMU.
+To learn about other methods of GPU virtualization, see [Plan for GPU acceleration in Windows Server](plan-for-gpu-acceleration-in-windows-server.md). If you're ready to try Discrete Device Assignment, you can go to [Deploy graphics devices using Discrete Device Assignment](../deploy/Deploying-graphics-devices-using-dda.md) or [Deploy NVMe Storage Devices using Discrete Device Assignment](../deploy/Deploying-storage-devices-using-dda.md).
 
-These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings.  For example, the same capabilities are required for SR-IOV support and in the BIOS you may need to set "Enable SR-IOV."  Please reach out to your system vendor if you are unable to identify the correct setting in your BIOS.
+## Supported VMs and guest operating systems
 
-To help ensure hardware the hardware is capable of Discrete Device Assignment, our engineers have put together a [Machine Profile Script](#machine-profile-script) that you can run on an Hyper-V enabled host to test if your server is correctly setup and what devices are capable of Discrete Device Assignment.
+Discrete Device Assignment is supported for Generation 1 or 2 VMs. The guests supported include:
 
-## Device Requirements
-Not every PCIe device can be used with Discrete Device Assignment.  For example, older devices that leverage legacy (INTx) PCI Interrupts are not supported. Jake Oshin's [blog posts](https://blogs.technet.microsoft.com/virtualization/2015/11/20/discrete-device-assignment-machines-and-devices/) go into more detail - however, for the consumer, running the [Machine Profile Script](#machine-profile-script) will display which devices are capable of being used for Discrete Device Assignment.
+- Windows 10 or later
+- Windows Server 2016 or later
+- Windows Server 2012 R2 with the [Update to add Discrete Device Assignment support for Azure](https://support.microsoft.com/kb/3133690).
 
-Device manufactures can reach out to their Microsoft representative for more details.
+For more information, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
 
-## Device Driver
-As Discrete Device Assignment passes the entire PCIe device into the Guest VM, a host driver is not required to be installed prior to the device being mounted within the VM.  The only requirement on the host is that the device's [PCIe Location Path](#pcie-location-path) can be determined.  The device's driver can optionally be installed if this helps in identifying the device.  For example, a GPU without its device driver installed on the host may appear as a Microsoft Basic Render Device.  If the device driver is installed, its manufacturer and model will likely be displayed.
+## System requirements
 
-Once the device is mounted inside the guest, the Manufacturer's device driver can now be installed like normal inside the guest virtual machine.  
+Your system must meet the [Hardware Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System Requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md). Discrete Device Assignment also requires server class hardware that's capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support Access Control Services (ACS), which enables Hyper-V to force all PCIe traffic through the Input-Output Memory Management Unit.
 
-## Virtual Machine Limitations
-Due to the nature of how Discrete Device Assignment is implemented, some features of a virtual machine are restricted while a device is attached.  The following features are not available:
+These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings. If the same capabilities are required for SR-IOV support and in the BIOS, you might need to set "Enable SR-IOV." Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
+
+To help ensure the hardware is capable of Discrete Device Assignment, you can run the [machine profile script](#machine-profile-script) on a Hyper-V enabled host. The script tests if your server is correctly set up and what devices are capable of Discrete Device Assignment.
+
+## Device requirements
+
+Not every PCIe device can be used with Discrete Device Assignment. Older devices that use legacy (INTx) PCI Interrupts aren't supported. For more information, see [Discrete Device Assignment - Machines and devices](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-machines-and-devices/ba-p/382260). You can also run the [Machine Profile Script](#machine-profile-script) to display which devices are capable of being used for Discrete Device Assignment.
+
+Device manufacturers can reach out to their Microsoft representative for more details.
+
+## Device driver
+
+Discrete Device Assignment passes the entire PCIe device into the Guest VM. A host driver isn't required to be installed prior to the device being mounted within the VM. The only requirement on the host is that the device's [PCIe Location Path](#pcie-location-path) can be determined. The device's driver can be installed to help in identifying the device. A GPU without its device driver installed on the host might appear as a Microsoft Basic Render Device. If the device driver is installed, its manufacturer and model is likely to be displayed.
+
+When the device is mounted inside the guest, the Manufacturer's device driver can be installed like normal inside the guest VM.
+
+## VM limitations
+
+Due to the nature of how Discrete Device Assignment is implemented, some features of a VM are restricted while a device is attached. The following features aren't available:
+
 - VM Save/Restore
 - Live migration of a VM
 - The use of dynamic memory
 - Adding the VM to a high availability (HA) cluster
 
 ## Security
-Discrete Device Assignment passes the entire device into the VM.  This means all capabilities of that device are accessible from the guest operating system. Some capabilities, like firmware updating, may adversely impact the stability of the system. As such, numerous warnings are presented to the admin when dismounting the device from the host. We highly recommend that Discrete Device Assignment is only used where the tenants of the VMs are trusted.  
 
-If the admin desires to use a device with an untrusted tenant, we have provided device manufactures with the ability to create a Device Mitigation driver that can be installed on the host.  Please contact the device manufacturer for details on whether they provide a Device Mitigation Driver.
+Discrete Device Assignment passes the entire device into the VM. This pass means all capabilities of that device are accessible from the guest operating system. Some capabilities, like firmware updating, might adversely affect the stability of the system. Numerous warnings are presented to the admin when dismounting the device from the host. You should only use Discrete Device Assignment where the tenants of the VMs are trusted.
 
-If you would like to bypass the security checks for a device that does not have a Device Mitigation Driver, you will have to pass the `-Force` parameter to the `Dismount-VMHostAssignableDevice` cmdlet.  Understand that by doing so, you have changed the security profile of that system and this is only recommended during prototyping or trusted environments.
+If the admin desires to use a device with an untrusted tenant, device manufactures can create a Device Mitigation driver that can be installed on the host. Contact the device manufacturer for details on whether they provide a Device Mitigation Driver.
 
-## PCIe Location Path
-The PCIe Location path is required to dismount and mount the device from the Host.  An example location path looks like the following: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   The [Machine Profile Script](#machine-profile-script) will also return the Location Path of the PCIe device.
+If you would like to bypass the security checks for a device that doesn't have a Device Mitigation Driver, you have to pass the `-Force` parameter to the `Dismount-VMHostAssignableDevice` cmdlet. When you make this pass, you have changed the security profile of that system. You should only make this change during prototyping or trusted environments.
 
-### Getting the Location Path by Using Device Manager
-![Device Manager](../deploy/media/dda-devicemanager.png)
-- Open Device Manager and locate the device.  
-- Right click the device and select “Properties.”
-- Navigate to the Details tab and select “Location Paths” in the Property drop down.  
-- Right click the entry that begins with “PCIROOT” and select "Copy."  You now have the location path for that device.
+## PCIe location path
 
-## MMIO Space
-Some devices, especially GPUs, require additional MMIO space to be allocated to the VM for the memory of that device to be accessible. By default, each VM starts off with 128MB of low MMIO space and 512MB of high MMIO space allocated to it. However, a device might require more MMIO space, or multiple devices may be passed through such that the combined requirements exceed these values.  Changing MMIO Space is straight forward and can be performed in PowerShell using the following commands:
+The PCIe location path is required to dismount and mount the device from the Host. An example location path is `PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)`. The [Machine Profile Script](#machine-profile-script) also returns the location path of the PCIe device.
 
-```
+### Get the location path by using Device Manager
+
+:::image type="content" source="../deploy/media/dda-devicemanager.png" alt-text="Screenshot of the device manager, showing the selections for finding a device path." border="false":::
+
+1. Open Device Manager and locate the device.
+1. Right-click the device and select **Properties**.
+1. On the **Details** tab, expand the **Property** drop-down menu and select **Location Paths**.
+1. Right-click the entry that begins with **PCIROOT** and select **Copy** to get the location path for the device.
+
+## MMIO space
+
+Some devices, especially GPUs, require more MMIO space to be allocated to the VM for the memory of that device to be accessible. By default, each VM starts off with 128 MB of low MMIO space and 512 MB of high MMIO space allocated to it. However, a device might require more MMIO space, or multiple devices might be passed through such that the combined requirements exceed these values. Changing MMIO Space is straightforward and can be performed in PowerShell by using the following commands:
+
+```powershell
 Set-VM -LowMemoryMappedIoSpace 3Gb -VMName $vm
 Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName $vm
 ```
-The easiest way to determine how much MMIO space to allocate is to use the [Machine Profile Script](#machine-profile-script).  Alternatively, you can calculate it using the Device Manager. Please see the TechNet blog post [Discrete Device Assignment - GPUs](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/) for more details.
 
-## Machine Profile Script
-In order to simplify identifying if the server is configured correctly and what devices are available to be passed through using Discrete Device Assignment, one of our engineers put together the following PowerShell script: [SurveyDDA.ps1.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1)
+The easiest way to determine how much MMIO space to allocate is to use the [Machine Profile Script](#machine-profile-script). To download and run the Machine Profile Script, run the following commands in a PowerShell console:
 
-Before using the script, please ensure you have the Hyper-V role installed and you run the script from a PowerShell command window that has Administrator privileges.
-
-If the system is incorrectly configured to support Discrete Device Assignment, the tool will display an error message as to what is wrong. If the tool finds the system configured correctly, it will enumerate all the devices it can find on the PCIe Bus.
-
-For each device it finds, the tool will display whether it is able to be used with Discrete Device Assignment. If a device is identified as being compatible with Discrete Device Assignment, the script will provide a reason.  When a device is successfully identified as being compatible, the device's Location Path will be displayed.  Additionally, if that device requires [MMIO space](#mmio-space), it will be displayed as well.
-
-![SurveyDDA.ps1](./images/hyper-v-surveydda-ps1.png)
-
-## Frequently Asked Questions
-
-### How does Remote Desktop's RemoteFX vGPU technology relate to Discrete Device Assignment?
-They are completely separate technologies. RemoteFX vGPU does not need to be installed for Discrete Device Assignment to work. Additionally, no additional roles are required to be installed. RemoteFX vGPU requires the RDVH role to be installed in order for the RemoteFX vGPU driver to be present in the VM. For Discrete Device Assignment, since you will be installing the Hardware Vendor's driver into the virtual machine, no additional roles need to be present.  
-
-### I've passed a GPU into a VM but Remote Desktop or an application isn't recognizing the GPU
-There are a number of reasons this could happen, but several common issues are listed below.
-- Ensure the latest GPU vendor's driver is installed and is not reporting an error by checking the device state in the Device Manager.
-- Ensure that device has enough [MMIO space](#mmio-space) allocated for it within the VM.
-- Ensure you're using a GPU that the vendor supports being used in this configuration. For example, some vendors prevent their consumer cards from working when passed through to a VM.
-- Ensure the application being run supports running inside a VM, and that both the GPU and its associated drivers are supported by the application. Some applications have whitelists of GPUs and environments.
-- If you're using the Remote Desktop Session Host role or Windows Multipoint Services on the guest, you will need to ensure that a specific Group Policy entry is set to allow use of the default GPU. Using a Group Policy Object applied to the guest (or the Local Group Policy Editor on the guest), navigate to the following Group Policy item:
-   - Computer Configuration
-   - Administrator Templates
-   - Windows Components
-   - Remote Desktop Services
-   - Remote Desktop Session Host
-   - Remote Session Environment
-   - Use the hardware default graphics adapter for all Remote Desktop Services sessions
-
-    Set this value to Enabled, then reboot the VM once the policy has been applied.
-
-### Can Discrete Device Assignment take advantage of Remote Desktop's AVC444 codec?
-Yes, visit this blog post for more information: [Remote Desktop Protocol (RDP) 10 AVC/H.264 improvements in Windows 10 and Windows Server 2016 Technical Preview.](https://blogs.technet.microsoft.com/enterprisemobility/2016/01/11/remote-desktop-protocol-rdp-10-avch-264-improvements-in-windows-10-and-windows-server-2016-technical-preview/)
-
-### Can I use PowerShell to get the Location Path?
-Yes, there are various ways to do this. Here is one example:
-```
-#Enumerate all PNP Devices on the system
-$pnpdevs = Get-PnpDevice -presentOnly
-#Select only those devices that are Display devices manufactured by NVIDIA
-$gpudevs = $pnpdevs |where-object {$_.Class -like "Display" -and $_.Manufacturer -like "NVIDIA"}
-#Select the location path of the first device that's available to be dismounted by the host.
-$locationPath = ($gpudevs | Get-PnpDeviceProperty DEVPKEY_Device_LocationPaths).data[0]
+```powershell
+curl -o SurveyDDA.ps1 https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1
+.\SurveyDDA.ps1
 ```
 
-### Can Discrete Device Assignment be used to pass a USB device into a VM?
-Although not officially supported, our customers have used Discrete Device Assignment to do this by passing the entire USB3 controller into a VM.  As the whole controller is being passed in, each USB device plugged into that controller will also be accessible in the VM.  Note that only some USB3 controllers may work, and USB2 controllers cannot be used with Discrete Device Assignment.
+For devices that can be assigned, the script displays the MMIO requirements of a given device. The following script output is an example:
+
+```powershell
+NVIDIA GRID K520
+Express Endpoint -- more secure.
+    ...
+    And it requires at least: 176 MB of MMIO gap space
+...
+```
+
+The low MMIO space is used only by 32-bit operating systems and devices that use 32-bit addresses. In most circumstances, setting the high MMIO space of a VM is enough since 32-bit configurations aren't common.
+
+> [!IMPORTANT]
+> When you assign MMIO space to a VM, be sure to specify sufficient MMIO space. The MMIO space should be the sum of the requested MMIO space for all desired assigned devices plus a buffer for other virtual devices that require a few MB of MMIO space. Use the default MMIO values previously described as the buffer for low and high MMIO (128 MB and 512 MB, respectively).
+
+Consider the previous example. If you assign a single K520 GPU, set the MMIO space of the VM to the value outputted by the machine profile script plus a buffer: 176 MB + 512 MB. If you assign three K520 GPUs, set the MMIO space to three times the base amount of 176 MB plus a buffer, or 528 MB + 512 MB.
+
+For a more in-depth look at MMIO space, see [Discrete Device Assignment - GPUs](https://techcommunity.microsoft.com/t5/Virtualization/Discrete-Device-Assignment-GPUs/ba-p/382266) on the Tech Community blog.
+
+## Machine profile script
+
+To identify if the server is configured correctly, and what devices can be passed through by using Discrete Device Assignment, run the [SurveyDDA.ps1.](https://github.com/Microsoft/Virtualization-Documentation/blob/live/hyperv-tools/DiscreteDeviceAssignment/SurveyDDA.ps1) PowerShell script.
+
+Before you use the script, ensure you have the Hyper-V role installed and you run the script from a PowerShell command window that has Administrator privileges.
+
+If the system is incorrectly configured to support Discrete Device Assignment, the tool displays an error message with details about the issue. If the system is correctly configured, the tool enumerates all devices located on the PCIe Bus.
+
+For each device it finds, the tool displays whether it's able to be used with Discrete Device Assignment. If a device is identified as being compatible with Discrete Device Assignment, the script provides a reason. When a device is successfully identified as being compatible, the device's Location Path is displayed. Additionally, if that device requires [MMIO space](#mmio-space), it's displayed as well.
+
+:::image type="content" source="./images/hyper-v-surveydda-ps1.png" alt-text="Screenshot of the requirements displayed in SurveyDDA.ps1.":::

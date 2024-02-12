@@ -1,39 +1,36 @@
 ---
 title: bitsadmin peers and clear
-description: "Windows Commands topic for **bitsadmin peers and clear** - Clears the peer list."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 71833862-be86-4829-8ce3-11e7869adf29
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+description: Reference article for the bitsadmin peers and clear command that clears the peer list.
+ms.topic: reference
+ms.author: jgerend
+author: JasonGerend
+ms.date: 04/01/2023
 ---
 
 # bitsadmin peers and clear
 
+Applies to Windows Server (All supported versions)
 
-
-Clears the peer list.
+The `bitsadmin /peers /clear` command clears the peer list.
 
 ## Syntax
 
 ```
-bitsadmin /Peers /Clear 
+bitsadmin /peers /clear
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example clears the peer list.
+To clear the peer list.
+
 ```
-C:\>bitsadmin /Peers /Clear
+bitsadmin /peers /clear
 ```
 
-#### Additional references
+## Related links
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
+
+- [bitsadmin peers command](bitsadmin-peers.md)

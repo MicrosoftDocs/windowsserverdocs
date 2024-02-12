@@ -1,65 +1,69 @@
 ---
-title: Remote Desktop - compare the client apps
-description: Learn how the different RD apps compare when it comes to supported features and functions.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
+title: Remote Desktop - compare the client apps redirections
+description: Learn how the different Remote Desktop apps compare when it comes to redirections.
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 06/22/2018
-ms.localizationpriority: medium
+author: heidilohr
+manager: femila
+ms.author: helohr
+ms.date: 10/24/2023
 ---
 
-# Compare the client apps
+# Compare the clients: redirections
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
 
-We're often asked how the different Remote Desktop client apps compare to each other. Do they all do the same thing? Here are the answers to those questions.
+We're often asked how the different Remote Desktop clients compare to each other when connecting to Remote Desktop Services or remote PCs. Here's the answer to these questions.
 
 ## Redirection support
 
-The following tables compare support for device and other redirections on the Remote Desktop Connection app, Universal app, Android app, iOS app, macOS app and web client. These tables cover the redirections that you can access once in a remote session. 
+The following tables compare support for device and other redirections across the different clients. These tables cover the redirections that you can access once in a remote session.
 
-If you remote into your personal desktop, there are additional redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings.
+If you remote into your personal desktop, there are other redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings or RDP properties.
+
+>[!IMPORTANT]
+>You can only enable redirections with binary settings that apply to both to and from the remote machine. The service doesn't currently support one-way blocking of redirections from only one side of the connection.
 
 ### Input redirection
 
-| Redirection | Remote Desktop<br> Connection | Universal | Android | iOS | macOS | web client |
-|-------------|-------------------------------|-----------|---------|-----|-------|------------|
-| Keyboard    | X                             | X         | X       | X   | X     | X          |
-| Mouse       | X                             | X         | X       |     | X     | X          |
-| Touch       | X                             | X         | X       | X   |       |            |
-| Other       | Pen                           |           |         |     |       |            |
+| Redirection | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS | macOS | Web client    |
+|-------------|---------------------------|---------------|---------|-----|-------|---------------|
+| Keyboard    | X                         | X             | X       | X   | X     | X             |
+| Mouse       | X                         | X             | X       | X\* | X     | X             |
+| Touch       | X                         | X             | X       | X   |       | X (except IE) |
+| Pen         | X                         |               | X       | X   | | |
 
-### Port redirection   
+\* View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices-and-redirection).
 
-| Redirection | Remote Desktop <br>Connection | Universal | Android | iOS | macOS | Web client |
-|-------------|-------------------------------|-----------|---------|-----|-------|------------|
-| Serial port | X                             |           |         |     |       |            |
-| USB         | X                             |           |         |     |       |            |
+### Port redirection
 
-When you enable USB port redirection, any USB devices attached to the USB port are automatically recognized in the remote session.
+| Redirection | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS | macOS | Web client |
+|-------------|---------------------------|---------------|---------|-----|-------|------------|
+| Serial port | X                         |               |         |     |       |            |
+| USB         | X                         |               |         |     |       |            |
 
-### Other redirection (devices, etc)
+When you enable USB port redirection, all USB devices attached to USB ports are automatically recognized in the remote session. For the devices to work as expected, you must make sure to install their required drivers on both the endpoint and host. Also, make sure the drivers are certified to run in remote scenarios. If you need more information about using your USB device in remote scenarios, talk to the device manufacturer.
 
+### Other redirection (devices, etc.)
 
+| Redirection         | Windows</br>(MSTSC) | Remote Desktop app | Android | iOS         | macOS                           | Web client    |
+|---------------------|---------------------------|---------------|---------|--------------|---------------------------------|---------------|
+| Cameras             | X                         |               |  X       |   X          | X                               | X              |
+| Clipboard           | X                         | X             | Text    | Text, images | X                               | Text          |
+| Local drive/storage | X                         |               | X       | X            | X                               |  X\*             |
+| Location            | X                         |  X             |         |              |                                 |               |
+| Microphones         | X                         | X             | X       |  X           | X                               | X             |
+| Printers            | X                         |               |         |              | X\*\* (CUPS only)                   | PDF print     |
+| Scanners            | X                         |               |         |              |                                 |               |
+| Smart cards         | X                         |               |         |              | X (Windows sign-in not supported) |               |
+| Speakers            | X                         | X             | X       | X            | X                               | X (except IE) |
+| Third-party virtual channel plugins | X         |               |         |              |                                 |               |
+| WebAuthn            | X                         |               |         |              |                                 |               |
 
-| Redirection         | Remote Desktop Connection | Universal   | Android | iOS         | macOS                                    | Web client    |
-|---------------------|---------------------------|-------------|---------|-------------|------------------------------------------|---------------|
-| Cameras             | X                         |             |         |             |                                          |               |
-| Clipboard           | X                         | text, image | text    | text, image | X                                        | text          |
-| Local drive/storage | X                         |             | X       |             | x                                        |               |
-| Location            | X                         |             |         |             |                                          |               |
-| Microphones         | X                         |X            |         |             | X                                        |               |
-| Printers            | X                         |             |         |             | X (CUPS only)                            | PDF print     |
-| Scanners            | X                         |             |         |             |                                          |               |
-| Smart Cards         | X                         |             |         |             | X (Windows authentication not supported) |               |
-| Speakers            | X                         | X           | X       | X           | X                                        | X (except IE) |
+\* Limited to uploading and downloading files through the Remote Desktop Web client.
 
-*For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
+\*\* For printer redirection, the macOS app supports the Publisher Imagesetter printer driver by default. The app doesn't support the native printer drivers.
+
+## Other resources
+
+If you're looking for feature comparisons, check out [Compare the clients: features](remote-desktop-features.md).

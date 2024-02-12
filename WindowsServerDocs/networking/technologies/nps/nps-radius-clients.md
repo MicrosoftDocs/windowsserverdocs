@@ -2,17 +2,16 @@
 title: RADIUS Clients
 description: This topic provides an overview of RADIUS Clients for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # RADIUS Clients
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 A network access server \(NAS\) is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 
@@ -75,7 +74,7 @@ A text string that is used as a password between RADIUS clients, RADIUS servers,
 Described in RFC 2869, "RADIUS Extensions," a Message Digest 5 \(MD5\) hash of the entire RADIUS message. If the RADIUS Message Authenticator attribute is present, it is verified. If it fails verification, the RADIUS message is discarded. If the client settings require the Message Authenticator attribute and it is not present, the RADIUS message is discarded. Use of the Message Authenticator attribute is recommended.
 
 >[!NOTE]
->The Message Authenticator attribute is required and enabled by default when you use Extensible Authentication Protocol \(EAP\) authentication. 
+>The Message Authenticator attribute is required and enabled by default when you use Extensible Authentication Protocol \(EAP\) authentication.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
 

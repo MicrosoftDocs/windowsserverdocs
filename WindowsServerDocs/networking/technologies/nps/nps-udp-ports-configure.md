@@ -2,17 +2,16 @@
 title: Configure NPS UDP Port Information
 description: You can use this topic to configure the ports that Network Policy Server (NPS) uses for Remote Authentication Dial-In User Service (RADIUS) authentication and accounting traffic in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: 70569958-d7a7-474e-a817-6b7b5134784a
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Configure NPS UDP Port Information
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following procedure to configure the ports that Network Policy Server (NPS) uses for Remote Authentication Dial-In User Service \(RADIUS\) authentication and accounting traffic.
 
@@ -28,7 +27,7 @@ The port values of 1812 for authentication and 1813 for accounting are RADIUS st
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
-## To configure NPS UDP port information 
+## To configure NPS UDP port information
 
 1. Open the NPS console.
 2. Right-click **Network Policy Server**, and then click **Properties**.

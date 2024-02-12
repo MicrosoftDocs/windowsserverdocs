@@ -2,21 +2,20 @@
 title: Plan NPS as a RADIUS server
 description: This topic provides information about Network Policy Server RADIUS server deployment planning in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: 2900dd2c-0f70-4f8d-9650-ed83d51d509a
-ms.author: pashort 
-author: shortpatti
+ms.author: wscontent
+author: xelu86
+ms.date: 05/30/2023
 ---
 
 # Plan NPS as a RADIUS server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When you deploy Network Policy Server \(NPS\) as a Remote Authentication Dial-In User Service (RADIUS) server, NPS performs authentication, authorization, and accounting for connection requests for the local domain and for domains that trust the local domain. You can use these planning guidelines to simplify your RADIUS deployment.
 
-These planning guidelines do not include circumstances in which you want to deploy NPS as a RADIUS proxy. When you deploy NPS as a RADIUS proxy, NPS forwards connection requests to a server running NPS or other RADIUS servers in remote domains, untrusted domains, or both. 
+These planning guidelines do not include circumstances in which you want to deploy NPS as a RADIUS proxy. When you deploy NPS as a RADIUS proxy, NPS forwards connection requests to a server running NPS or other RADIUS servers in remote domains, untrusted domains, or both.
 
 Before you deploy NPS as a RADIUS server on your network, use the following guidelines to plan your deployment.
 
@@ -65,7 +64,7 @@ To test basic interoperability for PPP connections for wireless access points, c
 
 During the planning for RADIUS clients, you can use the following steps.
 
-- Document the vendor-specific attributes (VSAs) you must configure in NPS. If your network access servers require VSAs, log the VSA information for later use when you configure your network policies in NPS. 
+- Document the vendor-specific attributes (VSAs) you must configure in NPS. If your network access servers require VSAs, log the VSA information for later use when you configure your network policies in NPS.
 
 - Document the IP addresses of RADIUS clients and your NPS to simplify the configuration of all devices. When you deploy your RADIUS clients, you must configure them to use the RADIUS protocol, with the NPS IP address entered as the authenticating server. And when you configure NPS to communicate with your RADIUS clients, you must enter the RADIUS client IP addresses into the NPS snap-in.
 
@@ -152,9 +151,9 @@ During the planning for network policies, you can use the following steps.
 
 ## Plan NPS accounting
 
-NPS provides the ability to log RADIUS accounting data, such as user authentication and accounting requests, in three formats: IAS format, database-compatible format, and Microsoft SQL Server logging. 
+NPS provides the ability to log RADIUS accounting data, such as user authentication and accounting requests, in three formats: IAS format, database-compatible format, and Microsoft SQL Server logging.
 
-IAS format and database-compatible format create log files on the local NPS in text file format. 
+IAS format and database-compatible format create log files on the local NPS in text file format.
 
 SQL Server logging provides the ability to log to a SQL Server 2000 or SQL Server 2005 XML-compliant database, extending RADIUS accounting to leverage the advantages of logging to a relational database.
 
@@ -216,7 +215,6 @@ During the planning for NPS accounting by using NPS SQL Server logging, you can 
 
 - Plan to use network access servers that support the storing and forwarding of accounting data. Network access servers that support this feature can store accounting data when the network access server cannot communicate with the NPS. When the NPS is available, the network access server forwards the stored records to the NPS, providing increased reliability in accounting over network access servers that do not provide this feature.
 
-- Plan to always configure the Acct-Interim-Interval attribute in network policies. The Acct-Interim-Interval attribute sets the interval (in seconds) between each interim update that the network access server sends. According to RFC 2869, the value of the Acct-Interim-Interval attribute must not be smaller than 60 seconds, or one minute, and should not be smaller than 600 seconds, or 10 minutes. For more information, see RFC 2869, "RADIUS Extensions."
+- Plan to always configure the Acct-Interim-Interval attribute in network policies. The Acct-Interim-Interval attribute sets the interval (in seconds) between each interim update that the network access server sends. According to RFC 2869, the value of the Acct-Interim-Interval attribute must not be smaller than 60 seconds (1 minute), and should not be smaller than 600 seconds (10 minutes), meaning that values over 600 seconds will reduce the frequency of updates received by the RADIUS server. For more information, see [RFC 2869](https://datatracker.ietf.org/doc/html/rfc2869).
 
 - Ensure that logging of periodic status is enabled on your NPSs.
-

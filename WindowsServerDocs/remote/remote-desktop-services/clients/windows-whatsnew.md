@@ -1,49 +1,19 @@
 ---
-title: What's new for Remote Desktop on Windows?
-description: Learn about recent changes to the Remote Desktop client for Windows
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
-ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 11/06/2018
-ms.localizationpriority: medium
+title: What's new in the Remote Desktop app for Windows - Remote Desktop Services
+description: Learn about recent changes to the Remote Desktop app for Windows
+ms.topic: conceptual
+author: heidilohr
+ms.author: helohr
+ms.date: 04/10/2023
 ---
-# What's new for the Remote Desktop client on Windows?
 
-We regularly update the [Remote Desktop client for Windows](windows.md), adding new features and fixing issues. Check out the latest updates below.
+# What's new in the Remote Desktop app for Windows
 
-## Updates for version 10.1.1088
-*Published date: 11/06/2018*
+In this article you'll learn about the latest updates for the Remote Desktop app for Windows. To learn more about using the Remote Desktop app for Windows with Remote Desktop Services, see [Get started with the Microsoft Store Client](windows.md).
 
-- Connection display name is now more discoverable.
-- Fixed a crash when closing the client window while a connection is still active.
-- Fix a hang when reconnecting after the client is minimized.
-- Allow desktops to be dragged anywhere in a group.
-- Ensure launching a connection from the jumplist results in a separate window when needed.
-- Additional bug fixes.
+> [!IMPORTANT]
+> We're no longer updating the Remote Desktop app for Windows with new features.
+>
+> If you're connecting to Azure Virtual Desktop, for the best experience that includes the latest features and updates, we recommend you download the [Azure Virtual Desktop Store app for Windows](/azure/virtual-desktop/users/connect-windows-avd-app) instead.
 
-## Updates for version 10.1.1060
-*Published date: 09/14/2018*
-
-- Addressed an issue where double-clicking a desktop connection caused two sessions to be launched.
-- Fixed a crash when switching between virtual desktops locally.
-- Moving a session to a different monitor now also updates the session scale factor. 
-- Handle additional system keys like AltGr.
-- Additional bug fixes.
-
-## Updates for version 10.1.1046
-*Published date: 06/20/2018*
-
-- Bug fixes.
-
-## Updates for version 10.1.1042
-*Published date: 04/02/2018*
-
-- Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
-- Additional bug fixes.
+[!INCLUDE [include-whats-new-client-microsoft-store](~/../_azuredocs/articles/virtual-desktop/includes/include-whats-new-client-microsoft-store.md)]

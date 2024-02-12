@@ -1,41 +1,58 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "window-server-docs/essentials/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "window-server-docs/essentials/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {
-		"_op_documentIdPathDepotMapping": {
-			"./": {
-			  "depot_name": "WS.EssentialsDocs"
-			}
-		}
-	},
-    "fileMetadata": {},
-    "template": [],
-    "dest": "window-server-docs/essentials"
-  }
+   "build": {
+      "content": [
+         {
+            "files": [
+               "**/*.md",
+               "**/*.yml"               
+            ],
+            "exclude": [
+               "**/obj/**",
+               "**/includes/**"
+            ]
+         }
+      ],
+      "resource": [
+         {
+            "files": [
+               "**/*.png",
+               "**/*.jpg",
+               "**/*.gif",
+               "**/*.json",
+               "**/*.svg"     
+            ],
+            "exclude": [
+               "**/obj/**",
+               "**/includes/**"
+            ]
+         }
+      ],
+      "overwrite": [],
+      "externalReference": [],
+      "globalMetadata": {
+         "breadcrumb_path": "/windows-server-essentials/breadcrumbs/toc.json",
+         "uhfHeaderId": "MSDocsHeader-WindowsServer",
+         "_op_documentIdPathDepotMapping": {
+            "./": {
+               "depot_name": "WS.EssentialsDocs"
+            }
+         },
+         "recommendations": true
+      },
+      "fileMetadata": {
+         "ms.subservice": {
+            "**/*.md": "essentials"
+         },
+         "ms.service": {
+            "**/*.md": "windows-server"
+         },
+         "ms.prod": {
+         },
+         "ms.technology": {
+         }
+      },
+       "template": [],
+       "dest": "window-server-docs/essentials",
+       "markdownEngineName": "markdig"
+   }
 }

@@ -8,6 +8,7 @@
         ],
         "exclude": [
           "**/obj/**",
+          "**/includes/**",
           "windows-server/**"
         ]
       }
@@ -30,27 +31,87 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-        "uhfHeaderId": "MSDocsHeader-WindowsIT", 
-		"breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
-    "extendBreadcrumb":  true,
-	    "feedback_system": "GitHub",
-        "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
-        "feedback_product_url": "https://windowsserver.uservoice.com/forums/295047-general-feedback",
-		"_op_documentIdPathDepotMapping": {
-			"./": {
-			  "depot_name": "WS.WindowsServerDocs"
-			}
-		}
-	},
-    "fileMetadata": {
-      "feedback_product_url": {
-        "manage/windows-admin-center/*.md": "http://aka.ms/wacfeedback",
-        "manage/windows-admin-center/**/*.md": "http://aka.ms/wacfeedback" 
+      "breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
+      "uhfHeaderId": "MSDocsHeader-WindowsServer",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server",
+      "_op_documentIdPathDepotMapping": {
+          "manage/windows-admin-center/license/": {
+            "depot_name": "MSDN.WindowsServerDocs-pr",
+            "folder_relative_path_in_docset": "licensing/"
+           }
+        },
+      "recommendations": true
+      },
+      "fileMetadata": {
+         "ms.service": {
+            "failover-clustering/**/*.md": "windows-server",
+            "remote/**/*.md": "windows-server",
+            "EssentialsDocs/**/*.md": "windows-server",
+            "storage/**/*.md": "windows-server",
+            "troubleshoot/**/*.md": "windows-server",
+            "get-started/**/*.md": "windows-server",
+            "get-started-19/**/*.md": "windows-server",
+            "manage/**/*.md": "windows-server",
+            "identity/**/*.md": "windows-server",
+            "security/**/*.md": "windows-server",
+            "administration/**/*.md": "windows-server",
+            "virtualization/**/*.md": "windows-server",
+            "networking/**/*.md": "windows-server",
+            "upgrade/**/*.md": "windows-server",
+            "windows-server-licensing/**/*.md": "windows-server"
+         },
+         "ms.subservice": {
+            "storage/storage-spaces/**/*.md": "storage-spaces",
+            "failover-clustering/**/*.md": "failover-clustering",
+            "remote/remote-desktop-services/**/*.md": "remote-desktop-services",
+            "remote/**/*.md": "remote",
+            "identity/ad-fs/**/*.md": "ad-fs",
+            "EssentialsDocs/**/*.md": "essentials",
+            "storage/**/*.md": "storage",
+            "troubleshoot/**/*.md": "troubleshoot",
+            "get-started/**/*.md": "getting-started",
+            "get-started-19/**/*.md": "getting-started",
+            "manage/**/*.md": "manage",
+            "identity/**/*.md": "security",
+            "security/**/*.md": "security",
+            "administration/windows-commands/**/*.md": "windows-commands",
+            "administration/**/*.md": "administration",
+            "manage/windows-admin-center/**/*.md": "windows-admin-center",
+            "identity/ad-ds/**/*.md": "ad-ds",
+            "administration/windows-server-update-services/**/*.md": "wsus",
+            "virtualization/**/*.md": "hyper-v",
+            "networking/**/*.md": "networking"
+         },
+        "author": {
+          "security/tls/*.md": "Andrei-Popov"
+        },
+        "feedback_product_url": {
+          "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
+          "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
+        },
+        "ms.author": {
+          "security/tls/*.md": "wscontent"
+        },
+        "ms.prod": {
+        },
+        "ms.technology": {
+          "upgrade/**/*.md": "upgrade"
+          }
+        },
+    "template": [
+      "docs.html"
+    ],
+
+    "rules": {
+      "sensitive-language-sl": {
+        "exclude": [
+          "administration/windows-commands/dnscmd.md"
+        ]
       }
     },
-    "template": [
-      null
-    ],
+
     "dest": "windows-server"
   }
 }

@@ -1,18 +1,15 @@
 ---
 title: Guides
 description: Guides Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/17/2018
-ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Guides
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Guides
 Here are some guides for developing with the Windows Admin Center SDK:

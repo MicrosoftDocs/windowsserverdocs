@@ -1,18 +1,16 @@
 ---
+description: "Learn more about: Performance history for volumes"
 title: Performance history for volumes
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
-Keywords: Storage Spaces Direct
-ms.localizationpriority: medium
 ---
 
 # Performance history for volumes
 
-> Applies To: Windows Server Insider Preview
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for volumes. Performance history is available for every Cluster Shared Volume (CSV) in the cluster. However, it is not available for OS boot volumes nor any other non-CSV storage.
 
@@ -73,7 +71,7 @@ The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Clu
    > Counters are measured over the entire interval, not sampled. For example, if the volume is idle for 9 seconds but completes 30 IOs in the 10th second, its `volume.iops.total` will be recorded as 3 IOs per second on average during this 10-second interval. This ensures its performance history captures all activity and is robust to noise.
 
    > [!TIP]
-   > These are the same counters used by the popular [VM Fleet](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1) benchmark framework.
+   > These are the same counters used by the popular [VM Fleet](https://github.com/microsoft/diskspd/blob/master/Frameworks/VMFleet/WatchCluster.psm1) benchmark framework.
 
 The `size.*` series are collected from the `MSFT_Volume` class in WMI, one instance per volume.
 
@@ -84,12 +82,12 @@ The `size.*` series are collected from the `MSFT_Volume` class in WMI, one insta
 
 ## Usage in PowerShell
 
-Use the [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-volume) cmdlet:
+Use the [Get-Volume](/powershell/module/storage/get-volume) cmdlet:
 
 ```PowerShell
 Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

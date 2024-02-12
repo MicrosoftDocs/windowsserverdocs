@@ -2,8 +2,6 @@
 title: Create a Quota
 description: This article describes how to create a quota based on a template
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -11,7 +9,7 @@ ms.author: jgerend
 ---
 # Create a Quota
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Quotas can be created from a template or with custom properties. The following procedure describes how to create a quota that is based on a template (recommended). If you need to create a quota with custom properties, you can save these properties as a template to re-use at a later date.
 
@@ -43,7 +41,7 @@ When you create a quota, you choose a quota path, which is a volume or folder th
 
 7.  Click **Create**.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -   [Create an Auto Apply Quota](create-auto-apply-quota.md)

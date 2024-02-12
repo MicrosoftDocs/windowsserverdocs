@@ -1,22 +1,16 @@
 ---
 title: Manage the Local Server and the Server Manager Console
-description: "Server Manager"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+description: Learn how to  manage both the local server and remote servers that are running Windows Server 2008 and newer releases of the Windows Server operating system.
 ms.topic: article
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage the Local Server and the Server Manager Console
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In Windows Server, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
 
@@ -36,7 +30,7 @@ This topic contains the following sections.
 
 -   [Manage roles on role home pages](#BKMK_roles)
 
-## <a name="BKMK_shutdown"></a>Shut down the local server
+## <a name=BKMK_shutdown></a>Shut down the local server
 The **Tasks** menu in the local server **Properties** tile lets you start a Windows PowerShell session on the local server, open the **computer Management** mmc snap-in, or open mmc snap-ins for roles or features that are installed on the local server. You can also shut down the local server by using the **Shut Down Local Server** command in this **Tasks** menu. The **Shut Down Local Server** command is also available for the local server in the **Servers** tile on the **All Servers** page, or on any role or group page in which the local server is represented.
 
 Shutting down the local server by using this method, unlike shutting down Windows Server 2016 from the **start** screen, opens the **Shut Down Windows** dialog box, which lets you specify reasons for shutdown in the **shutdown Event Tracker** area.
@@ -44,38 +38,38 @@ Shutting down the local server by using this method, unlike shutting down Window
 > [!NOTE]
 > Only members of the Administrators group can shut down or restart a server. Standard users cannot shut down or restart a server. Clicking the **Shut Down Local Server** command logs standard users off server sessions. This matches the experience of a standard user running the **Alt+F4** shutdown command from the server desktop.
 
-## <a name="BKMK_props"></a>Configure Server Manager properties
+## <a name=BKMK_props></a>Configure Server Manager properties
 You can view or change the following settings in the **Properties** tile on the **Local Server** page. To change a setting's value, click the hypertext value of the setting.
 
 > [!NOTE]
 > Typically, the properties displayed in the Local Server **Properties** tile can only be changed on the local server. You cannot change the local server properties from a remote computer by using Server Manager because the **Properties** tile can only get information about the local computer, not remote computers.
-> 
+>
 > Because many properties displayed in the **Properties** tile are controlled by tools that are not part of Server Manager (Control Panel, for example), changes to **Properties** settings are not always displayed in the **Properties** tile immediately. By default, data in the **Properties** tile is refreshed every two minutes. To refresh **Properties** tile data immediately, click **Refresh** in the Server Manager address bar.
 
 |Setting|Description|
 |------|--------|
 |computer name|Displays the computer friendly name, and opens the **System Properties** dialog box, which lets you change the server's name, domain membership, and other system settings such as user profiles.|
 |Domain (or Workgroup, if the server is not joined to a domain)|Displays the domain or workgroup of which the server is a member. Opens the **System Properties** dialog box, which lets you change the server's name, domain membership, and other system settings such as user profiles.|
-|Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](https://go.microsoft.com/fwlink/?LinkId=253465).|
+|Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732283(v=ws.10)).|
 |remote management|Displays Server Manager and Windows PowerShell remote management status. Opens the **Configure remote Management** dialog box. For more information about remote management, see [Configure remote Management in Server Manager](configure-remote-management-in-server-manager.md).|
 |Remote Desktop|Shows whether users can connect to the server remotely by using Remote Desktop sessions. Opens the **remote** tab of the **System Properties** dialog box.|
-|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. For more information about NIC Teaming, see the [NIC Teaming white paper](https://go.microsoft.com/fwlink/?LinkID=253449).|
+|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. For more information about NIC Teaming, see the [NIC Teaming white paper](/download/details.aspx?id=30160).|
 |Ethernet|Displays the networking status of the server. Opens **Control Panel\Network and Internet\Network Connections**.|
 |Operating system version|This read-only field displays the version number of the Windows operating system that the local server is running.|
 |Hardware information|This read-only field displays the manufacturer and model name and number of the server hardware.|
 |Last installed updates|Displays the day and time that Windows updates were last installed. Opens **Control Panel\System and Security\Windows Update**.|
 |Windows Update|Displays Windows Update settings for the local server. Opens **Control Panel\System and Security\Windows Update**.|
 |Last checked for updates|Displays the day and time that the server last checked for available Windows updates. Opens **Control Panel\System and Security\Windows Update**.|
-|Windows Error Reporting|Displays Windows Error Reporting opt-in status. Opens the **Windows Error Reporting Configuration** dialog box. For more information about Windows Error Reporting, its benefits, privacy statements, and opt-in settings, see [Windows Error Reporting](https://go.microsoft.com/fwlink/?LinkID=245991).|
-|Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. For more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](https://go.microsoft.com/fwlink/?LinkID=245992).|
-|Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. For more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](https://go.microsoft.com/fwlink/?LinkId=253461).|
+|Windows Error Reporting|Displays Windows Error Reporting opt-in status. Opens the **Windows Error Reporting Configuration** dialog box. For more information about Windows Error Reporting, its benefits, privacy statements, and opt-in settings, see [Windows Error Reporting](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj129704(v=ws.11)).|
+|Customer Experience Improvement Program|Displays Windows Customer Experience Improvement Program opt-in status. Opens the **Customer Experience Improvement Program Configuration** dialog box. For more information about Windows Customer Experience Improvement Program, its benefits, and opt-in settings, see [Windows Customer Experience Improvement Program](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj129704(v=ws.11)).|
+|Internet Explorer (IE) Enhanced Security Configuration|Shows whether IE Enhanced Security Configuration (also known as IE hardening or IE ESC) is turned on or off. Opens the **Internet Explorer Enhanced Security Configuration** dialog box. IE Enhanced Security Configuration is a security measure for servers that prevents web pages from opening in Internet Explorer. For more information about IE Enhanced Security Configuration, its benefits, and settings, see [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).|
 |time zone|Displays the local server's time zone. Opens the **date and time** dialog box.|
 |Product ID|Displays the Windows activation status and product ID number (if Windows has been activated) of the Windows Server 2016 operating system. This is not the same number as the Windows product key. Opens the **Windows Activation** dialog box.|
 |Processors|This read-only field displays manufacturer, model name, and speed information about the local server's processors.|
 |Installed memory (RAM)|This read-only field displays the amount of available RAM, in gigabytes.|
 |Total disk space|This read-only field displays the amount of available disk space, in gigabytes.|
 
-## <a name="BKMK_managesm"></a>Manage the Server Manager console
+## <a name=BKMK_managesm></a>Manage the Server Manager console
 Global settings that apply to the entire Server Manager console, and to all remote servers that have been added to the Server Manager server pool, are found in the heading bars at the top of the Server Manager console window.
 
 ### add servers to Server Manager
@@ -111,7 +105,7 @@ The **Do not start Server Manager automatically at logon** check box in the **Se
 ### Zoom in or out
 To zoom in or out on your view of the Server Manager console, you can either use the **Zoom** commands on the **View** menu, or press **Ctrl+Plus (+)** to zoom in and **Ctrl+Minus (-)** to zoom out.
 
-## <a name="BKMK_tools"></a>Customize tools that are displayed in the Tools menu
+## <a name=BKMK_tools></a>Customize tools that are displayed in the Tools menu
 The **Tools** menu in Server Manager includes soft links to shortcuts in the **Administrative Tools** folder in **Control Panel/System and Security**. The **Administrative Tools** folder contains a list of shortcuts or LNK files to available management tools, such as mmc snap-ins. Server Manager populates the **Tools** menu with links to those shortcuts, and copies the folder structure of the **Administrative Tools** folder to the **Tools** menu. By default, tools in the Administrative Tools folder are arranged in a flat list, sorted by type and by name. In the Server Manager**Tools** menu, items are sorted only by name, not by type.
 
 To customize the **Tools** menu, copy tool or script shortcuts that you want to use to the **Administrative Tools** folder. You can also organize your shortcuts in folders, which create cascading menus in the **Tools** menu. additionally, if you want to restrict access to the custom tools on the **Tools** menu, you can set user access rights on both your custom tool folders in Administrative Tools, or directly on the original tool or script files.
@@ -141,9 +135,9 @@ The following procedure describes how to create an example folder called *MyTool
 
     > [!NOTE]
     > if you restrict access to an entire folder that you have copied to Administrative Tools, restricted users can see neither the folder nor its contents in the Server Manager**Tools** menu.
-    > 
+    >
     > edit permissions for the folder in the **Administrative Tools** folder. Because hidden files and folders in Administrative Tools are always displayed in the Server Manager**Tools** menu, do not use the **Hidden** setting on a file or folder's **Properties** dialog box to restrict user access to your custom tool shortcuts.
-    > 
+    >
     > **Deny** permissions always overwrite **Allow** permissions.
 
 6.  Right-click the original tool, script, or executable file for which you want to add entries on the **Tools** menu, and then click **create shortcut**.
@@ -152,14 +146,14 @@ The following procedure describes how to create an example folder called *MyTool
 
 8.  Refresh or restart Server Manager, if necessary, to see your custom tool shortcut in the **Tools** menu.
 
-## <a name="BKMK_roles"></a>Manage roles on role home pages
+## <a name=BKMK_roles></a>Manage roles on role home pages
 After you add servers to the Server Manager server pool, and Server Manager collects inventory data about servers in your pool, Server Manager adds pages to the navigation pane for roles that are discovered on managed servers. The **Servers** tile on role pages lists managed servers that are running the role. By default, **Events**, **Best Practices Analyzer**, **Services**, and **Performance** tiles display data for all servers that are running the role; selecting specific servers in the **Servers** tile limits the scope of events, services, performance counters, and BPA results to selected servers only. Management tools are typically available in the Server Manager console **Tools** menu, after a role or feature has been installed or discovered on a managed server. You can also right-click server entries in the **Servers** tile for a role or group, and then start the management tool that you want to use.
 
 In Windows Server 2016, the following roles and feature have management tools that are integrated into Server Manager console as pages.
 
--   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. For more information about deploying and managing File and Storage Services, see [File and Storage Services](https://go.microsoft.com/fwlink/p/?LinkId=241530).
+-   **File and Storage Services.** File and Storage Services pages include custom tiles and commands for managing volumes, shares, iSCSI virtual disks, and storage pools. When you open the File and Storage Services role home page in Server Manager, a retracting pane opens that displays custom management pages for File and Storage Services. For more information about deploying and managing File and Storage Services, see [File and Storage Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11)).
 
--   **Remote Desktop Services.** Remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. For more information about deploying and managing Remote Desktop Services, see [Remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532).
+-   **Remote Desktop Services.** Remote Desktop Services pages include custom tiles and commands for managing sessions, licenses, gateways, and virtual desktops. For more information about deploying and managing Remote Desktop Services, see [Remote Desktop Services (rdS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831447(v=ws.11)).
 
 -   **IP address Management (IPAM).** The IPAM role page includes a custom **Welcome** tile containing links to common IPAM configuration and management tasks, including a wizard for provisioning an IPAM server. The IPAM home page also includes tiles for viewing the managed network, configuration summary, and scheduled tasks.
 
@@ -167,16 +161,13 @@ In Windows Server 2016, the following roles and feature have management tools th
 
     Dashboard thumbnails also display limited rows for IPAM, compared to thumbnails for other roles and groups. By clicking the IPAM thumbnail rows, you can view events, performance data, and manageability status alerts for servers that are running IPAM. IPAM-related services can be managed from pages for server groups that contain IPAM servers, such as the page for the **All Servers** group.
 
-    for more information about deploying and managing IPAM, see [IP address Management (IPAM)](https://go.microsoft.com/fwlink/p/?LinkId=241533).
+    for more information about deploying and managing IPAM, see [IP address Management (IPAM)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831353(v=ws.11)).
 
 ## See Also
 [Server Manager](server-manager.md)
 [add Servers to Server Manager](add-servers-to-server-manager.md)
 [create and Manage Server Groups](create-and-manage-server-groups.md)
 [View and Configure Performance, Event, and Service Data](view-and-configure-performance-event-and-service-data.md)
-[File and Storage Services](https://go.microsoft.com/fwlink/p/?LinkId=241530)
-[Remote Desktop Services (rdS)](https://go.microsoft.com/fwlink/p/?LinkId=241532)
-[IP address Management (IPAM)](https://go.microsoft.com/fwlink/p/?LinkId=241533)
-
-
-
+[File and Storage Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))
+[Remote Desktop Services (rdS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831447(v=ws.11))
+[IP address Management (IPAM)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831353(v=ws.11))

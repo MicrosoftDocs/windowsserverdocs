@@ -2,18 +2,16 @@
 title: Realm Names
 description: This topic provides an overview of using realm names in Network Policy Server connection request processing in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Realm Names
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for an overview of using realm names in Network Policy Server connection request processing.
 
@@ -23,7 +21,7 @@ In another example, if the User-Name RADIUS attribute contains the user name use
 
 - **Example\user1**. In this example, the realm name **Example** is a prefix; and it is also the name of an Active Directory&reg; Domain Services \(AD DS\) domain.
 
-- **user1@example.com**. In this example, the realm name **example.com** is a suffix; and it is either a DNS domain name or the name of an AD DS domain.
+- <strong>user1@example.com</strong>. In this example, the realm name **example.com** is a suffix; and it is either a DNS domain name or the name of an AD DS domain.
 
 You can use realm names configured in connection request policies while designing and deploying your RADIUS infrastructure to ensure that connection requests are routed from RADIUS clients, also called network access servers, to RADIUS servers that can authenticate and authorize the connection request.
 
@@ -51,6 +49,10 @@ You can configure a set of connection request policies that are specific to the 
 
 Before the RADIUS message is either processed locally (when NPS is being used as a RADIUS server) or forwarded to another RADIUS server (when NPS is being used as a RADIUS proxy), the User-Name attribute in the message can be modified by attribute manipulation rules. You can configure attribute manipulation rules for the User-Name attribute by selecting **User name** on the **Conditions** tab in the properties of a connection request policy. NPS attribute manipulation rules use regular expression syntax.
 
+> [!Note]  
+> Realm manipulation does not work with PEAP.    
+> The desired behaviour might be accomplished by either switching to EAP-TLS or EAP-MSCHAPv2 for authentication or [adding an UPN suffix to the domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772007(v=ws.11)) for each additional domain name you need to resolve.
+
 You can configure attribute manipulation rules for the User-Name attribute to change the following:
 
 - Remove the realm name from the user name \(also known as realm stripping\). For example, the user name user1@example.com is changed to user1.
@@ -69,11 +71,14 @@ After the User-Name attribute is modified according to the attribute manipulatio
 
 When the user name does not contain a domain name, NPS supplies one. By default, the NPS-supplied domain name is the domain of which the NPS is a member. You can specify the NPS-supplied domain name through the following registry setting:
 
-    
-    HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan\PPP\ControlProtocols\BuiltIn\DefaultDomain
-    
+```
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan\PPP\ControlProtocols\BuiltIn\
+Name:  DefaultDomain
+Type:  REG_SZ
+Value: the FQDN for the domain, like test.contoso.com
+```
 
->[!CAUTION]
->Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+> [!CAUTION]
+> Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
 Some non-Microsoft network access servers delete or modify the domain name as specified by the user. As the result, the network access request is authenticated against the default domain, which might not be the domain for the user's account. To resolve this problem, configure your RADIUS servers to change the user name into the correct format with the accurate domain name.

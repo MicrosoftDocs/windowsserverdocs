@@ -1,39 +1,38 @@
 ---
 title: bitsadmin peercaching and help
-description: "Windows Commands topic for **bitsadmin peercaching and help** - Displays the command-line usage for the **PeerCaching** commands."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2cb0fcc0-5464-47c9-b44d-dd32a4f0d907
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+description: Reference article for bitsadmin peercaching and help command that displays the command-line usage for the /peercaching switches.
+ms.topic: reference
+ms.author: jgerend
+author: JasonGerend
+ms.date: 04/01/2023
 ---
 
 # bitsadmin peercaching and help
 
+Applies to: Windows Server (All supported versions)
 
-
-Displays the command-line usage for the **PeerCaching** commands.
+The `bitsadmin` command displays the command-line usage for the `/peercaching` switch when combined with `/help` switch.
 
 ## Syntax
 
-```
-Bitsadmin /PeerCaching /Help 
-```
+The following syntax is used:
 
-## <a name="BKMK_examples"></a>Examples
-
-The following command displays the command-line help for the **PeerCaching** commands.
-```
-Bitsadmin /PeerCaching /Help
+```CLI
+bitsadmin /peercaching /help
 ```
 
-#### Additional references
+## Examples
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+To display the command-line help for the `/peercaching` switches, run the following command.
+
+```CLI
+bitsadmin /peercaching /help
+```
+
+## Related links
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
+
+- [bitsadmin peercaching command](bitsadmin-peercaching.md)

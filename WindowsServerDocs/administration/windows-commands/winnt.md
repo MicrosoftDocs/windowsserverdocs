@@ -1,24 +1,16 @@
 ---
 title: winnt
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3bf6e792-befb-435c-8fa3-940a45a98adb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+description: Reference article for winnt command that is deprecated and might not be supported in future releases of Windows.
+ms.topic: reference
+ms.author: jgerend
+author: JasonGerend
+ms.date: 04/01/2023
 ---
 
 # winnt
 
+Applies to: Windows Server (All supported versions)
 
+The winnt command is deprecated and might not be supported in future releases of Windows.
 
-Winnt is deprecated, and is not guaranteed to be supported in future releases of Windows.
-
-This tool is included in Windows Server 2003. For more information see [Winnt](https://technet.microsoft.com/library/cc755763(v=ws.10).aspx).
+This tool is included in Windows Server 2003. For more information, see [Winnt](/previous-versions/orphan-topics/ws.10/cc755763(v=ws.10))

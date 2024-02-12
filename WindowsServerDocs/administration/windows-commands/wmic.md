@@ -1,37 +1,29 @@
 ---
 title: wmic
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for wmic, which displays WMI information inside an interactive command shell.
+ms.topic: reference
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+ms.author: alalve
+author: JasonGerend
+ms.date: 10/19/2022
 ---
 
 # wmic
 
-
-
 Displays WMI information inside an interactive command shell.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+> [!IMPORTANT]
+> The WMI command-line (WMIC) utility is deprecated as of Windows 10, version 21H1, and as of the 21H1 semi-annual channel release of Windows Server. This utility is superseded by Windows PowerShell for WMI (see [Chapter 7—Working with WMI](/powershell/scripting/learn/ps101/07-working-with-wmi)). This deprecation applies only to the WMI command-line (WMIC) utility; Windows Management Instrumentation (WMI) itself is not affected. Also see [Windows 10 features we're no longer developing](/windows/deployment/planning/windows-10-deprecated-features).
 
 ## Syntax
 
-```
-command </parameter>
+```cmd
+wmic </parameter>
 ```
 
 ## Sub-commands
 
-The following sub-commands are available at all times:
+The following sub-commands are available:
 
 |Sub-command|Description|
 |-----------|-----------|
@@ -40,22 +32,17 @@ The following sub-commands are available at all times:
 |context|Displays the current values of all global switches.|
 |[quit \| exit]|Exits the WMIC command shell.|
 
-## Parameters
-
-|Parameter|Description|
-|---------|-----------|
-|</parameter>|\<Concise description, starts with a verb.>|
-|</param2>|\<Another concise description, starts with a verb.>|
-
-
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display the current values of all global switches, type:
-```
+
+```cmd
 wmic context
 ```
+
 Output similar to the following displays:
-```
+
+```cmd
 NAMESPACE    : root\cimv2
 ROLE         : root\cli
 NODE(S)      : BOBENTERPRISE
@@ -73,11 +60,13 @@ APPEND       : STDOUT
 USER         : N/A
 AGGREGATE    : ON
 ```
+
 To change the language ID used by the command line to English (locale ID 409), type:
-```
+
+```cmd
 wmic /locale:ms_409
 ```
 
-#### Additional references
+## Related links
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

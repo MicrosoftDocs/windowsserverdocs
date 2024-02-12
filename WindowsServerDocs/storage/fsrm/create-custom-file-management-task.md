@@ -2,8 +2,6 @@
 title: Create a Custom File Management Task
 description: This article describes how to create a custom file management task and custom tasks.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -11,7 +9,7 @@ ms.author: jgerend
 ---
 # Create a Custom File Management Task
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Expiration is not always a desired action to be performed on files. File management tasks allow you to run custom commands as well.
 
@@ -33,7 +31,7 @@ Expiration is not always a desired action to be performed on files. File managem
 
 4.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Classification Management](classification-management.md)
 -   [File Management Tasks](file-management-tasks.md)

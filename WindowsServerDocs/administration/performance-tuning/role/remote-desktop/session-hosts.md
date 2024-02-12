@@ -1,12 +1,10 @@
 ---
 title: Performance Tuning Remote Desktop Session Hosts
 description: Performance tuning guidelines for Remote Desktop Session Hosts
-ms.prod: windows-server-threshold
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: HammadBu; VladmiS
+ms.author: hammadbu
 author: phstee
-ms.date: 10/16/2017
+ms.date: 10/22/2019
 ---
 
 # Performance Tuning Remote Desktop Session Hosts
@@ -16,13 +14,13 @@ This topic discusses how to select Remote Desktop Session Host (RD Session Host)
 
 **In this topic:**
 
--   [Selecting the proper hardware for performance](#hw)
+-   [Selecting the proper hardware for performance](#selecting-the-proper-hardware-for-performance)
 
--   [Tuning applications for Remote Desktop Session Host](#apps)
+-   [Tuning applications for Remote Desktop Session Host](#tuning-applications-for-remote-desktop-session-host)
 
--   [Remote Desktop Session Host tuning parameters](#host)
+-   [Remote Desktop Session Host tuning parameters](#remote-desktop-session-host-tuning-parameters)
 
-## <a href="" id="hw"></a>Selecting the proper hardware for performance
+## Selecting the proper hardware for performance
 
 
 For an RD Session Host server deployment, the choice of hardware is governed by the application set and how users use them. The key factors that affect the number of users and their experience are CPU, memory, disk, and graphics. This section contains additional guidelines that are specific to RD Session Host servers and is mostly related to the multi-user environment of RD Session Host servers.
@@ -67,7 +65,7 @@ Network usage for an RD Session Host server includes two main categories:
 
     The volume and profile of network traffic is specific to each deployment.
 
-## <a href="" id="apps"></a>Tuning applications for Remote Desktop Session Host
+## Tuning applications for Remote Desktop Session Host
 
 
 Most of the CPU usage on an RD Session Host server is driven by apps. Desktop apps are usually optimized toward responsiveness with the goal of minimizing how long it takes an application to respond to a user request. However in a server environment, it is equally important to minimize the total amount of CPU usage that is needed to complete an action to avoid adversely affecting other sessions.
@@ -88,13 +86,13 @@ Consider the following suggestions when you configure apps that are to be used o
 
 -   Disable unnecessary processes that are registered to start with user sign-in or a session startup.
 
-    These processes can significantly contribute to the cost of CPU usage when creating a new user session, which generally is a CPU-intensive process, and it can be very expensive in morning scenarios. Use MsConfig.exe or MsInfo32.exe to obtain a list of processes that are started at user sign-in. For more detailed info, you can use [Autoruns for Windows](https://technet.microsoft.com/sysinternals/bb963902.aspx).
+    These processes can significantly contribute to the cost of CPU usage when creating a new user session, which generally is a CPU-intensive process, and it can be very expensive in morning scenarios. Use MsConfig.exe or MsInfo32.exe to obtain a list of processes that are started at user sign-in. For more detailed info, you can use [Autoruns for Windows](/sysinternals/downloads/autoruns).
 
 For memory consumption, you should consider the following:
 
 -   Verify that DLLs loaded by an app are not relocated.
 
-    -   Relocated DLLs can be verified by selecting Process DLL view, as shown in the following figure, by using [Process Explorer](https://technet.microsoft.com/sysinternals/bb896653.aspx).
+    -   Relocated DLLs can be verified by selecting Process DLL view, as shown in the following figure, by using [Process Explorer](/sysinternals/downloads/process-explorer).
 
     -   Here we can see that y.dll was relocated because x.dll already occupied its default base address and ASLR was not enabled
 
@@ -106,7 +104,7 @@ For memory consumption, you should consider the following:
 
     When possible, apply similar techniques to other similar execution engines.
 
-## <a href="" id="host"></a>Remote Desktop Session Host tuning parameters
+## Remote Desktop Session Host tuning parameters
 
 
 ### Page file
@@ -125,9 +123,9 @@ Task Scheduler lets you examine the list of tasks that are scheduled for differe
 
 Notification icons on the desktop can have fairly expensive refreshing mechanisms. You should disable any notifications by removing the component that registers them from the startup list or by changing the configuration on apps and system components to disable them. You can use **Customize Notifications Icons** to examine the list of notifications that are available on the server.
 
-### RemoteFX data compression
+### Remote Desktop Protocol data compression
 
-Microsoft RemoteFX compression can be configured by using Group Policy under **Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Remote Desktop Services &gt; Remote Desktop Session Host &gt; Remote Session Environment &gt; Configure compression for RemoteFX data**. Three values are possible:
+Remote Desktop Protocol compression can be configured by using Group Policy under **Computer Configuration** &gt; **Administrative Templates** &gt; **Windows Components** &gt; **Remote Desktop Services** &gt; **Remote Desktop Session Host** &gt; **Remote Session Environment** &gt; **Configure compression for RemoteFX data**. Three values are possible:
 
 -   **Optimized to use less memory** Consumes the least amount of memory per session but has the lowest compression ratio and therefore the highest bandwidth consumption.
 
@@ -135,11 +133,11 @@ Microsoft RemoteFX compression can be configured by using Group Policy under **C
 
 -   **Optimized to use less network bandwidth** Further reduces network bandwidth usage at a cost of approximately 2 MB per session. If you want to use this setting, you should assess the maximum number of sessions and test to that level with this setting before you place the server in production.
 
-You can also choose to not use a RemoteFX compression algorithm. Choosing to not use a RemoteFX compression algorithm will use more network bandwidth, and it is only recommended if you are using a hardware device that is designed to optimize network traffic. Even if you choose not to use a RemoteFX compression algorithm, some graphics data will be compressed.
+You can also choose to not use a Remote Desktop Protocol compression algorithm, so we only recommend using it with a hardware device designed to optimize network traffic. Even if you choose not to use a compression algorithm, some graphics data will be compressed.
 
 ### Device redirection
 
-Device redirection can be configured by using Group Policy under **Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Remote Desktop Services &gt; Remote Desktop Session Host &gt; Device and Resource Redirection** or by using the **Session Collection** properties box in Server Manager.
+Device redirection can be configured by using Group Policy under **Computer Configuration** &gt; **Administrative Templates** &gt; **Windows Components** &gt; **Remote Desktop Services** &gt; **Remote Desktop Session Host** &gt; **Device and Resource Redirection** or by using the **Session Collection** properties box in Server Manager.
 
 Generally, device redirection increases how much network bandwidth RD Session Host server connections use because data is exchanged between devices on the client computers and processes that are running in the server session. The extent of the increase is a function of the frequency of operations that are performed by the applications that are running on the server against the redirected devices.
 

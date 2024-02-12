@@ -1,0 +1,11 @@
+- name: Windows
+  tocHref: /windows/
+  topicHref: /windows-server/index
+  items:
+  - name: Remote Desktop Services
+    tocHref: /windows-server/remote/
+    topicHref: /windows-server/remote/index
+    items: 
+    - name: RDS Shortcut Keys
+      tocHref: /windows/win32/termserv/terminal-services-shortcut-keys/
+      topicHref: /windows-server/remote/index

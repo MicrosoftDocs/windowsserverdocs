@@ -2,19 +2,18 @@
 title: Configure Firewalls for RADIUS Traffic
 description: This topic provides an overview of how to configure firewalls to allow RADIUS traffic for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: 58cca2b2-4ef3-4a09-a614-8bdc08d24f15
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Configure Firewalls for RADIUS Traffic
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Firewalls can be configured to allow or block types of IP traffic to and from the computer or device on which the firewall is running. If firewalls are not properly configured to allow RADIUS traffic between RADIUS clients, RADIUS proxies, and RADIUS servers, network access authentication can fail, preventing users from accessing network resources. 
+Firewalls can be configured to allow or block types of IP traffic to and from the computer or device on which the firewall is running. If firewalls are not properly configured to allow RADIUS traffic between RADIUS clients, RADIUS proxies, and RADIUS servers, network access authentication can fail, preventing users from accessing network resources.
 
 You might need to configure two types of firewalls to allow RADIUS traffic:
 
@@ -23,7 +22,9 @@ You might need to configure two types of firewalls to allow RADIUS traffic:
 
 ## Windows Firewall on the local NPS
 
-By default, NPS sends and receives RADIUS traffic by using User Datagram Protocol \(UDP\) ports 1812, 1813, 1645, and 1646. Windows Defender Firewall on the NPS is automatically configured with exceptions, during the installation of NPS, to allow this RADIUS traffic to be sent and received.
+By default, NPS sends and receives RADIUS traffic by using User Datagram Protocol \(UDP\) ports 1812, 1813, 1645, and 1646. Windows Defender Firewall on the NPS should be automatically configured with exceptions, during the installation of NPS, to allow this RADIUS traffic to be sent and received.
+
+With Server 2019 this firewall exception requires a modification to the service account security identifier to effectively detect and allow RADIUS traffic. If this security identifier change is not executed, the firewall will drop RADIUS traffic. From an elevated command prompt, run `sc sidtype IAS unrestricted`. This command changes the IAS (RADIUS) service to use a unique SID instead of sharing with other NETWORK SERVICE services.
 
 Therefore, if you are using the default UDP ports, you do not need to change the Windows Defender Firewall configuration to allow RADIUS traffic to and from NPSs.
 
@@ -40,7 +41,7 @@ In the most common configuration, the firewall is connected to the Internet and 
 
 To reach the domain controller within the intranet, the NPS might have:
 
-- An interface on the perimeter network and an interface on the intranet (IP routing is not enabled). 
+- An interface on the perimeter network and an interface on the intranet (IP routing is not enabled).
 - A single interface on the perimeter network. In this configuration, NPS communicates with domain controllers through another firewall that connects the perimeter network to the intranet.
 
 ## Configuring the Internet firewall

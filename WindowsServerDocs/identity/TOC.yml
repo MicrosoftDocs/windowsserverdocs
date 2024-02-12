@@ -1,0 +1,1051 @@
+- name: Identity and Access
+  href: Identity-and-Access.yml
+  items:
+  - name: Solutions and Scenario Guides
+    href: solution-guides/Solutions-and-Scenario-Guides.md
+    items:
+    - name: 'Dynamic Access Control: Scenario Overview'
+      href: solution-guides/Dynamic-Access-Control--Scenario-Overview.md
+      items:
+      - name: 'Scenario: Central Access Policy'
+        href: solution-guides/Scenario--Central-Access-Policy.md
+        items:
+        - name: Deploy a Central Access Policy (Demonstration Steps)
+          href: solution-guides/Deploy-a-Central-Access-Policy--Demonstration-Steps-.md
+      - name: 'Scenario: File Access Auditing'
+        href: solution-guides/Scenario--File-Access-Auditing.md
+        items:
+        - name: Plan for File Access Auditing
+          href: solution-guides/Plan-for-File-Access-Auditing.md
+        - name: Deploy Security Auditing with Central Audit Policies (Demonstration Steps)
+          href: solution-guides/Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md
+      - name: 'Scenario: Access-Denied Assistance'
+        href: solution-guides/Scenario--Access-Denied-Assistance.md
+        items:
+        - name: Deploy Access-Denied Assistance (Demonstration Steps)
+          href: solution-guides/Deploy-Access-Denied-Assistance--Demonstration-Steps-.md
+      - name: 'Scenario: Classification-Based Encryption for Office Documents'
+        href: solution-guides/Scenario--Classification-Based-Encryption-for-Office-Documents.md
+        items:
+        - name: Deploy Encryption of Office Files (Demonstration Steps)
+          href: solution-guides/Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md
+      - name: 'Scenario: Get Insight into Your Data by Using Classification'
+        href: solution-guides/Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md
+        items:
+        - name: Deploy Automatic File Classification (Demonstration Steps)
+          href: solution-guides/Deploy-Automatic-File-Classification--Demonstration-Steps-.md
+      - name: 'Scenario: Implement Retention of Information on File Servers'
+        href: solution-guides/Scenario--Implement-Retention-of-Information-on-File-Servers.md
+        items:
+        - name: Plan for retention of information on file servers
+          href: solution-guides/plan-retention-information-file-servers.md
+        - name: Deploy Implementing Retention of Information on File Servers Demonstration Steps
+          href: solution-guides/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md
+      - name: Deploy Claims Across Forests
+        href: solution-guides/Deploy-Claims-Across-forests.md
+        items:
+        - name: Deploy Claims Across forests (Demonstration Steps)
+          href: solution-guides/Deploy-Claims-Across-forests--Demonstration-Steps-.md
+        - name: Claims Transformation Rules Language
+          href: solution-guides/Claims-Transformation-Rules-Language.md
+      - name: 'Appendix A: Dynamic Access Control Glossary'
+        href: solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md
+      - name: 'Appendix B: Setting Up the Test Environment'
+        href: solution-guides/appendix-B--Setting-Up-the-Test-Environment.md
+    - name: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
+      href: solution-guides/certificate-enrollment-certificate-key-based-renewal.md
+  - name: Active Directory Domain Services
+    items:
+    - name: Active Directory Domain Services Overview
+      href: ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
+    - name: What's new in Active Directory Domain Services
+      href: whats-new-active-directory-domain-services.md
+    - name: What's new in Active Directory Domain Services Insider Preview
+      href: ../get-started/whats-new-windows-server-insiders-preview.md
+    - name: AD DS Getting started
+      items:
+      - name: Active Directory Administrative Center
+        items:
+        - name: AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History
+          href: ad-ds/get-started/adac/Introduction-to-active-directory-Administrative-Center-Enhancements--Level-100-.md
+        - name: Advanced AD DS Management Using Active Directory Administrative Center
+          href: ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-active-directory-Administrative-Center--Level-200-.md
+      - name: Active Directory Domain Services Virtualization
+        href: ad-ds/get-started/virtual-dc/active-directory-Domain-Services-Virtualization.md
+        items:
+        - name: Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)
+          href: ad-ds/Introduction-to-active-directory-Domain-Services-AD-DS-Virtualization-Level-100.md
+        - name: Virtualized Domain Controller Technical Reference (Level 300)
+          href: ad-ds/deploy/virtual-dc/Virtualized-Domain-Controller-Technical-Reference--Level-300-.md
+          items:
+          - name: Virtualized Domain Controller Architecture
+            href: ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md
+          - name: Virtualized Domain Controller Deployment and Configuration
+            href: ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md
+          - name: Running Active Directory on Azure VMs
+            href: ad-ds/deploy/virtual-dc/adds-on-azure-vm.md
+          - name: Virtualized Domain Controllers using Hyper-V
+            href: ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md
+          - name: Virtualized Domain Controller Troubleshooting
+            href: ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md
+          - name: Virtualized Domain Controller Technical Reference appendix
+            href: ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md
+          - name: Virtualized Domain Controller additional Resources
+            href: ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-additional-Resources.md
+        - name: Virtualized Domain Controller Cloning Test Guidance for Application Vendors
+          href: ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md
+        - name: Support for using Hyper-V Replica for virtualized domain controllers
+          href: ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md
+      - name: Windows Time Service and AD DS
+        href: ../networking/windows-time-service/windows-time-service.md
+    - name: AD DS Design and Planning
+      href: ad-ds/plan/AD-DS-Design-and-Planning.md
+      items:
+      - name: Understanding AD DS Design
+        href: ad-ds/plan/Understanding-AD-DS-Design.md
+      - name: Identifying Your AD DS Design and Deployment Requirements
+        href: ad-ds/plan/Identifying-Your-AD-DS-Design-and-Deployment-Requirements.md
+        items:
+        - name: AD DS Design Requirements
+          href: ad-ds/plan/AD-DS-Design-Requirements.md
+        - name: AD DS Deployment Requirements
+          href: ad-ds/plan/AD-DS-Deployment-Requirements.md
+      - name: Mapping Your Requirements to an AD DS Deployment Strategy
+        href: ad-ds/plan/Mapping-Your-Requirements-to-an-AD-DS-Deployment-Strategy.md
+        items:
+        - name: Deploying AD DS in a New Organization
+          href: ad-ds/plan/Deploying-AD-DS-in-a-New-Organization.md
+        - name: Deploying AD DS in a Windows Server 2003 Organization
+          href: ad-ds/plan/Deploying-AD-DS-in-a-Windows-Server-2003-Organization.md
+        - name: Deploying AD DS in a Windows 2000 Organization
+          href: ad-ds/plan/Deploying-AD-DS-in-a-Windows-2000-Organization.md
+      - name: Designing the Logical Structure
+        href: ad-ds/plan/Designing-the-Logical-Structure.md
+        items:
+        - name: Understanding the Active Directory Logical model
+          href: ad-ds/plan/Understanding-the-active-directory-Logical-model.md
+        - name: Identifying the Deployment Project Participants
+          href: ad-ds/plan/Identifying-the-Deployment-Project-Participants.md
+        - name: Creating a Forest Design
+          href: ad-ds/plan/Creating-a-forest-Design.md
+          items:
+          - name: Identifying Forest Design Requirements
+            href: ad-ds/plan/Identifying-forest-Design-Requirements.md
+            items:
+            - name: Service Administrator Scope of Authority
+              href: ad-ds/plan/Service-Administrator-Scope-of-Authority.md
+            - name: Autonomy vs. Isolation
+              href: ad-ds/plan/Autonomy-vs.-Isolation.md
+          - name: Determining the Number of Forests Required
+            href: ad-ds/plan/Determining-the-Number-of-forests-Required.md
+            items:
+            - name: Forest Design models
+              href: ad-ds/plan/forest-Design-models.md
+            - name: Mapping Design Requirements to Forest Design models
+              href: ad-ds/plan/Mapping-Design-Requirements-to-forest-Design-models.md
+            - name: Using the Organizational Domain Forest model
+              href: ad-ds/plan/Using-the-Organizational-Domain-forest-model.md
+        - name: Creating a Domain Design
+          href: ad-ds/plan/Creating-a-Domain-Design.md
+          items:
+          - name: Reviewing the Domain models
+            href: ad-ds/plan/Reviewing-the-Domain-models.md
+          - name: Determining the Number of Domains Required
+            href: ad-ds/plan/Determining-the-Number-of-Domains-Required.md
+          - name: Determining Whether to Upgrade Existing Domains or Deploy New Domains
+            href: ad-ds/plan/Determining-Whether-to-Upgrade-Existing-Domains-or-Deploy-New-Domains.md
+          - name: Assigning Domain Names
+            href: ad-ds/plan/assigning-Domain-Names.md
+          - name: Selecting the Forest Root Domain
+            href: ad-ds/plan/selecting-the-forest-Root-Domain.md
+        - name: Creating a DNS Infrastructure Design
+          href: ad-ds/plan/Creating-a-DNS-Infrastructure-Design.md
+          items:
+          - name: Reviewing DNS Concepts
+            href: ad-ds/plan/Reviewing-DNS-Concepts.md
+          - name: DNS and AD DS
+            href: ad-ds/plan/DNS-and-AD-DS.md
+            items:
+            - name: Domain Controller Location
+              href: ad-ds/plan/Domain-Controller-Location.md
+            - name: Active Directory-Integrated DNS Zones
+              href: ad-ds/plan/active-directory-Integrated-DNS-Zones.md
+            - name: Computer Naming
+              href: ad-ds/plan/computer-Naming.md
+            - name: Disjoint Namespace
+              href: ad-ds/plan/Disjoint-Namespace.md
+          - name: DNS for AD DS Owner Role
+            href: ad-ds/deploy/assigning-the-DNS-for-AD-DS-Owner-Role.md
+          - name: Integrating AD DS into an Existing DNS Infrastructure
+            href: ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md
+          - name: 'Appendix A: DNS Inventory'
+            href: ad-ds/plan/appendix-A--DNS-Inventory.md
+        - name: Creating an Organizational Unit Design
+          href: ad-ds/plan/Creating-an-Organizational-Unit-Design.md
+          items:
+          - name: Reviewing OU Design Concepts
+            href: ad-ds/plan/Reviewing-OU-Design-Concepts.md
+          - name: Delegating Administration by Using OU Objects
+            href: ad-ds/plan/delegating-Administration-by-Using-OU-Objects.md
+            items:
+            - name: Delegating Administration of Default Containers and OUs
+              href: ad-ds/plan/delegating-Administration-of-Default-Containers-and-OUs.md
+            - name: Delegating Administration of Account OUs and Resource OUs
+              href: ad-ds/plan/delegating-Administration-of-Account-OUs-and-Resource-OUs.md
+        - name: Finding additional Resources for Logical Structure Design
+          href: ad-ds/plan/finding-additional-Resources-for-Logical-Structure-Design.md
+      - name: Designing the Site Topology
+        href: ad-ds/plan/Designing-the-Site-Topology.md
+        items:
+        - name: Understanding Active Directory Site Topology
+          href: ad-ds/plan/Understanding-active-directory-Site-Topology.md
+          items:
+          - name: Site Functions
+            href: ad-ds/plan/Site-Functions.md
+          - name: Site Topology Owner Role
+            href: ad-ds/plan/Site-Topology-Owner-Role.md
+          - name: Active Directory Replication Concepts
+            href: ad-ds/get-started/replication/active-directory-Replication-Concepts.md
+        - name: Collecting Network Information
+          href: ad-ds/plan/Collecting-Network-Information.md
+        - name: Planning Domain Controller Placement
+          href: ad-ds/plan/Planning-Domain-Controller-Placement.md
+          items:
+          - name: Planning Forest Root Domain Controller Placement
+            href: ad-ds/plan/Planning-forest-Root-Domain-Controller-Placement.md
+          - name: Planning regional Domain Controller Placement
+            href: ad-ds/plan/Planning-regional-Domain-Controller-Placement.md
+          - name: Planning Global Catalog Server Placement
+            href: ad-ds/plan/Planning-Global-Catalog-Server-Placement.md
+          - name: Planning Operations Master Role Placement
+            href: ad-ds/plan/Planning-Operations-Master-Role-Placement.md
+        - name: Creating a Site Design
+          href: ad-ds/plan/Creating-a-Site-Design.md
+        - name: Creating a Site Link Design
+          href: ad-ds/plan/Creating-a-Site-Link-Design.md
+          items:
+          - name: Setting Site Link Properties
+            href: ad-ds/plan/Setting-Site-Link-Properties.md
+            items:
+            - name: Determining the Cost
+              href: ad-ds/plan/Determining-the-Cost.md
+              items:
+              - name: Enabling Clients to Locate the Next Closest Domain Controller
+                href: ad-ds/plan/Enabling-Clients-to-Locate-the-Next-Closest-Domain-Controller.md
+            - name: Determining the Schedule
+              href: ad-ds/plan/Determining-the-Schedule.md
+            - name: Determining the Interval
+              href: ad-ds/plan/Determining-the-Interval.md
+        - name: Creating a Site Link Bridge Design
+          href: ad-ds/plan/Creating-a-Site-Link-Bridge-Design.md
+        - name: Finding additional Resources for Windows Server 2008 Active Directory Site Topology Design
+          href: ad-ds/plan/finding-additional-Resources-for-Windows-Server-2008-active-directory-Site-Topology-Design.md
+        - name: 'Appendix A: Locations and Subnet Prefixes'
+          href: ad-ds/plan/appendix-A--Locations-and-Subnet-Prefixes.md
+      - name: Enabling Advanced Features for AD DS
+        href: ad-ds/plan/Enabling-Advanced-Features-for-AD-DS.md
+        items:
+        - name: Windows Server Functional Levels
+          href: ad-ds/active-directory-functional-levels.md
+        - name: Identifying Your Functional Level Upgrade
+          href: ad-ds/plan/Identifying-Your-Functional-Level-Upgrade.md
+        - name: Finding additional Resources for Enabling Advanced Features
+          href: ad-ds/plan/finding-additional-Resources-for-Enabling-Advanced-Features.md
+      - name: Evaluating AD DS Deployment Strategy Examples
+        href: ad-ds/plan/Evaluating-AD-DS-Deployment-Strategy-Examples.md
+      - name: 'Appendix A: Reviewing Key AD DS Terms'
+        href: ad-ds/plan/appendix-A--Reviewing-Key-AD-DS-Terms.md
+    - name: AD DS Deployment
+      href: ad-ds/deploy/AD-DS-Deployment.md
+      items:
+      - name: What's New in Active Directory Domain Services Installation and Removal
+        href: ad-ds/deploy/What-s-New-in-active-directory-Domain-Services-Installation-and-removal.md
+      - name: Upgrade Domain Controllers to Windows Server
+        href: ad-ds/deploy/upgrade-domain-controllers.md
+      - name: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
+        href: ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md
+      - name: AD DS Simplified Administration
+        href: ad-ds/manage/AD-DS-Simplified-Administration.md
+        items:
+        - name: Simplified Administration appendix
+          href: ad-ds/deploy/Simplified-Administration-appendix.md
+      - name: Install Active Directory Domain Services
+        href: ad-ds/deploy/Install-active-directory-Domain-Services--Level-100-.md
+        items:
+        - name: Install a New Windows Server Active Directory Forest
+          href: ad-ds/deploy/Install-a-New-Windows-Server-2012-active-directory-forest--Level-200-.md
+        - name: Install a Replica Windows Server 2012 Domain Controller in an Existing Domain
+          href: ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md
+        - name: Install a New Windows Server Active Directory Child or tree Domain
+          href: ad-ds/deploy/Install-a-New-Windows-Server-2012-active-directory-Child-or-tree-Domain--Level-200-.md
+        - name: Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC)
+          href: ad-ds/deploy/RODC/Install-a-Windows-Server-2012-active-directory-Read-Only-Domain-Controller--RODC---Level-200-.md
+      - name: Demoting Domain Controllers
+        href: ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md
+        items:
+        - name: AD DS metadata cleanup
+          href: ad-ds/deploy/ad-ds-metadata-cleanup.md
+      - name: AD DS Installation and removal Wizard Page Descriptions
+        href: ad-ds/deploy/AD-DS-Installation-and-removal-Wizard-Page-Descriptions.md
+      - name: Changes Made by Adprep
+        href: ad-ds/deploy/adprep/changes-Made-by-Adprep.md
+        items:
+        - name: Schema Updates
+          href: ad-ds/deploy/Schema-Updates.md
+        - name: Read-Only Domain Controller Updates
+          href: ad-ds/deploy/RODC/Read-Only-Domain-Controller-Updates.md
+        - name: Domain-Wide Updates
+          href: ad-ds/deploy/Domain-Wide-Updates.md
+        - name: Forest-Wide Updates
+          href: ad-ds/deploy/RODC/forest-Wide-Updates.md
+    - name: AD DS Operations
+      href: ad-ds/manage/component-updates/AD-DS-Operations.md
+      items:
+      - name: Active Directory Forest Recovery Guide
+        items:
+        - name: Introduction
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide.md
+        - name: Prerequisites
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-prerequisites.md
+        - name: Devise a custom forest recovery plan
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan.md
+        - name: Steps to recovery the forest
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest.md
+        - name: Identify the problem
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem.md
+        - name: Determine how to recover
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-determine-how-to-recover.md
+        - name: Perform initial recovery
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery.md
+        - name: Procedures
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures.md
+        - name: FAQ
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq.yml
+        - name: Recover a single domain within a multidomain forest
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-recover-single-domain-multidomain-forest.md
+        - name: Redeploy remaining DCs
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-restore-additional-dcs.md
+        - name: Virtualization
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-virtualization.md
+        - name: Cleanup
+          href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup.md
+      - name: Best Practices for Securing Active Directory
+        href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
+        items:
+        - name: Avenues to compromise
+          href: ad-ds/plan/security-best-practices/Avenues-to-compromise.md
+        - name: Attractive Accounts for Credential Theft
+          href: ad-ds/plan/security-best-practices/attractive-Accounts-for-Credential-Theft.md
+        - name: Reducing the Active Directory attack Surface
+          href: ad-ds/plan/security-best-practices/Reducing-the-active-directory-attack-Surface.md
+        - name: Implementing Least-Privilege Administrative models
+          href: ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-models.md
+        - name: Implementing Secure Administrative Hosts
+          href: ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md
+        - name: Securing Domain Controllers Against attack
+          href: ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-attack.md
+        - name: Monitoring Active Directory for Signs of compromise
+          href: ad-ds/plan/security-best-practices/Monitoring-active-directory-for-Signs-of-compromise.md
+        - name: Audit Policy Recommendations
+          href: ad-ds/plan/security-best-practices/audit-policy-Recommendations.md
+        - name: Planning for compromise
+          href: ad-ds/plan/security-best-practices/Planning-for-compromise.md
+        - name: Maintaining a more Secure Environment
+          href: ad-ds/plan/security-best-practices/Maintaining-a-more-Secure-Environment.md
+        - name: Appendices
+          href: ad-ds/plan/security-best-practices/appendices.md
+        - name: 'Appendix B: Privileged Accounts and Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-B--Privileged-Accounts-and-Groups-in-active-directory.md
+        - name: 'Appendix C: Protected Accounts and Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-C--Protected-Accounts-and-Groups-in-active-directory.md
+        - name: 'Appendix D: Securing Built-In Administrator Accounts in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-D--Securing-Built-In-Administrator-Accounts-in-active-directory.md
+        - name: 'Appendix E: Securing Enterprise Admins Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-E--Securing-Enterprise-Admins-Groups-in-active-directory.md
+        - name: 'Appendix F: Securing Domain Admins Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-F--Securing-Domain-Admins-Groups-in-active-directory.md
+        - name: 'Appendix G: Securing Administrators Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-G--Securing-Administrators-Groups-in-active-directory.md
+        - name: 'Appendix H: Securing Local Administrator Accounts and Groups'
+          href: ad-ds/plan/security-best-practices/appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md
+        - name: 'Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory'
+          href: ad-ds/manage/component-updates/appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-active-directory.md
+        - name: 'Appendix L: Events to Monitor'
+          href: ad-ds/plan/appendix-L--Events-to-Monitor.md
+        - name: 'Appendix M: Document Links and Recommended Reading'
+          href: ad-ds/manage/appendix-M--Document-Links-and-Recommended-Reading.md
+      - name: Active Directory Replication and Topology Management Using Windows PowerShell
+        href: ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md
+        items:
+        - name: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
+          href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
+        - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
+          href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
+      - name: Managing RID issuance
+        href: ad-ds/manage/Managing-RID-Issuance.md
+      - name: Active Directory Domain Services component updates
+        href: ad-ds/manage/component-updates/active-directory-Domain-Services-component-Updates.md
+        items:
+        - name: Identity component updates
+          href: ad-ds/manage/component-updates/Identity-component-updates.md
+          items:
+          - name: SPN and UPN uniqueness
+            href: ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md
+          - name: Winlogon Automatic Restart Sign-On (ARSO)
+            href: ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md
+          - name: TPM key attestation
+            href: ad-ds/manage/component-updates/TPM-Key-attestation.md
+          - name: CA backup and restore Windows PowerShell cmdlets
+            href: ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-powershell-cmdlets.md
+          - name: Command-line process auditing
+            href: ad-ds/manage/component-updates/Command-line-process-auditing.md
+        - name: Directory services component updates
+          href: ad-ds/manage/component-updates/directory-Services-component-updates.md
+      - name: Active Directory accounts
+        href: ad-ds/manage/understand-default-user-accounts.md
+      - name: Special identities
+        href: ad-ds/manage/understand-special-identities-groups.md
+      - name: Active Directory security groups
+        href: ad-ds/manage/understand-security-groups.md
+      - name: Service accounts
+        href: ad-ds/manage/understand-service-accounts.md
+      - name: Microsoft accounts
+        href: ad-ds/manage/understand-microsoft-accounts.md
+      - name: Security principals
+        href: ad-ds/manage/understand-security-principals.md
+      - name: Security identifiers
+        href: ad-ds/manage/understand-security-identifiers.md
+      - name: Configure protected accounts
+        href: ad-ds/manage/how-to-configure-protected-accounts.md
+      - name: How LDAP server cookies are handled
+        href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
+      - name: DC locator changes
+        href: ad-ds/manage/dc-locator-changes.md
+    - name: AD DS Troubleshooting
+      href: ad-ds/manage/AD-DS-Troubleshooting.md
+      items:
+      - name: Configuring a computer for Troubleshooting
+        href: ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md
+      - name: Using ETW to troubleshoot LDAP connections
+        href: ad-ds/manage/troubleshoot/troubleshoot-ldap-using-etw.md
+      - name: Troubleshooting Active Directory Replication Problems
+        href: ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md
+        items:
+        - name: Additional Resources
+          href: additional-Resources_12.md
+  - name: Active Directory Federation Services
+    items:
+    - name: AD FS Overview
+      href: ad-fs/AD-FS-Overview.md
+      items:
+      - name: What's new in Active Directory Federation Services
+        href: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
+      - name: AD FS 2016 Requirements
+        href: ad-fs/overview/AD-FS-Requirements.md
+    - name: AD FS Design
+      href: ad-fs/AD-FS-Design.md
+      items:
+      - name: AD FS Design Guide
+        href: ad-fs/design/AD-FS-Design-Guide.md
+        items:
+        - name: AD FS Design Guide in Windows Server 2012 R2
+          href: ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md
+          items:
+          - name: Identify Your AD FS Deployment Goals
+            href: ad-fs/design/Identify-Your-AD-FS-Deployment-Goals.md
+          - name: Plan Your AD FS Deployment Topology
+            href: ad-fs/design/Plan-Your-AD-FS-Deployment-Topology.md
+            items:
+            - name: Federation Server Farm Using WID
+              href: ad-fs/design/Federation-Server-Farm-Using-WID.md
+            - name: Federation Server Farm Using WID and Proxies
+              href: ad-fs/design/Federation-Server-Farm-Using-WID-and-Proxies.md
+            - name: Federation Server Farm Using SQL Server
+              href: ad-fs/design/Federation-Server-Farm-Using-SQL-Server.md
+          - name: AD FS Requirements
+            href: ad-fs/design/AD-FS-Requirements.md
+        - name: AD FS Design Guide in Windows Server 2012
+          href: ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012.md
+          items:
+          - name: Identifying Your AD FS Deployment Goals
+            href: ad-fs/design/Identifying-Your-AD-FS-Deployment-Goals.md
+            items:
+            - name: Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services
+              href: ad-fs/design/Provide-Your-active-directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md
+            - name: Provide Your Active Directory Users Access to the Applications and Services of Other Organizations
+              href: ad-fs/design/Provide-Your-active-directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md
+            - name: Provide Users in Another Organization Access to Your Claims-Aware Applications and Services
+              href: ad-fs/design/Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md
+          - name: Mapping Your Deployment Goals to an AD FS Design
+            href: ad-fs/design/Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md
+            items:
+            - name: Web SSO Design
+              href: ad-fs/design/Web-SSO-Design.md
+            - name: Federated Web SSO Design
+              href: ad-fs/design/Federated-Web-SSO-Design.md
+          - name: Determine Your AD FS Deployment Topology
+            href: ad-fs/design/Determine-Your-AD-FS-Deployment-Topology.md
+            items:
+            - name: AD FS Deployment Topology Considerations
+              href: ad-fs/design/AD-FS-Deployment-Topology-Considerations.md
+            - name: Stand-Alone Federation Server Using WID
+              href: ad-fs/design/Stand-Alone-Federation-Server-Using-WID.md
+            - name: Federation Server Farm Using WID
+              href: ad-fs/design/Federation-Server-Farm-Using-WID-2012.md
+            - name: Federation Server Farm Using WID and Proxies
+              href: ad-fs/design/Federation-Server-Farm-Using-WID-and-Proxies-2012.md
+            - name: Federation Server Farm Using SQL Server
+              href: ad-fs/design/Federation-Server-Farm-Using-SQL-Server-2012.md
+          - name: Planning Your Deployment
+            href: ad-fs/design/Planning-Your-Deployment.md
+            items:
+            - name: Using AD DS Claims with AD FS
+              href: ad-fs/design/Using-AD-DS-Claims-with-AD-FS.md
+            - name: Best Practices for Secure Planning and Deployment of AD FS
+              href: ad-fs/design/Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md
+            - name: Planning for Interoperability with AD FS 1.x
+              href: ad-fs/design/Planning-for-Interoperability-with-AD-FS-1.x.md
+            - name: When to Use Identity delegation
+              href: ad-fs/design/When-to-Use-Identity-delegation.md
+            - name: Deploying AD FS in the Account Partner Organization
+              href: ad-fs/design/Deploying-AD-FS-in-the-Account-Partner-Organization-2012.md
+              items:
+              - name: Review the Role of the Federation Server in the Account Partner
+                href: ad-fs/design/Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md
+              - name: Review the Role of the Federation Server Proxy in the Account Partner
+                href: ad-fs/design/Review-the-Role-of-the-Federation-Server-Proxy-in-the-Account-Partner.md
+              - name: Prepare Client computers in the Account Partner
+                href: ad-fs/design/Prepare-Client-computers-in-the-Account-Partner.md
+            - name: Deploying AD FS in the Resource Partner Organization
+              href: ad-fs/design/Deploying-AD-FS-in-the-Resource-Partner-Organization-2012.md
+              items:
+              - name: Review the Role of the Federation Server in the Resource Partner
+                href: ad-fs/design/Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md
+              - name: Review the Role of the Federation Server Proxy in the Resource Partner
+                href: ad-fs/design/Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md
+              - name: Determine Your Federated Application Strategy in the Resource Partner
+                href: ad-fs/design/Determine-Your-Federated-Application-Strategy-in-the-Resource-Partner.md
+          - name: Planning Federation Server Placement
+            href: ad-fs/design/Planning-Federation-Server-Placement.md
+            items:
+            - name: When to create a Federation Server
+              href: ad-fs/design/When-to-create-a-Federation-Server.md
+            - name: Where to Place a Federation Server
+              href: ad-fs/design/Where-to-Place-a-Federation-Server.md
+            - name: When to create a Federation Server Farm
+              href: ad-fs/design/When-to-create-a-Federation-Server-Farm.md
+            - name: Certificate Requirements for Federation Servers
+              href: ad-fs/design/Certificate-Requirements-for-Federation-Servers.md
+              items:
+              - name: Token-Signing Certificates
+                href: ad-fs/design/Token-Signing-Certificates.md
+              - name: Service Communications Certificates
+                href: ad-fs/design/Service-Communications-Certificates.md
+            - name: Name Resolution Requirements for Federation Servers
+              href: ad-fs/design/Name-Resolution-Requirements-for-Federation-Servers.md
+          - name: Planning Federation Server Proxy Placement
+            href: ad-fs/design/Planning-Federation-Server-Proxy-Placement.md
+            items:
+            - name: When to create a Federation Server Proxy
+              href: ad-fs/design/When-to-create-a-Federation-Server-Proxy.md
+            - name: Where to Place a Federation Server Proxy
+              href: ad-fs/design/Where-to-Place-a-Federation-Server-Proxy.md
+            - name: When to create a Federation Server Proxy Farm
+              href: ad-fs/design/When-to-create-a-Federation-Server-Proxy-Farm.md
+            - name: Certificate Requirements for Federation Server Proxies
+              href: ad-fs/design/Certificate-Requirements-for-Federation-Server-Proxies.md
+            - name: Name Resolution Requirements for Federation Server Proxies
+              href: ad-fs/design/Name-Resolution-Requirements-for-Federation-Server-Proxies.md
+          - name: Planning for AD FS Server Capacity
+            href: ad-fs/design/Planning-for-AD-FS-Server-Capacity.md
+            items:
+            - name: Planning for Federation Server Capacity
+              href: ad-fs/design/Planning-for-Federation-Server-Capacity.md
+            - name: Planning for Federation Server Proxy Capacity
+              href: ad-fs/design/Planning-for-Federation-Server-Proxy-Capacity.md
+          - name: 'Appendix A: Reviewing AD FS Requirements'
+            href: ad-fs/design/appendix-A--Reviewing-AD-FS-Requirements.md
+    - name: AD FS Deployment
+      href: ad-fs/AD-FS-Deployment.md
+      items:
+      - name: AD FS Deployment Guide
+        href: ad-fs/deployment/AD-FS-Deployment-Guide.md
+      - name: Best Practices for Securing AD FS
+        href: ad-fs/deployment/Best-Practices-Securing-AD-FS.md
+      - name: Plan Device-based Conditional Access on-premises
+        href: ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md
+      - name: Required updates for AD FS and WAP
+        href: ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md
+      - name: Create an AD FS Farm without domain admin privileges
+        href: ad-fs/deployment/Install-AD-FS-Delegated-Admin.md
+      - name: Set up Geographic Redundancy with SQL Server Replication
+        href: ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md
+      - name: Set up the lab environment for AD FS in Windows Server 2012 R2
+        href: ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md
+      - name: Upgrade an AD FS farm using Windows Internal Database
+        href: ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server.md
+      - name: Deploy AD FS in Azure
+        href: ad-fs/deployment/how-to-connect-fed-azure-adfs.md
+      - name: AD FS in Azure with Azure Traffic Manager
+        href: ad-fs/deployment/active-directory-adfs-in-azure-with-azure-traffic-manager.md
+      - name: Upgrading to AD FS in Windows Server 2016 using a SQL database
+        href: ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-SQL.md
+      - name: Deploy Microsoft Entra Connect Health to Monitor your on-premises identity infrastructure in the cloud
+        href: /azure/active-directory/hybrid/whatis-hybrid-identity
+      - name: Windows Server 2016 and 2012 R2 AD FS Deployment Guide
+        href: ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md
+        items:
+        - name: Deploying a Federation Server Farm
+          href: ad-fs/deployment/Deploying-a-Federation-Server-Farm.md
+          items:
+          - name: Join a computer to a Domain
+            href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
+          - name: Enroll an SSL Certificate for AD FS
+            href: ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md
+          - name: Install the AD FS Role Service
+            href: ad-fs/deployment/Install-the-AD-FS-Role-Service.md
+          - name: Configure a Federation Server
+            href: ad-fs/deployment/Configure-a-Federation-Server.md
+          - name: Configure a federation server with Device registration Service
+            href: ad-fs/deployment/Configure-a-federation-server-with-Device-registration-Service.md
+          - name: Configure Corporate DNS for the Federation Service and DRS
+            href: ad-fs/deployment/Configure-Corporate-DNS-for-the-Federation-Service-and-DRS.md
+          - name: Verify your Windows Server 2012 R2 Federation Server Is Operational
+            href: ad-fs/deployment/verify-your-Windows-Server-2012-R2-Federation-Server-Is-Operational.md
+        - name: Deploying Federation Server Proxies
+          href: ad-fs/deployment/Deploying-Federation-Server-Proxies-W2K12R2.md
+      - name: Windows Server 2012 AD FS Deployment Guide
+        href: ad-fs/deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md
+        items:
+        - name: Planning to Deploy AD FS
+          href: ad-fs/deployment/Planning-to-Deploy-AD-FS.md
+        - name: Implementing Your AD FS Design Plan
+          href: ad-fs/deployment/Implementing-your-AD-FS-Design-Plan.md
+        - name: 'Checklist: Implementing a Web SSO Design'
+          href: ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md
+        - name: 'Checklist: Implementing a Federated Web SSO Design'
+          href: ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md
+        - name: Configure Partner Organizations
+          href: ad-fs/deployment/Configuring-Partner-Organizations.md
+          items:
+          - name: 'Checklist: Configure the Account Partner Organization'
+            href: ad-fs/deployment/Checklist--Configuring-the-Account-Partner-Organization.md
+          - name: 'Checklist: Configure the Resource Partner Organization'
+            href: ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md
+          - name: Add an attribute Store
+            href: ad-fs/operations/add-an-attribute-Store.md
+          - name: Create a Claims Provider Trust Using Federation Metadata
+            href: ad-fs/operations/create-a-Claims-Provider-Trust.md
+          - name: Create a Relying Party Trust Using Federation Metadata
+            href: ad-fs/operations/create-a-Relying-Party-Trust.md
+          - name: Add a Claim Description
+            href: ad-fs/operations/add-a-Claim-Description.md
+          - name: Configure Client computers to Trust the Account Federation Server
+            href: ad-fs/deployment/Configure-Client-computers-to-Trust-the-Account-Federation-Server.md
+          - name: Distribute Certificates to Client computers by Using Group Policy
+            href: ad-fs/deployment/Distribute-Certificates-to-Client-computers-by-Using-Group-Policy.md
+        - name: Configuring Claim Rules
+          href: ad-fs/deployment/Configuring-Claim-Rules.md
+          items:
+          - name: 'Checklist: Creating Claim Rules for a Claims Provider Trust'
+            href: ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Claims-Provider-Trust.md
+          - name: 'Checklist: Creating Claim Rules for a Relying Party Trust'
+            href: ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Relying-Party-Trust.md
+          - name: Create a Rule to Pass Through or filter an Incoming Claim
+            href: ad-fs/operations/create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md
+          - name: Create a Rule to Send an AD FS 1.x compatible Claim
+            href: ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md
+          - name: Create a Rule to Permit All Users
+            href: ad-fs/operations/create-a-Rule-to-Permit-All-Users.md
+          - name: Create a Rule to Permit or Deny Users Based on an Incoming Claim
+            href: ad-fs/operations/create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md
+          - name: Create a Rule to Send LDAP attributes as Claims
+            href: ad-fs/operations/create-a-Rule-to-Send-LDAP-attributes-as-Claims.md
+          - name: Create a Rule to Send Group Membership as a Claim
+            href: ad-fs/operations/create-a-Rule-to-Send-Group-Membership-as-a-Claim.md
+          - name: Create a Rule to Transform an Incoming Claim
+            href: ad-fs/operations/create-a-Rule-to-Transform-an-Incoming-Claim.md
+          - name: Create a Rule to Send an Authentication Method Claim
+            href: ad-fs/operations/create-a-Rule-to-Send-an-Authentication-Method-Claim.md
+          - name: Create a Rule to Send Claims Using a Custom Rule
+            href: ad-fs/operations/create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md
+        - name: Deploying Federation Servers
+          href: ad-fs/deployment/Deploying-Federation-Servers.md
+          items:
+          - name: 'Checklist: Setting Up a Federation Server'
+            href: ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md
+          - name: Add a Host (A) Resource Record to Corporate DNS for a Federation Server
+            href: ad-fs/deployment/add-a-Host--A--Resource-Record-to-Corporate-DNS-for-a-Federation-Server.md
+          - name: Manually Configure a Service Account for a Federation Server Farm
+            href: ad-fs/deployment/Manually-Configure-a-Service-Account-for-a-Federation-Server-Farm.md
+          - name: Install the Federation Service Role Service
+            href: ad-fs/deployment/Install-the-Federation-Service-Role-Service.md
+          - name: Create the First Federation Server in a Federation Server Farm
+            href: ad-fs/deployment/create-the-First-Federation-Server-in-a-Federation-Server-Farm.md
+          - name: Create a Stand-Alone Federation Server
+            href: ad-fs/deployment/create-a-Stand-Alone-Federation-Server.md
+          - name: Add a Federation Server to a Federation Server Farm
+            href: ad-fs/deployment/add-a-Federation-Server-to-a-Federation-Server-Farm.md
+          - name: Add a Token-Signing Certificate
+            href: ad-fs/deployment/add-a-Token-Signing-Certificate.md
+          - name: Add a Token-Decrypting Certificate
+            href: ad-fs/deployment/add-a-Token-Decrypting-Certificate.md
+          - name: Set a Service Communications Certificate
+            href: ad-fs/deployment/Set-a-Service-Communications-Certificate.md
+          - name: Verify That a Federation Server Is Operational
+            href: ad-fs/deployment/verify-That-a-Federation-Server-Is-Operational.md
+        - name: Deploying Federation Server Proxies
+          href: ad-fs/deployment/Deploying-Federation-Server-Proxies.md
+          items:
+          - name: 'Checklist: Setting Up a Federation Server Proxy'
+            href: ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md
+          - name: Join a computer to a Domain
+            href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
+          - name: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network
+            href: ./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md
+          - name: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
+            href: ./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md
+          - name: Export the Private Key Portion of a Server Authentication Certificate
+            href: ad-fs/deployment/Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md
+          - name: Import a Server Authentication Certificate to the Default Web Site
+            href: ad-fs/deployment/import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md
+          - name: Install the Federation Service Proxy Role Service
+            href: ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md
+          - name: Configure a computer for the Federation Server Proxy Role
+            href: ad-fs/deployment/Configure-a-computer-for-the-Federation-Server-Proxy-Role.md
+          - name: Verify That a Federation Server Proxy Is Operational
+            href: ad-fs/deployment/verify-That-a-Federation-Server-Proxy-Is-Operational.md
+          - name: Configure Performance Monitoring
+            href: ad-fs/deployment/Configure-Performance-Monitoring.md
+        - name: Interoperating with AD FS 1.x
+          href: ad-fs/deployment/Interoperating-with-AD-FS-1.x.md
+          items:
+          - name: 'Checklist: Configuring AD FS to Consume Claims from AD FS 1.x'
+            href: ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
+          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service'
+            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md
+          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent'
+            href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md
+          - name: Create a Relying Party Trust Manually
+            href: ad-fs/operations/create-a-Relying-Party-Trust.md
+          - name: Create a Claims Provider Trust Manually
+            href: ad-fs/operations/create-a-Claims-Provider-Trust.md
+          - name: Create a Rule to Send an AD FS 1.x compatible Claim
+            href: ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md
+      - name: Deploy Microsoft Entra Connect Health
+        href: /azure/active-directory/hybrid/whatis-hybrid-identity
+      - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2
+        href: ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md
+        items:
+        - name: Prepare to Migrate the AD FS Federation Server
+          href: ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md
+        - name: Migrate the AD FS Federation Server
+          href: ad-fs/deployment/migrate-ad-fs-fed-server-r2.md
+        - name: Migrate the AD FS Federation Server Proxy
+          href: ad-fs/deployment/migrate-fed-server-proxy-r2.md
+        - name: Verify the AD FS Migration to Windows Server 2012 R2
+          href: ad-fs/deployment/verify-ad-fs-migration.md
+      - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012
+        href: ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md
+        items:
+        - name: Prepare to Migrate the AD FS 2.0 Federation Server
+          href: ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md
+          items:
+          - name: Prepare to Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server
+            href: ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md
+          - name: Prepare to Migrate the AD FS 2.0 WID Farm
+            href: ad-fs/deployment/prepare-to-migrate-a-wid-farm.md
+          - name: Prepare to Migrate the AD FS 2.0 SQL Farm
+            href: ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md
+        - name: Prepare to Migrate the AD FS 2.0 Federation Server Proxy
+          href: ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md
+        - name: Migrate the AD FS 2.0 Federation Server
+          href: ad-fs/deployment/migrate-the-ad-fs-fed-server.md
+          items:
+          - name: Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server
+            href: ad-fs/deployment/migrate-ad-fs-stand-alone-server.md
+          - name: Migrate the AD FS 2.0 WID Farm
+            href: ad-fs/deployment/migrate-ad-fs-wid-farm.md
+          - name: Migrate the AD FS 2.0 SQL Farm
+            href: ad-fs/deployment/migrate-ad-fs-sql-farm.md
+        - name: Migrate the AD FS 2.0 Federation Server Proxy
+          href: ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md
+        - name: Migrate the AD FS 1.1 Web Agents
+          href: ad-fs/deployment/migrate-the-ad-fs-web-agent.md
+    - name: AD FS Development
+      items:
+      - name: AD FS OpenID Connect/OAuth Concepts
+        href: ad-fs/development/ad-fs-openid-connect-oauth-concepts.md
+      - name: AD FS OpenID Connect/OAuth flows and Application Scenarios
+        href: ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md
+      - name: Build a Custom Authentication Method for AD FS
+        href: ad-fs/development/ad-fs-build-custom-auth-method.md
+      - name: Build Plug-ins with AD FS 2019 Risk Assessment Model
+        href: ad-fs/development/ad-fs-risk-assessment-model.md
+      - name: Single log-out for OpenID Connect with AD FS
+        href: ad-fs/development/ad-fs-logout-openid-connect.md
+      - name: MSAL
+        items:
+        - name: Native app calling Web API
+          href: ad-fs/development/msal/adfs-msal-native-app-web-api.md
+        - name: Web API calling Web API (On Behalf of Scenario)
+          href: ad-fs/development/msal/adfs-msal-web-api-web-api.md
+        - name: Web app (server app) calling web APIs
+          href: ad-fs/development/msal/adfs-msal-web-app-web-api.md
+    - name: AD FS Operations
+      href: ad-fs/AD-FS-Operations.md
+      items:
+      - name: AD FS Access Control Policies
+        href: ad-fs/operations/AD-FS-Client-Access-Policies.md
+        items:
+        - name: Access Control Policies in AD FS for Windows Server 2016
+          href: ad-fs/operations/Access-Control-Policies-in-AD-FS.md
+        - name: Access Control Policies in AD FS for Windows Server 2012 R2
+          href: ad-fs/operations/Access-Control-Policies-W2K12.md
+        - name: Access Control Policies in AD FS 2.0
+          href: ad-fs/operations/Access-Control-Policies-in-AD-FS-2.md
+      - name: Additional Authentication methods in AD FS 2019
+        href: ad-fs/operations/Additional-Authentication-Methods-AD-FS.md
+      - name: AlwaysOn Availability Groups
+        href: ad-fs/operations/ad-fs-always-on.md
+      - name: AD FS Prompt login parameter support
+        href: ad-fs/operations/AD-FS-Prompt-Login.md
+      - name: AD FS Paginated sign-in
+        href: ad-fs/operations/AD-FS-paginated-sign-in.md
+      - name: AD FS 2016 Single Sign On Settings
+        href: ad-fs/operations/AD-FS-Single-Sign-On-Settings.md
+      - name: AD FS Rapid Restore Tool
+        href: ad-fs/operations/AD-FS-Rapid-Restore-Tool.md
+      - name: AD FS support for alternate hostname binding for certificate authentication
+        href: ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md
+      - name: AD FS user sign-in customization
+        href: ad-fs/operations/AD-FS-user-sign-in-customization.md
+      - name: Add an attribute Store
+        href: ad-fs/operations/add-an-attribute-Store.md
+      - name: Compound authentication and AD DS claims in AD FS
+        href: ad-fs/operations/AD-FS-Compound-Authentication-and-AD-DS-claims.md
+      - name: Configure AD FS for user certificate authentication
+        href: ad-fs/operations/Configure-User-Certificate-Authentication.md
+      - name: Configure AD FS 2016 and Microsoft Entra multifactor authentication
+        href: ad-fs/operations/Configure-AD-FS-and-Azure-MFA.md
+      - name: Configure AD FS Extranet Soft Lockout Protection
+        href: ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md
+      - name: Configure AD FS Extranet Smart Lockout Protection
+        href: ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md
+      - name: Configure AD FS Extranet Banned IPs
+        href: ad-fs/operations/Configure-AD-FS-Banned-IP.md
+      - name: Configure AD FS to authenticate users stored in LDAP directories
+        href: ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md
+      - name: Configure AD FS to Send Password Expiry Claims
+        href: ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md
+      - name: Configure additional Authentication Methods for AD FS
+        href: ad-fs/operations/Configure-additional-Authentication-Methods-for-AD-FS.md
+      - name: Configure Authentication Policies
+        href: ad-fs/operations/Configure-Authentication-Policies.md
+      - name: Configure Claim Rules
+        href: ad-fs/operations/Configure-Claim-Rules.md
+      - name: Configure Device-based Conditional Access on-premises
+        href: ad-fs/operations/Configure-Device-based-Conditional-Access-on-Premises.md
+      - name: Configure intranet forms-based authentication for devices that do not support WIA
+        href: ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md
+      - name: Configuring Alternate Login ID
+        href: ad-fs/operations/Configuring-Alternate-Login-ID.md
+      - name: Create a Claims Provider Trust
+        href: ad-fs/operations/create-a-Claims-Provider-Trust.md
+      - name: Create a Non-Claims Aware Relying Party Trust
+        href: ad-fs/operations/create-a-Non-Claims-Aware-Relying-Party-Trust.md
+      - name: Create a Relying Party Trust
+        href: ad-fs/operations/create-a-Relying-Party-Trust.md
+      - name: Customize HTTP security response headers with AD FS
+        href: ad-fs/operations/customize-http-security-headers-ad-fs.md
+      - name: Delegate AD FS PowerShell Commandlet Access to Non-Admin Users
+        href: ad-fs/operations/delegate-ad-fs-pshell-access.md
+      - name: Device Authentication Controls in AD FS
+        href: ad-fs/operations/device-authentication-controls-in-AD-FS.md
+      - name: What is KDFv2?
+        href: ad-fs/operations/what-is-kdfv2.md
+      - name: Improved interoperability with SAML 2.0
+        href: ad-fs/operations/Improved-interoperability-with-SAML-2.0.md
+      - name: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across company Applications
+        href: ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-company-Applications.md
+      - name: Manage Risk with additional multifactor authentication for Sensitive Applications
+        href: ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md
+      - name: Manage Risk with Conditional Access Control
+        href: ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md
+      - name: Managing SSL Certificates in AD FS and WAP 2016
+        href: ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP.md
+      - name: Managing SSL Protocols in AD FS
+        href: ad-fs/operations/Manage-SSL-Protocols-in-AD-FS.md
+      - name: Plan Device-based Conditional Access on-premises
+        href: ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md
+      - name: Set up an AD FS lab environment
+        href: ad-fs/operations/Set-up-an-AD-FS-lab-environment.md
+      - name: SQL fine tuning and addressing latency
+        href: ad-fs/operations/adfs-sql-latency.md
+      - name: 'Walkthrough Guide: Manage Risk with Conditional Access Control'
+        href: ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md
+      - name: 'Walkthrough: Workplace Join with a Windows Device'
+        href: ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md
+      - name: 'Walkthrough: Workplace Join with an iOS Device'
+        href: ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md
+      - name: 'Walkthrough: Workplace Join with an Android Device'
+        href: ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md
+    - name: AD FS Troubleshooting
+      href: ad-fs/troubleshooting/ad-fs-tshoot-overview.md
+      items:
+      - name: AD FS Help Diagnostics Analyzer
+        href: ad-fs/troubleshooting/ad-fs-diagnostics-analyzer.md
+      - name: Azure
+        href: ad-fs/troubleshooting/ad-fs-tshoot-azure.md
+      - name: Certificates
+        href: ad-fs/troubleshooting/ad-fs-tshoot-certs.md
+      - name: Claims syntax
+        href: ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md
+      - name: DNS
+        href: ad-fs/troubleshooting/ad-fs-tshoot-dns.md
+      - name: Endpoints
+        href: ad-fs/troubleshooting/ad-fs-tshoot-endpoints.md
+      - name: Fiddler trace(WS-Fed)
+        href: ad-fs/troubleshooting/ad-fs-tshoot-fiddler-ws-fed.md
+      - name: Fiddler
+        href: ad-fs/troubleshooting/ad-fs-tshoot-fiddler.md
+      - name: Initiated SignOn
+        href: ad-fs/troubleshooting/ad-fs-tshoot-initiatedsignon.md
+      - name: Integrated Windows Auth
+        href: ad-fs/troubleshooting/ad-fs-tshoot-iwa.md
+      - name: Logging
+        href: ad-fs/troubleshooting/ad-fs-tshoot-logging.md
+      - name: Loops
+        href: ad-fs/troubleshooting/ad-fs-tshoot-loop.md
+      - name: SQL
+        href: ad-fs/troubleshooting/ad-fs-tshoot-sql.md
+    - name: AD FS Technical Reference
+      href: ad-fs/AD-FS-Technical-Reference.md
+      items:
+      - name: User privacy and AD FS
+        href: ad-fs/technical-reference/GDPR-and-AD-FS-Compliance.md
+      - name: AD FS and certificate KeySpec property information
+        href: ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md
+      - name: Auditing Enhancements to AD FS in Windows Server
+        href: ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md
+      - name: Understanding Key AD FS Concepts
+        href: ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md
+        items:
+        - name: The Role of attribute Stores
+          href: ad-fs/technical-reference/The-Role-of-attribute-Stores.md
+        - name: The Role of the AD FS Configuration Database
+          href: ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md
+        - name: The Role of Claims
+          href: ad-fs/technical-reference/The-Role-of-Claims.md
+        - name: The Role of Claim Rules
+          href: ad-fs/technical-reference/The-Role-of-Claim-Rules.md
+        - name: The Role of the Claims Engine
+          href: ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md
+        - name: The Role of the Claims Pipeline
+          href: ad-fs/technical-reference/The-Role-of-the-Claims-Pipeline.md
+        - name: The Role of the Claim Rule Language
+          href: ad-fs/technical-reference/The-Role-of-the-Claim-Rule-Language.md
+        - name: Determine the type of Claim Rule Template to Use
+          href: ad-fs/technical-reference/Determine-the-type-of-Claim-Rule-Template-to-Use.md
+        - name: How URIs Are Used in AD FS
+          href: ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md
+      - name: Device registration Technical Reference
+        href: ad-fs/technical-reference/device-registration-technical-reference.md
+      - name: AD FS Password Attack Protection
+        href: ad-fs/technical-reference/ad-fs-password-protection.md
+    - name: AD FS 2016 FAQ
+      href: ad-fs/overview/AD-FS-FAQ.yml
+    - name: AD FS Decommission
+      href: ad-fs/ad-fs-decommission.md
+      items:
+      - name: AD FS Decommission Guide
+        href: ad-fs/decommission/adfs-decommission-guide.md
+      - name: AD FS to Microsoft Entra FAQ
+        href: ad-fs/decommission/ad-fs-to-azure-ad-faq.md
+  - name: Active Directory Rights Management Service
+    items:
+    - name: Upgrading AD RMS to Windows Server 2016
+      href: ad-rms/adrms-deploy.md
+  - name: Active Directory Certificate Services
+    href: ad-cs/index.yml
+    items:
+    - name: Overview
+      items:
+      - name: What is Active Directory Certificate Services?
+        href: ad-cs/active-directory-certificate-services-overview.md
+    - name: Concepts
+      items:
+      - name: What is the Certification Authority Role Service?
+        href: ad-cs/certification-authority-role.md
+      - name: Certification Authority Web Enrollment Role Service
+        href: ad-cs/certificate-authority-web-enrollment.md
+      - name: PKI design considerations
+        href: ad-cs/pki-design-considerations.md
+      - name: Network Device Enrollment Service
+        href: ad-cs/network-device-enrollment-service-overview.md
+      - name: Certificates and trust
+        href: ad-cs/certificate-trust.md
+    - name: How-to guides
+      items:
+      - name: Configure Network Device Enrollment Service to use a domain user account
+        href: ad-cs/create-domain-user-account-ndes-service-account.md
+      - name: Configure trusted roots and disallowed certificates
+        href: ad-cs/configure-trusted-roots-disallowed-certificates.md
+      - name: Request certificates using Web Enrollment
+        href: ad-cs/request-certificate-windows-server.md
+      - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
+        href: ad-cs/submit-pkcs-certificate-request.md
+      - name: Retrieve base and delta CRLs
+        href: ad-cs/retrieve-base-and-delta-crl.md
+  - name: Administrative tools and logon types reference
+    href: securing-privileged-access/reference-tools-logon-types.md
+  - name: Software Restriction Policies
+    href: software-restriction-policies/software-restriction-policies.md
+    items:
+    - name: Software Restriction Policies Technical Overview
+      href: software-restriction-policies/software-restriction-policies-technical-overview.md
+    - name: Administer Software Restriction Policies
+      href: software-restriction-policies/administer-software-restriction-policies.md
+      items:
+      - name: Determine Allow-Deny list and Application Inventory for Software Restriction Policies
+        href: software-restriction-policies/determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md
+      - name: Work with Software Restriction Policies Rules
+        href: software-restriction-policies/work-with-software-restriction-policies-rules.md
+    - name: Use software restriction policies to help protect your computer against an email virus
+      href: software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md
+  - name: Windows Local Administrator Password Solution
+    items:
+    - name: What is Windows LAPS?
+      href: laps/laps-overview.md
+    - name: Windows LAPS concepts
+      items:
+      - name: Overview
+        href: laps/laps-concepts-overview.md
+      - name: Account management modes
+        href: laps/laps-concepts-account-management-modes.md
+      - name: Passwords and passphrases
+        href: laps/laps-concepts-passwords-passphrases.md
+    - name: Windows LAPS scenarios
+      items:
+      - name: Windows LAPS and Microsoft Entra ID
+        href: laps/laps-scenarios-azure-active-directory.md
+      - name: Windows LAPS and Windows Server Active Directory
+        href: laps/laps-scenarios-windows-server-active-directory.md
+      - name: Windows LAPS in legacy Microsoft LAPS emulation mode
+        href: laps/laps-scenarios-legacy.md
+      - name: Windows LAPS deployment and migration
+        href: laps/laps-scenarios-deployment-migration.md
+    - name: Manage Windows LAPS
+      items:
+      - name: Configure Windows LAPS policy settings
+        href: laps/laps-management-policy-settings.md
+      - name: Use Windows LAPS PowerShell cmdlets
+        href: laps/laps-management-powershell.md
+      - name: Use Windows LAPS event logs
+        href: laps/laps-management-event-log.md
+      - name: Set up Windows LAPS in LAPS properties dialog
+        href: laps/laps-management-user-interface.md
+    - name: Windows LAPS schema extensions reference
+      href: laps/laps-technical-reference.md
+    - name: Windows LAPS FAQ
+      href: laps/laps-faq.yml

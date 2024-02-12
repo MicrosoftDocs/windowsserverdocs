@@ -1,17 +1,16 @@
 ---
+description: "Learn more about: Install trusted TPM root certificates"
 title: Install trusted TPM root certificates
-ms.custom: na
-ms.prod: windows-server-threshold
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.technology: security-guarded-fabric
-ms.date: 09/11/2018
+author: IngridAtMicrosoft
+ms.author: inhenkel
+ms.date: 06/27/2019
 ---
 
 # Install trusted TPM root certificates
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When you configure HGS to use TPM attestation, you also need to configure HGS to trust the vendors of the TPMs in your servers.
 This extra verification process ensures only authentic, trustworthy TPMs are able to attest with your HGS.
@@ -30,7 +29,23 @@ If your TPM certificates are not included in the package below, contact your TPM
 
 Repeat the following steps on **every HGS server**:
 
-1.  Download the latest package from [https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+1.  Download the latest package from [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
+
+2.  Verify the signature of the cab file to ensure its authenticity. Do not proceed if the signature is not valid.
+
+    ```powershell
+    Get-AuthenticodeSignature .\TrustedTpm.cab
+    ```
+
+    Here's some example output:
+
+    ```
+    Directory: C:\Users\Administrator\Downloads
+
+    SignerCertificate                         Status                                 Path
+    -----------------                         ------                                 ----
+    0DD6D4D4F46C0C7C2671962C4D361D607E370940  Valid                                  TrustedTpm.cab
+    ```
 
 2.  Expand the cab file.
 
@@ -53,8 +68,8 @@ Existing certificates will remain trusted but new certificates found in the expa
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Configure fabric DNS](guarded-fabric-configuring-fabric-dns-tpm.md)
+> [!div class="nextstepaction"]
+> [Configure fabric DNS](guarded-fabric-configuring-fabric-dns-tpm.md)
 
 
 

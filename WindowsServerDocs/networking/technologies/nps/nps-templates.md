@@ -2,17 +2,16 @@
 title: NPS Templates
 description: This topic provides an overview of Network Policy Server Templates in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: fdfc0df1-21c7-492c-9fad-38fe9c7d935a
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # NPS Templates
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Network Policy Server \(NPS\) templates allow you to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS and export for use on other NPSs.
 
@@ -24,7 +23,7 @@ NPS templates are designed to reduce the amount of time and cost that it takes t
 - IP Filters
 - Remediation Server Groups
 
-Configuring a template is different than configuring the NPS directly. Creating a template does not affect the NPS's functionality. It is only when you select the template in the appropriate location in the NPS console that the template affects the NPS functionality. 
+Configuring a template is different than configuring the NPS directly. Creating a template does not affect the NPS's functionality. It is only when you select the template in the appropriate location in the NPS console that the template affects the NPS functionality.
 
 For example, if you configure a RADIUS client in the NPS console under RADIUS Clients and Servers, you have altered the NPS configuration and taken one step in configuring NPS to communicate with one of your network access servers \(NAS's\). \(The next step would be to configure the NAS to communicate with NPS.\) However, if you configure a new RADIUS Clients template in the NPS console under **Templates Management** rather than creating a new RADIUS client under **RADIUS Clients and Servers**, you have created a template, but you have not altered the NPS functionality yet. To alter the NPS functionality, you must select the template from the correct location in the NPS console.
 

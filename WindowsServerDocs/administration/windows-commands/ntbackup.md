@@ -1,30 +1,23 @@
 ---
 title: ntbackup
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6bce6b0d-646b-46b6-b833-0ff1d6f082c2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+description: Reference article for the ntbackup command (replaced with the wbadmin command).
+ms.topic: reference
+ms.author: alalve
+author: JasonGerend
+ms.date: 04/01/2023
 ---
 
 # ntbackup
 
+Applies to: Windows Server (All supported versions)
 
+The `ntbackup` command backs up and restores your computer and files from a command prompt. This command is replaced with the [wbadmin command](wbadmin.md).
 
-The **ntbackup** command is not available in Windows Vista or Windows Server 2008. Instead, you should use the **wbadmin** command and subcommands to back up and restore your computer and files from a command prompt.
+> [!IMPORTANT]
+> The `wbadmin` command can't recover backups created by using the `ntbackup` commands. The Windows NT Backup - Restore utility is needed to recover from legacy backups.
 
-You cannot recover backups that you created with **ntbackup** by using **wbadmin**. However, a version of **ntbackup** is available as a download for Windows Server 2008 and Windows Vista users who want to recover backups that they created using **ntbackup**. This downloadable version of **ntbackup** enables you to perform recoveries only of legacy backups, and it cannot be used on computers running Windows Server 2008 or Windows Vista to create new backups. To download this version of **ntbackup**, see [https://go.microsoft.com/fwlink/?LinkId=82917](https://go.microsoft.com/fwlink/?LinkId=82917).
+## Related links
 
-#### Additional references
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
-
-[Wbadmin](wbadmin.md)
+- [wbadmin](wbadmin.md)

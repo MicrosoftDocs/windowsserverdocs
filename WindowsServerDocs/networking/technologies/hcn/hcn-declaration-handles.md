@@ -1,32 +1,38 @@
 ---
 title: RPC context handles for HCN
-description:
-ms.author: jmesser
-author: jmesser81
-ms.date: 11/05/2018
+description: Information about HCN Network entities, represented using HCN_NETWORK RPC context handles.
+ms.topic: article
+ms.author: daschott
+author: daschott
+ms.date: 04/01/2023
+
 ---
 
 # RPC context handles for HCN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-
+Applies to: Windows Server 2022, Windows Server 2019
 
 ## HCN_Network
 
-An HCN Network is an entity which is used to represent a host compute network and its associated system resources and policies. For example, a HCN network will typically consist of a set of metadata (e.g. id, name, type), a virtual switch, a host virtual network adapter (which acts as a default gateway for the network), a NAT instance (if required by the network type), a set of subnet and MAC pools, and any network-wide policies to be applied (e.g. ACLs).
+An HCN Network is an entity that's used to represent a host compute network and its associated system resources and policies. An HCN network typically can include:
+
+- A set of metadata (ID, name, type)
+- A virtual switch
+- A host virtual network adapter (acting as a default gateway for the network)
+- A NAT instance (if required by the network type)
+- A set of subnet and MAC pools
+- Any network-wide policies to be applied (for example, ACLs)
 
 HCN Network entities are represented using HCN_NETWORK RPC context handles.
 
 ```
-
 /// Handle to an operation
 DECLARE_HANDLE(HCN_NETWORK);
-
 /// Return a list of existing Networks
 ///
 /// \param  Query          Optionally specifies a JSON document for a query
 ///                        containing properties of the specific Networks to
-///                        return. By default, all Networks are returned.
+///                        return. By default, all networks are returned.
 /// \retval Networks       Receives a JSON document with the list of Networks.
 /// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
@@ -45,8 +51,8 @@ HcnEnumerateNetworks(
 ///
 /// \param  Id             Specifies the unique ID for the new Network.
 /// \param  Settings       JSON document specifying the settings of the new Network.
-/// \retval Network        Receives a handle to the new Network.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \retval Network        Receives a handle to the new network.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -62,9 +68,9 @@ HcnCreateNetwork(
     );
 /// Opens a handle to an existing Network.
 ///
-/// \param  Id             Unique ID of the existing Network.
-/// \retval Network        Receives a handle to the Network.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Id             Unique ID of the existing network.
+/// \retval Network        Receives a handle to the network.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -79,9 +85,9 @@ HcnOpenNetwork(
     );
 /// Modify the settings of a Network
 ///
-/// \param  Network        Handle to a Network.
-/// \param  Settings       JSON document specifying the new settings of the Network.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Network        Handle to a network.
+/// \param  Settings       JSON document specifying the new settings of the network.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -94,15 +100,14 @@ HcnModifyNetwork(
     _In_ PCWSTR Settings,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Query Network properties
 ///
-/// \param  Network        Handle to a Network.
+/// \param  Network        Handle to a network.
 /// \param  Query          Optionally specifies a JSON document for a query
-///                        containing specific properties of the Network
+///                        containing specific properties of the network
 ///                        return. By default all properties are returned.
 /// \retval Properties     Receives a JSON document with Network properties.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -118,8 +123,8 @@ HcnQueryNetworkProperties(
     );
 /// Delete a Network
 ///
-/// \param  Id             Unique ID of the existing Network.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Id             Unique ID of the existing network.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -133,7 +138,7 @@ HcnDeleteNetwork(
     );
 /// Close a handle to a Network
 ///
-/// \param  Network        Handle to a Network.
+/// \param  Network        Handle to a network.
 ///
 /// \returns S_OK if successful; HResult error code on failures.
 ///
@@ -141,26 +146,29 @@ HRESULT
 WINAPI
 HcnCloseNetwork(
     _In_ HCN_NETWORK Network
-    ); 
+    );
 ```
 
 ## HCN_Endpoint
 
-A HCN Endpoint is an entity which is used to represent an IP endpoint on a HCN network and its associated system resources and policies. For example, a HCN endpoint will typically consist of a set of metadata (e.g. id, name, parent network id), its network identity (e.g., IP address, MAC address), and any endpoint specific policies to be applied (e.g. ACLs, routes).
+An HCN Endpoint is an entity that's used to represent an IP endpoint on an HCN network and its associated system resources and policies. An HCN endpoint typically consists of: 
+
+- A set of metadata (ID, name, parent network ID)
+- Its network identity (IP address, MAC address)
+- Any endpoint specific policies to be applied (ACLs, routes)
+
 HCN Endpoint entities are represented using HCN_ENDPOINT RPC context handles.
 
 ```
-
 /// Handle to an operation
 DECLARE_HANDLE(HCN_ENDPOINT);
-
-/// Return a list of existing Endpoints
+/// Return a list of existing endpoints
 ///
 /// \param  Query          Optionally specifies a JSON document for a query
-///                        containing properties of the specific Endpoints to
+///                        containing properties of the specific endpoints to
 ///                        return. By default all Endpoints are returned.
-/// \retval Endpoints      Receives a JSON document with the list of Endpoints.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \retval Endpoints      Receives a JSON document with the list of endpoints.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -175,11 +183,11 @@ HcnEnumerateEndpoints(
     );
 /// Create an Endpoint
 ///
-/// \param  Id             Specifies the unique ID for the new Endpoint.
+/// \param  Id             Specifies the unique ID for the new endpoint.
 /// \param  Network        Handle to the network on which endpoint is to be created.
-/// \param  Settings       JSON document specifying the settings of the new Endpoint.
-/// \retval Endpoint       Receives a handle to the new Endpoint.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Settings       JSON document specifying the settings of the new endpoint.
+/// \retval Endpoint       Receives a handle to the new endpoint.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -196,8 +204,8 @@ HcnCreateEndpoint(
     );
 /// Opens a handle to an existing Endpoint.
 ///
-/// \param  Id             Unique ID of the existing Endpoint.
-/// \retval Endpoint       Receives a handle to the Endpoint.
+/// \param  Id             Unique ID of the existing endpoint.
+/// \retval Endpoint       Receives a handle to the endpoint.
 /// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
@@ -213,9 +221,9 @@ HcnOpenEndpoint(
     );
 /// Modify the settings of an Endpoint
 ///
-/// \param  Endpoint       Handle to an Endpoint.
-/// \param  Settings       JSON document specifying the new settings of the Endpoint.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Endpoint       Handle to an endpoint.
+/// \param  Settings       JSON document specifying the new settings of the endpoint.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -230,11 +238,11 @@ HcnModifyEndpoint(
     );
 /// Query Endpoint properties
 ///
-/// \param  Endpoint       Handle to an Endpoint.
+/// \param  Endpoint       Handle to an endpoint.
 /// \param  Query          Optionally specifies a JSON document for a query
-///                        containing specific properties of the Endpoint
+///                        containing specific properties of the endpoint
 ///                        return. By default all properties are returned.
-/// \retval Properties     Receives a JSON document with Endpoint properties.
+/// \retval Properties     Receives a JSON document with endpoint properties.
 /// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
@@ -251,8 +259,8 @@ HcnQueryEndpointProperties(
     );
 /// Delete an Endpoint
 ///
-/// \param  Id             Unique ID of the existing Endpoint.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Id             Unique ID of the existing endpoint.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -264,9 +272,9 @@ HcnDeleteEndpoint(
     _In_ REFGUID Id,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-/// Close a handle to an Endpoint
+/// Close a handle to an endpoint
 ///
-/// \param  Endpoint       Handle to an Endpoint.
+/// \param  Endpoint       Handle to an endpoint.
 ///
 /// \returns S_OK if successful; HResult error code on failures.
 ///
@@ -275,26 +283,24 @@ WINAPI
 HcnCloseEndpoint(
     _In_ HCN_ENDPOINT Endpoint
     );
- 
 ```
 
 ## HCN_Namespace
 
-A HCN Namespace is an entity which is used to represent a host compute network namespace. Namespaces allow you to have isolated network environments on a single host, where each namespace has its own network interfaces and routing table, separated from other namespaces.
+An HCN namespace is an entity that's used to represent a host compute network namespace. Namespaces allow you to have isolated network environments on a single host, where each namespace has its own network interfaces and routing table, separated from other namespaces.
 
 HCN Namespace entities are represented using HCN_NAMESPACE RPC context handles.
 
 ```
 /// Handle to an operation
 DECLARE_HANDLE(HCN_NAMESPACE);
-
-/// Return a list of existing Namespaces
+/// Return a list of existing namespaces
 ///
 /// \param  Query          Optionally specifies a JSON document for a query
-///                        containing properties of the specific Namespaces to
+///                        containing properties of the specific namespaces to
 ///                        return. By default all Namespaces are returned.
-/// \retval Namespaces     Receives a JSON document with the list of Namespaces.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \retval Namespaces     Receives a JSON document with the list of namespaces.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -307,13 +313,12 @@ HcnEnumerateNamespaces(
     _Outptr_ PWSTR* Namespaces,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Create a Namespace
 ///
-/// \param  Id             Specifies the unique ID for the new Namespace.
-/// \param  Settings       JSON document specifying the settings of the new Namespace.
-/// \retval Namespace      Receives a handle to the new Namespace.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Id             Specifies the unique ID for the new namespace.
+/// \param  Settings       JSON document specifying the settings of the new namespace.
+/// \retval Namespace      Receives a handle to the new namespace.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -327,12 +332,11 @@ HcnCreateNamespace(
     _Out_ PHCN_NAMESPACE Namespace,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
-/// Opens a handle to an existing Namespace.
+/// Opens a handle to an existing namespace.
 ///
-/// \param  Id             Unique ID of the existing Namespace.
-/// \retval Namespace      Receives a handle to the Namespace.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Id             Unique ID of the existing namespace.
+/// \retval Namespace      Receives a handle to the namespace.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -345,10 +349,10 @@ HcnOpenNamespace(
     _Out_ PHCN_NAMESPACE Namespace,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-/// Modify the settings of a Namespace
+/// Modify the settings of a namespace
 ///
-/// \param  Namespace      Handle to a Namespace.
-/// \param  Settings       JSON document specifying the new settings of the Namespace.
+/// \param  Namespace      Handle to a namespace.
+/// \param  Settings       JSON document specifying the new settings of the namespace.
 /// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
@@ -362,15 +366,14 @@ HcnModifyNamespace(
     _In_ PCWSTR Settings,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Query Namespace properties
 ///
-/// \param  Namespace      Handle to a Namespace.
+/// \param  Namespace      Handle to a namespace.
 /// \param  Query          Optionally specifies a JSON document for a query
-///                        containing specific properties of the Namespace
+///                        containing specific properties of the namespace
 ///                        return. By default all properties are returned.
 /// \retval Properties     Receives a JSON document with Namespace properties.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -386,8 +389,8 @@ HcnQueryNamespaceProperties(
     );
 /// Delete a Namespace
 ///
-/// \param  Id             Unique ID of the existing Namespace.
-/// \retval ErrorRecord    Optional, receives a JSON document on failure with extended result
+/// \param  Id             Unique ID of the existing namespace.
+/// \retval ErrorRecord    Optional. Receives a JSON document on failure with extended result
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -399,10 +402,9 @@ HcnDeleteNamespace(
     _In_ REFGUID Id,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Close a handle to a Namespace
 ///
-/// \param  Namespace      Handle to a Namespace.
+/// \param  Namespace      Handle to a namespace.
 ///
 /// \returns S_OK if successful; HResult error code on failures.
 ///
@@ -411,28 +413,25 @@ WINAPI
 HcnCloseNamespace(
     _In_ HCN_NAMESPACE Namespace
     );
-
 ```
 
 ## HCN_LoadBalancer
 
-A HCN LoadBalancer is an entity which is used to represent a host compute network loadbalancer. LoadBalancers allow you to have load balanced host compute network endpoints.
+An HCN load balancer is an entity that's used to represent a host compute network load balancer. Load balancers allow you to have load balanced host compute network endpoints.
 HCN LoadBalancer entities are represented using HCN_LOADBALANCER RPC context handles.
 
 ```
 /// Handle to an operation
 DECLARE_HANDLE(HCN_LOADBALANCER);
-
 //////
-/// LoadBalancer Methods
-
-/// Return a list of existing LoadBalancers
+/// LoadBalancer methods
+/// Return a list of existing load balancers
 ///
 /// \param  Query          Optionally specifies a JSON document for a query
-///                        containing properties of the specific LoadBalancers to
-///                        return. By default all LoadBalancers are returned.
-/// \retval LoadBalancers    Receives a JSON document with the list of LoadBalancers.
-/// \retval ErrorRecord    Optional, receives a JSON document with extended errorCode
+///                        containing properties of the specific load balancers to
+///                        return. By default all load balancers are returned.
+/// \retval LoadBalancers    Receives a JSON document with the list of load balancers.
+/// \retval ErrorRecord    Optional. Receives a JSON document with extended errorCode
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -445,13 +444,12 @@ HcnEnumerateLoadBalancers(
     _Outptr_ PWSTR* LoadBalancer,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
-/// Create a LoadBalancer
+/// Create a load balancer
 ///
-/// \param  Id             Specifies the unique ID for the new LoadBalancer.
-/// \param  Settings       JSON document specifying the settings of the new LoadBalancer.
+/// \param  Id             Specifies the unique ID for the new load balancer.
+/// \param  Settings       JSON document specifying the settings of the new load balancer.
 /// \retval LoadBalancer     Receives a handle to the new LoadBalancer.
-/// \retval ErrorRecord    Optional, receives a JSON document with extended errorCode
+/// \retval ErrorRecord    Optional. Receives a JSON document with extended errorCode
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -465,12 +463,11 @@ HcnCreateLoadBalancer(
     _Out_ PHCN_LOADBALANCER LoadBalancer,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Opens a handle to an existing LoadBalancer.
 ///
-/// \param  Id             Unique ID of the existing LoadBalancer.
-/// \retval LoadBalancer     Receives a handle to the LoadBalancer.
-/// \retval ErrorRecord    Optional, receives a JSON document with extended errorCode
+/// \param  Id             Unique ID of the existing load balancer.
+/// \retval LoadBalancer     Receives a handle to the load balancer.
+/// \retval ErrorRecord    Optional. Receives a JSON document with extended errorCode
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -483,7 +480,6 @@ HcnOpenLoadBalancer(
     _Out_ PHCN_LOADBALANCER LoadBalancer,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Modify the settings of a PolcyList
 ///
 /// \param  PolcyList      Handle to a PolcyList.
@@ -501,12 +497,11 @@ HcnModifyLoadBalancer(
     _In_ PCWSTR Settings,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Query LoadBalancer properties
 ///
-/// \param  LoadBalancer     Handle to a LoadBalancer.
+/// \param  LoadBalancer     Handle to a load balancer.
 /// \param  Query          Optionally specifies a JSON document for a query
-///                        containing specific properties of the LoadBalancer
+///                        containing specific properties of the load balancer
 ///                        return. By default all properties are returned.
 /// \retval Properties     Receives a JSON document with LoadBalancer properties.
 /// \retval ErrorRecord    Optional, receives a JSON document with extended errorCode
@@ -523,11 +518,10 @@ HcnQueryLoadBalancerProperties(
     _Outptr_ PWSTR* Properties,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Delete a LoadBalancer
 ///
-/// \param  Id             Unique ID of the existing LoadBalancer.
-/// \retval ErrorRecord    Optional, receives a JSON document with extended errorCode
+/// \param  Id             Unique ID of the existing load balancer.
+/// \retval ErrorRecord    Optional. Receives a JSON document with extended errorCode
 ///                        information. The caller must release the buffer using
 ///                        CoTaskMemFree.
 ///
@@ -539,10 +533,9 @@ HcnDeleteLoadBalancer(
     _In_ REFGUID Id,
     _Outptr_opt_ PWSTR* ErrorRecord
     );
-
 /// Close a handle to a LoadBalancer
 ///
-/// \param  LoadBalancer     Handle to a LoadBalancer.
+/// \param  LoadBalancer     Handle to a load balancer.
 ///
 /// \returns S_OK if successful; HResult error code on failures.
 ///
@@ -550,12 +543,11 @@ HRESULT
 WINAPI
 HcnCloseLoadBalancer(
     _In_ HCN_LOADBALANCER LoadBalancer
-
 ```
 
 ## HCN_Notification_Callback
 
-There functions provide access to service-wide operations such as notifications (e.g. receiving notifications of a new network creation).
+These functions provide access to service-wide operations such as notifications (for example, receiving notifications of a new network creation).
 
 ```
 /// Registers a callback function to receive notifications of service-wide events such as network
@@ -563,7 +555,7 @@ There functions provide access to service-wide operations such as notifications 
 ///
 /// \param  Callback           Function pointer to notification callback.
 /// \param  Context            Context pointer.
-/// \retval CallbackHandle     Receives a handle to a callback registered on a Service.
+/// \retval CallbackHandle     Receives a handle to a callback registered on a service.
 ///
 /// \returns S_OK if successful; HResult error code on failures.
 ///
@@ -573,10 +565,9 @@ HcnRegisterServiceCallback(
     _In_ void* Context,
     _Out_ HCN_CALLBACK* CallbackHandle
     );
-
 /// Unregisters from service-wide notifications
 ///
-/// \retval CallbackHandle     Handle to a callback registered on a Service.
+/// \retval CallbackHandle     Handle to a callback registered on a service.
 ///
 /// \returns S_OK if successful; HResult error code on failures.
 ///
@@ -585,5 +576,3 @@ HcnUnregisterServiceCallback(
     _In_ HCN_CALLBACK CallbackHandle
     );
 ```
-
-

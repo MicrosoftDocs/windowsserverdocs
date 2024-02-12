@@ -1,24 +1,21 @@
 ---
-title: Deploy Storage Spaces Direct
-ms.prod: windows-server-threshold
-manager: eldenc
-ms.author: stevenek
-ms.technology: storage-spaces
-ms.topic: get-started-article
+title: Deploy Storage Spaces Direct on Windows Server
+manager: femil
+ms.author: inhenkel
+ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 8/16/2018
-description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure. 
-ms.localizationpriority: medium
+ms.date: 11/16/2021
+description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ---
-# Deploy Storage Spaces Direct
+# Deploy Storage Spaces Direct on Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
-> Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
+> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://aka.ms/azurestackhcicatalog).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
@@ -29,11 +26,11 @@ Review the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-H
 
 Gather the following information:
 
-- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](storage-spaces-direct-overview.md#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
+- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](/azure-stack/hci/concepts/storage-spaces-direct-overview#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
 
 - **Server names.** Get familiar with your organization's naming policies for computers, files, paths, and other resources. You'll need to provision several servers, each with unique names.
 
-- **Domain name.** Get familiar with your organization's policies for domain naming and domain joining.  You'll be joining the servers to your domain, and you'll need to specify the domain name. 
+- **Domain name.** Get familiar with your organization's policies for domain naming and domain joining.  You'll be joining the servers to your domain, and you'll need to specify the domain name.
 
 - **RDMA networking.** There are two types of RDMA protocols: iWarp and RoCE. Note which one your network adapters use, and if RoCE, also note the version (v1 or v2). For RoCE, also note the model of your top-of-rack switch.
 
@@ -43,15 +40,15 @@ Gather the following information:
 
 ### Step 1.1: Install the operating system
 
-The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server 2016 Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
+The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
 
-When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Install Server Core](../../get-started/getting-started-with-server-core.md).
 
 ### Step 1.2: Connect to the servers
 
 This guide focuses the Server Core installation option and deploying/managing remotely from a separate management system, which must have:
 
-- Windows Server 2016 with the same updates as the servers it's managing
+- A version of Windows Server or Windows 10 at least as new as the servers it's managing, and with the latest updates
 - Network connectivity to the servers it's managing
 - Joined to the same domain or a fully trusted domain
 - Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server and can be installed without installing other features. You can also install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) on a Windows 10 management PC.
@@ -74,15 +71,15 @@ Enter the PS session and use either the server name or the IP address of the nod
    ```
 
 > [!TIP]
-> If you're deploying remotely from a management system, you might get an error like *WinRM cannot process the request.* To fix this, use Windows PowerShell to add each server to the Trusted Hosts list on your management computer:  
->   
+> If you're deploying remotely from a management system, you might get an error like *WinRM cannot process the request.* To fix this, use Windows PowerShell to add each server to the Trusted Hosts list on your management computer:
+>
 > `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Server01 -Force`
->  
+>
 > Note: the trusted hosts list supports wildcards, like `Server*`.
 >
-> To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.  
->   
-> To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
+> To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.
+>
+> To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.
 
 ### Step 1.3: Join the domain and add domain accounts
 
@@ -92,11 +89,11 @@ To manage Storage Spaces Direct, you'll need to join the servers to a domain and
 
 From the management system, open a PowerShell console with Administrator privileges. Use `Enter-PSSession` to connect to each server and  run the following cmdlet, substituting your own computer name, domain name, and domain credentials:
 
-```PowerShell  
-Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force  
+```PowerShell
+Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force
 ```
 
-If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](http://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) for more info):
+If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](https://devblogs.microsoft.com/scripting/use-powershell-to-add-domain-users-to-a-local-group/) for more info):
 
 ```
 Net localgroup Administrators <Domain\Account> /add
@@ -113,7 +110,7 @@ The next step is to install server roles on every server. You can do this by usi
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-To install via PowerShell, use the [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet. You can use it on a single server like this:
 
 ```PowerShell
 Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
@@ -136,14 +133,18 @@ Invoke-Command ($ServerList) {
 
 If you're deploying Storage Spaces Direct inside virtual machines, skip this section.
 
-Storage Spaces Direct requires high-bandwidth, low-latency networking between servers in the cluster. At least 10 GbE networking is required and remote direct memory access (RDMA) is recommended. You can use either iWARP or RoCE as long as it has the Windows Server 2016 logo, but iWARP is usually easier to set up.
+Storage Spaces Direct requires high-bandwidth, low-latency networking between servers in the cluster. At least 10 GbE networking is required and remote direct memory access (RDMA) is recommended. You can use either iWARP or RoCE as long as it has the Windows Server logo that matches your operating system version, but iWARP is usually easier to set up.
 
 > [!Important]
 > Depending on your networking equipment, and especially with RoCE v2, some configuration of the top-of-rack switch may be required. Correct switch configuration is important to ensure reliability and performance of Storage Spaces Direct.
 
-Windows Server 2016 introduces switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
+Windows Server 2016 introduced switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
 
-For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
+Switched or switchless node interconnects
+- Switched: Network switches must be properly configured to handle the bandwidth and networking type. If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important.
+- Switchless: Nodes can be interconnected using direct connections, avoiding using a switch. It is required that every node have a direct connection with every other node of the cluster.
+
+For instructions to set up networking for Storage Spaces Direct, see the [Windows Server 2016 and 2019 RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 
 ## Step 3: Configure Storage Spaces Direct
 
@@ -199,7 +200,7 @@ In this step, you'll run the cluster validation tool to ensure that the server n
 Use the following PowerShell command to validate a set of servers for use as a Storage Spaces Direct cluster.
 
 ```PowerShell
-Test-Cluster –Node <MachineName1, MachineName2, MachineName3, MachineName4> –Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
+Test-Cluster -Node <MachineName1, MachineName2, MachineName3, MachineName4> -Include "Storage Spaces Direct", "Inventory", "Network", "System Configuration"
 ```
 
 ### Step 3.3: Create the cluster
@@ -209,17 +210,17 @@ In this step, you'll create a cluster with the nodes that you have validated for
 When creating the cluster, you'll get a warning that states - "There were issues while creating the clustered role that may prevent it from starting. For more information, view the report file below." You can safely ignore this warning. It's due to no disks being available for the cluster quorum. Its recommended that a file share witness or cloud witness is configured after creating the cluster.
 
 > [!Note]
-> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:–StaticAddress &lt;X.X.X.X&gt;.
+> If the servers are using static IP addresses, modify the following command to reflect the static IP address by adding the following parameter and specifying the IP address:-StaticAddress &lt;X.X.X.X&gt;.
 > In the following command the ClusterName placeholder should be replaced with a netbios name that is unique and 15 characters or less.
 > ```PowerShell
-> New-Cluster –Name <ClusterName> –Node <MachineName1,MachineName2,MachineName3,MachineName4> –NoStorage
+> New-Cluster -Name <ClusterName> -Node <MachineName1,MachineName2,MachineName3,MachineName4> -NoStorage
 > ```
 
 After the cluster is created, it can take time for DNS entry for the cluster name to be replicated. The time is dependent on the environment and DNS replication configuration. If resolving the cluster isn't successful, in most cases you can be successful with using the machine name of a node that is an active member of the cluster may be used instead of the cluster name.
 
 ### Step 3.4: Configure a cluster witness
 
-We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. 
+We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness.
 
 For more info, see the following topics:
 
@@ -239,7 +240,7 @@ After creating the cluster, use the `Enable-ClusterStorageSpacesDirect` PowerShe
 From the management system, in a PowerShell command windows opened with Administrator privileges, initiate the following command. The cluster name is the name of the cluster that you created in the previous steps. If this command is run locally on one of the nodes, the -CimSession parameter is not necessary.
 
 ```PowerShell
-Enable-ClusterStorageSpacesDirect –CimSession <ClusterName>
+Enable-ClusterStorageSpacesDirect -CimSession <ClusterName>
 ```
 
 To enable Storage Spaces Direct using the above command, you can also use the node name instead of the cluster name. Using the node name may be more reliable due to DNS replication delays that may occur with the newly created cluster name.
@@ -250,7 +251,7 @@ When this command is finished, which may take several minutes, the system will b
 
 We recommend using the `New-Volume` cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
+For more information, check out [Creating volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes).
 
 ### Step 3.7: Optionally enable the CSV cache
 
@@ -271,7 +272,7 @@ $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
 
-For more info, see [Using the CSV in-memory read cache](csv-cache.md).
+For more info, see [Using the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache).
 
 ### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
@@ -291,19 +292,19 @@ The next step in setting up the cluster services for your file server is creatin
 
 #### To create a Scale-Out File Server role by using Server Manager
 
-1.  In Failover Cluster Manager, select the cluster, go to **Roles**, and then click **Configure Role…**.<br>The High Availability Wizard appears.
-2.  On the **Select Role** page, click **File Server**.
-3.  On the **File Server Type** page, click **Scale-Out File Server for application data**.
-4.  On the **Client Access Point** page, type a name for the Scale-Out File Server.
-5.  Verify that the role was successfully set up by going to **Roles** and confirming that the **Status** column shows **Running** next to the clustered file server role you created, as shown in Figure 1.
+1. In Failover Cluster Manager, select the cluster, go to **Roles**, and then click **Configure Role…**.<br>The High Availability Wizard appears.
+2. On the **Select Role** page, click **File Server**.
+3. On the **File Server Type** page, click **Scale-Out File Server for application data**.
+4. On the **Client Access Point** page, type a name for the Scale-Out File Server.
+5. Verify that the role was successfully set up by going to **Roles** and confirming that the **Status** column shows **Running** next to the clustered file server role you created, as shown in Figure 1.
 
-    ![Screenshot of Failover Cluster Manager showing the Scale-Out File Server](media\Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016\SOFS_in_FCM.png "Failover Cluster Manager showing the Scale-Out File Server")
+   ![Screenshot of Failover Cluster Manager showing the Scale-Out File Server](media/Hyper-converged-solution-using-Storage-Spaces-Direct-in-Windows-Server-2016/SOFS_in_FCM.png "Failover Cluster Manager showing the Scale-Out File Server")
 
-     **Figure 1** Failover Cluster Manager showing the Scale-Out File Server with the Running status
+    **Figure 1** Failover Cluster Manager showing the Scale-Out File Server with the Running status
 
 > [!NOTE]
->  After creating the clustered role, there might be some network propagation delays that could prevent you from creating file shares on it for a few minutes, or potentially longer.  
-  
+>  After creating the clustered role, there might be some network propagation delays that could prevent you from creating file shares on it for a few minutes, or potentially longer.
+
 #### To create a Scale-Out File Server role by using Windows PowerShell
 
  In a Windows PowerShell session that's connected to the file server cluster, enter the following commands to create the Scale-Out File Server role, changing *FSCLUSTER* to match the name of your cluster, and *SOFS* to match the name you want to give the Scale-Out File Server role:
@@ -319,14 +320,14 @@ Add-ClusterScaleOutFileServerRole -Name SOFS -Cluster FSCLUSTER
 
 After you've created your virtual disks and added them to CSVs, it's time to create file shares on them - one file share per CSV per virtual disk. System Center Virtual Machine Manager (VMM) is probably the handiest way to do this because it handles permissions for you, but if you don't have it in your environment, you can use Windows PowerShell to partially automate the deployment.
 
-Use the scripts included in the [SMB Share Configuration for Hyper-V Workloads](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
+Use the scripts included in the [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) script, which partially automates the process of creating groups and shares. It's written for Hyper-V workloads, so if you're deploying other workloads, you might have to modify the settings or perform additional steps after you create the shares. For example, if you're using Microsoft SQL Server, the SQL Server service account must be granted full control on the share and the file system.
 
 > [!NOTE]
 >  You'll have to update the group membership when you add cluster nodes unless you use System Center Virtual Machine Manager to create your shares.
 
 To create file shares by using PowerShell scripts, do the following:
 
-1. Download the scripts included in [SMB Share Configuration for Hyper-V Workloads](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) to one of the nodes of the file server cluster.
+1. Download the scripts included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a) to one of the nodes of the file server cluster.
 2. Open a Windows PowerShell session with Domain Administrator credentials on the management system, and then use the following script to create an Active Directory group for the Hyper-V computer objects, changing the values for the variables as appropriate for your environment:
 
     ```PowerShell
@@ -351,8 +352,7 @@ To create file shares by using PowerShell scripts, do the following:
 
     # Start of the script itself
     CD $ScriptFolder
-    Get-ClusterSharedVolume -Cluster $StorageClusterName | ForEach-Object
-    {
+    Get-ClusterSharedVolume -Cluster $StorageClusterName | ForEach-Object {
         $ShareName = $SharePrefix + $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume")
         Write-host "Creating share $ShareName on "$_.name "on Volume: " $_.SharedVolumeInfo.friendlyvolumename
         .\FileShareSetup.ps1 -HyperVClusterName $StorageClusterName -CSVVolumeNumber $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume") -ScaleOutFSName $SOFSName -ShareName $ShareName -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName
@@ -361,7 +361,7 @@ To create file shares by using PowerShell scripts, do the following:
 
 ### Step 4.3 Enable Kerberos constrained delegation
 
-To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in [SMB Share Configuration for Hyper-V Workloads](http://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a). Here's a little wrapper for the script:
+To setup Kerberos constrained delegation for remote scenario management and increased Live Migration security, from one of the storage cluster nodes, use the KCDSetup.ps1 script included in [SMB Share Configuration for Hyper-V Workloads](https://gallery.technet.microsoft.com/SMB-Share-Configuration-4a36272a). Here's a little wrapper for the script:
 
 ```PowerShell
 $HyperVClusterName = "Compute01"
@@ -372,15 +372,11 @@ CD $ScriptFolder
 .\KCDSetup.ps1 -HyperVClusterName $HyperVClusterName -ScaleOutFSName $ScaleOutFSName -EnableLM
 ```
 
-## Next steps
+## Additional References
 
-After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/library/dn894707.aspx).
-
-## See also
-
--   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
--   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
--   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
--   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
+-   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+-   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
+-   [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
+-   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
--   [To RDMA, or not to RDMA – that is the question](https://blogs.technet.microsoft.com/filecab/2017/03/27/to-rdma-or-not-to-rdma-that-is-the-question/) (TechNet blog)
+-   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

@@ -1,19 +1,18 @@
 ---
+description: "Learn more about: Initialize the HGS cluster using TPM mode in an existing bastion forest"
 title: Initialize the HGS cluster using TPM mode in a bastion forest
-ms.custom: na
-ms.prod: windows-server-threshold
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.technology: security-guarded-fabric
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using TPM mode in an existing bastion forest
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
+To initialize the HGS cluster using TPM mode in an existing bastion forest, follow the steps below. Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
@@ -36,7 +35,9 @@ Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersG
 
 If you are using certificates installed on the local machine (such as HSM-backed certificates and non-exportable certificates), use the `-SigningCertificateThumbprint` and `-EncryptionCertificateThumbprint` parameters instead.
 
+In a production environment, you should continue to [add additional HGS nodes to your cluster](guarded-fabric-configure-additional-hgs-nodes.md).
+
 ## Next step
 
->[!div class="nextstepaction"]
-[Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
+> [!div class="nextstepaction"]
+> [Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)

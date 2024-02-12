@@ -1,10 +1,8 @@
 ---
 title: Customize the RDS title “Work Resources” using PowerShell on Windows Server
 description: Provides description of how to change workspace name from default in Windows Server.
-ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 10/26/2017  
+ms.date: 10/26/2017
 ms.topic: article
 author: Heidilohr
 ---
@@ -22,7 +20,7 @@ Next, use the Set-RDWorkspace command to change the workspace name.
 
 ```powershell
     Set-RDWorkspace [-Name] <string> [-ConnectionBroker <string>]  [<CommonParameters>]
-```   
+```
 
 For example, you can use the following command to change the workpsace name to "Contoso RemoteApps":
 
@@ -36,4 +34,4 @@ If you are running multiple Connection Brokers in High Availability mode, you mu
     Set-RDWorkspace -Name "Contoso RemoteApps" -ConnectionBroker (Get-RDConnectionBrokerHighAvailability).ActiveManagementServer
 ```
 
-For more information about the Set-RDWorkspace cmdlet, see the [Set-RDSWorkspace](https://docs.microsoft.com/powershell/module/remotedesktop/set-rdworkspace?view=win10-ps) reference.
+For more information about the Set-RDWorkspace cmdlet, see the [Set-RDSWorkspace](/powershell/module/remotedesktop/set-rdworkspace) reference.

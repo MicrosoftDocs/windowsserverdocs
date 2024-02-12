@@ -1,30 +1,14 @@
 ---
-title: What's new for Remote Desktop on iOS?
-description: Learn about recent changes to the Remote Desktop client for iOS
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
-ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 06/20/2018
-ms.localizationpriority: medium
+title: What's new in the Remote Desktop client for iOS and iPadOS - Remote Desktop Services
+description: Learn about recent changes to the Remote Desktop client for iOS and iPadOS
+ms.topic: conceptual
+author: heidilohr
+ms.author: helohr
+ms.date: 01/04/2023
 ---
-# What's new for the Remote Desktop client on iOS?
 
-We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), adding new features and fixing issues. Check out the latest updates below.
+# What's new in the Remote Desktop client for iOS and iPadOS
 
-## Updates for version 8.1.42
-*Published date: 06/20/2018*
+In this article you'll learn about the latest updates for the Remote Desktop client for iOS and iPadOS. To learn more about using the Remote Desktop client for iOS and iPadOS with Remote Desktop Services, see [Get started with the iOS client](remote-desktop-ios.md).
 
-- Bug fixes and performance improvements.
-
-## Updates for version 8.1.41
-*Published date: 03/28/2018*
-
-- Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
- 
+[!INCLUDE [include-whats-new-client-ios-ipados](~/../_azuredocs/articles/virtual-desktop/includes/include-whats-new-client-ios-ipados.md)]

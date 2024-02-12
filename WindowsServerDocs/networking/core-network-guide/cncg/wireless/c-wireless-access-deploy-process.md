@@ -1,17 +1,16 @@
 ---
 title: Wireless Access Deployment Process
-description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
+description: Learn about the five stages used in the process to deploy wireless access.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: 2555f238-926e-4b20-9bfb-9774831062da
-author: shortpatti
-ms.author: pashort
+author: JasonGerend
+ms.author: jgerend
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Process
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The process that you use to deploy wireless access occurs in these stages:
 

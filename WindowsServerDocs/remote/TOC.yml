@@ -1,0 +1,582 @@
+- name: Remote
+  href: index.yml
+  items:
+  - name: MultiPoint Services
+    href: multipoint-services/MultiPoint-Services.md
+    items:
+    - name: Planning a MultiPoint Services Deployment
+      href: multipoint-services/Planning-a-MultiPoint-Services-Deployment.md
+      items:
+      - name: Introducing MultiPoint Services
+        href: multipoint-services/Introducing-MultiPoint-services.md
+      - name: Getting started with MultiPoint Services
+        href: multipoint-services/getting-started-with-MultiPoint-services.md
+      - name: Common Usage Scenarios
+        href: multipoint-services/Common-MultiPoint-services-Usage-Scenarios.md
+      - name: MultiPoint Stations
+        href: multipoint-services/MultiPoint-services-Stations.md
+      - name: Selecting Hardware for Your MultiPoint Services System
+        href: multipoint-services/select-hardware-mps.md
+      - name: Hardware Requirements and Performance Recommendations
+        href: multipoint-services/hardware-and-performance-recommendations.md
+        items:
+        - name: Variables Affecting MultiPoint Services System Performance
+          href: multipoint-services/Variables-Affecting-MultiPoint-services-System-Performance.md
+      - name: MultiPoint Services Site Planning
+        href: multipoint-services/MultiPoint-services-Site-Planning.md
+      - name: Network Considerations and User Accounts
+        href: multipoint-services/Network-Considerations-and-User-Accounts.md
+      - name: Storing Files with MultiPoint Services
+        href: multipoint-services/Storing-Files-with-MultiPoint-services.md
+      - name: Protecting the System volume with Disk Protection
+        href: multipoint-services/Protecting-the-System-volume-with-Disk-Protection.md
+      - name: MultiPoint Services Virtualization Support
+        href: multipoint-services/MultiPoint-services-Virtualization-Support.md
+      - name: Application Considerations
+        href: multipoint-services/Application-Considerations.md
+      - name: Predeployment Checklist
+        href: multipoint-services/Predeployment-Checklist.md
+      - name: Glossary
+        href: multipoint-services/Glossary.md
+    - name: Migrate MultiPoint Services
+      href: multipoint-services/multipoint-services-migrate.md
+      items:
+      - name: Prepare to migrate to MultiPoint Services
+        href: multipoint-services/multipoint-services-migration-preparation.md
+      - name: Planning worksheet for your migration
+        href: multipoint-services/multipoint-services-migration-worksheet.md
+      - name: Migrate to MultiPoint Services
+        href: multipoint-services/multipoint-services-migration-steps.md
+      - name: Post-migration tasks
+        href: multipoint-services/multipoint-services-post-migration-steps.md
+    - name: Deploying MultiPoint Services
+      href: multipoint-services/Deploying-MultiPoint-Services.md
+      items:
+      - name: Deploy a new MultiPoint Services System
+        href: multipoint-services/Deploy-a-new-MultiPoint-services-system.md
+        items:
+        - name: Collect hardware and device drivers needed for the installation
+          href: multipoint-services/multipoint-hardware-device-drivers.md
+        - name: Set up the physical computer and primary station
+          href: multipoint-services/Set-up-the-physical-computer-and-primary-station.md
+        - name: Install MultiPoint Services
+          href: multipoint-services/Install-MultiPoint-services.md
+        - name: Update and install device drivers if needed
+          href: multipoint-services/Update-and-install-device-drivers-if-needed.md
+        - name: Set the date, time, and time zone
+          href: multipoint-services/set-the-date-time.md
+        - name: Join the MultiPoint Server to a domain (optional)
+          href: multipoint-services/join-multipoint-services-to-a-domain.md
+        - name: Install updates
+          href: multipoint-services/Install-updates.md
+        - name: attach additional stations to your MultiPoint server
+          href: multipoint-services/multipoint-attach-additional-stations.md
+          items:
+          - name: Set up a direct-video-connected station
+            href: multipoint-services/Set-up-a-direct-video-connected-station-in-MultiPoint-services.md
+          - name: Set up a USB zero client-connected station
+            href: multipoint-services/Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services.md
+          - name: Set up an RDP-over-LAN connected station
+            href: multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md
+        - name: Manage Client Access Licenses (CAL) with MultiPoint Services
+          href: multipoint-services/manage-client-access-licenses.md
+        - name: Install software on your MultiPoint Services System
+          href: multipoint-services/install-software-on-multipoint.md
+      - name: Optional configuration tasks for a MultiPoint Services deployment
+        href: multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md
+        items:
+        - name: Set up a split-screen station
+          href: multipoint-services/Set-up-a-split-screen-station-in-multipoint-services.md
+        - name: Add printers
+          href: multipoint-services/add-printers.md
+        - name: Create Windows 10 Enterprise virtual desktops for stations
+          href: multipoint-services/Create-Windows-10-Enterprise-virtual-desktops-for-stations.md
+      - name: Prepare your MultiPoint Services System for users
+        href: multipoint-services/Prepare-your-MultiPoint-services-system-for-users.md
+        items:
+        - name: Plan user accounts for your MultiPoint Services environment
+          href: multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment.md
+        - name: 'Example scenarios: MultiPoint Services user accounts'
+          href: multipoint-services/multipoint-users-scenario.md
+        - name: Create local user accounts
+          href: multipoint-services/create-local-user-accounts.md
+        - name: Limit users' access to the MultiPoint server
+          href: multipoint-services/limit-user-access-to-multipoint.md
+        - name: Configure stations for automatic logon
+          href: multipoint-services/Configure-stations-for-automatic-logon.md
+        - name: Allow one account to have multiple sessions
+          href: multipoint-services/Allow-one-account-to-have-multiple-sessions.md
+        - name: Enable file sharing in MultiPoint Services
+          href: multipoint-services/Enable-file-sharing-in-multipoint-services.md
+      - name: System administration in MultiPoint Services
+        href: multipoint-services/System-administration-in-multipoint-services.md
+        items:
+        - name: Configure Disk Protection in MultiPoint Services
+          href: multipoint-services/Configure-Disk-Protection-in-MultiPoint-services.md
+        - name: Install Server Backup on your MultiPoint system
+          href: multipoint-services/install-server-backup-on-multiPoint.md
+        - name: Configure group policies for a domain deployment
+          href: multipoint-services/Configure-group-policies-for-a-domain-deployment.md
+    - name: Managing MultiPoint Services
+      href: multipoint-services/Managing-MultiPoint-Services.md
+      items:
+      - name: Managing Your MultiPoint Services System
+        href: multipoint-services/Managing-Your-MultiPoint-Services-System.md
+        items:
+        - name: Privacy and Security Considerations
+          href: multipoint-services/Privacy-and-Security-Considerations.md
+      - name: Manage Station Hardware
+        href: multipoint-services/Manage-Station-Hardware.md
+        items:
+        - name: View Hardware Status
+          href: multipoint-services/View-Hardware-Status.md
+        - name: Work with USB Devices
+          href: multipoint-services/Work-with-USB-Devices.md
+        - name: Work with Video Devices
+          href: multipoint-services/Work-with-Video-Devices.md
+        - name: Set Up a Station
+          href: multipoint-services/Set-Up-a-Station.md
+      - name: Manage System Tasks Using MultiPoint Manager
+        href: multipoint-services/Manage-System-Tasks-Using-MultiPoint-Manager.md
+        items:
+        - name: Edit Server Settings
+          href: multipoint-services/edit-Server-Settings.md
+        - name: Restart or Shut Down MultiPoint Systems
+          href: multipoint-services/Restart-or-Shut-Down-MultiPoint-Systems.md
+        - name: Switch Between modes
+          href: multipoint-services/Switch-Between-modes.md
+        - name: Enable or Disable Disk Protection
+          href: multipoint-services/Enable-or-Disable-Disk-Protection.md
+        - name: Manage Client Access Licenses
+          href: multipoint-services/Manage-Client-Access-Licenses.md
+        - name: Remap All Stations
+          href: multipoint-services/remap-All-Stations.md
+        - name: Save Connection Settings to File
+          href: multipoint-services/Save-Connection-Settings-to-File.md
+        - name: Add or remove computers
+          href: multipoint-services/add-or-remove-computers.md
+      - name: Manage User Stations
+        href: multipoint-services/Manage-User-Stations.md
+        items:
+        - name: View User Connection Status
+          href: multipoint-services/View-User-Connection-Status.md
+        - name: Log off or Disconnect User Sessions
+          href: multipoint-services/Log-off-or-Disconnect-User-Sessions.md
+        - name: Suspend and Leave User Session active
+          href: multipoint-services/Suspend-and-Leave-User-Session-active.md
+        - name: End a User Session
+          href: multipoint-services/End-a-User-Session.md
+        - name: Set up a Station for Automatic Logon
+          href: multipoint-services/Set-up-a-Station-for-Automatic-Logon.md
+        - name: Split a User Station
+          href: multipoint-services/Split-a-User-Station.md
+      - name: Manage User Accounts
+        href: multipoint-services/Manage-User-Accounts.md
+        items:
+        - name: User Account Considerations
+          href: multipoint-services/User-Account-Considerations.md
+        - name: Create an Administrative User Account
+          href: multipoint-services/create-an-Administrative-User-Account.md
+        - name: Create a Standard User Account
+          href: multipoint-services/create-a-Standard-User-Account.md
+        - name: Create a MultiPoint Dashboard User Account
+          href: multipoint-services/create-a-MultiPoint-Dashboard-User-Account.md
+        - name: Update or delete a User Account
+          href: multipoint-services/Update-or-delete-a-User-Account.md
+      - name: Manage Virtual Desktops
+        href: multipoint-services/Manage-Virtual-Desktops.md
+      - name: Manage User Files
+        href: multipoint-services/Manage-User-Files.md
+        items:
+        - name: Keep Files Private
+          href: multipoint-services/Keep-Files-Private.md
+        - name: Share Files
+          href: multipoint-services/Share-Files.md
+        - name: Save and Share Files on a USB Flash Drive
+          href: multipoint-services/Save-and-Share-Files-on-a-USB-Flash-Drive.md
+      - name: Manage User Desktops Using MultiPoint Dashboard
+        href: multipoint-services/Manage-User-Desktops-Using-MultiPoint-Dashboard.md
+        items:
+        - name: Block or Unblock a Station
+          href: multipoint-services/Block-or-Unblock-a-Station.md
+        - name: Limit Web Access
+          href: multipoint-services/Limit-Web-Access.md
+        - name: Block or Unblock USB Storage
+          href: multipoint-services/Block-or-Unblock-USB-Storage.md
+        - name: Project a Station to Other Stations
+          href: multipoint-services/Project-a-Station-to-Other-Stations.md
+        - name: Launch or Close Applications on a Station
+          href: multipoint-services/Launch-or-Close-Applications-on-a-Station.md
+        - name: Use IM
+          href: multipoint-services/Use-IM.md
+        - name: Take Control of a User Session
+          href: multipoint-services/Take-Control-of-a-User-Session.md
+        - name: View Options for Session Thumbnails in MultiPoint Dashboard
+          href: multipoint-services/View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md
+        - name: Log Off User Sessions
+          href: multipoint-services/Log-Off-User-Sessions.md
+      - name: Manage MultiPoint Systems Using MultiPoint Dashboard
+        href: multipoint-services/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md
+        items:
+        - name: Restart or Shut Down
+          href: multipoint-services/Restart-or-Shut-Down.md
+        - name: Remap selected MultiPoint Systems
+          href: multipoint-services/remap-selected-MultiPoint-Systems.md
+  - name: Remote Server Administration Tools
+    href: remote-server-administration-tools.md
+  - name: Remote Desktop Services
+    href: remote-desktop-services/welcome-to-rds.md
+  - name: Remote Access
+    items:
+    - name: Overview
+      items:
+      - name: About Remote Access
+        href: remote-access/remote-Access.md
+      - name: About Always On VPN
+        href: remote-access/overview-always-on-vpn.md
+      - name: About DirectAccess
+        href: remote-access/directaccess/directAccess.md
+      - name: About RAS Gateway
+        href: remote-access/ras-gateway/RAS-Gateway.md
+    - name: Getting started
+      items:
+      - name: Install Remote Access as a VPN Server
+        href: remote-access/get-started-install-ras-as-vpn.md
+    - name: Tutorials
+      items:
+      - name: Deploy Always on VPN
+        items:
+        - name: 1- Set up infrastructure for Always On VPN
+          href: remote-access/tutorial-aovpn-deploy-setup.md
+        - name: 2- Configure Always On VPN certificates
+          href: remote-access/tutorial-aovpn-deploy-create-certificates.md
+        - name: 3- Deploy Always On VPN profile for Windows clients
+          href: remote-access/tutorial-aovpn-deploy-configure-client.md
+      - name: Migrate from Direct Access to Always on VPN
+        items:
+        - name: Overview of DirectAccess to Always On VPN migration
+          href: remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md
+        - name: Plan DirectAccess to Always On VPN migration
+          href: remote-access/da-always-on-vpn-migration/da-always-on-migration-planning.md
+        - name: Deploy DirectAccess to Always On VPN migration
+          href: remote-access/da-always-on-vpn-migration/da-always-on-migration-deploy.md
+      - name: DirectAccess
+        items:
+        - name: DirectAccess offline Domain Join
+          href: remote-access/directaccess/directAccess-offline-Domain-Join.md
+        - name: Deploy a Single DirectAccess Server Using the Getting started Wizard
+          href: remote-access/directaccess/single-server-wizard/Deploy-a-Single-directAccess-Server-Using-the-Getting-started-Wizard.md
+          items:
+          - name: Plan a Basic DirectAccess Deployment
+            href: remote-access/directaccess/single-server-wizard/Plan-a-Basic-directAccess-Deployment.md
+            items:
+            - name: 'Step 1: Plan the Basic DirectAccess Infrastructure'
+              href: remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure.md
+            - name: 'Step 2: Plan the Basic DirectAccess Deployment'
+              href: remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment.md
+          - name: Install and Configure Basic DirectAccess
+            href: remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-directAccess.md
+            items:
+            - name: 'Step 1: Configure the Basic DirectAccess Infrastructure'
+              href: remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure.md
+            - name: 'Step 2: Configure the Basic DirectAccess Server'
+              href: remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server.md
+            - name: 'Step 3: verify Basic DirectAccess Deployments'
+              href: remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify.md
+        - name: Deploy a Single DirectAccess Server with Advanced Settings
+          href: remote-access/directaccess/single-server-advanced/Deploy-a-Single-directAccess-Server-with-Advanced-Settings.md
+          items:
+          - name: Plan an Advanced DirectAccess Deployment
+            href: remote-access/directaccess/single-server-advanced/Plan-an-Advanced-directAccess-Deployment.md
+            items:
+            - name: 'Step 1: Plan the Advanced DirectAccess Infrastructure'
+              href: remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure.md
+            - name: 'Step 2: Plan Advanced DirectAccess Deployments'
+              href: remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments.md
+          - name: Install and Configure Advanced DirectAccess
+            href: remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-directAccess.md
+            items:
+            - name: 'Step 1: Configure Advanced DirectAccess Infrastructure'
+              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure.md
+            - name: 'Step 2: Configure Advanced DirectAccess Servers'
+              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers.md
+            - name: 'Step 3: verify the Advanced DirectAccess Deployment'
+              href: remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
+        - name: Add DirectAccess to an Existing Remote Access (VPN) Deployment
+          href: remote-access/directaccess/add-to-existing-vpn/add-directAccess-to-an-Existing-remote-Access-VPN-Deployment.md
+          items:
+          - name: Plan to Enable DirectAccess
+            href: remote-access/directaccess/add-to-existing-vpn/Plan-to-Enable-directAccess.md
+            items:
+            - name: 'Step 1: Plan DirectAccess Infrastructure'
+              href: remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn.md
+            - name: 'Step 2: Plan the DirectAccess Deployment'
+              href: remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md
+          - name: Enable DirectAccess
+            href: remote-access/directaccess/add-to-existing-vpn/Enable-directAccess.md
+            items:
+            - name: 'Step 1: Configure the DirectAccess Infrastructure'
+              href: remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md
+            - name: 'Step 2: Configure the DirectAccess-VPN Server'
+              href: remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md
+            - name: 'Step 3: Verify the Deployment'
+              href: remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md
+        - name: Deploy DirectAccess Remote Client Management
+          href: remote-access/ras/manage-remote-access.md
+        - name: Deploy Remote Access in an Enterprise
+          href: remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md
+        - name: Deploy Remote Access in a Load Balancing Cluster
+          href: remote-access/ras/cluster/Deploy-remote-Access-In-Cluster.md
+          items:
+          - name: Plan a Remote Access Cluster Deployment
+            href: remote-access/ras/cluster/plan/Plan-a-remote-Access-Cluster-Deployment.md
+            items:
+            - name: 'Step 1: Plan an Advanced Single-Server Deployment'
+              href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
+            - name: 'Step 2: Plan Cluster Servers'
+              href: remote-access/ras/cluster/plan/Step-2-Plan-Cluster-Servers.md
+            - name: 'Step 3: Plan a Load-Balanced Cluster Deployment'
+              href: remote-access/ras/cluster/plan/Step-3-Plan-a-Load-Balanced-Cluster-Deployment.md
+          - name: Configure a Remote Access Cluster
+            href: remote-access/ras/cluster/configure/Configure-a-remote-Access-Cluster.md
+            items:
+            - name: 'Step 1: Implement a Single-Server Remote Access Deployment'
+              href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
+            - name: 'Step 2: Prepare Cluster Servers'
+              href: remote-access/ras/cluster/configure/Step-2-Prepare-Cluster-Servers.md
+            - name: 'Step 3: Configure a Load-Balanced Cluster'
+              href: remote-access/ras/cluster/configure/Step-3-Configure-a-Load-Balanced-Cluster.md
+            - name: 'Step 4: Verify the Cluster'
+              href: remote-access/ras/cluster/configure/Step-4-verify-the-Cluster.md
+          - name: Deploy Multiple Remote Access Servers in a Multisite Deployment
+            href: remote-access/ras/multisite/Deploy-Multiple-remote-Access-Servers-in-a-Multisite-Deployment.md
+            items:
+            - name: Plan a Multisite Deployment
+              href: remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment.md
+              items:
+              - name: 'Step 1: Plan an Advanced Single Server Deployment'
+                href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
+              - name: 'Step 2: Plan the Multisite Infrastructure'
+                href: remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure.md
+              - name: 'Step 3: Plan the Multisite Deployment'
+                href: remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment.md
+            - name: Configure a Multisite Deployment
+              href: remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment.md
+              items:
+              - name: 'Step 1: Implement a Single Server Remote Access Deployment'
+                href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
+              - name: 'Step 2: Configure the Multisite Infrastructure'
+                href: remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure.md
+              - name: 'Step 3: Configure the Multisite Deployment'
+                href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
+              - name: 'Step 4: Verify the Multisite Deployment'
+                href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
+          - name: Deploy Remote Access in a Multi-forest Environment
+            href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
+            items:
+            - name: Plan a Multi-forest Deployment
+              href: remote-access/ras/multi-forest/Plan-a-Multi-forest-Deployment.md
+            - name: Configure a Multi-forest Deployment
+              href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md
+        - name: Use Remote Access Monitoring and Accounting
+          href: remote-access/ras/monitoring-and-accounting/Use-remote-Access-Monitoring-and-Accounting.md
+          items:
+          - name: Monitor the existing load on the Remote Access server
+            href: remote-access/ras/monitoring-and-accounting/Monitor-the-existing-load-on-the-remote-Access-server.md
+          - name: Monitor the configuration distribution status of the Remote Access server
+            href: remote-access/ras/monitoring-and-accounting/Monitor-the-configuration-distribution-status-of-the-remote-Access-server.md
+          - name: Monitor the operations status of the Remote Access server and its components
+            href: remote-access/ras/monitoring-and-accounting/Monitor-the-operations-status-of-the-remote-Access-server-and-its-components.md
+          - name: Identify and resolve Remote Access server operations problems
+            href: remote-access/ras/monitoring-and-accounting/Identify-and-resolve-remote-Access-server-operations-problems.md
+          - name: Monitor connected remote clients for activity and status
+            href: remote-access/ras/monitoring-and-accounting/Monitor-connected-remote-clients-for-activity-and-status.md
+          - name: Generate a usage report for remote clients using historical data
+            href: remote-access/ras/monitoring-and-accounting/Generate-a-usage-report-for-remote-clients-using-historical-data.md
+        - name: Manage DirectAccess Clients Remotely
+          href: remote-access/ras/manage-remote-clients/Manage-directAccess-Clients-remotely.md
+          items:
+          - name: Plan Deployment for Remote Management of DirectAccess Clients
+            href: remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-remote-Management-of-directAccess-Clients.md
+            items:
+            - name: 'Step 1: Plan the Remote Access Infrastructure'
+              href: remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-remote-Access-Infrastructure.md
+            - name: 'Step 2: Plan the Remote Access Deployment'
+              href: remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-remote-Access-Deployment.md
+          - name: Install and Configure Deployment for remote Management of DirectAccess Clients
+            href: remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-remote-Management-of-directAccess-Clients.md
+            items:
+            - name: 'Step 1: Configure the Remote Access Infrastructure'
+              href: remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md
+            - name: 'Step 2: Configure the Remote Access Server'
+              href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
+            - name: 'Step 3: Verify the Deployment'
+              href: remote-access/ras/manage-remote-clients/install/Step-3-Verify-the-Deployment_2.md
+          - name: Publishing Applications using AD FS Preauthentication
+            href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
+          - name: Publishing Applications with SharePoint, Exchange and RDG
+            href: remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md
+    - name: How-to Guides
+      items:
+      - name: Always On VPN
+        items:
+        - name: Deploy Always On VPN profile to Windows clients with Microsoft InTune
+          href: remote-access/how-to-aovpn-client-intune.md
+        - name: Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager
+          href: remote-access/how-to-aovpn-client-config-mgr.md
+        - name: Configure Always on VPN Conditional Access using Microsoft Entra ID
+          href: remote-access/how-to-aovpn-conditional-access.md
+        - name: Configure Always On VPN Conditional Access using NPS
+          href: remote-access/how-to-always-on-vpn-conditional-access-network-policy-server.md
+        - name: Block VPN clients that use a revoked certificate
+          href: remote-access/how-to-always-on-vpn-block-clients-revoked-certificates.md
+      - name: Virtual Private Networking (VPN)
+        items:
+        - name: Configure VPN device tunneling
+          href: remote-access/vpn/vpn-device-tunnel-config.md
+        - name: How to configure Diffie Hellman protocol over IKEv2 VPN connections
+          href: /windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        - name: How to use single sign-on (SSO) over VPN and Wi-Fi connections
+          href: /windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+    - name: Concepts
+      items:
+      - name: DirectAccess
+        items:
+        - name: Direct Access Prerequisites
+          href: remote-access/directaccess/prerequisites-for-deploying-directaccess.md
+        - name: DirectAccess Unsupported configurations
+          href: remote-access/directaccess/directAccess-Unsupported-Configurations.md
+        - name: Direct Access Capacity Planning
+          href: remote-access/directaccess/directAccess-Capacity-Planning.md
+        - name: Direct Access deployment paths
+          href: remote-access/directaccess/directaccess-deployment-paths-in-windows-server.md
+      - name: RAS Gateway
+        items:
+        - name: GRE Tunneling in Windows Server
+          href: remote-access/ras-gateway/gre-tunneling-windows-server.md
+        - name: RAS Gateway GRE Tunnel Throughput and Performance
+          href: remote-access/ras-gateway/RAS-Gateway-GRE-Perf.md
+        - name: RAS Gateway for Software Defined Networking
+          href: /azure-stack/hci/concepts/gateway-overview
+      - name: Routing
+        items:
+        - name: Network Address Translation (NAT) routers
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957896(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        - name: LAN routers running Border Gateway Protocol (BGP)
+          href: remote-access/bgp/border-gateway-protocol-bgp.md
+        - name: Routing Information Protocol (RIP)
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957940(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        - name: Multicast-capable routers using Internet Group Management Protocol (IGMP)
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957920(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        - name: Demand-dial routing
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957968(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        - name: Unicast IP Routing
+          href: /previous-versions/windows/it-pro/windows-2000-server/cc957899(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+      - name: Web Application Proxy
+        href: remote-access/web-application-proxy/web-app-proxy-windows-server.md
+    - name: Troubleshooting
+      items: 
+      - name: DirectAccess Known Issues
+        href: remote-access/directaccess/directAccess-Known-Issues.md      
+    - name: Reference
+      items:
+      - name: BGP Windows PowerShell Command reference
+        href: remote-access/bgp/BGP-Windows-powershell-Command-Reference.md
+      - name: Remote Access PowerShell Command reference
+        href: /powershell/module/remoteaccess/?view=windowsserver2022-ps&preserve-view=true?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+      - name: Windows VPN technical guide
+        href: /windows/security/identity-protection/vpn/vpn-guide?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+    - name: Resources
+      items:
+      - name: DirectAccess Test Lab Guides
+        items:
+        - name: About DirectAccess Test Lab Guides
+          href: remote-access/directaccess/directAccess-Test-Lab-Guides.md
+        - name: 'Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB'
+          href: remote-access/directaccess/tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-directAccess-in-a-Cluster-with-Windows-NLB.md
+          items:
+          - name: Overview of the DirectAccess Cluster-NLB Test Lab Scenario
+            href: remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-overview.md
+          - name: DirectAccess Cluster-NLB Test Lab Configuration Requirements
+            href: remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-requirements.md
+          - name: Steps for Configuring the DirectAccess Cluster-NLB Test Lab
+            href: remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md
+            items:
+            - name: 'STEP 1: Complete the DirectAccess Configuration'
+              href: remote-access/directaccess/tlg-cluster-nlb/STEP-1-complete-the-directAccess-Configuration.md
+            - name: 'STEP 2: Configure EDGE1'
+              href: remote-access/directaccess/tlg-cluster-nlb/STEP-2-Configure-EDGE1.md
+            - name: 'STEP 3: Install and Configure EDGE2'
+              href: remote-access/directaccess/tlg-cluster-nlb/STEP-3-Install-and-Configure-EDGE2.md
+            - name: 'STEP 4: Create the Network Load Balanced remote Access Cluster'
+              href: remote-access/directaccess/tlg-cluster-nlb/STEP-4-create-the-Network-Load-Balanced-remote-Access-Cluster.md
+            - name: 'STEP 5: Test DirectAccess Connectivity from the Internet and Through the Cluster'
+              href: remote-access/directaccess/tlg-cluster-nlb/STEP-5-Test-directAccess-Connectivity-from-the-Internet-and-Through-the-Cluster.md
+            - name: 'STEP 6: Test DirectAccess Client Connectivity from Behind a Nat Device'
+              href: remote-access/directaccess/tlg-cluster-nlb/STEP-6-Test-directAccess-Client-Connectivity-from-Behind-a-Nat-Device.md
+            - name: 'STEP 7: Test Connectivity When Returning to the Corpnet'
+              href: remote-access/directaccess/tlg-cluster-nlb/STEP-7-Test-Connectivity-When-Returning-to-the-Corpnet.md
+            - name: 'STEP 8: Snapshot the DirectAccess Cluster-NLB Configuration'
+              href: remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot.md
+        - name: 'Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment'
+          href: remote-access/directaccess/tlg-multisite/Test-Lab-Guide-Demonstrate-a-directAccess-Multisite-Deployment.md
+          items:
+          - name: Configuration Requirements
+            href: remote-access/directaccess/tlg-multisite/Configuration-Requirements.md
+          - name: Steps for Configuring the Test Lab
+            href: remote-access/directaccess/tlg-multisite/Steps-for-Configuring-the-Test-Lab-4.md
+            items:
+            - name: 'STEP 1: Complete the DirectAccess Configuration'
+              href: remote-access/directaccess/tlg-multisite/STEP-1-Complete-DirectAccess-Configuration.md
+            - name: 'STEP 2: Install and Configure ROUTER1'
+              href: remote-access/directaccess/tlg-multisite/STEP-2-Install-and-Configure-ROUTER1.md
+            - name: 'STEP 3: Install and Configure CLIENT2'
+              href: remote-access/directaccess/tlg-multisite/STEP-3-Install-and-Configure-CLIENT2.md
+            - name: 'STEP 4: Configure APP1'
+              href: remote-access/directaccess/tlg-multisite/STEP-4-Configure-APP1.md
+            - name: 'STEP 5: Configure DC1'
+              href: remote-access/directaccess/tlg-multisite/STEP-5-Configure-DC1.md
+            - name: 'STEP 6: Install and Configure 2-DC1'
+              href: remote-access/directaccess/tlg-multisite/STEP-6-Install-and-Configure-2-DC1.md
+            - name: 'STEP 7: Install and Configure 2-APP1'
+              href: remote-access/directaccess/tlg-multisite/STEP-7-Install-and-Configure-2-APP1.md
+            - name: 'STEP 8: Configure INET1'
+              href: remote-access/directaccess/tlg-multisite/STEP-8-Configure-INET1.md
+            - name: 'STEP 9: Configure EDGE1'
+              href: remote-access/directaccess/tlg-multisite/STEP-9-Configure-EDGE1.md
+            - name: 'STEP 10: Install and Configure 2-EDGE1'
+              href: remote-access/directaccess/tlg-multisite/STEP-10-Install-and-Configure-2-EDGE1.md
+            - name: 'STEP 11: Configure the Multisite Deployment'
+              href: remote-access/directaccess/tlg-multisite/STEP-11-Configure-the-Multisite-Deployment.md
+            - name: 'STEP 12: Test DirectAccess Connectivity'
+              href: remote-access/directaccess/tlg-multisite/STEP-12-Test-directAccess-Connectivity.md
+            - name: 'STEP 13: Test DirectAccess Connectivity from Behind a Nat Device'
+              href: remote-access/directaccess/tlg-multisite/STEP-13-Test-directAccess-Connectivity-from-Behind-a-Nat-Device.md
+            - name: 'STEP 14: Snapshot the Configuration'
+              href: remote-access/directaccess/tlg-multisite/STEP-14-Snapshot-the-Configuration.md
+        - name: 'Test Lab Guide: Demonstrate DirectAccess with OTP Authentication and RSA SecurID'
+          href: remote-access/directaccess/tlg-otp-securid/Test-Lab-Guide-Demonstrate-directAccess-with-OTP-Authentication-and-RSA-SecurID.md
+          items:
+          - name: Overview of the Test Lab Scenario OTP Authentication and RSA SecurID
+            href: remote-access/directaccess/tlg-multisite/Overview-of-the-Test-Lab-Scenario_4.md
+          - name: Configuration Requirements
+            href: remote-access/directaccess/tlg-multisite/Configuration-Requirements.md
+          - name: Steps for Configuring the Test Lab
+            href: remote-access/directaccess/tlg-otp-securid/Steps-for-Configuring-the-Test-Lab-2.md
+            items:
+            - name: 'STEP 1: complete the DirectAccess Configuration'
+              href: remote-access/directaccess/tlg-otp-securid/STEP-1-complete-the-directAccess-Configuration_5.md
+            - name: 'STEP 2: Configure APP1'
+              href: remote-access/directaccess/tlg-otp-securid/STEP-2-Configure-APP1.md
+            - name: 'STEP 3: Configure DC1'
+              href: remote-access/directaccess/tlg-otp-securid/STEP-3-Configure-DC1.md
+            - name: 'STEP 4: Install and Configure RSA and EDGE1'
+              href: remote-access/directaccess/tlg-otp-securid/STEP-4-Install-and-Configure-RSA-and-EDGE1.md
+            - name: 'STEP 5: Verify OTP Health on EDGE1'
+              href: remote-access/directaccess/tlg-otp-securid/STEP-5-verify-OTP-Health-on-EDGE1.md
+            - name: 'STEP 6: Test DirectAccess Connectivity from the Homenet Subnet'
+              href: remote-access/directaccess/tlg-otp-securid/STEP-6-Test-directAccess-Connectivity-from-the-Homenet-Subnet.md
+            - name: 'STEP 7: Test DirectAccess Connectivity from the Internet'
+              href: remote-access/directaccess/tlg-otp-securid/STEP-7-Test-directAccess-Connectivity-from-the-Internet.md
+      - name: Routing and Remote Access Snap-In
+        href: /previous-versions/windows/it-pro/windows-2000-server/cc957873(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
