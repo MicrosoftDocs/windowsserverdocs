@@ -6,7 +6,7 @@ ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 01/31/2024
+ms.date: 02/12/2024
 ---
 # Protected Users Security Group
 
@@ -26,11 +26,9 @@ Your system must meet the following prerequisites before you can deploy a Protec
 - The domain functional level must be Windows Server 2012 R2 or later. For more information about functional levels, see [Forest and domain functional levels](../../identity/ad-ds/active-directory-functional-levels.md).
 
 > [!NOTE]
-> The built-in domain Administrator, `S-1-5-<domain>-500`, is always exempt from Authentication Policies, even when they're assigned to an Authentication Policy Silo.
+> The built-in domain Administrator, `S-1-5-<domain>-500`, is always exempt from Authentication Policies, even when they're assigned to an Authentication Policy Silo. For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 - Protected Users global security group memberships restrict members to only use Advanced Encryption Standards (AES) for Kerberos. Members of the Protected Users group must be able to authenticate using AES.
-
-- You must replicate the global Protected Users security group across all domain controllers in the account domain.
 
 ## Protections applied by Active Directory
 
@@ -70,8 +68,6 @@ The Protected Users group applies non-configurable settings to TGT expiration fo
 - Maximum lifetime for user ticket renewal
 
 For Protected Users members, the group automatically sets these lifetime limits to 600 minutes. The user can't change this limit unless they leave the group.
-
-For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 ## How the Protected Users group works
 
