@@ -4,7 +4,7 @@ description: Learn about delegated Managed Service Accounts (DMSA) that authenti
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
-ms.date: 01/12/2024
+ms.date: 02/12/2024
 ---
 
 # Delegated Managed Service Accounts overview
@@ -12,7 +12,7 @@ ms.date: 01/12/2024
 > [!IMPORTANT]
 > Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server Insiders Preview that is used to harden overall usage of service accounts within Active Directory (AD). Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. In addition, dMSA can work with Credential Guard (CG), which ensures that device credentials are always isolated and unknown by the user. Using dMSA also prevents harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
+A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server Insiders Preview. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. In addition, dMSA works with Credential Guard (CG) to ensure that device credentials are always isolated in CG and unknown to the user to protect the machine identity used retrieving dMSA tickets. Using dMSA also prevents harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
 
 ## dMSA and gMSA comparison
 
