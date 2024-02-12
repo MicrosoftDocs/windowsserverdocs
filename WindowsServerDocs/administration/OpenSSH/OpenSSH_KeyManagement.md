@@ -103,8 +103,8 @@ Now you have a public/private ed25519 key pair in the location specified. The .p
 ```Output
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
--a----         6/3/2021   2:55 PM            464 ed25519
--a----         6/3/2021   2:55 PM            103 ed25519.pub
+-a----         6/3/2021   2:55 PM            464 id_ed25519
+-a----         6/3/2021   2:55 PM            103 id_ed25519.pub
 ```
 
 Remember that private key files are the equivalent of a password should be protected the same way you protect your password.
