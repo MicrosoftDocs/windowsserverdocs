@@ -16,11 +16,11 @@ In this article, learn about which Remote Desktop Services (RDS) versions can be
 
 ## Supported OS upgrades with RDS role installed
 
-Beginning with Windows Server 2012 R2, you can upgrade to a newer version of Windows Server by two versions at a time. For example, to upgrade to Windows Server 2022 from Windows Server 2012 R2, you would first need to upgrade to Windows Server 2016 or Windows Server 2019.
+You can upgrade to a newer version of Windows Server by two versions at a time. For example, you can upgrade to Windows Server 2022 from Windows Server 2016.
 
 ## Flow for deployment upgrades
 
-In order to keep the downtime to a minimum, use the follow as a guide:
+In order to keep the downtime to a minimum, use the following guide:
 
 1. **RD Connection Broker servers** should be upgraded first. If you have an active/active configuration, remove all but one server from the deployment and perform an in-place upgrade. Perform upgrades on the remaining RD Connection Broker servers offline and then reapply them to the deployment. The deployment isn't available during the RD Connection Broker servers' upgrade.
 

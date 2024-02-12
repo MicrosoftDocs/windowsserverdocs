@@ -113,7 +113,7 @@ Backup-ADFS -StorageType {FileSystem | Azure}
 
 The following list describes the parameter details for the Backup-ADFS cmdlet.
 
-- `BackupDKM`: Backs up the Active Directory DKM container that contains the AD FS keys in the default configuration (automatically generated token signing and decrypting certificates). This approach uses the Azure AD `ldifde` tool to export the Azure AD container and all its subtrees.
+- `BackupDKM`: Backs up the Active Directory DKM container that contains the AD FS keys in the default configuration (automatically generated token signing and decrypting certificates). This approach uses the Microsoft Entra `ldifde` tool to export the Microsoft Entra container and all its subtrees.
 
 - `StorageType <string>`: When the user performs the backup, they select the backup location:
 
@@ -324,6 +324,14 @@ A log file is created for every backup and restore operation. The log files can 
 ## Version release history
 
 The following sections identify version details for the AD FS Rapid Restore tool.
+
+### Version 2.0.2464.1
+
+Release: December 2023
+
+**Fixed issues:**
+
+- Bug fix: Distinguish CNG & CSP keys during restore
 
 ### Version 1.0.82.3
 

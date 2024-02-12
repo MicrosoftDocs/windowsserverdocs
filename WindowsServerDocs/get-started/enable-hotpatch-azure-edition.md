@@ -116,10 +116,10 @@ package. In your PowerShell session, complete the following steps:
 
    ```powershell
    $parameters = @{
-       Uri = "https://go.microsoft.com/fwlink/?linkid=2211714"
-       OutFile = ".\KB5003508.msu"
+        Source = "https://go.microsoft.com/fwlink/?linkid=2211714"
+        Destination = ".\KB5003508.msu"
    }
-   Invoke-WebRequest @parameters
+   Start-BitsTransfer @parameters
    ```
 
 1. To install the Standalone Package, run the following command:

@@ -101,9 +101,9 @@
       items:
       - name: Learn how to use Multi-factor Authentication with RDS
         href: /azure/multi-factor-authentication/nps-extension-remote-desktop-gateway
-      - name: Integrate Azure AD Domain Services with your RDS deployment
+      - name: Integrate Microsoft Entra Domain Services with your RDS deployment
         href: rds-azure-adds.md
-      - name: Publish Remote Desktop with Azure AD Application Proxy
+      - name: Publish Remote Desktop with Microsoft Entra application proxy
         href: /azure/active-directory/application-proxy-publish-remote-desktop
     - name: Extend your RDS environment for high availability
       items:
@@ -136,6 +136,8 @@
     items:
     - name: Manage personal desktop session collections
       href: rds-manage-personal-collection.md
+    - name: Remote Desktop IP Virtualization
+      href: internet-protocol-virtualization.md
     - name: Recommended configuration for VDI desktops
       href: rds-vdi-recommendations.md
     - name: Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
@@ -216,26 +218,5 @@
         href: clients/remote-privacy-settings.md
     - name: Known issues
       items:
-      - name: General Remote Desktop connection troubleshooting
-        href: troubleshoot/rdp-error-general-troubleshooting.md
-      - name: Credential limit per app
-        href: troubleshoot/credential-limit.md
-      - name: Clients can't connect and get the "Class not registered" error
-        href: troubleshoot/rdp-error-class-not-registered.md
       - name: Clients can't connect and see "No licenses available" error
         href: troubleshoot/rdp-error-no-licenses-available.md
-      - name: User can't authenticate or must authenticate twice
-        href: troubleshoot/cannot-authenticate-or-must-authenticate-twice.md
-      - name: '"Remote Desktop Service is currently busy" error on connecting'
-        href: troubleshoot/remote-desktop-service-currently-busy.md
-      - name: Remote Desktop client disconnects and can't reconnect to the same session
-        href: troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md
-      - name: Remote laptop disconnects from wireless network
-        href: troubleshoot/remote-laptop-disconnects-wireless-network.md
-      - name: Poor performance or application problems during remote desktop connection
-        href: troubleshoot/poor-performance-or-application-problems.md
-      - name: Input method editor issue in RemoteApp scenarios
-        href: troubleshoot/input-method-editor-error.md
-      - name: '"Out of memory" error'
-        href: troubleshoot/out-of-memory-error.md
-

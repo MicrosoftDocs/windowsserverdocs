@@ -320,10 +320,10 @@ You have now configured your user tunnel for Always On VPN. If you want to learn
 
 - To learn how to configure Always On VPN profiles with Microsoft Intune, see [Deploy Always On VPN profile to Windows clients with Microsoft Intune](how-to-aovpn-client-intune.md).
 
-- Learn how to [Configure conditional access for VPN connectivity using Azure AD](how-to-aovpn-conditional-access.md).
+- Learn how to [Configure conditional access for VPN connectivity using Microsoft Entra ID](how-to-aovpn-conditional-access.md).
 
 - To learn more about the advanced VPN features, see [Advanced VPN Features](vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features).
 
 - For more detailed information on Always on VPN configuration options for the configuration service provider (CSP), see [VPNv2 configuration service provider](/windows/client-management/mdm/vpnv2-csp).
 
-- To troubleshoot issues with Always On VPN, see [Troubleshoot Always On VPN](troubleshoot-always-on-vpn.md).
+- To troubleshoot issues with Always On VPN, see [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn).

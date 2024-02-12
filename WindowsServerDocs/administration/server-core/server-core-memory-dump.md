@@ -178,7 +178,7 @@ You can generate manual memory dumps with a PS/2 keyboard that is connected to y
 
 ## Step 9: Verify that memory dump files are being created correctly
 
-You can use the dumpchk.exe utlity to verify that the memory dump files are being created correctly. The dumpchk.exe utility isn't installed with the Server Core installation option, so you'll have to run it from a server with the Desktop Experience or from Windows 10. Additionally, the debugging tools for Windows products must be installed.
+You can use the dumpchk.exe utility to verify that the memory dump files are being created correctly. The dumpchk.exe utility isn't installed with the Server Core installation option, so you'll have to run it from a server with the Desktop Experience or from Windows 10. Additionally, the debugging tools for Windows products must be installed.
 
 The dumpchk.exe utility lets you transfer the memory dump file from your Server Core installation of Windows Server 2008 to the other computer by using the medium of your choice.
 

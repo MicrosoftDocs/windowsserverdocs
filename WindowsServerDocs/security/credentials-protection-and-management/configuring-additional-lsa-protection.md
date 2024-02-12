@@ -122,7 +122,7 @@ On x86-based or x64-based devices that don't support UEFI or where Secure Boot i
 For client devices running Windows 11 version 22H2 and later, added LSA protection is enabled by default if the following criteria are met:
 
 - The device is a new install of Windows 11 version 22H2 or later, not upgraded from a previous release.
-- The device is enterprise joined (Active Directory domain joined, Azure AD domain joined, or hybrid Azure AD domain joined).
+- The device is enterprise joined (Active Directory domain joined, Microsoft Entra domain joined, or hybrid Microsoft Entra domain joined).
 - The device is capable of [Hypervisor-protected code integrity (HVCI)](/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity).
 
 Automatic enablement of added LSA protection on Windows 11 version 22H2 and later doesn't set a UEFI variable for the feature. If you want to set a UEFI variable, you can use a registry configuration or policy.

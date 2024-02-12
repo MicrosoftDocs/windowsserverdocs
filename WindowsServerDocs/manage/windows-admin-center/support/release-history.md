@@ -2,15 +2,16 @@
 title: Windows Admin Center release history
 description: A summary of the history of Windows Admin Center releases, including links to download them.
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 01/06/2020
 ---
 # Windows Admin Center release history
 
 Here's a listing of our latest released features:
 
-- Version [2306](https://aka.ms/wac2306) is the most recent generally available (GA) release - it includes the WDAC-enabled infra GA, new Hyper-V features and improvements, the long awaited cluster-aware event viewer, as well as a plethora of bug fixes and improvements.
+- Version [2311](https://aka.ms/wac2311) is the most recently available (GA) release - it includes Angular 15 upgrade, improvements to the Import VM experience, Azure Arc at-scale onboarding, and a new Azure Migrate assessment experience.
+- Version [2306](https://aka.ms/wac2306) includes the WDAC-enabled infra GA, new Hyper-V features and improvements, the long awaited cluster-aware event viewer, as well as a plethora of bug fixes and improvements.
 - Version [2211](https://aka.ms/wac2211) includes support for 400% zoom and WDAC-enabled infrastructure, improvements to Azure Stack HCI management features, as well as bug fixes and updates in several extensions.
 - Version [2110.2](https://aka.ms/wac2110.2) includes major bug fixes to Role-based Access Control (RBAC), the connections page’s search feature, as well as bug fixes in several extensions.
 - Version [2110](https://aka.ms/wac2110) includes Angular 11 upgrades, performance and security enhancements. It also includes updated developer SDK for extension development using Angular 11 or upgrading of existing extensions, CredSSP enhancements, a better Virtual Machine tool, and two brand new tools for Security and GPU management.
@@ -36,7 +37,7 @@ Here's a listing of our latest released features:
 - Version [1806](https://aka.ms/WACPreview1806-InsiderBlog) added show PowerShell script, SDN management, 2008 R2 connections, SDN, scheduled tasks, and many other improvements.
 - Version 1804.25 - a maintenance update to support users installing Windows Admin Center in completely offline environments.
 - Version [1804](https://cloudblogs.microsoft.com/windowsserver/2018/04/12/announcing-windows-admin-center-our-reimagined-management-experience/) - Project Honolulu becomes Windows Admin Center and adds security features and role-based access control. Our first GA release.
-- Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for Azure AD access control, detailed logging, resizable content, and a bunch of tool improvements.
+- Version [1803](https://blogs.windows.com/windowsexperience/2018/03/13/announcing-project-honolulu-technical-preview-1803-and-rsat-insider-preview-for-windows-10) added support for Microsoft Entra access control, detailed logging, resizable content, and a bunch of tool improvements.
 - Version [1802](https://blogs.windows.com/windowsexperience/2018/02/13/announcing-windows-server-insider-preview-build-17093-project-honolulu-technical-preview-1802) added support for accessibility, localization, high-availability deployments, tagging, Hyper-V host settings, and gateway authentication.
 - Version [1712](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-project-honolulu-technical-preview-1712-build-05002) added more virtual machine features and performance improvements throughout the tools.
 - Version [1711](https://cloudblogs.microsoft.com/windowsserver/2017/12/01/1711-update-to-project-honolulu-technical-preview-is-now-available/) added highly anticipated tools (Remote Desktop and PowerShell) along with other improvements.
