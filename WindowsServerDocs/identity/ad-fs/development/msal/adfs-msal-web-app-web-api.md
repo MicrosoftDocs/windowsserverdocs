@@ -20,15 +20,15 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
 
 ![Overview of web app calling web api](media/adfs-msal-web-app-web-api/webapp1.png)
 
-In this flow you add authentication to your Web App (Server App), which can therefore sign in users and calls a web API. From the Web App, to call the Web API, use MSAL's AcquireTokenByAuthorizationCode token acquisition method. You'll use the Authorization code flow, storing the acquired token in the token cache. Then the controller acquires tokens silently from the cache when needed. MSAL refreshes the token if needed.
+In this flow, you add authentication to your Web App (Server App), which can therefore sign in users and calls a web API. From the Web App, to call the Web API, use MSAL's AcquireTokenByAuthorizationCode token acquisition method. You use the Authorization code flow, storing the acquired token in the token cache. Then the controller acquires tokens silently from the cache when needed. MSAL refreshes the token if needed.
 
 Web Apps that calls Web APIs:
 
 
 - are confidential client applications.
-- that's why they've registered a secret (application shared secret, certificate or AD account) with AD FS. This secret is passed-in during the call to AD FS to get a token.
+- registered a secret (application shared secret, certificate or AD account) with AD FS. This secret is passed-in during the call to AD FS to get a token.
 
-To better understand how to register a Web App in AD FS and to configure it to acquire tokens to call a Web API, let's use a sample available [here](/entra/msal/dotnet/) and walk through the app registration and code configuration steps.
+To register a Web App in AD FS and to configure it to acquire tokens to call a Web API, let's use a sample available [here](/entra/msal/dotnet/) and walk through the app registration and code configuration steps.
 
 
 ## Pre-requisites
@@ -49,7 +49,7 @@ This section shows how to register the Web App as a confidential client and Web 
 
       ![Screenshot of the Server application page of the Add Application Group Wizard showing the correct client identifier and redirect U R I.](media/adfs-msal-web-app-web-api/webapp3.png)
 
-  4. On the Configure Application Credentials screen, place a check-in **Generate a shared secret** and copy the secret. This is used later as the value for **ida:ClientSecret** in the applications **Web.config** file. Click **Next**.
+  4. On the Configure Application Credentials screen, place a check-in **Generate a shared secret** and copy the secret. This secret is used later as the value for **ida:ClientSecret** in the applications **Web.config** file. Click **Next**.
 
       ![Screenshot of the Configure Application Credentials application page of the Add Application Group Wizard showing the Generate a shared secret option selected and the generated shared secret populated.](media/adfs-msal-web-app-web-api/webapp4.png)
 
@@ -80,19 +80,19 @@ This section shows how to configure a ASP.NET Web App to sign-in user and retrie
   2. Open the sample using Visual Studio
 
   3. Open the web.config file. Modify the following:
-       - ida:ClientId - enter the **Client Identifier** value from #3 in App Registration in AD FS section above.
-       - ida:ClientSecret - enter the **Secret** value from #4 in App Registration in AD FS section above.
-       - ida:RedirectUri - enter the **Redirect URI** value from #3 in App Registration in AD FS section above.
+       - ida:ClientId - enter the **Client Identifier** value from #3 in App Registration in AD FS section.
+       - ida:ClientSecret - enter the **Secret** value from #4 in App Registration in AD FS section.
+       - ida:RedirectUri - enter the **Redirect URI** value from #3 in App Registration in AD FS section.
        - ida:Authority - enter https://[your AD FS hostname]/adfs. E.g., https://adfs.contoso.com/adfs
-       - ida:Resource - enter the **Identifier** value from #5 in App Registration in AD FS section above.
+       - ida:Resource - enter the **Identifier** value from #5 in App Registration in AD FS section.
 
           ![Screenshot of the web config file showing the modified values.](media/adfs-msal-web-app-web-api/webapp8.png)
 
 
 ### Test the sample
-This section shows how to test the sample configured above.
+This section shows how to test the sample configured.
 
-  1. Once the code changes are made rebuild the solution
+  1. Once the code changes are made rebuild the solution.
 
   2. At the top of Visual Studio, make sure Internet Explorer is selected and click the green arrow.
 
@@ -110,7 +110,7 @@ This section shows how to test the sample configured above.
 
       ![Screenshot of the Home Page with the Access Token option called out.](media/adfs-msal-web-app-web-api/webapp12.png)
 
-  6. Clicking on Access Token gets the access token info by calling the Web API
+  6. Clicking on Access Token gets the access token info by calling the Web API.
 
       ![Screenshot of the Access Token page showing the access token info.](media/adfs-msal-web-app-web-api/webapp13.png)
 
