@@ -45,7 +45,7 @@ This section shows how to register the Web App as a confidential client and Web 
 
       ![Screenshot of the Welcome page of the Add Application Group Wizard showing the Server application accessing a web A P I template highlighted.](media/adfs-msal-web-app-web-api/webapp2.png)
 
-  3. Copy the **Client Identifier** value. It is used later as the value for **ida:ClientId** in the applications **Web.config** file. Enter the following for **Redirect URI:** - https://localhost:44326. Click Add. Click **Next**.
+  3. Copy the **Client Identifier** value. The value is used later as the value for **ida:ClientId** in the applications **Web.config** file. Enter the following for **Redirect URI:** - https://localhost:44326. Click Add. Click **Next**.
 
       ![Screenshot of the Server application page of the Add Application Group Wizard showing the correct client identifier and redirect U R I.](media/adfs-msal-web-app-web-api/webapp3.png)
 
@@ -80,11 +80,11 @@ This section shows how to configure a ASP.NET Web App to sign-in user and retrie
   2. Open the sample using Visual Studio
 
   3. Open the web.config file. Modify the following:
-       - ida:ClientId - enter the **Client Identifier** value from #3 in App Registration in AD FS section.
-       - ida:ClientSecret - enter the **Secret** value from #4 in App Registration in AD FS section.
-       - ida:RedirectUri - enter the **Redirect URI** value from #3 in App Registration in AD FS section.
-       - ida:Authority - enter https://[your AD FS hostname]/adfs. E.g., https://adfs.contoso.com/adfs
-       - ida:Resource - enter the **Identifier** value from #5 in App Registration in AD FS section.
+       - `ida:ClientId` - enter the **Client Identifier** value from #3 in App Registration in AD FS section.
+       - `ida:ClientSecret` - enter the **Secret** value from #4 in App Registration in AD FS section.
+       - `ida:RedirectUri` - enter the **Redirect URI** value from #3 in App Registration in AD FS section.
+       - `ida:Authority` - enter https://[your AD FS hostname]/adfs. E.g., https://adfs.contoso.com/adfs
+       - `ida:Resource` - enter the **Identifier** value from #5 in App Registration in AD FS section.
 
           ![Screenshot of the web config file showing the modified values.](media/adfs-msal-web-app-web-api/webapp8.png)
 
