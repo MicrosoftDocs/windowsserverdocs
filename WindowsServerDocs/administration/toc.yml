@@ -96,7 +96,7 @@ items:
             - name: Key-based authentication
               href: OpenSSH/OpenSSH_KeyManagement.md
             - name: Manage OpenSSH with Group Policy
-              href: OpenSSH/OpenSSH_Group_Policy.md
+              href: OpenSSH/openssh-group-policy.md
         - name: Windows Server Update Services (WSUS)
           href: windows-server-update-services/get-started/windows-server-update-services-wsus.md
           items: 
