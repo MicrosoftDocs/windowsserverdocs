@@ -8,7 +8,7 @@ metadata:
   author: nedpyle
   ms.date: 04/15/2020
   ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-  ms.prod: windows-server
+  ms.service: windows-server
 title: Frequently asked questions about Storage Replica
 summary: |
   >Applies to: Windows Server 2019, Windows Server 2016
