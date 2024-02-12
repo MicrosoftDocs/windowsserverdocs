@@ -2,7 +2,11 @@
 ms.date:  2/12/2024 
 contributor:  damaerte
 keywords:  OpenSSH, SSH, Win32-OpenSSH
+ms.topic: OpenSSH, SSH, Win32-OpenSSH
+author: maertendmsft
+ms.author: damaerte
 title:  Manage OpenSSH with Group Policy
+description: Learn how to create a Group Policy object for OpenSSH
 ---
 
 # How to manage OpenSSH with Group Policy
@@ -19,7 +23,7 @@ To create a Group Policy to manage OpenSSH perform the following steps:
 3. Select `Group Policy Objects`
 4. Right-click `Group Policy Objects`, then select New to create a new Object
 5. Name the Object so that it can be identified as managing OpenSSH
-    ![OpenSSH Group Policy Object](media/OpenSSH_GPO.PNG)
+    ![OpenSSH Group Policy](media/OpenSSH_GPO.PNG)
 6. Double-click the new Object
 7. Navigate to the `Settings` tab
 8. Right-click on `Computer Configuration`, then select `Edit...`
