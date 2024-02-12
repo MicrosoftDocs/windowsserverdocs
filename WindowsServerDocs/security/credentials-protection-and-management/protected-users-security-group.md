@@ -74,7 +74,7 @@ For Protected Users members, the group automatically sets these lifetime limits 
 You can add users to the Protected Users group using the following methods:
 
 - UI tools, such as [Active Directory Administrative Center (ADAC)](../../identity/ad-ds\get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md) or [Active Directory Users and Computers](/troubleshoot/windows-server/system-management-components/remote-server-administration-tools).
-- A command-line tool, such as [PowerShell](/powershell/module/activedirectory/add-adgroupmember?view=windowsserver2022-ps).
+- A command-line tool, such as [PowerShell](/powershell/module/activedirectory/add-adgroupmember).
 - With PowerShell, using the [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember) cmdlet.
 
 >[!IMPORTANT]
