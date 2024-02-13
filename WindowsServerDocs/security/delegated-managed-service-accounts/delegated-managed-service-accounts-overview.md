@@ -88,4 +88,4 @@ Running `Complete-ADServiceAccountMigration` performs the following changes:
 
 ## See also
 
-[Setting up Delegated Managed Service Accounts](delegated-managed-service-accounts-setting-up-dmsa.md)
+[Setting up Delegated Managed Service Accounts](delegated-managed-service-accounts-set-up-dmsa.md)
