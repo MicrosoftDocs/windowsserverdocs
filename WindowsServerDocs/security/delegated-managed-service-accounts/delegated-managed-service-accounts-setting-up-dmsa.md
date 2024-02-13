@@ -49,7 +49,7 @@ Get-ADServiceAccount -Identity <DMSAName> -Properties PrincipalsAllowedToRetriev
 ```
 
 > [!NOTE]
-> In the case that the service account is connected to multiple devices and migration has ended, the [PrincipalsAllowedToRetrieveManagedPassword](/powershell/module/activedirectory/set-adserviceaccount?view=windowsserver2022-ps#example-3-set-the-principals-allowed-to-retrieve-the-password-for-an-msa) needs to be updated manually.
+> In the case that the service account is connected to multiple devices and migration has ended, the [PrincipalsAllowedToRetrieveManagedPassword](/powershell/module/activedirectory/set-adserviceaccount?view=windowsserver2022-ps#example-3-set-the-principals-allowed-to-retrieve-the-password-for-an-msa&preserve-view=true) needs to be updated manually.
 
 ### Complete account migration
 
@@ -82,7 +82,7 @@ To create a new dMSA, open PowerShell as admin and run:
 New-ADServiceAccount -Name <DMSAName> -DNSHostName <host> -CreateDelegatedServiceAccount -KerberosEncryptionType AES256
 ```
 
-To learn more about `New-ADServiceAccount` and related cmdlets, see [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2022-ps).
+To learn more about `New-ADServiceAccount` and related cmdlets, see [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2022-ps&preserve-view=true).
 
 ## View dMSA event logs
 
