@@ -97,7 +97,7 @@ robocopy c:\reports "\\marketing\videos" yearly-report.mov /mt /z
 | /iorate:`<n>`[kmg] | The requested i/o rate in *n* **k**ilobytes **m**egabytes, or **g**igabytes per second. |
 | /threshold:`<n>`[kmg] | The file size threshold for throttling in *n* **k**ilobytes, **m**egabytes, or **g**igabytes (see [Remarks](#remarks)). |
 
-These throttling options are used to specify the maximum I/O bandwidth that Robocopy allows to be used in bytes per second. If not specifying in bytes per second, whole numbers can be used if **k**, **m**, or **g** are specified.
+These throttling options are used to specify the maximum I/O bandwidth that Robocopy allows to be used in bytes per second. If not specifying in bytes per second, whole numbers can be used if **k**, **m**, or **g** are specified. The minimum I/O bandwidth that is throttled is **524288** bytes even if a lesser value is specified.
 
 #### File selection options
 
