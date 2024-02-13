@@ -7,13 +7,13 @@ author: mariamgewida
 ms.date: 02/12/2024
 ---
 
-# Setting up delegated Managed Service Accounts
+# Setting up Delegated Managed Service Accounts
 
 A delegated Managed Service Account (dMSA) is an Active Directory (AD) account that enables secure management of credentials. Unlike traditional service accounts, DMSAs don't require manual management of passwords as AD automatically manages the password, ensuring that it remains secure. Additionally, dMSAs can be delegated specific permissions to access resources in the domain, providing an efficient way to manage access control.
 
 ## Prerequisites
 
-- The **Active Directory Domain Services** role must be installed on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+- The **Active Directory Domain Services** role must be installed on your device or on any device if using remote management tools. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 - Once the role is installed, your device must be promoted to a Domain Controller (DC). In **Server Manager**, the flag icon displays a new notification, select **Promote this server to a domain controller**, then complete the necessary steps.
 - In Group Policy Object for client devices, **Kerberos** must be _enabled_ in the path **Computer Configuration\Administrative Templates\System\Kerberos**.
 
