@@ -4,7 +4,7 @@ description: Reference article for the schtasks query command, which lists all t
 ms.topic: reference
 ms.author: wscontent
 author: xelu86
-ms.date: 10/10/2023
+ms.date: 02/13/2024
 ---
 
 # schtasks query
@@ -60,11 +60,11 @@ schtasks /query /s Reskit16 /fo csv /nh >> \\svr01\data\tasklogs\p0102.csv
 
 You can use this command format to collect and track tasks that are scheduled for multiple computers. This command uses the **/s** parameter to identify the remote computer, *Reskit16*, the **/fo** parameter to specify the format and the **/nh** parameter to suppress the column headings. The **>>** append symbol redirects the output to the task log, *p0102.csv*, on the local computer, *Svr01*. Because the command runs on the remote computer, the local computer path must be fully qualified.
 
+To get information for the *Office Subscription Maintenance* task using the **/tn** parameter, which can also be viewed via Task Scheduler in the location *\\Microsoft\\Office\\* with the root directory "**\\**" seen under the **Task Scheduler Library** folder, type:
+
 ```
 schtasks /query /tn "\Microsoft\Office\Office Subscription Maintenance"
 ```
-
-This command gets information for the *Office Subscription Maintenance* task using the **/tn** parameter, which can also be viewed via Task Scheduler in the location *\\Microsoft\\Office\\* with the root directory "**\\**" seen under the **Task Scheduler Library** folder.
 
 ## Related links
 
