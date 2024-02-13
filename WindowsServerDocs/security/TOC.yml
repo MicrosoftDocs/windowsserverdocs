@@ -178,7 +178,7 @@
     - name: Delegated Managed Service Accounts overview
       href: delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
     - name: Setting up Delegated Managed Service Accounts
-      href: delegated-managed-service-accounts/delegated-managed-service-accounts-setting-up-dmsa.md
+      href: delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
   - name: Group Managed Service Accounts
     href: group-managed-service-accounts/group-managed-service-accounts-overview.md
     items:

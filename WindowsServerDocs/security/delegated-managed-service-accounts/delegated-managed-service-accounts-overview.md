@@ -4,7 +4,7 @@ description: Learn about delegated Managed Service Accounts (DMSA) that authenti
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
-ms.date: 02/12/2024
+ms.date: 02/13/2024
 ---
 
 # Delegated Managed Service Accounts overview
