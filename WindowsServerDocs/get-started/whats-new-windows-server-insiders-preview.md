@@ -4,7 +4,7 @@ description: This article describes some of the new features in Windows Server I
 ms.topic: article
 author: xelu86
 ms.author: wscontent
-ms.date: 02/06/2024
+ms.date: 02/13/2024
 ---
 
 # What's new in Windows Server Insiders Preview
@@ -102,7 +102,7 @@ When you sign in for the first time, the desktop shell experience conforms to th
 
 ### Delegated Managed Service Account
 
-This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords.
+This new type of account enables migration from a service account to a delegated Managed Service Account (dMSA). This account type comes with managed and fully randomized keys ensuring minimal application changes while disabling the original service account passwords. To learn more, see [Delegated Managed Service Accounts overview](/windows-server/security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview).
 
 ### Email & accounts
 
