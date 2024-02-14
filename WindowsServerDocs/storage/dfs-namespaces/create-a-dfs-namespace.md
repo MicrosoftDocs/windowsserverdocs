@@ -15,7 +15,7 @@ To create a new namespace, you can use Server Manager to create the namespace wh
 
 The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
-Alernatively, you can use the following procedure to create a namespace after installing the role service.
+Alternatively, you can use the following procedure to create a namespace after installing the role service.
 
 ## To create a namespace
 
