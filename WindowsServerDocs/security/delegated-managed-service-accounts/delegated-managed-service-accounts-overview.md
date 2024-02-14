@@ -4,7 +4,7 @@ description: Learn about delegated Managed Service Accounts (DMSA) that authenti
 ms.topic: conceptual
 ms.author: alalve
 author: mariamgewida
-ms.date: 02/13/2024
+ms.date: 02/14/2024
 ---
 
 # Delegated Managed Service Accounts overview
@@ -12,7 +12,7 @@ ms.date: 02/13/2024
 > [!IMPORTANT]
 > Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server Insiders Preview that allows migration from a traditional service account to a machine account with managed and fully randomized keys, while disabling original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. Using dMSA also prevents harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
+A new account type known as delegated Managed Service Account (dMSA) is introduced in Windows Server Insiders Preview that allows migration from a traditional service account to a machine account with managed and fully randomized keys, while disabling original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. Using dMSA helps to prevent harvesting credentials using a compromised account (kerberoasting), which is a common issue with traditional service accounts.
 
 ## dMSA and gMSA comparison
 
@@ -34,7 +34,7 @@ dMSA uses a randomized secret (derived from the machine account credential) that
 
 A quick concept of the migration flow process for a dMSA involves the following steps:
 
-1. The CG policy is configured to protect the machines identity.
+1. The Credential Guard (CG) policy is configured to protect the machines identity.
 1. An administrator starts and completes migration of the service account.
 1. The service account refreshes the Ticket Granting Server (TGT).
 1. The service account adds the machine identity to allow principles.
