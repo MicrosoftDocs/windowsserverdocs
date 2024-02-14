@@ -212,19 +212,19 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 
 ## DNS
 
-Windows Server 2016 contains the following updates for DNS <!--Acronym--> .
+Windows Server 2016 contains the following updates for Domain Name System (DNS).
 
 ### DNS policies
 
 You can configure DNS policies to specify how a DNS server responds to DNS queries. You can configure DNS responses based on client IP address, time of day, and several other parameters. DNS policies can enable location-aware DNS, traffic management, load balancing, split-brain DNS, and other scenarios. For more information, see the [DNS Policy Scenario Guide](../networking/dns/deploy/DNS-Policies-Overview.md).
 
-### Response Rate Limiting (RRL)
+### RRL
 
-You can enable response rate limiting on your DNS servers to prevent malicious systems from using your DNS servers to initiate a denial of service attack on a DNS client.
+You can enable response rate limiting (RRL) on your DNS servers to prevent malicious systems from using your DNS servers to initiate a distributed denial of service (DDoS) attack on a DNS client. RRL prevents your DNS server from responding to too many requests at once, which protects it during scenarios when a botnet sends multiple requests at once to try to disrupt server operations.
 
 ### DANE support
 
-You can use DANE support (RFC 6394 and 6698) <!---Acronym--> to specify which certificate authority your DNS clients should expect certificates from for domain names hosted in your DNS server. This prevents a form of man-in-the-middle attack where a malicious actor corrupts a DNS cache and points a DNS name to their own IP address.
+You can use DNS-based Authentication of Named Entities (DANE) support (RFC 6394 and 6698) to specify which certificate authority your DNS clients should expect certificates from for domain names hosted in your DNS server. This prevents a form of man-in-the-middle attack where a malicious actor corrupts a DNS cache and points a DNS name to their own IP address.
 
 ### Unknown record support
 
@@ -232,7 +232,7 @@ You can add records that the DNS server doesn't explicitly support by using the 
 
 ### IPv6 root hints
 
-Windows DNS server now includes IPv6 root hints published by IANA. <!--Acronym---> Support for IPv6 root hints lets you make internet queries that use the IPv6 root servers to perform name resolutions.
+Windows DNS server now includes IPv6 root hints published by the Internet Assigned Numbers Authority (IANA). Support for IPv6 root hints lets you make internet queries that use the IPv6 root servers to perform name resolutions.
 
 ### Windows PowerShell support
 
