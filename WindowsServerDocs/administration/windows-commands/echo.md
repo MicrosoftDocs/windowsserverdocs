@@ -43,7 +43,7 @@ echo [on | off]
 
 - To display a pipe (`|`), ampersand (`&`) or redirection character (`<` or `>`) when you're using **echo**, use a caret (`^`) immediately before that character. For example, `^|`, `^&`, `^>`, or `^<`. To display a caret, type two carets in succession (`^^`).
 
-- When inside a block terminated by parentheses (`()`), both opening and closing parentheses must also be escaped using the caret (`^`) immediately before each. For example, `This is ^(now^) correct` will correctly display `This is (now) correct`.
+- When inside a block terminated by parentheses (`()`), both opening and closing parentheses must also be escaped using the caret (`^`) immediately before each one. For example, `This is ^(now^) correct` will correctly display `This is (now) correct`.
 
 ### Examples
 
