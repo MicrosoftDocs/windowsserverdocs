@@ -5,7 +5,7 @@ title: Create a Rule to Send an AD FS 1.x Compatible Claim
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 
