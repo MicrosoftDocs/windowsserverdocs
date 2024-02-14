@@ -18,8 +18,8 @@ A new account type known as delegated Managed Service Account (dMSA) is introduc
 
 dMSAs and gMSAs are two types of managed service accounts that are used to run services and applications in Windows Server. A dMSA is managed by an administrator and is used to run a service or application on a specific server. A gMSA is managed by AD and is used to run a service or application on multiple servers. Both offer improved security and simplified password management. dMSA differs by:
 
-- Utilizing gMSA concepts to limit scope of usage using Credential Guard (CG) to bind machine authentication.
-- dMSA uses automatic rotating passwords that bind all service account tickets to CG and disables legacy accounts to provide more security.
+- Utilizing gMSA concepts to limit scope of usage using [Credential Guard](/windows/security/identity-protection/credential-guard) (CG) to bind machine authentication.
+- CG can be used to enhance security in dMSA by automatically rotating passwords and binding all service account tickets. Legacy accounts are then disabled to further improve security.
 - Although gMSAs are secured with machine generate and autorotated passwords, the passwords are still not machine bound and can be stolen.
 
 ## Functionality of dMSA
