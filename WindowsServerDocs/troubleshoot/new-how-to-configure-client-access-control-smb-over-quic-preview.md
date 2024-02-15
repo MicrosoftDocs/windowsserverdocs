@@ -1,3 +1,4 @@
+---
 title: Configure SMB over QUIC client access control in Windows Insider
 description: Learn how to use SMB over QUIC client access control in Windows Insider
 ms.topic: how-to
@@ -11,16 +12,16 @@ ms.date: 03/01/2024
 
 >Applies to: Windows and Windows Server Insider builds
 
-SMB over QUIC represents an alternative to TCP and RDMA, supplying secure connectivity to edge file servers over untrusted networks like the Internet. SMB over QUIC CAC enhances security in the SMB over QUIC feature. This article explains how to configure SMB over QUIC client access control (CAC) in Windows and Windows Server Insider builds. See [SMB over QUIC](https://aka.ms/smboverquic) for detailed information on SMB over QUIC. 
+SMB over QUIC represents an alternative to TCP and RDMA, supplying secure connectivity to edge file servers over untrusted networks like the Internet. SMB over QUIC client access control (CAC) enhances security in the SMB over QUIC feature. This article explains how to configure SMB over QUIC client CAC in Windows and Windows Server Insider builds. See [SMB over QUIC](https://aka.ms/smboverquic) for detailed information on SMB over QUIC.
 
-Prior to the introduction of SMB over QUIC CAC, servers trusted all clients if they were issued the same certificate root chain as the server’s SMB over QUIC server certificate. With SMB over QUIC CAC, administrators can restrict which clients can access SMB over QUIC servers -- essentially an allowlist for devices trusted to connect to the file server. This functionality gives organizations more protection but doesn't change the Windows authentication used to make the SMB connection nor does it alter the end user experience.
+Prior to the introduction of SMB over QUIC CAC, servers trusted all clients if they were issued the same certificate root chain as the SMB over QUIC server certificate. With SMB over QUIC CAC, administrators can restrict which clients can access SMB over QUIC servers, essentially creating an allowlist of devices trusted to connect to the file server. This functionality gives organizations more protection but doesn't change the Windows authentication used to make the SMB connection. The end user experience remains the same.
 
 >[!IMPORTANT]
 >SMB over QUIC is not enabled by default. A file server administrator must opt in to enable SMB over QUIC. A client can't force a file server to enable SMB over QUIC.
 
-SMB over QUIC CAC supports using certificates with subject alternative names, not just a single subject. This means the client access control feature supports using a Microsoft AD Certificate Authority and multiple endpoint names, just like the currently released version of SMB over QUIC. You can evaluate the feature using the recommended options and not require self-signed test certificates.
+SMB over QUIC CAC works by a client trusting the SMB over QUIC server via a valid shared root authority key. An admin also gives the client a certificate from the same issuer, and that certificate’s hash (or issuer) is added to a trust list maintained by the server. When the client connects, it sends the certificate info to the server for comparison against the allow list, granting or denying access to QUIC. Then SMB authentication occurs inside the QUIC TLS tunnel, and the user connects to their share. An admin can also explicitly deny access or just revoke certificates. CAC is optional and not enabled by default.
 
-SMB over QUIC CAC works by a client trusting the SMB over QUIC server via a valid shared root authority key. An admin also gives the client a certificate from the same issuer, and that certificate’s hash (or issuer) is added to a trust list maintained by the server. When the client connects, it sends the certificate info to the server for comparison against the allow list, granting or denying access to QUIC. Then SMB authentication occurs inside the QUIC TLS tunnel, and the user connects to their share. An admin can also explicitly deny access or just revoke certificates. CAC is optional and – for now – not on by default.
+SMB over QUIC CAC supports using certificates with subject alternative names, not just a single subject. This means the client access control feature supports using a Microsoft AD Certificate Authority and multiple endpoint names, just like the currently released version of SMB over QUIC. You can evaluate the feature using the recommended options and not require self-signed test certificates.
 
 You can remove specific SMB protocols from usage in your organization, blocking older, less secure, less capable Windows devices and third parties from connecting to the server. For example, you can limit users to SMB 3.1.1, the most secure dialect of the protocol.
 
@@ -135,12 +136,6 @@ New-SmbMapping -RemotePath \\server DNS name\share -TransportType QUIC
 ```
 
 ---
-
-## Final notes
-
-SMB over QUIC isn’t just for mobile users and edge servers in Internet DMZs, it’s a practical defensive layer to prevent leakage of NTLM credentials and makes attacking internal files servers harder without first subverting a trusted client. TCP had its time, QUIC is the future of user and application transport.
-
-We also just announced that a replacement for KDC Proxy -  IAKerb - is coming to Windows Insider Previews along with a local KDC. These combined options mean the beginning of the end for NTLM, which will make SMB over QUIC Kerberos usage much easier. Read about it at The evolution of Windows authentication.    
 
 ## Related content
 
