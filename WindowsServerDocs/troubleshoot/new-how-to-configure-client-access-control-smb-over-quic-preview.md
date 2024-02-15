@@ -18,7 +18,7 @@ Prior to the introduction of SMB over QUIC CAC, servers trusted all clients if t
 >[!IMPORTANT]
 >SMB over QUIC is not enabled by default. A file server administrator must opt in to enable SMB over QUIC. A client can't force a file server to enable SMB over QUIC.
 
-SMB over QUIC CAC supports using certificates with subject alternative names and not just a single subject. This means the client access control feature supports using a Microsoft AD Certificate Authority and multiple endpoint names, just like the currently released version of SMB over QUIC. You can evaluate the feature using the recommended options and not require self-signed test certificates.
+SMB over QUIC CAC supports using certificates with subject alternative names, not just a single subject. This means the client access control feature supports using a Microsoft AD Certificate Authority and multiple endpoint names, just like the currently released version of SMB over QUIC. You can evaluate the feature using the recommended options and not require self-signed test certificates.
 
 SMB over QUIC CAC works by a client trusting the SMB over QUIC server via a valid shared root authority key. An admin also gives the client a certificate from the same issuer, and that certificate’s hash (or issuer) is added to a trust list maintained by the server. When the client connects, it sends the certificate info to the server for comparison against the allow list, granting or denying access to QUIC. Then SMB authentication occurs inside the QUIC TLS tunnel, and the user connects to their share. An admin can also explicitly deny access or just revoke certificates. CAC is optional and – for now – not on by default.
 
@@ -26,12 +26,12 @@ You can remove specific SMB protocols from usage in your organization, blocking 
 
 ## Configure SMB over QUIC CAC using PowerShell
 
-### Prerequisites
+To configure SMB over QUIC CAC you will need the following: 
 
 - One Windows Server vNext Azure Edition Preview Build 25977 or later VM. You’re allowed to run Windows Server Azure Edition outside of Azure IaaS and Azure Stack HCI for evaluation and testing purposes.
 - One Windows 11 Insider Preview Build 25977 (Canary Channel) or later client.
 
-To configure SMB over QUIC CAC using a self-signed certificate, and administrator-elevated PowerShell:
+To configure SMB over QUIC CAC using a self-signed certificate and administrator-elevated PowerShell, following these steps:
 
 # [PowerShell](#tab/powershell)
 
