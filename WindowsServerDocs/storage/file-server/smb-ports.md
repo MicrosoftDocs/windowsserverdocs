@@ -9,7 +9,9 @@ ms.date: 02/07/2024
 
 # Configure alternative SMB ports (preview)
 
-<!--Insert PREVIEW note here--->
+> [!IMPORTANT]
+> Configuring alternative SMB ports is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports. However, you can only connect to alternative ports if the SMB server is configured to support listening on that port.
 
@@ -81,6 +83,8 @@ To map an alternative port to your SMB client:
 
 The SMB client doesn't support changing the TCP listening port to anything but the default 445 port.
 
+### [PowerShell](#tab/powershell)
+
 You can configure the SMB over the QUIC server to use an alternative port by running the following commands in PowerShell:
 
 ```powershell
@@ -90,17 +94,11 @@ Remove-SmbServerAlternativePort
 Set-SmbServerAlternativePort
 ```
 
-<!---Ask Ned if there's a way to change the RDMA port.--->
-
-
-
-### [PowerShell](#tab/powershell)
-
-<!--- Content here  -->
+<!---Ask Ned if there's a way to change the RDMA, etc. ports.--->
 
 ### [Command line](#tab/command-line)
 
-<!--- Content here  -->
+<!---Ask Ned if there's a CLI method for controlling port usage.-->
 
 ---
 
