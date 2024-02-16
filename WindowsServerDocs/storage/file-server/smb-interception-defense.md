@@ -204,7 +204,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 ```
 
 To learn more about how to set the minimum SMB dialect used, see
-[Controlling SMB dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024?WT.mc_id=ITOPSTALK-blog-abartolo).
+[Managing SMB dialects in Windows Server Insider builds](./troubleshoot/new-how-to-smb-dialect-management.md).
 
 ### Use UNC hardening to require signing, encryption, and mutual authentication
 
