@@ -92,7 +92,7 @@ Events can be viewed using the Event Viewer (eventvwr.exe) by performing the fol
 1. In the left pane, expand **Applications and Services** and navigate to **Microsoft\Windows\Security-Kerberos\Operational**.
 1. Logging for this provider is disabled by default, to enable logging, right-click on **Operational** and select **Enable Log**.
 
-The following table describes the captured events.
+The following table describes these captured events.
 
 |Event ID|Description|
 |-|-|
