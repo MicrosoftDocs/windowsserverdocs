@@ -102,7 +102,7 @@ The following table describes these captured events.
 
 ## See also
 
-- [Complete-ADServiceAccountMigration](/powershell/module/activedirectory/complete-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
-- [Reset-ADServiceAccountMigration](/powershell/module/activedirectory/reset-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
-- [Start-ADServiceAccountMigration](/powershell/module/activedirectory/start-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
-- [Undo-ADServiceAccountMigration](/powershell/module/activedirectory/undo-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Complete-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/complete-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Reset-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/reset-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Start-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/start-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Undo-ADServiceAccountMigration](https://learn.microsoft.com/powershell/module/activedirectory/undo-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
