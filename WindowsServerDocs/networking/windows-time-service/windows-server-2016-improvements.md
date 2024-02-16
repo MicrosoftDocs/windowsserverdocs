@@ -455,3 +455,8 @@ You can disable the feature with these steps:
 
 4. To apply this setting in an entire domain, please set the UtilizeSSLTimeData value in W32time group policy setting to 0 and publish the setting. When the setting is picked up by a Group Policy Client, W32time service is notified and it will stop time monitoring and enforcement using SSL time data. The SSL time data collection will stop when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you may want to exclude such machines from this policy change. These devices will eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
 
+> [!WARNING]
+> It is highly recommended to disable the Secure Time Seeding (STS) feature for the Windows Time service on devices that already sync with a reliable time source such as an NTP server. This includes both Active Directory domain controllers as well as member servers. This is because STS was designed specifically to correct only gross clock inaccuracies on portable devices such as tablets and laptops whose batteries might die or whose hardware clocks might not be as reliable. Furthermore, it is possible for STS to incorrectly set the system clock if enough SSL-based handshakes containing random data are received.
+>
+> For more information, see [Time accuracy improvements for Windows Server 2016](/windows-server/networking/windows-time-service/windows-server-2016-improvements).
+
