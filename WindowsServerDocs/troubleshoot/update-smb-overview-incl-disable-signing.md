@@ -78,15 +78,17 @@ MS-SMB2 requires all SMB 2/3 servers to implement signing, regardless of whether
 
 By default, Windows client and server have the following settings:
 
-Get-SmbClientConfiguration  | fl EnableSecuritySignature,RequireSecuritySignature
-EnableSecuritySignature  : True
-RequireSecuritySignature : False
+Get-SmbClientConfiguration
+
+- EnableSecuritySignature  : True
+- RequireSecuritySignature : False
 
 The corresponding registry keys on the client are under HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters
 
-Get-SmbServerConfiguration | fl EnableSecuritySignature,RequireSecuritySignature
-EnableSecuritySignature  : False
-RequireSecuritySignature : False
+Get-SmbServerConfiguration
+
+- EnableSecuritySignature  : False
+- RequireSecuritySignature : False
 
 The corresponding registry keys on the server are under HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 
