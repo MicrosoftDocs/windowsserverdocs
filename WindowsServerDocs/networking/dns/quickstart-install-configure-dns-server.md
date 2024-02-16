@@ -23,7 +23,7 @@ upstream name server.
 Before you can install and configure your DNS server, your computer must meet the following
 prerequisites:
 
-- A computer running a support version of Windows Server.
+- A computer running a supported version of Windows Server.
 - A static IP.
 - An account that is a member of the Administrators group, or equivalent.
 
