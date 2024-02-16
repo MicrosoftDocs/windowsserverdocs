@@ -4,7 +4,7 @@ title: Configuring systems for high accuracy
 description: Improve Windows Time synchronization tuning under reasonable operating conditions where systems can be configured to maintain 1 ms (millisecond) accuracy or better with respect to UTC.
 author: xelu86
 ms.author: wscontent
-ms.date: 05/30/2023
+ms.date: 02/16/2024
 ms.topic: article
 ---
 
@@ -43,7 +43,8 @@ High accuracy configurations require Windows 10 or Windows Server 2016. All Wind
 
 > [!WARNING]
 > It is highly recommended to disable the Secure Time Seeding (STS) feature for the Windows Time service on devices that already sync with a reliable time source such as an NTP server. This includes both Active Directory domain controllers as well as member servers. This is because STS was designed specifically to correct only gross clock inaccuracies on portable devices such as tablets and laptops whose batteries might die or whose hardware clocks might not be as reliable. Furthermore, it is possible for STS to incorrectly set the system clock if enough SSL-based handshakes containing random data are received.
-> For more information please see [Time accuracy improvements for Windows Server 2016](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-server-2016-improvements)
+>
+> For more information, see [Time accuracy improvements for Windows Server 2016](/windows-server/networking/windows-time-service/windows-server-2016-improvements).
 
 In the illustration shown below, the virtual machines requiring high accuracy are running Windows 10 or Windows Server 2016. Likewise, the Hyper-V Host on which the virtual machines reside, and the upstream Windows time server must also run Windows Server 2016.
 
