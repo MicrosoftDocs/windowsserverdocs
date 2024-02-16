@@ -4,7 +4,7 @@ description: Learn how to set up delegated Managed Service Accounts (dMSA) in Wi
 ms.topic: how-to
 ms.author: alalve
 author: mariamgewida
-ms.date: 02/13/2024
+ms.date: 02/16/2024
 ---
 
 # Setting up delegated Managed Service Accounts
@@ -82,14 +82,27 @@ To create a new dMSA, open PowerShell as admin and run:
 New-ADServiceAccount -Name <DMSAName> -DNSHostName <host> -CreateDelegatedServiceAccount -KerberosEncryptionType AES256
 ```
 
-To learn more about `New-ADServiceAccount` and related cmdlets, see [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2022-ps&preserve-view=true).
+To learn more about `New-ADServiceAccount` and related cmdlets, see [New-ADServiceAccount](/powershell/module/activedirectory/new-adserviceaccount?view=windowsserver2025-ps&preserve-view=true).
 
 ## View dMSA event logs
 
-Events are stored in the Event Viewer (eventvwr.exe) and logged under **Applications and Services\Microsoft\Windows\Security-Kerberos\Operational**. Logging for this provider is disabled by default, to enable logging, right-click on **Operational** and select **Enable Log**. The following table describes captured events.
+Events can be viewed using the Event Viewer (eventvwr.exe) by performing the following actions:
+
+1. Right-click on **Start** and select **Event Viewer**.
+1. In the left pane, expand **Applications and Services** and navigate to **Microsoft\Windows\Security-Kerberos\Operational**.
+1. Logging for this provider is disabled by default, to enable logging, right-click on **Operational** and select **Enable Log**.
+
+The following table describes the captured events.
 
 |Event ID|Description|
 |-|-|
 |307| **dMSA Migration** - This event is written for both dMSAs under migration and for ones that migrated. It contains information about the old service account and the new dMSA.|
 |308| **dMSA Permission Add** - This event is logged when a machine attempts to add itself to the principals allowed to retrieve managed password field of a dMSA during migration.|
 |309| **dMSA Key Fetch** - This event is logged when the Kerberos client attempts to fetch keys for a dMSA from the domain controller.|
+
+## See also
+
+- [Complete-ADServiceAccountMigration](/powershell/module/activedirectory/complete-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Reset-ADServiceAccountMigration](/powershell/module/activedirectory/reset-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Start-ADServiceAccountMigration](/powershell/module/activedirectory/start-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+- [Undo-ADServiceAccountMigration](/powershell/module/activedirectory/undo-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
