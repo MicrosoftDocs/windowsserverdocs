@@ -113,6 +113,24 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 - Changed our default TCP congestion provider to Cubic to give you more throughput!
 
+### Encrypted networks
+
+Virtual network encryption encrypts virtual network traffic between virtual machines within subnets configured with the **Encryption Enabled** label. Encrypted networks also use Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS provides protection against eavesdropping, tampering, and forgery by anyone with access to the physical network.
+
+For more information, see [Encrypted networks](../networking/sdn/vnet-encryption/sdn-vnet-encryption.md).
+
+### Firewall auditing
+
+[Firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules (ACLs) that also have logging enabled.
+
+### Virtual network peering
+
+[Virtual network peering](../networking/sdn/vnet-peering/sdn-vnet-peering.md) lets you connect two virtual networks seamlessly. Once peered, the virtual networks appear in monitoring as one.
+
+### Egress metering
+
+[Egress metering](../networking/sdn/manage/sdn-egress.md) offers usage meters for outbound data transfers. Network Controller uses this feature to keep an allow list of all IP ranges used within SDN per virtual network. These lists consider any packet heading to a destination not included within the listed IP ranges to be billed as outbound data transfers.
+
 ## Storage
 
 Here are some of the changes we've made to storage in Windows Server 2019. For details, see [What's new in Storage](../storage/whats-new-in-storage.md).
