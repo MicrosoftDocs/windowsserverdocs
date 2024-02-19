@@ -2,8 +2,8 @@
 title: Distribute certificates to Windows devices by using Group Policy
 description: Learn how to distribute certificates to Windows devices by using Group Policy.
 ms.topic: how-to
-author: wscontent
-ms.author: daknappe
+author: dknappettmsft
+ms.author: wscontent
 ms.date: 02/16/2024
 ---
 
