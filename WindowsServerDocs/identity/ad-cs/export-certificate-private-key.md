@@ -1,13 +1,13 @@
 ---
-title: Export a certificate with the private key
-description: Learn how to export a certificate with the private key.
+title: Export a certificate with its private key
+description: Learn how to export a certificate with its private key.
 ms.topic: how-to
 author: dknappettmsft
 ms.author: wscontent
 ms.date: 02/16/2024
 ---
 
-# Export a certificate with the private key
+# Export a certificate with its private key
 
 If you already have a certificate installed on a Windows device and you want to install the same certificate on a Windows device that requires a private key, you can export the certificate with the private key. This article describes how to export a certificate from the Windows certificate stores of the local computer with the private key.
 
@@ -41,7 +41,7 @@ To export a certificate from the Windows certificate stores with the private key
 
 1. Check the box to enter and confirm a password to protect the private key, and select **AES256-SHA256** for the encryption method, then select **Next**. It's important to guard the security of the private key.
 
-1. Browse or enter a file name, then select **Next**.
+1. Enter or browse to the file path, then select **Next**.
 
 1. Review the summary, then select **Finish**.
 
