@@ -2,14 +2,18 @@
 title: Manage Certificate Templates in Windows Server
 description: This article describes how to manage Active Directory Certificate Services Certificate Templates in Windows Server.
 author: Orin-Thomas
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: orthomas
 ms.date: 01/31/2024
 ---
 
 # Manage Certificate Templates
 
-Certificate Templates are managed through the Certificate Templates Microsoft Management Console (MMC) snap-in. You can use this snap-in to manage Active Directory Certificate Services (AD CS) both locally and remotely. You must be a member of Domain Admins to access and administer certificate templates for a domain. To add this snap-in, install the AD CS management tools on the management computer. The AD CS management tools are part of the Remote Server Administration Tools (RSAT). You can install the management tools on a Windows Server computer by running the following PowerShell command from an elevated PowerShell session:
+Certificate Templates are managed through the Certificate Templates Microsoft Management Console (MMC) snap-in. You can use this snap-in to manage Active Directory Certificate Services (AD CS) both locally and remotely. 
+
+## How to manage templates
+
+You must be a member of Domain Admins to access and administer certificate templates for a domain. To add this snap-in, install the AD CS management tools on the management computer. The AD CS management tools are part of the Remote Server Administration Tools (RSAT). You can install the management tools on a Windows Server computer by running the following PowerShell command from an elevated PowerShell session:
 
 ```powershell
 Install-WindowsFeature RSAT-ADCS
@@ -29,7 +33,7 @@ To create a new certificate template:
 
 1. Open the Certificate Templates snap-in and connect to the AC CS Enterprise root or subordinate server.
 1. Right-click the template to copy from, and then click Duplicate Template.
-1. Choose the minimum operating system version of AD CS CA that you want to support. Currently the most recent version of Windows Server that you can select is Windows Server 2016. You can also select the minimum recipient operating system for the certificate template, with the most recent version being Windows 10/Windows Server 2016.
+1. Choose the minimum operating system version of AD CS Certificate Authority (CA) that you want to support. Currently the most recent version of Windows Server that you can select is Windows Server 2016. You can also select the minimum recipient operating system for the certificate template, with the most recent version being Windows 10/Windows Server 2016.
 1. Provide a name for the certificate template and configure the template settings.
  
 ## Delete a certificate template
