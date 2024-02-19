@@ -1,6 +1,6 @@
 ---
-title: Configure SMB over QUIC client access control in Windows Insider
-description: Learn how to use SMB over QUIC client access control in Windows Insider
+title: Configure SMB over QUIC client access control in Windows Server
+description: Learn how to configure client access control for SMB over QUIC in Windows Server.
 ms.topic: how-to
 author: gswashington
 ms.author: nedpyle
@@ -12,7 +12,7 @@ ms.date: 03/01/2024
 
 >Applies to: Windows and Windows Server Insider builds
 
-SMB over QUIC represents an alternative to TCP and RDMA, supplying secure connectivity to edge file servers over untrusted networks like the Internet. SMB over QUIC client access control (CAC) enhances security in the SMB over QUIC feature. This article explains how to configure SMB over QUIC client CAC in Windows and Windows Server Insider builds. See [SMB over QUIC](https://aka.ms/smboverquic) for detailed information on SMB over QUIC.
+SMB over QUIC represents an alternative to TCP and RDMA, supplying secure connectivity to edge file servers over untrusted networks like the Internet. SMB over QUIC client access control (CAC) enhances security in the SMB over QUIC feature. This article explains how to configure SMB over QUIC client CAC in Windows and Windows Server Insider builds. See [SMB over QUIC](smb-over-quic.md)for detailed information on SMB over QUIC.
 
 Prior to the introduction of SMB over QUIC CAC, servers trusted all clients if they were issued the same certificate root chain as the SMB over QUIC server certificate. With SMB over QUIC CAC, administrators can restrict which clients can access SMB over QUIC servers, essentially creating an allowlist of devices trusted to connect to the file server. This functionality gives organizations more protection but doesn't change the Windows authentication used to make the SMB connection. The end user experience remains the same.
 
@@ -139,4 +139,4 @@ New-SmbMapping -RemotePath \\server DNS name\share -TransportType QUIC
 
 ## Related content
 
-- [SMB over QUIC](../storage/file-server/smb-over-quic.md)
+- [SMB over QUIC](smb-over-quic.md)
