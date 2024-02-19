@@ -98,7 +98,7 @@ certutil.exe path\clientCert.cer | findstr /i /c:"Cert Hash(sha256)"
 
 ---
 
-:::image type="content" source="media/smb-over-quic-cac/certutil-command-running.png" alt-text="Screenshot showing example of certutil command running.":::
+:::image type="content" source="../storage/file-server/media/configure-smb-over-quic-access-control/certutil-command.png" alt-text="Screenshot showing example of certutil command running." lightbox="../storage/file-server/media/configure-smb-over-quic-access-control/certutil-command.png":::
 
 1. Return to the server.
 
@@ -139,6 +139,4 @@ New-SmbMapping -RemotePath \\server DNS name\share -TransportType QUIC
 
 ## Related content
 
-- [SMB over QUIC](https://aka.ms/smboverquic)
-
-- []()
+- [SMB over QUIC](../storage/file-server/smb-over-quic.md)
