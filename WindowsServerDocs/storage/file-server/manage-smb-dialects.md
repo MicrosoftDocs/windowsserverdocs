@@ -1,5 +1,5 @@
 ---
-title: Managing SMB dialects in Windows (preview)
+title: Manage SMB dialects in Windows (preview)
 description: Learn how to manage SMB2 and SMB3 dialects using Group Policy and Windows PowerShell in Windows Server and Windows client.
 ms.topic: how-to
 author: gswashington
@@ -8,7 +8,7 @@ ms.date: 02/20/2024
 
 ---
 
-# Managing SMB dialects in Windows (preview)
+# Manage SMB dialects in Windows (preview)
 
 >Applies to: Windows and Windows Server Insider Builds
 
