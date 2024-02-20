@@ -193,13 +193,13 @@ This group includes all domain controllers in an Active Directory forest. Domain
 
 ### Enterprise Read-only Domain Controllers
 
-This group includes all Read-only Domain Controllers in an Active Directory forest. Membership is controlled by the operating system.
+This group includes all Read-only Domain Controllers (RODC) in an Active Directory forest. An Enterprise RODC can replicate a larger subset of the Active Directory database, including the global catalog and read-only domain partitions for all domains in the forest. Membership is controlled by the operating system.
 
 |Attribute|Value|
 | --- | --- |
 |Well-known SID/RID|S-1-5-21-\<RootDomain>-498|
-|Object Class|Group|
-|Default location in Active Directory |cn=Users, dc=\<forestRootDomain\>|
+|Object class|Group|
+|Default location in Active Directory |CN=Users, DC=\<forestRootDomain\>|
 |Default user rights|None|
 
 ### Everyone
@@ -369,13 +369,13 @@ Identifies a SECURITY_NT_AUTHORITY proxy.
 
 ### Read-only Domain Controllers
 
-This group includes all RODCs in the domain with read-only rights to the Active Directory database. Except for account passwords, a read-only domain controller (RODC) holds all the Active Directory objects and attributes that a writable domain controller holds. It allows domain controller deployment when physical security is scarce or not guaranteed. RODCs are explicit members of this group.
+This group includes all RODCs in the domain with read-only rights to the Active Directory database. Except for account passwords, a RODC holds all the Active Directory objects and attributes that a writable domain controller holds. It allows domain controller deployment when physical security is scarce or not guaranteed. RODCs are explicit members of this group.
 
 |Attribute|Value|
 | --- | --- |
 |Well-known SID/RID|S-1-5-21-\<domain>-521|
 |Object class|Group|
-|Default location in Active Directory |cn=Users, dc=\<rootDomain\>|
+|Default location in Active Directory |CN=Users, DC=\<rootDomain\>|
 |Default user rights|None|
 
 > [!NOTE]
