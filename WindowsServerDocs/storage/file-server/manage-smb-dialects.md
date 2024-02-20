@@ -32,11 +32,11 @@ and
 
 `Computer Configuration \ Administrative Templates \ Network \ Lanman Server \ Mandate the Minimum version of SMB`
 
-:::image type="content" source="media/managing-smb-dialects/mandate-minimum-version-smb.jpg" alt-text="Screenshot showing group policy editor and mandate minimum version of smb setting.":::
+:::image type="content" source="media/manage-smb-dialects/mandate-minimum-version-smb.jpg" alt-text="Screenshot showing group policy editor and mandate minimum version of smb setting.":::
 
 1. Select the minimum and maximum version of the dialects using the dropdown menu when the policy is enabled.
 
-:::image type="content" source="media/managing-smb-dialects/select-minimum-maximum.jpg" alt-text="Screenshot showing group policy editor and select SMB version dropdown.":::
+:::image type="content" source="media/manage-smb-dialects/select-minimum-maximum.jpg" alt-text="Screenshot showing group policy editor and select SMB version dropdown.":::
 
 ## Configure group policy (SMB client)
 
@@ -82,7 +82,7 @@ SMB300 | SMB302 | SMB311 | None} -Smb2DialectMin {None | SMB202 | SMB210 | SMB30
 
 You can use a network capture tool like Wireshark to examine the client and server responses for the SMB2 Negotiate Protocol. In the following example, client requests only SMB 3.1.1 because it's been configured with a minimum and maximum dialect of 3.1.1:
 
-:::image type="content" source="media/managing-smb-dialects/capture-SMB-session-creation.jpg" alt-text="Screenshot showing ethernet capture of SMB session creation.":::
+:::image type="content" source="media/manage-smb-dialects/capture-smb-session-creation.jpg" alt-text="Screenshot showing ethernet capture of SMB session creation.":::
 
 ## Related content
 
