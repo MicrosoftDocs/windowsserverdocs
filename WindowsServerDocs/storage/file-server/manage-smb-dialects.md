@@ -17,7 +17,7 @@ ms.date: 02/20/2024
 
 SMB server has the ability to manage SMB2 and SMB3 dialects in Windows Server and Windows client. In this article, learn how to configure a minimum and maximum SMB dialect for the SMB server and client using Group Policy and Windows PowerShell.
 
-By default SMB Server and client automatically negotiates the highest matched dialect from SMB 2.0.2 to 3.1.1. Being with [Windows 11 Insider Preview Build 25951](https://blogs.windows.com/windows-insider/2023/09/13/announcing-windows-11-insider-preview-build-25951-canary-channel/) and [Windows Server Preview Build 25951](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25951/m-p/3926636), you can specify the SMB protocols used, blocking older, less secure, versions from connecting to the server. For example, you can specify connection to only use SMB 3.1.1, the most secure dialect of the protocol.
+By default SMB Server and client automatically negotiates the highest matched dialect from SMB 2.0.2 to 3.1.1. Beginning with [Windows 11 Insider Preview Build 25951](https://blogs.windows.com/windows-insider/2023/09/13/announcing-windows-11-insider-preview-build-25951-canary-channel/) and [Windows Server Preview Build 25951](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25951/m-p/3926636), you can specify the SMB protocols used, blocking older, less secure, versions from connecting to the server. For example, you can specify connection to only use SMB 3.1.1, the most secure dialect of the protocol.
 
 ## Configure maximum and minimum SMB dialects
 
@@ -25,7 +25,7 @@ You can configure the dialects available for negotiation using Group Policy or P
 
 ## SMB server
 
-You can configure the dialects available to your SMB server, by following these steps:
+You can configure the dialects available to your SMB server (that is, for inbound connections), by following these steps:
 
 # [PowerShell](#tab/powershell)
 
@@ -48,7 +48,7 @@ Set-SmbServerConfiguration -Smb2DialectMax SMB311 -Smb2DialectMin SMB300
 
 Here's how to configure the minimum and maximum SMB dialects for the SMB server using Group Policy for domain joined machines.
 
-To configure SMB dialect minimum and maximum for the SMB server (that is, for inbound connection):
+To configure SMB dialect minimum and maximum for the SMB server:
 
 1. Open the **Group Policy Management Console**.
 1. Edit or create a Group Policy Object (GPO) that you want to use.
@@ -63,7 +63,7 @@ To configure SMB dialect minimum and maximum for the SMB server (that is, for in
 
 ## SMB client
 
-You can configure the dialects available to your SMB client, by following these steps:
+You can configure the dialects available to your SMB client (that is, for outbound connections), by following these steps:
 
 # [PowerShell](#tab/powershell)
 
@@ -86,7 +86,7 @@ Set-SmbClientConfiguration -Smb2DialectMax SMB311 -Smb2DialectMin SMB311
 
 Here's how to configure the minimum and maximum SMB dialects for the SMB client using Group Policy for domain joined machines.
 
-To configure SMB dialect minimum and maximum for the SMB client (that is, for outbound connections):
+To configure SMB dialect minimum and maximum for the SMB client:
 
 1. Open the **Group Policy Management Console**.
 1. Edit or create a Group Policy Object (GPO) that you want to use.
@@ -109,4 +109,4 @@ You can use a network capture tool like Wireshark to examine the client and serv
 
 ## Related content
 
-- [Protect SMB traffic from interception](https://learn.microsoft.com/en-gb/windows-server/storage/file-server/smb-interception-defense?tabs=group-policy#use-smb-311)
+- [Protect SMB traffic from interception](smb-interception-defense.md)
