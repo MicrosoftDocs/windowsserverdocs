@@ -11,7 +11,7 @@ author: Heidilohr
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!IMPORTANT]
->The web client does support using Azure AD Application Proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
+>The web client does support using Microsoft Entra application proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
 
 ## What you'll need to set up the web client
 

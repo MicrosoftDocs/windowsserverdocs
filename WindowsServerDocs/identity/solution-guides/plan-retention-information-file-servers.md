@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 manager: femila
 ms.date: 04/01/2022
-ms.prod: windows-server
 ---
 
 # Plan for retention of information on file servers

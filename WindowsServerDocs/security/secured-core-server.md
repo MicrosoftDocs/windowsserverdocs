@@ -5,7 +5,6 @@ author: roysasabe
 ms.author: wscontent
 ms.topic: conceptual 
 ms.date: 04/06/2023
-ms.prod: windows-server
 ms.custom: template-overview, team=cloud_advocates, kr2b-contr-experiment
 ms.contributors: socuff-01282022
 ---

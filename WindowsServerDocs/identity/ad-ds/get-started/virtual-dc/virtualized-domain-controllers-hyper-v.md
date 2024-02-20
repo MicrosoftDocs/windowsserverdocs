@@ -99,7 +99,7 @@ Performance of VMs depends specifically on the workload. To guarantee satisfacto
 
 To get a general idea of the performance of virtualized DCs, the following performance tests were carried out with the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
 
-Lightweight Directory Access Protocol (LDAP) tests were run on a physical DC with ADTest.exe and then on a VM hosted on a server identical to the physical DC. Only one logical processor was used for the physical computer, and only one virtual processor was used for the VM to easily reach 100-percent CPU utilization. In the following table, the letter and number in parenthesis after each test indicate the specific test in ADTest.exe. As this data shows, virtualized DC performance was 88 to 98 percent of the physical DC performance.
+Lightweight Directory Access Protocol (LDAP) tests were run on a physical DC with ADTest.exe and then on a VM hosted on a server identical to the physical DC. Only one logical processor was used for the physical computer, and only one virtual processor was used for the VM to easily reach 100-percent CPU utilization. In the following table, the letter and number in parentheses after each test indicate the specific test in ADTest.exe. As this data shows, virtualized DC performance was 88 to 98 percent of the physical DC performance.
 
 | Measurement  | Test                                              | Physical | Virtual | Delta |
 |--------------|---------------------------------------------------|----------|---------|-------|

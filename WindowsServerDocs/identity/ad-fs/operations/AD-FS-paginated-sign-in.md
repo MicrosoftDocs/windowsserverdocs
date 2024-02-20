@@ -3,7 +3,7 @@ title: AD FS paginated sign-in
 description: This article describes new sign-in experience for AD FS.
 author: billmath
 ms.author: billmath
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # AD FS paginated sign-in
