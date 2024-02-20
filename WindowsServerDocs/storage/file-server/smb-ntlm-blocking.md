@@ -4,14 +4,14 @@ description: Learn how to make SMB more secure by blocking NTLM.
 ms.topic: how-to
 author: Heidilohr
 ms.author: helohr
-ms.date: 01/22/2024
+ms.date: 02/21/2024
 ms.prod: windows-server
 ---
 # Block NTLM connections on SMB (preview)
 
 > [!IMPORTANT]
-> NTLM blocking in SMB is currently in PREVIEW.
-> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Windows Server Insider builds are in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 The SMB client now supports blocking NTLM queries for remote outbound connections. Blocking NTLM queries prevents bad actors from tricking clients into sending NTLM requests to malicious servers, counteracting brute force, cracking, and pass-the-hash attacks. NTLM blocking is also required for switching an organization's authentication protocols to Kerberos, which is more secure than NTLM because it can verify server identities with its ticket system. However, organizations can also enable this layer of protection without having to disable NTLM entirely.
 
