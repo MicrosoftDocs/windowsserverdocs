@@ -1,13 +1,13 @@
 ---
-title: Manage Certificate Templates in Windows Server
-description: This article describes how to manage Active Directory Certificate Services Certificate Templates in Windows Server.
+title: Manage certificate templates in Windows Server
+description: This article describes how to manage Active Directory Certificate Services certificate templates in Windows Server.
 author: Orin-Thomas
 ms.topic: how-to
 ms.author: orthomas
-ms.date: 01/31/2024
+ms.date: 02/18/2024
 ---
 
-# Manage Certificate Templates
+# Manage certificate templates
 
 Certificate Templates are managed through the Certificate Templates Microsoft Management Console (MMC) snap-in. You can use this snap-in to manage Active Directory Certificate Services (AD CS) both locally and remotely. 
 
@@ -59,9 +59,9 @@ To change a certificate template name:
 
 If the modified template is already published to issuing CAs, remove the template from Certificate Templates on those issuing CAs, then restart these issuing CA computers, and then add the renamed template to the issuing CAs. If another template supersedes the modified template, then update the superseding template by adding the modified template to the list of superseded templates.
 
-## Deploying Certificate Templates to a CA
+## Deploying certificate templates to a CA
 
-When you create an enterprise certification authority (CA), certificate templates are stored in Active Directory Domain Services (AD DS) and can be made available to all enterprise CAs in the forest. Any newly  created certificate templates are will be replicated automatically to all domain controllers in the enterprise.
+When you create an enterprise certification authority (CA), certificate templates are stored in Active Directory Domain Services (AD DS) and can be made available to all enterprise CAs in the forest. Any newly created certificate templates will be replicated automatically to all domain controllers in the enterprise.
 
 To configure a CA to issue certificates based on a certificate template, perform the following steps:
 
@@ -69,7 +69,7 @@ To configure a CA to issue certificates based on a certificate template, perform
 1. Right-click Certificate Templates, click New, and then click Certificate Template to Issue.
 1. Select the certificate template, and click OK.
 
-## Remove a Certificate Template from a CA.
+## Remove a certificate template from a CA.
 
 It may be necessary to remove a certificate template from a certification authority (CA). For example, if you need to avoid confusion when adding a newer version of the certificate template. 
 

@@ -1,13 +1,13 @@
 ---
-title: Certificate Template concepts in Windows Server
-description: This article describes Certificate Templates concepts for Active Directory Certificate Services in Windows Server.
+title: Certificate template concepts in Windows Server
+description: This article describes certificate templates concepts for Active Directory Certificate Services in Windows Server.
 author: Orin-Thomas
 ms.topic: conceptual
 ms.author: orthomas
-ms.date: 01/31/2024
+ms.date: 02/18/2024
 ---
 
-# Certificate Templates concepts
+# Certificate templates concepts
 
 Certificate templates can greatly simplify the task of administering an Active Directory Certificate Services (AD CS) certification authority (CA) by allowing an administrator to issue certificates preconfigured for selected tasks. The Certificate Templates snap-in allows an administrator to perform the following tasks:
 
@@ -20,7 +20,7 @@ Certificate templates are the sets of rules and settings that are configured on 
 
 Only an enterprise CA can issue certificates based on a certificate template. The templates are stored in Active Directory Domain Services (AD DS) for use by every CA in the forest. This allows the CA to always have access to the current standard template and ensures consistent application of the certificate policy across the forest.
 
-## Certificate Template versions
+## Certificate template versions
 
 Certificate template versions determine which features are available in a certificate template. Active Directory Certificate Services (AD CS) provides three versions of certificate templates that are available on enterprise certification authorities (CA).
 
@@ -28,7 +28,7 @@ Certificate template versions determine which features are available in a certif
 - Version 2 certificate templates were introduced with Windows Server 2003. An administrator can configure version 2 templates to control the way certificates are requested, issued, and used. Version 2 templates provide support for certificate autoenrollment.
 - Version 3 certificate templates support all version 2 template features but also provide support for Suite B cryptographic algorithms. Suite B was created by the U.S. National Security Agency to specify cryptographic algorithms that must be used by U.S. government agencies to secure confidential information. Version 3 certificate templates are available through AD CS on all supported versions of Windows Server.
 
-## Default Certificate Templates
+## Default certificate templates
 
 A number of preconfigured certificate templates that are designed to meet the needs of most organizations are included with AD CS enterprise certification authorities (CAs). New certificate templates can be created by modifying a copy of an existing preconfigured template. The default certificate templates are described in the following table: 
 
