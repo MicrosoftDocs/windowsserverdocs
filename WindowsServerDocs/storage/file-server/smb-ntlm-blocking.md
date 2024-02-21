@@ -68,7 +68,7 @@ To enable a list of exceptions to NTLM blocking:
 
 #### [PowerShell](#tab/powershell)
 
-There isn't currently a PowerShell equivalent to the Block NTLM Server Exception List Group Policy object. In order to set up an exception list, you must go into the Group Policy Editor and configure the setting manually. However, once you've completed the manual setup, you can make individual exceptions for certain IPs by running this command:
+There isn't currently a PowerShell equivalent to the Block NTLM Server Exception List Group Policy object. In order to set up an exception list, you must go into the Group Policy Editor and configure the setting manually. However, once you've completed the manual setup, you can make individual exceptions for certain IPs by running this command with the DNS name, IP adress, or NetBIOS name in the `AddToList` parameter:
 
   ```powershell
   $params = @{
@@ -76,10 +76,21 @@ There isn't currently a PowerShell equivalent to the Block NTLM Server Exception
     Name = "BlockNTLMServerExceptionList"
   }
   $CurrentValue = (Get-ItemProperty @params).BlockNTLMServerExceptionList
-  $params["Value"] = if ($CurrentValue -eq $null) { @("") } else { $CurrentValue + "<IP Address>" }
+  $params["Value"] = if ($CurrentValue -eq $null) { @("") } else { $CurrentValue + "AddToList" }
   Set-ItemProperty @params 
   ```
 
+  You can also add multiple variables to the `AddToList` parameter by separating them with a comma, as shown in the following example command:
+
+  ```powershell
+  $params = @{
+    Path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation"
+    Name = "BlockNTLMServerExceptionList"
+  }
+  $CurrentValue = (Get-ItemProperty @params).BlockNTLMServerExceptionList
+  $params["Value"] = if ($CurrentValue -eq $null) { @("") } else { $CurrentValue + "192.168.10.10","corp.contoso.com","CORP" }
+  Set-ItemProperty @params 
+  ```
 ---
 
 ## Block NTLM while mapping SMB drives
