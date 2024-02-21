@@ -1,5 +1,5 @@
 ---
-title: SMB authentication rate limiter for Windows (preview)
+title: Configure SMB authentication rate limiter for Windows (preview)
 description: Learn how SMB authentication rate limiter works and how to configure it for Windows Server and Windows client.
 ms.topic: how-to
 author: gswashington
@@ -8,7 +8,7 @@ ms.date: 02/21/2024
 
 ---
 
-# SMB authentication rate limiter for Windows (preview)
+# Configure SMB authentication rate limiter for Windows (preview)
 
 >Applies to: Windows Server Insider Builds
 
