@@ -36,7 +36,7 @@ Before you can configure the SMB client to require encryption, you need:
 You can configure the SMB client to always require encryption regardless of server, share, UNC hardening, or mapped drive requirements. An administrator can globally force a Windows machine to use SMB encryption (and therefore SMB 3.x) on all connections, refusing to connect if the SMB server doesn't support either.
 
 > [!TIP]
-> SMB encryption has associated performance and compatibility overhead. SMB signing features better performance and tamper protection but does not provide snooping protection. Forgoing encryption and signing completely offers the best performance but of course provides no security beyond connection authorization and pre-auth integrity protection. SMB encryption supersedes SMB signing and supplies the same level of tamper protection; if your SMC client requires signing, SMB encryption turns it off.
+> SMB encryption has associated performance and compatibility overhead. SMB signing features better performance and tamper protection but does not provide snooping protection. Forgoing encryption and signing completely offers the best performance but of course provides no security beyond connection authorization and pre-auth integrity protection. SMB encryption supersedes SMB signing and supplies the same level of tamper protection; if your SMB client requires signing, SMB encryption turns it off.
 
 You can configure the SMB client to require encryption for outbound connections using Group Policy or PowerShell.
 
