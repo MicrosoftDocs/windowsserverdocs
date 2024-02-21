@@ -57,7 +57,7 @@ To configure SMB client for required encryption to all SMB servers (that is, for
 Setting the policy to disabled or not configured removes the encryption requirement.
 
 >[!IMPORTANT]
->Be careful when deploying SMB encryption through group policy to a heterogenous fleet. Legacy SMB servers such as Windows Server 2008 R2 won’t support SMB 3.0. Older third-party SMB servers in some cases can support SMB 3.0 but won't support encryption.
+>Be careful when deploying SMB encryption through organization-wide. Legacy SMB servers such as Windows Server 2008 R2 don't support SMB 3.0. Older third-party SMB servers in some cases can support SMB 3.0 but might not support encryption.
 
 # [PowerShell](#tab/powershell)
 
