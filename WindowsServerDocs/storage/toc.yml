@@ -1,3 +1,4 @@
+items:
 - name: Storage
   href: storage.yml
   items:
@@ -95,6 +96,8 @@
       href: file-server/smb-interception-defense.md
     - name: Control SMB signing behavior
       href: file-server/smb-signing.md
+    - name: Configure the SMB client to require encryption
+      href: file-server/configure-smb-client-require-encryption.md
     - name: Network File System overview
       href: nfs/nfs-overview.md
     - name: Deploy Network File System
