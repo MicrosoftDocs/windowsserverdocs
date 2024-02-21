@@ -109,7 +109,7 @@ VM performance depends on the workload you use it for. We recommend you test spe
 
 To give you an idea of how testing virtualized DC performance works, we created an example performance test using the [Active Directory Performance Testing Tool (ADTest.exe)](https://go.microsoft.com/fwlink/?linkid=137088).
 
-We first ran Lightweight Directory Access Protocol (LDAP) tests on a physical DC using the ADTest.exe program. Next, we ran the same tests on a virtualized DC, which consisted of a VM hosted on a server identical to the physical DC. In our example build, we only used one logical processor for the physical computer and only one virtual processor for the VM. This configuration allowed our deployment to easily reach 100 percent CPU utilization.
+Lightweight Directory Access Protocol (LDAP) tests were performed on a physical DC using ADTest.exe. The same tests were run on a virtualized DC that consisted of a VM hosted on a server identical to the physical DC. Only one logical processor was used in this example build for the physical computer and only one virtual processor for the VM. This configuration allowed for deployment to easily reach 100 percent CPU utilization.
 
 The following table lists the test results for the physical and virtual DCs. The letters and numbers in parentheses next to the test names are their labels in ADTest.exe. This data shows that the virtualized DC performance was between 88 to 98 percent of the physical DC performance.
 
@@ -126,7 +126,7 @@ The following table lists the test results for the physical and virtual DCs. The
 
 To maximize performance in our test deployment, we installed integration components (IC) in this test build to allow the guest OS to use hypervisor-aware synthetic drivers. When you install an IC, sometimes you need to use emulated Integrated Drive Electronics (IDE) or network adapter drivers. In production environments, you should replace these emulated drivers with synthetic drivers to increase performance.
 
-Based on this test, we can give you the following recommendations for improving performance:
+Based on this test, consider the following recommendations for improving performance:
 
 - When you monitor VM performance using the Perfmon.msc tool, sometimes the CUP information for the VM isn't entirely accurate. This inaccuracy is because of how the virtual CPU is scheduled to run on the physical processor. For more accurate CPU information for VM running on Hyper-V servers, use the Hyper-V Hypervisor Logical Processor counters in the host partition instead. For more information about performance tuning of both AD DS and Hyper-V, see [Performance tuning guidelines for Windows Server](../../../../administration/performance-tuning/index.md).
 
@@ -149,7 +149,7 @@ Virtualization platforms like Hyper-V have many features that make managing, mai
 - Don't deploy Active Directory domains and forests on a copy of a Windows Server OS without first using the System Preparation tool (sysprep) to prepare them for deployment. For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
 
    > [!WARNING]
-   > We don't recommend running Sysprep on a promoted DC because it can negatively affect the AD database and related components, causing the following issues:
+   > Running Sysprep on a promoted DC isn't recommended, as it can negatively affect the AD database and related components and cause the following issues:
    >
    > - Data loss
    > - AD database corruption

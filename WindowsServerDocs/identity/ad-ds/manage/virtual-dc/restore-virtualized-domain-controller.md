@@ -101,7 +101,7 @@ To restore a virtual DC with a VHD file:
    
    - Don't start the DC in normal mode. If you miss the **Windows Boot Manager** screen and the DC begins to start in normal mode, turn the VM off to prevent it from starting up.
 
-1. Open the **Registry Editor**. You can open the editor by selecting **Start** > **Run**, then enter **regedit** and select **OK**.
+1. Open the Registry Editor by selecting **Start**, then entering **regedit** and selecting **Registry Editor**.
 
    - If the **User Account Control** dialog displays, confirm the displayed action is as expected, then select **Yes**.
 
@@ -115,15 +115,9 @@ To restore a virtual DC with a VHD file:
 
 1. Double-click the value you just created to open the **Edit DWORD (32-bit) Value** dialog, then find the **Value data** field and enter **1**.
 
-   The **Database restored from backup entry** option is available on the following DCs running Windows Server:
-
-   - Windows 2000 Server with Service Pack 4 (SP4)
-   - Windows Server 2003 with specified updates installed. For details, see [A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback).
-   - Windows Server 2008
-
 1. Restart the DC in normal mode.
 
-1. When the DC restarts, open **Event Viewer**. To open Event Viewer, select **Start** > **Control Panel**. Double-click **Administrative Tools**, then double-click **Event Viewer**.
+1. When the DC restarts, open Event Viewer by right-clicking **Start**, then selecting **Event Viewer**.
 
 1. Expand **Application and Services Logs**, then select the **Directory Services** log. Ensure the events appear in the details pane.
 
