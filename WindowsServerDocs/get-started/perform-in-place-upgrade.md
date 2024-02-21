@@ -16,7 +16,9 @@ your settings, server roles, and data intact. This article teaches you how to mo
 version of Windows Server by using an in-place upgrade.
 
 > [!IMPORTANT]
-> This article covers the in-place Windows Server upgrade process for non-Azure servers and virtual machines (VMs) only. To do an in-place upgrade of Windows Server running in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+> This article covers the in-place Windows Server upgrade process for non-Azure servers and virtual machines (VMs) only. To do an in-place upgrade of Windows Server running in an Azure VM       , see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+>
+> For users using Microsoft Entra Connect who're looking to upgrade, see [Microsoft Entra Connect: Upgrade from a previous version to the latest](/entra/identity/hybrid/connect/how-to-upgrade-previous-version).
 
 ## Prerequisites
 
