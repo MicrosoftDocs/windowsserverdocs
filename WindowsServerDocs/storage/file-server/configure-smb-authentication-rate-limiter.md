@@ -1,10 +1,10 @@
 ---
 title: SMB authentication rate limiter for Windows (preview)
-description: Learn how SMB authentication rate limiter works and how to configure it for Windows Server and Windows client
-ms.topic: conceptual
+description: Learn how SMB authentication rate limiter works and how to configure it for Windows Server and Windows client.
+ms.topic: how-to
 author: gswashington
 ms.author: nedpyle
-ms.date: 02/14/2024
+ms.date: 02/21/2024
 
 ---
 
@@ -15,30 +15,50 @@ ms.date: 02/14/2024
 > [!IMPORTANT]
 > Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-SMB authentication rate limited is a feature of SMB server for Windows Server and Windows client designed to address bruce force authentication attacks. Bruce force authentication attacks bombard the SMB server with multiple username and password-guess attempts per second. In this article you will learn how SMB authentication rate limiter works and how to configure it.
+SMB authentication rate limited is a feature of SMB server for Windows Server and Windows client designed to address brute force authentication attacks. Bruce force authentication attacks bombard the SMB server with multiple username and password-guess attempts per second. Beginning with [Windows Server Insider build 25075](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25075/m-p/3259165) and [Windows 11 Insider build 25375](https://blogs.windows.com/windows-insider/2023/05/25/announcing-windows-11-insider-preview-build-25375/), SMB authentication rate limiter is enabled by default. The default delay between each failed NTLM or PKU2U-based authentication attempt is 2 seconds and can be configured. In this article. Learn how SMB authentication rate limiter works and how to configure it.
 
-It is a common for the SMB server service to be enabled even on machines that aren't dedicated file servers. Enabling access to the SMB server is done for many reasons such as opening remote files or copying logs. But SMB access can also be leveraged by bad actors as a way to attempt authentication. Knowing a username, an attacker can send local or Active Directory New Technology LAN Manager (NTLM) logons to a machine using several methods. Password guess frequency can range from dozens to hundreds of logon attempts per second.
+It's a common for the SMB server service to be enabled even on machines that aren't dedicated file servers. Enabling access to the SMB server is done for many reasons such as opening remote files or copying logs. But bad actors can use SMB access as a way to attempt authentication. Knowing a username, an attacker can send local or Active Directory New Technology LAN Manager (NTLM) logons to a machine using several methods. Password guess frequency can range from dozens to hundreds of sign-in attempts per second.
 
-If your organization has no intrusion detection software or doesn't set a password lockout policy, an attacker can guess a user's password in days or even hours. Although the SMB server runs by default across all versions of Windows it's not accessible by default unless the firewall rule is allowed. An end user who turns off firewall and joins a device to an unsafe network faces a similar problem.
+If your organization has no intrusion detection software or doesn't set a password lockout policy, an attacker can guess a user's password in days or even hours. Although the SMB server runs by default across all versions of Windows, it's not accessible by default unless the firewall rule is allowed. An end user who turns off firewall and joins a device to an unsafe network faces a similar problem.
 
 ## How SMB authentication rate limiter works
 
-The SMB server service uses the authentication rate limiter to implement a 2-second delay between each failed NTLM or PKU2U-based authentication attempt. This means if an attacker previously sent 300 brute force attempts per second from a client for 5 minutes (90,000 passwords), the same number of attempts would now take 50 hours or more. As with similar defense-in-depth techniques, the purpose of SMB authentication rate limiter is to make a server an unattractive a target by increasing the cost of the attack.
+The SMB server service uses the authentication rate limiter to implement a 2-second delay between each failed NTLM or PKU2U-based authentication attempt. Meaning if an attacker previously sent 300 brute force attempts per second from a client for 5 minutes (90,000 passwords), the same number of attempts would now take 50 hours or more. As with similar defense-in-depth techniques, the purpose of SMB authentication rate limiter is to make a server an unattractive a target by increasing the cost of the attack.
 
-The SMB authentication rate limiter setting features a time configuration variable and can be enabled or disabled manually in Powershell:
+## Prerequisites
 
-`Set-SmbServerConfiguration -InvalidAuthenticationDelayTimeInMs n` 
+Before you can configure SMB authentication rate limiter, you need:
 
-The variable is measured in milliseconds; it must be a multiple of 100 with an allowed range 0-10000.
+- An SMB server running on one of the following operating systems.
+  - Windows Server Insider build 25075 or later.
+  - Windows 11 Insider build 25375 or later.
+- Administrative privileges to the computer.
+- FIXME: check client version doesn't matter.
+
+## Configure SMB authentication rate limiter
+
+The SMB authentication rate limiter setting features a time configuration variable and can be enabled or disabled manually in PowerShell. To enable SMB authentication rate limiter, follow the steps:
+
+1. Open a PowerShell window as an administrator.
+
+1. Determine the number of milliseconds you want to delay between each failed NTLM or PKU2U-based authentication attempt. The default value is 2000 milliseconds (2 second). Your value must be a multiple of 100 with an allowed range 0-10000.
+
+1. Run the following command to enable SMB authentication rate limiter.
+
+   ```powershell
+    Set-SmbServerConfiguration -InvalidAuthenticationDelayTimeInMs <Milliseconds>
+    ```
 
 >[!NOTE]
 > Setting the variable to 0 disables SMB authentication rate limiter.
 
-To see the current value, run:
+To see the current value, run the following command:
 
-`Get-SmbServerConfiguration`
+```powershell
+Get-SmbServerConfiguration | Format-List -Property InvalidAuthenticationDelayTimeInMs
+```
 
-SMB authentication rate limiter does not affect Kerberos. Kerberos authenticates before an application protocol like SMB connects. SMB authentication rate limiter is designed to be an additional layer of defense in depth, especially for devices not joined to domains.
+SMB authentication rate limiter doesn't affect Kerberos. Kerberos authenticates before an application protocol like SMB connects. SMB authentication rate limiter is designed to be another layer of defense in depth, especially for devices not joined to domains.
 
 ## Related content
 

@@ -1,3 +1,4 @@
+items:
 - name: Storage
   href: storage.yml
   items:
@@ -85,6 +86,8 @@
       href: file-server/smb-over-quic.md
     - name: SMB compression
       href: file-server/smb-compression.md
+    - name: Configure SMB authentication rate limiter
+      href: file-server/configure-smb-authentication-rate-limiter.md
     - name: SMB security enhancements
       href: file-server/smb-security.md
     - name: 'SMB: File and printer sharing ports should be open'
