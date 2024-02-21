@@ -5,7 +5,6 @@ ms.topic: article
 author: PatAltimore
 ms.author: wscontent
 ms.date: 06/12/2023
-ms.prod: windows-server
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
 ---
 # Secure SMB Traffic in Windows Server

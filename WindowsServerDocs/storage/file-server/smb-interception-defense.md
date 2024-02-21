@@ -282,10 +282,10 @@ and ticket passing attacks. Use the following items as a guide when enhancing Ke
 1. **Enforce long passwords and phrases** - We encourage using longer password lengths such as 15
    characters or more to reduce your resistance to brute force attacks. You should also avoid common
    words or phrases to make your password even stronger.
-1. **Deploy Azure AD Password Protection for Active Directory Domain Services** - Use Azure AD
+1. **Deploy Microsoft Entra Password Protection for Active Directory Domain Services** - Use Microsoft Entra ID
    Password Protect to block known weak passwords and terms that are specific to your organization.
    To learn more, review
-   [Enforce on-premises Azure AD Password Protection for Active Directory Domain Services](/azure/active-directory/authentication/concept-password-ban-bad-on-premises).
+   [Enforce on-premises Microsoft Entra Password Protection for Active Directory Domain Services](/azure/active-directory/authentication/concept-password-ban-bad-on-premises).
 1. **Use group Managed Service Accounts (gMSA)** - gMSA enabled services with their 127 random
    character construction, makes brute force and dictionary attacks to crack passwords incredibly
    time consuming. Read about what gMSAs are in the article

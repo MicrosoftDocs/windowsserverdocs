@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 11/27/2023
-ms.prod: windows-server
 ---
 
 # Install, upgrade, or migrate to Windows Server

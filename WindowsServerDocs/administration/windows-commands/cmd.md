@@ -12,6 +12,9 @@ ms.date: 09/12/2023
 
 Starts a new instance of the command interpreter, Cmd.exe. If used without parameters, **cmd** displays the version and copyright information of the operating system.
 
+> [!NOTE]
+> Users seeking more advanced capabilities are encouraged to explore [PowerShell](/powershell/) for enhanced scripting and automation.
+
 ## Syntax
 
 ```

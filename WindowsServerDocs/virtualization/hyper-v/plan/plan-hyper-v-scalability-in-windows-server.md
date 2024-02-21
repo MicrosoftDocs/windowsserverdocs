@@ -5,7 +5,6 @@ ms.topic: article
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 9/16/2021
-ms.prod: windows-server
 ---
 
 # Plan for Hyper-V scalability in Windows Server

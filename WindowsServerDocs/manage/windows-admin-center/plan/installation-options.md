@@ -41,6 +41,9 @@ To operate Windows Admin Center:
 > [!WARNING]
 > Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
 
+> [!NOTE]
+> Port usage and defaults for Windows Admin Center installations on the modernized gateway vary from what is mentioned above. [Read more about what's different in the modernized gateway.](../understand/modernized-gateway.md)
+
 ## Installation: Supported web browsers
 
 Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10. Other web browsers—including Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has its own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).

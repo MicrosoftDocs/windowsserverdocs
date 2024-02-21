@@ -119,7 +119,7 @@ mechanism.
 
 1. Download the CTL files on a server that computers on a disconnected environment can access over
    the network by using a FILE path (for example, `FILE://\\Server1\CTL`) or an HTTP path (for
-   example, `https://Server1/CTL`).
+   example, `http://Server1/CTL`).
 
 > [!NOTE]
 >
@@ -212,7 +212,7 @@ The configuration in this section requires that you already completed the steps 
    be used instead of default ctldl.windowsupdate.com**.
 
 1. Select **Enabled**. In the Options section, enter the URL to the file server or web server that
-   contains the CTL files. For example, `https://server1/CTL` or `file://\\server1\CTL`.
+   contains the CTL files. For example, `http://server1/CTL` or `file://\\server1\CTL`.
 
 1. Select **OK**.
 
@@ -443,7 +443,7 @@ domain. These settings must be reconfigured, if you want to change them.
   - **Key**: `SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot`
   - **Type**: `REG_DWORD`
   - **Name**: `EnableDisallowedCertAutoUpdate`
-  - **Data**: `0` to enabled or `1` to disable.
+  - **Data**: `1` to enabled or `0` to disable.
   - **Default**: There is no key present by default. Without a key present, the default is enabled.
 
 - Set the shared CTL file location (HTTP or the FILE path):

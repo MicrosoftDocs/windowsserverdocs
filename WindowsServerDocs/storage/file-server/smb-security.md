@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2023
-ms.prod: windows-server
 ---
 
 # SMB security enhancements

@@ -7,7 +7,6 @@ author: Heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 11/03/2022
-ms.custom: contperf-fy21q1
 ---
 
 # Get started with the Android client
