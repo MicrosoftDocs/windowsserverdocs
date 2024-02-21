@@ -1,16 +1,16 @@
 ---
 title: Configure alternative SMB ports (preview)
 description: How to configure alternative SMB ports on Windows Server.
-ms.topic: article
+ms.topic: how-to
 author: Heidilohr
 ms.author: helohr
-ms.date: 02/15/2024
+ms.date: 02/21/2024
 ---
 
 # Configure alternative SMB ports (preview)
 
 > [!IMPORTANT]
-> Configuring alternative SMB ports is currently in PREVIEW.
+> Windows Server Insider builds are in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use the SMB client to connect to alternative TCP, QUIC, and RDMA ports. However, you can only connect to alternative ports if the SMB server is configured to support listening on that port.
@@ -86,10 +86,17 @@ The SMB client doesn't support changing the TCP listening port to anything but t
 The only method currently available to configure alternative ports is through PowerShell. You can configure the SMB over the QUIC server to use an alternative port by running the following commands:
 
 ```powershell
-Get-SmbServerAlternativePort #Lists all available alternative ports
-New-SmbServerAlternativePort #Creates a new alternative port
-Remove-SmbServerAlternativePort #Deletes an alternative port
-Set-SmbServerAlternativePort #Configures SMB to use a specific port
+#Lists all available alternative ports
+Get-SmbServerAlternativePort 
+
+#Creates a new alternative port
+New-SmbServerAlternativePort 
+
+#Deletes an alternative port
+Remove-SmbServerAlternativePort
+
+#Configures SMB to use a specific port
+Set-SmbServerAlternativePort
 ```
 
 ## Related content
