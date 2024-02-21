@@ -244,7 +244,7 @@ Although we are targeting Private Cloud scenarios, specifically Hyper-V and Scal
 - This feature works only for versions of Windows Server starting with Windows Server 2012 R2. This feature cannot upgrade earlier versions of Windows Server such as Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012.
 - Each Windows Server 2016 node should be reformatted/new installation only. *In-place* or *upgrade* installation types are discouraged.
 - A node running the newer version of Windows Server must be used to add the new nodes to the cluster.
-- When managing a mixed-OS mode cluster, always perform the management tasks from an up-level node that is running Windows Server 2016. Downlevel Windows Server nodes cannot use UI or management tools against newer versions of Windows Server.
+- When managing a mixed-OS mode cluster, always perform the management tasks from the node that is running the newer version of Windows Server. Down-level Windows Server nodes cannot use UI or management tools against newer versions of Windows Server.
 - We encourage customers to move through the cluster upgrade process quickly because some cluster features are not optimized for mixed-OS mode.
 - Avoid creating or resizing storage on newer Windows Server nodes while the cluster is running in mixed-OS mode because of possible incompatibilities on failover from a newer Windows Server node to down-level Windows Server nodes.
 
