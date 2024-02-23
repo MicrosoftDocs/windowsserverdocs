@@ -17,9 +17,9 @@ ms.date: 03/01/2024
 
 Beginning with [Windows 11 Insider Preview Build 25982 (Canary Channel)](https://blogs.windows.com/windows-insider/2023/10/25/announcing-windows-11-insider-preview-build-25982-canary-channel/) and [Windows Server Preview Build 25997](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25997/m-p/3983949), the SMB client supports requiring encryption of all outbound SMB connections. Administrators can require all destination servers to support encryption with SMB 3.0 or later. In this article, learn how to configure the SMB client to require encryption for all outbound connections.
 
-Encryption of all outbound SMB client connections enforces the highest level of network security and bringing management parity to SMB signing, which allows both client and server requirements. When enabled, the SMB client won't connect to an SMB server that doesn't support SMB 3.0 or later.
+Encryption of all outbound SMB client connections enforces the highest level of network security and brings management parity to SMB signing, which allows both client and server requirements. When enabled, the SMB client won't connect to an SMB server that doesn't support SMB 3.0 or later, or that doesn't support SMB encryption. For example, a third-party SMB server might support SMB 3.0 but not SMB encryption.
 
-SMB Encryption supplies SMB data end-to-end protection from interception attacks and snooping. SMB Encryption includes AES-GCM support to deliver better hardware-accelerated encryption. AES-256-GCM cryptographic suites enable you to configure SMB encryption on a per share basis for the entire file server whether mapping drives or using UNC Hardening. To learn more about SMB encryption, see [SMB security enhancements](smb-security.md).
+SMB Encryption supplies SMB data end-to-end protection from interception attacks and snooping. The SMB client can require encryption per mapped drive, by UNC hardening, or on a per machine setting as described in this article. SMB server can also require SMB encryption on a per share basis or for the entire file server. To learn more about SMB encryption for SMB server and UNC Hardening, see [SMB encryption](smb-security.md#smb-encryption).
 
 ## Prerequisites
 
