@@ -141,7 +141,8 @@ All versions of Windows use the same final equation to check `PhaseCorrection`:
 
 To see the `SystemClockRate` and `pollIntervalInSeconds` values (measured in seconds), open a Command Prompt window and then run `w32tm /query /status /verbose`. This command produces an output that resembles the following:  
 
-```
+
+```swift
 Leap Indicator: 0(no warning)
 Stratum: 1 (primary reference - syncd by radio clock)
 Precision: -23 (119.209ns per tick)
@@ -187,7 +188,8 @@ Is `CurrentTimeOffset` &le; `MaxAllowedPhaseOffset`?
 
 Does it satisfy the following equation?
 
-```
+
+```sql
 (CurrentTimeOffset) ÷ (PhaseCorrectRate × UpdateInterval) ≤ SystemClockRate ÷ 2
 
 2,400,000,000 ÷ (30,000 × 1) ≤ 156,000 ÷ 2
@@ -220,7 +222,8 @@ Is `CurrentTimeOffset` &le; `MaxAllowedPhaseOffset`?
 
 Does it satisfy the following equation?
 
-```
+
+```sql
 (CurrentTimeOffset) ÷ (PhaseCorrectRate × UpdateInterval) ≤ SystemClockRate ÷ 2
 
 (1,800,000,000) ÷ (1 × 30,000) ≤ 156,000 ÷ 2
@@ -314,7 +317,6 @@ Some of the parameters in the registry are measured in clock ticks and some are 
 For example, 5 minutes becomes 5 &times; 60 &times; 1000 &times; 10000 = 3,000,000,000 clock ticks.
 
 In the following section, "All versions" refers to Windows 7, including future iterations, and Windows Server 2008 including future iterations.
-
 # [Config](#tab/config)
 
 |Registry entry |Versions |Description |
@@ -339,7 +341,8 @@ In the following section, "All versions" refers to Windows 7, including future i
 |**SpikeWatchPeriod** |All versions |Specifies the amount of time that a suspicious offset must persist before it's accepted as correct (in seconds). The default value on domain members is **900**. The default value on stand-alone clients and workstations is **900**. |
 |**TimeJumpAuditOffset** |All versions |An unsigned integer that indicates the time jump audit threshold, in seconds. If the time service adjusts the local clock by setting the clock directly, and the time correction is more than this value, then the time service logs an audit event. |
 |**UpdateInterval** |All versions |Specifies the number of clock ticks between phase correction adjustments. The default value for domain controllers is **100**. The default value for domain members is **30,000**. The default value for stand-alone clients and servers is **360,000**.<p>Zero isn't a valid value for the **UpdateInterval** registry entry. On computers running Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2, if the value is set to **0**, the Windows Time service automatically changes it to **1**.|
-|**UtilizeSslTimeData** |Windows versions later than Windows 10 build 1511 |Value of **1** indicates that W32Time uses multiple SSL timestamps to seed a clock that is grossly inaccurate. |
+|**UtilizeSslTimeData** |Windows versions later than Windows 10 build 1511 |Value of **1** indicates that W32Time uses multiple SSL timestamps to seed a clock that is grossly inaccurate. **Note**: UtilizeSslTimeData is the Registry Value that refers to Secure Time Seeding. To learn more, see [Secure Time Seeding – improving time keeping in Windows](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows).|
+
 
 # [Parameters](#tab/parameters)
 
@@ -385,6 +388,7 @@ In the following section, "All versions" refers to Windows 7, including future i
 |**InputProvider** |All versions |Indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock.<p><ul><li>**1** - Yes</li><li>**0** - No</li></ul><p>Default value for both domain members and stand-alone clients is **0**. |
 |**RequireSecureTimeSyncRequests** |Windows 8 and later versions |Controls whether or not the DC will respond to time sync requests that use older authentication protocols. If enabled (set to **1**), the DC won't respond to requests using such protocols. This is a boolean setting, and the default value is **0**. |
 
+
 ---
 
 ## Enhanced logging
@@ -403,3 +407,4 @@ In order to enable enhanced W32Time logging, add the following registry entries 
 
 - [RFC 1305 - Network Time Protocol, Version 3](https://datatracker.ietf.org/doc/rfc1305/)
 - [RFC 5905 - Network Time Protocol, Version 4](https://datatracker.ietf.org/doc/rfc5905/)
+

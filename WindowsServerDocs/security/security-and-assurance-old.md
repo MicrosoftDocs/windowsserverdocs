@@ -67,8 +67,10 @@ A road-map for how you can secure your privileged access. This road-map is built
 ### [Just in Time Administration with Microsoft Identity Manager](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.
 
-### Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management
-This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).
+<a name='protecting-windows-and-microsoft-azure-active-directory-with-privileged-access-management'></a>
+
+### Protecting Windows and Microsoft Entra ID with Privileged Access Management
+This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Microsoft Entra ID for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).
 
 ### [Just Enough Administration Article](https://aka.ms/JEA)
 This document shares the vision and technical details of Just Enough Administration, a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks.

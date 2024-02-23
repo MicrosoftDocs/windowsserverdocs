@@ -5,7 +5,6 @@ ms.topic: conceptual
 author: Orin-Thomas
 ms.author: orthomas
 ms.date: 12/03/2023
-ms.prod: windows-server
 ms.custom: team=cloud_advocates
 ms.contributors: orthomas-08202021
 ---

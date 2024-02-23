@@ -93,6 +93,8 @@
       href: file-server/smb-secure-traffic.md
     - name: Protect SMB traffic from interception
       href: file-server/smb-interception-defense.md
+    - name: Control SMB signing behavior
+      href: file-server/smb-signing.md
     - name: Network File System overview
       href: nfs/nfs-overview.md
     - name: Deploy Network File System

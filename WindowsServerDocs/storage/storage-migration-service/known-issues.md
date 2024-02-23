@@ -930,7 +930,7 @@ Windows Server 2003, you need to perform a manual cutover using the steps descri
    the computer from the domain after
    [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
 
-## Transfer validation warning "The destination proxy wasn't found"
+### Transfer validation warning "The destination proxy wasn't found"
 
 If you didn't already have the SMS Proxy service installed on the destination server before starting the transfer, Windows Admin Center installs it automatically. But under certain circumstances it fails to register and display validation error "The destination proxy wasn't found".
 
@@ -941,6 +941,19 @@ Register-SMSProxy -ComputerName <destination server FQDN> -Force
 ```
 
 Validation now passes.
+
+###  Missing disks on Windows Server 2008 R2 failover cluster source
+
+After inventorying a Windows Server 2008 R2 failover cluster source, you do not see all the clustered disks. This iscaused by the default file server role in Windows Server 2008 R2 will always pick one disk as a dependency, but not the remaining disks assigned to a file server role.
+
+To resolve this issue, ensure all the disks assigned to the file role are added as a dependency in the file server role. 
+
+1. Open failover cluster manager (cluadmin.msc).
+2. Right click on a clustered disk and click **Properties**
+3. On the Dependencies tab, add an **AND** line for the disk to the file server role.
+4. repeat for all other clustered disks.
+5. Close the snap-in and inventory the source again. All disks should now appear and be available for transfer. 
+
 
 ## See also
 

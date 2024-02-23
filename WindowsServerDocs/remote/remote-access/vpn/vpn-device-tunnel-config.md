@@ -19,7 +19,7 @@ Always On VPN gives you the ability to create a dedicated VPN profile for device
 
 Unlike _user tunnel_, which only connects after a user logs on to the device or machine, _device tunnel_ allows the VPN to establish connectivity before the user logs on. Both _device tunnel_ and _user tunnel_ operate independently with their VPN profiles, can be connected at the same time, and can use different authentication methods and other VPN configuration settings as appropriate. User tunnel supports SSTP and IKEv2, and device tunnel supports IKEv2 only with no support for SSTP fallback.
 
-User tunnel is supported on domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. It is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support. 
+User tunnel is supported on domain-joined, nondomain-joined (workgroup), or Microsoft Entra ID–joined devices to allow for both enterprise and BYOD scenarios. It is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support. 
 
 Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel. If only a Device Tunnel is used on a system, you can configure a Name Resolution Policy table (NRPT). If a User Tunnel and a Device Tunnel are used on a system, you can use the Name Resolution Policy table (NRPT) only on the User Tunnel.
 

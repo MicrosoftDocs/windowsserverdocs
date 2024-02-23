@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 9/13/2021
-ms.prod: windows-server
 ---
 
 # How to create a Key Management Services (KMS) activation host

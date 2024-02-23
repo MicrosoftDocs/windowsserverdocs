@@ -1,7 +1,7 @@
 ---
 title: certutil
 description: Learn about certutil, a command-line program that displays CA configuration information, configures Certificate Services, and backs up and restores CA components.
-ms.service: 
+ms.service: windows-server
 ms.topic: reference
 author: xelu86
 ms.author: wscontent

@@ -61,7 +61,7 @@
     - name: What's new in Active Directory Domain Services
       href: whats-new-active-directory-domain-services.md
     - name: What's new in Active Directory Domain Services Insider Preview
-      href: ad-ds/whats-new-active-directory-domain-services-insider-preview.md
+      href: ../get-started/whats-new-windows-server-insiders-preview.md
     - name: AD DS Getting started
       items:
       - name: Active Directory Administrative Center
@@ -997,6 +997,10 @@
         href: ad-cs/submit-pkcs-certificate-request.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
+      - name: Export a certificate with its private key
+        href: ad-cs/export-certificate-private-key.md
+      - name: Distribute certificates using Group Policy
+        href: ad-cs/distribute-certificates-group-policy.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
@@ -1023,6 +1027,8 @@
         href: laps/laps-concepts-overview.md
       - name: Account management modes
         href: laps/laps-concepts-account-management-modes.md
+      - name: Passwords and passphrases
+        href: laps/laps-concepts-passwords-passphrases.md
     - name: Windows LAPS scenarios
       items:
       - name: Windows LAPS and Microsoft Entra ID
