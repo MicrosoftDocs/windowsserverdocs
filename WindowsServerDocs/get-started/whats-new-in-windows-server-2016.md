@@ -220,15 +220,15 @@ You can configure DNS policies to specify how a DNS server responds to DNS queri
 
 ### RRL
 
-You can enable response rate limiting (RRL) on your DNS servers to prevent malicious systems from using your DNS servers to initiate a distributed denial of service (DDoS) attack on a DNS client. RRL prevents your DNS server from responding to too many requests at once, which protects it during scenarios when a botnet sends multiple requests at once to try to disrupt server operations.
+You can enable Response Rate Limiting (RRL) on your DNS servers to prevent malicious systems from using your DNS servers to initiate a Distributed Denial of Service (DDoS) attack on a DNS client. RRL prevents your DNS server from responding to too many requests at once, which protects it during scenarios when a botnet sends multiple requests at once to try to disrupt server operations.
 
 ### DANE support
 
-You can use DNS-based Authentication of Named Entities (DANE) support (RFC 6394 and 6698) to specify which certificate authority your DNS clients should expect certificates from for domain names hosted in your DNS server. This prevents a form of man-in-the-middle attack where a malicious actor corrupts a DNS cache and points a DNS name to their own IP address.
+You can use DNS-based Authentication of Named Entities (DANE) support ([RFC 6394](https://www.rfc-editor.org/rfc/rfc6394) and [RFC 6698](https://www.rfc-editor.org/rfc/rfc6698)) to specify which certificate authority your DNS clients should expect certificates from for domain names hosted in your DNS server. This prevents a form of man-in-the-middle attack where a malicious actor corrupts a DNS cache and points a DNS name to their own IP address.
 
 ### Unknown record support
 
-You can add records that the DNS server doesn't explicitly support by using the unknown record functionality. A record is unknown when the DNS server doesn't recognize its RDATA format. Windows Server 2016 supports unknown record (RFC 3597) types, so you can add unknown records to Windows DNS server zones in binary on-wire format. The windows caching resolver can already process unknown record types. Windows DNS server doesn't perform record-specific processing for unknown records, but can send them in response to queries it receives.
+You can add records that the DNS server doesn't explicitly support by using the unknown record functionality. A record is unknown when the DNS server doesn't recognize its RDATA format. Windows Server 2016 supports unknown record types ([RFC 3597](https://www.rfc-editor.org/rfc/rfc3597)), so you can add unknown records to Windows DNS server zones in binary on-wire format. The windows caching resolver can already process unknown record types. Windows DNS server doesn't perform record-specific processing for unknown records, but can send them in response to queries it receives.
 
 ### IPv6 root hints
 
@@ -236,4 +236,4 @@ Windows DNS server now includes IPv6 root hints published by the Internet Assign
 
 ### Windows PowerShell support
 
-Windows Server 2016 includes new commands you can use to configure DNS in PowerShell. For more information, see [Windwows Server 2016 DnsServer module](/powershell/module/dnsserver/?view=windowsserver2016-ps) and [Windows Server 2016 DnsClient module](/powershell/module/dnsclient/?view=windowsserver2016-ps).
+Windows Server 2016 includes new commands you can use to configure DNS in PowerShell. For more information, see [Windwows Server 2016 DnsServer module](/powershell/module/dnsserver/?view=windowsserver2016-ps&preserve-view=true) and [Windows Server 2016 DnsClient module](/powershell/module/dnsclient/?view=windowsserver2016-ps&preserve-view=true).
