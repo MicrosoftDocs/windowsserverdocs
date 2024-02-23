@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 manager: femila
 ms.date: 8/16/2021
-ms.prod: windows-server
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 ---
 

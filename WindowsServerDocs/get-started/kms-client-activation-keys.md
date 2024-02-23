@@ -5,7 +5,6 @@ ms.topic: conceptual
 author: dknappettmsft
 ms.author: alalve
 ms.date: 09/05/2023
-ms.prod: windows-server
 ---
 
 # Key Management Services (KMS) client activation and product keys

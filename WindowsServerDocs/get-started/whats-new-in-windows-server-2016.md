@@ -6,7 +6,6 @@ author: jasongerend
 ms.author: jgerend
 manager: femila
 ms.date: 08/13/2021
-ms.prod: windows-server
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Certification Authority Web Enrollment Role Service in Windows Server
 description: Use this article to understand the Active Directory Certification Authority Web Enrollment Role Service.
 author: gswashington
@@ -69,7 +69,7 @@ If you've been granted access permissions, you can perform the following tasks f
 
   - In **Cryptographic service provider (CSP) options**, you can configure the name of the cryptographic service provider, the key size (1024, 2048, and so on), the hash algorithm (such as SHA/RSA, SHA/DSA, MD2, or MD5) and the key specification (exchange or signature).
 
-  - **Key generation options** lest you create a new key set or use an existing key set, mark the keys as exportable, enable strong key protection, and use the local computer store to generate the key.
+  - **Key generation options** lets you create a new key set or use an existing key set, mark the keys as exportable, enable strong key protection, and use the local computer store to generate the key.
 
   - **Additional options**. Save the request to a PKCS #10 file or add specific attributes to the certificate.
 

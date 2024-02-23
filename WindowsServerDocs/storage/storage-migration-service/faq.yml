@@ -7,7 +7,7 @@ metadata:
   manager: siroy
   ms.date: 01/29/2021
   ms.topic: faq
-  ms.prod: windows-server
+  ms.service: windows-server
 title: Storage Migration Service frequently asked questions (FAQ)
 summary: |
   This article contains answers to frequently asked questions (FAQs) about using [Storage Migration Service](overview.md) to migrate servers.
