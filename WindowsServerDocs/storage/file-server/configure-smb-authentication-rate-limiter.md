@@ -79,7 +79,7 @@ Here's an example of the enable Group Policy item.
 :::image type="content" source="media/configure-smb-authentication-rate-limiter/enable-authentication-rate-limiter-group-policy.png" alt-text="Screenshot showing the Enable authentication rate limiter Group Policy setting.":::
 
 > [!TIP]
-> To set the invalid authentication delay time, you need to use the [PowerShell steps](#powershelltabpowershell).
+> To set the invalid authentication delay time, you need to use the [PowerShell steps](?tabs=powershell).
 
 ---
 
