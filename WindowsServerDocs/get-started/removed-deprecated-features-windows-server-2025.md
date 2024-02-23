@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/23/2024
-ms.prod: windows-server
+ms.service: windows-server
 ---
 
 # Features removed or no longer developed starting with Windows Server 2025 (preview)
