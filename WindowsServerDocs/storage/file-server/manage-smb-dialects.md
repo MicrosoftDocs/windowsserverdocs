@@ -4,7 +4,7 @@ description: Learn how to manage SMB2 and SMB3 dialects using Group Policy and W
 ms.topic: how-to
 author: gswashington
 ms.author: nedpyle
-ms.date: 02/20/2024
+ms.date: 02/29/2024
 
 ---
 
@@ -15,13 +15,23 @@ ms.date: 02/20/2024
 > [!IMPORTANT]
 > Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-SMB server has the ability to manage SMB2 and SMB3 dialects in Windows Server and Windows client. In this article, learn how to configure a minimum and maximum SMB dialect for the SMB server and client using Group Policy and Windows PowerShell.
+Administrators have the ability to manage SMB2 and SMB3 dialects in Windows Server and Windows client. In this article, learn how to configure a minimum and maximum SMB dialect for the SMB server and client using Group Policy and Windows PowerShell.
 
 By default SMB Server and client automatically negotiates the highest matched dialect from SMB 2.0.2 to 3.1.1. Beginning with [Windows 11 Insider Preview Build 25951](https://blogs.windows.com/windows-insider/2023/09/13/announcing-windows-11-insider-preview-build-25951-canary-channel/) and [Windows Server Preview Build 25951](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25951/m-p/3926636), you can specify the SMB protocols used, blocking older, less secure, versions from connecting to the server. For example, you can specify connection to only use SMB 3.1.1, the most secure dialect of the protocol.
 
+## Prerequisites
+
+Before you can configure SMB dialectsyou need:
+
+- An SMB server running on one of the following operating systems.
+  - Windows Server Insiders build 25075 or later.
+  - Windows 11 Insiders build 25375 or later.
+- Administrative privileges to the computer.
+- If you're using Group Policy on a domain, you need privileges to create or edit a Group Policy object (GPO) and link it to the appropriate organizational unit (OU).
+
 ## Configure maximum and minimum SMB dialects
 
-You can configure the dialects available for negotiation using Group Policy or PowerShell. The minimum and maximum dialects can be set independently for the SMB server and client.
+You can configure the dialects available for negotiation using Group Policy or PowerShell. The minimum and maximum dialects can be set independently for the SMB server and client. Alternately, you can choose not to set a maximum. For example, you can set a minimum of 3.1.1 which effectively sets the maximum to 3.1.1.
 
 ## SMB server
 
