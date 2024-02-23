@@ -13,7 +13,7 @@ If it has been enabled in the server settings, MultiPoint Dashboard users and st
 
 #### To send a chat message from the MultiPoint Dashboard to a user
 
-1.  In MultiPoint Dashboard, click the thumbnail image or images of the user ypu want to send a message.
+1.  In MultiPoint Dashboard, click the thumbnail image or images of the user you want to send a message.
 
 2.  Click **Send** in the ribbon - an IM chat window opens.
 

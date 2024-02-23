@@ -35,6 +35,8 @@
       href: hardware-requirements.md
     - name: Features removed or no longer developed
       items:
+      - name: Windows Server 2025
+        href: removed-deprecated-features-windows-server-2025.md
       - name: Windows Server 2022
         href: removed-deprecated-features-windows-server-2022.md
       - name: Windows Server 2019
