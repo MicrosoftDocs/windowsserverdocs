@@ -4,7 +4,7 @@ description: Learn about Windows Server Annual Channel for Containers
 ms.topic: conceptual
 author: gswashington
 ms.author: roharwoo
-ms.date: 01/18/2024
+ms.date: 02/29/2024
 
 ---
 
@@ -14,9 +14,7 @@ ms.date: 01/18/2024
 
 Windows Server Annual Channel for Containers is an operating system to host Windows Server containers. Annual Channel enables customers who are innovating quickly to take advantage of new operating system capabilities at a faster pace, focusing on containers, microservices, and portability.
 
-Windows Server Annual Channel for Containers means new features and functionality being released on an annual basis. The more frequent releases of Annual Channel enable customers to take advantage of innovation more quickly, with a focus on containers and microservices. For a detailed comparison, see Windows Server servicing channels. To learn more about the lifecycle, see the [Windows Server Annual Channel lifecycle article](/lifecycle/products/windows-server-annual-channel).
-
-To learn more about difference between servicing channels, see [Windows Server servicing channels](/windows-server/get-started/servicing-channels-comparison).
+Windows Server Annual Channel for Containers means new features and functionality being released on an annual basis. The more frequent releases of Annual Channel enable customers to take advantage of innovation more quickly, with a focus on containers and microservices. To learn more about the lifecycle, see the [Windows Server Annual Channel lifecycle article](/lifecycle/products/windows-server-annual-channel). To learn more about difference between servicing channels, see [Windows Server servicing channels](/windows-server/get-started/servicing-channels-comparison).
 
 ## Supported platforms
 
