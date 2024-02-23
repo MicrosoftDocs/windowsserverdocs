@@ -74,7 +74,7 @@ To configure SMB authentication rate limiter using Group Policy, follow these st
 1. For the setting, right-click **Enable authentication rate limiter** and select **Edit**.
 1. Select **Enabled** and select **OK**.
 
-Here's an example of the enable Group Policy item.
+Here's an example of the enabled Group Policy item.
 
 :::image type="content" source="media/configure-smb-authentication-rate-limiter/enable-authentication-rate-limiter-group-policy.png" alt-text="Screenshot showing the Enable authentication rate limiter Group Policy setting.":::
 
