@@ -18,8 +18,6 @@ It's important to keep your failover clusters as up to date as possible, particu
 
 ## Overview
 
-<!--Double-check if this is still accurate or if this supports newer versions of Windows Server.-->
-
 Currently, you can only upgrade the Windows Server operating system (OS) on an existing failover cluster from Windows Server 2016 to Windows Server 2019. IF your failover cluster is running an earlier version of Windows Server, such as Windows Server 2012 R2, upgrading while cluster services are running prevents nodes from joining together.
 
 Before you start upgrading, review the information at [Windows Server upgrade content](../get-started/upgrade-overview.md) to understand upgrade compatibility for different versions of Windows Server. When you upgrade-in place, you can only upgrade one or two versions forward. For example, if your server cluster currently uses Windows Server 2012 R2 or Windows Server 2016, you can upgrade in-place to Windows Server 2019.
@@ -66,7 +64,7 @@ To evict and upgrade your deployment's first node:
 
 1. If required, detach the node from the storage you're using. If you're not sure if you need to detach your storage or how to do it, ask your storage vendor for guidance.
 
-1. Upgrade the first node to the target Windows Server version. Ensure you have added all the necessary roles, features, drivers and security updates. <!--Should we have more specific directions for this/a link to more specific directions?-->
+1. Upgrade the first node to the target Windows Server version. Ensure you have added all the necessary roles, features, drivers and security updates.
 
 1. In Failover Cluster Manager, go to **Management** and select **Create Cluster** to create a new cluster. In this example, the new cluster is labeled CLUSTER1.
 
@@ -92,11 +90,17 @@ To evict and upgrade your deployment's first node:
 
 1. If required, detach the node from the storage you're using. If you're not sure if you need to detach your storage or how to do it, ask your storage vendor for guidance.
 
-1. Upgrade the first node to the tartget Windows Server version. Make sure you've added all necessary roles, features, drivers, and security updates.
+1. Upgrade the first node to the target Windows Server version. Make sure you've added all necessary roles, features, drivers, and security updates.
 
-1. Create a new cluster that contains the first node. <!--How to do this with PowerShell? If not an option, bring back text from Windows Server tab.-->
+1. Run the following command to create a new cluster that contains the first node.
 
-1. You create the cluster, you must migrate the roles from the original cluster to this new cluster. <!--How to do this with PowerShell? If not an option, bring back text from Windows Server tab.-->
+   ```powershell
+   New-Cluster
+   ```
+
+1. After you create the cluster, you must migrate the roles from the original cluster to this new cluster. To migrate the roles, you must open the Failover Cluster Manager, right-click on the name of the new cluster and select **More Actions** > **Copy Cluster Roles**.
+
+    ![Screenshot of the Failover Cluster Manager showing the More Actions > Copy Cluster option.](media/In-Place-Upgrade/In-Place-Upgrade-5.png)
 
 1. Once you finish migrating all resources, turn off the second node in the original cluster and disconnect it from the storage.
 
@@ -139,8 +143,6 @@ To upgrade the second node:
 1. Test your resources to make sure they're all online and functioning as expected.
 
 #### [PowerShell](#tab/powershell)
-
-<!--These directions are Server-only. Is there a way to do this in PowerShell?-->
 
 1. Perform a clean installation of Windows Server 2019 on the second node. Make sure to add all the necessary roles, features, drivers, and security updates.
 
