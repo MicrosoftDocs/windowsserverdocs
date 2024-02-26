@@ -22,7 +22,7 @@ A Windows Server, version 23H2 container host only supports the Windows Server 2
 
 ## Portability
 
-Portability is an important feature introduced in Windows Server Annual Channel for Containers that lets users run workloads with different container image versions. Portability lets Windows Server 2022-based container images run on session hosts running later versions of Windows Server. This increased support helps container services like AKS to update the operating systems on container hosts on a more frequent basis without requiring you to update the containers themselves. Portability doesn't only streamline the upgrade process, but also helps developers take full advantage of the enhanced flexibility and compatibility that containers offer. For more information about portability, see [Portability in Windows Server Annual Channel for containers](/.md).
+Portability is an important feature introduced in Windows Server Annual Channel for Containers that lets users run workloads with different container image versions. Portability lets Windows Server 2022-based container images run on session hosts running later versions of Windows Server. This increased support helps container services like AKS to update the operating systems on container hosts on a more frequent basis without requiring you to update the containers themselves. Portability doesn't only streamline the upgrade process, but also helps developers take full advantage of the enhanced flexibility and compatibility that containers offer. For more information about portability, see [Portability in Windows Server Annual Channel for containers](https://techcommunity.microsoft.com/t5/containers/portability-with-windows-server-annual-channel-for-containers/ba-p/3885911).
 
 ## Get started with Windows Server Annual Channel for Containers
 
@@ -38,4 +38,4 @@ Server on your container host. Annual Channel is available to volume-licensed cu
 
 ## Related content
 
-- [Portability in Windows Server Annual Channel for container](.md)
+- [Portability in Windows Server Annual Channel for container](https://techcommunity.microsoft.com/t5/containers/portability-with-windows-server-annual-channel-for-containers/ba-p/3885911)
