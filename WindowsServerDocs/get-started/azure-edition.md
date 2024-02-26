@@ -38,6 +38,9 @@ The following table summarizes the key differences:
 | Operating system environments (OSE) | Physical or virtual | Virtual only |
 | Associated virtualization rights | 2 virtual OSEs for Standard, Unlimited virtual OSEs for Datacenter | None |
 
+> [!IMPORTANT]
+> Once Windows Server Datacenter: Azure Edition is installed, it is not possible to switch the OS to a non-Azure Edition Operating System.
+
 Capabilities vary by image, see
 [Getting started with Windows Server Datacenter: Azure Edition](#get-started-with-windows-server-datacenter-azure-edition)
 for more detail.
