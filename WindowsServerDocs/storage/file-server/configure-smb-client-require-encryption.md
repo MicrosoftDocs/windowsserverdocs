@@ -52,7 +52,7 @@ To configure SMB client for required encryption to all SMB servers (that is, for
 1. For the setting, right-click **Require encryption** and select **Edit**.
 1. Select **Enable** and select **OK**.
 
-:::image type="content" source="media/configure-smb-client-require-encryption/group-policy-editor-ui.png" alt-text="Screenshot showing Group Policy editor":::
+:::image type="content" source="media/configure-smb-client-require-encryption/group-policy-editor-ui.png" alt-text="Screenshot showing Group Policy editor.":::
 
 Setting the policy to disabled or not configured removes the encryption requirement.
 
