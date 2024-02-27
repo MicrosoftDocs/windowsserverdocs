@@ -210,7 +210,7 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 
 - Improved tracing allowing you to set a registry key to include an image file path in the trace log file name so you can tell which trace log file to check. See [How to enable diagnostic tracing for MS DTC on a Windows-based computer](https://support.microsoft.com/kb/926099) for details on configuring tracing for MSDTC.
 
-## DNS
+## DNS Server
 
 Windows Server 2016 contains the following updates for Domain Name System (DNS).
 
@@ -236,4 +236,4 @@ Windows DNS server now includes IPv6 root hints published by the Internet Assign
 
 ### Windows PowerShell support
 
-Windows Server 2016 includes new commands you can use to configure DNS in PowerShell. For more information, see [Windwows Server 2016 DnsServer module](/powershell/module/dnsserver/?view=windowsserver2016-ps&preserve-view=true) and [Windows Server 2016 DnsClient module](/powershell/module/dnsclient/?view=windowsserver2016-ps&preserve-view=true).
+Windows Server 2016 includes new commands you can use to configure DNS in PowerShell. For more information, see [Windows Server 2016 DnsServer module](/powershell/module/dnsserver/?view=windowsserver2016-ps&preserve-view=true) and [Windows Server 2016 DnsClient module](/powershell/module/dnsclient/?view=windowsserver2016-ps&preserve-view=true).
