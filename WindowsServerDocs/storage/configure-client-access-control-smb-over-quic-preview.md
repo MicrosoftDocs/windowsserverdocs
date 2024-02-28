@@ -15,16 +15,16 @@ ms.date: 02/29/2024
 > [!IMPORTANT]
 > Windows Insider and Windows Server Insider builds are in PREVIEW. This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-SMB over QUIC introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
+SMB over QUIC introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP.
 
-This article explains how to configure SMB over QUIC client CAC in Windows and Windows Server Insider builds. See [SMB over QUIC](https://aka.ms/smboverquic) for detailed information on SMB over QUIC.
+This article explains how to configure SMB over QUIC Client Access Control (CAC) in Windows and Windows Server Insider builds. See [SMB over QUIC](https://aka.ms/smboverquic) for detailed information on SMB over QUIC.
 
 >[!IMPORTANT]
 >SMB over QUIC is not enabled by default. A file server administrator must opt in to enable SMB over QUIC. A client can't force a file server to enable SMB over QUIC.
 
 ## SMB over QUIC Client Access Control
 
-SMB over QUIC Client Access Control (CAC) works by a client trusting the SMB over QUIC server via a valid shared root authority key. An admin also gives the client a certificate from the same issuer, and that certificate’s hash (or issuer) is added to a trust list maintained by the server. When the client connects, it sends the certificate info to the server for comparison against the allow list, granting or denying access to QUIC. Then SMB authentication occurs inside the QUIC TLS tunnel, and the user connects to their share. An admin can also explicitly deny access or just revoke certificates. CAC is optional and not enabled by default.
+SMB over QUIC CAC works by a client trusting the SMB over QUIC server via a valid shared root authority key. An admin also gives the client a certificate from the same issuer, and that certificate’s hash (or issuer) is added to a trust list maintained by the server. When the client connects, it sends the certificate info to the server for comparison against the allow list, granting or denying access to QUIC. Then SMB authentication occurs inside the QUIC TLS tunnel, and the user connects to their share. An admin can also explicitly deny access or just revoke certificates. CAC is optional and not enabled by default.
 
 SMB over QUIC CAC supports using certificates with subject alternative names, not just a single subject. This means the client access control feature supports using a Microsoft AD Certificate Authority and multiple endpoint names, just like the currently released version of SMB over QUIC. You can evaluate the feature using the recommended options and not require self-signed test certificates.
 
