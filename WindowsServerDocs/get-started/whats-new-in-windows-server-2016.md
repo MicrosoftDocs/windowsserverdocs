@@ -5,7 +5,7 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 manager: femila
-ms.date: 08/13/2021
+ms.date: 02/28/2024
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
@@ -25,13 +25,13 @@ Physical and virtual machines benefit from greater time accuracy due to improvem
 
 - [What's new in Hyper-V on Windows Server 2016](../virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.
 
-- [Windows Containers](/virtualization/windowscontainers/):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
+- [Windows Containers](/virtualization/windowscontainers/):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
 
 ### Nano Server
 
-What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality as well as support for different Windows Server editions.
+What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality and support for different Windows Server editions.
 
-There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair the configuration of WinRM.
+There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules and the ability to repair the configuration of WinRM.
 
 ### Shielded Virtual Machines
 
@@ -145,7 +145,7 @@ Control Flow Guard (CFG) is a platform security feature that was created to comb
 
 ## Storage
 
-[Storage](../storage/storage.yml) in Windows Server 2016 includes new features and enhancements for software-defined storage, as well as for traditional file servers. Below are a few of the new features, for more enhancements and further details, see [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md).
+[Storage](../storage/storage.yml) in Windows Server 2016 includes new features and enhancements for software-defined storage, and for traditional file servers. Below are a few of the new features, for more enhancements and further details, see [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md).
 
 ### Storage Spaces Direct
 
@@ -155,7 +155,7 @@ For more info, see [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spa
 
 ### Storage Replica
 
-Storage Replica enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, as well as stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.
+Storage Replica enables storage-agnostic, block-level, synchronous replication between servers or clusters for disaster recovery, and stretching of a failover cluster between sites. Synchronous replication enables mirroring of data in physical sites with crash-consistent volumes to ensure zero data loss at the file-system level. Asynchronous replication allows site extension beyond metropolitan ranges with the possibility of data loss.
 
 For more info, see [Storage Replica](../storage/storage-replica/storage-replica-overview.md).
 
@@ -167,7 +167,7 @@ For more info, see [Storage Quality of Service](../storage/storage-qos/storage-q
 
 ## [Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md)
 
-Windows Server 2016 includes a number of new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
+Windows Server 2016 includes many new features and enhancements for multiple servers that are grouped together into a single fault-tolerant cluster using the Failover Clustering feature. Some of the additions are listed below; for a more complete listing, see [What's New in Failover Clustering in Windows Server 2016](../failover-clustering/whats-new-in-failover-clustering.md).
 
 ### Cluster Operating System Rolling Upgrade
 
@@ -198,7 +198,7 @@ New features provided by the IIS 10.0 web server in Windows Server 2016 include:
 - Support for Wildcard Host Headers, enabling administrators to set up a web server for a domain and then have the web server serve requests for any subdomain.
 - A new PowerShell module (IISAdministration) for managing IIS.
 
-For more details see [IIS](https://iis.net/learn).
+For more details, see [IIS](https://iis.net/learn).
 
 ### Distributed Transaction Coordinator (MSDTC)
 
