@@ -11,6 +11,9 @@ ms.date: 09/16/2022
 
 Use this article to compare Standard and Datacenter editions of Windows Server 2016 to see which will be most appropriate.
 
+> [!TIP]
+> If you're looking for information about the locks and limits in Windows Server, see [Comparison of locks and limits in Windows Server](locks-limits.md).
+
 ## Features generally available
 
 # [Full Comparison](#tab/full-comparison)
@@ -48,34 +51,6 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Storage Replica | No | **Yes** |
 |Storage Spaces Direct|No| **Yes** |
 |Inherited activation|As guest if hosted on Datacenter| **Can be host or guest** |
-
----
-
-## Locks and Limits
-
-# [Full Comparison](#tab/full-comparison)
-
-| Locks and Limits | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| ------------------- |---------- | --------------------------- |
-| Maximum number of users | Based on CALs   | Based on CALs     |
-| Maximum SMB connections | 16,777,216      | 16,777,216          |
-| Maximum RRAS connections| unlimited       | unlimited         |
-| Maximum IAS connections | 2,147,483,647   | 2,147,483,647        |
-| Maximum RDS connections | 65535           | 65535             |
-| Maximum number of 64-bit sockets | 64     | 64                |
-| Maximum number of cores | unlimited       | unlimited      |
-| Maximum RAM             | 24 TB           | 24 TB             |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
-| Server can join a domain | yes            | yes                |
-| Edge network protection/firewall | no     | no                 |
-| DirectAccess            | yes             | yes                |
-| DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
-
-# [Version Differences](#tab/version-differences)
-
-| Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| -------------------              | ---------------------------  | --------------------------- |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 
 ---
 

@@ -12,6 +12,9 @@ ms.date: 09/16/2022
 
 Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022 to see which will be most appropriate.
 
+> [!TIP]
+> If you're looking for information about the locks and limits in Windows Server, see [Comparison of locks and limits in Windows Server](locks-limits.md).
+
 ## Features generally available
 
 # [Full Comparison](#tab/full-comparison)
@@ -58,36 +61,6 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Storage Replica| Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** | Yes, **unlimited** |
 |Storage Spaces Direct|No|**Yes**|**Yes**|
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
-
----
-
-## Locks and Limits
-
-# [Full Comparison](#tab/full-comparison)
-
-| Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
-| -------------------              | ---------------------------  | --------------------------- |
-| Maximum number of users          | Based on CALs                | Based on CALs |
-| Maximum SMB connections          | 16,777,216                   | 16,777,216 |
-| Maximum RRAS connections         | Unlimited                    | Unlimited |
-| Maximum IAS connections          | 2,147,483,647                | 2,147,483,647 |
-| Maximum RDS connections          | 65,535                       | 65,535 |
-| Maximum number of 64-bit sockets | 64                           | 64 |
-| Maximum number of cores          | Unlimited                    | Unlimited |
-| Maximum RAM                      | 48 TB                        | 48 TB |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
-| Windows Server Containers | Unlimited | Unlimited |
-| Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited |
-| Server can join a domain        | Yes                           | Yes |
-| Edge network protection/firewall| No                            | No  |
-| DirectAccess                    | Yes                           | Yes |
-| DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
-
-# [Version Differences](#tab/version-differences)
-
-| Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
-| -------------------              | ---------------------------  | --------------------------- |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 
 ---
 
