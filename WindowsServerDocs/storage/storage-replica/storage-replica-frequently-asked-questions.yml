@@ -257,7 +257,7 @@ sections:
       - question: |
           How do I report an issue with Storage Replica or this guide?
         answer: |
-          For technical assistance with Storage Replica, you can post at the [Microsoft forums](/answers/index.html). You can also email srfeed@microsoft.com for questions on Storage Replica. For issues with this documentation, see Feedback section at the bottom of this page, and select **This page**.
+          For technical assistance with Storage Replica, you can post at  [Microsoft Q & A](/answers/index.html) or contact [Microsoft Business Support](https://support.microsoft.com/contactus). For issues with this documentation, see Feedback section at the bottom of this page, and select **This page**.
           
       - question: |
           Can Storage Replica be configured to replicate in both directions?
