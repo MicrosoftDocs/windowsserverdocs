@@ -212,7 +212,7 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 
 ## DNS Server
 
-Windows Server 2016 contains the following updates for Domain Name System (DNS).
+Windows Server 2016 contains the following updates for Domain Name System (DNS) Server.
 
 ### DNS policies
 
