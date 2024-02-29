@@ -99,7 +99,7 @@ The following table lists valid hexadecimal digits that you can use as the value
   - You use one or more white-space characters within the quotation marks.
   - The `<string>` within quotation marks is the name of an executable file.
   
-  If the previous conditions aren't met, `<string>` is processed by examining the first character to verify whether it's an opening quotation mark. If the first character is an opening quotation mark, it's stripped along with the closing quotation mark. Any text following the closing quotation marks is preserved.
+  If the previous conditions aren't met, `<string>` is processed by examining the first character to verify whether it's an opening quotation mark. If the first character is an opening quotation mark, it's stripped along with the last quotation mark. Any text following the last quotation mark is preserved.
 
 - If you don't specify `/d`, Cmd.exe looks for the following registry subkeys:
 
