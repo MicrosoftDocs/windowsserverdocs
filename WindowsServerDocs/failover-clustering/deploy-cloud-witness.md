@@ -167,6 +167,30 @@ To set up Cloud Witness in the Windows Admin Center:
 
 ---
 
+## Proxy considerations with Cloud Witness
+
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses **.core.windows.net** as the endpoint. You need to ensure that this endpoint is included in any firewall allow lists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
+
+To use the Netsh command to configure a default proxy server, follow these steps: 
+
+> [!NOTE]
+>
+> - This will change the default proxy configuration for WinHTTP. Any application, including Windows services, that use WinHTTP may be affected. </br>
+
+1. Open an elevated command line:
+   1. Go to **Start** and type **cmd**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
+
+2. Enter the following command and press **Enter**:
+
+   ```cmd
+   netsh winhttp set proxy proxy-server="<ProxyServerName>:<port>" bypass-list="<HostsList>"
+   ```
+
+   For example: `netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; *.contoso.com"`
+
+See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
+
 ## Related content
 
 - [What's New in failover clustering in Windows Server](whats-new-in-failover-clustering.md)
