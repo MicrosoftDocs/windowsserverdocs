@@ -1,19 +1,18 @@
 ---
-title: Restore a virtual domain controller
-description: Learn about how to restore a virtualized Windows Server Active Directory domain controller (DC) in Hyper-V.
+title: Restore a virtualized domain controller in Windows Server
+description: Learn about how to restore a virtualized Active Directory Domain Services Domain Controller (DC) in Windows Server.
 author: HeidiLohr
 ms.author: helohr
 ms.date: 06/09/2023
 ms.topic: article
-ms.custom: inhenkel
 ---
 # Restore a virtual domain controller
 
-You must regularly back up your system state in order to restore a physical or virtual domain controller (DC) during a disaster recovery scenario. The system state includes Active Directory data and log files, the registry, the system volume, and various elements of the OS. Active Directory-compatible backup applications ensure consistent local and replicated Active Directory databases after a restore process, including notifying replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications let administrators bypass standard checks and validations that occur during DC system state restore.
+You must regularly back up your system state in order to restore a physical or virtual domain controller (DC) during a disaster recovery scenario. The system state includes Active Directory data and log files, the registry, the system volume, and various elements of the operating system. Active Directory-compatible backup applications ensure consistent local and replicated Active Directory databases after a restore process, including notifying replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications let administrators bypass standard checks and validations that occur during DC system state restore.
 
 If your DC VM fails but you don't see signs of a [USN rollback](../../get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md#usn-and-usn-rollback), there are two ways you can restore the VM:
 
-- If your system has a valid system state data backup from before the failure, you can restore it using the Active Directory-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, and you should back up your DCs every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
+- If your system has a valid system state data backup from before the failure, you can restore it using the Active Directory-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, you should back up your DCs regularly and at least every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
 
 - If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM, then configure the registry property as described in [Restoring a system state backup](#restoring-a-system-state-backup). After that, restart the DC in normal mode.
 
@@ -37,9 +36,9 @@ There are several ways to back up your DC, but which way works best for your dep
   
   - If the previous version runs a different version of Windows Server, have you already started it in normal mode?
   
-  - If no, then restore the DC by starting it in DSRM, setting the database restored from backup registry value to 1, then restarting it in normal mode.
+    - If no, then restore the DC by starting it in DSRM, setting the database restored from backup registry value to 1, then restarting it in normal mode.
   
-  - If yes, disconnect the virtual DC from the network, recover and save any required unique data on a different copy of the VM, then don't use the original DC on the network again. Also, remove its AD DS role from original DC or reinstall the OS, then install the role to the new version of the DC.
+    - If yes, disconnect the virtual DC from the network, recover and save any required unique data on a different copy of the VM, then don't use the original DC on the network again. Also, remove its AD DS role from original DC or reinstall the OS, then install the role to the new version of the DC.
 
 If you're trying to restore an RODC:
 
@@ -47,7 +46,7 @@ If you're trying to restore an RODC:
 
 - If you don't have a system state backup but you do have a VHD file of a previous version of the DC, remove the failed DC, then create and start a new VM using the backup from the VHD file.
 
-- If you don't have either of those backups, remove teh AD DS role from the domain controller by running this command:
+- If you don't have either of those backups, remove the AD DS role from the domain controller by running this command:
   
   ```cmd
   dcpromo /forceremoval
@@ -66,7 +65,7 @@ If a valid system state backup exists for the DC VM, you can safely restore the 
 
 To restore the system state data backup of the virtual DC:
 
-1. Start the DC's VM, then press the F5 key to access **Windows Boot Manager**.
+1. Start the DC's VM, then press the <kbd>F5</kbd> key to access **Windows Boot Manager**.
 
 1. If you're prompted to enter connection credentials, follow these steps:
 
@@ -76,11 +75,11 @@ To restore the system state data backup of the virtual DC:
 
    - Select the **Play** button on the VM.
 
-   - Select inside the VM window, and press F5.
+   - Select inside the VM window, and press the <kbd>F5</kbd> key.
 
    If **Windows Boot Manager** doesn't open and the DC begins to start in normal mode, turn the VM off to pause the process. Repeat this step as many times as necessary until you're able to access Windows Boot Manager. You can't access DSRM from the Windows Error Recovery menu. Therefore, turn off the VM and try again if the Windows Error Recovery menu appears.
 
-1. In **Windows Boot Manager**, press the F8 key to access advanced boot options.
+1. In **Windows Boot Manager**, press the <kbd>F8<kbd> key to access advanced boot options.
 
 1. Under **Advanced Boot Options**, select **Directory Services Restore Mode**, and then press the Enter key to start the DC in DSRM.
 
@@ -101,11 +100,11 @@ To restore a virtual DC with a VHD file:
    
    - Don't start the DC in normal mode. If you miss the **Windows Boot Manager** screen and the DC begins to start in normal mode, turn the VM off to prevent it from starting up.
 
-1. Open the Registry Editor by selecting **Start**, then entering **regedit** and selecting **Registry Editor**.
+1. Open the Registry Editor by selecting **Start**, then entering `regedit.exe` and selecting **Registry Editor**.
 
    - If the **User Account Control** dialog displays, confirm the displayed action is as expected, then select **Yes**.
 
-   - In Registry Editor, expand the path **HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters**.
+   - In Registry Editor, expand the path `HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.
 
    - Look for a value named **DSA Previous Restore Count**. If the value is present, make a note of the setting. Otherwise, the setting value is the default (0). If no value is shown, don't manually set the value.
 
