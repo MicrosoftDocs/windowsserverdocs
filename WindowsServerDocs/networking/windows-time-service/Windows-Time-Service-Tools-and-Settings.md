@@ -341,7 +341,8 @@ In the following section, "All versions" refers to Windows 7, including future i
 |**SpikeWatchPeriod** |All versions |Specifies the amount of time that a suspicious offset must persist before it's accepted as correct (in seconds). The default value on domain members is **900**. The default value on stand-alone clients and workstations is **900**. |
 |**TimeJumpAuditOffset** |All versions |An unsigned integer that indicates the time jump audit threshold, in seconds. If the time service adjusts the local clock by setting the clock directly, and the time correction is more than this value, then the time service logs an audit event. |
 |**UpdateInterval** |All versions |Specifies the number of clock ticks between phase correction adjustments. The default value for domain controllers is **100**. The default value for domain members is **30,000**. The default value for stand-alone clients and servers is **360,000**.<p>Zero isn't a valid value for the **UpdateInterval** registry entry. On computers running Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2, if the value is set to **0**, the Windows Time service automatically changes it to **1**.|
-|**UtilizeSslTimeData** |Windows versions later than Windows 10 build 1511 |Value of **1** indicates that W32Time uses multiple SSL timestamps to seed a clock that is grossly inaccurate. **Note** UtilizeSslTimeData is the Registry Value that refers to Secure Time Seed**ing.** |
+|**UtilizeSslTimeData** |Windows versions later than Windows 10 build 1511 |Value of **1** indicates that W32Time uses multiple SSL timestamps to seed a clock that is grossly inaccurate. **Note**: UtilizeSslTimeData is the Registry Value that refers to Secure Time Seeding. To learn more, see [Secure Time Seeding – improving time keeping in Windows](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows).|
+
 
 # [Parameters](#tab/parameters)
 

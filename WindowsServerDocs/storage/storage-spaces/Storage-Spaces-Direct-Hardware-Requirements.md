@@ -97,9 +97,10 @@ Here's how drives can be connected for Storage Spaces Direct:
 - Direct-attached NVMe drives
 - SAS host-bus adapter (HBA) with SAS drives
 - SAS host-bus adapter (HBA) with SATA drives
-- **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode for any storage devices used for Storage Spaces Direct.
+- RAID controller cards directly passing through SAS physical storage devices only
+- **NOT SUPPORTED:** RAID controller cards that don't support direct pass through of SAS physical storage devices or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode for any storage devices used for Storage Spaces Direct
 
-![Diagram showing supported drive interconnects, with RAID cards not supported](media/hardware-requirements/drive-interconnect-support-1.png)
+![Diagram showing supported and unsupported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
 
 Drives can be internal to the server, or in an external enclosure that is connected to just one server. SCSI Enclosure Services (SES) is required for slot mapping and identification. Each external enclosure must present a unique identifier (Unique ID).
 
