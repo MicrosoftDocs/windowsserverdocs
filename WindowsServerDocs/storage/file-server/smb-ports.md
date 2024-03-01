@@ -22,7 +22,7 @@ You can also configure your deployment to block configuring alternative ports or
 In order to configure alternative ports, you need the following:
 
 - Admin permissions
-- An SMB client
+- An SMB client that supports connecting to alternative ports
 - An SMB server configured to listen to the port you want to use
 
 ## Map an alternative port
@@ -38,19 +38,19 @@ To map an alternative port to your SMB client:
    - Run this command to map a TCP port:
 
      ```powershell
-     New-SmbMapping -RemotePath \\server\share -TcpPort <port number between 0 and 65536>
+     New-SmbMapping -LocalPath <drive letter>: -RemotePath \\server\share -TcpPort <port number between 0 and 65536>
      ```
 
    - Run this command to map a QUIC port:
 
      ```powershell
-     New-SmbMapping -RemotePath \\server\share -QuicPort <port number between 0 and 65536>
+     New-SmbMapping -LocalPath <drive letter>: -RemotePath \\server\share -QuicPort <port number between 0 and 65536>
      ```
 
    - Run this command to map an RDMA port:
 
      ```powershell
-     New-SmbMapping -RemotePath \\server\share -RdmaPort <port number between 0 and 65536>
+     New-SmbMapping -LocalPath <drive letter>: -RemotePath \\server\share -RdmaPort <port number between 0 and 65536>
      ```
 
 ### [Command line](#tab/command-line)
@@ -62,26 +62,26 @@ To map an alternative port to your SMB client:
    - Run this command to map a TCP port:
 
      ```cmd
-     NET USE \\server\share /TCPPORT:<port number between 0 and 65536>
+     NET USE <drive letter>: \\server\share /TCPPORT:<port number between 0 and 65536>
      ```
 
    - Run this command to map a QUIC port:
 
      ```cmd
-     NET USE \\server\share /QUICPORT:<port number between 0 and 65536>
+     NET USE <drive letter>: \\server\share /QUICPORT:<port number between 0 and 65536>
      ```
 
    - Run this command to map an RDMA port:
 
      ```cmd
-     NET USE \\server\share /RDMAPORT:<port number between 0 and 65536>
+     NET USE <drive letter>: \\server\share /RDMAPORT:<port number between 0 and 65536>
      ```
 
 ---
 
 ## Control or block alternative port usage
 
-The SMB client doesn't support changing the TCP listening port to anything but the default 445 port.
+The SMB server in Windows and Windows Server only supports changing the SMB over QUIC listening port. You can't configure TCP or RDMA listening ports.
 
 The only method currently available to configure alternative ports is through PowerShell. You can configure the SMB over the QUIC server to use an alternative port by running the following commands:
 
@@ -90,7 +90,7 @@ The only method currently available to configure alternative ports is through Po
 Get-SmbServerAlternativePort 
 
 #Creates a new alternative port
-New-SmbServerAlternativePort 
+New-SmbServerAlternativePort -TransportType QUIC -Port <port number> -EnableInstances Default
 
 #Deletes an alternative port
 Remove-SmbServerAlternativePort
