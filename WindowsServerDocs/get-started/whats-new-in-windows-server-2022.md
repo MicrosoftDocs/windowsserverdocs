@@ -5,7 +5,6 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/19/2023
-ms.prod: windows-server
 ---
 
 # What's new in Windows Server 2022

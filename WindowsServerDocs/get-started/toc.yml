@@ -3,14 +3,15 @@
   items:
   - name: Get started with Windows Server
     href: get-started-with-windows-server.md
+    items:
+    - name: Windows Server Insiders Preview
+      href: get-started-with-windows-server-insiders-preview.md
   - name: Overview
     expanded: true
     items:
     - name: What's new in Windows Server
       items:
-      - name: Get started with Windows Server Insiders Preview
-        href: get-started-with-windows-server-insiders-preview.md
-      - name: What's new in Windows Server Insiders Preview
+      - name: Windows Server Insiders Preview
         href: whats-new-windows-server-insiders-preview.md  
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
@@ -24,6 +25,8 @@
       items:
       - name: Azure Edition
         href: azure-edition.md
+      - name: Windows Server Annual Channel for Containers
+        href: annual-channel-for-containers.md
       - name: Windows Server 2022
         href: editions-comparison-windows-server-2022.md
       - name: Windows Server 2019
@@ -34,6 +37,8 @@
       href: hardware-requirements.md
     - name: Features removed or no longer developed
       items:
+      - name: Windows Server 2025
+        href: removed-deprecated-features-windows-server-2025.md
       - name: Windows Server 2022
         href: removed-deprecated-features-windows-server-2022.md
       - name: Windows Server 2019

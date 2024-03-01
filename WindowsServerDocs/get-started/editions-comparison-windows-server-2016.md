@@ -5,7 +5,6 @@ ms.topic: conceptual
 author: jasongerend
 ms.author: alalve
 ms.date: 09/16/2022
-ms.prod: windows-server
 ---
 
 # Comparison of Standard and Datacenter editions of Windows Server 2016

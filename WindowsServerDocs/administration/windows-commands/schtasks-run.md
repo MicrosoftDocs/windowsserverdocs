@@ -39,7 +39,7 @@ schtasks /run /tn <taskname> [/s <computer> [/u [<domain>\]<user> [/p <password>
 To start the *Security Script* task, type:
 
 ```
-schtasks /run /tn Security Script
+schtasks /run /tn "Security Script"
 ```
 
 To start the *Update* task on a remote computer, Svr01, type:

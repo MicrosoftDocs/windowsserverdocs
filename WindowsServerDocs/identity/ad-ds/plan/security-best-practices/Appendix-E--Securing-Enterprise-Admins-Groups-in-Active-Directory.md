@@ -5,7 +5,7 @@ title: Appendix E - Securing Enterprise Admins Groups in Active Directory
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 01/28/2024
 ms.topic: article
 ---
 

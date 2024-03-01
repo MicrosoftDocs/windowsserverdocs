@@ -27,7 +27,7 @@ This example is a simplified configuration with two nodes in two on-site datacen
 
 However, you may notice that, in addition to the two datacenters, there's also a third datacenter called a *file share witness*. This datacenter is kept separate from the other two sites and hosts a file server that backs up the system file share. The file share witness functions as the quorum witness in this cluster quorum configuration, making sure the system still runs even if one of the datacenters unexpectedly shuts down.
 
-Having a file share witness provides enough redundancy to keep your file server highly available. However, you should remember that hosting the file share witness on another server in a seperate site requires setup, regular maintenance, and independent connectivity to the other sites.
+Having a file share witness provides enough redundancy to keep your file server highly available. However, you should remember that hosting the file share witness on another server in a separate site requires setup, regular maintenance, and independent connectivity to the other sites.
 
 Cloud Witness is different from traditional cluster quorum witness configurations because it uses an Azure VM in the cloud as the quorum witness instead of a physical datacenter. Cloud Witness uses Azure Blob Storage to read and write a blob file that the system uses as the deciding vote to achieve quorum. The following diagram shows an example configuration that uses Cloud Witness.
 
@@ -166,6 +166,30 @@ To set up Cloud Witness in the Windows Admin Center:
 1. Verify your configuration was successful by checking the witness resource status. If the status is online, that means the Cloud Witness is configured and ready to use.
 
 ---
+
+## Proxy considerations with Cloud Witness
+
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Azure uses **.core.windows.net** as the endpoint. You need to ensure that this endpoint is included in any firewall allow lists you're using between the cluster and Azure Storage. If a proxy is required to reach Azure Storage, configure Windows HTTP services (WinHTTP) with the required proxy settings. Failover cluster utilizes WinHTTP for HTTPS communication.
+
+To use the Netsh command to configure a default proxy server, follow these steps: 
+
+> [!NOTE]
+>
+> - This will change the default proxy configuration for WinHTTP. Any application, including Windows services, that use WinHTTP may be affected. </br>
+
+1. Open an elevated command line:
+   1. Go to **Start** and type **cmd**.
+   1. Right-click **Command prompt** and select **Run as administrator**.
+
+2. Enter the following command and press **Enter**:
+
+   ```cmd
+   netsh winhttp set proxy proxy-server="<ProxyServerName>:<port>" bypass-list="<HostsList>"
+   ```
+
+   For example: `netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; *.contoso.com"`
+
+See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
 
 ## Related content
 
