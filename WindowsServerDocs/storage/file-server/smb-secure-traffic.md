@@ -151,6 +151,16 @@ allows for more secure options like IPSEC.
 
 For more information about configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
 
+### Insiders firewall rules
+
+> [!IMPORTANT]
+> Windows Server Insiders Edition is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
+In earlier versions of Windows Server, when you created a share, the firewall automatically enabled certain rules in the File and Printer Sharing group. In particular, the built-in firewall automatically used inbound NetBIOS ports 137 through 139. However, the current preview build of Windows Server Insiders Edition doesn't contain those NetBIOS ports anymore. Shares made with SMB2 or later don't use NetBIOS ports 137-139. If you need to use an SMB1 server for legacy compatibility reasons, you must manually reconfigure the firewall to open those ports
+
+We made this change to ensure a higher degree of network security. This change brings SMB firewall rules more in line with the standard behavior for the Windows Server File Server role. In the default settings for the File Server role, the firewall only opens the minimum number of ports required for sharing data. Administrators can reconfigure the rules to restore the legacy ports.
+
 ## Disable SMB Server if unused
 
 Windows clients and some of your Windows Servers on your network may not require the SMB Server
@@ -169,16 +179,6 @@ group policy rollouts to make these changes. For example, start with the heavies
 as your own IT team. If your team's laptops and apps and file share access work well after deploying
 your inbound and outbound firewall rules, create test group policy within your broad test and QA
 environments. Based on results, start sampling some departmental machines, then expand out.
-
-## Insiders firewall rules
-
-> [!IMPORTANT]
-> Windows Server Insiders Edition is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-In earlier versions of Windows Server, when you created a share, the firewall automatically enabled certain rules in the File and Printer Sharing group. In particular, the built-in firewall automatically used inbound NetBIOS ports 137 through 139. However, the current preview build of Windows Server Insiders Edition doesn't contain those NetBIOS ports anymore. Shares made with SMB2 or later don't use NetBIOS ports 137-139. If you need to use an SMB1 server for legacy compatibility reasons, you must manually reconfigure the firewall to open those ports
-
-We made this change to ensure a higher degree of network security. This change brings SMB firewall rules more in line with the standard behavior for the Windows Server File Server role. In the default settings for the File Server role, the firewall only opens the minimum number of ports required for sharing data. Administrators can reconfigure the rules to restore the legacy ports.
 
 ## Next steps
 
