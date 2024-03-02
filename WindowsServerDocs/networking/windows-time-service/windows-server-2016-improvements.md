@@ -13,12 +13,12 @@ Windows Server 2016 has improved the algorithms it uses to correct time and cond
 
 ## Hyper-V
 
-Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on the virtual machine (VM) start or the VM restore and interrupt latency correction for samples provided to w32time. This improvement allows us to stay within 10µs of the host with a root mean square ([RMS] which indicates variance) of 50µs, even on a machine with 75% load. For more information, see [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx).
+Windows 2016 has improved the Hyper-V TimeSync service. Improvements include more accurate initial time on the virtual machine (VM) start or the VM restore and interrupt latency correction for samples provided to w32time. This improvement allows us to stay within 10µs of the host with a root mean square ([RMS], which indicates variance) of 50µs, even on a machine with 75% load. For more information, see [Hyper-V architecture](https://msdn.microsoft.com/library/cc768520.aspx).
 
 > [!NOTE]
 > Load was created by using the prime95 benchmark using a balanced profile.
 
-The Stratum level that the host reports to the guest is more transparent. Previously, the host would present a fixed Stratum of 2, regardless of its accuracy. With the changes in Windows Server 2016, the host reports a Stratum 1 greater than the host Stratum, which results in better time for virtual guests. The host Stratum is determined by w32time through normal means based on its source time. Domain-joined Windows 2016 guests will find the most accurate clock, rather than defaulting to the host. For this reason, we advise that you manually disable the **Hyper-V Time Provider** setting for machines participating in a domain in Windows 2012R2 and below.
+The Stratum level that the host reports to the guest is more transparent. Previously, the host would present a fixed Stratum of 2, regardless of its accuracy. With the changes in Windows Server 2016, the host reports a Stratum 1 greater than the host Stratum, which results in better time for virtual guests. The host Stratum is determined by w32time through normal means based on its source time. Domain-joined Windows 2016 guests find the most accurate clock rather than defaulting to the host. For this reason, we advise that you manually disable the **Hyper-V Time Provider** setting for machines participating in a domain in Windows 2012R2 and below.
 
 ## Monitoring
 
@@ -26,8 +26,8 @@ Performance Monitor counters have been added. These counters allow you to baseli
 
 |Counter|Description|
 |----- | ----- |
-|Computed Time Offset| The absolute time offset between the system clock and the chosen time source, as computed by W32Time Service in microseconds. When a new valid sample is available, the computed time is updated with the time offset indicated by the sample. This time is the actual time offset of the local clock. W32time initiates clock correction by using this offset and updates the computed time in between samples with the remaining time offset that needs to be applied to the local clock. Clock accuracy can be tracked by using this performance counter with a low polling interval (for example, 256 seconds or less) and looking for the counter value to be smaller than the desired clock accuracy limit.|
-|Clock Frequency Adjustment| The absolute clock frequency adjustment made to the local system clock by W32Time in parts per billion. This counter helps visualize the actions being taken by W32time.|
+|Computed Time Offset| The absolute time offset between the system clock and the chosen time source, as computed by the W32Time service in microseconds. When a new valid sample is available, the computed time is updated with the time offset indicated by the sample. This time is the actual time offset of the local clock. W32Time initiates clock correction by using this offset and updates the computed time in between samples with the remaining time offset that needs to be applied to the local clock. Clock accuracy can be tracked by using this performance counter with a low polling interval (for example, 256 seconds or less) and looking for the counter value to be smaller than the desired clock accuracy limit.|
+|Clock Frequency Adjustment| The absolute clock frequency adjustment made to the local system clock by W32Time in parts per billion. This counter helps visualize the actions taken by W32Time.|
 |NTP Roundtrip Delay| Most recent roundtrip delay experienced by the NTP client in receiving a response from the server in microseconds. This delay is the time elapsed on the NTP client between transmitting a request to the NTP server and receiving a valid response from the server. This counter helps characterize the delays experienced by the NTP client. Larger or varying roundtrips can add noise to NTP time computations, which in turn might affect the accuracy of time synchronization through NTP.|
 |NTP Client Source Count| Active number of NTP Time sources being used by the NTP client. This number is a count of active, distinct IP addresses of time servers that are responding to this client's requests. This number might be larger or smaller than the configured peers, depending on DNS resolution of peer names and current reachability.|
 |NTP Server Incoming Requests| Number of requests received by the NTP server (requests/sec).|
@@ -91,17 +91,17 @@ Our domain source clock consisted of two high-precision NTP servers with GPS har
 
 We used four different methods to measure accuracy with both physical and virtual machines. Multiple methods provided independent means to validate the results.
 
-1. Measure the local clock, which is conditioned by w32tm, against our reference test machine, which has separate GPS hardware.
+1. Measure the local clock, which is conditioned by `w32tm`, against our reference test machine, which has separate GPS hardware.
 
-1. Measure NTP pings from the NTP server to clients by using the W32tm stripchart.
+1. Measure NTP pings from the NTP server to clients by using the `W32tm` stripchart.
 
-1. Measure NTP pings from the client to the NTP server by using the W32tm stripchart.
+1. Measure NTP pings from the client to the NTP server by using the `W32tm` stripchart.
 
-1. Measure Hyper-V results from the host to the guest by using the Time Stamp Counter (TSC). This counter is shared between both partitions and the system time in both partitions. We calculated the difference of the host time and the client time in the VM. Then we used the TSC clock to interpolate the host time from the guest because the measurements don't happen at the same time. Also, we used the time-segmented volume (TSV) clock to factor out delays and latency in the API.
+1. Measure Hyper-V results from the host to the guest by using the Time Stamp Counter (TSC). This counter is shared between both partitions and the system time in both partitions. We calculated the difference of the host time and the client time in the VM. Then we used the TSC clock to interpolate the host time from the guest because the measurements don't happen at the same time. Also, we used the time-segmented volume clock to factor out delays and latency in the API.
 
-W32tm is built in, but the other tools we used during our testing are available for the Microsoft repository on GitHub as open source for your testing and use. For more information about how to use the tools to do measurements, see [Windows Time Calibration Tools Wiki](https://github.com/Microsoft/Windows-Time-Calibration-Tools).
+`W32tm` is built in, but the other tools we used during our testing are available for the Microsoft repository on GitHub as open source for your testing and use. For more information about how to use the tools to do measurements, see [Windows Time Calibration Tools Wiki](https://github.com/Microsoft/Windows-Time-Calibration-Tools).
 
-The test results shown are a subset of measurements we made in one of the test environments. They illustrate the accuracy maintained at the start of the time hierarchy and the child domain client at the end of the time hierarchy. This results are compared to the same machines in a 2012-based topology for comparison.
+The test results shown are a subset of measurements we made in one of the test environments. They illustrate the accuracy maintained at the start of the time hierarchy and the child domain client at the end of the time hierarchy. These results are compared to the same machines in a 2012-based topology for comparison.
 
 ### Topology
 
@@ -261,7 +261,7 @@ When Windows is virtualized, by default, the Hypervisor is responsible for provi
 
 Because the chain of time hierarchy to the master clock source is dynamic in a domain, and negotiated, you need to query the status of a particular machine to understand its time source and chain to the master source clock. This information can help diagnose time synchronization problems.
 
-If you want to troubleshoot a specific client, the first step is to understand its time source by using this w32tm command:
+If you want to troubleshoot a specific client, the first step is to understand its time source by using this `w32tm` command:
 
 ```dockerfile
 w32tm /query /status
@@ -275,36 +275,36 @@ w32tm /stripchart /computer:MySourceEntry /packetinfo /samples:1
 
 Also useful, the following command lists each DC it can find in the specified domain and prints a result that lets you determine each partner. This command includes machines that were configured manually.
 
- w32tm /monitor /domain:my_domain
+ `w32tm /monitor /domain:my_domain`
 
-By using the list, you can trace the results through the domain and understand the hierarchy and the time offset at each step. By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time. From there, you can try to understand why that time is incorrect by turning on w32tm logging.
+By using the list, you can trace the results through the domain and understand the hierarchy and the time offset at each step. By locating the point where the time offset gets significantly worse, you can pinpoint the root of the incorrect time. From there, you can try to understand why that time is incorrect by turning on `w32tm` logging.
 
 #### Use Group Policy
-You can use Group Policy to accomplish stricter accuracy by, for instance, assigning clients to use specific NTP servers or to control how down-level OS's are configured when virtualized. Here's a list of possible scenarios and relevant Group Policy settings:
+You can use Group Policy to accomplish stricter accuracy by, for instance, assigning clients to use specific NTP servers or to control how down-level operating systems are configured when virtualized. Here's a list of possible scenarios and relevant Group Policy settings:
 
 **Virtualized domains**: To control Virtualized DCs in Windows 2012R2 so that they synchronize time with their domain, rather than with the Hyper-V host, you can disable this registry entry. For the PDC, you don't want to disable the entry because the Hyper-V host delivers the most stable time source. The registry entry requires that you restart the w32time service after it's changed.
 
- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider]
- "Enabled"=dword:00000000
+ `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\VMICTimeProvider]
+ "Enabled"=dword:00000000`
 
 **Accuracy sensitive loads**: For time accuracy sensitive workloads, you could configure groups of machines to set the NTP servers and any related time settings, such as polling and clock update frequency. This task is normally handled by the domain, but for more control you could target specific machines to point directly to the master clock.
 
 Group Policy setting| New value|
 ----- | ----- |
-NtpServer| ClockMasterName,0x8|
-MinPollInterval| 6 – 64 seconds|
-MaxPollInterval| 6|
-UpdateInterval| 100 – Once per second|
-EventLogFlags| 3 – All special time logging|
+`NtpServer`| `ClockMasterName`,0x8|
+`MinPollInterval`| 6 – 64 seconds|
+`MaxPollInterval`| 6|
+`UpdateInterval`| 100 – Once per second|
+`EventLogFlags`| 3 – All special time logging|
 
 > [!NOTE]
 > The `NtpServer` and `EventLogFlags` settings are located under System\Windows Time Service\Time Providers by using the **Configure Windows NTP Client** settings. The other three are located under System\Windows Time Service by using the **Global Configuration** settings.
 
-**Remote accuracy sensitive loads remote**: For systems in branch domains, for instance, Retail and the Payment Credit Industry (PCI), Windows uses the current site information and DC Locator to find a local DC, unless there's a manual NTP time source configured. This environment requires 1 second of accuracy, which uses faster convergence to the correct time. This option allows the w32time service to move the clock backwards. If this is acceptable and meets your requirements, you can create the following policy. As with any environment, make sure to test and baseline your network.
+**Remote accuracy sensitive loads remote**: For systems in branch domains, for instance, Retail and the Payment Credit Industry (PCI), Windows uses the current site information and DC Locator to find a local DC, unless there's a manual NTP time source configured. This environment requires 1 second of accuracy, which uses faster convergence to the correct time. This option allows the w32time service to move the clock backwards. If this behavior is acceptable and meets your requirements, you can create the following policy. As with any environment, make sure to test and baseline your network.
 
 Group Policy setting| New value|
 ----- | ----- |
-MaxAllowedPhaseOffset| 1, but if more than one second, set clock to correct time.|
+`MaxAllowedPhaseOffset`| 1, but if more than one second, set clock to correct time.|
 
 The `MaxAllowedPhaseOffset` setting is located under System\Windows Time Service by using the **Global Configuration** settings.
 
@@ -329,7 +329,7 @@ If the Azure VM isn't joined to a domain, and it isn't a DC, we recommend that y
 Here are some actions you can take if your Windows application requires accurate time.
 
 ### Time Stamp API
-Programs that require the greatest accuracy with regard to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime). Using this API ensures that your application gets System Time, which is conditioned by the Windows Time service.
+Programs that require the greatest accuracy relative to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime). Using this API ensures that your application gets System Time, which is conditioned by the Windows Time service.
 
 ### UDP performance
 If you have an application that uses UDP communication for transactions and it's important to minimize latency, there are some related registry entries you can use to configure a range of ports to be excluded from the port base filtering engine. This action improves both the latency and increases your throughput. However, changes to the registry should be limited to experienced administrators. This workaround excludes ports from being secured by the firewall. For more information, see the following reference.
@@ -337,60 +337,60 @@ If you have an application that uses UDP communication for transactions and it's
 For Windows Server 2012 and Windows Server 2008, you need to install a hotfix first. For more information, see [Datagram loss when you run a multicast receiver application in Windows 8 and in Windows Server 2012](https://support.microsoft.com/kb/2808584).
 
 ### Update network drivers
-Some network vendors have driver updates that improve performance with regard to driver latency and buffering UDP packets. Contact your network vendor to see if there are updates to help with UDP throughput.
+Some network vendors have driver updates that improve performance relative to driver latency and buffering UDP packets. Contact your network vendor to see if there are updates to help with UDP throughput.
 
 ## Logging for auditing purposes
-To comply with time tracing regulations, you can manually archive w32tm logs, event logs, and Performance Monitor information. Later, the archived information can be used to attest compliance at a specific time in the past. The following factors are used to indicate the accuracy:
+To comply with time tracing regulations, you can manually archive `w32tm` logs, event logs, and Performance Monitor information. Later, the archived information can be used to attest compliance at a specific time in the past. The following factors are used to indicate the accuracy:
 
 1. Clock accuracy by using the **Computed Time Offset** Performance Monitor counter. This counter shows the clock within the desired accuracy.
-1. Clock source looking for `Peer Response from` in the w32tm logs. Following the message text is the IP address or VMIC, which describes the time source and the next in the chain of reference clocks to validate.
-1. Clock condition status by using the w32tm logs to validate that `ClockDispl Discipline: \*SKEW\*TIME\*` is occurring. This status indicates that w32tm is active at the time.
+1. Clock source looking for `Peer Response from` in the `w32tm` logs. Following the message text is the IP address or VMIC, which describes the time source and the next in the chain of reference clocks to validate.
+1. Clock condition status by using the `w32tm` logs to validate that `ClockDispl Discipline: \*SKEW\*TIME\*` is occurring. This status indicates that `w32tm` is active at the time.
 
 ### Event logging
 To get the complete story, you also need Event log information. By collecting the System Event log and filtering on Time-Server, Microsoft-Windows-Kernel-Boot, and Microsoft-Windows-Kernel-General, you might be able to discover if other influences changed the time, for instance, third parties. These logs might be necessary to rule out external interference. Group Policy can affect which event logs are written to the log. For more information, see the preceding section **Use Group Policy**.
 
-### <a name="W32Logging"></a>W32time Debug logging
-To enable w32tm for auditing purposes, the following command enables logging that shows the periodic updates of the clock and indicates the source clock. Restart the service to enable the new logging.
+### <a name="W32Logging"></a>W32Time debug logging
+To enable `w32tm` for auditing purposes, the following command enables logging that shows the periodic updates of the clock and indicates the source clock. Restart the service to enable the new logging.
 
 For more information, see [Turn on debug logging in the Windows Time service](https://support.microsoft.com/kb/816043).
 
- w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-73,103,107,110
+ `w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-73,103,107,110`
 
 ### Performance Monitor
 The Windows Server 2016 Windows Time service exposes performance counters, which can be used to collect logging for auditing. These counters can be logged locally or remotely. You can record the **Computer Time Offset** and **Round Trip Delay** counters. Like any performance counter, you can monitor them remotely and create alerts by using System Center Operations Manager. For instance, you can use an alert to alarm you when the Time Offset drifts from the desired accuracy. For more information, see the [System Center Management Pack](/system-center/scsm/management-packs).
 
 ### Windows traceability example
-From w32tm log files, you want to validate two pieces of information. The first is an indication that the log file is currently a condition clock. This indication proves that your clock was being conditioned by the Windows Time service at the disputed time.
-
+From `w32tm` log files, you want to validate two pieces of information. The first is an indication that the log file is currently a condition clock. This indication proves that your clock was being conditioned by the Windows Time service at the disputed time.
+```
  151802 20:18:32.9821765s - ClockDispln Discipline: *SKEW*TIME* - PhCRR:223 CR:156250 UI:100 phcT:65 KPhO:14307
  151802 20:18:33.9898460s - ClockDispln Discipline: *SKEW*TIME* - PhCRR:1 CR:156250 UI:100 phcT:64 KPhO:41
  151802 20:18:44.1090410s - ClockDispln Discipline: *SKEW*TIME* - PhCRR:1 CR:156250 UI:100 phcT:65 KPhO:38
-
+```
 The main point is that you see messages prefixed with `ClockDispln Discipline`, which is proof that w32time is interacting with your system clock.
 
 Next, you need to find the last report in the log before the disputed time that reports the source computer, which is currently being used as the reference clock. This information could be an IP address, computer name, or the VMIC provider, which indicates that it's syncing with the host for Hyper-V. The following example provides an IPv4 address of 10.197.216.105:
 
- 151802 20:18:54.6531515s - Response from peer 10.197.216.105,0x8 (ntp.m|0x8|0.0.0.0:123->10.197.216.105:123), ofs: +00.0012218s
+ `151802 20:18:54.6531515s - Response from peer 10.197.216.105,0x8 (ntp.m|0x8|0.0.0.0:123->10.197.216.105:123), ofs: +00.0012218s`
 
 Now that you've validated the first system in the reference time chain, you need to investigate the log file on the reference time source and repeat the same steps. This process continues until you get to a physical clock, like GPS, or a known time source, like NIST. If the reference clock is GPS hardware, logs from the manufactured might also be required.
 
 ## Network considerations
-The NTP protocol algorithms have a dependency on the symmetry of your network. As you increase the number of network hops, the probability of asymmetry increases. Therefore, it's difficult to predict what types of accuracies you see in your specific environments.
+The NTP protocol algorithms have a dependency on the symmetry of your network. As you increase the number of network hops, the probability of asymmetry increases. For this reason, it's difficult to predict what types of accuracies you see in your specific environments.
 
 Performance Monitor and the new Windows Time counters in Windows Server 2016 can be used to assess your environment's accuracy and create baselines. You can also perform troubleshooting to determine the current offset of any machine on your network.
 
 There are two general standards for accurate time over the network:
 
-- [Precision Time Protocol - IEEE 1588](https://www.nist.gov/el/intelligent-systems-division-73500/introduction-ieee-1588) **(PTP)**: PTP has tighter requirements on network infrastructure but can often provide sub-microsecond accuracy.
+- [Precision Time Protocol - IEEE 1588](https://www.nist.gov/el/intelligent-systems-division-73500/introduction-ieee-1588) **(PTP)**: PTP has tighter requirements on network infrastructure but can often provide submicrosecond accuracy.
 - [Network Time Protocol – RFC 1305](https://tools.ietf.org/html/rfc1305) **(NTP)**: NTP works on a larger variety of networks and environments, which makes it easier to manage.
 
-Windows supports simple NTP (RFC2030) by default for non-domain-joined machines. For domain-joined machines, we use a secure NTP called [MS-SNTP](/openspecs/windows_protocols/ms-sntp/8106cb73-ab3a-4542-8bc8-784dd32031cc), which uses domain-negotiated secrets that provide a management advantage over authenticated NTP described in RFC1305 and RFC5905.
+Windows supports simple NTP (RFC2030) by default for nondomain-joined machines. For domain-joined machines, we use a secure NTP called [MS-SNTP](/openspecs/windows_protocols/ms-sntp/8106cb73-ab3a-4542-8bc8-784dd32031cc), which uses domain-negotiated secrets that provide a management advantage over authenticated NTP described in RFC1305 and RFC5905.
 
-Both the domain and non-domain-joined protocols require UDP port 123. For more information about NTP best practices, see [Network Time Protocol Best Current Practices IETF Draft](https://tools.ietf.org/html/draft-ietf-ntp-bcp-00).
+Both the domain and nondomain-joined protocols require UDP port 123. For more information about NTP best practices, see [Network Time Protocol Best Current Practices IETF Draft](https://tools.ietf.org/html/draft-ietf-ntp-bcp-00).
 
 ### Reliable hardware clock (RTC)
 
-Windows doesn't step time, unless certain bounds are exceeded, but instead disciplines the clock. That means w32tm adjusts the frequency of the clock at a regular interval by using the **Clock Update Frequency** setting, which defaults to once a second with Windows Server 2016. If the clock is behind, it accelerates the frequency. If it's ahead, it slows down the frequency. However, during the time between clock frequency adjustments, the hardware clock is in control. If there's an issue with the firmware or the hardware clock, the time on the machine can become less accurate.
+Windows doesn't step time, unless certain bounds are exceeded, but instead disciplines the clock. That means `w32tm` adjusts the frequency of the clock at a regular interval by using the **Clock Update Frequency** setting, which defaults to once a second with Windows Server 2016. If the clock is behind, it accelerates the frequency. If it's ahead, it slows down the frequency. However, during the time between clock frequency adjustments, the hardware clock is in control. If there's an issue with the firmware or the hardware clock, the time on the machine can become less accurate.
 
 This scenario is another reason why you need to test and baseline in your environment. If the **Computed Time Offset** performance counter doesn't stabilize at the accuracy you're targeting, you might want to verify that your firmware is up to date. As another test, you can see if duplicate hardware reproduces the same issue.
 
@@ -401,58 +401,58 @@ You can use the section **Discover the hierarchy** to understand the source of t
 By focusing on the system with divergent time, you can use the following tools to gather more information to help you determine the issue and find a resolution. The `UpstreamClockSource` reference is the clock discovered by using `w32tm /config /status`:
 
 - System Event logs
-- Enable logging by using: w32tm logs - w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-300
-- w32Time Registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time
+- Enable logging by using `w32tm logs - w32tm /debug /enable /file:C:\Windows\Temp\w32time-test.log /size:10000000 /entries:0-300`
+- w32Time Registry key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time`
 - Local network traces
-- Performance Counters (from the local machine or the UpstreamClockSource)
-- W32tm /stripchart /computer:UpstreamClockSource
-- PING UpstreamClockSource to understand latency and number of hops to Source
-- Tracert UpstreamClockSource
+- Performance counters (from the local machine or `UpstreamClockSource`)
+- `W32tm /stripchart /computer:UpstreamClockSource`
+- PING `UpstreamClockSource` to understand latency and number of hops to source
+- Tracert `UpstreamClockSource`
 
 Problem| Symptoms| Resolution|
 ----- | ----- | ----- |
 | Local TSC clock isn't stable.| Using Perfmon - Physical Computer – Sync clock stable clock, but you still see that every 1-2 minutes of several 100us. | Update firmware or validate that different hardware doesn't display the same issue.|
-| Network latency.| The w32tm stripchart displays RoundTripDelay of more than 10 ms. Variation in the delay can cause noise as large as one half of the round trip time, for instance, a delay that's only in one direction.<br><br>UpstreamClockSource is multiple hops, as indicated by PING. TTL should be close to 128.<br><br>Use Tracert to find the latency at each hop.  | Find a closer clock source for time. One solution is to install a source clock on the same segment or manually point to a source clock that's geographically closer. For a domain scenario, add a machine with the GTimeServ role. |
-Unable to reliably reach the NTP source.| W32tm /stripchart intermittently returns "Request timed out." |NTP source isn't responsive. |
-NTP source isn't responsive.| Check Perfmon counters for NTP Client Source Count, NTP Server Incoming Requests, and NTP Server Outgoing Responses and determine your usage compared to your baselines.| By using server performance counters, determine if the load has changed in reference to your baselines.<br><br>Are there network congestion issues?|
+| Network latency.| The `w32tm` stripchart displays `RoundTripDelay` of more than 10 ms. Variation in the delay can cause noise as large as one half of the round trip time, for instance, a delay that's only in one direction.<br><br>`UpstreamClockSource` is multiple hops, as indicated by PING. TTL should be close to 128.<br><br>Use Tracert to find the latency at each hop.  | Find a closer clock source for time. One solution is to install a source clock on the same segment or manually point to a source clock that's geographically closer. For a domain scenario, add a machine with the GTimeServ role. |
+Unable to reliably reach the NTP source.| `W32tm /stripchart` intermittently returns "Request timed out." |NTP source isn't responsive. |
+NTP source isn't responsive.| Check Perfmon counters for NTP Client Source Count, NTP Server Incoming Requests, and NTP Server Outgoing Responses and determine your usage compared to your baselines.| By using server performance counters, determine if the load changed in reference to your baselines.<br><br>Are there network congestion issues?|
 Domain controller not using the most accurate clock.| Changes in the topology or recently added master time clock.| w32tm /resync /rediscover|
-Client clocks are drifting.| Time-Service event 36 in System event log and/or text in log file describing that **NTP Client Time Source Count** counter is going from 1 to 0.|Troubleshoot the upstream source and understand if it's running into performance issues.|
+Client clocks are drifting.| Time-Service event 36 in System event log and/or text in log file describing that NTP Client Time Source Count counter is going from 1 to 0.|Troubleshoot the upstream source and understand if it's running into performance issues.|
 
 ### Baselining time
 
 Baselining is important so that you can understand the performance and accuracy of your network and then compare it with the baseline in the future when problems occur. You want to baseline the root PDC or any machines marked with GTIMESRV. We also recommend that you baseline the PDC in every forest. Finally, pick any critical DCs or machines that have interesting characteristics, like distance or high loads, and baseline those.
 
-It's also useful to baseline Windows Server 2016 versus 2012 R2. However, you only have w32tm /stripchart as a tool that you can use to compare because Windows Server 2012R2 doesn't have performance counters. You should pick two machines with the same characteristics or upgrade a machine and compare the results after the update. The Windows Time Measurements addendum has more information on how to do detailed measurements between 2016 and 2012.
+It's also useful to baseline Windows Server 2016 versus 2012 R2. However, you only have `w32tm /stripchart` as a tool that you can use to compare because Windows Server 2012R2 doesn't have performance counters. You should pick two machines with the same characteristics or upgrade a machine and compare the results after the update. The Windows Time Measurements addendum has more information on how to do detailed measurements between 2016 and 2012.
 
 By using all the w32time performance counters, collect data for at least a week. This data ensures that you have enough of a reference to account for variations in the network over time and enough of a run to provide confidence that your time accuracy is stable.
 
 ### NTP server redundancy
 
-For manual NTP server configuration used with non-domain-joined machines or the PDC, having more than one server is a good redundancy measure in case of availability. It might also give better accuracy, assuming that all the sources are accurate and stable. However, if the topology isn't well designed, or the time sources aren't stable, the resulting accuracy could be worse, so caution is advised. The limit of supported time servers that w32time can manually reference is 10.
+For manual NTP server configuration used with nondomain-joined machines or the PDC, having more than one server is a good redundancy measure in case of availability. It might also give better accuracy, assuming that all the sources are accurate and stable. However, if the topology isn't well designed or the time sources aren't stable, the resulting accuracy could be worse, so caution is advised. The limit of supported time servers that w32time can manually reference is 10.
 
 ## Leap seconds
 
 The earth's rotation period varies over time owing to climatic and geological events. Typically, the variation is about a second every two years. Whenever the variation from atomic time grows too large, a correction of one second (up or down) is inserted, which is called a leap second. This insertion is done in such a way that the difference never exceeds 0.9 seconds. This correction is announced six months ahead of the actual correction. Before Windows Server 2016, the Microsoft Time Service wasn't aware of leap seconds but relied on the external time service to take care of this issue. With the increased time accuracy of Windows Server 2016, Microsoft is working on a more suitable solution for the leap second problem.
 
-## Secure time seeding
+## Secure Time Seeding
 
-W32time in Server 2016 includes the Secure Time Seeding feature. This feature determines the approximate current time from outgoing SSL connections. This time value is used to monitor the local system clock and correct any gross errors. You can read more about the feature in [this blog post](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows). In deployments with reliable time sources and well-monitored machines that include monitoring for time offsets, you might choose to not use the Secure Time Seeding feature and rely on your existing infrastructure instead.
+W32Time in Server 2016 includes the Secure Time Seeding feature. This feature determines the approximate current time from outgoing SSL connections. This time value is used to monitor the local system clock and correct any gross errors. You can read more about the feature in [this blog post](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows). In deployments with reliable time sources and well-monitored machines that include monitoring for time offsets, you might choose to not use the Secure Time Seeding feature and rely on your existing infrastructure instead.
 
 To disable the feature:
 
-1. Use Group Policy to manage `SecureTimeSeeding`. See the section that refers to the setting UtilizeSslTimeData: Learn: [Policy CSP - ADMX_W32Time](/windows/client-management/mdm/policy-csp-admx-w32time)
+1. Use Group Policy to manage `SecureTimeSeeding`. See the section that refers to the setting `UtilizeSslTimeData`: Learn: [Policy CSP - ADMX_W32Time](/windows/client-management/mdm/policy-csp-admx-w32time).
 1. Alternatively, you can manually set the registry value. Set the `UtilizeSSLTimeData` registry configuration value to `0` on a specific machine:
 
     ```yaml
     reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Config /v UtilizeSslTimeData /t REG_DWORD /d 0 /f
     ```
 
-1. If you're unable to reboot the machine immediately for some reason, you can notify W32time service about the configuration update. This notification stops time monitoring and enforcement based on time data collected from SSL connections.
+1. If you're unable to reboot the machine immediately, you can notify the W32Time service about the configuration update. This notification stops time monitoring and enforcement based on time data collected from SSL connections.
 
     ```
     W32tm.exe /config /update
     ```
 
-1. Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections. The latter part has a small overhead and shouldn't be a perf concern.
+1. Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections. The latter part has a small overhead and shouldn't be a performance concern.
 
-1. To apply this setting in an entire domain, set the `UtilizeSSLTimeData` value in the W32time Group Policy setting to `0` and publish the setting. When the setting is picked up by a Group Policy client, W32time service is notified and it will stop time monitoring and enforcement by using SSL time data. The SSL time data collection stops when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you might want to exclude such machines from this policy change. These devices eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
+1. To apply this setting in an entire domain, set the `UtilizeSSLTimeData` value in the W32Time Group Policy setting to `0` and publish the setting. When the setting is picked up by a Group Policy client, W32Time service is notified and it stops time monitoring and enforcement by using SSL time data. The SSL time data collection stops when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you might want to exclude such machines from this policy change. These devices eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
