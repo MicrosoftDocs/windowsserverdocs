@@ -7,15 +7,6 @@ ms.date: 07/04/2022
 ms.topic: conceptual
 ---
 
----
-title: Set up Windows LAPS in the LAPS properties dialog
-description: Learn how to use the LAPS properties dialog to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
-author: jay98014
-ms.author: jsimmons
-ms.date: 07/04/2022
-ms.topic: conceptual
----
-
 # Set up Windows LAPS in the LAPS properties dialog
 
 Learn how to use the LAPS properties dialog in the Windows Server Active Directory Users and Computers management snap-in to configure Windows Local Administrator Password Solution (Windows LAPS) for Windows Server Active Directory.
