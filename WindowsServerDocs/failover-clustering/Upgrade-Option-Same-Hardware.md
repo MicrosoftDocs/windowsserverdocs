@@ -18,7 +18,22 @@ It's important to keep your failover clusters as up to date as possible, particu
 
 ## Overview
 
-Currently, you can only upgrade the Windows Server operating system (OS) on an existing failover cluster from Windows Server 2016 to Windows Server 2019. IF your failover cluster is running an earlier version of Windows Server, such as Windows Server 2012 R2, upgrading while cluster services are running prevents nodes from joining together.
+As of Windows Server 2012 R2, you can upgrade your failover clusters by joining your existing nodes to a cluster that's running the next latest version of Windows Server. This later version is known as an *uplevel* version, because it's one level higher than your current version of WIndows Server.
+
+As of Windows Server 2012 R2, here's how uplevel joining works:
+
+- You can join a Windows Server 2012 R2 node to a Windows Server 2016 cluster.
+- You can join a Windows Server 2016 node to a Windows Server 2019 cluster.
+- You can join a Windows Server 2019 node to a Windows Server 2022 cluster.
+
+This method also works in reverse, where a node can join with a cluster one version lower than its current version. For example:
+
+- You can join a Windows Server 2019 node to a Windows Server 2016 cluster.
+- You can join a Windows Server 2022 node to a Windows Server 2019 cluster.
+
+Joining nodes in this manner supports Cluster OS Rolling Upgrade, which allows you to upgrade your cluster without stopping applications.
+
+However, you can only join Windows Server nodes and clusters that are one level apart from each other. Trying to join a node to a cluster that's two levels higher or lower doesn't work. For example, a Windows Server 2016 node will be unable to join a Windows Server 2022 cluster. In order to upgrade a WIndows Server 206 deployment to Windows Server 2022, you must chain upgrades together, one level at a time, until you reach the desired version.
 
 Before you start upgrading, review the information at [Windows Server upgrade content](../get-started/upgrade-overview.md) to understand upgrade compatibility for different versions of Windows Server. When you upgrade-in place, you can only upgrade one or two versions forward. For example, if your server cluster currently uses Windows Server 2012 R2 or Windows Server 2016, you can upgrade in-place to Windows Server 2019.
 
@@ -36,13 +51,17 @@ Before you start upgrading, you should do the following things:
 
 - Update all drivers and firmware to the certified levels required for the Windows Server version you're upgrading to.
 
+- Install [the Copy Cluster Roles wizard](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn530781(v=ws.11)), which requires shared storage to work as intended.
+
 You should also keep the following considerations and limitations in mind when planning your upgrade:
 
 - If your initial clusters are running earlier versions of Windows Server, you might need to perform multiple in-place upgrades to reach the latest version.
 
 - If the cluster is running virtual machines (VMs), you must run the [Update-VmVersion](/powershell/module/hyper-v/update-vmversion) command in PowerShell to upgrade the VMs after you finish upgrading the clusters.
 
-- Applications such as SQL Server, Exchange Server, and so on don't migrate if you upgrade your clusters using the Copy Cluster Roles wizard. Ask your application vendor for instructions about how to properly migrate your applications.
+- The Copy Cluster wizard only copies in-box roles such as Generic Service, Physical Disk, and IP Address. It doesn't copy the SQL Server, Exchange Server, or third-party applications. If you use the Copy Cluster wizard to upgrade your nodes, applications like SQL Server, Exchange Server, and third-party applications won't automatically migrate.
+
+- You need shared storage in order to use the Copy Cluster Roles wizard.
 
 ## Step 1: Evict first node and upgrade to Windows Server 2016
 
@@ -95,7 +114,7 @@ To evict and upgrade your deployment's first node:
 1. Run the following command to create a new cluster that contains the first node.
 
    ```powershell
-   New-Cluster
+   New-Cluster -Name cluster1
    ```
 
 1. After you create the cluster, you must migrate the roles from the original cluster to this new cluster. To migrate the roles, you must open the Failover Cluster Manager, right-click on the name of the new cluster and select **More Actions** > **Copy Cluster Roles**.
@@ -146,9 +165,15 @@ To upgrade the second node:
 
 1. Perform a clean installation of Windows Server 2019 on the second node. Make sure to add all the necessary roles, features, drivers, and security updates.
 
-1. Make sure you've deleted the original cluster.
+1. Run the following commands to delete the original cluster:
 
-1. Next, run the following command to rename the cluster:
+   ```powershell
+   Remove-Cluster <OldClusterName>
+   Clear-ClusterNode <OldClusterNodeName>
+   ```
+   <!----Is this syntax correct?--->
+
+1. Next, run the following command to rename the cluster group:
 
     ```powershell
     Get-ClusterGroup <OldName> | %{ $_.Name = "<NewName>" }
@@ -184,17 +209,19 @@ To rebuild the first node:
 
 1. Move all resources back to the first node and make sure they all work as intended.
 
-1. The current cluster functional level remains at Windows 2016. In a PowerShell window, run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/update-clusterfunctionallevel) command to update the functional level to Windows 2019.<!---Are there instructions for how to do this in Cluster Management, or is this PowerShell-only?-->
+1. The current cluster functional level remains at Windows 2016. In a PowerShell window, run the [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/update-clusterfunctionallevel) command to update the functional level to Windows 2019.
 
 #### [PowerShell](#tab/powershell)
-
-<!--Are there PowerShell steps for the first parts?--->
 
 1. Follow the directions in [Step 1: Evict first node and upgrade to Windows Server 2016](#step-1-evict-first-node-and-upgrade-to-windows-server-2016) to evict the first node from the cluster and disconnect the storage.
 
 1. Rebuild or upgrade the first node to Windows Server 2019. Make sure you've added all necessary roles, features, drivers, and security updates.
 
-1. Reattach the storage and add the first node back to the cluster.
+1. Run the following command to reattach the storage and add the first node back to the cluster:
+
+   ```powershell
+   Get-Cluster -Name <ClusterName> | Add-ClusterNode -Name <Node1>
+   ```
 
 1. Move all resources back to the first node and make sure they all work as intended.
 
