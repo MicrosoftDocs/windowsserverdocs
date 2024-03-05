@@ -83,7 +83,9 @@ Here's an example of the enabled Group Policy item.
 
 ---
 
-SMB authentication rate limiter doesn't affect Kerberos. Kerberos authenticates before an application protocol like SMB connects. SMB authentication rate limiter is designed to be another layer of defense in depth, especially for devices not joined to domains.
+SMB authentication rate limiter doesn't affect Kerberos; Kerberos authenticates before an application protocol like SMB connects. SMB authentication rate limiter is designed to be another layer of defense in depth, especially for devices not joined to domains. 
+
+<!-- The exception is if you are using Local KDC; Local KDC makes each Windows machine have its own local Kerberos. -->
 
 ## Related content
 
