@@ -194,6 +194,8 @@ Configure automatic updates under **Computer Configuration\Administrative Templa
   |**5 - Allow local admin to choose setting**|This option specifies whether local administrators are allowed to use the automatic updates control panel to choose configuration options. For example, a local administrator could choose a scheduled installation time. Local administrators aren't allowed to set the configuration for automatic updates to **Disabled**. |
   |**7 - Auto Download, Notify to install, Notify to Restart**|*This option is available only in Windows Server SKU, versions 2016 and later.* With this option, local administrators can use Windows Update to proceed with installations or reboots manually. Windows downloads applicable updates to the device, and notifies users that updates are ready to be installed. Once updates are installed, users are notified to restart the device.|
 
+> [!NOTE]
+> Microsoft ships Windows Server OSs with the Automatic Update Options policy configured to 3 in the registry. This is not reflected in the GP Editor UI. If an admin configures the Automatic Update Options policy to a different setting the new setting will apply. Setting the Automatic Update Options policy to "Not Configured" will result in the behavior of automatically downloading and installing updates.
 #### Delay restart for scheduled installations
 
 Specifies the amount of time automatic updates wait before proceeding with a scheduled restart.
