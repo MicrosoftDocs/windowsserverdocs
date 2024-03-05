@@ -850,6 +850,8 @@
         href: ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md
       - name: Configuring Alternate Login ID
         href: ad-fs/operations/Configuring-Alternate-Login-ID.md
+      - name: Configure Token Signing and Decrypting certificates
+        href: ad-fs/operations/configure-TS-TD-certs-ad-fs.md
       - name: Create a Claims Provider Trust
         href: ad-fs/operations/create-a-Claims-Provider-Trust.md
       - name: Create a Non-Claims Aware Relying Party Trust
