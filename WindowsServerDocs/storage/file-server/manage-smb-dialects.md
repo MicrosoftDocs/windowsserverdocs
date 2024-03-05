@@ -24,8 +24,8 @@ By default SMB Server and client automatically negotiates the highest matched di
 Before you can configure SMB dialects you need:
 
 - An SMB server running on one of the following operating systems.
-  - Windows Server Insiders build 25075 or later.
-  - Windows 11 Insiders build 25375 or later.
+  - Windows Server Insiders build 25951 or later.
+  - Windows 11 Insiders build 25951 or later.
 - Administrative privileges to the computer.
 - If you're using Group Policy on a domain, you need privileges to create or edit a Group Policy object (GPO) and link it to the appropriate organizational unit (OU).
 
