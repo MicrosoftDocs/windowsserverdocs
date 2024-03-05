@@ -21,7 +21,7 @@ By default SMB Server and client automatically negotiates the highest matched di
 
 ## Prerequisites
 
-Before you can configure SMB dialectsyou need:
+Before you can configure SMB dialects you need:
 
 - An SMB server running on one of the following operating systems.
   - Windows Server Insiders build 25075 or later.
