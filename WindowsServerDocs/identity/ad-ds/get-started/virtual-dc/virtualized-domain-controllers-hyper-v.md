@@ -266,7 +266,7 @@ In virtualized deployments, you need to pay special attention to certain require
 
 ### Recommended method for backing up and restoring virtualized DCs
 
-The method we recommend you use to back up and restore your virtualized DCs is to run Windows Server Backup in the guest OS.
+The method we recommend you use to back up and restore your virtualized DCs is to run Windows Server Backup in the guest OS. For more information, see [Restore a virtual domain controller](../../manage/virtual-dc/restore-virtualized-domain-controller.md).
 
 While you can technically use snapshots or copies of VHD files to restore a backup, we don't recommend using these methods for the following reasons:
 

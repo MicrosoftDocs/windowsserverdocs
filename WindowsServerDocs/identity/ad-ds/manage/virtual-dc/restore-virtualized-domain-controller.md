@@ -14,7 +14,7 @@ If your DC VM fails but you don't see signs of a [USN rollback](../../get-starte
 
 - If your system has a valid system state data backup from before the failure, you can restore it using the Active Directory-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, you should back up your DCs regularly and at least every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
 
-- If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM, then configure the registry property as described in [Restoring a system state backup](#restoring-a-system-state-backup). After that, restart the DC in normal mode.
+- If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM, then configure the registry property as described in [Restore a system state backup](#restore-a-system-state-backup). After that, restart the DC in normal mode.
 
 ## Determine the best way to back up your DC
 
@@ -59,7 +59,7 @@ If you're trying to restore an RODC:
 If a valid system state backup exists for the DC VM, you can safely restore the backup by following the restore procedure for the backup tool that you used to back up the VHD file.
 
 > [!IMPORTANT]
-> To properly restore the DC, you must start the DC in DSRM, not normal mode. If you miss the opportunity to enter DSRM during system startup, turn off the DC's VM before it can fully start in normal mode. It's important to start the DC in DSRM because starting a DC in normal mode increments the USNs, even if the DC is disconnected from the network. For more information about USN rollback, see [USN and USN rollback](#usn-and-usn-rollback).
+> To properly restore the DC, you must start the DC in DSRM, not normal mode. If you miss the opportunity to enter DSRM during system startup, turn off the DC's VM before it can fully start in normal mode. It's important to start the DC in DSRM because starting a DC in normal mode increments the USNs, even if the DC is disconnected from the network. For more information about USN rollback, see [USN and USN rollback](../../get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md#usn-and-usn-rollback).
 
 ### Restore the system state backup of the virtual DC
 
