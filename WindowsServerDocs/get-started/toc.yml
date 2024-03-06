@@ -24,6 +24,8 @@ items:
       href: servicing-channels-comparison.md
     - name: Editions feature comparison
       href: editions-comparison.md
+    - name: Locks and limits
+      href: locks-limits.md
     - name: Azure Edition
       href: azure-edition.md
     - name: Windows Server Annual Channel for Containers
@@ -40,8 +42,6 @@ items:
         href: removed-deprecated-features-windows-server-2019.md
       - name: Windows Server 2016
         href: removed-deprecated-features-windows-server-2016.md
-    - name: Locks and limits
-      href: locks-limits.md
     - name: Release information
       href: windows-server-release-info.md
     - name: Extended Security Updates

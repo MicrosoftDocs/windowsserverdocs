@@ -11519,6 +11519,21 @@
       "source_path": "WindowsServerDocs/networking/sdn/sdn-whats-new.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2016.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2019.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/editions-comparison-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison",
+      "redirect_document_id": false
     }
   ]
 }
