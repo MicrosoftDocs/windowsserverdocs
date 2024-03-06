@@ -96,6 +96,8 @@ items:
       href: file-server/smb-interception-defense.md
     - name: Control SMB signing behavior
       href: file-server/smb-signing.md
+    - name: Configure alternative SMB ports
+      href: file-server/smb-ports.md
     - name: Configure the SMB client to require encryption
       href: file-server/configure-smb-client-require-encryption.md
     - name: Network File System overview
