@@ -1,5 +1,5 @@
 ---
-title: Configure alternative SMB ports (preview)
+title: Configure alternative SMB ports for Windows Server (preview)
 description: How to configure alternative SMB ports on Windows Server.
 ms.topic: how-to
 author: Heidilohr
@@ -21,8 +21,14 @@ You can also configure your deployment to block configuring alternative ports or
 
 In order to configure alternative ports, you need the following:
 
+- Your system must be running one of the following two operating systems:
+
+  - [Windows 11 Insider Preview Build 25992](https://blogs.windows.com/windows-insider/2023/11/08/announcing-windows-11-insider-preview-build-25992-canary-channel/) or later
+
+  - [Windows Server Preview Build 25997](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25997/m-p/3983949) or later
+
 - Admin permissions
-- An SMB client that supports connecting to alternative ports
+
 - An SMB server configured to listen to the port you want to use
 
 ## Map an alternative port
