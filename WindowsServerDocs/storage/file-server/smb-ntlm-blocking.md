@@ -4,8 +4,7 @@ description: Learn how to make SMB more secure by blocking NTLM.
 ms.topic: how-to
 author: Heidilohr
 ms.author: helohr
-ms.date: 02/21/2024
-ms.prod: windows-server
+ms.date: 03/07/2024
 ---
 # Block NTLM connections on SMB (preview)
 
@@ -17,14 +16,19 @@ The SMB client now supports blocking NTLM authentication for remote outbound con
 
 ## Prerequisites
 
-NTLM blocking for the SMB client requires the following:
+NTLM blocking for the SMB client requires the following prerequisites:
 
-- A Windows 11 Preview build.
-- A server that allows using Kerberos.
+- An SMB client running on one of the following operating systems.
+  - [Windows Server Insiders build 25951](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25951/m-p/3926636) or later.
+  - [Windows 11 Insiders build 25951](https://blogs.windows.com/windows-insider/2023/09/13/announcing-windows-11-insider-preview-build-25951-canary-channel/) or later.
+- An SMB server that allows using Kerberos.
+
+> [!TIP]
+> NTLM blocking is an SMB client capability only. The SMB client is built into both Windows Server and Windows client operating systems. The destination SMB server can be any operating system where PKU2U or kerberos can be used.
 
 ## Configure SMB client NTLM blocking
 
-In the Windows 11 preview build, you now have the option to configure SMB to block NTLM. To improve the security of deployments running earlier versions of Windows, you must disable NTLM manually, either by editing the relevant Group Policy or running a specific command in PowerShell.
+Starting with Windows Server Insiders build 25951 and Windows 11 Insiders build 25951, you have the option to configure SMB to block NTLM. To improve the security of deployments running earlier versions of Windows, you must disable NTLM manually, either by editing the relevant Group Policy or running a specific command in PowerShell.
 
 To configure NTLM blocking:
 
@@ -42,7 +46,7 @@ To configure NTLM blocking:
 
 1. Open an elevated PowerShell window.
 
-1. Run the following command to enable NTLM blocking:
+1. Run the following command to enable NTLM blocking.
 
    ```powershell
    Set-SMbClientConfiguration -BlockNTLM $true 
@@ -52,7 +56,7 @@ To configure NTLM blocking:
 
 ## Enable exceptions to NTLM blocking
 
-There may be scenarios where you need to allow certain machines to use NTLM instead of blocking it globally, particularly when the SMB server you're trying to connect to isn't joined to an Active Directory domain.
+There might be scenarios where you need to allow certain machines to use NTLM instead of blocking it globally. For example, when the SMB server you're trying to connect to isn't joined to an Active Directory domain.
 
 To enable a list of exceptions to NTLM blocking:
 
@@ -68,7 +72,7 @@ To enable a list of exceptions to NTLM blocking:
 
 #### [PowerShell](#tab/powershell)
 
-There isn't currently a PowerShell equivalent to the Block NTLM Server Exception List Group Policy object. In order to set up an exception list, you must go into the Group Policy Editor and configure the setting manually. However, once you've completed the manual setup, you can make individual exceptions for certain IPs by running this command with the DNS name, IP adress, or NetBIOS name in the `AddToList` parameter:
+There isn't currently a PowerShell equivalent to the Block NTLM Server Exception List Group Policy object. In order to set up an exception list, you must go into the Group Policy Editor and configure the setting manually. However, once you've completed the manual setup, you can make individual exceptions for certain IPs by running this command with the DNS name, IP address, or NetBIOS name in the `AddToList` parameter:
 
   ```powershell
   $params = @{
