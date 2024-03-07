@@ -985,6 +985,8 @@
         href: ad-cs/network-device-enrollment-service-overview.md
       - name: Certificates and trust
         href: ad-cs/certificate-trust.md
+      - name: Certificate template concepts
+        href: ad-cs/certificate-template-concepts.md
     - name: How-to guides
       items:
       - name: Configure Network Device Enrollment Service to use a domain user account
@@ -997,6 +999,8 @@
         href: ad-cs/submit-pkcs-certificate-request.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
+      - name: Manage certificate templates
+        href: ad-cs/manage-certificate-templates.md  
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies

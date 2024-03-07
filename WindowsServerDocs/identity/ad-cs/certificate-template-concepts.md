@@ -30,7 +30,7 @@ Certificate template versions determine which features are available in a certif
 
 ## Default certificate templates
 
-A number of preconfigured certificate templates that are designed to meet the needs of most organizations are included with AD CS enterprise certification authorities (CAs). New certificate templates can be created by modifying a copy of an existing preconfigured template. The default certificate templates are described in the following table: 
+A number of preconfigured certificate templates that are designed to meet the needs of most organizations are included with AD CS enterprise certification authorities (CAs). New certificate templates can be created by modifying a copy of an existing preconfigured template. The default certificate templates are described in the following table:
 
 | Name | Description | Key usage | Subject type | Published to Active Directory Domain Services (AD DS)? | Template version |
 |------|-------------|-----------|--------------|-------------------------------------------------------|------------------|

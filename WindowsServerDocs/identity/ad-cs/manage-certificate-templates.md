@@ -9,7 +9,7 @@ ms.date: 02/18/2024
 
 # Manage certificate templates
 
-Certificate Templates are managed through the Certificate Templates Microsoft Management Console (MMC) snap-in. You can use this snap-in to manage Active Directory Certificate Services (AD CS) both locally and remotely. 
+Certificate Templates are managed through the Certificate Templates Microsoft Management Console (MMC) snap-in. You can use this snap-in to manage Active Directory Certificate Services (AD CS) both locally and remotely.
 
 ## How to manage templates
 
@@ -35,7 +35,7 @@ To create a new certificate template:
 1. Right-click the template to copy from, and then click Duplicate Template.
 1. Choose the minimum operating system version of AD CS Certificate Authority (CA) that you want to support. Currently the most recent version of Windows Server that you can select is Windows Server 2016. You can also select the minimum recipient operating system for the certificate template, with the most recent version being Windows 10/Windows Server 2016.
 1. Provide a name for the certificate template and configure the template settings.
- 
+
 ## Delete a certificate template
 
 You can delete a certificate template when you no longer want it to be available for use. When you delete a certificate template, certificates based on the template can no longer be issued. Template deletions affect all CAs in a forest. Certificate templates cannot be recovered once they are deleted. Membership in Domain Admins or Enterprise Admins, or equivalent, is required to delete a certificate template.
@@ -69,9 +69,9 @@ To configure a CA to issue certificates based on a certificate template, perform
 1. Right-click Certificate Templates, click New, and then click Certificate Template to Issue.
 1. Select the certificate template, and click OK.
 
-## Remove a certificate template from a CA.
+## Remove a certificate template from a CA
 
-It may be necessary to remove a certificate template from a certification authority (CA). For example, if you need to avoid confusion when adding a newer version of the certificate template. 
+It may be necessary to remove a certificate template from a certification authority (CA). For example, if you need to avoid confusion when adding a newer version of the certificate template.
 
 To remove a certificate template from a CA:
 
