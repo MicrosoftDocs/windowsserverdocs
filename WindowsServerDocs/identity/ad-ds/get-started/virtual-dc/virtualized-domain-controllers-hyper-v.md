@@ -58,11 +58,11 @@ When you plan to virtualize your DC, keep the following security considerations 
 
 - We recommend you configure your system to have a host running a Server Core installation of Windows Server with no applications besides Hyper-V. This configuration limits how many applications and servers you install on the server. This limitation results in better system performance and also creates a *reduced attack surface*, where there are fewer entry points for malicious attacks through applications and services.
 
-- For branch offices or other locations that are difficult to secure, we recommend you use read-only DCs (RODCs). If you have a separate management network, we recommend that you only connect the host to the management network. For more information about RODCs, see [Install a Windows Server Active Directory Read-Only Domain Controller (RODC) (Level 200)](/windows-server/identity/ad-ds/deploy/rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-).
+- For branch offices or other locations that are difficult to secure, we recommend you use read-only DCs (RODCs). If you have a separate management network, we recommend that you only connect the host to the management network. For more information about RODCs, see [Install a Windows Server Active Directory Read-Only Domain Controller (RODC) (Level 200)](../../deploy/rodc/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md).
 
 - You can secure your DCs with BitLocker. In Windows Server 2016 and later, you can also use the virtual Trusted Platform Module (TPM) feature that provides the guest key material required to unlock the system volume.
 
-- [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) can provide other controls to protect your DCs.
+- [Guarded fabric and shielded VMs](../../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md) can provide other controls to protect your DCs.
 
 For more information about securing DCs, see the [Best practice guide for securing Active Directory installations](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
@@ -275,7 +275,7 @@ While you can technically use snapshots or copies of VHD files to restore a back
 - While Windows Server 2016 and later is compatible with snapshots, snapshots don't provide the type of stable, permanent backup history you need to consistently restore your system during disaster scenarios. The Volume Shadow Copy Service (VSS)-based snapshots you can create in Windows Server 2016 Hyper-V and later also aren't compatible with BitLocker that can cause potential security issues. This issue prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
 
 > [!NOTE]
-> The shielded VM project described in [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
+> The shielded VM project described in [Guarded fabric and shielded VMs](../../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md) has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
 
 ## USN and USN rollback
 
