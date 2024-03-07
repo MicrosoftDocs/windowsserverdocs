@@ -37,7 +37,7 @@ Before you can configure SMB authentication rate limiter, you need:
 
 ## Configure SMB authentication rate limiter
 
-The SMB authentication rate limiter setting features a time configuration variable and can be enabled or disabled manually in PowerShell or using Group Policy. To enable SMB authentication rate limiter, follow the steps.
+Using SMB authentication rate limiter you can set a delay between failed authentication attempts. You can also enable or disable the SMB rate limiter manually in PowerShell or using Group Policy. To enable SMB authentication rate limiter, follow the steps.
 
 # [PowerShell](#tab/powershell)
 
@@ -79,13 +79,11 @@ Here's an example of the enabled Group Policy item.
 :::image type="content" source="media/configure-smb-authentication-rate-limiter/enable-authentication-rate-limiter-group-policy.png" alt-text="Screenshot showing the Enable authentication rate limiter Group Policy setting.":::
 
 > [!TIP]
-> To set the invalid authentication delay time, you need to use the [PowerShell steps](#configure-smb-authentication-rate-limiter?tabs=powershell).
+> To set the invalid authentication delay time, you need to use PowerShell.
 
 ---
 
-SMB authentication rate limiter doesn't affect Kerberos; Kerberos authenticates before an application protocol like SMB connects. SMB authentication rate limiter is designed to be another layer of defense in depth, especially for devices not joined to domains. 
-
-<!-- The exception is if you are using Local KDC; Local KDC makes each Windows machine have its own local Kerberos. -->
+SMB authentication rate limiter doesn't affect Kerberos; Kerberos authenticates before an application protocol like SMB connects. SMB authentication rate limiter is designed to be another layer of defense in depth, especially for devices not joined to domains.
 
 ## Related content
 
