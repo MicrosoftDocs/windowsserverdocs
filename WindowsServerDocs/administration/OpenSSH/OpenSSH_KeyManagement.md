@@ -1,7 +1,7 @@
 ---
 title: Key-based authentication in OpenSSH for Windows
 description: Learn about OpenSSH Server key-based authentication, generation and deployment for Windows using built-in Windows tools or PowerShell.
-ms.date: 07/12/2022
+ms.date: 02/14/2024
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
@@ -103,8 +103,8 @@ Now you have a public/private ed25519 key pair in the location specified. The .p
 ```Output
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
--a----         6/3/2021   2:55 PM            464 ed25519
--a----         6/3/2021   2:55 PM            103 ed25519.pub
+-a----         6/3/2021   2:55 PM            464 id_ed25519
+-a----         6/3/2021   2:55 PM            103 id_ed25519.pub
 ```
 
 Remember that private key files are the equivalent of a password should be protected the same way you protect your password.
@@ -173,10 +173,16 @@ initially.
 $authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\id_ed25519.pub
 
 # Generate the PowerShell to be run remote that will copy the public key file generated previously on your client to the authorized_keys file on your server
-$remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '$authorizedKey';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""Administrators:F"" /grant ""SYSTEM:F"""
+$remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '''$authorizedKey''';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""Administrators:F"" /grant ""SYSTEM:F"""
 
 # Connect to your server and run the PowerShell using the $remotePowerShell variable
 ssh username@domain1@contoso.com $remotePowershell
+```
+
+For non-English localized versions of the operating system, the script will need to be modified to reflect group names accordingly. To prevent errors when granting permissions to group names, the Security Identifier (SID) can be used in its place. The SID can be retrieved by running `Get-LocalGroup | Select-Object Name, SID`. When using the SID in place of the group name, it must be preceded by an asterisk (**\***). In the following example, the **Administrators** group uses the SID `S-1-5-32-544`:
+
+```powershell
+$remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '''$authorizedKey''';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""*S-1-5-32-544:F"" /grant ""SYSTEM:F"""
 ```
 
 These steps complete the configuration required to use key-based authentication with OpenSSH on Windows.

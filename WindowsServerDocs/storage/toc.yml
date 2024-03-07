@@ -1,3 +1,4 @@
+items:
 - name: Storage
   href: storage.yml
   items:
@@ -85,8 +86,11 @@
       href: file-server/smb-over-quic.md
     - name: SMB compression
       href: file-server/smb-compression.md
+    - name: Configure SMB authentication rate limiter
+      href: file-server/configure-smb-authentication-rate-limiter.md
     - name: SMB security enhancements
       href: file-server/smb-security.md
+    - name: Manage SMB dialects
     - name: 'SMB: File and printer sharing ports should be open'
       href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
     - name: Secure SMB traffic
@@ -95,6 +99,12 @@
       href: file-server/smb-interception-defense.md
     - name: Control SMB signing behavior
       href: file-server/smb-signing.md
+    - name: Configure alternative SMB ports
+      href: file-server/smb-ports.md
+    - name: Configure the SMB client to require encryption
+      href: file-server/configure-smb-client-require-encryption.md
+    - name: Block NTLM connections on SMB
+      href: file-server/smb-ntlm-blocking.md
     - name: Network File System overview
       href: nfs/nfs-overview.md
     - name: Deploy Network File System

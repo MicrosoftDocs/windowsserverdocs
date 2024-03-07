@@ -70,7 +70,7 @@ If you are using virtual machines for any of the Remote Desktop Services servers
     9.  Repeat substeps 1-8 for the RD Gateway and Web certificate, (for example contoso.westus.cloudapp.azure.com), giving the exported certificate an appropriate file name, for example **ContosoWebGwClientCert**.
     10. In File Explorer, navigate to the folder where the certificates are stored, for example \Contoso-Cb1\Certificates.
     11. Select the two exported client certificates, then right-click them, and click **Copy**.
-    12. Paste the certifcates on the local client computer.
+    12. Paste the certificates on the local client computer.
 8.  Configure the RD Gateway and RD Licensing deployment properties:
     1.  In Server Manager, click **Remote Desktop Services > Overview > Tasks > Edit Deployment Properties**.
     2.  Expand **RD Gateway** and clear the **Bypass RD Gateway server for local addresses** option.
