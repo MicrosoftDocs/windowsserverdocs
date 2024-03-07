@@ -118,6 +118,9 @@ VM, and select the _Windows Server Datacenter: Azure Edition_ image that you wou
 > capabilities that are in preview have specific opt-in and portal viewing requirements. See the
 > individual capability topics to learn more about using that capability with your VM.
 
+> [!CAUTION]
+> Once Windows Server Datacenter: Azure Edition is installed, it isn't possible to switch the OS back to a non-Azure Edition OS. If this occurs, reinstalling the previous OS is required.
+
 To learn more about creating virtual machine using Azure or Azure Stack HCI, see
 [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
 and
