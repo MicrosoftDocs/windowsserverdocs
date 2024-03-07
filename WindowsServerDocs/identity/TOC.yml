@@ -88,6 +88,8 @@
             href: ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md
           - name: Virtualized Domain Controller Troubleshooting
             href: ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md
+          - name: Restore a Virtualized Domain Controller
+            href: ad-ds/manage/virtual-dc/restore-virtualized-domain-controller.md
           - name: Virtualized Domain Controller Technical Reference appendix
             href: ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md
           - name: Virtualized Domain Controller additional Resources
