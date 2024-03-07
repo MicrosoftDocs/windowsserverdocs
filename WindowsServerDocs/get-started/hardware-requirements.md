@@ -31,7 +31,7 @@ Processor performance depends not only on the clock frequency of the processor, 
 - Supports CMPXCHG16b, LAHF/SAHF, and PrefetchW
 - Supports Second Level Address Translation (EPT or NPT)
 
-[Coreinfo](/sysinternals/downloads/coreinfo), part of Windows Sysinternals, is a tool you can use to confirm which of these capabilities your CPU has.
+You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Windows Sysinternals, to verify the capabilities that your CPU possesses.
 
 # [RAM](#tab/ram)
 
@@ -44,7 +44,7 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 - ECC (Error Correcting Code) type or similar technology for physical host deployments
 
 > [!IMPORTANT]
-> If you create a virtual machine with the minimum supported hardware parameters (1 processor core and 512 MB RAM) and then attempt to install this release, installation will fail.
+> Attempting to install Windows Server in a virtual machine configured with the minimum supported hardware parameters (1 processor core and 512 MB RAM) will result in a failed installation.
 >
 > To prevent this issue, perform one of the following:
 >
