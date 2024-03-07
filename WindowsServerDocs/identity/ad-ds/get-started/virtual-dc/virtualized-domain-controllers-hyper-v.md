@@ -50,7 +50,7 @@ The following recommendations can help prevent single points of failure. However
 
 ### Security considerations
 
-You must manage the host computer where you run your virtual DCs as carefully as you would a writeable DC, even if the computer is only a domain-joined or workgroup computer. This requirement is for security reasons. Mismanaged hosts are vulnerable to elevation-of-privilege attacks, where malicious users gain access to higher privileges than they're supposed to because the admin assigned the wrong level of permission to a lower-level role assignment. These attacks can compromise all VMs, domains, and forests hosted by the affected computer.
+You must manage the host computer where you run your virtual DCs as carefully as you would a writeable DC, even if the computer is only a domain-joined or workgroup computer. This requirement is for security reasons. Mismanaged hosts are vulnerable to elevation-of-privilege attacks, where malicious users gain access to higher privileges than they're supposed to because the admin assigned the wrong level of permission to a lower-level role assignment. These attacks can compromise all virtual machines (VMs), domains, and forests hosted by the affected computer.
 
 When you plan to virtualize your DC, keep the following security considerations in mind:
 
@@ -93,7 +93,7 @@ Based on the example configuration in the previous diagram, here are some import
 
   - Malicious users can attack VM 1 even if you install it as an RODC. Although RODC admins don't explicitly have domain admin rights, they can still use the RODC to apply policies to the host computer. These policies might include startup scripts for example. If a malicious actor finds a way to get RODC admin rights and sends a policy with a malicious startup script, they can compromise the host computer and use it to compromise other VMs on the host.
 
-- VHD file security
+- Virtual hard disk (VHD) file security
 
   - VHD files for a virtual DC are like the physical hard drive of a physical DC. You should be just as careful securing the VHD file as you would with a hard drive. Make sure you only allow reliable and trusted admins to access these VHD files.
 
@@ -156,7 +156,7 @@ Virtualization platforms like Hyper-V have many features that make managing, mai
    > - Stability and functionality issues
    > - Application, services, and drivers issues
 
-- Don't deploy other DCs with a copy of a VHD file from a DC you deployed. Not using copies prevents potential update sequence number (USN) rollback scenarios. For more information about USN rollback, see [USN and USN rollback](#usn-and-usn-rollback).
+- Don't deploy other DCs with a copy of a VHD file from a DC you deployed. Not using copies prevents potential USN rollback scenarios. For more information about USN rollback, see [USN and USN rollback](#usn-and-usn-rollback).
 
   - In Windows Server 2012 and later, administrators can clone DC images to deploy more DCs, but only if they use properly prepared images.
 

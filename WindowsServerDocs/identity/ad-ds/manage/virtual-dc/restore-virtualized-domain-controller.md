@@ -10,11 +10,11 @@ ms.topic: article
 
 You must regularly back up your system state in order to restore a physical or virtual domain controller (DC) during a disaster recovery scenario. The system state includes Active Directory data and log files, the registry, the system volume, and various elements of the operating system. Active Directory-compatible backup applications ensure consistent local and replicated Active Directory databases after a restore process, including notifying replication partners of invocation ID resets. Virtual hosting environments and disk or OS imaging applications let administrators bypass standard checks and validations that occur during DC system state restore.
 
-If your DC VM fails but you don't see signs of a [USN rollback](../../get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md#usn-and-usn-rollback), there are two ways you can restore the VM:
+If your DC virtual machine (VM) fails but you don't see signs of an [update sequence number (USN) rollback](../../get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md#usn-and-usn-rollback), there are two ways you can restore the VM:
 
 - If your system has a valid system state data backup from before the failure, you can restore it using the Active Directory-compatible backup utility you used to create the backup within the tombstone lifetime. The default tombstone lifetime is 180 days, you should back up your DCs regularly and at least every 90 days. For more information about determining tombstone lifetimes, see [Determine the tombstone lifetime for the forest](/previous-versions/windows/it-pro/windows-server-2003/cc784932(v=ws.10)).
 
-- If you have a working copy of the VHD file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM, then configure the registry property as described in [Restore a system state backup](#restore-a-system-state-backup). After that, restart the DC in normal mode.
+- If you have a working copy of the virtual hard disk (VHD) file but no system state backup, you can remove the existing VM and restore it using a previous copy of the VHD. Make sure to start the VM in DSRM, then configure the registry property as described in [Restore a system state backup](#restore-a-system-state-backup). After that, restart the DC in normal mode.
 
 ## Determine the best way to back up your DC
 
