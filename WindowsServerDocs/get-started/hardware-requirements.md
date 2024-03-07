@@ -35,7 +35,7 @@ You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool in
 
 # [RAM](#tab/ram)
 
-The following are the estimated Random Access Memory (RAM) requirements for this product:
+The following are the estimated Random Access Memory (RAM) requirements for this product.
 
 **Minimum**:
 
@@ -59,7 +59,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 
 **Minimum**:
 
-- 32 GB
+- 32 GB of space
 
 > [!NOTE]
 > Be aware that 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2022 or later using the Server Core installation option with the Web Services (IIS) server role. A server in Server Core mode is ~4 GB smaller than the same server using the **Server with Desktop Experience** installation option.
@@ -71,7 +71,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 
 # [Network](#tab/network)
 
-Network adapters used should include these features:
+Network adapters used should include these features.
 
 **Minimum**:
 
