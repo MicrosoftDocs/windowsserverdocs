@@ -3,7 +3,7 @@ title: Restore a virtualized domain controller in Windows Server
 description: Learn about how to restore a virtualized Active Directory Domain Services Domain Controller (DC) in Windows Server.
 author: HeidiLohr
 ms.author: helohr
-ms.date: 06/09/2023
+ms.date: 03/07/2024
 ms.topic: article
 ---
 # Restore a virtual domain controller
@@ -79,7 +79,7 @@ To restore the system state data backup of the virtual DC:
 
    If **Windows Boot Manager** doesn't open and the DC begins to start in normal mode, turn the VM off to pause the process. Repeat this step as many times as necessary until you're able to access Windows Boot Manager. You can't access DSRM from the Windows Error Recovery menu. Therefore, turn off the VM and try again if the Windows Error Recovery menu appears.
 
-1. In **Windows Boot Manager**, press the <kbd>F8<kbd> key to access advanced boot options.
+1. In **Windows Boot Manager**, press the <kbd>F8</kbd> key to access advanced boot options.
 
 1. Under **Advanced Boot Options**, select **Directory Services Restore Mode**, and then press the Enter key to start the DC in DSRM.
 

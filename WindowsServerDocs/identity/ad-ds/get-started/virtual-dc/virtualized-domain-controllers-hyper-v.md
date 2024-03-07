@@ -3,7 +3,7 @@ title: Virtualizing domain controllers with Hyper-V
 description: Learn about considerations for virtualizing Windows Server Active Directory domain controllers (DCs) in Hyper-V.
 author: daveba
 ms.author: wscontent
-ms.date: 06/09/2023
+ms.date: 03/07/2024
 ms.topic: article
 ms.custom: inhenkel
 ---
@@ -28,7 +28,7 @@ To install and use the Hyper-V role, your hardware must meet the following requi
 
 - Your processor must let you enable the hardware-assisted virtualization feature.
 
-  - Typically this setting is known at Intel Virtualization Technology (Intel VT) or Advanced Micro Devices Virtualization (AMD-V).
+  - Typically this setting is known as Intel Virtualization Technology (Intel VT) or Advanced Micro Devices Virtualization (AMD-V).
 
 - Your processor must support Hardware Data Execution Protection (DEP).
   
@@ -172,10 +172,9 @@ System Center VM Manager (VMM) lets you manage physical machines and VMs in a u
 
 You should perform P2V conversion in offline mode to keep the directory data consistent when you turn the DC back on. You can toggle offline mode in the Convert Physical Server installer. For more information about how to use offline mode, see [P2V: Convert physical computers to VMs in VMM](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc764232(v=technet.10)).
 
-You should also disconnect the VM from the network during P2V conversion. You should only enable the network adapter after you finish the conversion process and verified that everything works. At that point, you should turn the physical source machine off. Don't turn the physical source machine back on and reconnect it to the network until after you reformat the hard disk.
+You should also disconnect the VM from the network during P2V conversion. You should only enable the network adapter after you finish the conversion process and verify that everything works. At that point, you should turn the physical source machine off. Don't turn the physical source machine back on and reconnect it to the network until after you reformat the hard disk.
 
 #### Avoiding USN rollback
-
 
 When you create virtual DCs, you should avoid creating USN rollback scenarios. To avoid rollback, you can set up a new virtual DC with regular promotion, promotion from Install from Media (IfM), or by cloning the DC if you already have at least one virtual DC. This approach also lets you avoid hardware or platform problems P2V-converted virtual guests might encounter.
 
@@ -270,9 +269,9 @@ The method we recommend you use to back up and restore your virtualized DCs is t
 
 While you can technically use snapshots or copies of VHD files to restore a backup, we don't recommend using these methods for the following reasons:
 
-- If you copy or clone a VHD file, the database becomes stale because its database version number isn't automatically updated when you restore it. As a result of this inconsistency in tracking numbers means that if you start the VHD in normal mode, you can potentially cause a [USN rollback](#usn-and-usn-rollback).
+- If you copy or clone a VHD file, the database becomes stale because its database version number isn't automatically updated when you restore it. This inconsistency in tracking numbers means that if you start the VHD in normal mode, you can potentially cause a [USN rollback](#usn-and-usn-rollback).
 
-- While Windows Server 2016 and later is compatible with snapshots, snapshots don't provide the type of stable, permanent backup history you need to consistently restore your system during disaster scenarios. The Volume Shadow Copy Service (VSS)-based snapshots you can create in Windows Server 2016 Hyper-V and later also aren't compatible with BitLocker that can cause potential security issues. This issue prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
+- While Windows Server 2016 and later is compatible with snapshots, snapshots don't provide the type of stable, permanent backup history you need to consistently restore your system during disaster scenarios. The Volume Shadow Copy Service (VSS)-based snapshots you can create in Windows Server 2016 Hyper-V and later also aren't compatible with BitLocker, which can cause potential security issues. This issue prevents the Active Directory database engine from accessing the database containing the snapshot when Hyper-V tries to mount the snapshot volume.
 
 > [!NOTE]
 > The shielded VM project described in [Guarded fabric and shielded VMs](../../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md) has a Hyper-V host driven backup as a non-goal for maximum data protection of the guest VM.
@@ -285,7 +284,7 @@ This section describes replication issues that can occur as a result of an incor
 
 AD DS uses USNs to keep track of replication of data between DCs. Each time you change data in the directory, the USN increments to indicate a new change.
 
-Destination DCs use USNs to track updates to each directory partition it stores. The USN also tracks the status of every DC that stores replicas of these directory partitions. When DCs replicate changes to one another, they query their replication partners for changes with USNs greater than the last change the DC received from its partner.
+Destination DCs use USNs to track updates to each directory partition they store. The USN also tracks the status of every DC that stores replicas of these directory partitions. When DCs replicate changes to one another, they query their replication partners for changes with USNs greater than the last change the DC received from its partner.
 
 You can find the replication metadata tables that contain the USNs in the up-to-dateness vector and high water mark. Both the source and destination DCs use these tables to filter required updates for the destination DC.
 
@@ -378,7 +377,7 @@ If you see Event ID 2095 in the Directory Service event log, follow these instru
 
 1. Check if the reported changes originated from this DC and propagated to other DCs. If the event was a result of using a snapshot or copy of a VM, try to find out when the USN rollback occurred. Once you have the time, you can check the replication partners of that DC to determine whether replication occurred after the rollback.
 
-   You can use the Repadmin tool check where the changes came from. For information about how to use Repadmin, see [Monitoring and troubleshooting Active Directory replication with Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)). If you're unable to make a determination, contact [Microsoft Support](https://support.microsoft.com) for assistance.
+   You can use the Repadmin tool to check where the changes came from. For information about how to use Repadmin, see [Monitoring and troubleshooting Active Directory replication with Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)). If you're unable to make a determination, contact [Microsoft Support](https://support.microsoft.com) for assistance.
 
 1. Forcefully demote the DC. This operation involves cleaning up the DC's metadata and seizing the operations master roles, also known as flexible single master operations (FSMO) roles. For more information, see [Recover from USN rollback](/troubleshoot/windows-server/identity/detect-and-recover-from-usn-rollback#recover-from-usn-rollback).
 
