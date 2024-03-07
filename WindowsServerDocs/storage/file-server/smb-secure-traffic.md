@@ -2,9 +2,9 @@
 title: Secure SMB Traffic in Windows Server
 description: How to secure SMB Traffic in Windows
 ms.topic: article
-author: PatAltimore
+author: robinharwood
 ms.author: wscontent
-ms.date: 06/12/2023
+ms.date: 03/06/2024
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
 ---
 # Secure SMB Traffic in Windows Server
@@ -40,14 +40,18 @@ require it as part of a public cloud offering. The primary scenarios include Azu
 If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
 using a VPN, you restrict the outbound traffic to the required service IP ranges. For more
 information about Azure Cloud and Office 365 IP address ranges, see:
+
 - Azure IP ranges and service tags:
-  [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063),
-  [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), or
-  [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are
-  updated weekly and include versioning both for the full file and each individual service tag. The
-  *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China)
-  and is grouped by region within that cloud. Service tags in the file will increase as Azure
-  services are added.
+
+  - [public cloud](https://www.microsoft.com/download/details.aspx?id=56519)
+  - [US government cloud](https://www.microsoft.com/download/details.aspx?id=57063)
+  - [Germany cloud](https://www.microsoft.com/download/details.aspx?id=57064)
+  - [China cloud](https://www.microsoft.com/download/details.aspx?id=57064).
+  
+  The JSON files are updated weekly and include versioning both for the full file and each
+  individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US
+  government, Germany, or China) and is grouped by region within that cloud. Service tags in the
+  file will increase as Azure services are added.
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 With Windows 11 and Windows Server 2022 Datacenter: Azure Edition, you can use SMB over QUIC to
@@ -150,6 +154,16 @@ rules, which relies on Kerberos and domain membership for authentication. Window
 allows for more secure options like IPSEC.
 
 For more information about configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
+
+### Updated firewall rules (preview)
+
+> [!IMPORTANT]
+> Windows Server Insiders Edition is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
+Beginning with [Windows 11 Insider preview Build 25992 (Canary)](https://blogs.windows.com/windows-insider/2023/11/08/announcing-windows-11-insider-preview-build-25992-canary-channel/) and [Windows Server Preview Build 25997](https://techcommunity.microsoft.com/t5/windows-server-insiders/announcing-windows-server-preview-build-25997/m-p/3983949), the built-in firewall rules doesn't contain the SMB NetBIOS ports anymore. In earlier versions of Windows Server, when you created a share, the firewall automatically enabled certain rules in the File and Printer Sharing group. In particular, the built-in firewall automatically used inbound NetBIOS ports 137 through 139. Shares made with SMB2 or later don't use NetBIOS ports 137-139. If you need to use an SMB1 server for legacy compatibility reasons, you must manually reconfigure the firewall to open those ports
+
+We made this change to improve network security. This change brings SMB firewall rules more in line with the standard behavior for the Windows Server *File Server* role. By default, the firewall rule only open the minimum number of ports required for sharing data. Administrators can reconfigure the rules to restore the legacy ports.
 
 ## Disable SMB Server if unused
 
