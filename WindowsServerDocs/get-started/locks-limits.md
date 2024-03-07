@@ -31,14 +31,18 @@ Use this article to compare the operating system locks and limits across the dif
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 | Windows Server Containers | Unlimited | Unlimited | Unlimited |
 | Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited | Unlimited |
-| FIXME: Edge network protection/firewall | No | No | Yes |
+| Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
 | Storage Replica | 1 partnership and 1 resource group with a single 2TB volume | **Unlimited** | **Unlimited** |
+| FIXME: Edge network protection/firewall | No | No | Yes |
 
 # [Version Differences](#tab/version-differences)
 
 | Locks and limits | Windows Server 2022 Standard | Windows Server 2022 Datacenter | Windows Server 2022 Datacenter: Azure Edition |
 |--|--|--|--|
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+| Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited | Unlimited |
+| Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
+| Storage Replica | 1 partnership and 1 resource group with a single 2TB volume | **Unlimited** | **Unlimited** |
 
 ---
 
@@ -61,14 +65,18 @@ Use this article to compare the operating system locks and limits across the dif
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 | Windows Server Containers | Unlimited | Unlimited | Unlimited |
 | Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited | Unlimited |
-| FIXME: Edge network protection/firewall | No | No | Yes |
+| Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
 | Storage Replica | 1 partnership and 1 resource group with a single 2TB volume | **Unlimited** | **Unlimited** |
+| FIXME: Edge network protection/firewall | No | No | Yes |
 
 # [Version Differences](#tab/version-differences)
 
 | Locks and limits | Windows Server 2022 Standard | Windows Server 2022 Datacenter | Windows Server 2022 Datacenter: Azure Edition |
 |--|--|--|--|
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+| Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited | Unlimited |
+| Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
+| Storage Replica | 1 partnership and 1 resource group with a single 2TB volume | **Unlimited** | **Unlimited** |
 
 ---
 
@@ -90,13 +98,13 @@ Use this article to compare the operating system locks and limits across the dif
 | Maximum RAM | 24 TB | 24 TB |
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 | Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
-| FIXME: Edge network protection/firewall | No | No |
 
 # [Version Differences](#tab/version-differences)
 
 | Locks and limits | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
 |--|--|--|
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+| Windows Server Containers | Unlimited Windows containers and up to two Hyper-V containers | Unlimited Windows containers and Hyper-V containers |
 
 ---
 
@@ -117,7 +125,6 @@ Use this article to compare the operating system locks and limits across the dif
 | Maximum number of cores | Unlimited | Unlimited |
 | Maximum RAM | 24 TB | 24 TB |
 | Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
-| FIXME: Edge network protection/firewall | No | No |
 
 # [Version Differences](#tab/version-differences)
 
