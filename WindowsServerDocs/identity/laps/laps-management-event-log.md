@@ -79,7 +79,7 @@ Post authentication grace period (hours): 8
 Post authentication actions: 1
 ```
 
-When the policy is configured to back up the password to Azure Active Directory, a 10022 event is logged. Here's an example of a 10022 event:
+When the policy is configured to back up the password to Microsoft Entra ID, a 10022 event is logged. Here's an example of a 10022 event:
 
 ```output
 The current LAPS policy is configured as follows:
@@ -112,7 +112,7 @@ These specific policy setting values are examples and shouldn't be considered re
 
 ### Password update confirmation events
 
-When Windows LAPS successfully updates the configured directory (Windows Server Active Directory or Azure Active Directory) with a new password, a success event is logged: 10018 for password updates in Windows Server Active Directory, and 10029 for password updates in Azure Active Directory.
+When Windows LAPS successfully updates the configured directory (Windows Server Active Directory or Microsoft Entra ID) with a new password, a success event is logged: 10018 for password updates in Windows Server Active Directory, and 10029 for password updates in Microsoft Entra ID.
 
 Here's an example of a 10018 event:
 
@@ -202,4 +202,4 @@ The Windows LAPS event log channel contains events related to the local machine 
 ## Next steps
 
 - [Configure Windows LAPS for Windows Server Active Directory](laps-management-user-interface.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)

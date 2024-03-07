@@ -61,7 +61,7 @@
     - name: What's new in Active Directory Domain Services
       href: whats-new-active-directory-domain-services.md
     - name: What's new in Active Directory Domain Services Insider Preview
-      href: ad-ds/whats-new-active-directory-domain-services-insider-preview.md
+      href: ../get-started/whats-new-windows-server-insiders-preview.md
     - name: AD DS Getting started
       items:
       - name: Active Directory Administrative Center
@@ -88,6 +88,8 @@
             href: ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md
           - name: Virtualized Domain Controller Troubleshooting
             href: ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md
+          - name: Restore a Virtualized Domain Controller
+            href: ad-ds/manage/virtual-dc/restore-virtualized-domain-controller.md
           - name: Virtualized Domain Controller Technical Reference appendix
             href: ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md
           - name: Virtualized Domain Controller additional Resources
@@ -590,7 +592,7 @@
         href: ad-fs/deployment/active-directory-adfs-in-azure-with-azure-traffic-manager.md
       - name: Upgrading to AD FS in Windows Server 2016 using a SQL database
         href: ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-SQL.md
-      - name: Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud
+      - name: Deploy Microsoft Entra Connect Health to Monitor your on-premises identity infrastructure in the cloud
         href: /azure/active-directory/hybrid/whatis-hybrid-identity
       - name: Windows Server 2016 and 2012 R2 AD FS Deployment Guide
         href: ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md
@@ -732,7 +734,7 @@
             href: ad-fs/operations/create-a-Claims-Provider-Trust.md
           - name: Create a Rule to Send an AD FS 1.x compatible Claim
             href: ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md
-      - name: Deploy Azure AD Connect Health
+      - name: Deploy Microsoft Entra Connect Health
         href: /azure/active-directory/hybrid/whatis-hybrid-identity
       - name: Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2
         href: ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md
@@ -826,7 +828,7 @@
         href: ad-fs/operations/AD-FS-Compound-Authentication-and-AD-DS-claims.md
       - name: Configure AD FS for user certificate authentication
         href: ad-fs/operations/Configure-User-Certificate-Authentication.md
-      - name: Configure AD FS 2016 and Azure AD Multi-Factor Authentication
+      - name: Configure AD FS 2016 and Microsoft Entra multifactor authentication
         href: ad-fs/operations/Configure-AD-FS-and-Azure-MFA.md
       - name: Configure AD FS Extranet Soft Lockout Protection
         href: ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md
@@ -850,6 +852,8 @@
         href: ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md
       - name: Configuring Alternate Login ID
         href: ad-fs/operations/Configuring-Alternate-Login-ID.md
+      - name: Configure Token Signing and Decrypting certificates
+        href: ad-fs/operations/configure-TS-TD-certs-ad-fs.md
       - name: Create a Claims Provider Trust
         href: ad-fs/operations/create-a-Claims-Provider-Trust.md
       - name: Create a Non-Claims Aware Relying Party Trust
@@ -868,7 +872,7 @@
         href: ad-fs/operations/Improved-interoperability-with-SAML-2.0.md
       - name: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across company Applications
         href: ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-company-Applications.md
-      - name: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications
+      - name: Manage Risk with additional multifactor authentication for Sensitive Applications
         href: ad-fs/operations/Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md
       - name: Manage Risk with Conditional Access Control
         href: ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md
@@ -960,7 +964,7 @@
       items:
       - name: AD FS Decommission Guide
         href: ad-fs/decommission/adfs-decommission-guide.md
-      - name: AD FS to Azure AD FAQ
+      - name: AD FS to Microsoft Entra FAQ
         href: ad-fs/decommission/ad-fs-to-azure-ad-faq.md
   - name: Active Directory Rights Management Service
     items:
@@ -1001,6 +1005,10 @@
         href: ad-cs/retrieve-base-and-delta-crl.md
       - name: Manage certificate templates
         href: ad-cs/manage-certificate-templates.md  
+      - name: Export a certificate with its private key
+        href: ad-cs/export-certificate-private-key.md
+      - name: Distribute certificates using Group Policy
+        href: ad-cs/distribute-certificates-group-policy.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
@@ -1021,11 +1029,17 @@
     items:
     - name: What is Windows LAPS?
       href: laps/laps-overview.md
-    - name: Key concepts in Windows LAPS
-      href: laps/laps-concepts.md
+    - name: Windows LAPS concepts
+      items:
+      - name: Overview
+        href: laps/laps-concepts-overview.md
+      - name: Account management modes
+        href: laps/laps-concepts-account-management-modes.md
+      - name: Passwords and passphrases
+        href: laps/laps-concepts-passwords-passphrases.md
     - name: Windows LAPS scenarios
       items:
-      - name: Windows LAPS and Azure Active Directory
+      - name: Windows LAPS and Microsoft Entra ID
         href: laps/laps-scenarios-azure-active-directory.md
       - name: Windows LAPS and Windows Server Active Directory
         href: laps/laps-scenarios-windows-server-active-directory.md

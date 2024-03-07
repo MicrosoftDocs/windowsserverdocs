@@ -4,7 +4,7 @@ ms.assetid: 27e1e299-0beb-4e86-8143-1ba031dc3502
 title: Add a Token-Decrypting Certificate
 author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ms.author: billmath
 ---

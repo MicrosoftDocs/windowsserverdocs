@@ -4,7 +4,7 @@ title: Configuring systems for high accuracy
 description: Improve Windows Time synchronization tuning under reasonable operating conditions where systems can be configured to maintain 1 ms (millisecond) accuracy or better with respect to UTC.
 author: xelu86
 ms.author: wscontent
-ms.date: 05/30/2023
+ms.date: 02/16/2024
 ms.topic: article
 ---
 

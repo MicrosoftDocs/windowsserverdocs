@@ -5,7 +5,7 @@ description: "Learn more about: Legacy AD FS Federation Server Farm Using SQL Se
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 

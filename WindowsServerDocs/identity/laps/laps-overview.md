@@ -9,9 +9,11 @@ ms.topic: overview
 
 # What is Windows LAPS?
 
-Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
+Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Restore Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it.
 
-## Windows LAPS supported platforms
+<a name='windows-laps-supported-platforms-and-azure-ad-laps-preview-status'></a>
+
+## Windows LAPS supported platforms and Microsoft Entra LAPS preview status
 
 Windows LAPS is now available on the following OS platforms with the specified update or later installed:
 
@@ -25,7 +27,7 @@ All supported editions of the above platforms have been updated with Windows LAP
 
 The  Windows LAPS on-premises Active Directory scenarios are fully supported as of the above updates.
 
-## Windows LAPS and Entra ID
+## Windows LAPS and Microsoft Entra ID
 
 Windows LAPS with Microsoft Entra ID and Microsoft Intune support is now in General Availability as of October 23 2023. For more information, see [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999), and [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
 
@@ -37,7 +39,7 @@ Use Windows LAPS to regularly rotate and manage local administrator account pass
 - Improved security for remote help desk scenarios
 - Ability to sign in to and recover devices that are otherwise inaccessible
 - A fine-grained security model (access control lists and optional password encryption) for securing passwords that are stored in Windows Server Active Directory
-- Support for the Entra role-based access control model for securing passwords that are stored in Entra ID
+- Support for the Entra role-based access control model for securing passwords that are stored in Microsoft Entra ID
 
 ## Informational videos
 
@@ -55,7 +57,7 @@ Windows Tackling Tech discussion (August 2023):
 
 You can use Windows LAPS for several primary scenarios:
 
-- Back up local administrator account passwords to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) (for Azure Active Directory-joined devices)
+- Back up local administrator account passwords to [Microsoft Entra ID](/azure/active-directory/devices/concept-azure-ad-join) (for Microsoft Entra-joined devices)
 
 - Back up local administrator account passwords to Windows Server Active Directory (for Windows Server Active Directory-joined clients and servers)
 
@@ -67,15 +69,15 @@ In each scenario, you can apply different policy settings.
 
 ## Understand device join state restrictions
 
-Whether a device is joined to Azure Active Directory or Windows Server Active Directory determines how you can use Windows LAPS.
+Whether a device is joined to Microsoft Entra ID or Windows Server Active Directory determines how you can use Windows LAPS.
 
-Devices that are joined only to [Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join) can back up passwords only to Azure Active Directory.
+Devices that are joined only to [Microsoft Entra ID](/azure/active-directory/devices/concept-azure-ad-join) can back up passwords only to Microsoft Entra ID.
 
 Devices that are joined only to Windows Server Active Directory can back up passwords only to Windows Server Active Directory.
 
-Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Azure Active Directory and Windows Server Active Directory) can back up their passwords either to Azure Active Directory or to Windows Server Active Directory. You can't back up passwords to both Azure Active Directory and Windows Server Active Directory.
+Devices that are [hybrid-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (joined to both Microsoft Entra ID and Windows Server Active Directory) can back up their passwords either to Microsoft Entra ID or to Windows Server Active Directory. You can't back up passwords to both Microsoft Entra ID and Windows Server Active Directory.
 
-Windows LAPS doesn't support Azure Active Directory workplace-joined clients.
+Windows LAPS doesn't support Microsoft Entra workplace-joined clients.
 
 ## Set Windows LAPS policy
 
@@ -95,16 +97,16 @@ Options for Windows include:
 - A dedicated event log channel
 - A Windows PowerShell module that's specific to Windows LAPS
 
-Azure-based monitoring and reporting solutions are available when you back up passwords to Azure Active Directory.
+Azure-based monitoring and reporting solutions are available when you back up passwords to Microsoft Entra ID.
 
 ## Deprecation of legacy Microsoft LAPS product
 
 > [!IMPORTANT]
-> NOTE: As of October 23, 2023 the legacy [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated, starting with the next versions of Windows 11 and Windows Server. Installation of the legacy Microsoft LAPS MSI package is blocked on newer OS versions, and Microsoft will no longer consider code changes for the legacy Microsoft LAPS product.
+> NOTE: The legacy [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated as of Windows 11 23 H2 and later. Installation of the legacy Microsoft LAPS MSI package is blocked on newer OS versions, and Microsoft will no longer consider code changes for the legacy Microsoft LAPS product.
 >
 > Please use Windows LAPS, available on Windows Server 2019 and above, and on supported Windows 10 and Windows 11 clients, for managing local administrator account passwords.
 >
-> Microsoft will continue to support the legacy Microsoft LAPS product on those OSes on which it was previously supported. That support will end upon the normal End of Support for those OSes.
+> Microsoft will continue to support the legacy Microsoft LAPS product on older versions of Windows (prior to Windows 11 23 H2) on which it was previously supported. That support will end upon the normal End of Support for those OSes.
 
 ## Windows LAPS vs. legacy Microsoft LAPS
 
@@ -118,7 +120,7 @@ Windows LAPS inherits many design concepts from legacy Microsoft LAPS. If you're
 
 ## Support statement
 
-Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=46899). Windows LAPS shipped as part of Windows Updates released on April 11, 2023 for the platforms listed in [Windows LAPS supported platforms and Azure AD LAPS preview status](laps-overview.md#windows-laps-supported-platforms).
+Microsoft released the legacy Microsoft LAPS product in calendar year 2016 on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=46899). Windows LAPS shipped as part of Windows Updates released on April 11, 2023 for the platforms listed in [Windows LAPS supported platforms and Microsoft Entra LAPS preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
 
 Microsoft and its support delivery organization offer assisted support for both Microsoft LAPS and Windows LAPS including interoperability between the two products. 
 
@@ -135,7 +137,7 @@ The Windows LAPS feature itself is available for free in all supported Windows p
 
 You can back up passwords to your on-premises Active Directory with no other licensing requirements.
 
-You can back up passwords to Azure AD with an Azure AD Free or higher license.
+You can back up passwords to Microsoft Entra ID with a Microsoft Entra ID Free or higher license.
 
 Other Azure- or Intune-related features can have other licensing requirements.
 
@@ -145,12 +147,14 @@ Want to send us feedback? Feel free to submit doc-specific questions via the Fee
 
 You can also submit feedback and other requests via the [Windows LAPS feedback](https://aka.ms/WindowsLAPSFeedback) Tech Community page.
 
-If your feedback is specific to the Azure AD- or Intune-related LAPS functionality, you can submit feedback via the [Azure AD feedback forum](https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789).
+If your feedback is specific to the Microsoft Entra ID- or Intune-related LAPS functionality, you can submit feedback via the [Microsoft Entra feedback forum](https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789).
 
 If you aren't sure where your feedback should go, submit it using any of the above options.
 
 ## See also
 
+- [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps)
 - [Windows Local Administrator Password Solution with Microsoft Entra ID now Generally Available!](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/windows-local-administrator-password-solution-with-microsoft/ba-p/3911999)
 - [Windows Local Administrator Password Solution in Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords).
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
@@ -161,7 +165,7 @@ If you aren't sure where your feedback should go, submit it using any of the abo
 
 ## Next steps
 
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)
 - [Get started with Windows LAPS for Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
-- [Get started with Windows LAPS for Azure Active Directory](laps-scenarios-azure-active-directory.md)
+- [Get started with Windows LAPS for Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)

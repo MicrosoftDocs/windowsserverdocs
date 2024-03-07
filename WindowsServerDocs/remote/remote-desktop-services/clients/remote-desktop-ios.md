@@ -11,7 +11,7 @@ ms.date: 11/03/2022
 
 # Get started with the iOS client
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, Windows Server 2016
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
@@ -164,14 +164,17 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Mouse wheel          | Double-tap and hold with two fingers, then drag up or down |
 | Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and spread fingers apart to zoom in |
 
-## Supported input devices
+## Supported input devices and redirection
+
+### Mouse input
 
 The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS.
 
 For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
-> [!TIP]
-> Swiftpoint is offering an [exclusive discount on the ProPoint mouse](https://www.swiftpoint.com/microsoft) for iOS client users.
+### Camera redirection
+
+Camera redirection protocol (MS-RDPECAM) doesn't support dynamically changing the camera resolution while the camera is in use, such as when rotating the device. You need to start and restart the camera. For example, in the camera app, assuming you're using the front camera, change to the rear camera, then back to the front camera.
 
 ## Use a keyboard in a remote session
 

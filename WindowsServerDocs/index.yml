@@ -8,9 +8,9 @@ metadata:
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
   author: robinharwood
   manager: femila
-  ms.prod: windows-server
+  ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 08/05/2022
+  ms.date: 12/01/2023
   ms.author: roharwoo
 
 highlightedContent:
@@ -18,7 +18,7 @@ highlightedContent:
     - title: Get started with Windows Server
       itemType: get-started
       url: ./get-started/get-started-with-windows-server.md
-    - title: What's new in Windows Server 2022?
+    - title: What's new in Windows Server?
       itemType: whats-new
       url: ./get-started/whats-new-in-windows-server-2022.md
     - title: Windows Admin Center
@@ -30,7 +30,7 @@ highlightedContent:
     - title: Connect to Azure hybrid services
       itemType: how-to-guide
       url: ./manage/windows-admin-center/azure/index.md
-    - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
+    - title: Use Windows Server Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates-overview.md
     - title: Windows Insider Program for Windows Server

@@ -19,6 +19,9 @@ As is the case with the Enterprise Admins (EA) and Domain Admins (DA) groups, me
 
 Administrators are, by default, the owners of most of the AD DS objects in their respective domains. Membership in this group may be required in build or disaster recovery scenarios in which ownership or the ability to take ownership of objects is required. Additionally, DAs and EAs inherit a number of their rights and permissions by virtue of their default membership in the Administrators group. Default group nesting for privileged groups in Active Directory should not be modified, and each domain's Administrators group should be secured as described in the step-by-step instructions that follow.
 
+> !CAUTION
+> The steps described in this document should be tested thouroughly in a non-production environment before executing in production.
+
 For the Administrators group in each domain in the forest:
 
 1.  Remove all members from the Administrators group, with the possible exception of the built-in Administrator account for the domain, provided it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
