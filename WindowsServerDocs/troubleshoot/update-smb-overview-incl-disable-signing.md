@@ -24,9 +24,13 @@ SMB signing is enabled in all versions of Windows. SMB signing requirements can 
 
 ### Security considerations in SMB2 and SMB3
 
-All cryptographic keys used in SMB 2.x and 3.x signing are derived from the session key. The security of SMB 2/3 signing and encryption relies on the session key. Because the session key itself is derived from your password, using a long, complex, non-dictionary password enhances SMB signing and encryption.
+All cryptographic keys used in SMB 2.x and 3.x signing are derived from the session key. The security of SMB 2/3 signing and encryption relies on the session key. If someone changes a message during transmission, the hash won't match, and SMB will know that someone tampered with the data. The signature also confirms the sender's and receiver's identities. This prevents relay attacks.
 
-If someone changes a message during transmission, the hash won't match, and SMB will know that someone tampered with the data. The signature also confirms the sender's and receiver's identities. This prevents relay attacks. Using Kerberos instead of NTLMv2 is recommended so that your session key starts strong. Don't connect to shares by using IP addresses and don't use CNAME records, or you'll use NTLM instead of Kerberos. We recommend using Kerberos. To learn more about alternatives to using a CNAME, see [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064).
+You should consider the following when using SMB signing:
+
+- Because the session key itself is derived from your password, using a long, complex, non-dictionary password enhances SMB signing and encryption.
+- Using Kerberos instead of NTLMv2 is recommended so that your session key starts strong.
+- Don't connect to shares by using IP addresses and don't use CNAME records, or you'll use NTLM instead of Kerberos. We recommend using Kerberos. To learn more about alternatives to using a CNAME, see [Using Computer Name Aliases in place of DNS CNAME Records](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-computer-name-aliases-in-place-of-dns-cname-records/ba-p/259064).
 
 By default, domain controllers require SMB signing of anyone connecting to them, typically for SYSVOL and NETLOGON to get group policy and logon scripts. UNC Hardening from the client also requires signing when talking to those same two shares and goes further by requiring Kerberos.
 
