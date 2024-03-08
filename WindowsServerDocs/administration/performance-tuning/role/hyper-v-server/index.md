@@ -13,20 +13,20 @@ Hyper-V is the virtualization server role in Windows Server and Azure Stack HCI.
 
 ## Additional References
 
--   [Hyper-V terminology](terminology.md)
+- [Hyper-V terminology](terminology.md)
 
--   [Hyper-V architecture](architecture.md)
+- [Hyper-V architecture](architecture.md)
 
--   [Hyper-V server configuration](configuration.md)
+- [Hyper-V server configuration](configuration.md)
 
--   [Hyper-V processor performance](processor-performance.md)
+- [Hyper-V processor performance](processor-performance.md)
 
--   [Hyper-V memory performance](memory-performance.md)
+- [Hyper-V memory performance](memory-performance.md)
 
--   [Hyper-V storage I/O performance](storage-io-performance.md)
+- [Hyper-V storage I/O performance](storage-io-performance.md)
 
--   [Hyper-V network I/O performance](network-io-performance.md)
+- [Hyper-V network I/O performance](network-io-performance.md)
 
--   [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
+- [Detecting bottlenecks in a virtualized environment](detecting-virtualized-environment-bottlenecks.md)
 
--   [Linux Virtual Machines](linux-virtual-machine-considerations.md)
+- [Linux Virtual Machines](linux-virtual-machine-considerations.md)
