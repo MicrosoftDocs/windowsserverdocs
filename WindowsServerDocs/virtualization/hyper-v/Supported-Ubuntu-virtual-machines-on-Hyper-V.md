@@ -71,7 +71,7 @@ The following feature distribution map indicates the features in each version. T
 
 1. On long term support (LTS) releases use latest virtual Hardware Enablement (HWE) kernel for up to date Linux Integration Services.
 
-   To install the Azure-tuned kernel on 16.04, 18.04 and 20.04, run the following commands as root (or sudo):
+   To install the Azure-tuned kernel on 16.04, 18.04, 20.04 and 22.04, run the following commands as root (or sudo):
 
    ```bash
    # apt-get update

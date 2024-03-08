@@ -5,7 +5,7 @@ title: Change the  company name on the AD FS sign-in page
 author: billmath
 ms.author: billmath
 manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 02/13/2024
 ms.topic: article
 ---
 # Change the company name on the AD FS sign-in page
