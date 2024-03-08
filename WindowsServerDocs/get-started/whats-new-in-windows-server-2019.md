@@ -115,13 +115,13 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 ### Encrypted networks
 
-Virtual network encryption encrypts virtual network traffic between virtual machines within subnets configured with the **Encryption Enabled** label. Encrypted networks also use Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS provides protection against eavesdropping, tampering, and forgery by anyone with access to the physical network.
+Virtual network encryption encrypts virtual network traffic between virtual machines within subnets that have the **Encryption Enabled** label. Encrypted networks also use Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects your data from eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
 For more information, see [Encrypted networks](../networking/sdn/vnet-encryption/sdn-vnet-encryption.md).
 
 ### Firewall auditing
 
-[Firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules (ACLs) that also have logging enabled.
+[Firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules and access control lists (ACLs) that have logging enabled.
 
 ### Virtual network peering
 
