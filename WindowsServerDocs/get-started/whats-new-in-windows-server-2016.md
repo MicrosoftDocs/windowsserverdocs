@@ -23,31 +23,17 @@ Physical and virtual machines benefit from greater time accuracy due to improvem
 
 ### Hyper-V
 
-<!--Should these be bullet points instead? I'll need to shorten some of the earlier sections, then.--->
+Hyper-V network virtualization (HNV) is a fundamental building block of Microsoft's updated Software Defined Networking (SDN) solution and is fully integrated into the SDN stack. Windows Server 2016 includes the following changes for Hyper-V:
 
-#### Programmable Hyper-V switch
+- Windows Server 2016 now includes a programmable Hyper-V switch. Microsoft's Network Controller pushes HNV policies down to a Host Agent running on each host using the [Open vSwitch Database Management Protocol (OVSDB)](https://www.rfc-editor.org/info/rfc7047) as the SouthBound Interface (SBI). The Host Agent stores this policy using a customization of the [VTEP schema](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) and programs complex flow rules into a performant flow engine in the Hyper-V switch. The flow engine in the Hyper-V switch is the same one that Azure uses. The entire SDN stack up through the Network Controller and Network Resource provider is also consistent with Azure, making its performance comparable to the Azure public cloud.
 
-Hyper-V network virtualization (HNV) is a fundamental building block of Microsoft's updated Software Defined Networking (SDN) solution and is fully integrated into the SDN stack.
+- HNV now supports [Virtual eXtensible Local Area Network (VXLAN) protocol](https://www.rfc-editor.org/info/rfc7348) encapsulation. HNV uses the VXLAN protocal in MAC distribution mode through the Microsoft Network Controller to map tenant overly network IP addresses to the physical underlay network IP addresses. The NVGRE and VXLAN Task Offloads support third-party drivers for improved performance.
 
-Microsoft's Network Controller pushes HNV policies down to a Host Agent running on each host using [Open vSwitch Database Management Protocol (OVSDB)](https://www.rfc-editor.org/info/rfc7047) as the SouthBound Interface (SBI). The Host Agent stores this policy using a customization of the [VTEP schema](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) and programs complex flow rules into a performant flow engine in the Hyper-V switch.
+- Windows Server 2016 includes a software load balancer (SLB) with full support for virtual network traffic and seamless interaction with HNV. The performant flow engine implements the SLB in the data plane v-Switch, then the Network Controller controls it for Virtual IP (VIP) or Dynamic IP (DIP) mappings.
 
-The flow engine inside the Hyper-V switch uses is the same one Azure uses, which has been proven at hyper-scale in the Microsoft Azure public cloud. Additionally, the entire SDN stack up through the Network Controller and Network Resource Provider is consistent with Microsoft Azure, thus bringing the power of the Microsoft Azure public cloud to our enterprise and hosting service provider customers.
+- HNV implements correct L2 Ethernet headers to ensure interoperability with third-party virtual and physical appliances that depend on industry-standard protocols. Microsoft ensures that all transmitted packets have compliant values in all fields to guarantee interoperability. HNV requires support for Jumbo Frames (MTU > 1780) in the physical L2 network to account for packet overhead introduced by encapsulation protocols such as NVGRE and VXLAN. Jumbo Frame support ensures that guest Virtual Machines attached to an HNV Virtual Network maintain a 1514 MTU.
 
-#### VXLAN encapsulation support
-
-HNV now supports [the Virtual eXtensible Local Area Network (VXLAN) protocol](https://www.rfc-editor.org/info/rfc7348). HNV uses the VXLAN protocal in MAC distribution mode through the Microsoft Network Controller to map tenant overly network IP addresses to the physical underlay network IP addresses. The NVGRE and VXLAN Task Offloads support third-party drivers for improved performance.
-
-#### Software Load Balancer (SLB) interoperability
-
-Windows Server 2016 includes a software load balancer (SLB) with full support for virtual network traffic and seamless interaction with HNV. The performant flow engine implements the SLB in the data plane v-Switch, then the Network Controller controls it for Virtual IP (VIP) or Dynamic IP (DIP) mappings.
-
-#### Compliant IEEE Ethernet headers
-
-HNV implements correct L2 Ethernet headers to ensure interoperability with third-party virtual and physical appliances that depend on industry-standard protocols. Microsoft ensures that all transmitted packets have compliant values in all fields to guarantee interoperability. HNV requires support for Jumbo Frames (MTU > 1780) in the physical L2 network to account for packet overhead introduced by encapsulation protocols such as NVGRE and VXLAN. Jumbo Frame support ensures that guest Virtual Machines attached to an HNV Virtual Network maintain a 1514 MTU.
-
-#### Windows containers
-
-[Windows Container](/virtualization/windowscontainers/) support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For more information, see [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
+- [Windows Container](/virtualization/windowscontainers/) support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For more information, see [Containers: Docker, Windows, and Trends](https://azure.microsoft.com/blog/containers-docker-windows-and-trends/).
 
 ### Nano Server
 
